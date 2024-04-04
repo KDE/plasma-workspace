@@ -147,39 +147,6 @@ KCM.SimpleKCM {
         Kirigami.FormLayout {
             id: parentLayout
 
-            QQC2.ComboBox {
-                id: modeSwitcher
-                // Work around https://bugs.kde.org/show_bug.cgi?id=403153
-                Layout.minimumWidth: Kirigami.Units.gridUnit * 17
-                Kirigami.FormData.label: i18n("Switching times:")
-                currentIndex: kcm.nightColorSettings.active ? kcm.nightColorSettings.mode + 1 : 0
-                model: [
-                    i18n("Always off"),  // This is not actually a Mode, but represents Night Color being disabled
-                    i18n("Sunset and sunrise at current location"),
-                    i18n("Sunset and sunrise at manual location"),
-                    i18n("Custom times"),
-                    i18n("Always on night light")
-                ]
-                onCurrentIndexChanged: {
-                    if (currentIndex !== 0) {
-                        kcm.nightColorSettings.mode = currentIndex - 1;
-                    }
-                    kcm.nightColorSettings.active = (currentIndex !== 0);
-                    if (currentIndex - 1 == NightColorMode.Automatic && kcm.nightColorSettings.active) {
-                        startLocator();
-                    } else {
-                        endLocator();
-                    }
-                }
-            }
-
-            // Workaround for Layout.margins not working in Kirigami FormLayout (bug 434625)
-            Item { implicitHeight: Kirigami.Units.largeSpacing }
-
-            Item {
-                Kirigami.FormData.isSection: true
-            }
-
             GridLayout {
                 Kirigami.FormData.label: i18n("Day light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderDay
@@ -305,6 +272,32 @@ KCM.SimpleKCM {
             }
 
             Item { implicitHeight: Kirigami.Units.largeSpacing }
+
+            QQC2.ComboBox {
+                id: modeSwitcher
+                // Work around https://bugs.kde.org/show_bug.cgi?id=403153
+                Layout.minimumWidth: Kirigami.Units.gridUnit * 17
+                Kirigami.FormData.label: i18n("Switching times:")
+                currentIndex: kcm.nightColorSettings.active ? kcm.nightColorSettings.mode + 1 : 0
+                model: [
+                    i18n("Always off"),  // This is not actually a Mode, but represents Night Color being disabled
+                    i18n("Sunset and sunrise at current location"),
+                    i18n("Sunset and sunrise at manual location"),
+                    i18n("Custom times"),
+                    i18n("Always on night light")
+                ]
+                onCurrentIndexChanged: {
+                    if (currentIndex !== 0) {
+                        kcm.nightColorSettings.mode = currentIndex - 1;
+                    }
+                    kcm.nightColorSettings.active = (currentIndex !== 0);
+                    if (currentIndex - 1 == NightColorMode.Automatic && kcm.nightColorSettings.active) {
+                        startLocator();
+                    } else {
+                        endLocator();
+                    }
+                }
+            }
 
             // Show current location in auto mode
             QQC2.Label {
