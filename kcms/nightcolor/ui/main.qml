@@ -81,6 +81,29 @@ KCM.SimpleKCM {
         }
     }
 
+    actions: Kirigami.Action {
+        id: enabledAction
+        icon.name: "redshift-status-on"
+        text: i18nc("@option:check", "Enable Night Light")
+        checkable: true
+        checked: kcm.nightColorSettings.active
+
+        displayComponent: QQC2.CheckBox {
+            text: enabledAction.text
+            checked: enabledAction.checked
+            onToggled: kcm.nightColorSettings.active = checked
+
+            // HACK: Kirigami.ToolBarPageHeader shows no padding otherwise
+            rightPadding: Kirigami.Units.smallSpacing
+
+            KCM.SettingStateBinding {
+                configObject: kcm.nightColorSettings
+                settingName: "active"
+            }
+        }
+    }
+
+
     Timer {
         id: previewTimer
         interval: Kirigami.Units.humanMoment
@@ -278,20 +301,17 @@ KCM.SimpleKCM {
                 // Work around https://bugs.kde.org/show_bug.cgi?id=403153
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 17
                 Kirigami.FormData.label: i18n("Switching times:")
-                currentIndex: kcm.nightColorSettings.active ? kcm.nightColorSettings.mode + 1 : 0
+                enabled: kcm.nightColorSettings.active
+                currentIndex: kcm.nightColorSettings.mode
                 model: [
-                    i18n("Always off"),  // This is not actually a Mode, but represents Night Color being disabled
                     i18n("Sunset and sunrise at current location"),
                     i18n("Sunset and sunrise at manual location"),
                     i18n("Custom times"),
                     i18n("Always on night light")
                 ]
                 onCurrentIndexChanged: {
-                    if (currentIndex !== 0) {
-                        kcm.nightColorSettings.mode = currentIndex - 1;
-                    }
-                    kcm.nightColorSettings.active = (currentIndex !== 0);
-                    if (currentIndex - 1 == NightColorMode.Automatic && kcm.nightColorSettings.active) {
+                    kcm.nightColorSettings.mode = currentIndex;
+                    if (currentIndex == NightColorMode.Automatic && kcm.nightColorSettings.active) {
                         startLocator();
                     } else {
                         endLocator();
