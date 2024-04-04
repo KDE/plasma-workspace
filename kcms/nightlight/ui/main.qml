@@ -86,6 +86,28 @@ KCM.SimpleKCM {
         }
     }
 
+    actions: Kirigami.Action {
+        id: enabledAction
+        text: i18nc("@option:check Enable Night Light", "Enable")
+        checkable: true
+        checked: kcm.nightLightSettings.active
+
+        displayComponent: QQC2.CheckBox {
+            text: enabledAction.text
+            checked: enabledAction.checked
+            onToggled: kcm.nightLightSettings.active = checked
+
+            // HACK: Kirigami.ToolBarPageHeader shows no padding otherwise
+            rightPadding: Kirigami.Units.smallSpacing
+
+            KCM.SettingStateBinding {
+                configObject: kcm.nightLightSettings
+                settingName: "active"
+            }
+        }
+    }
+
+
     Timer {
         id: previewTimer
         interval: Kirigami.Units.humanMoment
@@ -295,21 +317,18 @@ KCM.SimpleKCM {
                 // Work around https://bugs.kde.org/show_bug.cgi?id=403153
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 17
                 Kirigami.FormData.label: i18n("Switching times:")
-                currentIndex: kcm.nightLightSettings.active ? kcm.nightLightSettings.mode + 1 : 0
+                enabled: kcm.nightLightSettings.active
+                currentIndex: kcm.nightLightSettings.mode
                 model: [
-                    i18n("Always off"),  // This is not actually a Mode, but represents Night Light being disabled
                     i18n("Sunset and sunrise at current location"),
                     i18n("Sunset and sunrise at manual location"),
                     i18n("Custom times"),
                     i18n("Always on night light")
                 ]
                 onCurrentIndexChanged: {
-                    if (currentIndex !== 0) {
-                        kcm.nightLightSettings.mode = currentIndex - 1;
-                    }
-                    kcm.nightLightSettings.active = (currentIndex !== 0);
-                    if (currentIndex - 1 === Private.NightLightMode.Automatic && kcm.nightLightSettings.active) {
-                        root.startLocator();
+                    kcm.nightLightSettings.mode = currentIndex;
+                    if (currentIndex == NightColorMode.Automatic && kcm.nightLightSettings.active) {
+                        startLocator();
                     } else {
                         root.endLocator();
                     }
