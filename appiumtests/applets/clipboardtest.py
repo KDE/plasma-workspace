@@ -41,14 +41,9 @@ class ClipboardTest(unittest.TestCase):
         data_dir: str = GLib.get_user_data_dir()
         klipper_folder: Final = os.path.join(data_dir, "klipper")
         klipper_data_file: Final = os.path.join(klipper_folder, "history2.lst")
-        if os.path.exists(klipper_data_file):
-            shutil.move(klipper_data_file, f"{klipper_data_file}.bak")
-            cls.addClassCleanup(lambda: shutil.move(f"{klipper_data_file}.bak", klipper_data_file))
-        elif os.path.exists(klipper_folder):
-            cls.addClassCleanup(lambda: os.remove(klipper_data_file))
-        else:
-            os.mkdir(klipper_folder)
-            cls.addClassCleanup(lambda: shutil.rmtree(klipper_folder))
+        assert not os.path.exists(klipper_data_file)
+        os.mkdir(klipper_folder)
+        cls.addClassCleanup(lambda: shutil.rmtree(klipper_folder))
 
         shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "klipper/autotests/data/onetextentry.lst"), klipper_data_file)
 
