@@ -720,8 +720,6 @@ void PanelView::resizePanel()
         } else {
             m_targetSize = QSize(m_screenToFollow->size().width(), totalThickness());
         }
-        resize(m_targetSize);
-        return;
     } else if (m_lengthMode == PanelView::LengthMode::FitContent) {
         if (formFactor() == Plasma::Types::Vertical) {
             m_targetSize = QSize(
@@ -732,20 +730,19 @@ void PanelView::resizePanel()
                 QSize(std::max(totalThickness(), std::min(m_screenToFollow->size().width(), m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding)),
                       totalThickness());
         }
-        resize(m_targetSize);
-        return;
-    }
-
-    if (formFactor() == Plasma::Types::Vertical) {
-        const int minSize = qMax(MINSIZE, m_minLength);
-        int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
-        maxSize = qMax(minSize, maxSize);
-        m_targetSize = QSize(totalThickness(), std::clamp(m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding, minSize, maxSize));
     } else {
-        const int minSize = qMax(MINSIZE, m_minLength);
-        int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
-        maxSize = qMax(minSize, maxSize);
-        m_targetSize = QSize(std::clamp(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, minSize, maxSize), totalThickness());
+        // PanelView::LengthMode::Custom
+        if (formFactor() == Plasma::Types::Vertical) {
+            const int minSize = qMax(MINSIZE, m_minLength);
+            int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
+            maxSize = qMax(minSize, maxSize);
+            m_targetSize = QSize(totalThickness(), std::clamp(m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding, minSize, maxSize));
+        } else {
+            const int minSize = qMax(MINSIZE, m_minLength);
+            int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
+            maxSize = qMax(minSize, maxSize);
+            m_targetSize = QSize(std::clamp(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, minSize, maxSize), totalThickness());
+        }
     }
 
     if (size() != m_targetSize) {
