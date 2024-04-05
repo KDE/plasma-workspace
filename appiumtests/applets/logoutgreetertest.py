@@ -15,6 +15,7 @@ from appium.webdriver.common.appiumby import AppiumBy
 
 KDE_INSTALL_FULL_LIBEXECDIR = os.environ.get("KDE_INSTALL_FULL_LIBEXECDIR", "/usr/libexec")
 
+
 class LogoutGreeterTests(unittest.TestCase):
 
     def setUp(self):
@@ -22,6 +23,9 @@ class LogoutGreeterTests(unittest.TestCase):
         options = AppiumOptions()
         options.set_capability("app", str(self.proc.pid))
         options.set_capability("timeouts", {'implicit': 10000})
+        options.set_capability("environ", {
+            "LC_ALL": "en_US.UTF-8",
+        })
         self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def tearDown(self):
