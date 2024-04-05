@@ -33,6 +33,7 @@ class CameraIndicatorTest(unittest.TestCase):
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
         options.set_capability("environ", {
+            "LC_ALL": "en_US.UTF-8",
             "QT_FATAL_WARNINGS": "1",
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false;kpipewire_logging.warning=false",
         })
