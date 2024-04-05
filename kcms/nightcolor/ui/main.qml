@@ -376,7 +376,7 @@ KCM.SimpleKCM {
                 visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active
                     && !kcm.nightColorSettings.autolocationConsented
                 Layout.fillWidth: true
-                text: i18n("Please consent to location access, or choose a different switing times mode.")
+                text: i18n("Please consent to location access, or choose a different switching times mode.")
             }
 
             // Show time entry fields in manual timings mode
