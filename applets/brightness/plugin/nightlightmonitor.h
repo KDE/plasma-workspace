@@ -9,33 +9,33 @@
 #include <QObject>
 #include <qqmlregistration.h>
 
-class NightColorMonitorPrivate;
+class NightLightMonitorPrivate;
 
 /**
- * The Monitor provides a way for monitoring the state of Night Color.
+ * The Monitor provides a way for monitoring the state of Night Light.
  */
-class NightColorMonitor : public QObject
+class NightLightMonitor : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
 
     /**
-     * This property holds a value to indicate if Night Color is available.
+     * This property holds a value to indicate if Night Light is available.
      */
     Q_PROPERTY(bool available READ isAvailable NOTIFY availableChanged)
 
     /**
-     * This property holds a value to indicate if Night Color is enabled.
+     * This property holds a value to indicate if Night Light is enabled.
      */
     Q_PROPERTY(bool enabled READ isEnabled NOTIFY enabledChanged)
 
     /**
-     * This property holds a value to indicate if Night Color is running.
+     * This property holds a value to indicate if Night Light is running.
      */
     Q_PROPERTY(bool running READ isRunning NOTIFY runningChanged)
 
     /**
-     * This property holds a value to indicate if Night Color is on day mode.
+     * This property holds a value to indicate if Night Light is on day mode.
      */
     Q_PROPERTY(bool daylight READ isDaylight NOTIFY daylightChanged)
 
@@ -65,26 +65,26 @@ class NightColorMonitor : public QObject
     Q_PROPERTY(quint64 scheduledTransitionStartTime READ scheduledTransitionStartTime NOTIFY scheduledTransitionStartTimeChanged)
 
 public:
-    explicit NightColorMonitor(QObject *parent = nullptr);
-    ~NightColorMonitor() override;
+    explicit NightLightMonitor(QObject *parent = nullptr);
+    ~NightLightMonitor() override;
 
     /**
-     * Returns @c true if Night Color is available; otherwise @c false.
+     * Returns @c true if Night Light is available; otherwise @c false.
      */
     bool isAvailable() const;
 
     /**
-     * Returns @c true if Night Color is enabled; otherwise @c false.
+     * Returns @c true if Night Light is enabled; otherwise @c false.
      */
     bool isEnabled() const;
 
     /**
-     * Returns @c true if Night Color is running; otherwise @c false.
+     * Returns @c true if Night Light is running; otherwise @c false.
      */
     bool isRunning() const;
 
     /**
-     * Returns @c true if Night Color is on day mode; otherwise @c false.
+     * Returns @c true if Night Light is on day mode; otherwise @c false.
      */
     bool isDaylight() const;
 
@@ -115,27 +115,27 @@ public:
 
 Q_SIGNALS:
     /**
-     * This signal is emitted when Night Color becomes (un)available.
+     * This signal is emitted when Night Light becomes (un)available.
      */
     void availableChanged();
 
     /**
-     * Emitted whenever Night Color is enabled or disabled.
+     * Emitted whenever Night Light is enabled or disabled.
      */
     void enabledChanged();
 
     /**
-     * Emitted whenever Night Color starts or stops running.
+     * Emitted whenever Night Light starts or stops running.
      */
     void runningChanged();
 
     /**
-     * Emitted whenever Night Color changes between day and night time.
+     * Emitted whenever Night Light changes between day and night time.
      */
     void daylightChanged();
 
     /**
-     * Emitted whenever Night Color timings mode changes.
+     * Emitted whenever Night Light timings mode changes.
      */
     void modeChanged();
 
@@ -160,5 +160,5 @@ Q_SIGNALS:
     void scheduledTransitionStartTimeChanged();
 
 private:
-    NightColorMonitorPrivate *d;
+    NightLightMonitorPrivate *d;
 };

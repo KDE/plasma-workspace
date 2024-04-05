@@ -123,15 +123,15 @@ PlasmaExtras.Representation {
                 width: scrollView.availableWidth
 
                 KeyNavigation.up: keyboardBrightnessSlider.visible ? keyboardBrightnessSlider : keyboardBrightnessSlider.KeyNavigation.up
-                KeyNavigation.down: nightColorItem
+                KeyNavigation.down: nightLightItem
                 KeyNavigation.backtab: KeyNavigation.up
                 KeyNavigation.tab: KeyNavigation.down
 
                 text: i18n("Keyboard Color")
             }
 
-            NightColorItem {
-                id: nightColorItem
+            NightLightItem {
+                id: nightLightItem
 
                 width: scrollView.availableWidth
 

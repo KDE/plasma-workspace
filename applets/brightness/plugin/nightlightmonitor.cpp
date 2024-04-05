@@ -4,8 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "nightcolormonitor.h"
-#include "nightcolormonitor_p.h"
+#include "nightlightmonitor.h"
+#include "nightlightmonitor_p.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -13,18 +13,18 @@
 #include <QDBusPendingReply>
 
 static const QString s_serviceName = QStringLiteral("org.kde.KWin.NightLight");
-static const QString s_nightColorPath = QStringLiteral("/org/kde/KWin/NightLight");
-static const QString s_nightColorInterface = QStringLiteral("org.kde.KWin.NightLight");
+static const QString s_nightLightPath = QStringLiteral("/org/kde/KWin/NightLight");
+static const QString s_nightLightInterface = QStringLiteral("org.kde.KWin.NightLight");
 static const QString s_propertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
 
-NightColorMonitorPrivate::NightColorMonitorPrivate(QObject *parent)
+NightLightMonitorPrivate::NightLightMonitorPrivate(QObject *parent)
     : QObject(parent)
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
 
     // clang-format off
     const bool connected = bus.connect(s_serviceName,
-                                       s_nightColorPath,
+                                       s_nightLightPath,
                                        s_propertiesInterface,
                                        QStringLiteral("PropertiesChanged"),
                                        this,
@@ -34,8 +34,8 @@ NightColorMonitorPrivate::NightColorMonitorPrivate(QObject *parent)
         return;
     }
 
-    QDBusMessage message = QDBusMessage::createMethodCall(s_serviceName, s_nightColorPath, s_propertiesInterface, QStringLiteral("GetAll"));
-    message.setArguments({s_nightColorInterface});
+    QDBusMessage message = QDBusMessage::createMethodCall(s_serviceName, s_nightLightPath, s_propertiesInterface, QStringLiteral("GetAll"));
+    message.setArguments({s_nightLightInterface});
 
     QDBusPendingReply<QVariantMap> properties = bus.asyncCall(message);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(properties, this);
@@ -52,11 +52,11 @@ NightColorMonitorPrivate::NightColorMonitorPrivate(QObject *parent)
     });
 }
 
-NightColorMonitorPrivate::~NightColorMonitorPrivate()
+NightLightMonitorPrivate::~NightLightMonitorPrivate()
 {
 }
 
-void NightColorMonitorPrivate::handlePropertiesChanged(const QString &interfaceName,
+void NightLightMonitorPrivate::handlePropertiesChanged(const QString &interfaceName,
                                                        const QVariantMap &changedProperties,
                                                        const QStringList &invalidatedProperties)
 {
@@ -66,17 +66,17 @@ void NightColorMonitorPrivate::handlePropertiesChanged(const QString &interfaceN
     updateProperties(changedProperties);
 }
 
-int NightColorMonitorPrivate::currentTemperature() const
+int NightLightMonitorPrivate::currentTemperature() const
 {
     return m_currentTemperature;
 }
 
-int NightColorMonitorPrivate::targetTemperature() const
+int NightLightMonitorPrivate::targetTemperature() const
 {
     return m_targetTemperature;
 }
 
-void NightColorMonitorPrivate::updateProperties(const QVariantMap &properties)
+void NightLightMonitorPrivate::updateProperties(const QVariantMap &properties)
 {
     const QVariant available = properties.value(QStringLiteral("available"));
     if (available.isValid()) {
@@ -125,7 +125,7 @@ void NightColorMonitorPrivate::updateProperties(const QVariantMap &properties)
     }
 }
 
-void NightColorMonitorPrivate::setCurrentTemperature(int temperature)
+void NightLightMonitorPrivate::setCurrentTemperature(int temperature)
 {
     if (m_currentTemperature == temperature) {
         return;
@@ -134,7 +134,7 @@ void NightColorMonitorPrivate::setCurrentTemperature(int temperature)
     Q_EMIT currentTemperatureChanged();
 }
 
-void NightColorMonitorPrivate::setTargetTemperature(int temperature)
+void NightLightMonitorPrivate::setTargetTemperature(int temperature)
 {
     if (m_targetTemperature == temperature) {
         return;
@@ -143,12 +143,12 @@ void NightColorMonitorPrivate::setTargetTemperature(int temperature)
     Q_EMIT targetTemperatureChanged();
 }
 
-bool NightColorMonitorPrivate::isAvailable() const
+bool NightLightMonitorPrivate::isAvailable() const
 {
     return m_isAvailable;
 }
 
-void NightColorMonitorPrivate::setAvailable(bool available)
+void NightLightMonitorPrivate::setAvailable(bool available)
 {
     if (m_isAvailable == available) {
         return;
@@ -157,12 +157,12 @@ void NightColorMonitorPrivate::setAvailable(bool available)
     Q_EMIT availableChanged();
 }
 
-bool NightColorMonitorPrivate::isEnabled() const
+bool NightLightMonitorPrivate::isEnabled() const
 {
     return m_isEnabled;
 }
 
-void NightColorMonitorPrivate::setEnabled(bool enabled)
+void NightLightMonitorPrivate::setEnabled(bool enabled)
 {
     if (m_isEnabled == enabled) {
         return;
@@ -171,12 +171,12 @@ void NightColorMonitorPrivate::setEnabled(bool enabled)
     Q_EMIT enabledChanged();
 }
 
-bool NightColorMonitorPrivate::isRunning() const
+bool NightLightMonitorPrivate::isRunning() const
 {
     return m_isRunning;
 }
 
-void NightColorMonitorPrivate::setRunning(bool running)
+void NightLightMonitorPrivate::setRunning(bool running)
 {
     if (m_isRunning == running) {
         return;
@@ -185,12 +185,12 @@ void NightColorMonitorPrivate::setRunning(bool running)
     Q_EMIT runningChanged();
 }
 
-int NightColorMonitorPrivate::mode() const
+int NightLightMonitorPrivate::mode() const
 {
     return m_mode;
 }
 
-void NightColorMonitorPrivate::setMode(int mode)
+void NightLightMonitorPrivate::setMode(int mode)
 {
     if (m_mode == mode) {
         return;
@@ -199,12 +199,12 @@ void NightColorMonitorPrivate::setMode(int mode)
     Q_EMIT modeChanged();
 }
 
-bool NightColorMonitorPrivate::isDaylight() const
+bool NightLightMonitorPrivate::isDaylight() const
 {
     return m_isDaylight;
 }
 
-void NightColorMonitorPrivate::setDaylight(bool daylight)
+void NightLightMonitorPrivate::setDaylight(bool daylight)
 {
     if (m_isDaylight == daylight) {
         return;
@@ -213,12 +213,12 @@ void NightColorMonitorPrivate::setDaylight(bool daylight)
     Q_EMIT daylightChanged();
 }
 
-quint64 NightColorMonitorPrivate::currentTransitionEndTime() const
+quint64 NightLightMonitorPrivate::currentTransitionEndTime() const
 {
     return m_currentTransitionEndTime;
 }
 
-void NightColorMonitorPrivate::setCurrentTransitionEndTime(quint64 currentTransitionEndTime)
+void NightLightMonitorPrivate::setCurrentTransitionEndTime(quint64 currentTransitionEndTime)
 {
     if (m_currentTransitionEndTime == currentTransitionEndTime) {
         return;
@@ -227,12 +227,12 @@ void NightColorMonitorPrivate::setCurrentTransitionEndTime(quint64 currentTransi
     Q_EMIT currentTransitionEndTimeChanged();
 }
 
-quint64 NightColorMonitorPrivate::scheduledTransitionStartTime() const
+quint64 NightLightMonitorPrivate::scheduledTransitionStartTime() const
 {
     return m_scheduledTransitionStartTime;
 }
 
-void NightColorMonitorPrivate::setScheduledTransitionStartTime(quint64 scheduledTransitionStartTime)
+void NightLightMonitorPrivate::setScheduledTransitionStartTime(quint64 scheduledTransitionStartTime)
 {
     if (m_scheduledTransitionStartTime == scheduledTransitionStartTime) {
         return;
@@ -241,68 +241,68 @@ void NightColorMonitorPrivate::setScheduledTransitionStartTime(quint64 scheduled
     Q_EMIT scheduledTransitionStartTimeChanged();
 }
 
-NightColorMonitor::NightColorMonitor(QObject *parent)
+NightLightMonitor::NightLightMonitor(QObject *parent)
     : QObject(parent)
-    , d(new NightColorMonitorPrivate(this))
+    , d(new NightLightMonitorPrivate(this))
 {
-    connect(d, &NightColorMonitorPrivate::availableChanged, this, &NightColorMonitor::availableChanged);
-    connect(d, &NightColorMonitorPrivate::enabledChanged, this, &NightColorMonitor::enabledChanged);
-    connect(d, &NightColorMonitorPrivate::runningChanged, this, &NightColorMonitor::runningChanged);
-    connect(d, &NightColorMonitorPrivate::modeChanged, this, &NightColorMonitor::modeChanged);
-    connect(d, &NightColorMonitorPrivate::daylightChanged, this, &NightColorMonitor::daylightChanged);
-    connect(d, &NightColorMonitorPrivate::currentTransitionEndTimeChanged, this, &NightColorMonitor::currentTransitionEndTimeChanged);
-    connect(d, &NightColorMonitorPrivate::scheduledTransitionStartTimeChanged, this, &NightColorMonitor::scheduledTransitionStartTimeChanged);
-    connect(d, &NightColorMonitorPrivate::currentTemperatureChanged, this, &NightColorMonitor::currentTemperatureChanged);
-    connect(d, &NightColorMonitorPrivate::targetTemperatureChanged, this, &NightColorMonitor::targetTemperatureChanged);
+    connect(d, &NightLightMonitorPrivate::availableChanged, this, &NightLightMonitor::availableChanged);
+    connect(d, &NightLightMonitorPrivate::enabledChanged, this, &NightLightMonitor::enabledChanged);
+    connect(d, &NightLightMonitorPrivate::runningChanged, this, &NightLightMonitor::runningChanged);
+    connect(d, &NightLightMonitorPrivate::modeChanged, this, &NightLightMonitor::modeChanged);
+    connect(d, &NightLightMonitorPrivate::daylightChanged, this, &NightLightMonitor::daylightChanged);
+    connect(d, &NightLightMonitorPrivate::currentTransitionEndTimeChanged, this, &NightLightMonitor::currentTransitionEndTimeChanged);
+    connect(d, &NightLightMonitorPrivate::scheduledTransitionStartTimeChanged, this, &NightLightMonitor::scheduledTransitionStartTimeChanged);
+    connect(d, &NightLightMonitorPrivate::currentTemperatureChanged, this, &NightLightMonitor::currentTemperatureChanged);
+    connect(d, &NightLightMonitorPrivate::targetTemperatureChanged, this, &NightLightMonitor::targetTemperatureChanged);
 }
 
-NightColorMonitor::~NightColorMonitor()
+NightLightMonitor::~NightLightMonitor()
 {
 }
 
-bool NightColorMonitor::isAvailable() const
+bool NightLightMonitor::isAvailable() const
 {
     return d->isAvailable();
 }
 
-bool NightColorMonitor::isEnabled() const
+bool NightLightMonitor::isEnabled() const
 {
     return d->isEnabled();
 }
 
-bool NightColorMonitor::isRunning() const
+bool NightLightMonitor::isRunning() const
 {
     return d->isRunning();
 }
 
-int NightColorMonitor::mode() const
+int NightLightMonitor::mode() const
 {
     return d->mode();
 }
 
-bool NightColorMonitor::isDaylight() const
+bool NightLightMonitor::isDaylight() const
 {
     return d->isDaylight();
 }
 
-int NightColorMonitor::currentTemperature() const
+int NightLightMonitor::currentTemperature() const
 {
     return d->currentTemperature();
 }
 
-int NightColorMonitor::targetTemperature() const
+int NightLightMonitor::targetTemperature() const
 {
     return d->targetTemperature();
 }
 
-quint64 NightColorMonitor::currentTransitionEndTime() const
+quint64 NightLightMonitor::currentTransitionEndTime() const
 {
     return d->currentTransitionEndTime();
 }
 
-quint64 NightColorMonitor::scheduledTransitionStartTime() const
+quint64 NightLightMonitor::scheduledTransitionStartTime() const
 {
     return d->scheduledTransitionStartTime();
 }
 
-#include "moc_nightcolormonitor.cpp"
+#include "moc_nightlightmonitor.cpp"

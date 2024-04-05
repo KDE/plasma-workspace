@@ -8,13 +8,13 @@
 
 #include <QObject>
 
-class NightColorMonitorPrivate : public QObject
+class NightLightMonitorPrivate : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit NightColorMonitorPrivate(QObject *parent = nullptr);
-    ~NightColorMonitorPrivate() override;
+    explicit NightLightMonitorPrivate(QObject *parent = nullptr);
+    ~NightLightMonitorPrivate() override;
 
     int currentTemperature() const;
     int targetTemperature() const;

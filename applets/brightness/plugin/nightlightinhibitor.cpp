@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "nightcolorinhibitor.h"
+#include "nightlightinhibitor.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -12,13 +12,13 @@
 #include <QDBusPendingReply>
 #include <QLoggingCategory>
 
-Q_LOGGING_CATEGORY(NIGHTCOLOR_CONTROL, "org.kde.plasma.nightcolorcontrol")
+Q_LOGGING_CATEGORY(NIGHTLIGHT_CONTROL, "org.kde.plasma.nightlightcontrol")
 
 static const QString s_serviceName = QStringLiteral("org.kde.KWin.NightLight");
 static const QString s_path = QStringLiteral("/org/kde/KWin/NightLight");
 static const QString s_interface = QStringLiteral("org.kde.KWin.NightLight");
 
-class NightColorInhibitor::Private
+class NightLightInhibitor::Private
 {
 public:
     uint cookie = 0;
@@ -26,23 +26,23 @@ public:
     bool pendingUninhibit = false;
 };
 
-NightColorInhibitor::NightColorInhibitor(QObject *parent)
+NightLightInhibitor::NightLightInhibitor(QObject *parent)
     : QObject(parent)
     , d(new Private)
 {
 }
 
-NightColorInhibitor::~NightColorInhibitor()
+NightLightInhibitor::~NightLightInhibitor()
 {
     uninhibit();
 }
 
-NightColorInhibitor::State NightColorInhibitor::state() const
+NightLightInhibitor::State NightLightInhibitor::state() const
 {
     return d->state;
 }
 
-void NightColorInhibitor::inhibit()
+void NightLightInhibitor::inhibit()
 {
     if (d->state == Inhibited) {
         return;
@@ -67,7 +67,7 @@ void NightColorInhibitor::inhibit()
         self->deleteLater();
 
         if (reply.isError()) {
-            qCWarning(NIGHTCOLOR_CONTROL()) << "Could not inhibit Night Color:" << reply.error().message();
+            qCWarning(NIGHTLIGHT_CONTROL()) << "Could not inhibit Night Light:" << reply.error().message();
             d->state = Uninhibited;
             Q_EMIT stateChanged();
             return;
@@ -86,7 +86,7 @@ void NightColorInhibitor::inhibit()
     Q_EMIT stateChanged();
 }
 
-void NightColorInhibitor::uninhibit()
+void NightLightInhibitor::uninhibit()
 {
     if (d->state == Uninhibiting || d->state == Uninhibited) {
         return;
@@ -112,7 +112,7 @@ void NightColorInhibitor::uninhibit()
 
         const QDBusPendingReply<void> reply = *self;
         if (reply.isError()) {
-            qCWarning(NIGHTCOLOR_CONTROL) << "Could not uninhibit Night Color:" << reply.error().message();
+            qCWarning(NIGHTLIGHT_CONTROL) << "Could not uninhibit Night Light:" << reply.error().message();
         }
 
         d->state = Uninhibited;
@@ -123,4 +123,4 @@ void NightColorInhibitor::uninhibit()
     Q_EMIT stateChanged();
 }
 
-#include "moc_nightcolorinhibitor.cpp"
+#include "moc_nightlightinhibitor.cpp"

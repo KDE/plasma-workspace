@@ -71,7 +71,7 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Label {
                     id: status
                     text: {
-                        if (inhibitor.state !== NightColorInhibitor.Uninhibited && monitor.enabled) {
+                        if (inhibitor.state !== NightLightInhibitor.Uninhibited && monitor.enabled) {
                             return i18nc("Night light status", "Off");
                         }
                         if (!monitor.available) {
@@ -103,7 +103,7 @@ PlasmaComponents3.ItemDelegate {
 
                 PlasmaComponents3.Label {
                     id: currentTemp
-                    visible: monitor.available && monitor.enabled && monitor.running && inhibitor.state !== NightColorInhibitor.Inhibited
+                    visible: monitor.available && monitor.enabled && monitor.running && inhibitor.state !== NightLightInhibitor.Inhibited
                     text: i18nc("Placeholder is screen color temperature", "%1K", monitor.currentTemperature)
                     textFormat: Text.PlainText
 
@@ -117,7 +117,7 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Switch {
                     id: inhibitionSwitch
                     visible: monitor.enabled
-                    checked: monitor.available && monitor.enabled && monitor.running && inhibitor.state !== NightColorInhibitor.Inhibited
+                    checked: monitor.available && monitor.enabled && monitor.running && inhibitor.state !== NightLightInhibitor.Inhibited
 
                     Layout.fillWidth: true
 
@@ -208,22 +208,22 @@ PlasmaComponents3.ItemDelegate {
             return;
         }
         switch (inhibitor.state) {
-        case NightColorInhibitor.Inhibiting:
-        case NightColorInhibitor.Inhibited:
+        case NightLightInhibitor.Inhibiting:
+        case NightLightInhibitor.Inhibited:
             inhibitor.uninhibit();
             break;
-        case NightColorInhibitor.Uninhibiting:
-        case NightColorInhibitor.Uninhibited:
+        case NightLightInhibitor.Uninhibiting:
+        case NightLightInhibitor.Uninhibited:
             inhibitor.inhibit();
             break;
         }
     }
 
-    NightColorInhibitor {
+    NightLightInhibitor {
         id: inhibitor
     }
 
-    NightColorMonitor {
+    NightLightMonitor {
         id: monitor
 
         readonly property bool transitioning: monitor.currentTemperature != monitor.targetTemperature
