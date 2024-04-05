@@ -27,7 +27,6 @@ public:
     ~KCMNightLight() override = default;
 
     NightLightSettings *nightLightSettings() const;
-    Q_INVOKABLE bool isIconThemeBreeze();
 
 private:
     NightLightData *const m_data;
