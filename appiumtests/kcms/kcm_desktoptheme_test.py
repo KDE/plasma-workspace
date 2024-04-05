@@ -29,6 +29,9 @@ class KCMDesktopThemeTest(unittest.TestCase):
         options = AppiumOptions()
         options.set_capability("app", f"kcmshell{KDE_VERSION} {KCM_ID}")
         options.set_capability("timeouts", {'implicit': 10000})
+        options.set_capability("environ", {
+            "LC_ALL": "en_US.UTF-8",
+        })
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
     def tearDown(self) -> None:
