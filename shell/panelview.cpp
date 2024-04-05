@@ -701,6 +701,38 @@ QRect PanelView::geometryByDistance(int distance, double floatingness) const
     return r;
 }
 
+void PanelView::beginSizeTransition()
+{
+    if (!m_resizeAnimation.targetObject()) {
+        resize(m_targetSize);
+        Q_EMIT geometryChanged();
+        return;
+    }
+
+    QRectF startGeom = QRectF(QPointF(0, 0), size());
+    QRectF endGeom = QRectF(QPointF(0, 0), m_targetSize);
+    QSize startPanelSize = size();
+    qWarning() << "HHHH" << startPanelSize;
+    if (m_targetSize.width() > startPanelSize.width()) {
+        startPanelSize.setWidth(m_targetSize.width());
+    }
+    if (m_targetSize.height() > startPanelSize.height()) {
+        startPanelSize.setHeight(m_targetSize.height());
+    }
+    startGeom.moveCenter(QPointF(startPanelSize.width() / 2, startPanelSize.height() / 2));
+    endGeom.moveCenter(QPointF(startPanelSize.width() / 2, startPanelSize.height() / 2));
+
+    // setMinimumSize(s);
+    // setMaximumSize(s);
+    // resize(s);
+
+    m_resizeAnimation.setStartValue(startGeom);
+    m_resizeAnimation.setEndValue(endGeom);
+    m_resizeAnimation.start();
+    resize(startPanelSize);
+    Q_EMIT geometryChanged();
+}
+
 void PanelView::resizePanel()
 {
     if (!m_initCompleted) {
@@ -746,8 +778,9 @@ void PanelView::resizePanel()
     }
 
     if (size() != m_targetSize) {
-        Q_EMIT geometryChanged();
-        resize(m_targetSize);
+        // Q_EMIT geometryChanged();
+        // resize(m_targetSize);
+        beginSizeTransition();
     }
 
     // position will be updated implicitly from resizeEvent
@@ -1056,6 +1089,15 @@ void PanelView::adaptToScreen()
 bool PanelView::event(QEvent *e)
 {
     switch (e->type()) {
+    /*case QEvent::Expose: {
+        QRect rect = m_resizeAnimation.currentValue().toRect();
+        qWarning()<<"BBBC"<<rect<<size();
+        rect.moveCenter(QPoint(size().width()/2, size().height()/2));
+        m_resizeAnimation.targetObject()->setProperty("contentGeom", rect);
+        qWarning()<<"BBBB"<<rect<<size();
+        requestUpdate();
+        break;
+    }*/
     case QEvent::Enter:
         m_containsMouse = true;
         if (edgeActivated()) {
@@ -1517,6 +1559,31 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             connect(rootObject, SIGNAL(topPaddingChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(rightPaddingChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(leftPaddingChanged()), this, SLOT(updatePadding()));
+        }
+        if (1) {
+            m_resizeAnimation.setDuration(rootObject->property("floatingnessAnimationDuration").toInt());
+            qWarning() << "GGGGGGGGGGGGGGGGGGGGGGGGGGGG";
+            m_resizeAnimation.setTargetObject(rootObject);
+            m_resizeAnimation.setPropertyName(QByteArrayLiteral("contentGeom"));
+            connect(&m_resizeAnimation, &QPropertyAnimation::finished, rootObject, [this]() {
+                // setMinimumSize(m_targetSize);
+                // setMaximumSize(m_targetSize);
+                // m_resizeAnimation.targetObject()->setProperty("contentGeom", QRectF(QPointF(0,0), m_targetSize));
+                m_resizeAnimation.targetObject()->setProperty("contentGeom", QRectF(QPointF(0, 0), m_targetSize));
+                resize(m_targetSize);
+                // qWarning()<<"ANIM
+                // OVER2"<<width()/2-m_resizeAnimation.targetObject()->property("width").toReal()/2<<m_resizeAnimation.targetObject()->property("x");
+            });
+            connect(this, &PanelView::beforeFrameBegin, this, [this, rootObject]() {
+                /*if (m_resizeAnimation.state() == QAbstractAnimation::Stopped) {
+                    qWarning() << "SETTING" << QRectF(QPointF(0, 0), m_targetSize);
+                    m_resizeAnimation.targetObject()->setProperty("contentGeom", QRectF(QPointF(0, 0), m_targetSize));
+                }*/
+                QRect rect = m_resizeAnimation.currentValue().toRect();
+                rect.moveCenter(QPoint(size().width() / 2, size().height() / 2));
+                //  rootObject->setProperty("contentGeom", rect);
+                //    qWarning()<<"BBBB"<<rect<<size();
+            });
         }
         if (floatingSignal >= 0) {
             // Floating animation

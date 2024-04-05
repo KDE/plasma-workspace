@@ -285,6 +285,7 @@ private Q_SLOTS:
 private:
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
     void positionPanel();
+    void beginSizeTransition();
     void resizePanel();
     void integrateScreen();
     void updateEditModeLabel();
@@ -306,6 +307,7 @@ private:
     int m_rightPadding;
     double m_floatingness = 0.0;
     QPropertyAnimation m_floatingnessAnimation;
+    QPropertyAnimation m_resizeAnimation;
     QSize m_targetSize;
     int m_bottomFloatingPadding;
     int m_topFloatingPadding;
