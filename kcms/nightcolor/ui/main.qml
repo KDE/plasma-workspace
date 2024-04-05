@@ -21,6 +21,7 @@ KCM.SimpleKCM {
     property bool defaultRequested: false
     property QtObject locator
     readonly property bool doneLocating: locator && !(locator.latitude == 0 && locator.longitude == 0)
+    property bool configValid: !(kcm.nightColorSettings.mode === NightColorMode.Automatic && !kcm.nightColorSettings.autolocationConsented)
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
 
@@ -55,7 +56,7 @@ KCM.SimpleKCM {
     }
 
     Component.onCompleted: {
-        if (kcm.nightColorSettings.mode == NightColorMode.Automatic && kcm.nightColorSettings.active) {
+        if (kcm.nightColorSettings.mode == NightColorMode.Automatic && kcm.nightColorSettings.active && kcm.nightColorSettings.autolocationConsented) {
             startLocator();
         }
     }
@@ -116,7 +117,7 @@ KCM.SimpleKCM {
             readonly property var morningTimings: sunCalc.getMorningTimings(latitude, longitude)
             readonly property var eveningTimings: sunCalc.getEveningTimings(latitude, longitude)
 
-            enabled: kcm.nightColorSettings.active
+            enabled: kcm.nightColorSettings.active && root.configValid
 
             dayTemperature: kcm.nightColorSettings.dayTemperature
             nightTemperature: kcm.nightColorSettings.nightTemperature
@@ -165,7 +166,7 @@ KCM.SimpleKCM {
                         kcm.nightColorSettings.mode = currentIndex - 1;
                     }
                     kcm.nightColorSettings.active = (currentIndex !== 0);
-                    if (currentIndex - 1 == NightColorMode.Automatic && kcm.nightColorSettings.active) {
+                    if (currentIndex - 1 == NightColorMode.Automatic && kcm.nightColorSettings.active && kcm.nightColorSettings.autolocationConsented) {
                         startLocator();
                     } else {
                         endLocator();
@@ -183,7 +184,7 @@ KCM.SimpleKCM {
             GridLayout {
                 Kirigami.FormData.label: i18n("Day light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderDay
-                enabled: kcm.nightColorSettings.active && kcm.nightColorSettings.mode !== NightColorMode.Constant
+                enabled: kcm.nightColorSettings.active && kcm.nightColorSettings.mode !== NightColorMode.Constant && root.configValid
 
                 columns: 4
 
@@ -245,7 +246,7 @@ KCM.SimpleKCM {
             GridLayout {
                 Kirigami.FormData.label: i18n("Night light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderNight
-                enabled: kcm.nightColorSettings.active
+                enabled: kcm.nightColorSettings.active && root.configValid
 
                 columns: 4
 
@@ -345,6 +346,37 @@ KCM.SimpleKCM {
                     acceptedButtons: Qt.NoButton
                     cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
                 }
+            }
+
+            QQC2.CheckBox {
+                text: i18nc("@action:button", "Consent to location access")
+                visible: modeSwitcher.currentIndex - 1 === NightColorMode.Automatic && kcm.nightColorSettings.active
+                checked: kcm.nightColorSettings.autolocationConsented
+
+                Layout.preferredWidth: modeSwitcher.width
+                Layout.alignment: Qt.AlignHCenter
+
+                KCM.SettingStateBinding {
+                    configObject: kcm.nightColorSettings
+                    settingName: "AutolocationConsented"
+                    extraEnabledConditions: kcm.nightColorSettings.active
+                }
+
+                onToggled: {
+                    kcm.nightColorSettings.autolocationConsented = checked;
+                    if (checked) {
+                        startLocator();
+                    } else {
+                        endLocator();
+                    }
+                }
+            }
+
+            Kirigami.InlineMessage {
+                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active
+                    && !kcm.nightColorSettings.autolocationConsented
+                Layout.fillWidth: true
+                text: i18n("Please consent to location access, or choose a different switing times mode.")
             }
 
             // Show time entry fields in manual timings mode
@@ -455,6 +487,7 @@ KCM.SimpleKCM {
         Item {
             visible: kcm.nightColorSettings.active
                 && kcm.nightColorSettings.mode === NightColorMode.Automatic
+                && kcm.nightColorSettings.autolocationConsented
                 && (!locator || !root.doneLocating)
             Layout.topMargin: Kirigami.Units.largeSpacing * 4
             Layout.fillWidth: true

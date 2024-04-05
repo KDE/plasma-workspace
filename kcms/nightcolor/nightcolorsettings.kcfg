@@ -23,6 +23,9 @@
             </choices>
             <default>Automatic</default>
         </entry>
+        <entry name="AutolocationConsented" type="Bool">
+            <default>false</default>
+        </entry>
         <entry name="NightTemperatureEnabled" type="Bool">
             <default>true</default>
         </entry>
