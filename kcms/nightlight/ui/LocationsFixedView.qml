@@ -100,7 +100,7 @@ Kirigami.FormLayout {
                 QQC2.Button {
                     // HACK: using list-add and list-remove for more obvious/standard zoom icons till we change the Breeze ones
                     // https://bugs.kde.org/show_bug.cgi?id=435671
-                    text: i18n("Zoom in")
+                    text: i18n("Zoom out")
                     display: QQC2.AbstractButton.IconOnly
                     icon.name: kcm.isIconThemeBreeze() ? "list-remove" : "zoom-out"
                     activeFocusOnTab: false
