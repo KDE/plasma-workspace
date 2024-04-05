@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"POT-Creation-Date: 2024-04-05 02:43+0000\n"
 "PO-Revision-Date: 2023-07-29 12:08+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,33 +19,33 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "%1 vart kopla til."
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "Ei USB-eining vart kopla til."
 
-#: devicenotifications.cpp:278
+#: devicenotifications.cpp:281
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB-eining oppdaga"
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 vart kopla frå."
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "Ei USB-eining vart kopla frå."
 
-#: devicenotifications.cpp:298
+#: devicenotifications.cpp:302
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"POT-Creation-Date: 2024-04-05 02:43+0000\n"
 "PO-Revision-Date: 2023-07-21 06:33+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,33 +18,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "შეერთებულია %1."
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "შეერთებულია USB მოწყობილობა."
 
-#: devicenotifications.cpp:278
+#: devicenotifications.cpp:281
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "აღმოჩენილია USB მოწყობილობა"
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 გამოერთებულია."
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "USB მოწყობილობა გამოერთებულია."
 
-#: devicenotifications.cpp:298
+#: devicenotifications.cpp:302
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"POT-Creation-Date: 2024-04-05 02:43+0000\n"
 "PO-Revision-Date: 2024-03-30 19:38\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,33 +18,33 @@ msgstr ""
 "kded_devicenotifications.pot\n"
 "X-Crowdin-File-ID: 52662\n"
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "%1 已插入。"
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "已插入 USB 设备。"
 
-#: devicenotifications.cpp:278
+#: devicenotifications.cpp:281
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "检测到 USB 设备"
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 已拔出。"
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "已拔出 USB 设备。"
 
-#: devicenotifications.cpp:298
+#: devicenotifications.cpp:302
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

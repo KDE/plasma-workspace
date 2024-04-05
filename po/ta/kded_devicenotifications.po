@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"POT-Creation-Date: 2024-04-05 02:43+0000\n"
 "PO-Revision-Date: 2024-03-30 21:01+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,33 +17,33 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.1\n"
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "%1 சொருகப்பட்டுள்ளது."
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "USB சாதனம் சொருகப்பட்டுள்ளது."
 
-#: devicenotifications.cpp:278
+#: devicenotifications.cpp:281
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB சாதனம் கண்டறியப்பட்டது"
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 கழற்றப்பட்டுள்ளது"
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "ஓர் USB சாதனம் கழற்றப்பட்டுள்ளது."
 
-#: devicenotifications.cpp:298
+#: devicenotifications.cpp:302
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

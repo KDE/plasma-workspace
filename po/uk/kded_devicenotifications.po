@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-19 01:58+0000\n"
+"POT-Creation-Date: 2024-04-05 02:43+0000\n"
 "PO-Revision-Date: 2023-07-22 18:10+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -18,33 +18,33 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "%1 з'єднано."
 
-#: devicenotifications.cpp:275
+#: devicenotifications.cpp:278
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "З'єднано пристрій USB."
 
-#: devicenotifications.cpp:278
+#: devicenotifications.cpp:281
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Виявлено пристрій USB"
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 було від'єднано."
 
-#: devicenotifications.cpp:295
+#: devicenotifications.cpp:299
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "Пристрій USB від'єднано."
 
-#: devicenotifications.cpp:298
+#: devicenotifications.cpp:302
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
