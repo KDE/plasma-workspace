@@ -25,6 +25,7 @@ class SystemDialogTest(unittest.TestCase):
         options = AppiumOptions()
         options.set_capability("app", f"{os.getenv('QML_EXEC')} {os.path.join(os.path.dirname(os.path.realpath(__file__)), 'systemdialogtest.qml')}")
         options.set_capability("environ", {
+            "LC_ALL": "en_US.UTF-8",
             "QT_FATAL_WARNINGS": "1",
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false",
         })
