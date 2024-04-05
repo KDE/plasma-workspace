@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-04 00:40+0000\n"
-"PO-Revision-Date: 2024-03-26 12:06+0100\n"
+"PO-Revision-Date: 2024-04-04 20:44+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -184,13 +184,11 @@ msgid "Not charging"
 msgstr "Ez da zamatzen ari"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgid ""
-#| "Automatic sleep and screen locking are disabled; middle-clik to re-enable"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr ""
-"Automatikoki lokartzea eta pantaila-giltzatea ezgaituta dago; erdiko klik "
+"Lokartze automatikoa eta pantaila-giltzatea ezgaituta daude; erdiko klik "
 "berriz gaitzeko"
 
 #: package/contents/ui/main.qml:271

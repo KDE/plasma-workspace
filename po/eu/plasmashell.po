@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:40+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2024-03-26 12:01+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -298,47 +298,52 @@ msgstr "Erakutsi mahaigaina"
 msgid "Hide Desktop"
 msgstr "Ezkutatu mahaigaina"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:222
+#, kde-format
+msgid "Activate Application Launcher"
+msgstr ""
+
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Erakutsi jarduera aldatzailea"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Gelditu uneko jarduera"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:249
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Aldatu aurreko jarduerara"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Aldatu hurrengo jarduerara"
 
-#: shellcorona.cpp:265
+#: shellcorona.cpp:272
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktibatu Ataza Kudeatzaileko %1 sarrera"
 
-#: shellcorona.cpp:292
+#: shellcorona.cpp:299
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Panel eta mahaigain kudeaketa"
 
-#: shellcorona.cpp:314
+#: shellcorona.cpp:321
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mugitu teklatuaren arreta panelen artean"
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2071
 #, kde-format
 msgid "Add Panel"
 msgstr "Gehitu panela"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2113
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

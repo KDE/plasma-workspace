@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:40+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2023-11-06 10:03+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -297,47 +297,52 @@ msgstr "Zobrazit plochu"
 msgid "Hide Desktop"
 msgstr "Skrýt pracovní plochu"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:222
+#, kde-format
+msgid "Activate Application Launcher"
+msgstr ""
+
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Zobrazit přepínač aktivit"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Zastavit současnou aktivitu"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:249
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Přepnout na předchozí aktivitu"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Přepnout na následující aktivitu"
 
-#: shellcorona.cpp:265
+#: shellcorona.cpp:272
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktivovat záznam Správce úloh %1"
 
-#: shellcorona.cpp:292
+#: shellcorona.cpp:299
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr ""
 
-#: shellcorona.cpp:314
+#: shellcorona.cpp:321
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Přesunovat zaměření klávesnice mezi panely"
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2071
 #, kde-format
 msgid "Add Panel"
 msgstr "Přidat panel"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2113
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

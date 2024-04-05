@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-25 00:39+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2023-12-17 16:48+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,105 +27,105 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: calendar/eventdatadecorator.cpp:51
+#: calendar/eventdatadecorator.cpp:50
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
 msgstr "விடுமுறைகள்"
 
-#: calendar/eventdatadecorator.cpp:53
+#: calendar/eventdatadecorator.cpp:52
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
 msgstr "நிகழ்வுகள் "
 
-#: calendar/eventdatadecorator.cpp:55
+#: calendar/eventdatadecorator.cpp:54
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
 msgstr "செய்ய வேண்டியவை"
 
-#: calendar/eventdatadecorator.cpp:57
+#: calendar/eventdatadecorator.cpp:56
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "மற்றவை"
 
-#: calendar/qml/DayDelegate.qml:41
+#: calendar/qml/DayDelegate.qml:74
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "%1 நிகழ்வு"
 msgstr[1] "%1 நிகழ்வுகள்"
 
-#: calendar/qml/DayDelegate.qml:41
+#: calendar/qml/DayDelegate.qml:75
 #, kde-format
 msgid "No events"
 msgstr "நிகழ்வுகள் இல்லை"
 
-#: calendar/qml/MonthViewHeader.qml:67
+#: calendar/qml/MonthViewHeader.qml:73
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:114
+#: calendar/qml/MonthViewHeader.qml:129
 #, kde-format
 msgid "Days"
 msgstr "நாட்கள்"
 
-#: calendar/qml/MonthViewHeader.qml:120
+#: calendar/qml/MonthViewHeader.qml:135
 #, kde-format
 msgid "Months"
 msgstr "மாதங்கள்"
 
-#: calendar/qml/MonthViewHeader.qml:126
+#: calendar/qml/MonthViewHeader.qml:141
 #, kde-format
 msgid "Years"
 msgstr "வருடங்கள்"
 
-#: calendar/qml/MonthViewHeader.qml:164
+#: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
 msgid "Previous Month"
 msgstr "முந்தைய மாதம்"
 
-#: calendar/qml/MonthViewHeader.qml:166
+#: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Year"
 msgstr "முந்தைய ஆண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:168
+#: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Decade"
 msgstr "முந்தைய பத்தாண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "இன்று"
 
-#: calendar/qml/MonthViewHeader.qml:186
+#: calendar/qml/MonthViewHeader.qml:201
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "நாள்காட்டியை இன்றைய தேதிக்கு மீட்டமை"
 
-#: calendar/qml/MonthViewHeader.qml:197
+#: calendar/qml/MonthViewHeader.qml:212
 #, kde-format
 msgid "Next Month"
 msgstr "அடுத்த மாதம்"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Year"
 msgstr "அடுத்த ஆண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:201
+#: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Decade"
 msgstr "அடுத்த பத்தாண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:257
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"

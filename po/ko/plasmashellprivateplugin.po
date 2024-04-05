@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-25 00:39+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 19:44+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,104 +27,104 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: calendar/eventdatadecorator.cpp:51
+#: calendar/eventdatadecorator.cpp:50
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
 msgstr "공휴일"
 
-#: calendar/eventdatadecorator.cpp:53
+#: calendar/eventdatadecorator.cpp:52
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
 msgstr "이벤트"
 
-#: calendar/eventdatadecorator.cpp:55
+#: calendar/eventdatadecorator.cpp:54
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
 msgstr "할 일"
 
-#: calendar/eventdatadecorator.cpp:57
+#: calendar/eventdatadecorator.cpp:56
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "기타"
 
-#: calendar/qml/DayDelegate.qml:41
+#: calendar/qml/DayDelegate.qml:74
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "행사 %1개"
 
-#: calendar/qml/DayDelegate.qml:41
+#: calendar/qml/DayDelegate.qml:75
 #, kde-format
 msgid "No events"
 msgstr "행사 없음"
 
-#: calendar/qml/MonthViewHeader.qml:67
+#: calendar/qml/MonthViewHeader.qml:73
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%2년 %1"
 
-#: calendar/qml/MonthViewHeader.qml:114
+#: calendar/qml/MonthViewHeader.qml:129
 #, kde-format
 msgid "Days"
 msgstr "일"
 
-#: calendar/qml/MonthViewHeader.qml:120
+#: calendar/qml/MonthViewHeader.qml:135
 #, kde-format
 msgid "Months"
 msgstr "월"
 
-#: calendar/qml/MonthViewHeader.qml:126
+#: calendar/qml/MonthViewHeader.qml:141
 #, kde-format
 msgid "Years"
 msgstr "년"
 
-#: calendar/qml/MonthViewHeader.qml:164
+#: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
 msgid "Previous Month"
 msgstr "이전 달"
 
-#: calendar/qml/MonthViewHeader.qml:166
+#: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Year"
 msgstr "이전 해"
 
-#: calendar/qml/MonthViewHeader.qml:168
+#: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Decade"
 msgstr "이전 10년"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "오늘"
 
-#: calendar/qml/MonthViewHeader.qml:186
+#: calendar/qml/MonthViewHeader.qml:201
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "오늘로 달력 초기화"
 
-#: calendar/qml/MonthViewHeader.qml:197
+#: calendar/qml/MonthViewHeader.qml:212
 #, kde-format
 msgid "Next Month"
 msgstr "다음 달"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Year"
 msgstr "다음 해"
 
-#: calendar/qml/MonthViewHeader.qml:201
+#: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Decade"
 msgstr "다음 10년"
 
-#: calendar/qml/MonthViewHeader.qml:257
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "열린 상태로 유지"

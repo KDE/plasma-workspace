@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-25 00:39+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2023-11-28 19:46+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -27,105 +27,105 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mkondarev@yahoo.de"
 
-#: calendar/eventdatadecorator.cpp:51
+#: calendar/eventdatadecorator.cpp:50
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
 msgstr "Почивни дни"
 
-#: calendar/eventdatadecorator.cpp:53
+#: calendar/eventdatadecorator.cpp:52
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
 msgstr "Събития"
 
-#: calendar/eventdatadecorator.cpp:55
+#: calendar/eventdatadecorator.cpp:54
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
 msgstr "Задачи"
 
-#: calendar/eventdatadecorator.cpp:57
+#: calendar/eventdatadecorator.cpp:56
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Други"
 
-#: calendar/qml/DayDelegate.qml:41
+#: calendar/qml/DayDelegate.qml:74
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "%1 събитие"
 msgstr[1] "%1 събития"
 
-#: calendar/qml/DayDelegate.qml:41
+#: calendar/qml/DayDelegate.qml:75
 #, kde-format
 msgid "No events"
 msgstr "Няма събития"
 
-#: calendar/qml/MonthViewHeader.qml:67
+#: calendar/qml/MonthViewHeader.qml:73
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:114
+#: calendar/qml/MonthViewHeader.qml:129
 #, kde-format
 msgid "Days"
 msgstr "Дни"
 
-#: calendar/qml/MonthViewHeader.qml:120
+#: calendar/qml/MonthViewHeader.qml:135
 #, kde-format
 msgid "Months"
 msgstr "Месеци"
 
-#: calendar/qml/MonthViewHeader.qml:126
+#: calendar/qml/MonthViewHeader.qml:141
 #, kde-format
 msgid "Years"
 msgstr "Години"
 
-#: calendar/qml/MonthViewHeader.qml:164
+#: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
 msgid "Previous Month"
 msgstr "Предишен месец"
 
-#: calendar/qml/MonthViewHeader.qml:166
+#: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Year"
 msgstr "Предходна година"
 
-#: calendar/qml/MonthViewHeader.qml:168
+#: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Decade"
 msgstr "Предишно десетилетие"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Днес"
 
-#: calendar/qml/MonthViewHeader.qml:186
+#: calendar/qml/MonthViewHeader.qml:201
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Нулиране календара до днешната дата"
 
-#: calendar/qml/MonthViewHeader.qml:197
+#: calendar/qml/MonthViewHeader.qml:212
 #, kde-format
 msgid "Next Month"
 msgstr "Следващ месец"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Year"
 msgstr "Следваща година"
 
-#: calendar/qml/MonthViewHeader.qml:201
+#: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Decade"
 msgstr "Следващо десетилетие"
 
-#: calendar/qml/MonthViewHeader.qml:257
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "Задържане отворен"

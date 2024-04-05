@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-25 00:39+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2023-04-07 23:52-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -27,104 +27,104 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ryuichi_ya220@outlook.jp"
 
-#: calendar/eventdatadecorator.cpp:51
+#: calendar/eventdatadecorator.cpp:50
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
 msgstr "祝日"
 
-#: calendar/eventdatadecorator.cpp:53
+#: calendar/eventdatadecorator.cpp:52
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
 msgstr "イベント"
 
-#: calendar/eventdatadecorator.cpp:55
+#: calendar/eventdatadecorator.cpp:54
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
 msgstr "Todo"
 
-#: calendar/eventdatadecorator.cpp:57
+#: calendar/eventdatadecorator.cpp:56
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "その他"
 
-#: calendar/qml/DayDelegate.qml:41
+#: calendar/qml/DayDelegate.qml:74
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] "%1 イベント"
 
-#: calendar/qml/DayDelegate.qml:41
+#: calendar/qml/DayDelegate.qml:75
 #, kde-format
 msgid "No events"
 msgstr "イベントなし"
 
-#: calendar/qml/MonthViewHeader.qml:67
+#: calendar/qml/MonthViewHeader.qml:73
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%2年 %1"
 
-#: calendar/qml/MonthViewHeader.qml:114
+#: calendar/qml/MonthViewHeader.qml:129
 #, kde-format
 msgid "Days"
 msgstr "日"
 
-#: calendar/qml/MonthViewHeader.qml:120
+#: calendar/qml/MonthViewHeader.qml:135
 #, kde-format
 msgid "Months"
 msgstr "月"
 
-#: calendar/qml/MonthViewHeader.qml:126
+#: calendar/qml/MonthViewHeader.qml:141
 #, kde-format
 msgid "Years"
 msgstr "年"
 
-#: calendar/qml/MonthViewHeader.qml:164
+#: calendar/qml/MonthViewHeader.qml:179
 #, kde-format
 msgid "Previous Month"
 msgstr "前の月"
 
-#: calendar/qml/MonthViewHeader.qml:166
+#: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Year"
 msgstr "前の年"
 
-#: calendar/qml/MonthViewHeader.qml:168
+#: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Decade"
 msgstr "前の十年"
 
-#: calendar/qml/MonthViewHeader.qml:185
+#: calendar/qml/MonthViewHeader.qml:200
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "今日"
 
-#: calendar/qml/MonthViewHeader.qml:186
+#: calendar/qml/MonthViewHeader.qml:201
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "カレンダーを今日にリセット"
 
-#: calendar/qml/MonthViewHeader.qml:197
+#: calendar/qml/MonthViewHeader.qml:212
 #, kde-format
 msgid "Next Month"
 msgstr "次の月"
 
-#: calendar/qml/MonthViewHeader.qml:199
+#: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Year"
 msgstr "次の年"
 
-#: calendar/qml/MonthViewHeader.qml:201
+#: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Decade"
 msgstr "次の十年"
 
-#: calendar/qml/MonthViewHeader.qml:257
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "開けたままにする"

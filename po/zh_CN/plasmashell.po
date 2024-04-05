@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:40+0000\n"
+"POT-Creation-Date: 2024-04-05 00:39+0000\n"
 "PO-Revision-Date: 2024-03-30 19:36\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -294,47 +294,52 @@ msgstr "显示桌面"
 msgid "Hide Desktop"
 msgstr "隐藏桌面"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:222
+#, kde-format
+msgid "Activate Application Launcher"
+msgstr ""
+
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "显示活动切换器"
 
-#: shellcorona.cpp:234
+#: shellcorona.cpp:241
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "停止当前活动"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:249
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "切换到上一个活动"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "切换到下一个活动"
 
-#: shellcorona.cpp:265
+#: shellcorona.cpp:272
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "激活任务管理器条目 %1"
 
-#: shellcorona.cpp:292
+#: shellcorona.cpp:299
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "面板和桌面管理"
 
-#: shellcorona.cpp:314
+#: shellcorona.cpp:321
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "在面板之间移动键盘焦点"
 
-#: shellcorona.cpp:2064
+#: shellcorona.cpp:2071
 #, kde-format
 msgid "Add Panel"
 msgstr "添加面板"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2113
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
