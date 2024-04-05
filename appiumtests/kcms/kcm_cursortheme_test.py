@@ -54,6 +54,7 @@ class KCMCursorThemeTest(unittest.TestCase):
         options.set_capability("timeouts", {'implicit': 10000})
         # From XCURSORPATH
         options.set_capability("environ", {
+            "LC_ALL": "en_US.UTF-8",
             "XCURSOR_PATH": icons_folder,
             "QT_LOGGING_RULES": "kcm_cursortheme.debug=true",
         })
