@@ -5,6 +5,8 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
@@ -23,7 +25,7 @@ ColumnLayout {
     property int nightTemperature: 4200
 
     readonly property bool show24h: true // TODO: Get from user's prefernces
-    readonly property bool singleColor: root.alwaysOn || !root.enabled
+    readonly property bool singleColor: alwaysOn || !enabled
 
     Rectangle {
         id: view
@@ -48,49 +50,63 @@ ColumnLayout {
             readonly property color nightColor: colorForTemp(root.nightTemperature)
             readonly property color edgeColor: (root.nightTransitionOn < root.dayTransitionOff) ? dayColor : nightColor
 
-            GradientStop { position: dayTransitionOn/1440; color: grad.nightColor }
-            GradientStop { position: dayTransitionOff/1440; color: grad.dayColor }
-            GradientStop { position: nightTransitionOn/1440; color: grad.dayColor }
-            GradientStop { position: nightTransitionOff/1440; color: grad.nightColor }
+            GradientStop { position: root.dayTransitionOn / 1440; color: grad.nightColor }
+            GradientStop { position: root.dayTransitionOff / 1440; color: grad.dayColor }
+            GradientStop { position: root.nightTransitionOn / 1440; color: grad.dayColor }
+            GradientStop { position: root.nightTransitionOff / 1440; color: grad.nightColor }
             // Keep the edge gradient stops at the end of the list, so the dynamic values cannot override them
             GradientStop { position: 0; color: grad.edgeColor }
             GradientStop { position: 1; color: grad.edgeColor }
         }
 
         Repeater {
-            model: (root.singleColor) ? [ { left: 0, right: 1440, isNight: true } ] : [
-                { left: 0, right: Math.min(root.dayTransitionOff, root.nightTransitionOn),
-                    isNight: root.dayTransitionOn < root.nightTransitionOn,
-                    overflow: root.dayTransitionOff < root.dayTransitionOn },
-                { left: root.dayTransitionOff, right: root.nightTransitionOn,
-                    isNight: root.dayTransitionOff > root.nightTransitionOn },
-                { left: Math.max(root.dayTransitionOff, root.nightTransitionOff), right: 1440,
-                    isNight: root.dayTransitionOff < root.nightTransitionOff,
-                    overflow: root.nightTransitionOff < root.nightTransitionOn },
-            ]
+            model: root.singleColor
+                ? [ { left: 0, right: 1440, isNight: true, overflow: false } ]
+                : [
+                    {
+                        left: 0,
+                        right: Math.min(root.dayTransitionOff, root.nightTransitionOn),
+                        isNight: root.dayTransitionOn < root.nightTransitionOn,
+                        overflow: root.dayTransitionOff < root.dayTransitionOn,
+                    },
+                    {
+                        left: root.dayTransitionOff,
+                        right: root.nightTransitionOn,
+                        isNight: root.dayTransitionOff > root.nightTransitionOn,
+                        overflow: false
+                    },
+                    {
+                        left: Math.max(root.dayTransitionOff, root.nightTransitionOff),
+                        right: 1440,
+                        isNight: root.dayTransitionOff < root.nightTransitionOff,
+                        overflow: root.nightTransitionOff < root.nightTransitionOn,
+                    },
+                ]
 
             Kirigami.Icon {
+                required property var modelData
+
                 source: {
                     if (!root.enabled) {
                         return 'redshift-status-off'
                     }
                     if (modelData.isNight) {
-                        return nightTemperature == 6500 ? 'weather-clear-night-symbolic': 'redshift-status-on'
+                        return root.nightTemperature === 6500 ? 'weather-clear-night-symbolic': 'redshift-status-on'
                     }
-                    return dayTemperature == 6500 ? 'weather-clear-symbolic' : 'redshift-status-day'
+                    return root.dayTemperature === 6500 ? 'weather-clear-symbolic' : 'redshift-status-day'
                 }
                 width: Kirigami.Units.iconSizes.medium
                 height: width
-                x: (modelData.left + modelData.right)/2/1440 * parent.width - width/2
+                x: (modelData.left + modelData.right) / 2 / 1440 * parent.width - width / 2
                 y: (parent.height - height) / 2
-                visible: Math.abs(modelData.right - modelData.left) > 2 * width && !modelData?.overflow
+                visible: Math.abs(modelData.right - modelData.left) > 2 * width && !modelData.overflow
                 // The view background is always light except when disabled
                 color: root.enabled ? 'black'  : Kirigami.Theme.textColor
             }
         }
 
         Kirigami.Icon {
-            x: Math.round(now.minutes/1440 * view.width - width/2)
+            x: Math.round(now.minutes / 1440 * view.width - width / 2)
             anchors.top: parent.bottom
             source: "draw-triangle4-symbolic"  // Pointing-down triangle
             color: Kirigami.Theme.textColor
@@ -104,7 +120,7 @@ ColumnLayout {
                 repeat: true
                 running: true
                 triggeredOnStart: true
-                onTriggered: minutes = minutesForDate(new Date())
+                onTriggered: minutes = root.minutesForDate(new Date())
             }
         }
 
@@ -114,18 +130,18 @@ ColumnLayout {
 
         QQC2.ToolTip {
             readonly property string eveningChange: i18n("Color temperature begins changing to night time at %1 and is fully changed by %2",
-                                                        prettyTime(nightTransitionOn), prettyTime(nightTransitionOff))
+                prettyTime(root.nightTransitionOn), prettyTime(root.nightTransitionOff))
 
-            readonly property string morningChange: i18n("Color temperature begins changing to day time at %1 and is fully changed by %2", prettyTime(dayTransitionOn),
-                                                        prettyTime(dayTransitionOff))
+            readonly property string morningChange: i18n("Color temperature begins changing to day time at %1 and is fully changed by %2",
+                prettyTime(root.dayTransitionOn), prettyTime(root.dayTransitionOff))
 
             text: `${eveningChange}\n\n${morningChange}`
             visible: hover.hovered && !root.singleColor
 
-            function prettyTime(minutes) {
-                const date = new Date()
-                date.setHours(minutes / 60)
-                date.setMinutes(minutes % 60)
+            function prettyTime(minutes: int): string {
+                const date = new Date();
+                date.setHours(minutes / 60);
+                date.setMinutes(minutes % 60);
                 return date.toLocaleString(Qt.locale(), "h:mm");
             }
         }
@@ -138,6 +154,8 @@ ColumnLayout {
         Repeater {
             model: 25
             delegate: QQC2.Label {
+                required property int index
+
                 Layout.fillWidth: true
                 Layout.preferredWidth: 10  // The actual value doesn't matter. It just makes the labels the same size
                 Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
@@ -146,8 +164,8 @@ ColumnLayout {
                     if (root.show24h) {
                         return `${index % 24}`
                     }
-                    if (index % 12 == 0) {
-                        return (index % 24 == 0) ? '12\nAM' : '12\nPM'
+                    if (index % 12 === 0) {
+                        return (index % 24 === 0) ? '12\nAM' : '12\nPM'
                     }
                     return `${index % 12}`
                 }
@@ -157,11 +175,11 @@ ColumnLayout {
         }
     }
 
-    function minutesForDate(date) {
+    function minutesForDate(date: date): int {
         return date.getHours() * 60 + date.getMinutes()
     }
 
-    function isThemeDark() {
+    function isThemeDark(): bool {
         const bg = Kirigami.Theme.backgroundColor;
         const gray = (bg.r + bg.g + bg.b) / 3;
         return (gray < 192);

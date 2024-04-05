@@ -5,62 +5,59 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts as QQL2
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
-QQL2.RowLayout {
-    property string backend
+RowLayout {
+    id: root
 
-    QQC2.SpinBox {
-        id: hoursField
+    property string backend: "0000"
 
-        QQC2.ToolTip.text: i18nc("@info:tooltip Part of a control for setting a time", "hour")
-        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay 
+    spacing: Kirigami.Units.smallSpacing
+
+    component TimePartSpinBox : QQC2.SpinBox {
+        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
         QQC2.ToolTip.visible: hovered || activeFocus
-        
-        from: 0
-        to: 23
+
         editable: true
 
-        onValueModified: {
-            updateBackendFromFields()
-        }
         textFromValue: function(value, locale) {
             return value.toString().padStart(2, "0");
         }
+
         valueFromText: function(text, locale) {
             return parseInt(text);
         }
+
+        onValueModified: {
+            root.updateBackendFromFields();
+        }
+    }
+
+    TimePartSpinBox {
+        id: hoursField
+
+        QQC2.ToolTip.text: i18nc("@info:tooltip Part of a control for setting a time", "hour")
+
+        from: 0
+        to: 23
     }
 
     QQC2.Label {
         text: i18nc("Time separator between hours and minutes", ":")
     }
 
-    QQC2.SpinBox {
+    TimePartSpinBox {
         id: minutesField
 
         QQC2.ToolTip.text: i18nc("@info:tooltip Part of a control for setting a time", "minute")
-        QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay 
-        QQC2.ToolTip.visible: hovered || activeFocus
-        
+
         from: 0
         to: 59
         stepSize: 5
-        editable: true
-
-        onValueModified: {
-            updateBackendFromFields()
-        }
-        textFromValue: function(value, locale) {
-            return value.toString().padStart(2, "0");
-        }
-        valueFromText: function(text, locale) {
-            return parseInt(text);
-        }
     }
 
     function updateFieldsFromBackend(): void {
@@ -79,23 +76,22 @@ QQL2.RowLayout {
         updateFieldsFromBackend();
     }
 
-    function backendToDate() {
+    function backendToDate(): date {
         if (!backend || backend.length !== 4) {
             return;
         }
-        var hours = backend.slice(0, 2);
-        var minutes = backend.slice(2, 4);
-        var date = new Date();
+        const hours = backend.slice(0, 2);
+        const minutes = backend.slice(2, 4);
+        const date = new Date();
         date.setHours(hours, minutes, 0, 0);
-        return date;
         return date;
     }
 
-    function getNormedDate(): void {
-        var nD = new Date();
-        var d = backendToDate();
-        nD.setHours(d.getHours());
-        nD.setMinutes(d.getMinutes());
-        return nD;
+    function getNormedDate(): date {
+        const normedDate = new Date();
+        const backendDate = backendToDate();
+        normedDate.setHours(backendDate.getHours());
+        normedDate.setMinutes(backendDate.getMinutes());
+        return normedDate;
     }
 }
