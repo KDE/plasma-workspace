@@ -10,6 +10,7 @@
 
 #include "klipper.h"
 
+#include <chrono>
 #include <zlib.h>
 
 #include "klipper_debug.h"
@@ -22,6 +23,7 @@
 #include <QMenu>
 #include <QMessageBox>
 #include <QPushButton>
+#include <QResizeEvent>
 #include <QSaveFile>
 #include <QtConcurrentRun>
 
@@ -32,7 +34,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KNotification>
-#include <KSystemClipboard>
 #include <KToggleAction>
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/plasmashell.h>
@@ -48,57 +49,24 @@
 #include "historystringitem.h"
 #include "klipperpopup.h"
 #include "klippersettings.h"
+#include "systemclipboard.h"
 
 #include <Prison/Barcode>
 
 #include <config-X11.h>
 #if HAVE_X11
 #include <private/qtx11extras_p.h>
-
-#include <chrono>
 #include <xcb/xcb.h>
-
-using namespace std::chrono_literals;
 #endif
 
-namespace
-{
-/**
- * Use this when manipulating the clipboard
- * from within clipboard-related signals.
- *
- * This avoids issues such as mouse-selections that immediately
- * disappear.
- * pattern: Resource Acquisition is Initialisation (RAII)
- *
- * (This is not threadsafe, so don't try to use such in threaded
- * applications).
- */
-struct Ignore {
-    Ignore(int &locklevel)
-        : locklevelref(locklevel)
-    {
-        locklevelref++;
-    }
-    ~Ignore()
-    {
-        locklevelref--;
-    }
-
-private:
-    int &locklevelref;
-};
-}
+using namespace std::chrono_literals;
 
 // config == KGlobal::config for process, otherwise applet
 Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     : QObject(parent)
-    , m_overflowCounter(0)
+    , m_clip(SystemClipboard::self())
     , m_quitAction(nullptr)
-    , m_selectionLocklevel(0)
-    , m_clipboardLocklevel(0)
     , m_config(config)
-    , m_pendingContentsCheck(false)
     , m_saveFileTimer(nullptr)
     , m_plasmashell(nullptr)
 {
@@ -107,15 +75,8 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
                                                  this,
                                                  QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
-    updateTimestamp(); // read initial X user time
-    m_clip = KSystemClipboard::instance();
-
-    connect(m_clip, &KSystemClipboard::changed, this, &Klipper::newClipData);
-
-    connect(&m_overflowClearTimer, &QTimer::timeout, this, &Klipper::slotClearOverflow);
-
-    m_pendingCheckTimer.setSingleShot(true);
-    connect(&m_pendingCheckTimer, &QTimer::timeout, this, &Klipper::slotCheckPending);
+    connect(m_clip.get(), &SystemClipboard::ignored, this, &Klipper::slotIgnored);
+    connect(m_clip.get(), &SystemClipboard::newClipData, this, &Klipper::checkClipData);
 
     m_history = new History(this);
     m_popup = new KlipperPopup(m_history);
@@ -262,8 +223,6 @@ void Klipper::setClipboardContents(const QString &s)
 {
     if (s.isEmpty())
         return;
-    Ignore selectionLock(m_selectionLocklevel);
-    Ignore clipboardLock(m_clipboardLocklevel);
     updateTimestamp();
     HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
     setClipboard(*item, Clipboard | Selection);
@@ -303,6 +262,11 @@ void Klipper::loadSettings()
     m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
     m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
+    if (m_bNoNullClipboard) {
+        connect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &Klipper::slotReceivedEmptyClipboard, Qt::UniqueConnection);
+    } else {
+        disconnect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &Klipper::slotReceivedEmptyClipboard);
+    }
     // 0 is the id of "Ignore selection" radiobutton
     m_bIgnoreSelection = KlipperSettings::ignoreSelection();
     m_bIgnoreImages = KlipperSettings::ignoreImages();
@@ -559,6 +523,28 @@ void Klipper::slotQuit()
     qApp->quit();
 }
 
+void Klipper::slotIgnored(QClipboard::Mode mode)
+{
+    // internal to klipper, ignoring QSpinBox selections
+    // keep our old clipboard, thanks
+    // This won't quite work, but it's close enough for now.
+    // The trouble is that the top selection =! top clipboard
+    // but we don't track that yet. We will....
+    if (auto top = history()->first()) {
+        setClipboard(*top, mode);
+    }
+}
+
+void Klipper::slotReceivedEmptyClipboard(QClipboard::Mode mode)
+{
+    Q_ASSERT(m_bNoNullClipboard);
+    if (auto top = history()->first()) {
+        // keep old clipboard after someone set it to null
+        qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
+        setClipboard(*top, mode, ClipboardUpdateReason::PreventEmptyClipboard);
+    }
+}
+
 void Klipper::slotPopupMenu()
 {
     m_popup->ensureClean();
@@ -591,7 +577,7 @@ void Klipper::setURLGrabberEnabled(bool enable)
 
 void Klipper::slotHistoryTopChanged()
 {
-    if (m_selectionLocklevel || m_clipboardLocklevel) {
+    if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
         return;
     }
 
@@ -606,19 +592,16 @@ void Klipper::slotHistoryTopChanged()
 
 void Klipper::slotClearClipboard()
 {
-    Ignore selectionLock(m_selectionLocklevel);
-    Ignore clipboardLock(m_clipboardLocklevel);
-
     m_clip->clear(QClipboard::Selection);
     m_clip->clear(QClipboard::Clipboard);
 }
 
 HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData, bool selectionMode)
 {
-    if ((selectionMode && m_selectionLocklevel) || (!selectionMode && m_clipboardLocklevel)) {
+    if ((selectionMode && m_clip->isLocked(QClipboard::Selection)) || (!selectionMode && m_clip->isLocked(QClipboard::Clipboard))) {
         return HistoryItemPtr();
     }
-    Ignore lock(selectionMode ? m_selectionLocklevel : m_clipboardLocklevel);
+    Ignore lock = m_clip->lockGuard(selectionMode ? QClipboard::Selection : QClipboard::Clipboard);
 
     if (!(history()->empty())) {
         if (m_bIgnoreImages && history()->first()->type() == HistoryItemType::Image) {
@@ -639,18 +622,6 @@ HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData, bool selecti
     return item;
 }
 
-void Klipper::newClipData(QClipboard::Mode mode)
-{
-    if ((mode == QClipboard::Clipboard && m_clipboardLocklevel) || (mode == QClipboard::Selection && m_selectionLocklevel)) {
-        return;
-    }
-
-    if (mode == QClipboard::Selection && blockFetchingNewData())
-        return;
-
-    checkClipData(mode == QClipboard::Selection ? true : false);
-}
-
 void Klipper::slotHistoryChanged()
 {
     if (history()->empty()) {
@@ -658,127 +629,29 @@ void Klipper::slotHistoryChanged()
     }
 }
 
-// Protection against too many clipboard data changes. Lyx responds to clipboard data
-// requests with setting new clipboard data, so if Lyx takes over clipboard,
-// Klipper notices, requests this data, this triggers "new" clipboard contents
-// from Lyx, so Klipper notices again, requests this data, ... you get the idea.
-const int MAX_CLIPBOARD_CHANGES = 10; // max changes per second
-
-bool Klipper::blockFetchingNewData()
+void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
 {
-#if HAVE_X11
-    // Hacks for #85198 and #80302.
-    // #85198 - block fetching new clipboard contents if Shift is pressed and mouse is not,
-    //   this may mean the user is doing selection using the keyboard, in which case
-    //   it's possible the app sets new clipboard contents after every change - Klipper's
-    //   history would list them all.
-    // #80302 - OOo (v1.1.3 at least) has a bug that if Klipper requests its clipboard contents
-    //   while the user is doing a selection using the mouse, OOo stops updating the clipboard
-    //   contents, so in practice it's like the user has selected only the part which was
-    //   selected when Klipper asked first.
-    // Use XQueryPointer rather than QApplication::mouseButtons()/keyboardModifiers(), because
-    //   Klipper needs the very current state.
-    if (!KWindowSystem::isPlatformX11()) {
-        return false;
-    }
-    xcb_connection_t *c = QX11Info::connection();
-    const xcb_query_pointer_cookie_t cookie = xcb_query_pointer_unchecked(c, QX11Info::appRootWindow());
-    UniqueCPointer<xcb_query_pointer_reply_t> queryPointer(xcb_query_pointer_reply(c, cookie, nullptr));
-    if (!queryPointer) {
-        return false;
-    }
-    if (((queryPointer->mask & (XCB_KEY_BUT_MASK_SHIFT | XCB_KEY_BUT_MASK_BUTTON_1)) == XCB_KEY_BUT_MASK_SHIFT) // BUG: 85198
-        || ((queryPointer->mask & XCB_KEY_BUT_MASK_BUTTON_1) == XCB_KEY_BUT_MASK_BUTTON_1)) { // BUG: 80302
-        m_pendingContentsCheck = true;
-        m_pendingCheckTimer.start(100ms);
-        return true;
-    }
-    m_pendingContentsCheck = false;
-    if (m_overflowCounter == 0)
-        m_overflowClearTimer.start(1s);
-    if (++m_overflowCounter > MAX_CLIPBOARD_CHANGES)
-        return true;
-#endif
-    return false;
-}
-
-void Klipper::slotCheckPending()
-{
-    if (!m_pendingContentsCheck)
-        return;
-    m_pendingContentsCheck = false; // blockFetchingNewData() will be called again
-    updateTimestamp();
-    newClipData(QClipboard::Selection); // always selection
-}
-
-void Klipper::checkClipData(bool selectionMode)
-{
-    if (ignoreClipboardChanges()) // internal to klipper, ignoring QSpinBox selections
-    {
-        // keep our old clipboard, thanks
-        // This won't quite work, but it's close enough for now.
-        // The trouble is that the top selection =! top clipboard
-        // but we don't track that yet. We will....
-        auto top = history()->first();
-        if (top) {
-            setClipboard(*top, selectionMode ? Selection : Clipboard);
-        }
-        return;
-    }
-
-    qCDebug(KLIPPER_LOG) << "Checking clip data";
-
-    const QMimeData *data = m_clip->mimeData(selectionMode ? QClipboard::Selection : QClipboard::Clipboard);
-
-    bool clipEmpty = false;
     bool changed = true; // ### FIXME (only relevant under polling, might be better to simply remove polling and rely on XFixes)
-    if (!data) {
-        clipEmpty = true;
-    } else {
-        clipEmpty = data->formats().isEmpty();
-        if (clipEmpty) {
-            // Might be a timeout. Try again
-            clipEmpty = data->formats().isEmpty();
-            qCDebug(KLIPPER_LOG) << "was empty. Retried, now " << (clipEmpty ? " still empty" : " no longer empty");
-        }
-    }
-
-    if (changed && clipEmpty && m_bNoNullClipboard) {
-        auto top = history()->first();
-        if (top) {
-            // keep old clipboard after someone set it to null
-            qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
-            setClipboard(*top, selectionMode ? Selection : Clipboard, ClipboardUpdateReason::PreventEmptyClipboard);
-        }
-        return;
-    } else if (clipEmpty) {
-        return;
-    }
 
     // this must be below the "bNoNullClipboard" handling code!
     // XXX: I want a better handling of selection/clipboard in general.
     // XXX: Order sensitive code. Must die.
+    const bool selectionMode = mode == QClipboard::Selection;
     if (selectionMode && m_bIgnoreSelection)
         return;
 
     if (selectionMode && m_bSelectionTextOnly && !data->hasText())
         return;
 
-    if (data->hasUrls())
-        ; // ok
-    else if (data->hasText())
-        ; // ok
-    else if (data->hasImage()) {
-        if (m_bIgnoreImages && !data->hasFormat(QStringLiteral("x-kde-force-image-copy")))
-            return;
-    } else // unknown, ignore
+    if (m_bIgnoreImages && data->hasImage() && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
         return;
+    }
 
     HistoryItemPtr item = applyClipChanges(data, selectionMode);
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize && item) {
-            setClipboard(*item, selectionMode ? Clipboard : Selection);
+            setClipboard(*item, mode);
         }
     }
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
@@ -799,8 +672,6 @@ void Klipper::checkClipData(bool selectionMode)
 
 void Klipper::setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason)
 {
-    Ignore lock(mode == Selection ? m_selectionLocklevel : m_clipboardLocklevel);
-
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
     if (mode & Selection) {
@@ -819,18 +690,6 @@ void Klipper::setClipboard(const HistoryItem &item, int mode, ClipboardUpdateRea
         }
         m_clip->setMimeData(mimeData, QClipboard::Clipboard);
     }
-}
-
-void Klipper::slotClearOverflow()
-{
-    m_overflowClearTimer.stop();
-
-    if (m_overflowCounter > MAX_CLIPBOARD_CHANGES) {
-        qCDebug(KLIPPER_LOG) << "App owning the clipboard/selection is lame";
-        // update to the latest data - this unfortunately may trigger the problem again
-        newClipData(QClipboard::Selection); // Always the selection.
-    }
-    m_overflowCounter = 0;
 }
 
 QStringList Klipper::getClipboardHistoryMenu()

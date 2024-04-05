@@ -20,6 +20,7 @@ set(libklipper_common_SRCS
     editcommanddialog.cpp
     clipcommandprocess.cpp
     utils.cpp
+    systemclipboard.cpp
 )
 
 ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h IDENTIFIER KLIPPER_LOG CATEGORY_NAME org.kde.klipper DESCRIPTION "klipper" EXPORT KLIPPER)
@@ -50,6 +51,7 @@ target_link_libraries(libklipper_common_static
     Plasma::KWaylandClient
     KF6::IconThemes
     KF6::IconWidgets
+    Wayland::Client
     ${ZLIB_LIBRARY})
 
 if (HAVE_X11)

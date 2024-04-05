@@ -14,14 +14,13 @@
 #include <QPointer>
 #include <QTimer>
 
-#include <KTextEdit>
+#include <KSharedConfig>
 
 #include "urlgrabber.h"
 
 class KToggleAction;
 class KActionCollection;
 class KlipperPopup;
-class URLGrabber;
 class QTime;
 class History;
 class QAction;
@@ -29,7 +28,7 @@ class QMenu;
 class QMimeData;
 class HistoryItem;
 class KNotification;
-class KSystemClipboard;
+class SystemClipboard;
 
 namespace KWayland
 {
@@ -127,7 +126,7 @@ protected:
      * Check data in clipboard, and if it passes these checks,
      * store the data in the clipboard history.
      */
-    void checkClipData(bool selectionMode);
+    void checkClipData(QClipboard::Mode mode, const QMimeData *data);
 
     /**
      * Enter clipboard data in the history.
@@ -148,6 +147,9 @@ Q_SIGNALS:
     Q_SCRIPTABLE void clipboardHistoryUpdated();
 
 public Q_SLOTS:
+    void slotIgnored(QClipboard::Mode mode);
+    void slotReceivedEmptyClipboard(QClipboard::Mode mode);
+
     void slotPopupMenu();
     void slotAskClearHistory();
     void setURLGrabberEnabled(bool);
@@ -158,7 +160,6 @@ protected Q_SLOTS:
     void disableURLGrabber();
 
 private Q_SLOTS:
-    void newClipData(QClipboard::Mode);
     void slotClearClipboard();
 
     void slotHistoryChanged();
@@ -166,21 +167,18 @@ private Q_SLOTS:
     void slotQuit();
     void slotStartShowTimer();
 
-    void slotClearOverflow();
-    void slotCheckPending();
-
     void loadSettings();
 
 private:
+    explicit Klipper(const KSharedConfigPtr &config);
     static void updateTimestamp();
 
-    KSystemClipboard *m_clip;
+    std::shared_ptr<SystemClipboard> m_clip;
 
     QElapsedTimer m_showTimer;
 
     History *m_history;
     KlipperPopup *m_popup;
-    int m_overflowCounter;
 
     KToggleAction *m_toggleURLGrabAction;
     QAction *m_clearHistoryAction;
@@ -202,24 +200,11 @@ private:
     bool m_bSelectionTextOnly : 1;
     bool m_bIgnoreImages : 1;
 
-    /**
-     * Avoid reacting to our own changes, using this
-     * lock.
-     * Don't manupulate this object directly... use the Ignore struct
-     * instead
-     */
-    int m_selectionLocklevel;
-    int m_clipboardLocklevel;
-
     URLGrabber *m_myURLGrabber;
     QString m_lastURLGrabberTextSelection;
     QString m_lastURLGrabberTextClipboard;
     KSharedConfigPtr m_config;
-    QTimer m_overflowClearTimer;
-    QTimer m_pendingCheckTimer;
-    bool m_pendingContentsCheck;
 
-    bool blockFetchingNewData();
     QString cycleText() const;
     KActionCollection *m_collection;
     QMenu *m_actionsPopup;
