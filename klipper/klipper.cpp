@@ -596,13 +596,9 @@ void Klipper::slotClearClipboard()
     m_clip->clear(QClipboard::Clipboard);
 }
 
-HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData, bool selectionMode)
+HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
 {
-    if ((selectionMode && m_clip->isLocked(QClipboard::Selection)) || (!selectionMode && m_clip->isLocked(QClipboard::Clipboard))) {
-        return HistoryItemPtr();
-    }
-    Ignore lock = m_clip->lockGuard(selectionMode ? QClipboard::Selection : QClipboard::Clipboard);
-
+    Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
     if (!(history()->empty())) {
         if (m_bIgnoreImages && history()->first()->type() == HistoryItemType::Image) {
             history()->remove(history()->first());
@@ -631,6 +627,7 @@ void Klipper::slotHistoryChanged()
 
 void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
 {
+    Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
     bool changed = true; // ### FIXME (only relevant under polling, might be better to simply remove polling and rely on XFixes)
 
     // this must be below the "bNoNullClipboard" handling code!
@@ -647,15 +644,15 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         return;
     }
 
-    HistoryItemPtr item = applyClipChanges(data, selectionMode);
+    HistoryItemPtr item = applyClipChanges(data);
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
-        if (m_bSynchronize && item) {
+        if (m_bSynchronize) {
             setClipboard(*item, mode);
         }
     }
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
-    if (m_bURLGrabber && item && data->hasText()) {
+    if (m_bURLGrabber && data->hasText()) {
         m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
 
         // Make sure URLGrabber doesn't repeat all the time if klipper reads the same

@@ -116,11 +116,6 @@ void SystemClipboard::setMimeData(QMimeData *data, QClipboard::Mode mode)
     m_clip->setMimeData(data, mode);
 }
 
-Ignore SystemClipboard::lockGuard(QClipboard::Mode mode)
-{
-    return Ignore(mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel);
-}
-
 bool SystemClipboard::isLocked(QClipboard::Mode mode)
 {
     return mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel;
@@ -135,6 +130,8 @@ void SystemClipboard::checkClipData(QClipboard::Mode mode)
     if (mode == QClipboard::Selection && blockFetchingNewData()) {
         return;
     }
+
+    Ignore lock(mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel);
 
     const bool isSelectionMode = mode == QClipboard::Selection;
     // internal to klipper, ignoring QSpinBox selections

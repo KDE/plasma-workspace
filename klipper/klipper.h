@@ -131,7 +131,7 @@ protected:
     /**
      * Enter clipboard data in the history.
      */
-    std::shared_ptr<HistoryItem> applyClipChanges(const QMimeData *data, bool selectionMode);
+    [[nodiscard]] std::shared_ptr<HistoryItem> applyClipChanges(const QMimeData *data);
 
     void setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
     bool ignoreClipboardChanges() const;

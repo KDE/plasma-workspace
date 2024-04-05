@@ -60,7 +60,6 @@ public:
     void clear(QClipboard::Mode mode);
     void setMimeData(QMimeData *data, QClipboard::Mode mode);
 
-    Ignore lockGuard(QClipboard::Mode mode);
     bool isLocked(QClipboard::Mode mode);
 
 Q_SIGNALS:
