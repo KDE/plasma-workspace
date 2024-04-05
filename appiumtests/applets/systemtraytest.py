@@ -134,6 +134,9 @@ class SystemTrayTests(unittest.TestCase):
         """
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
+        options.set_capability("environ", {
+            "LC_ALL": "en_US.UTF-8",
+        })
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
         cls.kded = subprocess.Popen([f"kded{KDE_VERSION}"])
