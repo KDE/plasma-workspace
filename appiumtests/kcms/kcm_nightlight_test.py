@@ -11,12 +11,12 @@ from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 
 KDE_VERSION: Final = 6
-KCM_ID: Final = "kcm_nightcolor"
+KCM_ID: Final = "kcm_nightlight"
 
 
-class KCMNightColorTest(unittest.TestCase):
+class KCMNightLightTest(unittest.TestCase):
     """
-    Tests for kcm_nightcolor
+    Tests for kcm_nightlight
     """
 
     driver: webdriver.Remote

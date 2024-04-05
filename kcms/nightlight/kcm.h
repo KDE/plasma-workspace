@@ -7,30 +7,30 @@
 
 #include <KQuickManagedConfigModule>
 
-#include "nightcolorsettings.h"
+#include "nightlightsettings.h"
 
-class NightColorData;
+class NightLightData;
 
 namespace ColorCorrect
 {
-class KCMNightColor : public KQuickManagedConfigModule
+class KCMNightLight : public KQuickManagedConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(NightColorSettings *nightColorSettings READ nightColorSettings CONSTANT)
+    Q_PROPERTY(NightLightSettings *nightLightSettings READ nightLightSettings CONSTANT)
     Q_PROPERTY(int minDayTemp MEMBER minDayTemp CONSTANT)
     Q_PROPERTY(int maxDayTemp MEMBER maxDayTemp CONSTANT)
     Q_PROPERTY(int minNightTemp MEMBER minNightTemp CONSTANT)
     Q_PROPERTY(int maxNightTemp MEMBER maxNightTemp CONSTANT)
 public:
-    KCMNightColor(QObject *parent, const KPluginMetaData &data);
-    ~KCMNightColor() override = default;
+    KCMNightLight(QObject *parent, const KPluginMetaData &data);
+    ~KCMNightLight() override = default;
 
-    NightColorSettings *nightColorSettings() const;
+    NightLightSettings *nightLightSettings() const;
     Q_INVOKABLE bool isIconThemeBreeze();
 
 private:
-    NightColorData *const m_data;
+    NightLightData *const m_data;
     int minDayTemp;
     int maxDayTemp;
     int minNightTemp;

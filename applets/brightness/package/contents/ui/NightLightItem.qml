@@ -136,7 +136,7 @@ PlasmaComponents3.ItemDelegate {
 
                 PlasmaComponents3.Button {
                     id: kcmButton
-                    visible: KConfig.KAuthorized.authorizeControlModule("kcm_nightcolor")
+                    visible: KConfig.KAuthorized.authorizeControlModule("kcm_nightlight")
 
                     icon.name: "configure"
                     text: monitor.enabled ? i18n("Configure…") : i18n("Enable and Configure…")
@@ -152,7 +152,7 @@ PlasmaComponents3.ItemDelegate {
                             clicked();
                         }
                     }
-                    onClicked: KCMLauncher.openSystemSettings("kcm_nightcolor")
+                    onClicked: KCMLauncher.openSystemSettings("kcm_nightlight")
                 }
             }
 

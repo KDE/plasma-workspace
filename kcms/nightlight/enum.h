@@ -11,7 +11,7 @@ SPDX-License-Identifier: GPL-2.0-or-later
 namespace ColorCorrect
 {
 Q_NAMESPACE
-enum NightColorMode {
+enum NightLightMode {
     /**
      * Color temperature is computed based on the current position of the Sun.
      *
@@ -36,5 +36,5 @@ enum NightColorMode {
     Constant,
 };
 
-Q_ENUM_NS(NightColorMode)
+Q_ENUM_NS(NightLightMode)
 }

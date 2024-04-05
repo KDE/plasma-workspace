@@ -13,7 +13,7 @@ import org.kde.kcmutils as KCM
 
 import org.kde.colorcorrect as CC
 
-import org.kde.private.kcms.nightcolor 1.0
+import org.kde.private.kcms.nightlight 1.0
 
 KCM.SimpleKCM {
     id: root
@@ -44,9 +44,9 @@ KCM.SimpleKCM {
     }
 
     Connections {
-        target: kcm.nightColorSettings
+        target: kcm.nightLightSettings
         function onActiveChanged() {
-            if (kcm.nightColorSettings.active && kcm.nightColorSettings.mode == NightColorMode.Automatic) {
+            if (kcm.nightLightSettings.active && kcm.nightLightSettings.mode == NightLightMode.Automatic) {
                 startLocator();
             } else {
                 endLocator();
@@ -55,7 +55,7 @@ KCM.SimpleKCM {
     }
 
     Component.onCompleted: {
-        if (kcm.nightColorSettings.mode == NightColorMode.Automatic && kcm.nightColorSettings.active) {
+        if (kcm.nightLightSettings.mode == NightLightMode.Automatic && kcm.nightLightSettings.active) {
             startLocator();
         }
     }
@@ -64,10 +64,10 @@ KCM.SimpleKCM {
     Connections {
         target: root.locator
         function onLatitudeChanged() {
-            kcm.nightColorSettings.latitudeAuto = Math.round(root.locator.latitude * 100) / 100
+            kcm.nightLightSettings.latitudeAuto = Math.round(root.locator.latitude * 100) / 100
         }
         function onLongitudeChanged() {
-            kcm.nightColorSettings.longitudeAuto = Math.round(root.locator.longitude * 100) / 100
+            kcm.nightLightSettings.longitudeAuto = Math.round(root.locator.longitude * 100) / 100
         }
     }
 
@@ -106,33 +106,33 @@ KCM.SimpleKCM {
             Layout.maximumWidth: Kirigami.Units.gridUnit * 30
             Layout.alignment: Qt.AlignCenter
 
-            readonly property real latitude: kcm.nightColorSettings.mode === NightColorMode.Location
-                ? kcm.nightColorSettings.latitudeFixed
-                : (locator?.locatingDone) ? locator.latitude : kcm.nightColorSettings.latitudeAuto
-            readonly property real longitude: kcm.nightColorSettings.mode === NightColorMode.Location
-                ? kcm.nightColorSettings.longitudeFixed
-                : (locator?.locatingDone) ? locator.longitude : kcm.nightColorSettings.longitudeAuto
+            readonly property real latitude: kcm.nightLightSettings.mode === NightLightMode.Location
+                ? kcm.nightLightSettings.latitudeFixed
+                : (locator?.locatingDone) ? locator.latitude : kcm.nightLightSettings.latitudeAuto
+            readonly property real longitude: kcm.nightLightSettings.mode === NightLightMode.Location
+                ? kcm.nightLightSettings.longitudeFixed
+                : (locator?.locatingDone) ? locator.longitude : kcm.nightLightSettings.longitudeAuto
 
             readonly property var morningTimings: sunCalc.getMorningTimings(latitude, longitude)
             readonly property var eveningTimings: sunCalc.getEveningTimings(latitude, longitude)
 
-            enabled: kcm.nightColorSettings.active
+            enabled: kcm.nightLightSettings.active
 
-            dayTemperature: kcm.nightColorSettings.dayTemperature
-            nightTemperature: kcm.nightColorSettings.nightTemperature
+            dayTemperature: kcm.nightLightSettings.dayTemperature
+            nightTemperature: kcm.nightLightSettings.nightTemperature
 
-            alwaysOn: kcm.nightColorSettings.mode === NightColorMode.Constant
-            dayTransitionOn: kcm.nightColorSettings.mode === NightColorMode.Timings
-                ? minutesForFixed(kcm.nightColorSettings.morningBeginFixed)
+            alwaysOn: kcm.nightLightSettings.mode === NightLightMode.Constant
+            dayTransitionOn: kcm.nightLightSettings.mode === NightLightMode.Timings
+                ? minutesForFixed(kcm.nightLightSettings.morningBeginFixed)
                 : minutesForDate(morningTimings.begin)
-            dayTransitionOff: kcm.nightColorSettings.mode === NightColorMode.Timings
-                ? (minutesForFixed(kcm.nightColorSettings.morningBeginFixed) + kcm.nightColorSettings.transitionTime) % 1440
+            dayTransitionOff: kcm.nightLightSettings.mode === NightLightMode.Timings
+                ? (minutesForFixed(kcm.nightLightSettings.morningBeginFixed) + kcm.nightLightSettings.transitionTime) % 1440
                 : minutesForDate(morningTimings.end)
-            nightTransitionOn: kcm.nightColorSettings.mode === NightColorMode.Timings
-                ? minutesForFixed(kcm.nightColorSettings.eveningBeginFixed)
+            nightTransitionOn: kcm.nightLightSettings.mode === NightLightMode.Timings
+                ? minutesForFixed(kcm.nightLightSettings.eveningBeginFixed)
                 : minutesForDate(eveningTimings.begin)
-            nightTransitionOff: kcm.nightColorSettings.mode === NightColorMode.Timings
-                ? (minutesForFixed(kcm.nightColorSettings.eveningBeginFixed) + kcm.nightColorSettings.transitionTime) % 1440
+            nightTransitionOff: kcm.nightLightSettings.mode === NightLightMode.Timings
+                ? (minutesForFixed(kcm.nightLightSettings.eveningBeginFixed) + kcm.nightLightSettings.transitionTime) % 1440
                 : minutesForDate(eveningTimings.end)
 
             function minutesForFixed(dateString) {
@@ -150,7 +150,7 @@ KCM.SimpleKCM {
             GridLayout {
                 Kirigami.FormData.label: i18n("Day light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderDay
-                enabled: kcm.nightColorSettings.active && kcm.nightColorSettings.mode !== NightColorMode.Constant
+                enabled: kcm.nightLightSettings.active && kcm.nightLightSettings.mode !== NightLightMode.Constant
 
                 columns: 4
 
@@ -164,10 +164,10 @@ KCM.SimpleKCM {
                     stepSize: -100
                     live: true
 
-                    value: kcm.nightColorSettings.dayTemperature
+                    value: kcm.nightLightSettings.dayTemperature
 
                     onMoved: {
-                        kcm.nightColorSettings.dayTemperature = value
+                        kcm.nightLightSettings.dayTemperature = value
                         cA.preview(value)
 
                         // This can fire for scroll events; in this case we need
@@ -185,9 +185,9 @@ KCM.SimpleKCM {
                     }
 
                     KCM.SettingStateBinding {
-                        configObject: kcm.nightColorSettings
+                        configObject: kcm.nightLightSettings
                         settingName: "DayTemperature"
-                        extraEnabledConditions: kcm.nightColorSettings.active
+                        extraEnabledConditions: kcm.nightLightSettings.active
                     }
                 }
                 QQC2.Label {
@@ -212,7 +212,7 @@ KCM.SimpleKCM {
             GridLayout {
                 Kirigami.FormData.label: i18n("Night light temperature:")
                 Kirigami.FormData.buddyFor: tempSliderNight
-                enabled: kcm.nightColorSettings.active
+                enabled: kcm.nightLightSettings.active
 
                 columns: 4
 
@@ -226,10 +226,10 @@ KCM.SimpleKCM {
                     stepSize: -100
                     live: true
 
-                    value: kcm.nightColorSettings.nightTemperature
+                    value: kcm.nightLightSettings.nightTemperature
 
                     onMoved: {
-                        kcm.nightColorSettings.nightTemperature = value
+                        kcm.nightLightSettings.nightTemperature = value
                         cA.preview(value)
 
                         // This can fire for scroll events; in this case we need
@@ -247,9 +247,9 @@ KCM.SimpleKCM {
                     }
 
                     KCM.SettingStateBinding {
-                        configObject: kcm.nightColorSettings
+                        configObject: kcm.nightLightSettings
                         settingName: "NightTemperature"
-                        extraEnabledConditions: kcm.nightColorSettings.active
+                        extraEnabledConditions: kcm.nightLightSettings.active
                     }
                 }
                 QQC2.Label {
@@ -278,9 +278,9 @@ KCM.SimpleKCM {
                 // Work around https://bugs.kde.org/show_bug.cgi?id=403153
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 17
                 Kirigami.FormData.label: i18n("Switching times:")
-                currentIndex: kcm.nightColorSettings.active ? kcm.nightColorSettings.mode + 1 : 0
+                currentIndex: kcm.nightLightSettings.active ? kcm.nightLightSettings.mode + 1 : 0
                 model: [
-                    i18n("Always off"),  // This is not actually a Mode, but represents Night Color being disabled
+                    i18n("Always off"),  // This is not actually a Mode, but represents Night Light being disabled
                     i18n("Sunset and sunrise at current location"),
                     i18n("Sunset and sunrise at manual location"),
                     i18n("Custom times"),
@@ -288,10 +288,10 @@ KCM.SimpleKCM {
                 ]
                 onCurrentIndexChanged: {
                     if (currentIndex !== 0) {
-                        kcm.nightColorSettings.mode = currentIndex - 1;
+                        kcm.nightLightSettings.mode = currentIndex - 1;
                     }
-                    kcm.nightColorSettings.active = (currentIndex !== 0);
-                    if (currentIndex - 1 == NightColorMode.Automatic && kcm.nightColorSettings.active) {
+                    kcm.nightLightSettings.active = (currentIndex !== 0);
+                    if (currentIndex - 1 == NightLightMode.Automatic && kcm.nightLightSettings.active) {
                         startLocator();
                     } else {
                         endLocator();
@@ -303,9 +303,9 @@ KCM.SimpleKCM {
             QQC2.Label {
                 Kirigami.FormData.label: i18nc("@label The coordinates for the current location", "Current location:")
 
-                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active
+                visible: kcm.nightLightSettings.mode === NightLightMode.Automatic && kcm.nightLightSettings.active
                     && root.doneLocating
-                enabled: kcm.nightColorSettings.active
+                enabled: kcm.nightLightSettings.active
                 wrapMode: Text.Wrap
                 text: i18n("Latitude: %1°   Longitude: %2°", Math.round((locator?.latitude || 0) * 100)/100, Math.round((locator?.longitude || 0) * 100)/100)
                 textFormat: Text.PlainText
@@ -318,8 +318,8 @@ KCM.SimpleKCM {
             TextEdit {
                 Layout.maximumWidth: modeSwitcher.width
 
-                visible: modeSwitcher.currentIndex - 1 === NightColorMode.Automatic && kcm.nightColorSettings.active
-                enabled: kcm.nightColorSettings.active
+                visible: modeSwitcher.currentIndex - 1 === NightLightMode.Automatic && kcm.nightLightSettings.active
+                enabled: kcm.nightLightSettings.active
 
                 textFormat: TextEdit.RichText
                 wrapMode: Text.Wrap
@@ -346,17 +346,17 @@ KCM.SimpleKCM {
                 // Match combobox width
                 Layout.minimumWidth: modeSwitcher.width
                 Layout.maximumWidth: modeSwitcher.width
-                visible: kcm.nightColorSettings.mode === NightColorMode.Timings && kcm.nightColorSettings.active
+                visible: kcm.nightLightSettings.mode === NightLightMode.Timings && kcm.nightLightSettings.active
                 Kirigami.FormData.label: i18n("Begin night light at:")
-                backend: kcm.nightColorSettings.eveningBeginFixed
+                backend: kcm.nightLightSettings.eveningBeginFixed
                 onBackendChanged: {
-                    kcm.nightColorSettings.eveningBeginFixed = backend;
+                    kcm.nightLightSettings.eveningBeginFixed = backend;
                 }
 
                 KCM.SettingStateBinding {
-                    configObject: kcm.nightColorSettings
+                    configObject: kcm.nightLightSettings
                     settingName: "EveningBeginFixed"
-                    extraEnabledConditions: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Timings
+                    extraEnabledConditions: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === NightLightMode.Timings
                 }
 
                 QQC2.ToolTip {
@@ -369,17 +369,17 @@ KCM.SimpleKCM {
                 // Match combobox width
                 Layout.minimumWidth: modeSwitcher.width
                 Layout.maximumWidth: modeSwitcher.width
-                visible: kcm.nightColorSettings.mode === NightColorMode.Timings && kcm.nightColorSettings.active
+                visible: kcm.nightLightSettings.mode === NightLightMode.Timings && kcm.nightLightSettings.active
                 Kirigami.FormData.label: i18n("Begin day light at:")
-                backend: kcm.nightColorSettings.morningBeginFixed
+                backend: kcm.nightLightSettings.morningBeginFixed
                 onBackendChanged: {
-                    kcm.nightColorSettings.morningBeginFixed = backend;
+                    kcm.nightLightSettings.morningBeginFixed = backend;
                 }
 
                 KCM.SettingStateBinding {
-                    configObject: kcm.nightColorSettings
+                    configObject: kcm.nightLightSettings
                     settingName: "MorningBeginFixed"
-                    extraEnabledConditions: kcm.nightColorSettings.active && kcm.nightColorSettings.mode === NightColorMode.Timings
+                    extraEnabledConditions: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === NightLightMode.Timings
                 }
 
                 QQC2.ToolTip {
@@ -389,16 +389,16 @@ KCM.SimpleKCM {
 
             QQC2.SpinBox {
                 id: transTimeField
-                visible: kcm.nightColorSettings.mode === NightColorMode.Timings && kcm.nightColorSettings.active
+                visible: kcm.nightLightSettings.mode === NightLightMode.Timings && kcm.nightLightSettings.active
                 // Match width of combobox and input fields
                 Layout.minimumWidth: modeSwitcher.width
                 Kirigami.FormData.label: i18n("Transition duration:")
                 from: 1
                 to: 600 // less than 12 hours (in minutes: 720)
-                value: kcm.nightColorSettings.transitionTime
+                value: kcm.nightLightSettings.transitionTime
                 editable: true
                 onValueModified: {
-                    kcm.nightColorSettings.transitionTime = value;
+                    kcm.nightLightSettings.transitionTime = value;
                 }
                 textFromValue: function(value, locale) {
                     return i18np("%1 minute", "%1 minutes", value)
@@ -408,9 +408,9 @@ KCM.SimpleKCM {
                 }
 
                 KCM.SettingStateBinding {
-                    configObject: kcm.nightColorSettings
+                    configObject: kcm.nightLightSettings
                     settingName: "TransitionTime"
-                    extraEnabledConditions: kcm.nightColorSettings.active
+                    extraEnabledConditions: kcm.nightLightSettings.active
                 }
 
                 QQC2.ToolTip {
@@ -429,8 +429,8 @@ KCM.SimpleKCM {
                     var diffMorEve = eve > mor ? eve - mor : mor - eve;
                     var diffMin = Math.min(diffMorEve, day - diffMorEve);
 
-                    return diffMin <= trTime && kcm.nightColorSettings.active
-                        && kcm.nightColorSettings.mode === NightColorMode.Timings;
+                    return diffMin <= trTime && kcm.nightLightSettings.active
+                        && kcm.nightLightSettings.mode === NightLightMode.Timings;
                 }
                 font.italic: true
                 text: i18n("Error: Transition time overlaps.")
@@ -440,14 +440,14 @@ KCM.SimpleKCM {
 
         // Show location chooser in manual location mode
         LocationsFixedView {
-            visible: kcm.nightColorSettings.mode === NightColorMode.Location && kcm.nightColorSettings.active
+            visible: kcm.nightLightSettings.mode === NightLightMode.Location && kcm.nightLightSettings.active
             Layout.alignment: Qt.AlignHCenter
-            enabled: kcm.nightColorSettings.active
+            enabled: kcm.nightLightSettings.active
         }
 
         Item {
-            visible: kcm.nightColorSettings.active
-                && kcm.nightColorSettings.mode === NightColorMode.Automatic
+            visible: kcm.nightLightSettings.active
+                && kcm.nightLightSettings.mode === NightLightMode.Automatic
                 && (!locator || !root.doneLocating)
             Layout.topMargin: Kirigami.Units.largeSpacing * 4
             Layout.fillWidth: true

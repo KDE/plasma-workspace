@@ -58,10 +58,10 @@ add_test(
 set_tests_properties(kcm_lookandfeel_test PROPERTIES TIMEOUT 120)
 
 add_test(
-    NAME kcm_nightcolor_test
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_nightcolor_test.py
+    NAME kcm_nightlight_test
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_nightlight_test.py
 )
-set_tests_properties(kcm_nightcolor_test PROPERTIES TIMEOUT 120)
+set_tests_properties(kcm_nightlight_test PROPERTIES TIMEOUT 120)
 
 add_test(
     NAME kcm_notifications_test

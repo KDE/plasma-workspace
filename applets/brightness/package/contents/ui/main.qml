@@ -204,9 +204,9 @@ PlasmoidItem {
             id: configureNightLight
             icon.name: "configure"
             text: i18nc("@action:inmenu", "Configure Night Light…")
-            visible: KAuthorized.authorize("kcm_nightcolor")
+            visible: KAuthorized.authorize("kcm_nightlight")
             priority: PlasmaCore.Action.LowPriority
-            onTriggered: KCMLauncher.openSystemSettings("kcm_nightcolor")
+            onTriggered: KCMLauncher.openSystemSettings("kcm_nightlight")
         }
     ]
 

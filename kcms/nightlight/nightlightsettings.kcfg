@@ -15,7 +15,7 @@
             <default>true</default>
         </entry>
         <entry name="Mode" type="Enum">
-            <choices name="ColorCorrect::NightColorMode">
+            <choices name="ColorCorrect::NightLightMode">
                 <choice name="Automatic"/>
                 <choice name="Location"/>
                 <choice name="Times"/>

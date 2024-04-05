@@ -144,8 +144,8 @@ Kirigami.FormLayout {
 
                     Kirigami.Icon {
                         z: 9999
-                        readonly property double rawX: longitudeToX(kcm.nightColorSettings.longitudeFixed)
-                        readonly property double rawY: latitudeToY(kcm.nightColorSettings.latitudeFixed)
+                        readonly property double rawX: longitudeToX(kcm.nightLightSettings.longitudeFixed)
+                        readonly property double rawY: latitudeToY(kcm.nightLightSettings.latitudeFixed)
                         x: rawX - (width/2)/mapRect.currentScale
                         y: rawY - (height - 4)/mapRect.currentScale
                         width: Kirigami.Units.iconSizes.medium
@@ -161,8 +161,8 @@ Kirigami.FormLayout {
                     TapHandler {
                         onTapped: event => {
                             const clickPos = event.position;
-                            kcm.nightColorSettings.longitudeFixed = xToLongitude(clickPos.x);
-                            kcm.nightColorSettings.latitudeFixed = yToLatitude(clickPos.y);
+                            kcm.nightLightSettings.longitudeFixed = xToLongitude(clickPos.x);
+                            kcm.nightLightSettings.latitudeFixed = yToLatitude(clickPos.y);
                         }
                     }
 
@@ -223,25 +223,25 @@ Kirigami.FormLayout {
                 textFormat: Text.PlainText
             }
             Connections {
-                target: kcm.nightColorSettings
+                target: kcm.nightLightSettings
                 function onLatitudeFixedChanged() {
-                    latitudeFixedField.backend = kcm.nightColorSettings.latitudeFixed;
+                    latitudeFixedField.backend = kcm.nightLightSettings.latitudeFixed;
                 }
                 function onLongitudeFixedChanged() {
-                    longitudeFixedField.backend = kcm.nightColorSettings.longitudeFixed;
+                    longitudeFixedField.backend = kcm.nightLightSettings.longitudeFixed;
                 }
             }
             NumberField {
                 id: latitudeFixedField
                 validator: DoubleValidator {bottom: -90; top: 90; decimals: 10}
-                backend: kcm.nightColorSettings.latitudeFixed
+                backend: kcm.nightLightSettings.latitudeFixed
                 onBackendChanged: {
-                    kcm.nightColorSettings.latitudeFixed = backend;
+                    kcm.nightLightSettings.latitudeFixed = backend;
                 }
                 KCM.SettingStateBinding {
-                    configObject: kcm.nightColorSettings
+                    configObject: kcm.nightLightSettings
                     settingName: "LatitudeFixed"
-                    extraEnabledConditions: kcm.nightColorSettings.active
+                    extraEnabledConditions: kcm.nightLightSettings.active
                 }
             }
 
@@ -252,14 +252,14 @@ Kirigami.FormLayout {
             NumberField {
                 id: longitudeFixedField
                 validator: DoubleValidator {bottom: -180; top: 180; decimals: 10}
-                backend: kcm.nightColorSettings.longitudeFixed
+                backend: kcm.nightLightSettings.longitudeFixed
                 onBackendChanged: {
-                    kcm.nightColorSettings.longitudeFixed = backend;
+                    kcm.nightLightSettings.longitudeFixed = backend;
                 }
                 KCM.SettingStateBinding {
-                    configObject: kcm.nightColorSettings
+                    configObject: kcm.nightLightSettings
                     settingName: "LongitudeFixed"
-                    extraEnabledConditions: kcm.nightColorSettings.active
+                    extraEnabledConditions: kcm.nightLightSettings.active
                 }
             }
         }

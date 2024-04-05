@@ -14,47 +14,47 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-#include "nightcolordata.h"
+#include "nightlightdata.h"
 
 namespace ColorCorrect
 {
-K_PLUGIN_FACTORY_WITH_JSON(KCMNightColorFactory, "kcm_nightcolor.json", registerPlugin<KCMNightColor>(); registerPlugin<NightColorData>();)
+K_PLUGIN_FACTORY_WITH_JSON(KCMNightLightFactory, "kcm_nightlight.json", registerPlugin<KCMNightLight>(); registerPlugin<NightLightData>();)
 
-KCMNightColor::KCMNightColor(QObject *parent, const KPluginMetaData &data)
+KCMNightLight::KCMNightLight(QObject *parent, const KPluginMetaData &data)
     : KQuickManagedConfigModule(parent, data)
-    , m_data(new NightColorData(this))
+    , m_data(new NightLightData(this))
 {
-    qmlRegisterAnonymousType<NightColorSettings>("org.kde.private.kcms.nightcolor", 1);
-    qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, "org.kde.private.kcms.nightcolor", 1, 0, "NightColorMode", "Error: only enums");
+    qmlRegisterAnonymousType<NightLightSettings>("org.kde.private.kcms.nightlight", 1);
+    qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, "org.kde.private.kcms.nightlight", 1, 0, "NightLightMode", "Error: only enums");
 
-    minDayTemp = nightColorSettings()->findItem("DayTemperature")->minValue().toInt();
-    maxDayTemp = nightColorSettings()->findItem("DayTemperature")->maxValue().toInt();
-    minNightTemp = nightColorSettings()->findItem("NightTemperature")->minValue().toInt();
-    maxNightTemp = nightColorSettings()->findItem("NightTemperature")->maxValue().toInt();
+    minDayTemp = nightLightSettings()->findItem("DayTemperature")->minValue().toInt();
+    maxDayTemp = nightLightSettings()->findItem("DayTemperature")->maxValue().toInt();
+    minNightTemp = nightLightSettings()->findItem("NightTemperature")->minValue().toInt();
+    maxNightTemp = nightLightSettings()->findItem("NightTemperature")->maxValue().toInt();
 
     setButtons(Apply | Default);
 }
 
-NightColorSettings *KCMNightColor::nightColorSettings() const
+NightLightSettings *KCMNightLight::nightLightSettings() const
 {
     return m_data->settings();
 }
 
 // FIXME: This was added to work around the nonstandardness of the Breeze zoom icons
 // remove once https://bugs.kde.org/show_bug.cgi?id=435671 is fixed
-bool KCMNightColor::isIconThemeBreeze()
+bool KCMNightLight::isIconThemeBreeze()
 {
     return QIcon::themeName().contains(QStringLiteral("breeze"));
 }
 
-void KCMNightColor::save()
+void KCMNightLight::save()
 {
     KQuickManagedConfigModule::save();
 
     // load/unload colorcorrectlocationupdater based on whether user set it to automatic location
     QDBusConnection dbus = QDBusConnection::sessionBus();
 
-    bool enableUpdater = (nightColorSettings()->mode() == NightColorMode::Automatic);
+    bool enableUpdater = (nightLightSettings()->mode() == NightLightMode::Automatic);
 
     QDBusMessage loadMsg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kded6"),
                                                           QStringLiteral("/kded"),
