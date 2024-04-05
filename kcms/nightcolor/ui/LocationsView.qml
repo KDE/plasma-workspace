@@ -11,6 +11,11 @@ import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kcmutils as KCM
 
 Kirigami.FormLayout {
+    id: root
+
+    property bool autoLocation
+    property real autoLongitude
+    property real autoLatitude
 
     /* Equirectangular projection maps (x, y) to (lat, long) cleanly */
     function longitudeToX(lon) {
@@ -30,6 +35,7 @@ Kirigami.FormLayout {
     ColumnLayout {
         QQC2.Label {
             id: mapLabel
+            visible: !root.autoLocation
             wrapMode: Text.Wrap
             Layout.maximumWidth: mapRect.width
             Layout.bottomMargin: Kirigami.Units.smallSpacing
@@ -144,8 +150,8 @@ Kirigami.FormLayout {
 
                     Kirigami.Icon {
                         z: 9999
-                        readonly property double rawX: longitudeToX(kcm.nightColorSettings.longitudeFixed)
-                        readonly property double rawY: latitudeToY(kcm.nightColorSettings.latitudeFixed)
+                        readonly property double rawX: longitudeToX(root.autoLocation ? root.autoLongitude : kcm.nightColorSettings.longitudeFixed)
+                        readonly property double rawY: latitudeToY(root.autoLocation ? root.autoLatitude : kcm.nightColorSettings.latitudeFixed)
                         x: rawX - (width/2)/mapRect.currentScale
                         y: rawY - (height - 4)/mapRect.currentScale
                         width: Kirigami.Units.iconSizes.medium
@@ -160,6 +166,9 @@ Kirigami.FormLayout {
 
                     TapHandler {
                         onTapped: event => {
+                            if (root.autoLocation) {
+                                return;
+                            }
                             const clickPos = event.position;
                             kcm.nightColorSettings.longitudeFixed = xToLongitude(clickPos.x);
                             kcm.nightColorSettings.latitudeFixed = yToLatitude(clickPos.y);
@@ -214,7 +223,15 @@ Kirigami.FormLayout {
             }
         }
 
+        // Show current location in auto mode
+        QQC2.Label {
+            visible: root.autoLocation
+            text: i18n("Latitude: %1°   Longitude: %2°", Math.round(root.latitude * 100)/100, Math.round(root.longitude * 100)/100)
+            textFormat: Text.PlainText
+        }
+
         RowLayout {
+            visible: !root.autoLocation
             Layout.topMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignHCenter
 

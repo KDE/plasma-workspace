@@ -306,18 +306,6 @@ KCM.SimpleKCM {
 
             Item { implicitHeight: Kirigami.Units.largeSpacing }
 
-            // Show current location in auto mode
-            QQC2.Label {
-                Kirigami.FormData.label: i18nc("@label The coordinates for the current location", "Current location:")
-
-                visible: kcm.nightColorSettings.mode === NightColorMode.Automatic && kcm.nightColorSettings.active
-                    && root.doneLocating
-                enabled: kcm.nightColorSettings.active
-                wrapMode: Text.Wrap
-                text: i18n("Latitude: %1°   Longitude: %2°", Math.round((locator?.latitude || 0) * 100)/100, Math.round((locator?.longitude || 0) * 100)/100)
-                textFormat: Text.PlainText
-            }
-
             // Inform about geolocation access in auto mode
             // The system settings window likes to take over the cursor with a plain label.
             // The TextEdit 'takes priority' over the system settings window trying to eat the mouse,
@@ -445,11 +433,17 @@ KCM.SimpleKCM {
             }
         }
 
-        // Show location chooser in manual location mode
-        LocationsFixedView {
-            visible: kcm.nightColorSettings.mode === NightColorMode.Location && kcm.nightColorSettings.active
+        // Show location viewer/chooser in automatic and manual location mode
+        LocationsView {
+            visible: (kcm.nightColorSettings.mode === NightColorMode.Location 
+                || (kcm.nightColorSettings.mode === NightColorMode.Automatic && root.doneLocating) )
+                && kcm.nightColorSettings.active
             Layout.alignment: Qt.AlignHCenter
             enabled: kcm.nightColorSettings.active
+
+            property bool autoLocation: kcm.nightColorSettings.mode === NightColorMode.Automatic
+            property real autoLongitude: root.locator?.longitude || 0
+            property real autoLatitude: root.locator?.latitude || 0
         }
 
         Item {
