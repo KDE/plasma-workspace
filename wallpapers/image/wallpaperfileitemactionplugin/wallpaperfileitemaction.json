@@ -98,7 +98,10 @@
             "image/svg+xml-compressed",
             "image/bmp",
             "image/webp",
-            "image/tiff"
+            "image/tiff",
+            "video/mp4",
+            "video/ogg",
+            "video/webm"
         ],
         "Name": "Set as",
         "Name[ar]": "عيّن كـ",
