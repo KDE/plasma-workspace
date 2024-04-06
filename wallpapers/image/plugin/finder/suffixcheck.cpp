@@ -33,7 +33,7 @@ void fillSuffixes()
             suffixeSet.insert(pattern);
         }
     }
-
+    suffixeSet << QStringLiteral("*.mp4") << QStringLiteral("*.ogv") << QStringLiteral("*.webm");
     s_suffixes = suffixeSet.values();
 }
 }

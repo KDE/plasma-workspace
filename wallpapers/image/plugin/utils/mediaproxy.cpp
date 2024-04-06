@@ -280,18 +280,21 @@ void MediaProxy::determineBackgroundType(KPackage::Package *package)
     QMimeDatabase db;
     const QString type = db.mimeTypeForFile(filePath).name();
 
-    QBuffer dummyBuffer;
-    dummyBuffer.open(QIODevice::ReadOnly);
-    // Don't use QMovie::supportedFormats() as it loads all available image plugins
-    const bool isAnimated = QImageReader(&dummyBuffer, QFileInfo(filePath).suffix().toLower().toLatin1()).supportsOption(QImageIOHandler::Animation);
-
-    if (isAnimated) {
-        // Derived from the suffix
+    if (type.startsWith(QLatin1String("video/"))) {
         m_backgroundType = BackgroundType::Type::AnimatedImage;
-    } else if (type.startsWith(QLatin1String("image/"))) {
-        m_backgroundType = BackgroundType::Type::Image;
     } else {
-        m_backgroundType = BackgroundType::Type::Unknown;
+        QBuffer dummyBuffer;
+        dummyBuffer.open(QIODevice::ReadOnly);
+        // Don't use QMovie::supportedFormats() as it loads all available image plugins
+        const bool isAnimated = QImageReader(&dummyBuffer, QFileInfo(filePath).suffix().toLower().toLatin1()).supportsOption(QImageIOHandler::Animation);
+
+        if (isAnimated) {
+            m_backgroundType = BackgroundType::Type::AnimatedImage;
+        } else if (type.startsWith(QLatin1String("image/"))) {
+            m_backgroundType = BackgroundType::Type::Image;
+        } else {
+            m_backgroundType = BackgroundType::Type::Unknown;
+        }
     }
 
     Q_EMIT backgroundTypeChanged();
