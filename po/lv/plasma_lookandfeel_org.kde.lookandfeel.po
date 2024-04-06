@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-01-18 20:45+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -17,82 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 "X-Generator: Lokalize 23.08.4\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Tastatūras izkārtojums: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "Lietotājvārds"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Parole"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Ierakstīties"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Ir ieslēgts „Caps Lock“"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Iesnaudināt"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Pārstartēt"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Izslēgt"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "Cits..."
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "Ievadiet lietotājvārdu un paroli"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "Uzskaitīt lietotājus"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Virtuālā tastatūra"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Ierakstīšanās neizdevās"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "Darbvirsmas sesija: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -154,6 +78,12 @@ msgstr ""
 "Pēc pārstartēšanas dators ieslēgsies aparatūrprogrammatūras iestatīšanas "
 "ekrānā."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Iesnaudināt"
+
 #: contents/logout/Logout.qml:201
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
@@ -187,11 +117,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "Instalēt atjauninājumus un pārstartēt"
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Pārstartēt"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "Pārstartēt"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Izslēgt"
 
 #: contents/logout/Logout.qml:252
 #, fuzzy, kde-format
@@ -229,6 +169,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE veidotā „Plasma“"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Tastatūras izkārtojums: %1"
+
+#~ msgid "Username"
+#~ msgstr "Lietotājvārds"
+
+#~ msgid "Password"
+#~ msgstr "Parole"
+
+#~ msgid "Log In"
+#~ msgstr "Ierakstīties"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Ir ieslēgts „Caps Lock“"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "Cits..."
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "Ievadiet lietotājvārdu un paroli"
+
+#~ msgid "List Users"
+#~ msgstr "Uzskaitīt lietotājus"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtuālā tastatūra"
+
+#~ msgid "Login Failed"
+#~ msgstr "Ierakstīšanās neizdevās"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Darbvirsmas sesija: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

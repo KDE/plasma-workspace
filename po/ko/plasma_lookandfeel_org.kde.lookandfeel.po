@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-09 19:42+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,82 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 23.08.1\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "키보드 레이아웃: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "사용자 이름"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "암호"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "로그인"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Caps Lock이 켜져 있음"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "대기 모드"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "다시 시작"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "컴퓨터 끄기"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "기타…"
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "사용자 이름과 암호 입력"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "사용자 목록"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "가상 키보드"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "로그인 실패"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "데스크톱 세션: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -135,6 +59,12 @@ msgstr[0] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "대기 모드"
+
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgctxt "Suspend to RAM"
@@ -163,10 +93,20 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "업데이트 설치 후 지금 다시 시작"
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "다시 시작"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
 msgstr "지금 다시 시작"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "컴퓨터 끄기"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
@@ -202,6 +142,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "키보드 레이아웃: %1"
+
+#~ msgid "Username"
+#~ msgstr "사용자 이름"
+
+#~ msgid "Password"
+#~ msgstr "암호"
+
+#~ msgid "Log In"
+#~ msgstr "로그인"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Caps Lock이 켜져 있음"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "기타…"
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "사용자 이름과 암호 입력"
+
+#~ msgid "List Users"
+#~ msgstr "사용자 목록"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "가상 키보드"
+
+#~ msgid "Login Failed"
+#~ msgstr "로그인 실패"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "데스크톱 세션: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2023-10-07 10:47+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: contents/ui/FullRepresentation.qml:40
+#: contents/ui/FullRepresentation.qml:47
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
 msgstr "Kamera"
 
-#: contents/ui/FullRepresentation.qml:43
+#: contents/ui/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
 msgstr "Aktiivinen"
 
-#: contents/ui/FullRepresentation.qml:45
+#: contents/ui/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
@@ -37,43 +37,43 @@ msgstr ""
 "Toimeton|/|$[aseta tilanmuutos 'on toimeton' omantilanmuutoslause 'Sinut on "
 "merkitty toimettomaksi.']"
 
-#: contents/ui/FullRepresentation.qml:47
+#: contents/ui/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
 msgstr "Virhe"
 
-#: contents/ui/FullRepresentation.qml:49
+#: contents/ui/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
 msgstr "Luodaan"
 
-#: contents/ui/FullRepresentation.qml:51
+#: contents/ui/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
 msgstr "Keskeytetty"
 
-#: contents/ui/FullRepresentation.qml:53
+#: contents/ui/FullRepresentation.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
 msgstr "Tuntematon"
 
-#: contents/ui/FullRepresentation.qml:69
+#: contents/ui/FullRepresentation.qml:79
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
 msgstr "%1 on käytössä"
 
-#: contents/ui/main.qml:21
+#: contents/ui/main.qml:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
 msgstr "Kamerailmaisin ei ole käytettävissä"
 
-#: contents/ui/main.qml:23
+#: contents/ui/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
@@ -81,7 +81,7 @@ msgid_plural "%1 cameras are in use"
 msgstr[0] "Kamera on käytössä"
 msgstr[1] "Käytössä on %1 kameraa"
 
-#: contents/ui/main.qml:25
+#: contents/ui/main.qml:27
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"

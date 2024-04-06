@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2023-02-01 23:20+0100\n"
 "Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -15,82 +15,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Tastaturbelegung: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "Benutzername"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Passwort"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Anmelden"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Feststelltaste ist aktiviert"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Standby-Modus"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Neu starten"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Herunterfahren"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "Weitere ..."
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "Benutzername und Passwort eingeben"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "Benutzer anzeigen"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Virtuelle Tastatur"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Anmeldung fehlgeschlagen"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "Arbeitsflächen-Sitzung: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -140,6 +64,12 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Beim Neustart wird der Dialog für Firmware-Einrichtung angezeigt."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Standby-Modus"
+
 #: contents/logout/Logout.qml:201
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
@@ -171,11 +101,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Neu starten"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "Neu starten"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Herunterfahren"
 
 #: contents/logout/Logout.qml:252
 #, fuzzy, kde-format
@@ -213,6 +153,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma von KDE"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Tastaturbelegung: %1"
+
+#~ msgid "Username"
+#~ msgstr "Benutzername"
+
+#~ msgid "Password"
+#~ msgstr "Passwort"
+
+#~ msgid "Log In"
+#~ msgstr "Anmelden"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Feststelltaste ist aktiviert"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "Weitere ..."
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "Benutzername und Passwort eingeben"
+
+#~ msgid "List Users"
+#~ msgstr "Benutzer anzeigen"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtuelle Tastatur"
+
+#~ msgid "Login Failed"
+#~ msgstr "Anmeldung fehlgeschlagen"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Arbeitsflächen-Sitzung: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

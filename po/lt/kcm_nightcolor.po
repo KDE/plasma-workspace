@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-01-13 15:09+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt\n"
@@ -87,76 +87,76 @@ msgstr "Ilguma:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Mėlynos šviesos filtras padaro spalvas ekrane šiltesnes."
 
-#: ui/main.qml:154
-#, kde-format
-msgid "Switching times:"
-msgstr "Perjungimo laikai:"
-
-#: ui/main.qml:157
-#, kde-format
-msgid "Always off"
-msgstr "Visada išjungta"
-
-#: ui/main.qml:158
-#, kde-format
-msgid "Sunset and sunrise at current location"
-msgstr "Saulėlydis ir saulėtekis esamoje vietoje"
-
-#: ui/main.qml:159
-#, kde-format
-msgid "Sunset and sunrise at manual location"
-msgstr "Saulėlydis ir saulėtekis pasirinktoje vietoje"
-
-#: ui/main.qml:160
-#, kde-format
-msgid "Custom times"
-msgstr "Tinkinti laikai"
-
-#: ui/main.qml:161
-#, kde-format
-msgid "Always on night light"
-msgstr "Visada įjungta naktinė šviesa"
-
-#: ui/main.qml:184
+#: ui/main.qml:151
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Dieninės šviesos temperatūra:"
 
-#: ui/main.qml:227 ui/main.qml:289
+#: ui/main.qml:194 ui/main.qml:256
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:232 ui/main.qml:294
+#: ui/main.qml:199 ui/main.qml:261
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Šalta (jokio filtro)"
 
-#: ui/main.qml:239 ui/main.qml:301
+#: ui/main.qml:206 ui/main.qml:268
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Šilta"
 
-#: ui/main.qml:246
+#: ui/main.qml:213
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Naktinės šviesos temperatūra:"
 
-#: ui/main.qml:311
+#: ui/main.qml:280
+#, kde-format
+msgid "Switching times:"
+msgstr "Perjungimo laikai:"
+
+#: ui/main.qml:283
+#, kde-format
+msgid "Always off"
+msgstr "Visada išjungta"
+
+#: ui/main.qml:284
+#, kde-format
+msgid "Sunset and sunrise at current location"
+msgstr "Saulėlydis ir saulėtekis esamoje vietoje"
+
+#: ui/main.qml:285
+#, kde-format
+msgid "Sunset and sunrise at manual location"
+msgstr "Saulėlydis ir saulėtekis pasirinktoje vietoje"
+
+#: ui/main.qml:286
+#, kde-format
+msgid "Custom times"
+msgstr "Tinkinti laikai"
+
+#: ui/main.qml:287
+#, kde-format
+msgid "Always on night light"
+msgstr "Visada įjungta naktinė šviesa"
+
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Dabartinė vieta:"
 
-#: ui/main.qml:317
+#: ui/main.qml:310
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Platuma: %1°   Ilguma: %2°"
 
-#: ui/main.qml:339
+#: ui/main.qml:332
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -169,27 +169,27 @@ msgstr ""
 "services.mozilla.com'>„Mozilla“ vietų tarnybą (angl. Mozilla Location "
 "Service)</link>."
 
-#: ui/main.qml:357
+#: ui/main.qml:350
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Pradėti naktinę šviesą ties:"
 
-#: ui/main.qml:370 ui/main.qml:393
+#: ui/main.qml:363 ui/main.qml:386
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Įvesties formatas: VV:MM"
 
-#: ui/main.qml:380
+#: ui/main.qml:373
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Pradėti dieninę šviesą ties:"
 
-#: ui/main.qml:402
+#: ui/main.qml:395
 #, kde-format
 msgid "Transition duration:"
 msgstr "Perėjimo trukmė:"
 
-#: ui/main.qml:411
+#: ui/main.qml:404
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -198,17 +198,17 @@ msgstr[1] "%1 minutės"
 msgstr[2] "%1 minučių"
 msgstr[3] "%1 minutė"
 
-#: ui/main.qml:424
+#: ui/main.qml:417
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Įveskite minutes - min. 1, maks. 600)"
 
-#: ui/main.qml:443
+#: ui/main.qml:436
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Klaida: Perėjimo laikas persidengia."
 
-#: ui/main.qml:466
+#: ui/main.qml:459
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

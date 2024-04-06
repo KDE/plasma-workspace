@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2023-11-30 01:15+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -88,76 +88,76 @@ msgid "The blue light filter makes the colors on the screen warmer."
 msgstr ""
 "El filtro de luz azul hace que los colores de la pantalla sean más cálidos."
 
-#: ui/main.qml:154
-#, kde-format
-msgid "Switching times:"
-msgstr "Horas de cambio:"
-
-#: ui/main.qml:157
-#, kde-format
-msgid "Always off"
-msgstr "Siempre desactivado"
-
-#: ui/main.qml:158
-#, kde-format
-msgid "Sunset and sunrise at current location"
-msgstr "Atardecer y amanecer de la ubicación actual"
-
-#: ui/main.qml:159
-#, kde-format
-msgid "Sunset and sunrise at manual location"
-msgstr "Atardecer y amanecer de una ubicación manual"
-
-#: ui/main.qml:160
-#, kde-format
-msgid "Custom times"
-msgstr "Horas personalizadas"
-
-#: ui/main.qml:161
-#, kde-format
-msgid "Always on night light"
-msgstr "Siempre en luz nocturna"
-
-#: ui/main.qml:184
+#: ui/main.qml:151
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Temperatura de la luz diurna:"
 
-#: ui/main.qml:227 ui/main.qml:289
+#: ui/main.qml:194 ui/main.qml:256
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1 K"
 
-#: ui/main.qml:232 ui/main.qml:294
+#: ui/main.qml:199 ui/main.qml:261
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Frío (sin filtro)"
 
-#: ui/main.qml:239 ui/main.qml:301
+#: ui/main.qml:206 ui/main.qml:268
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Cálido"
 
-#: ui/main.qml:246
+#: ui/main.qml:213
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Temperatura de la luz nocturna:"
 
-#: ui/main.qml:311
+#: ui/main.qml:280
+#, kde-format
+msgid "Switching times:"
+msgstr "Horas de cambio:"
+
+#: ui/main.qml:283
+#, kde-format
+msgid "Always off"
+msgstr "Siempre desactivado"
+
+#: ui/main.qml:284
+#, kde-format
+msgid "Sunset and sunrise at current location"
+msgstr "Atardecer y amanecer de la ubicación actual"
+
+#: ui/main.qml:285
+#, kde-format
+msgid "Sunset and sunrise at manual location"
+msgstr "Atardecer y amanecer de una ubicación manual"
+
+#: ui/main.qml:286
+#, kde-format
+msgid "Custom times"
+msgstr "Horas personalizadas"
+
+#: ui/main.qml:287
+#, kde-format
+msgid "Always on night light"
+msgstr "Siempre en luz nocturna"
+
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Ubicación actual:"
 
-#: ui/main.qml:317
+#: ui/main.qml:310
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitud: %1°   Longitud: %2°"
 
-#: ui/main.qml:339
+#: ui/main.qml:332
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -169,44 +169,44 @@ msgstr ""
 "está disponible) o enviando información de redes al <link url=\"https://"
 "location.services.mozilla.com\">Servicio de localización de Mozilla</link>."
 
-#: ui/main.qml:357
+#: ui/main.qml:350
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Activar la luz nocturna a las:"
 
-#: ui/main.qml:370 ui/main.qml:393
+#: ui/main.qml:363 ui/main.qml:386
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Formato de entrada: HH:MM"
 
-#: ui/main.qml:380
+#: ui/main.qml:373
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Activar la luz diurna a las:"
 
-#: ui/main.qml:402
+#: ui/main.qml:395
 #, kde-format
 msgid "Transition duration:"
 msgstr "Duración de la transición:"
 
-#: ui/main.qml:411
+#: ui/main.qml:404
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minuto"
 msgstr[1] "%1 minutos"
 
-#: ui/main.qml:424
+#: ui/main.qml:417
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "En minutos (mín. 1, máx. 600)"
 
-#: ui/main.qml:443
+#: ui/main.qml:436
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Error: el tiempo de transición se solapa."
 
-#: ui/main.qml:466
+#: ui/main.qml:459
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

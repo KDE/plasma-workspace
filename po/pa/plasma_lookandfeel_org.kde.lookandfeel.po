@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-05 07:44-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -16,82 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "ਕੀਬੋਰਡ ਲੇਆਉਟ: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "ਵਰਤੋਂਕਾਰ ਨਾਂ"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "ਪਾਸਵਰਡ"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "ਲਾਗ ਇਨ"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "ਕੈਪਸ ਲਾਕ ਚਾਲੂ ਹੈ"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "ਸਲੀਪ"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "ਬੰਦ ਕਰੋ"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "…ਹੋਰ"
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਵਿੱਚ ਲਿਖੋ"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "ਵਰਤੋਂਕਾਰ ਦੀ ਸੂਚੀ"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "ਲਾਗਇਨ ਫੇਲ੍ਹ ਹੈ"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "ਡੈਸਕਟਾਪ ਸ਼ੈਸ਼ਨ: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -141,6 +65,12 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "ਜਦੋਂ ਮੁੜ-ਚਾਲੂ ਕੀਤਾ ਤਾਂ ਕੰਪਿਊਟਰ ਫਿਰਮਵੇਅਰ ਸੈਟਅੱਪ ਸਕਰੀਨ ਉੱਤੇ ਜਾਵੇਗਾ।"
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "ਸਲੀਪ"
+
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgctxt "Suspend to RAM"
@@ -169,10 +99,20 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "ਅੱਪਡੇਟ ਇੰਸਟਾਲ ਕਰਕੇ ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
 msgstr "ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "ਬੰਦ ਕਰੋ"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
@@ -208,6 +148,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "ਪਲਾਜ਼ਮਾ ਨੂੰ KDE ਨੇ ਬਣਾਇਆ"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "ਕੀਬੋਰਡ ਲੇਆਉਟ: %1"
+
+#~ msgid "Username"
+#~ msgstr "ਵਰਤੋਂਕਾਰ ਨਾਂ"
+
+#~ msgid "Password"
+#~ msgstr "ਪਾਸਵਰਡ"
+
+#~ msgid "Log In"
+#~ msgstr "ਲਾਗ ਇਨ"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "ਕੈਪਸ ਲਾਕ ਚਾਲੂ ਹੈ"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "…ਹੋਰ"
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਵਿੱਚ ਲਿਖੋ"
+
+#~ msgid "List Users"
+#~ msgstr "ਵਰਤੋਂਕਾਰ ਦੀ ਸੂਚੀ"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "ਫ਼ਰਜ਼ੀ ਕੀਬੋਰਡ"
+
+#~ msgid "Login Failed"
+#~ msgstr "ਲਾਗਇਨ ਫੇਲ੍ਹ ਹੈ"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "ਡੈਸਕਟਾਪ ਸ਼ੈਸ਼ਨ: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

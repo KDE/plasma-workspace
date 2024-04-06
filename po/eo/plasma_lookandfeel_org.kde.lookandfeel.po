@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-02 22:38+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -19,82 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Klavara aranĝo: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "Uzantnomo"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Pasvorto"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Ensaluti"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Majskulo estas aktiva"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Dormi"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Rekomenci"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Fermi sistemon"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "Alia…"
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "Tajpu Uzantnomon kaj Pasvorton"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "Listo de Uzantoj"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Virtuala Klavaro"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Ensaluto malsukcesis"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "Labortabla Sesio: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -146,6 +70,12 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Rekomencinte, la komputilo eniros la ekranon de agordo de firmware."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Dormi"
+
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgctxt "Suspend to RAM"
@@ -174,10 +104,20 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "Instali Ĝisdatigojn & Rekomenci Nun"
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Rekomenci"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
 msgstr "Rekomenci Nun"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Fermi sistemon"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
@@ -213,6 +153,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma farita de KDE"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Klavara aranĝo: %1"
+
+#~ msgid "Username"
+#~ msgstr "Uzantnomo"
+
+#~ msgid "Password"
+#~ msgstr "Pasvorto"
+
+#~ msgid "Log In"
+#~ msgstr "Ensaluti"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Majskulo estas aktiva"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "Alia…"
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "Tajpu Uzantnomon kaj Pasvorton"
+
+#~ msgid "List Users"
+#~ msgstr "Listo de Uzantoj"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtuala Klavaro"
+
+#~ msgid "Login Failed"
+#~ msgstr "Ensaluto malsukcesis"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Labortabla Sesio: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-10 19:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -17,82 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 23.08.1\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "تخطيط لوحة المفاتيح: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "اسم المستخدم"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "كلمة السّرّ"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "لِج"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "مفتاح Caps Lock مفعّل"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "نَم"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "أعد التّشغيل"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "أطفئ"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "الآخرين..."
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "اكتب اسم المستخدم و كلمة السر"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "اسرد المستخدمين"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "لوحة المفاتيح الوهميّة"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "فشل الولوج"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "جلسة سطح المكتب: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -170,6 +94,12 @@ msgstr[5] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "عند إعادة التشغيل ، سيدخل الحاسوب إلى شاشة إعداد البرنامج الثابت."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "نَم"
+
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgctxt "Suspend to RAM"
@@ -198,10 +128,20 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "ثبت التحديثات وأعد التشغيل الآن"
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "أعد التّشغيل"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
 msgstr "أعِد التشغيل الآن"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "أطفئ"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
@@ -237,6 +177,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "بلازما من كِيدِي"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "تخطيط لوحة المفاتيح: %1"
+
+#~ msgid "Username"
+#~ msgstr "اسم المستخدم"
+
+#~ msgid "Password"
+#~ msgstr "كلمة السّرّ"
+
+#~ msgid "Log In"
+#~ msgstr "لِج"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "مفتاح Caps Lock مفعّل"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "الآخرين..."
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "اكتب اسم المستخدم و كلمة السر"
+
+#~ msgid "List Users"
+#~ msgstr "اسرد المستخدمين"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "لوحة المفاتيح الوهميّة"
+
+#~ msgid "Login Failed"
+#~ msgstr "فشل الولوج"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "جلسة سطح المكتب: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

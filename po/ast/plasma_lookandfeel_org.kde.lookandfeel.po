@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -16,82 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.0\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Distribución del tecláu: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr ""
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Contraseña"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Aniciar la sesión"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "El Bloq Mayús ta activáu"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Dormir"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Reaniciar"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Apagar"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr ""
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "Escribi'l nome d'usuariu y la contraseña"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "Llistar los usuarios"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Tecláu virtual"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "L'aniciu de la sesión falló"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "Sesión del escritoriu: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -141,6 +65,12 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Dormir"
+
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgctxt "Suspend to RAM"
@@ -169,10 +99,20 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Reaniciar"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
 msgstr "Reaniciar"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Apagar"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
@@ -208,6 +148,34 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, creáu por KDE"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Distribución del tecláu: %1"
+
+#~ msgid "Password"
+#~ msgstr "Contraseña"
+
+#~ msgid "Log In"
+#~ msgstr "Aniciar la sesión"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "El Bloq Mayús ta activáu"
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "Escribi'l nome d'usuariu y la contraseña"
+
+#~ msgid "List Users"
+#~ msgstr "Llistar los usuarios"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Tecláu virtual"
+
+#~ msgid "Login Failed"
+#~ msgstr "L'aniciu de la sesión falló"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Sesión del escritoriu: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

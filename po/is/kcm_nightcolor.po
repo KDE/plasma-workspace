@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-19 18:30+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -84,76 +84,76 @@ msgstr "Breiddargráða:"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Bláljósasía stillir skjáinn á hlýrri liti."
 
-#: ui/main.qml:154
-#, kde-format
-msgid "Switching times:"
-msgstr "Virkjunartími:"
-
-#: ui/main.qml:157
-#, kde-format
-msgid "Always off"
-msgstr "Alltaf slökkt"
-
-#: ui/main.qml:158
-#, kde-format
-msgid "Sunset and sunrise at current location"
-msgstr "Frá sólarlagi til sólarupprásar á núverandi staðsetningu"
-
-#: ui/main.qml:159
-#, kde-format
-msgid "Sunset and sunrise at manual location"
-msgstr "Frá sólarlagi til sólarupprásar á handvirkri staðsetningu"
-
-#: ui/main.qml:160
-#, kde-format
-msgid "Custom times"
-msgstr "Sérstilltur tími"
-
-#: ui/main.qml:161
-#, kde-format
-msgid "Always on night light"
-msgstr "Alltaf kveikt á næturlitum"
-
-#: ui/main.qml:184
+#: ui/main.qml:151
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Lithitastig dagslita:"
 
-#: ui/main.qml:227 ui/main.qml:289
+#: ui/main.qml:194 ui/main.qml:256
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:232 ui/main.qml:294
+#: ui/main.qml:199 ui/main.qml:261
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Svalt (engin sía)"
 
-#: ui/main.qml:239 ui/main.qml:301
+#: ui/main.qml:206 ui/main.qml:268
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Hlýtt"
 
-#: ui/main.qml:246
+#: ui/main.qml:213
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Lithitastig næturlita:"
 
-#: ui/main.qml:311
+#: ui/main.qml:280
+#, kde-format
+msgid "Switching times:"
+msgstr "Virkjunartími:"
+
+#: ui/main.qml:283
+#, kde-format
+msgid "Always off"
+msgstr "Alltaf slökkt"
+
+#: ui/main.qml:284
+#, kde-format
+msgid "Sunset and sunrise at current location"
+msgstr "Frá sólarlagi til sólarupprásar á núverandi staðsetningu"
+
+#: ui/main.qml:285
+#, kde-format
+msgid "Sunset and sunrise at manual location"
+msgstr "Frá sólarlagi til sólarupprásar á handvirkri staðsetningu"
+
+#: ui/main.qml:286
+#, kde-format
+msgid "Custom times"
+msgstr "Sérstilltur tími"
+
+#: ui/main.qml:287
+#, kde-format
+msgid "Always on night light"
+msgstr "Alltaf kveikt á næturlitum"
+
+#: ui/main.qml:304
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Núverandi staðsetning:"
 
-#: ui/main.qml:317
+#: ui/main.qml:310
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Breiddargráða: %1°   Lengdargráða: %2°"
 
-#: ui/main.qml:339
+#: ui/main.qml:332
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -165,44 +165,44 @@ msgstr ""
 "með því að senda upplýsingar um netkerfi til <link url='https://location."
 "services.mozilla.com'>Mozilla-staðsetningarþjónustunnar</link>."
 
-#: ui/main.qml:357
+#: ui/main.qml:350
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Byrja næturliti kl.:"
 
-#: ui/main.qml:370 ui/main.qml:393
+#: ui/main.qml:363 ui/main.qml:386
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Inntakssnið: HH:MM"
 
-#: ui/main.qml:380
+#: ui/main.qml:373
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Byrja dagsliti kl.:"
 
-#: ui/main.qml:402
+#: ui/main.qml:395
 #, kde-format
 msgid "Transition duration:"
 msgstr "Tímalengd yfirfærslu:"
 
-#: ui/main.qml:411
+#: ui/main.qml:404
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 mínúta"
 msgstr[1] "%1 mínútur"
 
-#: ui/main.qml:424
+#: ui/main.qml:417
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Sláðu inn mínútur - lágm. 1, hám. 600"
 
-#: ui/main.qml:443
+#: ui/main.qml:436
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Villa: Yfirfærslutímar skarast."
 
-#: ui/main.qml:466
+#: ui/main.qml:459
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

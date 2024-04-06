@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.cameraindicator\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2023-12-09 09:40+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,61 +15,61 @@ msgstr ""
 "X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: contents/ui/FullRepresentation.qml:40
+#: contents/ui/FullRepresentation.qml:47
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
 msgstr "Fotoaparát"
 
-#: contents/ui/FullRepresentation.qml:43
+#: contents/ui/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
 msgstr "Aktívne"
 
-#: contents/ui/FullRepresentation.qml:45
+#: contents/ui/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
 msgstr "Nečinný"
 
-#: contents/ui/FullRepresentation.qml:47
+#: contents/ui/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
 msgstr "Chyba"
 
-#: contents/ui/FullRepresentation.qml:49
+#: contents/ui/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
 msgstr "Vytváram"
 
-#: contents/ui/FullRepresentation.qml:51
+#: contents/ui/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
 msgstr "Pozastavené"
 
-#: contents/ui/FullRepresentation.qml:53
+#: contents/ui/FullRepresentation.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
 msgstr "Neznáme"
 
-#: contents/ui/FullRepresentation.qml:69
+#: contents/ui/FullRepresentation.qml:79
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
 msgstr ""
 
-#: contents/ui/main.qml:21
+#: contents/ui/main.qml:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
 msgstr ""
 
-#: contents/ui/main.qml:23
+#: contents/ui/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
@@ -78,7 +78,7 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: contents/ui/main.qml:25
+#: contents/ui/main.qml:27
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"

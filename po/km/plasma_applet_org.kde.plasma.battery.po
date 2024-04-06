@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-04 00:40+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2012-07-04 09:13+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -74,31 +74,31 @@ msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
+#: package/contents/ui/logic.js:24 package/contents/ui/logic.js:30
 #: package/contents/ui/main.qml:228
 #, kde-format
 msgid "Fully Charged"
 msgstr ""
 
-#: package/contents/ui/logic.js:28
+#: package/contents/ui/logic.js:29
 #, fuzzy, kde-format
 #| msgid "%1% (discharging)"
 msgid "Discharging"
 msgstr "%1% (មិន​កំពុង​បញ្ចូល)"
 
-#: package/contents/ui/logic.js:30
+#: package/contents/ui/logic.js:31
 #, fuzzy, kde-format
 #| msgid "%1% (charging)"
 msgid "Charging"
 msgstr "%1% (កំពុង​បញ្ចូល)"
 
-#: package/contents/ui/logic.js:32
+#: package/contents/ui/logic.js:33
 #, fuzzy, kde-format
 #| msgid "%1% (charging)"
 msgid "Not Charging"
 msgstr "%1% (កំពុង​បញ្ចូល)"
 
-#: package/contents/ui/logic.js:35
+#: package/contents/ui/logic.js:36
 #, fuzzy, kde-format
 #| msgctxt "Battery is not plugged in"
 #| msgid "Not present"

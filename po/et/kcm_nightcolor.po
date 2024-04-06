@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2020-03-05 18:29+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -86,85 +86,85 @@ msgstr ""
 "Öörežiim muudab ekraani värvid soojemaks, vähendades silmade pinget just "
 "siis, kui sa seda soovid."
 
-#: ui/main.qml:154
-#, fuzzy, kde-format
-#| msgid "Activation time:"
-msgid "Switching times:"
-msgstr "Aktiveerimise aeg:"
-
-#: ui/main.qml:157
-#, kde-format
-msgid "Always off"
-msgstr ""
-
-#: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at current location"
-msgid "Sunset and sunrise at current location"
-msgstr "Loojangust koiduni praeguses asukohas"
-
-#: ui/main.qml:159
-#, fuzzy, kde-format
-#| msgid "Sunset to sunrise at manual location"
-msgid "Sunset and sunrise at manual location"
-msgstr "Loojangust koiduni käsitsi valitud asukohas"
-
-#: ui/main.qml:160
-#, fuzzy, kde-format
-#| msgid "Custom time"
-msgid "Custom times"
-msgstr "Kohandatud ajal"
-
-#: ui/main.qml:161
-#, fuzzy, kde-format
-#| msgid "Always on"
-msgid "Always on night light"
-msgstr "Alati sees"
-
-#: ui/main.qml:184
+#: ui/main.qml:151
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgid "Day light temperature:"
 msgstr "Öine värvustemperatuur:"
 
-#: ui/main.qml:227 ui/main.qml:289
+#: ui/main.qml:194 ui/main.qml:256
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr ""
 
-#: ui/main.qml:232 ui/main.qml:294
+#: ui/main.qml:199 ui/main.qml:261
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
-#: ui/main.qml:239 ui/main.qml:301
+#: ui/main.qml:206 ui/main.qml:268
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Soe "
 
-#: ui/main.qml:246
+#: ui/main.qml:213
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgid "Night light temperature:"
 msgstr "Öine värvustemperatuur:"
 
-#: ui/main.qml:311
+#: ui/main.qml:280
+#, fuzzy, kde-format
+#| msgid "Activation time:"
+msgid "Switching times:"
+msgstr "Aktiveerimise aeg:"
+
+#: ui/main.qml:283
+#, kde-format
+msgid "Always off"
+msgstr ""
+
+#: ui/main.qml:284
+#, fuzzy, kde-format
+#| msgid "Sunset to sunrise at current location"
+msgid "Sunset and sunrise at current location"
+msgstr "Loojangust koiduni praeguses asukohas"
+
+#: ui/main.qml:285
+#, fuzzy, kde-format
+#| msgid "Sunset to sunrise at manual location"
+msgid "Sunset and sunrise at manual location"
+msgstr "Loojangust koiduni käsitsi valitud asukohas"
+
+#: ui/main.qml:286
+#, fuzzy, kde-format
+#| msgid "Custom time"
+msgid "Custom times"
+msgstr "Kohandatud ajal"
+
+#: ui/main.qml:287
+#, fuzzy, kde-format
+#| msgid "Always on"
+msgid "Always on night light"
+msgstr "Alati sees"
+
+#: ui/main.qml:304
 #, fuzzy, kde-format
 #| msgid "Detect Location"
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Tuvasta asukoht"
 
-#: ui/main.qml:317
+#: ui/main.qml:310
 #, fuzzy, kde-format
 #| msgid "Latitude: %1   Longitude: %2"
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Laiuskraad: %1   Pikkuskraad: %2"
 
-#: ui/main.qml:339
+#: ui/main.qml:332
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -173,44 +173,44 @@ msgid ""
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
 
-#: ui/main.qml:357
+#: ui/main.qml:350
 #, kde-format
 msgid "Begin night light at:"
 msgstr ""
 
-#: ui/main.qml:370 ui/main.qml:393
+#: ui/main.qml:363 ui/main.qml:386
 #, kde-format
 msgid "Input format: HH:MM"
 msgstr "Sisestusvorming: HH:MM"
 
-#: ui/main.qml:380
+#: ui/main.qml:373
 #, kde-format
 msgid "Begin day light at:"
 msgstr ""
 
-#: ui/main.qml:402
+#: ui/main.qml:395
 #, kde-format
 msgid "Transition duration:"
 msgstr "Ülemineku kestus:"
 
-#: ui/main.qml:411
+#: ui/main.qml:404
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minut"
 msgstr[1] "%1 minutit"
 
-#: ui/main.qml:424
+#: ui/main.qml:417
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Minutite sisestamine: min 1, maks 60"
 
-#: ui/main.qml:443
+#: ui/main.qml:436
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Viga: üleminekuaeg kattub"
 
-#: ui/main.qml:466
+#: ui/main.qml:459
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@info:placeholder"

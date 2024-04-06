@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-03-09 18:30+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -18,83 +18,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Tastaturoppsett: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "Brukarnamn"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Passord"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Logg inn"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "«Caps Lock» er på"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Kvilemodus"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Start på nytt"
-
-# Teksten bør vera kort, for å unngå å bli delt over fleire linjer (så «Slå av maskina», som stod før, er gjerne hakket for langt), sidan dei andre tekstane er på éi linje.
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Slå av"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "Anna …"
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "Skriv inn brukarnamn og passord"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "Vis brukarar"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Virtuelt tastatur"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Feil ved innlogging"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "Skrivebordsøkt: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -146,6 +69,12 @@ msgstr ""
 "Når maskina vert starta på nytt, vil ho starta systeminnstillingane for "
 "oppsett av fastvara."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Kvilemodus"
+
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgctxt "Suspend to RAM"
@@ -174,10 +103,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "Installer oppdateringar og start på nytt"
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Start på nytt"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
 msgstr "Start på nytt no"
+
+# Teksten bør vera kort, for å unngå å bli delt over fleire linjer (så «Slå av maskina», som stod før, er gjerne hakket for langt), sidan dei andre tekstane er på éi linje.
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Slå av"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
@@ -214,55 +154,37 @@ msgctxt ""
 msgid "Plasma made by KDE"
 msgstr "Plasma frå KDE"
 
-#~ msgctxt "@title: group"
-#~ msgid "Clock:"
-#~ msgstr "Klokke:"
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Tastaturoppsett: %1"
 
-#~ msgctxt "@option:check"
-#~ msgid "Keep visible when unlocking prompt disappears"
-#~ msgstr "Hald synleg når opplåsingsfeltet forsvinn"
+#~ msgid "Username"
+#~ msgstr "Brukarnamn"
 
-#~ msgctxt "@title: group"
-#~ msgid "Media controls:"
-#~ msgstr "Mediestyring:"
+#~ msgid "Password"
+#~ msgstr "Passord"
 
-#~ msgctxt "@option:check"
-#~ msgid "Show under unlocking prompt"
-#~ msgstr "Vis under opplåsingsfeltet"
+#~ msgid "Log In"
+#~ msgstr "Logg inn"
 
-#~ msgid "Unlocking failed"
-#~ msgstr "Klarte ikkje låsa opp"
+#~ msgid "Caps Lock is on"
+#~ msgstr "«Caps Lock» er på"
 
-#~ msgid "Sleep"
-#~ msgstr "Kvilemodus"
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "Anna …"
 
-#~ msgid "Switch User"
-#~ msgstr "Byt brukar"
+#~ msgid "Type in Username and Password"
+#~ msgstr "Skriv inn brukarnamn og passord"
 
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Byt utforming"
+#~ msgid "List Users"
+#~ msgstr "Vis brukarar"
 
-#~ msgid "Unlock"
-#~ msgstr "Lås opp"
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtuelt tastatur"
 
-#~ msgid "(or scan your fingerprint on the reader)"
-#~ msgstr "(eller les av fingeravtrykket ditt)"
+#~ msgid "Login Failed"
+#~ msgstr "Feil ved innlogging"
 
-#~ msgid "(or scan your smartcard)"
-#~ msgstr "(eller les av smartkortet ditt)"
-
-#~ msgid "No title"
-#~ msgstr "Utan tittel"
-
-#~ msgid "No media playing"
-#~ msgstr "Inkje medium vert spela av"
-
-#~ msgid "Previous track"
-#~ msgstr "Førre spor"
-
-#~ msgid "Play or Pause media"
-#~ msgstr "Spel/pause"
-
-#~ msgid "Next track"
-#~ msgstr "Neste spor"
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Skrivebordsøkt: %1"

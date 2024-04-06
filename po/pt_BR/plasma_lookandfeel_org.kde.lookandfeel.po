@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-03-18 16:02-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -21,82 +21,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 24.02.0\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Layout do teclado: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "Nome de usuário"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Senha"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Iniciar sessão"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Caps Lock está ligado"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Suspender"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Reiniciar"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Desligar"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "Outro..."
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "Digite o nome de usuário e senha"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "Listar usuários"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Teclado virtual"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Falha na autenticação"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "Sessão da área de trabalho: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -148,6 +72,12 @@ msgstr ""
 "Quando reiniciar, o computador irá entrar na tela de configuração do "
 "firmware."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Suspender"
+
 #: contents/logout/Logout.qml:201
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
@@ -179,11 +109,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Reiniciar"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "Reiniciar"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Desligar"
 
 #: contents/logout/Logout.qml:252
 #, fuzzy, kde-format
@@ -221,6 +161,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma feito pelo KDE"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Layout do teclado: %1"
+
+#~ msgid "Username"
+#~ msgstr "Nome de usuário"
+
+#~ msgid "Password"
+#~ msgstr "Senha"
+
+#~ msgid "Log In"
+#~ msgstr "Iniciar sessão"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Caps Lock está ligado"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "Outro..."
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "Digite o nome de usuário e senha"
+
+#~ msgid "List Users"
+#~ msgstr "Listar usuários"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Teclado virtual"
+
+#~ msgid "Login Failed"
+#~ msgstr "Falha na autenticação"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Sessão da área de trabalho: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

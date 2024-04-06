@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-26 01:47+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2023-10-08 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,68 +17,68 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.12.3\n"
 
-#: contents/ui/FullRepresentation.qml:40
+#: contents/ui/FullRepresentation.qml:47
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
 msgstr "카메라"
 
-#: contents/ui/FullRepresentation.qml:43
+#: contents/ui/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
 msgstr "활성"
 
-#: contents/ui/FullRepresentation.qml:45
+#: contents/ui/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
 msgstr "대기"
 
-#: contents/ui/FullRepresentation.qml:47
+#: contents/ui/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
 msgstr "오류"
 
-#: contents/ui/FullRepresentation.qml:49
+#: contents/ui/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
 msgstr "생성 중"
 
-#: contents/ui/FullRepresentation.qml:51
+#: contents/ui/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
 msgstr "일시 정지됨"
 
-#: contents/ui/FullRepresentation.qml:53
+#: contents/ui/FullRepresentation.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: contents/ui/FullRepresentation.qml:69
+#: contents/ui/FullRepresentation.qml:79
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
 msgstr "%1이(가) 사용 중"
 
-#: contents/ui/main.qml:21
+#: contents/ui/main.qml:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
 msgstr "카메라 표시기를 사용할 수 없음"
 
-#: contents/ui/main.qml:23
+#: contents/ui/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
 msgid_plural "%1 cameras are in use"
 msgstr[0] "카메라 %1개 사용 중"
 
-#: contents/ui/main.qml:25
+#: contents/ui/main.qml:27
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"

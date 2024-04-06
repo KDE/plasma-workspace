@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -16,82 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.12.2\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "कुंजीपटल अभिन्यास : %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "उपयोक्ता नाम"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "कूटशब्द"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "लॉग इन"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "कैप्स लॉक सक्रिय है"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "निद्रा"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "पुनः प्रारंभ करें"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "बन्द करें"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "अन्य…"
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "उपयोक्ता नाम और कूटशब्द टाइप करें"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "उपयोक्ता सूची दिखाएँ"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "अप्रत्यक्ष कुंजीपटल"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "लॉगइन असफल"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "डेस्कटॉप सत्र : %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -141,6 +65,12 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "पुनरारंभ होने पर, कंप्यूटर फर्मवेयर संस्थापन स्क्रीन में प्रवेश करेगा।"
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "निद्रा"
+
 #: contents/logout/Logout.qml:201
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
@@ -172,11 +102,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "पुनः प्रारंभ करें"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "पुनः प्रारंभ करें"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "बन्द करें"
 
 #: contents/logout/Logout.qml:252
 #, fuzzy, kde-format
@@ -214,6 +154,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "केडीई द्वारा बनाया गया प्लाज़्मा"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "कुंजीपटल अभिन्यास : %1"
+
+#~ msgid "Username"
+#~ msgstr "उपयोक्ता नाम"
+
+#~ msgid "Password"
+#~ msgstr "कूटशब्द"
+
+#~ msgid "Log In"
+#~ msgstr "लॉग इन"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "कैप्स लॉक सक्रिय है"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "अन्य…"
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "उपयोक्ता नाम और कूटशब्द टाइप करें"
+
+#~ msgid "List Users"
+#~ msgstr "उपयोक्ता सूची दिखाएँ"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "अप्रत्यक्ष कुंजीपटल"
+
+#~ msgid "Login Failed"
+#~ msgstr "लॉगइन असफल"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "डेस्कटॉप सत्र : %1"
 
 #, fuzzy
 #~| msgid "Clock"

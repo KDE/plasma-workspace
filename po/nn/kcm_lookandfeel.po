@@ -290,6 +290,3 @@ msgid ""
 msgstr ""
 "Dette globale temaet inneheld ikkje nokon aktuelle innstillingar. Ta kontakt "
 "med utviklarane av teamet, då det truleg er øydelagt."
-
-#~ msgid "Lock Screen"
-#~ msgstr "Låseskjerm"

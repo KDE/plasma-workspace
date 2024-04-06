@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-18 14:54+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -16,82 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.5\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "விசைப்பலகை தளவமைப்பு: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "பயனர் பெயர்"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "கடவுச்சொல்"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "நுழை"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Caps Lock இயக்கப்பட்டுள்ளது"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "தூங்கு"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "மீள்துவக்கு"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "கணினியை நிறுத்து"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "வேறு…"
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "பயனர் பெயரையும் கடவுச்சொல்லையும் உள்ளிடவும்"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "பயனர்களை பட்டியலிடு"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "மெய்நிகர் விசைப்பலகை"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "நுழைவு தோல்வியடைந்தது"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "பணிமேடை அமர்வு: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -141,6 +65,12 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "மீள்துவக்கப்படும்போது கணினி சாதனநிரல் அமைப்புகளில் நுழையும்."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "தூங்கு"
+
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgctxt "Suspend to RAM"
@@ -169,10 +99,20 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "உடனே புதுப்பித்து மீள்துவக்கு"
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "மீள்துவக்கு"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
 msgstr "இப்போதே மீள்துவக்கு"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "கணினியை நிறுத்து"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
@@ -208,6 +148,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "கே.டீ.யீ. வழங்கும் பிளாஸ்மா"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "விசைப்பலகை தளவமைப்பு: %1"
+
+#~ msgid "Username"
+#~ msgstr "பயனர் பெயர்"
+
+#~ msgid "Password"
+#~ msgstr "கடவுச்சொல்"
+
+#~ msgid "Log In"
+#~ msgstr "நுழை"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Caps Lock இயக்கப்பட்டுள்ளது"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "வேறு…"
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "பயனர் பெயரையும் கடவுச்சொல்லையும் உள்ளிடவும்"
+
+#~ msgid "List Users"
+#~ msgstr "பயனர்களை பட்டியலிடு"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "மெய்நிகர் விசைப்பலகை"
+
+#~ msgid "Login Failed"
+#~ msgstr "நுழைவு தோல்வியடைந்தது"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "பணிமேடை அமர்வு: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

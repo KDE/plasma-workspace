@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2022-10-18 13:03+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -16,82 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.08.2\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Klaviatura qatı: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "İstifadəçi adı"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Şifrə"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Giriş"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Caps Lock aktivdir"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Yuxu"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Yenidən başlatmaq"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Söndürmək"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "Digər..."
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "İstifadəçi adını və Şifrəni daxil edin"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "İstifadəçilər siyahısı"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Virtual Klaviatura"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Giriş alınmadı"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "İş masası Seansı: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -143,6 +67,12 @@ msgstr ""
 "Yenidən başladıldıqda komputer proqram təminatının ayarlanması ekranına "
 "daxil olacaq"
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Yuxu"
+
 #: contents/logout/Logout.qml:201
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
@@ -174,11 +104,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Yenidən başlatmaq"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "Yenidən başlatmaq"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Söndürmək"
 
 #: contents/logout/Logout.qml:252
 #, fuzzy, kde-format
@@ -216,6 +156,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma, KDE tərəfindən yaradılıb"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Klaviatura qatı: %1"
+
+#~ msgid "Username"
+#~ msgstr "İstifadəçi adı"
+
+#~ msgid "Password"
+#~ msgstr "Şifrə"
+
+#~ msgid "Log In"
+#~ msgstr "Giriş"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Caps Lock aktivdir"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "Digər..."
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "İstifadəçi adını və Şifrəni daxil edin"
+
+#~ msgid "List Users"
+#~ msgstr "İstifadəçilər siyahısı"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtual Klaviatura"
+
+#~ msgid "Login Failed"
+#~ msgstr "Giriş alınmadı"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "İş masası Seansı: %1"
 
 #~ msgctxt "@title: group"
 #~ msgid "Clock:"

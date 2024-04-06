@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2021-09-07 22:06-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -16,82 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.08.1\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Тарҳбандии клавиатура: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "Номи корбар"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Ниҳонвожа"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Ворид шудан"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Тугмаи Caps Lock фаъол аст"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Ба хоб равондан"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Аз нав оғоз кардани низом"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Хомӯш кардани низом"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "Дигар…"
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "Номи корбар ва ниҳонвожаро ворид намоед"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "Рӯйхати корбарон"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Клавиатураи барномавӣ"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Воридшавӣ қатъ шуд"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "Ҷаласаи мизи корӣ: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -145,6 +69,12 @@ msgstr ""
 "Вақте ки низом аз нав оғоз карда мешавад, компютер ба экрани танзимоти "
 "миёнафзор ворид карда мешавад."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Ба хоб равондан"
+
 #: contents/logout/Logout.qml:201
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
@@ -176,11 +106,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Аз нав оғоз кардани низом"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "Аз нав оғоз кардани низом"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Хомӯш кардани низом"
 
 #: contents/logout/Logout.qml:252
 #, fuzzy, kde-format
@@ -218,6 +158,41 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma аз ҷониби KDE"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Тарҳбандии клавиатура: %1"
+
+#~ msgid "Username"
+#~ msgstr "Номи корбар"
+
+#~ msgid "Password"
+#~ msgstr "Ниҳонвожа"
+
+#~ msgid "Log In"
+#~ msgstr "Ворид шудан"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Тугмаи Caps Lock фаъол аст"
+
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "Дигар…"
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "Номи корбар ва ниҳонвожаро ворид намоед"
+
+#~ msgid "List Users"
+#~ msgstr "Рӯйхати корбарон"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Клавиатураи барномавӣ"
+
+#~ msgid "Login Failed"
+#~ msgstr "Воридшавӣ қатъ шуд"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Ҷаласаи мизи корӣ: %1"
 
 #, fuzzy
 #~| msgid "Clock"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2014-09-18 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -16,87 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.4\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr ""
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr ""
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Passwoort"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, fuzzy, kde-format
-#| msgid "Log out"
-msgid "Log In"
-msgstr "Afmellen"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Grootschriev-Rast is an"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr ""
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr ""
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, fuzzy, kde-format
-#| msgid "Shut down"
-msgid "Shut Down"
-msgstr "Utmaken"
-
-#: ../sddm-theme/Main.qml:233
-#, kde-format
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr ""
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr ""
-
-#: ../sddm-theme/Main.qml:377
-#, fuzzy, kde-format
-#| msgctxt "Button to change keyboard layout"
-#| msgid "Switch layout"
-msgid "List Users"
-msgstr "Tasttoornen wesseln"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr ""
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Anmellen is fehlslaan"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, fuzzy, kde-format
-#| msgid "Create Session"
-msgid "Desktop Session: %1"
-msgstr "Törn opstellen"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -145,6 +64,12 @@ msgstr[1] ""
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr ""
+
 #: contents/logout/Logout.qml:201
 #, kde-format
 msgctxt "Suspend to RAM"
@@ -173,10 +98,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr ""
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
 msgstr ""
+
+#: contents/logout/Logout.qml:251
+#, fuzzy, kde-format
+#| msgid "Shut down"
+msgid "Shut Down"
+msgstr "Utmaken"
 
 #: contents/logout/Logout.qml:252
 #, fuzzy, kde-format
@@ -217,6 +153,31 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr ""
+
+#~ msgid "Password"
+#~ msgstr "Passwoort"
+
+#, fuzzy
+#~| msgid "Log out"
+#~ msgid "Log In"
+#~ msgstr "Afmellen"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Grootschriev-Rast is an"
+
+#, fuzzy
+#~| msgctxt "Button to change keyboard layout"
+#~| msgid "Switch layout"
+#~ msgid "List Users"
+#~ msgstr "Tasttoornen wesseln"
+
+#~ msgid "Login Failed"
+#~ msgstr "Anmellen is fehlslaan"
+
+#, fuzzy
+#~| msgid "Create Session"
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Törn opstellen"
 
 #, fuzzy
 #~| msgid "Unlock"

@@ -9,9 +9,9 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:39+0000\n"
-"PO-Revision-Date: 2024-03-26 17:40+0200\n"
+"PO-Revision-Date: 2024-04-05 20:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
+"Language-Team: Ukrainian\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -300,7 +300,7 @@ msgstr "Приховати стільницю"
 #: shellcorona.cpp:222
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Задіяти засіб запуску програм"
 
 #: shellcorona.cpp:230
 #, kde-format

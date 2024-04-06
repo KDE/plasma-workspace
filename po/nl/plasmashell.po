@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:39+0000\n"
-"PO-Revision-Date: 2024-03-26 11:23+0100\n"
+"PO-Revision-Date: 2024-04-05 10:42+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -299,7 +299,7 @@ msgstr "Bureaublad verbergen"
 #: shellcorona.cpp:222
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Toepassingen-menu activeren"
 
 #: shellcorona.cpp:230
 #, kde-format

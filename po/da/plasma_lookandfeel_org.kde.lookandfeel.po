@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-06 00:39+0000\n"
 "PO-Revision-Date: 2020-10-04 17:18+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -17,84 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.04.2\n"
-
-#: ../sddm-theme/KeyboardButton.qml:19
-#, kde-format
-msgid "Keyboard Layout: %1"
-msgstr "Tastaturlayout: %1"
-
-#: ../sddm-theme/Login.qml:85
-#, kde-format
-msgid "Username"
-msgstr "Brugernavn"
-
-#: ../sddm-theme/Login.qml:102
-#, kde-format
-msgid "Password"
-msgstr "Adgangskode"
-
-#: ../sddm-theme/Login.qml:144 ../sddm-theme/Login.qml:150
-#, kde-format
-msgid "Log In"
-msgstr "Log ind"
-
-#: ../sddm-theme/Main.qml:200
-#, kde-format
-msgid "Caps Lock is on"
-msgstr "Lås skift er aktiveret"
-
-#: ../sddm-theme/Main.qml:212 ../sddm-theme/Main.qml:356
-#: contents/logout/Logout.qml:200
-#, kde-format
-msgctxt "Suspend to RAM"
-msgid "Sleep"
-msgstr "Slumre"
-
-#: ../sddm-theme/Main.qml:219 ../sddm-theme/Main.qml:363
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
-#, kde-format
-msgid "Restart"
-msgstr "Genstart"
-
-#: ../sddm-theme/Main.qml:226 ../sddm-theme/Main.qml:370
-#: contents/logout/Logout.qml:251
-#, kde-format
-msgid "Shut Down"
-msgstr "Luk ned"
-
-#: ../sddm-theme/Main.qml:233
-#, fuzzy, kde-format
-#| msgctxt "For switching to a username and password prompt"
-#| msgid "Other..."
-msgctxt "For switching to a username and password prompt"
-msgid "Other…"
-msgstr "Anden..."
-
-#: ../sddm-theme/Main.qml:342
-#, kde-format
-msgid "Type in Username and Password"
-msgstr "Indtast brugernavn og adgangskode"
-
-#: ../sddm-theme/Main.qml:377
-#, kde-format
-msgid "List Users"
-msgstr "Vis brugere"
-
-#: ../sddm-theme/Main.qml:452
-#, kde-format
-msgctxt "Button to show/hide virtual keyboard"
-msgid "Virtual Keyboard"
-msgstr "Virtuelt tastatur"
-
-#: ../sddm-theme/Main.qml:526
-#, kde-format
-msgid "Login Failed"
-msgstr "Indlogning mislykkedes"
-
-#: ../sddm-theme/SessionButton.qml:18
-#, kde-format
-msgid "Desktop Session: %1"
-msgstr "Skrivebordssession: %1"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -145,6 +67,12 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
 "Når den er blevet genstartet går computeren ind i firmwareopsætningsskærmen."
 
+#: contents/logout/Logout.qml:200
+#, kde-format
+msgctxt "Suspend to RAM"
+msgid "Sleep"
+msgstr "Slumre"
+
 #: contents/logout/Logout.qml:201
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
@@ -176,11 +104,21 @@ msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr ""
 
+#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#, kde-format
+msgid "Restart"
+msgstr "Genstart"
+
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "Genstart"
+
+#: contents/logout/Logout.qml:251
+#, kde-format
+msgid "Shut Down"
+msgstr "Luk ned"
 
 #: contents/logout/Logout.qml:252
 #, fuzzy, kde-format
@@ -218,6 +156,44 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma skabt af KDE"
+
+#~ msgid "Keyboard Layout: %1"
+#~ msgstr "Tastaturlayout: %1"
+
+#~ msgid "Username"
+#~ msgstr "Brugernavn"
+
+#~ msgid "Password"
+#~ msgstr "Adgangskode"
+
+#~ msgid "Log In"
+#~ msgstr "Log ind"
+
+#~ msgid "Caps Lock is on"
+#~ msgstr "Lås skift er aktiveret"
+
+#, fuzzy
+#~| msgctxt "For switching to a username and password prompt"
+#~| msgid "Other..."
+#~ msgctxt "For switching to a username and password prompt"
+#~ msgid "Other…"
+#~ msgstr "Anden..."
+
+#~ msgid "Type in Username and Password"
+#~ msgstr "Indtast brugernavn og adgangskode"
+
+#~ msgid "List Users"
+#~ msgstr "Vis brugere"
+
+#~ msgctxt "Button to show/hide virtual keyboard"
+#~ msgid "Virtual Keyboard"
+#~ msgstr "Virtuelt tastatur"
+
+#~ msgid "Login Failed"
+#~ msgstr "Indlogning mislykkedes"
+
+#~ msgid "Desktop Session: %1"
+#~ msgstr "Skrivebordssession: %1"
 
 #, fuzzy
 #~| msgid "Clock"
