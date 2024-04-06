@@ -23,6 +23,15 @@ QQC2.StackView {
 
     readonly property alias mediaProxy: mediaProxy
     readonly property url modelImage: mediaProxy.modelImage
+    readonly property bool isQtMultimediaInstalled: {
+        try {
+            let comp = Qt.createQmlObject("import QtQml; import QtMultimedia; QtObject {}", this);
+            comp.destroy();
+        } catch (e) {
+            return false;
+        }
+        return true;
+    }
 
     /**
      * Stores pending image here to avoid the default image overriding the true image.
@@ -51,7 +60,7 @@ QQC2.StackView {
         }
         case Wallpaper.BackgroundType.AnimatedImage: {
             if (!animatedImageComponent) {
-                animatedImageComponent = Qt.createComponent("mediacomponent/AnimatedImageComponent.qml");
+                animatedImageComponent = isQtMultimediaInstalled ? Qt.createComponent("mediacomponent/VideoComponent.qml") : Qt.createComponent("mediacomponent/AnimatedImageComponent.qml");
             }
             return animatedImageComponent;
         }
