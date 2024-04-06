@@ -162,6 +162,7 @@ private:
     QUrl m_modelImage;
     BackgroundType::Type m_backgroundType = BackgroundType::Type::Unknown;
     Provider::Type m_providerType = Provider::Type::Unknown;
+    std::optional<bool> m_isQtMultimediaReady;
 
     QSize m_targetSize;
     QColor m_customColor = Qt::transparent;

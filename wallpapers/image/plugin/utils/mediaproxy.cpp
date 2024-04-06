@@ -13,6 +13,7 @@
 #include <QGuiApplication>
 #include <QMimeDatabase>
 #include <QMovie>
+#include <QQmlComponent>
 #include <QScreen>
 #include <QUrlQuery>
 
@@ -277,26 +278,40 @@ void MediaProxy::determineBackgroundType(KPackage::Package *package)
         filePath = m_source.toLocalFile();
     }
 
+    if (!m_isQtMultimediaReady.has_value()) {
+        QQmlComponent component(qmlEngine(this));
+        component.loadFromModule("QtMultimedia", "MediaPlayer", QQmlComponent::PreferSynchronous);
+        m_isQtMultimediaReady = !component.isError();
+    }
+
     QMimeDatabase db;
     const QString type = db.mimeTypeForFile(filePath).name();
 
-    if (type.startsWith(QLatin1String("video/"))) {
-        m_backgroundType = BackgroundType::Type::Video;
-    } else if (type.startsWith(QLatin1String("image/svg"))) {
+    if (type.startsWith(QLatin1String("image/svg"))) {
         m_backgroundType = BackgroundType::Type::VectorImage;
-    } else {
+    } else if (type.startsWith(u"image/")) {
         QBuffer dummyBuffer;
         dummyBuffer.open(QIODevice::ReadOnly);
         // Don't use QMovie::supportedFormats() as it loads all available image plugins
         const bool isAnimated = QImageReader(&dummyBuffer, QFileInfo(filePath).suffix().toLower().toLatin1()).supportsOption(QImageIOHandler::Animation);
 
         if (isAnimated) {
-            m_backgroundType = BackgroundType::Type::AnimatedImage;
-        } else if (type.startsWith(QLatin1String("image/"))) {
-            m_backgroundType = BackgroundType::Type::Image;
+            if (m_isQtMultimediaReady.value() && type == u"image/gif") {
+                m_backgroundType = BackgroundType::Type::Video;
+            } else {
+                m_backgroundType = BackgroundType::Type::AnimatedImage;
+            }
         } else {
-            m_backgroundType = BackgroundType::Type::Unknown;
+            m_backgroundType = BackgroundType::Type::Image;
         }
+    } else if (type.startsWith(u"video/")) {
+        if (m_isQtMultimediaReady.value()) {
+            m_backgroundType = BackgroundType::Type::Video;
+        } else {
+            m_backgroundType = BackgroundType::Type::AnimatedImage;
+        }
+    } else {
+        m_backgroundType = BackgroundType::Type::Unknown;
     }
 
     Q_EMIT backgroundTypeChanged();

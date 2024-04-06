@@ -10,6 +10,9 @@
 
 #include <QImageReader>
 #include <QMimeDatabase>
+#include <QQmlComponent>
+#include <QQmlEngine>
+#include <QQmlExpression>
 #include <QSet>
 
 namespace
@@ -33,7 +36,41 @@ void fillSuffixes()
             suffixeSet.insert(pattern);
         }
     }
-    suffixeSet << QStringLiteral("*.mp4") << QStringLiteral("*.ogv") << QStringLiteral("*.webm");
+
+    QQmlEngine engine;
+    QQmlComponent component(&engine);
+    component.loadFromModule("QtMultimedia", "MediaRecorder", QQmlComponent::PreferSynchronous);
+    if (component.isReady()) {
+        QObject *recorder = component.create(engine.rootContext());
+        if (recorder) {
+            QQmlExpression expr(engine.rootContext(), recorder, QStringLiteral("this.mediaFormat.supportedVideoCodecs(1).map(c => Number(c))"));
+            const QVariant result = expr.evaluate();
+            const QVariantList formats = result.value<QJSValue>().toVariant().toList();
+            for (const QVariant &format : formats) {
+                switch (format.toInt()) {
+                case 0: // QMediaFormat::VideoCodec::MPEG1
+                case 1: // QMediaFormat::VideoCodec::MPEG2
+                    suffixeSet << QStringLiteral("*.ts");
+                case 2: // QMediaFormat::VideoCodec::MPEG4
+                case 3: // QMediaFormat::VideoCodec::H264
+                case 4: // QMediaFormat::VideoCodec::H265
+                    suffixeSet << QStringLiteral("*.m4a") << QStringLiteral("*.mkv") << QStringLiteral("*.mp4") << QStringLiteral("*.mov");
+                case 5: // QMediaFormat::VideoCodec::VP8
+                case 6: // QMediaFormat::VideoCodec::VP9
+                    suffixeSet << QStringLiteral("*.webm");
+                case 7: // QMediaFormat::VideoCodec::AV1
+                    suffixeSet << QStringLiteral("*.av1");
+                case 8: // QMediaFormat::VideoCodec::Theora
+                    suffixeSet << QStringLiteral("*.ogv");
+                case 9: // QMediaFormat::VideoCodec::WMV
+                    suffixeSet << QStringLiteral("*.wmv");
+                case 10: // QMediaFormat::VideoCodec::MotionJPEG
+                    suffixeSet << QStringLiteral("*.mjpeg");
+                }
+            }
+            delete recorder;
+        }
+    }
     s_suffixes = suffixeSet.values();
 }
 }
