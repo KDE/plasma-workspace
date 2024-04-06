@@ -637,6 +637,23 @@ QRect PanelView::dogdeGeometryByDistance(int distance) const
     if (!containment() || !m_screenToFollow) {
         return QRect();
     }
+    if (m_floating) {
+        // don't double count the padding
+        switch (containment()->location()) {
+        case Plasma::Types::TopEdge:
+            distance -= m_bottomFloatingPadding;
+            break;
+        case Plasma::Types::LeftEdge:
+            distance -= m_rightFloatingPadding;
+            break;
+        case Plasma::Types::RightEdge:
+            distance -= m_leftFloatingPadding;
+            break;
+        case Plasma::Types::BottomEdge:
+        default:
+            distance -= m_topFloatingPadding;
+        }
+    }
     const QRect dodgeGeometry = geometryByDistance(distance, m_floating ? 1 : 0);
     return dodgeGeometry & m_screenToFollow->geometry();
 }
