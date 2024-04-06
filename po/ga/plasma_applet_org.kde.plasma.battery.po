@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: playground-base/plasma_applet_battery.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 02:21+0000\n"
+"POT-Creation-Date: 2024-04-06 02:31+0000\n"
 "PO-Revision-Date: 2007-07-23 06:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -75,31 +75,31 @@ msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
+#: package/contents/ui/logic.js:24 package/contents/ui/logic.js:30
 #: package/contents/ui/main.qml:142
 #, kde-format
 msgid "Fully Charged"
 msgstr ""
 
-#: package/contents/ui/logic.js:28
+#: package/contents/ui/logic.js:29
 #, fuzzy, kde-format
 #| msgid "%1% (discharging)"
 msgid "Discharging"
 msgstr "%1% (á dhíluchtú)"
 
-#: package/contents/ui/logic.js:30
+#: package/contents/ui/logic.js:31
 #, fuzzy, kde-format
 #| msgid "%1% (charging)"
 msgid "Charging"
 msgstr "%1% (á luchtú)"
 
-#: package/contents/ui/logic.js:32
+#: package/contents/ui/logic.js:33
 #, fuzzy, kde-format
 #| msgid "%1% (charging)"
 msgid "Not Charging"
 msgstr "%1% (á luchtú)"
 
-#: package/contents/ui/logic.js:35
+#: package/contents/ui/logic.js:36
 #, fuzzy, kde-format
 #| msgctxt "Battery is not plugged in"
 #| msgid "Not present"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-12 02:21+0000\n"
+"POT-Creation-Date: 2024-04-06 02:31+0000\n"
 "PO-Revision-Date: 2009-12-14 23:28+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -73,33 +73,33 @@ msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr ""
 
-#: package/contents/ui/logic.js:23 package/contents/ui/logic.js:29
+#: package/contents/ui/logic.js:24 package/contents/ui/logic.js:30
 #: package/contents/ui/main.qml:142
 #, fuzzy, kde-format
 #| msgid "<b>Battery:</b> %1% (fully charged)<br />"
 msgid "Fully Charged"
 msgstr "<b>Baterëjô:</b> %1% (fùl naladowanié)<br />"
 
-#: package/contents/ui/logic.js:28
+#: package/contents/ui/logic.js:29
 #, fuzzy, kde-format
 #| msgctxt "Shown when a time estimate is not available"
 #| msgid "%1% (discharging)"
 msgid "Discharging"
 msgstr "%1 (rozladowanié)"
 
-#: package/contents/ui/logic.js:30
+#: package/contents/ui/logic.js:31
 #, fuzzy, kde-format
 #| msgid "%1% (charging)"
 msgid "Charging"
 msgstr "%1% (ladowanié)"
 
-#: package/contents/ui/logic.js:32
+#: package/contents/ui/logic.js:33
 #, fuzzy, kde-format
 #| msgid "%1% (charging)"
 msgid "Not Charging"
 msgstr "%1% (ladowanié)"
 
-#: package/contents/ui/logic.js:35
+#: package/contents/ui/logic.js:36
 #, fuzzy, kde-format
 #| msgctxt "Battery is not plugged in"
 #| msgid "Not present"
