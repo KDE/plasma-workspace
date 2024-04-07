@@ -34,7 +34,7 @@ ColumnLayout {
         Layout.leftMargin: axis.width / 50 - border.width
         Layout.rightMargin: Layout.leftMargin
         border.color: Qt.alpha(Kirigami.Theme.textColor, 0.2)
-        radius: 3
+        radius: Kirigami.Units.cornerRadius
 
         gradient: root.singleColor ? null : grad
         // The color only get used when there's no gradient

@@ -7,7 +7,7 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.15 as QQC2
-import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 
 Kirigami.FormLayout {
@@ -48,7 +48,7 @@ Kirigami.FormLayout {
             Layout.maximumWidth: Kirigami.Units.gridUnit * 30
             implicitHeight: Kirigami.Units.gridUnit * 15
             Layout.maximumHeight: Kirigami.Units.gridUnit * 15
-            radius: Kirigami.Units.smallSpacing
+            radius: Kirigami.Units.cornerRadius
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.View
             color: Kirigami.Theme.backgroundColor

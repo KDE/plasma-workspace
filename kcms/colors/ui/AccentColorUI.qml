@@ -10,7 +10,7 @@ import QtQuick.Dialogs as QtDialogs
 import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Templates 2.3 as T
 
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Item {
     id: accentColorUI
@@ -91,7 +91,7 @@ Item {
 
             background: Rectangle {
                 readonly property bool showHighlight: parent.hovered && !control.checked && control.highlight
-                radius:  showHighlight ? Math.round(height / 4) : Math.round(height / 2)
+                radius:  showHighlight ? Kirigami.Units.cornerRadius : Math.round(height / 2)
                 color: control.color
                 border {
                     color: showHighlight ? Kirigami.Theme.highlightColor : Qt.rgba(0, 0, 0, 0.15)

@@ -16,7 +16,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.ksvg 1.0 as KSvg
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
-import org.kde.kirigami 2.11 as Kirigami
+import org.kde.kirigami as Kirigami
 
 ContainmentLayoutManager.AppletContainer {
     id: appletContainer

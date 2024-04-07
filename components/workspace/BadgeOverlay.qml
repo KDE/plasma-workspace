@@ -9,7 +9,7 @@ import QtQuick 2.15
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 Rectangle {
     property alias text: label.text
@@ -18,7 +18,7 @@ Rectangle {
     color: Kirigami.Theme.backgroundColor
     width: Math.max(Kirigami.Units.gridUnit, label.width + 2)
     height: label.height
-    radius: 3
+    radius: Kirigami.Units.cornerRadius
     opacity: 0.9
 
     PlasmaComponents3.Label {

@@ -41,7 +41,7 @@ Item {
         anchors.centerIn: parent
         width: parent.width
         height: parent.height
-        radius: Kirigami.Units.smallSpacing
+        radius: Kirigami.Units.cornerRadius
 
         gradient: Gradient {
             GradientStop {
