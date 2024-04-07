@@ -64,9 +64,9 @@ public:
                     if (service && service->isValid()) {
                         auto notification = KNotification::event(KNotification::Catastrophe,
                                                                  i18nc("@title", "Memory Shortage Avoided"),
-                                                                 i18nc("@label",
-                                                                       "The process %1 has been terminated by the Linux kernel because the system is low on "
-                                                                       "memory. Consider closing unused applications or browser tabs.",
+                                                                 xi18nc("@info",
+                                                                        "The process <command>%1</command> has been terminated by the Linux kernel because "
+                                                                        "the system is low on memory. Consider closing unused applications or browser tabs.",
                                                                        service->name()),
                                                                  service->icon(),
                                                                  KNotification::Persistent);
@@ -79,9 +79,9 @@ public:
                     }else {
                         KNotification::event(KNotification::Catastrophe,
                                              i18nc("@title", "Memory Shortage Avoided"),
-                                             i18nc("@label",
-                                                   "A process of unit %1 has been terminated by the Linux kernel because the system is low on "
-                                                   "memory. Consider closing unused applications or browser tabs.",
+                                             xi18nc("@info",
+                                                    "A process of unit <command>%1</command> has been terminated by the Linux kernel because "
+                                                    "the system is low on memory. Consider closing unused applications or browser tabs.",
                                                    unit),
                                              "edit-bomb-symbolic",
                                              KNotification::Persistent)
