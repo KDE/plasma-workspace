@@ -55,7 +55,7 @@ Loader {
             nameFilters: imageWallpaper.nameFilters()
             fileMode: QtDialogs.FileDialog.OpenFiles
             options: QtDialogs.FileDialog.ReadOnly
-            title: i18nc("@title:window", "Open Image")
+            title: i18ndc("plasma_wallpaper_org.kde.image", "@title:window", "Open Media")
         }
     }
 
