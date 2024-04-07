@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"POT-Creation-Date: 2024-04-07 00:40+0000\n"
 "PO-Revision-Date: 2024-03-30 20:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -53,44 +53,49 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/KeyboardColorItem.qml:78
+#, kde-format
+msgid "Follow accent color"
+msgstr ""
+
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Brightness and Color"
 msgstr "நிறமும் பிரகாசமும்"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "தரையின் பிரகாசம் %1%-ஆக உள்ளது"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "விசைப்பலகையின் பிரகாசம் %1%-ஆக உள்ளது"
 
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr "இரவு நிறமாற்றம் முடங்கியுள்ளது"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
 msgstr "இரவு நிறமாற்றம் %1K-ஆக உள்ளது"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "திரையின் பிரகாசத்தை மாற்ற உருளவும்"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "இரவு நிறமாற்றத்தை நிலைமாற்ற நடு-கிளிக் செய்யவும்"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:206
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
@@ -200,7 +205,13 @@ msgstr "திரையின் பிரகாசம்"
 msgid "Keyboard Brightness"
 msgstr "விசைப்பலகையின் பிரகாசம்"
 
-#: package/contents/ui/PopupDialog.qml:127
+#: package/contents/ui/PopupDialog.qml:130
+#, fuzzy, kde-format
+#| msgid "Keyboard Brightness"
+msgid "Keyboard Color"
+msgstr "விசைப்பலகையின் பிரகாசம்"
+
+#: package/contents/ui/PopupDialog.qml:140
 #, kde-format
 msgid "Night Light"
 msgstr "இரவு நிறமாற்றம்"

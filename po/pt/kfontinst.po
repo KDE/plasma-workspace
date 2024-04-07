@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdelibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-29 01:38+0000\n"
+"POT-Creation-Date: 2024-04-07 00:40+0000\n"
 "PO-Revision-Date: 2021-11-09 18:52+0000\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -63,7 +63,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com,morais@kde.org"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:953
+#: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:953
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -72,32 +72,33 @@ msgstr ""
 "Deseja instalar os tipos de letra para uso pessoal (apenas você pode usar) "
 "ou para o sistema (todos os utilizadores podem usá-los)?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:956
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
 #, kde-format
 msgid "Where to Install"
 msgstr "Onde Instalar"
 
-#: apps/Installer.cpp:108
+#: apps/Installer.cpp:111
 #, kde-format
 msgid "Font Installer"
 msgstr "Instalador dos Tipos de Letra"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:113
 #, kde-format
 msgid "Simple font installer"
 msgstr "Instalador de tipos de letra simples"
 
-#: apps/Installer.cpp:112 apps/Printer.cpp:331
+#: apps/Installer.cpp:115 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:118 apps/Printer.cpp:337
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
+#: apps/Installer.cpp:122
+#, fuzzy, kde-format
+#| msgid "Makes the dialog transient for an X app specified by winid"
+msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr "Torna a janela de uma aplicação X identificada com X transitória"
 
-#: apps/Installer.cpp:120
+#: apps/Installer.cpp:125
 #, kde-format
 msgid "URL to install"
 msgstr "O URL a instalar"
@@ -121,6 +122,11 @@ msgstr "Impressora de Tipos de Letra"
 #, kde-format
 msgid "Simple font printer"
 msgstr "Uma impressora de tipos de letra simples"
+
+#: apps/Printer.cpp:337
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "Torna a janela de uma aplicação X identificada com X transitória"
 
 #: apps/Printer.cpp:339
 #, kde-format
@@ -539,22 +545,22 @@ msgstr "Mover para a pasta pessoal."
 msgid "Move to system folder."
 msgstr "Mover para a pasta do sistema."
 
-#: kcmfontinst/JobRunner.cpp:140
+#: kcmfontinst/JobRunner.cpp:136
 #, kde-format
 msgid "Skip"
 msgstr "Ignorar"
 
-#: kcmfontinst/JobRunner.cpp:143
+#: kcmfontinst/JobRunner.cpp:139
 #, kde-format
 msgid "AutoSkip"
 msgstr "Ignorar automaticamente"
 
-#: kcmfontinst/JobRunner.cpp:188
+#: kcmfontinst/JobRunner.cpp:184
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>Cancelar?</h3><p>Tem a certeza que deseja cancelar?</p>"
 
-#: kcmfontinst/JobRunner.cpp:200
+#: kcmfontinst/JobRunner.cpp:196
 #, kde-format
 msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
@@ -563,78 +569,78 @@ msgstr ""
 "<h3>Terminado</h3><p>Por favor repare que todas as aplicações abertas terão "
 "que ser reiniciadas para detectarem as alterações nos tipos de letra.</p>"
 
-#: kcmfontinst/JobRunner.cpp:208
+#: kcmfontinst/JobRunner.cpp:204
 #, kde-format
 msgid "Do not show this message again"
 msgstr "Não mostrar esta mensagem de novo"
 
-#: kcmfontinst/JobRunner.cpp:318
+#: kcmfontinst/JobRunner.cpp:312
 #, kde-format
 msgid "Installing"
 msgstr "A Instalar"
 
-#: kcmfontinst/JobRunner.cpp:321
+#: kcmfontinst/JobRunner.cpp:315
 #, kde-format
 msgid "Uninstalling"
 msgstr "A Desinstalar"
 
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
+#: kcmfontinst/JobRunner.cpp:318 kcmfontinst/JobRunner.cpp:415
 #, kde-format
 msgid "Enabling"
 msgstr "A Activar"
 
-#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:425
+#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:419
 #, kde-format
 msgid "Moving"
 msgstr "A mover"
 
-#: kcmfontinst/JobRunner.cpp:330
+#: kcmfontinst/JobRunner.cpp:324
 #, kde-format
 msgid "Updating"
 msgstr "A Actualizar"
 
-#: kcmfontinst/JobRunner.cpp:334
+#: kcmfontinst/JobRunner.cpp:328
 #, kde-format
 msgid "Removing"
 msgstr "A Remover"
 
-#: kcmfontinst/JobRunner.cpp:338
+#: kcmfontinst/JobRunner.cpp:332
 #, kde-format
 msgid "Disabling"
 msgstr "A Desactivar"
 
-#: kcmfontinst/JobRunner.cpp:376
+#: kcmfontinst/JobRunner.cpp:370
 #, kde-format
 msgid "Updating font configuration. Please wait…"
 msgstr "A actualizar a configuração dos tipos de letra. Espere por favor…"
 
-#: kcmfontinst/JobRunner.cpp:448
+#: kcmfontinst/JobRunner.cpp:442
 #, kde-format
 msgid "Unable to start backend."
 msgstr "Não foi possível iniciar a infra-estrutura."
 
-#: kcmfontinst/JobRunner.cpp:457
+#: kcmfontinst/JobRunner.cpp:451
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "A infra-estrutura morreu e foi reiniciada. Por favor, tente de novo."
 
-#: kcmfontinst/JobRunner.cpp:622 kcmfontinst/JobRunner.cpp:628
+#: kcmfontinst/JobRunner.cpp:616 kcmfontinst/JobRunner.cpp:622
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Erro</h3>"
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:688
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "Não foi possível obter o <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:690
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr ""
 "A infra-estrutura do sistema morreu. Por favor tente de novo.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:692
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -642,7 +648,7 @@ msgstr ""
 "O <i>%1</i> é um tipo de letra de imagens, e estes foram desactivados no seu "
 "sistema."
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -651,47 +657,47 @@ msgstr ""
 "O <i>%1</i> contém o tipo de letra <b>%2</b>, que já está instalado no seu "
 "sistema."
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "O <i>%1</i> não é um tipo de letra."
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "Não foi possível remover todos os ficheiros associados ao <i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:706
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Não foi possível iniciar o serviço do sistema.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:716
+#: kcmfontinst/JobRunner.cpp:703 kio/KioFonts.cpp:716
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "O <i>%1</i> já existe."
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "O <i>%1</i> não existe."
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Permissão negada.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Acção não suportada.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "A autenticação falhou.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:720
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Ocorreu um erro inesperado durante o processamento: <i>%1</i>"
@@ -1593,32 +1599,32 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "Entidade Decimal em XML"
 
-#: viewpart/FontViewPart.cpp:87
+#: viewpart/FontViewPart.cpp:89
 #, kde-format
 msgid "Show Face:"
 msgstr "Mostrar a Face:"
 
-#: viewpart/FontViewPart.cpp:90
+#: viewpart/FontViewPart.cpp:92
 #, kde-format
 msgid "Install…"
 msgstr "Instalar…"
 
-#: viewpart/FontViewPart.cpp:111
+#: viewpart/FontViewPart.cpp:113
 #, kde-format
 msgid "Change Text…"
 msgstr "Modificar o Texto…"
 
-#: viewpart/FontViewPart.cpp:337
+#: viewpart/FontViewPart.cpp:339
 #, kde-format
 msgid "Could not read font."
 msgstr "Não foi possível ler o tipo de letra."
 
-#: viewpart/FontViewPart.cpp:389
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Preview String"
 msgstr "Texto de Antevisão"
 
-#: viewpart/FontViewPart.cpp:389
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Indique o novo texto:"

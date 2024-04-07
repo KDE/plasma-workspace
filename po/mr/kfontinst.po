@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-29 01:38+0000\n"
+"POT-Creation-Date: 2024-04-07 00:40+0000\n"
 "PO-Revision-Date: 2013-03-23 15:09+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr ""
 "sandeep.shedmake@gmail.com, \n"
 "chetan@kompkin.com"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:953
+#: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:953
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -42,32 +42,33 @@ msgstr ""
 "तुम्हाला नक्की फॉन्टचा वापर व्यक्तिगत (फक्त तुम्हाला उपलब्ध होईल) किंवा प्रणाली-नुरूप (सर्व "
 "वापरकर्ता करिता उपलब्ध) करिता करायचे?"
 
-#: apps/Installer.cpp:38 kcmfontinst/KCmFontInst.cpp:956
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
 #, kde-format
 msgid "Where to Install"
 msgstr "कुठे प्रतिष्ठापन करायचे"
 
-#: apps/Installer.cpp:108
+#: apps/Installer.cpp:111
 #, kde-format
 msgid "Font Installer"
 msgstr "फॉन्ट संस्थापक"
 
-#: apps/Installer.cpp:110
+#: apps/Installer.cpp:113
 #, kde-format
 msgid "Simple font installer"
 msgstr "सोपे फॉन्ट प्रतिष्ठापक"
 
-#: apps/Installer.cpp:112 apps/Printer.cpp:331
+#: apps/Installer.cpp:115 apps/Printer.cpp:331
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:118 apps/Printer.cpp:337
-#, kde-format
-msgid "Makes the dialog transient for an X app specified by winid"
+#: apps/Installer.cpp:122
+#, fuzzy, kde-format
+#| msgid "Makes the dialog transient for an X app specified by winid"
+msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr "winid ने निर्देशीत केलेल्या X app साठी क्षणिक संवाद करतो"
 
-#: apps/Installer.cpp:120
+#: apps/Installer.cpp:125
 #, kde-format
 msgid "URL to install"
 msgstr "प्रतिष्ठापन करिता URL"
@@ -92,6 +93,11 @@ msgstr "फॉन्ट छपाईयंत्र"
 #, kde-format
 msgid "Simple font printer"
 msgstr "सोपे फॉन्ट छपाईयंत्र"
+
+#: apps/Printer.cpp:337
+#, kde-format
+msgid "Makes the dialog transient for an X app specified by winid"
+msgstr "winid ने निर्देशीत केलेल्या X app साठी क्षणिक संवाद करतो"
 
 #: apps/Printer.cpp:339
 #, kde-format
@@ -491,100 +497,100 @@ msgstr "वैयक्तिक संचयीकेत हलवा."
 msgid "Move to system folder."
 msgstr "प्रणाली संचयीकेत हलवा."
 
-#: kcmfontinst/JobRunner.cpp:140
+#: kcmfontinst/JobRunner.cpp:136
 #, kde-format
 msgid "Skip"
 msgstr "वगळा"
 
-#: kcmfontinst/JobRunner.cpp:143
+#: kcmfontinst/JobRunner.cpp:139
 #, kde-format
 msgid "AutoSkip"
 msgstr "स्वयंवगळा"
 
-#: kcmfontinst/JobRunner.cpp:188
+#: kcmfontinst/JobRunner.cpp:184
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>रद्द करा?</h3><p>तुम्हाला नक्की रद्द करायचे आहे का?</p>"
 
-#: kcmfontinst/JobRunner.cpp:200
+#: kcmfontinst/JobRunner.cpp:196
 #, kde-format
 msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:208
+#: kcmfontinst/JobRunner.cpp:204
 #, kde-format
 msgid "Do not show this message again"
 msgstr "हा संदेश पुन्हा दाखवू नका"
 
-#: kcmfontinst/JobRunner.cpp:318
+#: kcmfontinst/JobRunner.cpp:312
 #, kde-format
 msgid "Installing"
 msgstr "प्रतिष्ठापन करत आहे"
 
-#: kcmfontinst/JobRunner.cpp:321
+#: kcmfontinst/JobRunner.cpp:315
 #, kde-format
 msgid "Uninstalling"
 msgstr "अप्रतिष्ठापीत करत आहे"
 
-#: kcmfontinst/JobRunner.cpp:324 kcmfontinst/JobRunner.cpp:421
+#: kcmfontinst/JobRunner.cpp:318 kcmfontinst/JobRunner.cpp:415
 #, kde-format
 msgid "Enabling"
 msgstr "कार्यान्वित करत आहे"
 
-#: kcmfontinst/JobRunner.cpp:327 kcmfontinst/JobRunner.cpp:425
+#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:419
 #, kde-format
 msgid "Moving"
 msgstr "हलवित आहे"
 
-#: kcmfontinst/JobRunner.cpp:330
+#: kcmfontinst/JobRunner.cpp:324
 #, kde-format
 msgid "Updating"
 msgstr "अद्ययावत करत आहे"
 
-#: kcmfontinst/JobRunner.cpp:334
+#: kcmfontinst/JobRunner.cpp:328
 #, kde-format
 msgid "Removing"
 msgstr "काढून टाकत आहे"
 
-#: kcmfontinst/JobRunner.cpp:338
+#: kcmfontinst/JobRunner.cpp:332
 #, kde-format
 msgid "Disabling"
 msgstr "अकार्यान्वित करत आहे"
 
-#: kcmfontinst/JobRunner.cpp:376
+#: kcmfontinst/JobRunner.cpp:370
 #, fuzzy, kde-format
 #| msgid "Updating font configuration. Please wait..."
 msgid "Updating font configuration. Please wait…"
 msgstr "फॉन्ट संयोजना अद्ययावतीत करत आहे. कृपया थांबा..."
 
-#: kcmfontinst/JobRunner.cpp:448
+#: kcmfontinst/JobRunner.cpp:442
 #, kde-format
 msgid "Unable to start backend."
 msgstr "बॅकएन्ड सुरु करू शकत नाही."
 
-#: kcmfontinst/JobRunner.cpp:457
+#: kcmfontinst/JobRunner.cpp:451
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "बॅकएन्ड मृत झाले होते. पण ते पुन्हा सुरु झाले आहे. कृपया पुन्हा प्रयत्न करा."
 
-#: kcmfontinst/JobRunner.cpp:622 kcmfontinst/JobRunner.cpp:628
+#: kcmfontinst/JobRunner.cpp:616 kcmfontinst/JobRunner.cpp:622
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>त्रुटी</h3>"
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:688
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "<i>%1</i> हे डाउनलोड करण्यास अपयश"
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:690
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "बॅकएन्ड मृत झाले आहे. कृपया पुन्हा प्रयत्न करा.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:692
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
@@ -592,7 +598,7 @@ msgstr ""
 "<i>%1</i> बीटमॅप फॉन्ट आहे. तुम्ही प्रणालीवर बीटमॅप फॉन्ट प्रतिष्ठापीत करू शकत नाही, "
 "कारण यांस प्रणालीवर अकार्यान्वित केले गेले आहे."
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -601,47 +607,47 @@ msgstr ""
 "<i>%1</i> अंतर्गत <b>%2</b> हा फॉन्ट समाविष्टीत आहे. या नावाचा फॉन्ट आधीपासूनच "
 "प्रतिष्ठापीत आहे."
 
-#: kcmfontinst/JobRunner.cpp:702
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> हा फॉन्ट नाही."
 
-#: kcmfontinst/JobRunner.cpp:704
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "<i>%1</i> याच्याशी संबंधित सर्व फाईल्स काढून टाकु शकत नाही"
 
-#: kcmfontinst/JobRunner.cpp:706
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "प्रणाली डीमन सुरु करण्यास अपयश.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:709 kio/KioFonts.cpp:716
+#: kcmfontinst/JobRunner.cpp:703 kio/KioFonts.cpp:716
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<b>%1</b> आधीपासूनच अस्तित्वात आहे."
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:706
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> अस्तित्वात नाही."
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "परवानगी नाही.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:716
+#: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "असमर्थीत पद्धत.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:718
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "अधिप्रमाणन असफल.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:720
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "हे प्रक्रीया करताना अनपेक्षीत त्रुटी : <i>%1</i>"
@@ -1555,34 +1561,34 @@ msgstr "UTF-8"
 msgid "XML Decimal Entity"
 msgstr "XML डेसीमल एनटीटी"
 
-#: viewpart/FontViewPart.cpp:87
+#: viewpart/FontViewPart.cpp:89
 #, kde-format
 msgid "Show Face:"
 msgstr "चेहरा दर्शवा :"
 
-#: viewpart/FontViewPart.cpp:90
+#: viewpart/FontViewPart.cpp:92
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "प्रतिष्ठापन करत आहे"
 
-#: viewpart/FontViewPart.cpp:111
+#: viewpart/FontViewPart.cpp:113
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "पाठ्य बदला..."
 
-#: viewpart/FontViewPart.cpp:337
+#: viewpart/FontViewPart.cpp:339
 #, kde-format
 msgid "Could not read font."
 msgstr "फॉन्ट वाचू शकत नाही."
 
-#: viewpart/FontViewPart.cpp:389
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Preview String"
 msgstr "अक्षरमाळा पूर्वावलोकन"
 
-#: viewpart/FontViewPart.cpp:389
+#: viewpart/FontViewPart.cpp:406
 #, kde-format
 msgid "Please enter new string:"
 msgstr "कृपया नवीन अक्षमाळा दाखल करा:"

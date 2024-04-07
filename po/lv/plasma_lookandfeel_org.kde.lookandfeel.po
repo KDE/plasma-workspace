@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2024-01-18 20:45+0200\n"
+"PO-Revision-Date: 2024-04-05 11:11+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -85,9 +85,7 @@ msgid "Sleep"
 msgstr "Iesnaudināt"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Iesnaudināt"
@@ -98,8 +96,7 @@ msgid "Hibernate"
 msgstr "Hibernēt"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
 msgstr "Hibernēt"
 
@@ -110,9 +107,7 @@ msgid "Install Updates & Restart"
 msgstr "Instalēt atjauninājumus un pārstartēt"
 
 #: contents/logout/Logout.qml:223
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "Instalēt atjauninājumus un pārstartēt"
@@ -123,8 +118,7 @@ msgid "Restart"
 msgstr "Pārstartēt"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
 msgstr "Pārstartēt"
 
@@ -134,8 +128,7 @@ msgid "Shut Down"
 msgstr "Izslēgt"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
 msgstr "Izslēgt"
 
@@ -145,10 +138,9 @@ msgid "Log Out"
 msgstr "Izrakstīsies"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Izrakstīsies"
+msgstr "Izrakstīsiet"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

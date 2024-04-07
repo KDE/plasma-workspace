@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:39+0000\n"
-"PO-Revision-Date: 2024-03-26 10:31+0100\n"
+"PO-Revision-Date: 2024-04-05 11:02+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -303,7 +303,7 @@ msgstr "Oculta l'escriptori"
 #: shellcorona.cpp:222
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Activa l'iniciador d'aplicacions"
 
 #: shellcorona.cpp:230
 #, kde-format
@@ -382,13 +382,3 @@ msgstr "Nombre de quadros"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els quadros"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "Activa el mode prova i especifica el fitxer en JavaScript de disposició "
-#~ "per a definir l'entorn de prova"
-
-#~ msgid "file"
-#~ msgstr "fitxer"

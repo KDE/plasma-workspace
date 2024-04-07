@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-01-18 21:02+0200\n"
+"PO-Revision-Date: 2024-04-05 10:06+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -60,7 +60,7 @@ msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr ""
-"Šī programma neatbalsta paziņojumu konfigurāciju katram gadījumam atsevišķi"
+"Šī programma neatbalsta paziņojumu konfigurēšanu katram notikumam atsevišķi"
 
 #: ui/ApplicationConfiguration.qml:269
 #, kde-format
@@ -76,32 +76,30 @@ msgstr "Atskaņot skaņu"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "Izmēģināt skaņu"
 
 #: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "Atiestatīt"
 
 #: ui/ApplicationConfiguration.qml:327
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Atlasīt skaņas datni"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Normal notifications:"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Normālie paziņojumi:"
+msgstr "Sistēmas paziņojumi..."
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Programmu iestatījumi"
+msgstr "Programmas iestatījumi..."
 
 #: ui/main.qml:77
 #, kde-format
@@ -118,7 +116,7 @@ msgstr ""
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
-msgstr "Šobrīd paziņojumus nenodrošina „Plasma“, bet gan „%1 %2“."
+msgstr "Šobrīd paziņojumus nenodrošina „Plasma“, bet gan „%1“ „%2“."
 
 #: ui/main.qml:92
 #, kde-format
@@ -135,20 +133,16 @@ msgstr "Netraucēšanas režīms"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "Ieslēgt automātiski:"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Kad ir spoguļoti ekrāni"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode during screen sharing"
-#| msgid "During screen sharing"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Ekrāna kopīgošanas laikā"
@@ -157,7 +151,7 @@ msgstr "Ekrāna kopīgošanas laikā"
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "Manuāli pārslēgt ar saīsni:"
 
 #: ui/main.qml:139
 #, kde-format

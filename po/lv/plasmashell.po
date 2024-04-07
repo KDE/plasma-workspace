@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:39+0000\n"
-"PO-Revision-Date: 2024-01-18 18:12+0200\n"
+"PO-Revision-Date: 2024-04-05 15:36+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -232,43 +232,43 @@ msgstr "Deaktivēta uz ekrāna redzama tastatūra"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Iesnaudināšana un ekrāna slēgšana ir bloķēta"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Iesnaudināšana un ekrāna slēgšana ir atbloķēta"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Energotaupības režīms"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Līdzsvarotais jaudas režīms"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Jaudas režīms"
 
 #: panelview.cpp:1019
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Slēpt paneļa konfigurāciju"
 
 #: panelview.cpp:1021
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Rādīt paneļa konfigurāciju"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
@@ -299,7 +299,7 @@ msgstr "Slēpt darbvirsmu"
 #: shellcorona.cpp:222
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Aktivizēt programmu palaidēju"
 
 #: shellcorona.cpp:230
 #, kde-format
@@ -329,7 +329,7 @@ msgstr "Aktivēt uzdevumu pārvaldnieka vienumu %1"
 #: shellcorona.cpp:299
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Paneļa un darbvirsmas pārvaldība"
 
 #: shellcorona.cpp:321
 #, kde-format

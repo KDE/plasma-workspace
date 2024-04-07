@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-05 00:39+0000\n"
-"PO-Revision-Date: 2024-01-18 10:22+0200\n"
+"PO-Revision-Date: 2024-04-05 10:20+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -72,15 +72,14 @@ msgid ""
 msgstr ""
 "<emphasis>Atlase</emphasis> nozīmē darbību, kad teksts ekrānā vai tā zona "
 "tiek atlasīta ar peli vai tastatūru. Pēc tam šo tekstu iespējams ielīmēt, "
-"izmantojot peles vidējo pogu.<nl/><nl/>Ja atlase tiek īpaši kopēta, "
-"izmantojot <interface>Kopēšanu</interface> vai <interface>Izgriešanu</"
-"interface>, tā tiek saglabāta <emphasis>starpliktuvē</emphasis>. No "
-"starpliktuves šo informāciju var ielīmēt, izmantojot <interface>Ielīmēšanu</"
-"interface>. <nl/><nl/>Ieslēdzot šo iespēju, atlase un starpliktuve kļūst par "
-"vienu vienību, tāpēc atlase kļūst nekavējoties pieejama ielīmēšanai jebkādā "
-"veidā. Ja šī iespēja ir izslēgta, atlase joprojām var tikt saglabāta "
-"starpliktuves vēsturē (ņemot vērā apstiprinātās opcijas), bet to ielīmēt var "
-"tikai ar peles vidējo pogu."
+"izmantojot peles vidējo pogu.<nl/><nl/>Ja atlasi īpaši kopējat, izmantojot "
+"<interface>Kopēšanu</interface> vai <interface>Izgriešanu</interface>, "
+"sistēma to saglabā <emphasis>starpliktuvē</emphasis>. No starpliktuves šo "
+"informāciju varat ielīmēt, izmantojot <interface>Ielīmēšanu</interface>. <nl/"
+"><nl/>Ieslēdzot šo iespēju, atlase un starpliktuve kļūst par vienu vienību, "
+"tāpēc atlase kļūst uzreiz pieejama ielīmēšanai jebkādā veidā. Ja šī iespēja "
+"ir izslēgta, atlase joprojām var tikt saglabāta starpliktuves vēsturē (ņemot "
+"vērā apstiprinātās opcijas), bet to ielīmēt var tikai ar peles vidējo pogu."
 
 #: configdialog.cpp:132 configdialog.cpp:170
 #, kde-format
@@ -830,11 +829,9 @@ msgstr ""
 "programmas, kas var pieņemt šādu MIME tipu."
 
 #: klipperpopup.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "%1 is application display name"
-#| msgid "%1 - Clipboard Items"
+#, kde-format
 msgid "Clipboard Items"
-msgstr "%1 — starpliktuves vienības"
+msgstr "Starpliktuves vienumi"
 
 #: klipperpopup.cpp:111
 #, kde-format

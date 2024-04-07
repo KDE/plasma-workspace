@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.brightness\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-27 00:39+0000\n"
+"POT-Creation-Date: 2024-04-07 00:40+0000\n"
 "PO-Revision-Date: 2023-12-09 09:39+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -55,44 +55,49 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/KeyboardColorItem.qml:78
+#, kde-format
+msgid "Follow accent color"
+msgstr ""
+
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Brightness and Color"
 msgstr ""
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr ""
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr ""
 
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr ""
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
 msgstr ""
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Kolieskom myši upravíte jas obrazovky"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr ""
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:206
 #, fuzzy, kde-format
 #| msgid "Configure…"
 msgctxt "@action:inmenu"
@@ -203,7 +208,13 @@ msgstr "Jas obrazovky"
 msgid "Keyboard Brightness"
 msgstr "Jas klávesnice"
 
-#: package/contents/ui/PopupDialog.qml:127
+#: package/contents/ui/PopupDialog.qml:130
+#, fuzzy, kde-format
+#| msgid "Keyboard Brightness"
+msgid "Keyboard Color"
+msgstr "Jas klávesnice"
+
+#: package/contents/ui/PopupDialog.qml:140
 #, kde-format
 msgid "Night Light"
 msgstr ""

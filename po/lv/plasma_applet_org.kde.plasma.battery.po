@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2024-01-17 14:22+0200\n"
+"PO-Revision-Date: 2024-04-05 10:49+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -27,7 +27,7 @@ msgstr ""
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/BatteryItem.qml:171
 #, kde-format
@@ -35,7 +35,7 @@ msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
 "manufacturer."
 msgstr ""
-"Baterijas veselība ir vairs tikai %1%, tāpēc to vajadzētu nomainīt. "
+"Baterijas veselība ir vairs tikai %1 %, tāpēc to vajadzētu nomainīt. "
 "Sazinieties ar ražotāju."
 
 #: package/contents/ui/BatteryItem.qml:191
@@ -63,7 +63,7 @@ msgstr "Baterijas veselība:"
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/BatteryItem.qml:229
 #, kde-format
@@ -74,7 +74,7 @@ msgstr "Baterija ir konfigurēta uzlādēties līdz aptuveni %1%."
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/logic.js:24 package/contents/ui/logic.js:30
 #: package/contents/ui/main.qml:228
@@ -109,18 +109,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Baterijas sīklietotne neļauj sistēmai iemigt un slēgt ekrānu"
 
 #: package/contents/ui/main.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Manuāli bloķēt aizmigšanu un ekrāna slēgšanu"
+msgstr "Neizdevās bloķēt automātisku iesnaudināšanu un ekrāna slēgšanu"
 
 #: package/contents/ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Manuāli bloķēt aizmigšanu un ekrāna slēgšanu"
+msgstr "Neizdevās atbloķēt automātisko iemidzināšanu un ekrāna slēgšanu"
 
 #: package/contents/ui/main.qml:159 package/contents/ui/main.qml:197
 #: package/contents/ui/main.qml:203
@@ -141,23 +137,23 @@ msgstr "Jauda un baterija"
 #: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Baterijas līmenis ir %1%, nelādē"
+msgstr "Baterijas līmenis ir %1 %, nelādē"
 
 #: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr ""
-"Baterijas līmenis ir %1%, pievienota elektrotīklam, bet joprojām izlādējas"
+"Baterijas līmenis ir %1 %, pievienota elektrotīklam, bet joprojām izlādējas"
 
 #: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Baterijas līmenis ir %1%, lādē"
+msgstr "Baterijas līmenis ir %1 %, lādē"
 
 #: package/contents/ui/main.qml:242
 #, kde-format
 msgid "Battery at %1%"
-msgstr "Baterijas līmenis ir %1%"
+msgstr "Baterijas līmenis ir %1 %"
 
 #: package/contents/ui/main.qml:250
 #, kde-format
@@ -187,18 +183,18 @@ msgid "Not charging"
 msgstr "Nelādē"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "Automātiska ekrāna slēgšana un iemigšana ir izslēgta"
+msgstr ""
+"Automātiskā ekrāna slēgšana un iesnaudināšana ir izslēgta. Ieslēdziet ar "
+"peles vidējo pogu."
 
 #: package/contents/ui/main.qml:271
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Manuāli bloķēt aizmigšanu un ekrāna slēgšanu"
+msgstr ""
+"Izslēdziet automātisko iesnaudināšanu un ekrāna slēgšanu ar peles vidējo pogu"
 
 #: package/contents/ui/main.qml:276
 #, kde-format
@@ -209,10 +205,9 @@ msgstr[1] "%1 programmas ir pieprasījušas aktivizēt jaudas režīmu"
 msgstr[2] "%1 programmu ir pieprasījušas aktivizēt jaudas režīmu"
 
 #: package/contents/ui/main.qml:280
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Sistēma ir jaudas režīmā"
+msgstr "Sistēma atrodas jaudas režīmā. Ritiniet, lai mainītu."
 
 #: package/contents/ui/main.qml:284
 #, kde-format
@@ -223,15 +218,14 @@ msgstr[1] "%1 programmas ir pieprasījušas aktivizēt energotaupības režīmu"
 msgstr[2] "%1 programmu ir pieprasījušas aktivizēt energotaupības režīmu"
 
 #: package/contents/ui/main.qml:288
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Sistēma ir energotaupības režīmā"
+msgstr "Sistēma atrodas energotaupības režīmā. Ritiniet, lai mainītu"
 
 #: package/contents/ui/main.qml:291
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "Sistēma atrodas līdzsvara režīmā. Ritiniet, lai mainītu"
 
 #: package/contents/ui/main.qml:383
 #, kde-format
@@ -244,16 +238,15 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Rādīt baterijas atlikumu procentos uz ikonas, kad nav pilnībā uzlādēta"
 
 #: package/contents/ui/main.qml:402
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "&Konfigurēt energotaupību..."
+msgstr "&Konfigurēt jaudas pārvaldību..."
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid "Manually block sleep and screen locking"
-msgstr "Manuāli bloķēt aizmigšanu un ekrāna slēgšanu"
+msgstr "Manuāli bloķēt iesnaudināšanu un ekrāna slēgšanu"
 
 #: package/contents/ui/PowerManagementItem.qml:76
 #, kde-format
@@ -269,24 +262,24 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "%1 programma šobrīd bloķē aizmigšanu un ekrāna slēgšanu:"
-msgstr[1] "%1 programmas šobrīd bloķē aizmigšanu un ekrāna slēgšanu:"
-msgstr[2] "%1 programmu šobrīd bloķē aizmigšanu un ekrāna slēgšanu:"
+msgstr[0] "%1 programma šobrīd bloķē iesnaudināšanu un ekrāna slēgšanu:"
+msgstr[1] "%1 programmas šobrīd bloķē iesnaudināšanu un ekrāna slēgšanu:"
+msgstr[2] "%1 programmu šobrīd bloķē iesnaudināšanu un ekrāna slēgšanu:"
 
 #: package/contents/ui/PowerManagementItem.qml:107
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
-msgstr "%1 šobrīd bloķē aizmigšanu un ekrāna slēgšanu (%2)"
+msgstr "%1 šobrīd bloķē iesnaudināšanu un ekrāna slēgšanu (%2)"
 
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
-msgstr "%1 šobrīd bloķē aizmigšanu un ekrāna slēgšanu (iemesls nezināms)"
+msgstr "%1 šobrīd bloķē iesnaudināšanu un ekrāna slēgšanu (iemesls nezināms)"
 
 #: package/contents/ui/PowerManagementItem.qml:111
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "Programma šobrīd bloķē aizmigšanu un ekrāna slēgšanu (%1)"
+msgstr "Programma šobrīd bloķē iesnaudināšanu un ekrāna slēgšanu (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:113
 #, kde-format
@@ -294,7 +287,7 @@ msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
 msgstr ""
-"Programma šobrīd bloķē aizmigšanu un ekrāna slēgšanu (iemesls nezināms)"
+"Programma šobrīd bloķē iesnaudināšanu un ekrāna slēgšanu (iemesls nezināms)"
 
 #: package/contents/ui/PowerManagementItem.qml:117
 #, kde-format
