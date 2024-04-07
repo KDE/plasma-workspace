@@ -24,6 +24,7 @@
 
 #include <KLocalizedString>
 
+#include "finder/suffixcheck.h"
 #include "model/imageproxymodel.h"
 #include "slidefiltermodel.h"
 #include "slidemodel.h"
@@ -325,15 +326,8 @@ void ImageBackend::backgroundsFound()
 
 QString ImageBackend::nameFilters() const
 {
-    QStringList imageGlobPatterns;
-    QMimeDatabase db;
-    const auto supportedMimeTypes = QImageReader::supportedMimeTypes();
-    for (const QByteArray &mimeType : supportedMimeTypes) {
-        QMimeType mime(db.mimeTypeForName(QString::fromLatin1(mimeType)));
-        imageGlobPatterns << mime.globPatterns();
-    }
     // i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-    return i18n("Image Files") + QLatin1String(" (") + imageGlobPatterns.join(QLatin1Char(' ')) + QLatin1Char(')');
+    return i18n("Media Files") + QLatin1String(" (") + suffixes().join(QLatin1Char(' ')) + QLatin1Char(')');
 }
 
 QQmlPropertyMap *ImageBackend::configMap() const
