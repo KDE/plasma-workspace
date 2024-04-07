@@ -27,7 +27,7 @@ class COLORCORRECT_EXPORT CompositorAdaptor : public QObject
     Q_PROPERTY(int error READ error NOTIFY errorChanged)
     Q_PROPERTY(QString errorText READ errorText NOTIFY errorTextChanged)
 
-    Q_PROPERTY(bool nightColorAvailable READ nightColorAvailable CONSTANT)
+    Q_PROPERTY(bool nightLightAvailable READ nightLightAvailable CONSTANT)
 
 public:
     enum class ErrorCode {
@@ -54,9 +54,9 @@ public:
         return m_errorText;
     }
 
-    bool nightColorAvailable() const
+    bool nightLightAvailable() const
     {
-        return m_nightColorAvailable;
+        return m_nightLightAvailable;
     }
 
     bool running() const
@@ -105,7 +105,7 @@ private:
     ErrorCode m_error = ErrorCode::ErrorCodeSuccess;
     QString m_errorText;
 
-    bool m_nightColorAvailable = false;
+    bool m_nightLightAvailable = false;
 
     bool m_running = false;
 

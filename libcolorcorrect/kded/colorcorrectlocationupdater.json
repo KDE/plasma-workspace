@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "Provides location updates for Night Color",
+        "Description": "Provides location updates for Night Light",
         "Description[ar]": "يقدم تحديثات للموقع للون الليلي",
         "Description[az]": "Gecə rəngi rejimi üçün məkan yenilənmələrini təqdim edir",
         "Description[be]": "Абнаўленне месцазнаходжання для начнога колеру",
@@ -46,7 +46,7 @@
         "Description[x-test]": "xxProvides location updates for Night Colorxx",
         "Description[zh_CN]": "提供夜间颜色的位置更新",
         "Description[zh_TW]": "提供地點更新給夜色模式",
-        "Name": "Automatic Location for Night Color",
+        "Name": "Automatic Location for Night Light",
         "Name[ar]": "موقع آلي للون الليلي",
         "Name[az]": "Gecə rəngi rejimi üçün avtomatik məkan təyini",
         "Name[be]": "Аўтаматычнае вызначэнне месцазнаходжання для начнога колеру",

@@ -78,9 +78,9 @@ void CompositorAdaptor::updateProperties(const QVariantMap &properties)
 {
     const QVariant available = properties.value(QStringLiteral("available"));
     if (available.isValid()) {
-        m_nightColorAvailable = available.toBool();
+        m_nightLightAvailable = available.toBool();
 
-        if (!m_nightColorAvailable) {
+        if (!m_nightLightAvailable) {
             setError(ErrorCode::ErrorCodeBackendNoSupport);
             return;
         }

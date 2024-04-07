@@ -39,7 +39,7 @@ void LocationUpdater::resetLocator()
         delete m_locator;
         m_locator = nullptr;
         // if automatic location isn't enabled, there's no need to keep running
-        // Night Color KCM will enable us again if user changes to automatic
+        // Night Light KCM will enable us again if user changes to automatic
         disableSelf();
     }
 }
