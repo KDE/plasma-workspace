@@ -13,6 +13,8 @@
 
 #include <unistd.h>
 
+#include <chrono>
+
 #include "debug_p.h"
 #include "waiter.h"
 
@@ -62,7 +64,7 @@ Waiter::Waiter(int argc, char **argv)
     }
     if (timeout > 0) {
         mTimeoutTimer.setSingleShot(true);
-        mTimeoutTimer.setInterval(timeout * 1000);
+        mTimeoutTimer.setInterval(std::chrono::seconds(timeout));
         connect(&mTimeoutTimer, &QTimer::timeout, this, &Waiter::timeout);
         mTimeoutTimer.start();
     }

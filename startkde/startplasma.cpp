@@ -643,6 +643,10 @@ bool startPlasmaSession(bool wayland)
     reloadSystemd();
     OrgKdeKSplashInterface iface(QStringLiteral("org.kde.KSplash"), QStringLiteral("/KSplash"), QDBusConnection::sessionBus());
     iface.setStage(QStringLiteral("startPlasma"));
+
+    // this is used by plasma-sentinel to check when this procses exits and cleanup
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.startplasma"));
+
     // finally, give the session control to the session manager
     // see kdebase/ksmserver for the description of the rest of the startup sequence
     // if the KDEWM environment variable has been set, then it will be used as KDE's

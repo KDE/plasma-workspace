@@ -1,0 +1,10 @@
+[Unit]
+Description=Close Plasma session when session leader quits
+PartOf=graphical-session.target
+RefuseManualStart=yes
+RefuseManualStop=yes
+
+[Service]
+Type=exec
+ExecStart=@CMAKE_INSTALL_FULL_BINDIR@/plasma_waitforname org.kde.startplasma --unregistered --timeout 0
+Slice=session.slice
