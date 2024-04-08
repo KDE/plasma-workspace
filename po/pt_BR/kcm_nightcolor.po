@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2019, 2021, 2022.
-# Frederico Goncalves Guimaraes <frederico@teia.bio.br>, 2018.
+# Frederico Goncalves Guimaraes <frederico@teia.bio.br>, 2018, 2024.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2019.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
 msgid ""
@@ -11,31 +11,33 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2022-12-20 09:49-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2024-04-07 16:44-0300\n"
+"Last-Translator: Frederico Goncalves Guimaraes <frederico@teia.bio.br>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: ui/DayNightView.qml:116
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "A cor noturna começa a alterar às %1 e é alterada por completo às %2"
+msgstr ""
+"A temperatura da cor começa ser alterada para o modo noturno às %1 e "
+"completa a alteração às %2"
 
 #: ui/DayNightView.qml:119
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "A cor noturna começa a alterar às %1 e é alterada por completo às %2"
+msgstr ""
+"A temperatura da cor começa ser alterada para o modo diurno às %1 e completa "
+"a alteração às %2"
 
 #: ui/LocationsFixedView.qml:38
 #, kde-format
@@ -88,10 +90,9 @@ msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "O filtro de luz azul torna as cores na tela mais quentes."
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Temperatura da cor diurna:"
+msgstr "Temperatura da luz diurna:"
 
 #: ui/main.qml:194 ui/main.qml:256
 #, kde-format
@@ -103,7 +104,7 @@ msgstr "%1K"
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Fria (sem filtro)"
 
 #: ui/main.qml:206 ui/main.qml:268
 #, kde-format
@@ -112,16 +113,14 @@ msgid "Warm"
 msgstr "Quente"
 
 #: ui/main.qml:213
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Temperatura da cor noturna:"
+msgstr "Temperatura da luz noturna:"
 
 #: ui/main.qml:280
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
-msgstr "Hora de ativação:"
+msgstr "Hora de alteração:"
 
 #: ui/main.qml:283
 #, kde-format
@@ -144,17 +143,15 @@ msgid "Custom times"
 msgstr "Horários personalizados"
 
 #: ui/main.qml:287
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night light"
-msgstr "Sempre ligado"
+msgstr "Sempre na luz noturna"
 
 #: ui/main.qml:304
-#, fuzzy, kde-format
-#| msgid "Detect Location"
+#, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "Detectar localização"
+msgstr "Localização atual:"
 
 #: ui/main.qml:310
 #, kde-format
@@ -176,7 +173,7 @@ msgstr ""
 #: ui/main.qml:350
 #, kde-format
 msgid "Begin night light at:"
-msgstr ""
+msgstr "Iniciar a luz noturna às:"
 
 #: ui/main.qml:363 ui/main.qml:386
 #, kde-format
@@ -186,7 +183,7 @@ msgstr "Formato de entrada: HH:MM"
 #: ui/main.qml:373
 #, kde-format
 msgid "Begin day light at:"
-msgstr ""
+msgstr "Iniciar a luz diurna às:"
 
 #: ui/main.qml:395
 #, kde-format

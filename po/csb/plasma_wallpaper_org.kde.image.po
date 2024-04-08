@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-08 00:39+0000\n"
 "PO-Revision-Date: 2009-12-13 00:11+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -33,7 +33,7 @@ msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
 #, fuzzy, kde-format
 #| msgid "Next Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Image"
+msgid "Open Media"
 msgstr "Nôslédny òbrôzk tapétë"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -187,9 +187,9 @@ msgid ""
 msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:330
 #, kde-format
-msgid "Image Files"
+msgid "Media Files"
 msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48

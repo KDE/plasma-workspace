@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-08 00:39+0000\n"
 "PO-Revision-Date: 2024-01-03 13:59-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -28,9 +28,11 @@ msgid "Your emails"
 msgstr "aalam@punlinux.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Open Image"
 msgctxt "@title:window"
-msgid "Open Image"
+msgid "Open Media"
 msgstr "ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -177,9 +179,10 @@ msgstr ""
 "ਵਾਲਪੇਪਰ ਲਾਉਣ ਵਾਲੀ ਦਿੱਤੀ ਗਈ ਫਾਇਲ ਮੌਜੂਦ ਨਹੀਂ ਹੈ ਜਾਂ ਅਸੀਂ ਇਸ ਨੂੰ ਠੀਕ ਤਰ੍ਹਾਂ ਪਛਾਣ ਨਹੀਂ ਸਕੇ: %1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:336
-#, kde-format
-msgid "Image Files"
+#: plugin/imagebackend.cpp:330
+#, fuzzy, kde-format
+#| msgid "Image Files"
+msgid "Media Files"
 msgstr "ਚਿੱਤਰ ਫਾਇਲਾਂ"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48

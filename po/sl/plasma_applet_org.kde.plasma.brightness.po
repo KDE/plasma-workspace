@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2024-03-20 05:59+0100\n"
+"PO-Revision-Date: 2024-04-07 07:10+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -54,7 +54,7 @@ msgstr "%1%"
 #: package/contents/ui/KeyboardColorItem.qml:78
 #, kde-format
 msgid "Follow accent color"
-msgstr ""
+msgstr "Sledi barvi poudarka"
 
 #: package/contents/ui/main.qml:68
 #, kde-format
@@ -204,10 +204,9 @@ msgid "Keyboard Brightness"
 msgstr "Svetlost tipkovnice"
 
 #: package/contents/ui/PopupDialog.qml:130
-#, fuzzy, kde-format
-#| msgid "Keyboard Brightness"
+#, kde-format
 msgid "Keyboard Color"
-msgstr "Svetlost tipkovnice"
+msgstr "Barva tipkovnice"
 
 #: package/contents/ui/PopupDialog.qml:140
 #, kde-format

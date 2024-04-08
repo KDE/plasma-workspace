@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-08 00:39+0000\n"
 "PO-Revision-Date: 2008-11-06 22:08+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -30,7 +30,7 @@ msgstr ""
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, kde-format
 msgctxt "@title:window"
-msgid "Open Image"
+msgid "Open Media"
 msgstr ""
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -176,9 +176,9 @@ msgid ""
 msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:330
 #, kde-format
-msgid "Image Files"
+msgid "Media Files"
 msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48

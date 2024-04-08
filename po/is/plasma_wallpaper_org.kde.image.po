@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-08 00:39+0000\n"
 "PO-Revision-Date: 2023-09-15 10:13+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -33,9 +33,11 @@ msgid "Your emails"
 msgstr "gudmundure@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Open Image"
 msgctxt "@title:window"
-msgid "Open Image"
+msgid "Open Media"
 msgstr "Opna mynd"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -188,9 +190,10 @@ msgstr ""
 "að hún geti verið veggfóður: %1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:336
-#, kde-format
-msgid "Image Files"
+#: plugin/imagebackend.cpp:330
+#, fuzzy, kde-format
+#| msgid "Image Files"
+msgid "Media Files"
 msgstr "Myndskrár"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48

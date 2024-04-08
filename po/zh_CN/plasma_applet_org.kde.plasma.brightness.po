@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-27 00:39+0000\n"
-"PO-Revision-Date: 2024-03-30 19:36\n"
+"POT-Creation-Date: 2024-04-07 00:40+0000\n"
+"PO-Revision-Date: 2024-04-07 19:29\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -54,44 +54,49 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/KeyboardColorItem.qml:78
+#, kde-format
+msgid "Follow accent color"
+msgstr ""
+
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgid "Brightness and Color"
 msgstr "亮度和颜色"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "屏幕亮度 %1%"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:83
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "键盘亮度 %1%"
 
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:87
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr "夜间颜色关闭"
 
-#: package/contents/ui/main.qml:86
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "Status; placeholder is a temperature"
 msgid "Night Light at %1K"
 msgstr "夜间颜色色温 %1K"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "滚动鼠标滚轮以调整屏幕亮度"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:102
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "中键点击开关夜间颜色"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:206
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
@@ -201,7 +206,12 @@ msgstr "显示器亮度"
 msgid "Keyboard Brightness"
 msgstr "键盘亮度"
 
-#: package/contents/ui/PopupDialog.qml:127
+#: package/contents/ui/PopupDialog.qml:130
+#, kde-format
+msgid "Keyboard Color"
+msgstr ""
+
+#: package/contents/ui/PopupDialog.qml:140
 #, kde-format
 msgid "Night Light"
 msgstr "夜间颜色"

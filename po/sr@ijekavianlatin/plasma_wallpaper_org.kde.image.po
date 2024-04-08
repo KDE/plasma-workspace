@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-08 00:39+0000\n"
 "PO-Revision-Date: 2017-12-15 12:38+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -34,7 +34,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Open Image"
 msgctxt "@title:window"
-msgid "Open Image"
+msgid "Open Media"
 msgstr "Otvaranje slike"
 
 # rewrite-msgid: /slides//
@@ -194,9 +194,10 @@ msgstr ""
 
 # >> @item:intext
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:336
-#, kde-format
-msgid "Image Files"
+#: plugin/imagebackend.cpp:330
+#, fuzzy, kde-format
+#| msgid "Image Files"
+msgid "Media Files"
 msgstr "fajlovi slika"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48

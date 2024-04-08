@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-08 00:39+0000\n"
 "PO-Revision-Date: 2023-09-17 23:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -33,9 +33,11 @@ msgid "Your emails"
 msgstr "xalba@euskalnet.net"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Open Image"
 msgctxt "@title:window"
-msgid "Open Image"
+msgid "Open Media"
 msgstr "Ireki irudia"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -190,9 +192,10 @@ msgstr ""
 "dugu identifikatu horma-paper gisa: %1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:336
-#, kde-format
-msgid "Image Files"
+#: plugin/imagebackend.cpp:330
+#, fuzzy, kde-format
+#| msgid "Image Files"
+msgid "Media Files"
 msgstr "Irudi-fitxategiak"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48

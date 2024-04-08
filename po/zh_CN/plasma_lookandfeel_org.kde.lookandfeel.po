@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2024-04-03 19:13\n"
+"PO-Revision-Date: 2024-04-07 14:28\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -141,38 +141,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma 桌面环境"
-
-#~ msgid "Keyboard Layout: %1"
-#~ msgstr "键盘布局：%1"
-
-#~ msgid "Username"
-#~ msgstr "用户名"
-
-#~ msgid "Password"
-#~ msgstr "密码"
-
-#~ msgid "Log In"
-#~ msgstr "登录"
-
-#~ msgid "Caps Lock is on"
-#~ msgstr "大写锁定已开启"
-
-#~ msgctxt "For switching to a username and password prompt"
-#~ msgid "Other…"
-#~ msgstr "其他…"
-
-#~ msgid "Type in Username and Password"
-#~ msgstr "输入用户名和密码"
-
-#~ msgid "List Users"
-#~ msgstr "列出用户"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "虚拟键盘"
-
-#~ msgid "Login Failed"
-#~ msgstr "登录失败"
-
-#~ msgid "Desktop Session: %1"
-#~ msgstr "桌面会话：%1"

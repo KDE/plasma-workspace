@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-04-08 00:39+0000\n"
 "PO-Revision-Date: 2008-10-05 11:04+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -34,7 +34,7 @@ msgstr "ihar.hrachyshka@gmail.com"
 #, fuzzy, kde-format
 #| msgid "Select Wallpaper Image File"
 msgctxt "@title:window"
-msgid "Open Image"
+msgid "Open Media"
 msgstr "Vybiery fajł z špalerami"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -189,10 +189,10 @@ msgid ""
 msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:336
+#: plugin/imagebackend.cpp:330
 #, fuzzy, kde-format
 #| msgid "Images"
-msgid "Image Files"
+msgid "Media Files"
 msgstr "Vyjavy"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48
