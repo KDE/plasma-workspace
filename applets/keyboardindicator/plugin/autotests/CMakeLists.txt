@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: BSD-3-Clause
 
+ecm_add_test(keystatetest.cpp LINK_LIBRARIES Qt::Test Qt::Qml Qt::Quick)
+
 if(NOT CMAKE_SYSTEM_NAME MATCHES "Linux")
     return()
 endif()
