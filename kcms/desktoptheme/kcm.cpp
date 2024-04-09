@@ -11,6 +11,7 @@
 #include "kcm.h"
 
 #include <KLocalizedString>
+#include <KPackage/PackageJob>
 #include <KPluginFactory>
 
 #include <KIO/FileCopyJob>
@@ -233,8 +234,6 @@ bool KCMDesktopTheme::isSaveNeeded() const
 
 void KCMDesktopTheme::processPendingDeletions()
 {
-    const QString program = QStringLiteral("plasmapkg2");
-
     const auto pendingDeletions = m_model->match(m_model->index(0, 0), ThemesModel::PendingDeletionRole, true, -1 /*all*/);
     QList<QPersistentModelIndex> persistentPendingDeletions;
     // turn into persistent model index so we can delete as we go
@@ -244,29 +243,17 @@ void KCMDesktopTheme::processPendingDeletions()
 
     for (const QPersistentModelIndex &idx : persistentPendingDeletions) {
         const QString pluginName = idx.data(ThemesModel::PluginNameRole).toString();
-        const QString displayName = idx.data(Qt::DisplayRole).toString();
+        const QString location = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/plasma/desktoptheme");
+        auto *job = KPackage::PackageJob::uninstall(QStringLiteral("Plasma/Theme"), pluginName, location);
 
-        Q_ASSERT(pluginName != desktopThemeSettings()->name());
-
-        const QStringList arguments = {QStringLiteral("-t"), QStringLiteral("theme"), QStringLiteral("-r"), pluginName};
-
-        QProcess *process = new QProcess(this);
-        connect(process,
-                static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished),
-                this,
-                [this, process, idx, pluginName, displayName](int exitCode, QProcess::ExitStatus exitStatus) {
-                    Q_UNUSED(exitStatus)
-                    if (exitCode == 0) {
-                        m_model->removeRow(idx.row());
-                    } else {
-                        Q_EMIT showErrorMessage(i18n("Removing theme failed: %1", QString::fromLocal8Bit(process->readAllStandardOutput().trimmed())));
-                        m_model->setData(idx, false, ThemesModel::PendingDeletionRole);
-                    }
-                    process->deleteLater();
-                });
-
-        process->start(program, arguments);
-        process->waitForFinished(); // needed so it deletes fine when "OK" is clicked and the dialog destroyed
+        connect(job, &KJob::finished, this, [this, idx](KJob *job) {
+            if (job->error()) {
+                Q_EMIT showErrorMessage(i18n("Removing theme failed: %1", job->errorString()));
+                m_model->setData(idx, false, ThemesModel::PendingDeletionRole);
+            } else {
+                m_model->removeRow(idx.row());
+            }
+        });
     }
 }
 
