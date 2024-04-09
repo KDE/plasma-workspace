@@ -5,6 +5,7 @@
 */
 
 #include "locationupdater.h"
+#include "locationupdater_debug.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -34,6 +35,7 @@ void LocationUpdater::resetLocator()
     if (m_adaptor->running() && enabled && mode == QStringLiteral("Automatic")) {
         if (!m_locator) {
             m_locator = new ColorCorrect::Geolocator(this);
+            qCInfo(LOCATIONUPDATER) << "Geolocator started";
             connect(m_locator, &ColorCorrect::Geolocator::locationChanged, this, &LocationUpdater::sendLocation);
         }
     } else {
@@ -42,6 +44,7 @@ void LocationUpdater::resetLocator()
         // if automatic location isn't enabled, there's no need to keep running
         // Night Light KCM will enable us again if user changes to automatic
         disableSelf();
+        qCInfo(LOCATIONUPDATER) << "Geolocator stopped";
     }
 }
 
