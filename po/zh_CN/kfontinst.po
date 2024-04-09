@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2024-04-07 19:29\n"
+"PO-Revision-Date: 2024-04-08 19:10\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -57,7 +57,7 @@ msgstr "(C) Craig Drummond，2007"
 #: apps/Installer.cpp:122
 #, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr ""
+msgstr "将由 windowHandle 指定的窗口中的对话框设为透明"
 
 #: apps/Installer.cpp:125
 #, kde-format

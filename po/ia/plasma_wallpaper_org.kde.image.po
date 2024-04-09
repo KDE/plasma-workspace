@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2013, 2014, 2020, 2021, 2022, 2023.
+# g.sora <g.sora@tiscali.it>, 2010, 2011, 2013, 2014, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-08 00:39+0000\n"
-"PO-Revision-Date: 2023-09-15 15:01+0200\n"
+"PO-Revision-Date: 2024-04-08 11:59+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -28,12 +28,10 @@ msgid "Your emails"
 msgstr "g.sora@tiscali.it"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Media"
-msgstr "Aperi imagine"
+msgstr "Aperi  medios"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -194,10 +192,9 @@ msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:330
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "Files de Image"
+msgstr "Files de Medios"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format

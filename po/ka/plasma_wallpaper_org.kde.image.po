@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-08 00:39+0000\n"
-"PO-Revision-Date: 2023-09-16 06:08+0200\n"
+"PO-Revision-Date: 2024-04-08 04:35+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -29,12 +29,10 @@ msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Media"
-msgstr "გამოსახულების გახსნა"
+msgstr "მედიის გახსნა"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -186,10 +184,9 @@ msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:330
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "გამოსახულების ფაილები"
+msgstr "მედია ფაილები"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format

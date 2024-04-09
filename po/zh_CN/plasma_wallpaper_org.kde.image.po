@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-08 00:39+0000\n"
-"PO-Revision-Date: 2024-03-30 19:36\n"
+"PO-Revision-Date: 2024-04-08 19:10\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -29,12 +29,10 @@ msgid "Your emails"
 msgstr "i@guoyunhe.me, tds00@qq.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Media"
-msgstr "打开图像"
+msgstr ""
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -182,10 +180,9 @@ msgstr "要设为壁纸的文件不存在，或者无法识别为壁纸：%1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:330
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "图像文件"
+msgstr ""
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format
