@@ -264,8 +264,7 @@ void PlasmaWindowedView::minimumWidthChanged()
         return;
     }
 
-    setMinimumWidth(
-        qMax(m_appletInterface->property("switchWidth").toInt() + 1, qMax((int)KIconLoader::SizeEnormous, m_layout->property("minimumWidth").toInt())));
+    setMinimumWidth(qMax(m_appletInterface->property("switchWidth").toInt() + 1, m_layout->property("minimumWidth").toInt()));
 }
 
 void PlasmaWindowedView::minimumHeightChanged()
@@ -274,8 +273,7 @@ void PlasmaWindowedView::minimumHeightChanged()
         return;
     }
 
-    setMinimumHeight(
-        qMax(m_appletInterface->property("switchHeight").toInt() + 1, qMax((int)KIconLoader::SizeEnormous, m_layout->property("minimumHeight").toInt())));
+    setMinimumHeight(qMax(m_appletInterface->property("switchHeight").toInt() + 1, m_layout->property("minimumHeight").toInt()));
 }
 
 void PlasmaWindowedView::maximumWidthChanged()
