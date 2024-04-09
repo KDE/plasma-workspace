@@ -27,6 +27,7 @@ target_link_libraries(kcm_desktoptheme PRIVATE
   KF6::I18n
   KF6::Svg
   KF6::KCMUtilsQuick
+  KF6::Package
 )
 
 add_executable(plasma-apply-desktoptheme ${plasma-apply-desktoptheme_SRCS})
