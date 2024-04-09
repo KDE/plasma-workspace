@@ -29,8 +29,9 @@ LocationUpdater::LocationUpdater(QObject *parent, const QList<QVariant> &)
 void LocationUpdater::resetLocator()
 {
     KConfigGroup group(m_configWatcher->config(), QStringLiteral("NightColor"));
-    auto mode = group.readEntry(QStringLiteral("Mode"), 0);
-    if (m_adaptor->running() && mode == 0) {
+    const bool enabled = group.readEntry(QStringLiteral("Active"), false);
+    const QString mode = group.readEntry(QStringLiteral("Mode"), QStringLiteral("Automatic"));
+    if (m_adaptor->running() && enabled && mode == QStringLiteral("Automatic")) {
         if (!m_locator) {
             m_locator = new ColorCorrect::Geolocator(this);
             connect(m_locator, &ColorCorrect::Geolocator::locationChanged, this, &LocationUpdater::sendLocation);
