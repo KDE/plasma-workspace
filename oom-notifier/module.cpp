@@ -54,7 +54,7 @@ public:
                     if (interface != "org.freedesktop.systemd1.Scope"_L1 && interface != "org.freedesktop.systemd1.Service"_L1) {
                         return;
                     }
-                    if (changed.value("Result", QString()) != "oom-kill"_L1) {
+                    if (changed.value(u"Result"_s, QString()) != "oom-kill"_L1) {
                         return;
                     }
 
