@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:39+0000\n"
-"PO-Revision-Date: 2024-03-27 23:15+0200\n"
+"PO-Revision-Date: 2024-04-09 12:23+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -301,7 +301,7 @@ msgstr "Slėpti darbalaukį"
 #: shellcorona.cpp:222
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Aktyvuoti programų paleidyklę"
 
 #: shellcorona.cpp:230
 #, kde-format

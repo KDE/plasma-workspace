@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-09 00:39+0000\n"
-"PO-Revision-Date: 2024-03-27 23:09+0200\n"
+"PO-Revision-Date: 2024-04-09 12:20+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -58,7 +58,7 @@ msgstr "%1%"
 #: package/contents/ui/KeyboardColorItem.qml:78
 #, kde-format
 msgid "Follow accent color"
-msgstr ""
+msgstr "Laikytis paryškinimo spalvos"
 
 #: package/contents/ui/main.qml:68
 #, kde-format
@@ -209,10 +209,9 @@ msgid "Keyboard Brightness"
 msgstr "Klaviatūros ryškumas"
 
 #: package/contents/ui/PopupDialog.qml:130
-#, fuzzy, kde-format
-#| msgid "Keyboard Brightness"
+#, kde-format
 msgid "Keyboard Color"
-msgstr "Klaviatūros ryškumas"
+msgstr "Klaviatūros spalva"
 
 #: package/contents/ui/PopupDialog.qml:140
 #, kde-format

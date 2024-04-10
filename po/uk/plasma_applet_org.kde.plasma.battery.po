@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-04-10 00:39+0000\n"
 "PO-Revision-Date: 2024-03-27 15:45+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -74,7 +74,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/logic.js:24 package/contents/ui/logic.js:30
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Fully Charged"
 msgstr "Повністю заряджено"
@@ -100,86 +100,86 @@ msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
 msgstr "Немає"
 
-#: package/contents/ui/main.qml:121
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Аплетом акумулятора було увімкнено загальносистемний стан блокування"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Failed to block automatic sleep and screen locking"
 msgstr "Не вдалося заблокувати автоматичне присипляння і блокування екрана"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
 msgstr "Не вдалося розблокувати автоматичне присипляння і блокування екрана"
 
-#: package/contents/ui/main.qml:159 package/contents/ui/main.qml:197
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:157 package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:201
 #, kde-format
 msgid "Power Management"
 msgstr "Керування живленням"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:174
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Не вдалося задіяти режим %1"
 
-#: package/contents/ui/main.qml:203
+#: package/contents/ui/main.qml:201
 #, kde-format
 msgid "Power and Battery"
 msgstr "Живлення і акумулятор"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:233
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Акумулятор заряджено на %1%, не заряджається"
 
-#: package/contents/ui/main.qml:237
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr ""
 "Акумулятор заряджено на %1%, увімкнено у мережу, але він усе ще розряджається"
 
-#: package/contents/ui/main.qml:239
+#: package/contents/ui/main.qml:237
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Акумулятор заряджено на %1%, заряджається"
 
-#: package/contents/ui/main.qml:242
+#: package/contents/ui/main.qml:240
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Акумулятор заряджено на %1%"
 
-#: package/contents/ui/main.qml:250
+#: package/contents/ui/main.qml:248
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Живлення є недостатньо потужним для заряджання акумулятора"
 
-#: package/contents/ui/main.qml:254
+#: package/contents/ui/main.qml:252
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Акумуляторів не виявлено"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:258
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 до повного заряджання"
 
-#: package/contents/ui/main.qml:262
+#: package/contents/ui/main.qml:260
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "Лишилося %1"
 
-#: package/contents/ui/main.qml:265
+#: package/contents/ui/main.qml:263
 #, kde-format
 msgid "Not charging"
 msgstr "Не заряджається"
 
-#: package/contents/ui/main.qml:269
+#: package/contents/ui/main.qml:267
 #, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
@@ -187,14 +187,14 @@ msgstr ""
 "Автоматичне присипляння та блокування екрана вимкнено; клацніть середньою "
 "кнопкою миші, щоб увімкнути знову"
 
-#: package/contents/ui/main.qml:271
+#: package/contents/ui/main.qml:269
 #, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr ""
 "Клацніть середньою кнопкою миші, щоб вимкнути автоматичне присипляння і "
 "блокування екрана"
 
-#: package/contents/ui/main.qml:276
+#: package/contents/ui/main.qml:274
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
@@ -207,12 +207,12 @@ msgstr[2] ""
 msgstr[3] ""
 "Програмою надіслано запит щодо активації режиму підвищеної швидкодії"
 
-#: package/contents/ui/main.qml:280
+#: package/contents/ui/main.qml:278
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
 msgstr "Система перебуває у режимі швидкодії; гортайте далі, щоб змінити режим"
 
-#: package/contents/ui/main.qml:284
+#: package/contents/ui/main.qml:282
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
@@ -224,42 +224,61 @@ msgstr[2] ""
 "Запит щодо активації режиму енергозаощадження надіслано %1 програмами"
 msgstr[3] "Програмою надіслано запит щодо активації режиму енергозаощадження"
 
-#: package/contents/ui/main.qml:288
+#: package/contents/ui/main.qml:286
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
 msgstr ""
 "Система перебуває у режимі заощадження енергії; гортайте далі, щоб змінити "
 "режим"
 
-#: package/contents/ui/main.qml:291
+#: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
 "Система перебуває у режимі збалансованого споживання енергії; гортайте далі, "
 "щоб змінити режим"
 
-#: package/contents/ui/main.qml:383
+#: package/contents/ui/main.qml:378
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "&Показати дані щодо енергоспоживання…"
 
-#: package/contents/ui/main.qml:389
+#: package/contents/ui/main.qml:384
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Показувати заряд у відсотках на піктограмі, якщо заряджено не повністю"
 
-#: package/contents/ui/main.qml:402
+#: package/contents/ui/main.qml:397
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "&Налаштувати керування живленням…"
 
 #: package/contents/ui/PowerManagementItem.qml:41
 #, kde-format
-msgctxt "Minimize the length of this string as much as possible"
-msgid "Manually block sleep and screen locking"
-msgstr "Блокування вручну присипляння і блокування екрана"
+msgctxt "@title:group"
+msgid "Sleep and Screen Locking after Inactivity"
+msgstr ""
 
-#: package/contents/ui/PowerManagementItem.qml:76
+#: package/contents/ui/PowerManagementItem.qml:78
+#, kde-format
+msgctxt "Sleep and Screen Locking after Inactivity"
+msgid "Blocked"
+msgstr ""
+
+#: package/contents/ui/PowerManagementItem.qml:78
+#, kde-format
+msgctxt "Sleep and Screen Locking after Inactivity"
+msgid "Automatic"
+msgstr ""
+
+#: package/contents/ui/PowerManagementItem.qml:88
+#, kde-format
+msgctxt ""
+"@option:check Manually block sleep and screen locking after inactivity"
+msgid "Manually block"
+msgstr ""
+
+#: package/contents/ui/PowerManagementItem.qml:137
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -269,7 +288,7 @@ msgstr ""
 "Ваш ноутбук налаштовано на блокування присипляння після закриття ноутбука, "
 "якщо з ним з’єднано зовнішній монітор."
 
-#: package/contents/ui/PowerManagementItem.qml:87
+#: package/contents/ui/PowerManagementItem.qml:148
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
@@ -278,22 +297,22 @@ msgstr[1] "%1 програми зараз блокують присиплянн�
 msgstr[2] "%1 програм зараз блокують присипляння та блокування екрана:"
 msgstr[3] "Одна програма зараз блокує присипляння та блокування екрана:"
 
-#: package/contents/ui/PowerManagementItem.qml:107
+#: package/contents/ui/PowerManagementItem.qml:168
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "Зараз %1 блокує присипляння і блокування екрана (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:109
+#: package/contents/ui/PowerManagementItem.qml:170
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "Зараз %1 блокує присипляння і блокування екрана (невідома причина)"
 
-#: package/contents/ui/PowerManagementItem.qml:111
+#: package/contents/ui/PowerManagementItem.qml:172
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr "Якась програма зараз блокує присипляння та блокування екрана (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:113
+#: package/contents/ui/PowerManagementItem.qml:174
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -302,25 +321,25 @@ msgstr ""
 "Зараз якась програма блокує присипляння і блокування екрана (невідома "
 "причина)"
 
-#: package/contents/ui/PowerManagementItem.qml:117
+#: package/contents/ui/PowerManagementItem.qml:178
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:119
+#: package/contents/ui/PowerManagementItem.qml:180
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: невідома причина"
 
-#: package/contents/ui/PowerManagementItem.qml:121
+#: package/contents/ui/PowerManagementItem.qml:182
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Невідома програма: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:123
+#: package/contents/ui/PowerManagementItem.qml:184
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
@@ -423,6 +442,10 @@ msgstr ""
 ">Спробуйте встановити пакунок <command>power-profiles-daemon</command> за "
 "допомогою програми для керування пакунками вашого дистрибутива, а потім "
 "перезапустити систему."
+
+#~ msgctxt "Minimize the length of this string as much as possible"
+#~ msgid "Manually block sleep and screen locking"
+#~ msgstr "Блокування вручну присипляння і блокування екрана"
 
 #~ msgctxt "Placeholder is brightness percentage"
 #~ msgid "%1%"

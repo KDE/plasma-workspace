@@ -148,25 +148,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma fra KDE"
-
-#~ msgid "Keyboard Layout: %1"
-#~ msgstr "Tastaturoppsett: %1"
-
-#~ msgid "Username"
-#~ msgstr "Brukernavn"
-
-#~ msgid "Password"
-#~ msgstr "Passord"
-
-#~ msgid "Caps Lock is on"
-#~ msgstr "Caps Lock er på"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Virtuelt tastatur"
-
-#~ msgid "Login Failed"
-#~ msgstr "Innlogging mislyktes"
-
-#~ msgid "Desktop Session: %1"
-#~ msgstr "Skrivebordsøkt: %1"

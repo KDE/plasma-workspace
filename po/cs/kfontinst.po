@@ -62,10 +62,9 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:122
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr "Učiní okno modální pro aplikaci X, určenou pomocí ID okna"
+msgstr ""
 
 #: apps/Installer.cpp:125
 #, kde-format

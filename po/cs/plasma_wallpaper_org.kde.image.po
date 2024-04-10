@@ -33,12 +33,10 @@ msgid "Your emails"
 msgstr "vit@pelcak.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Media"
-msgstr "Otevřít obrázek"
+msgstr ""
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -184,10 +182,9 @@ msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:330
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "Soubory obrázků"
+msgstr "Mediální soubory"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:48
 #, kde-format

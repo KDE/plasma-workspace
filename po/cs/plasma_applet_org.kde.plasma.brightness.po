@@ -206,10 +206,9 @@ msgid "Keyboard Brightness"
 msgstr "Jas klávesnice"
 
 #: package/contents/ui/PopupDialog.qml:130
-#, fuzzy, kde-format
-#| msgid "Keyboard Brightness"
+#, kde-format
 msgid "Keyboard Color"
-msgstr "Jas klávesnice"
+msgstr ""
 
 #: package/contents/ui/PopupDialog.qml:140
 #, kde-format

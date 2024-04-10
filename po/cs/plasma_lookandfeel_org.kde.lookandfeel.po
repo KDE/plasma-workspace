@@ -158,38 +158,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma byla vytvořena v rámci projektu KDE"
-
-#~ msgid "Keyboard Layout: %1"
-#~ msgstr "Rozvržení klávesnice: %1"
-
-#~ msgid "Username"
-#~ msgstr "Uživatelské jméno"
-
-#~ msgid "Password"
-#~ msgstr "Heslo"
-
-#~ msgid "Log In"
-#~ msgstr "Přihlásit"
-
-#~ msgid "Caps Lock is on"
-#~ msgstr "CapsLock je zapnut"
-
-#~ msgctxt "For switching to a username and password prompt"
-#~ msgid "Other…"
-#~ msgstr "Jiný…"
-
-#~ msgid "Type in Username and Password"
-#~ msgstr "Zadejte uživatelské jméno a heslo"
-
-#~ msgid "List Users"
-#~ msgstr "Vypsat uživatele"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Virtuální klávesnice"
-
-#~ msgid "Login Failed"
-#~ msgstr "Přihlášení selhalo"
-
-#~ msgid "Desktop Session: %1"
-#~ msgstr "Sezení plochy: %1"
