@@ -365,6 +365,7 @@ bool Klipper::eventFilter(QObject *filtered, QEvent *event)
         plasmaSurface->openUnderCursor();
         plasmaSurface->setSkipTaskbar(true);
         plasmaSurface->setSkipSwitcher(true);
+        plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::AppletPopup);
         menuWindow->removeEventFilter(this);
     }
     return ret;
