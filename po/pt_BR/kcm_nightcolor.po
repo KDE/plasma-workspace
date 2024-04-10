@@ -6,20 +6,21 @@
 # Frederico Goncalves Guimaraes <frederico@teia.bio.br>, 2018.
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2019.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-16 02:40+0000\n"
-"PO-Revision-Date: 2022-12-20 09:49-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2024-04-09 09:22-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/ui/LocationsFixedView.qml:39
 #, kde-format
@@ -73,8 +74,7 @@ msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "O filtro de luz azul torna as cores na tela mais quentes."
 
 #: package/contents/ui/main.qml:109
-#, fuzzy, kde-format
-#| msgid "Activation time:"
+#, kde-format
 msgid "Switching times:"
 msgstr "Hora de ativação:"
 
@@ -99,10 +99,9 @@ msgid "Custom times"
 msgstr "Horários personalizados"
 
 #: package/contents/ui/main.qml:115
-#, fuzzy, kde-format
-#| msgid "Always on"
+#, kde-format
 msgid "Always on night color"
-msgstr "Sempre ligado"
+msgstr "Cor noturna sempre ativada"
 
 #: package/contents/ui/main.qml:167
 #, kde-kuit-format
@@ -137,7 +136,7 @@ msgstr "Quente"
 #, kde-format
 msgctxt "No blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Fria (sem filtro)"
 
 #: package/contents/ui/main.qml:239 package/contents/ui/main.qml:298
 #, kde-format
@@ -158,7 +157,7 @@ msgstr "Latitude: %1°   Longitude: %2°"
 #: package/contents/ui/main.qml:319
 #, kde-format
 msgid "Begin night color at:"
-msgstr ""
+msgstr "Iniciar a cor noturna em:"
 
 #: package/contents/ui/main.qml:332 package/contents/ui/main.qml:355
 #, kde-format
@@ -168,7 +167,7 @@ msgstr "Formato de entrada: HH:MM"
 #: package/contents/ui/main.qml:342
 #, kde-format
 msgid "Begin day color at:"
-msgstr ""
+msgstr "Iniciar a cor diurna em:"
 
 #: package/contents/ui/main.qml:364
 #, kde-format
@@ -199,20 +198,18 @@ msgid "Locating…"
 msgstr "Localizando..."
 
 #: package/contents/ui/TimingsView.qml:32
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
-msgstr "A cor noturna começa a alterar às %1 e é alterada por completo às %2"
+msgstr "A cor noturna começa a mudar às %1 e é alterada por completo às %2"
 
 #: package/contents/ui/TimingsView.qml:39
-#, fuzzy, kde-format
-#| msgid "Night Color begins changing at %1 and is fully changed by %2"
+#, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "A cor noturna começa a alterar às %1 e é alterada por completo às %2"
+msgstr "A cor noturna começa a mudar às %1 e é alterada por completo às %2"
 
 #, fuzzy
 #~| msgid "This is what Night Color will look like when active."
