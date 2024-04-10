@@ -1,4 +1,4 @@
-# Translation of kcm_nightcolor to Norwegian Nynorsk
+# Translation of kcm_nightlight to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
