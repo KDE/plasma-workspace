@@ -12,7 +12,6 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-#include <QScopeGuard>
 #include <QTest>
 
 class KlipperTest : public QObject
@@ -56,10 +55,10 @@ void KlipperTest::testBug465225()
     QVERIFY(QFile(QFINDTESTDATA("./data/bug465225.lst")).copy(QDir(folderPath).absoluteFilePath(QStringLiteral("history2.lst"))));
 
     const QString fileName = QStringLiteral("klipperrc");
-    QScopeGuard cleanup([&folderPath, &fileName] {
-        QDir(folderPath).removeRecursively();
-        QFile(QStandardPaths::locate(QStandardPaths::GenericConfigLocation, fileName)).remove();
-    });
+    std::unique_ptr<void, std::function<void(void *)>> cleanup{this, [&folderPath, &fileName](auto) {
+                                                                   QDir(folderPath).removeRecursively();
+                                                                   QFile(QStandardPaths::locate(QStandardPaths::GenericConfigLocation, fileName)).remove();
+                                                               }};
 
     // Prepare config
     auto klipperConfig = KSharedConfig::openConfig(fileName, KConfig::NoGlobals);
