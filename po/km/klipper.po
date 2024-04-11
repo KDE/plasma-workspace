@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-04-11 02:45+0000\n"
 "PO-Revision-Date: 2012-06-14 13:47+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -531,7 +531,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "បើក​ Klipper នៅ​ទីតាំង​កណ្ដុរ"
 
-#: klipper.cpp:494
+#: klipper.cpp:495
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -539,59 +539,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:542
+#: klipper.cpp:543
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "តើ Klipper គួរ​តែ​ចាប់ផ្ដើម​ដោយ​​ស្វ័យប្រវត្តិ ពេល​អ្នក​ចូល​ឬ?"
 
-#: klipper.cpp:543
+#: klipper.cpp:544
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "ចាប់​ផ្ដើម Klipper ដោយ​​ស្វ័យ​ប្រវត្តិ?"
 
-#: klipper.cpp:544
+#: klipper.cpp:545
 #, kde-format
 msgid "Start"
 msgstr "ចាប់ផ្ដើម"
 
-#: klipper.cpp:545
+#: klipper.cpp:546
 #, kde-format
 msgid "Do Not Start"
 msgstr "កុំ​ចាប់ផ្ដើម"
 
-#: klipper.cpp:915
+#: klipper.cpp:916
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "កូដផលិតផល​ចល័ត"
 
-#: klipper.cpp:956
+#: klipper.cpp:957
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ពិតជា​លុប​ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់​ទាំង​​អស់​ឬ ?"
 
-#: klipper.cpp:957
+#: klipper.cpp:958
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "ជម្រះ​ប្រវត្តិ​ក្ដារ​តម្បៀត​ខ្ទាស់"
 
-#: klipper.cpp:973 klipper.cpp:982
+#: klipper.cpp:974 klipper.cpp:983
 #, kde-format
 msgid "Clipboard history"
 msgstr "ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់"
 
-#: klipper.cpp:999
+#: klipper.cpp:1000
 #, kde-format
 msgid "up"
 msgstr "ឡើង​លើ"
 
-#: klipper.cpp:1006
+#: klipper.cpp:1007
 #, kde-format
 msgid "current"
 msgstr "បច្ចុប្បន្ន"
 
-#: klipper.cpp:1013
+#: klipper.cpp:1014
 #, kde-format
 msgid "down"
 msgstr "ចុះក្រោម"

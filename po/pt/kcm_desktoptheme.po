@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2024-04-11 02:45+0000\n"
 "PO-Revision-Date: 2021-06-08 19:40+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -20,27 +20,27 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "Nome do estilo actual do Plasma"
 
-#: kcm.cpp:111
+#: kcm.cpp:112
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Não foi possível criar um ficheiro temporário."
 
-#: kcm.cpp:122
+#: kcm.cpp:123
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "Não foi possível transferir o tema: %1"
 
-#: kcm.cpp:147
+#: kcm.cpp:148
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "O tema foi instalado com sucesso."
 
-#: kcm.cpp:150 kcm.cpp:156
+#: kcm.cpp:151 kcm.cpp:157
 #, kde-format
 msgid "Theme installation failed."
 msgstr "Não foi possível instalar o tema."
 
-#: kcm.cpp:262
+#: kcm.cpp:251
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Não foi possível remover o tema: %1"

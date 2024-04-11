@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktoptheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2024-04-11 02:45+0000\n"
 "PO-Revision-Date: 2023-08-03 23:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -26,27 +26,27 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "Назва поточного стилю Плазми"
 
-#: kcm.cpp:111
+#: kcm.cpp:112
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Не вдалося створити тимчасовий файл."
 
-#: kcm.cpp:122
+#: kcm.cpp:123
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "Не вдалося отримати тему: %1"
 
-#: kcm.cpp:147
+#: kcm.cpp:148
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Тему успішно встановлено."
 
-#: kcm.cpp:150 kcm.cpp:156
+#: kcm.cpp:151 kcm.cpp:157
 #, kde-format
 msgid "Theme installation failed."
 msgstr "Помилка під час спроби встановити тему."
 
-#: kcm.cpp:262
+#: kcm.cpp:251
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Не вдалося вилучити тему: %1"

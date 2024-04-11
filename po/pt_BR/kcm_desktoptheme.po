@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2024-04-11 02:45+0000\n"
 "PO-Revision-Date: 2023-11-14 14:12-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -26,27 +26,27 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "Nome do estilo do Plasma atual"
 
-#: kcm.cpp:111
+#: kcm.cpp:112
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Não foi possível criar um arquivo temporário."
 
-#: kcm.cpp:122
+#: kcm.cpp:123
 #, kde-format
 msgid "Unable to download the theme: %1"
 msgstr "Não foi possível baixar o tema: %1"
 
-#: kcm.cpp:147
+#: kcm.cpp:148
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema instalado com sucesso."
 
-#: kcm.cpp:150 kcm.cpp:156
+#: kcm.cpp:151 kcm.cpp:157
 #, kde-format
 msgid "Theme installation failed."
 msgstr "Falha na instalação do tema."
 
-#: kcm.cpp:262
+#: kcm.cpp:251
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr "Falha ao remover tema: %1"

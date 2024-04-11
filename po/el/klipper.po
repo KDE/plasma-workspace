@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-04-11 02:45+0000\n"
 "PO-Revision-Date: 2014-10-28 16:44+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -540,7 +540,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Άνοιγμα του Klipper στη θέση του ποντικιού"
 
-#: klipper.cpp:494
+#: klipper.cpp:495
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -548,59 +548,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:542
+#: klipper.cpp:543
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Να ξεκινά αυτόματα το Klipper κατά τη σύνδεσή σας;"
 
-#: klipper.cpp:543
+#: klipper.cpp:544
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Αυτόματη εκκίνηση Klipper;"
 
-#: klipper.cpp:544
+#: klipper.cpp:545
 #, kde-format
 msgid "Start"
 msgstr "Εκκίνηση"
 
-#: klipper.cpp:545
+#: klipper.cpp:546
 #, kde-format
 msgid "Do Not Start"
 msgstr "Να μην εκκινηθεί"
 
-#: klipper.cpp:915
+#: klipper.cpp:916
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Γραμμοκώδικας για κινητά"
 
-#: klipper.cpp:956
+#: klipper.cpp:957
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Επιθυμείτε πραγματικά τη διαγραφή του ιστορικού του προχείρου;"
 
-#: klipper.cpp:957
+#: klipper.cpp:958
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Κα&θαρισμός ιστορικού προχείρου"
 
-#: klipper.cpp:973 klipper.cpp:982
+#: klipper.cpp:974 klipper.cpp:983
 #, kde-format
 msgid "Clipboard history"
 msgstr "Ιστορικό του προχείρου"
 
-#: klipper.cpp:999
+#: klipper.cpp:1000
 #, kde-format
 msgid "up"
 msgstr "πάνω"
 
-#: klipper.cpp:1006
+#: klipper.cpp:1007
 #, kde-format
 msgid "current"
 msgstr "τρέχον"
 
-#: klipper.cpp:1013
+#: klipper.cpp:1014
 #, kde-format
 msgid "down"
 msgstr "κάτω"

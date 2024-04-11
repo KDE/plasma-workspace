@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-03 02:38+0000\n"
+"POT-Creation-Date: 2024-04-11 02:45+0000\n"
 "PO-Revision-Date: 2008-12-28 08:00+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -25,29 +25,29 @@ msgstr ""
 msgid "Name of the current Plasma Style"
 msgstr "Temaya Nû Bîne..."
 
-#: kcm.cpp:111
+#: kcm.cpp:112
 #, fuzzy, kde-format
 #| msgid "Unable to save theme."
 msgid "Unable to create a temporary file."
 msgstr "Nikare dirbê tomar bike."
 
-#: kcm.cpp:122
+#: kcm.cpp:123
 #, fuzzy, kde-format
 #| msgid "Unable to save theme."
 msgid "Unable to download the theme: %1"
 msgstr "Nikare dirbê tomar bike."
 
-#: kcm.cpp:147
+#: kcm.cpp:148
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""
 
-#: kcm.cpp:150 kcm.cpp:156
+#: kcm.cpp:151 kcm.cpp:157
 #, kde-format
 msgid "Theme installation failed."
 msgstr ""
 
-#: kcm.cpp:262
+#: kcm.cpp:251
 #, kde-format
 msgid "Removing theme failed: %1"
 msgstr ""

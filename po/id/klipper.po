@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-05 01:35+0000\n"
+"POT-Creation-Date: 2024-04-11 02:45+0000\n"
 "PO-Revision-Date: 2023-02-17 18:08+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -513,7 +513,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Tampilkan Item di Posisi Mouse"
 
-#: klipper.cpp:494
+#: klipper.cpp:495
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -523,57 +523,57 @@ msgstr ""
 "Kamu bisa memfungsikan aksi URL nanti di halaman <interface>Aksi</interface> "
 "pada jendela konfigurasi applet Clipboard"
 
-#: klipper.cpp:542
+#: klipper.cpp:543
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Haruskan Klipper dijalankan secara otomatis ketika anda login?"
 
-#: klipper.cpp:543
+#: klipper.cpp:544
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Secara Otomatis Menjalankan Klipper?"
 
-#: klipper.cpp:544
+#: klipper.cpp:545
 #, kde-format
 msgid "Start"
 msgstr "Jalankan"
 
-#: klipper.cpp:545
+#: klipper.cpp:546
 #, kde-format
 msgid "Do Not Start"
 msgstr "Jangan Jalankan"
 
-#: klipper.cpp:915
+#: klipper.cpp:916
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "KodeBilah Ponsel"
 
-#: klipper.cpp:956
+#: klipper.cpp:957
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Apakah Anda yakin ingin menghapus seluruh riwayat papan klip?"
 
-#: klipper.cpp:957
+#: klipper.cpp:958
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bersihkan Riwayat Papan Klip"
 
-#: klipper.cpp:973 klipper.cpp:982
+#: klipper.cpp:974 klipper.cpp:983
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histori papan klip"
 
-#: klipper.cpp:999
+#: klipper.cpp:1000
 #, kde-format
 msgid "up"
 msgstr "atas"
 
-#: klipper.cpp:1006
+#: klipper.cpp:1007
 #, kde-format
 msgid "current"
 msgstr "saat ini"
 
-#: klipper.cpp:1013
+#: klipper.cpp:1014
 #, kde-format
 msgid "down"
 msgstr "bawah"
