@@ -53,7 +53,7 @@ MouseArea {
         visible: opacity > 0
         active: compactRoot.containsMouse
 
-        source: "notification-inactive"
+        source: "notification-inactive-symbolic"
 
         Charts.PieChart {
             id: chart
@@ -98,7 +98,7 @@ MouseArea {
     Kirigami.Icon {
         id: dndIcon
         anchors.fill: parent
-        source: "notifications-disabled"
+        source: "notifications-disabled-symbolic"
         opacity: 0
         scale: 2
         visible: opacity > 0
@@ -144,7 +144,7 @@ MouseArea {
             when: compactRoot.unreadCount > 0
             PropertyChanges {
                 target: notificationIcon
-                source: "notification-active"
+                source: "notification-active-symbolic"
             }
         }
     ]
