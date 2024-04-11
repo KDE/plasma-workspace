@@ -423,8 +423,3 @@ msgstr ""
 "Straumprofilar er kanskje støtta på eininga di.<nl/>Prøv å installera pakken "
 "<command>power-profiles-daemon</command> via pakke­handsamaren til distroen "
 "din, og start så maskina på nytt."
-
-# Teksten på engelsk er litt rar (korfor ha med «manually»?). Poenget er at når ein kryssar av for dette, vil ikkje maskina automatisk låsa skjermen eller gå i kvilemodus viss ein er inaktiv for lenge. Prøver ei omsetting som gjer dette klarare. Er òg meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Manually block sleep and screen locking"
-#~ msgstr "Hindra automatisk skjermlåsing og kvilemodus"

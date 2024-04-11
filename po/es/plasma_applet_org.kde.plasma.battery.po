@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-03-27 16:09+0100\n"
+"PO-Revision-Date: 2024-04-10 12:40+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -256,26 +256,26 @@ msgstr "&Configurar la gestión de energía..."
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "Suspensión y bloqueo de pantalla tras inactividad"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "Bloqueada"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "Automática"
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "Bloquear manualmente"
 
 #: package/contents/ui/PowerManagementItem.qml:137
 #, kde-format

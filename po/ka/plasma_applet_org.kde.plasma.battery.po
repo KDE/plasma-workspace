@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-03-27 05:14+0100\n"
+"PO-Revision-Date: 2024-04-10 04:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -238,26 +238,26 @@ msgstr "&ენერგიის მართვის მორგება…
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "ძილი და ეკრანის დაბლოკვა უქმეობის შემდეგ"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "დაბლოკილია"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "ავტომატური"
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "ხელით დაბლოკვა"
 
 #: package/contents/ui/PowerManagementItem.qml:137
 #, kde-format
