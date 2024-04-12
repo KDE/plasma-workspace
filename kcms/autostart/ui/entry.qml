@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2023 Thenujan Sandramohan <sthenujan2002@gmail.com>
+    SPDX-FileCopyrightText: 2024 ivan tkachenko <me@ratijas.tk>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -22,6 +23,21 @@ KCM.SimpleKCM {
     bottomPadding: 0
 
     onBackRequested: kcm.pop()
+
+    actions: QQC2.Action {
+        icon.name: entryPage.unit.activeState === "active" ? "media-playback-stop-symbolic" : "media-playback-start-symbolic"
+        text: entryPage.unit.activeState === "active"
+            ? i18nc("@label Stop the Systemd unit for a running process", "Stop")
+            : i18nc("@label Start the Systemd unit for a currently inactive process", "Start")
+
+        onTriggered: {
+            if (entryPage.unit.activeState === "active") {
+                entryPage.unit.stop();
+            } else {
+                entryPage.unit.start();
+            }
+        }
+    }
 
     header: ColumnLayout {
         width: entryPage.width
@@ -64,20 +80,6 @@ KCM.SimpleKCM {
                 Kirigami.FormData.label: i18nc("@label A date and time follows this text, making a sentence like 'Last activated on: August 7th 11 PM 2023'", "Last activated on:")
                 text: entryPage.unit.timeActivated
                 textFormat: Text.PlainText
-            }
-        }
-
-        QQC2.Button {
-            Layout.alignment: Qt.AlignHCenter
-            Layout.bottomMargin: Kirigami.Units.largeSpacing
-            icon.name: entryPage.unit.activeState === "active" ? "media-playback-stop-symbolic" : "media-playback-start-symbolic"
-            text: entryPage.unit.activeState === "active" ? i18nc("@label Stop the Systemd unit for a running process", "Stop") : i18nc("@label Start the Systemd unit for a currently inactive process", "Start")
-            onClicked: {
-                if (entryPage.unit.activeState === "active") {
-                    entryPage.unit.stop();
-                } else {
-                    entryPage.unit.start();
-                }
             }
         }
     }
