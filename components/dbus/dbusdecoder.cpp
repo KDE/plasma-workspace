@@ -13,14 +13,17 @@
 #include <QDBusSignature>
 #include <QDBusVariant>
 
+#include "dbustype.h"
+
 namespace Decoder
 {
 QVariant dbusToVariant(const QVariant &variant)
 {
-    if (variant.canConvert<QDBusArgument>()) {
+    if (variant.metaType() == QMetaType::fromType<QDBusArgument>()) {
         const QDBusArgument argument = variant.value<QDBusArgument>();
         switch (argument.currentType()) {
         case QDBusArgument::BasicType:
+        case QDBusArgument::MapEntryType:
             return dbusToVariant(argument.asVariant());
         case QDBusArgument::VariantType:
             return dbusToVariant(argument.asVariant().value<QDBusVariant>().variant());
@@ -60,14 +63,50 @@ QVariant dbusToVariant(const QVariant &variant)
         default:
             return variant;
         }
-    } else if (variant.canConvert<QDBusObjectPath>()) {
-        return variant.value<QDBusObjectPath>().path();
-    } else if (variant.canConvert<QDBusSignature>()) {
-        return variant.value<QDBusSignature>().signature();
-    } else if (variant.canConvert<QDBusVariant>()) {
-        return dbusToVariant(variant.value<QDBusVariant>().variant());
+    } else if (variant.metaType() == QMetaType::fromType<QDBusObjectPath>()) {
+        return Plasma::DBus::OBJECTPATH(get<QDBusObjectPath>(variant).path());
+    } else if (variant.metaType() == QMetaType::fromType<QDBusSignature>()) {
+        return Plasma::DBus::SIGNATURE(get<QDBusSignature>(variant).signature());
+    } else if (variant.metaType() == QMetaType::fromType<QDBusVariant>()) {
+        return dbusToVariant(get<QDBusVariant>(variant).variant());
+    } else {
+        switch (variant.typeId()) {
+        case QMetaType::Bool:
+            return Plasma::DBus::BOOL(get<bool>(variant));
+        case QMetaType::Short:
+            return Plasma::DBus::INT16(get<short>(variant));
+        case QMetaType::Int:
+            return Plasma::DBus::INT32(get<int>(variant));
+        case QMetaType::LongLong:
+            return Plasma::DBus::INT64(get<qlonglong>(variant));
+        case QMetaType::UShort:
+            return Plasma::DBus::UINT16(get<ushort>(variant));
+        case QMetaType::UInt:
+            return Plasma::DBus::UINT32(get<uint>(variant));
+        case QMetaType::ULongLong:
+            return Plasma::DBus::UINT64(get<qulonglong>(variant));
+        case QMetaType::Double:
+            return Plasma::DBus::DOUBLE(get<double>(variant));
+        case QMetaType::UChar:
+            return Plasma::DBus::BYTE(get<uchar>(variant));
+        case QMetaType::QString:
+            return Plasma::DBus::STRING(get<QString>(variant));
+        case QMetaType::QByteArray: {
+            const QByteArray &bytes = get<QByteArray>(variant);
+            return QVariant::fromValue(QList<Plasma::DBus::BYTE>{bytes.cbegin(), bytes.cend()});
+        }
+        }
     }
 
     return variant;
+}
+
+QVariantList decode(const QDBusMessage &message)
+{
+    QVariantList arguments = message.arguments();
+    for (QVariant &arg : arguments) {
+        arg = dbusToVariant(arg);
+    }
+    return arguments;
 }
 }
