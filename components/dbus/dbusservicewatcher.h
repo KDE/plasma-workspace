@@ -11,7 +11,16 @@
 #include <QQmlParserStatus>
 #include <qqmlregistration.h>
 
-#include "bustype.h"
+namespace BusType
+{
+QML_ELEMENT
+Q_NAMESPACE //
+    enum Type {
+        Session = 0,
+        System,
+    };
+Q_ENUM_NS(Type)
+}
 
 class DBusServiceWatcher : public QObject, public QQmlParserStatus
 {
