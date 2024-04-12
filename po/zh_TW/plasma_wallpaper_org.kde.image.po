@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2023-10-20 03:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -34,11 +34,10 @@ msgstr "mail@kisaragi-hiu.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "開啟影像"
+msgid "Open Image"
+msgstr "開啟桌布影像"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -310,6 +309,13 @@ msgstr "嘗試設定 Plasma 桌布時出錯：<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "嘗試開啟 kscreenlockerrc 設定檔案時出錯。"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Open Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "開啟影像"
 
 #~ msgid "Add Image…"
 #~ msgstr "新增影像…"

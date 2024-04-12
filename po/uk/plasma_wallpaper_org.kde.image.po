@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-08 08:52+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -31,10 +31,11 @@ msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "Відкриття мультимедійних даних"
+msgid "Open Image"
+msgstr "Відкрити зображення тла стільниці"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -326,6 +327,10 @@ msgstr ""
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Під час спроби відкрити файл налаштувань kscreenlockerrc сталася помилка."
+
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "Відкриття мультимедійних даних"
 
 #~ msgid "Add Image…"
 #~ msgstr "Додати зображення…"

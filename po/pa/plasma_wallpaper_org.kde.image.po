@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-03 13:59-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -29,11 +29,10 @@ msgstr "aalam@punlinux.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
+msgid "Open Image"
+msgstr "ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -306,6 +305,13 @@ msgstr "ਪਲਾਜ਼ਮਾ ਵਾਲਪੇਪਰ ਲਾਉਣ ਦੌਰਾਨ �
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc ਸੰਰਚਨਾ ਫਾਇਲ ਖੋਲ੍ਹਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ।"
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Open Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
 
 #~ msgid "Add Image…"
 #~ msgstr "…ਚਿੱਤਰ ਜੋੜੋ"

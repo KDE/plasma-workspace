@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2024-01-19 19:01+0200\n"
 "Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
 "Language-Team: \n"
@@ -34,11 +34,10 @@ msgstr "viesturs.zarins@mii.lu.lv, toms.trasuns@posteo.net"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "Atvērt attēlu"
+msgid "Open Image"
+msgstr "Atvērt tapetes attēlu"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -319,6 +318,13 @@ msgstr "Kļūda, mēģinot uzlikt „Plasma“ tapeti:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Kļūda, mēģinot atvērt „kscreenlockerrc“ konfigurācijas datni."
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Open Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "Atvērt attēlu"
 
 #, fuzzy
 #~| msgid "&Add Folder..."

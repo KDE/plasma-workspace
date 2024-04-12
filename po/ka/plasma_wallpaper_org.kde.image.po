@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-08 04:35+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -29,10 +29,11 @@ msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "მედიის გახსნა"
+msgid "Open Image"
+msgstr "ფონის გამოსახულების გახსნა"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -309,6 +310,10 @@ msgstr "შეცდომა Plasma-ის ფონის სურათი�
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "შეცდომა kscreenlockerrc-ის გახსნის მცდელობისას."
+
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "მედიის გახსნა"
 
 #~ msgid "Add Image…"
 #~ msgstr "გამოსახულების დამატება…"

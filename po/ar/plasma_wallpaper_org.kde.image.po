@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-09 11:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: \n"
@@ -31,10 +31,11 @@ msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "افتح وسيط"
+msgid "Open Image"
+msgstr "افتح صورة خلفيّة"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -323,6 +324,10 @@ msgstr "حدث خطأ أثناء محاولة تعيين خلفية البلاز
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "حدث خطأ في أثناء محاولة فتح ملف ضبط kscreenlockerrc."
+
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "افتح وسيط"
 
 #~ msgid "Add Image…"
 #~ msgstr "أضف صورة..."

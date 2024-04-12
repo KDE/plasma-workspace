@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-08 10:17+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -28,10 +28,11 @@ msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "Medium openen"
+msgid "Open Image"
+msgstr "Achtergrondafbeelding openen"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -322,6 +323,10 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Er deed zich een fout voor tijdens het openen van het configuratiebestand "
 "kscreenlockerrc."
+
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "Medium openen"
 
 #~ msgid "Add Image…"
 #~ msgstr "Afbeelding toevoegen…"

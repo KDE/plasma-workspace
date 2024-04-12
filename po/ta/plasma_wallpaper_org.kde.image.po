@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2023-10-15 13:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -29,11 +29,10 @@ msgstr "Kde-l10n-ta@kde.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "படத்தை திற"
+msgid "Open Image"
+msgstr "பின்புல படத்தை திற"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -309,6 +308,13 @@ msgstr "பிளாஸ்மாவுக்கான பின்புல ப�
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc எனும் கோப்பைத் திறப்பதில் சிக்கல் ஏற்பட்டது."
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Open Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "படத்தை திற"
 
 #~ msgid "Add Image…"
 #~ msgstr "படத்தை சேர்…"

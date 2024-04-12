@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2023-02-19 19:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -29,10 +29,10 @@ msgstr "xxmn77@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
-#| msgid "Open Image"
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "Şəkili açmaq"
+msgid "Open Image"
+msgstr "Divar kağızı şəklini açın"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, fuzzy, kde-format
@@ -319,6 +319,12 @@ msgstr "Plasma divar kağızı təyin edərkən xəta baş verdi:<nl/>%1"
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "\"kscreenlockerrc\" tənzimləmə faylını açmağa cəhd edərkən xəta baş verdi."
+
+#, fuzzy
+#~| msgid "Open Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "Şəkili açmaq"
 
 #~ msgid "Add Image…"
 #~ msgstr "Şəkil əlavə etmək..."

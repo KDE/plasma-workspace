@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2009-06-27 00:55+0200\n"
 "Last-Translator: Rinse de Vries <rinsedevries@kde.nl>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "berendy@bigfoot.com"
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, kde-format
 msgctxt "@title:window"
-msgid "Open Media"
+msgid "Open Image"
 msgstr ""
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70

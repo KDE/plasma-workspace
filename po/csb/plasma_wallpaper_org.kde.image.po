@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2009-12-13 00:11+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -33,7 +33,7 @@ msgstr "michol@linuxcsb.org, mark@linuxcsb.org"
 #, fuzzy, kde-format
 #| msgid "Next Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
+msgid "Open Image"
 msgstr "Nôslédny òbrôzk tapétë"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -321,6 +321,12 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Next Wallpaper Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "Nôslédny òbrôzk tapétë"
 
 #, fuzzy
 #~| msgid "&Add Folder..."

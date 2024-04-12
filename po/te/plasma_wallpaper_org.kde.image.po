@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -36,7 +36,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Images"
 msgctxt "@title:window"
-msgid "Open Media"
+msgid "Open Image"
 msgstr "చిత్రాలు"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -317,6 +317,12 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Images"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "చిత్రాలు"
 
 #, fuzzy
 #~| msgid "Images"

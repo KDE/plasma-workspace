@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2023-09-17 23:50+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -34,11 +34,10 @@ msgstr "xalba@euskalnet.net"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Open Image"
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "Ireki irudia"
+msgid "Open Image"
+msgstr "Ireki horma-paper irudia"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -321,6 +320,13 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Errore bat gertatu da konfiguratzeko «kscreenlockerrc» fitxategia irekitzen "
 "saiatzean."
+
+#, fuzzy
+#~| msgctxt "@title:window"
+#~| msgid "Open Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "Ireki irudia"
 
 #~ msgid "Add Image…"
 #~ msgstr "Gehitu irudia..."

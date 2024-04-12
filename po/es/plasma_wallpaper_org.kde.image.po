@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2024-04-08 12:19+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -30,10 +30,11 @@ msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "Abrir multimedia"
+msgid "Open Image"
+msgstr "Abrir imagen de fondo del escritorio"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -322,6 +323,10 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Ha ocurrido un error al intentar abrir el archivo de configuración "
 "«kscreenlockerrc»."
+
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "Abrir multimedia"
 
 #~ msgid "Add Image…"
 #~ msgstr "Añadir imagen..."

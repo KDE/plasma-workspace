@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2011-07-14 09:21+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -32,7 +32,7 @@ msgstr "jean.cayron@gmail.com"
 #, fuzzy, kde-format
 #| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
+msgid "Open Image"
 msgstr "Drovi l' imådje del tapisreye"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
@@ -316,6 +316,12 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
+
+#, fuzzy
+#~| msgid "Open Wallpaper Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "Drovi l' imådje del tapisreye"
 
 #, fuzzy
 #~| msgid "&Add Folder..."

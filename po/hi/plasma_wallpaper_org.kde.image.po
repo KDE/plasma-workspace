@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-08 00:39+0000\n"
+"POT-Creation-Date: 2024-04-12 00:39+0000\n"
 "PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -33,10 +33,10 @@ msgstr "raviratlami@aol.in"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
-#| msgid "Open Image"
+#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
-msgid "Open Media"
-msgstr "छवि खोलें"
+msgid "Open Image"
+msgstr "वालपेपर छवि खोलें"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, fuzzy, kde-format
@@ -320,6 +320,12 @@ msgstr "प्लाज्मा वॉलपेपर नियत करने
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "kscreenlockerrc कॉन्फ़िग फ़ाइल खोलने का प्रयास करते समय एक त्रुटि उत्पन्न हुई।"
+
+#, fuzzy
+#~| msgid "Open Image"
+#~ msgctxt "@title:window"
+#~ msgid "Open Media"
+#~ msgstr "छवि खोलें"
 
 #~ msgid "Add Image…"
 #~ msgstr "छवि जोड़ें…"

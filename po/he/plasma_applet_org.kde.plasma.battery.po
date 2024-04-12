@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-03-27 07:04+0200\n"
+"PO-Revision-Date: 2024-04-10 06:47+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -241,26 +241,26 @@ msgstr "ניהול צריכת &חשמל…"
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "שינה ונעילת מסך לאחר חוסר פעילות"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "חסום"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "אוטומטי"
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "חסימה ידנית"
 
 #: package/contents/ui/PowerManagementItem.qml:137
 #, kde-format
