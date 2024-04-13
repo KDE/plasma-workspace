@@ -54,6 +54,7 @@
 #include <QFile>
 #include <QPushButton>
 #include <QRegularExpression>
+#include <QScopeGuard>
 #include <QSocketNotifier>
 #include <QStandardPaths>
 
@@ -287,37 +288,34 @@ static void fprintfhex(FILE *fp, unsigned int len, char *cp)
     }
 }
 
-/*
- * We use temporary files which contain commands to add/remove entries from
- * the .ICEauthority file.
- */
-static void write_iceauth(FILE *addfp, FILE *removefp, IceAuthDataEntry *entry)
-{
-    fprintf(addfp, "add %s \"\" %s %s ", entry->protocol_name, entry->network_id, entry->auth_name);
-    fprintfhex(addfp, entry->auth_data_length, entry->auth_data);
-    fprintf(addfp, "\n");
-
-    fprintf(removefp, "remove protoname=%s protodata=\"\" netid=%s authname=%s\n", entry->protocol_name, entry->network_id, entry->auth_name);
-}
-
 #define MAGIC_COOKIE_LEN 16
-
 
 Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry **authDataEntries)
 {
-    QTemporaryFile addTempFile;
-    remTempFile = new QTemporaryFile;
+    char *filename = IceAuthFileName();
+    FILE *fp;
 
-    if (!addTempFile.open() || !remTempFile->open())
+    if (IceLockAuthFile(filename, 10, 2, 600) != IceAuthLockSuccess) {
+        qWarning() << "Could not lock ICEAuthority file";
         return 0;
+    }
+    auto cleanup = qScopeGuard([filename]() {
+        IceUnlockAuthFile(filename);
+    });
 
-    if ((*authDataEntries = (IceAuthDataEntry *)malloc(count * 2 * sizeof(IceAuthDataEntry))) == nullptr)
+    if ((fp = fopen(filename, "ab")) == NULL) {
+        qWarning() << "Could not open ICEAuthority file";
         return 0;
+    }
 
-    FILE *addAuthFile = fopen(QFile::encodeName(addTempFile.fileName()).constData(), "r+");
-    FILE *remAuthFile = fopen(QFile::encodeName(remTempFile->fileName()).constData(), "r+");
+    if ((*authDataEntries = (IceAuthDataEntry *)malloc(count * 2 * sizeof(IceAuthDataEntry))) == nullptr) {
+        (void)fclose(fp);
+        return 0;
+    }
 
     for (int i = 0; i < numTransports * 2; i += 2) {
+        // ICE Auth Data
+
         (*authDataEntries)[i].network_id = IceGetListenConnectionString(listenObjs[i / 2]);
         (*authDataEntries)[i].protocol_name = (char *)"ICE";
         (*authDataEntries)[i].auth_name = (char *)"MIT-MAGIC-COOKIE-1";
@@ -325,6 +323,23 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
         (*authDataEntries)[i].auth_data = IceGenerateMagicCookie(MAGIC_COOKIE_LEN);
         (*authDataEntries)[i].auth_data_length = MAGIC_COOKIE_LEN;
 
+        // ICE Auth File
+        {
+            IceAuthFileEntry *file_entry = (IceAuthFileEntry *)malloc(sizeof(IceAuthFileEntry));
+            file_entry->protocol_name = strdup("ICE");
+            file_entry->protocol_data = NULL;
+            file_entry->protocol_data_length = 0;
+            file_entry->network_id = IceGetListenConnectionString(listenObjs[i / 2]);
+            file_entry->auth_name = strdup("MIT-MAGIC-COOKIE-1");
+            file_entry->auth_data = strdup((*authDataEntries)[i].auth_data);
+            file_entry->auth_data_length = MAGIC_COOKIE_LEN;
+            if (IceWriteAuthFileEntry(fp, file_entry) != 0) {
+                qWarning("Failed to write ice auth file entry");
+            }
+            IceFreeAuthFileEntry(file_entry);
+        }
+
+        // XSMP Auth Data
         (*authDataEntries)[i + 1].network_id = IceGetListenConnectionString(listenObjs[i / 2]);
         (*authDataEntries)[i + 1].protocol_name = (char *)"XSMP";
         (*authDataEntries)[i + 1].auth_name = (char *)"MIT-MAGIC-COOKIE-1";
@@ -332,141 +347,127 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
         (*authDataEntries)[i + 1].auth_data = IceGenerateMagicCookie(MAGIC_COOKIE_LEN);
         (*authDataEntries)[i + 1].auth_data_length = MAGIC_COOKIE_LEN;
 
-        write_iceauth(addAuthFile, remAuthFile, &(*authDataEntries)[i]);
-        write_iceauth(addAuthFile, remAuthFile, &(*authDataEntries)[i + 1]);
+        // XSMP Auth file
+        {
+            IceAuthFileEntry *file_entry = (IceAuthFileEntry *)malloc(sizeof(IceAuthFileEntry));
+            file_entry->protocol_name = strdup("XSMP");
+            file_entry->protocol_data = NULL;
+            file_entry->protocol_data_length = 0;
+            file_entry->network_id = IceGetListenConnectionString(listenObjs[i / 2]);
+            file_entry->auth_name = strdup("MIT-MAGIC-COOKIE-1");
+            file_entry->auth_data = strdup((*authDataEntries)[i + 1].auth_data);
+            file_entry->auth_data_length = MAGIC_COOKIE_LEN;
+            if (IceWriteAuthFileEntry(fp, file_entry) != 0) {
+                qWarning("Failed to write xsmp ice auth file entry");
+            }
+            IceFreeAuthFileEntry(file_entry);
+        }
 
         IceSetPaAuthData(2, &(*authDataEntries)[i]);
     }
-    fclose(addAuthFile);
-    fclose(remAuthFile);
-
-    QString iceAuth = QStandardPaths::findExecutable(QStringLiteral("iceauth"));
-    if (iceAuth.isEmpty()) {
-        qCWarning(KSMSERVER, "KSMServer: could not find iceauth");
-        return 0;
-    }
-
-    KProcess p;
-    p << iceAuth << QStringLiteral("source") << addTempFile.fileName();
-    p.execute();
 
     return (1);
 }
 
-/*
- * Free up authentication data.
- */
-void FreeAuthenticationData(int count, IceAuthDataEntry *authDataEntries)
-{
-    /* Each transport has entries for ICE and XSMP */
-    for (int i = 0; i < count * 2; i++) {
-        free(authDataEntries[i].network_id);
-        free(authDataEntries[i].auth_data);
-    }
+        /*
+         * Free up authentication data.
+         */
+        void FreeAuthenticationData(int count, IceAuthDataEntry *authDataEntries)
+        {
+            /* Each transport has entries for ICE and XSMP */
+            for (int i = 0; i < count * 2; i++) {
+                free(authDataEntries[i].network_id);
+                free(authDataEntries[i].auth_data);
+            }
 
-    free(authDataEntries);
-
-    QString iceAuth = QStandardPaths::findExecutable(QStringLiteral("iceauth"));
-    if (iceAuth.isEmpty()) {
-        qCWarning(KSMSERVER, "KSMServer: could not find iceauth");
-        return;
-    }
-
-    if (remTempFile) {
-        KProcess p;
-        p << iceAuth << QStringLiteral("source") << remTempFile->fileName();
-        p.execute();
-    }
-
-    delete remTempFile;
-    remTempFile = nullptr;
-}
-
-static int Xio_ErrorHandler(Display *)
-{
-    qCWarning(KSMSERVER, "ksmserver: Fatal IO error: client killed");
-
-    // Don't do anything that might require the X connection
-    if (the_server) {
-        KSMServer *server = the_server;
-        the_server = nullptr;
-        server->cleanUp();
-        // Don't delete server!!
-    }
-
-    exit(0); // Don't report error, it's not our fault.
-    return 0; // Bogus return value, notreached
-}
-
-void KSMServer::setupXIOErrorHandler()
-{
-    XSetIOErrorHandler(Xio_ErrorHandler);
-}
-
-static int wake_up_socket = -1;
-static void sighandler(int sig)
-{
-    if (sig == SIGHUP) {
-        signal(SIGHUP, sighandler);
-        return;
-    }
-
-    char ch = 0;
-    (void)::write(wake_up_socket, &ch, 1);
-}
-
-void KSMWatchProc(IceConn iceConn, IcePointer client_data, Bool opening, IcePointer *watch_data)
-{
-    KSMServer *ds = (KSMServer *)client_data;
-
-    if (opening) {
-        *watch_data = (IcePointer)ds->watchConnection(iceConn);
-    } else {
-        ds->removeConnection((KSMConnection *)*watch_data);
-    }
-}
-
-static Status KSMNewClientProc(SmsConn conn, SmPointer manager_data, unsigned long *mask_ret, SmsCallbacks *cb, char **failure_reason_ret)
-{
-    *failure_reason_ret = nullptr;
-
-    void *client = ((KSMServer *)manager_data)->newClient(conn);
-    if (client == NULL) {
-        const char *errstr = "Connection rejected: ksmserver is shutting down";
-        qCWarning(KSMSERVER, "%s", errstr);
-
-        if ((*failure_reason_ret = (char *)malloc(strlen(errstr) + 1)) != NULL) {
-            strcpy(*failure_reason_ret, errstr);
+            free(authDataEntries);
         }
-        return 0;
-    }
 
-    cb->register_client.callback = KSMRegisterClientProc;
-    cb->register_client.manager_data = client;
-    cb->interact_request.callback = KSMInteractRequestProc;
-    cb->interact_request.manager_data = client;
-    cb->interact_done.callback = KSMInteractDoneProc;
-    cb->interact_done.manager_data = client;
-    cb->save_yourself_request.callback = KSMSaveYourselfRequestProc;
-    cb->save_yourself_request.manager_data = client;
-    cb->save_yourself_phase2_request.callback = KSMSaveYourselfPhase2RequestProc;
-    cb->save_yourself_phase2_request.manager_data = client;
-    cb->save_yourself_done.callback = KSMSaveYourselfDoneProc;
-    cb->save_yourself_done.manager_data = client;
-    cb->close_connection.callback = KSMCloseConnectionProc;
-    cb->close_connection.manager_data = client;
-    cb->set_properties.callback = KSMSetPropertiesProc;
-    cb->set_properties.manager_data = client;
-    cb->delete_properties.callback = KSMDeletePropertiesProc;
-    cb->delete_properties.manager_data = client;
-    cb->get_properties.callback = KSMGetPropertiesProc;
-    cb->get_properties.manager_data = client;
+        static int Xio_ErrorHandler(Display *)
+        {
+            qCWarning(KSMSERVER, "ksmserver: Fatal IO error: client killed");
 
-    *mask_ret = SmsRegisterClientProcMask | SmsInteractRequestProcMask | SmsInteractDoneProcMask | SmsSaveYourselfRequestProcMask
-        | SmsSaveYourselfP2RequestProcMask | SmsSaveYourselfDoneProcMask | SmsCloseConnectionProcMask | SmsSetPropertiesProcMask | SmsDeletePropertiesProcMask
-        | SmsGetPropertiesProcMask;
-    return 1;
-}
+            // Don't do anything that might require the X connection
+            if (the_server) {
+                KSMServer *server = the_server;
+                the_server = nullptr;
+                server->cleanUp();
+                // Don't delete server!!
+            }
+
+            exit(0); // Don't report error, it's not our fault.
+            return 0; // Bogus return value, notreached
+        }
+
+        void KSMServer::setupXIOErrorHandler()
+        {
+            XSetIOErrorHandler(Xio_ErrorHandler);
+        }
+
+        static int wake_up_socket = -1;
+        static void sighandler(int sig)
+        {
+            if (sig == SIGHUP) {
+                signal(SIGHUP, sighandler);
+                return;
+            }
+
+            char ch = 0;
+            (void)::write(wake_up_socket, &ch, 1);
+        }
+
+        void KSMWatchProc(IceConn iceConn, IcePointer client_data, Bool opening, IcePointer * watch_data)
+        {
+            KSMServer *ds = (KSMServer *)client_data;
+
+            if (opening) {
+                *watch_data = (IcePointer)ds->watchConnection(iceConn);
+            } else {
+                ds->removeConnection((KSMConnection *)*watch_data);
+            }
+        }
+
+        static Status KSMNewClientProc(SmsConn conn, SmPointer manager_data, unsigned long *mask_ret, SmsCallbacks *cb, char **failure_reason_ret)
+        {
+            *failure_reason_ret = nullptr;
+
+            void *client = ((KSMServer *)manager_data)->newClient(conn);
+            if (client == NULL) {
+                const char *errstr = "Connection rejected: ksmserver is shutting down";
+                qCWarning(KSMSERVER, "%s", errstr);
+
+                if ((*failure_reason_ret = (char *)malloc(strlen(errstr) + 1)) != NULL) {
+                    strcpy(*failure_reason_ret, errstr);
+                }
+                return 0;
+            }
+
+            cb->register_client.callback = KSMRegisterClientProc;
+            cb->register_client.manager_data = client;
+            cb->interact_request.callback = KSMInteractRequestProc;
+            cb->interact_request.manager_data = client;
+            cb->interact_done.callback = KSMInteractDoneProc;
+            cb->interact_done.manager_data = client;
+            cb->save_yourself_request.callback = KSMSaveYourselfRequestProc;
+            cb->save_yourself_request.manager_data = client;
+            cb->save_yourself_phase2_request.callback = KSMSaveYourselfPhase2RequestProc;
+            cb->save_yourself_phase2_request.manager_data = client;
+            cb->save_yourself_done.callback = KSMSaveYourselfDoneProc;
+            cb->save_yourself_done.manager_data = client;
+            cb->close_connection.callback = KSMCloseConnectionProc;
+            cb->close_connection.manager_data = client;
+            cb->set_properties.callback = KSMSetPropertiesProc;
+            cb->set_properties.manager_data = client;
+            cb->delete_properties.callback = KSMDeletePropertiesProc;
+            cb->delete_properties.manager_data = client;
+            cb->get_properties.callback = KSMGetPropertiesProc;
+            cb->get_properties.manager_data = client;
+
+            *mask_ret = SmsRegisterClientProcMask | SmsInteractRequestProcMask | SmsInteractDoneProcMask | SmsSaveYourselfRequestProcMask
+                | SmsSaveYourselfP2RequestProcMask | SmsSaveYourselfDoneProcMask | SmsCloseConnectionProcMask | SmsSetPropertiesProcMask
+                | SmsDeletePropertiesProcMask | SmsGetPropertiesProcMask;
+            return 1;
+        }
 
 #ifdef HAVE__ICETRANSNOLISTEN
 extern "C" int _IceTransNoListen(const char *protocol);
@@ -489,6 +490,12 @@ KSMServer::KSMServer(InitFlags flags)
     wake_up_socket = sockets[0];
     QSocketNotifier *n = new QSocketNotifier(sockets[1], QSocketNotifier::Read, this);
     qApp->connect(n, &QSocketNotifier::activated, &QApplication::quit);
+
+    const QString runtimeDirectory = QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation);
+    iceAuthFile.setFileTemplate(runtimeDirectory + QStringLiteral("/iceauth_XXXXXX"));
+    if (!iceAuthFile.open())
+        qFatal("Failed to create ICEauthority file");
+    setenv("ICEAUTHORITY", qPrintable(iceAuthFile.fileName()), true);
 
     new KSMServerInterfaceAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KSMServer"), this);
@@ -545,7 +552,11 @@ KSMServer::KSMServer(InitFlags flags)
         fclose(f);
         setenv("SESSION_MANAGER", session_manager, true);
 
-        auto updateEnvJob = new UpdateLaunchEnvJob(QStringLiteral("SESSION_MANAGER"), QString::fromLatin1(session_manager));
+        QProcessEnvironment newEnv;
+        newEnv.insert(QStringLiteral("SESSION_MANAGER"), QString::fromLatin1(session_manager));
+        newEnv.insert(QStringLiteral("ICEAUTHORITY"), iceAuthFile.fileName());
+
+        auto updateEnvJob = new UpdateLaunchEnvJob(newEnv);
         updateEnvJob->exec();
 
         free(session_manager);
