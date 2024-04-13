@@ -307,9 +307,3 @@ msgstr ""
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
-
-#, fuzzy
-#~| msgid "Open Image"
-#~ msgctxt "@title:window"
-#~ msgid "Open Media"
-#~ msgstr "Åpne bildet"

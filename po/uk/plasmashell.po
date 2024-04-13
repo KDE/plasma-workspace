@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-04-13 00:40+0000\n"
 "PO-Revision-Date: 2024-04-05 20:37+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -259,13 +259,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Режим швидкодії"
 
-#: panelview.cpp:1019
+#: panelview.cpp:983
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Приховати налаштування панелі"
 
-#: panelview.cpp:1021
+#: panelview.cpp:985
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

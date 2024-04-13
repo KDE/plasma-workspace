@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:39+0000\n"
-"PO-Revision-Date: 2024-04-08 08:52+0300\n"
+"PO-Revision-Date: 2024-04-12 10:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -31,11 +31,10 @@ msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Відкрити зображення тла стільниці"
+msgstr "Відкриття зображення"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format

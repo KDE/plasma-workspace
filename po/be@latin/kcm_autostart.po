@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 00:39+0000\n"
+"POT-Creation-Date: 2024-04-13 00:40+0000\n"
 "PO-Revision-Date: 2008-11-04 12:19+0200\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -40,7 +40,20 @@ msgstr ""
 msgid "\"%1\" is not readable."
 msgstr ""
 
-#: ui/entry.qml:52
+#: ui/entry.qml:30
+#, kde-format
+msgctxt "@label Stop the Systemd unit for a running process"
+msgid "Stop"
+msgstr ""
+
+#: ui/entry.qml:31
+#, fuzzy, kde-format
+#| msgid "Startup"
+msgctxt "@label Start the Systemd unit for a currently inactive process"
+msgid "Start"
+msgstr "Uklučeńnie kamputara"
+
+#: ui/entry.qml:68
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt ""
@@ -48,7 +61,7 @@ msgctxt ""
 msgid "Name:"
 msgstr "Nazva"
 
-#: ui/entry.qml:58
+#: ui/entry.qml:74
 #, fuzzy, kde-format
 #| msgid "Status"
 msgctxt ""
@@ -57,7 +70,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "Stan"
 
-#: ui/entry.qml:64
+#: ui/entry.qml:80
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -65,25 +78,12 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr ""
 
-#: ui/entry.qml:74
-#, kde-format
-msgctxt "@label Stop the Systemd unit for a running process"
-msgid "Stop"
-msgstr ""
-
-#: ui/entry.qml:74
-#, fuzzy, kde-format
-#| msgid "Startup"
-msgctxt "@label Start the Systemd unit for a currently inactive process"
-msgid "Start"
-msgstr "Uklučeńnie kamputara"
-
-#: ui/entry.qml:109
+#: ui/entry.qml:111
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr ""
 
-#: ui/entry.qml:113
+#: ui/entry.qml:115
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"

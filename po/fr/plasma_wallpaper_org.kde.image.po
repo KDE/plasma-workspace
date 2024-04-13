@@ -41,11 +41,10 @@ msgid "Your emails"
 msgstr "xavier.besnard@kde.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Ouvrir l'image de fond d'écran"
+msgstr "Ouvrir une image"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format

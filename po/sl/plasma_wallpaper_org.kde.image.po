@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:39+0000\n"
-"PO-Revision-Date: 2024-04-08 07:10+0200\n"
+"PO-Revision-Date: 2024-04-12 07:15+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -31,11 +31,10 @@ msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Odpri sliko ozadja"
+msgstr "Odpri sliko"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format

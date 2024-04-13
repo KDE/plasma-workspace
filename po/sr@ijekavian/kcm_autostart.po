@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 00:39+0000\n"
+"POT-Creation-Date: 2024-04-13 00:40+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -40,8 +40,22 @@ msgstr "‘%1’ није фајл."
 msgid "\"%1\" is not readable."
 msgstr "‘%1’ није читљив."
 
+#: ui/entry.qml:30
+#, kde-format
+msgctxt "@label Stop the Systemd unit for a running process"
+msgid "Stop"
+msgstr ""
+
+# >> @item:intable Run application on...
+#: ui/entry.qml:31
+#, fuzzy, kde-format
+#| msgid "Startup"
+msgctxt "@label Start the Systemd unit for a currently inactive process"
+msgid "Start"
+msgstr "по покретању"
+
 # >> @title:column
-#: ui/entry.qml:52
+#: ui/entry.qml:68
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt ""
@@ -50,7 +64,7 @@ msgid "Name:"
 msgstr "име"
 
 # >> @title:column
-#: ui/entry.qml:58
+#: ui/entry.qml:74
 #, fuzzy, kde-format
 #| msgid "Status"
 msgctxt ""
@@ -59,7 +73,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "стање"
 
-#: ui/entry.qml:64
+#: ui/entry.qml:80
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -67,26 +81,12 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr ""
 
-#: ui/entry.qml:74
-#, kde-format
-msgctxt "@label Stop the Systemd unit for a running process"
-msgid "Stop"
-msgstr ""
-
-# >> @item:intable Run application on...
-#: ui/entry.qml:74
-#, fuzzy, kde-format
-#| msgid "Startup"
-msgctxt "@label Start the Systemd unit for a currently inactive process"
-msgid "Start"
-msgstr "по покретању"
-
-#: ui/entry.qml:109
+#: ui/entry.qml:111
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr ""
 
-#: ui/entry.qml:113
+#: ui/entry.qml:115
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"

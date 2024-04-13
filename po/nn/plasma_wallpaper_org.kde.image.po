@@ -31,11 +31,10 @@ msgid "Your emails"
 msgstr "karl@huftis.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Opna bakgrunnsbilete"
+msgstr "Opna bilete"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -315,10 +314,3 @@ msgstr "Det oppstod ein feil ved val av bakgrunnsbilete for Plasma:<nl/>%1"
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr "Det oppstod ein feil ved opning av oppsettfila «kscreenlockerrc»."
-
-#, fuzzy
-#~| msgctxt "@title:window"
-#~| msgid "Open Image"
-#~ msgctxt "@title:window"
-#~ msgid "Open Media"
-#~ msgstr "Opna bilete"

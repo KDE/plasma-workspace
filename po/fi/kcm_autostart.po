@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-18 00:39+0000\n"
+"POT-Creation-Date: 2024-04-13 00:40+0000\n"
 "PO-Revision-Date: 2023-12-11 18:30+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -43,14 +43,26 @@ msgstr "”%1” ei ole tiedosto."
 msgid "\"%1\" is not readable."
 msgstr "Tiedostoa ”%1” ei voi lukea."
 
-#: ui/entry.qml:52
+#: ui/entry.qml:30
+#, kde-format
+msgctxt "@label Stop the Systemd unit for a running process"
+msgid "Stop"
+msgstr "Pysäytä"
+
+#: ui/entry.qml:31
+#, kde-format
+msgctxt "@label Start the Systemd unit for a currently inactive process"
+msgid "Start"
+msgstr "Käynnistä"
+
+#: ui/entry.qml:68
 #, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
 msgstr "Nimi:"
 
-#: ui/entry.qml:58
+#: ui/entry.qml:74
 #, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
@@ -58,7 +70,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "Tila:"
 
-#: ui/entry.qml:64
+#: ui/entry.qml:80
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -66,24 +78,12 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr "Viimeksi aktivoitu:"
 
-#: ui/entry.qml:74
-#, kde-format
-msgctxt "@label Stop the Systemd unit for a running process"
-msgid "Stop"
-msgstr "Pysäytä"
-
-#: ui/entry.qml:74
-#, kde-format
-msgctxt "@label Start the Systemd unit for a currently inactive process"
-msgid "Start"
-msgstr "Käynnistä"
-
-#: ui/entry.qml:109
+#: ui/entry.qml:111
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr "Lokeja ei voitu ladata. Kokeile virkistämistä."
 
-#: ui/entry.qml:113
+#: ui/entry.qml:115
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"

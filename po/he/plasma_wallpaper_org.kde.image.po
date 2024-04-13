@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:39+0000\n"
-"PO-Revision-Date: 2024-04-08 06:44+0300\n"
+"PO-Revision-Date: 2024-04-12 06:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -33,11 +33,10 @@ msgid "Your emails"
 msgstr "kde-l10n-he@kde.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "פתיחת תמונת רקע"
+msgstr "פתיחת תמונה"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
