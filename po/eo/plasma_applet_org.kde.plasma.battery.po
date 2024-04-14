@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-03-27 09:18+0100\n"
+"PO-Revision-Date: 2024-04-13 11:51+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -239,26 +239,26 @@ msgstr "&Agordi Energimastrumadon…"
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "Dormo kaj Ekranŝlosado por Neaktiveco"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "Blokita"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "Aŭtomata"
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "Permane bloki"
 
 #: package/contents/ui/PowerManagementItem.qml:137
 #, kde-format
@@ -414,7 +414,3 @@ msgstr ""
 "Energiprofiloj povas esti subtenataj en via aparato.<nl/>Provu instali la "
 "pakon <command>power-profiles-daemon</command> uzante la pakadministrilon de "
 "via distribuado kaj rekomencante la sistemon."
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Manually block sleep and screen locking"
-#~ msgstr "Mane bloki dormon kaj ekranŝlosadon"
