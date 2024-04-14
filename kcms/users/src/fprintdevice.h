@@ -27,7 +27,6 @@ public:
     QDBusError claim(const QString &username);
     QDBusError release();
 
-    QDBusError deleteEnrolledFingers();
     QDBusError deleteEnrolledFinger(QString &finger);
     QDBusError startEnrolling(const QString &finger);
     QDBusError stopEnrolling();
