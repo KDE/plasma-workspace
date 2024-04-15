@@ -196,6 +196,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
     po.negative_exponents = false;
     po.lower_case_e = true;
     po.base_display = BASE_DISPLAY_NORMAL;
+    po.use_unicode_signs = true;
 #if defined(QALCULATE_MAJOR_VERSION) && defined(QALCULATE_MINOR_VERSION)                                                                                       \
     && (QALCULATE_MAJOR_VERSION > 2 || (QALCULATE_MAJOR_VERSION == 2 && QALCULATE_MINOR_VERSION >= 2))
     po.interval_display = INTERVAL_DISPLAY_SIGNIFICANT_DIGITS;
