@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-02 02:20+0000\n"
+"POT-Creation-Date: 2024-04-15 02:39+0000\n"
 "PO-Revision-Date: 2023-02-08 13:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,22 +22,22 @@ msgstr ""
 "po\n"
 "X-Crowdin-File-ID: 8816\n"
 
-#: iconapplet.cpp:97
+#: iconapplet.cpp:98
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Не ўдалося стварыць каталог значкоў віджэтаў \"%1\""
 
-#: iconapplet.cpp:143
+#: iconapplet.cpp:144
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Не ўдалося скапіяваць файл значка віджэта з \"%1\" у \"%2\""
 
-#: iconapplet.cpp:355
+#: iconapplet.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Адкрыць каталог змесціва"
 
-#: iconapplet.cpp:570
+#: iconapplet.cpp:571
 #, kde-format
 msgid "Properties for %1"
 msgstr "Уласцівасці для %1"

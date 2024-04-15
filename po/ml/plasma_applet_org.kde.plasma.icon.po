@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-02 02:20+0000\n"
+"POT-Creation-Date: 2024-04-15 02:39+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -19,22 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#: iconapplet.cpp:97
+#: iconapplet.cpp:98
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "'%1' ചിഹ്ന വിഡ്ജറ്റിന്റെ അറ നിർമിക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: iconapplet.cpp:143
+#: iconapplet.cpp:144
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "'%1' ൽ നിന്ന് '%2' ലേക്ക് ചിഹ്ന വിഡ്ജറ്റ് ഡെസ്ക്ടോപ്പ് ഫയൽ പകർത്തുന്നത് പരാജയപ്പെട്ടു"
 
-#: iconapplet.cpp:355
+#: iconapplet.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ഇതടങ്ങിയിരിക്കുന്ന അറ തുറക്കുക"
 
-#: iconapplet.cpp:570
+#: iconapplet.cpp:571
 #, kde-format
 msgid "Properties for %1"
 msgstr "%1 ന്റെ ഗുണഗണങ്ങൾ"

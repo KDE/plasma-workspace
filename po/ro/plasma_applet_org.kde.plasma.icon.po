@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-02 02:20+0000\n"
+"POT-Creation-Date: 2024-04-15 02:39+0000\n"
 "PO-Revision-Date: 2020-08-31 23:16+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -17,24 +17,24 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: iconapplet.cpp:97
+#: iconapplet.cpp:98
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Crearea dosarului %1 cu pictograme ale controalelor a eșuat"
 
-#: iconapplet.cpp:143
+#: iconapplet.cpp:144
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
 "Copierea fișierului de birou cu pictograme ale controalelor de la „%1” la "
 "„%2” a eșuat"
 
-#: iconapplet.cpp:355
+#: iconapplet.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
 
-#: iconapplet.cpp:570
+#: iconapplet.cpp:571
 #, kde-format
 msgid "Properties for %1"
 msgstr "Proprietăți pentru %1"

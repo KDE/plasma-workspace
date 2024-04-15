@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.icon\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-02 02:20+0000\n"
+"POT-Creation-Date: 2024-04-15 02:39+0000\n"
 "PO-Revision-Date: 2020-04-05 18:38+0200\n"
 "Last-Translator: Dusan Kazik <prescott66@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -16,22 +16,22 @@ msgstr ""
 "X-Generator: Lokalize 19.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: iconapplet.cpp:97
+#: iconapplet.cpp:98
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Zlyhalo vytvorenie priečinku miniaplikácií ikon \"%1\""
 
-#: iconapplet.cpp:143
+#: iconapplet.cpp:144
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Zlyhalo kopírovanie súboru desktop miniaplikácie ikon z '%1' do '%2'"
 
-#: iconapplet.cpp:355
+#: iconapplet.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
 
-#: iconapplet.cpp:570
+#: iconapplet.cpp:571
 #, kde-format
 msgid "Properties for %1"
 msgstr "Vlastnosti pre %1"

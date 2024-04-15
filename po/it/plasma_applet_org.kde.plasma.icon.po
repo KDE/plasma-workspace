@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-02 02:20+0000\n"
+"POT-Creation-Date: 2024-04-15 02:39+0000\n"
 "PO-Revision-Date: 2017-03-01 14:18+0100\n"
 "Last-Translator: Paolo Zamponi <zapaolo@email.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -17,22 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 2.0\n"
 
-#: iconapplet.cpp:97
+#: iconapplet.cpp:98
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
 msgstr "Impossibile creare la cartella dell'oggetto icona «%1»"
 
-#: iconapplet.cpp:143
+#: iconapplet.cpp:144
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr "Impossibile copiare il file desktop dell'oggetto icona da «%1» a «%2»"
 
-#: iconapplet.cpp:355
+#: iconapplet.cpp:356
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Apri cartella contenitore"
 
-#: iconapplet.cpp:570
+#: iconapplet.cpp:571
 #, kde-format
 msgid "Properties for %1"
 msgstr "Proprietà di %1"
