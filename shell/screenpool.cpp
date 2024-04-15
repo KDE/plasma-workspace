@@ -311,10 +311,11 @@ void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
         }
 
         auto *toScreen = outputRedundantTo(s);
-        if (!toScreen) {
-            newAvailableScreens.append(s);
-        } else {
+        // Never consider redundant an output redundant to something explicitly not included in the output order
+        if (toScreen && newOrder.contains(toScreen->name())) {
             m_redundantScreens.insert(s, toScreen);
+        } else {
+            newAvailableScreens.append(s);
         }
     }
 
