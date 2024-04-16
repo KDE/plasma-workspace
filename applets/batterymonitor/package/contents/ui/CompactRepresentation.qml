@@ -27,13 +27,14 @@ MouseArea {
     property bool hasInternalBatteries : false
     property bool hasCumulative: false
 
-    property alias model: view.model
-
-    required property bool isSetToPerformanceMode
-    required property bool isSetToPowerSaveMode
-    required property bool isManuallyInhibited
     required property bool isSomehowFullyCharged
     required property bool isDischarging
+
+    required property bool isManuallyInhibited
+    required property string activeProfile
+    required property bool isInNonDefaultPowerProfile
+
+    property alias model: view.model
 
     activeFocusOnTab: true
     hoverEnabled: true
@@ -42,12 +43,18 @@ MouseArea {
     Accessible.description: `${toolTipMainText}; ${toolTipSubText}`
     Accessible.role: Accessible.Button
 
-    property string powerModeIcon: root.isManuallyInhibited
+    property string activeProfileIconSrc: root.activeProfile === "balanced"
+            ? "speedometer"
+            : root.activeProfile === "performance"
+            ? "battery-profile-performance-symbolic"
+            : root.activeProfile === "power-saver"
+            ? "battery-profile-powersave-symbolic"
+            : Plasmoid.icon
+
+    property string powerModeIconSrc: root.isManuallyInhibited
             ? "system-suspend-inhibited-symbolic" 
-            : root.isSetToPerformanceMode
-            ? "battery-profile-performance-symbolic" 
-            : root.isSetToPowerSaveMode
-            ? "battery-profile-powersave-symbolic" 
+            : root.isInNonDefaultPowerProfile
+            ? root.activeProfileIconSrc
             : Plasmoid.icon
 
     //Show only overall battery
@@ -55,19 +62,19 @@ MouseArea {
     Kirigami.Icon {
         anchors.fill: parent
         visible: root.isConstrained && !root.hasBatteries || (root.isConstrained && !root.hasInternalBatteries)
-        source: root.powerModeIcon
+        source: root.powerModeIconSrc
         active: root.containsMouse
     }
 
     // Manual inhibition or power profile active while not discharging:
     // Show the active mode so the user can notice this at a glance
     Kirigami.Icon {
-        id: powerMode
+        id: powerModeIcon
 
         anchors.fill: parent
 
-        visible: root.isConstrained && !root.isDischarging && (root.isManuallyInhibited || root.isSetToPerformanceMode || root.isSetToPowerSaveMode)
-        source: root.powerModeIcon
+        visible: root.isConstrained && !root.isDischarging && (root.isManuallyInhibited || root.isInNonDefaultPowerProfile)
+        source: root.powerModeIconSrc
         active: root.containsMouse
     }
 
@@ -76,11 +83,11 @@ MouseArea {
 
         anchors.fill: parent
 
-        visible: root.isConstrained && !powerMode.visible && root.hasInternalBatteries
+        visible: root.isConstrained && !powerModeIcon.visible && root.hasInternalBatteries
 
         // Show normal battery icon
         WorkspaceComponents.BatteryIcon {
-            id: overalbatteryIcon
+            id: overallBatteryIcon
 
             anchors.fill: parent
 
@@ -97,7 +104,7 @@ MouseArea {
             visible: Plasmoid.configuration.showPercentage && !root.isSomehowFullyCharged
 
             text: i18nc("battery percentage below battery icon", "%1%", root.batteryPercent)
-            icon: overalbatteryIcon
+            icon: overallBatteryIcon
         }
     }
 

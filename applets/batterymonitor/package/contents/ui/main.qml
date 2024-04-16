@@ -47,6 +47,9 @@ PlasmoidItem {
     readonly property bool isSomehowInPowerSaveMode: powerProfilesControl.actuallyActiveProfile === "power-saver" // Don't care about whether it was manually one or due to holds
     readonly property bool isHeldOnPerformanceMode: isSomehowInPerformanceMode && powerProfilesControl.activeProfileHolds.length > 0
     readonly property bool isHeldOnPowerSaveMode: isSomehowInPowerSaveMode && powerProfilesControl.activeProfileHolds.length > 0
+    readonly property string defaultPowerProfile: powerProfilesControl.configuredProfile ? powerProfilesControl.configuredProfile : "balanced"
+    readonly property bool isInNonDefaultPowerProfile: powerProfilesControl.actuallyActiveProfile && powerProfilesControl.actuallyAtiveProfile != defaultPowerProfile
+
 
     readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
         || Plasmoid.location === PlasmaCore.Types.RightEdge
@@ -99,15 +102,11 @@ PlasmoidItem {
 
     Plasmoid.status: {
 
-        if (powerManagementControl.isManuallyInhibited) {
+        if (powerManagementControl.isManuallyInhibited || isInNonDefaultPowerProfile) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
         if (batteryControl.hasCumulative && batteryControl.state === BatteryControlModel.Discharging) {
-            return PlasmaCore.Types.ActiveStatus;
-        }
-
-        if (powerManagementControl.isManuallyInPerformanceMode || powerManagementControl.isManuallyInPowerSaveMode || batterymonitor.isHeldOnPerformanceMode || batterymonitor.isHeldOnPowerSaveMode) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -209,20 +208,20 @@ PlasmoidItem {
     }
 
     compactRepresentation: CompactRepresentation {
-
         batteryPercent: batteryControl.percent
         batteryPluggedIn: batteryControl.pluggedIn
         hasBatteries: batteryControl.hasBatteries
         hasInternalBatteries: batteryControl.hasInternalBatteries
         hasCumulative: batteryControl.hasCumulative
 
-        model: batteryControl
-
-        isSetToPerformanceMode: batterymonitor.isHeldOnPerformanceMode || powerProfilesControl.isManuallyInPerformanceMode
-        isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || powerProfilesControl.isManuallyInPowerSaveMode
-        isManuallyInhibited: powerManagementControl.isManuallyInhibited
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
         isDischarging: !batteryControl.pluggedIn
+
+        isManuallyInhibited: powerManagementControl.isManuallyInhibited
+        activeProfile: powerProfilesControl.actuallyActiveProfile
+        isInNonDefaultPowerProfile: batterymonitor.isInNonDefaultPowerProfile
+
+        model: batteryControl
 
         acceptedButtons: Qt.LeftButton | Qt.MiddleButton
         property bool wasExpanded: false

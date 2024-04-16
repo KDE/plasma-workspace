@@ -174,6 +174,15 @@ void PowermanagementEngine::init()
         }
     }
 
+    if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                               QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
+                                               QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
+                                               QStringLiteral("configuredProfileChanged"),
+                                               this,
+                                               SLOT(updatePowerProfileConfiguredProfile(QString)))) {
+        qDebug() << "error connecting to configured profile changes via dbus";
+    }
+
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(FDO_POWERMANAGEMENT_SERVICE)) {
         if (!QDBusConnection::sessionBus().connect(FDO_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/freedesktop/PowerManagement"),
@@ -330,6 +339,9 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
         createPowerProfileDBusMethodCallAndNotifyChanged<QList<QVariantMap>>(
             QStringLiteral("profileHolds"),
             std::bind(&PowermanagementEngine::updatePowerProfileHolds, this, std::placeholders::_1));
+        createPowerProfileDBusMethodCallAndNotifyChanged<QString>(
+            QStringLiteral("configuredProfile"),
+            std::bind(&PowermanagementEngine::updatePowerProfileConfiguredProfile, this, std::placeholders::_1));
     } else {
         qDebug() << "Data for" << name << "not found";
         return false;
@@ -572,6 +584,11 @@ void PowermanagementEngine::updatePowerProfileHolds(const QList<QVariantMap> &ho
         };
     });
     setData(QStringLiteral("Power Profiles"), QStringLiteral("Profile Holds"), QVariant::fromValue(out));
+}
+
+void PowermanagementEngine::updatePowerProfileConfiguredProfile(const QString &activeProfile)
+{
+    setData(QStringLiteral("Power Profiles"), QStringLiteral("Configured Profile"), activeProfile);
 }
 
 void PowermanagementEngine::deviceRemoved(const QString &udi)

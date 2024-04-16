@@ -64,6 +64,7 @@ private Q_SLOTS:
     void updatePowerProfilePerformanceInhibitedReason(const QString &reason);
     void updatePowerProfilePerformanceDegradedReason(const QString &reason);
     void updatePowerProfileHolds(const QList<QVariantMap> &holds);
+    void updatePowerProfileConfiguredProfile(const QString &profile);
 
 private:
     template<typename ReplyType>

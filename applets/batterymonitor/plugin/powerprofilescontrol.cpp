@@ -45,6 +45,22 @@ PowerProfilesControl::PowerProfilesControl(QObject *parent)
             watcher->deleteLater();
         });
 
+        QDBusMessage configuredProfile = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
+                                                                     QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
+                                                                     QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
+                                                                     QStringLiteral("configuredProfile"));
+        QDBusPendingCall configuredProfileCall = QDBusConnection::sessionBus().asyncCall(configuredProfile);
+        auto configuredProfileWatcher = new QDBusPendingCallWatcher(configuredProfileCall, this);
+        connect(configuredProfileWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
+            QDBusReply<QString> reply = *watcher;
+            if (reply.isValid()) {
+                updatePowerProfileConfiguredProfile(reply.value());
+            } else {
+                qCDebug(APPLETS::BATTERYMONITOR) << "error getting configured profile";
+            }
+            watcher->deleteLater();
+        });
+
         QDBusMessage currentProfile = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
                                                                      QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
                                                                      QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
@@ -176,16 +192,6 @@ QBindable<bool> PowerProfilesControl::bindableIsPowerProfileDaemonInstalled()
     return &m_isPowerProfileDaemonInstalled;
 }
 
-QBindable<bool> PowerProfilesControl::bindableIsManuallyInPerformanceMode()
-{
-    return &m_isManuallyInPerformanceMode;
-}
-
-QBindable<bool> PowerProfilesControl::bindableIsManuallyInPowerSaveMode()
-{
-    return &m_isManuallyInPowerSaveMode;
-}
-
 QBindable<QStringList> PowerProfilesControl::bindableProfiles()
 {
     return &m_profiles;
@@ -194,6 +200,11 @@ QBindable<QStringList> PowerProfilesControl::bindableProfiles()
 QBindable<QList<QVariantMap>> PowerProfilesControl::bindableActiveProfileHolds()
 {
     return &m_activeProfileHolds;
+}
+
+QBindable<QString> PowerProfilesControl::bindableConfiguredProfile()
+{
+    return &m_configuredProfile;
 }
 
 QBindable<QString> PowerProfilesControl::bindableActuallyActiveProfile()
@@ -229,8 +240,6 @@ void PowerProfilesControl::setActuallyActiveProfile(const QString &profile)
         QDBusReply<void> reply = *watcher;
         if (reply.isValid()) {
             m_actuallyActiveProfile = profile;
-            m_isManuallyInPerformanceMode = profile == QLatin1String("performance");
-            m_isManuallyInPowerSaveMode = profile == QLatin1String("power-saver");
             showPowerProfileOsd(profile);
         } else {
             m_actuallyActiveProfileError = profile;
@@ -250,6 +259,11 @@ void PowerProfilesControl::showPowerProfileOsd(const QString &profile)
                                                          QStringLiteral("powerProfileChanged"));
     osdMsg << profile;
     QDBusConnection::sessionBus().asyncCall(osdMsg);
+}
+
+void PowerProfilesControl::updatePowerProfileConfiguredProfile(const QString &configuredProfile)
+{
+    m_configuredProfile = configuredProfile;
 }
 
 void PowerProfilesControl::updatePowerProfileCurrentProfile(const QString &activeProfile)
