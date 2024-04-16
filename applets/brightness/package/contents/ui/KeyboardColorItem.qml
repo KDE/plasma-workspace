@@ -74,10 +74,30 @@ PlasmaComponents3.ItemDelegate {
             }
 
             RowLayout {
+                QQC2.RoundButton {
+                    id: colorPickerButton
+
+                    icon.name: "color-picker"
+                    Layout.preferredHeight: syncAccentSwitch.implicitHeight
+                    icon.height: Math.round(Kirigami.Units.iconSizes.small)
+                    padding: 0 // centers the icon
+
+                    KeyNavigation.up: root.KeyNavigation.up
+                    KeyNavigation.left: syncAccentSwitch
+                    KeyNavigation.right: root.KeyNavigation.right
+                    KeyNavigation.tab: root.KeyNavigation.tab
+                    KeyNavigation.backtab: syncAccentSwitch
+
+                    onClicked: {
+                        colorDialog.open();
+                    }
+                }
+
                 PlasmaComponents3.Label { // label for switch off state
                     text: i18n("Custom color")
                     textFormat: Text.PlainText
                 }
+
                 PlasmaComponents3.Switch {
                     id: syncAccentSwitch
                     checked: keyboardColorControl.accent
@@ -97,26 +117,7 @@ PlasmaComponents3.ItemDelegate {
                     }
                     onToggled: {
                         keyboardColorControl.setAccent(checked);
-                        colorPicker.opacity = checked ? 0 : 1;
-                        colorPicker.enabled = !checked;
                     }
-                }
-
-                PlasmaComponents3.Button {
-                    id: colorPicker
-                    opacity: syncAccentSwitch.checked ? 0 : 1
-                    enabled: !syncAccentSwitch.checked
-
-                    icon.name: "color-picker"
-                    text: i18n("Select color…")
-
-                    KeyNavigation.up: root.KeyNavigation.up
-                    KeyNavigation.left: syncAccentSwitch
-                    KeyNavigation.right: root.KeyNavigation.right
-                    KeyNavigation.tab: root.KeyNavigation.tab
-                    KeyNavigation.backtab: syncAccentSwitch
-
-                    onClicked: colorDialog.open()
                 }
 
                 QtDialogs.ColorDialog {
@@ -127,6 +128,7 @@ PlasmaComponents3.ItemDelegate {
                     parentWindow: root.Window.window
                     selectedColor: keyboardColorControl.color
                     onAccepted: {
+                        syncAccentSwitch.checked = false;
                         keyboardColorControl.setColor(colorDialog.selectedColor);
                     }
                 }
