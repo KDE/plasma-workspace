@@ -25,13 +25,13 @@ PlasmaComponents3.ItemDelegate {
     highlighted: activeFocus
     hoverEnabled: false
 
-    visible: keyboardColorControl.supported
+    // visible: keyboardColorControl.supported
 
     contentItem: RowLayout {
         spacing: Kirigami.Units.gridUnit
 
         Kirigami.Icon {
-            id: image
+            id: icon
             Layout.alignment: Qt.AlignTop
             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
@@ -71,22 +71,26 @@ PlasmaComponents3.ItemDelegate {
                         onColorChanged: colorIndicator.color = keyboardColorControl.color
                     }
 
-                QQC2.BusyIndicator {
-                    id: busyIndicator
-                    visible: false
+                    QQC2.RoundButton {
+                        id: colorPickerButton
+                        visible: !syncAccentSwitch.checked
+                        icon.name: "color-picker"
 
-                    implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.75)
-                    anchors.centerIn: colorIndicator
+                        height: colorIndicator.height
+                        width: colorIndicator.width
+                        padding: 0  // Round button adds some padding by default which we don't need. Setting this to 0 centers the icon
+                        icon.width : Math.round(Kirigami.Units.iconSizes.small * 0.9) // This provides a nice padding
+                        icon.height : Math.round(Kirigami.Units.iconSizes.small * 0.9)
 
-                    Connections {
-                        target: keyboardColorControl
-                        onColorChanged: busyIndicator.visible = false
+                        onClicked: colorDialog.open()
                     }
-                }
                 }
             }
 
             RowLayout {
+                PlasmaComponents3.Label { // label for off switch state
+                    text: i18n("Choose custom color")
+                }
                 PlasmaComponents3.Switch {
                     id: syncAccentSwitch
                     checked: keyboardColorControl.accent
@@ -106,28 +110,8 @@ PlasmaComponents3.ItemDelegate {
                     }
                     onToggled: {
                         keyboardColorControl.setAccent(checked);
-                        busyIndicator.visible = true;
                         colorIndicator.color = "transparent"
-                        colorPicker.opacity = checked ? 0 : 1;
-                        colorPicker.enabled = !checked;
                     }
-                }
-
-                PlasmaComponents3.Button {
-                    id: colorPicker
-                    opacity: syncAccentSwitch.checked ? 0 : 1
-                    enabled: !syncAccentSwitch.checked
-
-                    icon.name: "color-picker"
-                    text: i18n("Select color…")
-
-                    KeyNavigation.up: root.KeyNavigation.up
-                    KeyNavigation.left: syncAccentSwitch
-                    KeyNavigation.right: root.KeyNavigation.right
-                    KeyNavigation.tab: root.KeyNavigation.tab
-                    KeyNavigation.backtab: syncAccentSwitch
-
-                    onClicked: colorDialog.open()
                 }
 
                 QtDialogs.ColorDialog {
@@ -138,7 +122,7 @@ PlasmaComponents3.ItemDelegate {
                     parentWindow: root.Window.window
                     selectedColor: keyboardColorControl.color
                     onAccepted: {
-                        busyIndicator.visible = true;
+                        colorIndicator.color = colorDialog.selectedColor;
                         keyboardColorControl.setColor(colorDialog.selectedColor);
                     }
                 }
