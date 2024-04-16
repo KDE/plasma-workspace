@@ -70,23 +70,14 @@ PlasmaComponents3.ItemDelegate {
                         target: keyboardColorControl
                         onColorChanged: colorIndicator.color = keyboardColorControl.color
                     }
-
-                QQC2.BusyIndicator {
-                    id: busyIndicator
-                    visible: false
-
-                    implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.75)
-                    anchors.centerIn: colorIndicator
-
-                    Connections {
-                        target: keyboardColorControl
-                        onColorChanged: busyIndicator.visible = false
-                    }
-                }
                 }
             }
 
             RowLayout {
+                PlasmaComponents3.Label { // label for switch off state
+                    text: i18n("Custom color")
+                    textFormat: Text.PlainText
+                }
                 PlasmaComponents3.Switch {
                     id: syncAccentSwitch
                     checked: keyboardColorControl.accent
@@ -106,8 +97,6 @@ PlasmaComponents3.ItemDelegate {
                     }
                     onToggled: {
                         keyboardColorControl.setAccent(checked);
-                        busyIndicator.visible = true;
-                        colorIndicator.color = "transparent"
                         colorPicker.opacity = checked ? 0 : 1;
                         colorPicker.enabled = !checked;
                     }
@@ -138,7 +127,6 @@ PlasmaComponents3.ItemDelegate {
                     parentWindow: root.Window.window
                     selectedColor: keyboardColorControl.color
                     onAccepted: {
-                        busyIndicator.visible = true;
                         keyboardColorControl.setColor(colorDialog.selectedColor);
                     }
                 }
