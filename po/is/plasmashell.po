@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:40+0000\n"
-"PO-Revision-Date: 2024-02-19 18:34+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-04-06 14:04+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
@@ -224,37 +224,37 @@ msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
-msgstr "Skjályklaborð óvirkjað"
+msgstr "Skjályklaborð afvirkjað"
 
 #: osd.cpp:160
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Lokað á svæfingu og skjálæsingu"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Opnað á svæfingu og skjálæsingu"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Orkusparnaðarsnið"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Jafnvægissnið"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Afkastasnið"
 
 #: panelview.cpp:983
 #, kde-format
@@ -297,7 +297,7 @@ msgstr "Fela skjáborðið"
 #: shellcorona.cpp:222
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Virkja forritaræsi"
 
 #: shellcorona.cpp:230
 #, kde-format
@@ -327,7 +327,7 @@ msgstr "Virkja verkefnastjóra færslu %1"
 #: shellcorona.cpp:299
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Umsjón með skjáborði og skjáborðsstiku"
 
 #: shellcorona.cpp:321
 #, kde-format

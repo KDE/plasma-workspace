@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 00:39+0000\n"
-"PO-Revision-Date: 2024-02-19 18:33+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-04-14 18:41+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
@@ -109,18 +109,14 @@ msgid "The battery applet has enabled system-wide inhibition"
 msgstr "Rafhlöðusmáforritið hefur virkjað takmarkanir fyrir allt kerfið"
 
 #: package/contents/ui/main.qml:131
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Loka handvirkt á svæfingu og skjálæsingu"
+msgstr "Mistókst að loka á sjálfvirka svæfingu og skjálæsingu"
 
 #: package/contents/ui/main.qml:145
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Loka handvirkt á svæfingu og skjálæsingu"
+msgstr "Mistókst að opna á sjálfvirka svæfingu og skjálæsingu"
 
 #: package/contents/ui/main.qml:157 package/contents/ui/main.qml:195
 #: package/contents/ui/main.qml:201
@@ -186,18 +182,16 @@ msgid "Not charging"
 msgstr "Ekki í hleðslu"
 
 #: package/contents/ui/main.qml:267
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "Sjálfvirk svæfing og skjálæsing eru óvirk"
+msgstr ""
+"Sjálfvirk svæfing og skjálæsing eru óvirk; miðjusmelltu til að gera þau virk"
 
 #: package/contents/ui/main.qml:269
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Loka handvirkt á svæfingu og skjálæsingu"
+msgstr "Miðjusmelltu til að afvirkja sjálfvirka svæfingu og skjálæsingu"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
@@ -207,10 +201,9 @@ msgstr[0] "Forrit hefur beðið um að virkja afkastasnið"
 msgstr[1] "%1 forrit hafa beðið um að virkja afkastasnið"
 
 #: package/contents/ui/main.qml:278
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "Kerfið er í afkastasniði"
+msgstr "Kerfið er í afkastasniði; skrunaðu til að breyta"
 
 #: package/contents/ui/main.qml:282
 #, kde-format
@@ -220,15 +213,14 @@ msgstr[0] "Forrit hefur beðið um að virkja orkusparnaðarsnið"
 msgstr[1] "%1 forrit hafa beðið um að virkja orkusparnaðarsnið"
 
 #: package/contents/ui/main.qml:286
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "Kerfið er í orkusparnaðarsniði"
+msgstr "Kerfið er í orkusparnaðarsniði; skrunaðu til að breyta"
 
 #: package/contents/ui/main.qml:289
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "Kerfið er í jafnvægissniði; skrunaðu til að breyta"
 
 #: package/contents/ui/main.qml:378
 #, kde-format
@@ -250,26 +242,26 @@ msgstr "&Grunnstilla orkustjórnun…"
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "Svæfing og skjálæsing eftir aðgerðaleysi"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "Útilokað"
 
 #: package/contents/ui/PowerManagementItem.qml:78
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "Sjálfvirkt"
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "Loka á handvirkt"
 
 #: package/contents/ui/PowerManagementItem.qml:137
 #, kde-format

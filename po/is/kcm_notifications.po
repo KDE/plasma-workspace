@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-22 00:39+0000\n"
-"PO-Revision-Date: 2024-03-06 14:12+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-04-06 13:32+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,7 @@ msgstr "Birta þegar stillt á 'Ekki ónáða'"
 #: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
-msgstr "Birta í ferilskráningu"
+msgstr "Sýna í ferilskráningu"
 
 #: ui/ApplicationConfiguration.qml:130
 #, kde-format
@@ -66,7 +66,7 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:269
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr "Birta skilaboð í sprettiglugga"
+msgstr "Sýna skilaboð í sprettiglugga"
 
 #: ui/ApplicationConfiguration.qml:278
 #, kde-format
@@ -77,32 +77,30 @@ msgstr "Spila hljóð"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "Forskoða hljóð"
 
 #: ui/ApplicationConfiguration.qml:315
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "Endurstilla"
 
 #: ui/ApplicationConfiguration.qml:327
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Velja hljóðskrá"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Configure Notifications"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Grunnstilla tilkynningar"
+msgstr "Kerfistilkynningar…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Stillingar forrits"
+msgstr "Stillingar forrits…"
 
 #: ui/main.qml:77
 #, kde-format
@@ -111,15 +109,15 @@ msgid ""
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
-"Ekki tókst að finna græjuna 'Tilkynningar' ('Notifications') sem er krafist "
-"til að hægt sé að birta tilkynningar. Gakktu úr skugga um að hún sé virkjuð "
-"í kerfisbakkanum eða sem sjálfstæð græja."
+"Ekki tókst að finna græjuna 'Tilkynningar' sem er nauðsynlegtil að hægt sé "
+"að birta tilkynningar. Gakktu úr skugga um að hún sé virkjuð í "
+"kerfisbakkanum eða sem sjálfstæð græja."
 
 #: ui/main.qml:88
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
-msgstr "'%1 %2' útvegar tilkynningar sem stendur í stað Plasma."
+msgstr "'%1 %2' útvegar tilkynningar eins og er í staðinn fyrir Plasma."
 
 #: ui/main.qml:92
 #, kde-format
@@ -160,7 +158,7 @@ msgstr "Víxla af/á handvirkt með flýtilykli:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr "Skilyrði birtingar"
+msgstr "Skilyrði fyrir sýnileika"
 
 #: ui/main.qml:144
 #, kde-format
@@ -170,7 +168,7 @@ msgstr "Áríðandi tilkynningar:"
 #: ui/main.qml:145
 #, kde-format
 msgid "Show in Do Not Disturb mode"
-msgstr "Birta þegar stillt á 'Ekki ónáða'"
+msgstr "Sýna þegar stillt er á 'Ekki ónáða'"
 
 #: ui/main.qml:157
 #, kde-format
@@ -190,7 +188,7 @@ msgstr "Tilkynningar án forgangs:"
 #: ui/main.qml:171
 #, kde-format
 msgid "Show popup"
-msgstr "Birta sprettiglugga"
+msgstr "Sýna sprettiglugga"
 
 #: ui/main.qml:200
 #, kde-format
@@ -213,7 +211,7 @@ msgstr "Nálægt tilkynningatákni"
 #: ui/main.qml:244
 #, kde-format
 msgid "Choose Custom Position…"
-msgstr "Velja sérsniðna staðsetningu..."
+msgstr "Velja aðra staðsetningu..."
 
 #: ui/main.qml:253 ui/main.qml:269
 #, kde-format
@@ -238,7 +236,7 @@ msgstr "Viðbótarendurgjöf"
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
-msgstr "Birta í tilkynningum"
+msgstr "Sýna í tilkynningum"
 
 #: ui/main.qml:288
 #, kde-format
@@ -259,7 +257,7 @@ msgstr "Tilkynningamerki:"
 #: ui/main.qml:316
 #, kde-format
 msgid "Show in task manager"
-msgstr "Birta í verkefnastjóra"
+msgstr "Sýna í verkefnastjóra"
 
 #: ui/PopupPositionPage.qml:14
 #, kde-format

@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-29 00:39+0000\n"
-"PO-Revision-Date: 2022-10-22 16:31+0000\n"
+"PO-Revision-Date: 2024-04-06 13:33+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -41,7 +41,7 @@ msgstr "Festa á verkefnastjóra"
 #: plugin/actionlist.cpp:156
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "Bæta við skjáborðsstiku (viðmótshluti)"
+msgstr "Bæta við skjáborðsstiku (græja)"
 
 #: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
@@ -193,7 +193,7 @@ msgstr "Oft notuð forrit"
 #: plugin/rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
-msgstr "Orka / Seta"
+msgstr "Frágangur / Seta"
 
 #: plugin/runnermodel.cpp:222
 #, kde-format
