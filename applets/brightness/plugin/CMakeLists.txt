@@ -12,6 +12,9 @@ target_sources(brightnesscontrolplugin PRIVATE
     colorblindnesscorrectioncontrol.cpp
 )
 target_link_libraries(brightnesscontrolplugin PRIVATE
+    KF6::CoreAddons
+    KF6::ConfigCore
+    KF6::ConfigGui
     Qt::Core
     Qt::DBus
     Qt::Qml

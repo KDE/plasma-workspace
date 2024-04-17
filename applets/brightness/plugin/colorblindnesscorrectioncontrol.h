@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <KConfigWatcher>
+
 #include <QBindable>
 #include <QObject>
 #include <qqmlregistration.h>
@@ -36,7 +38,11 @@ private:
     bool m_shown = false;
     bool m_enabled = false;
 
+    KSharedConfig::Ptr m_config;
+    KConfigWatcher::Ptr m_configWatcher;
+
     void updateProperties(const QVariantMap &properties);
+    void loadConfig();
 
 private Q_SLOTS:
     void handlePropertiesChanged(const QString &interfaceName, const QVariantMap &changedProperties, const QStringList &invalidatedProperties);

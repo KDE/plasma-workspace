@@ -6,6 +6,9 @@
 
 #include "colorblindnesscorrectioncontrol.h"
 
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusMessage>
@@ -25,6 +28,8 @@ static const QString s_effectName = QStringLiteral("colorblindnesscorrection");
 
 ColorBlindnessCorrectionControl::ColorBlindnessCorrectionControl(QObject *parent)
     : QObject(parent)
+    , m_config(KSharedConfig::openConfig("kwinrc"))
+    , m_configWatcher(KConfigWatcher::create(m_config))
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
 
@@ -60,6 +65,11 @@ ColorBlindnessCorrectionControl::ColorBlindnessCorrectionControl(QObject *parent
 
         updateProperties(properties.value());
     });
+
+    connect(m_configWatcher.get(), &KConfigWatcher::configChanged, this, [this]() {
+        loadConfig();
+    });
+    loadConfig();
 }
 
 ColorBlindnessCorrectionControl::~ColorBlindnessCorrectionControl()
@@ -89,6 +99,11 @@ void ColorBlindnessCorrectionControl::updateProperties(const QVariantMap &proper
         m_enabled = loadedEffects.toStringList().contains(s_effectName);
         qDebug() << "effect enabled" << m_enabled;
     }
+}
+
+void ColorBlindnessCorrectionControl::loadConfig()
+{
+    m_shown = m_config->group("Plugins").readEntry<bool>("colorblindnesscorrectionShowInApplet", false);
 }
 
 bool ColorBlindnessCorrectionControl::isSupported()
