@@ -72,7 +72,7 @@ PlasmaComponents3.ItemDelegate {
                     id: status
                     text: {
                         if (control.inhibited && control.enabled) {
-                            return i18nc("Night light status", "Off");
+                            return i18nc("Night light status", "Suspended");
                         }
                         if (!control.available) {
                             return i18nc("Night light status", "Unavailable");
@@ -117,8 +117,9 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Switch {
                     id: inhibitionSwitch
                     visible: control.enabled
-                    checked: !control.inhibited
                     enabled: control.togglable
+                    checked: control.inhibited
+                    text: i18nc("@action:button Night Light", "Suspend")
 
                     Layout.fillWidth: true
 

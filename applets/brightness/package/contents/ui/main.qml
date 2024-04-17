@@ -81,7 +81,11 @@ PlasmoidItem {
         }
         if (nightLightControl.enabled) {
             if (!nightLightControl.running) {
-                parts.push(i18nc("Status", "Night Light off"));
+                if (nightLightControl.inhibitedFromApplet) {
+                    parts.push(i18nc("Status", "Night Light suspended; middle-click to resume"));
+                } else {
+                    parts.push(i18nc("Status", "Night Light suspended"));
+                }
             } else if (nightLightControl.currentTemperature != 6500) {
                 if (nightLightControl.currentTemperature == nightLightControl.targetTemperature) {
                     if (nightLightControl.daylight) {
@@ -117,8 +121,8 @@ PlasmoidItem {
         if (screenBrightnessControl.isBrightnessAvailable) {
             parts.push(i18n("Scroll to adjust screen brightness"));
         }
-        if (nightLightControl.enabled && nightLightControl.togglable) {
-            parts.push(i18n("Middle-click to toggle Night Light"));
+        if (nightLightControl.enabled && nightLightControl.running) {
+            parts.push(i18n("Middle-click to suspend Night Light"));
         }
         return parts.join("\n");
     }
