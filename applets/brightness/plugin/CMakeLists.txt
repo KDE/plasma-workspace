@@ -9,6 +9,7 @@ target_sources(brightnesscontrolplugin PRIVATE
     screenbrightnesscontrol.cpp
     keyboardbrightnesscontrol.cpp
     keyboardcolorcontrol.cpp
+    colorblindnesscorrectioncontrol.cpp
 )
 target_link_libraries(brightnesscontrolplugin PRIVATE
     Qt::Core
