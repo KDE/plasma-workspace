@@ -79,6 +79,13 @@ KCM.SimpleKCM {
             type: Kirigami.MessageType.Error
             text: cA.errorText
         }
+
+        Kirigami.InlineMessage {
+            id: inhibitedMessage
+            text: i18n("Night Light is currently suspended.")
+            Layout.fillWidth: true
+            visible: kcm.inhibited 
+        }
     }
 
     Timer {
