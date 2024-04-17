@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2023-12-03 20:44+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -165,27 +165,22 @@ msgstr ""
 "используемой сети в <link url='https://location.services.mozilla.com'>Службу "
 "определения местоположения Mozilla</link>."
 
-#: ui/main.qml:350
+#: ui/main.qml:347
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Включение ночного цвета:"
 
-#: ui/main.qml:363 ui/main.qml:386
-#, kde-format
-msgid "Input format: HH:MM"
-msgstr "(в формате ЧЧ:ММ)"
-
-#: ui/main.qml:373
+#: ui/main.qml:363
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Включение дневного цвета:"
 
-#: ui/main.qml:395
+#: ui/main.qml:378
 #, kde-format
 msgid "Transition duration:"
 msgstr "Длительность перехода:"
 
-#: ui/main.qml:404
+#: ui/main.qml:387
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -194,21 +189,44 @@ msgstr[1] "%1 минуты"
 msgstr[2] "%1 минут"
 msgstr[3] "%1 минута"
 
-#: ui/main.qml:417
+#: ui/main.qml:400
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "(в минутах, минимум 1, максимум 600)"
 
-#: ui/main.qml:436
+#: ui/main.qml:419
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Ошибка: переходные периоды пересекаются."
 
-#: ui/main.qml:459
+#: ui/main.qml:442
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Определение местоположения…"
+
+#: ui/TimeField.qml:20
+#, kde-format
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "hour"
+msgstr ""
+
+#: ui/TimeField.qml:40
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ""
+
+#: ui/TimeField.qml:46
+#, fuzzy, kde-format
+#| msgid "%1 minute"
+#| msgid_plural "%1 minutes"
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "minute"
+msgstr "%1 минута"
+
+#~ msgid "Input format: HH:MM"
+#~ msgstr "(в формате ЧЧ:ММ)"
 
 #~ msgctxt "Night colour blue-ish"
 #~ msgid "Cool"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2024-04-15 15:11+0000\n"
+"PO-Revision-Date: 2024-04-16 15:32+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
 "Language: is\n"
@@ -33,6 +33,8 @@ msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
 msgstr ""
+"Lætur plasmíðið haldast lifandi á tilkynningasvæðinu, jafnvel þótt glugganum "
+"sé lokað."
 
 #: main.cpp:51
 #, kde-format

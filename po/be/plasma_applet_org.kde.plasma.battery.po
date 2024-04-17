@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,13 +22,13 @@ msgstr ""
 "battery.po\n"
 "X-Crowdin-File-ID: 8569\n"
 
-#: package/contents/ui/BatteryItem.qml:107
+#: package/contents/ui/BatteryItem.qml:109
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:171
+#: package/contents/ui/BatteryItem.qml:173
 #, kde-format
 msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
@@ -37,34 +37,34 @@ msgstr ""
 "Зарад гэтай батарэі складае ўсяго %1%, яе трэба замяніць. Звярніцеся да "
 "вытворцы."
 
-#: package/contents/ui/BatteryItem.qml:191
+#: package/contents/ui/BatteryItem.qml:193
 #, kde-format
 msgid "Time To Full:"
 msgstr "Часу да поўнага:"
 
-#: package/contents/ui/BatteryItem.qml:192
+#: package/contents/ui/BatteryItem.qml:194
 #, kde-format
 msgid "Remaining Time:"
 msgstr "Засталося часу:"
 
-#: package/contents/ui/BatteryItem.qml:197
+#: package/contents/ui/BatteryItem.qml:199
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
 msgstr "Разлік…"
 
-#: package/contents/ui/BatteryItem.qml:209
+#: package/contents/ui/BatteryItem.qml:211
 #, kde-format
 msgid "Battery Health:"
 msgstr "Узровень зараду батарэі:"
 
-#: package/contents/ui/BatteryItem.qml:215
+#: package/contents/ui/BatteryItem.qml:217
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:229
+#: package/contents/ui/BatteryItem.qml:231
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Батарэя наладжаная на зараджэнне прыблізна да %1%."

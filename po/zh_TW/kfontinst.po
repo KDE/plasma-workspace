@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2024-04-06 01:20+0900\n"
+"PO-Revision-Date: 2024-04-16 18:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -67,10 +67,9 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:122
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr "讓 X 應用程式對話框的瞬變值由 winid 指定"
+msgstr "讓視窗的對話框瞬變值由 windowHandle 來指定"
 
 #: apps/Installer.cpp:125
 #, kde-format

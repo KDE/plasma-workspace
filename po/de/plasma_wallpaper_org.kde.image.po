@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-12 00:39+0000\n"
-"PO-Revision-Date: 2023-12-18 16:13+0100\n"
+"PO-Revision-Date: 2023-12-21 18:50+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -28,11 +28,10 @@ msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Hintergrundbild öffnen"
+msgstr "Bild öffnen"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format

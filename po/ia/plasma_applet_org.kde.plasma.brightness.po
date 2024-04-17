@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2024-04-08 11:59+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -79,23 +79,53 @@ msgctxt "Status"
 msgid "Night Light off"
 msgstr "Color de Nocte non active"
 
-#: package/contents/ui/main.qml:89
+#: package/contents/ui/main.qml:91
 #, kde-format
-msgctxt "Status; placeholder is a temperature"
-msgid "Night Light at %1K"
-msgstr "Color de Nocte a %1K"
+msgctxt "Status"
+msgid "Night Light at day color temperature"
+msgstr ""
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:93
+#, kde-format
+msgctxt "Status"
+msgid "Night Light at night color temperature"
+msgstr ""
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgctxt "Status; placeholder is a time"
+msgid "Night Light in morning transition (complete by %1)"
+msgstr ""
+
+#: package/contents/ui/main.qml:100
+#, kde-format
+msgctxt "Status; placeholder is a time"
+msgid "Night Light in evening transition (complete by %1)"
+msgstr ""
+
+#: package/contents/ui/main.qml:115
+#, kde-format
+msgctxt "Status; placeholder is a time"
+msgid "Night Light evening transition scheduled for %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:117
+#, kde-format
+msgctxt "Status; placeholder is a time"
+msgid "Night Light morning transition scheduled for %1"
+msgstr ""
+
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Rola pro adjustar luminositate de schermo"
 
-#: package/contents/ui/main.qml:102
+#: package/contents/ui/main.qml:124
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "Cliccar in le medie commuta Color de Nocte"
 
-#: package/contents/ui/main.qml:206
+#: package/contents/ui/main.qml:228
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
@@ -214,3 +244,7 @@ msgstr "Color de claviero"
 #, kde-format
 msgid "Night Light"
 msgstr "Color de Nocte"
+
+#~ msgctxt "Status; placeholder is a temperature"
+#~ msgid "Night Light at %1K"
+#~ msgstr "Color de Nocte a %1K"

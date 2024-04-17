@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2023-11-29 09:56+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -169,27 +169,22 @@ msgstr ""
 "GPS (якщо доступний) або надсилання даних щодо мережі до <link url='https://"
 "location.services.mozilla.com'>Служби розташування Mozilla</link>."
 
-#: ui/main.qml:350
+#: ui/main.qml:347
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Вмикати нічні кольори о:"
 
-#: ui/main.qml:363 ui/main.qml:386
-#, kde-format
-msgid "Input format: HH:MM"
-msgstr "Формат вхідних даних: ГГ:ХХ"
-
-#: ui/main.qml:373
+#: ui/main.qml:363
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Вмикати денні кольори о:"
 
-#: ui/main.qml:395
+#: ui/main.qml:378
 #, kde-format
 msgid "Transition duration:"
 msgstr "Тривалість кульмінації:"
 
-#: ui/main.qml:404
+#: ui/main.qml:387
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -198,21 +193,44 @@ msgstr[1] "%1 хвилини"
 msgstr[2] "%1 хвилин"
 msgstr[3] "хвилина"
 
-#: ui/main.qml:417
+#: ui/main.qml:400
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Вхідні дані у хвилинах — мін. 1, макс. 600"
 
-#: ui/main.qml:436
+#: ui/main.qml:419
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Помилка: перекриття часів кульмінації."
 
-#: ui/main.qml:459
+#: ui/main.qml:442
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Розташування…"
+
+#: ui/TimeField.qml:20
+#, kde-format
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "hour"
+msgstr ""
+
+#: ui/TimeField.qml:40
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ""
+
+#: ui/TimeField.qml:46
+#, fuzzy, kde-format
+#| msgid "%1 minute"
+#| msgid_plural "%1 minutes"
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "minute"
+msgstr "%1 хвилина"
+
+#~ msgid "Input format: HH:MM"
+#~ msgstr "Формат вхідних даних: ГГ:ХХ"
 
 #~ msgctxt "Night colour blue-ish"
 #~ msgid "Cool"

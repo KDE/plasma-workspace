@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2017-02-17 16:54+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -23,13 +23,13 @@ msgstr ""
 "X-Generator: Lokalize 2.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/BatteryItem.qml:107
+#: package/contents/ui/BatteryItem.qml:109
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:171
+#: package/contents/ui/BatteryItem.qml:173
 #, fuzzy, kde-format
 #| msgid ""
 #| "The capacity of this battery is %1%. This means it is broken and needs a "
@@ -42,29 +42,29 @@ msgstr ""
 "κατεστραμμένη και χρειάζεται αντικατάσταση. Επικοινωνήστε με τον προμηθευτή "
 "του υλικού σας για λεπτομέρειες."
 
-#: package/contents/ui/BatteryItem.qml:191
+#: package/contents/ui/BatteryItem.qml:193
 #, kde-format
 msgid "Time To Full:"
 msgstr "Χρόνος για πλήρη φόρτιση:"
 
-#: package/contents/ui/BatteryItem.qml:192
+#: package/contents/ui/BatteryItem.qml:194
 #, kde-format
 msgid "Remaining Time:"
 msgstr ""
 
-#: package/contents/ui/BatteryItem.qml:197
+#: package/contents/ui/BatteryItem.qml:199
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
 msgstr ""
 
-#: package/contents/ui/BatteryItem.qml:209
+#: package/contents/ui/BatteryItem.qml:211
 #, fuzzy, kde-format
 #| msgid "Battery:"
 msgid "Battery Health:"
 msgstr "Μπαταρία:"
 
-#: package/contents/ui/BatteryItem.qml:215
+#: package/contents/ui/BatteryItem.qml:217
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is battery percentage"
 #| msgid "%1%"
@@ -72,7 +72,7 @@ msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:229
+#: package/contents/ui/BatteryItem.qml:231
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""

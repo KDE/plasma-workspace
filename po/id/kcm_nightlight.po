@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -177,49 +177,67 @@ msgstr ""
 "dengan mengirimkan informasi jaringan ke <a href=\"https://location.services."
 "mozilla.com\">Mozilla Location Service</a>."
 
-#: ui/main.qml:350
+#: ui/main.qml:347
 #, kde-format
 msgid "Begin night light at:"
 msgstr ""
 
-#: ui/main.qml:363 ui/main.qml:386
-#, kde-format
-msgid "Input format: HH:MM"
-msgstr "Format input: JJ:MM"
-
-#: ui/main.qml:373
+#: ui/main.qml:363
 #, kde-format
 msgid "Begin day light at:"
 msgstr ""
 
-#: ui/main.qml:395
+#: ui/main.qml:378
 #, kde-format
 msgid "Transition duration:"
 msgstr "Durasi transisi:"
 
-#: ui/main.qml:404
+#: ui/main.qml:387
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 menit"
 msgstr[1] "%1 menit"
 
-#: ui/main.qml:417
+#: ui/main.qml:400
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Menit input - men. 1, maks. 600"
 
-#: ui/main.qml:436
+#: ui/main.qml:419
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Error: Waktu transisi tumpang tindih."
 
-#: ui/main.qml:459
+#: ui/main.qml:442
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Lokasi"
+
+#: ui/TimeField.qml:20
+#, kde-format
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "hour"
+msgstr ""
+
+#: ui/TimeField.qml:40
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ""
+
+#: ui/TimeField.qml:46
+#, fuzzy, kde-format
+#| msgid "%1 minute"
+#| msgid_plural "%1 minutes"
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "minute"
+msgstr "%1 menit"
+
+#~ msgid "Input format: HH:MM"
+#~ msgstr "Format input: JJ:MM"
 
 #~ msgctxt "Night colour blue-ish"
 #~ msgid "Cool"

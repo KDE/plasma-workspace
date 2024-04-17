@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2024-03-17 10:54+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -164,45 +164,63 @@ msgstr ""
 "tilgjengeleg), eller ved å senda informasjon om nettverket til <link "
 "url='https://location.services.mozilla.com'>Mozilla Location Service</link>."
 
-#: ui/main.qml:350
+#: ui/main.qml:347
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Kveldsfargar tek til:"
 
-#: ui/main.qml:363 ui/main.qml:386
-#, kde-format
-msgid "Input format: HH:MM"
-msgstr "Format: HH:MM"
-
-#: ui/main.qml:373
+#: ui/main.qml:363
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Dagfargar tek til:"
 
-#: ui/main.qml:395
+#: ui/main.qml:378
 #, kde-format
 msgid "Transition duration:"
 msgstr "Overgangstid:"
 
-#: ui/main.qml:404
+#: ui/main.qml:387
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minutt"
 msgstr[1] "%1 minutt"
 
-#: ui/main.qml:417
+#: ui/main.qml:400
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "I minutt, frå 1 til 600."
 
-#: ui/main.qml:436
+#: ui/main.qml:419
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Feil: Overgangstidene overlappar."
 
-#: ui/main.qml:459
+#: ui/main.qml:442
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Finn posisjon …"
+
+#: ui/TimeField.qml:20
+#, kde-format
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "hour"
+msgstr ""
+
+#: ui/TimeField.qml:40
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ""
+
+#: ui/TimeField.qml:46
+#, fuzzy, kde-format
+#| msgid "%1 minute"
+#| msgid_plural "%1 minutes"
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "minute"
+msgstr "%1 minutt"
+
+#~ msgid "Input format: HH:MM"
+#~ msgstr "Format: HH:MM"

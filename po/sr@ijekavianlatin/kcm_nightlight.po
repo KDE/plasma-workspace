@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2017-12-17 18:00+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -161,28 +161,23 @@ msgid ""
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
 
-#: ui/main.qml:350
+#: ui/main.qml:347
 #, kde-format
 msgid "Begin night light at:"
 msgstr ""
 
-#: ui/main.qml:363 ui/main.qml:386
-#, kde-format
-msgid "Input format: HH:MM"
-msgstr ""
-
-#: ui/main.qml:373
+#: ui/main.qml:363
 #, kde-format
 msgid "Begin day light at:"
 msgstr ""
 
-#: ui/main.qml:395
+#: ui/main.qml:378
 #, fuzzy, kde-format
 #| msgid "Transition duration"
 msgid "Transition duration:"
 msgstr "Trajanje prelaza"
 
-#: ui/main.qml:404
+#: ui/main.qml:387
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -192,21 +187,39 @@ msgstr[2] ""
 msgstr[3] ""
 
 # well-spelled: мин, макс
-#: ui/main.qml:417
+#: ui/main.qml:400
 #, fuzzy, kde-format
 #| msgid "(In minutes - min. 1, max. 600)"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "(u minutima, min. 1, maks. 600)"
 
-#: ui/main.qml:436
+#: ui/main.qml:419
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Greška: vreme prelaza se preklapa."
 
-#: ui/main.qml:459
+#: ui/main.qml:442
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
+msgstr ""
+
+#: ui/TimeField.qml:20
+#, kde-format
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "hour"
+msgstr ""
+
+#: ui/TimeField.qml:40
+#, kde-format
+msgctxt "Time separator between hours and minutes"
+msgid ":"
+msgstr ""
+
+#: ui/TimeField.qml:46
+#, kde-format
+msgctxt "@info:tooltip Part of a control for setting a time"
+msgid "minute"
 msgstr ""
 
 #~ msgctxt "NAME OF TRANSLATORS"

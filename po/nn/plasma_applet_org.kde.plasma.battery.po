@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:39+0000\n"
+"POT-Creation-Date: 2024-04-17 00:39+0000\n"
 "PO-Revision-Date: 2024-03-09 18:24+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,13 +20,13 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: package/contents/ui/BatteryItem.qml:107
+#: package/contents/ui/BatteryItem.qml:109
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/BatteryItem.qml:171
+#: package/contents/ui/BatteryItem.qml:173
 #, kde-format
 msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
@@ -35,34 +35,34 @@ msgstr ""
 "Batterihelsa er på berre %1 %, og du bør derfor byta batteri. Ta kontakt med "
 "maskinvare­produsenten."
 
-#: package/contents/ui/BatteryItem.qml:191
+#: package/contents/ui/BatteryItem.qml:193
 #, kde-format
 msgid "Time To Full:"
 msgstr "Tid til ferdig lada:"
 
-#: package/contents/ui/BatteryItem.qml:192
+#: package/contents/ui/BatteryItem.qml:194
 #, kde-format
 msgid "Remaining Time:"
 msgstr "Tid att:"
 
-#: package/contents/ui/BatteryItem.qml:197
+#: package/contents/ui/BatteryItem.qml:199
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
 msgstr "Estimerer …"
 
-#: package/contents/ui/BatteryItem.qml:209
+#: package/contents/ui/BatteryItem.qml:211
 #, kde-format
 msgid "Battery Health:"
 msgstr "Batterihelse:"
 
-#: package/contents/ui/BatteryItem.qml:215
+#: package/contents/ui/BatteryItem.qml:217
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1 %"
 
-#: package/contents/ui/BatteryItem.qml:229
+#: package/contents/ui/BatteryItem.qml:231
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Batteriet er sett opp til berre å ladast opp til %1 %."
