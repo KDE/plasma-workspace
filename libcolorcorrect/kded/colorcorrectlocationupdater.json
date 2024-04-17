@@ -19,6 +19,7 @@
         "Description[uk]": "Надає оновлення даних щодо місця перебування для «Нічних кольорів»",
         "Description[x-test]": "xxProvides location updates for Night Lightxx",
         "Description[zh_CN]": "为夜间颜色提供位置更新",
+        "Description[zh_TW]": "提供地點更新給夜光模式",
         "Name": "Automatic Location for Night Light",
         "Name[ar]": "موقع آلي للإضاءة الليلية",
         "Name[bg]": "Автоматично определяне на местоположение за Нощни цветове",
@@ -37,7 +38,8 @@
         "Name[tr]": "Gece Işığı için Otomatik Konum",
         "Name[uk]": "Автоматичне місце для «Нічних кольорів»",
         "Name[x-test]": "xxAutomatic Location for Night Lightxx",
-        "Name[zh_CN]": "夜间颜色自动位置"
+        "Name[zh_CN]": "夜间颜色自动位置",
+        "Name[zh_TW]": "夜光模式用的自動地點"
     },
     "X-KDE-Kded-autoload": true
 }
