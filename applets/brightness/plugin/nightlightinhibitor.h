@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2019 Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+ * SPDX-FileCopyrightText: 2024 Natalie Clarius <natalie.clarius@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
@@ -15,16 +16,12 @@
 class NightLightInhibitor : public QObject
 {
     Q_OBJECT
-    QML_ELEMENT
-
-    /**
-     * This property holds a value to indicate the current state of the inhibitor.
-     */
-    Q_PROPERTY(State state READ state NOTIFY stateChanged)
 
 public:
     explicit NightLightInhibitor(QObject *parent = nullptr);
     ~NightLightInhibitor() override;
+
+    static NightLightInhibitor &instance();
 
     /**
      * This enum type is used to specify the state of the inhibitor.
@@ -38,11 +35,23 @@ public:
     Q_ENUM(State)
 
     /**
-     * Returns the current state of the inhibitor.
+     * Returns true if Night Light is currently inhibited, inhibiting or has a pending inhibit, and false if it is uninhibit or uninhibiting.
      */
-    State state() const;
+    bool isInhibited() const;
 
 public Q_SLOTS:
+    /**
+     *  Attemmpts to temporarily disable Night Light if currently uninhibited or uninhibiting, and uto re-enable it if currently inhibited or inhibiting.
+     */
+    void toggleInhibition();
+
+private:
+    class Private;
+
+    uint m_cookie = 0;
+    State m_state = Uninhibited;
+    bool m_pendingUninhibit = false;
+
     /**
      * Attempts to temporarily disable Night Light.
      *
@@ -64,14 +73,4 @@ public Q_SLOTS:
      * This method does nothing if the inhibitor is in the Uninhibited state.
      */
     void uninhibit();
-
-Q_SIGNALS:
-    /**
-     * Emitted whenever the state of the inhibitor has changed.
-     */
-    void stateChanged();
-
-private:
-    class Private;
-    QScopedPointer<Private> d;
 };

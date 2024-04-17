@@ -1,11 +1,12 @@
 /*
  * SPDX-FileCopyrightText: 2019 Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+ * SPDX-FileCopyrightText: 2024 Natalie Clarius <natalie.clarius@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "nightlightmonitor.h"
-#include "nightlightmonitor_p.h"
+#include "nightlightcontrol.h"
+#include "nightlightcontrol_p.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -17,7 +18,7 @@ static const QString s_nightLightPath = QStringLiteral("/org/kde/KWin/NightLight
 static const QString s_nightLightInterface = QStringLiteral("org.kde.KWin.NightLight");
 static const QString s_propertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
 
-NightLightMonitorPrivate::NightLightMonitorPrivate(QObject *parent)
+NightLightControlPrivate::NightLightControlPrivate(QObject *parent)
     : QObject(parent)
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
@@ -50,13 +51,21 @@ NightLightMonitorPrivate::NightLightMonitorPrivate(QObject *parent)
 
         updateProperties(properties.value());
     });
+<<<<<<< Updated upstream
+=======
+
+    m_isInhibitedFromApplet = NightLightInhibitor::instance().isInhibited();
+    connect(&NightLightInhibitor::instance(), &NightLightInhibitor::inhibitedChanged, this, [this]() {
+        setInhibitedFromApplet(NightLightInhibitor::instance().isInhibited());
+    });
+>>>>>>> Stashed changes
 }
 
-NightLightMonitorPrivate::~NightLightMonitorPrivate()
+NightLightControlPrivate::~NightLightControlPrivate()
 {
 }
 
-void NightLightMonitorPrivate::handlePropertiesChanged(const QString &interfaceName,
+void NightLightControlPrivate::handlePropertiesChanged(const QString &interfaceName,
                                                        const QVariantMap &changedProperties,
                                                        const QStringList &invalidatedProperties)
 {
@@ -66,17 +75,17 @@ void NightLightMonitorPrivate::handlePropertiesChanged(const QString &interfaceN
     updateProperties(changedProperties);
 }
 
-int NightLightMonitorPrivate::currentTemperature() const
+int NightLightControlPrivate::currentTemperature() const
 {
     return m_currentTemperature;
 }
 
-int NightLightMonitorPrivate::targetTemperature() const
+int NightLightControlPrivate::targetTemperature() const
 {
     return m_targetTemperature;
 }
 
-void NightLightMonitorPrivate::updateProperties(const QVariantMap &properties)
+void NightLightControlPrivate::updateProperties(const QVariantMap &properties)
 {
     const QVariant available = properties.value(QStringLiteral("available"));
     if (available.isValid()) {
@@ -123,9 +132,14 @@ void NightLightMonitorPrivate::updateProperties(const QVariantMap &properties)
     if (scheduledTransitionStartTime.isValid()) {
         setScheduledTransitionStartTime(scheduledTransitionStartTime.toULongLong() * 1000);
     }
+
+    const QVariant inhibited = properties.value(QStringLiteral("inhibited"));
+    if (inhibited.isValid()) {
+        setInhibited(inhibited.toBool());
+    }
 }
 
-void NightLightMonitorPrivate::setCurrentTemperature(int temperature)
+void NightLightControlPrivate::setCurrentTemperature(int temperature)
 {
     if (m_currentTemperature == temperature) {
         return;
@@ -134,7 +148,7 @@ void NightLightMonitorPrivate::setCurrentTemperature(int temperature)
     Q_EMIT currentTemperatureChanged();
 }
 
-void NightLightMonitorPrivate::setTargetTemperature(int temperature)
+void NightLightControlPrivate::setTargetTemperature(int temperature)
 {
     if (m_targetTemperature == temperature) {
         return;
@@ -143,12 +157,12 @@ void NightLightMonitorPrivate::setTargetTemperature(int temperature)
     Q_EMIT targetTemperatureChanged();
 }
 
-bool NightLightMonitorPrivate::isAvailable() const
+bool NightLightControlPrivate::isAvailable() const
 {
     return m_isAvailable;
 }
 
-void NightLightMonitorPrivate::setAvailable(bool available)
+void NightLightControlPrivate::setAvailable(bool available)
 {
     if (m_isAvailable == available) {
         return;
@@ -157,12 +171,12 @@ void NightLightMonitorPrivate::setAvailable(bool available)
     Q_EMIT availableChanged();
 }
 
-bool NightLightMonitorPrivate::isEnabled() const
+bool NightLightControlPrivate::isEnabled() const
 {
     return m_isEnabled;
 }
 
-void NightLightMonitorPrivate::setEnabled(bool enabled)
+void NightLightControlPrivate::setEnabled(bool enabled)
 {
     if (m_isEnabled == enabled) {
         return;
@@ -171,12 +185,12 @@ void NightLightMonitorPrivate::setEnabled(bool enabled)
     Q_EMIT enabledChanged();
 }
 
-bool NightLightMonitorPrivate::isRunning() const
+bool NightLightControlPrivate::isRunning() const
 {
     return m_isRunning;
 }
 
-void NightLightMonitorPrivate::setRunning(bool running)
+void NightLightControlPrivate::setRunning(bool running)
 {
     if (m_isRunning == running) {
         return;
@@ -185,12 +199,28 @@ void NightLightMonitorPrivate::setRunning(bool running)
     Q_EMIT runningChanged();
 }
 
-int NightLightMonitorPrivate::mode() const
+bool NightLightControlPrivate::isInhibited() const
+{
+    return m_isInhibited;
+}
+
+void NightLightControlPrivate::setInhibited(bool inhibited)
+{
+    m_isInhibited = inhibited;
+    Q_EMIT inhibitedChanged();
+}
+
+void NightLightControlPrivate::toggleInhibition()
+{
+    NightLightInhibitor::instance().toggleInhibition();
+}
+
+int NightLightControlPrivate::mode() const
 {
     return m_mode;
 }
 
-void NightLightMonitorPrivate::setMode(int mode)
+void NightLightControlPrivate::setMode(int mode)
 {
     if (m_mode == mode) {
         return;
@@ -199,12 +229,12 @@ void NightLightMonitorPrivate::setMode(int mode)
     Q_EMIT modeChanged();
 }
 
-bool NightLightMonitorPrivate::isDaylight() const
+bool NightLightControlPrivate::isDaylight() const
 {
     return m_isDaylight;
 }
 
-void NightLightMonitorPrivate::setDaylight(bool daylight)
+void NightLightControlPrivate::setDaylight(bool daylight)
 {
     if (m_isDaylight == daylight) {
         return;
@@ -213,12 +243,12 @@ void NightLightMonitorPrivate::setDaylight(bool daylight)
     Q_EMIT daylightChanged();
 }
 
-quint64 NightLightMonitorPrivate::currentTransitionEndTime() const
+quint64 NightLightControlPrivate::currentTransitionEndTime() const
 {
     return m_currentTransitionEndTime;
 }
 
-void NightLightMonitorPrivate::setCurrentTransitionEndTime(quint64 currentTransitionEndTime)
+void NightLightControlPrivate::setCurrentTransitionEndTime(quint64 currentTransitionEndTime)
 {
     if (m_currentTransitionEndTime == currentTransitionEndTime) {
         return;
@@ -227,12 +257,12 @@ void NightLightMonitorPrivate::setCurrentTransitionEndTime(quint64 currentTransi
     Q_EMIT currentTransitionEndTimeChanged();
 }
 
-quint64 NightLightMonitorPrivate::scheduledTransitionStartTime() const
+quint64 NightLightControlPrivate::scheduledTransitionStartTime() const
 {
     return m_scheduledTransitionStartTime;
 }
 
-void NightLightMonitorPrivate::setScheduledTransitionStartTime(quint64 scheduledTransitionStartTime)
+void NightLightControlPrivate::setScheduledTransitionStartTime(quint64 scheduledTransitionStartTime)
 {
     if (m_scheduledTransitionStartTime == scheduledTransitionStartTime) {
         return;
@@ -241,68 +271,79 @@ void NightLightMonitorPrivate::setScheduledTransitionStartTime(quint64 scheduled
     Q_EMIT scheduledTransitionStartTimeChanged();
 }
 
-NightLightMonitor::NightLightMonitor(QObject *parent)
+NightLightControl::NightLightControl(QObject *parent)
     : QObject(parent)
-    , d(new NightLightMonitorPrivate(this))
+    , d(new NightLightControlPrivate(this))
 {
-    connect(d, &NightLightMonitorPrivate::availableChanged, this, &NightLightMonitor::availableChanged);
-    connect(d, &NightLightMonitorPrivate::enabledChanged, this, &NightLightMonitor::enabledChanged);
-    connect(d, &NightLightMonitorPrivate::runningChanged, this, &NightLightMonitor::runningChanged);
-    connect(d, &NightLightMonitorPrivate::modeChanged, this, &NightLightMonitor::modeChanged);
-    connect(d, &NightLightMonitorPrivate::daylightChanged, this, &NightLightMonitor::daylightChanged);
-    connect(d, &NightLightMonitorPrivate::currentTransitionEndTimeChanged, this, &NightLightMonitor::currentTransitionEndTimeChanged);
-    connect(d, &NightLightMonitorPrivate::scheduledTransitionStartTimeChanged, this, &NightLightMonitor::scheduledTransitionStartTimeChanged);
-    connect(d, &NightLightMonitorPrivate::currentTemperatureChanged, this, &NightLightMonitor::currentTemperatureChanged);
-    connect(d, &NightLightMonitorPrivate::targetTemperatureChanged, this, &NightLightMonitor::targetTemperatureChanged);
+    connect(d, &NightLightControlPrivate::availableChanged, this, &NightLightControl::availableChanged);
+    connect(d, &NightLightControlPrivate::enabledChanged, this, &NightLightControl::enabledChanged);
+    connect(d, &NightLightControlPrivate::runningChanged, this, &NightLightControl::runningChanged);
+    connect(d, &NightLightControlPrivate::inhibitedChanged, this, &NightLightControl::inhibitedChanged);
+    connect(d, &NightLightControlPrivate::modeChanged, this, &NightLightControl::modeChanged);
+    connect(d, &NightLightControlPrivate::daylightChanged, this, &NightLightControl::daylightChanged);
+    connect(d, &NightLightControlPrivate::currentTransitionEndTimeChanged, this, &NightLightControl::currentTransitionEndTimeChanged);
+    connect(d, &NightLightControlPrivate::scheduledTransitionStartTimeChanged, this, &NightLightControl::scheduledTransitionStartTimeChanged);
+    connect(d, &NightLightControlPrivate::currentTemperatureChanged, this, &NightLightControl::currentTemperatureChanged);
+    connect(d, &NightLightControlPrivate::targetTemperatureChanged, this, &NightLightControl::targetTemperatureChanged);
 }
 
-NightLightMonitor::~NightLightMonitor()
+NightLightControl::~NightLightControl()
 {
 }
 
-bool NightLightMonitor::isAvailable() const
+bool NightLightControl::isAvailable() const
 {
     return d->isAvailable();
 }
 
-bool NightLightMonitor::isEnabled() const
+bool NightLightControl::isEnabled() const
 {
     return d->isEnabled();
 }
 
-bool NightLightMonitor::isRunning() const
+bool NightLightControl::isRunning() const
 {
     return d->isRunning();
 }
 
-int NightLightMonitor::mode() const
+bool NightLightControl::isInhibited() const
+{
+    return d->isInhibited();
+}
+
+void NightLightControl::toggleInhibition()
+{
+    d->toggleInhibition();
+}
+
+int NightLightControl::mode() const
 {
     return d->mode();
 }
 
-bool NightLightMonitor::isDaylight() const
+bool NightLightControl::isDaylight() const
 {
     return d->isDaylight();
 }
 
-int NightLightMonitor::currentTemperature() const
+int NightLightControl::currentTemperature() const
 {
     return d->currentTemperature();
 }
 
-int NightLightMonitor::targetTemperature() const
+int NightLightControl::targetTemperature() const
 {
     return d->targetTemperature();
 }
 
-quint64 NightLightMonitor::currentTransitionEndTime() const
+quint64 NightLightControl::currentTransitionEndTime() const
 {
     return d->currentTransitionEndTime();
 }
 
-quint64 NightLightMonitor::scheduledTransitionStartTime() const
+quint64 NightLightControl::scheduledTransitionStartTime() const
 {
     return d->scheduledTransitionStartTime();
 }
 
-#include "moc_nightlightmonitor.cpp"
+#include "moc_nightlightcontrol.cpp"

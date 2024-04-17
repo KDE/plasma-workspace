@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2019 Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+ * SPDX-FileCopyrightText: 2024 Natalie Clarius <natalie.clarius@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
@@ -8,13 +9,13 @@
 
 #include <QObject>
 
-class NightLightMonitorPrivate : public QObject
+class NightLightControlPrivate : public QObject
 {
     Q_OBJECT
 
 public:
-    explicit NightLightMonitorPrivate(QObject *parent = nullptr);
-    ~NightLightMonitorPrivate() override;
+    explicit NightLightControlPrivate(QObject *parent = nullptr);
+    ~NightLightControlPrivate() override;
 
     int currentTemperature() const;
     int targetTemperature() const;
@@ -25,6 +26,9 @@ public:
     bool isAvailable() const;
     bool isEnabled() const;
     bool isRunning() const;
+    bool isInhibited() const;
+public Q_SLOTS:
+    void toggleInhibition();
 Q_SIGNALS:
     void currentTemperatureChanged();
     void targetTemperatureChanged();
@@ -35,6 +39,7 @@ Q_SIGNALS:
     void availableChanged();
     void enabledChanged();
     void runningChanged();
+    void inhibitedChanged();
 
 private Q_SLOTS:
     void handlePropertiesChanged(const QString &interfaceName, const QVariantMap &changedProperties, const QStringList &invalidatedProperties);
@@ -50,6 +55,7 @@ private:
     void setAvailable(bool available);
     void setEnabled(bool enabled);
     void setRunning(bool running);
+    void setInhibited(bool inhibited);
 
     int m_currentTemperature = 0;
     int m_targetTemperature = 0;
@@ -60,4 +66,5 @@ private:
     bool m_isAvailable = false;
     bool m_isEnabled = false;
     bool m_isRunning = false;
+    bool m_isInhibited = false;
 };

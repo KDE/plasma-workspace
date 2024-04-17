@@ -30,11 +30,8 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
-    NightLightMonitor {
-        id: nightLightMonitor
-    }
-    NightLightInhibitor {
-        id: nightLightInhibitor
+    NightLightControl {
+        id: nightLightControl
     }
     ScreenBrightnessControl {
         id: screenBrightnessControl
@@ -48,8 +45,8 @@ PlasmoidItem {
         id: keyboardColorControl
     }
 
-    property bool isNightLightActive: nightLightMonitor.running && nightLightMonitor.currentTemperature != 6500
-    property bool isNightLightInhibited: nightLightInhibitor.state == NightLightInhibitor.Inhibiting || nightLightInhibitor.state == NightLightInhibitor.Inhibited && nightLightMonitor.targetTemperature != 6500
+    property bool isNightLightActive: nightLightControl.running && nightLightControl.currentTemperature != 6500
+    property bool isNightLightInhibited: nightLightControl.inhibited && nightLightControl.targetTemperature != 6500
     property int screenBrightnessPercent: screenBrightnessControl.brightnessMax ? Math.round(100 * screenBrightnessControl.brightness / screenBrightnessControl.brightnessMax) : 0
     property int keyboardBrightnessPercent: keyboardBrightnessControl.brightnessMax ? Math.round(100 * keyboardBrightnessControl.brightness / keyboardBrightnessControl.brightnessMax) : 0
 
@@ -82,19 +79,19 @@ PlasmoidItem {
         if (keyboardBrightnessControl.isBrightnessAvailable) {
             parts.push(i18n("Keyboard brightness at %1%", keyboardBrightnessPercent));
         }
-        if (nightLightMonitor.enabled) {
-            if (!nightLightMonitor.running) {
+        if (nightLightControl.enabled) {
+            if (!nightLightControl.running) {
                 parts.push(i18nc("Status", "Night Light off"));
-            } else if (nightLightMonitor.currentTemperature != 6500) {
-                if (nightLightMonitor.currentTemperature == nightLightMonitor.targetTemperature) {
-                    if (nightLightMonitor.daylight) {
+            } else if (nightLightControl.currentTemperature != 6500) {
+                if (nightLightControl.currentTemperature == nightLightControl.targetTemperature) {
+                    if (nightLightControl.daylight) {
                         parts.push(i18nc("Status", "Night Light at day color temperature"));
                     } else {
                         parts.push(i18nc("Status", "Night Light at night color temperature"));
                     }
                 } else {
-                    const endTime = new Date(nightLightMonitor.currentTransitionEndTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-                    if (nightLightMonitor.daylight) {
+                    const endTime = new Date(nightLightControl.currentTransitionEndTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+                    if (nightLightControl.daylight) {
                         parts.push(i18nc("Status; placeholder is a time", "Night Light in morning transition (complete by %1)", endTime));
                     } else {
                         parts.push(i18nc("Status; placeholder is a time", "Night Light in evening transition (complete by %1)", endTime));
@@ -120,7 +117,7 @@ PlasmoidItem {
         if (screenBrightnessControl.isBrightnessAvailable) {
             parts.push(i18n("Scroll to adjust screen brightness"));
         }
-        if (nightLightMonitor.enabled) {
+        if (nightLightControl.enabled) {
             parts.push(i18n("Middle-click to toggle Night Light"));
         }
         return parts.join("\n");
@@ -129,11 +126,11 @@ PlasmoidItem {
     Plasmoid.icon: {
         let iconName = "brightness-high";
 
-        if (nightLightMonitor.enabled) {
-            if (!nightLightMonitor.running) {
+        if (nightLightControl.enabled) {
+            if (!nightLightControl.running) {
                 iconName = "redshift-status-off";
-            } else if (nightLightMonitor.currentTemperature != 6500) {
-                if (nightLightMonitor.daylight) {
+            } else if (nightLightControl.currentTemperature != 6500) {
+                if (nightLightControl.daylight) {
                     iconName = "redshift-status-day";
                 } else {
                     iconName = "redshift-status-on";
@@ -183,25 +180,9 @@ PlasmoidItem {
         onPressed: wasExpanded = brightnessAndColorControl.expanded
         onClicked: mouse => {
             if (mouse.button == Qt.MiddleButton) {
-                toggleNightLightInhibition();
+                nightLightControl.toggleInhibition();
             } else {
                 brightnessAndColorControl.expanded = !wasExpanded;
-            }
-        }
-
-        function toggleNightLightInhibition() {
-            if (!nightLightMonitor.available) {
-                return;
-            }
-            switch (nightLightInhibitor.state) {
-            case NightLightInhibitor.Inhibiting:
-            case NightLightInhibitor.Inhibited:
-                nightLightInhibitor.uninhibit();
-                break;
-            case NightLightInhibitor.Uninhibiting:
-            case NightLightInhibitor.Uninhibited:
-                nightLightInhibitor.inhibit();
-                break;
             }
         }
     }

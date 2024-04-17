@@ -1,5 +1,6 @@
 /*
  * SPDX-FileCopyrightText: 2019 Vlad Zahorodnii <vlad.zahorodnii@kde.org>
+ * SPDX-FileCopyrightText: 2024 Natalie Clarius <natalie.clarius@kde.org>
  *
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
@@ -9,12 +10,12 @@
 #include <QObject>
 #include <qqmlregistration.h>
 
-class NightLightMonitorPrivate;
+class NightLightControlPrivate;
 
 /**
- * The Monitor provides a way for monitoring the state of Night Light.
+ * The Control provides a way for controling the state of Night Light.
  */
-class NightLightMonitor : public QObject
+class NightLightControl : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
@@ -33,6 +34,11 @@ class NightLightMonitor : public QObject
      * This property holds a value to indicate if Night Light is running.
      */
     Q_PROPERTY(bool running READ isRunning NOTIFY runningChanged)
+
+    /**
+     * This property holds a value to indicate whether night light is currently inhibited.
+     */
+    Q_PROPERTY(bool inhibited READ isInhibited NOTIFY inhibitedChanged)
 
     /**
      * This property holds a value to indicate if Night Light is on day mode.
@@ -65,8 +71,8 @@ class NightLightMonitor : public QObject
     Q_PROPERTY(quint64 scheduledTransitionStartTime READ scheduledTransitionStartTime NOTIFY scheduledTransitionStartTimeChanged)
 
 public:
-    explicit NightLightMonitor(QObject *parent = nullptr);
-    ~NightLightMonitor() override;
+    explicit NightLightControl(QObject *parent = nullptr);
+    ~NightLightControl() override;
 
     /**
      * Returns @c true if Night Light is available; otherwise @c false.
@@ -82,6 +88,11 @@ public:
      * Returns @c true if Night Light is running; otherwise @c false.
      */
     bool isRunning() const;
+
+    /**
+     * Returns @c true if Night Light is currently inhibited or inhibiting; otherwise @c false.
+     */
+    bool isInhibited() const;
 
     /**
      * Returns @c true if Night Light is on day mode; otherwise @c false.
@@ -113,6 +124,12 @@ public:
      */
     quint64 scheduledTransitionStartTime() const;
 
+public Q_SLOTS:
+    /**
+     * Inhibits Night Light if currently running, and un-inhibits it if currently inhibited.
+     */
+    void toggleInhibition();
+
 Q_SIGNALS:
     /**
      * This signal is emitted when Night Light becomes (un)available.
@@ -128,6 +145,11 @@ Q_SIGNALS:
      * Emitted whenever Night Light starts or stops running.
      */
     void runningChanged();
+
+    /**
+     * Emitted when the inhibition state of Night Light has changed.
+     */
+    void inhibitedChanged();
 
     /**
      * Emitted whenever Night Light changes between day and night time.
@@ -160,5 +182,5 @@ Q_SIGNALS:
     void scheduledTransitionStartTimeChanged();
 
 private:
-    NightLightMonitorPrivate *d;
+    NightLightControlPrivate *d;
 };

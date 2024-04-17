@@ -36,11 +36,11 @@ PlasmaComponents3.ItemDelegate {
             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
             source: {
-                if (!monitor.enabled) {
+                if (!control.enabled) {
                     return "redshift-status-on"; // not configured: show generic night light icon rather "manually turned off" icon
-                } else if (!monitor.running) {
+                } else if (!control.running) {
                     return "redshift-status-off";
-                } else if (monitor.daylight && monitor.targetTemperature != 6500) { // show daylight icon only when temperature during the day is actually modified
+                } else if (control.daylight && control.targetTemperature != 6500) { // show daylight icon only when temperature during the day is actually modified
                     return "redshift-status-day";
                 } else {
                     return "redshift-status-on";
@@ -71,26 +71,26 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Label {
                     id: status
                     text: {
-                        if (inhibitor.state !== NightLightInhibitor.Uninhibited && monitor.enabled) {
+                        if (control.inhibited && control.enabled) {
                             return i18nc("Night light status", "Off");
                         }
-                        if (!monitor.available) {
+                        if (!control.available) {
                             return i18nc("Night light status", "Unavailable");
                         }
-                        if (!monitor.enabled) {
+                        if (!control.enabled) {
                             return i18nc("Night light status", "Not enabled");
                         }
-                        if (!monitor.running) {
+                        if (!control.running) {
                             return i18nc("Night light status", "Not running");
                         }
-                        if (!monitor.hasSwitchingTimes) {
+                        if (!control.hasSwitchingTimes) {
                             return i18nc("Night light status", "On");
                         }
-                        if (monitor.daylight && monitor.transitioning) {
+                        if (control.daylight && control.transitioning) {
                             return i18nc("Night light phase", "Morning Transition");
-                        } else if (monitor.daylight) {
+                        } else if (control.daylight) {
                             return i18nc("Night light phase", "Day");
-                        } else if (monitor.transitioning) {
+                        } else if (control.transitioning) {
                             return i18nc("Night light phase", "Evening Transition");
                         } else {
                             return i18nc("Night light phase", "Night");
@@ -103,8 +103,8 @@ PlasmaComponents3.ItemDelegate {
 
                 PlasmaComponents3.Label {
                     id: currentTemp
-                    visible: monitor.available && monitor.enabled && monitor.running && inhibitor.state !== NightLightInhibitor.Inhibited
-                    text: i18nc("Placeholder is screen color temperature", "%1K", monitor.currentTemperature)
+                    visible: control.available && control.enabled && control.running
+                    text: i18nc("Placeholder is screen color temperature", "%1K", control.currentTemperature)
                     textFormat: Text.PlainText
 
                     horizontalAlignment: Text.AlignRight
@@ -116,8 +116,8 @@ PlasmaComponents3.ItemDelegate {
 
                 PlasmaComponents3.Switch {
                     id: inhibitionSwitch
-                    visible: monitor.enabled
-                    checked: monitor.available && monitor.enabled && monitor.running && inhibitor.state !== NightLightInhibitor.Inhibited
+                    visible: control.enabled
+                    checked: !control.inhibited
 
                     Layout.fillWidth: true
 
@@ -131,7 +131,7 @@ PlasmaComponents3.ItemDelegate {
                             toggle();
                         }
                     }
-                    onToggled: toggleInhibition()
+                    onToggled: control.toggleInhibition()
                 }
 
                 PlasmaComponents3.Button {
@@ -139,7 +139,7 @@ PlasmaComponents3.ItemDelegate {
                     visible: KConfig.KAuthorized.authorizeControlModule("kcm_nightlight")
 
                     icon.name: "configure"
-                    text: monitor.enabled ? i18n("Configure…") : i18n("Enable and Configure…")
+                    text: control.enabled ? i18n("Configure…") : i18n("Enable and Configure…")
 
                     Layout.alignment: Qt.AlignRight
 
@@ -157,18 +157,18 @@ PlasmaComponents3.ItemDelegate {
             }
 
             RowLayout {
-                visible: monitor.running && monitor.hasSwitchingTimes
+                visible: control.running && control.hasSwitchingTimes
 
                 spacing: Kirigami.Units.smallSpacing
 
                 PlasmaComponents3.Label {
                     id: transitionLabel
                     text: {
-                        if (monitor.daylight && monitor.transitioning) {
+                        if (control.daylight && control.transitioning) {
                             return i18nc("Label for a time", "Transition to day complete by:");
-                        } else if (monitor.daylight) {
+                        } else if (control.daylight) {
                             return i18nc("Label for a time", "Transition to night scheduled for:");
-                        } else if (monitor.transitioning) {
+                        } else if (control.transitioning) {
                             return i18nc("Label for a time", "Transition to night complete by:");
                         } else {
                             return i18nc("Label for a time", "Transition to day scheduled for:");
@@ -185,10 +185,10 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Label {
                     id: transitionTime
                     text: {
-                        if (monitor.transitioning) {
-                            return new Date(monitor.currentTransitionEndTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+                        if (control.transitioning) {
+                            return new Date(control.currentTransitionEndTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
                         } else {
-                            return new Date(monitor.scheduledTransitionStartTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+                            return new Date(control.scheduledTransitionStartTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
                         }
                     }
                     textFormat: Text.PlainText
@@ -203,31 +203,11 @@ PlasmaComponents3.ItemDelegate {
         }
     }
 
-    function toggleInhibition() {
-        if (!monitor.available) {
-            return;
-        }
-        switch (inhibitor.state) {
-        case NightLightInhibitor.Inhibiting:
-        case NightLightInhibitor.Inhibited:
-            inhibitor.uninhibit();
-            break;
-        case NightLightInhibitor.Uninhibiting:
-        case NightLightInhibitor.Uninhibited:
-            inhibitor.inhibit();
-            break;
-        }
-    }
+    NightLightControl {
+        id: control
 
-    NightLightInhibitor {
-        id: inhibitor
-    }
-
-    NightLightMonitor {
-        id: monitor
-
-        readonly property bool transitioning: monitor.currentTemperature != monitor.targetTemperature
-        readonly property bool hasSwitchingTimes: monitor.mode != 3
+        readonly property bool transitioning: control.currentTemperature != control.targetTemperature
+        readonly property bool hasSwitchingTimes: control.mode != 3
     }
 
 }
