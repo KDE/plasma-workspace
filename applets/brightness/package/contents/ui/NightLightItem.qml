@@ -39,9 +39,13 @@ PlasmaComponents3.ItemDelegate {
                 if (!monitor.enabled) {
                     return "redshift-status-on"; // not configured: show generic night light icon rather "manually turned off" icon
                 } else if (!monitor.running) {
-                    return "redshift-status-off";
+                    if (monitor.daylight && monitor.targetTemperature != 6500) {
+                        return; "redshift-status-day-off";
+                    } else {
+                        return "redshift-status-off";
+                    }
                 } else if (monitor.daylight && monitor.targetTemperature != 6500) { // show daylight icon only when temperature during the day is actually modified
-                    return "redshift-status-day";
+                    return "redshift-status-day-on";
                 } else {
                     return "redshift-status-on";
                 }

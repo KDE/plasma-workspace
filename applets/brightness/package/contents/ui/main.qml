@@ -131,10 +131,14 @@ PlasmoidItem {
 
         if (nightLightMonitor.enabled) {
             if (!nightLightMonitor.running) {
-                iconName = "redshift-status-off";
+                if (nightLightMonitor.daylight && nightLightMonitor.targetTemperature != 6500) {
+                    iconName = "redshift-status-day-off";
+                } else {
+                    iconName = "redshift-status-off";
+                }
             } else if (nightLightMonitor.currentTemperature != 6500) {
                 if (nightLightMonitor.daylight) {
-                    iconName = "redshift-status-day";
+                    iconName = "redshift-status-day-on";
                 } else {
                     iconName = "redshift-status-on";
                 }
