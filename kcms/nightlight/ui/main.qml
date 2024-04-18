@@ -326,17 +326,47 @@ KCM.SimpleKCM {
                 Layout.minimumWidth: Kirigami.Units.gridUnit * 17
                 Kirigami.FormData.label: i18n("Switching times:")
                 enabled: kcm.nightLightSettings.active
-                currentIndex: kcm.nightLightSettings.mode
+
+                // Model for kcm.nightLightSettings.mode:
+                // 0 = Automatic Location
+                // 1 = Manual Location
+                // 2 = Custom Times
+                // 3 = Always On
+                // Model for comobox:
+                // 0 = Location; automatic or manual is in a separate control
+                // 1 = Custom Times
+                // 2 = Always On
+                // Map between the frontend and backend mode model depending on current index and location mode
                 model: [
                     i18n("Sunset and sunrise at current location"),
-                    i18n("Sunset and sunrise at manual location"),
                     i18n("Custom times"),
                     i18n("Always on night light")
                 ]
+                currentIndex: {
+                    switch(kcm.nightLightSettings.mode) {
+                        case Private.NightLightMode.Automatic:
+                        case Private.NightLightMode.Location:
+                            return 0;
+                        case Private.NightLightMode.Timings:
+                            return 1;
+                        case Private.NightLightMode.Constant:
+                            return 2;
+                    }
+                }
                 onCurrentIndexChanged: {
-                    kcm.nightLightSettings.mode = currentIndex;
-                    if (currentIndex === NightColorMode.Automatic && kcm.nightLightSettings.active) {
-                        startLocator();
+                    switch (currentIndex) {
+                        case 0:
+                            kcm.nightLightSettings.mode = Private.NightLightMode.Automatic;
+                            break;
+                        case 1:
+                            kcm.nightLightSettings.mode = Private.NightLightMode.Timings;
+                            break;
+                        case 2:
+                            kcm.nightLightSettings.mode = Private.NightLightMode.Constant;
+                            break;
+                    }
+                    if (kcm.nightLightSettings.mode === Private.NightLightMode.Automatic && kcm.nightLightSettings.active) {
+                        root.startLocator();
                     } else {
                         root.endLocator();
                     }
