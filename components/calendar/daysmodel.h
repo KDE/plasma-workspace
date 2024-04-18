@@ -32,6 +32,7 @@ public:
         dayNumber,
         monthNumber,
         yearNumber,
+        DayLabel, //< For numbering systems other than "latn"
         Events,
         EventColor,
         EventCount,
