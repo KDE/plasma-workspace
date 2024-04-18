@@ -342,6 +342,11 @@ KCM.SimpleKCM {
                 currentIndex: {
                     switch(kcm.nightLightSettings.mode) {
                         case Private.NightLightMode.Automatic:
+                            // pre-set consent to autoloation only if a location has already been determined, so the locator doesn't get started immediately on the default configuration
+                            if (!(kcm.nightLightSettings.latitudeAuto === 0. && kcm.nightLightSettings.longitudeAuto === 0.)) {
+                                autoLocationSwitch.checked = true;
+                            }
+                            return 0;
                         case Private.NightLightMode.Location:
                             return 0;
                         case Private.NightLightMode.Timings:
@@ -353,7 +358,7 @@ KCM.SimpleKCM {
                 onCurrentIndexChanged: {
                     switch (currentIndex) {
                         case 0:
-                            kcm.nightLightSettings.mode = Private.NightLightMode.Automatic;
+                            kcm.nightLightSettings.mode = autoLocationSwitch.checked ? Private.NightLightMode.Automatic : Private.NightLightMode.Location;
                             break;
                         case 1:
                             kcm.nightLightSettings.mode = Private.NightLightMode.Timings;
@@ -367,49 +372,6 @@ KCM.SimpleKCM {
                     } else {
                         root.endLocator();
                     }
-                }
-            }
-
-            // Show current location in auto mode
-            QQC2.Label {
-                Kirigami.FormData.label: i18nc("@label The coordinates for the current location", "Current location:")
-
-                visible: kcm.nightLightSettings.mode === Private.NightLightMode.Automatic && kcm.nightLightSettings.active
-                    && root.doneLocating
-                enabled: kcm.nightLightSettings.active
-                wrapMode: Text.Wrap
-                text: i18n("Latitude: %1°   Longitude: %2°",
-                    Math.round((root.locator?.latitude ?? 0) * 100) / 100,
-                    Math.round((root.locator?.longitude ?? 0) * 100) / 100)
-                textFormat: Text.PlainText
-            }
-
-            // Inform about geolocation access in auto mode
-            // The system settings window likes to take over the cursor with a plain label.
-            // The TextEdit 'takes priority' over the system settings window trying to eat the mouse,
-            // allowing us to use the HoverHandler boilerplate for proper link handling
-            TextEdit {
-                Layout.maximumWidth: modeSwitcher.width
-
-                visible: modeSwitcher.currentIndex - 1 === Private.NightLightMode.Automatic && kcm.nightLightSettings.active
-                enabled: kcm.nightLightSettings.active
-
-                textFormat: TextEdit.RichText
-                wrapMode: Text.Wrap
-                readOnly: true
-
-                color: Kirigami.Theme.textColor
-                selectedTextColor: Kirigami.Theme.highlightedTextColor
-                selectionColor: Kirigami.Theme.highlightColor
-
-                text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
-                font: Kirigami.Theme.smallFont
-
-                onLinkActivated: (url) => Qt.openUrlExternally(url)
-
-                HoverHandler {
-                    acceptedButtons: Qt.NoButton
-                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
                 }
             }
 
@@ -491,6 +453,69 @@ KCM.SimpleKCM {
                 font.italic: true
                 text: i18n("Error: Transition time overlaps.")
                 textFormat: Text.PlainText
+            }
+
+            // Toggle for autolocation mode
+            QQC2.CheckBox {
+                Kirigami.FormData.label: i18nc("@label Control for whether to determine location automatically", "Current location:")
+                id: autoLocationSwitch
+
+                visible: modeSwitcher.currentIndex == 0 && kcm.nightLightSettings.active
+                checked: kcm.nightLightSettings.mode === Private.NightLightMode.Automatic && !(kcm.nightLightSettings.latitudeAuto === 0. && kcm.nightLightSettings.longitudeAuto === 0.)
+                text: i18nc("Current location", "Determine automatically")
+
+                onCheckedChanged: {
+                    if (checked) {
+                        kcm.nightLightSettings.mode = Private.NightLightMode.Automatic;
+                        if (kcm.nightLightSettings.active) {
+                            startLocator();
+                        }
+                    } else {
+                        kcm.nightLightSettings.mode = Private.NightLightMode.Location;
+                        root.endLocator();
+                    }
+                }
+            }
+
+            // Inform about geolocation access
+            // The system settings window likes to take over the cursor with a plain label.
+            // The TextEdit 'takes priority' over the system settings window trying to eat the mouse,
+            // allowing us to use the HoverHandler boilerplate for proper link handling
+            TextEdit {
+                Layout.maximumWidth: modeSwitcher.width
+
+                visible: modeSwitcher.currentIndex == 0 && kcm.nightLightSettings.active
+
+                textFormat: TextEdit.RichText
+                wrapMode: Text.Wrap
+                readOnly: true
+
+                color: autoLocationSwitch.checked ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
+                selectedTextColor: Kirigami.Theme.highlightedTextColor
+                selectionColor: Kirigami.Theme.highlightColor
+
+                text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
+                font: Kirigami.Theme.smallFont
+
+                onLinkActivated: (url) => Qt.openUrlExternally(url)
+
+                HoverHandler {
+                    acceptedButtons: Qt.NoButton
+                    cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
+                }
+            }
+
+            // Inform about map chooser UI
+            QQC2.Label {
+                wrapMode: Text.Wrap
+                Layout.maximumWidth: modeSwitcher.width
+                visible: (kcm.nightLightSettings.mode === Private.NightLightMode.Automatic || kcm.nightLightSettings.mode === Private.NightLightMode.Location) && kcm.nightLightSettings.active
+                text: Kirigami.Settings.tabletMode
+                    ? i18nc("@label:chooser Tap should be translated to mean touching using a touchscreen", "Tap to choose your location on the map.")
+                    : i18nc("@label:chooser Click should be translated to mean clicking using a mouse", "Click to choose your location on the map.")
+                textFormat: Text.PlainText
+                font: Kirigami.Theme.smallFont
+                color: !autoLocationSwitch.checked ? Kirigami.Theme.textColor : "transparent"
             }
         }
 

@@ -62,18 +62,6 @@ Kirigami.FormLayout {
     }
 
     ColumnLayout {
-        QQC2.Label {
-            id: mapLabel
-            wrapMode: Text.Wrap
-            Layout.maximumWidth: mapRect.width
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
-            Layout.alignment: Qt.AlignHCenter
-            text: Kirigami.Settings.tabletMode
-                ? i18nc("@label:chooser Tap should be translated to mean touching using a touchscreen", "Tap to choose your location on the map.")
-                : i18nc("@label:chooser Click should be translated to mean clicking using a mouse", "Click to choose your location on the map.")
-            textFormat: Text.PlainText
-            font: Kirigami.Theme.smallFont
-        }
 
         Kirigami.ShadowedRectangle {
             id: mapRect
