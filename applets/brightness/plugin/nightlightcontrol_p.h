@@ -27,6 +27,7 @@ public:
     bool isEnabled() const;
     bool isRunning() const;
     bool isInhibited() const;
+    bool isInhibitedFromApplet() const;
 public Q_SLOTS:
     void toggleInhibition();
 Q_SIGNALS:
@@ -40,6 +41,7 @@ Q_SIGNALS:
     void enabledChanged();
     void runningChanged();
     void inhibitedChanged();
+    void inhibitedFromAppletChanged();
 
 private Q_SLOTS:
     void handlePropertiesChanged(const QString &interfaceName, const QVariantMap &changedProperties, const QStringList &invalidatedProperties);
@@ -56,6 +58,7 @@ private:
     void setEnabled(bool enabled);
     void setRunning(bool running);
     void setInhibited(bool inhibited);
+    void setInhibitedFromApplet(bool inhibitedFromApplet);
 
     int m_currentTemperature = 0;
     int m_targetTemperature = 0;
@@ -67,4 +70,5 @@ private:
     bool m_isEnabled = false;
     bool m_isRunning = false;
     bool m_isInhibited = false;
+    bool m_isInhibitedFromApplet = false;
 };

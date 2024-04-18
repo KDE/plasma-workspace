@@ -7,6 +7,7 @@
 
 #include "nightlightcontrol.h"
 #include "nightlightcontrol_p.h"
+#include "nightlightinhibitor.h"
 
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -51,14 +52,11 @@ NightLightControlPrivate::NightLightControlPrivate(QObject *parent)
 
         updateProperties(properties.value());
     });
-<<<<<<< Updated upstream
-=======
 
     m_isInhibitedFromApplet = NightLightInhibitor::instance().isInhibited();
     connect(&NightLightInhibitor::instance(), &NightLightInhibitor::inhibitedChanged, this, [this]() {
         setInhibitedFromApplet(NightLightInhibitor::instance().isInhibited());
     });
->>>>>>> Stashed changes
 }
 
 NightLightControlPrivate::~NightLightControlPrivate()
@@ -215,6 +213,20 @@ void NightLightControlPrivate::toggleInhibition()
     NightLightInhibitor::instance().toggleInhibition();
 }
 
+bool NightLightControlPrivate::isInhibitedFromApplet() const
+{
+    return m_isInhibitedFromApplet;
+}
+
+void NightLightControlPrivate::setInhibitedFromApplet(bool inhibitedFromApplet)
+{
+    if (m_isInhibitedFromApplet == inhibitedFromApplet) {
+        return;
+    }
+    m_isInhibitedFromApplet = inhibitedFromApplet;
+    Q_EMIT inhibitedFromAppletChanged();
+}
+
 int NightLightControlPrivate::mode() const
 {
     return m_mode;
@@ -279,6 +291,7 @@ NightLightControl::NightLightControl(QObject *parent)
     connect(d, &NightLightControlPrivate::enabledChanged, this, &NightLightControl::enabledChanged);
     connect(d, &NightLightControlPrivate::runningChanged, this, &NightLightControl::runningChanged);
     connect(d, &NightLightControlPrivate::inhibitedChanged, this, &NightLightControl::inhibitedChanged);
+    connect(d, &NightLightControlPrivate::inhibitedFromAppletChanged, this, &NightLightControl::inhibitedFromAppletChanged);
     connect(d, &NightLightControlPrivate::modeChanged, this, &NightLightControl::modeChanged);
     connect(d, &NightLightControlPrivate::daylightChanged, this, &NightLightControl::daylightChanged);
     connect(d, &NightLightControlPrivate::currentTransitionEndTimeChanged, this, &NightLightControl::currentTransitionEndTimeChanged);
@@ -314,6 +327,11 @@ bool NightLightControl::isInhibited() const
 void NightLightControl::toggleInhibition()
 {
     d->toggleInhibition();
+}
+
+bool NightLightControl::isInhibitedFromApplet() const
+{
+    return d->isInhibitedFromApplet();
 }
 
 int NightLightControl::mode() const

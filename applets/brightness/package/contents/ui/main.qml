@@ -117,7 +117,7 @@ PlasmoidItem {
         if (screenBrightnessControl.isBrightnessAvailable) {
             parts.push(i18n("Scroll to adjust screen brightness"));
         }
-        if (nightLightControl.enabled) {
+        if (nightLightControl.enabled && nightLightControl.togglable) {
             parts.push(i18n("Middle-click to toggle Night Light"));
         }
         return parts.join("\n");

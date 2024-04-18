@@ -118,6 +118,7 @@ PlasmaComponents3.ItemDelegate {
                     id: inhibitionSwitch
                     visible: control.enabled
                     checked: !control.inhibited
+                    enabled: control.togglable
 
                     Layout.fillWidth: true
 
@@ -208,6 +209,7 @@ PlasmaComponents3.ItemDelegate {
 
         readonly property bool transitioning: control.currentTemperature != control.targetTemperature
         readonly property bool hasSwitchingTimes: control.mode != 3
+        readonly property bool togglable: !control.inhibited || control.inhibitedFromApplet
     }
 
 }

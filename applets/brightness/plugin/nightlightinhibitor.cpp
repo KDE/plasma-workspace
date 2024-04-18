@@ -78,11 +78,13 @@ void NightLightInhibitor::inhibit()
         if (reply.isError()) {
             qCWarning(NIGHTLIGHT_CONTROL()) << "Could not inhibit Night Light:" << reply.error().message();
             m_state = Uninhibited;
+            Q_EMIT inhibitedChanged();
             return;
         }
 
         m_cookie = reply.value();
         m_state = Inhibited;
+        Q_EMIT inhibitedChanged();
 
         if (wasPendingUninhibit) {
             uninhibit();
@@ -122,6 +124,7 @@ void NightLightInhibitor::uninhibit()
         }
 
         m_state = Uninhibited;
+        Q_EMIT inhibitedChanged();
     });
 
     m_state = Uninhibiting;

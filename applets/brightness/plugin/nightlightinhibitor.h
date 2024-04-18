@@ -17,6 +17,11 @@ class NightLightInhibitor : public QObject
 {
     Q_OBJECT
 
+    /**
+     * This property holds whether Night Light is currently inhibited, inhibiting or has a pending inhibit.
+     */
+    Q_PROPERTY(bool inhibited READ isInhibited NOTIFY inhibitedChanged)
+
 public:
     explicit NightLightInhibitor(QObject *parent = nullptr);
     ~NightLightInhibitor() override;
@@ -44,6 +49,12 @@ public Q_SLOTS:
      *  Attemmpts to temporarily disable Night Light if currently uninhibited or uninhibiting, and uto re-enable it if currently inhibited or inhibiting.
      */
     void toggleInhibition();
+
+Q_SIGNALS:
+    /**
+     * This signal is emitted when the state of the inhibitor has changed.
+     */
+    void inhibitedChanged();
 
 private:
     class Private;

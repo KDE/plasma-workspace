@@ -41,6 +41,11 @@ class NightLightControl : public QObject
     Q_PROPERTY(bool inhibited READ isInhibited NOTIFY inhibitedChanged)
 
     /**
+     * This property holds a value to indicate whether night light is currently inhibited frin tge aooket abd can be uninhibited through it.
+     */
+    Q_PROPERTY(bool inhibitedFromApplet READ isInhibitedFromApplet NOTIFY inhibitedFromAppletChanged)
+
+    /**
      * This property holds a value to indicate if Night Light is on day mode.
      */
     Q_PROPERTY(bool daylight READ isDaylight NOTIFY daylightChanged)
@@ -93,6 +98,11 @@ public:
      * Returns @c true if Night Light is currently inhibited or inhibiting; otherwise @c false.
      */
     bool isInhibited() const;
+
+    /**
+     * Returns @c true if Night Light is currently inhibited from the applet and can be uninhibited; otherwise @c false.
+     */
+    bool isInhibitedFromApplet() const;
 
     /**
      * Returns @c true if Night Light is on day mode; otherwise @c false.
@@ -150,6 +160,11 @@ Q_SIGNALS:
      * Emitted when the inhibition state of Night Light has changed.
      */
     void inhibitedChanged();
+
+    /**
+     * Emitted wgeb Night Light has been inhibited or uninnhibited from the applet.
+     */
+    void inhibitedFromAppletChanged();
 
     /**
      * Emitted whenever Night Light changes between day and night time.
