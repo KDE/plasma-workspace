@@ -10,8 +10,6 @@
 #include <QObject>
 #include <qqmlregistration.h>
 
-class NightLightControlPrivate;
-
 /**
  * The Control provides a way for controling the state of Night Light.
  */
@@ -41,19 +39,19 @@ class NightLightControl : public QObject
     Q_PROPERTY(bool inhibited READ isInhibited NOTIFY inhibitedChanged)
 
     /**
-     * This property holds a value to indicate whether night light is currently inhibited frin tge aooket abd can be uninhibited through it.
+     * This property holds a value to indicate whether night light is currently inhibited from the applet can be uninhibited through it.
      */
     Q_PROPERTY(bool inhibitedFromApplet READ isInhibitedFromApplet NOTIFY inhibitedFromAppletChanged)
-
-    /**
-     * This property holds a value to indicate if Night Light is on day mode.
-     */
-    Q_PROPERTY(bool daylight READ isDaylight NOTIFY daylightChanged)
 
     /**
      * This property holds a value to indicate which mode is set for transitions (0 - automatic location, 1 - manual location, 2 - manual timings, 3 - constant)
      */
     Q_PROPERTY(int mode READ mode NOTIFY modeChanged)
+
+    /**
+     * This property holds a value to indicate if Night Light is on day mode.
+     */
+    Q_PROPERTY(bool daylight READ isDaylight NOTIFY daylightChanged)
 
     /**
      * This property holds a value to indicate currently applied color temperature.
@@ -105,14 +103,14 @@ public:
     bool isInhibitedFromApplet() const;
 
     /**
-     * Returns @c true if Night Light is on day mode; otherwise @c false.
-     */
-    bool isDaylight() const;
-
-    /**
      * Returns 0 if automatic location, 1 if manual location, 2 if manual timings, 3 if constant
      */
     int mode() const;
+
+    /**
+     * Returns @c true if Night Light is on day mode; otherwise @c false.
+     */
+    bool isDaylight() const;
 
     /**
      * Returns currently applied screen color temperature.
@@ -167,14 +165,14 @@ Q_SIGNALS:
     void inhibitedFromAppletChanged();
 
     /**
-     * Emitted whenever Night Light changes between day and night time.
-     */
-    void daylightChanged();
-
-    /**
      * Emitted whenever Night Light timings mode changes.
      */
     void modeChanged();
+
+    /**
+     * Emitted whenever Night Light changes between day and night time.
+     */
+    void daylightChanged();
 
     /**
      * Emitted whenever the current screen color temperature has changed.
@@ -196,6 +194,32 @@ Q_SIGNALS:
      */
     void scheduledTransitionStartTimeChanged();
 
+private Q_SLOTS:
+    void handlePropertiesChanged(const QString &interfaceName, const QVariantMap &changedProperties, const QStringList &invalidatedProperties);
+
 private:
-    NightLightControlPrivate *d;
+    void updateProperties(const QVariantMap &properties);
+    void setAvailable(bool available);
+    void setEnabled(bool enabled);
+    void setRunning(bool running);
+    void setInhibited(bool inhibited);
+    void setInhibitedFromApplet(bool inhibitedFromApplet);
+    void setMode(int mode);
+    void setDaylight(bool daylight);
+    void setCurrentTemperature(int temperature);
+    void setTargetTemperature(int temperature);
+    void setCurrentTransitionEndTime(quint64 currentTransitionEndTime);
+    void setScheduledTransitionStartTime(quint64 scheduledTransitionStartTime);
+
+    bool m_isAvailable = false;
+    bool m_isEnabled = false;
+    bool m_isRunning = false;
+    bool m_isInhibited = false;
+    bool m_isInhibitedFromApplet = false;
+    int m_mode = 0;
+    bool m_isDaylight = false;
+    int m_currentTemperature = 0;
+    int m_targetTemperature = 0;
+    quint64 m_currentTransitionEndTime = 0;
+    quint64 m_scheduledTransitionStartTime = 0;
 };
