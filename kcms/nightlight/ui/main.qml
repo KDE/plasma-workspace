@@ -95,7 +95,12 @@ KCM.SimpleKCM {
         displayComponent: QQC2.CheckBox {
             text: enabledAction.text
             checked: enabledAction.checked
-            onToggled: kcm.nightLightSettings.active = checked
+            onToggled: {
+                kcm.nightLightSettings.active = checked;
+                if (checked) {
+                    compositorAdaptor.preview(kcm.nightLightSettings.nightTemperature)
+                }
+            }
 
             // HACK: Kirigami.ToolBarPageHeader shows no padding otherwise
             rightPadding: Kirigami.Units.smallSpacing
