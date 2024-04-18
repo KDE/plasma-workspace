@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-17 00:39+0000\n"
-"PO-Revision-Date: 2024-04-07 13:35+0200\n"
+"PO-Revision-Date: 2024-04-17 11:01+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
@@ -83,37 +83,37 @@ msgstr "Nachtlicht uit"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "Nachtkleur op dagkleurtemperatuur"
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "Nachtkleur op nachtkleurtemperatuur"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "Nachtkleur in ochtendovergang (voltooid om %1)"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "Nachtkleur in avondovergang (voltooid om %1)"
 
 #: package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "Nachtkleur in avondovergang gepland op %1"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "Nachtkleur in ochtendovergang gepland op %1"
 
 #: package/contents/ui/main.qml:121
 #, kde-format
@@ -165,7 +165,7 @@ msgstr "Aan"
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
-msgstr "Overgang 's morgens"
+msgstr "Overgang in ochtend"
 
 #: package/contents/ui/NightLightItem.qml:92
 #, kde-format
