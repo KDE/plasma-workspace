@@ -6,7 +6,6 @@
  */
 
 #include "nightlightcontrol.h"
-#include "nightlightcontrol_p.h"
 #include "nightlightinhibitor.h"
 
 #include <QDBusConnection>
@@ -19,7 +18,7 @@ static const QString s_nightLightPath = QStringLiteral("/org/kde/KWin/NightLight
 static const QString s_nightLightInterface = QStringLiteral("org.kde.KWin.NightLight");
 static const QString s_propertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
 
-NightLightControlPrivate::NightLightControlPrivate(QObject *parent)
+NightLightControl::NightLightControl(QObject *parent)
     : QObject(parent)
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
@@ -59,13 +58,11 @@ NightLightControlPrivate::NightLightControlPrivate(QObject *parent)
     });
 }
 
-NightLightControlPrivate::~NightLightControlPrivate()
+NightLightControl::~NightLightControl()
 {
 }
 
-void NightLightControlPrivate::handlePropertiesChanged(const QString &interfaceName,
-                                                       const QVariantMap &changedProperties,
-                                                       const QStringList &invalidatedProperties)
+void NightLightControl::handlePropertiesChanged(const QString &interfaceName, const QVariantMap &changedProperties, const QStringList &invalidatedProperties)
 {
     Q_UNUSED(interfaceName)
     Q_UNUSED(invalidatedProperties)
@@ -73,17 +70,7 @@ void NightLightControlPrivate::handlePropertiesChanged(const QString &interfaceN
     updateProperties(changedProperties);
 }
 
-int NightLightControlPrivate::currentTemperature() const
-{
-    return m_currentTemperature;
-}
-
-int NightLightControlPrivate::targetTemperature() const
-{
-    return m_targetTemperature;
-}
-
-void NightLightControlPrivate::updateProperties(const QVariantMap &properties)
+void NightLightControl::updateProperties(const QVariantMap &properties)
 {
     const QVariant available = properties.value(QStringLiteral("available"));
     if (available.isValid()) {
@@ -98,6 +85,11 @@ void NightLightControlPrivate::updateProperties(const QVariantMap &properties)
     const QVariant running = properties.value(QStringLiteral("running"));
     if (running.isValid()) {
         setRunning(running.toBool());
+    }
+
+    const QVariant inhibited = properties.value(QStringLiteral("inhibited"));
+    if (inhibited.isValid()) {
+        setInhibited(inhibited.toBool());
     }
 
     const QVariant mode = properties.value(QStringLiteral("mode"));
@@ -130,37 +122,14 @@ void NightLightControlPrivate::updateProperties(const QVariantMap &properties)
     if (scheduledTransitionStartTime.isValid()) {
         setScheduledTransitionStartTime(scheduledTransitionStartTime.toULongLong() * 1000);
     }
-
-    const QVariant inhibited = properties.value(QStringLiteral("inhibited"));
-    if (inhibited.isValid()) {
-        setInhibited(inhibited.toBool());
-    }
 }
 
-void NightLightControlPrivate::setCurrentTemperature(int temperature)
-{
-    if (m_currentTemperature == temperature) {
-        return;
-    }
-    m_currentTemperature = temperature;
-    Q_EMIT currentTemperatureChanged();
-}
-
-void NightLightControlPrivate::setTargetTemperature(int temperature)
-{
-    if (m_targetTemperature == temperature) {
-        return;
-    }
-    m_targetTemperature = temperature;
-    Q_EMIT targetTemperatureChanged();
-}
-
-bool NightLightControlPrivate::isAvailable() const
+bool NightLightControl::isAvailable() const
 {
     return m_isAvailable;
 }
 
-void NightLightControlPrivate::setAvailable(bool available)
+void NightLightControl::setAvailable(bool available)
 {
     if (m_isAvailable == available) {
         return;
@@ -169,12 +138,12 @@ void NightLightControlPrivate::setAvailable(bool available)
     Q_EMIT availableChanged();
 }
 
-bool NightLightControlPrivate::isEnabled() const
+bool NightLightControl::isEnabled() const
 {
     return m_isEnabled;
 }
 
-void NightLightControlPrivate::setEnabled(bool enabled)
+void NightLightControl::setEnabled(bool enabled)
 {
     if (m_isEnabled == enabled) {
         return;
@@ -183,12 +152,12 @@ void NightLightControlPrivate::setEnabled(bool enabled)
     Q_EMIT enabledChanged();
 }
 
-bool NightLightControlPrivate::isRunning() const
+bool NightLightControl::isRunning() const
 {
     return m_isRunning;
 }
 
-void NightLightControlPrivate::setRunning(bool running)
+void NightLightControl::setRunning(bool running)
 {
     if (m_isRunning == running) {
         return;
@@ -197,28 +166,28 @@ void NightLightControlPrivate::setRunning(bool running)
     Q_EMIT runningChanged();
 }
 
-bool NightLightControlPrivate::isInhibited() const
+bool NightLightControl::isInhibited() const
 {
     return m_isInhibited;
 }
 
-void NightLightControlPrivate::setInhibited(bool inhibited)
+void NightLightControl::setInhibited(bool inhibited)
 {
     m_isInhibited = inhibited;
     Q_EMIT inhibitedChanged();
 }
 
-void NightLightControlPrivate::toggleInhibition()
+void NightLightControl::toggleInhibition()
 {
     NightLightInhibitor::instance().toggleInhibition();
 }
 
-bool NightLightControlPrivate::isInhibitedFromApplet() const
+bool NightLightControl::isInhibitedFromApplet() const
 {
     return m_isInhibitedFromApplet;
 }
 
-void NightLightControlPrivate::setInhibitedFromApplet(bool inhibitedFromApplet)
+void NightLightControl::setInhibitedFromApplet(bool inhibitedFromApplet)
 {
     if (m_isInhibitedFromApplet == inhibitedFromApplet) {
         return;
@@ -227,12 +196,12 @@ void NightLightControlPrivate::setInhibitedFromApplet(bool inhibitedFromApplet)
     Q_EMIT inhibitedFromAppletChanged();
 }
 
-int NightLightControlPrivate::mode() const
+int NightLightControl::mode() const
 {
     return m_mode;
 }
 
-void NightLightControlPrivate::setMode(int mode)
+void NightLightControl::setMode(int mode)
 {
     if (m_mode == mode) {
         return;
@@ -241,12 +210,12 @@ void NightLightControlPrivate::setMode(int mode)
     Q_EMIT modeChanged();
 }
 
-bool NightLightControlPrivate::isDaylight() const
+bool NightLightControl::isDaylight() const
 {
     return m_isDaylight;
 }
 
-void NightLightControlPrivate::setDaylight(bool daylight)
+void NightLightControl::setDaylight(bool daylight)
 {
     if (m_isDaylight == daylight) {
         return;
@@ -255,12 +224,40 @@ void NightLightControlPrivate::setDaylight(bool daylight)
     Q_EMIT daylightChanged();
 }
 
-quint64 NightLightControlPrivate::currentTransitionEndTime() const
+int NightLightControl::currentTemperature() const
+{
+    return m_currentTemperature;
+}
+
+void NightLightControl::setCurrentTemperature(int temperature)
+{
+    if (m_currentTemperature == temperature) {
+        return;
+    }
+    m_currentTemperature = temperature;
+    Q_EMIT currentTemperatureChanged();
+}
+
+int NightLightControl::targetTemperature() const
+{
+    return m_targetTemperature;
+}
+
+void NightLightControl::setTargetTemperature(int temperature)
+{
+    if (m_targetTemperature == temperature) {
+        return;
+    }
+    m_targetTemperature = temperature;
+    Q_EMIT targetTemperatureChanged();
+}
+
+quint64 NightLightControl::currentTransitionEndTime() const
 {
     return m_currentTransitionEndTime;
 }
 
-void NightLightControlPrivate::setCurrentTransitionEndTime(quint64 currentTransitionEndTime)
+void NightLightControl::setCurrentTransitionEndTime(quint64 currentTransitionEndTime)
 {
     if (m_currentTransitionEndTime == currentTransitionEndTime) {
         return;
@@ -269,99 +266,18 @@ void NightLightControlPrivate::setCurrentTransitionEndTime(quint64 currentTransi
     Q_EMIT currentTransitionEndTimeChanged();
 }
 
-quint64 NightLightControlPrivate::scheduledTransitionStartTime() const
+quint64 NightLightControl::scheduledTransitionStartTime() const
 {
     return m_scheduledTransitionStartTime;
 }
 
-void NightLightControlPrivate::setScheduledTransitionStartTime(quint64 scheduledTransitionStartTime)
+void NightLightControl::setScheduledTransitionStartTime(quint64 scheduledTransitionStartTime)
 {
     if (m_scheduledTransitionStartTime == scheduledTransitionStartTime) {
         return;
     }
     m_scheduledTransitionStartTime = scheduledTransitionStartTime;
     Q_EMIT scheduledTransitionStartTimeChanged();
-}
-
-NightLightControl::NightLightControl(QObject *parent)
-    : QObject(parent)
-    , d(new NightLightControlPrivate(this))
-{
-    connect(d, &NightLightControlPrivate::availableChanged, this, &NightLightControl::availableChanged);
-    connect(d, &NightLightControlPrivate::enabledChanged, this, &NightLightControl::enabledChanged);
-    connect(d, &NightLightControlPrivate::runningChanged, this, &NightLightControl::runningChanged);
-    connect(d, &NightLightControlPrivate::inhibitedChanged, this, &NightLightControl::inhibitedChanged);
-    connect(d, &NightLightControlPrivate::inhibitedFromAppletChanged, this, &NightLightControl::inhibitedFromAppletChanged);
-    connect(d, &NightLightControlPrivate::modeChanged, this, &NightLightControl::modeChanged);
-    connect(d, &NightLightControlPrivate::daylightChanged, this, &NightLightControl::daylightChanged);
-    connect(d, &NightLightControlPrivate::currentTransitionEndTimeChanged, this, &NightLightControl::currentTransitionEndTimeChanged);
-    connect(d, &NightLightControlPrivate::scheduledTransitionStartTimeChanged, this, &NightLightControl::scheduledTransitionStartTimeChanged);
-    connect(d, &NightLightControlPrivate::currentTemperatureChanged, this, &NightLightControl::currentTemperatureChanged);
-    connect(d, &NightLightControlPrivate::targetTemperatureChanged, this, &NightLightControl::targetTemperatureChanged);
-}
-
-NightLightControl::~NightLightControl()
-{
-}
-
-bool NightLightControl::isAvailable() const
-{
-    return d->isAvailable();
-}
-
-bool NightLightControl::isEnabled() const
-{
-    return d->isEnabled();
-}
-
-bool NightLightControl::isRunning() const
-{
-    return d->isRunning();
-}
-
-bool NightLightControl::isInhibited() const
-{
-    return d->isInhibited();
-}
-
-void NightLightControl::toggleInhibition()
-{
-    d->toggleInhibition();
-}
-
-bool NightLightControl::isInhibitedFromApplet() const
-{
-    return d->isInhibitedFromApplet();
-}
-
-int NightLightControl::mode() const
-{
-    return d->mode();
-}
-
-bool NightLightControl::isDaylight() const
-{
-    return d->isDaylight();
-}
-
-int NightLightControl::currentTemperature() const
-{
-    return d->currentTemperature();
-}
-
-int NightLightControl::targetTemperature() const
-{
-    return d->targetTemperature();
-}
-
-quint64 NightLightControl::currentTransitionEndTime() const
-{
-    return d->currentTransitionEndTime();
-}
-
-quint64 NightLightControl::scheduledTransitionStartTime() const
-{
-    return d->scheduledTransitionStartTime();
 }
 
 #include "moc_nightlightcontrol.cpp"
