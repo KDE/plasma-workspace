@@ -39,12 +39,12 @@ PlasmaComponents3.ItemDelegate {
                 if (!monitor.enabled) {
                     return "redshift-status-on"; // not configured: show generic night light icon rather "manually turned off" icon
                 } else if (!monitor.running) {
-                    if (monitor.daylight && monitor.targetTemperature != 6500) {
+                    if (monitor.daylight && monitor.hasConfiguredTemperature) {
                         return; "redshift-status-day-off";
                     } else {
                         return "redshift-status-off";
                     }
-                } else if (monitor.daylight && monitor.targetTemperature != 6500) { // show daylight icon only when temperature during the day is actually modified
+                } else if (monitor.daylight && monitor.hasConfiguredTemperature) { // show daylight icon only when temperature during the day is actually modified
                     return "redshift-status-day-on";
                 } else {
                     return "redshift-status-on";
@@ -232,6 +232,8 @@ PlasmaComponents3.ItemDelegate {
 
         readonly property bool transitioning: monitor.currentTemperature != monitor.targetTemperature
         readonly property bool hasSwitchingTimes: monitor.mode != 3
+        readonly property bool hasActiveTemperature: monitor.currentTemperature != 6500
+        readonly property bool hasConfiguredTemperature: monitor.targetTemperature != 6500
     }
 
 }

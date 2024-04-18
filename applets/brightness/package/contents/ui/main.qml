@@ -48,8 +48,8 @@ PlasmoidItem {
         id: keyboardColorControl
     }
 
-    property bool isNightLightActive: nightLightMonitor.running && nightLightMonitor.currentTemperature != 6500
-    property bool isNightLightInhibited: nightLightInhibitor.state == NightLightInhibitor.Inhibiting || nightLightInhibitor.state == NightLightInhibitor.Inhibited && nightLightMonitor.targetTemperature != 6500
+    property bool isNightLightActive: nightLightMonitor.running && nightLightMonitor.hasActiveTemperature
+    property bool isNightLightInhibited: nightLightInhibitor.state == NightLightInhibitor.Inhibiting || nightLightInhibitor.state == NightLightInhibitor.Inhibited && nightLightMonitor.hasConfiguredTemperature
     property int screenBrightnessPercent: screenBrightnessControl.brightnessMax ? Math.round(100 * screenBrightnessControl.brightness / screenBrightnessControl.brightnessMax) : 0
     property int keyboardBrightnessPercent: keyboardBrightnessControl.brightnessMax ? Math.round(100 * keyboardBrightnessControl.brightness / keyboardBrightnessControl.brightnessMax) : 0
 
@@ -85,8 +85,8 @@ PlasmoidItem {
         if (nightLightMonitor.enabled) {
             if (!nightLightMonitor.running) {
                 parts.push(i18nc("Status", "Night Light off"));
-            } else if (nightLightMonitor.currentTemperature != 6500) {
-                if (nightLightMonitor.currentTemperature == nightLightMonitor.targetTemperature) {
+            } else if (nightLightMonitor.hasActiveTemperature) {
+                if (!nightLightMonitor.transitioning) {
                     if (nightLightMonitor.daylight) {
                         parts.push(i18nc("Status", "Night Light at day color temperature"));
                     } else {
@@ -131,12 +131,12 @@ PlasmoidItem {
 
         if (nightLightMonitor.enabled) {
             if (!nightLightMonitor.running) {
-                if (nightLightMonitor.daylight && nightLightMonitor.targetTemperature != 6500) {
+                if (nightLightMonitor.daylight && nightLightMonitor.hasConfiguredTemperature) {
                     iconName = "redshift-status-day-off";
                 } else {
                     iconName = "redshift-status-off";
                 }
-            } else if (nightLightMonitor.currentTemperature != 6500) {
+            } else if (nightLightMonitor.hasActiveTemperature) {
                 if (nightLightMonitor.daylight) {
                     iconName = "redshift-status-day-on";
                 } else {
