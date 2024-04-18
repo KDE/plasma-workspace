@@ -113,6 +113,8 @@ QVariant DaysModel::data(const QModelIndex &index, int role) const
             return currentData.monthNumber;
         case yearNumber:
             return currentData.yearNumber;
+        case DayLabel:
+            return QLocale::system().toString(currentData.dayNumber);
         default:
             break;
         }
@@ -441,6 +443,7 @@ QHash<int, QByteArray> DaysModel::roleNames() const
         {dayNumber, "dayNumber"},
         {monthNumber, "monthNumber"},
         {yearNumber, "yearNumber"},
+        {DayLabel, "dayLabel"},
         {EventColor, "eventColor"},
         {EventCount, "eventCount"},
         {Events, "events"},

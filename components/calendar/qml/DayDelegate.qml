@@ -165,7 +165,7 @@ PlasmaComponents3.AbstractButton {
             font.pointSize: -1 // Avoid QML warnings
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
-            text: model.label || dayNumber
+            text: model.label || model.dayLabel
             opacity: isCurrent ? 1.0 : 0.5
             wrapMode: Text.NoWrap
             elide: Text.ElideRight
