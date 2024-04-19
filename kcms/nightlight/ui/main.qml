@@ -78,11 +78,20 @@ KCM.SimpleKCM {
 
     header: ColumnLayout {
         Kirigami.InlineMessage {
-            id: errorMessage
+            id: compositorAdaptorErrorMessage
             Layout.fillWidth: true
             visible: compositorAdaptor.error !== CC.CompositorAdaptor.ErrorCodeSuccess
             type: Kirigami.MessageType.Error
             text: compositorAdaptor.errorText
+        }
+
+        Kirigami.InlineMessage {
+            id: configInvalidMessage
+            visible: kcm.configurationInvalid
+            type: Kirigami.MessageType.Warning
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignHCenter
+            text: i18nc("@info:placeholder", "Please provide a location or choose a different switching times mode.")
         }
     }
 
@@ -94,12 +103,13 @@ KCM.SimpleKCM {
 
         displayComponent: QQC2.CheckBox {
             text: enabledAction.text
-            checked: enabledAction.checked
+            checked: kcm.nightLightSettings.active
             onToggled: {
                 kcm.nightLightSettings.active = checked;
                 if (checked) {
                     compositorAdaptor.preview(kcm.nightLightSettings.nightTemperature)
                 }
+                autoLocationSwitch.checked = false;
             }
 
             // HACK: Kirigami.ToolBarPageHeader shows no padding otherwise
@@ -372,6 +382,8 @@ KCM.SimpleKCM {
                     } else {
                         root.endLocator();
                     }
+                    configInvalidMessage.visible = kcm.configurationInvalid;
+                    kcm.needsSave = !kcm.configurationInvalid;
                 }
             }
 
@@ -474,6 +486,8 @@ KCM.SimpleKCM {
                         kcm.nightLightSettings.mode = Private.NightLightMode.Location;
                         root.endLocator();
                     }
+                    configInvalidMessage.visible = kcm.configurationInvalid;
+                    kcm.needsSave = !kcm.configurationInvalid;
                 }
             }
 
@@ -529,6 +543,10 @@ KCM.SimpleKCM {
             property real autoLongitude: kcm.nightLightSettings.longitudeAuto
             property real autoLatitude: kcm.nightLightSettings.latitudeAuto
 
+            onManualLocationChanged: {
+                configInvalidMessage.visible = kcm.configurationInvalid;
+                kcm.needsSave = !kcm.configurationInvalid;
+            }
         }
 
         // Show loading placeholder while locating

@@ -15,6 +15,7 @@
 #include <KPluginFactory>
 
 #include "nightlightdata.h"
+#include "nightlightsettings.h"
 
 namespace ColorCorrect
 {
@@ -41,8 +42,18 @@ NightLightSettings *KCMNightLight::nightLightSettings() const
     return m_data->settings();
 }
 
+bool KCMNightLight::isConfigurationInvalid()
+{
+    return nightLightSettings()->active()
+        && ((nightLightSettings()->mode() == NightLightMode::Location && nightLightSettings()->latitudeFixed() == 0.
+             && nightLightSettings()->longitudeFixed() == 0.));
+}
+
 void KCMNightLight::save()
 {
+    if (isConfigurationInvalid()) {
+        return;
+    }
     KQuickManagedConfigModule::save();
 
     // load/unload colorcorrectlocationupdater based on whether user set it to automatic location

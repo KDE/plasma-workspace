@@ -22,11 +22,13 @@ class KCMNightLight : public KQuickManagedConfigModule
     Q_PROPERTY(int maxDayTemp MEMBER maxDayTemp CONSTANT)
     Q_PROPERTY(int minNightTemp MEMBER minNightTemp CONSTANT)
     Q_PROPERTY(int maxNightTemp MEMBER maxNightTemp CONSTANT)
+    Q_PROPERTY(bool configurationInvalid READ isConfigurationInvalid CONSTANT)
 public:
     KCMNightLight(QObject *parent, const KPluginMetaData &data);
     ~KCMNightLight() override = default;
 
     NightLightSettings *nightLightSettings() const;
+    Q_INVOKABLE bool isConfigurationInvalid();
 
 private:
     NightLightData *const m_data;

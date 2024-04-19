@@ -61,6 +61,8 @@ Kirigami.FormLayout {
         }
     }
 
+    signal manualLocationChanged()
+
     ColumnLayout {
 
         Kirigami.ShadowedRectangle {
@@ -258,6 +260,9 @@ Kirigami.FormLayout {
                     settingName: "LatitudeFixed"
                     extraEnabledConditions: kcm.nightLightSettings.active
                 }
+                onEditingFinished: {
+                    root.manualLocationChanged();
+                }
             }
 
             QQC2.Label {
@@ -282,6 +287,9 @@ Kirigami.FormLayout {
                     configObject: kcm.nightLightSettings
                     settingName: "LongitudeFixed"
                     extraEnabledConditions: kcm.nightLightSettings.active
+                }
+                onEditingFinished: {
+                    root.manualLocationChanged();
                 }
             }
         }
