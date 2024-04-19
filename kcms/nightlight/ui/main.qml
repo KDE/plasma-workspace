@@ -519,14 +519,21 @@ KCM.SimpleKCM {
             }
         }
 
-        // Show location chooser in manual location mode
-        LocationsFixedView {
-            visible: kcm.nightLightSettings.mode === Private.NightLightMode.Location && kcm.nightLightSettings.active
+        // Show location indicator/chooser in automatic and manual location modes
+        LocationsView {
+            visible: (kcm.nightLightSettings.mode === Private.NightLightMode.Automatic || kcm.nightLightSettings.mode === Private.NightLightMode.Location) && kcm.nightLightSettings.active && !loadingPlaceholderItem.visible
             Layout.alignment: Qt.AlignHCenter
             enabled: kcm.nightLightSettings.active
+
+            property bool autoLocation: kcm.nightLightSettings.mode === Private.NightLightMode.Automatic
+            property real autoLongitude: kcm.nightLightSettings.longitudeAuto
+            property real autoLatitude: kcm.nightLightSettings.latitudeAuto
+
         }
 
+        // Show loading placeholder while locating
         Item {
+            id: loadingPlaceholderItem
             visible: kcm.nightLightSettings.active
                 && kcm.nightLightSettings.mode === Private.NightLightMode.Automatic
                 && (!root.locator || !root.doneLocating)

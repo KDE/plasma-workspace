@@ -149,8 +149,8 @@ Kirigami.FormLayout {
 
                     Kirigami.Icon {
                         z: 9999
-                        readonly property double rawX: root.longitudeToX(kcm.nightLightSettings.longitudeFixed)
-                        readonly property double rawY: root.latitudeToY(kcm.nightLightSettings.latitudeFixed)
+                        readonly property double rawX: root.longitudeToX(root.autoLocation ? root.autoLongitude : kcm.nightLightSettings.longitudeFixed)
+                        readonly property double rawY: root.latitudeToY(root.autoLocation ? root.autoLatitude : kcm.nightLightSettings.latitudeFixed)
                         x: rawX - (width / 2) / mapRect.currentScale
                         y: rawY - (height - 4) / mapRect.currentScale
                         width: Kirigami.Units.iconSizes.medium
@@ -165,6 +165,9 @@ Kirigami.FormLayout {
 
                     TapHandler {
                         onTapped: event => {
+                            if (root.autoLocation) {
+                                return;
+                            }
                             const clickPos = event.position;
                             kcm.nightLightSettings.longitudeFixed = root.xToLongitude(clickPos.x);
                             kcm.nightLightSettings.latitudeFixed = root.yToLatitude(clickPos.y);
@@ -222,10 +225,6 @@ Kirigami.FormLayout {
             Layout.topMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignHCenter
 
-            QQC2.Label {
-                text: i18nc("@label: textbox", "Latitude:")
-                textFormat: Text.PlainText
-            }
             Connections {
                 target: kcm.nightLightSettings
                 function onLatitudeFixedChanged() {
@@ -235,16 +234,24 @@ Kirigami.FormLayout {
                     longitudeFixedField.backend = kcm.nightLightSettings.longitudeFixed;
                 }
             }
+
+            QQC2.Label {
+                text: i18nc("@label: textbox", "Latitude:")
+                textFormat: Text.PlainText
+            }
             NumberField {
                 id: latitudeFixedField
+                readOnly: root.autoLocation
                 validator: DoubleValidator {
                     bottom: -90
                     top: 90
                     decimals: 10
                 }
-                backend: kcm.nightLightSettings.latitudeFixed
+                backend: root.autoLocation ? root.autoLatitude : kcm.nightLightSettings.latitudeFixed
                 onBackendChanged: {
-                    kcm.nightLightSettings.latitudeFixed = backend;
+                    if (!root.autoLocation) {
+                        kcm.nightLightSettings.latitudeFixed = backend;
+                    }
                 }
                 KCM.SettingStateBinding {
                     configObject: kcm.nightLightSettings
@@ -259,14 +266,17 @@ Kirigami.FormLayout {
             }
             NumberField {
                 id: longitudeFixedField
+                readOnly: root.autoLocation
                 validator: DoubleValidator {
                     bottom: -180
                     top: 180
                     decimals: 10
                 }
-                backend: kcm.nightLightSettings.longitudeFixed
+                backend: root.autoLocation ? root.autoLongitude : kcm.nightLightSettings.longitudeFixed
                 onBackendChanged: {
-                    kcm.nightLightSettings.longitudeFixed = backend;
+                    if (!root.autoLocation) {
+                        kcm.nightLightSettings.longitudeFixed = backend;
+                    }
                 }
                 KCM.SettingStateBinding {
                     configObject: kcm.nightLightSettings
