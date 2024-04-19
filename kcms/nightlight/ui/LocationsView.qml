@@ -61,20 +61,10 @@ Kirigami.FormLayout {
         }
     }
 
-    ColumnLayout {
-        QQC2.Label {
-            id: mapLabel
-            wrapMode: Text.Wrap
-            Layout.maximumWidth: mapRect.width
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
-            Layout.alignment: Qt.AlignHCenter
-            text: Kirigami.Settings.tabletMode
-                ? i18nc("@label:chooser Tap should be translated to mean touching using a touchscreen", "Tap to choose your location on the map.")
-                : i18nc("@label:chooser Click should be translated to mean clicking using a mouse", "Click to choose your location on the map.")
-            textFormat: Text.PlainText
-            font: Kirigami.Theme.smallFont
-        }
+    signal latitudeChanged()
+    signal longitudeChanged()
 
+    ColumnLayout {
         Kirigami.ShadowedRectangle {
             id: mapRect
             Layout.alignment: Qt.AlignHCenter
@@ -163,8 +153,8 @@ Kirigami.FormLayout {
 
                     Kirigami.Icon {
                         z: 9999
-                        readonly property double rawX: root.longitudeToX(kcm.nightLightSettings.longitudeFixed)
-                        readonly property double rawY: root.latitudeToY(kcm.nightLightSettings.latitudeFixed)
+                        readonly property double rawX: root.longitudeToX(root.longitude)
+                        readonly property double rawY: root.latitudeToY(root.latitude)
                         x: rawX - (width / 2) / mapRect.currentScale
                         y: rawY - (height - 4) / mapRect.currentScale
                         width: Kirigami.Units.iconSizes.medium
@@ -179,9 +169,11 @@ Kirigami.FormLayout {
 
                     TapHandler {
                         onTapped: event => {
-                            const clickPos = event.position;
-                            kcm.nightLightSettings.longitudeFixed = root.xToLongitude(clickPos.x);
-                            kcm.nightLightSettings.latitudeFixed = root.yToLatitude(clickPos.y);
+                            if (!root.autoLocation) {
+                                const clickPos = event.position;
+                                kcm.nightLightSettings.longitudeFixed = root.xToLongitude(clickPos.x);
+                                kcm.nightLightSettings.latitudeFixed = root.yToLatitude(clickPos.y);
+                            }
                         }
                     }
 
@@ -236,29 +228,38 @@ Kirigami.FormLayout {
             Layout.topMargin: Kirigami.Units.smallSpacing
             Layout.alignment: Qt.AlignHCenter
 
+            Connections {
+                target: kcm.nightLightSettings
+                function onLatitudeFixedChanged() {
+                    if (!root.autoLocation) {
+                        latitudeField.backend = kcm.nightLightSettings.latitudeFixed;
+                    }
+                }
+                function onLongitudeFixedChanged() {
+                    if (!root.autoLocation) {
+                        longitudeField.backend = kcm.nightLightSettings.longitudeFixed;
+                    }
+                }
+            }
+
             QQC2.Label {
                 text: i18nc("@label: textbox", "Latitude:")
                 textFormat: Text.PlainText
             }
-            Connections {
-                target: kcm.nightLightSettings
-                function onLatitudeFixedChanged() {
-                    latitudeFixedField.backend = kcm.nightLightSettings.latitudeFixed;
-                }
-                function onLongitudeFixedChanged() {
-                    longitudeFixedField.backend = kcm.nightLightSettings.longitudeFixed;
-                }
-            }
             NumberField {
-                id: latitudeFixedField
+                id: latitudeField
+                readOnly: root.autoLocation
                 validator: DoubleValidator {
                     bottom: -90
                     top: 90
                     decimals: 10
                 }
-                backend: kcm.nightLightSettings.latitudeFixed
+                backend: root.latitude
                 onBackendChanged: {
-                    kcm.nightLightSettings.latitudeFixed = backend;
+                    if (!root.autoLocation) {
+                        kcm.nightLightSettings.latitudeFixed = backend;
+                        root.latitudeChanged();
+                    }
                 }
                 KCM.SettingStateBinding {
                     configObject: kcm.nightLightSettings
@@ -272,15 +273,19 @@ Kirigami.FormLayout {
                 textFormat: Text.PlainText
             }
             NumberField {
-                id: longitudeFixedField
+                id: longitudeField
+                readOnly: root.autoLocation
                 validator: DoubleValidator {
                     bottom: -180
                     top: 180
                     decimals: 10
                 }
-                backend: kcm.nightLightSettings.longitudeFixed
+                backend: root.longitude
                 onBackendChanged: {
-                    kcm.nightLightSettings.longitudeFixed = backend;
+                    if (!root.autoLocation) {
+                        kcm.nightLightSettings.longitudeFixed = backend;
+                        root.longitudeChanged();
+                    }
                 }
                 KCM.SettingStateBinding {
                     configObject: kcm.nightLightSettings

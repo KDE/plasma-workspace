@@ -503,16 +503,38 @@ KCM.SimpleKCM {
                     cursorShape: parent.hoveredLink ? Qt.PointingHandCursor : Qt.ArrowCursor
                 }
             }
+
+            // Inform about map chooser UI
+            QQC2.Label {
+                wrapMode: Text.Wrap
+                Layout.maximumWidth: modeSwitcher.width
+                visible: (kcm.nightLightSettings.mode === Private.NightLightMode.Automatic || kcm.nightLightSettings.mode === Private.NightLightMode.Location) && kcm.nightLightSettings.active
+                text: Kirigami.Settings.tabletMode
+                    ? i18nc("@label:chooser Tap should be translated to mean touching using a touchscreen", "Tap to choose your location on the map.")
+                    : i18nc("@label:chooser Click should be translated to mean clicking using a mouse", "Click to choose your location on the map.")
+                textFormat: Text.PlainText
+                font: Kirigami.Theme.smallFont
+                color: !autoLocationSwitch.checked ? Kirigami.Theme.textColor : "transparent"
+            }
+            
+            
         }
 
-        // Show location chooser in manual location mode
-        LocationsFixedView {
-            visible: kcm.nightLightSettings.mode === Private.NightLightMode.Location && kcm.nightLightSettings.active
+        // Show location indicator/chooser in automatic and manual location modes
+        LocationsView {
+            id: locationsView
+            visible: (kcm.nightLightSettings.mode === Private.NightLightMode.Automatic || kcm.nightLightSettings.mode === Private.NightLightMode.Location) && kcm.nightLightSettings.active && !loadingPlaceholderItem.visible
             Layout.alignment: Qt.AlignHCenter
             enabled: kcm.nightLightSettings.active
+
+            property bool autoLocation: autoLocationSwitch.checked
+            property real longitude: autoLocation ? kcm.nightLightSettings.longitudeAuto : kcm.nightLightSettings.longitudeFixed
+            property real latitude: autoLocation ? kcm.nightLightSettings.latitudeAuto  : kcm.nightLightSettings.latitudeFixed
         }
 
+        // Show loading placeholder while locating
         Item {
+            id: loadingPlaceholderItem
             visible: kcm.nightLightSettings.active
                 && autoLocationSwitch.checked
                 && (!root.locator || !root.doneLocating)
