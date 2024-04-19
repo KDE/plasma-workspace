@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-17 00:39+0000\n"
-"PO-Revision-Date: 2024-04-08 19:10\n"
+"PO-Revision-Date: 2024-04-18 19:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -84,37 +84,37 @@ msgstr "夜间颜色关闭"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "夜间颜色正在使用日间色温"
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "夜间颜色正在使用夜间色温"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "夜间颜色正在过渡到日间色温 (%1 切换完成)"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "夜间颜色正在过渡到夜间色温 (%1 切换完成)"
 
 #: package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "夜间颜色预定在 %1 过渡到夜间色温"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "夜间颜色预定在 %1 过渡到日间色温"
 
 #: package/contents/ui/main.qml:121
 #, kde-format
@@ -245,7 +245,3 @@ msgstr "键盘颜色"
 #, kde-format
 msgid "Night Light"
 msgstr "夜间颜色"
-
-#~ msgctxt "Status; placeholder is a temperature"
-#~ msgid "Night Light at %1K"
-#~ msgstr "夜间颜色色温 %1K"

@@ -1,8 +1,7 @@
 # Translation for kfontinst.po to Euskara/Basque (eu).
-# Copyright (C) 2003-2018, Free Software Foundation.
-# Copyright (C) 2019-2021, This file is copyright:
+# Copyright (C) 2003-2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Marcos  <marcos@euskalgnu.org>, 2003, 2005.
@@ -15,14 +14,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2021-11-27 12:35+0100\n"
+"PO-Revision-Date: 2024-04-18 22:27+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #, kde-format
@@ -68,12 +67,11 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:122
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"winIDk zehaztutako X aplikazio baten elkarrizketa-koadroa behin-behineko "
-"bihurtzen du"
+"«windowHandle» bidez zehaztutako leiho baterako, elkarrizketa-koadroa "
+"iragankorra egiten du"
 
 #: apps/Installer.cpp:125
 #, kde-format

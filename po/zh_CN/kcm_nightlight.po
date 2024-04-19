@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-17 00:39+0000\n"
-"PO-Revision-Date: 2024-04-09 19:25\n"
+"PO-Revision-Date: 2024-04-18 19:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -36,14 +36,14 @@ msgstr "%1 开始逐渐过渡到日间色温，%2 切换完成"
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr "点击选择您在地图上的位置。"
+msgstr "点击地图以选择您的位置。"
 
 #: ui/LocationsFixedView.qml:39
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr "点击选择您在地图上的位置。"
+msgstr "点击地图以选择您的位置。"
 
 #: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
 #, kde-format
@@ -84,7 +84,7 @@ msgstr "夜间颜色功能可以滤除蓝光，使屏幕以偏暖的颜色显示
 #: ui/main.qml:151
 #, kde-format
 msgid "Day light temperature:"
-msgstr "白天色温："
+msgstr "日间色温："
 
 #: ui/main.qml:194 ui/main.qml:256
 #, kde-format
@@ -164,12 +164,12 @@ msgstr ""
 #: ui/main.qml:347
 #, kde-format
 msgid "Begin night light at:"
-msgstr "开始夜间颜色："
+msgstr "夜间颜色开始时间："
 
 #: ui/main.qml:363
 #, kde-format
 msgid "Begin day light at:"
-msgstr "开始白天颜色："
+msgstr "日间颜色开始时间："
 
 #: ui/main.qml:378
 #, kde-format
@@ -202,21 +202,16 @@ msgstr "正在定位…"
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr " 小时"
 
 #: ui/TimeField.qml:40
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:46
-#, fuzzy, kde-format
-#| msgid "%1 minute"
-#| msgid_plural "%1 minutes"
+#, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr "%1 分钟"
-
-#~ msgid "Input format: HH:MM"
-#~ msgstr "输入格式：HH:MM"
+msgstr "分钟"

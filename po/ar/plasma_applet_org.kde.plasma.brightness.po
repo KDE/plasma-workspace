@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-17 00:39+0000\n"
-"PO-Revision-Date: 2024-04-07 11:46+0400\n"
+"PO-Revision-Date: 2024-04-18 13:25+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -84,37 +84,37 @@ msgstr "الإضاءة الليلية معطلة"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "ضوء الليل عند حرارة لون النهار"
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "ضوء الليل عند حرارة لون الليل"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "الضوء الليلي في الفترة الانتقالية الصباحية (اكتمل بنسبة %1)"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "الضوء الليلي في الفترة الانتقالية المسائية (اكتمل بنسبة %1)"
 
 #: package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "جدولة الانتقال المسائي للضوء الليلي عند %1"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "جدولة الانتقال الصباحي للضوء الليلي عند %1"
 
 #: package/contents/ui/main.qml:121
 #, kde-format

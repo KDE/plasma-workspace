@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-17 00:39+0000\n"
-"PO-Revision-Date: 2024-04-07 08:42+0300\n"
+"PO-Revision-Date: 2024-04-18 22:31+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.3\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
@@ -84,37 +84,37 @@ msgstr "Нічні кольори вимкнено"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "«Нічні кольори» при денній температурі кольорів"
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "«Нічні кольори» при нічній температурі кольорів"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "«Нічні кольори» у ранковому переході (завершується за %1)"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "«Нічні кольори» у вечірньому переході (завершується за %1)"
 
 #: package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "Перехід «Нічних кольорів» у вечірній режим заплановано на %1"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "Перехід «Нічних кольорів» у ранковий режим заплановано на %1"
 
 #: package/contents/ui/main.qml:121
 #, kde-format
