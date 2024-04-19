@@ -172,7 +172,7 @@ void X11OutputOrderWatcher::refresh()
         OutputOrderWatcher::refresh();
         return;
     }
-    QMap<int, QString> orderMap;
+    QList<std::pair<uint, QString>> orderMap;
 
     ScopedPointer<xcb_randr_get_screen_resources_current_reply_t> reply(xcb_randr_get_screen_resources_current_reply(
         m_x11Interface->connection(),
@@ -193,9 +193,6 @@ void X11OutputOrderWatcher::refresh()
             continue;
         }
 
-        const auto screenName =
-            QString::fromUtf8((const char *)xcb_randr_get_output_info_name(output.get()), xcb_randr_get_output_info_name_length(output.get()));
-
         auto orderCookie = xcb_randr_get_output_property(m_x11Interface->connection(), randr_outputs[i], m_kdeScreenAtom, XCB_ATOM_ANY, 0, 100, false, false);
         ScopedPointer<xcb_randr_get_output_property_reply_t> orderReply(
             xcb_randr_get_output_property_reply(m_x11Interface->connection(), orderCookie, nullptr));
@@ -213,16 +210,18 @@ void X11OutputOrderWatcher::refresh()
         const uint32_t order = *xcb_randr_get_output_property_data(orderReply.data());
 
         if (order > 0) { // 0 is the special case for disabled, so we ignore it
-            orderMap[order] = QString::fromUtf8(reinterpret_cast<const char *>(xcb_randr_get_output_info_name(output.get())),
-                                                xcb_randr_get_output_info_name_length(output.get()));
+            orderMap.emplace_back(order,
+                                  QString::fromUtf8(reinterpret_cast<const char *>(xcb_randr_get_output_info_name(output.get())),
+                                                    xcb_randr_get_output_info_name_length(output.get())));
         }
     }
 
     QStringList pendingOutputOrder;
-
-    for (const auto &screenName : orderMap) {
-        pendingOutputOrder.append(screenName);
-    }
+    pendingOutputOrder.reserve(orderMap.size());
+    std::sort(orderMap.begin(), orderMap.end());
+    std::transform(orderMap.cbegin(), orderMap.cend(), std::back_inserter(pendingOutputOrder), [](const auto &pr) {
+        return pr.second;
+    });
 
     for (const auto &name : std::as_const(pendingOutputOrder)) {
         bool present = false;
