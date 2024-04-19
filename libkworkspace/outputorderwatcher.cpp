@@ -153,8 +153,9 @@ X11OutputOrderWatcher::X11OutputOrderWatcher(QObject *parent)
     const xcb_query_extension_reply_t *reply = xcb_get_extension_data(m_x11Interface->connection(), &xcb_randr_id);
     m_xrandrExtensionOffset = reply->first_event;
 
-    const QByteArray effectName = QByteArrayLiteral("_KDE_SCREEN_INDEX");
-    xcb_intern_atom_cookie_t atomCookie = xcb_intern_atom_unchecked(m_x11Interface->connection(), false, effectName.length(), effectName);
+    constexpr const char *effectName = "_KDE_SCREEN_INDEX";
+    xcb_intern_atom_cookie_t atomCookie =
+        xcb_intern_atom_unchecked(m_x11Interface->connection(), false, std::char_traits<char>::length(effectName), effectName);
     xcb_intern_atom_reply_t *atom(xcb_intern_atom_reply(m_x11Interface->connection(), atomCookie, nullptr));
     if (!atom) {
         useFallback(true);
@@ -212,7 +213,8 @@ void X11OutputOrderWatcher::refresh()
         const uint32_t order = *xcb_randr_get_output_property_data(orderReply.data());
 
         if (order > 0) { // 0 is the special case for disabled, so we ignore it
-            orderMap[order] = screenName;
+            orderMap[order] = QString::fromUtf8(reinterpret_cast<const char *>(xcb_randr_get_output_info_name(output.get())),
+                                                xcb_randr_get_output_info_name_length(output.get()));
         }
     }
 
@@ -241,7 +243,7 @@ void X11OutputOrderWatcher::refresh()
     }
 
     if (pendingOutputOrder != m_outputOrder) {
-        m_outputOrder = pendingOutputOrder;
+        m_outputOrder = std::move(pendingOutputOrder);
         Q_EMIT outputOrderChanged(m_outputOrder);
     }
 }
