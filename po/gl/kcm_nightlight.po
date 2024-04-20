@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-17 00:39+0000\n"
+"POT-Creation-Date: 2024-04-20 00:39+0000\n"
 "PO-Revision-Date: 2024-04-18 18:23+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: ui/DayNightView.qml:116
+#: ui/DayNightView.qml:132
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
@@ -26,7 +26,7 @@ msgstr ""
 "A temperatura da cor comeza a cambiar á nocturna ás %1 e completa o cambio "
 "ás %2"
 
-#: ui/DayNightView.qml:119
+#: ui/DayNightView.qml:135
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
@@ -35,26 +35,32 @@ msgstr ""
 "A temperatura da cor comeza a cambiar á diúrna ás %1 e completa o cambio ás "
 "%2"
 
-#: ui/LocationsFixedView.qml:38
+#: ui/LocationsFixedView.qml:72
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
 msgstr "Toque para escoller a súa localización no mapa."
 
-#: ui/LocationsFixedView.qml:39
+#: ui/LocationsFixedView.qml:73
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
 msgstr "Prema para escoller a súa localización no mapa."
 
-#: ui/LocationsFixedView.qml:78 ui/LocationsFixedView.qml:103
+#: ui/LocationsFixedView.qml:113
 #, kde-format
 msgid "Zoom in"
 msgstr "Achegar"
 
-#: ui/LocationsFixedView.qml:209
+#: ui/LocationsFixedView.qml:130
+#, fuzzy, kde-format
+#| msgid "Zoom in"
+msgid "Zoom out"
+msgstr "Achegar"
+
+#: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -68,93 +74,93 @@ msgstr ""
 "link> de TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:222
+#: ui/LocationsFixedView.qml:240
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Latitude:"
 
-#: ui/LocationsFixedView.qml:249
+#: ui/LocationsFixedView.qml:271
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Lonxitude:"
 
-#: ui/main.qml:98
+#: ui/main.qml:103
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "O filtro de luz azul fai as cores da pantalla máis cálidas."
 
-#: ui/main.qml:151
+#: ui/main.qml:156
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Temperatura de luz diúrna:"
 
-#: ui/main.qml:194 ui/main.qml:256
+#: ui/main.qml:199 ui/main.qml:261
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:199 ui/main.qml:261
+#: ui/main.qml:204 ui/main.qml:266
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Fría (sen filtro)"
 
-#: ui/main.qml:206 ui/main.qml:268
+#: ui/main.qml:211 ui/main.qml:273
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Cálida"
 
-#: ui/main.qml:213
+#: ui/main.qml:218
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Temperatura de luz nocturna:"
 
-#: ui/main.qml:280
+#: ui/main.qml:285
 #, kde-format
 msgid "Switching times:"
 msgstr "Horas de cambio:"
 
-#: ui/main.qml:283
+#: ui/main.qml:288
 #, kde-format
 msgid "Always off"
 msgstr "Sempre desactivado"
 
-#: ui/main.qml:284
+#: ui/main.qml:289
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Solpor e amencer na localización actual"
 
-#: ui/main.qml:285
+#: ui/main.qml:290
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Solpor e amencer nunha localización manual"
 
-#: ui/main.qml:286
+#: ui/main.qml:291
 #, kde-format
 msgid "Custom times"
 msgstr "Horas personalizadas"
 
-#: ui/main.qml:287
+#: ui/main.qml:292
 #, kde-format
 msgid "Always on night light"
 msgstr "Luz nocturna perpetua"
 
-#: ui/main.qml:304
+#: ui/main.qml:309
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Localización actual:"
 
-#: ui/main.qml:310
+#: ui/main.qml:315
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitude: %1°   Lonxitude: %2°"
 
-#: ui/main.qml:332
+#: ui/main.qml:339
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -166,57 +172,57 @@ msgstr ""
 "hai), ou enviando información de rede ao <link url='https://location."
 "services.mozilla.com'>servizo de localización de Mozilla</link>."
 
-#: ui/main.qml:347
+#: ui/main.qml:354
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Comezar a luz nocturna ás:"
 
-#: ui/main.qml:363
+#: ui/main.qml:370
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Comezar a luz diúrna ás:"
 
-#: ui/main.qml:378
+#: ui/main.qml:385
 #, kde-format
 msgid "Transition duration:"
 msgstr "Duración da transición:"
 
-#: ui/main.qml:387
+#: ui/main.qml:394
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minuto"
 msgstr[1] "%1 minutos"
 
-#: ui/main.qml:400
+#: ui/main.qml:407
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Minutos de entrada (mínimo 1, máximo 600)"
 
-#: ui/main.qml:419
+#: ui/main.qml:426
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Erro: os tempos de transición sobrepóñense."
 
-#: ui/main.qml:442
+#: ui/main.qml:449
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
 msgstr "Buscando…"
 
-#: ui/TimeField.qml:20
+#: ui/TimeField.qml:43
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
 msgstr "hora"
 
-#: ui/TimeField.qml:40
+#: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
 msgstr ":"
 
-#: ui/TimeField.qml:46
+#: ui/TimeField.qml:56
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
