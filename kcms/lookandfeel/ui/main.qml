@@ -60,6 +60,7 @@ KCM.GridViewKCM {
 
             parent: root
             title: i18nc("@title:window", "Delete Permanently")
+            dialogType: Kirigami.PromptDialog.Warning
             subtitle: i18nc("@label", "Do you really want to permanently delete this theme?")
             standardButtons: Kirigami.Dialog.NoButton
             customFooterActions: [

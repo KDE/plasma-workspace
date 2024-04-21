@@ -4,16 +4,19 @@
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
 
-import QtQuick 2.6
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
 
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.plasma.kcm.users 1.0 as UsersKCM
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.kcm.users as UsersKCM
 
 Kirigami.PromptDialog {
     id: passwordRoot
 
     preferredWidth: Kirigami.Units.gridUnit * 20
+
+    iconName: 'lock-symbolic'
 
     function openAndClear() {
         verifyField.text = ""
@@ -43,54 +46,59 @@ Kirigami.PromptDialog {
         }
     }
 
-    ColumnLayout {
-        id: mainColumn
-        spacing: Kirigami.Units.smallSpacing
+    Label {
+        text: i18nc("@label:textbox", "Password:")
+        Layout.topMargin: Kirigami.Units.largeSpacing
+        Layout.fillWidth: true
+    }
 
-        Kirigami.PasswordField {
-            id: passwordField
+    Kirigami.PasswordField {
+        id: passwordField
 
-            Layout.fillWidth: true
+        Layout.fillWidth: true
 
-            placeholderText: i18n("Password")
-            onTextChanged: debouncer.reset()
+        onTextChanged: debouncer.reset()
 
-            onAccepted: {
-                if (!passwordWarning.visible && verifyField.text && passwordField.text) {
-                    passAction.trigger()
-                }
+        onAccepted: {
+            if (!passwordWarning.visible && verifyField.text && passwordField.text) {
+                passAction.trigger()
             }
         }
+    }
 
-        Kirigami.PasswordField {
-            id: verifyField
+    Label {
+        text: i18nc("@label:textbox", "Confirm password:")
+        Layout.topMargin: Kirigami.Units.largeSpacing
+        Layout.fillWidth: true
+    }
 
-            Layout.fillWidth: true
+    Kirigami.PasswordField {
+        id: verifyField
 
-            placeholderText: i18n("Confirm password")
-            onTextChanged: debouncer.reset()
+        Layout.fillWidth: true
 
-            onAccepted: {
-                if (!passwordWarning.visible && verifyField.text && passwordField.text) {
-                    passAction.trigger()
-                }
+        onTextChanged: debouncer.reset()
+
+        onAccepted: {
+            if (!passwordWarning.visible && verifyField.text && passwordField.text) {
+                passAction.trigger()
             }
         }
+    }
 
-        Debouncer {
-            id: debouncer
-        }
+    Debouncer {
+        id: debouncer
+    }
 
-        Kirigami.InlineMessage {
-            id: passwordWarning
+    Kirigami.InlineMessage {
+        id: passwordWarning
 
-            Layout.fillWidth: true
-            type: Kirigami.MessageType.Error
-            text: i18n("Passwords must match")
-            visible: passwordField.text !== ""
-                && verifyField.text !== ""
-                && passwordField.text !== verifyField.text
-                && debouncer.isTriggered
-        }
+        Layout.fillWidth: true
+        type: Kirigami.MessageType.Error
+        text: i18n("Passwords must match")
+        visible: passwordField.text !== ""
+            && verifyField.text !== ""
+            && passwordField.text !== verifyField.text
+            && debouncer.isTriggered
     }
 }
