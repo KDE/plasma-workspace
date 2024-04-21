@@ -10,6 +10,7 @@ import QtQuick.Layouts
 
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
+import org.kde.notification
 
 PlasmaComponents3.ItemDelegate {
     id: root
@@ -20,6 +21,7 @@ PlasmaComponents3.ItemDelegate {
     property bool profilesAvailable
 
     property string activeProfile
+    property string activeProfileError
 
     property string inhibitionReason
     readonly property bool inhibited: inhibitionReason !== ""
@@ -48,7 +50,7 @@ PlasmaComponents3.ItemDelegate {
         }
     ]
 
-    readonly property int activeProfileIndex: profileData.findIndex(data => data.profile === activeProfile)
+    readonly property int activeProfileIndex: profileData.findIndex(data => data.profile === root.activeProfile)
     // type: typeof(profileData[])?
     readonly property var activeProfileData: activeProfileIndex !== -1 ? profileData[activeProfileIndex] : undefined
     // type: typeof(profileHolds)
@@ -64,6 +66,14 @@ PlasmaComponents3.ItemDelegate {
     Accessible.description: activeProfileLabel.text
     Accessible.role: Accessible.Slider
     Keys.forwardTo: [slider]
+
+    Notification {
+        id: powerProfileError
+        componentName: "plasma_workspace"
+        eventId: "warning"
+        iconName: "speedometer"
+        title: i18n("Power Management")
+    }
 
     contentItem: RowLayout {
         spacing: Kirigami.Units.gridUnit
@@ -115,8 +125,26 @@ PlasmaComponents3.ItemDelegate {
                     const { canBeInhibited, profile } = root.profileData[value];
                     if (!(canBeInhibited && root.inhibited)) {
                         activateProfileRequested(profile);
-                    } else {
-                        value = Qt.binding(() => root.activeProfileIndex);
+                    }
+                }
+
+                Connections {
+                    target: root
+                    function onActiveProfileChanged(){
+                        slider.value = root.activeProfileIndex
+                    }
+                }
+
+
+                Connections {
+                    target: root
+                    function onActiveProfileErrorChanged(){
+                        if(root.activeProfileError !== "") {
+                            powerProfileError.text = i18n("Failed to activate %1 mode", root.activeProfileError);
+                            powerProfileError.sendEvent();
+                            slider.value = root.activeProfileIndex;
+                            root.activeProfileError = "";
+                        }
                     }
                 }
 

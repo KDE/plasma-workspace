@@ -9,6 +9,7 @@ import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls
 
+import org.kde.notification
 import org.kde.kwindowsystem
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.ksvg as KSvg
@@ -21,13 +22,15 @@ PlasmaComponents3.ItemDelegate {
 
     signal inhibitionChangeRequested(bool inhibit)
 
-    property bool manuallyInhibited
+    property bool isManuallyInhibited
+    property bool isManuallyInhibitedError
     // List of active power management inhibitions (applications that are
     // blocking sleep and screen locking).
     //
     // type: [{
-    //  Icon: string,
     //  Name: string,
+    //  PrettyName: string,
+    //  Icon: string,
     //  Reason: string,
     // }]
     property var inhibitions: []
@@ -40,6 +43,14 @@ PlasmaComponents3.ItemDelegate {
     hoverEnabled: false
     text: i18nc("@title:group", "Sleep and Screen Locking after Inactivity")
 
+    Notification {
+        id: inhibitionError
+        componentName: "plasma_workspace"
+        eventId: "warning"
+        iconName: "system-suspend-uninhibited"
+        title: i18n("Power Management")
+    }
+
     Accessible.description: pmStatusLabel.text
     Accessible.role: Accessible.CheckBox
     KeyNavigation.tab: manualInhibitionSwitch
@@ -49,7 +60,7 @@ PlasmaComponents3.ItemDelegate {
 
         Kirigami.Icon {
             id: icon
-            source: root.manuallyInhibited || root.inhibitions.length > 0 ? "system-suspend-inhibited" : "system-suspend-uninhibited"
+            source: root.isManuallyInhibited || root.inhibitions.length > 0 ? "system-suspend-inhibited" : "system-suspend-uninhibited"
             Layout.alignment: Qt.AlignTop
             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
@@ -75,7 +86,7 @@ PlasmaComponents3.ItemDelegate {
                 PlasmaComponents3.Label {
                     id: pmStatusLabel
                     Layout.alignment: Qt.AlignRight | Qt.AlignTop
-                    text: root.manuallyInhibited || root.inhibitions.length > 0 ? i18nc("Sleep and Screen Locking after Inactivity", "Blocked") : i18nc("Sleep and Screen Locking after Inactivity", "Automatic")
+                    text: root.isManuallyInhibited || root.inhibitions.length > 0 ? i18nc("Sleep and Screen Locking after Inactivity", "Blocked") : i18nc("Sleep and Screen Locking after Inactivity", "Automatic")
                     textFormat: Text.PlainText
                 }
             }
@@ -86,7 +97,7 @@ PlasmaComponents3.ItemDelegate {
                     id: manualInhibitionSwitch
                     Layout.fillWidth: true
                     text: i18nc("@option:check Manually block sleep and screen locking after inactivity", "Manually block")
-                    checked: root.manuallyInhibited
+                    checked: root.isManuallyInhibited
                     focus: true
 
                     KeyNavigation.up: root.KeyNavigation.up
@@ -103,25 +114,51 @@ PlasmaComponents3.ItemDelegate {
                     onToggled: {
                         inhibitionChangeRequested(checked);
                     }
-                }
-
-
-                BusyIndicator {
-                    id: busyIndicator
-                    visible: false
-                    Layout.preferredHeight: manualInhibitionSwitch.implicitHeight
 
                     Connections {
                         target: root
-                        function onInhibitionChangeRequested(inhibit) {
-                            busyIndicator.visible = inhibit != root.manuallyInhibited;
+                        function onIsManuallyInhibitedChanged() {
+                            manualInhibitionSwitch.checked = isManuallyInhibited;
                         }
-                        function onManuallyInhibitedChanged(val) {
-                            busyIndicator.visible = false;
+                    }
+
+                    Connections {
+                        target: root
+                        function onIsManuallyInhibitedErrorChanged() {
+                            if (root.isManuallyInhibitedError) {
+                                manualInhibitionSwitch.checked = !manualInhibitionSwitch.checked
+                                busyIndicator.visible = false;
+                                root.isManuallyInhibitedError = false;
+                                if (!root.isManuallyInhibited) {
+                                    inhibitionError.text = i18n("Failed to unblock automatic sleep and screen locking");
+                                    inhibitionError.sendEvent();
+                                } else {
+                                    inhibitionError.text = i18n("Failed to block automatic sleep and screen locking");
+                                    inhibitionError.sendEvent();
+                                }
+                            }
                         }
                     }
                 }
+
+            BusyIndicator {
+                id: busyIndicator
+                visible: false
+                Layout.preferredHeight: manualInhibitionSwitch.implicitHeight
+
+                Connections {
+                    target: root
+
+                    function onInhibitionChangeRequested(inhibit) {
+                        busyIndicator.visible = inhibit != root.isManuallyInhibited;
+                    }
+
+                    function onIsManuallyInhibitedChanged(val) {
+                        busyIndicator.visible = false;
+                    }
+                }
             }
+        }
 
             // list of automatic inhibitions
             ColumnLayout {
