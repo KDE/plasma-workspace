@@ -227,6 +227,3 @@ msgstr ""
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "%1 minutt"
-
-#~ msgid "Input format: HH:MM"
-#~ msgstr "Format: HH:MM"

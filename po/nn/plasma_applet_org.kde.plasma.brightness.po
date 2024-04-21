@@ -250,7 +250,3 @@ msgstr "Lysstyrke tastatur"
 #, kde-format
 msgid "Night Light"
 msgstr "Kveldsfargar"
-
-#~ msgctxt "Status; placeholder is a temperature"
-#~ msgid "Night Light at %1K"
-#~ msgstr "Kveldsfargane er på %1 K"

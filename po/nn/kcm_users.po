@@ -583,7 +583,3 @@ msgstr "Kontoen din"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Andre kontoar"
-
-#~ msgctxt "@action:button 'all' refers to fingerprints"
-#~ msgid "Clear All"
-#~ msgstr "Fjern alle"

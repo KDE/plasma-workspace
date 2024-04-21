@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-20 00:39+0000\n"
-"PO-Revision-Date: 2024-04-18 22:39+0200\n"
+"PO-Revision-Date: 2024-04-20 09:06+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -58,10 +58,9 @@ msgid "Zoom in"
 msgstr "Zooma gerturatu"
 
 #: ui/LocationsFixedView.qml:130
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "Zooma gerturatu"
+msgstr "Zooma urrundu"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
