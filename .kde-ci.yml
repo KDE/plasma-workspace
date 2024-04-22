@@ -91,6 +91,7 @@ RuntimeDependencies:
     'frameworks/qqc2-desktop-style': '@latest-kf6'
     'plasma/milou' : '@same'
     'plasma/kglobalacceld': '@same'
+    'xdg-desktop-portal-kde': '@same'
 
 Options:
   ctest-arguments: '--repeat until-pass:5'
