@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-17 00:39+0000\n"
-"PO-Revision-Date: 2024-04-07 16:30+0530\n"
+"PO-Revision-Date: 2024-04-21 21:21+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
@@ -83,37 +83,37 @@ msgstr "இரவு நிறமாற்றம் முடங்கியு�
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "பகலுக்கான நிறவெப்பநிலையில் உள்ளது"
 
 #: package/contents/ui/main.qml:93
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "இரவுக்கான நிறவெப்பநிலையில் உள்ளது"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "இரவுக்கான நிறவெப்பநிலையிலிருந்து பகலுக்கானதற்கு மாறுகிறது (%1-க்குள் மாறும்)"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "பகலுக்கான நிறவெப்பநிலையிலிருந்து இரவுக்கானதற்கு மாறுகிறது (%1-க்குள் மாறும்)"
 
 #: package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "பகலுக்கான நிறவெப்பநிலையிலிருந்து இரவுக்கானதற்கு %1-க்கு மாறும்"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "இரவுக்கான நிறவெப்பநிலையிலிருந்து பகலுக்கானதற்கு %1-க்கு மாறும்"
 
 #: package/contents/ui/main.qml:121
 #, kde-format

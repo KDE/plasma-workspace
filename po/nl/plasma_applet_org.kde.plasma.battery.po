@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-17 00:39+0000\n"
+"POT-Creation-Date: 2024-04-22 00:39+0000\n"
 "PO-Revision-Date: 2024-04-10 11:09+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -17,13 +17,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.02.1\n"
 
+#: package/contents/ui/BatteryItem.qml:100
+#, kde-format
+msgid "Charging"
+msgstr "Bezig met opladen"
+
+#: package/contents/ui/BatteryItem.qml:102
+#, kde-format
+msgid "Discharging"
+msgstr "Ontladen"
+
+#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:121
+#, kde-format
+msgid "Fully Charged"
+msgstr "Volledig opgeladen"
+
+#: package/contents/ui/BatteryItem.qml:106
+#, kde-format
+msgid "Not Charging"
+msgstr "Niet bezig met laden"
+
 #: package/contents/ui/BatteryItem.qml:109
+#, kde-format
+msgctxt "Battery is currently not present in the bay"
+msgid "Not present"
+msgstr "Niet aanwezig"
+
+#: package/contents/ui/BatteryItem.qml:121
 #, kde-format
 msgctxt "Placeholder is battery percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:173
+#: package/contents/ui/BatteryItem.qml:185
 #, kde-format
 msgid ""
 "This battery's health is at only %1% and it should be replaced. Contact the "
@@ -32,150 +58,111 @@ msgstr ""
 "De conditie van de batterij is slechts %1% en deze zou vervangen moeten "
 "worden. Neem contact op met de leverancier."
 
-#: package/contents/ui/BatteryItem.qml:193
+#: package/contents/ui/BatteryItem.qml:204
 #, kde-format
 msgid "Time To Full:"
 msgstr "Tijd tot volledig geladen:"
 
-#: package/contents/ui/BatteryItem.qml:194
+#: package/contents/ui/BatteryItem.qml:205
 #, kde-format
 msgid "Remaining Time:"
 msgstr "Resterende tijd:"
 
-#: package/contents/ui/BatteryItem.qml:199
+#: package/contents/ui/BatteryItem.qml:211
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
 msgstr "Schatten…"
 
-#: package/contents/ui/BatteryItem.qml:211
+#: package/contents/ui/BatteryItem.qml:221
 #, kde-format
 msgid "Battery Health:"
 msgstr "Gezondheid van batterij:"
 
-#: package/contents/ui/BatteryItem.qml:217
+#: package/contents/ui/BatteryItem.qml:227
 #, kde-format
 msgctxt "Placeholder is battery health percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/BatteryItem.qml:231
+#: package/contents/ui/BatteryItem.qml:239
 #, kde-format
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Batterij is geconfigureerd om op te laden tot ongeveer %1%."
 
-#: package/contents/ui/CompactRepresentation.qml:111
+#: package/contents/ui/CompactRepresentation.qml:98
+#: package/contents/ui/CompactRepresentation.qml:142
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/logic.js:24 package/contents/ui/logic.js:30
-#: package/contents/ui/main.qml:226
-#, kde-format
-msgid "Fully Charged"
-msgstr "Volledig opgeladen"
+#: package/contents/ui/main.qml:73
+#, fuzzy, kde-format
+#| msgid "An application is preventing sleep and screen locking:"
+msgid "The battery applet has enabled suppressing sleep and screen locking"
+msgstr "Een toepassing voorkomt het slapen en vergrendelen van het scherm:"
 
-#: package/contents/ui/logic.js:29
-#, kde-format
-msgid "Discharging"
-msgstr "Ontladen"
-
-#: package/contents/ui/logic.js:31
-#, kde-format
-msgid "Charging"
-msgstr "Bezig met opladen"
-
-#: package/contents/ui/logic.js:33
-#, kde-format
-msgid "Not Charging"
-msgstr "Niet bezig met laden"
-
-#: package/contents/ui/logic.js:36
-#, kde-format
-msgctxt "Battery is currently not present in the bay"
-msgid "Not present"
-msgstr "Niet aanwezig"
-
-#: package/contents/ui/main.qml:119
-#, kde-format
-msgid "The battery applet has enabled system-wide inhibition"
-msgstr "De batterij-applet heeft systeembreed slapen ingeschakeld"
-
-#: package/contents/ui/main.qml:131
-#, kde-format
-msgid "Failed to block automatic sleep and screen locking"
-msgstr "Automatisch slapen en scherm vergrendelen blokkeren is mislukt"
-
-#: package/contents/ui/main.qml:145
-#, kde-format
-msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Automatisch slapen en scherm vergrendelen deblokkeren is mislukt"
-
-#: package/contents/ui/main.qml:157 package/contents/ui/main.qml:195
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:95
+#: package/contents/ui/PowerManagementItem.qml:51
+#: package/contents/ui/PowerProfileItem.qml:75
 #, kde-format
 msgid "Power Management"
 msgstr "Energiebeheer"
 
-#: package/contents/ui/main.qml:174
-#, kde-format
-msgid "Failed to activate %1 mode"
-msgstr "Activeren van modus %1 is mislukt"
-
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgid "Power and Battery"
 msgstr "Energie en batterij"
 
-#: package/contents/ui/main.qml:233
+#: package/contents/ui/main.qml:128
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Batterij op %1%, wordt niet opgeladen"
 
-#: package/contents/ui/main.qml:235
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Batterij op %1%, ingeplugd maar wordt nog steeds ontladen"
 
-#: package/contents/ui/main.qml:237
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Batterij op %1%, wordt opgeladen"
 
-#: package/contents/ui/main.qml:240
+#: package/contents/ui/main.qml:135
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Batterij op %1%"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:143
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Het voedingsapparaat is niet krachtig genoeg om de batterij te laden"
 
-#: package/contents/ui/main.qml:252
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Geen batterijen beschikbaar"
 
-#: package/contents/ui/main.qml:258
+#: package/contents/ui/main.qml:153
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 tot volledig opgeladen"
 
-#: package/contents/ui/main.qml:260
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 resterend"
 
-#: package/contents/ui/main.qml:263
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgid "Not charging"
 msgstr "Niet bezig met laden"
 
-#: package/contents/ui/main.qml:267
+#: package/contents/ui/main.qml:162
 #, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
@@ -183,82 +170,92 @@ msgstr ""
 "Automatisch slapen en vergrendelen van scherm zijn uitgeschakeld; opnieuw "
 "inschakelen met midden-klik"
 
-#: package/contents/ui/main.qml:269
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr ""
 "Midden-klik om automatisch slapen en vergrendelen van scherm uit te schakelen"
 
-#: package/contents/ui/main.qml:274
+#: package/contents/ui/main.qml:169
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Een toepassing heeft activering gevraagd van modus Prestatie"
 msgstr[1] "%1 toepassingen hebben activering gevraagd van modus Prestatie"
 
-#: package/contents/ui/main.qml:278
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
 msgstr "Systeem is in modus prestatie; schuif om te wijzigen"
 
-#: package/contents/ui/main.qml:282
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "Een toepassing heeft activering gevraagd van modus Energie sparen"
 msgstr[1] "%1 toepassingen hebben activering gevraagd van modus Energie sparen"
 
-#: package/contents/ui/main.qml:286
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
 msgstr "Systeem is in modus energie besparen; schuif om te wijzigen"
 
-#: package/contents/ui/main.qml:289
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr "Systeem is in modus gebalanceerde energie; schuif om te wijzigen"
 
-#: package/contents/ui/main.qml:378
+#: package/contents/ui/main.qml:295
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Energie-informatie &tonen…"
 
-#: package/contents/ui/main.qml:384
+#: package/contents/ui/main.qml:301
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Percentage batterij tonen op pictogram indien niet volledig geladen"
 
-#: package/contents/ui/main.qml:397
+#: package/contents/ui/main.qml:314
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "Energiebeheer &configureren…"
 
-#: package/contents/ui/PowerManagementItem.qml:41
+#: package/contents/ui/PowerManagementItem.qml:44
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
 msgstr "Slapen en vergrendelen van scherm na inactiviteit"
 
-#: package/contents/ui/PowerManagementItem.qml:78
+#: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
 msgstr "Geblokkeerd"
 
-#: package/contents/ui/PowerManagementItem.qml:78
+#: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
 msgstr "Automatisch"
 
-#: package/contents/ui/PowerManagementItem.qml:88
+#: package/contents/ui/PowerManagementItem.qml:99
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
 msgstr "Handmatige blokkering"
 
-#: package/contents/ui/PowerManagementItem.qml:137
+#: package/contents/ui/PowerManagementItem.qml:133
+#, kde-format
+msgid "Failed to unblock automatic sleep and screen locking"
+msgstr "Automatisch slapen en scherm vergrendelen deblokkeren is mislukt"
+
+#: package/contents/ui/PowerManagementItem.qml:136
+#, kde-format
+msgid "Failed to block automatic sleep and screen locking"
+msgstr "Automatisch slapen en scherm vergrendelen blokkeren is mislukt"
+
+#: package/contents/ui/PowerManagementItem.qml:174
 #, kde-format
 msgctxt "Minimize the length of this string as much as possible"
 msgid ""
@@ -268,7 +265,7 @@ msgstr ""
 "Uw laptop is geconfigureerd om niet te gaan slapen wanneer het deksel wordt "
 "gesloten terwijl er een externe monitor is aangesloten."
 
-#: package/contents/ui/PowerManagementItem.qml:148
+#: package/contents/ui/PowerManagementItem.qml:185
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
@@ -277,24 +274,24 @@ msgstr[0] ""
 msgstr[1] ""
 "%1 toepassingen blokkeren op dit moment slapen en scherm vergrendelen:"
 
-#: package/contents/ui/PowerManagementItem.qml:168
+#: package/contents/ui/PowerManagementItem.qml:205
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
 msgstr "%1 voorkomt op dit moment slapen en scherm vergrendelen (%2)"
 
-#: package/contents/ui/PowerManagementItem.qml:170
+#: package/contents/ui/PowerManagementItem.qml:207
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr ""
 "%1 blokkeert op dit moment slapen en scherm vergrendelen (onbekende reden)"
 
-#: package/contents/ui/PowerManagementItem.qml:172
+#: package/contents/ui/PowerManagementItem.qml:209
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
 msgstr ""
 "Een toepassing blokkeert op dit moment slapen en scherm vergrendelen (%1)"
 
-#: package/contents/ui/PowerManagementItem.qml:174
+#: package/contents/ui/PowerManagementItem.qml:211
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
@@ -303,57 +300,62 @@ msgstr ""
 "Een toepassing blokkeert op dit moment slapen en scherm vergrendelen "
 "(onbekende reden)"
 
-#: package/contents/ui/PowerManagementItem.qml:178
+#: package/contents/ui/PowerManagementItem.qml:215
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerManagementItem.qml:180
+#: package/contents/ui/PowerManagementItem.qml:217
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "%1: unknown reason"
 msgstr "%1: onbekende reden"
 
-#: package/contents/ui/PowerManagementItem.qml:182
+#: package/contents/ui/PowerManagementItem.qml:219
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
 msgstr "Onbekende toepassing: %1"
 
-#: package/contents/ui/PowerManagementItem.qml:184
+#: package/contents/ui/PowerManagementItem.qml:221
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
 msgstr "Onbekende toepassing: onbekende reden"
 
-#: package/contents/ui/PowerProfileItem.qml:37
+#: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
 msgid "Power Save"
 msgstr "Energie besparen"
 
-#: package/contents/ui/PowerProfileItem.qml:41
+#: package/contents/ui/PowerProfileItem.qml:43
 #, kde-format
 msgid "Balanced"
 msgstr "Evenwichtig"
 
-#: package/contents/ui/PowerProfileItem.qml:45
+#: package/contents/ui/PowerProfileItem.qml:47
 #, kde-format
 msgid "Performance"
 msgstr "Prestatie"
 
-#: package/contents/ui/PowerProfileItem.qml:62
+#: package/contents/ui/PowerProfileItem.qml:64
 #, kde-format
 msgid "Power Profile"
 msgstr "Energieprofiel"
 
-#: package/contents/ui/PowerProfileItem.qml:97
+#: package/contents/ui/PowerProfileItem.qml:107
 #, kde-format
 msgctxt "Power profile"
 msgid "Not available"
 msgstr "Niet beschikbaar"
 
-#: package/contents/ui/PowerProfileItem.qml:192
+#: package/contents/ui/PowerProfileItem.qml:143
+#, kde-format
+msgid "Failed to activate %1 mode"
+msgstr "Activeren van modus %1 is mislukt"
+
+#: package/contents/ui/PowerProfileItem.qml:220
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -362,18 +364,18 @@ msgstr ""
 "Modus Prestatie is uitgeschakeld om warmtegeneratie te verminderen omdat de "
 "computer gedetecteerd heeft dat het zich op uw schoot kan bevinden."
 
-#: package/contents/ui/PowerProfileItem.qml:194
+#: package/contents/ui/PowerProfileItem.qml:222
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "Modus prestatie is niet beschikbaar omdat de computer te heet wordt."
 
-#: package/contents/ui/PowerProfileItem.qml:196
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Modus Prestatie is niet beschikbaar."
 
-#: package/contents/ui/PowerProfileItem.qml:209
+#: package/contents/ui/PowerProfileItem.qml:237
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -382,24 +384,24 @@ msgstr ""
 "Prestatie kan verminderd zijn om warmtegeneratie te verminderen omdat de "
 "computer gedetecteerd heeft dat het zich op uw schoot kan bevinden."
 
-#: package/contents/ui/PowerProfileItem.qml:211
+#: package/contents/ui/PowerProfileItem.qml:239
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Prestatie kan verminderd zijn omdat de computer te heet wordt."
 
-#: package/contents/ui/PowerProfileItem.qml:213
+#: package/contents/ui/PowerProfileItem.qml:241
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Prestatie kan gereduceerd zijn."
 
-#: package/contents/ui/PowerProfileItem.qml:224
+#: package/contents/ui/PowerProfileItem.qml:252
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
 msgstr[0] "Één toepassing heeft activering gevraagd van %2:"
 msgstr[1] "%1 toepassingen hebben activering gevraagd van %2:"
 
-#: package/contents/ui/PowerProfileItem.qml:242
+#: package/contents/ui/PowerProfileItem.qml:270
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "
@@ -407,7 +409,7 @@ msgctxt ""
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerProfileItem.qml:261
+#: package/contents/ui/PowerProfileItem.qml:289
 #, kde-kuit-format
 msgid ""
 "Power profiles may be supported on your device.<nl/>Try installing the "
@@ -417,6 +419,21 @@ msgstr ""
 "Energieprofielen kunnen ondersteund worden op uw apparaat.<nl/>Probeer het "
 "pakket <command>energieprofielendaemon</command> te installeren met de "
 "pakketbeheerder van uw distributie en start het systeem opnieuw."
+
+#: plugin/batteriesnamesmonitor_p.cpp:25
+#, fuzzy, kde-format
+#| msgid "Battery at %1%"
+msgctxt "Placeholder is the battery number"
+msgid "Battery %1"
+msgstr "Batterij op %1%"
+
+#: plugin/batteriesnamesmonitor_p.cpp:27
+#, kde-format
+msgid "Battery"
+msgstr "Batterij"
+
+#~ msgid "The battery applet has enabled system-wide inhibition"
+#~ msgstr "De batterij-applet heeft systeembreed slapen ingeschakeld"
 
 #~ msgctxt "Minimize the length of this string as much as possible"
 #~ msgid "Manually block sleep and screen locking"
@@ -431,9 +448,6 @@ msgstr ""
 
 #~ msgid "Brightness"
 #~ msgstr "Helderheid"
-
-#~ msgid "Battery"
-#~ msgstr "Batterij"
 
 #~ msgid "Scroll to adjust screen brightness"
 #~ msgstr "Schuiven om schermhelderheid aan te passen"
@@ -456,9 +470,6 @@ msgstr ""
 
 #~ msgid "General"
 #~ msgstr "Algemeen"
-
-#~ msgid "An application is preventing sleep and screen locking:"
-#~ msgstr "Een toepassing voorkomt het slapen en vergrendelen van het scherm:"
 
 #~ msgctxt "short symbol to signal there is no battery currently available"
 #~ msgid "-"
