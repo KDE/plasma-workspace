@@ -73,14 +73,14 @@ set_package_properties(KF6NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper fo
                        PURPOSE "Needed by geolocation data engine."
                       )
 
-find_package(KF6Kirigami2 ${KF6_MIN_VERSION} CONFIG)
-set_package_properties(KF6Kirigami2 PROPERTIES
+find_package(KF6Kirigami ${KF6_MIN_VERSION} CONFIG)
+set_package_properties(KF6Kirigami PROPERTIES
     DESCRIPTION "A QtQuick based components set"
     TYPE RUNTIME
 )
 
-find_package(KF6KirigamiAddons2 0.10.0 CONFIG)
-set_package_properties(KF6KirigamiAddons2 PROPERTIES
+find_package(KF6KirigamiAddons 0.10.0 CONFIG)
+set_package_properties(KF6KirigamiAddons PROPERTIES
     DESCRIPTION "Extra controls for Kirigami applications"
     PURPOSE "Required at runtime for the User KCM"
     TYPE RUNTIME
