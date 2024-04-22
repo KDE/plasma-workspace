@@ -36,6 +36,7 @@ public:
     void save() override;
     void load() override;
     void defaults() override;
+    bool isDefaults() const override;
 
     RegionAndLangSettings *settings() const;
 
@@ -75,4 +76,5 @@ private:
     LocaleGeneratorBase *m_generator = nullptr;
     QProcess *m_localectl = nullptr;
     bool m_enabled = false;
+    int m_loadedBinaryDialect;
 };

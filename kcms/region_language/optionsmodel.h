@@ -11,6 +11,7 @@
 
 #include <QAbstractListModel>
 
+#include "kformat.h"
 #include "regionandlangsettings.h"
 
 class RegionAndLangSettings;
@@ -19,6 +20,9 @@ class KCMRegionAndLang;
 class OptionsModel : public QAbstractListModel
 {
     Q_OBJECT
+
+    Q_PROPERTY(int binaryDialect READ binaryDialect WRITE setBinaryDialect NOTIFY binaryDialectChanged)
+
 public:
     enum Roles { Name = Qt::DisplayRole, Subtitle, Example, Page };
     explicit OptionsModel(KCMRegionAndLang *parent);
@@ -26,12 +30,22 @@ public:
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     QHash<int, QByteArray> roleNames() const override;
 
+    KFormat::BinaryUnitDialect binaryDialect();
+    void setBinaryDialect(QVariant d);
+
+public:
+    void load();
+
+Q_SIGNALS:
+    void binaryDialectChanged();
+
 public Q_SLOTS:
     void handleLangChange();
 
 private:
     QString implicitFormatExampleMsg() const;
     QString getNativeName(const QString &locale) const;
+    void updateBinaryDialectExample();
 
     QString m_numberExample;
     QString m_timeExample;
@@ -47,4 +61,7 @@ private:
     std::vector<std::pair<QString, KCM_RegionAndLang::SettingType>> m_staticNames; // title, page
 
     RegionAndLangSettings *m_settings;
+
+    QString m_binaryDialectExample;
+    KFormat::BinaryUnitDialect m_binaryDialect;
 };

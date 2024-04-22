@@ -79,6 +79,7 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
         switch (m_configType) {
         case Lang:
         case Language:
+            Q_ASSERT(false); // shouldn't happen
             return {};
         case Numeric:
             return Utility::numericExample(data.locale);
@@ -98,6 +99,9 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
         case PhoneNumbers:
             return Utility::phoneNumbersExample(data.locale);
 #endif
+        case BinaryDialect:
+            Q_ASSERT(false);
+            break;
         }
         return {};
     }

@@ -7,8 +7,6 @@
 
 #include "regionandlangsettings.h"
 
-#include "kcm_regionandlang_debug.h"
-
 using KCM_RegionAndLang::SettingType;
 
 bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
@@ -34,6 +32,9 @@ bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
         return nameStyle() == defaultNameStyleValue();
     case SettingType::PhoneNumbers:
         return phoneNumbers() == defaultPhoneNumbersValue();
+    case KCM_RegionAndLang::BinaryDialect:
+        Q_UNREACHABLE();
+        break;
     }
 
     return false;
@@ -76,8 +77,12 @@ QString RegionAndLangSettings::LC_LocaleWithLang(SettingType setting) const
     case SettingType::PhoneNumbers:
         return phoneNumbers();
     case SettingType::Lang:
+        return lang();
     case SettingType::Language:
+        return language();
+    case SettingType::BinaryDialect:
         Q_UNREACHABLE();
+        break;
     }
 
     return langWithFallback();

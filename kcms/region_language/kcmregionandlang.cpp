@@ -23,6 +23,7 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 
+#include "binarydialectmodel.h"
 #include "languagelistmodel.h"
 #include "localegenerator.h"
 #include "localegeneratorbase.h"
@@ -81,6 +82,7 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
     qmlRegisterAnonymousType<SelectedLanguageModel>("kcmregionandlang", 1);
     qmlRegisterType<LocaleListModel>("kcmregionandlang", 1, 0, "LocaleListModel");
     qmlRegisterType<LanguageListModel>("kcmregionandlang", 1, 0, "LanguageListModel");
+    qmlRegisterType<BinaryDialectModel>("kcmregionandlang", 1, 0, "BinaryDialectModel");
     qRegisterMetaType<KCM_RegionAndLang::SettingType>();
     qmlRegisterUncreatableMetaObject(KCM_RegionAndLang::staticMetaObject, "kcmregionandlang", 1, 0, "SettingType", "Error: SettingType is an enum");
 
@@ -108,6 +110,13 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
 #else
     m_enabled = true;
 #endif
+
+    m_loadedBinaryDialect = m_optionsModel->binaryDialect();
+
+    connect(m_optionsModel, &OptionsModel::binaryDialectChanged, this, [this]() {
+        setNeedsSave(m_settings->isSaveNeeded() || m_loadedBinaryDialect != m_optionsModel->binaryDialect());
+        setRepresentsDefaults(m_settings->isDefaults() && m_optionsModel->binaryDialect() == KFormat::BinaryUnitDialect::IECBinaryDialect);
+    });
 }
 
 QString KCMRegionAndLang::failedFindLocalesMessage()
@@ -124,61 +133,80 @@ QString KCMRegionAndLang::localeFileDirPath()
 
 void KCMRegionAndLang::save()
 {
-    // assemble full locales in use
-    QStringList locales;
-    if (!settings()->isDefaultSetting(SettingType::Lang)) {
-        locales.append(settings()->lang());
-    }
-    if (!settings()->isDefaultSetting(SettingType::Numeric)) {
-        locales.append(settings()->numeric());
-    }
-    if (!settings()->isDefaultSetting(SettingType::Time)) {
-        locales.append(settings()->time());
-    }
-    if (!settings()->isDefaultSetting(SettingType::Measurement)) {
-        locales.append(settings()->measurement());
-    }
-    if (!settings()->isDefaultSetting(SettingType::Currency)) {
-        locales.append(settings()->monetary());
-    }
-    if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
-        locales.append(settings()->paperSize());
-    }
-    if (!settings()->isDefaultSetting(SettingType::Address)) {
-        locales.append(settings()->address());
-    }
-    if (!settings()->isDefaultSetting(SettingType::NameStyle)) {
-        locales.append(settings()->nameStyle());
-    }
-    if (!settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
-        locales.append(settings()->phoneNumbers());
-    }
+    if (settings()->isSaveNeeded()) {
+        // assemble full locales in use
+        QStringList locales;
+        if (!settings()->isDefaultSetting(SettingType::Lang)) {
+            locales.append(settings()->lang());
+        }
+        if (!settings()->isDefaultSetting(SettingType::Numeric)) {
+            locales.append(settings()->numeric());
+        }
+        if (!settings()->isDefaultSetting(SettingType::Time)) {
+            locales.append(settings()->time());
+        }
+        if (!settings()->isDefaultSetting(SettingType::Measurement)) {
+            locales.append(settings()->measurement());
+        }
+        if (!settings()->isDefaultSetting(SettingType::Currency)) {
+            locales.append(settings()->monetary());
+        }
+        if (!settings()->isDefaultSetting(SettingType::PaperSize)) {
+            locales.append(settings()->paperSize());
+        }
+        if (!settings()->isDefaultSetting(SettingType::Address)) {
+            locales.append(settings()->address());
+        }
+        if (!settings()->isDefaultSetting(SettingType::NameStyle)) {
+            locales.append(settings()->nameStyle());
+        }
+        if (!settings()->isDefaultSetting(SettingType::PhoneNumbers)) {
+            locales.append(settings()->phoneNumbers());
+        }
 #ifdef GLIBC_LOCALE
-    if (!settings()->language().isEmpty()) {
-        QStringList languages = settings()->language().split(QLatin1Char(':'));
-        for (const QString &lang : languages) {
-            auto glibcLocale = toGlibcLocale(lang);
-            if (glibcLocale.has_value()) {
-                locales.append(glibcLocale.value());
+        if (!settings()->language().isEmpty()) {
+            QStringList languages = settings()->language().split(QLatin1Char(':'));
+            for (const QString &lang : languages) {
+                auto glibcLocale = toGlibcLocale(lang);
+                if (glibcLocale.has_value()) {
+                    locales.append(glibcLocale.value());
+                }
             }
         }
-    }
 #endif
 
-    auto setLangCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Accounts"),
-                                                      QStringLiteral("/org/freedesktop/Accounts/User%1").arg(getuid()),
-                                                      QStringLiteral("org.freedesktop.Accounts.User"),
-                                                      QStringLiteral("SetLanguage"));
-    setLangCall.setArguments({settings()->lang()});
-    QDBusConnection::systemBus().asyncCall(setLangCall);
+        auto setLangCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Accounts"),
+                                                          QStringLiteral("/org/freedesktop/Accounts/User%1").arg(getuid()),
+                                                          QStringLiteral("org.freedesktop.Accounts.User"),
+                                                          QStringLiteral("SetLanguage"));
+        setLangCall.setArguments({settings()->lang()});
+        QDBusConnection::systemBus().asyncCall(setLangCall);
 
-    if (!locales.isEmpty()) {
-        Q_EMIT startGenerateLocale();
-        m_generator->localesGenerate(locales);
-    } else {
-        // probably after clicking "defaults" so all the setting is default
-        saveToConfigFile();
+        if (!locales.isEmpty()) {
+            Q_EMIT startGenerateLocale();
+            m_generator->localesGenerate(locales);
+        } else {
+            // after clicking "defaults" so all the settings are default
+            saveToConfigFile();
+        }
     }
+
+    KSharedConfigPtr globalConfig = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+    KConfigGroup localeGroup(globalConfig, QStringLiteral("Locale"));
+    if (m_optionsModel->binaryDialect() == KFormat::IECBinaryDialect) {
+        // no need to store default value
+        if (localeGroup.hasKey("BinaryUnitDialect")) {
+            localeGroup.deleteEntry("BinaryUnitDialect");
+            globalConfig->sync();
+        }
+    } else {
+        m_loadedBinaryDialect = m_optionsModel->binaryDialect();
+        localeGroup.writeEntry("BinaryUnitDialect", m_loadedBinaryDialect);
+        globalConfig->sync();
+
+        Q_EMIT takeEffectNextTime();
+    }
+
     Q_EMIT saveClicked();
 }
 
@@ -186,11 +214,16 @@ void KCMRegionAndLang::load()
 {
     KQuickManagedConfigModule::load();
     engine()->addImageProvider("flags", new FlagImageProvider);
+
+    m_settings->load();
+    m_optionsModel->load();
+
     Q_EMIT loadClicked();
 }
 void KCMRegionAndLang::defaults()
 {
     KQuickManagedConfigModule::defaults();
+    m_optionsModel->setBinaryDialect(KFormat::BinaryUnitDialect::IECBinaryDialect);
     Q_EMIT defaultsClicked();
 }
 
@@ -211,6 +244,11 @@ OptionsModel *KCMRegionAndLang::optionsModel() const
 
 void KCMRegionAndLang::unset(SettingType setting) const
 {
+    if (setting == SettingType::BinaryDialect) {
+        m_optionsModel->setBinaryDialect(KFormat::IECBinaryDialect);
+        return;
+    }
+
     const char *entry = nullptr;
     switch (setting) {
     case SettingType::Language:
@@ -251,6 +289,9 @@ void KCMRegionAndLang::unset(SettingType setting) const
     case SettingType::PhoneNumbers:
         entry = "LC_TELEPHONE";
         settings()->setPhoneNumbers(settings()->defaultPhoneNumbersValue());
+        break;
+    case SettingType::BinaryDialect:
+        Q_UNREACHABLE();
         break;
     }
 
@@ -396,6 +437,11 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     return localeMap;
 }
 #endif
+
+bool KCMRegionAndLang::isDefaults() const
+{
+    return m_settings->isDefaults() && m_optionsModel->binaryDialect() == KFormat::BinaryUnitDialect::IECBinaryDialect;
+}
 
 #include "kcmregionandlang.moc"
 #include "moc_kcmregionandlang.cpp"

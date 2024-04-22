@@ -177,6 +177,9 @@ KCM.ScrollViewKCM {
                         if (model.page === SettingType.Lang) {
                             languageSelectPage.active = true;
                             kcm.push(languageSelectPage.item);
+                        } else if (model.page === SettingType.BinaryDialect) {
+                            binaryDialectSelectPage.active = true;
+                            kcm.push(binaryDialectSelectPage.item);
                         } else {
                             localeListPage.active = true;
                             localeListPage.item.setting = optionsDelegate.model.page;
@@ -193,6 +196,57 @@ KCM.ScrollViewKCM {
         id: languageSelectPage
         active: false
         source: "AdvancedLanguageSelectPage.qml"
+    }
+
+    Loader {
+        id: binaryDialectSelectPage
+        active: false
+        sourceComponent: KCM.ScrollViewKCM {
+            title: i18nc("@title:window", "Data and Storage Sizes")
+
+            BinaryDialectModel {
+                id: binaryDialectModel
+            }
+
+            view: ListView {
+                id: binaryDialectListView
+                clip: true
+                model: binaryDialectModel
+                delegate: Kirigami.SubtitleDelegate {
+                    id: binaryDialectDelegate
+
+                    required property var model
+
+                    width: ListView.view.width
+
+                    text: model.name
+                    subtitle: model.example ? model.example : ""
+
+                    Kirigami.Theme.useAlternateBackgroundColor: true
+
+                    contentItem: RowLayout {
+                        spacing: Kirigami.Units.smallSpacing
+                        Kirigami.TitleSubtitle {
+                            id: titleSubtitle
+                            Layout.fillWidth: true
+                            title: binaryDialectDelegate.text
+                            subtitle: binaryDialectDelegate.subtitle
+                            selected: model.index === kcm.optionsModel.binaryDialect
+                        }
+
+                        QQC2.Label {
+                            color: !titleSubtitle.selected ? Kirigami.Theme.disabledTextColor: titleSubtitle.color
+                            text: model.description
+                        }
+                    }
+
+                    onClicked: {
+                        kcm.optionsModel.binaryDialect = model.index;
+                        kcm.takeLast();
+                    }
+                }
+            }
+        }
     }
 
     Loader {
@@ -270,14 +324,38 @@ KCM.ScrollViewKCM {
 
                     contentItem: RowLayout {
                         Kirigami.IconTitleSubtitle {
+                            id: icontTitle
                             Layout.fillWidth: true
                             icon: icon.fromControlsIcon(localeDelegate.icon)
                             title: localeDelegate.text
                             subtitle: localeDelegate.subtitle
+                            selected: {
+                                switch (setting) {
+                                case SettingType.Lang:
+                                    return kcm.settings.lang === model.localeName;
+                                case SettingType.Numeric:
+                                    return kcm.settings.numeric === model.localeName;
+                                case SettingType.Time:
+                                    return kcm.settings.time === model.localeName;
+                                case SettingType.Currency:
+                                    return kcm.settings.monetary === model.localeName;
+                                case SettingType.Measurement:
+                                    return kcm.settings.measurement === model.localeName;
+                                case SettingType.PaperSize:
+                                    return kcm.settings.paperSize === model.localeName;
+                                case SettingType.Address:
+                                    return kcm.settings.address === model.localeName;
+                                case SettingType.NameStyle:
+                                    return kcm.settings.nameStyle === model.localeName;
+                                case SettingType.PhoneNumbers:
+                                    return kcm.settings.phoneNumbers === model.localeName;
+                                }
+                                return false;
+                            }
                         }
 
                         QQC2.Label {
-                            color: Kirigami.Theme.disabledTextColor
+                            color: !icontTitle.selected ? Kirigami.Theme.disabledTextColor: icontTitle.color
                             text: model.localeName
                             textFormat: Text.PlainText
                         }
