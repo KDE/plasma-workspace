@@ -6,7 +6,7 @@
 
 #include "batterycontrol.h"
 
-#include "batterymonitor_debug.h"
+#include "batterycontrol_debug.h"
 
 #include <QDBusConnectionInterface>
 #include <QDBusInterface>
@@ -51,7 +51,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
                 if (!reply.isValid()) {
                     m_remainingMsec = reply.value();
                 } else {
-                    qCDebug(APPLETS::BATTERYMONITOR) << "error getting battery remaining time";
+                    qCDebug(BATTERYCONTROL) << "error getting battery remaining time";
                 }
                 watcher->deleteLater();
             });
@@ -67,7 +67,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
                 if (reply.isValid()) {
                     m_smoothedRemainingMsec = reply.value();
                 } else {
-                    qCDebug(APPLETS::BATTERYMONITOR) << "error getting smoothed battery remaining time";
+                    qCDebug(BATTERYCONTROL) << "error getting smoothed battery remaining time";
                 }
 
                 watcher->deleteLater();
@@ -91,7 +91,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
             if (reply.isValid()) {
                 m_chargeStopThreshold = reply.value();
             } else {
-                qCDebug(APPLETS::BATTERYMONITOR) << "error getting charge stop threshold";
+                qCDebug(BATTERYCONTROL) << "error getting charge stop threshold";
             }
             watcher->deleteLater();
         });
@@ -102,7 +102,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
                                                    QStringLiteral("batteryRemainingTimeChanged"),
                                                    this,
                                                    SLOT(batteryRemainingTimeChanged(qulonglong)))) {
-            qCDebug(APPLETS::BATTERYMONITOR) << "error connecting to remaining time changes";
+            qCDebug(BATTERYCONTROL) << "error connecting to remaining time changes";
         }
 
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
@@ -111,7 +111,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
                                                    QStringLiteral("smoothedBatteryRemainingTimeChanged"),
                                                    this,
                                                    SLOT(smoothedBatteryRemainingTimeChanged(qulonglong)))) {
-            qCDebug(APPLETS::BATTERYMONITOR) << "error connecting to smoothed remaining time changes";
+            qCDebug(BATTERYCONTROL) << "error connecting to smoothed remaining time changes";
         }
 
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
@@ -120,7 +120,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
                                                    QStringLiteral("chargeStopThresholdChanged"),
                                                    this,
                                                    SLOT(updateBatteryChargeStopThreshold(int)))) {
-            qCDebug(APPLETS::BATTERYMONITOR) << "error connecting to charge stop threshold changes via dbus";
+            qCDebug(BATTERYCONTROL) << "error connecting to charge stop threshold changes via dbus";
         }
 
         QDBusMessage PowerSaveStatusMessage = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PowerManagement"),
@@ -134,7 +134,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
             if (reply.isValid()) {
                 updateAcPlugState(reply.value());
             } else {
-                qCDebug(APPLETS::BATTERYMONITOR) << "Fail to retrive power save status";
+                qCDebug(BATTERYCONTROL) << "Fail to retrive power save status";
             }
             watcher->deleteLater();
         });
@@ -145,7 +145,7 @@ BatteryControlModel::BatteryControlModel(QObject *parent)
                                                    QStringLiteral("PowerSaveStatusChanged"),
                                                    this,
                                                    SLOT(updateAcPlugState(bool)))) {
-            qCDebug(APPLETS::BATTERYMONITOR) << "error connecting to power save status changes via dbus";
+            qCDebug(BATTERYCONTROL) << "error connecting to power save status changes via dbus";
         }
     }
 }
@@ -208,7 +208,7 @@ QHash<int, QByteArray> BatteryControlModel::roleNames() const
 
 void BatteryControlModel::deviceAdded(const QString &udi)
 {
-    qCDebug(APPLETS::BATTERYMONITOR) << "Device add signal arrived. Udi: " << udi;
+    qCDebug(BATTERYCONTROL) << "Device add signal arrived. Udi: " << udi;
 
     Solid::Device deviceBattery(udi);
     if (!deviceBattery.isValid()) {
@@ -225,7 +225,7 @@ void BatteryControlModel::deviceAdded(const QString &udi)
 
         m_hasInternalBatteries = true;
 
-        qCDebug(APPLETS::BATTERYMONITOR) << "Is have internal batteries: true";
+        qCDebug(BATTERYCONTROL) << "Is have internal batteries: true";
 
         connect(battery, &Solid::Battery::presentStateChanged, this, &BatteryControlModel::updateOverallBattery);
         connect(battery, &Solid::Battery::energyChanged, this, &BatteryControlModel::updateOverallBattery);
@@ -243,17 +243,17 @@ void BatteryControlModel::deviceAdded(const QString &udi)
 
     int position = m_batterySources.size();
 
-    qCDebug(APPLETS::BATTERYMONITOR) << "Position for battery with udi : " << udi << "intitialized : " << position;
+    qCDebug(BATTERYCONTROL) << "Position for battery with udi : " << udi << "intitialized : " << position;
 
     m_batteryPositions[udi] = position;
 
-    qCDebug(APPLETS::BATTERYMONITOR) << "Update Battery Position. Udi: " << udi << "Position: " << m_batteryPositions[udi];
+    qCDebug(BATTERYCONTROL) << "Update Battery Position. Udi: " << udi << "Position: " << m_batteryPositions[udi];
 
     beginInsertRows(QModelIndex(), position, position);
     m_batterySources.append(udi);
     endInsertRows();
 
-    qCDebug(APPLETS::BATTERYMONITOR) << "Battery with udi: " << udi << " is added";
+    qCDebug(BATTERYCONTROL) << "Battery with udi: " << udi << " is added";
 
     m_hasBatteries = true;
 
@@ -262,7 +262,7 @@ void BatteryControlModel::deviceAdded(const QString &udi)
 
 void BatteryControlModel::deviceRemoved(const QString &udi)
 {
-    qCDebug(APPLETS::BATTERYMONITOR) << "Device remove signal arrived. Udi: " << udi;
+    qCDebug(BATTERYCONTROL) << "Device remove signal arrived. Udi: " << udi;
     if (m_batterySources.isEmpty()) {
         return;
     }
@@ -276,14 +276,14 @@ void BatteryControlModel::deviceRemoved(const QString &udi)
 
     if (m_internalBatteries.removeOne(udi)) {
         m_hasInternalBatteries = !m_internalBatteries.isEmpty();
-        qCDebug(APPLETS::BATTERYMONITOR) << "Is have internal batteries: " << m_hasInternalBatteries;
+        qCDebug(BATTERYCONTROL) << "Is have internal batteries: " << m_hasInternalBatteries;
     }
 
     if (auto deleteBattery = Solid::Device(udi).as<Solid::Battery>()) {
         deleteBattery->disconnect(this);
     }
 
-    qCDebug(APPLETS::BATTERYMONITOR) << "battery with udi: " << udi << "at index: " << *position << "is removed";
+    qCDebug(BATTERYCONTROL) << "battery with udi: " << udi << "at index: " << *position << "is removed";
 
     for (int newPosition = *position + 1; newPosition < m_batterySources.size(); ++newPosition) {
         m_batteryPositions[m_batterySources[newPosition]] = newPosition - 1;
@@ -344,7 +344,7 @@ void BatteryControlModel::updatePluggedInState(bool onBattery, const QString &ud
 
 void BatteryControlModel::batteryRemainingTimeChanged(qulonglong time)
 {
-    // qCDebug(APPLETS::BATTERYMONITOR) << "Remaining time 2:" << time;
+    // qCDebug(BATTERYCONTROL) << "Remaining time 2:" << time;
     m_remainingMsec = time;
 }
 
@@ -433,15 +433,15 @@ void BatteryControlModel::updateOverallBattery()
 
     m_hasCumulative = hasCumulative;
 
-    qCDebug(APPLETS::BATTERYMONITOR) << "____ Overal battery updated ____ \n"
-                                     << "Has cumulative          : " << (hasCumulative ? "Yes" : "No") << "\n"
-                                     << "Has battery             : " << (m_hasBatteries ? "Yes" : "No") << "\n"
-                                     << "Plugged In              : " << (m_pluggedIn ? "Yes" : "No") << "\n"
-                                     << "State                   : " << m_state << "\n"
-                                     << "Charge Stop Threshold   : " << m_chargeStopThreshold << "\n"
-                                     << "Remaining Msec          : " << m_remainingMsec << "\n"
-                                     << "Smoothed Remaining Msec : " << m_smoothedRemainingMsec << "\n"
-                                     << "Percent                 : " << m_percent << "\n";
+    qCDebug(BATTERYCONTROL) << "____ Overal battery updated ____ \n"
+                            << "Has cumulative          : " << (hasCumulative ? "Yes" : "No") << "\n"
+                            << "Has battery             : " << (m_hasBatteries ? "Yes" : "No") << "\n"
+                            << "Plugged In              : " << (m_pluggedIn ? "Yes" : "No") << "\n"
+                            << "State                   : " << m_state << "\n"
+                            << "Charge Stop Threshold   : " << m_chargeStopThreshold << "\n"
+                            << "Remaining Msec          : " << m_remainingMsec << "\n"
+                            << "Smoothed Remaining Msec : " << m_smoothedRemainingMsec << "\n"
+                            << "Percent                 : " << m_percent << "\n";
 }
 
 QBindable<bool> BatteryControlModel::bindableHasCumulative()

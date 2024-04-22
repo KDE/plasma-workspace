@@ -19,6 +19,7 @@ import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
 
+import org.kde.plasma.private.batterymonitor
 import org.kde.plasma.private.battery
 
 PlasmoidItem {
