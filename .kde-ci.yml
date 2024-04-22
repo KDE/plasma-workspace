@@ -86,12 +86,12 @@ RuntimeDependencies:
     'network/kio-extras': '@latest-kf6'
     'plasma/powerdevil': '@same'
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
+    'xdg-desktop-portal-kde': '@latest-kf6'
 - 'on': ['Linux', 'FreeBSD']
   'require':
     'frameworks/qqc2-desktop-style': '@latest-kf6'
     'plasma/milou' : '@same'
     'plasma/kglobalacceld': '@same'
-    'xdg-desktop-portal-kde': '@same'
 
 Options:
   ctest-arguments: '--repeat until-pass:5'
