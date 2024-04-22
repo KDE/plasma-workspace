@@ -211,8 +211,8 @@ PlasmoidItem {
 
         model: batteryControl
 
-        isSetToPerformanceMode: batterymonitor.isHeldOnPerformanceMode || powerManagmentControl.isManuallyInPerformanceMode
-        isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || powerManagmentControl.isManuallyInPowerSaveMode
+        isSetToPerformanceMode: batterymonitor.isHeldOnPerformanceMode || powerProfilesControl.isManuallyInPerformanceMode
+        isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || powerProfilesControl.isManuallyInPowerSaveMode
         isManuallyInhibited: powerManagmentControl.isManuallyInhibited
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
         isDischarging: !batteryControl.pluggedIn
