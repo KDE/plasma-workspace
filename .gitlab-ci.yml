@@ -6,15 +6,6 @@ include:
     file:
       - /gitlab-templates/linux-qt6.yml
       - /gitlab-templates/freebsd-qt6.yml
-
-qmlstringies:
-  image: invent-registry.kde.org/sysadmin/ci-images/suse-qt67:latest
-  stage: build
-  tags:
-    - Linux
-  interruptible: true
-  variables:
-    LANG: en_US.UTF-8
-  script:
-    - git clone https://invent.kde.org/sitter/somethingsomething.git --depth 1
-    - somethingsomething/main.rb
+  - project: sysadmin/ci-service-templates
+    file:
+      - /ci-qml-checks.yml
