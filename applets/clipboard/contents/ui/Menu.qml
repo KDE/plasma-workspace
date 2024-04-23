@@ -86,8 +86,10 @@ PlasmaComponents3.ScrollView {
         reuseItems: true
 
         delegate: ClipboardItemDelegate {
-            // FIXME: removing this causes a binding loop
-            width: menuListView.width - menuListView.leftMargin - menuListView.rightMargin
+            width: {
+                const view = ListView.view;
+                return view ? view.width - view.leftMargin - view.rightMargin : 0;
+            }
 
             supportsBarcodes: menu.supportsBarcodes
 
