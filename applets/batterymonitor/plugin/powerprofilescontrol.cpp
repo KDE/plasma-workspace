@@ -56,7 +56,7 @@ PowerProfilesControl::PowerProfilesControl(QObject *parent)
             if (reply.isValid()) {
                 updatePowerProfileConfiguredProfile(reply.value());
             } else {
-                qCDebug(APPLETS::BATTERYMONITOR) << "error getting configured profile";
+                qCDebug(APPLETS::BATTERYMONITOR) << "error getting current profile";
             }
             watcher->deleteLater();
         });
@@ -124,6 +124,15 @@ PowerProfilesControl::PowerProfilesControl(QObject *parent)
             }
             watcher->deleteLater();
         });
+
+        if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.PowerProfile"),
+                                                   QStringLiteral("configuredProfileChanged"),
+                                                   this,
+                                                   SLOT(updatePowerProfileConfiguredProfile(QString)))) {
+            qCDebug(APPLETS::BATTERYMONITOR) << "error connecting to current profile changes via dbus";
+        }
 
         if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                    QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
@@ -197,24 +206,19 @@ QBindable<QStringList> PowerProfilesControl::bindableProfiles()
     return &m_profiles;
 }
 
-QBindable<QList<QVariantMap>> PowerProfilesControl::bindableActiveProfileHolds()
-{
-    return &m_activeProfileHolds;
-}
-
 QBindable<QString> PowerProfilesControl::bindableConfiguredProfile()
 {
     return &m_configuredProfile;
 }
 
-QBindable<QString> PowerProfilesControl::bindableActuallyActiveProfile()
+QBindable<QString> PowerProfilesControl::bindableActiveProfile()
 {
-    return &m_actuallyActiveProfile;
+    return &m_activeProfile;
 }
 
-QBindable<QString> PowerProfilesControl::bindableActuallyActiveProfileError()
+QBindable<QString> PowerProfilesControl::bindableProfileError()
 {
-    return &m_actuallyActiveProfileError;
+    return &m_profileError;
 }
 
 QBindable<QString> PowerProfilesControl::bindableInhibitionReason()
@@ -227,7 +231,12 @@ QBindable<QString> PowerProfilesControl::bindableDegradationReason()
     return &m_degradationReason;
 }
 
-void PowerProfilesControl::setActuallyActiveProfile(const QString &profile)
+QBindable<QList<QVariantMap>> PowerProfilesControl::bindableProfileHolds()
+{
+    return &m_profileHolds;
+}
+
+void PowerProfilesControl::setProfile(const QString &profile)
 {
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.Solid.PowerManagement"),
                                                       QStringLiteral("/org/kde/Solid/PowerManagement/Actions/PowerProfile"),
@@ -239,10 +248,10 @@ void PowerProfilesControl::setActuallyActiveProfile(const QString &profile)
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, profile](QDBusPendingCallWatcher *watcher) {
         QDBusReply<void> reply = *watcher;
         if (reply.isValid()) {
-            m_actuallyActiveProfile = profile;
+            m_activeProfile = profile;
             showPowerProfileOsd(profile);
         } else {
-            m_actuallyActiveProfileError = profile;
+            m_profileError = profile;
         }
         watcher->deleteLater();
     });
@@ -261,6 +270,11 @@ void PowerProfilesControl::showPowerProfileOsd(const QString &profile)
     QDBusConnection::sessionBus().asyncCall(osdMsg);
 }
 
+void PowerProfilesControl::updatePowerProfileChoices(const QStringList &choices)
+{
+    m_profiles = choices;
+}
+
 void PowerProfilesControl::updatePowerProfileConfiguredProfile(const QString &configuredProfile)
 {
     m_configuredProfile = configuredProfile;
@@ -268,12 +282,7 @@ void PowerProfilesControl::updatePowerProfileConfiguredProfile(const QString &co
 
 void PowerProfilesControl::updatePowerProfileCurrentProfile(const QString &activeProfile)
 {
-    m_actuallyActiveProfile = activeProfile;
-}
-
-void PowerProfilesControl::updatePowerProfileChoices(const QStringList &choices)
-{
-    m_profiles = choices;
+    m_activeProfile = activeProfile;
 }
 
 void PowerProfilesControl::updatePowerProfilePerformanceInhibitedReason(const QString &reason)
@@ -302,7 +311,7 @@ void PowerProfilesControl::updatePowerProfileHolds(QList<QVariantMap> holds)
             {QStringLiteral("Profile"), hold[QStringLiteral("Profile")]},
         };
     });
-    m_activeProfileHolds = std::move(out);
+    m_profileHolds = std::move(out);
 
-    Q_EMIT activeProfileHoldsChanged(m_activeProfileHolds);
+    Q_EMIT profileHoldsChanged(m_profileHolds);
 }

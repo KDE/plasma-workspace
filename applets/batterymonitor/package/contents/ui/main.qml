@@ -26,10 +26,20 @@ PlasmoidItem {
 
     PowerProfilesControl {
         id: powerProfilesControl
+
+        readonly property bool isInBalancedProfile: powerProfilesControl.activeProfile === "balanced"
+        readonly property bool isInPerformanceProfile: powerProfilesControl.activeProfile === "performance"
+        readonly property bool isInPowersaveProfile: powerProfilesControl.activeProfile === "power-saver"
+        readonly property bool isHeldOPowerProfile: powerProfilesControl.profileHolds.length > 0
+        readonly property string defaultPowerProfile: powerProfilesControl.configuredProfile ? powerProfilesControl.configuredProfile : "balanced"
+        readonly property bool isInNonDefaultPowerProfile: powerProfilesControl.activeProfile && powerProfilesControl.activeProfile != powerProfilesControl.defaultPowerProfile
     }
 
     BatteryControlModel {
         id: batteryControl
+
+        readonly property int remainingTime: batteryControl.smoothedRemainingMsec
+        readonly property bool isSomehowFullyCharged: batteryControl.pluggedIn && batteryControl.state === BatteryControlModel.FullyCharged
     }
 
     PowerManagementControl {
@@ -38,18 +48,6 @@ PlasmoidItem {
 
     readonly property bool kcmAuthorized: KAuthorized.authorizeControlModule("powerdevilprofilesconfig")
     readonly property bool kcmEnergyInformationAuthorized: KAuthorized.authorizeControlModule("kcm_energyinfo")
-    readonly property bool isSomehowFullyCharged: batteryControl.pluggedIn && batteryControl.state === BatteryControlModel.FullyCharged
-    readonly property int remainingTime: batteryControl.smoothedRemainingMsec
-
-    readonly property bool isInBalancedMode: powerProfilesControl.actuallyActiveProfile === "balanced"
-
-    readonly property bool isSomehowInPerformanceMode: powerProfilesControl.actuallyActiveProfile === "performance"// Don't care about whether it was manually one or due to holds
-    readonly property bool isSomehowInPowerSaveMode: powerProfilesControl.actuallyActiveProfile === "power-saver" // Don't care about whether it was manually one or due to holds
-    readonly property bool isHeldOnPerformanceMode: isSomehowInPerformanceMode && powerProfilesControl.activeProfileHolds.length > 0
-    readonly property bool isHeldOnPowerSaveMode: isSomehowInPowerSaveMode && powerProfilesControl.activeProfileHolds.length > 0
-    readonly property string defaultPowerProfile: powerProfilesControl.configuredProfile ? powerProfilesControl.configuredProfile : "balanced"
-    readonly property bool isInNonDefaultPowerProfile: powerProfilesControl.actuallyActiveProfile && powerProfilesControl.actuallyAtiveProfile != defaultPowerProfile
-
 
     readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
         || Plasmoid.location === PlasmaCore.Types.RightEdge
@@ -85,10 +83,10 @@ PlasmoidItem {
     onActivateProfileRequested: profile => {
         powerProfilesControl.isSilent = batterymonitor.expanded;
 
-        if (profile === powerProfilesControl.actuallyActiveProfile) {
+        if (profile === powerProfilesControl.activeProfile) {
             return;
         }
-        powerProfilesControl.setActuallyActiveProfile(profile);
+        powerProfilesControl.setProfile(profile);
     }
 
 
@@ -102,7 +100,7 @@ PlasmoidItem {
 
     Plasmoid.status: {
 
-        if (powerManagementControl.isManuallyInhibited || isInNonDefaultPowerProfile) {
+        if (powerManagementControl.isManuallyInhibited || powerProfilesControl.isInNonDefaultPowerProfile) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -120,7 +118,7 @@ PlasmoidItem {
 
         if (!batteryControl.hasInternalBatteries) {
             return Plasmoid.title
-        } else if (isSomehowFullyCharged) {
+        } else if (batteryControl.isSomehowFullyCharged) {
             return i18n("Fully Charged");
         }
 
@@ -149,8 +147,8 @@ PlasmoidItem {
         if (!batteryControl.hasBatteries) {
             parts.push(i18n("No Batteries Available"));
         } else if(batteryControl.hasInternalBatteries) {
-            if (remainingTime > 0) {
-                const remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
+            if (batteryControl.remainingTime > 0) {
+                const remainingTimeString = KCoreAddons.Format.formatDuration(batteryControl.remainingTime, KCoreAddons.FormatTypes.HideSeconds);
                 if (batteryControl.state === BatteryControlModel.FullyCharged) {
                     // Don't add anything
                 } else if (batteryControl.pluggedIn && batteryControl.state === BatteryControlModel.Charging) {
@@ -158,7 +156,7 @@ PlasmoidItem {
                 } else {
                     parts.push(i18nc("remaining time left of battery usage - HH:MM", "%1 remaining", remainingTimeString));
                 }
-            } else if (batteryControl.state === BatteryControlModel.NoCharge && !isSomehowFullyCharged) {
+            } else if (batteryControl.state === BatteryControlModel.NoCharge && !batteryControl.isSomehowFullyCharged) {
                 parts.push(i18n("Not charging"));
             } // otherwise, don't add anything
         }
@@ -169,23 +167,23 @@ PlasmoidItem {
             parts.push(i18n("Middle-click to disable automatic sleep and screen locking"));
         }
 
-        if (isSomehowInPerformanceMode) {
-            if (isHeldOnPerformanceMode) {
+        if (powerProfilesControl.isInPerformanceProfile) {
+            if (powerProfilesControl.isHeldOnPowerProfile) {
                 parts.push(i18np("An application has requested activating Performance mode",
                                  "%1 applications have requested activating Performance mode",
                                  powerProfilesControl.activeProfileHolds.length));
             } else {
                 parts.push(i18n("System is in Performance mode; scroll to change"));
             }
-        } else if (isSomehowInPowerSaveMode) {
-            if (isHeldOnPowerSaveMode) {
+        } else if (powerProfilesControl.isInPowersaveProfile) {
+            if (powerProfilesControl.isHeldOnPowerProfile) {
                 parts.push(i18np("An application has requested activating Power Save mode",
                                 "%1 applications have requested activating Power Save mode",
                                 powerProfilesControl.activeProfileHolds.length));
             } else {
                 parts.push(i18n("System is in Power Save mode; scroll to change"));
             }
-        } else if (isInBalancedMode) {
+        } else if (powerProfilesControl.isInBalancedProfile) {
             parts.push(i18n("System is in Balanced Power mode; scroll to change"));
         }
 
@@ -214,12 +212,12 @@ PlasmoidItem {
         hasInternalBatteries: batteryControl.hasInternalBatteries
         hasCumulative: batteryControl.hasCumulative
 
-        isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
+        isSomehowFullyCharged: batteryControl.isSomehowFullyCharged
         isDischarging: !batteryControl.pluggedIn
 
         isManuallyInhibited: powerManagementControl.isManuallyInhibited
-        activeProfile: powerProfilesControl.actuallyActiveProfile
-        isInNonDefaultPowerProfile: batterymonitor.isInNonDefaultPowerProfile
+        activeProfile: powerProfilesControl.activeProfile
+        isInNonDefaultPowerProfile: powerProfilesControl.isInNonDefaultPowerProfile
 
         model: batteryControl
 
@@ -245,7 +243,7 @@ PlasmoidItem {
                 return;
             }
 
-            let activeProfile = powerProfilesControl.actuallyActiveProfile;
+            let activeProfile = powerProfilesControl.activeProfile;
             let newProfile = activeProfile;
 
             const delta = (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x);
@@ -276,16 +274,16 @@ PlasmoidItem {
         isManuallyInhibitedError: powerManagementControl.isManuallyInhibitedError
         pluggedIn: batteryControl.pluggedIn
         chargeStopThreshold: batteryControl.chargeStopThreshold
-        remainingTime: batterymonitor.remainingTime
-        activeProfile: powerProfilesControl.actuallyActiveProfile
-        activeProfileError: powerProfilesControl.actuallyActiveProfileError
+        remainingTime: batteryControl.remainingTime
+        activeProfile: powerProfilesControl.activeProfile
+        activeProfileError: powerProfilesControl.profileError
         inhibitions: powerManagementControl.inhibitions
         inhibitsLidAction: powerManagementControl.isLidPresent && !powerManagementControl.triggersLidAction
         profilesInstalled: powerProfilesControl.isPowerProfileDaemonInstalled
         profiles: powerProfilesControl.profiles
         inhibitionReason: powerProfilesControl.inhibitionReason
         degradationReason: powerProfilesControl.degradationReason
-        profileHolds: powerProfilesControl.activeProfileHolds
+        profileHolds: powerProfilesControl.profileHolds
 
         onActivateProfileRequested: profile => {
             batterymonitor.activateProfileRequested(profile);
