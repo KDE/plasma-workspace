@@ -223,6 +223,10 @@ void BatteryControlModel::deviceAdded(const QString &udi)
     if (battery->type() == Solid::Battery::PrimaryBattery) {
         m_internalBatteries.append(udi);
 
+        m_hasInternalBatteries = true;
+
+        qCDebug(APPLETS::BATTERYMONITOR) << "Is have internal batteries: true";
+
         connect(battery, &Solid::Battery::presentStateChanged, this, &BatteryControlModel::updateOverallBattery);
         connect(battery, &Solid::Battery::energyChanged, this, &BatteryControlModel::updateOverallBattery);
         connect(battery, &Solid::Battery::energyFullChanged, this, &BatteryControlModel::updateOverallBattery);
@@ -270,7 +274,10 @@ void BatteryControlModel::deviceRemoved(const QString &udi)
 
     namesMonitor->removeBatteryName(udi);
 
-    m_internalBatteries.removeOne(udi);
+    if (m_internalBatteries.removeOne(udi)) {
+        m_hasInternalBatteries = !m_internalBatteries.isEmpty();
+        qCDebug(APPLETS::BATTERYMONITOR) << "Is have internal batteries: " << m_hasInternalBatteries;
+    }
 
     if (auto deleteBattery = Solid::Device(udi).as<Solid::Battery>()) {
         deleteBattery->disconnect(this);
@@ -358,13 +365,6 @@ void BatteryControlModel::updateAcPlugState(bool onBattery)
 
 void BatteryControlModel::updateOverallBattery()
 {
-    if (m_internalBatteries.isEmpty()) {
-        m_hasInternalBatteries = false;
-        return;
-    }
-
-    bool hasInternalBatteries = false;
-
     bool hasCumulative = false;
 
     double energy = 0;
@@ -380,19 +380,16 @@ void BatteryControlModel::updateOverallBattery()
         Solid::Device deviceBattery(internalBattery);
         const Solid::Battery *battery = deviceBattery.as<Solid::Battery>();
         if (battery && battery->isPresent()) {
-            hasInternalBatteries = true;
-            if (battery->isPowerSupply()) {
-                hasCumulative = true;
+            hasCumulative = true;
 
-                energy += battery->energy();
-                totalEnergy += battery->energyFull();
-                totalPercentage += battery->chargePercent();
-                allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
-                charging = charging || (battery->chargeState() == Solid::Battery::Charging);
-                discharging = discharging || (battery->chargeState() == Solid::Battery::Discharging);
-                noCharge = noCharge || (battery->chargeState() == Solid::Battery::NoCharge);
-                ++count;
-            }
+            energy += battery->energy();
+            totalEnergy += battery->energyFull();
+            totalPercentage += battery->chargePercent();
+            allFullyCharged = allFullyCharged && (battery->chargeState() == Solid::Battery::FullyCharged);
+            charging = charging || (battery->chargeState() == Solid::Battery::Charging);
+            discharging = discharging || (battery->chargeState() == Solid::Battery::Discharging);
+            noCharge = noCharge || (battery->chargeState() == Solid::Battery::NoCharge);
+            ++count;
         }
     }
 
@@ -435,8 +432,6 @@ void BatteryControlModel::updateOverallBattery()
     }
 
     m_hasCumulative = hasCumulative;
-    m_hasInternalBatteries = hasInternalBatteries;
-    qCDebug(APPLETS::BATTERYMONITOR) << "Is have internal batteries: " << hasInternalBatteries;
 
     qCDebug(APPLETS::BATTERYMONITOR) << "____ Overal battery updated ____ \n"
                                      << "Has cumulative          : " << (hasCumulative ? "Yes" : "No") << "\n"

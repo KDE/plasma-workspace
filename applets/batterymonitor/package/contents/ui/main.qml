@@ -115,6 +115,10 @@ PlasmoidItem {
     }
 
     toolTipMainText: {
+        if(batteryControl.hasInternalBatteries && !batteryControl.hasCumulative){
+            return i18n("Battery is not present in the bay");
+        }
+
         if (!batteryControl.hasInternalBatteries) {
             return Plasmoid.title
         } else if (isSomehowFullyCharged) {
@@ -145,18 +149,20 @@ PlasmoidItem {
 
         if (!batteryControl.hasBatteries) {
             parts.push(i18n("No Batteries Available"));
-        } else if (remainingTime > 0) {
-            const remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
-            if (batteryControl.state === BatteryControlModel.FullyCharged) {
-                // Don't add anything
-            } else if (batteryControl.pluggedIn && batteryControl.state === BatteryControlModel.Charging) {
-                parts.push(i18nc("time until fully charged - HH:MM","%1 until fully charged", remainingTimeString));
-            } else {
-                parts.push(i18nc("remaining time left of battery usage - HH:MM","%1 remaining", remainingTimeString));
-            }
-        } else if (batteryControl.state === BatteryControlModel.NoCharge && !isSomehowFullyCharged) {
-            parts.push(i18n("Not charging"));
-        } // otherwise, don't add anything
+        } else if(batteryControl.hasInternalBatteries) {
+            if (remainingTime > 0) {
+                const remainingTimeString = KCoreAddons.Format.formatDuration(remainingTime, KCoreAddons.FormatTypes.HideSeconds);
+                if (batteryControl.state === BatteryControlModel.FullyCharged) {
+                    // Don't add anything
+                } else if (batteryControl.pluggedIn && batteryControl.state === BatteryControlModel.Charging) {
+                    parts.push(i18nc("time until fully charged - HH:MM", "%1 until fully charged", remainingTimeString));
+                } else {
+                    parts.push(i18nc("remaining time left of battery usage - HH:MM", "%1 remaining", remainingTimeString));
+                }
+            } else if (batteryControl.state === BatteryControlModel.NoCharge && !isSomehowFullyCharged) {
+                parts.push(i18n("Not charging"));
+            } // otherwise, don't add anything
+        }
 
         if (powerManagmentControl.isManuallyInhibited) {
             parts.push(i18n("Automatic sleep and screen locking are disabled; middle-click to re-enable"));
@@ -208,6 +214,7 @@ PlasmoidItem {
         batteryPluggedIn: batteryControl.pluggedIn
         hasBatteries: batteryControl.hasBatteries
         hasInternalBatteries: batteryControl.hasInternalBatteries
+        hasCumulative: batteryControl.hasCumulative
 
         model: batteryControl
 

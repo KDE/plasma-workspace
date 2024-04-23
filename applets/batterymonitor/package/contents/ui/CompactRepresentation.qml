@@ -25,6 +25,7 @@ MouseArea {
     property bool batteryPluggedIn : false
     property bool hasBatteries: false
     property bool hasInternalBatteries : false
+    property bool hasCumulative: false
 
     property alias model: view.model
 
@@ -84,7 +85,7 @@ MouseArea {
             anchors.fill: parent
 
             active: root.containsMouse
-            hasBattery: root.hasInternalBatteries
+            hasBattery: root.hasCumulative
             percent: root.batteryPercent
             pluggedIn: root.batteryPluggedIn
         }
