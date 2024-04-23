@@ -12,6 +12,7 @@
 #include <QDBusMessage>
 #include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
+#include <qproperty.h>
 
 static const QString s_serviceName = QStringLiteral("org.kde.KWin.NightLight");
 static const QString s_nightLightPath = QStringLiteral("/org/kde/KWin/NightLight");
@@ -52,9 +53,8 @@ NightLightControl::NightLightControl(QObject *parent)
         updateProperties(properties.value());
     });
 
-    m_isInhibitedFromApplet = NightLightInhibitor::instance().isInhibited();
-    connect(&NightLightInhibitor::instance(), &NightLightInhibitor::inhibitedChanged, this, [this]() {
-        setInhibitedFromApplet(NightLightInhibitor::instance().isInhibited());
+    isInhibitedFromApplet().setBinding([&]() {
+        return NightLightInhibitor::instance().isInhibited();
     });
 }
 
@@ -182,9 +182,9 @@ void NightLightControl::toggleInhibition()
     NightLightInhibitor::instance().toggleInhibition();
 }
 
-bool NightLightControl::isInhibitedFromApplet() const
+QBindable<bool> NightLightControl::isInhibitedFromApplet()
 {
-    return m_isInhibitedFromApplet;
+    return &m_isInhibitedFromApplet;
 }
 
 void NightLightControl::setInhibitedFromApplet(bool inhibitedFromApplet)
@@ -193,7 +193,7 @@ void NightLightControl::setInhibitedFromApplet(bool inhibitedFromApplet)
         return;
     }
     m_isInhibitedFromApplet = inhibitedFromApplet;
-    Q_EMIT inhibitedFromAppletChanged();
+    Q_EMIT inhibitedFromAppletChanged(m_isInhibitedFromApplet);
 }
 
 int NightLightControl::mode() const

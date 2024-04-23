@@ -8,6 +8,7 @@
 #pragma once
 
 #include <QObject>
+#include <qproperty.h>
 #include <qqmlregistration.h>
 
 /**
@@ -41,7 +42,7 @@ class NightLightControl : public QObject
     /**
      * This property holds a value to indicate whether night light is currently inhibited frin tge aooket abd can be uninhibited through it.
      */
-    Q_PROPERTY(bool inhibitedFromApplet READ isInhibitedFromApplet NOTIFY inhibitedFromAppletChanged)
+    Q_PROPERTY(bool inhibitedFromApplet READ default NOTIFY inhibitedFromAppletChanged BINDABLE isInhibitedFromApplet)
 
     /**
      * This property holds a value to indicate if Night Light is on day mode.
@@ -105,7 +106,7 @@ public:
     /**
      * Returns @c true if Night Light is currently inhibited from the applet and can be uninhibited; otherwise @c false.
      */
-    bool isInhibitedFromApplet() const;
+    QBindable<bool> isInhibitedFromApplet();
 
     /**
      * Returns 0 if automatic location, 1 if manual location, 2 if manual timings, 3 if constant
@@ -167,7 +168,7 @@ Q_SIGNALS:
     /**
      * Emitted wgeb Night Light has been inhibited or uninnhibited from the applet.
      */
-    void inhibitedFromAppletChanged();
+    void inhibitedFromAppletChanged(bool inhibitedFromApplet);
 
     /**
      * Emitted whenever Night Light timings mode changes.
@@ -216,11 +217,12 @@ private:
     void setCurrentTransitionEndTime(quint64 currentTransitionEndTime);
     void setScheduledTransitionStartTime(quint64 scheduledTransitionStartTime);
 
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(NightLightControl, bool, m_isInhibitedFromApplet, false, &NightLightControl::inhibitedFromAppletChanged)
+
     bool m_isAvailable = false;
     bool m_isEnabled = false;
     bool m_isRunning = false;
     bool m_isInhibited = false;
-    bool m_isInhibitedFromApplet = false;
     int m_mode = 0;
     bool m_isDaylight = false;
     int m_currentTemperature = 0;
