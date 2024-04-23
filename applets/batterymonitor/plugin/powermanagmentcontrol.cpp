@@ -43,10 +43,11 @@ PowerManagmentControl::PowerManagmentControl(QObject *parent)
             if (reply.isValid()) {
                 m_isLidPresent = reply.value();
 
-                QDBusMessage triggersLidActionMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
-                                                                                       QStringLiteral("/org/kde/Solid/PowerManagement"),
-                                                                                       SOLID_POWERMANAGEMENT_SERVICE,
-                                                                                       QStringLiteral("triggersLidAction"));
+                QDBusMessage triggersLidActionMessage =
+                    QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                   QStringLiteral("/org/kde/Solid/PowerManagement/Actions/HandleButtonEvents"),
+                                                   QStringLiteral("org.kde.Solid.PowerManagement.Actions.HandleButtonEvents"),
+                                                   QStringLiteral("triggersLidAction"));
                 QDBusPendingCall triggersLidActionCall = QDBusConnection::sessionBus().asyncCall(triggersLidActionMessage);
                 auto triggersLidActionWatcher = new QDBusPendingCallWatcher(triggersLidActionCall, this);
                 connect(triggersLidActionWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
