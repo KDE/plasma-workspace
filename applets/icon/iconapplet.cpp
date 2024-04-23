@@ -53,8 +53,9 @@ IconApplet::~IconApplet()
     if (destroyed()) {
         QFile::remove(m_localPath);
     }
-
-    m_openWithMenu->deleteLater();
+    if (m_openWithMenu) {
+        m_openWithMenu->deleteLater();
+    }
 }
 
 void IconApplet::init()

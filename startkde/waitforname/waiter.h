@@ -20,6 +20,7 @@ public:
 
 private Q_SLOTS:
     void registered();
+    void unregistered();
     void timeout();
 
 private:
@@ -27,4 +28,8 @@ private:
 
     QString mService = QStringLiteral("org.freedesktop.Notifications");
     QTimer mTimeoutTimer;
+    enum Mode {
+        WaitForRegistration,
+        WaitForUnregistration,
+    } mMode = WaitForRegistration;
 };

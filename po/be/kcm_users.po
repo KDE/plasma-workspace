@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 00:38+0000\n"
+"POT-Creation-Date: 2024-04-15 00:39+0000\n"
 "PO-Revision-Date: 2023-02-09 11:39\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -21,37 +21,37 @@ msgstr ""
 "X-Crowdin-File: /main/be/plasma-workspace/kcm_users.po\n"
 "X-Crowdin-File-ID: 8794\n"
 
-#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
+#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Не знойдзена прылады для сканавання адбіткаў пальцаў."
 
-#: src/fingerprintmodel.cpp:317
+#: src/fingerprintmodel.cpp:294
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Паўтарыце спробу сканавання пальца."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:296
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Занадта хутка. Паўтарыце спробу."
 
-#: src/fingerprintmodel.cpp:321
+#: src/fingerprintmodel.cpp:298
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Палец знаходзіцца не ў цэнтры сканера. Паўтарыце спробу."
 
-#: src/fingerprintmodel.cpp:323
+#: src/fingerprintmodel.cpp:300
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Прыміце палец са сканера і паўтарыце спробу."
 
-#: src/fingerprintmodel.cpp:331
+#: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Не ўдалося зарэгістраваць адбітак пальца."
 
-#: src/fingerprintmodel.cpp:334
+#: src/fingerprintmodel.cpp:311
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -60,12 +60,12 @@ msgstr ""
 "На гэтай прыладзе не хапае вольнага месца. Выдаліце ​​іншыя адбіткі пальцаў, "
 "каб працягнуць."
 
-#: src/fingerprintmodel.cpp:337
+#: src/fingerprintmodel.cpp:314
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Прылада была адлучаная."
 
-#: src/fingerprintmodel.cpp:342
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Адбылася невядомая памылка."
@@ -192,31 +192,25 @@ msgstr "Наладжванне адбіткаў пальцаў"
 
 #: src/ui/FingerprintDialog.qml:38
 #, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr "Ачысціць усё"
-
-#: src/ui/FingerprintDialog.qml:45
-#, kde-format
 msgid "Add"
 msgstr "Дадаць"
 
-#: src/ui/FingerprintDialog.qml:54
+#: src/ui/FingerprintDialog.qml:47
 #, kde-format
 msgid "Cancel"
 msgstr "Скасаваць"
 
-#: src/ui/FingerprintDialog.qml:62
+#: src/ui/FingerprintDialog.qml:55
 #, kde-format
 msgid "Done"
 msgstr "Завершана"
 
-#: src/ui/FingerprintDialog.qml:84
+#: src/ui/FingerprintDialog.qml:77
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Рэгістраванне адбітка пальца"
 
-#: src/ui/FingerprintDialog.qml:94
+#: src/ui/FingerprintDialog.qml:87
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
@@ -224,14 +218,14 @@ msgstr ""
 "Некалькі разоў націсніце правым указальным пальцам на сканер адбіткаў "
 "пальцаў."
 
-#: src/ui/FingerprintDialog.qml:96
+#: src/ui/FingerprintDialog.qml:89
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў націсніце правым сярэднім пальцам на сканер адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:98
+#: src/ui/FingerprintDialog.qml:91
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
@@ -239,33 +233,33 @@ msgstr ""
 "Некалькі разоў націсніце правым безназоўным пальцам на сканер адбіткаў "
 "пальцаў."
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:93
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "Некалькі разоў націсніце правым мезенцам на сканер адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:102
+#: src/ui/FingerprintDialog.qml:95
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў націсніце правым вялікім пальцам на сканер адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:104
+#: src/ui/FingerprintDialog.qml:97
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў націсніце левым указальным пальцам на сканер адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:106
+#: src/ui/FingerprintDialog.qml:99
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў націсніце левым сярэднім пальцам на сканер адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:108
+#: src/ui/FingerprintDialog.qml:101
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
@@ -273,19 +267,19 @@ msgstr ""
 "Некалькі разоў націсніце левым безназоўным пальцам на сканер адбіткаў "
 "пальцаў."
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:103
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "Некалькі разоў націсніце левым мезенцам на сканер адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:105
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў націсніце леаым вялікім пальцам на сканер адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:109
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
@@ -293,7 +287,7 @@ msgstr ""
 "Некалькі разоў правядзіце правым указальным пальцам па сканеры адбіткаў "
 "пальцаў."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:111
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
@@ -301,7 +295,7 @@ msgstr ""
 "Некалькі разоў правядзіце правым сярэднім пальцам па сканеры адбіткаў "
 "пальцаў."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:113
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
@@ -309,19 +303,19 @@ msgstr ""
 "Некалькі разоў правядзіце правым безназоўным пальцам па сканеры адбіткаў "
 "пальцаў."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:115
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "Некалькі разоў правядзіце правым мезенцам па сканеры адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:117
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў правядзіце правым вялікім пальцам па сканеры адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:119
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
@@ -329,14 +323,14 @@ msgstr ""
 "Некалькі разоў правядзіце левым указальным пальцам па сканеры адбіткаў "
 "пальцаў."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:121
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў правядзіце левым сярэднім пальцам па сканеры адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:123
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
@@ -344,39 +338,39 @@ msgstr ""
 "Некалькі разоў правядзіце левым безназоўным пальцам па сканеры адбіткаў "
 "пальцаў."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:125
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "Некалькі разоў правядзіце левым мезенцам па сканеры адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:127
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Некалькі разоў правядзіце левым вялікім пальцам па сканеры адбіткаў пальцаў."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:143
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Палец зарэгістраваны"
 
-#: src/ui/FingerprintDialog.qml:185
+#: src/ui/FingerprintDialog.qml:178
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Абярыце палец для рэгістравання"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintDialog.qml:297
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Паўторнае рэгістраванне пальца"
 
-#: src/ui/FingerprintDialog.qml:311
+#: src/ui/FingerprintDialog.qml:304
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Выдаліць адбітак пальца"
 
-#: src/ui/FingerprintDialog.qml:320
+#: src/ui/FingerprintDialog.qml:313
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Не дададзена адбіткаў пальцаў"
@@ -615,6 +609,10 @@ msgstr "Ваш акаўнт"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Іншыя акаўнты"
+
+#~ msgctxt "@action:button 'all' refers to fingerprints"
+#~ msgid "Clear All"
+#~ msgstr "Ачысціць усё"
 
 #~ msgid "Manage Users"
 #~ msgstr "Кіраванне карыстальнікамі"

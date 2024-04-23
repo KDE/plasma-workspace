@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 00:38+0000\n"
+"POT-Creation-Date: 2024-04-15 00:39+0000\n"
 "PO-Revision-Date: 2023-10-05 10:01+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "%100==4 ? 3 : 0);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
+#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Ni najdene naprave za branje prstnih odtisov."
 
-#: src/fingerprintmodel.cpp:317
+#: src/fingerprintmodel.cpp:294
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Ponovi skeniranje vašega prsta."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:296
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Poteg prekratek. Poskusite ponovno."
 
-#: src/fingerprintmodel.cpp:321
+#: src/fingerprintmodel.cpp:298
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Prst ni bil centriran na bralniku. Poskusite ponovno."
 
-#: src/fingerprintmodel.cpp:323
+#: src/fingerprintmodel.cpp:300
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Odmaknite prst od bralnika in poskusite ponovno."
 
-#: src/fingerprintmodel.cpp:331
+#: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Vpis prstnega odtisa ni uspel."
 
-#: src/fingerprintmodel.cpp:334
+#: src/fingerprintmodel.cpp:311
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -57,12 +57,12 @@ msgstr ""
 "Ni več prostora za to napravo, zbrišite druge prstne odtise, da bi lahko "
 "nadaljevali."
 
-#: src/fingerprintmodel.cpp:337
+#: src/fingerprintmodel.cpp:314
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Naprava je bila odklopljena."
 
-#: src/fingerprintmodel.cpp:342
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Prišlo je do neznane napake."
@@ -188,167 +188,161 @@ msgstr "Nastavi prstne odtise"
 
 #: src/ui/FingerprintDialog.qml:38
 #, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr "Počisti vse"
-
-#: src/ui/FingerprintDialog.qml:45
-#, kde-format
 msgid "Add"
 msgstr "Dodaj"
 
-#: src/ui/FingerprintDialog.qml:54
+#: src/ui/FingerprintDialog.qml:47
 #, kde-format
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: src/ui/FingerprintDialog.qml:62
+#: src/ui/FingerprintDialog.qml:55
 #, kde-format
 msgid "Done"
 msgstr "Narejeno"
 
-#: src/ui/FingerprintDialog.qml:84
+#: src/ui/FingerprintDialog.qml:77
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Vpisovanje prstnega odtisa"
 
-#: src/ui/FingerprintDialog.qml:94
+#: src/ui/FingerprintDialog.qml:87
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš desni kazalec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:96
+#: src/ui/FingerprintDialog.qml:89
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš desni sredinec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:98
+#: src/ui/FingerprintDialog.qml:91
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš desni prstanec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:93
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš desni mezinec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:102
+#: src/ui/FingerprintDialog.qml:95
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš desni palec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:104
+#: src/ui/FingerprintDialog.qml:97
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš levi kazalec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:106
+#: src/ui/FingerprintDialog.qml:99
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš levi sredinec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:108
+#: src/ui/FingerprintDialog.qml:101
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš levi prstanec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:103
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš levi mezinec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:105
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "Ponavljajoče pritiskajte vaš levi palec na senzor prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:109
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš desni kazalec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:111
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš desni sredinec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:113
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš desni prstanec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:115
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš desni mezinec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:117
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš desni palec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:119
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš levi kazalec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:121
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš levi sredinec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:123
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš levi prstanec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:125
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš levi mezinec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:127
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "Ponavljajoče potegnite vaš levi palec po senzorju prstnega odtisa."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:143
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Prst vpisan"
 
-#: src/ui/FingerprintDialog.qml:185
+#: src/ui/FingerprintDialog.qml:178
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Izberite prst za vpis"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintDialog.qml:297
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Ponovno vpiši prst"
 
-#: src/ui/FingerprintDialog.qml:311
+#: src/ui/FingerprintDialog.qml:304
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Zbriši prstni odtis"
 
-#: src/ui/FingerprintDialog.qml:320
+#: src/ui/FingerprintDialog.qml:313
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Ni dodatnih prstnih odtisov"
@@ -589,6 +583,10 @@ msgstr "Vaš račun"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Ostali računi"
+
+#~ msgctxt "@action:button 'all' refers to fingerprints"
+#~ msgid "Clear All"
+#~ msgstr "Počisti vse"
 
 #~ msgid "Manage Users"
 #~ msgstr "Upravljaj uporabnike"

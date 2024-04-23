@@ -7,22 +7,22 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011, 2012.
 # Marce Villarino <mvillarino@kde-espana.es>, 2011, 2013, 2014.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2017.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2023-10-07 14:54+0200\n"
+"PO-Revision-Date: 2024-04-14 15:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -64,12 +64,11 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "© 2007 Craig Drummond"
 
 #: apps/Installer.cpp:122
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"Fai que o diálogo sexa transitorio para unha aplicación de X indicada por "
-"winid"
+"Fai que o diálogo sexa transitorio para unha xanela indicada por "
+"windowHandle."
 
 #: apps/Installer.cpp:125
 #, kde-format

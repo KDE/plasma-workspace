@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 00:38+0000\n"
+"POT-Creation-Date: 2024-04-15 00:39+0000\n"
 "PO-Revision-Date: 2023-02-19 15:50+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,37 +17,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
+#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Barmaq izi cihazı tapılmadı."
 
-#: src/fingerprintmodel.cpp:317
+#: src/fingerprintmodel.cpp:294
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Barmağınızı təkrar oxudun."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:296
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Çox qısa sürüşdürün. Yenidən cəhd edin."
 
-#: src/fingerprintmodel.cpp:321
+#: src/fingerprintmodel.cpp:298
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Barmaq oxuyucunun mərkəzində deyil. Yenidən cəhd edin."
 
-#: src/fingerprintmodel.cpp:323
+#: src/fingerprintmodel.cpp:300
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Barmağınızı oxuyucudan qaldırın və yenidən cəhd edin."
 
-#: src/fingerprintmodel.cpp:331
+#: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Barmaq izi qeydiyyatı uğursuz oldu."
 
-#: src/fingerprintmodel.cpp:334
+#: src/fingerprintmodel.cpp:311
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -55,12 +55,12 @@ msgid ""
 msgstr ""
 "Bu cihaz üçün boş yer qalmadı, davam etmək üçün digər barmaq izlərini silin."
 
-#: src/fingerprintmodel.cpp:337
+#: src/fingerprintmodel.cpp:314
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Bu cihazla bağlantı kəsildi."
 
-#: src/fingerprintmodel.cpp:342
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Bilinməyən xəta baş verdi."
@@ -187,92 +187,86 @@ msgstr "Barmaq izlərini tənzimləyin"
 
 #: src/ui/FingerprintDialog.qml:38
 #, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr "Hamısını sil"
-
-#: src/ui/FingerprintDialog.qml:45
-#, kde-format
 msgid "Add"
 msgstr "Əlavə edin"
 
-#: src/ui/FingerprintDialog.qml:54
+#: src/ui/FingerprintDialog.qml:47
 #, kde-format
 msgid "Cancel"
 msgstr "İmtina"
 
-#: src/ui/FingerprintDialog.qml:62
+#: src/ui/FingerprintDialog.qml:55
 #, kde-format
 msgid "Done"
 msgstr "Hazırdır"
 
-#: src/ui/FingerprintDialog.qml:84
+#: src/ui/FingerprintDialog.qml:77
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Barmaq izi qeydiyyatı"
 
-#: src/ui/FingerprintDialog.qml:94
+#: src/ui/FingerprintDialog.qml:87
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ şəhadət barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:96
+#: src/ui/FingerprintDialog.qml:89
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "Lütfən, sağ orta barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:98
+#: src/ui/FingerprintDialog.qml:91
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "Lütfən, sağ üzük barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:93
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ kiçik barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:102
+#: src/ui/FingerprintDialog.qml:95
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Lütfən, sağ baş barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:104
+#: src/ui/FingerprintDialog.qml:97
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "Lütfən, sol şəhadət barmağınızı barmaq izi sensoruna təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:106
+#: src/ui/FingerprintDialog.qml:99
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "Lütfən, sol orta barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:108
+#: src/ui/FingerprintDialog.qml:101
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "Lütfən, sol üzük barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:103
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sol kiçik barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:105
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "Lütfən, sol baş barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:109
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
@@ -280,88 +274,88 @@ msgstr ""
 "Lütfən, sağ şəhadət barmağınızı barmaq izi sensorunda təkrar-təkrar "
 "sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:111
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ orta barmağınızı barmaq izi sensorundaa təkrar-təkrar sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:113
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ üzük barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:115
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, barmaq izi sensorunda sağ kiçik barmağınızı dəfələrlə sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:117
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ baş barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:119
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sol şəhadət barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:121
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sol orta barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:123
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sol üzük barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:125
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, barmaq izi sensorunda sol kiçik barmağınızı dəfələrlə sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:127
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Lütfən, barmaq izi sensorunda sol baş barmağınızı dəfələrlə sürüşdürün."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:143
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Barmaq izi qeyd olundu"
 
-#: src/ui/FingerprintDialog.qml:185
+#: src/ui/FingerprintDialog.qml:178
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Qeydə alınacaq barmağınızı seçin"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintDialog.qml:297
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Təkrar qeydiyyatdan keçirin"
 
-#: src/ui/FingerprintDialog.qml:311
+#: src/ui/FingerprintDialog.qml:304
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Barmaq izini sil"
 
-#: src/ui/FingerprintDialog.qml:320
+#: src/ui/FingerprintDialog.qml:313
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Heç bir barmaq izi əlavə edilməyib"
@@ -600,6 +594,10 @@ msgstr "Hesabınız"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Digər hesablar"
+
+#~ msgctxt "@action:button 'all' refers to fingerprints"
+#~ msgid "Clear All"
+#~ msgstr "Hamısını sil"
 
 #~ msgid "Manage Users"
 #~ msgstr "İstifadəçilərin idarə edilməsi"

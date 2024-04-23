@@ -35,13 +35,6 @@ QDBusError FprintDevice::release()
     return reply.error();
 }
 
-QDBusError FprintDevice::deleteEnrolledFingers()
-{
-    auto reply = m_fprintInterface->DeleteEnrolledFingers2();
-    reply.waitForFinished();
-    return reply.error();
-}
-
 QDBusError FprintDevice::deleteEnrolledFinger(QString &finger)
 {
     auto reply = m_fprintInterface->DeleteEnrolledFinger(finger);

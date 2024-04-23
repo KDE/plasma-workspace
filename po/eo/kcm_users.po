@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-24 00:38+0000\n"
+"POT-Creation-Date: 2024-04-15 00:39+0000\n"
 "PO-Revision-Date: 2023-10-07 23:20+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -20,37 +20,37 @@ msgstr ""
 "X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:244
+#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Neniu fingrospura aparato trovita."
 
-#: src/fingerprintmodel.cpp:317
+#: src/fingerprintmodel.cpp:294
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Reprovu skani vian fingron."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:296
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Glito tro mallonga. Provu denove."
 
-#: src/fingerprintmodel.cpp:321
+#: src/fingerprintmodel.cpp:298
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Fingro ne centrita sur la leganto. Provu denove."
 
-#: src/fingerprintmodel.cpp:323
+#: src/fingerprintmodel.cpp:300
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Forigu vian fingron de la leganto, kaj provu denove."
 
-#: src/fingerprintmodel.cpp:331
+#: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Enskribo de fingrospuro malsukcesis."
 
-#: src/fingerprintmodel.cpp:334
+#: src/fingerprintmodel.cpp:311
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -58,12 +58,12 @@ msgid ""
 msgstr ""
 "Ne restas spaco por ĉi tiu aparato, forigu aliajn fingrospurojn por daŭrigi."
 
-#: src/fingerprintmodel.cpp:337
+#: src/fingerprintmodel.cpp:314
 #, kde-format
 msgid "The device was disconnected."
 msgstr "La aparato estis malkonektita."
 
-#: src/fingerprintmodel.cpp:342
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Nekonata eraro okazis."
@@ -190,31 +190,25 @@ msgstr "Agordi Fingrospurojn"
 
 #: src/ui/FingerprintDialog.qml:38
 #, kde-format
-msgctxt "@action:button 'all' refers to fingerprints"
-msgid "Clear All"
-msgstr "Forigi Ĉion"
-
-#: src/ui/FingerprintDialog.qml:45
-#, kde-format
 msgid "Add"
 msgstr "Aldoni"
 
-#: src/ui/FingerprintDialog.qml:54
+#: src/ui/FingerprintDialog.qml:47
 #, kde-format
 msgid "Cancel"
 msgstr "Nuligi"
 
-#: src/ui/FingerprintDialog.qml:62
+#: src/ui/FingerprintDialog.qml:55
 #, kde-format
 msgid "Done"
 msgstr "Farita"
 
-#: src/ui/FingerprintDialog.qml:84
+#: src/ui/FingerprintDialog.qml:77
 #, kde-format
 msgid "Enrolling Fingerprint"
 msgstr "Enskribanta Fingrosignon"
 
-#: src/ui/FingerprintDialog.qml:94
+#: src/ui/FingerprintDialog.qml:87
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
@@ -222,7 +216,7 @@ msgstr ""
 "Bonvolu plurfoje premi vian dekstran montran fingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:96
+#: src/ui/FingerprintDialog.qml:89
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
@@ -230,7 +224,7 @@ msgstr ""
 "Bonvolu plurfoje premi vian dekstran mezan fingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:98
+#: src/ui/FingerprintDialog.qml:91
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
@@ -238,20 +232,20 @@ msgstr ""
 "Bonvolu plurfoje premi vian dekstran ringan fingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:100
+#: src/ui/FingerprintDialog.qml:93
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr ""
 "Bonvolu plurfoje premi vian dekstran etfingron sur la fingrospura sensilo."
 
-#: src/ui/FingerprintDialog.qml:102
+#: src/ui/FingerprintDialog.qml:95
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
 "Bonvolu plurfoje premi vian dekstran dikfingron sur la fingrospura sensilo."
 
-#: src/ui/FingerprintDialog.qml:104
+#: src/ui/FingerprintDialog.qml:97
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
@@ -259,7 +253,7 @@ msgstr ""
 "Bonvolu plurfoje premi vian maldekstran montrofingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:106
+#: src/ui/FingerprintDialog.qml:99
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
@@ -267,7 +261,7 @@ msgstr ""
 "Bonvolu plurfoje premi vian maldekstran mezan fingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:108
+#: src/ui/FingerprintDialog.qml:101
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
@@ -275,21 +269,21 @@ msgstr ""
 "Bonvolu plurfoje premi vian maldekstran ringan fingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:110
+#: src/ui/FingerprintDialog.qml:103
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
 "Bonvolu plurfoje premi vian maldekstran etfingron sur la fingrospura sensilo."
 
-#: src/ui/FingerprintDialog.qml:112
+#: src/ui/FingerprintDialog.qml:105
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
 "Bonvolu plurfoje premi vian maldekstran dikfingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:116
+#: src/ui/FingerprintDialog.qml:109
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
@@ -297,7 +291,7 @@ msgstr ""
 "Bonvolu plurfoje gliti vian dekstran montrofingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:118
+#: src/ui/FingerprintDialog.qml:111
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
@@ -305,7 +299,7 @@ msgstr ""
 "Bonvolu plurfoje gliti vian dekstran mezan fingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:120
+#: src/ui/FingerprintDialog.qml:113
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
@@ -313,20 +307,20 @@ msgstr ""
 "Bonvolu plurfoje gliti vian dekstran ringan fingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:122
+#: src/ui/FingerprintDialog.qml:115
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr ""
 "Bonvolu plurfoje gliti vian dekstran etfingron sur la fingrospura sensilo."
 
-#: src/ui/FingerprintDialog.qml:124
+#: src/ui/FingerprintDialog.qml:117
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 "Bonvolu plurfoje gliti vian dekstran dikfingron sur la fingrospura sensilo."
 
-#: src/ui/FingerprintDialog.qml:126
+#: src/ui/FingerprintDialog.qml:119
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
@@ -334,7 +328,7 @@ msgstr ""
 "Bonvolu plurfoje gliti vian maldekstran montrofingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:128
+#: src/ui/FingerprintDialog.qml:121
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
@@ -342,7 +336,7 @@ msgstr ""
 "Bonvolu plurfoje gliti vian maldekstran mezan fingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:130
+#: src/ui/FingerprintDialog.qml:123
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
@@ -350,41 +344,41 @@ msgstr ""
 "Bonvolu plurfoje gliti vian maldekstran ringfingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:132
+#: src/ui/FingerprintDialog.qml:125
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
 "Bonvolu plurfoje gliti vian maldekstran etfingron sur la fingrospura sensilo."
 
-#: src/ui/FingerprintDialog.qml:134
+#: src/ui/FingerprintDialog.qml:127
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Bonvolu plurfoje gliti vian maldekstran dikfingron sur la fingrospura "
 "sensilo."
 
-#: src/ui/FingerprintDialog.qml:150
+#: src/ui/FingerprintDialog.qml:143
 #, kde-format
 msgid "Finger Enrolled"
 msgstr "Fingro Enskribita"
 
-#: src/ui/FingerprintDialog.qml:185
+#: src/ui/FingerprintDialog.qml:178
 #, kde-format
 msgid "Pick a finger to enroll"
 msgstr "Elekti fingron por enskribiĝi"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintDialog.qml:297
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Reenskribi fingron"
 
-#: src/ui/FingerprintDialog.qml:311
+#: src/ui/FingerprintDialog.qml:304
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Forigi fingrospuron"
 
-#: src/ui/FingerprintDialog.qml:320
+#: src/ui/FingerprintDialog.qml:313
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Neniuj fingrospuroj aldonitaj"
@@ -623,3 +617,7 @@ msgstr "Via Konto"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Aliaj Kontoj"
+
+#~ msgctxt "@action:button 'all' refers to fingerprints"
+#~ msgid "Clear All"
+#~ msgstr "Forigi Ĉion"
