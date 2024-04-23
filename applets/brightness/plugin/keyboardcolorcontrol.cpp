@@ -51,15 +51,15 @@ KeyboardColorControl::KeyboardColorControl(QObject *parent)
         qDebug() << "kameleon accent" << m_accent;
     }
 
-    QDBusReply<QString> activeColor =
-        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "activeColor"));
-    if (!activeColor.isValid()) {
-        qWarning() << "error connecting to kameleon activeColor via dbus:" << activeColor.error().message();
+    QDBusReply<QString> currentColor =
+        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "currentColor"));
+    if (!currentColor.isValid()) {
+        qWarning() << "error connecting to kameleon currentColor via dbus:" << currentColor.error().message();
         m_supported = false;
         return;
     } else {
-        m_color = activeColor.value();
-        qDebug() << "kameleon active color" << m_color;
+        m_color = currentColor.value();
+        qDebug() << "kameleon current color" << m_color;
     }
 
     if (!QDBusConnection::sessionBus().connect(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "accentChanged", this, SLOT(slotAccentChanged(bool)))) {
