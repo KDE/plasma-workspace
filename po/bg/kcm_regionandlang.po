@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-14 00:39+0000\n"
+"POT-Creation-Date: 2024-04-23 00:40+0000\n"
 "PO-Revision-Date: 2023-02-13 11:58+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,39 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.1\n"
+
+#: binarydialectmodel.cpp:50
+#, kde-format
+msgctxt "Binary dialect IEC, with sigle in parentheses"
+msgid "International Electrotechnical Commission (IEC)"
+msgstr ""
+
+#: binarydialectmodel.cpp:54
+#, kde-format
+msgctxt "Binary dialect JEDEC, with sigle in parentheses"
+msgid "Joint Electron Device Engineering Council (JEDEC)"
+msgstr ""
+
+#: binarydialectmodel.cpp:58
+#, kde-format
+msgctxt "Binary dialect Metric, with origin in parentheses"
+msgid "Metric system (SI)"
+msgstr ""
+
+#: binarydialectmodel.cpp:73
+#, kde-format
+msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
+msgstr ""
+
+#: binarydialectmodel.cpp:75
+#, kde-format
+msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+msgstr ""
+
+#: binarydialectmodel.cpp:77
+#, kde-format
+msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
+msgstr ""
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -219,7 +252,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Неуспешно намиране на  примери за локала"
 
-#: kcmregionandlang.cpp:116
+#: kcmregionandlang.cpp:125
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -299,7 +332,7 @@ msgstr "Неизвестно"
 msgid "Default for System"
 msgstr "Стандартно за системата"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:287
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:365
 #, kde-format
 msgid "Default"
 msgstr "По подразбиране"
@@ -312,81 +345,105 @@ msgctxt ""
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: localelistmodel.cpp:150
+#: localelistmodel.cpp:154
 #, kde-format
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
 msgstr "Стандартно за системата C"
 
-#: localelistmodel.cpp:153
+#: localelistmodel.cpp:157
 #, kde-format
 msgctxt ""
 "@info:title the current locale is the default for %1, %1 is the country name"
 msgid "Default for %1"
 msgstr "По подразбиране за %1"
 
-#: optionsmodel.cpp:23
+#: optionsmodel.cpp:45
 #, kde-format
 msgctxt "@info:title"
 msgid "Language"
 msgstr "Език"
 
-#: optionsmodel.cpp:24
+#: optionsmodel.cpp:46
 #, kde-format
 msgctxt "@info:title"
 msgid "Numbers"
 msgstr "Числа"
 
-#: optionsmodel.cpp:25
+#: optionsmodel.cpp:47
 #, kde-format
 msgctxt "@info:title"
 msgid "Time"
 msgstr "Дата и час"
 
-#: optionsmodel.cpp:26
+#: optionsmodel.cpp:48
 #, kde-format
 msgctxt "@info:title"
 msgid "Currency"
 msgstr "Валута"
 
-#: optionsmodel.cpp:27
+#: optionsmodel.cpp:49
 #, kde-format
 msgctxt "@info:title"
 msgid "Measurements"
 msgstr "Мерни единици"
 
-#: optionsmodel.cpp:28
+#: optionsmodel.cpp:50
 #, kde-format
 msgctxt "@info:title"
 msgid "Paper Size"
 msgstr "Размери на хартията"
 
-#: optionsmodel.cpp:30
+#: optionsmodel.cpp:52
 #, kde-format
 msgctxt "@info:title"
 msgid "Address"
 msgstr "Адрес"
 
-#: optionsmodel.cpp:31
+#: optionsmodel.cpp:53
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
 msgstr "Стил на име"
 
-#: optionsmodel.cpp:32
+#: optionsmodel.cpp:54
 #, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
 msgstr "Телефонни номера"
 
-#: optionsmodel.cpp:117 optionsmodel.cpp:310
+#: optionsmodel.cpp:56
+#, kde-format
+msgctxt "@info:title"
+msgid "Data and Storage Sizes"
+msgstr ""
+
+#: optionsmodel.cpp:130 optionsmodel.cpp:374
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
 msgstr "Системни настройки по подразбиране"
 
-#: optionsmodel.cpp:312
+#: optionsmodel.cpp:296
+#, kde-format
+msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
+msgid "KiB, MiB, GiB; %1"
+msgstr ""
+
+#: optionsmodel.cpp:299
+#, kde-format
+msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
+msgid "KB, MB, GB; %1"
+msgstr ""
+
+#: optionsmodel.cpp:302
+#, kde-format
+msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
+msgid "kB, MB, GB; %1"
+msgstr ""
+
+#: optionsmodel.cpp:376
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
@@ -522,44 +579,50 @@ msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Промяна…"
 
-#: ui/main.qml:209
+#: ui/main.qml:205
+#, kde-format
+msgctxt "@title:window"
+msgid "Data and Storage Sizes"
+msgstr ""
+
+#: ui/main.qml:263
 #, kde-format
 msgid "Numbers"
 msgstr "Числа"
 
-#: ui/main.qml:211
+#: ui/main.qml:265
 #, kde-format
 msgid "Time"
 msgstr "Дата и час"
 
-#: ui/main.qml:213
+#: ui/main.qml:267
 #, kde-format
 msgid "Currency"
 msgstr "Валута"
 
-#: ui/main.qml:215
+#: ui/main.qml:269
 #, kde-format
 msgid "Measurements"
 msgstr "Мерни единици"
 
-#: ui/main.qml:217
+#: ui/main.qml:271
 #, kde-format
 msgid "Paper Size"
 msgstr "Размери на хартията"
 
-#: ui/main.qml:219
+#: ui/main.qml:273
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Адрес"
 
-#: ui/main.qml:221
+#: ui/main.qml:275
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Име"
 
-#: ui/main.qml:223
+#: ui/main.qml:277
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

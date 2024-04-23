@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-22 00:39+0000\n"
-"PO-Revision-Date: 2024-04-10 14:22+0300\n"
+"PO-Revision-Date: 2024-04-22 16:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -107,10 +107,10 @@ msgid "%1%"
 msgstr "%​%1"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "The battery applet has enabled system-wide inhibition"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "Pil uygulamacığı, sistem geneli kısıtlamayı etkinleştirdi"
+msgstr ""
+"Pil uygulamacığı, uykuyu ve ekran kilitlemesini bastırmayı etkinleştirdi"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -427,11 +427,10 @@ msgstr ""
 "kurun ve sistemi yeniden başlatın."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Pil %​%1"
+msgstr "Pil %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format

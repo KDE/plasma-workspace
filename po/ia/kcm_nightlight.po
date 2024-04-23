@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-20 00:39+0000\n"
-"PO-Revision-Date: 2024-04-17 14:55+0200\n"
+"PO-Revision-Date: 2024-04-22 12:44+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -55,10 +55,9 @@ msgid "Zoom in"
 msgstr "Zoom in (aggrandi)"
 
 #: ui/LocationsFixedView.qml:130
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "Zoom in (aggrandi)"
+msgstr "Zoom out (diminue)"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-22 00:39+0000\n"
-"PO-Revision-Date: 2024-04-10 04:45+0200\n"
+"PO-Revision-Date: 2024-04-22 10:55+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -99,10 +99,9 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "The battery applet has enabled system-wide inhibition"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "ელემენტის აპლეტს აქვს სისტემის სრული კონტროლი"
+msgstr "ელემენტის აპლეტმა ჩართო ძილის გათიშვა და ეკრანის დაბლოკვა"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -417,11 +416,10 @@ msgstr ""
 "დისტრიბუტივის პაკეტების მმართველით და და გადატვირთოთ სისტემა."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "ელემენტის მუხტია %1%"
+msgstr "ელემენტი %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format

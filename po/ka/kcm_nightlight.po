@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-20 00:39+0000\n"
-"PO-Revision-Date: 2024-04-17 05:18+0200\n"
+"PO-Revision-Date: 2024-04-22 10:56+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -56,10 +56,9 @@ msgid "Zoom in"
 msgstr "გადიდება"
 
 #: ui/LocationsFixedView.qml:130
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "გადიდება"
+msgstr "დაპატარავება"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format

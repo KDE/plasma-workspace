@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-22 00:39+0000\n"
-"PO-Revision-Date: 2024-04-10 12:40+0200\n"
+"PO-Revision-Date: 2024-04-22 12:25+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/BatteryItem.qml:100
@@ -104,12 +104,11 @@ msgid "%1%"
 msgstr "%1 %"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "An application is preventing sleep and screen locking:"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr ""
-"Una aplicación está impidiendo entrar en el modo de suspensión y bloquear la "
-"pantalla:"
+"La miniaplicación de la batería ha activado la supresión de la suspensión y "
+"del bloqueo de pantalla"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -451,11 +450,10 @@ msgstr ""
 "gestor de paquetes de su distribución y reinicie el sistema."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Batería al %1 %"
+msgstr "Batería %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format

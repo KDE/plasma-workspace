@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-22 00:39+0000\n"
-"PO-Revision-Date: 2024-04-10 11:09+0200\n"
+"PO-Revision-Date: 2024-04-22 10:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BatteryItem.qml:100
 #, kde-format
 msgid "Charging"
-msgstr "Bezig met opladen"
+msgstr "Opladen"
 
 #: package/contents/ui/BatteryItem.qml:102
 #, kde-format
@@ -98,10 +98,11 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "An application is preventing sleep and screen locking:"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "Een toepassing voorkomt het slapen en vergrendelen van het scherm:"
+msgstr ""
+"De batterij-applet heeft onderdrukken van slapen en scherm vergrendelen "
+"onderdrukt"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -421,11 +422,10 @@ msgstr ""
 "pakketbeheerder van uw distributie en start het systeem opnieuw."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Batterij op %1%"
+msgstr "Batterij %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format

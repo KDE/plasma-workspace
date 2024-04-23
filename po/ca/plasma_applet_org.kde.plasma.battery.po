@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-22 00:39+0000\n"
-"PO-Revision-Date: 2024-04-10 12:18+0200\n"
+"PO-Revision-Date: 2024-04-22 12:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -105,10 +105,11 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "The battery applet has enabled system-wide inhibition"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "La miniaplicació de bateria ha activat la inhibició global del sistema"
+msgstr ""
+"La miniaplicació de bateria ha activat la supressió de la suspensió i el "
+"bloqueig de pantalla"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -444,17 +445,15 @@ msgstr ""
 "sistema."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Bateria al %1%"
+msgstr "Bateria %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgid "Battery"
-msgstr "Bateria al %1%"
+msgstr "Bateria"
 
 #~ msgctxt "Minimize the length of this string as much as possible"
 #~ msgid "Manually block sleep and screen locking"

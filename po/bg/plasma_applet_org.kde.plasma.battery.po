@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-22 00:39+0000\n"
-"PO-Revision-Date: 2024-04-11 11:26+0200\n"
+"PO-Revision-Date: 2024-04-22 09:13+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BatteryItem.qml:100
 #, kde-format
@@ -100,11 +100,11 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "The battery applet has enabled system-wide inhibition"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr ""
-"Аплетът на батерията е активирал системно намаление на производителността"
+"Аплетът на батерията е активирал предотвратяване на приспиването и "
+"заключването на екрана"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -432,17 +432,15 @@ msgstr ""
 "системата."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Батерия на %1%"
+msgstr "Батерия %1%"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgid "Battery"
-msgstr "Батерия на %1%"
+msgstr "Батерия"
 
 #~ msgctxt "Minimize the length of this string as much as possible"
 #~ msgid "Manually block sleep and screen locking"
