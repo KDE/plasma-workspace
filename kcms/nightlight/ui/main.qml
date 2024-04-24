@@ -91,7 +91,15 @@ KCM.SimpleKCM {
         text: i18nc("@option:check enable Night Light", "Enable")
         checkable: true
         checked: kcm.nightLightSettings.active
-        onToggled: kcm.nightLightSettings.active = checked
+        onToggled: {
+            kcm.nightLightSettings.active = checked;
+            if (checked) {
+                previewTimer.restart();
+                compositorAdaptor.preview(kcm.nightLightSettings.nightTemperature);
+            } else {
+                compositorAdaptor.stopPreview();
+            }
+        }
 
         displayComponent: QQC2.CheckBox {
             text: enabledAction.text
