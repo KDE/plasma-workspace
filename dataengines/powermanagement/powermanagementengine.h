@@ -18,7 +18,11 @@
 
 class SessionManagement;
 
-using InhibitionInfo = QPair<QString, QString>;
+struct SolidInhibition {
+    uint cookie;
+    QString appName;
+    QString reason;
+};
 
 /**
  * This class provides runtime information about the battery and AC status
@@ -55,7 +59,8 @@ private Q_SLOTS:
     void smoothedBatteryRemainingTimeChanged(qulonglong time);
     void triggersLidActionChanged(bool triggers);
     void hasInhibitionChanged(bool inhibited);
-    void inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed);
+    void updateInhibitions(const QList<SolidInhibition> &inhibitions);
+    void inhibitionsChanged(const QList<SolidInhibition> &added, const QList<uint> &removed);
     void chargeStopThresholdChanged(int threshold);
 
     void updatePowerProfileDaemonInstalled(const bool &installed);

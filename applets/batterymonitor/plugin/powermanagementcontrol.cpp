@@ -21,11 +21,27 @@
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
 static const char FDO_POWERMANAGEMENT_SERVICE[] = "org.freedesktop.PowerManagement";
 
+QDBusArgument &operator<<(QDBusArgument &argument, const SolidInhibition &inhibition)
+{
+    argument.beginStructure();
+    argument << inhibition.cookie << inhibition.appName << inhibition.reason;
+    argument.endStructure();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, SolidInhibition &inhibition)
+{
+    argument.beginStructure();
+    argument >> inhibition.cookie >> inhibition.appName >> inhibition.reason;
+    argument.endStructure();
+    return argument;
+}
+
 PowerManagementControl::PowerManagementControl(QObject *parent)
     : QObject(parent)
 {
-    qDBusRegisterMetaType<QList<InhibitionInfo>>();
-    qDBusRegisterMetaType<InhibitionInfo>();
+    qDBusRegisterMetaType<QList<SolidInhibition>>();
+    qDBusRegisterMetaType<SolidInhibition>();
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
         m_isManuallyInhibited = InhibitMonitor::self().getInhibit();
@@ -94,7 +110,7 @@ PowerManagementControl::PowerManagementControl(QObject *parent)
                                                    QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
                                                    QStringLiteral("InhibitionsChanged"),
                                                    this,
-                                                   SLOT(onInhibitionsChanged(QList<InhibitionInfo>, QStringList)))) {
+                                                   SLOT(onInhibitionsChanged(QList<SolidInhibition>, QList<uint>)))) {
             qCDebug(APPLETS::BATTERYMONITOR) << "Error connecting to inhibition changes via dbus";
         }
     }
@@ -165,7 +181,7 @@ QBindable<bool> PowerManagementControl::bindableIsManuallyInhibitedError()
     return &m_isManuallyInhibitedError;
 }
 
-void PowerManagementControl::onInhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
+void PowerManagementControl::onInhibitionsChanged(const QList<SolidInhibition> &added, const QList<uint> &removed)
 {
     Q_UNUSED(added);
     Q_UNUSED(removed);
@@ -177,7 +193,7 @@ void PowerManagementControl::onInhibitionsChanged(const QList<InhibitionInfo> &a
     QDBusPendingCall inhibitionsCall = QDBusConnection::sessionBus().asyncCall(inhibitionsMessage);
     auto inhibitionsWatcher = new QDBusPendingCallWatcher(inhibitionsCall, this);
     connect(inhibitionsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-        QDBusReply<QList<InhibitionInfo>> reply = *watcher;
+        QDBusReply<QList<SolidInhibition>> reply = *watcher;
         if (reply.isValid()) {
             updateInhibitions(reply.value());
         } else {
@@ -202,22 +218,24 @@ void PowerManagementControl::onisManuallyInhibitedErrorChanged(bool status)
     m_isManuallyInhibitedError = status;
 }
 
-void PowerManagementControl::updateInhibitions(const QList<InhibitionInfo> &inhibitions)
+void PowerManagementControl::updateInhibitions(const QList<SolidInhibition> &inhibitions)
 {
     QList<QVariantMap> out;
 
     for (auto it = inhibitions.constBegin(); it != inhibitions.constEnd(); ++it) {
-        const QString &name = (*it).first;
+        const uint cookie = (*it).cookie;
+        const QString &name = (*it).appName;
         if (name == QStringLiteral("plasmashell") || name == QStringLiteral("org.kde.plasmashell")) {
             continue;
         }
         QString prettyName;
         QString icon;
-        const QString &reason = (*it).second;
+        const QString &reason = (*it).reason;
 
         m_data.populateApplicationData(name, &prettyName, &icon);
 
-        out.append(QVariantMap{{QStringLiteral("Name"), name},
+        out.append(QVariantMap{{QStringLiteral("Cookie"), cookie},
+                               {QStringLiteral("Name"), name},
                                {QStringLiteral("PrettyName"), prettyName},
                                {QStringLiteral("Icon"), icon},
                                {QStringLiteral("Reason"), reason}});

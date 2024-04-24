@@ -32,8 +32,10 @@ PlasmaExtras.Representation {
     // blocking sleep and screen locking).
     //
     // type: [{
-    //  Icon: string,
+    //  Cookie: int,
     //  Name: string,
+    //  PrettyName: string,
+    //  Icon: string,
     //  Reason: string,
     // }]
     property var inhibitions: []

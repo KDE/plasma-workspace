@@ -61,13 +61,29 @@ void createAsyncDBusMethodCallAndCallback(QObject *parent,
 }
 }
 
+QDBusArgument &operator<<(QDBusArgument &argument, const SolidInhibition &inhibition)
+{
+    argument.beginStructure();
+    argument << inhibition.cookie << inhibition.appName << inhibition.reason;
+    argument.endStructure();
+    return argument;
+}
+
+const QDBusArgument &operator>>(const QDBusArgument &argument, SolidInhibition &inhibition)
+{
+    argument.beginStructure();
+    argument >> inhibition.cookie >> inhibition.appName >> inhibition.reason;
+    argument.endStructure();
+    return argument;
+}
+
 PowermanagementEngine::PowermanagementEngine(QObject *parent)
     : Plasma5Support::DataEngine(parent)
     , m_sources(basicSourceNames())
     , m_session(new SessionManagement(this))
 {
-    qDBusRegisterMetaType<QList<InhibitionInfo>>();
-    qDBusRegisterMetaType<InhibitionInfo>();
+    qDBusRegisterMetaType<QList<SolidInhibition>>();
+    qDBusRegisterMetaType<SolidInhibition>();
     qDBusRegisterMetaType<QList<QVariant>>();
     qDBusRegisterMetaType<QList<QVariantMap>>();
     init();
@@ -97,7 +113,7 @@ void PowermanagementEngine::init()
                                                    QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
                                                    QStringLiteral("InhibitionsChanged"),
                                                    this,
-                                                   SLOT(inhibitionsChanged(QList<InhibitionInfo>, QStringList)))) {
+                                                   SLOT(inhibitionsChanged(QList<SolidInhibition>, QList<uint>)))) {
             qDebug() << "error connecting to inhibition changes via dbus";
         }
 
@@ -301,15 +317,15 @@ bool PowermanagementEngine::sourceRequestEvent(const QString &name)
                                                    });
 
     } else if (name == QLatin1String("Inhibitions")) {
-        createAsyncDBusMethodCallAndCallback<QList<InhibitionInfo>>(this,
-                                                                    SOLID_POWERMANAGEMENT_SERVICE,
-                                                                    QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
-                                                                    QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
-                                                                    QStringLiteral("ListInhibitions"),
-                                                                    [this](const QList<InhibitionInfo> &replyValue) {
-                                                                        removeAllData(QStringLiteral("Inhibitions"));
-                                                                        inhibitionsChanged(replyValue, QStringList());
-                                                                    });
+        createAsyncDBusMethodCallAndCallback<QList<SolidInhibition>>(this,
+                                                                     SOLID_POWERMANAGEMENT_SERVICE,
+                                                                     QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
+                                                                     QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
+                                                                     QStringLiteral("ListInhibitions"),
+                                                                     [this](const QList<SolidInhibition> &replyValue) {
+                                                                         removeAllData(QStringLiteral("Inhibitions"));
+                                                                         updateInhibitions(replyValue);
+                                                                     });
         // any info concerning lock screen/screensaver goes here
     } else if (name == QLatin1String("UserActivity")) {
         setData(QStringLiteral("UserActivity"), QStringLiteral("IdleTime"), KIdleTime::instance()->idleTime());
@@ -661,24 +677,36 @@ void PowermanagementEngine::hasInhibitionChanged(bool inhibited)
     setData(QStringLiteral("PowerManagement"), QStringLiteral("Has Inhibition"), inhibited);
 }
 
-void PowermanagementEngine::inhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
+void PowermanagementEngine::updateInhibitions(const QList<SolidInhibition> &inhibitions)
 {
-    for (auto it = removed.constBegin(); it != removed.constEnd(); ++it) {
-        removeData(QStringLiteral("Inhibitions"), (*it));
-    }
-
-    for (auto it = added.constBegin(); it != added.constEnd(); ++it) {
-        const QString &name = (*it).first;
+    for (auto it = inhibitions.constBegin(); it != inhibitions.constEnd(); ++it) {
+        const uint cookie = (*it).cookie;
+        const QString &name = (*it).appName;
+        if (name == QStringLiteral("plasmashell") || name == QStringLiteral("org.kde.plasmashell")) {
+            continue;
+        }
         QString prettyName;
         QString icon;
-        const QString &reason = (*it).second;
+        const QString &reason = (*it).reason;
 
         populateApplicationData(name, &prettyName, &icon);
 
         setData(QStringLiteral("Inhibitions"),
                 name,
-                QVariantMap{{QStringLiteral("Name"), prettyName}, {QStringLiteral("Icon"), icon}, {QStringLiteral("Reason"), reason}});
+                QVariantMap{{QStringLiteral("Cookie"), cookie},
+                            {QStringLiteral("Name"), name},
+                            {QStringLiteral("PrettyName"), prettyName},
+                            {QStringLiteral("Icon"), icon},
+                            {QStringLiteral("Reason"), reason}});
     }
+}
+
+void PowermanagementEngine::inhibitionsChanged(const QList<SolidInhibition> &added, const QList<uint> &removed)
+{
+    Q_UNUSED(added);
+    Q_UNUSED(removed);
+
+    sourceRequestEvent(QStringLiteral("Inhibitions"));
 }
 
 template<typename ReplyType>

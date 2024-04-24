@@ -28,6 +28,7 @@ PlasmaComponents3.ItemDelegate {
     // blocking sleep and screen locking).
     //
     // type: [{
+    //  Cookie: int,
     //  Name: string,
     //  PrettyName: string,
     //  Icon: string,
@@ -196,6 +197,7 @@ PlasmaComponents3.ItemDelegate {
                             || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
                         property string name: modelData.Name
                         property string reason: modelData.Reason
+                        property int cookie: modelData.Cookie
 
                         Layout.fillWidth: true
                         iconSource: icon
