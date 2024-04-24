@@ -126,6 +126,16 @@ void PowerManagmentControl::uninhibit()
     InhibitMonitor::self().uninhibit(m_isSilent);
 }
 
+void PowerManagmentControl::releaseInhibition(uint cookie)
+{
+    QDBusMessage msg = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
+                                                      QStringLiteral("/org/kde/Solid/PowerManagement/PolicyAgent"),
+                                                      QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
+                                                      QStringLiteral("ReleaseInhibition"));
+    msg << cookie;
+    QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(msg);
+}
+
 bool PowerManagmentControl::isSilent()
 {
     return m_isSilent;

@@ -190,6 +190,7 @@ PlasmaComponents3.ItemDelegate {
                 }
 
                 Repeater {
+                    id: inhibitionRepeater
                     model: root.inhibitions
 
                     InhibitionHint {
@@ -201,6 +202,11 @@ PlasmaComponents3.ItemDelegate {
                         property string reason: modelData.Reason
                         property int cookie: modelData.Cookie
 
+                        showToolButton: true
+                        toolButtonName: i18nc("Button to remove an application from the list of applications blocking sleep and screen locking", "Stop blocking")
+                        toolButtonIcon: "process-stop"
+                        releaseCookie: cookie
+                        
                         Layout.fillWidth: true
                         iconSource: icon
                         text: {

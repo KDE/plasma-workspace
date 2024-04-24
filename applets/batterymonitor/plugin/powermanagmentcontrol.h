@@ -36,6 +36,7 @@ class PowerManagmentControl : public QObject
 public:
     Q_INVOKABLE void inhibit(const QString &reason);
     Q_INVOKABLE void uninhibit();
+    Q_INVOKABLE void releaseInhibition(uint cookie);
 
     explicit PowerManagmentControl(QObject *parent = nullptr);
     ~PowerManagmentControl() override;

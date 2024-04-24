@@ -77,6 +77,11 @@ PlasmoidItem {
         }
     }
 
+    signal inhibitionReleaseRequested(int cookie)
+    onInhibitionReleaseRequested: cookie => {
+        // powerManagmentControl.releaseInhibition(cookie);
+    }
+
     signal activateProfileRequested(string profile)
 
     onActivateProfileRequested: profile => {
