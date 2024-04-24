@@ -15,6 +15,7 @@
 #include <QString>
 
 #include <KService>
+#include <qcontainerfwd.h>
 
 #include "inhibitmonitor_p.h"
 
@@ -24,8 +25,8 @@ static const char FDO_POWERMANAGEMENT_SERVICE[] = "org.freedesktop.PowerManageme
 PowerManagmentControl::PowerManagmentControl(QObject *parent)
     : QObject(parent)
 {
-    qDBusRegisterMetaType<QList<InhibitionInfo>>();
-    qDBusRegisterMetaType<InhibitionInfo>();
+    qDBusRegisterMetaType<QList<QVariantMap>>();
+    qDBusRegisterMetaType<QVariantMap>();
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
         m_isManuallyInhibited = InhibitMonitor::self().getInhibit();
@@ -94,7 +95,7 @@ PowerManagmentControl::PowerManagmentControl(QObject *parent)
                                                    QStringLiteral("org.kde.Solid.PowerManagement.PolicyAgent"),
                                                    QStringLiteral("InhibitionsChanged"),
                                                    this,
-                                                   SLOT(onInhibitionsChanged(QList<InhibitionInfo>, QStringList)))) {
+                                                   SLOT(onInhibitionsChanged(QList<uint>, QList<uint>)))) {
             qCDebug(APPLETS::BATTERYMONITOR) << "Error connecting to inhibition changes via dbus";
         }
     }
@@ -165,7 +166,7 @@ QBindable<bool> PowerManagmentControl::bindableIsManuallyInhibitedError()
     return &m_isManuallyInhibitedError;
 }
 
-void PowerManagmentControl::onInhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
+void PowerManagmentControl::onInhibitionsChanged(const QList<uint> &added, const QList<uint> &removed)
 {
     Q_UNUSED(added);
     Q_UNUSED(removed);
@@ -177,7 +178,7 @@ void PowerManagmentControl::onInhibitionsChanged(const QList<InhibitionInfo> &ad
     QDBusPendingCall inhibitionsCall = QDBusConnection::sessionBus().asyncCall(inhibitionsMessage);
     auto inhibitionsWatcher = new QDBusPendingCallWatcher(inhibitionsCall, this);
     connect(inhibitionsWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-        QDBusReply<QList<InhibitionInfo>> reply = *watcher;
+        QDBusReply<QList<SolidInhibition>> reply = *watcher;
         if (reply.isValid()) {
             updateInhibitions(reply.value());
         } else {
@@ -202,22 +203,24 @@ void PowerManagmentControl::onisManuallyInhibitedErrorChanged(bool status)
     m_isManuallyInhibitedError = status;
 }
 
-void PowerManagmentControl::updateInhibitions(const QList<InhibitionInfo> &inhibitions)
+void PowerManagmentControl::updateInhibitions(const QList<SolidInhibition> &inhibitions)
 {
     QList<QVariantMap> out;
 
     for (auto it = inhibitions.constBegin(); it != inhibitions.constEnd(); ++it) {
-        const QString &name = (*it).first;
+        const uint cookie = (*it).cookie;
+        const QString &name = (*it).appName;
         if (name == QStringLiteral("plasmashell") || name == QStringLiteral("org.kde.plasmashell")) {
             continue;
         }
         QString prettyName;
         QString icon;
-        const QString &reason = (*it).second;
+        const QString &reason = (*it).reason;
 
         m_data.populateApplicationData(name, &prettyName, &icon);
 
-        out.append(QVariantMap{{QStringLiteral("Name"), name},
+        out.append(QVariantMap{{QStringLiteral("Cookie"), cookie},
+                               {QStringLiteral("Name"), name},
                                {QStringLiteral("PrettyName"), prettyName},
                                {QStringLiteral("Icon"), icon},
                                {QStringLiteral("Reason"), reason}});

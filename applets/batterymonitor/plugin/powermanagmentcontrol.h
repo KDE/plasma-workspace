@@ -14,7 +14,11 @@
 
 #include "applicationdata_p.h"
 
-using InhibitionInfo = QPair<QString, QString>;
+struct SolidInhibition {
+    uint cookie;
+    QString appName;
+    QString reason;
+};
 
 class PowerManagmentControl : public QObject
 {
@@ -45,7 +49,7 @@ Q_SIGNALS:
     void isManuallyInhibitedErrorChanged(bool status);
 
 private Q_SLOTS:
-    void onInhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed);
+    void onInhibitionsChanged(const QList<uint> &added, const QList<uint> &removed);
     void onHasInhibitionChanged(bool status);
     void onIsManuallyInhibitedChanged(bool status);
     void onisManuallyInhibitedErrorChanged(bool status);
@@ -53,7 +57,7 @@ private Q_SLOTS:
 private:
     bool isSilent();
     void setIsSilent(bool status);
-    void updateInhibitions(const QList<InhibitionInfo> &inhibitions);
+    void updateInhibitions(const QList<SolidInhibition> &inhibitions);
 
     QBindable<QList<QVariantMap>> bindableInhibitions();
     QBindable<bool> bindableHasInhibition();
