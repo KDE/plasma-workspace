@@ -2,14 +2,14 @@
 # Copyright (C) 2003, 2004, 2005, 2007, 2008 Free Software Foundation, Inc.
 # Luciano Montanaro <mikelima@cirulla.net>, 2003, 2007, 2008, 2010, 2011, 2012, 2016.
 # Andrea Rizzi <rizzi@kde.org>, 2003, 2004, 2005.
-# Paolo Zamponi <feus73@gmail.com>, 2019, 2021.
+# SPDX-FileCopyrightText: 2019, 2021, 2024 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2021-11-30 18:45+0100\n"
+"PO-Revision-Date: 2024-04-11 12:57+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -59,12 +59,11 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "© Craig Drummond, 2007"
 
 #: apps/Installer.cpp:122
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"Rende la finestra di dialogo transiente per un'applicazione X specificata da "
-"winid"
+"Rende la finestra di dialogo transitoria per una finestra specificata da "
+"windowHandle"
 
 #: apps/Installer.cpp:125
 #, kde-format

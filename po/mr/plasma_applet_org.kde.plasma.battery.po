@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-22 00:39+0000\n"
+"POT-Creation-Date: 2024-04-24 00:40+0000\n"
 "PO-Revision-Date: 2013-02-05 18:22+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "<b>बॅटरी:</b> %1% (डिसचार्ज करत आह�
 msgid "Discharging"
 msgstr "<b>बॅटरी:</b> %1% (डिसचार्ज करत आहे)<br />"
 
-#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:121
+#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "<b>Battery:</b> %1% (fully charged)<br />"
 msgid "Fully Charged"
@@ -104,8 +104,8 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr ""
 
-#: package/contents/ui/CompactRepresentation.qml:98
-#: package/contents/ui/CompactRepresentation.qml:142
+#: package/contents/ui/CompactRepresentation.qml:99
+#: package/contents/ui/CompactRepresentation.qml:143
 #, fuzzy, kde-format
 #| msgctxt "overlay on the battery, needs to be really tiny"
 #| msgid "%1%"
@@ -133,116 +133,121 @@ msgstr "पावर व्यवस्थापन"
 msgid "Power and Battery"
 msgstr "पावर व्यवस्थापन"
 
-#: package/contents/ui/main.qml:128
+#: package/contents/ui/main.qml:119
+#, kde-format
+msgid "Battery is not present in the bay"
+msgstr ""
+
+#: package/contents/ui/main.qml:132
 #, fuzzy, kde-format
 #| msgctxt "Shown when a time estimate is not available"
 #| msgid "<b>Battery:</b> %1% (discharging)<br />"
 msgid "Battery at %1%, not Charging"
 msgstr "<b>बॅटरी:</b> %1% (डिसचार्ज करत आहे)<br />"
 
-#: package/contents/ui/main.qml:130
+#: package/contents/ui/main.qml:134
 #, fuzzy, kde-format
 #| msgctxt "Shown when a time estimate is not available"
 #| msgid "<b>Battery:</b> %1% (discharging)<br />"
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "<b>बॅटरी:</b> %1% (डिसचार्ज करत आहे)<br />"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:136
 #, fuzzy, kde-format
 #| msgctxt "Shown when a time estimate is not available"
 #| msgid "<b>Battery:</b> %1% (discharging)<br />"
 msgid "Battery at %1%, Charging"
 msgstr "<b>बॅटरी:</b> %1% (डिसचार्ज करत आहे)<br />"
 
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/main.qml:139
 #, fuzzy, kde-format
 #| msgctxt "tooltip: placeholder is the battery ID"
 #| msgid "Battery %1:"
 msgid "Battery at %1%"
 msgstr "बॅटरी %1 :"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:147
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr ""
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:151
 #, kde-format
 msgid "No Batteries Available"
 msgstr ""
 
-#: package/contents/ui/main.qml:153
+#: package/contents/ui/main.qml:158
 #, fuzzy, kde-format
 #| msgid "<b>Battery:</b> %1% (fully charged)<br />"
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "<b>बॅटरी:</b> %1% (पूर्णतया चार्ज केलेले)<br />"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr ""
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:163
 #, fuzzy, kde-format
 #| msgctxt "Shown when a time estimate is not available"
 #| msgid "<b>Battery:</b> %1% (discharging)<br />"
 msgid "Not charging"
 msgstr "<b>बॅटरी:</b> %1% (डिसचार्ज करत आहे)<br />"
 
-#: package/contents/ui/main.qml:162
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr ""
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:170
 #, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr ""
 
-#: package/contents/ui/main.qml:169
+#: package/contents/ui/main.qml:175
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:173
+#: package/contents/ui/main.qml:179
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:177
+#: package/contents/ui/main.qml:183
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] ""
 msgstr[1] ""
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:190
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:295
+#: package/contents/ui/main.qml:302
 #, fuzzy, kde-format
 #| msgid "Show charge &information"
 msgid "&Show Energy Information…"
 msgstr "चार्जची माहिती दर्शवा (&I)"
 
-#: package/contents/ui/main.qml:301
+#: package/contents/ui/main.qml:308
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 
-#: package/contents/ui/main.qml:314
+#: package/contents/ui/main.qml:321
 #, fuzzy, kde-format
 #| msgid "More..."
 msgid "&Configure Power Management…"

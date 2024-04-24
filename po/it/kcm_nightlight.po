@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2018, 2019, 2021, 2022, 2023 Paolo Zamponi <feus73@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2019, 2021, 2022, 2023, 2024 Paolo Zamponi <feus73@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-20 00:39+0000\n"
-"PO-Revision-Date: 2023-11-29 18:13+0100\n"
+"PO-Revision-Date: 2024-04-21 09:04+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -55,10 +55,9 @@ msgid "Zoom in"
 msgstr "Ingrandisci"
 
 #: ui/LocationsFixedView.qml:130
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "Ingrandisci"
+msgstr "Rimpicciolisci"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
@@ -142,7 +141,7 @@ msgstr "Tramonto e alba in una posizione manuale"
 #: ui/main.qml:291
 #, kde-format
 msgid "Custom times"
-msgstr "Orari personalizzato"
+msgstr "Orari personalizzati"
 
 #: ui/main.qml:292
 #, kde-format
@@ -214,21 +213,19 @@ msgstr "Localizzazione…"
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "ora"
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 minute"
-#| msgid_plural "%1 minutes"
+#, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr "%1 minuto"
+msgstr "minuto"
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "Formato d'inserimento: OO:MM"

@@ -33,11 +33,10 @@ msgid "Your emails"
 msgstr "vit@pelcak.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Otevřít obrázek s tapetou"
+msgstr "Otevřít obrázek"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format

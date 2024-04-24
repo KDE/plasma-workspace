@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-20 00:39+0000\n"
-"PO-Revision-Date: 2024-01-13 15:09+0200\n"
+"PO-Revision-Date: 2024-04-24 00:03+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -57,10 +57,9 @@ msgid "Zoom in"
 msgstr "Didinti"
 
 #: ui/LocationsFixedView.qml:130
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "Didinti"
+msgstr "Mažinti"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
@@ -202,7 +201,7 @@ msgstr[3] "%1 minutė"
 #: ui/main.qml:407
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
-msgstr "Įveskite minutes - min. 1, maks. 600)"
+msgstr "Įveskite minutes – min. 1, maks. 600)"
 
 #: ui/main.qml:426
 #, kde-format
@@ -219,21 +218,19 @@ msgstr "Nustatoma vieta…"
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "val."
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 minute"
-#| msgid_plural "%1 minutes"
+#, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr "%1 minutė"
+msgstr "min."
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "Įvesties formatas: VV:MM"
