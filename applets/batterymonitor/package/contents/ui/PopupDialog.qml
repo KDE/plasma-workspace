@@ -142,6 +142,8 @@ PlasmaExtras.Representation {
             footer:  PowerManagementItem {
                 id: powerManagementItem
 
+                readonly property var pmControl: dialog.pmControl
+
                 width: scrollView.availableWidth
 
                 KeyNavigation.up: batteryRepeater.itemAtIndex(batteryRepeater.count - 1)

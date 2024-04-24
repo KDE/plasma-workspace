@@ -13,6 +13,12 @@ import org.kde.kirigami as Kirigami
 RowLayout {
     property alias iconSource: iconItem.source
     property alias text: label.text
+    
+    property alias showToolButton: toolButton.visible
+    property alias toolButtonName: toolButton.text
+    property alias toolButtonIcon: toolButton.icon.name
+
+    property int releaseCookie: 0
 
     spacing: Kirigami.Units.smallSpacing
 
@@ -31,5 +37,24 @@ RowLayout {
         wrapMode: Text.WordWrap
         elide: Text.ElideRight
         maximumLineCount: 4
+    }
+
+    PlasmaComponents3.Button {
+        id: toolButton
+        visible: false
+
+        PlasmaComponents3.ToolTip {
+            text: parent.text
+        }
+
+        Keys.onPressed: (event) => {
+            if (event.key == Qt.Key_Space || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
+                clicked();
+            }
+        }
+
+        onClicked: {
+            pmControl.releaseInhibition(releaseCookie);
+        }
     }
 }

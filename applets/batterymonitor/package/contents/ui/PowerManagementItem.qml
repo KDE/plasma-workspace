@@ -193,12 +193,19 @@ PlasmaComponents3.ItemDelegate {
                     model: root.inhibitions
 
                     InhibitionHint {
+                        readonly property var pmControl: root.pmControl
+
                         property string icon: modelData.Icon
                             || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
-                        property string name: modelData.Name
+                        property string name: modelData.PrettyName
                         property string reason: modelData.Reason
                         property int cookie: modelData.Cookie
 
+                        showToolButton: true
+                        toolButtonName: i18nc("@action:button Stop an app from blocking automatic sleep and screen locking after inactivity", "Unblock")
+                        toolButtonIcon: "edit-delete-remove"
+                        releaseCookie: cookie
+                        
                         Layout.fillWidth: true
                         iconSource: icon
                         text: {
