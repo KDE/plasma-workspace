@@ -10,10 +10,10 @@ add_definitions(-DTRANSLATION_DOMAIN=\"batterycontrol\")
 
 ecm_qt_declare_logging_category(batterycontrol_SRCS
         HEADER "batterycontrol_debug.h"
-        IDENTIFIER "BATTERYCONTROL"
-        CATEGORY_NAME org.kde.libbattery
+        IDENTIFIER "COMPONENTS::BATTERYCONTROL"
+        CATEGORY_NAME org.kde.batterycontrol
         DEFAULT_SEVERITY Warning
-        DESCRIPTION "Battery List Model" EXPORT "BATTERYCONTROL"
+        DESCRIPTION "Battery List Model" EXPORT "COMPONENTS::BATTERYCONTROL"
 )
 
 add_library(batterycontrol SHARED ${batterycontrol_SRCS})
@@ -43,7 +43,7 @@ ecm_finalize_qml_module(batterycontrol)
 install(TARGETS batterycontrol ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_qt_install_logging_categories(
-        EXPORT "BATTERYCONTROL"
-        FILE batterycontrol.categories
+        EXPORT "COMPONENTS::BATTERYCONTROL"
+        FILE components/batterycontrol.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
 )
