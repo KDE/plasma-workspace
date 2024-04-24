@@ -394,7 +394,9 @@ void SelectedLanguageModel::saveLanguages()
                 m_settings->setLang(glibcLang.value());
             }
 #else
-            m_settings->setLang(m_selectedLanguages.front());
+            auto selectedLocale = QLocale(m_selectedLanguages.front());
+            auto utf8Lang = KCMRegionAndLang::toUTF8Locale(selectedLocale.name());
+            m_settings->setLang(utf8Lang);
 #endif
         }
         QString languages;

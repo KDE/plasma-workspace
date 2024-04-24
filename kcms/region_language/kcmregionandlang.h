@@ -42,6 +42,7 @@ public:
 
     OptionsModel *optionsModel() const;
     bool enabled() const;
+    static QString toUTF8Locale(const QString &locale);
 #ifdef GLIBC_LOCALE
     std::optional<QString> toGlibcLocale(const QString &lang);
 #endif
@@ -69,7 +70,6 @@ private:
 #endif
     static QString failedFindLocalesMessage();
     static QString localeFileDirPath();
-    static QString toUTF8Locale(const QString &locale);
 
     RegionAndLangSettings *m_settings;
     OptionsModel *m_optionsModel;
