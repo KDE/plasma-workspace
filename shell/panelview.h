@@ -135,6 +135,16 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(bool userConfiguring READ isUserConfiguring NOTIFY userConfiguringChanged)
 
+    /**
+     * Quirk for X11 session on NVIDIA GPU.
+     */
+    Q_PROPERTY(bool unsupportedConfiguration READ isUnsupportedConfiguration NOTIFY unsupportedConfigurationChanged)
+
+    /**
+     * Quirk for X11 session on NVIDIA GPU.
+     */
+    Q_PROPERTY(QString unsupportedConfigurationDescription READ unsupportedConfigurationDescription NOTIFY unsupportedConfigurationChanged)
+
 public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
@@ -195,6 +205,10 @@ public:
 
     QRect relativeConfigRect() const;
 
+    bool isUnsupportedConfiguration() const;
+
+    QString unsupportedConfigurationDescription() const;
+
     Plasma::Types::BackgroundHints backgroundHints() const;
     void setBackgroundHints(Plasma::Types::BackgroundHints hint);
 
@@ -219,6 +233,8 @@ public:
      * @returns the dodge/defloat geometry of the panel given a distance
      */
     Q_INVOKABLE QRect dogdeGeometryByDistance(int distance) const;
+
+    Q_INVOKABLE void fixUnsupportedConfiguration();
 
     /* Both Shared with script/panel.cpp */
     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
@@ -255,6 +271,8 @@ Q_SIGNALS:
     void enabledBordersChanged();
     void floatingChanged();
     void minThicknessChanged();
+    void unsupportedConfigurationChanged();
+
     void geometryChanged();
     void relativeConfigRectChanged();
 
@@ -291,6 +309,9 @@ private Q_SLOTS:
     void updateTouchingWindow();
 
 private:
+    bool isUnsupportedEnvironment() const;
+    bool defaultFloating() const;
+    OpacityMode defaultOpacityMode() const;
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
     KWindowEffects::SlideFromLocation slideLocation() const;
     void updateLayerWindow();
