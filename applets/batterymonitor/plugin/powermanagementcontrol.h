@@ -16,7 +16,7 @@
 
 using InhibitionInfo = QPair<QString, QString>;
 
-class PowerManagmentControl : public QObject
+class PowerManagementControl : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
@@ -33,8 +33,8 @@ public:
     Q_INVOKABLE void inhibit(const QString &reason);
     Q_INVOKABLE void uninhibit();
 
-    explicit PowerManagmentControl(QObject *parent = nullptr);
-    ~PowerManagmentControl() override;
+    explicit PowerManagementControl(QObject *parent = nullptr);
+    ~PowerManagementControl() override;
 
 Q_SIGNALS:
     void inhibitionsChanged(const QList<QVariantMap> &inhibitions);
@@ -62,16 +62,16 @@ private:
     QBindable<bool> bindableIsManuallyInhibited();
     QBindable<bool> bindableIsManuallyInhibitedError();
 
-    Q_OBJECT_BINDABLE_PROPERTY(PowerManagmentControl, QList<QVariantMap>, m_inhibitions, &PowerManagmentControl::inhibitionsChanged)
-    Q_OBJECT_BINDABLE_PROPERTY(PowerManagmentControl, bool, m_hasInhibition, &PowerManagmentControl::hasInhibitionChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagmentControl, bool, m_isLidPresent, false, &PowerManagmentControl::isLidPresentChanged)
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagmentControl, bool, m_triggersLidAction, false, &PowerManagmentControl::triggersLidActionChanged)
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagmentControl, bool, m_isManuallyInhibited, false, &PowerManagmentControl::isManuallyInhibitedChanged)
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagmentControl,
+    Q_OBJECT_BINDABLE_PROPERTY(PowerManagementControl, QList<QVariantMap>, m_inhibitions, &PowerManagementControl::inhibitionsChanged)
+    Q_OBJECT_BINDABLE_PROPERTY(PowerManagementControl, bool, m_hasInhibition, &PowerManagementControl::hasInhibitionChanged);
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagementControl, bool, m_isLidPresent, false, &PowerManagementControl::isLidPresentChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagementControl, bool, m_triggersLidAction, false, &PowerManagementControl::triggersLidActionChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagementControl, bool, m_isManuallyInhibited, false, &PowerManagementControl::isManuallyInhibitedChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagementControl,
                                          bool,
                                          m_isManuallyInhibitedError,
                                          false,
-                                         &PowerManagmentControl::isManuallyInhibitedErrorChanged)
+                                         &PowerManagementControl::isManuallyInhibitedErrorChanged)
 
     bool m_isSilent = false;
 

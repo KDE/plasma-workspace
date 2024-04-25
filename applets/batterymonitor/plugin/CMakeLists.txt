@@ -6,7 +6,7 @@ ecm_add_qml_module(batterycontrolplugin URI org.kde.plasma.private.battery GENER
 target_sources(batterycontrolplugin PRIVATE
         powerprofilescontrol.cpp
         batterycontrol.cpp
-        powermanagmentcontrol.cpp
+        powermanagementcontrol.cpp
         applicationdata_p.cpp
         batteriesnamesmonitor_p.cpp
         inhibitmonitor_p.cpp

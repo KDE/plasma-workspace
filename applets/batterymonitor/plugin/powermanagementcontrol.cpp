@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  */
 
-#include "powermanagmentcontrol.h"
+#include "powermanagementcontrol.h"
 
 #include "batterymonitor_debug.h"
 
@@ -21,7 +21,7 @@
 static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
 static const char FDO_POWERMANAGEMENT_SERVICE[] = "org.freedesktop.PowerManagement";
 
-PowerManagmentControl::PowerManagmentControl(QObject *parent)
+PowerManagementControl::PowerManagementControl(QObject *parent)
     : QObject(parent)
 {
     qDBusRegisterMetaType<QList<InhibitionInfo>>();
@@ -29,8 +29,8 @@ PowerManagmentControl::PowerManagmentControl(QObject *parent)
 
     if (QDBusConnection::sessionBus().interface()->isServiceRegistered(SOLID_POWERMANAGEMENT_SERVICE)) {
         m_isManuallyInhibited = InhibitMonitor::self().getInhibit();
-        connect(&InhibitMonitor::self(), &InhibitMonitor::isManuallyInhibitedChanged, this, &PowerManagmentControl::onIsManuallyInhibitedChanged);
-        connect(&InhibitMonitor::self(), &InhibitMonitor::isManuallyInhibitedChangeError, this, &PowerManagmentControl::onisManuallyInhibitedErrorChanged);
+        connect(&InhibitMonitor::self(), &InhibitMonitor::isManuallyInhibitedChanged, this, &PowerManagementControl::onIsManuallyInhibitedChanged);
+        connect(&InhibitMonitor::self(), &InhibitMonitor::isManuallyInhibitedChangeError, this, &PowerManagementControl::onisManuallyInhibitedErrorChanged);
 
         QDBusMessage isLidPresentMessage = QDBusMessage::createMethodCall(SOLID_POWERMANAGEMENT_SERVICE,
                                                                           QStringLiteral("/org/kde/Solid/PowerManagement"),
@@ -111,61 +111,61 @@ PowerManagmentControl::PowerManagmentControl(QObject *parent)
     }
 }
 
-PowerManagmentControl::~PowerManagmentControl()
+PowerManagementControl::~PowerManagementControl()
 {
 }
 
-void PowerManagmentControl::inhibit(const QString &reason)
+void PowerManagementControl::inhibit(const QString &reason)
 {
     InhibitMonitor::self().inhibit(reason, m_isSilent);
 }
 
-void PowerManagmentControl::uninhibit()
+void PowerManagementControl::uninhibit()
 {
     InhibitMonitor::self().uninhibit(m_isSilent);
 }
 
-bool PowerManagmentControl::isSilent()
+bool PowerManagementControl::isSilent()
 {
     return m_isSilent;
 }
 
-void PowerManagmentControl::setIsSilent(bool status)
+void PowerManagementControl::setIsSilent(bool status)
 {
     m_isSilent = status;
 }
 
-QBindable<QList<QVariantMap>> PowerManagmentControl::bindableInhibitions()
+QBindable<QList<QVariantMap>> PowerManagementControl::bindableInhibitions()
 {
     return &m_inhibitions;
 }
 
-QBindable<bool> PowerManagmentControl::bindableHasInhibition()
+QBindable<bool> PowerManagementControl::bindableHasInhibition()
 {
     return &m_hasInhibition;
 }
 
-QBindable<bool> PowerManagmentControl::bindableIsLidPresent()
+QBindable<bool> PowerManagementControl::bindableIsLidPresent()
 {
     return &m_isLidPresent;
 }
 
-QBindable<bool> PowerManagmentControl::bindableTriggersLidAction()
+QBindable<bool> PowerManagementControl::bindableTriggersLidAction()
 {
     return &m_triggersLidAction;
 }
 
-QBindable<bool> PowerManagmentControl::bindableIsManuallyInhibited()
+QBindable<bool> PowerManagementControl::bindableIsManuallyInhibited()
 {
     return &m_isManuallyInhibited;
 }
 
-QBindable<bool> PowerManagmentControl::bindableIsManuallyInhibitedError()
+QBindable<bool> PowerManagementControl::bindableIsManuallyInhibitedError()
 {
     return &m_isManuallyInhibitedError;
 }
 
-void PowerManagmentControl::onInhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
+void PowerManagementControl::onInhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed)
 {
     Q_UNUSED(added);
     Q_UNUSED(removed);
@@ -187,22 +187,22 @@ void PowerManagmentControl::onInhibitionsChanged(const QList<InhibitionInfo> &ad
     });
 }
 
-void PowerManagmentControl::onHasInhibitionChanged(bool status)
+void PowerManagementControl::onHasInhibitionChanged(bool status)
 {
     m_hasInhibition = status;
 }
 
-void PowerManagmentControl::onIsManuallyInhibitedChanged(bool status)
+void PowerManagementControl::onIsManuallyInhibitedChanged(bool status)
 {
     m_isManuallyInhibited = status;
 }
 
-void PowerManagmentControl::onisManuallyInhibitedErrorChanged(bool status)
+void PowerManagementControl::onisManuallyInhibitedErrorChanged(bool status)
 {
     m_isManuallyInhibitedError = status;
 }
 
-void PowerManagmentControl::updateInhibitions(const QList<InhibitionInfo> &inhibitions)
+void PowerManagementControl::updateInhibitions(const QList<InhibitionInfo> &inhibitions)
 {
     QList<QVariantMap> out;
 
@@ -226,4 +226,4 @@ void PowerManagmentControl::updateInhibitions(const QList<InhibitionInfo> &inhib
     m_inhibitions = out;
 }
 
-#include "moc_powermanagmentcontrol.cpp"
+#include "moc_powermanagementcontrol.cpp"

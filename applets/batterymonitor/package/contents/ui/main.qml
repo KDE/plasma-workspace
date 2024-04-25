@@ -32,8 +32,8 @@ PlasmoidItem {
         id: batteryControl
     }
 
-    PowerManagmentControl {
-        id: powerManagmentControl
+    PowerManagementControl {
+        id: powerManagementControl
     }
 
     readonly property bool kcmAuthorized: KAuthorized.authorizeControlModule("powerdevilprofilesconfig")
@@ -67,13 +67,13 @@ PlasmoidItem {
 
     onInhibitionChangeRequested: inhibit => {
 
-        powerManagmentControl.isSilent = batterymonitor.expanded; // show OSD only when the plasmoid isn't expanded since the changing switch is feedback enough
+        powerManagementControl.isSilent = batterymonitor.expanded; // show OSD only when the plasmoid isn't expanded since the changing switch is feedback enough
 
         if (inhibit) {
             const reason = i18n("The battery applet has enabled suppressing sleep and screen locking");
-            powerManagmentControl.inhibit(reason)
+            powerManagementControl.inhibit(reason)
         } else {
-            powerManagmentControl.uninhibit()
+            powerManagementControl.uninhibit()
         }
     }
 
@@ -99,7 +99,7 @@ PlasmoidItem {
 
     Plasmoid.status: {
 
-        if (powerManagmentControl.isManuallyInhibited) {
+        if (powerManagementControl.isManuallyInhibited) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -107,7 +107,7 @@ PlasmoidItem {
             return PlasmaCore.Types.ActiveStatus;
         }
 
-        if (powerManagmentControl.isManuallyInPerformanceMode || powerManagmentControl.isManuallyInPowerSaveMode || batterymonitor.isHeldOnPerformanceMode || batterymonitor.isHeldOnPowerSaveMode) {
+        if (powerManagementControl.isManuallyInPerformanceMode || powerManagementControl.isManuallyInPowerSaveMode || batterymonitor.isHeldOnPerformanceMode || batterymonitor.isHeldOnPowerSaveMode) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -164,7 +164,7 @@ PlasmoidItem {
             } // otherwise, don't add anything
         }
 
-        if (powerManagmentControl.isManuallyInhibited) {
+        if (powerManagementControl.isManuallyInhibited) {
             parts.push(i18n("Automatic sleep and screen locking are disabled; middle-click to re-enable"));
         } else {
             parts.push(i18n("Middle-click to disable automatic sleep and screen locking"));
@@ -220,7 +220,7 @@ PlasmoidItem {
 
         isSetToPerformanceMode: batterymonitor.isHeldOnPerformanceMode || powerProfilesControl.isManuallyInPerformanceMode
         isSetToPowerSaveMode: batterymonitor.isHeldOnPowerSaveMode || powerProfilesControl.isManuallyInPowerSaveMode
-        isManuallyInhibited: powerManagmentControl.isManuallyInhibited
+        isManuallyInhibited: powerManagementControl.isManuallyInhibited
         isSomehowFullyCharged: batterymonitor.isSomehowFullyCharged
         isDischarging: !batteryControl.pluggedIn
 
@@ -229,7 +229,7 @@ PlasmoidItem {
         onPressed: wasExpanded = batterymonitor.expanded
         onClicked: mouse => {
             if (mouse.button == Qt.MiddleButton) {
-                batterymonitor.inhibitionChangeRequested(!powerManagmentControl.isManuallyInhibited);
+                batterymonitor.inhibitionChangeRequested(!powerManagementControl.isManuallyInhibited);
             } else {
                 batterymonitor.expanded = !wasExpanded;
             }
@@ -273,15 +273,15 @@ PlasmoidItem {
 
         model: batteryControl
 
-        isManuallyInhibited: powerManagmentControl.isManuallyInhibited
-        isManuallyInhibitedError: powerManagmentControl.isManuallyInhibitedError
+        isManuallyInhibited: powerManagementControl.isManuallyInhibited
+        isManuallyInhibitedError: powerManagementControl.isManuallyInhibitedError
         pluggedIn: batteryControl.pluggedIn
         chargeStopThreshold: batteryControl.chargeStopThreshold
         remainingTime: batterymonitor.remainingTime
         activeProfile: powerProfilesControl.actuallyActiveProfile
         activeProfileError: powerProfilesControl.actuallyActiveProfileError
-        inhibitions: powerManagmentControl.inhibitions
-        inhibitsLidAction: powerManagmentControl.isLidPresent && !powerManagmentControl.triggersLidAction
+        inhibitions: powerManagementControl.inhibitions
+        inhibitsLidAction: powerManagementControl.isLidPresent && !powerManagementControl.triggersLidAction
         profilesInstalled: powerProfilesControl.isPowerProfileDaemonInstalled
         profiles: powerProfilesControl.profiles
         inhibitionReason: powerProfilesControl.inhibitionReason
