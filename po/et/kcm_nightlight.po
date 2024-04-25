@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:39+0000\n"
+"POT-Creation-Date: 2024-04-25 00:39+0000\n"
 "PO-Revision-Date: 2020-03-05 18:29+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -47,17 +47,17 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr ""
 
-#: ui/LocationsFixedView.qml:113
+#: ui/LocationsFixedView.qml:112
 #, kde-format
 msgid "Zoom in"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:130
+#: ui/LocationsFixedView.qml:128
 #, kde-format
 msgid "Zoom out"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:227
+#: ui/LocationsFixedView.qml:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -67,14 +67,14 @@ msgid ""
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
 
-#: ui/LocationsFixedView.qml:240
+#: ui/LocationsFixedView.qml:238
 #, fuzzy, kde-format
 #| msgid "Latitude:"
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Laiuskraad:"
 
-#: ui/LocationsFixedView.qml:271
+#: ui/LocationsFixedView.qml:269
 #, fuzzy, kde-format
 #| msgid "Longitude:"
 msgctxt "@label: textbox"

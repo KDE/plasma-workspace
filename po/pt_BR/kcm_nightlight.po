@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-20 00:39+0000\n"
+"POT-Creation-Date: 2024-04-25 00:39+0000\n"
 "PO-Revision-Date: 2024-04-07 16:44-0300\n"
 "Last-Translator: Frederico Goncalves Guimaraes <frederico@teia.bio.br>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -53,18 +53,18 @@ msgctxt ""
 msgid "Click to choose your location on the map."
 msgstr "Clique para escolher sua localização no mapa."
 
-#: ui/LocationsFixedView.qml:113
+#: ui/LocationsFixedView.qml:112
 #, kde-format
 msgid "Zoom in"
 msgstr "Ampliar"
 
-#: ui/LocationsFixedView.qml:130
+#: ui/LocationsFixedView.qml:128
 #, fuzzy, kde-format
 #| msgid "Zoom in"
 msgid "Zoom out"
 msgstr "Ampliar"
 
-#: ui/LocationsFixedView.qml:227
+#: ui/LocationsFixedView.qml:225
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -78,13 +78,13 @@ msgstr ""
 "link> por TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
 "licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:240
+#: ui/LocationsFixedView.qml:238
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Latitude:"
 
-#: ui/LocationsFixedView.qml:271
+#: ui/LocationsFixedView.qml:269
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

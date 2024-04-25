@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-22 13:59+0300\n"
+"PO-Revision-Date: 2024-04-24 10:50+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -120,7 +120,7 @@ msgstr "Живлення і акумулятор"
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "У лотку немає акумулятора"
 
 #: package/contents/ui/main.qml:132
 #, kde-format

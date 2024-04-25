@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-22 10:55+0200\n"
+"PO-Revision-Date: 2024-04-24 06:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -118,7 +118,7 @@ msgstr "კვება და ელემენტი"
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "ჩასადებში ელემენტი არ დევს"
 
 #: package/contents/ui/main.qml:132
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-17 00:39+0000\n"
+"POT-Creation-Date: 2024-04-25 00:39+0000\n"
 "PO-Revision-Date: 2024-04-18 01:44+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -60,74 +60,74 @@ msgstr "%1 %"
 msgid "Follow accent color"
 msgstr "Seguir el color de acento"
 
-#: package/contents/ui/main.qml:68
+#: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Brightness and Color"
 msgstr "Brillo y color"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "Brillo de la pantalla al %1 %"
 
-#: package/contents/ui/main.qml:83
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "Brillo del teclado al %1 %"
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
 msgstr "Luz nocturna desactivada"
 
-#: package/contents/ui/main.qml:91
+#: package/contents/ui/main.qml:88
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
 msgstr "Temperatura de color de la luz nocturna durante el día"
 
-#: package/contents/ui/main.qml:93
+#: package/contents/ui/main.qml:90
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
 msgstr "Temperatura de color de la luz nocturna durante la noche"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
 msgstr "Luz nocturna en transición a la mañana (completa a las %1)"
 
-#: package/contents/ui/main.qml:100
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
 msgstr "Luz nocturna en transición a la noche (completa a las %1)"
 
-#: package/contents/ui/main.qml:115
+#: package/contents/ui/main.qml:112
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
 msgstr "Transición a la noche de la luz nocturna programada para las %1"
 
-#: package/contents/ui/main.qml:117
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
 msgstr "Transición a la mañana de la luz nocturna programada para las %1"
 
-#: package/contents/ui/main.qml:121
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Desplace para ajustar el brillo de la pantalla"
 
-#: package/contents/ui/main.qml:124
+#: package/contents/ui/main.qml:121
 #, kde-format
 msgid "Middle-click to toggle Night Light"
 msgstr "Clic central para cambiar la luz nocturna"
 
-#: package/contents/ui/main.qml:228
+#: package/contents/ui/main.qml:209
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
@@ -193,35 +193,35 @@ msgctxt "Placeholder is screen color temperature"
 msgid "%1K"
 msgstr "%1 K"
 
-#: package/contents/ui/NightLightItem.qml:142
+#: package/contents/ui/NightLightItem.qml:143
 #, kde-format
 msgid "Configure…"
 msgstr "Configurar..."
 
-#: package/contents/ui/NightLightItem.qml:142
+#: package/contents/ui/NightLightItem.qml:143
 #, kde-format
 msgid "Enable and Configure…"
 msgstr "Activar y configurar..."
 
-#: package/contents/ui/NightLightItem.qml:168
+#: package/contents/ui/NightLightItem.qml:169
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
 msgstr "Transición al día completa en:"
 
-#: package/contents/ui/NightLightItem.qml:170
+#: package/contents/ui/NightLightItem.qml:171
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
 msgstr "Transición a la noche programada para las:"
 
-#: package/contents/ui/NightLightItem.qml:172
+#: package/contents/ui/NightLightItem.qml:173
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
 msgstr "Transición a la noche completa en:"
 
-#: package/contents/ui/NightLightItem.qml:174
+#: package/contents/ui/NightLightItem.qml:175
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"

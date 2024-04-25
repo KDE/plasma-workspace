@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-22 22:51+0100\n"
+"PO-Revision-Date: 2024-04-24 19:18+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -122,7 +122,7 @@ msgstr "Energio kaj Baterio"
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "Baterio ne ĉeestas en la niĉo"
 
 #: package/contents/ui/main.qml:132
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-23 00:40+0000\n"
-"PO-Revision-Date: 2023-03-17 05:27+0100\n"
+"PO-Revision-Date: 2024-04-24 06:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,40 +16,40 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: binarydialectmodel.cpp:50
 #, kde-format
 msgctxt "Binary dialect IEC, with sigle in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "საერთაშორისო ელექტროტექნიკური კომისია (IEC)"
 
 #: binarydialectmodel.cpp:54
 #, kde-format
 msgctxt "Binary dialect JEDEC, with sigle in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "გაერთიანებული ელექტრონული მოწყობილობების ინჟინრების საბჭო (JEDEC)"
 
 #: binarydialectmodel.cpp:58
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "მეტრული სისტემა (SI)"
 
 #: binarydialectmodel.cpp:73
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "ბინარული -  კიბიბაიტი (კიბ), მებიბაიტი (მიბ), გიბიბაიტი (გიბ)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "ბინარული - კილობაიტი (კბ), მეგაბაიტი (მბ), გიგაბაიტი (გბ)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "ათობითი -- კილობაიტი (კბ), მეგაბაიტი (მბ), გიგაბაიტი (გბ)"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -415,7 +415,7 @@ msgstr "ტელეფონის ნომრები"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "მონაცემებისა და საცავის ზომები"
 
 #: optionsmodel.cpp:130 optionsmodel.cpp:374
 #, kde-format
@@ -427,19 +427,19 @@ msgstr "სისტემის ნაგულისხმები"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "კიბ, მიბ, გიბ; %1"
 
 #: optionsmodel.cpp:299
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "კბ, მბ, გბ; %1"
 
 #: optionsmodel.cpp:302
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "კბ, მბ, გბ; %1"
 
 #: optionsmodel.cpp:376
 #, kde-format
@@ -578,7 +578,7 @@ msgstr "შეცვლა…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "მონაცემებისა და საცავის ზომები"
 
 #: ui/main.qml:263
 #, kde-format

@@ -99,7 +99,7 @@ msgstr "%1%"
 #: package/contents/ui/main.qml:73
 #, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr ""
+msgstr "电池挂件已启用阻止睡眠和锁屏"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -409,7 +409,7 @@ msgstr ""
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "电池 %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format
