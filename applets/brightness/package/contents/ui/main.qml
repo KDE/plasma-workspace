@@ -105,10 +105,10 @@ PlasmoidItem {
 
     toolTipSubText: {
         const parts = [];
-        if (nightLightMonitor.enabled)
-            if (nightLightMonitor.currentTemperature == nightLightMonitor.targetTemperature) {
-                const startTime = new Date(nightLightMonitor.scheduledTransitionStartTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
-                if (nightLightMonitor.daylight) {
+        if (nightLightControl.enabled)
+            if (nightLightControl.currentTemperature == nightLightControl.targetTemperature) {
+                const startTime = new Date(nightLightControl.scheduledTransitionStartTime).toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
+                if (nightLightControl.daylight) {
                     parts.push(i18nc("Status; placeholder is a time", "Night Light evening transition scheduled for %1", startTime));
                 } else {
                     parts.push(i18nc("Status; placeholder is a time", "Night Light morning transition scheduled for %1", startTime));
