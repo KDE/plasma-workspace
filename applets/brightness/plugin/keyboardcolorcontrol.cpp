@@ -37,7 +37,6 @@ KeyboardColorControl::KeyboardColorControl(QObject *parent)
         return;
     } else {
         m_supported = supported.value();
-        qDebug() << "kameleon supported" << m_supported;
     }
 
     QDBusReply<bool> accent =
@@ -48,7 +47,6 @@ KeyboardColorControl::KeyboardColorControl(QObject *parent)
         return;
     } else {
         m_accent = accent.value();
-        qDebug() << "kameleon accent" << m_accent;
     }
 
     QDBusReply<QString> currentColor =
