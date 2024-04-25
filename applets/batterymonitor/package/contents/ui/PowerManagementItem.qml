@@ -194,7 +194,7 @@ PlasmaComponents3.ItemDelegate {
                     InhibitionHint {
                         property string icon: modelData.Icon
                             || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
-                        property string name: modelData.Name
+                        property string name: modelData.PrettyName
                         property string reason: modelData.Reason
 
                         Layout.fillWidth: true
