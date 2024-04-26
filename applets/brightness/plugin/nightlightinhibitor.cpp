@@ -30,11 +30,15 @@ NightLightInhibitor::~NightLightInhibitor()
     uninhibit();
 }
 
-NightLightInhibitor &NightLightInhibitor::instance()
+std::shared_ptr<NightLightInhibitor> NightLightInhibitor::instance()
 {
-    static NightLightInhibitor nightLightInhibitor;
-
-    return nightLightInhibitor;
+    static std::weak_ptr<NightLightInhibitor> nightLightInhibitor;
+    if (nightLightInhibitor.expired()) {
+        auto ptr = std::shared_ptr<NightLightInhibitor>{new NightLightInhibitor};
+        nightLightInhibitor = ptr;
+        return ptr;
+    }
+    return nightLightInhibitor.lock();
 }
 
 bool NightLightInhibitor::isInhibited() const

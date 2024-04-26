@@ -20,6 +20,7 @@ static const QString s_propertiesInterface = QStringLiteral("org.freedesktop.DBu
 
 NightLightControl::NightLightControl(QObject *parent)
     : QObject(parent)
+    , m_inhibitor(NightLightInhibitor::instance())
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
 
@@ -52,9 +53,9 @@ NightLightControl::NightLightControl(QObject *parent)
         updateProperties(properties.value());
     });
 
-    m_isInhibitedFromApplet = NightLightInhibitor::instance().isInhibited();
-    connect(&NightLightInhibitor::instance(), &NightLightInhibitor::inhibitedChanged, this, [this]() {
-        setInhibitedFromApplet(NightLightInhibitor::instance().isInhibited());
+    m_isInhibitedFromApplet = m_inhibitor->isInhibited();
+    connect(m_inhibitor.get(), &NightLightInhibitor::inhibitedChanged, this, [this]() {
+        setInhibitedFromApplet(m_inhibitor->isInhibited());
     });
 }
 
@@ -179,7 +180,7 @@ void NightLightControl::setInhibited(bool inhibited)
 
 void NightLightControl::toggleInhibition()
 {
-    NightLightInhibitor::instance().toggleInhibition();
+    m_inhibitor->toggleInhibition();
 }
 
 bool NightLightControl::isInhibitedFromApplet() const

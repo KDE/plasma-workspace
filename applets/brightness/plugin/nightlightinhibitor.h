@@ -23,10 +23,8 @@ class NightLightInhibitor : public QObject
     Q_PROPERTY(bool inhibited READ isInhibited NOTIFY inhibitedChanged)
 
 public:
-    explicit NightLightInhibitor(QObject *parent = nullptr);
+    static std::shared_ptr<NightLightInhibitor> instance();
     ~NightLightInhibitor() override;
-
-    static NightLightInhibitor &instance();
 
     /**
      * This enum type is used to specify the state of the inhibitor.
@@ -57,6 +55,7 @@ Q_SIGNALS:
     void inhibitedChanged();
 
 private:
+    explicit NightLightInhibitor(QObject *parent = nullptr);
     class Private;
 
     uint m_cookie = 0;

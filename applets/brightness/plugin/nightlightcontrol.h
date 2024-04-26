@@ -10,6 +10,8 @@
 #include <QObject>
 #include <qqmlregistration.h>
 
+class NightLightInhibitor;
+
 /**
  * The Control provides a way for controling the state of Night Light.
  */
@@ -219,6 +221,7 @@ private:
     bool m_isAvailable = false;
     bool m_isEnabled = false;
     bool m_isRunning = false;
+    std::shared_ptr<NightLightInhibitor> m_inhibitor;
     bool m_isInhibited = false;
     bool m_isInhibitedFromApplet = false;
     int m_mode = 0;
