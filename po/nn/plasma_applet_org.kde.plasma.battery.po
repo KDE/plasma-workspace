@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 02:31+0000\n"
-"PO-Revision-Date: 2024-03-09 18:24+0100\n"
+"PO-Revision-Date: 2024-04-25 21:04+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -228,34 +228,39 @@ msgstr ""
 "Maskina di er sett opp til å ikkje gå i kvile-/dvalemodus når du lukkar att "
 "lokket og ein ekstern skjerm er kopla til."
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:87
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "%1 program hindrar kvilemodus og skjermlåsing:"
-msgstr[1] "%1 program hindrar kvilemodus og skjermlåsing:"
+msgstr[0] "%1 program hindrar skjermlåsing og kvilemodus:"
+msgstr[1] "%1 program hindrar skjermlåsing og kvilemodus:"
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:106
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
-msgstr "%1 hindrar kvilemodus og skjermlåsing (%2)"
+msgstr "%1 hindrar skjermlåsing og kvilemodus (%2)"
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:108
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
-msgstr "%1 hindrar kvilemodus og skjermlåsing (ukjend grunn)"
+msgstr "%1 hindrar skjermlåsing og kvilemodus (ukjend grunn)"
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:110
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "Eit program hindrar kvilemodus og skjermlåsing (%1)"
+msgstr "Eit program hindrar skjermlåsing og kvilemodus (%1)"
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:112
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "Eit program hindrar kvilemodus og skjermlåsing (ukjend grunn)"
+msgstr "Eit program hindrar skjermlåsing og kvilemodus (ukjend grunn)"
 
 #: package/contents/ui/PowerManagementItem.qml:116
 #, kde-format
