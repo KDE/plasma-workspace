@@ -249,6 +249,7 @@ void PanelConfigView::init()
             resize(mainItem()->implicitWidth() + leftPadding() + rightPadding(), mainItem()->implicitHeight() + topPadding() + bottomPadding());
         };
         connect(mainItem(), &QQuickItem::implicitWidthChanged, this, syncSize);
+        connect(mainItem(), &QQuickItem::implicitHeightChanged, this, syncSize);
         syncSize();
         mainItem()->setVisible(true);
     }
