@@ -56,7 +56,7 @@ namespace TaskManager
 static const NET::Properties windowInfoFlags =
     NET::WMState | NET::XAWMState | NET::WMDesktop | NET::WMVisibleName | NET::WMGeometry | NET::WMFrameExtents | NET::WMWindowType | NET::WMPid;
 static const NET::Properties2 windowInfoFlags2 = NET::WM2DesktopFileName | NET::WM2Activities | NET::WM2WindowClass | NET::WM2AllowedActions
-    | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName | NET::WM2GTKApplicationId;
+    | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName | NET::WM2GTKApplicationId | NET::WM2GTKFrameExtents;
 
 class Q_DECL_HIDDEN XWindowTasksModel::Private
 {
@@ -388,7 +388,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
         changedRoles << VirtualDesktops << IsOnAllVirtualDesktops;
     }
 
-    if (properties & NET::WMGeometry) {
+    if ((properties & NET::WMGeometry) || (properties2 & NET::WM2GTKFrameExtents)) {
         wipeInfoCache = true;
         changedRoles << Geometry << ScreenGeometry;
     }
@@ -684,8 +684,11 @@ QVariant XWindowTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsOnAllVirtualDesktops) {
         return d->windowInfo(window)->onAllDesktops();
     } else if (role == Geometry) {
+        const KWindowInfo *windowInfo = d->windowInfo(window);
+        const QRect geometry = windowInfo->frameGeometry();
+        const NETStrut padding = windowInfo->gtkFrameExtents();
         // Both the topLeft position and the size belong to the non-scaled coordinate system
-        return d->windowInfo(window)->frameGeometry();
+        return geometry.adjusted(padding.left, padding.top, -padding.right, -padding.bottom);
     } else if (role == ScreenGeometry) {
         // The topLeft position belongs to the non-scaled coordinate system
         // The size belongs to the scaled coordinate system, which means the size is already divided by DPR
