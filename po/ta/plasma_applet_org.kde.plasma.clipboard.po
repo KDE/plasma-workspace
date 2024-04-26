@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-26 00:39+0000\n"
 "PO-Revision-Date: 2023-06-11 17:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -106,7 +106,7 @@ msgstr "ரத்து செய்"
 msgid "Clipboard Contents"
 msgstr "பிடிப்புப்பலகையின் உள்ளடக்கம்"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:134
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
@@ -121,7 +121,7 @@ msgstr "வரலாற்றை காலியாக்கு"
 msgid "Configure Clipboard…"
 msgstr "பிடிப்புப்பலகையை அமை…"
 
-#: contents/ui/Menu.qml:134
+#: contents/ui/Menu.qml:136
 #, kde-format
 msgid "No matches"
 msgstr "பொருத்தங்கள் இல்லை"

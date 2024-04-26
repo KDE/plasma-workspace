@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-25 00:39+0000\n"
+"POT-Creation-Date: 2024-04-26 00:39+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -86,76 +86,76 @@ msgstr "经度："
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "夜间颜色功能可以滤除蓝光，使屏幕以偏暖的颜色显示内容。"
 
-#: ui/main.qml:156
-#, kde-format
-msgid "Day light temperature:"
-msgstr "日间色温："
-
-#: ui/main.qml:199 ui/main.qml:261
+#: ui/main.qml:156 ui/main.qml:207 ui/main.qml:271
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:204 ui/main.qml:266
+#: ui/main.qml:164
+#, kde-format
+msgid "Day light temperature:"
+msgstr "日间色温："
+
+#: ui/main.qml:214 ui/main.qml:278
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "冷 (不滤除蓝光)"
 
-#: ui/main.qml:211 ui/main.qml:273
+#: ui/main.qml:221 ui/main.qml:285
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "暖"
 
-#: ui/main.qml:218
+#: ui/main.qml:228
 #, kde-format
 msgid "Night light temperature:"
 msgstr "夜间色温："
 
-#: ui/main.qml:285
+#: ui/main.qml:297
 #, kde-format
 msgid "Switching times:"
 msgstr "切换时间："
 
-#: ui/main.qml:288
+#: ui/main.qml:300
 #, kde-format
 msgid "Always off"
 msgstr "总是关闭"
 
-#: ui/main.qml:289
+#: ui/main.qml:301
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "当前地理位置的日落到日出"
 
-#: ui/main.qml:290
+#: ui/main.qml:302
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "手动选定的地理位置的日落到日出"
 
-#: ui/main.qml:291
+#: ui/main.qml:303
 #, kde-format
 msgid "Custom times"
 msgstr "自定义时间"
 
-#: ui/main.qml:292
+#: ui/main.qml:304
 #, kde-format
 msgid "Always on night light"
 msgstr "总是使用夜间颜色"
 
-#: ui/main.qml:309
+#: ui/main.qml:321
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "当前位置："
 
-#: ui/main.qml:315
+#: ui/main.qml:327
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "纬度：%1°   经度：%2°"
 
-#: ui/main.qml:339
+#: ui/main.qml:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -166,38 +166,38 @@ msgstr ""
 "系统将定期通过 GPS (如果可用)、或者发送信息到 <link url='https://location."
 "services.mozilla.com'>Mozilla 定位服务</link>以对设备进行持续定位。"
 
-#: ui/main.qml:354
+#: ui/main.qml:366
 #, kde-format
 msgid "Begin night light at:"
 msgstr "夜间颜色开始时间："
 
-#: ui/main.qml:370
+#: ui/main.qml:382
 #, kde-format
 msgid "Begin day light at:"
 msgstr "日间颜色开始时间："
 
-#: ui/main.qml:385
+#: ui/main.qml:397
 #, kde-format
 msgid "Transition duration:"
 msgstr "过渡时长："
 
-#: ui/main.qml:394
+#: ui/main.qml:406
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 分钟"
 
-#: ui/main.qml:407
+#: ui/main.qml:419
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "输入分钟，最小为 1，最大为 600"
 
-#: ui/main.qml:426
+#: ui/main.qml:438
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "错误：过渡时间重叠。"
 
-#: ui/main.qml:449
+#: ui/main.qml:461
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

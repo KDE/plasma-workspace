@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-26 00:39+0000\n"
 "PO-Revision-Date: 2023-12-18 16:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -124,7 +124,7 @@ msgstr "Отмена"
 msgid "Clipboard Contents"
 msgstr "Содержимое буфера обмена"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:134
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер обмена пуст"
@@ -139,7 +139,7 @@ msgstr "Очистить журнал"
 msgid "Configure Clipboard…"
 msgstr "Настроить буфер обмена…"
 
-#: contents/ui/Menu.qml:134
+#: contents/ui/Menu.qml:136
 #, kde-format
 msgid "No matches"
 msgstr "<нет совпадений>"

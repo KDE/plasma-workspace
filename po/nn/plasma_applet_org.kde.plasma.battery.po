@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:40+0000\n"
-"PO-Revision-Date: 2024-03-09 18:24+0100\n"
+"PO-Revision-Date: 2024-04-25 21:04+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -177,13 +177,11 @@ msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "Automatisk kvilemodus og skjermlåsing er slått av"
 
-# Teksten på engelsk er litt rar (korfor ha med «manually»?). Poenget er at når ein kryssar av for dette, vil ikkje maskina automatisk låsa skjermen eller gå i kvilemodus viss ein er inaktiv for lenge. Prøver ei omsetting som gjer dette klarare. Er òg meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/main.qml:170
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Hindra automatisk skjermlåsing og kvilemodus"
+msgstr "Midtklikk for å slå av automatisk skjermlåsing og kvilemodus"
 
 #: package/contents/ui/main.qml:175
 #, kde-format
@@ -256,21 +254,17 @@ msgctxt ""
 msgid "Manually block"
 msgstr ""
 
-# Teksten på engelsk er litt rar (korfor ha med «manually»?). Poenget er at når ein kryssar av for dette, vil ikkje maskina automatisk låsa skjermen eller gå i kvilemodus viss ein er inaktiv for lenge. Prøver ei omsetting som gjer dette klarare. Er òg meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Hindra automatisk skjermlåsing og kvilemodus"
+msgstr "Klarte ikkje slå på automatisk skjermlåsing og kvilemodus"
 
-# Teksten på engelsk er litt rar (korfor ha med «manually»?). Poenget er at når ein kryssar av for dette, vil ikkje maskina automatisk låsa skjermen eller gå i kvilemodus viss ein er inaktiv for lenge. Prøver ei omsetting som gjer dette klarare. Er òg meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:136
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Hindra automatisk skjermlåsing og kvilemodus"
+msgstr "Klarte ikkje hindra automatisk skjermlåsing og kvilemodus"
 
 #: package/contents/ui/PowerManagementItem.qml:174
 #, kde-format
@@ -282,34 +276,39 @@ msgstr ""
 "Maskina di er sett opp til å ikkje gå i kvile-/dvalemodus når du lukkar att "
 "lokket og ein ekstern skjerm er kopla til."
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:185
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "%1 program hindrar kvilemodus og skjermlåsing:"
-msgstr[1] "%1 program hindrar kvilemodus og skjermlåsing:"
+msgstr[0] "%1 program hindrar skjermlåsing og kvilemodus:"
+msgstr[1] "%1 program hindrar skjermlåsing og kvilemodus:"
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:205
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
-msgstr "%1 hindrar kvilemodus og skjermlåsing (%2)"
+msgstr "%1 hindrar skjermlåsing og kvilemodus (%2)"
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:207
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
-msgstr "%1 hindrar kvilemodus og skjermlåsing (ukjend grunn)"
+msgstr "%1 hindrar skjermlåsing og kvilemodus (ukjend grunn)"
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:209
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "Eit program hindrar kvilemodus og skjermlåsing (%1)"
+msgstr "Eit program hindrar skjermlåsing og kvilemodus (%1)"
 
+# Er meir naturleg å nemna skjermlåsing først (sidan det er det som skjer først).
 #: package/contents/ui/PowerManagementItem.qml:211
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "Eit program hindrar kvilemodus og skjermlåsing (ukjend grunn)"
+msgstr "Eit program hindrar skjermlåsing og kvilemodus (ukjend grunn)"
 
 #: package/contents/ui/PowerManagementItem.qml:215
 #, kde-format
@@ -439,7 +438,6 @@ msgid "Battery %1"
 msgstr "Batterinivå: %1 %"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgid "Battery"
-msgstr "Batterinivå: %1 %"
+msgstr "Batteri"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-26 00:39+0000\n"
 "PO-Revision-Date: 2023-05-27 11:16+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -113,7 +113,7 @@ msgstr "Annuler"
 msgid "Clipboard Contents"
 msgstr "Contenu du presse-papier"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:134
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Le presse-papier est vide"
@@ -128,7 +128,7 @@ msgstr "Effacer l'historique"
 msgid "Configure Clipboard…"
 msgstr "Configurer le presse-papier..."
 
-#: contents/ui/Menu.qml:134
+#: contents/ui/Menu.qml:136
 #, kde-format
 msgid "No matches"
 msgstr "Aucune correspondance"

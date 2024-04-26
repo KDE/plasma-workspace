@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-04-26 00:39+0000\n"
 "PO-Revision-Date: 2024-01-13 16:14+0200\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -111,7 +111,7 @@ msgstr "Atsisakyti"
 msgid "Clipboard Contents"
 msgstr "Iškarpinės turinys"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:134
+#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Iškarpinė tuščia"
@@ -126,7 +126,7 @@ msgstr "Išvalyti istoriją"
 msgid "Configure Clipboard…"
 msgstr "Konfigūruoti iškarpinę…"
 
-#: contents/ui/Menu.qml:134
+#: contents/ui/Menu.qml:136
 #, kde-format
 msgid "No matches"
 msgstr "Nėra atitikmenų"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-25 00:39+0000\n"
+"POT-Creation-Date: 2024-04-26 00:39+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -93,84 +93,84 @@ msgstr ""
 "Warna Malam membuat warna pada layar menghangat untuk mengurangi ketegangan "
 "mata sesuai waktu yang kamu pilih."
 
-#: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature:"
-msgid "Day light temperature:"
-msgstr "Temperatur Warna Malam:"
-
-#: ui/main.qml:199 ui/main.qml:261
+#: ui/main.qml:156 ui/main.qml:207 ui/main.qml:271
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:204 ui/main.qml:266
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgid "Night Color Temperature:"
+msgid "Day light temperature:"
+msgstr "Temperatur Warna Malam:"
+
+#: ui/main.qml:214 ui/main.qml:278
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
-#: ui/main.qml:211 ui/main.qml:273
+#: ui/main.qml:221 ui/main.qml:285
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Hangat"
 
-#: ui/main.qml:218
+#: ui/main.qml:228
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature:"
 msgid "Night light temperature:"
 msgstr "Temperatur Warna Malam:"
 
-#: ui/main.qml:285
+#: ui/main.qml:297
 #, fuzzy, kde-format
 #| msgid "Activation time:"
 msgid "Switching times:"
 msgstr "Waktu pengaktifan:"
 
-#: ui/main.qml:288
+#: ui/main.qml:300
 #, kde-format
 msgid "Always off"
 msgstr ""
 
-#: ui/main.qml:289
+#: ui/main.qml:301
 #, fuzzy, kde-format
 #| msgid "Sunset to sunrise at current location"
 msgid "Sunset and sunrise at current location"
 msgstr "Matahari tenggelam ke terbit di lokasi saat ini"
 
-#: ui/main.qml:290
+#: ui/main.qml:302
 #, fuzzy, kde-format
 #| msgid "Sunset to sunrise at manual location"
 msgid "Sunset and sunrise at manual location"
 msgstr "Matahari tenggelam ke terbit di lokasi manual"
 
-#: ui/main.qml:291
+#: ui/main.qml:303
 #, fuzzy, kde-format
 #| msgid "Custom time"
 msgid "Custom times"
 msgstr "Waktu kustom"
 
-#: ui/main.qml:292
+#: ui/main.qml:304
 #, fuzzy, kde-format
 #| msgid "Always on"
 msgid "Always on night light"
 msgstr "Selalu nyala"
 
-#: ui/main.qml:309
+#: ui/main.qml:321
 #, fuzzy, kde-format
 #| msgid "Detect Location"
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Deteksikan Lokasi"
 
-#: ui/main.qml:315
+#: ui/main.qml:327
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Garis lintang: %1°   Garis bujur: %2°"
 
-#: ui/main.qml:339
+#: ui/main.qml:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -182,39 +182,39 @@ msgstr ""
 "dengan mengirimkan informasi jaringan ke <a href=\"https://location.services."
 "mozilla.com\">Mozilla Location Service</a>."
 
-#: ui/main.qml:354
+#: ui/main.qml:366
 #, kde-format
 msgid "Begin night light at:"
 msgstr ""
 
-#: ui/main.qml:370
+#: ui/main.qml:382
 #, kde-format
 msgid "Begin day light at:"
 msgstr ""
 
-#: ui/main.qml:385
+#: ui/main.qml:397
 #, kde-format
 msgid "Transition duration:"
 msgstr "Durasi transisi:"
 
-#: ui/main.qml:394
+#: ui/main.qml:406
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 menit"
 msgstr[1] "%1 menit"
 
-#: ui/main.qml:407
+#: ui/main.qml:419
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Menit input - men. 1, maks. 600"
 
-#: ui/main.qml:426
+#: ui/main.qml:438
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Error: Waktu transisi tumpang tindih."
 
-#: ui/main.qml:449
+#: ui/main.qml:461
 #, fuzzy, kde-format
 #| msgid "Location"
 msgctxt "@info:placeholder"

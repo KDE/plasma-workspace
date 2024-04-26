@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-25 00:39+0000\n"
+"POT-Creation-Date: 2024-04-26 00:39+0000\n"
 "PO-Revision-Date: 2017-12-17 18:00+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -85,79 +85,79 @@ msgstr "Geografska dužina"
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr ""
 
-#: ui/main.qml:156
-#, fuzzy, kde-format
-#| msgid "Night Color Temperature: "
-msgid "Day light temperature:"
-msgstr "Temperatura noćne boje: "
-
-#: ui/main.qml:199 ui/main.qml:261
+#: ui/main.qml:156 ui/main.qml:207 ui/main.qml:271
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr ""
 
-#: ui/main.qml:204 ui/main.qml:266
+#: ui/main.qml:164
+#, fuzzy, kde-format
+#| msgid "Night Color Temperature: "
+msgid "Day light temperature:"
+msgstr "Temperatura noćne boje: "
+
+#: ui/main.qml:214 ui/main.qml:278
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr ""
 
-#: ui/main.qml:211 ui/main.qml:273
+#: ui/main.qml:221 ui/main.qml:285
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr ""
 
-#: ui/main.qml:218
+#: ui/main.qml:228
 #, fuzzy, kde-format
 #| msgid "Night Color Temperature: "
 msgid "Night light temperature:"
 msgstr "Temperatura noćne boje: "
 
-#: ui/main.qml:285
+#: ui/main.qml:297
 #, kde-format
 msgid "Switching times:"
 msgstr ""
 
-#: ui/main.qml:288
+#: ui/main.qml:300
 #, kde-format
 msgid "Always off"
 msgstr ""
 
-#: ui/main.qml:289
+#: ui/main.qml:301
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr ""
 
-#: ui/main.qml:290
+#: ui/main.qml:302
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr ""
 
-#: ui/main.qml:291
+#: ui/main.qml:303
 #, kde-format
 msgid "Custom times"
 msgstr ""
 
-#: ui/main.qml:292
+#: ui/main.qml:304
 #, kde-format
 msgid "Always on night light"
 msgstr ""
 
-#: ui/main.qml:309
+#: ui/main.qml:321
 #, fuzzy, kde-format
 #| msgid "Detect location"
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Otkrij lokaciju"
 
-#: ui/main.qml:315
+#: ui/main.qml:327
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr ""
 
-#: ui/main.qml:339
+#: ui/main.qml:351
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -166,23 +166,23 @@ msgid ""
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
 
-#: ui/main.qml:354
+#: ui/main.qml:366
 #, kde-format
 msgid "Begin night light at:"
 msgstr ""
 
-#: ui/main.qml:370
+#: ui/main.qml:382
 #, kde-format
 msgid "Begin day light at:"
 msgstr ""
 
-#: ui/main.qml:385
+#: ui/main.qml:397
 #, fuzzy, kde-format
 #| msgid "Transition duration"
 msgid "Transition duration:"
 msgstr "Trajanje prelaza"
 
-#: ui/main.qml:394
+#: ui/main.qml:406
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -192,18 +192,18 @@ msgstr[2] ""
 msgstr[3] ""
 
 # well-spelled: мин, макс
-#: ui/main.qml:407
+#: ui/main.qml:419
 #, fuzzy, kde-format
 #| msgid "(In minutes - min. 1, max. 600)"
 msgid "Input minutes - min. 1, max. 600"
 msgstr "(u minutima, min. 1, maks. 600)"
 
-#: ui/main.qml:426
+#: ui/main.qml:438
 #, kde-format
 msgid "Error: Transition time overlaps."
 msgstr "Greška: vreme prelaza se preklapa."
 
-#: ui/main.qml:449
+#: ui/main.qml:461
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
