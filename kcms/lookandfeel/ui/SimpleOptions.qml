@@ -9,7 +9,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.private.kcms.lookandfeel 1.0 as Private
 
 ColumnLayout {
@@ -43,6 +43,7 @@ ColumnLayout {
         }
 
         QtControls.CheckBox {
+            id: resetLayoutCheckbox
             visible: root.hasAppearance && root.hasLayout
             text: i18n("Desktop and window layout")
             checked: kcm.selectedContents & Private.LookandFeelManager.LayoutSettings
@@ -56,15 +57,11 @@ ColumnLayout {
             wrapMode: Text.WordWrap
         }
 
-        QtControls.Label {
+        Kirigami.InlineMessage {
             Layout.fillWidth: true
-            visible: root.showLayoutInfo
-            text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets")
-            textFormat: Text.PlainText
-            elide: Text.ElideRight
-            wrapMode: Text.WordWrap
-            font: Kirigami.Theme.smallFont
-            color: Kirigami.Theme.neutralTextColor
+            visible: resetLayoutCheckbox.checked
+            type: Kirigami.MessageType.Warning
+            text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets.")
         }
         // This label shouldn't ever appear, but it's good to let the user know why the dialog has no options
         // in the rare scenario they provide an empty Global Theme
