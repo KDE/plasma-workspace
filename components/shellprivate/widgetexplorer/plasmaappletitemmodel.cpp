@@ -33,14 +33,6 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
 
     setText(QString(m_info.name() + u" - " + m_info.category().toLower()));
 
-    if (QIcon::hasThemeIcon(info.pluginId())) {
-        setIcon(QIcon::fromTheme(info.pluginId()));
-    } else if (!m_info.iconName().isEmpty()) {
-        setIcon(QIcon::fromTheme(info.iconName()));
-    } else {
-        setIcon(QIcon::fromTheme(QStringLiteral("application-x-plasma")));
-    }
-
     // set plugininfo parts as roles in the model, only way qml can understand it
     setData(name(), PlasmaAppletItemModel::NameRole);
     setData(pluginName(), PlasmaAppletItemModel::PluginNameRole);
@@ -56,6 +48,30 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     setData(unsupportedMessage(), PlasmaAppletItemModel::UnsupportedMessageRole);
     setData(0, PlasmaAppletItemModel::RunningRole);
     setData(m_local, PlasmaAppletItemModel::LocalRole);
+
+    QString iconName;
+
+    if (!m_info.iconName().isEmpty()) {
+        if (m_info.iconName().startsWith(QLatin1String("/"))) {
+            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
+            pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
+            pkg.setPath(m_info.pluginId());
+            if (pkg.isValid()) {
+                iconName = pkg.filePath("", pkg.metadata().iconName());
+            }
+        } else {
+            iconName = m_info.iconName();
+        }
+    } else {
+        if (QIcon::hasThemeIcon(m_info.pluginId())) {
+            iconName = m_info.pluginId();
+        } else {
+            iconName = QStringLiteral("application-x-plasma");
+        }
+    }
+
+    // Do not use setIcon here, we need to pass the icon name to the delegate, otherwise Kirigami.Icon will load it with the wrong colors
+    setData(iconName, Qt::DecorationRole);
 }
 
 QString PlasmaAppletItem::pluginName() const
@@ -264,26 +280,6 @@ QVariant PlasmaAppletItem::data(int role) const
             return QVariant();
         }
         return m_screenshot;
-
-    case Qt::DecorationRole: {
-        // null = not yet done, empty = tried and failed
-        if (m_icon.isNull()) {
-            KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
-            pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
-            pkg.setPath(m_info.pluginId());
-            if (pkg.isValid() && pkg.metadata().iconName().startsWith(QLatin1String("/"))) {
-                const_cast<PlasmaAppletItem *>(this)->m_icon = pkg.filePath("", pkg.metadata().iconName().toUtf8());
-            } else {
-                const_cast<PlasmaAppletItem *>(this)->m_icon = QString();
-                return AbstractItem::data(role);
-            }
-        }
-        if (m_icon.isEmpty()) {
-            return AbstractItem::data(role);
-        }
-        return QIcon(m_icon);
-    }
-
     default:
         return AbstractItem::data(role);
     }

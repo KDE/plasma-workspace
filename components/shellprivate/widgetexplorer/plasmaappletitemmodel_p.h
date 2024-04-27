@@ -48,7 +48,6 @@ public:
 private:
     KPluginMetaData m_info;
     QString m_screenshot;
-    QString m_icon;
     int m_runningCount;
     bool m_local;
 };
