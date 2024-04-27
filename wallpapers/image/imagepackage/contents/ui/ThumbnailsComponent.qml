@@ -7,6 +7,7 @@
 */
 
 import QtQuick
+import QtQuick.Layouts
 import QtQuick.Controls as QQC2
 
 import org.kde.kcmutils as KCM
@@ -44,29 +45,18 @@ Item {
         }
     }
 
-    KCM.GridView {
-        id: wallpapersGrid
+    ColumnLayout {
         anchors.fill: parent
+        spacing: 0
 
-        function resetCurrentIndex() {
-            //that min is needed as the module will be populated in an async way
-            //and only on demand so we can't ensure it already exists
-            if (configDialog.currentWallpaper === "org.kde.image") {
-                wallpapersGrid.view.currentIndex = Qt.binding(() => configDialog.currentWallpaper === "org.kde.image" ?  Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1) : 0);
-            }
+        Kirigami.Separator {
+            Layout.fillWidth: true
         }
 
-        // FIXME: this scrolls out of view due to the lack of a headerPositioning: property
-        // in GridView, which is an omission; see https://bugreports.qt.io/browse/QTBUG-117035.
-        // Once that's added, uncomment this line to fix it!
-        // view.headerPositioning: GridView.OverlayHeader
-        // Alternatively, make the page frameless, have the views touch the edges,
-        // and just stick the header in a ColumnLayout with the view below it.
-        view.header: Kirigami.InlineViewHeader {
-            width: {
-                const scrollBar = wallpapersGrid.QQC2.ScrollBar.vertical;
-                return wallpapersGrid.width - scrollBar.width - scrollBar.leftPadding - scrollBar.rightPadding - Kirigami.Units.smallSpacing;
-            }
+        // FIXME: can't make it a header of the grid view due to the lack of a
+        // headerPositioning: property; see https://bugreports.qt.io/browse/QTBUG-117035.
+        Kirigami.InlineViewHeader {
+            Layout.fillWidth: true
             text: i18nd("plasma_wallpaper_org.kde.image", "Images")
             actions: [
                 Kirigami.Action {
@@ -82,17 +72,43 @@ Item {
                 }
             ]
         }
-        //kill the space for label under thumbnails
-        view.model: thumbnailsComponent.imageModel
 
-        //set the size of the cell, depending on Screen resolution to respect the aspect ratio
-        view.implicitCellWidth: screenSize.width / 10 + Kirigami.Units.smallSpacing * 2
-        view.implicitCellHeight: screenSize.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+        Rectangle {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
 
-        view.reuseItems: true
+            Kirigami.Theme.inherit: false
+            Kirigami.Theme.colorSet: Kirigami.Theme.View
+            color: Kirigami.Theme.backgroundColor
 
-        view.delegate: WallpaperDelegate {
-            color: cfg_Color
+            KCM.GridView {
+                id: wallpapersGrid
+                anchors.fill: parent
+
+                framedView: false
+
+
+                function resetCurrentIndex() {
+                    //that min is needed as the module will be populated in an async way
+                    //and only on demand so we can't ensure it already exists
+                    if (configDialog.currentWallpaper === "org.kde.image") {
+                        wallpapersGrid.view.currentIndex = Qt.binding(() => configDialog.currentWallpaper === "org.kde.image" ?  Math.min(imageModel.indexOf(cfg_Image), imageModel.count - 1) : 0);
+                    }
+                }
+
+                //kill the space for label under thumbnails
+                view.model: thumbnailsComponent.imageModel
+
+                //set the size of the cell, depending on Screen resolution to respect the aspect ratio
+                view.implicitCellWidth: screenSize.width / 10 + Kirigami.Units.smallSpacing * 2
+                view.implicitCellHeight: screenSize.height / 10 + Kirigami.Units.smallSpacing * 2 + Kirigami.Units.gridUnit * 3
+
+                view.reuseItems: true
+
+                view.delegate: WallpaperDelegate {
+                    color: cfg_Color
+                }
+            }
         }
     }
 

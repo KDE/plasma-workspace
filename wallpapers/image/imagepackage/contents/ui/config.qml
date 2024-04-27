@@ -110,17 +110,19 @@ ColumnLayout {
             imageWallpaper.slideshowFoldersFirst = cfg_SlideshowFoldersFirst
     }
 
-    //Rectangle { color: "orange"; x: formAlignment; width: formAlignment; height: 20 }
+    spacing: 0
 
     Kirigami.FormLayout {
         id: formLayout
-        
+
+        Layout.bottomMargin: configDialog.currentWallpaper === "org.kde.image" ? Kirigami.Units.largeSpacing : 0
+
         Component.onCompleted: function() {
             if (typeof appearanceRoot !== "undefined") {
                 twinFormLayouts.push(appearanceRoot.parentLayout);
             }
         }
-        
+
         QtControls2.ComboBox {
             id: resizeComboBox
             Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")

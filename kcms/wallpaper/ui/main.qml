@@ -20,7 +20,8 @@ import org.kde.kcmutils as KCM
 import org.kde.plasma.kcm.wallpaper
 import org.kde.plasma.configuration 2.0
 
-KCM.SimpleKCM {
+// Not using AbstractKCM because we're not using any of it features, not even one
+Kirigami.Page {
     id: appearanceRoot
 
     signal configurationChanged
@@ -29,6 +30,8 @@ KCM.SimpleKCM {
 
     implicitWidth: Kirigami.Units.gridUnit * 15
     implicitHeight: Kirigami.Units.gridUnit * 30
+
+    padding: 0
 
     actions: [
         Kirigami.Action {
@@ -59,10 +62,13 @@ KCM.SimpleKCM {
     ColumnLayout {
         anchors.fill: parent
 
+        spacing: 0
+
         ScreenView {
             visible: !kcm.allScreens && kcm.screens.length > 1
 
-            Layout.fillWidth: true;
+            Layout.fillWidth: true
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
             implicitHeight: Kirigami.Units.gridUnit * 10
 
             outputs: kcm.screens

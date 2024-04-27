@@ -34,15 +34,19 @@ ColumnLayout {
     onMinutesIntervalValueChanged: minutesInterval.value = minutesIntervalValue
     onSecondsIntervalValueChanged: secondsInterval.value = secondsIntervalValue
 
+    spacing: 0
+
     Kirigami.FormLayout {
         id: form
-        
+
+        Layout.bottomMargin: Kirigami.Units.largeSpacing
+
         Component.onCompleted: function () {
             if (typeof appearanceRoot !== "undefined") {
                 twinFormLayouts = appearanceRoot.parentLayout;
             }
         }
-    
+
         RowLayout {
             id: slideshowModeRow
             Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Order:")
@@ -168,103 +172,121 @@ ColumnLayout {
         }
     }
 
-    GridLayout {
-        columns: 2
+    RowLayout {
         Layout.fillWidth: true
         Layout.fillHeight: true
-        columnSpacing: Kirigami.Units.largeSpacing
 
-        QQC2.ScrollView {
-            id: foldersScroll
+        spacing: 0
+
+        ColumnLayout {
+            spacing: 0
             Layout.fillHeight: true
             Layout.preferredWidth: 0.35 * parent.width
             Layout.maximumWidth: Kirigami.Units.gridUnit * 16
-            Component.onCompleted: foldersScroll.background.visible = true;
 
-            ListView {
-                id: slidePathsView
-                headerPositioning: ListView.OverlayHeader
-                header: Kirigami.InlineViewHeader {
-                    width: slidePathsView.width
-                    text: i18nd("plasma_wallpaper_org.kde.image", "Folders")
-                    actions: [
-                        Kirigami.Action {
-                            icon.name: "folder-add-symbolic"
-                            text: i18ndc("plasma_wallpaper_org.kde.image", "@action button the thing being added is a folder", "Add…")
-                            onTriggered: root.openChooserDialog()
-                        }
-                    ]
-                }
-                model: imageWallpaper.slidePaths
-                delegate: Kirigami.SubtitleDelegate {
-                    id: baseListItem
+            Kirigami.Separator {
+                Layout.fillWidth: true
+            }
+            QQC2.ScrollView {
+                id: foldersScroll
+                Layout.fillWidth: true
+                Layout.fillHeight: true
 
-                    required property var modelData
-
-                    width: slidePathsView.width
-                    // Don't need a highlight or hover effects
-                    hoverEnabled: false
-                    down: false
-
-                    text: {
-                        var strippedPath = baseListItem.modelData.replace(/\/+$/, "");
-                        return strippedPath.split('/').pop()
-                    }
-                    // Subtitle: the path to the folder
-                    subtitle: {
-                        var strippedPath = baseListItem.modelData.replace(/\/+$/, "");
-                        return strippedPath.replace(/\/[^\/]*$/, '');;
-                    }
-
-                    contentItem: RowLayout {
-                        spacing: Kirigami.Units.smallSpacing
-
-                        Kirigami.TitleSubtitle {
-                            Layout.fillWidth: true
-                            // Header: the folder
-                            title: baseListItem.text
-                            subtitle: baseListItem.subtitle
-                        }
-
-                        QQC2.ToolButton {
-                            icon.name: "edit-delete-remove-symbolic"
-                            text: i18nd("plasma_wallpaper_org.kde.image", "Remove Folder")
-                            display: QQC2.Button.IconOnly
-                            onClicked: imageWallpaper.removeSlidePath(baseListItem.modelData)
-
-                            QQC2.ToolTip.visible: hovered
-                            QQC2.ToolTip.text: text
-                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                        }
-
-                        QQC2.ToolButton {
-                            icon.name: "document-open-folder"
-                            text: i18nd("plasma_wallpaper_org.kde.image", "Open Folder…")
-                            display: QQC2.Button.IconOnly
-                            onClicked: Qt.openUrlExternally(baseListItem.modelData)
-
-                            QQC2.ToolTip.visible: hovered
-                            QQC2.ToolTip.text: text
-                            QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
-                        }
-                    }
+                background: Rectangle {
+                    Kirigami.Theme.inherit: false
+                    Kirigami.Theme.colorSet: Kirigami.Theme.View
+                    color: Kirigami.Theme.backgroundColor
                 }
 
-                Kirigami.PlaceholderMessage {
-                    anchors.centerIn: parent
-                    width: parent.width - (Kirigami.Units.largeSpacing * 4)
-                    visible: slidePathsView.count === 0
-                    text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpaper locations configured")
+                ListView {
+                    id: slidePathsView
+                    headerPositioning: ListView.OverlayHeader
+                    header: Kirigami.InlineViewHeader {
+                        width: slidePathsView.width
+                        text: i18nd("plasma_wallpaper_org.kde.image", "Folders")
+                        actions: [
+                            Kirigami.Action {
+                                icon.name: "folder-add-symbolic"
+                                text: i18ndc("plasma_wallpaper_org.kde.image", "@action button the thing being added is a folder", "Add…")
+                                onTriggered: root.openChooserDialog()
+                            }
+                        ]
+                    }
+                    model: imageWallpaper.slidePaths
+                    delegate: Kirigami.SubtitleDelegate {
+                        id: baseListItem
+
+                        required property var modelData
+
+                        width: slidePathsView.width
+                        // Don't need a highlight or hover effects
+                        hoverEnabled: false
+                        down: false
+
+                        text: {
+                            var strippedPath = baseListItem.modelData.replace(/\/+$/, "");
+                            return strippedPath.split('/').pop()
+                        }
+                        // Subtitle: the path to the folder
+                        subtitle: {
+                            var strippedPath = baseListItem.modelData.replace(/\/+$/, "");
+                            return strippedPath.replace(/\/[^\/]*$/, '');;
+                        }
+
+                        contentItem: RowLayout {
+                            spacing: Kirigami.Units.smallSpacing
+
+                            Kirigami.TitleSubtitle {
+                                Layout.fillWidth: true
+                                // Header: the folder
+                                title: baseListItem.text
+                                subtitle: baseListItem.subtitle
+                            }
+
+                            QQC2.ToolButton {
+                                icon.name: "edit-delete-remove-symbolic"
+                                text: i18nd("plasma_wallpaper_org.kde.image", "Remove Folder")
+                                display: QQC2.Button.IconOnly
+                                onClicked: imageWallpaper.removeSlidePath(baseListItem.modelData)
+
+                                QQC2.ToolTip.visible: hovered
+                                QQC2.ToolTip.text: text
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                            }
+
+                            QQC2.ToolButton {
+                                icon.name: "document-open-folder"
+                                text: i18nd("plasma_wallpaper_org.kde.image", "Open Folder…")
+                                display: QQC2.Button.IconOnly
+                                onClicked: Qt.openUrlExternally(baseListItem.modelData)
+
+                                QQC2.ToolTip.visible: hovered
+                                QQC2.ToolTip.text: text
+                                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                            }
+                        }
+                    }
+
+                    Kirigami.PlaceholderMessage {
+                        anchors.centerIn: parent
+                        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+                        visible: slidePathsView.count === 0
+                        text: i18nd("plasma_wallpaper_org.kde.image", "There are no wallpaper locations configured")
+                    }
                 }
             }
+        }
+
+        Kirigami.Separator {
+            Layout.fillHeight: true
         }
 
         Loader {
             Layout.fillWidth: true
             Layout.fillHeight: true
             anchors.fill: undefined
-            
-            Component.onCompleted: () => { 
+
+            Component.onCompleted: () => {
                 this.setSource("ThumbnailsComponent.qml", {"screenSize": slideshowComponent.screenSize});
             }
         }
