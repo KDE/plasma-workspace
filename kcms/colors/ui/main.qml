@@ -71,13 +71,16 @@ KCM.GridViewKCM {
         }
     }
 
-    // putting the InlineMessage as header item causes it to show up initially despite visible false
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
+
         Kirigami.InlineMessage {
             id: notInstalledWarning
             Layout.fillWidth: true
 
             type: Kirigami.MessageType.Warning
+            position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
             visible: false
 
@@ -90,46 +93,55 @@ KCM.GridViewKCM {
             }
         }
 
-        AccentColorUI {
-            id: colourFlow
-            Layout.topMargin: Kirigami.Units.smallSpacing
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
-        }
+        ColumnLayout {
+            spacing: Kirigami.Units.smallSpacing
 
-        RowLayout {
             Layout.fillWidth: true
+            // Equal to the margins removed by disabling header padding
+            Layout.margins: Kirigami.Units.mediumSpacing
 
-            Kirigami.SearchField {
-                id: searchField
-                Layout.fillWidth: true
+            AccentColorUI {
+                id: colourFlow
+                Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             }
 
-            QtControls.ComboBox {
-                id: filterCombo
-                Layout.rightMargin: parent.spacing * 3
-                textRole: "text"
-                model: [
-                    {text: i18n("All Schemes"), filter: Private.KCM.AllSchemes},
-                    {text: i18n("Light Schemes"), filter: Private.KCM.LightSchemes},
-                    {text: i18n("Dark Schemes"), filter: Private.KCM.DarkSchemes}
-                ]
+            RowLayout {
+                Layout.fillWidth: true
 
-                // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
-                // and inject a nice little filter icon.
-                Component.onCompleted: {
-                    if (!background || !background.hasOwnProperty("properties")) {
-                        // not a KQuickStyleItem
-                        return;
+                spacing: Kirigami.Units.smallSpacing
+
+                Kirigami.SearchField {
+                    id: searchField
+                    Layout.fillWidth: true
+                }
+
+                QtControls.ComboBox {
+                    id: filterCombo
+                    Layout.rightMargin: parent.spacing * 3
+                    textRole: "text"
+                    model: [
+                        {text: i18n("All Schemes"), filter: Private.KCM.AllSchemes},
+                        {text: i18n("Light Schemes"), filter: Private.KCM.LightSchemes},
+                        {text: i18n("Dark Schemes"), filter: Private.KCM.DarkSchemes}
+                    ]
+
+                    // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
+                    // and inject a nice little filter icon.
+                    Component.onCompleted: {
+                        if (!background || !background.hasOwnProperty("properties")) {
+                            // not a KQuickStyleItem
+                            return;
+                        }
+
+                        var props = background.properties || {};
+
+                        background.properties = Qt.binding(function() {
+                            var newProps = props;
+                            newProps.currentIcon = "view-filter";
+                            newProps.iconColor = Kirigami.Theme.textColor;
+                            return newProps;
+                        });
                     }
-
-                    var props = background.properties || {};
-
-                    background.properties = Qt.binding(function() {
-                        var newProps = props;
-                        newProps.currentIcon = "view-filter";
-                        newProps.iconColor = Kirigami.Theme.textColor;
-                        return newProps;
-                    });
                 }
             }
         }

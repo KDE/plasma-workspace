@@ -24,13 +24,16 @@ KCM.ScrollViewKCM {
             languageListModel.setRegionAndLangSettings(kcm.settings, kcm);
         }
     }
+
+    headerPaddingEnabled: false // Let the InlineMessages touch the edges
     header: ColumnLayout {
-        spacing: Kirigami.Units.largeSpacing
+        spacing: 0
 
         Kirigami.InlineMessage {
             text: i18n("Putting any other languages below English will cause undesired behavior in some applications. If you would like to use your system in English, remove all other languages.")
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
+            position: Kirigami.InlineMessage.Position.Header
             visible: languageListModel.selectedLanguageModel.shouldWarnMultipleLang
         }
 
@@ -39,6 +42,7 @@ KCM.ScrollViewKCM {
             text: i18nc("Error message, %1 is the language name", "The language \"%1\" is unsupported", languageListModel.selectedLanguageModel.unsupportedLanguage)
             Layout.fillWidth: true
             type: Kirigami.MessageType.Error
+            position: Kirigami.InlineMessage.Position.Header
             visible: languageListModel.selectedLanguageModel.unsupportedLanguage.length > 0
         }
 
@@ -46,6 +50,8 @@ KCM.ScrollViewKCM {
             horizontalAlignment: Qt.AlignHCenter
             wrapMode: Text.Wrap
             Layout.fillWidth: true
+            // Equal to the margins removed by disabling header padding
+            Layout.margins: Kirigami.Units.mediumSpacing
             text: i18n("Add languages in the order you want to see them in your applications.")
             textFormat: Text.PlainText
         }

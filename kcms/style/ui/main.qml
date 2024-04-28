@@ -31,22 +31,20 @@ KCM.GridViewKCM {
         view.implicitCellHeight = Kirigami.Units.gridUnit * 15;
     }
 
-    // putting the InlineMessage as header item causes it to show up initially despite visible false
-    header: ColumnLayout {
-        Kirigami.InlineMessage {
-            id: infoLabel
-            Layout.fillWidth: true
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: Kirigami.InlineMessage {
+        id: infoLabel
 
-            showCloseButton: true
-            visible: false
+        position: Kirigami.InlineMessage.Position.Header
+        showCloseButton: true
+        visible: false
 
-            Connections {
-                target: kcm
-                function onShowErrorMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Error;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
+        Connections {
+            target: kcm
+            function onShowErrorMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Error;
+                infoLabel.text = message;
+                infoLabel.visible = true;
             }
         }
     }

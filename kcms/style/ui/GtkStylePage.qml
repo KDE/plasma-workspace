@@ -16,25 +16,25 @@ Kirigami.Page {
     id: gtkStylePage
     title: i18n("GNOME/GTK Application Style")
 
-    ColumnLayout {
-        anchors.fill: parent
+    header: Kirigami.InlineMessage {
+        id: infoLabel
 
-        Kirigami.InlineMessage {
-            id: infoLabel
-            Layout.fillWidth: true
+        position: Kirigami.InlineMessage.Position.Header
+        showCloseButton: true
+        visible: true
 
-            showCloseButton: true
-            visible: false
-
-            Connections {
-                target: kcm.gtkPage
-                function onShowErrorMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Error;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
+        Connections {
+            target: kcm.gtkPage
+            function onShowErrorMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Error;
+                infoLabel.text = message;
+                infoLabel.visible = true;
             }
         }
+    }
+
+    ColumnLayout {
+        anchors.fill: parent
 
         Kirigami.FormLayout {
             wideMode: true

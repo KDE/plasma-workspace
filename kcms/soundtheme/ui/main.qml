@@ -49,9 +49,10 @@ KCM.GridViewKCM {
     view.model: kcm.themes
     view.currentIndex: kcm.currentIndex
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: Kirigami.InlineMessage {
         id: errorMessage
-        Layout.fillWidth: true
+        position: Kirigami.InlineMessage.Position.Header
         showCloseButton: true
 
         function display(errorText, errorType) {

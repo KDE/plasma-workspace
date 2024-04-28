@@ -76,14 +76,13 @@ KCM.SimpleKCM {
         }
     }
 
-    header: ColumnLayout {
-        Kirigami.InlineMessage {
-            id: errorMessage
-            Layout.fillWidth: true
-            visible: compositorAdaptor.error !== CC.CompositorAdaptor.ErrorCodeSuccess
-            type: Kirigami.MessageType.Error
-            text: compositorAdaptor.errorText
-        }
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: Kirigami.InlineMessage {
+        id: errorMessage
+        visible: compositorAdaptor.error !== CC.CompositorAdaptor.ErrorCodeSuccess
+        position: Kirigami.InlineMessage.Position.Header
+        type: Kirigami.MessageType.Error
+        text: compositorAdaptor.errorText
     }
 
     Timer {

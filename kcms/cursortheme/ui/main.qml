@@ -41,6 +41,33 @@ KCM.GridViewKCM {
         extraEnabledConditions: !kcm.downloadingFile
     }
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: Kirigami.InlineMessage {
+        id: infoLabel
+
+        position: Kirigami.InlineMessage.Position.Header
+        showCloseButton: true
+
+        Connections {
+            target: kcm
+            function onShowSuccessMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Positive;
+                infoLabel.text = message;
+                infoLabel.visible = true;
+            }
+            function onShowInfoMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Information;
+                infoLabel.text = message;
+                infoLabel.visible = true;
+            }
+            function onShowErrorMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Error;
+                infoLabel.text = message;
+                infoLabel.visible = true;
+            }
+        }
+    }
+
     DropArea {
         anchors.fill: parent
         onEntered: {
@@ -143,36 +170,6 @@ KCM.GridViewKCM {
             }
         }
     ]
-
-    footer: ColumnLayout {
-        id: footerLayout
-
-        Kirigami.InlineMessage {
-            id: infoLabel
-            Layout.fillWidth: true
-
-            showCloseButton: true
-
-            Connections {
-                target: kcm
-                function onShowSuccessMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Positive;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
-                function onShowInfoMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Information;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
-                function onShowErrorMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Error;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
-            }
-        }
-    }
 
     Loader {
         id: fileDialogLoader

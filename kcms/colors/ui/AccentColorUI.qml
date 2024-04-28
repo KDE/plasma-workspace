@@ -12,26 +12,16 @@ import QtQuick.Templates 2.3 as T
 
 import org.kde.kirigami as Kirigami
 
-Item {
+RowLayout {
     id: accentColorUI
 
-    implicitWidth: root.width
-    implicitHeight: colorList.height
+    readonly property int colorButtonSize: Math.round(Kirigami.Units.gridUnit * 1.25)
 
-    // We are centering the content here if the window has more width than the content of the item.
-    // We are taking the extra width and then adding the half of it to the left side as padding.
-    // We will end up with same spacing at both the side of the item when there is excess width.
-    Item {
-        id: spacer
-        width: Math.max(Math.round((parent.width - colorList.contentWidth) / 2), 0)
-        anchors.left: parent.left
-    }
+    spacing: Kirigami.Units.smallSpacing
 
     QQC2.ComboBox {
         id: colorModeBox
-        anchors.left: spacer.right
-        anchors.verticalCenter: colorList.row === 1 ? colorList.verticalCenter : colorList.top
-        anchors.verticalCenterOffset: colorList.row === 1 ? 0 : Math.round(height / 2)
+        Layout.alignment: Qt.AlignTop | Qt.AlignRight
 
         model: [
             i18nc("@item:inlistbox Accent color from color scheme", "Accent Color From Color Scheme"),
@@ -66,18 +56,11 @@ Item {
     }
 
     Flow {
-        id: colorList
-        // This is the total width of flow and the items before it: all the color options + color picker + wallpaper button + spacing between them given by flow or other elements + combobox
-        readonly property var contentWidth: (colorRepeater.count * (colorRepeater.itemAt(0).width + spacing)) + (customColorIndicator.width + spacing) + colorModeBox.width + anchors.leftMargin
-        readonly property int row: Math.ceil(height / customColorIndicator.height)
+        Layout.fillWidth: true
+        Layout.maximumWidth: (colorRepeater.count * (accentColorUI.colorButtonSize + spacing)) + customColorIndicator.width
 
         spacing: Kirigami.Units.largeSpacing
-        width: parent.width - colorModeBox.width
         opacity: colorModeBox.currentIndex === 2 ? 1.0 : 0.5
-
-        anchors.verticalCenter: parent.verticalCenter
-        anchors.left: colorModeBox.right
-        anchors.leftMargin: Kirigami.Units.smallSpacing
 
         component ColorRadioButton : T.RadioButton {
             id: control
@@ -86,8 +69,8 @@ Item {
             property color color: "transparent"
             property bool highlight: true
 
-            implicitWidth: Math.round(Kirigami.Units.gridUnit * 1.25)
-            implicitHeight: Math.round(Kirigami.Units.gridUnit * 1.25)
+            implicitWidth: accentColorUI.colorButtonSize
+            implicitHeight: accentColorUI.colorButtonSize
 
             background: Rectangle {
                 readonly property bool showHighlight: parent.hovered && !control.checked && control.highlight

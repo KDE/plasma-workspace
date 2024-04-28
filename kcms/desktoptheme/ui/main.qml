@@ -55,39 +55,72 @@ KCM.GridViewKCM {
         }
         onDropped: kcm.installThemeFromFile(drop.urls[0])
     }
-     header: RowLayout {
-        Layout.fillWidth: true
 
-        Kirigami.SearchField {
-            id: searchField
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
+
+        Kirigami.InlineMessage {
+            id: infoLabel
+
             Layout.fillWidth: true
-        }
-        QtControls.ComboBox {
-            id: filterCombo
-            textRole: "text"
-            model: [
-                {text: i18n("All Themes"), filter: Private.FilterProxyModel.AllThemes},
-                {text: i18n("Light Themes"), filter: Private.FilterProxyModel.LightThemes},
-                {text: i18n("Dark Themes"), filter: Private.FilterProxyModel.DarkThemes},
-                {text: i18n("Color scheme compatible"), filter: Private.FilterProxyModel.ThemesFollowingColors}
-            ]
+            position: Kirigami.InlineMessage.Position.Header
 
-            // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
-            // and inject a nice little filter icon.
-            Component.onCompleted: {
-                if (!background || !background.hasOwnProperty("properties")) {
-                    // not a KQuickStyleItem
-                    return;
+            showCloseButton: true
+
+            Connections {
+                target: kcm
+                function onShowSuccessMessage(message) {
+                    infoLabel.type = Kirigami.MessageType.Positive;
+                    infoLabel.text = message;
+                    infoLabel.visible = true;
                 }
+                function onShowErrorMessage(message) {
+                    infoLabel.type = Kirigami.MessageType.Error;
+                    infoLabel.text = message;
+                    infoLabel.visible = true;
+                }
+            }
+        }
 
-                var props = background.properties || {};
+        RowLayout {
+            spacing: Kirigami.Units.smallSpacing
 
-                background.properties = Qt.binding(function() {
-                    var newProps = props;
-                    newProps.currentIcon = "view-filter";
-                    newProps.iconColor = Kirigami.Theme.textColor;
-                    return newProps;
-                });
+            // Equal to the margins removed by disabling header padding
+            Layout.margins: Kirigami.Units.mediumSpacing
+
+            Kirigami.SearchField {
+                id: searchField
+                Layout.fillWidth: true
+            }
+
+            QtControls.ComboBox {
+                id: filterCombo
+                textRole: "text"
+                model: [
+                    {text: i18n("All Themes"), filter: Private.FilterProxyModel.AllThemes},
+                    {text: i18n("Light Themes"), filter: Private.FilterProxyModel.LightThemes},
+                    {text: i18n("Dark Themes"), filter: Private.FilterProxyModel.DarkThemes},
+                    {text: i18n("Color scheme compatible"), filter: Private.FilterProxyModel.ThemesFollowingColors}
+                ]
+
+                // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
+                // and inject a nice little filter icon.
+                Component.onCompleted: {
+                    if (!background || !background.hasOwnProperty("properties")) {
+                        // not a KQuickStyleItem
+                        return;
+                    }
+
+                    var props = background.properties || {};
+
+                    background.properties = Qt.binding(function() {
+                        var newProps = props;
+                        newProps.currentIcon = "view-filter";
+                        newProps.iconColor = Kirigami.Theme.textColor;
+                        return newProps;
+                    });
+                }
             }
         }
     }
@@ -156,29 +189,6 @@ KCM.GridViewKCM {
         }
         onDoubleClicked: {
             kcm.save();
-        }
-    }
-
-    footer: ColumnLayout {
-        Kirigami.InlineMessage {
-            id: infoLabel
-            Layout.fillWidth: true
-
-            showCloseButton: true
-
-            Connections {
-                target: kcm
-                function onShowSuccessMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Positive;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
-                function onShowErrorMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Error;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
-            }
         }
     }
 

@@ -28,6 +28,28 @@ KCM.GridViewKCM {
         settingName: "Theme"
     }
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: Kirigami.InlineMessage {
+        id: infoLabel
+        Layout.fillWidth: true
+        position: Kirigami.InlineMessage.Position.Header
+        showCloseButton: true
+
+        Connections {
+            target: kcm
+            function onShowSuccessMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Positive;
+                infoLabel.text = message;
+                infoLabel.visible = true;
+            }
+            function onShowErrorMessage(message) {
+                infoLabel.type = Kirigami.MessageType.Error;
+                infoLabel.text = message;
+                infoLabel.visible = true;
+            }
+        }
+    }
+
     DropArea {
         enabled: view.enabled
         anchors.fill: parent
@@ -186,54 +208,31 @@ KCM.GridViewKCM {
         }
     }
 
-    footer: ColumnLayout {
-        Kirigami.InlineMessage {
-            id: infoLabel
-            Layout.fillWidth: true
+    footer: RowLayout {
+        id: progressRow
+        visible: false
 
-            showCloseButton: true
-
-            Connections {
-                target: kcm
-                function onShowSuccessMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Positive;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
-                function onShowErrorMessage(message) {
-                    infoLabel.type = Kirigami.MessageType.Error;
-                    infoLabel.text = message;
-                    infoLabel.visible = true;
-                }
-            }
+        QtControls.BusyIndicator {
+            id: progressBusy
         }
 
-        RowLayout {
-            id: progressRow
-            visible: false
+        QtControls.Label {
+            id: progressLabel
+            Layout.fillWidth: true
+            textFormat: Text.PlainText
+            wrapMode: Text.WordWrap
+        }
 
-            QtControls.BusyIndicator {
-                id: progressBusy
+        Connections {
+            target: kcm
+            function onShowProgress() {
+                progressLabel.text = message;
+                progressBusy.running = true;
+                progressRow.visible = true;
             }
-
-            QtControls.Label {
-                id: progressLabel
-                Layout.fillWidth: true
-                textFormat: Text.PlainText
-                wrapMode: Text.WordWrap
-            }
-
-            Connections {
-                target: kcm
-                function onShowProgress() {
-                    progressLabel.text = message;
-                    progressBusy.running = true;
-                    progressRow.visible = true;
-                }
-                function onHideProgress() {
-                    progressBusy.running = false;
-                    progressRow.visible = false;
-                }
+            function onHideProgress() {
+                progressBusy.running = false;
+                progressRow.visible = false;
             }
         }
     }

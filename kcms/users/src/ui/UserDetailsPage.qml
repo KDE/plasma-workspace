@@ -87,14 +87,15 @@ KCM.SimpleKCM {
         kcm.needsSave = Qt.binding(resolvePending)
     }
 
-    ColumnLayout {
-        Kirigami.InlineMessage {
-            id: errorMessage
-            visible: false
-            type: Kirigami.MessageType.Error
-            Layout.fillWidth: true
-        }
+    headerPaddingEnabled: false // Let the InlineMessages touch the edges
+    header: Kirigami.InlineMessage {
+        id: errorMessage
+        visible: false
+        type: Kirigami.MessageType.Error
+        position: Kirigami.InlineMessage.Position.Header
+    }
 
+    ColumnLayout {
         KirigamiComponents.AvatarButton {
             readonly property int size: 6 * Kirigami.Units.gridUnit
 

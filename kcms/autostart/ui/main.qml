@@ -20,9 +20,11 @@ KCM.ScrollViewKCM {
     implicitHeight: Kirigami.Units.gridUnit * 28
     implicitWidth: Kirigami.Units.gridUnit * 28
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: Kirigami.InlineMessage {
         id: errorMessage
 
+        position: Kirigami.InlineMessage.Position.Header
         showCloseButton: true
 
         Connections {

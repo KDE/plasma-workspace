@@ -69,18 +69,21 @@ KCM.SimpleKCM {
         }
     }
 
-    Kirigami.FormLayout {
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: ColumnLayout {
+        spacing: 0
+
         Kirigami.InlineMessage {
-            Kirigami.FormData.isSection: true
             Layout.fillWidth: true
+            position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Error
             text: i18n("Could not find a 'Notifications' widget, which is required for displaying notifications. Make sure that it is enabled either in your System Tray or as a standalone widget.");
             visible: currentOwnerInfo.status === NotificationManager.ServerInfo.NotRunning
         }
 
         Kirigami.InlineMessage {
-            Kirigami.FormData.isSection: true
             Layout.fillWidth: true
+            position: Kirigami.InlineMessage.Position.Header
             type: Kirigami.MessageType.Information
             text: {
                 if (currentOwnerInfo.vendor && currentOwnerInfo.name) {
@@ -94,6 +97,9 @@ KCM.SimpleKCM {
             visible: root.currentOwnerInfo.status === NotificationManager.ServerInfo.Running
                 && (currentOwnerInfo.vendor !== root.ourServerVendor || currentOwnerInfo.name !== root.ourServerName)
         }
+    }
+
+    Kirigami.FormLayout {
 
         Item {
             Kirigami.FormData.label: i18nc("@title:group", "Do Not Disturb mode")

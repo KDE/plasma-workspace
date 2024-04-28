@@ -22,18 +22,18 @@ SimpleKCM {
     implicitWidth: Kirigami.Units.gridUnit * 38
     implicitHeight: Kirigami.Units.gridUnit * 35
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
+    header: Kirigami.InlineMessage {
+        id: infoLabel
+
+        position: Kirigami.InlineMessage.Position.Header
+        type: Kirigami.MessageType.Information
+        visible: !form.enabled
+        text: i18n("User Feedback has been disabled centrally. Please contact your distributor.")
+    }
 
     ColumnLayout {
         spacing: 0
-
-        Kirigami.InlineMessage {
-            id: infoLabel
-            Layout.fillWidth: true
-
-            type: Kirigami.MessageType.Information
-            visible: !form.enabled
-            text: i18n("User Feedback has been disabled centrally. Please contact your distributor.")
-        }
 
         // The system settings window likes to take over
         // the cursor with a plain label. The TextEdit

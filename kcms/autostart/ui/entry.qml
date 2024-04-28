@@ -39,15 +39,15 @@ KCM.SimpleKCM {
         }
     }
 
+    headerPaddingEnabled: false // Let the InlineMessage touch the edges
     header: ColumnLayout {
-        width: entryPage.width
-
         spacing: Kirigami.Units.smallSpacing
 
         Kirigami.InlineMessage {
             id: errorMessage
 
             Layout.fillWidth: true
+            position: Kirigami.InlineMessage.Position.Header
             showCloseButton: true
 
             property bool journalError: false
@@ -64,6 +64,9 @@ KCM.SimpleKCM {
         }
 
         Kirigami.FormLayout {
+            // Equal to the margins removed by disabling header padding
+            Layout.margins: Kirigami.Units.mediumSpacing
+
             QQC2.Label {
                 Kirigami.FormData.label: i18nc("@label The name of a Systemd unit for an app or script that will autostart", "Name:")
                 text: entryPage.unit.description

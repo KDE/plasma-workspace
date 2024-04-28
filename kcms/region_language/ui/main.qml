@@ -18,16 +18,18 @@ KCM.ScrollViewKCM {
     implicitWidth: Kirigami.Units.gridUnit * 20
     enabled: kcm.enabled
 
+    headerPaddingEnabled: false // Let the InlineMessages touch the edges
     header: ColumnLayout {
         id: messagesLayout
 
-        spacing: Kirigami.Units.largeSpacing
+        spacing: 0
 
         Kirigami.InlineMessage {
             id: takeEffectNextTimeMsg
             Layout.fillWidth: true
 
             type: Kirigami.MessageType.Information
+            position: Kirigami.InlineMessage.Position.Header
 
             text: i18nc("@info", "Changes will take effect the next time you log in.")
 
@@ -48,6 +50,7 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
 
             type: Kirigami.MessageType.Warning
+            position: Kirigami.InlineMessage.Position.Header
 
             text:  i18nc("@info", "Generating locale and language support files; don't turn off the computer yet.")
         }
@@ -57,6 +60,7 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
 
             type: Kirigami.MessageType.Information
+            position: Kirigami.InlineMessage.Position.Header
 
             text: i18nc("@info", "Locale and language support files have been generated, but language-specific fonts could not be automatically installed. If your language requires specialized fonts to be displayed properly, you will need to discover what they are and install them yourself.")
         }
@@ -65,12 +69,14 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
 
             type: Kirigami.MessageType.Error
+            position: Kirigami.InlineMessage.Position.Header
         }
         Kirigami.InlineMessage {
             id: installSuccessMsg
             Layout.fillWidth: true
 
             type: Kirigami.MessageType.Positive
+            position: Kirigami.InlineMessage.Position.Header
 
             text: i18nc("@info", "Necessary locale and language support files have been installed. It is now safe to turn off the computer.")
         }
@@ -80,6 +86,7 @@ KCM.ScrollViewKCM {
             Layout.fillWidth: true
 
             type: Kirigami.MessageType.Error
+            position: Kirigami.InlineMessage.Position.Header
         }
     }
 
