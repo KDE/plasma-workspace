@@ -36,6 +36,7 @@
 #include <PlasmaQuick/AppletQuickItem>
 
 #include <LayerShellQt/Window>
+#include <plasma/containment.h>
 
 #if HAVE_X11
 #include <NETWM>
@@ -345,6 +346,29 @@ void PanelView::setLength(int value)
     queuePositionAndResizePanel();
 }
 
+int PanelView::effectiveMaximumLength() const
+{
+    if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
+        if (formFactor() == Plasma::Types::Vertical) {
+            return screenToFollow()->geometry().height();
+        } else {
+            return screenToFollow()->geometry().width();
+        }
+    } else if (m_lengthMode == PanelView::FitContent) {
+        if (formFactor() == Plasma::Types::Vertical) {
+            return containment()->availableRelativeScreenRect().toRect().height();
+        } else {
+            return containment()->availableRelativeScreenRect().toRect().width();
+        }
+    } else { // m_lengthMode == PanelView::LengthMode::Custom
+        if (formFactor() == Plasma::Types::Vertical) {
+            return std::min(m_maxLength, containment()->availableRelativeScreenRect().toRect().height());
+        } else {
+            return std::min(m_maxLength, containment()->availableRelativeScreenRect().toRect().width());
+        }
+    }
+}
+
 int PanelView::maximumLength() const
 {
     return m_maxLength;
@@ -367,6 +391,29 @@ void PanelView::setMaximumLength(int length)
     m_corona->requestApplicationConfigSync();
 
     queuePositionAndResizePanel();
+}
+
+int PanelView::effectiveMinimumLength() const
+{
+    if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
+        if (formFactor() == Plasma::Types::Vertical) {
+            return screenToFollow()->geometry().height();
+        } else {
+            return screenToFollow()->geometry().width();
+        }
+    } else if (m_lengthMode == PanelView::FitContent) {
+        if (formFactor() == Plasma::Types::Vertical) {
+            return containment()->availableRelativeScreenRect().toRect().height();
+        } else {
+            return 1;
+        }
+    } else { // m_lengthMode == PanelView::LengthMode::Custom
+        if (formFactor() == Plasma::Types::Vertical) {
+            return std::min(m_minLength, containment()->availableRelativeScreenRect().toRect().height());
+        } else {
+            return std::min(m_minLength, containment()->availableRelativeScreenRect().toRect().width());
+        }
+    }
 }
 
 int PanelView::minimumLength() const
@@ -849,19 +896,18 @@ QSize PanelView::preferredSize() const
     QSize targetSize;
     if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
         if (formFactor() == Plasma::Types::Vertical) {
-            targetSize = QSize(totalThickness(), m_screenToFollow->size().height());
+            targetSize = QSize(totalThickness(), effectiveMaximumLength());
         } else {
-            targetSize = QSize(m_screenToFollow->size().width(), totalThickness());
+            targetSize = QSize(effectiveMaximumLength(), totalThickness());
         }
     } else if (m_lengthMode == PanelView::LengthMode::FitContent) {
         if (formFactor() == Plasma::Types::Vertical) {
-            targetSize = QSize(
-                totalThickness(),
-                std::max(totalThickness(), std::min(m_screenToFollow->size().height(), m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding)));
-        } else {
             targetSize =
-                QSize(std::max(totalThickness(), std::min(m_screenToFollow->size().width(), m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding)),
-                      totalThickness());
+                QSize(totalThickness(),
+                      std::max(totalThickness(), std::min(effectiveMaximumLength(), m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding)));
+        } else {
+            targetSize = QSize(std::max(totalThickness(), std::min(effectiveMaximumLength(), m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding)),
+                               totalThickness());
         }
     } else {
         // PanelView::LengthMode::Custom
@@ -869,12 +915,15 @@ QSize PanelView::preferredSize() const
             const int minSize = qMax(MINSIZE, m_minLength);
             int maxSize = qMin(m_maxLength, m_screenToFollow->size().height() - m_offset);
             maxSize = qMax(minSize, maxSize);
-            targetSize = QSize(totalThickness(), std::clamp(m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding, minSize, maxSize));
+            targetSize =
+                QSize(totalThickness(),
+                      std::clamp(m_contentLength + m_topFloatingPadding + m_bottomFloatingPadding, effectiveMinimumLength(), effectiveMaximumLength()));
         } else {
             const int minSize = qMax(MINSIZE, m_minLength);
             int maxSize = qMin(m_maxLength, m_screenToFollow->size().width() - m_offset);
             maxSize = qMax(minSize, maxSize);
-            targetSize = QSize(std::clamp(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, minSize, maxSize), totalThickness());
+            targetSize = QSize(std::clamp(m_contentLength + m_leftFloatingPadding + m_rightFloatingPadding, effectiveMinimumLength(), effectiveMaximumLength()),
+                               totalThickness());
         }
     }
 
@@ -1713,6 +1762,8 @@ void PanelView::refreshContainment()
             cont->setStatus(Plasma::Types::ActiveStatus);
         }
     });
+
+    connect(containment(), &Plasma::Containment::availableRelativeScreenRectChanged, this, &PanelView::resizePanel);
 }
 
 void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
