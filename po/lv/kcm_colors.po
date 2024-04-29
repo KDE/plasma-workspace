@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-01-19 17:45+0200\n"
-"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-04-24 16:17+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -90,7 +90,7 @@ msgstr ""
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr "Vai ir jāpiemēro akcenta krāsa no darbvirsmas tapetes"
+msgstr "Vai ir jāpielieto akcenta krāsa no darbvirsmas tapetes"
 
 #: editor/kcolorschemeeditor.cpp:21
 #, kde-format
@@ -138,7 +138,7 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
-"Parādīt „Piemērot“ pogu, kas izmaiņās saglabā bez vaicāšanas (atšķirībā no "
+"Parādīt Pielietot“ pogu, kas izmaiņas saglabā bez vaicāšanas (atšķirībā no "
 "„Saglabāt kā“ pogas)"
 
 #: editor/kcolorschemeeditor.cpp:37
@@ -1196,7 +1196,7 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr "Šai „Plasma“ sesijai ir veiksmīgi piemērota krāsu shēma „%1“"
+msgstr "Šai „Plasma“ sesijai ir veiksmīgi pielietota krāsu shēma „%1“"
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
@@ -1223,7 +1223,7 @@ msgstr ""
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr "Veiksmīgi piemērota akcenta krāsa %1"
+msgstr "Veiksmīgi pielietota akcenta krāsa %1"
 
 #: plasma-apply-colorscheme.cpp:149
 #, kde-format

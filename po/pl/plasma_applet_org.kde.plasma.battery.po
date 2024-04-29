@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-13 19:27+0200\n"
+"PO-Revision-Date: 2024-04-28 12:13+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -102,10 +102,9 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "An application is preventing sleep and screen locking:"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "Aplikacja zapobiega uśpieniu i blokadzie ekranu:"
+msgstr "Aplet baterii zapobiega uśpieniu i blokowaniu ekranu"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -122,7 +121,7 @@ msgstr "Zasilanie i bateria"
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "Bateria nie jest dostępna w gnieździe"
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -430,11 +429,10 @@ msgstr ""
 "programu do zarządzania pakietami i uruchomić ponownie komputer."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Bateria na %1%"
+msgstr "Bateria %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format

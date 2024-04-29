@@ -2,54 +2,55 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# Māris Nartišs <maris.kde@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-23 00:40+0000\n"
-"PO-Revision-Date: 2024-01-16 12:37+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
-"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-04-28 10:47+0300\n"
+"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
+"Language-Team: \n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: binarydialectmodel.cpp:50
 #, kde-format
 msgctxt "Binary dialect IEC, with sigle in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "Starptautiskā elektrotehnikas komisija (IEC)"
 
 #: binarydialectmodel.cpp:54
 #, kde-format
 msgctxt "Binary dialect JEDEC, with sigle in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "Joint Electron Device Engineering Council (JEDEC)"
 
 #: binarydialectmodel.cpp:58
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "Metriskā sistēma (SI)"
 
 #: binarydialectmodel.cpp:73
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "Binārās —  kibibaiti (KiB), mebibaiti (MiB), gibibaiti (GiB)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Binārās — kilobaiti (kB), megabaiti (MB), gigabaiti (GB)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Decimālās — kilobaiti (kB), megabaiti (MB), gigabaiti (GB)"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -67,7 +68,7 @@ msgstr "Imperiālās ASV"
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Metric"
-msgstr "Metiskās"
+msgstr "Metriskās"
 
 #: exampleutility.cpp:47
 #, kde-format
@@ -416,7 +417,7 @@ msgstr "Tālruņa numuri"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Datu un krātuves izmēri"
 
 #: optionsmodel.cpp:130 optionsmodel.cpp:374
 #, kde-format
@@ -428,19 +429,19 @@ msgstr "Sistēmas noklusējums"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:299
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:302
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:376
 #, kde-format
@@ -579,7 +580,7 @@ msgstr "Modificēt..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Datu un krātuves izmēri"
 
 #: ui/main.qml:263
 #, kde-format

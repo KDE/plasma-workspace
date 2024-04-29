@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-05 10:49+0300\n"
+"PO-Revision-Date: 2024-04-24 16:29+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.1\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -104,10 +104,11 @@ msgid "%1%"
 msgstr "%1 %"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "The battery applet has enabled system-wide inhibition"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "Baterijas sīklietotne neļauj sistēmai iemigt un slēgt ekrānu"
+msgstr ""
+"Baterijas sīklietotne ir ieslēgusi sistēmas iesnaudināšanas un slēgšanas "
+"bloķēšanu"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -124,7 +125,7 @@ msgstr "Jauda un baterija"
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "Baterijas ligzdā nav baterijas"
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -238,31 +239,31 @@ msgstr "&Konfigurēt jaudas pārvaldību..."
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "Iesnaudināšana un ekrāna slēgšana pēc neaktivitātes perioda"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "Bloķēts"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "Automātisks"
 
 #: package/contents/ui/PowerManagementItem.qml:99
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "Manuāli bloķēt"
 
 #: package/contents/ui/PowerManagementItem.qml:133
 #, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Neizdevās atbloķēt automātisko iemidzināšanu un ekrāna slēgšanu"
+msgstr "Neizdevās atbloķēt automātisko iesnaudināšanu un ekrāna slēgšanu"
 
 #: package/contents/ui/PowerManagementItem.qml:136
 #, kde-format
@@ -433,18 +434,15 @@ msgstr ""
 "daemon</command> "
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Baterijas līmenis ir %1 %"
+msgstr "Baterija %1 %"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is the battery ID"
-#| msgid "Battery %1:"
+#, kde-format
 msgid "Battery"
-msgstr "Baterija %1:"
+msgstr "Baterija"
 
 #~ msgctxt "Minimize the length of this string as much as possible"
 #~ msgid "Manually block sleep and screen locking"

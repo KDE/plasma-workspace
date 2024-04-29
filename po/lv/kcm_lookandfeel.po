@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-03 00:39+0000\n"
-"PO-Revision-Date: 2024-01-18 10:20+0200\n"
+"PO-Revision-Date: 2024-04-24 16:20+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -50,7 +50,7 @@ msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
 msgstr ""
-"Komandrindas rīks, lai piemērotu globālā motīva pakotnes izskata un "
+"Komandrindas rīks, lai pielietotu globālā motīva pakotnes izskata un "
 "uzvedības izmainīšanai."
 
 #: lnftool.cpp:37
@@ -80,9 +80,9 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
-"Piemērot globālā motīva pakotni. Tā var būt pakotnes nosaukums vai pilns "
-"ceļš uz instalētu pakotni. Norādot pilnu ceļi, šis rīks pārliecināsies, ka "
-"tā tiešām ir globālā motīva pakotne un centīsies to piemērot"
+"Pielietot globālā motīva pakotni. Tas var būt pakotnes nosaukums vai pilns "
+"ceļš uz instalētu pakotni. Norādot pilnu ceļu, šis rīks pārliecināsies, ka "
+"tā tiešām ir globālā motīva pakotne, un mēģinās to pielietot"
 
 #: lnftool.cpp:51
 #, kde-format
@@ -151,12 +151,12 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr "Piemērot „%1“?"
+msgstr "Vai pielietot „%1“?"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
-msgstr "Izvēlieties, ko piemērot..."
+msgstr "Izvēlieties, ko pielietot..."
 
 #: ui/main.qml:159
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "Rādīt mazāk iespēju..."
 #: ui/main.qml:176
 #, kde-format
 msgid "Apply"
-msgstr "Piemērot"
+msgstr "Pielietot"
 
 #: ui/main.qml:188
 #, kde-format
@@ -194,7 +194,7 @@ msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
 "panels, docks, and widgets"
 msgstr ""
-"Darbvirsmas izkārtojuma piemērošana aizvieto pašreizējo darbvirsmu, paneļu, "
+"Darbvirsmas izkārtojuma pielietošana aizvieto pašreizējo darbvirsmu, paneļu, "
 "peldošo paneļu un logdaļu konfigurāciju."
 
 #: ui/MoreOptions.qml:55
@@ -286,7 +286,7 @@ msgid ""
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
 "Šis globālais motīvs nepiedāvā nekādus piemērojamus iestatījumus. "
-"Sazinieties ar tā uzturētāju, jo, iespējams, motīvs nedarbojas."
+"Sazinieties ar tā uzturētāju, jo, iespējams, motīvs nestrādā."
 
 #~ msgid "Lock Screen"
 #~ msgstr "Bloķēšanas ekrāns"

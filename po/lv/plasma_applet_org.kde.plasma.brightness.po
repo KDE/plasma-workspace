@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-25 00:39+0000\n"
-"PO-Revision-Date: 2024-04-05 10:52+0300\n"
+"PO-Revision-Date: 2024-04-24 16:32+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
@@ -58,7 +58,7 @@ msgstr "%1 %"
 #: package/contents/ui/KeyboardColorItem.qml:78
 #, kde-format
 msgid "Follow accent color"
-msgstr ""
+msgstr "Ievērot akcenta krāsu"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
@@ -79,43 +79,43 @@ msgstr "Tastatūras spilgtums %1 %"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light off"
-msgstr "Nakts gaisma izslēgta"
+msgstr "Nakts gaisma ir izslēgta"
 
 #: package/contents/ui/main.qml:88
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "Nakts gaisma dienas krāsas temperatūrā"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "Nakts gaisma nakts krāsas temperatūrā"
 
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "Nakts gaismas rīta pāreja (beigsies %1)"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "Nakts gaismas vakara pāreja (beigsies %1)"
 
 #: package/contents/ui/main.qml:112
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "Nakts gaismas vakara pāreja ir paredzēta %1"
 
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "Nakts gaismas rīta pāreja ir paredzēta %1"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
@@ -238,10 +238,9 @@ msgid "Keyboard Brightness"
 msgstr "Tastatūras spilgtums"
 
 #: package/contents/ui/PopupDialog.qml:130
-#, fuzzy, kde-format
-#| msgid "Keyboard Brightness"
+#, kde-format
 msgid "Keyboard Color"
-msgstr "Tastatūras spilgtums"
+msgstr "Tastatūras krāsa"
 
 #: package/contents/ui/PopupDialog.qml:140
 #, kde-format

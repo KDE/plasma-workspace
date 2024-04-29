@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-23 00:40+0000\n"
-"PO-Revision-Date: 2024-03-30 21:26+0530\n"
+"PO-Revision-Date: 2024-04-28 16:06+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: binarydialectmodel.cpp:50
 #, kde-format
@@ -35,20 +35,21 @@ msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
 msgstr ""
 
+# TFW Kibibyte and Gibibyte are written the same way in your language.
 #: binarydialectmodel.cpp:73
-#, kde-format
+#, fuzzy, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "இருமம் - கிபிபைட்டு (kB), மெபிபைட்டு (MB), கிபிபைட்டு (GB)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "இருமம் - கிலோபைட்டு (kB), மெகாபைட்டு (MB), கிகாபைட்டு (GB)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "தசமம் - கிலோபைட்டு (kB), மெகாபைட்டு (MB), கிகாபைட்டு (GB)"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -415,7 +416,7 @@ msgstr "தொலைபேசி எண்கள்"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "சேமிப்பக அளவுகள்"
 
 #: optionsmodel.cpp:130 optionsmodel.cpp:374
 #, kde-format
@@ -427,19 +428,19 @@ msgstr "இயங்குதள இயல்பிருப்பு"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:299
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:302
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:376
 #, kde-format
@@ -579,7 +580,7 @@ msgstr "மாற்று…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "சேமிப்பக அளவுகள்"
 
 #: ui/main.qml:263
 #, kde-format

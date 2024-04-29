@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-25 00:39+0000\n"
-"PO-Revision-Date: 2024-04-13 19:28+0200\n"
+"PO-Revision-Date: 2024-04-28 12:16+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -84,37 +84,37 @@ msgstr "Nocne światło wyłączone"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "Nocne barwy o temperaturze barwowej jak za dnia"
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "Nocne barwy o temperaturze barwowej jak w nocy"
 
 #: package/contents/ui/main.qml:95
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "Przejście na nocne barwy o poranku (do ukończenia o %1)"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "Przejście na nocne barwy wieczorem (do ukończenia o %1)"
 
 #: package/contents/ui/main.qml:112
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "Przejście na nocne barwy wieczorem zaplanowane na %1"
 
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "Przejście na nocne barwy o poranku zaplanowane na %1"
 
 #: package/contents/ui/main.qml:118
 #, kde-format

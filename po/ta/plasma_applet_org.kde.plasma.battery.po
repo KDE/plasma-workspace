@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-24 00:40+0000\n"
-"PO-Revision-Date: 2024-04-21 21:25+0530\n"
+"PO-Revision-Date: 2024-04-28 16:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -98,10 +98,9 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/main.qml:73
-#, fuzzy, kde-format
-#| msgid "The battery applet has enabled system-wide inhibition"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "கணினி முழுவதற்குமான ஆற்றல் சேமிப்பு, மின்கல பிளாஸ்மாய்டால் தடுக்கப்பட்டுள்ளது"
+msgstr "திரை பூட்டல் மற்றும் தானியக்க உறக்கம், மின்கல பிளாஸ்மாய்டால் தடுக்கப்பட்டுள்ளது"
 
 #: package/contents/ui/main.qml:95
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -118,7 +117,7 @@ msgstr "ஆற்றலும் மின்கலமும்"
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "புறையில் மின்கலம் இல்லை"
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -417,11 +416,10 @@ msgstr ""
 "மீள்துவக்கவும்."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "மின்கலத்தில் %1% உள்ளது"
+msgstr "மின்கலம் %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format
