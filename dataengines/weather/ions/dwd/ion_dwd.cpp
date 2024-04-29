@@ -638,7 +638,7 @@ void DWDIon::updateWeather(const QString &source)
                         .arg(period, dayForecast->iconName, QLatin1String(""))
                         .arg(dayForecast->tempHigh)
                         .arg(dayForecast->tempLow)
-                        .arg(dayForecast->precipitation));
+                        .arg(QLatin1String(""))); // dayForecast->precipitation is a quantity, not a probability
         dayNumber++;
     }
 
