@@ -189,7 +189,10 @@ public:
             this,
             [this]() {
                 QStringList keys;
-                for (auto it = m_itemEntries.cbegin(); it != m_itemEntries.cend(); it++) {
+                // ResultWatcher can emit resultUnlinked when AppEntry::reload() is reparsing configuration which will modify m_itemEntries
+                // https://crash-reports.kde.org/organizations/kde/issues/23450/
+                const auto itemEntries = m_itemEntries;
+                for (auto it = itemEntries.cbegin(); it != itemEntries.cend(); it = std::next(it)) {
                     it.value()->reload();
                     if (it.value() && !it.value()->isValid()) {
                         keys << it.key();
