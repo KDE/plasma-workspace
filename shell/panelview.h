@@ -192,9 +192,11 @@ public:
     int length() const;
     void setLength(int value);
 
+    int effectiveMaximumLength() const;
     int maximumLength() const;
     void setMaximumLength(int length);
 
+    int effectiveMinimumLength() const;
     int minimumLength() const;
     void setMinimumLength(int length);
 
