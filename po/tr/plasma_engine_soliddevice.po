@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2024-02-29 16:59+0300\n"
+"PO-Revision-Date: 2024-04-30 00:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -597,7 +597,7 @@ msgstr "Dosya sistemi yanıt vermiyor"
 #: soliddeviceengine.cpp:535
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr "‘%1’ konumunda bağlanan dosya sistemi yanıt vermiyor"
+msgstr "“%1” konumunda bağlanan dosya sistemi yanıt vermiyor"
 
 #: soliddeviceengine.cpp:553
 msgid "Free Space"
