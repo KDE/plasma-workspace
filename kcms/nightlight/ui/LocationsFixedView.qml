@@ -113,6 +113,7 @@ Kirigami.FormLayout {
                     display: QQC2.AbstractButton.IconOnly
                     icon.name: "zoom-in-map-symbolic"
                     activeFocusOnTab: false
+                    enabled: mapRect.currentScale < 5
 
                     onClicked: root.zoomIn()
                     onDoubleClicked: root.zoomIn()
@@ -129,6 +130,7 @@ Kirigami.FormLayout {
                     display: QQC2.AbstractButton.IconOnly
                     icon.name: "zoom-out-map-symbolic"
                     activeFocusOnTab: false
+                    enabled: mapRect.currentScale > 1
 
                     onClicked: root.zoomOut()
                     onDoubleClicked: root.zoomOut()
