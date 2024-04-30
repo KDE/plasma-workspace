@@ -29,6 +29,12 @@ KCM.SimpleKCM {
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
 
+    function checkLocationValid() {
+        const locationInvalid = kcm.nightLightSettings.active && modeSwitcher.currentIndex === 0 && !autoLocationSwitch.checked && kcm.nightLightSettings.latitudeFixed === 0 && kcm.nightLightSettings.longitudeFixed === 0;
+        locationInvalidMessage.visible = locationInvalid;
+        kcm.needsSave = !locationInvalid;
+    }
+
     CC.CompositorAdaptor {
         id: compositorAdaptor
     }
@@ -60,6 +66,7 @@ KCM.SimpleKCM {
     }
 
     Component.onCompleted: {
+        root.checkLocationValid();
         if (kcm.nightLightSettings.active && autoLocationSwitch.checked) {
             startLocator();
         }
@@ -78,11 +85,19 @@ KCM.SimpleKCM {
 
     header: ColumnLayout {
         Kirigami.InlineMessage {
-            id: errorMessage
+            id: compositorAdaptorErrorMessage
             Layout.fillWidth: true
             visible: compositorAdaptor.error !== CC.CompositorAdaptor.ErrorCodeSuccess
             type: Kirigami.MessageType.Error
             text: compositorAdaptor.errorText
+        }
+
+        Kirigami.InlineMessage {
+            id: locationInvalidMessage
+            type: Kirigami.MessageType.Information
+            Layout.fillWidth: true
+            Layout.alignment: Qt.AlignHCenter
+            text: i18nc("@info:placeholder", "Choose your location on the map, enable automatic location lookup, or pick a different switching times mode.")
         }
     }
 
@@ -370,6 +385,7 @@ KCM.SimpleKCM {
                     } else {
                         root.endLocator();
                     }
+                    root.checkLocationValid();
                 }
             }
 
@@ -464,6 +480,7 @@ KCM.SimpleKCM {
                 text: i18nc("Current location", "Determine automatically")
 
                 onToggled: {
+                    root.checkLocationValid();
                     if (checked) {
                         kcm.nightLightSettings.mode = Private.NightLightMode.Automatic;
                         if (kcm.nightLightSettings.active) {
@@ -530,6 +547,13 @@ KCM.SimpleKCM {
             property bool autoLocation: autoLocationSwitch.checked
             property real longitude: autoLocation ? kcm.nightLightSettings.longitudeAuto : kcm.nightLightSettings.longitudeFixed
             property real latitude: autoLocation ? kcm.nightLightSettings.latitudeAuto  : kcm.nightLightSettings.latitudeFixed
+
+            onLatitudeChanged: {
+                root.checkLocationValid();
+            }
+            onLongitudeChanged: {
+                root.checkLocationValid();
+            }
         }
 
         // Show loading placeholder while locating
