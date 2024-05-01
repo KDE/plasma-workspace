@@ -15,6 +15,7 @@
 #include <QString>
 
 #include <KService>
+#include <qvariant.h>
 
 #include "inhibitmonitor_p.h"
 
@@ -298,10 +299,13 @@ void PowerManagementControl::updateBlockedInhibitions(const QList<InhibitionInfo
 
         m_data.populateApplicationData(name, &prettyName, &icon);
 
-        out.append(QVariantMap{{QStringLiteral("Name"), name},
-                               {QStringLiteral("PrettyName"), prettyName},
-                               {QStringLiteral("Icon"), icon},
-                               {QStringLiteral("Reason"), reason}});
+        QVariantMap blockedInhibition{{QStringLiteral("Name"), name},
+                                      {QStringLiteral("PrettyName"), prettyName},
+                                      {QStringLiteral("Icon"), icon},
+                                      {QStringLiteral("Reason"), reason}};
+        if (!out.contains(blockedInhibition)) {
+            out.append(blockedInhibition);
+        }
     }
 
     m_blockedInhibitions = out;
