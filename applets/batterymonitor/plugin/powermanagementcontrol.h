@@ -10,7 +10,9 @@
 #include <QIcon>
 #include <QObject>
 #include <QObjectBindableProperty>
+#include <qproperty.h>
 #include <qqmlregistration.h>
+#include <qtmetamacros.h>
 
 #include "applicationdata_p.h"
 
@@ -22,6 +24,7 @@ class PowerManagementControl : public QObject
     QML_ELEMENT
 
     Q_PROPERTY(QList<QVariantMap> inhibitions READ default NOTIFY inhibitionsChanged BINDABLE bindableInhibitions)
+    Q_PROPERTY(QList<QVariantMap> blockedInhibitions READ default NOTIFY blockedInhibitionsChanged BINDABLE bindableBlockedInhibitions)
     Q_PROPERTY(bool hasInhibition READ default NOTIFY hasInhibitionChanged BINDABLE bindableHasInhibition)
     Q_PROPERTY(bool isLidPresent READ default NOTIFY isLidPresentChanged BINDABLE bindableIsLidPresent)
     Q_PROPERTY(bool triggersLidAction READ default NOTIFY triggersLidActionChanged BINDABLE bindableTriggersLidAction)
@@ -32,12 +35,15 @@ class PowerManagementControl : public QObject
 public:
     Q_INVOKABLE void inhibit(const QString &reason);
     Q_INVOKABLE void uninhibit();
+    Q_INVOKABLE void blockInhibition(const QString &appName, const QString &reason);
+    Q_INVOKABLE void unblockInhibition(const QString &appName, const QString &reason);
 
     explicit PowerManagementControl(QObject *parent = nullptr);
     ~PowerManagementControl() override;
 
 Q_SIGNALS:
     void inhibitionsChanged(const QList<QVariantMap> &inhibitions);
+    void blockedInhibitionsChanged(const QList<QVariantMap> &inhibitions);
     void hasInhibitionChanged(bool status);
     void isLidPresentChanged(bool status);
     void triggersLidActionChanged(bool status);
@@ -46,6 +52,7 @@ Q_SIGNALS:
 
 private Q_SLOTS:
     void onInhibitionsChanged(const QList<InhibitionInfo> &added, const QStringList &removed);
+    void onBlockedInhibitionsChanged(const QList<InhibitionInfo> &added, const QList<InhibitionInfo> &removed);
     void onHasInhibitionChanged(bool status);
     void onIsManuallyInhibitedChanged(bool status);
     void onisManuallyInhibitedErrorChanged(bool status);
@@ -54,8 +61,10 @@ private:
     bool isSilent();
     void setIsSilent(bool status);
     void updateInhibitions(const QList<InhibitionInfo> &inhibitions);
+    void updateBlockedInhibitions(const QList<InhibitionInfo> &inhibitions);
 
     QBindable<QList<QVariantMap>> bindableInhibitions();
+    QBindable<QList<QVariantMap>> bindableBlockedInhibitions();
     QBindable<bool> bindableHasInhibition();
     QBindable<bool> bindableIsLidPresent();
     QBindable<bool> bindableTriggersLidAction();
@@ -63,6 +72,7 @@ private:
     QBindable<bool> bindableIsManuallyInhibitedError();
 
     Q_OBJECT_BINDABLE_PROPERTY(PowerManagementControl, QList<QVariantMap>, m_inhibitions, &PowerManagementControl::inhibitionsChanged)
+    Q_OBJECT_BINDABLE_PROPERTY(PowerManagementControl, QList<QVariantMap>, m_blockedInhibitions, &PowerManagementControl::blockedInhibitionsChanged)
     Q_OBJECT_BINDABLE_PROPERTY(PowerManagementControl, bool, m_hasInhibition, &PowerManagementControl::hasInhibitionChanged);
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagementControl, bool, m_isLidPresent, false, &PowerManagementControl::isLidPresentChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(PowerManagementControl, bool, m_triggersLidAction, false, &PowerManagementControl::triggersLidActionChanged)
