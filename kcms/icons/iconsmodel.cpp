@@ -19,6 +19,14 @@
 
 #include "iconssettings.h"
 
+static const QStringList themesToIgnore = {
+    // These GNOME icon themes don't implement the FDO icon naming spec, so using
+    // them outside of GNOME will break apps; see
+    // https://gitlab.gnome.org/GNOME/adwaita-icon-theme/-/issues/288.
+    QStringLiteral("Adwaita"),
+    QStringLiteral("Adwaita Dark"),
+    QStringLiteral("HighContrast")};
+
 IconsModel::IconsModel(IconsSettings *iconsSettings, QObject *parent)
     : QAbstractListModel(parent)
     , m_settings(iconsSettings)
@@ -115,6 +123,10 @@ void IconsModel::load()
             // qCWarning(KCM_ICONS) << "Not a valid theme" << themeName;
         }
         if (theme.isHidden()) {
+            continue;
+        }
+        if (themesToIgnore.contains(themeName)) {
+            qDebug() << "Filtering out" << themeName << "because it's in the ignore list.";
             continue;
         }
 
