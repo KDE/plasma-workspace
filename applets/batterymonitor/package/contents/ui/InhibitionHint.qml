@@ -11,19 +11,10 @@ import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
 RowLayout {
-    enum ActionButtonType {
-        Block,
-        Unblock
-    }
-
     property alias iconSource: iconItem.source
     property alias text: label.text
+    property alias actions: actionToolBar.actions
     
-    property alias showActionButton: actionButton.visible
-    property /*InhibitionHint.ActionButtonType*/ int actionButtonType
-    property alias actionButtonName: actionButton.text
-    property alias actionButtonIcon: actionButton.icon.name
-
     spacing: Kirigami.Units.smallSpacing
 
     Kirigami.Icon {
@@ -43,26 +34,10 @@ RowLayout {
         maximumLineCount: 4
     }
 
-    PlasmaComponents3.Button {
-        id: actionButton
-        visible: false
-
-        PlasmaComponents3.ToolTip {
-            text: parent.text
-        }
-
-        Keys.onPressed: (event) => {
-            if (event.key == Qt.Key_Space || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
-                clicked();
-            }
-        }
-
-        onClicked: {
-            if (actionButtonType === InhibitionHint.ActionButtonType.Block) {
-                pmControl.blockInhibition(app, reason);
-            } else if (actionButtonType === InhibitionHint.ActionButtonType.Unblock) {
-                pmControl.unblockInhibition(app, reason);
-            }
-        }
+    Kirigami.ActionToolBar {
+        id: actionToolBar
+        Layout.minimumWidth: Kirigami.Units.iconSizes.large
+        Layout.alignment: Qt.AlignRight
+        visible: actions.length > 0
     }
 }

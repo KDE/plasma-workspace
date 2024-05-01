@@ -201,11 +201,6 @@ PlasmaComponents3.ItemDelegate {
                         property string name: modelData.PrettyName
                         property string reason: modelData.Reason
 
-                        showActionButton: true
-                        actionButtonType: InhibitionHint.ActionButtonType.Block
-                        actionButtonName: i18nc("@action:button Stop an app from blocking automatic sleep and screen locking after inactivity", "Prevent blocking")
-                        actionButtonIcon: "edit-delete-remove"
-
                         Layout.fillWidth: true
                         iconSource: icon
                         text: {
@@ -231,6 +226,24 @@ PlasmaComponents3.ItemDelegate {
                                 }
                             }
                         }
+
+                        actions: [
+                            Kirigami.Action {
+                                icon.name: "edit-delete-remove"
+
+                                Kirigami.Action {
+                                    text: i18nc("@action:button Stop an app from blocking automatic sleep and screen locking after inactivity once", "Unblock this time")
+
+                                    onTriggered: pmControl.blockInhibition(app, reason)
+                                }
+
+                                Kirigami.Action {
+                                    text: i18nc("@action:button Permanently prevent an app from blocking automatic sleep and screen locking after inactivity", "Prevent blocking every time")
+
+                                    onTriggered: pmControl.blockInhibition(app, reason)
+                                }
+                            }
+                        ]
                     }
                 }
 
@@ -258,11 +271,6 @@ PlasmaComponents3.ItemDelegate {
                         property string name: modelData.PrettyName
                         property string reason: modelData.Reason
 
-                        showActionButton: true
-                        actionButtonType: InhibitionHint.ActionButtonType.Unblock
-                        actionButtonName: i18nc("@action:button Undo preventing an app from blocking automatic sleep and screen locking after inactivity", "Allow blocking")
-                        actionButtonIcon: "checkmark"
-
                         Layout.fillWidth: true
                         iconSource: icon
                         text: {
@@ -272,6 +280,20 @@ PlasmaComponents3.ItemDelegate {
                                 return i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason)
                             }
                         }
+
+                        actions: [
+                            Kirigami.Action {
+                                text: i18nc("@action:button Undo stopping an app from blocking automatic sleep and screen locking after inactivity once", "Block this time")
+
+                                onTriggered: pmControl.unblockInhibition(app, reason)
+                            },
+
+                            Kirigami.Action {
+                                text: i18nc("@action:button Undo permanently preventing an app from blocking automatic sleep and screen locking after inactivity", "Allow blocking every time")
+
+                                onTriggered: pmControl.unblockInhibition(app, reason)
+                            }
+                        ]
                     }
                 }
             }
