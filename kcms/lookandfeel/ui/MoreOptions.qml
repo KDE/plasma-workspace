@@ -52,7 +52,7 @@ ColumnLayout {
         Layout.fillWidth: true
         visible: false
         type: Kirigami.MessageType.Warning
-        text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets.")
+        text: i18n("Applying a Desktop layout will delete the current set of desktops, panels, docks, and widgets, replacing them with what the theme specifies.")
     }
 
     Kirigami.FormLayout {

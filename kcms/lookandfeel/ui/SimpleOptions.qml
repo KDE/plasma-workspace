@@ -61,7 +61,7 @@ ColumnLayout {
             Layout.fillWidth: true
             visible: resetLayoutCheckbox.checked
             type: Kirigami.MessageType.Warning
-            text: i18n("Applying a Desktop layout replaces your current configuration of desktops, panels, docks, and widgets.")
+            text: i18n("Applying a Desktop layout will delete the current set of desktops, panels, docks, and widgets, replacing them with what the theme specifies.")
         }
         // This label shouldn't ever appear, but it's good to let the user know why the dialog has no options
         // in the rare scenario they provide an empty Global Theme
