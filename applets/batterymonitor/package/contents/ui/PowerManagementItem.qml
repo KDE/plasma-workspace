@@ -34,6 +34,7 @@ PlasmaComponents3.ItemDelegate {
     //  Reason: string,
     // }]
     property var inhibitions: []
+    property var blockedInhibitions: []
     property bool inhibitsLidAction
 
     property alias manualInhibitionSwitch: manualInhibitionSwitch
@@ -165,9 +166,11 @@ PlasmaComponents3.ItemDelegate {
                 id: inhibitionReasonsLayout
 
                 Layout.fillWidth: true
-                visible: root.inhibitsLidAction || (root.inhibitions.length > 0)
+                visible: root.inhibitsLidAction || (root.inhibitions.length > 0) || (root.blockedInhibitions.length > 0)
 
                 InhibitionHint {
+                    readonly property var pmControl: root.pmControl
+
                     Layout.fillWidth: true
                     visible: root.inhibitsLidAction
                     iconSource: "computer-laptop"
@@ -194,8 +197,14 @@ PlasmaComponents3.ItemDelegate {
                     InhibitionHint {
                         property string icon: modelData.Icon
                             || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
+                        property string app: modelData.Name
                         property string name: modelData.PrettyName
                         property string reason: modelData.Reason
+
+                        showActionButton: true
+                        actionButtonType: InhibitionHint.ActionButtonType.Block
+                        actionButtonName: i18nc("@action:button Stop an app from blocking automatic sleep and screen locking after inactivity", "Prevent blocking")
+                        actionButtonIcon: "edit-delete-remove"
 
                         Layout.fillWidth: true
                         iconSource: icon
@@ -220,6 +229,47 @@ PlasmaComponents3.ItemDelegate {
                                 } else {
                                     return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: unknown reason")
                                 }
+                            }
+                        }
+                    }
+                }
+
+                PlasmaComponents3.Label {
+                    id: blockedInhibitionExplanation
+                    Layout.fillWidth: true
+                    visible: root.blockedInhibitions.length > 1
+                    font: Kirigami.Theme.smallFont
+                    wrapMode: Text.WordWrap
+                    elide: Text.ElideRight
+                    maximumLineCount: 3
+                    text: i18np("%1 application is configured not to block sleep and screen locking:",
+                                "%1 applications are configured not to block sleep and screen locking:",
+                                root.blockedInhibitions.length)
+                    textFormat: Text.PlainText
+                }
+
+                Repeater {
+                    model: root.blockedInhibitions
+
+                    InhibitionHint {
+                        property string icon: modelData.Icon
+                            || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
+                        property string app: modelData.Name
+                        property string name: modelData.PrettyName
+                        property string reason: modelData.Reason
+
+                        showActionButton: true
+                        actionButtonType: InhibitionHint.ActionButtonType.Unblock
+                        actionButtonName: i18nc("@action:button Undo preventing an app from blocking automatic sleep and screen locking after inactivity", "Allow blocking")
+                        actionButtonIcon: "checkmark"
+
+                        Layout.fillWidth: true
+                        iconSource: icon
+                        text: {
+                            if (root.blockedInhibitions.length === 1) {
+                                return i18nc("Application name; reason", "%1 is configured not to block sleep and screen locking for %2", name, reason)
+                            } else {
+                                return i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason)
                             }
                         }
                     }
