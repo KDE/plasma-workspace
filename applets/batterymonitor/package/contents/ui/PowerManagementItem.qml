@@ -1,6 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2012-2013 Daniel Nicoletti <dantti12@gmail.com>
     SPDX-FileCopyrightText: 2013, 2015 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2024 Natalie Clarius <natalie.clarius@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -34,6 +35,7 @@ PlasmaComponents3.ItemDelegate {
     //  Reason: string,
     // }]
     property var inhibitions: []
+    property var blockedInhibitions: []
     property bool inhibitsLidAction
 
     property alias manualInhibitionSwitch: manualInhibitionSwitch
@@ -107,7 +109,7 @@ PlasmaComponents3.ItemDelegate {
 
                     Keys.onPressed: (event) => {
                         if (event.key == Qt.Key_Space || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
-                            toggle();
+                            clicked();
                         }
                     }
 
@@ -165,9 +167,11 @@ PlasmaComponents3.ItemDelegate {
                 id: inhibitionReasonsLayout
 
                 Layout.fillWidth: true
-                visible: root.inhibitsLidAction || (root.inhibitions.length > 0)
+                visible: root.inhibitsLidAction || (root.inhibitions.length > 0) || (root.blockedInhibitions.length > 0)
 
                 InhibitionHint {
+                    readonly property var pmControl: root.pmControl
+
                     Layout.fillWidth: true
                     visible: root.inhibitsLidAction
                     iconSource: "computer-laptop"
@@ -194,6 +198,7 @@ PlasmaComponents3.ItemDelegate {
                     InhibitionHint {
                         property string icon: modelData.Icon
                             || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
+                        property string app: modelData.Name
                         property string name: modelData.PrettyName
                         property string reason: modelData.Reason
 
@@ -219,6 +224,99 @@ PlasmaComponents3.ItemDelegate {
                                     return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: %1", reason)
                                 } else {
                                     return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: unknown reason")
+                                }
+                            }
+                        }
+
+                        Item {
+                            width: blockButton.width
+                            height: blockButton.height
+
+                            PlasmaComponents3.Button {
+                                id: blockButton
+                                text: i18nc("@action:button Prevent an app from blocking automatic sleep and screen locking after inactivity", "Unblock…")
+                                icon.name: "edit-delete-remove"
+                                onClicked: blockButtonMenu.open()
+                            }
+
+                            Menu {
+                                id: blockButtonMenu
+                                x: blockButton.x + blockButton.width - blockButtonMenu.width
+                                y: blockButton.y + blockButton.height
+
+                                MenuItem {
+                                    text: i18nc("@action:button Prevent an app from blocking automatic sleep and screen locking after inactivity", "Only this time")
+                                    onTriggered: pmControl.blockInhibition(app, reason, false)
+                                }
+
+                                MenuItem {
+                                    text: i18nc("@action:button Prevent an app from blocking automatic sleep and screen locking after inactivity", "Every time for this app and reason")
+                                    onTriggered: pmControl.blockInhibition(app, reason, true)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // list of blocked inhibitions
+                PlasmaComponents3.Label {
+                    id: blockedInhibitionExplanation
+                    Layout.fillWidth: true
+                    visible: root.blockedInhibitions.length > 1
+                    font: Kirigami.Theme.smallFont
+                    wrapMode: Text.WordWrap
+                    elide: Text.ElideRight
+                    maximumLineCount: 3
+                    text: i18np("%1 application has been prevented from blocking sleep and screen locking:",
+                                "%1 applications have been prevented from blocking sleep and screen locking:",
+                                root.blockedInhibitions.length)
+                    textFormat: Text.PlainText
+                }
+
+                Repeater {
+                    model: root.blockedInhibitions
+
+                    InhibitionHint {
+                        property string icon: modelData.Icon
+                            || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
+                        property string app: modelData.Name
+                        property string name: modelData.PrettyName
+                        property string reason: modelData.Reason
+
+                        Layout.fillWidth: true
+                        iconSource: icon
+                        text: {
+                            if (root.blockedInhibitions.length === 1) {
+                                return i18nc("Application name; reason", "%1 has been prevented from blocking sleep and screen locking for %2", name, reason)
+                            } else {
+                                return i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason)
+                            }
+                        }
+
+                        Item {
+                            width: unblockButton.width
+                            height: unblockButton.height
+
+                            PlasmaComponents3.Button {
+                                id: unblockButton
+                                text: i18nc("@action:button Undo preventing an app from blocking automatic sleep and screen locking after inactivity", "Block again…")
+                                icon.name: "dialog-cancel"
+                                onClicked: unblockButtonMenu.open()
+                            }
+
+                            Menu {
+                                id: unblockButtonMenu
+                                x: unblockButton.x + unblockButton.width - unblockButtonMenu.width
+                                y: unblockButton.y + unblockButton.height
+
+                                MenuItem {
+                                    text: i18nc("@action:button Prevent an app from blocking automatic sleep and screen locking after inactivity", "Only this time")
+                                    onTriggered: pmControl.unblockInhibition(app, reason, false)
+                                }
+
+                                MenuItem {
+                                    text: i18nc("@action:button Prevent an app from blocking automatic sleep and screen locking after inactivity", "Every time for this app and reason")
+                                    onTriggered: pmControl.unblockInhibition(app, reason, true)
                                 }
                             }
                         }
