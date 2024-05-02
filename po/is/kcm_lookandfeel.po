@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-05-02 00:40+0000\n"
 "PO-Revision-Date: 2023-09-09 09:53+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -173,7 +173,7 @@ msgstr "Virkja"
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: ui/MoreOptions.qml:23
+#: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
 msgstr "Stillingar framsetningar:"
@@ -188,66 +188,69 @@ msgstr "Framsetning skjáborðs"
 msgid "Titlebar Buttons layout"
 msgstr "Framsetning hnappa á titilstiku"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
-#, kde-format
+#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applying a Desktop layout replaces your current configuration of "
+#| "desktops, panels, docks, and widgets"
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
-"panels, docks, and widgets"
+"panels, docks, and widgets."
 msgstr ""
 "Ef framsetning skjáborðs er virkjuð skiptir það út núverandi framsetningu á "
 "skjáborðum, skjáborðsstikum, dokkum og græjum"
 
-#: ui/MoreOptions.qml:55
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Stillingar útlits:"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
 msgstr "Litir"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
 msgstr "Stíll forrits"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Gluggaskreytingastíll"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Gluggaskreytingastærð"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
 msgstr "Tákn"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
 msgstr "Stíll Plasma"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Cursors"
 msgstr "Bendlar"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
 msgstr "Letur"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
 msgstr "Verkefnaskiptir"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
 msgstr "Upphafsskjár"
@@ -268,18 +271,18 @@ msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Stillingar útlits"
 
-#: ui/SimpleOptions.qml:47
+#: ui/SimpleOptions.qml:48
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Framsetning á skjáborði og gluggum"
 
-#: ui/SimpleOptions.qml:54
+#: ui/SimpleOptions.qml:55
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Framsetning á skjáborði og gluggum"
 
-#: ui/SimpleOptions.qml:74
+#: ui/SimpleOptions.qml:71
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

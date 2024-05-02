@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-05-02 00:40+0000\n"
 "PO-Revision-Date: 2023-12-24 17:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -174,7 +174,7 @@ msgstr "Применить"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: ui/MoreOptions.qml:23
+#: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
 msgstr "Параметры расположения виджетов"
@@ -189,66 +189,69 @@ msgstr "Расположение виджетов"
 msgid "Titlebar Buttons layout"
 msgstr "Кнопки в заголовках"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
-#, kde-format
+#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applying a Desktop layout replaces your current configuration of "
+#| "desktops, panels, docks, and widgets"
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
-"panels, docks, and widgets"
+"panels, docks, and widgets."
 msgstr ""
 "При применении параметра текущие конфигурации рабочих столов, панелей, доков "
 "и виджетов будет заменены на определённые в оформлении"
 
-#: ui/MoreOptions.qml:55
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Параметры оформления:"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
 msgstr "Цвета"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
 msgstr "Оформление приложений"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Оформление окон"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Размер оформления"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
 msgstr "Значки"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
 msgstr "Оформление рабочего стола"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Cursors"
 msgstr "Курсоры мыши"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
 msgstr "Шрифты"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
 msgstr "Переключение окон"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
 msgstr "Заставка"
@@ -269,18 +272,18 @@ msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Параметры оформления"
 
-#: ui/SimpleOptions.qml:47
+#: ui/SimpleOptions.qml:48
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Расположение виджетов и окон"
 
-#: ui/SimpleOptions.qml:54
+#: ui/SimpleOptions.qml:55
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Расположение виджетов и окон"
 
-#: ui/SimpleOptions.qml:74
+#: ui/SimpleOptions.qml:71
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-24 00:40+0000\n"
+"POT-Creation-Date: 2024-05-02 00:40+0000\n"
 "PO-Revision-Date: 2024-04-28 16:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "ஆற்றல் ஏறுகிறது"
 msgid "Discharging"
 msgstr "ஆற்றல் பயன்படுகிறது"
 
-#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:125
+#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:122
 #, kde-format
 msgid "Fully Charged"
 msgstr "முழு ஆற்றல் உள்ளது"
@@ -90,133 +90,133 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "ஏறத்தாழ %1% வரை மட்டும் ஆற்றல் ஏறுமாறு உங்கள் மின்கலம் அமைக்கப்பட்டுள்ளது."
 
-#: package/contents/ui/CompactRepresentation.qml:99
-#: package/contents/ui/CompactRepresentation.qml:143
+#: package/contents/ui/CompactRepresentation.qml:106
+#: package/contents/ui/CompactRepresentation.qml:150
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:74
 #, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr "திரை பூட்டல் மற்றும் தானியக்க உறக்கம், மின்கல பிளாஸ்மாய்டால் தடுக்கப்பட்டுள்ளது"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #: package/contents/ui/PowerManagementItem.qml:51
 #: package/contents/ui/PowerProfileItem.qml:75
 #, kde-format
 msgid "Power Management"
 msgstr "ஆற்றல் மேலாண்மை"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Power and Battery"
 msgstr "ஆற்றலும் மின்கலமும்"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Battery is not present in the bay"
 msgstr "புறையில் மின்கலம் இல்லை"
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "மின்கலத்தில் %1% உள்ளது; ஆற்றல் ஏறவில்லை"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "மின்கலத்தில் %1% உள்ளது; சொருகப்பட்டுள்ளது, ஆனால் ஆற்றல் ஏறவில்லை"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "மின்கலத்தில் %1% உள்ளது; ஆற்றல் ஏறுகிறது"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Battery at %1%"
 msgstr "மின்கலத்தில் %1% உள்ளது"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "மின்கலத்தில் ஆற்றல் ஏற்றும் அளவுக்கு மின்னளிப்பு ஆற்றல்வாய்ந்ததல்ல"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "No Batteries Available"
 msgstr "மின்கலங்கள் ஏதுமில்லை"
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "முழுதாக ஆற்றல் ஏறும் வரை %1"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:157
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "மீதம் %1"
 
-#: package/contents/ui/main.qml:163
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Not charging"
 msgstr "ஆற்றல் ஏறவில்லை"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:165
 #, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "தானியங்கி தூக்கம் மற்றும் திரை பூட்டுதல் முடங்கியுள்ளன; இயக்க நடு-கிளிக் செய்யவும்"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:167
 #, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr "தானியக்க தூக்கத்தையும் திரைபூட்டலையும் தடுக்க நடு-கிளிக் செய்யவும்"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:172
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "ஒரு செயலி அதிவேக பயன்முறையை இயக்குமாறு கோரியுள்ளது"
 msgstr[1] "%1 செயலிகள் அதிவேக பயன்முறையை இயக்குமாறு கோரியுள்ளன"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
 msgstr "கணினி அதிவேக பயன்முறையில் உள்ளது; மாற்ற உருளவும்"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "ஒரு செயலி ஆற்றல் சேமிப்பு பயன்முறையை இயக்குமாறு கோரியுள்ளது"
 msgstr[1] "%1 செயலிகள் ஆற்றல் சேமிப்பு பயன்முறையை இயக்குமாறு கோரியுள்ளன"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
 msgstr "கணினி ஆற்றல் சேமிப்பு பயன்முறையில் உள்ளது; மாற்ற உருளவும்"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr "கணினி நடுநிலையான ஆற்றல் பயன்முறையில் உள்ளது; மாற்ற உருளவும்"
 
-#: package/contents/ui/main.qml:302
+#: package/contents/ui/main.qml:299
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "ஆற்றல் விவரங்களை காட்டு…"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "ஆற்றல் நிறைந்திராத பட்சத்தில் சின்னத்தில் மின்கல சதவீதத்தைக் காட்டு"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:318
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "&ஆற்றல் மேலாண்மையை அமை…"

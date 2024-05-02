@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-05-02 00:40+0000\n"
 "PO-Revision-Date: 2020-07-22 19:57+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -171,7 +171,7 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: ui/MoreOptions.qml:23
+#: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
 msgstr ""
@@ -187,64 +187,64 @@ msgstr "Nulstil Plasmas skrivebordslayout"
 msgid "Titlebar Buttons layout"
 msgstr ""
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
+#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
 #, kde-format
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
-"panels, docks, and widgets"
-msgstr ""
-
-#: ui/MoreOptions.qml:55
-#, kde-format
-msgid "Appearance settings:"
-msgstr ""
-
-#: ui/MoreOptions.qml:59
-#, kde-format
-msgid "Colors"
-msgstr ""
-
-#: ui/MoreOptions.qml:60
-#, kde-format
-msgid "Application Style"
-msgstr ""
-
-#: ui/MoreOptions.qml:61
-#, kde-format
-msgid "Window Decoration Style"
-msgstr ""
-
-#: ui/MoreOptions.qml:62
-#, kde-format
-msgid "Window Decoration Size"
-msgstr ""
-
-#: ui/MoreOptions.qml:63
-#, kde-format
-msgid "Icons"
-msgstr ""
-
-#: ui/MoreOptions.qml:64
-#, kde-format
-msgid "Plasma Style"
-msgstr ""
-
-#: ui/MoreOptions.qml:65
-#, kde-format
-msgid "Cursors"
+"panels, docks, and widgets."
 msgstr ""
 
 #: ui/MoreOptions.qml:66
 #, kde-format
+msgid "Appearance settings:"
+msgstr ""
+
+#: ui/MoreOptions.qml:69
+#, kde-format
+msgid "Colors"
+msgstr ""
+
+#: ui/MoreOptions.qml:70
+#, kde-format
+msgid "Application Style"
+msgstr ""
+
+#: ui/MoreOptions.qml:71
+#, kde-format
+msgid "Window Decoration Style"
+msgstr ""
+
+#: ui/MoreOptions.qml:72
+#, kde-format
+msgid "Window Decoration Size"
+msgstr ""
+
+#: ui/MoreOptions.qml:73
+#, kde-format
+msgid "Icons"
+msgstr ""
+
+#: ui/MoreOptions.qml:74
+#, kde-format
+msgid "Plasma Style"
+msgstr ""
+
+#: ui/MoreOptions.qml:75
+#, kde-format
+msgid "Cursors"
+msgstr ""
+
+#: ui/MoreOptions.qml:76
+#, kde-format
 msgid "Fonts"
 msgstr ""
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
 msgstr ""
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:78
 #, fuzzy, kde-format
 #| msgid "Test Splashscreen"
 msgid "Splash Screen"
@@ -266,20 +266,20 @@ msgctxt "List item"
 msgid "• Appearance settings"
 msgstr ""
 
-#: ui/SimpleOptions.qml:47
+#: ui/SimpleOptions.qml:48
 #, fuzzy, kde-format
 #| msgid "Reset the Plasma Desktop layout"
 msgid "Desktop and window layout"
 msgstr "Nulstil Plasmas skrivebordslayout"
 
-#: ui/SimpleOptions.qml:54
+#: ui/SimpleOptions.qml:55
 #, fuzzy, kde-format
 #| msgid "Reset the Plasma Desktop layout"
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "Nulstil Plasmas skrivebordslayout"
 
-#: ui/SimpleOptions.qml:74
+#: ui/SimpleOptions.qml:71
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

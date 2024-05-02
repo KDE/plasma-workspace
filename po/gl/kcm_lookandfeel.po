@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-05-02 00:40+0000\n"
 "PO-Revision-Date: 2023-10-11 11:03+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -175,7 +175,7 @@ msgstr "Aplicar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: ui/MoreOptions.qml:23
+#: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
 msgstr "Configuración da disposición:"
@@ -190,66 +190,69 @@ msgstr "Disposición de escritorio"
 msgid "Titlebar Buttons layout"
 msgstr "Disposición dos botóns da barra de título"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
-#, kde-format
+#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applying a Desktop layout replaces your current configuration of "
+#| "desktops, panels, docks, and widgets"
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
-"panels, docks, and widgets"
+"panels, docks, and widgets."
 msgstr ""
 "Aplicar unha disposición de escritorio substitúe a súa configuración actual "
 "de escritorios, paneis, docas e trebellos."
 
-#: ui/MoreOptions.qml:55
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Configuración de aparencia:"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
 msgstr "Cores"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
 msgstr "Estilo das aplicacións"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Estilo da decoración de xanelas"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Tamaño da decoración de xanelas"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
 msgstr "Iconas"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
 msgstr "Estilo de Plasma"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Cursors"
 msgstr "Cursores"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
 msgstr "Fontes"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
 msgstr "Selector de tarefa"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
 msgstr "Pantalla de inicio"
@@ -270,18 +273,18 @@ msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• Configuración de aparencia"
 
-#: ui/SimpleOptions.qml:47
+#: ui/SimpleOptions.qml:48
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "Disposición de escritorios e de xanelas"
 
-#: ui/SimpleOptions.qml:54
+#: ui/SimpleOptions.qml:55
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• Disposición de escritorios e de xanelas"
 
-#: ui/SimpleOptions.qml:74
+#: ui/SimpleOptions.qml:71
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-24 00:40+0000\n"
+"POT-Creation-Date: 2024-05-02 00:40+0000\n"
 "PO-Revision-Date: 2024-02-24 18:30+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Se încarcă"
 msgid "Discharging"
 msgstr "Se descarcă"
 
-#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:125
+#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:122
 #, kde-format
 msgid "Fully Charged"
 msgstr "Încărcat deplin"
@@ -94,99 +94,99 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Acumulatorul e configurat să se încarce până la aproximativ %1%."
 
-#: package/contents/ui/CompactRepresentation.qml:99
-#: package/contents/ui/CompactRepresentation.qml:143
+#: package/contents/ui/CompactRepresentation.qml:106
+#: package/contents/ui/CompactRepresentation.qml:150
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "An application is preventing sleep and screen locking:"
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr "O aplicație previne adormirea și blocarea ecranului:"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #: package/contents/ui/PowerManagementItem.qml:51
 #: package/contents/ui/PowerProfileItem.qml:75
 #, kde-format
 msgid "Power Management"
 msgstr "Gestiunea alimentării"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgid "Power and Battery"
 msgstr "Alimentare și acumulator"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Battery is not present in the bay"
 msgstr ""
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Acumulator la %1%, nu se încarcă"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Acumulator la %1%, conectat dar oricum se descarcă"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Acumulator la %1%, se încarcă"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Acumulator la %1%"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr ""
 "Sursa de alimentare nu e suficient de puternică ca să încarce acumulatorul"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Niciun acumulator disponibil"
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 până la încărcare deplină"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:157
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 rămase"
 
-#: package/contents/ui/main.qml:163
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Not charging"
 msgstr "Nu se încarcă"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Automatic sleep and screen locking are disabled"
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "Adormirea și blocarea ecranului automate sunt dezactivate"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:167
 #, fuzzy, kde-format
 #| msgctxt "Minimize the length of this string as much as possible"
 #| msgid "Manually block sleep and screen locking"
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr "Blochează manual adormirea și blocarea ecranului"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:172
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
@@ -194,13 +194,13 @@ msgstr[0] "O aplicație a cerut activarea regimului de performanță"
 msgstr[1] "%1 aplicații au cerut activarea regimului de performanță"
 msgstr[2] "%1 de aplicații au cerut activarea regimului de performanță"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:176
 #, fuzzy, kde-format
 #| msgid "System is in Performance mode"
 msgid "System is in Performance mode; scroll to change"
 msgstr "Sistemul e în regim de performanță"
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
@@ -208,29 +208,29 @@ msgstr[0] "O aplicație a cerut activarea regimului de economisire"
 msgstr[1] "%1 aplicații au cerut activarea regimului de economisire"
 msgstr[2] "%1 de aplicații au cerut activarea regimului de economisire"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:184
 #, fuzzy, kde-format
 #| msgid "System is in Power Save mode"
 msgid "System is in Power Save mode; scroll to change"
 msgstr "Sistemul e în regim de economisire"
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:302
+#: package/contents/ui/main.qml:299
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Arată informații de&spre energie…"
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:305
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr ""
 "Arată procentajul acumulatorului pe pictogramă când nu e încărcat complet"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:318
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "&Configurează gestiunea alimentării…"

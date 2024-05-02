@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-24 00:40+0000\n"
+"POT-Creation-Date: 2024-05-02 00:40+0000\n"
 "PO-Revision-Date: 2022-05-14 17:13+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Lader op"
 msgid "Discharging"
 msgstr "Aflader"
 
-#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:125
+#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:122
 #, kde-format
 msgid "Fully Charged"
 msgstr "Fuldt opladet"
@@ -92,99 +92,99 @@ msgstr "%1%"
 msgid "Battery is configured to charge up to approximately %1%."
 msgstr "Dit batteri er indstillet til kun at lade op til %1%."
 
-#: package/contents/ui/CompactRepresentation.qml:99
-#: package/contents/ui/CompactRepresentation.qml:143
+#: package/contents/ui/CompactRepresentation.qml:106
+#: package/contents/ui/CompactRepresentation.qml:150
 #, kde-format
 msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:73
+#: package/contents/ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "An application is preventing sleep and screen locking:"
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr "Et program forhindrer slumring og låsning af skærm:"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #: package/contents/ui/PowerManagementItem.qml:51
 #: package/contents/ui/PowerProfileItem.qml:75
 #, kde-format
 msgid "Power Management"
 msgstr "Strømstyring"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:96
 #, fuzzy, kde-format
 #| msgid "Power Management"
 msgid "Power and Battery"
 msgstr "Strømstyring"
 
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Battery is not present in the bay"
 msgstr ""
 
-#: package/contents/ui/main.qml:132
+#: package/contents/ui/main.qml:129
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Batteriet er på %1%, lader ikke op"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:131
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Batteriet er på %1%, tilsluttet men aflader stadig"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Batteriet er på %1%, lader op"
 
-#: package/contents/ui/main.qml:139
+#: package/contents/ui/main.qml:136
 #, kde-format
 msgid "Battery at %1%"
 msgstr "Batteriet er på %1%"
 
-#: package/contents/ui/main.qml:147
+#: package/contents/ui/main.qml:144
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Strømforsyningen er ikke kraftig nok til at oplade batteriet"
 
-#: package/contents/ui/main.qml:151
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Ingen batterier tilgængelige"
 
-#: package/contents/ui/main.qml:158
+#: package/contents/ui/main.qml:155
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 til fuldt opladet"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:157
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 tilbage"
 
-#: package/contents/ui/main.qml:163
+#: package/contents/ui/main.qml:160
 #, kde-format
 msgid "Not charging"
 msgstr "Lader ikke op"
 
-#: package/contents/ui/main.qml:168
+#: package/contents/ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Automatic sleep and screen locking are disabled"
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "Automatisk slumring og låsning af skærm er deaktiveret"
 
-#: package/contents/ui/main.qml:170
+#: package/contents/ui/main.qml:167
 #, fuzzy, kde-format
 #| msgctxt "Minimize the length of this string as much as possible"
 #| msgid "Manually block sleep and screen locking"
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr "Forhindr manuelt slumring og låsning af skærm"
 
-#: package/contents/ui/main.qml:175
+#: package/contents/ui/main.qml:172
 #, fuzzy, kde-format
 #| msgid "One application has requested activating %2:"
 #| msgid_plural "%1 applications have requested activating %2:"
@@ -193,12 +193,12 @@ msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Et program har anmodet om aktivering af %2:"
 msgstr[1] "%1 programmer har anmodet om aktivering af %2:"
 
-#: package/contents/ui/main.qml:179
+#: package/contents/ui/main.qml:176
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:183
+#: package/contents/ui/main.qml:180
 #, fuzzy, kde-format
 #| msgid "One application has requested activating %2:"
 #| msgid_plural "%1 applications have requested activating %2:"
@@ -207,28 +207,28 @@ msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "Et program har anmodet om aktivering af %2:"
 msgstr[1] "%1 programmer har anmodet om aktivering af %2:"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:184
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:190
+#: package/contents/ui/main.qml:187
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:302
+#: package/contents/ui/main.qml:299
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Vi&s information om strøm..."
 
-#: package/contents/ui/main.qml:308
+#: package/contents/ui/main.qml:305
 #, fuzzy, kde-format
 #| msgid "Show Battery Percentage on Icon"
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Vis batteriprocent på ikon"
 
-#: package/contents/ui/main.qml:321
+#: package/contents/ui/main.qml:318
 #, fuzzy, kde-format
 #| msgid "&Configure Energy Saving…"
 msgid "&Configure Power Management…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:39+0000\n"
+"POT-Creation-Date: 2024-05-02 00:40+0000\n"
 "PO-Revision-Date: 2024-01-17 21:11+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -172,7 +172,7 @@ msgstr "طبّق"
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: ui/MoreOptions.qml:23
+#: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
 msgstr "إعدادات التخطيط:"
@@ -187,66 +187,69 @@ msgstr "تخطيط سطح مكتب"
 msgid "Titlebar Buttons layout"
 msgstr "تخطيط أزرار شريط العنوان"
 
-#: ui/MoreOptions.qml:46 ui/SimpleOptions.qml:62
-#, kde-format
+#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
+#, fuzzy, kde-format
+#| msgid ""
+#| "Applying a Desktop layout replaces your current configuration of "
+#| "desktops, panels, docks, and widgets"
 msgid ""
 "Applying a Desktop layout replaces your current configuration of desktops, "
-"panels, docks, and widgets"
+"panels, docks, and widgets."
 msgstr ""
 "تطبيق تخطيط سطح المكتب سيستبدل إعدادات سطح المكتب الحالية واللوحات و تطبيقات "
 "الصغيرة والمراسي."
 
-#: ui/MoreOptions.qml:55
+#: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
 msgstr "إعدادات المظهر:"
 
-#: ui/MoreOptions.qml:59
+#: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
 msgstr "الألوان"
 
-#: ui/MoreOptions.qml:60
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
 msgstr "نمط التطبيق"
 
-#: ui/MoreOptions.qml:61
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "نمط زخارف النوافذ"
 
-#: ui/MoreOptions.qml:62
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "حجم زخارف النوافذ"
 
-#: ui/MoreOptions.qml:63
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
 msgstr "الأيقونات"
 
-#: ui/MoreOptions.qml:64
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
 msgstr "نمط بلازما"
 
-#: ui/MoreOptions.qml:65
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Cursors"
 msgstr "المؤشرات"
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
 msgstr "الخطوط"
 
-#: ui/MoreOptions.qml:67
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
 msgstr "مبدّل المهام"
 
-#: ui/MoreOptions.qml:68
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
 msgstr "شاشة البدء"
@@ -267,18 +270,18 @@ msgctxt "List item"
 msgid "• Appearance settings"
 msgstr "• إعدادات المظهر"
 
-#: ui/SimpleOptions.qml:47
+#: ui/SimpleOptions.qml:48
 #, kde-format
 msgid "Desktop and window layout"
 msgstr "تخطيط سطح مكتب والنوافذ"
 
-#: ui/SimpleOptions.qml:54
+#: ui/SimpleOptions.qml:55
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
 msgstr "• تخطيط سطح مكتب والنوافذ"
 
-#: ui/SimpleOptions.qml:74
+#: ui/SimpleOptions.qml:71
 #, kde-format
 msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
