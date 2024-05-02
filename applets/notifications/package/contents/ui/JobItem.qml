@@ -189,7 +189,7 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: suspendButton
 
-            icon.name: "media-playback-pause"
+            icon.name: "media-playback-pause-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
             onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked()
                                                                                                 : jobItem.suspendJobClicked()
@@ -198,7 +198,7 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: killButton
 
-            icon.name: "media-playback-stop"
+            icon.name: "media-playback-stop-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
             onClicked: jobItem.killJobClicked()
         }
@@ -227,7 +227,7 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: otherFileActionsButton
             height: Math.max(implicitHeight, openButton.implicitHeight)
-            icon.name: "application-menu"
+            icon.name: "application-menu-symbolic"
             checkable: true
             text: openButton.visible ? "" : Accessible.name
             Accessible.name: i18nd("plasma_applet_org.kde.plasma.notifications", "More Options…")
@@ -267,7 +267,7 @@ ColumnLayout {
                     PropertyChanges {
                         target: openButton
                         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
-                        icon.name: "folder-open"
+                        icon.name: "folder-open-symbolic"
                     }
                 },
                 State {
