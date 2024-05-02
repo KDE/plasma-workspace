@@ -84,7 +84,7 @@ RowLayout {
         level: 5
         opacity: 0.9
         textFormat: Text.PlainText
-        elide: Text.ElideLeft
+        elide: Text.ElideMiddle
         maximumLineCount: 2
         text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")
     }
