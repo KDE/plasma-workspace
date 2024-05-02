@@ -198,7 +198,7 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: killButton
 
-            icon.name: "media-playback-stop-symbolic"
+            icon.name: "dialog-cancel-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
             onClicked: jobItem.killJobClicked()
         }
