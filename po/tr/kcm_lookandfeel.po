@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Volkan Gezer <volkangezer@gmail.com>, 2015, 2017, 2021.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:40+0000\n"
-"PO-Revision-Date: 2023-11-25 20:26+0300\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"PO-Revision-Date: 2024-05-02 13:56+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -194,13 +194,13 @@ msgstr "Başlık Çubuğu Düğmeleri yerleşimi"
 #, fuzzy, kde-format
 #| msgid ""
 #| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#| "desktops, panels, docks, and widgets."
 msgid ""
-"Applying a Desktop layout replaces your current configuration of desktops, "
-"panels, docks, and widgets."
+"Applying a Desktop layout will delete the current set of desktops, panels, "
+"docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
 "Bir masaüstü yerleşimi uygulamak; geçerli masaüstü, panel, rıhtım ve araç "
-"takımı yapılandırmanızı değiştirir"
+"takımı yapılandırmanızı değiştirir."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

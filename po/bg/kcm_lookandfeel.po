@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:40+0000\n"
-"PO-Revision-Date: 2023-08-09 08:41+0200\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"PO-Revision-Date: 2024-05-02 07:58+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -191,13 +191,13 @@ msgstr "Оформление на бутоните на заглавната л�
 #, fuzzy, kde-format
 #| msgid ""
 #| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#| "desktops, panels, docks, and widgets."
 msgid ""
-"Applying a Desktop layout replaces your current configuration of desktops, "
-"panels, docks, and widgets."
+"Applying a Desktop layout will delete the current set of desktops, panels, "
+"docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
 "Прилагането на оформление на работен плот замества текущата конфигурация на "
-"работните плотове, панелите и уиджетите."
+"работните плотове, панелите и уиджетите.."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

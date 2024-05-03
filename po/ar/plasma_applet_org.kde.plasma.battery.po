@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:40+0000\n"
-"PO-Revision-Date: 2024-04-18 13:20+0400\n"
+"PO-Revision-Date: 2024-05-02 10:15+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -98,10 +98,9 @@ msgid "%1%"
 msgstr "%1٪"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "The battery applet has enabled system-wide inhibition"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "فعّل بريمج البطّاريّة الكبت على مستوى النّظام"
+msgstr "عطل تطبيق البطارية وضع السكون وقفل الشاشة."
 
 #: package/contents/ui/main.qml:96
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -118,7 +117,7 @@ msgstr "الطاقة والبطارية"
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "البطارية غير موجودة في مخزن البطاريات"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
@@ -235,7 +234,7 @@ msgstr "ا&ضبط إدارة الطّاقة..."
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr "النوم وقفل الشاشة بعد الخمول"
+msgstr "وضع السكون وقفل الشاشة بعد الخمول"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
@@ -259,12 +258,12 @@ msgstr "حظر يدوي"
 #: package/contents/ui/PowerManagementItem.qml:133
 #, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "فشل في إلغاء حظر النوم التلقائي وقفل الشاشة"
+msgstr "فشل في إلغاء حظر وضع السكون التلقائي وقفل الشاشة"
 
 #: package/contents/ui/PowerManagementItem.qml:136
 #, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "فشل في منع النوم التلقائي وقفل الشاشة"
+msgstr "فشل في منع وضع السكون التلقائي وقفل الشاشة"
 
 #: package/contents/ui/PowerManagementItem.qml:174
 #, kde-format
@@ -279,7 +278,7 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "‏%1 يمنع النوم وقفل الشاشة:"
+msgstr[0] "‏%1 يمنع وضع السكون وقفل الشاشة:"
 msgstr[1] "تطبيق يمنع النوم وقفل الشاشة:"
 msgstr[2] "تطبيقان يمنعان النوم وقفل الشاشة:"
 msgstr[3] "%1 تطبيقات يمنعن النوم وقفل الشاشة:"
@@ -289,24 +288,24 @@ msgstr[5] "%1 تطبيق يمنع النوم وقفل الشاشة:"
 #: package/contents/ui/PowerManagementItem.qml:205
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
-msgstr "‏%1 يمنع النوم وقفل الشاشة (%2)"
+msgstr "‏%1 يمنع وضع السكون وقفل الشاشة (%2)"
 
 #: package/contents/ui/PowerManagementItem.qml:207
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
-msgstr "‏%1 يمنع النوم وقفل الشاشة (سبب مجهول)"
+msgstr "‏%1 يمنع وضع السكون وقفل الشاشة (سبب مجهول)"
 
 #: package/contents/ui/PowerManagementItem.qml:209
 #, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "هناك تطبيق يمنع النوم وقفل الشاشة (‏%1)"
+msgstr "هناك تطبيق يمنع وضع السكون وقفل الشاشة (‏%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:211
 #, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "‏هناك تطبيق يمنع النوم وقفل الشاشة (سبب مجهول)"
+msgstr "‏هناك تطبيق يمنع وضع السكون وقفل الشاشة (سبب مجهول)"
 
 #: package/contents/ui/PowerManagementItem.qml:215
 #, kde-format
@@ -430,11 +429,10 @@ msgstr ""
 "profiles-daemon</command> باستخدام مدير الحزم وأعد التشغيل."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "البطارية عند %1٪"
+msgstr "البطارية %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-25 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2024-04-19 02:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -73,59 +73,67 @@ msgstr "螢幕亮度為 %1%"
 msgid "Keyboard brightness at %1%"
 msgstr "鍵盤亮度為 %1%"
 
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgctxt "Status"
-msgid "Night Light off"
-msgstr "夜光模式關閉"
+msgid "Night Light suspended; middle-click to resume"
+msgstr ""
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
+#, fuzzy, kde-format
+#| msgid "Night Light"
+msgctxt "Status"
+msgid "Night Light suspended"
+msgstr "夜光模式"
+
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
 msgstr "夜光模式於日間色溫"
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
 msgstr "夜光模式於夜間色溫"
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
 msgstr "夜光模式於日間過渡期（%1 已完成）"
 
-#: package/contents/ui/main.qml:97
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
 msgstr "夜光模式於夜間過渡期（%1 已完成）"
 
-#: package/contents/ui/main.qml:112
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
 msgstr "夜光模式夜間過渡期排定於 %1"
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
 msgstr "夜光模式日間過渡期排定於 %1"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "捲動來調整螢幕亮度"
 
-#: package/contents/ui/main.qml:121
-#, kde-format
-msgid "Middle-click to toggle Night Light"
+#: package/contents/ui/main.qml:125
+#, fuzzy, kde-format
+#| msgid "Middle-click to toggle Night Light"
+msgid "Middle-click to suspend Night Light"
 msgstr "按中鍵切換夜光模式"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
@@ -134,8 +142,8 @@ msgstr "設定夜光…"
 #: package/contents/ui/NightLightItem.qml:75
 #, kde-format
 msgctxt "Night light status"
-msgid "Off"
-msgstr "關閉"
+msgid "Suspended"
+msgstr ""
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -191,35 +199,41 @@ msgctxt "Placeholder is screen color temperature"
 msgid "%1K"
 msgstr "%1K"
 
-#: package/contents/ui/NightLightItem.qml:143
+#: package/contents/ui/NightLightItem.qml:122
+#, kde-format
+msgctxt "@action:button Night Light"
+msgid "Suspend"
+msgstr ""
+
+#: package/contents/ui/NightLightItem.qml:144
 #, kde-format
 msgid "Configure…"
 msgstr "設定…"
 
-#: package/contents/ui/NightLightItem.qml:143
+#: package/contents/ui/NightLightItem.qml:144
 #, kde-format
 msgid "Enable and Configure…"
 msgstr "啟用並設定…"
 
-#: package/contents/ui/NightLightItem.qml:169
+#: package/contents/ui/NightLightItem.qml:170
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
 msgstr "何時完成到白天的過渡："
 
-#: package/contents/ui/NightLightItem.qml:171
+#: package/contents/ui/NightLightItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
 msgstr "何時開始到夜晚的過渡："
 
-#: package/contents/ui/NightLightItem.qml:173
+#: package/contents/ui/NightLightItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
 msgstr "何時完成到夜晚的過渡："
 
-#: package/contents/ui/NightLightItem.qml:175
+#: package/contents/ui/NightLightItem.qml:176
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
@@ -244,6 +258,14 @@ msgstr "鍵盤顏色"
 #, kde-format
 msgid "Night Light"
 msgstr "夜光模式"
+
+#~ msgctxt "Status"
+#~ msgid "Night Light off"
+#~ msgstr "夜光模式關閉"
+
+#~ msgctxt "Night light status"
+#~ msgid "Off"
+#~ msgstr "關閉"
 
 #~ msgctxt "Status; placeholder is a temperature"
 #~ msgid "Night Light at %1K"

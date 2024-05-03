@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2021-08-31 16:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -41,52 +41,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "സ്ലൈഡുകൾ കാണിക്കുന്നതിന് പശ്ചാത്തലചിത്രമുള്ള കൂട"
 
-#: imagepackage/contents/ui/config.qml:126
+#: imagepackage/contents/ui/config.qml:128
 #, kde-format
 msgid "Positioning:"
 msgstr "സ്ഥാനം:"
 
-#: imagepackage/contents/ui/config.qml:129
+#: imagepackage/contents/ui/config.qml:131
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "വലിപ്പം മാറ്റിയതും അറ്റം വെട്ടിചുരുക്കിയതും"
 
-#: imagepackage/contents/ui/config.qml:133
+#: imagepackage/contents/ui/config.qml:135
 #, kde-format
 msgid "Scaled"
 msgstr "വലിപ്പം മാറ്റിയത്"
 
-#: imagepackage/contents/ui/config.qml:137
+#: imagepackage/contents/ui/config.qml:139
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "ചിത്രത്തിന്റെ അനുപാതം മാറ്റാതെ വലിപ്പം മാറ്റിയത്"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:143
 #, kde-format
 msgid "Centered"
 msgstr "നടുവിലായിട്ട്"
 
-#: imagepackage/contents/ui/config.qml:145
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Tiled"
 msgstr "അടുത്തടുത്തു് വച്ചു്"
 
-#: imagepackage/contents/ui/config.qml:173
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
 msgstr "പശ്ചാത്തലം:"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
 msgstr "അവ്യക്തം"
 
-#: imagepackage/contents/ui/config.qml:183
+#: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
 msgstr "കടും നിറം"
 
-#: imagepackage/contents/ui/config.qml:194
+#: imagepackage/contents/ui/config.qml:196
 #, kde-format
 msgid "Select Background Color"
 msgstr "പശ്ചാത്തല നിറം തെരഞ്ഞെടുക്കുക"
@@ -101,19 +101,19 @@ msgstr "പശ്ചാത്തലചിത്രം തുറക്കുക"
 msgid "Next Wallpaper Image"
 msgstr "അടുത്ത പശ്ചാത്തലചിത്രം"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, fuzzy, kde-format
 #| msgid "Image Files"
 msgid "Images"
 msgstr "ചിത്ര ഫയലുകൾ"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:74
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:64
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:80
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt "@action:button the new things being gotten are wallpapers"
@@ -196,90 +196,90 @@ msgstr ""
 msgid "Media Files"
 msgstr "ചിത്ര ഫയലുകൾ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Order:"
 msgstr "ക്രമം:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:55
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
 #, kde-format
 msgid "Random"
 msgstr "ക്രമരഹിതം"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
 #, kde-format
 msgid "A to Z"
 msgstr "ആരോഹണക്രമം"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
 #, kde-format
 msgid "Z to A"
 msgstr "അവരോഹണക്രമം"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "പരിഷ്ക്കരിച്ച തീയതി (പുതിയത് ആദ്യം)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:75
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "പരിഷ്ക്കരിച്ച തീയതി (പഴയത് ആദ്യം)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:96
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:100
 #, kde-format
 msgid "Group by folders"
 msgstr "അറകള്‍ പ്രകാരം ഗ്രൂപ്പ് ചെയ്യുക"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:112
 #, kde-format
 msgid "Change every:"
 msgstr "ചിത്രങ്ങൾ ഓരോന്നും മാറ്റേണ്ട സമയം:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:118
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:122
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 മണിക്കൂർ"
 msgstr[1] "%1 മണിക്കൂറുകൾ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:138
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:142
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 മിനുട്ട്"
 msgstr[1] "%1 മിനുട്ടുകൾ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:158
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 സെക്കൻ്റ്"
 msgstr[1] "%1 സെക്കൻ്റുകൾ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:189
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:206
 #, kde-format
 msgid "Folders"
 msgstr "അറകള്‍"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:193
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:210
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
 #, kde-format
 msgid "Remove Folder"
 msgstr "അറ നീക്കം ചെയ്യുക"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:242
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "അറ തുറക്കുക"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "പശ്ചാത്തലചിത്ര സ്ഥാനങ്ങളൊന്നും സജ്ജമാക്കിയിട്ടില്ല"

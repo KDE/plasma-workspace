@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2024-04-09 09:30+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -53,52 +53,52 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Dossier contenant les fonds d'écran à afficher comme des diapositives"
 
 # unreviewed-context
-#: imagepackage/contents/ui/config.qml:126
+#: imagepackage/contents/ui/config.qml:128
 #, kde-format
 msgid "Positioning:"
 msgstr "Positionnement :"
 
-#: imagepackage/contents/ui/config.qml:129
+#: imagepackage/contents/ui/config.qml:131
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Adapté et rogné"
 
-#: imagepackage/contents/ui/config.qml:133
+#: imagepackage/contents/ui/config.qml:135
 #, kde-format
 msgid "Scaled"
 msgstr "Adapté"
 
-#: imagepackage/contents/ui/config.qml:137
+#: imagepackage/contents/ui/config.qml:139
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Adapté, conserver les proportions"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:143
 #, kde-format
 msgid "Centered"
 msgstr "Centré"
 
-#: imagepackage/contents/ui/config.qml:145
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Tiled"
 msgstr "Mosaïque"
 
-#: imagepackage/contents/ui/config.qml:173
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
 msgstr "Arrière-plan :"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
 msgstr "Flou"
 
-#: imagepackage/contents/ui/config.qml:183
+#: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
 msgstr "Couleur unie"
 
-#: imagepackage/contents/ui/config.qml:194
+#: imagepackage/contents/ui/config.qml:196
 #, kde-format
 msgid "Select Background Color"
 msgstr "Sélectionner la couleur de fond"
@@ -113,18 +113,18 @@ msgstr "Ouvrir l'image de fond d'écran"
 msgid "Next Wallpaper Image"
 msgstr "Image de fond d'écran suivante"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, kde-format
 msgid "Images"
 msgstr "Images"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:74
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:64
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Ajouter…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:80
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
@@ -209,90 +209,90 @@ msgstr ""
 msgid "Media Files"
 msgstr "Fichiers de média"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Order:"
 msgstr "Ordre :"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:55
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
 #, kde-format
 msgid "Random"
 msgstr "Aléatoire"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
 #, kde-format
 msgid "A to Z"
 msgstr "De A à Z"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
 #, kde-format
 msgid "Z to A"
 msgstr "De Z à A"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Date de modification (le plus récent en premier)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:75
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Date de modification (le plus ancien en premier)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:96
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:100
 #, kde-format
 msgid "Group by folders"
 msgstr "Regrouper par dossiers"
 
 # unreviewed-context
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:112
 #, kde-format
 msgid "Change every:"
 msgstr "Changer chaque :"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:118
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:122
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 heure"
 msgstr[1] "%1 heures"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:138
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:142
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minute"
 msgstr[1] "%1 minutes"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:158
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 seconde"
 msgstr[1] "%1 secondes"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:189
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:206
 #, kde-format
 msgid "Folders"
 msgstr "Dossiers"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:193
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:210
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Ajouter…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
 #, kde-format
 msgid "Remove Folder"
 msgstr "Supprimer le dossier"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:242
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
 #, kde-format
 msgid "Open Folder…"
 msgstr "Ouvrir un dossier..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Aucun emplacement de fond d'écran configuré"

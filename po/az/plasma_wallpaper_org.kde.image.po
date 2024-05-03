@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-12 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2023-02-19 19:06+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -41,52 +41,52 @@ msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Slaydları göstərmək üçün divar kağızı qovluğu"
 
-#: imagepackage/contents/ui/config.qml:126
+#: imagepackage/contents/ui/config.qml:128
 #, kde-format
 msgid "Positioning:"
 msgstr "Yerləşdirmə:"
 
-#: imagepackage/contents/ui/config.qml:129
+#: imagepackage/contents/ui/config.qml:131
 #, kde-format
 msgid "Scaled and Cropped"
 msgstr "Miqyaslandırılmış və Kəsilmiş"
 
-#: imagepackage/contents/ui/config.qml:133
+#: imagepackage/contents/ui/config.qml:135
 #, kde-format
 msgid "Scaled"
 msgstr "Tam İş masası boyu"
 
-#: imagepackage/contents/ui/config.qml:137
+#: imagepackage/contents/ui/config.qml:139
 #, kde-format
 msgid "Scaled, Keep Proportions"
 msgstr "Nisbətləri saxlanılmaqla miqyaslanmış"
 
-#: imagepackage/contents/ui/config.qml:141
+#: imagepackage/contents/ui/config.qml:143
 #, kde-format
 msgid "Centered"
 msgstr "Mərkəzdə"
 
-#: imagepackage/contents/ui/config.qml:145
+#: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgid "Tiled"
 msgstr "Döşənmiş"
 
-#: imagepackage/contents/ui/config.qml:173
+#: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
 msgstr "Arxa fon:"
 
-#: imagepackage/contents/ui/config.qml:174
+#: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
 msgstr "Tutqun"
 
-#: imagepackage/contents/ui/config.qml:183
+#: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
 msgstr "Bütöv rəng"
 
-#: imagepackage/contents/ui/config.qml:194
+#: imagepackage/contents/ui/config.qml:196
 #, kde-format
 msgid "Select Background Color"
 msgstr "Arxa fon şəklini seçmək"
@@ -101,19 +101,19 @@ msgstr "Divar kağızı şəklini açın"
 msgid "Next Wallpaper Image"
 msgstr "Növbəti divar kağızı"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, fuzzy, kde-format
 #| msgid "Image Files"
 msgid "Images"
 msgstr "Şəkil faylları"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:74
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:64
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:80
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt "@action:button the new things being gotten are wallpapers"
@@ -196,90 +196,90 @@ msgstr ""
 msgid "Media Files"
 msgstr "Şəkil faylları"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:48
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Order:"
 msgstr "Düzülüş:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:55
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
 #, kde-format
 msgid "Random"
 msgstr "Təsadüfi"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
 #, kde-format
 msgid "A to Z"
 msgstr "A-dan Z-ə"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
 #, kde-format
 msgid "Z to A"
 msgstr "Z-dən A-ya"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
 #, kde-format
 msgid "Date modified (newest first)"
 msgstr "Dəyişdirilmə tarixi (öncə ən yenisi)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:75
 #, kde-format
 msgid "Date modified (oldest first)"
 msgstr "Dəyişdirilmə tarixi (öncə ən köhnəsi)"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:96
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:100
 #, kde-format
 msgid "Group by folders"
 msgstr "Qovluqlar üzrə qruplaşdırın"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:108
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:112
 #, kde-format
 msgid "Change every:"
 msgstr "Dəyişdirmə tezliyi:"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:118
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:122
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
 msgstr[0] "%1 saat"
 msgstr[1] "%1 saat"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:138
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:142
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 dəqiqə"
 msgstr[1] "%1 dəqiqə"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:158
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 saniyə"
 msgstr[1] "%1 saniyə"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:189
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:206
 #, kde-format
 msgid "Folders"
 msgstr "Qovluqlar"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:193
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:210
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:231
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
 #, kde-format
 msgid "Remove Folder"
 msgstr "Qovluğu silmək"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:242
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "Qovluğu açmaq"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:257
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Divar kağızı yeri müəyyən edilməyib"

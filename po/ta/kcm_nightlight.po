@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2024-04-21 21:26+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -50,12 +50,12 @@ msgstr "நிலப்படத்தில் உங்கள் இருப�
 msgid "Zoom in"
 msgstr "பெரிதாக்கு"
 
-#: ui/LocationsFixedView.qml:128
+#: ui/LocationsFixedView.qml:129
 #, kde-format
 msgid "Zoom out"
 msgstr "சிறிதாக்கு"
 
-#: ui/LocationsFixedView.qml:225
+#: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -69,13 +69,13 @@ msgstr ""
 "wikimedia.org/wiki/File:World_location_map_(equirectangular_180).svg'>உலக "
 "நிலப்படத்தை</link> மாற்றி உருவாக்கப்பட்டது"
 
-#: ui/LocationsFixedView.qml:238
+#: ui/LocationsFixedView.qml:240
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "அட்சரேகை:"
 
-#: ui/LocationsFixedView.qml:269
+#: ui/LocationsFixedView.qml:271
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

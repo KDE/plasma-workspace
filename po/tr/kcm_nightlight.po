@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2024-04-20 14:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -55,12 +55,12 @@ msgstr "Haritada konumunuzu seçmek için tıklayın."
 msgid "Zoom in"
 msgstr "Yakınlaştır"
 
-#: ui/LocationsFixedView.qml:128
+#: ui/LocationsFixedView.qml:129
 #, kde-format
 msgid "Zoom out"
 msgstr "Uzaklaştır"
 
-#: ui/LocationsFixedView.qml:225
+#: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -74,13 +74,13 @@ msgstr ""
 "link>’ndan uyarlanmıştır (TUBS / Wikimedia Commons / <link url='https://"
 "creativecommons.org/licenses/by-sa/3.0'>CC BY-SA 3.0</link>)"
 
-#: ui/LocationsFixedView.qml:238
+#: ui/LocationsFixedView.qml:240
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Enlem:"
 
-#: ui/LocationsFixedView.qml:269
+#: ui/LocationsFixedView.qml:271
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 12:44+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -54,12 +54,12 @@ msgstr "Clicca pro seliger tu location sur le mappa"
 msgid "Zoom in"
 msgstr "Zoom in (aggrandi)"
 
-#: ui/LocationsFixedView.qml:128
+#: ui/LocationsFixedView.qml:129
 #, kde-format
 msgid "Zoom out"
 msgstr "Zoom out (diminue)"
 
-#: ui/LocationsFixedView.qml:225
+#: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -73,13 +73,13 @@ msgstr ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 
-#: ui/LocationsFixedView.qml:238
+#: ui/LocationsFixedView.qml:240
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Latitude:"
 
-#: ui/LocationsFixedView.qml:269
+#: ui/LocationsFixedView.qml:271
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

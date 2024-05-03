@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2024-01-02 13:37+0100\n"
 "Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -53,13 +53,13 @@ msgstr "Kattintson a hely kiválasztásához a térképen."
 msgid "Zoom in"
 msgstr "Nagyítás"
 
-#: ui/LocationsFixedView.qml:128
+#: ui/LocationsFixedView.qml:129
 #, fuzzy, kde-format
 #| msgid "Zoom in"
 msgid "Zoom out"
 msgstr "Nagyítás"
 
-#: ui/LocationsFixedView.qml:225
+#: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -73,13 +73,13 @@ msgstr ""
 "wikimedia.org/wiki/File:World_location_map_(equirectangular_180)."
 "svg'>világtérképe</link> alapján."
 
-#: ui/LocationsFixedView.qml:238
+#: ui/LocationsFixedView.qml:240
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
 msgstr "Szélesség:"
 
-#: ui/LocationsFixedView.qml:269
+#: ui/LocationsFixedView.qml:271
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"

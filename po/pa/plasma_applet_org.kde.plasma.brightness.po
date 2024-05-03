@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-25 00:39+0000\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
 "PO-Revision-Date: 2023-12-26 08:28-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -77,59 +77,67 @@ msgstr "ਸਕਰੀਨ ਚਮਕ %1% ਉੱਤੇ ਹੈ"
 msgid "Keyboard brightness at %1%"
 msgstr "ਕੀਬੋਰਡ ਚਮਕ %1% ਉੱਤੇ ਹੈ"
 
-#: package/contents/ui/main.qml:84
+#: package/contents/ui/main.qml:85
 #, kde-format
 msgctxt "Status"
-msgid "Night Light off"
-msgstr "ਰਾਤ ਦੇ ਰੰਗ ਬੰਦ ਹਨ"
+msgid "Night Light suspended; middle-click to resume"
+msgstr ""
 
-#: package/contents/ui/main.qml:88
+#: package/contents/ui/main.qml:87
+#, fuzzy, kde-format
+#| msgid "Night Light"
+msgctxt "Status"
+msgid "Night Light suspended"
+msgstr "ਰਾਤ ਦੇ ਰੰਗ"
+
+#: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
 msgstr ""
 
-#: package/contents/ui/main.qml:90
+#: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
 msgstr ""
 
-#: package/contents/ui/main.qml:95
+#: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
 msgstr ""
 
-#: package/contents/ui/main.qml:97
+#: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
 msgstr ""
 
-#: package/contents/ui/main.qml:112
+#: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:114
+#: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
 msgstr ""
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "ਸਕਰੀਨ ਚਮਕ ਨੂੰ ਅਡਜੱਸਟ ਕਰਨ ਲਈ ਸਕਰੋਲ ਕਰੋ"
 
-#: package/contents/ui/main.qml:121
-#, kde-format
-msgid "Middle-click to toggle Night Light"
+#: package/contents/ui/main.qml:125
+#, fuzzy, kde-format
+#| msgid "Middle-click to toggle Night Light"
+msgid "Middle-click to suspend Night Light"
 msgstr "ਰਾਤ ਦੀ ਰੌਸ਼ਨੀ ਬਦਲਣ ਲਈ ਅੱਧਾ-ਕਲਿੱਕ ਕਰੋ"
 
-#: package/contents/ui/main.qml:209
+#: package/contents/ui/main.qml:213
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
@@ -138,8 +146,8 @@ msgstr "ਰਾਤ ਦੇ ਰੰਗ ਦੀ ਸੰਰਚਨਾ…"
 #: package/contents/ui/NightLightItem.qml:75
 #, kde-format
 msgctxt "Night light status"
-msgid "Off"
-msgstr "ਬੰਦ"
+msgid "Suspended"
+msgstr ""
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -195,35 +203,41 @@ msgctxt "Placeholder is screen color temperature"
 msgid "%1K"
 msgstr "%1K"
 
-#: package/contents/ui/NightLightItem.qml:143
+#: package/contents/ui/NightLightItem.qml:122
+#, kde-format
+msgctxt "@action:button Night Light"
+msgid "Suspend"
+msgstr ""
+
+#: package/contents/ui/NightLightItem.qml:144
 #, kde-format
 msgid "Configure…"
 msgstr "…ਸੰਰਚਨਾ"
 
-#: package/contents/ui/NightLightItem.qml:143
+#: package/contents/ui/NightLightItem.qml:144
 #, kde-format
 msgid "Enable and Configure…"
 msgstr "ਸਮਰੱਥ ਅਤੇ ਸੰਰਚਨਾ…"
 
-#: package/contents/ui/NightLightItem.qml:169
+#: package/contents/ui/NightLightItem.qml:170
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
 msgstr "ਦਿਨ ਲਈ ਤਬਦੀਲੀ ਪੂਰੀ ਹੁੰਦੀ ਹੈ:"
 
-#: package/contents/ui/NightLightItem.qml:171
+#: package/contents/ui/NightLightItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
 msgstr "ਰਾਤ ਦੇ ਸਮੇਂ ਲਈ ਤਬਦੀਲੀ:"
 
-#: package/contents/ui/NightLightItem.qml:173
+#: package/contents/ui/NightLightItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
 msgstr "ਰਾਤ ਲਈ ਤਬਦੀਲੀ ਪੂਰੀ ਹੁੰਦੀ ਹੈ:"
 
-#: package/contents/ui/NightLightItem.qml:175
+#: package/contents/ui/NightLightItem.qml:176
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
@@ -249,6 +263,14 @@ msgstr "ਕੀਬੋਰਡ ਚਮਕ"
 #, kde-format
 msgid "Night Light"
 msgstr "ਰਾਤ ਦੇ ਰੰਗ"
+
+#~ msgctxt "Status"
+#~ msgid "Night Light off"
+#~ msgstr "ਰਾਤ ਦੇ ਰੰਗ ਬੰਦ ਹਨ"
+
+#~ msgctxt "Night light status"
+#~ msgid "Off"
+#~ msgstr "ਬੰਦ"
 
 #~ msgctxt "Status; placeholder is a temperature"
 #~ msgid "Night Light at %1K"

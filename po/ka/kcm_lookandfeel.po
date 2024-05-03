@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:40+0000\n"
-"PO-Revision-Date: 2023-11-17 09:32+0100\n"
+"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"PO-Revision-Date: 2024-05-02 06:07+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -191,13 +191,13 @@ msgstr "სათაურის ქუდის ღილაკების გ
 #, fuzzy, kde-format
 #| msgid ""
 #| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#| "desktops, panels, docks, and widgets."
 msgid ""
-"Applying a Desktop layout replaces your current configuration of desktops, "
-"panels, docks, and widgets."
+"Applying a Desktop layout will delete the current set of desktops, panels, "
+"docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
 "სამუშაო მაგიდის განლაგების გადატარება თქვენი სამუშაო მაგიდების, პანელების, "
-"მიმაგრებების და ვიჯეტების განლაგებასაც შეცვლის"
+"მიმაგრებების და ვიჯეტების განლაგებასაც შეცვლის."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
