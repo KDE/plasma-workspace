@@ -18,7 +18,7 @@ Item {
     property alias labelRendering: label.renderType
     property alias circleOpacity: iconCircle.opacity
     property alias circleVisiblity: iconCircle.visible
-    property int fontSize: Kirigami.Theme.defaultFont.pointSize + 1
+    property real fontSize: Kirigami.Theme.defaultFont.pointSize + 1
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
     signal clicked
 

@@ -32,7 +32,7 @@ ListView {
     readonly property int userItemWidth: Kirigami.Units.gridUnit * 8
     readonly property int userItemHeight: Kirigami.Units.gridUnit * 9
     readonly property bool constrainText: count > 1
-    property int fontSize: Kirigami.Theme.defaultFont.pointSize + 2
+    property real fontSize: Kirigami.Theme.defaultFont.pointSize + 2
 
     implicitHeight: userItemHeight
 

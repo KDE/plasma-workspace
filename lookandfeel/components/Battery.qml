@@ -15,7 +15,7 @@ import org.kde.kirigami 2.20 as Kirigami
 RowLayout {
     id: root
 
-    property int fontSize: Kirigami.Theme.defaultFont.pointSize
+    property real fontSize: Kirigami.Theme.defaultFont.pointSize
 
     function getOrDefault(source /*object?*/, prop /*string*/, fallback /*T*/) /*-> T*/ {
         return (source !== null && source !== undefined && source.hasOwnProperty(prop))

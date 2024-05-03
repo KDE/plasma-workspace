@@ -58,7 +58,7 @@ FocusScope {
 
     property alias userList: userListView
 
-    property int fontSize: Kirigami.Theme.defaultFont.pointSize + 2
+    property real fontSize: Kirigami.Theme.defaultFont.pointSize + 2
 
     default property alias _children: innerLayout.children
 

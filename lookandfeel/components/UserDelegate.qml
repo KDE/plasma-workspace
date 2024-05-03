@@ -28,7 +28,7 @@ Item {
     property var vtNumber
     property bool constrainText: true
     property alias nameFontSize: usernameDelegate.font.pointSize
-    property int fontSize: Kirigami.Theme.defaultFont.pointSize + 2
+    property real fontSize: Kirigami.Theme.defaultFont.pointSize + 2
     signal clicked()
 
     property real faceSize: Kirigami.Units.gridUnit * 7
