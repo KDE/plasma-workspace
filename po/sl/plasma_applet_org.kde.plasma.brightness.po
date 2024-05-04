@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-17 07:16+0200\n"
+"PO-Revision-Date: 2024-05-03 10:31+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -75,14 +75,13 @@ msgstr "Svetlost tipkovnice ob %1%"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
-msgstr ""
+msgstr "Nočna svetloba začasno prekinjena; srednji klik za nadaljevanje"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "Nočna svetloba"
+msgstr "Nočna svetloba začasno prekinjena"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
@@ -126,10 +125,9 @@ msgid "Scroll to adjust screen brightness"
 msgstr "Pomaknite, da prilagodite svetlost zaslona"
 
 #: package/contents/ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Middle-click to toggle Night Light"
+#, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr "S srednjim klikom preklopite nočno svetlobo"
+msgstr "Srednji klik za začasno prekinitev nočne svetlobe"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
@@ -141,7 +139,7 @@ msgstr "Konfiguriraj nočno svetlobo…"
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "Začasno prekinjeno"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -201,7 +199,7 @@ msgstr "%1K"
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "Začasno prekini"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format

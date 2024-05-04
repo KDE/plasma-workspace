@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-17 05:22+0200\n"
+"PO-Revision-Date: 2024-05-03 04:09+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -78,14 +78,13 @@ msgstr "კლავიატურის სიკაშკაშეა %1%"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
-msgstr ""
+msgstr "ღამის სინათლე შეჩერებულია. შუა-წკაპი გასაგრძელებლად"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "ღამის სინათლე"
+msgstr "ღამის სინათლე შეჩერებულია"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
@@ -129,10 +128,9 @@ msgid "Scroll to adjust screen brightness"
 msgstr "ეკრანის სიკაშკაშის მოსარგები ჩოჩია"
 
 #: package/contents/ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Middle-click to toggle Night Light"
+#, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr "შუა-წკაპი ღამის სინათლის გადასართავად"
+msgstr "შუა-წკაპი ღამის სინათლის შესაჩერებლად"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
@@ -144,7 +142,7 @@ msgstr "ღამის განათების მორგება…"
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "შეჩერებულია"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -204,7 +202,7 @@ msgstr "%1K"
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "შეჩერება"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format

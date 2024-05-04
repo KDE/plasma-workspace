@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-17 14:33+0200\n"
+"PO-Revision-Date: 2024-05-03 09:10+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -79,14 +79,13 @@ msgstr "Brillantor del teclat al %1%"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
-msgstr ""
+msgstr "S'ha suspés la llum de nit; clic del mig per a reprendre"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "Llum de nit"
+msgstr "S'ha suspés la llum de nit"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
@@ -130,10 +129,9 @@ msgid "Scroll to adjust screen brightness"
 msgstr "Desplaceu per a ajustar la brillantor de la pantalla"
 
 #: package/contents/ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Middle-click to toggle Night Light"
+#, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr "Clic del mig per a canviar la llum de nit"
+msgstr "Clic del mig per a suspendre la llum de nit"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
@@ -145,7 +143,7 @@ msgstr "Configura la llum de nit…"
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "Suspesa"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -205,7 +203,7 @@ msgstr "%1 K"
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "Suspén"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format
@@ -260,11 +258,3 @@ msgstr "Color del teclat"
 #, kde-format
 msgid "Night Light"
 msgstr "Llum de nit"
-
-#~ msgctxt "Status"
-#~ msgid "Night Light off"
-#~ msgstr "Llum de nit desactivada"
-
-#~ msgctxt "Night light status"
-#~ msgid "Off"
-#~ msgstr "Inactiva"

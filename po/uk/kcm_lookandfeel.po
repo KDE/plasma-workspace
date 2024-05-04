@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 09:14+0300\n"
+"PO-Revision-Date: 2024-05-03 07:38+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -192,16 +192,14 @@ msgid "Titlebar Buttons layout"
 msgstr "Компонування кнопок смужки заголовка"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Застосування компонування стільниці призведе до заміни ваших поточних "
-"налаштувань стільниць, панелей, бічних панелей та віджетів."
+"Застосування компонування стільниці призведе до вилучення поточного набору "
+"стільниць, панелей, бічних панелей та віджетів та заміни їх тими, які "
+"визначено у темі."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

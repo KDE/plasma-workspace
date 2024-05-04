@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 06:07+0200\n"
+"PO-Revision-Date: 2024-05-03 04:08+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -188,16 +188,14 @@ msgid "Titlebar Buttons layout"
 msgstr "სათაურის ქუდის ღილაკების განლაგება"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
 "სამუშაო მაგიდის განლაგების გადატარება თქვენი სამუშაო მაგიდების, პანელების, "
-"მიმაგრებების და ვიჯეტების განლაგებასაც შეცვლის."
+"მიმაგრებების და ვიჯეტების განლაგებას წაშლის და მათ თემის მნიშვნელობებით "
+"შეცვლის.."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

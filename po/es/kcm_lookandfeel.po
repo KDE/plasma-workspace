@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 17:37+0200\n"
+"PO-Revision-Date: 2024-05-03 19:09+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -192,16 +192,13 @@ msgid "Titlebar Buttons layout"
 msgstr "Diseño de botones de la barra de título"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"La aplicación de un diseño de escritorio sustituye la configuración actual "
-"de los escritorios, paneles y elementos gráficos."
+"La aplicación de un diseño de escritorio borrará el conjunto actual de "
+"escritorios, paneles y widgets, sustituyéndolos con los que contiene el tema."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

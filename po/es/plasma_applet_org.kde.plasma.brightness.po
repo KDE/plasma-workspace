@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-18 01:44+0200\n"
+"PO-Revision-Date: 2024-05-03 19:10+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
@@ -79,14 +79,13 @@ msgstr "Brillo del teclado al %1 %"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
-msgstr ""
+msgstr "La luz nocturna está suspendida; clic centrar para reanudarla"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "Luz nocturna"
+msgstr "Luz nocturna suspendida"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
@@ -130,10 +129,9 @@ msgid "Scroll to adjust screen brightness"
 msgstr "Desplace para ajustar el brillo de la pantalla"
 
 #: package/contents/ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Middle-click to toggle Night Light"
+#, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr "Clic central para cambiar la luz nocturna"
+msgstr "Clic central para suspender la luz nocturna"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
@@ -145,7 +143,7 @@ msgstr "Configurar la luz nocturna..."
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "Suspendida"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -205,7 +203,7 @@ msgstr "%1 K"
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "Suspender"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format

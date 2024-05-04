@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 08:59+0200\n"
+"PO-Revision-Date: 2024-05-03 10:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -189,16 +189,14 @@ msgid "Titlebar Buttons layout"
 msgstr "Razpored gumbov naslovne letvice"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Uveljavljanje razporeda namizja zamenja trenutno konfiguracijo namizij, "
-"plošč, sidrišč in gradnikov."
+"Z uveljavljanjem postavitve namizja boste izbrisali trenutni nabor namizij, "
+"plošč, sidrišč in gradnikov ter jih nadomestili s tistimi, ki jih določa "
+"tema."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

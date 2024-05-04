@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 13:24+0200\n"
+"PO-Revision-Date: 2024-05-03 09:08+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -195,16 +195,14 @@ msgid "Titlebar Buttons layout"
 msgstr "Disposició dels botons de la barra de títol"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"En aplicar una disposició d'escriptori se substituirà la vostra configuració "
-"actual d'escriptoris, plafons, acobladors i ginys."
+"En aplicar una disposició d'escriptori se suprimirà la configuració actual "
+"d'escriptoris, plafons, acobladors i ginys, substituint-ho pels que el tema "
+"especifiqui."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
