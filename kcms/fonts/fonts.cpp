@@ -145,7 +145,6 @@ void KFonts::save()
             proc.waitForFinished();
         }
     }
-    QApplication::processEvents();
 #endif
 
     // Notify the world about the font changes
