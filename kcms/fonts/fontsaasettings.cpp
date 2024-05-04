@@ -242,16 +242,16 @@ public:
     }
 
 private:
-    bool m_isImmutable;
-    bool m_antiAliasing;
-    bool m_antiAliasingChanged;
-    KXftConfig::SubPixel::Type m_subPixel;
-    bool m_subPixelChanged;
-    KXftConfig::Hint::Style m_hinting;
-    bool m_hintingChanged;
-    bool m_exclude;
-    int m_excludeFrom;
-    int m_excludeTo;
+    bool m_isImmutable = false;
+    bool m_antiAliasing = true;
+    bool m_antiAliasingChanged = false;
+    KXftConfig::SubPixel::Type m_subPixel = KXftConfig::SubPixel::NotSet;
+    bool m_subPixelChanged = false;
+    KXftConfig::Hint::Style m_hinting = KXftConfig::Hint::NotSet;
+    bool m_hintingChanged = false;
+    bool m_exclude = false;
+    int m_excludeFrom = 0;
+    int m_excludeTo = 0;
 };
 
 FontsAASettings::FontsAASettings(QObject *parent)
