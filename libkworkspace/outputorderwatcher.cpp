@@ -7,6 +7,8 @@
 
 #include "outputorderwatcher.h"
 
+#include <ranges>
+
 #include <QScreen>
 #include <QTimer>
 
@@ -216,33 +218,21 @@ void X11OutputOrderWatcher::refresh()
         }
     }
 
-    QStringList pendingOutputOrder;
-    pendingOutputOrder.reserve(orderMap.size());
-    std::sort(orderMap.begin(), orderMap.end());
-    std::transform(orderMap.cbegin(), orderMap.cend(), std::back_inserter(pendingOutputOrder), [](const auto &pr) {
-        return pr.second;
+    const auto screenNames = qGuiApp->screens() | std::views::transform(&QScreen::name);
+    const bool isScreenPresent = std::ranges::all_of(std::as_const(orderMap), [&screenNames](const auto &pr) {
+        return std::ranges::find(screenNames, std::get<QString>(pr)) != screenNames.end();
     });
-
-    for (const auto &name : std::as_const(pendingOutputOrder)) {
-        bool present = false;
-        for (auto *s : qApp->screens()) {
-            if (s->name() == name) {
-                present = true;
-                break;
-            }
-        }
+    if (!isScreenPresent) [[unlikely]] {
         // if the pending output order refers to screens
         // we don't know of yet, try again next time a screen is added
-
         // this seems unlikely given we have the server lock and the timing thing
-        if (!present) {
-            m_delayTimer->start();
-            return;
-        }
+        m_delayTimer->start();
+        return;
     }
 
-    if (pendingOutputOrder != m_outputOrder) {
-        m_outputOrder = std::move(pendingOutputOrder);
+    std::sort(orderMap.begin(), orderMap.end());
+    if (const auto pendingOutputs = std::views::values(std::as_const(orderMap)); !std::ranges::equal(pendingOutputs, std::as_const(m_outputOrder))) {
+        m_outputOrder = QStringList{pendingOutputs.begin(), pendingOutputs.end()};
         Q_EMIT outputOrderChanged(m_outputOrder);
     }
 }
