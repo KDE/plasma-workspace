@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-23 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 10:45+0400\n"
+"PO-Revision-Date: 2024-05-04 11:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -39,17 +39,17 @@ msgstr "النظام المتري (SI)"
 #: binarydialectmodel.cpp:73
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr "ثنائي - كيبيبايت (كي.بايت)، ميبيبايت (مي.بايت)، جيبيبايت (جي.بايت)"
+msgstr "ثنائي - كيبيبايت (كي.بايت)، ميبيبايت (مي.بايت)، جيبيبايت (غي.بايت)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr "ثنائي - كيلو بايت (ك.بايت)، ميجا بايت (م.بايت)، جيجا بايت (غ.بايت)"
+msgstr "ثنائي - كيلو بايت (ك.بايت)، ميغا بايت (م.بايت)، غيغا بايت (غ.بايت)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr "عشري - كيلو بايت (ك.بايت)، ميجا بايت (م.بايت)، جيجا بايت (غ.بايت)"
+msgstr "عشري - كيلو بايت (ك.بايت)، ميغا بايت (م.بايت)، غيغا بايت (غ.بايت)"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -456,7 +456,7 @@ msgstr " (التنسيق القياسي لـ %1)"
 #: regionandlangsettingsbase.kcfg:42
 #, kde-format
 msgid "Inherit Language"
-msgstr "توارث اللغة"
+msgstr "اللغة الموروثة"
 
 #: ui/AdvancedLanguageSelectPage.qml:20
 #, kde-format

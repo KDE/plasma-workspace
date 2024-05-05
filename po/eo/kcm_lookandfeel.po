@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 23:45+0100\n"
+"PO-Revision-Date: 2024-05-04 07:47+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -189,16 +189,14 @@ msgid "Titlebar Buttons layout"
 msgstr "Aranĝo de Titolbretaj Butonoj"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Aplikado de Labortabla aranĝo anstataŭigas vian nunan agordon de "
-"labortabloj, paneloj, dokoj kaj fenestraĵoj."
+"Aplikado de Labortabla aranĝo forigos la aktualan aron de labortabloj, "
+"paneloj, dokoj kaj fenestraĵoj, anstataŭigante ilin per tio, kion specifas "
+"la etoso."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

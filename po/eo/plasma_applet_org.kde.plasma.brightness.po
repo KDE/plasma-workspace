@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-21 17:45+0100\n"
+"PO-Revision-Date: 2024-05-04 13:23+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -78,14 +78,13 @@ msgstr "Klavara brileco ĉe %1%"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
-msgstr ""
+msgstr "Noktolumo suspendita; mezklaku por daŭrigi"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "Nokta Lumo"
+msgstr "Nokta Lumo suspendita"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
@@ -129,10 +128,9 @@ msgid "Scroll to adjust screen brightness"
 msgstr "Rulumu por alĝustigi ekranbrilecon"
 
 #: package/contents/ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Middle-click to toggle Night Light"
+#, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr "Mezklaku por baskuligi Noktolumon"
+msgstr "Mezklaku por suspend Noktolumon"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
@@ -144,7 +142,7 @@ msgstr "Agordi Noktlumon…"
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "Suspendita"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -204,7 +202,7 @@ msgstr "%1K"
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "Suspendi"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format
@@ -259,11 +257,3 @@ msgstr "Klavara Koloro"
 #, kde-format
 msgid "Night Light"
 msgstr "Nokta Lumo"
-
-#~ msgctxt "Status"
-#~ msgid "Night Light off"
-#~ msgstr "Noktolumo for"
-
-#~ msgctxt "Night light status"
-#~ msgid "Off"
-#~ msgstr "For"
