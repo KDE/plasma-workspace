@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-03 03:13+0900\n"
+"PO-Revision-Date: 2024-05-05 17:02+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -189,14 +189,13 @@ msgid "Titlebar Buttons layout"
 msgstr "標題列按鈕配置"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
-msgstr "套用桌面佈局將會取代您目前的桌面、面板、dock 和元件的設定。"
+msgstr ""
+"套用桌面佈局將會刪除目前的桌面、面板、dock 與元件設定，並將它們取代為主題所指"
+"定的。"
 
 #: ui/MoreOptions.qml:66
 #, kde-format

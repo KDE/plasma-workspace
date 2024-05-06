@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2023-06-11 17:48+0530\n"
+"PO-Revision-Date: 2024-05-05 14:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -125,7 +125,7 @@ msgstr "ரத்து செய்"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "புதியவற்றை பெறு…"
 
 #: ui/main.qml:103
 #, kde-format
@@ -187,16 +187,13 @@ msgid "Titlebar Buttons layout"
 msgstr "தலைப்புப்பட்டை பட்டன்களின் தளவமைப்பு"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
 "பணிமேடைத் தளவமைப்பை செயல்படுத்துவது, தற்போதுள்ள பணிமேடைகள், பலகைகள், மற்றும் "
-"பிளாஸ்மாய்டுகள் ஆகியவற்றின் அமைப்பை மாற்றும்"
+"பிளாஸ்மாய்டுகளை நீக்கி, தளவமைப்பில் குறிப்பிடப்பட்டுள்ளவாறு உருவாக்கும்."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
