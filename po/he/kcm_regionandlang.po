@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-23 00:40+0000\n"
-"PO-Revision-Date: 2024-04-23 08:31+0300\n"
+"PO-Revision-Date: 2024-05-05 11:54+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -481,7 +481,7 @@ msgstr "אין תמיכה בשפה „%1”"
 #: ui/AdvancedLanguageSelectPage.qml:49
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr "יש להוסיף שפות בסדר אותו ברצונך לראות אותן ביישומים שלך."
+msgstr "יש להוסיף שפות בסדר בו תופענה ביישומים שלך."
 
 #: ui/AdvancedLanguageSelectPage.qml:87
 #, kde-format

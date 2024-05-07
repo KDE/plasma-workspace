@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-12 06:58+0300\n"
+"PO-Revision-Date: 2024-05-05 11:53+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -148,8 +148,7 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
-"קובץ תמונה או חבילת kpackage של תמונת רקע שברצונך להגדיר כתמונת רקע להפעלת "
-"הפלזמה שלך"
+"קובץ תמונה או חבילת kpackage של תמונת רקע להגדרה כתמונת רקע להפעלת הפלזמה שלך"
 
 #: plasma-apply-wallpaperimage.cpp:44
 #, kde-format

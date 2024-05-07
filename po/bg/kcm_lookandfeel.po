@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 07:58+0200\n"
+"PO-Revision-Date: 2024-05-06 10:25+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -188,16 +188,13 @@ msgid "Titlebar Buttons layout"
 msgstr "Оформление на бутоните на заглавната лента"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
 "Прилагането на оформление на работен плот замества текущата конфигурация на "
-"работните плотове, панелите и уиджетите.."
+"работните плотове, панелите и уиджетите със зададените в новата тема."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

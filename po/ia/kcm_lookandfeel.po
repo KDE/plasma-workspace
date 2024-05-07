@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-02 12:35+0200\n"
+"PO-Revision-Date: 2024-05-06 14:42+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -190,16 +190,14 @@ msgid "Titlebar Buttons layout"
 msgstr "Disposition de buttones de barra de titulo"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets."
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Applicar un disposition de Scriptorio reimplacia tu configuration currente "
-"de scriptorios, pannellos, docks e widgets."
+"Applicar un disposition de Scriptorio  delera le currente insimul de "
+"scriptorios, pannellos, docks e widgets, reimplaciante los conlo que le "
+"thema specifica."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
