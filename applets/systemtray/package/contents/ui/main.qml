@@ -5,15 +5,15 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.5
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.15
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
 import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.plasmoid 2.0
-import org.kde.draganddrop 2.0 as DnD
-import org.kde.kirigami 2.5 as Kirigami // For Settings.tabletMode
-import org.kde.kitemmodels 1.0 as KItemModels
+import org.kde.ksvg as KSvg
+import org.kde.plasma.plasmoid
+import org.kde.draganddrop as DnD
+import org.kde.kirigami as Kirigami // For Settings.tabletMode
+import org.kde.kitemmodels as KItemModels
 
 import "items"
 
