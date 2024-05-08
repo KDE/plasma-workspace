@@ -49,22 +49,9 @@ PlasmaComponents3.ScrollView {
         //! labels to be aligned properly at all items. At the same time this approach does not
         //! enforce labels with 3 lines at all cases so translations that require only one or two
         //! lines will always look consistent with no too much padding
-        readonly property int minLabelHeight: {
-            var minHeight = 0;
-
-            for(let i in contentItem.children){
-                var gridItem = contentItem.children[i];
-                if (!gridItem || !gridItem.hasOwnProperty("item") || !gridItem.item.hasOwnProperty("labelHeight")) {
-                    continue;
-                }
-
-                if (gridItem.item.labelHeight > minHeight) {
-                    minHeight = gridItem.item.labelHeight;
-                }
-            }
-
-            return minHeight;
-        }
+        readonly property int minLabelHeight: Math.max(...contentItem.children.map(gridItem =>
+            ((gridItem as Loader)?.item as Items.AbstractItem)?.labelHeight ?? 0
+        ));
 
         model: KItemModels.KSortFilterProxyModel {
             sourceModel: Plasmoid.systemTrayModel

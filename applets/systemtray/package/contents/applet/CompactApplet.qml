@@ -11,21 +11,23 @@ import org.kde.kirigami as Kirigami
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.plasmoid
 
+import "../ui/items" as Items
+
 PlasmaCore.ToolTipArea {
     id: appletRoot
     objectName: "org.kde.desktop-CompactApplet"
     anchors.fill: parent
 
-    mainText: plasmoidItem ? plasmoidItem.toolTipMainText : ""
-    subText: plasmoidItem ? plasmoidItem.toolTipSubText : ""
-    location: if (plasmoidItem && plasmoidItem.parent && plasmoidItem.parent.inHiddenLayout && Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
+    mainText: plasmoidItem?.toolTipMainText ?? ""
+    subText: plasmoidItem?.toolTipSubText ?? ""
+    location: if ((plasmoidItem?.parent as Items.AbstractItem)?.inHiddenLayout && Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
         return PlasmaCore.Types.RightEdge;
     } else {
         return Plasmoid.location;
     }
-    active: plasmoidItem ? !plasmoidItem.expanded : 0
-    textFormat: plasmoidItem ? plasmoidItem.toolTipTextFormat : 0
-    mainItem: plasmoidItem && plasmoidItem.toolTipItem ? plasmoidItem.toolTipItem : null
+    active: plasmoidItem ? !plasmoidItem.expanded : false
+    textFormat: plasmoidItem?.toolTipTextFormat ?? Text.AutoText
+    mainItem: plasmoidItem?.toolTipItem ?? null
 
     property Item fullRepresentation
     property Item compactRepresentation

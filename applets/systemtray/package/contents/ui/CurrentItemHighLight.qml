@@ -127,8 +127,8 @@ KSvg.FrameSvgItem {
         } else {
             x = p.x;
             y = p.y;
-            width = nextItem.width
-            height = nextItem.height
+            width = nextItem.width;
+            height = nextItem.height;
         }
 
         highlightedItem = nextItem;

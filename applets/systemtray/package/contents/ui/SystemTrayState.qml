@@ -70,7 +70,7 @@ QtObject {
     }
 
     //listen on SystemTray AppletInterface signals
-    property Connections plasmoidConnections: Connections {
+    readonly property Connections plasmoidConnections: Connections {
         target: Plasmoid
         //emitted when activation is requested, for example by using a global keyboard shortcut
         function onActivated() {
@@ -78,7 +78,7 @@ QtObject {
         }
     }
 
-    property Connections rootConnections: Connections {
+    readonly property Connections rootConnections: Connections {
         function onExpandedChanged() {
             if (acceptExpandedChange) {
                 expanded = root.expanded
@@ -88,7 +88,7 @@ QtObject {
         }
     }
 
-    property Connections activeAppletConnections: Connections {
+    readonly property Connections activeAppletConnections: Connections {
         target: activeApplet && activeApplet
 
         function onExpandedChanged() {
@@ -97,5 +97,4 @@ QtObject {
             }
         }
     }
-
 }

@@ -13,14 +13,14 @@ import org.kde.plasma.plasmoid
 AbstractItem {
     id: plasmoidContainer
 
-    property Item applet: model.applet || null
-    text: applet ? applet.plasmoid.title : ""
+    property Item applet: model.applet ?? null
+    text: applet?.plasmoid.title ?? ""
 
-    itemId: applet ? applet.plasmoid.pluginName : ""
-    mainText: applet ? applet.toolTipMainText : ""
-    subText: applet ? applet.toolTipSubText : ""
-    mainItem: applet && applet.toolTipItem ? applet.toolTipItem : null
-    textFormat: applet ? applet.toolTipTextFormat : 0 /* Text.AutoText, the default value */
+    itemId: applet?.plasmoid.pluginName ?? ""
+    mainText: applet?.toolTipMainText ?? ""
+    subText: applet?.toolTipSubText ?? ""
+    mainItem: applet?.toolTipItem ?? null
+    textFormat: applet?.toolTipTextFormat ?? 0 /* Text.AutoText, the default value */
     active: systemTrayState.activeApplet !== applet
 
     // FIXME: Use an input type agnostic way to activate whatever the primary
@@ -38,7 +38,7 @@ AbstractItem {
             return
         }
         //forward click event to the applet
-        var appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
+        const appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
         const mouseArea = findMouseArea(appletItem)
 
         if (mouseArea && mouse.button !== Qt.RightButton) {
@@ -71,11 +71,23 @@ AbstractItem {
             return
         }
         //forward wheel event to the applet
-        var appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
+        const appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
         const mouseArea = findMouseArea(appletItem)
         if (mouseArea) {
             mouseArea.wheel(wheel)
         }
+    }
+
+    function __isSuitableMouseArea(child: Item): bool {
+        const item = child.parent;
+        return child instanceof MouseArea
+            && child.enabled
+            // check if MouseArea covers the entire item
+            && (child.anchors.fill === item
+                || (child.x === 0
+                    && child.y === 0
+                    && child.width === item.width
+                    && child.height === item.height));
     }
 
     //some heuristics to find MouseArea
@@ -88,17 +100,7 @@ AbstractItem {
             return item
         }
 
-        for (var i = 0; i < item.children.length; i++) {
-            const child = item.children[i]
-            if (child instanceof MouseArea && child.enabled) {
-                //check if MouseArea covers the entire item
-                if (child.anchors.fill === item || (child.x === 0 && child.y === 0 && child.height === item.height && child.width === item.width)) {
-                    return child
-                }
-            }
-        }
-
-        return null
+        return item.children.find(__isSuitableMouseArea) ?? null;
     }
 
     //This is to make preloading effective, minimizes the scene changes
