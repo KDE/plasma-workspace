@@ -6,13 +6,13 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Controls
+import QtQuick.Controls as QQC2
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.plasma.plasmoid
 
-StackView {
+QQC2.StackView {
     id: mainStack
     focus: true
 
@@ -69,7 +69,7 @@ StackView {
                 "opacity": 1,
                 "KeyNavigation.up": mainStack.KeyNavigation.up,
                 "KeyNavigation.backtab": mainStack.KeyNavigation.backtab,
-            }, isTransitionEnabled ? (unFlipped ? StackView.PushTransition : StackView.PopTransition) : StackView.Immediate);
+            }, isTransitionEnabled ? (unFlipped ? QQC2.StackView.PushTransition : QQC2.StackView.PopTransition) : QQC2.StackView.Immediate);
         } else {
             mainStack.clear();
         }

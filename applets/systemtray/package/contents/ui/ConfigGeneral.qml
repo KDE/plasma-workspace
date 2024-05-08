@@ -11,9 +11,9 @@ import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
 
 import org.kde.kirigami as Kirigami
-import org.kde.kcmutils as KCM
+import org.kde.kcmutils as KCMUtils
 
-KCM.SimpleKCM {
+KCMUtils.SimpleKCM {
     property bool cfg_scaleIconsToFit
     property int cfg_iconSpacing
 

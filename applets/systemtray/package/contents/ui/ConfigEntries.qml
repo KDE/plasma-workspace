@@ -14,10 +14,10 @@ import QtQuick.Layouts
 import org.kde.plasma.plasmoid
 import org.kde.kquickcontrols as KQC
 import org.kde.kirigami as Kirigami
-import org.kde.kitemmodels
-import org.kde.kcmutils as KCM
+import org.kde.kitemmodels as KItemModels
+import org.kde.kcmutils as KCMUtils
 
-KCM.ScrollViewKCM {
+KCMUtils.ScrollViewKCM {
     id: iconsPage
 
     signal configurationChanged
@@ -56,7 +56,7 @@ KCM.ScrollViewKCM {
 
         clip: true
 
-        model: KSortFilterProxyModel {
+        model: KItemModels.KSortFilterProxyModel {
             sourceModel: Plasmoid.configSystemTrayModel
             filterString: filterField.text
             filterCaseSensitivity: Qt.CaseInsensitive

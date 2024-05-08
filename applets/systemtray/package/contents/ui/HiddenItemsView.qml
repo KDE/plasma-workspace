@@ -13,7 +13,7 @@ import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.plasmoid
 import org.kde.kitemmodels as KItemModels
 
-import "items"
+import "items" as Items
 import org.kde.plasma.extras as PlasmaExtras
 
 PlasmaComponents3.ScrollView {
@@ -73,7 +73,7 @@ PlasmaComponents3.ScrollView {
                 return value === PlasmaCore.Types.PassiveStatus
             }
         }
-        delegate: ItemLoader {
+        delegate: Items.ItemLoader {
             width: hiddenTasks.cellWidth
             height: hiddenTasks.cellHeight
             minLabelHeight: hiddenTasks.minLabelHeight

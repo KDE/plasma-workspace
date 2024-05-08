@@ -15,7 +15,7 @@ Loader {
     property var itemModel: model
 
     Binding {
-        target: item
+        target: itemLoader.item
         property: "minLabelHeight"
         value: itemLoader.minLabelHeight
     }
