@@ -116,7 +116,7 @@ QCoro::Task<void> ScreenBrightnessControl::init()
     if (!QDBusConnection::sessionBus().connect(SOLID_POWERMANAGEMENT_SERVICE,
                                                u"/org/kde/Solid/PowerManagement/Actions/BrightnessControl"_s,
                                                u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s,
-                                               u"maxBrightnessChanged"_s,
+                                               u"brightnessMaxChanged"_s,
                                                this,
                                                SLOT(onBrightnessMaxChanged(int)))) {
         qDebug() << "error connecting to max brightness changes via dbus:";
