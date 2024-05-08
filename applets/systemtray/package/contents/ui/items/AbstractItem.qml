@@ -6,6 +6,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 import QtQuick.Layouts
 
@@ -17,18 +19,27 @@ import org.kde.plasma.plasmoid
 PlasmaCore.ToolTipArea {
     id: abstractItem
 
-    property var model: itemModel
+    required property int index
+    required property var model
 
-    property string itemId
-    property alias text: label.text
-    property alias labelHeight: label.implicitHeight
-    property alias iconContainer: iconContainer
-    property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
-    property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
-    property bool effectivePressed: false
-    property real minLabelHeight: 0
+    required property real minLabelHeight
+
+    required property string itemId
+    /*required*/ property alias text: label.text
+
+    // subclasses need to bind these tooltip properties
+    required mainText
+    required subText
+    required textFormat
+
+    readonly property alias labelHeight: label.implicitHeight
+    readonly property alias iconContainer: iconContainer
+    readonly property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
+    readonly property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
     readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
+
+    property bool effectivePressed: false
 
     // input agnostic way to trigger the main action
     signal activated(var pos)
@@ -38,11 +49,6 @@ PlasmaCore.ToolTipArea {
     signal pressed(var mouse)
     signal wheel(var wheel)
     signal contextMenu(var mouse)
-
-    /* subclasses need to assign to this tooltip properties
-    mainText:
-    subText:
-    */
 
     location: {
         if (inHiddenLayout) {

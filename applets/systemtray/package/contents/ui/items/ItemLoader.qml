@@ -4,22 +4,19 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 
 Loader {
-    id: itemLoader
+    required property int index
+    required property var model
 
-    property real minLabelHeight: 0
+    required property real minLabelHeight
 
-    z: x+1 // always be above what it's on top of, even for x==0
-    property var itemModel: model
+    z: x + 1 // always be above what it's on top of, even for x==0
 
-    Binding {
-        target: itemLoader.item
-        property: "minLabelHeight"
-        value: itemLoader.minLabelHeight
-    }
-    source: {
+    readonly property url __url: {
         if (model.itemType === "Plasmoid" && model.hasApplet) {
             return Qt.resolvedUrl("PlasmoidItem.qml")
         } else if (model.itemType === "StatusNotifier") {
@@ -27,5 +24,15 @@ Loader {
         }
         console.warn("SystemTray ItemLoader: Invalid state, cannot determine source!")
         return ""
+    }
+
+    // Avoid relying on context properties using initialProperties with bindings.
+    // See https://bugreports.qt.io/browse/QTBUG-125070
+    on__UrlChanged: {
+        setSource(__url, {
+            index: Qt.binding(() => index),
+            model: Qt.binding(() => model),
+            minLabelHeight: Qt.binding(() => minLabelHeight),
+        });
     }
 }

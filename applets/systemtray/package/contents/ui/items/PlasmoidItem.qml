@@ -5,6 +5,8 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
 
 import org.kde.plasma.components as PlasmaComponents3
