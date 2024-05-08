@@ -116,7 +116,7 @@ msgstr "电量和电池"
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "电池不在电池仓中"
 
 #: package/contents/ui/main.qml:129
 #, kde-format

@@ -188,16 +188,11 @@ msgid "Titlebar Buttons layout"
 msgstr "Rozvržení tlačítek titulkového pruhu"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Použití rozvržení pracovní plochy nahradí vaše nastavení ploch, panelů, doků "
-"a widgetů"
 
 #: ui/MoreOptions.qml:66
 #, kde-format

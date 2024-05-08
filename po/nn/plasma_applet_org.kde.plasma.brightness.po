@@ -264,11 +264,3 @@ msgstr "Lysstyrke tastatur"
 #, kde-format
 msgid "Night Light"
 msgstr "Kveldsfargar"
-
-#~ msgctxt "Status"
-#~ msgid "Night Light off"
-#~ msgstr "Kveldsfargar av"
-
-#~ msgctxt "Night light status"
-#~ msgid "Off"
-#~ msgstr "Av"

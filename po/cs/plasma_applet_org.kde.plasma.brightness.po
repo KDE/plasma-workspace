@@ -80,11 +80,10 @@ msgid "Night Light suspended; middle-click to resume"
 msgstr ""
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "Noční světlo"
+msgstr ""
 
 #: package/contents/ui/main.qml:92
 #, kde-format
@@ -257,11 +256,3 @@ msgstr "Barvy klávesnice"
 #, kde-format
 msgid "Night Light"
 msgstr "Noční světlo"
-
-#~ msgctxt "Status"
-#~ msgid "Night Light off"
-#~ msgstr "Noční světlo vypnuto"
-
-#~ msgctxt "Night light status"
-#~ msgid "Off"
-#~ msgstr "Vypnuto"

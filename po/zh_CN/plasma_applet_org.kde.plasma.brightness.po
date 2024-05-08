@@ -81,11 +81,10 @@ msgid "Night Light suspended; middle-click to resume"
 msgstr ""
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "夜间颜色"
+msgstr ""
 
 #: package/contents/ui/main.qml:92
 #, kde-format
@@ -129,10 +128,9 @@ msgid "Scroll to adjust screen brightness"
 msgstr "滚动鼠标滚轮以调整屏幕亮度"
 
 #: package/contents/ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Middle-click to toggle Night Light"
+#, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr "中键点击开关夜间颜色"
+msgstr ""
 
 #: package/contents/ui/main.qml:213
 #, kde-format
@@ -259,11 +257,3 @@ msgstr "键盘颜色"
 #, kde-format
 msgid "Night Light"
 msgstr "夜间颜色"
-
-#~ msgctxt "Status"
-#~ msgid "Night Light off"
-#~ msgstr "夜间颜色关闭"
-
-#~ msgctxt "Night light status"
-#~ msgid "Off"
-#~ msgstr "关"
