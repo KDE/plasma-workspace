@@ -122,6 +122,12 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(&m_strutsTimer, &QTimer::timeout, this, &PanelView::updateExclusiveZone);
 
     connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::updateEditModeLabel);
+    connect(m_corona, &Plasma::Corona::availableScreenRectChanged, this, [this](int id) {
+        if (!containment() || id != containment()->screen() || containment()->formFactor() != Plasma::Types::Vertical) {
+            return;
+        }
+        positionPanel();
+    });
 
     // Register enums
     qmlRegisterUncreatableMetaObject(PanelView::staticMetaObject, "org.kde.plasma.shell.panel", 0, 1, "Global", QStringLiteral("Error: only enums"));
@@ -349,23 +355,21 @@ void PanelView::setLength(int value)
 
 int PanelView::effectiveMaximumLength() const
 {
-    if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
-        if (formFactor() == Plasma::Types::Vertical) {
-            return screenToFollow()->geometry().height();
+    if (formFactor() == Plasma::Types::Vertical) {
+        int extraEmptySpace = 0;
+        if (m_alignment == Qt::AlignCenter) {
+            extraEmptySpace = std::abs(screenToFollow()->geometry().size().height() / 2.0 - containment()->availableRelativeScreenRect().center().y()) * 2;
+        }
+        if (m_lengthMode == PanelView::LengthMode::Custom) {
+            return std::min(m_maxLength, containment()->availableRelativeScreenRect().toRect().height() - extraEmptySpace);
+        } else {
+            return containment()->availableRelativeScreenRect().toRect().height() - extraEmptySpace;
+        }
+    } else {
+        if (m_lengthMode == PanelView::LengthMode::Custom) {
+            return std::min(m_maxLength, screenToFollow()->geometry().width());
         } else {
             return screenToFollow()->geometry().width();
-        }
-    } else if (m_lengthMode == PanelView::FitContent) {
-        if (formFactor() == Plasma::Types::Vertical) {
-            return containment()->availableRelativeScreenRect().toRect().height();
-        } else {
-            return containment()->availableRelativeScreenRect().toRect().width();
-        }
-    } else { // m_lengthMode == PanelView::LengthMode::Custom
-        if (formFactor() == Plasma::Types::Vertical) {
-            return std::min(m_maxLength, containment()->availableRelativeScreenRect().toRect().height());
-        } else {
-            return std::min(m_maxLength, containment()->availableRelativeScreenRect().toRect().width());
         }
     }
 }
@@ -396,24 +400,10 @@ void PanelView::setMaximumLength(int length)
 
 int PanelView::effectiveMinimumLength() const
 {
-    if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
-        if (formFactor() == Plasma::Types::Vertical) {
-            return screenToFollow()->geometry().height();
-        } else {
-            return screenToFollow()->geometry().width();
-        }
-    } else if (m_lengthMode == PanelView::FitContent) {
-        if (formFactor() == Plasma::Types::Vertical) {
-            return containment()->availableRelativeScreenRect().toRect().height();
-        } else {
-            return 1;
-        }
-    } else { // m_lengthMode == PanelView::LengthMode::Custom
-        if (formFactor() == Plasma::Types::Vertical) {
-            return std::min(m_minLength, containment()->availableRelativeScreenRect().toRect().height());
-        } else {
-            return std::min(m_minLength, containment()->availableRelativeScreenRect().toRect().width());
-        }
+    if (m_lengthMode == PanelView::LengthMode::Custom) {
+        return std::min(m_minLength, effectiveMaximumLength());
+    } else {
+        return 1;
     }
 }
 
