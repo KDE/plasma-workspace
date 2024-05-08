@@ -53,7 +53,7 @@ Item {
             PlasmaComponents.ToolButton {
                 id: backButton
                 visible: systemTrayState.activeApplet && systemTrayState.activeApplet.expanded && (hiddenLayout.itemCount > 0)
-                icon.name: LayoutMirroring.enabled ? "go-previous-symbolic-rtl" : "go-previous-symbolic"
+                icon.name: mirrored ? "go-previous-symbolic-rtl" : "go-previous-symbolic"
 
                 display: PlasmaComponents.AbstractButton.IconOnly
                 text: i18nc("@action:button", "Go Back")
