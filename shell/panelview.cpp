@@ -73,6 +73,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
         m_layerWindow->setScope(QStringLiteral("dock"));
         m_layerWindow->setCloseOnDismissed(false);
+        m_layerWindow->setAccomodateExclusiveZones(false);
     }
     if (targetScreen) {
         setPosition(targetScreen->geometry().center());
