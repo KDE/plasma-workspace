@@ -6,8 +6,9 @@
 */
 
 import QtQuick
-import org.kde.plasma.plasmoid
+
 import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.plasmoid
 
 AbstractItem {
     id: plasmoidContainer

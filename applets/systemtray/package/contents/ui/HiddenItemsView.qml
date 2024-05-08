@@ -8,13 +8,14 @@
 
 import QtQuick
 import QtQuick.Layouts
-import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components as PlasmaComponents3
-import org.kde.plasma.plasmoid
+
 import org.kde.kitemmodels as KItemModels
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.plasma.plasmoid
 
 import "items" as Items
-import org.kde.plasma.extras as PlasmaExtras
 
 PlasmaComponents3.ScrollView {
     id: hiddenTasksView

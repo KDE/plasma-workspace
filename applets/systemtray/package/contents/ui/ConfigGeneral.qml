@@ -7,11 +7,10 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid
-import org.kde.plasma.core as PlasmaCore
-
-import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCMUtils
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasmoid
 
 KCMUtils.SimpleKCM {
     property bool cfg_scaleIconsToFit

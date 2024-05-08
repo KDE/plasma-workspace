@@ -7,12 +7,13 @@
 
 import QtQuick
 import QtQuick.Layouts
-import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg as KSvg
-import org.kde.plasma.plasmoid
+
 import org.kde.draganddrop as DnD
 import org.kde.kirigami as Kirigami
 import org.kde.kitemmodels as KItemModels
+import org.kde.ksvg as KSvg
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.plasmoid
 
 import "items" as Items
 
