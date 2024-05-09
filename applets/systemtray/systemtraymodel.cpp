@@ -292,7 +292,11 @@ QVariant StatusNotifierModel::data(const QModelIndex &index, int role) const
         case Qt::DisplayRole:
             return sniData->title();
         case Qt::DecorationRole:
-            return extractIcon(sniData->icon(), sniData->iconName());
+            if (!sniData->iconName().isNull()) {
+                return sniData->iconName();
+            } else {
+                return extractIcon(sniData->icon());
+            }
         default:
             return QVariant();
         }
