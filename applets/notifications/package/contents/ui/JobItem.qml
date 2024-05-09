@@ -91,11 +91,6 @@ ColumnLayout {
             opacity: busyIndicator.running ? 0.6 : 1
             source: !fileInfo.error ? fileInfo.iconName : ""
 
-            Drag.dragType: Drag.Automatic
-            Drag.mimeData: {
-                "text/uri-list": [jobItem.url ?? ""]
-            }
-
             Behavior on opacity {
                 NumberAnimation {
                     duration: Kirigami.Units.longDuration
@@ -108,6 +103,8 @@ ColumnLayout {
                 anchors.fill: parent
 
                 dragParent: jobDragIcon
+                dragUrl: jobItem.url
+                dragPixmap: jobDragIcon.source
 
                 onActivated: jobItem.openUrl(jobItem.url)
                 onContextMenuRequested: (pos) => {

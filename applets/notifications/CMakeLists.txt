@@ -2,6 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.notification
 
 set(notificationapplet_SRCS
     notificationapplet.cpp
+    draghelper.cpp
     fileinfo.cpp
     filemenu.cpp
     globalshortcuts.cpp
@@ -9,6 +10,7 @@ set(notificationapplet_SRCS
     thumbnailer.cpp
     wheelforwarder.cpp
     notificationapplet.h
+    draghelper.h
     fileinfo.h
     filemenu.h
     globalshortcuts.h
@@ -25,6 +27,7 @@ target_link_libraries(org.kde.plasma.notifications
                       KF6::I18n
                       Plasma::Plasma
                       Plasma::PlasmaQuick
+                      KF6::CoreAddons
                       KF6::GlobalAccel
                       KF6::KIOGui
                       KF6::KIOWidgets # for PreviewJob

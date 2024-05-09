@@ -8,6 +8,8 @@ import QtQuick
 
 import org.kde.kirigami 2.20 as Kirigami
 
+import org.kde.plasma.private.notifications 2.0 as NotificationsApplet
+
 Item {
     id: area
 
@@ -16,8 +18,10 @@ Item {
 
     required property Item dragParent
     property int dragPixmapSize: Kirigami.Units.iconSizes.large
+    property url dragUrl
+    property var dragPixmap
 
-    readonly property alias dragging: dragHandler.active
+    readonly property bool dragging: NotificationsApplet.DragHelper.dragActive
     readonly property alias hovered: hoverHandler.hovered
 
     HoverHandler {
@@ -52,14 +56,11 @@ Item {
     DragHandler {
         id: dragHandler
 
-        onActiveChanged: if (active) {
-            area.dragParent.grabToImage(result => {
-                area.dragParent.Drag.imageSource = result.url;
-                area.dragParent.Drag.active = dragHandler.active;
-            }, Qt.size(area.dragPixmapSize, area.dragPixmapSize));
-        } else {
-            area.dragParent.Drag.imageSource = "";
-            area.dragParent.Drag.active = false;
+        onActiveChanged: {
+            if (active) {
+                NotificationsApplet.DragHelper.dragPixmapSize = area.dragPixmapSize;
+                NotificationsApplet.DragHelper.startDrag(area.dragParent, area.dragUrl, area.dragPixmap);
+            }
         }
     }
 }

@@ -81,6 +81,8 @@ Item {
         anchors.fill: parent
         dragParent: previewIcon
         dragPixmapSize: previewIcon.height
+        dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
+        dragUrl: thumbnailer.url
 
         onActivated: thumbnailArea.openUrl(thumbnailer.url)
         onContextMenuRequested: (pos) => {
@@ -112,11 +114,6 @@ Item {
             height: Kirigami.Units.iconSizes.roundedIconSize(parent.height)
             active: dragArea.hovered
             source: !thumbnailer.busy && !thumbnailer.hasPreview ? thumbnailer.iconName : ""
-
-            Drag.dragType: Drag.Automatic
-            Drag.mimeData: {
-                "text/uri-list": [thumbnailer.url],
-            }
         }
 
         PlasmaComponents3.BusyIndicator {
