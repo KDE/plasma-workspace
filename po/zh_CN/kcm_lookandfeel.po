@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "KDE 中国"
+msgstr "KDE 中国, Guo Yunhe, Tyson Tan"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kde-china@kde.org"
+msgstr "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com"
 
 #: kcm.cpp:467
 #, kde-format
@@ -190,6 +190,8 @@ msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
+"应用桌面布局将删除当前的桌面、面板、停靠栏和挂件，并将它们替换为主题指定的状"
+"态。"
 
 #: ui/MoreOptions.qml:66
 #, kde-format

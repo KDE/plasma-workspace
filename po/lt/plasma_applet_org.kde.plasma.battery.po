@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:40+0000\n"
-"PO-Revision-Date: 2024-04-24 00:32+0300\n"
+"PO-Revision-Date: 2024-05-08 22:37+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -126,7 +126,7 @@ msgstr "Maitinimas ir akumuliatorius"
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "Akumuliatoriaus skyriuje nėra akumuliatoriaus"
 
 #: package/contents/ui/main.qml:129
 #, kde-format

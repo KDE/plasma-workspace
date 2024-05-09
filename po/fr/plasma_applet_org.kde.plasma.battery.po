@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:40+0000\n"
-"PO-Revision-Date: 2024-04-11 09:05+0200\n"
+"PO-Revision-Date: 2024-05-06 18:33+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -113,11 +113,11 @@ msgid "%1%"
 msgstr "%1 %"
 
 #: package/contents/ui/main.qml:74
-#, fuzzy, kde-format
-#| msgid "An application is preventing sleep and screen locking:"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr ""
-"Une application empêche la veille automatique et le verrouillage d'écran :"
+"L'applet de batterie a activé la suppression de la veille et du verrouillage "
+"d'écran"
 
 #: package/contents/ui/main.qml:96
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -134,7 +134,7 @@ msgstr "Énergie et batterie"
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "La batterie est absente de son logement."
 
 #: package/contents/ui/main.qml:129
 #, kde-format
@@ -461,16 +461,15 @@ msgid ""
 "package manager and restarting the system."
 msgstr ""
 "Les profils d'énergie peuvent être pris en charge sur votre périphérique. "
-"<nl/>Veuillez tenter d’installer le paquet <command>power-profiles-daemon</"
-"command> à l’aide du gestionnaire de paquets de votre distribution, puis "
+"<nl/>Veuillez tenter d'installer le paquet <command>power-profiles-daemon</"
+"command> à l'aide du gestionnaire de paquets de votre distribution, puis "
 "redémarrez le système."
 
 #: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr "Batterie à %1 %"
+msgstr "Batterie %1"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
 #, kde-format

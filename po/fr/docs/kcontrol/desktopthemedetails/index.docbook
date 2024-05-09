@@ -46,7 +46,7 @@
 </articleinfo>
 
 <para
->&plasma; est livré avec plusieurs thèmes. Le thème de &plasma; définit la façon dont les différents composants de &plasma; sont affichés (&eg; les plasmoïdes, les panneaux, les composants graphiques). </para>
+>&plasma; est livré avec plusieurs thèmes. Le thème de &plasma; définit la façon dont les différents composants de &plasma; sont affichés (&pex; les plasmoïdes, les panneaux, les composants graphiques). </para>
 
 <para>
   <screenshot>
@@ -97,11 +97,11 @@
 ><imageobject
 ><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
 ></inlinemediaobject
-> l’icône d'écrasement dans le coin inférieur droit de l’icône de style. Pour annuler cette action, veuillez cliquer sur <inlinemediaobject
+> l'icône d'écrasement dans le coin inférieur droit de l'icône de style. Pour annuler cette action, veuillez cliquer sur <inlinemediaobject
 ><imageobject
 ><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
 ></inlinemediaobject
-> l’icône. Si vous appuyez sur le bouton <guibutton
+> l'icône. Si vous appuyez sur le bouton <guibutton
 >Appliquer</guibutton
 >, les styles sélectionnés pour la suppression sont effectivement supprimés, de sorte que vous ne pourrez pas annuler une suppression ou toutes les suppressions. </para>
 
@@ -151,7 +151,7 @@
 ></term>
     <listitem>
       <para
->Si vous avez téléchargé de nouveaux thèmes à partir d'Internet, vous pouvez les utiliser pour rechercher l'emplacement de ces nouveaux thèmes téléchargés. Un clic sur ce bouton fera apparaître la boîte de dialogue de fichier  de sélection d'un fichier d'archives pour le thème de &plasma; que vous avez téléchargé sur votre disque.</para>
+>Si vous avez téléchargé de nouveaux thèmes à partir d'Internet, vous pouvez les utiliser pour rechercher l'emplacement de ces nouveaux thèmes téléchargés. Un clic sur ce bouton fera apparaître la boîte de dialogue de fichier de sélection d'un fichier d'archives pour le thème de &plasma; que vous avez téléchargé sur votre disque.</para>
 
       <para
 >Un clic sur le bouton sur <guibutton
