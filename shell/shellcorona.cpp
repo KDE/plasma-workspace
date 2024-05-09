@@ -2077,7 +2077,7 @@ void ShellCorona::checkAddPanelAction()
 // Used by the plasma-desktop edit ToolBox
 void ShellCorona::showAddPanelContextMenu(const QPoint pos)
 {
-    m_addPanelsMenu.get()->exec(pos);
+    m_addPanelsMenu.get()->popup(pos);
 }
 
 void ShellCorona::populateAddPanelsMenu()
