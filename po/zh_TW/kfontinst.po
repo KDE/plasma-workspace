@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-29 01:38+0000\n"
-"PO-Revision-Date: 2024-04-06 01:20+0900\n"
+"PO-Revision-Date: 2024-05-08 13:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -1647,7 +1647,7 @@ msgstr "NKo"
 
 #: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
 msgid "Devanagari"
-msgstr "Devanagari"
+msgstr "天城文字"
 
 #: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
 msgid "Bengali"
