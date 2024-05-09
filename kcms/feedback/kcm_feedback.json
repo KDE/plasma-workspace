@@ -49,7 +49,7 @@
         "Description[vi]": "Cấu hình các thiết lập phản hồi của người dùng",
         "Description[x-test]": "xxConfigure user feedback settingsxx",
         "Description[zh_CN]": "配置用户反馈设置",
-        "Description[zh_TW]": "設定使用者意見回應",
+        "Description[zh_TW]": "設定使用者回饋",
         "FormFactors": [
             "tablet",
             "handset",
@@ -107,7 +107,7 @@
         "Name[vi]": "Phản hồi của người dùng",
         "Name[x-test]": "xxUser Feedbackxx",
         "Name[zh_CN]": "用户反馈",
-        "Name[zh_TW]": "使用者意見回應"
+        "Name[zh_TW]": "使用者回饋"
     },
     "X-DocPath": "kcontrol/feedback/index.html",
     "X-KDE-Keywords": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry",
