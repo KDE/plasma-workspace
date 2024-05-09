@@ -192,7 +192,7 @@ KCM.SimpleKCM {
                 QtControls.CheckBox {
                     id: antiAliasingCheckBox
                     checked: kcm.fontsAASettings.antiAliasing
-                    onCheckedChanged: kcm.fontsAASettings.antiAliasing = checked
+                    onToggled: kcm.fontsAASettings.antiAliasing = checked
                     text: i18n("Enable")
                     Layout.fillWidth: true
                 }
@@ -210,7 +210,7 @@ KCM.SimpleKCM {
             QtControls.CheckBox {
                 id: excludeCheckBox
                 checked: kcm.fontsAASettings.exclude
-                onCheckedChanged: kcm.fontsAASettings.exclude = checked;
+                onToggled: kcm.fontsAASettings.exclude = checked;
                 text: i18n("Exclude range from anti-aliasing")
                 Layout.fillWidth: true
 
@@ -229,7 +229,7 @@ KCM.SimpleKCM {
                 QtControls.SpinBox {
                     id: excludeFromSpinBox
                     stepSize: 1
-                    onValueChanged: kcm.fontsAASettings.excludeFrom = value
+                    onValueModified: kcm.fontsAASettings.excludeFrom = value
                     textFromValue: function(value, locale) { return i18n("%1 pt", value)}
                     valueFromText: function(text, locale) { return parseInt(text) }
                     editable: true
@@ -252,7 +252,7 @@ KCM.SimpleKCM {
                 QtControls.SpinBox {
                     id: excludeToSpinBox
                     stepSize: 1
-                    onValueChanged: kcm.fontsAASettings.excludeTo = value
+                    onValueModified: kcm.fontsAASettings.excludeTo = value
                     textFromValue: function(value, locale) { return i18n("%1 pt", value)}
                     valueFromText: function(text, locale) { return parseInt(text) }
                     editable: true
@@ -281,7 +281,9 @@ KCM.SimpleKCM {
                     id: subPixelCombo
                     Layout.preferredWidth: formLayout.maxImplicitWidth
                     currentIndex: kcm.subPixelCurrentIndex
-                    onCurrentIndexChanged: kcm.subPixelCurrentIndex = currentIndex;
+                    onActivated: (index) => {
+                        kcm.subPixelCurrentIndex = index
+                    }
                     model: kcm.subPixelOptionsModel
                     textRole: "display"
                     popup.height: popup.implicitHeight
@@ -329,7 +331,9 @@ KCM.SimpleKCM {
                     id: hintingCombo
                     Layout.preferredWidth: formLayout.maxImplicitWidth
                     currentIndex: kcm.hintingCurrentIndex
-                    onCurrentTextChanged: kcm.hintingCurrentIndex = currentIndex;
+                    onActivated: (index) => {
+                        kcm.hintingCurrentIndex = index
+                    }
                     model: kcm.hintingOptionsModel
                     textRole: "display"
                     popup.height: popup.implicitHeight
@@ -380,7 +384,7 @@ KCM.SimpleKCM {
                     id: dpiCheckBox
                     checked: kcm.fontsAASettings.dpi !== 0
                     text: i18n("Force font DPI:")
-                    onClicked: {
+                    onToggled: {
                         kcm.fontsAASettings.dpi = checked ? dpiSpinBox.value : 0
                         dpiTwiddledMessage.visible = checked
                     }
