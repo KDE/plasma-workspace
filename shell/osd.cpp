@@ -190,7 +190,7 @@ bool Osd::init()
         return true;
     }
 
-    const QUrl url = m_corona->lookAndFeelPackage().fileUrl("osdmainscript");
+    const QUrl url = m_corona->kPackage().fileUrl("osdmainscript");
     if (url.isEmpty()) {
         return false;
     }
@@ -203,7 +203,7 @@ bool Osd::init()
 
     if (m_osdObject->status() != QQmlComponent::Ready) {
         qCWarning(PLASMASHELL) << "Failed to load OSD QML file" << url;
-        auto fallbackUrl = m_corona->lookAndFeelPackage().fallbackPackage().fileUrl("osdmainscript");
+        auto fallbackUrl = m_corona->kPackage().fallbackPackage().fileUrl("osdmainscript");
         if (fallbackUrl.isEmpty() || fallbackUrl == url) {
             return false;
         }
