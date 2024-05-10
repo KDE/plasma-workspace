@@ -229,6 +229,9 @@ KCM.SimpleKCM {
 
                 if (fingerprintButton.dialog === null) {
                     const component = Qt.createComponent("FingerprintDialog.qml");
+                    if (component.status == Component.Error) {
+                        console.warn(component.errorString())
+                    }
                     component.incubateObject(usersDetailPage, {
                         focus: true,
                     });
