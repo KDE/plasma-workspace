@@ -229,8 +229,8 @@ QVariantList FingerprintModel::enrolledFingerprints()
     // convert fingers list to qlist of Finger objects
     QVariantList fingers;
     for (QString &finger : enrolledFingerprintsRaw()) {
-        for (Finger *storedFinger : FINGERS) {
-            if (storedFinger->internalName() == finger) {
+        for (const Finger &storedFinger : FINGERS) {
+            if (storedFinger.internalName() == finger) {
                 fingers.append(QVariant::fromValue(storedFinger));
                 break;
             }
@@ -245,8 +245,8 @@ QVariantList FingerprintModel::availableFingersToEnroll()
     QStringList enrolled = enrolledFingerprintsRaw();
 
     // add fingerprints to list that are not in the enrolled list
-    for (Finger *finger : FINGERS) {
-        if (!enrolledFingerprintsRaw().contains(finger->internalName())) {
+    for (const Finger &finger : FINGERS) {
+        if (!enrolledFingerprintsRaw().contains(finger.internalName())) {
             list.append(QVariant::fromValue(finger));
         }
     }
@@ -259,8 +259,8 @@ QVariantList FingerprintModel::unavailableFingersToEnroll()
     QStringList enrolled = enrolledFingerprintsRaw();
 
     // add fingerprints to list that are in the enrolled list
-    for (Finger *finger : FINGERS) {
-        if (enrolledFingerprintsRaw().contains(finger->internalName())) {
+    for (const Finger &finger : FINGERS) {
+        if (enrolledFingerprintsRaw().contains(finger.internalName())) {
             list.append(QVariant::fromValue(finger));
         }
     }

@@ -57,7 +57,6 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data)
     constexpr const char *uri_fm = "FingerprintModel";
 
     qmlRegisterUncreatableType<FprintDevice>(uri_fm, 1, 0, "FprintDevice", QStringLiteral("Only for enum access"));
-    qmlRegisterType<Finger>(uri_fm, 1, 0, "Finger");
 
     setButtons(Apply);
     auto font = QApplication::font("QLabel");

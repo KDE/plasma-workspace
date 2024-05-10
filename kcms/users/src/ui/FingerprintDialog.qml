@@ -91,76 +91,21 @@ Kirigami.OverlaySheet {
             }
         }
 
-        ColumnLayout {
-            id: fingerprints
-            spacing: Kirigami.Units.smallSpacing
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+        FingerprintList {
             anchors.fill: parent
 
-            Kirigami.InlineMessage {
-                id: errorMessage
-                type: Kirigami.MessageType.Error
-                visible: fingerprintModel.currentError !== ""
-                text: fingerprintModel.currentError
-                Layout.fillWidth: true
-                actions: [
-                    Kirigami.Action {
-                        icon.name: "dialog-close"
-                        onTriggered: fingerprintModel.currentError = ""
-                    }
-                ]
+            visible: fingerprintRoot.fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+
+            currentError: fingerprintRoot.fingerprintModel.currentError
+            model: fingerprintRoot.fingerprintModel.enrolledFingerprints
+
+            onReenrollFinger: finger => {
+                fingerprintRoot.currentFinger = finger;
+                fingerprintRoot.fingerprintModel.startEnrolling(finger);
             }
 
-            ListView {
-                id: fingerprintsList
-                model: kcm.fingerprintModel.deviceFound ? fingerprintModel.enrolledFingerprints : 0
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                delegate: Kirigami.SwipeListItem {
-                    property Finger finger: modelData
-                    // Don't need a background or hover effect for this use case
-                    hoverEnabled: false
-                    backgroundColor: "transparent"
-                    contentItem: RowLayout {
-                        Kirigami.Icon {
-                            source: "fingerprint"
-                            height: Kirigami.Units.iconSizes.medium
-                            width: Kirigami.Units.iconSizes.medium
-                        }
-                        QQC2.Label {
-                            Layout.fillWidth: true
-                            elide: Text.ElideRight
-                            text: finger.friendlyName
-                            textFormat: Text.PlainText
-                        }
-                    }
-                    actions: [
-                        Kirigami.Action {
-                            icon.name: "edit-entry"
-                            onTriggered: {
-                                fingerprintRoot.currentFinger = finger.internalName;
-                                fingerprintModel.startEnrolling(finger.internalName);
-                            }
-                            tooltip: i18n("Re-enroll finger")
-                        },
-                        Kirigami.Action {
-                            icon.name: "entry-delete"
-                            onTriggered: {
-                                fingerprintModel.deleteFingerprint(finger.internalName);
-                            }
-                            tooltip: i18n("Delete fingerprint")
-                        }
-                    ]
-                }
-
-                Kirigami.PlaceholderMessage {
-                    anchors.centerIn: parent
-                    width: parent.width - (Kirigami.Units.largeSpacing * 4)
-                    visible: fingerprintsList.count == 0
-                    text: i18n("No fingerprints added")
-                    icon.name: "fingerprint"
-                }
+            onDeleteFinger: finger => {
+                fingerprintRoot.fingerprintModel.deleteFingerprint(finger);
             }
         }
     }

@@ -14,23 +14,15 @@
 #include "fprint_device_interface.h"
 #include "fprint_manager_interface.h"
 
-class Finger : public QObject
+class Finger
 {
-    Q_OBJECT
+    Q_GADGET
     Q_PROPERTY(QString internalName READ internalName CONSTANT)
     Q_PROPERTY(QString friendlyName READ friendlyName CONSTANT)
 
 public:
-    explicit Finger(const Finger &finger, QObject *parent = nullptr)
-        : QObject(parent)
-        , m_internalName(finger.internalName())
-        , m_friendlyName(finger.friendlyName())
-    {
-    }
-
-    explicit Finger(QString internalName = "", QString friendlyName = "", QObject *parent = nullptr)
-        : QObject(parent)
-        , m_internalName(internalName)
+    explicit Finger(QString internalName = "", QString friendlyName = "")
+        : m_internalName(internalName)
         , m_friendlyName(friendlyName)
     {
     }
@@ -74,16 +66,16 @@ public:
     };
     Q_ENUM(DialogState)
 
-    const QList<Finger *> FINGERS = {new Finger("right-index-finger", i18n("Right index finger"), this),
-                                     new Finger("right-middle-finger", i18n("Right middle finger"), this),
-                                     new Finger("right-ring-finger", i18n("Right ring finger"), this),
-                                     new Finger("right-little-finger", i18n("Right little finger"), this),
-                                     new Finger("right-thumb", i18n("Right thumb"), this),
-                                     new Finger("left-index-finger", i18n("Left index finger"), this),
-                                     new Finger("left-middle-finger", i18n("Left middle finger"), this),
-                                     new Finger("left-ring-finger", i18n("Left ring finger"), this),
-                                     new Finger("left-little-finger", i18n("Left little finger"), this),
-                                     new Finger("left-thumb", i18n("Left thumb"), this)};
+    const QList<Finger> FINGERS = {Finger("right-index-finger", i18n("Right index finger")),
+                                   Finger("right-middle-finger", i18n("Right middle finger")),
+                                   Finger("right-ring-finger", i18n("Right ring finger")),
+                                   Finger("right-little-finger", i18n("Right little finger")),
+                                   Finger("right-thumb", i18n("Right thumb")),
+                                   Finger("left-index-finger", i18n("Left index finger")),
+                                   Finger("left-middle-finger", i18n("Left middle finger")),
+                                   Finger("left-ring-finger", i18n("Left ring finger")),
+                                   Finger("left-little-finger", i18n("Left little finger")),
+                                   Finger("left-thumb", i18n("Left thumb"))};
 
     Q_INVOKABLE void switchUser(QString username);
     bool claimDevice();
