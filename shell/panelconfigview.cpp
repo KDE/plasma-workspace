@@ -53,6 +53,8 @@ PanelRulerView::PanelRulerView(Plasma::Containment *containment, PanelView *pane
         m_layerWindow->setLayer(LayerShellQt::Window::LayerTop);
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         m_layerWindow->setScope(QStringLiteral("dock"));
+        // Don't get resized by other panels
+        m_layerWindow->setAccomodateExclusiveZones(false);
         m_layerWindow->setCloseOnDismissed(false);
     }
     setScreen(m_panelView->screen());
@@ -69,7 +71,6 @@ void PanelRulerView::syncPanelLocation()
     if (!mainItem()) {
         return;
     }
-    const QRect available = m_containment->corona()->availableScreenRect(m_containment->screen());
 
     switch (m_containment->location()) {
     case Plasma::Types::TopEdge:
@@ -89,85 +90,71 @@ void PanelRulerView::syncPanelLocation()
     switch (m_containment->location()) {
     case Plasma::Types::LeftEdge:
     case Plasma::Types::RightEdge:
-        setMaximumWidth(mainItem()->implicitWidth());
         setWidth(mainItem()->implicitWidth());
-        setMaximumHeight(available.height());
-        setHeight(available.height());
+        setHeight(screen()->geometry().height());
         break;
     case Plasma::Types::TopEdge:
     case Plasma::Types::BottomEdge:
     default:
-        setMaximumWidth(available.width());
-        setWidth(available.width());
-        setMaximumHeight(mainItem()->implicitHeight());
+        setWidth(screen()->geometry().width());
         setHeight(mainItem()->implicitHeight());
         break;
     }
 
     if (KWindowSystem::isPlatformX11()) {
 #if HAVE_X11
+        const QRect available = m_containment->corona()->availableScreenRect(m_containment->screen());
         KX11Extras::setType(winId(), NET::Dock);
         KX11Extras::setState(winId(), NET::KeepAbove);
         switch (m_containment->location()) {
         case Plasma::Types::TopEdge:
-            setPosition(available.topLeft() + screen()->geometry().topLeft());
+            setPosition(screen()->geometry().topLeft() + QPoint(0, available.top()));
             break;
         case Plasma::Types::LeftEdge:
-            setPosition(available.topLeft() + screen()->geometry().topLeft());
+            setPosition(screen()->geometry().topLeft() + QPoint(available.left(), 0));
             break;
         case Plasma::Types::RightEdge:
-            setPosition(available.topLeft() + screen()->geometry().topRight() - QPoint(width(), 0));
+            setPosition(screen()->geometry().topLeft() - QPoint(width(), 0) + QPoint(available.right(), 0));
             break;
         case Plasma::Types::BottomEdge:
         default:
-            setPosition(available.bottomLeft() + screen()->geometry().topLeft() - QPoint(0, height()));
+            setPosition(screen()->geometry().topLeft() - QPoint(0, height()) + QPoint(0, available.bottom()));
         }
 #endif
     } else if (m_layerWindow) {
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         LayerShellQt::Window::Anchors anchors;
+        QMargins margins;
 
         switch (m_containment->location()) {
         case Plasma::Types::TopEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorTop);
+            margins.setTop(m_panelView->height());
             break;
         case Plasma::Types::LeftEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+            margins.setLeft(m_panelView->width());
             break;
         case Plasma::Types::RightEdge:
             anchors.setFlag(LayerShellQt::Window::AnchorRight);
+            margins.setRight(m_panelView->width());
             break;
         case Plasma::Types::BottomEdge:
         default:
             anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+            margins.setBottom(m_panelView->height());
             break;
         }
 
         if (m_containment->formFactor() == Plasma::Types::Horizontal) {
-            switch (m_panelView->alignment()) {
-            case Qt::AlignLeft:
-                anchors.setFlag(LayerShellQt::Window::AnchorLeft);
-                break;
-            case Qt::AlignCenter:
-                break;
-            case Qt::AlignRight:
-                anchors.setFlag(LayerShellQt::Window::AnchorRight);
-                break;
-            }
+            anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+            anchors.setFlag(LayerShellQt::Window::AnchorRight);
         } else {
-            switch (m_panelView->alignment()) {
-            case Qt::AlignLeft:
-                anchors.setFlag(LayerShellQt::Window::AnchorTop);
-                break;
-            case Qt::AlignCenter:
-                break;
-            case Qt::AlignRight:
-                anchors.setFlag(LayerShellQt::Window::AnchorBottom);
-                break;
-            }
+            anchors.setFlag(LayerShellQt::Window::AnchorTop);
+            anchors.setFlag(LayerShellQt::Window::AnchorBottom);
         }
 
-        // m_layerWindow->setMargins(margins);
+        m_layerWindow->setMargins(margins);
         m_layerWindow->setAnchors(anchors);
 
         requestUpdate();
