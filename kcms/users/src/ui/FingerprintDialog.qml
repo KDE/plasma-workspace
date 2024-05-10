@@ -3,18 +3,17 @@
 
     SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
 */
+pragma ComponentBehavior: Bound
 
 import QtQuick 2.12
 import QtQuick.Layouts 1.3
 import QtQuick.Shapes 1.12
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.plasma.kcm.users 1.0 as UsersKCM
-import FingerprintModel 1.0
+import org.kde.kirigami as Kirigami
 
-Kirigami.OverlaySheet {
-    id: fingerprintRoot
+Kirigami.Dialog {
+    id: root
 
     property var fingerprintModel: kcm.fingerprintModel
     property string currentFinger
@@ -28,90 +27,122 @@ Kirigami.OverlaySheet {
 
     title: i18n("Configure Fingerprints")
 
-    footer: Kirigami.ActionToolBar {
-        flat: false
-        alignment: Qt.AlignRight
+    visible: true
 
-        actions: [
-            // FingerprintList State
-            Kirigami.Action {
-                text: i18n("Add")
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
-                enabled: fingerprintModel.availableFingersToEnroll.length !== 0
-                icon.name: "list-add"
-                onTriggered: fingerprintModel.dialogState = FingerprintDialog.DialogState.PickFinger
-            },
+    implicitWidth: Kirigami.Units.gridUnit * 20
+    implicitHeight: Kirigami.Units.gridUnit * 18
 
-            // Enrolling State
-            Kirigami.Action {
-                text: i18n("Cancel")
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
-                icon.name: "dialog-cancel"
-                onTriggered: fingerprintModel.stopEnrolling();
-            },
+    standardButtons: QQC2.Dialog.NoButton
 
-            // EnrollComplete State
-            Kirigami.Action {
-                text: i18n("Done")
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
-                icon.name: "dialog-ok"
-                onTriggered: fingerprintModel.stopEnrolling();
+    customFooterActions: [
+        // FingerprintList State
+        Kirigami.Action {
+            text: i18n("Add")
+            visible: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+            enabled: root.fingerprintModel.availableFingersToEnroll.length !== 0
+            icon.name: "list-add"
+            onTriggered: {
+                root.fingerprintModel.dialogState = FingerprintDialog.DialogState.PickFinger;
+                stack.push(pickFinger);
             }
-        ]
+        },
+
+        // Enrolling State
+        Kirigami.Action {
+            text: i18n("Cancel")
+            visible: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
+            icon.name: "dialog-cancel"
+            onTriggered: root.fingerprintModel.stopEnrolling()
+        },
+
+        // EnrollComplete State
+        Kirigami.Action {
+            text: i18n("Done")
+            visible: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
+            icon.name: "dialog-ok"
+            onTriggered: root.fingerprintModel.stopEnrolling()
+        }
+    ]
+
+    ColumnLayout {
+        anchors.fill: parent
+
+        Kirigami.InlineMessage {
+            type: Kirigami.MessageType.Error
+            visible: root.fingerprintModel.currentError !== ""
+            text: root.fingerprintModel.currentError
+            Layout.fillWidth: true
+            actions: [
+                Kirigami.Action {
+                    icon.name: "dialog-close"
+                    onTriggered: root.fingerprintModel.currentError = ""
+                }
+            ]
+        }
+
+        QQC2.StackView {
+            id: stack
+
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+
+            initialItem: fingerPrints
+        }
     }
 
-    Item {
-        id: rootPanel
+    Connections {
+        target: root.fingerprintModel
 
-        implicitWidth: Kirigami.Units.gridUnit * 20
-        implicitHeight: Kirigami.Units.gridUnit * 16
-
-        EnrollFeedback {
-            anchors.fill: parent
-
-            visible: fingerprintRoot.fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling || fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
-
-            done: fingerprintRoot.fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
-            enrollFeedback: fingerprintRoot.fingerprintModel.enrollFeedback
-            scanType: fingerprintRoot.fingerprintModel.scanType
-            finger: fingerprintRoot.currentFinger
-        }
-
-        PickFinger {
-            anchors.fill: parent
-
-            visible: fingerprintRoot.fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
-
-            availableFingers: fingerprintRoot.fingerprintModel.availableFingersToEnroll
-            unavailableFingers: fingerprintRoot.fingerprintModel.unavailableFingersToEnroll
-
-            onFingerPicked: finger => {
-                fingerprintRoot.currentFinger = finger
-                fingerprintRoot.fingerprintModel.startEnrolling(finger);
+        function onDialogStateChanged() {
+            if (root.fingerprintModel.dialogState == FingerprintDialog.FingerprintList) {
+                stack.clear();
+                stack.push(fingerPrints);
+            }
+            if (root.fingerprintModel.dialogState == FingerprintDialog.Enrolling) {
+                stack.push(enrolling);
             }
         }
+    }
+
+    Component {
+        id: enrolling
+
+        EnrollFeedback {
+            done: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
+            enrollFeedback: root.fingerprintModel.enrollFeedback
+            scanType: root.fingerprintModel.scanType
+            finger: root.currentFinger
+        }
+    }
+
+    Component {
+        id: pickFinger
+
+        PickFinger {
+            availableFingers: root.fingerprintModel.availableFingersToEnroll
+            unavailableFingers: root.fingerprintModel.unavailableFingersToEnroll
+
+            onFingerPicked: finger => {
+                root.currentFinger = finger;
+                root.fingerprintModel.startEnrolling(finger);
+            }
+        }
+    }
+
+    Component {
+        id: fingerPrints
 
         FingerprintList {
-            anchors.fill: parent
-
-            visible: fingerprintRoot.fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
-
-            currentError: fingerprintRoot.fingerprintModel.currentError
-            model: fingerprintRoot.fingerprintModel.enrolledFingerprints
+            model: root.fingerprintModel.enrolledFingerprints
 
             onReenrollFinger: finger => {
-                fingerprintRoot.currentFinger = finger;
-                fingerprintRoot.fingerprintModel.startEnrolling(finger);
+                root.currentFinger = finger;
+                root.fingerprintModel.startEnrolling(finger);
             }
 
             onDeleteFinger: finger => {
-                fingerprintRoot.fingerprintModel.deleteFingerprint(finger);
+                root.fingerprintModel.deleteFingerprint(finger);
             }
         }
-    }
-
-    Component.onCompleted: {
-        fingerprintButton.dialog = this;
-        open();
     }
 }
