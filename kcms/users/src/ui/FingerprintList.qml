@@ -25,40 +25,52 @@ ListView {
         required property string internalName
         required property string friendlyName
 
-        // Don't need a background or hover effect for this use case
+        text: friendlyName
+        width: ListView.view.width
         hoverEnabled: false
-        backgroundColor: "transparent"
+        down: false
+        highlighted: false
+
         contentItem: RowLayout {
-            Kirigami.Icon {
-                source: "fingerprint"
-                height: Kirigami.Units.iconSizes.medium
-                width: Kirigami.Units.iconSizes.medium
-            }
+
+            spacing: Kirigami.Units.mediumSpacing
+
             QQC2.Label {
+                text: delegate.text
+
                 Layout.fillWidth: true
-                elide: Text.ElideRight
-                text: delegate.friendlyName
-                textFormat: Text.PlainText
+            }
+
+            QQC2.ToolButton {
+                icon.name: "edit-entry"
+                text: i18n("Re-enroll finger")
+                display: QQC2.Button.IconOnly
+
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                QQC2.ToolTip.text: text
+                QQC2.ToolTip.visible: hovered || activeFocus
+
+                onClicked: root.reenrollFinger(delegate.internalName)
+            }
+
+            QQC2.ToolButton {
+                icon.name: "edit-delete"
+                text: i18n("Delete fingerprint")
+                display: QQC2.Button.IconOnly
+
+                QQC2.ToolTip.delay: Kirigami.Units.toolTipDelay
+                QQC2.ToolTip.text: text
+                QQC2.ToolTip.visible: hovered || activeFocus
+
+                onClicked: root.deleteFinger(delegate.internalName)
             }
         }
-        actions: [
-            Kirigami.Action {
-                icon.name: "edit-entry"
-                tooltip: i18n("Re-enroll finger")
-                onTriggered: root.reenrollFinger(delegate.internalName)
-            },
-            Kirigami.Action {
-                icon.name: "entry-delete"
-                tooltip: i18n("Delete fingerprint")
-                onTriggered: root.deleteFinger(delegate.internalName)
-            }
-        ]
     }
 
     Kirigami.PlaceholderMessage {
         anchors.centerIn: parent
         width: parent.width - (Kirigami.Units.largeSpacing * 4)
-        visible: root.count == 0
+        visible: root.count === 0
         text: i18n("No fingerprints added")
         icon.name: "fingerprint"
     }
