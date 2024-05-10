@@ -77,79 +77,17 @@ Kirigami.OverlaySheet {
             finger: fingerprintRoot.currentFinger
         }
 
-        ColumnLayout {
-            id: pickFinger
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
-            spacing: Kirigami.Units.largeSpacing
+        PickFinger {
             anchors.fill: parent
 
-            Kirigami.Heading {
-                level: 2
-                text: i18n("Pick a finger to enroll")
-                textFormat: Text.PlainText
-                Layout.alignment: Qt.AlignHCenter
-            }
+            visible: fingerprintRoot.fingerprintModel.dialogState === FingerprintDialog.DialogState.PickFinger
 
-            Item {
-                id: handContainer
-                implicitHeight: basePalm.height
-                Layout.fillWidth: true
+            availableFingers: fingerprintRoot.fingerprintModel.availableFingersToEnroll
+            unavailableFingers: fingerprintRoot.fingerprintModel.unavailableFingersToEnroll
 
-                property string currentFinger: ""
-                property string currentFingerData: ""
-
-                Image {
-                    id: basePalm
-                    source: kcm.recolorSVG(Qt.resolvedUrl("hand-images/palm.svg"), Kirigami.Theme.textColor)
-                    fillMode: Image.PreserveAspectFit
-                    width: handContainer.width
-                    opacity: 0.25
-                }
-
-                Repeater {
-                    model: fingerprintModel.availableFingersToEnroll
-                    delegate: Image {
-                        id: img
-                        activeFocusOnTab: true
-                        source: kcm.recolorSVG(Qt.resolvedUrl(`hand-images/${modelData.internalName}.svg`), color)
-                        readonly property color color: focus ?
-                            Kirigami.Theme.focusColor :
-                            (maskArea.hovered ? Kirigami.Theme.hoverColor : Kirigami.Theme.textColor)
-
-                        fillMode: Image.PreserveAspectFit
-                        anchors.fill: parent
-                        Accessible.name: modelData.friendlyName
-                        Accessible.focusable: true
-                        Accessible.role: Accessible.RadioButton
-                        Accessible.onPressAction: {
-                            img.activate()
-                        }
-                        Keys.onEnterPressed: {
-                            img.activate()
-                        }
-                        function activate() {
-                            fingerprintRoot.currentFinger = modelData.internalName;
-                            fingerprintModel.startEnrolling(modelData.internalName);
-                        }
-                        UsersKCM.MaskMouseArea {
-                            id: maskArea
-                            anchors.fill: parent
-                            onTapped: {
-                                img.activate()
-                            }
-                        }
-                    }
-                }
-
-                Repeater {
-                    model: fingerprintModel.unavailableFingersToEnroll
-                    delegate: Image {
-                        source: kcm.recolorSVG(Qt.resolvedUrl(`hand-images/${modelData.internalName}.svg`), Kirigami.Theme.textColor)
-                        fillMode: Image.PreserveAspectFit
-                        anchors.fill: parent
-                        opacity: 0.25
-                    }
-                }
+            onFingerPicked: finger => {
+                fingerprintRoot.currentFinger = finger
+                fingerprintRoot.fingerprintModel.startEnrolling(finger);
             }
         }
 
