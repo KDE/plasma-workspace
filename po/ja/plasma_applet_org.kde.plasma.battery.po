@@ -1,5 +1,5 @@
 # Translation of plasma_applet_battery into Japanese.
-# SPDX-FileCopyrightText: 2022, 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2007, 2008, 2009, 2010.
 # Taiki Komoda <kom@kde.gr.jp>, 2010.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 02:31+0000\n"
-"PO-Revision-Date: 2023-12-03 15:44+0900\n"
+"PO-Revision-Date: 2024-04-28 19:29+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BatteryItem.qml:105
 #, kde-format
@@ -164,7 +164,7 @@ msgstr "充電していません"
 #: package/contents/ui/main.qml:183
 #, kde-format
 msgid "Automatic sleep and screen locking are disabled"
-msgstr "自動的なスリープと画面ロックは無効化されました"
+msgstr "自動的なスリープと画面ロックは無効化されています"
 
 #: package/contents/ui/main.qml:188
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "省電力モードがオンになっています"
 #: package/contents/ui/main.qml:260
 #, kde-format
 msgid "The battery applet has enabled system-wide inhibition"
-msgstr "バッテリ アプレットがシステム全体の抑制を有効化しました"
+msgstr "バッテリアプレットがシステム全体の抑制を有効化しています"
 
 #: package/contents/ui/main.qml:299
 #, kde-format
