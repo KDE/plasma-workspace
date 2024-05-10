@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:40+0000\n"
 "PO-Revision-Date: 2024-03-24 17:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -22,67 +22,67 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "தொந்தரவு செய்யாமையை நிலைமாற்று"
 
-#: sourcesmodel.cpp:392
+#: sourcesmodel.cpp:405
 #, kde-format
 msgid "Other Applications"
 msgstr "மற்ற செயலிகள்"
 
-#: ui/ApplicationConfiguration.qml:92
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
 msgstr "தெரித்தெழும் அறிவிப்புகளை காட்டு"
 
-#: ui/ApplicationConfiguration.qml:106
+#: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "தொந்தரவு செய்யாத பயன்முறையில் காட்டு"
 
-#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "வரலாற்றில் காட்டு"
 
-#: ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:143
 #, kde-format
 msgid "Show notification badges"
 msgstr "அறிவிப்பு அடையாளக்குறிகளைக் காட்டு"
 
-#: ui/ApplicationConfiguration.qml:167
+#: ui/ApplicationConfiguration.qml:180
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "நிகழ்வுகளை அமைப்பது"
 
-#: ui/ApplicationConfiguration.qml:175
+#: ui/ApplicationConfiguration.qml:188
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr "தனிப்பட்ட நிகழ்வுகளுக்கான அறிவிப்புகளை அமைத்தலை இந்த செயலி ஆதரிக்கவில்லை"
 
-#: ui/ApplicationConfiguration.qml:269
+#: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "மேல்தோன்றும் அறிவிப்பை காட்டு"
 
-#: ui/ApplicationConfiguration.qml:278
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
 msgstr "ஒலியெழுப்பு"
 
-#: ui/ApplicationConfiguration.qml:289
+#: ui/ApplicationConfiguration.qml:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr "ஒலியின் முன்னோட்டம்"
 
-#: ui/ApplicationConfiguration.qml:315
+#: ui/ApplicationConfiguration.qml:328
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "மீட்டமை"
 
-#: ui/ApplicationConfiguration.qml:327
+#: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
 msgstr "ஒலிக்கோப்பை தேர்ந்தெடு"

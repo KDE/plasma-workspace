@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:40+0000\n"
 "PO-Revision-Date: 2024-03-22 19:14+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -25,38 +25,38 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "Перемкнути стан «Не турбувати»"
 
-#: sourcesmodel.cpp:392
+#: sourcesmodel.cpp:405
 #, kde-format
 msgid "Other Applications"
 msgstr "Інші програми"
 
-#: ui/ApplicationConfiguration.qml:92
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
 msgstr "Показувати контекстні вікна"
 
-#: ui/ApplicationConfiguration.qml:106
+#: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Показувати у режимі «Не турбувати»"
 
-#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "Показувати у журналі"
 
-#: ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:143
 #, kde-format
 msgid "Show notification badges"
 msgstr "Показувати пункти сповіщень"
 
-#: ui/ApplicationConfiguration.qml:167
+#: ui/ApplicationConfiguration.qml:180
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Налаштовування подій"
 
-#: ui/ApplicationConfiguration.qml:175
+#: ui/ApplicationConfiguration.qml:188
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
@@ -65,29 +65,29 @@ msgstr ""
 "Для цієї програми не передбачено підтримки налаштовування сповіщень на "
 "основі даних щодо подій"
 
-#: ui/ApplicationConfiguration.qml:269
+#: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "Показати повідомлення у вигульку"
 
-#: ui/ApplicationConfiguration.qml:278
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
 msgstr "Відтворити звук"
 
-#: ui/ApplicationConfiguration.qml:289
+#: ui/ApplicationConfiguration.qml:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr "Прослухати звук"
 
-#: ui/ApplicationConfiguration.qml:315
+#: ui/ApplicationConfiguration.qml:328
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "Скинути"
 
-#: ui/ApplicationConfiguration.qml:327
+#: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
 msgstr "Виберіть звуковий файл"

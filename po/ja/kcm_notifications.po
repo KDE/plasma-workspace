@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:40+0000\n"
 "PO-Revision-Date: 2024-02-26 03:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: ja\n"
@@ -23,67 +23,67 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "マナーモードをオン/オフ"
 
-#: sourcesmodel.cpp:392
+#: sourcesmodel.cpp:405
 #, kde-format
 msgid "Other Applications"
 msgstr "その他のアプリケーション"
 
-#: ui/ApplicationConfiguration.qml:92
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
 msgstr "ポップアップを表示"
 
-#: ui/ApplicationConfiguration.qml:106
+#: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "マナーモードでも表示"
 
-#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "履歴に表示"
 
-#: ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:143
 #, kde-format
 msgid "Show notification badges"
 msgstr "通知バッジを表示"
 
-#: ui/ApplicationConfiguration.qml:167
+#: ui/ApplicationConfiguration.qml:180
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "イベントを設定"
 
-#: ui/ApplicationConfiguration.qml:175
+#: ui/ApplicationConfiguration.qml:188
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr "このアプリケーションはイベントごとの通知の設定をサポートしていません"
 
-#: ui/ApplicationConfiguration.qml:269
+#: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "メッセージをポップアップで表示"
 
-#: ui/ApplicationConfiguration.qml:278
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
 msgstr "サウンドを再生"
 
-#: ui/ApplicationConfiguration.qml:289
+#: ui/ApplicationConfiguration.qml:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:315
+#: ui/ApplicationConfiguration.qml:328
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:327
+#: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:40+0000\n"
 "PO-Revision-Date: 2020-01-06 12:09+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -22,39 +22,39 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "Mittehäirimise lülitamine"
 
-#: sourcesmodel.cpp:392
+#: sourcesmodel.cpp:405
 #, kde-format
 msgid "Other Applications"
 msgstr "Muud rakendused"
 
-#: ui/ApplicationConfiguration.qml:92
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
 msgstr "Hüpikute näitamine"
 
-#: ui/ApplicationConfiguration.qml:106
+#: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "Näitamine häirevabas režiimis"
 
-#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "Näitamine ajaloos"
 
-#: ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:143
 #, kde-format
 msgid "Show notification badges"
 msgstr "Märguannete numbrimullide näitamine"
 
-#: ui/ApplicationConfiguration.qml:167
+#: ui/ApplicationConfiguration.qml:180
 #, fuzzy, kde-format
 #| msgid "Configure Events..."
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Seadista sündmusi ..."
 
-#: ui/ApplicationConfiguration.qml:175
+#: ui/ApplicationConfiguration.qml:188
 #, fuzzy, kde-format
 #| msgid ""
 #| "This application does not support configuring notifications on a per-"
@@ -64,29 +64,29 @@ msgid ""
 "basis"
 msgstr "See rakendus ei toeta märguannete seadistamist sündmuste alusel."
 
-#: ui/ApplicationConfiguration.qml:269
+#: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:278
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:289
+#: ui/ApplicationConfiguration.qml:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:315
+#: ui/ApplicationConfiguration.qml:328
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr ""
 
-#: ui/ApplicationConfiguration.qml:327
+#: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
 msgstr ""

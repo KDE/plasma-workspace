@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-22 00:39+0000\n"
+"POT-Creation-Date: 2024-05-10 00:40+0000\n"
 "PO-Revision-Date: 2024-03-22 08:12+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -23,67 +23,67 @@ msgstr ""
 msgid "Toggle do not disturb"
 msgstr "החלפת מצב ‚לא להפריע’"
 
-#: sourcesmodel.cpp:392
+#: sourcesmodel.cpp:405
 #, kde-format
 msgid "Other Applications"
 msgstr "יישומים אחרים"
 
-#: ui/ApplicationConfiguration.qml:92
+#: ui/ApplicationConfiguration.qml:105
 #, kde-format
 msgid "Show popups"
 msgstr "הצגת חלוניות קופצות"
 
-#: ui/ApplicationConfiguration.qml:106
+#: ui/ApplicationConfiguration.qml:119
 #, kde-format
 msgid "Show in do not disturb mode"
 msgstr "הצגה במצב ‚לא להפריע’"
 
-#: ui/ApplicationConfiguration.qml:119 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:183
 #, kde-format
 msgid "Show in history"
 msgstr "הצגה בהיסטוריה"
 
-#: ui/ApplicationConfiguration.qml:130
+#: ui/ApplicationConfiguration.qml:143
 #, kde-format
 msgid "Show notification badges"
 msgstr "הצגת עיטורי התראה"
 
-#: ui/ApplicationConfiguration.qml:167
+#: ui/ApplicationConfiguration.qml:180
 #, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "הגדרת אירועים"
 
-#: ui/ApplicationConfiguration.qml:175
+#: ui/ApplicationConfiguration.qml:188
 #, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr "היישום הזה לא תומך בהגדרת התראות בהתאם לאירוע"
 
-#: ui/ApplicationConfiguration.qml:269
+#: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
 msgstr "הצגת הודעה בחלונית קופצת"
 
-#: ui/ApplicationConfiguration.qml:278
+#: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
 msgstr "השמעת צליל"
 
-#: ui/ApplicationConfiguration.qml:289
+#: ui/ApplicationConfiguration.qml:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
 msgstr "השמעת צליל מקדימה"
 
-#: ui/ApplicationConfiguration.qml:315
+#: ui/ApplicationConfiguration.qml:328
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
 msgstr "איפוס"
 
-#: ui/ApplicationConfiguration.qml:327
+#: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
 msgstr "בחירת קובץ צליל"
