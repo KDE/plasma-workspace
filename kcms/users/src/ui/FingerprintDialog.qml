@@ -66,105 +66,15 @@ Kirigami.OverlaySheet {
         implicitWidth: Kirigami.Units.gridUnit * 20
         implicitHeight: Kirigami.Units.gridUnit * 16
 
-        ColumnLayout {
-            id: enrollFeedback
-            spacing: Kirigami.Units.largeSpacing * 2
-            visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling || fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
+        EnrollFeedback {
             anchors.fill: parent
 
-            Kirigami.Heading {
-                level: 2
-                text: i18n("Enrolling Fingerprint")
-                textFormat: Text.PlainText
-                Layout.alignment: Qt.AlignHCenter
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
-            }
+            visible: fingerprintRoot.fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling || fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
 
-            QQC2.Label {
-                text: {
-                    if (fingerprintModel.scanType == FprintDevice.Press) {
-                        if (fingerprintRoot.currentFinger == "right-index-finger") {
-                            return i18n("Please repeatedly press your right index finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "right-middle-finger") {
-                            return i18n("Please repeatedly press your right middle finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "right-ring-finger") {
-                            return i18n("Please repeatedly press your right ring finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "right-little-finger") {
-                            return i18n("Please repeatedly press your right little finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "right-thumb") {
-                            return i18n("Please repeatedly press your right thumb on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-index-finger") {
-                            return i18n("Please repeatedly press your left index finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-middle-finger") {
-                            return i18n("Please repeatedly press your left middle finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-ring-finger") {
-                            return i18n("Please repeatedly press your left ring finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-little-finger") {
-                            return i18n("Please repeatedly press your left little finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-thumb") {
-                            return i18n("Please repeatedly press your left thumb on the fingerprint sensor.")
-                        }
-                    } else if (fingerprintModel.scanType == FprintDevice.Swipe) {
-                        if (fingerprintRoot.currentFinger == "right-index-finger") {
-                            return i18n("Please repeatedly swipe your right index finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "right-middle-finger") {
-                            return i18n("Please repeatedly swipe your right middle finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "right-ring-finger") {
-                            return i18n("Please repeatedly swipe your right ring finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "right-little-finger") {
-                            return i18n("Please repeatedly swipe your right little finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "right-thumb") {
-                            return i18n("Please repeatedly swipe your right thumb on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-index-finger") {
-                            return i18n("Please repeatedly swipe your left index finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-middle-finger") {
-                            return i18n("Please repeatedly swipe your left middle finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-ring-finger") {
-                            return i18n("Please repeatedly swipe your left ring finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-little-finger") {
-                            return i18n("Please repeatedly swipe your left little finger on the fingerprint sensor.")
-                        } else if (fingerprintRoot.currentFinger == "left-thumb") {
-                            return i18n("Please repeatedly swipe your left thumb on the fingerprint sensor.")
-                        }
-                    }
-                    return ""
-                }
-                textFormat: Text.PlainText
-
-                Layout.alignment: Qt.AlignHCenter
-                wrapMode: Text.Wrap
-                horizontalAlignment: Text.AlignHCenter
-                Layout.maximumWidth: parent.width
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.Enrolling
-            }
-
-            Kirigami.Heading {
-                level: 2
-                text: i18n("Finger Enrolled")
-                textFormat: Text.PlainText
-                Layout.alignment: Qt.AlignHCenter
-                visible: fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
-            }
-
-            // reset from back from whatever color was used before
-            onVisibleChanged: progressCircle.colorTimer.restart();
-
-            // progress circle
-            FingerprintProgressCircle {
-                id: progressCircle
-
-                implicitWidth: 80
-                implicitHeight: 80
-
-                Layout.alignment: Qt.AlignHCenter
-            }
-
-            QQC2.Label {
-                text: fingerprintModel.enrollFeedback
-                textFormat: Text.PlainText
-                wrapMode: Text.Wrap
-                Layout.alignment: Qt.AlignHCenter
-            }
+            done: fingerprintRoot.fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
+            enrollFeedback: fingerprintRoot.fingerprintModel.enrollFeedback
+            scanType: fingerprintRoot.fingerprintModel.scanType
+            finger: fingerprintRoot.currentFinger
         }
 
         ColumnLayout {
