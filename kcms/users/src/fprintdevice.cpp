@@ -10,8 +10,7 @@ FprintDevice::FprintDevice(QDBusObjectPath path, QObject *parent)
     : QObject(parent)
     , m_devicePath(path.path())
     , m_fprintInterface(new NetReactivatedFprintDeviceInterface(QStringLiteral("net.reactivated.Fprint"), path.path(), QDBusConnection::systemBus(), this))
-    , m_freedesktopInterface(
-          new QDBusInterface(QStringLiteral("net.reactivated.Fprint"), path.path(), "org.freedesktop.DBus.Properties", QDBusConnection::systemBus(), this))
+    , m_properiesInterface(new OrgFreedesktopDBusPropertiesInterface(QStringLiteral("net.reactivated.Fprint"), path.path(), QDBusConnection::systemBus(), this))
 {
     connect(m_fprintInterface, &NetReactivatedFprintDeviceInterface::EnrollStatus, this, &FprintDevice::enrollStatus);
 }
@@ -74,7 +73,7 @@ void FprintDevice::enrollStatus(const QString &result, bool done)
 
 int FprintDevice::numOfEnrollStages()
 {
-    QDBusReply<QDBusVariant> reply = m_freedesktopInterface->call("Get", "net.reactivated.Fprint.Device", "num-enroll-stages");
+    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get("net.reactivated.Fprint.Device", "num-enroll-stages");
     if (!reply.isValid()) {
         qDebug() << "error fetching num-enroll-stages:" << reply.error();
         return 0;
@@ -84,7 +83,7 @@ int FprintDevice::numOfEnrollStages()
 
 FprintDevice::ScanType FprintDevice::scanType()
 {
-    QDBusReply<QDBusVariant> reply = m_freedesktopInterface->call("Get", "net.reactivated.Fprint.Device", "scan-type");
+    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get("net.reactivated.Fprint.Device", "scan-type");
     if (!reply.isValid()) {
         qDebug() << "error fetching scan-type:" << reply.error();
         return FprintDevice::Press;
@@ -107,7 +106,7 @@ FprintDevice::ScanType FprintDevice::scanType()
 
 bool FprintDevice::fingerPresent()
 {
-    QDBusReply<QDBusVariant> reply = m_freedesktopInterface->call("Get", "net.reactivated.Fprint.Device", "finger-present");
+    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get("net.reactivated.Fprint.Device", "finger-present");
     if (!reply.isValid()) {
         qDebug() << "error fetching finger-present:" << reply.error();
         return "";
@@ -117,7 +116,7 @@ bool FprintDevice::fingerPresent()
 
 bool FprintDevice::fingerNeeded()
 {
-    QDBusReply<QDBusVariant> reply = m_freedesktopInterface->call("Get", "net.reactivated.Fprint.Device", "finger-needed");
+    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get("net.reactivated.Fprint.Device", "finger-needed");
     if (!reply.isValid()) {
         qDebug() << "error fetching finger-needed:" << reply.error();
         return "";

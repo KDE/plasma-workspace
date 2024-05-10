@@ -7,6 +7,7 @@
 #pragma once
 
 #include "fprint_device_interface.h"
+#include "properties_interface.h"
 
 class FprintDevice : public QObject
 {
@@ -48,5 +49,5 @@ private:
     QString m_devicePath;
     QString m_username;
     NetReactivatedFprintDeviceInterface *m_fprintInterface;
-    QDBusInterface *m_freedesktopInterface;
+    OrgFreedesktopDBusPropertiesInterface *m_properiesInterface;
 };

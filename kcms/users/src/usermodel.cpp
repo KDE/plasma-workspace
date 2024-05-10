@@ -8,7 +8,6 @@
 #include "usermodel.h"
 
 #include <KLocalizedString>
-#include <QDBusInterface>
 #include <QDBusPendingReply>
 #include <algorithm>
 

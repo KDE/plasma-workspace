@@ -2,6 +2,7 @@ set_source_files_properties(org.freedesktop.Accounts.xml PROPERTIES NO_NAMESPACE
 set_source_files_properties(org.freedesktop.Accounts.User.xml PROPERTIES NO_NAMESPACE TRUE)
 set_source_files_properties(net.reactivated.Fprint.Device.xml PROPERTIES NO_NAMESPACE TRUE)
 set_source_files_properties(net.reactivated.Fprint.Manager.xml PROPERTIES NO_NAMESPACE TRUE)
+set_source_files_properties(org.freedesktop.DBus.Properties.xml PROPERTIES NO_NAMESPACE TRUE)
                         
 qt_add_dbus_interface(kcm_users_DBUS_SRCS
     org.freedesktop.Accounts.xml
@@ -21,6 +22,11 @@ qt_add_dbus_interface(kcm_users_DBUS_SRCS
 qt_add_dbus_interface(kcm_users_DBUS_SRCS
     net.reactivated.Fprint.Manager.xml
     fprint_manager_interface
+)
+
+qt_add_dbus_interface(kcm_users_DBUS_SRCS
+    org.freedesktop.DBus.Properties.xml
+    properties_interface
 )
 
 set(login1_manager_xml org.freedesktop.login1.Manager.xml)
