@@ -26,7 +26,7 @@ Kirigami.PromptDialog {
 
     title: i18n("Change Password")
 
-    standardButtons: Kirigami.Dialog.NoButton
+    standardButtons: Kirigami.Dialog.Cancel
     customFooterActions: Kirigami.Action {
         id: passAction
         text: i18n("Set Password")
