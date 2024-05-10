@@ -7,7 +7,6 @@
 #pragma once
 
 #include "fprint_device_interface.h"
-#include "fprint_manager_interface.h"
 
 class FprintDevice : public QObject
 {
@@ -27,7 +26,7 @@ public:
     QDBusError claim(const QString &username);
     QDBusError release();
 
-    QDBusError deleteEnrolledFinger(QString &finger);
+    QDBusError deleteEnrolledFinger(const QString &finger);
     QDBusError startEnrolling(const QString &finger);
     QDBusError stopEnrolling();
 
@@ -37,13 +36,13 @@ public:
     bool fingerNeeded();
 
 public Q_SLOTS:
-    void enrollStatus(QString result, bool done);
+    void enrollStatus(const QString &result, bool done);
 
 Q_SIGNALS:
     void enrollCompleted();
     void enrollStagePassed();
-    void enrollRetryStage(QString feedback);
-    void enrollFailed(QString error);
+    void enrollRetryStage(const QString &feedback);
+    void enrollFailed(const QString &error);
 
 private:
     QString m_devicePath;

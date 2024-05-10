@@ -11,7 +11,6 @@
 
 #include <KLocalizedString>
 
-#include "fprint_device_interface.h"
 #include "fprint_manager_interface.h"
 
 class Finger
@@ -21,23 +20,14 @@ class Finger
     Q_PROPERTY(QString friendlyName READ friendlyName CONSTANT)
 
 public:
-    explicit Finger(QString internalName = "", QString friendlyName = "")
-        : m_internalName(internalName)
-        , m_friendlyName(friendlyName)
-    {
-    }
+    explicit Finger(const QString &internalName, const QString &friendlyName);
 
-    QString internalName() const
-    {
-        return m_internalName;
-    }
-    QString friendlyName() const
-    {
-        return m_friendlyName;
-    }
+    QString internalName() const;
+    QString friendlyName() const;
 
 private:
-    QString m_internalName = "", m_friendlyName = "";
+    QString m_internalName;
+    QString m_friendlyName;
 };
 
 class FingerprintModel : public QObject
@@ -77,12 +67,12 @@ public:
                                    Finger("left-little-finger", i18n("Left little finger")),
                                    Finger("left-thumb", i18n("Left thumb"))};
 
-    Q_INVOKABLE void switchUser(QString username);
+    Q_INVOKABLE void switchUser(const QString &username);
     bool claimDevice();
 
-    Q_INVOKABLE void startEnrolling(QString finger);
+    Q_INVOKABLE void startEnrolling(const QString &finger);
     Q_INVOKABLE void stopEnrolling();
-    Q_INVOKABLE void deleteFingerprint(QString finger);
+    Q_INVOKABLE void deleteFingerprint(const QString &finger);
 
     QStringList enrolledFingerprintsRaw();
     QVariantList enrolledFingerprints();
@@ -91,9 +81,9 @@ public:
 
     FprintDevice::ScanType scanType();
     QString currentError();
-    void setCurrentError(QString error);
+    void setCurrentError(const QString &error);
     QString enrollFeedback();
-    void setEnrollFeedback(QString feedback);
+    void setEnrollFeedback(const QString &feedback);
     bool currentlyEnrolling();
     bool deviceFound();
     double enrollProgress();
@@ -104,8 +94,8 @@ public:
 public Q_SLOTS:
     void handleEnrollCompleted();
     void handleEnrollStagePassed();
-    void handleEnrollRetryStage(QString feedback);
-    void handleEnrollFailed(QString error);
+    void handleEnrollRetryStage(const QString &feedback);
+    void handleEnrollFailed(const QString &error);
 
 Q_SIGNALS:
     void currentErrorChanged();
@@ -122,7 +112,8 @@ Q_SIGNALS:
 
 private:
     QString m_username; // set to "" if it is the currently logged in user
-    QString m_currentError, m_enrollFeedback;
+    QString m_currentError;
+    QString m_enrollFeedback;
 
     DialogState m_dialogState = DialogState::FingerprintList;
 

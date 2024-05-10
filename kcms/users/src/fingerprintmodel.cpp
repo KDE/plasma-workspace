@@ -50,7 +50,7 @@ QString FingerprintModel::currentError()
     return m_currentError;
 }
 
-void FingerprintModel::setCurrentError(QString error)
+void FingerprintModel::setCurrentError(const QString &error)
 {
     if (m_currentError != error) {
         m_currentError = error;
@@ -63,7 +63,7 @@ QString FingerprintModel::enrollFeedback()
     return m_enrollFeedback;
 }
 
-void FingerprintModel::setEnrollFeedback(QString feedback)
+void FingerprintModel::setEnrollFeedback(const QString &feedback)
 {
     m_enrollFeedback = feedback;
     Q_EMIT enrollFeedbackChanged();
@@ -104,7 +104,7 @@ void FingerprintModel::setDialogState(DialogState dialogState)
     Q_EMIT dialogStateChanged();
 }
 
-void FingerprintModel::switchUser(QString username)
+void FingerprintModel::switchUser(const QString &username)
 {
     m_username = username;
 
@@ -131,7 +131,7 @@ bool FingerprintModel::claimDevice()
     return true;
 }
 
-void FingerprintModel::startEnrolling(QString finger)
+void FingerprintModel::startEnrolling(const QString &finger)
 {
     if (!deviceFound()) {
         setCurrentError(i18n("No fingerprint device found."));
@@ -180,7 +180,7 @@ void FingerprintModel::stopEnrolling()
     }
 }
 
-void FingerprintModel::deleteFingerprint(QString finger)
+void FingerprintModel::deleteFingerprint(const QString &finger)
 {
     // claim for user
     if (!claimDevice()) {
@@ -287,7 +287,7 @@ void FingerprintModel::handleEnrollStagePassed()
     qDebug() << "fingerprint enroll stage pass:" << enrollProgress();
 }
 
-void FingerprintModel::handleEnrollRetryStage(QString feedback)
+void FingerprintModel::handleEnrollRetryStage(const QString &feedback)
 {
     Q_EMIT scanFailure();
     if (feedback == "enroll-retry-scan") {
@@ -302,7 +302,7 @@ void FingerprintModel::handleEnrollRetryStage(QString feedback)
     qDebug() << "fingerprint enroll stage fail:" << feedback;
 }
 
-void FingerprintModel::handleEnrollFailed(QString error)
+void FingerprintModel::handleEnrollFailed(const QString &error)
 {
     if (error == "enroll-failed") {
         setCurrentError(i18n("Fingerprint enrollment has failed."));
@@ -319,4 +319,20 @@ void FingerprintModel::handleEnrollFailed(QString error)
         setCurrentError(i18n("An unknown error has occurred."));
         stopEnrolling();
     }
+}
+
+Finger::Finger(const QString &internalName, const QString &friendlyName)
+    : m_internalName(internalName)
+    , m_friendlyName(friendlyName)
+{
+}
+
+QString Finger::friendlyName() const
+{
+    return m_friendlyName;
+}
+
+QString Finger::internalName() const
+{
+    return m_internalName;
 }

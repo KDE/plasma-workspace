@@ -35,7 +35,7 @@ QDBusError FprintDevice::release()
     return reply.error();
 }
 
-QDBusError FprintDevice::deleteEnrolledFinger(QString &finger)
+QDBusError FprintDevice::deleteEnrolledFinger(const QString &finger)
 {
     auto reply = m_fprintInterface->DeleteEnrolledFinger(finger);
     reply.waitForFinished();
@@ -56,7 +56,7 @@ QDBusError FprintDevice::stopEnrolling()
     return reply.error();
 }
 
-void FprintDevice::enrollStatus(QString result, bool done)
+void FprintDevice::enrollStatus(const QString &result, bool done)
 {
     Q_UNUSED(done)
 
