@@ -59,25 +59,25 @@ Item {
 
         Behavior on width {
             PropertyAnimation {
-                from: faceSize
+                from: wrapper.faceSize
                 duration: Kirigami.Units.longDuration;
             }
         }
-        width: isCurrent ? faceSize : faceSize - Kirigami.Units.gridUnit
+        width: wrapper.isCurrent ? wrapper.faceSize : wrapper.faceSize - Kirigami.Units.gridUnit
         height: width
 
         //Image takes priority, taking a full path to a file, if that doesn't exist we show an icon
         Image {
             id: face
             source: wrapper.avatarPath
-            sourceSize: Qt.size(faceSize * Screen.devicePixelRatio, faceSize * Screen.devicePixelRatio)
+            sourceSize: Qt.size(wrapper.faceSize * Screen.devicePixelRatio, wrapper.faceSize * Screen.devicePixelRatio)
             fillMode: Image.PreserveAspectCrop
             anchors.fill: parent
         }
 
         Kirigami.Icon {
             id: faceIcon
-            source: iconSource
+            source: wrapper.iconSource
             visible: face.status === Image.Error || face.status === Image.Null
             anchors.fill: parent
         }
@@ -114,11 +114,11 @@ Item {
         // Make it bigger than other fonts to match the scale of the avatar better
         font.pointSize: wrapper.fontSize + 4
 
-        width: constrainText ? parent.width : undefined
+        width: wrapper.constrainText ? parent.width : undefined
         text: wrapper.name
         textFormat: Text.PlainText
-        style: softwareRendering ? Text.Outline : Text.Normal
-        styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
+        style: wrapper.softwareRendering ? Text.Outline : Text.Normal
+        styleColor: wrapper.softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         wrapMode: Text.WordWrap
         maximumLineCount: wrapper.constrainText ? 3 : 1
         elide: Text.ElideRight

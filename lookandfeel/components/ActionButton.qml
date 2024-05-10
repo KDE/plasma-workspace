@@ -40,11 +40,11 @@ Item {
     Rectangle {
         id: iconCircle
         anchors.centerIn: icon
-        width: iconSize + Kirigami.Units.smallSpacing
+        width: root.iconSize + Kirigami.Units.smallSpacing
         height: width
         radius: width / 2
-        color: softwareRendering ?  Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
-        opacity: root.activeFocus || containsMouse ? (softwareRendering ? 0.8 : 0.15) : (softwareRendering ? 0.6 : 0)
+        color: root.softwareRendering ?  Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
+        opacity: root.activeFocus || root.containsMouse ? (root.softwareRendering ? 0.8 : 0.15) : (root.softwareRendering ? 0.6 : 0)
         Behavior on opacity {
             PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
                 duration: Kirigami.Units.longDuration
@@ -75,8 +75,8 @@ Item {
             top: parent.top
             horizontalCenter: parent.horizontalCenter
         }
-        width: iconSize
-        height: iconSize
+        width: root.iconSize
+        height: root.iconSize
 
         active: mouseArea.containsMouse || root.activeFocus
     }
@@ -86,12 +86,12 @@ Item {
         font.pointSize: root.fontSize
         anchors {
             top: icon.bottom
-            topMargin: softwareRendering ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
+            topMargin: root.softwareRendering ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
             left: parent.left
             right: parent.right
         }
-        style: softwareRendering ? Text.Outline : Text.Normal
-        styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
+        style: root.softwareRendering ? Text.Outline : Text.Normal
+        styleColor: root.softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         horizontalAlignment: Text.AlignHCenter
         verticalAlignment: Text.AlignTop
         textFormat: Text.PlainText

@@ -73,7 +73,7 @@ FocusScope {
     // whitespace to avoid items being overlapped.
     UserList {
         id: userListView
-        visible: showUserList && y > 0
+        visible: root.showUserList && y > 0
         anchors {
             bottom: parent.verticalCenter
             // We only need an extra bottom margin when text is constrained,

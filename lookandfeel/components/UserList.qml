@@ -88,8 +88,8 @@ ListView {
 
         userName: model.name
 
-        width: userItemWidth
-        height: userItemHeight
+        width: view.userItemWidth
+        height: view.userItemHeight
 
         //if we only have one delegate, we don't need to clip the text as it won't be overlapping with anything
         constrainText: view.constrainText

@@ -12,21 +12,23 @@ import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.kirigami 2.20 as Kirigami
 
 ColumnLayout {
+    id: root
+
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
 
     PlasmaComponents3.Label {
         text: Qt.formatTime(timeSource.data["Local"]["DateTime"], Qt.locale(), Locale.ShortFormat)
         textFormat: Text.PlainText
-        style: softwareRendering ? Text.Outline : Text.Normal
-        styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
+        style: root.softwareRendering ? Text.Outline : Text.Normal
+        styleColor: root.softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         font.pointSize: 48
         Layout.alignment: Qt.AlignHCenter
     }
     PlasmaComponents3.Label {
         text: Qt.formatDate(timeSource.data["Local"]["DateTime"], Qt.locale(), Locale.LongFormat)
         textFormat: Text.PlainText
-        style: softwareRendering ? Text.Outline : Text.Normal
-        styleColor: softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
+        style: root.softwareRendering ? Text.Outline : Text.Normal
+        styleColor: root.softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
         font.pointSize: 24
         Layout.alignment: Qt.AlignHCenter
     }
