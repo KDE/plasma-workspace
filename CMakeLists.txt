@@ -14,7 +14,7 @@ option(PLASMA_X11_DEFAULT_SESSION "Use X11 session by default for Plasma" OFF)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
 option(WITH_X11 "Build with X11 support. Building without is experimental" ON)
 
-set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 find_package(ECM ${KF6_MIN_VERSION} REQUIRED NO_MODULE)
