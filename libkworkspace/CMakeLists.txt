@@ -36,6 +36,8 @@ set_target_properties(kworkspace PROPERTIES
                              OUTPUT_NAME kworkspace6
                       )
 
+qt_extract_metatypes(kworkspace)
+
 generate_export_header(kworkspace)
 target_link_libraries(kworkspace
     PUBLIC

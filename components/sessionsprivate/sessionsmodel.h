@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlregistration.h>
 
 #include <kdisplaymanager.h>
 
@@ -37,6 +38,7 @@ class KDisplayManager;
 class SessionsModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(bool canSwitchUser READ canSwitchUser CONSTANT)
     Q_PROPERTY(bool canStartNewSession READ canStartNewSession CONSTANT)
