@@ -101,12 +101,16 @@ void OutputOrderWatcher::refresh()
 {
     Q_ASSERT(!m_orderProtocolPresent);
 
+#if __has_cpp_attribute(__cpp_lib_ranges_to_container)
+    QStringList pendingOutputOrder = qGuiApp->screens() | std::views::transform(&QScreen::name) | std::ranges::to<QStringList>();
+#else
     QStringList pendingOutputOrder;
 
     pendingOutputOrder.clear();
     for (auto *s : qApp->screens()) {
         pendingOutputOrder.append(s->name());
     }
+#endif
 
     auto outputLess = [](const QString &c1, const QString &c2) {
         if (c1 == qApp->primaryScreen()->name()) {
@@ -310,19 +314,11 @@ WaylandOutputOrderWatcher::WaylandOutputOrderWatcher(QObject *parent)
 bool WaylandOutputOrderWatcher::hasAllScreens() const
 {
     // for each name in our ordered list, find a screen with that name
-    for (const auto &name : std::as_const(m_pendingOutputOrder)) {
-        bool present = false;
-        for (auto *s : qApp->screens()) {
-            if (s->name() == name) {
-                present = true;
-                break;
-            }
-        }
-        if (!present) {
-            return false;
-        }
-    }
-    return true;
+    const auto screens = qApp->screens();
+    const auto screenNames = screens | std::views::transform(&QScreen::name);
+    return std::ranges::all_of(std::as_const(m_pendingOutputOrder), [&screenNames](const QString &name) {
+        return std::ranges::find(screenNames, name) != screenNames.end();
+    });
 }
 
 void WaylandOutputOrderWatcher::refresh()
