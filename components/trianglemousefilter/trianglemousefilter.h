@@ -49,6 +49,7 @@ struct InterceptedQuickItemData {
 class TriangleMouseFilter : public QQuickItem
 {
     Q_OBJECT
+    QML_ELEMENT
 
     /**
      * Whether the filter is active.  If false, all events will be passed through. True by default.
