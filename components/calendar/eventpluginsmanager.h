@@ -8,6 +8,7 @@
 
 #include <QObject>
 #include <QStringList>
+#include <qqmlregistration.h>
 
 #include <CalendarEvents/CalendarEventsPlugin>
 
@@ -22,6 +23,7 @@ class EventPluginsManagerPrivate;
 class EventPluginsManager : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(QAbstractListModel *model READ pluginsModel NOTIFY pluginsChanged)
     Q_PROPERTY(QStringList enabledPlugins READ enabledPlugins WRITE setEnabledPlugins NOTIFY pluginsChanged)
 

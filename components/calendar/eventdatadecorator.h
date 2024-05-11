@@ -9,12 +9,14 @@
 #include <QDateTime>
 #include <QObject>
 #include <QString>
+#include <qqmlregistration.h>
 
 #include <CalendarEvents/CalendarEventsPlugin>
 
 class EventDataDecorator
 {
     Q_GADGET
+    QML_VALUE_TYPE(eventData)
     Q_PROPERTY(QDateTime startDateTime READ startDateTime CONSTANT FINAL)
     Q_PROPERTY(QDateTime endDateTime READ endDateTime CONSTANT FINAL)
     Q_PROPERTY(bool isAllDay READ isAllDay CONSTANT FINAL)
@@ -25,6 +27,7 @@ class EventDataDecorator
     Q_PROPERTY(QString eventType READ eventType CONSTANT FINAL)
 
 public:
+    EventDataDecorator() = default;
     explicit EventDataDecorator(const CalendarEvents::EventData &data);
 
     QDateTime startDateTime() const;

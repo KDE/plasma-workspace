@@ -7,6 +7,7 @@
 
 #pragma once
 
+#include "qqmlregistration.h"
 #include <QDate>
 #include <QJsonArray>
 #include <QObject>
@@ -19,6 +20,7 @@ class CalendarPrivate;
 class Calendar : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
     /* The conversion between QDate and JS Date is broken. The specification says that a date
      * is represented by the start of the UTC day, but for negative to UTC timezones this results
      * in wrong dates: Jan 2 in C++ -> Jan 2 (00:00) UTC -> Jan 1 (23:00) UTC-1 in JS.

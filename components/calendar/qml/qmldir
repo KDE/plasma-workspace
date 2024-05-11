@@ -1,8 +1,0 @@
-module org.kde.plasma.workspace.calendar
-plugin calendarplugin
-
-MonthView 2.0 MonthView.qml
-internal DayDelegate DayDelegate.qml
-internal DaysCalendar DaysCalendar.qml
-internal InfiniteList InfiniteList.qml
-internal MonthViewHeader MonthViewHeader.qml

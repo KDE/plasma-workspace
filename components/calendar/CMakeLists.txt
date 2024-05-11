@@ -1,14 +1,32 @@
-add_library(calendarplugin SHARED)
+ecm_add_qml_module(calendarplugin
+    URI "org.kde.plasma.workspace.calendar"
+    VERSION 2.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtCore
+)
 
 target_sources(calendarplugin PRIVATE
-    calendarplugin.cpp
     calendar.cpp
     daysmodel.cpp
     eventdatadecorator.cpp
     eventpluginsmanager.cpp
 )
 
-target_link_libraries(calendarplugin
+ecm_target_qml_sources(calendarplugin
+    SOURCES
+    qml/MonthView.qml
+)
+
+ecm_target_qml_sources(calendarplugin
+    PRIVATE
+    SOURCES
+    qml/DayDelegate.qml
+    qml/DaysCalendar.qml
+    qml/InfiniteList.qml
+    qml/MonthViewHeader.qml
+)
+
+target_link_libraries(calendarplugin PRIVATE
     Qt6::Core
     Qt6::Quick
     Qt6::Qml
@@ -18,10 +36,7 @@ target_link_libraries(calendarplugin
     KF6::CoreAddons
 )
 
-install(TARGETS calendarplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/workspace/calendar)
-install(DIRECTORY qml/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/workspace/calendar)
-
-ecm_generate_qmltypes(org.kde.plasma.workspace.calendar 2.0 DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/workspace/calendar)
+ecm_finalize_qml_module(calendarplugin)
 
 install(PROGRAMS kconf_update/migrate-calendar-to-plugin-id.py DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(FILES kconf_update/migrate-calendar-to-plugin-id.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})

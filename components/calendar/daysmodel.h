@@ -19,6 +19,8 @@ class DaysModelPrivate;
 class DaysModel : public QAbstractItemModel
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("")
 
 public:
     enum Roles {
