@@ -6,14 +6,16 @@
 
 #pragma once
 
+#include <QAction>
 #include <QDateTime>
 #include <QObject>
-
-class QAction;
+#include <QQmlEngine>
 
 class ClipboardMenu : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
     Q_PROPERTY(QDateTime currentDate READ currentDate WRITE setCurrentDate NOTIFY currentDateChanged)
     Q_PROPERTY(bool secondsIncluded READ secondsIncluded WRITE setSecondsIncluded NOTIFY secondsIncludedChanged)

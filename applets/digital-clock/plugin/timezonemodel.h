@@ -9,6 +9,7 @@
 
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
+#include <qqmlregistration.h>
 
 #include "timezonedata.h"
 
@@ -17,6 +18,7 @@ class TimezonesI18n;
 class TimeZoneFilterProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(QString filterString WRITE setFilterString MEMBER m_filterString NOTIFY filterStringChanged)
     Q_PROPERTY(bool onlyShowChecked WRITE setOnlyShowChecked MEMBER m_onlyShowChecked NOTIFY onlyShowCheckedChanged)
 
@@ -42,6 +44,7 @@ private:
 class TimeZoneModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(QStringList selectedTimeZones WRITE setSelectedTimeZones MEMBER m_selectedTimeZones NOTIFY selectedTimeZonesChanged)
 
 public:

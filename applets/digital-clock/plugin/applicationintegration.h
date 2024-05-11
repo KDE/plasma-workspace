@@ -4,10 +4,13 @@
 #pragma once
 #include <KService>
 #include <QObject>
+#include <QQmlEngine>
 
 class ApplicationIntegration : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
     Q_PROPERTY(bool calendarInstalled READ calendarInstalled CONSTANT)
 
 public:

@@ -6,20 +6,24 @@ set_package_properties(IsoCodes PROPERTIES
                        TYPE RUNTIME
                       )
 
-set(digitalclockplugin_SRCS
+ecm_add_qml_module(digitalclockplugin
+    URI "org.kde.plasma.private.digitalclock"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtCore
+)
+
+target_sources(digitalclockplugin PRIVATE
     timezonemodel.cpp
     timezonesi18n.cpp
-    digitalclockplugin.cpp
     clipboardmenu.cpp
     applicationintegration.cpp
     timezonemodel.h
     timezonesi18n.h
-    digitalclockplugin.h
     clipboardmenu.h
     applicationintegration.h
-    )
+)
 
-add_library(digitalclockplugin SHARED ${digitalclockplugin_SRCS})
 target_link_libraries(digitalclockplugin
     PRIVATE
         Qt::Core
@@ -34,6 +38,4 @@ target_link_libraries(digitalclockplugin
         ICU::uc
 )
 
-install(TARGETS digitalclockplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/digitalclock)
-
-install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/digitalclock)
+ecm_finalize_qml_module(digitalclockplugin)

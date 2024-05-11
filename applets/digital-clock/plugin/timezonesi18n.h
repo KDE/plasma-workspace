@@ -9,12 +9,15 @@
 #include <QHash>
 #include <QLocale>
 #include <QObject>
+#include <QQmlEngine>
 
 #include <unicode/tznames.h>
 
 class TimezonesI18n : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     explicit TimezonesI18n(QObject *parent = nullptr);
