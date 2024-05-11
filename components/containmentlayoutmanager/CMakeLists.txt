@@ -1,7 +1,11 @@
+ecm_add_qml_module(containmentlayoutmanagerplugin
+    URI "org.kde.plasma.private.containmentlayoutmanager"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtQuick
+)
 
-
-set(containmentlayoutmanagerplugin_SRCS
-    containmentlayoutmanagerplugin.cpp
+target_sources(containmentlayoutmanagerplugin PRIVATE
     appletcontainer.cpp
     configoverlay.cpp
     appletslayout.cpp
@@ -9,9 +13,20 @@ set(containmentlayoutmanagerplugin_SRCS
     gridlayoutmanager.cpp
     itemcontainer.cpp
     resizehandle.cpp
-    )
+)
 
-add_library(containmentlayoutmanagerplugin ${containmentlayoutmanagerplugin_SRCS})
+ecm_target_qml_sources(containmentlayoutmanagerplugin
+    SOURCES
+    qml/BasicAppletContainer.qml
+    qml/ConfigOverlayWithHandles.qml
+    qml/PlaceHolder.qml
+)
+
+ecm_target_qml_sources(containmentlayoutmanagerplugin
+    PRIVATE
+    SOURCES
+    qml/private/BasicResizeHandle.qml
+)
 
 target_link_libraries(containmentlayoutmanagerplugin
         PUBLIC
@@ -29,6 +44,4 @@ ecm_qt_declare_logging_category(containmentlayoutmanagerplugin
     EXPORT PLASMAWORKSPACE
 )
 
-install(TARGETS containmentlayoutmanagerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/containmentlayoutmanager)
-
-install(DIRECTORY qml/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/containmentlayoutmanager)
+ecm_finalize_qml_module(containmentlayoutmanagerplugin)

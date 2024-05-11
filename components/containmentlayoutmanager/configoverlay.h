@@ -14,6 +14,7 @@
 class ConfigOverlay : public QQuickItem
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(bool open READ open WRITE setOpen NOTIFY openChanged)
     Q_PROPERTY(ItemContainer *itemContainer READ itemContainer NOTIFY itemContainerChanged)
     Q_PROPERTY(qreal leftAvailableSpace READ leftAvailableSpace NOTIFY leftAvailableSpaceChanged)

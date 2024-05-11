@@ -19,6 +19,7 @@ class ConfigOverlay;
 class ItemContainer : public QQuickItem
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(AppletsLayout *layout READ layout NOTIFY layoutChanged)

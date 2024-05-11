@@ -19,6 +19,7 @@ class AppletQuickItem;
 class AppletContainer : public ItemContainer
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(PlasmaQuick::AppletQuickItem *applet READ applet NOTIFY appletChanged)

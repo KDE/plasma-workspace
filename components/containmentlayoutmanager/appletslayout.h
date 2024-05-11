@@ -31,6 +31,7 @@ class ItemContainer;
 class AppletsLayout : public QQuickItem
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(QString configKey READ configKey WRITE setConfigKey NOTIFY configKeyChanged)

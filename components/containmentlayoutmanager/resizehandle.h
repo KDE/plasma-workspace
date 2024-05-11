@@ -13,6 +13,7 @@
 class ResizeHandle : public QQuickItem
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_PROPERTY(Corner resizeCorner MEMBER m_resizeCorner NOTIFY resizeCornerChanged)
     Q_PROPERTY(bool resizeBlocked READ resizeBlocked NOTIFY resizeBlockedChanged)
     Q_PROPERTY(bool pressed READ isPressed NOTIFY pressedChanged)

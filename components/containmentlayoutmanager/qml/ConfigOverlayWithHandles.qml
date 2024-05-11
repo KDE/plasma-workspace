@@ -11,8 +11,6 @@ import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.plasma.private.containmentlayoutmanager 1.0 as ContainmentLayoutManager
 
-import "private"
-
 ContainmentLayoutManager.ConfigOverlay {
     id: overlay
 
