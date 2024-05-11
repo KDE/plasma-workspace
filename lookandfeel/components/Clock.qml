@@ -21,7 +21,7 @@ ColumnLayout {
         textFormat: Text.PlainText
         style: root.softwareRendering ? Text.Outline : Text.Normal
         styleColor: root.softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
-        font.pointSize: 48
+        font.pointSize: Math.round(Kirigami.Theme.defaultFont.pointSize * 4.8)
         Layout.alignment: Qt.AlignHCenter
     }
     PlasmaComponents3.Label {
@@ -29,7 +29,7 @@ ColumnLayout {
         textFormat: Text.PlainText
         style: root.softwareRendering ? Text.Outline : Text.Normal
         styleColor: root.softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
-        font.pointSize: 24
+        font.pointSize: Math.round(Kirigami.Theme.defaultFont.pointSize * 2.4)
         Layout.alignment: Qt.AlignHCenter
     }
     P5Support.DataSource {
