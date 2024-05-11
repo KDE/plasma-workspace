@@ -12,6 +12,8 @@ import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
 Rectangle {
+    id: root
+
     property alias text: label.text
     property Item icon
 
@@ -24,7 +26,7 @@ Rectangle {
     PlasmaComponents3.Label {
         id: label
         anchors.centerIn: parent
-        font.pixelSize: Math.max(icon.height / 4, Kirigami.Theme.smallFont.pixelSize * 0.8)
+        font.pixelSize: Math.max(root.icon.height / 4, Kirigami.Theme.smallFont.pixelSize * 0.8)
         textFormat: Text.PlainText
     }
 
