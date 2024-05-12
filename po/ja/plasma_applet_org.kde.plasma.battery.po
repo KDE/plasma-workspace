@@ -1,5 +1,5 @@
 # Translation of plasma_applet_battery into Japanese.
-# SPDX-FileCopyrightText: 2022, 2023 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # This file is distributed under the same license as the kdebase package.
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2007, 2008, 2009, 2010.
 # Taiki Komoda <kom@kde.gr.jp>, 2010.
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-02 00:40+0000\n"
-"PO-Revision-Date: 2023-12-03 15:44+0900\n"
+"PO-Revision-Date: 2024-04-28 19:29+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BatteryItem.qml:100
 #, kde-format
@@ -175,18 +175,16 @@ msgid "Not charging"
 msgstr "充電していません"
 
 #: package/contents/ui/main.qml:165
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "自動的なスリープと画面ロックは無効化されました"
+msgstr ""
+"自動的なスリープと画面ロックは無効化されています - 中クリックして再有効化"
 
 #: package/contents/ui/main.qml:167
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "スリープと画面ロックを妨げる"
+msgstr "中クリックして自動的なスリープと画面ロックを無効化"
 
 #: package/contents/ui/main.qml:172
 #, kde-format
@@ -195,10 +193,9 @@ msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "%1 つのアプリケーションがパフォーマンスモードの有効化を要求しました"
 
 #: package/contents/ui/main.qml:176
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "パフォーマンスモードがオンになっています"
+msgstr "パフォーマンスモードがオンになっています - スクロールして変更"
 
 #: package/contents/ui/main.qml:180
 #, kde-format
@@ -207,15 +204,14 @@ msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "%1 つのアプリケーションが省電力モードの有効化を要求しました"
 
 #: package/contents/ui/main.qml:184
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "省電力モードがオンになっています"
+msgstr "省電力モードがオンになっています - スクロールして変更"
 
 #: package/contents/ui/main.qml:187
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "バランスモードがオンになっています - スクロールして変更"
 
 #: package/contents/ui/main.qml:299
 #, kde-format
@@ -228,49 +224,44 @@ msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "フル充電されていないときバッテリ残量を数字で表示"
 
 #: package/contents/ui/main.qml:318
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
-msgstr "省エネルギーを設定(&C)…"
+msgstr "電源管理を設定(&C)..."
 
 #: package/contents/ui/PowerManagementItem.qml:44
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "無操作状態が続いた後スリープ＆画面ロック"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "ブロック"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "自動"
 
 #: package/contents/ui/PowerManagementItem.qml:99
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "手動でブロック"
 
 #: package/contents/ui/PowerManagementItem.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "スリープと画面ロックを妨げる"
+msgstr "自動的なスリープと画面ロックの有効化に失敗しました"
 
 #: package/contents/ui/PowerManagementItem.qml:136
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "スリープと画面ロックを妨げる"
+msgstr "自動的なスリープと画面ロックのブロックに失敗しました"
 
 #: package/contents/ui/PowerManagementItem.qml:174
 #, kde-format
@@ -441,11 +432,6 @@ msgid "Battery %1"
 msgstr "バッテリ %1%"
 
 #: plugin/batteriesnamesmonitor_p.cpp:27
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
+#, kde-format
 msgid "Battery"
-msgstr "バッテリ %1%"
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Manually block sleep and screen locking"
-#~ msgstr "スリープと画面ロックを妨げる"
+msgstr "バッテリ"

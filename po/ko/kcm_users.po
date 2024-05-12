@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2023-10-08 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -178,6 +178,132 @@ msgstr "암호 확인:"
 msgid "Create"
 msgstr "만들기"
 
+#: src/ui/EnrollFeedback.qml:27
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "지문 등록"
+
+#: src/ui/EnrollFeedback.qml:37
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "오른손 검지손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:39
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "오른손 가운뎃손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:41
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "오른손 약손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:43
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "오른손 새끼손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:45
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "오른손 엄지손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:47
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "왼손 검지손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:49
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "왼손 가운뎃손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:51
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "왼손 약손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:53
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "왼손 새끼손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:55
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "왼손 엄지손가락을 지문 센서에 반복하여 탭하십시오."
+
+#: src/ui/EnrollFeedback.qml:59
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "오른손 검지손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:61
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "오른손 가운뎃손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:63
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "오른손 약손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:65
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "오른손 새끼손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:67
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "오른손 엄지손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:69
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "왼손 검지손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:71
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "왼손 가운뎃손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:73
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "왼손 약손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:75
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "왼손 새끼손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:77
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "왼손 엄지손가락을 지문 센서에 반복하여 스와이프하십시오."
+
+#: src/ui/EnrollFeedback.qml:93
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "지문 등록됨"
+
 #: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
@@ -198,148 +324,17 @@ msgstr "취소"
 msgid "Done"
 msgstr "완료"
 
-#: src/ui/FingerprintDialog.qml:77
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "지문 등록"
-
-#: src/ui/FingerprintDialog.qml:87
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "오른손 검지손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr "오른손 가운뎃손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "오른손 약손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:93
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "오른손 새끼손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:95
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "오른손 엄지손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:97
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "왼손 검지손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:99
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "왼손 가운뎃손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:101
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "왼손 약손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:103
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "왼손 새끼손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:105
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "왼손 엄지손가락을 지문 센서에 반복하여 탭하십시오."
-
-#: src/ui/FingerprintDialog.qml:109
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr "오른손 검지손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:111
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr "오른손 가운뎃손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:113
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr "오른손 약손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "오른손 새끼손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:117
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "오른손 엄지손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:119
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "왼손 검지손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:121
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr "왼손 가운뎃손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:123
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "왼손 약손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:125
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "왼손 새끼손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:127
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "왼손 엄지손가락을 지문 센서에 반복하여 스와이프하십시오."
-
-#: src/ui/FingerprintDialog.qml:143
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "지문 등록됨"
-
-#: src/ui/FingerprintDialog.qml:178
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "등록할 손가락 선택"
-
-#: src/ui/FingerprintDialog.qml:297
+#: src/ui/FingerprintList.qml:72
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "손가락 다시 등록"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintList.qml:77
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "지문 지우기"
 
-#: src/ui/FingerprintDialog.qml:313
+#: src/ui/FingerprintList.qml:87
 #, kde-format
 msgid "No fingerprints added"
 msgstr "추가한 지문 없음"
@@ -360,6 +355,11 @@ msgstr "새로 추가"
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
 msgstr "Space 키를 눌러서 사용자 프로필 편집"
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "등록할 손가락 선택"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -535,7 +535,7 @@ msgstr "사용자 삭제…"
 msgid "Configure Fingerprint Authentication…"
 msgstr "지문 인증 설정..."
 
-#: src/ui/UserDetailsPage.qml:248
+#: src/ui/UserDetailsPage.qml:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -568,12 +568,12 @@ msgstr "이미지 크기 조정 실패: 임시 파일을 열 수 없음"
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "이미지 크기 조정 실패: 임시 파일에 쓸 수 없음"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Your Account"
 msgstr "내 계정"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Other Accounts"
 msgstr "다른 계정"

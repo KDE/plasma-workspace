@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2023-10-07 07:45+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -182,6 +182,163 @@ msgstr "Potwierdź hasło:"
 msgid "Create"
 msgstr "Utwórz"
 
+#: src/ui/EnrollFeedback.qml:27
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Pobieranie odcisku palca"
+
+#: src/ui/EnrollFeedback.qml:37
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+"Przyłóż kilka razy swój palec wskazujący prawej ręki do czytnika odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:39
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+"Przyłóż kilka razy swój palec środkowy prawej ręki do czytnika odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:41
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+"Przyłóż kilka razy swój palec serdeczny prawej ręki do czytnika odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:43
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+"Przyłóż kilka razy swój mały palec prawej ręki do czytnika odcisków palców."
+
+#: src/ui/EnrollFeedback.qml:45
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "Przyłóż kilka razy swój kciuk prawej ręki do czytnika odcisków palców."
+
+#: src/ui/EnrollFeedback.qml:47
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+"Przyłóż kilka razy swój palec wskazujący lewej ręki do czytnika odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:49
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+"Przyłóż kilka razy swój mały palec lewej ręki do czytnika odcisków palców."
+
+#: src/ui/EnrollFeedback.qml:51
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+"Przyłóż kilka razy swój palec serdeczny lewej ręki do czytnika odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:53
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+"Przyłóż kilka razy swój mały palec lewej ręki do czytnika odcisków palców."
+
+#: src/ui/EnrollFeedback.qml:55
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "Przyłóż kilka razy swój kciuk lewej ręki do czytnika odcisków palców."
+
+#: src/ui/EnrollFeedback.qml:59
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim palcem wskazującym prawej ręki po czytniku "
+"odcisków palców."
+
+#: src/ui/EnrollFeedback.qml:61
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim palcem środkowym prawej ręki po czytniku odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:63
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim palcem serdecznym prawej ręki po czytniku odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:65
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim małym palcem prawej ręki po czytniku odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:67
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim kciukiem prawej ręki po czytniku odcisków palców."
+
+#: src/ui/EnrollFeedback.qml:69
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim palcem wskazującym lewej ręki po czytniku odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:71
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim palcem środkowym lewej ręki po czytniku odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:73
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim palcem serdecznym lewej ręki po czytniku odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:75
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim małym palcem lewej ręki po czytniku odcisków "
+"palców."
+
+#: src/ui/EnrollFeedback.qml:77
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+"Przejedź kilka razy swoim kciukiem lewej ręki po czytniku odcisków palców."
+
+#: src/ui/EnrollFeedback.qml:93
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Pobrano odcisk palca"
+
 #: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
@@ -202,179 +359,17 @@ msgstr "Anuluj"
 msgid "Done"
 msgstr "Gotowe"
 
-#: src/ui/FingerprintDialog.qml:77
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Pobieranie odcisku palca"
-
-#: src/ui/FingerprintDialog.qml:87
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
-"Przyłóż kilka razy swój palec wskazujący prawej ręki do czytnika odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
-"Przyłóż kilka razy swój palec środkowy prawej ręki do czytnika odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
-"Przyłóż kilka razy swój palec serdeczny prawej ręki do czytnika odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:93
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
-"Przyłóż kilka razy swój mały palec prawej ręki do czytnika odcisków palców."
-
-#: src/ui/FingerprintDialog.qml:95
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "Przyłóż kilka razy swój kciuk prawej ręki do czytnika odcisków palców."
-
-#: src/ui/FingerprintDialog.qml:97
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
-"Przyłóż kilka razy swój palec wskazujący lewej ręki do czytnika odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:99
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
-"Przyłóż kilka razy swój mały palec lewej ręki do czytnika odcisków palców."
-
-#: src/ui/FingerprintDialog.qml:101
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
-"Przyłóż kilka razy swój palec serdeczny lewej ręki do czytnika odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:103
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
-"Przyłóż kilka razy swój mały palec lewej ręki do czytnika odcisków palców."
-
-#: src/ui/FingerprintDialog.qml:105
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "Przyłóż kilka razy swój kciuk lewej ręki do czytnika odcisków palców."
-
-#: src/ui/FingerprintDialog.qml:109
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim palcem wskazującym prawej ręki po czytniku "
-"odcisków palców."
-
-#: src/ui/FingerprintDialog.qml:111
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim palcem środkowym prawej ręki po czytniku odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:113
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim palcem serdecznym prawej ręki po czytniku odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim małym palcem prawej ręki po czytniku odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:117
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim kciukiem prawej ręki po czytniku odcisków palców."
-
-#: src/ui/FingerprintDialog.qml:119
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim palcem wskazującym lewej ręki po czytniku odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:121
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim palcem środkowym lewej ręki po czytniku odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:123
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim palcem serdecznym lewej ręki po czytniku odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:125
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim małym palcem lewej ręki po czytniku odcisków "
-"palców."
-
-#: src/ui/FingerprintDialog.qml:127
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
-"Przejedź kilka razy swoim kciukiem lewej ręki po czytniku odcisków palców."
-
-#: src/ui/FingerprintDialog.qml:143
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Pobrano odcisk palca"
-
-#: src/ui/FingerprintDialog.qml:178
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Wybierz palec do pobrania odcisku"
-
-#: src/ui/FingerprintDialog.qml:297
+#: src/ui/FingerprintList.qml:72
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Ponownie złóż odcisk"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintList.qml:77
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Usuń odcisk palca"
 
-#: src/ui/FingerprintDialog.qml:313
+#: src/ui/FingerprintList.qml:87
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nie dodano żadnego odcisku palca"
@@ -395,6 +390,11 @@ msgstr "Dodaj nowy"
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
 msgstr "Naciśnij spację, aby dostosować profil użytkownika"
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Wybierz palec do pobrania odcisku"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -570,7 +570,7 @@ msgstr "Usuń użytkownika..."
 msgid "Configure Fingerprint Authentication…"
 msgstr "Ustawienia uwierzytelniania odciskiem palca..."
 
-#: src/ui/UserDetailsPage.qml:248
+#: src/ui/UserDetailsPage.qml:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -607,12 +607,12 @@ msgstr ""
 "Nie udało się zmienić rozmiaru obrazu: nie udało się zapisać do pliku "
 "tymczasowego"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Your Account"
 msgstr "Twoje konto"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Other Accounts"
 msgstr "Inne konta"

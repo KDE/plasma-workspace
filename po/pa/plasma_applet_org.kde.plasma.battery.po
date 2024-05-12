@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2024-03-11 07:42-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
 msgid "Discharging"
 msgstr "ਡਿਸਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
 
-#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:122
+#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:123
 #, kde-format
 msgid "Fully Charged"
 msgstr "ਪੂਰੀ ਚਾਰਜ"
@@ -98,132 +98,132 @@ msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:75
 #, fuzzy, kde-format
 #| msgid "An application is preventing sleep and screen locking:"
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr " ਐਪਲੀਕੇਸ਼ਨ ਸਲੀਪ ਕਰਨ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਹੋਣ ਤੋਂ ਰੋਕ ਰਹੀ ਹੈ:"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #: package/contents/ui/PowerManagementItem.qml:51
 #: package/contents/ui/PowerProfileItem.qml:75
 #, kde-format
 msgid "Power Management"
 msgstr "ਪਾਵਰ ਮੈਨਜੇਮੈਂਟ"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Power and Battery"
 msgstr "ਪਾਵਰ ਅਤੇ ਬੈਟਰੀ"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Battery is not present in the bay"
 msgstr ""
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ, ਚਾਰਜ ਨਹੀਂ ਹੋ ਰਹੀ ਹੈ"
 
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ, ਪਲੱਗ ਲੱਗਾ ਹੈ, ਪਰ ਹਾਲੇ ਵੀ ਚਾਰਜ ਨਹੀਂ ਹੋ ਰਹੀ ਹੈ"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ, ਚਾਰਜ ਹੋ ਰਹੀ ਹੈ"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:137
 #, kde-format
 msgid "Battery at %1%"
 msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ"
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "ਪਾਵਰ ਸਪਲਾਈ ਬੈਟਰੀ ਨੂੰ ਚਾਰਜ ਕਰਨ ਲਈ ਕਾਫ਼ੀ ਨਹੀਂ ਹੈ"
 
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "No Batteries Available"
 msgstr "ਕੋਈ ਬੈਟਰੀ ਮੌਜੂਦ ਨਹੀਂ"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "ਪੂਰੀ ਚਾਰਜ ਹੋਣ ਲਈ %1"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 ਬਾਕੀ"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:161
 #, kde-format
 msgid "Not charging"
 msgstr "ਚਾਰਜ ਨਹੀਂ ਹੋ ਰਹੀ"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:166
 #, fuzzy, kde-format
 #| msgid "Automatic sleep and screen locking are disabled"
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
 msgstr "ਆਪਣੇ-ਆਪ ਸਲੀਪ ਅਤੇ ਸਕਰੀਨ ਲਾਕ ਕਰਨਾ ਅਸਮਰੱਥ ਹੈ"
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:168
 #, fuzzy, kde-format
 #| msgctxt "Minimize the length of this string as much as possible"
 #| msgid "Manually block sleep and screen locking"
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr "ਸਲੀਪ ਕਰਨ ਤੇ ਸਕਰੀਨ ਲਾਕ ਕਰਨ ਨੂੰ ਖੁਦ ਰੋਕੋ"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "ਐਪਲੀਕੇਸ਼ਨ ਨੇ ਕਾਰਗੁਜ਼ਾਰੀ ਮੋਡ ਚਾਲੂ ਕਰਨ ਦੀ ਮੰਗ ਕੀਤੀ ਹੈ"
 msgstr[1] "%1 ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੇ ਕਾਰਗੁਜ਼ਾਰੀ ਮੋਡ ਚਾਲੂ ਕਰਨ ਦੀ ਮੰਗ ਕੀਤੀ ਹੈ"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:177
 #, fuzzy, kde-format
 #| msgid "System is in Performance mode"
 msgid "System is in Performance mode; scroll to change"
 msgstr "ਸਿਸਟਮ ਕਾਰਗੁਜ਼ਾਰੀ ਮੋਡ ਵਿੱਚ ਹੈ"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "ਐਪਲੀਕੇਸ਼ਨ ਨੇ ਊਰਜਾ ਬੱਚਤ ਮੋਡ ਚਾਲੂ ਕਰਨ ਦੀ ਮੰਗ ਕੀਤੀ ਹੈ"
 msgstr[1] "%1 ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੇ ਊਰਜਾ ਬੱਚਤ ਮੋਡ ਚਾਲੂ ਕਰਨ ਦੀ ਮੰਗ ਕੀਤੀ ਹੈ"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:185
 #, fuzzy, kde-format
 #| msgid "System is in Power Save mode"
 msgid "System is in Power Save mode; scroll to change"
 msgstr "ਸਿਸਟਮ ਊਰਜਾ ਬੱਚਤ ਮੋਡ ਵਿੱਚ ਹੈ"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
 
-#: package/contents/ui/main.qml:299
+#: package/contents/ui/main.qml:300
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "…ਊਰਜਾ ਜਾਣਕਾਰੀ ਵੇਖਾਓ(&S)"
 
-#: package/contents/ui/main.qml:305
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "ਜਦੋਂ ਬੈਟਰੀ ਪੂਰੀ ਚਾਰਜ ਨਾ ਹੋਵੇ ਤਾਂ ਆਈਕਾਨ ਉੱਤੇ ਬੈਟਰੀ ਫ਼ੀਸਦੀ ਵੇਖਾਓ"
 
-#: package/contents/ui/main.qml:318
+#: package/contents/ui/main.qml:319
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "…ਪਾਵਰ ਬੱਚਤ ਦਾ ਇੰਤਜ਼ਾਮ(&C)"
@@ -426,17 +426,14 @@ msgstr ""
 "ਰਾਹੀਂ <command>power-profiles-daemon</command> ਇੰਸਟਾਲ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ ਅਤੇ ਸਿਸਟਮ "
 "ਨੂੰ ਮੁੜ-ਚਾਲੂ ਕਰੋ।"
 
-#: plugin/batteriesnamesmonitor_p.cpp:25
-#, fuzzy, kde-format
-#| msgid "Battery at %1%"
-msgctxt "Placeholder is the battery number"
-msgid "Battery %1"
-msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ"
+#, fuzzy
+#~| msgid "Battery at %1%"
+#~ msgctxt "Placeholder is the battery number"
+#~ msgid "Battery %1"
+#~ msgstr "ਬੈਟਰੀ %1 ਉੱਤੇ ਹੈ"
 
-#: plugin/batteriesnamesmonitor_p.cpp:27
-#, kde-format
-msgid "Battery"
-msgstr "ਬੈਟਰੀ"
+#~ msgid "Battery"
+#~ msgstr "ਬੈਟਰੀ"
 
 #~ msgid "The battery applet has enabled system-wide inhibition"
 #~ msgstr "ਬੈਟਰੀ ਐਪਲਿਟ ਨੇ ਪੂਰੇ ਸਿਸਟਮ ਲਈ ਇਨਹੈਬਟੇਸ਼ਨ ਚਾਲੂ ਕਰ ਦਿੱਤੀ ਹੈ"

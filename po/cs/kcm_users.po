@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2023-11-02 13:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -179,6 +179,137 @@ msgstr "Potvrdit heslo:"
 msgid "Create"
 msgstr "Vytvořit"
 
+#: src/ui/EnrollFeedback.qml:27
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Zaznamenávám otisk prstu"
+
+#: src/ui/EnrollFeedback.qml:37
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte pravý ukazováček na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:39
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+"Prosím, opakovaně stiskněte pravý prostředníček na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:41
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte pravý prsteníček na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:43
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte pravý malíček na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:45
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte pravý palec na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:47
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte levý ukazováček na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:49
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte levý prostředníček na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:51
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte levý prsteníček na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:53
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte levý malíček na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:55
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr "Prosím, opakovaně stiskněte levý palec na senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:59
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+"Prosím, opakovaně přetáhněte pravý ukazováček přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:61
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+"Prosím, opakovaně přetáhněte pravý prostředníček přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:63
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+"Prosím, opakovaně přetáhněte pravý prsteníček přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:65
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně přetáhněte pravý malíček přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:67
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "Prosím, opakovaně přetáhněte pravý palec přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:69
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně přetáhněte levý ukazováček přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:71
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+"Prosím, opakovaně přetáhněte levý prostředníček přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:73
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně přetáhněte levý prsteníček přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:75
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "Prosím, opakovaně přetáhněte levý malíček přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:77
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "Prosím, opakovaně přetáhněte levý palec přes senzor otisku prstů."
+
+#: src/ui/EnrollFeedback.qml:93
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Prst byl zaznamenán"
+
 #: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
@@ -199,153 +330,17 @@ msgstr "Zrušit"
 msgid "Done"
 msgstr "Hotovo"
 
-#: src/ui/FingerprintDialog.qml:77
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Zaznamenávám otisk prstu"
-
-#: src/ui/FingerprintDialog.qml:87
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte pravý ukazováček na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
-"Prosím, opakovaně stiskněte pravý prostředníček na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte pravý prsteníček na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:93
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte pravý malíček na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:95
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte pravý palec na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:97
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte levý ukazováček na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:99
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte levý prostředníček na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:101
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte levý prsteníček na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:103
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte levý malíček na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:105
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr "Prosím, opakovaně stiskněte levý palec na senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:109
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-"Prosím, opakovaně přetáhněte pravý ukazováček přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:111
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
-"Prosím, opakovaně přetáhněte pravý prostředníček přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:113
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
-"Prosím, opakovaně přetáhněte pravý prsteníček přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně přetáhněte pravý malíček přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:117
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr "Prosím, opakovaně přetáhněte pravý palec přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:119
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně přetáhněte levý ukazováček přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:121
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
-"Prosím, opakovaně přetáhněte levý prostředníček přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:123
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně přetáhněte levý prsteníček přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:125
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr "Prosím, opakovaně přetáhněte levý malíček přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:127
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr "Prosím, opakovaně přetáhněte levý palec přes senzor otisku prstů."
-
-#: src/ui/FingerprintDialog.qml:143
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Prst byl zaznamenán"
-
-#: src/ui/FingerprintDialog.qml:178
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Vyberte prst, který zaznamenat"
-
-#: src/ui/FingerprintDialog.qml:297
+#: src/ui/FingerprintList.qml:72
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Znova zaznamenat prst"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintList.qml:77
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Smazat otisk"
 
-#: src/ui/FingerprintDialog.qml:313
+#: src/ui/FingerprintList.qml:87
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nebyly přidány žádné otisky"
@@ -366,6 +361,11 @@ msgstr "Přidat nové"
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
 msgstr ""
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Vyberte prst, který zaznamenat"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -541,7 +541,7 @@ msgstr "Odstranit uživatele…"
 msgid "Configure Fingerprint Authentication…"
 msgstr "Nastavit ověřování pomocí otisku prstu..."
 
-#: src/ui/UserDetailsPage.qml:248
+#: src/ui/UserDetailsPage.qml:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -571,12 +571,12 @@ msgstr "Změna velikosti obrázku selhala: otevření dočasného souboru selhal
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Změna velikosti obrázku selhala: zápis do dočasného souboru selhal"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Your Account"
 msgstr "Váš účet"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Other Accounts"
 msgstr "Jiné účty"

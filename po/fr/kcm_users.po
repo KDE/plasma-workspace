@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2023-10-06 17:23+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -181,6 +181,172 @@ msgstr "Confirmer le mot de passe :"
 msgid "Create"
 msgstr "Créer"
 
+#: src/ui/EnrollFeedback.qml:27
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Enregistrement d'une empreinte digitale"
+
+#: src/ui/EnrollFeedback.qml:37
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre index droit sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:39
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre majeur droit sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:41
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre annulaire droit sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:43
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre auriculaire droit sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:45
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre pouce droit sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:47
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre index gauche sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:49
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre majeur gauche sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:51
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre annulaire gauche sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:53
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre auriculaire gauche sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:55
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+"Veuillez appuyer de façon répétée votre pouce gauche sur le capteur "
+"d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:59
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre index droit sur le "
+"capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:61
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre majeur droit sur le "
+"capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:63
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre annulaire droit sur "
+"le capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:65
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre auriculaire droit sur "
+"le capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:67
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre pouce droit sur le "
+"capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:69
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre index gauche sur le "
+"capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:71
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre majeur gauche sur le "
+"capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:73
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre annulaire gauche sur "
+"le capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:75
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre auriculaire gauche "
+"sur le capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:77
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+"Veuillez faire un balayage de façon répétée avec votre pouce gauche sur le "
+"capteur d'empreintes digitales."
+
+#: src/ui/EnrollFeedback.qml:93
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Empreinte digitale d'un doigt enregistrée"
+
 #: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
@@ -201,188 +367,17 @@ msgstr "Annuler"
 msgid "Done"
 msgstr "Terminé"
 
-#: src/ui/FingerprintDialog.qml:77
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Enregistrement d'une empreinte digitale"
-
-#: src/ui/FingerprintDialog.qml:87
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre index droit sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre majeur droit sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre annulaire droit sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:93
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre auriculaire droit sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:95
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre pouce droit sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:97
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre index gauche sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:99
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre majeur gauche sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:101
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre annulaire gauche sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:103
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre auriculaire gauche sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:105
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
-"Veuillez appuyer de façon répétée votre pouce gauche sur le capteur "
-"d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:109
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre index droit sur le "
-"capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:111
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre majeur droit sur le "
-"capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:113
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre annulaire droit sur "
-"le capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre auriculaire droit sur "
-"le capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:117
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre pouce droit sur le "
-"capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:119
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre index gauche sur le "
-"capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:121
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre majeur gauche sur le "
-"capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:123
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre annulaire gauche sur "
-"le capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:125
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre auriculaire gauche "
-"sur le capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:127
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
-"Veuillez faire un balayage de façon répétée avec votre pouce gauche sur le "
-"capteur d'empreintes digitales."
-
-#: src/ui/FingerprintDialog.qml:143
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Empreinte digitale d'un doigt enregistrée"
-
-#: src/ui/FingerprintDialog.qml:178
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Sélectionner un doigt pour l'enregistrement"
-
-#: src/ui/FingerprintDialog.qml:297
+#: src/ui/FingerprintList.qml:72
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Ré-enregistrer l'empreinte digitale d'un doigt"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintList.qml:77
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Supprimer une empreinte digitale"
 
-#: src/ui/FingerprintDialog.qml:313
+#: src/ui/FingerprintList.qml:87
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Aucun ajout d'empreinte numérique"
@@ -403,6 +398,11 @@ msgstr "Ajouter un nouveau"
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
 msgstr "Appuyez sur la touche « Espace » pour modifier un profil utilisateur"
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Sélectionner un doigt pour l'enregistrement"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -578,7 +578,7 @@ msgstr "Supprimer un utilisateur..."
 msgid "Configure Fingerprint Authentication…"
 msgstr "Configurer l'authentification par empreinte digitale..."
 
-#: src/ui/UserDetailsPage.qml:248
+#: src/ui/UserDetailsPage.qml:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -617,12 +617,12 @@ msgstr ""
 "Impossible de redimensionner l'image : échec de l'écriture du fichier "
 "temporaire"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Your Account"
 msgstr "Votre compte"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Other Accounts"
 msgstr "Autres comptes"

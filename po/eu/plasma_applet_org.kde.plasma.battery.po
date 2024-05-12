@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-02 00:40+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2024-04-27 20:36+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Kargatzen"
 msgid "Discharging"
 msgstr "Deskargatzen"
 
-#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:122
+#: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:123
 #, kde-format
 msgid "Fully Charged"
 msgstr "Erabat kargatuta"
@@ -103,78 +103,78 @@ msgctxt "battery percentage below battery icon"
 msgid "%1%"
 msgstr "%%1"
 
-#: package/contents/ui/main.qml:74
+#: package/contents/ui/main.qml:75
 #, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr ""
 "Bateriaren aplikaziotxoak lokartzea eta pantaila giltzatzea indargabetzea "
 "gaitu du"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #: package/contents/ui/PowerManagementItem.qml:51
 #: package/contents/ui/PowerProfileItem.qml:75
 #, kde-format
 msgid "Power Management"
 msgstr "Energia-kudeaketa"
 
-#: package/contents/ui/main.qml:96
+#: package/contents/ui/main.qml:97
 #, kde-format
 msgid "Power and Battery"
 msgstr "Energia eta bateria"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Battery is not present in the bay"
 msgstr "Bateria ez dago badian"
 
-#: package/contents/ui/main.qml:129
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgid "Battery at %1%, not Charging"
 msgstr "Bateria %%1(e)an, ez da zamatzen ari"
 
-#: package/contents/ui/main.qml:131
+#: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Battery at %1%, plugged in but still discharging"
 msgstr "Bateria %%1(e)an, entxufatuta egon arren zama galtzen ari da"
 
-#: package/contents/ui/main.qml:133
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Battery at %1%, Charging"
 msgstr "Bateria %%1(e)an, zamatzen"
 
-#: package/contents/ui/main.qml:136
+#: package/contents/ui/main.qml:137
 #, kde-format
 msgid "Battery at %1%"
 msgstr "bateria %%1(e)an"
 
-#: package/contents/ui/main.qml:144
+#: package/contents/ui/main.qml:145
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
 msgstr "Elikadura-iturria ez da bateria zamatzeko behar bezain indartsua"
 
-#: package/contents/ui/main.qml:148
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "No Batteries Available"
 msgstr "Ez dago bateria erabilgarririk"
 
-#: package/contents/ui/main.qml:155
+#: package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "time until fully charged - HH:MM"
 msgid "%1 until fully charged"
 msgstr "%1 erabat zamatzeko"
 
-#: package/contents/ui/main.qml:157
+#: package/contents/ui/main.qml:158
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
 msgstr "%1 geratzen zaio"
 
-#: package/contents/ui/main.qml:160
+#: package/contents/ui/main.qml:161
 #, kde-format
 msgid "Not charging"
 msgstr "Ez da zamatzen ari"
 
-#: package/contents/ui/main.qml:165
+#: package/contents/ui/main.qml:166
 #, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
@@ -182,51 +182,51 @@ msgstr ""
 "Lokartze automatikoa eta pantaila-giltzatea ezgaituta daude; erdiko klik "
 "berriz gaitzeko"
 
-#: package/contents/ui/main.qml:167
+#: package/contents/ui/main.qml:168
 #, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
 msgstr "Erdiko klik lokartze eta pantaila-giltzatze automatikoa ezgaitzeko"
 
-#: package/contents/ui/main.qml:172
+#: package/contents/ui/main.qml:173
 #, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
 msgstr[0] "Aplikazio batek Errendimendu modua aktibatzea eskatu du"
 msgstr[1] "%1 aplikaziok Errendimendu modua aktibatzea eskatu dute"
 
-#: package/contents/ui/main.qml:176
+#: package/contents/ui/main.qml:177
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
 msgstr "Sistema Errendimendu moduan dago; kiribildu aldatzeko"
 
-#: package/contents/ui/main.qml:180
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
 msgstr[0] "Aplikazio batek Energia aurrezteko modua aktibatzea eskatu du"
 msgstr[1] "%1 aplikaziok Energia aurrezteko modua aktibatzea eskatu dute"
 
-#: package/contents/ui/main.qml:184
+#: package/contents/ui/main.qml:185
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
 msgstr "Sistema Energia aurrezteko moduan dago; kiribildu aldatzeko"
 
-#: package/contents/ui/main.qml:187
+#: package/contents/ui/main.qml:188
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr "Sistema Energia oreketauko moduan dago; kiribildu aldatzeko"
 
-#: package/contents/ui/main.qml:299
+#: package/contents/ui/main.qml:300
 #, kde-format
 msgid "&Show Energy Information…"
 msgstr "Erakut&si energiari buruzko informazioa..."
 
-#: package/contents/ui/main.qml:305
+#: package/contents/ui/main.qml:306
 #, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
 msgstr "Erakutsi bateriaren ehunekoa ikonoan, osorik kargatu gabe dagoenean"
 
-#: package/contents/ui/main.qml:318
+#: package/contents/ui/main.qml:319
 #, kde-format
 msgid "&Configure Power Management…"
 msgstr "&Konfiguratu energia-kudeaketa..."
@@ -440,16 +440,12 @@ msgstr ""
 "zaitez <command>power-profiles-daemon</command> paketea instalatzen, zure "
 "banaketaren pakete-kudeatzailea erabiliz, eta berrabiarazi zure sistema."
 
-#: plugin/batteriesnamesmonitor_p.cpp:25
-#, kde-format
-msgctxt "Placeholder is the battery number"
-msgid "Battery %1"
-msgstr "%1 bateria"
+#~ msgctxt "Placeholder is the battery number"
+#~ msgid "Battery %1"
+#~ msgstr "%1 bateria"
 
-#: plugin/batteriesnamesmonitor_p.cpp:27
-#, kde-format
-msgid "Battery"
-msgstr "Bateria"
+#~ msgid "Battery"
+#~ msgstr "Bateria"
 
 #~ msgid "The battery applet has enabled system-wide inhibition"
 #~ msgstr "Bateriaren applet-ak sistema osorako inhibizioa gaitu du"

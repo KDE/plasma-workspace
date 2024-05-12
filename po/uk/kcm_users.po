@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2023-10-05 18:44+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -188,6 +188,170 @@ msgstr "Підтвердження пароля:"
 msgid "Create"
 msgstr "Створити"
 
+#: src/ui/EnrollFeedback.qml:27
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Реєстрація відбитка"
+
+#: src/ui/EnrollFeedback.qml:37
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим правим вказівним пальцем на датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:39
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим правим середнім пальцем на датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:41
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим правим безіменним пальцем на "
+"датчику відбитків."
+
+#: src/ui/EnrollFeedback.qml:43
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим правим мізинцем на датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:45
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим правим великим пальцем на датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:47
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим лівим вказівним пальцем на датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:49
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим лівим середнім пальцем на датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:51
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим лівим безіменним пальцем на датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:53
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим лівим мізинцем на датчику відбитків."
+
+#: src/ui/EnrollFeedback.qml:55
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз натисніть вашим лівим великим пальцем на датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:59
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим правим вказівним пальцем по датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:61
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим правим середнім пальцем по датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:63
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим правим безіменним пальцем по "
+"датчику відбитків."
+
+#: src/ui/EnrollFeedback.qml:65
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим правим мізинцем по датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:67
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим правим великим пальцем по датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:69
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим лівим вказівним пальцем по датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:71
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим лівим середнім пальцем по датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:73
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим лівим безіменним пальцем по датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:75
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим лівим мізинцем по датчику відбитків."
+
+#: src/ui/EnrollFeedback.qml:77
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+"Будь ласка, декілька раз проведіть вашим лівим великим пальцем по датчику "
+"відбитків."
+
+#: src/ui/EnrollFeedback.qml:93
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Палець зареєстровано"
+
 #: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
@@ -208,186 +372,17 @@ msgstr "Скасувати"
 msgid "Done"
 msgstr "Виконано"
 
-#: src/ui/FingerprintDialog.qml:77
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Реєстрація відбитка"
-
-#: src/ui/FingerprintDialog.qml:87
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим правим вказівним пальцем на датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим правим середнім пальцем на датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим правим безіменним пальцем на "
-"датчику відбитків."
-
-#: src/ui/FingerprintDialog.qml:93
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим правим мізинцем на датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:95
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим правим великим пальцем на датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:97
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим лівим вказівним пальцем на датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:99
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим лівим середнім пальцем на датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:101
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим лівим безіменним пальцем на датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:103
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим лівим мізинцем на датчику відбитків."
-
-#: src/ui/FingerprintDialog.qml:105
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз натисніть вашим лівим великим пальцем на датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:109
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим правим вказівним пальцем по датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:111
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим правим середнім пальцем по датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:113
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим правим безіменним пальцем по "
-"датчику відбитків."
-
-#: src/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим правим мізинцем по датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:117
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим правим великим пальцем по датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:119
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим лівим вказівним пальцем по датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:121
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим лівим середнім пальцем по датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:123
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим лівим безіменним пальцем по датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:125
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим лівим мізинцем по датчику відбитків."
-
-#: src/ui/FingerprintDialog.qml:127
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
-"Будь ласка, декілька раз проведіть вашим лівим великим пальцем по датчику "
-"відбитків."
-
-#: src/ui/FingerprintDialog.qml:143
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Палець зареєстровано"
-
-#: src/ui/FingerprintDialog.qml:178
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Виберіть палець для реєстрації"
-
-#: src/ui/FingerprintDialog.qml:297
+#: src/ui/FingerprintList.qml:72
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Повторна реєстрація пальця"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintList.qml:77
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Вилучити відбиток"
 
-#: src/ui/FingerprintDialog.qml:313
+#: src/ui/FingerprintList.qml:87
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Не додано жодного відбитка"
@@ -408,6 +403,11 @@ msgstr "Додати"
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
 msgstr "Натисніть клавішу пробілу для редагування профілю користувача"
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Виберіть палець для реєстрації"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -583,7 +583,7 @@ msgstr "Вилучити користувача…"
 msgid "Configure Fingerprint Authentication…"
 msgstr "Налаштувати розпізнавання за відбитками…"
 
-#: src/ui/UserDetailsPage.qml:248
+#: src/ui/UserDetailsPage.qml:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -621,12 +621,12 @@ msgstr ""
 "Не вдалося змінити розміри зображення: не вдалося виконати запис до "
 "тимчасового файла"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Your Account"
 msgstr "Ваш обліковий запис"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Other Accounts"
 msgstr "Інші облікові записи"

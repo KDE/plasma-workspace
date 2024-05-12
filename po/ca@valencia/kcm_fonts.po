@@ -27,7 +27,7 @@ msgstr ""
 #: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
-msgstr "Força els ppp de les lletres en l'X11"
+msgstr "Força els ppp de les lletres en X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9

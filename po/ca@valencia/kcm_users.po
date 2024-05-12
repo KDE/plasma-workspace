@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2023-10-05 11:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -186,6 +186,172 @@ msgstr "Confirma la contrasenya:"
 msgid "Create"
 msgstr "Crea"
 
+#: src/ui/EnrollFeedback.qml:27
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Registre de les empremtes dactilars"
+
+#: src/ui/EnrollFeedback.qml:37
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre dit índex dret sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:39
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre dit mitger dret sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:41
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre dit anular dret sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:43
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre dit auricular (xicotet) dret sobre el sensor "
+"d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:45
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre polze dret sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:47
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre dit índex esquerre sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:49
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre dit mitger esquerre sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:51
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre dit anular esquerre sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:53
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre dit auricular (xicotet) esquerre sobre el "
+"sensor d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:55
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+"Poseu repetidament el vostre polze esquerre sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:59
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre dit índex dret sobre el sensor "
+"d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:61
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre dit mitger dret sobre el sensor "
+"d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:63
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre dit anular dret sobre el sensor "
+"d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:65
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre dit auricular (xicotet) dret sobre el "
+"sensor d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:67
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre polze dret sobre el sensor d'empremtes "
+"dactilars."
+
+#: src/ui/EnrollFeedback.qml:69
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre dit índex esquerre sobre el sensor "
+"d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:71
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre dit mitger esquerre sobre el sensor "
+"d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:73
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre dit anular esquerre sobre el sensor "
+"d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:75
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre dit auricular (xicotet) esquerre sobre el "
+"sensor d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:77
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr ""
+"Feu lliscar repetidament el vostre polze esquerre sobre el sensor "
+"d'empremtes dactilars."
+
+#: src/ui/EnrollFeedback.qml:93
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "S'ha registrat el dit"
+
 #: src/ui/FingerprintDialog.qml:29
 #, kde-format
 msgid "Configure Fingerprints"
@@ -206,188 +372,17 @@ msgstr "Cancel·la"
 msgid "Done"
 msgstr "Fet"
 
-#: src/ui/FingerprintDialog.qml:77
-#, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Registre de les empremtes dactilars"
-
-#: src/ui/FingerprintDialog.qml:87
-#, kde-format
-msgid ""
-"Please repeatedly press your right index finger on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre dit índex dret sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:89
-#, kde-format
-msgid ""
-"Please repeatedly press your right middle finger on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre dit mitger dret sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:91
-#, kde-format
-msgid ""
-"Please repeatedly press your right ring finger on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre dit anular dret sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:93
-#, kde-format
-msgid ""
-"Please repeatedly press your right little finger on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre dit auricular (xicotet) dret sobre el sensor "
-"d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:95
-#, kde-format
-msgid "Please repeatedly press your right thumb on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre polze dret sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:97
-#, kde-format
-msgid ""
-"Please repeatedly press your left index finger on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre dit índex esquerre sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:99
-#, kde-format
-msgid ""
-"Please repeatedly press your left middle finger on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre dit mitger esquerre sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:101
-#, kde-format
-msgid ""
-"Please repeatedly press your left ring finger on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre dit anular esquerre sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:103
-#, kde-format
-msgid ""
-"Please repeatedly press your left little finger on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre dit auricular (xicotet) esquerre sobre el "
-"sensor d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:105
-#, kde-format
-msgid "Please repeatedly press your left thumb on the fingerprint sensor."
-msgstr ""
-"Poseu repetidament el vostre polze esquerre sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:109
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right index finger on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre dit índex dret sobre el sensor "
-"d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:111
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right middle finger on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre dit mitger dret sobre el sensor "
-"d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:113
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right ring finger on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre dit anular dret sobre el sensor "
-"d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:115
-#, kde-format
-msgid ""
-"Please repeatedly swipe your right little finger on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre dit auricular (xicotet) dret sobre el "
-"sensor d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:117
-#, kde-format
-msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre polze dret sobre el sensor d'empremtes "
-"dactilars."
-
-#: src/ui/FingerprintDialog.qml:119
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left index finger on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre dit índex esquerre sobre el sensor "
-"d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:121
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left middle finger on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre dit mitger esquerre sobre el sensor "
-"d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:123
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left ring finger on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre dit anular esquerre sobre el sensor "
-"d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:125
-#, kde-format
-msgid ""
-"Please repeatedly swipe your left little finger on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre dit auricular (xicotet) esquerre sobre el "
-"sensor d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:127
-#, kde-format
-msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
-msgstr ""
-"Feu lliscar repetidament el vostre polze esquerre sobre el sensor "
-"d'empremtes dactilars."
-
-#: src/ui/FingerprintDialog.qml:143
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "S'ha registrat el dit"
-
-#: src/ui/FingerprintDialog.qml:178
-#, kde-format
-msgid "Pick a finger to enroll"
-msgstr "Seleccioneu un dit per a registrar"
-
-#: src/ui/FingerprintDialog.qml:297
+#: src/ui/FingerprintList.qml:72
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Torna a registrar el dit"
 
-#: src/ui/FingerprintDialog.qml:304
+#: src/ui/FingerprintList.qml:77
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Suprimix l'empremta dactilar"
 
-#: src/ui/FingerprintDialog.qml:313
+#: src/ui/FingerprintList.qml:87
 #, kde-format
 msgid "No fingerprints added"
 msgstr "No s'ha afegit cap empremta dactilar"
@@ -408,6 +403,11 @@ msgstr "Afig nou"
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
 msgstr "Premeu «Espai» per a editar el perfil d'usuari"
+
+#: src/ui/PickFinger.qml:28
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Seleccioneu un dit per a registrar"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
@@ -583,7 +583,7 @@ msgstr "Suprimix l'usuari…"
 msgid "Configure Fingerprint Authentication…"
 msgstr "Configura l'autenticació d'empremtes dactilars…"
 
-#: src/ui/UserDetailsPage.qml:248
+#: src/ui/UserDetailsPage.qml:251
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -622,12 +622,12 @@ msgstr ""
 "No s'ha pogut redimensionar la imatge: ha fallat en escriure en el fitxer "
 "temporal"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Your Account"
 msgstr "El vostre compte"
 
-#: src/usermodel.cpp:147
+#: src/usermodel.cpp:146
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-05-12 00:40+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -26,6 +26,17 @@ msgstr "राघवेंद्र कामत"
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raghu@raghukamath.com"
+
+#: batterycontrol/batteriesnamesmonitor_p.cpp:25
+#, kde-format
+msgctxt "Placeholder is the battery number"
+msgid "Battery %1"
+msgstr ""
+
+#: batterycontrol/batteriesnamesmonitor_p.cpp:27
+#, kde-format
+msgid "Battery"
+msgstr ""
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
