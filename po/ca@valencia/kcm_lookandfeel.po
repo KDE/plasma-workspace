@@ -110,7 +110,7 @@ msgstr "Aspecte i comportament global"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr "Supressió definitiva"
+msgstr "Suprimiu definitivament"
 
 #: ui/main.qml:63
 #, kde-format

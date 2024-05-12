@@ -300,7 +300,7 @@ msgstr "Activa l'entrada %1 del gestor de tasques"
 #: shellcorona.cpp:291
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr "Gestiona escriptoris i quadros..."
+msgstr "Gestiona escriptoris i quadros…"
 
 #: shellcorona.cpp:313
 #, kde-format
