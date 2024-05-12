@@ -85,17 +85,20 @@ QString Utils::desktopEntryFromPid(uint pid)
     if (environFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         constexpr QByteArrayView bamfDesktopFileHint("BAMF_DESKTOP_FILE_HINT");
 
-        const QByteArrayList lines = environFile.readAll().split('\0');
-        for (const QByteArrayView line : lines) {
-            const int equalsIdx = line.indexOf('=');
-            if (equalsIdx <= 0) {
+        const QByteArray environ = environFile.readAll();
+#if (defined(__GNUC__) && __GNUC__ >= 12) || !defined(__GNUC__)
+        for (const QByteArrayView line : QByteArrayView(environ) | std::views::split('\0')) {
+#else
+        for (const QByteArrayView line : environ.split('\0')) {
+#endif
+            const auto equalsIdx = line.indexOf('=');
+            if (equalsIdx == -1) {
                 continue;
             }
 
             const QByteArrayView key = line.sliced(0, equalsIdx);
             if (key == bamfDesktopFileHint) {
-                const QByteArrayView value = line.sliced(equalsIdx + 1);
-                return QString::fromUtf8(value);
+                return QString::fromUtf8(line.sliced(equalsIdx + 1));
             }
         }
     }
