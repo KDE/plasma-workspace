@@ -49,7 +49,6 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_maxLength(0)
     , m_minLength(0)
     , m_contentLength(0)
-    , m_distance(0)
     , m_thickness(30)
     , m_minDrawingWidth(0)
     , m_minDrawingHeight(0)
@@ -337,22 +336,6 @@ void PanelView::setMinimumLength(int length)
     resizePanel();
 }
 
-int PanelView::distance() const
-{
-    return m_distance;
-}
-
-void PanelView::setDistance(int dist)
-{
-    if (m_distance == dist) {
-        return;
-    }
-
-    m_distance = dist;
-    Q_EMIT distanceChanged();
-    positionPanel();
-}
-
 bool PanelView::floating() const
 {
     return m_floating;
@@ -619,7 +602,7 @@ void PanelView::positionPanel()
     }
 
     // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
-    const QPoint pos = geometryByDistance(m_distance).topLeft();
+    const QPoint pos = geometryByDistance(0).topLeft();
     setPosition(pos);
     updateMask();
     Q_EMIT geometryChanged();
@@ -903,7 +886,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     // don't setGeometry() to make really sure we aren't doing a resize loop
     if (m_screenToFollow && containment()) {
         // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
-        const QPoint pos = geometryByDistance(m_distance).topLeft();
+        const QPoint pos = geometryByDistance(0).topLeft();
         setPosition(pos);
 
         m_strutsTimer.start(STRUTSTIMERDELAY);

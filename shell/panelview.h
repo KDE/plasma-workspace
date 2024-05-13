@@ -70,11 +70,6 @@ class PanelView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(int minimumLength READ minimumLength WRITE setMinimumLength NOTIFY minimumLengthChanged)
 
     /**
-     * how much the panel is distant for the screen edge: used by the panel controller to drag it around
-     */
-    Q_PROPERTY(int distance READ distance WRITE setDistance NOTIFY distanceChanged)
-
-    /**
      * support NoBackground in order to disable blur/contrast effects and remove
      * the panel shadows
      * @since 5.9
@@ -181,9 +176,6 @@ public:
     int minimumLength() const;
     void setMinimumLength(int length);
 
-    int distance() const;
-    void setDistance(int dist);
-
     bool floating() const;
     void setFloating(bool floating);
 
@@ -243,7 +235,6 @@ Q_SIGNALS:
     void lengthChanged();
     void maximumLengthChanged();
     void minimumLengthChanged();
-    void distanceChanged();
     void backgroundHintsChanged();
     void enabledBordersChanged();
     void floatingChanged();
@@ -298,7 +289,6 @@ private:
     int m_maxLength;
     int m_minLength;
     int m_contentLength;
-    int m_distance;
     int m_thickness;
     int m_bottomPadding;
     int m_topPadding;
