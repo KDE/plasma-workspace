@@ -218,7 +218,8 @@ void X11OutputOrderWatcher::refresh()
         }
     }
 
-    const auto screenNames = qGuiApp->screens() | std::views::transform(&QScreen::name);
+    const auto screens = qGuiApp->screens();
+    const auto screenNames = screens | std::views::transform(&QScreen::name);
     const bool isScreenPresent = std::ranges::all_of(std::as_const(orderMap), [&screenNames](const auto &pr) {
         return std::ranges::find(screenNames, std::get<QString>(pr)) != screenNames.end();
     });
