@@ -33,7 +33,7 @@ msgstr "Força els ppp dels tipus de lletra a Wayland"
 #: fontsaasettingsbase.kcfg:13
 #, kde-format
 msgid "Force font DPI on X11"
-msgstr "Força els ppp dels tipus de lletra a l'X11"
+msgstr "Força els ppp dels tipus de lletra a X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9

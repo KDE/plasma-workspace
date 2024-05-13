@@ -49,10 +49,10 @@ msgstr ""
 "del mig del ratolí.<nl/><nl/>Si la selecció es copia explícitament "
 "utilitzant l'acció <interface>Copia</interface> o <interface>Retalla</"
 "interface>, es guarda a dins del <emphasis>porta-retalls</emphasis>. Es pot "
-"apegar utilitzant l'acció <interface>Apega</interface>. <nl/><nl/>Quan se "
-"selecciona, esta opció manté iguals la selecció i el porta-retalls de manera "
-"que qualsevol selecció està immediatament disponible per a apegar de totes "
-"les maneres. Si no se selecciona, la selecció encara es pot guardar en "
+"apegar utilitzant l'acció <interface>Apega</interface>. <nl/><nl/>Quan es "
+"marca, esta opció manté iguals la selecció i el porta-retalls de manera que "
+"qualsevol selecció està immediatament disponible per a apegar de totes les "
+"maneres. Si no està marcada, la selecció encara es pot guardar en "
 "l'historial del porta-retalls (subjecte a les opcions de davall), però només "
 "es pot apegar utilitzant el botó central del ratolí."
 
@@ -132,7 +132,7 @@ msgstr ""
 #: configdialog.cpp:278
 #, kde-format
 msgid "Exclude Windows..."
-msgstr "Exclou finestres..."
+msgstr "Exclou finestres…"
 
 #: configdialog.cpp:292
 #, kde-format
@@ -185,12 +185,12 @@ msgstr "Descripció"
 #: configdialog.cpp:374
 #, kde-format
 msgid "Add Action..."
-msgstr "Afig una acció..."
+msgstr "Afig una acció…"
 
 #: configdialog.cpp:378
 #, kde-format
 msgid "Edit Action..."
-msgstr "Edita l'acció..."
+msgstr "Edita l'acció…"
 
 #: configdialog.cpp:383
 #, kde-format
@@ -400,20 +400,20 @@ msgid ""
 msgstr ""
 "Les ordres d'esta coincidència s'inclouran en la finestra emergent d'acció "
 "automàtica, si està activada a la pàgina <interface>Mení d'acció</"
-"interface>. Si esta opció està desseleccionada, les ordres d'esta "
-"coincidència no s'inclouran en la finestra emergent automàtica però "
-"s'inclouran si la finestra emergent s'activa manualment amb la drecera de "
-"teclat <shortcut>%1</shortcut>."
+"interface>. Si es desmarca esta opció, les ordres d'esta coincidència no "
+"s'inclouran en la finestra emergent automàtica però s'inclouran si la "
+"finestra emergent s'activa manualment amb la drecera de teclat <shortcut>%1</"
+"shortcut>."
 
 #: editactiondialog.cpp:262
 #, kde-format
 msgid "Add Command..."
-msgstr "Afig una ordre..."
+msgstr "Afig una ordre…"
 
 #: editactiondialog.cpp:267
 #, kde-format
 msgid "Edit Command..."
-msgstr "Edita una ordre..."
+msgstr "Edita una ordre…"
 
 #: editactiondialog.cpp:273
 #, kde-format
@@ -936,7 +936,7 @@ msgstr "Luboš Luňák"
 #: main.cpp:40
 #, kde-format
 msgid "Bugfixes and optimizations"
-msgstr "Correccions d'errors i optimitzacions"
+msgstr "Esmenes d'errors i optimitzacions"
 
 #: main.cpp:42
 #, kde-format
