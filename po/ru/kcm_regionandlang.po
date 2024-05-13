@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2023, 2024.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-23 00:40+0000\n"
-"PO-Revision-Date: 2023-02-19 17:56+0300\n"
+"PO-Revision-Date: 2024-05-12 17:04+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -23,34 +23,35 @@ msgstr ""
 #, kde-format
 msgctxt "Binary dialect IEC, with sigle in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "Международная электротехническая комиссия (IEC)"
 
 #: binarydialectmodel.cpp:54
 #, kde-format
 msgctxt "Binary dialect JEDEC, with sigle in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
 msgstr ""
+"Комитет инженеров, специализирующихся в области электронных устройств (JEDEC)"
 
 #: binarydialectmodel.cpp:58
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "Метрическая система (СИ)"
 
 #: binarydialectmodel.cpp:73
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "Двоичная — кибибайты (КиБ), мебибайты (МиБ), гигибайты (ГиБ)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Двоичная — килобайты (Кбайт), мегабайты (Мбайт), гмгабайты (Гбайт)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Десятичная — килобайты (Кбайт), мегабайты (Мбайт), гмгабайты (Гбайт)"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -417,7 +418,7 @@ msgstr "Телефонные номера"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Размеры данных и хранилищ"
 
 #: optionsmodel.cpp:130 optionsmodel.cpp:374
 #, kde-format
@@ -429,19 +430,19 @@ msgstr "Системный параметр по умолчанию"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "КиБ, МиБ, ГиБ, %1"
 
 #: optionsmodel.cpp:299
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "Кбайт, Мбайт, Гбайт, %1"
 
 #: optionsmodel.cpp:302
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "Кбайт, Мбайт, Гбайт, %1"
 
 #: optionsmodel.cpp:376
 #, kde-format

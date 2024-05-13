@@ -404,10 +404,3 @@ msgid ""
 msgstr ""
 "此设备可能支持电源管理方案。<nl/>请尝试使用本机发行版的软件包管理器安装 "
 "<command>power-profiles-daemon</command> 软件包，然后重新启动系统。"
-
-#~ msgctxt "Placeholder is the battery number"
-#~ msgid "Battery %1"
-#~ msgstr "电池 %1"
-
-#~ msgid "Battery"
-#~ msgstr "电池"

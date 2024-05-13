@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2024-02-25 02:44+0100\n"
-"Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
+"PO-Revision-Date: 2024-05-12 07:57+0200\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -35,12 +35,12 @@ msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net,jlp@holodeck1.com"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Baterija %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:27
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Baterija"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
