@@ -24,6 +24,11 @@ class AutoHideScreenEdge;
 class ShellCorona;
 class PanelConfigView;
 
+namespace PlasmaQuick
+{
+class EdgeEventForwarder;
+}
+
 namespace LayerShellQt
 {
 class Window;
@@ -288,8 +293,6 @@ private:
     void resizePanel();
     void integrateScreen();
     void updateEditModeLabel();
-    bool containmentContainsPosition(const QPointF &point) const;
-    QPointF positionAdjustedForContainment(const QPointF &point) const;
     bool edgeActivated() const;
     bool canSetStrut() const;
     QRect geometryByDistance(int distance, double floatingness) const;
@@ -315,7 +318,6 @@ private:
     bool m_initCompleted;
     bool m_floating;
     bool m_containsMouse = false;
-    bool m_fakeEventPending = false;
     bool m_touchingWindow = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
@@ -334,6 +336,7 @@ private:
     QPointer<QScreen> m_screenToFollow;
     QMetaObject::Connection m_transientWindowVisibleWatcher;
     AutoHideScreenEdge *m_autoHideScreenEdge = nullptr;
+    PlasmaQuick::EdgeEventForwarder *m_edgeEventForwarder = nullptr;
 
     static const int STRUTSTIMERDELAY = 200;
 };

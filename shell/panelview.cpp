@@ -29,6 +29,7 @@
 
 #include <Plasma/Containment>
 #include <PlasmaQuick/AppletQuickItem>
+#include <PlasmaQuick/EdgeEventForwarder>
 
 #include <LayerShellQt/Window>
 
@@ -61,6 +62,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_opacityMode(Adaptive)
     , m_lengthMode(FillAvailable)
     , m_backgroundHints(Plasma::Types::StandardBackground)
+    , m_edgeEventForwarder(new PlasmaQuick::EdgeEventForwarder(this))
 {
     if (KWindowSystem::isPlatformWayland()) {
         m_layerWindow = LayerShellQt::Window::get(this);
@@ -96,6 +98,8 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     m_lastScreen = targetScreen;
     connect(this, &PanelView::locationChanged, this, &PanelView::restore);
     connect(this, &PanelView::containmentChanged, this, &PanelView::refreshContainment);
+
+    m_edgeEventForwarder->setActiveEdges(Qt::TopEdge | Qt::LeftEdge | Qt::RightEdge | Qt::BottomEdge);
 
     if (!m_corona->kPackage().isValid()) {
         qCWarning(PLASMASHELL) << "Invalid home screen package";
@@ -1071,107 +1075,6 @@ bool PanelView::event(QEvent *e)
         }
         break;
 
-        /*Fitt's law: if the containment has margins, and the mouse cursor clicked
-         * on the mouse edge, forward the click in the containment boundaries
-         */
-
-    case QEvent::MouseMove:
-    case QEvent::MouseButtonPress:
-    case QEvent::MouseButtonRelease: {
-        QMouseEvent *me = static_cast<QMouseEvent *>(e);
-
-        // first, don't mess with position if the cursor is actually outside the view:
-        // somebody is doing a click and drag that must not break when the cursor i outside
-        // BUG 482580: use QRectF for HiDPI
-        if (QRectF(geometry()).contains(mapToGlobal(me->scenePosition()))) {
-            if (!containmentContainsPosition(me->scenePosition()) && !m_fakeEventPending) {
-                QMouseEvent me2(me->type(),
-                                positionAdjustedForContainment(me->scenePosition()),
-                                positionAdjustedForContainment(me->scenePosition()),
-                                positionAdjustedForContainment(me->scenePosition()) + position(),
-                                me->button(),
-                                me->buttons(),
-                                me->modifiers());
-                me2.setTimestamp(me->timestamp());
-
-                m_fakeEventPending = true;
-                QCoreApplication::sendEvent(this, &me2);
-                m_fakeEventPending = false;
-                return true;
-            }
-        } else {
-            // default handling if current mouse position is outside the panel
-            return ContainmentView::event(e);
-        }
-        break;
-    }
-
-    case QEvent::Wheel: {
-        QWheelEvent *we = static_cast<QWheelEvent *>(e);
-
-        if (!containmentContainsPosition(we->position()) && !m_fakeEventPending) {
-            QWheelEvent we2(positionAdjustedForContainment(we->position()),
-                            positionAdjustedForContainment(we->position()) + position(),
-                            we->pixelDelta(),
-                            we->angleDelta(),
-                            we->buttons(),
-                            we->modifiers(),
-                            we->phase(),
-                            we->inverted());
-            we2.setTimestamp(we->timestamp());
-
-            m_fakeEventPending = true;
-            QCoreApplication::sendEvent(this, &we2);
-            m_fakeEventPending = false;
-            return true;
-        }
-        break;
-    }
-
-    case QEvent::DragEnter: {
-        QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
-        if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
-            QDragEnterEvent de2(positionAdjustedForContainment(de->position()).toPoint(),
-                                de->possibleActions(),
-                                de->mimeData(),
-                                de->buttons(),
-                                de->modifiers());
-
-            m_fakeEventPending = true;
-            QCoreApplication::sendEvent(this, &de2);
-            m_fakeEventPending = false;
-            return true;
-        }
-        break;
-    }
-    // DragLeave just works
-    case QEvent::DragLeave:
-        break;
-    case QEvent::DragMove: {
-        QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
-        if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
-            QDragMoveEvent de2(positionAdjustedForContainment(de->position()).toPoint(), de->possibleActions(), de->mimeData(), de->buttons(), de->modifiers());
-
-            m_fakeEventPending = true;
-            QCoreApplication::sendEvent(this, &de2);
-            m_fakeEventPending = false;
-            return true;
-        }
-        break;
-    }
-    case QEvent::Drop: {
-        QDropEvent *de = static_cast<QDropEvent *>(e);
-        if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
-            QDropEvent de2(positionAdjustedForContainment(de->position()).toPoint(), de->possibleActions(), de->mimeData(), de->buttons(), de->modifiers());
-
-            m_fakeEventPending = true;
-            QCoreApplication::sendEvent(this, &de2);
-            m_fakeEventPending = false;
-            return true;
-        }
-        break;
-    }
-
     case QEvent::Hide: {
         m_containsMouse = false;
         break;
@@ -1197,36 +1100,6 @@ bool PanelView::event(QEvent *e)
     }
 
     return rc;
-}
-
-bool PanelView::containmentContainsPosition(const QPointF &point) const
-{
-    QQuickItem *containmentItem = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
-
-    if (!containmentItem) {
-        return false;
-    }
-
-    return QRectF(containmentItem->mapToScene(QPoint(m_leftPadding, m_topPadding)),
-                  QSizeF(containmentItem->width() - m_leftPadding - m_rightPadding, containmentItem->height() - m_topPadding - m_bottomPadding))
-        .contains(point);
-}
-
-QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
-{
-    QQuickItem *containmentItem = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
-
-    if (!containmentItem) {
-        return point;
-    }
-
-    QRectF containmentRect(containmentItem->mapToScene(QPoint(0, 0)), QSizeF(containmentItem->width(), containmentItem->height()));
-
-    // We are removing 1 to the e.g. containmentRect.right() - m_rightPadding because the last pixel would otherwise
-    // the first one in the margin, and thus the mouse event would be discarded. Instead, the first pixel given by
-    // containmentRect.left() + m_leftPadding the first one *not* in the margin, so it work.
-    return QPointF(qBound(containmentRect.left() + m_leftPadding, point.x(), containmentRect.right() - m_rightPadding - 1),
-                   qBound(containmentRect.top() + m_topPadding, point.y(), containmentRect.bottom() - m_bottomPadding - 1));
 }
 
 void PanelView::updateMask()
@@ -1690,6 +1563,12 @@ void PanelView::updatePadding()
     m_bottomPadding = rootObject()->property("bottomPadding").toInt();
     m_minDrawingHeight = rootObject()->property("minPanelHeight").toInt();
     m_minDrawingWidth = rootObject()->property("minPanelWidth").toInt();
+
+    m_edgeEventForwarder->setMargins(QMargins(m_leftFloatingPadding + m_leftPadding,
+                                              m_topFloatingPadding + m_topPadding,
+                                              m_rightFloatingPadding + m_rightPadding,
+                                              m_bottomFloatingPadding + m_bottomPadding));
+
     Q_EMIT minThicknessChanged();
     setThickness(m_thickness);
 }
@@ -1724,6 +1603,11 @@ void PanelView::updateFloating()
     m_rightFloatingPadding = rootObject()->property("fixedRightFloatingPadding").toInt();
     m_topFloatingPadding = rootObject()->property("fixedTopFloatingPadding").toInt();
     m_bottomFloatingPadding = rootObject()->property("fixedBottomFloatingPadding").toInt();
+
+    m_edgeEventForwarder->setMargins(QMargins(m_leftFloatingPadding + m_leftPadding,
+                                              m_topFloatingPadding + m_topPadding,
+                                              m_rightFloatingPadding + m_rightPadding,
+                                              m_bottomFloatingPadding + m_bottomPadding));
 
     resizePanel();
     updateExclusiveZone();
