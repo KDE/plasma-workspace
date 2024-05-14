@@ -32,8 +32,8 @@ private Q_SLOTS:
 
 private:
     QPointer<SlideModel> m_model = nullptr;
-    QPointer<QSignalSpy> m_doneSpy = nullptr;
-    QPointer<QSignalSpy> m_dataSpy = nullptr;
+    QSignalSpy *m_doneSpy = nullptr;
+    QSignalSpy *m_dataSpy = nullptr;
 
     QDir m_dataDir;
     QDir m_alternateDir;
@@ -92,8 +92,8 @@ void SlideModelTest::init()
 void SlideModelTest::cleanup()
 {
     m_model->deleteLater();
-    m_doneSpy->deleteLater();
-    m_dataSpy->deleteLater();
+    delete m_doneSpy;
+    delete m_dataSpy;
 }
 
 void SlideModelTest::cleanupTestCase()

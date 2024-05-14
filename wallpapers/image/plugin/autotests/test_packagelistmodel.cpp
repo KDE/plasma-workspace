@@ -35,8 +35,8 @@ private Q_SLOTS:
 
 private:
     QPointer<PackageListModel> m_model = nullptr;
-    QPointer<QSignalSpy> m_countSpy = nullptr;
-    QPointer<QSignalSpy> m_dataSpy = nullptr;
+    QSignalSpy *m_countSpy = nullptr;
+    QSignalSpy *m_dataSpy = nullptr;
 
     QDir m_dataDir;
     QDir m_alternateDir;
@@ -81,8 +81,8 @@ void PackageListModelTest::init()
 void PackageListModelTest::cleanup()
 {
     m_model->deleteLater();
-    m_countSpy->deleteLater();
-    m_dataSpy->deleteLater();
+    delete m_countSpy;
+    delete m_dataSpy;
 }
 
 void PackageListModelTest::cleanupTestCase()
