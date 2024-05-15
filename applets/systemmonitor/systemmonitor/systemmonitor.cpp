@@ -7,6 +7,7 @@
 #include "systemmonitor.h"
 
 #include <QDebug>
+#include <QQmlEngine>
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QStandardPaths>
@@ -36,7 +37,7 @@ void SystemMonitor::init()
     // FIXME HACK: better way to get the engine At least AppletQuickItem should have an engine() getter
     auto qmlObject = new PlasmaQuick::SharedQmlEngine();
     KConfigGroup cg = config();
-    m_sensorFaceController = new KSysGuard::SensorFaceController(cg, qmlObject->engine().get());
+    m_sensorFaceController = new KSysGuard::SensorFaceController(cg, qmlObject->engine().get(), new QQmlEngine(this));
     qmlObject->deleteLater();
 
     // NOTE: taking the pluginId from the child applet (cpu monitor, memory, whatever) is done implicitly by not embedding metadata in this applet
@@ -54,7 +55,7 @@ KSysGuard::SensorFaceController *SystemMonitor::faceController() const
 KSysGuard::SensorFaceController *SystemMonitor::workaroundController(QQuickItem *context) const
 {
     KConfigGroup cg = config();
-    return new KSysGuard::SensorFaceController(cg, qmlEngine(context));
+    return new KSysGuard::SensorFaceController(cg, qmlEngine(context), new QQmlEngine(context));
 }
 
 void SystemMonitor::configChanged()
