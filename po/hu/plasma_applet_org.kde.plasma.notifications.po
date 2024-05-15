@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-02 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:40+0000\n"
 "PO-Revision-Date: 2024-02-05 22:55+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "Megnyitás ezzel: %1"
 msgid "Open with…"
 msgstr "Megnyitás mással…"
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:269
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:266
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Tartalmazó mappa megnyitása"
@@ -241,37 +241,37 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
 
-#: package/contents/ui/JobItem.qml:167
+#: package/contents/ui/JobItem.qml:164
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:182
+#: package/contents/ui/JobItem.qml:179
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Részletek"
 
-#: package/contents/ui/JobItem.qml:193
+#: package/contents/ui/JobItem.qml:190
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Szünet"
 
-#: package/contents/ui/JobItem.qml:202
+#: package/contents/ui/JobItem.qml:199
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Mégse"
 
-#: package/contents/ui/JobItem.qml:233
-#: package/contents/ui/ThumbnailStrip.qml:169
+#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/ThumbnailStrip.qml:166
 #, kde-format
 msgid "More Options…"
 msgstr "További beállítások…"
 
-#: package/contents/ui/JobItem.qml:261
+#: package/contents/ui/JobItem.qml:258
 #, kde-format
 msgid "Open"
 msgstr "Megnyitás"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:40+0000\n"
 "PO-Revision-Date: 2012-06-14 14:01+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -319,7 +319,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "ប្រើ​ការ​បង្ហាញ​ភីកសែល​រង​ ៖"
 
-#: ui/main.qml:324
+#: ui/main.qml:326
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -333,14 +333,14 @@ msgid ""
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
 
-#: ui/main.qml:329
+#: ui/main.qml:331
 #, fuzzy, kde-format
 #| msgid "Hinting style: "
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "រចនា​ប័ទ្ម Hinting ៖ "
 
-#: ui/main.qml:372
+#: ui/main.qml:376
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -350,13 +350,13 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:385
+#: ui/main.qml:389
 #, fuzzy, kde-format
 #| msgid "Force fonts DPI:"
 msgid "Force font DPI:"
 msgstr "បង្ខំ​ពុម្ព​អក្សរ DPI ៖"
 
-#: ui/main.qml:413
+#: ui/main.qml:417
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -368,7 +368,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:419
+#: ui/main.qml:423
 #, kde-format
 msgid "Select Font"
 msgstr ""

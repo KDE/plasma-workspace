@@ -32,12 +32,12 @@ msgstr "kde-china@kde.org, i@guoyunhe.me, tds00@qq.com"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "电池 %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:27
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "电池"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format

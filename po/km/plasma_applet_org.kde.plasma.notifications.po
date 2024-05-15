@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-02 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:40+0000\n"
 "PO-Revision-Date: 2012-06-14 10:53+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Open with…"
 msgstr ""
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:269
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:266
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
@@ -247,39 +247,39 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:167
+#: package/contents/ui/JobItem.qml:164
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:182
+#: package/contents/ui/JobItem.qml:179
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:193
+#: package/contents/ui/JobItem.qml:190
 #, fuzzy, kde-format
 #| msgid "Paused"
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "បានផ្អាក"
 
-#: package/contents/ui/JobItem.qml:202
+#: package/contents/ui/JobItem.qml:199
 #, fuzzy, kde-format
 #| msgid "Cancel job"
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "បោះបង់​ការងារ"
 
-#: package/contents/ui/JobItem.qml:233
-#: package/contents/ui/ThumbnailStrip.qml:169
+#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/ThumbnailStrip.qml:166
 #, kde-format
 msgid "More Options…"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:261
+#: package/contents/ui/JobItem.qml:258
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open"

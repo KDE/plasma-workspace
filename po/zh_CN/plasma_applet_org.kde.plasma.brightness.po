@@ -90,13 +90,13 @@ msgstr "夜间色温已暂停"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr "夜间颜色正在使用日间色温"
+msgstr "夜间色温正在显示日间色温"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr "夜间颜色正在使用夜间色温"
+msgstr "夜间色温正在显示夜间色温"
 
 #: package/contents/ui/main.qml:99
 #, kde-format

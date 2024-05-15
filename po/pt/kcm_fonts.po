@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmdisplay\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-15 00:40+0000\n"
 "PO-Revision-Date: 2022-10-16 11:47+0100\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -284,7 +284,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Desenho dos sub-pixels:"
 
-#: ui/main.qml:324
+#: ui/main.qml:326
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -308,13 +308,13 @@ msgstr ""
 "suportadas por esta funcionalidade.</para>Isto não funciona com monitores "
 "CRT."
 
-#: ui/main.qml:329
+#: ui/main.qml:331
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Sugestão:"
 
-#: ui/main.qml:372
+#: ui/main.qml:376
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -329,12 +329,12 @@ msgstr ""
 "origem a arestas mais nítidas mas as letras pequenas ficarão menos parecidas "
 "com a sua forma original com tamanhos grandes."
 
-#: ui/main.qml:385
+#: ui/main.qml:389
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Forçar os PPP do texto:"
 
-#: ui/main.qml:413
+#: ui/main.qml:417
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -354,7 +354,7 @@ msgstr ""
 "ajustar a escala de tudo, use a barra deslizante de escala na página do "
 "<interface>Ecrã e Monitor</interface>.</para>"
 
-#: ui/main.qml:419
+#: ui/main.qml:423
 #, kde-format
 msgid "Select Font"
 msgstr "Seleccione o Tipo de Letra"

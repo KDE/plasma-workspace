@@ -154,7 +154,7 @@ msgstr "手动切换快捷键："
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr "可见条件"
+msgstr "显示条件"
 
 #: ui/main.qml:144
 #, kde-format

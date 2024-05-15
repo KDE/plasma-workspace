@@ -29,7 +29,7 @@ msgstr "%1 开始逐渐过渡到夜间色温，%2 切换完成"
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
-msgstr "%1 开始逐渐过渡到日间色温，%2 切换完成"
+msgstr "%1 开始过渡到日间色温，%2 切换完成"
 
 #: ui/LocationsFixedView.qml:72
 #, kde-format
@@ -142,7 +142,7 @@ msgstr "自定义时间"
 #: ui/main.qml:304
 #, kde-format
 msgid "Always on night light"
-msgstr "总是使用夜间颜色"
+msgstr "总是使用夜间色温"
 
 #: ui/main.qml:321
 #, kde-format
@@ -169,7 +169,7 @@ msgstr ""
 #: ui/main.qml:366
 #, kde-format
 msgid "Begin night light at:"
-msgstr "夜间颜色开始时间："
+msgstr "夜间色温开始时间："
 
 #: ui/main.qml:382
 #, kde-format
