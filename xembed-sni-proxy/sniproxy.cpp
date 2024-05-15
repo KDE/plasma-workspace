@@ -118,14 +118,13 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
         We also need it to exist in the right place to get the clicks working as GTK will check sendEvent locations to see if our window is in the right place.
        So even though our contents are drawn via compositing we still put this window in the right place
 
-        We can't composite it away anything parented owned by the root window (apparently)
-        Stack Under works in the non composited case, but it doesn't seem to work in kwin's composited case (probably need set relevant NETWM hint)
-
-        As a last resort set opacity to 0 just to make sure this container never appears
+        Set opacity to 0 just to make sure this container never appears
+        And set the input region to null so everything just clicks through
     */
 
+    setActiveForInput(false);
+
 #ifndef VISUAL_DEBUG
-    stackContainerWindow(XCB_STACK_MODE_BELOW);
 
     NETWinInfo wm(c, m_containerWid, screen->root, NET::Properties(), NET::Properties2());
     wm.setOpacity(0);
@@ -225,8 +224,7 @@ void SNIProxy::resizeWindow(const uint16_t width, const uint16_t height) const
 void SNIProxy::hideContainerWindow(xcb_window_t windowId) const
 {
     if (m_containerWid == windowId && !sendingClickEvent) {
-        qDebug() << "Container window visible, stack below";
-        stackContainerWindow(XCB_STACK_MODE_BELOW);
+        setActiveForInput(false);
     }
 }
 
@@ -382,7 +380,8 @@ QImage SNIProxy::convertFromNative(xcb_image_t *xcbImage) const
 */
 QPoint SNIProxy::calculateClickPoint() const
 {
-    QPoint clickPoint = QPoint(0, 0);
+    QSize clientSize = calculateClientWindowSize();
+    QPoint clickPoint = QPoint(clientSize.width() / 2, clientSize.height() / 2);
 
     auto c = m_x11Interface->connection();
 
@@ -419,11 +418,32 @@ QPoint SNIProxy::calculateClickPoint() const
     return clickPoint;
 }
 
-void SNIProxy::stackContainerWindow(const uint32_t stackMode) const
+void SNIProxy::setActiveForInput(bool active) const
 {
     auto c = m_x11Interface->connection();
-    const uint32_t stackData[] = {stackMode};
-    xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
+    if (active) {
+        QSize clientWindowSize = calculateClientWindowSize();
+
+        xcb_rectangle_t rectangle;
+        rectangle.x = 0;
+        rectangle.y = 0;
+        rectangle.width = s_embedSize;
+        rectangle.height = s_embedSize;
+        xcb_shape_rectangles(c, XCB_SHAPE_SO_SET, XCB_SHAPE_SK_INPUT, 0, m_containerWid, 0, 0, 1, &rectangle);
+
+        const uint32_t stackData[] = {XCB_STACK_MODE_ABOVE};
+        xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
+    } else {
+        xcb_rectangle_t rectangle;
+        rectangle.x = 0;
+        rectangle.y = 0;
+        rectangle.width = 0;
+        rectangle.height = 0;
+        xcb_shape_rectangles(c, XCB_SHAPE_SO_SET, XCB_SHAPE_SK_INPUT, 0, m_containerWid, 0, 0, 1, &rectangle);
+
+        const uint32_t stackData[] = {XCB_STACK_MODE_BELOW};
+        xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_STACK_MODE, stackData);
+    }
 }
 
 //____________properties__________
@@ -525,6 +545,7 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     // move our window so the mouse is within its geometry
     uint32_t configVals[2] = {0, 0};
     const QPoint clickPoint = calculateClickPoint();
+
     if (mouseButton >= XCB_BUTTON_INDEX_4) {
         // scroll event, take pointer position
         auto cookie = xcb_query_pointer(c, m_windowId);
@@ -537,8 +558,8 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     }
     xcb_configure_window(c, m_containerWid, XCB_CONFIG_WINDOW_X | XCB_CONFIG_WINDOW_Y, configVals);
 
-    // pull window up
-    stackContainerWindow(XCB_STACK_MODE_ABOVE);
+    setActiveForInput(true);
+    xcb_flush(c);
 
     // mouse down
     if (m_injectMode == Direct) {
@@ -585,10 +606,9 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     } else {
         sendXTestReleased(m_x11Interface->display(), mouseButton);
     }
+    xcb_flush(c);
 
-#ifndef VISUAL_DEBUG
-    stackContainerWindow(XCB_STACK_MODE_BELOW);
-#endif
+    setActiveForInput(false); // will be called on the timer
 
     sendingClickEvent = false;
 }
