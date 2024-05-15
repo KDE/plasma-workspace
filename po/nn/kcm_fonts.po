@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 03:05+0000\n"
+"POT-Creation-Date: 2024-05-15 02:29+0000\n"
 "PO-Revision-Date: 2024-03-23 13:45+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -286,7 +286,7 @@ msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Delpikselvising:"
 
-#: ui/main.qml:322
+#: ui/main.qml:324
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -309,13 +309,13 @@ msgstr ""
 "andre har meir eksotiske mønster, som ikkje er støtta av denne funksjonen.</"
 "para><para>Dette verkar ikkje med CRT-skjermar.</para>"
 
-#: ui/main.qml:327
+#: ui/main.qml:329
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hintstil:"
 
-#: ui/main.qml:369
+#: ui/main.qml:373
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -329,12 +329,12 @@ msgstr ""
 "fører generelt til skarpare kantar, men bokstavane vil ved liten "
 "skriftstorleik likna mindre på korleis dei eigentleg skal sjå ut."
 
-#: ui/main.qml:382
+#: ui/main.qml:386
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Tving skrift-PPT:"
 
-#: ui/main.qml:410
+#: ui/main.qml:414
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -354,7 +354,7 @@ msgstr ""
 "justera den globale skaleringa under sida <interface>Skjerm og skjermbilete</"
 "interface>.</para>"
 
-#: ui/main.qml:416
+#: ui/main.qml:420
 #, kde-format
 msgid "Select Font"
 msgstr "Vel skrift"
