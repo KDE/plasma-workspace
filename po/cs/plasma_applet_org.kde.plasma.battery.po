@@ -421,10 +421,3 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-
-#~ msgctxt "Placeholder is the battery number"
-#~ msgid "Battery %1"
-#~ msgstr "Baterie %1"
-
-#~ msgid "Battery"
-#~ msgstr "Baterie"

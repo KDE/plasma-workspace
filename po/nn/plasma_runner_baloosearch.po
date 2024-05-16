@@ -1,12 +1,11 @@
 # Translation of plasma_runner_baloosearch to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2016, 2018, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-19 00:40+0000\n"
-"PO-Revision-Date: 2023-02-22 21:32+0100\n"
+"PO-Revision-Date: 2024-05-15 20:49+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -25,8 +24,7 @@ msgid "Open Containing Folder"
 msgstr "Opna foreldermappa"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Audios"
+#, kde-format
 msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
 "of the word"

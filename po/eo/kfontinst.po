@@ -1,14 +1,14 @@
 # translation of kfontinst.po to Esperanto
 # Matthias Peick <matthias@peick.de>, 2004.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
 "PO-Revision-Date: 2024-04-07 17:09+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -25,7 +25,7 @@ msgstr "Matthias Peick, Cindy McKee, Oliver Kellogg"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "matthias@peick.de, cfmckee@gmail.com, okellogg@users.sourceforge.net"
+msgstr "matthias@peick.de, cfmckee@gmail.com, olivermkellogg@gmail.com"
 
 #: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:953
 #, kde-format

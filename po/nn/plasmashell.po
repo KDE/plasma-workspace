@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-13 00:40+0000\n"
-"PO-Revision-Date: 2024-03-09 18:28+0100\n"
+"PO-Revision-Date: 2024-05-15 20:52+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -234,31 +234,31 @@ msgstr "Skjermtastatur av"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Skjermlåsing og kvilemodus blokkert"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Skjermlåsing og kvilemodus ikkje blokkert"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Straumsparemodus"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Balansert straummodus"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Ytingsmodus"
 
 #: panelview.cpp:983
 #, kde-format
@@ -301,7 +301,7 @@ msgstr "Gøym skrivebord"
 #: shellcorona.cpp:222
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Køyr programstartar"
 
 #: shellcorona.cpp:230
 #, kde-format
@@ -331,7 +331,7 @@ msgstr "Gå til oppføring %1 på oppgåvelinja"
 #: shellcorona.cpp:299
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Handsaming av panel og skrivebord"
 
 #: shellcorona.cpp:321
 #, kde-format

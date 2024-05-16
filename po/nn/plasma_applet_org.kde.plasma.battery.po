@@ -429,12 +429,3 @@ msgstr ""
 "Straumprofilar er kanskje støtta på eininga di.<nl/>Prøv å installera pakken "
 "<command>power-profiles-daemon</command> via pakke­handsamaren til distroen "
 "din, og start så maskina på nytt."
-
-#, fuzzy
-#~| msgid "Battery at %1%"
-#~ msgctxt "Placeholder is the battery number"
-#~ msgid "Battery %1"
-#~ msgstr "Batterinivå: %1 %"
-
-#~ msgid "Battery"
-#~ msgstr "Batteri"

@@ -32,12 +32,12 @@ msgstr "vit@pelcak.org"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Baterie %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:27
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Baterie"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format

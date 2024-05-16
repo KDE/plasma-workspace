@@ -1,7 +1,7 @@
 # translation of klipper.po to Esperanto
 # Copyright (C) 2007 Free Software Foundation, Inc.
 # Cindy McKee <cfmckee@gmail.com>, 2007.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-11 00:39+0000\n"
 "PO-Revision-Date: 2024-03-10 10:31+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "wolfram@steloj.de,Steffen.Pietsch@BerlinOnline.de,cfmckee@gmail.com,"
-"okellogg@users.sourceforge.net"
+"olivermkellogg@gmail.com"
 
 #: configdialog.cpp:81
 #, kde-format
