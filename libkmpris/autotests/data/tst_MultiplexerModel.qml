@@ -5,13 +5,13 @@
 */
 
 import QtQuick
-import org.kde.plasma.private.mpris as MPRIS
+import org.kde.plasma.private.mpris as Mpris
 
 Item {
     id: root
     readonly property alias count: repeater.count
     property QtObject modelData
-    MPRIS.MultiplexerModel {
+    Mpris.MultiplexerModel {
         id: mpris
     }
     Repeater {

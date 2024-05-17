@@ -5,12 +5,12 @@
 */
 
 import QtQuick
-import org.kde.plasma.private.mpris as MPRIS
+import org.kde.plasma.private.mpris as Mpris
 
 Item {
     id: root
     readonly property alias count: repeater.count
-    MPRIS.Mpris2Model {
+    Mpris.Mpris2Model {
         id: mpris
     }
     Repeater {
@@ -18,4 +18,7 @@ Item {
         model: mpris
         Item { }
     }
+
+    // make sure PlayerContainer is registered
+    readonly property Mpris.PlayerContainer playerData: mpris.currentPlayer
 }

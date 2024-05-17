@@ -266,7 +266,8 @@ protected:
 class KMPRIS_EXPORT PlayerContainer : public AbstractPlayerContainer
 {
     Q_OBJECT
-    QML_ANONYMOUS
+    QML_ELEMENT
+    QML_UNCREATABLE("PlayerContainer objects can be obtained from Mpris2Model")
 
     Q_PROPERTY(LoopStatus::Status loopStatus READ loopStatus WRITE setLoopStatus NOTIFY loopStatusChanged)
     Q_PROPERTY(qlonglong position READ position WRITE setPosition NOTIFY positionChanged)
