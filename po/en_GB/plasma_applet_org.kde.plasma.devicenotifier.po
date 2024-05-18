@@ -4,21 +4,21 @@
 #
 # Malcolm Hunter <malcolm.hunter@gmx.co.uk>, 2008.
 # Andrew Coles <andrew_coles@yahoo.co.uk>, 2009, 2010.
-# Steve Allewell <steve.allewell@gmail.com>, 2014, 2016, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2024 Steve Allewell <steve.allewell@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-02-19 12:43+0000\n"
+"PO-Revision-Date: 2024-05-17 19:24+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
-"Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
+"Language-Team: British English\n"
 "Language: en_GB\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -43,10 +43,9 @@ msgid "Removing…"
 msgstr "Removing…"
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "Do not unplug yet! Files are still being transferred..."
+msgstr "Do not unplug yet! Files are still being transferred…"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
@@ -133,92 +132,74 @@ msgstr "Show popup when new device is plugged in"
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Device Status"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "A device can now be safely removed"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "This device can now be safely removed."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Click to mount this device."
+msgstr "You are not authorised to mount this device."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "It is currently safe to remove this device."
+msgstr "You are not authorised to remove this device."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Click to eject this disc."
+msgstr "You are not authorised to eject this disc."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Could not mount device %1."
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Could not mount device %1."
+msgstr "Could not mount this device as it is busy."
 
 #: plugin/ksolidnotify.cpp:242
-#, fuzzy, kde-format
-#| msgid ""
-#| "Cannot eject the disc.\n"
-#| "One or more files on this disc are open within an application."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr ""
-"Cannot eject the disc.\n"
-"One or more files on this disc are open within an application."
+msgstr "One or more files on this device are open within an application."
 
 #: plugin/ksolidnotify.cpp:244
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not unmount device %1.\n"
-#| "One or more files on this device are open within an application."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] ""
-"Could not unmount device %1.\n"
-"One or more files on this device are open within an application."
+msgstr[0] "One or more files on this device are opened in application \"%2\"."
 msgstr[1] ""
-"Could not unmount device %1.\n"
-"One or more files on this device are open within an application."
+"One or more files on this device are opened in following applications: %2."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Could not mount device %1."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Could not mount device %1."
+msgstr "Could not mount this device."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Could not mount device %1."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Could not mount device %1."
+msgstr "Could not remove this device."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Click to eject this disc."
+msgstr "Could not eject this disc."
 
 #~ msgid "Show:"
 #~ msgstr "Show:"
