@@ -183,7 +183,7 @@ PlasmoidItem {
             return urgencies;
         }
 
-        onCountChanged: count => {
+        onCountChanged: {
             if (count === 0) {
                 closePlasmoid();
             }
