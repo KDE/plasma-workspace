@@ -28,9 +28,6 @@
 #include <KWayland/Client/surface.h>
 #include <kpluginfactory.h>
 
-static const QByteArray s_x11AppMenuServiceNamePropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_SERVICE_NAME");
-static const QByteArray s_x11AppMenuObjectPathPropertyName = QByteArrayLiteral("_KDE_NET_WM_APPMENU_OBJECT_PATH");
-
 K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory, "appmenu.json", registerPlugin<AppMenuModule>();)
 
 AppMenuModule::AppMenuModule(QObject *parent, const QList<QVariant> &)
@@ -125,7 +122,7 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
         static xcb_atom_t s_serviceNameAtom = XCB_ATOM_NONE;
         static xcb_atom_t s_objectPathAtom = XCB_ATOM_NONE;
 
-        auto setWindowProperty = [c](WId id, xcb_atom_t &atom, const QByteArray &name, const QByteArray &value) {
+        auto setWindowProperty = [c](WId id, xcb_atom_t &atom, QByteArrayView name, QByteArrayView value) {
             if (atom == XCB_ATOM_NONE) {
                 const xcb_intern_atom_cookie_t cookie = xcb_intern_atom(c, false, name.length(), name.constData());
                 UniqueCPointer<xcb_intern_atom_reply_t> reply{xcb_intern_atom_reply(c, cookie, nullptr)};
@@ -139,8 +136,7 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
             }
 
             auto cookie = xcb_change_property_checked(c, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING, 8, value.length(), value.constData());
-            xcb_generic_error_t *error;
-            if ((error = xcb_request_check(c, cookie))) {
+            if (xcb_generic_error_t *error = xcb_request_check(c, cookie)) {
                 qCWarning(APPMENU_DEBUG) << "Got an error";
                 free(error);
                 return;
@@ -148,6 +144,9 @@ void AppMenuModule::slotWindowRegistered(WId id, const QString &serviceName, con
         };
 
         // TODO only set the property if it doesn't already exist
+
+        constexpr QByteArrayView s_x11AppMenuServiceNamePropertyName("_KDE_NET_WM_APPMENU_SERVICE_NAME");
+        constexpr QByteArrayView s_x11AppMenuObjectPathPropertyName("_KDE_NET_WM_APPMENU_OBJECT_PATH");
 
         setWindowProperty(id, s_serviceNameAtom, s_x11AppMenuServiceNamePropertyName, serviceName.toUtf8());
         setWindowProperty(id, s_objectPathAtom, s_x11AppMenuObjectPathPropertyName, menuObjectPath.path().toUtf8());

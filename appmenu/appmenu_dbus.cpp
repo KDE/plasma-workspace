@@ -13,8 +13,7 @@
 #include <QDBusMessage>
 #include <QDBusServiceWatcher>
 
-static const char *DBUS_SERVICE = "org.kde.kappmenu";
-static const char *DBUS_OBJECT_PATH = "/KAppMenu";
+using namespace Qt::StringLiterals;
 
 AppmenuDBus::AppmenuDBus(QObject *parent)
     : QObject(parent)
@@ -27,8 +26,8 @@ AppmenuDBus::~AppmenuDBus()
 
 bool AppmenuDBus::connectToBus(const QString &service, const QString &path)
 {
-    m_service = service.isEmpty() ? DBUS_SERVICE : service;
-    const QString newPath = path.isEmpty() ? DBUS_OBJECT_PATH : path;
+    m_service = service.isEmpty() ? u"org.kde.kappmenu"_s : service;
+    const QString newPath = path.isEmpty() ? u"/KAppMenu"_s : path;
 
     if (!QDBusConnection::sessionBus().registerService(m_service)) {
         return false;
