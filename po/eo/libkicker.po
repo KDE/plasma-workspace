@@ -1,7 +1,7 @@
 # translation of libkicker.pot to Esperanto
 # Copyright (C) 2019 Free Software Foundation, Inc.
 # This file is distributed under the same license as the plasma-workspace package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-30 02:27+0000\n"
-"PO-Revision-Date: 2023-04-08 13:35+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-04-21 17:45+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -43,7 +43,7 @@ msgstr "Alpingli al Task Manager"
 #: plugin/actionlist.cpp:156
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "Aldoni al Panelo (Fenestaĵo)"
+msgstr "Aldoni al Panelo (Fenestraĵo)"
 
 #: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
 #, kde-format
@@ -292,18 +292,3 @@ msgstr "Malŝalti komputilon"
 #, kde-format
 msgid "System actions"
 msgstr "Sistemaj agoj"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "Montri kontaktinformojn…"
-
-#~ msgid "Contacts"
-#~ msgstr "Kontaktoj"
-
-#~ msgid "Forget Contact"
-#~ msgstr "Forgesi Kontakton"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "Forgesi Ĉiujn Kontaktojn"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "Lastatempaj Kontaktoj"

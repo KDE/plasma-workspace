@@ -2,15 +2,15 @@
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the plasma-workspace package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-23 02:23+0000\n"
-"PO-Revision-Date: 2023-04-06 22:30+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-03-28 10:37+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: ESPERANTO <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -30,13 +30,13 @@ msgstr "klara"
 #, kde-format
 msgctxt "weather condition"
 msgid "clear intervals"
-msgstr "periode klara"
+msgstr "klara periode"
 
 #: bbcukmet_i18n.dat:3 ions/wetter.com/ion_wettercom.cpp:220
 #, kde-format
 msgctxt "weather condition"
 msgid "clear sky"
-msgstr "klara ĉielo"
+msgstr "klara "
 
 #: bbcukmet_i18n.dat:4 ions/wetter.com/ion_wettercom.cpp:158
 #: ions/wetter.com/ion_wettercom.cpp:159
@@ -49,13 +49,13 @@ msgstr "nuba"
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with hail"
-msgstr "numa kun hajlo"
+msgstr "nuba kun hajlo"
 
 #: bbcukmet_i18n.dat:6
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with heavy snow"
-msgstr "nuba kun neĝego"
+msgstr "nuva kun neĝego"
 
 #: bbcukmet_i18n.dat:7
 #, kde-format
@@ -122,19 +122,19 @@ msgstr "brumo"
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain"
-msgstr "bruma pluvo"
+msgstr "pluvego"
 
 #: bbcukmet_i18n.dat:18
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain shower"
-msgstr "bruma duŝego"
+msgstr "pluva duŝego"
 
 #: bbcukmet_i18n.dat:19
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain showers"
-msgstr "brumaj duŝegoj"
+msgstr "pluvaj duŝegoj"
 
 #: bbcukmet_i18n.dat:20
 #, kde-format
@@ -170,7 +170,7 @@ msgstr "neĝaj duŝegoj"
 #, kde-format
 msgctxt "weather condition"
 msgid "light cloud"
-msgstr "blanka nubo"
+msgstr "malpeza nubo"
 
 #: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
 #: ions/wetter.com/ion_wettercom.cpp:176
@@ -214,13 +214,13 @@ msgstr "neĝeto"
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow shower"
-msgstr "neĝa duŝeto"
+msgstr "neĝeta duŝo"
 
 #: bbcukmet_i18n.dat:33 ions/wetter.com/ion_wettercom.cpp:194
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow showers"
-msgstr "neĝaj duŝetoj"
+msgstr "neĝeta duŝoj"
 
 #: bbcukmet_i18n.dat:34
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "parte nuba"
 #, kde-format
 msgctxt "weather condition"
 msgid "sandstorm"
-msgstr "sablŝtormo"
+msgstr "sabla ŝtormo"
 
 #: bbcukmet_i18n.dat:40
 #, kde-format
@@ -286,7 +286,7 @@ msgstr "suna"
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny intervals"
-msgstr "intervale suna"
+msgstr "periode suna"
 
 #: bbcukmet_i18n.dat:45
 #, kde-format
@@ -305,13 +305,13 @@ msgstr "fulmotondro"
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery shower"
-msgstr "tondra duŝo"
+msgstr "fulmotondra duŝo"
 
 #: bbcukmet_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery showers"
-msgstr "tondraj duŝoj"
+msgstr "fulmotondraj duŝoj"
 
 #: bbcukmet_i18n.dat:49
 #, kde-format
@@ -659,7 +659,7 @@ msgstr "Malbonega"
 #, kde-format
 msgctxt "weather condition"
 msgid "Blowing Snow"
-msgstr "Plovanta Neĝo"
+msgstr "Blovanta Neĝo"
 
 #: envcan_i18n.dat:3 noaa_i18n.dat:10
 #, kde-format
@@ -737,13 +737,13 @@ msgstr "Nebularo"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing drizzle"
-msgstr "Glaciigita pluveto"
+msgstr "Frosta pluveto"
 
 #: envcan_i18n.dat:16
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing rain"
-msgstr "Glaciigita pluvo"
+msgstr "Frosta pluvo"
 
 #: envcan_i18n.dat:17 noaa_i18n.dat:40
 #, kde-format
@@ -761,7 +761,7 @@ msgstr "Hajlo"
 #, kde-format
 msgctxt "weather condition"
 msgid "Haze"
-msgstr "Seka Brumo"
+msgstr "Brumo"
 
 #: envcan_i18n.dat:20 noaa_i18n.dat:45
 #, kde-format
@@ -857,7 +857,7 @@ msgstr "Grava fulmotondro kun Pluvo"
 #, kde-format
 msgctxt "weather condition"
 msgid "Ice Crystals"
-msgstr "Glacia Kristalo"
+msgstr "Glaciaj Kristaloj"
 
 #: envcan_i18n.dat:36 noaa_i18n.dat:102
 #, kde-format
@@ -3130,7 +3130,7 @@ msgstr "Nebulo"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle"
-msgstr "Frosta Pluveto"
+msgstr "Glaciigita pluveto"
 
 #: noaa_i18n.dat:31
 #, kde-format
@@ -3154,7 +3154,7 @@ msgstr "Frosta Pluveta Neĝo"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Fog"
-msgstr "Frosta Nebulo"
+msgstr "Glaciiganta Nebulo"
 
 #: noaa_i18n.dat:35
 #, kde-format
@@ -3166,7 +3166,7 @@ msgstr "Frosta Nebulo en Najbareco"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain"
-msgstr "Frosta Pluvo"
+msgstr "Glaciigita pluvo"
 
 #: noaa_i18n.dat:37
 #, kde-format
@@ -3970,7 +3970,7 @@ msgstr "Pluvo Glaciaj Buletoj"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers"
-msgstr "Pluvegoj"
+msgstr "Pluvaj Duŝoj"
 
 #: noaa_i18n.dat:187
 #, kde-format
@@ -4144,7 +4144,7 @@ msgstr "Neĝa Pluvo"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers"
-msgstr "Neĝaj Duŝoj"
+msgstr "Neĝfalo"
 
 #: noaa_i18n.dat:220
 #, kde-format

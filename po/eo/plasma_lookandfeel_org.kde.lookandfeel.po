@@ -1,7 +1,7 @@
 # translation of plasma_lookandfeel_org.kde.lookandfeel.pot to esperanto
 # Copyright (C) 2014 Free Software Foundation, Inc.
 # This file is distributed under the same license as the plasma-workspace package.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 # Minuskloj: ĉ ĝ ĵ ĥ ŝ ŭ   Majuskloj: Ĉ Ĝ Ĵ Ĥ Ŝ Ŭ
 #
@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-08 01:36+0000\n"
-"PO-Revision-Date: 2023-11-22 06:38+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-02-02 22:38+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -271,35 +271,4 @@ msgctxt ""
 "should be translated as something short, is a form that can be seen on a "
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
-msgstr "Plasmo farita de KDE"
-
-#~ msgid "Switch to This Session"
-#~ msgstr "Ŝanĝi al Ĉi tiu Seanco"
-
-#~ msgid "Start New Session"
-#~ msgstr "Komenci Novan Seancon"
-
-#~ msgid "Back"
-#~ msgstr "Reen"
-
-#~ msgid "%1%"
-#~ msgstr "%1%"
-
-#~ msgid "Battery at %1%"
-#~ msgstr "Baterio ĉe %1%"
-
-#~ msgctxt "Nobody logged in on that session"
-#~ msgid "Unused"
-#~ msgstr "Neuzata"
-
-#~ msgctxt "User logged in on console number"
-#~ msgid "TTY %1"
-#~ msgstr "TTY %1"
-
-#~ msgctxt "User logged in on console (X display number)"
-#~ msgid "on TTY %1 (Display %2)"
-#~ msgstr "ĉe TTY %1 (Ekrano %2)"
-
-#~ msgctxt "Username (location)"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"
+msgstr "Plasma farita de KDE"
