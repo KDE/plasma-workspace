@@ -82,7 +82,7 @@ bool SolidDeviceEngine::sourceRequestEvent(const QString &name)
     } else {
         Solid::Predicate predicate = Solid::Predicate::fromString(name);
         if (predicate.isValid() && !m_predicatemap.contains(name)) {
-            foreach (const Solid::Device &device, Solid::Device::listFromQuery(predicate)) {
+            for (const auto devices = Solid::Device::listFromQuery(predicate); const Solid::Device &device : devices) {
                 m_predicatemap[name] << device.udi();
             }
 
@@ -259,7 +259,7 @@ bool SolidDeviceEngine::populateDeviceData(const QString &name)
         // the following method return QList<int> so we need to convert it to QList<QVariant>
         const QList<int> writespeeds = opticaldrive->writeSpeeds();
         QList<QVariant> variantlist;
-        foreach (int num, writespeeds) {
+        for (int num : writespeeds) {
             variantlist << num;
         }
         setData(name, kli18n("Write Speeds").untranslatedText(), variantlist);
@@ -437,11 +437,11 @@ void SolidDeviceEngine::deviceAdded(const QString &udi)
 {
     Solid::Device device(udi);
 
-    foreach (const QString &query, m_predicatemap.keys()) {
-        Solid::Predicate predicate = Solid::Predicate::fromString(query);
+    for (auto it = m_predicatemap.cbegin(); it != m_predicatemap.cend(); it = std::next(it)) {
+        Solid::Predicate predicate = Solid::Predicate::fromString(it.key());
         if (predicate.matches(device)) {
-            m_predicatemap[query] << udi;
-            setData(query, m_predicatemap[query]);
+            m_predicatemap[it.key()] << udi;
+            setData(it.key(), m_predicatemap[it.key()]);
         }
     }
 
@@ -656,7 +656,7 @@ void SolidDeviceEngine::deviceRemoved(const QString &udi)
         m_encryptedContainerMap.remove(udi);
     }
 
-    foreach (const QString &query, m_predicatemap.keys()) {
+    for (const QString &query : m_predicatemap.keys()) {
         m_predicatemap[query].removeAll(udi);
         setData(query, m_predicatemap[query]);
     }
