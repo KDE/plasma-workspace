@@ -152,7 +152,7 @@ KIO::WorkerResult ApplicationsProtocol::listDir(const QUrl &url)
     unsigned int count = 0;
     KIO::UDSEntry entry;
 
-    foreach (const KSycocaEntry::Ptr &e, grp->entries(true, true)) {
+    for (const auto entries = grp->entries(true, true); const KSycocaEntry::Ptr &e : entries) {
         if (e->isType(KST_KServiceGroup)) {
             KServiceGroup::Ptr g(static_cast<KServiceGroup *>(e.data()));
 
