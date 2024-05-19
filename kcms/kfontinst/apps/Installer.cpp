@@ -130,7 +130,7 @@ int main(int argc, char **argv)
 
     QSet<QUrl> urls;
 
-    foreach (const QString &arg, parser.positionalArguments())
+    for (const auto args = parser.positionalArguments(); const QString &arg : args)
         urls.insert(QUrl::fromUserInput(arg, QDir::currentPath()));
 
     if (!urls.isEmpty()) {

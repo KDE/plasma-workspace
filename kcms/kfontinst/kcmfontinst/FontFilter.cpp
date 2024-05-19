@@ -163,7 +163,7 @@ CFontFilter::CFontFilter(QWidget *parent)
             act->setChecked(false);
 
             QStringList mimes;
-            foreach (QString pattern, mime.globPatterns())
+            for (const auto patterns = mime.globPatterns(); QString pattern : patterns)
                 mimes.append(pattern.remove(QStringLiteral("*.")));
             act->setData(mimes);
         }
