@@ -269,7 +269,7 @@ QList<QPair<QDateTime, QDateTime>> SolarSystemObject::timesForAngles(const QList
     }
     QList<QPair<QDateTime, QDateTime>> result;
     QTime rise, set;
-    foreach (double angle, angles) {
+    for (double angle : angles) {
         for (int j = 3; j <= 25; j += 2) {
             QPointF p1((j - 2) * 60 * 60, altitudes[j - 2] - angle);
             QPointF p2((j - 1) * 60 * 60, altitudes[j - 1] - angle);

@@ -105,8 +105,8 @@ void TimeEngine::tzConfigChanged()
 QStringList TimeEngine::sources() const
 {
     QStringList sources;
-    Q_FOREACH (const QByteArray &tz, QTimeZone::availableTimeZoneIds()) {
-        sources << QString(tz.constData());
+    for (const auto timezones = QTimeZone::availableTimeZoneIds(); const QByteArray &tz : timezones) {
+        sources << QString::fromLocal8Bit(tz);
     }
     sources << QStringLiteral("Local");
     return sources;
