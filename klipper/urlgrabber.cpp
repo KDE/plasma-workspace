@@ -106,10 +106,10 @@ void URLGrabber::matchingMimeActions(const QString &clipData)
     }
 
     if (!mimetype.isDefault()) {
-        KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
+        const KService::List lst = KApplicationTrader::queryByMimeType(mimetype.name());
         if (!lst.isEmpty()) {
             ClipAction *action = new ClipAction(QString(), mimetype.comment());
-            foreach (const KService::Ptr &service, lst) {
+            for (const KService::Ptr &service : lst) {
                 action->addCommand(ClipCommand(QString(), service->name(), true, service->icon(), ClipCommand::IGNORE, service->storageId()));
             }
             m_myMatches.append(action);
@@ -125,7 +125,7 @@ const ActionList &URLGrabber::matchingActions(const QString &clipData, bool auto
 
     // now look for matches in custom user actions
     QRegularExpression re;
-    foreach (ClipAction *action, m_myActions) {
+    for (ClipAction *action : std::as_const(m_myActions)) {
         re.setPattern(action->actionRegexPattern());
         const QRegularExpressionMatch match = re.match(clipData);
         if (match.hasMatch() && (action->automatic() || !automatically_invoked)) {
@@ -152,7 +152,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
     if (m_stripWhiteSpace) {
         text = std::move(text).trimmed();
     }
-    ActionList matchingActionsList = matchingActions(text, automatically_invoked);
+    const ActionList matchingActionsList = matchingActions(text, automatically_invoked);
 
     if (!matchingActionsList.isEmpty()) {
         // don't react on blacklisted (e.g. konqi's/netscape's urls) unless the user explicitly asked for it
@@ -169,7 +169,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
 
         connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
 
-        foreach (ClipAction *clipAct, matchingActionsList) {
+        for (ClipAction *clipAct : matchingActionsList) {
             m_myMenu->addSection(QIcon::fromTheme(QStringLiteral("klipper")), clipAct->description());
             QList<ClipCommand> cmdList = clipAct->commands();
             int listSize = cmdList.count();
@@ -293,7 +293,7 @@ void URLGrabber::saveSettings() const
 
     int i = 0;
     QString group;
-    foreach (ClipAction *action, m_myActions) {
+    for (ClipAction *action : std::as_const(m_myActions)) {
         group = QStringLiteral("Action_%1").arg(i);
         action->save(KSharedConfig::openConfig(), group);
         ++i;
@@ -420,7 +420,7 @@ void ClipAction::save(KSharedConfigPtr kc, const QString &group) const
 
     int i = 0;
     // now iterate over all commands of this action
-    foreach (const ClipCommand &cmd, m_myCommands) {
+    for (const ClipCommand &cmd : std::as_const(m_myCommands)) {
         QString _group = group + QStringLiteral("/Command_%1");
         KConfigGroup cg(kc, _group.arg(i));
 
