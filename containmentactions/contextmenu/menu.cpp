@@ -286,7 +286,7 @@ QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)
     m_buttons = new QButtonGroup(widget);
     m_buttons->setExclusive(false);
 
-    foreach (const QString &name, m_actionOrder) {
+    for (const QString &name : std::as_const(m_actionOrder)) {
         QCheckBox *item = nullptr;
 
         if (name == QLatin1String("_context")) {
