@@ -22,14 +22,6 @@ ColumnLayout {
 
     spacing: Kirigami.Units.largeSpacing * 2
 
-    Kirigami.Heading {
-        level: 2
-        text: i18n("Enrolling Fingerprint")
-        textFormat: Text.PlainText
-        Layout.alignment: Qt.AlignHCenter
-        visible: !root.done
-    }
-
     QQC2.Label {
         text: {
             if (root.scanType == FprintDevice.Press) {
