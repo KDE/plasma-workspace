@@ -53,7 +53,7 @@ QDBusArgument &operator<<(QDBusArgument &argument, const DBusMenuLayoutItem &obj
     argument.beginStructure();
     argument << obj.id << obj.properties;
     argument.beginArray(qMetaTypeId<QDBusVariant>());
-    Q_FOREACH (const DBusMenuLayoutItem &child, obj.children) {
+    for (const DBusMenuLayoutItem &child : std::as_const(obj.children)) {
         argument << QDBusVariant(QVariant::fromValue<DBusMenuLayoutItem>(child));
     }
     argument.endArray();

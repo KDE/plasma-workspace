@@ -44,7 +44,7 @@ DBusMenuShortcut DBusMenuShortcut::fromKeySequence(const QKeySequence &sequence)
     QString string = sequence.toString();
     DBusMenuShortcut shortcut;
     QStringList tokens = string.split(QStringLiteral(", "));
-    Q_FOREACH (QString token, tokens) {
+    for (QString &token : tokens) {
         // Hack: Qt::CTRL | Qt::Key_Plus is turned into the string "Ctrl++",
         // but we don't want the call to token.split() to consider the
         // second '+' as a separator so we replace it with its final value.
@@ -59,7 +59,7 @@ DBusMenuShortcut DBusMenuShortcut::fromKeySequence(const QKeySequence &sequence)
 QKeySequence DBusMenuShortcut::toKeySequence() const
 {
     QStringList tmp;
-    Q_FOREACH (const QStringList &keyTokens_, *this) {
+    for (const QStringList &keyTokens_ : std::as_const(*this)) {
         QStringList keyTokens = keyTokens_;
         processKeyTokens(&keyTokens, DM_COLUMN, QT_COLUMN);
         tmp << keyTokens.join(QLatin1String("+"));
