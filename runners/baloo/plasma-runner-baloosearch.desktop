@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=File Search
 Name[ar]=بحث الملفّات
+Name[be]=Пошук файлаў
 Name[bg]=Търсене на файлове
 Name[ca]=Cerca de fitxers
 Name[ca@valencia]=Busca de fitxers
@@ -40,6 +41,7 @@ Name[zh_CN]=文件搜索
 Name[zh_TW]=檔案搜尋
 Comment=Searches for files by name and content
 Comment[ar]=يبحث عن الملفات بالاسم والمحتوى
+Comment[be]=Пошук файлаў па назве і змесціву
 Comment[bg]=Търсене на файлове по име и съдържание
 Comment[ca]=Cerca fitxers per nom i contingut
 Comment[ca@valencia]=Busca fitxers per nom i contingut
