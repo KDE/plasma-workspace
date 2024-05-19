@@ -36,8 +36,7 @@ PreviewWidget::PreviewWidget(QWidget *parent)
     labelSelection6->setBackgroundRole(QPalette::Highlight);
     labelSelection7->setBackgroundRole(QPalette::Highlight);
 
-    QList<QWidget *> widgets = findChildren<QWidget *>();
-    foreach (QWidget *widget, widgets) {
+    for (const QList<QWidget *> widgets = findChildren<QWidget *>(); QWidget * widget : widgets) {
         widget->installEventFilter(this);
         widget->setFocusPolicy(Qt::NoFocus);
     }
@@ -81,7 +80,7 @@ void PreviewWidget::setPaletteRecursive(QWidget *widget, const QPalette &palette
     widget->setPalette(palette);
 
     const QObjectList children = widget->children();
-    foreach (QObject *child, children) {
+    for (QObject *child : children) {
         if (child->isWidgetType())
             setPaletteRecursive((QWidget *)child, palette);
     }
