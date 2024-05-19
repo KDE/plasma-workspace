@@ -55,15 +55,15 @@ QList<int> AppInterface::activityIds() const
 {
     // FIXME: the ints could overflow since Applet::id() returns a uint,
     //       however QScript deals with QList<uint> very, very poorly
-    QList<int> containments;
-
-    foreach (Plasma::Containment *c, m_env->corona()->containments()) {
+    const auto containments = m_env->corona()->containments();
+    QList<int> activityIds;
+    for (Plasma::Containment *c : containments) {
         if (!ScriptEngine::isPanel(c)) {
-            containments.append(c->id());
+            activityIds.append(c->id());
         }
     }
 
-    return containments;
+    return activityIds;
 }
 
 QList<int> AppInterface::panelIds() const
@@ -72,7 +72,7 @@ QList<int> AppInterface::panelIds() const
     //       however QScript deals with QList<uint> very, very poorly
     QList<int> panels;
 
-    foreach (Plasma::Containment *c, m_env->corona()->containments()) {
+    for (const auto conts = m_env->corona()->containments(); Plasma::Containment * c : conts) {
         // qDebug() << "checking" << (QObject*)c << isPanel(c);
         if (ScriptEngine::isPanel(c)) {
             panels.append(c->id());

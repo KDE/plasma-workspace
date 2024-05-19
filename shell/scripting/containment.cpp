@@ -126,7 +126,7 @@ QList<int> Containment::widgetIds() const
     QList<int> w;
 
     if (d->containment) {
-        foreach (const Plasma::Applet *applet, d->containment->applets()) {
+        for (const auto applets = d->containment->applets(); const Plasma::Applet *applet : applets) {
             w.append(applet->id());
         }
     }
@@ -143,7 +143,7 @@ QJSValue Containment::widgetById(const QJSValue &paramId) const
     const uint id = paramId.toInt();
 
     if (d->containment) {
-        foreach (Plasma::Applet *w, d->containment->applets()) {
+        for (const auto applets = d->containment->applets(); Plasma::Applet * w : applets) {
             if (w->id() == id) {
                 return engine()->wrap(w);
             }
@@ -216,7 +216,7 @@ QJSValue Containment::widgets(const QString &widgetType) const
     QJSValue widgets = engine()->newArray();
     int count = 0;
 
-    foreach (Plasma::Applet *widget, d->containment->applets()) {
+    for (const auto applets = d->containment->applets(); Plasma::Applet * widget : applets) {
         if (widgetType.isEmpty() || widget->pluginMetaData().pluginId() == widgetType) {
             widgets.setProperty(count, engine()->wrap(widget));
             ++count;

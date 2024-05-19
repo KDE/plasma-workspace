@@ -235,7 +235,7 @@ QVariant CurrentContainmentActionsModel::aboutMetaData(int row) const
 
 void CurrentContainmentActionsModel::save()
 {
-    foreach (const QString &removedTrigger, m_removedTriggers) {
+    for (const QString &removedTrigger : std::as_const(m_removedTriggers)) {
         m_containment->setContainmentActions(removedTrigger, QString());
     }
     m_removedTriggers.clear();
