@@ -101,6 +101,10 @@ Kirigami.Dialog {
             if (root.fingerprintModel.dialogState == FingerprintDialog.Enrolling) {
                 stack.push(enrolling);
             }
+
+            if (root.fingerprintModel.dialogState == FingerprintDialog.EnrollComplete) {
+                stack.push(enrolledConfirmation);
+            }
         }
     }
 
@@ -108,7 +112,6 @@ Kirigami.Dialog {
         id: enrolling
 
         EnrollFeedback {
-            done: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.EnrollComplete
             enrollFeedback: root.fingerprintModel.enrollFeedback
             scanType: root.fingerprintModel.scanType
             finger: root.currentFinger
@@ -144,5 +147,11 @@ Kirigami.Dialog {
                 root.fingerprintModel.deleteFingerprint(finger);
             }
         }
+    }
+
+    Component {
+        id: enrolledConfirmation
+
+        EnrolledConfirmation {}
     }
 }
