@@ -270,7 +270,7 @@ void KSMGetPropertiesProc(SmsConn smsConn, SmPointer managerData)
     auto client = (KSMClient *)managerData;
     auto props = new SmProp *[client->properties.count()];
     int i = 0;
-    foreach (SmProp *prop, client->properties)
+    for (SmProp *prop : std::as_const(client->properties))
         props[i++] = prop;
 
     SmsReturnProperties(smsConn, i, props);
@@ -873,7 +873,7 @@ void KSMServer::discardSession()
 {
     KConfigGroup config(KSharedConfig::openConfig(), sessionGroup);
     int count = config.readEntry("count", 0);
-    foreach (KSMClient *c, clients) {
+    for (KSMClient *c : std::as_const(clients)) {
         QStringList discardCommand = c->discardCommand();
         if (discardCommand.isEmpty()) {
             continue;
@@ -925,7 +925,7 @@ void KSMServer::storeSession()
     auto reply = m_kwinInterface->finishSaveSession(currentSession());
     reply.waitForFinished(); // boo!
 
-    foreach (KSMClient *c, clients) {
+    for (KSMClient *c : std::as_const(clients)) {
         const int restartHint = c->restartStyleHint();
         if (restartHint == SmRestartNever) {
             continue;

@@ -245,7 +245,7 @@ void KSMServer::handlePendingInteractions()
         return;
     }
 
-    foreach (KSMClient *c, clients) {
+    for (KSMClient *c : std::as_const(clients)) {
         if (c->pendingInteraction) {
             clientInteracting = c;
             c->pendingInteraction = false;
@@ -271,7 +271,7 @@ void KSMServer::cancelShutdown(KSMClient *c)
     } else {
         qCDebug(KSMSERVER) << "Client " << c->program() << " (" << c->clientId() << ") canceled shutdown.";
         KNotification::event(QStringLiteral("cancellogout"), i18n("Logout canceled by '%1'", c->program()), QPixmap(), KNotification::DefaultEvent);
-        foreach (KSMClient *c, clients) {
+        for (KSMClient *c : std::as_const(clients)) {
             SmsShutdownCancelled(c->connection());
             if (c->saveYourselfDone) {
                 // Discard also saved state.
@@ -317,7 +317,7 @@ void KSMServer::protectionTimeout()
         return;
     }
 
-    foreach (KSMClient *c, clients) {
+    for (KSMClient *c : std::as_const(clients)) {
         if (!c->saveYourselfDone && !c->waitForPhase2) {
             qCDebug(KSMSERVER) << "protectionTimeout: client " << c->program() << "(" << c->clientId() << ")";
             c->saveYourselfDone = true;
@@ -340,7 +340,7 @@ void KSMServer::completeShutdownOrCheckpoint()
         pendingClients = clients;
     }
 
-    foreach (KSMClient *c, pendingClients) {
+    for (KSMClient *c : std::as_const(pendingClients)) {
         if (!c->saveYourselfDone && !c->waitForPhase2) {
             return; // not done yet
         }
@@ -348,7 +348,7 @@ void KSMServer::completeShutdownOrCheckpoint()
 
     // do phase 2
     bool waitForPhase2 = false;
-    foreach (KSMClient *c, pendingClients) {
+    for (KSMClient *c : std::as_const(pendingClients)) {
         if (!c->saveYourselfDone && c->waitForPhase2) {
             c->waitForPhase2 = false;
             SmsSaveYourselfPhase2(c->connection());
@@ -382,7 +382,7 @@ void KSMServer::completeShutdownOrCheckpoint()
             }
         });
     } else if (state == Checkpoint) {
-        foreach (KSMClient *c, clients) {
+        for (KSMClient *c : std::as_const(clients)) {
             SmsSaveComplete(c->connection());
         }
         state = Idle;
@@ -403,7 +403,7 @@ void KSMServer::startKilling()
 
     m_kwinInterface->setState(KWinSessionState::Quitting);
 
-    foreach (KSMClient *c, clients) {
+    for (KSMClient *c : std::as_const(clients)) {
         qCDebug(KSMSERVER) << "startKilling: client " << c->program() << "(" << c->clientId() << ")";
         SmsDie(c->connection());
     }
@@ -431,7 +431,7 @@ void KSMServer::killingCompleted()
 
 void KSMServer::timeoutQuit()
 {
-    foreach (KSMClient *c, clients) {
+    for (KSMClient *c : std::as_const(clients)) {
         qCWarning(KSMSERVER) << "SmsDie timeout, client " << c->program() << "(" << c->clientId() << ")";
     }
     killingCompleted();
@@ -454,7 +454,7 @@ void KSMServer::saveSubSession(const QString &name, QStringList saveAndClose, QS
 #endif
 
     startProtection();
-    foreach (KSMClient *c, clients) {
+    for (KSMClient *c : std::as_const(clients)) {
         if (saveAndClose.contains(QString::fromLocal8Bit(c->clientId()))) {
             c->resetState();
             SmsSaveYourself(c->connection(), saveType, true, SmInteractStyleAny, false);
@@ -474,7 +474,7 @@ void KSMServer::startKillingSubSession()
     qCDebug(KSMSERVER) << "Starting killing clients";
     // kill all clients
     state = KillingSubSession;
-    foreach (KSMClient *c, clientsToKill) {
+    for (KSMClient *c : std::as_const(clientsToKill)) {
         qCDebug(KSMSERVER) << "completeShutdown: client " << c->program() << "(" << c->clientId() << ")";
         SmsDie(c->connection());
     }

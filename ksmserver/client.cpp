@@ -37,7 +37,7 @@ KSMClient::KSMClient(SmsConn conn)
 
 KSMClient::~KSMClient()
 {
-    foreach (SmProp *prop, properties)
+    for (SmProp *prop : std::as_const(properties))
         SmFreeProperty(prop);
     if (id)
         free((void *)id);
@@ -45,7 +45,7 @@ KSMClient::~KSMClient()
 
 SmProp *KSMClient::property(const char *name) const
 {
-    foreach (SmProp *prop, properties) {
+    for (SmProp *prop : std::as_const(properties)) {
         if (!qstrcmp(prop->name, name))
             return prop;
     }
