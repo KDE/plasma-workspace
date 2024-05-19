@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2023-02-08 13:49\n"
+"PO-Revision-Date: 2024-05-12 20:05\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,12 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasma_applet_org.kde.plasma."
-"lock_logout.po\n"
-"X-Crowdin-File-ID: 8818\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_applet_org.kde.plasma.lock_logout.po\n"
+"X-Crowdin-File-ID: 10826\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -37,19 +37,17 @@ msgstr "Паказ дзеянняў:"
 #: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Выйсці"
 
 #: contents/ui/ConfigGeneral.qml:41
-#, fuzzy, kde-format
-#| msgid "Shutdown"
+#, kde-format
 msgid "Shut Down"
 msgstr "Выключыць"
 
 #: contents/ui/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Restart…"
+#, kde-format
 msgid "Restart"
-msgstr "Перазапусціць…"
+msgstr "Перазапусціць"
 
 #: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format

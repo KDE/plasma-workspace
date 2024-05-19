@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-15 00:40+0000\n"
-"PO-Revision-Date: 2023-02-08 13:49\n"
+"PO-Revision-Date: 2024-05-17 09:11\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,12 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasma_applet_org.kde.plasma."
-"notifications.po\n"
-"X-Crowdin-File-ID: 8824\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_applet_org.kde.plasma.notifications.po\n"
+"X-Crowdin-File-ID: 10832\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -71,22 +71,19 @@ msgid "Notifications On"
 msgstr "Апавяшчэнні ўключаныя"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, fuzzy, kde-format
-#| msgid "Copy Link Address"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "Скапіяваць адрас спасылкі"
 
 #: package/contents/ui/EditContextMenu.qml:44
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
-msgstr "Капіяваць"
+msgstr "Скапіяваць"
 
 #: package/contents/ui/EditContextMenu.qml:61
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Абраць усе"
@@ -266,12 +263,10 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:179
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "Схаваць падрабязнасці"
+msgstr "Падрабязнасці"
 
 #: package/contents/ui/JobItem.qml:190
 #, kde-format

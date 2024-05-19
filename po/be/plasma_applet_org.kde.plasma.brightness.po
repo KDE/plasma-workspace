@@ -1,259 +1,263 @@
-# Copyright (C) 2024 This file is copyright:
-# This file is distributed under the same license as the plasma-workspace package.
-#
 # SPDX-FileCopyrightText: 2024 Zmicier Turok <zmicerturok@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-workspace\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-16 21:13+0300\n"
+"PO-Revision-Date: 2024-05-17 21:17\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
-"Language-Team: Belarusian <kde-i18n-doc@kde.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be_BY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 24.02.2\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_applet_org.kde.plasma.brightness.po\n"
+"X-Crowdin-File-ID: 17866\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
 msgctxt "Backlight on or off"
 msgid "Off"
-msgstr ""
+msgstr "Адключана"
 
 #: package/contents/ui/BrightnessItem.qml:30
 #, kde-format
 msgctxt "Brightness level"
 msgid "Low"
-msgstr ""
+msgstr "Нізкі ўзровень"
 
 #: package/contents/ui/BrightnessItem.qml:31
 #, kde-format
 msgctxt "Brightness level"
 msgid "Medium"
-msgstr ""
+msgstr "Сярэдні ўзровень"
 
 #: package/contents/ui/BrightnessItem.qml:32
 #, kde-format
 msgctxt "Brightness level"
 msgid "High"
-msgstr ""
+msgstr "Высокі ўзровень"
 
 #: package/contents/ui/BrightnessItem.qml:33
 #, kde-format
 msgctxt "Backlight on or off"
 msgid "On"
-msgstr ""
+msgstr "Уключана"
 
 #: package/contents/ui/BrightnessItem.qml:45
 #, kde-format
 msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: package/contents/ui/KeyboardColorItem.qml:78
 #, kde-format
 msgid "Follow accent color"
-msgstr ""
+msgstr "Пільнавацца дамінантнага колеру"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
 msgid "Brightness and Color"
-msgstr ""
+msgstr "Яркасць і колер"
 
 #: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Screen brightness at %1%"
-msgstr ""
+msgstr "Яркасць экрана %1%"
 
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Keyboard brightness at %1%"
-msgstr ""
+msgstr "Яркасць клавіятуры %1%"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
-msgstr ""
+msgstr "Начны рэжым прыпынены; пстрыкніце сярэдняй кнопкай мышы, каб узнавіць"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr ""
+msgstr "Начны рэжым прыпынены"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "Начны рэжым пры дзённай колеравай тэмпературы"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "Начны рэжым пры начной колеравай тэмпературы"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "Начны рэжым пры ранішнім пераходзе (завяршаецца а %1)"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "Начны рэжым пры вечаровым пераходзе (завяршаецца а %1)"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "Вечаровы пераход у начны рэжым запланаваны на %1"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "Ранішні пераход з начнога рэжыму запланаваны на %1"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr ""
+msgstr "Пракруціце, каб наладзіць яркасць экрана"
 
 #: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr ""
+msgstr "Пстрыкніце сярэдняй кнопкай мышы, каб прыпыніць начны рэжым"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
-msgstr ""
+msgstr "Наладжванне начнога рэжыму…"
 
 #: package/contents/ui/NightLightItem.qml:75
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "Прыпынена"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
 msgctxt "Night light status"
 msgid "Unavailable"
-msgstr ""
+msgstr "Недаступна"
 
 #: package/contents/ui/NightLightItem.qml:81
 #, kde-format
 msgctxt "Night light status"
 msgid "Not enabled"
-msgstr ""
+msgstr "Не ўключана"
 
 #: package/contents/ui/NightLightItem.qml:84
 #, kde-format
 msgctxt "Night light status"
 msgid "Not running"
-msgstr ""
+msgstr "Не выконваецца"
 
 #: package/contents/ui/NightLightItem.qml:87
 #, kde-format
 msgctxt "Night light status"
 msgid "On"
-msgstr ""
+msgstr "Уключана"
 
 #: package/contents/ui/NightLightItem.qml:90
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
-msgstr ""
+msgstr "Ранішні пераход"
 
 #: package/contents/ui/NightLightItem.qml:92
 #, kde-format
 msgctxt "Night light phase"
 msgid "Day"
-msgstr ""
+msgstr "Дзень"
 
 #: package/contents/ui/NightLightItem.qml:94
 #, kde-format
 msgctxt "Night light phase"
 msgid "Evening Transition"
-msgstr ""
+msgstr "Вечаровы пераход"
 
 #: package/contents/ui/NightLightItem.qml:96
 #, kde-format
 msgctxt "Night light phase"
 msgid "Night"
-msgstr ""
+msgstr "Ноч"
 
 #: package/contents/ui/NightLightItem.qml:107
 #, kde-format
 msgctxt "Placeholder is screen color temperature"
 msgid "%1K"
-msgstr ""
+msgstr "%1K"
 
 #: package/contents/ui/NightLightItem.qml:122
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "Прыпыніць"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Наладжванне…"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format
 msgid "Enable and Configure…"
-msgstr ""
+msgstr "Уключыць і наладзіць…"
 
 #: package/contents/ui/NightLightItem.qml:170
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
-msgstr ""
+msgstr "Пераход з начнога рэжыму завяршаецца:"
 
 #: package/contents/ui/NightLightItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
-msgstr ""
+msgstr "Пераход у начны рэжым запланаваны:"
 
 #: package/contents/ui/NightLightItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
-msgstr ""
+msgstr "Пераход у начны рэжым завяршаецца:"
 
 #: package/contents/ui/NightLightItem.qml:176
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
-msgstr ""
+msgstr "Пераход з начнога рэжыму запланаваны:"
 
 #: package/contents/ui/PopupDialog.qml:66
 #, kde-format
 msgid "Display Brightness"
-msgstr ""
+msgstr "Яркасць дысплэя"
 
 #: package/contents/ui/PopupDialog.qml:97
 #, kde-format
 msgid "Keyboard Brightness"
-msgstr ""
+msgstr "Яркасць клавіятуры"
 
 #: package/contents/ui/PopupDialog.qml:130
 #, kde-format
 msgid "Keyboard Color"
-msgstr ""
+msgstr "Колер клавіятуры"
 
 #: package/contents/ui/PopupDialog.qml:140
 #, kde-format
 msgid "Night Light"
-msgstr ""
+msgstr "Начны рэжым"

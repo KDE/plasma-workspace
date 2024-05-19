@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2023-02-08 13:49\n"
+"PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,21 +15,25 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasma_lookandfeel_org.kde."
-"lookandfeel.po\n"
-"X-Crowdin-File-ID: 8858\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_lookandfeel_org.kde.lookandfeel.po\n"
+"X-Crowdin-File-ID: 10860\n"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Усталяванне абнаўленняў праграмнага забеспячэння і перазапуск праз %1 секунду"
 msgstr[1] ""
+"Усталяванне абнаўленняў праграмнага забеспячэння і перазапуск праз %1 секунды"
 msgstr[2] ""
+"Усталяванне абнаўленняў праграмнага забеспячэння і перазапуск праз %1 секунд"
 msgstr[3] ""
+"Усталяванне абнаўленняў праграмнага забеспячэння і перазапуск праз %1 секунды"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -91,9 +95,7 @@ msgid "Sleep"
 msgstr "Прыпыніць у RAM"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Прыпыніць у RAM"
@@ -104,8 +106,7 @@ msgid "Hibernate"
 msgstr "Перавесці ў рэжым сну"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
 msgstr "Перавесці ў рэжым сну"
 
@@ -113,13 +114,13 @@ msgstr "Перавесці ў рэжым сну"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Усталяваць абнаўленні і перазапусціць"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr ""
+msgstr "Усталяваць абнаўленні і перазапусціць зараз"
 
 #: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
@@ -127,8 +128,7 @@ msgid "Restart"
 msgstr "Перазапусціць"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
 msgstr "Перазапусціць"
 
@@ -138,8 +138,7 @@ msgid "Shut Down"
 msgstr "Выключыць"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
 msgstr "Выключыць"
 
@@ -149,10 +148,9 @@ msgid "Log Out"
 msgstr "Выхад"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Выхад"
+msgstr "Выйсці зараз"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

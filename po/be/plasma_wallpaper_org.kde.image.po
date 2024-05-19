@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2023-02-08 13:49\n"
+"PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasma_wallpaper_org.kde.image.po\n"
-"X-Crowdin-File-ID: 8888\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_wallpaper_org.kde.image.po\n"
+"X-Crowdin-File-ID: 10890\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,15 +33,13 @@ msgid "Your emails"
 msgstr "nashtlumach@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Адкрыць выяву шпалер"
+msgstr "Адкрыць выяву"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог са шпалерамі для паказу слайдаў"
@@ -106,23 +105,21 @@ msgid "Next Wallpaper Image"
 msgstr "Наступная выява шпалер"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Файлы выяў"
+msgstr "Выявы"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:64
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Дадаць…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Атрымаць новыя шпалеры…"
+msgstr "Атрымаць новыя…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -272,7 +269,7 @@ msgstr "Каталогі"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Дадаць…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:248
 #, kde-format
@@ -280,10 +277,9 @@ msgid "Remove Folder"
 msgstr "Выдаліць каталог"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:259
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "Адкрыць каталог"
+msgstr "Адкрыць каталог…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:274
 #, kde-format
@@ -291,48 +287,41 @@ msgid "There are no wallpaper locations configured"
 msgstr "Размяшчэнні шпалер не наладжаныя"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Атрымаць новыя шпалеры…"
+msgstr "Зрабіць шпалерамі"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Працоўны стол"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Экран блакавання"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Абодва"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
-#, fuzzy, kde-kuit-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr "Падчас выканання спробы вызначэння шпалер Plasma адбылася памылка:\n"
+msgstr ""
+"Падчас выканання спробы прызначэння шпалер Plasma адбылася памылка: <nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
-msgstr "Падчас выканання спробы вызначэння шпалер Plasma адбылася памылка:\n"
-
-#, fuzzy
-#~| msgid "Open Image"
-#~ msgctxt "@title:window"
-#~ msgid "Open Media"
-#~ msgstr "Адкрыць выяву"
+msgstr ""
+"Падчас спробы адкрыць канфігурацыйны файл kscreenlockerrc адбылася памылка."
 
 #~ msgid "Add Image…"
 #~ msgstr "Дадаць выяву…"

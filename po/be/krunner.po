@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-17 00:39+0000\n"
-"PO-Revision-Date: 2023-02-08 13:48\n"
+"PO-Revision-Date: 2024-05-17 21:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/krunner.po\n"
-"X-Crowdin-File-ID: 8800\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"krunner.po\n"
+"X-Crowdin-File-ID: 10792\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -59,12 +60,12 @@ msgstr "Замяніць наяўны асобнік"
 #: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Паказваць толькі вынікі з паладзенай ўбудовы"
 
 #: main.cpp:67
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Спіс даступных убудоў"
 
 #: main.cpp:74
 #, kde-format
@@ -77,7 +78,7 @@ msgstr ""
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Даступныя ўбудовы KRunner, pluginId"
 
 #: qml/RunCommand.qml:96
 #, kde-format
@@ -97,7 +98,7 @@ msgstr "Наладжванне KRunner…"
 #: qml/RunCommand.qml:113
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Паказваюцца толькі вынікі з %1"
 
 #: qml/RunCommand.qml:127
 #, kde-format

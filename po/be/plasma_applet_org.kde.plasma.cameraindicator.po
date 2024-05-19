@@ -1,88 +1,93 @@
-# Copyright (C) 2024 This file is copyright:
-# This file is distributed under the same license as the plasma-workspace package.
-#
 # SPDX-FileCopyrightText: 2024 Zmicier Turok <zmicerturok@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-workspace\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2024-05-16 21:14+0300\n"
+"PO-Revision-Date: 2024-05-17 21:17\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
-"Language-Team: Belarusian <kde-i18n-doc@kde.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be_BY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 24.02.2\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_applet_org.kde.plasma.cameraindicator.po\n"
+"X-Crowdin-File-ID: 17868\n"
 
 #: contents/ui/FullRepresentation.qml:47
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
-msgstr ""
+msgstr "Камера"
 
 #: contents/ui/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
-msgstr ""
+msgstr "Актыўна"
 
 #: contents/ui/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
-msgstr ""
+msgstr "Бяздзейнічае"
 
 #: contents/ui/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
-msgstr ""
+msgstr "Памылка"
 
 #: contents/ui/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
-msgstr ""
+msgstr "Стварэнне"
 
 #: contents/ui/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
-msgstr ""
+msgstr "Прыпынена"
 
 #: contents/ui/FullRepresentation.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
-msgstr ""
+msgstr "Невядома"
 
 #: contents/ui/FullRepresentation.qml:79
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
-msgstr ""
+msgstr "%1 выкарыстоўваецца"
 
 #: contents/ui/main.qml:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
-msgstr ""
+msgstr "Індыкатар камеры недаступны"
 
 #: contents/ui/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
 msgid_plural "%1 cameras are in use"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Выкарыстоўваецца %1 камера"
+msgstr[1] "Выкарыстоўваецца %1 камеры"
+msgstr[2] "Выкарыстоўваецца %1 камер"
+msgstr[3] "Выкарыстоўваецца %1 камеры"
 
 #: contents/ui/main.qml:27
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"
-msgstr ""
+msgstr "Камера не выкарыстоўваецца"

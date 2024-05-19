@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2023-02-09 11:39\n"
+"PO-Revision-Date: 2024-05-17 21:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/kcm_users.po\n"
-"X-Crowdin-File-ID: 8794\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"kcm_users.po\n"
+"X-Crowdin-File-ID: 10778\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -373,20 +374,19 @@ msgstr "Не дададзена адбіткаў пальцаў"
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr ""
+msgstr "Карыстальнікі"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgid "Add New User"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New"
-msgstr "Дадаць новага карыстальніка"
+msgstr "Дадаць"
 
 #: src/ui/main.qml:107
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr ""
+msgstr "Каб рэдагаваць профіль карыстальніка, націсніце прагал"
 
 #: src/ui/PickFinger.qml:28
 #, kde-format
@@ -505,13 +505,13 @@ msgstr "Rich Hardwood"
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Назад"
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr ""
+msgstr "Ініцыялы"
 
 #: src/ui/PicturesSheet.qml:132
 #, kde-format
@@ -529,13 +529,13 @@ msgstr "Абраць выяву"
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr ""
+msgstr "Значок-запаўняльнік"
 
 #: src/ui/PicturesSheet.qml:274
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr ""
+msgstr "Значок запаўняльніка аватара карыстальніка"
 
 #: src/ui/UserDetailsPage.qml:111
 #, kde-format

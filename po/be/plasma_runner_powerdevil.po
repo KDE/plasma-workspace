@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2023-02-08 13:49\n"
+"PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,17 +15,18 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasma_runner_powerdevil.po\n"
-"X-Crowdin-File-ID: 8874\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_runner_powerdevil.po\n"
+"X-Crowdin-File-ID: 10876\n"
 
 #: PowerDevilRunner.cpp:31
 #, kde-format
 msgctxt "Note this is a KRunner keyword; 'power' as in 'power saving mode'"
 msgid "power"
-msgstr ""
+msgstr "сілкаванне"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
@@ -61,13 +62,13 @@ msgstr "to disk"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid sleep"
-msgstr ""
+msgstr "гібрыдны рэжым сну"
 
 #: PowerDevilRunner.cpp:38
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hybrid"
-msgstr ""
+msgstr "гібрыд"
 
 #: PowerDevilRunner.cpp:39 PowerDevilRunner.cpp:40 PowerDevilRunner.cpp:66
 #, kde-format
@@ -97,7 +98,7 @@ msgstr "Прыпыненне з кэшаваннем на цвёрды дыск"
 #: PowerDevilRunner.cpp:62
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr ""
+msgstr "Прыпынена зараз і вяртаецца ў рэжым сну"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
@@ -157,12 +158,12 @@ msgstr "Прыпыніць з кэшаваннем на цвёрды дыск"
 #, kde-format
 msgctxt "Suspend to both RAM and disk"
 msgid "Hybrid sleep"
-msgstr ""
+msgstr "Гібрыдны рэжым сну"
 
 #: PowerDevilRunner.cpp:144
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr ""
+msgstr "Прыпыніць зараз і вярнуцца ў рэжым сну"
 
 #: PowerDevilRunner.cpp:222
 #, kde-format

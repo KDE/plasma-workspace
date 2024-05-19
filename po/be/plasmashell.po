@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-18 00:40+0000\n"
-"PO-Revision-Date: 2023-02-09 11:39\n"
+"PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasmashell.po\n"
-"X-Crowdin-File-ID: 8890\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasmashell.po\n"
+"X-Crowdin-File-ID: 10892\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -37,79 +38,70 @@ msgid "Configure Mouse Actions Plugin"
 msgstr "Наладжванне ўбудовы дзеянняў мышы"
 
 #: desktopview.cpp:210
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 Dev"
 
 #: desktopview.cpp:213
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 Alpha"
 
 #: desktopview.cpp:216
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 Beta 1"
 
 #: desktopview.cpp:219
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 Beta 2"
 
 #: desktopview.cpp:222
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 RC1"
 
 #: desktopview.cpp:225
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
-msgstr "Plasma"
+msgstr "KDE Plasma 6.0 RC2"
 
 #: desktopview.cpp:251
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "Plasma"
+msgstr "KDE Plasma %1 Dev"
 
 #: desktopview.cpp:255
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
-msgstr "Plasma"
+msgstr "KDE Plasma %1 Beta"
 
 #: desktopview.cpp:258
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
-msgstr ""
+msgstr "KDE Plasma %1 Beta %2"
 
 #: desktopview.cpp:262
-#, fuzzy, kde-format
-#| msgid "Plasma"
+#, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
-msgstr "Plasma"
+msgstr "KDE Plasma %1"
 
 #: desktopview.cpp:268
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
-msgstr ""
+msgstr "Наведайце bugs.kde.org, каб адправіць справаздачу пра хібу"
 
 #: main.cpp:84
 #, kde-format
@@ -273,13 +265,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Схаваць панэль канфігурацыі"
 
 #: panelview.cpp:968
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Паказаць панэль канфігурацыі"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format

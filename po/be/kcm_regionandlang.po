@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-23 00:40+0000\n"
-"PO-Revision-Date: 2023-02-09 11:39\n"
+"PO-Revision-Date: 2024-05-17 21:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/kcm_regionandlang.po\n"
-"X-Crowdin-File-ID: 8792\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"kcm_regionandlang.po\n"
+"X-Crowdin-File-ID: 10774\n"
 
 #: binarydialectmodel.cpp:50
 #, kde-format
@@ -467,19 +468,15 @@ msgid "Language"
 msgstr "Мова"
 
 #: ui/AdvancedLanguageSelectPage.qml:31
-#, fuzzy, kde-format
-#| msgid ""
-#| "Putting American English above other languages will cause undesired "
-#| "behavior in some applications. If you would like your system to use "
-#| "American English, remove all other languages."
+#, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
-"Калі размясціць англійскую (ЗША) вышэй за іншыя мовы, то у некаторых праграм "
+"Калі размясціць англійскую вышэй за іншыя мовы, то у некаторых праграм "
 "могуць быць нечаканыя паводзіны. Калі вы хочаце, каб у вашай сістэме "
-"выкарыстоўвалася англійская мова (ЗША), выдаліце ​​ўсе іншыя мовы."
+"выкарыстоўвалася англійская мова, выдаліце ​​ўсе іншыя мовы."
 
 #: ui/AdvancedLanguageSelectPage.qml:39
 #, kde-format

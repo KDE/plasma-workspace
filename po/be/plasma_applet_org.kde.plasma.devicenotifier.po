@@ -2,10 +2,10 @@
 # Darafei Praliaskouski <komzpa@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2023-02-08 13:47\n"
+"PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -16,12 +16,12 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasma_applet_org.kde.plasma."
-"devicenotifier.po\n"
-"X-Crowdin-File-ID: 8571\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_applet_org.kde.plasma.devicenotifier.po\n"
+"X-Crowdin-File-ID: 10820\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -46,10 +46,9 @@ msgid "Removing…"
 msgstr "Выманне…"
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "Не адлучайце! Выконваецца перадача файлаў..."
+msgstr "Не адлучайце! Выконваецца перадача файлаў…"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
@@ -136,50 +135,43 @@ msgstr "Пры падлучэнні новай прылады паказваць
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Стан прылады"
 
 #: plugin/ksolidnotify.cpp:190
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Цяпер прыладу можна бяспечна адлучыць"
 
 #: plugin/ksolidnotify.cpp:191
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Цяпер гэтую прыладу можна бяспечна адлучыць."
 
 #: plugin/ksolidnotify.cpp:198
-#, fuzzy, kde-format
-#| msgid "1 action for this device"
-#| msgid_plural "%1 actions for this device"
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "%1 дзеянне для гэтай прылады"
+msgstr "У вас няма правоў на прымантаванне гэтай прылады."
 
 #: plugin/ksolidnotify.cpp:201
-#, fuzzy, kde-format
-#| msgid "1 action for this device"
-#| msgid_plural "%1 actions for this device"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "%1 дзеянне для гэтай прылады"
+msgstr "У вас няма правоў на адлучэнне гэтай прылады."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "1 action for this device"
-#| msgid_plural "%1 actions for this device"
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "%1 дзеянне для гэтай прылады"
+msgstr "У вас няма правоў на выманне гэтага дыска."
 
 #: plugin/ksolidnotify.cpp:211
-#, fuzzy, kde-format
-#| msgid "Recently plugged devices :"
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Нядаўна падключаныя прылады :"
+msgstr "Не ўдалося прымантаваць гэтую прыладу, бо яна занятая."
 
 #: plugin/ksolidnotify.cpp:242
 #, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr ""
+msgstr "Адзін або некалькі файлаў на гэтай прыладзе адкрытыя ў праграме."
 
 #: plugin/ksolidnotify.cpp:244
 #, kde-format
@@ -187,35 +179,38 @@ msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
+"Адзін або некалькі файлаў на гэтай прыладзе адкрытыя ў праграме \"%2\"."
 msgstr[1] ""
+"Адзін або некалькі файлаў на гэтай прыладзе адкрытыя ў наступных праграмах: "
+"\"%2\"."
 msgstr[2] ""
+"Адзін або некалькі файлаў на гэтай прыладзе адкрытыя ў наступных праграмах: "
+"\"%2\"."
 msgstr[3] ""
+"Адзін або некалькі файлаў на гэтай прыладзе адкрытыя ў наступных праграмах: "
+"\"%2\"."
 
 #: plugin/ksolidnotify.cpp:247
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:265
-#, fuzzy, kde-format
-#| msgid "Recently plugged devices :"
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Нядаўна падключаныя прылады :"
+msgstr "Не ўдалося прымантаваць гэтую прыладу."
 
 #: plugin/ksolidnotify.cpp:268
-#, fuzzy, kde-format
-#| msgid "Recently plugged devices :"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Нядаўна падключаныя прылады :"
+msgstr "Не ўдалося адлучыць гэтую прыладу."
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "1 action for this device"
-#| msgid_plural "%1 actions for this device"
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "%1 дзеянне для гэтай прылады"
+msgstr "Не ўдалося выняць гэты дыск."
 
 #, fuzzy
 #~| msgid "1 action for this device"

@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:40+0000\n"
-"PO-Revision-Date: 2023-02-09 11:39\n"
+"PO-Revision-Date: 2024-05-17 21:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/kcm_notifications.po\n"
-"X-Crowdin-File-ID: 8790\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"kcm_notifications.po\n"
+"X-Crowdin-File-ID: 10772\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -52,32 +53,28 @@ msgid "Show notification badges"
 msgstr "Паказваць значкі апавяшчэнняў"
 
 #: ui/ApplicationConfiguration.qml:180
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Наладжванне падзей…"
+msgstr "Наладжванне падзей"
 
 #: ui/ApplicationConfiguration.qml:188
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
 msgstr ""
-"Гэтая праграма не падтрымлівае наладжванне апавяшчэнняў для кожнай падзеі."
+"Гэтая праграма не падтрымлівае наладжванне апавяшчэнняў для кожнай падзеі"
 
 #: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Паказваць выплыўное паведамленне"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Прайграць гук"
 
 #: ui/ApplicationConfiguration.qml:302
 #, kde-format
@@ -144,20 +141,16 @@ msgstr "Рэжым \"Не турбаваць\""
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "Аўтаматычнае ўключэнне:"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#| msgid "When screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "Калі экраны люстраныя"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgctxt "Enable Do Not Disturb mode during screen sharing"
-#| msgid "During screen sharing"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Калі выява экрана перадаецца"
@@ -166,7 +159,7 @@ msgstr "Калі выява экрана перадаецца"
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "Уласнаручнае пераключэнне з дапамогай спалучэння клавіш:"
 
 #: ui/main.qml:139
 #, kde-format
@@ -296,26 +289,21 @@ msgid "System Services"
 msgstr "Сістэмныя службы"
 
 #: ui/SourcesPage.qml:156
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Ніводная праграма або падзея не адпавядае крытэрыям пошуку."
+msgstr "Ніводная праграма або падзея не адпавядае крытэрыям пошуку"
 
 #: ui/SourcesPage.qml:180
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
-msgstr "Абярыце праграму са спіса, каб наладзіць яе апавяшчэнні і паводзіны."
+msgstr "Абярыце праграму са спіса, каб наладзіць яе апавяшчэнні і паводзіны"
 
-#, fuzzy
 #~| msgid "Application Settings"
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Configure Application Settings…"
-#~ msgstr "Налады праграмы"
+#~ msgstr "Наладжванне праграмы…"
 
 #~ msgctxt "@title:group"
 #~ msgid "Application-specific settings"

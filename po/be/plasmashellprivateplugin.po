@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2023-02-09 11:40\n"
+"PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasmashellprivateplugin.po\n"
-"X-Crowdin-File-ID: 8892\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasmashellprivateplugin.po\n"
+"X-Crowdin-File-ID: 10894\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -35,12 +36,12 @@ msgstr "nashtlumach@gmail.com"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Батарэя %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:27
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Батарэя"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -193,6 +194,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Гэты віджэт быў створаны для невядомай старой версіі Plasma, ён "
+"несумяшчальны з Plasma %1. Каб атрымаць абноўленую версію, звяжыцеся з "
+"аўтарам віджэта."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
 #, kde-format
@@ -200,6 +204,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Гэты віджэт быў створаны для Plasma %1, ён несумяшчальны з Plasma %2. Каб "
+"атрымаць абноўленую версію, звяжыцеся з аўтарам віджэта."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
 #, kde-format
@@ -207,6 +213,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Гэты віджэт быў створаны для Plasma %1, ён несумяшчальны з Plasma %2. Каб "
+"карыстацца віджэтам, абнавіце Plasma."
 
 #: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
 #, kde-format
@@ -214,119 +222,118 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Гэты віджэт быў створаны для Plasma %1, ён несумяшчальны з апошняй версіяй "
+"Plasma. Каб карыстацца віджэтам, абнавіце Plasma."
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Адмысловыя магчымасці"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Сродкі запуску праграм"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Астраномія"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Дата і час"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Інструменты для распрацоўвання"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Адукацыя"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Навакольнае асяроддзе і надвор'е"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Прыклады"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Файлавая сістэма"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:120
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Antikruk"
+msgstr "Забавы і гульні"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Графіка"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Мова"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Мапа"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Рознае"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Мультымедыя"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Сеціўныя службы"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Прадукцыйнасць"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Сістэмная інфармацыя"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Утыліты"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Вокны і задачы"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Буфер абмену"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Задачы"
 
 #: shellprivate/widgetexplorer/widgetexplorer.cpp:148
 #, kde-format

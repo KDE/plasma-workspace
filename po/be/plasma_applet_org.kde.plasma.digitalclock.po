@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-05 00:39+0000\n"
-"PO-Revision-Date: 2023-02-09 11:39\n"
+"PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,12 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/plasma_applet_org.kde.plasma."
-"digitalclock.po\n"
-"X-Crowdin-File-ID: 8814\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"plasma_applet_org.kde.plasma.digitalclock.po\n"
+"X-Crowdin-File-ID: 10822\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -207,15 +207,12 @@ msgid "Custom"
 msgstr "Адвольны"
 
 #: package/contents/ui/configAppearance.qml:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Дакументацыя па фармаце часу</a>"
 
 #: package/contents/ui/configAppearance.qml:237
@@ -284,11 +281,7 @@ msgid "Available Plugins:"
 msgstr "Даступныя ўбудовы:"
 
 #: package/contents/ui/configTimeZones.qml:42
-#, fuzzy, kde-format
-#| msgid ""
-#| "Tip: if you travel frequently, add another entry for your home time zone "
-#| "to this list. It will only appear when you change the systemwide time "
-#| "zone to something else."
+#, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."

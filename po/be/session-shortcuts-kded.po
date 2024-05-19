@@ -1,60 +1,64 @@
-# Copyright (C) 2024 This file is copyright:
-# This file is distributed under the same license as the plasma-workspace package.
-#
 # SPDX-FileCopyrightText: 2024 Zmicier Turok <zmicerturok@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-workspace\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-30 00:39+0000\n"
-"PO-Revision-Date: 2024-05-16 21:14+0300\n"
+"PO-Revision-Date: 2024-05-17 21:17\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
-"Language-Team: Belarusian <kde-i18n-doc@kde.org>\n"
+"Language-Team: Belarusian\n"
 "Language: be_BY\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
+"%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 24.02.2\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
+"X-Crowdin-Language: be\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"session-shortcuts-kded.po\n"
+"X-Crowdin-File-ID: 17874\n"
 
 #: main.cpp:32
 #, kde-format
 msgid "Session Management"
-msgstr ""
+msgstr "Кіраванне сеансам"
 
 #: main.cpp:39
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Prompt"
-msgstr ""
+msgstr "Паказваць пацвярджэнне выхаду"
 
 #: main.cpp:48
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Выйсці"
 
 #: main.cpp:54
 #, kde-format
 msgid "Shut Down"
-msgstr ""
+msgstr "Выключыць"
 
 #: main.cpp:60
 #, kde-format
 msgid "Reboot"
-msgstr ""
+msgstr "Перазапусціць"
 
 #: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr ""
+msgstr "Выхад без пацвярджэння"
 
 #: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr ""
+msgstr "Выключэнне без пацвярджэння"
 
 #: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr ""
+msgstr "Перазапуск без пацвярджэння"
