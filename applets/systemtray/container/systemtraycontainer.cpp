@@ -51,7 +51,7 @@ void SystemTrayContainer::ensureSystrayExists()
 
     uint id = config().readEntry("SystrayContainmentId", 0);
     if (id > 0) {
-        foreach (Plasma::Containment *candidate, c->containments()) {
+        for (const auto conts = c->containments(); Plasma::Containment * candidate : conts) {
             if (candidate->id() == id) {
                 m_innerContainment = candidate;
                 break;

@@ -107,8 +107,8 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
             connect(watcher, &QDBusPendingCallWatcher::finished, this, [=, this]() {
                 watcher->deleteLater();
                 QDBusReply<QDBusVariant> reply = *watcher;
-                QStringList registeredItems = reply.value().variant().toStringList();
-                foreach (const QString &service, registeredItems) {
+                const QStringList registeredItems = reply.value().variant().toStringList();
+                for (const QString &service : registeredItems) {
                     if (!m_sniServices.contains(service)) { // due to async nature of this call, service may be already there
                         addSNIService(service);
                     }
