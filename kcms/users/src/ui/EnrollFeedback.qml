@@ -15,7 +15,6 @@ import FingerprintModel
 ColumnLayout {
     id: root
 
-    required property bool done
     required property int scanType
     required property string finger
     required property string enrollFeedback
@@ -77,15 +76,6 @@ ColumnLayout {
         wrapMode: Text.Wrap
         horizontalAlignment: Text.AlignHCenter
         Layout.maximumWidth: parent.width
-        visible: !root.done
-    }
-
-    Kirigami.Heading {
-        level: 2
-        text: i18n("Finger Enrolled")
-        textFormat: Text.PlainText
-        Layout.alignment: Qt.AlignHCenter
-        visible: root.done
     }
 
     // reset from back from whatever color was used before
