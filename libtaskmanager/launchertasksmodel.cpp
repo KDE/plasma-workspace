@@ -146,7 +146,7 @@ bool LauncherTasksModel::Private::requestAddLauncherToActivities(const QUrl &_ur
 
     // Merge duplicates
     int row = -1;
-    foreach (const QUrl &launcher, launchersOrder) {
+    for (const QUrl &launcher : std::as_const(launchersOrder)) {
         ++row;
 
         if (launcherUrlsMatch(url, launcher, IgnoreQueryItems)) {

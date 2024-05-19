@@ -736,7 +736,7 @@ void TasksModel::Private::updateActivityTaskCounts()
         return;
     }
 
-    foreach (const QString &activity, activityInfo->runningActivities()) {
+    for (const auto activities = activityInfo->runningActivities(); const QString &activity : activities) {
         activityTaskCounts.insert(activity, 0);
     }
 
@@ -752,7 +752,7 @@ void TasksModel::Private::updateActivityTaskCounts()
                 it.setValue(it.value() + 1);
             }
         } else {
-            foreach (const QString &activity, activities) {
+            for (const QString &activity : activities) {
                 ++activityTaskCounts[activity];
             }
         }
@@ -1860,7 +1860,7 @@ void TasksModel::syncLaunchers()
     QMap<int, QString> sortedShownLaunchers;
     QStringList sortedHiddenLaunchers;
 
-    foreach (const QString &launcherUrlStr, launcherList()) {
+    for (const auto launchers = launcherList(); const QString &launcherUrlStr : launchers) {
         int row = -1;
         QStringList activities;
         QUrl launcherUrl;
