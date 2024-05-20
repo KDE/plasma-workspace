@@ -23,6 +23,8 @@
 #include <QGuiApplication>
 #include <QTimer>
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char **argv)
 {
     // This is a CLI application, but we require at least a QGuiApplication to be able
@@ -50,8 +52,8 @@ int main(int argc, char **argv)
         QCommandLineOption(accentColor,
                            i18n("The name of the accent color you want to set. SVG color names (https://www.w3.org/TR/SVG11/types.html#ColorKeywords) and hex "
                                 "color codes are supported. Quote the hex code if there is possibility of shell expansion"),
-                           "accentColor",
-                           "0"));
+                           u"accentColor"_s,
+                           u"0"_s));
     parser->process(app);
 
     int exitCode{0};
@@ -62,7 +64,7 @@ int main(int argc, char **argv)
     model->setSelectedScheme(settings->colorScheme());
     if (!parser->positionalArguments().isEmpty() && !parser->isSet(QStringLiteral("accent-color"))) {
         QString requestedScheme{parser->positionalArguments().first()};
-        const QString dirSplit{"/"};
+        constexpr QLatin1Char dirSplit{'/'};
         if (requestedScheme.contains(dirSplit)) {
             QStringList splitScheme = requestedScheme.split(dirSplit, Qt::SkipEmptyParts);
             requestedScheme = splitScheme.last();
@@ -126,7 +128,7 @@ int main(int argc, char **argv)
             exitCode = -1;
         }
     } else if (parser->isSet(QStringLiteral("accent-color"))) {
-        QString accentColor = parser->value("accent-color");
+        QString accentColor = parser->value(u"accent-color"_s);
 
         if (QColor::isValidColor(accentColor)) {
             const QString path =
@@ -158,7 +160,7 @@ int main(int argc, char **argv)
             if (i == currentThemeIndex) {
                 ts << i18n(" * %1 (current color scheme)", schemeName) << Qt::endl;
             } else {
-                ts << QString(" * %1").arg(schemeName) << Qt::endl;
+                ts << QStringLiteral(" * %1").arg(schemeName) << Qt::endl;
             }
         }
     } else {

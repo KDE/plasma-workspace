@@ -13,6 +13,8 @@
 #include <KAboutData>
 #include <KWindowSystem>
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
@@ -28,7 +30,7 @@ int main(int argc, char *argv[])
     KAboutData::setApplicationData(aboutData);
 
     QCommandLineParser parser;
-    parser.addPositionalArgument("theme", i18n("Scheme to edit or to use as a base."), QStringLiteral("kcolorschemeeditor ThemeName"));
+    parser.addPositionalArgument(u"theme"_s, i18n("Scheme to edit or to use as a base."), QStringLiteral("kcolorschemeeditor ThemeName"));
 
     QCommandLineOption overwriteOption(QStringLiteral("overwrite"), i18n("Show 'Apply' button that saves changes without asking (unlike 'Save As' button)"));
     parser.addOption(overwriteOption);
@@ -43,10 +45,10 @@ int main(int argc, char *argv[])
     aboutData.processCommandLine(&parser);
 
     const QStringList args = parser.positionalArguments();
-    QString path = "";
+    QString path;
     if (args.count() == 1) {
         const QString fileBaseName(args.at(0));
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/" + fileBaseName + ".colors");
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/"_L1 + fileBaseName + ".colors"_L1);
     }
     if (path.isEmpty()) {
         QTextStream out(stderr);

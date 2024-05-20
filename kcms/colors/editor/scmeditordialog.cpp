@@ -151,10 +151,10 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
         }
 
         // go ahead and save it
-        QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/color-schemes/";
+        QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/color-schemes/"_L1;
         QDir dir;
         dir.mkpath(newpath);
-        newpath += filename + ".colors";
+        newpath += filename + ".colors"_L1;
 
         KConfig *config = m_config->copyTo(newpath);
         m_config->markAsClean();

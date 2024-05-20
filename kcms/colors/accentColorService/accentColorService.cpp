@@ -12,6 +12,8 @@
 #include "accentcolor_service_adaptor.h"
 #include "colorsapplicator.h"
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_CLASS_WITH_JSON(AccentColorService, "accentColorService.json")
 
 AccentColorService::AccentColorService(QObject *parent, const QList<QVariant> &)
@@ -20,8 +22,8 @@ AccentColorService::AccentColorService(QObject *parent, const QList<QVariant> &)
 {
     new AccentColorServiceAdaptor(this);
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject("/AccentColor", this);
-    dbus.registerService("org.kde.plasmashell.accentColor");
+    dbus.registerObject(u"/AccentColor"_s, this);
+    dbus.registerService(u"org.kde.plasmashell.accentColor"_s);
 }
 
 void AccentColorService::setAccentColor(unsigned accentColor)

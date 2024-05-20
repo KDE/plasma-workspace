@@ -469,8 +469,8 @@ QColor KCMColors::accentForeground(const QColor &accent, const bool &isActive)
 
 void KCMColors::applyWallpaperAccentColor()
 {
-    QDBusMessage accentColor = QDBusMessage::createMethodCall("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", "color");
-    auto const connection = QDBusConnection::connectToBus(QDBusConnection::SessionBus, "accentColorBus");
+    QDBusMessage accentColor = QDBusMessage::createMethodCall(u"org.kde.plasmashell"_s, u"/PlasmaShell"_s, u"org.kde.PlasmaShell"_s, u"color"_s);
+    auto const connection = QDBusConnection::connectToBus(QDBusConnection::SessionBus, u"accentColorBus"_s);
     QDBusPendingCall async = connection.asyncCall(accentColor);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
 
