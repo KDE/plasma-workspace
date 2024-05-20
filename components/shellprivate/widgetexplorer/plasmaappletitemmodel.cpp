@@ -19,17 +19,19 @@
 #include <KPackage/PackageLoader>
 #include <KRuntimePlatform>
 
+using namespace Qt::StringLiterals;
+
 PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     : AbstractItem()
     , m_info(info)
     , m_runningCount(0)
     , m_local(false)
 {
-    const QString _f = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + info.pluginId() + '/';
+    const QString _f = QLatin1String(PLASMA_RELATIVE_DATA_INSTALL_DIR) + "/plasmoids/"_L1 + info.pluginId() + u'/';
     QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation, _f, QStandardPaths::LocateDirectory));
     m_local = dir.exists() && dir.isWritable();
 
-    setText(m_info.name() + " - " + m_info.category().toLower());
+    setText(m_info.name() + " - "_L1 + m_info.category().toLower());
 
     if (QIcon::hasThemeIcon(info.pluginId())) {
         setIcon(QIcon::fromTheme(info.pluginId()));
@@ -270,7 +272,7 @@ QVariant PlasmaAppletItem::data(int role) const
             pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
             pkg.setPath(m_info.pluginId());
             if (pkg.isValid() && pkg.metadata().iconName().startsWith(QLatin1String("/"))) {
-                const_cast<PlasmaAppletItem *>(this)->m_icon = pkg.filePath("", pkg.metadata().iconName().toUtf8());
+                const_cast<PlasmaAppletItem *>(this)->m_icon = pkg.filePath("", pkg.metadata().iconName());
             } else {
                 const_cast<PlasmaAppletItem *>(this)->m_icon = QString();
                 return AbstractItem::data(role);

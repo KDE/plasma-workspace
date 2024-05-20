@@ -113,7 +113,7 @@ QVariantHash DefaultFilterModel::get(int row) const
 
     const QHash<int, QByteArray> roles = roleNames();
     for (QHash<int, QByteArray>::const_iterator i = roles.constBegin(); i != roles.constEnd(); ++i) {
-        hash[i.value()] = data(idx, i.key());
+        hash[QString::fromLatin1(i.value())] = data(idx, i.key());
     }
 
     return hash;
@@ -176,7 +176,7 @@ QVariantHash DefaultItemFilterProxyModel::get(int row) const
 
     const QHash<int, QByteArray> roles = roleNames();
     for (QHash<int, QByteArray>::const_iterator i = roles.constBegin(); i != roles.constEnd(); ++i) {
-        hash[i.value()] = data(idx, i.key());
+        hash[QString::fromLatin1(i.value())] = data(idx, i.key());
     }
 
     return hash;
