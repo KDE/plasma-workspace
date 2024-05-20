@@ -610,9 +610,9 @@ void AutostartModel::sort(int column, Qt::SortOrder order)
 {
     Q_UNUSED(column)
     Q_UNUSED(order)
-    emit layoutAboutToBeChanged();
+    Q_EMIT layoutAboutToBeChanged();
     m_entries = sortedEntries(m_entries);
-    emit layoutChanged();
+    Q_EMIT layoutChanged();
 }
 
 QList<AutostartEntry> AutostartModel::sortedEntries(const QList<AutostartEntry> &entries)
