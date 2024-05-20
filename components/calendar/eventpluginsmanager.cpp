@@ -15,6 +15,8 @@
 
 #include <KPluginMetaData>
 
+using namespace Qt::StringLiterals;
+
 class EventPluginsManagerPrivate
 {
 public:
@@ -203,7 +205,7 @@ QStringList EventPluginsManager::enabledPlugins() const
 
 void EventPluginsManager::loadPlugin(const QString &pluginId)
 {
-    QPluginLoader loader("plasmacalendarplugins/" + QDir::cleanPath(pluginId));
+    QPluginLoader loader("plasmacalendarplugins/"_L1 + QDir::cleanPath(pluginId));
 
     if (!loader.load()) {
         qWarning() << "Could not create Plasma Calendar Plugin: " << pluginId;
