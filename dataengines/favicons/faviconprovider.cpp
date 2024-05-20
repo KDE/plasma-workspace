@@ -16,6 +16,8 @@
 #include <KIO/StoredTransferJob>
 #include <KJob>
 
+using namespace Qt::StringLiterals;
+
 class FaviconProvider::Private
 {
 public:
@@ -54,10 +56,10 @@ FaviconProvider::FaviconProvider(QObject *parent, const QString &url)
     const QString fileName = KIO::favIconForUrl(faviconUrl);
 
     if (!fileName.isEmpty()) {
-        d->cachePath = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + '/' + fileName + ".png";
+        d->cachePath = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + u'/' + fileName + ".png"_L1;
         d->image.load(d->cachePath, "PNG");
     } else {
-        d->cachePath = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/favicons/" + faviconUrl.host() + ".png";
+        d->cachePath = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/favicons/"_L1 + faviconUrl.host() + ".png"_L1;
         faviconUrl.setPath(QStringLiteral("/favicon.ico"));
 
         if (faviconUrl.isValid()) {
