@@ -208,7 +208,7 @@ void PlayerContainer::setLoopStatus(LoopStatus::Status value)
     default:
         Q_UNREACHABLE();
     }
-    m_propsIface->Set(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName(), QStringLiteral("LoopStatus"), QDBusVariant(result));
+    m_propsIface->Set(QStringLiteral("org.mpris.MediaPlayer2.Player"), QStringLiteral("LoopStatus"), QDBusVariant(result));
     // Emit changed signals in onPropertiesChanged
 }
 
@@ -227,7 +227,7 @@ void PlayerContainer::setRate(double value)
         return;
     }
 
-    m_propsIface->Set(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName(), QStringLiteral("Rate"), QDBusVariant(QVariant(value)));
+    m_propsIface->Set(QStringLiteral("org.mpris.MediaPlayer2.Player"), QStringLiteral("Rate"), QDBusVariant(QVariant(value)));
     // Emit changed signals in onPropertiesChanged
 }
 
@@ -237,9 +237,7 @@ void PlayerContainer::setShuffle(ShuffleStatus::Status value)
         return;
     }
 
-    m_propsIface->Set(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName(),
-                      QStringLiteral("Shuffle"),
-                      QDBusVariant(QVariant(value == ShuffleStatus::On)));
+    m_propsIface->Set(QStringLiteral("org.mpris.MediaPlayer2.Player"), QStringLiteral("Shuffle"), QDBusVariant(QVariant(value == ShuffleStatus::On)));
     // Emit changed signals in onPropertiesChanged
 }
 
@@ -249,7 +247,7 @@ void PlayerContainer::setVolume(double value)
         return;
     }
 
-    m_propsIface->Set(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName(), QStringLiteral("Volume"), QDBusVariant(QVariant(value)));
+    m_propsIface->Set(QStringLiteral("org.mpris.MediaPlayer2.Player"), QStringLiteral("Volume"), QDBusVariant(QVariant(value)));
     // Emit changed signals in onPropertiesChanged
 }
 
@@ -330,7 +328,7 @@ void PlayerContainer::setFullscreen(bool value)
         return;
     }
 
-    m_propsIface->Set(OrgMprisMediaPlayer2Interface::staticInterfaceName(), QStringLiteral("Fullscreen"), QDBusVariant(QVariant(value)));
+    m_propsIface->Set(QStringLiteral("org.mpris.MediaPlayer2"), QStringLiteral("Fullscreen"), QDBusVariant(QVariant(value)));
     // Emit changed signals in onPropertiesChanged
 }
 
@@ -408,13 +406,12 @@ void PlayerContainer::refresh()
     // despite these calls being async, we should never update values in the
     // wrong order (eg: a stale GetAll response overwriting a more recent value
     // from a PropertiesChanged signal) due to D-Bus message ordering guarantees.
-
-    QDBusPendingCall async = m_propsIface->GetAll(OrgMprisMediaPlayer2Interface::staticInterfaceName());
+    QDBusPendingCall async = m_propsIface->GetAll(QStringLiteral("org.mpris.MediaPlayer2"));
     auto watcher = new QDBusPendingCallWatcher(async, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, &PlayerContainer::onGetPropsFinished);
     ++m_fetchesPending;
 
-    async = m_propsIface->GetAll(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName());
+    async = m_propsIface->GetAll(QStringLiteral("org.mpris.MediaPlayer2.Player"));
     watcher = new QDBusPendingCallWatcher(async, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, &PlayerContainer::onGetPropsFinished);
     ++m_fetchesPending;
@@ -422,7 +419,7 @@ void PlayerContainer::refresh()
 
 void PlayerContainer::updatePosition()
 {
-    QDBusPendingCall call = m_propsIface->Get(OrgMprisMediaPlayer2PlayerInterface::staticInterfaceName(), QStringLiteral("Position"));
+    QDBusPendingCall call = m_propsIface->Get(QStringLiteral("org.mpris.MediaPlayer2.Player"), QStringLiteral("Position"));
     auto watcher = new QDBusPendingCallWatcher(call, this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<QVariant> propsReply = *watcher;
