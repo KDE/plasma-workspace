@@ -123,6 +123,17 @@ class PanelView : public PlasmaQuick::ContainmentView
      */
     Q_PROPERTY(int minThickness READ minThickness NOTIFY minThicknessChanged)
 
+    /**
+     * The rectangle, relative to the screen which is covered by the panel configuration window
+     */
+    Q_PROPERTY(QRect relativeConfigRect READ relativeConfigRect NOTIFY relativeConfigRectChanged)
+
+    /**
+     * If true the panel config window is visible offering the user configuration options
+     * for the panel
+     */
+    Q_PROPERTY(bool userConfiguring READ isUserConfiguring NOTIFY userConfiguringChanged)
+
 public:
     enum VisibilityMode {
         NormalPanel = 0, /** default, always visible panel, the windowmanager reserves a places for it */
@@ -181,7 +192,7 @@ public:
 
     int minThickness() const;
 
-    QRegion configRegion() const;
+    QRect relativeConfigRect() const;
 
     Plasma::Types::BackgroundHints backgroundHints() const;
     void setBackgroundHints(Plasma::Types::BackgroundHints hint);
@@ -220,6 +231,8 @@ public:
     void setScreenToFollow(QScreen *screen);
     QScreen *screenToFollow() const;
 
+    bool isUserConfiguring() const;
+
 protected:
     void resizeEvent(QResizeEvent *ev) override;
     void showEvent(QShowEvent *event) override;
@@ -240,6 +253,7 @@ Q_SIGNALS:
     void floatingChanged();
     void minThicknessChanged();
     void geometryChanged();
+    void relativeConfigRectChanged();
 
     // QWindow does not have a property for screen. Adding this property requires re-implementing the signal
     void screenToFollowChanged(QScreen *screen);
@@ -247,7 +261,7 @@ Q_SIGNALS:
     void opacityModeChanged();
     void lengthModeChanged();
     void adaptiveOpacityEnabledChanged();
-    void configRegionChanged();
+    void userConfiguringChanged();
 
 protected Q_SLOTS:
     /**

@@ -67,6 +67,7 @@ kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GEN
 add_executable(plasmashell)
 qt6_generate_wayland_protocol_client_sources(plasmashell FILES
     ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
+    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-shell.xml
 )
 
 set(krunner_xml ${plasma-workspace_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml)

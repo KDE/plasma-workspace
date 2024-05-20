@@ -369,18 +369,16 @@ int PanelView::minThickness() const
     return 0;
 }
 
-QRegion PanelView::configRegion() const
+QRect PanelView::relativeConfigRect() const
 {
     PanelConfigView *panelConfigView = qobject_cast<PanelConfigView *>(m_panelConfigView);
-    if (m_panelConfigView && m_panelConfigView->isVisible()) {
-        QRect rulerViewRect;
-        if (panelConfigView && panelConfigView->panelRulerView() && panelConfigView->panelRulerView()->isVisible()) {
-            rulerViewRect = panelConfigView->panelRulerView()->geometry();
-            rulerViewRect.moveTopLeft(QPoint(0, totalThickness()));
-        }
-        return QRegion(m_panelConfigView->geometry()) | QRegion(rulerViewRect);
+    if (!panelConfigView || !panelConfigView->isVisible()) {
+        return QRect();
     }
-    return QRect();
+    const QRect screenGeo = m_screenToFollow->geometry();
+    QRect rect = m_panelConfigView->geometry();
+    rect.moveTopLeft(QPoint(rect.left() - screenGeo.left(), rect.top() - screenGeo.top()));
+    return rect;
 }
 
 Plasma::Types::BackgroundHints PanelView::backgroundHints() const
@@ -805,19 +803,34 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     if (isPanelConfig) {
         if (m_panelConfigView && m_panelConfigView->isVisible()) {
             m_panelConfigView->hide();
-            Q_EMIT configRegionChanged();
             cont->corona()->setEditMode(false);
         } else if (m_panelConfigView) {
             m_panelConfigView->show();
-            Q_EMIT configRegionChanged();
             m_panelConfigView->requestActivate();
         } else {
             PanelConfigView *configView = new PanelConfigView(cont, this);
+            connect(configView, &PanelConfigView::visibleChanged, this, &PanelView::relativeConfigRectChanged);
+            connect(configView, &PanelConfigView::visibleChanged, this, &PanelView::userConfiguringChanged);
+            connect(configView, &PanelConfigView::geometryChanged, this, &PanelView::relativeConfigRectChanged);
+            configView->setFlags(configView->flags() | Qt::Dialog | Qt::WindowStaysOnTopHint);
+
+            configView->setAnimated(true);
             m_panelConfigView = configView;
-            configView->setVisualParent(contentItem());
+
+            auto positionConfigView = [this]() {
+                QQuickItem *contObject = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
+                QQuickItem *tb = contObject->property("toolBox").value<QQuickItem *>();
+                if (tb && containment()->formFactor() != Plasma::Types::Vertical) {
+                    m_panelConfigView->setVisualParent(tb);
+                } else {
+                    m_panelConfigView->setVisualParent(contObject);
+                }
+            };
+            connect(this, &PanelView::formFactorChanged, this, positionConfigView);
+            positionConfigView();
+
             configView->init();
             configView->show();
-            Q_EMIT configRegionChanged();
             configView->requestActivate();
             connect(m_panelConfigView, &PanelConfigView::visibleChanged, this, &PanelView::updateEditModeLabel);
             updateEditModeLabel();
@@ -1022,6 +1035,11 @@ void PanelView::setScreenToFollow(QScreen *screen)
 QScreen *PanelView::screenToFollow() const
 {
     return m_screenToFollow;
+}
+
+bool PanelView::isUserConfiguring() const
+{
+    return m_panelConfigView && m_panelConfigView->isVisible();
 }
 
 void PanelView::adaptToScreen()

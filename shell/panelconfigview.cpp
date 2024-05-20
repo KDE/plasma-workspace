@@ -31,6 +31,7 @@
 
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
+#include <PlasmaQuick/PlasmaShellWaylandIntegration>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
@@ -195,6 +196,12 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     , m_panelView(panelView)
     , m_sharedQmlEngine(std::make_unique<PlasmaQuick::SharedQmlEngine>(this))
 {
+    if (KWindowSystem::isPlatformX11()) {
+        KX11Extras::setType(winId(), NET::AppletPopup);
+    } else {
+        PlasmaShellWaylandIntegration::get(this)->setRole(QtWayland::org_kde_plasma_surface::role::role_appletpopup);
+    }
+
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
 
     setScreen(panelView->screen());
@@ -334,6 +341,23 @@ void PanelConfigView::hideEvent(QHideEvent *ev)
         m_containment->setUserConfiguring(false);
     }
     deleteLater();
+}
+
+void PanelConfigView::moveEvent(QMoveEvent *ev)
+{
+    PlasmaQuick::PlasmaWindow::moveEvent(ev);
+    Q_EMIT geometryChanged(QRect(ev->pos(), size()));
+}
+
+void PanelConfigView::resizeEvent(QResizeEvent *ev)
+{
+    PlasmaQuick::PlasmaWindow::resizeEvent(ev);
+    Q_EMIT geometryChanged(QRect(position(), ev->size()));
+}
+
+QRect PanelConfigView::geometry() const
+{
+    return QRect(position(), size());
 }
 
 void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)

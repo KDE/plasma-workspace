@@ -24,6 +24,7 @@
 #include <QQuickItemGrabResult>
 #include <QScreen>
 #include <QUrl>
+#include <QVariant>
 
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -1163,7 +1164,7 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     return std::accumulate(m_panelViews.cbegin(), m_panelViews.cend(), QRegion(screen->geometry()), [screen](const QRegion &a, const PanelView *v) {
         if (v->isVisible() && screen == v->screen() && v->visibilityMode() != PanelView::AutoHide) {
             // if the panel is being moved around, we still want to calculate it from the edge
-            return a - v->geometryByDistance(0) - v->configRegion();
+            return a - v->geometryByDistance(0);
         }
         return a;
     });
@@ -1540,7 +1541,7 @@ void ShellCorona::createWaitingPanels()
         connect(panel, &PanelView::locationChanged, this, rectNotify);
         connect(panel, &PanelView::visibilityModeChanged, this, rectNotify);
         connect(panel, &PanelView::thicknessChanged, this, rectNotify);
-        connect(panel, &PanelView::configRegionChanged, this, rectNotify);
+        connect(panel, &PanelView::userConfiguringChanged, this, &ShellCorona::panelBeingConfiguredChanged);
     }
     m_waitingPanels = stillWaitingPanels;
 }
@@ -2078,6 +2079,16 @@ void ShellCorona::checkAddPanelAction()
 void ShellCorona::showAddPanelContextMenu(const QPoint pos)
 {
     m_addPanelsMenu.get()->popup(pos);
+}
+
+PanelView *ShellCorona::panelBeingConfigured() const
+{
+    for (PanelView *panel : m_panelViews) {
+        if (panel->isUserConfiguring()) {
+            return panel;
+        }
+    }
+    return nullptr;
 }
 
 void ShellCorona::populateAddPanelsMenu()

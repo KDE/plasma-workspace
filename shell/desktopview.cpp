@@ -132,6 +132,7 @@ void DesktopView::setScreenToFollow(QScreen *screen)
     QDebug(&rectString) << screen->geometry();
     setTitle(QStringLiteral("%1 @ %2").arg(corona()->kPackage().metadata().name()).arg(rectString));
     adaptToScreen();
+    Q_EMIT screenToFollowChanged(screen);
 }
 
 QScreen *DesktopView::screenToFollow() const

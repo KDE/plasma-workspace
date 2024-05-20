@@ -64,6 +64,7 @@ class ShellCorona : public Plasma::Corona, QDBusContext
     Q_OBJECT
     Q_PROPERTY(QString shell READ shell WRITE setShell)
     Q_PROPERTY(int numScreens READ numScreens)
+    Q_PROPERTY(PanelView *panelBeingConfigured READ panelBeingConfigured NOTIFY panelBeingConfiguredChanged)
     Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
 
 public:
@@ -139,6 +140,8 @@ public:
 
     Q_INVOKABLE void showAddPanelContextMenu(const QPoint pos);
 
+    PanelView *panelBeingConfigured() const;
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk
@@ -149,6 +152,7 @@ Q_SIGNALS:
     void screenOrderChanged(QList<QScreen *> screens);
 
     void wallpaperChanged(uint screenNum);
+    void panelBeingConfiguredChanged();
 
 public Q_SLOTS:
     /**

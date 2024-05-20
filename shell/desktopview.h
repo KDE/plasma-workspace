@@ -15,6 +15,7 @@
 #include <KConfigWatcher>
 
 #include "config-workspace.h"
+#include "panelview.h"
 
 namespace LayerShellQt
 {
@@ -43,6 +44,11 @@ class DesktopView : public PlasmaQuick::ContainmentView
     Q_PROPERTY(QString previewBannerTitle READ previewBannerTitle CONSTANT)
     Q_PROPERTY(QString previewBannerText READ previewBannerText CONSTANT)
 #endif
+
+    /**
+     * information about the screen in which the panel is in
+     */
+    Q_PROPERTY(QScreen *screenToFollow READ screenToFollow WRITE setScreenToFollow NOTIFY screenToFollowChanged)
 
 public:
     explicit DesktopView(Plasma::Corona *corona, QScreen *targetScreen = nullptr);
@@ -94,6 +100,7 @@ Q_SIGNALS:
     void geometryChanged();
     void usedInAccentColorChanged();
     void accentColorChanged(const QColor &accentColor);
+    void screenToFollowChanged(QScreen *screen);
 
 private:
     void coronaPackageChanged(const KPackage::Package &package);

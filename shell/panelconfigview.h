@@ -19,6 +19,7 @@
 #include <QQuickView>
 #include <QStandardItemModel>
 #include <plasmaquick/plasmawindow.h>
+#include <qevent.h>
 
 class PanelView;
 
@@ -52,6 +53,7 @@ class PanelConfigView : public PlasmaQuick::PopupPlasmaWindow
 {
     Q_OBJECT
     Q_PROPERTY(PanelRulerView *panelRulerView READ panelRulerView CONSTANT)
+    Q_PROPERTY(QRect geometry READ geometry NOTIFY geometryChanged)
 
 public:
     PanelConfigView(Plasma::Containment *interface, PanelView *panelView);
@@ -60,6 +62,7 @@ public:
     void init();
 
     PanelRulerView *panelRulerView();
+    QRect geometry() const;
 
     Q_INVOKABLE QScreen *screenFromWindow(QWindow *window) const;
 
@@ -70,6 +73,8 @@ protected:
     void showEvent(QShowEvent *ev) override;
     void hideEvent(QHideEvent *ev) override;
     void focusInEvent(QFocusEvent *ev) override;
+    void moveEvent(QMoveEvent *ev) override;
+    void resizeEvent(QResizeEvent *ev) override;
 
 public Q_SLOTS:
     void showAddWidgetDialog();
@@ -77,6 +82,9 @@ public Q_SLOTS:
 
 protected Q_SLOTS:
     void syncGeometry();
+
+Q_SIGNALS:
+    void geometryChanged(const QRect &geometry);
 
 private:
     void focusVisibilityCheck(QWindow *focusWindow);
