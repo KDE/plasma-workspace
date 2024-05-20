@@ -16,8 +16,6 @@ using namespace Qt::StringLiterals;
 
 void SessionsPrivatePlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.lookandfeel"));
-
     qmlRegisterSingletonType<KPackageInterface>(uri, 1, 0, "LookAndFeel", [](QQmlEngine *, QJSEngine *) {
         const KConfigGroup cg(KSharedConfig::openConfig(), u"KDE"_s);
         const auto packageName = cg.readEntry("LookAndFeelPackage", QString());
