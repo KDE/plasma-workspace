@@ -15,7 +15,7 @@ QString BatteriesNamesMonitor::updateBatteryName(const Solid::Device &deviceBatt
     bool showBatteryName = battery->type() != Solid::Battery::PrimaryBattery || !battery->isPowerSupply();
     if (!deviceBattery.product().isEmpty() && deviceBattery.product() != QLatin1String("Unknown Battery") && showBatteryName) {
         if (!deviceBattery.vendor().isEmpty()) {
-            return (QString(deviceBattery.vendor() + ' ' + deviceBattery.product()));
+            return (QString(deviceBattery.vendor() + QLatin1Char(' ') + deviceBattery.product()));
         }
         return deviceBattery.product();
     }

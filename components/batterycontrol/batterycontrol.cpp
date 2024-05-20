@@ -21,7 +21,7 @@
 
 #include "batteriesnamesmonitor_p.h"
 
-static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
+static constexpr QLatin1String SOLID_POWERMANAGEMENT_SERVICE("org.kde.Solid.PowerManagement");
 
 BatteryControlModel::BatteryControlModel(QObject *parent)
     : QAbstractListModel(parent)
