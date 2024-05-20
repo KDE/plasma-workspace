@@ -35,8 +35,10 @@
 #include "powermanagementservice.h"
 #include <Plasma5Support/DataContainer>
 
-static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
-static const char FDO_POWERMANAGEMENT_SERVICE[] = "org.freedesktop.PowerManagement";
+using namespace Qt::StringLiterals;
+
+static constexpr QLatin1String SOLID_POWERMANAGEMENT_SERVICE("org.kde.Solid.PowerManagement");
+static constexpr QLatin1String FDO_POWERMANAGEMENT_SERVICE("org.freedesktop.PowerManagement");
 
 namespace
 {
@@ -727,7 +729,7 @@ void PowermanagementEngine::populateApplicationData(const QString &name, QString
         *prettyName = info.first;
         *icon = info.second;
     } else {
-        KService::Ptr service = KService::serviceByStorageId(name + ".desktop");
+        KService::Ptr service = KService::serviceByStorageId(name + ".desktop"_L1);
         if (service) {
             *prettyName = service->name(); // cannot be null
             *icon = service->icon();
