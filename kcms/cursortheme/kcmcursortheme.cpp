@@ -40,6 +40,8 @@
 #include <X11/extensions/Xfixes.h>
 #endif
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_FACTORY_WITH_JSON(CursorThemeConfigFactory, "kcm_cursortheme.json", registerPlugin<CursorThemeConfig>(); registerPlugin<CursorThemeData>();)
 
 CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &data)
@@ -68,7 +70,7 @@ CursorThemeConfig::CursorThemeConfig(QObject *parent, const KPluginMetaData &dat
 
     // Disable the install button if we can't install new themes to ~/.icons,
     // or Xcursor isn't set up to look for cursor themes there.
-    if (!m_themeModel->searchPaths().contains(QDir::homePath() + "/.icons") || !iconsIsWritable()) {
+    if (!m_themeModel->searchPaths().contains(QDir::homePath() + "/.icons"_L1) || !iconsIsWritable()) {
         setCanInstall(false);
     }
 
@@ -172,7 +174,7 @@ QAbstractItemModel *CursorThemeConfig::sizesModel()
 
 bool CursorThemeConfig::iconsIsWritable() const
 {
-    const QFileInfo icons = QFileInfo(QDir::homePath() + "/.icons");
+    const QFileInfo icons = QFileInfo(QDir::homePath() + "/.icons"_L1);
     const QFileInfo home = QFileInfo(QDir::homePath());
 
     return ((icons.exists() && icons.isDir() && icons.isWritable()) || (!icons.exists() && home.isWritable()));
@@ -191,14 +193,13 @@ void CursorThemeConfig::updateSizeComboBox()
         const QList<int> sizes = theme->availableSizes();
         // only refill the combobox if there is more that 1 size
         if (sizes.size() > 1) {
-            int i;
             QList<int> comboBoxList;
             QPixmap m_pixmap;
 
             // insert the items
             m_pixmap = theme->createIcon(0);
 
-            foreach (i, sizes) {
+            for (int i : sizes) {
                 m_pixmap = theme->createIcon(i);
                 QStandardItem *item = new QStandardItem(QIcon(m_pixmap), QString::number(i));
                 item->setData(i);
@@ -238,7 +239,7 @@ void CursorThemeConfig::updateSizeComboBox()
     }
 
     // enable or disable the combobox
-    if (cursorThemeSettings()->isImmutable("cursorSize")) {
+    if (cursorThemeSettings()->isImmutable(u"cursorSize"_s)) {
         setCanResize(false);
     } else {
         setCanResize(m_sizesModel->rowCount() > 0);
@@ -405,11 +406,11 @@ void CursorThemeConfig::installThemeFile(const QString &path)
 
     // Extract the dir names of the cursor themes in the archive, and
     // append them to themeDirs
-    foreach (const QString &name, archiveDir->entries()) {
+    for (const QString &name : archiveDir->entries()) {
         const KArchiveEntry *entry = archiveDir->entry(name);
-        if (entry->isDirectory() && entry->name().toLower() != "default") {
+        if (entry->isDirectory() && entry->name().toLower() != "default"_L1) {
             const KArchiveDirectory *dir = static_cast<const KArchiveDirectory *>(entry);
-            if (dir->entry("index.theme") && dir->entry("cursors")) {
+            if (dir->entry(u"index.theme"_s) && dir->entry(u"cursors"_s)) {
                 themeDirs << dir->name();
             }
         }
@@ -421,14 +422,14 @@ void CursorThemeConfig::installThemeFile(const QString &path)
     }
 
     // The directory we'll install the themes to
-    QString destDir = QDir::homePath() + "/.icons/";
+    QString destDir = QDir::homePath() + "/.icons/"_L1;
     if (!QDir().mkpath(destDir)) {
         Q_EMIT showErrorMessage(i18n("Failed to create 'icons' folder."));
         return;
     }
 
     // Process each cursor theme in the archive
-    foreach (const QString &dirName, themeDirs) {
+    for (const QString &dirName : std::as_const(themeDirs)) {
         QDir dest(destDir + dirName);
         if (dest.exists()) {
             QString question = i18n(

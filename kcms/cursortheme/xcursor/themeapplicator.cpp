@@ -18,6 +18,8 @@
 #include <X11/extensions/Xfixes.h>
 #endif
 
+using namespace Qt::StringLiterals;
+
 bool applyTheme(const CursorTheme *theme, const int size)
 {
     // Require the Xcursor version that shipped with X11R6.9 or greater, since
@@ -36,54 +38,56 @@ bool applyTheme(const CursorTheme *theme, const int size)
 
     if (CursorTheme::haveXfixes()) {
         // Qt cursors
-        names << "left_ptr"
-              << "up_arrow"
-              << "cross"
-              << "wait"
-              << "left_ptr_watch"
-              << "ibeam"
-              << "size_ver"
-              << "size_hor"
-              << "size_bdiag"
-              << "size_fdiag"
-              << "size_all"
-              << "split_v"
-              << "split_h"
-              << "pointing_hand"
-              << "openhand"
-              << "closedhand"
-              << "forbidden"
-              << "whats_this"
-              << "copy"
-              << "move"
-              << "link";
+        // clang-format off
+        names << u"left_ptr"_s
+              << u"up_arrow"_s
+              << u"cross"_s
+              << u"wait"_s
+              << u"left_ptr_watch"_s
+              << u"ibeam"_s
+              << u"size_ver"_s
+              << u"size_hor"_s
+              << u"size_bdiag"_s
+              << u"size_fdiag"_s
+              << u"size_all"_s
+              << u"split_v"_s
+              << u"split_h"_s
+              << u"pointing_hand"_s
+              << u"openhand"_s
+              << u"closedhand"_s
+              << u"forbidden"_s
+              << u"whats_this"_s
+              << u"copy"_s
+              << u"move"_s
+              << u"link"_s;
 
         // X core cursors
-        names << "X_cursor"
-              << "right_ptr"
-              << "hand1"
-              << "hand2"
-              << "watch"
-              << "xterm"
-              << "crosshair"
-              << "left_ptr_watch"
-              << "center_ptr"
-              << "sb_h_double_arrow"
-              << "sb_v_double_arrow"
-              << "fleur"
-              << "top_left_corner"
-              << "top_side"
-              << "top_right_corner"
-              << "right_side"
-              << "bottom_right_corner"
-              << "bottom_side"
-              << "bottom_left_corner"
-              << "left_side"
-              << "question_arrow"
-              << "pirate";
+        names << u"X_cursor"_s
+              << u"right_ptr"_s
+              << u"hand1"_s
+              << u"hand2"_s
+              << u"watch"_s
+              << u"xterm"_s
+              << u"crosshair"_s
+              << u"left_ptr_watch"_s
+              << u"center_ptr"_s
+              << u"sb_h_double_arrow"_s
+              << u"sb_v_double_arrow"_s
+              << u"fleur"_s
+              << u"top_left_corner"_s
+              << u"top_side"_s
+              << u"top_right_corner"_s
+              << u"right_side"_s
+              << u"bottom_right_corner"_s
+              << u"bottom_side"_s
+              << u"bottom_left_corner"_s
+              << u"left_side"_s
+              << u"question_arrow"_s
+              << u"pirate"_s;
+        // clang-format on
 
-        foreach (const QString &name, names) {
-            XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name));
+        for (const QString &name : std::as_const(names)) {
+            XFixesChangeCursorByName(QX11Info::display(), theme->loadCursor(name, size), QFile::encodeName(name).constData());
         }
     }
 

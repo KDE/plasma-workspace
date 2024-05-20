@@ -34,7 +34,7 @@ XCursorTheme::XCursorTheme(const QDir &themeDir)
     if (themeDir.exists(QStringLiteral("index.theme")))
         parseIndexFile();
 
-    QString cursorFile = path() + "/cursors/left_ptr";
+    QString cursorFile = path() + "/cursors/left_ptr"_L1;
     QList<int> sizeList;
     XcursorImages *images = XcursorFilenameLoadAllImages(qPrintable(cursorFile));
     if (images) {
@@ -49,7 +49,7 @@ XCursorTheme::XCursorTheme(const QDir &themeDir)
     if (!sizeList.isEmpty()) {
         QString sizeListString = QString::number(sizeList.takeFirst());
         while (!sizeList.isEmpty()) {
-            sizeListString.append(", ");
+            sizeListString.append(u", ");
             sizeListString.append(QString::number(sizeList.takeFirst()));
         };
         QString tempString = i18nc(
@@ -60,13 +60,13 @@ XCursorTheme::XCursorTheme(const QDir &themeDir)
         if (m_description.isEmpty())
             m_description = tempString;
         else
-            m_description = m_description + ' ' + tempString;
+            m_description = m_description + u' ' + tempString;
     };
 }
 
 void XCursorTheme::parseIndexFile()
 {
-    KConfig config(path() + "/index.theme", KConfig::NoGlobals);
+    KConfig config(path() + "/index.theme"_L1, KConfig::NoGlobals);
     KConfigGroup cg(&config, u"Icon Theme"_s);
 
     m_title = cg.readEntry("Name", m_title);
@@ -116,7 +116,7 @@ XcursorImage *XCursorTheme::xcLoadImage(const QString &image, int size) const
     QByteArray cursorName = QFile::encodeName(image);
     QByteArray themeName = QFile::encodeName(name());
 
-    return XcursorLibraryLoadImage(cursorName, themeName, size);
+    return XcursorLibraryLoadImage(cursorName.constData(), themeName.constData(), size);
 }
 
 XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
@@ -124,7 +124,7 @@ XcursorImages *XCursorTheme::xcLoadImages(const QString &image, int size) const
     QByteArray cursorName = QFile::encodeName(image);
     QByteArray themeName = QFile::encodeName(name());
 
-    return XcursorLibraryLoadImages(cursorName, themeName, size);
+    return XcursorLibraryLoadImages(cursorName.constData(), themeName.constData(), size);
 }
 
 int XCursorTheme::defaultCursorSize() const

@@ -112,7 +112,7 @@ void CursorTheme::setCursorName(qulonglong cursor, const QString &name) const
 #ifdef HAVE_XFIXES
 
     if (haveXfixes()) {
-        XFixesSetCursorName(QX11Info::display(), cursor, QFile::encodeName(name));
+        XFixesSetCursorName(QX11Info::display(), cursor, QFile::encodeName(name).constData());
     }
 #endif
 }

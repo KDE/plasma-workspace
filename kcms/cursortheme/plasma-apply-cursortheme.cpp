@@ -20,6 +20,8 @@
 #include <QFile>
 #include <QTimer>
 
+using namespace Qt::StringLiterals;
+
 namespace
 {
 /** Apply a theme, log warnings
@@ -75,7 +77,7 @@ int main(int argc, char **argv)
     CursorThemeModel *model = new CursorThemeModel(&app);
     if (!parser->positionalArguments().isEmpty()) {
         QString requestedTheme{parser->positionalArguments().first()};
-        const QString dirSplit{"/"};
+        constexpr QLatin1Char dirSplit{'/'};
         if (requestedTheme.contains(dirSplit)) {
             QStringList splitTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts);
             // Cursor themes installed through KNewStuff will commonly be given an installed files entry
@@ -96,7 +98,7 @@ int main(int argc, char **argv)
 
             if (theme) {
                 settings->setCursorTheme(theme->name());
-                if (settings->save() && applyThemeAndSize(theme, parser->value("size"), ts)) {
+                if (settings->save() && applyThemeAndSize(theme, parser->value(u"size"_s), ts)) {
                     notifyKcmChange(GlobalChangeType::CursorChanged);
                     ts << i18n("Successfully applied the mouse cursor theme %1 to your current Plasma session", theme->title()) << Qt::endl;
                 } else {
@@ -121,9 +123,9 @@ int main(int argc, char **argv)
         ts << i18n("You have the following mouse cursor themes on your system:") << Qt::endl;
         for (int i = 0; i < model->rowCount(); ++i) {
             const CursorTheme *theme = model->theme(model->index(i, 0));
-            ts << QString(" * %1 [%2]").arg(theme->title()).arg(theme->name());
+            ts << QStringLiteral(" * %1 [%2]").arg(theme->title()).arg(theme->name());
             if (settings->cursorTheme() == theme->name()) {
-                ts << QChar(' ') << i18n("(Current theme for this Plasma session)");
+                ts << QLatin1Char(' ') << i18n("(Current theme for this Plasma session)");
             }
             ts << Qt::endl;
         }

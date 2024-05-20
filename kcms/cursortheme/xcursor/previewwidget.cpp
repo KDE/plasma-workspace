@@ -19,7 +19,7 @@
 namespace
 {
 // Preview cursors
-const char *const cursor_names[] = {
+constexpr const char *const cursor_names[] = {
     "left_ptr",
     "left_ptr_watch",
     "wait",
@@ -248,7 +248,7 @@ void PreviewWidget::setTheme(const CursorTheme *theme, const int size)
 
     if (theme) {
         for (int i = 0; i < numCursors; i++)
-            list << new PreviewCursor(theme, cursor_names[i], size);
+            list << new PreviewCursor(theme, QString::fromLatin1(cursor_names[i]), size);
 
         needLayout = true;
         updateImplicitSize();

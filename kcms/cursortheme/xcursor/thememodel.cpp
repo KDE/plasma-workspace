@@ -163,12 +163,12 @@ const QStringList CursorThemeModel::searchPaths()
         path = xcursorPath;
 #else
     // Get the search path from Xcursor
-    QString path = XcursorLibraryPath();
+    QString path = QString::fromLocal8Bit(XcursorLibraryPath());
     qCDebug(KCM_CURSORTHEME) << "XcursorLibraryPath:" << path;
 #endif
 
     // Separate the paths
-    baseDirs = path.split(':', Qt::SkipEmptyParts);
+    baseDirs = path.split(u':', Qt::SkipEmptyParts);
 
     // Remove duplicates
     QMutableStringListIterator i(baseDirs);
@@ -181,7 +181,7 @@ const QStringList CursorThemeModel::searchPaths()
     }
 
     // Expand all occurrences of ~/ to the home dir
-    baseDirs.replaceInStrings(QRegularExpression("^~\\/"), QDir::home().path() + '/');
+    baseDirs.replaceInStrings(QRegularExpression(u"^~\\/"_s), QDir::home().path() + u'/');
     return baseDirs;
 }
 
@@ -189,7 +189,7 @@ bool CursorThemeModel::hasTheme(const QString &name) const
 {
     const uint hash = qHash(name);
 
-    foreach (const CursorTheme *theme, list)
+    for (const CursorTheme *theme : std::as_const(list))
         if (theme->hash() == hash)
             return true;
 
@@ -203,7 +203,7 @@ bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
         return false;
 
     // Search each icon theme directory for 'theme'
-    foreach (const QString &baseDir, searchPaths()) {
+    for (const QString &baseDir : searchPaths()) {
         QDir dir(baseDir);
         if (!dir.exists() || !dir.cd(theme))
             continue;
@@ -217,7 +217,7 @@ bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
             continue;
 
         // Open the index.theme file, so we can get the list of inherited themes
-        KConfig config(dir.path() + "/index.theme", KConfig::NoGlobals);
+        KConfig config(dir.path() + "/index.theme"_L1, KConfig::NoGlobals);
         KConfigGroup cg(&config, u"Icon Theme"_s);
 
         // Recurse through the list of inherited themes, to check if one of them
@@ -250,7 +250,7 @@ bool CursorThemeModel::handleDefault(const QDir &themeDir)
     }
 
     // If there's no cursors subdir, or if it's empty
-    if (!themeDir.exists(QStringLiteral("cursors")) || QDir(themeDir.path() + "/cursors").entryList(QDir::Files | QDir::NoDotAndDotDot).isEmpty()) {
+    if (!themeDir.exists(QStringLiteral("cursors")) || QDir(themeDir.path() + "/cursors"_L1).entryList(QDir::Files | QDir::NoDotAndDotDot).isEmpty()) {
         if (themeDir.exists(QStringLiteral("index.theme"))) {
             XCursorTheme theme(themeDir);
             if (!theme.inherits().isEmpty())
@@ -295,7 +295,7 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
     if (!haveCursors) {
         bool foundCursorTheme = false;
 
-        foreach (const QString &name, theme->inherits())
+        for (const QString &name : theme->inherits())
             if ((foundCursorTheme = isCursorTheme(name)))
                 break;
 
