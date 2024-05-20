@@ -186,7 +186,7 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
     connect(m_executeAction, &QAction::triggered, this, &InteractiveConsole::evaluateScript);
     m_executeAction->setShortcut(Qt::CTRL | Qt::Key_E);
 
-    const QString autosave = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
+    const QString autosave = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + u'/' + s_autosaveFileName;
     if (QFile::exists(autosave)) {
         loadScript(autosave);
     }
@@ -281,7 +281,7 @@ void InteractiveConsole::showEvent(QShowEvent *)
 void InteractiveConsole::closeEvent(QCloseEvent *event)
 {
     // need to save first!
-    const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
+    const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + u'/' + s_autosaveFileName;
     m_closeWhenCompleted = true;
     saveScript(QUrl::fromLocalFile(path));
     QDialog::closeEvent(event);
@@ -392,7 +392,7 @@ void InteractiveConsole::loadTemplate(QAction *action)
 
 void InteractiveConsole::useTemplate(QAction *action)
 {
-    QString code("var template = loadTemplate('" + action->data().toString() + "')");
+    QString code("var template = loadTemplate('"_L1 + action->data().toString() + "')"_L1);
     if (m_editorPart) {
         const QList<KTextEditor::View *> views = m_editorPart->views();
         if (views.isEmpty()) {
@@ -542,7 +542,7 @@ void InteractiveConsole::evaluateScript()
             print(reply.arguments().first().toString());
         }
     } else if (m_mode == KWinConsole) {
-        const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + "/" + s_autosaveFileName;
+        const QString path = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) + u'/' + s_autosaveFileName;
         saveScript(QUrl::fromLocalFile(path));
 
         QDBusMessage message = QDBusMessage::createMethodCall(s_kwinService, QStringLiteral("/Scripting"), QString(), QStringLiteral("loadScript"));
@@ -555,10 +555,10 @@ void InteractiveConsole::evaluateScript()
         } else {
             const int id = reply.arguments().constFirst().toInt();
             QDBusConnection::sessionBus()
-                .connect(s_kwinService, "/Scripting/Script" + QString::number(id), QString(), QStringLiteral("print"), this, SLOT(print(QString)));
+                .connect(s_kwinService, "/Scripting/Script"_L1 + QString::number(id), QString(), QStringLiteral("print"), this, SLOT(print(QString)));
             QDBusConnection::sessionBus()
                 .connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("printError"), this, SLOT(print(QString)));
-            message = QDBusMessage::createMethodCall(s_kwinService, "/Scripting/Script" + QString::number(id), QString(), QStringLiteral("run"));
+            message = QDBusMessage::createMethodCall(s_kwinService, "/Scripting/Script"_L1 + QString::number(id), QString(), QStringLiteral("run"));
             reply = QDBusConnection::sessionBus().call(message);
             if (reply.type() == QDBusMessage::ErrorMessage) {
                 print(reply.errorMessage());
