@@ -21,7 +21,7 @@ msgstr ""
 #: desktopthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "当前 Plasma 视觉风格名称"
+msgstr "当前 Plasma 外观样式名称"
 
 #: kcm.cpp:112
 #, kde-format

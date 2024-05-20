@@ -39,7 +39,7 @@ msgstr "等宽字体"
 #: fontssettings.kcfg:33
 #, kde-format
 msgid "Small font"
-msgstr "小字体"
+msgstr "小号字"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
@@ -139,7 +139,7 @@ msgstr "调整全局缩放…"
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
-msgstr "某些更改只影响之后启动的程序，例如抗锯齿或 DPI 等选项。"
+msgstr "某些更改仅影响在更改之后启动的程序，例如抗锯齿或 DPI 等选项。"
 
 #: ui/main.qml:48
 #, kde-format
@@ -299,7 +299,7 @@ msgstr ""
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "字体微调方式："
+msgstr "字体轮廓微调："
 
 #: ui/main.qml:373
 #, kde-kuit-format
