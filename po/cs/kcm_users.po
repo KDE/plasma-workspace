@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:40+0000\n"
+"POT-Creation-Date: 2024-05-20 00:40+0000\n"
 "PO-Revision-Date: 2023-11-02 13:53+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -310,37 +310,37 @@ msgstr "Prosím, opakovaně přetáhněte levý palec přes senzor otisku prstů
 msgid "Finger Enrolled"
 msgstr "Prst byl zaznamenán"
 
-#: src/ui/FingerprintDialog.qml:29
+#: src/ui/FingerprintDialog.qml:28
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Nastavte otisky"
 
-#: src/ui/FingerprintDialog.qml:38
+#: src/ui/FingerprintDialog.qml:40
 #, kde-format
 msgid "Add"
 msgstr "Přidat"
 
-#: src/ui/FingerprintDialog.qml:47
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Cancel"
 msgstr "Zrušit"
 
-#: src/ui/FingerprintDialog.qml:55
+#: src/ui/FingerprintDialog.qml:60
 #, kde-format
 msgid "Done"
 msgstr "Hotovo"
 
-#: src/ui/FingerprintList.qml:72
+#: src/ui/FingerprintList.qml:46
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Znova zaznamenat prst"
 
-#: src/ui/FingerprintList.qml:77
+#: src/ui/FingerprintList.qml:58
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Smazat otisk"
 
-#: src/ui/FingerprintList.qml:87
+#: src/ui/FingerprintList.qml:74
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nebyly přidány žádné otisky"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:40+0000\n"
+"POT-Creation-Date: 2024-05-20 00:40+0000\n"
 "PO-Revision-Date: 2024-02-10 17:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -305,37 +305,37 @@ msgstr "الرجاء امسح بالإبهام الأيسر بشكل متكرر 
 msgid "Finger Enrolled"
 msgstr "الأصبع سُجّل"
 
-#: src/ui/FingerprintDialog.qml:29
+#: src/ui/FingerprintDialog.qml:28
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "اضبط البصمات"
 
-#: src/ui/FingerprintDialog.qml:38
+#: src/ui/FingerprintDialog.qml:40
 #, kde-format
 msgid "Add"
 msgstr "أضف"
 
-#: src/ui/FingerprintDialog.qml:47
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: src/ui/FingerprintDialog.qml:55
+#: src/ui/FingerprintDialog.qml:60
 #, kde-format
 msgid "Done"
 msgstr "تمّ"
 
-#: src/ui/FingerprintList.qml:72
+#: src/ui/FingerprintList.qml:46
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "أعد تسجيل الإصبع"
 
-#: src/ui/FingerprintList.qml:77
+#: src/ui/FingerprintList.qml:58
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "احذف بصمة"
 
-#: src/ui/FingerprintList.qml:87
+#: src/ui/FingerprintList.qml:74
 #, kde-format
 msgid "No fingerprints added"
 msgstr "لم يضف أي بصمة"

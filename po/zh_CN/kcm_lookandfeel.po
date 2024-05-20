@@ -206,7 +206,7 @@ msgstr "颜色"
 #: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
-msgstr "应用程序视觉风格"
+msgstr "应用程序外观样式"
 
 #: ui/MoreOptions.qml:71
 #, kde-format
@@ -226,7 +226,7 @@ msgstr "图标"
 #: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
-msgstr "Plasma 视觉风格"
+msgstr "Plasma 外观样式"
 
 #: ui/MoreOptions.qml:75
 #, kde-format

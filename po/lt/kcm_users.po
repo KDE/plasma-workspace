@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:40+0000\n"
+"POT-Creation-Date: 2024-05-20 00:40+0000\n"
 "PO-Revision-Date: 2024-01-13 15:58+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -341,37 +341,37 @@ msgstr ""
 msgid "Finger Enrolled"
 msgstr "Pirštas įrašytas"
 
-#: src/ui/FingerprintDialog.qml:29
+#: src/ui/FingerprintDialog.qml:28
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "Konfigūruoti piršto atspaudus"
 
-#: src/ui/FingerprintDialog.qml:38
+#: src/ui/FingerprintDialog.qml:40
 #, kde-format
 msgid "Add"
 msgstr "Pridėti"
 
-#: src/ui/FingerprintDialog.qml:47
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Cancel"
 msgstr "Atsisakyti"
 
-#: src/ui/FingerprintDialog.qml:55
+#: src/ui/FingerprintDialog.qml:60
 #, kde-format
 msgid "Done"
 msgstr "Atlikta"
 
-#: src/ui/FingerprintList.qml:72
+#: src/ui/FingerprintList.qml:46
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "Įrašyti pirštą iš naujo"
 
-#: src/ui/FingerprintList.qml:77
+#: src/ui/FingerprintList.qml:58
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "Ištrinti piršto atspaudą"
 
-#: src/ui/FingerprintList.qml:87
+#: src/ui/FingerprintList.qml:74
 #, kde-format
 msgid "No fingerprints added"
 msgstr "Nepridėta jokių piršto atspaudų"

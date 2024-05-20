@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:40+0000\n"
+"POT-Creation-Date: 2024-05-20 00:40+0000\n"
 "PO-Revision-Date: 2024-03-08 03:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -298,37 +298,37 @@ msgstr "請在指紋感應器上重複滑動您的左手大拇指。"
 msgid "Finger Enrolled"
 msgstr "已登錄指紋"
 
-#: src/ui/FingerprintDialog.qml:29
+#: src/ui/FingerprintDialog.qml:28
 #, kde-format
 msgid "Configure Fingerprints"
 msgstr "設定指紋"
 
-#: src/ui/FingerprintDialog.qml:38
+#: src/ui/FingerprintDialog.qml:40
 #, kde-format
 msgid "Add"
 msgstr "新增"
 
-#: src/ui/FingerprintDialog.qml:47
+#: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
 
-#: src/ui/FingerprintDialog.qml:55
+#: src/ui/FingerprintDialog.qml:60
 #, kde-format
 msgid "Done"
 msgstr "完成"
 
-#: src/ui/FingerprintList.qml:72
+#: src/ui/FingerprintList.qml:46
 #, kde-format
 msgid "Re-enroll finger"
 msgstr "重新登錄手指"
 
-#: src/ui/FingerprintList.qml:77
+#: src/ui/FingerprintList.qml:58
 #, kde-format
 msgid "Delete fingerprint"
 msgstr "刪除指紋"
 
-#: src/ui/FingerprintList.qml:87
+#: src/ui/FingerprintList.qml:74
 #, kde-format
 msgid "No fingerprints added"
 msgstr "未新增指紋"
