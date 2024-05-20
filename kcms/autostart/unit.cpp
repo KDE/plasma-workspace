@@ -227,7 +227,7 @@ QStringList Unit::getLastJournalEntries(const QString &unit)
         // Get the message itself
         returnValue = sd_journal_get_data(journal, "MESSAGE", &data, &length);
         if (returnValue == 0) {
-            line.append(QString::fromUtf8((const char *)data, length).section('=', 1) + "</font>");
+            line.append(QString::fromUtf8(reinterpret_cast<const char *>(data), length).section(u'=', 1) + "</font>"_L1);
             reply << line;
         }
     }
