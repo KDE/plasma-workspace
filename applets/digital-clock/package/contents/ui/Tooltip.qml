@@ -14,7 +14,7 @@ import org.kde.plasma.plasmoid
 import org.kde.kirigami as Kirigami
 
 Item {
-    id: tooltipContentItem
+    id: toolTipContentItem
 
     property int preferredTextWidth: Kirigami.Units.gridUnit * 20
 
@@ -54,8 +54,8 @@ Item {
         Kirigami.Heading {
             id: tooltipMaintext
 
-            Layout.minimumWidth: Math.min(implicitWidth, tooltipContentItem.preferredTextWidth)
-            Layout.maximumWidth: tooltipContentItem.preferredTextWidth
+            Layout.minimumWidth: Math.min(implicitWidth, toolTipContentItem.preferredTextWidth)
+            Layout.maximumWidth: toolTipContentItem.preferredTextWidth
 
             level: 3
             elide: Text.ElideRight
@@ -67,8 +67,8 @@ Item {
         PlasmaComponents.Label {
             id: tooltipSubtext
 
-            Layout.minimumWidth: Math.min(implicitWidth, tooltipContentItem.preferredTextWidth)
-            Layout.maximumWidth: tooltipContentItem.preferredTextWidth
+            Layout.minimumWidth: Math.min(implicitWidth, toolTipContentItem.preferredTextWidth)
+            Layout.maximumWidth: toolTipContentItem.preferredTextWidth
 
             text: {
                 if (Plasmoid.configuration.showSeconds === 0) {
@@ -85,8 +85,8 @@ Item {
 
         PlasmaComponents.Label {
             id: tooltipSubLabelText
-            Layout.minimumWidth: Math.min(implicitWidth, tooltipContentItem.preferredTextWidth)
-            Layout.maximumWidth: tooltipContentItem.preferredTextWidth
+            Layout.minimumWidth: Math.min(implicitWidth, toolTipContentItem.preferredTextWidth)
+            Layout.maximumWidth: toolTipContentItem.preferredTextWidth
             text: (root.fullRepresentationItem as CalendarView)?.monthView.todayAuxilliaryText ?? ""
             textFormat: Text.PlainText
             opacity: 0.6
@@ -96,8 +96,8 @@ Item {
         GridLayout {
             id: clocks
 
-            Layout.minimumWidth: Math.min(implicitWidth, tooltipContentItem.preferredTextWidth)
-            Layout.maximumWidth: tooltipContentItem.preferredTextWidth
+            Layout.minimumWidth: Math.min(implicitWidth, toolTipContentItem.preferredTextWidth)
+            Layout.maximumWidth: toolTipContentItem.preferredTextWidth
             Layout.minimumHeight: childrenRect.height
             visible: timezoneRepeater.count > 2
             columns: 2
