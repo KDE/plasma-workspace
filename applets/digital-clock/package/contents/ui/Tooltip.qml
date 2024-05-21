@@ -34,8 +34,8 @@ Item {
     Accessible.name: i18nc("@info:tooltip %1 is a localized long date", "Today is %1", tooltipSubtext.text)
     Accessible.description: {
         const description = tooltipSubLabelText.visible ? [tooltipSubLabelText.text] : [];
-        for (let i = 0; i < timezoneRepeater.count; i += 2) {
-            description.push(`${timezoneRepeater.itemAt(i).text}: ${timezoneRepeater.itemAt(i + 1).text}`);
+        for (let i = 0; i < timeZoneRepeater.count; i += 2) {
+            description.push(`${timeZoneRepeater.itemAt(i).text}: ${timeZoneRepeater.itemAt(i + 1).text}`);
         }
         return description.join('; ');
     }
@@ -60,7 +60,7 @@ Item {
             level: 3
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
-            text: clocks.visible ? Qt.formatDate(root.tzDate, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(root.tzDate, "dddd")
+            text: clocks.visible ? Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(root.currentDateTimeInSelectedTimeZone, "dddd")
             textFormat: Text.PlainText
         }
 
@@ -72,11 +72,11 @@ Item {
 
             text: {
                 if (Plasmoid.configuration.showSeconds === 0) {
-                    return Qt.formatDate(root.tzDate, Qt.locale(), root.dateFormatString);
+                    return Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), root.dateFormatString);
                 } else {
                     return "%1\n%2"
-                        .arg(Qt.formatTime(root.tzDate, Qt.locale(), Locale.LongFormat))
-                        .arg(Qt.formatDate(root.tzDate, Qt.locale(), root.dateFormatString))
+                        .arg(Qt.formatTime(root.currentDateTimeInSelectedTimeZone, Qt.locale(), Locale.LongFormat))
+                        .arg(Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), root.dateFormatString))
                 }
             }
             opacity: 0.6
@@ -99,12 +99,12 @@ Item {
             Layout.minimumWidth: Math.min(implicitWidth, toolTipContentItem.preferredTextWidth)
             Layout.maximumWidth: toolTipContentItem.preferredTextWidth
             Layout.minimumHeight: childrenRect.height
-            visible: timezoneRepeater.count > 2
+            visible: timeZoneRepeater.count > 2
             columns: 2
             rowSpacing: 0
 
             Repeater {
-                id: timezoneRepeater
+                id: timeZoneRepeater
 
                 model: root.selectedTimeZonesDeduplicatingExplicitLocalTimeZone()
                     // Duplicate each entry, because that's how we do "tables" with 2 columns in QML. :-\

@@ -13,13 +13,13 @@
 
 #include "timezonesi18n_generated.h"
 
-TimezonesI18n::TimezonesI18n(QObject *parent)
+TimeZonesI18n::TimeZonesI18n(QObject *parent)
     : QObject(parent)
     , m_isInitialized(false)
 {
 }
 
-QString TimezonesI18n::i18nContinents(const QString &continent)
+QString TimeZonesI18n::i18nContinents(const QString &continent)
 {
     if (!m_isInitialized) {
         init();
@@ -27,7 +27,7 @@ QString TimezonesI18n::i18nContinents(const QString &continent)
     return m_i18nContinents.value(continent, continent);
 }
 
-QString TimezonesI18n::i18nCountry(QLocale::Country country)
+QString TimeZonesI18n::i18nCountry(QLocale::Country country)
 {
     if (!m_isInitialized) {
         init();
@@ -42,7 +42,7 @@ QString TimezonesI18n::i18nCountry(QLocale::Country country)
     return countryName;
 }
 
-QString TimezonesI18n::i18nCity(const QString &timezoneId)
+QString TimeZonesI18n::i18nCity(const QString &timezoneId)
 {
     if (!m_isInitialized) {
         init();
@@ -58,9 +58,9 @@ QString TimezonesI18n::i18nCity(const QString &timezoneId)
     return cityName.isBogus() ? timezoneId : QStringView(cityName.getBuffer(), cityName.length()).toString();
 }
 
-void TimezonesI18n::init()
+void TimeZonesI18n::init()
 {
-    m_i18nContinents = TimezonesI18nData::timezoneContinentToL10nMap();
+    m_i18nContinents = TimeZonesI18nData::timezoneContinentToL10nMap();
 
     const auto locale = icu::Locale(QLocale::system().name().toLatin1());
     UErrorCode error = U_ZERO_ERROR;

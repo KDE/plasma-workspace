@@ -46,7 +46,7 @@ KCMUtils.ScrollViewKCM {
     }
 
     view: ListView {
-        id: configuredTimezoneList
+        id: configuredTimeZoneList
         clip: true // Avoid visual glitches
         focus: true // keyboard navigation
         activeFocusOnTab: true // keyboard navigation
@@ -58,7 +58,7 @@ KCMUtils.ScrollViewKCM {
                 Kirigami.Action {
                     text: i18n("Add Time Zones…")
                     icon.name: "list-add-symbolic"
-                    onTriggered: timezoneSheet.open()
+                    onTriggered: timeZoneSheet.open()
                 }
             ]
         }
@@ -88,7 +88,7 @@ KCMUtils.ScrollViewKCM {
 
             text: model.city
             subtitle: {
-                if (configuredTimezoneList.count > 1) {
+                if (configuredTimeZoneList.count > 1) {
                     if (isCurrent) {
                         return i18n("Clock is currently using this time zone");
                     } else if (isIdenticalToLocal) {
@@ -129,7 +129,7 @@ KCMUtils.ScrollViewKCM {
                 }
 
                 QQC2.Button {
-                    visible: !timeZoneListItem.model.isLocalTimeZone && configuredTimezoneList.count > 1
+                    visible: !timeZoneListItem.model.isLocalTimeZone && configuredTimeZoneList.count > 1
                     icon.name: "edit-delete"
                     font.bold: false
                     onClicked: timeZoneListItem.model.checked = false;
@@ -145,15 +145,15 @@ KCMUtils.ScrollViewKCM {
             delegate: Kirigami.ListSectionHeader {
                 required property string section
 
-                width: configuredTimezoneList.width
+                width: configuredTimeZoneList.width
                 label: section === "true" ? i18n("Systemwide Time Zone") : i18n("Additional Time Zones")
             }
         }
 
         Kirigami.PlaceholderMessage {
-            visible: configuredTimezoneList.count === 1
+            visible: configuredTimeZoneList.count === 1
             anchors {
-                top: parent.verticalCenter // Visual offset for system timezone and header
+                top: parent.verticalCenter // Visual offset for system time zone and header
                 left: parent.left
                 right: parent.right
                 leftMargin: Kirigami.Units.largeSpacing * 6
@@ -168,7 +168,7 @@ KCMUtils.ScrollViewKCM {
 
         QQC2.CheckBox {
             id: enableWheelCheckBox
-            enabled: configuredTimezoneList.count > 1
+            enabled: configuredTimeZoneList.count > 1
             Layout.fillWidth: true
             Layout.topMargin: Kirigami.Units.largeSpacing
             text: i18n("Switch displayed time zone by scrolling over clock applet")
@@ -186,7 +186,7 @@ KCMUtils.ScrollViewKCM {
     }
 
     Kirigami.OverlaySheet {
-        id: timezoneSheet
+        id: timeZoneSheet
 
         parent: timeZonesPage.QQC2.Overlay.overlay
 
@@ -222,7 +222,7 @@ KCMUtils.ScrollViewKCM {
 
         footer: QQC2.DialogButtonBox {
             standardButtons: QQC2.DialogButtonBox.Ok
-            onAccepted: timezoneSheet.close()
+            onAccepted: timeZoneSheet.close()
         }
 
         ListView {

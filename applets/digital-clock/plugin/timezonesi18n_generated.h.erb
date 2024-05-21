@@ -10,7 +10,7 @@
 
 #include <KLocalizedString>
 
-namespace TimezonesI18nData
+namespace TimeZonesI18nData
 {
 using TimezoneContinentToL10nMap = QHash<QString, QString>;
 
@@ -20,4 +20,4 @@ static TimezoneContinentToL10nMap timezoneContinentToL10nMap()
         {QStringLiteral("<%= continent %>"), i18nc("<%= continent_description(continent) %>", "<%= to_contient_name(continent) %>")},<%end%>
     };
 }
-} // namespace TimezonesI18nData
+} // namespace TimeZonesI18nData

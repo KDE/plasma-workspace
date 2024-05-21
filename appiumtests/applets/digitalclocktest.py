@@ -130,9 +130,9 @@ class DigitalClockTests(unittest.TestCase):
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Holidays"))).click()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Search")))
 
-    def test_2_config_dialog_3_timezones(self) -> None:
+    def test_2_config_dialog_3_time_zones(self) -> None:
         """
-        Checks the timezone list
+        Checks the time zone list
         """
         self.driver.find_element(AppiumBy.NAME, "Time Zones").click()
         wait = WebDriverWait(self.driver, 10)

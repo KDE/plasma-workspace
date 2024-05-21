@@ -13,14 +13,14 @@
 
 #include <unicode/tznames.h>
 
-class TimezonesI18n : public QObject
+class TimeZonesI18n : public QObject
 {
     Q_OBJECT
     QML_ELEMENT
     QML_SINGLETON
 
 public:
-    explicit TimezonesI18n(QObject *parent = nullptr);
+    explicit TimeZonesI18n(QObject *parent = nullptr);
     Q_INVOKABLE QString i18nContinents(const QString &continent);
     Q_INVOKABLE QString i18nCountry(QLocale::Country country);
     Q_INVOKABLE QString i18nCity(const QString &timezoneId);

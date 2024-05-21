@@ -53,11 +53,11 @@ MouseArea {
     property string lastDate: ""
     property int tzOffset
 
-    // This is the index in the list of user selected timezones
+    // This is the index in the list of user selected time zones
     property int tzIndex: 0
 
     // if showing the date and the time in one line or
-    // if the date/timezone cannot be fit with the smallest font to its designated space
+    // if the date/time zone cannot be fit with the smallest font to its designated space
     readonly property bool oneLineMode: {
         if (Plasmoid.configuration.dateDisplayFormat === 1) {
             // BesideTime
@@ -69,7 +69,7 @@ MouseArea {
             // Adaptive
             return Plasmoid.formFactor === PlasmaCore.Types.Horizontal &&
                 height <= 2 * Kirigami.Theme.smallFont.pixelSize &&
-                (Plasmoid.configuration.showDate || timezoneLabel.visible);
+                (Plasmoid.configuration.showDate || timeZoneLabel.visible);
         }
     }
 
@@ -90,14 +90,14 @@ MouseArea {
     Connections {
         target: Plasmoid.configuration
         function onSelectedTimeZonesChanged() {
-            // If the currently selected timezone was removed,
+            // If the currently selected time zone was removed,
             // default to the first one in the list
             if (Plasmoid.configuration.selectedTimeZones.indexOf(Plasmoid.configuration.lastSelectedTimezone) === -1) {
                 Plasmoid.configuration.lastSelectedTimezone = Plasmoid.configuration.selectedTimeZones[0];
             }
 
             main.setupLabels();
-            main.setTimezoneIndex();
+            main.setTimeZoneIndex();
         }
 
         function onDisplayTimezoneFormatChanged() {
@@ -132,7 +132,7 @@ MouseArea {
             return new Date();
         }
 
-        // get the time for the given timezone from the dataengine
+        // get the time for the given time zone from the dataengine
         const now = data["DateTime"];
         // get current UTC time
         const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
@@ -162,9 +162,9 @@ MouseArea {
             PropertyChanges {
                 target: contentItem
 
-                height: timeLabel.height + (Plasmoid.configuration.showDate || timezoneLabel.visible ? 0.8 * timeLabel.height : 0)
-                width: Math.max(timeLabel.width + (Plasmoid.configuration.showDate ? timezoneLabel.paintedWidth : 0),
-                                timezoneLabel.paintedWidth, dateLabel.paintedWidth) + Kirigami.Units.largeSpacing
+                height: timeLabel.height + (Plasmoid.configuration.showDate || timeZoneLabel.visible ? 0.8 * timeLabel.height : 0)
+                width: Math.max(timeLabel.width + (Plasmoid.configuration.showDate ? timeZoneLabel.paintedWidth : 0),
+                                timeZoneLabel.paintedWidth, dateLabel.paintedWidth) + Kirigami.Units.largeSpacing
             }
 
             PropertyChanges {
@@ -189,12 +189,12 @@ MouseArea {
             }
 
             PropertyChanges {
-                target: timezoneLabel
+                target: timeZoneLabel
 
                 height: Plasmoid.configuration.showDate ? 0.7 * timeLabel.height : 0.8 * timeLabel.height
-                width: Plasmoid.configuration.showDate ? timezoneLabel.paintedWidth : timeLabel.width
+                width: Plasmoid.configuration.showDate ? timeZoneLabel.paintedWidth : timeLabel.width
 
-                font.pixelSize: timezoneLabel.height
+                font.pixelSize: timeZoneLabel.height
             }
 
             PropertyChanges {
@@ -221,10 +221,10 @@ MouseArea {
                  * The value 0.71 was picked by testing to give the clock the right
                  * size (aligned with tray icons).
                  * Value 0.56 seems to be chosen rather arbitrary as well such that
-                 * the time label is slightly larger than the date or timezone label
+                 * the time label is slightly larger than the date or time zone label
                  * and still fits well into the panel with all the applied margins.
                  */
-                height: Math.min(Plasmoid.configuration.showDate || timezoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
+                height: Math.min(Plasmoid.configuration.showDate || timeZoneLabel.visible ? main.height * 0.56 : main.height * 0.71,
                                  fontHelper.font.pixelSize)
 
                 font.pixelSize: sizehelper.height
@@ -288,10 +288,10 @@ MouseArea {
             }
 
             PropertyChanges {
-                target: timezoneLabel
+                target: timeZoneLabel
 
                 height: 0.7 * timeLabel.height
-                width: timezoneLabel.paintedWidth
+                width: timeZoneLabel.paintedWidth
 
                 fontSizeMode: Text.VerticalFit
                 horizontalAlignment: Text.AlignHCenter
@@ -343,7 +343,7 @@ MouseArea {
             }
 
             PropertyChanges {
-                target: timezoneLabel
+                target: timeZoneLabel
 
                 height: Math.max(0.7 * timeLabel.height, minimumPixelSize)
                 width: main.width
@@ -421,7 +421,7 @@ MouseArea {
             }
 
             PropertyChanges {
-                target: timezoneLabel
+                target: timeZoneLabel
 
                 height: 0.7 * timeLabel.height
                 width: main.width
@@ -455,11 +455,11 @@ MouseArea {
 
                 height: {
                     if (Plasmoid.configuration.showDate) {
-                        if (timezoneLabel.visible) {
+                        if (timeZoneLabel.visible) {
                             return 0.4 * main.height
                         }
                         return 0.56 * main.height
-                    } else if (timezoneLabel.visible) {
+                    } else if (timeZoneLabel.visible) {
                         return 0.59 * main.height
                     }
                     return main.height
@@ -547,7 +547,7 @@ MouseArea {
             }
 
             PlasmaComponents.Label {
-                id: timezoneLabel
+                id: timeZoneLabel
 
                 font.weight: timeLabel.font.weight
                 font.italic: timeLabel.font.italic
@@ -624,7 +624,7 @@ MouseArea {
     }
 
     // Qt's QLocale does not offer any modular time creating like Klocale did
-    // eg. no "gimme time with seconds" or "gimme time without seconds and with timezone".
+    // eg. no "gimme time with seconds" or "gimme time without seconds and with time zone".
     // QLocale supports only two formats - Long and Short. Long is unusable in many situations
     // and Short does not provide seconds. So if seconds are enabled, we need to add it here.
     //
@@ -677,13 +677,13 @@ MouseArea {
         let timezoneString = "";
 
         if (showTimezone) {
-            // format timezone as tz code, city or UTC offset
+            // format time zone as tz code, city or UTC offset
             switch (Plasmoid.configuration.displayTimezoneFormat) {
             case 0: // Code
                 timezoneString = lastSelectedData["Timezone Abbreviation"]
                 break;
             case 1: // City
-                timezoneString = TimezonesI18n.i18nCity(lastSelectedData["Timezone"]);
+                timezoneString = TimeZonesI18n.i18nCity(lastSelectedData["Timezone"]);
                 break;
             case 2: // Offset from UTC time
                 const lastOffset = lastSelectedData["Offset"];
@@ -699,7 +699,7 @@ MouseArea {
             }
         }
         // an empty string clears the label and that makes it hidden
-        timezoneLabel.text = timezoneString;
+        timeZoneLabel.text = timezoneString;
 
         if (Plasmoid.configuration.showDate) {
             dateLabel.text = dateFormatter(getCurrentTime());
@@ -749,10 +749,10 @@ MouseArea {
             }
         }
 
-        const currentTZOffset = dataSource.data["Local"]["Offset"] / 60;
-        if (currentTZOffset !== tzOffset) {
+        const currentTimeZoneOffset = dataSource.data["Local"]["Offset"] / 60;
+        if (currentTimeZoneOffset !== tzOffset) {
             doCorrections = true;
-            tzOffset = currentTZOffset;
+            tzOffset = currentTimeZoneOffset;
             Date.timeZoneUpdated(); // inform the QML JS engine about TZ change
         }
 
@@ -761,12 +761,12 @@ MouseArea {
         }
     }
 
-    function setTimezoneIndex() {
+    function setTimeZoneIndex() {
         tzIndex = Plasmoid.configuration.selectedTimeZones.indexOf(Plasmoid.configuration.lastSelectedTimezone);
     }
 
     Component.onCompleted: {
-        // Sort the timezones according to their offset
+        // Sort the time zones according to their offset
         // Calling sort() directly on Plasmoid.configuration.selectedTimeZones
         // has no effect, so sort a copy and then assign the copy to it
         const byOffset = (a, b) => a.offset - b.offset;
@@ -780,7 +780,7 @@ MouseArea {
         Plasmoid.configuration.selectedTimeZones = sortedTimeZones
             .map(({ timeZone }) => timeZone);
 
-        setTimezoneIndex();
+        setTimeZoneIndex();
         tzOffset = -(new Date().getTimezoneOffset());
         dateTimeChanged();
         timeFormatCorrection();

@@ -28,7 +28,7 @@ PlasmoidItem {
 
     readonly property string dateFormatString: setDateFormatString()
 
-    readonly property date tzDate: {
+    readonly property date currentDateTimeInSelectedTimeZone: {
         const data = dataSource.data[Plasmoid.configuration.lastSelectedTimezone];
         // The order of signal propagation is unspecified, so we might get
         // here before the dataSource has updated. Alternatively, a buggy
@@ -38,20 +38,21 @@ PlasmoidItem {
         if (data === undefined) {
             return new Date();
         }
-        // get the time for the given timezone from the dataengine
+        // get the time for the given time zone from the dataengine
         const now = data["DateTime"];
         // get current UTC time
-        const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
-        // add the dataengine TZ offset to it
-        return new Date(msUTC + (data["Offset"] * 1000));
+        const nowUtcMilliseconds = now.getTime() + (now.getTimezoneOffset() * 60000);
+        const selectedTimeZoneOffsetMilliseconds = data["Offset"] * 1000;
+        // add the selected time zone's offset to it
+        return new Date(nowUtcMilliseconds + selectedTimeZoneOffsetMilliseconds);
     }
 
-    function initTimezones() {
-        const tz = [];
+    function initTimeZones() {
+        const timeZones = [];
         if (Plasmoid.configuration.selectedTimeZones.indexOf("Local") === -1) {
-            tz.push("Local");
+            timeZones.push("Local");
         }
-        root.allTimezones = tz.concat(Plasmoid.configuration.selectedTimeZones);
+        root.allTimeZones = timeZones.concat(Plasmoid.configuration.selectedTimeZones);
     }
 
     function timeForZone(timeZone: string, showSeconds: bool): string {
@@ -64,7 +65,7 @@ PlasmoidItem {
             return "";
         }
 
-        // get the time for the given timezone from the dataengine
+        // get the time for the given time zone from the dataengine
         const now = data["DateTime"];
         // get current UTC time
         const msUTC = now.getTime() + (now.getTimezoneOffset() * 60000);
@@ -91,15 +92,15 @@ PlasmoidItem {
             return timeZone;
         }
 
-        // add the timezone string to the clock
+        // add the time zone string to the clock
         if (Plasmoid.configuration.displayTimezoneAsCode) {
             return data["Timezone Abbreviation"];
         } else {
-            return TimezonesI18n.i18nCity(data["Timezone"]);
+            return TimeZonesI18n.i18nCity(data["Timezone"]);
         }
     }
 
-    function selectedTimeZonesDeduplicatingExplicitLocalTimeZone()/*: [string] */ {
+    function selectedTimeZonesDeduplicatingExplicitLocalTimeZone():/* [string] */var {
         const displayStringForLocalTimeZone = displayStringForTimeZone("Local");
         /*
          * Don't add this item if it's the same as the local time zone, which
@@ -147,12 +148,12 @@ PlasmoidItem {
 
     //We need Local to be *always* present, even if not disaplayed as
     //it's used for formatting in ToolTip.dateTimeChanged()
-    property list<string> allTimezones
+    property list<string> allTimeZones
 
     Connections {
         target: Plasmoid.configuration
         function onSelectedTimeZonesChanged() {
-            root.initTimezones();
+            root.initTimeZones();
         }
     }
 
@@ -161,7 +162,7 @@ PlasmoidItem {
     P5Support.DataSource {
         id: dataSource
         engine: "time"
-        connectedSources: allTimezones
+        connectedSources: allTimeZones
         interval: intervalAlignment === P5Support.Types.NoAlignment ? 1000 : 60000
         intervalAlignment: {
             if (Plasmoid.configuration.showSeconds === 2
@@ -208,6 +209,6 @@ PlasmoidItem {
     Component.onCompleted: {
         ClipboardMenu.setupMenu(clipboardAction);
 
-        initTimezones();
+        initTimeZones();
     }
 }

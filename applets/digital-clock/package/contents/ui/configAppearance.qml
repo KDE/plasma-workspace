@@ -35,8 +35,8 @@ KCMUtils.SimpleKCM {
     property alias cfg_fontSize: fontDialog.fontChosen.pointSize
 
     property string cfg_timeFormat: ""
-    property alias cfg_showLocalTimezone: showLocalTimezone.checked
-    property alias cfg_displayTimezoneFormat: displayTimezoneFormat.currentIndex
+    property alias cfg_showLocalTimezone: showLocalTimeZone.checked
+    property alias cfg_displayTimezoneFormat: displayTimeZoneFormat.currentIndex
     property alias cfg_showSeconds: showSecondsComboBox.currentIndex
 
     property alias cfg_showDate: showDate.checked
@@ -95,7 +95,7 @@ KCMUtils.SimpleKCM {
             }
 
             QQC2.RadioButton {
-                id: showLocalTimezone
+                id: showLocalTimeZone
                 text: i18n("Always")
             }
         }
@@ -105,7 +105,7 @@ KCMUtils.SimpleKCM {
         }
 
         QQC2.ComboBox {
-            id: displayTimezoneFormat
+            id: displayTimeZoneFormat
 
             Kirigami.FormData.label: i18n("Display time zone as:")
 
@@ -294,7 +294,7 @@ KCMUtils.SimpleKCM {
     }
 
     Component.onCompleted: {
-        if (!Plasmoid.configuration.showLocalTimezone) {
+        if (!Plasmoid.configuration.showLocalTimeZone) {
             showLocalTimeZoneWhenDifferent.checked = true;
         }
     }

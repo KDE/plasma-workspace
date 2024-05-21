@@ -397,7 +397,7 @@ PlasmaExtras.Representation {
 
         // Clocks stuff
         // ------------
-        // Header text + button to change time & timezone
+        // Header text + button to change time & time zone
         PlasmaExtras.PlasmoidHeading {
             visible: worldClocks.visible
 
@@ -582,7 +582,7 @@ PlasmaExtras.Representation {
             borderOpacity: 0.25
 
             eventPluginsManager: eventPluginsManager
-            today: root.tzDate
+            today: root.currentDateTimeInSelectedTimeZone
             firstDayOfWeek: Plasmoid.configuration.firstDayOfWeek > -1
                 ? Plasmoid.configuration.firstDayOfWeek
                 : Qt.locale().firstDayOfWeek

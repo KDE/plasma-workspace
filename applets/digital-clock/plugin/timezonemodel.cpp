@@ -63,7 +63,7 @@ void TimeZoneFilterProxy::setOnlyShowChecked(const bool show)
 
 TimeZoneModel::TimeZoneModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_timezonesI18n(new TimezonesI18n(this))
+    , m_timezonesI18n(new TimeZonesI18n(this))
 {
     update();
 

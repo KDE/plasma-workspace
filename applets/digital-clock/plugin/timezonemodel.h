@@ -13,7 +13,7 @@
 
 #include "timezonedata.h"
 
-class TimezonesI18n;
+class TimeZonesI18n;
 
 class TimeZoneFilterProxy : public QSortFilterProxyModel
 {
@@ -85,5 +85,5 @@ private:
     QList<TimeZoneData> m_data;
     QHash<QString, int> m_offsetData; // used for sorting
     QStringList m_selectedTimeZones;
-    TimezonesI18n *m_timezonesI18n;
+    TimeZonesI18n *m_timezonesI18n;
 };
