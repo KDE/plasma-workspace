@@ -92,7 +92,7 @@ KCMUtils.ScrollViewKCM {
                     if (isCurrent) {
                         return i18n("Clock is currently using this time zone");
                     } else if (isIdenticalToLocal) {
-                        return i18nc("@label This list item shows a time zone city name that is identical to the local time zone's city, and will be hidden in the timezone display in the plasmoid's popup", "Hidden while this is the local time zone's city");
+                        return i18nc("@label This list item shows a time zone city name that is identical to the local time zone's city, and will be hidden in the time zone display in the plasmoid's popup", "Hidden while this is the local time zone's city");
                     }
                 }
                 return "";
@@ -203,7 +203,7 @@ KCMUtils.ScrollViewKCM {
 
             Kirigami.Heading {
                 Layout.fillWidth: true
-                text: i18n("Add More Timezones")
+                text: i18n("Add More Time Zones")
                 textFormat: Text.PlainText
                 wrapMode: Text.Wrap
             }
@@ -215,7 +215,7 @@ KCMUtils.ScrollViewKCM {
                 id: messageWidget
                 Layout.fillWidth: true
                 type: Kirigami.MessageType.Warning
-                text: i18n("At least one time zone needs to be enabled. Your local timezone was enabled automatically.")
+                text: i18n("At least one time zone needs to be enabled. Your local time zone was enabled automatically.")
                 showCloseButton: true
             }
         }

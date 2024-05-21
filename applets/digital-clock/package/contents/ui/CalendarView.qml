@@ -431,10 +431,11 @@ PlasmaExtras.Representation {
 
                     visible: KConfig.KAuthorized.authorizeControlModule("kcm_clock.desktop")
                     text: i18n("Switch…")
-                    Accessible.name: i18n("Switch to another timezone")
                     icon.name: "preferences-system-time"
 
-                    Accessible.description: i18n("Switch to another timezone")
+                    Accessible.name: i18n("Switch to another time zone")
+                    Accessible.description: i18n("Switch to another time zone")
+
                     KeyNavigation.down: clocksList
                     Keys.onRightPressed: event => {
                         monthView.Keys.downPressed(event);

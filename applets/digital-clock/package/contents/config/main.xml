@@ -7,7 +7,7 @@
 
   <group name="Appearance">
     <entry name="showLocalTimezone" type="Bool">
-      <label>Whether the timezone should be displayed when the clock is showing the local timezone.</label>
+      <label>Whether the time zone should be displayed when the clock is showing the local time zone.</label>
       <default>false</default>
     </entry>
     <entry name="showSeconds" type="Enum">
@@ -67,15 +67,15 @@
       <default>Local</default>
     </entry>
     <entry name="lastSelectedTimezone" type="String">
-      <label>When multiple time zones are configured, this is the one shown on widget restore. Typically the system's current timezone.</label>
+      <label>When multiple time zones are configured, this is the one shown on widget restore. Typically the system's current time zone.</label>
       <default>Local</default>
     </entry>
         <entry name="wheelChangesTimezone" type="Bool">
-      <label>Whether the mouse wheel switches between the timezones configured in selectedTimeZones.</label>
+      <label>Whether the mouse wheel switches between the time zones configured in selectedTimeZones.</label>
       <default>false</default>
     </entry>
     <entry name="displayTimezoneFormat" type="Enum">
-      <label>Whether the timezone is displayed as a code i.e. "GMT", full text i.e. "London" or UTC offset "+1".</label>
+      <label>Whether the time zone is displayed as a code i.e. "GMT", full text i.e. "London" or UTC offset "+1".</label>
       <choices name="Settings::displayTimezoneFormat">
         <choice name="Code" />
         <choice name="FullText" />

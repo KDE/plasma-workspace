@@ -137,7 +137,7 @@ class DigitalClockTests(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Time Zones").click()
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Time Zones…"))).click()
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add More Timezones")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add More Time Zones")))
         self.driver.find_element(AppiumBy.NAME, "Search").send_keys("utc+03:00")
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "UTC+03:00")))
 
