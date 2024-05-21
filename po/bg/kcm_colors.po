@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2023-08-09 08:41+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: \n"
@@ -88,47 +88,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "Прилагане на цвят за акцентиране от тапета"
 
-#: editor/kcolorschemeeditor.cpp:21
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:23
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "Инструмент за редактиране и създаване на цветови схеми"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
 msgstr "Създаване на инструмент"
 
-#: editor/kcolorschemeeditor.cpp:26
+#: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "KCM код (повторно използван тук)"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "Схема за редактиране или за използване като основа."
 
-#: editor/kcolorschemeeditor.cpp:33
+#: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -137,7 +137,7 @@ msgstr ""
 "Показване на бутона \"Прилагане\", който запазва промените без запитване  "
 "(за разлика от бутона \"Запазване като\")"
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
@@ -145,7 +145,7 @@ msgstr ""
 "Прави диалоговия прозорец преходен за друг прозорец на приложението, посочен "
 "от манипулатора"
 
-#: editor/kcolorschemeeditor.cpp:53
+#: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Схемата не е намерена, връщане  към текущата. \n"
@@ -1145,7 +1145,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "фокус"
 
-#: plasma-apply-colorscheme.cpp:39
+#: plasma-apply-colorscheme.cpp:41
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1156,7 +1156,7 @@ msgstr ""
 "на Plasma, без случайно да го зададете на този, който или не е на "
 "разположение, или който вече е зададен."
 
-#: plasma-apply-colorscheme.cpp:43
+#: plasma-apply-colorscheme.cpp:45
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1165,14 +1165,14 @@ msgstr ""
 "Името на цветовата схема, която искате да зададете за текущата си сесия на "
 "Plasma (посочването на пълен път, ще използва само последната част на пътя)"
 
-#: plasma-apply-colorscheme.cpp:46
+#: plasma-apply-colorscheme.cpp:48
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "Показване на всички налични теми на системата (и коя е текущата тема)"
 
-#: plasma-apply-colorscheme.cpp:51
+#: plasma-apply-colorscheme.cpp:53
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1184,7 +1184,7 @@ msgstr ""
 "десетични кодове. Оградете с кавички десетичния код, ако има опция за "
 "разширение на обвивката"
 
-#: plasma-apply-colorscheme.cpp:78
+#: plasma-apply-colorscheme.cpp:80
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1192,12 +1192,12 @@ msgid ""
 msgstr ""
 "Заявената тема \"%1\" вече е зададена като тема за текущата сесия на Plasma."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "Успешно прилагане на цветна схема %1 към текущата сесия на Plasma"
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1205,7 +1205,7 @@ msgid ""
 msgstr ""
 "Не може да се намери тема \"%1\". Темата трябва да има следните опции: %2"
 
-#: plasma-apply-colorscheme.cpp:120
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
@@ -1214,7 +1214,7 @@ msgstr ""
 "Вие успяхте да зададете име на празна цветова схема, което не е поддържано "
 "действие."
 
-#: plasma-apply-colorscheme.cpp:124
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1223,22 +1223,22 @@ msgstr ""
 "Файлът, който сте се опитали да зададете като ваша схема, %1, не може да "
 "бъде идентифициран като цветова схема."
 
-#: plasma-apply-colorscheme.cpp:147
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Акцентният цвят %1е приложен успешно"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Невалиден акцентен цвят"
 
-#: plasma-apply-colorscheme.cpp:154
+#: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Имате следните цветови схеми на вашата система:"
 
-#: plasma-apply-colorscheme.cpp:159
+#: plasma-apply-colorscheme.cpp:161
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (текуща цветова схема)"

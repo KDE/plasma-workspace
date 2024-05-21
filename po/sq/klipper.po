@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2010-02-17 02:14+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -473,57 +473,57 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:133
+#: klipper.cpp:94
 #, fuzzy, kde-format
 #| msgid "Action Properties"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Veprimet e Parametrave"
 
-#: klipper.cpp:169
+#: klipper.cpp:130
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr ""
 
-#: klipper.cpp:176
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr ""
 
-#: klipper.cpp:180
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr ""
 
-#: klipper.cpp:187
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:196
+#: klipper.cpp:157
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr ""
 
-#: klipper.cpp:201
+#: klipper.cpp:162
 #, fuzzy, kde-format
 #| msgid "Maintainer"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Mirëmbajtës"
 
-#: klipper.cpp:208
+#: klipper.cpp:169
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr ""
 
-#: klipper.cpp:495
+#: klipper.cpp:459
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -531,57 +531,57 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:543
+#: klipper.cpp:507
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr ""
 
-#: klipper.cpp:544
+#: klipper.cpp:508
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr ""
 
-#: klipper.cpp:545
+#: klipper.cpp:509
 #, kde-format
 msgid "Start"
 msgstr "Nise"
 
-#: klipper.cpp:546
+#: klipper.cpp:510
 #, kde-format
 msgid "Do Not Start"
 msgstr "Mos Nis"
 
-#: klipper.cpp:916
+#: klipper.cpp:772
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:957
+#: klipper.cpp:813
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: klipper.cpp:958
+#: klipper.cpp:814
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr ""
 
-#: klipper.cpp:974 klipper.cpp:983
+#: klipper.cpp:830 klipper.cpp:839
 #, kde-format
 msgid "Clipboard history"
 msgstr ""
 
-#: klipper.cpp:1000
+#: klipper.cpp:856
 #, kde-format
 msgid "up"
 msgstr "sipër"
 
-#: klipper.cpp:1007
+#: klipper.cpp:863
 #, kde-format
 msgid "current"
 msgstr "e tanishme"
 
-#: klipper.cpp:1014
+#: klipper.cpp:870
 #, kde-format
 msgid "down"
 msgstr "poshtë"

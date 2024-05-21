@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-03-11 07:43-0500\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -452,55 +452,55 @@ msgstr "ਆਈਕਾਨ:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:133
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ਆਟੋਮੈਟਿਕ ਕਾਰਵਾਈ ਪੌਪਅੱਪ ਮੇਨੂ"
 
-#: klipper.cpp:169
+#: klipper.cpp:130
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ(&l)"
 
-#: klipper.cpp:176
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "…ਕਲਿੱਪਰ ਦੀ ਸੰਰਚਨਾ(&C)"
 
-#: klipper.cpp:180
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ਮੌਜੂਦਾ ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਕਾਰਵਾਈ ਦਸਤੀ ਸ਼ਾਮਿਲ ਕਰੋ"
 
-#: klipper.cpp:187
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "…ਬਾਰਕੋਡ ਵੇਖੋ(&S)"
 
-#: klipper.cpp:196
+#: klipper.cpp:157
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ਅਗਲੀ ਅਤੀਤ ਆਈਟਮ"
 
-#: klipper.cpp:201
+#: klipper.cpp:162
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ਪਿਛਲੀ ਅਤੀਤ ਆਈਟਮ"
 
-#: klipper.cpp:208
+#: klipper.cpp:169
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "ਮਾਊਸ ਸਥਿਤੀ ਉੱਤੇ ਕਲਿੱਪਬੋਰਡ ਆਈਟਮਾਂ ਵੇਖਾਓ"
 
-#: klipper.cpp:495
+#: klipper.cpp:459
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -508,57 +508,57 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:543
+#: klipper.cpp:507
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "ਕੀ ਤੁਹਾਡੇ ਲਾਗਇਨ ਕਰਨ ਸਮੇਂ ਕੇਲਿੱਪਰ ਖੁਦ ਹੀ ਸ਼ੁਰੂ ਹੋ ਜਾਵੇ?"
 
-#: klipper.cpp:544
+#: klipper.cpp:508
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "ਕੇਲਿੱਪਰ ਆਟੋਮੈਟਿਕ ਸ਼ੁਰੂ ਕਰਨਾ ਹੈ?"
 
-#: klipper.cpp:545
+#: klipper.cpp:509
 #, kde-format
 msgid "Start"
 msgstr "ਸ਼ੁਰੂ"
 
-#: klipper.cpp:546
+#: klipper.cpp:510
 #, kde-format
 msgid "Do Not Start"
 msgstr "ਸ਼ੁਰੂ ਨਾ ਕਰੋ"
 
-#: klipper.cpp:916
+#: klipper.cpp:772
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "ਮੋਬਾਇਲ ਬਾਰਕੋਡ"
 
-#: klipper.cpp:957
+#: klipper.cpp:813
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ਕੀ ਤੁਸੀਂ ਪੂਰੇ ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਉਣਾ ਅਤੇ ਹਟਾਉਣਾ ਚਾਹੁੰਦੇ ਹੋ?"
 
-#: klipper.cpp:958
+#: klipper.cpp:814
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
-#: klipper.cpp:974 klipper.cpp:983
+#: klipper.cpp:830 klipper.cpp:839
 #, kde-format
 msgid "Clipboard history"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ"
 
-#: klipper.cpp:1000
+#: klipper.cpp:856
 #, kde-format
 msgid "up"
 msgstr "ਉੱਤੇ"
 
-#: klipper.cpp:1007
+#: klipper.cpp:863
 #, kde-format
 msgid "current"
 msgstr "ਮੌਜੂਦਾ"
 
-#: klipper.cpp:1014
+#: klipper.cpp:870
 #, kde-format
 msgid "down"
 msgstr "ਹੇਠਾਂ"

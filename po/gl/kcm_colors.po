@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2023-10-13 07:01+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -99,47 +99,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "Se aplicar unha cor de énfase do fondo."
 
-#: editor/kcolorschemeeditor.cpp:21
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:23
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "Ferramenta para editar e crear esquemas de cores."
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
 msgstr "Creación da ferramenta."
 
-#: editor/kcolorschemeeditor.cpp:26
+#: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "Código de KCM (reusado aquí)."
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "Esquema para editar ou usar como base."
 
-#: editor/kcolorschemeeditor.cpp:33
+#: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -148,7 +148,7 @@ msgstr ""
 "Amosar un botón de «Aplicar» que garda os cambios sen preguntar (a "
 "diferencia do botón «Gardar como»)"
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
@@ -156,7 +156,7 @@ msgstr ""
 "Fai que o diálogo sexa transitorio para a xanela doutra aplicación indicada "
 "mediante asa"
 
-#: editor/kcolorschemeeditor.cpp:53
+#: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Non se atopou o esquema, volvendo ao actual.\n"
@@ -1156,7 +1156,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "foco"
 
-#: plasma-apply-colorscheme.cpp:39
+#: plasma-apply-colorscheme.cpp:41
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1167,7 +1167,7 @@ msgstr ""
 "plasma, sen definir accidentalmente unha que non estea dispoñíbel ou xa "
 "estea definida."
 
-#: plasma-apply-colorscheme.cpp:43
+#: plasma-apply-colorscheme.cpp:45
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1176,7 +1176,7 @@ msgstr ""
 "O nome do esquema de cores que quere definir para a sesión de Plasma actual "
 "(se indica unha ruta completa só se usará a última parte da ruta)."
 
-#: plasma-apply-colorscheme.cpp:46
+#: plasma-apply-colorscheme.cpp:48
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1184,7 +1184,7 @@ msgid ""
 msgstr ""
 "Amosar todos os esquemas de cores dispoñíbeis no sistema (e cal é o actual)."
 
-#: plasma-apply-colorscheme.cpp:51
+#: plasma-apply-colorscheme.cpp:53
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1196,7 +1196,7 @@ msgstr ""
 "Poña os códigos hexadecimais entre comiñas se o intérprete de ordes podería "
 "expandilos."
 
-#: plasma-apply-colorscheme.cpp:78
+#: plasma-apply-colorscheme.cpp:80
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1205,12 +1205,12 @@ msgstr ""
 "O tema solicitado, «%1», xa está definido como o tema da sesión de Plasma "
 "actual."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "O esquema de cores «%1» aplicouse á sesión actual de Plasma."
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1220,14 +1220,14 @@ msgstr ""
 "opcións: %2"
 
 # skip-rule: trasno/2012_support
-#: plasma-apply-colorscheme.cpp:120
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "O nome do esquema de cores non pode quedar baleiro."
 
-#: plasma-apply-colorscheme.cpp:124
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1236,22 +1236,22 @@ msgstr ""
 "Non foi posíbel identificar como esquema de cores o ficheiro que intentou "
 "definir como tal, «%1»."
 
-#: plasma-apply-colorscheme.cpp:147
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Aplicouse a cor de énfase «%1»."
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Invalid accent color "
 msgstr "A cor de énfase non é válida."
 
-#: plasma-apply-colorscheme.cpp:154
+#: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Ten os seguintes esquemas de cores no sistema:"
 
-#: plasma-apply-colorscheme.cpp:159
+#: plasma-apply-colorscheme.cpp:161
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de cores actual)"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2010-01-30 09:51+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -484,62 +484,62 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: klipper.cpp:133
+#: klipper.cpp:94
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Истек на време за покренување на акции:"
 
-#: klipper.cpp:169
+#: klipper.cpp:130
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Исчисти историја на таб&лата"
 
-#: klipper.cpp:176
+#: klipper.cpp:137
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Конфигурирај го Klipper..."
 
-#: klipper.cpp:180
+#: klipper.cpp:141
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Рачно активирај акција од тековната табла"
 
-#: klipper.cpp:187
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:196
+#: klipper.cpp:157
 #, fuzzy, kde-format
 #| msgid "Next history item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Следен елемент од историјата"
 
-#: klipper.cpp:201
+#: klipper.cpp:162
 #, fuzzy, kde-format
 #| msgid "Previous history item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Претходен елемент од историјата"
 
-#: klipper.cpp:208
+#: klipper.cpp:169
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Прикажи мени кај позицијата на глушецот"
 
-#: klipper.cpp:495
+#: klipper.cpp:459
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -547,59 +547,59 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:543
+#: klipper.cpp:507
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Треба ли Клипер да се стартува автоматски кога ќе се најавите?"
 
-#: klipper.cpp:544
+#: klipper.cpp:508
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Автоматско стартување на Klipper?"
 
-#: klipper.cpp:545
+#: klipper.cpp:509
 #, kde-format
 msgid "Start"
 msgstr "Стартувај"
 
-#: klipper.cpp:546
+#: klipper.cpp:510
 #, kde-format
 msgid "Do Not Start"
 msgstr "Не стартувај"
 
-#: klipper.cpp:916
+#: klipper.cpp:772
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:957
+#: klipper.cpp:813
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Дали навистина сакате да ја избришете историја на таблата?"
 
-#: klipper.cpp:958
+#: klipper.cpp:814
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Исчисти историја на таб&лата"
 
-#: klipper.cpp:974 klipper.cpp:983
+#: klipper.cpp:830 klipper.cpp:839
 #, kde-format
 msgid "Clipboard history"
 msgstr "Историја на таблата"
 
-#: klipper.cpp:1000
+#: klipper.cpp:856
 #, kde-format
 msgid "up"
 msgstr "нагоре"
 
-#: klipper.cpp:1007
+#: klipper.cpp:863
 #, kde-format
 msgid "current"
 msgstr "тековен"
 
-#: klipper.cpp:1014
+#: klipper.cpp:870
 #, kde-format
 msgid "down"
 msgstr "надолу"

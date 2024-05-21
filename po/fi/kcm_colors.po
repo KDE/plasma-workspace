@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2023-08-28 18:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -101,47 +101,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "Käytetäänkö taustakuvasta saatua korostusväriä"
 
-#: editor/kcolorschemeeditor.cpp:21
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:23
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "Väriteemojen luonti- ja muokkaustyökalu"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
 msgstr "Työkalun luonti"
 
-#: editor/kcolorschemeeditor.cpp:26
+#: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "KCM-koodi (käytetään uudelleen tässä)"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "Muokattava tai pohjana käytettävä teema."
 
-#: editor/kcolorschemeeditor.cpp:33
+#: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -152,13 +152,13 @@ msgstr ""
 "(toisin kuin ”Tallenna nimellä”)"
 
 # *** TARKISTA: Mikä on sanan ”transient” merkitys tässä – liikkuva? tilapäinen? Ja mitä tässä ylipäänsä tehdään?
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr "Tee ikkunasta tilapäinen kahvan määrittämälle toiselle sovellukselle"
 
-#: editor/kcolorschemeeditor.cpp:53
+#: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "Teema ei löytynyt: palataan takaisin nykyiseen.\n"
@@ -1160,7 +1160,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "kohdistettu"
 
-#: plasma-apply-colorscheme.cpp:39
+#: plasma-apply-colorscheme.cpp:41
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1171,7 +1171,7 @@ msgstr ""
 "vahingossa aseta sitä sellaiseksi, joka ei ole käytettävissä tai on jo "
 "käytössä."
 
-#: plasma-apply-colorscheme.cpp:43
+#: plasma-apply-colorscheme.cpp:45
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1180,7 +1180,7 @@ msgstr ""
 "Plasma-istuntoon haluamasi väriteeman nimi (täydestä polkunimestä käytetään "
 "vain viimeistä osaa)"
 
-#: plasma-apply-colorscheme.cpp:46
+#: plasma-apply-colorscheme.cpp:48
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
@@ -1188,7 +1188,7 @@ msgid ""
 msgstr ""
 "Näytä kaikki järjestelmään asennetut väriteemat (ja mikä niistä on käytössä)"
 
-#: plasma-apply-colorscheme.cpp:51
+#: plasma-apply-colorscheme.cpp:53
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1199,33 +1199,33 @@ msgstr ""
 "SVG11/types.html#ColorKeywords) ja heksalukuarvoja. Lainaa heksakoodi "
 "tarvittaessa, jottei komentotulkki laajenna sitä"
 
-#: plasma-apply-colorscheme.cpp:78
+#: plasma-apply-colorscheme.cpp:80
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "Pyydetty teema ”%1” on jo asetettu väriteemaksi."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "Väriteeman %1 käyttöönotto nykyiseen Plasma-istuntoon onnistui"
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "Teemaa ”%1” ei löytynyt. Teeman tulisi olla yksi seuraavista: %2"
 
-#: plasma-apply-colorscheme.cpp:120
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "Olet onnistunut antamaan väriteeman nimen tyhjänä, mitä ei tueta."
 
-#: plasma-apply-colorscheme.cpp:124
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1234,22 +1234,22 @@ msgstr ""
 "Tiedostoa (%1), jota yritetään asettaa teemaksi, ei voitu tunnistaa "
 "väriteemaksi."
 
-#: plasma-apply-colorscheme.cpp:147
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "Korostusväriksi asetettiin onnistuneesti %1"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Invalid accent color "
 msgstr "Virheellinen korostusväri"
 
-#: plasma-apply-colorscheme.cpp:154
+#: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "Järjestelmään on asennettu seuraavat väriteemat:"
 
-#: plasma-apply-colorscheme.cpp:159
+#: plasma-apply-colorscheme.cpp:161
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (nykyinen väriteema)"

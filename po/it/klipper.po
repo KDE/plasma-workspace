@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-03-10 05:14+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -507,55 +507,55 @@ msgstr "Icona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:133
+#: klipper.cpp:94
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu a comparsa delle azioni automatiche"
 
-#: klipper.cpp:169
+#: klipper.cpp:130
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Ripulisci la cronologia degli appunti"
 
-#: klipper.cpp:176
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configura Klipper…"
 
-#: klipper.cpp:180
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualmente le azioni sugli appunti correnti"
 
-#: klipper.cpp:187
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra il codice a barre…"
 
-#: klipper.cpp:196
+#: klipper.cpp:157
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Elemento successivo nella cronologia"
 
-#: klipper.cpp:201
+#: klipper.cpp:162
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Elemento precedente nella cronologia"
 
-#: klipper.cpp:208
+#: klipper.cpp:169
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra gli elementi degli appunti alla posizione del mouse"
 
-#: klipper.cpp:495
+#: klipper.cpp:459
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -566,58 +566,58 @@ msgstr ""
 "<interface>Azioni</interface> della finestra di configurazione dell'applet "
 "degli appunti"
 
-#: klipper.cpp:543
+#: klipper.cpp:507
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Vuoi avviare Klipper automaticamente quando accedi al computer?"
 
-#: klipper.cpp:544
+#: klipper.cpp:508
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Avviare Klipper automaticamente?"
 
-#: klipper.cpp:545
+#: klipper.cpp:509
 #, kde-format
 msgid "Start"
 msgstr "Avvia"
 
-#: klipper.cpp:546
+#: klipper.cpp:510
 #, kde-format
 msgid "Do Not Start"
 msgstr "Non avviare"
 
-#: klipper.cpp:916
+#: klipper.cpp:772
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Codice a barre per cellulari"
 
-#: klipper.cpp:957
+#: klipper.cpp:813
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Vuoi davvero cancellare ed eliminare l'intera cronologia degli appunti?"
 
-#: klipper.cpp:958
+#: klipper.cpp:814
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Cancella la cronologia degli appunti"
 
-#: klipper.cpp:974 klipper.cpp:983
+#: klipper.cpp:830 klipper.cpp:839
 #, kde-format
 msgid "Clipboard history"
 msgstr "Cronologia degli appunti"
 
-#: klipper.cpp:1000
+#: klipper.cpp:856
 #, kde-format
 msgid "up"
 msgstr "su"
 
-#: klipper.cpp:1007
+#: klipper.cpp:863
 #, kde-format
 msgid "current"
 msgstr "corrente"
 
-#: klipper.cpp:1014
+#: klipper.cpp:870
 #, kde-format
 msgid "down"
 msgstr "giù"

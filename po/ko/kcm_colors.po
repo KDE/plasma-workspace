@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2023-08-06 22:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -88,47 +88,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "배경 그림의 강조색을 적용할지 여부"
 
-#: editor/kcolorschemeeditor.cpp:21
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:23
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "색 구성표를 만들고 편집하는 도구"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
 msgstr "유틸리티 제작"
 
-#: editor/kcolorschemeeditor.cpp:26
+#: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "KCM 코드(재사용)"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "편집하거나 기반으로 사용할 색 구성표입니다."
 
-#: editor/kcolorschemeeditor.cpp:33
+#: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -137,13 +137,13 @@ msgstr ""
 "요청하지 않고 변경 사항을 저장하는 '적용' 단추 표시('다른 이름으로 저장' 단추"
 "와 다름)"
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr "대화 상자를 지정한 창 핸들을 사용하는 앱에 연결하기"
 
-#: editor/kcolorschemeeditor.cpp:53
+#: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "색 구성표를 찾을 수 없어서 현재 사용 중인 구성표를 사용합니다.\n"
@@ -1137,7 +1137,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "포커스"
 
-#: plasma-apply-colorscheme.cpp:39
+#: plasma-apply-colorscheme.cpp:41
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1148,7 +1148,7 @@ msgstr ""
 "색 구성표를 다시 선택하지 않고 현재 Plasma 세션의 색 구성표를 설정할 수 있습"
 "니다."
 
-#: plasma-apply-colorscheme.cpp:43
+#: plasma-apply-colorscheme.cpp:45
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1156,14 +1156,14 @@ msgid ""
 msgstr ""
 "현재 Plasma 세션에 적용할 색 구성표(전체 경로를 지정하면 마지막 부분만 사용)"
 
-#: plasma-apply-colorscheme.cpp:46
+#: plasma-apply-colorscheme.cpp:48
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "시스템에 있는 모든 색 구성표 표시(현재 테마 포함)"
 
-#: plasma-apply-colorscheme.cpp:51
+#: plasma-apply-colorscheme.cpp:53
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1174,55 +1174,55 @@ msgstr ""
 "html#ColorKeywords)과 16진 색상 코드를 사용할 수 있습니다. 셸 확장이 될 가능"
 "성이 있으면 16진 색상 코드를 따옴표로 둘러싸십시오"
 
-#: plasma-apply-colorscheme.cpp:78
+#: plasma-apply-colorscheme.cpp:80
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "요청한 \"%1\" 테마는 현재 Plasma 세션의 테마로 설정되어 있습니다."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "현재 Plasma 세션 색 구성표를 %1(으)로 설정함"
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "테마 \"%1\"을(를) 찾을 수 없습니다. 다음 중 하나여야 합니다: %2"
 
-#: plasma-apply-colorscheme.cpp:120
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "빈 색 구성표 이름을 전달했습니다. 지원하지 않는 동작입니다."
 
-#: plasma-apply-colorscheme.cpp:124
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr "색 구성표로 지정하려고 했단 파일 %1이(가) 올바른 색 구성표가 아닙니다."
 
-#: plasma-apply-colorscheme.cpp:147
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "강조 색상 %1을(를) 적용함"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Invalid accent color "
 msgstr "잘못된 강조 색상"
 
-#: plasma-apply-colorscheme.cpp:154
+#: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "시스템에 다음 색 구성표가 설치되어 있습니다:"
 
-#: plasma-apply-colorscheme.cpp:159
+#: plasma-apply-colorscheme.cpp:161
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1(현재 색 구성표)"

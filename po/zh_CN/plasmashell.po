@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-18 00:40+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -33,67 +33,67 @@ msgstr ""
 msgid "Configure Mouse Actions Plugin"
 msgstr "配置鼠标操作插件"
 
-#: desktopview.cpp:210
+#: desktopview.cpp:211
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma 6.0 Dev"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:214
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma 6.0 Alpha"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:217
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma 6.0 Beta 1"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:220
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma 6.0 Beta 2"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:223
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma 6.0 RC1"
 
-#: desktopview.cpp:225
+#: desktopview.cpp:226
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma 6.0 RC2"
 
-#: desktopview.cpp:251
+#: desktopview.cpp:252
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 Dev"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:256
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 Beta"
 
-#: desktopview.cpp:258
+#: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 Beta %2"
 
-#: desktopview.cpp:262
+#: desktopview.cpp:263
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:268
+#: desktopview.cpp:269
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -256,13 +256,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "性能模式"
 
-#: panelview.cpp:966
+#: panelview.cpp:979
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "隐藏面板配置"
 
-#: panelview.cpp:968
+#: panelview.cpp:981
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -284,62 +284,62 @@ msgstr "%1 %2，位于 %3"
 msgid "Disconnected Screen %1"
 msgstr "已断开连接的屏幕 %1"
 
-#: shellcorona.cpp:205 shellcorona.cpp:207
+#: shellcorona.cpp:206 shellcorona.cpp:208
 #, kde-format
 msgid "Show Desktop"
 msgstr "显示桌面"
 
-#: shellcorona.cpp:207
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Hide Desktop"
 msgstr "隐藏桌面"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "激活应用程序启动器"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "显示活动切换器"
 
-#: shellcorona.cpp:241
+#: shellcorona.cpp:242
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "停止当前活动"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:250
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "切换到上一个活动"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "切换到下一个活动"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "激活任务管理器条目 %1"
 
-#: shellcorona.cpp:299
+#: shellcorona.cpp:300
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "面板和桌面管理"
 
-#: shellcorona.cpp:321
+#: shellcorona.cpp:322
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "在面板之间移动键盘焦点"
 
-#: shellcorona.cpp:2071
+#: shellcorona.cpp:2072
 #, kde-format
 msgid "Add Panel"
 msgstr "添加面板"
 
-#: shellcorona.cpp:2113
+#: shellcorona.cpp:2124
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

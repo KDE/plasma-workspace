@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-18 00:40+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-04-06 22:07+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -32,67 +32,67 @@ msgstr "mkondarev@yahoo.de"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Конфигуриране на приставката за действия на мишката"
 
-#: desktopview.cpp:210
+#: desktopview.cpp:211
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma 6.0 Dev"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:214
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma 6.0 Alpha"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:217
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma 6.0 Beta 1"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:220
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma 6.0 Beta 2"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:223
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma 6.0 RC1"
 
-#: desktopview.cpp:225
+#: desktopview.cpp:226
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma 6.0 RC2"
 
-#: desktopview.cpp:251
+#: desktopview.cpp:252
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 Dev"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:256
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 Beta"
 
-#: desktopview.cpp:258
+#: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 Beta %2"
 
-#: desktopview.cpp:262
+#: desktopview.cpp:263
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:268
+#: desktopview.cpp:269
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -256,13 +256,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Режим на производителност"
 
-#: panelview.cpp:966
+#: panelview.cpp:979
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Скриване на конфигурацията на панела"
 
-#: panelview.cpp:968
+#: panelview.cpp:981
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -284,62 +284,62 @@ msgstr "%1 %2 on %3"
 msgid "Disconnected Screen %1"
 msgstr "Прекъснат екран %1"
 
-#: shellcorona.cpp:205 shellcorona.cpp:207
+#: shellcorona.cpp:206 shellcorona.cpp:208
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показване на работния плот"
 
-#: shellcorona.cpp:207
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скриване на работния плот"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Активиране на Стартер на приложения"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показване на превключвател на дейности"
 
-#: shellcorona.cpp:241
+#: shellcorona.cpp:242
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Спиране на текущата дейност"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:250
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Превключване към предишна дейност"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Превключване към следваща дейност"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Активиране на запис от управление на задачите %1"
 
-#: shellcorona.cpp:299
+#: shellcorona.cpp:300
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Настройване на работния плот и панелите"
 
-#: shellcorona.cpp:321
+#: shellcorona.cpp:322
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Преместване на фокуса на клавиатурата между панелите"
 
-#: shellcorona.cpp:2071
+#: shellcorona.cpp:2072
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:2113
+#: shellcorona.cpp:2124
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

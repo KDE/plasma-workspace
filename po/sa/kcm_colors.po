@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit\n"
@@ -83,60 +83,60 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "दीपचित्रतः शिरस्कन्धवर्णः प्रयोक्तव्यः वा"
 
-#: editor/kcolorschemeeditor.cpp:21
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "रङ्ग योजना सम्पादक"
 
-#: editor/kcolorschemeeditor.cpp:23
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "वर्णयोजनानि सम्पादयितुं निर्मातुं च उपयोगिता"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "ओलिवियर् चुरलाउड्"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
 msgstr "उपयोगिता निर्माण"
 
-#: editor/kcolorschemeeditor.cpp:26
+#: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "जेरेमी व्हिटिङ्ग्"
 
-#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "KCM कोडः (अत्र पुनः प्रयुक्तः)"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "मैथ्यू वोएल्के"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "सम्पादयितुं वा आधाररूपेण उपयोक्तुं वा योजना।."
 
-#: editor/kcolorschemeeditor.cpp:33
+#: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr "'प्रयोजयन्तु' गण्डं दर्शयतु यत् परिवर्तनं विना पृच्छति ('यथा रक्षतु' गण्डस्य विपरीतम्)"
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr "वारङ्गः द्वारा निर्दिष्टस्य अन्यस्य अनुप्रयोगविण्डो कृते संवादं क्षणिकं करोति"
 
-#: editor/kcolorschemeeditor.cpp:53
+#: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "योजना न प्राप्ता, वर्तमानस्य प्रति पतति।\n"
@@ -1135,7 +1135,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "केंद्रबिन्दुः"
 
-#: plasma-apply-colorscheme.cpp:39
+#: plasma-apply-colorscheme.cpp:41
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1145,7 +1145,7 @@ msgstr ""
 "एतत् साधनं वर्तमानस्य प्लाज्मा सत्रस्य वर्णयोजनां निरूपयत् कर्तुं शक्नोति, आकस्मिकतया एकं न "
 "उपलभ्यते, अथवा यत् पूर्वमेव निरूपयत् कृतम् अस्ति इति निरूपयत् कर्तुं न शक्नोति ।."
 
-#: plasma-apply-colorscheme.cpp:43
+#: plasma-apply-colorscheme.cpp:45
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1154,14 +1154,14 @@ msgstr ""
 "यस्य वर्णयोजनायाः नाम भवान् स्वस्य वर्तमानस्य प्लाज्मा सत्रस्य कृते निरूपय कर्तुम् इच्छति "
 "(पूर्णमार्गं पारयन् केवलं मार्गस्य अन्तिमभागस्य उपयोगं करिष्यति)"
 
-#: plasma-apply-colorscheme.cpp:46
+#: plasma-apply-colorscheme.cpp:48
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "प्रणाल्यां उपलभ्यमानानि सर्वाणि वर्णयोजनानि दर्शयन्तु (वर्तमानः विषयः च कः)"
 
-#: plasma-apply-colorscheme.cpp:51
+#: plasma-apply-colorscheme.cpp:53
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1172,7 +1172,7 @@ msgstr ""
 "org/TR/SVG11/types.html#ColorKeywords) तथा हेक्स रङ्गसङ्केताः समर्थिताः सन्ति । यदि "
 "शेल् विस्तारस्य सम्भावना अस्ति तर्हि हेक्स कोड् उद्धृत्य स्थापयन्तु"
 
-#: plasma-apply-colorscheme.cpp:78
+#: plasma-apply-colorscheme.cpp:80
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1180,26 +1180,26 @@ msgid ""
 msgstr ""
 "अनुरोधितः विषयः \"%1\" पूर्वमेव वर्तमानप्लाज्मासत्रस्य विषयवस्तुरूपेण निरूपय कृतः अस्ति ।."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "भवतः वर्तमानप्लाज्मासत्रे %1 इति वर्णयोजना सफलतया प्रयुक्ता"
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "\"%1\" इति विषयः न लब्धः । विषयः निम्नलिखितविकल्पेषु अन्यतमः भवेत्: %2"
 
-#: plasma-apply-colorscheme.cpp:120
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "भवान् रिक्तं वर्णयोजनानाम पारयितुं सफलः अभवत्, यत् समर्थितः व्यवहारः नास्ति ।."
 
-#: plasma-apply-colorscheme.cpp:124
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1208,22 +1208,22 @@ msgstr ""
 "भवता स्वयोजनारूपेण निरूपयत् कर्तुं प्रयतितायाः सञ्चिकायाः %1 इत्यस्य वर्णयोजनारूपेण परिचयः "
 "कर्तुं न शक्यते स्म ।."
 
-#: plasma-apply-colorscheme.cpp:147
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "शिरस्कन्धवर्णं %1 सफलतया प्रयुक्तम्"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Invalid accent color "
 msgstr "अमान्य शिरस्कन्धवर्णः "
 
-#: plasma-apply-colorscheme.cpp:154
+#: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "भवतः प्रणाल्यां निम्नलिखितवर्णयोजनाः सन्ति :"
 
-#: plasma-apply-colorscheme.cpp:159
+#: plasma-apply-colorscheme.cpp:161
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (वर्तमानवर्णयोजना)"

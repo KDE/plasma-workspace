@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2022-02-17 22:54+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -86,47 +86,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
-#: editor/kcolorschemeeditor.cpp:21
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "के-कलरस्कीमएडिटर"
 
-#: editor/kcolorschemeeditor.cpp:23
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "रंग योजनाओं को संपादित करने और बनाने की उपयोगिता"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "ओलिविएर चर्लौड"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
 msgstr "उपयोगिता निर्माण"
 
-#: editor/kcolorschemeeditor.cpp:26
+#: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "जेरेमी व्हिटिंग"
 
-#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "केसीएम कोड (यहां पुन: उपयोग किया गया)"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "मैथ्यू वोहके"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "आधार के रूप में संपादित करने या उपयोग करने की योजना ।"
 
-#: editor/kcolorschemeeditor.cpp:33
+#: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -134,13 +134,13 @@ msgid ""
 msgstr ""
 "'लागू करें' बटन दिखाएं जो बिना पूछे परिवर्तनों को सहेजता है ('ऐसे सहेजें' बटन के विपरीत)"
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr "हैंडल द्वारा निर्दिष्ट किसी अन्य अनुप्रयोग विंडो के लिए संवाद को क्षणिक बनाता है ।"
 
-#: editor/kcolorschemeeditor.cpp:53
+#: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "योजना नहीं मिली, वर्तमान वाली पर वापस आ रही है ।\n"
@@ -1141,7 +1141,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "फोकस"
 
-#: plasma-apply-colorscheme.cpp:39
+#: plasma-apply-colorscheme.cpp:41
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1151,7 +1151,7 @@ msgstr ""
 "यह औज़ार आपको वर्तमान प्लाज़्मा सत्र के लिए रंग योजना नियत करने की अनुमति देता है, बिना "
 "गलती से इसे उसपर नियत किए जो या तो उपलब्ध नहीं है, या जो पहले से नियत है।"
 
-#: plasma-apply-colorscheme.cpp:43
+#: plasma-apply-colorscheme.cpp:45
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1160,14 +1160,14 @@ msgstr ""
 "रंग योजना का नाम जिसे आप अपने वर्तमान प्लाज़्मा सत्र के लिए सेट करना चाहते हैं (एक पूर्ण पथ "
 "देने से पथ के अंतिम भाग का ही उपयोग होगा)"
 
-#: plasma-apply-colorscheme.cpp:46
+#: plasma-apply-colorscheme.cpp:48
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "तंत्र पर उपलब्ध सभी रंग योजनाएं दिखाएं (और जो वर्तमान प्रसंग है)"
 
-#: plasma-apply-colorscheme.cpp:51
+#: plasma-apply-colorscheme.cpp:53
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1178,7 +1178,7 @@ msgstr ""
 "org/TR/SVG11/types.html#ColorKeywords) और हेक्स रंग कोड समर्थित हैं। यदि शेल विस्तार "
 "की संभावना है तो हेक्स कोड को उद्धृत करें"
 
-#: plasma-apply-colorscheme.cpp:78
+#: plasma-apply-colorscheme.cpp:80
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1186,26 +1186,26 @@ msgid ""
 msgstr ""
 "अनुरोधित प्रसंग \"%1\" पहले से ही वर्तमान प्लाज़्मा सत्र के लिए प्रसंग के रूप में नियत है।"
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "आपके वर्तमान प्लाज़्मा सत्र में रंग योजना %1 को सफलतापूर्वक लागू किया गया है"
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "प्रसंग \"%1\" नहीं मिल सका। प्रसंग निम्न विकल्पों में से एक होनी चाहिए : %2"
 
-#: plasma-apply-colorscheme.cpp:120
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "आप एक खाली रंग योजना नाम देने में कामयाब रहे हैं, जो समर्थित व्यवहार नहीं है।"
 
-#: plasma-apply-colorscheme.cpp:124
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1214,22 +1214,22 @@ msgstr ""
 "आपने जिस फ़ाइल को अपनी योजना %1 के रूप में नियत करने का प्रयास किया, उसे रंग योजना के "
 "रूप में पहचाना नहीं जा सका।"
 
-#: plasma-apply-colorscheme.cpp:147
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "प्रभावी रंग %1 को सफलतापूर्वक लागू किया गया"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Invalid accent color "
 msgstr "अवैध प्रभावी रंग"
 
-#: plasma-apply-colorscheme.cpp:154
+#: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "आपके सिस्टम पर निम्नलिखित रंग योजनाएं हैं:"
 
-#: plasma-apply-colorscheme.cpp:159
+#: plasma-apply-colorscheme.cpp:161
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1(मौज़ूदा रंग योजना)"

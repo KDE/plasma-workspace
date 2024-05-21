@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-05-05 11:56+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -100,47 +100,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr "האם להחיל צבע משני מתמונת הרקע"
 
-#: editor/kcolorschemeeditor.cpp:21
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "עורך סכמות צבעים של KDE"
 
-#: editor/kcolorschemeeditor.cpp:23
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "כלי לעריכת ויצירת סכמות צבעים"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "אוליבייה שרלוד"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
 msgstr "יצירת הכלי"
 
-#: editor/kcolorschemeeditor.cpp:26
+#: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "ג׳רמי וייטינג"
 
-#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "קוד KCM (נגזר לכאן)"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "מת׳יו ולקי"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "ערכה לבסיס העריכה או היצירה."
 
-#: editor/kcolorschemeeditor.cpp:33
+#: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -148,13 +148,13 @@ msgid ""
 msgstr ""
 "הצגת כפתור ‚החלה’ ששומר את השינויים בלי לשאול (בניגוד לכפתור ‚שמירה בשם’)"
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr "הופך את החלון לזמני מול חלון יישום אחר שצוין בכינוי"
 
-#: editor/kcolorschemeeditor.cpp:53
+#: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "לא נמצאה ערכה, חוזרים לערכה הנוכחית.\n"
@@ -1148,7 +1148,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "ממוקד"
 
-#: plasma-apply-colorscheme.cpp:39
+#: plasma-apply-colorscheme.cpp:41
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1158,7 +1158,7 @@ msgstr ""
 "הכלי הזה מאפשר לך להגדיר את סכמת הצבעים להפעלת הפלזמה הנוכחית מבלי להגדיר "
 "בטעות ערכה שלא זמינה או שכבר מוגדרת."
 
-#: plasma-apply-colorscheme.cpp:43
+#: plasma-apply-colorscheme.cpp:45
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1167,14 +1167,14 @@ msgstr ""
 "שם סכמת הצבעים להגדרה בהפעלת הפלזמה הנוכחית שלך (העברת נתיב מלא תשתמש רק "
 "בחלק האחרון של הנתיב)"
 
-#: plasma-apply-colorscheme.cpp:46
+#: plasma-apply-colorscheme.cpp:48
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "הצגת כל סכמות הצבעים שזמינות במערכת (ומה הסכמה הנוכחית)"
 
-#: plasma-apply-colorscheme.cpp:51
+#: plasma-apply-colorscheme.cpp:53
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1185,7 +1185,7 @@ msgstr ""
 "SVG11/types.html#ColorKeywords) וקודים הקדסצימליים של צבעים. כדאי לשים את "
 "הקוד ההקסדצימלי במירכאות אם יש סיכוי שהמעטפת תפענח אותו איכשהו"
 
-#: plasma-apply-colorscheme.cpp:78
+#: plasma-apply-colorscheme.cpp:80
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1193,12 +1193,12 @@ msgid ""
 msgstr ""
 "ערכת העיצוב המבוקשת „%1” כבר מוגדרת בתור ערכת הנושא להפעלת הפלזמה הנוכחית."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "סכמת הצבעים %1 הוחלה בהצלחה על הפעלת הפלזמה הנוכחית שלך"
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -1207,36 +1207,36 @@ msgstr ""
 "לא ניתן למצוא את ערכת העיצוב „%1”. ערכת העיצוב צריכה להיות אחת מהאפשרויות "
 "הבאות: %2"
 
-#: plasma-apply-colorscheme.cpp:120
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "הצלחת להעביר שם ריק לסכמת צבעים, אין תמיכה בהתנהגות כזאת."
 
-#: plasma-apply-colorscheme.cpp:124
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr "הקובץ שניסית להגדיר בתור הסכמה שלך, %1, לא מזוהה כסכמת צבעים."
 
-#: plasma-apply-colorscheme.cpp:147
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr "הצבע המשני %1 הוחל בהצלחה"
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Invalid accent color "
 msgstr "צבע משני שגוי "
 
-#: plasma-apply-colorscheme.cpp:154
+#: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "אלו סכמות הצבעים שקיימות במערכת שלך:"
 
-#: plasma-apply-colorscheme.cpp:159
+#: plasma-apply-colorscheme.cpp:161
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (סכמת הצבעים הנוכחית)"

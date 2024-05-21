@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-18 00:40+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2024-04-09 12:23+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -36,67 +36,67 @@ msgstr "liudas@akmc.lt, opensuse.lietuviu.kalba@gmail.com, <>"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Konfigūruoti pelės veiksmų įskiepį"
 
-#: desktopview.cpp:210
+#: desktopview.cpp:211
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma 6.0 plėtojama"
 
-#: desktopview.cpp:213
+#: desktopview.cpp:214
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma 6.0 Alfa"
 
-#: desktopview.cpp:216
+#: desktopview.cpp:217
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma 6.0 Beta 1 versija"
 
-#: desktopview.cpp:219
+#: desktopview.cpp:220
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma 6.0 Beta 2 versija"
 
-#: desktopview.cpp:222
+#: desktopview.cpp:223
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma 6.0 kandidatinė versija 1"
 
-#: desktopview.cpp:225
+#: desktopview.cpp:226
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma 6.0 kandidatinė versija 2"
 
-#: desktopview.cpp:251
+#: desktopview.cpp:252
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 plėtojama"
 
-#: desktopview.cpp:255
+#: desktopview.cpp:256
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 Beta versija"
 
-#: desktopview.cpp:258
+#: desktopview.cpp:259
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 Beta %2 versija"
 
-#: desktopview.cpp:262
+#: desktopview.cpp:263
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:268
+#: desktopview.cpp:269
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
@@ -260,13 +260,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Našumo veiksena"
 
-#: panelview.cpp:966
+#: panelview.cpp:979
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Slėpti skydelio konfigūraciją"
 
-#: panelview.cpp:968
+#: panelview.cpp:981
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -288,62 +288,62 @@ msgstr "%1 %2 ties %3"
 msgid "Disconnected Screen %1"
 msgstr "Atjungtas ekranas %1"
 
-#: shellcorona.cpp:205 shellcorona.cpp:207
+#: shellcorona.cpp:206 shellcorona.cpp:208
 #, kde-format
 msgid "Show Desktop"
 msgstr "Rodyti darbalaukį"
 
-#: shellcorona.cpp:207
+#: shellcorona.cpp:208
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Slėpti darbalaukį"
 
-#: shellcorona.cpp:222
+#: shellcorona.cpp:223
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Aktyvuoti programų paleidyklę"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Rodyti veiklų perjungiklį"
 
-#: shellcorona.cpp:241
+#: shellcorona.cpp:242
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Stabdyti dabartinę veiklą"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:250
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Perjungti į ankstesnę veiklą"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Perjungti į kitą veiklą"
 
-#: shellcorona.cpp:272
+#: shellcorona.cpp:273
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktyvuoti užduočių tvarkytuvės įrašą %1"
 
-#: shellcorona.cpp:299
+#: shellcorona.cpp:300
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Skydelio ir darbalaukio tvarkymas"
 
-#: shellcorona.cpp:321
+#: shellcorona.cpp:322
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Perkelti klaviatūros fokusą tarp skydelių"
 
-#: shellcorona.cpp:2071
+#: shellcorona.cpp:2072
 #, kde-format
 msgid "Add Panel"
 msgstr "Pridėti skydelį"
 
-#: shellcorona.cpp:2113
+#: shellcorona.cpp:2124
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

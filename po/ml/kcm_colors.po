@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-21 00:40+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -88,47 +88,47 @@ msgstr ""
 msgid "Whether accent color from wallpaper should be applied"
 msgstr ""
 
-#: editor/kcolorschemeeditor.cpp:21
+#: editor/kcolorschemeeditor.cpp:23
 #, kde-format
 msgid "KColorSchemeEditor"
 msgstr "KColorSchemeEditor"
 
-#: editor/kcolorschemeeditor.cpp:23
+#: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "Utility to edit and create color schemes"
 msgstr "നിറക്കൂട്ടുകൾ എഡിറ്റു ചെയ്യാനും സൃഷ്ടിക്കാനുമുള്ള ഉപകരണം"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Olivier Churlaud"
 msgstr "Olivier Churlaud"
 
-#: editor/kcolorschemeeditor.cpp:25
+#: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility creation"
 msgstr "ഉപയോഗയോഗ്യത സൃഷ്ടി"
 
-#: editor/kcolorschemeeditor.cpp:26
+#: editor/kcolorschemeeditor.cpp:28
 #, kde-format
 msgid "Jeremy Whiting"
 msgstr "Jeremy Whiting"
 
-#: editor/kcolorschemeeditor.cpp:26 editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:28 editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "KCM code (reused in here)"
 msgstr "KCM കോഡ് (ഇവിടെ വീണ്ടും ഉപയോഗിച്ചിരിക്കുന്നു)"
 
-#: editor/kcolorschemeeditor.cpp:27
+#: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Matthew Woehlke"
 msgstr "Matthew Woehlke"
 
-#: editor/kcolorschemeeditor.cpp:31
+#: editor/kcolorschemeeditor.cpp:33
 #, kde-format
 msgid "Scheme to edit or to use as a base."
 msgstr "എഡിറ്റു ചെയ്യുന്നതിനോ അടിസ്ഥാനമായി ഉപയോഗിക്കുന്നതിനോ ഉള്ള സ്കീം."
 
-#: editor/kcolorschemeeditor.cpp:33
+#: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
@@ -137,14 +137,14 @@ msgstr ""
 "ചോദിക്കാതെ മാറ്റങ്ങൾ സംരക്ഷിക്കുന്ന 'പ്രയോഗിക്കുക' ബട്ടൺ കാണിക്കുക('സേവ് ആസ്' ബട്ടണിൽ നിന്ന് "
 "വ്യത്യസ്തമായി)"
 
-#: editor/kcolorschemeeditor.cpp:37
+#: editor/kcolorschemeeditor.cpp:39
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
 msgstr ""
 "ഹാൻഡിൽ വഴി വ്യക്തമാക്കിയിട്ടുള്ള മറ്റൊരു ആപ്ലിക്കേഷൻ ജാലകത്തിനായി ഡയലോഗ് ക്ഷണികമാക്കുന്നു"
 
-#: editor/kcolorschemeeditor.cpp:53
+#: editor/kcolorschemeeditor.cpp:55
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
 msgstr "സ്കീം കണ്ടെത്തിയില്ല, നിലവിലുള്ളതിലേക്ക് മടങ്ങുന്നു.\n"
@@ -1145,7 +1145,7 @@ msgctxt "color-kcm-set-preview"
 msgid "focus"
 msgstr "ശ്രദ്ധാകേന്ദ്രം"
 
-#: plasma-apply-colorscheme.cpp:39
+#: plasma-apply-colorscheme.cpp:41
 #, kde-format
 msgid ""
 "This tool allows you to set the color scheme for the current Plasma session, "
@@ -1156,7 +1156,7 @@ msgstr ""
 "അബദ്ധത്തിൽ അത് ലഭ്യമല്ലാത്തതോ അല്ലെങ്കിൽ ഇതിനകം സജ്ജീകരിച്ചിരിക്കുന്നതോ ആയ ഒന്നിലേക്ക് "
 "ക്രമീകരിക്കാതെ."
 
-#: plasma-apply-colorscheme.cpp:43
+#: plasma-apply-colorscheme.cpp:45
 #, kde-format
 msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
@@ -1165,14 +1165,14 @@ msgstr ""
 "നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനായി നിങ്ങൾ സജ്ജമാക്കാൻ ആഗ്രഹിക്കുന്ന വർണ്ണ സ്കീമിന്റെ പേര് "
 "(ഒരു പൂർണ്ണ പാത നൽകുന്നതിന്റെ അവസാന ഭാഗം മാത്രമേ ഉപയോഗിക്കൂ)"
 
-#: plasma-apply-colorscheme.cpp:46
+#: plasma-apply-colorscheme.cpp:48
 #, kde-format
 msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr "സിസ്റ്റത്തിൽ ലഭ്യമായ എല്ലാ വർണ്ണ സ്കീമുകളും കാണിക്കുക (കൂടാതെ നിലവിലെ തീമും)"
 
-#: plasma-apply-colorscheme.cpp:51
+#: plasma-apply-colorscheme.cpp:53
 #, kde-format
 msgid ""
 "The name of the accent color you want to set. SVG color names (https://www."
@@ -1180,7 +1180,7 @@ msgid ""
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:78
+#: plasma-apply-colorscheme.cpp:80
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -1188,26 +1188,26 @@ msgid ""
 msgstr ""
 "അഭ്യർത്ഥിച്ച തീം \"%1\" നിലവിലെ പ്ലാസ്മ സെഷന്റെ തീം ആയി ഇതിനകം സജ്ജീകരിച്ചിരിക്കുന്നു."
 
-#: plasma-apply-colorscheme.cpp:111
+#: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
 msgstr "നിങ്ങളുടെ നിലവിലെ പ്ലാസ്മ സെഷനിൽ നിറക്കൂട്ടു് %1 വിജയകരമായി പ്രയോഗിച്ചു"
 
-#: plasma-apply-colorscheme.cpp:113
+#: plasma-apply-colorscheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "\"%1\" തീം കണ്ടെത്താനായില്ല. തീം ഇനിപ്പറയുന്ന ഓപ്ഷനുകളിൽ ഒന്നായിരിക്കണം: %2"
 
-#: plasma-apply-colorscheme.cpp:120
+#: plasma-apply-colorscheme.cpp:122
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr "പിന്തുണ നൽകാത്ത രീതിയിൽ ഒരു ശൂന്യമായ നിറക്കൂട്ടു് നാമം നിങ്ങൾ കൈമാറി."
 
-#: plasma-apply-colorscheme.cpp:124
+#: plasma-apply-colorscheme.cpp:126
 #, kde-format
 msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
@@ -1216,23 +1216,23 @@ msgstr ""
 "നിങ്ങളുടെ സ്കീമായി സജ്ജീകരിക്കാൻ ശ്രമിച്ച ഫയൽ, %1, ഒരു വർണ്ണ സ്കീമായി തിരിച്ചറിയാൻ "
 "കഴിഞ്ഞില്ല."
 
-#: plasma-apply-colorscheme.cpp:147
+#: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
 msgstr ""
 
-#: plasma-apply-colorscheme.cpp:149
+#: plasma-apply-colorscheme.cpp:151
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgid "Invalid accent color "
 msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
 
-#: plasma-apply-colorscheme.cpp:154
+#: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
 msgstr "നിങ്ങളുടെ സിസ്റ്റത്തിൽ ഇനിപ്പറയുന്ന വർണ്ണ സ്കീമുകൾ ഉണ്ട്:"
 
-#: plasma-apply-colorscheme.cpp:159
+#: plasma-apply-colorscheme.cpp:161
 #, kde-format
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (നിലവിലെ കളർ സ്കീം)"
