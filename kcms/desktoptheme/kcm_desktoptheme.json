@@ -47,7 +47,7 @@
         "Description[uk]": "Вибір стилю Плазми",
         "Description[vi]": "Chọn kiểu cách Plasma",
         "Description[x-test]": "xxChoose Plasma stylexx",
-        "Description[zh_CN]": "选择 Plasma 视觉风格",
+        "Description[zh_CN]": "选择 Plasma 外观样式",
         "Description[zh_TW]": "選擇 Plasma 風格",
         "FormFactors": [
             "tablet",
@@ -104,7 +104,7 @@
         "Name[uk]": "Стиль Плазми",
         "Name[vi]": "Kiểu cách Plasma",
         "Name[x-test]": "xxPlasma Stylexx",
-        "Name[zh_CN]": "Plasma 视觉风格",
+        "Name[zh_CN]": "Plasma 外观样式",
         "Name[zh_TW]": "Plasma 風格"
     },
     "X-DocPath": "kcontrol/desktopthemedetails/index.html",

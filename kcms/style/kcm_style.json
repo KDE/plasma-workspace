@@ -47,7 +47,7 @@
         "Description[uk]": "Налаштовування стилю і поведінки вікон програм",
         "Description[vi]": "Cấu hình kiểu cách và ứng xử của ứng dụng",
         "Description[x-test]": "xxConfigure application style and behaviorxx",
-        "Description[zh_CN]": "配置应用程序视觉风格和行为",
+        "Description[zh_CN]": "配置应用程序外观样式和行为",
         "Description[zh_TW]": "設定應用程式風格與行為",
         "Icon": "preferences-desktop-theme-applications",
         "Name": "Application Style",
@@ -98,7 +98,7 @@
         "Name[uk]": "Стиль вікон програм",
         "Name[vi]": "Kiểu cách ứng dụng",
         "Name[x-test]": "xxApplication Stylexx",
-        "Name[zh_CN]": "应用程序风格",
+        "Name[zh_CN]": "应用程序外观样式",
         "Name[zh_TW]": "應用程式風格"
     },
     "X-DocPath": "kcontrol/kcmstyle/index.html",
