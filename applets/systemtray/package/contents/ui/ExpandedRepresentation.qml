@@ -81,13 +81,9 @@ Item {
                     if (actionsButton.applet === null) {
                         return [];
                     }
-                    const primaryActions = [];
-                    actionsButton.applet.plasmoid.contextualActions.forEach(action => {
-                        if (action.priority == PlasmaCore.Action.HighPriority) {
-                            primaryActions.push(action);
-                        }
-                    })
-                    return primaryActions;
+                    return actionsButton.applet.plasmoid.contextualActions.filter(action => {
+                        return !action.isSeparator && action.priority === PlasmaCore.Action.HighPriority;
+                    });
                 }
 
                 delegate: PlasmaComponents.ToolButton {
@@ -105,6 +101,7 @@ Item {
                         source: parent.qAction ? parent.qAction.icon.name : ""
                     }
 
+                    enabled: qAction && qAction.enabled
                     checkable: qAction && qAction.checkable
                     checked: qAction && qAction.checked
                     display: PlasmaComponents.AbstractButton.IconOnly
@@ -130,6 +127,7 @@ Item {
             PlasmaComponents.ToolButton {
                 id: actionsButton
                 visible: visibleActions > 0
+                enabled: visibleActions > 1 || (singleAction && singleAction.enabled)
                 checked: visibleActions > 1 ? configMenu.status !== PlasmaExtras.Menu.Closed : singleAction && singleAction.checked
                 property QtObject applet: systemTrayState.activeApplet || root
                 property int visibleActions: menuItemFactory.count
@@ -187,17 +185,23 @@ Item {
                         if (!actionsButton.applet) {
                             return [];
                         }
-                        let actions = [];
-                        for (let i in actionsButton.applet.plasmoid.contextualActions) {
-                            const action = actionsButton.applet.plasmoid.contextualActions[i];
-                            if (action.visible
-                                    && action.priority > PlasmaCore.Action.LowPriority
-                                    && !primaryActionButtons.model.includes(action)
-                                    && action !== actionsButton.applet.plasmoid.internalAction("configure")) {
-                                actions.push(action);
-                            }
-                        }
-                        return actions;
+                        return actionsButton.applet.plasmoid.contextualActions
+                            .filter(action => {
+                                return action.visible &&
+                                    action.priority === PlasmaCore.Action.NormalPriority &&
+                                    action !== actionsButton.applet.plasmoid.internalAction("configure");
+                            })
+                            // squash separators
+                            .reduce((dstActions, action, i, srcActions) => {
+                                if (!action.isSeparator) {
+                                    const prevAction = srcActions[i - 1];
+                                    if (prevAction?.isSeparator && dstActions.length > 0) {
+                                        dstActions.push(prevAction);
+                                    }
+                                    dstActions.push(action);
+                                }
+                                return dstActions;
+                            }, []);
                     }
                     delegate: PlasmaExtras.MenuItem {
                         id: menuItem
