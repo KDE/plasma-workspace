@@ -37,6 +37,8 @@ K_PLUGIN_CLASS_WITH_JSON(WallpaperModule, "kcm_wallpaper.json")
 
 Q_DECLARE_METATYPE(QColor)
 
+using namespace Qt::StringLiterals;
+
 QDBusArgument &operator<<(QDBusArgument &argument, const QColor &color)
 {
     argument.beginStructure();
@@ -57,8 +59,9 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, QColor &color)
 
 WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
-    , m_config(KSharedConfig::openConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/plasma-org.kde.plasma.desktop-appletsrc",
-                                         KConfig::OpenFlag::SimpleConfig))
+    , m_config(
+          KSharedConfig::openConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/plasma-org.kde.plasma.desktop-appletsrc"_L1,
+                                    KConfig::OpenFlag::SimpleConfig))
     , m_activityConsumer(new KActivities::Consumer(this))
 {
     qDBusRegisterMetaType<QColor>();
