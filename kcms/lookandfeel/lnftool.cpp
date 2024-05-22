@@ -22,21 +22,21 @@
 
 #include "lookandfeelsettings.h"
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
 
-    const char version[] = "1.0";
-
     // About data
-    KAboutData aboutData("plasma-apply-lookandfeel",
+    KAboutData aboutData(u"plasma-apply-lookandfeel"_s,
                          i18n("Global Theme Tool"),
-                         version,
+                         u"1.0"_s,
                          i18n("Command line tool to apply global theme packages for changing the look and feel."),
                          KAboutLicense::GPL,
                          i18n("Copyright 2017, Marco Martin"));
     aboutData.addAuthor(i18n("Marco Martin"), i18n("Maintainer"), QStringLiteral("mart@kde.org"));
-    aboutData.setDesktopFileName("org.kde.plasma-apply-lookandfeel");
+    aboutData.setDesktopFileName(u"org.kde.plasma-apply-lookandfeel"_s);
     KAboutData::setApplicationData(aboutData);
 
     const static auto _l = QStringLiteral("list");
@@ -65,7 +65,7 @@ int main(int argc, char **argv)
     }
 
     if (parser.isSet(_list)) {
-        const QList<KPluginMetaData> pkgs = KPackage::PackageLoader::self()->listPackages("Plasma/LookAndFeel");
+        const QList<KPluginMetaData> pkgs = KPackage::PackageLoader::self()->listPackages(u"Plasma/LookAndFeel"_s);
 
         for (const KPluginMetaData &data : pkgs) {
             std::cout << data.pluginId().toStdString() << std::endl;
@@ -79,7 +79,7 @@ int main(int argc, char **argv)
             // absolute paths need to be passed with trailing shash to KPackage
             requestedTheme += QStringLiteral("/");
         }
-        KPackage::Package p = KPackage::PackageLoader::self()->loadPackage("Plasma/LookAndFeel");
+        KPackage::Package p = KPackage::PackageLoader::self()->loadPackage(u"Plasma/LookAndFeel"_s);
         p.setPath(requestedTheme);
 
         // can't use package.isValid as lnf packages always fallback, even when not existing

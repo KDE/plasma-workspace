@@ -61,8 +61,8 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     constexpr char uri[] = "org.kde.private.kcms.lookandfeel";
     qmlRegisterAnonymousType<LookAndFeelSettings>("", 1);
     qmlRegisterAnonymousType<QStandardItemModel>("", 1);
-    qmlRegisterUncreatableType<KCMLookandFeel>(uri, 1, 0, "KCMLookandFeel", "Can't create KCMLookandFeel");
-    qmlRegisterUncreatableType<LookAndFeelManager>(uri, 1, 0, "LookandFeelManager", "Can't create LookandFeelManager");
+    qmlRegisterUncreatableType<KCMLookandFeel>(uri, 1, 0, "KCMLookandFeel", u"Can't create KCMLookandFeel"_s);
+    qmlRegisterUncreatableType<LookAndFeelManager>(uri, 1, 0, "LookandFeelManager", u"Can't create LookandFeelManager"_s);
 
     setButtons(Default | Help);
 
@@ -117,7 +117,7 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
     });
     connect(m_lnf, &LookAndFeelManager::cursorsChanged, this, &KCMLookandFeel::cursorsChanged);
     connect(m_lnf, &LookAndFeelManager::fontsChanged, this, [] {
-        QDBusMessage message = QDBusMessage::createSignal("/KDEPlatformTheme", "org.kde.KDEPlatformTheme", "refreshFonts");
+        QDBusMessage message = QDBusMessage::createSignal(u"/KDEPlatformTheme"_s, u"org.kde.KDEPlatformTheme"_s, u"refreshFonts"_s);
         QDBusConnection::sessionBus().send(message);
     });
 }
@@ -227,7 +227,7 @@ void KCMLookandFeel::loadModel()
 {
     m_model->clear();
 
-    QList<KPackage::Package> pkgs = availablePackages({"defaults", "layouts"});
+    QList<KPackage::Package> pkgs = availablePackages({u"defaults"_s, u"layouts"_s});
 
     // Sort case-insensitively
     QCollator collator;
@@ -336,7 +336,7 @@ QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)
     }
 
     // Search each icon theme directory for 'theme'
-    foreach (const QString &baseDir, cursorSearchPaths()) {
+    for (const QString &baseDir : cursorSearchPaths()) {
         QDir dir(baseDir);
         if (!dir.exists() || !dir.cd(theme)) {
             continue;
@@ -390,7 +390,7 @@ QStringList KCMLookandFeel::cursorSearchPaths()
         path = xcursorPath;
 #else
     // Get the search path from Xcursor
-    QString path = XcursorLibraryPath();
+    QString path = QString::fromLocal8Bit(XcursorLibraryPath());
 #endif
 
     // Separate the paths
@@ -458,8 +458,8 @@ void KCMLookandFeel::cursorsChanged(const QString &themeName)
           << QStringLiteral("bottom_side") << QStringLiteral("bottom_left_corner") << QStringLiteral("left_side") << QStringLiteral("question_arrow")
           << QStringLiteral("pirate");
 
-    foreach (const QString &name, names) {
-        XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, cursorSize), QFile::encodeName(name));
+    for (const QString &name : std::as_const(names)) {
+        XFixesChangeCursorByName(QX11Info::display(), theme.loadCursor(name, cursorSize), QFile::encodeName(name).constData());
     }
 
 #else

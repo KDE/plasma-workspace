@@ -66,7 +66,7 @@ LookAndFeelManager::LookAndFeelManager(QObject *parent)
     , m_plasmashellChanged(false)
     , m_fontsChanged(false)
 {
-    m_applyLatteLayout = (KService::serviceByDesktopName("org.kde.latte-dock") != nullptr);
+    m_applyLatteLayout = (KService::serviceByDesktopName(u"org.kde.latte-dock"_s) != nullptr);
 }
 
 LookAndFeelSettings *LookAndFeelManager::settings() const
@@ -88,30 +88,30 @@ LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage:
 
     if (!pkg.filePath("layoutdefaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("layoutdefaults"));
-        contents.setFlag(TitlebarLayout, configProvides(conf, "kwinrc/org.kde.kdecoration2", {"ButtonsOnLeft", "ButtonsOnRight"}));
+        contents.setFlag(TitlebarLayout, configProvides(conf, u"kwinrc/org.kde.kdecoration2"_s, {u"ButtonsOnLeft"_s, u"ButtonsOnRight"_s}));
     }
 
     if (!pkg.filePath("defaults").isEmpty()) {
         KSharedConfigPtr conf = KSharedConfig::openConfig(pkg.filePath("defaults"));
 
-        contents.setFlag(Colors, configProvides(conf, "kdeglobals/General", "ColorScheme") || !pkg.filePath("colors").isEmpty());
-        contents.setFlag(WidgetStyle, configProvides(conf, "kdeglobals/KDE", "widgetStyle"));
-        contents.setFlag(Icons, configProvides(conf, "kdeglobals/Icons", "Theme"));
+        contents.setFlag(Colors, configProvides(conf, u"kdeglobals/General"_s, u"ColorScheme"_s) || !pkg.filePath("colors"_ba).isEmpty());
+        contents.setFlag(WidgetStyle, configProvides(conf, u"kdeglobals/KDE"_s, u"widgetStyle"_s));
+        contents.setFlag(Icons, configProvides(conf, u"kdeglobals/Icons"_s, u"Theme"_s));
 
-        contents.setFlag(PlasmaTheme, configProvides(conf, "plasmarc/Theme", "name"));
-        contents.setFlag(Wallpaper, configProvides(conf, "Wallpaper", "Image"));
-        contents.setFlag(Cursors, configProvides(conf, "kcminputrc/Mouse", "cursorTheme"));
+        contents.setFlag(PlasmaTheme, configProvides(conf, u"plasmarc/Theme"_s, u"name"_s));
+        contents.setFlag(Wallpaper, configProvides(conf, u"Wallpaper"_s, u"Image"_s));
+        contents.setFlag(Cursors, configProvides(conf, u"kcminputrc/Mouse"_s, u"cursorTheme"_s));
 
-        contents.setFlag(WindowSwitcher, configProvides(conf, "kwinrc/WindowSwitcher", "LayoutName"));
-        contents.setFlag(WindowDecoration, configProvides(conf, "kwinrc/org.kde.kdecoration2", {"library", "NoPlugin"}));
-        contents.setFlag(BorderSize, configProvides(conf, "kwinrc/org.kde.kdecoration2", "BorderSize"));
+        contents.setFlag(WindowSwitcher, configProvides(conf, u"kwinrc/WindowSwitcher"_s, u"LayoutName"_s));
+        contents.setFlag(WindowDecoration, configProvides(conf, u"kwinrc/org.kde.kdecoration2"_s, {u"library"_s, u"NoPlugin"_s}));
+        contents.setFlag(BorderSize, configProvides(conf, u"kwinrc/org.kde.kdecoration2"_s, u"BorderSize"_s));
 
         contents.setFlag(Fonts,
-                         configProvides(conf, "kdeglobals/WM", {"font", "fixed", "smallestReadableFont", "toolBarFont", "menuFont"})
-                             || configProvides(conf, "kdeglobals/General", "activeFont"));
+                         configProvides(conf, u"kdeglobals/WM"_s, {u"font"_s, u"fixed"_s, u"smallestReadableFont"_s, u"toolBarFont"_s, u"menuFont"_s})
+                             || configProvides(conf, u"kdeglobals/General"_s, u"activeFont"_s));
 
-        contents.setFlag(WindowPlacement, configProvides(conf, "kwinrc/Windows", "Placement"));
-        contents.setFlag(ShellPackage, configProvides(conf, "plasmashellrc/Shell", "ShellPackage"));
+        contents.setFlag(WindowPlacement, configProvides(conf, u"kwinrc/Windows"_s, u"Placement"_s));
+        contents.setFlag(ShellPackage, configProvides(conf, u"plasmashellrc/Shell"_s, u"ShellPackage"_s));
 
         // TODO: Currently managed together within the "DesktopLayout" content
         // contents.setFlag(Autostart, configProvides(conf, "Autostart", "Services"));
@@ -177,7 +177,7 @@ void LookAndFeelManager::setWindowDecoration(const QString &library, const QStri
     KConfigGroup defaultGroup(&configDefault, QStringLiteral("org.kde.kdecoration2"));
     writeNewDefaults(group, defaultGroup, QStringLiteral("library"), library);
     writeNewDefaults(group, defaultGroup, QStringLiteral("theme"), theme, KConfig::Notify);
-    writeNewDefaults(group, defaultGroup, QStringLiteral("NoPlugin"), noPlugin ? "true" : "false", KConfig::Notify);
+    writeNewDefaults(group, defaultGroup, QStringLiteral("NoPlugin"), noPlugin ? u"true"_s : u"false"_s, KConfig::Notify);
 }
 
 void LookAndFeelManager::setTitlebarLayout(const QString &leftbtns, const QString &rightbtns)
@@ -202,7 +202,7 @@ void LookAndFeelManager::setBorderSize(const QString &size)
 void LookAndFeelManager::setBorderlessMaximized(const QString &value)
 {
     if (value.isEmpty()) { // Turn borderless off for unsupported LNFs to prevent issues
-        writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("BorderlessMaximizedWindows"), "false", KConfig::Notify);
+        writeNewDefaults(QStringLiteral("kwinrc"), QStringLiteral("Windows"), QStringLiteral("BorderlessMaximizedWindows"), u"false"_s, KConfig::Notify);
         return;
     }
 
@@ -262,7 +262,7 @@ void LookAndFeelManager::setLatteLayout(const QString &filepath, const QString &
     if (filepath.isEmpty()) {
         // there is no latte layout
         KIO::CommandLauncherJob latteapp(QStringLiteral("latte-dock"), {QStringLiteral("--disable-autostart")});
-        latteapp.setDesktopName("org.kde.latte-dock");
+        latteapp.setDesktopName(u"org.kde.latte-dock"_s);
         latteapp.start();
 
         QDBusMessage quitmessage = QDBusMessage::createMethodCall(QStringLiteral("org.kde.lattedock"),
@@ -274,7 +274,7 @@ void LookAndFeelManager::setLatteLayout(const QString &filepath, const QString &
         KIO::CommandLauncherJob latteapp(
             QStringLiteral("latte-dock"),
             {QStringLiteral("--enable-autostart"), QStringLiteral("--import-layout"), filepath, QStringLiteral("--suggested-layout-name"), name});
-        latteapp.setDesktopName("org.kde.latte-dock");
+        latteapp.setDesktopName(u"org.kde.latte-dock"_s);
         latteapp.start();
     }
 }
@@ -443,7 +443,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
 
         if (m_applyLatteLayout) {
             //! latte exists in system and user has chosen to update desktop layout
-            setLatteLayout(package.filePath("layouts", "looknfeel.layout.latte"), package.metadata().name());
+            setLatteLayout(package.filePath("layouts", u"looknfeel.layout.latte"_s), package.metadata().name());
         }
     }
 
@@ -655,7 +655,7 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
 
     // WidgetStyle
     if (itemsToRemove.testFlag(WidgetStyle)) {
-        const QString widgetStyle = configValue(config, "kdeglobals/KDE", "widgetStyle");
+        const QString widgetStyle = configValue(config, u"kdeglobals/KDE"_s, u"widgetStyle"_s);
 
         const QDir widgetStyleDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("kstyle")
                                   + QDir::separator() + QStringLiteral("themes"));
@@ -677,7 +677,7 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
 
     // Color scheme
     if (itemsToRemove.testFlag(Colors)) {
-        const QString colorScheme = configValue(config, "kdeglobals/General", "ColorScheme");
+        const QString colorScheme = configValue(config, u"kdeglobals/General"_s, u"ColorScheme"_s);
         QFile schemeFile(colorSchemeFile(colorScheme));
         if (schemeFile.exists()) {
             schemeFile.remove();
@@ -687,7 +687,7 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
     // Desktop Theme and Icon (Icons are in the theme folder). Only remove if both selected
     // TODO: Remove separately
     if (itemsToRemove.testFlag(PlasmaTheme) && itemsToRemove.testFlag(Icons)) {
-        const QString themeName = configValue(config, "plasmarc/Theme", "name");
+        const QString themeName = configValue(config, u"plasmarc/Theme"_s, u"name"_s);
         QDir themeDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("plasma") + QDir::separator()
                       + QStringLiteral("desktoptheme") + QDir::separator() + themeName);
         if (themeDir.exists()) {
@@ -697,7 +697,7 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
 
     // Wallpaper
     if (itemsToRemove.testFlag(Wallpaper)) {
-        const QString image = configValue(config, "Wallpaper", "Image");
+        const QString image = configValue(config, u"Wallpaper"_s, u"Image"_s);
         const QDir wallpaperDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("wallpapers"));
         if (wallpaperDir.exists()) {
             QFileInfo wallpaperFile(wallpaperDir.absoluteFilePath(image));
@@ -712,7 +712,7 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
     }
 
     if (itemsToRemove.testFlag(WindowSwitcher)) {
-        const QString layoutName = configValue(config, "kwinrc/WindowSwitcher", "LayoutName");
+        const QString layoutName = configValue(config, u"kwinrc/WindowSwitcher"_s, u"LayoutName"_s);
         const auto windowSwitcherPackages =
             KPackage::PackageLoader::self()->findPackages(QStringLiteral("KWin/WindowSwitcher"), QString(), [&layoutName](const KPluginMetaData &meta) {
                 return meta.pluginId() == layoutName;
