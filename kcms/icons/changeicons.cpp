@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     // KNS will give us a path
     const QStringList args = app.arguments();
     QString themeName = args.last();
-    int idx = themeName.lastIndexOf('/');
+    int idx = themeName.lastIndexOf(u'/');
     if (idx >= 0) {
         themeName = themeName.mid(idx + 1);
     }
