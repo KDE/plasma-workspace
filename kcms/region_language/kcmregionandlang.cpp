@@ -393,7 +393,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
             }
 
             // language name with same country code has higher priority, eg. es_ES > es_PA, de_DE > de_DE@euro
-            auto mainLocale = plasmaLocale + "_" + plasmaLocale.toUpper();
+            auto mainLocale = plasmaLocale + u'_' + plasmaLocale.toUpper();
             fullMatch = std::find(prefixedLocales.begin(), prefixedLocales.end(), mainLocale);
             if (fullMatch != prefixedLocales.end()) {
                 addToMap(plasmaLocale, *fullMatch);

@@ -7,6 +7,8 @@
 
 #include "exampleutility.h"
 
+using namespace Qt::StringLiterals;
+
 QString Utility::monetaryExample(const QLocale &locale)
 {
     return locale.toCurrencyString(24.00);
@@ -189,7 +191,7 @@ QString Utility::parseLocaleFile(const QString &localeName, int langInfoFormat)
         }
         // Read the file with regex and return the first match
 
-        const QRegularExpression rx({formatToFetch + "\\s+\"(.*)\""});
+        const QRegularExpression rx({formatToFetch + "\\s+\"(.*)\""_L1});
 
         while (!textStream.atEnd()) {
             QString line = textStream.readLine();

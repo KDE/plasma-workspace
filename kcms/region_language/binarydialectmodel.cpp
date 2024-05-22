@@ -10,6 +10,8 @@
 #include <KLocalizedString>
 #include <kformat.h>
 
+using namespace Qt::StringLiterals;
+
 BinaryDialectModel::BinaryDialectModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -64,7 +66,7 @@ QVariant BinaryDialectModel::data(const QModelIndex &index, int role) const
         break;
     case Example: {
         const KFormat f;
-        return f.formatByteSize(kdefbase, 1, dialect, KFormat::BinarySizeUnits::UnitKiloByte) + " = "
+        return f.formatByteSize(kdefbase, 1, dialect, KFormat::BinarySizeUnits::UnitKiloByte) + " = "_L1
             + f.formatByteSize(kdefbase, 1, dialect, KFormat::BinarySizeUnits::UnitByte);
     }
     case Description: {

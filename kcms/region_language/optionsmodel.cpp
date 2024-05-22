@@ -15,6 +15,7 @@
 #include "settingtype.h"
 
 using namespace KCM_RegionAndLang;
+using namespace Qt::StringLiterals;
 
 void OptionsModel::load()
 {
@@ -287,7 +288,7 @@ void OptionsModel::updateBinaryDialectExample()
         defbase = 1000;
     }
     const KFormat f;
-    m_binaryDialectExample = f.formatByteSize(defbase, 1, m_binaryDialect, KFormat::BinarySizeUnits::UnitKiloByte) + " = "
+    m_binaryDialectExample = f.formatByteSize(defbase, 1, m_binaryDialect, KFormat::BinarySizeUnits::UnitKiloByte) + " = "_L1
         + f.formatByteSize(defbase, 1, m_binaryDialect, KFormat::BinarySizeUnits::UnitByte);
 
     switch (m_binaryDialect) {
