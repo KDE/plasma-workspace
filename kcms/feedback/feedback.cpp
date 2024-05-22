@@ -22,6 +22,8 @@
 #include "feedbackdata.h"
 #include "feedbacksettings.h"
 
+using namespace Qt::StringLiterals;
+
 K_PLUGIN_FACTORY_WITH_JSON(FeedbackFactory, "kcm_feedback.json", registerPlugin<Feedback>(); registerPlugin<FeedbackData>();)
 
 struct Information {
@@ -29,8 +31,8 @@ struct Information {
     QString kuserfeedbackComponent;
 };
 static QHash<QString, Information> s_programs = {
-    {"plasmashell", {"plasmashell", "plasmashell"}},
-    {"plasma-discover", {"plasmadiscover", "discover"}},
+    {u"plasmashell"_s, {u"plasmashell"_s, u"plasmashell"_s}},
+    {u"plasma-discover"_s, {u"plasmadiscover"_s, u"discover"_s}},
 };
 
 inline void swap(QJsonValueRef v1, QJsonValueRef v2)
@@ -92,15 +94,15 @@ void Feedback::programFinished(int exitCode)
     m_feedbackSources = {};
     for (const auto &[mode, modeUses] : m_uses.asKeyValueRange()) {
         for (const auto &[description, icon] : modeUses.asKeyValueRange()) {
-            m_feedbackSources << QJsonObject({{"mode", mode}, {"icons", icon}, {"description", description}});
+            m_feedbackSources << QJsonObject({{u"mode"_s, mode}, {u"icons"_s, icon}, {u"description"_s, description}});
         }
     }
     std::sort(m_feedbackSources.begin(), m_feedbackSources.end(), [](const QJsonValue &valueL, const QJsonValue &valueR) {
         const QJsonObject objL(valueL.toObject());
         const QJsonObject objR(valueR.toObject());
-        const auto modeL = objL["mode"].toInt();
-        const auto modeR = objR["mode"].toInt();
-        return modeL < modeR || (modeL == modeR && objL["description"].toString() < objR["description"].toString());
+        const auto modeL = objL[QStringView(u"mode")].toInt();
+        const auto modeR = objR[QStringView(u"mode")].toInt();
+        return modeL < modeR || (modeL == modeR && objL[u"description"].toString() < objR[u"description"].toString());
     });
     Q_EMIT feedbackSourcesChanged();
 }
@@ -121,12 +123,12 @@ QJsonArray Feedback::audits() const
     QJsonArray ret;
     for (const auto &[program, info] : s_programs.asKeyValueRange()) {
         QString feedbackLocation =
-            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + info.kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit");
+            QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + info.kuserfeedbackComponent + QStringLiteral("/kuserfeedback/audit");
 
         if (QFileInfo::exists(feedbackLocation)) {
             ret += QJsonObject{
-                {"program", program},
-                {"audits", feedbackLocation},
+                {u"program"_s, program},
+                {u"audits"_s, feedbackLocation},
             };
         }
     }
