@@ -531,7 +531,7 @@ void Klipper::slotIgnored(QClipboard::Mode mode)
     // The trouble is that the top selection =! top clipboard
     // but we don't track that yet. We will....
     if (auto top = history()->first()) {
-        setClipboard(*top, mode);
+        setClipboard(*top, mode == QClipboard::Selection ? Selection : Clipboard);
     }
 }
 
@@ -541,7 +541,7 @@ void Klipper::slotReceivedEmptyClipboard(QClipboard::Mode mode)
     if (auto top = history()->first()) {
         // keep old clipboard after someone set it to null
         qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
-        setClipboard(*top, mode, ClipboardUpdateReason::PreventEmptyClipboard);
+        setClipboard(*top, mode == QClipboard::Selection ? Selection : Clipboard, ClipboardUpdateReason::PreventEmptyClipboard);
     }
 }
 
@@ -648,7 +648,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize) {
-            setClipboard(*item, mode);
+            setClipboard(*item, mode == QClipboard::Selection ? Clipboard : Selection);
         }
     }
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
