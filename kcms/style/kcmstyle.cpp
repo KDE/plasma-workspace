@@ -124,7 +124,7 @@ void KCMStyle::setMainToolBarStyle(ToolBarStyle style)
         Q_EMIT mainToolBarStyleChanged();
 
         const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
-        styleSettings()->setToolButtonStyle(toolBarStyleEnum.valueToKey(m_mainToolBarStyle));
+        styleSettings()->setToolButtonStyle(QString::fromLatin1(toolBarStyleEnum.valueToKey(m_mainToolBarStyle)));
         m_effectsDirty = true;
     }
 }
@@ -141,7 +141,7 @@ void KCMStyle::setOtherToolBarStyle(ToolBarStyle style)
         Q_EMIT otherToolBarStyleChanged();
 
         const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
-        styleSettings()->setToolButtonStyleOtherToolbars(toolBarStyleEnum.valueToKey(m_otherToolBarStyle));
+        styleSettings()->setToolButtonStyleOtherToolbars(QString::fromLatin1(toolBarStyleEnum.valueToKey(m_otherToolBarStyle)));
         m_effectsDirty = true;
     }
 }

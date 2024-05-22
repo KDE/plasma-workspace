@@ -32,7 +32,7 @@ GtkPage::~GtkPage() = default;
 
 bool GtkPage::gtkPreviewAvailable()
 {
-    return !QStandardPaths::findExecutable(QStringLiteral("gtk3_preview"), {CMAKE_INSTALL_FULL_LIBEXECDIR}).isEmpty();
+    return !QStandardPaths::findExecutable(QStringLiteral("gtk3_preview"), {QString::fromLocal8Bit(CMAKE_INSTALL_FULL_LIBEXECDIR)}).isEmpty();
 }
 
 void GtkPage::showGtkPreview()
