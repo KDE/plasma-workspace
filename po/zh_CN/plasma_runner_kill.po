@@ -31,7 +31,7 @@ msgstr "发送 SIGKILL"
 #: killrunner.cpp:42 killrunner_config.cpp:42 killrunner_config.cpp:64
 #, kde-format
 msgid "kill"
-msgstr "kill"
+msgstr "终止"
 
 #: killrunner.cpp:48
 #, kde-format
@@ -67,7 +67,7 @@ msgstr "无"
 #: killrunner_config.ui:30
 #, kde-format
 msgid "Kill Applications Config"
-msgstr "杀死应用程序配置"
+msgstr "终止应用程序配置"
 
 #. i18n: ectx: property (text), widget (QCheckBox, useTriggerWord)
 #: killrunner_config.ui:39
@@ -91,4 +91,4 @@ msgstr "排序方式(&S)"
 #: killrunner_config.ui:82
 #, kde-format
 msgid "It is not sure, that this will take effect"
-msgstr "不确定这会有用"
+msgstr "这不一定能够生效"

@@ -21,12 +21,12 @@ msgstr ""
 #: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
 #, kde-format
 msgid "Search %1 for %2"
-msgstr "在 %1 上搜索 %2"
+msgstr "搜索 %1 中的 %2"
 
 #: webshortcutrunner.cpp:69
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
-msgstr "以查询内容 :q: 在网络浏览器中打开“%1”。"
+msgstr "用网页浏览器打开“%1”并查询 :q:。"
 
 #: webshortcutrunner.cpp:74
 #, kde-format
@@ -41,4 +41,4 @@ msgstr "在隐私窗口中搜索"
 #: webshortcutrunner.cpp:102
 #, kde-format
 msgid "Search in incognito window"
-msgstr "在隐身窗口搜索"
+msgstr "在隐身窗口中搜索"

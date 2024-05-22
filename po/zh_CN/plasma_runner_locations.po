@@ -33,7 +33,7 @@ msgstr "打开 %1"
 #: locationrunner.cpp:72 locationrunner.cpp:76
 #, kde-format
 msgid "Launch with %1"
-msgstr "用 %1 执行"
+msgstr "用 %1 启动"
 
 #: locationrunner.cpp:82
 #, kde-format

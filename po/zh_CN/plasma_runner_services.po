@@ -29,4 +29,4 @@ msgstr "%1 - %2"
 #: servicerunner.cpp:413
 #, kde-format
 msgid "Finds applications whose name or description match :q:"
-msgstr "查找名称或描述匹配 :q: 的应用程序"
+msgstr "查找名称或者描述匹配 :q: 的应用程序"
