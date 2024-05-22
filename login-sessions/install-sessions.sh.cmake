@@ -20,9 +20,6 @@ install @CMAKE_CURRENT_BINARY_DIR@/startplasma-dev.sh @CMAKE_INSTALL_FULL_LIBEXE
 sudo mkdir -p /opt/kde-dbus-scripts/
 sudo cp -r @KDE_INSTALL_FULL_DBUSDIR@/* /opt/kde-dbus-scripts/
 
-old_file='/etc/dbus-1/session-local.conf'
-[ -e $old_file ] && grep --quiet '/opt/kde-dbus-scripts' $old_file && sudo rm -v $old_file
-
 cat > /tmp/00-plasma.conf << EOF
 <!DOCTYPE busconfig PUBLIC "-//freedesktop//DTD D-Bus Bus Configuration 1.0//EN"
  "http://www.freedesktop.org/standards/dbus/1.0/busconfig.dtd">
