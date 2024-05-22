@@ -17,6 +17,8 @@
 #include <QUrlQuery>
 #include <ctype.h>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 namespace Misc
@@ -25,7 +27,7 @@ QString prettyUrl(const QUrl &url)
 {
     QString u(url.url());
 
-    u.replace("%20", " ");
+    u.replace("%20"_L1, " "_L1);
     return u;
 }
 
@@ -34,12 +36,12 @@ QString dirSyntax(const QString &d)
     if (!d.isEmpty()) {
         QString ds(d);
 
-        ds.replace("//", "/");
+        ds.replace("//"_L1, "/"_L1);
 
-        int slashPos(ds.lastIndexOf('/'));
+        int slashPos(ds.lastIndexOf(u'/'));
 
         if (slashPos != (((int)ds.length()) - 1)) {
-            ds.append('/');
+            ds.append(u'/');
         }
 
         return ds;
@@ -53,9 +55,9 @@ QString fileSyntax(const QString &d)
     if (!d.isEmpty()) {
         QString ds(d);
 
-        ds.replace("//", "/");
+        ds.replace("//"_L1, "/"_L1);
 
-        int slashPos(ds.lastIndexOf('/'));
+        int slashPos(ds.lastIndexOf(u'/'));
 
         if (slashPos == (((int)ds.length()) - 1)) {
             ds.remove(slashPos, 1);
@@ -70,7 +72,7 @@ QString getDir(const QString &f)
 {
     QString d(f);
 
-    int slashPos(d.lastIndexOf('/'));
+    int slashPos(d.lastIndexOf(u'/'));
 
     if (slashPos != -1) {
         d.remove(slashPos + 1, d.length());
@@ -83,7 +85,7 @@ QString getFile(const QString &f)
 {
     QString d(f);
 
-    int slashPos = d.lastIndexOf('/');
+    int slashPos = d.lastIndexOf(u'/');
 
     if (slashPos != -1) {
         d.remove(0, slashPos + 1);
@@ -134,13 +136,13 @@ bool doCmd(const QString &cmd, const QString &p1, const QString &p2, const QStri
     return 0 == QProcess::execute(cmd, args);
 }
 
-QString changeExt(const QString &f, const QString &newExt)
+QString changeExt(const QString &f, QLatin1String newExt)
 {
     QString newStr(f);
-    int dotPos(newStr.lastIndexOf('.'));
+    int dotPos(newStr.lastIndexOf(u'.'));
 
     if (-1 == dotPos) {
-        newStr += QChar('.') + newExt;
+        newStr += u'.' + newExt;
     } else {
         newStr.remove(dotPos + 1, newStr.length());
         newStr += newExt;
@@ -158,7 +160,7 @@ QString changeExt(const QString &f, const QString &newExt)
 void getAssociatedFiles(const QString &path, QStringList &files, bool afmAndPfm)
 {
     QString ext(path);
-    int dotPos(ext.lastIndexOf('.'));
+    int dotPos(ext.lastIndexOf(u'.'));
     bool check(false);
 
     if (-1 == dotPos) { // Hmm, no extension - check anyway...
@@ -166,16 +168,16 @@ void getAssociatedFiles(const QString &path, QStringList &files, bool afmAndPfm)
     } else // Cool, got an extension - see if it is a Type1 font...
     {
         ext = ext.mid(dotPos + 1);
-        check = 0 == ext.compare("pfa", Qt::CaseInsensitive) || 0 == ext.compare("pfb", Qt::CaseInsensitive);
+        check = 0 == ext.compare(u"pfa", Qt::CaseInsensitive) || 0 == ext.compare(u"pfb", Qt::CaseInsensitive);
     }
 
     if (check) {
-        const char *afm[] = {"afm", "AFM", "Afm", nullptr}, *pfm[] = {"pfm", "PFM", "Pfm", nullptr};
+        constexpr const char *afm[] = {"afm", "AFM", "Afm", nullptr}, *pfm[] = {"pfm", "PFM", "Pfm", nullptr};
         bool gotAfm(false);
         int e;
 
         for (e = 0; afm[e]; ++e) {
-            QString statFile(changeExt(path, afm[e]));
+            QString statFile(changeExt(path, QLatin1String(afm[e])));
 
             if (fExists(statFile)) {
                 files.append(statFile);
@@ -186,7 +188,7 @@ void getAssociatedFiles(const QString &path, QStringList &files, bool afmAndPfm)
 
         if (afmAndPfm || !gotAfm) {
             for (e = 0; pfm[e]; ++e) {
-                QString statFile(changeExt(path, pfm[e]));
+                QString statFile(changeExt(path, QLatin1String(pfm[e])));
 
                 if (fExists(statFile)) {
                     files.append(statFile);
@@ -231,21 +233,21 @@ QString getFolder(const QString &defaultDir, const QString &root, QStringList &d
     return defaultDir;
 }
 
-bool checkExt(const QString &fname, const QString &ext)
+bool checkExt(const QString &fname, QStringView ext)
 {
-    QString extension('.' + ext);
+    QString extension(u'.' % ext);
 
     return fname.length() > extension.length() ? 0 == fname.mid(fname.length() - extension.length()).compare(extension, Qt::CaseInsensitive) : false;
 }
 
 bool isBitmap(const QString &str)
 {
-    return checkExt(str, "pcf") || checkExt(str, "bdf") || checkExt(str, "pcf.gz") || checkExt(str, "bdf.gz");
+    return checkExt(str, u"pcf") || checkExt(str, u"bdf") || checkExt(str, u"pcf.gz") || checkExt(str, u"bdf.gz");
 }
 
 bool isMetrics(const QString &str)
 {
-    return checkExt(str, "afm") || checkExt(str, "pfm");
+    return checkExt(str, u"afm") || checkExt(str, u"pfm");
 }
 
 int getIntQueryVal(const QUrl &url, const char *key, int defVal)
@@ -263,8 +265,8 @@ int getIntQueryVal(const QUrl &url, const char *key, int defVal)
 
 bool printable(const QString &mime)
 {
-    return mime == "font/otf" || mime == "font/ttf" || mime == "application/x-font-ttf" || mime == "application/x-font-otf"
-        || mime == "application/x-font-type1";
+    return mime == u"font/otf" || mime == u"font/ttf" || mime == u"application/x-font-ttf" || mime == u"application/x-font-otf"
+        || mime == u"application/x-font-type1";
 }
 
 uint qHash(const KFI::Misc::TFont &key)
@@ -334,14 +336,14 @@ QString encodeText(const QString &str)
 
 QString contractHome(QString path)
 {
-    if (!path.isEmpty() && '/' == path[0]) {
+    if (!path.isEmpty() && u'/' == path[0]) {
         QString home(QDir::homePath());
 
         if (path.startsWith(home)) {
             int len = home.length();
 
-            if (len > 1 && (path.length() == len || path[len] == '/')) {
-                return path.replace(0, len, QString::fromLatin1("~"));
+            if (len > 1 && (path.length() == len || path[len] == u'/')) {
+                return path.replace(0, len, u'~');
             }
         }
     }
@@ -415,15 +417,15 @@ QMap<QString, QString> getFontFileMap(const QSet<QString> &files)
 
 QString modifyName(const QString &fname)
 {
-    static const char constSymbols[] = {'-', ' ', ':', ';', '/', '~', 0};
+    static const char16_t constSymbols[] = {u'-', u' ', u':', u';', u'/', u'~', 0};
 
     QString rv(fname);
 
     for (int s = 0; constSymbols[s]; ++s) {
-        rv.replace(constSymbols[s], '_');
+        rv.replace(constSymbols[s], u'_');
     }
 
-    int dotPos(rv.lastIndexOf('.'));
+    int dotPos(rv.lastIndexOf(u'.'));
 
     return -1 == dotPos ? rv : rv.left(dotPos + 1) + rv.mid(dotPos + 1).toLower();
 }
@@ -435,7 +437,7 @@ QString app(const QString &name, const char *path)
     if (!apps.contains(name)) {
         QStringList installPaths;
         if (qstrcmp(path, "libexec") == 0) {
-            installPaths.append(KFONTINST_LIBEXEC_DIR);
+            installPaths.append(QString::fromLocal8Bit(KFONTINST_LIBEXEC_DIR));
         }
         apps[name] = QStandardPaths::findExecutable(name, installPaths);
     }

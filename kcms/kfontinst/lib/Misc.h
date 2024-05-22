@@ -48,7 +48,7 @@ struct TFont {
 extern KFONTINST_EXPORT QString prettyUrl(const QUrl &url);
 inline KFONTINST_EXPORT bool isHidden(const QString &f)
 {
-    return f.startsWith(QChar('.'));
+    return f.startsWith(QLatin1Char('.'));
 }
 inline KFONTINST_EXPORT bool isHidden(const QUrl &url)
 {
@@ -82,7 +82,7 @@ inline KFONTINST_EXPORT void setFilePerms(const QString &f)
 {
     setFilePerms(QFile::encodeName(f));
 }
-extern KFONTINST_EXPORT QString changeExt(const QString &f, const QString &newExt);
+extern KFONTINST_EXPORT QString changeExt(const QString &f, QLatin1String newExt);
 extern KFONTINST_EXPORT bool doCmd(const QString &cmd, const QString &p1 = QString(), const QString &p2 = QString(), const QString &p3 = QString());
 inline KFONTINST_EXPORT bool root()
 {
@@ -91,7 +91,7 @@ inline KFONTINST_EXPORT bool root()
 extern KFONTINST_EXPORT void getAssociatedFiles(const QString &file, QStringList &list, bool afmAndPfm = true);
 extern KFONTINST_EXPORT time_t getTimeStamp(const QString &item);
 extern KFONTINST_EXPORT QString getFolder(const QString &defaultDir, const QString &root, QStringList &dirs);
-extern KFONTINST_EXPORT bool checkExt(const QString &fname, const QString &ext);
+extern KFONTINST_EXPORT bool checkExt(const QString &fname, QStringView ext);
 extern KFONTINST_EXPORT bool isBitmap(const QString &str);
 extern KFONTINST_EXPORT bool isMetrics(const QString &str);
 inline KFONTINST_EXPORT bool isMetrics(const QUrl &url)
@@ -100,17 +100,17 @@ inline KFONTINST_EXPORT bool isMetrics(const QUrl &url)
 }
 inline KFONTINST_EXPORT bool isPackage(const QString &file)
 {
-    return file.indexOf(KFI_FONTS_PACKAGE) == (file.length() - KFI_FONTS_PACKAGE_LEN);
+    return file.indexOf(QLatin1String(KFI_FONTS_PACKAGE)) == (file.length() - KFI_FONTS_PACKAGE_LEN);
 }
 extern KFONTINST_EXPORT int getIntQueryVal(const QUrl &url, const char *key, int defVal);
 extern KFONTINST_EXPORT bool printable(const QString &mime);
 inline KFONTINST_EXPORT QString hide(const QString &f)
 {
-    return '.' != f[0] ? QChar('.') + f : f;
+    return u'.' != f[0] ? QLatin1Char('.') + f : f;
 }
 inline KFONTINST_EXPORT QString unhide(const QString &f)
 {
-    return '.' == f[0] ? f.mid(1) : f;
+    return u'.' == f[0] ? f.mid(1) : f;
 }
 extern KFONTINST_EXPORT uint qHash(const TFont &key);
 extern KFONTINST_EXPORT QString encodeText(const QString &str);
@@ -121,7 +121,7 @@ extern KFONTINST_EXPORT QMap<QString, QString> getFontFileMap(const QSet<QString
 extern KFONTINST_EXPORT QString modifyName(const QString &fname);
 inline QString getDestFolder(const QString &folder, const QString &file)
 {
-    return folder + file[0].toLower() + '/';
+    return folder + file[0].toLower() + u'/';
 }
 extern KFONTINST_EXPORT QString app(const QString &name, const char *path = nullptr);
 }

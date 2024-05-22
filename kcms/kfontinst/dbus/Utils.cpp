@@ -14,13 +14,15 @@
 #include <QTextStream>
 #include <fontconfig/fontconfig.h>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 namespace Utils
 {
 bool isAAfm(const QString &fname)
 {
-    if (Misc::checkExt(QFile::encodeName(fname), "afm")) // CPD? Is this a necessary check?
+    if (Misc::checkExt(QFile::encodeName(fname), u"afm")) // CPD? Is this a necessary check?
     {
         QFile file(fname);
 
@@ -52,7 +54,7 @@ bool isAPfm(const QString &fname)
     // have the .pfm extension...
     QByteArray name(QFile::encodeName(fname));
 
-    if (Misc::checkExt(name, "pfm")) {
+    if (Misc::checkExt(name, u"pfm")) {
         //
         // OK, the extension matches, so perform a little contents checking...
         FILE *f = fopen(name.constData(), "r");
@@ -98,7 +100,7 @@ bool isAType1(const QString &fname)
     char buffer[constPfbLen];
     bool match = false;
 
-    if (Misc::checkExt(name, "pfa")) {
+    if (Misc::checkExt(name, u"pfa")) {
         FILE *f = fopen(name.constData(), "r");
 
         if (f) {
@@ -107,7 +109,7 @@ bool isAType1(const QString &fname)
             }
             fclose(f);
         }
-    } else if (Misc::checkExt(name, "pfb")) {
+    } else if (Misc::checkExt(name, u"pfb")) {
         static const char constPfbMarker = static_cast<char>(0x80);
 
         FILE *f = fopen(name.constData(), "r");
@@ -125,7 +127,7 @@ bool isAType1(const QString &fname)
 
 static QString getMatch(const QString &file, const char *extension)
 {
-    QString f(Misc::changeExt(file, extension));
+    QString f(Misc::changeExt(file, QLatin1String(extension)));
 
     return Misc::fExists(f) ? f : QString();
 }
@@ -160,7 +162,7 @@ void createAfm(const QString &file, EFileType type)
             {
                 QString rootName(t1.left(t1.length() - 4));
                 Misc::doCmd("pf2afm", KShell::quoteArg(rootName)); // pf2afm wants name without extension...
-                Misc::setFilePerms(QFile::encodeName(rootName + ".afm"));
+                Misc::setFilePerms(QFile::encodeName(rootName + ".afm"_L1));
             }
         }
     }

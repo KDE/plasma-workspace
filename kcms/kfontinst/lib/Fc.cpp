@@ -17,14 +17,16 @@
 #define KFI_HAVE_MEDIUM_WEIGHT // Do we differentiate between Medium and Regular weights when comparing weights?
 #define KFI_DISPLAY_MEDIUM // Do we want to list "Medium"? Or always use Regular?
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 namespace FC
 {
-#define FC_PROTOCOL QString::fromLatin1("fontconfig")
-#define FC_STYLE_QUERY QString::fromLatin1("style")
-#define FC_FILE_QUERY QString::fromLatin1("file")
-#define FC_INDEX_QUERY QString::fromLatin1("index")
+inline constexpr QLatin1String FC_PROTOCOL("fontconfig");
+inline constexpr QLatin1String FC_STYLE_QUERY("style");
+inline constexpr QLatin1String FC_FILE_QUERY("file");
+inline constexpr QLatin1String FC_INDEX_QUERY("index");
 
 QUrl encode(const QString &name, quint32 style, const QString &file, int index)
 {
@@ -308,7 +310,7 @@ quint32 createStyleVal(const QString &name)
 {
     int pos;
 
-    if (-1 == (pos = name.indexOf(", "))) { // No style information...
+    if (-1 == (pos = name.indexOf(", "_L1))) { // No style information...
         return createStyleVal(FC_WEIGHT_REGULAR,
 #ifdef KFI_FC_NO_WIDTHS
                               KFI_NULL_SETTING
@@ -501,7 +503,7 @@ QString createStyleName(int weight, int width, int slant)
 #ifndef KFI_FC_NO_WIDTHS
     if (!widthString.isEmpty()) {
         if (!name.isEmpty()) {
-            name += QChar(' ');
+            name += QLatin1Char(' ');
         }
         name += widthString;
     }
@@ -509,7 +511,7 @@ QString createStyleName(int weight, int width, int slant)
 
     if (!slantString.isEmpty()) {
         if (!name.isEmpty()) {
-            name += QChar(' ');
+            name += QLatin1Char(' ');
         }
         name += slantString;
     }

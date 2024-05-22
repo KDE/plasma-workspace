@@ -47,6 +47,8 @@
 #define CFG_GROUP "Runner Dialog"
 #define CFG_DONT_SHOW_FINISHED_MSG "DontShowFinishedMsg"
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 Q_GLOBAL_STATIC(FontInstInterface, theInterface)
@@ -239,13 +241,13 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
     }
 
     if (check) {
-        const char *afm[] = {"afm", "AFM", "Afm", nullptr}, *pfm[] = {"pfm", "PFM", "Pfm", nullptr};
+        constexpr const char *afm[] = {"afm", "AFM", "Afm", nullptr}, *pfm[] = {"pfm", "PFM", "Pfm", nullptr};
         bool gotAfm(false), localFile(url.isLocalFile());
         int e;
 
         for (e = 0; afm[e]; ++e) {
             QUrl statUrl(url);
-            statUrl.setPath(Misc::changeExt(url.path(), afm[e]));
+            statUrl.setPath(Misc::changeExt(url.path(), QLatin1String(afm[e])));
 
             bool urlExists = false;
             if (localFile) {
@@ -266,7 +268,7 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
         if (afmAndPfm || !gotAfm) {
             for (e = 0; pfm[e]; ++e) {
                 QUrl statUrl(url);
-                statUrl.setPath(Misc::changeExt(url.path(), pfm[e]));
+                statUrl.setPath(Misc::changeExt(url.path(), QLatin1String(pfm[e])));
 
                 bool urlExists = false;
                 if (localFile) {
@@ -655,7 +657,7 @@ QString CJobRunner::fileName(const QUrl &url)
         } else {
             // Need to do actual download...
             if (!m_tempDir) {
-                m_tempDir = new QTemporaryDir(QDir::tempPath() + "/fontinst");
+                m_tempDir = new QTemporaryDir(QDir::tempPath() + "/fontinst"_L1);
                 m_tempDir->setAutoRemove(true);
             }
 
@@ -721,10 +723,10 @@ CJobRunner::Item::Item(const QUrl &u, const QString &n, bool dis)
     , fileName(Misc::getFile(u.path()))
     , isDisabled(dis)
 {
-    type = Misc::checkExt(fileName, "pfa") || Misc::checkExt(fileName, "pfb") ? TYPE1_FONT
-        : Misc::checkExt(fileName, "afm")                                     ? TYPE1_AFM
-        : Misc::checkExt(fileName, "pfm")                                     ? TYPE1_PFM
-                                                                              : OTHER_FONT;
+    type = Misc::checkExt(fileName, u"pfa") || Misc::checkExt(fileName, u"pfb") ? TYPE1_FONT
+        : Misc::checkExt(fileName, u"afm")                                      ? TYPE1_AFM
+        : Misc::checkExt(fileName, u"pfm")                                      ? TYPE1_PFM
+                                                                                : OTHER_FONT;
 
     if (OTHER_FONT != type) {
         int pos(fileName.lastIndexOf('.'));

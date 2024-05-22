@@ -55,18 +55,20 @@
 
 K_PLUGIN_CLASS_WITH_JSON(KFI::CKCmFontInst, "kcm_fontinst.json")
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 static QString partialIcon(bool load = true)
 {
-    QString name = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/kfi/partial.png";
+    QString name = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) + "/kfi/partial.png"_L1;
 
     if (Misc::fExists(name)) {
         if (!load) {
             QFile::remove(name);
         }
     } else if (load) {
-        QPixmap pix = KIconLoader::global()->loadIcon("dialog-ok", KIconLoader::Small, KIconLoader::SizeSmall, KIconLoader::DisabledState);
+        QPixmap pix = KIconLoader::global()->loadIcon(u"dialog-ok"_s, KIconLoader::Small, KIconLoader::SizeSmall, KIconLoader::DisabledState);
 
         pix.save(name, "PNG");
     }
@@ -442,7 +444,7 @@ void CKCmFontInst::addFonts()
         QList<QUrl>::Iterator it(list.begin()), end(list.end());
 
         for (; it != end; ++it) {
-            if (KFI_KIO_FONTS_PROTOCOL != (*it).scheme()) // Do not try to install from fonts:/ !!!
+            if (QLatin1String(KFI_KIO_FONTS_PROTOCOL) != (*it).scheme()) // Do not try to install from fonts:/ !!!
             {
                 auto job = KIO::mostLocalUrl(*it);
                 KJobWidgets::setWindow(job, widget());
@@ -800,9 +802,9 @@ void CKCmFontInst::downloadFonts(const QList<KNSCore::Entry> &changedEntries)
     // We then sym-link our knewstuff3 download folder into the fonts folder...
     QString destFolder = CJobRunner::folderName(false);
     if (!destFolder.isEmpty()) {
-        destFolder += "kfontinst";
+        destFolder += "kfontinst"_L1;
         if (!QFile::exists(destFolder)) {
-            QFile _file(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + "kfontinst");
+            QFile _file(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + "kfontinst"_L1);
             _file.link(destFolder);
         }
     }
@@ -916,7 +918,7 @@ void CKCmFontInst::setStatusBar()
                                                      enabled + disabled));
         }
 
-        m_statusLabel->setText(disabled || partial ? "<p>" + text + "</p>" : text);
+        m_statusLabel->setText(disabled || partial ? "<p>"_L1 + text + "</p>"_L1 : text);
     }
 
     CGroupListItem::EType type(m_groupListView->getType());

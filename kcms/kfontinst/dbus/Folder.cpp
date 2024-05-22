@@ -24,6 +24,8 @@
 
 #define DISABLED_FONTS "disabledfonts"
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 bool Folder::CfgFile::modified()
@@ -53,7 +55,7 @@ void Folder::init(bool system, bool systemBus)
             dirs.append(Misc::dirSyntax((const char *)fcDir));
         }
 
-        m_location = Misc::getFolder(Misc::dirSyntax(QDir::homePath() + "/.fonts/"), Misc::dirSyntax(QDir::homePath()), dirs);
+        m_location = Misc::getFolder(Misc::dirSyntax(QDir::homePath() + "/.fonts/"_L1), Misc::dirSyntax(QDir::homePath()), dirs);
     } else {
         m_location = KFI_DEFAULT_SYS_FONTS_FOLDER;
     }
@@ -64,10 +66,10 @@ void Folder::init(bool system, bool systemBus)
 
     m_disabledCfg.dirty = false;
     if (m_disabledCfg.name.isEmpty()) {
-        QString fileName("/" DISABLED_FONTS ".xml");
+        QString fileName(QStringLiteral("/" DISABLED_FONTS ".xml"));
 
         if (system) {
-            m_disabledCfg.name = QString::fromLatin1(KFI_ROOT_CFG_DIR) + fileName;
+            m_disabledCfg.name = KFI_ROOT_CFG_DIR + fileName;
         } else {
             QString path = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + QLatin1Char('/');
 
@@ -293,7 +295,7 @@ void Folder::configure(bool force)
         QSet<QString> dirs;
 
         for (; it != end; ++it) {
-            if (Misc::fExists((*it) + "fonts.dir")) {
+            if (Misc::fExists((*it) + "fonts.dir"_L1)) {
                 dirs.insert(KShell::quoteArg(*it));
             }
         }

@@ -49,7 +49,7 @@ Q_DECL_EXPORT int kdemain(int argc, char **argv)
     }
 
     QCoreApplication app(argc, argv);
-    QCoreApplication::setApplicationName("kio_" KFI_KIO_FONTS_PROTOCOL);
+    QCoreApplication::setApplicationName(QStringLiteral("kio_" KFI_KIO_FONTS_PROTOCOL));
     KFI::CKioFonts worker(argv[2], argv[3]);
 
     worker.dispatchLoop();
@@ -73,7 +73,7 @@ inline bool isUserFolder(const QString &folder)
 static CKioFonts::EFolder getFolder(const QStringList &list)
 {
     if (list.size() > 0) {
-        QString folder = list[0];
+        const QString &folder = list[0];
 
         if (isSysFolder(folder)) {
             return CKioFonts::FOLDER_SYS;
@@ -124,7 +124,8 @@ static bool writeAll(int fd, const char *buf, size_t len)
 
 static bool isScalable(const QString &str)
 {
-    return Misc::checkExt(str, "ttf") || Misc::checkExt(str, "otf") || Misc::checkExt(str, "ttc") || Misc::checkExt(str, "pfa") || Misc::checkExt(str, "pfb");
+    return Misc::checkExt(str, u"ttf") || Misc::checkExt(str, u"otf") || Misc::checkExt(str, u"ttc") || Misc::checkExt(str, u"pfa")
+        || Misc::checkExt(str, u"pfb");
 }
 
 static const char *const constExtensions[] = {".ttf", KFI_FONTS_PACKAGE, ".otf", ".pfa", ".pfb", ".ttc", ".pcf", ".pcf.gz", ".bdf", ".bdf.gz", nullptr};
@@ -135,7 +136,7 @@ static QString removeKnownExtension(const QUrl &url)
     int pos;
 
     for (int i = 0; constExtensions[i]; ++i) {
-        if (-1 != (pos = fname.lastIndexOf(QString::fromLatin1(constExtensions[i]), -1, Qt::CaseInsensitive))) {
+        if (-1 != (pos = fname.lastIndexOf(QLatin1String(constExtensions[i]), -1, Qt::CaseInsensitive))) {
             return fname.left(pos);
         }
     }

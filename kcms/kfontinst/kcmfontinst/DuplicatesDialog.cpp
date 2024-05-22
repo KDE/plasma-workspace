@@ -30,6 +30,8 @@
 #include <QVBoxLayout>
 #include <QWindow>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 enum EDialogColumns {
@@ -132,7 +134,7 @@ void CDuplicatesDialog::scanFinished()
                         details.append(info.symLinkTarget());
                     }
                     new QTreeWidgetItem(top, details);
-                    if (Misc::checkExt(*fit, "pfa") || Misc::checkExt(*fit, "pfb")) {
+                    if (Misc::checkExt(*fit, u"pfa") || Misc::checkExt(*fit, u"pfb")) {
                         t1++;
                     } else {
                         tt++;

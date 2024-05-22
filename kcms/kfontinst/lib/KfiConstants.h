@@ -13,8 +13,8 @@
 #define KFI_NAME "kfontinst"
 #define KFI_CATALOGUE KFI_NAME
 
-#define KFI_INSTALLER QLatin1String("kfontinst")
-#define KFI_VIEWER QLatin1String("kfontview")
+inline constexpr QLatin1String KFI_INSTALLER("kfontinst");
+inline constexpr QLatin1String KFI_VIEWER("kfontview");
 #define KFI_PRINTER QLatin1String("kfontprint"), "libexec"
 
 #define KFI_PRINT_GROUP "Print"
@@ -36,8 +36,9 @@ constexpr const auto KFI_KIO_FONTS_ALL = kli18n("All");
 #define KFI_SYS_USER "root"
 
 constexpr const auto KFI_AUTHINF_USER = kli18n("Administrator");
-#define KFI_UI_CFG_FILE KFI_NAME "uirc"
-#define KFI_ROOT_CFG_DIR "/etc/fonts/"
+inline constexpr QLatin1String KFI_UI_CFG_FILE(KFI_NAME "uirc");
+
+inline constexpr QLatin1String KFI_ROOT_CFG_DIR("/etc/fonts/");
 #define KFI_DEFAULT_SYS_FONTS_FOLDER "/usr/local/share/fonts/"
 
 #define KFI_NO_STYLE_INFO 0xFFFFFFFF
@@ -47,9 +48,9 @@ constexpr const auto KFI_AUTHINF_USER = kli18n("Administrator");
 #define KFI_FACE_KEY "Face="
 
 #define KFI_FONTS_PACKAGE ".fonts.zip"
-#define KFI_FONTS_PACKAGE_LEN 10
-#define KFI_GROUPS_FILE "fontgroups.xml"
-#define KFI_TMP_DIR_PREFIX "kfi"
+inline constexpr int KFI_FONTS_PACKAGE_LEN = QLatin1String(KFI_FONTS_PACKAGE).size();
+inline constexpr QLatin1String KFI_GROUPS_FILE("fontgroups.xml");
+inline constexpr QLatin1String KFI_TMP_DIR_PREFIX("kfi");
 
 #define KFI_NULL_SETTING 0xFF
 

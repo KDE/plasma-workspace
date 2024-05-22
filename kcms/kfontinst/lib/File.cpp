@@ -10,6 +10,8 @@
 #include <QDomElement>
 #include <QTextStream>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 static QString expandHome(const QString &path)
@@ -34,14 +36,14 @@ File::File(const QDomElement &elem, bool disabled)
 QString File::toXml(bool disabled) const
 {
     if (!disabled || Misc::isHidden(Misc::getFile(m_path))) {
-        QString str(PATH_ATTR "=\"" + KFI::Misc::encodeText(KFI::Misc::contractHome(m_path)) + "\"");
+        QString str(PATH_ATTR + "=\""_L1 + KFI::Misc::encodeText(KFI::Misc::contractHome(m_path)) + "\""_L1);
 
         if (!m_foundry.isEmpty() && QString::fromLatin1("unknown") != m_foundry) {
-            str += " " FOUNDRY_ATTR "=\"" + KFI::Misc::encodeText(m_foundry) + "\"";
+            str += u' ' + FOUNDRY_ATTR + "=\""_L1 + KFI::Misc::encodeText(m_foundry) + "\""_L1;
         }
 
         if (m_index > 0) {
-            str += " " FACE_ATTR "=\"" + QString::number(m_index) + "\"";
+            str += u' ' + FACE_ATTR + "=\""_L1 + QString::number(m_index) + "\""_L1;
         }
 
         return str;

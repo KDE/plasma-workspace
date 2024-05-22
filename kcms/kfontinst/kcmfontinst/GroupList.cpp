@@ -184,7 +184,7 @@ CGroupList::CGroupList(QWidget *parent)
         Misc::createDir(path);
     }
 
-    m_fileName = path + '/' + KFI_GROUPS_FILE;
+    m_fileName = path + u'/' + KFI_GROUPS_FILE;
 
     rescan();
 }

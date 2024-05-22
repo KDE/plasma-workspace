@@ -22,6 +22,8 @@
 #include <QTimer>
 #include <QToolTip>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 EUnicodeCategory getCategory(quint32 ucs2)
@@ -99,7 +101,7 @@ static QString toStr(EUnicodeCategory cat)
     case UNICODE_SPACE_SEPARATOR:
         return i18n("Separator, Space");
     default:
-        return "";
+        return QString();
     }
 }
 
@@ -149,39 +151,40 @@ void CCharTip::showTip()
     EUnicodeCategory cat(getCategory(m_item.ucs4));
     QString details("<table>");
 
-    details += "<tr><td align=\"right\"><b>" + i18n("Category") + "&nbsp;</b></td><td>" + toStr(cat) + "</td></tr>";
-    details += "<tr><td align=\"right\"><b>" + i18n("UCS-4") + "&nbsp;</b></td><td>" + "U+" + QStringLiteral("%1").arg(m_item.ucs4, 4, 16) + "&nbsp;</td></tr>";
+    details += "<tr><td align=\"right\"><b>"_L1 + i18n("Category") + "&nbsp;</b></td><td>"_L1 + toStr(cat) + "</td></tr>"_L1;
+    details += "<tr><td align=\"right\"><b>"_L1 + i18n("UCS-4") + "&nbsp;</b></td><td>"_L1 + "U+"_L1 + QStringLiteral("%1").arg(m_item.ucs4, 4, 16)
+        + "&nbsp;</td></tr>"_L1;
 
     QString str(QString::fromUcs4(&(m_item.ucs4), 1));
-    details += "<tr><td align=\"right\"><b>" + i18n("UTF-16") + "&nbsp;</b></td><td>";
+    details += "<tr><td align=\"right\"><b>"_L1 + i18n("UTF-16") + "&nbsp;</b></td><td>"_L1;
 
     const ushort *utf16(str.utf16());
 
     for (int i = 0; utf16[i]; ++i) {
         if (i) {
-            details += ' ';
+            details += u' ';
         }
         details += QStringLiteral("0x%1").arg(utf16[i], 4, 16);
     }
-    details += "</td></tr>";
-    details += "<tr><td align=\"right\"><b>" + i18n("UTF-8") + "&nbsp;</b></td><td>";
+    details += "</td></tr>"_L1;
+    details += "<tr><td align=\"right\"><b>"_L1 + i18n("UTF-8") + "&nbsp;</b></td><td>"_L1;
 
     QByteArray utf8(str.toUtf8());
 
     for (int i = 0; i < utf8.size(); ++i) {
         if (i) {
-            details += ' ';
+            details += u' ';
         }
         details += QStringLiteral("0x%1").arg((unsigned char)(utf8.constData()[i]), 2, 16);
     }
-    details += "</td></tr>";
+    details += "</td></tr>"_L1;
 
     // Note: the "<b></b> below is just to stop Qt converting the xml entry into
     // a character!
     if ((0x0001 <= m_item.ucs4 && m_item.ucs4 <= 0xD7FF) || (0xE000 <= m_item.ucs4 && m_item.ucs4 <= 0xFFFD)
         || (0x10000 <= m_item.ucs4 && m_item.ucs4 <= 0x10FFFF)) {
-        details +=
-            "<tr><td align=\"right\"><b>" + i18n("XML Decimal Entity") + "&nbsp;</b></td><td>" + "&#<b></b>" + QString::number(m_item.ucs4) + ";</td></tr>";
+        details += "<tr><td align=\"right\"><b>"_L1 + i18n("XML Decimal Entity") + "&nbsp;</b></td><td>"_L1 + "&#<b></b>"_L1 + QString::number(m_item.ucs4)
+            + ";</td></tr>"_L1;
     }
 
     details += "</table>";

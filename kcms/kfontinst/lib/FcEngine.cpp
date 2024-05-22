@@ -617,7 +617,7 @@ static QString usableStr(XftFont *font, QString &str)
 
 static bool isFileName(const QString &name, quint32 style)
 {
-    return QChar('/') == name[0] || KFI_NO_STYLE_INFO == style;
+    return QLatin1Char('/') == name[0] || KFI_NO_STYLE_INFO == style;
 }
 
 static void setTransparentBackground(QImage &img, const QColor &col)

@@ -17,6 +17,8 @@
 #include <fontconfig/fontconfig.h>
 #include <stdio.h>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 namespace FcConfig
@@ -78,7 +80,7 @@ QString getConfigFile(bool system)
         }
         return files.front(); // Just return the 1st one...
     } else { // Hmmm... no known files?
-        return system ? "/etc/fonts/local.conf" : Misc::fileSyntax(home + "/.fonts.conf");
+        return system ? u"/etc/fonts/local.conf"_s : Misc::fileSyntax(home + "/.fonts.conf"_L1);
     }
 }
 

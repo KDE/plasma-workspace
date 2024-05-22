@@ -11,6 +11,8 @@
 #include <QStringList>
 #include <QTextStream>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 Style::Style(const QDomElement &elem, bool loadFiles)
@@ -83,43 +85,43 @@ QString Style::toXml(bool disabled, const QString &family) const
     }
 
     if (files.count() > 0) {
-        QString str("  <" FONT_TAG " ");
+        QString str("  <"_L1 + FONT_TAG + u' ');
         int weight, width, slant;
 
         KFI::FC::decomposeStyleVal(m_value, weight, width, slant);
 
         if (!family.isEmpty()) {
-            str += FAMILY_ATTR "=\"" + family + "\" ";
+            str += FAMILY_ATTR + "=\""_L1 + family + "\" "_L1;
         }
         if (KFI_NULL_SETTING != weight) {
-            str += WEIGHT_ATTR "=\"" + QString::number(weight) + "\" ";
+            str += WEIGHT_ATTR + "=\""_L1 + QString::number(weight) + "\" "_L1;
         }
         if (KFI_NULL_SETTING != width) {
-            str += WIDTH_ATTR "=\"" + QString::number(width) + "\" ";
+            str += WIDTH_ATTR + "=\""_L1 + QString::number(width) + "\" "_L1;
         }
         if (KFI_NULL_SETTING != slant) {
-            str += SLANT_ATTR "=\"" + QString::number(slant) + "\" ";
+            str += SLANT_ATTR + "=\""_L1 + QString::number(slant) + "\" "_L1;
         }
         if (!m_scalable) {
-            str += SCALABLE_ATTR "=\"false\" ";
+            str += SCALABLE_ATTR + "=\"false\" "_L1;
         }
 
         QStringList ws(WritingSystems::instance()->getLangs(m_writingSystems));
 
         if (!ws.isEmpty()) {
-            str += LANGS_ATTR "=\"" + ws.join(LANG_SEP) + "\" ";
+            str += LANGS_ATTR + "=\""_L1 + ws.join(LANG_SEP) + "\" "_L1;
         }
 
         if (1 == files.count()) {
-            str += (*files.begin()) + "/>";
+            str += (*files.begin()) + "/>"_L1;
         } else {
             QStringList::ConstIterator it(files.begin()), end(files.end());
 
-            str += ">\n";
+            str += QStringView(u">\n");
             for (; it != end; ++it) {
-                str += "   <" FILE_TAG " " + (*it) + "/>\n";
+                str += "   <"_L1 + FILE_TAG + u' ' + (*it) + "/>\n"_L1;
             }
-            str += "  </" FONT_TAG ">";
+            str += "  </"_L1 + FONT_TAG + ">"_L1;
         }
 
         return str;

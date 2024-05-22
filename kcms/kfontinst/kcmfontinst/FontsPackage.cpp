@@ -38,7 +38,7 @@ QSet<QUrl> extract(const QString &fileName, QTemporaryDir **tempDir)
 
                     if (entry && entry->isFile()) {
                         if (!(*tempDir)) {
-                            (*tempDir) = new QTemporaryDir(QDir::tempPath() + "/" KFI_TMP_DIR_PREFIX);
+                            (*tempDir) = new QTemporaryDir(QDir::tempPath() + u'/' + KFI_TMP_DIR_PREFIX);
                             (*tempDir)->setAutoRemove(true);
                         }
 

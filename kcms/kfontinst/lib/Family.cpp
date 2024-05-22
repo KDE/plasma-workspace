@@ -10,6 +10,8 @@
 #include <QDomElement>
 #include <QTextStream>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 Family::Family(const QDomElement &elem, bool loadStyles)
@@ -51,7 +53,7 @@ void Family::toXml(bool disabled, QTextStream &s) const
 
     if (entries.count() > 0) {
         if (!disabled) {
-            s << " <" FAMILY_TAG " " NAME_ATTR "=\"" << KFI::Misc::encodeText(m_name) << "\">\n";
+            s << " <"_L1 + FAMILY_TAG + u' ' + NAME_ATTR + "=\""_L1 << KFI::Misc::encodeText(m_name) << "\">\n"_L1;
         }
 
         QStringList::ConstIterator it(entries.begin()), end(entries.end());
@@ -61,7 +63,7 @@ void Family::toXml(bool disabled, QTextStream &s) const
         }
 
         if (!disabled) {
-            s << " </" FAMILY_TAG ">" << Qt::endl;
+            s << " </"_L1 + FAMILY_TAG + u'>' << Qt::endl;
         }
     }
 }
