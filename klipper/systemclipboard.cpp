@@ -133,7 +133,6 @@ void SystemClipboard::checkClipData(QClipboard::Mode mode)
 
     Ignore lock(mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel);
 
-    const bool isSelectionMode = mode == QClipboard::Selection;
     // internal to klipper, ignoring QSpinBox selections
     if (ignoreClipboardChanges()) {
         // keep our old clipboard, thanks
