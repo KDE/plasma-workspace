@@ -120,7 +120,7 @@ void KFonts::save()
         auto antiAliasingItem = fontsAASettings()->findItem("antiAliasing");
         Q_ASSERT(dpiItem && antiAliasingItem);
         if (dpiItem->isSaveNeeded() || antiAliasingItem->isSaveNeeded()) {
-            emit aliasingChangeApplied();
+            Q_EMIT aliasingChangeApplied();
         }
 
         forceFontDPIChanged = dpiItem->isSaveNeeded();
