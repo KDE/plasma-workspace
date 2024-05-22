@@ -18,6 +18,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(DesktopNotifier, "desktopnotifier.json")
 
+using namespace Qt::StringLiterals;
+
 DesktopNotifier::DesktopNotifier(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
 {
@@ -25,7 +27,7 @@ DesktopNotifier::DesktopNotifier(QObject *parent, const QList<QVariant> &)
 
     dirWatch = new KDirWatch(this);
     dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
-    dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + "Trash/files");
+    dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + "Trash/files"_L1);
     dirWatch->addFile(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs"));
 
     connect(dirWatch, &KDirWatch::created, this, &DesktopNotifier::created);
@@ -48,7 +50,7 @@ void DesktopNotifier::dirty(const QString &path)
 {
     Q_UNUSED(path)
 
-    if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + '/' + "Trash/files")) {
+    if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + "Trash/files"_L1)) {
         QList<QUrl> trashUrls;
 
         // Check for any .desktop file linking to trash:/ to update its icon

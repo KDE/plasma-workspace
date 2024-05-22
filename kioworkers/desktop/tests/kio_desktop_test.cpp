@@ -53,7 +53,7 @@ private Q_SLOTS:
         m_testFileName = QLatin1String("kio_desktop_test_file");
         qWarning() << "We will write in the desktop folder" << m_desktopPath;
         // NOTE: we must shut down kded if we started it in the CI! Do not detach!
-        m_kded.setProgram("kded6"_L1);
+        m_kded.setProgram(u"kded6"_s);
         m_kded.start();
         const auto started = m_kded.waitForStarted((1000ms).count());
         qWarning() << "Starting kded" << started;
@@ -61,9 +61,9 @@ private Q_SLOTS:
     }
     void cleanupTestCase()
     {
-        QFile::remove(m_desktopPath + '/' + m_testFileName);
-        QFile::remove(m_desktopPath + '/' + m_testFileName + ".part");
-        QFile::remove(m_desktopPath + '/' + m_testFileName + "_link");
+        QFile::remove(m_desktopPath + u'/' + m_testFileName);
+        QFile::remove(m_desktopPath + u'/' + m_testFileName + ".part"_L1);
+        QFile::remove(m_desktopPath + u'/' + m_testFileName + "_link"_L1);
         m_kded.kill();
     }
 
@@ -74,16 +74,16 @@ private Q_SLOTS:
         tempFile.write("Hello world\n", 12);
         QString fileName = tempFile.fileName();
         tempFile.close();
-        KIO::Job *job = KIO::file_copy(QUrl::fromLocalFile(fileName), QUrl("desktop:/" + m_testFileName), -1, KIO::HideProgressInfo);
+        KIO::Job *job = KIO::file_copy(QUrl::fromLocalFile(fileName), QUrl("desktop:/"_L1 + m_testFileName), -1, KIO::HideProgressInfo);
         job->setUiDelegate(nullptr);
         QVERIFY(job->exec());
-        QVERIFY(QFile::exists(m_desktopPath + '/' + m_testFileName));
+        QVERIFY(QFile::exists(m_desktopPath + u'/' + m_testFileName));
     }
 
     void testMostLocalUrl() // relies on testCopyToDesktop being run before
     {
-        const QUrl desktopUrl("desktop:/" + m_testFileName);
-        const QString filePath(m_desktopPath + '/' + m_testFileName);
+        const QUrl desktopUrl("desktop:/"_L1 + m_testFileName);
+        const QString filePath(m_desktopPath + u'/' + m_testFileName);
         KIO::StatJob *job = KIO::mostLocalUrl(desktopUrl, KIO::HideProgressInfo);
         QVERIFY(job);
         bool ok = job->exec();
@@ -93,10 +93,10 @@ private Q_SLOTS:
 
     void testCreateSymlink()
     {
-        const QUrl desktopUrl("desktop:/" + m_testFileName);
-        const QUrl desktopLink("desktop:/" + m_testFileName + "_link");
-        const QString source = m_desktopPath + '/' + m_testFileName;
-        const QString localLink = source + "_link";
+        const QUrl desktopUrl("desktop:/"_L1 + m_testFileName);
+        const QUrl desktopLink("desktop:/"_L1 + m_testFileName + "_link"_L1);
+        const QString source = m_desktopPath + u'/' + m_testFileName;
+        const QString localLink = source + "_link"_L1;
 
         // Create a symlink using kio_desktop
         KIO::Job *linkJob = KIO::symlink(m_testFileName, desktopLink, KIO::HideProgressInfo);
@@ -122,9 +122,9 @@ private Q_SLOTS:
         QTest::addColumn<QUrl>("srcUrl");
         QTest::addColumn<QUrl>("destUrl");
 
-        const QString str = "desktop:/" + m_testFileName;
+        const QString str = "desktop:/"_L1 + m_testFileName;
         const QUrl orig(str);
-        const QUrl part(str + ".part");
+        const QUrl part(str + ".part"_L1);
         QTest::newRow("orig_to_part") << false << orig << part;
         QTest::newRow("part_to_orig") << false << part << orig;
         // Warnings: all tests without dirlister cache should above this line
@@ -180,11 +180,11 @@ private Q_SLOTS:
     void testTrashAndUndo()
     {
         // Given a file on the desktop...
-        const QString localPath = m_desktopPath + '/' + m_testFileName;
+        const QString localPath = m_desktopPath + u'/' + m_testFileName;
         QVERIFY(QFile::exists(localPath));
 
         // ...moved to the trash
-        const QUrl desktopUrl("desktop:/" + m_testFileName);
+        const QUrl desktopUrl("desktop:/"_L1 + m_testFileName);
         KIO::Job *job = KIO::trash({desktopUrl}, KIO::HideProgressInfo);
         job->setUiDelegate(nullptr);
         KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, {desktopUrl}, QUrl(QStringLiteral("trash:/")), job);

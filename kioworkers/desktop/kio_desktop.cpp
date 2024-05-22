@@ -20,6 +20,8 @@
 #include "desktopnotifier_interface.h"
 #include "kded_interface.h"
 
+using namespace Qt::StringLiterals;
+
 // Pseudo plugin class to embed meta data
 class KIOPluginForMetaData : public QObject
 {
@@ -74,7 +76,8 @@ void DesktopProtocol::checkLocalInstall()
 
     if (desktopIsEmpty) {
         // Copy the .directory file
-        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.desktop")), desktopPath + "/.directory");
+        QFile::copy(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/directory.desktop")),
+                    desktopPath + "/.directory"_L1);
 
         // Copy the desktop links
         QSet<QString> links;
@@ -87,7 +90,7 @@ void DesktopProtocol::checkLocalInstall()
             }
         }
 
-        foreach (const QString &link, links) {
+        for (const QString &link : std::as_const(links)) {
             const auto fullPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("kio_desktop/DesktopLinks/%1").arg(link));
             KDesktopFile file(fullPath);
             if (!file.desktopGroup().readEntry("Hidden", false))

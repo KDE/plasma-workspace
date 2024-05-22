@@ -417,7 +417,7 @@ QMap<QString, QString> getFontFileMap(const QSet<QString> &files)
 
 QString modifyName(const QString &fname)
 {
-    static const char16_t constSymbols[] = {u'-', u' ', u':', u';', u'/', u'~', 0};
+    static constexpr char16_t constSymbols[] = {u'-', u' ', u':', u';', u'/', u'~', 0};
 
     QString rv(fname);
 
