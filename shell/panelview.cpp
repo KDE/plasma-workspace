@@ -599,6 +599,7 @@ void PanelView::positionPanel()
         requestUpdate();
     }
 
+    preparePopupPosition();
     updateMask();
     Q_EMIT geometryChanged();
 
@@ -729,9 +730,7 @@ void PanelView::resizePanel()
         resize(targetSize);
     }
 
-    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
-    const QPoint pos = geometryByDistance(0).topLeft();
-    setPosition(pos);
+    // position will be updated implicitly from resizeEvent
 }
 
 void PanelView::restore()
@@ -897,6 +896,7 @@ void PanelView::resizeEvent(QResizeEvent *ev)
     updateEnabledBorders();
     // don't setGeometry() to make really sure we aren't doing a resize loop
     if (m_screenToFollow && containment()) {
+        preparePopupPosition();
         m_strutsTimer.start(STRUTSTIMERDELAY);
         Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
     }
@@ -1734,6 +1734,15 @@ void PanelView::updateFloating()
 void PanelView::updateFloatingAnimationDuration()
 {
     m_floatingnessAnimation.setDuration(rootObject()->property("floatingnessAnimationDuration").toInt());
+}
+
+void PanelView::preparePopupPosition()
+{
+    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
+    const QPoint pos = geometryByDistance(0).topLeft();
+    setPosition(pos);
+    // This makes sure the panel size is refreshed for the changed position
+    resizePanel();
 }
 
 #include "moc_panelview.cpp"
