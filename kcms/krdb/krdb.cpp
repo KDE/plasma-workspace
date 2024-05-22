@@ -91,7 +91,7 @@ static QString writableGtkrc(int version)
     QString gtkrc = QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation);
     QDir dir;
     dir.mkpath(gtkrc);
-    gtkrc += 2 == version ? "/gtkrc-2.0" : "/gtkrc";
+    gtkrc += 2 == version ? u"/gtkrc-2.0"_s : u"/gtkrc"_s;
     return gtkrc;
 }
 
@@ -116,7 +116,7 @@ static void applyGtkStyles(int version)
         list.prepend(systemGtkrc);
     }
 
-    list.removeAll(QLatin1String(""));
+    list.removeAll(QString());
 
     const QString gtkkde = writableGtkrc(version);
     list.removeAll(gtkkde);
@@ -125,7 +125,7 @@ static void applyGtkStyles(int version)
     // Pass env. var to kdeinit.
     const QString value = list.join(QLatin1Char(':'));
     QProcessEnvironment newEnv;
-    newEnv.insert(varName, value);
+    newEnv.insert(QString::fromLatin1(varName), value);
     new KUpdateLaunchEnvironmentJob(newEnv);
 }
 
@@ -270,7 +270,7 @@ static void createGtkrc(const QPalette &cg, bool exportGtkTheme, const QString &
 
     if (exportGtkTheme) {
         QString gtkStyle;
-        if (gtkTheme.toLower() == QLatin1String("oxygen"))
+        if (QString::compare(gtkTheme, QLatin1String("oxygen"), Qt::CaseInsensitive) == 0)
             gtkStyle = QStringLiteral("oxygen-gtk");
         else
             gtkStyle = gtkTheme;
@@ -281,9 +281,9 @@ static void createGtkrc(const QPalette &cg, bool exportGtkTheme, const QString &
         if (listGtkrc.contains(saveFile.fileName()))
             listGtkrc.removeAll(saveFile.fileName());
         listGtkrc.append(QDir::homePath() + userGtkrc(version));
-        listGtkrc.append(QDir::homePath() + "/.gtkrc-2.0-kde");
-        listGtkrc.append(QDir::homePath() + "/.gtkrc-2.0-kde4");
-        listGtkrc.removeAll(QLatin1String(""));
+        listGtkrc.append(QDir::homePath() + "/.gtkrc-2.0-kde"_L1);
+        listGtkrc.append(QDir::homePath() + "/.gtkrc-2.0-kde4"_L1);
+        listGtkrc.removeAll(QString());
         listGtkrc.removeDuplicates();
         for (int i = 0; i < listGtkrc.size(); ++i) {
             if ((exist_gtkrc = QFile::exists(listGtkrc.at(i))))
@@ -297,7 +297,7 @@ static void createGtkrc(const QPalette &cg, bool exportGtkTheme, const QString &
                 QStringList gtk2ThemePath;
                 gtk2ThemeFilename.clear();
                 QByteArray xdgDataDirs = getenv("XDG_DATA_DIRS");
-                gtk2ThemePath.append(QDir::homePath() + "/.local");
+                gtk2ThemePath.append(QDir::homePath() + "/.local"_L1);
                 gtk2ThemePath.append(QFile::decodeName(xdgDataDirs).split(QLatin1Char(':')));
                 gtk2ThemePath.removeDuplicates();
                 for (int i = 0; i < gtk2ThemePath.size(); ++i) {
@@ -372,13 +372,13 @@ void runRdb(unsigned int flags)
 
     // Merge ~/.Xresources or fallback to ~/.Xdefaults
     QString homeDir = QDir::homePath();
-    QString xResources = homeDir + "/.Xresources";
+    QString xResources = homeDir + "/.Xresources"_L1;
 
     // very primitive support for ~/.Xresources by appending it
     if (QFile::exists(xResources))
         copyFile(tmpFile, xResources, true);
     else
-        copyFile(tmpFile, homeDir + "/.Xdefaults", true);
+        copyFile(tmpFile, homeDir + "/.Xdefaults"_L1, true);
 
     // Export the Xcursor theme & size settings
     KConfigGroup mousecfg(KSharedConfig::openConfig(QStringLiteral("kcminputrc")), u"Mouse"_s);
@@ -392,8 +392,8 @@ void runRdb(unsigned int flags)
     }
 
     QString contents;
-    contents += "Xcursor.theme: " + theme + '\n';
-    contents += "Xcursor.size: " + QString::number(cursorSize) + '\n';
+    contents += "Xcursor.theme: "_L1 + theme + u'\n';
+    contents += "Xcursor.size: "_L1 + QString::number(cursorSize) + u'\n';
 
     if (exportXftSettings) {
         contents += QLatin1String("Xft.antialias: ");
@@ -411,16 +411,16 @@ void runRdb(unsigned int flags)
                 contents += QLatin1String("1\n");
             else
                 contents += QLatin1String("0\n");
-            contents += "Xft.hintstyle: " + hintStyle + '\n';
+            contents += "Xft.hintstyle: "_L1 + hintStyle + u'\n';
         }
 
         QString subPixel = generalCfgGroup.readEntry("XftSubPixel", "rgb");
         if (!subPixel.isEmpty())
-            contents += "Xft.rgba: " + subPixel + '\n';
+            contents += "Xft.rgba: "_L1 + subPixel + u'\n';
 
         int dpi = xftDpi();
         if (dpi > 0)
-            contents += "Xft.dpi: " + QString::number(dpi) + '\n';
+            contents += "Xft.dpi: "_L1 + QString::number(dpi) + u'\n';
         else {
             KProcess queryProc;
             queryProc << QStringLiteral("xrdb") << QStringLiteral("-query");
@@ -455,7 +455,7 @@ void runRdb(unsigned int flags)
     }
 
     if (contents.length() > 0)
-        tmpFile.write(contents.toLatin1(), contents.length());
+        tmpFile.write(contents.toLatin1());
 
     tmpFile.flush();
 
@@ -463,9 +463,7 @@ void runRdb(unsigned int flags)
 #ifndef NDEBUG
     proc << QStringLiteral("xrdb") << QStringLiteral("-merge") << tmpFile.fileName();
 #else
-    proc << "xrdb"
-         << "-quiet"
-         << "-merge" << tmpFile.fileName();
+    proc << u"xrdb"_s << u"-quiet"_s << u"-merge"_s << tmpFile.fileName();
 #endif
     proc.execute();
 
@@ -501,8 +499,8 @@ void runRdb(unsigned int flags)
             static Atom qt_settings_timestamp = 0;
             if (!qt_settings_timestamp) {
                 QString atomname(QStringLiteral("_QT_SETTINGS_TIMESTAMP_"));
-                atomname += XDisplayName(nullptr); // Use the $DISPLAY envvar.
-                qt_settings_timestamp = XInternAtom(QX11Info::display(), atomname.toLatin1(), False);
+                atomname += QString::fromLocal8Bit(XDisplayName(nullptr)); // Use the $DISPLAY envvar.
+                qt_settings_timestamp = XInternAtom(QX11Info::display(), atomname.toLatin1().constData(), False);
             }
 
             QBuffer stamp;
