@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -70,10 +70,11 @@ msgstr "Няма падзей на гэты дзень"
 msgid "Switch…"
 msgstr "Пераключыцца…"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, kde-format
-msgid "Switch to another timezone"
+#, fuzzy, kde-format
+#| msgid "Switch to another timezone"
+msgid "Switch to another time zone"
 msgstr "Пераключыцца на іншы часавы пояс"
 
 #: package/contents/ui/configAppearance.qml:51
@@ -301,10 +302,15 @@ msgid "Clock is currently using this time zone"
 msgstr "Гадзіннік зараз выкарыстоўвае гэты часавы пояс"
 
 #: package/contents/ui/configTimeZones.qml:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label This list item shows a time zone city name that is identical to "
+#| "the local time zone's city, and will be hidden in the timezone display in "
+#| "the plasmoid's popup"
+#| msgid "Hidden while this is the local time zone's city"
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
-"local time zone's city, and will be hidden in the timezone display in the "
+"local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
 msgstr "Схавана, пакуль гэта горад мясцовага часавага пояса"
@@ -353,14 +359,18 @@ msgstr ""
 "пераключыце агульнасістэмны часавы пояс."
 
 #: package/contents/ui/configTimeZones.qml:206
-#, kde-format
-msgid "Add More Timezones"
+#, fuzzy, kde-format
+#| msgid "Add More Timezones"
+msgid "Add More Time Zones"
 msgstr "Дадаць больш часавых паясоў"
 
 #: package/contents/ui/configTimeZones.qml:218
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "At least one time zone needs to be enabled. Your local timezone was "
+#| "enabled automatically."
 msgid ""
-"At least one time zone needs to be enabled. Your local timezone was enabled "
+"At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
 msgstr ""
 "Неабходна ўключыць прынамсі адзін часавы пояс. Ваш мясцовы часавы пояс быў "
@@ -376,17 +386,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Скапіяваць у буфер абмену"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Падладзіць дату і час…"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Вызначыць фармат часу…"

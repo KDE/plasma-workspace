@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2022-05-30 10:56+0700\n"
 "Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "Nama tema kursor saat ini"
 msgid "Current cursor size"
 msgstr "Ukuran kursor saat ini"
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:313
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -40,27 +40,27 @@ msgstr ""
 "Kamu harus menjalankan ulang sesi Plasma untuk perubahan tersebut agar "
 "berpengaruh."
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:387
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Tak bisa menciptakan sebuah file temporer."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:398
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Tak bisa mengunduh arsip tema ikon: %1"
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "File bukanlah arsip tema kursor yang absah."
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Gagal menciptakan folder 'ikon-ikon'."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:445
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "Sebuah tema bernama %1 sudah ada di folder tema ikonmu. Apakah kamu ingin "
 "menggantinya dengan yang ini?"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:449
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Timpa Tema?"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:473
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Tema terinstal dengan sukses."
@@ -86,13 +86,13 @@ msgstr "Tema terinstal dengan sukses."
 msgid "Timeout in seconds"
 msgstr ""
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr ""
 "Ukuran yang diminta '%1' tidak tersedia, menggunakan %2 sebagai gantinya."
 
-#: plasma-apply-cursortheme.cpp:63
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -103,7 +103,7 @@ msgstr ""
 "Plasma saat ini, tanpa secara tidak sengaja mengaturnya ke tema yang tidak "
 "tersedia, atau yang sudah diatur."
 
-#: plasma-apply-cursortheme.cpp:67
+#: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
@@ -112,7 +112,7 @@ msgstr ""
 "Nama tema kursor yang ingin kamu atur untuk sesi Plasma saat ini (melalui "
 "alur penuh hanya akan menggunakan bagian terakhir dari alur)"
 
-#: plasma-apply-cursortheme.cpp:68
+#: plasma-apply-cursortheme.cpp:70
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
@@ -120,12 +120,12 @@ msgstr ""
 "Tampilkan semua tema yang tersedia di sistem (dan yang merupakan tema saat "
 "ini)"
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:71
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Gunakan ukuran tertentu, bukan ukuran baku tema"
 
-#: plasma-apply-cursortheme.cpp:90
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -134,13 +134,13 @@ msgstr ""
 "Tema \"%1\" yang diminta sudah ditetapkan sebagai tema untuk sesi Plasma "
 "saat ini."
 
-#: plasma-apply-cursortheme.cpp:101
+#: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr "Berhasil menerapkan tema kursor mouse %1 ke sesi Plasma saat ini"
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
@@ -149,7 +149,7 @@ msgstr ""
 "Kamu harus menjalankan ulang sesi Plasma untuk menerapkan tema kursor mouse "
 "yang baru agar ditampilkan dengan benar."
 
-#: plasma-apply-cursortheme.cpp:113
+#: plasma-apply-cursortheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -158,12 +158,12 @@ msgstr ""
 "Tidak dapat menemukan tema \"%1\". Tema seharusnya salahsatu dari opsi "
 "berikut ini: %2"
 
-#: plasma-apply-cursortheme.cpp:121
+#: plasma-apply-cursortheme.cpp:123
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
 msgstr "Kamu memiliki tema kursor mouse berikut di sistem:"
 
-#: plasma-apply-cursortheme.cpp:126
+#: plasma-apply-cursortheme.cpp:128
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Tema saat ini untuk sesi Plasma ini)"

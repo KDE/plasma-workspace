@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2023-08-06 11:26+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -30,33 +30,33 @@ msgstr "Názov aktuálnej témy kurzora"
 msgid "Current cursor size"
 msgstr "Aktuálna veľkosť kurzora"
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:313
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Plasma musí byť reštartovaná, aby sa zmena prejavila."
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:387
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nepodarilo sa vytvoriť dočasný súbor."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:398
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Nepodarilo sa stiahnuť archív témy ikon: %1."
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Súbor asi nie je platný archív kurzorovej témy."
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Nepodarilo sa vytvoriť priečinok 'ikony'."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:445
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -65,12 +65,12 @@ msgstr ""
 "Téma s názvom %1 už existuje vo vašom priečinku kurzorových tém. Chcete ju "
 "nahradiť novou?"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:449
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Prepísať tému?"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:473
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Téma úspešne nainštalovaná."
@@ -82,13 +82,13 @@ msgstr "Téma úspešne nainštalovaná."
 msgid "Timeout in seconds"
 msgstr "Časový limit v sekundách"
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr ""
 "Požadovaná veľkosť '%1' nie je k dispozícii, namiesto nej sa použije %2."
 
-#: plasma-apply-cursortheme.cpp:63
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -99,7 +99,7 @@ msgstr ""
 "Plasmy bez toho, aby ste ju omylom nastavili na tému, ktorá buď nie je k "
 "dispozícii, alebo ktorá je už nastavená."
 
-#: plasma-apply-cursortheme.cpp:67
+#: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
@@ -108,18 +108,18 @@ msgstr ""
 "Názov témy kurzora myši, ktorú chcete nastaviť pre svoje aktuálne sedenie "
 "Plasmy (pri prechode úplnou cestou sa použije iba posledná časť cesty)."
 
-#: plasma-apply-cursortheme.cpp:68
+#: plasma-apply-cursortheme.cpp:70
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "Zobraziť všetky témy dostupné v systéme (a ktorá je aktuálna téma)"
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:71
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "Použitie konkrétnej veľkosti namiesto predvolenej veľkosti témy"
 
-#: plasma-apply-cursortheme.cpp:90
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -127,14 +127,14 @@ msgid ""
 msgstr ""
 "Požadovaná téma „%1“ je už nastavená ako téma pre aktuálne sedenie Plasmy."
 
-#: plasma-apply-cursortheme.cpp:101
+#: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr ""
 "Téma kurzora myši %1 bola úspešne použitá na vaše aktuálne sedenie Plasmy"
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
@@ -143,7 +143,7 @@ msgstr ""
 "Ak chcete, aby sa novo použitá téma kurzora myši zobrazovala správne, musíte "
 "znovu spustiť Plasma sedenie."
 
-#: plasma-apply-cursortheme.cpp:113
+#: plasma-apply-cursortheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -152,12 +152,12 @@ msgstr ""
 "Nepodarilo sa nájsť tému „%1“. Téma by mala byť jednou z nasledujúcich "
 "možností: %2"
 
-#: plasma-apply-cursortheme.cpp:121
+#: plasma-apply-cursortheme.cpp:123
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
 msgstr "Vo vašom systéme máte nasledujúce témy kurzora myši:"
 
-#: plasma-apply-cursortheme.cpp:126
+#: plasma-apply-cursortheme.cpp:128
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(Aktuálna téma tohto sedenia Plasma)"

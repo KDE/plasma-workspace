@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2023-10-21 07:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -66,10 +66,11 @@ msgstr "ამ დღეს არაფერი ხდება"
 msgid "Switch…"
 msgstr "გადართვა…"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, kde-format
-msgid "Switch to another timezone"
+#, fuzzy, kde-format
+#| msgid "Switch to another timezone"
+msgid "Switch to another time zone"
 msgstr "დროის სხვა სარტყელზე გადართვა"
 
 #: package/contents/ui/configAppearance.qml:51
@@ -297,10 +298,15 @@ msgid "Clock is currently using this time zone"
 msgstr "ამჟამად საათი დროის ამ სარტყელს იყენებს"
 
 #: package/contents/ui/configTimeZones.qml:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label This list item shows a time zone city name that is identical to "
+#| "the local time zone's city, and will be hidden in the timezone display in "
+#| "the plasmoid's popup"
+#| msgid "Hidden while this is the local time zone's city"
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
-"local time zone's city, and will be hidden in the timezone display in the "
+"local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
 msgstr "დამალულია, რადგან ეს ლოკალური დროის სარტყელი ქალაქია"
@@ -351,14 +357,18 @@ msgstr ""
 "სარტყელს. მგზავრობისას გადაერთეთ დროის ლოკალურ სარტყელზე."
 
 #: package/contents/ui/configTimeZones.qml:206
-#, kde-format
-msgid "Add More Timezones"
+#, fuzzy, kde-format
+#| msgid "Add More Timezones"
+msgid "Add More Time Zones"
 msgstr "დროის მეტი სარტყლის დამატება"
 
 #: package/contents/ui/configTimeZones.qml:218
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "At least one time zone needs to be enabled. Your local timezone was "
+#| "enabled automatically."
 msgid ""
-"At least one time zone needs to be enabled. Your local timezone was enabled "
+"At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
 msgstr ""
 "საჭიროა, ჩართული იყოს დროის ერთი სარტყელი მაინც. თქვენი ლოკალური დროის "
@@ -374,17 +384,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "გაცვლის ბუფერში კოპირება"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "დროისა და თარიღის გასწორება…"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgid "Set Time Format…"
 msgstr "დროის ფორმატის დაყენება…"

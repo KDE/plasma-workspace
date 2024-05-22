@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgeography\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -812,10 +812,11 @@ msgstr "Sem eventos para este dia"
 msgid "Switch…"
 msgstr "Mudar…"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, kde-format
-msgid "Switch to another timezone"
+#, fuzzy, kde-format
+#| msgid "Switch to another timezone"
+msgid "Switch to another time zone"
 msgstr "Mudar para outro fuso-horário"
 
 #: package/contents/ui/configAppearance.qml:51
@@ -1050,10 +1051,15 @@ msgid "Clock is currently using this time zone"
 msgstr "O relógio já está a usar este fuso-horário"
 
 #: package/contents/ui/configTimeZones.qml:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label This list item shows a time zone city name that is identical to "
+#| "the local time zone's city, and will be hidden in the timezone display in "
+#| "the plasmoid's popup"
+#| msgid "Hidden while this is the local time zone's city"
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
-"local time zone's city, and will be hidden in the timezone display in the "
+"local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
 msgstr "Escondido enquanto esta é a cidade do fuso-horário local"
@@ -1102,14 +1108,18 @@ msgstr ""
 "sistema. Quando viajar, mude o fuso-horário local em alternativa."
 
 #: package/contents/ui/configTimeZones.qml:206
-#, kde-format
-msgid "Add More Timezones"
+#, fuzzy, kde-format
+#| msgid "Add More Timezones"
+msgid "Add More Time Zones"
 msgstr "Adicionar Mais Fusos-Horários"
 
 #: package/contents/ui/configTimeZones.qml:218
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "At least one time zone needs to be enabled. Your local timezone was "
+#| "enabled automatically."
 msgid ""
-"At least one time zone needs to be enabled. Your local timezone was enabled "
+"At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
 msgstr ""
 "Pelo menos um dos fusos-horários terá de estar activo. O seu fuso-horário "
@@ -1125,17 +1135,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de Transferência"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Acertar a Data e Hora…"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Mudar o Formato da Hora…"

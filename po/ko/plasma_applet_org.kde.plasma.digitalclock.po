@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2024-02-09 19:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -65,10 +65,11 @@ msgstr "해당하는 날짜의 이벤트 없음"
 msgid "Switch…"
 msgstr "바꾸기…"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, kde-format
-msgid "Switch to another timezone"
+#, fuzzy, kde-format
+#| msgid "Switch to another timezone"
+msgid "Switch to another time zone"
 msgstr "다른 시간대로 전환"
 
 #: package/contents/ui/configAppearance.qml:51
@@ -294,10 +295,15 @@ msgid "Clock is currently using this time zone"
 msgstr "시계에서 현재 다음 시간대 사용 중"
 
 #: package/contents/ui/configTimeZones.qml:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label This list item shows a time zone city name that is identical to "
+#| "the local time zone's city, and will be hidden in the timezone display in "
+#| "the plasmoid's popup"
+#| msgid "Hidden while this is the local time zone's city"
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
-"local time zone's city, and will be hidden in the timezone display in the "
+"local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
 msgstr "기본 시간대 도시에서 숨기기"
@@ -345,14 +351,18 @@ msgstr ""
 "템 기본 시간대를 변경하십시오."
 
 #: package/contents/ui/configTimeZones.qml:206
-#, kde-format
-msgid "Add More Timezones"
+#, fuzzy, kde-format
+#| msgid "Add More Timezones"
+msgid "Add More Time Zones"
 msgstr "더 많은 시간대 추가"
 
 #: package/contents/ui/configTimeZones.qml:218
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "At least one time zone needs to be enabled. Your local timezone was "
+#| "enabled automatically."
 msgid ""
-"At least one time zone needs to be enabled. Your local timezone was enabled "
+"At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
 msgstr ""
 "최소한 하나의 시간대를 선택해야 합니다. 현재 지역 시간대가 자동으로 선택되었"
@@ -368,17 +378,17 @@ msgstr "%1, %2(%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "날짜와 시간 조정…"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgid "Set Time Format…"
 msgstr "시간 형식 설정…"

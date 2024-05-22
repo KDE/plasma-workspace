@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2023-09-21 23:25+0530\n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -67,10 +67,11 @@ msgstr "अस्य दिवसस्य कृते कोऽपि का�
 msgid "Switch…"
 msgstr "परिवर्तय…"
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, kde-format
-msgid "Switch to another timezone"
+#, fuzzy, kde-format
+#| msgid "Switch to another timezone"
+msgid "Switch to another time zone"
 msgstr "अन्यसमयक्षेत्रं प्रति गच्छन्तु"
 
 #: package/contents/ui/configAppearance.qml:51
@@ -298,10 +299,15 @@ msgid "Clock is currently using this time zone"
 msgstr "घड़ी सम्प्रति एतत् समयक्षेत्रं उपयुज्यते"
 
 #: package/contents/ui/configTimeZones.qml:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@label This list item shows a time zone city name that is identical to "
+#| "the local time zone's city, and will be hidden in the timezone display in "
+#| "the plasmoid's popup"
+#| msgid "Hidden while this is the local time zone's city"
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
-"local time zone's city, and will be hidden in the timezone display in the "
+"local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
 msgstr "गुप्तं यदा एतत् स्थानीयसमयक्षेत्रस्य नगरम् अस्ति"
@@ -350,14 +356,18 @@ msgstr ""
 "कुर्वन्ति तदा तस्य स्थाने सङ्गणकतन्त्रव्यापी समयक्षेत्रं परिवर्तयन्तु ।."
 
 #: package/contents/ui/configTimeZones.qml:206
-#, kde-format
-msgid "Add More Timezones"
+#, fuzzy, kde-format
+#| msgid "Add More Timezones"
+msgid "Add More Time Zones"
 msgstr "अधिकानि समयक्षेत्राणि योजयन्तु"
 
 #: package/contents/ui/configTimeZones.qml:218
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "At least one time zone needs to be enabled. Your local timezone was "
+#| "enabled automatically."
 msgid ""
-"At least one time zone needs to be enabled. Your local timezone was enabled "
+"At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
 msgstr ""
 "न्यूनातिन्यूनम् एकः समयक्षेत्रः सक्षमः करणीयः । भवतः स्थानीयसमयक्षेत्रं स्वयमेव सक्षमम् अभवत् ।."
@@ -372,17 +382,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "अंशफलकम् प्रति प्रतिलिख्यताम्"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "तिथिं समयं च समायोजयन्तु…"
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgid "Set Time Format…"
 msgstr "समय प्रारूपं निरूपयतु…"

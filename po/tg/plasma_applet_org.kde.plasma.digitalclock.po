@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2019-09-23 21:28+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -65,11 +65,11 @@ msgstr "Ягон рӯйдод барои ин рӯз нест"
 msgid "Switch…"
 msgstr ""
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
 #, fuzzy, kde-format
 #| msgid "Show local time zone"
-msgid "Switch to another timezone"
+msgid "Switch to another time zone"
 msgstr "Нишон додани минтақаи вақти маҳаллӣ"
 
 #: package/contents/ui/configAppearance.qml:51
@@ -298,7 +298,7 @@ msgstr ""
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
-"local time zone's city, and will be hidden in the timezone display in the "
+"local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
 msgstr ""
@@ -346,14 +346,15 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:206
-#, kde-format
-msgid "Add More Timezones"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Time Zones"
+msgid "Add More Time Zones"
+msgstr "Минтақаи вақт"
 
 #: package/contents/ui/configTimeZones.qml:218
 #, kde-format
 msgid ""
-"At least one time zone needs to be enabled. Your local timezone was enabled "
+"At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
 msgstr ""
 
@@ -367,17 +368,17 @@ msgstr ""
 msgid "%1, %2"
 msgstr ""
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr ""
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgid "Set Time Format…"
 msgstr ""

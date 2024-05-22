@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2021-03-05 12:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -67,10 +67,11 @@ msgstr "ഈ ദിവസത്തേക്ക് പരിപാടികളൊ�
 msgid "Switch…"
 msgstr ""
 
-#: package/contents/ui/CalendarView.qml:434
+#: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, kde-format
-msgid "Switch to another timezone"
+#, fuzzy, kde-format
+#| msgid "Switch to another timezone"
+msgid "Switch to another time zone"
 msgstr "മറ്റൊരു സമയമേഖലയിലേക്ക് മാറുക"
 
 #: package/contents/ui/configAppearance.qml:51
@@ -301,7 +302,7 @@ msgstr ""
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
-"local time zone's city, and will be hidden in the timezone display in the "
+"local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
 msgstr ""
@@ -355,14 +356,18 @@ msgstr ""
 "മാറ്റില്ലെന്നത് ശ്രദ്ധിക്കുക. നിങ്ങൾ യാത്ര ചെയ്യുമ്പോൾ, പകരം പ്രാദേശിക സമയ മേഖല മാറ്റുക."
 
 #: package/contents/ui/configTimeZones.qml:206
-#, kde-format
-msgid "Add More Timezones"
+#, fuzzy, kde-format
+#| msgid "Add More Timezones"
+msgid "Add More Time Zones"
 msgstr "കൂടുതൽ സമയ മേഖലകൾ കൂട്ടിച്ചേര്‍ക്കുക"
 
 #: package/contents/ui/configTimeZones.qml:218
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "At least one time zone needs to be enabled. Your local timezone was "
+#| "enabled automatically."
 msgid ""
-"At least one time zone needs to be enabled. Your local timezone was enabled "
+"At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
 msgstr ""
 "കുറഞ്ഞത് ഒരു സമയ മേഖലയെങ്കിലും പ്രവർത്തനക്ഷമമാക്കേണ്ടതുണ്ട്. നിങ്ങളുടെ പ്രാദേശിക സമയമേഖല "
@@ -378,17 +383,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:191
+#: package/contents/ui/main.qml:192
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "ഓര്‍മ്മചെപ്പിലേക്ക് പകര്‍ത്തുക"
 
-#: package/contents/ui/main.qml:195
+#: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr ""
 
-#: package/contents/ui/main.qml:201
+#: package/contents/ui/main.qml:202
 #, kde-format
 msgid "Set Time Format…"
 msgstr ""

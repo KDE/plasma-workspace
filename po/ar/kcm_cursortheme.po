@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2024-02-10 17:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -38,45 +38,45 @@ msgstr "اسم سمة المؤشر الحالية"
 msgid "Current cursor size"
 msgstr "حجم المؤشر الحالي"
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:313
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "عليك إعادة تشغيل جلسة بلازما  لتأخذ التغييرات تأثيرها."
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:387
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "لم يتمكن من إنشاء ملف مؤقت"
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:398
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "لم يتمكن من تنزيل سمة الأيقونات: %1"
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "الملف ليس أرشيف سمة أيقونة صالحًا."
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "فشل في إنشاء مجلد 'الأيقونات'"
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:445
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "توجد مسبقا سمة باسم %1 في مجلد سمات الأيقونات, هل تريد استبدالها بهذه؟"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:449
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "أطمس السِمة ؟"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:473
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "ثبتت السمة بنجاح."
@@ -88,12 +88,12 @@ msgstr "ثبتت السمة بنجاح."
 msgid "Timeout in seconds"
 msgstr "المهلة بالثواني"
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr "لا يتوفر الحجم '%1'، سيستعمل %2 عوضاً عن ذلك."
 
-#: plasma-apply-cursortheme.cpp:63
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -103,7 +103,7 @@ msgstr ""
 "تتيح لك هذه الأداة ضبط سمة مؤشر الفأرة لجلسة البلازما الحالية، دون ضبطه عن "
 "طريق الخطأ على نظام إما غير متوفر ، أو تم تعيينه بالفعل."
 
-#: plasma-apply-cursortheme.cpp:67
+#: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
@@ -112,31 +112,31 @@ msgstr ""
 "اسم سمة المؤشر الذي ترغب في تعيينه لجلسة البلازما الحالية(تمرير مسار كامل "
 "سيستخدم فقط الجزء الأخير من المسار)"
 
-#: plasma-apply-cursortheme.cpp:68
+#: plasma-apply-cursortheme.cpp:70
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "اعرض جميع السمات المتوفرة على النظام (وما السمة الحالية)"
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:71
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "استخدم حجم المحدد عوضاً عن الحجم المبدئي السمة"
 
-#: plasma-apply-cursortheme.cpp:90
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "تم بالفعل تعيين السمة المطلوبة \"%1\" كسمة لجلسة البلازما الحالية."
 
-#: plasma-apply-cursortheme.cpp:101
+#: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr "تم بنجاح تطبيق سمة مؤشر الفأرة %1 على جلسة بلازما الحاليةز"
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
@@ -144,7 +144,7 @@ msgid ""
 msgstr ""
 "عليك إعادة تشغيل جلسة بلازما لتطبيق سمة المؤشر الجديدة و تعرض بشكل صحيح."
 
-#: plasma-apply-cursortheme.cpp:113
+#: plasma-apply-cursortheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -153,12 +153,12 @@ msgstr ""
 "لم يعثر على السمة المطلوبة \"%1\". السمة يجب أن تكون واحدة من الخيارات "
 "التالية: %2"
 
-#: plasma-apply-cursortheme.cpp:121
+#: plasma-apply-cursortheme.cpp:123
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
 msgstr "لديك سمات المؤشرات التالية على نظامك:"
 
-#: plasma-apply-cursortheme.cpp:126
+#: plasma-apply-cursortheme.cpp:128
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(سمة الحالية لجلسة بلازما هذه)"

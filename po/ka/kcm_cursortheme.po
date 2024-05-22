@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-17 00:39+0000\n"
+"POT-Creation-Date: 2024-05-22 00:41+0000\n"
 "PO-Revision-Date: 2023-08-04 07:15+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -30,45 +30,45 @@ msgstr "კურსორის მიმდინარე ფერის ს
 msgid "Current cursor size"
 msgstr "კურსორის მიმდინარე ზომა"
 
-#: kcmcursortheme.cpp:303
+#: kcmcursortheme.cpp:313
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "ცვლილებების ძალაში შესასვლელად საჭიროა Plasma-ის სესიის გადატვირთვა."
 
-#: kcmcursortheme.cpp:377
+#: kcmcursortheme.cpp:387
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "დროებითი ფაილის შექმნის შეცდომა."
 
-#: kcmcursortheme.cpp:388
+#: kcmcursortheme.cpp:398
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "ხატულების თემის არქივის გადმოწერის შეცდომა: %1"
 
-#: kcmcursortheme.cpp:419
+#: kcmcursortheme.cpp:429
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "ფაილი ხატულების თემის სწორ არქივს არ წარმოადგენს."
 
-#: kcmcursortheme.cpp:426
+#: kcmcursortheme.cpp:436
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "'icon' საქაღალდის შექმნის შეცდომა."
 
-#: kcmcursortheme.cpp:435
+#: kcmcursortheme.cpp:445
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr "თემა სახელად %1 საქაღალდეში უკვე არსებობს. გნებავთ ამით შეცვლა?"
 
-#: kcmcursortheme.cpp:439
+#: kcmcursortheme.cpp:449
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "გადავაწერო თემა?"
 
-#: kcmcursortheme.cpp:463
+#: kcmcursortheme.cpp:473
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "თემა წარმატებით დადგა."
@@ -80,12 +80,12 @@ msgstr "თემა წარმატებით დადგა."
 msgid "Timeout in seconds"
 msgstr "ვადა წამებში"
 
-#: plasma-apply-cursortheme.cpp:42
+#: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
 msgstr "მოთხოვნილი ზომა %1 მიუწვდომელია. გამოიყენეთ %2."
 
-#: plasma-apply-cursortheme.cpp:63
+#: plasma-apply-cursortheme.cpp:65
 #, kde-format
 msgid ""
 "This tool allows you to set the mouse cursor theme for the current Plasma "
@@ -96,7 +96,7 @@ msgstr ""
 "საშუალებას გაძლევთ უკვე დაყენებულის ან მიუწვდომელის შემთხვევითად "
 "მითითებისგან დაცვით."
 
-#: plasma-apply-cursortheme.cpp:67
+#: plasma-apply-cursortheme.cpp:69
 #, kde-format
 msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
@@ -106,18 +106,18 @@ msgstr ""
 "გნებავთ (სრული ბილიკის მითითების შემთხვევაში გამოყენებული იქნება მხოლოდ ბოლო "
 "ნაწილი)"
 
-#: plasma-apply-cursortheme.cpp:68
+#: plasma-apply-cursortheme.cpp:70
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "სისტემაში ხელმისაწვდომი ყველა თემის ჩვენება (მიმდინარე თემის ჩათვლით)"
 
-#: plasma-apply-cursortheme.cpp:69
+#: plasma-apply-cursortheme.cpp:71
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr "თემის ნაგულისხმების მაგიერ მითითებული ზომის გამოყენება"
 
-#: plasma-apply-cursortheme.cpp:90
+#: plasma-apply-cursortheme.cpp:92
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -125,7 +125,7 @@ msgid ""
 msgstr ""
 "მოთხოვნილი თემა \"%1\" უკვე წარმოადგენს Plasma-ის მიმდინარე სესიის თემას."
 
-#: plasma-apply-cursortheme.cpp:101
+#: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
@@ -133,7 +133,7 @@ msgstr ""
 "თაგუნას კურსორის თემა %1 თქვენს მიმდინარე Plasma-ის სესიაზე წარმატებით "
 "გადატარდა"
 
-#: plasma-apply-cursortheme.cpp:103
+#: plasma-apply-cursortheme.cpp:105
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
@@ -142,19 +142,19 @@ msgstr ""
 "ახლახანს გადატარებული თაგუნას კურსორის თემის სწორად საჩვენებლად აუცილებელია "
 "Plasma-ის სესიის გადატვირთვა."
 
-#: plasma-apply-cursortheme.cpp:113
+#: plasma-apply-cursortheme.cpp:115
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "თემა \"%1\" ვერ ვიპოვე. თემა ერთ-ერთი უნდა იყოს შემდეგიდან: %2"
 
-#: plasma-apply-cursortheme.cpp:121
+#: plasma-apply-cursortheme.cpp:123
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
 msgstr "თქვენ ამჟამად სისტემაში შემდეგი თაგუნას კურსორის თემები გაგაჩნიათ:"
 
-#: plasma-apply-cursortheme.cpp:126
+#: plasma-apply-cursortheme.cpp:128
 #, kde-format
 msgid "(Current theme for this Plasma session)"
 msgstr "(მიმდინარე თემა ამ Plasma-ის სესიისთვის)"
