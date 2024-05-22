@@ -15,6 +15,8 @@
 #include <QDebug>
 #include <QTimer>
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char **argv)
 {
     // This is a CLI application, but we require at least a QGuiApplication for things
@@ -41,7 +43,7 @@ int main(int argc, char **argv)
     ThemesModel *model{new ThemesModel(&app)};
     if (!parser->positionalArguments().isEmpty()) {
         QString requestedTheme{parser->positionalArguments().first()};
-        const QString dirSplit{"/"};
+        constexpr QLatin1Char dirSplit{'/'};
         if (requestedTheme.contains(dirSplit)) {
             requestedTheme = requestedTheme.split(dirSplit, Qt::SkipEmptyParts).last();
         }
@@ -77,9 +79,9 @@ int main(int argc, char **argv)
         for (int i = 0; i < model->rowCount(); ++i) {
             QString themeName{model->data(model->index(i), ThemesModel::PluginNameRole).toString()};
             if (Plasma::Theme().themeName() == themeName) {
-                ts << QString(" * %1 (current theme for this Plasma session)").arg(themeName) << Qt::endl;
+                ts << u" * %1 (current theme for this Plasma session)"_s.arg(themeName) << Qt::endl;
             } else {
-                ts << QString(" * %1").arg(themeName) << Qt::endl;
+                ts << u" * %1"_s.arg(themeName) << Qt::endl;
             }
         }
     } else {
