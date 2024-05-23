@@ -15,6 +15,7 @@
 #endif
 
 #include <KSvg/FrameSvg>
+#include <kwindoweffects.h>
 
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
@@ -234,6 +235,8 @@ public:
     bool isUserConfiguring() const;
 
 protected:
+    QSize preferredSize() const;
+
     void resizeEvent(QResizeEvent *ev) override;
     void showEvent(QShowEvent *event) override;
     void moveEvent(QMoveEvent *ev) override;
@@ -289,8 +292,11 @@ private Q_SLOTS:
 
 private:
     int readConfigValueWithFallBack(const QString &key, int defaultValue);
+    KWindowEffects::SlideFromLocation slideLocation() const;
+    void updateLayerWindow();
     void positionPanel();
     void resizePanel();
+    void positionAndResizePanel();
     void integrateScreen();
     void updateEditModeLabel();
     bool containmentContainsPosition(const QPointF &point) const;

@@ -24,7 +24,6 @@
 
 #include <KLocalizedString>
 #include <KX11Extras>
-#include <kwindoweffects.h>
 #include <kwindowsystem.h>
 
 #include <Plasma/Containment>
@@ -484,6 +483,113 @@ void PanelView::updateAdaptiveOpacityEnabled()
     Q_EMIT adaptiveOpacityEnabledChanged();
 }
 
+KWindowEffects::SlideFromLocation PanelView::slideLocation() const
+{
+    switch (containment()->location()) {
+    case Plasma::Types::TopEdge:
+        containment()->setFormFactor(Plasma::Types::Horizontal);
+        return KWindowEffects::TopEdge;
+
+    case Plasma::Types::LeftEdge:
+        containment()->setFormFactor(Plasma::Types::Vertical);
+        return KWindowEffects::LeftEdge;
+
+    case Plasma::Types::RightEdge:
+        containment()->setFormFactor(Plasma::Types::Vertical);
+        return KWindowEffects::RightEdge;
+
+    case Plasma::Types::BottomEdge:
+    default:
+        containment()->setFormFactor(Plasma::Types::Horizontal);
+        return KWindowEffects::BottomEdge;
+    }
+}
+
+void PanelView::updateLayerWindow()
+{
+    if (!m_layerWindow) {
+        return;
+    }
+
+    QMargins margins;
+    LayerShellQt::Window::Anchors anchors;
+    LayerShellQt::Window::Anchor edge;
+
+    switch (containment()->location()) {
+    case Plasma::Types::TopEdge:
+        anchors.setFlag(LayerShellQt::Window::AnchorTop);
+        margins.setTop((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
+        edge = LayerShellQt::Window::AnchorTop;
+        break;
+    case Plasma::Types::LeftEdge:
+        anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+        margins.setLeft((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
+        edge = LayerShellQt::Window::AnchorLeft;
+        break;
+    case Plasma::Types::RightEdge:
+        anchors.setFlag(LayerShellQt::Window::AnchorRight);
+        margins.setRight((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
+        edge = LayerShellQt::Window::AnchorRight;
+        break;
+    case Plasma::Types::BottomEdge:
+    default:
+        anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+        margins.setBottom((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
+        edge = LayerShellQt::Window::AnchorBottom;
+        break;
+    }
+
+    if (formFactor() == Plasma::Types::Horizontal) {
+        switch (m_alignment) {
+        case Qt::AlignLeft:
+            anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+            if (m_lengthMode == PanelView::LengthMode::Custom) {
+                margins.setLeft(margins.left() + m_offset);
+            }
+            break;
+        case Qt::AlignCenter:
+            break;
+        case Qt::AlignRight:
+            anchors.setFlag(LayerShellQt::Window::AnchorRight);
+            if (m_lengthMode == PanelView::LengthMode::Custom) {
+                margins.setRight(margins.right() + m_offset);
+            }
+            break;
+        }
+        if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
+            anchors.setFlag(LayerShellQt::Window::AnchorLeft);
+            anchors.setFlag(LayerShellQt::Window::AnchorRight);
+        }
+    } else {
+        switch (m_alignment) {
+        case Qt::AlignLeft:
+            anchors.setFlag(LayerShellQt::Window::AnchorTop);
+            if (m_lengthMode == PanelView::LengthMode::Custom) {
+                margins.setTop(margins.top() + m_offset);
+            }
+            break;
+        case Qt::AlignCenter:
+            break;
+        case Qt::AlignRight:
+            anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+            if (m_lengthMode == PanelView::LengthMode::Custom) {
+                margins.setBottom(margins.bottom() + m_offset);
+            }
+            break;
+        }
+        if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
+            anchors.setFlag(LayerShellQt::Window::AnchorTop);
+            anchors.setFlag(LayerShellQt::Window::AnchorBottom);
+        }
+    }
+
+    m_layerWindow->setAnchors(anchors);
+    m_layerWindow->setExclusiveEdge(edge);
+    m_layerWindow->setMargins(margins);
+
+    requestUpdate();
+}
+
 void PanelView::positionPanel()
 {
     if (!containment()) {
@@ -494,110 +600,7 @@ void PanelView::positionPanel()
         return;
     }
 
-    KWindowEffects::SlideFromLocation slideLocation = KWindowEffects::NoEdge;
-
-    switch (containment()->location()) {
-    case Plasma::Types::TopEdge:
-        containment()->setFormFactor(Plasma::Types::Horizontal);
-        slideLocation = KWindowEffects::TopEdge;
-        break;
-
-    case Plasma::Types::LeftEdge:
-        containment()->setFormFactor(Plasma::Types::Vertical);
-        slideLocation = KWindowEffects::LeftEdge;
-        break;
-
-    case Plasma::Types::RightEdge:
-        containment()->setFormFactor(Plasma::Types::Vertical);
-        slideLocation = KWindowEffects::RightEdge;
-        break;
-
-    case Plasma::Types::BottomEdge:
-    default:
-        containment()->setFormFactor(Plasma::Types::Horizontal);
-        slideLocation = KWindowEffects::BottomEdge;
-        break;
-    }
-
-    if (m_layerWindow) {
-        QMargins margins;
-        LayerShellQt::Window::Anchors anchors;
-        LayerShellQt::Window::Anchor edge;
-
-        switch (containment()->location()) {
-        case Plasma::Types::TopEdge:
-            anchors.setFlag(LayerShellQt::Window::AnchorTop);
-            margins.setTop((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
-            edge = LayerShellQt::Window::AnchorTop;
-            break;
-        case Plasma::Types::LeftEdge:
-            anchors.setFlag(LayerShellQt::Window::AnchorLeft);
-            margins.setLeft((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
-            edge = LayerShellQt::Window::AnchorLeft;
-            break;
-        case Plasma::Types::RightEdge:
-            anchors.setFlag(LayerShellQt::Window::AnchorRight);
-            margins.setRight((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
-            edge = LayerShellQt::Window::AnchorRight;
-            break;
-        case Plasma::Types::BottomEdge:
-        default:
-            anchors.setFlag(LayerShellQt::Window::AnchorBottom);
-            margins.setBottom((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
-            edge = LayerShellQt::Window::AnchorBottom;
-            break;
-        }
-
-        if (formFactor() == Plasma::Types::Horizontal) {
-            switch (m_alignment) {
-            case Qt::AlignLeft:
-                anchors.setFlag(LayerShellQt::Window::AnchorLeft);
-                if (m_lengthMode == PanelView::LengthMode::Custom) {
-                    margins.setLeft(margins.left() + m_offset);
-                }
-                break;
-            case Qt::AlignCenter:
-                break;
-            case Qt::AlignRight:
-                anchors.setFlag(LayerShellQt::Window::AnchorRight);
-                if (m_lengthMode == PanelView::LengthMode::Custom) {
-                    margins.setRight(margins.right() + m_offset);
-                }
-                break;
-            }
-            if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
-                anchors.setFlag(LayerShellQt::Window::AnchorLeft);
-                anchors.setFlag(LayerShellQt::Window::AnchorRight);
-            }
-        } else {
-            switch (m_alignment) {
-            case Qt::AlignLeft:
-                anchors.setFlag(LayerShellQt::Window::AnchorTop);
-                if (m_lengthMode == PanelView::LengthMode::Custom) {
-                    margins.setTop(margins.top() + m_offset);
-                }
-                break;
-            case Qt::AlignCenter:
-                break;
-            case Qt::AlignRight:
-                anchors.setFlag(LayerShellQt::Window::AnchorBottom);
-                if (m_lengthMode == PanelView::LengthMode::Custom) {
-                    margins.setBottom(margins.bottom() + m_offset);
-                }
-                break;
-            }
-            if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
-                anchors.setFlag(LayerShellQt::Window::AnchorTop);
-                anchors.setFlag(LayerShellQt::Window::AnchorBottom);
-            }
-        }
-
-        m_layerWindow->setAnchors(anchors);
-        m_layerWindow->setExclusiveEdge(edge);
-        m_layerWindow->setMargins(margins);
-
-        requestUpdate();
-    }
+    updateLayerWindow();
 
     // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
     const QPoint pos = geometryByDistance(0).topLeft();
@@ -605,7 +608,39 @@ void PanelView::positionPanel()
     updateMask();
     Q_EMIT geometryChanged();
 
-    KWindowEffects::slideWindow(this, slideLocation, -1);
+    KWindowEffects::slideWindow(this, slideLocation(), -1);
+}
+
+void PanelView::positionAndResizePanel()
+{
+    if (!containment()) {
+        return;
+    }
+
+    if (!m_initCompleted) {
+        return;
+    }
+
+    const QSize sizeHint = preferredSize();
+    if (sizeHint.isEmpty()) {
+        return;
+    }
+
+    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
+    const QPoint pos = geometryByDistance(0).topLeft();
+
+    const QRect geom = {pos, sizeHint};
+
+    if (geom == geometry()) {
+        return;
+    }
+
+    updateLayerWindow();
+    setGeometry(geom);
+    updateMask();
+    Q_EMIT geometryChanged();
+
+    KWindowEffects::slideWindow(this, slideLocation(), -1);
 }
 
 QRect PanelView::geometryByDistance(int distance) const
@@ -682,17 +717,17 @@ QRect PanelView::geometryByDistance(int distance, double floatingness) const
     return r;
 }
 
-void PanelView::resizePanel()
+QSize PanelView::preferredSize() const
 {
     if (!m_initCompleted) {
-        return;
+        return QSize();
     }
 
     // On Wayland when a screen is disconnected and the panel is migrating to a newscreen
     // it can happen a moment where the qscreen gets destroyed before it gets reassigned
     // to the new screen
     if (!m_screenToFollow) {
-        return;
+        return QSize();
     }
 
     QSize targetSize;
@@ -727,9 +762,19 @@ void PanelView::resizePanel()
         }
     }
 
-    if (size() != targetSize) {
+    return targetSize;
+}
+
+void PanelView::resizePanel()
+{
+    const QSize preferred = preferredSize();
+    if (preferred.isEmpty()) {
+        return;
+    }
+
+    if (size() != preferred) {
+        resize(preferred);
         Q_EMIT geometryChanged();
-        resize(targetSize);
     }
 
     // position will be updated implicitly from resizeEvent
