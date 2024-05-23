@@ -63,6 +63,7 @@ private Q_SLOTS:
     void testReorderScreens_data();
     void testReorderScreens();
     void testReorderContainments();
+    void testPanelSizeModes();
 
 private:
     ShellCorona *m_corona;
@@ -638,6 +639,58 @@ void ShellTest::testReorderContainments()
     QCOMPARE(desktopContainments[1]->screen(), 0);
     QCOMPARE(desktopViews[0]->screenToFollow(), screens[1]);
     QCOMPARE(desktopViews[1]->screenToFollow(), screens[0]);
+}
+
+void ShellTest::testPanelSizeModes()
+{
+    // Testing variables
+    int thickness = 96;
+    int lengthMax = 300;
+    int lengthMin = lengthMax / 2;
+
+    // Create a panel and prepare it for testing
+    QCOMPARE(m_corona->m_panelViews.size(), 0);
+    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.panel"));
+    // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
+    QCOMPARE(m_corona->m_panelViews.size(), 1);
+    QVERIFY(m_corona->m_panelViews.contains(panelCont));
+    QCOMPARE(panelCont->screen(), 0);
+    QCOMPARE(m_corona->m_panelViews[panelCont]->screen(), qApp->primaryScreen());
+
+    auto panel = m_corona->m_panelViews[panelCont];
+
+    // Plase panel to bottom edge of screen
+    panel->containment()->setLocation(Plasma::Types::BottomEdge);
+    QCOMPARE(panel->containment()->location(), Plasma::Types::BottomEdge);
+
+    // Set panel thickness
+    panel->setThickness(thickness);
+    QCOMPARE(panel->thickness(), thickness);
+
+    // Set panel lengths
+    panel->setLengthMode(PanelView::FillAvailable);
+    QCOMPARE(panel->size(), QSize(panel->screen()->size().width(), thickness)); // Panel should be screen width
+
+    panel->setLengthMode(PanelView::Custom);
+    panel->setMaximumLength(lengthMax);
+    panel->setMinimumLength(lengthMin);
+    panel->setLength(lengthMin);
+    QCOMPARE(panel->maximumLength(), lengthMax); // Panel should be custom width
+    QCOMPARE(panel->minimumLength(), lengthMin);
+    QCOMPARE(panel->length(), lengthMin); // Resize panel to minimum size
+    QCOMPARE(panel->size(), QSize(lengthMin, thickness)); // Panel should be screen width
+
+    // TODO: PanelView::FitContent
+    // Needs a working panel containment. Also may not work due to the test not rendering it.
+
+    // Test floating setting
+    panel->setFloating(true);
+    QVERIFY(panel->floating());
+    QCOMPARE(panel->thickness(), thickness);
+
+    panel->setFloating(false);
+    QVERIFY(!panel->floating());
+    QCOMPARE(panel->thickness(), thickness);
 }
 
 QCOMPOSITOR_TEST_MAIN(ShellTest)
