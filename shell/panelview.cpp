@@ -268,7 +268,7 @@ void PanelView::setThickness(int value)
     // For thickness, always use the default thickness value for horizontal/vertical panel
     configDefaults().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
-    resizePanel();
+    positionAndResizePanel();
 }
 
 int PanelView::length() const
@@ -284,7 +284,7 @@ void PanelView::setLength(int value)
 
     m_contentLength = value;
 
-    resizePanel();
+    positionAndResizePanel();
 }
 
 int PanelView::maximumLength() const
@@ -308,7 +308,7 @@ void PanelView::setMaximumLength(int length)
     Q_EMIT maximumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
-    resizePanel();
+    positionAndResizePanel();
 }
 
 int PanelView::minimumLength() const
@@ -332,7 +332,7 @@ void PanelView::setMinimumLength(int length)
     Q_EMIT minimumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
-    resizePanel();
+    positionAndResizePanel();
 }
 
 bool PanelView::floating() const
@@ -471,9 +471,8 @@ void PanelView::setLengthMode(PanelView::LengthMode mode)
             m_corona->requestApplicationConfigSync();
         }
         Q_EMIT lengthModeChanged();
-        positionPanel();
+        positionAndResizePanel();
         Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
-        resizePanel();
     }
 }
 
@@ -607,6 +606,7 @@ void PanelView::positionPanel()
     setPosition(pos);
     updateMask();
     Q_EMIT geometryChanged();
+    Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
 
     KWindowEffects::slideWindow(this, slideLocation(), -1);
 }
@@ -636,9 +636,11 @@ void PanelView::positionAndResizePanel()
     }
 
     updateLayerWindow();
+    m_internalResize = true;
     setGeometry(geom);
     updateMask();
     Q_EMIT geometryChanged();
+    Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
 
     KWindowEffects::slideWindow(this, slideLocation(), -1);
 }
@@ -664,7 +666,8 @@ QRect PanelView::geometryByDistance(int distance, double floatingness) const
     }
 
     const QRect screenGeometry = m_screenToFollow->geometry();
-    QRect r(QPoint(0, 0), formFactor() == Plasma::Types::Vertical ? QSize(totalThickness(), height()) : QSize(width(), totalThickness()));
+    QRect r(QPoint(0, 0),
+            formFactor() == Plasma::Types::Vertical ? QSize(totalThickness(), preferredSize().height()) : QSize(preferredSize().width(), totalThickness()));
 
     int currentOffset = 0;
     if (m_lengthMode == PanelView::LengthMode::Custom) {
@@ -765,21 +768,6 @@ QSize PanelView::preferredSize() const
     return targetSize;
 }
 
-void PanelView::resizePanel()
-{
-    const QSize preferred = preferredSize();
-    if (preferred.isEmpty()) {
-        return;
-    }
-
-    if (size() != preferred) {
-        resize(preferred);
-        Q_EMIT geometryChanged();
-    }
-
-    // position will be updated implicitly from resizeEvent
-}
-
 void PanelView::restore()
 {
     KConfigGroup panelConfig = config();
@@ -826,8 +814,7 @@ void PanelView::restore()
     setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
     setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity", PanelView::OpacityMode::Adaptive));
     setLengthMode((LengthMode)config().parent().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable));
-    resizePanel();
-    positionPanel();
+    positionAndResizePanel();
 
     Q_EMIT maximumLengthChanged();
     Q_EMIT minimumLengthChanged();
@@ -941,15 +928,21 @@ void PanelView::setAutoHideEnabled(bool enabled)
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
     updateEnabledBorders();
+
     // don't setGeometry() to make really sure we aren't doing a resize loop
     if (m_screenToFollow && containment()) {
-        // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
-        const QPoint pos = geometryByDistance(0).topLeft();
-        setPosition(pos);
+        updateEnabledBorders();
+        if (!m_internalResize) {
+            // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
+            const QPoint pos = geometryByDistance(0).topLeft();
+            setPosition(pos);
+            Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
+        }
 
         m_strutsTimer.start(STRUTSTIMERDELAY);
-        Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
     }
+
+    m_internalResize = false;
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
 }
@@ -1575,7 +1568,7 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
                     return;
                 }
                 m_floatingness = get<double>(value);
-                positionPanel();
+                positionAndResizePanel();
             });
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
@@ -1771,7 +1764,7 @@ void PanelView::updateFloating()
     m_topFloatingPadding = rootObject()->property("fixedTopFloatingPadding").toInt();
     m_bottomFloatingPadding = rootObject()->property("fixedBottomFloatingPadding").toInt();
 
-    resizePanel();
+    positionAndResizePanel();
     updateExclusiveZone();
     updateShadows();
 
