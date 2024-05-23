@@ -71,7 +71,6 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
     m_dbus(QDBusConnection::connectToBus(QDBusConnection::SessionBus, QStringLiteral("XembedSniProxy%1").arg(s_serviceCount++)))
     , m_x11Interface(qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
     , m_windowId(wid)
-    , sendingClickEvent(false)
     , m_injectMode(Direct)
 {
     // create new SNI
@@ -95,9 +94,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
     uint32_t mask = XCB_CW_BACK_PIXEL | XCB_CW_OVERRIDE_REDIRECT | XCB_CW_EVENT_MASK;
     values[0] = screen->black_pixel; // draw a solid background so the embedded icon doesn't get garbage in it
     values[1] = true; // bypass wM
-    values[2] = XCB_EVENT_MASK_VISIBILITY_CHANGE | // receive visibility change, to handle KWin restart #357443
-                                                   // Redirect and handle structure (size, position) requests from the embedded window.
-        XCB_EVENT_MASK_STRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_REDIRECT;
+    values[2] = XCB_EVENT_MASK_STRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_NOTIFY | XCB_EVENT_MASK_SUBSTRUCTURE_REDIRECT;
     xcb_create_window(c, /* connection    */
                       XCB_COPY_FROM_PARENT, /* depth         */
                       m_containerWid, /* window Id     */
@@ -219,13 +216,6 @@ void SNIProxy::resizeWindow(const uint16_t width, const uint16_t height) const
     xcb_configure_window(connection, m_windowId, XCB_CONFIG_WINDOW_WIDTH | XCB_CONFIG_WINDOW_HEIGHT, windowSizeConfigVals);
 
     xcb_flush(connection);
-}
-
-void SNIProxy::hideContainerWindow(xcb_window_t windowId) const
-{
-    if (m_containerWid == windowId && !sendingClickEvent) {
-        setActiveForInput(false);
-    }
 }
 
 QSize SNIProxy::calculateClientWindowSize() const
@@ -525,7 +515,6 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     // ideally we should make this match the plasmoid hit area
 
     qCDebug(SNIPROXY) << "Received click" << mouseButton << "with passed x*y" << x << y;
-    sendingClickEvent = true;
 
     auto c = m_x11Interface->connection();
 
@@ -605,6 +594,4 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
     }
 
     setActiveForInput(false);
-
-    sendingClickEvent = false;
 }

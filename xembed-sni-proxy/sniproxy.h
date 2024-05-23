@@ -38,7 +38,6 @@ public:
 
     void update();
     void resizeWindow(const uint16_t width, const uint16_t height) const;
-    void hideContainerWindow(xcb_window_t windowId) const;
 
     /**
      * @return the category of the application associated to this item
@@ -150,6 +149,5 @@ private:
     xcb_window_t m_containerWid;
     static int s_serviceCount;
     QPixmap m_pixmap;
-    bool sendingClickEvent;
     InjectMode m_injectMode;
 };

@@ -146,15 +146,6 @@ bool FdoSelectionManager::nativeEventFilter(const QByteArray &eventType, void *m
                 sniProxy->resizeWindow(event->width, event->height);
             }
         }
-    } else if (responseType == XCB_VISIBILITY_NOTIFY) {
-        const auto event = reinterpret_cast<xcb_visibility_notify_event_t *>(ev);
-        // it's possible that something showed our container window, we have to hide it
-        // workaround for BUG 357443: when KWin is restarted, container window is shown on top
-        if (event->state == XCB_VISIBILITY_UNOBSCURED) {
-            for (auto sniProxy : m_proxies.values()) {
-                sniProxy->hideContainerWindow(event->window);
-            }
-        }
     }
 
     return false;
