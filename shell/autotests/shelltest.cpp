@@ -24,6 +24,23 @@
 
 using namespace MockCompositor;
 
+void copyDirectory(const QString &srcDir, const QString &dstDir)
+{
+    QDir targetDir(dstDir);
+    QVERIFY(targetDir.mkpath(dstDir));
+    QDirIterator it(srcDir, QDir::Filters(QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot | QDir::Name), QDirIterator::Subdirectories);
+    while (it.hasNext()) {
+        it.next();
+        QString path = it.filePath();
+        QString relDestPath = path.last(it.filePath().length() - srcDir.length() - 1);
+        if (it.fileInfo().isDir()) {
+            QVERIFY(targetDir.mkpath(relDestPath));
+        } else {
+            QVERIFY(QFile::copy(path, dstDir % '/' % relDestPath));
+        }
+    }
+}
+
 class ShellTest : public QObject, DefaultCompositor
 {
     Q_OBJECT
@@ -49,6 +66,7 @@ private Q_SLOTS:
 
 private:
     ShellCorona *m_corona;
+    QDir m_plasmaDir;
 };
 
 QScreen *ShellTest::insertScreen(const QRect &geometry, const QString &name)
@@ -133,6 +151,11 @@ void ShellTest::initTestCase()
     QStandardPaths::setTestModeEnabled(true);
     qRegisterMetaType<QScreen *>();
 
+    m_plasmaDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) % '/' % "plasma");
+    m_plasmaDir.removeRecursively();
+
+    copyDirectory(QFINDTESTDATA("data/testpanel"), m_plasmaDir.absolutePath() % "/plasmoids/org.kde.plasma.testpanel");
+
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();
     cg.sync();
@@ -168,6 +191,8 @@ void ShellTest::cleanupTestCase()
     cg.deleteGroup();
     cg.sync();
     delete m_corona;
+
+    // m_plasmaDir.removeRecursively();
 }
 
 void ShellTest::cleanup()
@@ -220,7 +245,8 @@ void ShellTest::testScreenInsertion()
 void ShellTest::testPanelInsertion()
 {
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.panel"));
+    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
+    QCOMPARE(panelCont->pluginMetaData().pluginId(), QStringLiteral("org.kde.plasma.testpanel"));
     // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     QVERIFY(m_corona->m_panelViews.contains(panelCont));
