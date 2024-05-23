@@ -142,7 +142,7 @@ private:
     bool isTransparentImage(const QImage &image) const;
     QImage convertFromNative(xcb_image_t *xcbImage) const;
     QPoint calculateClickPoint() const;
-    void stackContainerWindow(const uint32_t stackMode) const;
+    void setActiveForInput(bool active) const;
 
     QDBusConnection m_dbus;
     QNativeInterface::QX11Application *m_x11Interface = nullptr;
