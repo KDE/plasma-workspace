@@ -650,7 +650,7 @@ void ShellTest::testPanelSizeModes()
 
     // Create a panel and prepare it for testing
     QCOMPARE(m_corona->m_panelViews.size(), 0);
-    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.panel"));
+    auto panelCont = m_corona->addPanel(QStringLiteral("org.kde.plasma.testpanel"));
     // If the panel fails to load (on ci plasma-desktop isn't here) we want the "failed" containment to be of panel type anyways
     QCOMPARE(m_corona->m_panelViews.size(), 1);
     QVERIFY(m_corona->m_panelViews.contains(panelCont));
@@ -674,14 +674,12 @@ void ShellTest::testPanelSizeModes()
     panel->setLengthMode(PanelView::Custom);
     panel->setMaximumLength(lengthMax);
     panel->setMinimumLength(lengthMin);
-    panel->setLength(lengthMin);
     QCOMPARE(panel->maximumLength(), lengthMax); // Panel should be custom width
     QCOMPARE(panel->minimumLength(), lengthMin);
-    QCOMPARE(panel->length(), lengthMin); // Resize panel to minimum size
-    QCOMPARE(panel->size(), QSize(lengthMin, thickness)); // Panel should be screen width
+    QCOMPARE(panel->size(), QSize(std::min(panel->length(), lengthMax), thickness)); // Panel should be screen width
 
-    // TODO: PanelView::FitContent
-    // Needs a working panel containment. Also may not work due to the test not rendering it.
+    panel->setLengthMode(PanelView::FitContent);
+    QCOMPARE(panel->size(), QSize(800, thickness));
 
     // Test floating setting
     panel->setFloating(true);
@@ -691,6 +689,11 @@ void ShellTest::testPanelSizeModes()
     panel->setFloating(false);
     QVERIFY(!panel->floating());
     QCOMPARE(panel->thickness(), thickness);
+
+    // Set vertical panel
+    panel->containment()->setLocation(Plasma::Types::LeftEdge);
+    panel->containment()->setFormFactor(Plasma::Types::Vertical);
+    QTRY_COMPARE(panel->size(), QSize(thickness, 800));
 }
 
 QCOMPOSITOR_TEST_MAIN(ShellTest)
