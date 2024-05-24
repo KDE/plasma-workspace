@@ -346,7 +346,7 @@ public:
         connect(this, &QWaylandClientExtension::activeChanged, this, [this] {
             if (!isActive()) {
                 wl_proxy_destroy(reinterpret_cast<wl_proxy *>(object()));
-            } else {
+            } else if (QtWayland::org_kde_plasma_window_management::version() >= ORG_KDE_PLASMA_WINDOW_MANAGEMENT_GET_STACKING_ORDER_SINCE_VERSION) {
                 // fetch the stacking order
                 org_kde_plasma_window_management_stacking_order_changed_2();
             }
