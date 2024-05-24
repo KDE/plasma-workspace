@@ -148,9 +148,6 @@
         "Name[vi]": "Trình chạy \"Trợ giúp\"",
         "Name[x-test]": "xxHelp Runnerxx",
         "Name[zh_CN]": "帮助运行程序",
-        "Name[zh_TW]": "說明 Runner",
-        "ServiceTypes": [
-            "Plasma/Runner"
-        ]
+        "Name[zh_TW]": "說明 Runner"
     }
 }
