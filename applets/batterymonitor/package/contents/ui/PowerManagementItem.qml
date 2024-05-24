@@ -38,8 +38,6 @@ PlasmaComponents3.ItemDelegate {
     property var blockedInhibitions: []
     property bool inhibitsLidAction
 
-    property alias manualInhibitionSwitch: manualInhibitionSwitch
-
     background.visible: highlighted
     highlighted: activeFocus
     hoverEnabled: false
@@ -55,7 +53,6 @@ PlasmaComponents3.ItemDelegate {
 
     Accessible.description: pmStatusLabel.text
     Accessible.role: Accessible.CheckBox
-    KeyNavigation.tab: manualInhibitionSwitch
 
     contentItem: RowLayout {
         spacing: Kirigami.Units.gridUnit
@@ -93,81 +90,11 @@ PlasmaComponents3.ItemDelegate {
                 }
             }
 
-            RowLayout {
-                // UI to manually inhibit sleep and screen locking
-                PlasmaComponents3.Switch {
-                    id: manualInhibitionSwitch
-                    Layout.fillWidth: true
-                    text: i18nc("@option:check Manually block sleep and screen locking after inactivity", "Manually block")
-                    checked: root.isManuallyInhibited
-                    focus: true
-
-                    KeyNavigation.up: root.KeyNavigation.up
-                    KeyNavigation.down: root.KeyNavigation.down
-                    KeyNavigation.tab: root.KeyNavigation.down
-                    KeyNavigation.backtab: root.KeyNavigation.backtab
-
-                    Keys.onPressed: (event) => {
-                        if (event.key == Qt.Key_Space || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
-                            clicked();
-                        }
-                    }
-
-                    onToggled: {
-                        inhibitionChangeRequested(checked);
-                    }
-
-                    Connections {
-                        target: root
-                        function onIsManuallyInhibitedChanged() {
-                            manualInhibitionSwitch.checked = isManuallyInhibited;
-                        }
-                    }
-
-                    Connections {
-                        target: root
-                        function onIsManuallyInhibitedErrorChanged() {
-                            if (root.isManuallyInhibitedError) {
-                                manualInhibitionSwitch.checked = !manualInhibitionSwitch.checked
-                                busyIndicator.visible = false;
-                                root.isManuallyInhibitedError = false;
-                                if (!root.isManuallyInhibited) {
-                                    inhibitionError.text = i18n("Failed to unblock automatic sleep and screen locking");
-                                    inhibitionError.sendEvent();
-                                } else {
-                                    inhibitionError.text = i18n("Failed to block automatic sleep and screen locking");
-                                    inhibitionError.sendEvent();
-                                }
-                            }
-                        }
-                    }
-                }
-
-            BusyIndicator {
-                id: busyIndicator
-                visible: false
-                Layout.preferredHeight: manualInhibitionSwitch.implicitHeight
-
-                Connections {
-                    target: root
-
-                    function onInhibitionChangeRequested(inhibit) {
-                        busyIndicator.visible = inhibit != root.isManuallyInhibited;
-                    }
-
-                    function onIsManuallyInhibitedChanged(val) {
-                        busyIndicator.visible = false;
-                    }
-                }
-            }
-        }
-
-            // list of automatic inhibitions
+            // list of inhibitions
             ColumnLayout {
                 id: inhibitionReasonsLayout
 
                 Layout.fillWidth: true
-                visible: root.inhibitsLidAction || (root.inhibitions.length > 0) || (root.blockedInhibitions.length > 0)
 
                 InhibitionHint {
                     readonly property var pmControl: root.pmControl
@@ -178,6 +105,7 @@ PlasmaComponents3.ItemDelegate {
                     text: i18nc("Minimize the length of this string as much as possible", "Your laptop is configured not to sleep when closing the lid while an external monitor is connected.")
                 }
 
+                // list of automatic inhibitions
                 PlasmaComponents3.Label {
                     id: inhibitionExplanation
                     Layout.fillWidth: true
@@ -258,6 +186,47 @@ PlasmaComponents3.ItemDelegate {
                     }
                 }
 
+                // UI to undo manually inhibit sleep and screen locking
+                InhibitionHint {
+                    visible: root.isManuallyInhibited
+
+                    iconSource: "user"
+                    text: i18nc("Minimize the length of this string as much as possible", "You have manually blocked sleep and screen locking.")
+
+                    PlasmaComponents3.Button {
+                        id: manualUninhibitionButton
+                        Layout.alignment: Qt.AlignRight
+                        text: i18nc("@action:button Undo blocking sleep and screen locking after inactivity", "Unblock")
+                        icon.name: "edit-delete-remove"
+
+                        Keys.onPressed: (event) => {
+                            if (event.key == Qt.Key_Space || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
+                                click();
+                            }
+                        }
+
+                        onClicked: {
+                            inhibitionChangeRequested(!root.isManuallyInhibited);
+                        }
+
+                        Connections {
+                            target: root
+                            function onIsManuallyInhibitedErrorChanged() {
+                                if (root.isManuallyInhibitedError) {
+                                    root.isManuallyInhibitedError = false;
+                                    if (!root.isManuallyInhibited) {
+                                        inhibitionError.text = i18n("Failed to unblock automatic sleep and screen locking");
+                                        inhibitionError.sendEvent();
+                                    } else {
+                                        inhibitionError.text = i18n("Failed to block automatic sleep and screen locking");
+                                        inhibitionError.sendEvent();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
                 // list of blocked inhibitions
                 PlasmaComponents3.Label {
                     id: blockedInhibitionExplanation
@@ -317,6 +286,44 @@ PlasmaComponents3.ItemDelegate {
                                 MenuItem {
                                     text: i18nc("@action:button Prevent an app from blocking automatic sleep and screen locking after inactivity", "Every time for this app and reason")
                                     onTriggered: pmControl.unblockInhibition(app, reason, true)
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // UI to manually inhibit sleep and screen locking
+                InhibitionHint {
+                    visible: !root.isManuallyInhibited
+
+                    PlasmaComponents3.Button {
+                        id: manualInhibitionButton
+                        Layout.alignment: Qt.AlignRight
+                        text: i18nc("@action:button Block sleep and screen locking after inactivity", "Add manual block")
+                        icon.name: "dialog-cancel"
+
+                        Keys.onPressed: (event) => {
+                            if (event.key == Qt.Key_Space || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
+                                click();
+                            }
+                        }
+
+                        onClicked: {
+                            inhibitionChangeRequested(!root.isManuallyInhibited);
+                        }
+
+                        Connections {
+                            target: root
+                            function onIsManuallyInhibitedErrorChanged() {
+                                if (root.isManuallyInhibitedError) {
+                                    root.isManuallyInhibitedError = false;
+                                    if (!root.isManuallyInhibited) {
+                                        inhibitionError.text = i18n("Failed to unblock automatic sleep and screen locking");
+                                        inhibitionError.sendEvent();
+                                    } else {
+                                        inhibitionError.text = i18n("Failed to block automatic sleep and screen locking");
+                                        inhibitionError.sendEvent();
+                                    }
                                 }
                             }
                         }
