@@ -10,7 +10,6 @@
 #include <QDBusInterface>
 #include <QDBusMetaType>
 #include <QDBusReply>
-#include <QGuiApplication>
 #include <QString>
 
 InhibitMonitor &InhibitMonitor::self()
@@ -62,7 +61,7 @@ void InhibitMonitor::beginSuppressingSleep(const QString &reason, bool isSilent)
                                                       QStringLiteral("/org/freedesktop/PowerManagement/Inhibit"),
                                                       QStringLiteral("org.freedesktop.PowerManagement.Inhibit"),
                                                       QStringLiteral("Inhibit"));
-    msg << QGuiApplication::desktopFileName() << reason;
+    msg << QStringLiteral("org.kde.plasmashell") << reason;
     QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(msg);
     auto *watcher = new QDBusPendingCallWatcher(call, this);
 
@@ -134,7 +133,7 @@ void InhibitMonitor::beginSuppressingScreenPowerManagement(const QString &reason
                                                       QStringLiteral("/ScreenSaver"),
                                                       QStringLiteral("org.freedesktop.ScreenSaver"),
                                                       QStringLiteral("Inhibit"));
-    msg << QGuiApplication::desktopFileName() << reason;
+    msg << QStringLiteral("org.kde.plasmashell") << reason;
     QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(msg);
     auto *watcher = new QDBusPendingCallWatcher(call, this);
 
