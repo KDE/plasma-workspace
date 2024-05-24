@@ -1,4 +1,3 @@
-add_subdirectory(declarative)
 if(BUILD_TESTING)
    add_subdirectory(autotests)
 endif()
@@ -21,6 +20,8 @@ set(taskmanager_LIB_SRCS
     waylandstartuptasksmodel.cpp
     waylandtasksmodel.cpp
     windowtasksmodel.cpp
+    screencasting.cpp
+    screencastingrequest.cpp
 )
 
 if (HAVE_X11)
@@ -35,10 +36,17 @@ endif()
 add_library(taskmanager ${taskmanager_LIB_SRCS})
 add_library(PW::LibTaskManager ALIAS taskmanager)
 
+ecm_add_qml_module(taskmanager
+    URI "org.kde.taskmanager"
+    VERSION 0.1
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtCore
+)
 
 qt6_generate_wayland_protocol_client_sources(taskmanager
     FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/org-kde-plasma-virtual-desktop.xml
     FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-window-management.xml
+    FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/zkde-screencast-unstable-v1.xml
 )
 
 generate_export_header(taskmanager)
@@ -118,6 +126,8 @@ if (HAVE_X11)
         DESTINATION ${KDE_INSTALL_INCLUDEDIR}/taskmanager COMPONENT Devel
     )
 endif()
+
+ecm_finalize_qml_module(taskmanager)
 
 write_basic_config_version_file(${CMAKE_CURRENT_BINARY_DIR}/LibTaskManagerConfigVersion.cmake VERSION "${PROJECT_VERSION}" COMPATIBILITY AnyNewerVersion)
 

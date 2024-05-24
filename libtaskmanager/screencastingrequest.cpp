@@ -5,7 +5,6 @@
 */
 
 #include "screencastingrequest.h"
-#include "logging.h"
 
 #include <QCoreApplication>
 #include <QDebug>

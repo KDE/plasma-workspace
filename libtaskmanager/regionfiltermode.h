@@ -6,9 +6,13 @@
 
 #pragma once
 
+#include <qnamespace.h>
+#include <qqmlregistration.h>
+
 namespace RegionFilterMode
 {
 Q_NAMESPACE
+QML_ELEMENT
 
 enum Mode {
     Disabled = 0,

@@ -10,6 +10,7 @@
 
 #include <QObject>
 #include <QWaylandClientExtensionTemplate>
+#include <qqmlregistration.h>
 
 #include <memory>
 
@@ -35,6 +36,8 @@ protected:
 class Screencasting : public QWaylandClientExtensionTemplate<Screencasting>, public QtWayland::zkde_screencast_unstable_v1
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_UNCREATABLE("Use ScreencastingItem")
 
 public:
     explicit Screencasting();

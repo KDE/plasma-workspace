@@ -47,6 +47,7 @@ class VirtualDesktopInfo;
 class TASKMANAGER_EXPORT TasksModel : public QSortFilterProxyModel, public AbstractTasksModelIface, public QQmlParserStatus
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_INTERFACES(QQmlParserStatus)
 
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)

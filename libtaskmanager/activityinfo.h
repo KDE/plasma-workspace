@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlregistration.h>
 
 #include <memory>
 
@@ -31,6 +32,7 @@ namespace TaskManager
 class TASKMANAGER_EXPORT ActivityInfo : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QString currentActivity READ currentActivity NOTIFY currentActivityChanged)
     Q_PROPERTY(int numberOfRunningActivities READ numberOfRunningActivities NOTIFY numberOfRunningActivitiesChanged)

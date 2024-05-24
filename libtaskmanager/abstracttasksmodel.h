@@ -9,6 +9,7 @@
 #include "abstracttasksmodeliface.h"
 
 #include <QAbstractListModel>
+#include <qqmlregistration.h>
 
 #include "taskmanager_export.h"
 
@@ -27,6 +28,13 @@ class TASKMANAGER_EXPORT AbstractTasksModel : public QAbstractListModel, public 
 {
     Q_OBJECT
 
+    // Expose the AbstractTasksModel::AdditionalRoles enum to Qt Quick
+    // for use with the TasksModel::data invokable. TasksModel inherits
+    // the data roles from its source model, despite not inheriting from
+    // AbstractTasksModel to avoid multiple inheritance from QObject-
+    // derived classes.
+    QML_ELEMENT
+    QML_UNCREATABLE("")
 public:
     enum AdditionalRoles {
         AppId = Qt::UserRole + 1, /**< KService storage id (.desktop name sans extension). */

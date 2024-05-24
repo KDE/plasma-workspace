@@ -8,6 +8,7 @@
 
 #include "screencasting.h"
 #include <QObject>
+#include <qqmlregistration.h>
 
 /**
  * Allows us to request a stream for a window identified by its universally
@@ -19,6 +20,7 @@
 class ScreencastingRequest : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
     /**
      * The unique identifier of the window we want to cast.
      *

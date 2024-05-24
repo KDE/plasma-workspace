@@ -7,6 +7,7 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlregistration.h>
 
 #include "taskmanager_export.h"
 
@@ -25,6 +26,7 @@ namespace TaskManager
 class TASKMANAGER_EXPORT VirtualDesktopInfo : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QVariant currentDesktop READ currentDesktop NOTIFY currentDesktopChanged)
     Q_PROPERTY(int numberOfDesktops READ numberOfDesktops NOTIFY numberOfDesktopsChanged)
