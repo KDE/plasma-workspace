@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
-# Guðmundur Erlingsson <gudmundure@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-10 02:27+0000\n"
-"PO-Revision-Date: 2022-10-22 16:58+0000\n"
+"PO-Revision-Date: 2024-05-12 21:35+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #: exampleutility.cpp:29
 #, kde-format
@@ -235,6 +235,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Ekki tókst að finna tiltæka landsstaðla kerfisins með verkfærinu <command> "
+"localectl</command>. Sendu endilega inn villuskýrslu um þetta á "
+"<link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:86
 #, kde-format
