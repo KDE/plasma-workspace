@@ -608,28 +608,27 @@ void NOAAIon::updateWeather(const QString &source)
         data.insert(QStringLiteral("Wind Direction"), getWindDirectionIcon(windIcons(), weatherData.windDirection.toLower()));
     }
 
-    // Set number of forecasts per day/night supported
-    data.insert(QStringLiteral("Total Weather Days"), weatherData.forecasts.size());
-
-    int i = 0;
+    // Dayly forecasts
+    int forecastDay = 0;
     for (const WeatherData::Forecast &forecast : weatherData.forecasts) {
         ConditionIcons icon = getConditionIcon(forecast.summary.toLower(), true);
         QString iconName = getWeatherIcon(icon);
 
-        /* Sometimes the forecast for the later days is unavailable, if so skip remianing days
-         * since their forecast data is probably unavailable.
-         */
-        if (forecast.low.isEmpty() || forecast.high.isEmpty()) {
+        // Sometimes the forecast for the later days is unavailable, so skip
+        // remianing days since their forecast data is probably unavailable.
+        if (forecast.summary.isEmpty()) {
             break;
         }
 
         // Get the short day name for the forecast
-        data.insert(QStringLiteral("Short Forecast Day %1").arg(i),
+        data.insert(QStringLiteral("Short Forecast Day %1").arg(forecastDay),
                     QStringLiteral("%1|%2|%3|%4|%5|%6")
                         .arg(forecast.day, iconName, i18nc("weather forecast", forecast.summary.toUtf8().data()), forecast.high, forecast.low)
                         .arg(forecast.precipitation));
-        ++i;
+        ++forecastDay;
     }
+    // Set the number of days we provide after the filtering
+    data.insert(QStringLiteral("Total Weather Days"), forecastDay);
 
     data.insert(u"Total Warnings Issued"_s, weatherData.alerts.size());
     int alertNum = 0;
