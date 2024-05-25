@@ -774,12 +774,12 @@ void NOAAIon::getForecast(const QString &source)
         return;
     }
 
-    /* Assuming that we have the latitude and longitude data at this point, get the 7-day
-     * forecast.
+    /* Assuming that we have the latitude and longitude data at this point, get the 7-day forecast.
+     * The provider is more likely to reject requests with more than 3 decimal digits precision
      */
-    const QUrl url(QLatin1String("https://graphical.weather.gov/xml/sample_products/browser_interface/"
-                                 "ndfdBrowserClientByDay.php?lat=")
-                   + QString::number(lat) + QLatin1String("&lon=") + QString::number(lon) + QLatin1String("&format=24+hourly&numDays=7"));
+    const QUrl url("https://graphical.weather.gov/xml/sample_products/browser_interface/ndfdBrowserClientByDay.php?lat=%1&lon=%2&format=24+hourly&numDays=7"_L1
+                       .arg(QString::number(lat, 'f', 3))
+                       .arg(QString::number(lon, 'f', 3)));
 
     auto getJob = apiRequestJob(url, source);
     connect(getJob, &KJob::result, this, &NOAAIon::forecast_slotJobFinished);
@@ -825,7 +825,7 @@ void NOAAIon::readForecast(const QString &source, QXmlStreamReader &xml)
              * <layout-key> which indicates the separate day listings.  The schema defines it to be
              * the first item before the day listings.
              */
-            if (xml.name() == QLatin1String("layout-key") && xml.readElementText() == QLatin1String("k-p24h-n7-1")) {
+            if (xml.name() == "layout-key"_L1 && xml.readElementText().startsWith("k-p24h"_L1)) {
                 // Read days until we get to end of parent (<time-layout>)tag
                 while (!(xml.isEndElement() && xml.name() == QLatin1String("time-layout"))) {
                     xml.readNext();
@@ -903,6 +903,10 @@ void NOAAIon::readForecast(const QString &source, QXmlStreamReader &xml)
                         i++;
                     }
                 }
+            } else if (xml.name() == "problem"_L1) {
+                // We've received a server error
+                const QString problem = xml.readElementText();
+                qCWarning(IONENGINE_NOAA) << "Server error requesting forecast:" << problem;
             }
         }
     }
