@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-05-25 20:30+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -138,7 +138,7 @@ msgstr "%1 %2pt"
 msgid "Adjust Global Scale…"
 msgstr "Alĝustigi Globalan Skalon…"
 
-#: ui/main.qml:34
+#: ui/main.qml:37
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -146,7 +146,7 @@ msgid ""
 msgstr ""
 "Kelkaj ŝanĝoj kiel glatigo kaj DPI influos nur poste lanĉatajn programojn."
 
-#: ui/main.qml:48
+#: ui/main.qml:52
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -155,7 +155,7 @@ msgstr ""
 "Tre grandaj tiparoj povas produkti strangajn rezultojn. Anstataŭ uzi tre "
 "grandan tiparon, konsideru ĝustigi la ĉiean ekranskalon."
 
-#: ui/main.qml:69
+#: ui/main.qml:74
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -164,7 +164,7 @@ msgstr ""
 "Decimalaj tiparaj grandecoj povas kaŭzi problemojn pri teksta enpaĝigo en "
 "iuj aplikoj. Konsideru uzi nur entjerajn tipargrandojn."
 
-#: ui/main.qml:91
+#: ui/main.qml:97
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -173,82 +173,82 @@ msgstr ""
 "La rekomendita maniero por skali la uzantinterfacon estas uzi la ĉiean "
 "ekranan skalan funkcion."
 
-#: ui/main.qml:103
+#: ui/main.qml:110
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Alĝustigi Ĉiujn Tiparojn…"
 
-#: ui/main.qml:116
+#: ui/main.qml:123
 #, kde-format
 msgid "General:"
 msgstr "Normala:"
 
-#: ui/main.qml:117
+#: ui/main.qml:124
 #, kde-format
 msgid "Select general font"
 msgstr "Elekti normalan tiparon"
 
-#: ui/main.qml:128
+#: ui/main.qml:135
 #, kde-format
 msgid "Fixed width:"
 msgstr "Egallarĝa:"
 
-#: ui/main.qml:129
+#: ui/main.qml:136
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Elekti egallarĝan tiparon"
 
-#: ui/main.qml:140
+#: ui/main.qml:147
 #, kde-format
 msgid "Small:"
 msgstr "Malgranda:"
 
-#: ui/main.qml:141
+#: ui/main.qml:148
 #, kde-format
 msgid "Select small font"
 msgstr "Elekti malgrandan tiparon"
 
-#: ui/main.qml:152
+#: ui/main.qml:159
 #, kde-format
 msgid "Toolbar:"
 msgstr "Ilobreto:"
 
-#: ui/main.qml:153
+#: ui/main.qml:160
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Elekti ilobretan tiparon"
 
-#: ui/main.qml:164
+#: ui/main.qml:171
 #, kde-format
 msgid "Menu:"
 msgstr "Menuo:"
 
-#: ui/main.qml:165
+#: ui/main.qml:172
 #, kde-format
 msgid "Select menu font"
 msgstr "Elekti tiparon de la menuo"
 
-#: ui/main.qml:175
+#: ui/main.qml:182
 #, kde-format
 msgid "Window title:"
 msgstr "Fenestra titolo:"
 
-#: ui/main.qml:176
+#: ui/main.qml:183
 #, kde-format
 msgid "Select window title font"
 msgstr "Elekti fenestrotitolan tiparon"
 
-#: ui/main.qml:191
+#: ui/main.qml:198
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Glatigo:"
 
-#: ui/main.qml:196
+#: ui/main.qml:203
 #, kde-format
 msgid "Enable"
 msgstr "Ebligita"
 
-#: ui/main.qml:200
+#: ui/main.qml:207
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -264,28 +264,28 @@ msgstr ""
 "ĉi tiun efikon. Vi ĝenerale volas teni ĉi tiun opcion ebligita krom se ĝi "
 "kaŭzas problemojn."
 
-#: ui/main.qml:214
+#: ui/main.qml:221
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Ekskludi gamon de kontraŭ-aliasing"
 
-#: ui/main.qml:233 ui/main.qml:257
+#: ui/main.qml:240 ui/main.qml:264
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 p"
 
-#: ui/main.qml:248
+#: ui/main.qml:255
 #, kde-format
 msgid "to"
 msgstr "al "
 
-#: ui/main.qml:280
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Subpunkta bildigo:"
 
-#: ui/main.qml:326
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -308,13 +308,13 @@ msgstr ""
 "ekzotikaj ordigoj ne estas subtenataj de ĉi tiu funkcio.</para>Ĉi tio ne "
 "funkcias kun CRT. monitoroj."
 
-#: ui/main.qml:331
+#: ui/main.qml:338
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Aludado:"
 
-#: ui/main.qml:376
+#: ui/main.qml:383
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -328,12 +328,12 @@ msgstr ""
 "sugesto ĝenerale kondukas al pli akraj randoj sed la malgrandaj literoj "
 "malpli proksime similos sian formon ĉe grandaj grandecoj."
 
-#: ui/main.qml:389
+#: ui/main.qml:396
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Devigi tiparan DPI:"
 
-#: ui/main.qml:417
+#: ui/main.qml:424
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -352,7 +352,7 @@ msgstr ""
 "uzu la skalan glitilon sur la paĝo <interface>Vidigu & Monitoro</interface>."
 "</para>"
 
-#: ui/main.qml:423
+#: ui/main.qml:430
 #, kde-format
 msgid "Select Font"
 msgstr "Elekti Tiparon"

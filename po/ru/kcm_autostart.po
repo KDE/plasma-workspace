@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-12-24 18:03+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -60,14 +60,14 @@ msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
 msgstr "Запустить"
 
-#: ui/entry.qml:68
+#: ui/entry.qml:71
 #, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
 msgstr "Имя:"
 
-#: ui/entry.qml:74
+#: ui/entry.qml:77
 #, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
@@ -75,7 +75,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "Состояние:"
 
-#: ui/entry.qml:80
+#: ui/entry.qml:83
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -83,58 +83,58 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr "Последнее использование:"
 
-#: ui/entry.qml:111
+#: ui/entry.qml:114
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr "Не удалось загрузить записи журнала, выполняется повторная попытка."
 
-#: ui/entry.qml:115
+#: ui/entry.qml:118
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
 msgstr "Обновить"
 
-#: ui/main.qml:33
+#: ui/main.qml:35
 #, kde-format
 msgid "Make Executable"
 msgstr "Сделать исполняемым"
 
-#: ui/main.qml:53
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 "Файл «%1» должен быть исполняемым для его запуска при выходе из системы."
 
-#: ui/main.qml:55
+#: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr "Файл «%1» должен быть исполняемым для его запуска при входе в систему."
 
-#: ui/main.qml:66
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Добавить…"
 
-#: ui/main.qml:69
+#: ui/main.qml:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Добавить приложение…"
 
-#: ui/main.qml:74
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Добавить сценарий входа в систему..."
 
-#: ui/main.qml:79
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Добавить сценарий выхода из системы..."
 
-#: ui/main.qml:114
+#: ui/main.qml:116
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -143,62 +143,62 @@ msgstr ""
 "Приложение «%1» ещё ни разу не было запущено автоматически. Подробные "
 "сведения станут доступы после перезагрузки системы."
 
-#: ui/main.qml:137
+#: ui/main.qml:139
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Автозапуск ещё не использовался"
 
-#: ui/main.qml:146
+#: ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Открыть свойства"
 
-#: ui/main.qml:157
+#: ui/main.qml:159
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Удалить запись"
 
-#: ui/main.qml:173
+#: ui/main.qml:175
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
 
-#: ui/main.qml:176
+#: ui/main.qml:178
 #, kde-format
 msgid "Login Scripts"
 msgstr "Сценарии входа в систему"
 
-#: ui/main.qml:179
+#: ui/main.qml:181
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Сценарии, выполняемые перед началом сеанса"
 
-#: ui/main.qml:182
+#: ui/main.qml:184
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Сценарии выхода из системы"
 
-#: ui/main.qml:191
+#: ui/main.qml:193
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Нет ни одного объекта для автоматического запуска"
 
-#: ui/main.qml:192
+#: ui/main.qml:194
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "Для добавления нажмите кнопку <interface>Добавить…</interface>"
 
-#: ui/main.qml:207
+#: ui/main.qml:209
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Выбор сценария, выполняемого при входе"
 
-#: ui/main.qml:227
+#: ui/main.qml:229
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Выбор сценария, выполняемого при выходе"

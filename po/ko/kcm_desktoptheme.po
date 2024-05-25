@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-08-06 22:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "테마 설치가 실패했습니다."
 msgid "Removing theme failed: %1"
 msgstr "테마를 삭제할 수 없음: %1"
 
-#: plasma-apply-desktoptheme.cpp:31
+#: plasma-apply-desktoptheme.cpp:33
 #, kde-format
 msgid ""
 "This tool allows you to set the theme of the current Plasma session, without "
@@ -58,7 +58,7 @@ msgstr ""
 "이 도구를 사용하여 사용할 수 없는 테마를 실수로 선택하거나 이미 선택된 테마"
 "를 다시 선택하지 않고 현재 Plasma 세션의 테마를 설정할 수 있습니다."
 
-#: plasma-apply-desktoptheme.cpp:35
+#: plasma-apply-desktoptheme.cpp:37
 #, kde-format
 msgid ""
 "The name of the theme you wish to set for your current Plasma session "
@@ -66,92 +66,92 @@ msgid ""
 msgstr ""
 "현재 Plasma 세션에 적용할 테마(전체 경로를 지정하면 마지막 부분만 사용)"
 
-#: plasma-apply-desktoptheme.cpp:36
+#: plasma-apply-desktoptheme.cpp:38
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "시스템에 있는 모든 테마 표시(현재 테마 포함)"
 
-#: plasma-apply-desktoptheme.cpp:49
+#: plasma-apply-desktoptheme.cpp:51
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "요청한 \"%1\" 테마는 현재 Plasma 세션의 테마로 설정되어 있습니다."
 
-#: plasma-apply-desktoptheme.cpp:65
+#: plasma-apply-desktoptheme.cpp:67
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "현재 Plasma 세션 테마를 %1(으)로 설정함"
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:69
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr "테마 \"%1\"을(를) 찾을 수 없습니다. 다음 중 하나여야 합니다: %2"
 
-#: plasma-apply-desktoptheme.cpp:75
+#: plasma-apply-desktoptheme.cpp:77
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "시스템에 다음 Plasma 테마가 설치되어 있습니다:"
 
-#: ui/main.qml:69
+#: ui/main.qml:101
 #, kde-format
 msgid "All Themes"
 msgstr "모든 테마"
 
-#: ui/main.qml:70
+#: ui/main.qml:102
 #, kde-format
 msgid "Light Themes"
 msgstr "밝은 색상 테마"
 
-#: ui/main.qml:71
+#: ui/main.qml:103
 #, kde-format
 msgid "Dark Themes"
 msgstr "어두운 색상 테마"
 
-#: ui/main.qml:72
+#: ui/main.qml:104
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "색상표 호환"
 
-#: ui/main.qml:97
+#: ui/main.qml:130
 #, kde-format
 msgid "Install from File…"
 msgstr "파일에서 설치…"
 
-#: ui/main.qml:102
+#: ui/main.qml:135
 #, kde-format
 msgid "Get New…"
 msgstr "새 항목 가져오기…"
 
-#: ui/main.qml:115
+#: ui/main.qml:148
 #, kde-format
 msgid "Follows color scheme"
 msgstr "색상표 준수"
 
-#: ui/main.qml:133
+#: ui/main.qml:166
 #, kde-format
 msgid "Edit Theme…"
 msgstr "테마 편집…"
 
-#: ui/main.qml:140
+#: ui/main.qml:173
 #, kde-format
 msgid "Remove Theme"
 msgstr "테마 삭제"
 
-#: ui/main.qml:147
+#: ui/main.qml:180
 #, kde-format
 msgid "Restore Theme"
 msgstr "테마 복원"
 
-#: ui/main.qml:189
+#: ui/main.qml:199
 #, kde-format
 msgid "Open Theme"
 msgstr "테마 열기"
 
-#: ui/main.qml:191
+#: ui/main.qml:201
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "테마 파일 (*.zip *.tar.gz *.tar.bz2)"

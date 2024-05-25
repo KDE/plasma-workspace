@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 01:59+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2011-12-15 00:29+0330\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <>\n"
@@ -67,37 +67,37 @@ msgstr "نصب چهره‌های شمایل"
 msgid "Installing %1 theme…"
 msgstr "نصب چهره‌های شمایل"
 
-#: ui/main.qml:45
+#: ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "Install Theme File..."
 msgid "Install from File…"
 msgstr "نصب چهره جدید..."
 
-#: ui/main.qml:50
+#: ui/main.qml:72
 #, fuzzy, kde-format
 #| msgid "Get New Themes..."
 msgid "Get New…"
 msgstr "دریافت چهره جدید..."
 
-#: ui/main.qml:166
+#: ui/main.qml:188
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "حذف چهره"
 
-#: ui/main.qml:173
+#: ui/main.qml:195
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "حذف چهره"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "حذف چهره"
 
-#: ui/main.qml:247
+#: ui/main.qml:246
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -1251,87 +1251,87 @@ msgstr ""
 msgid " * %1 (current color scheme)"
 msgstr "Sábháil an scéim reatha datha"
 
-#: ui/AccentColorUI.qml:37
+#: ui/AccentColorUI.qml:27
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
 msgstr "Iompórtáil Scéim Datha"
 
-#: ui/AccentColorUI.qml:38
+#: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
 msgstr ""
 
-#: ui/AccentColorUI.qml:39
+#: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "Dath neamhghníomhach"
 
-#: ui/AccentColorUI.qml:164
+#: ui/AccentColorUI.qml:147
 #, kde-format
 msgid "Choose custom accent color"
 msgstr ""
 
-#: ui/main.qml:87
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 
-#: ui/main.qml:112
+#: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "All Schemes"
 msgstr "&Uasluchtaigh Scéim..."
 
-#: ui/main.qml:113
+#: ui/main.qml:124
 #, fuzzy, kde-format
 #| msgid "&Scheme"
 msgid "Light Schemes"
 msgstr "&Scéim"
 
-#: ui/main.qml:114
+#: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
 msgid "Dark Schemes"
 msgstr "Sábháil Scéim..."
 
-#: ui/main.qml:140
+#: ui/main.qml:152
 #, kde-format
 msgid "Install from File…"
 msgstr ""
 
-#: ui/main.qml:145
+#: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
 # gen plural in all of these
-#: ui/main.qml:192
+#: ui/main.qml:204
 #, fuzzy, kde-format
 #| msgid "Window Text"
 msgid "Window Title"
 msgstr "Téacs Fuinneog"
 
-#: ui/main.qml:215
+#: ui/main.qml:227
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Window text"
 msgid "Window text"
 msgstr "Téacs fuinneog"
 
-#: ui/main.qml:223
+#: ui/main.qml:235
 #, fuzzy, kde-format
 #| msgctxt "color-sets"
 #| msgid "Button"
 msgid "Button"
 msgstr "Cnaipe"
 
-#: ui/main.qml:263
+#: ui/main.qml:275
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "link"
@@ -1339,7 +1339,7 @@ msgctxt "Hyperlink"
 msgid "link"
 msgstr "nasc"
 
-#: ui/main.qml:265
+#: ui/main.qml:277
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "visited"
@@ -1347,51 +1347,51 @@ msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "feicthe"
 
-#: ui/main.qml:273
+#: ui/main.qml:285
 #, fuzzy, kde-format
 #| msgctxt "color-kcm-preview"
 #| msgid "Normal text"
 msgid "Normal text"
 msgstr "Gnáth-théacs"
 
-#: ui/main.qml:280
+#: ui/main.qml:292
 #, fuzzy, kde-format
 #| msgid "Visited Text"
 msgid "Highlighted text"
 msgstr "Téacs Feicthe"
 
-#: ui/main.qml:287
+#: ui/main.qml:299
 #, fuzzy, kde-format
 #| msgctxt "@title:tab color transformations on disabled elements"
 #| msgid "Disabled"
 msgid "Disabled text"
 msgstr "Díchumasaithe"
 
-#: ui/main.qml:305
+#: ui/main.qml:317
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
 msgid "Edit Color Scheme…"
 msgstr "&Uasluchtaigh Scéim..."
 
-#: ui/main.qml:311
+#: ui/main.qml:323
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Remove Color Scheme"
 msgstr "Sábháil Scéim Datha"
 
-#: ui/main.qml:318
+#: ui/main.qml:330
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "Restore Color Scheme"
 msgstr "Iompórtáil Scéim Datha"
 
-#: ui/main.qml:362
+#: ui/main.qml:374
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Open Color Scheme"
 msgstr "Sábháil Scéim Datha"
 
-#: ui/main.qml:364
+#: ui/main.qml:376
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr ""

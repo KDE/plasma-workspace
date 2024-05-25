@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-02-22 21:04+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,232 +19,232 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: binarydialectmodel.cpp:50
+#: binarydialectmodel.cpp:52
 #, kde-format
 msgctxt "Binary dialect IEC, with sigle in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
 msgstr ""
 
-#: binarydialectmodel.cpp:54
+#: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with sigle in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
 msgstr ""
 
-#: binarydialectmodel.cpp:58
+#: binarydialectmodel.cpp:60
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
 msgstr ""
 
-#: binarydialectmodel.cpp:73
+#: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 msgstr ""
 
-#: binarydialectmodel.cpp:75
+#: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr ""
 
-#: binarydialectmodel.cpp:77
+#: binarydialectmodel.cpp:79
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr ""
 
-#: exampleutility.cpp:29
+#: exampleutility.cpp:31
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial UK"
 msgstr "Britisk (UK)"
 
-#: exampleutility.cpp:31
+#: exampleutility.cpp:33
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial US"
 msgstr "Britisk (USA)"
 
-#: exampleutility.cpp:33
+#: exampleutility.cpp:35
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Metric"
 msgstr "Metrisk"
 
-#: exampleutility.cpp:47
+#: exampleutility.cpp:49
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
 msgstr "Letter"
 
-#: exampleutility.cpp:49
+#: exampleutility.cpp:51
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "A4"
 msgstr "A4"
 
-#: exampleutility.cpp:64
+#: exampleutility.cpp:66
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
 msgstr "c/o"
 
-#: exampleutility.cpp:65
+#: exampleutility.cpp:67
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
 msgstr "Firma AS"
 
-#: exampleutility.cpp:66
+#: exampleutility.cpp:68
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
 msgstr "Utviklingsavdelinga"
 
-#: exampleutility.cpp:67
+#: exampleutility.cpp:69
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
 msgstr "IKT-bygningen"
 
-#: exampleutility.cpp:68
+#: exampleutility.cpp:70
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
 msgstr "Storgata"
 
-#: exampleutility.cpp:69
+#: exampleutility.cpp:71
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
 msgstr "Hus 1"
 
-#: exampleutility.cpp:71
+#: exampleutility.cpp:73
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:72
+#: exampleutility.cpp:74
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
 msgstr "Rom 2"
 
-#: exampleutility.cpp:73
+#: exampleutility.cpp:75
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
 msgstr "3. etasje"
 
-#: exampleutility.cpp:75
+#: exampleutility.cpp:77
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
 msgstr "Sentrum"
 
-#: exampleutility.cpp:76
+#: exampleutility.cpp:78
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
 msgstr "123456"
 
-#: exampleutility.cpp:77
+#: exampleutility.cpp:79
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
 msgstr "By"
 
-#: exampleutility.cpp:78
+#: exampleutility.cpp:80
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
 msgstr "Delstad/region"
 
-#: exampleutility.cpp:91
+#: exampleutility.cpp:93
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
 msgstr "Etternamn"
 
-#: exampleutility.cpp:92
+#: exampleutility.cpp:94
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
 msgstr "ETTERNAMN"
 
-#: exampleutility.cpp:93
+#: exampleutility.cpp:95
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
 msgstr "Fornamn"
 
-#: exampleutility.cpp:94
+#: exampleutility.cpp:96
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
 msgstr "F"
 
-#: exampleutility.cpp:95
+#: exampleutility.cpp:97
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
 msgstr "Fornamn"
 
-#: exampleutility.cpp:96
+#: exampleutility.cpp:98
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
 msgstr "Annanamn"
 
-#: exampleutility.cpp:97
+#: exampleutility.cpp:99
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
 msgstr "Mellomnamn"
 
-#: exampleutility.cpp:98
+#: exampleutility.cpp:100
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
 msgstr "A"
 
-#: exampleutility.cpp:99
+#: exampleutility.cpp:101
 #, kde-format
 msgctxt "Profession"
 msgid "Profession"
 msgstr "Yrke"
 
-#: exampleutility.cpp:100
+#: exampleutility.cpp:102
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
 msgstr "Doktor"
 
-#: exampleutility.cpp:101
+#: exampleutility.cpp:103
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
 msgstr "Dr."
 
-#: exampleutility.cpp:102
+#: exampleutility.cpp:104
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
 msgstr "Dr."
 
-#: exampleutility.cpp:103
+#: exampleutility.cpp:105
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:119
+#: exampleutility.cpp:121
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:133
+#: exampleutility.cpp:135
 #, kde-format
 msgctxt ""
 "This is returned when an example test could not be made from locale "
@@ -302,27 +302,27 @@ msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
 msgstr "Klarte ikkje installera pakken %1"
 
-#: localegenhelper/localegenhelper.cpp:43
+#: localegenhelper/localegenhelper.cpp:45
 #, kde-format
 msgid "Another process is already running, please retry later"
 msgstr "Ein annan prosess køyrer frå før. Prøv på nytt seinare."
 
-#: localegenhelper/localegenhelper.cpp:63
+#: localegenhelper/localegenhelper.cpp:65
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
 msgstr "Har ikkje løyve til å redigera oppsettfila for språkområde"
 
-#: localegenhelper/localegenhelper.cpp:113
+#: localegenhelper/localegenhelper.cpp:115
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
 msgstr "Klarte ikkje opna fila «/etc/locale.gen»"
 
-#: localegenhelper/localegenhelper.cpp:146
+#: localegenhelper/localegenhelper.cpp:148
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr "Fann ikkje programfila «locale-gen»"
 
-#: localegenhelper/localegenhelper.cpp:159
+#: localegenhelper/localegenhelper.cpp:161
 #, kde-format
 msgid "Unknown"
 msgstr "Ukjend"
@@ -332,7 +332,7 @@ msgstr "Ukjend"
 msgid "Default for System"
 msgstr "Standard for systemet"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:365
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:372
 #, kde-format
 msgid "Default"
 msgstr "Standard"
@@ -359,92 +359,92 @@ msgctxt ""
 msgid "Default for %1"
 msgstr "Standard for %1"
 
-#: optionsmodel.cpp:45
+#: optionsmodel.cpp:46
 #, kde-format
 msgctxt "@info:title"
 msgid "Language"
 msgstr "Språk"
 
-#: optionsmodel.cpp:46
+#: optionsmodel.cpp:47
 #, kde-format
 msgctxt "@info:title"
 msgid "Numbers"
 msgstr "Tal"
 
-#: optionsmodel.cpp:47
+#: optionsmodel.cpp:48
 #, kde-format
 msgctxt "@info:title"
 msgid "Time"
 msgstr "Dato og klokkeslett"
 
-#: optionsmodel.cpp:48
+#: optionsmodel.cpp:49
 #, kde-format
 msgctxt "@info:title"
 msgid "Currency"
 msgstr "Valuta"
 
-#: optionsmodel.cpp:49
+#: optionsmodel.cpp:50
 #, kde-format
 msgctxt "@info:title"
 msgid "Measurements"
 msgstr "Måleeiningar"
 
-#: optionsmodel.cpp:50
+#: optionsmodel.cpp:51
 #, kde-format
 msgctxt "@info:title"
 msgid "Paper Size"
 msgstr "Papirstorleik"
 
-#: optionsmodel.cpp:52
+#: optionsmodel.cpp:53
 #, kde-format
 msgctxt "@info:title"
 msgid "Address"
 msgstr "Adresse"
 
 # Unødvendig å ha med «stil»-her, jf. dei andre overskriftene.
-#: optionsmodel.cpp:53
+#: optionsmodel.cpp:54
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
 msgstr "Personnamn"
 
-#: optionsmodel.cpp:54
+#: optionsmodel.cpp:55
 #, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
 msgstr "Telefonnummer"
 
-#: optionsmodel.cpp:56
+#: optionsmodel.cpp:57
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
 msgstr ""
 
-#: optionsmodel.cpp:130 optionsmodel.cpp:374
+#: optionsmodel.cpp:131 optionsmodel.cpp:375
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
 msgstr "Systemstandard"
 
-#: optionsmodel.cpp:296
+#: optionsmodel.cpp:297
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
 msgstr ""
 
-#: optionsmodel.cpp:299
+#: optionsmodel.cpp:300
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
 msgstr ""
 
-#: optionsmodel.cpp:302
+#: optionsmodel.cpp:303
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
 msgstr ""
 
-#: optionsmodel.cpp:376
+#: optionsmodel.cpp:377
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
@@ -465,7 +465,7 @@ msgstr "Arv språkval"
 msgid "Language"
 msgstr "Språk"
 
-#: ui/AdvancedLanguageSelectPage.qml:31
+#: ui/AdvancedLanguageSelectPage.qml:33
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -476,71 +476,71 @@ msgstr ""
 "enkelte program ikkje oppfører seg rett. Viss du ønskjer å sjå alle "
 "programma på engelsk, fjern dei andre språka."
 
-#: ui/AdvancedLanguageSelectPage.qml:39
+#: ui/AdvancedLanguageSelectPage.qml:42
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "Språket «%1» er ikkje støtta"
 
-#: ui/AdvancedLanguageSelectPage.qml:49
+#: ui/AdvancedLanguageSelectPage.qml:55
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Legg til språk i prioritert rekkjefølgje for vising i program."
 
-#: ui/AdvancedLanguageSelectPage.qml:87
+#: ui/AdvancedLanguageSelectPage.qml:93
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Byt språk"
 
-#: ui/AdvancedLanguageSelectPage.qml:91
+#: ui/AdvancedLanguageSelectPage.qml:97
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Byt språk"
 
-#: ui/AdvancedLanguageSelectPage.qml:102
+#: ui/AdvancedLanguageSelectPage.qml:108
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Flytt øvst"
 
-#: ui/AdvancedLanguageSelectPage.qml:108
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Fjern"
 
-#: ui/AdvancedLanguageSelectPage.qml:121
+#: ui/AdvancedLanguageSelectPage.qml:127
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Ingen språk er sette opp"
 
-#: ui/AdvancedLanguageSelectPage.qml:152 ui/AdvancedLanguageSelectPage.qml:163
+#: ui/AdvancedLanguageSelectPage.qml:158 ui/AdvancedLanguageSelectPage.qml:169
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Fleire språk"
 
-#: ui/AdvancedLanguageSelectPage.qml:180
+#: ui/AdvancedLanguageSelectPage.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
 msgstr "Legg til fleire …"
 
-#: ui/main.qml:32
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
 msgstr "Endringane vert tekne i bruk neste gong du loggar inn."
 
-#: ui/main.qml:38
+#: ui/main.qml:40
 #, kde-format
 msgid "Restart now"
 msgstr "Start på nytt no"
 
-#: ui/main.qml:52
+#: ui/main.qml:55
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -550,7 +550,7 @@ msgstr ""
 "Genererer språkområde-oppsett og tilhøyrande språkstøtte­filer. Ikkje slå av "
 "maskina enno."
 
-#: ui/main.qml:61
+#: ui/main.qml:65
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -564,7 +564,7 @@ msgstr ""
 "krev særskilde skrifter for å visast skikkeleg, må du sjølv finna ut kva "
 "skrifter som trengst og installera dei manuelt."
 
-#: ui/main.qml:75
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -574,56 +574,56 @@ msgstr ""
 "Språkområde-oppsett og tilhøyrande språkstøtte­filer er no installert. Du kan "
 "trygt slå av maskina."
 
-#: ui/main.qml:169
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "Endra …"
 
-#: ui/main.qml:205
+#: ui/main.qml:212
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
 msgstr ""
 
-#: ui/main.qml:263
+#: ui/main.qml:270
 #, kde-format
 msgid "Numbers"
 msgstr "Tal"
 
-#: ui/main.qml:265
+#: ui/main.qml:272
 #, kde-format
 msgid "Time"
 msgstr "Dato og klokkeslett"
 
-#: ui/main.qml:267
+#: ui/main.qml:274
 #, kde-format
 msgid "Currency"
 msgstr "Valuta"
 
-#: ui/main.qml:269
+#: ui/main.qml:276
 #, kde-format
 msgid "Measurements"
 msgstr "Måleeiningar"
 
-#: ui/main.qml:271
+#: ui/main.qml:278
 #, kde-format
 msgid "Paper Size"
 msgstr "Papirstorleik"
 
-#: ui/main.qml:273
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Adresse"
 
-#: ui/main.qml:275
+#: ui/main.qml:282
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Namn"
 
-#: ui/main.qml:277
+#: ui/main.qml:284
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

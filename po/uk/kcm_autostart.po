@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-10-27 20:53+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -52,14 +52,14 @@ msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
 msgstr "Запустити"
 
-#: ui/entry.qml:68
+#: ui/entry.qml:71
 #, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
 msgstr "Назва:"
 
-#: ui/entry.qml:74
+#: ui/entry.qml:77
 #, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
@@ -67,7 +67,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "Стан:"
 
-#: ui/entry.qml:80
+#: ui/entry.qml:83
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -75,57 +75,57 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr "Востаннє активовано:"
 
-#: ui/entry.qml:111
+#: ui/entry.qml:114
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr "Не вдалося завантажити журнал. Спробуйте освіження."
 
-#: ui/entry.qml:115
+#: ui/entry.qml:118
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
 msgstr "Освіжити"
 
-#: ui/main.qml:33
+#: ui/main.qml:35
 #, kde-format
 msgid "Make Executable"
 msgstr "Зробити виконуваним"
 
-#: ui/main.qml:53
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr "Файл «%1» має бути виконуваним для запуску при виході із системи."
 
-#: ui/main.qml:55
+#: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr "Файл «%1» має бути виконуваним для запуску при вході до системи."
 
-#: ui/main.qml:66
+#: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Додати…"
 
-#: ui/main.qml:69
+#: ui/main.qml:71
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Додати програму…"
 
-#: ui/main.qml:74
+#: ui/main.qml:76
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Додати скрипт входу…"
 
-#: ui/main.qml:79
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Додати скрипт виходу…"
 
-#: ui/main.qml:114
+#: ui/main.qml:116
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -134,62 +134,62 @@ msgstr ""
 "%1 ще не було автоматично запущено. Докладні дані стануть доступними після "
 "перезапуску системи."
 
-#: ui/main.qml:137
+#: ui/main.qml:139
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Ще не запущено автоматично"
 
-#: ui/main.qml:146
+#: ui/main.qml:148
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Переглянути властивості"
 
-#: ui/main.qml:157
+#: ui/main.qml:159
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Вилучити запис"
 
-#: ui/main.qml:173
+#: ui/main.qml:175
 #, kde-format
 msgid "Applications"
 msgstr "Програми"
 
-#: ui/main.qml:176
+#: ui/main.qml:178
 #, kde-format
 msgid "Login Scripts"
 msgstr "Скрипти входу"
 
-#: ui/main.qml:179
+#: ui/main.qml:181
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Скрипти до запуску"
 
-#: ui/main.qml:182
+#: ui/main.qml:184
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Скрипти виходу"
 
-#: ui/main.qml:191
+#: ui/main.qml:193
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Немає вказаних користувачем записів автозапуску"
 
-#: ui/main.qml:192
+#: ui/main.qml:194
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add…</interface> button to add some"
 msgstr "Натисніть кнопку <interface>Додати…</interface>, щоб додати записи"
 
-#: ui/main.qml:207
+#: ui/main.qml:209
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Виберіть скрипт входу"
 
-#: ui/main.qml:227
+#: ui/main.qml:229
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Виберіть скрипти виходу"

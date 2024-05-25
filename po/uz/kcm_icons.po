@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 01:59+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2006-12-16 15:28+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -66,37 +66,37 @@ msgstr "Nishonchalar mavzusi oʻrnatilmoqda"
 msgid "Installing %1 theme…"
 msgstr "Nishonchalar mavzusi oʻrnatilmoqda"
 
-#: ui/main.qml:45
+#: ui/main.qml:67
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Install from File…"
 msgstr "Yangi mavzuni oʻrnatish"
 
-#: ui/main.qml:50
+#: ui/main.qml:72
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "Get New…"
 msgstr "Yangi mavzuni oʻrnatish"
 
-#: ui/main.qml:166
+#: ui/main.qml:188
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Remove Icon Theme"
 msgstr "Mavzuni olib tashlash"
 
-#: ui/main.qml:173
+#: ui/main.qml:195
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Icon Theme"
 msgstr "Mavzuni olib tashlash"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Mavzuni olib tashlash"
 
-#: ui/main.qml:247
+#: ui/main.qml:246
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

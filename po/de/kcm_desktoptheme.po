@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-08-13 16:25+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -49,7 +49,7 @@ msgstr "Die Installation des Designs ist fehlgeschlagen."
 msgid "Removing theme failed: %1"
 msgstr "Das Design kann nicht entfernt werden: %1"
 
-#: plasma-apply-desktoptheme.cpp:31
+#: plasma-apply-desktoptheme.cpp:33
 #, kde-format
 msgid ""
 "This tool allows you to set the theme of the current Plasma session, without "
@@ -60,7 +60,7 @@ msgstr ""
 "festzulegen, ohne versehentlich ein nicht verfügbares oder bereits "
 "ausgewähltes zu verwenden."
 
-#: plasma-apply-desktoptheme.cpp:35
+#: plasma-apply-desktoptheme.cpp:37
 #, kde-format
 msgid ""
 "The name of the theme you wish to set for your current Plasma session "
@@ -70,7 +70,7 @@ msgstr ""
 "möchten (bei Angabe des vollständigen Pfades wird nur der letzte Teil "
 "verwendet)"
 
-#: plasma-apply-desktoptheme.cpp:36
+#: plasma-apply-desktoptheme.cpp:38
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
@@ -78,7 +78,7 @@ msgstr ""
 "Alle auf dem System verfügbaren Designs anzeigen (und welches das aktuelle "
 "ist)"
 
-#: plasma-apply-desktoptheme.cpp:49
+#: plasma-apply-desktoptheme.cpp:51
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -87,12 +87,12 @@ msgstr ""
 "Das gewählte Design „%1“ wird bereits für die aktuelle Plasma-Sitzung "
 "verwendet."
 
-#: plasma-apply-desktoptheme.cpp:65
+#: plasma-apply-desktoptheme.cpp:67
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "Als Design für die aktuelle Plasma-Sitzung wurde „%1“ festgelegt"
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:69
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -101,67 +101,67 @@ msgstr ""
 "Das Design „%1“ wurde nicht gefunden. Es sollte eines der folgenden Designs "
 "gewählt werden: %2"
 
-#: plasma-apply-desktoptheme.cpp:75
+#: plasma-apply-desktoptheme.cpp:77
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Sie haben die folgenden Plasma-Designs auf Ihrem System:"
 
-#: ui/main.qml:69
+#: ui/main.qml:101
 #, kde-format
 msgid "All Themes"
 msgstr "Alle Designs"
 
-#: ui/main.qml:70
+#: ui/main.qml:102
 #, kde-format
 msgid "Light Themes"
 msgstr "Helle Designs"
 
-#: ui/main.qml:71
+#: ui/main.qml:103
 #, kde-format
 msgid "Dark Themes"
 msgstr "Dunkle Designs"
 
-#: ui/main.qml:72
+#: ui/main.qml:104
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "Kompatibel zum Farbschema"
 
-#: ui/main.qml:97
+#: ui/main.qml:130
 #, kde-format
 msgid "Install from File…"
 msgstr "Aus Datei installieren ..."
 
-#: ui/main.qml:102
+#: ui/main.qml:135
 #, kde-format
 msgid "Get New…"
 msgstr "Neue holen ..."
 
-#: ui/main.qml:115
+#: ui/main.qml:148
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Folgt dem Farbschema"
 
-#: ui/main.qml:133
+#: ui/main.qml:166
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Design bearbeiten ..."
 
-#: ui/main.qml:140
+#: ui/main.qml:173
 #, kde-format
 msgid "Remove Theme"
 msgstr "Design entfernen"
 
-#: ui/main.qml:147
+#: ui/main.qml:180
 #, kde-format
 msgid "Restore Theme"
 msgstr "Design wiederherstellen"
 
-#: ui/main.qml:189
+#: ui/main.qml:199
 #, kde-format
 msgid "Open Theme"
 msgstr "Design öffnen"
 
-#: ui/main.qml:191
+#: ui/main.qml:201
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Designdateien (*.zip *.tar.gz *.tar.bz2)"

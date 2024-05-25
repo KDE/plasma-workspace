@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-11-02 13:56+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -50,7 +50,7 @@ msgstr "Instalace motivu selhala."
 msgid "Removing theme failed: %1"
 msgstr "Odebrání motivu selhalo: %1"
 
-#: plasma-apply-desktoptheme.cpp:31
+#: plasma-apply-desktoptheme.cpp:33
 #, kde-format
 msgid ""
 "This tool allows you to set the theme of the current Plasma session, without "
@@ -60,7 +60,7 @@ msgstr ""
 "Tento nástroj vám umožní nastavit motiv současného sezení Plasma bez "
 "neúmyslného nastavení na takový, který není k dispozici nebo je již nastaven."
 
-#: plasma-apply-desktoptheme.cpp:35
+#: plasma-apply-desktoptheme.cpp:37
 #, kde-format
 msgid ""
 "The name of the theme you wish to set for your current Plasma session "
@@ -69,14 +69,14 @@ msgstr ""
 "Název motivu, který si přejete nastavit pro vaše aktuální sezení Plasma "
 "(pokud zadáte celou cestu, bude použita jenom poslední část)"
 
-#: plasma-apply-desktoptheme.cpp:36
+#: plasma-apply-desktoptheme.cpp:38
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
 "Zobrazit všechny motivy dostupné na systému (a který je aktuální motiv)"
 
-#: plasma-apply-desktoptheme.cpp:49
+#: plasma-apply-desktoptheme.cpp:51
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -85,12 +85,12 @@ msgstr ""
 "Požadovaný motiv \"%1\" je již nastaven jako motiv pro současné sezení "
 "Plasma."
 
-#: plasma-apply-desktoptheme.cpp:65
+#: plasma-apply-desktoptheme.cpp:67
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "Motiv aktuálního sezení Plasma byl nastaven na %1"
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:69
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -98,67 +98,67 @@ msgid ""
 msgstr ""
 "Nelze najít motiv \"%1\". Motiv by měl být jedna z následujících možností: %2"
 
-#: plasma-apply-desktoptheme.cpp:75
+#: plasma-apply-desktoptheme.cpp:77
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "Ve vašem systému jsou dostupné následující motivy Plasma:"
 
-#: ui/main.qml:69
+#: ui/main.qml:101
 #, kde-format
 msgid "All Themes"
 msgstr "Všechny motivy"
 
-#: ui/main.qml:70
+#: ui/main.qml:102
 #, kde-format
 msgid "Light Themes"
 msgstr "Světlé motivy"
 
-#: ui/main.qml:71
+#: ui/main.qml:103
 #, kde-format
 msgid "Dark Themes"
 msgstr "Tmavé motivy"
 
-#: ui/main.qml:72
+#: ui/main.qml:104
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "Kompatibilní s barevným schématem"
 
-#: ui/main.qml:97
+#: ui/main.qml:130
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalovat ze souboru…"
 
-#: ui/main.qml:102
+#: ui/main.qml:135
 #, kde-format
 msgid "Get New…"
 msgstr "Získat nové…"
 
-#: ui/main.qml:115
+#: ui/main.qml:148
 #, kde-format
 msgid "Follows color scheme"
 msgstr "Následuje barevné schéma"
 
-#: ui/main.qml:133
+#: ui/main.qml:166
 #, kde-format
 msgid "Edit Theme…"
 msgstr "Upravit motiv…"
 
-#: ui/main.qml:140
+#: ui/main.qml:173
 #, kde-format
 msgid "Remove Theme"
 msgstr "Odstranit motiv"
 
-#: ui/main.qml:147
+#: ui/main.qml:180
 #, kde-format
 msgid "Restore Theme"
 msgstr "Obnovit motiv"
 
-#: ui/main.qml:189
+#: ui/main.qml:199
 #, kde-format
 msgid "Open Theme"
 msgstr "Otevřít motiv"
 
-#: ui/main.qml:191
+#: ui/main.qml:201
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "Soubory motivů (*.zip *.tar.gz *.tar.bz2)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-05 07:38-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -51,7 +51,7 @@ msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਫੇਲ੍ਹ ਹੋਈ।"
 msgid "Removing theme failed: %1"
 msgstr "ਥੀਮ ਨੂੰ ਹਟਾਉਣਾ ਫੇਲ੍ਹ ਹੈ: %1"
 
-#: plasma-apply-desktoptheme.cpp:31
+#: plasma-apply-desktoptheme.cpp:33
 #, kde-format
 msgid ""
 "This tool allows you to set the theme of the current Plasma session, without "
@@ -61,99 +61,99 @@ msgstr ""
 "ਇਹ ਟੂਲ ਤੁਹਾਨੂੰ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਥੀਮ ਸੈੱਟ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ, ਬਿਨਾਂ ਗਲਤੀ ਨਾਲ ਅਜਿਹੀ "
 "ਸੈਟਿੰਗ ਕਰਨ ਦੇ, ਜੋ ਮੌਜੂਦ ਨਾ ਹੋਵੇ ਜਾਂ ਜੋ ਪਹਿਲਾਂ ਹੀ ਸੈੱਟ ਹੋਵੇ।"
 
-#: plasma-apply-desktoptheme.cpp:35
+#: plasma-apply-desktoptheme.cpp:37
 #, kde-format
 msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
 
-#: plasma-apply-desktoptheme.cpp:36
+#: plasma-apply-desktoptheme.cpp:38
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr "ਸਿਸਟਮ ਉੱਤੇ ਮੌਜੂਦ ਸਭ ਥੀਮ ਵੇਖਾਓ (ਅਤੇ ਜੋ ਵੀ ਮੌਜੂਦਾ ਥੀਮ ਹੈ)"
 
-#: plasma-apply-desktoptheme.cpp:49
+#: plasma-apply-desktoptheme.cpp:51
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr "ਮੰਗਿਆ ਥੀਮ \"%1\" ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਥੀਮ ਵਜੋਂ ਸੈੱਟ ਹੈ।"
 
-#: plasma-apply-desktoptheme.cpp:65
+#: plasma-apply-desktoptheme.cpp:67
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਦੇ ਥੀਮ ਨੂੰ %1 ਵਜੋਂ ਨਿਰਧਾਰਿਤ ਕੀਤਾ"
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:69
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
 
-#: plasma-apply-desktoptheme.cpp:75
+#: plasma-apply-desktoptheme.cpp:77
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "ਤੁਹਾਡੇ ਸਿਸਟਮ ਉੱਤੇ ਅੱਗੇ ਦਿੱਤੇ ਪਲਾਜ਼ਮਾ ਥੀਮ ਮੌਜੂਦ ਹਨ:"
 
-#: ui/main.qml:69
+#: ui/main.qml:101
 #, kde-format
 msgid "All Themes"
 msgstr "ਸਾਰੇ ਥੀਮ"
 
-#: ui/main.qml:70
+#: ui/main.qml:102
 #, kde-format
 msgid "Light Themes"
 msgstr "ਹਲਕੇ ਥੀਮ"
 
-#: ui/main.qml:71
+#: ui/main.qml:103
 #, kde-format
 msgid "Dark Themes"
 msgstr "ਗੂੜ੍ਹੇ ਥੀਮ"
 
-#: ui/main.qml:72
+#: ui/main.qml:104
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "ਰੰਗ ਸਕੀਮ ਅਨੁਕੂਲ"
 
-#: ui/main.qml:97
+#: ui/main.qml:130
 #, kde-format
 msgid "Install from File…"
 msgstr "…ਫਾਇਲ ਤੋਂ ਇੰਸਟਾਲ ਕਰੋ"
 
-#: ui/main.qml:102
+#: ui/main.qml:135
 #, kde-format
 msgid "Get New…"
 msgstr "…ਨਵੇਂ ਲਵੋ"
 
-#: ui/main.qml:115
+#: ui/main.qml:148
 #, kde-format
 msgid "Follows color scheme"
 msgstr "ਰੰਗ ਸਕੀਮ ਮੁਤਾਬਕ"
 
-#: ui/main.qml:133
+#: ui/main.qml:166
 #, kde-format
 msgid "Edit Theme…"
 msgstr "…ਥੀਮ ਸੋਧੋ"
 
-#: ui/main.qml:140
+#: ui/main.qml:173
 #, kde-format
 msgid "Remove Theme"
 msgstr "ਥੀਮ ਹਟਾਓ"
 
-#: ui/main.qml:147
+#: ui/main.qml:180
 #, kde-format
 msgid "Restore Theme"
 msgstr "ਥੀਮ ਬਹਾਲ ਕਰੋ"
 
-#: ui/main.qml:189
+#: ui/main.qml:199
 #, kde-format
 msgid "Open Theme"
 msgstr "ਥੀਮ ਖੋਲ੍ਹੋ"
 
-#: ui/main.qml:191
+#: ui/main.qml:201
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "ਥੀਮ ਫਾਇਲਾਂ (*.zip *.tar.gz *.tar.bz2)"

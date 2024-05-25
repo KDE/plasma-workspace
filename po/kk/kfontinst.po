@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-07 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2013-01-02 06:53+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ak78@sci.kz, sairan@computer.org"
 
-#: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:953
+#: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:955
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -40,7 +40,7 @@ msgstr ""
 "Қаріпт(ерд)і дербес (тек өзіңіздің) пайдалануына, немесе жалпы жүйелік "
 "(барлығының пайдалануы) деңгейіне орнатпақсыз ба?"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
+#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:958
 #, kde-format
 msgid "Where to Install"
 msgstr "Қайда орналастыру"
@@ -76,7 +76,7 @@ msgstr "Орнататын URL"
 msgid "Print"
 msgstr "Басып шығару"
 
-#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:222
+#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:224
 #, fuzzy, kde-format
 #| msgid "Canceling..."
 msgid "Canceling…"
@@ -159,34 +159,34 @@ msgstr "Қарапайым қаріпті қарау құралы"
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"
 
-#: kcmfontinst/DuplicatesDialog.cpp:47
+#: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
 msgid "Duplicate Fonts"
 msgstr "Қайталанған қаріптер"
 
-#: kcmfontinst/DuplicatesDialog.cpp:77
+#: kcmfontinst/DuplicatesDialog.cpp:79
 #, fuzzy, kde-format
 #| msgid "Scanning for duplicate fonts. Please wait..."
 msgid "Scanning for duplicate fonts. Please wait…"
 msgstr "Қаріптердің қайталанғаның іздеу. Күте тұрыңыз..."
 
-#: kcmfontinst/DuplicatesDialog.cpp:96
+#: kcmfontinst/DuplicatesDialog.cpp:98
 #, kde-format
 msgid "No duplicate fonts found."
 msgstr "Қаріптердің қайталанғандары табылған жоқ."
 
-#: kcmfontinst/DuplicatesDialog.cpp:104
+#: kcmfontinst/DuplicatesDialog.cpp:106
 #, kde-format
 msgid "Delete Marked Files"
 msgstr "Белгілеген файлдарды өшіру"
 
-#: kcmfontinst/DuplicatesDialog.cpp:106
+#: kcmfontinst/DuplicatesDialog.cpp:108
 #, kde-format
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
 msgstr[0] "%1 қайталанған қаріп табылды."
 
-#: kcmfontinst/DuplicatesDialog.cpp:187
+#: kcmfontinst/DuplicatesDialog.cpp:189
 #, kde-format
 msgid ""
 "Are you sure you wish to delete:\n"
@@ -195,57 +195,57 @@ msgstr ""
 "Шынымен мынаны өшрмексіз бе:\n"
 "%1"
 
-#: kcmfontinst/DuplicatesDialog.cpp:193
+#: kcmfontinst/DuplicatesDialog.cpp:195
 #, kde-format
 msgid "Are you sure you wish to delete:"
 msgstr "Шынымен мынаны өшрмексіз бе:"
 
-#: kcmfontinst/DuplicatesDialog.cpp:221
+#: kcmfontinst/DuplicatesDialog.cpp:223
 #, kde-format
 msgid "Cancel font scan?"
 msgstr "Қаріп іздеу доғарылсын ба?"
 
-#: kcmfontinst/DuplicatesDialog.cpp:382
+#: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
 msgid "Font/File"
 msgstr "Қаріп/Файл"
 
-#: kcmfontinst/DuplicatesDialog.cpp:384
+#: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
 msgid "Size"
 msgstr "Өлшемі"
 
-#: kcmfontinst/DuplicatesDialog.cpp:385
+#: kcmfontinst/DuplicatesDialog.cpp:387
 #, kde-format
 msgid "Date"
 msgstr "Күні"
 
-#: kcmfontinst/DuplicatesDialog.cpp:386
+#: kcmfontinst/DuplicatesDialog.cpp:388
 #, kde-format
 msgid "Links To"
 msgstr "Келесіге сілтеме"
 
-#: kcmfontinst/DuplicatesDialog.cpp:399 kcmfontinst/FontList.cpp:1313
+#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1316
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "Қарау құралымен ашу"
 
-#: kcmfontinst/DuplicatesDialog.cpp:401
+#: kcmfontinst/DuplicatesDialog.cpp:403
 #, kde-format
 msgid "Properties"
 msgstr "Қасиеттері"
 
-#: kcmfontinst/DuplicatesDialog.cpp:403
+#: kcmfontinst/DuplicatesDialog.cpp:405
 #, kde-format
 msgid "Unmark for Deletion"
 msgstr "Өшіруге белгіленгендерден шығару"
 
-#: kcmfontinst/DuplicatesDialog.cpp:404
+#: kcmfontinst/DuplicatesDialog.cpp:406
 #, kde-format
 msgid "Mark for Deletion"
 msgstr "Өшіруге белгілеу"
 
-#: kcmfontinst/DuplicatesDialog.cpp:502
+#: kcmfontinst/DuplicatesDialog.cpp:504
 #, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
@@ -306,17 +306,17 @@ msgstr "Символ/Басқа"
 msgid "Filter by %1…"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:552
+#: kcmfontinst/FontList.cpp:554
 #, kde-format
 msgid "Font"
 msgstr "Қаріп"
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:556
 #, kde-format
 msgid "Status"
 msgstr "Күй-жайы"
 
-#: kcmfontinst/FontList.cpp:568
+#: kcmfontinst/FontList.cpp:570
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
@@ -324,7 +324,7 @@ msgid ""
 msgstr ""
 "Бұл бағанда қаріп шоғырының күй-жайын және жеке қаріптердің стилін көрсетеді."
 
-#: kcmfontinst/FontList.cpp:675
+#: kcmfontinst/FontList.cpp:677
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -337,46 +337,46 @@ msgstr ""
 "келтіріледі, мысалы,</p><ul><li>Times [4]<ul><li>Қалыпты</li><li>Қалың</"
 "li><li>Қалың Көлбеу</li><li>Көлбеу</li></ul></li></ul>"
 
-#: kcmfontinst/FontList.cpp:954 kcmfontinst/FontList.cpp:978
+#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
 #, fuzzy, kde-format
 #| msgid "...plus %1 more"
 msgid "…plus %1 more"
 msgstr "...және %1 басқа"
 
-#: kcmfontinst/FontList.cpp:1005
+#: kcmfontinst/FontList.cpp:1007
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1304
+#: kcmfontinst/FontList.cpp:1306
 #, kde-format
 msgid "Delete"
 msgstr "Өшіру"
 
-#: kcmfontinst/FontList.cpp:1306 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1154
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
 #, kde-format
 msgid "Enable"
 msgstr "Рұқсат ету"
 
-#: kcmfontinst/FontList.cpp:1307 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
+#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
 #, kde-format
 msgid "Disable"
 msgstr "Бұғаттау"
 
-#: kcmfontinst/FontList.cpp:1311 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1314 kcmfontinst/GroupList.cpp:796
 #, fuzzy, kde-format
 #| msgid "Print"
 msgid "Print…"
 msgstr "Басып шығару"
 
-#: kcmfontinst/FontList.cpp:1315
+#: kcmfontinst/FontList.cpp:1318
 #, kde-format
 msgid "Reload"
 msgstr "Қайта жүктеп алу"
 
-#: kcmfontinst/FontList.cpp:1699
+#: kcmfontinst/FontList.cpp:1696
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "Барлық %1 қаріптерді ашып қарайсыз ба?"
@@ -514,22 +514,22 @@ msgstr "Бөлек қапшыққа жылжыту."
 msgid "Move to system folder."
 msgstr "Жүйелік қапшыққа жылжыту."
 
-#: kcmfontinst/JobRunner.cpp:136
+#: kcmfontinst/JobRunner.cpp:138
 #, kde-format
 msgid "Skip"
 msgstr "Аттап кету"
 
-#: kcmfontinst/JobRunner.cpp:139
+#: kcmfontinst/JobRunner.cpp:141
 #, kde-format
 msgid "AutoSkip"
 msgstr "Автоаттап кету"
 
-#: kcmfontinst/JobRunner.cpp:184
+#: kcmfontinst/JobRunner.cpp:186
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
 msgstr "<h3>Доғару?</h3><p>Шынымен доғарғыңыз келе ме?</p>"
 
-#: kcmfontinst/JobRunner.cpp:196
+#: kcmfontinst/JobRunner.cpp:198
 #, kde-format
 msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
@@ -538,84 +538,84 @@ msgstr ""
 "<h3>Бітті</h3><p>Өзгерістерді ашылып тұрған қолданбаларға жеткізу үшін "
 "оларды қайта жегу керек екенін ескерген жөн.</p>"
 
-#: kcmfontinst/JobRunner.cpp:204
+#: kcmfontinst/JobRunner.cpp:206
 #, kde-format
 msgid "Do not show this message again"
 msgstr "Бұл хабарлама ендігәрі көрсетілмесін"
 
-#: kcmfontinst/JobRunner.cpp:312
+#: kcmfontinst/JobRunner.cpp:314
 #, kde-format
 msgid "Installing"
 msgstr "Орнату"
 
-#: kcmfontinst/JobRunner.cpp:315
+#: kcmfontinst/JobRunner.cpp:317
 #, kde-format
 msgid "Uninstalling"
 msgstr "Орнатудан шығару"
 
-#: kcmfontinst/JobRunner.cpp:318 kcmfontinst/JobRunner.cpp:415
+#: kcmfontinst/JobRunner.cpp:320 kcmfontinst/JobRunner.cpp:417
 #, kde-format
 msgid "Enabling"
 msgstr "Рұқсат ету"
 
-#: kcmfontinst/JobRunner.cpp:321 kcmfontinst/JobRunner.cpp:419
+#: kcmfontinst/JobRunner.cpp:323 kcmfontinst/JobRunner.cpp:421
 #, kde-format
 msgid "Moving"
 msgstr "Жылжыту"
 
-#: kcmfontinst/JobRunner.cpp:324
+#: kcmfontinst/JobRunner.cpp:326
 #, kde-format
 msgid "Updating"
 msgstr "Жаңарту"
 
-#: kcmfontinst/JobRunner.cpp:328
+#: kcmfontinst/JobRunner.cpp:330
 #, kde-format
 msgid "Removing"
 msgstr "Өшіру"
 
-#: kcmfontinst/JobRunner.cpp:332
+#: kcmfontinst/JobRunner.cpp:334
 #, kde-format
 msgid "Disabling"
 msgstr "Бұғаттау"
 
-#: kcmfontinst/JobRunner.cpp:370
+#: kcmfontinst/JobRunner.cpp:372
 #, fuzzy, kde-format
 #| msgid "Updating font configuration. Please wait..."
 msgid "Updating font configuration. Please wait…"
 msgstr "Қаріп жүйесін жаңарту. Күте тұрыңыз..."
 
-#: kcmfontinst/JobRunner.cpp:442
+#: kcmfontinst/JobRunner.cpp:444
 #, kde-format
 msgid "Unable to start backend."
 msgstr "Тетігі жегілмеді."
 
-#: kcmfontinst/JobRunner.cpp:451
+#: kcmfontinst/JobRunner.cpp:453
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
 msgstr "Тетігі құрыды, бірақ қайта жегілді. Қайталап көріңіз."
 
-#: kcmfontinst/JobRunner.cpp:616 kcmfontinst/JobRunner.cpp:622
+#: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:624
 #, kde-format
 msgid "<h3>Error</h3>"
 msgstr "<h3>Қате</h3>"
 
-#: kcmfontinst/JobRunner.cpp:688
+#: kcmfontinst/JobRunner.cpp:690
 #, kde-format
 msgid "Failed to download <i>%1</i>"
 msgstr "<i>%1</i> дегенді жүктеу жаңылды"
 
-#: kcmfontinst/JobRunner.cpp:690
+#: kcmfontinst/JobRunner.cpp:692
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
 msgstr "Жүйелік тетігі құрыды. Қайталап көріңіз.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:692
+#: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr "<i>%1</i> деген нүктелік қаріп, олар жүйеңізде бұғатталған."
 
-#: kcmfontinst/JobRunner.cpp:694
+#: kcmfontinst/JobRunner.cpp:696
 #, kde-format
 msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
@@ -624,142 +624,142 @@ msgstr ""
 "<i>%1</i> дегенде <b>%2</b> деген қаріп бар, бірақ ондай қаріп жүйеңізде "
 "орнатылған ғой."
 
-#: kcmfontinst/JobRunner.cpp:696
+#: kcmfontinst/JobRunner.cpp:698
 #, kde-format
 msgid "<i>%1</i> is not a font."
 msgstr "<i>%1</i> деген қаріп емес."
 
-#: kcmfontinst/JobRunner.cpp:698
+#: kcmfontinst/JobRunner.cpp:700
 #, kde-format
 msgid "Could not remove all files associated with <i>%1</i>"
 msgstr "<i>%1</i> дегенмен байланысты бүкіл файлдар өшірілмеді"
 
-#: kcmfontinst/JobRunner.cpp:700
+#: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "Жүйелік қызметті жегу жаңылысы.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:703 kio/KioFonts.cpp:716
+#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:717
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>%1</i> деген бар екен."
 
-#: kcmfontinst/JobRunner.cpp:706
+#: kcmfontinst/JobRunner.cpp:708
 #, kde-format
 msgid "<i>%1</i> does not exist."
 msgstr "<i>%1</i> деген жоқ екен."
 
-#: kcmfontinst/JobRunner.cpp:708
+#: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
 msgstr "Рұқсат жоқ.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:710
+#: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
 msgstr "Танымайтын амал.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:712
+#: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
 msgstr "Аутентификация жаңылысы.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:714
+#: kcmfontinst/JobRunner.cpp:716
 #, kde-format
 msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Өңдеу кезде күтпеген қате пайда болды: <i>%1</i>"
 
-#: kcmfontinst/KCmFontInst.cpp:211
+#: kcmfontinst/KCmFontInst.cpp:213
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Create New Group…"
 msgstr "Жаңа топты құру"
 
-#: kcmfontinst/KCmFontInst.cpp:214
+#: kcmfontinst/KCmFontInst.cpp:216
 #, fuzzy, kde-format
 #| msgid "Remove Group"
 msgid "Remove Group…"
 msgstr "Тобын өшіру"
 
-#: kcmfontinst/KCmFontInst.cpp:217
+#: kcmfontinst/KCmFontInst.cpp:219
 #, fuzzy, kde-format
 #| msgid "Enable Fonts"
 msgid "Enable Fonts in Group…"
 msgstr "Қаріптерді рұқаст ету"
 
-#: kcmfontinst/KCmFontInst.cpp:220
+#: kcmfontinst/KCmFontInst.cpp:222
 #, fuzzy, kde-format
 #| msgid "Disable Fonts"
 msgid "Disable Fonts in Group…"
 msgstr "Қаріптерді бұғаттау"
 
-#: kcmfontinst/KCmFontInst.cpp:241
+#: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "This displays a preview of the selected font."
 msgstr "Таңдалған қаріптің үлгісін көрсету."
 
-#: kcmfontinst/KCmFontInst.cpp:257
+#: kcmfontinst/KCmFontInst.cpp:259
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Find Duplicates…"
 msgstr "Қаріптердің қайталғанын іздеу..."
 
-#: kcmfontinst/KCmFontInst.cpp:257
+#: kcmfontinst/KCmFontInst.cpp:259
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Scan for Duplicate Fonts…"
 msgstr "Қаріптердің қайталғанын іздеу..."
 
-#: kcmfontinst/KCmFontInst.cpp:259
+#: kcmfontinst/KCmFontInst.cpp:261
 #, fuzzy, kde-format
 #| msgid "Install..."
 msgid "Install from File…"
 msgstr "Орнату..."
 
-#: kcmfontinst/KCmFontInst.cpp:259
+#: kcmfontinst/KCmFontInst.cpp:261
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:260
+#: kcmfontinst/KCmFontInst.cpp:262
 #, fuzzy, kde-format
 #| msgid "Get New Fonts..."
 msgid "Get New Fonts…"
 msgstr "Жаңа қаріптерді табу..."
 
-#: kcmfontinst/KCmFontInst.cpp:261
+#: kcmfontinst/KCmFontInst.cpp:263
 #, kde-format
 msgid "Download new fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:263
+#: kcmfontinst/KCmFontInst.cpp:265
 #, fuzzy, kde-format
 #| msgid "Delete all selected fonts"
 msgid "Delete Selected Fonts…"
 msgstr "Бүкіл таңдалған қаріптерді өшіру"
 
-#: kcmfontinst/KCmFontInst.cpp:333
+#: kcmfontinst/KCmFontInst.cpp:335
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "Үлгі мәтінің өзгерту..."
 
-#: kcmfontinst/KCmFontInst.cpp:432
+#: kcmfontinst/KCmFontInst.cpp:434
 #, kde-format
 msgid "Add Fonts"
 msgstr "Қаріптерді қосу"
 
-#: kcmfontinst/KCmFontInst.cpp:558
+#: kcmfontinst/KCmFontInst.cpp:560
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Басатын қаріптердің тізімін сақтау жаңылысы."
 
-#: kcmfontinst/KCmFontInst.cpp:580
+#: kcmfontinst/KCmFontInst.cpp:582
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Қаріпті басып шығаруды бастау жаңылысы."
 
-#: kcmfontinst/KCmFontInst.cpp:587
+#: kcmfontinst/KCmFontInst.cpp:589
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -768,59 +768,59 @@ msgstr ""
 "Басып шығаруға жарайтын қаріп жоқ.\n"
 "Тек нүктелік емес және рұқсат етілген қана қарібімен басуға болады."
 
-#: kcmfontinst/KCmFontInst.cpp:589
+#: kcmfontinst/KCmFontInst.cpp:591
 #, kde-format
 msgid "Cannot Print"
 msgstr "Басып шығаруға болмайды"
 
-#: kcmfontinst/KCmFontInst.cpp:604
+#: kcmfontinst/KCmFontInst.cpp:606
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Өшіру үшін ештеңе таңдалмаған."
 
-#: kcmfontinst/KCmFontInst.cpp:604
+#: kcmfontinst/KCmFontInst.cpp:606
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Өшіретін ештеңе жоқ"
 
-#: kcmfontinst/KCmFontInst.cpp:619
+#: kcmfontinst/KCmFontInst.cpp:621
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Келесіні шынымен өшіргіңіз келе ме?</p><p>'<b>%1</b>'</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:622
+#: kcmfontinst/KCmFontInst.cpp:624
 #, kde-format
 msgid "Delete Font"
 msgstr "Қаріпті өшіру"
 
-#: kcmfontinst/KCmFontInst.cpp:629
+#: kcmfontinst/KCmFontInst.cpp:631
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "Шынымен осы %1 қаріпті өшіргіңіз келе ме?"
 
-#: kcmfontinst/KCmFontInst.cpp:631
+#: kcmfontinst/KCmFontInst.cpp:633
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Қаріптерді өшіру"
 
-#: kcmfontinst/KCmFontInst.cpp:636
+#: kcmfontinst/KCmFontInst.cpp:638
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "Қаріпт(ерд)і өшіру..."
 
-#: kcmfontinst/KCmFontInst.cpp:651
+#: kcmfontinst/KCmFontInst.cpp:653
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Көшіру үшін ештеңе таңдалмаған."
 
-#: kcmfontinst/KCmFontInst.cpp:651
+#: kcmfontinst/KCmFontInst.cpp:653
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Көшіретін ештеңе жоқ"
 
-#: kcmfontinst/KCmFontInst.cpp:661
+#: kcmfontinst/KCmFontInst.cpp:663
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -829,17 +829,17 @@ msgstr ""
 "<p>Шынымен</p><p>'<b>%1</b>'</p><p>дегенді <i>%2</i> дегеннен <i>%3</i> "
 "дегенге жылжытқыңыз келе ме?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:666
+#: kcmfontinst/KCmFontInst.cpp:668
 #, kde-format
 msgid "Move Font"
 msgstr "Қаріпті жылжыту"
 
-#: kcmfontinst/KCmFontInst.cpp:667 kcmfontinst/KCmFontInst.cpp:679
+#: kcmfontinst/KCmFontInst.cpp:669 kcmfontinst/KCmFontInst.cpp:681
 #, kde-format
 msgid "Move"
 msgstr "Жылжыту"
 
-#: kcmfontinst/KCmFontInst.cpp:672
+#: kcmfontinst/KCmFontInst.cpp:674
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -849,76 +849,76 @@ msgstr[0] ""
 "<p>Шынымен осы %1 қаріпті <i>%2</i> дегеннен <i>%3</i> дегенге жылжытқыңыз "
 "келе ме?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:678
+#: kcmfontinst/KCmFontInst.cpp:680
 #, kde-format
 msgid "Move Fonts"
 msgstr "Қаріптерді жылжыту"
 
-#: kcmfontinst/KCmFontInst.cpp:683
+#: kcmfontinst/KCmFontInst.cpp:685
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "Қаріпт(ерд)і жылжыту..."
 
-#: kcmfontinst/KCmFontInst.cpp:697
+#: kcmfontinst/KCmFontInst.cpp:699
 #, kde-format
 msgid "Export Group"
 msgstr "Топты экспорттау"
 
-#: kcmfontinst/KCmFontInst.cpp:723
+#: kcmfontinst/KCmFontInst.cpp:725
 #, kde-format
 msgid "No files?"
 msgstr "Файлдар жоқ па?"
 
-#: kcmfontinst/KCmFontInst.cpp:726
+#: kcmfontinst/KCmFontInst.cpp:728
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "%1 дегенді жазу үшін ашқанда жаңылыс орын алды"
 
-#: kcmfontinst/KCmFontInst.cpp:746
+#: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "Create New Group"
 msgstr "Жаңа топты құру"
 
-#: kcmfontinst/KCmFontInst.cpp:746
+#: kcmfontinst/KCmFontInst.cpp:748
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Name of new group:"
 msgstr "Жаңа топты құру"
 
-#: kcmfontinst/KCmFontInst.cpp:746
+#: kcmfontinst/KCmFontInst.cpp:748
 #, kde-format
 msgid "New Group"
 msgstr "Жаңа топ"
 
-#: kcmfontinst/KCmFontInst.cpp:774
+#: kcmfontinst/KCmFontInst.cpp:776
 #, kde-format
 msgid "Preview Text"
 msgstr "Үлгі мәтіні"
 
-#: kcmfontinst/KCmFontInst.cpp:774
+#: kcmfontinst/KCmFontInst.cpp:776
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Жаңа үлгісін келтіріңіз:"
 
-#: kcmfontinst/KCmFontInst.cpp:826
+#: kcmfontinst/KCmFontInst.cpp:828
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "Қаріп тізімін қарап-шығу..."
 
-#: kcmfontinst/KCmFontInst.cpp:885
+#: kcmfontinst/KCmFontInst.cpp:887
 #, kde-format
 msgid "No fonts"
 msgstr "Қаріптер жоқ"
 
-#: kcmfontinst/KCmFontInst.cpp:890
+#: kcmfontinst/KCmFontInst.cpp:892
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "%1 қаріп"
 
-#: kcmfontinst/KCmFontInst.cpp:899
+#: kcmfontinst/KCmFontInst.cpp:901
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -931,7 +931,7 @@ msgstr ""
 "\"right\">Ішінара рұқсат етілгендер:</td><td>%3</td></tr><tr><td align="
 "\"right\">Жалпы:</td><td>%4</td></tr></table> "
 
-#: kcmfontinst/KCmFontInst.cpp:909
+#: kcmfontinst/KCmFontInst.cpp:911
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -942,66 +942,66 @@ msgstr ""
 "tr><tr><td align=\"right\">Бұғатталғандар:</td><td>%2</td></tr><tr><td align="
 "\"right\">Жалпы:</td><td>%3</td></tr></table> "
 
-#: kcmfontinst/KCmFontInst.cpp:986
+#: kcmfontinst/KCmFontInst.cpp:988
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "Байланысты файлдарын қарастыру..."
 
-#: kcmfontinst/KCmFontInst.cpp:990
+#: kcmfontinst/KCmFontInst.cpp:992
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "Файлдарды қарап-шығу..."
 
-#: kcmfontinst/KCmFontInst.cpp:991
+#: kcmfontinst/KCmFontInst.cpp:993
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "Орнататын қосымша файлдарды қарастыру..."
 
-#: kcmfontinst/KCmFontInst.cpp:1006
+#: kcmfontinst/KCmFontInst.cpp:1008
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1 дегенмен байланысты файлдарды қарастыру"
 
-#: kcmfontinst/KCmFontInst.cpp:1034
+#: kcmfontinst/KCmFontInst.cpp:1036
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "Қаріпт(ерд)і орнату..."
 
-#: kcmfontinst/KCmFontInst.cpp:1099
+#: kcmfontinst/KCmFontInst.cpp:1101
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Рұқсат ету үшін ештеңе таңдалмаған."
 
-#: kcmfontinst/KCmFontInst.cpp:1099
+#: kcmfontinst/KCmFontInst.cpp:1101
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Бұғаттау үшін ештеңе таңдалмаған."
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Рұқсат ететін ештеңе жоқ"
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1102
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Бұғаттайтын ештеңе жоқ"
 
-#: kcmfontinst/KCmFontInst.cpp:1117
+#: kcmfontinst/KCmFontInst.cpp:1119
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>'<b>%1</b>'</p><p>дегенді шынымен рұқсат етуді қалайсыз ба?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>'<b>%1</b>'</p><p>дегенді шынымен бұғаттауды қалайсыз ба?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1123
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1010,7 +1010,7 @@ msgstr ""
 "<p>'<b>%2</b>' тобындағы '<b>%1</b>'</p><p>дегенді шынымен рұқсат етуді "
 "қалайсыз ба?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1125
+#: kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1019,29 +1019,29 @@ msgstr ""
 "<p>'<b>%2</b>' тобындағы '<b>%1</b>'</p><p>дегенді шынымен бұғаттауды "
 "қалайсыз ба?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1129 kcmfontinst/KCmFontInst.cpp:1130
+#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Enable Font"
 msgstr "Қаріпті рұқсат ету"
 
-#: kcmfontinst/KCmFontInst.cpp:1129 kcmfontinst/KCmFontInst.cpp:1131
+#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
 #, kde-format
 msgid "Disable Font"
 msgstr "Қаріпті бұғаттау"
 
-#: kcmfontinst/KCmFontInst.cpp:1136
+#: kcmfontinst/KCmFontInst.cpp:1138
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "Шынымен осы %1 қаріпті рұқсат етуді қалайсыз ба?"
 
-#: kcmfontinst/KCmFontInst.cpp:1139
+#: kcmfontinst/KCmFontInst.cpp:1141
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "Шынымен осы %1 қаріпті бұғаттауды қалайсыз ба?"
 
-#: kcmfontinst/KCmFontInst.cpp:1142
+#: kcmfontinst/KCmFontInst.cpp:1144
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1052,7 +1052,7 @@ msgid_plural ""
 msgstr[0] ""
 "<p>'<b>%2</b>' топтағы %1 қаріпті шынымен рұқсат етуді қалайсыз ба?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1147
+#: kcmfontinst/KCmFontInst.cpp:1149
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1063,23 +1063,23 @@ msgid_plural ""
 msgstr[0] ""
 "<p>'<b>%2</b>' топтағы %1 қаріпті шынымен бұғаттауды қалайсыз ба?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1153 kcmfontinst/KCmFontInst.cpp:1154
+#: kcmfontinst/KCmFontInst.cpp:1155 kcmfontinst/KCmFontInst.cpp:1156
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Қаріптерді рұқаст ету"
 
-#: kcmfontinst/KCmFontInst.cpp:1153 kcmfontinst/KCmFontInst.cpp:1155
+#: kcmfontinst/KCmFontInst.cpp:1155 kcmfontinst/KCmFontInst.cpp:1157
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Қаріптерді бұғаттау"
 
-#: kcmfontinst/KCmFontInst.cpp:1161
+#: kcmfontinst/KCmFontInst.cpp:1163
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "Қаріпт(ерд)і рұқсат ету..."
 
-#: kcmfontinst/KCmFontInst.cpp:1163
+#: kcmfontinst/KCmFontInst.cpp:1165
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"
@@ -1125,12 +1125,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:206
+#: kio/KioFonts.cpp:207
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "Қаріптерді \"%1\" не \"%2\" дегенге ғана орнатуға болады."
 
-#: kio/KioFonts.cpp:209
+#: kio/KioFonts.cpp:210
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1139,57 +1139,57 @@ msgstr ""
 "Қаріп дестені тікелей орната алмайсыз.\n"
 "%1 дененді тарқатып, бір-бірлеп орнатып көріңіз."
 
-#: kio/KioFonts.cpp:431
+#: kio/KioFonts.cpp:432
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "Қаріптер көшірілмеді"
 
-#: kio/KioFonts.cpp:436
+#: kio/KioFonts.cpp:437
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "Қаріптер жылжымады"
 
-#: kio/KioFonts.cpp:447
+#: kio/KioFonts.cpp:448
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "Тек қаріптер ғана өшіріледі."
 
-#: kio/KioFonts.cpp:452
+#: kio/KioFonts.cpp:453
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "Қаріптерді \"%1\" не \"%2\" дегеннен өшіруге болады."
 
-#: kio/KioFonts.cpp:481
+#: kio/KioFonts.cpp:482
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "\"%1\" не \"%2\" біреуін келтіріңіз."
 
-#: kio/KioFonts.cpp:499
+#: kio/KioFonts.cpp:500
 #, kde-format
 msgid "No special methods supported."
 msgstr "Арнаулы әдістерінің қолдауы жоқ."
 
-#: kio/KioFonts.cpp:573
+#: kio/KioFonts.cpp:574
 #, kde-format
 msgid "Fonts"
 msgstr "Қаріптер"
 
-#: kio/KioFonts.cpp:702
+#: kio/KioFonts.cpp:703
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Жүйелік қызметті жегу жаңылысы."
 
-#: kio/KioFonts.cpp:704
+#: kio/KioFonts.cpp:705
 #, kde-format
 msgid "Backend died"
 msgstr "Тетігі құрыды"
 
-#: kio/KioFonts.cpp:706
+#: kio/KioFonts.cpp:707
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 деген нүктелік қаріп, олар жүйеңізде бұғатталған."
 
-#: kio/KioFonts.cpp:709
+#: kio/KioFonts.cpp:710
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
@@ -1197,17 +1197,17 @@ msgstr ""
 "%1 дегенде <b>%2</b> деген қаріп бар, бірақ бұндай қаріп жүйеңізде "
 "орнатылған ғой."
 
-#: kio/KioFonts.cpp:711
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 деген қаріп емес."
 
-#: kio/KioFonts.cpp:713
+#: kio/KioFonts.cpp:714
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "%1 дегенмен байланысты бүкіл файлдар өшірілмейді."
 
-#: lib/Fc.cpp:407 lib/KfiConstants.h:107
+#: lib/Fc.cpp:409 lib/KfiConstants.h:108
 #, kde-format
 msgid "Unknown"
 msgstr "Беймәлім"
@@ -1283,321 +1283,321 @@ msgstr "Барлығы"
 msgid "Administrator"
 msgstr "Әкімші"
 
-#: lib/KfiConstants.h:74
+#: lib/KfiConstants.h:75
 msgid "Thin"
 msgstr "Жүқа"
 
-#: lib/KfiConstants.h:75
+#: lib/KfiConstants.h:76
 msgid "Extra Light"
 msgstr "Аса жеңіл"
 
-#: lib/KfiConstants.h:76
+#: lib/KfiConstants.h:77
 msgid "Ultra Light"
 msgstr "Әсіре жеңіл"
 
-#: lib/KfiConstants.h:77
+#: lib/KfiConstants.h:78
 msgid "Light"
 msgstr "Жеңіл"
 
-#: lib/KfiConstants.h:78
+#: lib/KfiConstants.h:79
 msgid "Regular"
 msgstr "Қалыпты"
 
-#: lib/KfiConstants.h:79 lib/KfiConstants.h:97
+#: lib/KfiConstants.h:80 lib/KfiConstants.h:98
 msgid "Normal"
 msgstr "Кәдімгі"
 
-#: lib/KfiConstants.h:80
+#: lib/KfiConstants.h:81
 msgid "Medium"
 msgstr "Орташа"
 
-#: lib/KfiConstants.h:81
+#: lib/KfiConstants.h:82
 msgid "Demi Bold"
 msgstr "Жартылай қалың"
 
-#: lib/KfiConstants.h:82
+#: lib/KfiConstants.h:83
 msgid "Semi Bold"
 msgstr "Жарым қалың"
 
-#: lib/KfiConstants.h:83
+#: lib/KfiConstants.h:84
 msgid "Bold"
 msgstr "Қалың"
 
-#: lib/KfiConstants.h:84
+#: lib/KfiConstants.h:85
 msgid "Extra Bold"
 msgstr "Аса қалың"
 
-#: lib/KfiConstants.h:85
+#: lib/KfiConstants.h:86
 msgid "Ultra Bold"
 msgstr "Әсіре қалың"
 
-#: lib/KfiConstants.h:86
+#: lib/KfiConstants.h:87
 msgid "Black"
 msgstr "Қара"
 
-#: lib/KfiConstants.h:87
+#: lib/KfiConstants.h:88
 msgid "Heavy"
 msgstr "Салмақты"
 
-#: lib/KfiConstants.h:89
+#: lib/KfiConstants.h:90
 msgid "Roman"
 msgstr "Roman"
 
-#: lib/KfiConstants.h:90
+#: lib/KfiConstants.h:91
 msgid "Italic"
 msgstr "Көлбеу"
 
-#: lib/KfiConstants.h:91
+#: lib/KfiConstants.h:92
 msgid "Oblique"
 msgstr "Қиғаш"
 
-#: lib/KfiConstants.h:93
+#: lib/KfiConstants.h:94
 msgid "Ultra Condensed"
 msgstr "Әсіре қысылған"
 
-#: lib/KfiConstants.h:94
+#: lib/KfiConstants.h:95
 msgid "Extra Condensed"
 msgstr "Аса қысылған"
 
-#: lib/KfiConstants.h:95
+#: lib/KfiConstants.h:96
 msgid "Condensed"
 msgstr "Қысылған"
 
-#: lib/KfiConstants.h:96
+#: lib/KfiConstants.h:97
 msgid "Semi Condensed"
 msgstr "Жарым қысылған"
 
-#: lib/KfiConstants.h:98
+#: lib/KfiConstants.h:99
 msgid "Semi Expanded"
 msgstr "Жарым созылған"
 
-#: lib/KfiConstants.h:99
+#: lib/KfiConstants.h:100
 msgid "Expanded"
 msgstr "Созылған"
 
-#: lib/KfiConstants.h:100
+#: lib/KfiConstants.h:101
 msgid "Extra Expanded"
 msgstr "Аса созылған"
 
-#: lib/KfiConstants.h:101
+#: lib/KfiConstants.h:102
 msgid "Ultra Expanded"
 msgstr "Әсіре созылған"
 
-#: lib/KfiConstants.h:103
+#: lib/KfiConstants.h:104
 msgid "Monospaced"
 msgstr "Бірқадамды"
 
-#: lib/KfiConstants.h:104
+#: lib/KfiConstants.h:105
 msgid "Charcell"
 msgstr "Charcell"
 
-#: lib/KfiConstants.h:105
+#: lib/KfiConstants.h:106
 msgid "Proportional"
 msgstr "Пропорционалды"
 
-#: viewpart/CharTip.cpp:42
+#: viewpart/CharTip.cpp:44
 #, kde-format
 msgid "Other, Control"
 msgstr "Басқа, Басқару"
 
-#: viewpart/CharTip.cpp:44
+#: viewpart/CharTip.cpp:46
 #, kde-format
 msgid "Other, Format"
 msgstr "Басқа, Пішімдеу"
 
-#: viewpart/CharTip.cpp:46
+#: viewpart/CharTip.cpp:48
 #, kde-format
 msgid "Other, Not Assigned"
 msgstr "Басқа, Тағайындалмаған"
 
-#: viewpart/CharTip.cpp:48
+#: viewpart/CharTip.cpp:50
 #, kde-format
 msgid "Other, Private Use"
 msgstr "Басқа, Жеке қолданатын"
 
-#: viewpart/CharTip.cpp:50
+#: viewpart/CharTip.cpp:52
 #, kde-format
 msgid "Other, Surrogate"
 msgstr "Басқа, Ауыстырғыш"
 
-#: viewpart/CharTip.cpp:52
+#: viewpart/CharTip.cpp:54
 #, kde-format
 msgid "Letter, Lowercase"
 msgstr "Әріп, Кіші"
 
-#: viewpart/CharTip.cpp:54
+#: viewpart/CharTip.cpp:56
 #, kde-format
 msgid "Letter, Modifier"
 msgstr "Әріп, Түрлендіргіш"
 
-#: viewpart/CharTip.cpp:56
+#: viewpart/CharTip.cpp:58
 #, kde-format
 msgid "Letter, Other"
 msgstr "Әріп, Басқа"
 
-#: viewpart/CharTip.cpp:58
+#: viewpart/CharTip.cpp:60
 #, kde-format
 msgid "Letter, Titlecase"
 msgstr "Әріп, Басшы"
 
-#: viewpart/CharTip.cpp:60
+#: viewpart/CharTip.cpp:62
 #, kde-format
 msgid "Letter, Uppercase"
 msgstr "Әріп, Үлкен"
 
-#: viewpart/CharTip.cpp:62
+#: viewpart/CharTip.cpp:64
 #, kde-format
 msgid "Mark, Spacing Combining"
 msgstr "Белгі, Біріктірілген бос орын"
 
-#: viewpart/CharTip.cpp:64
+#: viewpart/CharTip.cpp:66
 #, kde-format
 msgid "Mark, Enclosing"
 msgstr "Белгі, Енгізу"
 
-#: viewpart/CharTip.cpp:66
+#: viewpart/CharTip.cpp:68
 #, kde-format
 msgid "Mark, Non-Spacing"
 msgstr "Белгі, Ажыратпау"
 
-#: viewpart/CharTip.cpp:68
+#: viewpart/CharTip.cpp:70
 #, kde-format
 msgid "Number, Decimal Digit"
 msgstr "Сан, Ондық цифра"
 
-#: viewpart/CharTip.cpp:70
+#: viewpart/CharTip.cpp:72
 #, kde-format
 msgid "Number, Letter"
 msgstr "Сан, Әріп"
 
-#: viewpart/CharTip.cpp:72
+#: viewpart/CharTip.cpp:74
 #, kde-format
 msgid "Number, Other"
 msgstr "Сан, Басқа"
 
-#: viewpart/CharTip.cpp:74
+#: viewpart/CharTip.cpp:76
 #, kde-format
 msgid "Punctuation, Connector"
 msgstr "Тыныс белгісі, Біріктіргіш"
 
-#: viewpart/CharTip.cpp:76
+#: viewpart/CharTip.cpp:78
 #, kde-format
 msgid "Punctuation, Dash"
 msgstr "Тыныс белгісі, Сызықша"
 
-#: viewpart/CharTip.cpp:78
+#: viewpart/CharTip.cpp:80
 #, kde-format
 msgid "Punctuation, Close"
 msgstr "Тыныс белгісі, Жабатын"
 
-#: viewpart/CharTip.cpp:80
+#: viewpart/CharTip.cpp:82
 #, kde-format
 msgid "Punctuation, Final Quote"
 msgstr "Тыныс белгісі, Жабатын тырнақша"
 
-#: viewpart/CharTip.cpp:82
+#: viewpart/CharTip.cpp:84
 #, kde-format
 msgid "Punctuation, Initial Quote"
 msgstr "Тыныс белгісі, Ашатын тырнақша"
 
-#: viewpart/CharTip.cpp:84
+#: viewpart/CharTip.cpp:86
 #, kde-format
 msgid "Punctuation, Other"
 msgstr "Тыныс белгісі, Басқа"
 
-#: viewpart/CharTip.cpp:86
+#: viewpart/CharTip.cpp:88
 #, kde-format
 msgid "Punctuation, Open"
 msgstr "Тыныс белгісі, Ашатын"
 
-#: viewpart/CharTip.cpp:88
+#: viewpart/CharTip.cpp:90
 #, kde-format
 msgid "Symbol, Currency"
 msgstr "Таңба, Ақша"
 
-#: viewpart/CharTip.cpp:90
+#: viewpart/CharTip.cpp:92
 #, kde-format
 msgid "Symbol, Modifier"
 msgstr "Таңба, Түрлендіргіші"
 
-#: viewpart/CharTip.cpp:92
+#: viewpart/CharTip.cpp:94
 #, kde-format
 msgid "Symbol, Math"
 msgstr "Таңба, Матем."
 
-#: viewpart/CharTip.cpp:94
+#: viewpart/CharTip.cpp:96
 #, kde-format
 msgid "Symbol, Other"
 msgstr "Таңба, Басқа"
 
-#: viewpart/CharTip.cpp:96
+#: viewpart/CharTip.cpp:98
 #, kde-format
 msgid "Separator, Line"
 msgstr "Бөлгіші, Жол"
 
-#: viewpart/CharTip.cpp:98
+#: viewpart/CharTip.cpp:100
 #, kde-format
 msgid "Separator, Paragraph"
 msgstr "Бөлгіші, Абзац"
 
-#: viewpart/CharTip.cpp:100
+#: viewpart/CharTip.cpp:102
 #, kde-format
 msgid "Separator, Space"
 msgstr "Бөлгіші, Бос_орын"
 
-#: viewpart/CharTip.cpp:152
+#: viewpart/CharTip.cpp:154
 #, kde-format
 msgid "Category"
 msgstr "Санаты"
 
-#: viewpart/CharTip.cpp:153
+#: viewpart/CharTip.cpp:155
 #, kde-format
 msgid "UCS-4"
 msgstr "UCS-4"
 
-#: viewpart/CharTip.cpp:156
+#: viewpart/CharTip.cpp:159
 #, kde-format
 msgid "UTF-16"
 msgstr "UTF-16"
 
-#: viewpart/CharTip.cpp:167
+#: viewpart/CharTip.cpp:170
 #, kde-format
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: viewpart/CharTip.cpp:184
+#: viewpart/CharTip.cpp:186
 #, kde-format
 msgid "XML Decimal Entity"
 msgstr "XML ондық мәні"
 
-#: viewpart/FontViewPart.cpp:89
+#: viewpart/FontViewPart.cpp:91
 #, kde-format
 msgid "Show Face:"
 msgstr "Түрін көрсету:"
 
-#: viewpart/FontViewPart.cpp:92
+#: viewpart/FontViewPart.cpp:94
 #, fuzzy, kde-format
 #| msgid "Installing"
 msgid "Install…"
 msgstr "Орнату"
 
-#: viewpart/FontViewPart.cpp:113
+#: viewpart/FontViewPart.cpp:115
 #, fuzzy, kde-format
 #| msgid "Change Text..."
 msgid "Change Text…"
 msgstr "Мәтінді өзгерту..."
 
-#: viewpart/FontViewPart.cpp:339
+#: viewpart/FontViewPart.cpp:341
 #, kde-format
 msgid "Could not read font."
 msgstr "Қаріп оқылмады."
 
-#: viewpart/FontViewPart.cpp:406
+#: viewpart/FontViewPart.cpp:407
 #, kde-format
 msgid "Preview String"
 msgstr "Үлгі мәтіні"
 
-#: viewpart/FontViewPart.cpp:406
+#: viewpart/FontViewPart.cpp:407
 #, kde-format
 msgid "Please enter new string:"
 msgstr "Жаңа үлгісін келтіріңіз:"

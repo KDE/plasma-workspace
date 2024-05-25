@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-01-13 14:59+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -250,33 +250,33 @@ msgstr[1] "%1 sekundės"
 msgstr[2] "%1 sekundžių"
 msgstr[3] "%1 sekundė"
 
-#: ui/main.qml:64 ui/main.qml:102
+#: ui/main.qml:91 ui/main.qml:129
 #, kde-format
 msgid "Size: %1"
 msgstr "Dydis: %1"
 
-#: ui/main.qml:117
+#: ui/main.qml:144
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Konfigūruoti paleidimo grįžtamąjį ryšį…"
 
-#: ui/main.qml:131
+#: ui/main.qml:158
 #, kde-format
 msgid "&Install from File…"
 msgstr "Į&diegti iš failo…"
 
-#: ui/main.qml:137
+#: ui/main.qml:164
 #, kde-format
 msgid "&Get New…"
 msgstr "&Gauti naują…"
 
-#: ui/main.qml:181
+#: ui/main.qml:178
 #, kde-format
 msgid "Open Theme"
 msgstr "Atverti apipavidalinimą"
 
-#: ui/main.qml:183
+#: ui/main.qml:180
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Žymeklio apipavidalinimo failai (*.tar.gz *.tar.bz2)"

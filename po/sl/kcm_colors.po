@@ -1,7 +1,7 @@
 # translation of kcmcolors.po to Slovenian
 # Translation of kcmcolors.po to Slovenian
 # KDEBASE translation to Slovenian language.
-# $Id: kcm_colors.po 1680502 2024-05-21 01:11:24Z scripty $
+# $Id: kcm_colors.po 1680767 2024-05-25 01:11:03Z scripty $
 # $Source$
 #
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2007 Free Software Foundation, Inc.
@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-08-03 07:56+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1257,123 +1257,123 @@ msgstr "V sistemu imate naslednje barvne sheme:"
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (trenutna barvna shema)"
 
-#: ui/AccentColorUI.qml:37
+#: ui/AccentColorUI.qml:27
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
 msgstr "Poudarjena barve iz barvne sheme"
 
-#: ui/AccentColorUI.qml:38
+#: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
 msgstr "Poudarjena barve iz tapete"
 
-#: ui/AccentColorUI.qml:39
+#: ui/AccentColorUI.qml:29
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "Poudarjena barvo po meri"
 
-#: ui/AccentColorUI.qml:164
+#: ui/AccentColorUI.qml:147
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Uporabi poudarjeno barvo po meri"
 
-#: ui/main.qml:87
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr "Barvna shema '%1' ni nameščena. Namesto te izbiram privzeto shemo."
 
-#: ui/main.qml:112
+#: ui/main.qml:123
 #, kde-format
 msgid "All Schemes"
 msgstr "Vse sheme"
 
-#: ui/main.qml:113
+#: ui/main.qml:124
 #, kde-format
 msgid "Light Schemes"
 msgstr "Lahke sheme"
 
-#: ui/main.qml:114
+#: ui/main.qml:125
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Temne sheme"
 
-#: ui/main.qml:140
+#: ui/main.qml:152
 #, kde-format
 msgid "Install from File…"
 msgstr "Namesti iz datoteke…"
 
-#: ui/main.qml:145
+#: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
 msgstr "Dobi nove…"
 
-#: ui/main.qml:192
+#: ui/main.qml:204
 #, kde-format
 msgid "Window Title"
 msgstr "Besedilo okna"
 
-#: ui/main.qml:215
+#: ui/main.qml:227
 #, kde-format
 msgid "Window text"
 msgstr "Besedilo okna"
 
-#: ui/main.qml:223
+#: ui/main.qml:235
 #, kde-format
 msgid "Button"
 msgstr "Gumb"
 
-#: ui/main.qml:263
+#: ui/main.qml:275
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "povezava"
 
-#: ui/main.qml:265
+#: ui/main.qml:277
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "obiskano"
 
-#: ui/main.qml:273
+#: ui/main.qml:285
 #, kde-format
 msgid "Normal text"
 msgstr "Običajno besedilo"
 
-#: ui/main.qml:280
+#: ui/main.qml:292
 #, kde-format
 msgid "Highlighted text"
 msgstr "Označeno besedilo"
 
-#: ui/main.qml:287
+#: ui/main.qml:299
 #, kde-format
 msgid "Disabled text"
 msgstr "Onemogočeno besedilo"
 
-#: ui/main.qml:305
+#: ui/main.qml:317
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Uredi barvno shemo…"
 
-#: ui/main.qml:311
+#: ui/main.qml:323
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Odstrani barvno shemo"
 
-#: ui/main.qml:318
+#: ui/main.qml:330
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Obnovi barvno shemo"
 
-#: ui/main.qml:362
+#: ui/main.qml:374
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Odpri barvno shemo"
 
-#: ui/main.qml:364
+#: ui/main.qml:376
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Datoteke barvnih shem (*.colors)"

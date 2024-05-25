@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 01:59+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-12-17 22:16+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -78,32 +78,32 @@ msgstr "Установка наборов значков..."
 msgid "Installing %1 theme…"
 msgstr "Установка набора значков %1..."
 
-#: ui/main.qml:45
+#: ui/main.qml:67
 #, kde-format
 msgid "Install from File…"
 msgstr "Установить из файла..."
 
-#: ui/main.qml:50
+#: ui/main.qml:72
 #, kde-format
 msgid "Get New…"
 msgstr "Загрузить наборы значков…"
 
-#: ui/main.qml:166
+#: ui/main.qml:188
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Удалить набор значков"
 
-#: ui/main.qml:173
+#: ui/main.qml:195
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Восстановить набор значков"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Open Theme"
 msgstr "Открытие темы"
 
-#: ui/main.qml:247
+#: ui/main.qml:246
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Наборы значков (*.tar.gz *.tar.bz2)"

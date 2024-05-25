@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 01:59+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-08-03 17:31+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -62,32 +62,32 @@ msgstr "Installante themas de icone…"
 msgid "Installing %1 theme…"
 msgstr "Installante thema %1 …"
 
-#: ui/main.qml:45
+#: ui/main.qml:67
 #, kde-format
 msgid "Install from File…"
 msgstr "Installa ex file ..."
 
-#: ui/main.qml:50
+#: ui/main.qml:72
 #, kde-format
 msgid "Get New…"
 msgstr "Obtene Nove…"
 
-#: ui/main.qml:166
+#: ui/main.qml:188
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Remove thema de icone"
 
-#: ui/main.qml:173
+#: ui/main.qml:195
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Restabili Thema de icone"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Open Theme"
 msgstr "Aperi thema"
 
-#: ui/main.qml:247
+#: ui/main.qml:246
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Files de Thema (*zip *.tar.gz *.tar.bz2)"

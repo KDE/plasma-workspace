@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-20 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2022-12-20 11:29-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -67,7 +67,7 @@ msgstr "O dispositivo foi desconectado."
 msgid "An unknown error has occurred."
 msgstr "Ocorreu um erro desconhecido."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:170
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:171
 #, kde-format
 msgid "Change Password"
 msgstr "Alterar senha"
@@ -142,27 +142,27 @@ msgstr "Manter inalterado"
 msgid "Create User"
 msgstr "Criar usuário"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:132
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Name:"
 msgstr "Nome:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:140
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Username:"
 msgstr "Nome de usuário:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:150
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Standard"
 msgstr "Padrão"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:151
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:152
 #, kde-format
 msgid "Administrator"
 msgstr "Administrador"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Account type:"
 msgstr "Tipo de conta:"
@@ -590,37 +590,37 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr ""
 
-#: src/ui/UserDetailsPage.qml:111
+#: src/ui/UserDetailsPage.qml:112
 #, kde-format
 msgid "Change avatar"
 msgstr "Alterar avatar"
 
-#: src/ui/UserDetailsPage.qml:164
+#: src/ui/UserDetailsPage.qml:165
 #, kde-format
 msgid "Email address:"
 msgstr "Endereço de e-mail:"
 
-#: src/ui/UserDetailsPage.qml:193
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgid "Delete files"
 msgstr "Excluir arquivos"
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Keep files"
 msgstr "Manter arquivos"
 
-#: src/ui/UserDetailsPage.qml:207
+#: src/ui/UserDetailsPage.qml:208
 #, kde-format
 msgid "Delete User…"
 msgstr "Excluir usuário..."
 
-#: src/ui/UserDetailsPage.qml:219
+#: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Configurar autenticação por impressão digital..."
 
-#: src/ui/UserDetailsPage.qml:251
+#: src/ui/UserDetailsPage.qml:252
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2009-08-08 17:59+0000\n"
 "Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
 "Language-Team: Albanian <sq@li.org>\n"
@@ -227,36 +227,36 @@ msgid_plural "%1 seconds"
 msgstr[0] ""
 msgstr[1] ""
 
-#: ui/main.qml:64 ui/main.qml:102
+#: ui/main.qml:91 ui/main.qml:129
 #, kde-format
 msgid "Size: %1"
 msgstr ""
 
-#: ui/main.qml:117
+#: ui/main.qml:144
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:131
+#: ui/main.qml:158
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "&Install from File…"
 msgstr "Instalo Temë të Re..."
 
-#: ui/main.qml:137
+#: ui/main.qml:164
 #, fuzzy, kde-format
 #| msgid "Install New Theme..."
 msgid "&Get New…"
 msgstr "Instalo Temë të Re..."
 
-#: ui/main.qml:181
+#: ui/main.qml:178
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Hiqe Temën"
 
-#: ui/main.qml:183
+#: ui/main.qml:180
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

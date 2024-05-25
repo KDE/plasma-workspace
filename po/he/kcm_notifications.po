@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-10 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-03-22 08:12+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -38,7 +38,7 @@ msgstr "הצגת חלוניות קופצות"
 msgid "Show in do not disturb mode"
 msgstr "הצגה במצב ‚לא להפריע’"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:183
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:189
 #, kde-format
 msgid "Show in history"
 msgstr "הצגה בהיסטוריה"
@@ -100,7 +100,7 @@ msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
 msgstr "הגדרות יישום…"
 
-#: ui/main.qml:77
+#: ui/main.qml:80
 #, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
@@ -110,107 +110,107 @@ msgstr ""
 "לא ניתן למצוא יישומון ‚התראות’, שנחוץ להצגת התראות. נא לוודא שהוא פעיל או "
 "במגש המערכת שלך או כיישומון עצמאי."
 
-#: ui/main.qml:88
+#: ui/main.qml:91
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2' instead of Plasma."
 msgstr "התראות מסופקות כרגע על ידי ‚%1 %2’ במקום דרך פלזמה."
 
-#: ui/main.qml:92
+#: ui/main.qml:95
 #, kde-format
 msgid "Notifications are currently not provided by Plasma."
 msgstr "התראות לא מסופקות כרגע דרך פלזמה."
 
-#: ui/main.qml:99
+#: ui/main.qml:105
 #, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
 msgstr "מצב ‚לא להפריע’"
 
-#: ui/main.qml:104
+#: ui/main.qml:110
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
 msgstr "הפעלה אוטומטית:"
 
-#: ui/main.qml:105
+#: ui/main.qml:111
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
 msgstr "כאשר המסכים משוקפים"
 
-#: ui/main.qml:117
+#: ui/main.qml:123
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "במהלך שיתוף מסך"
 
-#: ui/main.qml:132
+#: ui/main.qml:138
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "ברירה אוטומטית עם קיצור דרך:"
 
-#: ui/main.qml:139
+#: ui/main.qml:145
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "תנאי חשיפה"
 
-#: ui/main.qml:144
+#: ui/main.qml:150
 #, kde-format
 msgid "Critical notifications:"
 msgstr "התראות מכריעות:"
 
-#: ui/main.qml:145
+#: ui/main.qml:151
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "להציג במצב ‚לא להפריע’"
 
-#: ui/main.qml:157
+#: ui/main.qml:163
 #, kde-format
 msgid "Normal notifications:"
 msgstr "התראות רגילות:"
 
-#: ui/main.qml:158
+#: ui/main.qml:164
 #, kde-format
 msgid "Show over full screen windows"
 msgstr "להציג על גבי חלונות במסך מלא"
 
-#: ui/main.qml:170
+#: ui/main.qml:176
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "התראות בעדיפות נמוכה:"
 
-#: ui/main.qml:171
+#: ui/main.qml:177
 #, kde-format
 msgid "Show popup"
 msgstr "הצגת חלונית קופצת"
 
-#: ui/main.qml:200
+#: ui/main.qml:206
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "חלוניות קופצות"
 
-#: ui/main.qml:206
+#: ui/main.qml:212
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "מקום:"
 
-#: ui/main.qml:207
+#: ui/main.qml:213
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "ליד סמל ההתראות"
 
-#: ui/main.qml:244
+#: ui/main.qml:250
 #, kde-format
 msgid "Choose Custom Position…"
 msgstr "להשתמש במקום מותאם אישית…"
 
-#: ui/main.qml:253 ui/main.qml:269
+#: ui/main.qml:259 ui/main.qml:275
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -219,41 +219,41 @@ msgstr[1] "שתי שניות"
 msgstr[2] "%1 שניות"
 msgstr[3] "%1 שניות"
 
-#: ui/main.qml:258
+#: ui/main.qml:264
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "להסתיר לאחר:"
 
-#: ui/main.qml:281
+#: ui/main.qml:287
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "משוב נוסף"
 
-#: ui/main.qml:287
+#: ui/main.qml:293
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "הצגה בהתראות"
 
-#: ui/main.qml:288
+#: ui/main.qml:294
 #, kde-format
 msgid "Application progress:"
 msgstr "התקדמות יישום:"
 
-#: ui/main.qml:302
+#: ui/main.qml:308
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "להשאיר את החלונית הקופצת במשך ההתקדמות"
 
-#: ui/main.qml:315
+#: ui/main.qml:321
 #, kde-format
 msgid "Notification badges:"
 msgstr "עיטורי התראות:"
 
-#: ui/main.qml:316
+#: ui/main.qml:322
 #, kde-format
 msgid "Show in task manager"
 msgstr "הצגה במנהל המשימות"

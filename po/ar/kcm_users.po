@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-20 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-10 17:14+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -65,7 +65,7 @@ msgstr "الجهاز مفصول."
 msgid "An unknown error has occurred."
 msgstr "حدث خطأ مجهول."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:170
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:171
 #, kde-format
 msgid "Change Password"
 msgstr "غيّر كلمة السر"
@@ -139,27 +139,27 @@ msgstr "اتركه بدون تعديل"
 msgid "Create User"
 msgstr "أنشئ مستخدِم"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:132
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Name:"
 msgstr "الاسم:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:140
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Username:"
 msgstr "اسم المستخدم:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:150
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Standard"
 msgstr "عادي"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:151
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:152
 #, kde-format
 msgid "Administrator"
 msgstr "إداري"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Account type:"
 msgstr "نوع الحساب:"
@@ -506,37 +506,37 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "صورة تعبيرية للمستخدم"
 
-#: src/ui/UserDetailsPage.qml:111
+#: src/ui/UserDetailsPage.qml:112
 #, kde-format
 msgid "Change avatar"
 msgstr "غيّر الصورة"
 
-#: src/ui/UserDetailsPage.qml:164
+#: src/ui/UserDetailsPage.qml:165
 #, kde-format
 msgid "Email address:"
 msgstr "عنوان البريد الإلكتروني:"
 
-#: src/ui/UserDetailsPage.qml:193
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgid "Delete files"
 msgstr "احذف الملفات"
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Keep files"
 msgstr "احتفظ بالملفات"
 
-#: src/ui/UserDetailsPage.qml:207
+#: src/ui/UserDetailsPage.qml:208
 #, kde-format
 msgid "Delete User…"
 msgstr "احذف المستخدم..."
 
-#: src/ui/UserDetailsPage.qml:219
+#: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "اضبط عملية الاستيثاق بالبصمة..."
 
-#: src/ui/UserDetailsPage.qml:251
+#: src/ui/UserDetailsPage.qml:252
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 01:59+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2022-11-11 11:32+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -62,33 +62,33 @@ msgstr "Nişan mövzuları quraşdırılır..."
 msgid "Installing %1 theme…"
 msgstr "%1 mövzu quraşdırılır..."
 
-#: ui/main.qml:45
+#: ui/main.qml:67
 #, kde-format
 msgid "Install from File…"
 msgstr "Fayldan quraşdırın..."
 
-#: ui/main.qml:50
+#: ui/main.qml:72
 #, fuzzy, kde-format
 #| msgid "Get New Icons…"
 msgid "Get New…"
 msgstr "Yeni nişanlar alın..."
 
-#: ui/main.qml:166
+#: ui/main.qml:188
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "İkon mövzusunu silmək"
 
-#: ui/main.qml:173
+#: ui/main.qml:195
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "İkon mövzusunu bərpa etmək"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Open Theme"
 msgstr "Mövzunu açmaq"
 
-#: ui/main.qml:247
+#: ui/main.qml:246
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Mövzu faylları (*.tar.gz *.tar.bz2)"

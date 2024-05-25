@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 01:59+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-24 18:21+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -63,32 +63,32 @@ msgstr "Se instalează tematici de pictograme…"
 msgid "Installing %1 theme…"
 msgstr "Se instalează tematica %1…"
 
-#: ui/main.qml:45
+#: ui/main.qml:67
 #, kde-format
 msgid "Install from File…"
 msgstr "Instalează din fișier…"
 
-#: ui/main.qml:50
+#: ui/main.qml:72
 #, kde-format
 msgid "Get New…"
 msgstr "Obține noi…"
 
-#: ui/main.qml:166
+#: ui/main.qml:188
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "Elimină tematica de pictograme"
 
-#: ui/main.qml:173
+#: ui/main.qml:195
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "Restabilește tematica de pictograme"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Open Theme"
 msgstr "Deschide tematica"
 
-#: ui/main.qml:247
+#: ui/main.qml:246
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Fișiere cu tematici (*.tar.gz *.tar.bz2)"

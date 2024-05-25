@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-03-18 19:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -251,33 +251,33 @@ msgid_plural "%1 seconds"
 msgstr[0] "%1 saniye"
 msgstr[1] "%1 saniye"
 
-#: ui/main.qml:64 ui/main.qml:102
+#: ui/main.qml:91 ui/main.qml:129
 #, kde-format
 msgid "Size: %1"
 msgstr "Boyut: %1"
 
-#: ui/main.qml:117
+#: ui/main.qml:144
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Başlatma Geri Bildirimini &Yapılandır…"
 
-#: ui/main.qml:131
+#: ui/main.qml:158
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Dosyadan Kur…"
 
-#: ui/main.qml:137
+#: ui/main.qml:164
 #, kde-format
 msgid "&Get New…"
 msgstr "Yeni &Al…"
 
-#: ui/main.qml:181
+#: ui/main.qml:178
 #, kde-format
 msgid "Open Theme"
 msgstr "Temayı Aç"
 
-#: ui/main.qml:183
+#: ui/main.qml:180
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "İmleç Tema Dosyaları (*.tar.gz *.tar.bz2)"

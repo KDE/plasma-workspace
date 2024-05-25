@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-10-03 11:42+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -148,7 +148,7 @@ msgstr "%1 %2 נק׳"
 msgid "Adjust Global Scale…"
 msgstr "התאמת קנה מידה כללי…"
 
-#: ui/main.qml:34
+#: ui/main.qml:37
 #, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
@@ -157,7 +157,7 @@ msgstr ""
 "חלק מהשינויים כגון החלקת קצוות או נק׳ לאינטש יחולו רק על יישומים חדשים "
 "שנפתחים מעתה."
 
-#: ui/main.qml:48
+#: ui/main.qml:52
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
@@ -166,7 +166,7 @@ msgstr ""
 "גופנים גדולים מאוד יכולים להוליד תוצאות שנראות מוזר. במקום להשתמש בגופנים "
 "גדולים מאוד, כדי להתאים את קנה המידה הכללי של המסך."
 
-#: ui/main.qml:69
+#: ui/main.qml:74
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
@@ -175,7 +175,7 @@ msgstr ""
 "גודלי גופנים עם נקודה עשרונית יכולים לגרום לבעיות בחלק מהיישומים. כדאי "
 "להשתמש בגודלי גופנים במספרים שלמים."
 
-#: ui/main.qml:91
+#: ui/main.qml:97
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -184,82 +184,82 @@ msgstr ""
 "הדרך המומלצת לשנות את קנה המידה של ממשק המשתמש היא באמצעות יכולת קנה המידה "
 "הכללי של המסך."
 
-#: ui/main.qml:103
+#: ui/main.qml:110
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&כיוון כל הגופנים…"
 
-#: ui/main.qml:116
+#: ui/main.qml:123
 #, kde-format
 msgid "General:"
 msgstr "כללי:"
 
-#: ui/main.qml:117
+#: ui/main.qml:124
 #, kde-format
 msgid "Select general font"
 msgstr "בחירת גופן כללי"
 
-#: ui/main.qml:128
+#: ui/main.qml:135
 #, kde-format
 msgid "Fixed width:"
 msgstr "רוחב קבוע:"
 
-#: ui/main.qml:129
+#: ui/main.qml:136
 #, kde-format
 msgid "Select fixed width font"
 msgstr "בחירת גופן רוחב קבוע"
 
-#: ui/main.qml:140
+#: ui/main.qml:147
 #, kde-format
 msgid "Small:"
 msgstr "קטן:"
 
-#: ui/main.qml:141
+#: ui/main.qml:148
 #, kde-format
 msgid "Select small font"
 msgstr "בחירת גופן קטן"
 
-#: ui/main.qml:152
+#: ui/main.qml:159
 #, kde-format
 msgid "Toolbar:"
 msgstr "סרגל כלים:"
 
-#: ui/main.qml:153
+#: ui/main.qml:160
 #, kde-format
 msgid "Select toolbar font"
 msgstr "בחירת גופן סרגל כלים"
 
-#: ui/main.qml:164
+#: ui/main.qml:171
 #, kde-format
 msgid "Menu:"
 msgstr "תפריט:"
 
-#: ui/main.qml:165
+#: ui/main.qml:172
 #, kde-format
 msgid "Select menu font"
 msgstr "בחירת גופן תפריט"
 
-#: ui/main.qml:175
+#: ui/main.qml:182
 #, kde-format
 msgid "Window title:"
 msgstr "כותרת חלון:"
 
-#: ui/main.qml:176
+#: ui/main.qml:183
 #, kde-format
 msgid "Select window title font"
 msgstr "בחירת גופן לכותרות חלונות"
 
-#: ui/main.qml:191
+#: ui/main.qml:198
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "החלקת קצוות:"
 
-#: ui/main.qml:196
+#: ui/main.qml:203
 #, kde-format
 msgid "Enable"
 msgstr "פעילה"
 
-#: ui/main.qml:200
+#: ui/main.qml:207
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -274,28 +274,28 @@ msgstr ""
 "קצוות</emphasis> כדי להפחית את התופעה הזאת. בדרך כלל כדאי להשאיר את האפשרות "
 "הזאת פעילה אלא אם כן היא גורמת לבעיות."
 
-#: ui/main.qml:214
+#: ui/main.qml:221
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "החרגת טווח מהחלקת קצוות"
 
-#: ui/main.qml:233 ui/main.qml:257
+#: ui/main.qml:240 ui/main.qml:264
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 נק׳"
 
-#: ui/main.qml:248
+#: ui/main.qml:255
 #, kde-format
 msgid "to"
 msgstr "עד"
 
-#: ui/main.qml:280
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "סוג עיבוד תת‏־פיקסלים:"
 
-#: ui/main.qml:326
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -316,13 +316,13 @@ msgstr ""
 "יש <emphasis>BGR</emphasis> (כחול-ירוק-אדום) ומגוון סידורים אקזוטיים יותר לא "
 "נתמכים על ידי היכולת הזאת.</para>לא עובד עם צגי CRT (העבים הישנים)."
 
-#: ui/main.qml:331
+#: ui/main.qml:338
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "רמיזה:"
 
-#: ui/main.qml:376
+#: ui/main.qml:383
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -335,12 +335,12 @@ msgstr ""
 "בגדלים קטנים. רמיזה חזקה יותר בדרך כלל מחדדת את הקצוות אך האותיות הקטנות "
 "פחות דומות לצורת בגדלים גדולים יותר."
 
-#: ui/main.qml:389
+#: ui/main.qml:396
 #, kde-format
 msgid "Force font DPI:"
 msgstr "אכיפת נק׳ לאינטש של הגופן:"
 
-#: ui/main.qml:417
+#: ui/main.qml:424
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -356,7 +356,7 @@ msgstr ""
 "הטקסט, יש לשנות את גודל הגופנים להלן. כדי לשנות את הכול לפי קנה מידה, יש "
 "להשתמש במחוון הגלילה שבעמוד <interface>תצוגה וצג</interface>.</para>"
 
-#: ui/main.qml:423
+#: ui/main.qml:430
 #, kde-format
 msgid "Select Font"
 msgstr "בחירת גופן"

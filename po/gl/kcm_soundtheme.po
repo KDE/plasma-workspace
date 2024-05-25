@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-20 00:39+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-20 16:39+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -34,7 +34,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "Activar os sons de notificacións."
 
-#: ui/main.qml:96
+#: ui/main.qml:97
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -44,7 +44,7 @@ msgid_plural "Based on: %2"
 msgstr[0] "Baseado en: %2"
 msgstr[1] "Baseado en: %2"
 
-#: ui/main.qml:109
+#: ui/main.qml:110
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -53,26 +53,26 @@ msgid "Preview:"
 msgstr "Vista previa:"
 
 # skip-rule: trasno-11.0-en-sound
-#: ui/main.qml:128
+#: ui/main.qml:129
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Escoitar «%1»."
 
-#: ui/main.qml:150
+#: ui/main.qml:151
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Escoitar o son de demostración do tema «%1»."
 
-#: ui/main.qml:185
+#: ui/main.qml:186
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "O tema %1 non inclúe o son «%2»"
 
 # skip-rule: trasno-11.0-en-sound
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Non foi posíbel escoitar o son: %1"

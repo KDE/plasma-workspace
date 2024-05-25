@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-06-14 14:52+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -241,33 +241,33 @@ msgstr[0] "%1 sekunda"
 msgstr[1] "%1 sekundy"
 msgstr[2] "%1 sekund"
 
-#: ui/main.qml:64 ui/main.qml:102
+#: ui/main.qml:91 ui/main.qml:129
 #, kde-format
 msgid "Size: %1"
 msgstr "Velikost: %1"
 
-#: ui/main.qml:117
+#: ui/main.qml:144
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Nastavit ode&zvu při spuštění..."
 
-#: ui/main.qml:131
+#: ui/main.qml:158
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instalovat ze souboru…"
 
-#: ui/main.qml:137
+#: ui/main.qml:164
 #, kde-format
 msgid "&Get New…"
 msgstr "Zís&kat nové…"
 
-#: ui/main.qml:181
+#: ui/main.qml:178
 #, kde-format
 msgid "Open Theme"
 msgstr "Otevřít motiv"
 
-#: ui/main.qml:183
+#: ui/main.qml:180
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Soubory motivů kurzorů (*.tar.gz *.tar.bz2)"

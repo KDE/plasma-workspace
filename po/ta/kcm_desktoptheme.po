@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-11 00:39+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-08-06 19:19+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -48,7 +48,7 @@ msgstr "தோற்றத்திட்ட நிறுவல் தோல்�
 msgid "Removing theme failed: %1"
 msgstr "தோற்றத்திட்ட நீக்கம் தோல்வியடைந்தது: %1"
 
-#: plasma-apply-desktoptheme.cpp:31
+#: plasma-apply-desktoptheme.cpp:33
 #, kde-format
 msgid ""
 "This tool allows you to set the theme of the current Plasma session, without "
@@ -58,7 +58,7 @@ msgstr ""
 "தவறுதலாக, இல்லாத ஒன்றையொ ஏற்கனவே செயலில் உள்ளதையோ தேர்ந்தெடுக்காமல், தற்போதைய பிளாஸ்மா "
 "அமர்வின் தோற்றத்திட்டத்தை நீங்கள் மாற்ற இந்த கருவி உதவும்."
 
-#: plasma-apply-desktoptheme.cpp:35
+#: plasma-apply-desktoptheme.cpp:37
 #, kde-format
 msgid ""
 "The name of the theme you wish to set for your current Plasma session "
@@ -67,7 +67,7 @@ msgstr ""
 "தற்போதைய பிளாஸ்மா அமர்வில் நீங்கள் பயன்படுத்த விரும்பும் தோற்றத்திட்டத்தின் பெயர் (ஒரு பாதையை "
 "வழங்கினால், அதன் கடைசி பாகம் மட்டுமே பயன்படுத்தப்படும்)"
 
-#: plasma-apply-desktoptheme.cpp:36
+#: plasma-apply-desktoptheme.cpp:38
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
@@ -75,7 +75,7 @@ msgstr ""
 "கணினியில் கிட்டுகின்ற அனைத்து தோற்றத்திட்டங்களை (மற்றும் இப்போது எது செயலில் உள்ளதென) "
 "காட்டும்"
 
-#: plasma-apply-desktoptheme.cpp:49
+#: plasma-apply-desktoptheme.cpp:51
 #, kde-format
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
@@ -83,12 +83,12 @@ msgid ""
 msgstr ""
 "கோரப்பட்ட \"%1\" என்ற தோற்றத்திட்டம், தற்போதைய பிளாஸ்மா அமர்வில் ஏற்கனவே செயலில் உள்ளது."
 
-#: plasma-apply-desktoptheme.cpp:65
+#: plasma-apply-desktoptheme.cpp:67
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
 msgstr "தற்போதைய பிளாஸ்மா அமர்வின் தோற்றத்திட்டம் %1 ஆக அமைக்கப்பட்டுள்ளது"
 
-#: plasma-apply-desktoptheme.cpp:67
+#: plasma-apply-desktoptheme.cpp:69
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
@@ -97,67 +97,67 @@ msgstr ""
 "\"%1\" என்ற தோற்றத்திட்டத்தை கண்டுபிடிக்க முடியவில்லை. தோற்றத்திட்டம் பின்வருபவற்றில் ஒன்றாக "
 "இருக்க வேண்டும்: %2"
 
-#: plasma-apply-desktoptheme.cpp:75
+#: plasma-apply-desktoptheme.cpp:77
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
 msgstr "உங்கள் கணினியில் கீழ்காணும் தோற்றத்திட்டங்கள் உள்ளன:"
 
-#: ui/main.qml:69
+#: ui/main.qml:101
 #, kde-format
 msgid "All Themes"
 msgstr "அனைத்து தோற்றத்திட்டங்கள்"
 
-#: ui/main.qml:70
+#: ui/main.qml:102
 #, kde-format
 msgid "Light Themes"
 msgstr "வெளிர்ந்த தோற்றத்திட்டங்கள்"
 
-#: ui/main.qml:71
+#: ui/main.qml:103
 #, kde-format
 msgid "Dark Themes"
 msgstr "கருமையான தோற்றத்திட்டங்கள்"
 
-#: ui/main.qml:72
+#: ui/main.qml:104
 #, kde-format
 msgid "Color scheme compatible"
 msgstr "நிறத்திட்டத்தை பொறுத்தது"
 
-#: ui/main.qml:97
+#: ui/main.qml:130
 #, kde-format
 msgid "Install from File…"
 msgstr "கோப்பிலிருந்து நிறுவு…"
 
-#: ui/main.qml:102
+#: ui/main.qml:135
 #, kde-format
 msgid "Get New…"
 msgstr "புதியவற்றை பெறு…"
 
-#: ui/main.qml:115
+#: ui/main.qml:148
 #, kde-format
 msgid "Follows color scheme"
 msgstr "நிறத்திட்டத்தை பின்பற்றும்"
 
-#: ui/main.qml:133
+#: ui/main.qml:166
 #, kde-format
 msgid "Edit Theme…"
 msgstr "தோற்றத்திட்டத்தை திருத்து…"
 
-#: ui/main.qml:140
+#: ui/main.qml:173
 #, kde-format
 msgid "Remove Theme"
 msgstr "தோற்றத்திட்டத்தை நீக்கு"
 
-#: ui/main.qml:147
+#: ui/main.qml:180
 #, kde-format
 msgid "Restore Theme"
 msgstr "தோற்றத்திட்டத்தை மீட்டமை"
 
-#: ui/main.qml:189
+#: ui/main.qml:199
 #, kde-format
 msgid "Open Theme"
 msgstr "தோற்றத்திட்டத்தை திற"
 
-#: ui/main.qml:191
+#: ui/main.qml:201
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
 msgstr "தோற்றத்திட்ட கோப்புகள் (*.zip *.tar.gz *.tar.bz2)"

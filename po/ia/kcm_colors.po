@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-08-03 17:30+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -1245,30 +1245,30 @@ msgstr "Tu ha le sequente schemas de color sur tu systema:"
 msgid " * %1 (current color scheme)"
 msgstr "* %1 (schema de color currente)"
 
-#: ui/AccentColorUI.qml:37
+#: ui/AccentColorUI.qml:27
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
 msgstr "Color deaccento ex  schema de color"
 
-#: ui/AccentColorUI.qml:38
+#: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
 msgstr "Color de accento ex tapete de papiro "
 
-#: ui/AccentColorUI.qml:39
+#: ui/AccentColorUI.qml:29
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "Personalisa color de accento"
 
-#: ui/AccentColorUI.qml:164
+#: ui/AccentColorUI.qml:147
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Selige color de accento personalisate"
 
-#: ui/main.qml:87
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
@@ -1276,94 +1276,94 @@ msgstr ""
 "Le schema de color '%1? non es installate. In loco seliger le  thema "
 "predefinite."
 
-#: ui/main.qml:112
+#: ui/main.qml:123
 #, kde-format
 msgid "All Schemes"
 msgstr "Omne Schemas"
 
-#: ui/main.qml:113
+#: ui/main.qml:124
 #, kde-format
 msgid "Light Schemes"
 msgstr "Schemas clar"
 
-#: ui/main.qml:114
+#: ui/main.qml:125
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Schemas obscur"
 
-#: ui/main.qml:140
+#: ui/main.qml:152
 #, kde-format
 msgid "Install from File…"
 msgstr "Installa ex file ..."
 
-#: ui/main.qml:145
+#: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
 msgstr "Obtene Nove…"
 
-#: ui/main.qml:192
+#: ui/main.qml:204
 #, kde-format
 msgid "Window Title"
 msgstr "Titulo de fenestra"
 
-#: ui/main.qml:215
+#: ui/main.qml:227
 #, kde-format
 msgid "Window text"
 msgstr "Texto de fenestra"
 
-#: ui/main.qml:223
+#: ui/main.qml:235
 #, kde-format
 msgid "Button"
 msgstr "Button"
 
-#: ui/main.qml:263
+#: ui/main.qml:275
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "Ligamine"
 
-#: ui/main.qml:265
+#: ui/main.qml:277
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "Visitate"
 
-#: ui/main.qml:273
+#: ui/main.qml:285
 #, kde-format
 msgid "Normal text"
 msgstr "Texto Normal"
 
-#: ui/main.qml:280
+#: ui/main.qml:292
 #, kde-format
 msgid "Highlighted text"
 msgstr "Texto evidentiate "
 
-#: ui/main.qml:287
+#: ui/main.qml:299
 #, kde-format
 msgid "Disabled text"
 msgstr "Texto disactivate"
 
-#: ui/main.qml:305
+#: ui/main.qml:317
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Edita Schema de Color..."
 
-#: ui/main.qml:311
+#: ui/main.qml:323
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Remove schema de color"
 
-#: ui/main.qml:318
+#: ui/main.qml:330
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Restabili schema de color"
 
-#: ui/main.qml:362
+#: ui/main.qml:374
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Aperi Schema de Color"
 
-#: ui/main.qml:364
+#: ui/main.qml:376
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Files de Schema de Color (*.colors)"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-05 07:27-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -17,232 +17,232 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: binarydialectmodel.cpp:50
+#: binarydialectmodel.cpp:52
 #, kde-format
 msgctxt "Binary dialect IEC, with sigle in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
 msgstr ""
 
-#: binarydialectmodel.cpp:54
+#: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with sigle in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
 msgstr ""
 
-#: binarydialectmodel.cpp:58
+#: binarydialectmodel.cpp:60
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
 msgstr ""
 
-#: binarydialectmodel.cpp:73
+#: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 msgstr ""
 
-#: binarydialectmodel.cpp:75
+#: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr ""
 
-#: binarydialectmodel.cpp:77
+#: binarydialectmodel.cpp:79
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 msgstr ""
 
-#: exampleutility.cpp:29
+#: exampleutility.cpp:31
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial UK"
 msgstr "ਇੰਪੀਰੀਅਲ ਯੂਕੇ"
 
-#: exampleutility.cpp:31
+#: exampleutility.cpp:33
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial US"
 msgstr "ਇੰਪੀਰੀਅਲ ਯੂ.ਐਸ."
 
-#: exampleutility.cpp:33
+#: exampleutility.cpp:35
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Metric"
 msgstr "ਮੈਟਰਿਕ"
 
-#: exampleutility.cpp:47
+#: exampleutility.cpp:49
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
 msgstr "ਪੱਤਰ"
 
-#: exampleutility.cpp:49
+#: exampleutility.cpp:51
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "A4"
 msgstr "A4"
 
-#: exampleutility.cpp:64
+#: exampleutility.cpp:66
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
 msgstr "c/o"
 
-#: exampleutility.cpp:65
+#: exampleutility.cpp:67
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
 msgstr "ਭਾਸ਼ਾ ਕਾਰਪੋਰੇਸ਼ਨ"
 
-#: exampleutility.cpp:66
+#: exampleutility.cpp:68
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
 msgstr "ਵਿਕਾਸ ਵਿਭਾਗ"
 
-#: exampleutility.cpp:67
+#: exampleutility.cpp:69
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
 msgstr "ਪੰਜਾਬੀ-ਇਮਾਰਤ"
 
-#: exampleutility.cpp:68
+#: exampleutility.cpp:70
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
 msgstr "ਮੁੱਖ ਸੜਕ"
 
-#: exampleutility.cpp:69
+#: exampleutility.cpp:71
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
 msgstr "ਘਰ 1"
 
-#: exampleutility.cpp:71
+#: exampleutility.cpp:73
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:72
+#: exampleutility.cpp:74
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
 msgstr "ਕਮਰਾ 2"
 
-#: exampleutility.cpp:73
+#: exampleutility.cpp:75
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
 msgstr "ਮੰਜ਼ਲ 3"
 
-#: exampleutility.cpp:75
+#: exampleutility.cpp:77
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
 msgstr "ਡਾਊਨਟਾਊਨ"
 
-#: exampleutility.cpp:76
+#: exampleutility.cpp:78
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
 msgstr "123456"
 
-#: exampleutility.cpp:77
+#: exampleutility.cpp:79
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
 msgstr "ਸ਼ਹਿਰ"
 
-#: exampleutility.cpp:78
+#: exampleutility.cpp:80
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
 msgstr "ਰਾਜ"
 
-#: exampleutility.cpp:91
+#: exampleutility.cpp:93
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
 msgstr "ਪਰਿਵਾਰਿਕ ਨਾਂ"
 
-#: exampleutility.cpp:92
+#: exampleutility.cpp:94
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
 msgstr "ਪਰਿਵਾਰਿਕ ਨਾਂ"
 
-#: exampleutility.cpp:93
+#: exampleutility.cpp:95
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
 msgstr "ਨਾਂ ਦਾ ਪਹਿਲਾਂ ਹਿੱਸਾ"
 
-#: exampleutility.cpp:94
+#: exampleutility.cpp:96
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
 msgstr "F"
 
-#: exampleutility.cpp:95
+#: exampleutility.cpp:97
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
 msgstr "ਨਾਂ ਦਾ ਪਹਿਲਾਂ ਹਿੱਸਾ"
 
-#: exampleutility.cpp:96
+#: exampleutility.cpp:98
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
 msgstr "ਹੋਰ ਕੋਈ ਨਾਂ"
 
-#: exampleutility.cpp:97
+#: exampleutility.cpp:99
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
 msgstr "ਵਾਧੂ ਨਾਂ"
 
-#: exampleutility.cpp:98
+#: exampleutility.cpp:100
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
 msgstr "A"
 
-#: exampleutility.cpp:99
+#: exampleutility.cpp:101
 #, kde-format
 msgctxt "Profession"
 msgid "Profession"
 msgstr "ਕਿੱਤਾ"
 
-#: exampleutility.cpp:100
+#: exampleutility.cpp:102
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
 msgstr "ਡਾਕਟਰ"
 
-#: exampleutility.cpp:101
+#: exampleutility.cpp:103
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
 msgstr "ਡਾ."
 
-#: exampleutility.cpp:102
+#: exampleutility.cpp:104
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
 msgstr "ਡਾ."
 
-#: exampleutility.cpp:103
+#: exampleutility.cpp:105
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:119
+#: exampleutility.cpp:121
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:133
+#: exampleutility.cpp:135
 #, kde-format
 msgctxt ""
 "This is returned when an example test could not be made from locale "
@@ -299,27 +299,27 @@ msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
 msgstr "ਪੈਕੇਜ %1 ਇੰਸਟਾਲ ਕਰਨ ਲਈ ਫ਼ੇਲ੍ਹ ਹੈ"
 
-#: localegenhelper/localegenhelper.cpp:43
+#: localegenhelper/localegenhelper.cpp:45
 #, kde-format
 msgid "Another process is already running, please retry later"
 msgstr "ਹੋਰ ਕਾਰਵਾਈ ਪਹਿਲਾਂ ਹੀ ਜਾਰੀ ਹੈ, ਬਾਅਦ ਵਿੱਚ ਮੁੜ-ਕੋਸ਼ਿਸ ਕਰੋ"
 
-#: localegenhelper/localegenhelper.cpp:63
+#: localegenhelper/localegenhelper.cpp:65
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
 msgstr "ਲੋਕੇਲ ਸੰਰਚਨਾ ਫ਼ਾਇਲ ਨੂੰ ਸੋਧਣ ਲਈ ਪਰਮਾਣਿਤ ਨਹੀਂ"
 
-#: localegenhelper/localegenhelper.cpp:113
+#: localegenhelper/localegenhelper.cpp:115
 #, kde-format
 msgid "Can't open file `/etc/locale.gen`"
 msgstr "`/etc/locale.gen` ਫ਼ਾਇਲ ਖੋਲ੍ਹੀ ਨਹੀ ਜਾ ਸਕਦੀ ਹੈ"
 
-#: localegenhelper/localegenhelper.cpp:146
+#: localegenhelper/localegenhelper.cpp:148
 #, kde-format
 msgid "Can't locate executable `locale-gen`"
 msgstr "ਚੱਲਣਯੋਗ `locale-gen` ਲੱਭੀ ਨਹੀਂ ਜਾ ਸਕਦੀ"
 
-#: localegenhelper/localegenhelper.cpp:159
+#: localegenhelper/localegenhelper.cpp:161
 #, kde-format
 msgid "Unknown"
 msgstr "ਅਣਪਛਾਤਾ"
@@ -329,7 +329,7 @@ msgstr "ਅਣਪਛਾਤਾ"
 msgid "Default for System"
 msgstr "ਸਿਸਟਮ ਲਈ ਮੂਲ"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:365
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:372
 #, kde-format
 msgid "Default"
 msgstr "ਮੂਲ"
@@ -356,91 +356,91 @@ msgctxt ""
 msgid "Default for %1"
 msgstr "%1 ਲਈ ਮੂਲ"
 
-#: optionsmodel.cpp:45
+#: optionsmodel.cpp:46
 #, kde-format
 msgctxt "@info:title"
 msgid "Language"
 msgstr "ਭਾਸ਼ਾ"
 
-#: optionsmodel.cpp:46
+#: optionsmodel.cpp:47
 #, kde-format
 msgctxt "@info:title"
 msgid "Numbers"
 msgstr "ਅੰਕ"
 
-#: optionsmodel.cpp:47
+#: optionsmodel.cpp:48
 #, kde-format
 msgctxt "@info:title"
 msgid "Time"
 msgstr "ਸਮਾਂ"
 
-#: optionsmodel.cpp:48
+#: optionsmodel.cpp:49
 #, kde-format
 msgctxt "@info:title"
 msgid "Currency"
 msgstr "ਮੁਦਰਾ"
 
-#: optionsmodel.cpp:49
+#: optionsmodel.cpp:50
 #, kde-format
 msgctxt "@info:title"
 msgid "Measurements"
 msgstr "ਮਾਪ"
 
-#: optionsmodel.cpp:50
+#: optionsmodel.cpp:51
 #, kde-format
 msgctxt "@info:title"
 msgid "Paper Size"
 msgstr "ਸਫ਼ੇ ਦਾ ਆਕਾਰ"
 
-#: optionsmodel.cpp:52
+#: optionsmodel.cpp:53
 #, kde-format
 msgctxt "@info:title"
 msgid "Address"
 msgstr "ਐਡਰੈੱਸ"
 
-#: optionsmodel.cpp:53
+#: optionsmodel.cpp:54
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
 msgstr "ਨਾਂ ਦਾ ਢੰਗ"
 
-#: optionsmodel.cpp:54
+#: optionsmodel.cpp:55
 #, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
 msgstr "ਫੋਨ ਨੰਬਰ"
 
-#: optionsmodel.cpp:56
+#: optionsmodel.cpp:57
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
 msgstr ""
 
-#: optionsmodel.cpp:130 optionsmodel.cpp:374
+#: optionsmodel.cpp:131 optionsmodel.cpp:375
 #, kde-format
 msgctxt "@info:title, the current setting is system default"
 msgid "System Default"
 msgstr "ਸਿਸਟਮ ਮੂਲ"
 
-#: optionsmodel.cpp:296
+#: optionsmodel.cpp:297
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
 msgstr ""
 
-#: optionsmodel.cpp:299
+#: optionsmodel.cpp:300
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
 msgstr ""
 
-#: optionsmodel.cpp:302
+#: optionsmodel.cpp:303
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
 msgstr ""
 
-#: optionsmodel.cpp:376
+#: optionsmodel.cpp:377
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
@@ -461,7 +461,7 @@ msgstr ""
 msgid "Language"
 msgstr "ਭਾਸ਼ਾ"
 
-#: ui/AdvancedLanguageSelectPage.qml:31
+#: ui/AdvancedLanguageSelectPage.qml:33
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -471,71 +471,71 @@ msgstr ""
 "ਹੋਰ ਭਾਸ਼ਾਵਾਂ ਨੂੰ ਅੰਗਰੇਜ਼ੀ ਦੇ ਹੇਠਾਂ ਰੱਖਣ ਨਾਲ ਕੁਝ ਐਪਲੀਕੇਸ਼ਨਾਂ ਦਾ ਰਵੱਈਆ ਅਜੀਬ ਹੋਵੇਗਾ। ਜੇ ਤੁਸੀਂ ਆਪਣੇ "
 "ਸਿਸਟਮ ਨੂੰ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਵਰਤਣਾ ਚਾਹੁੰਦੇ ਹੋ ਤਾਂ ਹੋਰ ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ ਨੂੰ ਹਟਾ ਦਿਓ।"
 
-#: ui/AdvancedLanguageSelectPage.qml:39
+#: ui/AdvancedLanguageSelectPage.qml:42
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "ਭਾਸ਼ਾ \"%1\" ਸਹਾਇਕ ਨਹੀਂ ਹੈ"
 
-#: ui/AdvancedLanguageSelectPage.qml:49
+#: ui/AdvancedLanguageSelectPage.qml:55
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "ਆਪਣੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਵਿੱਚ ਜੋ ਵੀ ਭਾਸ਼ਾਵਾਂ ਤੁਸੀਂ ਵੇਖਣੀਆਂ ਚਾਹੁੰਦੇ ਹੋ, ਉਹਨਾਂ ਨੂੰ ਜੋੜੋ।"
 
-#: ui/AdvancedLanguageSelectPage.qml:87
+#: ui/AdvancedLanguageSelectPage.qml:93
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "ਭਾਸ਼ਾ ਬਦਲੋ"
 
-#: ui/AdvancedLanguageSelectPage.qml:91
+#: ui/AdvancedLanguageSelectPage.qml:97
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "ਭਾਸ਼ਾ ਬਦਲੋ"
 
-#: ui/AdvancedLanguageSelectPage.qml:102
+#: ui/AdvancedLanguageSelectPage.qml:108
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "ਉੱਤੇ ਭੇਜੋ"
 
-#: ui/AdvancedLanguageSelectPage.qml:108
+#: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "ਹਟਾਓ"
 
-#: ui/AdvancedLanguageSelectPage.qml:121
+#: ui/AdvancedLanguageSelectPage.qml:127
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "ਕੋਈ ਭਾਸ਼ਾ ਸੰਰਚਿਤ ਨਹੀਂ ਹੈ"
 
-#: ui/AdvancedLanguageSelectPage.qml:152 ui/AdvancedLanguageSelectPage.qml:163
+#: ui/AdvancedLanguageSelectPage.qml:158 ui/AdvancedLanguageSelectPage.qml:169
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "ਭਾਸ਼ਾਵਾਂ ਜੋੜੋ"
 
-#: ui/AdvancedLanguageSelectPage.qml:180
+#: ui/AdvancedLanguageSelectPage.qml:186
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
 msgstr "…ਹੋਰ ਜੋੜੋ"
 
-#: ui/main.qml:32
+#: ui/main.qml:34
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
 msgstr "ਤਬਦੀਲੀਆਂ ਤੁਹਾਡੇ ਵਲੋਂ ਅਗਲੀ ਵਾਰ ਲਾਗ ਇਨ ਕਰਨ ਵੇਲੇ ਲਾਗੂ ਹੋਣਗੀਆਂ।"
 
-#: ui/main.qml:38
+#: ui/main.qml:40
 #, kde-format
 msgid "Restart now"
 msgstr "ਹੁਣੇ ਮੁੜ-ਚਾਲੂ ਕਰੋ"
 
-#: ui/main.qml:52
+#: ui/main.qml:55
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -543,7 +543,7 @@ msgid ""
 "yet."
 msgstr "ਲੋਕੇਲ ਅਤੇ ਭਾਸ਼ਾ ਸਹਾਇਕ ਫ਼ਾਇਲਾਂ ਤਿਆਰ ਕੀਤੀਆਂ ਜਾ ਰਹੀਆਂ ਹਨ; ਕੰਪਿਊਟਰ ਨੂੰ ਹਾਲੇ ਬੰਦ ਨਾ ਕਰੋ।"
 
-#: ui/main.qml:61
+#: ui/main.qml:65
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -556,7 +556,7 @@ msgstr ""
 "ਇੰਸਟਾਲ ਨਹੀਂ ਕੀਤਾ ਜਾ ਕਿਆ ਹੈ। ਜੇ ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਨੂੰ ਦਿਖਾਉਣ ਲਈ ਲਈ ਖਾਸ ਕਿਸਮ ਦੇ ਫ਼ੋਂਟ ਚਾਹੀਦੇ ਹਨ "
 "ਤਾਂ ਤੁਹਾਨੂੰ ਉਹ ਪਤਾ ਕਰਨੇ ਪੈਣਗੇ ਅਤੇ ਖੁਦ ਇੰਸਟਾਲ ਕਰਨੇ ਪੈਣਗੇ।"
 
-#: ui/main.qml:75
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -566,56 +566,56 @@ msgstr ""
 "ਲੋੜੀਦੇ ਲੋਕੇਲ ਅਤੇ ਭਾਸ਼ਾ ਸਹਾਇਕ ਫ਼ਾਇਲਾਂ ਨੂੰ ਇੰਸਟਾਲ ਕੀਤਾ ਜਾ ਚੁੱਕਾ ਹੈ। ਹੁਣ ਕੰਪਿਊਟਰ ਨੂੰ ਬੰਦ ਕਰਨਾ ਠੀਕ "
 "ਹੈ।"
 
-#: ui/main.qml:169
+#: ui/main.qml:176
 #, kde-format
 msgctxt "@action:button for change the locale used"
 msgid "Modify…"
 msgstr "…ਸੋਧੋ"
 
-#: ui/main.qml:205
+#: ui/main.qml:212
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
 msgstr ""
 
-#: ui/main.qml:263
+#: ui/main.qml:270
 #, kde-format
 msgid "Numbers"
 msgstr "ਅੰਕ"
 
-#: ui/main.qml:265
+#: ui/main.qml:272
 #, kde-format
 msgid "Time"
 msgstr "ਸਮਾਂ"
 
-#: ui/main.qml:267
+#: ui/main.qml:274
 #, kde-format
 msgid "Currency"
 msgstr "ਮੁਦਰਾ"
 
-#: ui/main.qml:269
+#: ui/main.qml:276
 #, kde-format
 msgid "Measurements"
 msgstr "ਮਾਪ"
 
-#: ui/main.qml:271
+#: ui/main.qml:278
 #, kde-format
 msgid "Paper Size"
 msgstr "ਸਫ਼ੇ ਦਾ ਆਕਾਰ"
 
-#: ui/main.qml:273
+#: ui/main.qml:280
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "ਐਡਰੈੱਸ"
 
-#: ui/main.qml:275
+#: ui/main.qml:282
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "ਨਾਂ"
 
-#: ui/main.qml:277
+#: ui/main.qml:284
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"

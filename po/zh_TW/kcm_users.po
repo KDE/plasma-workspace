@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-20 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2024-03-08 03:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -61,7 +61,7 @@ msgstr "裝置已斷線。"
 msgid "An unknown error has occurred."
 msgstr "發生了未知錯誤。"
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:170
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:171
 #, kde-format
 msgid "Change Password"
 msgstr "變更密碼"
@@ -132,27 +132,27 @@ msgstr "不變更"
 msgid "Create User"
 msgstr "建立使用者"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:132
+#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Name:"
 msgstr "姓名："
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:140
+#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Username:"
 msgstr "使用者名稱："
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:150
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:151
 #, kde-format
 msgid "Standard"
 msgstr "標準"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:151
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:152
 #, kde-format
 msgid "Administrator"
 msgstr "管理員"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:155
 #, kde-format
 msgid "Account type:"
 msgstr "帳號類型："
@@ -500,37 +500,37 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "使用者大頭貼預設圖示"
 
-#: src/ui/UserDetailsPage.qml:111
+#: src/ui/UserDetailsPage.qml:112
 #, kde-format
 msgid "Change avatar"
 msgstr "變更大頭貼"
 
-#: src/ui/UserDetailsPage.qml:164
+#: src/ui/UserDetailsPage.qml:165
 #, kde-format
 msgid "Email address:"
 msgstr "電子郵件地址："
 
-#: src/ui/UserDetailsPage.qml:193
+#: src/ui/UserDetailsPage.qml:194
 #, kde-format
 msgid "Delete files"
 msgstr "刪除檔案"
 
-#: src/ui/UserDetailsPage.qml:200
+#: src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid "Keep files"
 msgstr "保留檔案"
 
-#: src/ui/UserDetailsPage.qml:207
+#: src/ui/UserDetailsPage.qml:208
 #, kde-format
 msgid "Delete User…"
 msgstr "刪除使用者…"
 
-#: src/ui/UserDetailsPage.qml:219
+#: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "設定指紋驗證…"
 
-#: src/ui/UserDetailsPage.qml:251
+#: src/ui/UserDetailsPage.qml:252
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""

@@ -3,7 +3,7 @@
 # Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2015, 2016.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 #
 msgid ""
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-22 00:41+0000\n"
-"PO-Revision-Date: 2023-10-21 12:56+0200\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"PO-Revision-Date: 2024-05-23 09:08+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -74,8 +74,7 @@ msgstr "Basculer..."
 
 #: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, fuzzy, kde-format
-#| msgid "Switch to another timezone"
+#, kde-format
 msgid "Switch to another time zone"
 msgstr "Basculer vers un autre fuseau horaire"
 
@@ -305,12 +304,7 @@ msgid "Clock is currently using this time zone"
 msgstr "L'horloge utilise actuelle ce fuseau horaire."
 
 #: package/contents/ui/configTimeZones.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label This list item shows a time zone city name that is identical to "
-#| "the local time zone's city, and will be hidden in the timezone display in "
-#| "the plasmoid's popup"
-#| msgid "Hidden while this is the local time zone's city"
+#, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
 "local time zone's city, and will be hidden in the time zone display in the "
@@ -365,16 +359,12 @@ msgstr ""
 "vers le fuseau horaire applicable à l'ensemble du système."
 
 #: package/contents/ui/configTimeZones.qml:206
-#, fuzzy, kde-format
-#| msgid "Add More Timezones"
+#, kde-format
 msgid "Add More Time Zones"
 msgstr "Ajouter plus de fuseaux horaires"
 
 #: package/contents/ui/configTimeZones.qml:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "At least one time zone needs to be enabled. Your local timezone was "
-#| "enabled automatically."
+#, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."

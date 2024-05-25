@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-13 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2022-07-03 13:02+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -50,7 +50,7 @@ msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
 msgstr "Başlatmaq"
 
-#: ui/entry.qml:68
+#: ui/entry.qml:71
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt ""
@@ -58,7 +58,7 @@ msgctxt ""
 msgid "Name:"
 msgstr "Ad"
 
-#: ui/entry.qml:74
+#: ui/entry.qml:77
 #, fuzzy, kde-format
 #| msgid "Status"
 msgctxt ""
@@ -67,7 +67,7 @@ msgctxt ""
 msgid "Status:"
 msgstr "Vəziyyət"
 
-#: ui/entry.qml:80
+#: ui/entry.qml:83
 #, kde-format
 msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
@@ -75,116 +75,116 @@ msgctxt ""
 msgid "Last activated on:"
 msgstr ""
 
-#: ui/entry.qml:111
+#: ui/entry.qml:114
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
 msgstr ""
 
-#: ui/entry.qml:115
+#: ui/entry.qml:118
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
 msgstr ""
 
-#: ui/main.qml:33
+#: ui/main.qml:35
 #, kde-format
 msgid "Make Executable"
 msgstr "İcra olunabilən edin"
 
-#: ui/main.qml:53
+#: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
 "Sİstemdən çıxarkən işə salmaq üçün \"%1\" faylı icra ediləbilən olmalıdır."
 
-#: ui/main.qml:55
+#: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
 "Sistemə girişdə işə düşməsi üçün \"%1\" faylı icra ediləbilən olmalıdır."
 
-#: ui/main.qml:66
+#: ui/main.qml:68
 #, fuzzy, kde-format
 #| msgid "Add…"
 msgctxt "@action:button"
 msgid "Add…"
 msgstr "Əlavə edin…"
 
-#: ui/main.qml:69
+#: ui/main.qml:71
 #, fuzzy, kde-format
 #| msgid "Add Application…"
 msgctxt "@action:button"
 msgid "Add Application…"
 msgstr "Tətbiq əlavə edin..."
 
-#: ui/main.qml:74
+#: ui/main.qml:76
 #, fuzzy, kde-format
 #| msgid "Add Login Script…"
 msgctxt "@action:button"
 msgid "Add Login Script…"
 msgstr "Giriş skripti əlavə edin..."
 
-#: ui/main.qml:79
+#: ui/main.qml:81
 #, fuzzy, kde-format
 #| msgid "Add Logout Script…"
 msgctxt "@action:button"
 msgid "Add Logout Script…"
 msgstr "Çıxış skript əlavə edin..."
 
-#: ui/main.qml:114
+#: ui/main.qml:116
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr ""
 
-#: ui/main.qml:137
+#: ui/main.qml:139
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr ""
 
-#: ui/main.qml:146
+#: ui/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Properties"
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Xüsusiyyətlər"
 
-#: ui/main.qml:157
+#: ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Silmək"
 
-#: ui/main.qml:173
+#: ui/main.qml:175
 #, kde-format
 msgid "Applications"
 msgstr "Tətbiqlər"
 
-#: ui/main.qml:176
+#: ui/main.qml:178
 #, kde-format
 msgid "Login Scripts"
 msgstr "Sistemə Giriş Skriptləri"
 
-#: ui/main.qml:179
+#: ui/main.qml:181
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Yenidən başlatma skriptləri"
 
-#: ui/main.qml:182
+#: ui/main.qml:184
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Sistemdən Çıxış Skriptləri"
 
-#: ui/main.qml:191
+#: ui/main.qml:193
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "İstifadəçi avtomatik başladılacaq elementləri göstərilməyib"
 
-#: ui/main.qml:192
+#: ui/main.qml:194
 #, fuzzy, kde-kuit-format
 #| msgctxt "@info"
 #| msgid "Click the <interface>Add…</interface> button below to add some"
@@ -193,12 +193,12 @@ msgid "Click the <interface>Add…</interface> button to add some"
 msgstr ""
 "Əlavə etmək üçün aşağıda <interface>Əlavə edin...</interface> düyməsinə vurun"
 
-#: ui/main.qml:207
+#: ui/main.qml:209
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Giriş Skriptini Seçmək"
 
-#: ui/main.qml:227
+#: ui/main.qml:229
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Çıxış Skriptini Seçmək"

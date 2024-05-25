@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-02-19 14:36+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -1246,124 +1246,124 @@ msgstr "Sisteminizdə aşağıdakı rəng sxemləri var:"
 msgid " * %1 (current color scheme)"
 msgstr " * %1 (cari rəng sxemi)"
 
-#: ui/AccentColorUI.qml:37
+#: ui/AccentColorUI.qml:27
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
 msgstr "Seçim rəngini rəng sxemindən almaq"
 
-#: ui/AccentColorUI.qml:38
+#: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
 msgstr "Seçim rəngini divar kağızından almaq"
 
-#: ui/AccentColorUI.qml:39
+#: ui/AccentColorUI.qml:29
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
 msgstr "Xüsusi seçim rəngi"
 
-#: ui/AccentColorUI.qml:164
+#: ui/AccentColorUI.qml:147
 #, kde-format
 msgid "Choose custom accent color"
 msgstr "Vurğulama rəngini seçin"
 
-#: ui/main.qml:87
+#: ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
 msgstr ""
 "\"%1\" rəng sxemi quraşdırılmayıb. Onun əvəzinə standart mövzunun seçilməsi."
 
-#: ui/main.qml:112
+#: ui/main.qml:123
 #, kde-format
 msgid "All Schemes"
 msgstr "Bütün sxemlər"
 
-#: ui/main.qml:113
+#: ui/main.qml:124
 #, kde-format
 msgid "Light Schemes"
 msgstr "İşıqlı sxemlər"
 
-#: ui/main.qml:114
+#: ui/main.qml:125
 #, kde-format
 msgid "Dark Schemes"
 msgstr "Tünd sxemlər"
 
-#: ui/main.qml:140
+#: ui/main.qml:152
 #, kde-format
 msgid "Install from File…"
 msgstr "Fayldan quraşdırmaq..."
 
-#: ui/main.qml:145
+#: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
 msgstr ""
 
-#: ui/main.qml:192
+#: ui/main.qml:204
 #, kde-format
 msgid "Window Title"
 msgstr "Pəncərə Başlığı"
 
-#: ui/main.qml:215
+#: ui/main.qml:227
 #, kde-format
 msgid "Window text"
 msgstr "Pəncərə mətni"
 
-#: ui/main.qml:223
+#: ui/main.qml:235
 #, kde-format
 msgid "Button"
 msgstr "Düymə"
 
-#: ui/main.qml:263
+#: ui/main.qml:275
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
 msgstr "keçid"
 
-#: ui/main.qml:265
+#: ui/main.qml:277
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
 msgstr "ziyarət olunan"
 
-#: ui/main.qml:273
+#: ui/main.qml:285
 #, kde-format
 msgid "Normal text"
 msgstr "Normal mətn"
 
-#: ui/main.qml:280
+#: ui/main.qml:292
 #, kde-format
 msgid "Highlighted text"
 msgstr "İşıqlanan mətn"
 
-#: ui/main.qml:287
+#: ui/main.qml:299
 #, kde-format
 msgid "Disabled text"
 msgstr "Söndürülmüş mətn"
 
-#: ui/main.qml:305
+#: ui/main.qml:317
 #, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Rəng Sxeminə Düzəliş..."
 
-#: ui/main.qml:311
+#: ui/main.qml:323
 #, kde-format
 msgid "Remove Color Scheme"
 msgstr "Rəng Sxemini Silmək"
 
-#: ui/main.qml:318
+#: ui/main.qml:330
 #, kde-format
 msgid "Restore Color Scheme"
 msgstr "Rəng Sxemini Bərpa etmək"
 
-#: ui/main.qml:362
+#: ui/main.qml:374
 #, kde-format
 msgid "Open Color Scheme"
 msgstr "Rəng Sxemini Açmaq"
 
-#: ui/main.qml:364
+#: ui/main.qml:376
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Rəng Sxemi Faylları (*.colors)"

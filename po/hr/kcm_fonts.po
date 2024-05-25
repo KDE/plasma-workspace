@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts 0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:40+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2010-01-26 11:57+0100\n"
 "Last-Translator: Andrej Dundovic <adundovi@gmail.com>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -157,7 +157,7 @@ msgstr ""
 msgid "Adjust Global Scale…"
 msgstr "&Prilagodi sva pisma…"
 
-#: ui/main.qml:34
+#: ui/main.qml:37
 #, fuzzy, kde-format
 #| msgid ""
 #| "<p>Some changes such as anti-aliasing will only affect newly started "
@@ -169,129 +169,129 @@ msgstr ""
 "<p>Neke izmjene, poput postavki anti-aliasinga, imat će učinak samo na novo "
 "pokrenutim aplikacijama.</p>"
 
-#: ui/main.qml:48
+#: ui/main.qml:52
 #, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 
-#: ui/main.qml:69
+#: ui/main.qml:74
 #, kde-format
 msgid ""
 "Decimal font sizes can cause text layout problems in some applications. "
 "Consider using only integer font sizes."
 msgstr ""
 
-#: ui/main.qml:91
+#: ui/main.qml:97
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
 
-#: ui/main.qml:103
+#: ui/main.qml:110
 #, fuzzy, kde-format
 #| msgid "Ad&just All Fonts..."
 msgid "&Adjust All Fonts…"
 msgstr "&Prilagodi sva pisma…"
 
-#: ui/main.qml:116
+#: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "General"
 msgid "General:"
 msgstr "Opće"
 
-#: ui/main.qml:117
+#: ui/main.qml:124
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "General"
 msgid "Select general font"
 msgstr "Opće"
 
-#: ui/main.qml:128
+#: ui/main.qml:135
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Fixed width"
 msgid "Fixed width:"
 msgstr "Stalne širine"
 
-#: ui/main.qml:129
+#: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Fixed width"
 msgid "Select fixed width font"
 msgstr "Stalne širine"
 
-#: ui/main.qml:140
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Small"
 msgid "Small:"
 msgstr "Sitan"
 
-#: ui/main.qml:141
+#: ui/main.qml:148
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Small"
 msgid "Select small font"
 msgstr "Sitan"
 
-#: ui/main.qml:152
+#: ui/main.qml:159
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Toolbar"
 msgid "Toolbar:"
 msgstr "Alatna traka"
 
-#: ui/main.qml:153
+#: ui/main.qml:160
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Toolbar"
 msgid "Select toolbar font"
 msgstr "Alatna traka"
 
-#: ui/main.qml:164
+#: ui/main.qml:171
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Menu"
 msgid "Menu:"
 msgstr "Izbornik"
 
-#: ui/main.qml:165
+#: ui/main.qml:172
 #, kde-format
 msgid "Select menu font"
 msgstr ""
 
-#: ui/main.qml:175
+#: ui/main.qml:182
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Window title"
 msgid "Window title:"
 msgstr "Naslov prozora"
 
-#: ui/main.qml:176
+#: ui/main.qml:183
 #, fuzzy, kde-format
 #| msgctxt "font usage"
 #| msgid "Window title"
 msgid "Select window title font"
 msgstr "Naslov prozora"
 
-#: ui/main.qml:191
+#: ui/main.qml:198
 #, fuzzy, kde-format
 #| msgid "Use a&nti-aliasing:"
 msgid "Anti-Aliasing:"
 msgstr "Upotrijebi a&nti-aliasing:"
 
-#: ui/main.qml:196
+#: ui/main.qml:203
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "Enabled"
 msgid "Enable"
 msgstr "Omogućeno"
 
-#: ui/main.qml:200
+#: ui/main.qml:207
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -302,30 +302,30 @@ msgid ""
 "problems."
 msgstr ""
 
-#: ui/main.qml:214
+#: ui/main.qml:221
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr ""
 
-#: ui/main.qml:233 ui/main.qml:257
+#: ui/main.qml:240 ui/main.qml:264
 #, kde-format
 msgid "%1 pt"
 msgstr ""
 
-#: ui/main.qml:248
+#: ui/main.qml:255
 #, fuzzy, kde-format
 #| msgid " to "
 msgid "to"
 msgstr "do"
 
-#: ui/main.qml:280
+#: ui/main.qml:287
 #, fuzzy, kde-format
 #| msgid "&Use sub-pixel rendering:"
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "&Upotrijebi pod-pikselno renderiranje:"
 
-#: ui/main.qml:326
+#: ui/main.qml:333
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -339,14 +339,14 @@ msgid ""
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
 
-#: ui/main.qml:331
+#: ui/main.qml:338
 #, fuzzy, kde-format
 #| msgid "Hinting style: "
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Stil naslućivanja:"
 
-#: ui/main.qml:376
+#: ui/main.qml:383
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -356,13 +356,13 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:389
+#: ui/main.qml:396
 #, fuzzy, kde-format
 #| msgid "Force fonts DPI:"
 msgid "Force font DPI:"
 msgstr "Prisilna vrijednost DPI za pisma:"
 
-#: ui/main.qml:417
+#: ui/main.qml:424
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -374,7 +374,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:423
+#: ui/main.qml:430
 #, kde-format
 msgid "Select Font"
 msgstr ""

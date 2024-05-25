@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm5_icons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-14 01:59+0000\n"
+"POT-Creation-Date: 2024-05-25 00:40+0000\n"
 "PO-Revision-Date: 2023-10-03 11:51+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -74,32 +74,32 @@ msgstr "ערכות סמלים מותקנות…"
 msgid "Installing %1 theme…"
 msgstr "ערכת הסמלים %1 מותקנת…"
 
-#: ui/main.qml:45
+#: ui/main.qml:67
 #, kde-format
 msgid "Install from File…"
 msgstr "התקנה מקובץ…"
 
-#: ui/main.qml:50
+#: ui/main.qml:72
 #, kde-format
 msgid "Get New…"
 msgstr "הורדת חדשות…"
 
-#: ui/main.qml:166
+#: ui/main.qml:188
 #, kde-format
 msgid "Remove Icon Theme"
 msgstr "הסרת ערכת סמלים"
 
-#: ui/main.qml:173
+#: ui/main.qml:195
 #, kde-format
 msgid "Restore Icon Theme"
 msgstr "שחזור ערכת סמלים"
 
-#: ui/main.qml:245
+#: ui/main.qml:244
 #, kde-format
 msgid "Open Theme"
 msgstr "פתיחת ערכת עיצוב"
 
-#: ui/main.qml:247
+#: ui/main.qml:246
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "קובצי ערכות עיצוב (‎*.tar.gz‏ ‎*.tar.bz2)"
