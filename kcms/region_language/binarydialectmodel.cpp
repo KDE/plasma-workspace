@@ -80,6 +80,7 @@ QVariant BinaryDialectModel::data(const QModelIndex &index, int role) const
         default:
             break;
         }
+        break;
     }
 
     default:

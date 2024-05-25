@@ -177,7 +177,7 @@ void PanelRulerView::showEvent(QShowEvent *ev)
     PlasmaWindow::showEvent(ev);
 }
 
-void PanelRulerView::focusOutEvent(QFocusEvent *ev)
+void PanelRulerView::focusOutEvent(QFocusEvent *)
 {
     QWindow *focusWindow = QGuiApplication::focusWindow();
 
