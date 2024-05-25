@@ -1,10 +1,11 @@
 /*
     SPDX-FileCopyrightText: 2007-2009, 2019 Shawn Starr <shawn.starr@rogers.com>
+    SPDX-FileCopyrightText: 2024 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-/* Ion for NOAA's National Weather Service XML data */
+/* Ion for NOAA's National Weather Service openAPI data */
 
 #pragma once
 
@@ -12,6 +13,7 @@
 
 #include <Plasma5Support/DataEngineConsumer>
 
+#include <KUnitConversion/Converter>
 #include <QDateTime>
 #include <QXmlStreamReader>
 
@@ -24,42 +26,38 @@ class Job;
 class WeatherData
 {
 public:
-    WeatherData();
-
     QString locationName;
     QString stationID;
-    double stationLatitude;
-    double stationLongitude;
+    double stationLatitude = qQNaN();
+    double stationLongitude = qQNaN();
     QString stateName;
     QString countyID;
+    QString forecastUrl;
 
     // Current observation information.
-    QString observationTime;
-    QDateTime observationDateTime;
-    QString weather;
-
-    float temperature_F;
-    float temperature_C;
-    float humidity;
-    QString windString;
-    QString windDirection;
-    float windSpeed;
-    float windGust;
-    float pressure;
-    float dewpoint_F;
-    float dewpoint_C;
-    float heatindex_F;
-    float heatindex_C;
-    float windchill_F;
-    float windchill_C;
-    float visibility;
+    struct Observation {
+        QDateTime timestamp;
+        QString weather;
+        float temperature_F = qQNaN();
+        float humidity = qQNaN();
+        float windDirection = qQNaN();
+        float windSpeed = qQNaN();
+        float windGust = qQNaN();
+        float pressure = qQNaN();
+        float dewpoint_F = qQNaN();
+        float heatindex_F = qQNaN();
+        float windchill_F = qQNaN();
+        float visibility = qQNaN();
+    };
+    Observation observation;
 
     struct Forecast {
         QString day;
         QString summary;
-        QString low;
-        QString high;
+        float low = qQNaN();
+        float high = qQNaN();
         int precipitation = 0;
+        bool isDayTime = true;
     };
     QList<Forecast> forecasts;
 
@@ -98,15 +96,13 @@ public Q_SLOTS:
     // for solar data pushes from the time engine
     void dataUpdated(const QString &sourceName, const Plasma5Support::DataEngine::Data &data);
 
+Q_SIGNALS:
+    void locationUpdated(const QString &source);
+    void observationUpdated(const QString &source);
+    void pointsInfoUpdated(const QString &source);
+
 protected: // IonInterface API
     void reset() override;
-
-private Q_SLOTS:
-    void setup_slotJobFinished(KJob *);
-    void slotJobFinished(KJob *);
-    void forecast_slotJobFinished(KJob *);
-    void county_slotJobFinished(KJob *);
-    void alerts_slotJobFinished(KJob *);
 
 private:
     void updateWeather(const QString &source);
@@ -122,59 +118,66 @@ private:
     IonInterface::ConditionIcons getConditionIcon(const QString &weather, bool isDayTime) const;
 
     // Helper to make an API request
-    KJob *apiRequestJob(const QUrl &url, const QString &source);
+    using Callback = void (NOAAIon::*)(const QString &, const QJsonDocument &);
+    KJob *requestAPIJob(const QString &source, const QUrl &url, Callback onResult);
 
-    // Load and Parse the place XML listing
-    void getXMLSetup(bool reset = true);
-    bool readXMLSetup(QXmlStreamReader &xml);
+    // Load and parse the station list
+    void getStationList(bool reset = true);
+    Q_SLOT void stationListReceived(KJob *);
+    bool readStationList(QXmlStreamReader &xml);
+    void parseStationID(QXmlStreamReader &xml);
 
-    // Load and parse the specific place(s)
-    void getXMLData(const QString &source);
-    bool readXMLData(const QString &source, QXmlStreamReader &xml);
+    // Initialize the station and location data
+    void setUpStation(const QString &source);
+
+    // Load and parse the observation data from a station
+    void getObservation(const QString &source);
+    void readObservation(const QString &source, const QJsonDocument &doc);
+
+    // To know whether the local observation is day or night time
+    void getSolarData(const QString &source);
 
     // Load and parse upcoming forecast for the next N days
     void getForecast(const QString &source);
-    void readForecast(const QString &source, QXmlStreamReader &xml);
+    void readForecast(const QString &source, const QJsonDocument &doc);
 
-    // Methods to get alerts. We need the county ID first
-    void getCountyID(const QString &source);
-    void readCountyID(const QString &source, const QJsonDocument &doc);
+    // The NOAA API is based on grid of points
+    void getPointsInfo(const QString &source);
+    void readPointsInfo(const QString &source, const QJsonDocument &doc);
+
+    // Methods to get alerts.
     void getAlerts(const QString &source);
     void readAlerts(const QString &source, const QJsonDocument &doc);
 
     // Check if place specified is valid or not
     QStringList validate(const QString &source) const;
 
-    // Catchall for unknown XML tags
+    // Utility method to parse XML data
     void parseUnknownElement(QXmlStreamReader &xml) const;
 
-    // Parse weather XML data
-    void parseWeatherSite(WeatherData &data, QXmlStreamReader &xml);
-    void parseStationID(QXmlStreamReader &xml);
-    void parseStationList(QXmlStreamReader &xml);
-
-    void parseFloat(float &value, const QString &string);
-    void parseFloat(float &value, QXmlStreamReader &xml);
-    void parseDouble(double &value, QXmlStreamReader &xml);
+    // Utility methods to parse JSON data
+    KUnitConversion::UnitId parseUnit(const QString &unitCode) const;
+    float parseQV(const QJsonValue &qv, KUnitConversion::UnitId destUnit = KUnitConversion::InvalidUnit) const;
+    QString windDirectionFromAngle(float degrees) const;
 
 private:
-    struct XMLMapInfo {
+    struct StationInfo {
         QString stateName;
         QString stationName;
         QString stationID;
-        QString XMLurl;
+        QPointF location;
     };
 
-    // Key dicts
-    QHash<QString, NOAAIon::XMLMapInfo> m_places;
+    // Station list
+    QHash<QString, NOAAIon::StationInfo> m_places;
 
     // Weather information
     QHash<QString, WeatherData> m_weatherData;
 
     // Store KIO jobs
     QHash<KJob *, QByteArray> m_jobData;
-    QHash<KJob *, QString> m_jobList;
 
-    // bool emitWhenSetup;
+    KUnitConversion::Converter m_converter;
+
     QStringList m_sourcesToReset;
 };
