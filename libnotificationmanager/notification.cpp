@@ -9,6 +9,8 @@
 #include "notification.h"
 #include "notification_p.h"
 
+#include <algorithm>
+
 #include <QDBusArgument>
 #include <QDebug>
 #include <QImageReader>
@@ -60,21 +62,21 @@ QString Notification::Private::sanitize(const QString &text)
     QString result;
     QXmlStreamWriter out(&result);
 
-    const QList<QString> allowedTags = {"b", "i", "u", "img", "a", "html", "br", "table", "tr", "td"};
+    static constexpr std::array<QStringView, 10> allowedTags{u"b", u"i", u"u", u"img", u"a", u"html", u"br", u"table", u"tr", u"td"};
 
     out.writeStartDocument();
     while (!r.atEnd()) {
         r.readNext();
 
         if (r.tokenType() == QXmlStreamReader::StartElement) {
-            const QString name = r.name().toString();
-            if (!allowedTags.contains(name)) {
+            const QStringView name = r.name();
+            if (std::ranges::find(allowedTags, name) == allowedTags.end()) {
                 continue;
             }
             out.writeStartElement(name);
             if (name == QLatin1String("img")) {
-                auto src = r.attributes().value("src").toString();
-                auto alt = r.attributes().value("alt").toString();
+                const QString src = r.attributes().value("src").toString();
+                const QStringView alt = r.attributes().value("alt");
 
                 const QUrl url(src);
                 if (url.isLocalFile()) {
@@ -83,24 +85,23 @@ QString Notification::Private::sanitize(const QString &text)
                     // image denied for security reasons! Do not copy the image src here!
                 }
 
-                out.writeAttribute(QStringLiteral("alt"), alt);
+                out.writeAttribute(u"alt", alt);
             }
             if (name == QLatin1Char('a')) {
-                out.writeAttribute(QStringLiteral("href"), r.attributes().value("href").toString());
+                out.writeAttribute(u"href", r.attributes().value("href"));
             }
         }
 
         if (r.tokenType() == QXmlStreamReader::EndElement) {
-            const QString name = r.name().toString();
-            if (!allowedTags.contains(name)) {
+            const QStringView name = r.name();
+            if (std::ranges::find(allowedTags, name) == allowedTags.end()) {
                 continue;
             }
             out.writeEndElement();
         }
 
         if (r.tokenType() == QXmlStreamReader::Characters) {
-            const auto text = r.text().toString();
-            out.writeCharacters(text); // this auto escapes chars -> HTML entities
+            out.writeCharacters(r.text()); // this auto escapes chars -> HTML entities
         }
     }
     out.writeEndDocument();
@@ -112,7 +113,7 @@ QString Notification::Private::sanitize(const QString &text)
 
     // The Text.StyledText format handles only html3.2 stuff and &apos; is html4 stuff
     // so we need to replace it here otherwise it will not render at all.
-    result.replace(QLatin1String("&apos;"), QChar('\''));
+    result.replace(QLatin1String("&apos;"), QChar(u'\''));
 
     return result;
 }
