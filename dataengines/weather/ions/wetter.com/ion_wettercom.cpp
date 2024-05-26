@@ -403,7 +403,7 @@ void WetterComIon::validate(const QString &source, bool parseError)
         const QString invalidPlace = source.section(QLatin1Char('|'), 2, 2);
 
         if (m_place[invalidPlace].name.isEmpty()) {
-            setData(source, QStringLiteral("validate"), QVariant(QLatin1String("wettercom|invalid|multiple|") + invalidPlace));
+            setData(source, QStringLiteral("validate"), QVariant(QString(u"wettercom|invalid|multiple|" + invalidPlace)));
         }
 
         m_locations.clear();
@@ -421,10 +421,10 @@ void WetterComIon::validate(const QString &source, bool parseError)
     qCDebug(IONENGINE_WETTERCOM) << "Returning place list:" << placeList;
 
     if (m_locations.count() > 1) {
-        setData(source, QStringLiteral("validate"), QVariant(QStringLiteral("wettercom|valid|multiple") + placeList));
+        setData(source, QStringLiteral("validate"), QVariant(QString(u"wettercom|valid|multiple" + placeList)));
     } else {
         placeList[7] = placeList[7].toUpper();
-        setData(source, QStringLiteral("validate"), QVariant(QStringLiteral("wettercom|valid|single") + placeList));
+        setData(source, QStringLiteral("validate"), QVariant(QString(u"wettercom|valid|single" + placeList)));
     }
 
     m_locations.clear();

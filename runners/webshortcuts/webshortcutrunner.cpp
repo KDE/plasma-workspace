@@ -150,7 +150,7 @@ void WebshortcutRunner::match(KRunner::RunnerContext &context)
     m_lastKey = key;
     m_lastProvider = filterData.searchProvider();
     m_match.setIconName(filterData.iconName());
-    m_match.setId(QStringLiteral("WebShortcut:") + key);
+    m_match.setId(QString(u"WebShortcut:" + key));
 
     m_match.setText(i18n("Search %1 for %2", m_lastProvider, filterData.searchTerm()));
     m_match.setData(filterData.uri());

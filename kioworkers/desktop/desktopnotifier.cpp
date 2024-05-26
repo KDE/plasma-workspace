@@ -27,7 +27,7 @@ DesktopNotifier::DesktopNotifier(QObject *parent, const QList<QVariant> &)
 
     dirWatch = new KDirWatch(this);
     dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
-    dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + "Trash/files"_L1);
+    dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"Trash/files");
     dirWatch->addFile(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs"));
 
     connect(dirWatch, &KDirWatch::created, this, &DesktopNotifier::created);
@@ -50,7 +50,7 @@ void DesktopNotifier::dirty(const QString &path)
 {
     Q_UNUSED(path)
 
-    if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + "Trash/files"_L1)) {
+    if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"Trash/files")) {
         QList<QUrl> trashUrls;
 
         // Check for any .desktop file linking to trash:/ to update its icon
@@ -58,7 +58,7 @@ void DesktopNotifier::dirty(const QString &path)
         for (const auto &fi : desktopFiles) {
             KDesktopFile df(fi.absoluteFilePath());
             if (df.hasLinkType() && df.readUrl() == QLatin1String("trash:/")) {
-                trashUrls << QUrl(QStringLiteral("desktop:/") + fi.fileName());
+                trashUrls << QUrl(QString(u"desktop:/" + fi.fileName()));
             }
         }
 

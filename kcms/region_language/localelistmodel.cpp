@@ -106,8 +106,8 @@ QVariant LocaleListModel::data(const QModelIndex &index, int role) const
         return {};
     }
     case FilterRole: {
-        return data.englishCountryName.toLower() + data.nativeCountryName.toLower() + data.nativeName.toLower() + data.englishName.toLower()
-            + data.countryCode.toLower();
+        return QString(data.englishCountryName.toLower() + data.nativeCountryName.toLower() + data.nativeName.toLower() + data.englishName.toLower()
+                       + data.countryCode.toLower());
     }
     }
     Q_UNREACHABLE();

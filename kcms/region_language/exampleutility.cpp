@@ -158,7 +158,7 @@ QString Utility::parseLocaleFile(const QString &localeName, int langInfoFormat)
     static std::unordered_map<QString, QString> resultCache;
 
     const QString formatToFetch = getFormatToFetch(langInfoFormat);
-    const auto cacheKey = formatToFetch + QStringLiteral("###") + localeName;
+    const QString cacheKey = formatToFetch + u"###" + localeName;
     if (resultCache.contains(cacheKey)) {
         return resultCache[cacheKey];
     }
@@ -191,7 +191,7 @@ QString Utility::parseLocaleFile(const QString &localeName, int langInfoFormat)
         }
         // Read the file with regex and return the first match
 
-        const QRegularExpression rx({formatToFetch + "\\s+\"(.*)\""_L1});
+        const QRegularExpression rx(QString(formatToFetch + u"\\s+\"(.*)\""));
 
         while (!textStream.atEnd()) {
             QString line = textStream.readLine();

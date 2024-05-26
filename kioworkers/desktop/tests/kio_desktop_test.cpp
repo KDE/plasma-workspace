@@ -74,7 +74,7 @@ private Q_SLOTS:
         tempFile.write("Hello world\n", 12);
         QString fileName = tempFile.fileName();
         tempFile.close();
-        KIO::Job *job = KIO::file_copy(QUrl::fromLocalFile(fileName), QUrl("desktop:/"_L1 + m_testFileName), -1, KIO::HideProgressInfo);
+        KIO::Job *job = KIO::file_copy(QUrl::fromLocalFile(fileName), QUrl(QString(u"desktop:/" + m_testFileName)), -1, KIO::HideProgressInfo);
         job->setUiDelegate(nullptr);
         QVERIFY(job->exec());
         QVERIFY(QFile::exists(m_desktopPath + u'/' + m_testFileName));
@@ -82,7 +82,7 @@ private Q_SLOTS:
 
     void testMostLocalUrl() // relies on testCopyToDesktop being run before
     {
-        const QUrl desktopUrl("desktop:/"_L1 + m_testFileName);
+        const QUrl desktopUrl(QString(u"desktop:/" + m_testFileName));
         const QString filePath(m_desktopPath + u'/' + m_testFileName);
         KIO::StatJob *job = KIO::mostLocalUrl(desktopUrl, KIO::HideProgressInfo);
         QVERIFY(job);
@@ -93,10 +93,10 @@ private Q_SLOTS:
 
     void testCreateSymlink()
     {
-        const QUrl desktopUrl("desktop:/"_L1 + m_testFileName);
-        const QUrl desktopLink("desktop:/"_L1 + m_testFileName + "_link"_L1);
+        const QUrl desktopUrl(QString(u"desktop:/" + m_testFileName));
+        const QUrl desktopLink(QString(u"desktop:/" + m_testFileName + u"_link"));
         const QString source = m_desktopPath + u'/' + m_testFileName;
-        const QString localLink = source + "_link"_L1;
+        const QString localLink = source + u"_link";
 
         // Create a symlink using kio_desktop
         KIO::Job *linkJob = KIO::symlink(m_testFileName, desktopLink, KIO::HideProgressInfo);
@@ -122,9 +122,9 @@ private Q_SLOTS:
         QTest::addColumn<QUrl>("srcUrl");
         QTest::addColumn<QUrl>("destUrl");
 
-        const QString str = "desktop:/"_L1 + m_testFileName;
+        const QString str = u"desktop:/" + m_testFileName;
         const QUrl orig(str);
-        const QUrl part(str + ".part"_L1);
+        const QUrl part(QString(str + u".part"));
         QTest::newRow("orig_to_part") << false << orig << part;
         QTest::newRow("part_to_orig") << false << part << orig;
         // Warnings: all tests without dirlister cache should above this line
@@ -184,7 +184,7 @@ private Q_SLOTS:
         QVERIFY(QFile::exists(localPath));
 
         // ...moved to the trash
-        const QUrl desktopUrl("desktop:/"_L1 + m_testFileName);
+        const QUrl desktopUrl(QString(u"desktop:/" + m_testFileName));
         KIO::Job *job = KIO::trash({desktopUrl}, KIO::HideProgressInfo);
         job->setUiDelegate(nullptr);
         KIO::FileUndoManager::self()->recordJob(KIO::FileUndoManager::Trash, {desktopUrl}, QUrl(QStringLiteral("trash:/")), job);

@@ -65,7 +65,7 @@ void KcmTest::initTestCase()
     f.close();
 
     const QString packagePath = QFINDTESTDATA("lookandfeel");
-    const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/plasma/look-and-feel/"_L1;
+    const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/plasma/look-and-feel/";
     auto installJob = KPackage::PackageJob::install(QStringLiteral("Plasma/LookAndFeel"), packagePath, packageRoot);
     connect(installJob, &KJob::result, this, [installJob]() {
         QCOMPARE(installJob->errorText(), QString());
@@ -99,7 +99,7 @@ void KcmTest::testWidgetStyle()
     KConfigGroup cg(&config, u"KDE"_s);
     QCOMPARE(cg.readEntry("widgetStyle", QString()), QString());
 
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals"_L1, KConfig::SimpleConfig);
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/kdeglobals", KConfig::SimpleConfig);
     KConfigGroup cgd(&configDefault, u"KDE"_s);
     QCOMPARE(cgd.readEntry("widgetStyle", QString()), QStringLiteral("Fusion"));
 
@@ -117,7 +117,7 @@ void KcmTest::testColors()
     KConfigGroup cg(&config, u"General"_s);
     QCOMPARE(cg.readEntry("ColorScheme", QString()), QString());
 
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals"_L1, KConfig::SimpleConfig);
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/kdeglobals", KConfig::SimpleConfig);
     KConfigGroup cgd(&configDefault, u"General"_s);
     QCOMPARE(cgd.readEntry("ColorScheme", QString()), QStringLiteral("customTestValue"));
 }
@@ -130,7 +130,7 @@ void KcmTest::testIcons()
     KConfigGroup cg(&config, u"Icons"_s);
     QCOMPARE(cg.readEntry("Theme", QString()), QString());
 
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals"_L1, KConfig::SimpleConfig);
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/kdeglobals", KConfig::SimpleConfig);
     KConfigGroup cgd(&configDefault, u"Icons"_s);
     QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 }
@@ -143,7 +143,7 @@ void KcmTest::testPlasmaTheme()
     KConfigGroup cg(&config, u"Theme"_s);
     QCOMPARE(cg.readEntry("name", QString()), QString());
 
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/plasmarc"_L1, KConfig::SimpleConfig);
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/plasmarc", KConfig::SimpleConfig);
     KConfigGroup cgd(&configDefault, u"Theme"_s);
     QCOMPARE(cgd.readEntry("name", QString()), QStringLiteral("customTestValue"));
 }
@@ -156,7 +156,7 @@ void KcmTest::testCursorTheme()
     KConfigGroup cg(&config, u"Mouse"_s);
     QCOMPARE(cg.readEntry("cursorTheme", QString()), QString());
 
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kcminputrc"_L1, KConfig::SimpleConfig);
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/kcminputrc", KConfig::SimpleConfig);
     KConfigGroup cgd(&configDefault, u"Mouse"_s);
     QCOMPARE(cgd.readEntry("cursorTheme", QString()), QStringLiteral("customTestValue"));
 }
@@ -170,7 +170,7 @@ void KcmTest::testSplashScreen()
     QCOMPARE(cg.readEntry("Theme", QString()), QString());
     QCOMPARE(cg.readEntry("Engine", QString()), QString());
 
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/ksplashrc"_L1, KConfig::SimpleConfig);
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/ksplashrc", KConfig::SimpleConfig);
     KConfigGroup cgd(&configDefault, u"KSplash"_s);
     QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
     QCOMPARE(cgd.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
@@ -184,7 +184,7 @@ void KcmTest::testWindowSwitcher()
     KConfigGroup cg(&config, u"TabBox"_s);
     QCOMPARE(cg.readEntry("LayoutName", QString()), QString());
 
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kwinrc"_L1, KConfig::SimpleConfig);
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/kwinrc", KConfig::SimpleConfig);
     KConfigGroup cgd(&configDefault, u"TabBox"_s);
     QCOMPARE(cgd.readEntry("LayoutName", QString()), QStringLiteral("customTestValue"));
 }
@@ -203,7 +203,7 @@ void KcmTest::testKCMSave()
     // On real setup we read entries from kdedefaults directory (XDG_CONFIG_DIRS is modified but not in test scenario)
 
     KConfig config(QStringLiteral("kdeglobals"));
-    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kdeglobals"_L1, KConfig::SimpleConfig);
+    KConfig configDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/kdeglobals", KConfig::SimpleConfig);
     KConfigGroup cg(&config, u"KDE"_s);
     KConfigGroup cgd(&configDefault, u"KDE"_s);
     // See comment in testWidgetStyle
@@ -222,21 +222,21 @@ void KcmTest::testKCMSave()
     QCOMPARE(cgd.readEntry("Theme", QString()), QStringLiteral("customTestValue"));
 
     KConfig plasmaConfig(QStringLiteral("plasmarc"));
-    KConfig plasmaConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/plasmarc"_L1, KConfig::SimpleConfig);
+    KConfig plasmaConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/plasmarc", KConfig::SimpleConfig);
     cg = KConfigGroup(&plasmaConfig, u"Theme"_s);
     cgd = KConfigGroup(&plasmaConfigDefault, u"Theme"_s);
     QCOMPARE(cg.readEntry("name", QString()), QString());
     QCOMPARE(cgd.readEntry("name", QString()), QStringLiteral("customTestValue"));
 
     KConfig inputConfig(QStringLiteral("kcminputrc"));
-    KConfig inputConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kcminputrc"_L1, KConfig::SimpleConfig);
+    KConfig inputConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/kcminputrc", KConfig::SimpleConfig);
     cg = KConfigGroup(&inputConfig, u"Mouse"_s);
     cgd = KConfigGroup(&inputConfigDefault, u"Mouse"_s);
     QCOMPARE(cg.readEntry("cursorTheme", QString()), QString());
     QCOMPARE(cgd.readEntry("cursorTheme", QString()), QStringLiteral("customTestValue"));
 
     KConfig splashConfig(QStringLiteral("ksplashrc"));
-    KConfig splashConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/ksplashrc"_L1, KConfig::SimpleConfig);
+    KConfig splashConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/ksplashrc", KConfig::SimpleConfig);
     cg = KConfigGroup(&splashConfig, u"KSplash"_s);
     cgd = KConfigGroup(&splashConfigDefault, u"KSplash"_s);
     QCOMPARE(cg.readEntry("Theme", QString()), QString());
@@ -245,7 +245,7 @@ void KcmTest::testKCMSave()
     QCOMPARE(cgd.readEntry("Engine", QString()), QStringLiteral("KSplashQML"));
 
     KConfig kwinConfig(QStringLiteral("kwinrc"));
-    KConfig kwinConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + "/kdedefaults/kwinrc"_L1, KConfig::SimpleConfig);
+    KConfig kwinConfigDefault(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/kdedefaults/kwinrc", KConfig::SimpleConfig);
     cg = KConfigGroup(&kwinConfig, u"TabBox"_s);
     cgd = KConfigGroup(&kwinConfigDefault, u"TabBox"_s);
     QCOMPARE(cg.readEntry("LayoutName", QString()), QString());

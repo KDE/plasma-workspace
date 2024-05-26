@@ -30,6 +30,8 @@ Q_LOGGING_CATEGORY(kcm_users, "kcm_users")
 
 K_PLUGIN_CLASS_WITH_JSON(KCMUser, "kcm_users.json")
 
+using namespace Qt::StringLiterals;
+
 // Work around QTBUG-100458
 inline auto asyncCall(OrgFreedesktopAccountsInterface *ptr, const QString &method, const QVariantList &arguments)
 {
@@ -153,8 +155,8 @@ QUrl KCMUser::recolorSVG(const QUrl &url, const QColor &color)
     }
 
     auto str = s_cache[url];
-    str.replace("fill:#000000", "fill:" + color.name());
-    return QUrl("data:image/svg+xml;utf8," + QUrl::toPercentEncoding(str));
+    str.replace("fill:#000000"_L1, QString(u"fill:" + color.name()));
+    return QUrl(QString(u"data:image/svg+xml;utf8," + QUrl::toPercentEncoding(str)));
 }
 
 void KCMUser::load()

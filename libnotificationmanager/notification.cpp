@@ -55,7 +55,8 @@ QString Notification::Private::sanitize(const QString &text)
         return t;
     }
 
-    QXmlStreamReader r(QStringLiteral("<html>") + t + QStringLiteral("</html>"));
+    t = u"<html>" + std::move(t) + u"</html>";
+    QXmlStreamReader r(t);
     QString result;
     QXmlStreamWriter out(&result);
 

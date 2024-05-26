@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     QString path;
     if (args.count() == 1) {
         const QString fileBaseName(args.at(0));
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, "color-schemes/"_L1 + fileBaseName + ".colors"_L1);
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, u"color-schemes/" + fileBaseName + u".colors");
     }
     if (path.isEmpty()) {
         QTextStream out(stderr);

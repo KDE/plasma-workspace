@@ -152,10 +152,10 @@ void ShellTest::initTestCase()
     QStandardPaths::setTestModeEnabled(true);
     qRegisterMetaType<QScreen *>();
 
-    m_plasmaDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) % '/' % "plasma");
+    m_plasmaDir = QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"plasma");
     m_plasmaDir.removeRecursively();
 
-    copyDirectory(QFINDTESTDATA("data/testpanel"), m_plasmaDir.absolutePath() % "/plasmoids/org.kde.plasma.testpanel");
+    copyDirectory(QFINDTESTDATA("data/testpanel"), m_plasmaDir.absolutePath() + u"/plasmoids/org.kde.plasma.testpanel");
 
     KConfigGroup cg(KSharedConfig::openConfig(), QStringLiteral("ScreenConnectors"));
     cg.deleteGroup();

@@ -391,7 +391,7 @@ void KCMColors::editScheme(const QString &schemeName, QQuickItem *ctx)
         if (QWindow *actualWindow = QQuickRenderControl::renderWindowFor(ctx->window())) {
             if (KWindowSystem::isPlatformX11()) {
                 // TODO wayland: once we have foreign surface support
-                args << QStringLiteral("--attach") << (QStringLiteral("x11:") + QString::number(actualWindow->winId()));
+                args << QStringLiteral("--attach") << u"x11:" + QString::number(actualWindow->winId());
             }
         }
     }

@@ -85,43 +85,43 @@ QString Style::toXml(bool disabled, const QString &family) const
     }
 
     if (files.count() > 0) {
-        QString str("  <"_L1 + FONT_TAG + u' ');
+        QString str(u"  <" + FONT_TAG + u' ');
         int weight, width, slant;
 
         KFI::FC::decomposeStyleVal(m_value, weight, width, slant);
 
         if (!family.isEmpty()) {
-            str += FAMILY_ATTR + "=\""_L1 + family + "\" "_L1;
+            str += FAMILY_ATTR + u"=\"" + family + u"\" ";
         }
         if (KFI_NULL_SETTING != weight) {
-            str += WEIGHT_ATTR + "=\""_L1 + QString::number(weight) + "\" "_L1;
+            str += WEIGHT_ATTR + u"=\"" + QString::number(weight) + u"\" ";
         }
         if (KFI_NULL_SETTING != width) {
-            str += WIDTH_ATTR + "=\""_L1 + QString::number(width) + "\" "_L1;
+            str += WIDTH_ATTR + u"=\"" + QString::number(width) + u"\" ";
         }
         if (KFI_NULL_SETTING != slant) {
-            str += SLANT_ATTR + "=\""_L1 + QString::number(slant) + "\" "_L1;
+            str += SLANT_ATTR + u"=\"" + QString::number(slant) + u"\" ";
         }
         if (!m_scalable) {
-            str += SCALABLE_ATTR + "=\"false\" "_L1;
+            str += SCALABLE_ATTR + u"=\"false\" ";
         }
 
         QStringList ws(WritingSystems::instance()->getLangs(m_writingSystems));
 
         if (!ws.isEmpty()) {
-            str += LANGS_ATTR + "=\""_L1 + ws.join(LANG_SEP) + "\" "_L1;
+            str += LANGS_ATTR + u"=\"" + ws.join(LANG_SEP) + u"\" ";
         }
 
         if (1 == files.count()) {
-            str += (*files.begin()) + "/>"_L1;
+            str += (*files.begin()) + u"/>";
         } else {
             QStringList::ConstIterator it(files.begin()), end(files.end());
 
             str += QStringView(u">\n");
             for (; it != end; ++it) {
-                str += "   <"_L1 + FILE_TAG + u' ' + (*it) + "/>\n"_L1;
+                str += u"   <" + FILE_TAG + u' ' + (*it) + u"/>\n";
             }
-            str += "  </"_L1 + FONT_TAG + ">"_L1;
+            str += u"  </" + FONT_TAG + u">";
         }
 
         return str;

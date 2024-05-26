@@ -688,8 +688,8 @@ bool LookAndFeelManager::remove(const KPackage::Package &package, LookAndFeelMan
     // TODO: Remove separately
     if (itemsToRemove.testFlag(PlasmaTheme) && itemsToRemove.testFlag(Icons)) {
         const QString themeName = configValue(config, u"plasmarc/Theme"_s, u"name"_s);
-        QDir themeDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("plasma") + QDir::separator()
-                      + QStringLiteral("desktoptheme") + QDir::separator() + themeName);
+        QDir themeDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + u"plasma" + QDir::separator()
+                      + u"desktoptheme" + QDir::separator() + themeName);
         if (themeDir.exists()) {
             themeDir.removeRecursively();
         }

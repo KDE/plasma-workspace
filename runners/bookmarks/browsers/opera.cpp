@@ -57,7 +57,7 @@ QList<BookmarkMatch> Opera::match(const QString &term, bool addEverything)
 void Opera::prepare()
 {
     // open bookmarks file
-    QString operaBookmarksFilePath = QDir::homePath() + "/.opera/bookmarks.adr";
+    QString operaBookmarksFilePath = QDir::homePath() + u"/.opera/bookmarks.adr";
     QFile operaBookmarksFile(operaBookmarksFilePath);
     if (!operaBookmarksFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         // qDebug() << "Could not open Operas Bookmark File " + operaBookmarksFilePath;

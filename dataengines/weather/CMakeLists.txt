@@ -2,7 +2,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_weather\")
 remove_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x50f02)
 
 add_definitions(
-    -DQT_USE_QSTRINGBUILDER
     -DQT_NO_CAST_TO_ASCII
     -DQT_NO_CAST_FROM_ASCII
     -DQT_NO_CAST_FROM_BYTEARRAY

@@ -882,7 +882,7 @@ void KSMServer::discardSession()
         // discardCommand before we execute it. This used to be the
         // case up to KDE and Qt < 3.1
         int i = 1;
-        while (i <= count && config.readPathEntry(QStringLiteral("discardCommand") + QString::number(i), QStringList()) != discardCommand) {
+        while (i <= count && config.readPathEntry(QString(u"discardCommand" + QString::number(i)), QStringList()) != discardCommand) {
             i++;
         }
         if (i <= count) {
@@ -950,12 +950,12 @@ void KSMServer::storeSession()
 
         count++;
         const QString n = QString::number(count);
-        cg.writeEntry(QStringLiteral("program") + n, program);
-        cg.writeEntry(QStringLiteral("clientId") + n, c->clientId());
-        cg.writeEntry(QStringLiteral("restartCommand") + n, restartCommand);
-        cg.writePathEntry(QStringLiteral("discardCommand") + n, c->discardCommand());
-        cg.writeEntry(QStringLiteral("restartStyleHint") + n, restartHint);
-        cg.writeEntry(QStringLiteral("userId") + n, c->userId());
+        cg.writeEntry(QString(u"program" + n), program);
+        cg.writeEntry(QString(u"clientId" + n), c->clientId());
+        cg.writeEntry(QString(u"restartCommand" + n), restartCommand);
+        cg.writePathEntry(QString(u"discardCommand" + n), c->discardCommand());
+        cg.writeEntry(QString(u"restartStyleHint" + n), restartHint);
+        cg.writeEntry(QString(u"userId" + n), c->userId());
     }
     cg.writeEntry("count", count);
 

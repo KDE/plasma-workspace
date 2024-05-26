@@ -288,7 +288,7 @@ void OptionsModel::updateBinaryDialectExample()
         defbase = 1000;
     }
     const KFormat f;
-    m_binaryDialectExample = f.formatByteSize(defbase, 1, m_binaryDialect, KFormat::BinarySizeUnits::UnitKiloByte) + " = "_L1
+    m_binaryDialectExample = f.formatByteSize(defbase, 1, m_binaryDialect, KFormat::BinarySizeUnits::UnitKiloByte) + u" = "
         + f.formatByteSize(defbase, 1, m_binaryDialect, KFormat::BinarySizeUnits::UnitByte);
 
     switch (m_binaryDialect) {

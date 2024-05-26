@@ -50,8 +50,7 @@ void KlipperTest::initTestCase()
 
 void KlipperTest::testBug465225()
 {
-    const QString folderPath =
-        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + QStringLiteral("klipper") + QDir::separator();
+    const QString folderPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + u"klipper" + QDir::separator();
     QVERIFY(QDir().mkpath(folderPath));
     QVERIFY(QFile(QFINDTESTDATA("./data/bug465225.lst")).copy(QDir(folderPath).absoluteFilePath(QStringLiteral("history2.lst"))));
 

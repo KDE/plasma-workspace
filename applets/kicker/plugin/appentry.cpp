@@ -318,7 +318,7 @@ bool AppEntry::run(const QString &actionId, const QVariant &argument)
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
         job->start();
 
-        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + m_service->storageId()), QStringLiteral("org.kde.plasma.kicker"));
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + m_service->storageId())), QStringLiteral("org.kde.plasma.kicker"));
 
         return true;
     }

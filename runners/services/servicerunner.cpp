@@ -157,7 +157,7 @@ private:
             // Otherwise we might filter out broken services. Rather than hiding them, it is better to show an error message on launch (as done by KIO's jobs)
             urlPath = exec;
         }
-        match.setId(QStringLiteral("exec://") + urlPath);
+        match.setId(QString(u"exec://" + urlPath));
         if (!service->genericName().isEmpty() && service->genericName() != name) {
             match.setSubtext(service->genericName());
         } else if (!service->comment().isEmpty()) {
@@ -483,7 +483,7 @@ void ServiceRunner::run(const KRunner::RunnerContext & /*context*/, const KRunne
         return;
     }
 
-    KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.krunner"));
+    KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + service->storageId())), QStringLiteral("org.kde.krunner"));
 
     KIO::ApplicationLauncherJob *job = nullptr;
 

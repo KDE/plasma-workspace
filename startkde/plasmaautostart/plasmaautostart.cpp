@@ -28,7 +28,7 @@ void PlasmaAutostart::copyIfNeeded()
             KDesktopFile *newDf = df->copyTo(local);
             delete df;
             delete newDf; // Force sync-to-disk
-            df = new KDesktopFile(QStandardPaths::GenericConfigLocation, QStringLiteral("autostart/") + name); // Recreate from disk
+            df = new KDesktopFile(QStandardPaths::GenericConfigLocation, u"autostart/" + name); // Recreate from disk
         }
     }
 

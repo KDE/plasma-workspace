@@ -154,7 +154,7 @@ void AutostartModel::load()
         QString actualName = url.fileName();
         // Remove .desktop part
         actualName.chop(8);
-        const QString serviceName = QStringLiteral("app-") + systemdEscape(actualName) + QStringLiteral("@autostart.service");
+        const QString serviceName = u"app-" + systemdEscape(actualName) + u"@autostart.service";
         auto unit = new Unit(this);
         // To show errors that occur when loading unit data in main page
         connect(unit, &Unit::error, this, &AutostartModel::error);

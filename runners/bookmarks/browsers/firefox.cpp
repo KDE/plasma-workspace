@@ -34,7 +34,7 @@ Firefox::Firefox(const QString &firefoxConfigDir, QObject *parent)
     }
 
     // Try to get the right database file, the default profile is used
-    KConfig firefoxProfile(firefoxConfigDir + "/profiles.ini", KConfig::SimpleConfig);
+    KConfig firefoxProfile(QString(firefoxConfigDir + u"/profiles.ini"), KConfig::SimpleConfig);
     QStringList profilesList = firefoxProfile.groupList();
     profilesList = profilesList.filter(QRegularExpression(QStringLiteral("^Profile\\d+$")));
 
@@ -64,9 +64,9 @@ Firefox::Firefox(const QString &firefoxConfigDir, QObject *parent)
         qCWarning(RUNNER_BOOKMARKS) << "No default firefox profile found";
         return;
     }
-    profilePath.prepend(firefoxConfigDir + "/");
-    m_dbFile = profilePath + "/places.sqlite";
-    m_dbFile_fav = profilePath + "/favicons.sqlite";
+    profilePath.prepend(firefoxConfigDir + u'/');
+    m_dbFile = profilePath + u"/places.sqlite";
+    m_dbFile_fav = profilePath + u"/favicons.sqlite";
 
     // We can reuse the favicon instance over the lifetime of the plugin consequently the
     // icons that are already written to disk can be reused in multiple match sessions

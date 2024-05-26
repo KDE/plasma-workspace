@@ -87,7 +87,7 @@ void PackageListModelTest::cleanup()
 
 void PackageListModelTest::cleanupTestCase()
 {
-    const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/");
+    const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/wallpapers/";
 
     QDir(standardPath).removeRecursively();
 }
@@ -117,8 +117,7 @@ void PackageListModelTest::testPackageListModelData()
     QCOMPARE(idx.data(ImageRoles::ResolutionRole).toString(), QStringLiteral("1920x1080"));
 
     QCOMPARE(idx.data(ImageRoles::PathRole).toUrl().toLocalFile(),
-             m_packagePaths.at(1) + QDir::separator() + QStringLiteral("contents") + QDir::separator() + QStringLiteral("images") + QDir::separator()
-                 + QStringLiteral("1920x1080.jpg"));
+             m_packagePaths.at(1) + QDir::separator() + u"contents" + QDir::separator() + u"images" + QDir::separator() + u"1920x1080.jpg");
     QCOMPARE(idx.data(ImageRoles::PackageNameRole).toString(), m_packagePaths.at(1) + QDir::separator());
 
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), false);
@@ -259,11 +258,11 @@ void PackageListModelTest::testPackageListModelRemoveBackground()
 
 void PackageListModelTest::testPackageListModelRemoveLocalBackground()
 {
-    const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/wallpapers/");
+    const QString standardPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/wallpapers/";
 
     QVERIFY(QDir(standardPath).mkpath(standardPath));
     KIO::CopyJob *job = KIO::copy(QUrl::fromLocalFile(m_dummyPackagePath),
-                                  QUrl::fromLocalFile(standardPath + QStringLiteral("dummy") + QDir::separator()),
+                                  QUrl::fromLocalFile(QString(standardPath + u"dummy" + QDir::separator())),
                                   KIO::HideProgressInfo | KIO::Overwrite);
     QVERIFY(job->exec());
 
@@ -275,12 +274,12 @@ void PackageListModelTest::testPackageListModelRemoveLocalBackground()
     QCOMPARE(idx.data(Qt::DisplayRole).toString(), QStringLiteral("Dummy wallpaper (For test purpose, don't translate!)"));
     QCOMPARE(idx.data(ImageRoles::RemovableRole).toBool(), true);
 
-    m_model->removeBackground(standardPath + QStringLiteral("dummy"));
+    m_model->removeBackground(QString(standardPath + u"dummy"));
     QCOMPARE(m_countSpy->size(), 1);
     m_countSpy->clear();
 
     // The local package should be deleted.
-    QVERIFY(!QFileInfo::exists(standardPath + QStringLiteral("dummy")));
+    QVERIFY(!QFileInfo::exists(QString(standardPath + u"dummy")));
     QVERIFY(QDir(standardPath).rmdir(standardPath));
 }
 

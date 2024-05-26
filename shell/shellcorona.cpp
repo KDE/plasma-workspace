@@ -632,7 +632,7 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
         const auto applets = cont->applets();
         for (Plasma::Applet *applet : applets) {
-            const QRect geometry = appletGeometries.value(QStringLiteral("Applet-") % QString::number(applet->id()));
+            const QRect geometry = appletGeometries.value(QString(u"Applet-" + QString::number(applet->id())));
 
             QJsonObject appletJson;
 
@@ -660,9 +660,9 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
     json.setObject(root);
 
     return
-        "var plasma = getApiVersion(1);\n\n"
+        QByteArray("var plasma = getApiVersion(1);\n\n"
         "var layout = " + json.toJson() + ";\n\n"
-        "plasma.loadSerializedLayout(layout);\n";
+        "plasma.loadSerializedLayout(layout);\n");
 }
 
 void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
@@ -783,7 +783,7 @@ void ShellCorona::load()
     disconnect(m_activityController, &KActivities::Controller::serviceStatusChanged, this, &ShellCorona::load);
 
     // TODO: a kconf_update script is needed
-    QString configFileName(QStringLiteral("plasma-") + m_shell + QStringLiteral("-appletsrc"));
+    QString configFileName(u"plasma-" + m_shell + u"-appletsrc");
 
     // Make sure all containments have screen numbers starting from 0 and are sequential
     sanitizeScreenLayout(configFileName);
@@ -1034,7 +1034,7 @@ void ShellCorona::loadDefaultLayout()
 {
 #if USE_SCRIPTING
     // pre-startup scripts
-    QString script = m_lookAndFeelPackage.filePath("layouts", shell() + "-prelayout.js");
+    QString script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + u"-prelayout.js"));
     if (!script.isEmpty()) {
         QFile file(script);
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1066,7 +1066,7 @@ void ShellCorona::loadDefaultLayout()
     script = m_testModeLayout;
 
     if (script.isEmpty()) {
-        script = m_lookAndFeelPackage.filePath("layouts", shell() + "-layout.js");
+        script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + u"-layout.js"));
     }
     if (script.isEmpty()) {
         script = kPackage().filePath("defaultlayout");
@@ -1590,7 +1590,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
         return;
     }
 
-    const QString scriptFile = m_lookAndFeelPackage.filePath("plasmoidsetupscripts", applet->pluginMetaData().pluginId() + ".js");
+    const QString scriptFile = m_lookAndFeelPackage.filePath("plasmoidsetupscripts", QString(applet->pluginMetaData().pluginId() + u".js"));
 
     if (scriptFile.isEmpty()) {
         return;

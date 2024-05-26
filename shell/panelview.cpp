@@ -175,10 +175,10 @@ KConfigGroup PanelView::panelConfig(ShellCorona *corona, Plasma::Containment *co
     views = KConfigGroup(&views, QStringLiteral("Panel %1").arg(containment->id()));
 
     if (containment->formFactor() == Plasma::Types::Vertical) {
-        return KConfigGroup(&views, QStringLiteral("Vertical") + QString::number(screen->size().height()));
+        return KConfigGroup(&views, QString(u"Vertical" + QString::number(screen->size().height())));
         // treat everything else as horizontal
     } else {
-        return KConfigGroup(&views, QStringLiteral("Horizontal") + QString::number(screen->size().width()));
+        return KConfigGroup(&views, QString(u"Horizontal" + QString::number(screen->size().width())));
     }
 }
 

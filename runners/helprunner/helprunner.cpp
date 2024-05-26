@@ -103,7 +103,7 @@ void HelpRunner::run(const RunnerContext &context, const QueryMatch &match)
         job->start();
     } else if (match.categoryRelevance() == qToUnderlying(QueryMatch::CategoryRelevance::Low)) {
         const KPluginMetaData data = match.data().value<KPluginMetaData>();
-        const QString completedRunnerName = QStringLiteral("?") + data.name();
+        const QString completedRunnerName = u'?' + data.name();
         context.requestQueryStringUpdate(completedRunnerName, -1);
     } else {
         const QString query = match.data().toString();

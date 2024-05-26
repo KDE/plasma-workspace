@@ -183,7 +183,7 @@ QAbstractItemModel *CursorThemeConfig::sizesModel()
 
 bool CursorThemeConfig::iconsIsWritable() const
 {
-    const QFileInfo icons = QFileInfo(QDir::homePath() + "/.icons"_L1);
+    const QFileInfo icons = QFileInfo(QString(QDir::homePath() + u"/.icons"));
     const QFileInfo home = QFileInfo(QDir::homePath());
 
     return ((icons.exists() && icons.isDir() && icons.isWritable()) || (!icons.exists() && home.isWritable()));
@@ -431,7 +431,7 @@ void CursorThemeConfig::installThemeFile(const QString &path)
     }
 
     // The directory we'll install the themes to
-    QString destDir = QDir::homePath() + "/.icons/"_L1;
+    QString destDir = QDir::homePath() + u"/.icons/";
     if (!QDir().mkpath(destDir)) {
         Q_EMIT showErrorMessage(i18n("Failed to create 'icons' folder."));
         return;

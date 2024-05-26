@@ -129,7 +129,7 @@ void ImageProxyModelTest::testImageProxyModelIndexOf()
     QVERIFY(m_model->indexOf(m_packagePaths.at(1)) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(0) + QDir::separator()) >= 0);
     QVERIFY(m_model->indexOf(m_packagePaths.at(1) + QDir::separator()) >= 0);
-    QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(QStringLiteral("brokenpackage") + QDir::separator())), -1);
+    QCOMPARE(m_model->indexOf(m_dataDir.absoluteFilePath(u"brokenpackage" + QDir::separator())), -1);
 }
 
 void ImageProxyModelTest::testImageProxyModelReload()
@@ -271,11 +271,11 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QCOMPARE(m_model->m_packageModel->count(), 0);
     QVERIFY(m_model->m_dirWatch.contains(standardPath));
     // KDirWatch already monitors the parent folder
-    QVERIFY(!m_model->m_dirWatch.contains(standardPath + QStringLiteral("image.jpg")));
+    QVERIFY(!m_model->m_dirWatch.contains(standardPath + u"image.jpg"));
 
     // Copy a package to the folder
     auto job = KIO::copy(QUrl::fromLocalFile(m_dummyPackagePath),
-                         QUrl::fromLocalFile(standardPath + QStringLiteral("dummy") + QDir::separator()),
+                         QUrl::fromLocalFile(QString(standardPath + u"dummy" + QDir::separator())),
                          KIO::HideProgressInfo | KIO::Overwrite);
     job->start();
 

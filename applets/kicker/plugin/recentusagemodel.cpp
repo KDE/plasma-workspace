@@ -391,7 +391,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
         job->start();
 
-        KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + storageId), QStringLiteral("org.kde.plasma.kicker"));
+        KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + storageId)), QStringLiteral("org.kde.plasma.kicker"));
 
         return true;
     } else if (actionId == QLatin1String("forget") && withinBounds) {

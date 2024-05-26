@@ -19,6 +19,8 @@
 #include <KPackage/PackageLoader>
 #include <KRuntimePlatform>
 
+using namespace Qt::StringLiterals;
+
 PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     : AbstractItem()
     , m_info(info)
@@ -29,7 +31,7 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation, _f, QStandardPaths::LocateDirectory));
     m_local = dir.exists() && dir.isWritable();
 
-    setText(m_info.name() + " - " + m_info.category().toLower());
+    setText(QString(m_info.name() + u" - " + m_info.category().toLower()));
 
     if (QIcon::hasThemeIcon(info.pluginId())) {
         setIcon(QIcon::fromTheme(info.pluginId()));

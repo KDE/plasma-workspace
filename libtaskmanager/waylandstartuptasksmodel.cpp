@@ -158,7 +158,7 @@ void WaylandStartupTasksModel::Private::addActivation(PlasmaActivation *activati
             return;
         }
 
-        const QUrl launcherUrl(QStringLiteral("applications:") + desktopFileName);
+        const QUrl launcherUrl(QString(u"applications:" + desktopFileName));
         const AppData appData = appDataFromUrl(QUrl::fromLocalFile(desktopFilePath));
 
         const int count = startups.size();

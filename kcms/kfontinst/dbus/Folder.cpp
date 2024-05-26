@@ -295,7 +295,7 @@ void Folder::configure(bool force)
         QSet<QString> dirs;
 
         for (; it != end; ++it) {
-            if (Misc::fExists((*it) + "fonts.dir"_L1)) {
+            if (Misc::fExists((*it) + u"fonts.dir")) {
                 dirs.insert(KShell::quoteArg(*it));
             }
         }

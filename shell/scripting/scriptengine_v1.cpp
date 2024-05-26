@@ -537,9 +537,10 @@ bool ScriptEngine::V1::loadTemplate(const QString &layout)
     }
 
     if (!package.isValid()) {
-        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + pluginData.pluginId() + "/metadata.json");
+        path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(package.defaultPackageRoot() + pluginData.pluginId() + u"/metadata.json"));
         if (path.isEmpty()) {
-            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, package.defaultPackageRoot() + pluginData.pluginId() + "/metadata.desktop");
+            path = QStandardPaths::locate(QStandardPaths::GenericDataLocation,
+                                          QString(package.defaultPackageRoot() + pluginData.pluginId() + u"/metadata.desktop"));
         }
         if (path.isEmpty()) {
             // qDebug() << "script path is empty";

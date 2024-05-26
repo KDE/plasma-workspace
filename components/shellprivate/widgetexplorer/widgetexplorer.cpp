@@ -532,7 +532,7 @@ void WidgetExplorer::uninstall(const QString &pluginName)
     // This removes folders of packages that are *not* valid so the package job can't uninstall them
     // This is a bit dangerous so eventually we can drop this when we drop support for uninstalling plasma5 plasmoids
     if (!job->package().isValid() && !pluginName.isEmpty()) {
-        QDir dir(packageRoot + "/" + pluginName);
+        QDir dir(QString(packageRoot + QDir::separator() + pluginName));
         if (dir.exists()) {
             dir.removeRecursively();
         }

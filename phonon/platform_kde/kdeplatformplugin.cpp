@@ -116,13 +116,13 @@ bool KdePlatformPlugin::isMimeTypeAvailable(const QString & /*mimeType*/) const
 void KdePlatformPlugin::saveVolume(const QString &outputName, qreal volume)
 {
     KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Phonon::AudioOutput"));
-    config.writeEntry(outputName + "_Volume", volume);
+    config.writeEntry(QString(outputName + u"_Volume"), volume);
 }
 
 qreal KdePlatformPlugin::loadVolume(const QString &outputName) const
 {
     KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("Phonon::AudioOutput"));
-    return config.readEntry<qreal>(outputName + "_Volume", 1.0);
+    return config.readEntry<qreal>(QString(outputName + u"_Volume"), 1.0);
 }
 
 QList<int> KdePlatformPlugin::objectDescriptionIndexes(ObjectDescriptionType type) const

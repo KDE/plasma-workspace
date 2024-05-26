@@ -151,12 +151,12 @@ void CCharTip::showTip()
     EUnicodeCategory cat(getCategory(m_item.ucs4));
     QString details("<table>");
 
-    details += "<tr><td align=\"right\"><b>"_L1 + i18n("Category") + "&nbsp;</b></td><td>"_L1 + toStr(cat) + "</td></tr>"_L1;
-    details += "<tr><td align=\"right\"><b>"_L1 + i18n("UCS-4") + "&nbsp;</b></td><td>"_L1 + "U+"_L1 + QStringLiteral("%1").arg(m_item.ucs4, 4, 16)
-        + "&nbsp;</td></tr>"_L1;
+    details += u"<tr><td align=\"right\"><b>" + i18n("Category") + u"&nbsp;</b></td><td>" + toStr(cat) + u"</td></tr>";
+    details +=
+        u"<tr><td align=\"right\"><b>" + i18n("UCS-4") + u"&nbsp;</b></td><td>" + u"U+" + QStringLiteral("%1").arg(m_item.ucs4, 4, 16) + u"&nbsp;</td></tr>";
 
     QString str(QString::fromUcs4(&(m_item.ucs4), 1));
-    details += "<tr><td align=\"right\"><b>"_L1 + i18n("UTF-16") + "&nbsp;</b></td><td>"_L1;
+    details += u"<tr><td align=\"right\"><b>" + i18n("UTF-16") + u"&nbsp;</b></td><td>";
 
     const ushort *utf16(str.utf16());
 
@@ -166,8 +166,8 @@ void CCharTip::showTip()
         }
         details += QStringLiteral("0x%1").arg(utf16[i], 4, 16);
     }
-    details += "</td></tr>"_L1;
-    details += "<tr><td align=\"right\"><b>"_L1 + i18n("UTF-8") + "&nbsp;</b></td><td>"_L1;
+    details += u"</td></tr>";
+    details += u"<tr><td align=\"right\"><b>" + i18n("UTF-8") + u"&nbsp;</b></td><td>";
 
     QByteArray utf8(str.toUtf8());
 
@@ -177,17 +177,17 @@ void CCharTip::showTip()
         }
         details += QStringLiteral("0x%1").arg((unsigned char)(utf8.constData()[i]), 2, 16);
     }
-    details += "</td></tr>"_L1;
+    details += u"</td></tr>";
 
     // Note: the "<b></b> below is just to stop Qt converting the xml entry into
     // a character!
     if ((0x0001 <= m_item.ucs4 && m_item.ucs4 <= 0xD7FF) || (0xE000 <= m_item.ucs4 && m_item.ucs4 <= 0xFFFD)
         || (0x10000 <= m_item.ucs4 && m_item.ucs4 <= 0x10FFFF)) {
-        details += "<tr><td align=\"right\"><b>"_L1 + i18n("XML Decimal Entity") + "&nbsp;</b></td><td>"_L1 + "&#<b></b>"_L1 + QString::number(m_item.ucs4)
-            + ";</td></tr>"_L1;
+        details +=
+            u"<tr><td align=\"right\"><b>" + i18n("XML Decimal Entity") + u"&nbsp;</b></td><td>" + u"&#<b></b>" + QString::number(m_item.ucs4) + u";</td></tr>";
     }
 
-    details += "</table>";
+    details += u"</table>";
     m_label->setText(details);
 
     QList<CFcEngine::TRange> range;

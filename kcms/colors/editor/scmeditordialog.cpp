@@ -129,7 +129,7 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
     filename.replace(0, 1, filename.at(0).toUpper());
 
     // check if that name is already in the list
-    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/") + filename + QStringLiteral(".colors"));
+    const QString path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(u"color-schemes/" + filename + u".colors"));
 
     QFile file(path);
     const int permissions = file.permissions();
@@ -151,10 +151,10 @@ void SchemeEditorDialog::saveScheme(bool overwrite)
         }
 
         // go ahead and save it
-        QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + "/color-schemes/"_L1;
+        QString newpath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/color-schemes/";
         QDir dir;
         dir.mkpath(newpath);
-        newpath += filename + ".colors"_L1;
+        newpath += filename + u".colors";
 
         KConfig *config = m_config->copyTo(newpath);
         m_config->markAsClean();

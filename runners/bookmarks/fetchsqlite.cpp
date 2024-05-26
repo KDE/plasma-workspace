@@ -32,7 +32,7 @@ void FetchSqlite::prepare()
 
 void FetchSqlite::teardown()
 {
-    const QString connectionPrefix = m_databaseFile + "-";
+    const QString connectionPrefix = m_databaseFile + u'-';
     const auto connections = QSqlDatabase::connectionNames();
     for (const auto &c : connections) {
         if (c.startsWith(connectionPrefix)) {
@@ -46,7 +46,7 @@ static QSqlDatabase openDbConnection(const QString &databaseFile)
 {
     // create a thread unique connection name based on the DB filename and
     // thread id
-    QString connection = databaseFile + "-";
+    QString connection = databaseFile + u'-';
     std::stringstream s;
     s << std::this_thread::get_id();
     connection += QString::fromStdString(s.str());

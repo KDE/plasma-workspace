@@ -188,7 +188,7 @@ void DWDIon::findPlace(const QString &searchText)
 {
     // Checks if the stations have already been loaded, always contains the currently active one
     if (m_place.size() > 1) {
-        setData(QStringLiteral("dwd|validate|") + searchText, Data());
+        setData(QString(u"dwd|validate|" + searchText), Data());
         searchInStationList(searchText);
     } else {
         const QUrl forecastURL(QStringLiteral(CATALOGUE_URL));
@@ -280,7 +280,7 @@ void DWDIon::setup_slotJobFinished(KJob *job)
 {
     if (!job->error()) {
         const QString searchText(m_searchJobList.value(job));
-        setData(QStringLiteral("dwd|validate|") + searchText, Data());
+        setData(u"dwd|validate|" + searchText, Data());
 
         QByteArray catalogueData = m_searchJobData[job];
         if (!catalogueData.isEmpty()) {
@@ -538,23 +538,23 @@ void DWDIon::parseMeasureData(const QString source, QJsonDocument doc)
 
 void DWDIon::validate(const QString &searchText)
 {
-    const QString source(QStringLiteral("dwd|validate|") + searchText);
+    const QString source(u"dwd|validate|" + searchText);
 
     if (m_locations.isEmpty()) {
         const QString invalidPlace = searchText;
-        setData(source, QStringLiteral("validate"), QVariant(QStringLiteral("dwd|invalid|multiple|") + invalidPlace));
+        setData(source, QStringLiteral("validate"), QVariant(QString(u"dwd|invalid|multiple|" + invalidPlace)));
         return;
     }
 
     QString placeList;
     for (const QString &place : std::as_const(m_locations)) {
-        placeList.append(QStringLiteral("|place|") + place + QStringLiteral("|extra|") + m_place[place]);
+        placeList.append(u"|place|" + place + u"|extra|" + m_place[place]);
     }
     if (m_locations.count() > 1) {
-        setData(source, QStringLiteral("validate"), QVariant(QStringLiteral("dwd|valid|multiple") + placeList));
+        setData(source, QStringLiteral("validate"), QVariant(QString(u"dwd|valid|multiple" + placeList)));
     } else {
         placeList[7] = placeList[7].toUpper();
-        setData(source, QStringLiteral("validate"), QVariant(QStringLiteral("dwd|valid|single") + placeList));
+        setData(source, QStringLiteral("validate"), QVariant(QString(u"dwd|valid|single" + placeList)));
     }
     m_locations.clear();
 }
@@ -647,9 +647,9 @@ void DWDIon::updateWeather(const QString &source)
     for (const WeatherData::WarningInfo *warning : weatherData.warnings) {
         const QString number = QString::number(k);
 
-        data.insert(QStringLiteral("Warning Priority ") + number, warning->priority);
-        data.insert(QStringLiteral("Warning Description ") + number, QStringLiteral("<p><b>%1</b></p>%2").arg(warning->headline, warning->description));
-        data.insert(QStringLiteral("Warning Timestamp ") + number, warning->timestamp.toString(QStringLiteral("dd.MM.yyyy")));
+        data.insert(QString(u"Warning Priority " + number), warning->priority);
+        data.insert(QString(u"Warning Description " + number), QStringLiteral("<p><b>%1</b></p>%2").arg(warning->headline, warning->description));
+        data.insert(QString(u"Warning Timestamp " + number), warning->timestamp.toString(QStringLiteral("dd.MM.yyyy")));
 
         ++k;
     }

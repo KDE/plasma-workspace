@@ -78,8 +78,8 @@ void LocationsRunnerTest::shouldNotProduceResult_data()
         QTest::newRow("executable file in home dir") << executableHomeFile;
     }
     QTest::newRow("executable path and argument") << "/bin/ls -Al";
-    QTest::newRow("non existent file") << QDir::homePath() + "_thisfiledoesnotexist.abc";
-    QTest::newRow("non existent file URL") << QUrl::fromLocalFile(QDir::homePath() + "_thisfiledoesnotexist.abc").toString();
+    QTest::newRow("non existent file") << QString(QDir::homePath() + u"_thisfiledoesnotexist.abc");
+    QTest::newRow("non existent file URL") << QUrl::fromLocalFile(QString(QDir::homePath() + u"_thisfiledoesnotexist.abc")).toString();
     QTest::newRow("nonexistent file with $HOME as env variable") << "$HOME/_thisfiledoesnotexist.abc";
     QTest::newRow("nonexistent protocol") << "thisprotocoldoesnotexist:test123";
     QTest::newRow("empty string") << "";

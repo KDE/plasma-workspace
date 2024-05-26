@@ -79,7 +79,7 @@ void NotificationTest::parse()
     NotificationManager::Notification notification;
     notification.setBody(messageIn);
 
-    expectedOut = "<?xml version=\"1.0\"?><html>" + expectedOut + "</html>\n";
+    expectedOut = u"<?xml version=\"1.0\"?><html>" + expectedOut + u"</html>\n";
 
     QCOMPARE(notification.body(), expectedOut);
 }

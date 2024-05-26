@@ -363,7 +363,7 @@ QStringList LauncherTasksModel::launcherList() const
             serializedLauncher = launcher.toString();
 
         } else {
-            serializedLauncher = "[" + d->activitiesForLauncher[launcher].values().join(",") + "]\n" + launcher.toString();
+            serializedLauncher = u'[' + d->activitiesForLauncher[launcher].values().join(u',') + u"]\n" + launcher.toString();
         }
 
         result << serializedLauncher;
@@ -589,7 +589,7 @@ void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<Q
 
     job->start();
 
-    KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()), QStringLiteral("org.kde.libtaskmanager"));
+    KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + service->storageId())), QStringLiteral("org.kde.libtaskmanager"));
 }
 
 }

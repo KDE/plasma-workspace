@@ -444,7 +444,7 @@ QStringList EnvCanadaIon::validate(const QString &source) const
     QHash<QString, EnvCanadaIon::XMLMapInfo>::const_iterator it = m_places.constBegin();
     while (it != m_places.constEnd()) {
         if (it.key().toUpper().contains(sourceNormalized)) {
-            placeList.append(QStringLiteral("place|") + it.key());
+            placeList.append(u"place|" + it.key());
         }
         ++it;
     }
@@ -473,9 +473,9 @@ bool EnvCanadaIon::updateIonSource(const QString &source)
     if (sourceAction[1] == QLatin1String("validate") && sourceAction.size() > 2) {
         const QStringList result = validate(sourceAction[2]);
 
-        const QString reply = (result.size() == 1        ? QString(QStringLiteral("envcan|valid|single|") + result[0])
-                                   : (result.size() > 1) ? QString(QStringLiteral("envcan|valid|multiple|") + result.join(QLatin1Char('|')))
-                                                         : QString(QStringLiteral("envcan|invalid|single|") + sourceAction[2]));
+        const QString reply = (result.size() == 1        ? QString(u"envcan|valid|single|" + result[0])
+                                   : (result.size() > 1) ? QString(u"envcan|valid|multiple|" + result.join(QLatin1Char('|')))
+                                                         : QString(u"envcan|invalid|single|" + sourceAction[2]));
         setData(source, QStringLiteral("validate"), reply);
 
         return true;
@@ -631,7 +631,7 @@ bool EnvCanadaIon::readXMLSetup()
 
         if (m_xmlSetup.isEndElement() && elementName == QLatin1String("site")) {
             EnvCanadaIon::XMLMapInfo info;
-            QString tmp = cityName + QStringLiteral(", ") + territory; // Build the key name.
+            QString tmp = cityName + u", " + territory; // Build the key name.
 
             // Set the mappings
             info.cityCode = code;
@@ -1383,7 +1383,7 @@ void EnvCanadaIon::updateWeather(const QString &source)
     Plasma5Support::DataEngine::Data data;
 
     data.insert(QStringLiteral("Country"), weatherData.countryName);
-    data.insert(QStringLiteral("Place"), QVariant(weatherData.cityName + QStringLiteral(", ") + weatherData.shortTerritoryName));
+    data.insert(QStringLiteral("Place"), QVariant(QString(weatherData.cityName + u", " + weatherData.shortTerritoryName)));
     data.insert(QStringLiteral("Region"), weatherData.regionName);
 
     data.insert(QStringLiteral("Station"), weatherData.stationID.isEmpty() ? i18n("N/A") : weatherData.stationID.toUpper());
@@ -1496,10 +1496,10 @@ void EnvCanadaIon::updateWeather(const QString &source)
         const WeatherData::WeatherEvent *warning = warnings.at(k);
         const QString number = QString::number(k);
 
-        data.insert(QStringLiteral("Warning Priority ") + number, warning->priority);
-        data.insert(QStringLiteral("Warning Description ") + number, warning->description);
-        data.insert(QStringLiteral("Warning Info ") + number, warning->url);
-        data.insert(QStringLiteral("Warning Timestamp ") + number, warning->timestamp);
+        data.insert(u"Warning Priority " + number, warning->priority);
+        data.insert(u"Warning Description " + number, warning->description);
+        data.insert(u"Warning Info " + number, warning->url);
+        data.insert(u"Warning Timestamp " + number, warning->timestamp);
     }
 
     const QList<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;

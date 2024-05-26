@@ -447,7 +447,7 @@ void JobsModelPrivate::updateApplicationPercentage(const QString &desktopEntry)
     QDBusMessage message = QDBusMessage::createSignal(QStringLiteral("/org/kde/notificationmanager/jobs"),
                                                       QStringLiteral("com.canonical.Unity.LauncherEntry"),
                                                       QStringLiteral("Update"));
-    message.setArguments({QStringLiteral("application://") + desktopEntry, properties});
+    message.setArguments({QString(u"application://" + desktopEntry), properties});
     QDBusConnection::sessionBus().send(message);
 }
 

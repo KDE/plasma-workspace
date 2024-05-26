@@ -279,7 +279,7 @@ void PanelConfigView::addPanelSpacer()
     }
     // Add a spacer at the end *except* if there is exactly one spacer already
     // this to trigger the panel centering mode of the spacer in a slightly more discoverable way
-    c->evaluateScript(QStringLiteral("panel = panelById(") + QString::number(m_containment->id())
+    c->evaluateScript(u"panel = panelById(" + QString::number(m_containment->id())
                       + QStringLiteral(");"
                                        "var spacers = panel.widgets(\"org.kde.plasma.panelspacer\");"
                                        "if (spacers.length === 1) {"

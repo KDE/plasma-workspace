@@ -33,7 +33,7 @@ HistoryImageItem::HistoryImageItem(const QImage &data)
 QString HistoryImageItem::text() const
 {
     if (m_text.isNull()) {
-        m_text = QStringLiteral("▨ ") + i18n("%1x%2 %3bpp", m_data.width(), m_data.height(), m_data.depth());
+        m_text = u"▨ " + i18n("%1x%2 %3bpp", m_data.width(), m_data.height(), m_data.depth());
     }
     return m_text;
 }

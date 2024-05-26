@@ -235,7 +235,7 @@ QString getFolder(const QString &defaultDir, const QString &root, QStringList &d
 
 bool checkExt(const QString &fname, QStringView ext)
 {
-    QString extension(u'.' % ext);
+    QString extension(u'.' + ext);
 
     return fname.length() > extension.length() ? 0 == fname.mid(fname.length() - extension.length()).compare(extension, Qt::CaseInsensitive) : false;
 }
@@ -404,11 +404,11 @@ QMap<QString, QString> getFontFileMap(const QSet<QString> &files)
                 }
             }
             for (int i = 0; i < count; ++i) {
-                map[getDir(modified[i]).mid(1) + fIt.key()] = fExists(orig[i] + fIt.key()) ? orig[i] + fIt.key() : orig[i] + hide(fIt.key());
+                map[getDir(modified[i]).mid(1) + fIt.key()] = fExists(orig[i] + fIt.key()) ? QString(orig[i] + fIt.key()) : QString(orig[i] + hide(fIt.key()));
             }
         } else { // Only 1 entry! :-)
             map[unhide(fIt.key())] =
-                fExists((*fIt.value().begin()) + fIt.key()) ? (*fIt.value().begin()) + fIt.key() : (*fIt.value().begin()) + hide(fIt.key());
+                fExists((*fIt.value().begin()) + fIt.key()) ? QString((*fIt.value().begin()) + fIt.key()) : QString((*fIt.value().begin()) + hide(fIt.key()));
         }
     }
 

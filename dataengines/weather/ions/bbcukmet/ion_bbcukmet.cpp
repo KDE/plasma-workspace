@@ -21,6 +21,8 @@
 #include <QTimeZone>
 #include <QXmlStreamReader>
 
+using namespace Qt::StringLiterals;
+
 WeatherData::WeatherData()
     : stationLatitude(qQNaN())
     , stationLongitude(qQNaN())
@@ -287,7 +289,7 @@ void UKMETIon::getXMLData(const QString &source)
         }
     }
 
-    const QUrl url(QStringLiteral("https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/") + m_place[source].stationId);
+    const QUrl url(QString(u"https://weather-broker-cdn.api.bbci.co.uk/en/observation/rss/" + m_place[source].stationId));
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -338,7 +340,7 @@ void UKMETIon::getFiveDayForecast(const QString &source)
 {
     XMLMapInfo &place = m_place[source];
 
-    const QUrl url(QStringLiteral("https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/") + place.stationId);
+    const QUrl url(QString(u"https://weather-broker-cdn.api.bbci.co.uk/en/forecast/rss/3day/" + place.stationId));
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -895,8 +897,8 @@ void UKMETIon::validate(const QString &source)
 {
     if (m_locations.isEmpty()) {
         const QString invalidPlace = source.section(QLatin1Char('|'), 2, 2);
-        if (m_place[QStringLiteral("bbcukmet|") + invalidPlace].place.isEmpty()) {
-            setData(source, QStringLiteral("validate"), QVariant(QStringLiteral("bbcukmet|invalid|multiple|") + invalidPlace));
+        if (m_place[QString(u"bbcukmet|" + invalidPlace)].place.isEmpty()) {
+            setData(source, QStringLiteral("validate"), QVariant(QString(u"bbcukmet|invalid|multiple|" + invalidPlace)));
         }
         return;
     }
@@ -904,13 +906,13 @@ void UKMETIon::validate(const QString &source)
     QString placeList;
     for (const QString &place : std::as_const(m_locations)) {
         const QString p = place.section(QLatin1Char('|'), 1, 1);
-        placeList.append(QStringLiteral("|place|") + p + QStringLiteral("|extra|") + m_place[place].stationId);
+        placeList.append(u"|place|" + p + u"|extra|" + m_place[place].stationId);
     }
     if (m_locations.count() > 1) {
-        setData(source, QStringLiteral("validate"), QVariant(QStringLiteral("bbcukmet|valid|multiple") + placeList));
+        setData(source, u"validate"_s, QVariant(QString(u"bbcukmet|valid|multiple" + placeList)));
     } else {
         placeList[7] = placeList[7].toUpper();
-        setData(source, QStringLiteral("validate"), QVariant(QStringLiteral("bbcukmet|valid|single") + placeList));
+        setData(source, QStringLiteral("validate"), QVariant(QString(u"bbcukmet|valid|single" + placeList)));
     }
     m_locations.clear();
 }

@@ -236,7 +236,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
 
         if (!appId.isEmpty()) {
             // Evaluate any mapping rules that map to a specific .desktop file.
-            QString mapped(grp.readEntry(appId + "::" + xWindowsWMClassName, QString()));
+            QString mapped(grp.readEntry(appId + u"::" + xWindowsWMClassName, QString()));
 
             if (mapped.endsWith(QLatin1String(".desktop"))) {
                 url = QUrl(mapped);
@@ -453,7 +453,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
         // applications: URLs are used to refer to applications by their KService::menuId
         // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
         if (!menuId.isEmpty()) {
-            url.setUrl(QStringLiteral("applications:") + menuId);
+            url.setUrl(QString(u"applications:" + menuId));
             return url;
         }
 
@@ -768,8 +768,7 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
             job->setUrls(urls);
             job->start();
 
-            KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + service->storageId()),
-                                                          QStringLiteral("org.kde.libtaskmanager"));
+            KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + service->storageId())), QStringLiteral("org.kde.libtaskmanager"));
         } else {
             auto *job = new KIO::OpenUrlJob(appData.url);
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
@@ -777,7 +776,7 @@ void runApp(const AppData &appData, const QList<QUrl> &urls)
             job->start();
 
             if (!appData.id.isEmpty()) {
-                KActivities::ResourceInstance::notifyAccessed(QUrl(QStringLiteral("applications:") + appData.id), QStringLiteral("org.kde.libtaskmanager"));
+                KActivities::ResourceInstance::notifyAccessed(QUrl(QString(u"applications:" + appData.id)), QStringLiteral("org.kde.libtaskmanager"));
             }
         }
     }

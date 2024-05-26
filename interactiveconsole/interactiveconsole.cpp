@@ -555,10 +555,10 @@ void InteractiveConsole::evaluateScript()
         } else {
             const int id = reply.arguments().constFirst().toInt();
             QDBusConnection::sessionBus()
-                .connect(s_kwinService, "/Scripting/Script"_L1 + QString::number(id), QString(), QStringLiteral("print"), this, SLOT(print(QString)));
+                .connect(s_kwinService, u"/Scripting/Script" + QString::number(id), QString(), QStringLiteral("print"), this, SLOT(print(QString)));
             QDBusConnection::sessionBus()
-                .connect(s_kwinService, "/" + QString::number(id), QString(), QStringLiteral("printError"), this, SLOT(print(QString)));
-            message = QDBusMessage::createMethodCall(s_kwinService, "/Scripting/Script"_L1 + QString::number(id), QString(), QStringLiteral("run"));
+                .connect(s_kwinService, u'/' + QString::number(id), QString(), QStringLiteral("printError"), this, SLOT(print(QString)));
+            message = QDBusMessage::createMethodCall(s_kwinService, u"/Scripting/Script" + QString::number(id), QString(), QStringLiteral("run"));
             reply = QDBusConnection::sessionBus().call(message);
             if (reply.type() == QDBusMessage::ErrorMessage) {
                 print(reply.errorMessage());

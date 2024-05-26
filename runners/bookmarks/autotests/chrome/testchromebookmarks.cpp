@@ -12,19 +12,20 @@
 #include "favicon.h"
 #include <QTest>
 
+using namespace Qt::StringLiterals;
 using namespace KRunner;
 
 void TestChromeBookmarks::initTestCase()
 {
     m_configHome = QFINDTESTDATA("chrome-config-home");
     m_findBookmarksInCurrentDirectory.reset(
-        new FakeFindProfile(QList<Profile>({Profile(m_configHome + "/Chrome-Bookmarks-Sample.json", "Sample", new FallbackFavicon())})));
+        new FakeFindProfile(QList<Profile>({Profile(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, new FallbackFavicon())})));
 }
 
 void TestChromeBookmarks::bookmarkFinderShouldFindEachProfileDirectory()
 {
-    FindChromeProfile findChrome("chromium", m_configHome);
-    QString profileTemplate = m_configHome + "/.config/%1/%2/Bookmarks";
+    FindChromeProfile findChrome(u"chromium"_s, m_configHome);
+    QString profileTemplate = m_configHome + u"/.config/%1/%2/Bookmarks";
 
     QList<Profile> profiles = findChrome.find();
     QCOMPARE(profiles.size(), 2);
@@ -91,8 +92,8 @@ void TestChromeBookmarks::itShouldClearResultAfterCallingTeardown()
 void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
 {
     FakeFindProfile findBookmarksFromAllProfiles(
-        QList<Profile>{Profile(m_configHome + "/Chrome-Bookmarks-Sample.json", "Sample", new FallbackFavicon(this)),
-                       Profile(m_configHome + "/Chrome-Bookmarks-SecondProfile.json", "SecondProfile", new FallbackFavicon(this))});
+        QList<Profile>{Profile(QString(m_configHome + u"/Chrome-Bookmarks-Sample.json"), u"Sample"_s, new FallbackFavicon(this)),
+                       Profile(QString(m_configHome + u"/Chrome-Bookmarks-SecondProfile.json"), u"SecondProfile"_s, new FallbackFavicon(this))});
     Chrome *chrome = new Chrome(&findBookmarksFromAllProfiles, this);
     chrome->prepare();
     QList<BookmarkMatch> matches = chrome->match("any", true);

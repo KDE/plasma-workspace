@@ -73,7 +73,7 @@ void Actions::trigger(const QString &name, const QVariant &target, uint timestam
         // If the startup notification id is not available, this can be just "_TIMEtime", where
         // time is the time stamp from the event triggering the call.
         // see also gtkwindow.c extract_time_from_startup_id and startup_id_is_fake
-        platformData.insert(QStringLiteral("desktop-startup-id"), QStringLiteral("_TIME") + QString::number(timestamp));
+        platformData.insert(QStringLiteral("desktop-startup-id"), QString(u"_TIME" + QString::number(timestamp)));
     }
 
     QDBusPendingReply<void> reply = m_interface->Activate(name, parameter, platformData);

@@ -212,8 +212,8 @@ public:
         // We want first to check whether we have an ordering for this activity.
         // If not, we will try to get a global one for this applet
 
-        const QString thisGroupName = QStringLiteral("Favorites-") + clientId + QStringLiteral("-") + m_activities.currentActivity();
-        const QString globalGroupName = QStringLiteral("Favorites-") + clientId + QStringLiteral("-global");
+        const QString thisGroupName = u"Favorites-" + clientId + u'-' + m_activities.currentActivity();
+        const QString globalGroupName = u"Favorites-" + clientId + u"-global";
 
         KConfigGroup thisCfgGroup(cfg, thisGroupName);
         KConfigGroup globalCfgGroup(cfg, globalGroupName);
@@ -495,7 +495,7 @@ public:
         qCDebug(KICKER_DEBUG) << "Saving ordering for" << currentActivity << "and global" << ids;
 
         for (const auto &activity : activities) {
-            const QString groupName = QStringLiteral("Favorites-") + clientId + QStringLiteral("-") + activity;
+            const QString groupName = u"Favorites-" + clientId + u'-' + activity;
 
             KConfigGroup cfgGroup(cfg, groupName);
 

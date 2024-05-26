@@ -104,7 +104,7 @@ void TaskToolsTest::shouldFindApp()
 
     QFETCH(QString, inputFileName);
 
-    const QUrl inputUrl = QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("applications/") + inputFileName));
+    const QUrl inputUrl = QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QString(u"applications/" + inputFileName)));
 
     const AppData &data = appDataFromUrl(inputUrl);
 

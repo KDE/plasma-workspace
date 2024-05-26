@@ -191,7 +191,7 @@ QUrl XStartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
         // applications: URLs are used to refer to applications by their KService::menuId
         // (i.e. .desktop file name) rather than the absolute path to a .desktop file.
         if (!menuId.isEmpty()) {
-            return QUrl(QStringLiteral("applications:") + menuId);
+            return QUrl(QString(u"applications:" + menuId));
         }
 
         QString path = services.at(0)->entryPath();

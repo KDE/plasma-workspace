@@ -207,8 +207,8 @@ void KSMServer::storeLegacySession(KConfig *config)
     if (state == ClosingSubSession)
         return; // FIXME implement later
     // Write LegacySession data
-    config->deleteGroup(QStringLiteral("Legacy") + sessionGroup);
-    KConfigGroup group(config, QStringLiteral("Legacy") + sessionGroup);
+    config->deleteGroup(QString(u"Legacy" + sessionGroup));
+    KConfigGroup group(config, QString(u"Legacy" + sessionGroup));
     int count = 0;
     for (WindowMap::ConstIterator it = legacyWindows.constBegin(); it != legacyWindows.constEnd(); ++it) {
         if ((*it).type != SM_ERROR) {
@@ -216,9 +216,9 @@ void KSMServer::storeLegacySession(KConfig *config)
                 continue;
             if (!(*it).wmCommand.isEmpty() && !(*it).wmClientMachine.isEmpty()) {
                 count++;
-                QString n = QString::number(count);
-                group.writeEntry(QStringLiteral("command") + n, (*it).wmCommand);
-                group.writeEntry(QStringLiteral("clientMachine") + n, (*it).wmClientMachine);
+                const QString n = QString::number(count);
+                group.writeEntry(QString(u"command" + n), (*it).wmCommand);
+                group.writeEntry(QString(u"clientMachine" + n), (*it).wmClientMachine);
             }
         }
     }
@@ -230,8 +230,8 @@ Restores legacy session management data (i.e. restart applications)
 */
 void KSMServer::restoreLegacySession(KConfig *config)
 {
-    if (config->hasGroup(QStringLiteral("Legacy") + sessionGroup)) {
-        KConfigGroup group(config, QStringLiteral("Legacy") + sessionGroup);
+    if (config->hasGroup(QString(u"Legacy" + sessionGroup))) {
+        KConfigGroup group(config, QString(u"Legacy" + sessionGroup));
         restoreLegacySessionInternal(&group);
     }
 }
@@ -242,13 +242,11 @@ void KSMServer::restoreLegacySessionInternal(KConfigGroup *config, char sep)
     for (int i = 1; i <= count; i++) {
         QString n = QString::number(i);
         QStringList wmCommand = (sep == ',') ? // why is this named "wmCommand"?
-            config->readEntry(QStringLiteral("command") + n, QStringList())
-                                             : KShell::splitArgs(config->readEntry(QStringLiteral("command") + n, QString())); // close enough(?)
+            config->readEntry(QString(u"command" + n), QStringList())
+                                             : KShell::splitArgs(config->readEntry(QString(u"command" + n), QString())); // close enough(?)
         if (wmCommand.isEmpty())
             continue;
-        startApplication(wmCommand,
-                         config->readEntry(QStringLiteral("clientMachine") + n, QString()),
-                         config->readEntry(QStringLiteral("userId") + n, QString()));
+        startApplication(wmCommand, config->readEntry(QString(u"clientMachine" + n), QString()), config->readEntry(QString(u"userId" + n), QString()));
     }
 }
 

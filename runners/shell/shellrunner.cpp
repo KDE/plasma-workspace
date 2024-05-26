@@ -41,7 +41,7 @@ void ShellRunner::match(KRunner::RunnerContext &context)
     if (parsingResult.has_value()) {
         const QString command = parsingResult.value();
         KRunner::QueryMatch match(this);
-        match.setId(QStringLiteral("exec://") + command);
+        match.setId(QString(u"exec://" + command));
         match.setCategoryRelevance(KRunner::QueryMatch::CategoryRelevance::Highest);
         match.setIcon(m_matchIcon);
         match.setText(i18n("Run %1", context.query()));

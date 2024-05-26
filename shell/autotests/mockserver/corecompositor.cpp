@@ -80,7 +80,7 @@ QString CoreCompositor::dirtyMessage()
     QStringList messages;
     for (auto *global : std::as_const(m_globals)) {
         if (!global->isClean())
-            messages << (global->metaObject()->className() % QLatin1String(": ") % global->dirtyMessage());
+            messages << QString::fromLatin1(global->metaObject()->className()) + u": " + global->dirtyMessage();
     }
     return messages.join(", ");
 }
