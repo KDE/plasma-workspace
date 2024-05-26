@@ -33,7 +33,6 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                set(krunner_xml ../../krunner/dbus/org.kde.krunner.App.xml)
                qt_add_dbus_interface(test_SRCS ${krunner_xml} krunner_interface)
 
-               include_directories(${CMAKE_CURRENT_BINARY_DIR}/../mockserver)
                add_executable(${_testname} ${test_SRCS})
                target_link_libraries(${_testname}
                             Qt::Test
