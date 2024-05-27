@@ -67,7 +67,7 @@ StatusNotifierItemSource::StatusNotifierItemSource(const QString &notifierItemId
 
     m_servicename = notifierItemId;
 
-    int slash = notifierItemId.indexOf('/');
+    int slash = notifierItemId.indexOf(u'/');
     if (slash == -1) {
         qCWarning(SYSTEM_TRAY) << "Invalid notifierItemId:" << notifierItemId;
         m_valid = false;
@@ -257,7 +257,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
             }
             // FIXME: If last part of path is not "icons", this won't work!
             QString appName;
-            auto tokens = QStringView(path).split('/', Qt::SkipEmptyParts);
+            auto tokens = QStringView(path).split(u'/', Qt::SkipEmptyParts);
             if (tokens.length() >= 3 && tokens.takeLast() == QLatin1String("icons"))
                 appName = tokens.takeLast().toString();
 

@@ -15,6 +15,8 @@
 #include "debug.h"
 #include <iostream>
 
+using namespace Qt::StringLiterals;
+
 class StatusNotifierItemHostSingleton
 {
 public:
@@ -54,7 +56,7 @@ StatusNotifierItemSource *StatusNotifierItemHost::itemForService(const QString s
 void StatusNotifierItemHost::init()
 {
     if (QDBusConnection::sessionBus().isConnected()) {
-        m_serviceName = "org.kde.StatusNotifierHost-" + QString::number(QCoreApplication::applicationPid());
+        m_serviceName = u"org.kde.StatusNotifierHost-" + QString::number(QCoreApplication::applicationPid());
         QDBusConnection::sessionBus().registerService(m_serviceName);
 
         QDBusServiceWatcher *watcher =
@@ -101,7 +103,7 @@ void StatusNotifierItemHost::registerWatcher(const QString &service)
                     this,
                     &StatusNotifierItemHost::serviceUnregistered);
 
-            QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), "RegisteredStatusNotifierItems");
+            QDBusPendingReply<QDBusVariant> pendingItems = propetriesIface.Get(m_statusNotifierWatcher->interface(), u"RegisteredStatusNotifierItems"_s);
 
             QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(pendingItems, this);
             connect(watcher, &QDBusPendingCallWatcher::finished, this, [=, this]() {
