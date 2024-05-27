@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-27 00:40+0000\n"
 "PO-Revision-Date: 2008-11-16 18:23+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -1604,7 +1604,7 @@ msgstr ""
 msgid "Category"
 msgstr ""
 
-#: viewpart/CharTip.cpp:155
+#: viewpart/CharTip.cpp:156
 #, kde-format
 msgid "UCS-4"
 msgstr ""
@@ -1619,7 +1619,7 @@ msgstr ""
 msgid "UTF-8"
 msgstr ""
 
-#: viewpart/CharTip.cpp:186
+#: viewpart/CharTip.cpp:187
 #, kde-format
 msgid "XML Decimal Entity"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-27 00:40+0000\n"
 "PO-Revision-Date: 2011-07-01 21:22+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -1521,7 +1521,7 @@ msgstr "Pemisah, Ruang"
 msgid "Category"
 msgstr "Kategori"
 
-#: viewpart/CharTip.cpp:155
+#: viewpart/CharTip.cpp:156
 #, fuzzy, kde-format
 msgid "UCS-4"
 msgstr "4"
@@ -1536,7 +1536,7 @@ msgstr "16"
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: viewpart/CharTip.cpp:186
+#: viewpart/CharTip.cpp:187
 #, fuzzy, kde-format
 msgid "XML Decimal Entity"
 msgstr "XML"

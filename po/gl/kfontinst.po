@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-27 00:40+0000\n"
 "PO-Revision-Date: 2024-04-14 15:19+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -1539,7 +1539,7 @@ msgstr "Separador, espazo"
 msgid "Category"
 msgstr "Categoría"
 
-#: viewpart/CharTip.cpp:155
+#: viewpart/CharTip.cpp:156
 #, kde-format
 msgid "UCS-4"
 msgstr "UCS-4"
@@ -1554,7 +1554,7 @@ msgstr "UTF-16"
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: viewpart/CharTip.cpp:186
+#: viewpart/CharTip.cpp:187
 #, kde-format
 msgid "XML Decimal Entity"
 msgstr "Entidade decimal de XML"

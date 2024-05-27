@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-27 00:40+0000\n"
 "PO-Revision-Date: 2024-04-08 23:52+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -1538,7 +1538,7 @@ msgstr "Разделител, интервал"
 msgid "Category"
 msgstr "Категория"
 
-#: viewpart/CharTip.cpp:155
+#: viewpart/CharTip.cpp:156
 #, kde-format
 msgid "UCS-4"
 msgstr "UCS-4"
@@ -1553,7 +1553,7 @@ msgstr "UTF-16"
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: viewpart/CharTip.cpp:186
+#: viewpart/CharTip.cpp:187
 #, kde-format
 msgid "XML Decimal Entity"
 msgstr "Десетичен указател към знак в XML"

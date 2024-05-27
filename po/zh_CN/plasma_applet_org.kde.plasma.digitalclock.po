@@ -70,7 +70,7 @@ msgstr "切换…"
 #: package/contents/ui/CalendarView.qml:437
 #, kde-format
 msgid "Switch to another time zone"
-msgstr ""
+msgstr "切换到另一个时区"
 
 #: package/contents/ui/configAppearance.qml:51
 #, kde-format
@@ -348,14 +348,14 @@ msgstr ""
 #: package/contents/ui/configTimeZones.qml:206
 #, kde-format
 msgid "Add More Time Zones"
-msgstr ""
+msgstr "添加更多时区"
 
 #: package/contents/ui/configTimeZones.qml:218
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
-msgstr ""
+msgstr "必须启用至少一个时区。系统本地时区已自动启用。"
 
 #: package/contents/ui/configTimeZones.qml:254
 #, kde-format

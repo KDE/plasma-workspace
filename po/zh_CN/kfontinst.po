@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-27 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -1494,7 +1494,7 @@ msgstr "分隔符，空格"
 msgid "Category"
 msgstr "分类"
 
-#: viewpart/CharTip.cpp:155
+#: viewpart/CharTip.cpp:156
 #, kde-format
 msgid "UCS-4"
 msgstr "UCS-4"
@@ -1509,7 +1509,7 @@ msgstr "UTF-16"
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: viewpart/CharTip.cpp:186
+#: viewpart/CharTip.cpp:187
 #, kde-format
 msgid "XML Decimal Entity"
 msgstr "XML 十进制项"

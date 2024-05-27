@@ -230,7 +230,7 @@ msgstr "Uyut"
 #: plugin/systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
-msgstr "Hazırda Beklet"
+msgstr "Derin Uykuya Geçir"
 
 #: plugin/systementry.cpp:212
 #, kde-format

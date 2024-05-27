@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-27 00:40+0000\n"
 "PO-Revision-Date: 2010-01-29 15:19+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -1488,7 +1488,7 @@ msgstr "पृथक्कारक, स्थान"
 msgid "Category"
 msgstr "श्रेणी"
 
-#: viewpart/CharTip.cpp:155
+#: viewpart/CharTip.cpp:156
 #, kde-format
 msgid "UCS-4"
 msgstr ""
@@ -1503,7 +1503,7 @@ msgstr ""
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: viewpart/CharTip.cpp:186
+#: viewpart/CharTip.cpp:187
 #, kde-format
 msgid "XML Decimal Entity"
 msgstr ""

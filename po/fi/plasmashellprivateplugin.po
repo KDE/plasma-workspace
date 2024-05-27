@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:40+0000\n"
+"POT-Creation-Date: 2024-05-27 00:40+0000\n"
 "PO-Revision-Date: 2023-12-11 18:34+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -182,7 +182,7 @@ msgstr "Uusi istunto"
 msgid "Filters"
 msgstr "Suodattimet"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:148
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -193,7 +193,7 @@ msgstr ""
 "yhteensopiva Plasma-version %1 kanssa. Ota yhteyttä sovelman tekijään ja "
 "pyydä päivitetty versio."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -202,7 +202,7 @@ msgstr ""
 "Sovelma on kirjoitettu Plasma-versiolle %1 eikä ole yhteensopiva Plasma-"
 "version %2 kanssa. Ota yhteyttä sovelman tekijään ja pyydä päivitetty versio."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -211,7 +211,7 @@ msgstr ""
 "Sovelma on kirjoitettu Plasma-versiolle %1 eikä ole yhteensopiva Plasma-"
 "version %2 kanssa. Päivitä Plasma, jotta sovelmaa voisi käyttää."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:163
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

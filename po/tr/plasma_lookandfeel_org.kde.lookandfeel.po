@@ -86,12 +86,12 @@ msgstr "Şimdi Uyut"
 #: contents/logout/Logout.qml:210
 #, kde-format
 msgid "Hibernate"
-msgstr "Hazırda Beklet"
+msgstr "Derin Uykuya Geçir"
 
 #: contents/logout/Logout.qml:211
 #, kde-format
 msgid "Hibernate Now"
-msgstr "Şimdi Hazırda Beklet"
+msgstr "Şimdi Derin Uykuya Geçir"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
@@ -154,125 +154,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE tarafından yapılan Plasma"
-
-#~ msgid "Keyboard Layout: %1"
-#~ msgstr "Klavye yerleşimi: %1"
-
-#~ msgid "Username"
-#~ msgstr "Kullanıcı Adı"
-
-#~ msgid "Password"
-#~ msgstr "Parola"
-
-#~ msgid "Log In"
-#~ msgstr "Oturum Aç"
-
-#~ msgid "Caps Lock is on"
-#~ msgstr "Büyük Harf Açık"
-
-#~ msgctxt "For switching to a username and password prompt"
-#~ msgid "Other…"
-#~ msgstr "Diğer…"
-
-#~ msgid "Type in Username and Password"
-#~ msgstr "Kullanıcı Adı ve Parola Girin"
-
-#~ msgid "List Users"
-#~ msgstr "Kullanıcıları Listele"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Sanal Klavye"
-
-#~ msgid "Login Failed"
-#~ msgstr "Oturum Açılamadı"
-
-#~ msgid "Desktop Session: %1"
-#~ msgstr "Masaüstü oturumu: %1"
-
-#~ msgctxt "@title: group"
-#~ msgid "Clock:"
-#~ msgstr "Saat:"
-
-#~ msgctxt "@option:check"
-#~ msgid "Keep visible when unlocking prompt disappears"
-#~ msgstr "Kilit açma istemi kaybolurken görünür tut"
-
-#~ msgctxt "@title: group"
-#~ msgid "Media controls:"
-#~ msgstr "Ortam denetimleri:"
-
-#~ msgctxt "@option:check"
-#~ msgid "Show under unlocking prompt"
-#~ msgstr "Kilit açma isteminin altında göster"
-
-#~ msgid "Unlocking failed"
-#~ msgstr "Kilit açılamadı"
-
-#~ msgid "Sleep"
-#~ msgstr "Uyut"
-
-#~ msgid "Switch User"
-#~ msgstr "Kullanıcı Değiştir"
-
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Yerleşimi değiştir"
-
-#~ msgid "Unlock"
-#~ msgstr "Kilidi Aç"
-
-#~ msgid "(or scan your fingerprint on the reader)"
-#~ msgstr "(veya okuyucuda parmak izinizi taratın)"
-
-#~ msgid "(or scan your smartcard)"
-#~ msgstr "(veya akıllı kartınızı okutun)"
-
-#~ msgid "No title"
-#~ msgstr "Başlıksız"
-
-#~ msgid "No media playing"
-#~ msgstr "Ortam yok"
-
-#~ msgid "Previous track"
-#~ msgstr "Önceki parça"
-
-#~ msgid "Play or Pause media"
-#~ msgstr "Ortam çal/oynat veya duraklat"
-
-#~ msgid "Next track"
-#~ msgstr "Sonraki parça"
-
-#~ msgid "OK"
-#~ msgstr "Tamam"
-
-#~ msgid "Switch to This Session"
-#~ msgstr "Bu Oturuma Geç"
-
-#~ msgid "Start New Session"
-#~ msgstr "Yeni Oturum Başlat"
-
-#~ msgid "Back"
-#~ msgstr "Geri"
-
-#~ msgid "%1%"
-#~ msgstr "%​%1"
-
-#~ msgid "Battery at %1%"
-#~ msgstr "Pil %​%1"
-
-#~ msgctxt "Nobody logged in on that session"
-#~ msgid "Unused"
-#~ msgstr "Kullanılmayan"
-
-#~ msgctxt "User logged in on console number"
-#~ msgid "TTY %1"
-#~ msgstr "TTY %1"
-
-#~ msgctxt "User logged in on console (X display number)"
-#~ msgid "on TTY %1 (Display %2)"
-#~ msgstr "TTY %1 (Ekran %2)"
-
-#~ msgctxt "Username (location)"
-#~ msgid "%1 (%2)"
-#~ msgstr "%1 (%2)"

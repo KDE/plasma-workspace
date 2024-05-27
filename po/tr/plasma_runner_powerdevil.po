@@ -47,7 +47,7 @@ msgstr "uyut"
 #, kde-format
 msgctxt "Note this is a KRunner keyword"
 msgid "hibernate"
-msgstr "hazırda beklet"
+msgstr "derin uyku"
 
 #: PowerDevilRunner.cpp:36
 #, kde-format
@@ -79,7 +79,7 @@ msgid ""
 "Lists system suspend (e.g. sleep, hibernate) options and allows them to be "
 "activated"
 msgstr ""
-"Sistemi askıya alma (uyku, bekleme kipi vb.) seçeneklerini listeler ve "
+"Sistemi askıya alma (uyku, derin uyku vb.) seçeneklerini listeler ve "
 "etkinleştirilmelerine izin verir"
 
 #: PowerDevilRunner.cpp:54
@@ -95,7 +95,7 @@ msgstr "Sistemi diski kullanarak askıya alır"
 #: PowerDevilRunner.cpp:62
 #, kde-format
 msgid "Sleeps now and falls back to hibernate"
-msgstr "Uyur ve pil durumuna göre askıya alır"
+msgstr "Uyur ve pil durumuna göre derin uykuya geçer"
 
 #: PowerDevilRunner.cpp:65
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "Belleği kullanarak askıya al"
 #, kde-format
 msgctxt "Suspend to disk"
 msgid "Hibernate"
-msgstr "Hazırda beklet"
+msgstr "Derin uykuya geç"
 
 #: PowerDevilRunner.cpp:138
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "Hibrit uyku"
 #: PowerDevilRunner.cpp:144
 #, kde-format
 msgid "Sleep now and fall back to hibernate"
-msgstr "Uyu ve pil durumuna göre askıya al"
+msgstr "Uyu ve pil durumuna göre derin uykuya geç"
 
 #: PowerDevilRunner.cpp:222
 #, kde-format

@@ -1,6 +1,6 @@
 # translation of kfontinst.po to Slovenian
 # Translation of kfontinst.po to Slovenian
-# $Id: kfontinst.po 1680767 2024-05-25 01:11:03Z scripty $
+# $Id: kfontinst.po 1680933 2024-05-27 01:09:52Z scripty $
 # $Source$
 #
 # Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-27 00:40+0000\n"
 "PO-Revision-Date: 2024-04-07 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -1553,7 +1553,7 @@ msgstr "Ločilnik, presledek"
 msgid "Category"
 msgstr "Kategorija"
 
-#: viewpart/CharTip.cpp:155
+#: viewpart/CharTip.cpp:156
 #, kde-format
 msgid "UCS-4"
 msgstr "UCS-4"
@@ -1568,7 +1568,7 @@ msgstr "UTF-16"
 msgid "UTF-8"
 msgstr "UTF-8"
 
-#: viewpart/CharTip.cpp:186
+#: viewpart/CharTip.cpp:187
 #, kde-format
 msgid "XML Decimal Entity"
 msgstr "Decimalna entiteta XML"
