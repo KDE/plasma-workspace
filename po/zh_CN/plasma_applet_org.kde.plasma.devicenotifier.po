@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/plasma_applet_org.kde."
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/plasma_applet_org.kde."
 "plasma.devicenotifier.pot\n"
-"X-Crowdin-File-ID: 43745\n"
+"X-Crowdin-File-ID: 51646\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format

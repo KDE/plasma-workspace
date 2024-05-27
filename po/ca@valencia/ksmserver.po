@@ -177,24 +177,3 @@ msgstr ""
 "No s'ha pogut restaurar l'aplicació <application>%1</application> perquè "
 "està trencada i ha exhaurit els recursos de restauració de la sessió del "
 "sistema. Informeu-ne als desenvolupadors de l'aplicació."
-
-#~ msgid "Session Management"
-#~ msgstr "Gestioneu les sessions"
-
-#~ msgid "Log Out"
-#~ msgstr "Eixida"
-
-#~ msgid "Shut Down"
-#~ msgstr "Para"
-
-#~ msgid "Reboot"
-#~ msgstr "Reinicia"
-
-#~ msgid "Log Out Without Confirmation"
-#~ msgstr "Eixida sense confirmació"
-
-#~ msgid "Shut Down Without Confirmation"
-#~ msgstr "Para sense confirmació"
-
-#~ msgid "Reboot Without Confirmation"
-#~ msgstr "Torna a iniciar sense confirmació"

@@ -258,15 +258,3 @@ msgstr "Color del teclat"
 #, kde-format
 msgid "Night Light"
 msgstr "Llum de nit"
-
-#~ msgctxt "Status"
-#~ msgid "Night Light off"
-#~ msgstr "Llum de nit desactivada"
-
-#~ msgctxt "Night light status"
-#~ msgid "Off"
-#~ msgstr "Inactiva"
-
-#~ msgctxt "Status; placeholder is a temperature"
-#~ msgid "Night Light at %1K"
-#~ msgstr "Llum de nit a %1 K"

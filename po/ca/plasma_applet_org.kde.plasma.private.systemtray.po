@@ -189,6 +189,3 @@ msgstr "Tanca la finestra emergent"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Mostra les icones ocultes"
-
-#~ msgid "Expand System Tray"
-#~ msgstr "Expandeix la safata del sistema"

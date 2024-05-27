@@ -73,7 +73,3 @@ msgstr "Accions del fons de pantalla"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Separador]"
-
-#~ msgctxt "plasma_containmentactions_contextmenu"
-#~ msgid "Configure Display Settings…"
-#~ msgstr "Configura els paràmetres de la pantalla…"

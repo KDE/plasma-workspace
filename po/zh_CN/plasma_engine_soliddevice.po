@@ -14,9 +14,9 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/"
 "plasma_engine_soliddevice.pot\n"
-"X-Crowdin-File-ID: 43671\n"
+"X-Crowdin-File-ID: 52762\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"

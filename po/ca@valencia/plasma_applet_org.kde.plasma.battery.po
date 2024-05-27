@@ -447,10 +447,3 @@ msgstr ""
 "Els perfils d'energia poden ser compatibles amb este dispositiu.<nl/>Proveu "
 "instal·lant el paquet <command>power-profiles-daemon</command> utilitzant el "
 "gestor de paquets de la vostra distribució i reiniciant el sistema."
-
-#~ msgctxt "Placeholder is the battery number"
-#~ msgid "Battery %1"
-#~ msgstr "Bateria %1"
-
-#~ msgid "Battery"
-#~ msgstr "Bateria"

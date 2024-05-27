@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kcm_users.pot\n"
-"X-Crowdin-File-ID: 43019\n"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/kcm_users.pot\n"
+"X-Crowdin-File-ID: 50816\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
