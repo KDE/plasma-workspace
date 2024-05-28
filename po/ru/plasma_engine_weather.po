@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-23 00:39+0000\n"
+"POT-Creation-Date: 2024-05-28 02:29+0000\n"
 "PO-Revision-Date: 2021-12-28 15:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -2819,7 +2819,7 @@ msgid "Data from Environment and Climate Change Canada"
 msgstr ""
 "Данные министерства Канады по вопросам окружающей среды и изменения климата"
 
-#: ions/noaa/ion_noaa.cpp:644
+#: ions/noaa/ion_noaa.cpp:643
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
