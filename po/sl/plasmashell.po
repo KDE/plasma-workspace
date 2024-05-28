@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-27 00:40+0000\n"
-"PO-Revision-Date: 2024-04-05 09:36+0200\n"
+"PO-Revision-Date: 2024-05-27 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -267,6 +267,9 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Pri grafičnem procesorju NVIDIA na X11 je znano, da plavajoči slog in način "
+"prilagodljive neprosojnosti povzročata slabo vlečenje in spreminjanje "
+"velikosti oken. Razmislite o uporabi drugih nastavitev."
 
 #: panelview.cpp:1086
 #, kde-format

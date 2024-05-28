@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-27 00:40+0000\n"
-"PO-Revision-Date: 2024-04-05 10:42+0200\n"
+"PO-Revision-Date: 2024-05-27 10:29+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -265,6 +265,9 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Met een NVIDIA GPU op X11 is het bekend dat de modi Zwevende stijl en "
+"Aanpasbare dekking slecht gedrag van vensters verslepen en prestatie van "
+"grootte wijzigen veroorzaakt. Overweeg andere instellingen te gebruiken."
 
 #: panelview.cpp:1086
 #, kde-format
