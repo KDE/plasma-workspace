@@ -67,8 +67,8 @@ ListView {
     }
 
     function resetViewPosition() {
-        positionViewAtIndex(1, ListView.Beginning);
         currentIndex = 1;
+        positionViewAtIndex(currentIndex, ListView.Beginning);
     }
 
     // prevents keep changing the date by dragging and holding; returns true if date should not change else returns false
