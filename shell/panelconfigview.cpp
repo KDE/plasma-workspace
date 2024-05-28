@@ -31,7 +31,6 @@
 
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
-#include <PlasmaQuick/PlasmaShellWaylandIntegration>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
@@ -196,11 +195,6 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     , m_panelView(panelView)
     , m_sharedQmlEngine(std::make_unique<PlasmaQuick::SharedQmlEngine>(this))
 {
-    if (KWindowSystem::isPlatformX11()) {
-        KX11Extras::setType(winId(), NET::AppletPopup);
-    } else {
-        PlasmaShellWaylandIntegration::get(this)->setRole(QtWayland::org_kde_plasma_surface::role::role_appletpopup);
-    }
     setProperty("restrictedPopupGeometry", QVariant(containment->corona()->availableScreenRect(m_containment->screen())));
 
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
