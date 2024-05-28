@@ -201,6 +201,7 @@ PanelConfigView::PanelConfigView(Plasma::Containment *containment, PanelView *pa
     } else {
         PlasmaShellWaylandIntegration::get(this)->setRole(QtWayland::org_kde_plasma_surface::role::role_appletpopup);
     }
+    setProperty("restrictedPopupGeometry", QVariant(containment->corona()->availableScreenRect(m_containment->screen())));
 
     connect(panelView, &QObject::destroyed, this, &QObject::deleteLater);
 
