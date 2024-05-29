@@ -194,9 +194,9 @@ public:
         return m_madeChanges;
     }
     static QString description(SubPixel::Type t);
-    static const char *toStr(SubPixel::Type t);
+    static QString toStr(SubPixel::Type t);
     static QString description(Hint::Style s);
-    static const char *toStr(Hint::Style s);
+    static QString toStr(Hint::Style s);
     bool aliasingEnabled();
 
 private:

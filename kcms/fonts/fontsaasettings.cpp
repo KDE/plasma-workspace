@@ -169,7 +169,7 @@ public:
         }
 
         // Write to KConfig to sync with krdb
-        KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
+        KSharedConfig::Ptr config = KSharedConfig::openConfig(u"kdeglobals"_s);
         KConfigGroup grp(config, u"General"_s);
 
         grp.writeEntry("XftSubPixel", KXftConfig::toStr(m_subPixel));

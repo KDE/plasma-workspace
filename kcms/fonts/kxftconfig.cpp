@@ -28,6 +28,7 @@
 #include <fontconfig/fontconfig.h>
 
 using namespace std;
+using namespace Qt::StringLiterals;
 
 static int point2Pixel(double point)
 {
@@ -100,7 +101,7 @@ static QString getEntry(QDomElement element, const char *type, unsigned int numA
             const char *attr = va_arg(args, const char *);
             const char *val = va_arg(args, const char *);
 
-            if (!attr || !val || val != element.attribute(attr)) {
+            if (!attr || !val || QLatin1String(val) != element.attribute(QString::fromLocal8Bit(attr))) {
                 ok = false;
             }
         }
@@ -113,7 +114,7 @@ static QString getEntry(QDomElement element, const char *type, unsigned int numA
             if (!n.isNull()) {
                 QDomElement e = n.toElement();
 
-                if (!e.isNull() && type == e.tagName()) {
+                if (!e.isNull() && QLatin1String(type) == e.tagName()) {
                     return e.text();
                 }
             }
@@ -123,30 +124,30 @@ static QString getEntry(QDomElement element, const char *type, unsigned int numA
     return QString();
 }
 
-static KXftConfig::SubPixel::Type strToType(const char *str)
+static KXftConfig::SubPixel::Type strToType(QStringView str)
 {
-    if (0 == strcmp(str, "rgb")) {
+    if (str == u"rgb") {
         return KXftConfig::SubPixel::Rgb;
-    } else if (0 == strcmp(str, "bgr")) {
+    } else if (str == u"bgr") {
         return KXftConfig::SubPixel::Bgr;
-    } else if (0 == strcmp(str, "vrgb")) {
+    } else if (str == u"vrgb") {
         return KXftConfig::SubPixel::Vrgb;
-    } else if (0 == strcmp(str, "vbgr")) {
+    } else if (str == u"vbgr") {
         return KXftConfig::SubPixel::Vbgr;
-    } else if (0 == strcmp(str, "none")) {
+    } else if (str == u"none") {
         return KXftConfig::SubPixel::None;
     } else {
         return KXftConfig::SubPixel::NotSet;
     }
 }
 
-static KXftConfig::Hint::Style strToStyle(const char *str)
+static KXftConfig::Hint::Style strToStyle(QStringView str)
 {
-    if (0 == strcmp(str, "hintslight")) {
+    if (str == u"hintslight") {
         return KXftConfig::Hint::Slight;
-    } else if (0 == strcmp(str, "hintmedium")) {
+    } else if (str == u"hintmedium") {
         return KXftConfig::Hint::Medium;
-    } else if (0 == strcmp(str, "hintfull")) {
+    } else if (str == u"hintfull") {
         return KXftConfig::Hint::Full;
     } else {
         return KXftConfig::Hint::None;
@@ -154,7 +155,7 @@ static KXftConfig::Hint::Style strToStyle(const char *str)
 }
 
 KXftConfig::KXftConfig(const QString &path)
-    : m_doc("fontconfig")
+    : m_doc(u"fontconfig"_s)
     , m_file(path.isEmpty() ? getConfigFile() : path)
 {
     qDebug() << "Using fontconfig file:" << m_file;
@@ -177,7 +178,7 @@ QString KXftConfig::getConfigFile()
     m_globalFiles.clear();
 
     while ((file = FcStrListNext(list))) {
-        QString f((const char *)file);
+        QString f(QString::fromLocal8Bit((const char *)file));
 
         if (fExists(f) && 0 == f.indexOf(home)) {
             localFiles.append(f);
@@ -326,29 +327,29 @@ bool KXftConfig::apply()
 
                         //
                         // Check document syntax...
-                        static const char qtXmlHeader[] = "<?xml version = '1.0'?>";
-                        static const char xmlHeader[] = "<?xml version=\"1.0\"?>";
-                        static const char qtDocTypeLine[] = "<!DOCTYPE fontconfig>";
-                        static const char docTypeLine[] =
-                            "<!DOCTYPE fontconfig SYSTEM "
+                        static constexpr QStringView qtXmlHeader = u"<?xml version = '1.0'?>";
+                        static constexpr QStringView xmlHeader = u"<?xml version=\"1.0\"?>";
+                        static constexpr QStringView qtDocTypeLine = u"<!DOCTYPE fontconfig>";
+                        static constexpr QStringView docTypeLine =
+                            u"<!DOCTYPE fontconfig SYSTEM "
                             "\"fonts.dtd\">";
 
                         QString str(m_doc.toString());
-                        int idx;
+                        qsizetype idx;
 
-                        if (0 != str.indexOf("<?xml")) {
+                        if (0 != str.indexOf(u"<?xml")) {
                             str.insert(0, xmlHeader);
                         } else if (0 == str.indexOf(qtXmlHeader)) {
-                            str.replace(0, strlen(qtXmlHeader), xmlHeader);
+                            str.replace(qsizetype(0), qtXmlHeader.size(), xmlHeader.constData(), xmlHeader.size());
                         }
 
                         if (-1 != (idx = str.indexOf(qtDocTypeLine))) {
-                            str.replace(idx, strlen(qtDocTypeLine), docTypeLine);
+                            str.replace(idx, qtDocTypeLine.size(), docTypeLine.constData(), docTypeLine.size());
                         }
 
                         //
                         // Write to file...
-                        fputs(str.toUtf8(), f);
+                        fputs(str.toLocal8Bit().constData(), f);
                         fclose(f);
 
                         if (FcAtomicReplaceOrig(atomic)) {
@@ -465,22 +466,22 @@ QString KXftConfig::description(SubPixel::Type t)
     }
 }
 
-const char *KXftConfig::toStr(SubPixel::Type t)
+QString KXftConfig::toStr(SubPixel::Type t)
 {
     switch (t) {
     default:
     case SubPixel::NotSet:
-        return "";
+        return QString();
     case SubPixel::None:
-        return "none";
+        return u"none"_s;
     case SubPixel::Rgb:
-        return "rgb";
+        return u"rgb"_s;
     case SubPixel::Bgr:
-        return "bgr";
+        return u"bgr"_s;
     case SubPixel::Vrgb:
-        return "vrgb";
+        return u"vrgb"_s;
     case SubPixel::Vbgr:
-        return "vbgr";
+        return u"vbgr"_s;
     }
 }
 
@@ -501,20 +502,20 @@ QString KXftConfig::description(Hint::Style s)
     }
 }
 
-const char *KXftConfig::toStr(Hint::Style s)
+QString KXftConfig::toStr(Hint::Style s)
 {
     switch (s) {
     default:
     case Hint::NotSet:
-        return "";
+        return QString();
     case Hint::Medium:
-        return "hintmedium";
+        return u"hintmedium"_s;
     case Hint::None:
-        return "hintnone";
+        return u"hintnone"_s;
     case Hint::Slight:
-        return "hintslight";
+        return u"hintslight"_s;
     case Hint::Full:
-        return "hintfull";
+        return u"hintfull"_s;
     }
 }
 
@@ -538,7 +539,7 @@ bool KXftConfig::parseConfigFile(const QString &filename)
     }
 
     if (m_doc.documentElement().isNull()) {
-        m_doc.appendChild(m_doc.createElement("fontconfig"));
+        m_doc.appendChild(m_doc.createElement(u"fontconfig"_s));
     }
 
     if (ok) {
@@ -573,7 +574,7 @@ void KXftConfig::readContents()
             continue;
         }
 
-        if ("match" != e.tagName()) {
+        if (u"match" != e.tagName()) {
             continue;
         }
 
@@ -586,7 +587,7 @@ void KXftConfig::readContents()
 
         QString str;
         if (childNodesCount == 1) {
-            if ("font" != e.attribute("target") && "pattern" != e.attribute("target")) {
+            if (u"font" != e.attribute(u"target"_s) && u"pattern" != e.attribute(u"target"_s)) {
                 break;
             }
             for (auto en = e.firstChild(); !en.isNull(); en = en.nextSibling()) {
@@ -595,30 +596,30 @@ void KXftConfig::readContents()
                     ene = ene.nextSiblingElement();
                 }
 
-                if (ene.isNull() || "edit" != ene.tagName()) {
+                if (ene.isNull() || u"edit" != ene.tagName()) {
                     continue;
                 }
 
                 if (!(str = getEntry(ene, "const", 2, "name", "rgba", "mode", "assign")).isNull()
                     || (m_subPixel.type == SubPixel::NotSet && !(str = getEntry(ene, "const", 2, "name", "rgba", "mode", "append")).isNull())) {
                     m_subPixel.node = n;
-                    m_subPixel.type = strToType(str.toLatin1());
+                    m_subPixel.type = strToType(str);
                 } else if (!(str = getEntry(ene, "const", 2, "name", "hintstyle", "mode", "assign")).isNull()
                            || (m_hint.style == Hint::NotSet && !(str = getEntry(ene, "const", 2, "name", "hintstyle", "mode", "append")).isNull())) {
                     m_hint.node = n;
-                    m_hint.style = strToStyle(str.toLatin1());
+                    m_hint.style = strToStyle(str);
                 } else if (!(str = getEntry(ene, "bool", 2, "name", "hinting", "mode", "assign")).isNull()) {
                     m_hinting.node = n;
-                    m_hinting.set = str.toLower() != "false";
+                    m_hinting.set = str.compare(u"false", Qt::CaseInsensitive) != 0;
                 } else if (!(str = getEntry(ene, "bool", 2, "name", "antialias", "mode", "assign")).isNull()
                            || (m_antiAliasing.state == AntiAliasing::NotSet
                                && !(str = getEntry(ene, "bool", 2, "name", "antialias", "mode", "append")).isNull())) {
                     m_antiAliasing.node = n;
-                    m_antiAliasing.state = str.toLower() != "false" ? AntiAliasing::Enabled : AntiAliasing::Disabled;
+                    m_antiAliasing.state = str.compare(u"false", Qt::CaseInsensitive) != 0 ? AntiAliasing::Enabled : AntiAliasing::Disabled;
                 }
             }
         } else if (childNodesCount == 3) { // CPD: Is target "font" or "pattern" ????
-            if ("font" != e.attribute("target")) {
+            if (u"font" != e.attribute(u"target"_s)) {
                 break;
             }
 
@@ -633,7 +634,7 @@ void KXftConfig::readContents()
                     continue;
                 }
                 auto ene = en.toElement();
-                if ("test" == ene.tagName()) {
+                if (u"test" == ene.tagName()) {
                     // kcmfonts used to write incorrectly more or less instead of
                     // more_eq and less_eq, so read both,
                     // first the old (wrong) one then the right one
@@ -661,7 +662,7 @@ void KXftConfig::readContents()
                     if (!(str = getEntry(ene, "double", 3, "qual", "any", "name", "pixelsize", "compare", "less_eq")).isNull()) {
                         pixelTo = str.toDouble();
                     }
-                } else if ("edit" == ene.tagName() && "false" == getEntry(ene, "bool", 2, "name", "antialias", "mode", "assign")) {
+                } else if (u"edit" == ene.tagName() && u"false" == getEntry(ene, "bool", 2, "name", "antialias", "mode", "assign")) {
                     foundFalse = true;
                 }
             }
@@ -687,14 +688,14 @@ void KXftConfig::applySubPixelType()
             m_subPixel.node.clear();
         }
     } else {
-        QDomElement matchNode = m_doc.createElement("match");
-        QDomElement typeNode = m_doc.createElement("const");
-        QDomElement editNode = m_doc.createElement("edit");
+        QDomElement matchNode = m_doc.createElement(u"match"_s);
+        QDomElement typeNode = m_doc.createElement(u"const"_s);
+        QDomElement editNode = m_doc.createElement(u"edit"_s);
         QDomText typeText = m_doc.createTextNode(toStr(m_subPixel.type));
 
-        matchNode.setAttribute("target", "font");
-        editNode.setAttribute("mode", "assign");
-        editNode.setAttribute("name", "rgba");
+        matchNode.setAttribute(u"target"_s, u"font"_s);
+        editNode.setAttribute(u"mode"_s, u"assign"_s);
+        editNode.setAttribute(u"name"_s, u"rgba"_s);
         editNode.appendChild(typeNode);
         typeNode.appendChild(typeText);
         matchNode.appendChild(editNode);
@@ -721,12 +722,12 @@ void KXftConfig::applyHintStyle()
             m_hinting.node.clear();
         }
     } else {
-        QDomElement matchNode = m_doc.createElement("match"), typeNode = m_doc.createElement("const"), editNode = m_doc.createElement("edit");
+        QDomElement matchNode = m_doc.createElement(u"match"_s), typeNode = m_doc.createElement(u"const"_s), editNode = m_doc.createElement(u"edit"_s);
         QDomText typeText = m_doc.createTextNode(toStr(m_hint.style));
 
-        matchNode.setAttribute("target", "font");
-        editNode.setAttribute("mode", "assign");
-        editNode.setAttribute("name", "hintstyle");
+        matchNode.setAttribute(u"target"_s, u"font"_s);
+        editNode.setAttribute(u"mode"_s, u"assign"_s);
+        editNode.setAttribute(u"name"_s, u"hintstyle"_s);
         editNode.appendChild(typeNode);
         typeNode.appendChild(typeText);
         matchNode.appendChild(editNode);
@@ -741,12 +742,12 @@ void KXftConfig::applyHintStyle()
 
 void KXftConfig::applyHinting()
 {
-    QDomElement matchNode = m_doc.createElement("match"), typeNode = m_doc.createElement("bool"), editNode = m_doc.createElement("edit");
-    QDomText typeText = m_doc.createTextNode(m_hinting.set ? "true" : "false");
+    QDomElement matchNode = m_doc.createElement(u"match"_s), typeNode = m_doc.createElement(u"bool"_s), editNode = m_doc.createElement(u"edit"_s);
+    QDomText typeText = m_doc.createTextNode(m_hinting.set ? u"true"_s : u"false"_s);
 
-    matchNode.setAttribute("target", "font");
-    editNode.setAttribute("mode", "assign");
-    editNode.setAttribute("name", "hinting");
+    matchNode.setAttribute(u"target"_s, u"font"_s);
+    editNode.setAttribute(u"mode"_s, u"assign"_s);
+    editNode.setAttribute(u"name"_s, u"hinting"_s);
     editNode.appendChild(typeNode);
     typeNode.appendChild(typeText);
     matchNode.appendChild(editNode);
@@ -773,24 +774,24 @@ void KXftConfig::applyExcludeRange(bool pixel)
         fromString.setNum(range.from);
         toString.setNum(range.to);
 
-        QDomElement matchNode = m_doc.createElement("match"), fromTestNode = m_doc.createElement("test"), fromNode = m_doc.createElement("double"),
-                    toTestNode = m_doc.createElement("test"), toNode = m_doc.createElement("double"), editNode = m_doc.createElement("edit"),
-                    boolNode = m_doc.createElement("bool");
-        QDomText fromText = m_doc.createTextNode(fromString), toText = m_doc.createTextNode(toString), boolText = m_doc.createTextNode("false");
+        QDomElement matchNode = m_doc.createElement(u"match"_s), fromTestNode = m_doc.createElement(u"test"_s), fromNode = m_doc.createElement(u"double"_s),
+                    toTestNode = m_doc.createElement(u"test"_s), toNode = m_doc.createElement(u"double"_s), editNode = m_doc.createElement(u"edit"_s),
+                    boolNode = m_doc.createElement(u"bool"_s);
+        QDomText fromText = m_doc.createTextNode(fromString), toText = m_doc.createTextNode(toString), boolText = m_doc.createTextNode(u"false"_s);
 
-        matchNode.setAttribute("target", "font"); // CPD: Is target "font" or "pattern" ????
-        fromTestNode.setAttribute("qual", "any");
-        fromTestNode.setAttribute("name", pixel ? "pixelsize" : "size");
-        fromTestNode.setAttribute("compare", "more_eq");
+        matchNode.setAttribute(u"target"_s, u"font"_s); // CPD: Is target "font" or "pattern" ????
+        fromTestNode.setAttribute(u"qual"_s, u"any"_s);
+        fromTestNode.setAttribute(u"name"_s, pixel ? u"pixelsize"_s : u"size"_s);
+        fromTestNode.setAttribute(u"compare"_s, u"more_eq"_s);
         fromTestNode.appendChild(fromNode);
         fromNode.appendChild(fromText);
-        toTestNode.setAttribute("qual", "any");
-        toTestNode.setAttribute("name", pixel ? "pixelsize" : "size");
-        toTestNode.setAttribute("compare", "less_eq");
+        toTestNode.setAttribute(u"qual"_s, u"any"_s);
+        toTestNode.setAttribute(u"name"_s, pixel ? u"pixelsize"_s : u"size"_s);
+        toTestNode.setAttribute(u"compare"_s, u"less_eq"_s);
         toTestNode.appendChild(toNode);
         toNode.appendChild(toText);
-        editNode.setAttribute("mode", "assign");
-        editNode.setAttribute("name", "antialias");
+        editNode.setAttribute(u"mode"_s, u"assign"_s);
+        editNode.setAttribute(u"name"_s, u"antialias"_s);
         editNode.appendChild(boolNode);
         boolNode.appendChild(boolText);
         matchNode.appendChild(fromTestNode);
@@ -835,14 +836,14 @@ void KXftConfig::applyAntiAliasing()
             m_antiAliasing.node.clear();
         }
     } else {
-        QDomElement matchNode = m_doc.createElement("match");
-        QDomElement typeNode = m_doc.createElement("bool");
-        QDomElement editNode = m_doc.createElement("edit");
-        QDomText typeText = m_doc.createTextNode(m_antiAliasing.state == AntiAliasing::Enabled ? "true" : "false");
+        QDomElement matchNode = m_doc.createElement(u"match"_s);
+        QDomElement typeNode = m_doc.createElement(u"bool"_s);
+        QDomElement editNode = m_doc.createElement(u"edit"_s);
+        QDomText typeText = m_doc.createTextNode(m_antiAliasing.state == AntiAliasing::Enabled ? u"true"_s : u"false"_s);
 
-        matchNode.setAttribute("target", "font");
-        editNode.setAttribute("mode", "assign");
-        editNode.setAttribute("name", "antialias");
+        matchNode.setAttribute(u"target"_s, u"font"_s);
+        editNode.setAttribute(u"mode"_s, u"assign"_s);
+        editNode.setAttribute(u"name"_s, u"antialias"_s);
         editNode.appendChild(typeNode);
         typeNode.appendChild(typeText);
         matchNode.appendChild(editNode);
