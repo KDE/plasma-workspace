@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-27 00:40+0000\n"
-"PO-Revision-Date: 2024-02-05 22:55+0100\n"
+"PO-Revision-Date: 2024-05-28 11:12+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -232,31 +232,31 @@ msgstr "Képernyő-billentyűzet deaktiválva"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Alvó állapot és képernyőzárolás tiltva"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Alvó állapot és képernyőzárolás tiltása feloldva"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Energiatakarékos mód"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Kiegyensúlyozott mód"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Teljesítmény mód"
 
 #: panelview.cpp:425
 #, kde-format
@@ -307,7 +307,7 @@ msgstr "Asztal elrejtése"
 #: shellcorona.cpp:223
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Alkalmazásindító aktiválása"
 
 #: shellcorona.cpp:231
 #, kde-format
@@ -337,7 +337,7 @@ msgstr "A(z) %1. bejegyzés aktiválása"
 #: shellcorona.cpp:300
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Panel- és asztalkezelés"
 
 #: shellcorona.cpp:322
 #, kde-format

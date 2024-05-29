@@ -263,6 +263,8 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"在 X11 环境下使用 NVIDIA GPU 时存在已知问题，会导致浮动样式和自适应不透明度模"
+"式的窗口拖动和缩放性能低下。请考虑使用其他设置。"
 
 #: panelview.cpp:1086
 #, kde-format
