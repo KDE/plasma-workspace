@@ -316,7 +316,7 @@ private:
     KWindowEffects::SlideFromLocation slideLocation() const;
     void updateLayerWindow();
     void positionPanel();
-    void positionAndResizePanel();
+    void resizePanel();
     void integrateScreen();
     void updateEditModeLabel();
     bool containmentContainsPosition(const QPointF &point) const;
@@ -347,7 +347,6 @@ private:
     bool m_containsMouse = false;
     bool m_fakeEventPending = false;
     bool m_touchingWindow = false;
-    bool m_internalResize = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
     QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView = 0;

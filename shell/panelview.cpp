@@ -312,7 +312,7 @@ void PanelView::setThickness(int value)
     // For thickness, always use the default thickness value for horizontal/vertical panel
     configDefaults().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
-    positionAndResizePanel();
+    resizePanel();
 }
 
 int PanelView::length() const
@@ -328,7 +328,7 @@ void PanelView::setLength(int value)
 
     m_contentLength = value;
 
-    positionAndResizePanel();
+    resizePanel();
 }
 
 int PanelView::maximumLength() const
@@ -352,7 +352,7 @@ void PanelView::setMaximumLength(int length)
     Q_EMIT maximumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
-    positionAndResizePanel();
+    resizePanel();
 }
 
 int PanelView::minimumLength() const
@@ -376,7 +376,7 @@ void PanelView::setMinimumLength(int length)
     Q_EMIT minimumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
-    positionAndResizePanel();
+    resizePanel();
 }
 
 bool PanelView::floating() const
@@ -540,7 +540,7 @@ void PanelView::setLengthMode(PanelView::LengthMode mode)
             m_corona->requestApplicationConfigSync();
         }
         Q_EMIT lengthModeChanged();
-        positionAndResizePanel();
+        resizePanel();
         Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
     }
 }
@@ -680,7 +680,7 @@ void PanelView::positionPanel()
     KWindowEffects::slideWindow(this, slideLocation(), -1);
 }
 
-void PanelView::positionAndResizePanel()
+void PanelView::resizePanel()
 {
     if (!containment()) {
         return;
@@ -695,18 +695,9 @@ void PanelView::positionAndResizePanel()
         return;
     }
 
-    // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
-    const QPoint pos = geometryByDistance(0).topLeft();
-
-    const QRect geom = {pos, sizeHint};
-
-    if (geom == geometry()) {
-        return;
-    }
-
     updateLayerWindow();
-    m_internalResize = true;
-    setGeometry(geom);
+    resize(sizeHint);
+
     updateMask();
     Q_EMIT geometryChanged();
     Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
@@ -883,7 +874,7 @@ void PanelView::restore()
     setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
     setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity", defaultOpacityMode()));
     setLengthMode((LengthMode)config().parent().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable));
-    positionAndResizePanel();
+    resizePanel();
 
     Q_EMIT maximumLengthChanged();
     Q_EMIT minimumLengthChanged();
@@ -996,22 +987,16 @@ void PanelView::setAutoHideEnabled(bool enabled)
 
 void PanelView::resizeEvent(QResizeEvent *ev)
 {
-    updateEnabledBorders();
-
     // don't setGeometry() to make really sure we aren't doing a resize loop
     if (m_screenToFollow && containment()) {
+        // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
+        const QPoint pos = geometryByDistance(0).topLeft();
+        setPosition(pos);
         updateEnabledBorders();
-        if (!m_internalResize) {
-            // TODO: Make it X11-specific. It's still relevant on wayland because of popup positioning.
-            const QPoint pos = geometryByDistance(0).topLeft();
-            setPosition(pos);
-            Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
-        }
+        Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
 
         m_strutsTimer.start(STRUTSTIMERDELAY);
     }
-
-    m_internalResize = false;
 
     PlasmaQuick::ContainmentView::resizeEvent(ev);
 }
@@ -1637,7 +1622,8 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
                     return;
                 }
                 m_floatingness = get<double>(value);
-                positionAndResizePanel();
+                resizePanel();
+                positionPanel();
             });
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
@@ -1833,7 +1819,7 @@ void PanelView::updateFloating()
     m_topFloatingPadding = rootObject()->property("fixedTopFloatingPadding").toInt();
     m_bottomFloatingPadding = rootObject()->property("fixedBottomFloatingPadding").toInt();
 
-    positionAndResizePanel();
+    resizePanel();
     updateExclusiveZone();
     updateShadows();
 
