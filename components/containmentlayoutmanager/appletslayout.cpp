@@ -656,10 +656,9 @@ void AppletsLayout::touchEvent(QTouchEvent *event)
     }
 
     default:
+        QQuickItem::touchEvent(event); // Ignore the event
         break;
     }
-
-    return QQuickItem::touchEvent(event); // Ignore the event
 }
 
 void AppletsLayout::touchUngrabEvent()
