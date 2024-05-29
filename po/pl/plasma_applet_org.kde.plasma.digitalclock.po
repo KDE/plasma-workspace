@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-22 00:41+0000\n"
-"PO-Revision-Date: 2024-05-25 13:02+0200\n"
+"PO-Revision-Date: 2024-05-26 11:04+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -128,7 +127,7 @@ msgstr "Pokaż strefę czasową:"
 #: package/contents/ui/configAppearance.qml:94
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr "Tylko gdy różna od obowiązującej strefy czasowej"
+msgstr "Tylko gdy różna od lokalnej strefy czasowej"
 
 #: package/contents/ui/configAppearance.qml:110
 #, kde-format

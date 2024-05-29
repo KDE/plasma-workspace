@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-01-02 13:37+0100\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-05-28 11:15+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -54,10 +54,9 @@ msgid "Zoom in"
 msgstr "Nagyítás"
 
 #: ui/LocationsFixedView.qml:129
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "Nagyítás"
+msgstr "Kicsinyítés"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
@@ -213,21 +212,19 @@ msgstr "Helymeghatározás…"
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "óra"
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 minute"
-#| msgid_plural "%1 minutes"
+#, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr "%1 perc"
+msgstr "perc"
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "Formátum: ÓÓ:PP"

@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-22 00:41+0000\n"
-"PO-Revision-Date: 2023-12-28 11:27+0100\n"
+"PO-Revision-Date: 2024-05-28 11:14+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -69,8 +69,7 @@ msgstr "Váltás…"
 
 #: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, fuzzy, kde-format
-#| msgid "Switch to another timezone"
+#, kde-format
 msgid "Switch to another time zone"
 msgstr "Váltás másik időzónára"
 
@@ -298,12 +297,7 @@ msgid "Clock is currently using this time zone"
 msgstr "Az óra jelenleg ezt az időzónát használja"
 
 #: package/contents/ui/configTimeZones.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label This list item shows a time zone city name that is identical to "
-#| "the local time zone's city, and will be hidden in the timezone display in "
-#| "the plasmoid's popup"
-#| msgid "Hidden while this is the local time zone's city"
+#, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
 "local time zone's city, and will be hidden in the time zone display in the "
@@ -356,16 +350,12 @@ msgstr ""
 "utazik, inkább állítsa át azt."
 
 #: package/contents/ui/configTimeZones.qml:206
-#, fuzzy, kde-format
-#| msgid "Add More Timezones"
+#, kde-format
 msgid "Add More Time Zones"
 msgstr "További időzónák hozzáadása"
 
 #: package/contents/ui/configTimeZones.qml:218
-#, fuzzy, kde-format
-#| msgid ""
-#| "At least one time zone needs to be enabled. Your local timezone was "
-#| "enabled automatically."
+#, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."

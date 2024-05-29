@@ -16,7 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -203,13 +202,13 @@ msgstr "Bluetooth wyłączone"
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr "Internet komórkowy włączony"
+msgstr "Mobilny internet włączony"
 
 #: osd.cpp:142
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr "Internet komórkowy wyłączony"
+msgstr "Mobilny internet wyłączony"
 
 #: osd.cpp:150
 #, kde-format
@@ -333,12 +332,12 @@ msgstr "Zarządzanie paskami i pulpitem"
 #: shellcorona.cpp:322
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr "Przełączaj klawiaturę na paski"
+msgstr "Przełączaj panele, które są obsługiwane przez klawiaturę"
 
 #: shellcorona.cpp:2072
 #, kde-format
 msgid "Add Panel"
-msgstr "Dodaj pasek"
+msgstr "Dodaj panel"
 
 #: shellcorona.cpp:2124
 #, kde-format
@@ -371,12 +370,12 @@ msgstr "Nie pokazuj ponownie"
 #: userfeedback.cpp:36
 #, kde-format
 msgid "Panel Count"
-msgstr "Liczba pasków"
+msgstr "Liczba paneli"
 
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr "Liczy paski"
+msgstr "Liczy panele"
 
 #~ msgid ""
 #~ "Enables test mode and specifies the layout javascript file to set up the "

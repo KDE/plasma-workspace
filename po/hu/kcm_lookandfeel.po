@@ -3,13 +3,13 @@
 #
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2015, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2023-12-26 17:31+0100\n"
+"PO-Revision-Date: 2024-05-28 11:16+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -190,16 +190,13 @@ msgid "Titlebar Buttons layout"
 msgstr "Címsor gombok elrendezése"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Az asztali elrendezés alkalmazása lecseréli az asztalok, panelek, dokkok és "
-"elemek jelenlegi beállításait"
+"Az asztali elrendezés alkalmazása törli a jelenlegi az asztalokat, "
+"paneleket, dokkokat és elemeket, lecserélve a téma által megadottakkal."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

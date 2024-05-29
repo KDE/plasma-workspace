@@ -5,13 +5,13 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2014, 2015, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2013, 2014.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2023-12-25 21:49+0100\n"
+"PO-Revision-Date: 2024-05-28 11:13+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,11 +32,10 @@ msgid "Your emails"
 msgstr "ulysses@fsf.hu"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Háttérkép megnyitása"
+msgstr "Kép megnyitása"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -191,10 +190,9 @@ msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:330
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "Képfájlok"
+msgstr "Médiafájlok"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format

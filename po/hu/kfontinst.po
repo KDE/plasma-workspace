@@ -3,20 +3,21 @@
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2019.
 # Balázs Úr <urbalazs@gmail.com>, 2012.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2021.
+# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2021-10-15 11:16+0200\n"
-"Last-Translator: Kristof Kiszel <kiszel.kristof@gmail.com>\n"
+"PO-Revision-Date: 2024-05-28 11:15+0200\n"
+"Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -58,11 +59,10 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "© Craig Drummond, 2007."
 
 #: apps/Installer.cpp:122
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"Tranzienssé teszi a párbeszédablakot egy adott azonosítójú X alkalmazásnak"
+"Tranzienssé teszi a párbeszédablakot egy windowHandle-lel megadott ablaknak"
 
 #: apps/Installer.cpp:125
 #, kde-format

@@ -17,7 +17,6 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
@@ -111,7 +110,7 @@ msgstr "Aplet baterii zapobiega uśpieniu i blokowaniu ekranu"
 #: package/contents/ui/PowerProfileItem.qml:75
 #, kde-format
 msgid "Power Management"
-msgstr "Zarządzanie zasilaniem"
+msgstr "Zarządzanie energią"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
@@ -126,7 +125,7 @@ msgstr "Bateria nie jest dostępna w gnieździe"
 #: package/contents/ui/main.qml:130
 #, kde-format
 msgid "Battery at %1%, not Charging"
-msgstr "Bateria na %1%, nie ładuje się"
+msgstr "Bateria na %1%, nie ładuje"
 
 #: package/contents/ui/main.qml:132
 #, kde-format
@@ -136,7 +135,7 @@ msgstr "Bateria na %1%, podłączona, lecz nadal się rozładowuje"
 #: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Battery at %1%, Charging"
-msgstr "Bateria na %1%, ładuje się"
+msgstr "Bateria na %1%, ładuje"
 
 #: package/contents/ui/main.qml:137
 #, kde-format
@@ -273,8 +272,8 @@ msgid ""
 "Your laptop is configured not to sleep when closing the lid while an "
 "external monitor is connected."
 msgstr ""
-"Twój laptop jest ustawiony tak, że nie przejdzie w stan uśpienia po "
-"zamknięciu pokrywy, gdy podłączony jest monitor zewnętrzny."
+"Laptopa masz tak ustawionego, że nie przejdzie on w stan uśpienia po "
+"zamknięciu jego pokrywy, gdy podłączony do niego jest monitor zewnętrzny."
 
 #: package/contents/ui/PowerManagementItem.qml:185
 #, kde-format
