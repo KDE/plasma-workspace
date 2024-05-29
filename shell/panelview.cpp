@@ -285,7 +285,7 @@ int PanelView::totalThickness() const
 {
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
-        return thickness() + m_topFloatingPadding + m_bottomFloatingPadding;
+        return thickness() + (m_topFloatingPadding + m_bottomFloatingPadding) * m_floatingness;
     case Plasma::Types::LeftEdge:
         return thickness() + m_leftFloatingPadding + m_rightFloatingPadding;
     case Plasma::Types::RightEdge:
@@ -771,7 +771,9 @@ QRect PanelView::geometryByDistance(int distance, double floatingness) const
 
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
-        r.moveTop(screenGeometry.top() + distance + (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - floatingness));
+        // r.moveTop(screenGeometry.top() + distance + (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - floatingness));
+        r.moveTop(screenGeometry.top() + distance);
+        r.setHeight(r.height() + (m_topFloatingPadding + m_bottomFloatingPadding) * (floatingness));
         break;
 
     case Plasma::Types::LeftEdge:
@@ -1632,13 +1634,13 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
             m_floatingnessAnimation.setDuration(rootObject->property("floatingnessAnimationDuration").toInt());
             m_floatingnessAnimation.setTargetObject(rootObject);
             m_floatingnessAnimation.setPropertyName(QByteArrayLiteral("floatingness"));
-            connect(&m_floatingnessAnimation, &QPropertyAnimation::valueChanged, rootObject, [this](const QVariant &value) {
+            /*connect(&m_floatingnessAnimation, &QPropertyAnimation::valueChanged, rootObject, [this](const QVariant &value) {
                 if (m_floatingnessAnimation.state() != QAbstractAnimation::State::Running) {
                     return;
                 }
                 m_floatingness = get<double>(value);
                 positionAndResizePanel();
-            });
+            });*/
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(hasShadowsChanged()), this, SLOT(updateShadows()));
@@ -1828,6 +1830,9 @@ void PanelView::updateFloating()
     } else {
         m_floatingnessAnimation.setEasingCurve(QEasingCurve::OutCubic);
     }
+    m_floatingness = rootObject()->property("floatingnessTarget").toDouble();
+    rootObject()->setProperty("floatingness", m_floatingness);
+
     m_leftFloatingPadding = rootObject()->property("fixedLeftFloatingPadding").toInt();
     m_rightFloatingPadding = rootObject()->property("fixedRightFloatingPadding").toInt();
     m_topFloatingPadding = rootObject()->property("fixedTopFloatingPadding").toInt();
@@ -1839,7 +1844,7 @@ void PanelView::updateFloating()
 
     // positionPanel and updateMask are called by m_floatingnessAnimation
     if (m_floatingnessAnimation.targetObject()) {
-        m_floatingnessAnimation.start();
+        //   m_floatingnessAnimation.start();
     }
 }
 
