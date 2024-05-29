@@ -191,7 +191,7 @@ bool SlideFilterModel::lessThan(const QModelIndex &source_left, const QModelInde
     {
         QFileInfo leftFile(getLocalFilePath(source_left));
         QFileInfo rightFile(getLocalFilePath(source_right));
-        return !(leftFile.lastModified() < rightFile.lastModified());
+        return leftFile.lastModified() > rightFile.lastModified();
     }
     }
     Q_UNREACHABLE();
