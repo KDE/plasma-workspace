@@ -40,7 +40,7 @@ Style::Style(const QDomElement &elem, bool loadFiles)
         }
     }
 
-    m_scalable = !elem.hasAttribute(SCALABLE_ATTR) || elem.attribute(SCALABLE_ATTR) != "false";
+    m_scalable = !elem.hasAttribute(SCALABLE_ATTR) || elem.attribute(SCALABLE_ATTR) != u"false";
     m_value = FC::createStyleVal(weight, width, slant);
     m_writingSystems = 0;
 

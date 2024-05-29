@@ -18,7 +18,7 @@ static QString expandHome(const QString &path)
 {
     QString p(path);
 
-    return !p.isEmpty() && '~' == p[0] ? 1 == p.length() ? QDir::homePath() : p.replace(0, 1, QDir::homePath()) : p;
+    return !p.isEmpty() && u'~' == p[0] ? 1 == p.length() ? QDir::homePath() : p.replace(0, 1, QDir::homePath()) : p;
 }
 
 File::File(const QDomElement &elem, bool disabled)

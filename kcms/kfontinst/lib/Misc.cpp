@@ -203,7 +203,7 @@ time_t getTimeStamp(const QString &item)
 {
     QT_STATBUF info;
 
-    return !item.isEmpty() && 0 == QT_LSTAT(QFile::encodeName(item), &info) ? info.st_mtime : 0;
+    return !item.isEmpty() && 0 == QT_LSTAT(QFile::encodeName(item).constData(), &info) ? info.st_mtime : 0;
 }
 
 bool check(const QString &path, bool file, bool checkW)
@@ -211,8 +211,8 @@ bool check(const QString &path, bool file, bool checkW)
     QT_STATBUF info;
     QByteArray pathC(QFile::encodeName(path));
 
-    return 0 == QT_LSTAT(pathC, &info) && (file ? (S_ISREG(info.st_mode) || S_ISLNK(info.st_mode)) : S_ISDIR(info.st_mode))
-        && (!checkW || 0 == ::access(pathC, W_OK));
+    return 0 == QT_LSTAT(pathC.constData(), &info) && (file ? (S_ISREG(info.st_mode) || S_ISLNK(info.st_mode)) : S_ISDIR(info.st_mode))
+        && (!checkW || 0 == ::access(pathC.constData(), W_OK));
 }
 
 QString getFolder(const QString &defaultDir, const QString &root, QStringList &dirs)
@@ -253,7 +253,7 @@ bool isMetrics(const QString &str)
 int getIntQueryVal(const QUrl &url, const char *key, int defVal)
 {
     QUrlQuery query(url);
-    QString item(query.queryItemValue(key));
+    QString item(query.queryItemValue(QString::fromLocal8Bit(key)));
     int val(defVal);
 
     if (!item.isNull()) {
@@ -353,7 +353,7 @@ QString contractHome(QString path)
 
 QString expandHome(QString path)
 {
-    if (!path.isEmpty() && '~' == path[0]) {
+    if (!path.isEmpty() && u'~' == path[0]) {
         return 1 == path.length() ? QDir::homePath() : path.replace(0, 1, QDir::homePath());
     }
 
@@ -384,7 +384,7 @@ QMap<QString, QString> getFontFileMap(const QSet<QString> &files)
             }
 
             while (good) {
-                int end = modified[0].indexOf('/', 1);
+                int end = modified[0].indexOf(u'/', 1);
 
                 if (-1 != end) {
                     QString dir = modified[0].left(end);

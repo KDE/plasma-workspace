@@ -145,7 +145,7 @@ WritingSystems::WritingSystems()
 {
     for (int i = 0; QFontDatabase::Any != constLanguageForWritingSystem[i].ws; ++i) {
         if (constLanguageForWritingSystem[i].lang) {
-            m_map[(const char *)constLanguageForWritingSystem[i].lang] = ((qulonglong)1) << constLanguageForWritingSystem[i].ws;
+            m_map[QString::fromLocal8Bit((const char *)constLanguageForWritingSystem[i].lang)] = ((qulonglong)1) << constLanguageForWritingSystem[i].ws;
         }
     }
 }
