@@ -25,6 +25,10 @@ PlasmaComponents3.ItemDelegate {
 
     visible: keyboardColorControl.supported
 
+    KeyboardColorControl {
+        id: keyboardColorControl
+    }
+
     contentItem: RowLayout {
         spacing: Kirigami.Units.gridUnit
 
@@ -63,11 +67,6 @@ PlasmaComponents3.ItemDelegate {
 
                     color: keyboardColorControl.enabled ? Kirigami.Theme.highlightColor : "transparent"
                     border.color: Qt.rgba(0, 0, 0, 0.15)
-
-                    Connections {
-                        target: Kirigami.Theme
-                        onColorsChanged: colorIndicator.color = keyboardColorControl.enabled ? Kirigami.Theme.highlightColor : "transparent"
-                    }
                 }
             }
 
@@ -90,18 +89,10 @@ PlasmaComponents3.ItemDelegate {
                         }
                     }
                     onToggled: {
-                        keyboardColorControl.setEnabled(checked);
-                        colorIndicator.color = checked ? Kirigami.Theme.highlightColor : "transparent";
+                        keyboardColorControl.enabled = checked;
                     }
                 }
             }
-
         }
-
     }
-
-    KeyboardColorControl {
-        id: keyboardColorControl
-    }
-
 }

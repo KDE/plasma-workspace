@@ -55,25 +55,28 @@ KeyboardColorControl::~KeyboardColorControl()
 {
 }
 
-bool KeyboardColorControl::isSupported()
+bool KeyboardColorControl::isSupported() const
 {
     return m_supported;
 }
 
-bool KeyboardColorControl::isEnabled()
-{
-    return m_enabled;
-}
-
 void KeyboardColorControl::setEnabled(bool enabled)
 {
-    QDBusMessage msg = QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "setEnabled");
-    msg << enabled;
-    QDBusMessage reply = QDBusConnection::sessionBus().call(msg);
-    if (reply.type() == QDBusMessage::ErrorMessage) {
-        qWarning() << "error connecting to kameleon via dbus:" << reply.errorMessage();
+    if (m_enabled.value() == enabled) {
         return;
     }
+
+    QDBusMessage msg = QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, u"setEnabled"_s);
+    msg << enabled;
+    QDBusPendingCall call = QDBusConnection::sessionBus().asyncCall(msg);
+    auto watcher = new QDBusPendingCallWatcher(call, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this, wasEnabled = m_enabled.value()](QDBusPendingCallWatcher *watcher) {
+        watcher->deleteLater();
+        if (QDBusReply<void> reply = *watcher; !reply.isValid()) {
+            m_enabled = wasEnabled;
+        }
+    });
+
     m_enabled = enabled;
 }
 

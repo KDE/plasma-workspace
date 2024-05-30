@@ -15,20 +15,21 @@ class KeyboardColorControl : public QObject
     Q_OBJECT
     QML_ELEMENT
 
-    Q_PROPERTY(bool supported READ isSupported)
-    Q_PROPERTY(bool enabled READ isEnabled WRITE setEnabled)
+    Q_PROPERTY(bool supported READ isSupported CONSTANT FINAL)
+    Q_PROPERTY(bool enabled READ default WRITE setEnabled NOTIFY enabledChanged FINAL)
 
 public:
     explicit KeyboardColorControl(QObject *parent = nullptr);
     ~KeyboardColorControl() override;
 
-    bool isSupported();
-    bool isEnabled();
+    bool isSupported() const;
 
-public Q_SLOTS:
     void setEnabled(bool enabled);
+
+Q_SIGNALS:
+    void enabledChanged();
 
 private:
     bool m_supported = false;
-    bool m_enabled = false;
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(KeyboardColorControl, bool, m_enabled, false, &KeyboardColorControl::enabledChanged)
 };

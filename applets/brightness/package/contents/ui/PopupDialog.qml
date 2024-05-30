@@ -2,7 +2,7 @@
     SPDX-FileCopyrightText: 2011 Viranch Mehta <viranch.mehta@gmail.com>
     SPDX-FileCopyrightText: 2013-2016 Kai Uwe Broulik <kde@privat.broulik.de>
     SPDX-FileCopyrightText: 2023-2024 Natalie Clarius <natalie.clarius@kde.org>
-    
+
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
@@ -35,7 +35,7 @@ PlasmaExtras.Representation {
             }
         }
 
-        contentItem: Column {
+        Column {
             id: brightnessList
 
             spacing: Kirigami.Units.smallSpacing * 2

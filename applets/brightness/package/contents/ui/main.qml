@@ -41,9 +41,6 @@ PlasmoidItem {
         id: keyboardBrightnessControl
         isSilent: brightnessAndColorControl.expanded
     }
-    KeyboardColorControl {
-        id: keyboardColorControl
-    }
 
     property bool isNightLightActive: nightLightControl.running && nightLightControl.currentTemperature != 6500
     property bool isNightLightInhibited: nightLightControl.inhibited && nightLightControl.targetTemperature != 6500
