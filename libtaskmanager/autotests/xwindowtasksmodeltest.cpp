@@ -236,11 +236,11 @@ void XWindowTasksModelTest::test_modelData()
         | NET::WM2AppMenuObjectPath | NET::WM2AppMenuServiceName | NET::WM2GTKApplicationId;
     KWindowInfo info(window->winId(), windowInfoFlags, windowInfoFlags2);
 
-    QTRY_COMPARE(index.data(AbstractTasksModel::AppId).toString(), info.windowClassClass());
-    QTRY_COMPARE(index.data(AbstractTasksModel::AppName).toString(), info.windowClassClass());
+    QTRY_COMPARE(index.data(AbstractTasksModel::AppId).toString(), QString::fromLocal8Bit(info.windowClassClass()));
+    QTRY_COMPARE(index.data(AbstractTasksModel::AppName).toString(), QString::fromLocal8Bit(info.windowClassClass()));
     QTRY_COMPARE(index.data(AbstractTasksModel::GenericName).toString(), QString());
-    QTRY_VERIFY(index.data(AbstractTasksModel::LauncherUrl).toUrl().toLocalFile().endsWith(info.windowClassClass()));
-    QTRY_VERIFY(index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl().toLocalFile().endsWith(info.windowClassClass()));
+    QTRY_VERIFY(index.data(AbstractTasksModel::LauncherUrl).toUrl().toLocalFile().endsWith(QString::fromLocal8Bit(info.windowClassClass())));
+    QTRY_VERIFY(index.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl().toLocalFile().endsWith(QString::fromLocal8Bit(info.windowClassClass())));
     QTRY_COMPARE(index.data(AbstractTasksModel::WinIdList).toList().size(), 1);
     QTRY_COMPARE(index.data(AbstractTasksModel::MimeType).toString(), QStringLiteral("windowsystem/winid"));
 

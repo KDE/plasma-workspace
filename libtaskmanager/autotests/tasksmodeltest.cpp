@@ -11,6 +11,7 @@
 #include "abstracttasksmodel.h" // For enums
 #include "tasksmodel.h"
 
+using namespace Qt::StringLiterals;
 using namespace TaskManager;
 
 class TasksModelTest : public QObject
@@ -181,13 +182,13 @@ void TasksModelTest::test_filterOutInvalidPreferredLaunchers()
     TasksModel model;
 
     model.setLauncherList(QStringList{
-        "preferred://nonexistent",
+        u"preferred://nonexistent"_s,
     });
     QCOMPARE(model.launcherList().size(), 0);
 
     const QUrl launcherUrl = QUrl::fromLocalFile(QFINDTESTDATA("data/applications/GammaRay.desktop"));
     model.setLauncherList(QStringList{
-        "preferred://nonexistent",
+        u"preferred://nonexistent"_s,
         launcherUrl.toString(),
     });
     QCOMPARE(model.launcherList().size(), 1);

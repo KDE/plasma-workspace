@@ -17,6 +17,7 @@
 
 #include "tasktools.h"
 
+using namespace Qt::StringLiterals;
 using namespace TaskManager;
 
 class TaskToolsTest : public QObject
@@ -126,8 +127,8 @@ void TaskToolsTest::shouldFindDefaultApp()
     KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
     config.writePathEntry("BrowserApplication", QLatin1String("konqueror"));
 
-    QVERIFY(defaultApplication(QUrl("wrong://url")).isEmpty());
-    QCOMPARE(defaultApplication(QUrl("preferred://browser")), QLatin1String("konqueror"));
+    QVERIFY(defaultApplication(QUrl(u"wrong://url"_s)).isEmpty());
+    QCOMPARE(defaultApplication(QUrl(u"preferred://browser"_s)), QLatin1String("konqueror"));
 }
 
 void TaskToolsTest::shouldCompareLauncherUrls()
@@ -179,9 +180,9 @@ void TaskToolsTest::testWindowUrlFromMetadata_data()
     QTest::addRow("Gwenview Importer") << QStringLiteral("org.kde.gwenview_importer") << QStringLiteral("gwenview_importer")
                                        << QUrl(QStringLiteral("applications:org.kde.gwenview_importer.desktop"));
     QTest::addRow("kcm_autostart") << QStringLiteral("kcm_autostart") << QString() << QUrl(QStringLiteral("applications:kcm_autostart.desktop"));
-    QTest::addRow("brave") << QStringLiteral("Brave-browser") << QStringLiteral("brave-browser") << QUrl("applications:brave-browser.desktop");
+    QTest::addRow("brave") << QStringLiteral("Brave-browser") << QStringLiteral("brave-browser") << QUrl(u"applications:brave-browser.desktop"_s);
     QTest::addRow("brave_webapp") << QStringLiteral("Brave-browser") << QStringLiteral("crx_efmjfjelnicpmdcmfikempdhlmainjcb")
-                                  << QUrl("applications:brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop");
+                                  << QUrl(u"applications:brave-efmjfjelnicpmdcmfikempdhlmainjcb-Default.desktop"_s);
 
     const QString dataDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
     QTest::addRow("kcm_kdeconnect") << dataDir + QLatin1String("/kservices6/kcm_kdeconnect") << QString()
