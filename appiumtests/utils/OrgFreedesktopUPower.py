@@ -56,12 +56,16 @@ class OrgFreedesktopUPower:
     AC_OBJECT_PATH: Final = "/org/freedesktop/UPower/devices/line_power_AC"
     DISPLAY_DEVICE_OBJECT_PATH: Final = "/org/freedesktop/UPower/devices/DisplayDevice"
 
+    KBDLIGHT_IFACE_NAME: Final = "org.freedesktop.UPower.KbdBacklight"
+    KBDLIGHT_OBJECT_PATH: Final = "/org/freedesktop/UPower/KbdBacklight"
+
     __connection: Gio.DBusConnection
 
     def __init__(self, device_properties: dict[str, dict[str, GLib.Variant]] | None = None, enable_display_device: bool = True) -> None:
         self.__upower_reg_id: int = 0
         self.__device_reg_id_map: dict[str, int] = {}  # object_path: reg_id
         self.__display_device_reg_id: int = 0
+        self.__kbdlight_reg_id: int = 0
 
         self.upower_properties: dict[str, GLib.Variant] = {
             "DaemonVersion": GLib.Variant("s", "1.90.2"),
@@ -207,6 +211,9 @@ class OrgFreedesktopUPower:
         self.__enable_display_device: bool = enable_display_device
         self.update_display_device_properties(self.BATTERY0_OBJECT_PATH)
 
+        self.MAX_KEYBOARD_BRIGHTNESS: Final = 3
+        self.current_keyboard_brightness: int = self.MAX_KEYBOARD_BRIGHTNESS
+
         self.is_online: bool = False
         self.registered_event = threading.Event()
 
@@ -221,6 +228,8 @@ class OrgFreedesktopUPower:
         self.__device_reg_id_map = {}
         self.__connection.unregister_object(self.__upower_reg_id)
         self.__upower_reg_id = 0
+        self.__connection.unregister_object(self.__kbdlight_reg_id)
+        self.__kbdlight_reg_id = 0
         Gio.bus_unown_name(self.__owner_id)
         self.__connection.flush_sync(None)  # Otherwise flaky
 
@@ -444,6 +453,11 @@ class OrgFreedesktopUPower:
                 self.__display_device_reg_id = connection.register_object(self.DISPLAY_DEVICE_OBJECT_PATH, introspection_data.interfaces[0], self.device_handle_method_call, self.device_handle_get_property, self.device_handle_set_property)
                 assert self.__display_device_reg_id > 0
 
+        with open(os.path.join(current_folder, os.pardir, os.pardir, "applets/batterymonitor/dbus/org.freedesktop.UPower.KbdBacklight.xml"), encoding="utf-8") as file_handler:
+            introspection_data = Gio.DBusNodeInfo.new_for_xml(skip_doc(file_handler))
+            self.__kbdlight_reg_id = connection.register_object(self.KBDLIGHT_OBJECT_PATH, introspection_data.interfaces[0], self.kbdlight_handle_method_call, None, None)
+            assert self.__kbdlight_reg_id > 0
+
         self.is_online = True
         self.registered_event.set()
 
@@ -503,3 +517,19 @@ class OrgFreedesktopUPower:
         Handles properties for org.freedesktop.UPower.Device
         """
         assert False, "Only read-only properties"
+
+    def kbdlight_handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+        print(f"kbdlight call {method_name} {parameters}", file=sys.stderr, flush=True)
+        if method_name == "GetMaxBrightness":
+            invocation.return_value(GLib.Variant.new_tuple(GLib.Variant("i", self.MAX_KEYBOARD_BRIGHTNESS)))
+        elif method_name == "GetBrightness":
+            invocation.return_value(GLib.Variant.new_tuple(GLib.Variant("i", self.current_keyboard_brightness)))
+        elif method_name == "SetBrightness":
+            target_brightness: int = parameters.get_child_value(0).get_int32()
+            if not 0 <= target_brightness <= self.MAX_KEYBOARD_BRIGHTNESS:
+                invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.INVALID_ARGS, f"Invalid brightness {target_brightness}")
+            self.current_keyboard_brightness = target_brightness
+            Gio.DBusConnection.emit_signal(connection, None, object_path, self.KBDLIGHT_IFACE_NAME, "BrightnessChanged", GLib.Variant.new_tuple(GLib.Variant("i", self.current_keyboard_brightness)))
+            invocation.return_value(None)
+        else:
+            invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.UNKNOWN_METHOD, f"Unknown method {method_name}")

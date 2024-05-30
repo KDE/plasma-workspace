@@ -52,8 +52,7 @@ PlasmaComponents3.ItemDelegate {
     highlighted: activeFocus
     hoverEnabled: false
 
-    Accessible.description: percent.text
-    Accessible.role: Accessible.Slider
+    Accessible.ignored: true
     Keys.forwardTo: [slider]
 
     contentItem: RowLayout {
@@ -81,6 +80,7 @@ PlasmaComponents3.ItemDelegate {
                     Layout.fillWidth: true
                     text: root.text
                     textFormat: Text.PlainText
+                    Accessible.ignored: true
                 }
 
                 PlasmaComponents3.Label {
@@ -88,6 +88,7 @@ PlasmaComponents3.ItemDelegate {
                     Layout.alignment: Qt.AlignRight
                     text: root.labelText
                     textFormat: Text.PlainText
+                    Accessible.ignored: true
                 }
             }
 
@@ -103,6 +104,7 @@ PlasmaComponents3.ItemDelegate {
 
                 Accessible.name: root.text
                 Accessible.description: percent.text
+                Accessible.onPressAction: moved()
 
                 onMoved: root.moved()
             }
