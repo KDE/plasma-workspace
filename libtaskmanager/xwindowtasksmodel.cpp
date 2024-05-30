@@ -462,7 +462,7 @@ const AppData &XWindowTasksModel::Private::appData(WId window)
     // can't map to an URL due to existing outside the regular system
     // environment, e.g. wine clients.
     if (data.id.isEmpty() && data.url.isEmpty()) {
-        data.id = windowInfo(window)->windowClassClass();
+        data.id = QString::fromLocal8Bit(windowInfo(window)->windowClassClass());
         return *appDataCache.emplace(window, std::move(data));
     }
 
@@ -546,7 +546,7 @@ QUrl XWindowTasksModel::Private::windowUrl(WId window)
         }
     }
 
-    return windowUrlFromMetadata(info->windowClassClass(), info->pid(), rulesConfig, info->windowClassName());
+    return windowUrlFromMetadata(QString::fromLocal8Bit(info->windowClassClass()), info->pid(), rulesConfig, QString::fromLocal8Bit(info->windowClassName()));
 }
 
 QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon)
@@ -589,7 +589,7 @@ QUrl XWindowTasksModel::Private::launcherUrl(WId window, bool encodeFallbackIcon
     QBuffer buffer(&bytes);
     buffer.open(QIODevice::WriteOnly);
     pixmap.save(&buffer, "PNG");
-    uQuery.addQueryItem(QStringLiteral("iconData"), bytes.toBase64(QByteArray::Base64UrlEncoding));
+    uQuery.addQueryItem(QStringLiteral("iconData"), QString::fromLatin1(bytes.toBase64(QByteArray::Base64UrlEncoding)));
 
     url.setQuery(uQuery);
 

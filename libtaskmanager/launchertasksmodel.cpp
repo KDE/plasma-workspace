@@ -380,12 +380,10 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
 
     // Loading the activity to launchers map
     for (const auto &serializedLauncher : serializedLaunchers) {
-        QStringList _activities;
+        QList<QStringView> _activities;
         QUrl url;
 
         std::tie(url, _activities) = deserializeLauncher(serializedLauncher);
-
-        auto activities = ActivitiesSet(_activities.cbegin(), _activities.cend());
 
         // Is url is not valid, ignore it
         if (!isValidLauncherUrl(url)) {
@@ -394,16 +392,17 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
 
         // If we have a null uuid, it means we are on all activities
         // and we should contain only the null uuid
-        if (isOnAllActivities(activities)) {
+        ActivitiesSet activities;
+        if (isOnAllActivities(_activities)) {
             activities = {NULL_UUID};
 
         } else {
             // Filter out invalid activities
             const auto allActivities = d->activitiesConsumer.activities();
             ActivitiesSet validActivities;
-            for (const auto &activity : std::as_const(activities)) {
+            for (const QStringView activity : std::as_const(_activities)) {
                 if (allActivities.contains(activity)) {
-                    validActivities << activity;
+                    validActivities << activity.toString(); // Need a deep copy
                 }
             }
 
@@ -413,7 +412,7 @@ void LauncherTasksModel::setLauncherList(const QStringList &serializedLaunchers)
                 continue;
             }
 
-            activities = validActivities;
+            activities = std::move(validActivities);
         }
 
         // Is the url a duplicate?

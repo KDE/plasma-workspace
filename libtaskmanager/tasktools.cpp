@@ -127,7 +127,7 @@ AppData appDataFromUrl(const QUrl &url, const QIcon &fallbackIcon)
                 }
             }
 
-            if (data.id.endsWith(".desktop")) {
+            if (data.id.endsWith(u".desktop")) {
                 data.id = data.id.left(data.id.length() - 8);
             }
         } else {
@@ -229,7 +229,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
         }
 
         // Try to match using xWindowsWMClassName also.
-        if (!xWindowsWMClassName.isEmpty() && matchCommandLineFirst.contains("::" + xWindowsWMClassName)) {
+        if (!xWindowsWMClassName.isEmpty() && matchCommandLineFirst.contains(u"::" + xWindowsWMClassName)) {
             triedPid = true;
             services = servicesFromPid(pid, rulesConfig);
         }
@@ -434,7 +434,7 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
         QMutableListIterator<KService::Ptr> it(matchingServices);
         while (it.hasNext()) {
             auto service = it.next();
-            if (!service->desktopEntryName().endsWith("." + appId)) {
+            if (!service->desktopEntryName().endsWith(u'.' + appId)) {
                 it.remove();
             }
         }
@@ -542,7 +542,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
         return services;
     }
 
-    const int firstSpace = cmdLine.indexOf(' ');
+    const int firstSpace = cmdLine.indexOf(u' ');
     int slash = 0;
 
     services = KApplicationTrader::query([&cmdLine](const KService::Ptr &service) {
@@ -551,7 +551,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
 
     if (services.isEmpty()) {
         // Could not find with complete command line, so strip out the path part ...
-        slash = cmdLine.lastIndexOf('/', firstSpace);
+        slash = cmdLine.lastIndexOf(u'/', firstSpace);
 
         if (slash > 0) {
             const QStringView midCmd = QStringView(cmdLine).mid(slash + 1);
@@ -570,7 +570,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
         });
 
         if (services.isEmpty()) {
-            slash = cmdLine.lastIndexOf('/');
+            slash = cmdLine.lastIndexOf(u'/');
 
             if (slash > 0) {
                 const QStringView midCmd = QStringView(cmdLine).mid(slash + 1);
@@ -815,7 +815,7 @@ bool canLauchNewInstance(const AppData &appData)
         // Hide our own action if there's already a "New Window" action
         const auto actions = service->actions();
         for (const KServiceAction &action : actions) {
-            if (action.name().startsWith("new", Qt::CaseInsensitive) && action.name().endsWith("window", Qt::CaseInsensitive)) {
+            if (action.name().startsWith(u"new", Qt::CaseInsensitive) && action.name().endsWith(u"window", Qt::CaseInsensitive)) {
                 return false;
             }
 

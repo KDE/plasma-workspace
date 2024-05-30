@@ -1862,7 +1862,7 @@ void TasksModel::syncLaunchers()
 
     for (const auto launchers = launcherList(); const QString &launcherUrlStr : launchers) {
         int row = -1;
-        QStringList activities;
+        QList<QStringView> activities;
         QUrl launcherUrl;
 
         std::tie(launcherUrl, activities) = deserializeLauncher(launcherUrlStr);

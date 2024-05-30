@@ -14,7 +14,7 @@
 
 namespace TaskManager
 {
-#define NULL_UUID "00000000-0000-0000-0000-000000000000"
+inline const QString NULL_UUID = QStringLiteral("00000000-0000-0000-0000-000000000000");
 
 inline static bool isValidLauncherUrl(const QUrl &url)
 {
@@ -33,25 +33,26 @@ inline static bool isValidLauncherUrl(const QUrl &url)
     return true;
 }
 
-inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &serializedLauncher)
+inline static std::pair<QUrl, QList<QStringView>> deserializeLauncher(QStringView serializedLauncher)
 {
-    QStringList activities;
-    QUrl url(serializedLauncher);
+    QList<QStringView> activities;
+    QUrl url(serializedLauncher.toString());
 
     // The storage format is: [list of activity ids]\nURL
     // The activity IDs list can not be empty, it at least needs
     // to contain the nulluuid.
     // If parsing fails, we are considering the serialized launcher
     // to not have the activities array -- to have the old format
-    if (serializedLauncher.startsWith('[')) {
+    if (serializedLauncher.startsWith(u'[')) {
         // It seems we have the activity specifier in the launcher
-        const auto activitiesBlockEnd = serializedLauncher.indexOf("]\n");
+        const auto activitiesBlockEnd = serializedLauncher.indexOf(u"]\n");
 
         if (activitiesBlockEnd != -1) {
-            activities = serializedLauncher.mid(1, activitiesBlockEnd - 1).split(",", Qt::SkipEmptyParts);
+            activities = serializedLauncher.sliced(1, activitiesBlockEnd - 1).split(u',', Qt::SkipEmptyParts);
 
             if (!activities.isEmpty()) {
-                url = QUrl(serializedLauncher.mid(activitiesBlockEnd + 2));
+                QStringView urlStr = serializedLauncher.sliced(activitiesBlockEnd + 2);
+                url = QUrl(urlStr.toString());
             }
         }
     }
@@ -59,7 +60,7 @@ inline static std::pair<QUrl, QStringList> deserializeLauncher(const QString &se
     // If the activities array is empty, this means that this launcher
     // needs to be on all activities
     if (activities.isEmpty()) {
-        activities = QStringList({NULL_UUID});
+        activities = {QStringView(NULL_UUID)};
     }
 
     return std::make_pair(url, activities);

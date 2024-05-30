@@ -34,7 +34,7 @@ AbstractWindowTasksModel::AbstractWindowTasksModel(QObject *parent)
 
     connect(qGuiApp, &QGuiApplication::screenAdded, this, screenAdded);
 
-    foreach (const QScreen *screen, QGuiApplication::screens()) {
+    for (const auto screens = QGuiApplication::screens(); const QScreen *screen : screens) {
         screenAdded(screen);
     }
 }

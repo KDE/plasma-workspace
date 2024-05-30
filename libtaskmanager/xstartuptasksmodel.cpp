@@ -64,7 +64,7 @@ void XStartupTasksModel::Private::init()
 
 void XStartupTasksModel::Private::loadConfig()
 {
-    const KConfig _c("klaunchrc");
+    const KConfig _c(u"klaunchrc"_s);
     KConfigGroup c(&_c, u"FeedbackStyle"_s);
 
     if (!c.readEntry("TaskbarButton", true)) {
@@ -90,7 +90,7 @@ void XStartupTasksModel::Private::loadConfig()
             const QString appId = data.applicationId();
             const QString bin = data.bin();
 
-            foreach (const KStartupInfoData &known, startupData) {
+            for (const KStartupInfoData &known : std::as_const(startupData)) {
                 // Reject if we already have a startup notification for this app.
                 if (known.applicationId() == appId && known.bin() == bin) {
                     return;
@@ -167,7 +167,7 @@ QUrl XStartupTasksModel::Private::launcherUrl(const KStartupInfoData &data)
         }
     }
 
-    const QString wmClass = data.WMClass();
+    const QString wmClass = QString::fromLocal8Bit(data.WMClass());
 
     // Try StartupWMClass.
     if (services.empty() && !wmClass.isEmpty()) {
