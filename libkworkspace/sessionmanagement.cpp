@@ -263,9 +263,9 @@ void SessionManagement::switchUser()
             return;
         }
         QDBusMessage switchToGreeterMessage = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.DisplayManager"),
-                                                                             qgetenv("XDG_SEAT_PATH"),
+                                                                             qEnvironmentVariable("XDG_SEAT_PATH"),
                                                                              QStringLiteral("org.freedesktop.DisplayManager.Seat"),
-                                                                             "SwitchToGreeter");
+                                                                             u"SwitchToGreeter"_s);
 
         QDBusConnection::systemBus().asyncCall(switchToGreeterMessage);
     });

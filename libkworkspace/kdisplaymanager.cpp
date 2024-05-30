@@ -256,7 +256,7 @@ class LightDMDBus : public QDBusInterface
 public:
     LightDMDBus()
         : QDBusInterface(QStringLiteral("org.freedesktop.DisplayManager"),
-                         qgetenv("XDG_SEAT_PATH"),
+                         qEnvironmentVariable("XDG_SEAT_PATH"),
                          QStringLiteral("org.freedesktop.DisplayManager.Seat"),
                          QDBusConnection::systemBus())
     {
@@ -343,9 +343,9 @@ KDisplayManager::KDisplayManager()
         }
         break;
     case OldKDM: {
-        QString tf(ctl);
-        tf.truncate(tf.indexOf(','));
-        d->fd = ::open(tf.toLatin1(), O_WRONLY);
+        QByteArray tf(ctl);
+        tf.truncate(tf.indexOf(u','));
+        d->fd = ::open(tf.constData(), O_WRONLY);
     } break;
     }
 }
@@ -571,7 +571,7 @@ bool KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
     if (!exec("listbootoptions\n", re))
         return false;
 
-    opts = QString::fromLocal8Bit(re.data()).split('\t', Qt::SkipEmptyParts);
+    opts = QString::fromLocal8Bit(re.data()).split(u'\t', Qt::SkipEmptyParts);
     if (opts.size() < 4)
         return false;
 
@@ -583,7 +583,7 @@ bool KDisplayManager::bootOptions(QStringList &opts, int &defopt, int &current)
     if (!ok)
         return false;
 
-    opts = opts[1].split(' ', Qt::SkipEmptyParts);
+    opts = opts[1].split(u' ', Qt::SkipEmptyParts);
     for (QStringList::Iterator it = opts.begin(); it != opts.end(); ++it)
         (*it).replace(QLatin1String("\\s"), QLatin1String(" "));
 
@@ -691,7 +691,7 @@ bool KDisplayManager::localSessions(SessList &list)
                              */
                             se.session = QStringLiteral("<unknown>");
 
-                            se.self = lsess.property("Id").toString() == qgetenv("XDG_SESSION_ID");
+                            se.self = lsess.property("Id").toString() == qEnvironmentVariable("XDG_SESSION_ID");
                             se.tty = !lsess.property("TTY").toString().isEmpty();
                         }
                         list.append(se);
@@ -731,31 +731,31 @@ bool KDisplayManager::localSessions(SessList &list)
     if (DMType == OldGDM) {
         if (!exec("CONSOLE_SERVERS\n", re))
             return false;
-        const QStringList sess = QString(re.data() + 3).split(QChar(';'), Qt::SkipEmptyParts);
+        const QStringList sess = QString(QString::fromLocal8Bit(QByteArrayView(re.data() + 3))).split(QChar(u';'), Qt::SkipEmptyParts);
         for (QStringList::ConstIterator it = sess.constBegin(); it != sess.constEnd(); ++it) {
-            QStringList ts = (*it).split(QChar(','));
+            QStringList ts = (*it).split(QChar(u','));
             SessEnt se;
             se.display = ts[0];
             se.user = ts[1];
             se.vt = ts[2].toInt();
             se.session = QStringLiteral("<unknown>");
-            se.self = ts[0] == ::getenv("DISPLAY"); /* Bleh */
+            se.self = ts[0] == QLatin1String(::getenv("DISPLAY")); /* Bleh */
             se.tty = false;
             list.append(se);
         }
     } else {
         if (!exec("list\talllocal\n", re))
             return false;
-        const QStringList sess = QString(re.data() + 3).split(QChar('\t'), Qt::SkipEmptyParts);
+        const QStringList sess = QString::fromLocal8Bit(QByteArrayView(re.data() + 3)).split(QChar(u'\t'), Qt::SkipEmptyParts);
         for (QStringList::ConstIterator it = sess.constBegin(); it != sess.constEnd(); ++it) {
-            QStringList ts = (*it).split(QChar(','));
+            QStringList ts = (*it).split(QChar(u','));
             SessEnt se;
             se.display = ts[0];
             se.vt = QStringView(ts[1]).mid(2).toInt();
             se.user = ts[2];
             se.session = ts[3];
-            se.self = (ts[4].indexOf('*') >= 0);
-            se.tty = (ts[4].indexOf('t') >= 0);
+            se.self = (ts[4].indexOf(u'*') >= 0);
+            se.tty = (ts[4].indexOf(u't') >= 0);
             list.append(se);
         }
     }
@@ -829,9 +829,9 @@ bool KDisplayManager::switchVT(int vt)
     }
 
     if (DMType == OldGDM)
-        return exec(QStringLiteral("SET_VT %1\n").arg(vt).toLatin1());
+        return exec(QStringLiteral("SET_VT %1\n").arg(vt).toLatin1().constData());
 
-    return exec(QStringLiteral("activate\tvt%1\n").arg(vt).toLatin1());
+    return exec(QStringLiteral("activate\tvt%1\n").arg(vt).toLatin1().constData());
 }
 
 void KDisplayManager::lockSwitchVT(int vt)
@@ -875,9 +875,9 @@ void KDisplayManager::GDMAuthenticate()
             && !memcmp(xau->name, "MIT-MAGIC-COOKIE-1", 18)) {
             QString cmd(QStringLiteral("AUTH_LOCAL "));
             for (int i = 0; i < 16; i++)
-                cmd += QString::number((uchar)xau->data[i], 16).rightJustified(2, '0');
-            cmd += '\n';
-            if (exec(cmd.toLatin1())) {
+                cmd += QString::number((uchar)xau->data[i], 16).rightJustified(2, u'0');
+            cmd += u'\n';
+            if (exec(cmd.toLatin1().constData())) {
                 XauDisposeAuth(xau);
                 break;
             }
