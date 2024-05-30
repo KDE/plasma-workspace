@@ -293,6 +293,11 @@ void ShellCorona::init()
     connect(this, &ShellCorona::editModeChanged, this, [this](bool edit) {
         setDashboardShown(edit);
     });
+    connect(KWindowSystem::self(), &KWindowSystem::showingDesktopChanged, [this](bool showingDesktop) {
+        if (!showingDesktop) {
+            setEditMode(false);
+        }
+    });
 
     QAction *manageContainmentsAction = new QAction(this);
     setAction(QStringLiteral("manage-containments"), manageContainmentsAction);
