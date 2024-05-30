@@ -44,9 +44,9 @@ static QTime sChrono;
         return;                                                                                                                                                \
     }
 
-static const char *DBUSMENU_PROPERTY_ID = "_dbusmenu_id";
-static const char *DBUSMENU_PROPERTY_ICON_NAME = "_dbusmenu_icon_name";
-static const char *DBUSMENU_PROPERTY_ICON_DATA_HASH = "_dbusmenu_icon_data_hash";
+static constexpr const char *DBUSMENU_PROPERTY_ID = "_dbusmenu_id";
+static constexpr const char *DBUSMENU_PROPERTY_ICON_NAME = "_dbusmenu_icon_name";
+static constexpr const char *DBUSMENU_PROPERTY_ICON_DATA_HASH = "_dbusmenu_icon_data_hash";
 
 static QAction *createKdeTitle(QAction *action, QWidget *parent)
 {
@@ -176,7 +176,7 @@ public:
 
     void updateActionLabel(QAction *action, const QVariant &value)
     {
-        QString text = swapMnemonicChar(value.toString(), '_', '&');
+        QString text = swapMnemonicChar(value.toString(), u'_', u'&');
         action->setText(text);
     }
 

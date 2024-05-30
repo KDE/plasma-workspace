@@ -9,13 +9,13 @@
 // Qt
 #include <QString>
 
-QString swapMnemonicChar(const QString &in, const char src, const char dst)
+QString swapMnemonicChar(const QString &in, QChar src, QChar dst)
 {
     QString out;
     bool mnemonicFound = false;
 
     for (int pos = 0; pos < in.length();) {
-        QChar ch = in[pos];
+        const QChar ch = in[pos];
         if (ch == src) {
             if (pos == in.length() - 1) {
                 // 'src' at the end of string, skip it
