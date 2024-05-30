@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-27 00:40+0000\n"
-"PO-Revision-Date: 2024-05-09 06:49+0900\n"
+"PO-Revision-Date: 2024-05-30 03:01+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -265,6 +265,8 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"使用 NVIDIA 顯示卡時若是使用 X11 圖形平台，「浮動」風格與「自動調整」透明度模"
+"式已知會造成視窗拖曳與調整大小時的效能降低。請考慮使用其他設定。"
 
 #: panelview.cpp:1086
 #, kde-format
