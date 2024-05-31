@@ -154,7 +154,7 @@ protected:
     // reimp
     bool hasChanged() override;
 
-protected slots:
+protected Q_SLOTS:
     // reimp
     void updateWidgets() override;
     // reimp

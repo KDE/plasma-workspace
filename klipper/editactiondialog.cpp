@@ -156,7 +156,7 @@ void ActionDetailModel::replaceCommand(const ClipCommand &command, const QModelI
         return;
     const int row = idx.row();
     m_commands[row] = command;
-    emit dataChanged(index(row, static_cast<int>(COMMAND_COL)), index(row, static_cast<int>(DESCRIPTION_COL)));
+    Q_EMIT dataChanged(index(row, static_cast<int>(COMMAND_COL)), index(row, static_cast<int>(DESCRIPTION_COL)));
 }
 
 void ActionDetailModel::removeCommand(const QModelIndex &idx)
@@ -340,7 +340,7 @@ void EditActionDialog::saveAction()
 
     m_action->clearCommands();
 
-    foreach (const ClipCommand &cmd, m_model->commands()) {
+    for (const auto commands = m_model->commands(); const ClipCommand &cmd : commands) {
         m_action->addCommand(cmd);
     }
 }

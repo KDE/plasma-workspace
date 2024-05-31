@@ -524,7 +524,7 @@ void ActionsWidget::onAddAction()
         QTreeWidgetItem *item = new QTreeWidgetItem;
         updateActionItem(item, newAct);
         m_actionsTree->addTopLevelItem(item);
-        emit widgetChanged();
+        Q_EMIT widgetChanged();
     }
 }
 
@@ -554,7 +554,7 @@ void ActionsWidget::onEditAction()
     // dialog will save values into action if user hits OK
     if (dlg.exec() == QDialog::Accepted) {
         updateActionItem(item, action);
-        emit widgetChanged();
+        Q_EMIT widgetChanged();
     }
 }
 
@@ -582,7 +582,7 @@ void ActionsWidget::onDeleteAction()
         int idx = m_actionsTree->indexOfTopLevelItem(item);
         m_actionList.removeAt(idx);
         delete item;
-        emit widgetChanged();
+        Q_EMIT widgetChanged();
     }
 }
 
