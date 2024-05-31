@@ -21,11 +21,7 @@
 #include "jobsettings.h"
 #include "notificationsettings.h"
 
-namespace NotificationManager
-{
-constexpr const char s_configFile[] = "plasmanotifyrc";
-}
-
+using namespace Qt::StringLiterals;
 using namespace NotificationManager;
 
 class Q_DECL_HIDDEN Settings::Private
@@ -153,7 +149,7 @@ Settings::Settings(QObject *parent)
     : QObject(parent)
     , d(new Private(this))
 {
-    d->config = KSharedConfig::openConfig(s_configFile);
+    d->config = KSharedConfig::openConfig(u"plasmanotifyrc"_s);
 
     setLive(true);
 

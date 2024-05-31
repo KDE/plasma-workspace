@@ -15,6 +15,7 @@
 
 #include "fdonotifications_interface.h"
 
+using namespace Qt::StringLiterals;
 using namespace NotificationManager;
 
 class WatchedNotificationsModel::Private : public QObject
@@ -54,7 +55,7 @@ WatchedNotificationsModel::Private::Private(WatchedNotificationsModel *q, QObjec
             &OrgFreedesktopNotificationsInterface::NotificationClosed,
             this,
             &WatchedNotificationsModel::Private::NotificationClosed);
-    dbus.registerObject("/NotificationWatcher", QStringLiteral("org.kde.NotificationWatcher"), this, QDBusConnection::ExportScriptableSlots);
+    dbus.registerObject(u"/NotificationWatcher"_s, QStringLiteral("org.kde.NotificationWatcher"), this, QDBusConnection::ExportScriptableSlots);
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Notifications"),
                                                       QStringLiteral("/org/freedesktop/Notifications"),
                                                       QStringLiteral("org.kde.NotificationManager"),
@@ -143,7 +144,7 @@ void WatchedNotificationsModel::invokeDefaultAction(uint notificationId, Notific
 void WatchedNotificationsModel::invokeAction(uint notificationId, const QString &actionName, Notifications::InvokeBehavior /*behavior*/)
 {
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject("/NotificationWatcher", this, QDBusConnection::ExportScriptableSlots);
+    dbus.registerObject(u"/NotificationWatcher"_s, this, QDBusConnection::ExportScriptableSlots);
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.Notifications"),
                                                       QStringLiteral("/org/freedesktop/Notifications"),
                                                       QStringLiteral("org.kde.NotificationManager"),
