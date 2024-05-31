@@ -179,12 +179,6 @@ static QTemporaryFile *remTempFile = nullptr;
 
 static IceListenObj *listenObjs = nullptr;
 int numTransports = 0;
-static bool only_local = false;
-
-static Bool HostBasedAuthProc(char * /*hostname*/)
-{
-    return only_local;
-}
 
 Status KSMRegisterClientProc(SmsConn /* smsConn */, SmPointer managerData, char *previousId)
 {
@@ -339,34 +333,6 @@ static void write_iceauth(FILE *addfp, FILE *removefp, IceAuthDataEntry *entry)
 
 #define MAGIC_COOKIE_LEN 16
 
-Status SetAuthentication_local(int count, IceListenObj *listenObjs)
-{
-    for (int i = 0; i < count; i++) {
-        char *prot = IceGetListenConnectionString(listenObjs[i]);
-        if (!prot) {
-            continue;
-        }
-        char *host = strchr(prot, '/');
-        char *sock = nullptr;
-        if (host) {
-            *host = 0;
-            host++;
-            sock = strchr(host, ':');
-            if (sock) {
-                *sock = 0;
-                sock++;
-            }
-        }
-        qCDebug(KSMSERVER) << "KSMServer: SetAProc_loc: conn " << (unsigned)i << ", prot=" << prot << ", file=" << sock;
-        if (sock && !strcmp(prot, "local")) {
-            chmod(sock, 0700);
-        }
-        IceSetHostBasedAuthProc(listenObjs[i], HostBasedAuthProc);
-        free(prot);
-    }
-    return 1;
-}
-
 Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry **authDataEntries)
 {
     QTemporaryFile addTempFile;
@@ -402,8 +368,6 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
         write_iceauth(addAuthFile, remAuthFile, &(*authDataEntries)[i + 1]);
 
         IceSetPaAuthData(2, &(*authDataEntries)[i]);
-
-        IceSetHostBasedAuthProc(listenObjs[i / 2], HostBasedAuthProc);
     }
     fclose(addAuthFile);
     fclose(remAuthFile);
@@ -427,10 +391,6 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
 void FreeAuthenticationData(int count, IceAuthDataEntry *authDataEntries)
 {
     /* Each transport has entries for ICE and XSMP */
-    if (only_local) {
-        return;
-    }
-
     for (int i = 0; i < count * 2; i++) {
         free(authDataEntries[i].network_id);
         free(authDataEntries[i].auth_data);
@@ -574,17 +534,14 @@ KSMServer::KSMServer(InitFlags flags)
     clientInteracting = nullptr;
     xonCommand = config.readEntry("xonCommand", "xon");
 
-    only_local = flags.testFlag(InitFlag::OnlyLocal);
 #ifdef HAVE__ICETRANSNOLISTEN
-    if (only_local) {
+    if (flags.testFlag(InitFlag::OnlyLocal)) {
         _IceTransNoListen("tcp");
     }
-#else
-    only_local = false;
 #endif
 
     char errormsg[256];
-    if (!SmsInitialize((char *)KSMVendorString, (char *)KSMReleaseString, KSMNewClientProc, (SmPointer)this, HostBasedAuthProc, 256, errormsg)) {
+    if (!SmsInitialize((char *)KSMVendorString, (char *)KSMReleaseString, KSMNewClientProc, (SmPointer)this, nullptr, 256, errormsg)) {
         qCWarning(KSMSERVER, "KSMServer: could not register XSM protocol");
     }
 
@@ -632,14 +589,8 @@ KSMServer::KSMServer(InitFlags flags)
         free(session_manager);
     }
 
-    if (only_local) {
-        if (!SetAuthentication_local(numTransports, listenObjs)) {
-            qFatal("KSMSERVER: authentication setup failed.");
-        }
-    } else {
-        if (!SetAuthentication(numTransports, listenObjs, &authDataEntries)) {
-            qFatal("KSMSERVER: authentication setup failed.");
-        }
+    if (!SetAuthentication(numTransports, listenObjs, &authDataEntries)) {
+        qFatal("KSMSERVER: authentication setup failed.");
     }
 
     IceAddConnectionWatch(KSMWatchProc, (IcePointer)this);
