@@ -24,6 +24,7 @@ extern "C" {
 #include <QMap>
 #include <QObject>
 #include <QStringList>
+#include <QTemporaryFile>
 #include <QTime>
 #include <QTimer>
 #include <QWindow>
@@ -210,5 +211,6 @@ private:
     OrgKdeKWinSessionInterface *m_kwinInterface;
 
     int sockets[2];
+    QTemporaryFile iceAuthFile;
     friend bool readFromPipe(int pipe);
 };
