@@ -44,7 +44,7 @@ inline QString xDirSyntax(const QString &d)
 QString getConfigFile(bool system)
 {
 #if (FC_VERSION >= 20300)
-    static const char constKdeRootFcFile[] = "00kde.conf";
+    static constexpr QStringView constKdeRootFcFile = u"00kde.conf";
 #endif
 
     FcStrList *list = FcConfigGetConfigFiles(FcConfigGetCurrent());
@@ -53,7 +53,7 @@ QString getConfigFile(bool system)
     QString home(Misc::dirSyntax(QDir::homePath()));
 
     while ((file = FcStrListNext(list))) {
-        QString f((const char *)file);
+        QString f(QString::fromLocal8Bit(QByteArrayView((const char *)file)));
 
         if (Misc::fExists(f)) {
             // For nonsystem, only consider file within $HOME
@@ -62,7 +62,7 @@ QString getConfigFile(bool system)
             }
         }
 #if (FC_VERSION >= 20300)
-        if (system && Misc::dExists(f) && (f.contains(QRegularExpression("/conf\\.d/?$")) || f.contains(QRegularExpression("/conf\\.d?$")))) {
+        if (system && Misc::dExists(f) && (f.contains(QRegularExpression(u"/conf\\.d/?$"_s)) || f.contains(QRegularExpression(u"/conf\\.d?$"_s)))) {
             return Misc::dirSyntax(f) + constKdeRootFcFile; // This ones good enough for me!
         }
 #endif
@@ -74,7 +74,7 @@ QString getConfigFile(bool system)
         QStringList::const_iterator it(files.begin()), end(files.end());
 
         for (; it != end; ++it) {
-            if (-1 != (*it).indexOf(QRegularExpression(system ? "/local\\.conf$" : "/\\.?fonts\\.conf$"))) {
+            if (-1 != (*it).indexOf(QRegularExpression(system ? u"/local\\.conf$"_s : u"/\\.?fonts\\.conf$"_s))) {
                 return *it;
             }
         }
@@ -86,7 +86,7 @@ QString getConfigFile(bool system)
 
 void addDir(const QString &dir, bool system)
 {
-    QDomDocument doc("fontconfig");
+    QDomDocument doc(u"fontconfig"_s);
     QString fileName = getConfigFile(system);
     QFile f(fileName);
     bool hasDir(false);
@@ -103,7 +103,7 @@ void addDir(const QString &dir, bool system)
             while (!n.isNull() && !hasDir) {
                 QDomElement e = n.toElement();
 
-                if (!e.isNull() && "dir" == e.tagName()) {
+                if (!e.isNull() && "dir"_L1 == e.tagName()) {
                     if (0 == Misc::expandHome(Misc::dirSyntax(e.text())).indexOf(dir)) {
                         hasDir = true;
                     }
@@ -117,10 +117,10 @@ void addDir(const QString &dir, bool system)
     // Add dir, and save, if config does not already have this dir.
     if (!hasDir) {
         if (doc.documentElement().isNull()) {
-            doc.appendChild(doc.createElement("fontconfig"));
+            doc.appendChild(doc.createElement(u"fontconfig"_s));
         }
 
-        QDomElement newNode = doc.createElement("dir");
+        QDomElement newNode = doc.createElement(u"dir"_s);
         QDomText text = doc.createTextNode(Misc::contractHome(xDirSyntax(dir)));
 
         newNode.appendChild(text);
@@ -135,29 +135,29 @@ void addDir(const QString &dir, bool system)
                 if (f) {
                     //
                     // Check document syntax...
-                    static const char qtXmlHeader[] = "<?xml version = '1.0'?>";
-                    static const char xmlHeader[] = "<?xml version=\"1.0\"?>";
-                    static const char qtDocTypeLine[] = "<!DOCTYPE fontconfig>";
-                    static const char docTypeLine[] =
-                        "<!DOCTYPE fontconfig SYSTEM "
+                    static constexpr QStringView qtXmlHeader = u"<?xml version = '1.0'?>";
+                    static constexpr QStringView xmlHeader = u"<?xml version=\"1.0\"?>";
+                    static constexpr QStringView qtDocTypeLine = u"<!DOCTYPE fontconfig>";
+                    static constexpr QStringView docTypeLine =
+                        u"<!DOCTYPE fontconfig SYSTEM "
                         "\"fonts.dtd\">";
 
                     QString str(doc.toString());
-                    int idx;
+                    qsizetype idx;
 
-                    if (0 != str.indexOf("<?xml")) {
+                    if (0 != str.indexOf(u"<?xml")) {
                         str.insert(0, xmlHeader);
                     } else if (0 == str.indexOf(qtXmlHeader)) {
-                        str.replace(0, strlen(qtXmlHeader), xmlHeader);
+                        str.replace(qsizetype(0), qtXmlHeader.size(), xmlHeader.constData(), xmlHeader.size());
                     }
 
                     if (-1 != (idx = str.indexOf(qtDocTypeLine))) {
-                        str.replace(idx, strlen(qtDocTypeLine), docTypeLine);
+                        str.replace(idx, qtDocTypeLine.size(), docTypeLine.constData(), docTypeLine.size());
                     }
 
                     //
                     // Write to file...
-                    fputs(str.toUtf8(), f);
+                    fputs(str.toUtf8().constData(), f);
                     fclose(f);
 
                     if (!FcAtomicReplaceOrig(atomic)) {

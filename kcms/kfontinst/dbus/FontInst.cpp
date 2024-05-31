@@ -23,14 +23,16 @@
 #include <sys/types.h>
 #include <unistd.h>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 static void decompose(const QString &name, QString &family, QString &style)
 {
-    int commaPos = name.lastIndexOf(',');
+    int commaPos = name.lastIndexOf(u',');
 
     family = -1 == commaPos ? name : name.left(commaPos);
-    style = -1 == commaPos ? KFI_WEIGHT_REGULAR.untranslatedText() : name.mid(commaPos + 2);
+    style = -1 == commaPos ? QString::fromUtf8(KFI_WEIGHT_REGULAR.untranslatedText()) : name.mid(commaPos + 2);
 }
 
 static bool isSystem = false;
@@ -90,7 +92,7 @@ FontInst::FontInst()
     QDBusConnection bus = QDBusConnection::sessionBus();
 
     // qDebug() << "Connecting to session bus";
-    if (!bus.registerService(OrgKdeFontinstInterface::staticInterfaceName())) {
+    if (!bus.registerService(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()))) {
         // qDebug() << "Failed to register service!";
         ::exit(-1);
     }
@@ -193,12 +195,12 @@ void FontInst::install(const QString &file, bool createAfm, bool toSystem, int p
                 if (toSystem && !isSystem) {
                     // qDebug() << "Send request to system helper" << file << destFolder << name;
                     QVariantMap args;
-                    args["method"] = "install";
-                    args["file"] = file;
-                    args["name"] = name;
-                    args["destFolder"] = destFolder;
-                    args["createAfm"] = createAfm;
-                    args["type"] = (int)type;
+                    args[u"method"_s] = u"install"_s;
+                    args[u"file"_s] = file;
+                    args[u"name"_s] = name;
+                    args[u"destFolder"_s] = destFolder;
+                    args[u"createAfm"_s] = createAfm;
+                    args[u"type"_s] = (int)type;
                     result = performAction(args);
                 } else {
                     if (!Misc::dExists(destFolder)) {
@@ -270,8 +272,8 @@ void FontInst::uninstall(const QString &family, quint32 style, bool fromSystem, 
                 }
             }
             QVariantMap args;
-            args["method"] = "uninstall";
-            args["files"] = fileList;
+            args[u"method"_s] = u"uninstall"_s;
+            args[u"files"_s] = fileList;
             result = performAction(args);
 
             if (STATUS_OK == result) {
@@ -365,12 +367,12 @@ void FontInst::move(const QString &family, quint32 style, bool toSystem, int pid
             }
 
             QVariantMap args;
-            args["method"] = "move";
-            args["files"] = files;
-            args["toSystem"] = toSystem;
-            args["dest"] = theFolders[to].location();
-            args["uid"] = getuid();
-            args["gid"] = getgid();
+            args[u"method"_s] = u"move"_s;
+            args[u"files"_s] = files;
+            args[u"toSystem"_s] = toSystem;
+            args[u"dest"_s] = theFolders[to].location();
+            args[u"uid"_s] = getuid();
+            args[u"gid"_s] = getgid();
             int result = performAction(args);
 
             if (STATUS_OK == result) {
@@ -447,8 +449,8 @@ void FontInst::removeFile(const QString &family, quint32 style, const QString &f
             // OK, found folder - so can now proceed to delete the file...
             if (fromSystem && !isSystem) {
                 QVariantMap args;
-                args["method"] = "removeFile";
-                args["file"] = file;
+                args[u"method"_s] = u"removeFile"_s;
+                args[u"file"_s] = file;
                 result = performAction(args);
             } else {
                 result = Misc::fExists(file) ? QFile::remove(file) ? (int)STATUS_OK : (int)KIO::ERR_WRITE_ACCESS_DENIED : (int)KIO::ERR_DOES_NOT_EXIST;
@@ -480,7 +482,7 @@ void FontInst::reconfigure(int pid, bool force)
             theFolders[FOLDER_SYS].configure();
         } else {
             QVariantMap args;
-            args["method"] = "reconfigure";
+            args[u"method"_s] = u"reconfigure"_s;
             performAction(args);
             theFolders[FOLDER_SYS].clearModified();
         }
@@ -507,7 +509,7 @@ void FontInst::saveDisabled()
             if (FOLDER_SYS == i && !isSystem) {
                 if (theFolders[i].disabledDirty()) {
                     QVariantMap args;
-                    args["method"] = "saveDisabled";
+                    args[u"method"_s] = u"saveDisabled"_s;
                     performAction(args);
                     theFolders[i].saveDisabled();
                 }
@@ -725,12 +727,12 @@ void FontInst::toggle(bool enable, const QString &family, quint32 style, bool in
 
             toggleFam.add(*st);
             QVariantMap args;
-            args["method"] = "toggle";
+            args[u"method"_s] = u"toggle"_s;
             QString xml;
             QTextStream str(&xml);
             toggleFam.toXml(false, str);
-            args["xml"] = xml;
-            args["enable"] = enable;
+            args[u"xml"_s] = xml;
+            args[u"enable"_s] = enable;
             result = performAction(args);
         }
 
@@ -860,9 +862,9 @@ bool FontInst::findFont(const QString &family, quint32 style, EFolder folder, Fa
 
 int FontInst::performAction(const QVariantMap &args)
 {
-    KAuth::Action action("org.kde.fontinst.manage");
+    KAuth::Action action(u"org.kde.fontinst.manage"_s);
 
-    action.setHelperId("org.kde.fontinst");
+    action.setHelperId(u"org.kde.fontinst"_s);
     action.setArguments(args);
     // qDebug() << "Call " << args["method"].toString() << " on helper";
     m_fontListTimer->stop();

@@ -38,7 +38,7 @@ KIO::ThumbnailResult CFontThumbnail::create(const KIO::ThumbnailRequest &request
 
     // Is this a appliaction/vnd.kde.fontspackage file? If so, extract 1 scalable font...
     QMimeDatabase db;
-    if (KFI::Misc::isPackage(path) || "application/zip" == db.mimeTypeForFile(path, QMimeDatabase::MatchContent).name()) {
+    if (KFI::Misc::isPackage(path) || u"application/zip" == db.mimeTypeForFile(path, QMimeDatabase::MatchContent).name()) {
         KZip zip(path);
 
         if (zip.open(QIODevice::ReadOnly)) {
@@ -62,8 +62,8 @@ KIO::ThumbnailResult CFontThumbnail::create(const KIO::ThumbnailRequest &request
 
                             QString mime(db.mimeTypeForFile(tempDir->filePath(entry->name())).name());
 
-                            if (mime == "font/ttf" || mime == "font/otf" || mime == "application/x-font-ttf" || mime == "application/x-font-otf"
-                                || mime == "application/x-font-type1") {
+                            if (mime == u"font/ttf" || mime == u"font/otf" || mime == u"application/x-font-ttf" || mime == u"application/x-font-otf"
+                                || mime == u"application/x-font-type1") {
                                 realPath = tempDir->filePath(entry->name());
                                 break;
                             } else {

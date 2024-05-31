@@ -52,7 +52,7 @@ void Folder::init(bool system, bool systemBus)
         FcChar8 *fcDir;
 
         while ((fcDir = FcStrListNext(list))) {
-            dirs.append(Misc::dirSyntax((const char *)fcDir));
+            dirs.append(Misc::dirSyntax(QString::fromLocal8Bit(QByteArrayView((const char *)fcDir))));
         }
 
         m_location = Misc::getFolder(Misc::dirSyntax(QDir::homePath() + "/.fonts/"_L1), Misc::dirSyntax(QDir::homePath()), dirs);
@@ -307,7 +307,7 @@ void Folder::configure(bool force)
         m_modifiedDirs.clear();
 
         // qDebug() << "RUN FC";
-        Misc::doCmd("fc-cache");
+        Misc::doCmd(u"fc-cache"_s);
         // qDebug() << "DONE";
     }
 }

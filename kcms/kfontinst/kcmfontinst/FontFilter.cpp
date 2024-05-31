@@ -20,6 +20,8 @@
 #include <QString>
 #include <QStyleOption>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 static void deselectCurrent(QActionGroup *act)
@@ -99,21 +101,21 @@ static void sortActions(KSelectAction *group)
 CFontFilter::CFontFilter(QWidget *parent)
     : QWidget(parent)
 {
-    m_icons[CRIT_FAMILY] = QIcon::fromTheme("draw-text");
+    m_icons[CRIT_FAMILY] = QIcon::fromTheme(u"draw-text"_s);
     m_texts[CRIT_FAMILY] = i18n("Family");
-    m_icons[CRIT_STYLE] = QIcon::fromTheme("format-text-bold");
+    m_icons[CRIT_STYLE] = QIcon::fromTheme(u"format-text-bold"_s);
     m_texts[CRIT_STYLE] = i18n("Style");
-    m_icons[CRIT_FOUNDRY] = QIcon::fromTheme("user-identity");
+    m_icons[CRIT_FOUNDRY] = QIcon::fromTheme(u"user-identity"_s);
     m_texts[CRIT_FOUNDRY] = i18n("Foundry");
-    m_icons[CRIT_FONTCONFIG] = QIcon::fromTheme("system-search");
+    m_icons[CRIT_FONTCONFIG] = QIcon::fromTheme(u"system-search"_s);
     m_texts[CRIT_FONTCONFIG] = i18n("FontConfig Match");
-    m_icons[CRIT_FILETYPE] = QIcon::fromTheme("preferences-desktop-font-installer");
+    m_icons[CRIT_FILETYPE] = QIcon::fromTheme(u"preferences-desktop-font-installer"_s);
     m_texts[CRIT_FILETYPE] = i18n("File Type");
-    m_icons[CRIT_FILENAME] = QIcon::fromTheme("application-x-font-type1");
+    m_icons[CRIT_FILENAME] = QIcon::fromTheme(u"application-x-font-type1"_s);
     m_texts[CRIT_FILENAME] = i18n("File Name");
-    m_icons[CRIT_LOCATION] = QIcon::fromTheme("folder");
+    m_icons[CRIT_LOCATION] = QIcon::fromTheme(u"folder"_s);
     m_texts[CRIT_LOCATION] = i18n("File Location");
-    m_icons[CRIT_WS] = QIcon::fromTheme("character-set");
+    m_icons[CRIT_WS] = QIcon::fromTheme(u"character-set"_s);
     m_texts[CRIT_WS] = i18n("Writing System");
 
     m_layout = new QHBoxLayout(this);
@@ -124,7 +126,7 @@ CFontFilter::CFontFilter(QWidget *parent)
     m_layout->addWidget(m_lineEdit);
 
     m_menuButton = new QPushButton(this);
-    m_menuButton->setIcon(QIcon::fromTheme("view-filter"));
+    m_menuButton->setIcon(QIcon::fromTheme(u"view-filter"_s));
     m_menuButton->setText(i18n("Set Criteria"));
     m_layout->addWidget(m_menuButton);
 
@@ -154,7 +156,7 @@ CFontFilter::CFontFilter(QWidget *parent)
     QStringList::ConstIterator it(CFontList::fontMimeTypes.constBegin()), end(CFontList::fontMimeTypes.constEnd());
     QMimeDatabase db;
     for (; it != end; ++it) {
-        if ((*it) != "application/vnd.kde.fontspackage") {
+        if ((*it) != u"application/vnd.kde.fontspackage") {
             QMimeType mime = db.mimeTypeForName(*it);
 
             KToggleAction *act = new KToggleAction(QIcon::fromTheme(mime.iconName()), mime.comment(), this);
@@ -225,7 +227,7 @@ void CFontFilter::setFoundries(const QSet<QString> &currentFoundries)
         for (; it != end; ++it) {
             QString foundry(*it);
 
-            foundry.replace("&", "&&");
+            foundry.replace("&"_L1, "&&"_L1);
             ((KSelectAction *)m_actions[CRIT_FOUNDRY])->addAction(foundry);
         }
         changed = true;

@@ -33,24 +33,18 @@ using namespace Qt::StringLiterals;
 
 namespace KFI
 {
-const QStringList CFontList::fontMimeTypes(QStringList() << "font/ttf"
-                                                         << "font/otf"
-                                                         << "font/collection"
-                                                         << "application/x-font-ttf"
-                                                         << "application/x-font-otf"
-                                                         << "application/x-font-type1"
-                                                         << "application/x-font-pcf"
-                                                         << "application/x-font-bdf"
-                                                         << "application/vnd.kde.fontspackage");
+const QStringList CFontList::fontMimeTypes(QStringList() << u"font/ttf"_s << u"font/otf"_s << u"font/collection"_s << u"application/x-font-ttf"_s
+                                                         << u"application/x-font-otf"_s << u"application/x-font-type1"_s << u"application/x-font-pcf"_s
+                                                         << u"application/x-font-bdf"_s << u"application/vnd.kde.fontspackage"_s);
 
 static const int constMaxSlowed = 250;
 
 static void decompose(const QString &name, QString &family, QString &style)
 {
-    int commaPos = name.lastIndexOf(',');
+    int commaPos = name.lastIndexOf(u',');
 
     family = -1 == commaPos ? name : name.left(commaPos);
-    style = -1 == commaPos ? KFI_WEIGHT_REGULAR.untranslatedText() : name.mid(commaPos + 2);
+    style = -1 == commaPos ? QString::fromUtf8(KFI_WEIGHT_REGULAR.untranslatedText()) : name.mid(commaPos + 2);
 }
 
 static void addFont(CFontItem *font,
@@ -74,7 +68,7 @@ static void addFont(CFontItem *font,
 static QString replaceEnvVar(const QString &text)
 {
     QString mod(text);
-    int endPos(text.indexOf('/'));
+    int endPos(text.indexOf(u'/'));
 
     if (endPos == -1) {
         endPos = text.length() - 1;
@@ -124,7 +118,7 @@ QStringList CFontList::compact(const QStringList &fonts)
         if (family != lastFamily) {
             usedStyles.clear();
             if (entry.length()) {
-                entry += ')';
+                entry += u')';
                 compacted.append(entry);
             }
             entry = QString(family + " ("_L1);
@@ -132,8 +126,8 @@ QStringList CFontList::compact(const QStringList &fonts)
         }
         if (!usedStyles.contains(style)) {
             usedStyles.clear();
-            if (entry.length() && '(' != entry[entry.length() - 1]) {
-                entry += ", ";
+            if (entry.length() && u'(' != entry[entry.length() - 1]) {
+                entry += u", ";
             }
             entry += style;
             usedStyles.insert(style);
@@ -141,7 +135,7 @@ QStringList CFontList::compact(const QStringList &fonts)
     }
 
     if (entry.length()) {
-        entry += ')';
+        entry += u')';
         compacted.append(entry);
     }
 
@@ -184,7 +178,7 @@ QString capitaliseFoundry(const QString &foundry)
 
 inline bool isSysFolder(const QString &sect)
 {
-    return KFI_KIO_FONTS_SYS.toString() == sect || KFI_KIO_FONTS_SYS.untranslatedText() == sect;
+    return KFI_KIO_FONTS_SYS.toString() == sect || QLatin1String(KFI_KIO_FONTS_SYS.untranslatedText()) == sect;
 }
 
 CFontItem::CFontItem(CFontModelItem *p, const Style &s, bool sys)
@@ -540,7 +534,7 @@ QStringList CFontList::mimeTypes() const
 {
     QStringList types;
 
-    types << "text/uri-list";
+    types << u"text/uri-list"_s;
     return types;
 }
 
@@ -1029,7 +1023,7 @@ QVariant CFontListSortFilterProxy::data(const QModelIndex &idx, int role) const
                 break;
             }
         } else if (COL_STATUS == index.column()) {
-            return QIcon::fromTheme((static_cast<CFontItem *>(index.internalPointer()))->isEnabled() ? "dialog-ok" : "dialog-cancel");
+            return QIcon::fromTheme((static_cast<CFontItem *>(index.internalPointer()))->isEnabled() ? u"dialog-ok"_s : u"dialog-cancel"_s);
         }
         break;
     case Qt::SizeHintRole:
@@ -1201,8 +1195,8 @@ void CFontListSortFilterProxy::setFilterText(const QString &text)
     if (text != m_filterText) {
         //
         // If we are filtering on file location, then expand ~ to /home/user, etc.
-        if (CFontFilter::CRIT_LOCATION == m_filterCriteria && !text.isEmpty() && ('~' == text[0] || '$' == text[0])) {
-            if ('~' == text[0]) {
+        if (CFontFilter::CRIT_LOCATION == m_filterCriteria && !text.isEmpty() && (u'~' == text[0] || u'$' == text[0])) {
+            if (u'~' == text[0]) {
                 m_filterText = 1 == text.length() ? QDir::homePath() : QString(text).replace(0, 1, QDir::homePath());
             } else {
                 m_filterText = replaceEnvVar(text);
@@ -1657,7 +1651,7 @@ void CFontListView::itemCollapsed(const QModelIndex &idx)
 
 static bool isScalable(const QString &str)
 {
-    QByteArray cFile(QFile::encodeName(str));
+    const QString cFile = QString::fromLocal8Bit(QFile::encodeName(str));
 
     return Misc::checkExt(cFile, u"ttf") || Misc::checkExt(cFile, u"otf") || Misc::checkExt(cFile, u"ttc") || Misc::checkExt(cFile, u"pfa")
         || Misc::checkExt(cFile, u"pfb");
@@ -1666,7 +1660,7 @@ static bool isScalable(const QString &str)
 void CFontListView::view()
 {
     // Number of fonts user has selected, before we ask if they really want to view them all...
-    static const int constMaxBeforePrompt = 10;
+    static constexpr int constMaxBeforePrompt = 10;
 
     const QModelIndexList selectedItems(selectedIndexes());
     QSet<CFontItem *> fonts;

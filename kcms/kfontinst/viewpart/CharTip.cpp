@@ -146,10 +146,10 @@ void CCharTip::showTip()
         return;
     }
 
-    static const int constPixSize = 96;
+    static constexpr int constPixSize = 96;
 
     EUnicodeCategory cat(getCategory(m_item.ucs4));
-    QString details("<table>");
+    QString details(u"<table>"_s);
 
     details += u"<tr><td align=\"right\"><b>" + i18n("Category") + u"&nbsp;</b></td><td>" + toStr(cat) + u"</td></tr>";
     details +=

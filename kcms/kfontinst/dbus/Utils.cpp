@@ -22,7 +22,7 @@ namespace Utils
 {
 bool isAAfm(const QString &fname)
 {
-    if (Misc::checkExt(QFile::encodeName(fname), u"afm")) // CPD? Is this a necessary check?
+    if (Misc::checkExt(QString::fromLocal8Bit(QFile::encodeName(fname)), u"afm"_s)) // CPD? Is this a necessary check?
     {
         QFile file(fname);
 
@@ -33,7 +33,7 @@ bool isAAfm(const QString &fname)
             for (int lc = 0; lc < 30 && !stream.atEnd(); ++lc) {
                 line = stream.readLine();
 
-                if (line.contains("StartFontMetrics")) {
+                if (line.contains(u"StartFontMetrics")) {
                     file.close();
                     return true;
                 }
@@ -54,7 +54,7 @@ bool isAPfm(const QString &fname)
     // have the .pfm extension...
     QByteArray name(QFile::encodeName(fname));
 
-    if (Misc::checkExt(name, u"pfm")) {
+    if (Misc::checkExt(QString::fromLocal8Bit(name), u"pfm"_s)) {
         //
         // OK, the extension matches, so perform a little contents checking...
         FILE *f = fopen(name.constData(), "r");
@@ -100,7 +100,7 @@ bool isAType1(const QString &fname)
     char buffer[constPfbLen];
     bool match = false;
 
-    if (Misc::checkExt(name, u"pfa")) {
+    if (Misc::checkExt(QString::fromLocal8Bit(name), u"pfa"_s)) {
         FILE *f = fopen(name.constData(), "r");
 
         if (f) {
@@ -109,7 +109,7 @@ bool isAType1(const QString &fname)
             }
             fclose(f);
         }
-    } else if (Misc::checkExt(name, u"pfb")) {
+    } else if (Misc::checkExt(QString::fromLocal8Bit(name), u"pfb"_s)) {
         static const char constPfbMarker = static_cast<char>(0x80);
 
         FILE *f = fopen(name.constData(), "r");
@@ -161,7 +161,7 @@ void createAfm(const QString &file, EFileType type)
             if (!t1.isEmpty() && !pfm.isEmpty()) // Do we have both Type1 and PFM?
             {
                 QString rootName(t1.left(t1.length() - 4));
-                Misc::doCmd("pf2afm", KShell::quoteArg(rootName)); // pf2afm wants name without extension...
+                Misc::doCmd(u"pf2afm"_s, KShell::quoteArg(rootName)); // pf2afm wants name without extension...
                 Misc::setFilePerms(QFile::encodeName(rootName + ".afm"_L1));
             }
         }

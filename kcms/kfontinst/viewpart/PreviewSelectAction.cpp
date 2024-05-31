@@ -7,10 +7,12 @@
 #include "UnicodeBlocks.h"
 #include "UnicodeScripts.h"
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 CPreviewSelectAction::CPreviewSelectAction(QObject *parent, Mode mode)
-    : KSelectAction(QIcon::fromTheme("character-set"), i18n("Preview Type"), parent)
+    : KSelectAction(QIcon::fromTheme(u"character-set"_s), i18n("Preview Type"), parent)
     , m_numUnicodeBlocks(0)
 {
     setMode(mode);

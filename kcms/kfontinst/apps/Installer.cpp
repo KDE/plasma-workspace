@@ -19,6 +19,8 @@
 #include <QFile>
 #include <QTemporaryDir>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 int CInstaller::install(const QSet<QUrl> &urls)
@@ -107,15 +109,15 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
 
     KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
-    KAboutData aboutData("kfontinst",
+    KAboutData aboutData(u"kfontinst"_s,
                          i18n("Font Installer"),
-                         WORKSPACE_VERSION_STRING,
+                         QLatin1String(WORKSPACE_VERSION_STRING),
                          i18n("Simple font installer"),
                          KAboutLicense::GPL,
                          i18n("(C) Craig Drummond, 2007"));
     KAboutData::setApplicationData(aboutData);
 
-    QGuiApplication::setWindowIcon(QIcon::fromTheme("preferences-desktop-font-installer"));
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"preferences-desktop-font-installer"_s));
 
     QCommandLineParser parser;
     const QCommandLineOption embedOption(QLatin1String("embed"),

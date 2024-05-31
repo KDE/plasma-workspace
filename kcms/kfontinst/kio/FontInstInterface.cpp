@@ -16,7 +16,8 @@
 namespace KFI
 {
 FontInstInterface::FontInstInterface()
-    : m_interface(new OrgKdeFontinstInterface(OrgKdeFontinstInterface::staticInterfaceName(), FONTINST_PATH, QDBusConnection::sessionBus(), nullptr))
+    : m_interface(
+          new OrgKdeFontinstInterface(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()), FONTINST_PATH, QDBusConnection::sessionBus(), nullptr))
     , m_active(false)
 {
     FontInst::registerTypes();
@@ -31,7 +32,7 @@ FontInstInterface::FontInstInterface()
     connect(m_interface, &OrgKdeFontinstInterface::fontList, this, &FontInstInterface::fontList);
     connect(m_interface, &OrgKdeFontinstInterface::fontStat, this, &FontInstInterface::fontStat);
 
-    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName())) {
+    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()))) {
         QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR "/fontinst"), QStringList());
     }
 }

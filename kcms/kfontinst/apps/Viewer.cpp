@@ -24,6 +24,8 @@
 #include <QFileDialog>
 #include <QUrl>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 CViewer::CViewer()
@@ -63,11 +65,8 @@ void CViewer::fileOpen()
 {
     QFileDialog dlg(this, i18n("Select Font to View"));
     dlg.setFileMode(QFileDialog::ExistingFile);
-    dlg.setMimeTypeFilters(QStringList() << "application/x-font-ttf"
-                                         << "application/x-font-otf"
-                                         << "application/x-font-type1"
-                                         << "application/x-font-bdf"
-                                         << "application/x-font-pcf");
+    dlg.setMimeTypeFilters(QStringList() << u"application/x-font-ttf"_s << u"application/x-font-otf"_s << u"application/x-font-type1"_s
+                                         << u"application/x-font-bdf"_s << u"application/x-font-pcf"_s);
     if (dlg.exec() == QDialog::Accepted) {
         QUrl url = dlg.selectedUrls().value(0);
         if (url.isValid()) {
@@ -145,9 +144,9 @@ int main(int argc, char **argv)
     KFI::ViewerApplication app(argc, argv);
 
     KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
-    KAboutData aboutData("kfontview",
+    KAboutData aboutData(u"kfontview"_s,
                          i18n("Font Viewer"),
-                         WORKSPACE_VERSION_STRING,
+                         QLatin1String(WORKSPACE_VERSION_STRING),
                          i18n("Simple font viewer"),
                          KAboutLicense::GPL,
                          i18n("(C) Craig Drummond, 2004-2007"));
@@ -159,7 +158,7 @@ int main(int argc, char **argv)
     aboutData.processCommandLine(parser);
 
     KDBusService dbusService(KDBusService::Unique);
-    QGuiApplication::setWindowIcon(QIcon::fromTheme("kfontview"));
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"kfontview"_s));
     app.activate(app.arguments(), QDir::currentPath());
     QObject::connect(&dbusService, &KDBusService::activateRequested, &app, &KFI::ViewerApplication::activate);
 

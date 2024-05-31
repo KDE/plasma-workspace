@@ -29,7 +29,7 @@ class QMenu;
 class QMimeData;
 class QTimer;
 
-#define KFI_FONT_DRAG_MIME "kfontinst/fontlist"
+inline constexpr QLatin1StringView KFI_FONT_DRAG_MIME("kfontinst/fontlist");
 
 namespace KFI
 {

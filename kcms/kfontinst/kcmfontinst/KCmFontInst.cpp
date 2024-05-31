@@ -164,7 +164,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
 {
     setButtons(Help);
 
-    KIconLoader::global()->addAppDir(KFI_NAME);
+    KIconLoader::global()->addAppDir(QStringLiteral(KFI_NAME));
 
     KConfigGroup cg(&m_config, QStringLiteral(CFG_GROUP));
 
@@ -210,16 +210,16 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
                                            widget()->style()->pixelMetric(QStyle::PM_LayoutTopMargin),
                                            widget()->style()->pixelMetric(QStyle::PM_LayoutRightMargin),
                                            widget()->style()->pixelMetric(QStyle::PM_LayoutBottomMargin));
-    QPushButton *createGroup = new CPushButton(KGuiItem(QString(), "list-add", i18n("Create New Group…")), groupWidget);
+    QPushButton *createGroup = new CPushButton(KGuiItem(QString(), u"list-add"_s, i18n("Create New Group…")), groupWidget);
     groupsButtonLayout->addWidget(createGroup);
 
-    m_deleteGroupControl = new CPushButton(KGuiItem(QString(), "list-remove", i18n("Remove Group…")), groupWidget);
+    m_deleteGroupControl = new CPushButton(KGuiItem(QString(), u"list-remove"_s, i18n("Remove Group…")), groupWidget);
     groupsButtonLayout->addWidget(m_deleteGroupControl);
 
-    m_enableGroupControl = new CPushButton(KGuiItem(QString(), "font-enable", i18n("Enable Fonts in Group…")), groupWidget);
+    m_enableGroupControl = new CPushButton(KGuiItem(QString(), u"font-enable"_s, i18n("Enable Fonts in Group…")), groupWidget);
     groupsButtonLayout->addWidget(m_enableGroupControl);
 
-    m_disableGroupControl = new CPushButton(KGuiItem(QString(), "font-disable", i18n("Disable Fonts in Group…")), groupWidget);
+    m_disableGroupControl = new CPushButton(KGuiItem(QString(), u"font-disable"_s, i18n("Disable Fonts in Group…")), groupWidget);
     groupsButtonLayout->addWidget(m_disableGroupControl);
 
     groupsLayout->addLayout(groupsButtonLayout);
@@ -256,13 +256,14 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     m_fontListView = new CFontListView(m_previewSplitter, m_fontList);
     m_fontListView->setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
 
-    m_scanDuplicateFontsControl = new CPushButton(KGuiItem(i18n("Find Duplicates…"), "edit-duplicate", i18n("Scan for Duplicate Fonts…")), fontControlWidget);
+    m_scanDuplicateFontsControl =
+        new CPushButton(KGuiItem(i18n("Find Duplicates…"), u"edit-duplicate"_s, i18n("Scan for Duplicate Fonts…")), fontControlWidget);
 
-    m_addFontControl = new CPushButton(KGuiItem(i18n("Install from File…"), "document-import", i18n("Install fonts from a local file")), fontControlWidget);
+    m_addFontControl = new CPushButton(KGuiItem(i18n("Install from File…"), u"document-import"_s, i18n("Install fonts from a local file")), fontControlWidget);
     m_getNewFontsControl = new KNSWidgets::Button(i18n("Get New Fonts…"), QStringLiteral("kfontinst.knsrc"), widget());
     m_getNewFontsControl->setToolTip(i18n("Download new fonts"));
 
-    m_deleteFontControl = new CPushButton(KGuiItem(QString(), "edit-delete", i18n("Delete Selected Fonts…")), fontControlWidget);
+    m_deleteFontControl = new CPushButton(KGuiItem(QString(), u"edit-delete"_s, i18n("Delete Selected Fonts…")), fontControlWidget);
 
     m_previewSplitter->addWidget(m_previewWidget);
     m_previewSplitter->setCollapsible(1, true);
@@ -332,7 +333,7 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
     m_previewMenu->addSeparator();
     CPreviewSelectAction *prevSel = new CPreviewSelectAction(m_previewMenu);
     m_previewMenu->addAction(prevSel);
-    QAction *changeTextAct = new QAction(QIcon::fromTheme("edit-rename"), i18n("Change Preview Text…"), this);
+    QAction *changeTextAct = new QAction(QIcon::fromTheme(u"edit-rename"_s), i18n("Change Preview Text…"), this);
     m_previewMenu->addAction(changeTextAct),
 
         m_previewListMenu = new QMenu(m_previewList);
@@ -551,23 +552,21 @@ void CKCmFontInst::print(bool all)
                             str << (*it).family << Qt::endl << (*it).styleInfo << Qt::endl;
                         }
 
-                        args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)widget()->window()->winId(), 0, 16) << "--qwindowtitle" << title
-                             << "--qwindowicon"
-                             << "preferences-desktop-font-installer"
-                             << "--size" << QString::number(constSizes[dlg.chosenSize() < 6 ? dlg.chosenSize() : 2]) << "--listfile" << tmpFile.fileName()
-                             << "--deletefile";
+                        args << u"--embed"_s << QStringLiteral("0x%1").arg((unsigned int)widget()->window()->winId(), 0, 16) << u"--qwindowtitle"_s << title
+                             << u"--qwindowicon"_s << u"preferences-desktop-font-installer"_s << u"--size"_s
+                             << QString::number(constSizes[dlg.chosenSize() < 6 ? dlg.chosenSize() : 2]) << u"--listfile"_s << tmpFile.fileName()
+                             << u"--deletefile"_s;
                     } else {
                         KMessageBox::error(widget(), i18n("Failed to save list of fonts to print."));
                         startProc = false;
                     }
                 } else {
-                    args << "--embed" << QStringLiteral("0x%1").arg((unsigned int)widget()->window()->winId(), 0, 16) << "--qwindowtitle" << title
-                         << "--qwindowicon"
-                         << "preferences-desktop-font-installer"
-                         << "--size" << QString::number(constSizes[dlg.chosenSize() < 6 ? dlg.chosenSize() : 2]);
+                    args << u"--embed"_s << QStringLiteral("0x%1").arg((unsigned int)widget()->window()->winId(), 0, 16) << u"--qwindowtitle"_s << title
+                         << u"--qwindowicon"_s << u"preferences-desktop-font-installer"_s << u"--size"_s
+                         << QString::number(constSizes[dlg.chosenSize() < 6 ? dlg.chosenSize() : 2]);
 
                     for (; it != end; ++it) {
-                        args << "--pfont" << QString((*it).family.toUtf8() + ',' + QString().setNum((*it).styleInfo));
+                        args << u"--pfont"_s << QString((*it).family + u',' + QString().setNum((*it).styleInfo));
                     }
                 }
 
@@ -892,8 +891,8 @@ void CKCmFontInst::setStatusBar()
         QString text(i18np("1 Font", "%1 Fonts", enabled + disabled + partial));
 
         if (disabled || partial) {
-            text += QLatin1String(" (<img src=\"%1\" />%2").arg(KIconLoader::global()->iconPath("dialog-ok", -KIconLoader::SizeSmall)).arg(enabled)
-                + QLatin1String(" <img src=\"%1\" />%2").arg(KIconLoader::global()->iconPath("dialog-cancel", -KIconLoader::SizeSmall)).arg(disabled);
+            text += QLatin1String(" (<img src=\"%1\" />%2").arg(KIconLoader::global()->iconPath(u"dialog-ok"_s, -KIconLoader::SizeSmall)).arg(enabled)
+                + QLatin1String(" <img src=\"%1\" />%2").arg(KIconLoader::global()->iconPath(u"dialog-cancel"_s, -KIconLoader::SizeSmall)).arg(disabled);
             if (partial) {
                 text += QLatin1String(" <img src=\"%1\" />%2").arg(partialIcon()).arg(partial);
             }
@@ -1129,8 +1128,8 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
                                             "contained within group \'<b>%2</b>\'?</p>",
                                             fonts.first(), grp),
                        enable ? i18n("Enable Font") : i18n("Disable Font"),
-                       enable ? KGuiItem(i18n("Enable"), "font-enable", i18n("Enable Font"))
-                              : KGuiItem(i18n("Disable"), "font-disable", i18n("Disable Font")));
+                       enable ? KGuiItem(i18n("Enable"), u"font-enable"_s, i18n("Enable Font"))
+                              : KGuiItem(i18n("Disable"), u"font-disable"_s, i18n("Disable Font")));
             break;
         default:
             doIt = KMessageBox::Continue==KMessageBox::warningContinueCancelList(widget(),
@@ -1153,9 +1152,9 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
                                              urls.count(), grp),
                        fonts,
                        enable ? i18n("Enable Fonts") : i18n("Disable Fonts"),
-                       enable ? KGuiItem(i18n("Enable"), "font-enable", i18n("Enable Fonts"))
-                              : KGuiItem(i18n("Disable"), "font-disable", i18n("Disable Fonts")));
-        // clang-format on
+                       enable ? KGuiItem(i18n("Enable"), u"font-enable"_s, i18n("Enable Fonts"))
+                              : KGuiItem(i18n("Disable"), u"font-disable"_s, i18n("Disable Fonts")));
+            // clang-format on
     }
 
     if (doIt) {

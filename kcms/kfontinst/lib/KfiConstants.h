@@ -39,7 +39,7 @@ constexpr const auto KFI_AUTHINF_USER = kli18n("Administrator");
 inline constexpr QLatin1String KFI_UI_CFG_FILE(KFI_NAME "uirc");
 
 inline constexpr QLatin1String KFI_ROOT_CFG_DIR("/etc/fonts/");
-#define KFI_DEFAULT_SYS_FONTS_FOLDER "/usr/local/share/fonts/"
+inline constexpr QLatin1String KFI_DEFAULT_SYS_FONTS_FOLDER("/usr/local/share/fonts/");
 
 #define KFI_NO_STYLE_INFO 0xFFFFFFFF
 #define KFI_NAME_KEY "Name="

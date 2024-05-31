@@ -22,6 +22,8 @@
 
 KAUTH_HELPER_MAIN("org.kde.fontinst", KFI::Helper)
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 static Folder theFontFolder;
@@ -89,23 +91,23 @@ Helper::~Helper()
 ActionReply Helper::manage(const QVariantMap &args)
 {
     int result = KIO::ERR_UNSUPPORTED_ACTION;
-    QString method = args["method"].toString();
+    QString method = args[u"method"_s].toString();
 
     // qDebug() << method;
 
-    if ("install" == method) {
+    if (u"install" == method) {
         result = install(args);
-    } else if ("uninstall" == method) {
+    } else if (u"uninstall" == method) {
         result = uninstall(args);
-    } else if ("move" == method) {
+    } else if (u"move" == method) {
         result = move(args);
-    } else if ("toggle" == method) {
+    } else if (u"toggle" == method) {
         result = toggle(args);
-    } else if ("removeFile" == method) {
+    } else if (u"removeFile" == method) {
         result = removeFile(args);
-    } else if ("reconfigure" == method) {
+    } else if (u"reconfigure" == method) {
         result = reconfigure();
-    } else if ("saveDisabled" == method) {
+    } else if (u"saveDisabled" == method) {
         result = saveDisabled();
     } else {
         // qDebug() << "Uknown action";
@@ -122,9 +124,9 @@ ActionReply Helper::manage(const QVariantMap &args)
 
 int Helper::install(const QVariantMap &args)
 {
-    QString file(args["file"].toString()), name(args["name"].toString()), destFolder(args["destFolder"].toString());
-    bool createAfm(args["createAfm"].toBool());
-    int type(args["type"].toInt());
+    QString file(args[u"file"_s].toString()), name(args[u"name"_s].toString()), destFolder(args[u"destFolder"_s].toString());
+    bool createAfm(args[u"createAfm"_s].toBool());
+    int type(args[u"type"_s].toInt());
 
     // qDebug() << file << destFolder << name << createAfm;
 
@@ -151,7 +153,7 @@ int Helper::install(const QVariantMap &args)
 
 int Helper::uninstall(const QVariantMap &args)
 {
-    QStringList files(args["files"].toStringList());
+    QStringList files(args[u"files"_s].toStringList());
     int result = checkWriteAction(files);
 
     if (FontInst::STATUS_OK == result) {
@@ -192,10 +194,10 @@ static bool renameFontFile(const QString &from, const QString &to, int uid = -1,
 
 int Helper::move(const QVariantMap &args)
 {
-    QStringList files(args["files"].toStringList());
-    bool toSystem(args["toSystem"].toBool());
-    QString dest(args["dest"].toString());
-    int uid(args["uid"].toInt()), gid(args["gid"].toInt());
+    QStringList files(args[u"files"_s].toStringList());
+    bool toSystem(args[u"toSystem"_s].toBool());
+    QString dest(args[u"dest"_s].toString());
+    int uid(args[u"uid"_s].toInt()), gid(args[u"gid"_s].toInt());
 
     // qDebug() << files << dest << toSystem;
 
@@ -265,9 +267,9 @@ int Helper::move(const QVariantMap &args)
 int Helper::toggle(const QVariantMap &args)
 {
     QDomDocument doc;
-    doc.setContent(args["xml"].toString());
+    doc.setContent(args[u"xml"_s].toString());
     Family font(doc.documentElement(), true);
-    bool enable(args["enable"].toBool());
+    bool enable(args[u"enable"_s].toBool());
 
     // qDebug() << font.name() << enable;
 
@@ -359,7 +361,7 @@ int Helper::toggle(const QVariantMap &args)
 
 int Helper::removeFile(const QVariantMap &args)
 {
-    QString file(args["file"].toString());
+    QString file(args[u"file"_s].toString());
 
     // qDebug() << file;
 

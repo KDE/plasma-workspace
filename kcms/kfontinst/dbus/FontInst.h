@@ -15,7 +15,7 @@
 #include <QSet>
 #include <QStringList>
 
-#define FONTINST_PATH "/FontInst"
+inline constexpr QLatin1StringView FONTINST_PATH("/FontInst");
 
 class QTimer;
 
@@ -66,7 +66,7 @@ public:
             QStringList services(reply.value());
             QStringList::ConstIterator it(services.begin()), end(services.end());
             for (; it != end; ++it)
-                if ((*it) == OrgKdeFontinstInterface::staticInterfaceName())
+                if ((*it) == QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()))
                     return true;
         }
         return false;

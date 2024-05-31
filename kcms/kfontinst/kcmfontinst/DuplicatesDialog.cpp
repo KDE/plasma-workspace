@@ -127,7 +127,7 @@ void CDuplicatesDialog::scanFinished()
                     QFileInfo info(*fit);
                     details.clear();
                     details.append(*fit);
-                    details.append("");
+                    details.append(QString());
                     details.append(KFormat().formatByteSize(info.size()));
                     details.append(QLocale().toString(info.birthTime()));
                     if (info.isSymLink()) {
@@ -140,7 +140,7 @@ void CDuplicatesDialog::scanFinished()
                         tt++;
                     }
                 }
-                top->setData(COL_FILE, Qt::DecorationRole, QIcon::fromTheme(t1 > tt ? "application-x-font-type1" : "application-x-font-ttf"));
+                top->setData(COL_FILE, Qt::DecorationRole, QIcon::fromTheme(t1 > tt ? u"application-x-font-type1"_s : u"application-x-font-ttf"_s));
                 top->setFont(COL_FILE, boldFont);
             }
 
@@ -364,7 +364,7 @@ void CFontFileList::fileDuplicates(const QString &folder, const QSet<TFile> &fil
 
 inline void markItem(QTreeWidgetItem *item)
 {
-    item->setData(COL_TRASH, Qt::DecorationRole, QIcon::fromTheme("list-remove"));
+    item->setData(COL_TRASH, Qt::DecorationRole, QIcon::fromTheme(u"list-remove"_s));
 }
 
 inline void unmarkItem(QTreeWidgetItem *item)
@@ -382,12 +382,12 @@ CFontFileListView::CFontFileListView(QWidget *parent)
 {
     QStringList headers;
     headers.append(i18n("Font/File"));
-    headers.append("");
+    headers.append(QString());
     headers.append(i18n("Size"));
     headers.append(i18n("Date"));
     headers.append(i18n("Links To"));
     setHeaderLabels(headers);
-    headerItem()->setData(COL_TRASH, Qt::DecorationRole, QIcon::fromTheme("user-trash"));
+    headerItem()->setData(COL_TRASH, Qt::DecorationRole, QIcon::fromTheme(u"user-trash"_s));
     setSizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::MinimumExpanding);
     setSelectionMode(ExtendedSelection);
     sortByColumn(COL_FILE, Qt::AscendingOrder);
@@ -398,12 +398,12 @@ CFontFileListView::CFontFileListView(QWidget *parent)
 
     m_menu = new QMenu(this);
     if (!Misc::app(KFI_VIEWER).isEmpty()) {
-        m_menu->addAction(QIcon::fromTheme("kfontview"), i18n("Open in Font Viewer"), this, &CFontFileListView::openViewer);
+        m_menu->addAction(QIcon::fromTheme(u"kfontview"_s), i18n("Open in Font Viewer"), this, &CFontFileListView::openViewer);
     }
-    m_menu->addAction(QIcon::fromTheme("document-properties"), i18n("Properties"), this, &CFontFileListView::properties);
+    m_menu->addAction(QIcon::fromTheme(u"document-properties"_s), i18n("Properties"), this, &CFontFileListView::properties);
     m_menu->addSeparator();
     m_unMarkAct = m_menu->addAction(i18n("Unmark for Deletion"), this, &CFontFileListView::unmark);
-    m_markAct = m_menu->addAction(QIcon::fromTheme("edit-delete"), i18n("Mark for Deletion"), this, &CFontFileListView::mark);
+    m_markAct = m_menu->addAction(QIcon::fromTheme(u"edit-delete"_s), i18n("Mark for Deletion"), this, &CFontFileListView::mark);
 
     connect(this, SIGNAL(itemSelectionChanged()), SLOT(selectionChanged()));
     connect(this, SIGNAL(itemClicked(QTreeWidgetItem *, int)), SLOT(clicked(QTreeWidgetItem *, int)));

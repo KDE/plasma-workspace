@@ -47,7 +47,7 @@ namespace KFI
 {
 static QString getFamily(const QString &font)
 {
-    int commaPos = font.lastIndexOf(',');
+    int commaPos = font.lastIndexOf(u',');
     return -1 == commaPos ? font : font.left(commaPos);
 }
 
@@ -267,8 +267,8 @@ void CFontViewPart::timeout()
                                 QMimeDatabase db;
                                 QString mime(db.mimeTypeForFile(m_tempDir->filePath(entry->name())).name());
 
-                                if (mime == "font/ttf" || mime == "font/otf" || mime == "application/x-font-ttf" || mime == "application/x-font-otf"
-                                    || mime == "application/x-font-type1") {
+                                if (mime == u"font/ttf" || mime == u"font/otf" || mime == u"application/x-font-ttf" || mime == u"application/x-font-otf"
+                                    || mime == u"application/x-font-type1") {
                                     fontFile = m_tempDir->filePath(entry->name());
                                     break;
                                 } else {
@@ -454,7 +454,7 @@ void CFontViewPart::showFace(int face)
 void CFontViewPart::checkInstallable()
 {
     if (m_fontDetails.family.isEmpty()) {
-        if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName())) {
+        if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()))) {
             QProcess::startDetached(QLatin1String(KFONTINST_LIB_EXEC_DIR "/fontinst"), QStringList());
         }
         m_installButton->setEnabled(false);

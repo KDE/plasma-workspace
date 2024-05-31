@@ -72,7 +72,7 @@ QString CJobRunner::folderName(bool sys)
 
 void CJobRunner::startDbusService()
 {
-    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(OrgKdeFontinstInterface::staticInterfaceName())) {
+    if (!QDBusConnection::sessionBus().interface()->isServiceRegistered(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()))) {
         const QString fontinst = QStringLiteral(KFONTINST_LIB_EXEC_DIR "/fontinst");
         qDebug() << "Service " << OrgKdeFontinstInterface::staticInterfaceName() << " not registered, starting" << fontinst;
         QProcess::startDetached(fontinst, QStringList());
@@ -86,7 +86,7 @@ static void decode(const QUrl &url, Misc::TFont &font, bool &system)
 {
     font = FC::decode(url);
     QUrlQuery query(url);
-    system = (query.hasQueryItem("sys") && query.queryItemValue("sys") == QLatin1String("true"));
+    system = (query.hasQueryItem(u"sys"_s) && query.queryItemValue(u"sys"_s) == QLatin1String("true"));
 }
 
 QUrl CJobRunner::encode(const QString &family, quint32 style, bool system)
@@ -113,7 +113,7 @@ enum Response {
     RESP_CANCEL,
 };
 
-static void addIcon(QGridLayout *layout, QFrame *page, const char *iconName, int iconSize)
+static void addIcon(QGridLayout *layout, QFrame *page, const QString &iconName, int iconSize)
 {
     QLabel *icon = new QLabel(page);
     icon->setPixmap(QIcon::fromTheme(iconName).pixmap(iconSize));
@@ -167,7 +167,7 @@ CJobRunner::CJobRunner(QWidget *parent)
     layout = new QGridLayout(page);
     m_skipLabel = new QLabel(page);
     m_skipLabel->setWordWrap(true);
-    addIcon(layout, page, "dialog-error", iconSize);
+    addIcon(layout, page, u"dialog-error"_s, iconSize);
     layout->addWidget(m_skipLabel, 0, 1);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
     m_stack->insertWidget(PAGE_SKIP, page);
@@ -176,7 +176,7 @@ CJobRunner::CJobRunner(QWidget *parent)
     layout = new QGridLayout(page);
     m_errorLabel = new QLabel(page);
     m_errorLabel->setWordWrap(true);
-    addIcon(layout, page, "dialog-error", iconSize);
+    addIcon(layout, page, u"dialog-error"_s, iconSize);
     layout->addWidget(m_errorLabel, 0, 1);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
     m_stack->insertWidget(PAGE_ERROR, page);
@@ -185,7 +185,7 @@ CJobRunner::CJobRunner(QWidget *parent)
     layout = new QGridLayout(page);
     QLabel *cancelLabel = new QLabel(i18n("<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"), page);
     cancelLabel->setWordWrap(true);
-    addIcon(layout, page, "dialog-warning", iconSize);
+    addIcon(layout, page, u"dialog-warning"_s, iconSize);
     layout->addWidget(cancelLabel, 0, 1);
     layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
     m_stack->insertWidget(PAGE_CANCEL, page);
@@ -200,7 +200,7 @@ CJobRunner::CJobRunner(QWidget *parent)
                                                 "restarted in order for any changes to be noticed.</p>"),
                                            page);
         finishedLabel->setWordWrap(true);
-        addIcon(layout, page, "dialog-information", iconSize);
+        addIcon(layout, page, u"dialog-information"_s, iconSize);
         layout->addWidget(finishedLabel, 0, 1);
         layout->addItem(new QSpacerItem(0, 0, QSizePolicy::Fixed, QSizePolicy::Expanding), 1, 0);
         m_dontShowFinishedMsg = new QCheckBox(i18n("Do not show this message again"), page);
@@ -229,7 +229,7 @@ CJobRunner::~CJobRunner()
 void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmAndPfm)
 {
     QString ext(url.path());
-    int dotPos(ext.lastIndexOf('.'));
+    int dotPos(ext.lastIndexOf(u'.'));
     bool check(false);
 
     if (-1 == dotPos) { // Hmm, no extension - check anyway...
@@ -237,7 +237,7 @@ void CJobRunner::getAssociatedUrls(const QUrl &url, QList<QUrl> &list, bool afmA
     } else // Cool, got an extension - see if it is a Type1 font...
     {
         ext = ext.mid(dotPos + 1);
-        check = 0 == ext.compare("pfa", Qt::CaseInsensitive) || 0 == ext.compare("pfb", Qt::CaseInsensitive);
+        check = 0 == ext.compare(u"pfa", Qt::CaseInsensitive) || 0 == ext.compare(u"pfb", Qt::CaseInsensitive);
     }
 
     if (check) {
@@ -729,7 +729,7 @@ CJobRunner::Item::Item(const QUrl &u, const QString &n, bool dis)
                                                                                 : OTHER_FONT;
 
     if (OTHER_FONT != type) {
-        int pos(fileName.lastIndexOf('.'));
+        int pos(fileName.lastIndexOf(u'.'));
 
         if (-1 != pos) {
             fileName.truncate(pos);

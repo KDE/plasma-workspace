@@ -8,12 +8,14 @@
 #include <QProcess>
 #include <stdio.h>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 // key: 0(i)(s)
 static int getInt(const QString &str)
 {
-    int rv = KFI_NULL_SETTING, start = str.lastIndexOf(':') + 1, end = str.lastIndexOf("(i)(s)");
+    int rv = KFI_NULL_SETTING, start = str.lastIndexOf(u':') + 1, end = str.lastIndexOf(u"(i)(s)");
 
     if (end > start) {
         rv = str.mid(start, end - start).trimmed().toInt();
@@ -39,19 +41,19 @@ void CFcQuery::run(const QString &query)
         m_proc = new QProcess(this);
     }
 
-    args << "-v" << query;
+    args << u"-v"_s << query;
 
     connect(m_proc, SIGNAL(finished(int, QProcess::ExitStatus)), SLOT(procExited()));
     connect(m_proc, &QProcess::readyReadStandardOutput, this, &CFcQuery::data);
 
-    m_proc->start("fc-match", args);
+    m_proc->start(u"fc-match"_s, args);
 }
 
 void CFcQuery::procExited()
 {
     QString family;
     int weight(KFI_NULL_SETTING), slant(KFI_NULL_SETTING), width(KFI_NULL_SETTING);
-    QStringList results(QString::fromUtf8(m_buffer, m_buffer.length()).split(QLatin1Char('\n')));
+    QStringList results(QString::fromUtf8(QByteArrayView(m_buffer.constData(), m_buffer.length())).split(QLatin1Char('\n')));
 
     if (!results.isEmpty()) {
         QStringList::ConstIterator it(results.begin()), end(results.end());
@@ -59,25 +61,25 @@ void CFcQuery::procExited()
         for (; it != end; ++it) {
             QString line((*it).trimmed());
 
-            if (0 == line.indexOf("file:")) // file: "Wibble"(s)
+            if (0 == line.indexOf(u"file:")) // file: "Wibble"(s)
             {
-                int endPos = line.indexOf("\"(s)");
+                int endPos = line.indexOf(u"\"(s)");
 
                 if (-1 != endPos) {
                     m_file = line.mid(7, endPos - 7);
                 }
-            } else if (0 == line.indexOf("family:")) // family: "Wibble"(s)
+            } else if (0 == line.indexOf(u"family:")) // family: "Wibble"(s)
             {
-                int endPos = line.indexOf("\"(s)");
+                int endPos = line.indexOf(u"\"(s)");
 
                 if (-1 != endPos) {
                     family = line.mid(9, endPos - 9);
                 }
-            } else if (0 == line.indexOf("slant:")) { // slant: 0(i)(s)
+            } else if (0 == line.indexOf(u"slant:")) { // slant: 0(i)(s)
                 slant = getInt(line);
-            } else if (0 == line.indexOf("weight:")) { // weight: 0(i)(s)
+            } else if (0 == line.indexOf(u"weight:")) { // weight: 0(i)(s)
                 weight = getInt(line);
-            } else if (0 == line.indexOf("width:")) { // width: 0(i)(s)
+            } else if (0 == line.indexOf(u"width:")) { // width: 0(i)(s)
                 width = getInt(line);
             }
         }

@@ -27,6 +27,8 @@
 #include <unistd.h>
 #include <utime.h>
 
+using namespace Qt::StringLiterals;
+
 namespace KFI
 {
 #define GROUPS_DOC "groups"
@@ -124,8 +126,8 @@ void CGroupListItem::updateStatus(QSet<QString> &enabled, QSet<QString> &disable
 
 bool CGroupListItem::load(QDomElement &elem)
 {
-    if (elem.hasAttribute(NAME_ATTR)) {
-        m_name = elem.attribute(NAME_ATTR);
+    if (elem.hasAttribute(QLatin1String(NAME_ATTR))) {
+        m_name = elem.attribute(QLatin1String(NAME_ATTR));
         addFamilies(elem);
         return true;
     }
@@ -139,7 +141,7 @@ bool CGroupListItem::addFamilies(QDomElement &elem)
     for (QDomNode n = elem.firstChild(); !n.isNull(); n = n.nextSibling()) {
         QDomElement ent = n.toElement();
 
-        if (FAMILY_TAG == ent.tagName()) {
+        if (QLatin1String(FAMILY_TAG) == ent.tagName()) {
             m_families.insert(ent.text());
         }
     }
@@ -178,7 +180,7 @@ CGroupList::CGroupList(QWidget *parent)
     }
     m_specialGroups[CGroupListItem::UNCLASSIFIED] = new CGroupListItem(CGroupListItem::UNCLASSIFIED, this);
     // Locate groups.xml file - normall will be ~/.config/fontgroups.xml
-    QString path(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + '/');
+    QString path(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u'/');
 
     if (!Misc::dExists(path)) {
         Misc::createDir(path);
@@ -267,36 +269,36 @@ QVariant CGroupList::data(const QModelIndex &index, int role) const
                 if (grp->highlighted()) {
                     switch (grp->type()) {
                     case CGroupListItem::ALL: // Removing from a group
-                        return QIcon::fromTheme("list-remove");
+                        return QIcon::fromTheme(u"list-remove"_s);
                     case CGroupListItem::PERSONAL: // Copying/moving
                     case CGroupListItem::SYSTEM: // Copying/moving
-                        return QIcon::fromTheme(Qt::LeftToRight == QApplication::layoutDirection() ? "go-next" : "go-previous");
+                        return QIcon::fromTheme(Qt::LeftToRight == QApplication::layoutDirection() ? u"go-next"_s : u"go-previous"_s);
                     case CGroupListItem::CUSTOM: // Adding to a group
-                        return QIcon::fromTheme("list-add");
+                        return QIcon::fromTheme(u"list-add"_s);
                     default:
                         break;
                     }
                 } else {
                     switch (grp->type()) {
                     case CGroupListItem::ALL:
-                        return QIcon::fromTheme("font");
+                        return QIcon::fromTheme(u"font"_s);
                     case CGroupListItem::PERSONAL:
-                        return QIcon::fromTheme("user-identity");
+                        return QIcon::fromTheme(u"user-identity"_s);
                     case CGroupListItem::SYSTEM:
-                        return QIcon::fromTheme("computer");
+                        return QIcon::fromTheme(u"computer"_s);
                     case CGroupListItem::UNCLASSIFIED:
-                        return QIcon::fromTheme("fontstatus");
+                        return QIcon::fromTheme(u"fontstatus"_s);
                     case CGroupListItem::CUSTOM:
                         if (0 == grp->families().count()) {
-                            return QIcon::fromTheme("image-missing");
+                            return QIcon::fromTheme(u"image-missing"_s);
                         }
                         switch (grp->status()) {
                         case CFamilyItem::PARTIAL:
-                            return QIcon::fromTheme("dialog-ok");
+                            return QIcon::fromTheme(u"dialog-ok"_s);
                         case CFamilyItem::ENABLED:
-                            return QIcon::fromTheme("dialog-ok");
+                            return QIcon::fromTheme(u"dialog-ok"_s);
                         case CFamilyItem::DISABLED:
-                            return QIcon::fromTheme("dialog-cancel");
+                            return QIcon::fromTheme(u"dialog-cancel"_s);
                         }
                         break;
                     }
@@ -415,8 +417,8 @@ bool CGroupList::load(const QString &file)
             for (QDomNode n = doc.documentElement().firstChild(); !n.isNull(); n = n.nextSibling()) {
                 QDomElement e = n.toElement();
 
-                if (GROUP_TAG == e.tagName() && e.hasAttribute(NAME_ATTR)) {
-                    QString name(e.attribute(NAME_ATTR));
+                if (QLatin1String(GROUP_TAG) == e.tagName() && e.hasAttribute(QLatin1String(NAME_ATTR))) {
+                    QString name(e.attribute(QLatin1String(NAME_ATTR)));
 
                     CGroupListItem *item = find(name);
 
@@ -537,7 +539,7 @@ bool CGroupList::removeGroup(const QModelIndex &idx)
                                                            "the actual fonts.</i></p>",
                                                            grp->name()),
                                                       i18n("Remove Group"),
-                                                      KGuiItem(i18n("Remove"), "list-remove", i18n("Remove group")))) {
+                                                      KGuiItem(i18n("Remove"), u"list-remove"_s, i18n("Remove group")))) {
             m_modified = true;
             m_groups.removeAll(grp);
 
@@ -784,21 +786,21 @@ CGroupListView::CGroupListView(QWidget *parent, CGroupList *model)
     setRootIsDecorated(false);
     m_menu = new QMenu(this);
 
-    m_deleteAct = m_menu->addAction(QIcon::fromTheme("list-remove"), i18n("Remove"), this, &CGroupListView::del);
+    m_deleteAct = m_menu->addAction(QIcon::fromTheme(u"list-remove"_s), i18n("Remove"), this, &CGroupListView::del);
     m_menu->addSeparator();
-    m_enableAct = m_menu->addAction(QIcon::fromTheme("font-enable"), i18n("Enable"), this, &CGroupListView::enable);
-    m_disableAct = m_menu->addAction(QIcon::fromTheme("font-disable"), i18n("Disable"), this, &CGroupListView::disable);
+    m_enableAct = m_menu->addAction(QIcon::fromTheme(u"font-enable"_s), i18n("Enable"), this, &CGroupListView::enable);
+    m_disableAct = m_menu->addAction(QIcon::fromTheme(u"font-disable"_s), i18n("Disable"), this, &CGroupListView::disable);
     m_menu->addSeparator();
-    m_renameAct = m_menu->addAction(QIcon::fromTheme("edit-rename"), i18n("Rename…"), this, &CGroupListView::rename);
+    m_renameAct = m_menu->addAction(QIcon::fromTheme(u"edit-rename"_s), i18n("Rename…"), this, &CGroupListView::rename);
 
     if (!Misc::app(KFI_PRINTER).isEmpty()) {
         m_menu->addSeparator();
-        m_printAct = m_menu->addAction(QIcon::fromTheme("document-print"), i18n("Print…"), this, &CGroupListView::print);
+        m_printAct = m_menu->addAction(QIcon::fromTheme(u"document-print"_s), i18n("Print…"), this, &CGroupListView::print);
     } else {
         m_printAct = nullptr;
     }
     m_menu->addSeparator();
-    m_exportAct = m_menu->addAction(QIcon::fromTheme("document-export"), i18n("Export…"), this, &CGroupListView::zip);
+    m_exportAct = m_menu->addAction(QIcon::fromTheme(u"document-export"_s), i18n("Export…"), this, &CGroupListView::zip);
 
     setWhatsThis(model->whatsThis());
     header()->setWhatsThis(whatsThis());

@@ -28,6 +28,8 @@
 #include <sys/stat.h>
 #include <unistd.h>
 
+using namespace Qt::StringLiterals;
+
 static constexpr int s_MAX_IPC_SIZE = 1024 * 32;
 
 static constexpr int constReconfigTimeout = 10;
@@ -62,12 +64,12 @@ namespace KFI
 {
 inline bool isSysFolder(const QString &folder)
 {
-    return KFI_KIO_FONTS_SYS.toString() == folder || KFI_KIO_FONTS_SYS.untranslatedText() == folder;
+    return KFI_KIO_FONTS_SYS.toString() == folder || QLatin1String(KFI_KIO_FONTS_SYS.untranslatedText()) == folder;
 }
 
 inline bool isUserFolder(const QString &folder)
 {
-    return KFI_KIO_FONTS_USER.toString() == folder || KFI_KIO_FONTS_USER.untranslatedText() == folder;
+    return KFI_KIO_FONTS_USER.toString() == folder || QLatin1String(KFI_KIO_FONTS_USER.untranslatedText()) == folder;
 }
 
 static CKioFonts::EFolder getFolder(const QStringList &list)
@@ -212,7 +214,7 @@ KIO::WorkerResult CKioFonts::put(const QUrl &url, int /*permissions*/, KIO::JobF
                                             url.toDisplayString()));
     } else {
         if (!m_tempDir) {
-            m_tempDir = new QTemporaryDir(QDir::tempPath() + QString::fromLatin1("/kio_fonts_") + QString::number(getpid()));
+            m_tempDir = new QTemporaryDir(QDir::tempPath() + u"/kio_fonts_" + QString::number(getpid()));
             m_tempDir->setAutoRemove(true);
         }
 
@@ -264,11 +266,11 @@ KIO::WorkerResult CKioFonts::get(const QUrl &url)
         // wont work. Therefore, when the thumbnail code asks for the font to download, just return
         // the family and style info for enabled fonts, and the filename for disabled fonts. This way
         // the font-thumbnail creator can read this and just ask Xft/fontconfig for the font data.
-        if ("1" == metaData("thumbnail")) {
+        if (u'1' == metaData(u"thumbnail"_s)) {
             QByteArray array;
             QTextStream stream(&array, QIODevice::WriteOnly);
 
-            Q_EMIT mimeType("text/plain");
+            Q_EMIT mimeType(u"text/plain"_s);
 
             bool hidden(true);
 
@@ -396,7 +398,7 @@ KIO::WorkerResult CKioFonts::get(const QUrl &url)
 
                         ::close(fd);
                         if (multiple) {
-                            ::unlink(realPathC);
+                            ::unlink(realPathC.constData());
                         }
                         return KIO::WorkerResult::fail(KIO::ERR_CANNOT_READ, url.toDisplayString());
                     }
@@ -419,7 +421,7 @@ KIO::WorkerResult CKioFonts::get(const QUrl &url)
             }
         }
         if (multiple) {
-            ::unlink(realPathC);
+            ::unlink(realPathC.constData());
         }
     } else {
         return KIO::WorkerResult::fail(KIO::ERR_CANNOT_READ, url.toDisplayString());
@@ -632,27 +634,27 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, const Family &family, const
         QByteArray cPath(QFile::encodeName(fontPath));
         QT_STATBUF buff;
 
-        if (-1 != QT_LSTAT(cPath, &buff)) {
+        if (-1 != QT_LSTAT(cPath.constData(), &buff)) {
             const QString fileName = Misc::getFile(fontPath);
             QString mt;
-            int dotPos(fileName.lastIndexOf('.'));
+            int dotPos(fileName.lastIndexOf(u'.'));
             QString extension(-1 == dotPos ? QString() : fileName.mid(dotPos));
 
-            if (QString::fromLatin1(".gz") == extension) {
-                dotPos = fileName.lastIndexOf('.', dotPos - 1);
+            if (QLatin1String(".gz") == extension) {
+                dotPos = fileName.lastIndexOf(u'.', dotPos - 1);
                 extension = -1 == dotPos ? QString() : fileName.mid(dotPos);
             }
 
-            if (QString::fromLatin1(".ttf") == extension || QString::fromLatin1(".ttc") == extension) {
-                mt = "application/x-font-ttf";
-            } else if (QString::fromLatin1(".otf") == extension) {
-                mt = "application/x-font-otf";
-            } else if (QString::fromLatin1(".pfa") == extension || QString::fromLatin1(".pfb") == extension) {
-                mt = "application/x-font-type1";
-            } else if (QString::fromLatin1(".pcf.gz") == extension || QString::fromLatin1(".pcf") == extension) {
-                mt = "application/x-font-pcf";
-            } else if (QString::fromLatin1(".bdf.gz") == extension || QString::fromLatin1(".bdf") == extension) {
-                mt = "application/x-font-bdf";
+            if (QLatin1String(".ttf") == extension || QLatin1String(".ttc") == extension) {
+                mt = u"application/x-font-ttf"_s;
+            } else if (QLatin1String(".otf") == extension) {
+                mt = u"application/x-font-otf"_s;
+            } else if (QLatin1String(".pfa") == extension || QLatin1String(".pfb") == extension) {
+                mt = u"application/x-font-type1"_s;
+            } else if (QLatin1String(".pcf.gz") == extension || QLatin1String(".pcf") == extension) {
+                mt = u"application/x-font-pcf"_s;
+            } else if (QLatin1String(".bdf.gz") == extension || QLatin1String(".bdf") == extension) {
+                mt = u"application/x-font-bdf"_s;
             } else {
                 // File extension check failed, use QMimeDatabase to read contents...
                 QMimeDatabase db;
@@ -660,7 +662,7 @@ bool CKioFonts::createUDSEntry(KIO::UDSEntry &entry, const Family &family, const
                 QStringList patterns = mime.globPatterns();
                 mt = mime.name();
                 if (patterns.size() > 0) {
-                    extension = (*patterns.begin()).remove("*");
+                    extension = (*patterns.begin()).remove(u'*');
                 }
             }
 

@@ -39,6 +39,7 @@
 // Enable the following to allow printing of non-installed fonts. Does not seem to work :-(
 // #define KFI_PRINT_APP_FONTS
 
+using namespace Qt::StringLiterals;
 using namespace KFI;
 
 static const int constMarginLineBefore = 1;
@@ -112,7 +113,7 @@ void CPrintThread::cancel()
 void CPrintThread::run()
 {
     QPainter painter;
-    QFont sans("sans", 12, QFont::Bold);
+    QFont sans(u"sans"_s, 12, QFont::Bold);
     bool changedFontEmbeddingSetting(false);
     QString str(CFcEngine(false).getPreviewString());
 
@@ -323,15 +324,15 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
 
     KLocalizedString::setApplicationDomain(KFI_CATALOGUE);
-    KAboutData aboutData("kfontprint",
+    KAboutData aboutData(u"kfontprint"_s,
                          i18n("Font Printer"),
-                         WORKSPACE_VERSION_STRING,
+                         QLatin1String(WORKSPACE_VERSION_STRING),
                          i18n("Simple font printer"),
                          KAboutLicense::GPL,
                          i18n("(C) Craig Drummond, 2007"));
     KAboutData::setApplicationData(aboutData);
 
-    QGuiApplication::setWindowIcon(QIcon::fromTheme("kfontprint"));
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(u"kfontprint"_s));
 
     QCommandLineParser parser;
     const QCommandLineOption embedOption(QLatin1String("embed"), i18n("Makes the dialog transient for an X app specified by winid"), QLatin1String("winid"));
@@ -386,7 +387,7 @@ int main(int argc, char **argv)
             for (; it != end; ++it) {
                 QString f(*it);
 
-                int commaPos = f.lastIndexOf(',');
+                int commaPos = f.lastIndexOf(u',');
 
                 if (-1 != commaPos) {
                     fonts.append(Misc::TFont(f.left(commaPos), f.mid(commaPos + 1).toUInt()));
