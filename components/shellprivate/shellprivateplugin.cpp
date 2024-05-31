@@ -14,8 +14,6 @@
 
 void PlasmaShellPrivatePlugin::registerTypes(const char *uri)
 {
-    Q_ASSERT(uri == QLatin1String("org.kde.plasma.private.shell"));
-
     qmlRegisterAnonymousType<Plasma::Containment>("", 1);
     qmlRegisterType<WidgetExplorer>(uri, 2, 0, "WidgetExplorer");
 }

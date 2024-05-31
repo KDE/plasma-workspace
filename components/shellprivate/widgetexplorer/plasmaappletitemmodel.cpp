@@ -27,7 +27,7 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     , m_runningCount(0)
     , m_local(false)
 {
-    const QString _f = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + info.pluginId() + '/';
+    const QString _f = QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR) + u"/plasmoids/" + info.pluginId() + u'/';
     QFileInfo dir(QStandardPaths::locate(QStandardPaths::QStandardPaths::GenericDataLocation, _f, QStandardPaths::LocateDirectory));
     m_local = dir.exists() && dir.isWritable();
 

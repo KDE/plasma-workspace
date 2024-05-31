@@ -37,6 +37,7 @@
 #include "config-workspace.h"
 #include "kcategorizeditemsviewmodels_p.h"
 
+using namespace Qt::StringLiterals;
 using namespace KActivities;
 using namespace KCategorizedItemsViewModels;
 using namespace Plasma;
@@ -132,7 +133,7 @@ QString readTranslatedCategory(const QString &category, const QString &plugin)
         kli18nc("applet category", "Tasks"),
     };
     const auto it = std::find_if(possibleTranslatslations.begin(), possibleTranslatslations.end(), [&category](const KLazyLocalizedString &str) {
-        return category == str.untranslatedText();
+        return category == QLatin1String(str.untranslatedText());
     });
     if (it == possibleTranslatslations.cend()) {
         qDebug() << category << "from" << plugin << "is not a known category that can be translated ";
@@ -461,7 +462,7 @@ Plasma::Corona *WidgetExplorer::corona() const
 
 void WidgetExplorer::addApplet(const QString &pluginName)
 {
-    const QString p = PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/" + pluginName;
+    const QString p = QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR) + u"/plasmoids/" + pluginName;
     qWarning() << "-------->  load applet: " << pluginName << " relpath: " << p;
 
     QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, p, QStandardPaths::LocateDirectory);
@@ -499,7 +500,7 @@ void WidgetExplorer::downloadWidgets()
 void WidgetExplorer::openWidgetFile()
 {
     QFileDialog *dialog = new QFileDialog;
-    dialog->setMimeTypeFilters({"application/x-plasma"});
+    dialog->setMimeTypeFilters({u"application/x-plasma"_s});
     dialog->setWindowTitle(i18n("Select Plasmoid File"));
     dialog->setFileMode(QFileDialog::ExistingFile);
     dialog->setAttribute(Qt::WA_DeleteOnClose, true);
@@ -526,8 +527,8 @@ void WidgetExplorer::openWidgetFile()
 
 void WidgetExplorer::uninstall(const QString &pluginName)
 {
-    static const QString packageRoot =
-        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/') + PLASMA_RELATIVE_DATA_INSTALL_DIR "/plasmoids/";
+    static const QString packageRoot = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1Char('/')
+        + QStringLiteral(PLASMA_RELATIVE_DATA_INSTALL_DIR) + u"/plasmoids/";
     KPackage::PackageJob *job = KPackage::PackageJob::uninstall(QStringLiteral("Plasma/Applet"), pluginName, packageRoot);
     // This removes folders of packages that are *not* valid so the package job can't uninstall them
     // This is a bit dangerous so eventually we can drop this when we drop support for uninstalling plasma5 plasmoids
