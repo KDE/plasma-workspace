@@ -625,7 +625,3 @@ msgstr "Вашия акаунт"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Други акаунти"
-
-#~ msgctxt "@action:button 'all' refers to fingerprints"
-#~ msgid "Clear All"
-#~ msgstr "Изчистване на всичко"

@@ -184,6 +184,3 @@ msgstr "Затваряне на изскачащ прозорец"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Показване на скрити икони"
-
-#~ msgid "Expand System Tray"
-#~ msgstr "Разширяване на системния панел"

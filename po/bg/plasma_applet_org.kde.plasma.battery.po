@@ -435,14 +435,3 @@ msgstr ""
 "да инсталирате пакета <command>power-profiles-daemon</command>, като "
 "използвате мениджъра на пакети  на вашата дистрибуция и рестартирайте "
 "системата."
-
-#~ msgctxt "Placeholder is the battery number"
-#~ msgid "Battery %1"
-#~ msgstr "Батерия %1%"
-
-#~ msgid "Battery"
-#~ msgstr "Батерия"
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Manually block sleep and screen locking"
-#~ msgstr "Ръчно блокиране на приспиване и заключване на екрана"

@@ -1,11 +1,11 @@
 # translation of krdb.po to
 # translation of krdb.po to Polish
-# Version: $Revision: 1681059 $
+# Version: $Revision: 1681191 $
 # Copyright (C) 2003, 2005, 2009 Free Software Foundation, Inc.
-#
 # Wojciech Milewski <Wojciech.Milewski@wp.pl>, 2002.
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2003, 2005, 2009, 2010.
 # Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2017, 2020.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: krdb\n"

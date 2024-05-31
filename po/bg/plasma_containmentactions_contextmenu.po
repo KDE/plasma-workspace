@@ -69,7 +69,3 @@ msgstr "Действия с тапети"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Разделител]"
-
-#~ msgctxt "plasma_containmentactions_contextmenu"
-#~ msgid "Configure Display Settings…"
-#~ msgstr "Настройки на екрана…"
