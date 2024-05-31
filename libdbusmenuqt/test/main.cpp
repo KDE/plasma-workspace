@@ -11,6 +11,8 @@
 #include <QMainWindow>
 #include <QMenuBar>
 
+using namespace Qt::StringLiterals;
+
 class MainWindow : public QMainWindow
 {
 public:
@@ -35,31 +37,31 @@ MainWindow::MainWindow()
     */
 
     QAction *t;
-    auto menuA = new QMenu("Menu A", this);
-    menuA->addAction("Item");
+    auto menuA = new QMenu(u"Menu A"_s, this);
+    menuA->addAction(u"Item"_s);
 
-    t = menuA->addAction("Checkable Item");
+    t = menuA->addAction(u"Checkable Item"_s);
     t->setCheckable(true);
 
-    t = menuA->addAction(QIcon::fromTheme("document-edit"), "Item with icon");
+    t = menuA->addAction(QIcon::fromTheme(u"document-edit"_s), u"Item with icon"_s);
 
     menuA->addSeparator();
 
-    auto menuB = new QMenu("Menu B", this);
-    menuB->addAction("Item B1");
+    auto menuB = new QMenu(u"Menu B"_s, this);
+    menuB->addAction(u"Item B1"_s);
     menuA->addMenu(menuB);
 
     menuBar()->addMenu(menuA);
 
-    auto menuC = new QMenu("Menu C", this);
+    auto menuC = new QMenu(u"Menu C"_s, this);
     connect(menuC, &QMenu::aboutToShow, this, [menuC]() {
         menuC->clear();
-        menuC->addAction("Dynamic Item " + QDateTime::currentDateTime().toString());
+        menuC->addAction(u"Dynamic Item " + QDateTime::currentDateTime().toString());
     });
 
     menuBar()->addMenu(menuC);
 
-    menuBar()->addAction("Top Level Item");
+    menuBar()->addAction(u"Top Level Item"_s);
 }
 
 int main(int argc, char **argv)
