@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-27 00:40+0000\n"
-"PO-Revision-Date: 2024-04-05 17:44+0200\n"
+"PO-Revision-Date: 2024-05-27 16:32+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -263,6 +263,10 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Con una GPU NVIDIA su X11, è noto che lo stile flottante e la modalità di "
+"opacità adattiva causano scarse prestazioni di trascinamento e "
+"ridimensionamento della finestra. Prendi in considerazione l'utilizzo di "
+"altre impostazioni."
 
 #: panelview.cpp:1086
 #, kde-format

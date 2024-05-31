@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-31 00:41+0000\n"
 "PO-Revision-Date: 2008-10-02 23:26+0530\n"
 "Last-Translator: Pragnesh Radadiya <pg.radadia@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@lists.kde.org>\n"
@@ -65,7 +65,7 @@ msgstr ""
 msgid "Window title font"
 msgstr "વિન્ડો શીર્ષક"
 
-#: kxftconfig.cpp:454
+#: kxftconfig.cpp:455
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "System Settings"
@@ -73,34 +73,34 @@ msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "સિસ્ટમની ગોઠવણીઓ"
 
-#: kxftconfig.cpp:456
+#: kxftconfig.cpp:457
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "કંઇ નહી"
 
-#: kxftconfig.cpp:458
+#: kxftconfig.cpp:459
 #, kde-format
 msgid "RGB"
 msgstr "RGB"
 
-#: kxftconfig.cpp:460
+#: kxftconfig.cpp:461
 #, kde-format
 msgid "BGR"
 msgstr "BGR"
 
-#: kxftconfig.cpp:462
+#: kxftconfig.cpp:463
 #, kde-format
 msgid "Vertical RGB"
 msgstr "ઉભું RGB"
 
-#: kxftconfig.cpp:464
+#: kxftconfig.cpp:465
 #, kde-format
 msgid "Vertical BGR"
 msgstr "ઉભું BGR"
 
-#: kxftconfig.cpp:492
+#: kxftconfig.cpp:493
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "System Settings"
@@ -108,28 +108,28 @@ msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "સિસ્ટમની ગોઠવણીઓ"
 
-#: kxftconfig.cpp:494
+#: kxftconfig.cpp:495
 #, fuzzy, kde-format
 #| msgid "Medium"
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "મધ્યમ"
 
-#: kxftconfig.cpp:496
+#: kxftconfig.cpp:497
 #, fuzzy, kde-format
 #| msgid "None"
 msgctxt "no hinting"
 msgid "None"
 msgstr "કંઇ નહી"
 
-#: kxftconfig.cpp:498
+#: kxftconfig.cpp:499
 #, fuzzy, kde-format
 #| msgid "Slight"
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "થોડુ"
 
-#: kxftconfig.cpp:500
+#: kxftconfig.cpp:501
 #, fuzzy, kde-format
 #| msgid "Full"
 msgctxt "full hinting"

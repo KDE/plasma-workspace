@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-05-31 00:41+0000\n"
 "PO-Revision-Date: 2023-10-03 11:42+0300\n"
 "Last-Translator: Elkana Bardugo <ttv200@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -73,63 +73,63 @@ msgstr "גופן תפריט"
 msgid "Window title font"
 msgstr "גופן כותרת חלון"
 
-#: kxftconfig.cpp:454
+#: kxftconfig.cpp:455
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "ברירת מחדל יצרן"
 
-#: kxftconfig.cpp:456
+#: kxftconfig.cpp:457
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "ללא"
 
-#: kxftconfig.cpp:458
+#: kxftconfig.cpp:459
 #, kde-format
 msgid "RGB"
 msgstr "RGB"
 
-#: kxftconfig.cpp:460
+#: kxftconfig.cpp:461
 #, kde-format
 msgid "BGR"
 msgstr "BGR"
 
-#: kxftconfig.cpp:462
+#: kxftconfig.cpp:463
 #, kde-format
 msgid "Vertical RGB"
 msgstr "RGB אופקי"
 
-#: kxftconfig.cpp:464
+#: kxftconfig.cpp:465
 #, kde-format
 msgid "Vertical BGR"
 msgstr "BGR אופקי"
 
-#: kxftconfig.cpp:492
+#: kxftconfig.cpp:493
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "ברירת מחדל יצרן"
 
-#: kxftconfig.cpp:494
+#: kxftconfig.cpp:495
 #, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "בינוני"
 
-#: kxftconfig.cpp:496
+#: kxftconfig.cpp:497
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
 msgstr "ללא"
 
-#: kxftconfig.cpp:498
+#: kxftconfig.cpp:499
 #, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "במקצת"
 
-#: kxftconfig.cpp:500
+#: kxftconfig.cpp:501
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"

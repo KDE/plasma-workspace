@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2023-04-13 23:16+0200\n"
+"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"PO-Revision-Date: 2024-05-30 19:17+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
@@ -61,63 +61,63 @@ msgstr "Шрифт на менюта"
 msgid "Window title font"
 msgstr "Шрифт на заглавие на прозорци"
 
-#: kxftconfig.cpp:454
+#: kxftconfig.cpp:455
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
 msgstr "Стандартно"
 
-#: kxftconfig.cpp:456
+#: kxftconfig.cpp:457
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
 msgstr "Без"
 
-#: kxftconfig.cpp:458
+#: kxftconfig.cpp:459
 #, kde-format
 msgid "RGB"
 msgstr "RGB"
 
-#: kxftconfig.cpp:460
+#: kxftconfig.cpp:461
 #, kde-format
 msgid "BGR"
 msgstr "BGR"
 
-#: kxftconfig.cpp:462
+#: kxftconfig.cpp:463
 #, kde-format
 msgid "Vertical RGB"
 msgstr "Vertical RGB"
 
-#: kxftconfig.cpp:464
+#: kxftconfig.cpp:465
 #, kde-format
 msgid "Vertical BGR"
 msgstr "Vertical BGR"
 
-#: kxftconfig.cpp:492
+#: kxftconfig.cpp:493
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
 msgstr "Стандартно"
 
-#: kxftconfig.cpp:494
+#: kxftconfig.cpp:495
 #, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
 msgstr "Средно"
 
-#: kxftconfig.cpp:496
+#: kxftconfig.cpp:497
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
 msgstr "Без"
 
-#: kxftconfig.cpp:498
+#: kxftconfig.cpp:499
 #, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
 msgstr "Леко"
 
-#: kxftconfig.cpp:500
+#: kxftconfig.cpp:501
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"
@@ -302,7 +302,7 @@ msgstr ""
 "<para> На TFT или LCD екрани всеки един пиксел всъщност се състои от три или "
 "четири по-малки монохромни светлини. Тези <emphasis> субпиксели </emphasis> "
 "могат да се променят независимо, за да се подобри допълнително качеството на "
-"показваните шрифтове. </para> <para> Качеството на изобразяване се подобрява "
+"показваните шрифтове. </para><para> Качеството на изобразяване се подобрява "
 "само ако изборът съвпада по начина, по който са подравнени субпикселите на "
 "вашия дисплей. Повечето дисплеи имат линейно подреждане на <emphasis> RGB </"
 "emphasis> субпиксели, някои имат <emphasis> BGR </emphasis> и някои "

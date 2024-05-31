@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-05-31 00:41+0000\n"
 "PO-Revision-Date: 2024-05-03 07:39+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -54,86 +54,86 @@ msgctxt "Placeholder is brightness percentage"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/KeyboardColorItem.qml:78
+#: package/contents/ui/KeyboardColorItem.qml:77
 #, kde-format
 msgid "Follow accent color"
 msgstr "Відповідно до кольору акценту"
 
-#: package/contents/ui/main.qml:65
+#: package/contents/ui/main.qml:62
 #, kde-format
 msgid "Brightness and Color"
 msgstr "Яскравість і колір"
 
-#: package/contents/ui/main.qml:77
+#: package/contents/ui/main.qml:74
 #, kde-format
 msgid "Screen brightness at %1%"
 msgstr "Яскравість екрана — %1%"
 
-#: package/contents/ui/main.qml:80
+#: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Keyboard brightness at %1%"
 msgstr "Яскравість підсвічування клавіатури — %1%"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:82
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
 msgstr ""
 "Використання нічних кольорів призупинено; клацніть середньою, щоб поновити"
 
-#: package/contents/ui/main.qml:87
+#: package/contents/ui/main.qml:84
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
 msgstr "Нічні кольори призупинено"
 
-#: package/contents/ui/main.qml:92
+#: package/contents/ui/main.qml:89
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
 msgstr "«Нічні кольори» при денній температурі кольорів"
 
-#: package/contents/ui/main.qml:94
+#: package/contents/ui/main.qml:91
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
 msgstr "«Нічні кольори» при нічній температурі кольорів"
 
-#: package/contents/ui/main.qml:99
+#: package/contents/ui/main.qml:96
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
 msgstr "«Нічні кольори» у ранковому переході (завершується за %1)"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:98
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
 msgstr "«Нічні кольори» у вечірньому переході (завершується за %1)"
 
-#: package/contents/ui/main.qml:116
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
 msgstr "Перехід «Нічних кольорів» у вечірній режим заплановано на %1"
 
-#: package/contents/ui/main.qml:118
+#: package/contents/ui/main.qml:115
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
 msgstr "Перехід «Нічних кольорів» у ранковий режим заплановано на %1"
 
-#: package/contents/ui/main.qml:122
+#: package/contents/ui/main.qml:119
 #, kde-format
 msgid "Scroll to adjust screen brightness"
 msgstr "Прокрутіть, щоб скоригувати яскравість екрана"
 
-#: package/contents/ui/main.qml:125
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgid "Middle-click to suspend Night Light"
 msgstr "Клацніть середньою, щоб призупинити використання нічних кольорів"
 
-#: package/contents/ui/main.qml:213
+#: package/contents/ui/main.qml:210
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"

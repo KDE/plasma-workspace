@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-27 00:40+0000\n"
-"PO-Revision-Date: 2024-04-08 23:52+0200\n"
+"PO-Revision-Date: 2024-05-30 21:04+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -27,7 +27,7 @@ msgstr "Радостин Раднев,Златко Попов, Минчо Кон
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "radnev@yahoo.com,zlatkopopov@fsa-bg.org"
+msgstr "radnev@yahoo.com,zlatkopopov@fsa-bg.org,mkondarev@yahoo.de"
 
 #: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:955
 #, kde-format
@@ -106,7 +106,7 @@ msgid ""
 "number composed as: <weight><width><slant>"
 msgstr ""
 "Шрифт за печат, посочен като  \"Семейство, стил \", където Стил е 24-битов "
-"десетичен знак, съставен като: <weight ><width> <slant>"
+"десетичен знак, съставен като: <weight ><width><slant>"
 
 #: apps/Printer.cpp:346
 #, kde-format
@@ -330,7 +330,7 @@ msgid ""
 msgstr ""
 "<p>Този списък показва инсталираните ви шрифтове. Шрифтовете са групирани по "
 "семейство,а числото в квадратни скоби представлява броя на стиловете, в "
-"които семейството е на разположение. напр.</p> <ul><li>Times "
+"които семейството е на разположение. напр.</p><ul><li>Times "
 "[4]<ul><li>Нормален</li><li>Получер</li><li>Получер курсив</li><li>Курсив</"
 "li></ul></li></ul>"
 
@@ -407,8 +407,8 @@ msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
 "the group, and not the actual fonts.</i></p>"
 msgstr ""
-"<p> Наистина ли искате да премахнете \"<b>%1 </b>\"? </p> <p> <i> Това ще "
-"премахне само групата, а не действителните шрифтове. </i> </p>"
+"<p> Наистина ли искате да премахнете \"<b>%1 </b>\"?</p><p><i> Това ще "
+"премахне само групата, а не действителните шрифтове. </i></p>"
 
 #: kcmfontinst/GroupList.cpp:539
 #, kde-format
@@ -436,7 +436,7 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
-"<h3> Групи от шрифтове </h3> <p> Този списък показва групите шрифтове, "
+"<h3> Групи от шрифтове </h3><p> Този списък показва групите шрифтове, "
 "налични във вашата система. Има 2 основни типа групи шрифтове: "
 "<ul><li><b>Стандартни</b> са специални групи, използвани от мениджъра на "
 "шрифтове. <ul>%1 </ul></li><li><b> Персонализирани</b> са групи, създадени "
@@ -521,7 +521,7 @@ msgstr "Автопропускане"
 #: kcmfontinst/JobRunner.cpp:186
 #, kde-format
 msgid "<h3>Cancel?</h3><p>Are you sure you wish to cancel?</p>"
-msgstr "<h3>Отказ?</h3> <p> Наистина ли искате да откажете промените? </p>"
+msgstr "<h3>Отказ?</h3><p> Наистина ли искате да откажете промените?</p>"
 
 #: kcmfontinst/JobRunner.cpp:198
 #, kde-format
@@ -529,9 +529,9 @@ msgid ""
 "<h3>Finished</h3><p>Please note that any open applications will need to be "
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
-"<h3> Завършен</h3> <p> Моля, обърнете внимание, че всички отворени "
-"приложения трябва да бъдат рестартирани, за да бъдат забелязани, каквито и "
-"да било промени. </p>"
+"<h3> Завършен</h3><p> Моля, обърнете внимание, че всички отворени приложения "
+"трябва да бъдат рестартирани, за да бъдат забелязани, каквито и да било "
+"промени.</p>"
 
 #: kcmfontinst/JobRunner.cpp:206
 #, kde-format
@@ -812,8 +812,8 @@ msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
 "%3</i>?</p>"
 msgstr ""
-"<p> Наистина ли искате да преместите </p> <p> '<b>%1 </b>' </p> <p> от <i>%2 "
-"</i> в <i>%3 </i>? </p>"
+"<p> Наистина ли искате да преместите</p><p> '<b>%1 </b>'</p><p> от <i>%2 </"
+"i> в <i>%3 </i>?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:668
 #, kde-format
@@ -912,10 +912,10 @@ msgid ""
 "enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
 "tr></table>"
 msgstr ""
-"<table> <tr> <td align = \\ \"right \"> Активирано: </td> <td>%1 </td> </tr> "
-"<tr> <td align =\\ \"right \"> Деактивирано: </td> <td>%2 </td> </tr> <tr> "
-"<td align = \\ \"right \"> Частично активирано: </td> <td>%3 </td> </tr> "
-"<tr> <td align = \\ \"right \"> Общо: </td> <td>%4 </td> </tr> </table>"
+"<table><tr><td align =\"right\"> Активирано: </td><td>%1 </td></tr> <tr><td "
+"align =\"right\"> Деактивирано: </td><td>%2 </td></tr><tr> <td align = "
+"\"right\"> Частично активирано: </td><td>%3 </td></tr> <tr><td align ="
+"\"right \"> Общо: </td><td>%4 </td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:911
 #, kde-format
@@ -924,9 +924,9 @@ msgid ""
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 msgstr ""
-"<table> <tr> <td align = \\ \"right \"> Активирано: </td> <td>%1 </td> </tr> "
-"<tr> <td align =\\ \"right \"> Деактивирано: </td> <td>%2 </td> </tr> <tr> "
-"<td align = \\ \"right \"> Общо: </td> <td>%3 </td> </tr> </table>"
+"<table><tr><td align =  \"right \"> Активирано: </td><td>%1 </td></tr> "
+"<tr><td align = \"right \"> Деактивирано: </td><td>%2 </td></tr><tr> <td "
+"align =  \"right \"> Общо: </td><td>%3 </td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:988
 #, kde-format
@@ -989,8 +989,8 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p> Наистина ли искате да активирате </p> <p> '<b>%1 </b>', съдържащ се в "
-"групата\"<b>%2 </b>\"? </p>"
+"<p> Наистина ли искате да активирате</p><p> '<b>%1 </b>', съдържащ се в "
+"групата\"<b>%2 </b>\"?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
@@ -998,8 +998,8 @@ msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p> Наистина ли искате да деактивирате </p> <p> '<b>%1 </b>', съдържащ се в "
-"групата\"<b>%2 </b>\"? </p>"
+"<p> Наистина ли искате да деактивирате</p><p> '<b>%1 </b>', съдържащ се в "
+"групата\"<b>%2 </b>\"?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
