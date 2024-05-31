@@ -18,11 +18,11 @@
 #include "debug_p.h"
 #include "waiter.h"
 
-constexpr static const char dbusServiceName[] = "org.freedesktop.Notifications";
+using namespace Qt::StringLiterals;
 
 Waiter::Waiter(int argc, char **argv)
     : QCoreApplication(argc, argv)
-    , mService(dbusServiceName)
+    , mService(u"org.freedesktop.Notifications"_s)
 {
     setApplicationName(QStringLiteral("plasma_waitforname"));
     setApplicationVersion(QStringLiteral("1.0"));

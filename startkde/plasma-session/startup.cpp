@@ -228,7 +228,7 @@ void Startup::finishStartup()
 
 void Startup::updateLaunchEnv(const QString &key, const QString &value)
 {
-    qputenv(key.toLatin1(), value.toLatin1());
+    qputenv(key.toLatin1().constData(), value.toLatin1());
 }
 
 bool Startup::startDetached(QProcess *process)

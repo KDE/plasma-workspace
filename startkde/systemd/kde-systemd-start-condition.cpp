@@ -17,7 +17,7 @@ int main(int argc, char **argv)
     // this is because a desktop file that has X-KDE-AutostartCondition
     // probably has an X-Gnome- equivalent and we only want one to run
     // this would match non systemd behaviour
-    if (!qEnvironmentVariable("XDG_CURRENT_DESKTOP").split(QLatin1Char(':')).contains("kde", Qt::CaseInsensitive)) {
+    if (!qEnvironmentVariable("XDG_CURRENT_DESKTOP").split(u':').contains(u"kde", Qt::CaseInsensitive)) {
         return 0;
     }
     QCommandLineParser parser;

@@ -278,7 +278,7 @@ void importSystemdEnvrionment()
     const auto keys = environment.value().keys();
     for (const QString &nameStr : keys) {
         if (!isShellVariable(QStringView(nameStr)) && !isSessionVariable(nameStr)) {
-            setEnvironmentVariable(nameStr.toLocal8Bit(), environment.value().value(nameStr).toLocal8Bit());
+            setEnvironmentVariable(nameStr.toLocal8Bit().constData(), environment.value().value(nameStr).toLocal8Bit());
         }
     }
 }
@@ -450,7 +450,7 @@ static void dropSessionVarsFromSystemdEnvironment()
     const auto keys = environment.value().keys();
     for (const QString &nameStr : keys) {
         // If it's set in this process, it'll be overwritten by the following UpdateLaunchEnvJob
-        if (!qEnvironmentVariableIsSet(nameStr.toLocal8Bit()) && isSessionVariable(nameStr)) {
+        if (!qEnvironmentVariableIsSet(nameStr.toLocal8Bit().constData()) && isSessionVariable(nameStr)) {
             varsToDrop.append(nameStr);
         }
     }
