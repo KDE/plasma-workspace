@@ -11,6 +11,8 @@
 #include <QDBusInterface>
 #include <QDBusReply>
 
+using namespace Qt::StringLiterals;
+
 namespace ColorCorrect
 {
 CompositorAdaptor::CompositorAdaptor(QObject *parent)
@@ -37,7 +39,7 @@ CompositorAdaptor::CompositorAdaptor(QObject *parent)
                                                           QStringLiteral("/org/kde/KWin/NightLight"),
                                                           QStringLiteral("org.freedesktop.DBus.Properties"),
                                                           QStringLiteral("GetAll"));
-    message.setArguments({"org.kde.KWin.NightLight"});
+    message.setArguments({u"org.kde.KWin.NightLight"_s});
 
     QDBusPendingReply<QVariantMap> properties = m_iface->connection().asyncCall(message);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(properties, this);
@@ -68,7 +70,7 @@ void CompositorAdaptor::setError(ErrorCode error)
         m_errorText = i18nc("Critical error message", "Rendering backend doesn't support Color Correction.");
         break;
     default:
-        m_errorText = "";
+        m_errorText = QString();
     }
     Q_EMIT errorChanged();
     Q_EMIT errorTextChanged();
@@ -110,11 +112,11 @@ void CompositorAdaptor::sendAutoLocationUpdate(double latitude, double longitude
 
 void CompositorAdaptor::preview(int temperature)
 {
-    m_iface->call("preview", (uint)temperature);
+    m_iface->call(u"preview"_s, (uint)temperature);
 }
 
 void CompositorAdaptor::stopPreview()
 {
-    m_iface->call("stopPreview");
+    m_iface->call(u"stopPreview"_s);
 }
 }

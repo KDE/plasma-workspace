@@ -12,6 +12,8 @@
 
 #include <QDateTime>
 
+using namespace Qt::StringLiterals;
+
 namespace ColorCorrect
 {
 inline constexpr double TWILIGHT_NAUT = -12.0;
@@ -149,8 +151,8 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
     QDateTime dateTimeEnd(prompt, timeEnd, Qt::UTC);
 
     QVariantMap map;
-    map.insert("begin", dateTimeBegin.toLocalTime());
-    map.insert("end", dateTimeEnd.toLocalTime());
+    map.insert(u"begin"_s, dateTimeBegin.toLocalTime());
+    map.insert(u"end"_s, dateTimeEnd.toLocalTime());
     return map;
 }
 
