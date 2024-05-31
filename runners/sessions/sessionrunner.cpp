@@ -14,6 +14,8 @@
 
 K_PLUGIN_CLASS_WITH_JSON(SessionRunner, "plasma-runner-sessions.json")
 
+using namespace Qt::StringLiterals;
+
 SessionRunner::SessionRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
@@ -229,9 +231,9 @@ void SessionRunner::run(const KRunner::RunnerContext & /*context*/, const KRunne
     const auto config = KSharedConfig::openConfig(QStringLiteral("ksmserverrc"));
     KMessageBox::setDontShowAgainConfig(config.data());
     KGuiItem continueButton = KStandardGuiItem::cont();
-    continueButton.setText("Enter new session");
+    continueButton.setText(u"Enter new session"_s);
     KGuiItem cancelButton = KStandardGuiItem::cancel();
-    cancelButton.setText("Stay in current session");
+    cancelButton.setText(u"Stay in current session"_s);
     KMessageBox::ButtonCode confirmNewSession =
         KMessageBox::warningContinueCancel(nullptr,
                                            i18n("<p>You are about to enter a new desktop session.</p>"

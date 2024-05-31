@@ -14,7 +14,7 @@ class SessionManagement;
 
 struct RunnerKeyword {
     inline RunnerKeyword(KLocalizedString str, bool partialMatch = true)
-        : triggerWord(str.untranslatedText())
+        : triggerWord(QString::fromUtf8(str.untranslatedText()))
         , translatedTriggerWord(str.toString())
         , supportPartialMatch(partialMatch)
     {

@@ -12,6 +12,8 @@
 #include <QDir>
 #include <QFile>
 
+using namespace Qt::StringLiterals;
+
 Opera::Opera(QObject *parent)
     : QObject(parent)
     , m_favicon(new FallbackFavicon(this))
@@ -65,16 +67,16 @@ void Opera::prepare()
     }
 
     // check format
-    QString firstLine = operaBookmarksFile.readLine();
-    if (firstLine.compare(QLatin1String("Opera Hotlist version 2.0\n"))) {
+    QByteArray firstLine = operaBookmarksFile.readLine();
+    if (firstLine.compare(QByteArrayView("Opera Hotlist version 2.0\n"))) {
         // qDebug() << "Format of Opera Bookmarks File might have changed.";
     }
     operaBookmarksFile.readLine(); // skip options line ("Options: encoding = utf8, version=3")
     operaBookmarksFile.readLine(); // skip empty line
 
     // load contents
-    QString contents = operaBookmarksFile.readAll();
-    m_operaBookmarkEntries = contents.split(QStringLiteral("\n\n"), Qt::SkipEmptyParts);
+    QString contents = QString::fromLocal8Bit(operaBookmarksFile.readAll());
+    m_operaBookmarkEntries = contents.split(u"\n\n"_s, Qt::SkipEmptyParts);
 
     // close file
     operaBookmarksFile.close();

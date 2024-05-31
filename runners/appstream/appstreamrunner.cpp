@@ -26,10 +26,12 @@
 
 K_PLUGIN_CLASS_WITH_JSON(InstallerRunner, "plasma-runner-appstream.json")
 
+using namespace Qt::StringLiterals;
+
 InstallerRunner::InstallerRunner(QObject *parent, const KPluginMetaData &metaData)
     : KRunner::AbstractRunner(parent, metaData)
 {
-    addSyntax(":q:", i18n("Looks for non-installed components according to :q:"));
+    addSyntax(u":q:"_s, i18n("Looks for non-installed components according to :q:"));
     setMinLetterCount(3);
 }
 
@@ -97,11 +99,11 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
             if (service->desktopEntryName().compare(componentId, Qt::CaseInsensitive) == 0)
                 return true;
 
-            const auto idWithoutDesktop = QString(componentId).remove(".desktop");
+            const auto idWithoutDesktop = QString(componentId).remove(".desktop"_L1);
             if (service->desktopEntryName().compare(idWithoutDesktop, Qt::CaseInsensitive) == 0)
                 return true;
 
-            const auto renamedFrom = service->property<QStringList>("X-Flatpak-RenamedFrom");
+            const auto renamedFrom = service->property<QStringList>(u"X-Flatpak-RenamedFrom"_s);
             if (renamedFrom.contains(componentId, Qt::CaseInsensitive) || renamedFrom.contains(idWithoutDesktop, Qt::CaseInsensitive))
                 return true;
 
@@ -121,7 +123,7 @@ void InstallerRunner::match(KRunner::RunnerContext &context)
         match.setIcon(componentIcon(*it));
         match.setText(i18n("Get %1…", it->name()));
         match.setSubtext(it->summary());
-        match.setData(QUrl("appstream://" + componentId));
+        match.setData(QUrl(QString(u"appstream://" + componentId)));
         match.setRelevance(it->name().compare(context.query(), Qt::CaseInsensitive) == 0 ? 1. : 0.7);
         context.addMatch(match);
     }

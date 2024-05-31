@@ -49,6 +49,6 @@ void Falkon::teardown()
 QString Falkon::getStartupProfileDir()
 {
     const QString profilesIni = QStandardPaths::locate(QStandardPaths::ConfigLocation, QStringLiteral("/falkon/profiles/profiles.ini"));
-    const QString startupProfile = KSharedConfig::openConfig(profilesIni)->group(u"Profiles"_s).readEntry("startProfile", u"default"_s).remove("\"");
+    const QString startupProfile = KSharedConfig::openConfig(profilesIni)->group(u"Profiles"_s).readEntry("startProfile", u"default"_s).remove(u'\"');
     return QFileInfo(profilesIni).dir().absoluteFilePath(startupProfile);
 }

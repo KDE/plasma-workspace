@@ -9,6 +9,8 @@
 #include <QTest>
 #include <libqalculate/includes.h>
 
+using namespace Qt::StringLiterals;
+
 class CalculatorRunnerTest : public KRunner::AbstractRunnerTest
 {
     Q_OBJECT
@@ -46,51 +48,51 @@ void CalculatorRunnerTest::testQuery_data()
     QTest::addColumn<QString>("result");
 
     // clang-format off
-    QTest::newRow("simple addition") << "1+1" << "2";
-    QTest::newRow("simple subtraction") << "2-1" << "1";
-    QTest::newRow("simple multiplication") << "2*2" << "4";
-    QTest::newRow("simple division") << "6/2" << "3";
-    QTest::newRow("simple power") << "2^3" << "8";
+    QTest::newRow("simple addition") << u"1+1"_s << u"2"_s;
+    QTest::newRow("simple subtraction") << u"2-1"_s << u"1"_s;
+    QTest::newRow("simple multiplication") << u"2*2"_s << u"4"_s;
+    QTest::newRow("simple division") << u"6/2"_s << u"3"_s;
+    QTest::newRow("simple power") << u"2^3"_s << u"8"_s;
 
-    QTest::newRow("x as multiplication sign") << "25x4" << "100";
-    QTest::newRow("single digit factorial") << "5!" << "120";
-    QTest::newRow("superscripted number") << "2³"
-                                          << "8"; // BUG: 435932
+    QTest::newRow("x as multiplication sign") << u"25x4"_s << u"100"_s;
+    QTest::newRow("single digit factorial") << u"5!"_s << u"120"_s;
+    QTest::newRow("superscripted number") << u"2³"_s
+                                          << u"8"_s; // BUG: 435932
 
-    QTest::newRow("hex to decimal lower case") << "0xf" << "15";
-    QTest::newRow("hex to decimal upper case") << "0xF" << "15";
-    QTest::newRow("hex to decimal with = at beginning") << "=0xF" << "15";
-    QTest::newRow("decimal to hex") << "hex=15" << "0xF";
-    QTest::newRow("decimal to hex with addition") << "hex=15+15" << "0x1E";
-    QTest::newRow("hex additions") << "0xF+0xF" << "30";
-    QTest::newRow("hex multiplication") << "0xF*0xF" << "225";
+    QTest::newRow("hex to decimal lower case") << u"0xf"_s << u"15"_s;
+    QTest::newRow("hex to decimal upper case") << u"0xF"_s << u"15"_s;
+    QTest::newRow("hex to decimal with = at beginning") << u"=0xF"_s << u"15"_s;
+    QTest::newRow("decimal to hex") << u"hex=15"_s << u"0xF"_s;
+    QTest::newRow("decimal to hex with addition") << u"hex=15+15"_s << u"0x1E"_s;
+    QTest::newRow("hex additions") << u"0xF+0xF"_s << u"30"_s;
+    QTest::newRow("hex multiplication") << u"0xF*0xF"_s << u"225"_s;
     // BUG: 431362
-    QTest::newRow("hex and decimal addition") << "0x12+1" << "19";
-    QTest::newRow("hex and decimal addition reversed") << "1+0x12" << "19";
+    QTest::newRow("hex and decimal addition") << u"0x12+1"_s << u"19"_s;
+    QTest::newRow("hex and decimal addition reversed") << u"1+0x12"_s << u"19"_s;
     // clang-format on
 }
 
 void CalculatorRunnerTest::testApproximation()
 {
-    const auto matches = launchQuery("5^1234567");
+    const auto matches = launchQuery(u"5^1234567"_s);
     QCOMPARE(matches.size(), 1);
-    QCOMPARE(matches.first().subtext(), "Approximation");
+    QCOMPARE(matches.first().subtext(), u"Approximation"_s);
 }
 
 void CalculatorRunnerTest::test42()
 {
-    auto matches = launchQuery("life");
+    auto matches = launchQuery(u"life"_s);
     QCOMPARE(matches.size(), 1);
-    QCOMPARE(matches.constFirst().text(), "42");
-    matches = launchQuery("universe");
+    QCOMPARE(matches.constFirst().text(), u"42"_s);
+    matches = launchQuery(u"universe"_s);
     QCOMPARE(matches.size(), 1);
-    QCOMPARE(matches.constFirst().text(), "42");
+    QCOMPARE(matches.constFirst().text(), u"42"_s);
 }
 
 #if QALCULATE_MAJOR_VERSION > 2 || QALCULATE_MINOR_VERSION > 6
 void CalculatorRunnerTest::testErrorDetection()
 {
-    launchQuery("SDL_VIDEODRIVER=");
+    launchQuery(u"SDL_VIDEODRIVER="_s);
     QVERIFY(manager->matches().isEmpty());
 }
 #endif
@@ -98,18 +100,18 @@ void CalculatorRunnerTest::testErrorDetection()
 void CalculatorRunnerTest::testFunctions()
 {
     // BUG: 467418
-    launchQuery("sqrt(4)");
+    launchQuery(u"sqrt(4)"_s);
     QCOMPARE(manager->matches().size(), 1);
 
-    launchQuery("=sqrt(4)");
+    launchQuery(u"=sqrt(4)"_s);
     QCOMPARE(manager->matches().size(), 1);
 
     // Goes to qalculate
-    launchQuery("=sqrt 4");
+    launchQuery(u"=sqrt 4"_s);
     QCOMPARE(manager->matches().size(), 1);
 
     // Does not match the prefixless queries and function-pattern
-    launchQuery("sqrt 4");
+    launchQuery(u"sqrt 4"_s);
     QCOMPARE(manager->matches().size(), 0);
 }
 

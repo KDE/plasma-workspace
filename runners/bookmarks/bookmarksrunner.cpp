@@ -79,13 +79,13 @@ void BookmarksRunner::run(const KRunner::RunnerContext & /*context*/, const KRun
 
     // support urls like "kde.org" by transforming them to https://kde.org
     if (url.scheme().isEmpty()) {
-        const int idx = term.indexOf('/');
+        const int idx = term.indexOf(u'/');
 
         url.clear();
         url.setHost(term.left(idx));
         if (idx != -1) {
             // allow queries
-            const int queryStart = term.indexOf('?', idx);
+            const int queryStart = term.indexOf(u'?', idx);
             int pathLength = -1;
             if ((queryStart > -1) && (idx < queryStart)) {
                 pathLength = queryStart - idx;

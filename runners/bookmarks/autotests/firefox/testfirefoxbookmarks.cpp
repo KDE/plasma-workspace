@@ -9,6 +9,8 @@
 
 #include "browsers/firefox.h"
 
+using namespace Qt::StringLiterals;
+
 class TestFirefoxBookmarksMatch : public QObject
 {
     Q_OBJECT
@@ -44,11 +46,11 @@ void TestFirefoxBookmarksMatch::testBookmarksQuery_data()
     QTest::addColumn<QString>("query");
     QTest::addColumn<QStringList>("expectedUrls");
 
-    QTest::newRow("query that matches nothing") << "this does not exist" << QStringList{};
-    QTest::newRow("query that matches url") << "reddit.com" << QStringList{"https://www.reddit.com/"};
-    QTest::newRow("query that matches title") << "KDE Community" << QStringList{"https://kde.org/"};
-    QTest::newRow("query that matches title case insensitively") << "kde community" << QStringList{"https://kde.org/"};
-    QTest::newRow("query that matches multiple titles") << "ubuntu" << QStringList{"http://www.ubuntu.com/", "http://wiki.ubuntu.com/"};
+    QTest::newRow("query that matches nothing") << u"this does not exist"_s << QStringList{};
+    QTest::newRow("query that matches url") << u"reddit.com"_s << QStringList{u"https://www.reddit.com/"_s};
+    QTest::newRow("query that matches title") << u"KDE Community"_s << QStringList{u"https://kde.org/"_s};
+    QTest::newRow("query that matches title case insensitively") << u"kde community"_s << QStringList{u"https://kde.org/"_s};
+    QTest::newRow("query that matches multiple titles") << u"ubuntu"_s << QStringList{u"http://www.ubuntu.com/"_s, u"http://wiki.ubuntu.com/"_s};
 }
 
 void TestFirefoxBookmarksMatch::testBookmarksQuery()

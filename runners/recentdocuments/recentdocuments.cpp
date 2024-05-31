@@ -25,6 +25,7 @@
 #include <PlasmaActivities/Stats/Query>
 #include <PlasmaActivities/Stats/Terms>
 
+using namespace Qt::StringLiterals;
 using namespace KActivities::Stats::Terms;
 
 K_PLUGIN_CLASS_WITH_JSON(RecentDocuments, "plasma-runner-recentdocuments.json")
@@ -42,12 +43,12 @@ void RecentDocuments::match(KRunner::RunnerContext &context)
     const QString term = context.query();
 
     if (!m_resultsModel || m_resultsModel->rowCount() == m_maxResults || m_lastLoadedQuery.size() < m_minLetterCount || !term.startsWith(m_lastLoadedQuery)) {
-        const QLatin1String asterix("*");
+        constexpr QLatin1String asterix("*");
         const QString termPattern = (term.size() < m_minLetterCount ? QLatin1String() : asterix) + term + asterix;
         auto query = UsedResources | Activity::current() | Order::RecentlyUsedFirst | Agent::any() //
             | Type::files() // Only show files and not folders
             | Limit(m_maxResults) // In case we are in single runner mode, we could get tons of results for one or two letter queries
-            | Url("/*/*") // we search only for local files
+            | Url(u"/*/*"_s) // we search only for local files
             | Title({termPattern}); // check the title, because that is the filename
 
         // Reuse the model in case our query starts with the previous one. We filter out irrelevant results later on anyway

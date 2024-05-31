@@ -11,6 +11,8 @@
 #include <QMimeData>
 #include <QTest>
 
+using namespace Qt::StringLiterals;
+
 class LocationsRunnerTest : public KRunner::AbstractRunnerTest
 {
     Q_OBJECT
@@ -99,25 +101,26 @@ void LocationsRunnerTest::shouldProduceResult_data()
 
     QTest::newRow("file") << normalHomeFile << QUrl::fromLocalFile(normalHomeFile);
     QTest::newRow("file tilde") << KShell::tildeCollapse(normalHomeFile) << QUrl::fromLocalFile(normalHomeFile);
-    QTest::newRow("file with $HOME as env variable") << KShell::tildeCollapse(normalHomeFile).replace("~", "$HOME") << QUrl::fromLocalFile(normalHomeFile);
+    QTest::newRow("file with $HOME as env variable") << KShell::tildeCollapse(normalHomeFile).replace("~"_L1, "$HOME"_L1)
+                                                     << QUrl::fromLocalFile(normalHomeFile);
     QTest::newRow("file URL") << QUrl::fromLocalFile(normalHomeFile).toString() << QUrl::fromLocalFile(normalHomeFile);
     QTest::newRow("file URL to executable") << QUrl::fromLocalFile(executableHomeFile).toString() << QUrl::fromLocalFile(executableHomeFile);
-    if (KProtocolInfo::isHelperProtocol("vnc")) {
-        QTest::newRow("vnc URL") << "vnc:foo" << QUrl("vnc:foo");
+    if (KProtocolInfo::isHelperProtocol(u"vnc"_s)) {
+        QTest::newRow("vnc URL") << u"vnc:foo"_s << QUrl(u"vnc:foo"_s);
     }
-    if (KApplicationTrader::preferredService("x-scheme-handler/rtmp")) {
-        QTest::newRow("rtmp URL") << "rtmp:foo" << QUrl("rtmp:foo");
+    if (KApplicationTrader::preferredService(u"x-scheme-handler/rtmp"_s)) {
+        QTest::newRow("rtmp URL") << u"rtmp:foo"_s << QUrl(u"rtmp:foo"_s);
     }
-    if (KApplicationTrader::preferredService("x-scheme-handler/mailto")) {
+    if (KApplicationTrader::preferredService(u"x-scheme-handler/mailto"_s)) {
         // The mailto protocol is not provided by KIO, but by installed apps. BUG: 416257
-        QTest::newRow("mailto URL") << "mailto:user.user@user.com" << QUrl("mailto:user.user@user.com");
+        QTest::newRow("mailto URL") << u"mailto:user.user@user.com"_s << QUrl(u"mailto:user.user@user.com"_s);
     }
 
     if (KProtocolInfo::isKnownProtocol(QStringLiteral("smb"))) {
-        QTest::newRow("ssh URL") << "ssh:localhost" << QUrl("ssh:localhost");
-        QTest::newRow("help URL") << "help:krunner" << QUrl("help:krunner");
-        QTest::newRow("smb URL") << "smb:server/path" << QUrl("smb:server/path");
-        QTest::newRow("smb URL shorthand syntax") << R"(\\server\path)" << QUrl("smb://server/path");
+        QTest::newRow("ssh URL") << u"ssh:localhost"_s << QUrl(u"ssh:localhost"_s);
+        QTest::newRow("help URL") << u"help:krunner"_s << QUrl(u"help:krunner"_s);
+        QTest::newRow("smb URL") << u"smb:server/path"_s << QUrl(u"smb:server/path"_s);
+        QTest::newRow("smb URL shorthand syntax") << R"(\\server\path)" << QUrl(u"smb://server/path"_s);
     }
 }
 

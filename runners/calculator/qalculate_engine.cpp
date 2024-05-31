@@ -21,6 +21,8 @@
 #include <KIO/FileCopyJob>
 #include <KLocalizedString>
 
+using namespace Qt::StringLiterals;
+
 constexpr int evaluationTimeout = 10000;
 
 // Synchronization lock that ensures that
@@ -82,7 +84,7 @@ QalculateEngine::~QalculateEngine()
 
 void QalculateEngine::updateExchangeRates()
 {
-    QUrl source = QUrl("http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml");
+    QUrl source = QUrl(u"http://www.ecb.int/stats/eurofxref/eurofxref-daily.xml"_s);
     QUrl dest = QUrl::fromLocalFile(QFile::decodeName(CALCULATOR->getExchangeRatesFileName().c_str()));
 
     KIO::Job *getJob = KIO::file_copy(source, dest, -1, KIO::Overwrite | KIO::HideProgressInfo);
@@ -145,7 +147,7 @@ QString QalculateEngine::evaluate(const QString &expression, bool *isApproximate
 
     QString input = expression;
     // Make sure to use toLocal8Bit, the expression can contain non-latin1 characters
-    QByteArray ba = input.replace(QChar(0xA3), "GBP").replace(QChar(0xA5), "JPY").replace('$', "USD").replace(QChar(0x20AC), "EUR").toLocal8Bit();
+    QByteArray ba = input.replace(QChar(0xA3), "GBP"_L1).replace(QChar(0xA5), "JPY"_L1).replace(u'$', "USD"_L1).replace(QChar(0x20AC), "EUR"_L1).toLocal8Bit();
     const char *ctext = ba.data();
 
     QalculateLock qalculateLock;
@@ -275,7 +277,7 @@ bool QalculateEngine::findPrefix(QString basePrefix, int *base, QString *customB
         return true;
     }
 #ifdef BASE_CUSTOM // v3.3.0
-    if (basePrefix.startsWith("base")) {
+    if (basePrefix.startsWith(u"base")) {
         *base = BASE_CUSTOM;
         *customBase = basePrefix.mid(4);
 

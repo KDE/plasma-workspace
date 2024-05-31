@@ -59,7 +59,7 @@ void ShellRunner::run(const KRunner::RunnerContext &context, const KRunner::Quer
         const QStringList list = data.at(1).toStringList();
         QProcessEnvironment env = QProcessEnvironment::systemEnvironment();
         for (const QString &str : list) {
-            const int pos = str.indexOf('=');
+            const int pos = str.indexOf(u'=');
             env.insert(str.left(pos), str.mid(pos + 1));
         }
         auto job = new KTerminalLauncherJob(data.at(0).toString());

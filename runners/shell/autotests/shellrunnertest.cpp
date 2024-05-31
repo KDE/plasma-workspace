@@ -58,43 +58,43 @@ void ShellRunnerTest::testShellrunnerQueries_data()
     QTest::addColumn<QStringList>("expectedENVs");
 
     // On The BSDs the path can differ, this will give us the absolute path
-    const QString executablePath = QStandardPaths::findExecutable("true");
+    const QString executablePath = QStandardPaths::findExecutable(u"true"_s);
     QVERIFY(!executablePath.isEmpty());
     // clang-format off
     QTest::newRow("Should show result with full executable path")
         << 1 << executablePath << executablePath << QStringList{};
     QTest::newRow("Should show result with full executable path and args")
-        << 1 << executablePath + " --help" << executablePath + " --help" << QStringList{};
+        << 1 << executablePath + u" --help" << executablePath + u" --help" << QStringList{};
     QTest::newRow("Should bot show result for non-existent path")
-        << 0 << "/bin/trueeeeeee" << QString() << QStringList{};
+        << 0 << u"/bin/trueeeeeee"_s << QString() << QStringList{};
     QTest::newRow("Should show result for executable name")
-        << 1 << "true" << executablePath << QStringList{};
+        << 1 << u"true"_s << executablePath << QStringList{};
     QTest::newRow("Should show result for executable name and args")
-        << 1 << "true --help" << executablePath + " --help" << QStringList{};
+        << 1 << u"true --help"_s << executablePath + u" --help" << QStringList{};
 
     QTest::newRow("Should show result for executable and ENV variables")
-        << 1 << "LC_ALL=C true" << executablePath << QStringList{"LC_ALL=C"};
+        << 1 << u"LC_ALL=C true"_s << executablePath << QStringList{u"LC_ALL=C"_s};
     QTest::newRow("Should show result for executable + args and ENV variables")
-        << 1 << "LC_ALL=C true --help" << executablePath + " --help" << QStringList{"LC_ALL=C"};
+        << 1 << u"LC_ALL=C true --help"_s << executablePath + u" --help" << QStringList{u"LC_ALL=C"_s};
     QTest::newRow("Should show result for executable and multiple ENV variables")
-        << 1 << "LC_ALL=C TEST=1 true" << executablePath << QStringList{"LC_ALL=C", "TEST=1"};
+        << 1 << u"LC_ALL=C TEST=1 true"_s << executablePath << QStringList{u"LC_ALL=C"_s, u"TEST=1"_s};
     QTest::newRow("Should show no result for non-existent executable path and ENV variable")
-        << 0 << "LC_ALL=C /bin/trueeeeeeeeeeee" << "" << QStringList{};
+        << 0 << u"LC_ALL=C /bin/trueeeeeeeeeeee"_s << QString() << QStringList{};
 
     // Some file we can access with a ~
-    const QFileInfo testFile = createExecutableFile("test.sh");
+    const QFileInfo testFile = createExecutableFile(u"test.sh"_s);
     const QString testFilePath = testFile.absoluteFilePath();
     const QString tildePath = KShell::tildeCollapse(testFilePath);
 
     QTest::newRow("Should show result for full path with tilde")
         << 1 << tildePath << KShell::quoteArg(testFilePath) << QStringList{};
     QTest::newRow("Should show result for full path with tilde and envs")
-        << 1 << "LC_ALL=C " + tildePath << KShell::quoteArg(testFilePath) << QStringList{"LC_ALL=C"};
+        << 1 << u"LC_ALL=C " + tildePath << KShell::quoteArg(testFilePath) << QStringList{u"LC_ALL=C"_s};
     QTest::newRow("Should show result for full path with tilde + args and envs")
-        << 1 << "LC_ALL=C " + tildePath + " --help" << KShell::quoteArg(testFilePath) + " --help" << QStringList{"LC_ALL=C"};
+        << 1 << u"LC_ALL=C " + tildePath + u" --help" << KShell::quoteArg(testFilePath) + u" --help" << QStringList{u"LC_ALL=C"_s};
 
     // Some file we can access with a ~ and which has a space in its filename
-    const QFileInfo testSpaceFile = createExecutableFile("test space.sh");
+    const QFileInfo testSpaceFile = createExecutableFile(u"test space.sh"_s);
     const QString testSpaceFilePath = testSpaceFile.absoluteFilePath();
     const QString tildeSpacePath = KShell::tildeCollapse(testSpaceFile.absoluteFilePath());
 
@@ -103,8 +103,8 @@ void ShellRunnerTest::testShellrunnerQueries_data()
     QTest::newRow("Should show result for full path with tilde and quoted space")
             << 1 << KShell::quoteArg(tildeSpacePath) << KShell::quoteArg(testSpaceFilePath) << QStringList{};
     QTest::newRow("Should show result for full path with tilde, quoted space and args")
-            << 1 << KShell::quoteArg(tildeSpacePath) + " --help"
-            << KShell::joinArgs({testSpaceFilePath, "--help"}) << QStringList{};
+            << 1 << KShell::quoteArg(tildeSpacePath) + u" --help"
+            << KShell::joinArgs({testSpaceFilePath, u"--help"_s}) << QStringList{};
     // clang-format on
 }
 

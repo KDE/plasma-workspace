@@ -9,7 +9,9 @@
 
 #include "browsers/firefox.h"
 
+using namespace Qt::StringLiterals;
 using namespace KRunner;
+
 class TestBookmarksMatch : public QObject
 {
     Q_OBJECT
@@ -29,11 +31,11 @@ void TestBookmarksMatch::testQueryMatchConversion()
     QFETCH(int, expectedMatchCategoryRelevance);
     QFETCH(qreal, expectedRelevance);
 
-    BookmarkMatch bookmarkMatch(QIcon::fromTheme("unknown"), searchTerm, "KDE Community", "https://somehost.com/", bookmarkDescription);
+    BookmarkMatch bookmarkMatch(QIcon::fromTheme(u"unknown"_s), searchTerm, u"KDE Community"_s, u"https://somehost.com/"_s, bookmarkDescription);
     QueryMatch match = bookmarkMatch.asQueryMatch(nullptr);
 
-    QCOMPARE(match.text(), "KDE Community");
-    QCOMPARE(match.data().toString(), "https://somehost.com/");
+    QCOMPARE(match.text(), u"KDE Community");
+    QCOMPARE(match.data().toString(), u"https://somehost.com/");
     QCOMPARE(match.categoryRelevance(), expectedMatchCategoryRelevance);
     QCOMPARE(match.relevance(), expectedRelevance);
 }
@@ -49,19 +51,19 @@ void TestBookmarksMatch::testQueryMatchConversion_data()
         QTest::newRow(dataTag) << searchTerm << bookmarkDescription << expectedMatchType << expectedRelevance;
     };
 
-    newRow("no text match", "krunner", "", (int)QueryMatch::CategoryRelevance::Low, 0.18);
-    newRow("title partly matches", "kde", "", (int)QueryMatch::CategoryRelevance::Low, 0.45);
-    newRow("title exactly matches", "kde community", "", (int)QueryMatch::CategoryRelevance::Highest, 1.0);
-    newRow("url partly matches", "somehost", "", (int)QueryMatch::CategoryRelevance::Low, 0.2);
-    newRow("url exactly matches", "https://somehost.com/", "", (int)QueryMatch::CategoryRelevance::Low, 0.2);
-    newRow("description exactly matches", "test", "test", (int)QueryMatch::CategoryRelevance::Highest, 1.0);
-    newRow("description partly matches", "test", "testme", (int)QueryMatch::CategoryRelevance::Low, 0.3);
+    newRow("no text match", u"krunner"_s, QString(), (int)QueryMatch::CategoryRelevance::Low, 0.18);
+    newRow("title partly matches", u"kde"_s, QString(), (int)QueryMatch::CategoryRelevance::Low, 0.45);
+    newRow("title exactly matches", u"kde community"_s, QString(), (int)QueryMatch::CategoryRelevance::Highest, 1.0);
+    newRow("url partly matches", u"somehost"_s, QString(), (int)QueryMatch::CategoryRelevance::Low, 0.2);
+    newRow("url exactly matches", u"https://somehost.com/"_s, QString(), (int)QueryMatch::CategoryRelevance::Low, 0.2);
+    newRow("description exactly matches", u"test"_s, u"test"_s, (int)QueryMatch::CategoryRelevance::Highest, 1.0);
+    newRow("description partly matches", u"test"_s, u"testme"_s, (int)QueryMatch::CategoryRelevance::Low, 0.3);
 }
 
 void TestBookmarksMatch::testAddToList()
 {
-    BookmarkMatch noMatch(QIcon(), "krunner", "KDE Community", "https://somehost.com/");
-    BookmarkMatch match(QIcon(), "kde", "KDE Community", "https://somehost.com/");
+    BookmarkMatch noMatch(QIcon(), u"krunner"_s, u"KDE Community"_s, u"https://somehost.com/"_s);
+    BookmarkMatch match(QIcon(), u"kde"_s, u"KDE Community"_s, u"https://somehost.com/"_s);
 
     QList<BookmarkMatch> onlyMatching;
     noMatch.addTo(onlyMatching, false);

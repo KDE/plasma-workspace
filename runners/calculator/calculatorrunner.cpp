@@ -183,7 +183,7 @@ QMimeData *CalculatorRunner::mimeDataForMatch(const KRunner::QueryMatch &match)
 void CalculatorRunner::userFriendlyMultiplication(QString &cmd)
 {
     // convert multiplication sign to *
-    cmd.replace(QChar(U'\u00D7'), QChar('*'));
+    cmd.replace(QChar(U'\u00D7'), QChar(u'*'));
 
     for (int i = 0; i < cmd.length(); ++i) {
         if (i == 0 || i == cmd.length() - 1) {
@@ -194,7 +194,7 @@ void CalculatorRunner::userFriendlyMultiplication(QString &cmd)
         const QChar next = cmd.at(i + 1);
         if (current == QLatin1Char('x')) {
             if (prev.isDigit() && (next.isDigit() || next == QLatin1Char(',') || next == QLatin1Char('.'))) {
-                cmd[i] = '*';
+                cmd[i] = u'*';
             }
         }
     }

@@ -159,9 +159,9 @@ void PowerDevilRunner::run(const KRunner::RunnerContext & /*context*/, const KRu
                                    u"org.kde.Solid.PowerManagement.Actions.BrightnessControl"_s);
     const QString action = match.id().remove(AbstractRunner::id() + QLatin1Char('_'));
     if (action == QLatin1String("BrightnessChange")) {
-        QDBusReply<int> max = brightnessIface.call("brightnessMax");
+        QDBusReply<int> max = brightnessIface.call(u"brightnessMax"_s);
         const int value = max.isValid() ? std::round(match.data().toInt() * max / 100.0) : match.data().toInt();
-        brightnessIface.asyncCall("setBrightness", value);
+        brightnessIface.asyncCall(u"setBrightness"_s, value);
     } else if (action == QLatin1String("DimTotal")) {
         brightnessIface.asyncCall(u"setBrightness"_s, 0);
     } else if (action == QLatin1String("DimHalf")) {

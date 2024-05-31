@@ -18,6 +18,8 @@
 #include <QRegularExpression>
 #include <QStandardPaths>
 
+using namespace Qt::StringLiterals;
+
 Firefox::Firefox(const QString &firefoxConfigDir, QObject *parent)
     : QObject(parent)
     , m_dbCacheFile(QStandardPaths::writableLocation(QStandardPaths::GenericCacheLocation)
@@ -44,7 +46,7 @@ Firefox::Firefox(const QString &firefoxConfigDir, QObject *parent)
         KConfigGroup fGrp = firefoxProfile.group(profilesList.first());
         profilePath = fGrp.readEntry("Path");
     } else {
-        const QStringList installConfig = firefoxProfile.groupList().filter(QRegularExpression("^Install.*"));
+        const QStringList installConfig = firefoxProfile.groupList().filter(QRegularExpression(u"^Install.*"_s));
         // The profile with Default=1 is not always the default profile, see BUG: 418526
         // If there is only one Install* group it contains the default profile
         if (installConfig.size() == 1) {
