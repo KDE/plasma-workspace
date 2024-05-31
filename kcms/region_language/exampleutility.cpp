@@ -62,23 +62,23 @@ QString Utility::addressExample(const QLocale &locale)
     const QStringList lang = getLangCodeFromLocale(locale);
     const QHash<QChar, QString> map{
         // QChar is the field descriptor and QString is the value
-        {'n', nameStyleExample(locale)}, // Person's Name, use LC_NAME for this
-        {'a', ki18nc("Care of person or organization", "c/o").toString(lang)},
-        {'f', ki18nc("Firm name", "Acme Corporation").toString(lang)},
-        {'d', ki18nc("Department name", "Development Department").toString(lang)},
-        {'b', ki18nc("Building name", "Dev-Building").toString(lang)},
-        {'s', ki18nc("Street or block name", "Main Street").toString(lang)},
-        {'h', ki18nc("House number", "House 1").toString(lang)},
-        {'N', "\n"}, // End of line
-        {'t', ki18nc("Whitespace field for locale address style example", " ").toString(lang)}, // Space
-        {'r', ki18nc("Room number", "Room 2").toString(lang)},
-        {'e', ki18nc("Floor number", "Floor 3").toString(lang)},
-        {'C', getLocaleInfo(_NL_ADDRESS_COUNTRY_POST, LC_ADDRESS, locale)}, // Country designation from the CountryKeyword
-        {'l', ki18nc("Local township within town or city", "Downtown").toString(lang)},
-        {'z', ki18nc("Zip number, postal code", "123456").toString(lang)},
-        {'T', ki18nc("Town or city", "City").toString(lang)},
-        {'S', ki18nc("State, province or prefecture", "State").toString(lang)},
-        {'c', getLocaleInfo(_NL_ADDRESS_COUNTRY_NAME, LC_ADDRESS, locale)}, // Country from data record
+        {u'n', nameStyleExample(locale)}, // Person's Name, use LC_NAME for this
+        {u'a', ki18nc("Care of person or organization", "c/o").toString(lang)},
+        {u'f', ki18nc("Firm name", "Acme Corporation").toString(lang)},
+        {u'd', ki18nc("Department name", "Development Department").toString(lang)},
+        {u'b', ki18nc("Building name", "Dev-Building").toString(lang)},
+        {u's', ki18nc("Street or block name", "Main Street").toString(lang)},
+        {u'h', ki18nc("House number", "House 1").toString(lang)},
+        {u'N', u"\n"_s}, // End of line
+        {u't', ki18nc("Whitespace field for locale address style example", " ").toString(lang)}, // Space
+        {u'r', ki18nc("Room number", "Room 2").toString(lang)},
+        {u'e', ki18nc("Floor number", "Floor 3").toString(lang)},
+        {u'C', getLocaleInfo(_NL_ADDRESS_COUNTRY_POST, LC_ADDRESS, locale)}, // Country designation from the CountryKeyword
+        {u'l', ki18nc("Local township within town or city", "Downtown").toString(lang)},
+        {u'z', ki18nc("Zip number, postal code", "123456").toString(lang)},
+        {u'T', ki18nc("Town or city", "City").toString(lang)},
+        {u'S', ki18nc("State, province or prefecture", "State").toString(lang)},
+        {u'c', getLocaleInfo(_NL_ADDRESS_COUNTRY_NAME, LC_ADDRESS, locale)}, // Country from data record
     };
 
     return resolveFieldDescriptors(map, _NL_ADDRESS_POSTAL_FMT, LC_ADDRESS, locale);
@@ -90,19 +90,19 @@ QString Utility::nameStyleExample(const QLocale &locale)
 {
     const QStringList lang = getLangCodeFromLocale(locale);
     const QHash<QChar, QString> map{
-        {'f', ki18nc("Family names", "FamilyName").toString(lang)},
-        {'F', ki18nc("Family names in uppercase", "FAMILYNAME").toString(lang)},
-        {'g', ki18nc("First given name", "FirstName").toString(lang)},
-        {'G', ki18nc("First given initial", "F").toString(lang)},
-        {'l', ki18nc("First given name with latin letters", "FirstName").toString(lang)},
-        {'o', ki18nc("Other shorter name", "OtherName").toString(lang)},
-        {'m', ki18nc("Additional given names", "AdditionalName").toString(lang)},
-        {'M', ki18nc("Initials for additional given names", "A").toString(lang)},
-        {'p', ki18nc("Profession", "Profession").toString(lang)},
-        {'s', ki18nc("Salutation", "Doctor").toString(lang)},
-        {'S', ki18nc("Abbreviated salutation", "Dr.").toString(lang)},
-        {'d', ki18nc("Salutation using the FDCC-sets conventions", "Dr.").toString(lang)},
-        {'t', ki18nc("Space or dot for locale name style example", " ").toString(lang)}, // Space or dot. Space produces better examples.
+        {u'f', ki18nc("Family names", "FamilyName").toString(lang)},
+        {u'F', ki18nc("Family names in uppercase", "FAMILYNAME").toString(lang)},
+        {u'g', ki18nc("First given name", "FirstName").toString(lang)},
+        {u'G', ki18nc("First given initial", "F").toString(lang)},
+        {u'l', ki18nc("First given name with latin letters", "FirstName").toString(lang)},
+        {u'o', ki18nc("Other shorter name", "OtherName").toString(lang)},
+        {u'm', ki18nc("Additional given names", "AdditionalName").toString(lang)},
+        {u'M', ki18nc("Initials for additional given names", "A").toString(lang)},
+        {u'p', ki18nc("Profession", "Profession").toString(lang)},
+        {u's', ki18nc("Salutation", "Doctor").toString(lang)},
+        {u'S', ki18nc("Abbreviated salutation", "Dr.").toString(lang)},
+        {u'd', ki18nc("Salutation using the FDCC-sets conventions", "Dr.").toString(lang)},
+        {u't', ki18nc("Space or dot for locale name style example", " ").toString(lang)}, // Space or dot. Space produces better examples.
     };
     return resolveFieldDescriptors(map, _NL_NAME_NAME_FMT, LC_NAME, locale);
 }
@@ -112,13 +112,13 @@ QString Utility::nameStyleExample(const QLocale &locale)
 QString Utility::phoneNumbersExample(const QLocale &locale)
 {
     const QHash<QChar, QString> map = {
-        {'a', "123"}, // Area code without nationwide prefix
-        {'A', "0123"}, // Area code with nationwide prefix
-        {'l', "1234567"}, // Local number within area code
-        {'e', "321"}, // Extension to local number
-        {'c', getLocaleInfo(_NL_TELEPHONE_INT_PREFIX, LC_TELEPHONE, locale)}, // Country code
-        {'C', "01"}, // Alternate carrier service code used for dialling abroad
-        {'t', ki18nc("Whitespace for telephone style example", " ").toString(getLangCodeFromLocale(locale))}, // Insert space
+        {u'a', u"123"_s}, // Area code without nationwide prefix
+        {u'A', u"0123"_s}, // Area code with nationwide prefix
+        {u'l', u"1234567"_s}, // Local number within area code
+        {u'e', u"321"_s}, // Extension to local number
+        {u'c', getLocaleInfo(_NL_TELEPHONE_INT_PREFIX, LC_TELEPHONE, locale)}, // Country code
+        {u'C', u"01"_s}, // Alternate carrier service code used for dialling abroad
+        {u't', ki18nc("Whitespace for telephone style example", " ").toString(getLangCodeFromLocale(locale))}, // Insert space
     };
 
     return resolveFieldDescriptors(map, _NL_TELEPHONE_TEL_INT_FMT, LC_TELEPHONE, locale);
@@ -145,7 +145,7 @@ QString Utility::getLocaleInfo(int langInfoFormat, int lcFormat, const QLocale &
         const QString localeString = locale.name() + QLatin1String(".UTF-8");
         const QByteArray localeByteArray = localeString.toUtf8();
 
-        if (setlocale(lcFormat, localeByteArray)) {
+        if (setlocale(lcFormat, localeByteArray.constData())) {
             localeInfo = QString::fromUtf8(nl_langinfo(langInfoFormat));
         }
     }
