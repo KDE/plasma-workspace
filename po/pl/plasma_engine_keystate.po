@@ -1,14 +1,14 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma5support package.
+# SPDX-FileCopyrightText: 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2009.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_engine_keystate\n"
+"Project-Id-Version: plasma5support\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2009-07-27 19:28+0200\n"
-"Last-Translator: Marta Rybczyńska <kde-i18n@rybczynska.net>\n"
+"PO-Revision-Date: 2024-05-30 10:47+0200\n"
+"Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: keystate.cpp:15
 msgid "Shift"
@@ -80,7 +81,7 @@ msgstr "Drugi przycisk X"
 #: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
 #: keystate.cpp:110
 msgid "Pressed"
-msgstr "Naciśnięte"
+msgstr "Naciśnięty"
 
 #: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
 msgid "Latched"
@@ -88,4 +89,4 @@ msgstr "Zatrzaśnięte"
 
 #: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
 msgid "Locked"
-msgstr "Zablokowane"
+msgstr "Zablokowany"
