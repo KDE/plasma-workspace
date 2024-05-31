@@ -105,8 +105,8 @@ bool LanguageListModel::isSupportedLanguage(const QString &language) const
 
     // If the language string passed has a territory attached (like fr_FR) then chop it off,
     // and try searching for just the language.
-    if (language.contains('_')) {
-        const QString languageName{language.left(language.indexOf('_'))};
+    if (language.contains(u'_')) {
+        const QString languageName{language.left(language.indexOf(u'_'))};
         return m_availableLanguages.contains(languageName);
     }
 

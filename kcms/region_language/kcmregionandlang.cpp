@@ -31,6 +31,7 @@
 #include "optionsmodel.h"
 #include "regionandlangsettings.h"
 
+using namespace Qt::StringLiterals;
 using namespace KCM_RegionAndLang;
 
 K_PLUGIN_CLASS_WITH_JSON(KCMRegionAndLang, "kcm_regionandlang.json")
@@ -84,7 +85,12 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
     qmlRegisterType<LanguageListModel>("kcmregionandlang", 1, 0, "LanguageListModel");
     qmlRegisterType<BinaryDialectModel>("kcmregionandlang", 1, 0, "BinaryDialectModel");
     qRegisterMetaType<KCM_RegionAndLang::SettingType>();
-    qmlRegisterUncreatableMetaObject(KCM_RegionAndLang::staticMetaObject, "kcmregionandlang", 1, 0, "SettingType", "Error: SettingType is an enum");
+    qmlRegisterUncreatableMetaObject(KCM_RegionAndLang::staticMetaObject,
+                                     "kcmregionandlang",
+                                     1,
+                                     0,
+                                     "SettingType",
+                                     QStringLiteral("Error: SettingType is an enum"));
 
 #if GLIBC_LOCALE_GENERATED
     // fedora pre generate locales, fetch available locales from localectl. /usr/share/i18n/locales is empty in fedora
@@ -213,7 +219,7 @@ void KCMRegionAndLang::save()
 void KCMRegionAndLang::load()
 {
     KQuickManagedConfigModule::load();
-    engine()->addImageProvider("flags", new FlagImageProvider);
+    engine()->addImageProvider(u"flags"_s, new FlagImageProvider);
 
     m_settings->load();
     m_optionsModel->load();
@@ -350,7 +356,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     // not glibc system or corrupted system
     if (availableLocales.isEmpty()) {
         if (m_localectl) {
-            availableLocales = QString(m_localectl->readAllStandardOutput()).split('\n');
+            availableLocales = QString::fromLocal8Bit(m_localectl->readAllStandardOutput()).split(u'\n');
         }
         if (availableLocales.isEmpty()) {
             Q_EMIT encountedError(failedFindLocalesMessage());
@@ -362,7 +368,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     std::unordered_map<QString, std::vector<QString>> baseLocaleMap(availableLocales.size());
     for (const auto &glibcLocale : availableLocales) {
         // we want only absolute base locale code, for sr@ijekavian and en_US, we get sr and en
-        auto baseLocale = glibcLocale.split('_')[0].split('@')[0];
+        auto baseLocale = glibcLocale.split(u'_')[0].split(u'@')[0];
         if (baseLocaleMap.contains(baseLocale)) {
             baseLocaleMap[baseLocale].push_back(glibcLocale);
         } else {
@@ -381,7 +387,7 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
 
     auto plasmaLocales = KLocalizedString::availableDomainTranslations(QByteArrayLiteral("plasmashell")).values();
     for (const auto &plasmaLocale : plasmaLocales) {
-        auto baseLocale = plasmaLocale.split('_')[0].split('@')[0];
+        auto baseLocale = plasmaLocale.split(u'_')[0].split(u'@')[0];
         if (baseLocaleMap.contains(baseLocale)) {
             const auto &prefixedLocales = baseLocaleMap[baseLocale];
 

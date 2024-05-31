@@ -142,7 +142,7 @@ void LocaleListModel::setLang(const QString &lang)
     QString tmpLang = lang;
     bool isC = false;
     if (lang.isEmpty()) {
-        tmpLang = qgetenv("LANG");
+        tmpLang = qEnvironmentVariable("LANG");
         if (tmpLang.isEmpty()) {
             tmpLang = QStringLiteral("C");
             isC = true;
