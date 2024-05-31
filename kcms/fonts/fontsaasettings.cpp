@@ -229,7 +229,7 @@ public:
         }
         setHinting(hStyle);
 
-        KSharedConfig::Ptr config = KSharedConfig::openConfig("kdeglobals");
+        KSharedConfig::Ptr config = KSharedConfig::openConfig(u"kdeglobals"_s);
         KConfigGroup cg(config, QStringLiteral("General"));
         m_isImmutable = cg.isEntryImmutable("XftAntialias");
 
@@ -271,7 +271,7 @@ FontsAASettings::FontsAASettings(QObject *parent)
 void FontsAASettings::addItemInternal(const QByteArray &propertyName, const QVariant &defaultValue, NotifySignalType notifySignal)
 {
     auto item = new KPropertySkeletonItem(m_fontAASettingsStore, propertyName, defaultValue);
-    addItem(item, propertyName);
+    addItem(item, QString::fromLatin1(propertyName));
     item->setNotifyFunction([this, notifySignal] {
         Q_EMIT(this->*notifySignal)();
     });
@@ -279,37 +279,37 @@ void FontsAASettings::addItemInternal(const QByteArray &propertyName, const QVar
 
 bool FontsAASettings::exclude() const
 {
-    return findItem("exclude")->property().toBool();
+    return findItem(u"exclude"_s)->property().toBool();
 }
 
 void FontsAASettings::setExclude(bool exclude)
 {
-    findItem("exclude")->setProperty(exclude);
+    findItem(u"exclude"_s)->setProperty(exclude);
 }
 
 int FontsAASettings::excludeFrom() const
 {
-    return findItem("excludeFrom")->property().toInt();
+    return findItem(u"excludeFrom"_s)->property().toInt();
 }
 
 void FontsAASettings::setExcludeFrom(int excludeFrom)
 {
-    findItem("excludeFrom")->setProperty(excludeFrom);
+    findItem(u"excludeFrom"_s)->setProperty(excludeFrom);
 }
 
 int FontsAASettings::excludeTo() const
 {
-    return findItem("excludeTo")->property().toInt();
+    return findItem(u"excludeTo"_s)->property().toInt();
 }
 
 void FontsAASettings::setExcludeTo(int excludeTo)
 {
-    findItem("excludeTo")->setProperty(excludeTo);
+    findItem(u"excludeTo"_s)->setProperty(excludeTo);
 }
 
 bool FontsAASettings::antiAliasing() const
 {
-    return findItem("antiAliasing")->property().toBool();
+    return findItem(u"antiAliasing"_s)->property().toBool();
 }
 
 void FontsAASettings::setAntiAliasing(bool enabled)
@@ -318,7 +318,7 @@ void FontsAASettings::setAntiAliasing(bool enabled)
         return;
     }
 
-    findItem("antiAliasing")->setProperty(enabled);
+    findItem(u"antiAliasing"_s)->setProperty(enabled);
     if (!enabled) {
         setSubPixel(KXftConfig::SubPixel::None);
     } else if (subPixel() == KXftConfig::SubPixel::None) {
@@ -343,7 +343,7 @@ void FontsAASettings::setDpi(int newDPI)
 
 KXftConfig::SubPixel::Type FontsAASettings::subPixel() const
 {
-    return findItem("subPixel")->property().value<KXftConfig::SubPixel::Type>();
+    return findItem(u"subPixel"_s)->property().value<KXftConfig::SubPixel::Type>();
 }
 
 void FontsAASettings::setSubPixel(KXftConfig::SubPixel::Type type)
@@ -352,12 +352,12 @@ void FontsAASettings::setSubPixel(KXftConfig::SubPixel::Type type)
         return;
     }
 
-    findItem("subPixel")->setProperty(type);
+    findItem(u"subPixel"_s)->setProperty(type);
 }
 
 KXftConfig::Hint::Style FontsAASettings::hinting() const
 {
-    return findItem("hinting")->property().value<KXftConfig::Hint::Style>();
+    return findItem(u"hinting"_s)->property().value<KXftConfig::Hint::Style>();
 }
 
 bool FontsAASettings::isAaImmutable() const
@@ -372,7 +372,7 @@ bool FontsAASettings::excludeStateProxy() const
 
 void FontsAASettings::setHinting(KXftConfig::Hint::Style hinting)
 {
-    findItem("hinting")->setProperty(hinting);
+    findItem(u"hinting"_s)->setProperty(hinting);
 }
 
 bool FontsAASettings::usrSave()

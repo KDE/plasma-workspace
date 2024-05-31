@@ -42,6 +42,8 @@
 /**** DLL Interface ****/
 K_PLUGIN_FACTORY_WITH_JSON(KFontsFactory, "kcm_fonts.json", registerPlugin<KFonts>(); registerPlugin<FontsData>();)
 
+using namespace Qt::StringLiterals;
+
 /**** KFonts ****/
 
 KFonts::KFonts(QObject *parent, const KPluginMetaData &metaData)
@@ -103,7 +105,7 @@ void KFonts::load()
     // NOTE: This needs to be done AFTER AA settings is loaded
     // otherwise AA settings will be reset in process of loading
     // previews
-    engine()->addImageProvider("preview", new PreviewImageProvider(fontsSettings()->font()));
+    engine()->addImageProvider(u"preview"_s, new PreviewImageProvider(fontsSettings()->font()));
 
     // KCM expect save state to be false at this point (can be true because if a font setting loaded
     // from the config isn't available on the system, font substitution may take place)
@@ -116,8 +118,8 @@ void KFonts::save()
     bool forceFontDPIChanged = false;
 
     if (KWindowSystem::isPlatformX11()) {
-        auto dpiItem = fontsAASettings()->findItem("forceFontDPI");
-        auto antiAliasingItem = fontsAASettings()->findItem("antiAliasing");
+        auto dpiItem = fontsAASettings()->findItem(u"forceFontDPI"_s);
+        auto antiAliasingItem = fontsAASettings()->findItem(u"antiAliasing"_s);
         Q_ASSERT(dpiItem && antiAliasingItem);
         if (dpiItem->isSaveNeeded() || antiAliasingItem->isSaveNeeded()) {
             Q_EMIT aliasingChangeApplied();
@@ -135,12 +137,9 @@ void KFonts::save()
     if (fontsAASettings()->forceFontDPI() == 0 && forceFontDPIChanged && KWindowSystem::isPlatformX11()) {
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
-        proc.start("xrdb",
-                   QStringList() << "-quiet"
-                                 << "-remove"
-                                 << "-nocpp");
+        proc.start(u"xrdb"_s, QStringList{u"-quiet"_s, u"-remove"_s, u"-nocpp"_s});
         if (proc.waitForStarted()) {
-            proc.write(QByteArray("Xft.dpi\n"));
+            proc.write("Xft.dpi\n");
             proc.closeWriteChannel();
             proc.waitForFinished();
         }
@@ -149,7 +148,7 @@ void KFonts::save()
 
     // Notify the world about the font changes
     if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
-        QDBusMessage message = QDBusMessage::createSignal("/KDEPlatformTheme", "org.kde.KDEPlatformTheme", "refreshFonts");
+        QDBusMessage message = QDBusMessage::createSignal(u"/KDEPlatformTheme"_s, u"org.kde.KDEPlatformTheme"_s, u"refreshFonts"_s);
         QDBusConnection::sessionBus().send(message);
     }
 
