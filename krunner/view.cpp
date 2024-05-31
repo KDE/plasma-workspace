@@ -159,7 +159,7 @@ void View::positionOnScreen()
     const auto screens = QGuiApplication::screens();
     auto screenIt = screens.cend();
     if (KWindowSystem::isPlatformWayland() && m_floating) {
-        auto message = QDBusMessage::createMethodCall("org.kde.KWin", "/KWin", "org.kde.KWin", "activeOutputName");
+        auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
         QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
         if (reply.isValid()) {
             const QString activeOutputName = reply.value();
