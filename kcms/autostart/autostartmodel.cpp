@@ -100,7 +100,8 @@ AutostartModel::AutostartModel(QObject *parent)
     , m_xdgConfigPath(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation))
     , m_xdgAutoStartPath(m_xdgConfigPath.filePath(QStringLiteral("autostart")))
 {
-    auto message = QDBusMessage::createMethodCall("org.freedesktop.systemd1", "/org/freedesktop/systemd1", "org.freedesktop.systemd1.Manager", "Subscribe");
+    auto message =
+        QDBusMessage::createMethodCall(u"org.freedesktop.systemd1"_s, u"/org/freedesktop/systemd1"_s, u"org.freedesktop.systemd1.Manager"_s, u"Subscribe"_s);
     QDBusConnection::sessionBus().send(message);
 }
 
@@ -209,7 +210,7 @@ void AutostartModel::loadScriptsFromDir(const QString &subDir, AutostartModel::A
             iconName = m_iconProvider.icon(fi).name();
         }
 
-        iconName = iconName == QString("text-plain") ? FALLBACK_ICON : iconName;
+        iconName = iconName == QLatin1String("text-plain") ? FALLBACK_ICON : iconName;
         m_entries.push_back({fileName, targetFileDir, kind, true, fi.absoluteFilePath(), false, iconName});
     }
 }
@@ -413,7 +414,7 @@ void AutostartModel::addScript(const QUrl &url, AutostartModel::AutostartEntrySo
         const QString newFilePath = m_xdgAutoStartPath.absoluteFilePath(fileName + QStringLiteral(".desktop"));
 
         QIcon icon = m_iconProvider.icon(file);
-        QString iconName = icon.name() == QString("text-plain") ? FALLBACK_ICON : icon.name();
+        QString iconName = icon.name() == QLatin1String("text-plain") ? FALLBACK_ICON : icon.name();
         if (QFileInfo::exists(newFilePath)) {
             const QUrl baseUrl = QUrl::fromLocalFile(m_xdgAutoStartPath.path());
             fileName = suggestName(baseUrl, fileName + QStringLiteral(".desktop"));
@@ -460,7 +461,7 @@ void AutostartModel::insertScriptEntry(int index, const QString &name, const QSt
     beginInsertRows(QModelIndex(), index, index);
     QFileInfo targetFile{QDir(targetFileDirPath).filePath(name)};
     const QIcon icon = m_iconProvider.icon(targetFile);
-    const QString iconName = icon.name() == QString("text-plain") ? FALLBACK_ICON : icon.name();
+    const QString iconName = icon.name() == QLatin1String("text-plain") ? FALLBACK_ICON : icon.name();
 
     Unit *unit = new Unit(this, true);
 

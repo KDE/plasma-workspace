@@ -24,7 +24,7 @@ class QQuickItem;
 class AutostartModel : public QAbstractListModel
 {
     Q_OBJECT
-    Q_PROPERTY(bool usingSystemdBoot READ usingSystemdBoot CONSTANT);
+    Q_PROPERTY(bool usingSystemdBoot READ usingSystemdBoot CONSTANT)
 
 public:
     explicit AutostartModel(QObject *parent = nullptr);

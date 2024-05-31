@@ -49,7 +49,7 @@ void Unit::setId(const QString &id)
 void Unit::loadAllProperties()
 {
     // Get unit path using Manager interface
-    auto message = QDBusMessage::createMethodCall(m_connSystemd, m_pathSysdMgr, m_ifaceMgr, "GetUnit");
+    auto message = QDBusMessage::createMethodCall(m_connSystemd, m_pathSysdMgr, m_ifaceMgr, u"GetUnit"_s);
     message.setArguments(QList<QVariant>{m_id});
     QDBusPendingCall async = m_sessionBus.asyncCall(message);
     QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
@@ -99,8 +99,8 @@ void Unit::getAllCallback(QDBusPendingCallWatcher *call)
     QDBusConnection userbus = QDBusConnection::connectToBus(QDBusConnection::SessionBus, m_connSystemd);
     userbus.connect(m_connSystemd,
                     m_dbusObjectPath.path(),
-                    "org.freedesktop.DBus.Properties",
-                    "PropertiesChanged",
+                    u"org.freedesktop.DBus.Properties"_s,
+                    u"PropertiesChanged"_s,
                     this,
                     SLOT(dbusPropertiesChanged(QString, QVariantMap, QStringList)));
 }
@@ -120,11 +120,11 @@ void Unit::dbusPropertiesChanged(QString name, QVariantMap map, QStringList list
 {
     Q_UNUSED(name);
     Q_UNUSED(list);
-    if (map.contains("ActiveEnterTimestamp")) {
-        setActiveEnterTimestamp(map["ActiveEnterTimestamp"].toULongLong());
+    if (map.contains(u"ActiveEnterTimestamp"_s)) {
+        setActiveEnterTimestamp(map[u"ActiveEnterTimestamp"_s].toULongLong());
     }
-    if (map.contains("ActiveState")) {
-        m_activeState = map["ActiveState"].toString();
+    if (map.contains(u"ActiveState"_s)) {
+        m_activeState = map[u"ActiveState"_s].toString();
         m_activeStateValue = STATE_MAP[m_activeState];
     }
 
@@ -133,14 +133,14 @@ void Unit::dbusPropertiesChanged(QString name, QVariantMap map, QStringList list
 
 void Unit::start()
 {
-    auto message = QDBusMessage::createMethodCall(m_connSystemd, m_dbusObjectPath.path(), m_ifaceUnit, "Start");
+    auto message = QDBusMessage::createMethodCall(m_connSystemd, m_dbusObjectPath.path(), m_ifaceUnit, u"Start"_s);
     message << QStringLiteral("replace");
     m_sessionBus.send(message);
 }
 
 void Unit::stop()
 {
-    auto message = QDBusMessage::createMethodCall(m_connSystemd, m_dbusObjectPath.path(), m_ifaceUnit, "Stop");
+    auto message = QDBusMessage::createMethodCall(m_connSystemd, m_dbusObjectPath.path(), m_ifaceUnit, u"Stop"_s);
     message << QStringLiteral("replace");
     m_sessionBus.send(message);
 }
@@ -160,7 +160,7 @@ QStringList Unit::getLastJournalEntries(const QString &unit)
     sd_journal_flush_matches(journal);
 
     const QString match1 = QStringLiteral("USER_UNIT=%1").arg(unit);
-    returnValue = sd_journal_add_match(journal, match1.toUtf8(), 0);
+    returnValue = sd_journal_add_match(journal, match1.toUtf8().constData(), 0);
     if (returnValue != 0) {
         sd_journal_close(journal);
         return {};
@@ -169,7 +169,7 @@ QStringList Unit::getLastJournalEntries(const QString &unit)
     sd_journal_add_disjunction(journal);
 
     const QString match2 = QStringLiteral("_SYSTEMD_USER_UNIT=%1").arg(unit);
-    returnValue = sd_journal_add_match(journal, match2.toUtf8(), 0);
+    returnValue = sd_journal_add_match(journal, match2.toUtf8().constData(), 0);
     if (returnValue != 0) {
         sd_journal_close(journal);
         return {};
@@ -201,10 +201,10 @@ QStringList Unit::getLastJournalEntries(const QString &unit)
             QDateTime date;
             date.setMSecsSinceEpoch(time / 1000);
             if (lastDateTime != date.toString()) {
-                line.append(date.toString("yyyy.MM.dd hh:mm: "));
+                line.append(date.toString(u"yyyy.MM.dd hh:mm: "_s));
                 lastDateTime = date.toString();
             } else {
-                line.append(QString("&#8203;&#32;").repeated(33));
+                line.append(u"&#8203;&#32;"_s.repeated(33));
             }
         }
 
@@ -213,15 +213,15 @@ QStringList Unit::getLastJournalEntries(const QString &unit)
         const void *data;
         returnValue = sd_journal_get_data(journal, "PRIORITY", &data, &length);
         if (returnValue == 0) {
-            int prio = QString::fromUtf8((const char *)data, length).section('=', 1).toInt();
+            int prio = QString::fromUtf8((const char *)data, length).section(u'=', 1).toInt();
             // Adding color to the logs is done in c++ so we can't add Kirigami color here so we add a string here
             //  and then replace it all with actual colors in qml code
             if (prio <= 3)
-                line.append("<font color='Kirigami.Theme.negativeTextColor'>");
+                line.append(u"<font color='Kirigami.Theme.negativeTextColor'>");
             else if (prio == 4)
-                line.append("<font color='Kirigami.Theme.neutralTextColor'>");
+                line.append(u"<font color='Kirigami.Theme.neutralTextColor'>");
             else
-                line.append("<font>");
+                line.append(u"<font>");
         }
 
         // Get the message itself

@@ -15,12 +15,12 @@ class QDBusPendingCallWatcher;
 class Unit : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString activeState MEMBER m_activeState NOTIFY dataChanged);
-    Q_PROPERTY(QString activeStateValue MEMBER m_activeStateValue NOTIFY dataChanged);
-    Q_PROPERTY(QString description MEMBER m_description NOTIFY dataChanged);
-    Q_PROPERTY(QString timeActivated MEMBER m_timeActivated NOTIFY dataChanged);
-    Q_PROPERTY(QString logs MEMBER m_logs NOTIFY dataChanged);
-    Q_PROPERTY(bool invalid MEMBER m_invalid NOTIFY dataChanged);
+    Q_PROPERTY(QString activeState MEMBER m_activeState NOTIFY dataChanged)
+    Q_PROPERTY(QString activeStateValue MEMBER m_activeStateValue NOTIFY dataChanged)
+    Q_PROPERTY(QString description MEMBER m_description NOTIFY dataChanged)
+    Q_PROPERTY(QString timeActivated MEMBER m_timeActivated NOTIFY dataChanged)
+    Q_PROPERTY(QString logs MEMBER m_logs NOTIFY dataChanged)
+    Q_PROPERTY(bool invalid MEMBER m_invalid NOTIFY dataChanged)
 
 public:
     explicit Unit(QObject *parent = nullptr, bool invalid = false);
