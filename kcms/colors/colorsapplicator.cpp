@@ -10,6 +10,7 @@
 #include <KColorScheme>
 #include <KConfigGroup>
 
+#include <KColorUtils>
 #include <QColorSpace>
 #include <QDBusConnection>
 #include <QDBusMessage>
@@ -188,7 +189,25 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         for (const auto &entry : colorSetKeyList) {
             if (hasAccent) {
                 if (accentList.contains(entry)) {
-                    targetGroup.writeEntry(entry, accent);
+                    // Try to make sure links are readable
+                    if (entry == u"ForegroundLink") {
+                        auto readableAccent = accent;
+                        const auto background = sourceGroup.readEntry<QColor>(QStringLiteral("BackgroundNormal"), QColor());
+                        // Dont do anything if the ratio is already good enough
+                        // We check for 5.0 since that around the AA level ratio mentioned in WCAG
+                        // https://www.w3.org/TR/WCAG20/
+                        if (KColorUtils::contrastRatio(background, readableAccent) < 5.0) {
+                            // Try to compensate for low ratio by adjusting the luma value of the accent color
+                            if (KColorUtils::luma(readableAccent) > KColorUtils::luma(background)) {
+                                readableAccent = KColorUtils::lighten(readableAccent);
+                            } else {
+                                readableAccent = KColorUtils::darken(readableAccent);
+                            }
+                        }
+                        targetGroup.writeEntry(entry, readableAccent);
+                    } else {
+                        targetGroup.writeEntry(entry, accent);
+                    }
                 } else if (tintAccent) {
                     auto base = sourceGroup.readEntry<QColor>(entry, QColor());
                     targetGroup.writeEntry(entry, tintColor(base, accent, tintFactor));
