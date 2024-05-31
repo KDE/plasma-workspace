@@ -41,7 +41,7 @@ public:
     explicit XdgOutputV1(Output *output)
         : m_output(output)
         , m_logicalGeometry(m_output->m_data.position, QSize(m_output->m_data.mode.resolution / m_output->m_data.scale))
-        , m_name(m_output->m_data.connector.isEmpty() ? QString("WL-%1").arg(s_nextId++) : m_output->m_data.connector)
+        , m_name(m_output->m_data.connector.isEmpty() ? QStringLiteral("WL-%1").arg(s_nextId++) : m_output->m_data.connector)
     {
     }
 
@@ -54,7 +54,7 @@ public:
     Output *m_output = nullptr;
     QRect m_logicalGeometry;
     QString m_name;
-    QString m_description = "This is an Xdg Output description";
+    QString m_description = QStringLiteral("This is an Xdg Output description");
     static int s_nextId;
 };
 

@@ -152,7 +152,7 @@ void ScreenPoolModel::remove(int screenId)
     auto conts = m_corona->containmentsForScreen(screenId);
     for (auto *cont : std::as_const(conts)) {
         // Don't call destroy directly, so we can have the undo action notification
-        auto *destroyAction = cont->internalAction("remove");
+        auto *destroyAction = cont->internalAction(u"remove"_s);
         if (destroyAction) {
             destroyAction->trigger();
         }
@@ -184,7 +184,7 @@ ShellContainmentModel::ShellContainmentModel(ShellCorona *corona, int screenId, 
         for (auto &d : m_containments) {
             if (d.containment == containment) {
                 d.image = path;
-                emit dataChanged(index(i, 0), index(i, 0));
+                Q_EMIT dataChanged(index(i, 0), index(i, 0));
                 break;
             }
             ++i;
@@ -276,7 +276,7 @@ void ShellContainmentModel::remove(int contId)
     if (cont) {
         disconnect(cont, nullptr, this, nullptr);
         // Don't call destroy directly, so we can have the undo action notification
-        auto *destroyAction = cont->internalAction("remove");
+        auto *destroyAction = cont->internalAction(u"remove"_s);
         if (destroyAction) {
             destroyAction->trigger();
         }
@@ -403,7 +403,7 @@ QString ShellContainmentModel::plasmaLocationToString(Plasma::Types::Location lo
     case Plasma::Types::RightEdge:
         return u"right"_s;
     default:
-        return QString("unknown");
+        return QStringLiteral("unknown");
     }
 }
 

@@ -189,7 +189,7 @@ QVariant ConfigGroup::readEntry(const QString &key)
     if (!d->configGroup) {
         return QVariant();
     }
-    const QVariant value = d->configGroup->readEntry(key, QVariant(""));
+    const QVariant value = d->configGroup->readEntry(key, QVariant(QString()));
     // qDebug() << " reading setting: " << key << value;
     return value;
 }

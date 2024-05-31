@@ -51,7 +51,7 @@ public:
     }
     QString dirtyMessage() override
     {
-        return m_xdgSurfaces.empty() ? "clean" : "remaining xdg surfaces";
+        return m_xdgSurfaces.empty() ? u"clean"_s : u"remaining xdg surfaces"_s;
     }
     QList<XdgSurface *> m_xdgSurfaces;
     XdgToplevel *toplevel(int i = 0);
@@ -59,7 +59,7 @@ public:
     XdgPopup *m_topmostGrabbingPopup = nullptr;
     CoreCompositor *m_compositor = nullptr;
 
-signals:
+Q_SIGNALS:
     void pong(uint serial);
     void xdgSurfaceCreated(XdgSurface *xdgSurface);
     void toplevelCreated(XdgToplevel *toplevel);
@@ -105,13 +105,13 @@ public:
     } m_pending, m_committed;
     QList<XdgPopup *> m_popups;
 
-public slots:
+public Q_SLOTS:
     void verifyConfigured()
     {
         QVERIFY(m_configureSent);
     }
 
-signals:
+Q_SIGNALS:
     void configureCommitted(uint);
     void toplevelCreated(XdgToplevel *toplevel);
 
@@ -162,7 +162,7 @@ public:
     XdgSurface *m_parentXdgSurface = nullptr;
     bool m_grabbed = false;
     uint m_grabSerial = 0;
-signals:
+Q_SIGNALS:
     void destroyRequested();
 
 protected:

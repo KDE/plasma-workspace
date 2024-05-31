@@ -104,7 +104,7 @@ void ScriptEngine::setupEngine()
     // as workaround we build manually a js object with getters and setters
     m_scriptSelf.setProperty(QStringLiteral("__AppInterface"), appInterface);
     QJSValue res = evaluate(
-        "__proto__ = {\
+        u"__proto__ = {\
                 get locked() {return __AppInterface.locked;},\
                 get hasBattery() {return __AppInterface.hasBattery;},\
                 get screenCount() {return __AppInterface.screenCount;},\
@@ -123,24 +123,24 @@ void ScriptEngine::setupEngine()
                 get locale() {return __AppInterface.locale;},\
                 get language() {return __AppInterface.language;},\
                 get languageId() {return __AppInterface.languageId;},\
-            }");
+            }"_s);
     Q_ASSERT(!res.isError());
     // methods from AppInterface
-    m_scriptSelf.setProperty(QStringLiteral("screenGeometry"), appInterface.property("screenGeometry"));
-    m_scriptSelf.setProperty(QStringLiteral("lockCorona"), appInterface.property("lockCorona"));
-    m_scriptSelf.setProperty(QStringLiteral("sleep"), appInterface.property("sleep"));
-    m_scriptSelf.setProperty(QStringLiteral("print"), appInterface.property("print"));
+    m_scriptSelf.setProperty(QStringLiteral("screenGeometry"), appInterface.property(u"screenGeometry"_s));
+    m_scriptSelf.setProperty(QStringLiteral("lockCorona"), appInterface.property(u"lockCorona"_s));
+    m_scriptSelf.setProperty(QStringLiteral("sleep"), appInterface.property(u"sleep"_s));
+    m_scriptSelf.setProperty(QStringLiteral("print"), appInterface.property(u"print"_s));
 
-    m_scriptSelf.setProperty(QStringLiteral("getApiVersion"), globalScriptEngineObject.property("getApiVersion"));
+    m_scriptSelf.setProperty(QStringLiteral("getApiVersion"), globalScriptEngineObject.property(u"getApiVersion"_s));
 
     // Constructors: prefer them js based as they make the c++ code of panel et al way simpler without hacks to get the engine
-    m_scriptSelf.setProperty(QStringLiteral("__newPanel"), globalScriptEngineObject.property("newPanel"));
-    m_scriptSelf.setProperty(QStringLiteral("__newConfigFile"), globalScriptEngineObject.property("configFile"));
+    m_scriptSelf.setProperty(QStringLiteral("__newPanel"), globalScriptEngineObject.property(u"newPanel"_s));
+    m_scriptSelf.setProperty(QStringLiteral("__newConfigFile"), globalScriptEngineObject.property(u"configFile"_s));
     // definitions of qrectf properties from documentation
     // only properties/functions which were already binded are.
     // TODO KF6: just a plain QRectF binding
     res = evaluate(
-        "function QRectF(x,y,w,h) {\
+        u"function QRectF(x,y,w,h) {\
                 return {x: x, y: y, width: w, height: h,\
                         get left() {return this.x},\
                         get top() {return this.y},\
@@ -173,52 +173,52 @@ void ScriptEngine::setupEngine()
                         moveTo: function(x1, y1) {this.x = x1; this.y = y1;}\
               }};\
               function ConfigFile(config, group){return __newConfigFile(config, group)};\
-              function Panel(plugin){return __newPanel(plugin)};");
+              function Panel(plugin){return __newPanel(plugin)};"_s);
     Q_ASSERT(!res.isError());
 
-    m_scriptSelf.setProperty(QStringLiteral("createActivity"), globalScriptEngineObject.property("createActivity"));
-    m_scriptSelf.setProperty(QStringLiteral("setCurrentActivity"), globalScriptEngineObject.property("setCurrentActivity"));
-    m_scriptSelf.setProperty(QStringLiteral("currentActivity"), globalScriptEngineObject.property("currentActivity"));
-    m_scriptSelf.setProperty(QStringLiteral("activities"), globalScriptEngineObject.property("activities"));
-    m_scriptSelf.setProperty(QStringLiteral("activityName"), globalScriptEngineObject.property("activityName"));
-    m_scriptSelf.setProperty(QStringLiteral("setActivityName"), globalScriptEngineObject.property("setActivityName"));
-    m_scriptSelf.setProperty(QStringLiteral("loadSerializedLayout"), globalScriptEngineObject.property("loadSerializedLayout"));
-    m_scriptSelf.setProperty(QStringLiteral("desktopsForActivity"), globalScriptEngineObject.property("desktopsForActivity"));
-    m_scriptSelf.setProperty(QStringLiteral("desktops"), globalScriptEngineObject.property("desktops"));
-    m_scriptSelf.setProperty(QStringLiteral("desktopById"), globalScriptEngineObject.property("desktopById"));
-    m_scriptSelf.setProperty(QStringLiteral("desktopForScreen"), globalScriptEngineObject.property("desktopForScreen"));
-    m_scriptSelf.setProperty(QStringLiteral("screenForConnector"), globalScriptEngineObject.property("screenForConnector"));
-    m_scriptSelf.setProperty(QStringLiteral("panelById"), globalScriptEngineObject.property("panelById"));
-    m_scriptSelf.setProperty(QStringLiteral("panels"), globalScriptEngineObject.property("panels"));
-    m_scriptSelf.setProperty(QStringLiteral("fileExists"), globalScriptEngineObject.property("fileExists"));
-    m_scriptSelf.setProperty(QStringLiteral("loadTemplate"), globalScriptEngineObject.property("loadTemplate"));
-    m_scriptSelf.setProperty(QStringLiteral("applicationExists"), globalScriptEngineObject.property("applicationExists"));
-    m_scriptSelf.setProperty(QStringLiteral("defaultApplication"), globalScriptEngineObject.property("defaultApplication"));
-    m_scriptSelf.setProperty(QStringLiteral("userDataPath"), globalScriptEngineObject.property("userDataPath"));
-    m_scriptSelf.setProperty(QStringLiteral("applicationPath"), globalScriptEngineObject.property("applicationPath"));
-    m_scriptSelf.setProperty(QStringLiteral("knownWallpaperPlugins"), globalScriptEngineObject.property("knownWallpaperPlugins"));
-    m_scriptSelf.setProperty(QStringLiteral("gridUnit"), globalScriptEngineObject.property("gridUnit"));
-    m_scriptSelf.setProperty(QStringLiteral("setImmutability"), globalScriptEngineObject.property("setImmutability"));
-    m_scriptSelf.setProperty(QStringLiteral("immutability"), globalScriptEngineObject.property("immutability"));
+    m_scriptSelf.setProperty(QStringLiteral("createActivity"), globalScriptEngineObject.property(u"createActivity"_s));
+    m_scriptSelf.setProperty(QStringLiteral("setCurrentActivity"), globalScriptEngineObject.property(u"setCurrentActivity"_s));
+    m_scriptSelf.setProperty(QStringLiteral("currentActivity"), globalScriptEngineObject.property(u"currentActivity"_s));
+    m_scriptSelf.setProperty(QStringLiteral("activities"), globalScriptEngineObject.property(u"activities"_s));
+    m_scriptSelf.setProperty(QStringLiteral("activityName"), globalScriptEngineObject.property(u"activityName"_s));
+    m_scriptSelf.setProperty(QStringLiteral("setActivityName"), globalScriptEngineObject.property(u"setActivityName"_s));
+    m_scriptSelf.setProperty(QStringLiteral("loadSerializedLayout"), globalScriptEngineObject.property(u"loadSerializedLayout"_s));
+    m_scriptSelf.setProperty(QStringLiteral("desktopsForActivity"), globalScriptEngineObject.property(u"desktopsForActivity"_s));
+    m_scriptSelf.setProperty(QStringLiteral("desktops"), globalScriptEngineObject.property(u"desktops"_s));
+    m_scriptSelf.setProperty(QStringLiteral("desktopById"), globalScriptEngineObject.property(u"desktopById"_s));
+    m_scriptSelf.setProperty(QStringLiteral("desktopForScreen"), globalScriptEngineObject.property(u"desktopForScreen"_s));
+    m_scriptSelf.setProperty(QStringLiteral("screenForConnector"), globalScriptEngineObject.property(u"screenForConnector"_s));
+    m_scriptSelf.setProperty(QStringLiteral("panelById"), globalScriptEngineObject.property(u"panelById"_s));
+    m_scriptSelf.setProperty(QStringLiteral("panels"), globalScriptEngineObject.property(u"panels"_s));
+    m_scriptSelf.setProperty(QStringLiteral("fileExists"), globalScriptEngineObject.property(u"fileExists"_s));
+    m_scriptSelf.setProperty(QStringLiteral("loadTemplate"), globalScriptEngineObject.property(u"loadTemplate"_s));
+    m_scriptSelf.setProperty(QStringLiteral("applicationExists"), globalScriptEngineObject.property(u"applicationExists"_s));
+    m_scriptSelf.setProperty(QStringLiteral("defaultApplication"), globalScriptEngineObject.property(u"defaultApplication"_s));
+    m_scriptSelf.setProperty(QStringLiteral("userDataPath"), globalScriptEngineObject.property(u"userDataPath"_s));
+    m_scriptSelf.setProperty(QStringLiteral("applicationPath"), globalScriptEngineObject.property(u"applicationPath"_s));
+    m_scriptSelf.setProperty(QStringLiteral("knownWallpaperPlugins"), globalScriptEngineObject.property(u"knownWallpaperPlugins"_s));
+    m_scriptSelf.setProperty(QStringLiteral("gridUnit"), globalScriptEngineObject.property(u"gridUnit"_s));
+    m_scriptSelf.setProperty(QStringLiteral("setImmutability"), globalScriptEngineObject.property(u"setImmutability"_s));
+    m_scriptSelf.setProperty(QStringLiteral("immutability"), globalScriptEngineObject.property(u"immutability"_s));
 
     // i18n
-    m_scriptSelf.setProperty(QStringLiteral("i18n"), localizedContext.property("i18n"));
-    m_scriptSelf.setProperty(QStringLiteral("i18nc"), localizedContext.property("i18nc"));
-    m_scriptSelf.setProperty(QStringLiteral("i18np"), localizedContext.property("i18np"));
-    m_scriptSelf.setProperty(QStringLiteral("i18ncp"), localizedContext.property("i18ncp"));
-    m_scriptSelf.setProperty(QStringLiteral("i18nd"), localizedContext.property("i18nd"));
-    m_scriptSelf.setProperty(QStringLiteral("i18ndc"), localizedContext.property("i18ndc"));
-    m_scriptSelf.setProperty(QStringLiteral("i18ndp"), localizedContext.property("i18ndp"));
-    m_scriptSelf.setProperty(QStringLiteral("i18ndcp"), localizedContext.property("i18ndcp"));
+    m_scriptSelf.setProperty(QStringLiteral("i18n"), localizedContext.property(u"i18n"_s));
+    m_scriptSelf.setProperty(QStringLiteral("i18nc"), localizedContext.property(u"i18nc"_s));
+    m_scriptSelf.setProperty(QStringLiteral("i18np"), localizedContext.property(u"i18np"_s));
+    m_scriptSelf.setProperty(QStringLiteral("i18ncp"), localizedContext.property(u"i18ncp"_s));
+    m_scriptSelf.setProperty(QStringLiteral("i18nd"), localizedContext.property(u"i18nd"_s));
+    m_scriptSelf.setProperty(QStringLiteral("i18ndc"), localizedContext.property(u"i18ndc"_s));
+    m_scriptSelf.setProperty(QStringLiteral("i18ndp"), localizedContext.property(u"i18ndp"_s));
+    m_scriptSelf.setProperty(QStringLiteral("i18ndcp"), localizedContext.property(u"i18ndcp"_s));
 
-    m_scriptSelf.setProperty(QStringLiteral("xi18n"), localizedContext.property("xi18n"));
-    m_scriptSelf.setProperty(QStringLiteral("xi18nc"), localizedContext.property("xi18nc"));
-    m_scriptSelf.setProperty(QStringLiteral("xi18np"), localizedContext.property("xi18np"));
-    m_scriptSelf.setProperty(QStringLiteral("xi18ncp"), localizedContext.property("xi18ncp"));
-    m_scriptSelf.setProperty(QStringLiteral("xi18nd"), localizedContext.property("xi18nd"));
-    m_scriptSelf.setProperty(QStringLiteral("xi18ndc"), localizedContext.property("xi18ndc"));
-    m_scriptSelf.setProperty(QStringLiteral("xi18ndp"), localizedContext.property("xi18ndp"));
-    m_scriptSelf.setProperty(QStringLiteral("xi18ndcp"), localizedContext.property("xi18ndcp"));
+    m_scriptSelf.setProperty(QStringLiteral("xi18n"), localizedContext.property(u"xi18n"_s));
+    m_scriptSelf.setProperty(QStringLiteral("xi18nc"), localizedContext.property(u"xi18nc"_s));
+    m_scriptSelf.setProperty(QStringLiteral("xi18np"), localizedContext.property(u"xi18np"_s));
+    m_scriptSelf.setProperty(QStringLiteral("xi18ncp"), localizedContext.property(u"xi18ncp"_s));
+    m_scriptSelf.setProperty(QStringLiteral("xi18nd"), localizedContext.property(u"xi18nd"_s));
+    m_scriptSelf.setProperty(QStringLiteral("xi18ndc"), localizedContext.property(u"xi18ndc"_s));
+    m_scriptSelf.setProperty(QStringLiteral("xi18ndp"), localizedContext.property(u"xi18ndp"_s));
+    m_scriptSelf.setProperty(QStringLiteral("xi18ndcp"), localizedContext.property(u"xi18ndcp"_s));
 }
 
 bool ScriptEngine::isPanel(const Plasma::Containment *c)
@@ -243,8 +243,8 @@ bool ScriptEngine::evaluateScript(const QString &script, const QString &path)
     if (result.isError()) {
         QString error = i18n("Error: %1 at line %2\n\nBacktrace:\n%3",
                              result.toString(),
-                             result.property("lineNumber").toInt(),
-                             result.property("stack").toVariant().value<QStringList>().join(QLatin1String("\n  ")));
+                             result.property(u"lineNumber"_s).toInt(),
+                             result.property(u"stack"_s).toVariant().value<QStringList>().join(QLatin1String("\n  ")));
         Q_EMIT printError(error);
         Q_EMIT exception(result);
         m_errorString = error;
@@ -269,9 +269,8 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
     const QString appName = corona->kPackage().metadata().pluginId();
     QStringList scripts;
 
-    const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation,
-                                                       "plasma/shells/" + appName + QStringLiteral("/contents/updates"),
-                                                       QStandardPaths::LocateDirectory);
+    const QStringList dirs =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, u"plasma/shells/" + appName + u"/contents/updates", QStandardPaths::LocateDirectory);
     for (const QString &dir : dirs) {
         QDirIterator it(dir, QStringList() << QStringLiteral("*.js"));
         while (it.hasNext()) {
@@ -288,7 +287,7 @@ QStringList ScriptEngine::pendingUpdateScripts(Plasma::Corona *corona)
     QStringList performed = cg.readEntry("performed", QStringList());
     const QString localXdgDir = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
 
-    foreach (const QString &script, scripts) {
+    for (const QString &script : std::as_const(scripts)) {
         if (performed.contains(script)) {
             continue;
         }
@@ -329,7 +328,7 @@ QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
         return result;
     }
 
-    foreach (Plasma::Containment *c, m_corona->containments()) {
+    for (const auto conts = m_corona->containments(); Plasma::Containment * c : conts) {
         if (c->activity() == id && !isPanel(c)) {
             result << new Containment(c, this);
         }
@@ -341,7 +340,8 @@ QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
         // with the current shell package and layout.js is run to set up the shell for the
         // first time
         ShellCorona *sc = static_cast<ShellCorona *>(m_corona);
-        foreach (int i, sc->screenIds()) {
+        const auto ids = sc->screenIds();
+        for (int i : ids) {
             result << new Containment(sc->createContainmentForActivity(id, i), this);
         }
     }
@@ -353,7 +353,7 @@ Plasma::Containment *ScriptEngine::createContainment(const QString &type, const 
 {
     bool exists = false;
     const QList<KPluginMetaData> list = Plasma::PluginLoader::listContainmentsMetaDataOfType(type);
-    foreach (const KPluginMetaData &pluginInfo, list) {
+    for (const KPluginMetaData &pluginInfo : list) {
         if (pluginInfo.pluginId() == plugin) {
             exists = true;
             break;

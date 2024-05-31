@@ -175,7 +175,7 @@ void Widget::showConfigurationInterface()
 QString Widget::userBackgroundHints() const
 {
     QMetaEnum hintEnum = QMetaEnum::fromType<Plasma::Types::BackgroundHints>();
-    return hintEnum.valueToKey(applet()->userBackgroundHints());
+    return QString::fromLatin1(hintEnum.valueToKey(applet()->userBackgroundHints()));
 }
 
 void Widget::setUserBackgroundHints(const QString &hint)

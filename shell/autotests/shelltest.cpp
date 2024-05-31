@@ -36,7 +36,7 @@ void copyDirectory(const QString &srcDir, const QString &dstDir)
         if (it.fileInfo().isDir()) {
             QVERIFY(targetDir.mkpath(relDestPath));
         } else {
-            QVERIFY(QFile::copy(path, dstDir % '/' % relDestPath));
+            QVERIFY(QFile::copy(path, dstDir + u'/' + relDestPath));
         }
     }
 }
@@ -163,7 +163,7 @@ void ShellTest::initTestCase()
 
     qApp->setProperty("org.kde.KActivities.core.disableAutostart", true);
     m_corona = new ShellCorona();
-    m_corona->setShell("org.kde.plasma.nano");
+    m_corona->setShell(u"org.kde.plasma.nano"_s);
     m_corona->init();
 
     QTRY_COMPARE(QGuiApplication::screens().size(), 1);
@@ -178,7 +178,7 @@ void ShellTest::initTestCase()
 void ShellTest::cleanupTestCase()
 {
     exec([this] {
-        outputOrder()->setList({"WL-1"});
+        outputOrder()->setList({u"WL-1"_s});
     });
     QCOMPOSITOR_COMPARE(getAll<Output>().size(), 1); // Only the default output should be left
     QTRY_COMPARE(QGuiApplication::screens().size(), 1);
@@ -227,7 +227,7 @@ void ShellTest::cleanup()
     insertScreen(QRect(0, 0, 1920, 1080), QStringLiteral("WL-1"));
     QCOMPARE(qApp->screens().size(), 1);
     QSignalSpy coronaScreenOrderSpy(m_corona, &ShellCorona::screenOrderChanged);
-    setScreenOrder({"WL-1"}, true);
+    setScreenOrder({u"WL-1"_s}, true);
 }
 
 void ShellTest::testScreenInsertion()
@@ -235,7 +235,7 @@ void ShellTest::testScreenInsertion()
     const auto geom = QRect(1920, 0, 1920, 1080);
     const auto name = QStringLiteral("DP-1");
     auto result = insertScreen(geom, name);
-    setScreenOrder({"WL-1", "DP-1"}, true);
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, true);
     QCOMPARE(result->geometry(), geom);
     QCOMPARE(qApp->screens().size(), 2);
     QCOMPARE(qApp->screens()[0]->geometry(), m_corona->m_desktopViewForScreen[0]->geometry());
@@ -265,7 +265,7 @@ void ShellTest::testSecondScreenInsertion()
     auto name2 = QStringLiteral("DP-2");
     auto result2 = insertScreen(geom2, name2);
 
-    setScreenOrder({"WL-1", "DP-1", "DP-2"}, true);
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s, u"DP-2"_s}, true);
 
     QCOMPARE(qApp->screens().size(), 3);
     QCOMPARE(result1->geometry(), geom1);
@@ -289,7 +289,7 @@ void ShellTest::testRedundantScreenInsertion()
     const auto name = QStringLiteral("DP-1");
     auto result = insertScreen(geom, name);
     // false as we do not expect to be notified for screenorderchanged
-    setScreenOrder({"WL-1", "DP-1"}, false);
+    setScreenOrder({u"WL-1"_s, u"DP-1"_s}, false);
     QCOMPARE(result->geometry(), geom);
     QCOMPARE(qApp->screens().size(), 2);
     // m_desktopViewForScreen did *not* get a view for the new screen
@@ -312,7 +312,7 @@ void ShellTest::testMoveOutOfRedundant()
         out->m_data.mode.resolution = {1280, 2048};
         xdgOut->sendLogicalSize(QSize(1280, 2048));
         out->sendDone();
-        outputOrder()->setList({"WL-1", "DP-1"});
+        outputOrder()->setList({u"WL-1"_s, u"DP-1"_s});
     });
 
     coronaAddedSpy.wait();
@@ -353,7 +353,7 @@ void ShellTest::testScreenRemoval()
 
     QTRY_COMPARE(removedSpy.size(), 2);
 
-    setScreenOrder({"WL-1"}, true);
+    setScreenOrder({u"WL-1"_s}, true);
 
     QCOMPARE(m_corona->numScreens(), 1);
     QCOMPARE(qApp->screens().size(), 1);
@@ -431,7 +431,7 @@ void ShellTest::testScreenRemovalRecyclingViews()
 
     QTRY_COMPARE(removedSpy.size(), 1);
 
-    setScreenOrder({"WL-1", "DP-2"}, true);
+    setScreenOrder({u"WL-1"_s, u"DP-2"_s}, true);
 
     QTRY_COMPARE(view2DeletedSpy.count(), 1);
     QTRY_COMPARE(screen1DeletedSpy.count(), 1);
@@ -457,7 +457,7 @@ void ShellTest::testScreenRemovalRecyclingViews()
     // Add DP-1 again, test that a view with cont2 inside is created
     insertScreen(QRect(1920, 0, 1920, 1080), QStringLiteral("DP-1"));
 
-    setScreenOrder({"WL-1", "DP-2", "DP-1"}, true);
+    setScreenOrder({u"WL-1"_s, u"DP-2"_s, u"DP-1"_s}, true);
 
     auto *newView2 = m_corona->m_desktopViewForScreen[2];
     QCOMPARE(m_corona->m_desktopViewForScreen.size(), 3);
@@ -470,13 +470,14 @@ void ShellTest::testReorderScreens_data()
     QTest::addColumn<QStringList>("orderBefore");
     QTest::addColumn<QStringList>("orderAfter");
 
-    QTest::newRow("twoScreens") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}}) << QStringList({"WL-1", "DP-1"}) << QStringList({"DP-1", "WL-1"});
+    QTest::newRow("twoScreens") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}}) << QStringList({u"WL-1"_s, u"DP-1"_s})
+                                << QStringList({u"DP-1"_s, u"WL-1"_s});
     QTest::newRow("3screensReorder0_1") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
-                                        << QStringList({"WL-1", "DP-1", "DP-2"}) << QStringList({"DP-1", "WL-1", "DP-2"});
+                                        << QStringList({u"WL-1"_s, u"DP-1"_s, u"DP-2"_s}) << QStringList({u"DP-1"_s, u"WL-1"_s, u"DP-2"_s});
     QTest::newRow("3screensReorder2_3") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
-                                        << QStringList({"WL-1", "DP-1", "DP-2"}) << QStringList({"DP-1", "WL-1", "DP-2"});
+                                        << QStringList({u"WL-1"_s, u"DP-1"_s, u"DP-2"_s}) << QStringList({u"DP-1"_s, u"WL-1"_s, u"DP-2"_s});
     QTest::newRow("3screensShuffled") << QList<QRect>({{0, 0, 1920, 1080}, {1920, 0, 1920, 1080}, {3840, 0, 1920, 1080}})
-                                      << QStringList({"WL-1", "DP-1", "DP-2"}) << QStringList({"DP-2", "DP-1", "WL-1"});
+                                      << QStringList({u"WL-1"_s, u"DP-1"_s, u"DP-2"_s}) << QStringList({u"DP-2"_s, u"DP-1"_s, u"WL-1"_s});
 }
 
 void ShellTest::testReorderScreens()

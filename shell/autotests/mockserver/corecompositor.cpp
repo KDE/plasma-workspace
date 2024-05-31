@@ -82,7 +82,7 @@ QString CoreCompositor::dirtyMessage()
         if (!global->isClean())
             messages << QString::fromLatin1(global->metaObject()->className()) + u": " + global->dirtyMessage();
     }
-    return messages.join(", ");
+    return messages.join(u", ");
 }
 
 void CoreCompositor::dispatch()

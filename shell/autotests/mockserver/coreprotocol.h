@@ -159,7 +159,7 @@ public:
     QList<Output *> m_outputs;
     SurfaceRole *m_role = nullptr;
 
-signals:
+Q_SIGNALS:
     void attach(void *buffer, QPoint offset);
     void commit();
     void bufferCommitted();
@@ -205,7 +205,7 @@ public:
     QList<Surface *> m_surfaces;
     CoreCompositor *m_compositor = nullptr;
 
-signals:
+Q_SIGNALS:
     void surfaceCreated(Surface *surface);
 
 protected:
@@ -213,7 +213,7 @@ protected:
     {
         auto *surface = new Surface(this, resource->client(), id, resource->version());
         m_surfaces.append(surface);
-        emit surfaceCreated(surface);
+        Q_EMIT surfaceCreated(surface);
     }
 
     void compositor_create_region(Resource *resource, uint32_t id) override
@@ -248,8 +248,8 @@ struct OutputData {
     // for geometry event
     QPoint position;
     QSize physicalSize = QSize(0, 0); // means unknown physical size
-    QString make = "Make";
-    QString model = "Model";
+    QString make = u"Make"_s;
+    QString model = u"Model"_s;
     QString connector; // passing empty string will autogenerate
     Subpixel subpixel = Subpixel::subpixel_unknown;
     Transform transform = Transform::transform_normal;
@@ -354,7 +354,7 @@ public:
     QList<uint> m_enterSerials;
     QPoint m_hotspot;
 
-signals:
+Q_SIGNALS:
     void setCursor(uint serial); // TODO: add arguments?
 
 protected:

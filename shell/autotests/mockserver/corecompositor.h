@@ -34,6 +34,8 @@
 
 struct wl_resource;
 
+using namespace Qt::StringLiterals;
+
 namespace MockCompositor
 {
 class Global : public QObject
@@ -46,7 +48,7 @@ public:
     }
     virtual QString dirtyMessage()
     {
-        return isClean() ? "clean" : "dirty";
+        return isClean() ? u"clean"_s : u"dirty"_s;
     }
 };
 

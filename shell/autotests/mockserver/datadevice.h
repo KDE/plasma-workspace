@@ -98,7 +98,7 @@ public:
 
     DataDevice *m_dataDevice = nullptr;
 
-signals:
+Q_SIGNALS:
     void receive(QString mimeType, int fd);
 
 protected:

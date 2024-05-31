@@ -56,7 +56,7 @@ public:
 
         guard = true;
         QString ppath = package->path();
-        if (ppath.endsWith('/')) {
+        if (ppath.endsWith(u'/')) {
             ppath.chop(1);
             if (!QFile::exists(ppath)) {
                 ppath = package->path();

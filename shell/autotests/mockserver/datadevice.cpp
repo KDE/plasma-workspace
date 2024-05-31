@@ -95,7 +95,7 @@ void DataOffer::data_offer_destroy_resource(Resource *resource)
 void DataOffer::data_offer_receive(Resource *resource, const QString &mime_type, int32_t fd)
 {
     Q_UNUSED(resource);
-    emit receive(mime_type, fd);
+    Q_EMIT receive(mime_type, fd);
 }
 
 void DataOffer::data_offer_destroy(QtWaylandServer::wl_data_offer::Resource *resource)

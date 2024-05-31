@@ -43,7 +43,7 @@ DefaultCompositor::DefaultCompositor()
         add<Seat>(Seat::capability_pointer | Seat::capability_keyboard | Seat::capability_touch);
         add<Shm>();
         add<XdgWmBase>();
-        outputOrder->setList({"WL-1"});
+        outputOrder->setList({u"WL-1"_s});
         add<LayerShell>();
 
         QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, [&](Surface *surface) {

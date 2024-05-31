@@ -67,13 +67,13 @@ void XdgWmBase::xdg_wm_base_get_xdg_surface(Resource *resource, uint32_t id, wl_
     auto *s = fromResource<Surface>(surface);
     auto *xdgSurface = new XdgSurface(this, s, resource->client(), id, resource->version());
     m_xdgSurfaces << xdgSurface;
-    emit xdgSurfaceCreated(xdgSurface);
+    Q_EMIT xdgSurfaceCreated(xdgSurface);
 }
 
 void XdgWmBase::xdg_wm_base_pong(Resource *resource, uint32_t serial)
 {
     Q_UNUSED(resource);
-    emit pong(serial);
+    Q_EMIT pong(serial);
 }
 
 XdgSurface::XdgSurface(XdgWmBase *xdgWmBase, Surface *surface, wl_client *client, int id, int version)
@@ -90,7 +90,7 @@ XdgSurface::XdgSurface(XdgWmBase *xdgWmBase, Surface *surface, wl_client *client
 
         if (m_ackedConfigureSerial != m_committedConfigureSerial) {
             m_committedConfigureSerial = m_ackedConfigureSerial;
-            emit configureCommitted(m_committedConfigureSerial);
+            Q_EMIT configureCommitted(m_committedConfigureSerial);
         }
     });
 }
@@ -115,7 +115,7 @@ void XdgSurface::xdg_surface_get_toplevel(Resource *resource, uint32_t id)
     QVERIFY(!m_toplevel);
     QVERIFY(!m_popup);
     m_toplevel = new XdgToplevel(this, id, resource->version());
-    emit toplevelCreated(m_toplevel);
+    Q_EMIT toplevelCreated(m_toplevel);
 }
 
 void XdgSurface::xdg_surface_get_popup(Resource *resource, uint32_t id, wl_resource *parent, wl_resource *positioner)
@@ -239,7 +239,7 @@ void XdgPopup::xdg_popup_destroy(Resource *resource)
     }
     m_xdgSurface->m_popup = nullptr;
     m_parentXdgSurface->m_popups.removeAll(this);
-    emit destroyRequested();
+    Q_EMIT destroyRequested();
 }
 
 } // namespace MockCompositor

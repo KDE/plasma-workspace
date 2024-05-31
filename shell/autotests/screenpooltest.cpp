@@ -87,7 +87,7 @@ void ScreenPoolTest::testScreenInsertion()
         data.physicalSize = data.mode.physicalSizeForDpi(96);
         // NOTE: assumes that when a screen is added it will already have the final geometry
         add<Output>(data);
-        outputOrder()->setList({"WL-1", "WL-2"});
+        outputOrder()->setList({u"WL-1"_s, u"WL-2"_s});
     });
 
     addedSpy.wait();
@@ -120,7 +120,7 @@ void ScreenPoolTest::testRedundantScreenInsertion()
         data.physicalSize = data.mode.physicalSizeForDpi(96);
         // NOTE: assumes that when a screen is added it will already have the final geometry
         add<Output>(data);
-        outputOrder()->setList({"WL-1", "WL-2", "WL-3"});
+        outputOrder()->setList({u"WL-1"_s, u"WL-2"_s, u"WL-3"_s});
     });
 
     addedFromAppSpy.wait();
@@ -150,7 +150,7 @@ void ScreenPoolTest::testMoveOutOfRedundant()
         out->m_data.mode.resolution = {1280, 2048};
         xdgOut->sendLogicalSize(QSize(1280, 2048));
         out->sendDone();
-        outputOrder()->setList({"WL-1", "WL-2", "WL-3"});
+        outputOrder()->setList({u"WL-1"_s, u"WL-2"_s, u"WL-3"_s});
     });
 
     orderChangeSpy.wait();
@@ -173,7 +173,7 @@ void ScreenPoolTest::testMoveInRedundant()
         out->m_data.mode.resolution = {1280, 720};
         xdgOut->sendLogicalSize(QSize(1280, 720));
         out->sendDone();
-        outputOrder()->setList({"WL-1", "WL-2", "WL-3"});
+        outputOrder()->setList({u"WL-1"_s, u"WL-2"_s, u"WL-3"_s});
     });
 
     removedSpy.wait();
@@ -200,7 +200,7 @@ void ScreenPoolTest::testOrderSwap()
     // Set a primary screen
     // TODO: "WL-2", "WL-1", "WL-3" when tests are self contained
     exec([this] {
-        outputOrder()->setList({"WL-2", "WL-1", "WL-3"});
+        outputOrder()->setList({u"WL-2"_s, u"WL-1"_s, u"WL-3"_s});
     });
 
     orderChangeSpy.wait();
@@ -229,7 +229,7 @@ void ScreenPoolTest::testPrimarySwapToRedundant()
 
     // Set a primary screen
     exec([this] {
-        outputOrder()->setList({"WL-3", "WL-2", "WL-1"});
+        outputOrder()->setList({u"WL-3"_s, u"WL-2"_s, u"WL-1"_s});
     });
 
     orderChangeSpy.wait(250);
@@ -247,7 +247,7 @@ void ScreenPoolTest::testMoveRedundantToMakePrimary()
         out->m_data.mode.resolution = {1280, 2048};
         xdgOut->sendLogicalSize(QSize(1280, 2048));
         out->sendDone();
-        outputOrder()->setList({"WL-3", "WL-2", "WL-1"});
+        outputOrder()->setList({u"WL-3"_s, u"WL-2"_s, u"WL-1"_s});
     });
 
     QTRY_COMPARE(orderChangeSpy.size(), 1);
@@ -285,7 +285,7 @@ void ScreenPoolTest::testMoveInRedundantToLosePrimary()
         xdgOut->sendLogicalSize(QSize(1280, 720));
         out->m_data.mode.resolution = {1280, 720};
         out->sendDone();
-        outputOrder()->setList({"WL-3", "WL-2", "WL-1"});
+        outputOrder()->setList({u"WL-3"_s, u"WL-2"_s, u"WL-1"_s});
     });
 
     QTRY_COMPARE(orderChangeSpy.size(), 1);
@@ -321,7 +321,7 @@ void ScreenPoolTest::testSecondScreenRemoval()
     // Remove an output
     exec([this] {
         remove(output(1));
-        outputOrder()->setList({"WL-3", "WL-1"});
+        outputOrder()->setList({u"WL-3"_s, u"WL-1"_s});
     });
 
     // Removing the primary screen, will change a primaryChange signal beforehand
@@ -343,7 +343,7 @@ void ScreenPoolTest::testThirdScreenRemoval()
     // Remove an output
     exec([this] {
         remove(output(1));
-        outputOrder()->setList({"WL-1"});
+        outputOrder()->setList({u"WL-1"_s});
     });
 
     // NOTE: we can neither access the data of removedSpy nor oldPrimary because at this point will be dangling
@@ -396,7 +396,7 @@ void ScreenPoolTest::testFakeToRealScreen()
         auto *out = add<Output>(data);
         auto *xdgOut = xdgOutput(out);
         xdgOut->m_name = QStringLiteral("WL-1");
-        outputOrder()->setList({"WL-1"});
+        outputOrder()->setList({u"WL-1"_s});
     });
 
     orderChangeSpy.wait();

@@ -18,6 +18,8 @@
 #include "shellcorona.h"
 #include "widget.h"
 
+using namespace Qt::StringLiterals;
+
 namespace WorkspaceScripting
 {
 Panel::Panel(Plasma::Containment *containment, ScriptEngine *engine)
@@ -33,27 +35,27 @@ QString Panel::location() const
 {
     Plasma::Containment *c = containment();
     if (!c) {
-        return "floating";
+        return u"floating"_s;
     }
 
     switch (c->location()) {
     case Plasma::Types::Floating:
-        return "floating";
+        return u"floating"_s;
     case Plasma::Types::Desktop:
-        return "desktop";
+        return u"desktop"_s;
     case Plasma::Types::FullScreen:
-        return "fullscreen";
+        return u"fullscreen"_s;
     case Plasma::Types::TopEdge:
-        return "top";
+        return u"top"_s;
     case Plasma::Types::BottomEdge:
-        return "bottom";
+        return u"bottom"_s;
     case Plasma::Types::LeftEdge:
-        return "left";
+        return u"left"_s;
     case Plasma::Types::RightEdge:
-        return "right";
+        return u"right"_s;
     }
 
-    return "floating";
+    return u"floating"_s;
 }
 
 void Panel::setLocation(const QString &locationString)
@@ -66,20 +68,20 @@ void Panel::setLocation(const QString &locationString)
     const QString lower = locationString.toLower();
     Plasma::Types::Location loc = Plasma::Types::Floating;
     Plasma::Types::FormFactor ff = Plasma::Types::Planar;
-    if (lower == "desktop") {
+    if (lower == u"desktop") {
         loc = Plasma::Types::Desktop;
-    } else if (lower == "fullscreen") {
+    } else if (lower == u"fullscreen") {
         loc = Plasma::Types::FullScreen;
-    } else if (lower == "top") {
+    } else if (lower == u"top") {
         loc = Plasma::Types::TopEdge;
         ff = Plasma::Types::Horizontal;
-    } else if (lower == "bottom") {
+    } else if (lower == u"bottom") {
         loc = Plasma::Types::BottomEdge;
         ff = Plasma::Types::Horizontal;
-    } else if (lower == "left") {
+    } else if (lower == u"left") {
         loc = Plasma::Types::LeftEdge;
         ff = Plasma::Types::Vertical;
-    } else if (lower == "right") {
+    } else if (lower == u"right") {
         loc = Plasma::Types::RightEdge;
         ff = Plasma::Types::Vertical;
     }
@@ -143,23 +145,21 @@ QString Panel::alignment() const
 
     switch (alignment) {
     case Qt::AlignRight:
-        return "right";
+        return u"right"_s;
     case Qt::AlignCenter:
-        return "center";
+        return u"center"_s;
     default:
-        return "left";
+        return u"left"_s;
     }
-
-    return "left";
 }
 
 // NOTE: Alignment is the only one that reads and writes directly from panelconfig()
 void Panel::setAlignment(const QString &alignment)
 {
     int a = Qt::AlignCenter;
-    if (alignment.compare("left", Qt::CaseInsensitive) == 0) {
+    if (alignment.compare(u"left", Qt::CaseInsensitive) == 0) {
         a = Qt::AlignLeft;
-    } else if (alignment.compare("right", Qt::CaseInsensitive) == 0) {
+    } else if (alignment.compare(u"right", Qt::CaseInsensitive) == 0) {
         a = Qt::AlignRight;
     }
 
@@ -184,22 +184,22 @@ QString Panel::lengthMode() const
 
     switch (lengthMode) {
     case PanelView::LengthMode::FillAvailable:
-        return "fill";
+        return u"fill"_s;
     case PanelView::LengthMode::FitContent:
-        return "fit";
+        return u"fit"_s;
     case PanelView::LengthMode::Custom:
-        return "custom";
+        return u"custom"_s;
     }
 
-    return "fill";
+    return u"fill"_s;
 }
 
 void Panel::setLengthMode(const QString &mode)
 {
     PanelView::LengthMode lengthMode = PanelView::LengthMode::FillAvailable;
-    if (mode.compare("fit", Qt::CaseInsensitive) == 0) {
+    if (mode.compare(u"fit", Qt::CaseInsensitive) == 0) {
         lengthMode = PanelView::LengthMode::FitContent;
-    } else if (mode.compare("custom", Qt::CaseInsensitive) == 0) {
+    } else if (mode.compare(u"custom", Qt::CaseInsensitive) == 0) {
         lengthMode = PanelView::LengthMode::Custom;
     }
 
@@ -313,25 +313,25 @@ QString Panel::hiding() const
 
     switch (visibility) {
     case PanelView::NormalPanel:
-        return "none";
+        return u"none"_s;
     case PanelView::AutoHide:
-        return "autohide";
+        return u"autohide"_s;
     case PanelView::DodgeWindows:
-        return "dodgewindows";
+        return u"dodgewindows"_s;
     }
-    return "none";
+    return u"none"_s;
 }
 
 void Panel::setHiding(const QString &mode)
 {
     PanelView::VisibilityMode visibilityMode = PanelView::NormalPanel;
-    if (mode.compare("autohide", Qt::CaseInsensitive) == 0) {
+    if (mode.compare(u"autohide", Qt::CaseInsensitive) == 0) {
         visibilityMode = PanelView::AutoHide;
     }
-    if (mode.compare("dodgewindows", Qt::CaseInsensitive) == 0) {
+    if (mode.compare(u"dodgewindows", Qt::CaseInsensitive) == 0) {
         visibilityMode = PanelView::DodgeWindows;
     }
-    if (mode.compare("windowsgobelow", Qt::CaseInsensitive) == 0) {
+    if (mode.compare(u"windowsgobelow", Qt::CaseInsensitive) == 0) {
         visibilityMode = PanelView::WindowsGoBelow;
     }
 

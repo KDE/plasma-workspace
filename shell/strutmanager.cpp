@@ -14,6 +14,8 @@
 #include <QDBusMetaType>
 #include <QDBusServiceWatcher>
 
+using namespace Qt::StringLiterals;
+
 StrutManager::StrutManager(ShellCorona *plasmashellCorona)
     : QObject(plasmashellCorona)
     , m_plasmashellCorona(plasmashellCorona)
@@ -22,7 +24,7 @@ StrutManager::StrutManager(ShellCorona *plasmashellCorona)
     qDBusRegisterMetaType<QList<QRect>>();
 
     QDBusConnection dbus = QDBusConnection::sessionBus();
-    dbus.registerObject("/StrutManager", this, QDBusConnection::ExportAllSlots);
+    dbus.registerObject(u"/StrutManager"_s, this, QDBusConnection::ExportAllSlots);
     m_serviceWatcher->setConnection(dbus);
 
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, [this](const QString &service) {
@@ -39,8 +41,7 @@ StrutManager::StrutManager(ShellCorona *plasmashellCorona)
 QRect StrutManager::availableScreenRect(int id) const
 {
     QRect r = m_plasmashellCorona->_availableScreenRect(id);
-    QHash<int, QRect> service;
-    foreach (service, m_availableScreenRects) {
+    for (const QHash<int, QRect> &service : std::as_const(m_availableScreenRects)) {
         if (!service.value(id).isNull()) {
             r &= service[id];
         }
@@ -56,8 +57,7 @@ QRect StrutManager::availableScreenRect(const QString &screenName) const
 QRegion StrutManager::availableScreenRegion(int id) const
 {
     QRegion r = m_plasmashellCorona->_availableScreenRegion(id);
-    QHash<int, QRegion> service;
-    foreach (service, m_availableScreenRegions) {
+    for (const QHash<int, QRegion> &service : std::as_const(m_availableScreenRegions)) {
         if (!service.value(id).isNull()) {
             r &= service[id];
         }

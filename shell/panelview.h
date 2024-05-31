@@ -350,7 +350,7 @@ private:
     bool m_internalResize = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
-    QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView = 0;
+    QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView;
     ShellCorona *m_corona;
     QTimer m_strutsTimer;
     VisibilityMode m_visibilityMode;

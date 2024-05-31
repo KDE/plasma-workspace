@@ -150,7 +150,7 @@ public:
     int main(int argc, char **argv)                                                                                                                            \
     {                                                                                                                                                          \
         QTemporaryDir tmpRuntimeDir;                                                                                                                           \
-        setenv("XDG_RUNTIME_DIR", tmpRuntimeDir.path().toLocal8Bit(), 1);                                                                                      \
+        setenv("XDG_RUNTIME_DIR", tmpRuntimeDir.path().toLocal8Bit().constData(), 1);                                                                          \
         setenv("XDG_CURRENT_DESKTOP", "qtwaylandtests", 1);                                                                                                    \
         setenv("QT_QPA_PLATFORM", "wayland", 1);                                                                                                               \
         test tc;                                                                                                                                               \

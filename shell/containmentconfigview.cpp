@@ -203,8 +203,8 @@ void ContainmentConfigView::applyWallpaper()
     }
 
     if (m_currentWallpaperPlugin == QLatin1String("org.kde.image")) {
-        params.insert("Image", m_currentWallpaperConfig->value("Image"));
-        params.remove("PreviewImage");
+        params.insert(u"Image"_s, m_currentWallpaperConfig->value(u"Image"_s));
+        params.remove(u"PreviewImage"_s);
     }
 
     auto shell = static_cast<ShellCorona *>(m_containment->corona());

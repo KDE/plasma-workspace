@@ -69,7 +69,7 @@ public:
         if (!array.isArray())
             return;
 
-        int length = array.property("length").toInt();
+        int length = array.property(u"length"_s).toInt();
         for (int i = 0; i < length; ++i) {
             function(array.property(i));
         }
@@ -154,7 +154,7 @@ QJSValue ScriptEngine::V1::desktopById(const QJSValue &param) const
 
     const quint32 id = param.toInt();
 
-    foreach (Plasma::Containment *c, m_engine->m_corona->containments()) {
+    for (const auto conts = m_engine->m_corona->containments(); Plasma::Containment * c : conts) {
         if (c->id() == id && !isPanel(c)) {
             return m_engine->wrap(c);
         }
@@ -319,7 +319,7 @@ void loadSerializedConfigs(Object *object, const QJSValue &configs)
     SCRIPT_OBJECT_FOREACH(escapedGroup, config, configs)
     {
         // If the config group is set, pass it on to the containment
-        QStringList groups = escapedGroup.split('/', Qt::SkipEmptyParts);
+        QStringList groups = escapedGroup.split(u'/', Qt::SkipEmptyParts);
         for (QString &group : groups) {
             group = QUrl::fromPercentEncoding(group.toUtf8());
         }
@@ -340,7 +340,7 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
         return m_engine->newError(i18n("loadSerializedLayout requires the JSON object to deserialize from"));
     }
 
-    if (data.property("serializationFormatVersion").toInt() != 1) {
+    if (data.property(u"serializationFormatVersion"_s).toInt() != 1) {
         return m_engine->newError(i18n("loadSerializedLayout: invalid version of the serialized object"));
     }
 
@@ -350,7 +350,7 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
     // qDebug() << "DESKTOP DESERIALIZATION: Loading desktops...";
 
     int count = 0;
-    SCRIPT_ARRAY_FOREACH(desktopData, data.property("desktops"))
+    SCRIPT_ARRAY_FOREACH(desktopData, data.property(u"desktops"_s))
     {
         // If the template has more desktops than we do, ignore them
         if (count >= desktops.size())
@@ -360,26 +360,26 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
         // qDebug() << "DESKTOP DESERIALIZATION: var cont = desktopsArray[...]; " << count << " -> " << desktop;
 
         // Setting the wallpaper plugin because it is special
-        desktop->setWallpaperPlugin(desktopData.property("wallpaperPlugin").toString());
+        desktop->setWallpaperPlugin(desktopData.property(u"wallpaperPlugin"_s).toString());
         // qDebug() << "DESKTOP DESERIALIZATION: cont->setWallpaperPlugin(...) " << desktop->wallpaperPlugin();
 
         // Now, lets go through the configs
-        loadSerializedConfigs(desktop, desktopData.property("config"));
+        loadSerializedConfigs(desktop, desktopData.property(u"config"_s));
 
         // After the config, we want to load the applets
-        SCRIPT_ARRAY_FOREACH(appletData, desktopData.property("applets"))
+        SCRIPT_ARRAY_FOREACH(appletData, desktopData.property(u"applets"_s))
         {
             // qDebug() << "DESKTOP DESERIALIZATION: Applet: " << appletData.toString();
 
-            auto appletObject = desktop->addWidget(appletData.property("plugin"),
-                                                   appletData.property("geometry.x").toInt() * gridUnit(),
-                                                   appletData.property("geometry.y").toInt() * gridUnit(),
-                                                   appletData.property("geometry.width").toInt() * gridUnit(),
-                                                   appletData.property("geometry.height").toInt() * gridUnit());
+            auto appletObject = desktop->addWidget(appletData.property(u"plugin"_s),
+                                                   appletData.property(u"geometry.x"_s).toInt() * gridUnit(),
+                                                   appletData.property(u"geometry.y"_s).toInt() * gridUnit(),
+                                                   appletData.property(u"geometry.width"_s).toInt() * gridUnit(),
+                                                   appletData.property(u"geometry.height"_s).toInt() * gridUnit());
 
             if (auto applet = qobject_cast<Widget *>(appletObject.toQObject())) {
                 // Now, lets go through the configs for the applet
-                loadSerializedConfigs(applet, appletData.property("config"));
+                loadSerializedConfigs(applet, appletData.property(u"config"_s));
             }
         };
 
@@ -388,38 +388,38 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
 
     // qDebug() << "PANEL DESERIALIZATION: Loading panels...";
 
-    SCRIPT_ARRAY_FOREACH(panelData, data.property("panels"))
+    SCRIPT_ARRAY_FOREACH(panelData, data.property(u"panels"_s))
     {
         const auto panel = qobject_cast<Panel *>(m_engine->createContainmentWrapper(QStringLiteral("Panel"), QStringLiteral("org.kde.panel")));
 
         Q_ASSERT(panel);
 
         // Basic panel setup
-        panel->setLocation(panelData.property("location").toString());
-        panel->setHeight(panelData.property("height").toNumber() * gridUnit());
-        panel->setLengthMode(panelData.property("lengthMode").toString());
-        panel->setMaximumLength(panelData.property("maximumLength").toNumber() * gridUnit());
-        panel->setMinimumLength(panelData.property("minimumLength").toNumber() * gridUnit());
-        panel->setOffset(panelData.property("offset").toNumber() * gridUnit());
-        panel->setAlignment(panelData.property("alignment").toString());
-        panel->setHiding(panelData.property("hiding").toString());
+        panel->setLocation(panelData.property(u"location"_s).toString());
+        panel->setHeight(panelData.property(u"height"_s).toNumber() * gridUnit());
+        panel->setLengthMode(panelData.property(u"lengthMode"_s).toString());
+        panel->setMaximumLength(panelData.property(u"maximumLength"_s).toNumber() * gridUnit());
+        panel->setMinimumLength(panelData.property(u"minimumLength"_s).toNumber() * gridUnit());
+        panel->setOffset(panelData.property(u"offset"_s).toNumber() * gridUnit());
+        panel->setAlignment(panelData.property(u"alignment"_s).toString());
+        panel->setHiding(panelData.property(u"hiding"_s).toString());
 
         // Loading the config for the panel
-        loadSerializedConfigs(panel, panelData.property("config"));
+        loadSerializedConfigs(panel, panelData.property(u"config"_s));
 
         // Now dealing with the applets
-        SCRIPT_ARRAY_FOREACH(appletData, panelData.property("applets"))
+        SCRIPT_ARRAY_FOREACH(appletData, panelData.property(u"applets"_s))
         {
             // qDebug() << "PANEL DESERIALIZATION: Applet: " << appletData.toString();
 
-            auto appletObject = panel->addWidget(appletData.property("plugin"));
+            auto appletObject = panel->addWidget(appletData.property(u"plugin"_s));
             // qDebug() << "PANEL DESERIALIZATION: addWidget"
             //      << appletData.property("plugin").toString()
             //      ;
 
             if (auto applet = qobject_cast<Widget *>(appletObject.toQObject())) {
                 // Now, lets go through the configs for the applet
-                loadSerializedConfigs(applet, appletData.property("config"));
+                loadSerializedConfigs(applet, appletData.property(u"config"_s));
             }
         };
     };
@@ -441,7 +441,7 @@ QJSValue ScriptEngine::V1::panelById(const QJSValue &idParam) const
 
     const quint32 id = idParam.toInt();
 
-    foreach (Plasma::Containment *c, m_engine->m_corona->containments()) {
+    for (const auto conts = m_engine->m_corona->containments(); Plasma::Containment * c : conts) {
         if (c->id() == id && isPanel(c)) {
             return m_engine->wrap(c);
         }
@@ -562,7 +562,7 @@ bool ScriptEngine::V1::loadTemplate(const QString &layout)
         return false;
     }
 
-    QString script = file.readAll();
+    QString script = QString::fromLocal8Bit(file.readAll());
     if (script.isEmpty()) {
         // qDebug() << "script is empty";
         return false;
@@ -746,7 +746,7 @@ QJSValue ScriptEngine::V1::knownWallpaperPlugins(const QString &formFactor) cons
 {
     QString constraint;
     if (!formFactor.isEmpty()) {
-        constraint.append("[X-Plasma-FormFactors] ~~ '").append(formFactor).append("'");
+        constraint.append(u"[X-Plasma-FormFactors] ~~ '").append(formFactor).append(u'\'');
     }
 
     const QList<KPluginMetaData> wallpapers = KPackage::PackageLoader::self()->listPackages(QStringLiteral("Plasma/Wallpaper"), QString());

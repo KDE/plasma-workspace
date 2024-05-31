@@ -30,6 +30,8 @@
 #include "debug.h"
 #include "scriptengine.h"
 
+using namespace Qt::StringLiterals;
+
 namespace WorkspaceScripting
 {
 AppInterface::AppInterface(ScriptEngine *env)
@@ -48,7 +50,7 @@ QJSValue AppInterface::screenGeometry(int screen) const
 {
     QRectF rect = m_env->corona()->screenGeometry(screen);
     QJSValueList args({QJSValue(rect.x()), QJSValue(rect.y()), QJSValue(rect.width()), QJSValue(rect.height())});
-    return m_env->globalObject().property("QRectF").callAsConstructor(args);
+    return m_env->globalObject().property(u"QRectF"_s).callAsConstructor(args);
 }
 
 QList<int> AppInterface::activityIds() const

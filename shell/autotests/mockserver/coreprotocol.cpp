@@ -72,7 +72,7 @@ void Surface::surface_attach(Resource *resource, wl_resource *buffer, int32_t x,
     m_pending.buffer = fromResource<Buffer>(buffer);
     m_pending.commitSpecific.attachOffset = offset;
     m_pending.commitSpecific.attached = true;
-    emit attach(buffer, offset);
+    Q_EMIT attach(buffer, offset);
 }
 
 void Surface::surface_set_buffer_scale(QtWaylandServer::wl_surface::Resource *resource, int32_t scale)
@@ -91,9 +91,9 @@ void Surface::surface_commit(Resource *resource)
         m_waitingFrameCallbacks.append(frame);
 
     m_pending.commitSpecific = PerCommitData();
-    emit commit();
+    Q_EMIT commit();
     if (m_committed.commitSpecific.attached)
-        emit bufferCommitted();
+        Q_EMIT bufferCommitted();
 }
 
 void Surface::surface_frame(Resource *resource, uint32_t callback)
@@ -118,13 +118,13 @@ bool WlCompositor::isClean()
 QString WlCompositor::dirtyMessage()
 {
     if (isClean())
-        return "clean";
+        return u"clean"_s;
     QStringList messages;
     for (auto *s : std::as_const(m_surfaces)) {
-        QString role = s->m_role ? s->m_role->staticMetaObject.className() : "none/unknown";
-        messages << "Surface with role: " + role;
+        QString role = QString::fromLatin1(s->m_role ? s->m_role->staticMetaObject.className() : "none/unknown");
+        messages << u"Surface with role: " + role;
     }
-    return "Dirty, surfaces left:\n\t" + messages.join("\n\t");
+    return u"Dirty, surfaces left:\n\t" + messages.join(u"\n\t");
 }
 
 void Output::sendGeometry()
@@ -400,7 +400,7 @@ void Pointer::pointer_set_cursor(Resource *resource, uint32_t serial, wl_resourc
     }
 
     m_hotspot = QPoint(hotspot_x, hotspot_y);
-    emit setCursor(serial);
+    Q_EMIT setCursor(serial);
 }
 
 uint Touch::sendDown(Surface *surface, const QPointF &position, int id)

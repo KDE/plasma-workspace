@@ -198,7 +198,7 @@ void DesktopView::resetAccentColor()
 bool DesktopView::showPreviewBanner() const
 {
     static const bool shouldShowPreviewBanner =
-        !KConfigGroup(KSharedConfig::openConfig("kdeglobals"), u"General"_s).readEntry("HideDesktopPreviewBanner", false);
+        !KConfigGroup(KSharedConfig::openConfig(u"kdeglobals"_s), u"General"_s).readEntry("HideDesktopPreviewBanner", false);
     return shouldShowPreviewBanner;
 }
 
@@ -449,7 +449,7 @@ void DesktopView::setAccentColorFromWallpaper(const QColor &accentColor)
     if (!usedInAccentColor()) {
         return;
     }
-    QDBusMessage applyAccentColor = QDBusMessage::createMethodCall("org.kde.plasmashell.accentColor", "/AccentColor", "", "setAccentColor");
+    QDBusMessage applyAccentColor = QDBusMessage::createMethodCall(u"org.kde.plasmashell.accentColor"_s, u"/AccentColor"_s, QString(), u"setAccentColor"_s);
     applyAccentColor << accentColor.rgba();
     QDBusConnection::sessionBus().send(applyAccentColor);
 }

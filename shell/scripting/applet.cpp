@@ -108,7 +108,7 @@ void Applet::writeConfig(const QString &key, const QJSValue &value)
             QObject *wallpaperGraphicsObject = applet()->property("wallpaperGraphicsObject").value<QObject *>();
             if (wallpaperGraphicsObject) {
                 auto *config = static_cast<QQmlPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
-                config->setProperty(key.toLatin1(), value.toVariant());
+                config->setProperty(key.toLatin1().constData(), value.toVariant());
             }
         } else if (applet()->configScheme()) {
             // check if it can be written in the applets' configScheme

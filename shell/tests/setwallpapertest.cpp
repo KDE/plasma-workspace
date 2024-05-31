@@ -10,6 +10,8 @@
 
 #define SERVICE_NAME "org.kde.plasmashell"
 
+using namespace Qt::StringLiterals;
+
 class SetWallPaperTest : public QObject
 {
     Q_OBJECT
@@ -26,8 +28,10 @@ private:
 
 void SetWallPaperTest::printCurrentWallpaper()
 {
-    QDBusMessage request =
-        QDBusMessage::createMethodCall(SERVICE_NAME, QStringLiteral("/PlasmaShell"), QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("wallpaper"));
+    QDBusMessage request = QDBusMessage::createMethodCall(QStringLiteral(SERVICE_NAME),
+                                                          QStringLiteral("/PlasmaShell"),
+                                                          QStringLiteral("org.kde.PlasmaShell"),
+                                                          QStringLiteral("wallpaper"));
     request.setArguments({uint(0)});
 
     const QDBusReply<QVariantMap> response = QDBusConnection::sessionBus().call(request);
@@ -50,7 +54,7 @@ void SetWallPaperTest::setWallpaper(const QString &wallpaperPath)
     printCurrentWallpaper();
 
     // find our remote
-    auto iface = new QDBusInterface(SERVICE_NAME, "/PlasmaShell", "org.kde.PlasmaShell", QDBusConnection::sessionBus(), this);
+    auto iface = new QDBusInterface(QStringLiteral(SERVICE_NAME), u"/PlasmaShell"_s, u"org.kde.PlasmaShell"_s, QDBusConnection::sessionBus(), this);
     if (!iface->isValid()) {
         fprintf(stderr, "%s\n", qPrintable(QDBusConnection::sessionBus().lastError().message()));
         QCoreApplication::instance()->quit();
@@ -83,7 +87,7 @@ int main(int argc, char *argv[])
     if (argc == 1) {
         wallpaperPath = QStringLiteral("/usr/share/wallpapers/Altai/");
     } else {
-        wallpaperPath = QString(argv[1]);
+        wallpaperPath = QString::fromLocal8Bit(argv[1]);
     }
 
     qDebug() << "Setting wallpaper to" << wallpaperPath;

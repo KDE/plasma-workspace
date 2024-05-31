@@ -6,6 +6,8 @@
 
 #include <config-plasma.h>
 
+#include <chrono>
+
 #include "autohidescreenedge.h"
 #include "debug.h"
 #include "panelconfigview.h"
@@ -38,7 +40,6 @@
 #include <NETWM>
 #include <qpa/qplatformwindow_p.h>
 #endif
-#include <chrono>
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;
@@ -133,8 +134,8 @@ static bool vendorIsNVidia()
     context.create();
     if (context.makeCurrent(&surface)) {
         QOpenGLFunctions funcs(&context);
-        const auto vendor = QString::fromUtf8(reinterpret_cast<const char *>(funcs.glGetString(GL_VENDOR)));
-        return vendor.contains("NVIDIA", Qt::CaseInsensitive);
+        const QString vendor = QString::fromLocal8Bit(reinterpret_cast<const char *>(funcs.glGetString(GL_VENDOR)));
+        return vendor.contains(u"NVIDIA", Qt::CaseInsensitive);
     }
     return false;
 }
@@ -857,7 +858,7 @@ void PanelView::restore()
     // but fallback on the screen independent section, as is the only place
     // is safe to directly write during plasma startup, as there can be
     // resolution changes
-    m_offset = readConfigValueWithFallBack("offset", m_offset);
+    m_offset = readConfigValueWithFallBack(u"offset"_s, m_offset);
     if (m_alignment == Qt::AlignCenter) {
         m_offset = 0;
     } else {
@@ -873,8 +874,8 @@ void PanelView::restore()
 
     const int side = containment()->formFactor() == Plasma::Types::Vertical ? screenSize.height() : screenSize.width();
     const int maxSize = side - m_offset;
-    m_maxLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("maxLength", side), maxSize);
-    m_minLength = qBound<int>(MINSIZE, readConfigValueWithFallBack("minLength", side), maxSize);
+    m_maxLength = qBound<int>(MINSIZE, readConfigValueWithFallBack(u"maxLength"_s, side), maxSize);
+    m_minLength = qBound<int>(MINSIZE, readConfigValueWithFallBack(u"minLength"_s, side), maxSize);
 
     // panelVisibility is not resolution dependent
     // but if fails read it from the resolution dependent one as
@@ -1078,7 +1079,7 @@ void PanelView::integrateScreen()
 void PanelView::updateEditModeLabel()
 {
     bool editMode = containment()->corona()->isEditMode();
-    QAction *action = containment()->internalAction("configure");
+    QAction *action = containment()->internalAction(u"configure"_s);
     if (!action) {
         return;
     }
