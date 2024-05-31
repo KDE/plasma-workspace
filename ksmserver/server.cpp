@@ -51,6 +51,7 @@
 #include <QFile>
 #include <QPushButton>
 #include <QRegularExpression>
+#include <QScopeGuard>
 #include <QSocketNotifier>
 #include <QStandardPaths>
 
@@ -318,38 +319,34 @@ static void fprintfhex(FILE *fp, unsigned int len, char *cp)
     }
 }
 
-/*
- * We use temporary files which contain commands to add/remove entries from
- * the .ICEauthority file.
- */
-static void write_iceauth(FILE *addfp, FILE *removefp, IceAuthDataEntry *entry)
-{
-    fprintf(addfp, "add %s \"\" %s %s ", entry->protocol_name, entry->network_id, entry->auth_name);
-    fprintfhex(addfp, entry->auth_data_length, entry->auth_data);
-    fprintf(addfp, "\n");
-
-    fprintf(removefp, "remove protoname=%s protodata=\"\" netid=%s authname=%s\n", entry->protocol_name, entry->network_id, entry->auth_name);
-}
-
 #define MAGIC_COOKIE_LEN 16
 
 Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry **authDataEntries)
 {
-    QTemporaryFile addTempFile;
-    remTempFile = new QTemporaryFile;
+    char *filename = IceAuthFileName();
+    FILE *fp;
 
-    if (!addTempFile.open() || !remTempFile->open()) {
+    if (IceLockAuthFile(filename, 10, 2, 600) != IceAuthLockSuccess) {
+        qWarning() << "Could not lock ICEAuthority file";
+        return 0;
+    }
+    auto cleanup = qScopeGuard([filename]() {
+        IceUnlockAuthFile(filename);
+    });
+
+    if ((fp = fopen(filename, "ab")) == NULL) {
+        qWarning() << "Could not open ICEAuthority file";
         return 0;
     }
 
     if ((*authDataEntries = (IceAuthDataEntry *)malloc(count * 2 * sizeof(IceAuthDataEntry))) == nullptr) {
+        (void)fclose(fp);
         return 0;
     }
 
-    FILE *addAuthFile = fopen(QFile::encodeName(addTempFile.fileName()).constData(), "r+");
-    FILE *remAuthFile = fopen(QFile::encodeName(remTempFile->fileName()).constData(), "r+");
-
     for (int i = 0; i < numTransports * 2; i += 2) {
+        // ICE Auth Data
+
         (*authDataEntries)[i].network_id = IceGetListenConnectionString(listenObjs[i / 2]);
         (*authDataEntries)[i].protocol_name = (char *)"ICE";
         (*authDataEntries)[i].auth_name = (char *)"MIT-MAGIC-COOKIE-1";
@@ -357,6 +354,23 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
         (*authDataEntries)[i].auth_data = IceGenerateMagicCookie(MAGIC_COOKIE_LEN);
         (*authDataEntries)[i].auth_data_length = MAGIC_COOKIE_LEN;
 
+        // ICE Auth File
+        {
+            IceAuthFileEntry *file_entry = (IceAuthFileEntry *)malloc(sizeof(IceAuthFileEntry));
+            file_entry->protocol_name = strdup("ICE");
+            file_entry->protocol_data = NULL;
+            file_entry->protocol_data_length = 0;
+            file_entry->network_id = IceGetListenConnectionString(listenObjs[i / 2]);
+            file_entry->auth_name = strdup("MIT-MAGIC-COOKIE-1");
+            file_entry->auth_data = strdup((*authDataEntries)[i].auth_data);
+            file_entry->auth_data_length = MAGIC_COOKIE_LEN;
+            if (IceWriteAuthFileEntry(fp, file_entry) != 0) {
+                qWarning("Failed to write ice auth file entry");
+            }
+            IceFreeAuthFileEntry(file_entry);
+        }
+
+        // XSMP Auth Data
         (*authDataEntries)[i + 1].network_id = IceGetListenConnectionString(listenObjs[i / 2]);
         (*authDataEntries)[i + 1].protocol_name = (char *)"XSMP";
         (*authDataEntries)[i + 1].auth_name = (char *)"MIT-MAGIC-COOKIE-1";
@@ -364,23 +378,24 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
         (*authDataEntries)[i + 1].auth_data = IceGenerateMagicCookie(MAGIC_COOKIE_LEN);
         (*authDataEntries)[i + 1].auth_data_length = MAGIC_COOKIE_LEN;
 
-        write_iceauth(addAuthFile, remAuthFile, &(*authDataEntries)[i]);
-        write_iceauth(addAuthFile, remAuthFile, &(*authDataEntries)[i + 1]);
+        // XSMP Auth file
+        {
+            IceAuthFileEntry *file_entry = (IceAuthFileEntry *)malloc(sizeof(IceAuthFileEntry));
+            file_entry->protocol_name = strdup("XSMP");
+            file_entry->protocol_data = NULL;
+            file_entry->protocol_data_length = 0;
+            file_entry->network_id = IceGetListenConnectionString(listenObjs[i / 2]);
+            file_entry->auth_name = strdup("MIT-MAGIC-COOKIE-1");
+            file_entry->auth_data = strdup((*authDataEntries)[i + 1].auth_data);
+            file_entry->auth_data_length = MAGIC_COOKIE_LEN;
+            if (IceWriteAuthFileEntry(fp, file_entry) != 0) {
+                qWarning("Failed to write xsmp ice auth file entry");
+            }
+            IceFreeAuthFileEntry(file_entry);
+        }
 
         IceSetPaAuthData(2, &(*authDataEntries)[i]);
     }
-    fclose(addAuthFile);
-    fclose(remAuthFile);
-
-    QString iceAuth = QStandardPaths::findExecutable(QStringLiteral("iceauth"));
-    if (iceAuth.isEmpty()) {
-        qCWarning(KSMSERVER, "KSMServer: could not find iceauth");
-        return 0;
-    }
-
-    KProcess p;
-    p << iceAuth << QStringLiteral("source") << addTempFile.fileName();
-    p.execute();
 
     return (1);
 }
@@ -397,21 +412,6 @@ void FreeAuthenticationData(int count, IceAuthDataEntry *authDataEntries)
     }
 
     free(authDataEntries);
-
-    QString iceAuth = QStandardPaths::findExecutable(QStringLiteral("iceauth"));
-    if (iceAuth.isEmpty()) {
-        qCWarning(KSMSERVER, "KSMServer: could not find iceauth");
-        return;
-    }
-
-    if (remTempFile) {
-        KProcess p;
-        p << iceAuth << QStringLiteral("source") << remTempFile->fileName();
-        p.execute();
-    }
-
-    delete remTempFile;
-    remTempFile = nullptr;
 }
 
 static int Xio_ErrorHandler(Display *)
@@ -523,6 +523,12 @@ KSMServer::KSMServer(InitFlags flags)
     auto notifier = new QSocketNotifier(sockets[1], QSocketNotifier::Read, this);
     qApp->connect(notifier, &QSocketNotifier::activated, &QApplication::quit);
 
+    const QString runtimeDirectory = QStandardPaths::writableLocation(QStandardPaths::RuntimeLocation);
+    iceAuthFile.setFileTemplate(runtimeDirectory + QStringLiteral("/iceauth_XXXXXX"));
+    if (!iceAuthFile.open())
+        qFatal("Failed to create ICEauthority file");
+    setenv("ICEAUTHORITY", qPrintable(iceAuthFile.fileName()), true);
+
     new KSMServerInterfaceAdaptor(this);
     QDBusConnection::sessionBus().registerObject(QStringLiteral("/KSMServer"), this);
     the_server = this;
@@ -581,6 +587,8 @@ KSMServer::KSMServer(InitFlags flags)
 
         QProcessEnvironment newEnv;
         newEnv.insert(QStringLiteral("SESSION_MANAGER"), QString::fromLatin1(session_manager));
+        newEnv.insert(QStringLiteral("ICEAUTHORITY"), iceAuthFile.fileName());
+
         auto updateEnvJob = new KUpdateLaunchEnvironmentJob(newEnv);
         QEventLoop loop;
         QObject::connect(updateEnvJob, &KUpdateLaunchEnvironmentJob::finished, &loop, &QEventLoop::quit);
