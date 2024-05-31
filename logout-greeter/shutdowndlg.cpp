@@ -45,6 +45,8 @@
 #include <config-workspace.h>
 #include <debug.h>
 
+using namespace Qt::StringLiterals;
+
 static const QString s_login1Service = QStringLiteral("org.freedesktop.login1");
 static const QString s_login1Path = QStringLiteral("/org/freedesktop/login1");
 static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
@@ -116,7 +118,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     context->setContextProperty(QStringLiteral("canLogout"), m_session.canLogout());
 
     // Trying to access a non-existent context property throws an error, always create the property and then update it later
-    context->setContextProperty("rebootToFirmwareSetup", false);
+    context->setContextProperty(u"rebootToFirmwareSetup"_s, false);
 
     QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service, s_login1Path, s_dbusPropertiesInterface, QStringLiteral("Get"));
     message.setArguments({s_login1ManagerInterface, s_login1RebootToFirmwareSetup});
@@ -127,11 +129,11 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         watcher->deleteLater();
 
         if (reply.value().toBool()) {
-            context->setContextProperty("rebootToFirmwareSetup", true);
+            context->setContextProperty(u"rebootToFirmwareSetup"_s, true);
         }
     });
 
-    context->setContextProperty("softwareUpdatePending", false);
+    context->setContextProperty(u"softwareUpdatePending"_s, false);
     checkSoftwareUpdatePending();
 
     // TODO KF6 remove, used to read "BootManager" from kdmrc
@@ -302,7 +304,7 @@ void KSMShutdownDlg::checkSoftwareUpdatePending()
 
         const QVariantMap properties = reply.value();
         if (properties.value(QStringLiteral("UpdateTriggered")).toBool() || properties.value(QStringLiteral("UpgradeTriggered")).toBool()) {
-            rootContext()->setContextProperty("softwareUpdatePending", true);
+            rootContext()->setContextProperty(u"softwareUpdatePending"_s, true);
         }
     });
 }

@@ -38,8 +38,8 @@ int main(int argc, char *argv[])
     QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     {
         QCommandLineParser parser;
-        QCommandLineOption testingOption("windowed", "have the dialog show, windowed, regardless of the session state");
-        QCommandLineOption lnfOption("lookandfeel", "The look and feel package name to use", "name", packageName);
+        QCommandLineOption testingOption(u"windowed"_s, u"have the dialog show, windowed, regardless of the session state"_s);
+        QCommandLineOption lnfOption(u"lookandfeel"_s, u"The look and feel package name to use"_s, u"name"_s, packageName);
         parser.addOption(testingOption);
         parser.addOption(lnfOption);
         parser.addHelpOption();

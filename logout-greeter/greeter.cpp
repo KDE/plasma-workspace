@@ -20,6 +20,8 @@
 #include <KWindowSystem>
 #include <LayerShellQt/Shell>
 
+using namespace Qt::StringLiterals;
+
 Greeter::Greeter(const KPackage::Package &package)
     : QObject()
     , m_package(package)
@@ -46,7 +48,7 @@ void Greeter::init()
 {
     // If we're already shutting down we don't need another prompt,
     // just reply to the dbus message and exit
-    if (QDBusConnection::sessionBus().interface()->isServiceRegistered("org.kde.Shutdown")) {
+    if (QDBusConnection::sessionBus().interface()->isServiceRegistered(u"org.kde.Shutdown"_s)) {
         QApplication::quit();
         return;
     }
