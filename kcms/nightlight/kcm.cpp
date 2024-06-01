@@ -16,6 +16,8 @@
 
 #include "nightlightdata.h"
 
+using namespace Qt::StringLiterals;
+
 namespace ColorCorrect
 {
 K_PLUGIN_FACTORY_WITH_JSON(KCMNightLightFactory, "kcm_nightlight.json", registerPlugin<KCMNightLight>(); registerPlugin<NightLightData>();)
@@ -26,12 +28,12 @@ KCMNightLight::KCMNightLight(QObject *parent, const KPluginMetaData &data)
 {
     const auto uri = "org.kde.private.kcms.nightlight";
     qmlRegisterAnonymousType<NightLightSettings>(uri, 1);
-    qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, uri, 1, 0, "NightLightMode", "Error: only enums");
+    qmlRegisterUncreatableMetaObject(ColorCorrect::staticMetaObject, uri, 1, 0, "NightLightMode", QStringLiteral("Error: only enums"));
 
-    minDayTemp = nightLightSettings()->findItem("DayTemperature")->minValue().toInt();
-    maxDayTemp = nightLightSettings()->findItem("DayTemperature")->maxValue().toInt();
-    minNightTemp = nightLightSettings()->findItem("NightTemperature")->minValue().toInt();
-    maxNightTemp = nightLightSettings()->findItem("NightTemperature")->maxValue().toInt();
+    minDayTemp = nightLightSettings()->findItem(u"DayTemperature"_s)->minValue().toInt();
+    maxDayTemp = nightLightSettings()->findItem(u"DayTemperature"_s)->maxValue().toInt();
+    minNightTemp = nightLightSettings()->findItem(u"NightTemperature"_s)->minValue().toInt();
+    maxNightTemp = nightLightSettings()->findItem(u"NightTemperature"_s)->maxValue().toInt();
 
     setButtons(Apply | Default);
 }
