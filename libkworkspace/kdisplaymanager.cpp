@@ -344,7 +344,7 @@ KDisplayManager::KDisplayManager()
         break;
     case OldKDM: {
         QByteArray tf(ctl);
-        tf.truncate(tf.indexOf(u','));
+        tf.truncate(tf.indexOf(','));
         d->fd = ::open(tf.constData(), O_WRONLY);
     } break;
     }
