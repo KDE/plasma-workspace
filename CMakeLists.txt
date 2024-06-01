@@ -107,8 +107,6 @@ set_package_properties(KF6Baloo PROPERTIES DESCRIPTION "File Searching"
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(QALCULATE libqalculate>2.0 REQUIRED IMPORTED_TARGET)
 
-find_package(KWinDBusInterface CONFIG REQUIRED)
-
 find_package(KF6Screen CONFIG REQUIRED)
 find_package(KScreenLocker 5.13.80 REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
