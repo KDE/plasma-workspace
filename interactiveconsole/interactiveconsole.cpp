@@ -258,7 +258,7 @@ void InteractiveConsole::loadScript(const QString &script)
     } else {
         QFile file(KShell::tildeExpand(script));
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-            m_editor->setText(file.readAll());
+            m_editor->setText(QString::fromLocal8Bit(file.readAll()));
             return;
         }
     }
@@ -413,7 +413,7 @@ void InteractiveConsole::scriptFileDataRecvd(KIO::Job *job, const QByteArray &da
     Q_ASSERT(m_editor);
 
     if (job == m_job.data()) {
-        m_editor->insertPlainText(data);
+        m_editor->insertPlainText(QString::fromLocal8Bit(data));
     }
 }
 
