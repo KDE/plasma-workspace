@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"POT-Creation-Date: 2024-06-01 02:27+0000\n"
 "PO-Revision-Date: 2023-11-22 21:36+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -152,13 +152,13 @@ msgstr ""
 "Käynnistyy ilman lukitusnäyttötukea. Tarvitaan vain, jos jokin toinen "
 "komponentti tarjoaa lukitusnäytön."
 
-#: server.cpp:811
+#: server.cpp:770
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[tuntematon]"
 
-#: server.cpp:834
+#: server.cpp:793
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -170,7 +170,7 @@ msgstr ""
 "ovat lopussa. Niitä kuluttavat eniten seuraavat kolme:\n"
 "%1"
 
-#: server.cpp:1106
+#: server.cpp:1065
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

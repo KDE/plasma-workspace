@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"POT-Creation-Date: 2024-06-01 02:27+0000\n"
 "PO-Revision-Date: 2017-09-28 17:58+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -152,13 +152,13 @@ msgstr ""
 "Покреће се без подршке за закључавање екрана. Потребно само ако нека друга "
 "компонента опслужује закључавање."
 
-#: server.cpp:811
+#: server.cpp:770
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr ""
 
-#: server.cpp:834
+#: server.cpp:793
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -167,7 +167,7 @@ msgid ""
 "%1"
 msgstr ""
 
-#: server.cpp:1106
+#: server.cpp:1065
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

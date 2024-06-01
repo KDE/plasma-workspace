@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-24 00:40+0000\n"
+"POT-Creation-Date: 2024-06-01 02:27+0000\n"
 "PO-Revision-Date: 2024-04-05 17:44+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -324,22 +324,22 @@ msgstr "Passa all'attività successiva"
 msgid "Activate Task Manager Entry %1"
 msgstr "Attiva voce %1 del gestore dei processi"
 
-#: shellcorona.cpp:300
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Gestione dei pannelli e del desktop"
 
-#: shellcorona.cpp:322
+#: shellcorona.cpp:327
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Sposta il fuoco della tastiera tra i pannelli"
 
-#: shellcorona.cpp:2072
+#: shellcorona.cpp:2077
 #, kde-format
 msgid "Add Panel"
 msgstr "Aggiungi pannello"
 
-#: shellcorona.cpp:2124
+#: shellcorona.cpp:2129
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

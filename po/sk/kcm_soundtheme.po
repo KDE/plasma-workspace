@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcm_soundtheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-20 00:39+0000\n"
-"PO-Revision-Date: 2024-05-26 12:33+0200\n"
+"PO-Revision-Date: 2024-05-31 12:48+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -25,7 +25,7 @@ msgstr "FreeDesktop"
 #: kcm_soundtheme.cpp:112
 #, kde-format
 msgid "Fallback sound theme from freedesktop.org"
-msgstr ""
+msgstr "Náhradná zvuková téma z freedesktop.org"
 
 #: ui/main.qml:29
 #, kde-format
@@ -40,9 +40,9 @@ msgctxt ""
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Postavené na: %2"
+msgstr[1] "Postavené na: %2"
+msgstr[2] "Postavené na: %2"
 
 #: ui/main.qml:109
 #, kde-format
@@ -62,15 +62,15 @@ msgstr "Ukážka zvuku \"%1\""
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr ""
+msgstr "Náhľad demo zvuku pre tému „%1“"
 
 #: ui/main.qml:185
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "Téma %1 neobsahuje zvuk '%2'"
 
 #: ui/main.qml:190
 #, kde-format
 msgid "Failed to preview sound: %1"
-msgstr ""
+msgstr "Nepodarilo sa spustiť ukážku zvuku: %1"
