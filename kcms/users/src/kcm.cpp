@@ -77,7 +77,7 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data)
 
 bool KCMUser::createUser(const QString &name, const QString &realName, const QString &password, bool isAdmin)
 {
-    QDBusPendingReply<QDBusObjectPath> reply = asyncCall(m_dbusInterface, "CreateUser", {name, realName, static_cast<qint32>(isAdmin)});
+    QDBusPendingReply<QDBusObjectPath> reply = asyncCall(m_dbusInterface, u"CreateUser"_s, {name, realName, static_cast<qint32>(isAdmin)});
     reply.waitForFinished();
     if (reply.isValid()) {
         User *createdUser = new User(this);
@@ -91,7 +91,7 @@ bool KCMUser::createUser(const QString &name, const QString &realName, const QSt
 
 bool KCMUser::deleteUser(qint64 id, bool deleteHome)
 {
-    QDBusPendingReply<> reply = asyncCall(m_dbusInterface, "DeleteUser", {id, deleteHome});
+    QDBusPendingReply<> reply = asyncCall(m_dbusInterface, u"DeleteUser"_s, {id, deleteHome});
     reply.waitForFinished();
     if (reply.isError()) {
         return false;
@@ -113,12 +113,13 @@ void KCMUser::save()
 // Grab the initials of a string
 QString KCMUser::initializeString(const QString &stringToGrabInitialsOf)
 {
-    if (stringToGrabInitialsOf.isEmpty())
-        return "";
+    if (stringToGrabInitialsOf.isEmpty()) {
+        return QString();
+    }
 
     auto normalized = stringToGrabInitialsOf.normalized(QString::NormalizationForm_D);
-    if (normalized.contains(" ")) {
-        QStringList split = normalized.split(" ");
+    if (normalized.contains(u' ')) {
+        QStringList split = normalized.split(u' ');
         auto first = split.first();
         auto last = split.last();
         if (first.isEmpty()) {
@@ -156,7 +157,7 @@ QUrl KCMUser::recolorSVG(const QUrl &url, const QColor &color)
 
     auto str = s_cache[url];
     str.replace("fill:#000000"_L1, QString(u"fill:" + color.name()));
-    return QUrl(QString(u"data:image/svg+xml;utf8," + QUrl::toPercentEncoding(str)));
+    return QUrl(QString(u"data:image/svg+xml;utf8," + QString::fromLatin1(QUrl::toPercentEncoding(str))));
 }
 
 void KCMUser::load()

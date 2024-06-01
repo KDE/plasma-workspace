@@ -123,7 +123,7 @@ bool FingerprintModel::claimDevice()
     }
 
     QDBusError error = m_device->claim(m_username);
-    if (error.isValid() && error.name() != "net.reactivated.Fprint.Error.AlreadyInUse") {
+    if (error.isValid() && error.name() != u"net.reactivated.Fprint.Error.AlreadyInUse") {
         qDebug() << "error claiming:" << error.message();
         setCurrentError(error.message());
         return false;
@@ -210,7 +210,7 @@ QStringList FingerprintModel::enrolledFingerprintsRaw()
         reply.waitForFinished();
         if (reply.isError()) {
             // ignore net.reactivated.Fprint.Error.NoEnrolledPrints, as it shows up when there are no fingerprints
-            if (reply.error().name() != "net.reactivated.Fprint.Error.NoEnrolledPrints") {
+            if (reply.error().name() != u"net.reactivated.Fprint.Error.NoEnrolledPrints") {
                 qDebug() << "error listing enrolled fingers:" << reply.error().message();
                 setCurrentError(reply.error().message());
             }
@@ -290,13 +290,13 @@ void FingerprintModel::handleEnrollStagePassed()
 void FingerprintModel::handleEnrollRetryStage(const QString &feedback)
 {
     Q_EMIT scanFailure();
-    if (feedback == "enroll-retry-scan") {
+    if (feedback == u"enroll-retry-scan") {
         setEnrollFeedback(i18n("Retry scanning your finger."));
-    } else if (feedback == "enroll-swipe-too-short") {
+    } else if (feedback == u"enroll-swipe-too-short") {
         setEnrollFeedback(i18n("Swipe too short. Try again."));
-    } else if (feedback == "enroll-finger-not-centered") {
+    } else if (feedback == u"enroll-finger-not-centered") {
         setEnrollFeedback(i18n("Finger not centered on the reader. Try again."));
-    } else if (feedback == "enroll-remove-and-retry") {
+    } else if (feedback == u"enroll-remove-and-retry") {
         setEnrollFeedback(i18n("Remove your finger from the reader, and try again."));
     }
     qDebug() << "fingerprint enroll stage fail:" << feedback;
@@ -304,18 +304,18 @@ void FingerprintModel::handleEnrollRetryStage(const QString &feedback)
 
 void FingerprintModel::handleEnrollFailed(const QString &error)
 {
-    if (error == "enroll-failed") {
+    if (error == u"enroll-failed") {
         setCurrentError(i18n("Fingerprint enrollment has failed."));
         stopEnrolling();
-    } else if (error == "enroll-data-full") {
+    } else if (error == u"enroll-data-full") {
         setCurrentError(i18n("There is no space left for this device, delete other fingerprints to continue."));
         stopEnrolling();
-    } else if (error == "enroll-disconnected") {
+    } else if (error == u"enroll-disconnected") {
         setCurrentError(i18n("The device was disconnected."));
         m_currentlyEnrolling = false;
         Q_EMIT currentlyEnrollingChanged();
         setDialogState(DialogState::FingerprintList);
-    } else if (error == "enroll-unknown-error") {
+    } else if (error == u"enroll-unknown-error") {
         setCurrentError(i18n("An unknown error has occurred."));
         stopEnrolling();
     }

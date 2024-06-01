@@ -20,6 +20,8 @@
 #include <crypt.h>
 #endif
 
+using namespace Qt::StringLiterals;
+
 User::User(QObject *parent)
     : QObject(parent)
 {
@@ -202,10 +204,10 @@ void User::loadData()
 }
 
 #if !(HAVE_CRYPT_GENSALT)
-static char saltCharacter()
+static QLatin1Char saltCharacter()
 {
-    static constexpr const quint32 letterCount = 64;
-    static const char saltCharacters[] =
+    static constexpr quint32 letterCount = 64;
+    static constexpr const char saltCharacters[] =
         "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         "abcdefghijklmnopqrstuvwxyz"
         "./0123456789"; // and trailing NUL
@@ -214,24 +216,24 @@ static char saltCharacter()
 
     const quint32 index = QRandomGenerator::system()->bounded(0u, letterCount);
 
-    return saltCharacters[index];
+    return QLatin1Char(saltCharacters[index]);
 }
 #endif
 
 static QString saltPassword(const QString &plain)
 {
 #if HAVE_CRYPT_GENSALT
-    QString salt = crypt_gensalt(NULL, 0, NULL, 0);
+    QString salt = QString::fromLocal8Bit(crypt_gensalt(NULL, 0, NULL, 0));
 #else
     QString salt;
 
-    salt.append("$6$");
+    salt.append(u"$6$");
 
     for (auto i = 0; i < 16; i++) {
         salt.append(saltCharacter());
     }
 
-    salt.append("$");
+    salt.append(u'$');
 #endif
 
     auto stdStrPlain = plain.toStdString();
@@ -249,7 +251,7 @@ void User::setPassword(const QString &password)
     // Blocking because we need to wait for the password to be changed before we
     // can ask the user about also possibly changing their KWallet password
 
-    auto mc = QDBusMessage::createMethodCall(m_dbusIface->service(), m_dbusIface->path(), m_dbusIface->interface(), "SetPassword");
+    auto mc = QDBusMessage::createMethodCall(m_dbusIface->service(), m_dbusIface->path(), m_dbusIface->interface(), u"SetPassword"_s);
     mc.setArguments({saltPassword(password), QString()});
     mc.setInteractiveAuthorizationAllowed(true);
     auto message = QDBusConnection::systemBus().call(mc);
@@ -277,7 +279,7 @@ void User::apply()
                                 opt(mOriginalName != mName, mName),
                                 opt(mOriginalEmail != mEmail, mEmail),
                                 opt(mOriginalRealName != mRealName, mRealName),
-                                opt(mOriginalFace != mFace, mFace.toString().replace("file://", "")),
+                                opt(mOriginalFace != mFace, mFace.toString().remove("file://"_L1)),
                                 opt(mOriginalAdministrator != mAdministrator, mAdministrator ? 1 : 0));
     connect(
         job,
@@ -354,7 +356,7 @@ void UserApplyJob::start()
     // Subsequent calls do not trigger the auth dialog again
 
     if (m_type.has_value()) {
-        auto setAccount = asyncCall(m_dbusIface, "SetAccountType", {*m_type});
+        auto setAccount = asyncCall(m_dbusIface, u"SetAccountType"_s, {*m_type});
         setAccount.waitForFinished();
         if (setAccount.isError()) {
             setError(setAccount.error());
@@ -365,9 +367,9 @@ void UserApplyJob::start()
     }
 
     const std::multimap<std::optional<QString>, QString> set = {
-        {m_name, "SetUserName"},
-        {m_email, "SetEmail"},
-        {m_realname, "SetRealName"},
+        {m_name, u"SetUserName"_s},
+        {m_email, u"SetEmail"_s},
+        {m_realname, u"SetRealName"_s},
     };
     for (auto const &x : set) {
         if (!x.first.has_value())
@@ -408,7 +410,7 @@ void UserApplyJob::start()
 
         file.close();
 
-        auto resp = asyncCall(m_dbusIface, "SetIconFile", {file.fileName()});
+        auto resp = asyncCall(m_dbusIface, u"SetIconFile"_s, {file.fileName()});
 
         resp.waitForFinished();
         if (resp.isError()) {

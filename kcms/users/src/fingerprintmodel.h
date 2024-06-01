@@ -56,16 +56,16 @@ public:
     };
     Q_ENUM(DialogState)
 
-    const QList<Finger> FINGERS = {Finger("right-index-finger", i18n("Right index finger")),
-                                   Finger("right-middle-finger", i18n("Right middle finger")),
-                                   Finger("right-ring-finger", i18n("Right ring finger")),
-                                   Finger("right-little-finger", i18n("Right little finger")),
-                                   Finger("right-thumb", i18n("Right thumb")),
-                                   Finger("left-index-finger", i18n("Left index finger")),
-                                   Finger("left-middle-finger", i18n("Left middle finger")),
-                                   Finger("left-ring-finger", i18n("Left ring finger")),
-                                   Finger("left-little-finger", i18n("Left little finger")),
-                                   Finger("left-thumb", i18n("Left thumb"))};
+    const QList<Finger> FINGERS = {Finger(QStringLiteral("right-index-finger"), i18n("Right index finger")),
+                                   Finger(QStringLiteral("right-middle-finger"), i18n("Right middle finger")),
+                                   Finger(QStringLiteral("right-ring-finger"), i18n("Right ring finger")),
+                                   Finger(QStringLiteral("right-little-finger"), i18n("Right little finger")),
+                                   Finger(QStringLiteral("right-thumb"), i18n("Right thumb")),
+                                   Finger(QStringLiteral("left-index-finger"), i18n("Left index finger")),
+                                   Finger(QStringLiteral("left-middle-finger"), i18n("Left middle finger")),
+                                   Finger(QStringLiteral("left-ring-finger"), i18n("Left ring finger")),
+                                   Finger(QStringLiteral("left-little-finger"), i18n("Left little finger")),
+                                   Finger(QStringLiteral("left-thumb"), i18n("Left thumb"))};
 
     Q_INVOKABLE void switchUser(const QString &username);
     bool claimDevice();

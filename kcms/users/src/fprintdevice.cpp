@@ -6,6 +6,8 @@
 
 #include "fprintdevice.h"
 
+using namespace Qt::StringLiterals;
+
 FprintDevice::FprintDevice(QDBusObjectPath path, QObject *parent)
     : QObject(parent)
     , m_devicePath(path.path())
@@ -59,21 +61,21 @@ void FprintDevice::enrollStatus(const QString &result, bool done)
 {
     Q_UNUSED(done)
 
-    if (result == "enroll-completed") {
+    if (result == u"enroll-completed") {
         Q_EMIT enrollCompleted();
-    } else if (result == "enroll-failed" || result == "enroll-data-full" || result == "enroll-disconnected" || result == "enroll-unknown-error") {
+    } else if (result == u"enroll-failed" || result == u"enroll-data-full" || result == u"enroll-disconnected" || result == u"enroll-unknown-error") {
         Q_EMIT enrollFailed(result);
-    } else if (result == "enroll-stage-passed") {
+    } else if (result == u"enroll-stage-passed") {
         Q_EMIT enrollStagePassed();
-    } else if (result == "enroll-retry-scan" || result == "enroll-swipe-too-short" || result == "enroll-finger-not-centered"
-               || result == "enroll-remove-and-retry") {
+    } else if (result == u"enroll-retry-scan" || result == u"enroll-swipe-too-short" || result == u"enroll-finger-not-centered"
+               || result == u"enroll-remove-and-retry") {
         Q_EMIT enrollRetryStage(result);
     }
 }
 
 int FprintDevice::numOfEnrollStages()
 {
-    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get("net.reactivated.Fprint.Device", "num-enroll-stages");
+    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get(u"net.reactivated.Fprint.Device"_s, u"num-enroll-stages"_s);
     if (!reply.isValid()) {
         qDebug() << "error fetching num-enroll-stages:" << reply.error();
         return 0;
@@ -83,7 +85,7 @@ int FprintDevice::numOfEnrollStages()
 
 FprintDevice::ScanType FprintDevice::scanType()
 {
-    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get("net.reactivated.Fprint.Device", "scan-type");
+    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get(u"net.reactivated.Fprint.Device"_s, u"scan-type"_s);
     if (!reply.isValid()) {
         qDebug() << "error fetching scan-type:" << reply.error();
         return FprintDevice::Press;
@@ -106,7 +108,7 @@ FprintDevice::ScanType FprintDevice::scanType()
 
 bool FprintDevice::fingerPresent()
 {
-    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get("net.reactivated.Fprint.Device", "finger-present");
+    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get(u"net.reactivated.Fprint.Device"_s, u"finger-present"_s);
     if (!reply.isValid()) {
         qDebug() << "error fetching finger-present:" << reply.error();
         return "";
@@ -116,7 +118,7 @@ bool FprintDevice::fingerPresent()
 
 bool FprintDevice::fingerNeeded()
 {
-    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get("net.reactivated.Fprint.Device", "finger-needed");
+    QDBusReply<QDBusVariant> reply = m_properiesInterface->Get(u"net.reactivated.Fprint.Device"_s, u"finger-needed"_s);
     if (!reply.isValid()) {
         qDebug() << "error fetching finger-needed:" << reply.error();
         return "";
