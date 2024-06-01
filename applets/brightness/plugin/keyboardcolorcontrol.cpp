@@ -17,9 +17,9 @@ using namespace Qt::StringLiterals;
 
 namespace
 {
-constexpr QLatin1String KAMELEON_SERVICE("org.kde.kded6");
-constexpr QLatin1String KAMELEON_PATH("/modules/kameleon");
-constexpr QLatin1String KAMELEON_INTERFACE("org.kde.kameleon");
+inline constexpr QLatin1String KAMELEON_SERVICE("org.kde.kded6");
+inline constexpr QLatin1String KAMELEON_PATH("/modules/kameleon");
+inline constexpr QLatin1String KAMELEON_INTERFACE("org.kde.kameleon");
 }
 
 KeyboardColorControl::KeyboardColorControl(QObject *parent)
@@ -31,7 +31,7 @@ KeyboardColorControl::KeyboardColorControl(QObject *parent)
     }
 
     QDBusReply<bool> supported =
-        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "isSupported"));
+        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, u"isSupported"_s));
     if (!supported.isValid()) {
         qWarning() << "error connecting to kameleon via dbus:" << supported.error().message();
         return;
@@ -41,7 +41,7 @@ KeyboardColorControl::KeyboardColorControl(QObject *parent)
     }
 
     QDBusReply<bool> enabled =
-        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, "isEnabled"));
+        QDBusConnection::sessionBus().call(QDBusMessage::createMethodCall(KAMELEON_SERVICE, KAMELEON_PATH, KAMELEON_INTERFACE, u"isEnabled"_s));
     if (!enabled.isValid()) {
         qWarning() << "error connecting to kameleon via dbus:" << enabled.error().message();
         return;
