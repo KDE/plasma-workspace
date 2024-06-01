@@ -145,7 +145,7 @@ void TimeZoneModel::update()
     local.isLocalTimeZone = true;
     local.id = QStringLiteral("Local");
     local.region = i18nc("This means \"Local Timezone\"", "Local");
-    local.city = m_timezonesI18n->i18nCity(QTimeZone::systemTimeZoneId());
+    local.city = m_timezonesI18n->i18nCity(QString::fromLocal8Bit(QTimeZone::systemTimeZoneId()));
     local.comment = i18n("System's local time zone");
     local.checked = false;
 
@@ -153,15 +153,15 @@ void TimeZoneModel::update()
 
     const QList<QByteArray> systemTimeZones = QTimeZone::availableTimeZoneIds();
 
-    for (const auto &id : systemTimeZones) {
+    for (const QByteArray &id : systemTimeZones) {
         const QTimeZone zone(id);
 
         const QString continent = m_timezonesI18n->i18nContinents(QString::fromUtf8(QByteArrayView(id).mid(0, id.indexOf('/'))));
 
         TimeZoneData newData;
         newData.isLocalTimeZone = false;
-        newData.id = id;
-        newData.city = m_timezonesI18n->i18nCity(id);
+        newData.id = QString::fromLocal8Bit(id);
+        newData.city = m_timezonesI18n->i18nCity(newData.id);
         newData.region = zone.country() == QLocale::AnyCountry ? QString() : continent + QLatin1Char('/') + m_timezonesI18n->i18nCountry(zone.country());
         newData.comment = zone.comment();
         newData.checked = false;

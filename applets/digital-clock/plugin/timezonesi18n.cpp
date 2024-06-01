@@ -62,7 +62,7 @@ void TimeZonesI18n::init()
 {
     m_i18nContinents = TimeZonesI18nData::timezoneContinentToL10nMap();
 
-    const auto locale = icu::Locale(QLocale::system().name().toLatin1());
+    const auto locale = icu::Locale(QLocale::system().name().toLatin1().constData());
     UErrorCode error = U_ZERO_ERROR;
     m_tzNames.reset(icu::TimeZoneNames::createInstance(locale, error));
     if (!U_SUCCESS(error)) {
