@@ -37,7 +37,7 @@ int main(int argc, char **argv)
         QFileInfo wallpaperInfo{wallpaperFile};
         bool isWallpaper{false};
         bool isKPackage{false};
-        if (wallpaperFile.contains(QStringLiteral("\'"))) {
+        if (wallpaperFile.contains(u"\'")) {
             // If this happens, we might very well assume that there is some kind of funny business going on
             // even if technically it could just be a possessive. But, security first, so...
             ts << i18n(
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
                 << "var d = desktops()[key];" //
                 << "d.wallpaperPlugin = 'org.kde.image';" //
                 << "d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];" //
-                << "d.writeConfig('Image', 'file://" + wallpaperFile + "');" //
+                << u"d.writeConfig('Image', 'file://" + wallpaperFile + u"');" //
                 << "}";
             auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
                                                           QStringLiteral("/PlasmaShell"),

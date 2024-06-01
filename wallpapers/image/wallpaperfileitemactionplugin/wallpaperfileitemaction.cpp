@@ -74,7 +74,7 @@ QList<QAction *> WallpaperFileItemAction::actions(const KFileItemListProperties 
 
 void WallpaperFileItemAction::setAsDesktopBackground(const QString &file)
 {
-    auto script = QString(
+    auto script = QStringLiteral(
                       "const allDesktops = desktopsForActivity(currentActivity());"
                       " for (i=0; i<allDesktops.length; i++) {"
                       "    d = allDesktops[i];"

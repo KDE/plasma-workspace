@@ -230,13 +230,13 @@ void ImageProxyModelTest::testImageProxyModelDirWatch()
     QVERIFY(m_model->m_dirWatch.contains(m_dataDir.absolutePath()));
     // Duplicate watched items as their parent folder is already in KDirWatch
     for (const QString &path : std::as_const(m_wallpaperPaths)) {
-        QVERIFY2(!m_model->m_dirWatch.contains(path), path.toLatin1());
+        QVERIFY2(!m_model->m_dirWatch.contains(path), qPrintable(path));
     }
     for (const QString &path : std::as_const(m_packagePaths)) {
         QFileInfo info(path);
         while (info.absoluteFilePath() != m_dataDir.absolutePath()) {
             // Because of KDirWatch::WatchSubDirs, some folders will still be added to KDirWatch
-            QVERIFY2(m_model->m_dirWatch.contains(info.absoluteFilePath()), info.absoluteFilePath().toLatin1());
+            QVERIFY2(m_model->m_dirWatch.contains(info.absoluteFilePath()), qPrintable(info.absoluteFilePath()));
             info = QFileInfo(info.absolutePath()); // Parent folder
         }
     }
