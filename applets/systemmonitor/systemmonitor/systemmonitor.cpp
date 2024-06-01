@@ -22,6 +22,8 @@
 #include <KService>
 #include <PlasmaQuick/SharedQmlEngine>
 
+using namespace Qt::StringLiterals;
+
 SystemMonitor::SystemMonitor(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Applet(parent, data, args)
 {
@@ -67,7 +69,7 @@ void SystemMonitor::configChanged()
 
 void SystemMonitor::openSystemMonitor()
 {
-    auto job = new KIO::ApplicationLauncherJob(KService::serviceByDesktopName("org.kde.plasma-systemmonitor"));
+    auto job = new KIO::ApplicationLauncherJob(KService::serviceByDesktopName(u"org.kde.plasma-systemmonitor"_s));
     job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
     job->start();
 }
