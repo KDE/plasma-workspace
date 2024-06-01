@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-01 00:40+0000\n"
 "PO-Revision-Date: 2024-02-09 19:44+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -332,22 +332,22 @@ msgstr "다음 활동으로 전환"
 msgid "Activate Task Manager Entry %1"
 msgstr "활성 작업 관리자 항목 %1"
 
-#: shellcorona.cpp:300
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr ""
 
-#: shellcorona.cpp:322
+#: shellcorona.cpp:327
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "패널간 키보드 포커스 이동"
 
-#: shellcorona.cpp:2072
+#: shellcorona.cpp:2077
 #, kde-format
 msgid "Add Panel"
 msgstr "패널 추가하기"
 
-#: shellcorona.cpp:2124
+#: shellcorona.cpp:2129
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

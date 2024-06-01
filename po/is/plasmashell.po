@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-01 00:40+0000\n"
 "PO-Revision-Date: 2024-04-06 14:04+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -332,22 +332,22 @@ msgstr "Skipta í næstu athöfn"
 msgid "Activate Task Manager Entry %1"
 msgstr "Virkja verkefnastjóra færslu %1"
 
-#: shellcorona.cpp:300
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Umsjón með skjáborði og skjáborðsstiku"
 
-#: shellcorona.cpp:322
+#: shellcorona.cpp:327
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Færa lyklaborðsfókus á milli skjáborðsstika"
 
-#: shellcorona.cpp:2072
+#: shellcorona.cpp:2077
 #, kde-format
 msgid "Add Panel"
 msgstr "Bæta við skjáborðsstiku"
 
-#: shellcorona.cpp:2124
+#: shellcorona.cpp:2129
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

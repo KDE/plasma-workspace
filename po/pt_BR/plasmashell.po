@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-01 00:40+0000\n"
 "PO-Revision-Date: 2024-04-04 15:21-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -336,22 +336,22 @@ msgstr "Trocar para a próxima atividade"
 msgid "Activate Task Manager Entry %1"
 msgstr "Ativar entrada %1 do gerenciador de tarefas"
 
-#: shellcorona.cpp:300
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Gerenciamento do painel e da área de trabalho"
 
-#: shellcorona.cpp:322
+#: shellcorona.cpp:327
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre os painéis"
 
-#: shellcorona.cpp:2072
+#: shellcorona.cpp:2077
 #, kde-format
 msgid "Add Panel"
 msgstr "Adicionar painel"
 
-#: shellcorona.cpp:2124
+#: shellcorona.cpp:2129
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-01 00:40+0000\n"
 "PO-Revision-Date: 2024-04-09 12:23+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -336,22 +336,22 @@ msgstr "Perjungti į kitą veiklą"
 msgid "Activate Task Manager Entry %1"
 msgstr "Aktyvuoti užduočių tvarkytuvės įrašą %1"
 
-#: shellcorona.cpp:300
+#: shellcorona.cpp:305
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Skydelio ir darbalaukio tvarkymas"
 
-#: shellcorona.cpp:322
+#: shellcorona.cpp:327
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Perkelti klaviatūros fokusą tarp skydelių"
 
-#: shellcorona.cpp:2072
+#: shellcorona.cpp:2077
 #, kde-format
 msgid "Add Panel"
 msgstr "Pridėti skydelį"
 
-#: shellcorona.cpp:2124
+#: shellcorona.cpp:2129
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
