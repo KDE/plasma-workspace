@@ -16,7 +16,7 @@
 #include <QIcon>
 #include <sys/socket.h>
 
-static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
+static constexpr QLatin1StringView SOLID_POWERMANAGEMENT_SERVICE("org.kde.Solid.PowerManagement");
 
 PowerProfilesControl::PowerProfilesControl(QObject *parent)
     : QObject(parent)

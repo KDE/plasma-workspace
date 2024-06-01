@@ -18,8 +18,8 @@
 
 #include "inhibitmonitor_p.h"
 
-static const char SOLID_POWERMANAGEMENT_SERVICE[] = "org.kde.Solid.PowerManagement";
-static const char FDO_POWERMANAGEMENT_SERVICE[] = "org.freedesktop.PowerManagement";
+static constexpr QLatin1StringView SOLID_POWERMANAGEMENT_SERVICE("org.kde.Solid.PowerManagement");
+static constexpr QLatin1StringView FDO_POWERMANAGEMENT_SERVICE("org.freedesktop.PowerManagement");
 
 PowerManagementControl::PowerManagementControl(QObject *parent)
     : QObject(parent)
