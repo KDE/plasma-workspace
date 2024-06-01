@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2024-06-01 03:10+0000\n"
 "PO-Revision-Date: 2020-04-27 15:41-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -142,27 +142,27 @@ msgstr ""
 "Inicia sem suporte a bloqueio de tela. Necessário apenas se houver suporte "
 "por outro componente."
 
-#: server.cpp:884
+#: server.cpp:848
 #, kde-format
 msgid "Session Management"
 msgstr "Gerenciamento de sessão"
 
-#: server.cpp:887
+#: server.cpp:851
 #, kde-format
 msgid "Log Out"
 msgstr "Encerrar sessão"
 
-#: server.cpp:892
+#: server.cpp:856
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Sair sem confirmação"
 
-#: server.cpp:897
+#: server.cpp:861
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Encerrar sem confirmação"
 
-#: server.cpp:902
+#: server.cpp:866
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Reiniciar sem confirmação"

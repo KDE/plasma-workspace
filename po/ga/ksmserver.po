@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2024-06-01 03:10+0000\n"
 "PO-Revision-Date: 2004-12-31 00:55+0000\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -129,28 +129,28 @@ msgid ""
 "the lock screen."
 msgstr ""
 
-#: server.cpp:884
+#: server.cpp:848
 #, fuzzy, kde-format
 #| msgid "The KDE Session Manager"
 msgid "Session Management"
 msgstr "Bainisteoir na Seisiún KDE"
 
-#: server.cpp:887
+#: server.cpp:851
 #, kde-format
 msgid "Log Out"
 msgstr "Logáil Amach"
 
-#: server.cpp:892
+#: server.cpp:856
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Logáil Amach Gan Deimhniú"
 
-#: server.cpp:897
+#: server.cpp:861
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Stop gan Deimhniú"
 
-#: server.cpp:902
+#: server.cpp:866
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Atosaigh gan Deimhniú"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2024-06-01 03:10+0000\n"
 "PO-Revision-Date: 2020-06-04 11:12+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -137,27 +137,27 @@ msgstr ""
 "Spouští se bez podpory zamykání obrazovky. Je potřeba pouze pokud jiná "
 "komponenta zamykání poskytuje."
 
-#: server.cpp:884
+#: server.cpp:848
 #, kde-format
 msgid "Session Management"
 msgstr "Správa sezení"
 
-#: server.cpp:887
+#: server.cpp:851
 #, kde-format
 msgid "Log Out"
 msgstr "Odhlásit se"
 
-#: server.cpp:892
+#: server.cpp:856
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Odhlásit se bez potvrzení"
 
-#: server.cpp:897
+#: server.cpp:861
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Vypnout bez potvrzení"
 
-#: server.cpp:902
+#: server.cpp:866
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Restartovat bez potvrzení"
