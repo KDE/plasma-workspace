@@ -12,6 +12,8 @@
 #include <libnotificationmanager/jobsettings.h>
 #include <libnotificationmanager/notificationsettings.h>
 
+using namespace Qt::StringLiterals;
+
 NotificationsData::NotificationsData(QObject *parent)
     : KCModuleData(parent)
     , m_dndSettings(new NotificationManager::DoNotDisturbSettings(this))
@@ -92,7 +94,7 @@ bool NotificationsData::isDefaultsBehaviorSettings() const
 
 void NotificationsData::readBehaviorSettings()
 {
-    KConfig config("plasmanotifyrc", KConfig::SimpleConfig);
+    KConfig config(u"plasmanotifyrc"_s, KConfig::SimpleConfig);
 
     for (auto groupEntry : {QStringLiteral("Applications"), QStringLiteral("Services")}) {
         KConfigGroup group(&config, groupEntry);
