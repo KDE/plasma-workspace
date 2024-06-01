@@ -15,6 +15,8 @@
 #include <QUrl>
 #include <kio_version.h>
 
+using namespace Qt::StringLiterals;
+
 // Pseudo plugin class to embed meta data
 class KIOPluginForMetaData : public QObject
 {
@@ -43,7 +45,7 @@ extern "C" {
 Q_DECL_EXPORT int kdemain(int argc, char **argv)
 {
     QCoreApplication app(argc, argv);
-    app.setApplicationName("kio_applications");
+    app.setApplicationName(u"kio_applications"_s);
 
     ApplicationsProtocol worker(argv[1], argv[2], argv[3]);
     worker.dispatchLoop();
@@ -56,7 +58,7 @@ static void createFileEntry(KIO::UDSEntry &entry, const KService::Ptr &service, 
     entry.clear();
     entry.fastInsert(KIO::UDSEntry::UDS_NAME, KIO::encodeFileName(service->name()));
     entry.fastInsert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFREG);
-    const QString fileUrl = parentUrl.url() + '/' + service->desktopEntryName();
+    const QString fileUrl = parentUrl.url() + u'/' + service->desktopEntryName();
     entry.fastInsert(KIO::UDSEntry::UDS_URL, fileUrl);
     entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, 0500);
     entry.fastInsert(KIO::UDSEntry::UDS_MIME_TYPE, QStringLiteral("application/x-desktop"));
@@ -111,8 +113,8 @@ KIO::WorkerResult ApplicationsProtocol::stat(const QUrl &url)
     KIO::UDSEntry entry;
 
     QString servicePath(url.path());
-    if (!servicePath.endsWith('/'))
-        servicePath.append('/');
+    if (!servicePath.endsWith(u'/'))
+        servicePath.append(u'/');
     servicePath.remove(0, 1); // remove starting '/'
 
     KServiceGroup::Ptr grp = KServiceGroup::group(servicePath);
@@ -139,8 +141,8 @@ KIO::WorkerResult ApplicationsProtocol::stat(const QUrl &url)
 KIO::WorkerResult ApplicationsProtocol::listDir(const QUrl &url)
 {
     QString groupPath = url.path();
-    if (!groupPath.endsWith('/'))
-        groupPath.append('/');
+    if (!groupPath.endsWith(u'/'))
+        groupPath.append(u'/');
     groupPath.remove(0, 1); // remove starting '/'
 
     KServiceGroup::Ptr grp = KServiceGroup::group(groupPath);
@@ -164,12 +166,12 @@ KIO::WorkerResult ApplicationsProtocol::listDir(const QUrl &url)
                 continue;
 
             // Ignore dotfiles.
-            if (g->name().startsWith('.'))
+            if (g->name().startsWith(u'.'))
                 continue;
 
             QString relPath = g->relPath();
             QUrl dirUrl = url; // preserve protocol, whether that's programs:/ or applications:/
-            dirUrl.setPath('/' + relPath);
+            dirUrl.setPath(u'/' + relPath);
             dirUrl = dirUrl.adjusted(QUrl::StripTrailingSlash);
             // qDebug() << "ApplicationsProtocol: adding entry" << dirUrl;
             createDirEntry(entry, g->caption(), dirUrl.url(), QStringLiteral("inode/directory"), g->icon());

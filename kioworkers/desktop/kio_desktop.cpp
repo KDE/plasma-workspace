@@ -34,7 +34,7 @@ int Q_DECL_EXPORT kdemain(int argc, char **argv)
 {
     // necessary to use other kio workers
     QCoreApplication app(argc, argv);
-    app.setApplicationName("kio_desktop");
+    app.setApplicationName(u"kio_desktop"_s);
 
     // start the worker
     DesktopProtocol worker(argv[1], argv[2], argv[3]);
@@ -49,7 +49,7 @@ DesktopProtocol::DesktopProtocol(const QByteArray &protocol, const QByteArray &p
     checkLocalInstall();
 
     org::kde::kded6 kded(QStringLiteral("org.kde.kded6"), QStringLiteral("/kded"), QDBusConnection::sessionBus());
-    auto pending = kded.loadModule("desktopnotifier");
+    auto pending = kded.loadModule(u"desktopnotifier"_s);
     pending.waitForFinished();
 }
 
@@ -69,7 +69,7 @@ void DesktopProtocol::checkLocalInstall()
 
     // Create the desktop folder if it doesn't exist
     if (!desktopDir.exists()) {
-        ::mkdir(QFile::encodeName(desktopPath), S_IRWXU);
+        ::mkdir(QFile::encodeName(desktopPath).constData(), S_IRWXU);
         desktopIsEmpty = true;
     } else
         desktopIsEmpty = desktopDir.entryList(QDir::AllEntries | QDir::Hidden | QDir::NoDotAndDotDot).isEmpty();
