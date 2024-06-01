@@ -92,7 +92,7 @@ void StatusNotifierTest::log(const QString &msg)
     qDebug() << "msg: " << msg;
     d->loglines.prepend(msg);
 
-    logEdit->setText(d->loglines.join('\n'));
+    logEdit->setText(d->loglines.join(u'\n'));
 }
 
 void StatusNotifierTest::updateUi()
@@ -199,7 +199,7 @@ void StatusNotifierTest::scrollRequested(int delta, Qt::Orientation orientation)
 {
     QString msg(QStringLiteral("Scrolled by "));
     msg.append(QString::number(delta));
-    msg.append((orientation == Qt::Horizontal) ? " Horizontally" : " Vertically");
+    msg.append((orientation == Qt::Horizontal) ? u" Horizontally" : u" Vertically");
     log(msg);
 }
 

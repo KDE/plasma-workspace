@@ -17,6 +17,8 @@
 #include "../systemtraymodel.h"
 #include "../systemtraysettings.h"
 
+using namespace Qt::StringLiterals;
+
 static const QString DEVICENOTIFIER_ID = QStringLiteral("org.kde.plasma.devicenotifier.test");
 static const QString MEDIACONROLLER_ID = QStringLiteral("org.kde.plasma.mediacontroller.test");
 
@@ -30,7 +32,7 @@ private Q_SLOTS:
 
 void SystemTrayModelTest::init()
 {
-    QLocale::setDefault(QLocale("en_US"));
+    QLocale::setDefault(QLocale(u"en_US"_s));
     qunsetenv("LANGUAGE");
     qunsetenv("LC_ALL");
     qunsetenv("LC_MESSAGES");
@@ -75,32 +77,32 @@ void SystemTrayModelTest::testPlasmoidModel()
     QCOMPARE(model->roleNames().size(), 10);
     // and expect: correct data returned
     QModelIndex idx = model->index(0, 0);
-    QCOMPARE(model->data(idx, Qt::DisplayRole).toString(), "Device Notifier");
+    QCOMPARE(model->data(idx, Qt::DisplayRole).toString(), u"Device Notifier");
     QVERIFY(model->data(idx, Qt::DecorationRole).isValid());
-    QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemType)).toString(), "Plasmoid");
+    QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemType)).toString(), u"Plasmoid");
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemId)).toString(), DEVICENOTIFIER_ID);
     QVERIFY(!model->data(idx, static_cast<int>(BaseModel::BaseRole::CanRender)).toBool());
-    QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::Category)).toString(), "Hardware");
+    QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::Category)).toString(), u"Hardware");
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::Status)), QVariant(Plasma::Types::ItemStatus::UnknownStatus));
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::EffectiveStatus)), QVariant(Plasma::Types::ItemStatus::HiddenStatus));
     QVERIFY(!model->data(idx, static_cast<int>(PlasmoidModel::Role::HasApplet)).toBool());
     idx = model->index(1, 0);
-    QCOMPARE(model->data(idx, Qt::DisplayRole).toString(), "Media Player");
+    QCOMPARE(model->data(idx, Qt::DisplayRole).toString(), u"Media Player");
     QVERIFY(model->data(idx, Qt::DecorationRole).isValid());
-    QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemType)).toString(), "Plasmoid");
+    QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemType)).toString(), u"Plasmoid");
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::ItemId)).toString(), MEDIACONROLLER_ID);
     QVERIFY(!model->data(idx, static_cast<int>(BaseModel::BaseRole::CanRender)).toBool());
-    QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::Category)).toString(), "ApplicationStatus");
+    QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::Category)).toString(), u"ApplicationStatus");
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::Status)), QVariant(Plasma::Types::ItemStatus::UnknownStatus));
     QCOMPARE(model->data(idx, static_cast<int>(BaseModel::BaseRole::EffectiveStatus)), QVariant(Plasma::Types::ItemStatus::HiddenStatus));
     QVERIFY(!model->data(idx, static_cast<int>(PlasmoidModel::Role::HasApplet)).toBool());
 
     // when: language is changed
-    QLocale::setDefault(QLocale("pl_PL"));
+    QLocale::setDefault(QLocale(u"pl_PL"_s));
     qputenv("LANG", "pl_PL.UTF-8");
     qputenv("LC_MESSAGES", "pl_PL.UTF-8");
     // then expect: translated data returned
-    QCOMPARE(model->data(model->index(0, 0), Qt::DisplayRole).toString(), "Powiadomienia o urz\u0105dzeniach");
+    QCOMPARE(model->data(model->index(0, 0), Qt::DisplayRole).toString(), u"Powiadomienia o urz\u0105dzeniach");
 
     // when: applet added
     model->addApplet(new Plasma::Applet(nullptr, plasmoidRegistry->m_systemTrayApplets.value(MEDIACONROLLER_ID), QVariantList{}));

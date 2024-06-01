@@ -11,13 +11,15 @@
 
 #include "statusnotifiertest.h"
 
+using namespace Qt::StringLiterals;
+
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QCommandLineParser parser;
 
     const QString description = QStringLiteral("Statusnotifier test app");
-    const char version[] = "1.0";
+    const QString version = u"1.0"_s;
 
     app.setApplicationVersion(version);
     parser.addVersionOption();

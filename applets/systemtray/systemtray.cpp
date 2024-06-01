@@ -393,7 +393,7 @@ void SystemTray::startApplet(const QString &pluginId)
         addApplet(applet);
         // create a new one automatic id, new config group
     } else {
-        Applet *applet = createApplet(pluginId, QVariantList() << "org.kde.plasma:force-create");
+        Applet *applet = createApplet(pluginId, QVariantList() << u"org.kde.plasma:force-create"_s);
         if (applet) {
             m_configGroupIds[pluginId] = applet->id();
         }

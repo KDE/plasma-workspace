@@ -12,6 +12,8 @@
 #include <QAction>
 #include <kactioncollection.h>
 
+using namespace Qt::StringLiterals;
+
 SystemTrayContainer::SystemTrayContainer(QObject *parent, const KPluginMetaData &data, const QVariantList &args)
     : Plasma::Applet(parent, data, args)
 {
@@ -62,7 +64,7 @@ void SystemTrayContainer::ensureSystrayExists()
     }
 
     if (!m_innerContainment) {
-        m_innerContainment = c->createContainment(QStringLiteral("org.kde.plasma.private.systemtray"), QVariantList() << "org.kde.plasma:force-create");
+        m_innerContainment = c->createContainment(QStringLiteral("org.kde.plasma.private.systemtray"), QVariantList() << u"org.kde.plasma:force-create"_s);
         config().writeEntry("SystrayContainmentId", m_innerContainment->id());
     }
 
@@ -88,7 +90,7 @@ void SystemTrayContainer::ensureSystrayExists()
         Q_EMIT internalSystrayChanged();
     }
 
-    setInternalAction("configure", m_innerContainment->internalAction("configure"));
+    setInternalAction(u"configure"_s, m_innerContainment->internalAction(u"configure"_s));
     connect(m_innerContainment.data(), &Plasma::Containment::configureRequested, this, [this](Plasma::Applet *applet) {
         Q_EMIT containment()->configureRequested(applet);
     });
@@ -99,7 +101,7 @@ void SystemTrayContainer::ensureSystrayExists()
     }
 
     // replace internal remove action with ours
-    m_innerContainment->setInternalAction("remove", internalAction("remove"));
+    m_innerContainment->setInternalAction(u"remove"_s, internalAction(u"remove"_s));
 
     // Sync the display hints
     m_innerContainment->setContainmentDisplayHints(containmentDisplayHints() | Plasma::Types::ContainmentDrawsPlasmoidHeading
