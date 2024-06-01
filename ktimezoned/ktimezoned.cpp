@@ -96,7 +96,7 @@ void KTimeZoned::init(bool restart)
 // zone to the config file and notify interested parties.
 void KTimeZoned::updateLocalZone()
 {
-    QString systemTimeZone = QTimeZone::systemTimeZoneId();
+    QString systemTimeZone = QString::fromLocal8Bit(QTimeZone::systemTimeZoneId());
 
     if (m_localZone != systemTimeZone) {
         qDebug() << "System timezone has been changed, new timezone is" << systemTimeZone;
@@ -145,7 +145,7 @@ bool KTimeZoned::findZoneTab(const QString &pathFromConfig)
         return true;
     }
 
-    zoneinfoDir = ::getenv("TZDIR");
+    zoneinfoDir = QString::fromLocal8Bit(::getenv("TZDIR"));
     zoneTab = zoneinfoDir + ZONE_TAB_FILE;
     if (!zoneinfoDir.isEmpty() && dir.exists(zoneinfoDir) && QFileInfo::exists(zoneTab)) {
         m_zoneinfoDir = zoneinfoDir;
