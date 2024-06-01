@@ -3,9 +3,6 @@ add_definitions(-DTRANSLATION_DOMAIN=\"ksmserver\")
 check_library_exists("${X11_ICE_LIB}" _IceTransNoListen "" HAVE__ICETRANSNOLISTEN)
 configure_file(config-ksmserver.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-ksmserver.h)
 
-add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
-add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 ########### next target ###############

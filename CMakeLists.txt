@@ -10,10 +10,6 @@ list(GET VERSION_LIST 2 PROJECT_VERSION_PATCH)
 set(PROJECT_DEP_VERSION "6.0.90")
 set(QT_MIN_VERSION "6.6.0")
 set(KF6_MIN_VERSION "6.2.0")
-set(KDE_COMPILERSETTINGS_LEVEL "5.82")
-add_definitions(
-  -DQT_USE_QSTRINGBUILDER # TODO remove after bumping KDE_COMPILERSETTINGS_LEVEL
-)
 option(PLASMA_X11_DEFAULT_SESSION "Use X11 session by default for Plasma" OFF)
 option(INSTALL_SDDM_WAYLAND_SESSION OFF)
 option(WITH_X11 "Build with X11 support. Building without is experimental" ON)

@@ -6,9 +6,6 @@ if (SYSTEMD_FOUND)
     add_subdirectory(systemd)
 endif()
 
-add_definitions(-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII)
-add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
-
 qt_add_dbus_interface(
     startplasma_SRCS
     ${CMAKE_SOURCE_DIR}/ksplash/ksplashqml/org.kde.KSplash.xml

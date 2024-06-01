@@ -1,5 +1,3 @@
-add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
-
 set(kded_statusnotifierwatcher_SRCS statusnotifierwatcher.cpp )
 
 qt_add_dbus_adaptor(kded_statusnotifierwatcher_SRCS     ${KSTATUSNOTIFIERITEM_DBUS_INTERFACES_DIR}/kf6_org.kde.StatusNotifierWatcher.xml

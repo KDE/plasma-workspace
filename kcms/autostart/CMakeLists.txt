@@ -3,6 +3,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_autostart\")
 if(SYSTEMD_FOUND)
     pkg_check_modules(JOURNALD "libsystemd" REQUIRED)
     add_definitions(-DHAVE_SYSTEMD=1)
+else()
+    add_definitions(-DHAVE_SYSTEMD=0)
 endif()
 
 kcmutils_add_qml_kcm(kcm_autostart SOURCES ${kcm_autostart_PART_SRCS})
