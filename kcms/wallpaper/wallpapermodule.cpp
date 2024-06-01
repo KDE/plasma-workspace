@@ -157,7 +157,7 @@ void WallpaperModule::onScreenChanged()
             break;
         }
     }
-    Q_ASSERT(m_containmentIdx != "");
+    Q_ASSERT(!m_containmentIdx.isEmpty());
 
     auto containmentConfigGroup = containmentsGroup.group(m_containmentIdx);
     m_loadedWallpaperplugin = containmentConfigGroup.readEntry("wallpaperplugin");
@@ -305,7 +305,7 @@ void WallpaperModule::load()
 void WallpaperModule::save()
 {
     KQuickConfigModule::save();
-    auto iface = new QDBusInterface("org.kde.plasmashell", "/PlasmaShell", "org.kde.PlasmaShell", QDBusConnection::sessionBus(), this);
+    auto iface = new QDBusInterface(u"org.kde.plasmashell"_s, u"/PlasmaShell"_s, u"org.kde.PlasmaShell"_s, QDBusConnection::sessionBus(), this);
     if (!iface->isValid()) {
         qCWarning(KCM_WALLPAPER_DEBUG) << qPrintable(QDBusConnection::sessionBus().lastError().message());
         return;
