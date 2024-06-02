@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 02:25+0000\n"
 "PO-Revision-Date: 2024-05-12 11:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -180,7 +180,7 @@ msgstr "புதிய அமர்வு"
 msgid "Filters"
 msgstr "வடிகட்டிகள்"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:148
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -190,7 +190,7 @@ msgstr ""
 "பிளாஸ்மாவின் கண்டறிய முடியாத பழைய பதிப்பிற்கு இந்த பிளாஸ்மாய்ட் எழுதப்பட்டுள்ளதால் %1-வது "
 "பதிப்பில் இயங்காது. புதுப்பிக்கப்பட்ட பதிப்பை இதை இயற்றியவரிடம் கோரவும்."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:152
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -199,7 +199,7 @@ msgstr ""
 "பிளாஸ்மாவின் %1-வது பதிப்பிற்கு இந்த பிளாஸ்மாய்ட் எழுதப்பட்டுள்ளதால் தற்போதைய %2-வது "
 "பதிப்பில் இயங்காது. புதுப்பிக்கப்பட்ட பதிப்பை இதை இயற்றியவரிடம் கோரவும்."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:156
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -208,7 +208,7 @@ msgstr ""
 "பிளாஸ்மாவின் %1-வது பதிப்பிற்கு இந்த பிளாஸ்மாய்ட் எழுதப்பட்டுள்ளதால் தற்போதைய %2-வது "
 "பதிப்பில் இயங்காது. இதைப் பயன்படுத்த பிளாஸ்மாவைப் புதுப்பிக்கவும்."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:161
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
