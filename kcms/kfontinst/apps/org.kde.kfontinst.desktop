@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=KFontInst
 Name[ar]=مثبت خط.ك
+Name[az]=KFontInst
 Name[be]=KFontInst
 Name[bg]=KFontInst
 Name[ca]=KFontInst
@@ -36,6 +37,7 @@ Type=Application
 MimeType=application/x-font-ttf;application/x-font-type1;application/x-font-otf;application/x-font-pcf;application/x-font-bdf;application/vnd.kde.fontspackage;font/otf;font/ttf;font/collection;
 GenericName=Font Installer
 GenericName[ar]=مثبت الخط
+GenericName[az]=Şrift quraşdırıcısı
 GenericName[be]=Сродак усталявання шрыфтоў
 GenericName[bg]=Инсталатор на шрифтове
 GenericName[ca]=Instal·lador de fonts

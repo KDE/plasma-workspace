@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Play audible feedback when devices are inserted or removed",
         "Description[ar]": "يشغل ردود فعل مسموعة عند إدخال الأجهزة أو إزالتها",
+        "Description[az]": "Cihazlar qoşulduqda və ya çıxarıldıqda səsli bildiriş səsləndirmək",
         "Description[be]": "Прайграванне гукавона сігналу, калі прылады падлучаюцца або адлучаюцца",
         "Description[bg]": "Издаване на звуков сигнал за обратна връзка при добавяне или отделяне на устройства",
         "Description[ca@valencia]": "Reproduïx una reacció audible quan s'inserisquen o s'extraguen dispositius",
