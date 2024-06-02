@@ -58,7 +58,7 @@ public:
     ~SystemClipboard() override;
 
     void clear(QClipboard::Mode mode);
-    void setMimeData(QMimeData *data, QClipboard::Mode mode);
+    void setMimeData(QMimeData *data, QClipboard::Mode mode, bool needsRoundTrip = false);
 
     bool isLocked(QClipboard::Mode mode);
 

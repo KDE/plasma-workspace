@@ -110,10 +110,14 @@ void SystemClipboard::clear(QClipboard::Mode mode)
     m_clip->clear(mode);
 }
 
-void SystemClipboard::setMimeData(QMimeData *data, QClipboard::Mode mode)
+void SystemClipboard::setMimeData(QMimeData *data, QClipboard::Mode mode, bool needsRoundTrip)
 {
     Ignore lock(mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel);
     m_clip->setMimeData(data, mode);
+
+    if (needsRoundTrip) { // BUG 466414
+        roundtrip();
+    }
 }
 
 bool SystemClipboard::isLocked(QClipboard::Mode mode)

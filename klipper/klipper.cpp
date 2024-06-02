@@ -671,13 +671,15 @@ void Klipper::setClipboard(const HistoryItem &item, int mode, ClipboardUpdateRea
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
+    static const bool isWayland = KWindowSystem::isPlatformWayland();
+
     if (mode & Selection) {
         qCDebug(KLIPPER_LOG) << "Setting selection to <" << item.text() << ">";
         QMimeData *mimeData = item.mimeData();
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
             mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
         }
-        m_clip->setMimeData(mimeData, QClipboard::Selection);
+        m_clip->setMimeData(mimeData, QClipboard::Selection, m_bSynchronize && isWayland);
     }
     if (mode & Clipboard) {
         qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << item.text() << ">";
@@ -685,7 +687,7 @@ void Klipper::setClipboard(const HistoryItem &item, int mode, ClipboardUpdateRea
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
             mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
         }
-        m_clip->setMimeData(mimeData, QClipboard::Clipboard);
+        m_clip->setMimeData(mimeData, QClipboard::Clipboard, m_bSynchronize && isWayland);
     }
 }
 
