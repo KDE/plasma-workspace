@@ -16,8 +16,8 @@
 #include <KWindowInfo>
 #include <KWindowSystem>
 
-static const char *DBUS_SERVICE = "com.canonical.AppMenu.Registrar";
-static const char *DBUS_OBJECT_PATH = "/com/canonical/AppMenu/Registrar";
+static constexpr QLatin1StringView DBUS_SERVICE("com.canonical.AppMenu.Registrar");
+static constexpr QLatin1StringView DBUS_OBJECT_PATH("/com/canonical/AppMenu/Registrar");
 
 MenuImporter::MenuImporter(QObject *parent)
     : QObject(parent)
@@ -59,8 +59,7 @@ void MenuImporter::RegisterWindow(WId id, const QDBusObjectPath &path)
         if (type != NET::Unknown && (type & (NET::Menu | NET::DropdownMenu | NET::PopupMenu))) {
             return;
         }
-        QString classClass = info.windowClassClass();
-        m_windowClasses.insert(id, classClass);
+        m_windowClasses.insert(id, QString::fromLocal8Bit(info.windowClassClass()));
     }
 
     QString service = message().service();
