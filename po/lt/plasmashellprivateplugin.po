@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2024-05-16 21:13+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -186,7 +186,7 @@ msgstr "Naujas seansas"
 msgid "Filters"
 msgstr "Filtrai"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:166
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -197,7 +197,7 @@ msgstr ""
 "suderinamas su Plasma %1. Norėdami gauti atnaujintą valdiklio versiją, "
 "susisiekite su valdiklio kūrėju."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:170
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -207,7 +207,7 @@ msgstr ""
 "%2. Norėdami gauti atnaujintą valdiklio versiją, susisiekite su valdiklio "
 "kūrėju."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:174
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -216,7 +216,7 @@ msgstr ""
 "Šis valdiklis buvo sukurtas Plasma %1 versijai ir nėra suderinamas su Plasma "
 "%2. Norėdami naudoti valdiklį, atnaujinkite Plasma versiją."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:163
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:179
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

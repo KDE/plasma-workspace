@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-02 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -180,7 +180,7 @@ msgstr "新建会话"
 msgid "Filters"
 msgstr "过滤"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:150
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:166
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -190,7 +190,7 @@ msgstr ""
 "此挂件是为未知的旧版 Plasma 编写的，它与 Plasma %1 不兼容。请联系挂件的作者获"
 "取新版挂件。"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:154
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:170
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -199,7 +199,7 @@ msgstr ""
 "此挂件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请联系挂件的作者获取新版"
 "挂件。"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:158
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:174
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -208,7 +208,7 @@ msgstr ""
 "此挂件是为 Plasma %1 编写的，它与 Plasma %2 不兼容。请升级 Plasma 桌面环境以"
 "使用此挂件。"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:163
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:179
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

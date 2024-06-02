@@ -100,7 +100,7 @@ msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
-"指定要打印的字体，格式为“字体,风格”。样式字段为一串 24 位的十进制数值，格式"
+"指定要打印的字体，格式为“字体,样式”。样式字段为一串 24 位的十进制数值，格式"
 "为：<字重><宽度><倾斜度>"
 
 #: apps/Printer.cpp:346
@@ -247,7 +247,7 @@ msgstr "字体"
 #: kcmfontinst/FontFilter.cpp:105
 #, kde-format
 msgid "Style"
-msgstr "风格"
+msgstr "样式"
 
 #: kcmfontinst/FontFilter.cpp:107
 #, kde-format
@@ -309,7 +309,7 @@ msgstr "状态"
 msgid ""
 "This column shows the status of the font family, and of the individual font "
 "styles."
-msgstr "此列显示字体的状态以及它包含的每种字体风格。"
+msgstr "此列显示字体的状态以及它包含的每种字体样式。"
 
 #: kcmfontinst/FontList.cpp:677
 #, kde-format
@@ -320,7 +320,7 @@ msgid ""
 "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
 msgstr ""
 "<p>此列表显示了您已安装的字体。字体按照家族名称分组，方括号内的数字为该款字体"
-"包含的风格数量。例如：</p><ul><li>Times [4]<ul><li>常规</li><li>粗体</li><li>"
+"包含的样式数量。例如：</p><ul><li>Times [4]<ul><li>常规</li><li>粗体</li><li>"
 "粗斜体</li><li>斜体</li></ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
