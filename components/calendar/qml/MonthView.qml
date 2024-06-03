@@ -246,6 +246,10 @@ Item {
 
     PlasmaComponents.SwipeView {
         id: swipeView
+
+        // Warning: this binding depends on an implementation detail of PlasmaComponents.SwipeView
+        readonly property bool moving: (contentItem as ListView)?.moving ?? false
+
         anchors {
             top: viewHeader.bottom
             left: parent.left
@@ -255,6 +259,10 @@ Item {
 
         activeFocusOnTab: false
         clip: true
+
+        // cross-block interactiveness to avoid swiping in the orthogonal
+        // directions simultaneously and also to mitigate QTBUG-126042
+        interactive: !(mainDaysCalendar.moving || yearView.moving || decadeView.moving)
 
         KeyNavigation.left: root.showDigitalClockHeader ? root.KeyNavigation.left : viewHeader.tabBar
         KeyNavigation.tab: viewHeader.tabButton
@@ -310,6 +318,10 @@ Item {
                 }
                 swipeView.Keys.upPressed(event);
             }
+
+            // cross-block interactiveness to avoid swiping in the orthogonal
+            // directions simultaneously and also to mitigate QTBUG-126042
+            interactive: !swipeView.moving
 
             backend: calendarBackend
             viewType: InfiniteList.ViewType.DayView
@@ -368,6 +380,10 @@ Item {
         InfiniteList {
             id: yearView
 
+            // cross-block interactiveness to avoid swiping in the orthogonal
+            // directions simultaneously and also to mitigate QTBUG-126042
+            interactive: !swipeView.moving
+
             backend: calendarBackend
             viewType: InfiniteList.ViewType.YearView
             delegate: DaysCalendar {
@@ -395,6 +411,10 @@ Item {
         // DecadeView
         InfiniteList {
             id: decadeView
+
+            // cross-block interactiveness to avoid swiping in the orthogonal
+            // directions simultaneously and also to mitigate QTBUG-126042
+            interactive: !swipeView.moving
 
             backend: calendarBackend
             viewType: InfiniteList.ViewType.DecadeView
