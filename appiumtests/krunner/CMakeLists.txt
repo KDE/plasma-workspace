@@ -7,4 +7,4 @@ add_test(
 )
 set_tests_properties(krunnertest PROPERTIES
     TIMEOUT 600
-    ENVIRONMENT "USE_CUSTOM_BUS=1")
+    ENVIRONMENT "TEST_WITH_KWIN_WAYLAND=0;USE_CUSTOM_BUS=1")
