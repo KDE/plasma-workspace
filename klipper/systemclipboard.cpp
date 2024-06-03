@@ -26,7 +26,6 @@
 #include <xcb/xcb.h>
 #include <xcb/xcb_event.h>
 #endif // HAVE_X11
-#include <wayland-client-core.h> // roundtrip.
 
 using namespace std::chrono_literals;
 
@@ -59,7 +58,7 @@ bool ignoreClipboardChanges()
     return false;
 }
 
-void roundtrip()
+void x11RoundTrip()
 {
 #if HAVE_X11
     if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
@@ -69,11 +68,8 @@ void roundtrip()
         if (error) {
             free(error);
         }
-    } else
-#endif
-        if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>()) {
-        wl_display_roundtrip(interface->display());
     }
+#endif
 }
 }
 
@@ -92,7 +88,7 @@ SystemClipboard::SystemClipboard()
     : QObject(nullptr)
     , m_clip(KSystemClipboard::instance())
 {
-    roundtrip(); // read initial X user time
+    x11RoundTrip(); // read initial X user time
     connect(m_clip, &KSystemClipboard::changed, this, &SystemClipboard::checkClipData);
 
     m_pendingCheckTimer.setSingleShot(true);
@@ -152,7 +148,7 @@ void SystemClipboard::checkClipData(QClipboard::Mode mode)
         return;
     } else if (data->formats().isEmpty()) {
         // Might be a timeout. Try again
-        roundtrip();
+        x11RoundTrip();
         data = m_clip->mimeData(mode);
         if (data->formats().isEmpty()) {
             qCDebug(KLIPPER_LOG) << "was empty. Retried, now still empty";
@@ -192,7 +188,7 @@ void SystemClipboard::slotCheckPending()
         return;
     }
     m_pendingContentsCheck = false; // blockFetchingNewData() will be called again
-    roundtrip();
+    x11RoundTrip();
     checkClipData(QClipboard::Selection); // Always selection
 }
 
