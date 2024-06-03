@@ -51,7 +51,7 @@ void KeyState::setKey(Qt::Key newKey)
     if (m_keyInfo) {
         if (!m_keyInfo->knowsKey(newKey)) [[unlikely]] {
             // Ignore unknown keys
-            qCWarning(KEYBOARDINDICATOR_DEBUG) << "Unknown key" << newKey;
+            qCDebug(KEYBOARDINDICATOR_DEBUG) << "Unknown key" << newKey;
             m_keyInfo->disconnect(this);
             m_keyInfo.reset();
             onKeyRemoved(m_key);
@@ -60,7 +60,7 @@ void KeyState::setKey(Qt::Key newKey)
     } else {
         m_keyInfo = keyInfo();
         if (!m_keyInfo->knowsKey(newKey)) [[unlikely]] {
-            qCWarning(KEYBOARDINDICATOR_DEBUG) << "Unknown key" << newKey;
+            qCDebug(KEYBOARDINDICATOR_DEBUG) << "Unknown key" << newKey;
             m_keyInfo.reset();
             onKeyRemoved(m_key);
             return;
