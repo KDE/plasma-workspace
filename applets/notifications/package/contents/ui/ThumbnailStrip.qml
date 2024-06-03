@@ -39,9 +39,8 @@ Item {
     signal openUrl(string url)
     signal fileActionInvoked(QtObject action)
 
-    implicitHeight: Math.max(thumbnailActionRow.implicitHeight + 2 * thumbnailActionRow.anchors.topMargin,
-                             Math.round(Math.min(width / 3, width / thumbnailer.ratio)))
-                    + topPadding + bottomPadding
+    // Fix for BUG:462399
+    implicitHeight: Kirigami.Units.iconSizes.enormous
 
     Notifications.FileMenu {
         id: fileMenu
