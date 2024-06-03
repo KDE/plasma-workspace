@@ -647,12 +647,12 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     HistoryItemPtr item = applyClipChanges(data);
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
-        if (m_bSynchronize) {
+        if (m_bSynchronize && item) { // applyClipChanges can return nullptr
             setClipboard(*item, mode == QClipboard::Selection ? Clipboard : Selection);
         }
     }
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
-    if (m_bURLGrabber && data->hasText()) {
+    if (m_bURLGrabber && item && data->hasText()) {
         m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
 
         // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
