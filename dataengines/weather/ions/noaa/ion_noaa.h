@@ -125,7 +125,7 @@ private:
     KJob *apiRequestJob(const QUrl &url, const QString &source);
 
     // Load and Parse the place XML listing
-    void getXMLSetup();
+    void getXMLSetup(bool reset = true);
     bool readXMLSetup(QXmlStreamReader &xml);
 
     // Load and parse the specific place(s)
