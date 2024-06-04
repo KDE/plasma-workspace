@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:40+0000\n"
+"POT-Creation-Date: 2024-06-04 02:25+0000\n"
 "PO-Revision-Date: 2015-02-15 12:28+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -291,7 +291,7 @@ msgid "Cancel"
 msgstr ""
 
 #: package/contents/ui/JobItem.qml:230
-#: package/contents/ui/ThumbnailStrip.qml:166
+#: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr ""

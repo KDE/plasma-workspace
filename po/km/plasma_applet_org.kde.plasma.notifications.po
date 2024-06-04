@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:40+0000\n"
+"POT-Creation-Date: 2024-06-04 02:25+0000\n"
 "PO-Revision-Date: 2012-06-14 10:53+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -274,7 +274,7 @@ msgid "Cancel"
 msgstr "បោះបង់​ការងារ"
 
 #: package/contents/ui/JobItem.qml:230
-#: package/contents/ui/ThumbnailStrip.qml:166
+#: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr ""

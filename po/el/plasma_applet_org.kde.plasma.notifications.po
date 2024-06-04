@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:40+0000\n"
+"POT-Creation-Date: 2024-06-04 02:25+0000\n"
 "PO-Revision-Date: 2017-09-08 16:25+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -300,7 +300,7 @@ msgid "Cancel"
 msgstr "Ακύρωση εργασίας"
 
 #: package/contents/ui/JobItem.qml:230
-#: package/contents/ui/ThumbnailStrip.qml:166
+#: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr ""
