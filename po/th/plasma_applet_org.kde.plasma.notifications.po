@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-15 00:40+0000\n"
+"POT-Creation-Date: 2024-06-04 00:40+0000\n"
 "PO-Revision-Date: 2010-11-27 11:49+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -275,7 +275,7 @@ msgid "Cancel"
 msgstr "ยกเลิกงาน"
 
 #: package/contents/ui/JobItem.qml:230
-#: package/contents/ui/ThumbnailStrip.qml:166
+#: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr ""
