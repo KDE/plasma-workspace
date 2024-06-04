@@ -187,18 +187,37 @@ KJob *NOAAIon::apiRequestJob(const QUrl &url, const QString &source)
 }
 
 // Parses city list and gets the correct city based on ID number
-void NOAAIon::getXMLSetup()
+void NOAAIon::getXMLSetup(bool reset)
 {
-    auto getJob = apiRequestJob(QUrl(QStringLiteral("https://www.weather.gov/data/current_obs/index.xml")), {});
+    const QStringList stationUrls = {
+        u"https://w1.weather.gov/xml/current_obs/index.xml"_s,
+        u"https://www.weather.gov/xml/current_obs/index.xml"_s,
+    };
+    static int retryCount = 0;
+
+    if (reset) {
+        retryCount = 0;
+    } else {
+        retryCount++;
+        if (retryCount >= stationUrls.count()) {
+            qCWarning(IONENGINE_NOAA) << "Couldn't retrieve the list of stations";
+            return;
+        }
+    }
+
+    auto getJob = apiRequestJob(QUrl(stationUrls.at(retryCount)), {});
     connect(getJob, &KJob::result, this, &NOAAIon::setup_slotJobFinished);
 }
 
 void NOAAIon::setup_slotJobFinished(KJob *job)
 {
     QXmlStreamReader reader = QXmlStreamReader(m_jobData.value(job));
-    if (!reader.atEnd()) {
-        const bool success = readXMLSetup(reader);
-        setInitialized(success);
+
+    const bool success = readXMLSetup(reader);
+    setInitialized(success);
+
+    if (!success) {
+        getXMLSetup(/*reset*/ false);
     }
 
     m_jobData.remove(job);
