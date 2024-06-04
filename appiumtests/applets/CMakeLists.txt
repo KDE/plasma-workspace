@@ -35,7 +35,7 @@ add_test(
     NAME clipboardtest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py --failfast
 )
-set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300)
+set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 ENVIRONMENT "GDK_BACKEND=wayland")
 
 add_test(
     NAME devicenotifiertest
