@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgweather trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 02:29+0000\n"
+"POT-Creation-Date: 2024-06-05 03:02+0000\n"
 "PO-Revision-Date: 2022-08-20 23:20-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -2778,8 +2778,8 @@ msgstr "ソース: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:899 ions/envcan/ion_envcan.cpp:901
 #: ions/envcan/ion_envcan.cpp:1389 ions/envcan/ion_envcan.cpp:1514
-#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:365
-#: ions/noaa/ion_noaa.cpp:550
+#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:384
+#: ions/noaa/ion_noaa.cpp:569
 #, kde-format
 msgid "N/A"
 msgstr "利用不可能"
@@ -2813,7 +2813,7 @@ msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
 msgstr "Environment and Climate Change Canada のデータ"
 
-#: ions/noaa/ion_noaa.cpp:643
+#: ions/noaa/ion_noaa.cpp:662
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
