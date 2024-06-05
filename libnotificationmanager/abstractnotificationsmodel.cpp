@@ -25,7 +25,7 @@
 
 using namespace std::chrono_literals;
 
-static const int s_notificationsLimit = 1000;
+static constexpr int s_notificationsLimit = 1000;
 
 using namespace NotificationManager;
 
@@ -39,6 +39,7 @@ AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
         QList<int> rowsToBeRemoved;
         rowsToBeRemoved.reserve(pendingRemovals.count());
         for (uint id : std::as_const(pendingRemovals)) {
+            Notification::Private::s_imageCache.remove(id);
             int row = q->rowOfNotification(id); // oh the complexity...
             if (row == -1) {
                 continue;
@@ -66,6 +67,7 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
                                      << "notifications";
         q->beginRemoveRows(QModelIndex(), 0, cleanupCount - 1);
         for (int i = 0; i < cleanupCount; ++i) {
+            Notification::Private::s_imageCache.remove(notifications.at(0).id());
             notifications.removeAt(0);
             // TODO close gracefully?
         }

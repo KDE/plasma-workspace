@@ -125,6 +125,8 @@ bool ServerPrivate::init()
                                              SLOT(onBroadcastNotification(QMap<QString, QVariant>)));
     }
 
+    Notification::Private::s_imageCache.setMaxCost(256 * 256 * 100);
+
     m_valid = true;
     Q_EMIT validChanged();
 
@@ -167,7 +169,7 @@ uint ServerPrivate::Notify(const QString &app_name,
     notification.d->processHints(hints);
 
     // If we didn't get a pixmap, load the app_icon instead
-    if (notification.d->image.isNull()) {
+    if (!notification.d->s_imageCache.contains(notificationId)) {
         notification.setIcon(app_icon);
     }
 

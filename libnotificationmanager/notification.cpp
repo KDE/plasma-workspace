@@ -27,11 +27,16 @@
 using namespace NotificationManager;
 using namespace Qt::StringLiterals;
 
+QCache<uint, QImage> Notification::Private::s_imageCache = QCache<uint, QImage>{};
+
 Notification::Private::Private()
 {
 }
 
-Notification::Private::~Private() = default;
+Notification::Private::~Private()
+{
+    // The image cache is cleared by AbstractNotificationsModel::pendingRemovalTimer
+}
 
 QString Notification::Private::sanitize(const QString &text)
 {
@@ -208,7 +213,7 @@ void Notification::Private::loadImagePath(const QString &path)
     // image_path and appIcon should either be a URL with file scheme or the name of a themed icon.
     // We're lenient and also allow local paths.
 
-    image = QImage(); // clear
+    s_imageCache.remove(id); // clear
     icon.clear();
 
     QUrl imageUrl;
@@ -232,13 +237,13 @@ void Notification::Private::loadImagePath(const QString &path)
     QImageReader reader(imageUrl.toLocalFile());
     reader.setAutoTransform(true);
 
-    const QSize imageSize = reader.size();
-    if (imageSize.isValid() && (imageSize.width() > maximumImageSize().width() || imageSize.height() > maximumImageSize().height())) {
-        const QSize thumbnailSize = imageSize.scaled(maximumImageSize(), Qt::KeepAspectRatio);
-        reader.setScaledSize(thumbnailSize);
+    if (QSize imageSize = reader.size(); imageSize.isValid()) {
+        if (imageSize.width() > maximumImageSize().width() || imageSize.height() > maximumImageSize().height()) {
+            imageSize = imageSize.scaled(maximumImageSize(), Qt::KeepAspectRatio);
+            reader.setScaledSize(imageSize);
+        }
+        s_imageCache.insert(id, new QImage(reader.read()), imageSize.width() * imageSize.height());
     }
-
-    image = reader.read();
 }
 
 QString Notification::Private::defaultComponentName()
@@ -247,7 +252,7 @@ QString Notification::Private::defaultComponentName()
     return QStringLiteral("plasma_workspace");
 }
 
-QSize Notification::Private::maximumImageSize()
+constexpr QSize Notification::Private::maximumImageSize()
 {
     return QSize(256, 256);
 }
@@ -417,11 +422,20 @@ void Notification::Private::processHints(const QVariantMap &hints)
         it = hints.find(QStringLiteral("icon_data"));
     }
 
+    QImage *image = nullptr;
     if (it != end) {
-        image = decodeNotificationSpecImageHint(it->value<QDBusArgument>());
+        QImage imageFromHint(decodeNotificationSpecImageHint(it->value<QDBusArgument>()));
+        if (!imageFromHint.isNull()) {
+            Q_ASSERT_X(imageFromHint.width() > 0 && imageFromHint.height() > 0,
+                       Q_FUNC_INFO,
+                       qPrintable(QStringLiteral("%1 %2").arg(QString::number(imageFromHint.width()), QString::number(imageFromHint.height()))));
+            sanitizeImage(imageFromHint);
+            image = new QImage(imageFromHint);
+            s_imageCache.insert(id, image, imageFromHint.width() * imageFromHint.height());
+        }
     }
 
-    if (image.isNull()) {
+    if (!image) {
         it = hints.find(QStringLiteral("image-path"));
         if (it == end) {
             it = hints.find(QStringLiteral("image_path"));
@@ -431,8 +445,6 @@ void Notification::Private::processHints(const QVariantMap &hints)
             loadImagePath(it->toString());
         }
     }
-
-    sanitizeImage(image);
 }
 
 void Notification::Private::setUrgency(Notifications::Urgency urgency)
@@ -563,17 +575,19 @@ QString Notification::icon() const
 void Notification::setIcon(const QString &icon)
 {
     d->loadImagePath(icon);
-    Private::sanitizeImage(d->image);
 }
 
 QImage Notification::image() const
 {
-    return d->image;
+    if (d->s_imageCache.contains(d->id)) {
+        return *d->s_imageCache.object(d->id);
+    }
+    return QImage();
 }
 
 void Notification::setImage(const QImage &image)
 {
-    d->image = image;
+    d->s_imageCache.insert(d->id, new QImage(image));
 }
 
 QString Notification::desktopEntry() const

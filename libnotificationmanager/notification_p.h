@@ -6,11 +6,10 @@
 
 #pragma once
 
+#include <QCache>
 #include <QDBusArgument>
 #include <QDateTime>
 #include <QImage>
-#include <QList>
-#include <QString>
 #include <QUrl>
 
 #include <KService>
@@ -32,7 +31,7 @@ public:
     void loadImagePath(const QString &path);
 
     static QString defaultComponentName();
-    static QSize maximumImageSize();
+    static constexpr QSize maximumImageSize();
 
     static KService::Ptr serviceForDesktopEntry(const QString &desktopEntry);
 
@@ -54,7 +53,7 @@ public:
     QString rawBody;
     // Can be theme icon name or path
     QString icon;
-    QImage image;
+    static QCache<uint /*id*/, QImage> s_imageCache;
 
     QString applicationName;
     QString desktopEntry;
