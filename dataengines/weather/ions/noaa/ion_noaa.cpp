@@ -18,6 +18,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QLocale>
+#include <QStandardPaths>
 #include <QTimeZone>
 
 using namespace Qt::StringLiterals;
@@ -189,9 +190,10 @@ KJob *NOAAIon::apiRequestJob(const QUrl &url, const QString &source)
 // Parses city list and gets the correct city based on ID number
 void NOAAIon::getXMLSetup(bool reset)
 {
-    const QStringList stationUrls = {
-        u"https://w1.weather.gov/xml/current_obs/index.xml"_s,
-        u"https://www.weather.gov/xml/current_obs/index.xml"_s,
+    const QList<QUrl> stationUrls = {
+        QUrl("https://w1.weather.gov/xml/current_obs/index.xml"_L1),
+        QUrl("https://www.weather.gov/xml/current_obs/index.xml"_L1),
+        QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "plasma/weather/noaa_station_list.xml"_L1)),
     };
     static int retryCount = 0;
 
@@ -205,7 +207,7 @@ void NOAAIon::getXMLSetup(bool reset)
         }
     }
 
-    auto getJob = apiRequestJob(QUrl(stationUrls.at(retryCount)), {});
+    auto getJob = apiRequestJob(stationUrls.at(retryCount), {});
     connect(getJob, &KJob::result, this, &NOAAIon::setup_slotJobFinished);
 }
 
@@ -330,7 +332,7 @@ void NOAAIon::parseStationID(QXmlStreamReader &xml)
             } else if (elementName == QLatin1String("station_name")) {
                 stationName = xml.readElementText();
             } else if (elementName == QLatin1String("xml_url")) {
-                xmlurl = xml.readElementText().replace(QStringLiteral("http://"), QStringLiteral("http://www."));
+                xmlurl = xml.readElementText().replace(QStringLiteral("https://weather.gov"), QStringLiteral("https://forecast.weather.gov"));
             } else {
                 parseUnknownElement(xml);
             }
