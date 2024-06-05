@@ -8,22 +8,21 @@
 # محمد سعد  Mohamed SAAD <metehyi@free.fr>, 2006.
 # AbdulAziz AlSharif <a.a-a.s@hotmail.com>, 2007.
 # Youssef Chahibi <chahibi@gmail.com>, 2007.
-# zayed <zayed.alsaidi@gmail.com>, 2008, 2021.
+# SPDX-FileCopyrightText: 2008, 2021, 2023, 2024 zayed <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-01 03:10+0000\n"
+"POT-Creation-Date: 2024-06-05 04:02+0000\n"
 "PO-Revision-Date: 2021-06-19 20:20+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.07.70\n"
 
 #: logout.cpp:340
 #, kde-format
@@ -140,27 +139,27 @@ msgid ""
 "the lock screen."
 msgstr "تبدأ بدون دعم غلق الشاشة. تحتاجها فقط إذا كان المكون يقدم شاشة القفل."
 
-#: server.cpp:848
+#: server.cpp:853
 #, kde-format
 msgid "Session Management"
 msgstr "إدارة الجلسة"
 
-#: server.cpp:851
+#: server.cpp:856
 #, kde-format
 msgid "Log Out"
 msgstr "اخرج"
 
-#: server.cpp:856
+#: server.cpp:861
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "اخرج بدون تأكيد"
 
-#: server.cpp:861
+#: server.cpp:866
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "أوقف بدون تأكيد"
 
-#: server.cpp:866
+#: server.cpp:871
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "أعد التشغيل بدون تأكيد"

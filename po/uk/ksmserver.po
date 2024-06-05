@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-01 03:10+0000\n"
+"POT-Creation-Date: 2024-06-05 04:02+0000\n"
 "PO-Revision-Date: 2020-04-25 09:04+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -143,27 +143,27 @@ msgstr ""
 "Запуск без підтримки блокування екрана. Потрібен, лише якщо блокування "
 "екрана забезпечується іншим компонентом."
 
-#: server.cpp:848
+#: server.cpp:853
 #, kde-format
 msgid "Session Management"
 msgstr "Керування сеансами"
 
-#: server.cpp:851
+#: server.cpp:856
 #, kde-format
 msgid "Log Out"
 msgstr "Завершити сеанс"
 
-#: server.cpp:856
+#: server.cpp:861
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Завершити сеанс без підтвердження"
 
-#: server.cpp:861
+#: server.cpp:866
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Вимкнути без підтвердження"
 
-#: server.cpp:866
+#: server.cpp:871
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Перезавантажити без підтвердження"

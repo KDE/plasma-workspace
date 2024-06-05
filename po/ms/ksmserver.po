@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-01 03:10+0000\n"
+"POT-Creation-Date: 2024-06-05 04:02+0000\n"
 "PO-Revision-Date: 2010-07-23 21:18+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -130,28 +130,28 @@ msgid ""
 "the lock screen."
 msgstr ""
 
-#: server.cpp:848
+#: server.cpp:853
 #, fuzzy, kde-format
 #| msgid "The KDE Session Manager"
 msgid "Session Management"
 msgstr "Pengurus Sesi KDE"
 
-#: server.cpp:851
+#: server.cpp:856
 #, kde-format
 msgid "Log Out"
 msgstr "Log Keluar"
 
-#: server.cpp:856
+#: server.cpp:861
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Log Keluar Tanpa Pengesahan"
 
-#: server.cpp:861
+#: server.cpp:866
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Hentikan Tanpa Pengesahan"
 
-#: server.cpp:866
+#: server.cpp:871
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Ulangboot Tanpa Pengesahan"
