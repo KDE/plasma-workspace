@@ -184,7 +184,7 @@ KCM.ScrollViewKCM {
                             return 0
                         }
 
-                        onActivated: {
+                        onActivated: index => {
                             const shownIndex = cfg_shownItems.indexOf(itemId)
                             const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
                             const extraIndex = cfg_extraItems.indexOf(itemId)

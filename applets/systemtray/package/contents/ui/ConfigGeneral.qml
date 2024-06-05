@@ -77,7 +77,9 @@ KCM.SimpleKCM {
                 }
             }
 
-            onActivated: cfg_iconSpacing = model[currentIndex]["spacing"];
+            onActivated: index => {
+                cfg_iconSpacing = model[currentIndex]["spacing"];
+            }
         }
         QQC2.Label {
             visible: Kirigami.Settings.tabletMode

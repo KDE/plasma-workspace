@@ -37,7 +37,7 @@ ContainmentItem {
     MouseArea {
         anchors.fill: parent
 
-        onWheel: {
+        onWheel: wheel => {
             // Don't propagate unhandled wheel events
             wheel.accepted = true;
         }
@@ -76,13 +76,13 @@ ContainmentItem {
                 return plasmoidId;
             }
 
-            onDragEnter: {
+            onDragEnter: event => {
                 if (!systemTrayAppletName(event)) {
                     event.ignore();
                 }
             }
 
-            onDrop: {
+            onDrop: event => {
                 const plasmoidId = systemTrayAppletName(event);
                 if (!plasmoidId) {
                     event.ignore();
@@ -251,7 +251,7 @@ ContainmentItem {
             mainItem: ExpandedRepresentation {
                 id: expandedRepresentation
 
-                Keys.onEscapePressed: {
+                Keys.onEscapePressed: event => {
                     systemTrayState.expanded = false
                 }
 

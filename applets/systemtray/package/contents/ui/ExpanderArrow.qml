@@ -46,7 +46,7 @@ PlasmaCore.ToolTipArea {
                 tooltip.wasExpanded = systemTrayState.expanded;
             }
         }
-        onTapped: {
+        onTapped: (eventPoint, button) => {
             systemTrayState.expanded = !tooltip.wasExpanded;
             expandedRepresentation.hiddenLayout.currentIndex = -1;
         }

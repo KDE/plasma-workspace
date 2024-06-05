@@ -28,7 +28,7 @@ AbstractItem {
     // action of a plasmoid is supposed to be, even if it's just expanding the
     // Plasmoid. Not all plasmoids are supposed to expand and not all plasmoids
     // do anything with onActivated.
-    onActivated: {
+    onActivated: pos => {
         if (applet) {
             applet.plasmoid.activated()
         }
@@ -61,9 +61,11 @@ AbstractItem {
             }
         }
     }
-    onContextMenu: if (applet) {
-        effectivePressed = false;
-        Plasmoid.showPlasmoidMenu(applet, 0, inHiddenLayout ? applet.height : 0);
+    onContextMenu: mouse => {
+        if (applet) {
+            effectivePressed = false;
+            Plasmoid.showPlasmoidMenu(applet, 0, inHiddenLayout ? applet.height : 0);
+        }
     }
     onWheel: wheel => {
         if (!applet) {
