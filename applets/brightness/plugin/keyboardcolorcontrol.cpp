@@ -60,6 +60,11 @@ bool KeyboardColorControl::isSupported() const
     return m_supported;
 }
 
+bool KeyboardColorControl::enabled() const
+{
+    return m_enabled.value();
+}
+
 void KeyboardColorControl::setEnabled(bool enabled)
 {
     if (m_enabled.value() == enabled) {

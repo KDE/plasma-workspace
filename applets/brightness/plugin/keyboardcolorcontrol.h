@@ -16,7 +16,7 @@ class KeyboardColorControl : public QObject
     QML_ELEMENT
 
     Q_PROPERTY(bool supported READ isSupported CONSTANT FINAL)
-    Q_PROPERTY(bool enabled READ default WRITE setEnabled NOTIFY enabledChanged FINAL)
+    Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged FINAL)
 
 public:
     explicit KeyboardColorControl(QObject *parent = nullptr);
@@ -24,6 +24,7 @@ public:
 
     bool isSupported() const;
 
+    bool enabled() const;
     void setEnabled(bool enabled);
 
 Q_SIGNALS:
