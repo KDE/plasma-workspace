@@ -106,7 +106,7 @@ ColumnLayout {
         id: headingElement
         Layout.fillWidth: !notificationItem.inGroup
         Layout.preferredHeight: notificationHeading.implicitHeight
-        Layout.preferredWidth: notificationHeading.implicitWidth
+        Layout.preferredWidth: notificationItem.inGroup ? notificationHeading.implicitWidth : -1
         Layout.alignment: notificationItem.inGroup && summaryLabel.lineCount > 1 ? Qt.AlignTop : 0
         Layout.topMargin: notificationItem.inGroup && summaryLabel.lineCount > 1 ? Math.max(0, (summaryLabelTextMetrics.height - Layout.preferredHeight) / 2) : 0
         Layout.bottomMargin: notificationItem.inGroup ? 0 : -parent.spacing
