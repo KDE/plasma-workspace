@@ -488,6 +488,11 @@ void NOAAIon::updateWeather(const QString &source)
             break;
         }
 
+        // Indicate whether the first forcast is a nightly one
+        if (forecastDay == 0) {
+            data.insert(u"Forecast Starts at Night"_s, !forecast.isDayTime);
+        }
+
         // Get the short day name for the forecast
         data.insert(u"Short Forecast Day %1"_s.arg(forecastDay),
                     u"%1|%2|%3|%4|%5|%6"_s.arg(forecast.day, iconName, i18nc("weather forecast", forecast.summary.toUtf8().data()))

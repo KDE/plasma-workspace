@@ -1510,6 +1510,11 @@ void EnvCanadaIon::updateWeather(const QString &source)
     int i = 0;
     for (const WeatherData::ForecastInfo *forecastInfo : forecasts) {
         QString forecastPeriod = forecastInfo->forecastPeriod;
+        // Indicate whether the first forcast is a nightly one
+        if (i == 0) {
+            data.insert(QStringLiteral("Forecast Starts at Night"), forecastPeriod.contains(QStringLiteral("night")));
+        }
+
         if (forecastPeriod.isEmpty()) {
             forecastPeriod = i18n("N/A");
         } else {
