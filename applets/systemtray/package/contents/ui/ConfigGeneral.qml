@@ -24,7 +24,7 @@ KCM.SimpleKCM {
             Kirigami.FormData.label: i18nc("The arrangement of system tray icons in the Panel", "Panel icon size:")
             enabled: !Kirigami.Settings.tabletMode
             text: i18n("Small")
-            checked: cfg_scaleIconsToFit == false && !Kirigami.Settings.tabletMode
+            checked: !cfg_scaleIconsToFit && !Kirigami.Settings.tabletMode
             onToggled: cfg_scaleIconsToFit = !checked
         }
         QQC2.RadioButton {
@@ -32,7 +32,7 @@ KCM.SimpleKCM {
             enabled: !Kirigami.Settings.tabletMode
             text: Plasmoid.formFactor === PlasmaCore.Types.Horizontal ? i18n("Scale with Panel height")
                                                                       : i18n("Scale with Panel width")
-            checked: cfg_scaleIconsToFit == true || Kirigami.Settings.tabletMode
+            checked: cfg_scaleIconsToFit || Kirigami.Settings.tabletMode
             onToggled: cfg_scaleIconsToFit = checked
         }
         QQC2.Label {
