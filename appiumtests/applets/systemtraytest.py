@@ -4,10 +4,12 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import base64
 import os
 import queue
 import subprocess
 import sys
+import tempfile
 import threading
 import time
 import unittest
@@ -15,7 +17,9 @@ from datetime import date
 from time import sleep
 from typing import IO, Final
 
+import cv2 as cv
 import gi
+import numpy as np
 
 gi.require_version("Gtk", "3.0")  # StatusIcon is removed in 4
 from appium import webdriver
@@ -24,12 +28,23 @@ from appium.webdriver.common.appiumby import AppiumBy
 from gi.repository import Gio, GLib, Gtk
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.interaction import POINTER_MOUSE
+from selenium.webdriver.common.actions.mouse_button import MouseButton
+from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 KDE_VERSION: Final = 6
 WIDGET_ID: Final = "org.kde.plasma.systemtray"
+CMAKE_RUNTIME_OUTPUT_DIRECTORY: Final = os.getenv("CMAKE_RUNTIME_OUTPUT_DIRECTORY")
+
+
+def generate_color_block(red: int, green: int, blue: int) -> str:
+    cv_second_image = np.zeros((10, 10, 3), dtype=np.uint8)
+    cv_second_image[:, :] = [blue, green, red]
+    return base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
 
 
 class XEmbedTrayIcon(threading.Thread):
@@ -244,7 +259,138 @@ class SystemTrayTests(unittest.TestCase):
 
         self.assertTrue(success, "xembedsniproxy did not receive the click event")
 
-    def test_2_bug479466_keyboard_navigation_in_HiddenItemsView(self) -> None:
+    def take_screenshot(self) -> str:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            saved_image_path = os.path.join(temp_dir, "tray.png")
+            if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
+                subprocess.check_call(["import", "-window", "root", saved_image_path])
+            else:
+                self.driver.get_screenshot_as_file(saved_image_path)
+            cv_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
+        return base64.b64encode(cv.imencode('.png', cv_image)[1].tobytes()).decode()
+
+    def test_2_statusnotifieritem(self) -> None:
+        """
+        Tests for org.kde.StatusNotifierItem
+        1. Left click
+        2. Right click
+        3. Middle click
+        4. Wheel
+        5. Activate menu actions
+        6. NeedsAttention/Active/Passive status
+        """
+        if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
+            self.skipTest("inputsynth only works on Wayland")
+
+        status_notifier = subprocess.Popen([os.path.join(CMAKE_RUNTIME_OUTPUT_DIRECTORY, "systemtray_statusnotifiertest")], stdout=subprocess.PIPE)
+        self.addCleanup(status_notifier.terminate)
+        time.sleep(1)  # Wait until the icon appears
+        rect: dict = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))["rect"]  # Red
+
+        expected_result: list[str] = []
+
+        # Left click
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
+        action.perform()
+        expected_result.append("Activated")
+
+        # Middle click
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, MouseButton.MIDDLE)
+        action.perform()
+        expected_result.append("SecondaryActivated")
+        time.sleep(1)
+
+        # Scroll up
+        action = ActionBuilder(self.driver)
+        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), 0, -15)
+        action.perform()
+        expected_result.append("Scrolled by 180 Vertically")
+        time.sleep(1)
+
+        # Scroll down
+        action = ActionBuilder(self.driver)
+        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), 0, 15)
+        action.perform()
+        expected_result.append("Scrolled by -180 Vertically")
+        time.sleep(1)
+
+        # Scroll left
+        action = ActionBuilder(self.driver)
+        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), -15, 0)
+        action.perform()
+        expected_result.append("Scrolled by 180 Horizontally")
+        time.sleep(1)
+
+        # Scroll right
+        action = ActionBuilder(self.driver)
+        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), 15, 0)
+        action.perform()
+        expected_result.append("Scrolled by -180 Horizontally")
+        time.sleep(1)
+
+        # Right click
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, MouseButton.RIGHT)
+        action.perform()
+        time.sleep(1)  # Wait until the menu appears
+
+        # Click the first action to change the color to blue
+        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(0, 255, 0))["rect"]  # Green
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
+        action.perform()
+        expected_result.append("NeedsAttention")
+        time.sleep(1)  # Wait until the menu disappears
+
+        # Right click
+        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(0, 0, 255))["rect"]  # Blue
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, MouseButton.RIGHT)
+        action.perform()
+        time.sleep(1)  # Wait until the menu appears
+
+        # Click the second action to change the color to red
+        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 85, 255))["rect"]  # Purple
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
+        action.perform()
+        expected_result.append("Active")
+        time.sleep(1)  # Wait until the menu disappears
+
+        # Right click
+        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))["rect"]  # Red
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, MouseButton.RIGHT)
+        action.perform()
+        time.sleep(1)  # Wait until the menu appears
+
+        # Move to the submenu item
+        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(85, 0, 255))["rect"]
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
+        action.perform()
+        time.sleep(1)  # Wait until the submenu appears
+
+        # Move to the submenu
+        rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 255, 0))["rect"]  # Yellow
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
+        action.perform()
+        expected_result.append("Passive")
+        time.sleep(1)  # Wait until the menu disappears
+        # The icon is hidden
+        self.assertRaises(Exception, self.driver.find_image_occurrence, self.take_screenshot(), generate_color_block(255, 0, 0))
+
+        status_notifier.terminate()
+        status_notifier.wait(10)
+        output = status_notifier.stdout.readlines()
+        self.assertEqual(len(expected_result), len(output), f"output: f{output} expected: {expected_result}")
+        for l in range(0, len(expected_result)):
+            self.assertEqual(output[l].decode().strip(), expected_result[l])
+
+    def test_3_bug479466_keyboard_navigation_in_HiddenItemsView(self) -> None:
         """
         Make sure iconContainer in AbstractItem.qml has the default focus so it can receive key presses
         """

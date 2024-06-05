@@ -19,6 +19,3 @@ target_link_libraries(statusnotifiertest
     KF6::ConfigCore
     Qt::DBus
 )
-
-include(ECMMarkAsTest)
-ecm_mark_as_test(statusnotifiertest)
