@@ -17,7 +17,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 23.08.1\n"
 
 #: package/contents/ui/BatteryItem.qml:100
 #, kde-format
@@ -278,7 +277,7 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "‏%1 يمنع وضع السكون وقفل الشاشة:"
+msgstr[0] "‏%1 يمنع النوم وقفل الشاشة:"
 msgstr[1] "تطبيق يمنع النوم وقفل الشاشة:"
 msgstr[2] "تطبيقان يمنعان النوم وقفل الشاشة:"
 msgstr[3] "%1 تطبيقات يمنعن النوم وقفل الشاشة:"
@@ -288,12 +287,12 @@ msgstr[5] "%1 تطبيق يمنع النوم وقفل الشاشة:"
 #: package/contents/ui/PowerManagementItem.qml:205
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (%2)"
-msgstr "‏%1 يمنع وضع السكون وقفل الشاشة (%2)"
+msgstr "‏%1 يمنع النوم وقفل الشاشة (%2)"
 
 #: package/contents/ui/PowerManagementItem.qml:207
 #, kde-format
 msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
-msgstr "‏%1 يمنع وضع السكون وقفل الشاشة (سبب مجهول)"
+msgstr "‏%1 يمنع النوم وقفل الشاشة (سبب مجهول)"
 
 #: package/contents/ui/PowerManagementItem.qml:209
 #, kde-format

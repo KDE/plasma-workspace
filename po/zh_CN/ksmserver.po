@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-01 00:40+0000\n"
+"POT-Creation-Date: 2024-06-05 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -135,13 +135,13 @@ msgid ""
 "the lock screen."
 msgstr "在没有锁屏支持的情况下启动。仅在其他组件提供了锁屏时需要。"
 
-#: server.cpp:770
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[未知]"
 
-#: server.cpp:793
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -153,7 +153,7 @@ msgstr ""
 "程序：\n"
 "%1"
 
-#: server.cpp:1065
+#: server.cpp:1070
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

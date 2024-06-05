@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-01 00:40+0000\n"
+"POT-Creation-Date: 2024-06-05 00:40+0000\n"
 "PO-Revision-Date: 2024-04-04 15:31-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -148,13 +148,13 @@ msgstr ""
 "Inicia sem suporte a bloqueio de tela. Necessário apenas se houver suporte "
 "por outro componente."
 
-#: server.cpp:770
+#: server.cpp:775
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[Desconhecido]"
 
-#: server.cpp:793
+#: server.cpp:798
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -167,7 +167,7 @@ msgstr ""
 "principais consumidores de recursos de sessão:\n"
 "%1"
 
-#: server.cpp:1065
+#: server.cpp:1070
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

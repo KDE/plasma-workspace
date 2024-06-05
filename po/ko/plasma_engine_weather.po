@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-28 00:39+0000\n"
+"POT-Creation-Date: 2024-06-05 00:40+0000\n"
 "PO-Revision-Date: 2022-02-20 22:30+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -2777,8 +2777,8 @@ msgstr "원본: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:899 ions/envcan/ion_envcan.cpp:901
 #: ions/envcan/ion_envcan.cpp:1389 ions/envcan/ion_envcan.cpp:1514
-#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:365
-#: ions/noaa/ion_noaa.cpp:550
+#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:384
+#: ions/noaa/ion_noaa.cpp:569
 #, kde-format
 msgid "N/A"
 msgstr "없음"
@@ -2812,7 +2812,7 @@ msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
 msgstr "캐나다 환경 및 기후 변화부 데이터"
 
-#: ions/noaa/ion_noaa.cpp:643
+#: ions/noaa/ion_noaa.cpp:662
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
