@@ -83,19 +83,18 @@ void Greeter::adoptScreen(QScreen *screen)
         m_dialogs.removeOne(w);
         w->deleteLater();
     });
-    connect(w, &KSMShutdownDlg::rejected, this, &Greeter::rejected);
-
-    connect(w, &KSMShutdownDlg::accepted, this, []() {
-        QApplication::exit(1);
-    });
+    connect(w, &KSMShutdownDlg::accepted, this, &Greeter::quit);
+    connect(w, &KSMShutdownDlg::rejected, this, &Greeter::quit);
 
     w->setGeometry(screen->geometry());
     w->init(m_package);
 }
 
-void Greeter::rejected()
+void Greeter::quit()
 {
-    QApplication::exit(1);
+    for (auto window : qApp->topLevelWindows()) {
+        window->close();
+    }
 }
 
 bool Greeter::eventFilter(QObject *watched, QEvent *event)
@@ -110,7 +109,7 @@ bool Greeter::eventFilter(QObject *watched, QEvent *event)
                 return false;
             }
             // click outside, close
-            rejected();
+            quit();
         }
     }
     return false;

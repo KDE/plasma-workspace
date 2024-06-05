@@ -20,6 +20,7 @@
 class KSMShutdownDlg;
 
 class QScreen;
+class QEventLoopLocker;
 
 class Greeter : public QObject
 {
@@ -40,8 +41,8 @@ public Q_SLOTS:
     void promptAll();
 
 private:
+    void quit();
     void adoptScreen(QScreen *screen);
-    void rejected();
     void setupWaylandIntegration();
 
     bool m_running = false;

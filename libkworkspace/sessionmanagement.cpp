@@ -12,6 +12,9 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+#include <QDBusPendingCallWatcher>
+#include <QEventLoopLocker>
+
 #include <iostream>
 
 #include "logoutprompt_interface.h"
@@ -21,6 +24,21 @@
 #include "libkworkspace_debug.h"
 
 using namespace Qt::StringLiterals;
+
+static void lockQuitUntilFinished(QDBusPendingCall pendingCall)
+{
+    auto watcher = new QDBusPendingCallWatcher(pendingCall);
+    QEventLoopLocker eventLoopLocker;
+
+    // Keep event loop locker alive whist the call is in progress to keep application running
+
+    // If the recipient is dbus activated and the sender quits before the target is up
+    // the method may not be dispatched.
+    // See https://gitlab.freedesktop.org/dbus/dbus/-/issues/72
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, watcher, [watcher, eventLoopLocker = std::move(eventLoopLocker)]() {
+        watcher->deleteLater();
+    });
+}
 
 // add a constructor with the service names and paths pre-populated
 class LogoutPromptIface : public OrgKdeLogoutPromptInterface
@@ -127,7 +145,7 @@ void SessionManagement::requestLogoutPrompt()
     // not; if this function was invoked, it means they do want to see the logout
     // prompt right now
     LogoutPromptIface iface;
-    iface.promptAll().waitForFinished();
+    lockQuitUntilFinished(iface.promptAll());
 }
 
 void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
@@ -147,10 +165,11 @@ void SessionManagement::requestShutdown(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptShutDown().waitForFinished();
+        lockQuitUntilFinished(iface.promptShutDown());
+
     } else {
         ShutdownIface iface;
-        iface.logoutAndShutdown().waitForFinished();
+        lockQuitUntilFinished(iface.logoutAndShutdown());
     }
 }
 
@@ -171,10 +190,10 @@ void SessionManagement::requestReboot(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptReboot().waitForFinished();
+        lockQuitUntilFinished(iface.promptReboot());
     } else {
         ShutdownIface iface;
-        iface.logoutAndReboot().waitForFinished();
+        lockQuitUntilFinished(iface.logoutAndReboot());
     }
 }
 
@@ -189,10 +208,10 @@ void SessionManagement::requestLogout(ConfirmationMode confirmationMode)
     }
     if (confirm) {
         LogoutPromptIface iface;
-        iface.promptLogout().waitForFinished();
+        lockQuitUntilFinished(iface.promptLogout());
     } else {
         ShutdownIface iface;
-        iface.logout().waitForFinished();
+        lockQuitUntilFinished(iface.logout());
     }
 }
 
