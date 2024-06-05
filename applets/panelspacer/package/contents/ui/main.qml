@@ -62,11 +62,12 @@ PlasmoidItem {
         let thisSpacerIndex = null;
         let sizeHints = [0];
         // Children order is guaranteed to be the same as the visual order of items in the layout
-        for (var i in panelLayout.children) {
-            const child = panelLayout.children[i];
-            if (!child.visible) continue;
+        for (const child of panelLayout.children) {
+            if (!child.visible) {
+                continue;
+            }
 
-            if (child.applet && child.applet.plasmoid.pluginName === 'org.kde.plasma.panelspacer' && child.applet.plasmoid.configuration.expanding) {
+            if (child.applet?.plasmoid?.pluginName === 'org.kde.plasma.panelspacer' && child.applet.plasmoid.configuration.expanding) {
                 if (child.applet.plasmoid === Plasmoid) {
                     thisSpacerIndex = expandingSpacers
                 }
