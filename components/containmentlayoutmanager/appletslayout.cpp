@@ -711,7 +711,7 @@ void AppletsLayout::appletRemoved(Plasma::Applet *applet)
 
     m_layoutManager->releaseSpace(container);
     m_containerForApplet.remove(appletItem);
-    appletItem->setParentItem(this);
+    appletItem->setParentItem(nullptr);
     container->deleteLater();
 }
 
