@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/kfontinst.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "seoc@iolfree.ie,kscanne@gmail.com"
 
-#: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:955
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:954
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -36,71 +36,71 @@ msgstr ""
 "An bhfuil fonn ort an cló nó na clónna a shuiteáil d'úsáid phearsanta (ar do "
 "shonsa amháin), nó ar fud an chórais (ar son gach úsáideora)?"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:958
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:957
 #, kde-format
 msgid "Where to Install"
 msgstr "Suíomh Suiteála"
 
-#: apps/Installer.cpp:111
+#: apps/Installer.cpp:113
 #, kde-format
 msgid "Font Installer"
 msgstr "Suiteálaí Clónna"
 
-#: apps/Installer.cpp:113
+#: apps/Installer.cpp:115
 #, kde-format
 msgid "Simple font installer"
 msgstr "Suiteálaí simplí clónna"
 
-#: apps/Installer.cpp:115 apps/Printer.cpp:331
+#: apps/Installer.cpp:117 apps/Printer.cpp:332
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "© Craig Drummond, 2007"
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:124
 #, fuzzy, kde-format
 #| msgid "Makes the dialog transient for an X app specified by winid"
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
 "Déan an dialóg sealadach le haghaidh an fheidhmchláir X sonraithe ag winid"
 
-#: apps/Installer.cpp:125
+#: apps/Installer.cpp:127
 #, kde-format
 msgid "URL to install"
 msgstr "URL le suiteáil"
 
-#: apps/Printer.cpp:240
+#: apps/Printer.cpp:241
 #, kde-format
 msgid "Print"
 msgstr "Priontáil"
 
-#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:224
+#: apps/Printer.cpp:311 kcmfontinst/DuplicatesDialog.cpp:224
 #, fuzzy, kde-format
 #| msgid "Canceling..."
 msgid "Canceling…"
 msgstr "Á Chealú..."
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:328
 #, kde-format
 msgid "Font Printer"
 msgstr "Printéir Cló"
 
-#: apps/Printer.cpp:329
+#: apps/Printer.cpp:330
 #, kde-format
 msgid "Simple font printer"
 msgstr "Printéir simplí cló"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:338
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr ""
 "Déan an dialóg sealadach le haghaidh an fheidhmchláir X sonraithe ag winid"
 
-#: apps/Printer.cpp:339
+#: apps/Printer.cpp:340
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "Clómhéid le priontáil"
 
-#: apps/Printer.cpp:343
+#: apps/Printer.cpp:344
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -109,50 +109,50 @@ msgstr ""
 "An cló le priontáil, sonraithe mar \"Clann,Stíl\" agus is uimhir dheachúlach "
 "24-giotán é \"Stíl\" san fhoirm seo: <troime><leithead><claonadh>"
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:347
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "Comhad ina bhfuil liosta de chlónna le priontáil"
 
-#: apps/Printer.cpp:348
+#: apps/Printer.cpp:349
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "Bain an comhad ina bhfuil liosta de chlónna le priontáil"
 
-#: apps/Viewer.cpp:46
+#: apps/Viewer.cpp:48
 #, fuzzy, kde-format
 #| msgid "Open font in font viewer?"
 #| msgid_plural "Open all %1 fonts in font viewer?"
 msgid "Open an existing font file"
 msgstr "Oscail an cló in amharcán na gclónna?"
 
-#: apps/Viewer.cpp:47
+#: apps/Viewer.cpp:49
 #, fuzzy, kde-format
 #| msgid "Print Font Samples"
 msgid "Print font preview"
 msgstr "Priontáil Samplaí Cló"
 
-#: apps/Viewer.cpp:64
+#: apps/Viewer.cpp:66
 #, kde-format
 msgid "Select Font to View"
 msgstr "Roghnaigh Cló le Taispeáint"
 
-#: apps/Viewer.cpp:107
+#: apps/Viewer.cpp:106
 #, kde-format
 msgid "URL to open"
 msgstr "URL le hoscailt"
 
-#: apps/Viewer.cpp:149
+#: apps/Viewer.cpp:148
 #, kde-format
 msgid "Font Viewer"
 msgstr "Amharcán Clónna"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:150
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Amharcán simplí clónna"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:152
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "© Craig Drummond, 2004-2007"
@@ -227,7 +227,7 @@ msgstr "Dáta"
 msgid "Links To"
 msgstr "Nasctha Le"
 
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1316
+#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "Oscail san Amharcán Clónna"
@@ -257,73 +257,73 @@ msgstr[2] "Oscail na %1 chló uile in amharcán na gclónna?"
 msgstr[3] "Oscail na %1 gcló uile in amharcán na gclónna?"
 msgstr[4] "Oscail na %1 cló uile in amharcán na gclónna?"
 
-#: kcmfontinst/FontFilter.cpp:103
+#: kcmfontinst/FontFilter.cpp:105
 #, kde-format
 msgid "Family"
 msgstr "Fine"
 
-#: kcmfontinst/FontFilter.cpp:105
+#: kcmfontinst/FontFilter.cpp:107
 #, kde-format
 msgid "Style"
 msgstr "Stíl"
 
-#: kcmfontinst/FontFilter.cpp:107
+#: kcmfontinst/FontFilter.cpp:109
 #, kde-format
 msgid "Foundry"
 msgstr "Teilgcheárta"
 
-#: kcmfontinst/FontFilter.cpp:109
+#: kcmfontinst/FontFilter.cpp:111
 #, kde-format
 msgid "FontConfig Match"
 msgstr "Comhoiriúnacht FontConfig"
 
 # looks ok - see messages which follow
-#: kcmfontinst/FontFilter.cpp:111
+#: kcmfontinst/FontFilter.cpp:113
 #, kde-format
 msgid "File Type"
 msgstr "Cineál an Chomhaid"
 
-#: kcmfontinst/FontFilter.cpp:113
+#: kcmfontinst/FontFilter.cpp:115
 #, kde-format
 msgid "File Name"
 msgstr "Ainm an Chomhaid"
 
-#: kcmfontinst/FontFilter.cpp:115
+#: kcmfontinst/FontFilter.cpp:117
 #, kde-format
 msgid "File Location"
 msgstr "Suíomh an Chomhaid"
 
-#: kcmfontinst/FontFilter.cpp:117
+#: kcmfontinst/FontFilter.cpp:119
 #, kde-format
 msgid "Writing System"
 msgstr "Córas Scríbhneoireachta"
 
-#: kcmfontinst/FontFilter.cpp:128
+#: kcmfontinst/FontFilter.cpp:130
 #, kde-format
 msgid "Set Criteria"
 msgstr "Socraigh Critéir"
 
-#: kcmfontinst/FontFilter.cpp:187
+#: kcmfontinst/FontFilter.cpp:189
 #, kde-format
 msgid "Symbol/Other"
 msgstr "Siombail/Eile"
 
-#: kcmfontinst/FontFilter.cpp:265 kcmfontinst/FontFilter.cpp:333
+#: kcmfontinst/FontFilter.cpp:267 kcmfontinst/FontFilter.cpp:335
 #, kde-format
 msgid "Filter by %1…"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:548
 #, kde-format
 msgid "Font"
 msgstr "Cló"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:550
 #, kde-format
 msgid "Status"
 msgstr "Stádas"
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:564
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
@@ -331,7 +331,7 @@ msgid ""
 msgstr ""
 "Taispeántar stádas na clainne cló agus stádas na stíleanna cló sa cholún seo."
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:671
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -344,76 +344,76 @@ msgstr ""
 "na lúibíní cearnacha, m.sh. </p><ul><li>Times [4]<ul><li>Gnách</li><li>Trom</"
 "li><li>Iodálach Trom</li><li>Iodálach</li></ul></li></ul>"
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
 #, fuzzy, kde-format
 #| msgid "...plus %1 more"
 msgid "…plus %1 more"
 msgstr "...agus %1 ceann eile"
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1001
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1300
 #, kde-format
 msgid "Delete"
 msgstr "Scrios"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
+#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Enable"
 msgstr "Cumasaigh"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
 #, kde-format
 msgid "Disable"
 msgstr "Díchumasaigh"
 
-#: kcmfontinst/FontList.cpp:1314 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:798
 #, fuzzy, kde-format
 #| msgid "Print"
 msgid "Print…"
 msgstr "Priontáil"
 
-#: kcmfontinst/FontList.cpp:1318
+#: kcmfontinst/FontList.cpp:1312
 #, kde-format
 msgid "Reload"
 msgstr "Athluchtaigh"
 
-#: kcmfontinst/FontList.cpp:1696
+#: kcmfontinst/FontList.cpp:1690
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "Oscail na %1 cló uile in amharcán na gclónna?"
 
-#: kcmfontinst/GroupList.cpp:59
+#: kcmfontinst/GroupList.cpp:61
 #, kde-format
 msgid "All Fonts"
 msgstr "Gach Cló"
 
-#: kcmfontinst/GroupList.cpp:62
+#: kcmfontinst/GroupList.cpp:64
 #, kde-format
 msgid "Personal Fonts"
 msgstr "Clónna Pearsanta"
 
-#: kcmfontinst/GroupList.cpp:65
+#: kcmfontinst/GroupList.cpp:67
 #, kde-format
 msgid "System Fonts"
 msgstr "Clónna an Chórais"
 
-#: kcmfontinst/GroupList.cpp:68
+#: kcmfontinst/GroupList.cpp:70
 #, kde-format
 msgid "Unclassified"
 msgstr "Gan aicme"
 
-#: kcmfontinst/GroupList.cpp:350
+#: kcmfontinst/GroupList.cpp:352
 #, kde-format
 msgid "Group"
 msgstr "Grúpa"
 
-#: kcmfontinst/GroupList.cpp:535
+#: kcmfontinst/GroupList.cpp:537
 #, kde-format
 msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
@@ -422,22 +422,22 @@ msgstr ""
 "<p>An bhfuil tú cinnte gur mian leat '<b>%1</b>' a bhaint?</p><p><i>Bainfear "
 "an grúpa amháin agus ní bhainfear na clónna féin.</i></p>"
 
-#: kcmfontinst/GroupList.cpp:539
+#: kcmfontinst/GroupList.cpp:541
 #, kde-format
 msgid "Remove Group"
 msgstr "Bain Grúpa"
 
-#: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
+#: kcmfontinst/GroupList.cpp:542 kcmfontinst/GroupList.cpp:789
 #, kde-format
 msgid "Remove"
 msgstr "Bain"
 
-#: kcmfontinst/GroupList.cpp:540
+#: kcmfontinst/GroupList.cpp:542
 #, kde-format
 msgid "Remove group"
 msgstr "Bain grúpa"
 
-#: kcmfontinst/GroupList.cpp:586
+#: kcmfontinst/GroupList.cpp:588
 #, kde-format
 msgid ""
 "<h3>Font Groups</h3><p>This list displays the font groups available on your "
@@ -457,7 +457,7 @@ msgstr ""
 "fine cló a bhaint as grúpa, tarraing an cló go dtí an grúpa \"Gach Cló\".</"
 "li></ul></p>"
 
-#: kcmfontinst/GroupList.cpp:594
+#: kcmfontinst/GroupList.cpp:596
 #, kde-format
 msgid ""
 "<li><i>All Fonts</i> contains all the fonts installed on your system.</"
@@ -467,7 +467,7 @@ msgstr ""
 "<li><i>Gach Cló</i>: na clónna go léir ar do chóras.</li><li><i>Gan rangú</"
 "i>: clónna nach bhfuil i ngrúpa \"Saincheaptha\" fós.</li>"
 
-#: kcmfontinst/GroupList.cpp:597
+#: kcmfontinst/GroupList.cpp:599
 #, kde-format
 msgid ""
 "<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
@@ -483,39 +483,39 @@ msgstr ""
 "Pearsanta</i>: do chuid clónna pearsanta.</li><li><i>Gan rangú</i>: clónna "
 "nach bhfuil i ngrúpa \"Saincheaptha\" fós.</li>"
 
-#: kcmfontinst/GroupList.cpp:699
+#: kcmfontinst/GroupList.cpp:701
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgstr "<qt>Tá grúpa darb ainm <b>'%1'</b> ann cheana.</qt>"
 
-#: kcmfontinst/GroupList.cpp:792
+#: kcmfontinst/GroupList.cpp:794
 #, fuzzy, kde-format
 #| msgid "Rename..."
 msgid "Rename…"
 msgstr "Athainmnigh..."
 
-#: kcmfontinst/GroupList.cpp:801
+#: kcmfontinst/GroupList.cpp:803
 #, fuzzy, kde-format
 #| msgid "Export..."
 msgid "Export…"
 msgstr "Easpórtáil..."
 
-#: kcmfontinst/GroupList.cpp:895
+#: kcmfontinst/GroupList.cpp:897
 #, kde-format
 msgid "Add to \"%1\"."
 msgstr "Cuir le \"%1\"."
 
-#: kcmfontinst/GroupList.cpp:897
+#: kcmfontinst/GroupList.cpp:899
 #, kde-format
 msgid "Remove from current group."
 msgstr "Bain ón ghrúpa reatha."
 
-#: kcmfontinst/GroupList.cpp:899
+#: kcmfontinst/GroupList.cpp:901
 #, kde-format
 msgid "Move to personal folder."
 msgstr ""
 
-#: kcmfontinst/GroupList.cpp:901
+#: kcmfontinst/GroupList.cpp:903
 #, kde-format
 msgid "Move to system folder."
 msgstr ""
@@ -643,7 +643,7 @@ msgstr ""
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr ""
 
-#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:717
+#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "Tá <i>%1</i> ann cheana."
@@ -702,54 +702,54 @@ msgstr "Díchumasaigh Clónna"
 msgid "This displays a preview of the selected font."
 msgstr "Taispeáin réamhamharc ar an gcló roghnaithe."
 
-#: kcmfontinst/KCmFontInst.cpp:259
+#: kcmfontinst/KCmFontInst.cpp:260
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Find Duplicates…"
 msgstr "Lorg Clónna Dúblacha..."
 
-#: kcmfontinst/KCmFontInst.cpp:259
+#: kcmfontinst/KCmFontInst.cpp:260
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Scan for Duplicate Fonts…"
 msgstr "Lorg Clónna Dúblacha..."
 
-#: kcmfontinst/KCmFontInst.cpp:261
+#: kcmfontinst/KCmFontInst.cpp:262
 #, fuzzy, kde-format
 #| msgid "Install..."
 msgid "Install from File…"
 msgstr "Suiteáil..."
 
-#: kcmfontinst/KCmFontInst.cpp:261
+#: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:262
+#: kcmfontinst/KCmFontInst.cpp:263
 #, fuzzy, kde-format
 #| msgid "Get New Fonts..."
 msgid "Get New Fonts…"
 msgstr "Faigh Clónna Nua..."
 
-#: kcmfontinst/KCmFontInst.cpp:263
+#: kcmfontinst/KCmFontInst.cpp:264
 #, fuzzy, kde-format
 #| msgid "Enable fonts"
 msgid "Download new fonts"
 msgstr "Cumasaigh clónna"
 
-#: kcmfontinst/KCmFontInst.cpp:265
+#: kcmfontinst/KCmFontInst.cpp:266
 #, fuzzy, kde-format
 #| msgid "Delete all selected fonts"
 msgid "Delete Selected Fonts…"
 msgstr "Scrios gach cló roghnaithe"
 
-#: kcmfontinst/KCmFontInst.cpp:335
+#: kcmfontinst/KCmFontInst.cpp:336
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "Athraigh Téacs an Réamhamhairc..."
 
-#: kcmfontinst/KCmFontInst.cpp:434
+#: kcmfontinst/KCmFontInst.cpp:435
 #, kde-format
 msgid "Add Fonts"
 msgstr "Cuir Clónna Leis"
@@ -759,12 +759,12 @@ msgstr "Cuir Clónna Leis"
 msgid "Failed to save list of fonts to print."
 msgstr "Níorbh fhéidir liosta na gclónna le priontáil a shábháil."
 
-#: kcmfontinst/KCmFontInst.cpp:582
+#: kcmfontinst/KCmFontInst.cpp:581
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Níorbh fhéidir an printéir cló a thosú."
 
-#: kcmfontinst/KCmFontInst.cpp:589
+#: kcmfontinst/KCmFontInst.cpp:588
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -773,33 +773,33 @@ msgstr ""
 "Níl aon chlónna inphriontáilte ann.\n"
 "Ní féidir ach clónna cumasaithe nach bhfuil giotánmhapach a phriontáil."
 
-#: kcmfontinst/KCmFontInst.cpp:591
+#: kcmfontinst/KCmFontInst.cpp:590
 #, kde-format
 msgid "Cannot Print"
 msgstr "Ní Féidir Priontáil"
 
-#: kcmfontinst/KCmFontInst.cpp:606
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Ní raibh aon rud roghnaithe agat le scriosadh."
 
-#: kcmfontinst/KCmFontInst.cpp:606
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Faic le Scriosadh"
 
-#: kcmfontinst/KCmFontInst.cpp:621
+#: kcmfontinst/KCmFontInst.cpp:620
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr ""
 "<p>An bhfuil tú cinnte gur mian leat</p><p>'<b>%1</b>' a scriosadh?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:624
+#: kcmfontinst/KCmFontInst.cpp:623
 #, kde-format
 msgid "Delete Font"
 msgstr "Scrios Cló"
 
-#: kcmfontinst/KCmFontInst.cpp:631
+#: kcmfontinst/KCmFontInst.cpp:630
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
@@ -809,28 +809,28 @@ msgstr[2] "An bhfuil tú cinnte gur mhaith leat na %1 chló seo a scriosadh?"
 msgstr[3] "An bhfuil tú cinnte gur mhaith leat na %1 gcló seo a scriosadh?"
 msgstr[4] "An bhfuil tú cinnte gur mhaith leat an %1 cló seo a scriosadh?"
 
-#: kcmfontinst/KCmFontInst.cpp:633
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Scrios Clónna"
 
-#: kcmfontinst/KCmFontInst.cpp:638
+#: kcmfontinst/KCmFontInst.cpp:637
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "Clónna á scriosadh..."
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Ní raibh aon rud roghnaithe agat le bogadh."
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Faic le Bogadh"
 
-#: kcmfontinst/KCmFontInst.cpp:663
+#: kcmfontinst/KCmFontInst.cpp:662
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -839,17 +839,17 @@ msgstr ""
 "<p>An bhfuil tú cinnte gur mian leat</p><p>'<b>%1</b>' a bhogadh</p><p>ó <i>"
 "%2</i> go <i>%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:668
+#: kcmfontinst/KCmFontInst.cpp:667
 #, kde-format
 msgid "Move Font"
 msgstr "Bog Cló"
 
-#: kcmfontinst/KCmFontInst.cpp:669 kcmfontinst/KCmFontInst.cpp:681
+#: kcmfontinst/KCmFontInst.cpp:668 kcmfontinst/KCmFontInst.cpp:680
 #, kde-format
 msgid "Move"
 msgstr "Bog"
 
-#: kcmfontinst/KCmFontInst.cpp:674
+#: kcmfontinst/KCmFontInst.cpp:673
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -871,71 +871,71 @@ msgstr[4] ""
 "<p>An bhfuil tú cinnte gur mian leat na %1 cló seo a bhogadh ó <i>%2</i> go "
 "<i>%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:680
+#: kcmfontinst/KCmFontInst.cpp:679
 #, kde-format
 msgid "Move Fonts"
 msgstr "Bog Clónna"
 
-#: kcmfontinst/KCmFontInst.cpp:685
+#: kcmfontinst/KCmFontInst.cpp:684
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "Clónna á mbogadh..."
 
-#: kcmfontinst/KCmFontInst.cpp:699
+#: kcmfontinst/KCmFontInst.cpp:698
 #, kde-format
 msgid "Export Group"
 msgstr "Easpórtáil Grúpa"
 
-#: kcmfontinst/KCmFontInst.cpp:725
+#: kcmfontinst/KCmFontInst.cpp:724
 #, kde-format
 msgid "No files?"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:728
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "Create New Group"
 msgstr "Cruthaigh Grúpa Nua"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Name of new group:"
 msgstr "Cruthaigh Grúpa Nua"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "New Group"
 msgstr "Grúpa Nua"
 
 # looks ok - see messages which follow
-#: kcmfontinst/KCmFontInst.cpp:776
+#: kcmfontinst/KCmFontInst.cpp:775
 #, kde-format
 msgid "Preview Text"
 msgstr "Téacs Réamhamhairc"
 
-#: kcmfontinst/KCmFontInst.cpp:776
+#: kcmfontinst/KCmFontInst.cpp:775
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Iontráil téacs nua, le do thoil:"
 
-#: kcmfontinst/KCmFontInst.cpp:828
+#: kcmfontinst/KCmFontInst.cpp:827
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "Liosta na gclónna á scanadh..."
 
-#: kcmfontinst/KCmFontInst.cpp:887
+#: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
 msgid "No fonts"
 msgstr "Gan chlónna"
 
-#: kcmfontinst/KCmFontInst.cpp:892
+#: kcmfontinst/KCmFontInst.cpp:891
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
@@ -945,7 +945,7 @@ msgstr[2] "%1 Chló"
 msgstr[3] "%1 gCló"
 msgstr[4] "%1 Cló"
 
-#: kcmfontinst/KCmFontInst.cpp:901
+#: kcmfontinst/KCmFontInst.cpp:900
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -954,7 +954,7 @@ msgid ""
 "tr></table>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:911
+#: kcmfontinst/KCmFontInst.cpp:910
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -962,67 +962,67 @@ msgid ""
 "td><td>%3</td></tr></table>"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:988
+#: kcmfontinst/KCmFontInst.cpp:987
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "Comhaid chomhcheangailte á lorg..."
 
-#: kcmfontinst/KCmFontInst.cpp:992
+#: kcmfontinst/KCmFontInst.cpp:991
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "Comhaid á Scanadh..."
 
-#: kcmfontinst/KCmFontInst.cpp:993
+#: kcmfontinst/KCmFontInst.cpp:992
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "Comhaid eile le suiteáil á lorg..."
 
-#: kcmfontinst/KCmFontInst.cpp:1008
+#: kcmfontinst/KCmFontInst.cpp:1007
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "Comhaid a bhaineann le %1 á lorg"
 
-#: kcmfontinst/KCmFontInst.cpp:1036
+#: kcmfontinst/KCmFontInst.cpp:1035
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "Clónna á suiteáil..."
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Ní raibh aon rud roghnaithe agat le cumasú."
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Ní raibh aon rud roghnaithe agat le díchumasú."
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1101
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Faic le Cumasú"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1101
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Faic le Díchumasú"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: kcmfontinst/KCmFontInst.cpp:1118
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>An bhfuil tú cinnte gur mian leat</p><p>'<b>%1</b>' a chumasú?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr ""
 "<p>An bhfuil tú cinnte gur mian leat</p><p>'<b>%1</b>' a dhíchumasú?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1122
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1031,7 +1031,7 @@ msgstr ""
 "<p>An bhfuil tú cinnte gur mian leat </p><p>'<b>%1</b>' a chumasú, ó ghrúpa "
 "'<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1126
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1040,17 +1040,17 @@ msgstr ""
 "<p>An bhfuil tú cinnte gur mian leat </p><p>'<b>%1</b>' a dhíchumasú, ó "
 "ghrúpa '<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable Font"
 msgstr "Cumasaigh an Cló"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable Font"
 msgstr "Díchumasaigh an Cló"
 
-#: kcmfontinst/KCmFontInst.cpp:1138
+#: kcmfontinst/KCmFontInst.cpp:1137
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
@@ -1060,7 +1060,7 @@ msgstr[2] "An bhfuil tú cinnte gur mhaith leat na %1 chló seo a chumasú?"
 msgstr[3] "An bhfuil tú cinnte gur mhaith leat na %1 gcló seo a chumasú?"
 msgstr[4] "An bhfuil tú cinnte gur mhaith leat an %1 cló seo a chumasú?"
 
-#: kcmfontinst/KCmFontInst.cpp:1141
+#: kcmfontinst/KCmFontInst.cpp:1140
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
@@ -1070,7 +1070,7 @@ msgstr[2] "An bhfuil tú cinnte gur mhaith leat na %1 chló seo a dhíchumasú?"
 msgstr[3] "An bhfuil tú cinnte gur mhaith leat na %1 gcló seo a dhíchumasú?"
 msgstr[4] "An bhfuil tú cinnte gur mhaith leat an %1 cló seo a dhíchumasú?"
 
-#: kcmfontinst/KCmFontInst.cpp:1144
+#: kcmfontinst/KCmFontInst.cpp:1143
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1094,7 +1094,7 @@ msgstr[4] ""
 "<p>An bhfuil tú cinnte gur mhaith leat an %1 cló seo a chumasú as grúpa '<b>"
 "%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1149
+#: kcmfontinst/KCmFontInst.cpp:1148
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1118,23 +1118,23 @@ msgstr[4] ""
 "<p>An bhfuil tú cinnte gur mhaith leat na %1 cló seo a dhíchumasú i ngrúpa "
 "'<b>%2</b>'?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1155 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Cumasaigh Clónna"
 
-#: kcmfontinst/KCmFontInst.cpp:1155 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1156
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Díchumasaigh Clónna"
 
-#: kcmfontinst/KCmFontInst.cpp:1163
+#: kcmfontinst/KCmFontInst.cpp:1162
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "Clónna á gcumasú..."
 
-#: kcmfontinst/KCmFontInst.cpp:1165
+#: kcmfontinst/KCmFontInst.cpp:1164
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"
@@ -1180,12 +1180,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:207
+#: kio/KioFonts.cpp:209
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr ""
 
-#: kio/KioFonts.cpp:210
+#: kio/KioFonts.cpp:212
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1195,68 +1195,68 @@ msgstr ""
 "Ba chóir duit %1 a bhaint amach ar dtús, agus na comhpháirteanna a shuiteáil "
 "ceann ar cheann."
 
-#: kio/KioFonts.cpp:432
+#: kio/KioFonts.cpp:434
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr ""
 
-#: kio/KioFonts.cpp:437
+#: kio/KioFonts.cpp:439
 #, kde-format
 msgid "Cannot move fonts"
 msgstr ""
 
-#: kio/KioFonts.cpp:448
+#: kio/KioFonts.cpp:450
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr ""
 
-#: kio/KioFonts.cpp:453
+#: kio/KioFonts.cpp:455
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr ""
 
-#: kio/KioFonts.cpp:482
+#: kio/KioFonts.cpp:484
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "Sonraigh \"%1\" nó \"%2\" le do thoil."
 
-#: kio/KioFonts.cpp:500
+#: kio/KioFonts.cpp:502
 #, kde-format
 msgid "No special methods supported."
 msgstr ""
 
-#: kio/KioFonts.cpp:574
+#: kio/KioFonts.cpp:576
 #, kde-format
 msgid "Fonts"
 msgstr "Clónna"
 
-#: kio/KioFonts.cpp:703
+#: kio/KioFonts.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "Níorbh fhéidir deamhan an chórais a thosú"
 
-#: kio/KioFonts.cpp:705
+#: kio/KioFonts.cpp:707
 #, kde-format
 msgid "Backend died"
 msgstr ""
 
-#: kio/KioFonts.cpp:707
+#: kio/KioFonts.cpp:709
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "Is cló giotánmhapach é %1, agus díchumasaíodh ar do chóras iad seo."
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is not a font."
 msgstr "Ní cló é %1."
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:716
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr ""
@@ -1667,27 +1667,27 @@ msgid "&Main Toolbar"
 msgstr "&Príomhbharra Uirlisí"
 
 # looks ok - see messages which follow
-#: viewpart/PreviewSelectAction.cpp:13
+#: viewpart/PreviewSelectAction.cpp:15
 #, kde-format
 msgid "Preview Type"
 msgstr "Cineál Réamhamhairc"
 
-#: viewpart/PreviewSelectAction.cpp:31
+#: viewpart/PreviewSelectAction.cpp:33
 #, kde-format
 msgid "Standard Preview"
 msgstr "Réamhamharc Caighdeánach"
 
-#: viewpart/PreviewSelectAction.cpp:32
+#: viewpart/PreviewSelectAction.cpp:34
 #, kde-format
 msgid "All Characters"
 msgstr "Gach Carachtar"
 
-#: viewpart/PreviewSelectAction.cpp:40
+#: viewpart/PreviewSelectAction.cpp:42
 #, kde-format
 msgid "Unicode Block: %1"
 msgstr "Bloc Unicode: %1"
 
-#: viewpart/PreviewSelectAction.cpp:44
+#: viewpart/PreviewSelectAction.cpp:46
 #, kde-format
 msgid "Unicode Script: %1"
 msgstr "Script Unicode: %1"

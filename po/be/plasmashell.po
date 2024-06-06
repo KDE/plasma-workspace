@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-01 00:40+0000\n"
-"PO-Revision-Date: 2024-05-17 21:16\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"PO-Revision-Date: 2024-06-05 07:06\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -235,47 +235,51 @@ msgstr "Экранная клавіятура дэактываваная"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Пераход у рэжым сну і блакаванне экрана адключаны"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Пераход у рэжым сну і блакаванне экрана ўключаны"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Энергазберагальны рэжым"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Збалансаваны рэжым"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Прадукцыйны рэжым"
 
-#: panelview.cpp:425
+#: panelview.cpp:426
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Вядома, што з графічным працэсарам NVIDIA на X11 плывучы стыль і рэжым "
+"адаптыўнай непразрыстасці прыводзяць да нізкай прадукцыйнасці пры "
+"перацягванні і змене памеру акон. Падумайце над тым, каб скарыстацца іншымі "
+"наладамі."
 
-#: panelview.cpp:1086
+#: panelview.cpp:1087
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Схаваць панэль канфігурацыі"
 
-#: panelview.cpp:1088
+#: panelview.cpp:1089
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -310,7 +314,7 @@ msgstr "Схаваць працоўны стол"
 #: shellcorona.cpp:223
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Актываваць сродак запуску праграм"
 
 #: shellcorona.cpp:231
 #, kde-format
@@ -340,7 +344,7 @@ msgstr "Актываваць запіс кіраўніка задач %1"
 #: shellcorona.cpp:305
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Панэль і кіраванне працоўным сталом"
 
 #: shellcorona.cpp:327
 #, kde-format

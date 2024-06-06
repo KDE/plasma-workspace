@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-06 01:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2021-03-08 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.4\n"
 
-#: sessionrunner.cpp:20
+#: sessionrunner.cpp:22
 #, fuzzy, kde-format
 #| msgid "log out"
 msgctxt ""
@@ -28,12 +28,12 @@ msgctxt ""
 msgid "logout;log out"
 msgstr "പുറത്തിറങ്ങുക"
 
-#: sessionrunner.cpp:23
+#: sessionrunner.cpp:25
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
 msgstr "നിലവിലെ ഡെസ്ക്ടോപ്പ് സെഷനിൽ നിന്ന് പുറത്തുകടന്ന് ലോഗ് ഔട്ട് ചെയ്യുന്നു"
 
-#: sessionrunner.cpp:26
+#: sessionrunner.cpp:28
 #, fuzzy, kde-format
 #| msgctxt "shut down computer command"
 #| msgid "shut down"
@@ -43,12 +43,12 @@ msgctxt ""
 msgid "shutdown;shut down;power;power off"
 msgstr "shutdown"
 
-#: sessionrunner.cpp:29
+#: sessionrunner.cpp:31
 #, kde-format
 msgid "Turns off the computer"
 msgstr "കമ്പ്യൂട്ടര്‍ ഓഫാക്കുന്നു"
 
-#: sessionrunner.cpp:32
+#: sessionrunner.cpp:34
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -58,12 +58,12 @@ msgctxt ""
 msgid "restart;reboot"
 msgstr "restart"
 
-#: sessionrunner.cpp:35
+#: sessionrunner.cpp:37
 #, kde-format
 msgid "Reboots the computer"
 msgstr "കമ്പ്യൂട്ടർ പുനഃരാരംഭിക്കുന്നു"
 
-#: sessionrunner.cpp:39
+#: sessionrunner.cpp:41
 #, fuzzy, kde-format
 #| msgid "Lock the screen"
 msgctxt ""
@@ -71,12 +71,12 @@ msgctxt ""
 msgid "lock;lock screen"
 msgstr "സ്ക്രീന്‍ പൂട്ടുക"
 
-#: sessionrunner.cpp:41
+#: sessionrunner.cpp:43
 #, kde-format
 msgid "Locks the current sessions and starts the screen saver"
 msgstr "ഇപ്പോഴത്തെ സെഷനുകൾ ലോക്കുചെയ്ത് സ്ക്രീൻ സേവർ ആരംഭിക്കുന്നു"
 
-#: sessionrunner.cpp:44
+#: sessionrunner.cpp:46
 #, fuzzy, kde-format
 #| msgid "new session"
 msgctxt ""
@@ -85,12 +85,12 @@ msgctxt ""
 msgid "save;save session"
 msgstr "പുതിയ പ്രവര്‍ത്തനവേള"
 
-#: sessionrunner.cpp:47
+#: sessionrunner.cpp:49
 #, kde-format
 msgid "Saves the current session for session restoration"
 msgstr ""
 
-#: sessionrunner.cpp:50
+#: sessionrunner.cpp:52
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgctxt ""
@@ -99,12 +99,12 @@ msgctxt ""
 msgid "switch user;new session"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"
 
-#: sessionrunner.cpp:53
+#: sessionrunner.cpp:55
 #, kde-format
 msgid "Starts a new session as a different user"
 msgstr "മറ്റൊരു ഉപയോക്താവായി ഒരു പുതിയ സെഷൻ ആരംഭിക്കുന്നു"
 
-#: sessionrunner.cpp:56
+#: sessionrunner.cpp:58
 #, fuzzy, kde-format
 #| msgctxt "User sessions"
 #| msgid "sessions"
@@ -112,12 +112,12 @@ msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "സെഷനുകൾ"
 
-#: sessionrunner.cpp:57
+#: sessionrunner.cpp:59
 #, kde-format
 msgid "Lists all sessions"
 msgstr "എല്ലാ സെഷനുകളും പട്ടികപ്പെടുത്തുന്നു"
 
-#: sessionrunner.cpp:60
+#: sessionrunner.cpp:62
 #, fuzzy, kde-format
 #| msgctxt "switch user command"
 #| msgid "switch"
@@ -125,7 +125,7 @@ msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "switch"
 
-#: sessionrunner.cpp:62
+#: sessionrunner.cpp:64
 #, kde-format
 msgid ""
 "Switches to the active session for the user :q:, or lists all active "
@@ -134,13 +134,13 @@ msgstr ""
 ":q: ഉപയോക്താവിനായി സജീവ സെഷനിലേക്ക് മാറുന്നു, :q: നൽകിയിട്ടില്ലെങ്കിൽ എല്ലാ സജീവ "
 "സെഷനുകളും പട്ടികപ്പെടുത്തുന്നു"
 
-#: sessionrunner.cpp:81
+#: sessionrunner.cpp:83
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:89
+#: sessionrunner.cpp:91
 #, fuzzy, kde-format
 #| msgctxt "shut down computer command"
 #| msgid "shut down"
@@ -148,7 +148,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "shutdown"
 
-#: sessionrunner.cpp:96
+#: sessionrunner.cpp:98
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -156,25 +156,25 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "restart"
 
-#: sessionrunner.cpp:103
+#: sessionrunner.cpp:105
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:110
+#: sessionrunner.cpp:112
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "പുതിയ പ്രവര്‍ത്തനവേള"
 
-#: sessionrunner.cpp:151
+#: sessionrunner.cpp:153
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"
 
-#: sessionrunner.cpp:237
+#: sessionrunner.cpp:239
 #, kde-format
 msgid ""
 "<p>You are about to enter a new desktop session.</p><p>A login screen will "
@@ -184,7 +184,7 @@ msgid ""
 "application launcher)</li></ul>"
 msgstr ""
 
-#: sessionrunner.cpp:246
+#: sessionrunner.cpp:248
 #, fuzzy, kde-format
 #| msgid "New Session"
 msgid "New Desktop Session"

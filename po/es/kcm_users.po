@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2023-10-05 11:34+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -572,24 +572,24 @@ msgstr ""
 "programas de la línea de órdenes que los necesiten.<nl/><nl/>El inicio de "
 "sesión en el sistema usando la huella dactilar no está implementado todavía."
 
-#: src/user.cpp:290
+#: src/user.cpp:292
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "No se ha podido obtener permiso para guardar el usuario %1"
 
-#: src/user.cpp:295
+#: src/user.cpp:297
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Ha ocurrido un error al guardar los cambios"
 
-#: src/user.cpp:394
+#: src/user.cpp:396
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Ha ocurrido un error al cambiar el tamaño de la imagen: ha fallado la "
 "apertura del archivo temporal"
 
-#: src/user.cpp:402
+#: src/user.cpp:404
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

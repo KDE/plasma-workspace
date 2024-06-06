@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2010-01-28 23:29+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -29,125 +29,125 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "svenkate@redhat.com,kamathvasudev@gmail.com"
 
-#: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:955
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:954
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:958
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:957
 #, kde-format
 msgid "Where to Install"
 msgstr "ಎಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸಬೇಕು"
 
-#: apps/Installer.cpp:111
+#: apps/Installer.cpp:113
 #, kde-format
 msgid "Font Installer"
 msgstr "ಅಕ್ಷರಶೈಲಿ ಅನುಸ್ಥಾಪಕ"
 
-#: apps/Installer.cpp:113
+#: apps/Installer.cpp:115
 #, kde-format
 msgid "Simple font installer"
 msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ಅನುಸ್ಥಾಪಕ"
 
-#: apps/Installer.cpp:115 apps/Printer.cpp:331
+#: apps/Installer.cpp:117 apps/Printer.cpp:332
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:124
 #, fuzzy, kde-format
 #| msgid "Makes the dialog transient for an X app specified by winid"
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr "winid ಸೂಚಿಸಲಾದ ಒಂದು X app ಗಾಗಿ ಸಂವಾದ ಚೌಕವನ್ನು ಕ್ಷಣಿಕವಾಗಿಸುತ್ತದೆ"
 
-#: apps/Installer.cpp:125
+#: apps/Installer.cpp:127
 #, kde-format
 msgid "URL to install"
 msgstr "ಅನುಸ್ಥಾಪಿಸಲು ತಾಣಸೂಚಿ"
 
-#: apps/Printer.cpp:240
+#: apps/Printer.cpp:241
 #, kde-format
 msgid "Print"
 msgstr "ಮುದ್ರಣ"
 
-#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:224
+#: apps/Printer.cpp:311 kcmfontinst/DuplicatesDialog.cpp:224
 #, fuzzy, kde-format
 #| msgid "Canceling..."
 msgid "Canceling…"
 msgstr "ರದ್ದು ಮಾಡಲಾಗುತ್ತಿದೆ..."
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:328
 #, kde-format
 msgid "Font Printer"
 msgstr "ಅಕ್ಷರಶೈಲಿ ಮುದ್ರಕ"
 
-#: apps/Printer.cpp:329
+#: apps/Printer.cpp:330
 #, kde-format
 msgid "Simple font printer"
 msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ಮುದ್ರಕ"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:338
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "winid ಸೂಚಿಸಲಾದ ಒಂದು X app ಗಾಗಿ ಸಂವಾದ ಚೌಕವನ್ನು ಕ್ಷಣಿಕವಾಗಿಸುತ್ತದೆ"
 
-#: apps/Printer.cpp:339
+#: apps/Printer.cpp:340
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಮುದ್ರಿಸಲು ಗಾತ್ರ ಸೂಚಿ"
 
-#: apps/Printer.cpp:343
+#: apps/Printer.cpp:344
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
 "number composed as: <weight><width><slant>"
 msgstr ""
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:347
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "ಮುದ್ರಿಸಬೇಕಿರುವ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಹೊಂದಿರುವ ಕಡತ"
 
-#: apps/Printer.cpp:348
+#: apps/Printer.cpp:349
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "ಮುದ್ರಿಸಬೇಕಿರುವ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಹೊಂದಿರುವ ಕಡತವನ್ನು ತೆಗೆದು ಹಾಕಿ"
 
-#: apps/Viewer.cpp:46
+#: apps/Viewer.cpp:48
 #, fuzzy, kde-format
 #| msgid "Open all %1 fonts in font viewer?"
 msgid "Open an existing font file"
 msgstr "ಎಲ್ಲಾ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕದಲ್ಲಿ ತೆರೆಯಬೇಕೆ?"
 
-#: apps/Viewer.cpp:47
+#: apps/Viewer.cpp:49
 #, fuzzy, kde-format
 #| msgid "Print Font Samples"
 msgid "Print font preview"
 msgstr "ಅಕ್ಷರಶೈಲಿಯ ನಮೂನೆಗಳನ್ನು ಮುದ್ರಿಸಿ"
 
-#: apps/Viewer.cpp:64
+#: apps/Viewer.cpp:66
 #, kde-format
 msgid "Select Font to View"
 msgstr "ನೋಡಲು ಅಕ್ಷರಶೈಲಿಯನ್ನು ಆಯ್ಕೆ ಮಾಡಿ"
 
-#: apps/Viewer.cpp:107
+#: apps/Viewer.cpp:106
 #, kde-format
 msgid "URL to open"
 msgstr "ತೆರೆಯಬೇಕಿರುವ ತಾಣಸೂಚಿ"
 
-#: apps/Viewer.cpp:149
+#: apps/Viewer.cpp:148
 #, kde-format
 msgid "Font Viewer"
 msgstr "ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕ"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:150
 #, kde-format
 msgid "Simple font viewer"
 msgstr "ಸರಳ ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕ"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:152
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"
@@ -219,7 +219,7 @@ msgstr "ದಿನಾಂಕ"
 msgid "Links To"
 msgstr "ಇದಕ್ಕಾಗಿನ ಕೊಂಡಿಗಳು"
 
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1316
+#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕದಲ್ಲಿ ತೆರೆ"
@@ -247,74 +247,74 @@ msgid_plural "Open all %1 fonts in font viewer?"
 msgstr[0] "ಎಲ್ಲಾ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕದಲ್ಲಿ ತೆರೆಯಬೇಕೆ?"
 msgstr[1] "ಎಲ್ಲಾ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕದಲ್ಲಿ ತೆರೆಯಬೇಕೆ?"
 
-#: kcmfontinst/FontFilter.cpp:103
+#: kcmfontinst/FontFilter.cpp:105
 #, kde-format
 msgid "Family"
 msgstr "ಕುಟುಂಬ"
 
-#: kcmfontinst/FontFilter.cpp:105
+#: kcmfontinst/FontFilter.cpp:107
 #, kde-format
 msgid "Style"
 msgstr "ವೈಖರಿ"
 
-#: kcmfontinst/FontFilter.cpp:107
+#: kcmfontinst/FontFilter.cpp:109
 #, kde-format
 msgid "Foundry"
 msgstr "ಫೌಂಡ್ರಿ"
 
-#: kcmfontinst/FontFilter.cpp:109
+#: kcmfontinst/FontFilter.cpp:111
 #, kde-format
 msgid "FontConfig Match"
 msgstr "FontConfig ತಾಳೆ"
 
-#: kcmfontinst/FontFilter.cpp:111
+#: kcmfontinst/FontFilter.cpp:113
 #, fuzzy, kde-format
 #| msgid "Preview Type"
 msgid "File Type"
 msgstr "ಮುನ್ನೋಟದ ಬಗೆ"
 
-#: kcmfontinst/FontFilter.cpp:113
+#: kcmfontinst/FontFilter.cpp:115
 #, fuzzy, kde-format
 #| msgid "File"
 msgid "File Name"
 msgstr "ಕಡತ"
 
-#: kcmfontinst/FontFilter.cpp:115
+#: kcmfontinst/FontFilter.cpp:117
 #, kde-format
 msgid "File Location"
 msgstr "ಕಡತದ ಸ್ಥಳ"
 
-#: kcmfontinst/FontFilter.cpp:117
+#: kcmfontinst/FontFilter.cpp:119
 #, kde-format
 msgid "Writing System"
 msgstr "ಬರೆಯುವ ವ್ಯವಸ್ಥೆ"
 
-#: kcmfontinst/FontFilter.cpp:128
+#: kcmfontinst/FontFilter.cpp:130
 #, kde-format
 msgid "Set Criteria"
 msgstr "ಅರ್ಹತೆಯನ್ನು ಸೂಚಿಸಿ"
 
-#: kcmfontinst/FontFilter.cpp:187
+#: kcmfontinst/FontFilter.cpp:189
 #, kde-format
 msgid "Symbol/Other"
 msgstr "ಸಂಜ್ಞೆ/ಇತರೆ"
 
-#: kcmfontinst/FontFilter.cpp:265 kcmfontinst/FontFilter.cpp:333
+#: kcmfontinst/FontFilter.cpp:267 kcmfontinst/FontFilter.cpp:335
 #, kde-format
 msgid "Filter by %1…"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:548
 #, kde-format
 msgid "Font"
 msgstr "ಅಕ್ಷರಶೈಲಿ"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:550
 #, kde-format
 msgid "Status"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:564
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
@@ -323,7 +323,7 @@ msgstr ""
 "ಈ ಕಾಲಂ ಅಕ್ಷರಶೈಲಿ ಕುಟುಂಬದ ಸ್ಥಿತಿಯನ್ನು, ಹಾಗು ಪ್ರತ್ಯೇಕ ಅಕ್ಷರಶೈಲಿಯ ವೈಖರಿಗಳನ್ನು "
 "ತೋರಿಸುತ್ತದೆ."
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:671
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -332,76 +332,76 @@ msgid ""
 "li><li>Bold</li><li>Bold Italic</li><li>Italic</li></ul></li></ul>"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
 #, fuzzy, kde-format
 #| msgid "...plus %1 more"
 msgid "…plus %1 more"
 msgstr "...ಹಾಗು %1 ಇತರೆ"
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1001
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1300
 #, kde-format
 msgid "Delete"
 msgstr "ಅಳಿಸಿಹಾಕು"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
+#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Enable"
 msgstr "ಶಕ್ತಗೊಳಿಸು"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
 #, kde-format
 msgid "Disable"
 msgstr "ನಿಷ್ಕ್ರಿಯಗೊಳಿಸು"
 
-#: kcmfontinst/FontList.cpp:1314 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:798
 #, fuzzy, kde-format
 #| msgid "Print"
 msgid "Print…"
 msgstr "ಮುದ್ರಣ"
 
-#: kcmfontinst/FontList.cpp:1318
+#: kcmfontinst/FontList.cpp:1312
 #, kde-format
 msgid "Reload"
 msgstr "ಪುನರುತ್ಥಾಪಿಸು (ರಿಲೋಡ್)"
 
-#: kcmfontinst/FontList.cpp:1696
+#: kcmfontinst/FontList.cpp:1690
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "ಎಲ್ಲಾ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಕ್ಷರಶೈಲಿ ವೀಕ್ಷಕದಲ್ಲಿ ತೆರೆಯಬೇಕೆ?"
 
-#: kcmfontinst/GroupList.cpp:59
+#: kcmfontinst/GroupList.cpp:61
 #, kde-format
 msgid "All Fonts"
 msgstr "ಎಲ್ಲಾ ಅಕ್ಷರಶೈಲಿಗಳು"
 
-#: kcmfontinst/GroupList.cpp:62
+#: kcmfontinst/GroupList.cpp:64
 #, kde-format
 msgid "Personal Fonts"
 msgstr "ಖಾಸಗಿ ಅಕ್ಷರಶೈಲಿಗಳು"
 
-#: kcmfontinst/GroupList.cpp:65
+#: kcmfontinst/GroupList.cpp:67
 #, kde-format
 msgid "System Fonts"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಅಕ್ಷರಶೈಲಿಗಳು"
 
-#: kcmfontinst/GroupList.cpp:68
+#: kcmfontinst/GroupList.cpp:70
 #, kde-format
 msgid "Unclassified"
 msgstr "ವರ್ಗೀಕರಿಸಲಾಗದೆ ಇರುವುದು"
 
-#: kcmfontinst/GroupList.cpp:350
+#: kcmfontinst/GroupList.cpp:352
 #, kde-format
 msgid "Group"
 msgstr "ಬಳಗ"
 
-#: kcmfontinst/GroupList.cpp:535
+#: kcmfontinst/GroupList.cpp:537
 #, kde-format
 msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
@@ -410,22 +410,22 @@ msgstr ""
 "<p>ನೀವು ನಿಜವಾಗಲೂ '<b>%1</b>' ಅನ್ನು ತೆಗೆದು ಹಾಕಲು ಬಯಸುತ್ತೀರೆ? </p><p><i>ಇದು ಕೇವಲ "
 "ಗುಂಪನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆಯ ವಿನಃ ನಿಜವಾದ ಅಕ್ಷರಶೈಲಿಯನ್ನಲ್ಲ.</i></p>"
 
-#: kcmfontinst/GroupList.cpp:539
+#: kcmfontinst/GroupList.cpp:541
 #, kde-format
 msgid "Remove Group"
 msgstr "ಗುಂಪನ್ನು ತೆಗೆದುಹಾಕು"
 
-#: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
+#: kcmfontinst/GroupList.cpp:542 kcmfontinst/GroupList.cpp:789
 #, kde-format
 msgid "Remove"
 msgstr "ತೆಗೆದುಹಾಕು"
 
-#: kcmfontinst/GroupList.cpp:540
+#: kcmfontinst/GroupList.cpp:542
 #, kde-format
 msgid "Remove group"
 msgstr "ಗುಂಪನ್ನು ತೆಗೆದುಹಾಕು"
 
-#: kcmfontinst/GroupList.cpp:586
+#: kcmfontinst/GroupList.cpp:588
 #, kde-format
 msgid ""
 "<h3>Font Groups</h3><p>This list displays the font groups available on your "
@@ -437,7 +437,7 @@ msgid ""
 "li></ul></p>"
 msgstr ""
 
-#: kcmfontinst/GroupList.cpp:594
+#: kcmfontinst/GroupList.cpp:596
 #, kde-format
 msgid ""
 "<li><i>All Fonts</i> contains all the fonts installed on your system.</"
@@ -445,7 +445,7 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 
-#: kcmfontinst/GroupList.cpp:597
+#: kcmfontinst/GroupList.cpp:599
 #, kde-format
 msgid ""
 "<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
@@ -456,39 +456,39 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 
-#: kcmfontinst/GroupList.cpp:699
+#: kcmfontinst/GroupList.cpp:701
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgstr "<qt><b>'%1'</b> ಎಂಬ ಹೆಸರಿನ ಗುಂಪು ಈಗಾಗಲೆ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ.</qt>"
 
-#: kcmfontinst/GroupList.cpp:792
+#: kcmfontinst/GroupList.cpp:794
 #, fuzzy, kde-format
 #| msgid "Rename..."
 msgid "Rename…"
 msgstr "ಹೆಸರನ್ನು ಬದಲಾಯಿಸು..."
 
-#: kcmfontinst/GroupList.cpp:801
+#: kcmfontinst/GroupList.cpp:803
 #, fuzzy, kde-format
 #| msgid "Export..."
 msgid "Export…"
 msgstr "ರಫ್ತುಮಾಡು..."
 
-#: kcmfontinst/GroupList.cpp:895
+#: kcmfontinst/GroupList.cpp:897
 #, kde-format
 msgid "Add to \"%1\"."
 msgstr "\"%1\" ಗೆ ಸೇರಿಸು."
 
-#: kcmfontinst/GroupList.cpp:897
+#: kcmfontinst/GroupList.cpp:899
 #, kde-format
 msgid "Remove from current group."
 msgstr "ಪ್ರಸ್ತುತ ಗುಂಪಿನಿಂದ ತೆಗೆದುಹಾಕು."
 
-#: kcmfontinst/GroupList.cpp:899
+#: kcmfontinst/GroupList.cpp:901
 #, kde-format
 msgid "Move to personal folder."
 msgstr "ವೈಯುಕ್ತಿಕ ಕಡತಕೋಶಕ್ಕೆ ವರ್ಗಾಯಿಸು."
 
-#: kcmfontinst/GroupList.cpp:901
+#: kcmfontinst/GroupList.cpp:903
 #, kde-format
 msgid "Move to system folder."
 msgstr "ವ್ಯವಸ್ಥೆಯ ಕಡತಕೋಶಕ್ಕೆ ವರ್ಗಾಯಿಸು."
@@ -620,7 +620,7 @@ msgstr "<i>%1</i> ಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಎಲ್ಲಾ ಕ�
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಡೀಮನ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ವಿಫಲವಾಗಿದೆ.<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:717
+#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "<i>'%1'</i>ಈಗಾಗಲೆ ಅಸ್ತಿತ್ವದಲ್ಲಿದೆ."
@@ -680,53 +680,53 @@ msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಶಕ್ತಗೊಳ�
 msgid "This displays a preview of the selected font."
 msgstr "ಇದು ಆಯ್ಕೆ ಮಾಡಲಾದ ಅಕ್ಷರಶೈಲಿಯ ಒಂದು ಮುನ್ನೋಟವನ್ನು ತೋರಿಸುತ್ತದೆ."
 
-#: kcmfontinst/KCmFontInst.cpp:259
+#: kcmfontinst/KCmFontInst.cpp:260
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Find Duplicates…"
 msgstr "ಅಕ್ಷರಶೈಲಿಯ ಇನ್ನೊಂದು ಪ್ರತಿಗಾಗಿ ಹುಡುಕು..."
 
-#: kcmfontinst/KCmFontInst.cpp:259
+#: kcmfontinst/KCmFontInst.cpp:260
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Scan for Duplicate Fonts…"
 msgstr "ಅಕ್ಷರಶೈಲಿಯ ಇನ್ನೊಂದು ಪ್ರತಿಗಾಗಿ ಹುಡುಕು..."
 
-#: kcmfontinst/KCmFontInst.cpp:261
+#: kcmfontinst/KCmFontInst.cpp:262
 #, fuzzy, kde-format
 #| msgid "Install..."
 msgid "Install from File…"
 msgstr "ಅನುಸ್ಢಾಪಿಸು..."
 
-#: kcmfontinst/KCmFontInst.cpp:261
+#: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:262
+#: kcmfontinst/KCmFontInst.cpp:263
 #, fuzzy, kde-format
 #| msgid "Delete Fonts"
 msgid "Get New Fonts…"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಳಿಸಿಹಾಕು"
 
-#: kcmfontinst/KCmFontInst.cpp:263
+#: kcmfontinst/KCmFontInst.cpp:264
 #, kde-format
 msgid "Download new fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:265
+#: kcmfontinst/KCmFontInst.cpp:266
 #, fuzzy, kde-format
 #| msgid "Delete all selected fonts"
 msgid "Delete Selected Fonts…"
 msgstr "ಆಯ್ಕೆ ಮಾಡಲಾದ ಎಲ್ಲಾ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಳಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:335
+#: kcmfontinst/KCmFontInst.cpp:336
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "ಮುನ್ನೋಟ ಪಠ್ಯವನ್ನು ಬದಲಾಯಿಸು..."
 
-#: kcmfontinst/KCmFontInst.cpp:434
+#: kcmfontinst/KCmFontInst.cpp:435
 #, kde-format
 msgid "Add Fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಸೇರಿಸು"
@@ -736,12 +736,12 @@ msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಸೇರಿಸು"
 msgid "Failed to save list of fonts to print."
 msgstr "ಮುದ್ರಿಸಲು ಅಕ್ಷರಗಳ ಪಟ್ಟಿಯನ್ನು ಉಳಿಸುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ."
 
-#: kcmfontinst/KCmFontInst.cpp:582
+#: kcmfontinst/KCmFontInst.cpp:581
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "ಅಕ್ಷರಶೈಲಿ ಮುದ್ರಕವನ್ನು ಆರಂಭಿಸಲು ವಿಫಲಗೊಂಡಿದೆ."
 
-#: kcmfontinst/KCmFontInst.cpp:589
+#: kcmfontinst/KCmFontInst.cpp:588
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -750,60 +750,60 @@ msgstr ""
 "ಮುದ್ರಿಸಬಹುದಾದಂತಹ ಯಾವುದೆ ಅಕ್ಷರಶೈಲಿಗಳಿಲ್ಲ.\n"
 "ಬಿಟ್‌ಮ್ಯಾಪ್ ಅಲ್ಲದ ಹಾಗು ಶಕ್ತಗೊಂಡಿರುವ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಮಾತ್ರವೆ ಮುದ್ರಿಸಬಹುದಾಗಿದೆ."
 
-#: kcmfontinst/KCmFontInst.cpp:591
+#: kcmfontinst/KCmFontInst.cpp:590
 #, kde-format
 msgid "Cannot Print"
 msgstr "ಮುದ್ರಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
 
-#: kcmfontinst/KCmFontInst.cpp:606
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "ಅಳಿಸಲು ನೀವು ಏನನ್ನೂ ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ."
 
-#: kcmfontinst/KCmFontInst.cpp:606
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "ಅಳಿಸಲು ಏನೂ ಇಲ್ಲ"
 
-#: kcmfontinst/KCmFontInst.cpp:621
+#: kcmfontinst/KCmFontInst.cpp:620
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>ನೀವು</p><p>'<b>%1</b>' ಅನ್ನು ನಿಜವಾಗಿಯೂ ಅಳಿಸಲು ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:624
+#: kcmfontinst/KCmFontInst.cpp:623
 #, kde-format
 msgid "Delete Font"
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು ಅಳಿಸಿಹಾಕು"
 
-#: kcmfontinst/KCmFontInst.cpp:631
+#: kcmfontinst/KCmFontInst.cpp:630
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "ನೀವು ನಿಜವಾಗಲೂ ಈ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಅಳಿಸಿಹಾಕಲು ಬಯಸಿದ್ದೀರೆ?"
 msgstr[1] "ನೀವು ನಿಜವಾಗಲೂ ಈ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಳಿಸಿಹಾಕಲು ಬಯಸಿದ್ದೀರೆ?"
 
-#: kcmfontinst/KCmFontInst.cpp:633
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Delete Fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಳಿಸಿಹಾಕು"
 
-#: kcmfontinst/KCmFontInst.cpp:638
+#: kcmfontinst/KCmFontInst.cpp:637
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು(ಗಳನ್ನು) ಅಳಿಸಿಹಾಕಲಾಗುತ್ತಿದೆ..."
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "ಸ್ಥಳಾಂತರಿಸು ನೀವು ಏನನ್ನೂ ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ."
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Nothing to Move"
 msgstr "ಸ್ಥಳಾಂತರಿಸಲು ಏನೂ ಇಲ್ಲ"
 
-#: kcmfontinst/KCmFontInst.cpp:663
+#: kcmfontinst/KCmFontInst.cpp:662
 #, fuzzy, kde-format
 #| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
 msgid ""
@@ -811,17 +811,17 @@ msgid ""
 "%3</i>?</p>"
 msgstr "<p>ನೀವು ನಿಜವಾಗಲೂ</p><p>'<b>%1</b>' ಅನ್ನು ಸ್ಥಳಾಂತರಿಸಲು ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:668
+#: kcmfontinst/KCmFontInst.cpp:667
 #, kde-format
 msgid "Move Font"
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು ಸ್ಥಳಾಂತರಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:669 kcmfontinst/KCmFontInst.cpp:681
+#: kcmfontinst/KCmFontInst.cpp:668 kcmfontinst/KCmFontInst.cpp:680
 #, kde-format
 msgid "Move"
 msgstr "ಸ್ಥಳಾಂತರಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:674
+#: kcmfontinst/KCmFontInst.cpp:673
 #, fuzzy, kde-format
 #| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
 msgid ""
@@ -831,77 +831,77 @@ msgid_plural ""
 msgstr[0] "<p>ನೀವು ನಿಜವಾಗಲೂ</p><p>'<b>%1</b>' ಅನ್ನು ಸ್ಥಳಾಂತರಿಸಲು ಬಯಸುತ್ತೀರೆ?</p>"
 msgstr[1] "<p>ನೀವು ನಿಜವಾಗಲೂ</p><p>'<b>%1</b>' ಅನ್ನು ಸ್ಥಳಾಂತರಿಸಲು ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:680
+#: kcmfontinst/KCmFontInst.cpp:679
 #, kde-format
 msgid "Move Fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಸ್ಥಳಾಂತರಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:685
+#: kcmfontinst/KCmFontInst.cpp:684
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು(ಗಳನ್ನು) ಸ್ಥಳಾಂತರಿಸಲಾಗುತ್ತಿದೆ..."
 
-#: kcmfontinst/KCmFontInst.cpp:699
+#: kcmfontinst/KCmFontInst.cpp:698
 #, kde-format
 msgid "Export Group"
 msgstr "ಗುಂಪುಗಳನ್ನು ರಫ್ತುಮಾಡು"
 
-#: kcmfontinst/KCmFontInst.cpp:725
+#: kcmfontinst/KCmFontInst.cpp:724
 #, kde-format
 msgid "No files?"
 msgstr "ಯಾವುದೆ ಕಡತಗಳಿಲ್ಲ?"
 
-#: kcmfontinst/KCmFontInst.cpp:728
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "'%1' ಅನ್ನು ಬರೆಯಲು ತೆರೆಯುವಲ್ಲಿ ವಿಫಲಗೊಂಡಿದೆ"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "Create New Group"
 msgstr "ಹೊಸ ಗುಂಪನ್ನು ರಚಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Name of new group:"
 msgstr "ಹೊಸ ಗುಂಪನ್ನು ರಚಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "New Group"
 msgstr "ಹೊಸ ಗುಂಪು"
 
-#: kcmfontinst/KCmFontInst.cpp:776
+#: kcmfontinst/KCmFontInst.cpp:775
 #, kde-format
 msgid "Preview Text"
 msgstr "ಮುನ್ನೋಟ ಪಠ್ಯ"
 
-#: kcmfontinst/KCmFontInst.cpp:776
+#: kcmfontinst/KCmFontInst.cpp:775
 #, kde-format
 msgid "Please enter new text:"
 msgstr "ದಯವಿಟ್ಟು ಹೊಸ ಪಠ್ಯವನ್ನು ನಮೂದಿಸಿ:"
 
-#: kcmfontinst/KCmFontInst.cpp:828
+#: kcmfontinst/KCmFontInst.cpp:827
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "ಅಕ್ಷರಶೈಲಿ ಪಟ್ಟಿಯನ್ನು ಹುಡುಕಲಾಗುತ್ತಿದೆ..."
 
-#: kcmfontinst/KCmFontInst.cpp:887
+#: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
 msgid "No fonts"
 msgstr "ಯಾವುದೆ ಅಕ್ಷರಶೈಲಿಯು ಕಂಡುಬಂದಿಲ್ಲ"
 
-#: kcmfontinst/KCmFontInst.cpp:892
+#: kcmfontinst/KCmFontInst.cpp:891
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "೧ ಅಕ್ಷರಶೈಲಿ"
 msgstr[1] "%1 ಅಕ್ಷರಶೈಲಿಗಳು"
 
-#: kcmfontinst/KCmFontInst.cpp:901
+#: kcmfontinst/KCmFontInst.cpp:900
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
@@ -918,7 +918,7 @@ msgstr ""
 "ಶಕ್ತಗೊಳಿಸಲಾದ ಅಕ್ಷರಶೈಲಿಗಳು:</td><td>%3</td></tr><tr><td>ಒಟ್ಟು ಅಕ್ಷರಶೈಲಿಗಳು:</"
 "td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:911
+#: kcmfontinst/KCmFontInst.cpp:910
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
@@ -934,66 +934,66 @@ msgstr ""
 "ಶಕ್ತಗೊಳಿಸಲಾದ ಅಕ್ಷರಶೈಲಿಗಳು:</td><td>%3</td></tr><tr><td>ಒಟ್ಟು ಅಕ್ಷರಶೈಲಿಗಳು:</"
 "td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:988
+#: kcmfontinst/KCmFontInst.cpp:987
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "ಸಂಬಂಧಿತವಾದ ಯಾವುದೆ ಕಡತಗಳಿಗಾಗಿ ನೋಡಲಾಗುತ್ತಿದೆ.."
 
-#: kcmfontinst/KCmFontInst.cpp:992
+#: kcmfontinst/KCmFontInst.cpp:991
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "ಕಡತಗಳನ್ನು ಶೋಧಿಸಲಾಗುತ್ತಿದೆ..."
 
-#: kcmfontinst/KCmFontInst.cpp:993
+#: kcmfontinst/KCmFontInst.cpp:992
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "ಅನುಸ್ಥಾಪಿಸಲು ಕಡತಗಳಿಗಾಗಿ ಹುಡುಕಲಾಗುತ್ತಿದೆ..."
 
-#: kcmfontinst/KCmFontInst.cpp:1008
+#: kcmfontinst/KCmFontInst.cpp:1007
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1 ಕ್ಕೆ ಸಂಬಂಧಿಸಿದ ಕಡತಗಳನ್ನು ನೋಡಲಾಗುತ್ತಿದೆ"
 
-#: kcmfontinst/KCmFontInst.cpp:1036
+#: kcmfontinst/KCmFontInst.cpp:1035
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು(ಗಳನ್ನು) ಅನುಸ್ಥಾಪಿಸಲಾಗುತ್ತಿದೆ..."
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "ಶಕ್ತಗೊಳಿಸಲು ನೀವು ಏನನ್ನೂ ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ."
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "ಅಶಕ್ತಗೊಳಿಸಲು ನೀವು ಏನನ್ನೂ ಆಯ್ಕೆ ಮಾಡಿಲ್ಲ."
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1101
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "ಶಕ್ತಗೊಳಿಸಲು ಏನೂ ಇಲ್ಲ"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1101
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "ಅಶಕ್ತಗೊಳಿಸಲು ಏನೂ ಇಲ್ಲ"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: kcmfontinst/KCmFontInst.cpp:1118
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>ನೀವು ನಿಜವಾಗಲೂ </p><p>'<b>%1</b>' ಅನ್ನು ಶಕ್ತಗೊಳಿಸಲು ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>ನೀವು ನಿಜವಾಗಲೂ </p><p>'<b>%1</b>' ಅನ್ನು ಅಶಕ್ತಗೊಳಿಸಲು ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1122
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1002,7 +1002,7 @@ msgstr ""
 "<p>ನೀವು '<b>%2</b>' ಗುಂಪಿನಲ್ಲಿರುವ </p><p>'<b>%1</b>' ಅನ್ನು ನಿಜವಾಗಲೂ ಶಕ್ತಗೊಳಿಸಲು "
 "ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1126
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1011,31 +1011,31 @@ msgstr ""
 "<p>ನೀವು '<b>%2</b>' ಗುಂಪಿನಲ್ಲಿರುವ </p><p>'<b>%1</b>' ಅನ್ನು ನಿಜವಾಗಲೂ "
 "ಅಶಕ್ತಗೊಳಿಸಲು ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable Font"
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು ಶಕ್ತಗೊಳಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable Font"
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:1138
+#: kcmfontinst/KCmFontInst.cpp:1137
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "ನೀವು ನಿಜವಾಗಲೂ ಈ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಶಕ್ತಗೊಳಿಸಲು ಬಯಸುತ್ತೀರೆ?"
 msgstr[1] "ನೀವು ನಿಜವಾಗಲೂ ಈ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಶಕ್ತಗೊಳಿಸಲು ಬಯಸುತ್ತೀರೆ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1141
+#: kcmfontinst/KCmFontInst.cpp:1140
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "ನೀವು ನಿಜವಾಗಲೂ ಈ ಅಕ್ಷರಶೈಲಿಯನ್ನು ಅಶಕ್ತಗೊಳಿಸಲು ಬಯಸುತ್ತೀರೆ?"
 msgstr[1] "ನೀವು ನಿಜವಾಗಲೂ ಈ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸಲು ಬಯಸುತ್ತೀರೆ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1144
+#: kcmfontinst/KCmFontInst.cpp:1143
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1050,7 +1050,7 @@ msgstr[1] ""
 "<p>ನೀವು '<b>%2</b>' ಗುಂಪಿನಲ್ಲಿರುವ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ನಿಜವಾಗಲೂ ಶಕ್ತಗೊಳಿಸಲು "
 "ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1149
+#: kcmfontinst/KCmFontInst.cpp:1148
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1065,23 +1065,23 @@ msgstr[1] ""
 "<p>ನೀವು '<b>%2</b>' ಗುಂಪಿನಲ್ಲಿರುವ %1 ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ನಿಜವಾಗಲೂ ಅಶಕ್ತಗೊಳಿಸಲು "
 "ಬಯಸುತ್ತೀರೆ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1155 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Enable Fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಶಕ್ತಗೊಳಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:1155 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1156
 #, kde-format
 msgid "Disable Fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸು"
 
-#: kcmfontinst/KCmFontInst.cpp:1163
+#: kcmfontinst/KCmFontInst.cpp:1162
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "ಅಕ್ಷರಶೈಲಿಯನ್ನು(ಗಳನ್ನು) ಶಕ್ತಗೊಳಿಸಲಾಗುತ್ತಿದೆ..."
 
-#: kcmfontinst/KCmFontInst.cpp:1165
+#: kcmfontinst/KCmFontInst.cpp:1164
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"
@@ -1127,12 +1127,12 @@ msgstr "36pt"
 msgid "48pt"
 msgstr "48pt"
 
-#: kio/KioFonts.cpp:207
+#: kio/KioFonts.cpp:209
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು \"%1\" ಅಥವಾ \"%2\" ಗೆ ಮಾತ್ರ ಅನುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯ."
 
-#: kio/KioFonts.cpp:210
+#: kio/KioFonts.cpp:212
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1141,70 +1141,70 @@ msgstr ""
 "ನೀವು ಅಕ್ಷರಶೈಲಿಯ ಪ್ಯಾಕೇಜನ್ನು ನೇರವಾಗಿ ಅನುಸ್ಥಾಪಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ.\n"
 "ದಯವಿಟ್ಟು %1 ಅನ್ನು ಹೊರತೆಗೆಯಿರಿ, ನಂತರ ಅದರ ಅಂಗಗಳನ್ನು ಪ್ರತ್ಯೇಕವಾಗಿ ಅನುಸ್ಥಾಪಿಸಿ."
 
-#: kio/KioFonts.cpp:432
+#: kio/KioFonts.cpp:434
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ನಕಲಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
 
-#: kio/KioFonts.cpp:437
+#: kio/KioFonts.cpp:439
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ವರ್ಗಾಯಿಸಲು ಸಾಧ್ಯವಿಲ್ಲ"
 
-#: kio/KioFonts.cpp:448
+#: kio/KioFonts.cpp:450
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ಮಾತ್ರ ಅಳಿಸಬಹುದು."
 
-#: kio/KioFonts.cpp:453
+#: kio/KioFonts.cpp:455
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "\"%1\" ಅಥವಾ \"%2\" ಇಂದ ಮಾತ್ರ ಅಕ್ಷರಶೈಲಿಗಳನ್ನು ತೆಗೆದು ಹಾಕಲು ಸಾಧ್ಯ."
 
-#: kio/KioFonts.cpp:482
+#: kio/KioFonts.cpp:484
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "\"%1\" ಹಾಗು \"%2\" ರಲ್ಲಿ ಯಾವುದೆಂದು ಸೂಚಿಸಿ."
 
-#: kio/KioFonts.cpp:500
+#: kio/KioFonts.cpp:502
 #, kde-format
 msgid "No special methods supported."
 msgstr "ವಿಶೇಷ ವಿಧಾನಗಳನ್ನು ಬೆಂಬಲಿತವಾಗಿಲ್ಲ."
 
-#: kio/KioFonts.cpp:574
+#: kio/KioFonts.cpp:576
 #, kde-format
 msgid "Fonts"
 msgstr "ಅಕ್ಷರಶೈಲಿಗಳು"
 
-#: kio/KioFonts.cpp:703
+#: kio/KioFonts.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "ವ್ಯವಸ್ಥೆಯ ಡೀಮನ್ ಅನ್ನು ಪ್ರಾರಂಭಿಸಲು ವಿಫಲಗೊಂಡಿದೆ"
 
-#: kio/KioFonts.cpp:705
+#: kio/KioFonts.cpp:707
 #, kde-format
 msgid "Backend died"
 msgstr "ಬ್ಯಾಕೆಂಡ್ ಕೊನೆಗೊಂಡಿದೆ"
 
-#: kio/KioFonts.cpp:707
+#: kio/KioFonts.cpp:709
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
 "%1 ಒಂದು ಬಿಟ್ ಮ್ಯಾಪ್ ಅಕ್ಷರಶೈಲಿಯಾಗಿದೆ, ಹಾಗು ನಿಮ್ಮ ಗಣಕದಲ್ಲಿ ಇವುಗಳನ್ನು ಅಶಕ್ತಗೊಳಿಸಲಾಗಿದೆ."
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr ""
 "%1 ರಲ್ಲಿ <b>%2</b> ಅಕ್ಷರಶೈಲಿಯಿದೆ, ಇದನ್ನು ಈಗಾಗಲೆ ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯಲ್ಲಿ ಅನುಸ್ಥಾಪಿಸಲಾಗಿದೆ."
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 ಅಕ್ಷರಶೈಲಿಯಲ್ಲ."
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:716
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "%1ಗೆ ಸಂಬಂಧಿಸಿದ ಎಲ್ಲಾ ಕಡತಗಳನ್ನು ತೆಗೆದು ಹಾಕಲು ಸಾಧ್ಯವಿಲ್ಲ"
@@ -1609,27 +1609,27 @@ msgstr "ದಯವಿಟ್ಟು ಹೊಸ ವಾಕ್ಯವನ್ನು ನಮ
 msgid "&Main Toolbar"
 msgstr "ಮುಖ್ಯ ಉಪಕರಣಪಟ್ಟಿ(&M)"
 
-#: viewpart/PreviewSelectAction.cpp:13
+#: viewpart/PreviewSelectAction.cpp:15
 #, kde-format
 msgid "Preview Type"
 msgstr "ಮುನ್ನೋಟದ ಬಗೆ"
 
-#: viewpart/PreviewSelectAction.cpp:31
+#: viewpart/PreviewSelectAction.cpp:33
 #, kde-format
 msgid "Standard Preview"
 msgstr "ಮಾನಕ ಮುನ್ನೋಟ"
 
-#: viewpart/PreviewSelectAction.cpp:32
+#: viewpart/PreviewSelectAction.cpp:34
 #, kde-format
 msgid "All Characters"
 msgstr "ಎಲ್ಲಾ ಅಕ್ಷರಗಳು"
 
-#: viewpart/PreviewSelectAction.cpp:40
+#: viewpart/PreviewSelectAction.cpp:42
 #, kde-format
 msgid "Unicode Block: %1"
 msgstr "ಯೂನಿಕೋಡ್ ಖಂಡ: %1"
 
-#: viewpart/PreviewSelectAction.cpp:44
+#: viewpart/PreviewSelectAction.cpp:46
 #, kde-format
 msgid "Unicode Script: %1"
 msgstr "ಯೂನಿಕೋಡ್ ಸ್ಕ್ರಿಪ್ಟು: %1"

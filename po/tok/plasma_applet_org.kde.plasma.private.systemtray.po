@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2024-01-11 14:47-0500\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -93,94 +93,94 @@ msgstr "pali ala"
 msgid "Always show all entries"
 msgstr "o lukin e ijo ale"
 
-#: package/contents/ui/ConfigGeneral.qml:24
+#: package/contents/ui/ConfigGeneral.qml:23
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "suli sitelen:"
 
-#: package/contents/ui/ConfigGeneral.qml:26
+#: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
 msgid "Small"
 msgstr "lili"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:32
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "suli pi sinpin palisa"
 
-#: package/contents/ui/ConfigGeneral.qml:34
+#: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "suli pi supa palisa"
 
-#: package/contents/ui/ConfigGeneral.qml:40
+#: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "pali lon nasin luka"
 
-#: package/contents/ui/ConfigGeneral.qml:50
+#: package/contents/ui/ConfigGeneral.qml:49
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "suli kon lon poka sitelen:"
 
-#: package/contents/ui/ConfigGeneral.qml:53
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "lili"
 
-#: package/contents/ui/ConfigGeneral.qml:57
+#: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "meso"
 
-#: package/contents/ui/ConfigGeneral.qml:61
+#: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "suli"
 
-#: package/contents/ui/ConfigGeneral.qml:84
+#: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "o suli e kon lon nasin luka"
 
-#: package/contents/ui/ExpandedRepresentation.qml:60
+#: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "o tawa"
 
-#: package/contents/ui/ExpandedRepresentation.qml:72
+#: package/contents/ui/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "lon en kalama ilo"
 
-#: package/contents/ui/ExpandedRepresentation.qml:141
+#: package/contents/ui/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "pali ante"
 
-#: package/contents/ui/ExpandedRepresentation.qml:241
+#: package/contents/ui/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "o awen"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "o lukin e sitelen lili ale lon lupa"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
 msgstr "o lukin ala e lupa"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format
 msgid "Show hidden icons"
 msgstr "o lukin e sitelen lili len"

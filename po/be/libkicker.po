@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-30 00:40+0000\n"
-"PO-Revision-Date: 2024-05-12 20:05\n"
+"PO-Revision-Date: 2024-06-03 19:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -110,7 +110,7 @@ msgstr "Паказаць KRunner"
 #: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
-msgstr "Пошук, разбор або запуск загадаў"
+msgstr "Пошук, разбор або запуск каманд"
 
 #: plugin/computermodel.cpp:148
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2021-08-19 13:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -95,33 +95,33 @@ msgstr "അപ്രാപ്തമാക്കി"
 msgid "Always show all entries"
 msgstr "എപ്പോഴും എല്ലാ ഇനങ്ങളും കാണിക്കുക"
 
-#: package/contents/ui/ConfigGeneral.qml:24
+#: package/contents/ui/ConfigGeneral.qml:23
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "പാളി ചിഹ്ന വലിപ്പം:"
 
-#: package/contents/ui/ConfigGeneral.qml:26
+#: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
 msgid "Small"
 msgstr "ചെറുത്"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:32
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "പാളിയുടെ ഉയരത്തിനനുസരിച്ച് ഉയരം ക്രമീകരിക്കുക"
 
-#: package/contents/ui/ConfigGeneral.qml:34
+#: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "പാളിയുടെ വീതിക്കനുസരിച്ച് വീതി ക്രമീകരിക്കുക"
 
-#: package/contents/ui/ConfigGeneral.qml:40
+#: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:50
+#: package/contents/ui/ConfigGeneral.qml:49
 #, fuzzy, kde-format
 #| msgctxt "The arrangement of system tray icons in the Panel"
 #| msgid "Panel icon size:"
@@ -129,63 +129,63 @@ msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "പാളി ചിഹ്ന വലിപ്പം:"
 
-#: package/contents/ui/ConfigGeneral.qml:53
+#: package/contents/ui/ConfigGeneral.qml:52
 #, fuzzy, kde-format
 #| msgid "Small"
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "ചെറുത്"
 
-#: package/contents/ui/ConfigGeneral.qml:57
+#: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:61
+#: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr ""
 
-#: package/contents/ui/ConfigGeneral.qml:84
+#: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:60
+#: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:72
+#: package/contents/ui/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "അവസ്ഥയും അറിയിപ്പുകളും"
 
-#: package/contents/ui/ExpandedRepresentation.qml:141
+#: package/contents/ui/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "കൂടുതൽ നടപടികൾ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:241
+#: package/contents/ui/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "തുറന്ന് വെക്കുക"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
 msgstr "പോപ്-അപ് അടയ്ക്കുക"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format
 msgid "Show hidden icons"
 msgstr "മറച്ചിരിക്കുന്ന ചിഹ്നങ്ങൾ കാണിക്കുക"

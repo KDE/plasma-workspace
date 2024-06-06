@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2024-03-13 20:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -564,22 +564,22 @@ msgstr ""
 "kullanılabilir.<nl/><nl/>Sisteme parmak izinizle oturum açmak henüz "
 "desteklenmemektedir."
 
-#: src/user.cpp:290
+#: src/user.cpp:292
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "%1 kullanıcısını kaydetme izni alınamadı"
 
-#: src/user.cpp:295
+#: src/user.cpp:297
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Değişiklikler kaydedilirken bir hata oluştu"
 
-#: src/user.cpp:394
+#: src/user.cpp:396
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Görüntü yeniden boyutlandırılamadı: geçici dosya açılamadı"
 
-#: src/user.cpp:402
+#: src/user.cpp:404
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

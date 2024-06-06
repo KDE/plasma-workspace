@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-08 00:48+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2014-04-09 12:15+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: kio_applications.cpp:122
+#: kio_applications.cpp:124
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: kio_applications.cpp:122
+#: kio_applications.cpp:124
 #, kde-format
 msgid "Programs"
 msgstr "Programas"
 
-#: kio_applications.cpp:131
+#: kio_applications.cpp:133
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Carpeta de aplicaciones desconocida"

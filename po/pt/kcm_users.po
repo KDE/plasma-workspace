@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2023-01-11 09:35+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -595,24 +595,24 @@ msgstr ""
 "linha de comandos que as solicitem.<nl/><nl/>A autenticação no sistema com a "
 "sua impressão digital ainda não é suportada."
 
-#: src/user.cpp:290
+#: src/user.cpp:292
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Não foi possível obter permissões para gravar o utilizador %1"
 
-#: src/user.cpp:295
+#: src/user.cpp:297
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Ocorreu um erro ao gravar as alterações"
 
-#: src/user.cpp:394
+#: src/user.cpp:396
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Não foi possível dimensionar a imagem: a abertura do ficheiro temporário "
 "falhou"
 
-#: src/user.cpp:402
+#: src/user.cpp:404
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

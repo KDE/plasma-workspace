@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-27 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2010-10-25 17:15+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "drrider@gmail.com, donga.nb@gmail.com"
 
-#: apps/Installer.cpp:34 kcmfontinst/KCmFontInst.cpp:955
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:954
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -39,69 +39,69 @@ msgstr ""
 "คุณต้องการที่จะติดตั้งแบบอักษรสำหรับใช้ส่วนตัว (คุณเท่านั้นที่ใช้ได้) หรือจะติดตั้งสำหรับใช้ทั้งระบบ "
 "(ผู้ใช้ทุกคนสามารถใช้ได้) ?"
 
-#: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:958
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:957
 #, kde-format
 msgid "Where to Install"
 msgstr "ที่ที่จะติดตั้งไป"
 
-#: apps/Installer.cpp:111
+#: apps/Installer.cpp:113
 #, kde-format
 msgid "Font Installer"
 msgstr "ติดตั้งแบบอักษร"
 
-#: apps/Installer.cpp:113
+#: apps/Installer.cpp:115
 #, kde-format
 msgid "Simple font installer"
 msgstr "ตัวติดตั้งแบบอักษรอย่างง่าย ๆ"
 
-#: apps/Installer.cpp:115 apps/Printer.cpp:331
+#: apps/Installer.cpp:117 apps/Printer.cpp:332
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
-#: apps/Installer.cpp:122
+#: apps/Installer.cpp:124
 #, fuzzy, kde-format
 #| msgid "Makes the dialog transient for an X app specified by winid"
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr "ทำให้กล่องโต้ตอบเป็นของโปรแกรม X ชั่วคราว ซึ่งจะระบุโดยหมายเลขหน้าต่าง"
 
-#: apps/Installer.cpp:125
+#: apps/Installer.cpp:127
 #, kde-format
 msgid "URL to install"
 msgstr "ที่อยู่ URL ที่จะใช้ติดตั้ง"
 
-#: apps/Printer.cpp:240
+#: apps/Printer.cpp:241
 #, kde-format
 msgid "Print"
 msgstr "พิมพ์"
 
-#: apps/Printer.cpp:310 kcmfontinst/DuplicatesDialog.cpp:224
+#: apps/Printer.cpp:311 kcmfontinst/DuplicatesDialog.cpp:224
 #, fuzzy, kde-format
 #| msgid "Canceling..."
 msgid "Canceling…"
 msgstr "กำลังยกเลิก..."
 
-#: apps/Printer.cpp:327
+#: apps/Printer.cpp:328
 #, kde-format
 msgid "Font Printer"
 msgstr "โปรแกรมพิมพ์แบบอักษร"
 
-#: apps/Printer.cpp:329
+#: apps/Printer.cpp:330
 #, kde-format
 msgid "Simple font printer"
 msgstr "โปรแกรมพิมพ์แบบอักษรอย่างง่าย ๆ"
 
-#: apps/Printer.cpp:337
+#: apps/Printer.cpp:338
 #, kde-format
 msgid "Makes the dialog transient for an X app specified by winid"
 msgstr "ทำให้กล่องโต้ตอบเป็นของโปรแกรม X ชั่วคราว ซึ่งจะระบุโดยหมายเลขหน้าต่าง"
 
-#: apps/Printer.cpp:339
+#: apps/Printer.cpp:340
 #, kde-format
 msgid "Size index to print fonts"
 msgstr "ดัชนีขนาดที่จะพิมพ์แบบอักษร"
 
-#: apps/Printer.cpp:343
+#: apps/Printer.cpp:344
 #, kde-format
 msgid ""
 "Font to print, specified as \"Family,Style\" where Style is a 24-bit decimal "
@@ -110,49 +110,49 @@ msgstr ""
 "แบบอักษรที่จะพิมพ์, ระบุเป็น \"ตระกูล,แบบ\" ซึ่งแบบคือเลขฐานสิบแบบ 24 บิต ประกอบด้วย: "
 "<weight><width><slant>"
 
-#: apps/Printer.cpp:346
+#: apps/Printer.cpp:347
 #, kde-format
 msgid "File containing list of fonts to print"
 msgstr "แฟ้มที่บรรจุรายชื่อของแบบอักษรที่จะพิมพ์"
 
-#: apps/Printer.cpp:348
+#: apps/Printer.cpp:349
 #, kde-format
 msgid "Remove file containing list of fonts to print"
 msgstr "ลบแฟ้มที่มีรายการแบบอักษรที่จะพิมพ์"
 
-#: apps/Viewer.cpp:46
+#: apps/Viewer.cpp:48
 #, fuzzy, kde-format
 #| msgid "Open all %1 fonts in font viewer?"
 msgid "Open an existing font file"
 msgstr "เปิดแบบอักษร %1 ทั้งหมดในตัวแสดงแบบอักษรหรือไม่ ?"
 
-#: apps/Viewer.cpp:47
+#: apps/Viewer.cpp:49
 #, fuzzy, kde-format
 #| msgid "Print Font Samples"
 msgid "Print font preview"
 msgstr "พิมพ์ตัวอย่างแบบอักษร"
 
-#: apps/Viewer.cpp:64
+#: apps/Viewer.cpp:66
 #, kde-format
 msgid "Select Font to View"
 msgstr "เลือกแบบอักษรที่จะแสดง"
 
-#: apps/Viewer.cpp:107
+#: apps/Viewer.cpp:106
 #, kde-format
 msgid "URL to open"
 msgstr "ที่อยู่ URL ที่จะเปิด"
 
-#: apps/Viewer.cpp:149
+#: apps/Viewer.cpp:148
 #, kde-format
 msgid "Font Viewer"
 msgstr "โปรแกรมแสดงแบบอักษร"
 
-#: apps/Viewer.cpp:151
+#: apps/Viewer.cpp:150
 #, kde-format
 msgid "Simple font viewer"
 msgstr "ตัวแสดงแบบอักษรอย่างง่าย"
 
-#: apps/Viewer.cpp:153
+#: apps/Viewer.cpp:152
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "สงวนลิขสิทธิ์ (C) Craig Drummond, 2004-2007"
@@ -223,7 +223,7 @@ msgstr "วันที่"
 msgid "Links To"
 msgstr "เชื่อมโยงไปที่"
 
-#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1316
+#: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
 #, kde-format
 msgid "Open in Font Viewer"
 msgstr "เปิดในเครื่องมือแสดงแบบอักษร"
@@ -250,81 +250,81 @@ msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
 msgstr[0] "เปิดแบบอักษร %1 ทั้งหมดในตัวแสดงแบบอักษรหรือไม่ ?"
 
-#: kcmfontinst/FontFilter.cpp:103
+#: kcmfontinst/FontFilter.cpp:105
 #, kde-format
 msgid "Family"
 msgstr "ตระกูล"
 
-#: kcmfontinst/FontFilter.cpp:105
+#: kcmfontinst/FontFilter.cpp:107
 #, kde-format
 msgid "Style"
 msgstr "แบบ"
 
-#: kcmfontinst/FontFilter.cpp:107
+#: kcmfontinst/FontFilter.cpp:109
 #, kde-format
 msgid "Foundry"
 msgstr "ผู้ทำ"
 
-#: kcmfontinst/FontFilter.cpp:109
+#: kcmfontinst/FontFilter.cpp:111
 #, kde-format
 msgid "FontConfig Match"
 msgstr "คู่ของ FontConfig"
 
-#: kcmfontinst/FontFilter.cpp:111
+#: kcmfontinst/FontFilter.cpp:113
 #, fuzzy, kde-format
 #| msgid "Preview Type"
 msgid "File Type"
 msgstr "ประเภทของการแสดงตัวอย่าง"
 
-#: kcmfontinst/FontFilter.cpp:113
+#: kcmfontinst/FontFilter.cpp:115
 #, fuzzy, kde-format
 #| msgid "File"
 msgid "File Name"
 msgstr "แฟ้ม"
 
-#: kcmfontinst/FontFilter.cpp:115
+#: kcmfontinst/FontFilter.cpp:117
 #, kde-format
 msgid "File Location"
 msgstr "ที่อยู่แฟ้ม"
 
-#: kcmfontinst/FontFilter.cpp:117
+#: kcmfontinst/FontFilter.cpp:119
 #, kde-format
 msgid "Writing System"
 msgstr "ระบบการเขียน"
 
-#: kcmfontinst/FontFilter.cpp:128
+#: kcmfontinst/FontFilter.cpp:130
 #, kde-format
 msgid "Set Criteria"
 msgstr "ตั้งข้อกำหนด"
 
-#: kcmfontinst/FontFilter.cpp:187
+#: kcmfontinst/FontFilter.cpp:189
 #, kde-format
 msgid "Symbol/Other"
 msgstr "สัญลักษณ์/อื่น ๆ"
 
-#: kcmfontinst/FontFilter.cpp:265 kcmfontinst/FontFilter.cpp:333
+#: kcmfontinst/FontFilter.cpp:267 kcmfontinst/FontFilter.cpp:335
 #, kde-format
 msgid "Filter by %1…"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:554
+#: kcmfontinst/FontList.cpp:548
 #, kde-format
 msgid "Font"
 msgstr "แบบอักษร"
 
-#: kcmfontinst/FontList.cpp:556
+#: kcmfontinst/FontList.cpp:550
 #, kde-format
 msgid "Status"
 msgstr ""
 
-#: kcmfontinst/FontList.cpp:570
+#: kcmfontinst/FontList.cpp:564
 #, kde-format
 msgid ""
 "This column shows the status of the font family, and of the individual font "
 "styles."
 msgstr "คอลัมน์นี้แสดงสถานะของตระกูลแบบอักษร, และแบบของแต่ละแบบอักษร"
 
-#: kcmfontinst/FontList.cpp:677
+#: kcmfontinst/FontList.cpp:671
 #, kde-format
 msgid ""
 "<p>This list shows your installed fonts. The fonts are grouped by family, "
@@ -337,76 +337,76 @@ msgstr ""
 "[4]<ul><li>ตัวปกติ</li><li>ตัวหนา</li> <li>ตัวหนาเอียง</li><li>ตัวเอียง</li></ul></"
 "li></ul>"
 
-#: kcmfontinst/FontList.cpp:956 kcmfontinst/FontList.cpp:980
+#: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
 #, fuzzy, kde-format
 #| msgid "...plus %1 more"
 msgid "…plus %1 more"
 msgstr "...ร่วมกับอีก %1 "
 
-#: kcmfontinst/FontList.cpp:1007
+#: kcmfontinst/FontList.cpp:1001
 #, kde-format
 msgid "%1 [%2]"
 msgstr "%1 [%2]"
 
-#: kcmfontinst/FontList.cpp:1306
+#: kcmfontinst/FontList.cpp:1300
 #, kde-format
 msgid "Delete"
 msgstr "ลบ"
 
-#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:789
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
+#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Enable"
 msgstr "เปิดใช้งาน"
 
-#: kcmfontinst/FontList.cpp:1309 kcmfontinst/GroupList.cpp:790
-#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
+#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
 #, kde-format
 msgid "Disable"
 msgstr "ปิดการใช้งาน"
 
-#: kcmfontinst/FontList.cpp:1314 kcmfontinst/GroupList.cpp:796
+#: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:798
 #, fuzzy, kde-format
 #| msgid "Print"
 msgid "Print…"
 msgstr "พิมพ์"
 
-#: kcmfontinst/FontList.cpp:1318
+#: kcmfontinst/FontList.cpp:1312
 #, kde-format
 msgid "Reload"
 msgstr "โหลดใหม่"
 
-#: kcmfontinst/FontList.cpp:1696
+#: kcmfontinst/FontList.cpp:1690
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
 msgstr "เปิดแบบอักษร %1 ทั้งหมดในตัวแสดงแบบอักษรหรือไม่ ?"
 
-#: kcmfontinst/GroupList.cpp:59
+#: kcmfontinst/GroupList.cpp:61
 #, kde-format
 msgid "All Fonts"
 msgstr "แบบอักษรทั้งหมด"
 
-#: kcmfontinst/GroupList.cpp:62
+#: kcmfontinst/GroupList.cpp:64
 #, kde-format
 msgid "Personal Fonts"
 msgstr "แบบอักษรส่วนตัว"
 
-#: kcmfontinst/GroupList.cpp:65
+#: kcmfontinst/GroupList.cpp:67
 #, kde-format
 msgid "System Fonts"
 msgstr "แบบอักษรระบบ"
 
-#: kcmfontinst/GroupList.cpp:68
+#: kcmfontinst/GroupList.cpp:70
 #, kde-format
 msgid "Unclassified"
 msgstr "ไม่มีประเภท"
 
-#: kcmfontinst/GroupList.cpp:350
+#: kcmfontinst/GroupList.cpp:352
 #, kde-format
 msgid "Group"
 msgstr "กลุ่ม"
 
-#: kcmfontinst/GroupList.cpp:535
+#: kcmfontinst/GroupList.cpp:537
 #, kde-format
 msgid ""
 "<p>Do you really want to remove '<b>%1</b>'?</p><p><i>This will only remove "
@@ -415,22 +415,22 @@ msgstr ""
 "<p>คุณต้องการที่จะลบ '<b>%1</b>' จริงหรือไม่ ?</p><p><i>นี่จะเป็นการลบกลุ่มเท่านั้น "
 "ไม่ใช่การลบแบบอักษรจริง ๆ </i></p>"
 
-#: kcmfontinst/GroupList.cpp:539
+#: kcmfontinst/GroupList.cpp:541
 #, kde-format
 msgid "Remove Group"
 msgstr "ลบกลุ่ม"
 
-#: kcmfontinst/GroupList.cpp:540 kcmfontinst/GroupList.cpp:787
+#: kcmfontinst/GroupList.cpp:542 kcmfontinst/GroupList.cpp:789
 #, kde-format
 msgid "Remove"
 msgstr "ลบ"
 
-#: kcmfontinst/GroupList.cpp:540
+#: kcmfontinst/GroupList.cpp:542
 #, kde-format
 msgid "Remove group"
 msgstr "ลบกลุ่ม"
 
-#: kcmfontinst/GroupList.cpp:586
+#: kcmfontinst/GroupList.cpp:588
 #, kde-format
 msgid ""
 "<h3>Font Groups</h3><p>This list displays the font groups available on your "
@@ -442,7 +442,7 @@ msgid ""
 "li></ul></p>"
 msgstr ""
 
-#: kcmfontinst/GroupList.cpp:594
+#: kcmfontinst/GroupList.cpp:596
 #, kde-format
 msgid ""
 "<li><i>All Fonts</i> contains all the fonts installed on your system.</"
@@ -452,7 +452,7 @@ msgstr ""
 "<li><i>แบบอักษรทั้งหมด</i> จะมีแบบอักษรทั้งหมดที่ติดตั้งอยู่บนระบบของคุณ</li> "
 "<li><i>ไม่มีประเภท</i> จะมีแบบอักษรทั้งหมดที่ยังไม่ได้เอาเข้าไปไว้ในกลุ่ม \"ตั้งเอง\"</li>"
 
-#: kcmfontinst/GroupList.cpp:597
+#: kcmfontinst/GroupList.cpp:599
 #, kde-format
 msgid ""
 "<li><i>All Fonts</i> contains all the fonts installed on your system - both  "
@@ -467,39 +467,39 @@ msgstr ""
 "ให้ผู้ใช้อื่นสามารถใช้ได้ด้วย) </li><li><i>ส่วนบุคคล</i> บรรจุแบบอักษรที่คุณใช้ส่วนบุคคล</"
 "li><li><i>ยังไม่ถูกจำแนก</i> บรรจุแบบอักษรทุกตัวที่ยังไม่ถูกจัดในกลุ่มใดกลุ่มหนึ่ง</li>"
 
-#: kcmfontinst/GroupList.cpp:699
+#: kcmfontinst/GroupList.cpp:701
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgstr "<qt>มีกลุ่มที่ชื่อ <b>'%1'</b> อยู่แล้ว</qt>"
 
-#: kcmfontinst/GroupList.cpp:792
+#: kcmfontinst/GroupList.cpp:794
 #, fuzzy, kde-format
 #| msgid "Rename..."
 msgid "Rename…"
 msgstr "เปลี่ยนชื่อ..."
 
-#: kcmfontinst/GroupList.cpp:801
+#: kcmfontinst/GroupList.cpp:803
 #, fuzzy, kde-format
 #| msgid "Export..."
 msgid "Export…"
 msgstr "ส่งออก..."
 
-#: kcmfontinst/GroupList.cpp:895
+#: kcmfontinst/GroupList.cpp:897
 #, kde-format
 msgid "Add to \"%1\"."
 msgstr "เพิ่มไปยัง \"%1\""
 
-#: kcmfontinst/GroupList.cpp:897
+#: kcmfontinst/GroupList.cpp:899
 #, kde-format
 msgid "Remove from current group."
 msgstr "เอาออกจากกลุ่มปัจจุบัน"
 
-#: kcmfontinst/GroupList.cpp:899
+#: kcmfontinst/GroupList.cpp:901
 #, kde-format
 msgid "Move to personal folder."
 msgstr "ย้ายไปยังโฟลเดอร์ส่วนตัว"
 
-#: kcmfontinst/GroupList.cpp:901
+#: kcmfontinst/GroupList.cpp:903
 #, kde-format
 msgid "Move to system folder."
 msgstr "ย้ายไปยังโฟลเดอร์ของระบบ"
@@ -627,7 +627,7 @@ msgstr "ไม่สามารถลบแฟ้มทั้งหมดที
 msgid "Failed to start the system daemon.<br><i>%1</i>"
 msgstr "ล้มเหลวในการเริ่มการทำงานดีมอนของระบบ<br><i>%1</i>"
 
-#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:717
+#: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
 #, kde-format
 msgid "<i>%1</i> already exists."
 msgstr "มี <i>%1</i> อยู่แล้ว"
@@ -686,53 +686,53 @@ msgstr "ปิดการใช้งานแบบอักษร"
 msgid "This displays a preview of the selected font."
 msgstr "ที่ตรงนี้ใช้แสดงตัวอย่างของแบบอักษรที่เลือกไว้"
 
-#: kcmfontinst/KCmFontInst.cpp:259
+#: kcmfontinst/KCmFontInst.cpp:260
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Find Duplicates…"
 msgstr "ตรวจค้นหาแบบอักษรที่ซ้ำกัน..."
 
-#: kcmfontinst/KCmFontInst.cpp:259
+#: kcmfontinst/KCmFontInst.cpp:260
 #, fuzzy, kde-format
 #| msgid "Scan for Duplicate Fonts..."
 msgid "Scan for Duplicate Fonts…"
 msgstr "ตรวจค้นหาแบบอักษรที่ซ้ำกัน..."
 
-#: kcmfontinst/KCmFontInst.cpp:261
+#: kcmfontinst/KCmFontInst.cpp:262
 #, fuzzy, kde-format
 #| msgid "Install..."
 msgid "Install from File…"
 msgstr "ติดตั้ง..."
 
-#: kcmfontinst/KCmFontInst.cpp:261
+#: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Install fonts from a local file"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:262
+#: kcmfontinst/KCmFontInst.cpp:263
 #, fuzzy, kde-format
 #| msgid "Delete Fonts"
 msgid "Get New Fonts…"
 msgstr "ลบแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:263
+#: kcmfontinst/KCmFontInst.cpp:264
 #, kde-format
 msgid "Download new fonts"
 msgstr ""
 
-#: kcmfontinst/KCmFontInst.cpp:265
+#: kcmfontinst/KCmFontInst.cpp:266
 #, fuzzy, kde-format
 #| msgid "Delete all selected fonts"
 msgid "Delete Selected Fonts…"
 msgstr "ลบแบบอักษรที่เลือกไว้ทั้งหมด"
 
-#: kcmfontinst/KCmFontInst.cpp:335
+#: kcmfontinst/KCmFontInst.cpp:336
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "เปลี่ยนข้อความตัวอย่าง..."
 
-#: kcmfontinst/KCmFontInst.cpp:434
+#: kcmfontinst/KCmFontInst.cpp:435
 #, kde-format
 msgid "Add Fonts"
 msgstr "เพิ่มแบบอักษร"
@@ -742,12 +742,12 @@ msgstr "เพิ่มแบบอักษร"
 msgid "Failed to save list of fonts to print."
 msgstr "ล้มเหลวในการจัดเก็บรายการแบบอักษรเพื่อพิมพ์"
 
-#: kcmfontinst/KCmFontInst.cpp:582
+#: kcmfontinst/KCmFontInst.cpp:581
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "ล้มเหลวในการเริ่มเครื่องพิมพ์แบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:589
+#: kcmfontinst/KCmFontInst.cpp:588
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -756,59 +756,59 @@ msgstr ""
 "ไม่มีแบบอักษรที่สามารถพิมพ์ได้อยู่\n"
 "คุณสามารถพิมพ์ได้เพียงแบบอักษรที่ไม่ใช่บิตแมพและเปิดใช้อยู่ได้เท่านั้น"
 
-#: kcmfontinst/KCmFontInst.cpp:591
+#: kcmfontinst/KCmFontInst.cpp:590
 #, kde-format
 msgid "Cannot Print"
 msgstr "ไม่สามารถพิมพ์ได้"
 
-#: kcmfontinst/KCmFontInst.cpp:606
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "คุณยังไม่ได้เลือกแบบอักษรเพื่อทำการลบเลย"
 
-#: kcmfontinst/KCmFontInst.cpp:606
+#: kcmfontinst/KCmFontInst.cpp:605
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "ไม่มีแบบอักษรที่จะลบ"
 
-#: kcmfontinst/KCmFontInst.cpp:621
+#: kcmfontinst/KCmFontInst.cpp:620
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>คุณต้องการจะลบ</p><p>'<b>%1</b>' จริงหรือไม่ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:624
+#: kcmfontinst/KCmFontInst.cpp:623
 #, kde-format
 msgid "Delete Font"
 msgstr "ลบแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:631
+#: kcmfontinst/KCmFontInst.cpp:630
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "คุณต้องการที่จะลบแบบอักษร %1 แบบนี้ จริงหรือไม่ ?"
 
-#: kcmfontinst/KCmFontInst.cpp:633
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Delete Fonts"
 msgstr "ลบแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:638
+#: kcmfontinst/KCmFontInst.cpp:637
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "กำลังลบแบบอักษร..."
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "คุณยังไม่ได้เลือกแบบอักษรเพื่อทำการย้ายเลย"
 
-#: kcmfontinst/KCmFontInst.cpp:653
+#: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
 msgid "Nothing to Move"
 msgstr "ไม่มีแบบอักษรที่จะย้าย"
 
-#: kcmfontinst/KCmFontInst.cpp:663
+#: kcmfontinst/KCmFontInst.cpp:662
 #, fuzzy, kde-format
 #| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
 msgid ""
@@ -816,17 +816,17 @@ msgid ""
 "%3</i>?</p>"
 msgstr "<p>คุณต้องการที่จะย้าย</p><p>'<b>%1</b>' จริงหรือไม่ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:668
+#: kcmfontinst/KCmFontInst.cpp:667
 #, kde-format
 msgid "Move Font"
 msgstr "ย้ายแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:669 kcmfontinst/KCmFontInst.cpp:681
+#: kcmfontinst/KCmFontInst.cpp:668 kcmfontinst/KCmFontInst.cpp:680
 #, kde-format
 msgid "Move"
 msgstr "ย้าย"
 
-#: kcmfontinst/KCmFontInst.cpp:674
+#: kcmfontinst/KCmFontInst.cpp:673
 #, fuzzy, kde-format
 #| msgid "<p>Do you really want to move</p><p>'<b>%1</b>'?</p>"
 msgid ""
@@ -835,76 +835,76 @@ msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] "<p>คุณต้องการที่จะย้าย</p><p>'<b>%1</b>' จริงหรือไม่ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:680
+#: kcmfontinst/KCmFontInst.cpp:679
 #, kde-format
 msgid "Move Fonts"
 msgstr "ย้ายแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:685
+#: kcmfontinst/KCmFontInst.cpp:684
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "กำลังย้ายแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:699
+#: kcmfontinst/KCmFontInst.cpp:698
 #, kde-format
 msgid "Export Group"
 msgstr "ส่งออกกลุ่ม"
 
-#: kcmfontinst/KCmFontInst.cpp:725
+#: kcmfontinst/KCmFontInst.cpp:724
 #, kde-format
 msgid "No files?"
 msgstr "ไม่มีแฟ้มใช่หรือไม่ ?"
 
-#: kcmfontinst/KCmFontInst.cpp:728
+#: kcmfontinst/KCmFontInst.cpp:727
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "ล้มเหลวในการเปิดแฟ้ม %1 เพื่อทำการเขียน"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "Create New Group"
 msgstr "สร้างกลุ่มใหม่"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Name of new group:"
 msgstr "สร้างกลุ่มใหม่"
 
-#: kcmfontinst/KCmFontInst.cpp:748
+#: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
 msgid "New Group"
 msgstr "กลุ่มใหม่"
 
-#: kcmfontinst/KCmFontInst.cpp:776
+#: kcmfontinst/KCmFontInst.cpp:775
 #, kde-format
 msgid "Preview Text"
 msgstr "ข้อความตัวอย่าง"
 
-#: kcmfontinst/KCmFontInst.cpp:776
+#: kcmfontinst/KCmFontInst.cpp:775
 #, kde-format
 msgid "Please enter new text:"
 msgstr "โปรดป้อนข้อความตัวอย่างใหม่:"
 
-#: kcmfontinst/KCmFontInst.cpp:828
+#: kcmfontinst/KCmFontInst.cpp:827
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "กำลังตรวจหารายการแบบอักษร..."
 
-#: kcmfontinst/KCmFontInst.cpp:887
+#: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
 msgid "No fonts"
 msgstr "ไม่มีแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:892
+#: kcmfontinst/KCmFontInst.cpp:891
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "แบบอักษร %1 แบบ"
 
-#: kcmfontinst/KCmFontInst.cpp:901
+#: kcmfontinst/KCmFontInst.cpp:900
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
@@ -921,7 +921,7 @@ msgstr ""
 "tr><tr><td>แบบอักษรที่ถูกเปิดใช้งานบางส่วน:</td><td>%3</td></tr><tr><td>Total fonts:"
 "</td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:911
+#: kcmfontinst/KCmFontInst.cpp:910
 #, fuzzy, kde-format
 #| msgid ""
 #| "<table><tr><td>Enabled fonts:</td><td>%1</td></tr><tr><td>Disabled fonts:"
@@ -937,66 +937,66 @@ msgstr ""
 "tr><tr><td>แบบอักษรที่ถูกเปิดใช้งานบางส่วน:</td><td>%3</td></tr><tr><td>Total fonts:"
 "</td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:988
+#: kcmfontinst/KCmFontInst.cpp:987
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "กำลังหาแฟ้มที่เกี่ยวข้อง..."
 
-#: kcmfontinst/KCmFontInst.cpp:992
+#: kcmfontinst/KCmFontInst.cpp:991
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "กำลังตรวจหาแฟ้ม..."
 
-#: kcmfontinst/KCmFontInst.cpp:993
+#: kcmfontinst/KCmFontInst.cpp:992
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "กำลังหาแฟ้มเพิ่มเติมที่จะติดตั้ง..."
 
-#: kcmfontinst/KCmFontInst.cpp:1008
+#: kcmfontinst/KCmFontInst.cpp:1007
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "กำลังหาแฟ้มที่เกี่ยวข้องกับ %1"
 
-#: kcmfontinst/KCmFontInst.cpp:1036
+#: kcmfontinst/KCmFontInst.cpp:1035
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "กำลังติดตั้งแบบอักษร..."
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "คุณยังไม่ได้เลือกแบบอักษรใด ๆ เพื่อเปิดใช้งาน"
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "คุณยังไม่ได้เลือกแบบอักษรใด ๆ เพื่อปิดการใช้งาน"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1101
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "ไม่มีแบบอักษรที่จะเปิดใช้งาน"
 
-#: kcmfontinst/KCmFontInst.cpp:1102
+#: kcmfontinst/KCmFontInst.cpp:1101
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "ไม่มีแบบอักษรที่จะปิดการใช้งาน"
 
-#: kcmfontinst/KCmFontInst.cpp:1119
+#: kcmfontinst/KCmFontInst.cpp:1118
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>คุณต้องการจะเปิดใช้งาน</p><p>'<b>%1</b>' จริงหรือไม่ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1120
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>คุณต้องการจะปิดการใช้งาน</p><p>'<b>%1</b>' จริงหรือไม่ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1123
+#: kcmfontinst/KCmFontInst.cpp:1122
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1004,7 +1004,7 @@ msgid ""
 msgstr ""
 "<p>คุณต้องการจะเปิดใช้งาน</p><p>'<b>%1</b>' ซึ่งอยู่ในกลุ่ม '<b>%2</b>' จริงหรือไม่ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1126
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1013,29 +1013,29 @@ msgstr ""
 "<p>คุณต้องการจะปิดการใช้งาน</p><p>'<b>%1</b>' ซึ่งอยู่ในกลุ่ม '<b>%2</b>' จริงหรือไม่ ?</"
 "p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1131
 #, kde-format
 msgid "Enable Font"
 msgstr "เปิดการใช้งานแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1133
+#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Disable Font"
 msgstr "ปิดการใช้งานแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:1138
+#: kcmfontinst/KCmFontInst.cpp:1137
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "คุณต้องการที่จะเปิดใช้งานแบบอักษร %1 แบบนี้ จริงหรือไม่ ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1141
+#: kcmfontinst/KCmFontInst.cpp:1140
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "คุณต้องการที่จะปิดการใช้งานแบบอักษร %1 แบบนี้ จริงหรือไม่ ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1144
+#: kcmfontinst/KCmFontInst.cpp:1143
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1046,7 +1046,7 @@ msgid_plural ""
 msgstr[0] ""
 "<p>คุณต้องการที่จะเปิดใช้งานแบบอักษร %1 แบบนี้ ซึ่งอยู่ภายในกลุ่ม '<b>%2</b>' จริงหรือไม่ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1149
+#: kcmfontinst/KCmFontInst.cpp:1148
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1058,23 +1058,23 @@ msgstr[0] ""
 "<p>คุณต้องการที่จะปิดการใช้งานแบบอักษร %1 แบบนี้ ซึ่งอยู่ภายในกลุ่ม '<b>%2</b>' จริงหรือไม่ ?</"
 "p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1155 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1155
 #, kde-format
 msgid "Enable Fonts"
 msgstr "เปิดการใช้งานแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:1155 kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1156
 #, kde-format
 msgid "Disable Fonts"
 msgstr "ปิดการใช้งานแบบอักษร"
 
-#: kcmfontinst/KCmFontInst.cpp:1163
+#: kcmfontinst/KCmFontInst.cpp:1162
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "กำลังเปิดการใช้งานแบบอักษร..."
 
-#: kcmfontinst/KCmFontInst.cpp:1165
+#: kcmfontinst/KCmFontInst.cpp:1164
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"
@@ -1120,12 +1120,12 @@ msgstr "36 พ้อยนท์"
 msgid "48pt"
 msgstr "48 พ้อยนท์"
 
-#: kio/KioFonts.cpp:207
+#: kio/KioFonts.cpp:209
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
 msgstr "สามารถติดตั้งแบบอักษรต่าง ๆ ไปยัง \"%1\" หรือ \"%2\" ได้เท่านั้น"
 
-#: kio/KioFonts.cpp:210
+#: kio/KioFonts.cpp:212
 #, kde-format
 msgid ""
 "You cannot install a fonts package directly.\n"
@@ -1134,68 +1134,68 @@ msgstr ""
 "คุณไม่สามารถติดตั้งแพกเกจแบบอักษรได้โดยตรง\n"
 "โปรดแตกขยาย %1 ก่อน แล้วติดตั้งส่วนประกอบทีละตัว"
 
-#: kio/KioFonts.cpp:432
+#: kio/KioFonts.cpp:434
 #, kde-format
 msgid "Cannot copy fonts"
 msgstr "ไม่สามารถคัดลอกแบบอักษรได้"
 
-#: kio/KioFonts.cpp:437
+#: kio/KioFonts.cpp:439
 #, kde-format
 msgid "Cannot move fonts"
 msgstr "ไม่สามารถย้ายแบบอักษร"
 
-#: kio/KioFonts.cpp:448
+#: kio/KioFonts.cpp:450
 #, kde-format
 msgid "Only fonts may be deleted."
 msgstr "เฉพาะแบบอักษรที่จะถูกลบเท่านั้น"
 
-#: kio/KioFonts.cpp:453
+#: kio/KioFonts.cpp:455
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
 msgstr "สามารถเอาแบบอักษรออกจาก \"%1\" หรือ \"%2\" ได้เท่านั้น"
 
-#: kio/KioFonts.cpp:482
+#: kio/KioFonts.cpp:484
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
 msgstr "โปรดระบุ \"%1\" หรือ \"%2\""
 
-#: kio/KioFonts.cpp:500
+#: kio/KioFonts.cpp:502
 #, kde-format
 msgid "No special methods supported."
 msgstr "ยังไม่รองรับวิธีการพิเศษใด ๆ"
 
-#: kio/KioFonts.cpp:574
+#: kio/KioFonts.cpp:576
 #, kde-format
 msgid "Fonts"
 msgstr "แบบอักษร"
 
-#: kio/KioFonts.cpp:703
+#: kio/KioFonts.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon"
 msgstr "ล้มเหลวในการเริ่มการทำงานดีมอนของระบบ"
 
-#: kio/KioFonts.cpp:705
+#: kio/KioFonts.cpp:707
 #, kde-format
 msgid "Backend died"
 msgstr "โปรแกรมเบื้องหลังตาย"
 
-#: kio/KioFonts.cpp:707
+#: kio/KioFonts.cpp:709
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr "%1 เป็นแบบอักษรแบบบิตแมพ และพวกมันจะถูกปิดการใช้งานบนระบบของคุณ"
 
-#: kio/KioFonts.cpp:710
+#: kio/KioFonts.cpp:712
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
 msgstr "%1 มีแบบอักษร <b>%2</b> อยู่ ซึ่งมันได้ถูกติดตั้งไว้ในระบบของคุณอยู่แล้ว"
 
-#: kio/KioFonts.cpp:712
+#: kio/KioFonts.cpp:714
 #, kde-format
 msgid "%1 is not a font."
 msgstr "%1 ไม่ใช่แบบอักษร"
 
-#: kio/KioFonts.cpp:714
+#: kio/KioFonts.cpp:716
 #, kde-format
 msgid "Could not remove all files associated with %1"
 msgstr "ไม่สามารถลบแฟ้มทั้งหมดที่เกี่ยวข้องกับ %1 ออกได้"
@@ -1599,27 +1599,27 @@ msgstr "โปรดป้อนข้อความใหม่:"
 msgid "&Main Toolbar"
 msgstr "&แถบเครื่องมือหลัก"
 
-#: viewpart/PreviewSelectAction.cpp:13
+#: viewpart/PreviewSelectAction.cpp:15
 #, kde-format
 msgid "Preview Type"
 msgstr "ประเภทของการแสดงตัวอย่าง"
 
-#: viewpart/PreviewSelectAction.cpp:31
+#: viewpart/PreviewSelectAction.cpp:33
 #, kde-format
 msgid "Standard Preview"
 msgstr "ตัวอย่างมาตรฐาน"
 
-#: viewpart/PreviewSelectAction.cpp:32
+#: viewpart/PreviewSelectAction.cpp:34
 #, kde-format
 msgid "All Characters"
 msgstr "ตัวอักษรทั้งหมด"
 
-#: viewpart/PreviewSelectAction.cpp:40
+#: viewpart/PreviewSelectAction.cpp:42
 #, kde-format
 msgid "Unicode Block: %1"
 msgstr "บล็อกยูนิโค้ด: %1"
 
-#: viewpart/PreviewSelectAction.cpp:44
+#: viewpart/PreviewSelectAction.cpp:46
 #, kde-format
 msgid "Unicode Script: %1"
 msgstr "สคริปต์ยูนิโค้ด: %1"

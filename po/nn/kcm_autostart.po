@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2024-03-17 10:50+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,22 +20,22 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: autostartmodel.cpp:382
+#: autostartmodel.cpp:383
 #, kde-format
 msgid "\"%1\" is not an absolute url."
 msgstr "«%1» er ikkje ei absoluttadresse."
 
-#: autostartmodel.cpp:385
+#: autostartmodel.cpp:386
 #, kde-format
 msgid "\"%1\" does not exist."
 msgstr "«%1» finst ikkje."
 
-#: autostartmodel.cpp:388
+#: autostartmodel.cpp:389
 #, kde-format
 msgid "\"%1\" is not a file."
 msgstr "«%1» er ikkje ei fil."
 
-#: autostartmodel.cpp:391
+#: autostartmodel.cpp:392
 #, kde-format
 msgid "\"%1\" is not readable."
 msgstr "«%1» er ikkje lesbar."

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-17 21:15\n"
+"PO-Revision-Date: 2024-06-01 17:50\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -53,7 +53,7 @@ msgstr "Інструмент глабальнай тэмы"
 msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
-msgstr "Інструмент загаднага радка для ўжывання пакункаў глабальных тэмаў."
+msgstr "Інструмент каманднага радка для ўжывання пакетаў глабальных тэмаў."
 
 #: lnftool.cpp:37
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "Суправаджальнік"
 #: lnftool.cpp:46
 #, kde-format
 msgid "List available global theme packages"
-msgstr "Спіс даступных пакункаў глабальных тэмаў"
+msgstr "Спіс даступных пакетаў глабальных тэмаў"
 
 #: lnftool.cpp:49
 #, kde-format
@@ -82,9 +82,9 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
-"Ужыць глабальны пакунак тэмы. Гэта можа быць назва пакунка або поўны шлях да "
-"ўсталяванага пакунка. Інструмент пераканаецца, што па шляху знаходзіцца "
-"пакунак глабальнай тэмы, а потым паспрабуе ўжыць яго"
+"Ужыць глабальны пакет тэмы. Гэта можа быць назва пакета або поўны шлях да "
+"ўсталяванага пакета. Інструмент пераканаецца, што па шляху знаходзіцца пакет "
+"глабальнай тэмы, а потым паспрабуе ўжыць яго"
 
 #: lnftool.cpp:51
 #, kde-format
@@ -191,16 +191,14 @@ msgid "Titlebar Buttons layout"
 msgstr "Макет кнопак панэляў загалоўкаў"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Калі ўжыць макет працоўнага стала, то заменіцца бягучая канфігурацыя "
-"працоўных сталоў, панэляў, док-панэляў і віджэтаў"
+"Калі ўжыць макет працоўнага стала, то выдаліцца бягучы набор працоўных "
+"сталоў, панэляў, докаў і віджэтаў. Усё будзе заменена на тое, што вызначана "
+"тэмай."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

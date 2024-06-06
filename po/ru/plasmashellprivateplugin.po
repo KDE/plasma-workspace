@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-02 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2023-12-07 22:28+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -237,127 +237,127 @@ msgstr ""
 "актуальной версии Plasma.Обновите используемую версию Plasma для "
 "использования этого виджета."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "Специальные возможности"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "Запуск приложений"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "Астрономия"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "Дата и время"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "Средства разработки"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "Education"
 msgstr "Образование"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "Погода"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Examples"
 msgstr "Примеры"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "File System"
 msgstr "Файловая система"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "Игры и развлечения"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "Графика"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Language"
 msgstr "Язык"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "Картография"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "Прочее"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "Мультимедиа"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "Интернет-службы"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "Офис"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "System Information"
 msgstr "Сведения о системе"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "Служебные"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "Окна и задачи"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:131
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "Буфер обмена"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:132
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:133
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Задачи"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:148
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:149
 #, kde-format
 msgid "All Widgets"
 msgstr "Все виджеты"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:152
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:153
 #, kde-format
 msgid "Running"
 msgstr "Запущенные"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:158
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:159
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -366,32 +366,32 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Возможно удалить"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:162
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:163
 #, kde-format
 msgid "Categories:"
 msgstr "Категории:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:232
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:233
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Загрузить виджеты Plasma..."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:241
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:242
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Установить виджет из файла..."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:503
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:504
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Выбор файла виджета Plasma"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:517
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:518
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Не удалось установить пакет %1."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:517
+#: shellprivate/widgetexplorer/widgetexplorer.cpp:518
 #, kde-format
 msgid "Installation Failure"
 msgstr "Ошибка установки"

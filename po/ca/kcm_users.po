@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2023-10-05 11:52+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -591,24 +591,24 @@ msgstr ""
 "aplicacions i als programes de la línia d'ordres que el requereixin.<nl/><nl/"
 ">Encara no s'admet l'inici de sessió en el sistema amb l'empremta dactilar."
 
-#: src/user.cpp:290
+#: src/user.cpp:292
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "No s'ha pogut obtenir el permís per a desar l'usuari %1"
 
-#: src/user.cpp:295
+#: src/user.cpp:297
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "S'ha produït un error en desar els canvis"
 
-#: src/user.cpp:394
+#: src/user.cpp:396
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Ha fallat en redimensionar la imatge: ha fallat l'obertura del fitxer "
 "temporal"
 
-#: src/user.cpp:402
+#: src/user.cpp:404
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

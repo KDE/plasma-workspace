@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2024-03-08 03:29+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -542,22 +542,22 @@ msgstr ""
 "解鎖螢幕或提供管理員權限予應用程式時可以使用指紋驗證替代密碼。<nl/><nl/>目前"
 "尚不支援利用指紋登入系統。"
 
-#: src/user.cpp:290
+#: src/user.cpp:292
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "無法取得權限儲存使用者 %1"
 
-#: src/user.cpp:295
+#: src/user.cpp:297
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "儲存變更時出現錯誤"
 
-#: src/user.cpp:394
+#: src/user.cpp:396
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "圖片尺寸調整失敗：無法開啟暫存檔"
 
-#: src/user.cpp:402
+#: src/user.cpp:404
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "圖片尺寸調整失敗：無法寫入至暫存檔"

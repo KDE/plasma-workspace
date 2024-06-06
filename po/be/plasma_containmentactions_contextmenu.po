@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-26 00:39+0000\n"
-"PO-Revision-Date: 2024-02-13 08:38\n"
+"PO-Revision-Date: 2024-05-19 21:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -49,7 +49,7 @@ msgstr "Выйсці…"
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
-msgstr ""
+msgstr "Канфігурацыя дысплэя"
 
 #: menu.cpp:285
 #, kde-format

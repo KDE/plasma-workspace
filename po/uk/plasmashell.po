@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-01 00:40+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2024-05-27 06:34+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -259,7 +259,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Режим швидкодії"
 
-#: panelview.cpp:425
+#: panelview.cpp:426
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -271,13 +271,13 @@ msgstr ""
 "перетягування та зміни розмірів вікон. Вам варто скористатися іншими "
 "варіантами параметрів."
 
-#: panelview.cpp:1086
+#: panelview.cpp:1087
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Приховати налаштування панелі"
 
-#: panelview.cpp:1088
+#: panelview.cpp:1089
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

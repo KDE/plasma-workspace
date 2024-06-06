@@ -1,10 +1,10 @@
 # Zmicier <zmicerturok@gmail.com>, 2022.
 msgid ""
 msgstr ""
-"Project-Id-Version: 86ff119b1606fcaa910d6b44fc14b611\n"
+"Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2023-02-08 13:48\n"
+"PO-Revision-Date: 2024-05-31 17:50\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -15,11 +15,12 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || n%10>=5 && n%10<=9 || n"
 "%100>=11 && n%100<=14 ? 2 : 3);\n"
 "X-Generator: Lokalize 22.08.3\n"
-"X-Crowdin-Project: 86ff119b1606fcaa910d6b44fc14b611\n"
-"X-Crowdin-Project-ID: 127\n"
+"X-Crowdin-Project: fc57ad16a28d02dea100ceb1c60de14e\n"
+"X-Crowdin-Project-ID: 136\n"
 "X-Crowdin-Language: be\n"
-"X-Crowdin-File: /main/be/plasma-workspace/kcm_nightcolor.po\n"
-"X-Crowdin-File-ID: 8788\n"
+"X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
+"kcm_nightlight.po\n"
+"X-Crowdin-File-ID: 17924\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -58,10 +59,9 @@ msgid "Zoom in"
 msgstr "Павялічыць"
 
 #: ui/LocationsFixedView.qml:129
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "Павялічыць"
+msgstr "Паменшыць"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
@@ -101,15 +101,12 @@ msgid "%1K"
 msgstr "%1K"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Day color temperature:"
+#, kde-format
 msgid "Day light temperature:"
-msgstr "Дзённая колеравая тэмпература:"
+msgstr "Дзённая светлавая тэмпература:"
 
 #: ui/main.qml:213 ui/main.qml:277
-#, fuzzy, kde-format
-#| msgctxt "No blue light filter activated"
-#| msgid "Cool (no filter)"
+#, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Халодная (без фільтра)"
@@ -121,10 +118,9 @@ msgid "Warm"
 msgstr "Цёплы"
 
 #: ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Night color temperature:"
+#, kde-format
 msgid "Night light temperature:"
-msgstr "Начная колеравая тэмпература:"
+msgstr "Начная светлавая тэмпература:"
 
 #: ui/main.qml:296
 #, kde-format
@@ -152,16 +148,15 @@ msgid "Custom times"
 msgstr "Адвольны час"
 
 #: ui/main.qml:303
-#, fuzzy, kde-format
-#| msgid "Always on night color"
+#, kde-format
 msgid "Always on night light"
-msgstr "Заўсёды начны колер"
+msgstr "Заўсёды ўключаны начны рэжым"
 
 #: ui/main.qml:320
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr ""
+msgstr "Бягучае месцазнаходжанне:"
 
 #: ui/main.qml:326
 #, kde-format
@@ -182,16 +177,14 @@ msgstr ""
 "link>."
 
 #: ui/main.qml:365
-#, fuzzy, kde-format
-#| msgid "Begin night color at:"
+#, kde-format
 msgid "Begin night light at:"
-msgstr "Час пачатку дзеяння начной тэмпературы:"
+msgstr "Час пачатку дзеяння начнога рэжыму:"
 
 #: ui/main.qml:381
-#, fuzzy, kde-format
-#| msgid "Begin day color at:"
+#, kde-format
 msgid "Begin day light at:"
-msgstr "Час пачатку дзеяння дзённай тэмпературы:"
+msgstr "Час пачатку дзеяння дзённага рэжыму:"
 
 #: ui/main.qml:396
 #, kde-format
@@ -227,21 +220,19 @@ msgstr "Месцазнаходжанне…"
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "гадзіна"
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 minute"
-#| msgid_plural "%1 minutes"
+#, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr "%1 хвіліна"
+msgstr "хвіліна"
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "Фармат уводу: HH:MM"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
 "PO-Revision-Date: 2023-04-10 19:51+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -94,94 +94,94 @@ msgstr "Dezactivat"
 msgid "Always show all entries"
 msgstr "Arată mereu toate înregistrările"
 
-#: package/contents/ui/ConfigGeneral.qml:24
+#: package/contents/ui/ConfigGeneral.qml:23
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
 msgstr "Dimensiune pictograme panou:"
 
-#: package/contents/ui/ConfigGeneral.qml:26
+#: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
 msgid "Small"
 msgstr "Mică"
 
-#: package/contents/ui/ConfigGeneral.qml:33
+#: package/contents/ui/ConfigGeneral.qml:32
 #, kde-format
 msgid "Scale with Panel height"
 msgstr "Scalează cu înălțimea panoului"
 
-#: package/contents/ui/ConfigGeneral.qml:34
+#: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel width"
 msgstr "Scalează cu lățimea panoului"
 
-#: package/contents/ui/ConfigGeneral.qml:40
+#: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
 msgstr "Activată automat în regim tactil"
 
-#: package/contents/ui/ConfigGeneral.qml:50
+#: package/contents/ui/ConfigGeneral.qml:49
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
 msgstr "Spațiere pictograme panou:"
 
-#: package/contents/ui/ConfigGeneral.qml:53
+#: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
 msgstr "Mică"
 
-#: package/contents/ui/ConfigGeneral.qml:57
+#: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
 msgstr "Normală"
 
-#: package/contents/ui/ConfigGeneral.qml:61
+#: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
 msgstr "Mare"
 
-#: package/contents/ui/ConfigGeneral.qml:84
+#: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
 msgstr "Stabilește automat la Mare în regim tactil"
 
-#: package/contents/ui/ExpandedRepresentation.qml:60
+#: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Mergi înapoi"
 
-#: package/contents/ui/ExpandedRepresentation.qml:72
+#: package/contents/ui/ExpandedRepresentation.qml:71
 #, kde-format
 msgid "Status and Notifications"
 msgstr "Stare și notificări"
 
-#: package/contents/ui/ExpandedRepresentation.qml:141
+#: package/contents/ui/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
 msgstr "Acțiuni suplimentare"
 
-#: package/contents/ui/ExpandedRepresentation.qml:241
+#: package/contents/ui/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
 msgstr "Ține deschis"
 
-#: package/contents/ui/ExpanderArrow.qml:25
+#: package/contents/ui/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr "Arată toate elementele tăvii de sistem într-o fereastră plutitoare"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
 msgstr "Închide balonul"
 
-#: package/contents/ui/ExpanderArrow.qml:39
+#: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Arată pictogramele ascunse"

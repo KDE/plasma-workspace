@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2024-05-17 21:15\n"
+"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"PO-Revision-Date: 2024-06-01 17:50\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -26,34 +26,34 @@ msgstr ""
 #, kde-format
 msgctxt "Binary dialect IEC, with sigle in parentheses"
 msgid "International Electrotechnical Commission (IEC)"
-msgstr ""
+msgstr "International Electrotechnical Commission (IEC)"
 
 #: binarydialectmodel.cpp:56
 #, kde-format
 msgctxt "Binary dialect JEDEC, with sigle in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "Joint Electron Device Engineering Council (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "Metric system (SI)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "Двайковы - кібібайты (КіБ), мебібайты (МіБ), гібібайты (ГіБ)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Двайковы - кілабайты (КБ), мегабайты (МБ), гігабайты (ГБ)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Дзесятковы - кілабайты (КБ), мегабайты (МБ), гігабайты (ГБ)"
 
 #: exampleutility.cpp:31
 #, kde-format
@@ -255,7 +255,7 @@ msgctxt ""
 msgid "Could not find an example for this locale"
 msgstr "Не ўдалося знайсці прыклад для гэтай лакалі"
 
-#: kcmregionandlang.cpp:125
+#: kcmregionandlang.cpp:131
 #, kde-kuit-format
 msgctxt "@info this will be shown as an error message"
 msgid ""
@@ -297,13 +297,13 @@ msgstr "памылка check-language-support, вывад: %1"
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr "Не ўсе праблемы з адсутнымі пакункамі ўдалося развязаць! %1"
+msgstr "Не ўсе праблемы з адсутнымі пакетамі ўдалося развязаць! %1"
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Failed to install package %1"
-msgstr "Не ўдалося ўсталяваць пакунак %1"
+msgstr "Не ўдалося ўсталяваць пакет %1"
 
 #: localegenhelper/localegenhelper.cpp:45
 #, kde-format
@@ -420,7 +420,7 @@ msgstr "Тэлефонныя нумары"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Памер даных і сховішча"
 
 #: optionsmodel.cpp:131 optionsmodel.cpp:375
 #, kde-format
@@ -432,19 +432,19 @@ msgstr "Прадвызначаная сістэмная"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "КіБ, МіБ, ГіБ; %1"
 
 #: optionsmodel.cpp:300
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "КБ, МБ, ГБ; %1"
 
 #: optionsmodel.cpp:303
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "КБ, МБ, ГБ; %1"
 
 #: optionsmodel.cpp:377
 #, kde-format
@@ -586,7 +586,7 @@ msgstr "Змяніць…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Памер даных і сховішча"
 
 #: ui/main.qml:270
 #, kde-format
