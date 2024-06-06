@@ -86,6 +86,7 @@ int main(int argc, char **argv)
     runSync(QStringLiteral("kdeinit5_shutdown"), {});
 
     out << "startplasmacompositor: Shutting down...\n";
+    stopSystemdSession();
     cleanupPlasmaEnvironment(oldSystemdEnvironment);
     out << "startplasmacompositor: Done.\n";
 
