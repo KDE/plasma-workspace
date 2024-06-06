@@ -34,8 +34,12 @@ PlasmoidItem {
     toolTipSubText: totalSensor.sensorId ? i18nc("Sensor name: value", "%1: %2", totalSensor.name, totalSensor.formattedValue) : ""
 
     compactRepresentation: CompactRepresentation {
+        Layout.minimumWidth: Kirigami.Units.gridUnit
+        Layout.minimumHeight: Kirigami.Units.gridUnit
     }
     fullRepresentation: FullRepresentation {
+        Layout.minimumWidth: Kirigami.Units.gridUnit * 12
+        Layout.minimumHeight: Kirigami.Units.gridUnit * 16
     }
 
     Plasmoid.configurationRequired: Plasmoid.faceController.highPrioritySensorIds.length == 0 && Plasmoid.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.faceController.totalSensors.length == 0
