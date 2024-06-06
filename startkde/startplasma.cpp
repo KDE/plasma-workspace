@@ -737,6 +737,21 @@ bool startPlasmaSession(bool wayland)
     return rc;
 }
 
+void stopSystemdSession()
+{
+    // Generally plasma-workspace.target will have already marked itself as stopped
+    // when the session ends gracefully.
+
+    // However, we also need to handle the reverse case where the login manager restarts and
+    // startplasma is terminated first. This should trigger a cleanup of the systemd services we started.
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                              QStringLiteral("/org/freedesktop/systemd1"),
+                                              QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                              QStringLiteral("StopUnit"));
+    msg << QStringLiteral("plasma-workspace.target") << QStringLiteral("fail");
+    QDBusConnection::sessionBus().call(msg);
+}
+
 void waitForKonqi()
 {
     const KConfig cfg(QStringLiteral("startkderc"));

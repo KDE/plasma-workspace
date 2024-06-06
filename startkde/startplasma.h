@@ -33,6 +33,7 @@ QProcess *setupKSplash();
 
 bool startPlasmaSession(bool wayland);
 
+void stopSystemdSession();
 void waitForKonqi();
 
 void playStartupSound();
