@@ -102,69 +102,63 @@ ColumnLayout {
     spacing: Kirigami.Units.smallSpacing
 
     // Header
-    Item {
+    RowLayout {
         id: headingElement
-        Layout.fillWidth: !notificationItem.inGroup
-        Layout.preferredHeight: notificationHeading.implicitHeight
-        Layout.preferredWidth: notificationItem.inGroup ? notificationHeading.implicitWidth : -1
-        Layout.alignment: notificationItem.inGroup && summaryLabel.lineCount > 1 ? Qt.AlignTop : 0
-        Layout.topMargin: notificationItem.inGroup && summaryLabel.lineCount > 1 ? Math.max(0, (summaryLabelTextMetrics.height - Layout.preferredHeight) / 2) : 0
-        Layout.bottomMargin: notificationItem.inGroup ? 0 : -parent.spacing
+
+        visible: !notificationItem.inGroup
+        Layout.fillWidth: true
 
         Kirigami.Theme.colorSet: Kirigami.Theme.Header
         Kirigami.Theme.inherit: false
 
         PlasmaExtras.PlasmoidHeading {
+            id: heading
             topInset: 0
-            anchors.fill: parent
-            visible: !notificationItem.inHistory
+            Layout.fillWidth: true
+            background.visible: !notificationItem.inHistory
+            parent: notificationItem.inGroup ? summaryRow : headingElement
 
             // HACK PlasmoidHeading is a QQC2 Control which accepts left mouse button by default,
             // which breaks the popup default action mouse handler, cf. QTBUG-89785
             Component.onCompleted: Notifications.InputDisabler.makeTransparentForInput(this)
-        }
 
-        NotificationHeader {
-            id: notificationHeading
-            anchors {
-                fill: parent
-                leftMargin: notificationItem.headingLeftPadding
-                rightMargin: notificationItem.headingRightPadding
+            contentItem: NotificationHeader {
+                id: notificationHeading
+
+                inGroup: notificationItem.inGroup
+                inHistory: notificationItem.inHistory
+
+                notificationType: notificationItem.notificationType
+                jobState: notificationItem.jobState
+                jobDetails: notificationItem.jobDetails
+
+                onConfigureClicked: notificationItem.configureClicked()
+                onDismissClicked: notificationItem.dismissClicked()
+                onCloseClicked: notificationItem.closeClicked()
             }
-
-            inGroup: notificationItem.inGroup
-            inHistory: notificationItem.inHistory
-
-            notificationType: notificationItem.notificationType
-            jobState: notificationItem.jobState
-            jobDetails: notificationItem.jobDetails
-
-            onConfigureClicked: notificationItem.configureClicked()
-            onDismissClicked: notificationItem.dismissClicked()
-            onCloseClicked: notificationItem.closeClicked()
         }
     }
 
     // Everything else that goes below the header
     // This is its own ColumnLayout-within-a-ColumnLayout because it lets us set
     // the left margin once rather than several times, in each of its children
-    Item {
+    GridLayout {
         Layout.fillWidth: true
-        Layout.preferredHeight: childrenRect.height
-        Layout.leftMargin: notificationItem.extraSpaceForCriticalNotificationLine + (notificationItem.inGroup || !notificationItem.inHistory ? 0 : notificationItem.spacing)
+
+        rowSpacing: notificationItem.spacing
+        columnSpacing: notificationItem.spacing
 
         Accessible.role: notificationItem.inHistory ? Accessible.NoRole : Accessible.Notification
         Accessible.name: summaryLabel.text
         Accessible.description: notificationItem.accessibleDescription
+        columns: 2
 
         // Notification body
         RowLayout {
             id: summaryRow
-            anchors {
-                left: parent.left
-                right: notificationItem.inGroup ? parent.right : iconContainer.left
-                rightMargin: notificationItem.inGroup ? 0 : notificationItem.spacing
-            }
+
+            Layout.alignment: Qt.AlignTop
+            Layout.columnSpan: notificationItem.inGroup ? 2 : 1
             visible: summaryLabel.text !== ""
 
             Kirigami.Heading {
@@ -223,17 +217,13 @@ ColumnLayout {
         SelectableLabel {
             id: bodyLabel
 
+            Layout.fillWidth: true
+            Layout.row: 1
+            Layout.column: 0
+            Layout.alignment: Qt.AlignTop
             readonly property real maximumHeight: Kirigami.Units.gridUnit * notificationItem.maximumLineCount
             readonly property bool truncated: notificationItem.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
-
             height: truncated ? maximumHeight : implicitHeight
-            anchors {
-                top: summaryRow.bottom
-                topMargin: summaryRow.visible && notificationItem.inGroup && iconContainer.visible ? notificationItem.spacing : 0
-                left: parent.left
-                right: iconContainer.left
-                rightMargin: iconContainer.visible ? notificationItem.spacing : 0
-            }
 
             listViewParent: notificationItem.listViewParent
             // HACK RichText does not allow to specify link color and since LineEdit
@@ -250,12 +240,13 @@ ColumnLayout {
         Item {
             id: iconContainer
 
-            width: visible ? iconItem.width : 0
-            height: visible ? Math.max(iconItem.height + notificationItem.spacing * 2, bodyLabel.height + bodyLabel.anchors.topMargin + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
-            anchors {
-                top: notificationItem.inGroup ? bodyLabel.top : parent.top
-                right: parent.right
-            }
+            Layout.alignment: Qt.AlignTop
+            Layout.rowSpan: notificationItem.inGroup ? 1 : 2
+            Layout.row: notificationItem.inGroup ? 1 : 0
+            Layout.column: 1
+            implicitWidth: visible ? iconItem.width : 0
+            implicitHeight: visible ? Math.max(iconItem.height, bodyLabel.height + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
+
             visible: iconItem.shouldBeShown
 
             Kirigami.Icon {
