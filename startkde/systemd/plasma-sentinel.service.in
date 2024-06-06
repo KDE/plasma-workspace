@@ -1,3 +1,6 @@
+# The idea to bind this to plasma-workspace.target
+# That part is disabled as it causes issues with the hot-upgrade path
+
 [Unit]
 Description=Close Plasma session when session leader quits
 PartOf=graphical-session.target
