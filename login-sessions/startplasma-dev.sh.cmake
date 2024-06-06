@@ -11,8 +11,10 @@ if [ ! -z  "$XDG_RUNTIME_DIR" ]; then
     systemctl --user daemon-reload
 fi
 
-
-startplasma$@
+trap 'kill -TERM $PID; wait $PID' TERM
+startplasma$@ &
+PID=$!
+wait $PID
 
 if [ ! -z  "$XDG_RUNTIME_DIR" ]; then
     cd @KDE_INSTALL_FULL_SYSTEMDUSERUNITDIR@
