@@ -63,8 +63,7 @@ PlasmaComponents3.ItemDelegate {
     hoverEnabled: false
     text: i18n("Power Profile")
 
-    Accessible.description: activeProfileLabel.text
-    Accessible.role: Accessible.Slider
+    Accessible.ignored: true
     Keys.forwardTo: [slider]
 
     Notification {
@@ -99,6 +98,7 @@ PlasmaComponents3.ItemDelegate {
                     elide: Text.ElideRight
                     text: root.text
                     textFormat: Text.PlainText
+                    Accessible.ignored: true
                 }
 
                 PlasmaComponents3.Label {
@@ -121,6 +121,11 @@ PlasmaComponents3.ItemDelegate {
                 stepSize: 1
                 value: root.activeProfileIndex
                 snapMode: PlasmaComponents3.Slider.SnapAlways
+
+                Accessible.name: root.text
+                Accessible.description: activeProfileLabel.text
+                Accessible.onPressAction: moved()
+
                 onMoved: {
                     const { canBeInhibited, profile } = root.profileData[value];
                     if (!(canBeInhibited && root.inhibited)) {

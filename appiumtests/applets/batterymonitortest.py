@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import logging
 import os
 import subprocess
 import sys
@@ -14,17 +15,18 @@ from typing import Final
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
+from appium.webdriver.webdriver import ExtensionBase
+from appium.webdriver.webelement import WebElement
 from gi.repository import Gio, GLib
 from selenium.webdriver.support.ui import WebDriverWait
 
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "utils"))
 from GLibMainLoopThread import GLibMainLoopThread
+from NetHadessPowerProfiles import NetHadessPowerProfiles
 from OrgFreedesktopUPower import OrgFreedesktopUPower
 
-assert "ENABLE_DISPLAY_DEVICE" in os.environ, "Missing ENABLE_DISPLAY_DEVICE"
-
 WIDGET_ID: Final = "org.kde.plasma.battery"
-POWERDEVIL_PATH: Final = os.environ.get("POWERDEVIL_PATH", "~/kde/usr/lib64/libexec/org_kde_powerdevil")
+POWERDEVIL_PATH: Final = os.environ.get("POWERDEVIL_PATH", "/usr/libexec/org_kde_powerdevil")
 POWERDEVIL_SERVICE_NAME: Final = "org.kde.Solid.PowerManagement"
 ENABLE_DISPLAY_DEVICE: Final = int(os.environ["ENABLE_DISPLAY_DEVICE"]) != 0
 
@@ -39,6 +41,27 @@ def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
     return reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean()
 
 
+class SetValueCommand(ExtensionBase):
+
+    def method_name(self):
+        return "set_value"
+
+    def set_value(self, element: WebElement, value: str):
+        """
+        Set the value on this element in the application
+        Args:
+            value: The value to be set
+        """
+        data = {
+            "id": element.id,
+            "text": value,
+        }
+        return self.execute(data)["value"]
+
+    def add_command(self):
+        return "post", "/session/$sessionId/appium/element/$id/value"
+
+
 class BatteryMonitorTests(unittest.TestCase):
     """
     Tests for the system tray widget
@@ -48,6 +71,7 @@ class BatteryMonitorTests(unittest.TestCase):
     driver: webdriver.Remote
     loop_thread: GLibMainLoopThread
     upower_interface: OrgFreedesktopUPower
+    ppd_interface: NetHadessPowerProfiles
     powerdevil: subprocess.Popen[bytes]
 
     @classmethod
@@ -69,13 +93,16 @@ class BatteryMonitorTests(unittest.TestCase):
         cls.upower_interface = OrgFreedesktopUPower(None, ENABLE_DISPLAY_DEVICE)
         # Wait until the mocked upower interface is online
         assert cls.upower_interface.registered_event.wait(10), "upower interface is not ready"
+        cls.ppd_interface = NetHadessPowerProfiles()
+        # Wait until the mocked upower interface is online
+        assert cls.ppd_interface.registered_event.wait(10), "ppd interface is not ready"
 
         # Start PowerDevil which is used by the dataengine
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "org.kde.powerdevil.debug=true"
         session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
         assert not name_has_owner(session_bus, POWERDEVIL_SERVICE_NAME), "PowerDevil is already running"
-        cls.powerdevil = subprocess.Popen([POWERDEVIL_PATH], env=debug_env, stdout=sys.stdout, stderr=subprocess.PIPE)
+        cls.powerdevil = subprocess.Popen([POWERDEVIL_PATH], env=debug_env, stdout=sys.stderr, stderr=sys.stderr)
         powerdevil_started: bool = False
         for _ in range(10):
             if name_has_owner(session_bus, POWERDEVIL_SERVICE_NAME):
@@ -83,12 +110,7 @@ class BatteryMonitorTests(unittest.TestCase):
                 break
             print("waiting for PowerDevil to appear on the dbus session")
             time.sleep(1)
-        if not powerdevil_started:
-            if "KDECI_BUILD" in os.environ and cls.powerdevil.stderr.readable():
-                for line in cls.powerdevil.stderr.readlines():
-                    if "PRIVATE_API" in line.decode(encoding="utf-8"):
-                        sys.exit(0)
-            assert False, "PowerDevil is not running"
+        assert powerdevil_started, "PowerDevil is not running"
 
         # Now start the appium test
         options = AppiumOptions()
@@ -100,7 +122,7 @@ class BatteryMonitorTests(unittest.TestCase):
             "QT_FATAL_WARNINGS": "1",
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.dbus.integration.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false",
         })
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', extensions=[SetValueCommand], options=options)
 
     def setUp(self) -> None:
         pass
@@ -120,6 +142,7 @@ class BatteryMonitorTests(unittest.TestCase):
         cls.driver.quit()
         cls.powerdevil.terminate()
         cls.upower_interface.quit()
+        cls.ppd_interface.quit()
         cls.loop_thread.quit()
 
     def test_01_batteries_are_listed(self) -> None:
@@ -303,7 +326,65 @@ class BatteryMonitorTests(unittest.TestCase):
 
         self.driver.find_element(by=AppiumBy.NAME, value="KDE Gaming Mouse")
 
+    def test_41_set_power_profile(self) -> None:
+        """
+        Sets the power profile
+        """
+        # Remote changes
+        self.ppd_interface.set_profile("power-saver")
+        self.driver.find_element(AppiumBy.NAME, "Power Save")
+        self.ppd_interface.set_profile("performance")
+        self.driver.find_element(AppiumBy.NAME, "Performance")
+        self.ppd_interface.set_profile("balanced")
+        self.driver.find_element(AppiumBy.NAME, "Balanced")
+
+        # Local changes
+        slider_element = self.driver.find_element(AppiumBy.NAME, "Power Profile")
+        self.driver.set_value(slider_element, str(0))
+        slider_element.click()
+        self.driver.find_element(AppiumBy.NAME, "Power Save")
+        self.assertTrue(self.ppd_interface.active_profile_set_event.wait(5))
+        self.ppd_interface.active_profile_set_event.clear()
+        self.driver.set_value(slider_element, str(1))
+        slider_element.click()
+        self.driver.find_element(AppiumBy.NAME, "Balanced")
+        self.assertTrue(self.ppd_interface.active_profile_set_event.wait(5))
+        self.ppd_interface.active_profile_set_event.clear()
+        self.driver.set_value(slider_element, str(2))
+        slider_element.click()
+        self.driver.find_element(AppiumBy.NAME, "Performance")
+        self.assertTrue(self.ppd_interface.active_profile_set_event.wait(5))
+        self.ppd_interface.active_profile_set_event.clear()
+
+    def test_42_active_profile_holds(self) -> None:
+        """
+        Active profile holds are listed in the widget
+        """
+        cookie1 = self.ppd_interface.hold_profile("performance", "Building modules", "kde-builder")
+        cookie2 = self.ppd_interface.hold_profile("performance", "Running tests", "appiumtest")
+        label1 = self.driver.find_element(AppiumBy.NAME, "kde-builder: Building modules")
+        label2 = self.driver.find_element(AppiumBy.NAME, "appiumtest: Running tests")
+
+        self.ppd_interface.release_profile(cookie1)
+        self.ppd_interface.release_profile(cookie2)
+        wait = WebDriverWait(self.driver, 5)
+        wait.until_not(lambda _: label1.is_displayed())
+        wait.until_not(lambda _: label2.is_displayed())
+
+    def test_43_performance_degraded_reason(self) -> None:
+        """
+        The widget can show the reason of why the performance is degraded
+        """
+        self.ppd_interface.set_profile("performance")
+        self.ppd_interface.set_performance_degraded_reason("other")
+        reason_label = self.driver.find_element(AppiumBy.NAME, "Performance may be reduced.")
+        self.ppd_interface.set_performance_degraded_reason("")
+        wait = WebDriverWait(self.driver, 5)
+        wait.until_not(lambda _: reason_label.is_displayed())
+
 
 if __name__ == '__main__':
     assert os.path.exists(POWERDEVIL_PATH), f"{POWERDEVIL_PATH} does not exist"
+    assert "ENABLE_DISPLAY_DEVICE" in os.environ, "Missing ENABLE_DISPLAY_DEVICE"
+    logging.getLogger().setLevel(logging.INFO)
     unittest.main()
