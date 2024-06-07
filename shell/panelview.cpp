@@ -1348,6 +1348,8 @@ void PanelView::updateMask()
         QRegion mask;
 
         QQuickItem *rootObject = this->rootObject();
+        QRect screenPanelRect = geometry().intersected(screen()->geometry());
+        screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
         if (rootObject) {
             QVariant maskProperty = rootObject->property("panelMask");
             if (static_cast<QMetaType::Type>(maskProperty.typeId()) == QMetaType::QRegion) {
@@ -1355,6 +1357,9 @@ void PanelView::updateMask()
                 const QPoint floatingTranslucentItemOffset = rootObject->property("floatingTranslucentItemOffset").toPoint();
                 mask.translate(floatingTranslucentItemOffset);
             }
+        }
+        if (mask.isEmpty()) {
+            mask = QRegion(QRect(screenPanelRect));
         }
         // We use mask for graphical effect which tightly  covers the panel
         // For the input region (QWindow::mask) screenPanelRect includes area around the floating
@@ -1368,8 +1373,6 @@ void PanelView::updateMask()
                                                  mask);
 
         if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
-            QRect screenPanelRect = geometry().intersected(screen()->geometry());
-            screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
             setMask(screenPanelRect);
         } else {
             setMask(mask);
