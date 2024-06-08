@@ -3,15 +3,22 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import base64
+import os
+import tempfile
 import unittest
 from typing import Final
 
+import cv2 as cv
+import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import Gio, GLib
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+gi.require_version('GdkPixbuf', '2.0')
+from gi.repository import GdkPixbuf, Gio, GLib
 
 WIDGET_ID: Final = "org.kde.plasma.notifications"
 
@@ -90,7 +97,52 @@ class NotificationsTest(unittest.TestCase):
         wait = WebDriverWait(self.driver, 5)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, summary)))
 
-    def test_2_accessible_description_html_to_plaintext(self) -> None:
+    def take_screenshot(self) -> str:
+        with tempfile.TemporaryDirectory() as temp_dir:
+            saved_image_path = os.path.join(temp_dir, "tray.png")
+            self.driver.get_screenshot_as_file(saved_image_path)
+            cv_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
+        return base64.b64encode(cv.imencode('.png', cv_image)[1].tobytes()).decode()
+
+    def test_2_notification_with_image(self) -> None:
+        """
+        Sends notifications with images
+        """
+        wait = WebDriverWait(self.driver, 5)
+        summary: str = "Image notification"
+        pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
+        partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
+        colors = (0xff0000ff, 0x00ff00ff, 0x0000ffff)
+        for color in colors:
+            pixbuf.fill(color)
+            send_notification({
+                "app_name": "Appium Test",
+                "summary": summary + str(color),
+                "body": f"Notification body {str(color)}",
+                "hints": {
+                    "desktop-entry": GLib.Variant("s", "firefox"),
+                    "image-data": GLib.Variant("(iiibiiay)", [
+                        pixbuf.get_width(),
+                        pixbuf.get_height(),
+                        pixbuf.get_rowstride(),
+                        pixbuf.get_has_alpha(),
+                        pixbuf.get_bits_per_sample(),
+                        pixbuf.get_n_channels(),
+                        pixbuf.get_pixels(),
+                    ]),
+                },
+                "timeout": 10 * 1000,
+            })
+            wait.until(EC.presence_of_element_located((AppiumBy.NAME, summary + str(color))))
+            with tempfile.TemporaryDirectory() as temp_dir:
+                saved_image_path = os.path.join(temp_dir, "partial.png")
+                partial_pixbuf.fill(color)
+                self.assertTrue(partial_pixbuf.savev(saved_image_path, "png"))
+                cv_partial_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
+                partial_image = base64.b64encode(cv.imencode('.png', cv_partial_image)[1].tobytes()).decode()
+            self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+
+    def test_3_accessible_description_html_to_plaintext(self) -> None:
         """
         accessibleDescription provides the plain text of the description
         """
