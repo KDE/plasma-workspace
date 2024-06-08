@@ -66,30 +66,6 @@ KCM.SimpleKCM {
         }
 
         Kirigami.InlineMessage {
-            id: fractionalFontSizeWarning
-            Layout.fillWidth: true
-            position: Kirigami.InlineMessage.Position.Header
-            showCloseButton: true
-            type: Kirigami.MessageType.Warning
-            text: i18n("Decimal font sizes can cause text layout problems in some applications. Consider using only integer font sizes.")
-            // Specifically, it will trigger https://bugreports.qt.io/browse/QTBUG-92006,
-            // but we don't mention that in the message because that would be too technical
-            // for users.
-
-            Connections {
-                target: kcm
-                function onFontsHaveChanged() {
-                    fractionalFontSizeWarning.visible =
-                    !Number.isInteger(generalFontWidget.font.pointSize)
-                    || !Number.isInteger(fixedWidthFontWidget.font.pointSize)
-                    || !Number.isInteger(smallFontWidget.font.pointSize)
-                    || !Number.isInteger(toolbarFontWidget.font.pointSize)
-                    || !Number.isInteger(menuFontWidget.font.pointSize)
-                }
-            }
-        }
-
-        Kirigami.InlineMessage {
             id: dpiTwiddledMessage
             Layout.fillWidth: true
             position: Kirigami.InlineMessage.Position.Header
