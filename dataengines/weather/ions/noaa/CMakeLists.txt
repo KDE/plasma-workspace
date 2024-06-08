@@ -16,4 +16,4 @@ target_link_libraries (plasma_engine_noaa
 )
 
 install (TARGETS plasma_engine_noaa DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasma5support/dataengine)
-
+install (FILES noaa_station_list.xml DESTINATION ${KDE_INSTALL_DATADIR}/plasma/weather)
