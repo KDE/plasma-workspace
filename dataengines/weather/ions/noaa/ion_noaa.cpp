@@ -495,7 +495,7 @@ void NOAAIon::updateWeather(const QString &source)
 
         // Get the short day name for the forecast
         data.insert(u"Short Forecast Day %1"_s.arg(forecastDay),
-                    u"%1|%2|%3|%4|%5|%6"_s.arg(forecast.day, iconName, i18nc("weather forecast", forecast.summary.toUtf8().data()))
+                    u"%1|%2|%3|%4|%5|%6"_s.arg(forecast.day, iconName, i18nForecast(forecast.summary))
                         .arg(qIsNaN(forecast.high) ? u"N/A"_s : QString::number(forecast.high))
                         .arg(qIsNaN(forecast.low) ? u"N/A"_s : QString::number(forecast.low))
                         .arg(forecast.precipitation));
@@ -633,6 +633,22 @@ IonInterface::ConditionIcons NOAAIon::getConditionIcon(const QString &weather, b
     }
 
     return result;
+}
+
+QString NOAAIon::i18nForecast(const QString &summary) const
+{
+    const QStringList conditions = summary.split(u" then "_s, Qt::SkipEmptyParts, Qt::CaseInsensitive);
+
+    QStringList i18nSummary;
+    for (const auto &condition : conditions) {
+        i18nSummary << i18nc("weather forecast", condition.toUtf8().data());
+    }
+
+    // i18n: The forecast summary can include several single conditions that follow
+    // a temporary sequence, separated by " then ". Also include spaces if necessary.
+    // If there is no suitable separtor, a sentence separator might do.
+    const QString separator = i18nc("Separator between forecast conditions that follow a temporal sequence (ex. \"Rain then Sunny\")", " then ");
+    return i18nSummary.join(separator);
 }
 
 /* UnitOfMeasure

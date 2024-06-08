@@ -158,6 +158,7 @@ private:
     KUnitConversion::UnitId parseUnit(const QString &unitCode) const;
     float parseQV(const QJsonValue &qv, KUnitConversion::UnitId destUnit = KUnitConversion::InvalidUnit) const;
     QString windDirectionFromAngle(float degrees) const;
+    QString i18nForecast(const QString &summary) const;
 
 private:
     struct StationInfo {

@@ -161,6 +161,7 @@ weather condition|Light Thunderstorm Snow
 weather condition|Low Drifting Dust
 weather condition|Low Drifting Sand
 weather condition|Low Drifting Snow
+weather condition|Mostly Clear
 weather condition|Mostly Cloudy
 weather condition|Mostly Cloudy and Breezy
 weather condition|Mostly Cloudy and Windy
@@ -354,3 +355,7 @@ weather forecast|Decreasing Clouds
 weather forecast|Becoming Sunny
 weather forecast|Clear
 weather forecast|Mostly Clear
+weahter forecast|Showers And Thunderstorms
+weather forecast|Slight Chance Showers And Thunderstorms
+weather forecast|Chance Showers And Thunderstorms
+weather forecast|Showers And Thunderstorms Likely
