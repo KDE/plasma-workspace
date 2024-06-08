@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021.
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2021-11-20 15:41+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-06-07 14:54+0400\n"
+"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -31,7 +32,7 @@ msgstr "Məhsul"
 
 #: soliddeviceengine.cpp:115
 msgid "Description"
-msgstr "Təsviri"
+msgstr "Xüsusiyyətləri"
 
 #: soliddeviceengine.cpp:116
 msgid "Icon"
@@ -54,7 +55,7 @@ msgstr "Əməliyyatın nəticəsi"
 
 #: soliddeviceengine.cpp:120
 msgid "Timestamp"
-msgstr "Vaxt Möhürü"
+msgstr "Vaxt qeydi"
 
 #: soliddeviceengine.cpp:128
 msgid "Processor"
@@ -70,7 +71,7 @@ msgstr "Maksimum sürət"
 
 #: soliddeviceengine.cpp:131
 msgid "Can Change Frequency"
-msgstr "Tezliyi dəyişə bilən"
+msgstr "Tezliyi dəyişmək imkanı"
 
 #: soliddeviceengine.cpp:139
 msgid "Block"
@@ -90,7 +91,7 @@ msgstr "Cihaz"
 
 #: soliddeviceengine.cpp:150
 msgid "Storage Access"
-msgstr "Verilənlərə Giriş"
+msgstr "Yaddaşa giriş"
 
 #: soliddeviceengine.cpp:151 soliddeviceengine.cpp:507
 #: soliddeviceengine.cpp:608
@@ -111,7 +112,7 @@ msgstr "Ide"
 
 #: soliddeviceengine.cpp:170
 msgid "Usb"
-msgstr "Usb"
+msgstr "USB"
 
 #: soliddeviceengine.cpp:170
 msgid "Ieee1394"
@@ -123,7 +124,7 @@ msgstr "Scsi"
 
 #: soliddeviceengine.cpp:171
 msgid "Sata"
-msgstr "Sata"
+msgstr "SATA"
 
 #: soliddeviceengine.cpp:171
 msgid "Platform"
@@ -131,11 +132,11 @@ msgstr "Platforma"
 
 #: soliddeviceengine.cpp:173
 msgid "Hard Disk"
-msgstr "Sərt Disk"
+msgstr "Sərt disk"
 
 #: soliddeviceengine.cpp:173
 msgid "Cdrom Drive"
-msgstr "Cdrom Sürücü"
+msgstr "Optik sürücü"
 
 #: soliddeviceengine.cpp:173
 msgid "Floppy"
@@ -151,7 +152,7 @@ msgstr "Compact Flash"
 
 #: soliddeviceengine.cpp:174
 msgid "Memory Stick"
-msgstr "Memory Stick"
+msgstr "Daşınabilən yaddaş"
 
 #: soliddeviceengine.cpp:175
 msgid "Smart Media"
@@ -159,7 +160,7 @@ msgstr "Smart kart"
 
 #: soliddeviceengine.cpp:175
 msgid "SdMmc"
-msgstr "SdMmc"
+msgstr "SD/MMC"
 
 #: soliddeviceengine.cpp:175
 msgid "Xd"
@@ -171,21 +172,21 @@ msgstr "Şin"
 
 #: soliddeviceengine.cpp:178
 msgid "Drive Type"
-msgstr "Cihaz Növü"
+msgstr "Cihaz növü"
 
 #: soliddeviceengine.cpp:179 soliddeviceengine.cpp:192
 #: soliddeviceengine.cpp:360 soliddeviceengine.cpp:374
 msgid "Removable"
-msgstr "Çıxarıla bilən"
+msgstr "Çıxarılabilən"
 
 #: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
 #: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
 msgid "Hotpluggable"
-msgstr "İstənilən vaxt qoşula bilən"
+msgstr "İstənilən vaxt qoşulabilən"
 
 #: soliddeviceengine.cpp:202
 msgid "Optical Drive"
-msgstr "Optik Sürücü"
+msgstr "Optik sürücü"
 
 #: soliddeviceengine.cpp:207
 msgid "CD-R"
@@ -253,23 +254,23 @@ msgstr "HDDVD-RW"
 
 #: soliddeviceengine.cpp:254
 msgid "Supported Media"
-msgstr "Dəstəklənən Media"
+msgstr "Dəstəklənən daşıyıcı"
 
 #: soliddeviceengine.cpp:256
 msgid "Read Speed"
-msgstr "Oxuma Sürəti"
+msgstr "Oxuma sürəti"
 
 #: soliddeviceengine.cpp:257
 msgid "Write Speed"
-msgstr "Yazma Sürəti"
+msgstr "Yazma sürəti"
 
 #: soliddeviceengine.cpp:265
 msgid "Write Speeds"
-msgstr "Yazma Sürəti"
+msgstr "Yazma sürətləri"
 
 #: soliddeviceengine.cpp:273
 msgid "Storage Volume"
-msgstr "Yaddaş Həcmi"
+msgstr "Yaddaş həcmi"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
@@ -284,7 +285,7 @@ msgstr "İstifadə olunmur"
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "File System"
-msgstr "Fayl Sistemi"
+msgstr "Fayl sistemi"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
@@ -294,7 +295,7 @@ msgstr "Bölmələr cədvəli"
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Raid"
-msgstr "Raid"
+msgstr "RAID"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
@@ -316,7 +317,7 @@ msgstr "İmtina edilən"
 
 #: soliddeviceengine.cpp:285
 msgid "File System Type"
-msgstr "Fayl Sisteminin növü"
+msgstr "Fayl sistemi növü"
 
 #: soliddeviceengine.cpp:286
 msgid "Label"
@@ -332,7 +333,7 @@ msgstr "Şifrələnmiş məntiqi disk"
 
 #: soliddeviceengine.cpp:308
 msgid "OpticalDisc"
-msgstr "OpticalDisc"
+msgstr "Optik disk"
 
 #: soliddeviceengine.cpp:314
 msgid "Audio"
@@ -364,7 +365,7 @@ msgstr "Tərkibi"
 
 #: soliddeviceengine.cpp:334
 msgid "Unknown Disc Type"
-msgstr "Naməlum Disk növü"
+msgstr "Naməlum disk növü"
 
 #: soliddeviceengine.cpp:334
 msgid "CD Rom"
@@ -372,67 +373,67 @@ msgstr "CD Rom"
 
 #: soliddeviceengine.cpp:334
 msgid "CD Recordable"
-msgstr "CD-R"
+msgstr "Yazılabilən CD"
 
 #: soliddeviceengine.cpp:335
 msgid "CD Rewritable"
-msgstr "CD-RW"
+msgstr "Təkrar yazılabilən CD"
 
 #: soliddeviceengine.cpp:335
 msgid "DVD Rom"
-msgstr "DVD Rom"
+msgstr "DVD ROM"
 
 #: soliddeviceengine.cpp:335
 msgid "DVD Ram"
-msgstr "DVD Ram"
+msgstr "DVD RAM"
 
 #: soliddeviceengine.cpp:336
 msgid "DVD Recordable"
-msgstr "DVD-R"
+msgstr "Yazılabilən DVD"
 
 #: soliddeviceengine.cpp:336
 msgid "DVD Rewritable"
-msgstr "DVD-RW"
+msgstr "Təkrar yazılabilən DVD"
 
 #: soliddeviceengine.cpp:337
 msgid "DVD Plus Recordable"
-msgstr "DVD+R"
+msgstr "Yazılabilən DVD+"
 
 #: soliddeviceengine.cpp:337
 msgid "DVD Plus Rewritable"
-msgstr "DVD+RW"
+msgstr "Təkrar yazılabilən DVD+"
 
 #: soliddeviceengine.cpp:338
 msgid "DVD Plus Recordable Duallayer"
-msgstr "DVD+R İkitəbəqəli"
+msgstr "ikitərəfli yazılabiləb DVD+"
 
 #: soliddeviceengine.cpp:338
 msgid "DVD Plus Rewritable Duallayer"
-msgstr "DVD+RW İkitəbəqəli"
+msgstr "İkitərəfli təkrar yazılabilən DVD+"
 
 #: soliddeviceengine.cpp:339
 msgid "Blu Ray Rom"
-msgstr "Blu Ray Rom"
+msgstr "Blu Ray ROM"
 
 #: soliddeviceengine.cpp:339
 msgid "Blu Ray Recordable"
-msgstr "BD-R"
+msgstr "Yazılabilən Blue-Ray"
 
 #: soliddeviceengine.cpp:340
 msgid "Blu Ray Rewritable"
-msgstr "Blu Ray Rewritable"
+msgstr "Təkrar yazılabilən Blu Ray"
 
 #: soliddeviceengine.cpp:340
 msgid "HD DVD Rom"
-msgstr "HD DVD Rom"
+msgstr "HD DVD ROM"
 
 #: soliddeviceengine.cpp:341
 msgid "HD DVD Recordable"
-msgstr "HD DVD Recordable"
+msgstr "Yazılabilən HD DVD"
 
 #: soliddeviceengine.cpp:341
 msgid "HD DVD Rewritable"
-msgstr "HD DVD Rewritable"
+msgstr "Təkrar yazılabilən HD DVD"
 
 #: soliddeviceengine.cpp:343
 msgid "Disc Type"
@@ -440,7 +441,7 @@ msgstr "Disk növü"
 
 #: soliddeviceengine.cpp:344
 msgid "Appendable"
-msgstr "Əlavə edilə bilən"
+msgstr "Çoxsessiyalı yazılma"
 
 #: soliddeviceengine.cpp:345
 msgid "Blank"
@@ -448,7 +449,7 @@ msgstr "Boş"
 
 #: soliddeviceengine.cpp:346
 msgid "Rewritable"
-msgstr "Yenidən yazıla bilən"
+msgstr "Təkrar yazıla bilən"
 
 #: soliddeviceengine.cpp:347
 msgid "Capacity"
@@ -460,7 +461,7 @@ msgstr "Kamera"
 
 #: soliddeviceengine.cpp:357 soliddeviceengine.cpp:371
 msgid "Supported Protocols"
-msgstr "Dəstəklənən Protokollar"
+msgstr "Dəstəklənən protokollar"
 
 #: soliddeviceengine.cpp:358 soliddeviceengine.cpp:372
 msgid "Supported Drivers"
@@ -468,7 +469,7 @@ msgstr "Dəstəklənən cihazlar"
 
 #: soliddeviceengine.cpp:369
 msgid "Portable Media Player"
-msgstr "Daşınabilən Multimediya Oynadıcısı"
+msgstr "Daşınabilən Multimediya Oynadıcı"
 
 #: soliddeviceengine.cpp:383
 msgid "Battery"
@@ -476,75 +477,67 @@ msgstr "Batareya"
 
 #: soliddeviceengine.cpp:386
 msgid "Unknown Battery"
-msgstr "Naməlum Batareya"
+msgstr "Naməlum batareya"
 
 #: soliddeviceengine.cpp:386
 msgid "PDA Battery"
-msgstr "PDA Batareyası"
+msgstr "PDA batareyası"
 
 #: soliddeviceengine.cpp:386
 msgid "UPS Battery"
-msgstr "UPS Batareyası"
+msgstr "UPS batareyası"
 
 #: soliddeviceengine.cpp:387
 msgid "Primary Battery"
-msgstr "Əsas Batareya"
+msgstr "Əsas batareya"
 
 #: soliddeviceengine.cpp:387
 msgid "Mouse Battery"
-msgstr "Siçan Batareyası"
+msgstr "Siçan batareyası"
 
 #: soliddeviceengine.cpp:388
 msgid "Keyboard Battery"
-msgstr "Klaviatura Batareyası"
+msgstr "Klaviatura batareyası"
 
 #: soliddeviceengine.cpp:388
 msgid "Keyboard Mouse Battery"
-msgstr "Klaviatura Siçan Batareyası"
+msgstr "Klaviatura və siçan batareyası"
 
 #: soliddeviceengine.cpp:389
 msgid "Camera Battery"
-msgstr "Kamera Batareyası"
+msgstr "Kamera batareyası"
 
 #: soliddeviceengine.cpp:389
 msgid "Phone Battery"
-msgstr "Telefon Batareyası"
+msgstr "Telefon batareyası"
 
 #: soliddeviceengine.cpp:389
 msgid "Monitor Battery"
-msgstr "Monitor Batareyası"
+msgstr "Monitor batareyası"
 
 #: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
-msgstr "Oyun qurğusu Batareyası"
+msgstr "Oyun qurğusu batareyası"
 
 #: soliddeviceengine.cpp:390
 msgid "Bluetooth Battery"
-msgstr "Bluetooth Batareyası"
+msgstr "Bluetooth batareyası"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
-msgstr "Kamera Batareyası"
+msgstr "Planşet batareyası"
 
 #: soliddeviceengine.cpp:391
-#, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
-msgstr "Telefon Batareyası"
+msgstr "Qulaqlıq batareyası"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
-msgstr "Siçan Batareyası"
+msgstr "Qarnitur batareyası"
 
 #: soliddeviceengine.cpp:392
-#, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
-msgstr "Siçan Batareyası"
+msgstr "Sensor panel batareyası"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"
@@ -564,7 +557,7 @@ msgstr "Tam doldurulub"
 
 #: soliddeviceengine.cpp:398
 msgid "Plugged In"
-msgstr "Qoşulmuş"
+msgstr "Qoşulub"
 
 #: soliddeviceengine.cpp:399
 msgid "Type"
@@ -572,23 +565,23 @@ msgstr "Növ"
 
 #: soliddeviceengine.cpp:400
 msgid "Charge Percent"
-msgstr "Enerji doldurma faizi"
+msgstr "Dolma faizi"
 
 #: soliddeviceengine.cpp:401
 msgid "Rechargeable"
-msgstr "Enerji doldurulabilən"
+msgstr "Təkrar doldurulabilən"
 
 #: soliddeviceengine.cpp:402
 msgid "Charge State"
-msgstr "Enerji doldurma vəziyyəti"
+msgstr "Dolma vəziyyəti"
 
 #: soliddeviceengine.cpp:427
 msgid "Type Description"
-msgstr "Növün açıqlaması"
+msgstr "Növün xüsusiyyətləri"
 
 #: soliddeviceengine.cpp:432
 msgid "Device Types"
-msgstr "Cihazın növləri"
+msgstr "Cihaz növləri"
 
 #: soliddeviceengine.cpp:456 soliddeviceengine.cpp:555
 msgid "Size"
@@ -597,12 +590,12 @@ msgstr "Ölçü"
 #: soliddeviceengine.cpp:535
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr "Fayl Sistemi cavab vermir"
+msgstr "Fayl sistemi cavab vermir"
 
 #: soliddeviceengine.cpp:535
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr "\"%1\"-də(a) qoşulan fayl sistemi cavab vermir"
+msgstr "\"%1\" ilə əlaqəli fayl sistemi cavab vermir"
 
 #: soliddeviceengine.cpp:553
 msgid "Free Space"

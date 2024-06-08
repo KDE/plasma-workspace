@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2019, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2017, 2019, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@iki.fi>, 2020, 2022.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2023-12-11 18:31+0200\n"
+"PO-Revision-Date: 2024-04-14 10:53+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.1\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -24,7 +24,7 @@ msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr ""
-"Värilämpötila alkaa vaihtua %1 ja on täysin vaihtunut yöväriksi %2 mennessä"
+"Värilämpötila alkaa vaihtua yöväriksi %1 ja on täysin vaihtunut %2 mennessä"
 
 #: ui/DayNightView.qml:135
 #, kde-format
@@ -32,7 +32,7 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr ""
-"Värilämpötila alkaa vaihtua %1 ja on täysin vaihtunut päiväväriksi %2 "
+"Värilämpötila alkaa vaihtua päiväväriksi %1 ja on täysin vaihtunut %2 "
 "mennessä"
 
 #: ui/LocationsFixedView.qml:72
@@ -127,7 +127,7 @@ msgstr "Vaihtoajat:"
 #: ui/main.qml:299
 #, kde-format
 msgid "Always off"
-msgstr "Aina pois käytöstä"
+msgstr "Aina poissa käytöstä"
 
 #: ui/main.qml:300
 #, kde-format
@@ -137,12 +137,12 @@ msgstr "Auringonlasku ja -nousu nykyisessä sijainnissa"
 #: ui/main.qml:301
 #, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr "Auringonlaskusta ja -nousu asetetussa sijainnissa"
+msgstr "Auringonlasku ja -nousu asetetussa sijainnissa"
 
 #: ui/main.qml:302
 #, kde-format
 msgid "Custom times"
-msgstr "Aikojen mukautus"
+msgstr "Mukauta aikoja"
 
 #: ui/main.qml:303
 #, kde-format
@@ -168,21 +168,20 @@ msgid ""
 "or by sending network information to <link url='https://location.services."
 "mozilla.com'>Mozilla Location Service</link>."
 msgstr ""
-"Laitteen sijainti päivitetään säännöllisesti GPS:n avulla (jos "
-"käytettävissä) tai lähettämällä verkkotiedot <a href=\"https://location."
-"services.mozilla.com/\">Mozillan paikannuspalveluun</a>."
+"Laitteen sijainti päivitetään aika ajoin GPS:llä (jos käytettävissä) tai "
+"lähettämällä verkkotiedot <a href=\"https://location.services.mozilla.com/"
+"\">Mozillan paikannuspalveluun</a>."
 
 #: ui/main.qml:365
 #, kde-format
 msgid "Begin night light at:"
-msgstr "Yövärin aloitusaika:"
+msgstr "Aloita yöväritys:"
 
 #: ui/main.qml:381
 #, kde-format
 msgid "Begin day light at:"
-msgstr "Päivävärin aloitusaika:"
+msgstr "Aloita päiväväritys:"
 
-# Ellei transition ole astronomisessa kielessä vakiintunut muuksi kuin ”siirtymäksi”?
 #: ui/main.qml:396
 #, kde-format
 msgid "Transition duration:"

@@ -35,11 +35,10 @@ msgid "Your emails"
 msgstr "translator@legisign.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Avaa taustakuvatiedosto"
+msgstr "Avaa kuva"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
