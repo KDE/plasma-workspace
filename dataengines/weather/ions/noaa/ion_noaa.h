@@ -122,8 +122,7 @@ private:
     KJob *requestAPIJob(const QString &source, const QUrl &url, Callback onResult);
 
     // Load and parse the station list
-    void getStationList(bool reset = true);
-    Q_SLOT void stationListReceived(KJob *);
+    void getStationList();
     bool readStationList(QXmlStreamReader &xml);
     void parseStationID(QXmlStreamReader &xml);
 

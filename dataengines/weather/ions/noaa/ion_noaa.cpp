@@ -14,6 +14,7 @@
 #include <KIO/TransferJob>
 #include <KLocalizedString>
 
+#include <QFile>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -169,42 +170,28 @@ KJob *NOAAIon::requestAPIJob(const QString &source, const QUrl &url, Callback on
     return getJob;
 }
 
-// Parses city list and gets the correct city based on ID number
-void NOAAIon::getStationList(bool reset)
+// Opens and reads the list of weather stations, which provide a place name,
+// the station ID code and the coordinates of the station
+void NOAAIon::getStationList()
 {
-    const QList<QUrl> stationUrls = {
-        QUrl("https://w1.weather.gov/xml/current_obs/index.xml"_L1),
-        QUrl("https://www.weather.gov/xml/current_obs/index.xml"_L1),
-        QUrl::fromLocalFile(QStandardPaths::locate(QStandardPaths::GenericDataLocation, "plasma/weather/noaa_station_list.xml"_L1)),
-    };
-    static int retryCount = 0;
+    const QString stationsFileName = u"plasma/weather/noaa_station_list.xml"_s;
+    const QString stationsPath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, stationsFileName);
 
-    if (reset) {
-        retryCount = 0;
-    } else {
-        retryCount++;
-        if (retryCount >= stationUrls.count()) {
-            qCWarning(IONENGINE_NOAA) << "Couldn't retrieve the list of stations";
-            return;
-        }
+    if (stationsPath.isEmpty()) {
+        qCWarning(IONENGINE_NOAA) << "Couldn't find file" << stationsFileName << "on the local data path";
+        return;
     }
 
-    auto getJob = requestAPIJob({}, stationUrls.at(retryCount), {});
-    connect(getJob, &KJob::result, this, &NOAAIon::stationListReceived);
-}
+    QFile stationsFile(stationsPath);
+    if (!stationsFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qCWarning(IONENGINE_NOAA) << "Couldn't open stations file:" << stationsPath << stationsFile.errorString();
+        return;
+    }
 
-void NOAAIon::stationListReceived(KJob *job)
-{
-    QXmlStreamReader reader = QXmlStreamReader(m_jobData.value(job));
-
+    QXmlStreamReader reader = QXmlStreamReader(&stationsFile);
     const bool success = readStationList(reader);
     setInitialized(success);
-
-    if (!success) {
-        getStationList(/*reset*/ false);
-    }
-
-    m_jobData.remove(job);
+    stationsFile.close();
 
     for (const QString &source : std::as_const(m_sourcesToReset)) {
         updateSourceEvent(source);
