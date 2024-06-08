@@ -3,6 +3,7 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import os
 import subprocess
 import sys
 import unittest
@@ -23,6 +24,8 @@ class CameraIndicatorTest(unittest.TestCase):
     """
 
     driver: webdriver.Remote
+    pipewire: subprocess.Popen | None = None
+    wireplumber: subprocess.Popen | None = None
     pipewire_already_running_before_test: bool = False
 
     @classmethod
@@ -55,6 +58,12 @@ class CameraIndicatorTest(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         cls.driver.quit()
+        if cls.pipewire is not None:
+            cls.pipewire.terminate()
+            cls.pipewire.wait()
+        if cls.wireplumber is not None:
+            cls.wireplumber.terminate()
+            cls.wireplumber.wait()
 
     def test_0_open(self) -> None:
         """
@@ -65,21 +74,50 @@ class CameraIndicatorTest(unittest.TestCase):
         else:
             self.driver.find_element(AppiumBy.NAME, "Camera indicator is unavailable")
 
-    def test_10_connect_to_pipewire(self) -> None:
+    def test_1_connect_to_pipewire(self) -> None:
         """
         Tests the widget can connect to pipewire
         """
         if self.pipewire_already_running_before_test:
             self.skipTest("Pipewire is already running.")
 
-        pipewire = subprocess.Popen(["pipewire"], stdout=sys.stderr, stderr=sys.stderr)
-        self.addCleanup(pipewire.terminate)
+        self.pipewire = subprocess.Popen(["pipewire"], stdout=sys.stderr, stderr=sys.stderr)
+        self.wireplumber = subprocess.Popen(["wireplumber"], stdout=sys.stderr, stderr=sys.stderr)
 
         # Reconnecting takes at least 5s
         WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((AppiumBy.NAME, "No camera is in use")))
 
-        pipewire.terminate()
-        self.driver.find_element(AppiumBy.NAME, "Camera indicator is unavailable")
+    def test_2_camera_stream(self) -> None:
+        """
+        Camera status is reported in the widget
+        """
+        # Open two mock cameras to show the camera list
+        bin_dir = os.getenv("CMAKE_RUNTIME_OUTPUT_DIRECTORY", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "build", "bin"))
+        mock_camera1 = subprocess.Popen([os.path.join(bin_dir, "pipewiremockcamera")], stdout=subprocess.PIPE, stderr=sys.stderr)
+        mock_camera2 = subprocess.Popen([os.path.join(bin_dir, "pipewiremockcamera")], stdout=sys.stderr, stderr=sys.stderr)
+        self.addCleanup(mock_camera1.terminate)
+        self.addCleanup(mock_camera2.terminate)
+        self.driver.find_element(AppiumBy.NAME, "KDE Camera")
+        self.driver.find_element("description", "Suspended")
+
+        # Get the node id of the first mock camera
+        node_id: str = ""
+        PREFIX: Final = "node id: "
+        while True:
+            line = mock_camera1.stdout.readline().decode().strip()
+            if line.startswith(PREFIX):
+                node_id = line[len(PREFIX):]
+                break
+        assert int(node_id) > 0, node_id
+
+        # Open the camera player and connect to the first mock camera
+        camera_player = subprocess.Popen([os.path.join(bin_dir, "pipewirecameraplay"), node_id], stdout=sys.stderr, stderr=sys.stderr)
+        self.addCleanup(camera_player.terminate)
+        self.driver.find_element("description", "Active")
+
+        # Show the placeholder message when there is only one camera
+        mock_camera2.terminate()
+        self.driver.find_element(AppiumBy.NAME, "A camera is in use")
 
 
 if __name__ == '__main__':

@@ -32,6 +32,12 @@ add_test(
 set_tests_properties(calendartest PROPERTIES TIMEOUT 120)
 
 add_test(
+    NAME cameraindicatortest
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/cameraindicatortest.py
+)
+set_tests_properties(cameraindicatortest PROPERTIES TIMEOUT 120 ENVIRONMENT "CMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
+
+add_test(
     NAME clipboardtest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py --failfast
 )
@@ -97,9 +103,3 @@ add_test(
     COMMAND dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/logoutgreetertest.py
 )
 set_tests_properties(logoutgreetertest PROPERTIES TIMEOUT 300 ENVIRONMENT "PLASMA_SESSION_GUI_TEST=1;KDE_INSTALL_FULL_LIBEXECDIR=${KDE_INSTALL_FULL_LIBEXECDIR}")
-
-add_test(
-    NAME cameraindicatortest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/cameraindicatortest.py
-)
-set_tests_properties(cameraindicatortest PROPERTIES TIMEOUT 120)
