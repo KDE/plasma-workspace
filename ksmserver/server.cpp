@@ -364,7 +364,7 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
             file_entry->auth_name = strdup("MIT-MAGIC-COOKIE-1");
             file_entry->auth_data = strdup((*authDataEntries)[i].auth_data);
             file_entry->auth_data_length = MAGIC_COOKIE_LEN;
-            if (IceWriteAuthFileEntry(fp, file_entry) != 0) {
+            if (IceWriteAuthFileEntry(fp, file_entry) == 0) {
                 qWarning("Failed to write ice auth file entry");
             }
             IceFreeAuthFileEntry(file_entry);
@@ -388,13 +388,18 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
             file_entry->auth_name = strdup("MIT-MAGIC-COOKIE-1");
             file_entry->auth_data = strdup((*authDataEntries)[i + 1].auth_data);
             file_entry->auth_data_length = MAGIC_COOKIE_LEN;
-            if (IceWriteAuthFileEntry(fp, file_entry) != 0) {
+            if (IceWriteAuthFileEntry(fp, file_entry) == 0) {
                 qWarning("Failed to write xsmp ice auth file entry");
             }
             IceFreeAuthFileEntry(file_entry);
         }
 
         IceSetPaAuthData(2, &(*authDataEntries)[i]);
+    }
+
+    if (fclose(fp) != 0) {
+        qWarning() << "Could not close ICEAuthority file";
+        return 0;
     }
 
     return (1);
