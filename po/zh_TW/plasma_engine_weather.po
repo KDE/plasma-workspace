@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 03:02+0000\n"
+"POT-Creation-Date: 2024-06-09 02:29+0000\n"
 "PO-Revision-Date: 2023-03-06 21:51+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
@@ -2781,8 +2781,8 @@ msgstr "來源：Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:899 ions/envcan/ion_envcan.cpp:901
 #: ions/envcan/ion_envcan.cpp:1389 ions/envcan/ion_envcan.cpp:1514
-#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:384
-#: ions/noaa/ion_noaa.cpp:569
+#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:386
+#: ions/noaa/ion_noaa.cpp:571
 #, kde-format
 msgid "N/A"
 msgstr "無"
@@ -2816,7 +2816,7 @@ msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
 msgstr "來自 Environment and Climate Change Canada 的資料"
 
-#: ions/noaa/ion_noaa.cpp:662
+#: ions/noaa/ion_noaa.cpp:664
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"

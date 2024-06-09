@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-01 02:27+0000\n"
-"PO-Revision-Date: 2024-02-24 18:45+0000\n"
+"PO-Revision-Date: 2024-06-08 17:19+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -231,31 +231,31 @@ msgstr "Tastatură pe ecran dezactivată"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Adormirea și blocarea ecranului blocate"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Adormirea și blocarea ecranului deblocate"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Regim de economisire a energiei"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Regim de alimentare echilibrat"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Regim de performanță"
 
 #: panelview.cpp:1017
 #, kde-format
@@ -298,7 +298,7 @@ msgstr "Ascunde biroul"
 #: shellcorona.cpp:223
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Activează lansatorul de aplicații"
 
 #: shellcorona.cpp:231
 #, kde-format
@@ -328,7 +328,7 @@ msgstr "Activează înregistrarea %1 din gestionarul de sarcini"
 #: shellcorona.cpp:305
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Gestiune panouri și birouri"
 
 #: shellcorona.cpp:327
 #, kde-format

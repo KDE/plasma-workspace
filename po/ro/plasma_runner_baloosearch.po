@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the plasma-workspace package.
-# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022, 2023.
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2015, 2020, 2022, 2023, 2024.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-workspace\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-19 00:40+0000\n"
-"PO-Revision-Date: 2023-04-10 19:50+0100\n"
+"PO-Revision-Date: 2024-06-08 17:17+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -24,13 +24,12 @@ msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
 
 #: baloosearchrunner.cpp:84
-#, fuzzy, kde-format
-#| msgid "Audios"
+#, kde-format
 msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
 "of the word"
 msgid "Audio"
-msgstr "Sunete"
+msgstr "Audio"
 
 #: baloosearchrunner.cpp:86
 #, kde-format
