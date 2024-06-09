@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-05-27 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -36,71 +36,117 @@ msgstr "andrejm@ubuntu.si,matjaz.jeran@amis.net,jlp@holodeck1.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Nastavi vstavek za dejanja miške"
 
-#: desktopview.cpp:211
+#: desktopview.cpp:221
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma 6.0 Dev"
 
-#: desktopview.cpp:214
+#: desktopview.cpp:224
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma 6.0 Alpha"
 
-#: desktopview.cpp:217
+#: desktopview.cpp:227
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma 6.0 Beta 1"
 
-#: desktopview.cpp:220
+#: desktopview.cpp:230
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma 6.0 Beta 2"
 
-#: desktopview.cpp:223
+#: desktopview.cpp:233
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma 6.0 RC1"
 
-#: desktopview.cpp:226
+#: desktopview.cpp:236
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma 6.0 RC2"
 
-#: desktopview.cpp:252
+#: desktopview.cpp:262
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 Dev"
 
-#: desktopview.cpp:256
+#: desktopview.cpp:266
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 Beta"
 
-#: desktopview.cpp:259
+#: desktopview.cpp:269
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 Beta %2"
 
-#: desktopview.cpp:263
+#: desktopview.cpp:273
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:269
+#: desktopview.cpp:279
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Obiščite bugs.kde.org za poročanje o težavah"
+
+#: desktopview.cpp:287
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy Plasma Version"
+msgstr ""
+
+#: desktopview.cpp:293
+#, kde-format
+msgctxt "@action:button"
+msgid "Report a Bug…"
+msgstr ""
+
+#: desktopview.cpp:303
+#, kde-format
+msgctxt "@title:menu"
+msgid "Hide Preview Banner"
+msgstr ""
+
+#: desktopview.cpp:306
+#, kde-format
+msgctxt "@action:button Hide the preview banner until the system is restarted"
+msgid "Hide Until Restart"
+msgstr ""
+
+#: desktopview.cpp:313
+#, kde-format
+msgctxt "@action:button Hide the preview banner permanently"
+msgid "Hide Permanently…"
+msgstr ""
+
+#: desktopview.cpp:319
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Are you sure you want to permanently hide the preview banner?<nl/><nl/>This "
+"action can only be undone by removing the line beginning with "
+"<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
+"filename> config file."
+msgstr ""
+
+#: desktopview.cpp:321
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide Preview Banner?"
+msgstr ""
 
 #: main.cpp:84
 #, kde-format

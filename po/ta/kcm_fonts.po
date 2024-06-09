@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts 1.0\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2023-04-09 13:44+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -151,16 +151,7 @@ msgstr ""
 "மிகப்பெரிய எழுத்துருக்கள் அசிங்கமாக தெரியலாம். பதிலாக, காட்சிக்கருவிக்கான அளவீட்டு விகித‍"
 "த்தை மாற்றி பாருங்கள்."
 
-#: ui/main.qml:74
-#, kde-format
-msgid ""
-"Decimal font sizes can cause text layout problems in some applications. "
-"Consider using only integer font sizes."
-msgstr ""
-"பின்னமாயுள்ள எழுத்துரு அளவு, சில செயலிகளில் பிரச்சனைகளை உண்டாக்கலாம். முழு எண்ணாயுள்ள "
-"எழுத்துருவை பயன்படுத்துவது நல்லது."
-
-#: ui/main.qml:97
+#: ui/main.qml:73
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -169,82 +160,82 @@ msgstr ""
 "இடைமுகப்பின் அளவை மாற்ற பரிந்துரைக்கப்படும் வழி, காட்சிக்கருவிக்கான அளவீட்டு விகித‍த்தை "
 "மாற்றுவதாகும்."
 
-#: ui/main.qml:110
+#: ui/main.qml:86
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&அனைத்து எழுத்துருக்களையும் திருத்து…"
 
-#: ui/main.qml:123
+#: ui/main.qml:99
 #, kde-format
 msgid "General:"
 msgstr "பொதுவானது:"
 
-#: ui/main.qml:124
+#: ui/main.qml:100
 #, kde-format
 msgid "Select general font"
 msgstr "பொதுவான எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgid "Fixed width:"
 msgstr "சம‍அகலம்:"
 
-#: ui/main.qml:136
+#: ui/main.qml:112
 #, kde-format
 msgid "Select fixed width font"
 msgstr "சம‍அகல எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:147
+#: ui/main.qml:123
 #, kde-format
 msgid "Small:"
 msgstr "சிறியது:"
 
-#: ui/main.qml:148
+#: ui/main.qml:124
 #, kde-format
 msgid "Select small font"
 msgstr "சிறிய எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:159
+#: ui/main.qml:135
 #, kde-format
 msgid "Toolbar:"
 msgstr "கருவிப்பட்டை:"
 
-#: ui/main.qml:160
+#: ui/main.qml:136
 #, kde-format
 msgid "Select toolbar font"
 msgstr "கருவிப்பட்டைக்கான எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:171
+#: ui/main.qml:147
 #, kde-format
 msgid "Menu:"
 msgstr "பட்டி:"
 
-#: ui/main.qml:172
+#: ui/main.qml:148
 #, kde-format
 msgid "Select menu font"
 msgstr "பட்டிகளுக்கான எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:182
+#: ui/main.qml:158
 #, kde-format
 msgid "Window title:"
 msgstr "சாளர தலைப்பு:"
 
-#: ui/main.qml:183
+#: ui/main.qml:159
 #, kde-format
 msgid "Select window title font"
 msgstr "சாளரத் தலைப்பிற்கான எழுத்துருவை தேர்ந்தெடுக்கவும்"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, fuzzy, kde-format
 msgid "Anti-Aliasing:"
 msgstr "எழுத்துருக்களுக்கும் குறும்படங்களுக்கும் மெருக்கு (Anti-Aliasing) உபயோகிக்கவும்"
 
-#: ui/main.qml:203
+#: ui/main.qml:179
 #, kde-format
 msgid "Enable"
 msgstr "இயக்கு"
 
-#: ui/main.qml:207
+#: ui/main.qml:183
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -255,28 +246,28 @@ msgid ""
 "problems."
 msgstr ""
 
-#: ui/main.qml:221
+#: ui/main.qml:197
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr ""
 
-#: ui/main.qml:240 ui/main.qml:264
+#: ui/main.qml:216 ui/main.qml:240
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:255
+#: ui/main.qml:231
 #, kde-format
 msgid "to"
 msgstr "–"
 
-#: ui/main.qml:287
+#: ui/main.qml:263
 #, fuzzy, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "குறும்பட உதவியை பயன்படுத்து"
 
-#: ui/main.qml:333
+#: ui/main.qml:309
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -290,14 +281,14 @@ msgid ""
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, fuzzy, kde-format
 #| msgid "Hinting style: "
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "ஹின்டிங் பாணி"
 
-#: ui/main.qml:383
+#: ui/main.qml:359
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -307,12 +298,12 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:396
+#: ui/main.qml:372
 #, kde-format
 msgid "Force font DPI:"
 msgstr "எழுத்துருக்கான DPI-யை கட்டாயப்படுத்து:"
 
-#: ui/main.qml:424
+#: ui/main.qml:400
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -324,10 +315,17 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:430
+#: ui/main.qml:406
 #, kde-format
 msgid "Select Font"
 msgstr "எழுத்துருவை தேர்வு செய்தல்"
+
+#~ msgid ""
+#~ "Decimal font sizes can cause text layout problems in some applications. "
+#~ "Consider using only integer font sizes."
+#~ msgstr ""
+#~ "பின்னமாயுள்ள எழுத்துரு அளவு, சில செயலிகளில் பிரச்சனைகளை உண்டாக்கலாம். முழு "
+#~ "எண்ணாயுள்ள எழுத்துருவை பயன்படுத்துவது நல்லது."
 
 #~ msgid "Force font DPI Wayland"
 #~ msgstr "எழுத்துரு DPI-ஐ Wayland-இல் கட்டாயப்படுத்து"

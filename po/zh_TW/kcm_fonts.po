@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2023-08-07 23:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -159,98 +159,89 @@ msgstr ""
 "超大字型可能會使外觀看來很奇怪。請考慮調整全域螢幕縮放比例，而非使用超大字"
 "型。"
 
-#: ui/main.qml:74
-#, kde-format
-msgid ""
-"Decimal font sizes can cause text layout problems in some applications. "
-"Consider using only integer font sizes."
-msgstr ""
-"有小數點的字型大小可能會造成某些應用程式的文字編排出問題。請考慮使用整數字型"
-"大小。"
-
-#: ui/main.qml:97
+#: ui/main.qml:73
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr "建議的縮放使用者介面方式是使用全域螢幕縮放功能。"
 
-#: ui/main.qml:110
+#: ui/main.qml:86
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "調整所有字型...(&A)"
 
-#: ui/main.qml:123
+#: ui/main.qml:99
 #, kde-format
 msgid "General:"
 msgstr "一般："
 
-#: ui/main.qml:124
+#: ui/main.qml:100
 #, kde-format
 msgid "Select general font"
 msgstr "選擇一般字型"
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgid "Fixed width:"
 msgstr "等寬字型："
 
-#: ui/main.qml:136
+#: ui/main.qml:112
 #, kde-format
 msgid "Select fixed width font"
 msgstr "選擇等寬字型"
 
-#: ui/main.qml:147
+#: ui/main.qml:123
 #, kde-format
 msgid "Small:"
 msgstr "小型字："
 
-#: ui/main.qml:148
+#: ui/main.qml:124
 #, kde-format
 msgid "Select small font"
 msgstr "選擇小字用字型"
 
-#: ui/main.qml:159
+#: ui/main.qml:135
 #, kde-format
 msgid "Toolbar:"
 msgstr "工具列："
 
-#: ui/main.qml:160
+#: ui/main.qml:136
 #, kde-format
 msgid "Select toolbar font"
 msgstr "選擇工具列字型"
 
-#: ui/main.qml:171
+#: ui/main.qml:147
 #, kde-format
 msgid "Menu:"
 msgstr "選單："
 
-#: ui/main.qml:172
+#: ui/main.qml:148
 #, kde-format
 msgid "Select menu font"
 msgstr "選擇選單字型"
 
-#: ui/main.qml:182
+#: ui/main.qml:158
 #, kde-format
 msgid "Window title:"
 msgstr "視窗標題："
 
-#: ui/main.qml:183
+#: ui/main.qml:159
 #, kde-format
 msgid "Select window title font"
 msgstr "選擇視窗標題字型"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "防鋸齒："
 
-#: ui/main.qml:203
+#: ui/main.qml:179
 #, kde-format
 msgid "Enable"
 msgstr "啟用"
 
-#: ui/main.qml:207
+#: ui/main.qml:183
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -264,28 +255,28 @@ msgstr ""
 "字體看起來就像是由方格組成。<emphasis>防鋸齒</emphasis>功能可以減輕此效應，一"
 "般建議開啟此功能，除非它產生其他問題。"
 
-#: ui/main.qml:221
+#: ui/main.qml:197
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "不對以下範圍進行防鋸齒"
 
-#: ui/main.qml:240 ui/main.qml:264
+#: ui/main.qml:216 ui/main.qml:240
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 pt"
 
-#: ui/main.qml:255
+#: ui/main.qml:231
 #, kde-format
 msgid "to"
 msgstr "至"
 
-#: ui/main.qml:287
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "子像素繪製："
 
-#: ui/main.qml:333
+#: ui/main.qml:309
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -305,13 +296,13 @@ msgstr ""
 "會使用<emphasis>BGR</emphasis>，而其他更少見的排列方式本功能則不支援。</para>"
 "本功能不支援 CRT 螢幕。"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "字型微調（Hinting）："
 
-#: ui/main.qml:383
+#: ui/main.qml:359
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -324,12 +315,12 @@ msgstr ""
 "字體時），較強的微調通常會讓字體筆畫邊緣更加鮮明，但小號字體的形狀將與大號字"
 "體明顯不同。"
 
-#: ui/main.qml:396
+#: ui/main.qml:372
 #, kde-format
 msgid "Force font DPI:"
 msgstr "強制指定字型 DPI："
 
-#: ui/main.qml:424
+#: ui/main.qml:400
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -345,10 +336,17 @@ msgstr ""
 "para><para>若要使文字變大，請修改上方的字型大小。若要改變所有東西的大小，請在"
 "<interface>顯示與螢幕</interface>頁面中調整縮放比例。</para>"
 
-#: ui/main.qml:430
+#: ui/main.qml:406
 #, kde-format
 msgid "Select Font"
 msgstr "選擇字型"
+
+#~ msgid ""
+#~ "Decimal font sizes can cause text layout problems in some applications. "
+#~ "Consider using only integer font sizes."
+#~ msgstr ""
+#~ "有小數點的字型大小可能會造成某些應用程式的文字編排出問題。請考慮使用整數字"
+#~ "型大小。"
 
 #~ msgid "Force font DPI Wayland"
 #~ msgstr "強制指定字型 DPI (Wayland)"

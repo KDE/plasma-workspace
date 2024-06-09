@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2022-01-27 21:24+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -2787,8 +2787,8 @@ msgstr "Lähde: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:899 ions/envcan/ion_envcan.cpp:901
 #: ions/envcan/ion_envcan.cpp:1389 ions/envcan/ion_envcan.cpp:1514
-#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:384
-#: ions/noaa/ion_noaa.cpp:569
+#: ions/envcan/ion_envcan.cpp:1530 ions/noaa/ion_noaa.cpp:386
+#: ions/noaa/ion_noaa.cpp:571
 #, kde-format
 msgid "N/A"
 msgstr "-"
@@ -2822,7 +2822,7 @@ msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
 msgstr "Tiedot tarjoaa Environment and Climate Canada"
 
-#: ions/noaa/ion_noaa.cpp:662
+#: ions/noaa/ion_noaa.cpp:664
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"

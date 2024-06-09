@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2024-02-24 18:45+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"PO-Revision-Date: 2024-06-08 17:19+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
@@ -33,71 +33,117 @@ msgstr "sergiu@cip.md"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurare extensie acțiuni de maus"
 
-#: desktopview.cpp:211
+#: desktopview.cpp:221
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "KDE Plasma 6.0 Dev"
 
-#: desktopview.cpp:214
+#: desktopview.cpp:224
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "KDE Plasma 6.0 Alpha"
 
-#: desktopview.cpp:217
+#: desktopview.cpp:227
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "KDE Plasma 6.0 Beta 1"
 
-#: desktopview.cpp:220
+#: desktopview.cpp:230
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "KDE Plasma 6.0 Beta 2"
 
-#: desktopview.cpp:223
+#: desktopview.cpp:233
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "KDE Plasma 6.0 RC1"
 
-#: desktopview.cpp:226
+#: desktopview.cpp:236
 #, kde-format
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "KDE Plasma 6.0 RC2"
 
-#: desktopview.cpp:252
+#: desktopview.cpp:262
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "KDE Plasma %1 Dev"
 
-#: desktopview.cpp:256
+#: desktopview.cpp:266
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "KDE Plasma %1 Beta"
 
-#: desktopview.cpp:259
+#: desktopview.cpp:269
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr "KDE Plasma %1 Beta %2"
 
-#: desktopview.cpp:263
+#: desktopview.cpp:273
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "KDE Plasma %1"
 
-#: desktopview.cpp:269
+#: desktopview.cpp:279
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr "Vizitați bugs.kde.org pentru a raporta probleme"
+
+#: desktopview.cpp:287
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy Plasma Version"
+msgstr ""
+
+#: desktopview.cpp:293
+#, kde-format
+msgctxt "@action:button"
+msgid "Report a Bug…"
+msgstr ""
+
+#: desktopview.cpp:303
+#, kde-format
+msgctxt "@title:menu"
+msgid "Hide Preview Banner"
+msgstr ""
+
+#: desktopview.cpp:306
+#, kde-format
+msgctxt "@action:button Hide the preview banner until the system is restarted"
+msgid "Hide Until Restart"
+msgstr ""
+
+#: desktopview.cpp:313
+#, kde-format
+msgctxt "@action:button Hide the preview banner permanently"
+msgid "Hide Permanently…"
+msgstr ""
+
+#: desktopview.cpp:319
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Are you sure you want to permanently hide the preview banner?<nl/><nl/>This "
+"action can only be undone by removing the line beginning with "
+"<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
+"filename> config file."
+msgstr ""
+
+#: desktopview.cpp:321
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide Preview Banner?"
+msgstr ""
 
 #: main.cpp:84
 #, kde-format
@@ -231,31 +277,31 @@ msgstr "Tastatură pe ecran dezactivată"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Adormirea și blocarea ecranului blocate"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Adormirea și blocarea ecranului deblocate"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Regim de economisire a energiei"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Regim de alimentare echilibrat"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Regim de performanță"
 
 #: panelview.cpp:426
 #, kde-format
@@ -306,7 +352,7 @@ msgstr "Ascunde biroul"
 #: shellcorona.cpp:223
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Activează lansatorul de aplicații"
 
 #: shellcorona.cpp:231
 #, kde-format
@@ -336,7 +382,7 @@ msgstr "Activează înregistrarea %1 din gestionarul de sarcini"
 #: shellcorona.cpp:305
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Gestiune panouri și birouri"
 
 #: shellcorona.cpp:327
 #, kde-format

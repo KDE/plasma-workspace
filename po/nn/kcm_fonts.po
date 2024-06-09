@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2024-03-23 13:45+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -157,16 +157,7 @@ msgstr ""
 "Veldig stor skriftstorleik kan føra til rar utsjånad. Vurder å heller "
 "justera den globale skjerm­skaleringa."
 
-#: ui/main.qml:74
-#, kde-format
-msgid ""
-"Decimal font sizes can cause text layout problems in some applications. "
-"Consider using only integer font sizes."
-msgstr ""
-"Skriftstorleikar med desimaltal kan føra til feil tekstvising i nokre "
-"program. Vurder å berre bruka heiltaleg skriftstorleik."
-
-#: ui/main.qml:97
+#: ui/main.qml:73
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -174,82 +165,82 @@ msgid ""
 msgstr ""
 "Tilrådd måte for skalering av brukar­flata er å bruka global skjermskalering."
 
-#: ui/main.qml:110
+#: ui/main.qml:86
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&Tilpass alle skriftene …"
 
-#: ui/main.qml:123
+#: ui/main.qml:99
 #, kde-format
 msgid "General:"
 msgstr "Generelt:"
 
-#: ui/main.qml:124
+#: ui/main.qml:100
 #, kde-format
 msgid "Select general font"
 msgstr "Vel generell skrift"
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgid "Fixed width:"
 msgstr "Fast breidd:"
 
-#: ui/main.qml:136
+#: ui/main.qml:112
 #, kde-format
 msgid "Select fixed width font"
 msgstr "Vel fastbreiddeskrift"
 
-#: ui/main.qml:147
+#: ui/main.qml:123
 #, kde-format
 msgid "Small:"
 msgstr "Lita skrift:"
 
-#: ui/main.qml:148
+#: ui/main.qml:124
 #, kde-format
 msgid "Select small font"
 msgstr "Vel lita skrift"
 
-#: ui/main.qml:159
+#: ui/main.qml:135
 #, kde-format
 msgid "Toolbar:"
 msgstr "Verktøylinje:"
 
-#: ui/main.qml:160
+#: ui/main.qml:136
 #, kde-format
 msgid "Select toolbar font"
 msgstr "Vel verktøylinje-skrift"
 
-#: ui/main.qml:171
+#: ui/main.qml:147
 #, kde-format
 msgid "Menu:"
 msgstr "Menyar:"
 
-#: ui/main.qml:172
+#: ui/main.qml:148
 #, kde-format
 msgid "Select menu font"
 msgstr "Vel menyskrift"
 
-#: ui/main.qml:182
+#: ui/main.qml:158
 #, kde-format
 msgid "Window title:"
 msgstr "Vindaugstittel:"
 
-#: ui/main.qml:183
+#: ui/main.qml:159
 #, kde-format
 msgid "Select window title font"
 msgstr "Vel vindaugstittel-skrift"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "Kantutjamning:"
 
-#: ui/main.qml:203
+#: ui/main.qml:179
 #, kde-format
 msgid "Enable"
 msgstr "Slå på"
 
-#: ui/main.qml:207
+#: ui/main.qml:183
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -265,28 +256,28 @@ msgstr ""
 "til å redusera effekten av rutenett­avviket. Du bør vanlegvis ha kant­"
 "utjamning slått på, og berre slå det av dersom det fører til problem."
 
-#: ui/main.qml:221
+#: ui/main.qml:197
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "Utelat kantutjamning for nokre storleikar"
 
-#: ui/main.qml:240 ui/main.qml:264
+#: ui/main.qml:216 ui/main.qml:240
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 punkt"
 
-#: ui/main.qml:255
+#: ui/main.qml:231
 #, kde-format
 msgid "to"
 msgstr "til"
 
-#: ui/main.qml:287
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "Delpikselvising:"
 
-#: ui/main.qml:333
+#: ui/main.qml:309
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -309,13 +300,13 @@ msgstr ""
 "andre har meir eksotiske mønster, som ikkje er støtta av denne funksjonen.</"
 "para><para>Dette verkar ikkje med CRT-skjermar.</para>"
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Hintstil:"
 
-#: ui/main.qml:383
+#: ui/main.qml:359
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -329,12 +320,12 @@ msgstr ""
 "fører generelt til skarpare kantar, men bokstavane vil ved liten "
 "skriftstorleik likna mindre på korleis dei eigentleg skal sjå ut."
 
-#: ui/main.qml:396
+#: ui/main.qml:372
 #, kde-format
 msgid "Force font DPI:"
 msgstr "Tving skrift-PPT:"
 
-#: ui/main.qml:424
+#: ui/main.qml:400
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -354,7 +345,14 @@ msgstr ""
 "justera den globale skaleringa under sida <interface>Skjerm og skjermbilete</"
 "interface>.</para>"
 
-#: ui/main.qml:430
+#: ui/main.qml:406
 #, kde-format
 msgid "Select Font"
 msgstr "Vel skrift"
+
+#~ msgid ""
+#~ "Decimal font sizes can cause text layout problems in some applications. "
+#~ "Consider using only integer font sizes."
+#~ msgstr ""
+#~ "Skriftstorleikar med desimaltal kan føra til feil tekstvising i nokre "
+#~ "program. Vurder å berre bruka heiltaleg skriftstorleik."

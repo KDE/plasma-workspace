@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2023-04-13 09:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -160,16 +160,7 @@ msgstr ""
 "قد ينتج عن الخطوط الكبيرة جدًا نتائج غريبة المظهر. ضع في اعتبارك تعديل مقياس "
 "الشاشة العامل العام بدلاً من استخدام حجم خط كبير جدًا."
 
-#: ui/main.qml:74
-#, kde-format
-msgid ""
-"Decimal font sizes can cause text layout problems in some applications. "
-"Consider using only integer font sizes."
-msgstr ""
-"يمكن أن تتسبب أحجام الخطوط العشرية في حدوث مشكلات في تخطيط النص في بعض "
-"التطبيقات.ضع في اعتبارك استخدام أحجام خطوط صحيحة فقط."
-
-#: ui/main.qml:97
+#: ui/main.qml:73
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
@@ -178,82 +169,82 @@ msgstr ""
 "الطريقة الموصى بها لتوسيع نطاق واجهة المستخدم هي استخدام ميزة تحجيم الشاشة "
 "الشاملة."
 
-#: ui/main.qml:110
+#: ui/main.qml:86
 #, kde-format
 msgid "&Adjust All Fonts…"
 msgstr "&عدّل كلّ الخطوط..."
 
-#: ui/main.qml:123
+#: ui/main.qml:99
 #, kde-format
 msgid "General:"
 msgstr "عام"
 
-#: ui/main.qml:124
+#: ui/main.qml:100
 #, kde-format
 msgid "Select general font"
 msgstr "اختر خط عام"
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, kde-format
 msgid "Fixed width:"
 msgstr "العرض الثابت:"
 
-#: ui/main.qml:136
+#: ui/main.qml:112
 #, kde-format
 msgid "Select fixed width font"
 msgstr "اختر خط ثابت العرض"
 
-#: ui/main.qml:147
+#: ui/main.qml:123
 #, kde-format
 msgid "Small:"
 msgstr "صغير:"
 
-#: ui/main.qml:148
+#: ui/main.qml:124
 #, kde-format
 msgid "Select small font"
 msgstr "اختر خط صغير"
 
-#: ui/main.qml:159
+#: ui/main.qml:135
 #, kde-format
 msgid "Toolbar:"
 msgstr "شريط الأدوات:"
 
-#: ui/main.qml:160
+#: ui/main.qml:136
 #, kde-format
 msgid "Select toolbar font"
 msgstr "اختر خط شريط الأدوات"
 
-#: ui/main.qml:171
+#: ui/main.qml:147
 #, kde-format
 msgid "Menu:"
 msgstr "القائمة:"
 
-#: ui/main.qml:172
+#: ui/main.qml:148
 #, kde-format
 msgid "Select menu font"
 msgstr "اختر خط القائمة"
 
-#: ui/main.qml:182
+#: ui/main.qml:158
 #, kde-format
 msgid "Window title:"
 msgstr "عنوان النافذة:"
 
-#: ui/main.qml:183
+#: ui/main.qml:159
 #, kde-format
 msgid "Select window title font"
 msgstr "اختر خط عنوان النافذة"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, kde-format
 msgid "Anti-Aliasing:"
 msgstr "الصقل:"
 
-#: ui/main.qml:203
+#: ui/main.qml:179
 #, kde-format
 msgid "Enable"
 msgstr "ممكّن"
 
-#: ui/main.qml:207
+#: ui/main.qml:183
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -268,28 +259,28 @@ msgstr ""
 "<emphasis> الصقل </emphasis> لتقليل هذا التأثير. بشكل عام تريد الاحتفاظ بهذا "
 "الخيار ممكّنًا ما لم يتسبب في حدوث مشكلات."
 
-#: ui/main.qml:221
+#: ui/main.qml:197
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr "استبعاد النطاق من الصقل"
 
-#: ui/main.qml:240 ui/main.qml:264
+#: ui/main.qml:216 ui/main.qml:240
 #, kde-format
 msgid "%1 pt"
 msgstr "%1 نق"
 
-#: ui/main.qml:255
+#: ui/main.qml:231
 #, kde-format
 msgid "to"
 msgstr "إلى"
 
-#: ui/main.qml:287
+#: ui/main.qml:263
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "التصيير جزء-بكسلي:"
 
-#: ui/main.qml:333
+#: ui/main.qml:309
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -310,13 +301,13 @@ msgstr ""
 "وحدات بكسل فرعية ، وبعضها يحتوي على <emphasis> BGR </emphasis> وبعض الطلبات "
 "الغريبة لا تدعمها هذه الميزة. </para> هذا لا يعمل مع  شاشات CRT."
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "التلميح:"
 
-#: ui/main.qml:383
+#: ui/main.qml:359
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -329,12 +320,12 @@ msgstr ""
 "في الأحجام الصغيرة. يؤدي التلميح الأقوى عمومًا إلى حواف أكثر حدة ولكن الأحرف "
 "الصغيرة ستكون أقل تشابهًا لشكلها في الأحجام الكبيرة. "
 
-#: ui/main.qml:396
+#: ui/main.qml:372
 #, kde-format
 msgid "Force font DPI:"
 msgstr "افرِض عدد النقاط في البوصة للخطوط:"
 
-#: ui/main.qml:424
+#: ui/main.qml:400
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -352,10 +343,17 @@ msgstr ""
 "استخدم شريط تمرير التحجيم في صفحة  <interface>العرض والشاشة </interface></"
 "para>"
 
-#: ui/main.qml:430
+#: ui/main.qml:406
 #, kde-format
 msgid "Select Font"
 msgstr "اختر خطًا"
+
+#~ msgid ""
+#~ "Decimal font sizes can cause text layout problems in some applications. "
+#~ "Consider using only integer font sizes."
+#~ msgstr ""
+#~ "يمكن أن تتسبب أحجام الخطوط العشرية في حدوث مشكلات في تخطيط النص في بعض "
+#~ "التطبيقات.ضع في اعتبارك استخدام أحجام خطوط صحيحة فقط."
 
 #~ msgid "Force font DPI Wayland"
 #~ msgstr "افرِض عدد النقاط في البوصة للخطوط لويلاند"

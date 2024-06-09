@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-09 00:40+0000\n"
 "PO-Revision-Date: 2008-06-25 18:30+0200\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -172,111 +172,104 @@ msgid ""
 "large font size, consider adjusting the global screen scale."
 msgstr ""
 
-#: ui/main.qml:74
-#, kde-format
-msgid ""
-"Decimal font sizes can cause text layout problems in some applications. "
-"Consider using only integer font sizes."
-msgstr ""
-
-#: ui/main.qml:97
+#: ui/main.qml:73
 #, kde-format
 msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
 
-#: ui/main.qml:110
+#: ui/main.qml:86
 #, fuzzy, kde-format
 #| msgid "Ad&just All Fonts..."
 msgid "&Adjust All Fonts…"
 msgstr "Ad&juster totes les fontes..."
 
-#: ui/main.qml:123
+#: ui/main.qml:99
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "General:"
 msgstr "Djeneråle"
 
-#: ui/main.qml:124
+#: ui/main.qml:100
 #, fuzzy, kde-format
 #| msgid "General"
 msgid "Select general font"
 msgstr "Djeneråle"
 
-#: ui/main.qml:135
+#: ui/main.qml:111
 #, fuzzy, kde-format
 #| msgid "Fixed width"
 msgid "Fixed width:"
 msgstr "A espåçmint ewal"
 
-#: ui/main.qml:136
+#: ui/main.qml:112
 #, fuzzy, kde-format
 #| msgid "Fixed width"
 msgid "Select fixed width font"
 msgstr "A espåçmint ewal"
 
-#: ui/main.qml:147
+#: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "Small"
 msgid "Small:"
 msgstr "Pitite"
 
-#: ui/main.qml:148
+#: ui/main.qml:124
 #, fuzzy, kde-format
 #| msgid "Small"
 msgid "Select small font"
 msgstr "Pitite"
 
-#: ui/main.qml:159
+#: ui/main.qml:135
 #, fuzzy, kde-format
 #| msgid "Toolbar"
 msgid "Toolbar:"
 msgstr "Bår ås usteyes"
 
-#: ui/main.qml:160
+#: ui/main.qml:136
 #, fuzzy, kde-format
 #| msgid "Toolbar"
 msgid "Select toolbar font"
 msgstr "Bår ås usteyes"
 
-#: ui/main.qml:171
+#: ui/main.qml:147
 #, fuzzy, kde-format
 #| msgid "Menu"
 msgid "Menu:"
 msgstr "Menu"
 
-#: ui/main.qml:172
+#: ui/main.qml:148
 #, kde-format
 msgid "Select menu font"
 msgstr ""
 
-#: ui/main.qml:182
+#: ui/main.qml:158
 #, fuzzy, kde-format
 #| msgid "Window title"
 msgid "Window title:"
 msgstr "Tite do purnea"
 
-#: ui/main.qml:183
+#: ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "Window title"
 msgid "Select window title font"
 msgstr "Tite do purnea"
 
-#: ui/main.qml:198
+#: ui/main.qml:174
 #, fuzzy, kde-format
 #| msgid "Use a&nti-aliasing:"
 msgid "Anti-Aliasing:"
 msgstr "Eployî l' &discrenlaedje:"
 
-#: ui/main.qml:203
+#: ui/main.qml:179
 #, fuzzy, kde-format
 #| msgctxt "Use anti-aliasing"
 #| msgid "Enabled"
 msgid "Enable"
 msgstr "En alaedje"
 
-#: ui/main.qml:207
+#: ui/main.qml:183
 #, kde-kuit-format
 msgctxt "@info:tooltip Anti-Aliasing"
 msgid ""
@@ -287,30 +280,30 @@ msgid ""
 "problems."
 msgstr ""
 
-#: ui/main.qml:221
+#: ui/main.qml:197
 #, kde-format
 msgid "Exclude range from anti-aliasing"
 msgstr ""
 
-#: ui/main.qml:240 ui/main.qml:264
+#: ui/main.qml:216 ui/main.qml:240
 #, kde-format
 msgid "%1 pt"
 msgstr ""
 
-#: ui/main.qml:255
+#: ui/main.qml:231
 #, fuzzy, kde-format
 #| msgid " to "
 msgid "to"
 msgstr " disk' a "
 
-#: ui/main.qml:287
+#: ui/main.qml:263
 #, fuzzy, kde-format
 #| msgid "&Use sub-pixel rendering:"
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
 msgstr "&Eployî l' rindou pa dzo-picsels:"
 
-#: ui/main.qml:333
+#: ui/main.qml:309
 #, kde-kuit-format
 msgctxt "@info:tooltip Sub-pixel rendering"
 msgid ""
@@ -324,14 +317,14 @@ msgid ""
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
 
-#: ui/main.qml:338
+#: ui/main.qml:314
 #, fuzzy, kde-format
 #| msgid "Hinting style: "
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
 msgstr "Stîle pol hinting: "
 
-#: ui/main.qml:383
+#: ui/main.qml:359
 #, kde-kuit-format
 msgctxt "@info:tooltip Hinting"
 msgid ""
@@ -341,13 +334,13 @@ msgid ""
 "their shape at big sizes."
 msgstr ""
 
-#: ui/main.qml:396
+#: ui/main.qml:372
 #, fuzzy, kde-format
 #| msgid "Force fonts DPI:"
 msgid "Force font DPI:"
 msgstr "Foircî l' finté des fontes (e DPI):"
 
-#: ui/main.qml:424
+#: ui/main.qml:400
 #, kde-kuit-format
 msgctxt "@info:tooltip Force fonts DPI"
 msgid ""
@@ -359,7 +352,7 @@ msgid ""
 "& Monitor</interface> page.</para>"
 msgstr ""
 
-#: ui/main.qml:430
+#: ui/main.qml:406
 #, kde-format
 msgid "Select Font"
 msgstr ""
