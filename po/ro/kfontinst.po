@@ -1,7 +1,7 @@
 # Traducerea kfontinst.po în Română
 # Copyright (C) 2003, 2004, 2005, 2008 Free Software Foundation, Inc.
 # Claudiu Costin <claudiuc@kde.org>, 2003, 2004, 2005.
-# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2020, 2022.
+# Sergiu Bivol <sergiu@cip.md>, 2008, 2009, 2010, 2011, 2013, 2020, 2022, 2024.
 # Cristian Oneț <onet.cristian@gmail.com>, 2011.
 # Cristian Buzduga <cristianbzdg@gmail.com>, 2011.
 msgid ""
@@ -9,16 +9,16 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2022-02-17 00:21+0000\n"
+"PO-Revision-Date: 2024-06-09 15:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
-"Language-Team: Romanian\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
 "Language: ro\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
 "20)) ? 1 : 2;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -61,11 +61,10 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:122
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"Stabilește dialogul ca tranzitoriu pentru o aplicație X specificată de winid"
+"Face ca dialogul să fie temporar pentru fereastra specificată de windowHandle"
 
 #: apps/Installer.cpp:125
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2014, 2015, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2014, 2015, 2019, 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2021-05-27 18:39+0200\n"
+"PO-Revision-Date: 2024-06-09 10:02+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -32,19 +32,17 @@ msgstr "Visa åtgärder:"
 #: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Logga ut"
 
 #: contents/ui/ConfigGeneral.qml:41
-#, fuzzy, kde-format
-#| msgid "Shutdown"
+#, kde-format
 msgid "Shut Down"
-msgstr "Stäng av"
+msgstr "stäng av"
 
 #: contents/ui/ConfigGeneral.qml:47
-#, fuzzy, kde-format
-#| msgid "Restart…"
+#, kde-format
 msgid "Restart"
-msgstr "Starta om…"
+msgstr "Starta om"
 
 #: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
 #, kde-format
