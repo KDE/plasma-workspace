@@ -25,8 +25,9 @@
 
 #include <QProcess>
 #include <QRegularExpression>
-#include <QStringList>
 #include <QStringView>
+
+using namespace Qt::StringLiterals;
 
 KSolidNotify::KSolidNotify(QObject *parent)
     : QObject(parent)
@@ -187,7 +188,12 @@ void KSolidNotify::onSolidReply(SolidReplyType type, Solid::ErrorType error, con
     switch (error) {
     case Solid::ErrorType::NoError:
         if (type != SolidReplyType::Setup && isSafelyRemovable(udi)) {
-            KNotification::event(QStringLiteral("safelyRemovable"), i18n("Device Status"), i18n("A device can now be safely removed"));
+            KNotification::event(QStringLiteral("safelyRemovable"),
+                                 i18n("Device Status"),
+                                 i18n("A device can now be safely removed"),
+                                 u"device-notifier"_s,
+                                 KNotification::CloseOnTimeout,
+                                 u"devicenotifications"_s);
             errorMsg = i18n("This device can now be safely removed.");
         }
         break;
