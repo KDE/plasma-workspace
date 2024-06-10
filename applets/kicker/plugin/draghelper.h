@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include <QIcon>
 #include <QObject>
 #include <QUrl>
 
@@ -32,7 +31,7 @@ public:
     Q_INVOKABLE bool isDrag(int oldX, int oldY, int newX, int newY) const;
     Q_INVOKABLE void startDrag(QQuickItem *item,
                                const QUrl &url = QUrl(),
-                               const QIcon &icon = QIcon(),
+                               const QString &icon = QString(),
                                const QString &extraMimeType = QString(),
                                const QString &extraMimeData = QString());
 
@@ -46,7 +45,7 @@ private:
     bool m_dragging = false;
     Q_INVOKABLE void doDrag(QQuickItem *item,
                             const QUrl &url = QUrl(),
-                            const QIcon &icon = QIcon(),
+                            const QString &icon = QString(),
                             const QString &extraMimeType = QString(),
                             const QString &extraMimeData = QString());
     void setDragging(bool dragging);
