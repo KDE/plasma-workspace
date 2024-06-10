@@ -503,7 +503,7 @@ msgstr "Acțiuni de sistem"
 
 #~ msgctxt "EMAIL OF TRANSLATORS"
 #~ msgid "Your emails"
-#~ msgstr "sergiu@ase.md"
+#~ msgstr "sergiu@cip.md"
 
 #~ msgid "Runner: %1"
 #~ msgstr "Lansator: %1"
