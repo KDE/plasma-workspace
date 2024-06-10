@@ -199,7 +199,7 @@ void ForwardingModel::connectSignals()
         return;
     }
 
-    connect(m_sourceModel, SIGNAL(destroyed()), this, SLOT(reset()));
+    connect(m_sourceModel, &QObject::destroyed, this, &ForwardingModel::reset);
     connect(m_sourceModel.data(), &QAbstractItemModel::dataChanged, this, &QAbstractItemModel::dataChanged, Qt::UniqueConnection);
     connect(m_sourceModel.data(), &QAbstractItemModel::rowsAboutToBeInserted, this, &QAbstractItemModel::rowsAboutToBeInserted, Qt::UniqueConnection);
     connect(m_sourceModel.data(), &QAbstractItemModel::rowsAboutToBeMoved, this, &QAbstractItemModel::rowsAboutToBeMoved, Qt::UniqueConnection);

@@ -27,7 +27,7 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
         return;
     }
 
-    connect(model, SIGNAL(destroyed(QObject *)), this, SLOT(reset()));
+    connect(model, &QObject::destroyed, this, &ForwardingModel::reset);
 
     if (!m_sourceModel) {
         beginResetModel();
