@@ -34,7 +34,7 @@ Kirigami.AbstractApplicationWindow {
 
         ListView {
             Layout.fillWidth: true
-            implicitHeight: 300
+            implicitHeight: 100
 
             model: ListModel {
                 ListElement {
@@ -54,6 +54,7 @@ Kirigami.AbstractApplicationWindow {
                 icon.name: "kate"
                 text: display
                 checkable: true
+                width: ListView.view.width
             }
         }
 
