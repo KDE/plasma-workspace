@@ -9,8 +9,10 @@ SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include <QEventLoop>
 #include <QGuiApplication>
+#include <QThreadPool>
 #include <QTimer>
 #include <cstdlib>
+
 #include <qpa/qplatformnativeinterface.h>
 
 #include <wayland-client-core.h>
@@ -61,6 +63,10 @@ int main(int argc, char *argv[])
     }
 
     config->sync();
+
+    // WaylandtasksModels runs threads to fetch icons, prevent crashes when they construct QPixmaps but the QGuiApp is already gone
+    QThreadPool::globalInstance()->waitForDone();
+
     return EXIT_SUCCESS;
 }
 
