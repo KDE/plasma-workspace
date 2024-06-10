@@ -32,43 +32,45 @@ bool WindowSystem::eventFilter(QObject *watched, QEvent *event)
 
 void WindowSystem::forceActive(QQuickItem *item)
 {
-    if (!item || !item->window()) {
-        return;
+    if (item) {
+        if (auto window = item->window()) {
+            KX11Extras::forceActiveWindow(window->winId());
+        }
     }
-
-    KX11Extras::forceActiveWindow(item->window()->winId());
 }
 
 bool WindowSystem::isActive(QQuickItem *item)
 {
-    if (!item || !item->window()) {
-        return false;
+    if (item) {
+        if (auto window = item->window()) {
+            return window->isActive();
+        }
     }
 
-    return item->window()->isActive();
+    return false;
 }
 
 void WindowSystem::monitorWindowFocus(QQuickItem *item)
 {
-    if (!item || !item->window()) {
-        return;
+    if (item) {
+        if (auto window = item->window()) {
+            window->installEventFilter(this);
+        }
     }
-
-    item->window()->installEventFilter(this);
 }
 
 void WindowSystem::monitorWindowVisibility(QQuickItem *item)
 {
-    if (!item || !item->window()) {
-        return;
+    if (item) {
+        if (auto window = item->window()) {
+            connect(window, &QQuickWindow::visibilityChanged, this, &WindowSystem::monitoredWindowVisibilityChanged, Qt::UniqueConnection);
+        }
     }
-
-    connect(item->window(), &QQuickWindow::visibilityChanged, this, &WindowSystem::monitoredWindowVisibilityChanged, Qt::UniqueConnection);
 }
 
 void WindowSystem::monitoredWindowVisibilityChanged(QWindow::Visibility visibility) const
 {
-    bool visible = (visibility != QWindow::Hidden);
+    const bool visible = (visibility != QWindow::Hidden);
     QQuickWindow *w = static_cast<QQuickWindow *>(QObject::sender());
 
     if (!visible) {
