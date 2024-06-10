@@ -331,10 +331,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "选择字体"
-
-#~ msgid ""
-#~ "Decimal font sizes can cause text layout problems in some applications. "
-#~ "Consider using only integer font sizes."
-#~ msgstr ""
-#~ "带小数点的非整数字体大小可能会在某些应用程序中造成文字排版问题。请考虑仅使"
-#~ "用整数的字体大小。"

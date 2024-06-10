@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-27 13:14+0300\n"
+"PO-Revision-Date: 2024-06-09 21:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -105,31 +105,31 @@ msgstr "Hataları bildirmek için bugs.kde.org adresini ziyaret edin"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Plasma Sürümünü Kopyala"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Hata Bildir…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Önizleme Afişini Gizle"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Yeniden Başlatılana Dek Gizle"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Kalıcı Olarak Gizle…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -140,12 +140,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Önizleme afişini kalıcı olarak gizlemek istediğinizden emin misiniz?<nl/><nl/"
+">Bu eylem yalnızca <filename>kdeglobals</filename> yapılandırma dosyasında "
+"<icode>ShowDesktopPreviewBanner</icode> ile başlayan satır kaldırılarak geri "
+"alınabilir."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Önizleme Afişini Gizle?"
 
 #: main.cpp:84
 #, kde-format

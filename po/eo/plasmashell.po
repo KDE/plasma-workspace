@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-29 22:04+0200\n"
+"PO-Revision-Date: 2024-06-09 06:15+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -105,31 +105,31 @@ msgstr "Vizitu bugs.kde.org por raporti atentindaĵojn"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Kopii Version de Plasma"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Raporti Cimon…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Kaŝi Antaŭrigardan Rubandon"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Kaŝi Ĝis Restartigo"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Kaŝi Porĉiame…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -140,12 +140,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Ĉu vi certas, ke vi volas konstante kaŝi la antaŭrigardan rubandon?<nl/><nl/"
+">Tiu ĉi ago povas esti malfarata nur per forigo de la linio komencanta per "
+"<icode>ShowDesktopPreviewBanner</icode> en la agorddosiero "
+"<filename>kdeglobals</filename>."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Ĉu Kaŝi Antaŭrigardan Rubandon?"
 
 #: main.cpp:84
 #, kde-format

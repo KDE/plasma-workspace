@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-27 07:12+0200\n"
+"PO-Revision-Date: 2024-06-09 09:02+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
 "Language: sl\n"
@@ -106,31 +106,31 @@ msgstr "Obiščite bugs.kde.org za poročanje o težavah"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Kopiraj Plasma različico"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Poročaj o napaki…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Skrij predogled pasice"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Skrij do ponovnega zagona"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Skrij trajno…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -141,12 +141,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Ali ste prepričani, da želite trajno skriti predogled pasice?<nl/><nl/>To "
+"dejanje lahko razveljavite samo tako, da odstranite vrstico, ki se začne z "
+"<icode>ShowDesktopPreviewBanner</icode> v <filename>kdeglobals</filename> "
+"konfiguracijski datoteki."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Naj skrijem predogled pasice?"
 
 #: main.cpp:84
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-27 04:43+0200\n"
+"PO-Revision-Date: 2024-06-09 06:30+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -103,31 +103,31 @@ msgstr "შეცდომების შესახებ მოსაწე�
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Plasma-ის ვერსიის კოპირება"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "შეცდომის პატაკი…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "მინიატურის ბანერის დამალვა"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "დამალვა გადატვირთვამდე"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "სამუდამოდ დამალვა…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -138,12 +138,15 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"მართლა გნებავთ სამუდამოდ დამალოთ მინიატურის ბანერი?<nl/><nl/>ამ ქმედების "
+"დაბრუნება, მხოლოდ, <filename>kdeglobals</filename> კონფიგურაციის ფაილიდან "
+"<icode>ShowDesktopPreviewBanner</icode> შემცველი ხაზის წაშლით შეგიძლიათ."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "დავმალო მინიატურის ბანერი?"
 
 #: main.cpp:84
 #, kde-format
