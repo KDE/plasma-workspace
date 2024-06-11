@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-11 02:35+0000\n"
 "PO-Revision-Date: 2024-01-21 09:47+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -128,49 +128,49 @@ msgstr "Wszystkie urządzenia"
 msgid "Show popup when new device is plugged in"
 msgstr "Wysuń okno, po podłączeniu nowego urządzenia"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
 msgstr "Stan urządzenia"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie"
 
-#: plugin/ksolidnotify.cpp:191
+#: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Możesz teraz bezpiecznie wysunąć to urządzenie."
 
-#: plugin/ksolidnotify.cpp:198
+#: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Nie masz uprawnień do podpięcia tego urządzenia."
 
-#: plugin/ksolidnotify.cpp:201
+#: plugin/ksolidnotify.cpp:207
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Nie masz uprawnień do wysunięcia tego urządzenia."
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/ksolidnotify.cpp:210
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Nie masz uprawnień do wysunięcia tego dysku."
 
-#: plugin/ksolidnotify.cpp:211
+#: plugin/ksolidnotify.cpp:217
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Nie można podpiąć tego urządzenia, bo jest zajęte."
 
-#: plugin/ksolidnotify.cpp:242
+#: plugin/ksolidnotify.cpp:248
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Jeden lub więcej plików na tym urządzeniu jest otwartych w jakiejś aplikacji."
 
-#: plugin/ksolidnotify.cpp:244
+#: plugin/ksolidnotify.cpp:250
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -184,24 +184,24 @@ msgstr[2] ""
 "Jeden lub więcej plików na tym urządzeniu jest otwartych w następujących "
 "aplikacjach: \"%2\"."
 
-#: plugin/ksolidnotify.cpp:247
+#: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/ksolidnotify.cpp:265
+#: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Nie można podpiąć tego urządzenia."
 
-#: plugin/ksolidnotify.cpp:268
+#: plugin/ksolidnotify.cpp:274
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nie można wysunąć tego urządzenia."
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/ksolidnotify.cpp:277
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Nie można wysunąć dysku."

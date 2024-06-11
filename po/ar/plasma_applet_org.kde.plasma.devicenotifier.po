@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-11 02:35+0000\n"
 "PO-Revision-Date: 2024-02-10 22:13+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -129,48 +129,48 @@ msgstr "كلّ الأجهزة"
 msgid "Show popup when new device is plugged in"
 msgstr "افتح منبثقة عند وصل جهاز جديد"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
 msgstr "حالة الأجهزة"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "يمكن إزالة جهاز الآن بأمان."
 
-#: plugin/ksolidnotify.cpp:191
+#: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "يمكن إزالة هذا الجهاز الآن بأمان."
 
-#: plugin/ksolidnotify.cpp:198
+#: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "لست مستوثقًا لضمّ هذا الجهاز."
 
-#: plugin/ksolidnotify.cpp:201
+#: plugin/ksolidnotify.cpp:207
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "لست مستوثقًا لإزالة هذا الجهاز."
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/ksolidnotify.cpp:210
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "لست مستوثقًا لإخراج هذا القرص."
 
-#: plugin/ksolidnotify.cpp:211
+#: plugin/ksolidnotify.cpp:217
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "تعذّر ضمّ هذا الجهاز فهو مشغول."
 
-#: plugin/ksolidnotify.cpp:242
+#: plugin/ksolidnotify.cpp:248
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في تطبيق آخر."
 
-#: plugin/ksolidnotify.cpp:244
+#: plugin/ksolidnotify.cpp:250
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -182,24 +182,24 @@ msgstr[3] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح �
 msgstr[4] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
 msgstr[5] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
 
-#: plugin/ksolidnotify.cpp:247
+#: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr "، "
 
-#: plugin/ksolidnotify.cpp:265
+#: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not mount this device."
 msgstr "تعذّر ضمّ هذا الجهاز."
 
-#: plugin/ksolidnotify.cpp:268
+#: plugin/ksolidnotify.cpp:274
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "تعذّرت إزالة هذا الجهاز."
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/ksolidnotify.cpp:277
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "تعذّر إخراج هذا القرص."

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-11 02:35+0000\n"
 "PO-Revision-Date: 2024-01-26 20:50+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -130,48 +130,48 @@ msgstr "Öll tæki"
 msgid "Show popup when new device is plugged in"
 msgstr "Birta sprettiglugga þegar ný tæki eru tengd"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
 msgstr "Staða tækis"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "Nú er óhætt að fjarlægja tæki"
 
-#: plugin/ksolidnotify.cpp:191
+#: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "Nú er óhætt að fjarlægja þetta tæki."
 
-#: plugin/ksolidnotify.cpp:198
+#: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "Þú hefur ekki heimild til að tengjast þessu tæki."
 
-#: plugin/ksolidnotify.cpp:201
+#: plugin/ksolidnotify.cpp:207
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Þú hefur ekki heimild til að fjarlægja þetta tæki."
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/ksolidnotify.cpp:210
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "Þú hefur ekki heimild til að ýta þessum diski úr."
 
-#: plugin/ksolidnotify.cpp:211
+#: plugin/ksolidnotify.cpp:217
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "Gat ekki tengt þetta tæki því það er upptekið."
 
-#: plugin/ksolidnotify.cpp:242
+#: plugin/ksolidnotify.cpp:248
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Ein eða fleiri skrár á þessu tæki eru opnar í forriti."
 
-#: plugin/ksolidnotify.cpp:244
+#: plugin/ksolidnotify.cpp:250
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -180,24 +180,24 @@ msgstr[0] "Ein eða fleiri skrár á þessu tæki eru opnar í forritinu \"%2\".
 msgstr[1] ""
 "Ein eða fleiri skrár á þessu tæki eru opnar í eftirtöldum forritum: %2."
 
-#: plugin/ksolidnotify.cpp:247
+#: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/ksolidnotify.cpp:265
+#: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Gat ekki tengt þetta tæki."
 
-#: plugin/ksolidnotify.cpp:268
+#: plugin/ksolidnotify.cpp:274
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Gat ekki fjarlægt þetta tæki."
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/ksolidnotify.cpp:277
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Gat ekki ýtt þessum diski úr."

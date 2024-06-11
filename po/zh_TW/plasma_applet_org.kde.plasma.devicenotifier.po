@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-11 02:35+0000\n"
 "PO-Revision-Date: 2024-01-14 23:53+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -132,72 +132,72 @@ msgstr "所有裝置"
 msgid "Show popup when new device is plugged in"
 msgstr "當新裝置插入時顯示彈出式通知"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
 msgstr "裝置狀態"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "某裝置現在可以安全移除"
 
-#: plugin/ksolidnotify.cpp:191
+#: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "此裝置現在可以安全移除。"
 
-#: plugin/ksolidnotify.cpp:198
+#: plugin/ksolidnotify.cpp:204
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "您沒有掛載此裝置的權限。"
 
-#: plugin/ksolidnotify.cpp:201
+#: plugin/ksolidnotify.cpp:207
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "您沒有移除此裝置的權限。"
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/ksolidnotify.cpp:210
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "您沒有退出此碟片的權限。"
 
-#: plugin/ksolidnotify.cpp:211
+#: plugin/ksolidnotify.cpp:217
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "無法掛載裝置，裝置忙碌中。"
 
-#: plugin/ksolidnotify.cpp:242
+#: plugin/ksolidnotify.cpp:248
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "裝置上的一或多個檔案正被應用程式開啟。"
 
-#: plugin/ksolidnotify.cpp:244
+#: plugin/ksolidnotify.cpp:250
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] "裝置上的一或多個檔案正被以下應用程式開啟：%2。"
 
-#: plugin/ksolidnotify.cpp:247
+#: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr "、"
 
-#: plugin/ksolidnotify.cpp:265
+#: plugin/ksolidnotify.cpp:271
 #, kde-format
 msgid "Could not mount this device."
 msgstr "無法掛載此裝置。"
 
-#: plugin/ksolidnotify.cpp:268
+#: plugin/ksolidnotify.cpp:274
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "無法移除此裝置。"
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/ksolidnotify.cpp:277
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "無法退出碟片。"

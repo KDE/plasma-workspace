@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-11 02:35+0000\n"
 "PO-Revision-Date: 2010-01-29 16:12+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -143,29 +143,29 @@ msgstr ""
 msgid "Show popup when new device is plugged in"
 msgstr "कोनो युक्ति प्लगिन नहि"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:191
+#: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:198
+#: plugin/ksolidnotify.cpp:204
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to mount this device."
 msgstr "एहि अओजार क' लेल 1 क्रिया"
 
-#: plugin/ksolidnotify.cpp:201
+#: plugin/ksolidnotify.cpp:207
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
@@ -173,20 +173,20 @@ msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "एहि अओजार क' लेल 1 क्रिया"
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/ksolidnotify.cpp:210
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to eject this disc."
 msgstr "एहि अओजार क' लेल 1 क्रिया"
 
-#: plugin/ksolidnotify.cpp:211
+#: plugin/ksolidnotify.cpp:217
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "हालमे प्लग कएल गेल उपकरण: %1"
 
-#: plugin/ksolidnotify.cpp:242
+#: plugin/ksolidnotify.cpp:248
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -196,7 +196,7 @@ msgstr ""
 "उपकरणकेँ बाहर नहि कएल जाए सकल.\n"
 "कोनो अनुप्रयोगमे एहि अओजार क' एकाधिक फाइल खुलल अछि."
 
-#: plugin/ksolidnotify.cpp:244
+#: plugin/ksolidnotify.cpp:250
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot unmount the device.\n"
@@ -211,26 +211,26 @@ msgstr[1] ""
 "उपकरणकेँ अनमाउन्ट नहि कएल जाए सकल.\n"
 "कोनो अनुप्रयोगमे एहि अओजार क' एकाधिक फाइल खुलल अछि."
 
-#: plugin/ksolidnotify.cpp:247
+#: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:265
+#: plugin/ksolidnotify.cpp:271
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "हालमे प्लग कएल गेल उपकरण: %1"
 
-#: plugin/ksolidnotify.cpp:268
+#: plugin/ksolidnotify.cpp:274
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "हालमे प्लग कएल गेल उपकरण: %1"
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/ksolidnotify.cpp:277
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"

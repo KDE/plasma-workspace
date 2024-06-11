@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2012, 2014, 2016, 2018, 2019, 2021.
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2009, 2010.
@@ -7,16 +8,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2022-03-13 09:54+0100\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"POT-Creation-Date: 2024-06-11 02:35+0000\n"
+"PO-Revision-Date: 2024-06-09 13:17+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -30,7 +31,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr "Eingehängen ..."
+msgstr "Einhängen ..."
 
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
@@ -128,47 +129,47 @@ msgstr "Alle Geräte"
 msgid "Show popup when new device is plugged in"
 msgstr "Aufklappfenster anzeigen, wenn ein neues Gerät angeschlossen wird"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:191
+#: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:198
+#: plugin/ksolidnotify.cpp:204
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "You are not authorized to mount this device."
 msgstr "Klicken Sie, um dieses Gerät einzubinden."
 
-#: plugin/ksolidnotify.cpp:201
+#: plugin/ksolidnotify.cpp:207
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Es ist sicher, dieses Gerät zu entfernen."
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/ksolidnotify.cpp:210
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
 msgstr "Klicken Sie, um dieses Medium auszuwerfen."
 
-#: plugin/ksolidnotify.cpp:211
+#: plugin/ksolidnotify.cpp:217
 #, fuzzy, kde-format
 #| msgid "Most recent device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "Zuletzt angeschlossenes Gerät: %1"
 
-#: plugin/ksolidnotify.cpp:242
+#: plugin/ksolidnotify.cpp:248
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -179,7 +180,7 @@ msgstr ""
 "Eine oder mehrere Dateien auf dem Medium werden von einer Anwendung offen "
 "gehalten."
 
-#: plugin/ksolidnotify.cpp:244
+#: plugin/ksolidnotify.cpp:250
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount the device.\n"
@@ -196,26 +197,26 @@ msgstr[1] ""
 "Eine oder mehrere Dateien auf dem Gerät werden von einer Anwendung offen "
 "gehalten."
 
-#: plugin/ksolidnotify.cpp:247
+#: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:265
+#: plugin/ksolidnotify.cpp:271
 #, fuzzy, kde-format
 #| msgid "Most recent device: %1"
 msgid "Could not mount this device."
 msgstr "Zuletzt angeschlossenes Gerät: %1"
 
-#: plugin/ksolidnotify.cpp:268
+#: plugin/ksolidnotify.cpp:274
 #, fuzzy, kde-format
 #| msgid "Most recent device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Zuletzt angeschlossenes Gerät: %1"
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/ksolidnotify.cpp:277
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-11 02:35+0000\n"
 "PO-Revision-Date: 2010-01-31 23:41+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -139,47 +139,47 @@ msgstr "Сите уреди"
 msgid "Show popup when new device is plugged in"
 msgstr "Нема приклучени уреди"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:191
+#: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:198
+#: plugin/ksolidnotify.cpp:204
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device from the computer."
 msgid "You are not authorized to mount this device."
 msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
 
-#: plugin/ksolidnotify.cpp:201
+#: plugin/ksolidnotify.cpp:207
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device from the computer."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/ksolidnotify.cpp:210
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device from the computer."
 msgid "You are not authorized to eject this disc."
 msgstr "Кликнете за безбедно да го отстраните овој уред од компјутерот."
 
-#: plugin/ksolidnotify.cpp:211
+#: plugin/ksolidnotify.cpp:217
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "Последен приклучен уред: %1"
 
-#: plugin/ksolidnotify.cpp:242
+#: plugin/ksolidnotify.cpp:248
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -189,7 +189,7 @@ msgstr ""
 "Не можам да го извадам дискот.\n"
 "Една или повеќе датотеки на дискот се отворени во некоја апликација."
 
-#: plugin/ksolidnotify.cpp:244
+#: plugin/ksolidnotify.cpp:250
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount the device.\n"
@@ -207,26 +207,26 @@ msgstr[2] ""
 "Не можев да го одмонтирам уредот.\n"
 "Една или повеќе датотеки на уредот се отворени во некоја апликација."
 
-#: plugin/ksolidnotify.cpp:247
+#: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:265
+#: plugin/ksolidnotify.cpp:271
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "Последен приклучен уред: %1"
 
-#: plugin/ksolidnotify.cpp:268
+#: plugin/ksolidnotify.cpp:274
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Последен приклучен уред: %1"
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/ksolidnotify.cpp:277
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device from the computer."
 msgid "Could not eject this disc."

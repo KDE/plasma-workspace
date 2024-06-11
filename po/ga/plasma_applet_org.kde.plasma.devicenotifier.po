@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_devicenotifier.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-23 00:39+0000\n"
+"POT-Creation-Date: 2024-06-11 02:35+0000\n"
 "PO-Revision-Date: 2007-10-23 08:08-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -145,47 +145,47 @@ msgstr "Gach gléas"
 msgid "Show popup when new device is plugged in"
 msgstr "Níl aon ghléasanna plugáilte isteach"
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:190
+#: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:191
+#: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:198
+#: plugin/ksolidnotify.cpp:204
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "You are not authorized to mount this device."
 msgstr "Cliceáil chun an gléas seo a fheistiú."
 
-#: plugin/ksolidnotify.cpp:201
+#: plugin/ksolidnotify.cpp:207
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Tig leat an gléas seo a bhaint faoi láthair gan dochar a dhéanamh dó."
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/ksolidnotify.cpp:210
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
 msgstr "Cliceáil chun an diosca seo a dhíchur."
 
-#: plugin/ksolidnotify.cpp:211
+#: plugin/ksolidnotify.cpp:217
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "Could not mount this device as it is busy."
 msgstr "Cliceáil chun an gléas seo a fheistiú."
 
-#: plugin/ksolidnotify.cpp:242
+#: plugin/ksolidnotify.cpp:248
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -196,7 +196,7 @@ msgstr ""
 "Tá comhad nó níos mó ná comhad amháin oscailte ar an diosca seo i "
 "bhfeidhmchlár éigin."
 
-#: plugin/ksolidnotify.cpp:244
+#: plugin/ksolidnotify.cpp:250
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -225,26 +225,26 @@ msgstr[4] ""
 "Tá comhad nó níos mó ná comhad amháin oscailte ar an diosca seo i "
 "bhfeidhmchlár éigin."
 
-#: plugin/ksolidnotify.cpp:247
+#: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:265
+#: plugin/ksolidnotify.cpp:271
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "Could not mount this device."
 msgstr "Cliceáil chun an gléas seo a fheistiú."
 
-#: plugin/ksolidnotify.cpp:268
+#: plugin/ksolidnotify.cpp:274
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Cliceáil chun an gléas seo a dhícheangal gan dochar a dhéanamh."
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/ksolidnotify.cpp:277
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
