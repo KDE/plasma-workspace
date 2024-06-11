@@ -223,7 +223,7 @@ ColumnLayout {
             Layout.alignment: Qt.AlignTop
             readonly property real maximumHeight: Kirigami.Units.gridUnit * notificationItem.maximumLineCount
             readonly property bool truncated: notificationItem.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
-            height: truncated ? maximumHeight : implicitHeight
+            Layout.maximumHeight: truncated ? maximumHeight : implicitHeight
 
             listViewParent: notificationItem.listViewParent
             // HACK RichText does not allow to specify link color and since LineEdit
