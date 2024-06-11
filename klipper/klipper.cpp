@@ -671,6 +671,12 @@ void Klipper::setClipboard(const HistoryItem &item, int mode, ClipboardUpdateRea
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
+    // return if item metadata does not exist for some reason
+    if (!item.mimeData()) {
+        qCWarning(KLIPPER_LOG) << "Item's medatadata does not exist!";
+        return;
+    }
+
     if (mode & Selection) {
         qCDebug(KLIPPER_LOG) << "Setting selection to <" << item.text() << ">";
         QMimeData *mimeData = item.mimeData();
