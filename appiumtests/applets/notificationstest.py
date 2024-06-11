@@ -9,7 +9,6 @@ import tempfile
 import unittest
 from typing import Final
 
-import cv2 as cv
 import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
@@ -17,8 +16,9 @@ from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
+gi.require_version('Gdk', '4.0')
 gi.require_version('GdkPixbuf', '2.0')
-from gi.repository import GdkPixbuf, Gio, GLib
+from gi.repository import Gdk, GdkPixbuf, Gio, GLib
 
 WIDGET_ID: Final = "org.kde.plasma.notifications"
 
@@ -101,8 +101,7 @@ class NotificationsTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as temp_dir:
             saved_image_path = os.path.join(temp_dir, "tray.png")
             self.driver.get_screenshot_as_file(saved_image_path)
-            cv_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
-        return base64.b64encode(cv.imencode('.png', cv_image)[1].tobytes()).decode()
+            return base64.b64encode(Gdk.Texture.new_from_filename(saved_image_path).save_to_png_bytes().get_data()).decode()
 
     def test_2_notification_with_image(self) -> None:
         """
@@ -134,12 +133,8 @@ class NotificationsTest(unittest.TestCase):
                 "timeout": 10 * 1000,
             })
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, summary + str(color))))
-            with tempfile.TemporaryDirectory() as temp_dir:
-                saved_image_path = os.path.join(temp_dir, "partial.png")
-                partial_pixbuf.fill(color)
-                self.assertTrue(partial_pixbuf.savev(saved_image_path, "png"))
-                cv_partial_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
-                partial_image = base64.b64encode(cv.imencode('.png', cv_partial_image)[1].tobytes()).decode()
+            partial_pixbuf.fill(color)
+            partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
     def test_3_accessible_description_html_to_plaintext(self) -> None:
