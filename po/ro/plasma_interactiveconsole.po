@@ -1,0 +1,91 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Sergiu Bivol <sergiu@cip.md>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-03-20 00:39+0000\n"
+"PO-Revision-Date: 2024-06-09 15:10+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: interactiveconsole.cpp:63
+#, kde-format
+msgid "&Execute"
+msgstr "&Execută"
+
+#: interactiveconsole.cpp:64
+#, kde-format
+msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
+msgid "Plasma"
+msgstr "Plasma"
+
+#: interactiveconsole.cpp:65
+#, kde-format
+msgctxt "Toolbar Button to switch to KWin Scripting Mode"
+msgid "KWin"
+msgstr "KWin"
+
+#: interactiveconsole.cpp:66
+#, kde-format
+msgid "Templates"
+msgstr "Șabloane"
+
+#: interactiveconsole.cpp:75
+#, kde-format
+msgid "Desktop Shell Scripting Console"
+msgstr "Consolă de scripturi pentru învelișul de birou"
+
+#: interactiveconsole.cpp:82
+#, kde-format
+msgid "Editor"
+msgstr "Redactor"
+
+#: interactiveconsole.cpp:93
+#, kde-format
+msgid "Load"
+msgstr "Încarcă"
+
+#: interactiveconsole.cpp:99
+#, kde-format
+msgid "Use"
+msgstr "Folosește"
+
+#: interactiveconsole.cpp:159
+#, kde-format
+msgid "Output"
+msgstr "Ieșire"
+
+#: interactiveconsole.cpp:266
+#, kde-format
+msgid "Unable to load script file <b>%1</b>"
+msgstr "Nu s-a putut încărca fișierul-script: <b>%1</b>"
+
+#: interactiveconsole.cpp:316
+#, kde-format
+msgid "Open Script File"
+msgstr "Deschide fișier cu script"
+
+#: interactiveconsole.cpp:431
+#, kde-format
+msgid "Save Script File"
+msgstr "Salvează fișier cu script"
+
+#: interactiveconsole.cpp:520
+#, kde-format
+msgid "Executing script at %1"
+msgstr "Se execută script la %1"
+
+#: interactiveconsole.cpp:572
+#, no-c-format, kde-format
+msgid "Runtime: %1ms"
+msgstr "Timp de rulare: %1ms"

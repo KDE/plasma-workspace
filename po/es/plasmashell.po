@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-06-09 20:22+0200\n"
+"PO-Revision-Date: 2024-06-10 02:54+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -116,7 +116,7 @@ msgstr "Informar de un fallo..."
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Ocultar el panel de vista previa"
 
 #: desktopview.cpp:306
 #, kde-format
@@ -139,12 +139,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"¿Seguro que quiere ocultar permanentemente el panel de vista previa?<nl/><nl/"
+">Esta acción solo se puede deshacer eliminando la línea que empieza con "
+"<icode>ShowDesktopPreviewBanner</icode> en el archivo de configuración "
+"<filename>kdeglobals</filename>."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "¿Ocultar el panel de vista previa?"
 
 #: main.cpp:84
 #, kde-format

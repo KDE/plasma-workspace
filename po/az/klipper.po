@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:40+0000\n"
-"PO-Revision-Date: 2022-10-18 13:09+0400\n"
-"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-06-10 12:10+0400\n"
+"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -543,12 +544,10 @@ msgid "Previous History Item"
 msgstr "Tarixçənin əvvəlki elementi"
 
 #: klipper.cpp:169
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Show Items at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
-msgstr "Kursorun altında elementləri göstərmək"
+msgstr "Kursorun altında mübadilə yaddaşı elementlərini göstərmək"
 
 #: klipper.cpp:459
 #, kde-kuit-format
@@ -831,11 +830,9 @@ msgstr ""
 "tətbiqləri daxil edin."
 
 #: klipperpopup.cpp:107
-#, fuzzy, kde-format
-#| msgctxt "%1 is application display name"
-#| msgid "%1 - Clipboard Items"
+#, kde-format
 msgid "Clipboard Items"
-msgstr "%1 - mübadilə elementləri"
+msgstr "Mübadilə yaddaşı"
 
 #: klipperpopup.cpp:111
 #, kde-format
