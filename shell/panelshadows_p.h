@@ -10,6 +10,7 @@
 
 #include <KSvg/FrameSvg>
 #include <KSvg/Svg>
+#include <qt6/QtGui/qwindow.h>
 
 class PanelShadows : public KSvg::Svg
 {
@@ -21,10 +22,12 @@ public:
 
     static PanelShadows *self();
 
-    void addWindow(QWindow *window, KSvg::FrameSvg::EnabledBorders enabledBorders = KSvg::FrameSvg::AllBorders);
+    void addWindow(QWindow *window, KSvg::FrameSvg::EnabledBorders enabledBorders = KSvg::FrameSvg::AllBorders, const QMargins &margins = {});
     void removeWindow(QWindow *window);
 
     void setEnabledBorders(QWindow *window, KSvg::FrameSvg::EnabledBorders enabledBorders = KSvg::FrameSvg::AllBorders);
+
+    void setMargins(QWindow *window, const QMargins &margins = {});
 
 private:
     class Private;

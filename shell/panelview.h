@@ -230,6 +230,11 @@ public:
     Q_INVOKABLE QRect geometryByDistance(int distance) const;
 
     /**
+     * @returns the geometry the panel appears to have, removing invisible areas
+     */
+    QRect visualGeometry() const;
+
+    /**
      * @returns the dodge/defloat geometry of the panel given a distance
      */
     Q_INVOKABLE QRect dogdeGeometryByDistance(int distance) const;
@@ -323,7 +328,6 @@ private:
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     bool edgeActivated() const;
     bool canSetStrut() const;
-    QRect geometryByDistance(int distance, double floatingness) const;
 
     int m_offset;
     int m_maxLength;
