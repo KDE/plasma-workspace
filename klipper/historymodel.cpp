@@ -18,7 +18,6 @@ HistoryModel::HistoryModel(QObject *parent)
 
 HistoryModel::~HistoryModel()
 {
-    clear();
 }
 
 void HistoryModel::clear()
