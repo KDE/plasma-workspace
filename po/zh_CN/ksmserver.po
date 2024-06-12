@@ -50,7 +50,7 @@ msgstr "没有 $HOME 目录的读取权限 (%1)。"
 #: main.cpp:86
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME 目录 (%1) 无可用空间。"
+msgstr "$HOME 目录 (%1) 没有可用空间。"
 
 #: main.cpp:89
 #, kde-format
@@ -70,7 +70,7 @@ msgstr "没有“%1”的读取权限。"
 #: main.cpp:115 main.cpp:129
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
-msgstr "临时目录 (%1) 无可用空间。"
+msgstr "临时目录 (%1) 没有可用空间。"
 
 #: main.cpp:118 main.cpp:132
 #, kde-format

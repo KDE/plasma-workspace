@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-23 00:40+0000\n"
-"PO-Revision-Date: 2024-05-12 17:04+0300\n"
+"PO-Revision-Date: 2024-06-08 21:33+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -582,7 +582,7 @@ msgstr "Изменить…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Размеры данных и хранилищ"
 
 #: ui/main.qml:263
 #, kde-format

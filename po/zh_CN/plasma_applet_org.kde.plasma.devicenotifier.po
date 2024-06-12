@@ -99,7 +99,7 @@ msgstr "最近使用的设备"
 #: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No Devices Available"
-msgstr "无可用设备"
+msgstr "没有可用的设备"
 
 #: package/contents/ui/main.qml:207
 #, kde-format
