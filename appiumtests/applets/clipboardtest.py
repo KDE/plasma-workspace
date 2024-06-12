@@ -276,7 +276,6 @@ class ClipboardTest(unittest.TestCase):
             partial_pixbuf.fill(color)
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
-        self.driver.get_screenshot_as_file(f"appium_artifact_{WIDGET_ID}_#{self.id()}.png")
 
 
 if __name__ == '__main__':
