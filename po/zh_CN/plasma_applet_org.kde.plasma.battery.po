@@ -146,7 +146,7 @@ msgstr "电源功率不足，无法充电"
 #: package/contents/ui/main.qml:149
 #, kde-format
 msgid "No Batteries Available"
-msgstr "无可用电池"
+msgstr "没有可用的电池"
 
 #: package/contents/ui/main.qml:156
 #, kde-format

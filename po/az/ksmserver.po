@@ -1,26 +1,27 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020.
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-05 00:40+0000\n"
-"PO-Revision-Date: 2020-07-06 23:47+0400\n"
-"Last-Translator: Xəyyam Qocayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-06-11 15:25+0400\n"
+"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "Çıxış \"%1\" tərəfindən əngəlləndi"
+msgstr "Çıxış \"%1\" tərəfindən ləğv edildi"
 
 #: main.cpp:66
 #, kde-format
@@ -39,6 +40,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"$HOME qovluğuna (%1) yazmaq icazəsi yoxdur. Əgər bu bir səhv deyilsə mühit "
+"parametrini <envar>KDE_HOME_READONLY=1</envar> kimi təyin edin."
 
 #: main.cpp:81
 #, kde-format
@@ -141,7 +144,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[naməlum]"
 
 #: server.cpp:798
 #, kde-kuit-format
@@ -151,6 +154,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Sessiyanın işinin bərpası üçün istifadə olunan verilənlər dəsti üçün limit "
+"tükənməsi səbəbindən bəzi tətbiqləri bərpa etmək mümkün olmadı.Burada "
+"sessiyanın resurslarını ən çox istifadə edən üç tətbiq göstərilir\n"
+" %1"
 
 #: server.cpp:1070
 #, kde-kuit-format
@@ -160,6 +167,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"<application>%1</application> bərpa etmək mümkün olmadı, çünki o pozulub və "
+"sistem sessiyasını bərpa ertmək üçün resurslar tükənib. Bu xəta haqqında "
+"tətbiqin tərtibatçılarına bildirməniz xahiş olunur."
 
 #~ msgid "Session Management"
 #~ msgstr "Sesiyaları idarə etmək"

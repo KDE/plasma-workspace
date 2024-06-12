@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-07 00:40+0000\n"
+"POT-Creation-Date: 2024-06-12 00:40+0000\n"
 "PO-Revision-Date: 2024-02-19 18:34+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -391,35 +391,35 @@ msgstr "Fela"
 msgid "Close"
 msgstr "Loka"
 
-#: package/contents/ui/NotificationItem.qml:180
+#: package/contents/ui/NotificationItem.qml:222
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (sett á pásu)"
 
-#: package/contents/ui/NotificationItem.qml:185
+#: package/contents/ui/NotificationItem.qml:227
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (mistókst)"
 
-#: package/contents/ui/NotificationItem.qml:187
+#: package/contents/ui/NotificationItem.qml:229
 #, kde-format
 msgid "Job Failed"
 msgstr "Verk mistókst"
 
-#: package/contents/ui/NotificationItem.qml:191
+#: package/contents/ui/NotificationItem.qml:233
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (lokið)"
 
-#: package/contents/ui/NotificationItem.qml:193
+#: package/contents/ui/NotificationItem.qml:235
 #, kde-format
 msgid "Job Finished"
 msgstr "Verki lokið"
 
-#: package/contents/ui/NotificationItem.qml:337
+#: package/contents/ui/NotificationItem.qml:373
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

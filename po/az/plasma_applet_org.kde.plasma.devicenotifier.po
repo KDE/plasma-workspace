@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2022-01-19 15:51+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-06-11 16:23+0400\n"
+"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -40,8 +41,7 @@ msgid "Removing…"
 msgstr "Çıxarılır..."
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Elektrik şəbəkəsindən ayırmayın! Hələ də fayllar köçürülür..."
 
@@ -130,81 +130,73 @@ msgstr "Yeni cihaz qoşulduqda açılan menyuda göstərmək"
 #: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Cihazın vəziyyəti"
 
 #: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Cihazı indi təhlükəsiz ayırmaq olar"
 
 #: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Bu cihazı indi təhlükəsiz ayırmaq olar."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Ciahazı indi təhlükəsiz çıxara bilərsiniz."
+msgstr "Bu cihazı qoşmaq icazəniz yoxdur."
 
 #: plugin/ksolidnotify.cpp:207
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Ciahazı indi təhlükəsiz çıxara bilərsiniz."
+msgstr "Bu cihazı ayırmaq icazəniz yoxdur."
 
 #: plugin/ksolidnotify.cpp:210
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Bu diski çıxartmaq üçün vurun"
+msgstr "Bu diski çıxartmaq icazəniz yoxdur."
 
 #: plugin/ksolidnotify.cpp:217
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "Bu cihazə qoşmaq olmaz, o məşğuldur."
 
 #: plugin/ksolidnotify.cpp:248
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Digər tətbiqlərdən bu cihaza giriş əldə etmək üçün vurun"
+msgstr "Bu cihazdakı bir və daha çox fayl bir tətbiq tərəfindən açılıb."
 
 #: plugin/ksolidnotify.cpp:250
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "Digər tətbiqlərdən bu cihaza giriş əldə etmək üçün vurun"
-msgstr[1] "Digər tətbiqlərdən bu cihaza giriş əldə etmək üçün vurun"
+msgstr[0] "Bu cihazdakı bir və daha çox fayl bir tətbiq tərəfindən açılıb."
+msgstr[1] "Bu cihazdakı bir və daha çox fayl \"%2\" tətbiq tərəfindən açılıb."
 
 #: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Bütün cihazları təhlükəsiz çıxartmaq üçün klikləyin."
+msgstr "Bu cihazı qoşmaq mümkün olmadı."
 
 #: plugin/ksolidnotify.cpp:274
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Bütün cihazları təhlükəsiz çıxartmaq üçün klikləyin."
+msgstr "Bu cihazı ayırmaq mümkün olmadı."
 
 #: plugin/ksolidnotify.cpp:277
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Bu diski çıxartmaq üçün vurun"
+msgstr "Bu diski çıxartmaq mümkün olmadı."
 
 #~ msgid "Show:"
 #~ msgstr "Göstərmək:"

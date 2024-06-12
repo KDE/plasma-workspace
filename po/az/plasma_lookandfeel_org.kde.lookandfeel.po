@@ -1,28 +1,33 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Xəyyam Qocayev <xxmn77@gmail.com>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2024 X əyyam
+# SPDX-FileCopyrightText: 2024 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2022-10-18 13:03+0400\n"
-"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-06-11 16:14+0400\n"
+"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Proqram təminatı yenilənmələrini quraşdırılmaq və 1 saniyədən sonra yenidən "
+"başlatmaq"
 msgstr[1] ""
+"Proqram təminatı yenilənmələrini quraşdırılmaq və %1 saniyədən sonra yenidən "
+"başlatmaq"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -74,12 +79,10 @@ msgid "Sleep"
 msgstr "Yuxu"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Yuxu"
+msgstr "İndi yuxu rejimi"
 
 #: contents/logout/Logout.qml:210
 #, kde-format
@@ -87,22 +90,21 @@ msgid "Hibernate"
 msgstr "Gözləmə"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Gözləmə"
+msgstr "İndi gözləmə rejimi"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Yenilənmələri quraşdırmaq və yenidən başlatmaq"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr ""
+msgstr "Yenilənmələri quraşdırmaq və yenidən başlatmaq"
 
 #: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
@@ -110,10 +112,9 @@ msgid "Restart"
 msgstr "Yenidən başlatmaq"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Yenidən başlatmaq"
+msgstr "İndi yenidən başladın"
 
 #: contents/logout/Logout.qml:251
 #, kde-format
@@ -121,10 +122,9 @@ msgid "Shut Down"
 msgstr "Söndürmək"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Söndürmək"
+msgstr "İndi söndürün"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -132,10 +132,9 @@ msgid "Log Out"
 msgstr "Sesiyadan çıxış"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Sesiyadan çıxış"
+msgstr "İndi sessiyadan çıxın"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
