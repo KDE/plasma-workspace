@@ -25,11 +25,13 @@ add_test(
 )
 set_tests_properties(batterymonitortest_withoutdisplaydevice PROPERTIES TIMEOUT 120 ENVIRONMENT "ENABLE_DISPLAY_DEVICE=0;POWERDEVIL_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/org_kde_powerdevil")
 
+execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
+execute_process(COMMAND gcc -print-file-name=libumockdev-preload.so.0 OUTPUT_VARIABLE LIBUMOCKDEV_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
 add_test(
     NAME brightnesstest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/brightnesstest.py --failfast
+    COMMAND selenium-webdriver-at-spi-run env LD_PRELOAD=${LIBASAN_PATH}:${LIBUMOCKDEV_PATH} ${CMAKE_CURRENT_SOURCE_DIR}/brightnesstest.py --failfast
 )
-set_tests_properties(brightnesstest PROPERTIES TIMEOUT 120 ENVIRONMENT "POWERDEVIL_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/org_kde_powerdevil")
+set_tests_properties(brightnesstest PROPERTIES TIMEOUT 120 ENVIRONMENT "POWERDEVIL_PATH=${KDE_INSTALL_FULL_LIBEXECDIR}/org_kde_powerdevil;BACKLIGHTHELPER_PATH=${CMAKE_INSTALL_PREFIX}/${KAUTH_HELPER_INSTALL_DIR}/backlighthelper")
 
 add_test(
     NAME calendartest
