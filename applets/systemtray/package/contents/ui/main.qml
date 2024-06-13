@@ -34,6 +34,9 @@ ContainmentItem {
     readonly property alias hiddenLayout: expandedRepresentation.hiddenLayout
     readonly property bool oneRowOrColumn: tasksGrid.rowsOrColumns === 1
 
+    // As soon expandedRepresentation is properly initilized, hide it in the popup
+    Component.onCompleted: dialog.mainItem = expandedRepresentation
+
     MouseArea {
         anchors.fill: parent
 
@@ -207,6 +210,101 @@ ContainmentItem {
             onTriggered: systemTrayState.expanded = dialog.visible;
         }
 
+        /**
+         * HACK: expandedRepresentation will be reparented in the popup
+         * as soon as the component is completed, but we need to create it in something visible in
+         * order to properly initialize all the hidden applets and the GridView delegated
+         */
+        ExpandedRepresentation {
+            id: expandedRepresentation
+
+            Keys.onEscapePressed: event => {
+                systemTrayState.expanded = false
+            }
+
+            // Draws a line between the applet dialog and the panel
+            KSvg.SvgItem {
+                id: separator
+                // Only draw for popups of panel applets, not desktop applets
+                visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
+                    .includes(Plasmoid.location) && !dialog.margin
+                anchors {
+                    topMargin: -dialog.topMargin
+                    leftMargin: -dialog.leftMargin
+                    rightMargin: -dialog.rightMargin
+                    bottomMargin: -dialog.bottomMargin
+                }
+                z: 999 /* Draw the line on top of the applet */
+                elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
+                imagePath: "widgets/line"
+                // QTBUG-120464: Use AnchorChanges instead of bindings as it's officially supported: https://doc.qt.io/qt-6/qtquick-positioning-anchors.html#changing-anchors
+                states: [
+                    State {
+                        when: Plasmoid.location === PlasmaCore.Types.TopEdge
+                        AnchorChanges {
+                            target: separator
+                            anchors {
+                                top: separator.parent.top
+                                left: separator.parent.left
+                                right: separator.parent.right
+                            }
+                        }
+                        PropertyChanges {
+                            target: separator
+                            height: 1
+                        }
+                    },
+                    State {
+                        when: Plasmoid.location === PlasmaCore.Types.LeftEdge
+                        AnchorChanges {
+                            target: separator
+                            anchors {
+                                left: separator.parent.left
+                                top: separator.parent.top
+                                bottom: separator.parent.bottom
+                            }
+                        }
+                        PropertyChanges {
+                            target: separator
+                            width: 1
+                        }
+                    },
+                    State {
+                        when: Plasmoid.location === PlasmaCore.Types.RightEdge
+                        AnchorChanges {
+                            target: separator
+                            anchors {
+                                top: separator.parent.top
+                                right: separator.parent.right
+                                bottom: separator.parent.bottom
+                            }
+                        }
+                        PropertyChanges {
+                            target: separator
+                            width: 1
+                        }
+                    },
+                    State {
+                        when: Plasmoid.location === PlasmaCore.Types.BottomEdge
+                        AnchorChanges {
+                            target: separator
+                            anchors {
+                                left: separator.parent.left
+                                right: separator.parent.right
+                                bottom: separator.parent.bottom
+                            }
+                        }
+                        PropertyChanges {
+                            target: separator
+                            height: 1
+                        }
+                    }
+                ]
+            }
+
+            LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
+            LayoutMirroring.childrenInherit: true
+        }
         //Main popup
         PlasmaCore.AppletPopup {
             id: dialog
@@ -248,96 +346,7 @@ ContainmentItem {
                     }
                 }
             }
-            mainItem: ExpandedRepresentation {
-                id: expandedRepresentation
 
-                Keys.onEscapePressed: event => {
-                    systemTrayState.expanded = false
-                }
-
-                // Draws a line between the applet dialog and the panel
-                KSvg.SvgItem {
-                    id: separator
-                    // Only draw for popups of panel applets, not desktop applets
-                    visible: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.LeftEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge]
-                        .includes(Plasmoid.location) && !dialog.margin
-                    anchors {
-                        topMargin: -dialog.topMargin
-                        leftMargin: -dialog.leftMargin
-                        rightMargin: -dialog.rightMargin
-                        bottomMargin: -dialog.bottomMargin
-                    }
-                    z: 999 /* Draw the line on top of the applet */
-                    elementId: (Plasmoid.location === PlasmaCore.Types.TopEdge || Plasmoid.location === PlasmaCore.Types.BottomEdge) ? "horizontal-line" : "vertical-line"
-                    imagePath: "widgets/line"
-                    // QTBUG-120464: Use AnchorChanges instead of bindings as it's officially supported: https://doc.qt.io/qt-6/qtquick-positioning-anchors.html#changing-anchors
-                    states: [
-                        State {
-                            when: Plasmoid.location === PlasmaCore.Types.TopEdge
-                            AnchorChanges {
-                                target: separator
-                                anchors {
-                                    top: separator.parent.top
-                                    left: separator.parent.left
-                                    right: separator.parent.right
-                                }
-                            }
-                            PropertyChanges {
-                                target: separator
-                                height: 1
-                            }
-                        },
-                        State {
-                            when: Plasmoid.location === PlasmaCore.Types.LeftEdge
-                            AnchorChanges {
-                                target: separator
-                                anchors {
-                                    left: separator.parent.left
-                                    top: separator.parent.top
-                                    bottom: separator.parent.bottom
-                                }
-                            }
-                            PropertyChanges {
-                                target: separator
-                                width: 1
-                            }
-                        },
-                        State {
-                            when: Plasmoid.location === PlasmaCore.Types.RightEdge
-                            AnchorChanges {
-                                target: separator
-                                anchors {
-                                    top: separator.parent.top
-                                    right: separator.parent.right
-                                    bottom: separator.parent.bottom
-                                }
-                            }
-                            PropertyChanges {
-                                target: separator
-                                width: 1
-                            }
-                        },
-                        State {
-                            when: Plasmoid.location === PlasmaCore.Types.BottomEdge
-                            AnchorChanges {
-                                target: separator
-                                anchors {
-                                    left: separator.parent.left
-                                    right: separator.parent.right
-                                    bottom: separator.parent.bottom
-                                }
-                            }
-                            PropertyChanges {
-                                target: separator
-                                height: 1
-                            }
-                        }
-                    ]
-                }
-
-                LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
-                LayoutMirroring.childrenInherit: true
-            }
         }
     }
 }
