@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2024-04-24 14:37+0300\n"
+"PO-Revision-Date: 2024-06-13 01:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -169,7 +169,7 @@ msgstr "Tamamen şarj olana kadar %1"
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
-msgstr "%1 kaldı"
+msgstr "Kalan %1"
 
 #: package/contents/ui/main.qml:161
 #, kde-format
@@ -427,7 +427,7 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-"Güç profilleri aygıtınızda destekleniyor olabilir.<nl/>Dağıtımınızın paket "
+"Aygıtınızda güç profilleri destekleniyor olabilir.<nl/>Dağıtımınızın paket "
 "yöneticisini kullanarak <command>power-profiles-daemon</command> paketini "
 "kurun ve sistemi yeniden başlatın."
 

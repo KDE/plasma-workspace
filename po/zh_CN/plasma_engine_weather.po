@@ -4436,7 +4436,7 @@ msgstr "霜"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Thunderstorms"
-msgstr "较小可能有雷暴"
+msgstr "小概率有雷暴"
 
 #: noaa_i18n.dat:271
 #, kde-format
@@ -4448,7 +4448,7 @@ msgstr "可能有雷暴"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms Likely"
-msgstr "很可能有雷暴"
+msgstr "大概率有雷暴"
 
 #: noaa_i18n.dat:274
 #, kde-format
@@ -4460,7 +4460,7 @@ msgstr "强雷暴"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow/Sleet"
-msgstr "较小可能有雪/雨夹雪"
+msgstr "小概率有雪/雨夹雪"
 
 #: noaa_i18n.dat:276
 #, kde-format
@@ -4472,7 +4472,7 @@ msgstr "可能有雪/雨夹雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow/Sleet Likely"
-msgstr "很可能有雪/雨夹雪"
+msgstr "大概率有雪/雨夹雪"
 
 #: noaa_i18n.dat:278
 #, kde-format
@@ -4484,7 +4484,7 @@ msgstr "雪/雨夹雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Sleet"
-msgstr "较小可能有雨/雨夹雪"
+msgstr "小概率有雨/雨夹雪"
 
 #: noaa_i18n.dat:280
 #, kde-format
@@ -4496,7 +4496,7 @@ msgstr "可能有雨/雨夹雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Sleet Likely"
-msgstr "很可能有雨/雨夹雪"
+msgstr "大概率有雨/雨夹雪"
 
 #: noaa_i18n.dat:282
 #, kde-format
@@ -4508,7 +4508,7 @@ msgstr "雨/雨夹雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Freezing Rain"
-msgstr "较小可能有雨/冻雨"
+msgstr "小概率有雨/冻雨"
 
 #: noaa_i18n.dat:284
 #, kde-format
@@ -4520,7 +4520,7 @@ msgstr "可能有雨/冻雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain Likely"
-msgstr "很可能有雨/冻雨"
+msgstr "大概率有雨/冻雨"
 
 #: noaa_i18n.dat:286
 #, kde-format
@@ -4532,7 +4532,7 @@ msgstr "雨/冻雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix Likely"
-msgstr "很可能有雨夹雪"
+msgstr "大概率有雨夹雪"
 
 #: noaa_i18n.dat:288
 #, kde-format
@@ -4544,7 +4544,7 @@ msgstr "雨夹雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Drizzle"
-msgstr "较小可能有冻毛毛雨"
+msgstr "小概率有冻毛毛雨"
 
 #: noaa_i18n.dat:290
 #, kde-format
@@ -4556,7 +4556,7 @@ msgstr "可能有冻毛毛雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Drizzle Likely"
-msgstr "很可能有冻毛毛雨"
+msgstr "大概率有冻毛毛雨"
 
 #: noaa_i18n.dat:292
 #, kde-format
@@ -4568,7 +4568,7 @@ msgstr "冻毛毛雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Rain"
-msgstr "较小可能有冻雨"
+msgstr "小概率有冻雨"
 
 #: noaa_i18n.dat:294
 #, kde-format
@@ -4580,7 +4580,7 @@ msgstr "可能有冻雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Rain Likely"
-msgstr "很可能有冻雨"
+msgstr "大概率有冻雨"
 
 #: noaa_i18n.dat:296
 #, kde-format
@@ -4592,7 +4592,7 @@ msgstr "冻雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Snow"
-msgstr "较小可能有雨/雪"
+msgstr "小概率有雨/雪"
 
 #: noaa_i18n.dat:298
 #, kde-format
@@ -4604,7 +4604,7 @@ msgstr "可能有雨/雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Snow Likely"
-msgstr "很可能有雨/雪"
+msgstr "大概率有雨/雪"
 
 #: noaa_i18n.dat:300
 #, kde-format
@@ -4616,7 +4616,7 @@ msgstr "雨/雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow"
-msgstr "较小可能有雪"
+msgstr "小概率有雪"
 
 #: noaa_i18n.dat:302
 #, kde-format
@@ -4628,7 +4628,7 @@ msgstr "可能有雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow Likely"
-msgstr "很可能有雪"
+msgstr "大概率有雪"
 
 #: noaa_i18n.dat:305
 #, kde-format
@@ -4640,7 +4640,7 @@ msgstr "大雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Flurries"
-msgstr "较小可能有飘雪"
+msgstr "小概率有飘雪"
 
 #: noaa_i18n.dat:307
 #, kde-format
@@ -4652,13 +4652,13 @@ msgstr "可能有飘雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Flurries Likely"
-msgstr "很可能有飘雪"
+msgstr "大概率有飘雪"
 
 #: noaa_i18n.dat:310
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow Showers"
-msgstr "较小可能有阵雪"
+msgstr "小概率有阵雪"
 
 #: noaa_i18n.dat:311
 #, kde-format
@@ -4670,7 +4670,7 @@ msgstr "可能有阵雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow Showers Likely"
-msgstr "很可能有阵雪"
+msgstr "大概率有阵雪"
 
 #: noaa_i18n.dat:313
 #, kde-format
@@ -4682,7 +4682,7 @@ msgstr "阵雪"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Drizzle"
-msgstr "较小可能有毛毛雨"
+msgstr "小概率有毛毛雨"
 
 #: noaa_i18n.dat:315
 #, kde-format
@@ -4694,13 +4694,13 @@ msgstr "可能有毛毛雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Drizzle Likely"
-msgstr "很可能有毛毛雨"
+msgstr "大概率有毛毛雨"
 
 #: noaa_i18n.dat:318
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain"
-msgstr "较小可能有雨"
+msgstr "小概率有雨"
 
 #: noaa_i18n.dat:319
 #, kde-format
@@ -4712,7 +4712,7 @@ msgstr "可能有雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain Likely"
-msgstr "很可能有雨"
+msgstr "大概率有雨"
 
 #: noaa_i18n.dat:322
 #, kde-format
@@ -4724,7 +4724,7 @@ msgstr "大雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain Showers"
-msgstr "较小可能有阵雨"
+msgstr "小概率有阵雨"
 
 #: noaa_i18n.dat:324
 #, kde-format
@@ -4736,7 +4736,7 @@ msgstr "可能有阵雨"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain Showers Likely"
-msgstr "很可能有阵雨"
+msgstr "大概率有阵雨"
 
 #: noaa_i18n.dat:326
 #, kde-format
