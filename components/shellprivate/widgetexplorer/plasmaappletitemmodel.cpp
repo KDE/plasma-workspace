@@ -49,7 +49,9 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
 
     QString iconName;
 
-    if (!m_info.iconName().isEmpty()) {
+    if (QIcon::hasThemeIcon(m_info.pluginId())) {
+        iconName = m_info.pluginId();
+    } else if (!m_info.iconName().isEmpty()) {
         if (m_info.iconName().startsWith(QLatin1String("/"))) {
             KPackage::Package pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Applet"));
             pkg.setDefaultPackageRoot(QStringLiteral("plasma/plasmoids"));
@@ -61,11 +63,7 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
             iconName = m_info.iconName();
         }
     } else {
-        if (QIcon::hasThemeIcon(m_info.pluginId())) {
-            iconName = m_info.pluginId();
-        } else {
-            iconName = QStringLiteral("application-x-plasma");
-        }
+        iconName = QStringLiteral("application-x-plasma");
     }
 
     // Do not use setIcon here, we need to pass the icon name to the delegate, otherwise Kirigami.Icon will load it with the wrong colors
