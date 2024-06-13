@@ -10,7 +10,6 @@
 
 #include <KSvg/FrameSvg>
 #include <KSvg/Svg>
-#include <qt6/QtGui/qwindow.h>
 
 class PanelShadows : public KSvg::Svg
 {

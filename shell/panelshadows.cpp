@@ -8,7 +8,6 @@
 #include "panelshadows_p.h"
 
 #include <KWindowShadow>
-#include <qt6/QtGui/qwindow.h>
 
 class PanelShadows::Private
 {
