@@ -1,7 +1,7 @@
 # Translation of plasma_engine_weather.po to Catalan (Valencian)
-# Copyright (C) 2009-2023 This_file_is_part_of_KDE
+# Copyright (C) 2009-2024 This_file_is_part_of_KDE
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2011, 2016, 2017, 2018, 2019, 2021, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2009, 2011, 2016, 2017, 2018, 2019, 2021, 2023, 2024.
 # Manuel Tortosa Moreno <manutortosa@chakra-project.org>, 2009.
 # Orestes Mas <orestes@tsc.upc.edu>, 2009.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2018, 2019.
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2023-07-31 13:12+0200\n"
+"PO-Revision-Date: 2024-06-11 11:40+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -2840,7 +2840,7 @@ msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "
 "\"Rain then Sunny\")"
 msgid " then "
-msgstr ""
+msgstr " després "
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -3870,9 +3870,7 @@ msgid "Low Drifting Snow"
 msgstr "Nevada dispersa"
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Clear"
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
 msgstr "Majoritàriament clar"
@@ -4916,33 +4914,25 @@ msgid "Mostly Clear"
 msgstr "Majoritàriament clar"
 
 #: noaa_i18n.dat:358
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Showers or thunderstorms"
+#, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr "Ruixats o tempestes elèctriques"
+msgstr "Ruixats i tempestes elèctriques"
 
 #: noaa_i18n.dat:359
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Slight Chance Thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr "Lleugera possibilitat de tempestes elèctriques"
+msgstr "Lleugera possibilitat de ruixats i tempestes elèctriques"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance of showers or thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "Possibilitat de ruixats o tempestes elèctriques"
+msgstr "Possibilitat de ruixats i tempestes elèctriques"
 
 #: noaa_i18n.dat:361
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Thunderstorms Likely"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr "Probabilitat de tempestes elèctriques"
+msgstr "Probabilitat de ruixats i tempestes elèctriques"

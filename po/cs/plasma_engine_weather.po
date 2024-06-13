@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Vít Pelčák <vit@pelcak.org>, 2011, 2016, 2017, 2018, 2019.
-# Vit Pelcak <vit@pelcak.org>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2022-06-29 12:15+0200\n"
+"PO-Revision-Date: 2024-06-11 12:09+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -3858,7 +3858,7 @@ msgstr "Nízko zvířený sníh"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
-msgstr ""
+msgstr "Převážně jasno"
 
 #: noaa_i18n.dat:166
 #, kde-format
@@ -4902,22 +4902,22 @@ msgstr "Převážně jasno"
 #, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr ""
+msgstr "Přeháňky a bouřky"
 
 #: noaa_i18n.dat:359
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr ""
+msgstr "Malá možnost přeháněk a bouřek"
 
 #: noaa_i18n.dat:360
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr ""
+msgstr "Možnost přeháněk a bouřek"
 
 #: noaa_i18n.dat:361
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr ""
+msgstr "Pravděpodobné přeháňky a bouřky"

@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2024-04-24 14:37+0300\n"
+"PO-Revision-Date: 2024-06-13 01:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -29,28 +29,28 @@ msgstr ""
 #: package/contents/ui/BatteryItem.qml:100
 #, kde-format
 msgid "Charging"
-msgstr "Şarj Ediliyor"
+msgstr "Şarj ediliyor"
 
 #: package/contents/ui/BatteryItem.qml:102
 #, kde-format
 msgid "Discharging"
-msgstr "Şarj Boşalıyor"
+msgstr "Şarj boşalıyor"
 
 #: package/contents/ui/BatteryItem.qml:104 package/contents/ui/main.qml:123
 #, kde-format
 msgid "Fully Charged"
-msgstr "Şarj Dolu"
+msgstr "Şarj dolu"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
 msgid "Not Charging"
-msgstr "Şarj Olmuyor"
+msgstr "Şarj olmuyor"
 
 #: package/contents/ui/BatteryItem.qml:109
 #, kde-format
 msgctxt "Battery is currently not present in the bay"
 msgid "Not present"
-msgstr "Mevcut değil"
+msgstr "Pil yok"
 
 #: package/contents/ui/BatteryItem.qml:121
 #, kde-format
@@ -86,7 +86,7 @@ msgstr "Tahmin ediliyor…"
 #: package/contents/ui/BatteryItem.qml:221
 #, kde-format
 msgid "Battery Health:"
-msgstr "Pil Sağlığı:"
+msgstr "Pil sağlığı:"
 
 #: package/contents/ui/BatteryItem.qml:227
 #, kde-format
@@ -169,7 +169,7 @@ msgstr "Tamamen şarj olana kadar %1"
 #, kde-format
 msgctxt "remaining time left of battery usage - HH:MM"
 msgid "%1 remaining"
-msgstr "%1 kaldı"
+msgstr "Kalan %1"
 
 #: package/contents/ui/main.qml:161
 #, kde-format
@@ -427,36 +427,6 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
-"Güç profilleri aygıtınızda destekleniyor olabilir.<nl/>Dağıtımınızın paket "
+"Aygıtınızda güç profilleri destekleniyor olabilir.<nl/>Dağıtımınızın paket "
 "yöneticisini kullanarak <command>power-profiles-daemon</command> paketini "
 "kurun ve sistemi yeniden başlatın."
-
-#~ msgctxt "Placeholder is the battery number"
-#~ msgid "Battery %1"
-#~ msgstr "Pil %1"
-
-#~ msgid "Battery"
-#~ msgstr "Pil"
-
-#~ msgctxt "Minimize the length of this string as much as possible"
-#~ msgid "Manually block sleep and screen locking"
-#~ msgstr "Uyku ve ekran kilitlemeyi elle blokla"
-
-#~ msgctxt "Placeholder is brightness percentage"
-#~ msgid "%1%"
-#~ msgstr "%​%1"
-
-#~ msgid "Battery and Brightness"
-#~ msgstr "Pil ve Parlaklık"
-
-#~ msgid "Brightness"
-#~ msgstr "Parlaklık"
-
-#~ msgid "Scroll to adjust screen brightness"
-#~ msgstr "Ekran parlaklığını ayarlamak için sar"
-
-#~ msgid "Display Brightness"
-#~ msgstr "Ekran Parlaklığını Görüntüle"
-
-#~ msgid "Keyboard Brightness"
-#~ msgstr "Klavye Parlaklığı"
