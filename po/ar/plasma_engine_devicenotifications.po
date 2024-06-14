@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma5support\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
-"PO-Revision-Date: 2021-06-21 23:23+0400\n"
+"PO-Revision-Date: 2024-06-13 09:30+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ksolidnotify.cpp:149
 #, kde-format
@@ -30,28 +31,28 @@ msgstr "يمكن إزالة جهاز الآن بأمان."
 #: ksolidnotify.cpp:150
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr "يمكن إزالة هذا الجهاز الآن بأمان."
+msgstr "يمكن إزالة الجهاز الآن بأمان."
 
 #: ksolidnotify.cpp:157
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "لست مستوثقًا لضمّ هذا الجهاز."
+msgstr "لست مخولًا لضمّ هذا الجهاز."
 
 #: ksolidnotify.cpp:160
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "لست مستوثقًا لإزالة هذا الجهاز."
+msgstr "لست مخولًا لإزالة هذا الجهاز."
 
 #: ksolidnotify.cpp:163
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "لست مستوثقًا لإخراج هذا القرص."
+msgstr "لست مخولًا لإخراج هذا القرص."
 
 #: ksolidnotify.cpp:170
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "تعذّر ضمّ هذا الجهاز فهو مشغول."
+msgstr "تعذّر ضمّ هذا الجهاز لأنه مشغول."
 
 #: ksolidnotify.cpp:200
 #, kde-format
@@ -63,12 +64,24 @@ msgstr "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "لا تطبيقات تستخدم أيّ ملفّ في الجهاز الجهاز."
-msgstr[1] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيق \"%2\"."
-msgstr[2] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقين \"%2\"."
-msgstr[3] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
-msgstr[4] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
-msgstr[5] "ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في التّطبيقات \"%2\"."
+msgstr[0] ""
+"ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في تطبيق <application>\"%2\"</"
+"application>."
+msgstr[1] ""
+"ثمّة ملفّ أو أكثر في هذا الجهاز مفتوح في تطبيق <application>\"%2\"</"
+"application>."
+msgstr[2] ""
+"ثمّة ملفّين أو أكثر في هذا الجهاز مفتوحة في التطبيقات التالية:  <application>"
+"\"%2\"</application>."
+msgstr[3] ""
+"ثمّة ملفات مفتوحة في هذا الجهاز في التطبيقات التالية:  <application>\"%2\"</"
+"application>."
+msgstr[4] ""
+"ثمّة ملفات مفتوحة في هذا الجهاز في التطبيقات التالية:  <application>\"%2\"</"
+"application>."
+msgstr[5] ""
+"ثمّة ملفات مفتوحة في هذا الجهاز في التطبيقات التالية:  <application>\"%2\"</"
+"application>."
 
 #: ksolidnotify.cpp:205
 #, kde-format

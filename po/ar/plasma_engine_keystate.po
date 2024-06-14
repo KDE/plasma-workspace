@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-# Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014.
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2021.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma5support package.
+# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma5support\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2021-06-22 14:40+0400\n"
+"PO-Revision-Date: 2024-06-13 09:37+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: Arabic <kde-i18n-ar@kde.org>\n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: keystate.cpp:15
 msgid "Shift"
@@ -47,27 +48,27 @@ msgstr "AltGr"
 
 #: keystate.cpp:22
 msgid "Num Lock"
-msgstr "Num Lock"
+msgstr "قفل الأرقام"
 
 #: keystate.cpp:23
 msgid "Caps Lock"
-msgstr "Caps Lock"
+msgstr "قفل الحروف"
 
 #: keystate.cpp:24
 msgid "Scroll Lock"
-msgstr "Scroll Lock"
+msgstr "قفل التمرير"
 
 #: keystate.cpp:26
 msgid "Left Button"
-msgstr "الزر الأيسر"
+msgstr "الزّرّ الأيسر"
 
 #: keystate.cpp:27
 msgid "Right Button"
-msgstr "الزر الأيمن"
+msgstr "الزّرّ الأيمن"
 
 #: keystate.cpp:28
 msgid "Middle Button"
-msgstr "الزر الأوسط"
+msgstr "الزّرّ الأوسط"
 
 #: keystate.cpp:29
 msgid "First X Button"
@@ -80,12 +81,12 @@ msgstr "زر X الثاني"
 #: keystate.cpp:44 keystate.cpp:54 keystate.cpp:81 keystate.cpp:102
 #: keystate.cpp:110
 msgid "Pressed"
-msgstr "ضُغِط"
+msgstr "مضغوط"
 
 #: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
 msgid "Latched"
-msgstr "مفعل"
+msgstr "مثبت"
 
 #: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
 msgid "Locked"
-msgstr "مُقفَل"
+msgstr "مقفل"
