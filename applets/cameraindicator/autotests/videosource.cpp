@@ -10,7 +10,6 @@
 
 #include <iostream>
 #include <spa/debug/pod.h>
-#include <spa/param/tag-utils.h>
 #include <spa/param/video/format-utils.h>
 
 #include <pipewire/pipewire.h>
