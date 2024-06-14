@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-02 02:25+0000\n"
+"POT-Creation-Date: 2024-06-14 02:25+0000\n"
 "PO-Revision-Date: 2024-06-02 14:17+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -181,7 +181,7 @@ msgstr "Nové sedenie"
 msgid "Filters"
 msgstr "Filtre"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:162
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -192,7 +192,7 @@ msgstr ""
 "kompatibilný s Plasmou %1. Pre aktualizovanú verziu prosím kontaktujte "
 "autora widgetu."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:166
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -201,7 +201,7 @@ msgstr ""
 "Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s Plasmou %2. "
 "Ak chcete získať aktualizovanú verziu widgetu, obráťte sa na jeho autora."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:170
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -210,7 +210,7 @@ msgstr ""
 "Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s Plasmou %2. "
 "Ak chcete widget používať, aktualizujte Plasmu."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:175
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

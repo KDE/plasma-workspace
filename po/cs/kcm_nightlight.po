@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-17 09:52+0200\n"
+"PO-Revision-Date: 2024-05-27 16:36+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -210,16 +210,16 @@ msgstr "Hledám umístění..."
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "hodina"
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:56
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr ""
+msgstr "minuta"

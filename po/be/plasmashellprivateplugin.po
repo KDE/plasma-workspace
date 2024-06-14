@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-02 02:25+0000\n"
+"POT-Creation-Date: 2024-06-14 02:25+0000\n"
 "PO-Revision-Date: 2024-05-17 21:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -187,7 +187,7 @@ msgstr "Новы сеанс"
 msgid "Filters"
 msgstr "Фільтры"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:162
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -198,7 +198,7 @@ msgstr ""
 "несумяшчальны з Plasma %1. Каб атрымаць абноўленую версію, звяжыцеся з "
 "аўтарам віджэта."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:166
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -207,7 +207,7 @@ msgstr ""
 "Гэты віджэт быў створаны для Plasma %1, ён несумяшчальны з Plasma %2. Каб "
 "атрымаць абноўленую версію, звяжыцеся з аўтарам віджэта."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:170
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -216,7 +216,7 @@ msgstr ""
 "Гэты віджэт быў створаны для Plasma %1, ён несумяшчальны з Plasma %2. Каб "
 "карыстацца віджэтам, абнавіце Plasma."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:175
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

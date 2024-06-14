@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-17 09:50+0200\n"
+"PO-Revision-Date: 2024-05-29 11:39+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
@@ -78,12 +78,13 @@ msgstr "Jas klávesnice na %1%"
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
 msgstr ""
+"Noční světlo bylo pozastaveno, klikněte prostředním tlačítkem pro povolení"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr ""
+msgstr "Noční světlo bylo pozastaveno"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
@@ -141,7 +142,7 @@ msgstr "Nastavit noční barvu…"
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "Pozastaveno"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -171,7 +172,7 @@ msgstr "Zapnuto"
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
-msgstr ""
+msgstr "Ranní přechod"
 
 #: package/contents/ui/NightLightItem.qml:92
 #, kde-format
@@ -183,7 +184,7 @@ msgstr "Den"
 #, kde-format
 msgctxt "Night light phase"
 msgid "Evening Transition"
-msgstr ""
+msgstr "Večerní přechod"
 
 #: package/contents/ui/NightLightItem.qml:96
 #, kde-format
@@ -201,7 +202,7 @@ msgstr "%1K"
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "Pozastavit"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format
@@ -211,7 +212,7 @@ msgstr "Nastavit…"
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format
 msgid "Enable and Configure…"
-msgstr ""
+msgstr "Povolit a nastavit..."
 
 #: package/contents/ui/NightLightItem.qml:170
 #, kde-format
