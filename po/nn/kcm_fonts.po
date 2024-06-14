@@ -349,10 +349,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Vel skrift"
-
-#~ msgid ""
-#~ "Decimal font sizes can cause text layout problems in some applications. "
-#~ "Consider using only integer font sizes."
-#~ msgstr ""
-#~ "Skriftstorleikar med desimaltal kan føra til feil tekstvising i nokre "
-#~ "program. Vurder å berre bruka heiltaleg skriftstorleik."

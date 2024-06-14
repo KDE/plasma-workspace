@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-06-14 00:40+0000\n"
 "PO-Revision-Date: 2024-06-11 16:35+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -181,7 +181,7 @@ msgstr "Yeni Sesiya"
 msgid "Filters"
 msgstr "Süzgəclər"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:166
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -192,7 +192,7 @@ msgstr ""
 "ilə uyğun deyil. Vidjetin yenilənmiş versiyası üçün onun müəllifinə müraciət "
 "edin."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:170
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -201,7 +201,7 @@ msgstr ""
 "bu vidjet Plasma %1 üçün yazılb və Plasma %2 üçün uyğun deyil. Vidjetin yeni "
 "versiyası üçün onun müəllifinə müraciət edin."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:174
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -210,7 +210,7 @@ msgstr ""
 "bu vidjet Plasma %1 üçün yazılıb və Plasma %2 ilə uyğun deyil. Vidjeti "
 "istifadə edə bilmək üçün Plasmanı yeniləyin."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:179
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

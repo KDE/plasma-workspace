@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-06-14 00:40+0000\n"
 "PO-Revision-Date: 2024-05-15 20:50+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -181,7 +181,7 @@ msgstr "Ny økt"
 msgid "Filters"
 msgstr "Filter"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:166
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -192,7 +192,7 @@ msgstr ""
 "kompatibelt med Plasma %1. Ta kontakt med utviklaren av skjerm­elementet for "
 "å skaffa ein oppdatert versjon."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:170
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -202,7 +202,7 @@ msgstr ""
 "med Plasma %2. Ta kontakt med utviklaren av skjerm­elementet for å skaffa ein "
 "oppdatert versjon."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:174
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -211,7 +211,7 @@ msgstr ""
 "Dette skjermelementet er laga for Plasma versjon %1 og er ikkje kompatibelt "
 "med Plasma %2. Oppdater Plasma-versjonen din for å ta elementet i bruk."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:179
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "

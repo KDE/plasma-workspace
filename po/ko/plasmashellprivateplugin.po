@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-06-14 00:40+0000\n"
 "PO-Revision-Date: 2024-02-09 19:44+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -179,7 +179,7 @@ msgstr "새 세션"
 msgid "Filters"
 msgstr "필터"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:166
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -189,7 +189,7 @@ msgstr ""
 "이 위젯은 알 수 없는 과거 Plasma 버전을 위해서 작성되었으며 Plasma %1 버전과 "
 "호환되지 않습니다. 위젯 개발자에게 업데이트된 버전에 대해서 문의하십시오."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:170
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -198,7 +198,7 @@ msgstr ""
 "이 위젯은 Plasma %1 버전을 위해서 작성되었으며 Plasma %2 버전과 호환되지 않습"
 "니다. 위젯 개발자에게 업데이트된 버전에 대해서 문의하십시오."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:174
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -207,7 +207,7 @@ msgstr ""
 "이 위젯은 Plasma %1 버전을 위해서 작성되었으며 Plasma %2 버전과 호환되지 않습"
 "니다. 위젯을 사용하려면 Plasma를 업데이트하십시오."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:179
+#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
