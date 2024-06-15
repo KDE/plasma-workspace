@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2021 Emily Ehlert
+    SPDX-FileCopyrightText: 2024 Ismael Asensio <isma.af@gmail.com>
 
     Based upon BBC Weather Ion and ENV Canada Ion by Shawn Starr
     SPDX-FileCopyrightText: 2007-2009 Shawn Starr <shawn.starr@rogers.com>
@@ -246,60 +247,54 @@ void DWDIon::forecast_slotJobFinished(KJob *job)
     }
 }
 
-void DWDIon::calculatePositions(const QStringList &lines, QList<int> &namePositionalInfo, QList<int> &stationIdPositionalInfo) const
-{
-    QStringList stringLengths = lines[1].split(QChar::Space);
-    QList<int> lengths;
-    for (const QString &length : std::as_const(stringLengths)) {
-        lengths.append(length.count());
-    }
-
-    int curpos = 0;
-
-    for (int labelLength : lengths) {
-        QString label = lines[0].mid(curpos, labelLength).toLower();
-
-        if (label.contains(u"name"_s)) {
-            namePositionalInfo[0] = curpos;
-            namePositionalInfo[1] = labelLength;
-        } else if (label.contains(u"id"_s)) {
-            stationIdPositionalInfo[0] = curpos;
-            stationIdPositionalInfo[1] = labelLength;
-        }
-
-        curpos += labelLength + 1;
-    }
-}
-
 void DWDIon::parseStationData(const QByteArray &data)
 {
-    QString stringData = QString::fromLatin1(data);
-    QStringList lines = stringData.split(QChar::LineFeed);
-
-    QList<int> namePositionalInfo(2);
-    QList<int> stationIdPositionalInfo(2);
-    calculatePositions(lines, namePositionalInfo, stationIdPositionalInfo);
+    const QString stringData = QString::fromLatin1(data);
+    const QList<QStringView> lines = QStringView(stringData).split(QChar::LineFeed);
 
     // This loop parses the station file (https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg)
     // ID    ICAO NAME                 LAT    LON     ELEV
     // ----- ---- -------------------- -----  ------- -----
     // 01001 ENJA JAN MAYEN             70.56   -8.40    10
     // 01008 ENSB SVALBARD              78.15   15.28    29
-    int lineIndex = 0;
-    for (const QString &line : std::as_const(lines)) {
-        QString name = line.mid(namePositionalInfo[0], namePositionalInfo[1]).trimmed();
-        QString id = line.mid(stationIdPositionalInfo[0], stationIdPositionalInfo[1]).trimmed();
 
+    // Extract the fields' names and positions from the header
+    QMap<QString, std::pair<int, int>> fields;
+    const auto &titles = lines[0];
+    const auto delimiters = lines[1].split(QChar::Space);
+
+    int position = 0;
+    for (const QStringView &delimiter : delimiters) {
+        const int length = qMin(delimiter.length(), titles.length() - position);
+        const QString fieldName = titles.sliced(position, length).trimmed().toString().toLower();
+        fields.insert(fieldName, {position, length});
+        position += length + 1;
+    }
+
+    if (!fields.contains(u"id"_s) || !fields.contains(u"name"_s)) {
+        qCWarning(IONENGINE_dwd) << "Error parsing station list. Cannot recognize header";
+        return;
+    }
+
+    auto extractField = [&fields](QStringView line, const QString &fieldName) {
+        const auto &[pos, length] = fields[fieldName];
+        if (pos + length > line.length()) [[unlikely]] {
+            return line.sliced(pos).trimmed();
+        }
+        return line.sliced(pos, length).trimmed();
+    };
+
+    for (int idx = 2; idx < lines.count(); idx++) {
+        const QStringView &line = lines.at(idx);
+
+        const QString id = extractField(line, u"id"_s).toString();
         // This checks if this station is a station we know is working
-        // With this we remove all non working but also a lot of working ones.
-        if (id.startsWith(QLatin1Char('0')) || id.startsWith(QLatin1Char('1'))) {
-            m_place.insert(camelCaseString(name), id);
-        } else if (lineIndex > 10) {
-            // After header is passed and some more lines for safety, abort parse if filter fails, all acceptable stations were found
+        // With this we remove all non working but also a lot of working ones
+        if (!id.startsWith('0'_L1) && !id.startsWith('1'_L1)) {
             break;
         }
-
-        lineIndex += 1;
+        const QString name = extractField(line, u"name"_s).toString();
+        m_place.insert(camelCaseString(name), id);
     }
     qCDebug(IONENGINE_dwd) << "Number of parsed stations: " << m_place.size();
 }
@@ -584,17 +579,6 @@ QString DWDIon::roundWindDirections(int windDirection) const
 {
     QString roundedWindDirection = QString::number(qRound(((float)windDirection) / 100) * 10);
     return roundedWindDirection;
-}
-
-QString DWDIon::extractString(const QByteArray &array, int start, int length) const
-{
-    QString string;
-
-    for (int i = start; i < start + length; i++) {
-        string.append(QLatin1Char(array[i]));
-    }
-
-    return string;
 }
 
 QString DWDIon::camelCaseString(const QString &text) const

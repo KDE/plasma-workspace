@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2021 Emily Ehlert
+    SPDX-FileCopyrightText: 2024 Ismael Asensio <isma.af@gmail.com>
 
     Based upon BBC Weather Ion and ENV Canada Ion by Shawn Starr
     SPDX-FileCopyrightText: 2007-2009 Shawn Starr <shawn.starr@rogers.com>
@@ -122,9 +123,7 @@ private:
     void updateWeather(const QString &source);
 
     // Helper methods
-    void calculatePositions(const QStringList &lines, QList<int> &namePositionalInfo, QList<int> &stationIdPositionalInfo) const;
     QString camelCaseString(const QString &text) const;
-    QString extractString(const QByteArray &array, int start, int length) const;
     QString roundWindDirections(int windDirection) const;
     bool isNightTime(const WeatherData &weatherData) const;
     float parseNumber(const QVariant &number) const;
