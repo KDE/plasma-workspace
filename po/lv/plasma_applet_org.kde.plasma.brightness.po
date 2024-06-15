@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-31 00:41+0000\n"
-"PO-Revision-Date: 2024-04-24 16:32+0300\n"
+"PO-Revision-Date: 2024-05-27 18:52+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
@@ -80,13 +80,13 @@ msgstr "Tastatūras spilgtums %1 %"
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
 msgstr ""
+"Nakts gaismas darbība ir apturēta, spiediet te peles vidējo pogu, lai atsāktu"
 
 #: package/contents/ui/main.qml:84
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "Nakts gaisma"
+msgstr "Nakts gaismas darbība ir apturēta"
 
 #: package/contents/ui/main.qml:89
 #, kde-format
@@ -130,10 +130,9 @@ msgid "Scroll to adjust screen brightness"
 msgstr "Ritiniet, lai mainītu ekrāna spilgtumu"
 
 #: package/contents/ui/main.qml:122
-#, fuzzy, kde-format
-#| msgid "Middle-click to toggle Night Light"
+#, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr "Ieslēdziet/izslēdziet nakts gaismu ar peles vidējo pogu"
+msgstr "Spiediet te peles vidējo pogu, lai apturētu nakts gaismas darbību"
 
 #: package/contents/ui/main.qml:210
 #, kde-format
@@ -145,7 +144,7 @@ msgstr "Konfigurēt nakts gaismu..."
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "Apturēta"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -205,7 +204,7 @@ msgstr "%1K"
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "Apturēt"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format

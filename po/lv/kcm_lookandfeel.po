@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-04-24 16:20+0300\n"
+"PO-Revision-Date: 2024-05-27 08:01+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -127,7 +127,7 @@ msgstr "Atcelt"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr "Iegūt jaunus..."
+msgstr "Iegūt jaunus…"
 
 #: ui/main.qml:103
 #, kde-format
@@ -156,12 +156,12 @@ msgstr "Vai pielietot „%1“?"
 #: ui/main.qml:159
 #, kde-format
 msgid "Choose what to apply…"
-msgstr "Izvēlieties, ko pielietot..."
+msgstr "Izvēlieties, ko pielietot…"
 
 #: ui/main.qml:159
 #, kde-format
 msgid "Show fewer options…"
-msgstr "Rādīt mazāk iespēju..."
+msgstr "Rādīt mazāk iespēju…"
 
 #: ui/main.qml:176
 #, kde-format
@@ -189,16 +189,13 @@ msgid "Titlebar Buttons layout"
 msgstr "Virsrakstjoslas pogu izkārtojums"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Darbvirsmas izkārtojuma pielietošana aizvieto pašreizējo darbvirsmu, paneļu, "
-"peldošo paneļu un logdaļu konfigurāciju."
+"Darbvirsmas izkārtojuma pielietošana aizvieto pašreizējās darbvirsmas, "
+"paneļus, peldošos paneļus un logdaļas ar motīvam specifiskajiem."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

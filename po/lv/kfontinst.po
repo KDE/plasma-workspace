@@ -13,16 +13,16 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2024-01-19 18:25+0200\n"
-"Last-Translator: Māris Nartišs <maris.kde@gmail.com>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2024-05-27 08:03+0300\n"
+"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -64,10 +64,9 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:124
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr "Padara dialogu par „winid“ norādītās X programmas izcelošu logu"
+msgstr "Padara logu pārejošu logam, kas ir norādīts ar „windowHandle“"
 
 #: apps/Installer.cpp:127
 #, kde-format
@@ -82,7 +81,7 @@ msgstr "Drukāt"
 #: apps/Printer.cpp:311 kcmfontinst/DuplicatesDialog.cpp:224
 #, kde-format
 msgid "Canceling…"
-msgstr "Atceļ..."
+msgstr "Atceļ…"
 
 #: apps/Printer.cpp:328
 #, kde-format
@@ -166,7 +165,7 @@ msgstr "Dublējošies fonti"
 #: kcmfontinst/DuplicatesDialog.cpp:79
 #, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Meklē dublējošos fontus. Uzgaidiet..."
+msgstr "Meklē dublējošos fontus. Uzgaidiet…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:98
 #, kde-format
@@ -306,7 +305,7 @@ msgstr "Simbols/cits"
 #: kcmfontinst/FontFilter.cpp:267 kcmfontinst/FontFilter.cpp:335
 #, kde-format
 msgid "Filter by %1…"
-msgstr "Filtrēt pēc %1..."
+msgstr "Filtrēt pēc %1…"
 
 #: kcmfontinst/FontList.cpp:548
 #, kde-format
@@ -341,7 +340,7 @@ msgstr ""
 #: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
 #, kde-format
 msgid "…plus %1 more"
-msgstr "...un vēl par %1 vairāk"
+msgstr "…un vēl par %1 vairāk"
 
 #: kcmfontinst/FontList.cpp:1001
 #, kde-format
@@ -368,7 +367,7 @@ msgstr "Izslēgt"
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:798
 #, kde-format
 msgid "Print…"
-msgstr "Drukāt..."
+msgstr "Drukāt…"
 
 #: kcmfontinst/FontList.cpp:1312
 #, kde-format
@@ -482,12 +481,12 @@ msgstr "<qt>Grupa ar nosaukumu <b>„%1“</b> jau eksistē!</qt>"
 #: kcmfontinst/GroupList.cpp:794
 #, kde-format
 msgid "Rename…"
-msgstr "Pārdēvēt..."
+msgstr "Pārdēvēt…"
 
 #: kcmfontinst/GroupList.cpp:803
 #, kde-format
 msgid "Export…"
-msgstr "Eksportēt..."
+msgstr "Eksportēt…"
 
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
@@ -576,7 +575,7 @@ msgstr "Izslēdz"
 #: kcmfontinst/JobRunner.cpp:372
 #, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr "Atjauno fontu konfigurāciju. Uzgaidiet..."
+msgstr "Atjauno fontu konfigurāciju. Uzgaidiet…"
 
 #: kcmfontinst/JobRunner.cpp:444
 #, kde-format
@@ -665,22 +664,22 @@ msgstr "Negaidīta kļūda, apstrādājot: <i>%1</i>"
 #: kcmfontinst/KCmFontInst.cpp:213
 #, kde-format
 msgid "Create New Group…"
-msgstr "Izveidot jaunu grupu..."
+msgstr "Izveidot jaunu grupu…"
 
 #: kcmfontinst/KCmFontInst.cpp:216
 #, kde-format
 msgid "Remove Group…"
-msgstr "Noņemt grupu..."
+msgstr "Noņemt grupu…"
 
 #: kcmfontinst/KCmFontInst.cpp:219
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "Ieslēgt fontus grupā..."
+msgstr "Ieslēgt fontus grupā…"
 
 #: kcmfontinst/KCmFontInst.cpp:222
 #, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "Izslēgt fontus grupā..."
+msgstr "Izslēgt fontus grupā…"
 
 #: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
@@ -690,17 +689,17 @@ msgstr "Šī iespēja rāda izvēlētā fonta priekšskatījumu."
 #: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Find Duplicates…"
-msgstr "Atrast dublējošos fontus..."
+msgstr "Atrast dublējošos fontus…"
 
 #: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "Meklēt dublējošos fontus..."
+msgstr "Meklēt dublējošos fontus…"
 
 #: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Install from File…"
-msgstr "Instalēt no datnes..."
+msgstr "Instalēt no datnes…"
 
 #: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
@@ -710,7 +709,7 @@ msgstr "Instalēt fontus no lokālas datnes"
 #: kcmfontinst/KCmFontInst.cpp:263
 #, kde-format
 msgid "Get New Fonts…"
-msgstr "Iegūt jaunus fontus..."
+msgstr "Iegūt jaunus fontus…"
 
 #: kcmfontinst/KCmFontInst.cpp:264
 #, kde-format
@@ -720,12 +719,12 @@ msgstr "Lejupielādēt jaunus fontus"
 #: kcmfontinst/KCmFontInst.cpp:266
 #, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "Dzēst atlasītos fontus..."
+msgstr "Dzēst atlasītos fontus…"
 
 #: kcmfontinst/KCmFontInst.cpp:336
 #, kde-format
 msgid "Change Preview Text…"
-msgstr "Mainīt priekšskatījuma tekstu..."
+msgstr "Mainīt priekšskatījuma tekstu…"
 
 #: kcmfontinst/KCmFontInst.cpp:435
 #, kde-format
@@ -792,7 +791,7 @@ msgstr "Dzēst fontus"
 #: kcmfontinst/KCmFontInst.cpp:637
 #, kde-format
 msgid "Deleting font(s)…"
-msgstr "Dzēš fontu(s)..."
+msgstr "Dzēš fontu(s)…"
 
 #: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
@@ -844,7 +843,7 @@ msgstr "Pārvietot fontus"
 #: kcmfontinst/KCmFontInst.cpp:684
 #, kde-format
 msgid "Moving font(s)…"
-msgstr "Pārvieto fontu(s)..."
+msgstr "Pārvieto fontu(s)…"
 
 #: kcmfontinst/KCmFontInst.cpp:698
 #, kde-format
@@ -889,7 +888,7 @@ msgstr "Ievadiet jaunu tekstu:"
 #: kcmfontinst/KCmFontInst.cpp:827
 #, kde-format
 msgid "Scanning font list…"
-msgstr "Skenē fontu sarakstu..."
+msgstr "Skenē fontu sarakstu…"
 
 #: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
@@ -931,17 +930,17 @@ msgstr ""
 #: kcmfontinst/KCmFontInst.cpp:987
 #, kde-format
 msgid "Looking for any associated files…"
-msgstr "Meklē saistītās datnes..."
+msgstr "Meklē saistītās datnes…"
 
 #: kcmfontinst/KCmFontInst.cpp:991
 #, kde-format
 msgid "Scanning Files…"
-msgstr "Skenē datnes..."
+msgstr "Skenē datnes…"
 
 #: kcmfontinst/KCmFontInst.cpp:992
 #, kde-format
 msgid "Looking for additional files to install…"
-msgstr "Meklē papildu instalējamas datnes..."
+msgstr "Meklē papildu instalējamas datnes…"
 
 #: kcmfontinst/KCmFontInst.cpp:1007
 #, kde-format
@@ -951,7 +950,7 @@ msgstr "Meklē ar „%1“ saistītas datnes"
 #: kcmfontinst/KCmFontInst.cpp:1035
 #, kde-format
 msgid "Installing font(s)…"
-msgstr "Instalē fontu(s)..."
+msgstr "Instalē fontu(s)…"
 
 #: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
@@ -1076,12 +1075,12 @@ msgstr "Izslēgt fontus"
 #: kcmfontinst/KCmFontInst.cpp:1162
 #, kde-format
 msgid "Enabling font(s)…"
-msgstr "Ieslēdz fontu(s)..."
+msgstr "Ieslēdz fontu(s)…"
 
 #: kcmfontinst/KCmFontInst.cpp:1164
 #, kde-format
 msgid "Disabling font(s)…"
-msgstr "Izslēdz fontu(s)..."
+msgstr "Izslēdz fontu(s)…"
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
@@ -1574,12 +1573,12 @@ msgstr "Rādīt burtveidolu:"
 #: viewpart/FontViewPart.cpp:94
 #, kde-format
 msgid "Install…"
-msgstr "Instalēt..."
+msgstr "Instalēt…"
 
 #: viewpart/FontViewPart.cpp:115
 #, kde-format
 msgid "Change Text…"
-msgstr "Mainīt tekstu..."
+msgstr "Mainīt tekstu…"
 
 #: viewpart/FontViewPart.cpp:341
 #, kde-format
