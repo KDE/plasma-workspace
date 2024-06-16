@@ -33,7 +33,7 @@ PlasmoidItem {
         readonly property bool isInPowersaveProfile: powerProfilesControl.activeProfile === "power-saver"
         readonly property bool isHeldOPowerProfile: powerProfilesControl.profileHolds.length > 0
         readonly property string defaultPowerProfile: powerProfilesControl.configuredProfile ? powerProfilesControl.configuredProfile : "balanced"
-        readonly property bool isInNonDefaultPowerProfile: powerProfilesControl.activeProfile && powerProfilesControl.activeProfile != powerProfilesControl.defaultPowerProfile
+        readonly property bool isInDefaultPowerProfile: powerProfilesControl.activeProfile && powerProfilesControl.activeProfile == powerProfilesControl.defaultPowerProfile
     }
 
     BatteryControlModel {
@@ -101,7 +101,7 @@ PlasmoidItem {
 
     Plasmoid.status: {
 
-        if (powerManagementControl.isManuallyInhibited || powerProfilesControl.isInNonDefaultPowerProfile) {
+        if (powerManagementControl.isManuallyInhibited || !powerProfilesControl.isInDefaultPowerProfile) {
             return PlasmaCore.Types.ActiveStatus;
         }
 
@@ -218,7 +218,7 @@ PlasmoidItem {
 
         isManuallyInhibited: powerManagementControl.isManuallyInhibited
         activeProfile: powerProfilesControl.activeProfile
-        isInNonDefaultPowerProfile: powerProfilesControl.isInNonDefaultPowerProfile
+        isInDefaultPowerProfile: powerProfilesControl.isInDefaultPowerProfile
 
         model: batteryControl
 

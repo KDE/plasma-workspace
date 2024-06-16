@@ -32,7 +32,7 @@ MouseArea {
 
     required property bool isManuallyInhibited
     required property string activeProfile
-    required property bool isInNonDefaultPowerProfile
+    required property bool isInDefaultPowerProfile
 
     property alias model: view.model
 
@@ -53,7 +53,7 @@ MouseArea {
 
     property string powerModeIconSrc: root.isManuallyInhibited
             ? "system-suspend-inhibited-symbolic" 
-            : root.isInNonDefaultPowerProfile
+            : !root.isInDefaultPowerProfile
             ? root.activeProfileIconSrc
             : Plasmoid.icon
 
@@ -73,7 +73,7 @@ MouseArea {
 
         anchors.fill: parent
 
-        visible: root.isConstrained && !root.isDischarging && (root.isManuallyInhibited || root.isInNonDefaultPowerProfile)
+        visible: root.isConstrained && !root.isDischarging && (root.isManuallyInhibited || !root.isInDefaultPowerProfile)
         source: root.powerModeIconSrc
         active: root.containsMouse
     }
