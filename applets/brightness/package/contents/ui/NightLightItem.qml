@@ -123,6 +123,8 @@ PlasmaComponents3.ItemDelegate {
 
                     Layout.fillWidth: true
 
+                    Accessible.onPressAction: toggled()
+
                     KeyNavigation.up: root.KeyNavigation.up
                     KeyNavigation.tab: kcmButton
                     KeyNavigation.right: kcmButton

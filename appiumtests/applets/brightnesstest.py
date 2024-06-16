@@ -4,13 +4,15 @@
 # SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import logging
 import os
 import shutil
 import subprocess
 import sys
+import threading
 import time
 import unittest
-from typing import Final
+from typing import Any, Final
 
 import gi
 from appium import webdriver
@@ -34,6 +36,7 @@ POWERDEVIL_PATH: Final = os.environ.get("POWERDEVIL_PATH", "/usr/libexec/org_kde
 POWERDEVIL_SERVICE_NAME: Final = "org.kde.Solid.PowerManagement"
 BACKLIGHTHELPER_PATH: Final = os.environ.get("BACKLIGHTHELPER_PATH", "/usr/libexec/kf6/kauth/backlighthelper")
 BACKLIGHTHELPER_SERVICE_NAME: Final = "org.kde.powerdevil.backlighthelper"
+KDE_INSTALL_DBUSINTERFACEDIR: Final = os.getenv("KDE_INSTALL_DBUSINTERFACEDIR", "/usr/share/dbus-1/interfaces")
 
 
 def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
@@ -67,6 +70,88 @@ class SetValueCommand(ExtensionBase):
         return "post", "/session/$sessionId/appium/element/$id/value"
 
 
+class OrgKdeKWinNightLight:
+    """
+    D-Bus interface for org.kde.KWin.NightLight
+    """
+
+    BUS_NAME: Final = "org.kde.KWin.NightLight"
+    OBJECT_PATH: Final = "/org/kde/KWin/NightLight"
+    IFACE_NAME: Final = "org.kde.KWin.NightLight"
+
+    __connection: Gio.DBusConnection
+
+    def __init__(self) -> None:
+        self.__reg_id: int = 0
+        self.registered_event = threading.Event()
+        self.__owner_id: int = Gio.bus_own_name(Gio.BusType.SYSTEM, self.BUS_NAME, Gio.BusNameOwnerFlags.NONE, self.on_bus_acquired, None, None)
+        assert self.__owner_id > 0
+        self.cookie: int = 12345
+        self.properties: dict[str, GLib.Variant] = {
+            "inhibited": GLib.Variant("b", False),
+            "enabled": GLib.Variant("b", False),
+            "running": GLib.Variant("b", False),
+            "available": GLib.Variant("b", False),
+            "currentTemperature": GLib.Variant("u", 6500),
+            "targetTemperature": GLib.Variant("u", 6500),
+            "mode": GLib.Variant("u", 0),
+            "daylight": GLib.Variant("b", True),
+            "previousTransitionDateTime": GLib.Variant("t", 0),
+            "scheduledTransitionDateTime": GLib.Variant("t", 0),
+            "scheduledTransitionDuration": GLib.Variant("u", 0),
+        }
+
+    def quit(self) -> None:
+        self.__connection.unregister_object(self.__reg_id)
+        self.__reg_id = 0
+        Gio.bus_unown_name(self.__owner_id)
+        self.__connection.flush_sync(None)  # Otherwise flaky
+
+    def on_bus_acquired(self, connection: Gio.DBusConnection, name: str, *args) -> None:
+        """
+        Interface is ready, now register objects.
+        """
+        self.__connection = connection
+
+        with open(os.path.join(KDE_INSTALL_DBUSINTERFACEDIR, "org.kde.KWin.NightLight.xml"), encoding="utf-8") as file_handler:
+            introspection_data = Gio.DBusNodeInfo.new_for_xml("\n".join(file_handler.readlines()))
+            self.__reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.handle_method_call, self.handle_get_property, None)
+        assert self.__reg_id > 0
+
+        self.registered_event.set()
+
+    def handle_method_call(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, method_name: str, parameters: GLib.Variant, invocation: Gio.DBusMethodInvocation) -> None:
+        logging.info(f"nightlight call {method_name} {parameters}")
+
+        if method_name == "inhibit":
+            self.set_property("inhibited", GLib.Variant("b", True))
+            invocation.return_value(GLib.Variant.new_tuple(GLib.Variant("u", self.cookie)))
+        elif method_name == "uninhibit":
+            if parameters[0] == self.cookie:
+                self.set_property("inhibited", GLib.Variant("b", False))
+                invocation.return_value(None)
+            else:
+                invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.INVALID_ARGS, f"Wrong cookie {parameters}")
+        else:
+            invocation.return_value(None)
+
+    def handle_get_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, value: Any) -> GLib.Variant:
+        logging.info(f"nightlight get_property {value}")
+        return self.properties.get(value, None)
+
+    def set_property(self, key: str | list[str], value: GLib.Variant | list[GLib.Variant]) -> None:
+        logging.info(f"nightlight set_property {key} {value}")
+        changed_properties: dict[str, GLib.Variant] = {}
+        if isinstance(key, str):
+            self.properties[key] = value
+            changed_properties[key] = value
+        else:
+            for k, v in zip(key, value):
+                self.properties[k] = v
+                changed_properties[k] = v
+        Gio.DBusConnection.emit_signal(self.__connection, None, self.OBJECT_PATH, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(GLib.Variant("s", self.IFACE_NAME), GLib.Variant('a{sv}', changed_properties), GLib.Variant('as', ())))
+
+
 class BrightnessTests(unittest.TestCase):
     """
     Tests for the brightness widget
@@ -77,6 +162,7 @@ class BrightnessTests(unittest.TestCase):
     loop_thread: GLibMainLoopThread
     upower_interface: OrgFreedesktopUPower
     polkit1_interface: OrgFreedesktopPolicyKit1
+    nightlight_interface: OrgKdeKWinNightLight
     powerdevil: subprocess.Popen[bytes]
     backlighthelper: subprocess.Popen[bytes]
     testbed: UMockdev.Testbed
@@ -105,6 +191,10 @@ class BrightnessTests(unittest.TestCase):
         cls.polkit1_interface = OrgFreedesktopPolicyKit1()
         cls.addClassCleanup(cls.polkit1_interface.quit)
         assert cls.polkit1_interface.registered_event.wait(10), "polkit1 interface is not ready"
+        # Start the mock nightlight backend
+        cls.nightlight_interface = OrgKdeKWinNightLight()
+        cls.addClassCleanup(cls.nightlight_interface.quit)
+        assert cls.nightlight_interface.registered_event.wait(10), "nightlight interface is not ready"
 
         cls.testbed = UMockdev.Testbed.new()
         assert cls.testbed.add_from_file(os.path.join(os.path.dirname(os.path.abspath(__file__)), "brightness.umockdev"))
@@ -211,6 +301,39 @@ class BrightnessTests(unittest.TestCase):
             slider_element.click()
             wait = WebDriverWait(self.driver, 5)
             wait.until(lambda _: self.read_powerdevil_brightness() == target_brightness)
+
+    def test_3_nightlight(self) -> None:
+        """
+        Can report the nightlight status
+        """
+        self.driver.find_element(AppiumBy.NAME, "Unavailable")
+
+        self.nightlight_interface.set_property("available", GLib.Variant("b", True))
+        self.driver.find_element(AppiumBy.NAME, "Not enabled")
+
+        self.nightlight_interface.set_property("enabled", GLib.Variant("b", True))
+        self.driver.find_element(AppiumBy.NAME, "Not running")
+
+        self.nightlight_interface.set_property(["mode", "running"], [GLib.Variant("u", 3), GLib.Variant("b", True)])  # Always on
+        self.driver.find_element(AppiumBy.NAME, "On")
+
+        # Inhibit
+        slider_element = self.driver.find_element(AppiumBy.NAME, "Suspend")
+        slider_element.click()
+        self.driver.find_element(AppiumBy.NAME, "Suspended")
+        slider_element.click()
+        self.driver.find_element(AppiumBy.NAME, "On")
+
+        self.nightlight_interface.set_property(["mode", "daylight"], [GLib.Variant("u", 0), GLib.Variant("b", True)])  # Automatic
+        self.driver.find_element(AppiumBy.NAME, "Day")
+        self.nightlight_interface.set_property("daylight", GLib.Variant("b", False))
+        self.driver.find_element(AppiumBy.NAME, "Night")
+
+        # currentTemperature != targetTemperature
+        self.nightlight_interface.set_property("currentTemperature", GLib.Variant("u", 4500))
+        self.driver.find_element(AppiumBy.NAME, "Evening Transition")
+        self.nightlight_interface.set_property("daylight", GLib.Variant("b", True))
+        self.driver.find_element(AppiumBy.NAME, "Morning Transition")
 
 
 if __name__ == '__main__':
