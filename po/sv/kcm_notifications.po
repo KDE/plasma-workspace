@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-10 00:40+0000\n"
-"PO-Revision-Date: 2021-08-05 17:12+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-15 11:09+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -48,17 +48,13 @@ msgid "Show notification badges"
 msgstr "Visa underrättelsebrickor"
 
 #: ui/ApplicationConfiguration.qml:180
-#, fuzzy, kde-format
-#| msgid "Configure Events…"
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
-msgstr "Anpassa händelser…"
+msgstr "Anpassa händelser"
 
 #: ui/ApplicationConfiguration.qml:188
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
@@ -67,43 +63,41 @@ msgstr "Programmet stöder inte att anpassa underrättelser per händelse."
 #: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Visa ett meddelande i en ruta"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Spela att ljud"
 
 #: ui/ApplicationConfiguration.qml:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "Lyssna på ljud"
 
 #: ui/ApplicationConfiguration.qml:328
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "Återställ"
 
 #: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Välj ljudfil"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Underrättelser"
+msgstr "Systemunderrättelser…"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Programinställningar"
+msgstr "Programunderrättelser…"
 
 #: ui/main.qml:77
 #, kde-format
@@ -129,45 +123,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Underrättelser tillhandahålls för närvarande inte av Plasma."
 
 #: ui/main.qml:99
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "Stör ej:"
+msgstr "Stör ej"
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "Aktivera automatiskt:"
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Aktivera när skärmar är speglade"
+msgstr "När skärmar är speglade"
 
 #: ui/main.qml:117
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb while screen sharing"
-#| msgid "Enable while screen sharing"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Aktivera när skärmdelning pågår"
+msgstr "Vid skärmdelning"
 
 #: ui/main.qml:132
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "Ändra manuellt med genväg:"
 
 #: ui/main.qml:139
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Synlighetsvillkor"
 
 #: ui/main.qml:144
 #, kde-format
@@ -200,26 +189,22 @@ msgid "Show popup"
 msgstr "Visa meddelanderuta"
 
 #: ui/main.qml:200
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Meddelanderuta:"
+msgstr "Meddelanderutor"
 
 #: ui/main.qml:206
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Program:"
+msgstr "Plats:"
 
 #: ui/main.qml:207
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Visa nära underrättelseikon"
+msgstr "Nära underrättelseikon"
 
 #: ui/main.qml:244
 #, kde-format
@@ -243,7 +228,7 @@ msgstr "Dölj efter:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Ytterligare återmatning"
 
 #: ui/main.qml:287
 #, kde-format
@@ -293,22 +278,18 @@ msgid "System Services"
 msgstr "Systemtjänster"
 
 #: ui/SourcesPage.qml:156
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
-msgstr "Inget program eller händelse motsvarar sökbegreppet."
+msgstr "Inget program eller händelse motsvarar sökbegreppet"
 
 #: ui/SourcesPage.qml:180
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
 "Välj ett program i listan för att anpassa dess underrättelseinställningar "
-"och beteende."
+"och beteende"
 
 #, fuzzy
 #~| msgid "Application Settings"

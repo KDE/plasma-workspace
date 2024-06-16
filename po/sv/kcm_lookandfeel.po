@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2022-09-24 15:51+0200\n"
-"Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
+"PO-Revision-Date: 2024-06-15 10:42+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -103,23 +103,22 @@ msgstr "Globalt utseende och känsla"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Ta bort permanent"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Vill du verkligen ta bort temat permanent?"
 
 #: ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Ta bort permanent"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Avbryt"
@@ -127,7 +126,7 @@ msgstr "Avbryt"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Hämta nytt…"
 
 #: ui/main.qml:103
 #, kde-format
@@ -140,11 +139,10 @@ msgid "Preview Theme"
 msgstr "Förhandsgranska tema"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Preview Theme"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove Theme"
-msgstr "Förhandsgranska tema"
+msgstr "Ta bort tema"
 
 #: ui/main.qml:141
 #, kde-format
@@ -190,16 +188,14 @@ msgid "Titlebar Buttons layout"
 msgstr "Namnlistens knapplayout"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Att verkställa en skrivbordslayout ersätter de nuvarande inställningarna av "
-"skrivbordet, paneler, dockningsfönster och grafiska komponenter"
+"Att tillämpa en skrivbordslayout ersätter de nuvarande inställningarna av "
+"skrivbord, paneler, dockningsfönster och grafiska komponenter, och ersätter "
+"dem med vad temat anger."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
@@ -217,16 +213,14 @@ msgid "Application Style"
 msgstr "Programstil"
 
 #: ui/MoreOptions.qml:71
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Style"
-msgstr "Fönsterdekorationer"
+msgstr "Fönsterdekorationsstil"
 
 #: ui/MoreOptions.qml:72
-#, fuzzy, kde-format
-#| msgid "Window Decorations"
+#, kde-format
 msgid "Window Decoration Size"
-msgstr "Fönsterdekorationer"
+msgstr "Fönsterdekorationsstorlek"
 
 #: ui/MoreOptions.qml:73
 #, kde-format
