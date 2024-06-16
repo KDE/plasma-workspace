@@ -11,7 +11,7 @@ add_test(
     NAME appmenutest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/appmenutest.py --failfast
 )
-set_tests_properties(appmenutest PROPERTIES TIMEOUT 120)
+set_tests_properties(appmenutest PROPERTIES TIMEOUT 120 ENVIRONMENT "TEST_WITH_KWIN_WAYLAND=0;CMAKE_RUNTIME_OUTPUT_DIRECTORY=${CMAKE_RUNTIME_OUTPUT_DIRECTORY}")
 
 add_test(
     NAME batterymonitortest_withdisplaydevice
