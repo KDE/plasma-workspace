@@ -205,7 +205,7 @@ class BrightnessTests(unittest.TestCase):
         # define KAUTH_HELPER_PLUGIN_DIR "${KDE_INSTALL_FULL_PLUGINDIR}/${KAUTH_HELPER_PLUGIN_DIR}"
         if "KDECI_BUILD" in os.environ:
             os.makedirs(f"/builds/frameworks/kauth/_install/lib64/plugins/kf{KDE_VERSION}", exist_ok=True)
-            shutil.copytree(f"/builds/plasma/plasma-workspace/_install/lib64/plugins/kf{KDE_VERSION}/kauth", f"/builds/frameworks/kauth/_install/lib64/plugins/kf{KDE_VERSION}/kauth")
+            shutil.copytree(f"/builds/{os.getenv('CI_PROJECT_PATH', 'plasma/plasma-workspace')}/_install/lib64/plugins/kf{KDE_VERSION}/kauth", f"/builds/frameworks/kauth/_install/lib64/plugins/kf{KDE_VERSION}/kauth")
 
         debug_env = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "*.debug=true"
