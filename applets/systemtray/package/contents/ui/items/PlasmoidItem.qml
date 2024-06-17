@@ -160,7 +160,6 @@ AbstractItem {
 
         function onExpandedChanged(expanded) {
             if (expanded) {
-                systemTrayState.setActiveApplet(plasmoidContainer.applet, model.row)
                 effectivePressed = false;
             }
         }
