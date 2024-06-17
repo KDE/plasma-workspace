@@ -28,6 +28,7 @@
 #include <Plasma/Applet>
 #include <Plasma/PluginLoader>
 #include <Plasma5Support/ServiceJob>
+#include <PlasmaQuick/AppletQuickItem>
 
 #include <KAcceleratorManager>
 #include <KActionCollection>
@@ -64,6 +65,9 @@ void SystemTray::init()
     // even if SystemTray is of type Containment, it is de facto Applet and should act like one
     connect(this, &Containment::appletAdded, this, [this](Plasma::Applet *applet) {
         disconnect(applet, &Applet::activated, this, &Applet::activated);
+        PlasmaQuick::AppletQuickItem *appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
+        // this will ensure compactrepresentation will be loaded
+        appletItem->setSize({10, 10});
     });
 
     if (KWindowSystem::isPlatformWayland()) {

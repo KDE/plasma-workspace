@@ -34,6 +34,28 @@ ContainmentItem {
     readonly property alias hiddenLayout: expandedRepresentation.hiddenLayout
     readonly property bool oneRowOrColumn: tasksGrid.rowsOrColumns === 1
 
+    Instantiator {
+        model: KItemModels.KSortFilterProxyModel {
+            sourceModel: Plasmoid.systemTrayModel
+            filterRoleName: "effectiveStatus"
+            filterRowCallback: (sourceRow, sourceParent) => {
+                let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
+                // This loads active and passive items, excludes hidden ones
+                return value === PlasmaCore.Types.ActiveStatus || value === PlasmaCore.Types.PassiveStatus;
+            }
+        }
+        delegate: Connections {
+            required property QtObject applet
+            required property int row
+            target: applet
+            function onExpandedChanged(expanded: bool) {
+                if (expanded) {
+                    systemTrayState.setActiveApplet(applet, row)
+                }
+            }
+        }
+    }
+
     MouseArea {
         anchors.fill: parent
 
