@@ -1673,6 +1673,9 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
                 m_floatingness = get<double>(value);
                 positionAndResizePanel();
             });
+            connect(&m_floatingnessAnimation, &QPropertyAnimation::finished, rootObject, [this]() {
+                updateMask();
+            });
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(topShadowMarginChanged()), this, SLOT(updateShadows()));
