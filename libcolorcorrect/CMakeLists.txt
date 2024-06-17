@@ -2,7 +2,6 @@ add_subdirectory(kded)
 
 set(colorcorrect_LIB_SRCS
     compositorcoloradaptor.cpp
-    geolocator.cpp
     suncalc.cpp
     )
 
@@ -15,7 +14,6 @@ target_include_directories(colorcorrect PUBLIC "$<BUILD_INTERFACE:${CMAKE_CURREN
 
 target_link_libraries(colorcorrect
                     PUBLIC
-                      Plasma::Plasma5Support
                       KF6::ConfigCore
 
                       Qt::Core
@@ -38,7 +36,6 @@ install(TARGETS colorcorrect EXPORT libcolorcorrectLibraryTargets ${KDE_INSTALL_
 install(FILES
     colorcorrectconstants.h
     compositorcoloradaptor.h
-    geolocator.h
     ${CMAKE_CURRENT_BINARY_DIR}/colorcorrect_export.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/colorcorrect COMPONENT Devel
 )
