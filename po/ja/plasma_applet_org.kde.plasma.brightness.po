@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-17 00:40+0000\n"
 "PO-Revision-Date: 2024-02-06 18:39+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -208,35 +208,35 @@ msgctxt "@action:button Night Light"
 msgid "Suspend"
 msgstr ""
 
-#: package/contents/ui/NightLightItem.qml:144
+#: package/contents/ui/NightLightItem.qml:146
 #, kde-format
 msgid "Configure…"
 msgstr "設定…"
 
-#: package/contents/ui/NightLightItem.qml:144
+#: package/contents/ui/NightLightItem.qml:146
 #, kde-format
 msgid "Enable and Configure…"
 msgstr "有効化して設定..."
 
-#: package/contents/ui/NightLightItem.qml:170
+#: package/contents/ui/NightLightItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
 msgstr "昼モードへの移行を完了:"
 
-#: package/contents/ui/NightLightItem.qml:172
+#: package/contents/ui/NightLightItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
 msgstr "夜モードへの移行を開始:"
 
-#: package/contents/ui/NightLightItem.qml:174
+#: package/contents/ui/NightLightItem.qml:176
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
 msgstr "夜モードへの移行を完了:"
 
-#: package/contents/ui/NightLightItem.qml:176
+#: package/contents/ui/NightLightItem.qml:178
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"

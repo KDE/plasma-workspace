@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-17 00:40+0000\n"
 "PO-Revision-Date: 2024-05-04 13:23+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -204,35 +204,35 @@ msgctxt "@action:button Night Light"
 msgid "Suspend"
 msgstr "Suspendi"
 
-#: package/contents/ui/NightLightItem.qml:144
+#: package/contents/ui/NightLightItem.qml:146
 #, kde-format
 msgid "Configure…"
 msgstr "Agordi…"
 
-#: package/contents/ui/NightLightItem.qml:144
+#: package/contents/ui/NightLightItem.qml:146
 #, kde-format
 msgid "Enable and Configure…"
 msgstr "Ŝalti kaj Agordi…"
 
-#: package/contents/ui/NightLightItem.qml:170
+#: package/contents/ui/NightLightItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
 msgstr "Transiĝo al tago plenumita ĝis:"
 
-#: package/contents/ui/NightLightItem.qml:172
+#: package/contents/ui/NightLightItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
 msgstr "Transiĝo al nokto planita por:"
 
-#: package/contents/ui/NightLightItem.qml:174
+#: package/contents/ui/NightLightItem.qml:176
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
 msgstr "Transiĝo al nokto plenumita ĝis:"
 
-#: package/contents/ui/NightLightItem.qml:176
+#: package/contents/ui/NightLightItem.qml:178
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"

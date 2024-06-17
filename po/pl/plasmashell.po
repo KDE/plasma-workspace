@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-30 10:47+0200\n"
+"PO-Revision-Date: 2024-06-16 10:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -103,31 +103,31 @@ msgstr "Błędy zgłaszaj na bugs.kde.org"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Skopiuj wersję Plazmy"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Zgłoś błąd..."
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Ukryj pasek podglądu"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Ukryj do ponownego uruchomienia"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Ukryj trwale…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -138,12 +138,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Czy na pewno trwale ukryć pasek podglądu?<nl/><nl/> To działanie będzie "
+"można wycofać jedynie poprzez usunięcie wiersza zaczynającego się na "
+"<icode>ShowDesktopPreviewBanner</icode> w pliku ustawień "
+"<filename>kdeglobals</filename>."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Czy ukryć pasek podglądu?"
 
 #: main.cpp:84
 #, kde-format
@@ -249,13 +253,13 @@ msgstr "Bluetooth wyłączone"
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr "Mobilny internet włączony"
+msgstr "Przenośny internet włączony"
 
 #: osd.cpp:142
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr "Mobilny internet wyłączony"
+msgstr "Przenośny internet wyłączony"
 
 #: osd.cpp:150
 #, kde-format

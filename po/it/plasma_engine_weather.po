@@ -1,6 +1,6 @@
 # translation of plasma_engine_weather.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2008, 2019, 2021.
+# SPDX-FileCopyrightText: 2008, 2019, 2021, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2011.
 # Paolo Zamponi <feus73@gmail.com>, 2016, 2017, 2018, 2019.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2021-12-09 15:53+0100\n"
+"PO-Revision-Date: 2024-06-11 18:52+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -2828,7 +2828,7 @@ msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "
 "\"Rain then Sunny\")"
 msgid " then "
-msgstr ""
+msgstr " poi "
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -3856,9 +3856,7 @@ msgid "Low Drifting Snow"
 msgstr "Scaccianeve basso"
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Clear"
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
 msgstr "Prevalentemente sereno"
@@ -4902,36 +4900,28 @@ msgid "Mostly Clear"
 msgstr "Prevalentemente sereno"
 
 #: noaa_i18n.dat:358
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Showers or thunderstorms"
+#, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr "Rovesci o temporali"
+msgstr "Rovesci e temporali"
 
 #: noaa_i18n.dat:359
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Slight Chance Thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr "Lieve possibilità di temporali"
+msgstr "Lieve possibilità di rovesci e temporali"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance of showers or thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "Possibilità di rovesci o temporali"
+msgstr "Possibilità di rovesci e temporali"
 
 #: noaa_i18n.dat:361
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Thunderstorms Likely"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr "Probabili temporali"
+msgstr "Probabili rovesci e temporali"
 
 #~ msgctxt "weather condition"
 #~ msgid "weather condition"

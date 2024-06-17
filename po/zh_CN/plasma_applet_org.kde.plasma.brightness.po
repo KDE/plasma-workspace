@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-17 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -204,35 +204,35 @@ msgctxt "@action:button Night Light"
 msgid "Suspend"
 msgstr "暂停"
 
-#: package/contents/ui/NightLightItem.qml:144
+#: package/contents/ui/NightLightItem.qml:146
 #, kde-format
 msgid "Configure…"
 msgstr "配置…"
 
-#: package/contents/ui/NightLightItem.qml:144
+#: package/contents/ui/NightLightItem.qml:146
 #, kde-format
 msgid "Enable and Configure…"
 msgstr "启用并配置…"
 
-#: package/contents/ui/NightLightItem.qml:170
+#: package/contents/ui/NightLightItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
 msgstr "完全过渡到白天状态的时间："
 
-#: package/contents/ui/NightLightItem.qml:172
+#: package/contents/ui/NightLightItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
 msgstr "过渡到夜间状态的计划时间："
 
-#: package/contents/ui/NightLightItem.qml:174
+#: package/contents/ui/NightLightItem.qml:176
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
 msgstr "完全过渡到夜间状态的时间："
 
-#: package/contents/ui/NightLightItem.qml:176
+#: package/contents/ui/NightLightItem.qml:178
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-05-27 16:32+0200\n"
+"PO-Revision-Date: 2024-06-09 12:25+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -102,31 +102,31 @@ msgstr "Visita https://bugs.kde.org per segnalare errori"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Copia la versione di Plasma"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Segnala un bug…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Nascondi la riga di anteprima"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Nascondi fino al riavvio"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Nascondi permanentemente…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -137,12 +137,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Sei sicuro di voler nascondere permanentemente la riga di anteprima?<nl/><nl/"
+">Questa azione può essere annullata solo rimuovendo la riga che inizia con "
+"<icode>ShowDesktopPreviewBanner</icode> nel file di configurazione "
+"<filename>kdeglobals</filename>."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Vuoi nascondere la riga di anteprima?"
 
 #: main.cpp:84
 #, kde-format

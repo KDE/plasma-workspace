@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-31 00:41+0000\n"
+"POT-Creation-Date: 2024-06-17 00:40+0000\n"
 "PO-Revision-Date: 2024-05-28 12:50+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -203,35 +203,35 @@ msgctxt "@action:button Night Light"
 msgid "Suspend"
 msgstr "Felfüggesztés"
 
-#: package/contents/ui/NightLightItem.qml:144
+#: package/contents/ui/NightLightItem.qml:146
 #, kde-format
 msgid "Configure…"
 msgstr "Beállítás…"
 
-#: package/contents/ui/NightLightItem.qml:144
+#: package/contents/ui/NightLightItem.qml:146
 #, kde-format
 msgid "Enable and Configure…"
 msgstr "Bekapcsolás és beállítás…"
 
-#: package/contents/ui/NightLightItem.qml:170
+#: package/contents/ui/NightLightItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
 msgstr "Nappali átmenet vége:"
 
-#: package/contents/ui/NightLightItem.qml:172
+#: package/contents/ui/NightLightItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
 msgstr "Esti átmenet ütemezése:"
 
-#: package/contents/ui/NightLightItem.qml:174
+#: package/contents/ui/NightLightItem.qml:176
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
 msgstr "Esti átmenet vége:"
 
-#: package/contents/ui/NightLightItem.qml:176
+#: package/contents/ui/NightLightItem.qml:178
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
