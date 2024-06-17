@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 02:29+0000\n"
-"PO-Revision-Date: 2022-02-27 16:40+0530\n"
+"PO-Revision-Date: 2024-06-16 16:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,25 +15,25 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
 msgctxt "weather condition"
 msgid "clear"
-msgstr ""
+msgstr "தெளிவானது"
 
 #: bbcukmet_i18n.dat:2
 #, kde-format
 msgctxt "weather condition"
 msgid "clear intervals"
-msgstr ""
+msgstr "அவ்வப்போது தெளிவானது"
 
 #: bbcukmet_i18n.dat:3 ions/wetter.com/ion_wettercom.cpp:220
 #, kde-format
 msgctxt "weather condition"
 msgid "clear sky"
-msgstr ""
+msgstr "தெளிவான வானம்"
 
 #: bbcukmet_i18n.dat:4 ions/wetter.com/ion_wettercom.cpp:158
 #: ions/wetter.com/ion_wettercom.cpp:159
@@ -46,74 +46,74 @@ msgstr "மேகமூட்டம்"
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with hail"
-msgstr ""
+msgstr "கல்மழையுடன் மேகமூட்டம்"
 
 #: bbcukmet_i18n.dat:6
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with heavy snow"
-msgstr ""
+msgstr "பலத்த தூவிப்பனியுடன் மேகமூட்டம்"
 
 #: bbcukmet_i18n.dat:7
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with light snow"
-msgstr ""
+msgstr "லேசான தூவிப்பனியுடன் மேகமூட்டம்"
 
 #: bbcukmet_i18n.dat:8
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with sleet"
-msgstr ""
+msgstr "சிறுகல்மழையுடன் மேகமூட்டம்"
 
 #: bbcukmet_i18n.dat:9 ions/wetter.com/ion_wettercom.cpp:167
 #: ions/wetter.com/ion_wettercom.cpp:168 ions/wetter.com/ion_wettercom.cpp:170
 #, kde-format
 msgctxt "weather condition"
 msgid "drizzle"
-msgstr ""
+msgstr "தூறல்"
 
 #: bbcukmet_i18n.dat:10
 #, kde-format
 msgctxt "weather condition"
 msgid "fog"
-msgstr ""
+msgstr "மூடுபனி"
 
 #: bbcukmet_i18n.dat:11
 #, kde-format
 msgctxt "weather condition"
 msgid "foggy"
-msgstr ""
+msgstr "மூடுபனி"
 
 #: bbcukmet_i18n.dat:12
 #, kde-format
 msgctxt "weather condition"
 msgid "grey cloud"
-msgstr ""
+msgstr "சாம்பலான மேகம்"
 
 #: bbcukmet_i18n.dat:13
 #, kde-format
 msgctxt "weather condition"
 msgid "hail"
-msgstr ""
+msgstr "கல்மழை"
 
 #: bbcukmet_i18n.dat:14
 #, kde-format
 msgctxt "weather condition"
 msgid "hail shower"
-msgstr ""
+msgstr "இடைவிட்டு கல்மழை"
 
 #: bbcukmet_i18n.dat:15
 #, kde-format
 msgctxt "weather condition"
 msgid "hail showers"
-msgstr ""
+msgstr "இடைவிட்டு கல்மழை"
 
 #: bbcukmet_i18n.dat:16
 #, kde-format
 msgctxt "weather condition"
 msgid "hazy"
-msgstr ""
+msgstr "புகைமூட்டம்"
 
 #: bbcukmet_i18n.dat:17 ions/wetter.com/ion_wettercom.cpp:178
 #, kde-format
@@ -125,111 +125,111 @@ msgstr "பலத்த மழை"
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain shower"
-msgstr ""
+msgstr "இடைவிட்டு பலத்த மழை"
 
 #: bbcukmet_i18n.dat:19
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain showers"
-msgstr ""
+msgstr "இடைவிட்டு பலத்த மழை"
 
 #: bbcukmet_i18n.dat:20
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy shower"
-msgstr ""
+msgstr "இடைவிட்டு பலத்த மழை"
 
 #: bbcukmet_i18n.dat:21 ions/wetter.com/ion_wettercom.cpp:191
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy showers"
-msgstr ""
+msgstr "இடைவிட்டு பலத்த மழை"
 
 #: bbcukmet_i18n.dat:22 ions/wetter.com/ion_wettercom.cpp:187
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow"
-msgstr ""
+msgstr "பலத்த தூவிப்பனி"
 
 #: bbcukmet_i18n.dat:23
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow shower"
-msgstr ""
+msgstr "இடைவிட்டு பலத்த தூவிப்பனி"
 
 #: bbcukmet_i18n.dat:24
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow showers"
-msgstr ""
+msgstr "இடைவிட்டு பலத்த தூவிப்பனி"
 
 #: bbcukmet_i18n.dat:25
 #, kde-format
 msgctxt "weather condition"
 msgid "light cloud"
-msgstr ""
+msgstr "லேசான மேகமூட்டம்"
 
 #: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
 #: ions/wetter.com/ion_wettercom.cpp:176
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain"
-msgstr ""
+msgstr "லேசான மழை"
 
 #: bbcukmet_i18n.dat:27
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain shower"
-msgstr ""
+msgstr "இடைவிட்டு லேசான மழை"
 
 #: bbcukmet_i18n.dat:28
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain showers"
-msgstr ""
+msgstr "இடைவிட்டு லேசான மழை"
 
 #: bbcukmet_i18n.dat:29
 #, kde-format
 msgctxt "weather condition"
 msgid "light shower"
-msgstr ""
+msgstr "இடைவிட்டு லேசான மழை"
 
 #: bbcukmet_i18n.dat:30 ions/wetter.com/ion_wettercom.cpp:189
 #, kde-format
 msgctxt "weather condition"
 msgid "light showers"
-msgstr ""
+msgstr "இடைவிட்டு லேசான மழை"
 
 #: bbcukmet_i18n.dat:31 ions/wetter.com/ion_wettercom.cpp:184
 #: ions/wetter.com/ion_wettercom.cpp:185
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow"
-msgstr ""
+msgstr "லேசான தூவிப்பனி"
 
 #: bbcukmet_i18n.dat:32
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow shower"
-msgstr ""
+msgstr "இடைவிட்டு லேசான தூவிப்பனி"
 
 #: bbcukmet_i18n.dat:33 ions/wetter.com/ion_wettercom.cpp:194
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow showers"
-msgstr ""
+msgstr "இடைவிட்டு லேசான தூவிப்பனி"
 
 #: bbcukmet_i18n.dat:34
 #, kde-format
 msgctxt "weather condition"
 msgid "mist"
-msgstr ""
+msgstr "மூடுபனி"
 
 #: bbcukmet_i18n.dat:35
 #, kde-format
 msgctxt "weather condition"
 msgid "misty"
-msgstr ""
+msgstr "மூடுபனி"
 
 #: bbcukmet_i18n.dat:36 envcan_i18n.dat:1 noaa_i18n.dat:264
 #, kde-format
@@ -247,31 +247,31 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "partly cloudy"
-msgstr ""
+msgstr "ஓரளவு மேகமூட்டம்"
 
 #: bbcukmet_i18n.dat:39
 #, kde-format
 msgctxt "weather condition"
 msgid "sandstorm"
-msgstr ""
+msgstr "மணற்புயல்"
 
 #: bbcukmet_i18n.dat:40
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet"
-msgstr ""
+msgstr "கல்மழை"
 
 #: bbcukmet_i18n.dat:41
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet shower"
-msgstr ""
+msgstr "இடைவிட்டு கல்மழை"
 
 #: bbcukmet_i18n.dat:42
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet showers"
-msgstr ""
+msgstr "இடைவிட்டு கல்மழை"
 
 #: bbcukmet_i18n.dat:43 ions/wetter.com/ion_wettercom.cpp:207
 #, kde-format
@@ -283,32 +283,32 @@ msgstr "வெயில்"
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny intervals"
-msgstr ""
+msgstr "இடைவிட்டு வெயில்"
 
 #: bbcukmet_i18n.dat:45
 #, kde-format
 msgctxt "weather condition"
 msgid "thick cloud"
-msgstr ""
+msgstr "அடர்ந்த மேகமூட்டம்"
 
 #: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
 #: ions/wetter.com/ion_wettercom.cpp:197
 #, kde-format
 msgctxt "weather condition"
 msgid "thunderstorm"
-msgstr ""
+msgstr "இடிபுயல்"
 
 #: bbcukmet_i18n.dat:47
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery shower"
-msgstr ""
+msgstr "இடியுடன் கூடிய இடைவிட்ட மழை"
 
 #: bbcukmet_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery showers"
-msgstr ""
+msgstr "இடியுடன் கூடிய இடைவிட்ட மழை"
 
 #: bbcukmet_i18n.dat:49
 #, kde-format
@@ -320,25 +320,25 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "white cloud"
-msgstr ""
+msgstr "வெண்மேகம்"
 
 #: bbcukmet_i18n.dat:51
 #, kde-format
 msgctxt "weather forecast"
 msgid "clear"
-msgstr ""
+msgstr "தெளிவானது"
 
 #: bbcukmet_i18n.dat:52
 #, kde-format
 msgctxt "weather forecast"
 msgid "clear intervals"
-msgstr ""
+msgstr "அவ்வப்போது தெளிவானது"
 
 #: bbcukmet_i18n.dat:53
 #, kde-format
 msgctxt "weather forecast"
 msgid "clear sky"
-msgstr ""
+msgstr "தெளிவான வானம்"
 
 #: bbcukmet_i18n.dat:54
 #, kde-format
