@@ -9,6 +9,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Layouts
 import QtQuick.Controls as QQC2
+import QtPositioning
 
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
@@ -22,9 +23,6 @@ KCM.SimpleKCM {
 
     readonly property int error: compositorAdaptor.error
     property bool defaultRequested: false
-    property QtObject locator
-
-    readonly property bool doneLocating: locator !== null && !(locator.latitude === 0 && locator.longitude === 0)
 
     implicitHeight: Kirigami.Units.gridUnit * 29
     implicitWidth: Kirigami.Units.gridUnit * 35
@@ -37,42 +35,17 @@ KCM.SimpleKCM {
         id: sunCalc
     }
 
-    // the Geolocator object is created dynamically so we can have control over when geolocation is attempted
-    // because the object attempts geolocation immediately when created, which is unnecessary (and bad for privacy)
+    PositionSource {
+        id: automaticLocationProvider
+        active: kcm.nightLightSettings.active && kcm.nightLightSettings.mode === Private.NightLightMode.Automatic
 
-    function startLocator() {
-        locator = Qt.createQmlObject('import org.kde.colorcorrect as CC; CC.Geolocator {}', root, "geoLocatorObj");
-    }
+        readonly property bool locating: automaticLocationProvider.active
+            && automaticLocationProvider.sourceError == PositionSource.NoError
+            && !(automaticLocationProvider.position.latitudeValid || automaticLocationProvider.position.longitudeValid)
 
-    function endLocator() {
-        locator?.destroy();
-    }
-
-    Connections {
-        target: kcm.nightLightSettings
-        function onActiveChanged() {
-            if (kcm.nightLightSettings.active && kcm.nightLightSettings.mode === Private.NightLightMode.Automatic) {
-                root.startLocator();
-            } else {
-                root.endLocator();
-            }
-        }
-    }
-
-    Component.onCompleted: {
-        if (kcm.nightLightSettings.mode === Private.NightLightMode.Automatic && kcm.nightLightSettings.active) {
-            startLocator();
-        }
-    }
-
-    // Update backend when locator is changed
-    Connections {
-        target: root.locator
-        function onLatitudeChanged() {
-            kcm.nightLightSettings.latitudeAuto = Math.round(root.locator.latitude * 100) / 100
-        }
-        function onLongitudeChanged() {
-            kcm.nightLightSettings.longitudeAuto = Math.round(root.locator.longitude * 100) / 100
+        onPositionChanged: {
+            kcm.nightLightSettings.latitudeAuto = Math.round(automaticLocationProvider.position.coordinate.latitude * 100) / 100;
+            kcm.nightLightSettings.longitudeAuto = Math.round(automaticLocationProvider.position.coordinate.longitude * 100) / 100;
         }
     }
 
@@ -112,10 +85,10 @@ KCM.SimpleKCM {
 
             readonly property real latitude: kcm.nightLightSettings.mode === Private.NightLightMode.Location
                 ? kcm.nightLightSettings.latitudeFixed
-                : (root.locator?.locatingDone) ? root.locator.latitude : kcm.nightLightSettings.latitudeAuto
+                : automaticLocationProvider.position.latitudeValid ? automaticLocationProvider.position.coordinate.latitude : kcm.nightLightSettings.latitudeAuto
             readonly property real longitude: kcm.nightLightSettings.mode === Private.NightLightMode.Location
                 ? kcm.nightLightSettings.longitudeFixed
-                : (root.locator?.locatingDone) ? root.locator.longitude : kcm.nightLightSettings.longitudeAuto
+                : automaticLocationProvider.position.longitudeValid ? automaticLocationProvider.position.coordinate.longitude : kcm.nightLightSettings.longitudeAuto
 
             readonly property var morningTimings: sunCalc.getMorningTimings(latitude, longitude)
             readonly property var eveningTimings: sunCalc.getEveningTimings(latitude, longitude)
@@ -307,11 +280,6 @@ KCM.SimpleKCM {
                         kcm.nightLightSettings.mode = currentIndex - 1;
                     }
                     kcm.nightLightSettings.active = (currentIndex !== 0);
-                    if (currentIndex - 1 === Private.NightLightMode.Automatic && kcm.nightLightSettings.active) {
-                        root.startLocator();
-                    } else {
-                        root.endLocator();
-                    }
                 }
             }
 
@@ -319,13 +287,12 @@ KCM.SimpleKCM {
             QQC2.Label {
                 Kirigami.FormData.label: i18nc("@label The coordinates for the current location", "Current location:")
 
-                visible: kcm.nightLightSettings.mode === Private.NightLightMode.Automatic && kcm.nightLightSettings.active
-                    && root.doneLocating
+                visible: automaticLocationProvider.active && !automaticLocationProvider.locating
                 enabled: kcm.nightLightSettings.active
                 wrapMode: Text.Wrap
                 text: i18n("Latitude: %1°   Longitude: %2°",
-                    Math.round((root.locator?.latitude ?? 0) * 100) / 100,
-                    Math.round((root.locator?.longitude ?? 0) * 100) / 100)
+                    Math.round((automaticLocationProvider.position.latitudeValid ? automaticLocationProvider.position.coordinate.latitude : 0) * 100) / 100,
+                    Math.round((automaticLocationProvider.position.longitudeValid ? automaticLocationProvider.position.coordinate.longitude : 0) * 100) / 100)
                 textFormat: Text.PlainText
             }
 
@@ -432,9 +399,7 @@ KCM.SimpleKCM {
         }
 
         Item {
-            visible: kcm.nightLightSettings.active
-                && kcm.nightLightSettings.mode === Private.NightLightMode.Automatic
-                && (!root.locator || !root.doneLocating)
+            visible: automaticLocationProvider.locating
             Layout.topMargin: Kirigami.Units.largeSpacing * 4
             Layout.fillWidth: true
             implicitHeight: loadingPlaceholder.implicitHeight
