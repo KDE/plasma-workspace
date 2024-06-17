@@ -1,6 +1,6 @@
 # translation of plasma_engine_weather.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2008, 2019, 2021.
+# SPDX-FileCopyrightText: 2008, 2019, 2021, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 # Federico Zenith <federico.zenith@member.fsf.org>, 2009, 2011.
 # Paolo Zamponi <feus73@gmail.com>, 2016, 2017, 2018, 2019.
 #
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format

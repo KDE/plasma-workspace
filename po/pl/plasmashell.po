@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:34+0000\n"
-"PO-Revision-Date: 2022-12-29 10:30+0100\n"
+"PO-Revision-Date: 2024-06-16 10:41+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -165,13 +165,13 @@ msgstr "Bluetooth wyłączone"
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr "Mobilny internet włączony"
+msgstr "Przenośny internet włączony"
 
 #: osd.cpp:139
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr "Mobilny internet wyłączony"
+msgstr "Przenośny internet wyłączony"
 
 #: osd.cpp:147
 #, kde-format
