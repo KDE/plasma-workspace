@@ -13,7 +13,6 @@
 #include <KPluginFactory>
 
 #include "../compositorcoloradaptor.h"
-#include "../geolocator.h"
 
 K_PLUGIN_CLASS_WITH_JSON(LocationUpdater, "colorcorrectlocationupdater.json")
 
@@ -33,24 +32,31 @@ void LocationUpdater::resetLocator()
     const bool enabled = group.readEntry(QStringLiteral("Active"), false);
     const QString mode = group.readEntry(QStringLiteral("Mode"), QStringLiteral("Automatic"));
     if (m_adaptor->running() && enabled && mode == QStringLiteral("Automatic")) {
-        if (!m_locator) {
-            m_locator = new ColorCorrect::Geolocator(this);
-            qCInfo(LOCATIONUPDATER) << "Geolocator started";
-            connect(m_locator, &ColorCorrect::Geolocator::locationChanged, this, &LocationUpdater::sendLocation);
+        if (!m_positionSource) {
+            m_positionSource = QGeoPositionInfoSource::createDefaultSource(this);
+            if (!m_positionSource) {
+                qCWarning(LOCATIONUPDATER) << "Failed to get a geolocation source";
+                return;
+            }
+
+            const QGeoPositionInfo lastPosition = m_positionSource->lastKnownPosition();
+            if (lastPosition.isValid()) {
+                m_adaptor->sendAutoLocationUpdate(lastPosition.coordinate().latitude(), lastPosition.coordinate().longitude());
+            }
+
+            connect(m_positionSource, &QGeoPositionInfoSource::positionUpdated, this, [this](const QGeoPositionInfo &position) {
+                m_adaptor->sendAutoLocationUpdate(position.coordinate().latitude(), position.coordinate().longitude());
+            });
+            m_positionSource->startUpdates();
         }
     } else {
-        delete m_locator;
-        m_locator = nullptr;
+        delete m_positionSource;
+        m_positionSource = nullptr;
         // if automatic location isn't enabled, there's no need to keep running
         // Night Light KCM will enable us again if user changes to automatic
         disableSelf();
         qCInfo(LOCATIONUPDATER) << "Geolocator stopped";
     }
-}
-
-void LocationUpdater::sendLocation(double latitude, double longitude)
-{
-    m_adaptor->sendAutoLocationUpdate(latitude, longitude);
 }
 
 void LocationUpdater::disableSelf()

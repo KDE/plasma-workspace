@@ -5,13 +5,13 @@
 */
 #pragma once
 
-#include <kdedmodule.h>
+#include <QGeoPositionInfoSource>
 
 #include <KConfigWatcher>
+#include <KDEDModule>
 
 namespace ColorCorrect
 {
-class Geolocator;
 class CompositorAdaptor;
 }
 
@@ -23,10 +23,9 @@ public:
 
 private:
     void resetLocator();
-    void sendLocation(double latitude, double longitude);
     void disableSelf();
 
     ColorCorrect::CompositorAdaptor *const m_adaptor;
-    ColorCorrect::Geolocator *m_locator = nullptr;
+    QGeoPositionInfoSource *m_positionSource = nullptr;
     KConfigWatcher::Ptr m_configWatcher;
 };
