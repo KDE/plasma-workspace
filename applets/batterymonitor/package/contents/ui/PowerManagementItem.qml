@@ -55,8 +55,12 @@ PlasmaComponents3.ItemDelegate {
     Accessible.role: Accessible.CheckBox
     KeyNavigation.tab: manualInhibitionSwitch
 
-    contentItem: RowLayout {
-        spacing: Kirigami.Units.gridUnit
+    contentItem: GridLayout {
+        id: grid
+        columns: 3
+        columnSpacing: 0
+        rows: 5 /* Title + Switch + LidHint + InhibitionHintTitle + ApplicationList */
+        rowSpacing: Kirigami.Units.smallSpacing
 
         Kirigami.Icon {
             id: icon
@@ -64,162 +68,138 @@ PlasmaComponents3.ItemDelegate {
             Layout.alignment: Qt.AlignTop
             Layout.preferredWidth: Kirigami.Units.iconSizes.medium
             Layout.preferredHeight: Kirigami.Units.iconSizes.medium
+            Layout.rowSpan: grid.rows
+            Layout.rightMargin: Kirigami.Units.gridUnit
         }
 
-        ColumnLayout {
+        PlasmaComponents3.Label {
             Layout.fillWidth: true
-            Layout.alignment: Qt.AlignTop
-            spacing: Kirigami.Units.smallSpacing
+            elide: Text.ElideRight
+            maximumLineCount: 1
+            text: root.text
+            textFormat: Text.PlainText
+            wrapMode: Text.Wrap
+        }
 
-            RowLayout {
-                Layout.fillWidth: true
-                spacing: Kirigami.Units.largeSpacing
+        PlasmaComponents3.Label {
+            id: pmStatusLabel
+            Layout.alignment: Qt.AlignRight | Qt.AlignTop
+            text: root.isManuallyInhibited || root.inhibitions.length > 0 ? i18nc("Sleep and Screen Locking after Inactivity", "Blocked") : i18nc("Sleep and Screen Locking after Inactivity", "Automatic")
+            textFormat: Text.PlainText
+        }
 
-                PlasmaComponents3.Label {
-                    Layout.fillWidth: true
-                    elide: Text.ElideRight
-                    text: root.text
-                    textFormat: Text.PlainText
-                    wrapMode: Text.Wrap
-                }
+        // UI to manually inhibit sleep and screen locking
+        PlasmaComponents3.Switch {
+            id: manualInhibitionSwitch
+            Layout.columnSpan: 2
+            text: i18nc("@option:check Manually block sleep and screen locking after inactivity", "Manually block")
+            checked: root.isManuallyInhibited
+            focus: true
 
-                PlasmaComponents3.Label {
-                    id: pmStatusLabel
-                    Layout.alignment: Qt.AlignRight | Qt.AlignTop
-                    text: root.isManuallyInhibited || root.inhibitions.length > 0 ? i18nc("Sleep and Screen Locking after Inactivity", "Blocked") : i18nc("Sleep and Screen Locking after Inactivity", "Automatic")
-                    textFormat: Text.PlainText
-                }
+            Accessible.onPressAction: {
+                checked = !checked;
+                toggled();
             }
 
-            RowLayout {
-                // UI to manually inhibit sleep and screen locking
-                PlasmaComponents3.Switch {
-                    id: manualInhibitionSwitch
-                    Layout.fillWidth: true
-                    text: i18nc("@option:check Manually block sleep and screen locking after inactivity", "Manually block")
-                    checked: root.isManuallyInhibited
-                    focus: true
+            KeyNavigation.up: root.KeyNavigation.up
+            KeyNavigation.down: root.KeyNavigation.down
+            KeyNavigation.tab: root.KeyNavigation.down
+            KeyNavigation.backtab: root.KeyNavigation.backtab
 
-                    KeyNavigation.up: root.KeyNavigation.up
-                    KeyNavigation.down: root.KeyNavigation.down
-                    KeyNavigation.tab: root.KeyNavigation.down
-                    KeyNavigation.backtab: root.KeyNavigation.backtab
-
-                    Keys.onPressed: (event) => {
-                        if (event.key == Qt.Key_Space || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
-                            toggle();
-                        }
-                    }
-
-                    onToggled: {
-                        inhibitionChangeRequested(checked);
-                    }
-
-                    Connections {
-                        target: root
-                        function onIsManuallyInhibitedChanged() {
-                            manualInhibitionSwitch.checked = isManuallyInhibited;
-                        }
-                    }
-
-                    Connections {
-                        target: root
-                        function onIsManuallyInhibitedErrorChanged() {
-                            if (root.isManuallyInhibitedError) {
-                                manualInhibitionSwitch.checked = !manualInhibitionSwitch.checked
-                                busyIndicator.visible = false;
-                                root.isManuallyInhibitedError = false;
-                                if (!root.isManuallyInhibited) {
-                                    inhibitionError.text = i18n("Failed to unblock automatic sleep and screen locking");
-                                    inhibitionError.sendEvent();
-                                } else {
-                                    inhibitionError.text = i18n("Failed to block automatic sleep and screen locking");
-                                    inhibitionError.sendEvent();
+            Keys.onPressed: (event) => {
+                                if (event.key == Qt.Key_Space || event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
+                                    toggle();
                                 }
                             }
-                        }
-                    }
+
+            onToggled: {
+                inhibitionChangeRequested(checked);
+            }
+
+            Connections {
+                target: root
+                function onIsManuallyInhibitedChanged() {
+                    manualInhibitionSwitch.checked = isManuallyInhibited;
                 }
+            }
 
-            BusyIndicator {
-                id: busyIndicator
-                visible: false
-                Layout.preferredHeight: manualInhibitionSwitch.implicitHeight
-
-                Connections {
-                    target: root
-
-                    function onInhibitionChangeRequested(inhibit) {
-                        busyIndicator.visible = inhibit != root.isManuallyInhibited;
-                    }
-
-                    function onIsManuallyInhibitedChanged(val) {
-                        busyIndicator.visible = false;
+            Connections {
+                target: root
+                function onIsManuallyInhibitedErrorChanged() {
+                    if (root.isManuallyInhibitedError) {
+                        manualInhibitionSwitch.checked = !manualInhibitionSwitch.checked
+                        root.isManuallyInhibitedError = false;
+                        if (!root.isManuallyInhibited) {
+                            inhibitionError.text = i18n("Failed to unblock automatic sleep and screen locking");
+                            inhibitionError.sendEvent();
+                        } else {
+                            inhibitionError.text = i18n("Failed to block automatic sleep and screen locking");
+                            inhibitionError.sendEvent();
+                        }
                     }
                 }
             }
         }
 
-            // list of automatic inhibitions
-            ColumnLayout {
-                id: inhibitionReasonsLayout
+        InhibitionHint {
+            Layout.columnSpan: 2
+            visible: root.inhibitsLidAction
+            iconSource: "computer-laptop"
+            text: i18nc("Minimize the length of this string as much as possible", "Your laptop is configured not to sleep when closing the lid while an external monitor is connected.")
+        }
 
-                Layout.fillWidth: true
-                visible: root.inhibitsLidAction || (root.inhibitions.length > 0)
+        PlasmaComponents3.Label {
+            id: inhibitionExplanation
+            Layout.columnSpan: 2
+            Layout.fillWidth: true
+            visible: root.inhibitions.length > 1
+            font: Kirigami.Theme.smallFont
+            wrapMode: Text.WordWrap
+            elide: Text.ElideRight
+            maximumLineCount: 3
+            text: i18np("%1 application is currently blocking sleep and screen locking:",
+                        "%1 applications are currently blocking sleep and screen locking:",
+                        root.inhibitions.length)
+            textFormat: Text.PlainText
+        }
+
+        // list of automatic inhibitions
+        Column {
+            Layout.fillWidth: true
+            Layout.columnSpan: 2
+            spacing: grid.rowSpacing
+            visible: root.inhibitions.length > 0
+
+            Repeater {
+                model: root.inhibitions
 
                 InhibitionHint {
-                    Layout.fillWidth: true
-                    visible: root.inhibitsLidAction
-                    iconSource: "computer-laptop"
-                    text: i18nc("Minimize the length of this string as much as possible", "Your laptop is configured not to sleep when closing the lid while an external monitor is connected.")
-                }
+                    width: parent.width
+                    property string name: modelData.PrettyName
+                    property string reason: modelData.Reason
 
-                PlasmaComponents3.Label {
-                    id: inhibitionExplanation
-                    Layout.fillWidth: true
-                    visible: root.inhibitions.length > 1
-                    font: Kirigami.Theme.smallFont
-                    wrapMode: Text.WordWrap
-                    elide: Text.ElideRight
-                    maximumLineCount: 3
-                    text: i18np("%1 application is currently blocking sleep and screen locking:",
-                                "%1 applications are currently blocking sleep and screen locking:",
-                                root.inhibitions.length)
-                    textFormat: Text.PlainText
-                }
-
-                Repeater {
-                    model: root.inhibitions
-
-                    InhibitionHint {
-                        property string icon: modelData.Icon
-                            || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
-                        property string name: modelData.PrettyName
-                        property string reason: modelData.Reason
-
-                        Layout.fillWidth: true
-                        iconSource: icon
-                        text: {
-                            if (root.inhibitions.length === 1) {
-                                if (reason && name) {
-                                    return i18n("%1 is currently blocking sleep and screen locking (%2)", name, reason)
-                                } else if (name) {
-                                    return i18n("%1 is currently blocking sleep and screen locking (unknown reason)", name)
-                                } else if (reason) {
-                                    return i18n("An application is currently blocking sleep and screen locking (%1)", reason)
-                                } else {
-                                    return i18n("An application is currently blocking sleep and screen locking (unknown reason)")
-                                }
+                    iconSource: modelData.Icon
+                                || (KWindowSystem.isPlatformWayland ? "wayland" : "xorg")
+                    text: {
+                        if (root.inhibitions.length === 1) {
+                            if (reason && name) {
+                                return i18n("%1 is currently blocking sleep and screen locking (%2)", name, reason)
+                            } else if (name) {
+                                return i18n("%1 is currently blocking sleep and screen locking (unknown reason)", name)
+                            } else if (reason) {
+                                return i18n("An application is currently blocking sleep and screen locking (%1)", reason)
                             } else {
-                                if (reason && name) {
-                                    return i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason)
-                                } else if (name) {
-                                    return i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", name)
-                                } else if (reason) {
-                                    return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: %1", reason)
-                                } else {
-                                    return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: unknown reason")
-                                }
+                                return i18n("An application is currently blocking sleep and screen locking (unknown reason)")
+                            }
+                        } else {
+                            if (reason && name) {
+                                return i18nc("Application name: reason for preventing sleep and screen locking", "%1: %2", name, reason)
+                            } else if (name) {
+                                return i18nc("Application name: reason for preventing sleep and screen locking", "%1: unknown reason", name)
+                            } else if (reason) {
+                                return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: %1", reason)
+                            } else {
+                                return i18nc("Application name: reason for preventing sleep and screen locking", "Unknown application: unknown reason")
                             }
                         }
                     }

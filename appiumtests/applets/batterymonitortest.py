@@ -68,6 +68,7 @@ class BatteryMonitorTests(unittest.TestCase):
     """
 
     dbus_daemon_pid: str
+    session_bus: Gio.DBusConnection
     driver: webdriver.Remote
     loop_thread: GLibMainLoopThread
     upower_interface: OrgFreedesktopUPower
@@ -100,12 +101,12 @@ class BatteryMonitorTests(unittest.TestCase):
         # Start PowerDevil which is used by the dataengine
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "org.kde.powerdevil.debug=true"
-        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
-        assert not name_has_owner(session_bus, POWERDEVIL_SERVICE_NAME), "PowerDevil is already running"
+        cls.session_bus = Gio.bus_get_sync(Gio.BusType.SESSION)
+        assert not name_has_owner(cls.session_bus, POWERDEVIL_SERVICE_NAME), "PowerDevil is already running"
         cls.powerdevil = subprocess.Popen([POWERDEVIL_PATH], env=debug_env, stdout=sys.stderr, stderr=sys.stderr)
         powerdevil_started: bool = False
         for _ in range(10):
-            if name_has_owner(session_bus, POWERDEVIL_SERVICE_NAME):
+            if name_has_owner(cls.session_bus, POWERDEVIL_SERVICE_NAME):
                 powerdevil_started = True
                 break
             print("waiting for PowerDevil to appear on the dbus session")
@@ -385,6 +386,41 @@ class BatteryMonitorTests(unittest.TestCase):
         self.ppd_interface.set_performance_degraded_reason("")
         wait = WebDriverWait(self.driver, 5)
         wait.until_not(lambda _: reason_label.is_displayed())
+
+    def has_inhibition(self, driver) -> bool:
+        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.kde.Solid.PowerManagement.PolicyAgent", "/org/kde/Solid/PowerManagement/PolicyAgent", "org.kde.Solid.PowerManagement.PolicyAgent", "ListInhibitions")
+        reply, _ = self.session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+        return reply and reply.get_signature() == 'a(ss)' and reply.get_body().get_child_value(0).n_children() > 0
+
+    def inhibit(self, application: str, reason: str) -> int:
+        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.freedesktop.PowerManagement.Inhibit", "/org/freedesktop/PowerManagement/Inhibit", "org.freedesktop.PowerManagement.Inhibit", "Inhibit")
+        message.set_body(GLib.Variant("(ss)", [application, reason]))
+        reply, _ = self.session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+        return reply and reply.get_signature() == 'u' and reply.get_body().get_child_value(0).get_uint32()
+
+    def uninhibit(self, cookie: int) -> bool:
+        message: Gio.DBusMessage = Gio.DBusMessage.new_method_call("org.freedesktop.PowerManagement.Inhibit", "/org/freedesktop/PowerManagement/Inhibit", "org.freedesktop.PowerManagement.Inhibit", "UnInhibit")
+        message.set_body(GLib.Variant("(u)", [cookie]))
+        reply, _ = self.session_bus.send_message_with_reply_sync(message, Gio.DBusSendMessageFlags.NONE, 1000)
+        return reply and reply.get_error_name() is None
+
+    def test_5_inhibition(self) -> None:
+        """
+        Manual inhibition or inhibition from application
+        """
+        switch_element = self.driver.find_element(AppiumBy.NAME, "Manually block")
+        switch_element.click()
+        wait = WebDriverWait(self.driver, 10)
+        wait.until(self.has_inhibition)
+        switch_element.click()
+        wait.until_not(self.has_inhibition)
+
+        application: str = "appiumtest"
+        reason: str = "正在测试电池小部件"
+        cookie: int = self.inhibit(application, reason)
+        inhibition_hint = self.driver.find_element(AppiumBy.NAME, f"{application} is currently blocking sleep and screen locking ({reason})")
+        self.uninhibit(cookie)
+        wait.until_not(lambda _: inhibition_hint.is_displayed())
 
 
 if __name__ == '__main__':
