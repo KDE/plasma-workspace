@@ -92,8 +92,19 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::restoreAutoHide);
 
     m_lastScreen = targetScreen;
-    connect(this, &PanelView::locationChanged, this, &PanelView::restore);
     connect(this, &PanelView::containmentChanged, this, &PanelView::refreshContainment);
+    connect(this, &PanelView::locationChanged, this, [this](Plasma::Types::Location location) {
+        switch (location) {
+        case Plasma::Types::LeftEdge:
+        case Plasma::Types::RightEdge:
+            containment()->setFormFactor(Plasma::Types::Vertical);
+            break;
+        case Plasma::Types::TopEdge:
+        case Plasma::Types::BottomEdge:
+            containment()->setFormFactor(Plasma::Types::Horizontal);
+        }
+        restore();
+    });
 
     if (!m_corona->kPackage().isValid()) {
         qCWarning(PLASMASHELL) << "Invalid home screen package";
