@@ -44,8 +44,35 @@ QString Utility::numericExample(const QLocale &locale)
 
 QString Utility::paperSizeExample(const QLocale &locale)
 {
+    // clang-format off
+    // these locales have Metric measurement system but Letter paper size
+    const QSet<QString> letterLocales {
+        QStringLiteral("en_CA"),
+        QStringLiteral("en_PH"),
+        QStringLiteral("es_BO"),
+        QStringLiteral("es_CL"),
+        QStringLiteral("es_CO"),
+        QStringLiteral("es_CR"),
+        QStringLiteral("es_GT"),
+        QStringLiteral("es_MX"),
+        QStringLiteral("es_NI"),
+        QStringLiteral("es_PA"),
+        QStringLiteral("es_PR"),
+        QStringLiteral("es_SV"),
+        QStringLiteral("es_VE"),
+        QStringLiteral("fil_PH"),
+        QStringLiteral("fr_CA"),
+        QStringLiteral("ik_CA"),
+        QStringLiteral("iu_CA"),
+        QStringLiteral("miq_NI"),
+        QStringLiteral("nhn_MX"),
+        QStringLiteral("shs_CA"),
+        QStringLiteral("tl_PH")
+    };
+    // clang-format on
     QString paperSizeExample;
-    if (locale.measurementSystem() == QLocale::ImperialUSSystem || locale.measurementSystem() == QLocale::ImperialSystem) {
+    if (letterLocales.contains(locale.name()) || locale.measurementSystem() == QLocale::ImperialUSSystem
+        || locale.measurementSystem() == QLocale::ImperialSystem) {
         paperSizeExample = i18nc("PaperSize combobox", "Letter");
     } else {
         paperSizeExample = i18nc("PaperSize combobox", "A4");
