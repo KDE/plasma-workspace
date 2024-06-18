@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-12 00:40+0000\n"
+"POT-Creation-Date: 2024-06-18 00:41+0000\n"
 "PO-Revision-Date: 2024-02-24 18:30+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -109,7 +109,7 @@ msgstr "O aplicație previne adormirea și blocarea ecranului:"
 
 #: package/contents/ui/main.qml:97
 #: package/contents/ui/PowerManagementItem.qml:51
-#: package/contents/ui/PowerProfileItem.qml:75
+#: package/contents/ui/PowerProfileItem.qml:74
 #, kde-format
 msgid "Power Management"
 msgstr "Gestiunea alimentării"
@@ -365,12 +365,12 @@ msgctxt "Power profile"
 msgid "Not available"
 msgstr "Indisponibil"
 
-#: package/contents/ui/PowerProfileItem.qml:143
+#: package/contents/ui/PowerProfileItem.qml:148
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Activarea regimului %1 a eșuat"
 
-#: package/contents/ui/PowerProfileItem.qml:220
+#: package/contents/ui/PowerProfileItem.qml:225
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -380,7 +380,7 @@ msgstr ""
 "căldură deoarece calculatorul a depistat că s-ar putea afla în poala "
 "dumneavoastră."
 
-#: package/contents/ui/PowerProfileItem.qml:222
+#: package/contents/ui/PowerProfileItem.qml:227
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
@@ -388,12 +388,12 @@ msgstr ""
 "Regimul de performanță nu e disponibil deoarece calculatorul e prea "
 "fierbinte."
 
-#: package/contents/ui/PowerProfileItem.qml:224
+#: package/contents/ui/PowerProfileItem.qml:229
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Regimul de performanță nu e disponibil."
 
-#: package/contents/ui/PowerProfileItem.qml:237
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -402,17 +402,17 @@ msgstr ""
 "Performanța poate fi scăzută pentru a reduce generarea de căldură deoarece "
 "calculatorul a depistat că s-ar putea afla în poala dumneavoastră."
 
-#: package/contents/ui/PowerProfileItem.qml:239
+#: package/contents/ui/PowerProfileItem.qml:244
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Performanța poate fi redusă deoarece calculatorul e prea fierbinte."
 
-#: package/contents/ui/PowerProfileItem.qml:241
+#: package/contents/ui/PowerProfileItem.qml:246
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Performanța poate fi redusă."
 
-#: package/contents/ui/PowerProfileItem.qml:252
+#: package/contents/ui/PowerProfileItem.qml:257
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
@@ -420,7 +420,7 @@ msgstr[0] "O aplicație a cerut activarea %2:"
 msgstr[1] "%1 aplicații au cerut activarea %2:"
 msgstr[2] "%1 de aplicații au cerut activarea %2:"
 
-#: package/contents/ui/PowerProfileItem.qml:270
+#: package/contents/ui/PowerProfileItem.qml:275
 #, kde-format
 msgctxt ""
 "%1 is the name of the application, %2 is the reason provided by it for "
@@ -428,7 +428,7 @@ msgctxt ""
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerProfileItem.qml:289
+#: package/contents/ui/PowerProfileItem.qml:294
 #, kde-kuit-format
 msgid ""
 "Power profiles may be supported on your device.<nl/>Try installing the "
