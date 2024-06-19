@@ -111,12 +111,16 @@ ColumnLayout {
         Kirigami.Theme.colorSet: Kirigami.Theme.Header
         Kirigami.Theme.inherit: false
 
+
         PlasmaExtras.PlasmoidHeading {
             id: heading
             topInset: 0
             Layout.fillWidth: true
             background.visible: !notificationItem.inHistory
             parent: notificationItem.inGroup ? summaryRow : headingElement
+            leftPadding: headingLeftPadding
+            rightPadding: headingRightPadding
+            bottomPadding: 0
 
             // HACK PlasmoidHeading is a QQC2 Control which accepts left mouse button by default,
             // which breaks the popup default action mouse handler, cf. QTBUG-89785
@@ -208,6 +212,7 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.preferredHeight: implicitHeight
             Layout.topMargin: notificationItem.inGroup && lineCount > 1 ? Math.max(0, (headingElement.Layout.preferredHeight - summaryLabelTextMetrics.height) / 2) : 0
+            Layout.leftMargin: extraSpaceForCriticalNotificationLine
             textFormat: Text.PlainText
             maximumLineCount: 3
             wrapMode: Text.WordWrap
@@ -264,6 +269,7 @@ ColumnLayout {
         readonly property real maximumHeight: Kirigami.Units.gridUnit * notificationItem.maximumLineCount
         readonly property bool truncated: notificationItem.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
         Layout.maximumHeight: truncated ? maximumHeight : implicitHeight
+        Layout.leftMargin: extraSpaceForCriticalNotificationLine
 
         listViewParent: notificationItem.listViewParent
         // HACK RichText does not allow to specify link color and since LineEdit
