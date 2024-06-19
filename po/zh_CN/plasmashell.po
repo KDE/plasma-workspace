@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-01 02:27+0000\n"
+"POT-Creation-Date: 2024-06-19 02:32+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -256,13 +256,13 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "性能模式"
 
-#: panelview.cpp:1017
+#: panelview.cpp:1028
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "隐藏面板配置"
 
-#: panelview.cpp:1019
+#: panelview.cpp:1030
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

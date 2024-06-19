@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-23 00:40+0000\n"
+"POT-Creation-Date: 2024-06-19 02:32+0000\n"
 "PO-Revision-Date: 2023-02-19 14:43+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -68,181 +68,181 @@ msgctxt "Measurement combobox"
 msgid "Metric"
 msgstr "Metrik"
 
-#: exampleutility.cpp:47
+#: exampleutility.cpp:74
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
 msgstr "Sİyahı"
 
-#: exampleutility.cpp:49
+#: exampleutility.cpp:76
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "A4"
 msgstr "A4"
 
-#: exampleutility.cpp:64
+#: exampleutility.cpp:91
 #, kde-format
 msgctxt "Care of person or organization"
 msgid "c/o"
 msgstr "gözətçi"
 
-#: exampleutility.cpp:65
+#: exampleutility.cpp:92
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
 msgstr "\"ACME\" şirkəti"
 
-#: exampleutility.cpp:66
+#: exampleutility.cpp:93
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
 msgstr "Tərtibat Şöbəsi"
 
-#: exampleutility.cpp:67
+#: exampleutility.cpp:94
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
 msgstr "Tərtibat binası"
 
-#: exampleutility.cpp:68
+#: exampleutility.cpp:95
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
 msgstr "Əsas küçə"
 
-#: exampleutility.cpp:69
+#: exampleutility.cpp:96
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
 msgstr "Ev 1"
 
-#: exampleutility.cpp:71
+#: exampleutility.cpp:98
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:72
+#: exampleutility.cpp:99
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
 msgstr "Otaq 2"
 
-#: exampleutility.cpp:73
+#: exampleutility.cpp:100
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
 msgstr "Mərtəbə 3"
 
-#: exampleutility.cpp:75
+#: exampleutility.cpp:102
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
 msgstr "Şəhər mərkəzi"
 
-#: exampleutility.cpp:76
+#: exampleutility.cpp:103
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
 msgstr "123456"
 
-#: exampleutility.cpp:77
+#: exampleutility.cpp:104
 #, kde-format
 msgctxt "Town or city"
 msgid "City"
 msgstr "Şəhər"
 
-#: exampleutility.cpp:78
+#: exampleutility.cpp:105
 #, kde-format
 msgctxt "State, province or prefecture"
 msgid "State"
 msgstr "Əyalət"
 
-#: exampleutility.cpp:91
+#: exampleutility.cpp:118
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
 msgstr "Ləqəb"
 
-#: exampleutility.cpp:92
+#: exampleutility.cpp:119
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
 msgstr "LƏQƏB"
 
-#: exampleutility.cpp:93
+#: exampleutility.cpp:120
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
 msgstr "Adı"
 
-#: exampleutility.cpp:94
+#: exampleutility.cpp:121
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
 msgstr "F"
 
-#: exampleutility.cpp:95
+#: exampleutility.cpp:122
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
 msgstr "Adı"
 
-#: exampleutility.cpp:96
+#: exampleutility.cpp:123
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
 msgstr "Başqa adı"
 
-#: exampleutility.cpp:97
+#: exampleutility.cpp:124
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
 msgstr "Əlavə adı"
 
-#: exampleutility.cpp:98
+#: exampleutility.cpp:125
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
 msgstr "A"
 
-#: exampleutility.cpp:99
+#: exampleutility.cpp:126
 #, kde-format
 msgctxt "Profession"
 msgid "Profession"
 msgstr "Peşəsi"
 
-#: exampleutility.cpp:100
+#: exampleutility.cpp:127
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
 msgstr "Həkim"
 
-#: exampleutility.cpp:101
+#: exampleutility.cpp:128
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
 msgstr "Dr."
 
-#: exampleutility.cpp:102
+#: exampleutility.cpp:129
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
 msgstr "Dr."
 
-#: exampleutility.cpp:103
+#: exampleutility.cpp:130
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:119
+#: exampleutility.cpp:146
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
 msgstr " "
 
-#: exampleutility.cpp:133
+#: exampleutility.cpp:160
 #, kde-format
 msgctxt ""
 "This is returned when an example test could not be made from locale "
