@@ -69,4 +69,4 @@ msgstr "壁纸操作"
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
-msgstr "[分隔符]"
+msgstr "[分隔线]"

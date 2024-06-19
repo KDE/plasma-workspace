@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-19 00:40+0000\n"
 "PO-Revision-Date: 2024-06-16 16:13+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -306,7 +306,7 @@ msgid "Performance Mode"
 msgstr "அதிவேக பயன்முறை"
 
 # Condition in the code is: nvidia AND (floating OR adaptive)
-#: panelview.cpp:426
+#: panelview.cpp:437
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -317,13 +317,13 @@ msgstr ""
 "ஒளிபுகாமை மாறக்கூடியதாக இருந்தாலோ, சாளரங்களை இழுக்கும்போதும் அளவுமாற்றும்போதும் "
 "சாளரநிரலின் வேகம் பாதிக்கப்படலாம். அமைப்புகளை மாற்றுமாறு பரிந்துரைக்கிறோம்."
 
-#: panelview.cpp:1087
+#: panelview.cpp:1098
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "பலகை அமைப்புகளை மறை"
 
-#: panelview.cpp:1089
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

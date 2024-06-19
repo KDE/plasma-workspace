@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-19 00:40+0000\n"
 "PO-Revision-Date: 2024-06-15 23:06+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -306,7 +306,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Режим на производителност"
 
-#: panelview.cpp:426
+#: panelview.cpp:437
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -318,13 +318,13 @@ msgstr ""
 "при влачене и при промяна на размера. Обмислете използването на други "
 "настройки."
 
-#: panelview.cpp:1087
+#: panelview.cpp:1098
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Скриване на конфигурацията на панела"
 
-#: panelview.cpp:1089
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

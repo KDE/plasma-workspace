@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-06-19 00:40+0000\n"
 "PO-Revision-Date: 2024-06-10 09:28+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -314,7 +314,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Mode « Performance »"
 
-#: panelview.cpp:426
+#: panelview.cpp:437
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -326,13 +326,13 @@ msgstr ""
 "lors des glisser et des redimensionnements de fenêtre. Veuillez penser à "
 "utiliser une autre configuration."
 
-#: panelview.cpp:1087
+#: panelview.cpp:1098
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Masquer la configuration du panneau"
 
-#: panelview.cpp:1089
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
