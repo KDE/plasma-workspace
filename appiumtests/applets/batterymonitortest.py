@@ -377,7 +377,11 @@ class BatteryMonitorTests(unittest.TestCase):
         """
         self.ppd_interface.set_profile("performance")
         self.ppd_interface.set_performance_degraded_reason("other")
-        reason_label = self.driver.find_element(AppiumBy.NAME, "Performance may be reduced.")
+        self.driver.find_element(AppiumBy.NAME, "Performance may be reduced.")
+        self.ppd_interface.set_performance_degraded_reason("lap-detected")
+        self.driver.find_element(AppiumBy.NAME, "Performance may be lowered to reduce heat generation because the computer has detected that it may be sitting on your lap.")
+        self.ppd_interface.set_performance_degraded_reason("high-operating-temperature")
+        reason_label = self.driver.find_element(AppiumBy.NAME, "Performance may be reduced because the computer is running too hot.")
         self.ppd_interface.set_performance_degraded_reason("")
         wait = WebDriverWait(self.driver, 5)
         wait.until_not(lambda _: reason_label.is_displayed())
