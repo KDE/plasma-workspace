@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-12 00:40+0000\n"
+"POT-Creation-Date: 2024-06-20 00:41+0000\n"
 "PO-Revision-Date: 2024-02-28 15:16-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -388,35 +388,35 @@ msgstr "Minimizar"
 msgid "Close"
 msgstr "Fechar"
 
-#: package/contents/ui/NotificationItem.qml:222
+#: package/contents/ui/NotificationItem.qml:227
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (Pausado)"
 
-#: package/contents/ui/NotificationItem.qml:227
+#: package/contents/ui/NotificationItem.qml:232
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (Falhou)"
 
-#: package/contents/ui/NotificationItem.qml:229
+#: package/contents/ui/NotificationItem.qml:234
 #, kde-format
 msgid "Job Failed"
 msgstr "Falha na tarefa"
 
-#: package/contents/ui/NotificationItem.qml:233
+#: package/contents/ui/NotificationItem.qml:238
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (Concluído)"
 
-#: package/contents/ui/NotificationItem.qml:235
+#: package/contents/ui/NotificationItem.qml:240
 #, kde-format
 msgid "Job Finished"
 msgstr "Tarefa concluída"
 
-#: package/contents/ui/NotificationItem.qml:373
+#: package/contents/ui/NotificationItem.qml:379
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

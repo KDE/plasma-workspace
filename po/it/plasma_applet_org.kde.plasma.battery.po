@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:41+0000\n"
+"POT-Creation-Date: 2024-06-20 00:41+0000\n"
 "PO-Revision-Date: 2024-04-24 18:07+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -369,18 +369,18 @@ msgstr "Prestazioni"
 msgid "Power Profile"
 msgstr "Profilo energetico"
 
-#: package/contents/ui/PowerProfileItem.qml:107
+#: package/contents/ui/PowerProfileItem.qml:105
 #, kde-format
 msgctxt "Power profile"
 msgid "Not available"
 msgstr "Non disponibile"
 
-#: package/contents/ui/PowerProfileItem.qml:148
+#: package/contents/ui/PowerProfileItem.qml:146
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Attivazione della modalità %1 non riuscita"
 
-#: package/contents/ui/PowerProfileItem.qml:225
+#: package/contents/ui/PowerProfileItem.qml:222
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -389,7 +389,7 @@ msgstr ""
 "La modalità Prestazioni è stata disabilitata per ridurre la dissipazione di "
 "calore perché il computer ha rilevato che è appoggiato sulle tue ginocchia."
 
-#: package/contents/ui/PowerProfileItem.qml:227
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
@@ -397,12 +397,12 @@ msgstr ""
 "La modalità Prestazioni non è disponibile perché il computer è si sta "
 "surriscaldando."
 
-#: package/contents/ui/PowerProfileItem.qml:229
+#: package/contents/ui/PowerProfileItem.qml:226
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "La modalità Prestazioni non è disponibile."
 
-#: package/contents/ui/PowerProfileItem.qml:242
+#: package/contents/ui/PowerProfileItem.qml:240
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -411,19 +411,19 @@ msgstr ""
 "Le prestazioni potrebbero essere ridotte per diminuire la dissipazione di "
 "calore perché il computer ha rilevato che è appoggiato sulle tue ginocchia."
 
-#: package/contents/ui/PowerProfileItem.qml:244
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr ""
 "Le prestazioni potrebbero essere ridotte perché il computer si sta "
 "surriscaldando."
 
-#: package/contents/ui/PowerProfileItem.qml:246
+#: package/contents/ui/PowerProfileItem.qml:244
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Le prestazioni possono essere ridotte."
 
-#: package/contents/ui/PowerProfileItem.qml:257
+#: package/contents/ui/PowerProfileItem.qml:256
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
@@ -438,7 +438,7 @@ msgctxt ""
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerProfileItem.qml:294
+#: package/contents/ui/PowerProfileItem.qml:292
 #, kde-kuit-format
 msgid ""
 "Power profiles may be supported on your device.<nl/>Try installing the "

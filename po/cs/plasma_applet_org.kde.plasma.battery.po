@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:41+0000\n"
+"POT-Creation-Date: 2024-06-20 00:41+0000\n"
 "PO-Revision-Date: 2024-04-17 09:54+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -348,18 +348,18 @@ msgstr "Výkon"
 msgid "Power Profile"
 msgstr "Profil napájení"
 
-#: package/contents/ui/PowerProfileItem.qml:107
+#: package/contents/ui/PowerProfileItem.qml:105
 #, kde-format
 msgctxt "Power profile"
 msgid "Not available"
 msgstr "Není k dispozici"
 
-#: package/contents/ui/PowerProfileItem.qml:148
+#: package/contents/ui/PowerProfileItem.qml:146
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Selhala aktivace režimu %1"
 
-#: package/contents/ui/PowerProfileItem.qml:225
+#: package/contents/ui/PowerProfileItem.qml:222
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -368,18 +368,18 @@ msgstr ""
 "Režim výkon byl zakázán pro snížení tepelného vyzařování protože počítač "
 "zjistil, že ho máte posazený na klíně."
 
-#: package/contents/ui/PowerProfileItem.qml:227
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "Režim výkon je nedostupný protože se počítač příliš zahřívá."
 
-#: package/contents/ui/PowerProfileItem.qml:229
+#: package/contents/ui/PowerProfileItem.qml:226
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Režim výkon je nedostupný"
 
-#: package/contents/ui/PowerProfileItem.qml:242
+#: package/contents/ui/PowerProfileItem.qml:240
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -388,17 +388,17 @@ msgstr ""
 "Výkon může být nižší pro snížení tepelného vyzařování protože počítač "
 "zjistil, že ho můžete mít posazený na vašem klíně."
 
-#: package/contents/ui/PowerProfileItem.qml:244
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Může dojít ke snížení výkonu protože se počítač příliš zahřívá."
 
-#: package/contents/ui/PowerProfileItem.qml:246
+#: package/contents/ui/PowerProfileItem.qml:244
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Může dojít ke snížení výkonu."
 
-#: package/contents/ui/PowerProfileItem.qml:257
+#: package/contents/ui/PowerProfileItem.qml:256
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
@@ -414,7 +414,7 @@ msgctxt ""
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerProfileItem.qml:294
+#: package/contents/ui/PowerProfileItem.qml:292
 #, kde-kuit-format
 msgid ""
 "Power profiles may be supported on your device.<nl/>Try installing the "

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:41+0000\n"
+"POT-Creation-Date: 2024-06-20 00:41+0000\n"
 "PO-Revision-Date: 2024-04-28 16:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -339,18 +339,18 @@ msgstr "அதிவேகம்"
 msgid "Power Profile"
 msgstr "ஆற்றல் பயன்முறை"
 
-#: package/contents/ui/PowerProfileItem.qml:107
+#: package/contents/ui/PowerProfileItem.qml:105
 #, kde-format
 msgctxt "Power profile"
 msgid "Not available"
 msgstr "கிடைக்கவில்லை"
 
-#: package/contents/ui/PowerProfileItem.qml:148
+#: package/contents/ui/PowerProfileItem.qml:146
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "%1 பயன்முறையை இயக்குதல் தோல்வியடைந்தது"
 
-#: package/contents/ui/PowerProfileItem.qml:225
+#: package/contents/ui/PowerProfileItem.qml:222
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -359,18 +359,18 @@ msgstr ""
 "கணினி உங்கள் மடியில் இருப்பதுபோல் உள்ளதால், வெப்ப உற்பத்தியை குறைக்க அதிவேக பயன்முறை "
 "முடக்கப்பட்டுள்ளது."
 
-#: package/contents/ui/PowerProfileItem.qml:227
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "கணினி மிக சூடாக உள்ளதால் அதிவேக பயன்முறையை பயன்படுத்த முடியாது."
 
-#: package/contents/ui/PowerProfileItem.qml:229
+#: package/contents/ui/PowerProfileItem.qml:226
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "அதிவேக பயன்முறையை பயன்படுத்த முடியாது."
 
-#: package/contents/ui/PowerProfileItem.qml:242
+#: package/contents/ui/PowerProfileItem.qml:240
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -379,17 +379,17 @@ msgstr ""
 "கணினி உங்கள் மடியில் இருப்பதுபோல் உள்ளதால், வெப்ப உற்பத்தியை குறைக்க கணினியின் செயல்திறன் "
 "குறைக்கப்படலாம்."
 
-#: package/contents/ui/PowerProfileItem.qml:244
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "கணினி மிக சூடாக உள்ளதால் கணினியின் செயல்திறன் குறைக்கப்படலாம்."
 
-#: package/contents/ui/PowerProfileItem.qml:246
+#: package/contents/ui/PowerProfileItem.qml:244
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "கணினியின் செயல்திறன் குறைக்கப்படலாம்."
 
-#: package/contents/ui/PowerProfileItem.qml:257
+#: package/contents/ui/PowerProfileItem.qml:256
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
@@ -404,7 +404,7 @@ msgctxt ""
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerProfileItem.qml:294
+#: package/contents/ui/PowerProfileItem.qml:292
 #, kde-kuit-format
 msgid ""
 "Power profiles may be supported on your device.<nl/>Try installing the "

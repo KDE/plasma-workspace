@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-18 00:41+0000\n"
+"POT-Creation-Date: 2024-06-20 00:41+0000\n"
 "PO-Revision-Date: 2024-06-01 05:50\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -358,18 +358,18 @@ msgstr "Прадукцыйны"
 msgid "Power Profile"
 msgstr "Профіль сілкавання"
 
-#: package/contents/ui/PowerProfileItem.qml:107
+#: package/contents/ui/PowerProfileItem.qml:105
 #, kde-format
 msgctxt "Power profile"
 msgid "Not available"
 msgstr "Недаступна"
 
-#: package/contents/ui/PowerProfileItem.qml:148
+#: package/contents/ui/PowerProfileItem.qml:146
 #, kde-format
 msgid "Failed to activate %1 mode"
 msgstr "Не ўдалося актываваць %1 рэжым"
 
-#: package/contents/ui/PowerProfileItem.qml:225
+#: package/contents/ui/PowerProfileItem.qml:222
 #, kde-format
 msgid ""
 "Performance mode has been disabled to reduce heat generation because the "
@@ -378,18 +378,18 @@ msgstr ""
 "Прадукцыйны рэжым быў адключаны, каб паменшыць выпрацоўванне цяпла, бо "
 "камп'ютар выявіў, што ён можа знаходзіцца ў вас на каленях."
 
-#: package/contents/ui/PowerProfileItem.qml:227
+#: package/contents/ui/PowerProfileItem.qml:224
 #, kde-format
 msgid ""
 "Performance mode is unavailable because the computer is running too hot."
 msgstr "Прадукцыйны рэжым недаступны, бо камп'ютар занадта гарачы."
 
-#: package/contents/ui/PowerProfileItem.qml:229
+#: package/contents/ui/PowerProfileItem.qml:226
 #, kde-format
 msgid "Performance mode is unavailable."
 msgstr "Прадукцыйны рэжым недаступны."
 
-#: package/contents/ui/PowerProfileItem.qml:242
+#: package/contents/ui/PowerProfileItem.qml:240
 #, kde-format
 msgid ""
 "Performance may be lowered to reduce heat generation because the computer "
@@ -398,17 +398,17 @@ msgstr ""
 "Прадукцыйнасць можа быць паніжаная, каб паменшыць выпрацоўванне цяпла, бо "
 "камп'ютар выявіў, што ён можа знаходзіцца ў вас на каленях."
 
-#: package/contents/ui/PowerProfileItem.qml:244
+#: package/contents/ui/PowerProfileItem.qml:242
 #, kde-format
 msgid "Performance may be reduced because the computer is running too hot."
 msgstr "Прадукцыйнасць можа быць паніжаная, бо камп'ютар занадта гарачы."
 
-#: package/contents/ui/PowerProfileItem.qml:246
+#: package/contents/ui/PowerProfileItem.qml:244
 #, kde-format
 msgid "Performance may be reduced."
 msgstr "Прадукцыйнасць можа быць паніжаная."
 
-#: package/contents/ui/PowerProfileItem.qml:257
+#: package/contents/ui/PowerProfileItem.qml:256
 #, kde-format
 msgid "One application has requested activating %2:"
 msgid_plural "%1 applications have requested activating %2:"
@@ -425,7 +425,7 @@ msgctxt ""
 msgid "%1: %2"
 msgstr "%1: %2"
 
-#: package/contents/ui/PowerProfileItem.qml:294
+#: package/contents/ui/PowerProfileItem.qml:292
 #, kde-kuit-format
 msgid ""
 "Power profiles may be supported on your device.<nl/>Try installing the "
