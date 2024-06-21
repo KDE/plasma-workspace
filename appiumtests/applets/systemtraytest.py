@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: MIT
 
 import base64
+import logging
 import os
 import queue
 import subprocess
@@ -21,11 +22,14 @@ import cv2 as cv
 import gi
 import numpy as np
 
+gi.require_version("Gdk", "3.0")  # StatusIcon is removed in 4
 gi.require_version("Gtk", "3.0")  # StatusIcon is removed in 4
+gi.require_version('GdkPixbuf', '2.0')
+
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import Gio, GLib, Gtk
+from gi.repository import Gdk, GdkPixbuf, Gio, GLib, Gtk
 from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
@@ -38,7 +42,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 KDE_VERSION: Final = 6
 WIDGET_ID: Final = "org.kde.plasma.systemtray"
-CMAKE_RUNTIME_OUTPUT_DIRECTORY: Final = os.getenv("CMAKE_RUNTIME_OUTPUT_DIRECTORY")
+CMAKE_RUNTIME_OUTPUT_DIRECTORY: Final = os.getenv("CMAKE_RUNTIME_OUTPUT_DIRECTORY", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "build", "bin"))
 
 
 def generate_color_block(red: int, green: int, blue: int) -> str:
@@ -55,35 +59,44 @@ class XEmbedTrayIcon(threading.Thread):
     def __init__(self, title: str) -> None:
         super().__init__()
 
-        self.__timer: threading.Timer = threading.Timer(300, Gtk.main_quit)  # Failsafe
+        GLib.timeout_add_seconds(300, Gtk.main_quit)  # Failsafe
 
+        # Red square
         self.__status_icon: Gtk.StatusIcon = Gtk.StatusIcon(title=title)
-        self.__status_icon.set_from_icon_name("xorg")
-        self.__status_icon.connect("button-press-event", self.__on_button_press_event)
-        self.__status_icon.connect("button-release-event", self.__on_button_release_event)
-        self.__status_icon.connect("popup-menu", self.__on_popup_menu)
-        self.__status_icon.connect("scroll-event", self.__on_scroll_event)
+        pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
+        pixbuf.fill(0xaa0000ff)  # 170, 0, 0
+        self.__status_icon.set_from_pixbuf(pixbuf)
+
+        self.__status_icon.connect("button-press-event", self._on_button_press_event)
+        self.__status_icon.connect("button-release-event", self._on_button_release_event)
+        self.__status_icon.connect("popup-menu", self._on_popup_menu)
+        self.scroll_event = threading.Event()
+        self.__status_icon.connect("scroll-event", self._on_scroll_event)
 
     def run(self) -> None:
-        self.__timer.start()
         Gtk.main()
 
     def quit(self) -> None:
-        self.__timer.cancel()
         Gtk.main_quit()
 
-    def __on_button_press_event(self, status_icon: Gtk.StatusIcon, button_event) -> None:
-        print("button-press-event", button_event.button, file=sys.stderr, flush=True)
+    def reset_events(self) -> None:
+        """
+        Reset all threading events
+        """
+        self.scroll_event.clear()
 
-    def __on_button_release_event(self, status_icon: Gtk.StatusIcon, button_event) -> None:
-        print("button-release-event", button_event.button, file=sys.stderr, flush=True)
-        self.quit()
+    def _on_button_press_event(self, status_icon: Gtk.StatusIcon, button_event: Gdk.EventButton) -> None:
+        logging.info(f"button-press-event {button_event.button}")
 
-    def __on_popup_menu(self, status_icon: Gtk.StatusIcon, button: int, activate_time: int) -> None:
-        print("popup-menu", button, activate_time, file=sys.stderr, flush=True)
+    def _on_button_release_event(self, status_icon: Gtk.StatusIcon, button_event: Gdk.EventButton) -> None:
+        logging.info(f"button-release-event {button_event.button}")
 
-    def __on_scroll_event(self, status_icon, scroll_event) -> None:
-        print("scroll-event", scroll_event.delta_x, scroll_event.delta_y, int(scroll_event.direction), file=sys.stderr, flush=True)
+    def _on_popup_menu(self, status_icon: Gtk.StatusIcon, button: int, activate_time: int) -> None:
+        logging.info(f"popup-menu {button} {activate_time}")
+
+    def _on_scroll_event(self, status_icon, scroll_event: Gdk.EventScroll) -> None:
+        logging.info(f"scroll-event {scroll_event.delta_x} {scroll_event.delta_y} {int(scroll_event.direction)}")
+        self.scroll_event.set()
 
 
 class StreamReaderThread(threading.Thread):
@@ -195,6 +208,19 @@ class SystemTrayTests(unittest.TestCase):
             cls.kded.kill()
         cls.driver.quit()
 
+    def take_screenshot(self) -> str:
+        """
+        Take screenshot of the current screen and use png+base64 to encode the image
+        """
+        with tempfile.TemporaryDirectory() as temp_dir:
+            saved_image_path = os.path.join(temp_dir, "tray.png")
+            if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
+                subprocess.check_call(["import", "-window", "root", saved_image_path])
+            else:
+                self.driver.get_screenshot_as_file(saved_image_path)
+            cv_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
+        return base64.b64encode(cv.imencode('.png', cv_image)[1].tobytes()).decode()
+
     def cleanup_xembed_tray_icon(self) -> None:
         """
         Cleanup function for test_xembed_tray_icon
@@ -212,6 +238,14 @@ class SystemTrayTests(unittest.TestCase):
             self.stream_reader_thread.stop()
             self.stream_reader_thread = None
 
+    def scroll_center(self, rect: dict[str, int], delta_x: float, delta_y: float) -> None:
+        """
+        Move the mouse to the center of the area and scroll
+        """
+        action = ActionBuilder(self.driver)
+        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), delta_x, delta_y).pause(1)
+        action.perform()
+
     def test_1_xembed_tray_icon(self) -> None:
         """
         Tests XEmbed tray icons can be listed and clicked in the tray.
@@ -224,7 +258,7 @@ class SystemTrayTests(unittest.TestCase):
 
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "kde.xembedsniproxy.debug=true"
-        self.xembedsniproxy = subprocess.Popen(['xembedsniproxy', '--platform', 'xcb'], env=debug_env, stderr=subprocess.PIPE)  # For debug output
+        self.xembedsniproxy = subprocess.Popen([os.path.join(CMAKE_RUNTIME_OUTPUT_DIRECTORY, "xembedsniproxy"), '--platform', 'xcb'], env=debug_env, stderr=subprocess.PIPE)  # For debug output
         if not self.xembedsniproxy.stderr or self.xembedsniproxy.poll() != None:
             self.fail("xembedsniproxy is not available")
         print(f"xembedsniproxy PID: {self.xembedsniproxy.pid}", file=sys.stderr, flush=True)
@@ -259,15 +293,31 @@ class SystemTrayTests(unittest.TestCase):
 
         self.assertTrue(success, "xembedsniproxy did not receive the click event")
 
-    def take_screenshot(self) -> str:
-        with tempfile.TemporaryDirectory() as temp_dir:
-            saved_image_path = os.path.join(temp_dir, "tray.png")
-            if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-                subprocess.check_call(["import", "-window", "root", saved_image_path])
-            else:
-                self.driver.get_screenshot_as_file(saved_image_path)
-            cv_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
-        return base64.b64encode(cv.imencode('.png', cv_image)[1].tobytes()).decode()
+        # The tray icon is a red square
+        rect: dict[str, int] = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(170, 0, 0))["rect"]
+
+        if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
+            return
+
+        # Scroll up
+        self.xembed_tray_icon.reset_events()
+        self.scroll_center(rect, 0, -15)
+        self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
+
+        # Scroll down
+        self.xembed_tray_icon.reset_events()
+        self.scroll_center(rect, 0, 15)
+        self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
+
+        # Scroll left
+        self.xembed_tray_icon.reset_events()
+        self.scroll_center(rect, -15, 0)
+        self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
+
+        # Scroll right
+        self.xembed_tray_icon.reset_events()
+        self.scroll_center(rect, 15, 0)
+        self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
 
     def test_2_statusnotifieritem(self) -> None:
         """
@@ -413,4 +463,5 @@ class SystemTrayTests(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    logging.getLogger().setLevel(logging.INFO)
     unittest.main()
