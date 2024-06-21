@@ -563,8 +563,9 @@ void ItemContainer::mousePressEvent(QMouseEvent *event)
         m_editModeTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
     }
 
-    m_lastMousePosition = event->scenePosition();
-    m_mouseDownPosition = event->scenePosition();
+    // Use positions mapped to parent and *not* scene positions because the whole appletsLayout might be zoomed or transformed
+    m_lastMousePosition = mapToItem(parentItem(), event->pos());
+    m_mouseDownPosition = m_lastMousePosition;
     event->accept();
 }
 
@@ -602,7 +603,10 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         return;
     }
 
-    if (!m_editMode && QPointF(event->scenePosition() - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
+    // Use positions mapped to parent and *not* scene positions because the whole appletsLayout might be zoomed or transformed
+    const QPointF parentPos = mapToItem(parentItem(), event->pos());
+
+    if (!m_editMode && QPointF(parentPos - m_mouseDownPosition).manhattanLength() >= QGuiApplication::styleHints()->startDragDistance()) {
         if (m_editModeCondition == AfterPress) {
             setEditMode(true);
         } else {
@@ -621,7 +625,7 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
         Q_EMIT dragActiveChanged();
 
     } else {
-        setPosition(QPointF(x() + event->scenePosition().x() - m_lastMousePosition.x(), y() + event->scenePosition().y() - m_lastMousePosition.y()));
+        setPosition(QPointF(x() + parentPos.x() - m_lastMousePosition.x(), y() + parentPos.y() - m_lastMousePosition.y()));
 
         if (m_layout) {
             m_layout->showPlaceHolderForItem(this);
@@ -629,7 +633,7 @@ void ItemContainer::mouseMoveEvent(QMouseEvent *event)
 
         Q_EMIT userDrag(QPointF(x(), y()), event->pos());
     }
-    m_lastMousePosition = event->scenePosition();
+    m_lastMousePosition = parentPos;
     event->accept();
 }
 
