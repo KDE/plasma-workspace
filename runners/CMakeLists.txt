@@ -19,6 +19,5 @@ if(AppStreamQt_FOUND)
     add_subdirectory(appstream)
 endif()
 
-add_subdirectory(powerdevil)
 add_subdirectory(sessions)
 add_subdirectory(kill)

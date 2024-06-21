@@ -7,8 +7,6 @@ plasma_install_package(manage-inputmethod org.kde.plasma.manage-inputmethod)
 
 add_subdirectory(appmenu)
 add_subdirectory(systemmonitor)
-add_subdirectory(batterymonitor)
-add_subdirectory(brightness)
 add_subdirectory(calendar)
 add_subdirectory(devicenotifier)
 add_subdirectory(digital-clock)
