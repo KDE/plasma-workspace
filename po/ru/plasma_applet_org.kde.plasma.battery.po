@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2024-06-08 23:49+0300\n"
+"PO-Revision-Date: 2024-06-20 12:21+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -133,7 +133,7 @@ msgstr "Управление питанием и батарея"
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "Батарея не установлена"
 
 #: package/contents/ui/main.qml:130
 #, kde-format
@@ -232,6 +232,8 @@ msgstr ""
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
+"Используется сбалансированный режим экономии энергии; прокрутите колесом "
+"мыши для изменения"
 
 #: package/contents/ui/main.qml:300
 #, kde-format
@@ -252,26 +254,26 @@ msgstr "Н&астроить управление питанием…"
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "Блокировка экрана и переход в ждущий режим"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "Запрещено"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "Автоматически"
 
 #: package/contents/ui/PowerManagementItem.qml:99
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "Запретить"
 
 #: package/contents/ui/PowerManagementItem.qml:133
 #, fuzzy, kde-format
