@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-04-04 15:21-0300\n"
+"PO-Revision-Date: 2024-06-20 00:58-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -106,31 +106,31 @@ msgstr "Visite bugs.kde.org para relatar problemas"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Copiar a versão do Plasma"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Relatar um erro…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Ocultar banner de visualização"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Ocultar até a próxima reinicialização"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Ocultar permanentemente..."
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -141,12 +141,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Tem certeza de que deseja ocultar permanentemente o banner de visualização?"
+"<nl/><nl/>Esta ação só poderá ser desfeita removendo a linha que começa com "
+"<icode>ShowDesktopPreviewBanner</icode> no arquivo de configuração "
+"<filename>kdeglobals</filename>."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Ocultar banner de visualização?"
 
 #: main.cpp:84
 #, kde-format
@@ -313,6 +317,9 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Com uma GPU NVIDIA no X11, o estilo flutuante e o modo de opacidade "
+"adaptável são conhecidos por causar baixo desempenho de arrastar e "
+"redimensionar janelas. Considere usar outras configurações."
 
 #: panelview.cpp:1098
 #, kde-format
@@ -355,7 +362,7 @@ msgstr "Ocultar a Área de Trabalho"
 #: shellcorona.cpp:223
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Ativar o lançador de aplicativos"
 
 #: shellcorona.cpp:231
 #, kde-format
