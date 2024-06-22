@@ -160,7 +160,7 @@ msgstr "管理员"
 #: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:154
 #, kde-format
 msgid "Account type:"
-msgstr "账号类型："
+msgstr "账户类型："
 
 #: src/ui/CreateUser.qml:56
 #, kde-format
@@ -569,9 +569,9 @@ msgstr "调整图像大小失败：无法写入临时文件"
 #: src/usermodel.cpp:146
 #, kde-format
 msgid "Your Account"
-msgstr "您的账号"
+msgstr "您的账户"
 
 #: src/usermodel.cpp:146
 #, kde-format
 msgid "Other Accounts"
-msgstr "其他账号"
+msgstr "其他账户"
