@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2022-05-22 10:05+0200\n"
+"PO-Revision-Date: 2024-06-21 09:33+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,15 +28,13 @@ msgid "Your emails"
 msgstr "stefan.asserhall@gmail.com"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Öppna bild för skrivbordsunderlägg"
+msgstr "Öppna bild"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
 msgstr "Katalog med skrivbordsunderlägget att visa bilder från"
@@ -102,23 +100,21 @@ msgid "Next Wallpaper Image"
 msgstr "Nästa skrivbordsunderlägg"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Bildfiler"
+msgstr "Bilder"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:64
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Lägg till…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:70
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Hämta nya skrivbordsunderlägg…"
+msgstr "Hämta nytt…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -195,10 +191,9 @@ msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:330
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "Bildfiler"
+msgstr "Mediefiler"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
@@ -270,7 +265,7 @@ msgstr "Kataloger"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Lägg till…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:248
 #, kde-format
@@ -278,10 +273,9 @@ msgid "Remove Folder"
 msgstr "Ta bort katalog"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:259
-#, fuzzy, kde-format
-#| msgid "Open Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "Öppna katalog"
+msgstr "Öppna katalog…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:274
 #, kde-format
@@ -289,44 +283,41 @@ msgid "There are no wallpaper locations configured"
 msgstr "Det finns inga platser för skrivbordsunderlägg inställda"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers…"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Hämta nya skrivbordsunderlägg…"
+msgstr "Använd som skrivbordsunderlägg"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Skrivbord "
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Låsskärm"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Båda"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
-#, fuzzy, kde-kuit-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr ""
-"Ett fel uppstod vid försök att ställa in Plasma-skrivbordsunderlägget:\n"
+"Ett fel uppstod vid försök att ställa in Plasmas skrivbordsunderlägg:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
-#, fuzzy, kde-format
-#| msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+#, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
-"Ett fel uppstod vid försök att ställa in Plasma-skrivbordsunderlägget:\n"
+"Ett fel uppstod vid försök att öppna inställningsfilen kscreenlockerrc."
 
 #, fuzzy
 #~| msgid "Open Image"

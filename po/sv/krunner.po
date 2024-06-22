@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2016, 2017, 2019, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2019, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-17 00:39+0000\n"
-"PO-Revision-Date: 2022-09-24 15:49+0200\n"
+"PO-Revision-Date: 2024-06-21 09:27+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -55,12 +55,12 @@ msgstr "Ersätt en befintlig instans"
 #: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Visa bara resultat från angivet insticksprogram"
 
 #: main.cpp:67
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Lista tillgängliga insticksprogram"
 
 #: main.cpp:74
 #, kde-format
@@ -71,7 +71,7 @@ msgstr "Frågan att besvara, bara använd om -c inte anges"
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Tillgängliga insticksprogram för Kör program, pluginId"
 
 #: qml/RunCommand.qml:96
 #, kde-format
@@ -91,7 +91,7 @@ msgstr "Anpassa Kör program..."
 #: qml/RunCommand.qml:113
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Visar bara resultat från %1"
 
 #: qml/RunCommand.qml:127
 #, kde-format

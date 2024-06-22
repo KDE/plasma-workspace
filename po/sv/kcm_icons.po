@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2016, 2017, 2018, 2020, 2021.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2020, 2021, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2021-05-27 18:43+0200\n"
+"PO-Revision-Date: 2024-06-21 09:24+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
@@ -68,10 +68,9 @@ msgid "Install from File…"
 msgstr "Installera från fil…"
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Get New Icons…"
+#, kde-format
 msgid "Get New…"
-msgstr "Hämta nya ikoner…"
+msgstr "Hämta nytt…"
 
 #: ui/main.qml:188
 #, kde-format

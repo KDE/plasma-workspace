@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-20 00:41+0000\n"
-"PO-Revision-Date: 2022-02-19 10:09+0100\n"
+"PO-Revision-Date: 2024-06-21 09:28+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/BatteryItem.qml:100
 #, kde-format
@@ -72,7 +72,7 @@ msgstr "Återstående tid:"
 #, kde-format
 msgctxt "@info"
 msgid "Estimating…"
-msgstr ""
+msgstr "Uppskattar…"
 
 #: package/contents/ui/BatteryItem.qml:221
 #, kde-format
@@ -98,10 +98,11 @@ msgid "%1%"
 msgstr "%1 %"
 
 #: package/contents/ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "An application is preventing sleep and screen locking:"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "Ett program förhindrar viloläge och skärmlåsning:"
+msgstr ""
+"Batteriminiprogrammet har aktiverat undertryckande av viloläge och "
+"skärmlåsning:"
 
 #: package/contents/ui/main.qml:97
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -111,15 +112,14 @@ msgid "Power Management"
 msgstr "Strömsparhantering"
 
 #: package/contents/ui/main.qml:97
-#, fuzzy, kde-format
-#| msgid "Power Management"
+#, kde-format
 msgid "Power and Battery"
-msgstr "Strömsparhantering"
+msgstr "Strömhantering och batteri"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "Batteriet finns inte på plats"
 
 #: package/contents/ui/main.qml:130
 #, kde-format
@@ -169,51 +169,46 @@ msgid "Not charging"
 msgstr "Laddas inte"
 
 #: package/contents/ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "Automatiskt viloläge och skärmlåsning är inaktiverade"
+msgstr ""
+"Automatiskt viloläge och skärmlåsning är inaktiverade. Mittenklicka för att "
+"aktivera igen."
 
 #: package/contents/ui/main.qml:168
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Förhindra manuellt viloläge och skärmlåsning"
+msgstr "Mittenklicka för att inaktivera automatiskt viloläge och skärmlåsning"
 
 #: package/contents/ui/main.qml:173
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Performance mode"
 msgid_plural "%1 applications have requested activating Performance mode"
-msgstr[0] "Ett program har begärt att %2 aktiveras:"
-msgstr[1] "%1 program har begärt att %2 aktiveras:"
+msgstr[0] "Ett program har begärt att aktivera prestandaläge"
+msgstr[1] "%1 program har begärt att aktivera prestandaläge"
 
 #: package/contents/ui/main.qml:177
 #, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr ""
+msgstr "Systemet är i prestandaläge. Rulla för att ändra."
 
 #: package/contents/ui/main.qml:181
-#, fuzzy, kde-format
-#| msgid "One application has requested activating %2:"
-#| msgid_plural "%1 applications have requested activating %2:"
+#, kde-format
 msgid "An application has requested activating Power Save mode"
 msgid_plural "%1 applications have requested activating Power Save mode"
-msgstr[0] "Ett program har begärt att %2 aktiveras:"
-msgstr[1] "%1 program har begärt att %2 aktiveras:"
+msgstr[0] "Ett program har begärt att aktivera strömsparläge"
+msgstr[1] "%1 program har begärt att aktivera strömsparläge"
 
 #: package/contents/ui/main.qml:185
 #, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr ""
+msgstr "Systemet är i strömsparläge. Rulla för att ändra."
 
 #: package/contents/ui/main.qml:188
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
-msgstr ""
+msgstr "Systemet är i balanserat strömläge. Rulla för att ändra."
 
 #: package/contents/ui/main.qml:300
 #, kde-format
@@ -221,14 +216,12 @@ msgid "&Show Energy Information…"
 msgstr "Vi&sa information om energi…"
 
 #: package/contents/ui/main.qml:306
-#, fuzzy, kde-format
-#| msgid "Show Battery Percentage on Icon"
+#, kde-format
 msgid "Show Battery Percentage on Icon When Not Fully Charged"
-msgstr "Visa batteriets procentvärde på ikon"
+msgstr "Visa batteriets procentvärde på ikon om inte fulladdat"
 
 #: package/contents/ui/main.qml:319
-#, fuzzy, kde-format
-#| msgid "&Configure Energy Saving…"
+#, kde-format
 msgid "&Configure Power Management…"
 msgstr "Anpassa strömspar&hantering…"
 
@@ -236,40 +229,37 @@ msgstr "Anpassa strömspar&hantering…"
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "Viloläge och skärmlåsning efter inaktivitet"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "Blockerat"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "Automatiskt"
 
 #: package/contents/ui/PowerManagementItem.qml:99
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "Manuellt blockerat"
 
 #: package/contents/ui/PowerManagementItem.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Förhindra manuellt viloläge och skärmlåsning"
+msgstr ""
+"Misslyckades ta bort blockering av automatiskt viloläge och skärmlåsning"
 
 #: package/contents/ui/PowerManagementItem.qml:136
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Förhindra manuellt viloläge och skärmlåsning"
+msgstr "Misslyckades blockera automatiskt viloläge och skärmlåsning"
 
 #: package/contents/ui/PowerManagementItem.qml:174
 #, kde-format
@@ -299,20 +289,17 @@ msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
 msgstr "%1 förhindrar för närvarande viloläge och skärmlåsning (okänd orsak)"
 
 #: package/contents/ui/PowerManagementItem.qml:209
-#, fuzzy, kde-format
-#| msgid "%1 application is currently blocking sleep and screen locking:"
-#| msgid_plural ""
-#| "%1 applications are currently blocking sleep and screen locking:"
+#, kde-format
 msgid "An application is currently blocking sleep and screen locking (%1)"
-msgstr "%1 program förhindrar för närvarande viloläge och skärmlåsning:"
+msgstr "Ett program blockerar för närvarande viloläge och skärmlåsning (%1)"
 
 #: package/contents/ui/PowerManagementItem.qml:211
-#, fuzzy, kde-format
-#| msgid "%1 is currently blocking sleep and screen locking (unknown reason)"
+#, kde-format
 msgid ""
 "An application is currently blocking sleep and screen locking (unknown "
 "reason)"
-msgstr "%1 förhindrar för närvarande viloläge och skärmlåsning (okänd orsak)"
+msgstr ""
+"Ett program blockerar för närvarande viloläge och skärmlåsning (okänd orsak)"
 
 #: package/contents/ui/PowerManagementItem.qml:215
 #, kde-format
@@ -330,15 +317,13 @@ msgstr "%1: okänd orsak"
 #, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: %1"
-msgstr ""
+msgstr "Okänt program: %1"
 
 #: package/contents/ui/PowerManagementItem.qml:221
-#, fuzzy, kde-format
-#| msgctxt "Application name: reason for preventing sleep and screen locking"
-#| msgid "%1: unknown reason"
+#, kde-format
 msgctxt "Application name: reason for preventing sleep and screen locking"
 msgid "Unknown application: unknown reason"
-msgstr "%1: okänd orsak"
+msgstr "Okänt program: okänd orsak"
 
 #: package/contents/ui/PowerProfileItem.qml:39
 #, kde-format
@@ -361,11 +346,10 @@ msgid "Power Profile"
 msgstr "Strömsparprofil"
 
 #: package/contents/ui/PowerProfileItem.qml:105
-#, fuzzy, kde-format
-#| msgid "No Batteries Available"
+#, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Inga batterier tillgängliga"
+msgstr "Inte tillgänglig"
 
 #: package/contents/ui/PowerProfileItem.qml:146
 #, kde-format
@@ -433,6 +417,9 @@ msgid ""
 "<command>power-profiles-daemon</command> package using your distribution's "
 "package manager and restarting the system."
 msgstr ""
+"Strömprofiler skulle kunna stödjas på datorn.<nl/>Prova att installera "
+"paketet <command>power-profiles-daemon</command> med din distributions "
+"pakethanterare och starta om systemet."
 
 #, fuzzy
 #~| msgid "Battery at %1%"
