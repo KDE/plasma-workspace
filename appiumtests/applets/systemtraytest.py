@@ -204,8 +204,17 @@ class SystemTrayTests(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
+
         if cls.kded is not None:
-            cls.kded.kill()
+            subprocess.check_call([f"kquitapp{KDE_VERSION}", f"kded{KDE_VERSION}"])
+            cls.kded.wait(5)
         cls.driver.quit()
 
     def take_screenshot(self) -> str:
@@ -225,14 +234,14 @@ class SystemTrayTests(unittest.TestCase):
         """
         Cleanup function for test_xembed_tray_icon
         """
-        if self.xembedsniproxy is not None:
-            self.xembedsniproxy.terminate()
-            self.xembedsniproxy.wait()
-            self.xembedsniproxy = None
-
         if self.xembed_tray_icon is not None:
             self.xembed_tray_icon.quit()
             self.xembed_tray_icon = None
+
+        if self.xembedsniproxy is not None:
+            subprocess.check_call([f"kquitapp{KDE_VERSION}", "xembedsniproxy"])
+            self.xembedsniproxy.wait(5)
+            self.xembedsniproxy = None
 
         if self.stream_reader_thread is not None and self.stream_reader_thread.is_alive():
             self.stream_reader_thread.stop()

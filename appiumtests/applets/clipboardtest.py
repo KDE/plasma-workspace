@@ -121,6 +121,13 @@ class ClipboardTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         cls.driver.quit()
         cls.loop_thread.quit()
 

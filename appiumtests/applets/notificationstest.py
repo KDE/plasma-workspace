@@ -5,7 +5,9 @@
 
 import base64
 import os
+import subprocess
 import tempfile
+import time
 import unittest
 from typing import Final
 
@@ -21,6 +23,7 @@ gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import Gdk, GdkPixbuf, Gio, GLib
 
 WIDGET_ID: Final = "org.kde.plasma.notifications"
+KDE_VERSION: Final = 6
 
 
 def send_notification(data: dict[str, str | int | list[str] | dict[str, GLib.Variant] | GLib.Variant], session_bus: Gio.DBusConnection | None = None):
@@ -71,6 +74,13 @@ class NotificationsTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         cls.driver.quit()
 
     def test_0_open(self) -> None:

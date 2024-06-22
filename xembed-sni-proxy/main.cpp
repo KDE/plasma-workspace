@@ -14,8 +14,19 @@
 #include "snidbus.h"
 #include "xcbutils.h"
 
+#ifdef None
+#ifndef FIXX11H_None
+#define FIXX11H_None
+inline constexpr XID XNone = None;
+#undef None
+inline constexpr XID None = XNone;
+#endif
+#undef None
+#endif
+
 #include <QDBusMetaType>
 
+#include <KDBusService>
 #include <KWindowSystem>
 
 namespace Xcb
@@ -40,9 +51,11 @@ int main(int argc, char **argv)
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);
     };
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
+    app.connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    app.connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
+    app.setApplicationName(QStringLiteral("xembedsniproxy"));
+    app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setQuitOnLastWindowClosed(false);
 
     qDBusRegisterMetaType<KDbusImageStruct>();
@@ -51,6 +64,7 @@ int main(int argc, char **argv)
 
     Xcb::atoms = new Xcb::Atoms();
 
+    KDBusService service(KDBusService::Unique);
     FdoSelectionManager manager;
 
     auto rc = app.exec();

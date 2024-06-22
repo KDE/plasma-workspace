@@ -5,6 +5,7 @@
 # SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
 import subprocess
+import time
 import unittest
 from datetime import date
 from typing import Final
@@ -18,6 +19,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 WIDGET_ID: Final = "org.kde.plasma.digitalclock"
+KDE_VERSION: Final = 6
 
 
 class DigitalClockTests(unittest.TestCase):
@@ -49,6 +51,13 @@ class DigitalClockTests(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         cls.driver.quit()
 
     def assertResult(self, actual, expected):

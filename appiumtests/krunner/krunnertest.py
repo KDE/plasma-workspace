@@ -3,7 +3,10 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import subprocess
+import time
 import unittest
+from typing import Final
 
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
@@ -12,6 +15,8 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+
+KDE_VERSION: Final = 6
 
 
 class KRunnerTest(unittest.TestCase):
@@ -48,6 +53,13 @@ class KRunnerTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "krunner"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "krunner"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         cls.driver.quit()
 
     def test_0_open(self) -> None:

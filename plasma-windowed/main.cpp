@@ -5,6 +5,8 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
+#include <csignal>
+
 #include <QApplication>
 #include <QQmlDebuggingEnabler>
 #include <QSurfaceFormat>
@@ -13,6 +15,7 @@
 
 #include <KDBusService>
 #include <KLocalizedString>
+#include <KSignalHandler>
 
 #include "plasmawindowedcorona.h"
 #include "plasmawindowedview.h"
@@ -73,9 +76,15 @@ int main(int argc, char **argv)
     corona->setHasStatusNotifier(parser.isSet(QStringLiteral("statusnotifier")));
     corona->loadApplet(arguments.first(), args);
 
-    QObject::connect(&service, &KDBusService::activateRequested, corona, &PlasmaWindowedCorona::activateRequested);
+    app.connect(&service, &KDBusService::activateRequested, corona, &PlasmaWindowedCorona::activateRequested);
 
-    const int ret = app.exec();
-    delete corona;
-    return ret;
+    // Quit on SIGTERM to properly save gcov results
+    KSignalHandler::self()->watchSignal(SIGTERM);
+    app.connect(KSignalHandler::self(), &KSignalHandler::signalReceived, &app, [&app](int signal) {
+        if (signal == SIGTERM) [[likely]] {
+            app.quit();
+        }
+    });
+
+    return app.exec();
 }

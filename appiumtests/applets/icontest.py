@@ -3,6 +3,8 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 
+import subprocess
+import time
 import unittest
 from typing import Final
 
@@ -11,6 +13,7 @@ from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 
 WIDGET_ID: Final = "org.kde.plasma.icon"
+KDE_VERSION: Final = 6
 
 
 class IconTest(unittest.TestCase):
@@ -47,6 +50,13 @@ class IconTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         cls.driver.quit()
 
     def test_0_open(self) -> None:

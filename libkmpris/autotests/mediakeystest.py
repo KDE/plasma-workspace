@@ -97,9 +97,11 @@ class MediaKeysTest(unittest.TestCase):
         cls.mpris_interface.quit()
         cls.loop_thread.quit()
         if cls.kded:
-            cls.kded.terminate()
+            subprocess.check_call([f"kquitapp{KDE_VERSION}", f"kded{KDE_VERSION}"])
+            cls.kded.wait(5)
         if cls.kglobalacceld:
-            cls.kglobalacceld.terminate()
+            subprocess.check_call([f"kquitapp{KDE_VERSION}", "kglobalaccel"])
+            cls.kglobalacceld.wait(5)
 
     def setUp(self) -> None:
         pass

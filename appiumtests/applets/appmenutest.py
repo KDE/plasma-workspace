@@ -18,7 +18,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 WIDGET_ID: Final = "org.kde.plasma.appmenu"
 KDE_VERSION: Final = 6
-CMAKE_RUNTIME_OUTPUT_DIRECTORY: Final = os.getenv("CMAKE_RUNTIME_OUTPUT_DIRECTORY")
+CMAKE_RUNTIME_OUTPUT_DIRECTORY: Final = os.getenv("CMAKE_RUNTIME_OUTPUT_DIRECTORY", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "build", "bin"))
 
 
 def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
@@ -87,13 +87,13 @@ class AppMenuTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
-        cls.driver.quit()
-        if cls.kded is not None:
-            cls.kded.terminate()
-            cls.kded.wait()
         if cls.gmenudbusmenuproxy is not None:
-            cls.gmenudbusmenuproxy.terminate()
-            cls.gmenudbusmenuproxy.wait()
+            subprocess.check_call([f"kquitapp{KDE_VERSION}", "gmenudbusmenuproxy"])
+            cls.gmenudbusmenuproxy.wait(5)
+        if cls.kded is not None:
+            subprocess.check_call([f"kquitapp{KDE_VERSION}", f"kded{KDE_VERSION}"])
+            cls.kded.wait(5)
+        cls.driver.quit()
 
     def test_0_open(self) -> None:
         """

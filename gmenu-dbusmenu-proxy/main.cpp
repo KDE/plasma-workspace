@@ -7,9 +7,12 @@
 #include <QGuiApplication>
 #include <QSessionManager>
 
+#include <KDBusService>
 #include <KWindowSystem>
 
 #include "menuproxy.h"
+
+using namespace Qt::StringLiterals;
 
 int main(int argc, char **argv)
 {
@@ -20,17 +23,20 @@ int main(int argc, char **argv)
     QGuiApplication app(argc, argv);
 
     if (!KWindowSystem::isPlatformX11()) {
-        qFatal("qdbusmenuproxy is only useful XCB. Aborting");
+        qFatal("gmenudbusmenuproxy is only useful XCB. Aborting");
     }
 
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);
     };
-    QObject::connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
-    QObject::connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
+    app.connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
+    app.connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
+    app.setApplicationName(u"gmenudbusmenuproxy"_s);
+    app.setOrganizationDomain(u"kde.org"_s);
     app.setQuitOnLastWindowClosed(false);
 
+    KDBusService service(KDBusService::Unique);
     MenuProxy proxy;
 
     return app.exec();

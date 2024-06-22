@@ -10,6 +10,7 @@ import json
 import os
 import subprocess
 import sys
+import time
 import unittest
 from tempfile import NamedTemporaryFile
 from time import sleep
@@ -35,6 +36,7 @@ gi.require_version('Gtk', '4.0')
 from gi.repository import Gio, GLib, Gtk
 
 WIDGET_ID: Final = "org.kde.plasma.mediacontroller"
+KDE_VERSION: Final = 6
 
 
 class MediaControllerTests(unittest.TestCase):
@@ -92,6 +94,13 @@ class MediaControllerTests(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         cls.loop_thread.quit()
         cls.driver.quit()
 

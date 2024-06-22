@@ -53,6 +53,7 @@ target_link_libraries(gmenudbusmenuproxy
     Qt::DBus
     KF6::CoreAddons
     KF6::ConfigCore
+    KF6::DBusAddons
     KF6::WindowSystem
     XCB::XCB
 )
