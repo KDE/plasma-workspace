@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-05-30 16:14+0100\n"
+"PO-Revision-Date: 2024-06-22 12:58+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -102,31 +102,31 @@ msgstr "Visit bugs.kde.org to report issues"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Copy Plasma Version"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Report a Bug…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Hide Preview Banner"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Hide Until Restart"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Hide Permanently…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -137,12 +137,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Are you sure you want to permanently hide the preview banner?<nl/><nl/>This "
+"action can only be undone by removing the line beginning with "
+"<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
+"filename> configuration file."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Hide Preview Banner?"
 
 #: main.cpp:84
 #, kde-format

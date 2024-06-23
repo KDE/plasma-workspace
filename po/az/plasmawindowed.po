@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2024-06-23 00:40+0000\n"
 "PO-Revision-Date: 2024-06-11 17:04+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.07.70\n"
 
-#: main.cpp:44 plasmawindowedcorona.cpp:103
+#: main.cpp:47 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Pəncərədə Plasma"
 
-#: main.cpp:46
+#: main.cpp:49
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "QML Javascript sazlayıcısını aktiv etmək"
 
-#: main.cpp:49 plasmawindowedcorona.cpp:105
+#: main.cpp:52 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -35,17 +35,17 @@ msgid ""
 msgstr ""
 "Hətta pəncərə bağlandıqda belə vidjeti bildiriş sahəsində aktiv saxlamaq."
 
-#: main.cpp:51
+#: main.cpp:54
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Verilmiş üz qabığı əlavəsini məcburi yükləmək"
 
-#: main.cpp:55 plasmawindowedcorona.cpp:106
+#: main.cpp:58 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
 msgstr "Açılacaq vidjet."
 
-#: main.cpp:56 plasmawindowedcorona.cpp:107
+#: main.cpp:59 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "Vidjetə ötürüləcək arqumentlər."

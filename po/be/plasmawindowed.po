@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-09 01:39+0000\n"
+"POT-Creation-Date: 2024-06-23 00:40+0000\n"
 "PO-Revision-Date: 2024-05-19 21:17\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,34 +22,34 @@ msgstr ""
 "plasmawindowed.po\n"
 "X-Crowdin-File-ID: 17872\n"
 
-#: main.cpp:44 plasmawindowedcorona.cpp:103
+#: main.cpp:47 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Плазмоіды як праграмы"
 
-#: main.cpp:46
+#: main.cpp:49
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Уключыць сродак адладжвання QML Javascript"
 
-#: main.cpp:49 plasmawindowedcorona.cpp:105
+#: main.cpp:52 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
 msgstr "Плазмоід застаецца на прасторы апавяшчэнняў нават калі акно закрыта."
 
-#: main.cpp:51
+#: main.cpp:54
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Прымусовая загрузка пададзенай убудовы абалонкі"
 
-#: main.cpp:55 plasmawindowedcorona.cpp:106
+#: main.cpp:58 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
 msgstr "Аплет для адкрыцця."
 
-#: main.cpp:56 plasmawindowedcorona.cpp:107
+#: main.cpp:59 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "Аргументы для плазмоіда."
