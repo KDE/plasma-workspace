@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1681191 $
+# Version: $Revision: 1683038 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:40+0000\n"
-"PO-Revision-Date: 2024-03-17 11:45+0100\n"
+"PO-Revision-Date: 2024-06-22 09:17+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -24,6 +24,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -335,7 +336,7 @@ msgstr "Polecenie"
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr "Wyjście"
+msgstr "Wynik"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -543,13 +544,13 @@ msgstr "Pokaż kod kre&skowy..."
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr "Następny element historii"
+msgstr "Następny wpis w historii"
 
 #: klipper.cpp:162
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr "Poprzedni element historii"
+msgstr "Poprzedni wpis w historii"
 
 #: klipper.cpp:169
 #, kde-format
@@ -735,7 +736,7 @@ msgstr "Użyj graficznego edytora wyrażeń regularnych"
 #: klipper.kcfg:51
 #, kde-format
 msgid "Immediately on selection"
-msgstr "Natychmiast przy zaznaczeniu"
+msgstr "Natychmiast po zaznaczeniu"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -755,7 +756,7 @@ msgstr "Brak działań dla WM_CLASS"
 #: klipper.kcfg:60
 #, kde-format
 msgid "Automatic action menu time:"
-msgstr "Czas menu domyślnego działania:"
+msgstr "Czas do pojawienia się menu działań:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
@@ -796,7 +797,7 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
-"Usuń wszystkie białe odstępy z początku i końca zaznaczonego tekstu przed "
+"Usuń wszystkie białe znaki z początku i końca zaznaczonego tekstu przed "
 "wykonaniem działania. Na przykład, zapewnia to, że adres URL wklejony do "
 "przeglądarki jest traktowany tak, jak tego oczekujesz. Nie wpływa to na "
 "tekst zapisany do schowka."
@@ -820,7 +821,7 @@ msgstr ""
 #: klipper.kcfg:94
 #, kde-format
 msgid "Include MIME actions"
-msgstr "Dołącz działania MIME"
+msgstr "Dodaj działania MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96

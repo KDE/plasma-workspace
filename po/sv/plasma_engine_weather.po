@@ -2,21 +2,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@gmail.com>, 2009.
+# SPDX-FileCopyrightText: 2009, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2011, 2016, 2017, 2018, 2019, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 02:29+0000\n"
-"PO-Revision-Date: 2021-12-09 18:28+0100\n"
+"PO-Revision-Date: 2024-06-21 09:30+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: bbcukmet_i18n.dat:1
@@ -958,7 +958,7 @@ msgstr "Snöblandat regn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy"
-msgstr "Nästan mulet"
+msgstr "Övervägande mulet"
 
 #: envcan_i18n.dat:53
 #, kde-format
@@ -3849,19 +3849,19 @@ msgstr "Låg drivsnö"
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy and Breezy"
-msgstr "Nästan mulet och svag vind"
+msgstr "Övervägande mulet och svag vind"
 
 #: noaa_i18n.dat:166
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy and Windy"
-msgstr "Nästan mulet och frisk vind"
+msgstr "Övervägande mulet och frisk vind"
 
 #: noaa_i18n.dat:167
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy with Haze"
-msgstr "Nästan mulet med dis"
+msgstr "Övervägande mulet med dis"
 
 #: noaa_i18n.dat:168
 #, kde-format
@@ -4821,7 +4821,7 @@ msgstr "Varmt"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Cloudy"
-msgstr "Nästan mulet"
+msgstr "Övervägande mulet"
 
 #: noaa_i18n.dat:344
 #, kde-format
@@ -4881,7 +4881,7 @@ msgstr "Blir soligt"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Clear"
-msgstr "Nästan klart"
+msgstr "Övervägande klart"
 
 #~ msgctxt "weather condition"
 #~ msgid "weather condition"
