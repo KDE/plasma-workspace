@@ -12,8 +12,9 @@ import org.kde.plasma.private.sessions 2.0
 import org.kde.kcmutils as KCM
 
 KCM.SimpleKCM {
-    readonly property int checkedOptions: logout.checked + shutdown.checked + reboot.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
+    readonly property int checkedOptions: logout.checked + logoutScreen.checked + shutdown.checked + reboot.checked + lock.checked + switchUser.checked + hibernate.checked + sleep.checked
 
+    property alias cfg_show_requestLogoutScreen: logoutScreen.checked
     property alias cfg_show_requestLogout: logout.checked
     property alias cfg_show_requestShutDown: shutdown.checked
     property alias cfg_show_requestReboot: reboot.checked
@@ -34,6 +35,12 @@ KCM.SimpleKCM {
             text: i18n("Log Out")
             icon.name: "system-log-out"
             // ensure user cannot have all options unchecked
+            enabled: session.canLogout && (checkedOptions > 1 || !checked)
+        }
+        QtControls.CheckBox {
+            id: logoutScreen
+            text: i18nc("@option:check", "Show logout screen")
+            icon.name: "system-log-out"
             enabled: session.canLogout && (checkedOptions > 1 || !checked)
         }
         QtControls.CheckBox {

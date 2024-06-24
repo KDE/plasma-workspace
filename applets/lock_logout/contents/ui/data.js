@@ -33,6 +33,13 @@ var data = [{
     tooltip_subText: i18n("End the session"),
     requires: "Logout"
 }, {
+    icon: "system-log-out",
+    operation: "requestLogoutPrompt",
+    configKey: "requestLogoutScreen",
+    tooltip_mainText: i18nc("@info:tooltip", "Show logout screen"),
+    tooltip_subText: i18n("Log out, turn off, or restart the computer"),
+    requires: "Logout"
+}, {
     icon: "system-suspend",
     operation: "suspend",
     configKey: "suspendToRam",
