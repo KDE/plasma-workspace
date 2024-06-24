@@ -1,0 +1,573 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-05-08 02:42+0000\n"
+"PO-Revision-Date: 2024-06-23 10:40+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
+"Language: gl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.05.1\n"
+
+#: package/contents/ui/ChangePassword.qml:27
+#: package/contents/ui/UserDetailsPage.qml:156
+#, kde-format
+msgid "Change Password"
+msgstr "Cambiar o contrasinal"
+
+#: package/contents/ui/ChangePassword.qml:33
+#, kde-format
+msgid "Set Password"
+msgstr "Definir o contrasinal"
+
+#: package/contents/ui/ChangePassword.qml:56
+#, kde-format
+msgid "Password"
+msgstr "Contrasinal"
+
+#: package/contents/ui/ChangePassword.qml:71
+#, kde-format
+msgid "Confirm password"
+msgstr "Confirmar o contrasinal"
+
+#: package/contents/ui/ChangePassword.qml:90
+#: package/contents/ui/CreateUser.qml:65
+#, kde-format
+msgid "Passwords must match"
+msgstr "Os contrasinais deben coincidir"
+
+#: package/contents/ui/ChangeWalletPassword.qml:17
+#, kde-format
+msgid "Change Wallet Password?"
+msgstr "Quere cambiar o contrasinal da carteira?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:26
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Now that you have changed your login password, you may also want to change "
+"the password on your default KWallet to match it."
+msgstr ""
+"Agora que cambiou o seu contrasinal de acceso, quizais queira cambiar o "
+"contrasinal predeterminado de KWallet para que coincidan."
+
+#: package/contents/ui/ChangeWalletPassword.qml:31
+#, kde-format
+msgid "What is KWallet?"
+msgstr "Que é KWallet?"
+
+#: package/contents/ui/ChangeWalletPassword.qml:41
+#, kde-format
+msgid ""
+"KWallet is a password manager that stores your passwords for wireless "
+"networks and other encrypted resources. It is locked with its own password "
+"which differs from your login password. If the two passwords match, it can "
+"be unlocked at login automatically so you don't have to enter the KWallet "
+"password yourself."
+msgstr ""
+"KWallet é un xestor de contrasinais que almacena os seus contrasinais para "
+"redes sen fíos e outros recursos cifrados. Está bloqueada cun contrasinal de "
+"seu que non coincide co seu contrasinal de acceso. Se os contrasinais "
+"coinciden, pode desbloquearse automaticamente ao acceder para que non teña "
+"que introducir o contrasinal de KWallet a man."
+
+#: package/contents/ui/ChangeWalletPassword.qml:57
+#, kde-format
+msgid "Change Wallet Password"
+msgstr "Cambiar o contrasinal da carteira"
+
+#: package/contents/ui/ChangeWalletPassword.qml:66
+#, kde-format
+msgid "Leave Unchanged"
+msgstr "Deixar sen cambiar"
+
+#: package/contents/ui/CreateUser.qml:16
+#, kde-format
+msgid "Create User"
+msgstr "Crear a conta"
+
+#: package/contents/ui/CreateUser.qml:30
+#: package/contents/ui/UserDetailsPage.qml:124
+#, kde-format
+msgid "Name:"
+msgstr "Nome:"
+
+#: package/contents/ui/CreateUser.qml:34
+#: package/contents/ui/UserDetailsPage.qml:131
+#, kde-format
+msgid "Username:"
+msgstr "Nome de usuaria:"
+
+#: package/contents/ui/CreateUser.qml:44
+#: package/contents/ui/UserDetailsPage.qml:139
+#, kde-format
+msgid "Standard"
+msgstr "Estándar"
+
+#: package/contents/ui/CreateUser.qml:45
+#: package/contents/ui/UserDetailsPage.qml:140
+#, kde-format
+msgid "Administrator"
+msgstr "Administración"
+
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:143
+#, kde-format
+msgid "Account type:"
+msgstr "Tipo de conta:"
+
+#: package/contents/ui/CreateUser.qml:53
+#, kde-format
+msgid "Password:"
+msgstr "Contrasinal:"
+
+#: package/contents/ui/CreateUser.qml:58
+#, kde-format
+msgid "Confirm password:"
+msgstr "Confirmar o contrasinal:"
+
+#: package/contents/ui/CreateUser.qml:72
+#, kde-format
+msgid "Create"
+msgstr "Crear"
+
+#: package/contents/ui/FingerprintDialog.qml:58
+#, kde-format
+msgid "Configure Fingerprints"
+msgstr "Configurar as pegadas"
+
+#: package/contents/ui/FingerprintDialog.qml:68
+#, kde-format
+msgctxt "@action:button 'all' refers to fingerprints"
+msgid "Clear All"
+msgstr "Borralo todo"
+
+#: package/contents/ui/FingerprintDialog.qml:75
+#, kde-format
+msgid "Add"
+msgstr "Engadir"
+
+#: package/contents/ui/FingerprintDialog.qml:84
+#, kde-format
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: package/contents/ui/FingerprintDialog.qml:92
+#, kde-format
+msgid "Done"
+msgstr "Feito"
+
+#: package/contents/ui/FingerprintDialog.qml:116
+#, kde-format
+msgid "Enrolling Fingerprint"
+msgstr "Enrolando a pegada"
+
+#: package/contents/ui/FingerprintDialog.qml:125
+#, kde-format
+msgid ""
+"Please repeatedly press your right index finger on the fingerprint sensor."
+msgstr "Prema varias veces o seu dedo índice dereito sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:127
+#, kde-format
+msgid ""
+"Please repeatedly press your right middle finger on the fingerprint sensor."
+msgstr "Prema varias veces o seu dedo medio dereito sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:129
+#, kde-format
+msgid ""
+"Please repeatedly press your right ring finger on the fingerprint sensor."
+msgstr "Prema varias veces o seu dedo anular dereito sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:131
+#, kde-format
+msgid ""
+"Please repeatedly press your right little finger on the fingerprint sensor."
+msgstr ""
+"Prema varias veces o seu dedo maimiño dereito sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:133
+#, kde-format
+msgid "Please repeatedly press your right thumb on the fingerprint sensor."
+msgstr "Prema varias veces o seu dedo polgar dereito sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:135
+#, kde-format
+msgid ""
+"Please repeatedly press your left index finger on the fingerprint sensor."
+msgstr ""
+"Prema varias veces o seu dedo índice esquerdo sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:137
+#, kde-format
+msgid ""
+"Please repeatedly press your left middle finger on the fingerprint sensor."
+msgstr "Prema varias veces o seu dedo medio esquerdo sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:139
+#, kde-format
+msgid ""
+"Please repeatedly press your left ring finger on the fingerprint sensor."
+msgstr ""
+"Prema varias veces o seu dedo anular esquerdo sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:141
+#, kde-format
+msgid ""
+"Please repeatedly press your left little finger on the fingerprint sensor."
+msgstr ""
+"Prema varias veces o seu dedo maimiño esquerdo sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:143
+#, kde-format
+msgid "Please repeatedly press your left thumb on the fingerprint sensor."
+msgstr ""
+"Prema varias veces o seu dedo polgar esquerdo sobre o sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:147
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right index finger on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo índice dereito polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:149
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right middle finger on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo medio dereito polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:151
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right ring finger on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo anular dereito polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:153
+#, kde-format
+msgid ""
+"Please repeatedly swipe your right little finger on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo maimiño dereito polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:155
+#, kde-format
+msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo polgar dereito polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:157
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left index finger on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo índice esquerdo polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:159
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left middle finger on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo medio esquerdo polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:161
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left ring finger on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo anular esquerdo polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:163
+#, kde-format
+msgid ""
+"Please repeatedly swipe your left little finger on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo maimiño esquerdo polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:165
+#, kde-format
+msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
+msgstr "Pase varias veces o seu dedo polgar esquerdo polo sensor de pegada."
+
+#: package/contents/ui/FingerprintDialog.qml:179
+#, kde-format
+msgid "Finger Enrolled"
+msgstr "Enrolouse o dedo"
+
+#: package/contents/ui/FingerprintDialog.qml:209
+#, kde-format
+msgid "Pick a finger to enroll"
+msgstr "Escolla un dedo para enrolar."
+
+#: package/contents/ui/FingerprintDialog.qml:326
+#, kde-format
+msgid "Re-enroll finger"
+msgstr "Enrolar o dedo de novo"
+
+#: package/contents/ui/FingerprintDialog.qml:333
+#, kde-format
+msgid "Delete fingerprint"
+msgstr "Eliminar a pegada"
+
+#: package/contents/ui/FingerprintDialog.qml:342
+#, kde-format
+msgid "No fingerprints added"
+msgstr "Non se engadiron pegadas"
+
+#: package/contents/ui/main.qml:22
+#, kde-format
+msgid "Manage Users"
+msgstr "Xestionar as contas"
+
+#: package/contents/ui/main.qml:123
+#, kde-format
+msgid "Add New User"
+msgstr "Engadir unha nova conta"
+
+#: package/contents/ui/PicturesSheet.qml:19
+#, kde-format
+msgctxt "@title"
+msgid "Change Avatar"
+msgstr "Cambiar o avatar"
+
+#: package/contents/ui/PicturesSheet.qml:22
+#, kde-format
+msgctxt "@item:intable"
+msgid "It's Nothing"
+msgstr "Non é nada"
+
+#: package/contents/ui/PicturesSheet.qml:23
+#, kde-format
+msgctxt "@item:intable"
+msgid "Feisty Flamingo"
+msgstr "Flamengo bravo"
+
+#: package/contents/ui/PicturesSheet.qml:24
+#, kde-format
+msgctxt "@item:intable"
+msgid "Dragon's Fruit"
+msgstr "Froito do dragón"
+
+#: package/contents/ui/PicturesSheet.qml:25
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sweet Potato"
+msgstr "Pataca doce"
+
+#: package/contents/ui/PicturesSheet.qml:26
+#, kde-format
+msgctxt "@item:intable"
+msgid "Ambient Amber"
+msgstr "Ámbar ambiental"
+
+#: package/contents/ui/PicturesSheet.qml:27
+#, kde-format
+msgctxt "@item:intable"
+msgid "Sparkle Sunbeam"
+msgstr "Raio de sol"
+
+#: package/contents/ui/PicturesSheet.qml:28
+#, kde-format
+msgctxt "@item:intable"
+msgid "Lemon-Lime"
+msgstr "Lima limón"
+
+#: package/contents/ui/PicturesSheet.qml:29
+#, kde-format
+msgctxt "@item:intable"
+msgid "Verdant Charm"
+msgstr "Encanto verdoso"
+
+#: package/contents/ui/PicturesSheet.qml:30
+#, kde-format
+msgctxt "@item:intable"
+msgid "Mellow Meadow"
+msgstr "Pradeira plácida"
+
+#: package/contents/ui/PicturesSheet.qml:31
+#, kde-format
+msgctxt "@item:intable"
+msgid "Tepid Teal"
+msgstr "Verde azulado"
+
+#: package/contents/ui/PicturesSheet.qml:32
+#, kde-format
+msgctxt "@item:intable"
+msgid "Plasma Blue"
+msgstr "Azul plasma"
+
+#: package/contents/ui/PicturesSheet.qml:33
+#, kde-format
+msgctxt "@item:intable"
+msgid "Pon Purple"
+msgstr "Pon púrpura"
+
+#: package/contents/ui/PicturesSheet.qml:34
+#, kde-format
+msgctxt "@item:intable"
+msgid "Bajo Purple"
+msgstr "Baixo púrpura"
+
+#: package/contents/ui/PicturesSheet.qml:35
+#, kde-format
+msgctxt "@item:intable"
+msgid "Burnt Charcoal"
+msgstr "Carbón queimado"
+
+#: package/contents/ui/PicturesSheet.qml:36
+#, kde-format
+msgctxt "@item:intable"
+msgid "Paper Perfection"
+msgstr "Perfección en papel"
+
+#: package/contents/ui/PicturesSheet.qml:37
+#, kde-format
+msgctxt "@item:intable"
+msgid "Cafétera Brown"
+msgstr "Marrón de cafeteira"
+
+#: package/contents/ui/PicturesSheet.qml:38
+#, kde-format
+msgctxt "@item:intable"
+msgid "Rich Hardwood"
+msgstr "Madeira rica"
+
+#: package/contents/ui/PicturesSheet.qml:82
+#, kde-format
+msgctxt "@title"
+msgid "Choose a picture"
+msgstr "Escoller unha imaxe"
+
+#: package/contents/ui/PicturesSheet.qml:114
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose File…"
+msgstr "Escoller un ficheiro…"
+
+#: package/contents/ui/UserDetailsPage.qml:107
+#, kde-format
+msgid "Change avatar"
+msgstr "Cambiar o avatar"
+
+#: package/contents/ui/UserDetailsPage.qml:152
+#, kde-format
+msgid "Email address:"
+msgstr "Enderezo de correo electrónico:"
+
+#: package/contents/ui/UserDetailsPage.qml:176
+#, kde-format
+msgid "Delete files"
+msgstr "Eliminar os ficheiros"
+
+#: package/contents/ui/UserDetailsPage.qml:183
+#, kde-format
+msgid "Keep files"
+msgstr "Manter os ficheiros"
+
+#: package/contents/ui/UserDetailsPage.qml:190
+#, kde-format
+msgid "Delete User…"
+msgstr "Eliminar a conta…"
+
+#: package/contents/ui/UserDetailsPage.qml:201
+#, kde-format
+msgid "Configure Fingerprint Authentication…"
+msgstr "Configurar a autenticación con pegada…"
+
+#: package/contents/ui/UserDetailsPage.qml:215
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Fingerprints can be used in place of a password when unlocking the screen "
+"and providing administrator permissions to applications and command-line "
+"programs that request them.<nl/><nl/>Logging into the system with your "
+"fingerprint is not yet supported."
+msgstr ""
+"Pode usar a súa pegada en vez dun contrasinal para desbloquear a pantalla e "
+"fornecer permisos de administración a aplicacións e programas da liña de "
+"ordes que os soliciten.<nl/><nl/>Aínda non se permite acceder ao sistema con "
+"pegada."
+
+#: src/fingerprintmodel.cpp:151 src/fingerprintmodel.cpp:258
+#, kde-format
+msgid "No fingerprint device found."
+msgstr "Non se atopou ningún dispositivo de pegada."
+
+#: src/fingerprintmodel.cpp:331
+#, kde-format
+msgid "Retry scanning your finger."
+msgstr "Intentar escanear o dedo de novo."
+
+#: src/fingerprintmodel.cpp:333
+#, kde-format
+msgid "Swipe too short. Try again."
+msgstr "Pasada curta de máis. Inténteo de novo."
+
+#: src/fingerprintmodel.cpp:335
+#, kde-format
+msgid "Finger not centered on the reader. Try again."
+msgstr "O dedo non está centrado no lector. Inténteo de novo."
+
+#: src/fingerprintmodel.cpp:337
+#, kde-format
+msgid "Remove your finger from the reader, and try again."
+msgstr "Retire o dedo do lector e inténteo de novo."
+
+#: src/fingerprintmodel.cpp:345
+#, kde-format
+msgid "Fingerprint enrollment has failed."
+msgstr "O enrolamento da pegada fallou."
+
+#: src/fingerprintmodel.cpp:348
+#, kde-format
+msgid ""
+"There is no space left for this device, delete other fingerprints to "
+"continue."
+msgstr ""
+"Non queda espazo no dispositivo, elimine outras pegadas para continuar."
+
+#: src/fingerprintmodel.cpp:351
+#, kde-format
+msgid "The device was disconnected."
+msgstr "Desconectouse o dispositivo."
+
+#: src/fingerprintmodel.cpp:356
+#, kde-format
+msgid "An unknown error has occurred."
+msgstr "Produciuse un erro descoñecido."
+
+#: src/user.cpp:279
+#, kde-format
+msgid "Could not get permission to save user %1"
+msgstr "Non foi posíbel obter permiso para gardar a conta de %1."
+
+#: src/user.cpp:284
+#, kde-format
+msgid "There was an error while saving changes"
+msgstr "Produciuse un erro ao gardar os cambios."
+
+#: src/user.cpp:380
+#, kde-format
+msgid "Failed to resize image: opening temp file failed"
+msgstr ""
+"Non foi posíbel cambiar o tamaño da imaxe: a apertura dun ficheiro temporal "
+"fallou."
+
+#: src/user.cpp:388
+#, kde-format
+msgid "Failed to resize image: writing to temp file failed"
+msgstr ""
+"Non foi posíbel cambiar o tamaño da imaxe: a escritura nun ficheiro temporal "
+"fallou."
+
+#: src/usermodel.cpp:147
+#, kde-format
+msgid "Your Account"
+msgstr "A súa conta"
+
+#: src/usermodel.cpp:147
+#, kde-format
+msgid "Other Accounts"
+msgstr "Outras contas"
