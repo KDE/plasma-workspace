@@ -23,7 +23,6 @@ SortedSystemTrayModel::SortedSystemTrayModel(SortingType sorting, QObject *paren
     , m_sorting(sorting)
 {
     setSortLocaleAware(true);
-    sort(0);
 }
 
 bool SortedSystemTrayModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
