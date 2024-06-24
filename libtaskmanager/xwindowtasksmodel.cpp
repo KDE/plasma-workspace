@@ -341,6 +341,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
 
     bool wipeInfoCache = false;
     bool wipeAppDataCache = false;
+    bool wipeAppDataIcon = false;
     QList<int> changedRoles;
 
     if (properties & (NET::WMPid) || properties2 & (NET::WM2DesktopFileName | NET::WM2WindowClass)) {
@@ -355,8 +356,7 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     }
 
     if ((properties & NET::WMIcon) && usingFallbackIcon.contains(window)) {
-        wipeAppDataCache = true;
-
+        wipeAppDataIcon = true;
         if (!changedRoles.contains(Qt::DecorationRole)) {
             changedRoles << Qt::DecorationRole;
         }
@@ -415,6 +415,9 @@ void XWindowTasksModel::Private::windowChanged(WId window, NET::Properties prope
     if (wipeAppDataCache) {
         appDataCache.remove(window);
         usingFallbackIcon.remove(window);
+    } else if (wipeAppDataIcon) {
+        // Only the icon changes
+        appDataCache[window].icon = QIcon();
     }
 
     if (!changedRoles.isEmpty()) {

@@ -13,7 +13,7 @@
 
 #define BATCH_TIME 10
 
-static const NET::Properties s_cachableProperties = NET::WMName | NET::WMVisibleName;
+static const NET::Properties s_cachableProperties = NET::WMName | NET::WMVisibleName | NET::WMIcon;
 static const NET::Properties2 s_cachableProperties2 = NET::WM2UserTime;
 
 XWindowSystemEventBatcher::XWindowSystemEventBatcher(QObject *parent)

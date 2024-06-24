@@ -217,8 +217,9 @@ void XWindowTasksModelTest::test_modelData()
         const QIcon oldWindowIcon = index.data(Qt::DecorationRole).value<QIcon>(); // X11 icon
         QVERIFY(!oldWindowIcon.isNull());
         window->setIcon(QIcon(QFINDTESTDATA("data/windows/samplewidgetwindow.png")));
-        QVERIFY(dataChangedSpy.wait());
-        QVERIFY(dataChangedSpy.takeLast().at(2).value<QList<int>>().contains(Qt::DecorationRole));
+        QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &content) {
+            return content.at(2).value<QList<int>>().contains(static_cast<int>(qToUnderlying(Qt::DecorationRole)));
+        })); // Cached
 
         const QIcon newWindowIcon = index.data(Qt::DecorationRole).value<QIcon>();
         QVERIFY(!newWindowIcon.isNull());
