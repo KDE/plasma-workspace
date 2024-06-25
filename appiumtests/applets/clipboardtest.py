@@ -96,11 +96,13 @@ class ClipboardTest(unittest.TestCase):
 
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
-        options.set_capability("environ", {
-            "LC_ALL": "en_US.UTF-8",
-            "QT_FATAL_WARNINGS": "1" if "KDECI_BUILD" in os.environ else "0",
-            "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.typeresolution.cycle.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false;org.kde.klipper.debug=true",
-        })
+        options.set_capability(
+            "environ",
+            {
+                "LC_ALL": "en_US.UTF-8",
+                "QT_FATAL_WARNINGS": "0",  # DataControlOffer: timeout reading from pipe
+                "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;qt.qml.typeresolution.cycle.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false;org.kde.klipper.debug=true",
+            })
         options.set_capability("timeouts", {'implicit': 10000})
         cls.appium_options = options
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
@@ -205,9 +207,18 @@ class ClipboardTest(unittest.TestCase):
         # The first item becomes the current clipboard item
         self.assertEqual(self.driver.get_clipboard_text(), "Fushan Wen")
 
-    def update_config_and_restart_clipboard(self, group: str | list[str], key: str | list[str], new_value: str | list[str]) -> None:
+    def update_config_and_restart_clipboard(self, group: str | list[str], key: str | list[str], new_value: str | list[str], reset_history: bool = False) -> None:
+        subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", "plasmawindowed"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         self.driver.quit()
-        time.sleep(1)  # Avoid races
+
+        if reset_history:
+            shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "klipper/autotests/data/onetextentry.lst"), self.klipper_data_file)
 
         if isinstance(group, str):
             subprocess.check_call([f"kwriteconfig{KDE_VERSION}", "--file", "klipperrc", "--group", group, "--key", key, new_value])
@@ -217,6 +228,8 @@ class ClipboardTest(unittest.TestCase):
 
         # Restart the widget to take effect
         self.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=self.appium_options)
+        if reset_history:
+            self.driver.find_element(AppiumBy.NAME, "Fushan Wen")
 
     def gtk_copy(self, content: Gdk.ContentProvider, clipboard_mode: int = 0) -> None:
         """
@@ -267,9 +280,7 @@ class ClipboardTest(unittest.TestCase):
         When `IgnoreImages` is set to false, the clipboard should save images.
         """
         # Enable "Only when explicitly copied" to test the two bugs
-        shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "klipper/autotests/data/onetextentry.lst"), self.klipper_data_file)
-        self.update_config_and_restart_clipboard(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
-        self.driver.find_element(AppiumBy.NAME, "Fushan Wen")
+        self.update_config_and_restart_clipboard(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"], True)
 
         # Copy 3 color blocks to clipboard
         for color in (0xff0000ff, 0x00ff00ff, 0x0000ffff):
@@ -283,6 +294,17 @@ class ClipboardTest(unittest.TestCase):
             partial_pixbuf.fill(color)
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+
+    def test_5_sync_selection_with_ignore_selection(self) -> None:
+        """
+        When `SyncClipboards` is true but `IgnoreSelection` is true, the clipboard should still sync clipboard and selection.
+        """
+        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["true", "true"], True)
+        selected_text = "appiumtest123"
+        content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(selected_text, "utf-8")))
+        self.gtk_copy(content_text, 1)
+        self.assertEqual(self.driver.get_clipboard_text(), selected_text)
+        self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, selected_text)
 
 
 if __name__ == '__main__':

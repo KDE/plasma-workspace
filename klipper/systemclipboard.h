@@ -54,11 +54,28 @@ class SystemClipboard : public QObject
     Q_OBJECT
 
 public:
+    /**
+     * The selection modes
+     *
+     * Don't use 1, as I use that as a guard against passing
+     * a boolean true as a mode.
+     */
+    enum SelectionMode {
+        Clipboard = 2,
+        Selection = 4,
+    };
+
+    enum class ClipboardUpdateReason {
+        UpdateClipboard,
+        SyncSelection,
+        PreventEmptyClipboard,
+    };
+
     static std::shared_ptr<SystemClipboard> self();
     ~SystemClipboard() override;
 
     void clear(QClipboard::Mode mode);
-    void setMimeData(QMimeData *data, QClipboard::Mode mode);
+    void setMimeData(QMimeData *data, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
 
     bool isLocked(QClipboard::Mode mode);
 

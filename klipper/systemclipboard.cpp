@@ -20,6 +20,7 @@
 #include "../c_ptr.h"
 #include "config-X11.h"
 #include "klipper_debug.h"
+#include <wayland-client-core.h>
 
 #if HAVE_X11
 #include <X11/Xlib.h>
@@ -106,10 +107,34 @@ void SystemClipboard::clear(QClipboard::Mode mode)
     m_clip->clear(mode);
 }
 
-void SystemClipboard::setMimeData(QMimeData *data, QClipboard::Mode mode)
+void SystemClipboard::setMimeData(QMimeData *data, int mode, ClipboardUpdateReason updateReason)
 {
-    Ignore lock(mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel);
-    m_clip->setMimeData(data, mode);
+    Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
+
+    if (mode & Selection) {
+        Ignore lock(m_selectionLocklevel);
+        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
+            data->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+        }
+        qCDebug(KLIPPER_LOG) << "Setting selection to <" << data->text() << ">";
+        m_clip->setMimeData(data, QClipboard::Selection);
+    }
+    if (mode & Clipboard) {
+        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
+            data->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+        } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
+            // When plasmashell is not focused, klipper will not receive new clip data immediately. This type is used to filter out selections.
+            data->setData(QStringLiteral("application/x-kde-syncselection"), "1");
+        }
+        qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << data->text() << ">";
+        QMetaObject::invokeMethod(
+            m_clip,
+            [this, data]() {
+                Ignore lock(m_clipboardLocklevel);
+                m_clip->setMimeData(data, QClipboard::Clipboard);
+            },
+            updateReason == ClipboardUpdateReason::SyncSelection ? Qt::QueuedConnection : Qt::DirectConnection);
+    }
 }
 
 bool SystemClipboard::isLocked(QClipboard::Mode mode)
@@ -159,6 +184,10 @@ void SystemClipboard::checkClipData(QClipboard::Mode mode)
 
     if (!data->hasUrls() && !data->hasText() && !data->hasImage()) {
         return; // unknown, ignore
+    }
+
+    if (data->hasFormat(QStringLiteral("application/x-kde-syncselection"))) {
+        return;
     }
 
     Q_ASSERT_X((mode == QClipboard::Clipboard && m_clipboardLocklevel == 1) || (mode == QClipboard::Selection && m_selectionLocklevel == 1),

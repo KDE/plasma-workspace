@@ -225,7 +225,7 @@ void Klipper::setClipboardContents(const QString &s)
         return;
     updateTimestamp();
     HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
-    setClipboard(*item, Clipboard | Selection);
+    m_clip->setMimeData(item->mimeData(), SystemClipboard::Clipboard | SystemClipboard::Selection);
     history()->insert(item);
 }
 
@@ -378,7 +378,7 @@ bool Klipper::loadHistory()
     history()->clearAndBatchInsert(items);
 
     if (!history()->empty()) {
-        setClipboard(*history()->first(), Clipboard | Selection);
+        m_clip->setMimeData(history()->first()->mimeData(), SystemClipboard::Clipboard | SystemClipboard::Selection);
     }
 
     return true;
@@ -531,7 +531,7 @@ void Klipper::slotIgnored(QClipboard::Mode mode)
     // The trouble is that the top selection =! top clipboard
     // but we don't track that yet. We will....
     if (auto top = history()->first()) {
-        setClipboard(*top, mode == QClipboard::Selection ? Selection : Clipboard);
+        m_clip->setMimeData(top->mimeData(), mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard);
     }
 }
 
@@ -541,7 +541,9 @@ void Klipper::slotReceivedEmptyClipboard(QClipboard::Mode mode)
     if (auto top = history()->first()) {
         // keep old clipboard after someone set it to null
         qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
-        setClipboard(*top, mode == QClipboard::Selection ? Selection : Clipboard, ClipboardUpdateReason::PreventEmptyClipboard);
+        m_clip->setMimeData(top->mimeData(),
+                            mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
+                            SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
     }
 }
 
@@ -583,7 +585,7 @@ void Klipper::slotHistoryTopChanged()
 
     auto topitem = history()->first();
     if (topitem) {
-        setClipboard(*topitem, Clipboard | Selection);
+        m_clip->setMimeData(topitem->mimeData(), SystemClipboard::Clipboard | SystemClipboard::Selection);
     }
     if (m_bReplayActionInHistory && m_bURLGrabber) {
         slotRepeatAction();
@@ -634,8 +636,15 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     // XXX: I want a better handling of selection/clipboard in general.
     // XXX: Order sensitive code. Must die.
     const bool selectionMode = mode == QClipboard::Selection;
-    if (selectionMode && m_bIgnoreSelection)
+    if (selectionMode && m_bIgnoreSelection) {
+        if (m_bSynchronize) {
+            auto item = HistoryItem::create(data);
+            if (item) [[likely]] { // applyClipChanges can return nullptr
+                m_clip->setMimeData(item->mimeData(), SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
+            }
+        }
         return;
+    }
 
     if (selectionMode && m_bSelectionTextOnly && !data->hasText())
         return;
@@ -648,7 +657,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize && item) { // applyClipChanges can return nullptr
-            setClipboard(*item, mode == QClipboard::Selection ? Clipboard : Selection);
+            m_clip->setMimeData(item->mimeData(), mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
         }
     }
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
@@ -664,28 +673,6 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         }
     } else {
         lastURLGrabberText.clear();
-    }
-}
-
-void Klipper::setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason)
-{
-    Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
-
-    if (mode & Selection) {
-        qCDebug(KLIPPER_LOG) << "Setting selection to <" << item.text() << ">";
-        QMimeData *mimeData = item.mimeData();
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        }
-        m_clip->setMimeData(mimeData, QClipboard::Selection);
-    }
-    if (mode & Clipboard) {
-        qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << item.text() << ">";
-        QMimeData *mimeData = item.mimeData();
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        }
-        m_clip->setMimeData(mimeData, QClipboard::Clipboard);
     }
 }
 

@@ -96,21 +96,6 @@ public Q_SLOTS:
 
 protected:
     /**
-     * The selection modes
-     *
-     * Don't use 1, as I use that as a guard against passing
-     * a boolean true as a mode.
-     */
-    enum SelectionMode {
-        Clipboard = 2,
-        Selection = 4,
-    };
-    enum class ClipboardUpdateReason {
-        UpdateClipboard,
-        PreventEmptyClipboard,
-    };
-
-    /**
      * Loads history from disk.
      */
     bool loadHistory();
@@ -133,7 +118,6 @@ protected:
      */
     [[nodiscard]] std::shared_ptr<HistoryItem> applyClipChanges(const QMimeData *data);
 
-    void setClipboard(const HistoryItem &item, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
     bool ignoreClipboardChanges() const;
 
     KSharedConfigPtr config() const
