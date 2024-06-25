@@ -117,7 +117,7 @@ void ContextMenu::restore(const KConfigGroup &config)
         });
         connect(m_lockScreenAction, &QAction::triggered, m_session, &SessionManagement::lock);
 
-        m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Leave…"), this);
+        m_logoutAction = new QAction(i18nc("plasma_containmentactions_contextmenu", "Show Logout Screen"), this);
         m_logoutAction->setIcon(QIcon::fromTheme(QStringLiteral("system-log-out")));
         m_logoutAction->setShortcut(KGlobalAccel::self()->globalShortcut(QStringLiteral("ksmserver"), QStringLiteral("Show Logout Prompt")).value(0));
         connect(m_logoutAction, &QAction::triggered, this, &ContextMenu::startLogout);
