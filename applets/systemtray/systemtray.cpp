@@ -346,14 +346,14 @@ void SystemTray::onEnabledAppletsChanged()
         // for some reason it not always is.
         if (!applet->pluginMetaData().isValid()) {
             applet->config().parent().deleteGroup();
-            applet->deleteLater();
+            delete applet;
         } else {
             const QString task = applet->pluginMetaData().pluginId();
             if (!m_settings->isEnabledPlugin(task)) {
                 // in those cases we do delete the applet config completely
                 // as they were explicitly disabled by the user
                 applet->config().parent().deleteGroup();
-                applet->deleteLater();
+                delete applet;
                 m_configGroupIds.remove(task);
             }
         }
@@ -405,14 +405,7 @@ void SystemTray::stopApplet(const QString &pluginId)
     const auto appletsList = applets();
     for (Plasma::Applet *applet : appletsList) {
         if (applet->pluginMetaData().isValid() && pluginId == applet->pluginMetaData().pluginId()) {
-            // we are *not* cleaning the config here, because since is one
-            // of those automatically loaded/unloaded by dbus, we want to recycle
-            // the config the next time it's loaded, in case the user configured something here
-            applet->deleteLater();
-            // HACK: we need to remove the applet from Containment::applets() as soon as possible
-            // otherwise we may have disappearing applets for restarting dbus services
-            // this may be removed when we depend from a frameworks version in which appletDeleted is emitted as soon as deleteLater() is called
-            Q_EMIT appletDeleted(applet);
+            delete applet;
         }
     }
 }
