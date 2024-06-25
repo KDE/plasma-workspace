@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2010-01-03 21:44+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 msgid "General"
 msgstr "ಸಾಮಾನ್ಯ"
 
-#: contents/ui/ConfigGeneral.qml:33
+#: contents/ui/ConfigGeneral.qml:34
 #, fuzzy, kde-format
 #| msgid "Show lock button"
 msgctxt ""
@@ -30,37 +30,44 @@ msgctxt ""
 msgid "Show actions:"
 msgstr "ಲಾಕ್ ಮಾಡುವ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: contents/ui/ConfigGeneral.qml:35
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:41
+#: contents/ui/ConfigGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Show logout button"
+msgctxt "@option:check"
+msgid "Show logout screen"
+msgstr "ನಿರ್ಗಮಿಸುವ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
+
+#: contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:47
+#: contents/ui/ConfigGeneral.qml:54
 #, kde-format
 msgid "Restart"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "ಲಾಕ್ ಮಾಡು"
 
-#: contents/ui/ConfigGeneral.qml:59
+#: contents/ui/ConfigGeneral.qml:66
 #, kde-format
 msgid "Switch User"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
 #, kde-format
 msgid "Hibernate"
 msgstr "ಹೈಬರ್ನೇಟ್"
 
-#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -112,12 +119,25 @@ msgstr ""
 msgid "End the session"
 msgstr ""
 
+#: contents/ui/data.js:39
+#, fuzzy, kde-format
+#| msgid "Show logout button"
+msgctxt "@info:tooltip"
+msgid "Show logout screen"
+msgstr "ನಿರ್ಗಮಿಸುವ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
+
 #: contents/ui/data.js:40
+#, fuzzy, kde-format
+#| msgid "Logout, turn off or restart the computer"
+msgid "Log out, turn off, or restart the computer"
+msgstr "ನಿರ್ಗಮಿಸು, ಸ್ಥಗಿತಗೊಳಿಸು ಅಥವ ಗಣಕವನ್ನು ಮರಳಿ ಆರಂಭಿಸು"
+
+#: contents/ui/data.js:47
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "ನಿದ್ರಾವಸ್ಥೆ (RAM ನಲ್ಲಿ ಅಮಾನತಿನಲ್ಲಿಡು)"
 
-#: contents/ui/data.js:47
+#: contents/ui/data.js:54
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ಹೈಬರ್ನೇಟ್ (ಡಿಸ್ಕಿಗೆ ಅಮಾನತಿನಲ್ಲಿಡು)"
@@ -146,9 +166,6 @@ msgstr "ಹೈಬರ್ನೇಟ್ (ಡಿಸ್ಕಿಗೆ ಅಮಾನತಿ
 #~| msgid "Show sleep button"
 #~ msgid "Show \"switch user\" button"
 #~ msgstr "ನಿದ್ರಾವಸ್ಥೆಯ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
-
-#~ msgid "Show logout button"
-#~ msgstr "ನಿರ್ಗಮಿಸುವ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"
 
 #~ msgid "Show hibernate button"
 #~ msgstr "ಹೈಬರ್ನೇಟ್ ಗುಂಡಿಯನ್ನು ತೋರಿಸು"

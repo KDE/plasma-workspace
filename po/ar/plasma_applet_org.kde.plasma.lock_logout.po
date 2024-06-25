@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2024-02-10 19:27+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -23,44 +23,51 @@ msgstr ""
 msgid "General"
 msgstr "عامّ"
 
-#: contents/ui/ConfigGeneral.qml:33
+#: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "أظهر الإجراءات:"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: contents/ui/ConfigGeneral.qml:35
 #, kde-format
 msgid "Log Out"
 msgstr "اخرج"
 
-#: contents/ui/ConfigGeneral.qml:41
+#: contents/ui/ConfigGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt "@option:check"
+msgid "Show logout screen"
+msgstr "اقفل الشاشة"
+
+#: contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgid "Shut Down"
 msgstr "أطفئ"
 
-#: contents/ui/ConfigGeneral.qml:47
+#: contents/ui/ConfigGeneral.qml:54
 #, kde-format
 msgid "Restart"
 msgstr "أعد التّشغيل"
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "اقفل"
 
-#: contents/ui/ConfigGeneral.qml:59
+#: contents/ui/ConfigGeneral.qml:66
 #, kde-format
 msgid "Switch User"
 msgstr "بدّل المستخدِم"
 
-#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
 #, kde-format
 msgid "Hibernate"
 msgstr "أسبِت"
 
-#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -111,12 +118,25 @@ msgstr "اخرج…"
 msgid "End the session"
 msgstr "أنهِ هذه الجلسة"
 
+#: contents/ui/data.js:39
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt "@info:tooltip"
+msgid "Show logout screen"
+msgstr "اقفل الشاشة"
+
 #: contents/ui/data.js:40
+#, fuzzy, kde-format
+#| msgid "Turn off the computer"
+msgid "Log out, turn off, or restart the computer"
+msgstr "أطفئ الحاسوب"
+
+#: contents/ui/data.js:47
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "نَم (علّق إلى الذاكرة العشوائية)"
 
-#: contents/ui/data.js:47
+#: contents/ui/data.js:54
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "أسبِت (علّق إلى القرص)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2019-10-30 22:24+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -23,44 +23,51 @@ msgstr ""
 msgid "General"
 msgstr "Üldine"
 
-#: contents/ui/ConfigGeneral.qml:33
+#: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "Toimingute näitamine:"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: contents/ui/ConfigGeneral.qml:35
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:41
+#: contents/ui/ConfigGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Show logout button"
+msgctxt "@option:check"
+msgid "Show logout screen"
+msgstr "Väljalogimisnupu näitamine"
+
+#: contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgid "Shut Down"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:47
+#: contents/ui/ConfigGeneral.qml:54
 #, kde-format
 msgid "Restart"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Lukusta"
 
-#: contents/ui/ConfigGeneral.qml:59
+#: contents/ui/ConfigGeneral.qml:66
 #, kde-format
 msgid "Switch User"
 msgstr "Kasutaja vahetamine"
 
-#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
 #, kde-format
 msgid "Hibernate"
 msgstr "Talveuni"
 
-#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -112,12 +119,25 @@ msgstr ""
 msgid "End the session"
 msgstr ""
 
+#: contents/ui/data.js:39
+#, fuzzy, kde-format
+#| msgid "Show logout button"
+msgctxt "@info:tooltip"
+msgid "Show logout screen"
+msgstr "Väljalogimisnupu näitamine"
+
 #: contents/ui/data.js:40
+#, fuzzy, kde-format
+#| msgid "Log out, turn off or restart the computer"
+msgid "Log out, turn off, or restart the computer"
+msgstr "Väljalogimine või arvuti väljalülitamine või taaskäivitamine"
+
+#: contents/ui/data.js:47
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Uni (passiivne seisund mälus)"
 
-#: contents/ui/data.js:47
+#: contents/ui/data.js:54
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Talveuni (passiivne seisund kettal)"
@@ -160,9 +180,6 @@ msgstr "Talveuni (passiivne seisund kettal)"
 #~| msgid "Show sleep button"
 #~ msgid "Show \"switch user\" button"
 #~ msgstr "Unenupu näitamine"
-
-#~ msgid "Show logout button"
-#~ msgstr "Väljalogimisnupu näitamine"
 
 #~ msgid "Show hibernate button"
 #~ msgstr "Talveunenupu näitamine"

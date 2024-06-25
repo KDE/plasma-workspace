@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -23,44 +23,51 @@ msgstr ""
 msgid "General"
 msgstr "常规"
 
-#: contents/ui/ConfigGeneral.qml:33
+#: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "显示操作："
 
-#: contents/ui/ConfigGeneral.qml:34
+#: contents/ui/ConfigGeneral.qml:35
 #, kde-format
 msgid "Log Out"
 msgstr "注销"
 
-#: contents/ui/ConfigGeneral.qml:41
+#: contents/ui/ConfigGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt "@option:check"
+msgid "Show logout screen"
+msgstr "锁定屏幕"
+
+#: contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgid "Shut Down"
 msgstr "关机"
 
-#: contents/ui/ConfigGeneral.qml:47
+#: contents/ui/ConfigGeneral.qml:54
 #, kde-format
 msgid "Restart"
 msgstr "重启"
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "锁定"
 
-#: contents/ui/ConfigGeneral.qml:59
+#: contents/ui/ConfigGeneral.qml:66
 #, kde-format
 msgid "Switch User"
 msgstr "切换用户"
 
-#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
 #, kde-format
 msgid "Hibernate"
 msgstr "休眠"
 
-#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -111,12 +118,25 @@ msgstr "注销…"
 msgid "End the session"
 msgstr "结束会话"
 
+#: contents/ui/data.js:39
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt "@info:tooltip"
+msgid "Show logout screen"
+msgstr "锁定屏幕"
+
 #: contents/ui/data.js:40
+#, fuzzy, kde-format
+#| msgid "Turn off the computer"
+msgid "Log out, turn off, or restart the computer"
+msgstr "关闭计算机"
+
+#: contents/ui/data.js:47
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "睡眠 (挂起到内存)"
 
-#: contents/ui/data.js:47
+#: contents/ui/data.js:54
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "休眠 (挂起到磁盘)"

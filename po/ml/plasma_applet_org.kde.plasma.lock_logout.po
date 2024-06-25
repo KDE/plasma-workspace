@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeplasma-addons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -18,46 +18,53 @@ msgstr ""
 msgid "General"
 msgstr "പൊതു"
 
-#: contents/ui/ConfigGeneral.qml:33
+#: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "പ്രവർത്തികൾ കാണിക്കുക:"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: contents/ui/ConfigGeneral.qml:35
 #, kde-format
 msgid "Log Out"
 msgstr ""
 
-#: contents/ui/ConfigGeneral.qml:41
+#: contents/ui/ConfigGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt "@option:check"
+msgid "Show logout screen"
+msgstr "സ്ക്രീൻ പൂട്ടുക"
+
+#: contents/ui/ConfigGeneral.qml:48
 #, fuzzy, kde-format
 #| msgid "Shutdown"
 msgid "Shut Down"
 msgstr "അടയ്ക്കുക"
 
-#: contents/ui/ConfigGeneral.qml:47
+#: contents/ui/ConfigGeneral.qml:54
 #, fuzzy, kde-format
 #| msgid "Restart…"
 msgid "Restart"
 msgstr "പുനരാരംഭിക്കുക…"
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "പൂട്ടുക"
 
-#: contents/ui/ConfigGeneral.qml:59
+#: contents/ui/ConfigGeneral.qml:66
 #, kde-format
 msgid "Switch User"
 msgstr "ഉപയോക്താവിനെ മാറ്റുക"
 
-#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
 #, kde-format
 msgid "Hibernate"
 msgstr "ഹൈബർ‌നേറ്റ്"
 
-#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -108,12 +115,25 @@ msgstr "പുറത്തിറങ്ങുക"
 msgid "End the session"
 msgstr "സെഷൻ അവസാനിപ്പിക്കുക"
 
+#: contents/ui/data.js:39
+#, fuzzy, kde-format
+#| msgid "Lock the screen"
+msgctxt "@info:tooltip"
+msgid "Show logout screen"
+msgstr "സ്ക്രീൻ പൂട്ടുക"
+
 #: contents/ui/data.js:40
+#, fuzzy, kde-format
+#| msgid "Turn off the computer"
+msgid "Log out, turn off, or restart the computer"
+msgstr "കമ്പ്യൂട്ടർ ഓഫാക്കുക"
+
+#: contents/ui/data.js:47
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "സ്ലീപ് (റാമിലേക്ക് സസ്‌പെൻഡ് ചെയ്യുക)"
 
-#: contents/ui/data.js:47
+#: contents/ui/data.js:54
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "ഹൈബർ‌നേറ്റ് (ഡിസ്കിലേക്ക് സസ്‌പെൻഡ് ചെയ്യുക)"

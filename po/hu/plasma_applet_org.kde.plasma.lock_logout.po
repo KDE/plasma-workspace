@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-19 01:53+0000\n"
+"POT-Creation-Date: 2024-06-25 00:40+0000\n"
 "PO-Revision-Date: 2023-12-28 11:19+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -25,44 +25,51 @@ msgstr ""
 msgid "General"
 msgstr "Általános"
 
-#: contents/ui/ConfigGeneral.qml:33
+#: contents/ui/ConfigGeneral.qml:34
 #, kde-format
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
 msgstr "Műveletek megjelenítése:"
 
-#: contents/ui/ConfigGeneral.qml:34
+#: contents/ui/ConfigGeneral.qml:35
 #, kde-format
 msgid "Log Out"
 msgstr "Kijelentkezés"
 
-#: contents/ui/ConfigGeneral.qml:41
+#: contents/ui/ConfigGeneral.qml:42
+#, fuzzy, kde-format
+#| msgid "Show logout button"
+msgctxt "@option:check"
+msgid "Show logout screen"
+msgstr "Kijelentkezés gomb"
+
+#: contents/ui/ConfigGeneral.qml:48
 #, kde-format
 msgid "Shut Down"
 msgstr "Leállítás"
 
-#: contents/ui/ConfigGeneral.qml:47
+#: contents/ui/ConfigGeneral.qml:54
 #, kde-format
 msgid "Restart"
 msgstr "Újraindítás"
 
-#: contents/ui/ConfigGeneral.qml:53 contents/ui/data.js:5
+#: contents/ui/ConfigGeneral.qml:60 contents/ui/data.js:5
 #, kde-format
 msgid "Lock"
 msgstr "Zárolás"
 
-#: contents/ui/ConfigGeneral.qml:59
+#: contents/ui/ConfigGeneral.qml:66
 #, kde-format
 msgid "Switch User"
 msgstr "Felhasználóváltás"
 
-#: contents/ui/ConfigGeneral.qml:65 contents/ui/data.js:46
+#: contents/ui/ConfigGeneral.qml:72 contents/ui/data.js:53
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernálás"
 
-#: contents/ui/ConfigGeneral.qml:71 contents/ui/data.js:39
+#: contents/ui/ConfigGeneral.qml:78 contents/ui/data.js:46
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
@@ -113,12 +120,25 @@ msgstr "Kijelentkezés…"
 msgid "End the session"
 msgstr "A munkamenet befejezése"
 
+#: contents/ui/data.js:39
+#, fuzzy, kde-format
+#| msgid "Show logout button"
+msgctxt "@info:tooltip"
+msgid "Show logout screen"
+msgstr "Kijelentkezés gomb"
+
 #: contents/ui/data.js:40
+#, fuzzy, kde-format
+#| msgid "Turn off the computer"
+msgid "Log out, turn off, or restart the computer"
+msgstr "A számítógép kikapcsolása"
+
+#: contents/ui/data.js:47
 #, kde-format
 msgid "Sleep (suspend to RAM)"
 msgstr "Alvó állapot (felfüggesztés memóriába)"
 
-#: contents/ui/data.js:47
+#: contents/ui/data.js:54
 #, kde-format
 msgid "Hibernate (suspend to disk)"
 msgstr "Hibernálás (felfüggesztés merevlemezre)"
@@ -179,9 +199,6 @@ msgstr "Hibernálás (felfüggesztés merevlemezre)"
 #~| msgid "Show lock button"
 #~ msgid "Show \"switch user\" button"
 #~ msgstr "Képernyőzároló gomb"
-
-#~ msgid "Show logout button"
-#~ msgstr "Kijelentkezés gomb"
 
 #, fuzzy
 #~| msgid "Show logout button"
