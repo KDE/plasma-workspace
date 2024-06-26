@@ -1,4 +1,4 @@
-# Translation of plasma_lookandfeel_org.kde.lookandfeel to Norwegian Bokmål
+# Translation of plasma-desktop-sddm-theme to Norwegian Bokmål
 #
 # Bjørn Steensrud <bjornst@skogkatt.homelinux.org>, 2014, 2015.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.

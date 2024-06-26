@@ -1,4 +1,4 @@
-# Translation of plasma_lookandfeel_org.kde.lookandfeel to Norwegian Nynorsk
+# Translation of plasma-desktop-sddm-theme to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
