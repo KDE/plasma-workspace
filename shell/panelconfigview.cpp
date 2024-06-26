@@ -31,6 +31,7 @@
 
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
+#include <PlasmaQuick/Dialog>
 
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/surface.h>
@@ -367,7 +368,17 @@ void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)
     if (focusWindow == this || (m_panelRulerView && focusWindow == m_panelRulerView.get())) {
         return;
     }
+
+    // Do not hide if the focus is on PopupPlasmaWindows opened by the
+    // panel, e.g. the settings popup that appear on applet hover.
     if (auto popup = qobject_cast<const PopupPlasmaWindow *>(focusWindow)) {
+        if (auto parent = popup->visualParent(); parent && parent->window() == m_panelView) {
+            return;
+        }
+    }
+    // Also do not hide if the focus is on Dialogs opened by the panel, such
+    // as the "Show Alternatives" dialog.
+    if (auto popup = qobject_cast<const PlasmaQuick::Dialog *>(focusWindow)) {
         if (auto parent = popup->visualParent(); parent && parent->window() == m_panelView) {
             return;
         }
