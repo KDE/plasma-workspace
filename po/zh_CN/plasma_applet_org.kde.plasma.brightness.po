@@ -57,7 +57,7 @@ msgstr "%1%"
 #: package/contents/ui/KeyboardColorItem.qml:78
 #, kde-format
 msgid "Follow accent color"
-msgstr "跟随系统重点色"
+msgstr "跟随系统强调色"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
