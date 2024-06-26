@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2023-10-21 07:23+0200\n"
+"PO-Revision-Date: 2024-06-25 05:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -36,11 +36,10 @@ msgid "Log Out"
 msgstr "გასვლა"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "ეკრანის ჩაკეტვა"
+msgstr "გასვლის ეკრანის ჩვენება"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -119,17 +118,15 @@ msgid "End the session"
 msgstr "სესიის დასრულება"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "ეკრანის ჩაკეტვა"
+msgstr "გასვლის ეკრანის ჩვენება"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "კომპიუტერის გამორთვა"
+msgstr "გადით სესიიდან, გამორთეთ ან გადატვირთეთ კომპიუტერი"
 
 #: contents/ui/data.js:47
 #, kde-format

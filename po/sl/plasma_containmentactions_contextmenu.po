@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2024-03-26 06:52+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -39,10 +39,12 @@ msgid "Lock Screen"
 msgstr "Zakleni zaslon"
 
 #: menu.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "plasma_containmentactions_contextmenu"
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "Zapusti …"
+msgid "Show Logout Screen"
+msgstr "Zakleni zaslon"
 
 #: menu.cpp:125
 #, kde-format
@@ -73,6 +75,10 @@ msgstr "Dejanja za ozadje"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[ločilnik]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "Zapusti …"
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Configure Display Settings…"

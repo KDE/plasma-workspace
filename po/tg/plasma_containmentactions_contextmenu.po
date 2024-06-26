@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2021-09-05 11:38-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -35,10 +35,12 @@ msgid "Lock Screen"
 msgstr "Қулфи экран"
 
 #: menu.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "plasma_containmentactions_contextmenu"
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "Баромад..."
+msgid "Show Logout Screen"
+msgstr "Қулфи экран"
 
 #: menu.cpp:125
 #, kde-format
@@ -69,3 +71,7 @@ msgstr "Амалиётҳои тасвири замина"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Ҷудокунанда]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "Баромад..."

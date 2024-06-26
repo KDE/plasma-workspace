@@ -39,11 +39,10 @@ msgid "Log Out"
 msgstr "Odhlásit se"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Uzamknout obrazovku"
+msgstr ""
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -122,17 +121,15 @@ msgid "End the session"
 msgstr "Ukončit sezení"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Uzamknout obrazovku"
+msgstr ""
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Vypnout počítač"
+msgstr ""
 
 #: contents/ui/data.js:47
 #, kde-format

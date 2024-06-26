@@ -36,11 +36,10 @@ msgid "Log Out"
 msgstr "注销"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "锁定屏幕"
+msgstr ""
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -119,17 +118,15 @@ msgid "End the session"
 msgstr "结束会话"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "锁定屏幕"
+msgstr ""
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "关闭计算机"
+msgstr ""
 
 #: contents/ui/data.js:47
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2024-06-11 14:57+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -36,10 +36,12 @@ msgid "Lock Screen"
 msgstr "Ekranı Kilidləmək"
 
 #: menu.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "plasma_containmentactions_contextmenu"
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "Tərk etmək..."
+msgid "Show Logout Screen"
+msgstr "Ekranı Kilidləmək"
 
 #: menu.cpp:125
 #, kde-format
@@ -70,6 +72,10 @@ msgstr "Divar Kağızı əməlləri"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Ayırıcı]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "Tərk etmək..."
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Configure Display Settings…"

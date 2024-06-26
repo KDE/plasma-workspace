@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2024-03-26 05:59+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -36,10 +36,12 @@ msgid "Lock Screen"
 msgstr "ეკრანის დაბლოკვა"
 
 #: menu.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "plasma_containmentactions_contextmenu"
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "გასვლა…"
+msgid "Show Logout Screen"
+msgstr "ეკრანის დაბლოკვა"
 
 #: menu.cpp:125
 #, kde-format
@@ -70,6 +72,10 @@ msgstr "ფონის სურათის ქმედებები"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[გამყოფი]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "გასვლა…"
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Configure Display Settings…"

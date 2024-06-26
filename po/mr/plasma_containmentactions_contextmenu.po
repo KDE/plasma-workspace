@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2014-10-28 10:18+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -37,10 +37,10 @@ msgstr "स्क्रीन कुलूपबंद करा"
 #: menu.cpp:120
 #, fuzzy, kde-format
 #| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Leave..."
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "बाहेर पडा..."
+msgid "Show Logout Screen"
+msgstr "स्क्रीन कुलूपबंद करा"
 
 #: menu.cpp:125
 #, kde-format
@@ -71,6 +71,13 @@ msgstr "वॉलपेपर क्रिया"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[विभाजक]"
+
+#, fuzzy
+#~| msgctxt "plasma_containmentactions_contextmenu"
+#~| msgid "Leave..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "बाहेर पडा..."
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Run Command..."

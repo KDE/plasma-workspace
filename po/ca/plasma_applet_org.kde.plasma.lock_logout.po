@@ -1,16 +1,16 @@
 # Translation of plasma_applet_org.kde.plasma.lock_logout.po to Catalan
-# Copyright (C) 2014-2023 This_file_is_part_of_KDE
+# Copyright (C) 2014-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014.
-# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2019, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2015, 2019, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2023-10-20 09:25+0200\n"
+"PO-Revision-Date: 2024-06-25 12:38+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -39,11 +39,10 @@ msgid "Log Out"
 msgstr "Sortida"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Bloqueja la pantalla"
+msgstr "Mostra la pantalla de sortida"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -122,17 +121,15 @@ msgid "End the session"
 msgstr "Finalitza la sessió"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Bloqueja la pantalla"
+msgstr "Mostra la pantalla de sortida"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Apaga l'ordinador"
+msgstr "Surt, apaga o reinicia l'ordinador"
 
 #: contents/ui/data.js:47
 #, kde-format

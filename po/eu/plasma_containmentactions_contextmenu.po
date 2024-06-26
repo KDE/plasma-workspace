@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2024-03-26 12:00+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -40,10 +40,12 @@ msgid "Lock Screen"
 msgstr "Giltzatu pantaila"
 
 #: menu.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "plasma_containmentactions_contextmenu"
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "Irten..."
+msgid "Show Logout Screen"
+msgstr "Giltzatu pantaila"
 
 #: menu.cpp:125
 #, kde-format
@@ -74,6 +76,10 @@ msgstr "Horma-paperaren ekintzak"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Bereizlea]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "Irten..."
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Configure Display Settings…"

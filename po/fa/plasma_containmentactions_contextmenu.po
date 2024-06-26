@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2013-01-11 01:36+0330\n"
 "Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
 "Language-Team: Farsi (Persian) <kde-i18n-fa@kde.org>\n"
@@ -37,10 +37,10 @@ msgstr "قفل کردن صفحه"
 
 #: menu.cpp:120
 #, fuzzy, kde-format
-#| msgid "Leave..."
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "ترک کردن..."
+msgid "Show Logout Screen"
+msgstr "قفل کردن صفحه"
 
 #: menu.cpp:125
 #, kde-format
@@ -75,6 +75,12 @@ msgstr "کنشهای کاغذ دیواری"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[جداساز]"
+
+#, fuzzy
+#~| msgid "Leave..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "ترک کردن..."
 
 #, fuzzy
 #~| msgid "Run Command..."

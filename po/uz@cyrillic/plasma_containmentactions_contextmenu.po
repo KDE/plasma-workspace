@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2009-10-15 23:42+0200\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -37,10 +37,10 @@ msgstr "Экранни қулфлаш"
 
 #: menu.cpp:120
 #, fuzzy, kde-format
-#| msgid "Leave..."
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "Чиқиш..."
+msgid "Show Logout Screen"
+msgstr "Экранни қулфлаш"
 
 #: menu.cpp:125
 #, kde-format
@@ -71,6 +71,12 @@ msgstr ""
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Leave..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "Чиқиш..."
 
 #, fuzzy
 #~| msgid "Run Command..."

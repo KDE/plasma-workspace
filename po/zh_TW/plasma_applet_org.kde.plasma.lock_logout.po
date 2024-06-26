@@ -6,20 +6,20 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2009, 2010.
 # pan93412 <pan93412@gmail.com>, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2023-10-21 17:27+0900\n"
+"PO-Revision-Date: 2024-06-26 06:38+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: contents/config/config.qml:13
@@ -40,11 +40,10 @@ msgid "Log Out"
 msgstr "登出"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "鎖定螢幕"
+msgstr "顯示登出畫面"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -123,17 +122,15 @@ msgid "End the session"
 msgstr "結束工作階段"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "鎖定螢幕"
+msgstr "顯示登出畫面"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "關閉這台電腦"
+msgstr "登出、關機，或重新啟動電腦"
 
 #: contents/ui/data.js:47
 #, kde-format

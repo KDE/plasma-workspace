@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-06-21 09:40+0200\n"
+"PO-Revision-Date: 2024-06-25 19:10+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -35,11 +35,10 @@ msgid "Log Out"
 msgstr "Logga ut"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Lås skärmen"
+msgstr "Visa utloggningsskärm"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -118,17 +117,15 @@ msgid "End the session"
 msgstr "Avsluta session"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Lås skärmen"
+msgstr "Visa utloggningsskärm"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Stäng av datorn"
+msgstr "Logga ut, stäng av eller starta om datorn"
 
 #: contents/ui/data.js:47
 #, kde-format

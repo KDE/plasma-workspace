@@ -67,7 +67,7 @@ msgstr "配色方案名称"
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr "重点色"
+msgstr "强调色"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -75,13 +75,13 @@ msgstr "重点色"
 msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
-msgstr "用户切换到默认颜色、或基于壁纸的颜色之前用过的最后一种重点色"
+msgstr "用户切换到默认颜色、或基于壁纸的颜色之前用过的最后一种强调色"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr "是否应用从壁纸中提取的重点色"
+msgstr "是否应用从壁纸中提取的强调色"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
@@ -851,13 +851,13 @@ msgstr "绘制立体特效到列表中的已排序列(&I)"
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr "标题栏使用重点色(&C)"
+msgstr "标题栏使用强调色(&C)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Tint all colors with accent color"
-msgstr "使用重点色影响所有颜色"
+msgstr "使用强调色影响所有颜色"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
@@ -1163,7 +1163,7 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
-"您想要设置的重点色名称。支持使用 SVG 颜色名称 (https://www.w3.org/TR/SVG11/"
+"您想要设置的强调色名称。支持使用 SVG 颜色名称 (https://www.w3.org/TR/SVG11/"
 "types.html#ColorKeywords) 和 16 进制颜色代码。如果有可能使用外壳程序扩展，请"
 "引用 16 进制颜色代码。"
 
@@ -1203,12 +1203,12 @@ msgstr "您尝试设置的文件 %1 无法被识别为配色方案。"
 #: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr "成功应用重点色 %1"
+msgstr "成功应用强调色 %1"
 
 #: plasma-apply-colorscheme.cpp:151
 #, kde-format
 msgid "Invalid accent color "
-msgstr "无效的重点色 "
+msgstr "无效的强调色 "
 
 #: plasma-apply-colorscheme.cpp:156
 #, kde-format
@@ -1224,24 +1224,24 @@ msgstr " * %1 (当前配色方案)"
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "基于配色方案获取重点色"
+msgstr "基于配色方案获取强调色"
 
 #: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr "基于壁纸获取重点色"
+msgstr "基于壁纸获取强调色"
 
 #: ui/AccentColorUI.qml:29
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "自定义重点色"
+msgstr "自定义强调色"
 
 #: ui/AccentColorUI.qml:147
 #, kde-format
 msgid "Choose custom accent color"
-msgstr "选择自定义重点色"
+msgstr "选择自定义强调色"
 
 #: ui/main.qml:90
 #, kde-format

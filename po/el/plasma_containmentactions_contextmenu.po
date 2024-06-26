@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2014-10-08 13:02+0300\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -38,10 +38,10 @@ msgstr "Κλείδωμα οθόνης"
 #: menu.cpp:120
 #, fuzzy, kde-format
 #| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Leave..."
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "Έξοδος..."
+msgid "Show Logout Screen"
+msgstr "Κλείδωμα οθόνης"
 
 #: menu.cpp:125
 #, kde-format
@@ -72,6 +72,13 @@ msgstr "Ενέργειες ταπετσαρίας"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Διαχωριστικό]"
+
+#, fuzzy
+#~| msgctxt "plasma_containmentactions_contextmenu"
+#~| msgid "Leave..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "Έξοδος..."
 
 #~ msgctxt "plasma_containmentactions_contextmenu"
 #~ msgid "Run Command..."

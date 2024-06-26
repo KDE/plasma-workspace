@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2021-07-01 18:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -39,10 +39,12 @@ msgid "Lock Screen"
 msgstr "स्क्रीन पर ताला लगाएँ"
 
 #: menu.cpp:120
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "plasma_containmentactions_contextmenu"
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "छोड़ें..."
+msgid "Show Logout Screen"
+msgstr "स्क्रीन पर ताला लगाएँ"
 
 #: menu.cpp:125
 #, kde-format
@@ -73,6 +75,10 @@ msgstr "वालपेपर क्रियाएं"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[विभाजक]"
+
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "छोड़ें..."
 
 #, fuzzy
 #~| msgid "Run Command..."

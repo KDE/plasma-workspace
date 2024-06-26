@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2010-01-29 14:38+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer <support@khmeros.info>\n"
@@ -38,10 +38,10 @@ msgstr "ចាក់សោ​អេក្រង់"
 
 #: menu.cpp:120
 #, fuzzy, kde-format
-#| msgid "Leave..."
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "ចាកចេញ..."
+msgid "Show Logout Screen"
+msgstr "ចាក់សោ​អេក្រង់"
 
 #: menu.cpp:125
 #, kde-format
@@ -76,6 +76,12 @@ msgstr "សកម្មភាព​ផ្ទាំង​រូបភាព"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[ធាតុ​បំបែក]"
+
+#, fuzzy
+#~| msgid "Leave..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "ចាកចេញ..."
 
 #, fuzzy
 #~| msgid "Run Command..."

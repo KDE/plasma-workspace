@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-26 00:39+0000\n"
+"POT-Creation-Date: 2024-06-26 00:40+0000\n"
 "PO-Revision-Date: 2010-01-13 13:07+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-l10n-kn@kde.org>\n"
@@ -38,10 +38,10 @@ msgstr "ತೆರೆಯನ್ನು ಲಾಕ್‌ ಮಾಡು"
 
 #: menu.cpp:120
 #, fuzzy, kde-format
-#| msgid "Leave..."
+#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
-msgid "Leave…"
-msgstr "ಬಿಟ್ಟುಬಿಡು..."
+msgid "Show Logout Screen"
+msgstr "ತೆರೆಯನ್ನು ಲಾಕ್‌ ಮಾಡು"
 
 #: menu.cpp:125
 #, kde-format
@@ -76,6 +76,12 @@ msgstr "ಗಣಕತೆರೆ ಹಿನ್ನಲೆ ಚಿತ್ರಗಳ ಕ್
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[ವಿಭಜಕ]"
+
+#, fuzzy
+#~| msgid "Leave..."
+#~ msgctxt "plasma_containmentactions_contextmenu"
+#~ msgid "Leave…"
+#~ msgstr "ಬಿಟ್ಟುಬಿಡು..."
 
 #, fuzzy
 #~| msgid "Run Command..."
