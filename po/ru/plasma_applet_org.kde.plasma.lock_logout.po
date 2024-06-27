@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-02-18 21:32+0300\n"
+"PO-Revision-Date: 2024-06-25 12:51+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -44,11 +44,10 @@ msgstr "Завершить сеанс"
 
 # shutdown-method
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Кнопка завершения сеанса"
+msgstr "Экран завершения работы"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -133,18 +132,16 @@ msgstr "Завершить сеанс работы"
 
 # shutdown-method
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Кнопка завершения сеанса"
+msgstr "Экран завершения работы"
 
 # shutdown-method
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Выключить компьютер"
+msgstr "Завершение сеанса, выключение или перезапуск компьютера"
 
 # shutdown-method
 #: contents/ui/data.js:47

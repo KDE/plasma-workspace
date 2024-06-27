@@ -39,7 +39,7 @@ msgstr "注销"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr ""
+msgstr "显示注销屏幕"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -121,12 +121,12 @@ msgstr "结束会话"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr ""
+msgstr "显示注销屏幕"
 
 #: contents/ui/data.js:40
 #, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr ""
+msgstr "注销、关机、重启电脑"
 
 #: contents/ui/data.js:47
 #, kde-format

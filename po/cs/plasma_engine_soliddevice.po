@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010, 2012.
 # Vít Pelčák <vit@pelcak.org>, 2011, 2013, 2014, 2015, 2018, 2019, 2020.
-# SPDX-FileCopyrightText: 2024 Vit Pelcak <vpelcak@suse.cz>
+# SPDX-FileCopyrightText: 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""

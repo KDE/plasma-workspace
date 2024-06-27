@@ -1,13 +1,13 @@
 # translation of plasma_applet_lockout.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
-# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2012, 2014, 2019, 2020, 2021, 2023 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2012, 2014, 2019, 2020, 2021, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2023-10-21 15:48+0200\n"
+"PO-Revision-Date: 2024-06-25 14:22+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -35,11 +35,10 @@ msgid "Log Out"
 msgstr "Chiudi sessione"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Mostra pulsante di chiusura della sessione"
+msgstr "Mostra la schermata di chiusura della sessione"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -118,17 +117,15 @@ msgid "End the session"
 msgstr "Termina la sessione"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Mostra pulsante di chiusura della sessione"
+msgstr "Mostra la schermata di chiusura della sessione"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Spegni il computer"
+msgstr "Termina la sessione, spegni o riavvia il computer"
 
 #: contents/ui/data.js:47
 #, kde-format

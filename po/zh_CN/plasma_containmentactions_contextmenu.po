@@ -36,12 +36,10 @@ msgid "Lock Screen"
 msgstr "锁屏"
 
 #: menu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "锁屏"
+msgstr ""
 
 #: menu.cpp:125
 #, kde-format
@@ -72,7 +70,3 @@ msgstr "壁纸操作"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[分隔线]"
-
-#~ msgctxt "plasma_containmentactions_contextmenu"
-#~ msgid "Leave…"
-#~ msgstr "离开…"
