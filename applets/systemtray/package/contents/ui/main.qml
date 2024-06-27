@@ -34,6 +34,64 @@ ContainmentItem {
     readonly property alias hiddenLayout: expandedRepresentation.hiddenLayout
     readonly property bool oneRowOrColumn: tasksGrid.rowsOrColumns === 1
 
+    readonly property alias hiddenModel: hiddenModel
+
+    Component.onCompleted: {
+        // We need all the plasmoiditems to be there for correct working of shortcuts.
+        // Instantiators create the plasmoiditems: ensure this is done after
+        // this containmentitem actually  exists so they can be immediately parented properly
+        activeInstantiator.model = activeModel
+        hiddenInstantiator.model = hiddenModel
+    }
+
+    KItemModels.KSortFilterProxyModel {
+        id: activeModel
+        sourceModel: Plasmoid.systemTrayModel
+        filterRoleName: "effectiveStatus"
+        filterRowCallback: (sourceRow, sourceParent) => {
+            let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
+            return value === PlasmaCore.Types.ActiveStatus;
+        }
+    }
+
+    KItemModels.KSortFilterProxyModel {
+        id: hiddenModel
+        sourceModel: Plasmoid.systemTrayModel
+        filterRoleName: "effectiveStatus"
+        filterRowCallback: (sourceRow, sourceParent) => {
+            let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
+            return value === PlasmaCore.Types.PassiveStatus
+        }
+    }
+
+    Instantiator {
+        id: hiddenInstantiator
+        delegate: Connections {
+            required property QtObject applet
+            required property int row
+            target: applet
+            function onExpandedChanged(expanded: bool) {
+                if (expanded) {
+                    systemTrayState.setActiveApplet(applet, row)
+                }
+            }
+        }
+    }
+
+    Instantiator {
+        id: activeInstantiator
+        delegate: Connections {
+            required property QtObject applet
+            required property int row
+            target: applet
+            function onExpandedChanged(expanded: bool) {
+                if (expanded) {
+                    systemTrayState.setActiveApplet(applet, row)
+                }
+            }
+        }
+    }
+
     MouseArea {
         anchors.fill: parent
 
@@ -158,14 +216,7 @@ ContainmentItem {
                     }
                 }
 
-                model: KItemModels.KSortFilterProxyModel {
-                    sourceModel: Plasmoid.systemTrayModel
-                    filterRoleName: "effectiveStatus"
-                    filterRowCallback: (sourceRow, sourceParent) => {
-                        let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
-                        return value === PlasmaCore.Types.ActiveStatus;
-                    }
-                }
+                model: activeModel
 
                 delegate: Items.ItemLoader {
                     id: delegate

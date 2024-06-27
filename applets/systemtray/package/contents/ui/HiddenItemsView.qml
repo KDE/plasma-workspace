@@ -53,14 +53,7 @@ PlasmaComponents3.ScrollView {
             ((gridItem as Loader)?.item as Items.AbstractItem)?.labelHeight ?? 0
         ));
 
-        model: KItemModels.KSortFilterProxyModel {
-            sourceModel: Plasmoid.systemTrayModel
-            filterRoleName: "effectiveStatus"
-            filterRowCallback: (sourceRow, sourceParent) => {
-                let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
-                return value === PlasmaCore.Types.PassiveStatus
-            }
-        }
+        model: root.hiddenModel
         delegate: Items.ItemLoader {
             width: hiddenTasks.cellWidth
             height: hiddenTasks.cellHeight
