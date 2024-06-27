@@ -15,6 +15,7 @@
 #include <KSystemClipboard>
 
 class KSystemClipboard;
+class HistoryItem;
 
 /**
  * Use this when manipulating the clipboard
@@ -75,7 +76,7 @@ public:
     ~SystemClipboard() override;
 
     void clear(QClipboard::Mode mode);
-    void setMimeData(QMimeData *data, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
+    void setMimeData(const std::shared_ptr<const HistoryItem> &data, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
 
     bool isLocked(QClipboard::Mode mode);
 

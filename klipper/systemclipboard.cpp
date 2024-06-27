@@ -19,6 +19,7 @@
 
 #include "../c_ptr.h"
 #include "config-X11.h"
+#include "historyitem.h"
 #include "klipper_debug.h"
 #include <wayland-client-core.h>
 
@@ -107,31 +108,33 @@ void SystemClipboard::clear(QClipboard::Mode mode)
     m_clip->clear(mode);
 }
 
-void SystemClipboard::setMimeData(QMimeData *data, int mode, ClipboardUpdateReason updateReason)
+void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, int mode, ClipboardUpdateReason updateReason)
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
     if (mode & Selection) {
         Ignore lock(m_selectionLocklevel);
+        QMimeData *mimeData = data->mimeData();
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            data->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
         }
-        qCDebug(KLIPPER_LOG) << "Setting selection to <" << data->text() << ">";
-        m_clip->setMimeData(data, QClipboard::Selection);
+        qCDebug(KLIPPER_LOG) << "Setting selection to <" << mimeData->text() << ">";
+        m_clip->setMimeData(mimeData, QClipboard::Selection);
     }
     if (mode & Clipboard) {
+        QMimeData *mimeData = data->mimeData(); // NOTE: this has to be a new mimeData because setMimeData will take ownership
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            data->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
         } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
             // When plasmashell is not focused, klipper will not receive new clip data immediately. This type is used to filter out selections.
-            data->setData(QStringLiteral("application/x-kde-syncselection"), "1");
+            mimeData->setData(QStringLiteral("application/x-kde-syncselection"), "1");
         }
-        qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << data->text() << ">";
+        qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << mimeData->text() << ">";
         QMetaObject::invokeMethod(
             m_clip,
-            [this, data]() {
+            [this, mimeData]() {
                 Ignore lock(m_clipboardLocklevel);
-                m_clip->setMimeData(data, QClipboard::Clipboard);
+                m_clip->setMimeData(mimeData, QClipboard::Clipboard);
             },
             updateReason == ClipboardUpdateReason::SyncSelection ? Qt::QueuedConnection : Qt::DirectConnection);
     }

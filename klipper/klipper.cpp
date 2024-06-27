@@ -225,7 +225,7 @@ void Klipper::setClipboardContents(const QString &s)
         return;
     updateTimestamp();
     HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
-    m_clip->setMimeData(item->mimeData(), SystemClipboard::Clipboard | SystemClipboard::Selection);
+    m_clip->setMimeData(item, SystemClipboard::Clipboard | SystemClipboard::Selection);
     history()->insert(item);
 }
 
@@ -378,7 +378,7 @@ bool Klipper::loadHistory()
     history()->clearAndBatchInsert(items);
 
     if (!history()->empty()) {
-        m_clip->setMimeData(history()->first()->mimeData(), SystemClipboard::Clipboard | SystemClipboard::Selection);
+        m_clip->setMimeData(history()->first(), SystemClipboard::Clipboard | SystemClipboard::Selection);
     }
 
     return true;
@@ -531,7 +531,7 @@ void Klipper::slotIgnored(QClipboard::Mode mode)
     // The trouble is that the top selection =! top clipboard
     // but we don't track that yet. We will....
     if (auto top = history()->first()) {
-        m_clip->setMimeData(top->mimeData(), mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard);
+        m_clip->setMimeData(top, mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard);
     }
 }
 
@@ -541,7 +541,7 @@ void Klipper::slotReceivedEmptyClipboard(QClipboard::Mode mode)
     if (auto top = history()->first()) {
         // keep old clipboard after someone set it to null
         qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
-        m_clip->setMimeData(top->mimeData(),
+        m_clip->setMimeData(top,
                             mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
                             SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
     }
@@ -585,7 +585,7 @@ void Klipper::slotHistoryTopChanged()
 
     auto topitem = history()->first();
     if (topitem) {
-        m_clip->setMimeData(topitem->mimeData(), SystemClipboard::Clipboard | SystemClipboard::Selection);
+        m_clip->setMimeData(topitem, SystemClipboard::Clipboard | SystemClipboard::Selection);
     }
     if (m_bReplayActionInHistory && m_bURLGrabber) {
         slotRepeatAction();
@@ -640,7 +640,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         if (m_bSynchronize) {
             auto item = HistoryItem::create(data);
             if (item) [[likely]] { // applyClipChanges can return nullptr
-                m_clip->setMimeData(item->mimeData(), SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
+                m_clip->setMimeData(item, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
             }
         }
         return;
@@ -657,7 +657,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize && item) { // applyClipChanges can return nullptr
-            m_clip->setMimeData(item->mimeData(), mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
+            m_clip->setMimeData(item, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
         }
     }
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
