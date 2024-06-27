@@ -68,8 +68,12 @@ class XEmbedTrayIcon(threading.Thread):
         self.__status_icon.set_from_pixbuf(pixbuf)
 
         self.__status_icon.connect("button-press-event", self._on_button_press_event)
+        self.button_press_event = threading.Event()
+        self.pressed_button: int = -1
         self.__status_icon.connect("button-release-event", self._on_button_release_event)
+        self.button_release_event = threading.Event()
         self.__status_icon.connect("popup-menu", self._on_popup_menu)
+        self.popup_menu_event = threading.Event()
         self.scroll_event = threading.Event()
         self.__status_icon.connect("scroll-event", self._on_scroll_event)
 
@@ -83,16 +87,24 @@ class XEmbedTrayIcon(threading.Thread):
         """
         Reset all threading events
         """
+        self.button_press_event.clear()
+        self.pressed_button = -1
+        self.button_release_event.clear()
+        self.popup_menu_event.clear()
         self.scroll_event.clear()
 
     def _on_button_press_event(self, status_icon: Gtk.StatusIcon, button_event: Gdk.EventButton) -> None:
         logging.info(f"button-press-event {button_event.button}")
+        self.pressed_button = button_event.button
+        self.button_press_event.set()
 
     def _on_button_release_event(self, status_icon: Gtk.StatusIcon, button_event: Gdk.EventButton) -> None:
         logging.info(f"button-release-event {button_event.button}")
+        self.button_release_event.set()
 
     def _on_popup_menu(self, status_icon: Gtk.StatusIcon, button: int, activate_time: int) -> None:
         logging.info(f"popup-menu {button} {activate_time}")
+        self.popup_menu_event.set()
 
     def _on_scroll_event(self, status_icon, scroll_event: Gdk.EventScroll) -> None:
         logging.info(f"scroll-event {scroll_event.delta_x} {scroll_event.delta_y} {int(scroll_event.direction)}")
@@ -247,13 +259,38 @@ class SystemTrayTests(unittest.TestCase):
             self.stream_reader_thread.stop()
             self.stream_reader_thread = None
 
+    def click_center(self, rect: dict[str, int], mouse_button: int = MouseButton.LEFT) -> None:
+        """
+        Move the mouse to the center of the area and click
+        """
+        if self.xembed_tray_icon is not None:
+            self.xembed_tray_icon.reset_events()
+        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, mouse_button).pause(1)
+        action.perform()
+        if self.xembed_tray_icon is None:
+            return
+        self.assertTrue(self.xembed_tray_icon.button_press_event.is_set())
+        self.assertTrue(self.xembed_tray_icon.button_release_event.is_set())
+        # the button which was pressed or released, numbered from 1 to 5. Normally button 1 is the left mouse button, 2 is the middle button, and 3 is the right button. On 2-button mice, the middle button can often be simulated by pressing both mouse buttons together.
+        if mouse_button == MouseButton.LEFT:
+            self.assertEqual(self.xembed_tray_icon.pressed_button, 1)
+        elif mouse_button == MouseButton.MIDDLE:
+            self.assertEqual(self.xembed_tray_icon.pressed_button, 2)
+        elif mouse_button == MouseButton.RIGHT:
+            self.assertEqual(self.xembed_tray_icon.pressed_button, 3)
+
     def scroll_center(self, rect: dict[str, int], delta_x: float, delta_y: float) -> None:
         """
         Move the mouse to the center of the area and scroll
         """
+        if self.xembed_tray_icon is not None:
+            self.xembed_tray_icon.reset_events()
         action = ActionBuilder(self.driver)
         action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), delta_x, delta_y).pause(1)
         action.perform()
+        if self.xembed_tray_icon is not None:
+            self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
 
     def test_1_xembed_tray_icon(self) -> None:
         """
@@ -267,6 +304,7 @@ class SystemTrayTests(unittest.TestCase):
 
         debug_env: dict[str, str] = os.environ.copy()
         debug_env["QT_LOGGING_RULES"] = "kde.xembedsniproxy.debug=true"
+        debug_env["XDG_SESSION_TYPE"] = "x11" if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0" else "wayland"
         self.xembedsniproxy = subprocess.Popen([os.path.join(CMAKE_RUNTIME_OUTPUT_DIRECTORY, "xembedsniproxy"), '--platform', 'xcb'], env=debug_env, stderr=subprocess.PIPE)  # For debug output
         if not self.xembedsniproxy.stderr or self.xembedsniproxy.poll() != None:
             self.fail("xembedsniproxy is not available")
@@ -308,25 +346,27 @@ class SystemTrayTests(unittest.TestCase):
         if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
             return
 
+        # Left click
+        self.click_center(rect)
+
+        # Middle click
+        self.click_center(rect, MouseButton.MIDDLE)
+
+        # Right click
+        self.click_center(rect, MouseButton.RIGHT)
+        self.assertTrue(self.xembed_tray_icon.popup_menu_event.is_set())
+
         # Scroll up
-        self.xembed_tray_icon.reset_events()
         self.scroll_center(rect, 0, -15)
-        self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
 
         # Scroll down
-        self.xembed_tray_icon.reset_events()
         self.scroll_center(rect, 0, 15)
-        self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
 
         # Scroll left
-        self.xembed_tray_icon.reset_events()
         self.scroll_center(rect, -15, 0)
-        self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
 
         # Scroll right
-        self.xembed_tray_icon.reset_events()
         self.scroll_center(rect, 15, 0)
-        self.assertTrue(self.xembed_tray_icon.scroll_event.is_set())
 
     def test_2_statusnotifieritem(self) -> None:
         """
@@ -349,96 +389,59 @@ class SystemTrayTests(unittest.TestCase):
         expected_result: list[str] = []
 
         # Left click
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
-        action.perform()
+        self.click_center(rect)
         expected_result.append("Activated")
 
         # Middle click
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, MouseButton.MIDDLE)
-        action.perform()
+        self.click_center(rect, MouseButton.MIDDLE)
         expected_result.append("SecondaryActivated")
-        time.sleep(1)
 
         # Scroll up
-        action = ActionBuilder(self.driver)
-        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), 0, -15)
-        action.perform()
+        self.scroll_center(rect, 0, -15)
         expected_result.append("Scrolled by 180 Vertically")
-        time.sleep(1)
 
         # Scroll down
-        action = ActionBuilder(self.driver)
-        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), 0, 15)
-        action.perform()
+        self.scroll_center(rect, 0, 15)
         expected_result.append("Scrolled by -180 Vertically")
         time.sleep(1)
 
         # Scroll left
-        action = ActionBuilder(self.driver)
-        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), -15, 0)
-        action.perform()
+        self.scroll_center(rect, -15, 0)
         expected_result.append("Scrolled by 180 Horizontally")
-        time.sleep(1)
 
         # Scroll right
-        action = ActionBuilder(self.driver)
-        action.wheel_action.scroll(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2), 15, 0)
-        action.perform()
+        self.scroll_center(rect, 15, 0)
         expected_result.append("Scrolled by -180 Horizontally")
-        time.sleep(1)
 
         # Right click
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, MouseButton.RIGHT)
-        action.perform()
-        time.sleep(1)  # Wait until the menu appears
+        self.click_center(rect, MouseButton.RIGHT)
 
         # Click the first action to change the color to blue
         rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(0, 255, 0))["rect"]  # Green
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
-        action.perform()
+        self.click_center(rect)
         expected_result.append("NeedsAttention")
-        time.sleep(1)  # Wait until the menu disappears
 
         # Right click
         rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(0, 0, 255))["rect"]  # Blue
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, MouseButton.RIGHT)
-        action.perform()
-        time.sleep(1)  # Wait until the menu appears
+        self.click_center(rect, MouseButton.RIGHT)
 
         # Click the second action to change the color to red
         rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 85, 255))["rect"]  # Purple
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
-        action.perform()
+        self.click_center(rect)
         expected_result.append("Active")
-        time.sleep(1)  # Wait until the menu disappears
 
         # Right click
         rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))["rect"]  # Red
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click(None, MouseButton.RIGHT)
-        action.perform()
-        time.sleep(1)  # Wait until the menu appears
+        self.click_center(rect, MouseButton.RIGHT)
 
         # Move to the submenu item
         rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(85, 0, 255))["rect"]
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
-        action.perform()
-        time.sleep(1)  # Wait until the submenu appears
+        self.click_center(rect)
 
         # Move to the submenu
         rect = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 255, 0))["rect"]  # Yellow
-        action = ActionBuilder(self.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
-        action.pointer_action.move_to_location(int(rect["x"] + rect["width"] / 2), int(rect["y"] + rect["height"] / 2)).click()
-        action.perform()
+        self.click_center(rect)
         expected_result.append("Passive")
-        time.sleep(1)  # Wait until the menu disappears
         # The icon is hidden
         self.assertRaises(Exception, self.driver.find_image_occurrence, self.take_screenshot(), generate_color_block(255, 0, 0))
 
