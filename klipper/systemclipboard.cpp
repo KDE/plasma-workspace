@@ -131,7 +131,7 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, int mode, Cli
         }
         qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << mimeData->text() << ">";
         QMetaObject::invokeMethod(
-            m_clip,
+            this,
             [this, mimeData]() {
                 Ignore lock(m_clipboardLocklevel);
                 m_clip->setMimeData(mimeData, QClipboard::Clipboard);
