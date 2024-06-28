@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-28 00:40+0000\n"
 "PO-Revision-Date: 2023-02-17 18:08+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -543,37 +543,37 @@ msgstr "Jalankan"
 msgid "Do Not Start"
 msgstr "Jangan Jalankan"
 
-#: klipper.cpp:772
+#: klipper.cpp:759
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "KodeBilah Ponsel"
 
-#: klipper.cpp:813
+#: klipper.cpp:800
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Apakah Anda yakin ingin menghapus seluruh riwayat papan klip?"
 
-#: klipper.cpp:814
+#: klipper.cpp:801
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bersihkan Riwayat Papan Klip"
 
-#: klipper.cpp:830 klipper.cpp:839
+#: klipper.cpp:817 klipper.cpp:826
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histori papan klip"
 
-#: klipper.cpp:856
+#: klipper.cpp:843
 #, kde-format
 msgid "up"
 msgstr "atas"
 
-#: klipper.cpp:863
+#: klipper.cpp:850
 #, kde-format
 msgid "current"
 msgstr "saat ini"
 
-#: klipper.cpp:870
+#: klipper.cpp:857
 #, kde-format
 msgid "down"
 msgstr "bawah"

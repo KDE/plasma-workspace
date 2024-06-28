@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-28 00:40+0000\n"
 "PO-Revision-Date: 2012-11-14 22:26+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@base.be>\n"
 "Language-Team: Walloon <linux-wa@walon.org>\n"
@@ -562,39 +562,39 @@ msgstr "Enonder"
 msgid "Do Not Start"
 msgstr "Èn nén enonder"
 
-#: klipper.cpp:772
+#: klipper.cpp:759
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Axhlåve côde bår"
 
-#: klipper.cpp:813
+#: klipper.cpp:800
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Disfacer podbon tote l' istwere do presse-papî ?"
 
-#: klipper.cpp:814
+#: klipper.cpp:801
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "&Netyî l' istwere do presse-papî"
 
-#: klipper.cpp:830 klipper.cpp:839
+#: klipper.cpp:817 klipper.cpp:826
 #, kde-format
 msgid "Clipboard history"
 msgstr "Istwere do presse-papî"
 
-#: klipper.cpp:856
+#: klipper.cpp:843
 #, kde-format
 msgid "up"
 msgstr "pus hôt"
 
-#: klipper.cpp:863
+#: klipper.cpp:850
 #, kde-format
 msgid "current"
 msgstr "do moumint"
 
-#: klipper.cpp:870
+#: klipper.cpp:857
 #, kde-format
 msgid "down"
 msgstr "pus bas"

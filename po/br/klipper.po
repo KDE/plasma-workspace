@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-1.1\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-28 00:40+0000\n"
 "PO-Revision-Date: 1999-03-03 11:57+0100\n"
 "Last-Translator: Jañ-Mai Drapier <jdrapier@club-internet.fr>\n"
 "Language-Team: Brezhoneg <Suav.Icb@wanadoo.fr>\n"
@@ -562,40 +562,40 @@ msgstr "Loc'hañ"
 msgid "Do Not Start"
 msgstr "Ne loc'hit ket"
 
-#: klipper.cpp:772
+#: klipper.cpp:759
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:813
+#: klipper.cpp:800
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Gou&llonderiñ istorig ar golver"
 
-#: klipper.cpp:814
+#: klipper.cpp:801
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Gou&llonderiñ istorig ar golver"
 
-#: klipper.cpp:830 klipper.cpp:839
+#: klipper.cpp:817 klipper.cpp:826
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "Ment istor ar go&lver :"
 
-#: klipper.cpp:856
+#: klipper.cpp:843
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:863
+#: klipper.cpp:850
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:870
+#: klipper.cpp:857
 #, kde-format
 msgid "down"
 msgstr ""

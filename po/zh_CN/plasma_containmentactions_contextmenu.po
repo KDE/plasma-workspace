@@ -39,7 +39,7 @@ msgstr "锁屏"
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr ""
+msgstr "显示注销屏幕"
 
 #: menu.cpp:125
 #, kde-format

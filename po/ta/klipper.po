@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-28 00:40+0000\n"
 "PO-Revision-Date: 2024-03-08 21:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -542,37 +542,37 @@ msgstr "துவக்கு"
 msgid "Do Not Start"
 msgstr "துவக்காதே"
 
-#: klipper.cpp:772
+#: klipper.cpp:759
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "பட்டைக்குறியீடு"
 
-#: klipper.cpp:813
+#: klipper.cpp:800
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை முழுதாக அழிக்க வேண்டுமா?"
 
-#: klipper.cpp:814
+#: klipper.cpp:801
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை காலியாக்கு"
 
-#: klipper.cpp:830 klipper.cpp:839
+#: klipper.cpp:817 klipper.cpp:826
 #, kde-format
 msgid "Clipboard history"
 msgstr "பிடிப்புப்பலகை வரலாறு"
 
-#: klipper.cpp:856
+#: klipper.cpp:843
 #, kde-format
 msgid "up"
 msgstr "மேலே"
 
-#: klipper.cpp:863
+#: klipper.cpp:850
 #, kde-format
 msgid "current"
 msgstr "தற்போதையது"
 
-#: klipper.cpp:870
+#: klipper.cpp:857
 #, kde-format
 msgid "down"
 msgstr "கீழே"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-21 00:40+0000\n"
+"POT-Creation-Date: 2024-06-28 00:40+0000\n"
 "PO-Revision-Date: 2010-09-25 16:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -572,39 +572,39 @@ msgstr "開始する"
 msgid "Do Not Start"
 msgstr "開始しない"
 
-#: klipper.cpp:772
+#: klipper.cpp:759
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "モバイルバーコード"
 
-#: klipper.cpp:813
+#: klipper.cpp:800
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "本当にクリップボードの全履歴を消去しますか？"
 
-#: klipper.cpp:814
+#: klipper.cpp:801
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "クリップボードの履歴を消去(&L)"
 
-#: klipper.cpp:830 klipper.cpp:839
+#: klipper.cpp:817 klipper.cpp:826
 #, kde-format
 msgid "Clipboard history"
 msgstr "クリップボードの履歴"
 
-#: klipper.cpp:856
+#: klipper.cpp:843
 #, kde-format
 msgid "up"
 msgstr "上"
 
-#: klipper.cpp:863
+#: klipper.cpp:850
 #, kde-format
 msgid "current"
 msgstr "現在"
 
-#: klipper.cpp:870
+#: klipper.cpp:857
 #, kde-format
 msgid "down"
 msgstr "下"
