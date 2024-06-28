@@ -11,7 +11,9 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KSystemClipboard>
 
+#include <QMimeData>
 #include <QScopeGuard>
 #include <QTest>
 
@@ -67,22 +69,25 @@ void KlipperTest::testBug465225()
     config.writeEntry("MaxClipItems", 30);
     QVERIFY(config.sync());
 
+    auto clipboard = KSystemClipboard::instance();
     // Load the history file which contains faulty image data
     {
+        clipboard->clear(QClipboard::Clipboard); // Reset local clipboard
         auto klipper = std::make_unique<Klipper>(this, klipperConfig);
-        QCOMPARE(klipper->history()->model()->rowCount(), 1);
+        QCOMPARE(HistoryModel::self()->rowCount(), 1);
         QCOMPARE(klipper->history()->first()->type(), HistoryItemType::Image);
 
         auto mimeData = klipper->history()->first()->mimeData();
 
-        QClipboard *clipboard = qGuiApp->clipboard();
-        clipboard->setText(QDateTime::currentDateTime().toString());
+        QMimeData *data = new QMimeData;
+        data->setText(QDateTime::currentDateTime().toString());
+        clipboard->setMimeData(data, QClipboard::Clipboard);
         QCoreApplication::processEvents();
-        QCOMPARE(klipper->history()->model()->rowCount(), 2);
+        QTRY_COMPARE(HistoryModel::self()->rowCount(), 2);
 
-        clipboard->setMimeData(mimeData);
+        clipboard->setMimeData(mimeData, QClipboard::Clipboard);
         QCoreApplication::processEvents();
-        QCOMPARE(klipper->history()->model()->rowCount(), 2);
+        QCOMPARE(HistoryModel::self()->rowCount(), 2);
         QCOMPARE(klipper->history()->first()->type(), HistoryItemType::Image);
 
         klipper->saveClipboardHistory();
@@ -90,8 +95,9 @@ void KlipperTest::testBug465225()
 
     // Now load the history file again
     {
+        clipboard->clear(QClipboard::Clipboard); // Reset local clipboard
         auto klipper = std::make_unique<Klipper>(this, klipperConfig);
-        QCOMPARE(klipper->history()->model()->rowCount(), 2);
+        QCOMPARE(HistoryModel::self()->rowCount(), 2);
         QCOMPARE(klipper->history()->first()->type(), HistoryItemType::Image);
         QVERIFY(klipper->history()->first()->uuid() != klipper->history()->first()->next_uuid());
     }

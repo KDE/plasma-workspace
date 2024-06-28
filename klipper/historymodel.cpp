@@ -5,15 +5,44 @@
 */
 
 #include "historymodel.h"
-#include "historyimageitem.h"
-#include "historystringitem.h"
-#include "historyurlitem.h"
 
-HistoryModel::HistoryModel(QObject *parent)
-    : QAbstractListModel(parent)
+#include <chrono>
+#include <zlib.h>
+
+#include <QDir>
+#include <QFile>
+#include <QSaveFile>
+#include <QStandardPaths>
+#include <QtConcurrentRun>
+
+#include "config-klipper.h"
+#include "historyitem.h"
+#include "klipper_debug.h"
+#include "systemclipboard.h"
+
+using namespace std::chrono_literals;
+
+std::shared_ptr<HistoryModel> HistoryModel::self()
+{
+    static std::weak_ptr<HistoryModel> instance;
+    if (instance.expired()) {
+        std::shared_ptr<HistoryModel> ptr{new HistoryModel};
+        instance = ptr;
+        return ptr;
+    }
+    return instance.lock();
+}
+
+HistoryModel::HistoryModel()
+    : QAbstractListModel(nullptr)
     , m_maxSize(0)
     , m_displayImages(true)
 {
+    m_saveFileTimer.setSingleShot(true);
+    connect(&m_saveFileTimer, &QTimer::timeout, this, [this] {
+        const QFuture<bool> future = QtConcurrent::run(&HistoryModel::saveHistory, this, false);
+        // Destroying the future neither waits nor cancels the asynchronous computation
+    });
 }
 
 HistoryModel::~HistoryModel()
@@ -54,7 +83,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    std::shared_ptr<HistoryItem> item = m_items.at(index.row());
+    const std::shared_ptr<HistoryItem> &item = m_items.at(index.row());
 
     switch (role) {
     case Qt::DisplayRole:
@@ -94,27 +123,25 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
 
 bool HistoryModel::remove(const QByteArray &uuid)
 {
-    QModelIndex index = indexOf(uuid);
-    if (!index.isValid()) {
+    const int index = indexOf(uuid);
+    if (index < 0) {
         return false;
     }
-    return removeRow(index.row(), QModelIndex());
+    return removeRow(index, QModelIndex());
 }
 
-QModelIndex HistoryModel::indexOf(const QByteArray &uuid) const
+int HistoryModel::indexOf(const QByteArray &uuid) const
 {
-    for (int i = 0; i < m_items.count(); ++i) {
-        if (m_items.at(i)->uuid() == uuid) {
-            return index(i);
-        }
-    }
-    return QModelIndex();
+    auto it = std::find_if(m_items.cbegin(), m_items.cend(), [&uuid](const auto &item) {
+        return item->uuid() == uuid;
+    });
+    return it == m_items.cend() ? -1 : std::distance(m_items.cbegin(), it);
 }
 
-QModelIndex HistoryModel::indexOf(const HistoryItem *item) const
+int HistoryModel::indexOf(const HistoryItem *item) const
 {
-    if (!item) {
-        return QModelIndex();
+    if (!item) [[unlikely]] {
+        return -1;
     }
     return indexOf(item->uuid());
 }
@@ -132,10 +159,9 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
 
     QMutexLocker lock(&m_mutex);
 
-    const QModelIndex existingItem = indexOf(item.get());
-    if (existingItem.isValid()) {
+    if (const int existingItemIndex = indexOf(item.get()); existingItemIndex >= 0) {
         // move to top
-        moveToTop(existingItem.row());
+        moveToTop(existingItemIndex);
         return;
     }
 
@@ -151,47 +177,146 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
     }
 }
 
-void HistoryModel::clearAndBatchInsert(const QList<HistoryItemPtr> &items)
+bool HistoryModel::loadHistory()
 {
-    if (m_maxSize == 0) {
-        // special case - cannot insert any items
-        return;
+    if (m_maxSize == 0) [[unlikely]] {
+        // rare special case - cannot insert any items
+        return true;
+    }
+
+    constexpr const char *failedLoadWarning = "Failed to load history resource. Clipboard history cannot be read.";
+    // don't use "appdata", klipper is also a kicker applet
+    QString historyFilePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("klipper/history2.lst"));
+    if (historyFilePath.isEmpty()) {
+        qCWarning(KLIPPER_LOG) << failedLoadWarning << ": "
+                               << "History file does not exist";
+        return false;
+    }
+
+    QFile historyFile(historyFilePath);
+    if (!historyFile.open(QIODevice::ReadOnly)) {
+        qCWarning(KLIPPER_LOG) << failedLoadWarning << ": " << historyFile.errorString();
+        return false;
+    }
+
+    QDataStream fileStream(&historyFile);
+    if (fileStream.atEnd()) {
+        qCWarning(KLIPPER_LOG) << failedLoadWarning << ": "
+                               << "Error in reading data";
+        return false;
+    }
+
+    QByteArray data;
+    quint32 crc;
+    fileStream >> crc >> data;
+    if (crc32(0, reinterpret_cast<unsigned char *>(data.data()), data.size()) != crc) {
+        qCWarning(KLIPPER_LOG) << failedLoadWarning << ": "
+                               << "CRC checksum does not match";
+        return false;
+    }
+
+    QDataStream historyStream(&data, QIODevice::ReadOnly);
+    char *version;
+    historyStream >> version;
+    delete[] version;
+
+    // The last row is either items.size() - 1 or m_maxSize - 1.
+    decltype(m_items) items;
+    for (HistoryItemPtr item = HistoryItem::create(historyStream); item && items.size() < m_maxSize; item = HistoryItem::create(historyStream)) {
+        item->setModel(this);
+        items.emplace_back(std::move(item));
     }
 
     if (items.empty()) {
         // special case - nothing to insert, so just clear.
         clear();
-        return;
+        return true;
     }
 
+    {
+        QMutexLocker lock(&m_mutex);
+        beginResetModel();
+        m_items = std::move(items);
+        endResetModel();
+    }
+
+    SystemClipboard::self()->setMimeData(m_items[0], SystemClipboard::Clipboard | SystemClipboard::Selection);
+
+    return true;
+}
+
+void HistoryModel::startSaveHistoryTimer(std::chrono::seconds delay)
+{
+    m_saveFileTimer.start(delay);
+}
+
+bool HistoryModel::saveHistory(bool empty)
+{
     QMutexLocker lock(&m_mutex);
+    constexpr const char *failedSaveWarning = "Failed to save history. Clipboard history cannot be saved. Reason:";
+    static const QString relativeHistoryFilePath = QStringLiteral("klipper/history2.lst");
+    // don't use "appdata", klipper is also a kicker applet
+    QString historyFilePath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, relativeHistoryFilePath));
+    if (historyFilePath.isEmpty()) {
+        // try creating the file
 
-    beginResetModel();
-    m_items.clear();
-
-    // The last row is either items.size() - 1 or m_maxSize - 1.
-    const int numOfItemsToBeInserted = std::min(static_cast<int>(items.size()), m_maxSize);
-    m_items.reserve(numOfItemsToBeInserted);
-
-    for (int i = 0; i < numOfItemsToBeInserted; i++) {
-        if (!items[i]) {
-            continue;
+        QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
+        if (path.isEmpty()) {
+            qCWarning(KLIPPER_LOG) << failedSaveWarning << "cannot locate a standard data location to save the clipboard history.";
+            return false;
         }
 
-        items[i]->setModel(this);
-        m_items.append(items[i]);
+        QDir dir(path);
+        if (!dir.mkpath(QStringLiteral("klipper"))) {
+            qCWarning(KLIPPER_LOG) << failedSaveWarning << "Klipper save directory" << path + QStringLiteral("/klipper")
+                                   << "does not exist and cannot be created.";
+            return false;
+        }
+        historyFilePath = dir.absoluteFilePath(relativeHistoryFilePath);
+    }
+    if (historyFilePath.isEmpty()) {
+        qCWarning(KLIPPER_LOG) << failedSaveWarning << "could not construct path to save clipboard history to.";
+        return false;
     }
 
-    endResetModel();
+    QSaveFile historyFile(historyFilePath);
+    if (!historyFile.open(QIODevice::WriteOnly)) {
+        qCWarning(KLIPPER_LOG) << failedSaveWarning << "unable to open save file" << historyFilePath << ":" << historyFile.errorString();
+        return false;
+    }
+
+    QByteArray data;
+    QDataStream history_stream(&data, QIODevice::WriteOnly);
+    history_stream << KLIPPER_VERSION_STRING; // const char*
+
+    if (!empty) {
+        HistoryItemPtr item = m_items[0];
+        if (item) {
+            do {
+                history_stream << item.get();
+                item = m_items[indexOf(item->next_uuid())];
+            } while (item != m_items[0]);
+        }
+    }
+
+    quint32 crc = crc32(0, reinterpret_cast<unsigned char *>(data.data()), data.size());
+    QDataStream ds(&historyFile);
+    ds << crc << data;
+    if (!historyFile.commit()) {
+        qCWarning(KLIPPER_LOG) << failedSaveWarning << "failed to commit updated save file to disk.";
+        return false;
+    }
+
+    return true;
 }
 
 void HistoryModel::moveToTop(const QByteArray &uuid)
 {
-    const QModelIndex existingItem = indexOf(uuid);
-    if (!existingItem.isValid()) {
+    const int existingItemIndex = indexOf(uuid);
+    if (existingItemIndex < 0) {
         return;
     }
-    moveToTop(existingItem.row());
+    moveToTop(existingItemIndex);
 }
 
 void HistoryModel::moveToTop(int row)

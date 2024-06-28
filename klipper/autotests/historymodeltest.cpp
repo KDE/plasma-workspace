@@ -26,7 +26,7 @@ private Q_SLOTS:
 
 void HistoryModelTest::testSetMaxSize()
 {
-    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
 
     QCOMPARE(history->rowCount(), 0);
@@ -64,7 +64,7 @@ void HistoryModelTest::testSetMaxSize()
 
 void HistoryModelTest::testInsertRemove()
 {
-    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
@@ -79,6 +79,7 @@ void HistoryModelTest::testInsertRemove()
     // let's insert a few items
     history->insert(std::make_shared<HistoryStringItem>(fooText));
     QModelIndex index = history->index(0, 0);
+    int row = -1;
     QCOMPARE(index.data().toString(), fooText);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), index.data(HistoryModel::UuidRole).toByteArray());
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), index.data(HistoryModel::UuidRole).toByteArray());
@@ -87,21 +88,21 @@ void HistoryModelTest::testInsertRemove()
     QCOMPARE(index.data().toString(), barText);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), fooUuid);
-    index = history->indexOf(fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
+    row = history->indexOf(fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
 
     history->insert(std::make_shared<HistoryStringItem>(fooBarText));
     QCOMPARE(history->data(history->index(0, 0)).toString(), fooBarText);
     index = history->index(0, 0);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), fooUuid);
-    index = history->indexOf(fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), foobarUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
-    index = history->indexOf(barUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
+    row = history->indexOf(fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), foobarUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
+    row = history->indexOf(barUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
 
     // insert one again - it should be moved to top
     history->insert(std::make_shared<HistoryStringItem>(barText));
@@ -109,12 +110,12 @@ void HistoryModelTest::testInsertRemove()
     index = history->index(0, 0);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), foobarUuid);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), fooUuid);
-    index = history->indexOf(fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
-    index = history->indexOf(foobarUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
+    row = history->indexOf(fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
+    row = history->indexOf(foobarUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
 
     // move one to top using the slot
     // already on top, shouldn't change anything
@@ -123,12 +124,12 @@ void HistoryModelTest::testInsertRemove()
     index = history->index(0, 0);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), foobarUuid);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), fooUuid);
-    index = history->indexOf(fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
-    index = history->indexOf(foobarUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
+    row = history->indexOf(fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
+    row = history->indexOf(foobarUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
 
     // another one should change, though
     history->moveToTop(foobarUuid);
@@ -136,12 +137,12 @@ void HistoryModelTest::testInsertRemove()
     index = history->index(0, 0);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), fooUuid);
-    index = history->indexOf(fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), foobarUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
-    index = history->indexOf(barUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
+    row = history->indexOf(fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), foobarUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
+    row = history->indexOf(barUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), foobarUuid);
 
     // remove them again
     QVERIFY(history->remove(foobarUuid));
@@ -149,9 +150,9 @@ void HistoryModelTest::testInsertRemove()
     index = history->index(0, 0);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), fooUuid);
     QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), fooUuid);
-    index = history->indexOf(fooUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
-    QCOMPARE(index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
+    row = history->indexOf(fooUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->next_uuid(), barUuid);
+    QCOMPARE(history->index(row).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>()->previous_uuid(), barUuid);
 
     QVERIFY(history->remove(barUuid));
     QCOMPARE(history->data(history->index(0, 0)).toString(), fooText);
@@ -165,7 +166,7 @@ void HistoryModelTest::testInsertRemove()
 
 void HistoryModelTest::testClear()
 {
-    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
@@ -187,23 +188,23 @@ void HistoryModelTest::testClear()
 
 void HistoryModelTest::testIndexOf()
 {
-    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
-    QVERIFY(!history->indexOf(QByteArrayLiteral("whatever")).isValid());
-    QVERIFY(!history->indexOf(QByteArray()).isValid());
+    QVERIFY(history->indexOf(QByteArrayLiteral("whatever")) < 0);
+    QVERIFY(history->indexOf(QByteArray()) < 0);
 
     // insert some items
     history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
-    QVERIFY(!history->indexOf(QByteArrayLiteral("whatever")).isValid());
-    QVERIFY(!history->indexOf(QByteArray()).isValid());
+    QVERIFY(history->indexOf(QByteArrayLiteral("whatever")) < 0);
+    QVERIFY(history->indexOf(QByteArray()) < 0);
     const QByteArray fooUuid = QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1);
-    QVERIFY(history->indexOf(fooUuid).isValid());
-    QCOMPARE(history->indexOf(fooUuid).data(HistoryModel::UuidRole).toByteArray(), fooUuid);
+    QVERIFY(history->indexOf(fooUuid) >= 0);
+    QCOMPARE(history->index(history->indexOf(fooUuid)).data(HistoryModel::UuidRole).toByteArray(), fooUuid);
 
     history->clear();
-    QVERIFY(!history->indexOf(fooUuid).isValid());
+    QVERIFY(history->indexOf(fooUuid) < 0);
 }
 
 void HistoryModelTest::testType_data()
@@ -221,7 +222,7 @@ void HistoryModelTest::testType_data()
 
 void HistoryModelTest::testType()
 {
-    std::unique_ptr<HistoryModel> history(new HistoryModel(nullptr));
+    std::shared_ptr<HistoryModel> history = HistoryModel::self();
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);

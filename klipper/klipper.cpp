@@ -10,9 +10,6 @@
 
 #include "klipper.h"
 
-#include <chrono>
-#include <zlib.h>
-
 #include "klipper_debug.h"
 #include <QApplication>
 #include <QBoxLayout>
@@ -24,8 +21,6 @@
 #include <QMessageBox>
 #include <QPushButton>
 #include <QResizeEvent>
-#include <QSaveFile>
-#include <QtConcurrentRun>
 
 #include <KAboutData>
 #include <KActionCollection>
@@ -59,15 +54,12 @@
 #include <xcb/xcb.h>
 #endif
 
-using namespace std::chrono_literals;
-
 // config == KGlobal::config for process, otherwise applet
 Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     : QObject(parent)
     , m_clip(SystemClipboard::self())
     , m_quitAction(nullptr)
     , m_config(config)
-    , m_saveFileTimer(nullptr)
     , m_plasmashell(nullptr)
 {
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));
@@ -79,6 +71,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     connect(m_clip.get(), &SystemClipboard::newClipData, this, &Klipper::checkClipData);
 
     m_history = new History(this);
+    m_historyModel = HistoryModel::self();
     m_popup = new KlipperPopup(m_history);
     m_popup->setWindowFlags(m_popup->windowFlags() | Qt::FramelessWindowHint);
     connect(m_history, &History::changed, this, &Klipper::slotHistoryChanged);
@@ -109,19 +102,12 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
 
     // load previous history if configured
     if (m_bKeepContents) {
-        loadHistory();
+        m_historyModel->loadHistory();
     }
 
-    m_saveFileTimer = new QTimer(this);
-    m_saveFileTimer->setSingleShot(true);
-    m_saveFileTimer->setInterval(5s);
-    connect(m_saveFileTimer, &QTimer::timeout, this, [this] {
-        const QFuture<bool> future = QtConcurrent::run(&Klipper::saveHistory, this, false);
-        // Destroying the future neither waits nor cancels the asynchronous computation
-    });
     connect(m_history, &History::changed, this, [this] {
         if (m_bKeepContents) {
-            m_saveFileTimer->start();
+            m_historyModel->startSaveHistoryTimer();
         }
     }); // only connect this signal after loading the history, to avoid the action of loading triggering a save
 
@@ -248,7 +234,7 @@ void Klipper::clearClipboardHistory()
 void Klipper::saveClipboardHistory()
 {
     if (m_bKeepContents) { // save the clipboard eventually
-        saveHistory();
+        m_historyModel->saveHistory();
     }
 }
 
@@ -279,7 +265,7 @@ void Klipper::loadSettings()
     // this will cause it to loadSettings too
     setURLGrabberEnabled(m_bURLGrabber);
     history()->setMaxSize(KlipperSettings::maxClipItems());
-    history()->model()->setDisplayImages(!m_bIgnoreImages);
+    m_historyModel->setDisplayImages(!m_bIgnoreImages);
 
     // Convert 4.3 settings
     if (KlipperSettings::synchronize() != 3) {
@@ -335,118 +321,11 @@ bool Klipper::eventFilter(QObject *filtered, QEvent *event)
     return ret;
 }
 
-bool Klipper::loadHistory()
-{
-    static const char failed_load_warning[] = "Failed to load history resource. Clipboard history cannot be read.";
-    // don't use "appdata", klipper is also a kicker applet
-    QString history_file_path = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("klipper/history2.lst"));
-    if (history_file_path.isEmpty()) {
-        qCWarning(KLIPPER_LOG) << failed_load_warning << ": "
-                               << "History file does not exist";
-        return false;
-    }
-    QFile history_file(history_file_path);
-    if (!history_file.open(QIODevice::ReadOnly)) {
-        qCWarning(KLIPPER_LOG) << failed_load_warning << ": " << history_file.errorString();
-        return false;
-    }
-    QDataStream file_stream(&history_file);
-    if (file_stream.atEnd()) {
-        qCWarning(KLIPPER_LOG) << failed_load_warning << ": "
-                               << "Error in reading data";
-        return false;
-    }
-    QByteArray data;
-    quint32 crc;
-    file_stream >> crc >> data;
-    if (crc32(0, reinterpret_cast<unsigned char *>(data.data()), data.size()) != crc) {
-        qCWarning(KLIPPER_LOG) << failed_load_warning << ": "
-                               << "CRC checksum does not match";
-        return false;
-    }
-    QDataStream history_stream(&data, QIODevice::ReadOnly);
-
-    char *version;
-    history_stream >> version;
-    delete[] version;
-
-    QList<HistoryItemPtr> items;
-    for (HistoryItemPtr item = HistoryItem::create(history_stream); item; item = HistoryItem::create(history_stream)) {
-        items.append(item);
-    }
-
-    history()->clearAndBatchInsert(items);
-
-    if (!history()->empty()) {
-        m_clip->setMimeData(history()->first(), SystemClipboard::Clipboard | SystemClipboard::Selection);
-    }
-
-    return true;
-}
-
-bool Klipper::saveHistory(bool empty)
-{
-    QMutexLocker lock(m_history->model()->mutex());
-    static const char failed_save_warning[] = "Failed to save history. Clipboard history cannot be saved. Reason:";
-    static const QString history_file_path_relative = QStringLiteral("klipper/history2.lst");
-    // don't use "appdata", klipper is also a kicker applet
-    QString history_file_path(QStandardPaths::locate(QStandardPaths::GenericDataLocation, history_file_path_relative));
-    if (history_file_path.isEmpty()) {
-        // try creating the file
-
-        QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-        if (path.isEmpty()) {
-            qCWarning(KLIPPER_LOG) << failed_save_warning << "cannot locate a standard data location to save the clipboard history.";
-            return false;
-        }
-
-        QDir dir(path);
-        if (!dir.mkpath(QStringLiteral("klipper"))) {
-            qCWarning(KLIPPER_LOG) << failed_save_warning << "Klipper save directory" << path + QStringLiteral("/klipper")
-                                   << "does not exist and cannot be created.";
-            return false;
-        }
-        history_file_path = dir.absoluteFilePath(history_file_path_relative);
-    }
-    if (history_file_path.isEmpty()) {
-        qCWarning(KLIPPER_LOG) << failed_save_warning << "could not construct path to save clipboard history to.";
-        return false;
-    }
-    QSaveFile history_file(history_file_path);
-    if (!history_file.open(QIODevice::WriteOnly)) {
-        qCWarning(KLIPPER_LOG) << failed_save_warning << "unable to open save file" << history_file_path << ":" << history_file.errorString();
-        return false;
-    }
-    QByteArray data;
-    QDataStream history_stream(&data, QIODevice::WriteOnly);
-    history_stream << KLIPPER_VERSION_STRING; // const char*
-
-    if (!empty) {
-        HistoryItemConstPtr item = history()->first();
-        if (item) {
-            do {
-                history_stream << item.get();
-                item = HistoryItemConstPtr(history()->find(item->next_uuid()));
-            } while (item != history()->first());
-        }
-    }
-
-    quint32 crc = crc32(0, reinterpret_cast<unsigned char *>(data.data()), data.size());
-    QDataStream ds(&history_file);
-    ds << crc << data;
-    if (!history_file.commit()) {
-        qCWarning(KLIPPER_LOG) << failed_save_warning << "failed to commit updated save file to disk.";
-        return false;
-    }
-
-    return true;
-}
-
 // save session on shutdown. Don't simply use the c'tor, as that may not be called.
 void Klipper::saveSession()
 {
     if (m_bKeepContents) { // save the clipboard eventually
-        saveHistory();
+        m_historyModel->saveHistory();
     }
     saveSettings();
 }
@@ -487,7 +366,7 @@ void Klipper::slotConfigure()
         // BUG: 142882
         // Security: If user has save clipboard turned off, old data should be deleted from disk
         if (bKeepContents_old != m_bKeepContents) { // keepContents changed
-            saveHistory(!m_bKeepContents); // save history, empty = !keep
+            m_historyModel->saveHistory(!m_bKeepContents); // save history, empty = !keep
         }
     });
     dlg->show();
@@ -805,7 +684,7 @@ void Klipper::slotAskClearHistory()
                                                        KMessageBox::Dangerous);
     if (clearHist == KMessageBox::Continue) {
         history()->slotClear();
-        saveHistory();
+        m_historyModel->saveHistory();
     }
 }
 

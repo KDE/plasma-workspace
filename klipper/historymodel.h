@@ -5,9 +5,11 @@
 */
 #pragma once
 
+#include <memory>
+
 #include <QAbstractListModel>
 #include <QRecursiveMutex>
-#include <memory>
+#include <QTimer>
 
 class HistoryItem;
 
@@ -24,7 +26,7 @@ public:
     };
     Q_ENUM(RoleType)
 
-    explicit HistoryModel(QObject *parent = nullptr);
+    [[nodiscard]] static std::shared_ptr<HistoryModel> self();
     ~HistoryModel() override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -43,23 +45,41 @@ public:
     void moveTopToBack();
     void moveBackToTop();
 
-    QModelIndex indexOf(const QByteArray &uuid) const;
-    QModelIndex indexOf(const HistoryItem *item) const;
+    int indexOf(const QByteArray &uuid) const;
+    int indexOf(const HistoryItem *item) const;
 
     void insert(const std::shared_ptr<HistoryItem> &item);
-    void clearAndBatchInsert(const QList<std::shared_ptr<HistoryItem>> &items);
 
     QRecursiveMutex *mutex()
     {
         return &m_mutex;
     }
 
+    /**
+     * @short Loads history from disk.
+     * Inserts items into clipboard without any checks
+     * Used when restoring a saved history and internally.
+     * Don't use this unless you're reasonable the list
+     * should be reset.
+     */
+    bool loadHistory();
+
+    /**
+     * Save history to disk
+     */
+    bool saveHistory(bool empty = false);
+    void startSaveHistoryTimer(std::chrono::seconds delay = std::chrono::seconds(5));
+
 private:
+    explicit HistoryModel();
+
     void moveToTop(int row);
     QList<std::shared_ptr<HistoryItem>> m_items;
     int m_maxSize;
     bool m_displayImages;
     QRecursiveMutex m_mutex;
+
+    QTimer m_saveFileTimer;
 };
 
 inline int HistoryModel::maxSize() const

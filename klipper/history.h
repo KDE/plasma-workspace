@@ -31,14 +31,6 @@ public:
     void insert(const std::shared_ptr<HistoryItem> &item);
 
     /**
-     * Inserts items into clipboard without any checks
-     * Used when restoring a saved history and internally.
-     * Don't use this unless you're reasonable the list
-     * should be reset.
-     */
-    void clearAndBatchInsert(const QList<std::shared_ptr<HistoryItem>> &items);
-
-    /**
      * Remove (first) history item equal to item from history
      */
     void remove(const std::shared_ptr<const HistoryItem> &item);
@@ -96,11 +88,6 @@ public:
      */
     void cyclePrev();
 
-    HistoryModel *model()
-    {
-        return m_model;
-    }
-
 public Q_SLOTS:
     /**
      * move the history in position pos to top
@@ -133,7 +120,7 @@ private:
      */
     bool m_topIsUserSelected;
 
-    HistoryModel *m_model;
+    std::shared_ptr<HistoryModel> m_model;
 
     QByteArray m_cycleStartUuid;
 };
