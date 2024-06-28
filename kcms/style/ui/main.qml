@@ -52,7 +52,7 @@ KCM.GridViewKCM {
     actions: [
         Kirigami.Action {
             id: effectSettingsButton
-            text: i18n("Configure Icons and Toolbars")
+            text: i18n("Configure Icons and Toolbars…")
             icon.name: "configure-toolbars" // proper icon?
             checkable: true
             checked: effectSettingsPopupLoader.popupOpen
