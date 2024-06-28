@@ -45,16 +45,16 @@ bool CycleBlocker::isBlocked()
 History::History(QObject *parent)
     : QObject(parent)
     , m_topIsUserSelected(false)
-    , m_model(new HistoryModel(this))
+    , m_model(HistoryModel::self())
 {
-    connect(m_model, &HistoryModel::rowsInserted, this, [this](const QModelIndex &parent, int start) {
+    connect(m_model.get(), &HistoryModel::rowsInserted, this, [this](const QModelIndex &parent, int start) {
         Q_UNUSED(parent)
         if (start == 0) {
             Q_EMIT topChanged();
         }
         Q_EMIT changed();
     });
-    connect(m_model,
+    connect(m_model.get(),
             &HistoryModel::rowsMoved,
             this,
             [this](const QModelIndex &sourceParent, int sourceStart, int sourceEnd, const QModelIndex &destinationParent, int destinationRow) {
@@ -66,15 +66,15 @@ History::History(QObject *parent)
                 }
                 Q_EMIT changed();
             });
-    connect(m_model, &HistoryModel::rowsRemoved, this, [this](const QModelIndex &parent, int start) {
+    connect(m_model.get(), &HistoryModel::rowsRemoved, this, [this](const QModelIndex &parent, int start) {
         Q_UNUSED(parent)
         if (start == 0) {
             Q_EMIT topChanged();
         }
         Q_EMIT changed();
     });
-    connect(m_model, &HistoryModel::modelReset, this, &History::changed);
-    connect(m_model, &HistoryModel::modelReset, this, &History::topChanged);
+    connect(m_model.get(), &HistoryModel::modelReset, this, &History::changed);
+    connect(m_model.get(), &HistoryModel::modelReset, this, &History::topChanged);
     connect(this, &History::topChanged, [this]() {
         m_topIsUserSelected = false;
         if (!CycleBlocker::isBlocked()) {
@@ -93,11 +93,6 @@ void History::insert(const HistoryItemPtr &item)
         return;
 
     m_model->insert(item);
-}
-
-void History::clearAndBatchInsert(const QList<HistoryItemPtr> &items)
-{
-    m_model->clearAndBatchInsert(items);
 }
 
 void History::remove(const HistoryItemConstPtr &newItem)
@@ -124,8 +119,8 @@ void History::slotMoveToTop(QAction *action)
 
 void History::slotMoveToTop(const QByteArray &uuid)
 {
-    const QModelIndex item = m_model->indexOf(uuid);
-    if (item.isValid() && item.row() == 0) {
+    const int itemIndex = m_model->indexOf(uuid);
+    if (itemIndex == 0) {
         // The item is already at the top, but it still may be not be set as the actual clipboard
         // contents, normally this happens if the item is only in the X11 mouse selection but
         // not in the Ctrl+V clipboard.
@@ -196,11 +191,11 @@ HistoryItemConstPtr History::prevInCycle() const
 
 HistoryItemConstPtr History::find(const QByteArray &uuid) const
 {
-    const QModelIndex index = m_model->indexOf(uuid);
-    if (!index.isValid()) {
+    const int index = m_model->indexOf(uuid);
+    if (index < 0) {
         return HistoryItemConstPtr();
     }
-    return index.data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
+    return m_model->index(index, 0).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
 }
 
 bool History::empty() const

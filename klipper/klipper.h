@@ -12,7 +12,6 @@
 #include <QClipboard>
 #include <QElapsedTimer>
 #include <QPointer>
-#include <QTimer>
 
 #include <KSharedConfig>
 
@@ -27,6 +26,7 @@ class QAction;
 class QMenu;
 class QMimeData;
 class HistoryItem;
+class HistoryModel;
 class KNotification;
 class SystemClipboard;
 
@@ -96,18 +96,6 @@ public Q_SLOTS:
 
 protected:
     /**
-     * Loads history from disk.
-     */
-    bool loadHistory();
-
-    /**
-     * Save history to disk
-     * @param empty save empty history instead of actual history
-     * @return whether saving was successful
-     */
-    bool saveHistory(bool empty = false);
-
-    /**
      * Check data in clipboard, and if it passes these checks,
      * store the data in the clipboard history.
      */
@@ -162,6 +150,7 @@ private:
     QElapsedTimer m_showTimer;
 
     History *m_history;
+    std::shared_ptr<HistoryModel> m_historyModel;
     KlipperPopup *m_popup;
 
     KToggleAction *m_toggleURLGrabAction;
@@ -192,7 +181,6 @@ private:
     QString cycleText() const;
     KActionCollection *m_collection;
     QMenu *m_actionsPopup;
-    QTimer *m_saveFileTimer;
     QPointer<KNotification> m_notification;
     KWayland::Client::PlasmaShell *m_plasmashell;
 };

@@ -8,6 +8,7 @@
 #include <Plasma5Support/DataEngine>
 
 class Klipper;
+class HistoryModel;
 
 class ClipboardEngine : public Plasma5Support::DataEngine
 {
@@ -20,4 +21,5 @@ public:
 
 private:
     Klipper *m_klipper;
+    std::shared_ptr<HistoryModel> m_model;
 };

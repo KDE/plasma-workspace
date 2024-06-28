@@ -17,9 +17,10 @@ static const QString s_barcodeKey = QStringLiteral("supportsBarcodes");
 ClipboardEngine::ClipboardEngine(QObject *parent)
     : Plasma5Support::DataEngine(parent)
     , m_klipper(new Klipper(this, KSharedConfig::openConfig(QStringLiteral("klipperrc"))))
+    , m_model(HistoryModel::self())
 {
     // TODO: use a filterproxymodel
-    setModel(s_clipboardSourceName, m_klipper->history()->model());
+    setModel(s_clipboardSourceName, m_model.get());
     setData(s_clipboardSourceName, s_barcodeKey, true);
     auto updateCurrent = [this]() {
         setData(s_clipboardSourceName, QStringLiteral("current"), m_klipper->history()->empty() ? QString() : m_klipper->history()->first()->text());
