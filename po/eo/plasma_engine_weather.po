@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2024-06-21 23:56+0200\n"
+"PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: ESPERANTO <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -2830,6 +2830,8 @@ msgctxt ""
 "\"Rain then Sunny\")"
 msgid " then "
 msgstr ""
+"Apartigilo inter progrnozaj kondiĉoj kiej sekvas tempan sinsekvon (ekz. "
+"\"Pluva poste Suna\")"
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format

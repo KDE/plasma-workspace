@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-26 00:40+0000\n"
-"PO-Revision-Date: 2024-03-27 09:18+0100\n"
+"PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -35,12 +35,10 @@ msgid "Lock Screen"
 msgstr "Ŝlosi Ekranon"
 
 #: menu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "Ŝlosi Ekranon"
+msgstr "Montri Elsalutan Ekranon"
 
 #: menu.cpp:125
 #, kde-format
@@ -71,7 +69,3 @@ msgstr "Ekranfonagoj"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[Spaco]"
-
-#~ msgctxt "plasma_containmentactions_contextmenu"
-#~ msgid "Leave…"
-#~ msgstr "Fermi…"
