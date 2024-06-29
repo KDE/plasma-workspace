@@ -1,16 +1,16 @@
 # Translation for kcm_lookandfeel.po to Euskara/Basque (eu).
-# Copyright (C) 2017-2023 This file is copyright:
+# Copyright (C) 2017-2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2023-08-03 11:47+0200\n"
+"PO-Revision-Date: 2024-06-28 23:45+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -193,16 +193,13 @@ msgid "Titlebar Buttons layout"
 msgstr "Titulu-barrako botoien antolaera"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"Mahaigaineko antolaera bat ezartzea, zure mahaigainen, panelen, kaien eta "
-"trepeten uneko konfigurazioa ordezkatuko du"
+"Mahaigain-antolaera bat ezartzean uneko mahaigain-multzoa, panelak, kaiak, "
+"eta trepetak ezabatuko dira, gaiak zehazten duenarekin ordezkatzeko."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
