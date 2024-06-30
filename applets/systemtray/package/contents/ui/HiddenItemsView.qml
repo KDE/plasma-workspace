@@ -23,9 +23,6 @@ PlasmaComponents3.ScrollView {
     property alias layout: hiddenTasks
 
     hoverEnabled: true
-    onHoveredChanged: if (!hovered) {
-        hiddenTasks.currentIndex = -1;
-    }
     background: null
 
     GridView {
