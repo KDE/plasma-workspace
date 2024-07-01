@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-26 00:40+0000\n"
-"PO-Revision-Date: 2024-03-29 21:24+0900\n"
+"PO-Revision-Date: 2024-06-30 11:03+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -39,12 +39,10 @@ msgid "Lock Screen"
 msgstr "鎖定螢幕"
 
 #: menu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "鎖定螢幕"
+msgstr "顯示登出畫面"
 
 #: menu.cpp:125
 #, kde-format

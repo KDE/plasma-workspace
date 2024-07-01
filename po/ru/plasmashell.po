@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-06-20 12:20+0300\n"
+"PO-Revision-Date: 2024-06-28 10:07+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -130,7 +130,7 @@ msgstr "Сообщить об ошибке…"
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Сокрытие баннера"
 
 #: desktopview.cpp:306
 #, kde-format
@@ -153,12 +153,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Подтвердите постоянное сокрытие баннера.<nl/><nl/> Вернуть показ баннера "
+"возможно только ручной правкой файла конфигурации <filename>kdeglobals</"
+"filename>. В этом файле необходимо удалить строку, начинающуюся с текста "
+"<icode>ShowDesktopPreviewBanner</icode>."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Скрыть баннер?"
 
 #: main.cpp:84
 #, kde-format
@@ -292,13 +296,13 @@ msgstr "Экранная клавиатура выключена"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Сон и блокировка экрана запрещены"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Сон и блокировка экрана разрешены"
 
 #: osd.cpp:172
 #, kde-format
@@ -325,6 +329,10 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"При использовании графических ускорителей NVIDIA в графических сеансах X11 "
+"использование плавающего режима и адаптивной прозрачности приводят к низкой "
+"производительности графики при перетаскивании окон и изменении их размеров. "
+"Рекомендуется использовать другие параметры."
 
 #: panelview.cpp:1098
 #, kde-format
