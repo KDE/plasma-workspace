@@ -2,12 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 Alexander Yavorsky <kekcuha@gmail.com>
+# Alexander Yavorsky <kekcuha@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-20 00:39+0000\n"
-"PO-Revision-Date: 2024-05-05 22:14+0300\n"
+"PO-Revision-Date: 2024-06-27 20:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 21.08.3\n"
 
 #: interactiveconsole.cpp:63
 #, kde-format
@@ -43,7 +44,7 @@ msgstr "Шаблоны"
 #: interactiveconsole.cpp:75
 #, kde-format
 msgid "Desktop Shell Scripting Console"
-msgstr ""
+msgstr "Консоль сценариев для рабочего стола"
 
 #: interactiveconsole.cpp:82
 #, kde-format
