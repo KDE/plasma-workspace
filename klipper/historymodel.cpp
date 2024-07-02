@@ -54,7 +54,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    std::shared_ptr<HistoryItem> item = m_items.at(index.row());
+    const std::shared_ptr<HistoryItem> &item = m_items.at(index.row());
 
     switch (role) {
     case Qt::DisplayRole:
