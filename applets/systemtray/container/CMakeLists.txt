@@ -1,6 +1,3 @@
-
-plasma_install_package(package org.kde.plasma.systemtray)
-
 set(systemtraycontainer_SRCS
     systemtraycontainer.cpp
     systemtraycontainer.h
@@ -14,9 +11,12 @@ ecm_qt_declare_logging_category(systemtraycontainer_SRCS HEADER debug.h
                                             EXPORT PLASMAWORKSPACE
                                         )
 
-kcoreaddons_add_plugin(org.kde.plasma.systemtray SOURCES ${systemtraycontainer_SRCS} INSTALL_NAMESPACE "plasma/applets")
+plasma_add_applet(org.kde.plasma.systemtray
+    CPP_SOURCES ${systemtraycontainer_SRCS}
+    QML_SOURCES main.qml
+)
 
-target_link_libraries(org.kde.plasma.systemtray
+target_link_libraries(org.kde.plasma.systemtray PRIVATE
                       Qt::Gui
                       Qt::Quick
                       Plasma::Plasma

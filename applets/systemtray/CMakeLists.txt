@@ -1,7 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.private.systemtray\")
 
-plasma_install_package(package org.kde.plasma.private.systemtray)
-
 include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
 
 set(systemtray_SRCS
@@ -58,9 +56,33 @@ add_library(systemtraymodel_static STATIC systemtraymodel.cpp sortedsystemtraymo
 target_link_libraries(systemtraymodel_static PUBLIC systemtray_static)
 set_property(TARGET systemtraymodel_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp INSTALL_NAMESPACE "plasma/applets")
+plasma_add_applet(org.kde.plasma.private.systemtray
+  CPP_SOURCES systemtray.cpp
+  QML_SOURCES
+  CompactApplet.qml
+  config.qml
+  ConfigEntries.qml
+  ConfigGeneral.qml
+  CurrentItemHighLight.qml
+  ExpandedRepresentation.qml
+  ExpanderArrow.qml
+  PlasmoidPopupsContainer.qml
+  SystemTrayState.qml
+  HiddenItemsView.qml
+  main.qml
+  RESOURCES
+  main.xml
+)
 
-target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)
+ecm_target_qml_sources(org.kde.plasma.private.systemtray PATH items SOURCES
+  items/AbstractItem.qml
+  items/ItemLoader.qml
+  items/PulseAnimation.qml
+  items/StatusNotifierItem.qml
+  items/PlasmoidItem.qml
+)
+
+target_link_libraries(org.kde.plasma.private.systemtray PRIVATE systemtraymodel_static)
 
 ecm_add_qml_module(systemtrayplugin URI org.kde.plasma.private.systemtray GENERATE_PLUGIN_SOURCE)
 target_sources(systemtrayplugin PRIVATE systemtraymodel.cpp)
