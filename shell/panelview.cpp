@@ -1804,10 +1804,10 @@ void PanelView::updateEnabledBorders()
             }
         }
 
-        QMargins margins = {rootObject()->property("leftShadowMargin").toReal(),
-                            rootObject()->property("topShadowMargin").toReal(),
-                            rootObject()->property("rightShadowMargin").toReal(),
-                            rootObject()->property("bottomShadowMargin").toReal()};
+        QMargins margins = {int(std::round(rootObject()->property("leftShadowMargin").toReal())),
+                            int(std::round(rootObject()->property("topShadowMargin").toReal())),
+                            int(std::round(rootObject()->property("rightShadowMargin").toReal())),
+                            int(std::round(rootObject()->property("bottomShadowMargin").toReal()))};
 
         if (m_screenToFollow) {
             if (x() - margins.left() <= m_screenToFollow->geometry().x()) {
