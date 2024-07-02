@@ -17,8 +17,11 @@ Item {
     property bool pluggedIn
     property string batteryType
     property bool active: false
+    property string powerProfileIconName: ""
 
-    // Icon for current charge level and charging status for batteries that support it
+    // Icon for current charge level, charging status, and optionally power
+    // profile indication (for batteries that support it by setting
+    // "powerProfileIconName" to something other than an empty string).
     Kirigami.Icon {
         anchors.fill: parent
         source: root.hasBattery ? fillElement(root.percent) : "battery-missing"
@@ -54,6 +57,11 @@ Item {
             if (root.pluggedIn) {
                 name += "-charging";
             }
+
+            if (root.powerProfileIconName.length > 0) {
+                name += "-profile-" + root.powerProfileIconName
+            }
+
             return name;
         }
     }
