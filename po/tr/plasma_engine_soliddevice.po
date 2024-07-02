@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2024-04-30 00:20+0300\n"
+"PO-Revision-Date: 2024-07-02 01:25+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -138,11 +138,11 @@ msgstr "Sabit Disk"
 
 #: soliddeviceengine.cpp:173
 msgid "Cdrom Drive"
-msgstr "Cdrom Sürücü"
+msgstr "CD-ROM Sürücüsü"
 
 #: soliddeviceengine.cpp:173
 msgid "Floppy"
-msgstr "Disket Sürücü"
+msgstr "Disket Sürücüsü"
 
 #: soliddeviceengine.cpp:174
 msgid "Tape"
@@ -162,11 +162,11 @@ msgstr "Smart Media"
 
 #: soliddeviceengine.cpp:175
 msgid "SdMmc"
-msgstr "SdMmc"
+msgstr "SDMMC"
 
 #: soliddeviceengine.cpp:175
 msgid "Xd"
-msgstr "Xd"
+msgstr "XD"
 
 #: soliddeviceengine.cpp:177
 msgid "Bus"
@@ -297,7 +297,7 @@ msgstr "Bölüntü Tablosu"
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Raid"
-msgstr "Raid"
+msgstr "RAID"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
@@ -359,11 +359,11 @@ msgstr "Video DVD"
 
 #: soliddeviceengine.cpp:329
 msgid "Video Blu Ray"
-msgstr "Video Blu Ray"
+msgstr "Video Blu-Ray"
 
 #: soliddeviceengine.cpp:331
 msgid "Available Content"
-msgstr "Mevcut İçerik"
+msgstr "Kullanılabilir İçerik"
 
 #: soliddeviceengine.cpp:334
 msgid "Unknown Disc Type"
@@ -371,7 +371,7 @@ msgstr "Bilinmeyen Disk Türü"
 
 #: soliddeviceengine.cpp:334
 msgid "CD Rom"
-msgstr "CD Rom"
+msgstr "CD-ROM"
 
 #: soliddeviceengine.cpp:334
 msgid "CD Recordable"
@@ -383,11 +383,11 @@ msgstr "Yeniden yazılabilir CD"
 
 #: soliddeviceengine.cpp:335
 msgid "DVD Rom"
-msgstr "DVD Rom"
+msgstr "DVD-ROM"
 
 #: soliddeviceengine.cpp:335
 msgid "DVD Ram"
-msgstr "DVD Ram"
+msgstr "DVD-RAM"
 
 #: soliddeviceengine.cpp:336
 msgid "DVD Recordable"
@@ -415,7 +415,7 @@ msgstr "Çift katmanlı yeniden yazılabilir DVD Plus"
 
 #: soliddeviceengine.cpp:339
 msgid "Blu Ray Rom"
-msgstr "Blu Ray Rom"
+msgstr "Blu-Ray-ROM"
 
 #: soliddeviceengine.cpp:339
 msgid "Blu Ray Recordable"
@@ -427,15 +427,15 @@ msgstr "Yeniden yazılabilir Blu Ray"
 
 #: soliddeviceengine.cpp:340
 msgid "HD DVD Rom"
-msgstr "HD DVD Rom"
+msgstr "HD-DVD-ROM"
 
 #: soliddeviceengine.cpp:341
 msgid "HD DVD Recordable"
-msgstr "Kaydedilebilir HD DVD"
+msgstr "Kaydedilebilir HD-DVD"
 
 #: soliddeviceengine.cpp:341
 msgid "HD DVD Rewritable"
-msgstr "Yeniden yazılabilir HD DVD"
+msgstr "Yeniden yazılabilir HD-DVD"
 
 #: soliddeviceengine.cpp:343
 msgid "Disc Type"
@@ -471,7 +471,7 @@ msgstr "Desteklenen Sürücüler"
 
 #: soliddeviceengine.cpp:369
 msgid "Portable Media Player"
-msgstr "Taşınabilir Medya Oynatıcı"
+msgstr "Taşınabilir Ortam Oynatıcısı"
 
 #: soliddeviceengine.cpp:383
 msgid "Battery"
@@ -515,11 +515,11 @@ msgstr "Telefon Pili"
 
 #: soliddeviceengine.cpp:389
 msgid "Monitor Battery"
-msgstr "Pili Görüntüle"
+msgstr "Monitör Pili"
 
 #: soliddeviceengine.cpp:390
 msgid "Gaming Input Battery"
-msgstr "Oyun Giriş Pili"
+msgstr "Oyun Giriş Aygıtı Pili"
 
 #: soliddeviceengine.cpp:390
 msgid "Bluetooth Battery"
