@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-26 00:40+0000\n"
-"PO-Revision-Date: 2024-06-21 09:41+0200\n"
+"PO-Revision-Date: 2024-07-02 21:52+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -35,12 +35,10 @@ msgid "Lock Screen"
 msgstr "Lås skärmen"
 
 #: menu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "Lås skärmen"
+msgstr "Visa utloggningsskärm"
 
 #: menu.cpp:125
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-04-06 14:04+0000\n"
+"PO-Revision-Date: 2024-06-30 15:31+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -102,31 +102,31 @@ msgstr "Tilkynntu vandamál á bugs.kde.org"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Afrita Plasma-útgáfu"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Senda villutilkynningu…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Fela forskoðunarborða"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Fela fram að endurræsingu"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Fela varanlega"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -137,12 +137,16 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Ertu viss um að þú viljir fela forskoðunarborðann?<nl/><nl/>Það aðeins hægt "
+"að afturkalla þessa aðgerð með því að fjarlægja línuna sem byrjar á "
+"<icode>ShowDesktopPreviewBanner</icode> í <filename>kdeglobals</filename> "
+"grunnstillingaskránni."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Fela forskoðunarborða?"
 
 #: main.cpp:84
 #, kde-format
@@ -309,6 +313,9 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Ef notað er NVIDIA-skjákort með X11 er þekkt vandamál að fljótandi stílsnið "
+"og aðlagað gagnsæi geta valdið lélegum afköstum þegar gluggi er dreginn til "
+"eða stærð hans breytt. Það er hugsanlega betra að nota aðrar stillingar."
 
 #: panelview.cpp:1098
 #, kde-format

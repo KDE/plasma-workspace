@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2024-04-07 07:20+0300\n"
+"PO-Revision-Date: 2024-07-02 14:50+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -25,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1867,7 +1867,7 @@ msgstr "צורות מספרים"
 
 #: viewpart/UnicodeBlocks.h:79
 msgid "Arrows"
-msgstr "חצים"
+msgstr "חיצים"
 
 #: viewpart/UnicodeBlocks.h:80
 msgid "Mathematical Operators"
@@ -1915,7 +1915,7 @@ msgstr "סמלים מתמטיים שונים א׳"
 
 #: viewpart/UnicodeBlocks.h:91
 msgid "Supplemental Arrows-A"
-msgstr "השלמה של חצים א׳"
+msgstr "השלמה של חיצים א׳"
 
 #: viewpart/UnicodeBlocks.h:92
 msgid "Braille Patterns"
@@ -1923,7 +1923,7 @@ msgstr "תרשימי ברייל"
 
 #: viewpart/UnicodeBlocks.h:93
 msgid "Supplemental Arrows-B"
-msgstr "השלמה של חצים ב׳"
+msgstr "השלמה של חיצים ב׳"
 
 #: viewpart/UnicodeBlocks.h:94
 msgid "Miscellaneous Mathematical Symbols-B"
@@ -1935,7 +1935,7 @@ msgstr "פעולות מתמטיות נוספות"
 
 #: viewpart/UnicodeBlocks.h:96
 msgid "Miscellaneous Symbols and Arrows"
-msgstr "סמלים וחצים נוספים"
+msgstr "סמלים וחיצים נוספים"
 
 #: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
 msgid "Glagolitic"
