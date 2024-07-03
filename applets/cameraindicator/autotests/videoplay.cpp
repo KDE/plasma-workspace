@@ -10,7 +10,6 @@
 #include <spa/debug/pod.h>
 #include <spa/param/latency-utils.h>
 #include <spa/param/props.h>
-#include <spa/param/tag-utils.h>
 #include <spa/utils/result.h>
 
 #include <pipewire/pipewire.h>
