@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<suppressions>
+<suppress>
+<id>duplInheritedMember</id>
+<symbolName>d_func</symbolName>
+</suppress>
+<suppress>
+<id>unusedPrivateFunction</id>
+<symbolName>*::d_func</symbolName>
+</suppress>
+<suppress>
+<id>constParameterPointer</id>
+</suppress>
+<suppress>
+<id>returnByReference</id>
+</suppress>
+<!-- generic -->
+<suppress>
+<id>useStlAlgorithm</id>
+</suppress>
+<!-- embedded 3rdparty -->
+</suppressions>

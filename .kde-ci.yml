@@ -94,5 +94,6 @@ Options:
   cppcheck-arguments:
    - --enable=warning,style,performance
    - --library=cppcheck-qt-extra-defines.xml
+   - --suppress-xml=cppcheck-suppressions.xml
   cppcheck-ignore-files:
    - autotests
