@@ -5,6 +5,7 @@
 # SPDX-License-Identifier: MIT
 
 import base64
+import logging
 import os
 import shutil
 import subprocess
@@ -26,23 +27,33 @@ from selenium.webdriver.support.ui import WebDriverWait
 gi.require_version('Gdk', '4.0')
 gi.require_version('GdkPixbuf', '2.0')
 gi.require_version('Gtk', '4.0')
-from gi.repository import Gdk, GdkPixbuf, GLib, Gtk
+from gi.repository import Gdk, GdkPixbuf, Gio, GLib, Gtk
 
 WIDGET_ID: Final = "org.kde.plasma.clipboard"
 KDE_VERSION: Final = 6
 
 
-def spin_glib_main_loop() -> None:
-    """
-    Processes some pending events in the main loop
-    """
-    context = GLib.MainContext.default()
-    count = 0
-    while context.pending() or count < 10:
-        if not context.pending():
-            time.sleep(0.1)
-        context.iteration(may_block=False)
-        count += 1
+class SpinThread(threading.Thread):
+
+    def __init__(self) -> None:
+        self.quit_event = threading.Event()
+        # Create the thread
+        super().__init__()
+
+    @classmethod
+    def spin(cls) -> None:
+        context = GLib.MainContext.default()
+        count = 0
+        while context.pending() or count < 10:
+            count += 1
+            if not context.pending():
+                time.sleep(0.1)
+                continue
+            context.iteration(may_block=True)
+
+    def run(self) -> None:
+        while not self.quit_event.is_set():
+            self.spin()
 
 
 class GtkApplicationThread(threading.Thread):
@@ -75,7 +86,10 @@ class ClipboardTest(unittest.TestCase):
     """
 
     driver: webdriver.Remote
-    loop_thread: GtkApplicationThread
+    gtk_thread: GtkApplicationThread
+    spin_thread: SpinThread
+    klipper_proxy: Gio.DBusProxy
+    klipper_updated_event: threading.Event
     appium_options: AppiumOptions
     klipper_data_file: str = ""
 
@@ -107,9 +121,18 @@ class ClipboardTest(unittest.TestCase):
         cls.appium_options = options
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
-        cls.loop_thread = GtkApplicationThread()
-        cls.loop_thread.start()
-        assert cls.loop_thread.activate_event.wait()
+        cls.gtk_thread = GtkApplicationThread()
+        cls.gtk_thread.start()
+        assert cls.gtk_thread.activate_event.wait()
+
+        cls.spin_thread = SpinThread()
+        cls.spin_thread.start()
+
+        cls.klipper_proxy = Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION, 0, None, "org.kde.klipper", "/klipper", "org.kde.klipper.klipper")
+        cls.klipper_updated_event = threading.Event()
+
+    def setUp(self) -> None:
+        self.klipper_updated_event.clear()
 
     def tearDown(self) -> None:
         """
@@ -130,8 +153,14 @@ class ClipboardTest(unittest.TestCase):
             except subprocess.CalledProcessError:
                 break
             time.sleep(1)
+        cls.gtk_thread.quit()
+        cls.spin_thread.quit_event.set()
         cls.driver.quit()
-        cls.loop_thread.quit()
+
+    def klipper_signal_handler(self, d_bus_proxy: Gio.DBusProxy, sender_name: str, signal_name: str, parameters: GLib.Variant):
+        logging.info(f"received signal {signal_name}")
+        if signal_name == "clipboardHistoryUpdated":
+            self.klipper_updated_event.set()
 
     def test_0_open(self) -> None:
         """
@@ -139,6 +168,9 @@ class ClipboardTest(unittest.TestCase):
         """
         self.driver.find_element(AppiumBy.NAME, "Fushan Wen")
         self.driver.find_element(AppiumBy.NAME, "clipboard")
+
+        self.assertEqual(self.klipper_proxy.getClipboardContents(), "Fushan Wen")
+        self.klipper_proxy.connect("g-signal", self.klipper_signal_handler)
 
     def test_1_barcode_1_open_barcode_page(self) -> None:
         """
@@ -191,6 +223,7 @@ class ClipboardTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Show QR code")
         ActionChains(self.driver).send_keys(Keys.RETURN).perform()
         self.assertEqual(self.driver.get_clipboard_text(), "clipboard")
+        self.assertTrue(self.klipper_updated_event.wait(5))
         ActionChains(self.driver).send_keys(Keys.ENTER).perform()
         self.assertEqual(self.driver.get_clipboard_text(), "Fushan Wen")
         ActionChains(self.driver).send_keys(Keys.SPACE).perform()
@@ -206,11 +239,50 @@ class ClipboardTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Remove from history").click()
         # The first item becomes the current clipboard item
         self.assertEqual(self.driver.get_clipboard_text(), "Fushan Wen")
+        self.assertTrue(self.klipper_updated_event.wait(5))
 
+        self.klipper_updated_event.clear()
         item = self.driver.find_element(AppiumBy.NAME, "Fushan Wen")
         self.driver.find_element(AppiumBy.NAME, "Clear History").click()
         self.driver.find_element(AppiumBy.NAME, "Delete").click()
         WebDriverWait(self.driver, 5).until_not(lambda _: item.is_displayed())
+        self.assertTrue(self.klipper_updated_event.wait(5))
+
+    def test_3_dbus_interface(self) -> None:
+        """
+        D-Bus interface for Klipper
+        """
+        # setClipboardContents with a valid string
+        clipboard_content = "setFromTest"
+        self.klipper_proxy.setClipboardContents("(s)", clipboard_content)
+        element = self.driver.find_element(AppiumBy.NAME, clipboard_content)
+        self.assertTrue(self.klipper_updated_event.wait(5))
+
+        # setClipboardContents with an empty string
+        self.klipper_updated_event.clear()
+        self.klipper_proxy.setClipboardContents("(s)", "")
+        self.assertFalse(self.klipper_updated_event.wait(5))
+
+        # clearClipboardHistory
+        last_modified = os.stat(self.klipper_data_file).st_mtime
+        self.klipper_updated_event.clear()
+        self.klipper_proxy.clearClipboardHistory()
+        WebDriverWait(self.driver, 5).until_not(lambda _: element.is_displayed())
+        self.assertTrue(self.klipper_updated_event.wait(5))
+        self.assertNotEqual(last_modified, os.stat(self.klipper_data_file).st_mtime)
+
+        # saveClipboardHistory
+        last_modified = os.stat(self.klipper_data_file).st_mtime
+        self.klipper_proxy.setClipboardContents("(s)", clipboard_content)
+        self.klipper_proxy.saveClipboardHistory()
+        self.assertNotEqual(last_modified, os.stat(self.klipper_data_file).st_mtime)
+
+        # History item
+        self.assertEqual(self.klipper_proxy.getClipboardHistoryMenu(), [clipboard_content])
+        self.assertEqual(self.klipper_proxy.getClipboardHistoryItem("(i)", 0), clipboard_content)
+        self.assertEqual(self.klipper_proxy.getClipboardHistoryItem("(i)", 123), "")  # Invalid index
+
+        self.spin_thread.quit_event.set()
 
     def update_config_and_restart_clipboard(self, group: str | list[str], key: str | list[str], new_value: str | list[str], reset_history: bool = False) -> None:
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
@@ -245,22 +317,22 @@ class ClipboardTest(unittest.TestCase):
         button = Gtk.Button(label="Copy Content")
         window.set_child(button)
         window.set_visible(True)
-        spin_glib_main_loop()
+        SpinThread.spin()
 
         # Click the button to update the latest serial. See also:
         # https://invent.kde.org/plasma/kwin/-/commit/31018c000bbad5dc3b263b7f452b0795dd153ceb
         # https://github.com/GNOME/gtk/blob/7da4844dcc2fb2a35457fc4e251c504c8f3d0206/gdk/wayland/gdkseat-wayland.c#L4390
         ActionChains(self.driver).send_keys(Keys.SPACE).perform()
-        spin_glib_main_loop()
+        SpinThread.spin()
         if clipboard_mode == 0:
             clipboard = window.get_display().get_clipboard()  # Clipboard
         else:
             clipboard = window.get_display().get_primary_clipboard()  # Selection
         self.assertTrue(clipboard.set_content(content))
-        spin_glib_main_loop()
+        SpinThread.spin()
 
         window.set_visible(False)
-        spin_glib_main_loop()
+        SpinThread.spin()
 
     def take_screenshot(self) -> str:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -268,15 +340,14 @@ class ClipboardTest(unittest.TestCase):
             self.driver.get_screenshot_as_file(saved_image_path)
             return base64.b64encode(Gdk.Texture.new_from_filename(saved_image_path).save_to_png_bytes().get_data()).decode()
 
-    def test_3_bug487843_bug466414_empty_clip_crash(self) -> None:
+    def test_4_bug487843_bug466414_empty_clip_crash(self) -> None:
         """
         When "Text selection - Always save in history" is enabled, a clip with empty text can crash klipper.
         @see https://bugs.kde.org/show_bug.cgi?id=487843
         @see https://bugs.kde.org/show_bug.cgi?id=466414
         """
         # Enable "Text selection - Always save in history" to test the two bugs
-        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["false", "true"])
-        self.driver.find_element(AppiumBy.NAME, "Fushan Wen")
+        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["false", "true"], True)
 
         content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes("", "utf-8")))
         # Clip data from Firefox have additional mime types, which cause the crash
@@ -290,7 +361,7 @@ class ClipboardTest(unittest.TestCase):
         # self.assertEqual(self.driver.get_clipboard_text(), new_text) Broken in CI
         self.driver.find_element(AppiumBy.NAME, new_text)  # Still alive
 
-    def test_4_ignore_image(self) -> None:
+    def test_5_ignore_image(self) -> None:
         """
         When `IgnoreImages` is set to false, the clipboard should save images.
         """
@@ -324,4 +395,5 @@ class ClipboardTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    logging.getLogger().setLevel(logging.INFO)
     unittest.main()
