@@ -128,7 +128,7 @@ Menu {
     }
 
     model: KItemModels.KSortFilterProxyModel {
-        sourceModel: clipboardSource.models.clipboard
+        sourceModel: historyModel
         filterRoleName: "DisplayRole"
         filterRegularExpression: RegExp(filter.text, "i")
     }

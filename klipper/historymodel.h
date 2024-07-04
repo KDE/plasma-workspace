@@ -11,9 +11,11 @@
 #include <QRecursiveMutex>
 #include <QTimer>
 
+#include "klipper_export.h"
+
 class HistoryItem;
 
-class HistoryModel : public QAbstractListModel
+class KLIPPER_EXPORT HistoryModel : public QAbstractListModel
 {
     Q_OBJECT
 public:

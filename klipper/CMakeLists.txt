@@ -27,41 +27,47 @@ configure_file(config-klipper.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-klipper
 
 kconfig_add_kcfg_files(libklipper_common_SRCS klippersettings.kcfgc)
 
-add_library(libklipper_common_static STATIC ${libklipper_common_SRCS})
-set_property(TARGET libklipper_common_static PROPERTY POSITION_INDEPENDENT_CODE ON)
-target_link_libraries(libklipper_common_static
+add_library(klipper SHARED ${libklipper_common_SRCS})
+generate_export_header(klipper)
+target_link_libraries(klipper
     Qt::Concurrent
-    Qt::Widgets
     Qt::DBus
+    Qt::Widgets
     KF6::ConfigGui
     KF6::CoreAddons
-    KF6::DBusAddons
     KF6::GuiAddons
     KF6::GlobalAccel
-    KF6::KIOWidgets
-    KF6::Notifications
-    KF6::Service
-    KF6::Prison
-    KF6::TextWidgets
-    KF6::WindowSystem
-    KF6::WidgetsAddons
-    KF6::XmlGui
-    Plasma::KWaylandClient
     KF6::IconThemes
     KF6::IconWidgets
+    KF6::KIOWidgets
+    KF6::Notifications
+    KF6::Prison
+    KF6::Service
+    KF6::TextWidgets
+    KF6::WidgetsAddons
+    KF6::WindowSystem
+    KF6::XmlGui
+    Plasma::KWaylandClient
     Wayland::Client
-    ${ZLIB_LIBRARY})
+    ${ZLIB_LIBRARY}
+)
 
 if (HAVE_X11)
-    target_link_libraries(libklipper_common_static XCB::XCB)
-    target_link_libraries(libklipper_common_static Qt::GuiPrivate)
+    target_link_libraries(klipper Qt::GuiPrivate XCB::XCB)
 endif()
+
+set_target_properties(klipper PROPERTIES
+                      VERSION ${PROJECT_VERSION}
+                      SOVERSION ${PROJECT_VERSION_MAJOR})
+install(TARGETS klipper ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+
+add_subdirectory(declarative)
 
 # Plasma Data Engine
 set(plasma_engine_clipboard_SRCS clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
 kcoreaddons_add_plugin(plasma_engine_clipboard SOURCES ${plasma_engine_clipboard_SRCS} INSTALL_NAMESPACE "plasma5support/dataengine")
 target_link_libraries(plasma_engine_clipboard
-    libklipper_common_static
+    klipper
     Plasma::Plasma5Support
 )
 

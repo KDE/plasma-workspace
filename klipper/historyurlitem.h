@@ -8,11 +8,12 @@
 #include <kurlmimedata.h>
 
 #include "historyitem.h"
+#include "klipper_export.h"
 
 /**
  * An URL entry in the clipboard history.
  */
-class HistoryURLItem : public HistoryItem
+class KLIPPER_EXPORT HistoryURLItem : public HistoryItem
 {
 public:
     HistoryURLItem(const QList<QUrl> &urls, const KUrlMimeData::MetaDataMap &metaData, bool cut);

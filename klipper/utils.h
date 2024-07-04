@@ -8,7 +8,9 @@
 
 #include <QString>
 
-class Utils
+#include "klipper_export.h"
+
+class KLIPPER_EXPORT Utils
 {
 public:
     /**

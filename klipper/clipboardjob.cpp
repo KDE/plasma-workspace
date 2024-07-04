@@ -10,11 +10,13 @@
 #include "historystringitem.h"
 #include "klipper.h"
 
-#include "klipper_debug.h"
 #include <KIO/PreviewJob>
 #include <QIcon>
+#include <QLoggingCategory>
 
 #include <Prison/Barcode>
+
+Q_LOGGING_CATEGORY(KLIPPER_LOG, "org.kde.klipper", QtInfoMsg)
 
 const static QString s_iconKey = QStringLiteral("icon");
 const static QString s_previewKey = QStringLiteral("preview");

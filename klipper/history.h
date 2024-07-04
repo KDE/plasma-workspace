@@ -6,16 +6,19 @@
 */
 #pragma once
 
+#include <memory>
+
 #include <QByteArray>
 #include <QHash>
 #include <QObject>
-#include <memory>
+
+#include "klipper_export.h"
 
 class HistoryItem;
 class HistoryModel;
 class QAction;
 
-class History : public QObject
+class KLIPPER_EXPORT History : public QObject
 {
     Q_OBJECT
 public:

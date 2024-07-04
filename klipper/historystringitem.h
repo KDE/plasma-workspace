@@ -8,11 +8,12 @@
 #include <QMimeData>
 
 #include "historyitem.h"
+#include "klipper_export.h"
 
 /**
  * A string entry in the clipboard history.
  */
-class HistoryStringItem : public HistoryItem
+class KLIPPER_EXPORT HistoryStringItem : public HistoryItem
 {
 public:
     explicit HistoryStringItem(const QString &data);

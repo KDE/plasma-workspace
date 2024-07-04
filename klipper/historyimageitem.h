@@ -7,11 +7,12 @@
 #pragma once
 
 #include "historyitem.h"
+#include "klipper_export.h"
 
 /**
  * A image entry in the clipboard history.
  */
-class HistoryImageItem : public HistoryItem
+class KLIPPER_EXPORT HistoryImageItem : public HistoryItem
 {
 public:
     explicit HistoryImageItem(const QImage &data);

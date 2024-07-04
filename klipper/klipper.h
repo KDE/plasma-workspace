@@ -15,6 +15,7 @@
 
 #include <KSharedConfig>
 
+#include "klipper_export.h"
 #include "urlgrabber.h"
 
 class KToggleAction;
@@ -38,7 +39,7 @@ class PlasmaShell;
 }
 }
 
-class Klipper : public QObject
+class KLIPPER_EXPORT Klipper : public QObject
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.klipper.klipper")

@@ -14,6 +14,8 @@
 
 #include <KSystemClipboard>
 
+#include "klipper_export.h"
+
 class KSystemClipboard;
 class HistoryItem;
 
@@ -50,7 +52,7 @@ private:
 /**
  * This class filters out invalid data from KSystemClipboard, and only emits newClipData when the data is valid.
  */
-class SystemClipboard : public QObject
+class KLIPPER_EXPORT SystemClipboard : public QObject
 {
     Q_OBJECT
 

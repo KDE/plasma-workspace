@@ -5,11 +5,14 @@
 */
 #pragma once
 
-#include <QHash>
-#include <QStringList>
 #include <memory>
 
+#include <QHash>
+#include <QStringList>
+
 #include <KSharedConfig>
+
+#include "klipper_export.h"
 
 class History;
 class HistoryItem;
@@ -23,7 +26,7 @@ class ClipAction;
 struct ClipCommand;
 typedef QList<ClipAction *> ActionList;
 
-class URLGrabber : public QObject
+class KLIPPER_EXPORT URLGrabber : public QObject
 {
     Q_OBJECT
 

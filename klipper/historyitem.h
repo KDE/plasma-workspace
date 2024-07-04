@@ -7,6 +7,8 @@
 
 #include <QPixmap>
 
+#include "klipper_export.h"
+
 class HistoryModel;
 class QString;
 class QMimeData;
@@ -25,7 +27,7 @@ enum class HistoryItemType {
 /**
  * An entry in the clipboard history.
  */
-class HistoryItem
+class KLIPPER_EXPORT HistoryItem
 {
 public:
     explicit HistoryItem(const QByteArray &uuid);

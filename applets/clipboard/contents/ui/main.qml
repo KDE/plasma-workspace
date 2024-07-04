@@ -15,6 +15,8 @@ import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 
+import org.kde.plasma.private.clipboard 0.1 as Private
+
 PlasmoidItem {
     id: main
 
@@ -100,6 +102,10 @@ PlasmoidItem {
                 clipboardSource.editing = false;
             });
         }
+    }
+
+    Private.HistoryModel {
+        id: historyModel
     }
 
     fullRepresentation: PlasmaExtras.Representation {
