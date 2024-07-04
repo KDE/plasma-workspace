@@ -289,7 +289,7 @@ bool HistoryModel::saveHistory(bool empty)
     QDataStream history_stream(&data, QIODevice::WriteOnly);
     history_stream << KLIPPER_VERSION_STRING; // const char*
 
-    if (!empty) {
+    if (!empty && !m_items.isEmpty()) {
         HistoryItemPtr item = m_items[0];
         if (item) {
             do {

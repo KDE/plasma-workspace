@@ -684,7 +684,7 @@ void Klipper::slotAskClearHistory()
                                                        KMessageBox::Dangerous);
     if (clearHist == KMessageBox::Continue) {
         history()->slotClear();
-        m_historyModel->saveHistory();
+        m_historyModel->saveHistory(true);
     }
 }
 
