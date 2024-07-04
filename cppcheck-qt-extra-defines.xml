@@ -3,8 +3,8 @@
 <def format="2">
    <define name="Q_DISABLE_COPY_MOVE(C)" value="C(C&amp;) = delete; C&amp; operator=(const C&amp;) = delete; C(C&&amp;) = delete;C&amp; operator=(C&&amp;) = delete;"/>
    <define name="Q_SLOT" value=""/>
-   <define name="Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(containingClass, type, name, initialvalue, signal)" value=""/>
-   <define name="Q_OBJECT_BINDABLE_PROPERTY(containingClass, type, name, signal)" value=""/>
+   <define name="Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(containingClass, type, name, ...)" value=""/>
+   <define name="Q_OBJECT_BINDABLE_PROPERTY(containingClass, type, ...)" value=""/>
 </def>
 
 
