@@ -53,7 +53,7 @@ class KCMUsersTest(unittest.TestCase):
         """
         Tests the KCM can be opened
         """
-        self.driver.find_element(AppiumBy.NAME, "Add New")
+        self.driver.find_element(AppiumBy.NAME, "Add New…")
         self.driver.find_element(AppiumBy.NAME, "Name:")
         self.driver.find_element(AppiumBy.NAME, "Change Password")
         self.driver.find_element(AppiumBy.NAME, "Delete User…")
