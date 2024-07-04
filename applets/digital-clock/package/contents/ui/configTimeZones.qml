@@ -163,6 +163,8 @@ KCMUtils.ScrollViewKCM {
         }
     }
 
+    // Re-add separator line between footer and list view
+    extraFooterTopPadding: true
     footer: ColumnLayout {
         spacing: Kirigami.Units.smallSpacing
 
