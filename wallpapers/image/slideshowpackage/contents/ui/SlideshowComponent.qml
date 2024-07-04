@@ -206,8 +206,9 @@ ColumnLayout {
                         text: i18nd("plasma_wallpaper_org.kde.image", "Folders")
                         actions: [
                             Kirigami.Action {
-                                icon.name: "folder-add-symbolic"
+                                icon.name: "list-add-symbolic"
                                 text: i18ndc("plasma_wallpaper_org.kde.image", "@action button the thing being added is a folder", "Add…")
+                                Accessible.name: i18ndc("plasma_wallpaper_org.kde.image", "@action:button", "Add Folder…")
                                 onTriggered: root.openChooserDialog()
                             }
                         ]
