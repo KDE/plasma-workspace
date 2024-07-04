@@ -91,3 +91,7 @@ RuntimeDependencies:
 Options:
   ctest-arguments: '--repeat until-pass:5'
   require-passing-tests-on: [ '@all' ]
+  cppcheck-arguments:
+   - --enable=warning,style,performance
+  cppcheck-ignore-files:
+   - autotests
