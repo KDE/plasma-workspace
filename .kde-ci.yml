@@ -93,5 +93,6 @@ Options:
   require-passing-tests-on: [ '@all' ]
   cppcheck-arguments:
    - --enable=warning,style,performance
+   - --library=cppcheck-qt-extra-defines.xml
   cppcheck-ignore-files:
    - autotests
