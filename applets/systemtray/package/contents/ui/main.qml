@@ -40,8 +40,9 @@ ContainmentItem {
         // We need all the plasmoiditems to be there for correct working of shortcuts.
         // Instantiators create the plasmoiditems: ensure this is done after
         // this containmentitem actually  exists so they can be immediately parented properly
-        activeInstantiator.model = activeModel
-        hiddenInstantiator.model = hiddenModel
+        // set active and not the model, as this wil lcause an assert deep in Qt
+        activeInstantiator.active = true;
+        hiddenInstantiator.active = true;
     }
 
     KItemModels.KSortFilterProxyModel {
@@ -66,6 +67,10 @@ ContainmentItem {
 
     Instantiator {
         id: hiddenInstantiator
+        // It's important that those are inactive at creation time
+        // to not create plasmoiditems too soon
+        active: false
+        model: hiddenModel
         delegate: Connections {
             required property QtObject applet
             required property int row
@@ -80,6 +85,8 @@ ContainmentItem {
 
     Instantiator {
         id: activeInstantiator
+        active: false
+        model:activeModel
         delegate: Connections {
             required property QtObject applet
             required property int row
