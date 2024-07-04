@@ -115,7 +115,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     m_clearHistoryAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
     m_clearHistoryAction->setText(i18nc("@action:inmenu", "C&lear Clipboard History"));
     KGlobalAccel::setGlobalShortcut(m_clearHistoryAction, QKeySequence());
-    connect(m_clearHistoryAction, &QAction::triggered, this, &Klipper::slotAskClearHistory);
+    connect(m_clearHistoryAction, &QAction::triggered, m_historyModel.get(), &HistoryModel::clearHistory);
 
     QString CONFIGURE = QStringLiteral("configure");
     m_configureAction = m_collection->addAction(CONFIGURE);
@@ -226,7 +226,7 @@ void Klipper::clearClipboardContents()
 void Klipper::clearClipboardHistory()
 {
     updateTimestamp();
-    history()->slotClear();
+    m_historyModel->clear();
     saveSession();
 }
 
@@ -370,36 +370,6 @@ void Klipper::slotConfigure()
         }
     });
     dlg->show();
-}
-
-void Klipper::slotQuit()
-{
-    // If the menu was just opened, likely the user
-    // selected quit by accident while attempting to
-    // click the Klipper icon.
-    if (m_showTimer.elapsed() < 300) {
-        return;
-    }
-
-    saveSession();
-    int autoStart = KMessageBox::questionTwoActionsCancel(nullptr,
-                                                          i18n("Should Klipper start automatically when you login?"),
-                                                          i18n("Automatically Start Klipper?"),
-                                                          KGuiItem(i18n("Start")),
-                                                          KGuiItem(i18n("Do Not Start")),
-                                                          KStandardGuiItem::cancel(),
-                                                          QStringLiteral("StartAutomatically"));
-
-    KConfigGroup config(KSharedConfig::openConfig(), QStringLiteral("General"));
-    if (autoStart == KMessageBox::PrimaryAction) {
-        config.writeEntry("AutoStart", true);
-    } else if (autoStart == KMessageBox::SecondaryAction) {
-        config.writeEntry("AutoStart", false);
-    } else // cancel chosen don't quit
-        return;
-    config.sync();
-
-    qApp->quit();
 }
 
 void Klipper::slotIgnored(QClipboard::Mode mode)
@@ -671,21 +641,6 @@ void Klipper::showBarcode(std::shared_ptr<const HistoryItem> item)
     vBox->addWidget(buttons);
     dlg->adjustSize();
     dlg->open();
-}
-
-void Klipper::slotAskClearHistory()
-{
-    int clearHist = KMessageBox::warningContinueCancel(nullptr,
-                                                       i18n("Do you really want to clear and delete the entire clipboard history?"),
-                                                       i18n("Clear Clipboard History"),
-                                                       KStandardGuiItem::del(),
-                                                       KStandardGuiItem::cancel(),
-                                                       QStringLiteral("klipperClearHistoryAskAgain"),
-                                                       KMessageBox::Dangerous);
-    if (clearHist == KMessageBox::Continue) {
-        history()->slotClear();
-        m_historyModel->saveHistory(true);
-    }
 }
 
 void Klipper::slotCycleNext()

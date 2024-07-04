@@ -18,4 +18,9 @@ DeclarativeHistoryModel::~DeclarativeHistoryModel()
 {
 }
 
+void DeclarativeHistoryModel::clearHistory()
+{
+    m_model->clearHistory();
+}
+
 #include "moc_declarativehistorymodel.cpp"

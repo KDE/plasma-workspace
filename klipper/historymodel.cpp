@@ -15,6 +15,9 @@
 #include <QStandardPaths>
 #include <QtConcurrentRun>
 
+#include <KLocalizedString>
+#include <KMessageBox>
+
 #include "config-klipper.h"
 #include "historyitem.h"
 #include "klipper_debug.h"
@@ -55,6 +58,21 @@ void HistoryModel::clear()
     beginResetModel();
     m_items.clear();
     endResetModel();
+}
+
+void HistoryModel::clearHistory()
+{
+    int clearHist = KMessageBox::warningContinueCancel(nullptr,
+                                                       i18n("Do you really want to clear and delete the entire clipboard history?"),
+                                                       i18n("Clear Clipboard History"),
+                                                       KStandardGuiItem::del(),
+                                                       KStandardGuiItem::cancel(),
+                                                       QStringLiteral("klipperClearHistoryAskAgain"),
+                                                       KMessageBox::Dangerous);
+    if (clearHist == KMessageBox::Continue) {
+        clear();
+        startSaveHistoryTimer();
+    }
 }
 
 void HistoryModel::setMaxSize(int size)

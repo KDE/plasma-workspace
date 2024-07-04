@@ -102,11 +102,6 @@ public Q_SLOTS:
      */
     void slotMoveToTop(const QByteArray &uuid);
 
-    /**
-     * Clear history
-     */
-    void slotClear();
-
 Q_SIGNALS:
     void changed();
 

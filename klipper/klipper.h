@@ -124,7 +124,6 @@ public Q_SLOTS:
     void slotReceivedEmptyClipboard(QClipboard::Mode mode);
 
     void slotPopupMenu();
-    void slotAskClearHistory();
     void setURLGrabberEnabled(bool);
 
 protected Q_SLOTS:
@@ -137,7 +136,6 @@ private Q_SLOTS:
 
     void slotHistoryChanged();
 
-    void slotQuit();
     void slotStartShowTimer();
 
     void loadSettings();

@@ -116,7 +116,7 @@ Menu {
                 text: main.clearHistoryAction.text
 
                 onClicked: {
-                    clipboardSource.service("", "clearHistory")
+                    historyModel.clearHistory();
                     filter.clear()
                 }
 

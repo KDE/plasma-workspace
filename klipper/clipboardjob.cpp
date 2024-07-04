@@ -7,6 +7,7 @@
 #include "clipboardjob.h"
 #include "history.h"
 #include "historyitem.h"
+#include "historymodel.h"
 #include "historystringitem.h"
 #include "klipper.h"
 
@@ -27,6 +28,7 @@ const static QString s_urlKey = QStringLiteral("url");
 ClipboardJob::ClipboardJob(Klipper *klipper, const QString &destination, const QString &operation, const QVariantMap &parameters, QObject *parent)
     : Plasma5Support::ServiceJob(destination, operation, parameters, parent)
     , m_klipper(klipper)
+    , m_model(HistoryModel::self())
 {
 }
 
@@ -35,7 +37,7 @@ void ClipboardJob::start()
     const QString operation = operationName();
     // first check for operations not needing an item
     if (operation == QLatin1String("clearHistory")) {
-        m_klipper->slotAskClearHistory();
+        m_model->clearHistory();
         setResult(true);
         return;
     } else if (operation == QLatin1String("configureKlipper")) {

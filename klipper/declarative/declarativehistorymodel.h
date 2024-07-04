@@ -23,6 +23,8 @@ public:
     explicit DeclarativeHistoryModel(QObject *parent = nullptr);
     ~DeclarativeHistoryModel() override;
 
+    Q_INVOKABLE void clearHistory();
+
 private:
     std::shared_ptr<HistoryModel> m_model;
 };

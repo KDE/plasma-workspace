@@ -5,6 +5,7 @@
 */
 
 #include "../history.h"
+#include "../historymodel.h"
 #include "../historystringitem.h"
 // Qt
 #include <QObject>
@@ -202,7 +203,7 @@ void HistoryTest::testClear()
     QVERIFY(history->empty());
     QVERIFY(!history->topIsUserSelected());
 
-    history->slotClear();
+    HistoryModel::self()->clear();
     QVERIFY(history->empty());
 
     // insert some items
@@ -217,7 +218,7 @@ void HistoryTest::testClear()
     // and clear
     QSignalSpy topSpy(history.get(), &History::topChanged);
     QVERIFY(topSpy.isEmpty());
-    history->slotClear();
+    HistoryModel::self()->clear();
     QVERIFY(history->empty());
     QVERIFY(!history->first());
     QVERIFY(!history->topIsUserSelected());
@@ -239,7 +240,7 @@ void HistoryTest::testFind()
     const QByteArray fooUuid = QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1);
     QCOMPARE(history->find(fooUuid)->uuid(), fooUuid);
 
-    history->slotClear();
+    HistoryModel::self()->clear();
     QVERIFY(!history->find(fooUuid));
 }
 

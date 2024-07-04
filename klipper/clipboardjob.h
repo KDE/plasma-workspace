@@ -9,6 +9,7 @@
 
 class KFileItem;
 class Klipper;
+class HistoryModel;
 
 class ClipboardJob : public Plasma5Support::ServiceJob
 {
@@ -22,4 +23,5 @@ public:
 private:
     void iconResult(const KFileItem &item);
     Klipper *m_klipper;
+    std::shared_ptr<HistoryModel> m_model;
 };

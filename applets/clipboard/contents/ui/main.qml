@@ -39,7 +39,7 @@ PlasmoidItem {
     }
 
     function action_clearHistory() {
-        clipboardSource.service("", "clearHistory")
+        historyModel.clearHistory();
         clearSearchField()
     }
 
@@ -62,7 +62,7 @@ PlasmoidItem {
             icon.name: "edit-clear-history"
             visible: !main.isClipboardEmpty && !main.editing
             onTriggered: {
-                clipboardSource.service("", "clearHistory")
+                historyModel.clearHistory();
                 clearSearchField()
             }
         }

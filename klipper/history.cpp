@@ -103,11 +103,6 @@ void History::remove(const HistoryItemConstPtr &newItem)
     m_model->remove(newItem->uuid());
 }
 
-void History::slotClear()
-{
-    m_model->clear();
-}
-
 void History::slotMoveToTop(QAction *action)
 {
     QByteArray uuid = action->data().toByteArray();

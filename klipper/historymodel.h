@@ -42,7 +42,11 @@ public:
     bool displayImages() const;
     void setDisplayImages(bool show);
 
+    /**
+     * Clear history
+     */
     void clear();
+    void clearHistory();
     void moveToTop(const QByteArray &uuid);
     void moveTopToBack();
     void moveBackToTop();
