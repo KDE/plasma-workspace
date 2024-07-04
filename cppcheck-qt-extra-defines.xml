@@ -5,6 +5,9 @@
    <define name="Q_SLOT" value=""/>
    <define name="Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(containingClass, type, name, ...)" value=""/>
    <define name="Q_OBJECT_BINDABLE_PROPERTY(containingClass, type, ...)" value=""/>
+   <!--to kde's-->
+   <define name="KCONFIGGROUP_DECLARE_ENUM_QOBJECT(Class, Enum)" value=""/>
+   <define name="KCONFIGGROUP_DECLARE_FLAGS_QOBJECT(Class, Enum)" value=""/>
 </def>
 
 
