@@ -5,20 +5,21 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2013, 2014, 2015, 2019, 2020.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2016, 2018, 2019, 2020, 2021, 2022.
 # Aracele Torres <aracele@kde.org>, 2017.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 02:35+0000\n"
-"PO-Revision-Date: 2022-03-04 10:19-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2024-07-03 22:14-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #: package/contents/ui/DeviceItem.qml:188
 #, kde-format
@@ -43,8 +44,7 @@ msgid "Removing…"
 msgstr "Removendo..."
 
 #: package/contents/ui/DeviceItem.qml:198
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Não desconecte ainda! Arquivos ainda estão sendo transferidos..."
 
@@ -133,83 +133,78 @@ msgstr "Mostrar mensagem quando um novo dispositivo é conectado"
 #: plugin/ksolidnotify.cpp:192
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Status do dispositivo"
 
 #: plugin/ksolidnotify.cpp:193
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "O dispositivo pode, agora, ser removido com segurança"
 
 #: plugin/ksolidnotify.cpp:197
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Este dispositivo pode, agora, ser removido com segurança."
 
 #: plugin/ksolidnotify.cpp:204
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Neste momento é seguro remover este dispositivo."
+msgstr "Você não está autorizado a montar este dispositivo."
 
 #: plugin/ksolidnotify.cpp:207
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Neste momento é seguro remover este dispositivo."
+msgstr "Você não está autorizado a remover este dispositivo."
 
 #: plugin/ksolidnotify.cpp:210
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Clique para ejetar o disco."
+msgstr "Você não está autorizado a ejetar este disco."
 
 #: plugin/ksolidnotify.cpp:217
 #, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr ""
+msgstr "Não foi possível montar o dispositivo, ele ainda está ocupado."
 
 #: plugin/ksolidnotify.cpp:248
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Clique para acessar este dispositivo a partir de outros aplicativos."
+msgstr ""
+"Um ou mais arquivos deste dispositivo estão abertos dentro de um aplicativo."
 
 #: plugin/ksolidnotify.cpp:250
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
-"Clique para acessar este dispositivo a partir de outros aplicativos."
+"Um ou mais arquivos deste dispositivo estão abertos dentro do aplicativo "
+"\"%2\"."
 msgstr[1] ""
-"Clique para acessar este dispositivo a partir de outros aplicativos."
+"Um ou mais arquivos deste dispositivo estão abertos dentro dos aplicativos "
+"%2."
 
 #: plugin/ksolidnotify.cpp:253
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/ksolidnotify.cpp:271
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Clique para remover este dispositivo com segurança."
+msgstr "Não foi possível montar o dispositivo."
 
 #: plugin/ksolidnotify.cpp:274
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Clique para remover este dispositivo com segurança."
+msgstr "Não foi possível remover o dispositivo."
 
 #: plugin/ksolidnotify.cpp:277
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Clique para ejetar o disco."
+msgstr "Não foi possível ejetar o disco."
 
 #~ msgid "Show:"
 #~ msgstr "Mostrar:"
