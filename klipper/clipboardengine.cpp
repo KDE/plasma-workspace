@@ -11,6 +11,8 @@
 #include "historymodel.h"
 #include "klipper.h"
 
+#include <QCoreApplication>
+
 static const QString s_clipboardSourceName = QStringLiteral("clipboard");
 static const QString s_barcodeKey = QStringLiteral("supportsBarcodes");
 
@@ -38,7 +40,9 @@ ClipboardEngine::ClipboardEngine(QObject *parent)
 
 ClipboardEngine::~ClipboardEngine()
 {
-    m_klipper->saveClipboardHistory();
+    if (!QCoreApplication::closingDown()) {
+        m_klipper->saveClipboardHistory();
+    }
 }
 
 Plasma5Support::Service *ClipboardEngine::serviceForSource(const QString &source)

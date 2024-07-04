@@ -178,6 +178,9 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
                 m_plasmashell = registry->createPlasmaShell(name, version);
             }
         });
+        connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, registry, [registry] {
+            delete registry; // Avoid freeing resource when gui is deleted
+        });
         registry->create(connection);
         registry->setup();
     }

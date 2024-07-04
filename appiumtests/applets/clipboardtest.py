@@ -207,6 +207,11 @@ class ClipboardTest(unittest.TestCase):
         # The first item becomes the current clipboard item
         self.assertEqual(self.driver.get_clipboard_text(), "Fushan Wen")
 
+        item = self.driver.find_element(AppiumBy.NAME, "Fushan Wen")
+        self.driver.find_element(AppiumBy.NAME, "Clear History").click()
+        self.driver.find_element(AppiumBy.NAME, "Delete").click()
+        WebDriverWait(self.driver, 5).until_not(lambda _: item.is_displayed())
+
     def update_config_and_restart_clipboard(self, group: str | list[str], key: str | list[str], new_value: str | list[str], reset_history: bool = False) -> None:
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
         for _ in range(10):
@@ -295,7 +300,7 @@ class ClipboardTest(unittest.TestCase):
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
-    def test_5_sync_selection_with_ignore_selection(self) -> None:
+    def test_6_sync_selection_with_ignore_selection(self) -> None:
         """
         When `SyncClipboards` is true but `IgnoreSelection` is true, the clipboard should still sync clipboard and selection.
         """
