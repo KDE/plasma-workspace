@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-28 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2024-03-05 05:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -500,55 +500,55 @@ msgstr "ხატულა:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:94
+#: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ავტომატური ქმედების მხტუნარა მენიუ"
 
-#: klipper.cpp:130
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&ბუფერის ისტორიის გასუფთავება"
 
-#: klipper.cpp:137
+#: klipper.cpp:123
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper-ის &მორგება…"
 
-#: klipper.cpp:141
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "მიმდინარე ბუფერზე ქმედების ხელით გაშვება"
 
-#: klipper.cpp:148
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&ბარკოდის ჩვენება…"
 
-#: klipper.cpp:157
+#: klipper.cpp:143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ისტორიის შემდეგი ჩანაწერი"
 
-#: klipper.cpp:162
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ისტორიის წინა ჩანაწერი"
 
-#: klipper.cpp:169
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "თაგუნას მდგომარეობაზე მყოფი ბუფერის ელემენტების ჩვენება"
 
-#: klipper.cpp:459
+#: klipper.cpp:338
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -558,57 +558,57 @@ msgstr ""
 "URL მოქმედებების ჩართვა მოგვიანებით ბუფერდის ვაშლის კონფიგურაციის ფანჯრის "
 "<interface>მოქმედებების</interface> გვერდზე"
 
-#: klipper.cpp:507
+#: klipper.cpp:386
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "გაეშვას Klipper-ი ავტომატურად, როცა შეხვალთ?"
 
-#: klipper.cpp:508
+#: klipper.cpp:387
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "გავუშვა Klipper-ი ავტომატურად?"
 
-#: klipper.cpp:509
+#: klipper.cpp:388
 #, kde-format
 msgid "Start"
 msgstr "გაშვება"
 
-#: klipper.cpp:510
+#: klipper.cpp:389
 #, kde-format
 msgid "Do Not Start"
 msgstr "არ გაშვება"
 
-#: klipper.cpp:759
+#: klipper.cpp:638
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "მობილური შტრიხკოდი"
 
-#: klipper.cpp:800
+#: klipper.cpp:679
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "მართლა გნებავთ ბუფერის ისტორიის სრულად გასუფთავება და წაშლა?"
 
-#: klipper.cpp:801
+#: klipper.cpp:680
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "ბუფერის ისტორიის გასუფთავება"
 
-#: klipper.cpp:817 klipper.cpp:826
+#: klipper.cpp:696 klipper.cpp:705
 #, kde-format
 msgid "Clipboard history"
 msgstr "ბაფერის ისტორია"
 
-#: klipper.cpp:843
+#: klipper.cpp:722
 #, kde-format
 msgid "up"
 msgstr "მაღლა"
 
-#: klipper.cpp:850
+#: klipper.cpp:729
 #, kde-format
 msgid "current"
 msgstr "მიმდინარე"
 
-#: klipper.cpp:857
+#: klipper.cpp:736
 #, kde-format
 msgid "down"
 msgstr "დაბლა"

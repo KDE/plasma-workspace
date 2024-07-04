@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-28 00:40+0000\n"
+"POT-Creation-Date: 2024-07-04 00:40+0000\n"
 "PO-Revision-Date: 2023-08-06 11:28+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -503,55 +503,55 @@ msgstr "Ikona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:94
+#: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatická akcia vyskakovacej ponuky"
 
-#: klipper.cpp:130
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Vyčistiť históriu schránky"
 
-#: klipper.cpp:137
+#: klipper.cpp:123
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Nastaviť Klipper..."
 
-#: klipper.cpp:141
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ručne spustiť akciu na aktuálnej schránke"
 
-#: klipper.cpp:148
+#: klipper.cpp:134
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Zobraziť čiarový kód..."
 
-#: klipper.cpp:157
+#: klipper.cpp:143
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nasledujúca položka histórie"
 
-#: klipper.cpp:162
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Predchádzajúca položka histórie"
 
-#: klipper.cpp:169
+#: klipper.cpp:155
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Zobraziť položky schránky na pozícii myši"
 
-#: klipper.cpp:459
+#: klipper.cpp:338
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -561,57 +561,57 @@ msgstr ""
 "Akcie URL môžete povoliť neskôr na stránke <interface>Akcie</interface> v "
 "konfiguračnom okne appletu Schránka"
 
-#: klipper.cpp:507
+#: klipper.cpp:386
 #, kde-format
 msgid "Should Klipper start automatically when you login?"
 msgstr "Má sa Klipper spúšťať automaticky po prihlásení?"
 
-#: klipper.cpp:508
+#: klipper.cpp:387
 #, kde-format
 msgid "Automatically Start Klipper?"
 msgstr "Automaticky spúšťať Klipper?"
 
-#: klipper.cpp:509
+#: klipper.cpp:388
 #, kde-format
 msgid "Start"
 msgstr "Spustiť"
 
-#: klipper.cpp:510
+#: klipper.cpp:389
 #, kde-format
 msgid "Do Not Start"
 msgstr "Nespustiť"
 
-#: klipper.cpp:759
+#: klipper.cpp:638
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilný čiarový kód"
 
-#: klipper.cpp:800
+#: klipper.cpp:679
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Naozaj chcete vyčistiť a odstrániť celú históriu schránky?"
 
-#: klipper.cpp:801
+#: klipper.cpp:680
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Vyčistiť históriu schránky"
 
-#: klipper.cpp:817 klipper.cpp:826
+#: klipper.cpp:696 klipper.cpp:705
 #, kde-format
 msgid "Clipboard history"
 msgstr "História schránky"
 
-#: klipper.cpp:843
+#: klipper.cpp:722
 #, kde-format
 msgid "up"
 msgstr "hore"
 
-#: klipper.cpp:850
+#: klipper.cpp:729
 #, kde-format
 msgid "current"
 msgstr "aktuálne"
 
-#: klipper.cpp:857
+#: klipper.cpp:736
 #, kde-format
 msgid "down"
 msgstr "dole"
