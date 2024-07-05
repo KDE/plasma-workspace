@@ -720,6 +720,11 @@ void PanelView::updateLayerWindow()
             }
             break;
         }
+        if (containment()) {
+            const QRectF avail = containment()->availableRelativeScreenRect();
+            margins.setTop(std::round(margins.top()) + avail.top());
+            margins.setBottom(margins.bottom() + m_screenToFollow->geometry().height() - std::round(avail.bottom()));
+        }
         if (m_lengthMode == PanelView::LengthMode::FillAvailable) {
             anchors.setFlag(LayerShellQt::Window::AnchorTop);
             anchors.setFlag(LayerShellQt::Window::AnchorBottom);
@@ -1754,7 +1759,7 @@ void PanelView::refreshContainment()
         }
     });
 
-    connect(containment(), &Plasma::Containment::availableRelativeScreenRectChanged, this, &PanelView::resizePanel);
+    connect(containment(), &Plasma::Containment::availableRelativeScreenRectChanged, this, &PanelView::positionAndResizePanel);
 }
 
 void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
