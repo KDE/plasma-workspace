@@ -36,6 +36,9 @@ private:
     void exploreDrive();
     void onNotificationClosed();
 
+    // Only run one check at a time
+    bool m_checking = false;
+
     QString m_path;
     KLocalizedString m_notificationText;
 
