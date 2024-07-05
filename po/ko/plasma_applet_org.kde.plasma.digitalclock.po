@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2024-02-09 19:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -336,12 +336,12 @@ msgid ""
 msgstr ""
 "시간대를 더 추가하면 애플릿 팝업에 표시하거나 시계에 바로 표시할 수 있음"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:176
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "시계 애플릿에서 스크롤할 때 표시되는 시간대 전환"
 
-#: package/contents/ui/configTimeZones.qml:181
+#: package/contents/ui/configTimeZones.qml:183
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -350,13 +350,13 @@ msgstr ""
 "이 기능을 사용해도 시스템 기본 시간대를 변경하지 않습니다. 여행할 때에는 시스"
 "템 기본 시간대를 변경하십시오."
 
-#: package/contents/ui/configTimeZones.qml:206
+#: package/contents/ui/configTimeZones.qml:208
 #, fuzzy, kde-format
 #| msgid "Add More Timezones"
 msgid "Add More Time Zones"
 msgstr "더 많은 시간대 추가"
 
-#: package/contents/ui/configTimeZones.qml:218
+#: package/contents/ui/configTimeZones.qml:220
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. Your local timezone was "
@@ -368,12 +368,12 @@ msgstr ""
 "최소한 하나의 시간대를 선택해야 합니다. 현재 지역 시간대가 자동으로 선택되었"
 "습니다."
 
-#: package/contents/ui/configTimeZones.qml:254
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2(%3)"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

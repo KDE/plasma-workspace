@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2022-08-19 15:36-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -340,12 +340,12 @@ msgstr ""
 "Adicione mais fusos horários para exibir todos eles no miniaplicativo "
 "flutuante ou use um deles para o próprio relógio"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:176
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Mudar o fuso horário exibido rolando sobre o miniaplicativo do relógio"
 
-#: package/contents/ui/configTimeZones.qml:181
+#: package/contents/ui/configTimeZones.qml:183
 #, fuzzy, kde-format
 #| msgid ""
 #| "Note that using a different time zone for the clock does not change the "
@@ -358,13 +358,13 @@ msgstr ""
 "Note que usar um fuso horário diferente para o relógio não altera o fuso "
 "horário local do sistema. Quando você viaja, mude o fuso horário local."
 
-#: package/contents/ui/configTimeZones.qml:206
+#: package/contents/ui/configTimeZones.qml:208
 #, fuzzy, kde-format
 #| msgid "Add More Timezones"
 msgid "Add More Time Zones"
 msgstr "Adicionar mais fusos horários"
 
-#: package/contents/ui/configTimeZones.qml:218
+#: package/contents/ui/configTimeZones.qml:220
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. Your local timezone was "
@@ -376,12 +376,12 @@ msgstr ""
 "Pelo menos um fuso horário precisa ser habilitado. Seu fuso horário local "
 "foi habilitado automaticamente."
 
-#: package/contents/ui/configTimeZones.qml:254
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

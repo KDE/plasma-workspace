@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -340,13 +340,13 @@ msgstr ""
 "Pridajte viac časových pásiem, aby ste ich všetky zobrazili v kontextovom "
 "okne appletu, alebo použite jedno z nich pre samotné hodiny"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:176
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Prepínať zobrazené časové pásmo použitím kolieska myši nad appletom hodín"
 
-#: package/contents/ui/configTimeZones.qml:181
+#: package/contents/ui/configTimeZones.qml:183
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -355,13 +355,13 @@ msgstr ""
 "Použitím tejto funkcie sa nezmení systémové časové pásmo. Keď cestujete, "
 "prepnite namiesto toho systémové časové pásmo."
 
-#: package/contents/ui/configTimeZones.qml:206
+#: package/contents/ui/configTimeZones.qml:208
 #, fuzzy, kde-format
 #| msgid "Add More Timezones"
 msgid "Add More Time Zones"
 msgstr "Pridať ďalšie časové pásma"
 
-#: package/contents/ui/configTimeZones.qml:218
+#: package/contents/ui/configTimeZones.qml:220
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. Your local timezone was "
@@ -373,12 +373,12 @@ msgstr ""
 "Aspoň jedno časové pásmo musí byť povolené. Vaše miestne časové pásmo bolo "
 "povolené automaticky."
 
-#: package/contents/ui/configTimeZones.qml:254
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

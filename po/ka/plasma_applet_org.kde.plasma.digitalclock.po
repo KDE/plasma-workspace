@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2024-05-22 04:45+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -334,14 +334,14 @@ msgstr ""
 "დაამატეთ დროის მეტი საჩვენებელი სარტყელი ან გამოიყენეთ ერთ-ერთი მათგანი, "
 "როგორც საათი"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:176
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "ნაჩვენები დროის სარტყლების შეცვლა თაგუნას ბორბლის საათზე დატრიალებით "
 "შეგიძლიათ"
 
-#: package/contents/ui/configTimeZones.qml:181
+#: package/contents/ui/configTimeZones.qml:183
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -350,12 +350,12 @@ msgstr ""
 "დაიმახსოვრეთ, რომ ამ ფუნქციის გამოყენება არ ცვლის სისტემის ლოკალურ დროის "
 "სარტყელს. მგზავრობისას გადაერთეთ დროის ლოკალურ სარტყელზე."
 
-#: package/contents/ui/configTimeZones.qml:206
+#: package/contents/ui/configTimeZones.qml:208
 #, kde-format
 msgid "Add More Time Zones"
 msgstr "დროის მეტი სარტყლის დამატება"
 
-#: package/contents/ui/configTimeZones.qml:218
+#: package/contents/ui/configTimeZones.qml:220
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
@@ -364,12 +364,12 @@ msgstr ""
 "საჭიროა, ჩართული იყოს დროის ერთი სარტყელი მაინც. თქვენი ლოკალური დროის "
 "სარტყელი ავტომატურად ჩართულია."
 
-#: package/contents/ui/configTimeZones.qml:254
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

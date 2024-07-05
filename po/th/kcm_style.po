@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2010-12-17 16:41+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -220,7 +220,7 @@ msgstr ""
 
 #: ui/main.qml:55
 #, kde-format
-msgid "Configure Icons and Toolbars"
+msgid "Configure Icons and Toolbars…"
 msgstr ""
 
 #: ui/main.qml:73

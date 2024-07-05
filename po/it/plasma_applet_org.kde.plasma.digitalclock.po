@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2024-05-23 02:30+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -333,12 +333,12 @@ msgstr ""
 "Aggiungi più fusi orari per visualizzarli tutti nella finestra a comparsa "
 "dell'applet o utilizzane uno per l'orologio stesso"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:176
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Cambia il fuso orario visualizzato scorrendo sull'applet dell'orologio"
 
-#: package/contents/ui/configTimeZones.qml:181
+#: package/contents/ui/configTimeZones.qml:183
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -347,12 +347,12 @@ msgstr ""
 "L'utilizzo di questa funzionalità non modifica il fuso orario a livello di "
 "sistema. Quando viaggi, cambia invece il fuso orario di sistema."
 
-#: package/contents/ui/configTimeZones.qml:206
+#: package/contents/ui/configTimeZones.qml:208
 #, kde-format
 msgid "Add More Time Zones"
 msgstr "Aggiungi altri fusi orari"
 
-#: package/contents/ui/configTimeZones.qml:218
+#: package/contents/ui/configTimeZones.qml:220
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
@@ -361,12 +361,12 @@ msgstr ""
 "Almeno un fuso orario deve essere abilitato. Il tuo fuso orario locale è "
 "stato abilitato automaticamente."
 
-#: package/contents/ui/configTimeZones.qml:254
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

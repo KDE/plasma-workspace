@@ -2,7 +2,7 @@
 # translation of kcmstyle.po to Slovenian
 # KDEBASE TRANSLATION TO SLOVENIAN LANGUAGE.
 # Copyright (C) 2001,2002, 2003, 2004 Free Software Foundation, Inc.
-# $Id: kcm_style.po 1680767 2024-05-25 01:11:03Z scripty $
+# $Id: kcm_style.po 1683876 2024-07-05 01:11:04Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@amis.net>, 2000.
@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2023-08-03 07:53+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -208,8 +208,9 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Arhiv tem GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:55
-#, kde-format
-msgid "Configure Icons and Toolbars"
+#, fuzzy, kde-format
+#| msgid "Configure Icons and Toolbars"
+msgid "Configure Icons and Toolbars…"
 msgstr "Nastavi ikone in orodne vrstice"
 
 #: ui/main.qml:73

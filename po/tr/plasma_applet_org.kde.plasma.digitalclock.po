@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2024-05-23 01:29+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -334,13 +334,13 @@ msgstr ""
 "Tümünü uygulamanın açılır penceresinde görüntülemek için daha fazla zaman "
 "dilimi ekleyin veya bunlardan birini saatin kendisi için kullanın"
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:176
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Saat uygulaması üzerinde gezinerek görüntülenen zaman dilimini değiştirin"
 
-#: package/contents/ui/configTimeZones.qml:181
+#: package/contents/ui/configTimeZones.qml:183
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -349,12 +349,12 @@ msgstr ""
 "Bu özelliği kullanmak, sistem geneli zaman dilimini değiştirmez. Bunun "
 "yerine yolculuk yaparken sistem geneli zaman dilimine geçin."
 
-#: package/contents/ui/configTimeZones.qml:206
+#: package/contents/ui/configTimeZones.qml:208
 #, kde-format
 msgid "Add More Time Zones"
 msgstr "Daha Fazla Zaman Dilimleri Ekle"
 
-#: package/contents/ui/configTimeZones.qml:218
+#: package/contents/ui/configTimeZones.qml:220
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
@@ -363,12 +363,12 @@ msgstr ""
 "En azından bir zaman dilimi etkinleştirilmelidir. Yerel zaman diliminiz "
 "kendiliğinden etkindir."
 
-#: package/contents/ui/configTimeZones.qml:254
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

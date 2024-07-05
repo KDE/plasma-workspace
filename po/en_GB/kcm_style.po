@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2024-05-17 19:28+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -199,8 +199,9 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:55
-#, kde-format
-msgid "Configure Icons and Toolbars"
+#, fuzzy, kde-format
+#| msgid "Configure Icons and Toolbars"
+msgid "Configure Icons and Toolbars…"
 msgstr "Configure Icons and Toolbars"
 
 #: ui/main.qml:73

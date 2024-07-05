@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2024-03-09 18:13+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -341,12 +341,12 @@ msgstr ""
 "Legg til fleire tidssoner for å visa dei alle i sprettopp­vindauget til skjerm­"
 "elementet, eller bruk éi av dei for klokka."
 
-#: package/contents/ui/configTimeZones.qml:174
+#: package/contents/ui/configTimeZones.qml:176
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Byt vist tidssone ved bruk av musehjulet på klokka"
 
-#: package/contents/ui/configTimeZones.qml:181
+#: package/contents/ui/configTimeZones.qml:183
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -355,13 +355,13 @@ msgstr ""
 "Denne funksjonen endrar ikkje tidssona for heile systemet. Når du reiser, "
 "byt heller den tidssona."
 
-#: package/contents/ui/configTimeZones.qml:206
+#: package/contents/ui/configTimeZones.qml:208
 #, fuzzy, kde-format
 #| msgid "Add More Timezones"
 msgid "Add More Time Zones"
 msgstr "Legg til fleire tidssoner"
 
-#: package/contents/ui/configTimeZones.qml:218
+#: package/contents/ui/configTimeZones.qml:220
 #, fuzzy, kde-format
 #| msgid ""
 #| "At least one time zone needs to be enabled. Your local timezone was "
@@ -372,12 +372,12 @@ msgid ""
 msgstr ""
 "Du må velja minst éi tidssone. Den lokale tidssona di vart automatisk valt."
 
-#: package/contents/ui/configTimeZones.qml:254
+#: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:258
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

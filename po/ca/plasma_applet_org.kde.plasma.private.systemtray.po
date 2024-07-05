@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-05 00:40+0000\n"
 "PO-Revision-Date: 2022-07-25 12:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -92,7 +92,7 @@ msgstr "Sempre ocult"
 msgid "Disabled"
 msgstr "Desactivat"
 
-#: package/contents/ui/ConfigEntries.qml:309
+#: package/contents/ui/ConfigEntries.qml:311
 #, kde-format
 msgid "Always show all entries"
 msgstr "Mostra sempre totes les entrades"
