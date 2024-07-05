@@ -598,23 +598,19 @@ void PanelView::updateLayerWindow()
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
         anchors.setFlag(LayerShellQt::Window::AnchorTop);
-        margins.setTop((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
         edge = LayerShellQt::Window::AnchorTop;
         break;
     case Plasma::Types::LeftEdge:
         anchors.setFlag(LayerShellQt::Window::AnchorLeft);
-        margins.setLeft((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
         edge = LayerShellQt::Window::AnchorLeft;
         break;
     case Plasma::Types::RightEdge:
         anchors.setFlag(LayerShellQt::Window::AnchorRight);
-        margins.setRight((-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - m_floatingness));
         edge = LayerShellQt::Window::AnchorRight;
         break;
     case Plasma::Types::BottomEdge:
     default:
         anchors.setFlag(LayerShellQt::Window::AnchorBottom);
-        margins.setBottom((-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - m_floatingness));
         edge = LayerShellQt::Window::AnchorBottom;
         break;
     }
@@ -718,6 +714,7 @@ void PanelView::positionAndResizePanel()
 
     updateLayerWindow();
     m_internalResize = true;
+
     setGeometry(geom);
     updateMask();
     Q_EMIT geometryChanged();
@@ -726,21 +723,16 @@ void PanelView::positionAndResizePanel()
     KWindowEffects::slideWindow(this, slideLocation(), -1);
 }
 
-QRect PanelView::geometryByDistance(int distance) const
-{
-    return geometryByDistance(distance, m_floatingness);
-}
-
 QRect PanelView::dogdeGeometryByDistance(int distance) const
 {
     if (!containment() || !m_screenToFollow) {
         return QRect();
     }
-    const QRect dodgeGeometry = geometryByDistance(distance, m_floating ? 1 : 0);
+    const QRect dodgeGeometry = geometryByDistance(distance);
     return dodgeGeometry & m_screenToFollow->geometry();
 }
 
-QRect PanelView::geometryByDistance(int distance, double floatingness) const
+QRect PanelView::geometryByDistance(int distance) const
 {
     if (!containment() || !m_screenToFollow) {
         return QRect();
@@ -783,20 +775,20 @@ QRect PanelView::geometryByDistance(int distance, double floatingness) const
 
     switch (containment()->location()) {
     case Plasma::Types::TopEdge:
-        r.moveTop(screenGeometry.top() + distance + (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - floatingness));
+        r.moveTop(screenGeometry.top() + distance);
         break;
 
     case Plasma::Types::LeftEdge:
-        r.moveLeft(screenGeometry.left() + distance + (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - floatingness));
+        r.moveLeft(screenGeometry.left() + distance);
         break;
 
     case Plasma::Types::RightEdge:
-        r.moveRight(screenGeometry.right() - distance - (-m_rightFloatingPadding - m_leftFloatingPadding) * (1 - floatingness));
+        r.moveRight(screenGeometry.right() - distance);
         break;
 
     case Plasma::Types::BottomEdge:
     default:
-        r.moveBottom(screenGeometry.bottom() - distance - (-m_topFloatingPadding - m_bottomFloatingPadding) * (1 - floatingness));
+        r.moveBottom(screenGeometry.bottom() - distance);
     }
     return r;
 }
@@ -1351,15 +1343,18 @@ QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
 
 void PanelView::updateMask()
 {
+    if (!containment()) {
+        return;
+    }
+
     if (m_backgroundHints == Plasma::Types::NoBackground) {
         KWindowEffects::enableBlurBehind(this, false);
         KWindowEffects::enableBackgroundContrast(this, false);
         setMask(QRegion());
     } else {
         QRegion mask;
-
         QQuickItem *rootObject = this->rootObject();
-        QRect screenPanelRect = geometry().intersected(screen()->geometry());
+        QRect screenPanelRect = geometry();
         screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
         if (rootObject) {
             QVariant maskProperty = rootObject->property("panelMask");
@@ -1384,6 +1379,24 @@ void PanelView::updateMask()
                                                  mask);
 
         if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
+            const QRect bounding = mask.boundingRect();
+            // Always go to screen edge, to preserve fitts law
+            switch (containment()->location()) {
+            case Plasma::Types::LeftEdge:
+                screenPanelRect.setRight(bounding.right());
+                break;
+            case Plasma::Types::TopEdge:
+                screenPanelRect.setBottom(bounding.bottom());
+                break;
+            case Plasma::Types::RightEdge:
+                screenPanelRect.setLeft(bounding.left());
+                break;
+            case Plasma::Types::BottomEdge:
+                screenPanelRect.setTop(bounding.top());
+                break;
+            default:
+                break;
+            }
             setMask(screenPanelRect);
         } else {
             setMask(mask);
@@ -1480,7 +1493,16 @@ void PanelView::updateExclusiveZone()
         // overlap with the panel regardless of the visibility mode;
         // this won't be updated anymore as long as we are within
         // the panel configuration.
-        m_layerWindow->setExclusiveZone(thickness() - exclusiveMargin());
+        switch (containment()->formFactor()) {
+        case Plasma::Types::Horizontal:
+            m_layerWindow->setExclusiveZone(thickness() + m_topFloatingPadding + m_bottomFloatingPadding);
+            break;
+        case Plasma::Types::Vertical:
+            m_layerWindow->setExclusiveZone(thickness() + m_leftFloatingPadding + m_rightFloatingPadding);
+            break;
+        default:
+            qWarning() << "Warning: unexpected panel formFactor:" << containment()->formFactor() << "Horizontal or Vertical expected";
+        }
     }
     if (!containment() || containment()->isUserConfiguring() || !m_screenToFollow) {
         return;
@@ -1489,7 +1511,7 @@ void PanelView::updateExclusiveZone()
     if (KWindowSystem::isPlatformWayland()) {
         switch (m_visibilityMode) {
         case NormalPanel:
-            m_layerWindow->setExclusiveZone(thickness() - exclusiveMargin());
+            m_layerWindow->setExclusiveZone(thickness());
             break;
         case AutoHide:
         case DodgeWindows:
@@ -1654,9 +1676,15 @@ void PanelView::handleQmlStatusChange(QQmlComponent::Status status)
                 m_floatingness = get<double>(value);
                 positionAndResizePanel();
             });
+            connect(&m_floatingnessAnimation, &QPropertyAnimation::finished, rootObject, [this]() {
+                updateMask();
+            });
             connect(rootObject, SIGNAL(minPanelHeightChanged()), this, SLOT(updatePadding()));
             connect(rootObject, SIGNAL(minPanelWidthChanged()), this, SLOT(updatePadding()));
-            connect(rootObject, SIGNAL(hasShadowsChanged()), this, SLOT(updateShadows()));
+            connect(rootObject, SIGNAL(leftShadowMarginChanged()), this, SLOT(updateShadows()));
+            connect(rootObject, SIGNAL(topShadowMarginChanged()), this, SLOT(updateShadows()));
+            connect(rootObject, SIGNAL(rightShadowMarginChanged()), this, SLOT(updateShadows()));
+            connect(rootObject, SIGNAL(bottomShadowMarginChanged()), this, SLOT(updateShadows()));
             connect(rootObject, SIGNAL(floatingnessAnimationDurationChanged()), this, SLOT(updateFloatingAnimationDuration()));
             connect(rootObject, SIGNAL(floatingnessTargetChanged()), this, SLOT(updateFloating()));
         }
@@ -1763,34 +1791,41 @@ void PanelView::updateEnabledBorders()
     if (m_backgroundHints == Plasma::Types::NoBackground) {
         borders = KSvg::FrameSvg::NoBorder;
     } else {
-        switch (location()) {
-        case Plasma::Types::TopEdge:
-            borders &= ~KSvg::FrameSvg::TopBorder;
-            break;
-        case Plasma::Types::LeftEdge:
-            borders &= ~KSvg::FrameSvg::LeftBorder;
-            break;
-        case Plasma::Types::RightEdge:
-            borders &= ~KSvg::FrameSvg::RightBorder;
-            break;
-        case Plasma::Types::BottomEdge:
-            borders &= ~KSvg::FrameSvg::BottomBorder;
-            break;
-        default:
-            break;
+        if (m_floatingness == 0) {
+            switch (location()) {
+            case Plasma::Types::TopEdge:
+                borders &= ~KSvg::FrameSvg::TopBorder;
+                break;
+            case Plasma::Types::LeftEdge:
+                borders &= ~KSvg::FrameSvg::LeftBorder;
+                break;
+            case Plasma::Types::RightEdge:
+                borders &= ~KSvg::FrameSvg::RightBorder;
+                break;
+            case Plasma::Types::BottomEdge:
+                borders &= ~KSvg::FrameSvg::BottomBorder;
+                break;
+            default:
+                break;
+            }
         }
 
+        QMargins shadowPadding = {int(std::round(rootObject()->property("leftShadowMargin").toReal())),
+                                  int(std::round(rootObject()->property("topShadowMargin").toReal())),
+                                  int(std::round(rootObject()->property("rightShadowMargin").toReal())),
+                                  int(std::round(rootObject()->property("bottomShadowMargin").toReal()))};
+
         if (m_screenToFollow) {
-            if (x() <= m_screenToFollow->geometry().x()) {
+            if (x() - shadowPadding.left() <= m_screenToFollow->geometry().x()) {
                 borders &= ~KSvg::FrameSvg::LeftBorder;
             }
-            if (x() + width() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
+            if (x() + width() + shadowPadding.right() >= m_screenToFollow->geometry().x() + m_screenToFollow->geometry().width()) {
                 borders &= ~KSvg::FrameSvg::RightBorder;
             }
-            if (y() <= m_screenToFollow->geometry().y()) {
+            if (y() - shadowPadding.top() <= m_screenToFollow->geometry().y()) {
                 borders &= ~KSvg::FrameSvg::TopBorder;
             }
-            if (y() + height() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
+            if (y() + height() + shadowPadding.bottom() >= m_screenToFollow->geometry().y() + m_screenToFollow->geometry().height()) {
                 borders &= ~KSvg::FrameSvg::BottomBorder;
             }
         }
@@ -1822,12 +1857,13 @@ void PanelView::updateShadows()
     if (!rootObject()) {
         return;
     }
-    bool hasShadows = rootObject()->property("hasShadows").toBool();
-    if (hasShadows) {
-        PanelShadows::self()->addWindow(this, enabledBorders());
-    } else {
-        PanelShadows::self()->removeWindow(this);
-    }
+    updateEnabledBorders();
+
+    QMargins extraShadowPadding = {int(std::round(rootObject()->property("leftShadowMargin").toReal())),
+                                   int(std::round(rootObject()->property("topShadowMargin").toReal())),
+                                   int(std::round(rootObject()->property("rightShadowMargin").toReal())),
+                                   int(std::round(rootObject()->property("bottomShadowMargin").toReal()))};
+    PanelShadows::self()->addWindow(this, enabledBorders(), extraShadowPadding);
 }
 
 void PanelView::updateFloating()

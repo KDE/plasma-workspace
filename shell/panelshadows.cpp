@@ -33,6 +33,7 @@ public:
 
     QHash<QWindow *, KSvg::FrameSvg::EnabledBorders> m_windows;
     QHash<QWindow *, KWindowShadow *> m_shadows;
+    QHash<QWindow *, QMargins> m_extraPadding;
     QList<KWindowShadowTile::Ptr> m_tiles;
 };
 
@@ -68,16 +69,18 @@ PanelShadows *PanelShadows::self()
     return &privatePanelShadowsSelf->self;
 }
 
-void PanelShadows::addWindow(QWindow *window, KSvg::FrameSvg::EnabledBorders enabledBorders)
+void PanelShadows::addWindow(QWindow *window, KSvg::FrameSvg::EnabledBorders enabledBorders, const QMargins &extraPadding)
 {
     if (!window) {
         return;
     }
 
     d->m_windows[window] = enabledBorders;
+    d->m_extraPadding[window] = extraPadding;
     d->updateShadow(window, enabledBorders);
     connect(window, &QObject::destroyed, this, [this, window]() {
         d->m_windows.remove(window);
+        d->m_extraPadding.remove(window);
         d->clearShadow(window);
         if (d->m_windows.isEmpty()) {
             d->clearTiles();
@@ -92,6 +95,7 @@ void PanelShadows::removeWindow(QWindow *window)
     }
 
     d->m_windows.remove(window);
+    d->m_extraPadding.remove(window);
     disconnect(window, nullptr, this, nullptr);
     d->clearShadow(window);
 
@@ -108,6 +112,11 @@ void PanelShadows::setEnabledBorders(QWindow *window, KSvg::FrameSvg::EnabledBor
 
     d->m_windows[window] = enabledBorders;
     d->updateShadow(window, enabledBorders);
+}
+
+QMargins PanelShadows::extraPadding(QWindow *window) const
+{
+    return d->m_extraPadding.value(window);
 }
 
 void PanelShadows::Private::updateShadows()
@@ -230,40 +239,41 @@ void PanelShadows::Private::updateShadow(QWindow *window, KSvg::FrameSvg::Enable
     }
 
     QMargins padding;
+    QMargins extraPadding = m_extraPadding.value(window);
 
     if (enabledBorders & KSvg::FrameSvg::TopBorder) {
         const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-top-margin")).toSize();
         if (marginHint.isValid()) {
-            padding.setTop(marginHint.height());
+            padding.setTop(marginHint.height() + extraPadding.top());
         } else {
-            padding.setTop(m_tiles[0]->image().height());
+            padding.setTop(m_tiles[0]->image().height() + extraPadding.top());
         }
     }
 
     if (enabledBorders & KSvg::FrameSvg::RightBorder) {
         const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-right-margin")).toSize();
         if (marginHint.isValid()) {
-            padding.setRight(marginHint.width());
+            padding.setRight(marginHint.width() + extraPadding.right());
         } else {
-            padding.setRight(m_tiles[2]->image().width());
+            padding.setRight(m_tiles[2]->image().width() + extraPadding.right());
         }
     }
 
     if (enabledBorders & KSvg::FrameSvg::BottomBorder) {
         const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-bottom-margin")).toSize();
         if (marginHint.isValid()) {
-            padding.setBottom(marginHint.height());
+            padding.setBottom(marginHint.height() + extraPadding.bottom());
         } else {
-            padding.setBottom(m_tiles[4]->image().height());
+            padding.setBottom(m_tiles[4]->image().height() + extraPadding.bottom());
         }
     }
 
     if (enabledBorders & KSvg::FrameSvg::LeftBorder) {
         const QSize marginHint = q->elementSize(QStringLiteral("shadow-hint-left-margin")).toSize();
         if (marginHint.isValid()) {
-            padding.setLeft(marginHint.width());
+            padding.setLeft(marginHint.width() + extraPadding.left());
         } else {
-            padding.setLeft(m_tiles[6]->image().width());
+            padding.setLeft(m_tiles[6]->image().width() + extraPadding.left());
         }
     }
 

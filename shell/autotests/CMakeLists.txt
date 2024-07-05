@@ -32,6 +32,7 @@ MACRO(PLASMASHELL_UNIT_TESTS)
                qt_add_dbus_adaptor(test_SRCS ${plasmashell_dbusXML} shellcorona.h ShellCorona plasmashelladaptor)
                set(krunner_xml ../../krunner/dbus/org.kde.krunner.App.xml)
                qt_add_dbus_interface(test_SRCS ${krunner_xml} krunner_interface)
+               kconfig_add_kcfg_files(test_SRCS ../../kcms/colors/colorssettings.kcfgc GENERATE_MOC)
 
                add_executable(${_testname} ${test_SRCS})
                target_link_libraries(${_testname}

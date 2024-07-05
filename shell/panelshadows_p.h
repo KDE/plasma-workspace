@@ -21,10 +21,11 @@ public:
 
     static PanelShadows *self();
 
-    void addWindow(QWindow *window, KSvg::FrameSvg::EnabledBorders enabledBorders = KSvg::FrameSvg::AllBorders);
+    void addWindow(QWindow *window, KSvg::FrameSvg::EnabledBorders enabledBorders = KSvg::FrameSvg::AllBorders, const QMargins &extraPadding = {});
     void removeWindow(QWindow *window);
 
     void setEnabledBorders(QWindow *window, KSvg::FrameSvg::EnabledBorders enabledBorders = KSvg::FrameSvg::AllBorders);
+    QMargins extraPadding(QWindow *window) const;
 
 private:
     class Private;

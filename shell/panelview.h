@@ -323,7 +323,6 @@ private:
     QPointF positionAdjustedForContainment(const QPointF &point) const;
     bool edgeActivated() const;
     bool canSetStrut() const;
-    QRect geometryByDistance(int distance, double floatingness) const;
 
     int m_offset;
     int m_maxLength;
