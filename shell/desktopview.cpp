@@ -46,7 +46,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
     if (KWindowSystem::isPlatformWayland()) {
         m_layerWindow = LayerShellQt::Window::get(this);
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
-        m_layerWindow->setAccomodateExclusiveZones(false);
+        m_layerWindow->setAnchorRect(LayerShellQt::Window::AnchorRectFullArea);
         m_layerWindow->setLayer(LayerShellQt::Window::LayerBackground);
         m_layerWindow->setScope(QStringLiteral("desktop"));
         m_layerWindow->setCloseOnDismissed(false);

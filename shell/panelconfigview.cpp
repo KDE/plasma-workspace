@@ -54,7 +54,7 @@ PanelRulerView::PanelRulerView(Plasma::Containment *containment, PanelView *pane
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         m_layerWindow->setScope(QStringLiteral("dock"));
         // Don't get resized by other panels
-        m_layerWindow->setAccomodateExclusiveZones(false);
+        m_layerWindow->setAnchorRect(LayerShellQt::Window::AnchorRectFullArea);
         m_layerWindow->setCloseOnDismissed(false);
     }
     setScreen(m_panelView->screen());
