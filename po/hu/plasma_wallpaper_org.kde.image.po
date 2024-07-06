@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2024-05-28 11:13+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -114,11 +114,25 @@ msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Hozzáadás…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr "Háttérkép megnyitása"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Új letöltése…"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, fuzzy, kde-format
+#| msgid "Next Wallpaper Image"
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
+msgstr "Következő háttérkép"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -266,17 +280,24 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Hozzáadás…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, fuzzy, kde-format
+#| msgid "Add Folder…"
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr "Mappa hozzáadása…"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format
 msgid "Remove Folder"
 msgstr "Mappa eltávolítása"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, kde-format
 msgid "Open Folder…"
 msgstr "Mappa megnyitása…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Nincsenek beállítva háttérkép-mappák"
@@ -326,9 +347,6 @@ msgstr ""
 
 #~ msgid "Add Image…"
 #~ msgstr "Kép hozzáadása…"
-
-#~ msgid "Add Folder…"
-#~ msgstr "Mappa hozzáadása…"
 
 #~ msgid "Recommended wallpaper file"
 #~ msgstr "Ajánlott háttérképfájl"

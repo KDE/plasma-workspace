@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2024-04-12 07:06+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -114,11 +114,25 @@ msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Ekle…"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr "Duvar Kağıdı Resmi Aç"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Yeni Al…"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, fuzzy, kde-format
+#| msgid "Next Wallpaper Image"
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
+msgstr "Sonraki Duvar Kağıdı Görseli"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -267,17 +281,24 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Ekle…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, fuzzy, kde-format
+#| msgid "Open Folder…"
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr "Klasör Aç…"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format
 msgid "Remove Folder"
 msgstr "Klasörü Kaldır"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, kde-format
 msgid "Open Folder…"
 msgstr "Klasör Aç…"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Yapılandırılmış duvar kağıdı konumu yok"

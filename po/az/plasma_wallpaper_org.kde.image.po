@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2024-06-11 15:10+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -111,11 +111,25 @@ msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Əlavə edin..."
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr "Divar kağızı şəklini açın"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Yenisini endirin..."
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, fuzzy, kde-format
+#| msgid "Next Wallpaper Image"
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
+msgstr "Növbəti divar kağızı"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -264,17 +278,24 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Əlavə edin..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, fuzzy, kde-format
+#| msgid "Add Folder…"
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr "Qovluq əlavə etmək..."
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format
 msgid "Remove Folder"
 msgstr "Qovluğu silmək"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, kde-format
 msgid "Open Folder…"
 msgstr "Qovluğu açın..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "Divar kağızı yeri müəyyən edilməyib"
@@ -323,9 +344,6 @@ msgstr ""
 
 #~ msgid "Add Image…"
 #~ msgstr "Şəkil əlavə etmək..."
-
-#~ msgid "Add Folder…"
-#~ msgstr "Qovluq əlavə etmək..."
 
 #~ msgid "Recommended wallpaper file"
 #~ msgstr "Tövsiyyə olunan divar kağızı faylı"

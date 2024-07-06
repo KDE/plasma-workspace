@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2023-02-28 21:51+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -117,12 +117,26 @@ msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr "वालपेपर छवि खोलें"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, fuzzy, kde-format
 #| msgid "Get New Wallpapers…"
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "नए वॉलपेपर प्राप्त करें…"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, fuzzy, kde-format
+#| msgid "Next Wallpaper Image"
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
+msgstr "अगला वालपेपर छवि"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -270,18 +284,25 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, fuzzy, kde-format
+#| msgid "Add Folder…"
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr "फ़ोल्डर जोड़ें…"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format
 msgid "Remove Folder"
 msgstr "फ़ोल्डर हटाएँ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, fuzzy, kde-format
 #| msgid "Open Folder"
 msgid "Open Folder…"
 msgstr "फ़ोल्डर खोलें"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "कोई वॉलपेपर स्थान विन्यस्त नहीं किया गया है"
@@ -329,9 +350,6 @@ msgstr "kscreenlockerrc कॉन्फ़िग फ़ाइल खोलने
 
 #~ msgid "Add Image…"
 #~ msgstr "छवि जोड़ें…"
-
-#~ msgid "Add Folder…"
-#~ msgstr "फ़ोल्डर जोड़ें…"
 
 #~ msgid "Recommended wallpaper file"
 #~ msgstr "अनुशंसित वॉलपेपर फ़ाइल"

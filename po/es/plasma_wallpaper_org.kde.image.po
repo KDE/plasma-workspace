@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2024-04-12 17:01+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -114,11 +114,25 @@ msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "Añadir..."
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr "Abrir imagen de fondo del escritorio"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "Obtener nueva..."
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, fuzzy, kde-format
+#| msgid "Next Wallpaper Image"
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
+msgstr "Siguiente imagen de fondo del escritorio"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -269,17 +283,24 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "Añadir..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, fuzzy, kde-format
+#| msgid "Add Folder…"
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr "Añadir carpeta..."
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format
 msgid "Remove Folder"
 msgstr "Eliminar carpeta"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, kde-format
 msgid "Open Folder…"
 msgstr "Abrir carpeta..."
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "No se han configurado ubicaciones de fondos de escritorio"
@@ -329,9 +350,6 @@ msgstr ""
 
 #~ msgid "Add Image…"
 #~ msgstr "Añadir imagen..."
-
-#~ msgid "Add Folder…"
-#~ msgstr "Añadir carpeta..."
 
 #~ msgid "Recommended wallpaper file"
 #~ msgstr "Archivo de fondo de escritorio recomendado"

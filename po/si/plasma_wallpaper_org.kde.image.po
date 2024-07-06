@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2009-03-25 20:06+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhalese <danishka@gmail.com>\n"
@@ -113,11 +113,25 @@ msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, fuzzy, kde-format
+#| msgid "Images"
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr "පිංතූර"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, fuzzy, kde-format
 #| msgid "Images"
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
+msgstr "පිංතූර"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, fuzzy, kde-format
+#| msgid "Images"
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
 msgstr "පිංතූර"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
@@ -260,19 +274,26 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, fuzzy, kde-format
+#| msgid "Images"
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr "පිංතූර"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Remove Folder"
 msgstr "පිංතූර"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Open Folder…"
 msgstr "පිංතූර"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""
@@ -317,11 +338,6 @@ msgstr ""
 #~| msgid "Images"
 #~ msgctxt "@title:window"
 #~ msgid "Open Media"
-#~ msgstr "පිංතූර"
-
-#, fuzzy
-#~| msgid "Images"
-#~ msgid "Add Folder…"
 #~ msgstr "පිංතූර"
 
 #, fuzzy

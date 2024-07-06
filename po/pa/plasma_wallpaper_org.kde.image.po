@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2024-01-03 13:59-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -111,11 +111,25 @@ msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr "…ਜੋੜੋ"
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, fuzzy, kde-format
+#| msgid "Open Wallpaper Image"
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr "ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
 msgstr "…ਨਵੇਂ ਲਵੋ"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, fuzzy, kde-format
+#| msgid "Next Wallpaper Image"
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
+msgstr "ਅਗਲਾ ਵਾਲਪੇਪਰ ਚਿੱਤਰ"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -256,17 +270,24 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr "…ਜੋੜੋ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, fuzzy, kde-format
+#| msgid "Add Folder…"
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr "…ਫੋਲਡਰ ਜੋੜੋ"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format
 msgid "Remove Folder"
 msgstr "ਫੋਲਡਰ ਹਟਾਓ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, kde-format
 msgid "Open Folder…"
 msgstr "…ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr "ਸੰਰਚਿਤ ਕੀਤੇ ਟਿਕਾਣੇ ਉੱਤੇ ਕੋਈ ਵੀ ਵਾਲਪੇਪਰ ਨਹੀਂ ਹੈ"
@@ -315,9 +336,6 @@ msgstr "kscreenlockerrc ਸੰਰਚਨਾ ਫਾਇਲ ਖੋਲ੍ਹਣ ਦ�
 
 #~ msgid "Add Image…"
 #~ msgstr "…ਚਿੱਤਰ ਜੋੜੋ"
-
-#~ msgid "Add Folder…"
-#~ msgstr "…ਫੋਲਡਰ ਜੋੜੋ"
 
 #~ msgid "Recommended wallpaper file"
 #~ msgstr "ਸਿਫਾਰਸ਼ੀ ਵਾਲਪੇਪਰ ਫਾਈਲ"

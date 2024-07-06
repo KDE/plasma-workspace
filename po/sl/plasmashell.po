@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2024-06-09 09:02+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -321,13 +321,13 @@ msgstr ""
 "prilagodljive neprosojnosti povzročata slabo vlečenje in spreminjanje "
 "velikosti oken. Razmislite o uporabi drugih nastavitev."
 
-#: panelview.cpp:1098
+#: panelview.cpp:1090
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Skrij nastavitve pulta"
 
-#: panelview.cpp:1100
+#: panelview.cpp:1092
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
 "PO-Revision-Date: 2008-08-29 22:07+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -115,11 +115,25 @@ msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
 msgstr ""
 
-#: imagepackage/contents/ui/ThumbnailsComponent.qml:70
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, fuzzy, kde-format
+#| msgid "Images"
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr "Imej"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, fuzzy, kde-format
 #| msgid "Images"
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
+msgstr "Imej"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, fuzzy, kde-format
+#| msgid "Images"
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
 msgstr "Imej"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
@@ -262,19 +276,26 @@ msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
 msgstr ""
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:248
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, fuzzy, kde-format
+#| msgid "Images"
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr "Imej"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Remove Folder"
 msgstr "Imej"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:259
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Open Folder…"
 msgstr "Imej"
 
-#: slideshowpackage/contents/ui/SlideshowComponent.qml:274
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
 msgstr ""
@@ -319,11 +340,6 @@ msgstr ""
 #~| msgid "Images"
 #~ msgctxt "@title:window"
 #~ msgid "Open Media"
-#~ msgstr "Imej"
-
-#, fuzzy
-#~| msgid "Images"
-#~ msgid "Add Folder…"
 #~ msgstr "Imej"
 
 #, fuzzy

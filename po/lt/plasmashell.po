@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-04-09 12:23+0300\n"
+"POT-Creation-Date: 2024-07-06 00:40+0000\n"
+"PO-Revision-Date: 2024-07-06 01:16+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -106,31 +106,31 @@ msgstr "Norėdami pranešti apie klaidas, apsilankykite adresu bugs.kde.org"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Kopijuoti Plasma versiją"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Pranešti apie klaidą…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Slėpti peržiūros antraštę"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Slėpti iki paleidimo iš naujo"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Slėpti visam laikui…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -141,12 +141,15 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Ar tikrai norite visam laikui slėpti peržiūros antraštę?<nl/><nl/>Šį veiksmą "
+"galima bus atšaukti tik <filename>kdeglobals</filename> konfigūracijos faile "
+"pašalinus eilutę, prasidedančią <icode>ShowDesktopPreviewBanner</icode>."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Slėpti peržiūros antraštę?"
 
 #: main.cpp:84
 #, kde-format
@@ -313,14 +316,17 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Yra žinoma, jog naudojant NVIDIA grafinį procesorių X11 aplinkoje, slankus "
+"stilius ir prisitaikanti nepermatomumo veiksena sąlygoja blogą langų tempimo "
+"ir dydžio keitimo našumą. Apsvarstykite galimybę naudoti kitokias nuostatas."
 
-#: panelview.cpp:1098
+#: panelview.cpp:1090
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Slėpti skydelio konfigūraciją"
 
-#: panelview.cpp:1100
+#: panelview.cpp:1092
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
