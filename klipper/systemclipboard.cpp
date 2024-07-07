@@ -79,7 +79,7 @@ void roundtrip()
 
 std::shared_ptr<SystemClipboard> SystemClipboard::self()
 {
-    std::weak_ptr<SystemClipboard> s_clip;
+    static std::weak_ptr<SystemClipboard> s_clip;
     if (s_clip.expired()) {
         std::shared_ptr<SystemClipboard> ptr{new SystemClipboard};
         s_clip = ptr;
