@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-07 00:40+0000\n"
 "PO-Revision-Date: 2023-10-17 15:53+0300\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -347,12 +347,22 @@ msgid "Users"
 msgstr "משתמשים"
 
 #: src/ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button As in, 'add new user'"
+#| msgid "Add New"
 msgctxt "@action:button As in, 'add new user'"
-msgid "Add New"
+msgid "Add New…"
 msgstr "הוספת חדש"
 
-#: src/ui/main.qml:107
+#: src/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgctxt "@action:button As in, 'add new user'"
+#| msgid "Add New"
+msgctxt "@action:button"
+msgid "Add New User…"
+msgstr "הוספת חדש"
+
+#: src/ui/main.qml:108
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-07 00:40+0000\n"
 "PO-Revision-Date: 2023-01-08 16:06+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -411,10 +411,17 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Add New User"
 msgctxt "@action:button As in, 'add new user'"
-msgid "Add New"
+msgid "Add New…"
 msgstr "Thêm người dùng mới"
 
-#: src/ui/main.qml:107
+#: src/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgid "Add New User"
+msgctxt "@action:button"
+msgid "Add New User…"
+msgstr "Thêm người dùng mới"
+
+#: src/ui/main.qml:108
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"

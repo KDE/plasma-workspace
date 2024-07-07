@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-07 00:40+0000\n"
 "PO-Revision-Date: 2024-03-13 20:36+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -360,12 +360,22 @@ msgid "Users"
 msgstr "Kullanıcılar"
 
 #: src/ui/main.qml:31
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button As in, 'add new user'"
+#| msgid "Add New"
 msgctxt "@action:button As in, 'add new user'"
-msgid "Add New"
+msgid "Add New…"
 msgstr "Yeni Ekle"
 
-#: src/ui/main.qml:107
+#: src/ui/main.qml:32
+#, fuzzy, kde-format
+#| msgctxt "@action:button As in, 'add new user'"
+#| msgid "Add New"
+msgctxt "@action:button"
+msgid "Add New User…"
+msgstr "Yeni Ekle"
+
+#: src/ui/main.qml:108
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-06 00:40+0000\n"
-"PO-Revision-Date: 2024-04-12 07:06+0300\n"
+"PO-Revision-Date: 2024-07-07 00:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -115,11 +115,10 @@ msgid "Add…"
 msgstr "Ekle…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Duvar Kağıdı Resmi Aç"
+msgstr "Duvar Kağıdı Görseli Ekle…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
@@ -128,11 +127,10 @@ msgid "Get New…"
 msgstr "Yeni Al…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Sonraki Duvar Kağıdı Görseli"
+msgstr "Yeni Duvar Kağıdı Görselleri Al…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -282,11 +280,10 @@ msgid "Add…"
 msgstr "Ekle…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
-#, fuzzy, kde-format
-#| msgid "Open Folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
-msgstr "Klasör Aç…"
+msgstr "Klasör Ekle…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format

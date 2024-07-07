@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-05 00:40+0000\n"
-"PO-Revision-Date: 2024-03-09 18:13+0100\n"
+"PO-Revision-Date: 2024-07-06 15:01+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -69,8 +69,7 @@ msgstr "Byt …"
 
 #: package/contents/ui/CalendarView.qml:436
 #: package/contents/ui/CalendarView.qml:437
-#, fuzzy, kde-format
-#| msgid "Switch to another timezone"
+#, kde-format
 msgid "Switch to another time zone"
 msgstr "Byt til anna tidssone"
 
@@ -299,12 +298,7 @@ msgid "Clock is currently using this time zone"
 msgstr "Klokka brukar denne tidssona"
 
 #: package/contents/ui/configTimeZones.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label This list item shows a time zone city name that is identical to "
-#| "the local time zone's city, and will be hidden in the timezone display in "
-#| "the plasmoid's popup"
-#| msgid "Hidden while this is the local time zone's city"
+#, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
 "local time zone's city, and will be hidden in the time zone display in the "
@@ -356,16 +350,12 @@ msgstr ""
 "byt heller den tidssona."
 
 #: package/contents/ui/configTimeZones.qml:208
-#, fuzzy, kde-format
-#| msgid "Add More Timezones"
+#, kde-format
 msgid "Add More Time Zones"
 msgstr "Legg til fleire tidssoner"
 
 #: package/contents/ui/configTimeZones.qml:220
-#, fuzzy, kde-format
-#| msgid ""
-#| "At least one time zone needs to be enabled. Your local timezone was "
-#| "enabled automatically."
+#, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
