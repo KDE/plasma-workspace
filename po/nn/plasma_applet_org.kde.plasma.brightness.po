@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-15 20:44+0200\n"
+"PO-Revision-Date: 2024-07-06 16:42+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -86,41 +86,42 @@ msgctxt "Status"
 msgid "Night Light suspended"
 msgstr "Kveldsfargar på pause"
 
+# Rart formulert setning på engelsk. Tyder (slik eg forstår han) at «Night Light»-programmet no er i modusen «day color temperature».
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "Kveldsfargar: brukar no dagfargar"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "Kveldsfargar: brukar no kveldsfargar"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "Overgang til morgon (ferdig %1)"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "Overgang til kveld (ferdig %1)"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "Overgang til kveld tek til %1"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "Overgang til morgon tek til %1"
 
 #: package/contents/ui/main.qml:122
 #, kde-format

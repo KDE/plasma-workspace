@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-21 00:40+0000\n"
-"PO-Revision-Date: 2024-03-08 21:38+0530\n"
+"PO-Revision-Date: 2024-07-06 19:57+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -587,7 +587,7 @@ msgstr "க்ளிப்பர் பதிப்பு"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr "முந்தைய பணிமேடை அமர்வுகளின் பிடிப்புப்பலகை வரலாற்றை தக்கவைக்கவேண்டுமா"
+msgstr "முந்தைய பணிமேடை அமர்வுகளின் பிடிப்புப்பலகை வரலாற்றை தக்கவை"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
