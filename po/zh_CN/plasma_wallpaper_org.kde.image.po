@@ -112,11 +112,10 @@ msgid "Add…"
 msgstr "添加…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "打开壁纸图像"
+msgstr ""
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
@@ -125,11 +124,10 @@ msgid "Get New…"
 msgstr "获取新壁纸…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "下一张壁纸图像"
+msgstr ""
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -268,11 +266,10 @@ msgid "Add…"
 msgstr "添加…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
-#, fuzzy, kde-format
-#| msgid "Open Folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
-msgstr "打开文件夹…"
+msgstr "添加文件夹…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format

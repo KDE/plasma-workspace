@@ -199,7 +199,7 @@ msgstr "GTK 应用程序外观样式包 (*.tar.xz *.tar.gz *.tar.bz2)"
 #: ui/main.qml:55
 #, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr ""
+msgstr "配置图标和工具栏…"
 
 #: ui/main.qml:73
 #, kde-format
