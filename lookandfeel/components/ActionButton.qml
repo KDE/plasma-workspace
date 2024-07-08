@@ -1,35 +1,40 @@
 /*
     SPDX-FileCopyrightText: 2016 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2024 Noah Davis <noahadvs@gmail.com>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 import QtQuick 2.15
-
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.kirigami 2.20 as Kirigami
 
-Item {
+PlasmaComponents3.AbstractButton {
     id: root
-    property alias text: label.text
-    property alias iconSource: icon.source
-    property alias containsMouse: mouseArea.containsMouse
-    property alias font: label.font
-    property alias labelRendering: label.renderType
-    property alias circleOpacity: iconCircle.opacity
-    property alias circleVisiblity: iconCircle.visible
-    property real fontSize: Kirigami.Theme.defaultFont.pointSize + 1
     readonly property bool softwareRendering: GraphicsInfo.api === GraphicsInfo.Software
-    signal clicked
 
-    activeFocusOnTab: true
+    font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
+    font.underline: root.activeFocus
 
-    property int iconSize: Kirigami.Units.gridUnit * 3
+    icon.width: Kirigami.Units.iconSizes.large
+    icon.height: Kirigami.Units.iconSizes.large
 
-    implicitWidth: Math.max(iconSize + Kirigami.Units.gridUnit * 2, label.contentWidth)
-    implicitHeight: iconSize + Kirigami.Units.smallSpacing + label.implicitHeight
+    hoverEnabled: true
 
-    opacity: activeFocus || containsMouse ? 1 : 0.85
+    // Expand clickable area, keep background centered
+    leftInset: Math.max(Kirigami.Units.largeSpacing * 2, (implicitContentWidth - implicitBackgroundWidth) / 2)
+    rightInset: leftInset
+
+    padding: Kirigami.Units.smallSpacing
+    // Labels wider than the background shouldn't be padded
+    horizontalPadding: 0
+    // No padding below label
+    bottomPadding: 0
+
+    // padding for circle and spacing between circle and label
+    spacing: padding + Kirigami.Units.smallSpacing
+
+    opacity: root.activeFocus || root.hovered ? 1 : 0.85
     Behavior on opacity {
         PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
             duration: Kirigami.Units.longDuration
@@ -37,80 +42,63 @@ Item {
         }
     }
 
-    Rectangle {
-        id: iconCircle
-        anchors.centerIn: icon
-        width: root.iconSize + Kirigami.Units.smallSpacing
-        height: width
+    background: Rectangle {
+        implicitWidth: root.icon.width + root.padding * 2
+        implicitHeight: root.icon.height + root.padding * 2
+        // explicitly set size to keep it from expanding or shrinking
+        width: implicitWidth
+        height: implicitHeight
         radius: width / 2
-        color: root.softwareRendering ?  Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
-        opacity: root.activeFocus || root.containsMouse ? (root.softwareRendering ? 0.8 : 0.15) : (root.softwareRendering ? 0.6 : 0)
+        color: root.softwareRendering ? Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
+        opacity: {
+            if (root.activeFocus || root.hovered) {
+                return root.softwareRendering ? 0.8 : 0.15
+            }
+            return root.softwareRendering ? 0.6 : 0
+        }
         Behavior on opacity {
             PropertyAnimation { // OpacityAnimator makes it turn black at random intervals
                 duration: Kirigami.Units.longDuration
                 easing.type: Easing.InOutQuad
             }
         }
-    }
-
-    Rectangle {
-        anchors.centerIn: iconCircle
-        width: iconCircle.width
-        height: width
-        radius: width / 2
-        scale: mouseArea.containsPress ? 1 : 0
-        color: Kirigami.Theme.textColor
-        opacity: 0.15
-        Behavior on scale {
-            PropertyAnimation {
-                duration: Kirigami.Units.shortDuration
-                easing.type: Easing.InOutQuart
+        Rectangle {
+            anchors.fill: parent
+            radius: parent.radius
+            color: Kirigami.Theme.textColor
+            opacity: 0.15
+            scale: root.down ? 1 : 0
+            Behavior on scale {
+                PropertyAnimation {
+                    duration: Kirigami.Units.shortDuration
+                    easing.type: Easing.InOutQuart
+                }
             }
         }
     }
 
-    Kirigami.Icon {
-        id: icon
-        anchors {
-            top: parent.top
-            horizontalCenter: parent.horizontalCenter
+    contentItem: Column {
+        spacing: root.spacing
+        Kirigami.Icon {
+            anchors.horizontalCenter: parent.horizontalCenter
+            source: root.icon.name
+            implicitWidth: root.icon.width
+            implicitHeight: root.icon.height
+            active: root.hovered || root.activeFocus
         }
-        width: root.iconSize
-        height: root.iconSize
-
-        active: mouseArea.containsMouse || root.activeFocus
-    }
-
-    PlasmaComponents3.Label {
-        id: label
-        font.pointSize: root.fontSize
-        anchors {
-            top: icon.bottom
-            topMargin: root.softwareRendering ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
-            left: parent.left
-            right: parent.right
+        PlasmaComponents3.Label {
+            anchors.horizontalCenter: parent.horizontalCenter
+            width: Math.max(implicitWidth, parent.width)
+            text: root.text
+            style: root.softwareRendering ? Text.Outline : Text.Normal
+            styleColor: Kirigami.Theme.backgroundColor // Unused without outline
+            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignTop
+            textFormat: Text.PlainText
+            wrapMode: Text.WordWrap
         }
-        style: root.softwareRendering ? Text.Outline : Text.Normal
-        styleColor: root.softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignTop
-        textFormat: Text.PlainText
-        wrapMode: Text.WordWrap
-        font.underline: root.activeFocus
-    }
-
-    MouseArea {
-        id: mouseArea
-        hoverEnabled: true
-        onClicked: root.clicked()
-        anchors.fill: parent
     }
 
     Keys.onEnterPressed: clicked()
     Keys.onReturnPressed: clicked()
-    Keys.onSpacePressed: clicked()
-
-    Accessible.onPressAction: clicked()
-    Accessible.role: Accessible.Button
-    Accessible.name: label.text
 }
