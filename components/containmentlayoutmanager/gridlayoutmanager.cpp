@@ -200,7 +200,7 @@ bool GridLayoutManager::assignSpaceImpl(ItemContainer *item)
     // Don't Q_EMIT extra layoutneedssaving signals
     releaseSpaceImpl(item);
     if (!isRectAvailable(itemGeometry(item))) {
-        qCWarning(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Trying to take space not available" << item;
+        qCDebug(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Trying to take space not available" << item;
         return false;
     }
 
