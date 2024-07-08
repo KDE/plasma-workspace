@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.brightness\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-07-06 14:08+0200\n"
+"PO-Revision-Date: 2024-07-07 20:15+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
@@ -76,13 +76,13 @@ msgstr "Jas klávesnice je %1%"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
-msgstr ""
+msgstr "Nočná farba pozastavená; stredným kliknutím sa obnoví"
 
 #: package/contents/ui/main.qml:87
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr ""
+msgstr "Nočná farba pozastavená"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
