@@ -547,6 +547,10 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
 
     setActiveForInput(true);
 
+    if (qgetenv("XDG_SESSION_TYPE") == "wayland") {
+        xcb_warp_pointer(c, XCB_NONE, m_windowId, 0, 0, 0, 0, clickPoint.x(), clickPoint.y());
+    }
+
     // mouse down
     if (m_injectMode == Direct) {
         xcb_button_press_event_t *event = new xcb_button_press_event_t;
