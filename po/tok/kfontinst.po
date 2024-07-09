@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Janet Blackquill <uhhadd@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2024 Janet Blackquill <uhhadd@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2024-02-03 22:53-0500\n"
+"PO-Revision-Date: 2024-07-07 21:07-0400\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
 "Language: tok\n"
@@ -15,17 +15,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n == 0 ? 0 : n == 1 ? 1 : n == 2 ? 2 : 3;\n"
-"X-Generator: Lokalize 22.11.70\n"
+"X-Generator: Lokalize 24.05.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "akesi Jan"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "uhhadd@gmail.com"
 
 #: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:954
 #, fuzzy, kde-format
@@ -45,17 +45,17 @@ msgstr "nasin sitelen ni o tawa seme"
 #: apps/Installer.cpp:113
 #, kde-format
 msgid "Font Installer"
-msgstr ""
+msgstr "ilo kepkeen pi nasin sitelen"
 
 #: apps/Installer.cpp:115
 #, kde-format
 msgid "Simple font installer"
-msgstr ""
+msgstr "ilo kepkeen pi nasin sitelen"
 
 #: apps/Installer.cpp:117 apps/Printer.cpp:332
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
-msgstr ""
+msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:124
 #, kde-format
@@ -203,12 +203,12 @@ msgstr ""
 #: kcmfontinst/DuplicatesDialog.cpp:386
 #, kde-format
 msgid "Size"
-msgstr ""
+msgstr "suli"
 
 #: kcmfontinst/DuplicatesDialog.cpp:387
 #, kde-format
 msgid "Date"
-msgstr ""
+msgstr "tenpo"
 
 #: kcmfontinst/DuplicatesDialog.cpp:388
 #, kde-format
@@ -218,7 +218,7 @@ msgstr ""
 #: kcmfontinst/DuplicatesDialog.cpp:401 kcmfontinst/FontList.cpp:1310
 #, kde-format
 msgid "Open in Font Viewer"
-msgstr ""
+msgstr "o lukin kepeken ilo pi nasin sitelen"
 
 #: kcmfontinst/DuplicatesDialog.cpp:403
 #, kde-format
@@ -247,17 +247,17 @@ msgstr[3] ""
 #: kcmfontinst/FontFilter.cpp:105
 #, kde-format
 msgid "Family"
-msgstr ""
+msgstr "kulupu pi nasin sitelen"
 
 #: kcmfontinst/FontFilter.cpp:107
 #, kde-format
 msgid "Style"
-msgstr ""
+msgstr "nasin lukin"
 
 #: kcmfontinst/FontFilter.cpp:109
 #, kde-format
 msgid "Foundry"
-msgstr ""
+msgstr "kulupu pali"
 
 #: kcmfontinst/FontFilter.cpp:111
 #, kde-format
@@ -267,22 +267,22 @@ msgstr ""
 #: kcmfontinst/FontFilter.cpp:113
 #, kde-format
 msgid "File Type"
-msgstr ""
+msgstr "kule lipu"
 
 #: kcmfontinst/FontFilter.cpp:115
 #, kde-format
 msgid "File Name"
-msgstr ""
+msgstr "nimi lipu"
 
 #: kcmfontinst/FontFilter.cpp:117
 #, kde-format
 msgid "File Location"
-msgstr ""
+msgstr "ma lipu"
 
 #: kcmfontinst/FontFilter.cpp:119
 #, kde-format
 msgid "Writing System"
-msgstr ""
+msgstr "nasin sitelen"
 
 #: kcmfontinst/FontFilter.cpp:130
 #, kde-format
