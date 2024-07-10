@@ -76,7 +76,7 @@ public:
             std::shared_ptr<AbstractEntry> entry = nullptr;
 
             if (parent->m_itemEntries.contains(id)) {
-                entry = parent->m_itemEntries[id];
+                entry = parent->m_itemEntries.value(id);
             } else {
                 // This entry is not cached - it is temporary,
                 // so let's clean up when we exit this function
@@ -383,14 +383,13 @@ public:
             return;
 
         beginRemoveRows(QModelIndex(), index, index);
-        const auto entry = m_itemEntries[resource];
         m_items.removeAt(index);
 
         // Removing the entry from the cache
         QMutableHashIterator<QString, std::shared_ptr<AbstractEntry>> i(m_itemEntries);
         while (i.hasNext()) {
             i.next();
-            if (i.value() == entry) {
+            if (i.value()->id() == resource) {
                 i.remove();
             }
         }
@@ -415,7 +414,9 @@ public:
 
         const auto index = item.row();
 
-        const auto entry = m_itemEntries[m_items[index].value()];
+        // If index is out of bounds, m_items.value returns default constructed value.
+        // In that case, m_itemEntries.value will return default constructed value which is nullptr.
+        const auto entry = m_itemEntries.value(m_items.value(index).value());
         // clang-format off
         return entry == nullptr ? QVariant()
              : role == Qt::DisplayRole ? entry->name()
@@ -438,11 +439,11 @@ public:
 
         const QString id = data(index(row, 0), Kicker::UrlRole).toString();
         if (m_itemEntries.contains(id)) {
-            return m_itemEntries[id]->run(actionId, argument);
+            return m_itemEntries.value(id)->run(actionId, argument);
         }
         // Entries with preferred:// can be changed by the user, BUG: 416161
         // then the list of entries could be out of sync
-        const auto entry = m_itemEntries[m_items[row].value()];
+        const auto entry = m_itemEntries.value(m_items.value(row).value());
         if (QUrl(entry->id()).scheme() == QLatin1String("preferred")) {
             return entry->run(actionId, argument);
         }
