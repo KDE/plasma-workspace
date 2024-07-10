@@ -1787,6 +1787,9 @@ bool PanelView::edgeActivated() const
 
 void PanelView::updateEnabledBorders()
 {
+    if (!rootObject()) {
+        return;
+    }
     KSvg::FrameSvg::EnabledBorders borders = KSvg::FrameSvg::AllBorders;
     if (m_backgroundHints == Plasma::Types::NoBackground) {
         borders = KSvg::FrameSvg::NoBorder;
