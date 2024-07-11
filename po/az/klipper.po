@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-06-10 12:10+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -501,6 +501,17 @@ msgstr "Nişan:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr ""
+"Siz bütün mübadilə yaddaşı tarixçəsini təmizləmək və silmək istəyirsiniz?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Mübadilə yaddaşı tarixçəsini təmizləyin"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -559,58 +570,27 @@ msgstr ""
 "Siz URL ilə əməlləri daha sonra Mübadilə buferi qoşması tənzimləməsi "
 "pəncərəsi <interface>Əməllər</interface> səhifəsində aktiv edin"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Girişdə Klipper avtomatik başladılsın?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Kipper avtomatik başladılsın?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Başlatmaq"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Başlatmamaq"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil Barkod"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr ""
-"Siz bütün mübadilə yaddaşı tarixçəsini təmizləmək və silmək istəyirsiniz?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Mübadilə yaddaşı tarixçəsini təmizləyin"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Mübadilə tarixçəsi"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "yuxarı"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "cari"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "aşağı"
@@ -868,6 +848,18 @@ msgstr "Bu menyu pəncərəsini bağlamaq"
 #, kde-format
 msgid "&Cancel"
 msgstr "&İmtina etmək"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Girişdə Klipper avtomatik başladılsın?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Kipper avtomatik başladılsın?"
+
+#~ msgid "Start"
+#~ msgstr "Başlatmaq"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Başlatmamaq"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

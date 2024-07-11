@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-05 11:56+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -516,6 +516,16 @@ msgstr "Pictogram:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Wilt u echt de gehele klembordgeschiedenis wissen en verwijderen?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Klembordgeschiedenis wissen"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -574,57 +584,27 @@ msgstr ""
 "U kunt URL-acties later in de pagina <interface>Acties</interface> van het "
 "configuratievenster van het klembordapplet inschakelen"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Wilt u dat Klipper automatisch wordt opgestart als u zich aanmeldt?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Klipper automatisch starten?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Starten"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Niet starten"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Barcode van mobiel"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Wilt u echt de gehele klembordgeschiedenis wissen en verwijderen?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Klembordgeschiedenis wissen"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klembordgeschiedenis"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "omhoog"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "huidige"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "omlaag"
@@ -881,6 +861,18 @@ msgstr "Deze dialoog deactiveren"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annuleren"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Wilt u dat Klipper automatisch wordt opgestart als u zich aanmeldt?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Klipper automatisch starten?"
+
+#~ msgid "Start"
+#~ msgstr "Starten"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Niet starten"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

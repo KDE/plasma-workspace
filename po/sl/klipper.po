@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-05 08:27+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -512,6 +512,16 @@ msgstr "Ikona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Ali res želite očistiti in izbrisati celotno zgodovino odložišča?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Počisti zgodovino odložišča"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -570,57 +580,27 @@ msgstr ""
 "Dejanja URL-jev lahko omogočite pozneje na strani <interface>Akcija</"
 "interface> konfiguracijskega okna programčka odložišča"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Ali naj se Klipper samodejno zažene, ko se prijavite?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Samodejno zaženem Klipper?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Zaženi"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Ne zaženi"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Črtna koda za prenosni telefon"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Ali res želite očistiti in izbrisati celotno zgodovino odložišča?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Počisti zgodovino odložišča"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Zgodovina odložišča"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "gor"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "trenutno"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "dol"
@@ -872,6 +852,18 @@ msgstr "Onemogoči to pojavno okno"
 #, kde-format
 msgid "&Cancel"
 msgstr "Prekliči"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Ali naj se Klipper samodejno zažene, ko se prijavite?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Samodejno zaženem Klipper?"
+
+#~ msgid "Start"
+#~ msgstr "Zaženi"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Ne zaženi"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

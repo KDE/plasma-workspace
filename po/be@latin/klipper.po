@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2008-10-18 22:34+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -492,6 +492,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "&Vyčyści historyju abmiennaha bufera"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "&Vyčyści historyju abmiennaha bufera"
+
 #: klipper.cpp:87
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
@@ -555,60 +567,28 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Ci ŭklučać aplikacyju „Klipper” pry ŭvachodzie ŭ systemu?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Ci ŭklučać aŭtamatyčna aplikacyju „Klipper”?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Uklučaj"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Nie ŭklučaj"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "&Vyčyści historyju abmiennaha bufera"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "&Vyčyści historyju abmiennaha bufera"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "&Pamier historyi abmiennaha bufera:"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr ""
@@ -860,6 +840,18 @@ msgstr "Vyklučy hety vypłyŭny element"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anuluj"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Ci ŭklučać aplikacyju „Klipper” pry ŭvachodzie ŭ systemu?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Ci ŭklučać aŭtamatyčna aplikacyju „Klipper”?"
+
+#~ msgid "Start"
+#~ msgstr "Uklučaj"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Nie ŭklučaj"
 
 #, fuzzy
 #~| msgid "&Quit"

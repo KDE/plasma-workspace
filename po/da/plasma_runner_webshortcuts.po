@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2020-10-04 17:17+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"PO-Revision-Date: 2024-06-27 23:28+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
@@ -31,7 +32,7 @@ msgstr "Åbner \"%1\" i en webbrowser med forespørgslen :q:."
 #: webshortcutrunner.cpp:74
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
-msgstr ""
+msgstr "Søg med DuckDuckGo bang-syntaksen"
 
 #: webshortcutrunner.cpp:102
 #, kde-format

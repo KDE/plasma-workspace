@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-05 07:43+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -505,6 +505,16 @@ msgstr "סמל:"
 msgid "%1x%2 %3bpp"
 msgstr "%1×%2 %3 סיביות לפיקסלים"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "האם לפנות ולמחוק את כל היסטוריית לוח הגזירים?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "פינוי היסטוריית לוח הגזירים"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -563,57 +573,27 @@ msgstr ""
 "ניתן להפעיל פקודות על כתובות מאוחר יותר דרך עמוד ה<interface>פעולות</"
 "interface> בחלון הגדרות היישומונית של לוח הגזירים"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "האם להפעיל את Klipper אוטומטית בעת הכניסה למערכת?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "להפעיל את Klipper אוטומטית?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "להפעיל"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "לא להפעיל"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "ברקוד נייד"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "האם לפנות ולמחוק את כל היסטוריית לוח הגזירים?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "פינוי היסטוריית לוח הגזירים"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "היסטוריית לוח הגזירים"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "למעלה"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "נוכחי"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "למטה"
@@ -862,6 +842,18 @@ msgstr "ביטול תפריט מוקפץ זה"
 #, kde-format
 msgid "&Cancel"
 msgstr "&ביטול"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "האם להפעיל את Klipper אוטומטית בעת הכניסה למערכת?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "להפעיל את Klipper אוטומטית?"
+
+#~ msgid "Start"
+#~ msgstr "להפעיל"
+
+#~ msgid "Do Not Start"
+#~ msgstr "לא להפעיל"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

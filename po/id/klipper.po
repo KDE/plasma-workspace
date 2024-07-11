@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2023-02-17 18:08+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -463,6 +463,16 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Apakah Anda yakin ingin menghapus seluruh riwayat papan klip?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Bersihkan Riwayat Papan Klip"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -523,57 +533,27 @@ msgstr ""
 "Kamu bisa memfungsikan aksi URL nanti di halaman <interface>Aksi</interface> "
 "pada jendela konfigurasi applet Clipboard"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Haruskan Klipper dijalankan secara otomatis ketika anda login?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Secara Otomatis Menjalankan Klipper?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Jalankan"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Jangan Jalankan"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "KodeBilah Ponsel"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Apakah Anda yakin ingin menghapus seluruh riwayat papan klip?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Bersihkan Riwayat Papan Klip"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histori papan klip"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "atas"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "saat ini"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "bawah"
@@ -829,6 +809,18 @@ msgstr "Nonfungsikan Sembulan Ini"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Batal"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Haruskan Klipper dijalankan secara otomatis ketika anda login?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Secara Otomatis Menjalankan Klipper?"
+
+#~ msgid "Start"
+#~ msgstr "Jalankan"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Jangan Jalankan"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

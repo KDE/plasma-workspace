@@ -4,27 +4,27 @@
 #
 # Erik Kjær Pedersen <erik@binghamton.edu>, 2000, 2002, 2003, 2004, 2006.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2010, 2011, 2012, 2015, 2017, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2020-10-04 17:19+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"PO-Revision-Date: 2024-07-07 21:44+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force font DPI X11"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "Gennemtving skrifttypens DPI X11"
+msgstr "Gennemtving skrifttypens DPI på X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
@@ -130,13 +130,12 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2pt"
 
 #: ui/main.qml:23
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts..."
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "&Justér alle skrifttyper..."
+msgstr "Justér global skala..."
 
 #: ui/main.qml:37
 #, kde-format
@@ -148,10 +147,7 @@ msgstr ""
 "nystartede program."
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid ""
-#| "Very large fonts may produce odd-looking results. Consider adjusting the "
-#| "global screen scale instead of using a very large font size."
+#, kde-format
 msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
@@ -170,10 +166,9 @@ msgstr ""
 "global skalering af skærmen."
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "&Adjust All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "&Justér alle skrifttyper..."
+msgstr "&Justér alle fonts..."
 
 #: ui/main.qml:99
 #, kde-format
@@ -181,10 +176,9 @@ msgid "General:"
 msgstr "Generelt:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgid "General font"
+#, kde-format
 msgid "Select general font"
-msgstr "Generel skrifttype"
+msgstr "Vælg generel font"
 
 #: ui/main.qml:111
 #, kde-format
@@ -192,10 +186,9 @@ msgid "Fixed width:"
 msgstr "Fast bredde:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgid "Fixed width font"
+#, kde-format
 msgid "Select fixed width font"
-msgstr "Skrifttype med fast bredde"
+msgstr "Vælg font med fast bredde"
 
 #: ui/main.qml:123
 #, kde-format
@@ -203,10 +196,9 @@ msgid "Small:"
 msgstr "Lille:"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Small font"
+#, kde-format
 msgid "Select small font"
-msgstr "Lille skrifttype"
+msgstr "Vælg lille font"
 
 #: ui/main.qml:135
 #, kde-format
@@ -214,10 +206,9 @@ msgid "Toolbar:"
 msgstr "Værktøjslinje:"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgid "Tool bar font"
+#, kde-format
 msgid "Select toolbar font"
-msgstr "Skrifttype til værktøjslinje"
+msgstr "Vælg font til værktøjslinje"
 
 #: ui/main.qml:147
 #, kde-format
@@ -225,10 +216,9 @@ msgid "Menu:"
 msgstr "Menu:"
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgid "Select Font"
+#, kde-format
 msgid "Select menu font"
-msgstr "Vælg skrifttype"
+msgstr "Vælg fonten til menuerne"
 
 #: ui/main.qml:158
 #, kde-format
@@ -236,10 +226,9 @@ msgid "Window title:"
 msgstr "Vinduestitel:"
 
 #: ui/main.qml:159
-#, fuzzy, kde-format
-#| msgid "Window title font"
+#, kde-format
 msgid "Select window title font"
-msgstr "Skrifttype til vinduestitel"
+msgstr "Vælg font til vinduestitel"
 
 #: ui/main.qml:174
 #, kde-format
@@ -261,6 +250,11 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Pixels på skærme er oftest indrettet i et gitter. Derfor vil fonte, der ikke "
+"passer til dette gitter, se klodset og forkert ud, med mindre <emphasis> "
+"antialiasing</emphasis>-teknikker bruges for at reducere effekten. Du vil "
+"normaltgærne  have denne indstilling aktiveret, med mindre den skaber "
+"problemer."
 
 #: ui/main.qml:197
 #, kde-format
@@ -296,6 +290,14 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>På TFT eller LCD-skærme består hver enkelt pixel faktisk af tre eller "
+"fire mindre monokrome lys. Disse <emphasis>sub-pixels</emphasis> kan blive "
+"ændret uafhængigt af hinanden for yderligere at øge kvaliteten af den viste "
+"font.</para> <para>Renderingskvaliteten øges kun hvis selektionen matcher "
+"den måde, hvorpå din skærms sub-pixels er indrettet. De fleste skærme har en "
+"lineær rækkefølge af <emphasis>RGB</emphasis> sub-pixels, nogle har "
+"<emphasis>BGR</emphasis> og nogle eksotiske rækkefølger er ikke understøttet "
+"af denne funktion.</para>Dette virker ikke med CRT-skærme."
 
 #: ui/main.qml:314
 #, kde-format
@@ -312,6 +314,10 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"Hinting er en teknik, hvor hints indlejret i en font er brug til at øge "
+"renderingskvaliteten især ved små størrelser. Stærkere hinting fører "
+"generelt til skarperer kanter men de små bogstaver vil ligne deres større "
+"form mindre."
 
 #: ui/main.qml:372
 #, kde-format
@@ -329,6 +335,12 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>Indtast din skærms DPI her for at gøre fonts på skærmen match deres "
+"fysiske størrelse, når de printes. Det vil skabe konflikt med mange apps "
+"hvis du ændre denne indstilling; nogle ikoner og billeder skaleres på "
+"uforventede måder. </para><para>For at øge tekststørrelsen, skal du ændre "
+"størrelsen på fonterne ovenfor. For at skalere alt, skal du bruge "
+"skaleringsslideren på <interface>Skærm og display</interface>-siden.</para>"
 
 #: ui/main.qml:406
 #, kde-format

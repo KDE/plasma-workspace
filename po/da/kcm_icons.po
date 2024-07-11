@@ -4,20 +4,21 @@
 # Erik Kjær Pedersen <erik@binghamton.edu>, 2000, 2002, 2003, 2004, 2005.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2012, 2014, 2016, 2018, 2019, 2020.
 # scootergrisen, 2017.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2020-07-22 21:13+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-08 12:19+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
@@ -55,28 +56,24 @@ msgid "Theme installed successfully."
 msgstr "Tema installeret korrekt."
 
 #: main.cpp:228
-#, fuzzy, kde-format
-#| msgid "Installing icon themes..."
+#, kde-format
 msgid "Installing icon themes…"
 msgstr "Installerer ikontemaer..."
 
 #: main.cpp:238
-#, fuzzy, kde-format
-#| msgid "Installing %1 theme..."
+#, kde-format
 msgid "Installing %1 theme…"
 msgstr "Installerer temaet %1..."
 
 #: ui/main.qml:67
-#, fuzzy, kde-format
-#| msgid "Install from File..."
+#, kde-format
 msgid "Install from File…"
 msgstr "Installér fra fil..."
 
 #: ui/main.qml:72
-#, fuzzy, kde-format
-#| msgid "Get New Icons..."
+#, kde-format
 msgid "Get New…"
-msgstr "Hent nye ikoner..."
+msgstr "Hent nye..."
 
 #: ui/main.qml:188
 #, kde-format

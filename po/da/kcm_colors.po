@@ -3,19 +3,20 @@
 #
 # Martin Schlander <mschlander@opensuse.org>, 2008.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2009, 2010, 2011, 2012, 2015, 2016, 2018, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2020-07-22 20:00+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-07 22:19+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -66,10 +67,9 @@ msgstr "Navn på farvetema"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Accent color"
-msgstr "Inaktiv farve"
+msgstr "Accentfarver"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -78,12 +78,14 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"Den sidst brugte accentfarve før bruger skiftede til farve genereret af "
+"baggrund eller standard farve"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "Hvorvidt accentfarver fra baggrunde skal anvendes"
 
 #: editor/kcolorschemeeditor.cpp:23
 #, kde-format
@@ -504,7 +506,7 @@ msgstr "Komplementær"
 #, kde-format
 msgctxt "color-sets"
 msgid "Header"
-msgstr ""
+msgstr "Overskrift"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
@@ -856,20 +858,19 @@ msgstr "Skygge på sorteret kolonne &i lister"
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "Gør titlelinjer for vinduer a&ccentfarvet"
 
 #. i18n: ectx: property (text), widget (QCheckBox, tintColors)
 #: editor/scmeditoroptions.ui:45
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Tint all colors with accent color"
-msgstr "Inaktiv farve"
+msgstr "Ton alle farver med accentfarven"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "Toningsstyrke:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
@@ -1149,6 +1150,9 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"Dette værktøj tillader dig at sætte farvetemaet for den nuværende Plasma-"
+"session, uden ved en fejl at sætte det til noget der ikke er tilgængeligt, "
+"eller, som allerede er sat."
 
 #: plasma-apply-colorscheme.cpp:45
 #, kde-format
@@ -1156,6 +1160,8 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Navnet på farvetemaet du ønsker at sætte for din nuværende Plasma-sessionen "
+"(kun den sidste del af stien vil bruges, hvis du indsender en fuld sti)"
 
 #: plasma-apply-colorscheme.cpp:48
 #, kde-format
@@ -1163,6 +1169,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
+"Vis alle tilgængelige farvetemaer på systemet (og som er det nuværende "
+"farvetema)"
 
 #: plasma-apply-colorscheme.cpp:53
 #, kde-format
@@ -1171,6 +1179,9 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"Navnet på accentfarven du gerne vil sætte. SVG farvenavne (https://www. w3."
+"org/TR/SVG11/types.html#ColorKeywords) og hex-farvekoder er understøttet. "
+"Citér hex-koden hvis der er mulighed for skaludvidelse"
 
 #: plasma-apply-colorscheme.cpp:80
 #, kde-format
@@ -1178,11 +1189,13 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Det ønskede tema \"%1\" er allerede sat som temaet for den nuværende Plasma-"
+"session."
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr ""
+msgstr "Anvendte farvetamet %1 til din nuværende Plasma-session"
 
 #: plasma-apply-colorscheme.cpp:115
 #, kde-format
@@ -1190,6 +1203,8 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Kunne ikke finde tema \"%1\". Temaet brude være en af følgende "
+"valgmuligheder: %2"
 
 #: plasma-apply-colorscheme.cpp:122
 #, kde-format
@@ -1197,6 +1212,8 @@ msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
 msgstr ""
+"Du har formået at sende et tomt farvetemanavn, hvilket ikke er understøttet "
+"opførsel."
 
 #: plasma-apply-colorscheme.cpp:126
 #, kde-format
@@ -1204,53 +1221,51 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
+"Filen du prøver at sætte som dit tema, %1, kunne ikke blive identificeret "
+"som et farvetema."
 
 #: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr ""
+msgstr "Anvendte accenfarven %1"
 
 #: plasma-apply-colorscheme.cpp:151
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgid "Invalid accent color "
-msgstr "Inaktiv farve"
+msgstr "Ugyldig accentfarve "
 
 #: plasma-apply-colorscheme.cpp:156
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr ""
+msgstr "Du har følgende farvetemaer på dit system:"
 
 #: plasma-apply-colorscheme.cpp:161
-#, fuzzy, kde-format
-#| msgid "Configure the current color scheme"
+#, kde-format
 msgid " * %1 (current color scheme)"
-msgstr "Indstil det nuværende farvetema"
+msgstr " * %1 (nuværende farvetema)"
 
 #: ui/AccentColorUI.qml:27
-#, fuzzy, kde-format
-#| msgid "Restore Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent Color From Color Scheme"
-msgstr "Gendan farvetema"
+msgstr "Accentfarve fra farvetema"
 
 #: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent Color From Wallpaper"
-msgstr ""
+msgstr "Accentfarve fra baggrunden"
 
 #: ui/AccentColorUI.qml:29
-#, fuzzy, kde-format
-#| msgid "Inactive color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom Accent Color"
-msgstr "Inaktiv farve"
+msgstr "Brugerdefineret accentfarve"
 
 #: ui/AccentColorUI.qml:147
 #, kde-format
 msgid "Choose custom accent color"
-msgstr ""
+msgstr "Vælg brugerdefineret accentfarve"
 
 #: ui/main.qml:90
 #, kde-format
@@ -1275,15 +1290,14 @@ msgid "Dark Schemes"
 msgstr "Mørke temaer"
 
 #: ui/main.qml:152
-#, fuzzy, kde-format
-#| msgid "Install from File..."
+#, kde-format
 msgid "Install from File…"
 msgstr "Installér fra fil..."
 
 #: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Få nye..."
 
 #: ui/main.qml:204
 #, kde-format
@@ -1328,8 +1342,7 @@ msgid "Disabled text"
 msgstr "Deaktiveret tekst"
 
 #: ui/main.qml:317
-#, fuzzy, kde-format
-#| msgid "Edit Color Scheme..."
+#, kde-format
 msgid "Edit Color Scheme…"
 msgstr "Redigér farvetema..."
 

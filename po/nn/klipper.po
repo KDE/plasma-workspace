@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2023-08-21 19:42+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -503,6 +503,16 @@ msgstr "Ikon:"
 msgid "%1x%2 %3bpp"
 msgstr "%1 × %2 %3 b/p"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Er du sikker på at du vil tømma og sletta heile utklippshistorikken?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Tøm utklippshistorikken"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -561,57 +571,27 @@ msgstr ""
 "Du kan setja opp nettadresse­handlingar seinare på sida "
 "<interface>Handlingar</interface> i innstillings­vindauget til utklippstavla."
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Skal Klipper startast automatisk når du loggar inn?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Automatisk start av Klipper?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Start"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Ikkje start"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil strekkode"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Er du sikker på at du vil tømma og sletta heile utklippshistorikken?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Tøm utklippshistorikken"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Utklippshistorikk"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "opp"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "gjeldande"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "ned"
@@ -869,3 +849,15 @@ msgstr "Slå av dette sprettoppvindauget"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Skal Klipper startast automatisk når du loggar inn?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Automatisk start av Klipper?"
+
+#~ msgid "Start"
+#~ msgstr "Start"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Ikkje start"

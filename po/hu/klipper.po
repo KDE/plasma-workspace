@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-07 09:54+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -502,6 +502,16 @@ msgstr "Ikon:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3 bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Biztosan törölni szeretné a vágólap összes előzményét?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Vágólapnapló törlése"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -560,57 +570,27 @@ msgstr ""
 "Az URL-műveleteket később is engedélyezheti a vágólap kisalkalmazás "
 "beállítóablakának <interface>Műveletek</interface> oldalán."
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Automatikusan elinduljon a program?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Elinduljon automatikusan a program?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Elindítás"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Nem kell elindítani"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil vonalkód"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Biztosan törölni szeretné a vágólap összes előzményét?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Vágólapnapló törlése"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Vágólapnapló"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "fel"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "jelenlegi"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "le"
@@ -864,6 +844,18 @@ msgstr "Ez az ablak ne jelenjen meg többé"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Mégsem"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Automatikusan elinduljon a program?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Elinduljon automatikusan a program?"
+
+#~ msgid "Start"
+#~ msgstr "Elindítás"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Nem kell elindítani"
 
 #, fuzzy
 #~| msgctxt "@item:inmenu Quit Klipper"

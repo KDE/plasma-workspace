@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2021-10-11 12:06+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -101,22 +101,22 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/main.qml:30
+#: contents/ui/main.qml:32
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "क्लिपबोर्ड के वस्तुएँ"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिपबोर्ड खाली है"
 
-#: contents/ui/main.qml:59
+#: contents/ui/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "इतिहास साफ करें"
 
-#: contents/ui/main.qml:71
+#: contents/ui/main.qml:73
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "क्लिपबोर्ड विन्यस्त करें..."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2019-12-18 18:26+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -480,6 +480,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Kas tõesti kustutada kogu lõikepuhvri ajalugu?"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "Puhasta &lõikepuhvri ajalugu"
+
 #: klipper.cpp:87
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
@@ -544,59 +556,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Kas käivitada Klipper automaatselt sisselogimisel?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Kas käivitada Klipper automaatselt?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Käivita"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Ära käivita"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobiili ribakood"
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Kas tõesti kustutada kogu lõikepuhvri ajalugu?"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "Puhasta &lõikepuhvri ajalugu"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Lõikepuhvri ajalugu"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "üles"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "aktiivne"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "alla"
@@ -846,6 +826,18 @@ msgstr "Selle hüpikakna keelamine"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Loobu"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Kas käivitada Klipper automaatselt sisselogimisel?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Kas käivitada Klipper automaatselt?"
+
+#~ msgid "Start"
+#~ msgstr "Käivita"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Ära käivita"
 
 #, fuzzy
 #~| msgctxt "@item:inmenu Quit Klipper"

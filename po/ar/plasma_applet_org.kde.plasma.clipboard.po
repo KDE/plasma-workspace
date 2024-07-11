@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2023-06-01 09:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -102,22 +102,22 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "ألغ"
 
-#: contents/ui/main.qml:30
+#: contents/ui/main.qml:32
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "محتويات الحافظة"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "الحافظة فارغة"
 
-#: contents/ui/main.qml:59
+#: contents/ui/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "امحُ التّأريخ"
 
-#: contents/ui/main.qml:71
+#: contents/ui/main.qml:73
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "اضبط الحافظة..."

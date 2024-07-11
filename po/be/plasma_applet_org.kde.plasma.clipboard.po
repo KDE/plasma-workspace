@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-05-19 21:15\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -108,22 +108,22 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Скасаваць"
 
-#: contents/ui/main.qml:30
+#: contents/ui/main.qml:32
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Змесціва буфера абмену"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер абмену пусты"
 
-#: contents/ui/main.qml:59
+#: contents/ui/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "Ачысціць гісторыю"
 
-#: contents/ui/main.qml:71
+#: contents/ui/main.qml:73
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Наладжванне буфера абмену…"

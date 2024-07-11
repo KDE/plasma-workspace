@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2017-11-04 20:03+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -492,6 +492,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Заиста обрисати читав историјат клипборда?"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "&Очисти историјат клипборда"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -555,60 +567,28 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Да ли аутоматски покренути Клипер пошто се пријавите?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Аутоматски покретати Клипер?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Покрећи"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Не покрећи"
-
 # >> @title:window
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Мобилни бар‑код"
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Заиста обрисати читав историјат клипборда?"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "&Очисти историјат клипборда"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Историјат клипборда"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "горе"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "текуће"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "доље"
@@ -855,6 +835,18 @@ msgstr "Искључи ово искакање"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Одустани"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Да ли аутоматски покренути Клипер пошто се пријавите?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Аутоматски покретати Клипер?"
+
+#~ msgid "Start"
+#~ msgstr "Покрећи"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Не покрећи"
 
 #, fuzzy
 #~| msgctxt "@item:inmenu Quit Klipper"

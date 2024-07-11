@@ -4,19 +4,20 @@
 #
 # Erik Kjær Pedersen <erik@binghamton.edu>, 1999, 2002, 2004, 2005.
 # Martin Schlander <mschlander@opensuse.org>, 2008, 2010, 2012, 2014, 2015, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-05 00:40+0000\n"
-"PO-Revision-Date: 2020-07-21 18:30+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-07 21:25+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: logout.cpp:273
@@ -41,6 +42,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"Ingen skriveadgang til $HOME-mappen (%1). Hvis dette er bevidst, sæt "
+"<envar>KDE_HOME_READONLY=1</envar> i dit miljø."
 
 #: main.cpp:81
 #, kde-format
@@ -143,7 +146,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[ukendt]"
 
 #: server.cpp:798
 #, kde-kuit-format
@@ -153,6 +156,10 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Kunne ikke adminstrere visse apps på grund af systemets "
+"sessionshåndteringsressourcer er opbrugt. Her er de tre største forbrugere "
+"af sessionsressourcer:\n"
+"%1"
 
 #: server.cpp:1070
 #, kde-kuit-format
@@ -162,6 +169,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Kunne ikke gendanne <application>%1</application> på grund den er i stykker "
+"og har opbrugt systemets sessiongendannelsesressourcer. Venligt rapportér "
+"dette til appens udviklere."
 
 #~ msgid "Session Management"
 #~ msgstr "Sessionshåndtering"

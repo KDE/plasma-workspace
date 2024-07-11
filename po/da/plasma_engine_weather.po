@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2009, 2010, 2011, 2016, 2017, 2018, 2019.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-11 00:40+0000\n"
-"PO-Revision-Date: 2019-11-22 20:02+0100\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
-"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"PO-Revision-Date: 2024-07-08 12:30+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
+"Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: bbcukmet_i18n.dat:1
@@ -2773,7 +2774,7 @@ msgstr "Data fra BBC Weather"
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
-msgstr ""
+msgstr "Kilde: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:899 ions/envcan/ion_envcan.cpp:901
 #: ions/envcan/ion_envcan.cpp:1389 ions/envcan/ion_envcan.cpp:1519
@@ -2826,7 +2827,7 @@ msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "
 "\"Rain then Sunny\")"
 msgid " then "
-msgstr ""
+msgstr " så "
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -3854,9 +3855,7 @@ msgid "Low Drifting Snow"
 msgstr "Lav snefygning"
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Clear"
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
 msgstr "Mest klart"
@@ -4900,36 +4899,28 @@ msgid "Mostly Clear"
 msgstr "Mest klart"
 
 #: noaa_i18n.dat:358
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Showers or thunderstorms"
+#, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr "Byger eller tordenvejr"
+msgstr "Byger og tordenvejr"
 
 #: noaa_i18n.dat:359
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Slight Chance Thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr "Lille risiko for tordenvejr"
+msgstr "Lille risiko for byger og tordenvejr"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance of showers or thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "Risiko for byger eller tordenvejr"
+msgstr "Risiko for byger og tordenvejr"
 
 #: noaa_i18n.dat:361
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Thunderstorms Likely"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr "Tordenvejr sandsynligt"
+msgstr "Byger og tordenvejr sandsynligt"
 
 #~ msgctxt "weather condition"
 #~ msgid "weather condition"

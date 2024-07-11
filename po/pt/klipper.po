@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -504,6 +504,16 @@ msgstr "Ícone:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Deseja mesmo limpar e remover o histórico da área de transferência?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Limpar o Histórico da Área de Transferência"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -565,58 +575,27 @@ msgstr ""
 "<interface>Acções</interface> na janela de configuração do elemento da Área "
 "de Transferência"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr ""
-"Dever-se-á o Klipper iniciar automaticamente quando o utilizador se liga?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Iniciar Automaticamente o Klipper?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Iniciar"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Não Iniciar"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Código de Barras Móvel"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Deseja mesmo limpar e remover o histórico da área de transferência?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Limpar o Histórico da Área de Transferência"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histórico da área de transferência"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "cima"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "baixo"
@@ -880,6 +859,19 @@ msgstr "Desactivar este menu"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr ""
+#~ "Dever-se-á o Klipper iniciar automaticamente quando o utilizador se liga?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Iniciar Automaticamente o Klipper?"
+
+#~ msgid "Start"
+#~ msgstr "Iniciar"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Não Iniciar"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

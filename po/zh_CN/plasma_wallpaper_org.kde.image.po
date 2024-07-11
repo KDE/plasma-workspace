@@ -115,7 +115,7 @@ msgstr "添加…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr ""
+msgstr "添加壁纸…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "获取新壁纸…"
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr ""
+msgstr "获取新壁纸…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format

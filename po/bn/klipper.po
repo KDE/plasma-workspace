@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2010-06-01 11:22-0700\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -471,6 +471,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "সত্যিই পুরো ক্লিপবোর্ড ইতিহাস মুছে ফেলা হবে?"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "ক্লিপবোর্ড ইতিহা&স ফাঁকা করো"
+
 #: klipper.cpp:87
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
@@ -534,59 +546,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "আপনি লগ-ইন করাকালীন ক্লিপার কি আপনা আপনি চালু হবে?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "ক্লিপার আপনা আপনি শুরু?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "শুরু করো"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "শুরু কোর না"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "সত্যিই পুরো ক্লিপবোর্ড ইতিহাস মুছে ফেলা হবে?"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "ক্লিপবোর্ড ইতিহা&স ফাঁকা করো"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "ক্লিপবোর্ড ইতিহাস"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "উপর"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "বর্তমান"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "নীচ"
@@ -835,6 +815,18 @@ msgstr "এই পপ-আপটি নিষ্ক্রিয় করো"
 #, kde-format
 msgid "&Cancel"
 msgstr "বাতি&ল করো"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "আপনি লগ-ইন করাকালীন ক্লিপার কি আপনা আপনি চালু হবে?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "ক্লিপার আপনা আপনি শুরু?"
+
+#~ msgid "Start"
+#~ msgstr "শুরু করো"
+
+#~ msgid "Do Not Start"
+#~ msgstr "শুরু কোর না"
 
 #, fuzzy
 #~| msgid "&Quit"

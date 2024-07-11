@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -479,6 +479,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം തീര്‍ച്ച്യായും കളയുക?"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം കളയുക"
+
 #: klipper.cpp:87
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
@@ -545,59 +557,27 @@ msgstr ""
 "ക്ലിപ്പ്ബോർഡ് ആപ്പ്‌ലെറ്റിന്റെ ക്രമീകരണ ജാലകത്തിലെ <interface>പ്രവർത്തനങ്ങൾ</interface> "
 "താളിൽ നിങ്ങൾക്ക് പിന്നീട് URL പ്രവർത്തനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കാനാകും"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "താങ്കള്‍ ലോഗിന്‍ ചെയ്യുമ്പോള്‍ തന്നെ ക്ലിപ്പര്‍ തുടങ്ങണോ?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "ക്ലിപ്പര്‍ തനിയെ തുടങ്ങണോ ?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "തുടങ്ങുക"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "തുടങ്ങണ്ട"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "മൊബൈൽ ബാർകോഡ്"
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം തീര്‍ച്ച്യായും കളയുക?"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം കളയുക"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "മുകളില്‍"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "ഇപ്പോള്‍ നിലവിലുളളത്"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "താഴെ"
@@ -847,6 +827,18 @@ msgstr "പൊങ്ങിവരുന്ന ഈ ജാലകത്തിനെ 
 #, kde-format
 msgid "&Cancel"
 msgstr "&റദ്ദാക്കുക"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "താങ്കള്‍ ലോഗിന്‍ ചെയ്യുമ്പോള്‍ തന്നെ ക്ലിപ്പര്‍ തുടങ്ങണോ?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "ക്ലിപ്പര്‍ തനിയെ തുടങ്ങണോ ?"
+
+#~ msgid "Start"
+#~ msgstr "തുടങ്ങുക"
+
+#~ msgid "Do Not Start"
+#~ msgstr "തുടങ്ങണ്ട"
 
 #, fuzzy
 #~ msgctxt "@action:inmenu Quit Klipper"

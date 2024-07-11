@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-05 19:46+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -508,6 +508,16 @@ msgstr "Ikonoa:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Benetan garbitu eta ezabatu nahi duzu arbeleko historia osoa?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Garbitu arbeleko historia"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -566,57 +576,27 @@ msgstr ""
 "URL ekintzak beranduago gaitu ditzakezu, Arbela aplikaziotxoa konfiguratzeko "
 "<interface>Ekintzak</interface> orrian"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Klipper automatikoki abiarazi behar da saioa hasten duzunean?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Klipper automatikoki abiarazi nahi duzu?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Abiarazi"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Ez abiarazi"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mugikorretarako barra-kodea"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Benetan garbitu eta ezabatu nahi duzu arbeleko historia osoa?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Garbitu arbeleko historia"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Arbeleko historia"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "gora"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "unekoa"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "behera"
@@ -869,6 +849,18 @@ msgstr "Desgaitu leiho gainerakor hau"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Utzi"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Klipper automatikoki abiarazi behar da saioa hasten duzunean?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Klipper automatikoki abiarazi nahi duzu?"
+
+#~ msgid "Start"
+#~ msgstr "Abiarazi"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Ez abiarazi"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

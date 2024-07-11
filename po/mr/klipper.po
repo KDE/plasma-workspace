@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -482,6 +482,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "क्लिपबोर्डचा पूर्ण इतिहास नष्ट करायचा का?"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "क्लिपबोर्ड इतिहास नष्ट करा (&L)"
+
 #: klipper.cpp:87
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
@@ -546,59 +558,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "प्रवेशानंतर क्लिपर आपोआप सुरु व्हायला हवे का?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "क्लिपर आपोआप सुरु करायचे का?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "सुरु करा"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "सुरु करू नका"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "मोबाईल बारकोड"
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "क्लिपबोर्डचा पूर्ण इतिहास नष्ट करायचा का?"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "क्लिपबोर्ड इतिहास नष्ट करा (&L)"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "वर"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "वर्तमान"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "खाली"
@@ -847,6 +827,18 @@ msgstr "हे पॉपअप अकार्यान्वित करा"
 #, kde-format
 msgid "&Cancel"
 msgstr "रद्द करा (&C)"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "प्रवेशानंतर क्लिपर आपोआप सुरु व्हायला हवे का?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "क्लिपर आपोआप सुरु करायचे का?"
+
+#~ msgid "Start"
+#~ msgstr "सुरु करा"
+
+#~ msgid "Do Not Start"
+#~ msgstr "सुरु करू नका"
 
 #, fuzzy
 #~| msgctxt "@item:inmenu Quit Klipper"

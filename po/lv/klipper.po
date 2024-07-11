@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-04-05 10:20+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -507,6 +507,16 @@ msgstr "Ikona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Vai tiešām vēlaties notīrīt un dzēst visu starpliktuves vēsturi?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "&Tīrīt starpliktuves vēsturi"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -565,57 +575,27 @@ msgstr ""
 "URL darbības varat ieslēgt vēlāk starpliktuves logdaļas konfigurācijas loga "
 "<interface>Darbību</interface> lapā"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Vai automātiski palaist „Klipper“ pēc ierakstīšanās?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Automātiski palaist „Klipper“?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Palaist"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Nepalaist"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilais svītrkods"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Vai tiešām vēlaties notīrīt un dzēst visu starpliktuves vēsturi?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "&Tīrīt starpliktuves vēsturi"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Starpliktuves vēsture"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "augšup"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "aktīvais"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "lejup"
@@ -867,6 +847,18 @@ msgstr "Izslēgt šo uzlecošo logu"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atcelt"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Vai automātiski palaist „Klipper“ pēc ierakstīšanās?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Automātiski palaist „Klipper“?"
+
+#~ msgid "Start"
+#~ msgstr "Palaist"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Nepalaist"
 
 #, fuzzy
 #~| msgctxt "@item:inmenu Quit Klipper"

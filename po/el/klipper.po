@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2014-10-28 16:44+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -484,6 +484,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Επιθυμείτε πραγματικά τη διαγραφή του ιστορικού του προχείρου;"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "Κα&θαρισμός ιστορικού προχείρου"
+
 #: klipper.cpp:87
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
@@ -548,59 +560,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Να ξεκινά αυτόματα το Klipper κατά τη σύνδεσή σας;"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Αυτόματη εκκίνηση Klipper;"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Εκκίνηση"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Να μην εκκινηθεί"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Γραμμοκώδικας για κινητά"
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Επιθυμείτε πραγματικά τη διαγραφή του ιστορικού του προχείρου;"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "Κα&θαρισμός ιστορικού προχείρου"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Ιστορικό του προχείρου"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "πάνω"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "τρέχον"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "κάτω"
@@ -852,6 +832,18 @@ msgstr "Απενεργοποίηση αυτού του αναδυόμενου μ
 #, kde-format
 msgid "&Cancel"
 msgstr "&Ακύρωση"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Να ξεκινά αυτόματα το Klipper κατά τη σύνδεσή σας;"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Αυτόματη εκκίνηση Klipper;"
+
+#~ msgid "Start"
+#~ msgstr "Εκκίνηση"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Να μην εκκινηθεί"
 
 #, fuzzy
 #~| msgctxt "@item:inmenu Quit Klipper"

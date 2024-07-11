@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -508,6 +508,16 @@ msgstr "Значок:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3 бітаў/піксель"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Сапраўды хочаце ачысціць усю гісторыю буфера абмену?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Ачысціць гісторыю буфера абмену"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -566,57 +576,27 @@ msgstr ""
 "Вы можаце ўключыць URL-дзеянні пазней на старонцы <interface>Дзеянні</"
 "interface> акна канфігурацыі аплета буфера абмену"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Ці трэба аўтаматычна запускаць Klipper пры ўваходзе ў сістэму?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Запускаць Klipper аўтаматычна?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Запускаць"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Не запускаць"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Мабільны штрых-код"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Сапраўды хочаце ачысціць усю гісторыю буфера абмену?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Ачысціць гісторыю буфера абмену"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Гісторыя буфера абмену"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "уверх"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "бягучая"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "уніз"
@@ -869,6 +849,18 @@ msgstr "Адключыць гэтае выплыўнае акно"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Скасаваць"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Ці трэба аўтаматычна запускаць Klipper пры ўваходзе ў сістэму?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Запускаць Klipper аўтаматычна?"
+
+#~ msgid "Start"
+#~ msgstr "Запускаць"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Не запускаць"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

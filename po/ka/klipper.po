@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-05 05:02+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -500,6 +500,16 @@ msgstr "ხატულა:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "მართლა გნებავთ ბუფერის ისტორიის სრულად გასუფთავება და წაშლა?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "ბუფერის ისტორიის გასუფთავება"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -558,57 +568,27 @@ msgstr ""
 "URL მოქმედებების ჩართვა მოგვიანებით ბუფერდის ვაშლის კონფიგურაციის ფანჯრის "
 "<interface>მოქმედებების</interface> გვერდზე"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "გაეშვას Klipper-ი ავტომატურად, როცა შეხვალთ?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "გავუშვა Klipper-ი ავტომატურად?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "გაშვება"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "არ გაშვება"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "მობილური შტრიხკოდი"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "მართლა გნებავთ ბუფერის ისტორიის სრულად გასუფთავება და წაშლა?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "ბუფერის ისტორიის გასუფთავება"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "ბაფერის ისტორია"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "მაღლა"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "მიმდინარე"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "დაბლა"
@@ -862,6 +842,18 @@ msgstr "ამ მხტუნარას გათიშვა"
 #, kde-format
 msgid "&Cancel"
 msgstr "&შეწყვეტა"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "გაეშვას Klipper-ი ავტომატურად, როცა შეხვალთ?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "გავუშვა Klipper-ი ავტომატურად?"
+
+#~ msgid "Start"
+#~ msgstr "გაშვება"
+
+#~ msgid "Do Not Start"
+#~ msgstr "არ გაშვება"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

@@ -347,13 +347,13 @@ msgstr "用户"
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr ""
+msgstr "新增…"
 
 #: src/ui/main.qml:32
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr ""
+msgstr "新增用户…"
 
 #: src/ui/main.qml:108
 #, kde-format

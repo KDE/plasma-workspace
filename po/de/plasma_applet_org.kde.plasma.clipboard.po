@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2023-05-28 10:34+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -101,22 +101,22 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "Abbrechen"
 
-#: contents/ui/main.qml:30
+#: contents/ui/main.qml:32
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Inhalt der Zwischenablage"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Zwischenablage ist leer"
 
-#: contents/ui/main.qml:59
+#: contents/ui/main.qml:61
 #, kde-format
 msgid "Clear History"
 msgstr "Verlauf leeren"
 
-#: contents/ui/main.qml:71
+#: contents/ui/main.qml:73
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Zwischenablage einrichten ..."

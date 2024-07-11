@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-05 15:05+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -510,6 +510,16 @@ msgstr "Icona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Realment voleu netejar i suprimir tot l'historial del porta-retalls?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Neteja l'historial del porta-retalls"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -569,57 +579,27 @@ msgstr ""
 "interface> de la finestra de configuració de la miniaplicació de porta-"
 "retalls"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "El Klipper ha d'engegar automàticament en connectar-vos?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Engego el Klipper automàticament?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Engega"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "No engeguis"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Codi de barres del mòbil"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Realment voleu netejar i suprimir tot l'historial del porta-retalls?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Neteja l'historial del porta-retalls"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del porta-retalls"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "amunt"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "avall"
@@ -878,6 +858,18 @@ msgstr "Desactiva aquest emergent"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancel·la"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "El Klipper ha d'engegar automàticament en connectar-vos?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Engego el Klipper automàticament?"
+
+#~ msgid "Start"
+#~ msgstr "Engega"
+
+#~ msgid "Do Not Start"
+#~ msgstr "No engeguis"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

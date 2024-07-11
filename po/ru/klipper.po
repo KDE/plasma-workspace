@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-04-04 17:51+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -525,6 +525,16 @@ msgstr "Значок:"
 msgid "%1x%2 %3bpp"
 msgstr "%1×%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Очистить и удалить весь журнал буфера обмена?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Очистить журнал буфера обмена"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -584,57 +594,27 @@ msgstr ""
 "<interface>Действия</interface>, расположенном в окне настройки параметров "
 "виджета «Содержимое буфера обмена»"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Запускать Klipper автоматически при входе в KDE?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Запускать Klipper автоматически?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Запускать"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Не запускать"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "QR-код"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Очистить и удалить весь журнал буфера обмена?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Очистить журнал буфера обмена"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Журнал буфера обмена"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "более новое:"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "выбрано:"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "более старое:"
@@ -894,6 +874,18 @@ msgstr "Запретить выпадающее меню"
 #, kde-format
 msgid "&Cancel"
 msgstr "О&тмена"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Запускать Klipper автоматически при входе в KDE?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Запускать Klipper автоматически?"
+
+#~ msgid "Start"
+#~ msgstr "Запускать"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Не запускать"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

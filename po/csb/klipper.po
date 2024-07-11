@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2009-12-16 23:31+0100\n"
 "Last-Translator: Mark Kwidzińśczi <mark@linuxcsb.org>\n"
 "Language-Team: Kaszëbsczi <i18n-csb@linuxcsb.org>\n"
@@ -483,6 +483,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Pò prôwdze wëczëszczëc historëjã tacnika?"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "&Wëczëszczë historëjã tacnika"
+
 #: klipper.cpp:87
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
@@ -546,59 +558,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Czë zrëszac Klippera aùtomatno przë logòwaniu?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Aùtomatno zrëszëc Klippera?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Zrëszë"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Ni zrësziwôj"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Pò prôwdze wëczëszczëc historëjã tacnika?"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "&Wëczëszczë historëjã tacnika"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historëja tacnika"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "w górã"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "aktualné"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "w dół"
@@ -847,6 +827,18 @@ msgstr "Wëłączë to òkno"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Anulëjë"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Czë zrëszac Klippera aùtomatno przë logòwaniu?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Aùtomatno zrëszëc Klippera?"
+
+#~ msgid "Start"
+#~ msgstr "Zrëszë"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Ni zrësziwôj"
 
 #, fuzzy
 #~| msgid "&Quit"

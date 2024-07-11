@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-06-09 15:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -491,6 +491,16 @@ msgstr "Pictogramă:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Sigur curățați și ștergeți întregul istoric al clipboard-ului?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "Curăță istoricul clipboard-ului"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -549,57 +559,27 @@ msgstr ""
 "Puteți activa mai târziu acțiunile de URL pe pagina <interface>Acțiuni</"
 "interface> a ferestrei de configurare a miniaplicației Clipboard."
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "Configurați Klipper să pornească automat la autentificare?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Pornire automată Klipper"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Pornește"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Nu porni"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Cod de bare pentru mobil"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Sigur curățați și ștergeți întregul istoric al clipboard-ului?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "Curăță istoricul clipboard-ului"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Istoric clipboard"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "sus"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "curent"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "jos"
@@ -856,6 +836,18 @@ msgstr "Dezactivează acest meniu contextual"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Renunță"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "Configurați Klipper să pornească automat la autentificare?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Pornire automată Klipper"
+
+#~ msgid "Start"
+#~ msgstr "Pornește"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Nu porni"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

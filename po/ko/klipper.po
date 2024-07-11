@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2023-07-25 23:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -488,6 +488,16 @@ msgstr "아이콘:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "전체 클립보드 기록을 삭제하시겠습니까?"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "클립보드 기록 비우기"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -546,57 +556,27 @@ msgstr ""
 "클립보드 애플릿 설정 창의 <interface>동작</interface>에서 URL 동작을 설정할 "
 "수 있습니다"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "로그인 할 때마다 Kilpper를 자동으로 시작하시겠습니까?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Klipper를 자동으로 시작하시겠습니까?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "시작 사용"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "시작하지 않음"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "모바일 바코드"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "전체 클립보드 기록을 삭제하시겠습니까?"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "클립보드 기록 비우기"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "클립보드 과거 기록"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "위"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "현재"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "아래"
@@ -844,6 +824,18 @@ msgstr "이 팝업 사용 안 함"
 #, kde-format
 msgid "&Cancel"
 msgstr "취소(&C)"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "로그인 할 때마다 Kilpper를 자동으로 시작하시겠습니까?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Klipper를 자동으로 시작하시겠습니까?"
+
+#~ msgid "Start"
+#~ msgstr "시작 사용"
+
+#~ msgid "Do Not Start"
+#~ msgstr "시작하지 않음"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

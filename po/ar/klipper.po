@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-30 10:57+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -502,6 +502,16 @@ msgstr "الأيقونة:"
 msgid "%1x%2 %3bpp"
 msgstr "%1×%2 %3ب.ل.ب"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "أحقا أمحو وأحذف كامل تاريخ الحافظة؟"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "امح تاريخ الحافظة"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -560,57 +570,27 @@ msgstr ""
 "يمكنك تمكين إجراءات العناوين لاحقًا في صفحة <interface> الإجراءات </"
 "interface> لنافذة تكوين برنامج الحافظة الصغير."
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "هل يجب أن يبدأ Klipper تلقائيا عند الولوج؟"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "تشغيل Klipper تلقائياً ؟"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "ابدأ"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "لا تبدأ"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "باركود الجوال"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "أحقا أمحو وأحذف كامل تاريخ الحافظة؟"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "امح تاريخ الحافظة"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "تاريخ الحافظة: "
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "أعلى"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "الحالي"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "أسفل"
@@ -860,6 +840,18 @@ msgstr "عطّل هذه النافذة المنبثقة"
 #, kde-format
 msgid "&Cancel"
 msgstr "أ&لغ"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "هل يجب أن يبدأ Klipper تلقائيا عند الولوج؟"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "تشغيل Klipper تلقائياً ؟"
+
+#~ msgid "Start"
+#~ msgstr "ابدأ"
+
+#~ msgid "Do Not Start"
+#~ msgstr "لا تبدأ"
 
 #~ msgctxt "@action:inmenu Quit Klipper"
 #~ msgid "&Quit"

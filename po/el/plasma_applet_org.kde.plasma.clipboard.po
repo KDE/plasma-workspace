@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-26 00:39+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2015-03-05 15:28+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -105,23 +105,23 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/main.qml:30
+#: contents/ui/main.qml:32
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Περιεχόμενα προχείρου"
 
-#: contents/ui/main.qml:31 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Το πρόχειρο είναι άδειο"
 
-#: contents/ui/main.qml:59
+#: contents/ui/main.qml:61
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"
 msgstr "Καθαρισμός ιστορικού"
 
-#: contents/ui/main.qml:71
+#: contents/ui/main.qml:73
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"

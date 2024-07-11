@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2019, 2020.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2020-01-19 16:37+0100\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-07 21:56+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 18.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -48,17 +49,13 @@ msgid "Show notification badges"
 msgstr "Vis bekendtgørelsesskilte"
 
 #: ui/ApplicationConfiguration.qml:180
-#, fuzzy, kde-format
-#| msgid "Configure Events..."
+#, kde-format
 msgctxt "@title:table Configure individual notification events in an app"
 msgid "Configure Events"
 msgstr "Indstil hændelser..."
 
 #: ui/ApplicationConfiguration.qml:188
-#, fuzzy, kde-format
-#| msgid ""
-#| "This application does not support configuring notifications on a per-"
-#| "event basis."
+#, kde-format
 msgid ""
 "This application does not support configuring notifications on a per-event "
 "basis"
@@ -68,56 +65,52 @@ msgstr ""
 #: ui/ApplicationConfiguration.qml:282
 #, kde-format
 msgid "Show a message in a pop-up"
-msgstr ""
+msgstr "Vis en besked i en pop-up"
 
 #: ui/ApplicationConfiguration.qml:291
 #, kde-format
 msgid "Play a sound"
-msgstr ""
+msgstr "Afspil en lyd"
 
 #: ui/ApplicationConfiguration.qml:302
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound"
-msgstr ""
+msgstr "Afspil lyden"
 
 #: ui/ApplicationConfiguration.qml:328
 #, kde-format
 msgctxt "Reset the notification sound to a default one"
 msgid "Reset"
-msgstr ""
+msgstr "Nulstil"
 
 #: ui/ApplicationConfiguration.qml:340
 #, kde-format
 msgid "Choose sound file"
-msgstr ""
+msgstr "Vælg lydfil"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgid "Notifications"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications…"
-msgstr "Bekendtgørelser"
+msgstr "Systembekendtgørelser"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings…"
-msgstr "Programindstillinger"
+msgstr "Programindstillinger..."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not find a 'Notifications' widget which is required for displaying "
-#| "notifications."
+#, kde-format
 msgid ""
 "Could not find a 'Notifications' widget, which is required for displaying "
 "notifications. Make sure that it is enabled either in your System Tray or as "
 "a standalone widget."
 msgstr ""
 "Kunne ikke finde en \"bekendtgørelses\"-widget, hvilket er påkrævet for at "
-"vise bekendtgørelser."
+"vise bekendtgørelser. Sørg for at den er aktiveret enten i dit statusområde "
+"eller som en selvstændig widget."
 
 #: ui/main.qml:91
 #, kde-format
@@ -132,45 +125,40 @@ msgid "Notifications are currently not provided by Plasma."
 msgstr "Bekendtgørelser leveres i øjeblikket ikke af Plasma."
 
 #: ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "Do Not Disturb mode:"
+#, kde-format
 msgctxt "@title:group"
 msgid "Do Not Disturb mode"
-msgstr "\"Vil ikke forstyrres\"-tilstand:"
+msgstr "Vil ikke forstyres-tilstand"
 
 #: ui/main.qml:110
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr ""
+msgstr "Aktivér automatisk:"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "When screens are mirrored"
-msgstr "Aktivér når skærme er spejlede"
+msgstr "Når skærme er spejlede"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Do not disturb when screens are mirrored"
-#| msgid "Enable when screens are mirrored"
+#, kde-format
 msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
-msgstr "Aktivér når skærme er spejlede"
+msgstr "Når skærme er spejlede"
 
 #: ui/main.qml:138
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
-msgstr ""
+msgstr "Skift manuelt med genvej:"
 
 #: ui/main.qml:145
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
-msgstr ""
+msgstr "Synlighedsbetingelser"
 
 #: ui/main.qml:150
 #, kde-format
@@ -178,21 +166,19 @@ msgid "Critical notifications:"
 msgstr "Kritiske bekendtgørelser:"
 
 #: ui/main.qml:151
-#, fuzzy, kde-format
-#| msgid "Show in do not disturb mode"
+#, kde-format
 msgid "Show in Do Not Disturb mode"
-msgstr "Vis i \"Vil ikke forstyrres\"-tilstand"
+msgstr "Vis i Vil ikke forstyrres-tilstand"
 
 #: ui/main.qml:163
-#, fuzzy, kde-format
-#| msgid "Critical notifications:"
+#, kde-format
 msgid "Normal notifications:"
-msgstr "Kritiske bekendtgørelser:"
+msgstr "Normale bekendtgørelser:"
 
 #: ui/main.qml:164
 #, kde-format
 msgid "Show over full screen windows"
-msgstr ""
+msgstr "Vis over vinduer i fuld skærm"
 
 #: ui/main.qml:176
 #, kde-format
@@ -205,30 +191,25 @@ msgid "Show popup"
 msgstr "Vis pop-op"
 
 #: ui/main.qml:206
-#, fuzzy, kde-format
-#| msgid "Popup:"
+#, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
-msgstr "Pop-op:"
+msgstr "Pop-ups"
 
 #: ui/main.qml:212
-#, fuzzy, kde-format
-#| msgid "Applications:"
+#, kde-format
 msgctxt "@label"
 msgid "Location:"
-msgstr "Programmer:"
+msgstr "Placering:"
 
 #: ui/main.qml:213
-#, fuzzy, kde-format
-#| msgctxt "Popup position near notification plasmoid"
-#| msgid "Show near notification icon"
+#, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
-msgstr "Vis nær bekendtgørelsesikonet"
+msgstr "Nær bekendtgørelsesikonet"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Choose Custom Position..."
+#, kde-format
 msgid "Choose Custom Position…"
 msgstr "Angiv brugervalgt placering..."
 
@@ -249,7 +230,7 @@ msgstr "Skjul efter:"
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
-msgstr ""
+msgstr "Yderligere feedback"
 
 #: ui/main.qml:293
 #, kde-format
@@ -299,16 +280,12 @@ msgid "System Services"
 msgstr "Systemtjenester"
 
 #: ui/SourcesPage.qml:156
-#, fuzzy, kde-format
-#| msgid "No application or event matches your search term."
+#, kde-format
 msgid "No application or event matches your search term"
 msgstr "Intet program eller hændelse matcher dit søgeudtryk."
 
 #: ui/SourcesPage.qml:180
-#, fuzzy, kde-format
-#| msgid ""
-#| "Select an application from the list to configure its notification "
-#| "settings and behavior."
+#, kde-format
 msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-03-18 15:21-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -490,6 +490,18 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
+#: historymodel.cpp:66
+#, fuzzy, kde-format
+#| msgid "Really delete entire clipboard history?"
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "Deseja realmente excluir o histórico da área de transferência?"
+
+#: historymodel.cpp:67
+#, fuzzy, kde-format
+#| msgid "C&lear Clipboard History"
+msgid "Clear Clipboard History"
+msgstr "&Limpar histórico da área de transferência"
+
 #: klipper.cpp:87
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
@@ -556,59 +568,27 @@ msgstr ""
 "Você pode ativar ações de URL mais tarde na página de <interface>Ações</"
 "interface> da janela de configuração do widget da área de transferência"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "O Klipper deve iniciar automaticamente ao iniciar a sessão?"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "Iniciar o Klipper automaticamente?"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "Iniciar"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "Não iniciar"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Código de barras móvel"
 
-#: klipper.cpp:679
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Deseja realmente excluir o histórico da área de transferência?"
-
-#: klipper.cpp:680
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
-msgid "Clear Clipboard History"
-msgstr "&Limpar histórico da área de transferência"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histórico da área de transferência"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "acima"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "atual"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "abaixo"
@@ -855,6 +835,18 @@ msgstr "Desabilitar este menu de contexto"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "O Klipper deve iniciar automaticamente ao iniciar a sessão?"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "Iniciar o Klipper automaticamente?"
+
+#~ msgid "Start"
+#~ msgstr "Iniciar"
+
+#~ msgid "Do Not Start"
+#~ msgstr "Não iniciar"
 
 #, fuzzy
 #~| msgctxt "@item:inmenu Quit Klipper"

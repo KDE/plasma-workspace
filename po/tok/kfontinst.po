@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2024-07-07 21:07-0400\n"
+"PO-Revision-Date: 2024-07-09 23:51-0400\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
 "Language: tok\n"
@@ -1573,143 +1573,143 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:17
 msgid "Basic Latin"
-msgstr ""
+msgstr "sitelen Lasina open"
 
 #: viewpart/UnicodeBlocks.h:18
 msgid "Latin-1 Supplement"
-msgstr ""
+msgstr "sitelen kin Lasina"
 
 #: viewpart/UnicodeBlocks.h:19
 msgid "Latin Extended-A"
-msgstr ""
+msgstr "sitelen namako Lasina #A"
 
 #: viewpart/UnicodeBlocks.h:20
 msgid "Latin Extended-B"
-msgstr ""
+msgstr "sitelen namako Lasina #B"
 
 #: viewpart/UnicodeBlocks.h:21
 msgid "IPA Extensions"
-msgstr ""
+msgstr "sitelen IPA"
 
 #: viewpart/UnicodeBlocks.h:22
 msgid "Spacing Modifier Letters"
-msgstr ""
+msgstr "sitelen namako IPA"
 
 #: viewpart/UnicodeBlocks.h:23
 msgid "Combining Diacritical Marks"
-msgstr ""
+msgstr "sitelen namako pi kama wan"
 
 #: viewpart/UnicodeBlocks.h:24
 msgid "Greek and Coptic"
-msgstr ""
+msgstr "sitelen Elina en sitelen Timetenkemi"
 
 #: viewpart/UnicodeBlocks.h:25 viewpart/UnicodeScripts.h:29
 msgid "Cyrillic"
-msgstr ""
+msgstr "sitelen Silika"
 
 #: viewpart/UnicodeBlocks.h:26
 msgid "Cyrillic Supplement"
-msgstr ""
+msgstr "sitelen kin Silika"
 
 #: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
 msgid "Armenian"
-msgstr ""
+msgstr "sitelen Aja"
 
 #: viewpart/UnicodeBlocks.h:28 viewpart/UnicodeScripts.h:42
 msgid "Hebrew"
-msgstr ""
+msgstr "sitelen Iwisi"
 
 #: viewpart/UnicodeBlocks.h:29 viewpart/UnicodeScripts.h:15
 msgid "Arabic"
-msgstr ""
+msgstr "sitelen Alapi"
 
 #: viewpart/UnicodeBlocks.h:30 viewpart/UnicodeScripts.h:69
 msgid "Syriac"
-msgstr ""
+msgstr "sitelen Sulija"
 
 #: viewpart/UnicodeBlocks.h:31
 msgid "Arabic Supplement"
-msgstr ""
+msgstr "sitelen kin Alapi"
 
 #: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
 msgid "Thaana"
-msgstr ""
+msgstr "sitelen Tana"
 
 #: viewpart/UnicodeBlocks.h:33
 msgid "NKo"
-msgstr ""
+msgstr "sitelen Niko"
 
 #: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
 msgid "Devanagari"
-msgstr ""
+msgstr "sitelen Tepanakali"
 
 #: viewpart/UnicodeBlocks.h:35 viewpart/UnicodeScripts.h:18
 msgid "Bengali"
-msgstr ""
+msgstr "sitelen Panla"
 
 #: viewpart/UnicodeBlocks.h:36 viewpart/UnicodeScripts.h:38
 msgid "Gurmukhi"
-msgstr ""
+msgstr "sitelen Kumuki"
 
 #: viewpart/UnicodeBlocks.h:37 viewpart/UnicodeScripts.h:37
 msgid "Gujarati"
-msgstr ""
+msgstr "sitelen Kusala"
 
 #: viewpart/UnicodeBlocks.h:38 viewpart/UnicodeScripts.h:61
 msgid "Oriya"
-msgstr ""
+msgstr "sitelen Osija"
 
 #: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
 msgid "Tamil"
-msgstr ""
+msgstr "sitelen Tami"
 
 #: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
 msgid "Telugu"
-msgstr ""
+msgstr "sitelen Teluku"
 
 #: viewpart/UnicodeBlocks.h:41 viewpart/UnicodeScripts.h:45
 msgid "Kannada"
-msgstr ""
+msgstr "sitelen Kanata"
 
 #: viewpart/UnicodeBlocks.h:42 viewpart/UnicodeScripts.h:53
 msgid "Malayalam"
-msgstr ""
+msgstr "sitelen Malajalan"
 
 #: viewpart/UnicodeBlocks.h:43 viewpart/UnicodeScripts.h:67
 msgid "Sinhala"
-msgstr ""
+msgstr "sitelen Sinala"
 
 #: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
 msgid "Thai"
-msgstr ""
+msgstr "sitelen Tawi"
 
 #: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
 msgid "Lao"
-msgstr ""
+msgstr "sitelen La"
 
 #: viewpart/UnicodeBlocks.h:46 viewpart/UnicodeScripts.h:77
 msgid "Tibetan"
-msgstr ""
+msgstr "sitelen Poji"
 
 #: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:55
 msgid "Myanmar"
-msgstr ""
+msgstr "sitelen Mijama"
 
 #: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
 msgid "Georgian"
-msgstr ""
+msgstr "sitelen Katelo"
 
 #: viewpart/UnicodeBlocks.h:49
 msgid "Hangul Jamo"
-msgstr ""
+msgstr "sitelen Anku"
 
 #: viewpart/UnicodeBlocks.h:50 viewpart/UnicodeScripts.h:32
 msgid "Ethiopic"
-msgstr ""
+msgstr "sitelen Ki"
 
 #: viewpart/UnicodeBlocks.h:51
 msgid "Ethiopic Supplement"
-msgstr ""
+msgstr "sitelen kin Ki"
 
 #: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:24
 msgid "Cherokee"
@@ -1721,7 +1721,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
 msgid "Ogham"
-msgstr ""
+msgstr "sitelen Okum"
 
 #: viewpart/UnicodeBlocks.h:55 viewpart/UnicodeScripts.h:65
 msgid "Runic"
@@ -1729,11 +1729,11 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:56 viewpart/UnicodeScripts.h:70
 msgid "Tagalog"
-msgstr ""
+msgstr "sitelen Papalin"
 
 #: viewpart/UnicodeBlocks.h:57 viewpart/UnicodeScripts.h:41
 msgid "Hanunoo"
-msgstr ""
+msgstr "sitelen Anunuko"
 
 #: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:22
 msgid "Buhid"
@@ -1745,27 +1745,27 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:60 viewpart/UnicodeScripts.h:48
 msgid "Khmer"
-msgstr ""
+msgstr "sitelen Kanpusi"
 
 #: viewpart/UnicodeBlocks.h:61 viewpart/UnicodeScripts.h:54
 msgid "Mongolian"
-msgstr ""
+msgstr "sitelen Monkesisi"
 
 #: viewpart/UnicodeBlocks.h:62 viewpart/UnicodeScripts.h:51
 msgid "Limbu"
-msgstr ""
+msgstr "sitelen Yakunpan"
 
 #: viewpart/UnicodeBlocks.h:63 viewpart/UnicodeScripts.h:72
 msgid "Tai Le"
-msgstr ""
+msgstr "sitelen Tale"
 
 #: viewpart/UnicodeBlocks.h:64 viewpart/UnicodeScripts.h:56
 msgid "New Tai Lue"
-msgstr ""
+msgstr "sitelen sin Tale"
 
 #: viewpart/UnicodeBlocks.h:65
 msgid "Khmer Symbols"
-msgstr ""
+msgstr "sitelen ante Kanpusi"
 
 #: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
 msgid "Buginese"
@@ -1773,179 +1773,179 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:67 viewpart/UnicodeScripts.h:17
 msgid "Balinese"
-msgstr ""
+msgstr "sitelen Anakataka"
 
 #: viewpart/UnicodeBlocks.h:68
 msgid "Phonetic Extensions"
-msgstr ""
+msgstr "sitelen kalama namako"
 
 #: viewpart/UnicodeBlocks.h:69
 msgid "Phonetic Extensions Supplement"
-msgstr ""
+msgstr "sitelen kin kalama namako"
 
 #: viewpart/UnicodeBlocks.h:70
 msgid "Combining Diacritical Marks Supplement"
-msgstr ""
+msgstr "sitelen kin namako pi kama wan"
 
 #: viewpart/UnicodeBlocks.h:71
 msgid "Latin Extended Additional"
-msgstr ""
+msgstr "sitelen kin namako Lasina"
 
 #: viewpart/UnicodeBlocks.h:72
 msgid "Greek Extended"
-msgstr ""
+msgstr "sitelen kin Elina"
 
 #: viewpart/UnicodeBlocks.h:73
 msgid "General Punctuation"
-msgstr ""
+msgstr "sitelen pi nasin kalama"
 
 #: viewpart/UnicodeBlocks.h:74
 msgid "Superscripts and Subscripts"
-msgstr ""
+msgstr "sitelen lili sewi en anpa"
 
 #: viewpart/UnicodeBlocks.h:75
 msgid "Currency Symbols"
-msgstr ""
+msgstr "sitelen mani"
 
 #: viewpart/UnicodeBlocks.h:76
 msgid "Combining Diacritical Marks for Symbols"
-msgstr ""
+msgstr "sitelen namako pi kama wan tawa sitelen ante"
 
 #: viewpart/UnicodeBlocks.h:77
 msgid "Letter-Like Symbols"
-msgstr ""
+msgstr "sitelen nasa sama sitelen ante"
 
 #: viewpart/UnicodeBlocks.h:78
 msgid "Number Forms"
-msgstr ""
+msgstr "sitelen namako nanpa"
 
 #: viewpart/UnicodeBlocks.h:79
 msgid "Arrows"
-msgstr ""
+msgstr "sitelen pi palisa kiki"
 
 #: viewpart/UnicodeBlocks.h:80
 msgid "Mathematical Operators"
-msgstr ""
+msgstr "sitelen pi nasin nanpa"
 
 #: viewpart/UnicodeBlocks.h:81
 msgid "Miscellaneous Technical"
-msgstr ""
+msgstr "sitelen ante ilo"
 
 #: viewpart/UnicodeBlocks.h:82
 msgid "Control Pictures"
-msgstr ""
+msgstr "sitelen pi sitelen lawa"
 
 #: viewpart/UnicodeBlocks.h:83
 msgid "Optical Character Recognition"
-msgstr ""
+msgstr "sitelen pi lukin ilo"
 
 #: viewpart/UnicodeBlocks.h:84
 msgid "Enclosed Alphanumerics"
-msgstr ""
+msgstr "sitelen lon poki"
 
 #: viewpart/UnicodeBlocks.h:85
 msgid "Box Drawing"
-msgstr ""
+msgstr "sitelen pi linja leko"
 
 #: viewpart/UnicodeBlocks.h:86
 msgid "Block Elements"
-msgstr ""
+msgstr "sitelen leko"
 
 #: viewpart/UnicodeBlocks.h:87
 msgid "Geometric Shapes"
-msgstr ""
+msgstr "sitelen sijelo"
 
 #: viewpart/UnicodeBlocks.h:88
 msgid "Miscellaneous Symbols"
-msgstr ""
+msgstr "sitelen ante"
 
 #: viewpart/UnicodeBlocks.h:89
 msgid "Dingbats"
-msgstr ""
+msgstr "sitelen namako"
 
 #: viewpart/UnicodeBlocks.h:90
 msgid "Miscellaneous Mathematical Symbols-A"
-msgstr ""
+msgstr "sitelen ante pi nasin nanpa #A"
 
 #: viewpart/UnicodeBlocks.h:91
 msgid "Supplemental Arrows-A"
-msgstr ""
+msgstr "sitelen ante pi palisa kiki #A"
 
 #: viewpart/UnicodeBlocks.h:92
 msgid "Braille Patterns"
-msgstr ""
+msgstr "sitelen ale Kale"
 
 #: viewpart/UnicodeBlocks.h:93
 msgid "Supplemental Arrows-B"
-msgstr ""
+msgstr "sitelen ante pi palisa kiki #B"
 
 #: viewpart/UnicodeBlocks.h:94
 msgid "Miscellaneous Mathematical Symbols-B"
-msgstr ""
+msgstr "sitelen ante pi nasin nanpa #B"
 
 #: viewpart/UnicodeBlocks.h:95
 msgid "Supplemental Mathematical Operators"
-msgstr ""
+msgstr "sitelen kin pi nasin nanpa"
 
 #: viewpart/UnicodeBlocks.h:96
 msgid "Miscellaneous Symbols and Arrows"
-msgstr ""
+msgstr "sitelen ante en palisa kiki"
 
 #: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
 msgid "Glagolitic"
-msgstr ""
+msgstr "sitelen Kakolisa"
 
 #: viewpart/UnicodeBlocks.h:98
 msgid "Latin Extended-C"
-msgstr ""
+msgstr "sitelen namako Lasina #C"
 
 #: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
 msgid "Coptic"
-msgstr ""
+msgstr "sitelen Timetenkemi"
 
 #: viewpart/UnicodeBlocks.h:100
 msgid "Georgian Supplement"
-msgstr ""
+msgstr "sitelen kin Katelo"
 
 #: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
 msgid "Tifinagh"
-msgstr ""
+msgstr "sitelen Tipina"
 
 #: viewpart/UnicodeBlocks.h:102
 msgid "Ethiopic Extended"
-msgstr ""
+msgstr "sitelen kin Ki"
 
 #: viewpart/UnicodeBlocks.h:103
 msgid "Supplemental Punctuation"
-msgstr ""
+msgstr "sitelen kin pi nasin kalama"
 
 #: viewpart/UnicodeBlocks.h:104
 msgid "CJK Radicals Supplement"
-msgstr ""
+msgstr "sitelen kin lili pi ma Sonko"
 
 #: viewpart/UnicodeBlocks.h:105
 msgid "Kangxi Radicals"
-msgstr ""
+msgstr "sitelen lili pi ma Sonko"
 
 #: viewpart/UnicodeBlocks.h:106
 msgid "Ideographic Description Characters"
-msgstr ""
+msgstr "sitelen pi nasin poka Sonko"
 
 #: viewpart/UnicodeBlocks.h:107
 msgid "CJK Symbols and Punctuation"
-msgstr ""
+msgstr "sitelen Sonko pi nasin kalama"
 
 #: viewpart/UnicodeBlocks.h:108 viewpart/UnicodeScripts.h:43
 msgid "Hiragana"
-msgstr ""
+msgstr "sitelen Ilakana"
 
 #: viewpart/UnicodeBlocks.h:109 viewpart/UnicodeScripts.h:46
 msgid "Katakana"
-msgstr ""
+msgstr "sitelen Katakana"
 
 #: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
 msgid "Bopomofo"
-msgstr ""
+msgstr "sitelen Sulin"
 
 #: viewpart/UnicodeBlocks.h:111
 msgid "Hangul Compatibility Jamo"
@@ -1953,31 +1953,31 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:112
 msgid "Kanbun"
-msgstr ""
+msgstr "sitelen Kanpun"
 
 #: viewpart/UnicodeBlocks.h:113
 msgid "Bopomofo Extended"
-msgstr ""
+msgstr "sitelen kin Sulin"
 
 #: viewpart/UnicodeBlocks.h:114
 msgid "CJK Strokes"
-msgstr ""
+msgstr "linja lili pi sitelen Sonko"
 
 #: viewpart/UnicodeBlocks.h:115
 msgid "Katakana Phonetic Extensions"
-msgstr ""
+msgstr "sitelen kin kalama Katakana"
 
 #: viewpart/UnicodeBlocks.h:116
 msgid "Enclosed CJK Letters and Months"
-msgstr ""
+msgstr "sitelen Sonko lon poki"
 
 #: viewpart/UnicodeBlocks.h:117
 msgid "CJK Compatibility"
-msgstr ""
+msgstr "sitelen Sonko pi ilo majuna"
 
 #: viewpart/UnicodeBlocks.h:118
 msgid "CJK Unified Ideographs Extension A"
-msgstr ""
+msgstr "sitelen kin Sonko #A"
 
 #: viewpart/UnicodeBlocks.h:119
 msgid "Yijing Hexagram Symbols"
@@ -1985,7 +1985,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:120
 msgid "CJK Unified Ideographs"
-msgstr ""
+msgstr "sitelen wan Sonko"
 
 #: viewpart/UnicodeBlocks.h:121
 msgid "Yi Syllables"
@@ -2029,11 +2029,11 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:131
 msgid "Private Use Area"
-msgstr ""
+msgstr "sitelen pi kulupu ante"
 
 #: viewpart/UnicodeBlocks.h:132
 msgid "CJK Compatibility Ideographs"
-msgstr ""
+msgstr "sitelen nimi Sonko pi ilo majuna"
 
 #: viewpart/UnicodeBlocks.h:133
 msgid "Alphabetic Presentation Forms"
@@ -2045,7 +2045,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:135
 msgid "Variation Selectors"
-msgstr ""
+msgstr "nanpa lawa pi sitelen wile"
 
 #: viewpart/UnicodeBlocks.h:136
 msgid "Vertical Forms"
@@ -2057,7 +2057,7 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:138
 msgid "CJK Compatibility Forms"
-msgstr ""
+msgstr "sitelen ante Sonko pi ilo majuna"
 
 #: viewpart/UnicodeBlocks.h:139
 msgid "Small Form Variants"
@@ -2073,27 +2073,27 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:142
 msgid "Specials"
-msgstr ""
+msgstr "sitelen ante ante"
 
 #: viewpart/UnicodeBlocks.h:143
 msgid "Linear B Syllabary"
-msgstr ""
+msgstr "sitelen kalama Mikena"
 
 #: viewpart/UnicodeBlocks.h:144
 msgid "Linear B Ideograms"
-msgstr ""
+msgstr "sitelen nimi Mikena"
 
 #: viewpart/UnicodeBlocks.h:145
 msgid "Aegean Numbers"
-msgstr ""
+msgstr "sitelen nanpa pi telo Akipelako"
 
 #: viewpart/UnicodeBlocks.h:146
 msgid "Ancient Greek Numbers"
-msgstr ""
+msgstr "sitelen nanpa majuna Elina"
 
 #: viewpart/UnicodeBlocks.h:147 viewpart/UnicodeScripts.h:59
 msgid "Old Italic"
-msgstr ""
+msgstr "sitelen majuna Italija"
 
 #: viewpart/UnicodeBlocks.h:148 viewpart/UnicodeScripts.h:35
 msgid "Gothic"
@@ -2105,15 +2105,15 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:150 viewpart/UnicodeScripts.h:60
 msgid "Old Persian"
-msgstr ""
+msgstr "sitelen majuna Ilan"
 
 #: viewpart/UnicodeBlocks.h:151 viewpart/UnicodeScripts.h:30
 msgid "Deseret"
-msgstr ""
+msgstr "sitelen Tesele"
 
 #: viewpart/UnicodeBlocks.h:152 viewpart/UnicodeScripts.h:66
 msgid "Shavian"
-msgstr ""
+msgstr "sitelen Sepijan"
 
 #: viewpart/UnicodeBlocks.h:153 viewpart/UnicodeScripts.h:62
 msgid "Osmanya"
@@ -2165,31 +2165,31 @@ msgstr ""
 
 #: viewpart/UnicodeBlocks.h:165
 msgid "CJK Unified Ideographs Extension B"
-msgstr ""
+msgstr "sitelen kin Sonko #B"
 
 #: viewpart/UnicodeBlocks.h:166
 msgid "CJK Compatibility Ideographs Supplement"
-msgstr ""
+msgstr "sitelen kin nimi Sonko pi ilo majuna"
 
 #: viewpart/UnicodeBlocks.h:167
 msgid "Tags"
-msgstr ""
+msgstr "sitelen pi lipu kulupu"
 
 #: viewpart/UnicodeBlocks.h:168
 msgid "Variation Selectors Supplement"
-msgstr ""
+msgstr "nanpa lawa kin pi sitelen wile"
 
 #: viewpart/UnicodeBlocks.h:169
 msgid "Supplementary Private Use Area-A"
-msgstr ""
+msgstr "sitelen kin pi kulupu ante #A"
 
 #: viewpart/UnicodeBlocks.h:170
 msgid "Supplementary Private Use Area-B"
-msgstr ""
+msgstr "sitelen kin pi kulupu ante #B"
 
 #: viewpart/UnicodeScripts.h:20
 msgid "Braille"
-msgstr ""
+msgstr "sitelen Kale"
 
 #: viewpart/UnicodeScripts.h:23
 msgid "Canadian Aboriginal"
@@ -2205,15 +2205,15 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:36
 msgid "Greek"
-msgstr ""
+msgstr "sitelen Elina"
 
 #: viewpart/UnicodeScripts.h:39
 msgid "Han"
-msgstr ""
+msgstr "sitelen Ansi"
 
 #: viewpart/UnicodeScripts.h:40
 msgid "Hangul"
-msgstr ""
+msgstr "sitelen Anku"
 
 #: viewpart/UnicodeScripts.h:44
 msgid "Inherited"
@@ -2221,15 +2221,15 @@ msgstr ""
 
 #: viewpart/UnicodeScripts.h:50
 msgid "Latin"
-msgstr ""
+msgstr "sitelen Lasina"
 
 #: viewpart/UnicodeScripts.h:52
 msgid "Linear B"
-msgstr ""
+msgstr "sitelen Mikena"
 
 #: viewpart/UnicodeScripts.h:57
 msgid "Nko"
-msgstr ""
+msgstr "sitelen Niko"
 
 #: viewpart/UnicodeScripts.h:63
 msgid "Phags Pa"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-04 00:40+0000\n"
+"POT-Creation-Date: 2024-07-11 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -479,6 +479,16 @@ msgstr "图标："
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3 位/像素"
 
+#: historymodel.cpp:66
+#, kde-format
+msgid "Do you really want to clear and delete the entire clipboard history?"
+msgstr "您确定要清除剪贴板的所有历史记录吗？"
+
+#: historymodel.cpp:67
+#, kde-format
+msgid "Clear Clipboard History"
+msgstr "清除剪贴板历史记录"
+
 #: klipper.cpp:87
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
@@ -537,57 +547,27 @@ msgstr ""
 "您可以稍后在剪贴板小程序的配置窗口中的<interface>操作</interface>页面启用 "
 "URL 操作。"
 
-#: klipper.cpp:386
-#, kde-format
-msgid "Should Klipper start automatically when you login?"
-msgstr "您想要在登录时自动启动 Klipper 吗？"
-
-#: klipper.cpp:387
-#, kde-format
-msgid "Automatically Start Klipper?"
-msgstr "自动启动 Klipper 吗？"
-
-#: klipper.cpp:388
-#, kde-format
-msgid "Start"
-msgstr "启动"
-
-#: klipper.cpp:389
-#, kde-format
-msgid "Do Not Start"
-msgstr "不启动"
-
-#: klipper.cpp:638
+#: klipper.cpp:608
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "移动条形码"
 
-#: klipper.cpp:679
-#, kde-format
-msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "您确定要清除剪贴板的所有历史记录吗？"
-
-#: klipper.cpp:680
-#, kde-format
-msgid "Clear Clipboard History"
-msgstr "清除剪贴板历史记录"
-
-#: klipper.cpp:696 klipper.cpp:705
+#: klipper.cpp:651 klipper.cpp:660
 #, kde-format
 msgid "Clipboard history"
 msgstr "剪贴板历史"
 
-#: klipper.cpp:722
+#: klipper.cpp:677
 #, kde-format
 msgid "up"
 msgstr "向上"
 
-#: klipper.cpp:729
+#: klipper.cpp:684
 #, kde-format
 msgid "current"
 msgstr "当前"
 
-#: klipper.cpp:736
+#: klipper.cpp:691
 #, kde-format
 msgid "down"
 msgstr "向下"
@@ -828,3 +808,15 @@ msgstr "禁用此弹出菜单"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
+
+#~ msgid "Should Klipper start automatically when you login?"
+#~ msgstr "您想要在登录时自动启动 Klipper 吗？"
+
+#~ msgid "Automatically Start Klipper?"
+#~ msgstr "自动启动 Klipper 吗？"
+
+#~ msgid "Start"
+#~ msgstr "启动"
+
+#~ msgid "Do Not Start"
+#~ msgstr "不启动"

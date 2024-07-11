@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Martin Schlander <mschlander@opensuse.org>, 2009, 2014, 2019, 2021.
+# SPDX-FileCopyrightText: 2024 rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-26 00:40+0000\n"
-"PO-Revision-Date: 2021-09-27 20:47+0200\n"
-"Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
+"PO-Revision-Date: 2024-07-08 12:13+0200\n"
+"Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: menu.cpp:102
@@ -26,7 +27,7 @@ msgstr "Vis KRunner"
 #: menu.cpp:107
 #, kde-format
 msgid "Open Terminal"
-msgstr ""
+msgstr "Åbn terminal"
 
 #: menu.cpp:111
 #, kde-format
@@ -35,18 +36,16 @@ msgid "Lock Screen"
 msgstr "Lås skærmen"
 
 #: menu.cpp:120
-#, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "Lås skærmen"
+msgstr "Vis log ud-skærmen"
 
 #: menu.cpp:125
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
-msgstr ""
+msgstr "Skærmkonfiguration"
 
 #: menu.cpp:285
 #, kde-format
