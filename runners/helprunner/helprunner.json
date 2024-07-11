@@ -19,6 +19,7 @@
         "Description[bg]": "Показва помощна информация за runners при въвеждане на \"?\" или \"help\"",
         "Description[ca@valencia]": "Mostra informació d'ajuda quant als executors en teclejar «?» o «ajuda»",
         "Description[ca]": "Mostra informació d'ajuda quant als executors en teclejar «?» o «ajuda»",
+        "Description[da]": "Viser hjælpinformation om runnere, når du skriver \"?\" eller \"help\"",
         "Description[de]": "Zeigt Informationen über Programmmodule bei Eingabe von „?“ oder „help“ an",
         "Description[eo]": "Montras helpinformojn pri kuristoj dum tajpado de \"?\" aŭ \"helpo\"",
         "Description[es]": "Muestra información de ayuda sobre los lanzadores cuando se escribe «?» o «ayuda»",
