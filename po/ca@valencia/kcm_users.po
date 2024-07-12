@@ -1,16 +1,16 @@
 # Translation of kcm_users.po to Catalan (Valencian)
-# Copyright (C) 2020-2023 This_file_is_part_of_KDE
+# Copyright (C) 2020-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022, 2023, 2024.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-07 00:40+0000\n"
-"PO-Revision-Date: 2023-10-05 11:52+0200\n"
+"PO-Revision-Date: 2024-07-07 10:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -34,18 +34,18 @@ msgstr "Reintenta l'escaneig del dit."
 #: src/fingerprintmodel.cpp:296
 #, kde-format
 msgid "Swipe too short. Try again."
-msgstr "El lliscament és massa curt. Torneu-ho a intentar."
+msgstr "El lliscament és massa curt. Torneu-ho a provar."
 
 #: src/fingerprintmodel.cpp:298
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
-msgstr "El dit no està centrat en el lector. Torneu-ho a intentar."
+msgstr "El dit no està centrat en el lector. Torneu-ho a provar."
 
 # skip-rule: kct-remove
 #: src/fingerprintmodel.cpp:300
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
-msgstr "Retireu el dit del lector, i torneu-ho a intentar."
+msgstr "Retireu el dit del lector, i torneu-ho a provar."
 
 #: src/fingerprintmodel.cpp:308
 #, kde-format
@@ -393,20 +393,16 @@ msgid "Users"
 msgstr "Usuaris"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Afig nou"
+msgstr "Afig nou…"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Afig nou"
+msgstr "Afig un usuari nou…"
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -641,7 +637,3 @@ msgstr "El vostre compte"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"
-
-#~ msgctxt "@action:button 'all' refers to fingerprints"
-#~ msgid "Clear All"
-#~ msgstr "Neteja-ho tot"
