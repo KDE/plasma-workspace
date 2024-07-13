@@ -88,7 +88,7 @@ PlasmaComponents3.AbstractButton {
         }
         PlasmaComponents3.Label {
             anchors.horizontalCenter: parent.horizontalCenter
-            width: Math.max(implicitWidth, parent.width)
+            width: Math.min(implicitWidth, parent.width)
             text: root.text
             style: root.softwareRendering ? Text.Outline : Text.Normal
             styleColor: Kirigami.Theme.backgroundColor // Unused without outline
