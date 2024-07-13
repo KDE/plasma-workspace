@@ -20,8 +20,8 @@ target_link_libraries(plasmashellprivateplugin
         Plasma::Plasma
         Plasma::PlasmaQuick
         KF6::I18n
+        KF6::WidgetsAddons
         KF6::NewStuffWidgets
-        KF6::KIOFileWidgets
         KF6::WindowSystem
         Plasma::Activities
         KF6::TextWidgets
