@@ -91,7 +91,6 @@ public:
     QHash<QString, int> runningApplets; // applet name => count
     // extra hash so we can look up the names of deleted applets
     QHash<Plasma::Applet *, QString> appletNames;
-    KPackage::Package *package;
 
     PlasmaAppletItemModel itemModel;
     KCategorizedItemsViewModels::DefaultFilterModel filterModel;
