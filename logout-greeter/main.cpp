@@ -6,7 +6,9 @@
     SPDX-License-Identifier: MIT
 */
 #include <KConfigGroup>
+#include <KPackage/PackageLoader>
 #include <KSharedConfig>
+
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QDBusConnection>

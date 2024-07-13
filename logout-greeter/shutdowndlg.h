@@ -15,7 +15,6 @@
 #include <sessionmanagement.h>
 
 #include <KPackage/Package>
-#include <KPackage/PackageLoader>
 
 // The confirmation dialog
 class KSMShutdownDlg : public PlasmaQuick::QuickViewSharedEngine

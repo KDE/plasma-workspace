@@ -22,11 +22,9 @@
 #include <kshell.h>
 
 #include <KPackage/Package>
-#include <KPackage/PackageLoader>
 #include <Plasma/Applet>
 #include <Plasma/Containment>
 #include <Plasma/PluginLoader>
-#include <qstandardpaths.h>
 
 #include "appinterface.h"
 #include "containment.h"

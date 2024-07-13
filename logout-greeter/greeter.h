@@ -15,7 +15,6 @@
 #include <kworkspace.h>
 
 #include <KPackage/Package>
-#include <KPackage/PackageLoader>
 
 class KSMShutdownDlg;
 

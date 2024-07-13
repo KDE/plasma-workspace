@@ -31,8 +31,6 @@
 
 #include <KPackage/Package>
 #include <KPackage/PackageJob>
-#include <KPackage/PackageLoader>
-#include <KPackage/PackageStructure>
 
 #include "config-workspace.h"
 #include "kcategorizeditemsviewmodels_p.h"
