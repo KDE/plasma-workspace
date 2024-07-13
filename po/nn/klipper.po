@@ -849,15 +849,3 @@ msgstr "Slå av dette sprettoppvindauget"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgid "Should Klipper start automatically when you login?"
-#~ msgstr "Skal Klipper startast automatisk når du loggar inn?"
-
-#~ msgid "Automatically Start Klipper?"
-#~ msgstr "Automatisk start av Klipper?"
-
-#~ msgid "Start"
-#~ msgstr "Start"
-
-#~ msgid "Do Not Start"
-#~ msgstr "Ikkje start"

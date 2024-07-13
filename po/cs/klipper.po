@@ -823,15 +823,3 @@ msgstr "Zakázat toto okno"
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
-
-#~ msgid "Should Klipper start automatically when you login?"
-#~ msgstr "Má se Klipper spouštět automaticky, jakmile se přihlásíte?"
-
-#~ msgid "Automatically Start Klipper?"
-#~ msgstr "Automaticky spouštět Klipper?"
-
-#~ msgid "Start"
-#~ msgstr "Spustit"
-
-#~ msgid "Do Not Start"
-#~ msgstr "Nespouštět"

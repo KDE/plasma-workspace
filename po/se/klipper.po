@@ -770,6 +770,3 @@ msgstr ""
 #, kde-format
 msgid "&Cancel"
 msgstr ""
-
-#~ msgid "Automatically Start Klipper?"
-#~ msgstr "Automáhtalaččat álggahit Klipper:a?"

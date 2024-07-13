@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-13 00:41+0000\n"
 "PO-Revision-Date: 2024-06-09 15:15+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -318,13 +318,13 @@ msgstr ""
 "adaptivă pot provoca performață scăzută la tragerea și redimensionarea "
 "ferestrelor. Încercați să folosiți alte configurări."
 
-#: panelview.cpp:1090
+#: panelview.cpp:1091
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Ascunde configurările panoului"
 
-#: panelview.cpp:1092
+#: panelview.cpp:1093
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

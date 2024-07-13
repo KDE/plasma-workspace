@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-07 00:40+0000\n"
-"PO-Revision-Date: 2023-10-07 23:20+0100\n"
+"PO-Revision-Date: 2024-07-12 22:08+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -384,20 +384,16 @@ msgid "Users"
 msgstr "Uzantoj"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Aldoni Novan"
+msgstr "Aldoni Novan…"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Aldoni Novan"
+msgstr "Aldoni Novan…"
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -627,7 +623,3 @@ msgstr "Via Konto"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Aliaj Kontoj"
-
-#~ msgctxt "@action:button 'all' refers to fingerprints"
-#~ msgid "Clear All"
-#~ msgstr "Forigi Ĉion"
