@@ -5,7 +5,6 @@
 */
 
 #include "shellprivateplugin.h"
-#include "config-shellprivate.h"
 
 #include <QQmlEngine>
 

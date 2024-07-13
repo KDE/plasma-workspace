@@ -1,1 +1,0 @@
-#cmakedefine01 KF6TextEditor_FOUND
