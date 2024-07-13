@@ -12,8 +12,8 @@
 #include <QQmlApplicationEngine>
 #include <QQuickView>
 
-#include <plasma/containment.h>
-#include <plasma/plasma.h>
+#include <Plasma/Containment>
+#include <Plasma/Plasma>
 
 namespace KActivities
 {

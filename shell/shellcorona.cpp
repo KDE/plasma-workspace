@@ -8,17 +8,16 @@
 */
 
 #include "shellcorona.h"
-#include "debug.h"
-#include "kconfigloader.h"
-#include "kconfigpropertymap.h"
-#include "strutmanager.h"
 
+#include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 #include <config-plasma.h>
 #include <config-workspace.h>
 
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDebug>
+#include <QJsonDocument>
+#include <QJsonObject>
 #include <QMenu>
 #include <QQmlContext>
 #include <QQuickItemGrabResult>
@@ -26,60 +25,54 @@
 #include <QUrl>
 #include <QVariant>
 
-#include <QJsonDocument>
-#include <QJsonObject>
-
-#include <Plasma/PluginLoader>
-#include <PlasmaQuick/AppletQuickItem>
-#include <kactioncollection.h>
-#include <klocalizedstring.h>
-
+#include <KActionCollection>
 #include <KAuthorized>
+#include <KDirWatch>
 #include <KGlobalAccel>
+#include <KLocalizedString>
 #include <KMessageBox>
+#include <KPackage/PackageLoader>
+#include <KSycoca>
 #include <KWindowSystem>
 #include <KX11Extras>
-#include <PlasmaQuick/SharedQmlEngine>
-#include <kdirwatch.h>
-#include <ksycoca.h>
-#include <plasmaactivities/consumer.h>
-#include <plasmaactivities/controller.h>
 
-#include <KPackage/PackageLoader>
+#include <Plasma/Plasma>
+#include <Plasma/PluginLoader>
+#include <PlasmaQuick/AppletQuickItem>
+#include <PlasmaQuick/SharedQmlEngine>
+
+#include <PlasmaActivities/Consumer>
+#include <PlasmaActivities/Controller>
 
 #include <KWayland/Client/connection_thread.h>
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/plasmawindowmanagement.h>
 #include <KWayland/Client/registry.h>
-#include <plasma/plasma.h>
-
-#include "config-ktexteditor.h" // HAVE_KTEXTEDITOR
 
 #include "alternativeshelper.h"
+#include "debug.h"
 #include "desktopview.h"
+#include "futureutil.h"
+#include "kconfigloader.h"
+#include "kconfigpropertymap.h"
 #include "osd.h"
 #include "panelview.h"
+#include "plasmashelladaptor.h"
 #include "screenpool.h"
+#include "shellcontainmentconfig.h"
+#include "strutmanager.h"
+
 #if USE_SCRIPTING
 #include "scripting/scriptengine.h"
 #endif
-#include "shellcontainmentconfig.h"
 
-#include "debug.h"
-#include "futureutil.h"
-#include "plasmashelladaptor.h"
+#include <chrono>
 
 #ifndef NDEBUG
 #define CHECK_SCREEN_INVARIANTS screenInvariants();
 #else
 #define CHECK_SCREEN_INVARIANTS
 #endif
-
-#if HAVE_X11
-#include <NETWM>
-#include <xcb/xcb.h>
-#endif
-#include <chrono>
 
 using namespace std::chrono_literals;
 using namespace Qt::StringLiterals;

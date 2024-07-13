@@ -9,6 +9,7 @@
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KPackage/Package>
+
 #include <PlasmaActivities/Consumer>
 #include <PlasmaActivities/Info>
 

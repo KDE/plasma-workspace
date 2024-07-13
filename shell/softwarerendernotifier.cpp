@@ -5,15 +5,16 @@
 */
 
 #include "softwarerendernotifier.h"
-#include <KConfigGroup>
-#include <KLocalizedString>
-#include <KSharedConfig>
+
 #include <QGuiApplication>
 #include <QIcon>
 #include <QMenu>
 #include <QProcess>
-
 #include <QQuickWindow>
+
+#include <KConfigGroup>
+#include <KLocalizedString>
+#include <KSharedConfig>
 
 void SoftwareRendererNotifier::notifyIfRelevant()
 {
