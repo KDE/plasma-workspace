@@ -11,6 +11,7 @@
 #include <QAction>
 #include <QObject>
 #include <QQmlParserStatus>
+#include <qqmlregistration.h>
 
 #include <Plasma/Plasma>
 
@@ -41,6 +42,7 @@ Q_SIGNALS:
 class WidgetExplorer : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
+    QML_ELEMENT
     Q_INTERFACES(QQmlParserStatus)
 
     /**

@@ -1,12 +1,12 @@
-set(plasmashellprivateplugin_SRCS
-    widgetexplorer/kcategorizeditemsviewmodels.cpp
-    widgetexplorer/plasmaappletitemmodel.cpp
-    widgetexplorer/widgetexplorer.cpp
-    shellprivateplugin.cpp
+ecm_add_qml_module(plasmashellprivateplugin URI "org.kde.plasma.private.shell" VERSION 2.0 GENERATE_PLUGIN_SOURCE)
+
+target_sources(plasmashellprivateplugin PRIVATE
+    kcategorizeditemsviewmodels.cpp
+    plasmaappletitemmodel.cpp
+    widgetexplorer.cpp
 )
 
-add_library(plasmashellprivateplugin SHARED ${plasmashellprivateplugin_SRCS})
-target_link_libraries(plasmashellprivateplugin
+target_link_libraries(plasmashellprivateplugin PRIVATE
         Qt::Core
         Qt::Quick
         Qt::Qml
@@ -25,12 +25,10 @@ target_link_libraries(plasmashellprivateplugin
         KF6::Package
 )
 
-install(TARGETS plasmashellprivateplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)
+ecm_finalize_qml_module(plasmashellprivateplugin)
+
 install(FILES
     wallpaperplugin.knsrc
-    widgetexplorer/plasmoids.knsrc
+    plasmoids.knsrc
     DESTINATION ${KDE_INSTALL_KNSRCDIR}
 )
-
-install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/shell)
-
