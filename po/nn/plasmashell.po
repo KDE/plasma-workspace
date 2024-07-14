@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 02:32+0000\n"
-"PO-Revision-Date: 2024-05-15 20:52+0200\n"
+"PO-Revision-Date: 2024-07-12 23:06+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -377,7 +377,8 @@ msgstr "Ikkje vis denne meldinga igjen"
 msgid "Panel Count"
 msgstr "Paneltal"
 
+# Den engelske teksten er misvisande. Teksten refererer til talet på panel (vert brukt i telemetri-loggfilene for plasmashell) og bør ha substantivform. Bør òg ha avsluttande punktum, for konsistens med dei andre telemetriskildringane.
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr "Tel panela"
+msgstr "Talet på panel."
