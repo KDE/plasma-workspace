@@ -396,6 +396,13 @@ void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)
         requestActivate();
         return;
     }
+
+    // Never hide when the user is handling desktop widgets, e.g. drag
+    // and dropping them around.
+    if (auto desktop = qobject_cast<const DesktopView *>(focusWindow)) {
+        return;
+    }
+
     // Don't close if the user is directly manipulating the panel
     if (m_panelView->mouseGrabberItem()) {
         return;
