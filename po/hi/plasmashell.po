@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-13 00:41+0000\n"
+"POT-Creation-Date: 2024-07-14 00:40+0000\n"
 "PO-Revision-Date: 2023-02-28 21:23+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -331,101 +331,101 @@ msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:105
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "%1 पर आंतरिक स्क्रीन"
 
-#: shellcontainmentconfig.cpp:109
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%3 पर %1 %2"
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "वियोजित स्क्रीन %1"
 
-#: shellcorona.cpp:206 shellcorona.cpp:208
+#: shellcorona.cpp:199 shellcorona.cpp:201
 #, kde-format
 msgid "Show Desktop"
 msgstr "डेस्कटॉप दिखाएँ"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Hide Desktop"
 msgstr "डेस्कटॉप चिपाएँ"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr ""
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "गतिविधि परिवर्तक दिखाएं"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "वर्तमान गतिविधि बंद करें"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "पिछली गतिविधि पर जाएँ"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:251
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "अगले गतिविधि पर जाएँ"
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "कार्य प्रबंधक प्रविष्टि %1 सक्रिय करें"
 
-#: shellcorona.cpp:305
+#: shellcorona.cpp:298
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr ""
 
-#: shellcorona.cpp:327
+#: shellcorona.cpp:320
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "पैनल के बीच कुंजीपटल फ़ोकस ले जाएँ"
 
-#: shellcorona.cpp:2077
+#: shellcorona.cpp:2070
 #, kde-format
 msgid "Add Panel"
 msgstr "पैनल जोडें"
 
-#: shellcorona.cpp:2129
+#: shellcorona.cpp:2122
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "खाली %1"
 
-#: softwarerendernotifier.cpp:33
-#, kde-format
-msgid "Software Renderer In Use"
-msgstr "सॉफ्टवेयर रेंडरर जो उपयोग में है"
-
 #: softwarerendernotifier.cpp:34
 #, kde-format
-msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "सॉफ्टवेयर रेंडरर जो उपयोग में है"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "सॉफ्टवेयर रेंडरर जो उपयोग में है"
+
+#: softwarerendernotifier.cpp:36
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "रेंडरिंग अवक्रमित हो सकता है"
 
-#: softwarerendernotifier.cpp:45
+#: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
 msgstr "फिर कभी न दिखाएँ"

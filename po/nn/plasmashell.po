@@ -5,8 +5,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-13 00:41+0000\n"
-"PO-Revision-Date: 2024-07-07 14:15+0200\n"
+"POT-Creation-Date: 2024-07-14 00:40+0000\n"
+"PO-Revision-Date: 2024-07-12 23:06+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -333,102 +333,102 @@ msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "Vis panelinnstillingar"
 
-#: shellcontainmentconfig.cpp:105
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "Intern skjerm på %1"
 
-#: shellcontainmentconfig.cpp:109
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2 på %3"
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "Fråkopla skjerm %1"
 
-#: shellcorona.cpp:206 shellcorona.cpp:208
+#: shellcorona.cpp:199 shellcorona.cpp:201
 #, kde-format
 msgid "Show Desktop"
 msgstr "Vis skrivebord"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Gøym skrivebord"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Køyr programstartar"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Vis aktivitetsbytar"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Stopp gjeldande aktivitet"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Byt til førre aktivitet"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:251
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Byt til neste aktivitet"
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Gå til oppføring %1 på oppgåvelinja"
 
-#: shellcorona.cpp:305
+#: shellcorona.cpp:298
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Handsaming av panel og skrivebord"
 
-#: shellcorona.cpp:327
+#: shellcorona.cpp:320
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Flytt tastaturfokus mellom panel"
 
-#: shellcorona.cpp:2077
+#: shellcorona.cpp:2070
 #, kde-format
 msgid "Add Panel"
 msgstr "Legg til panel"
 
 # Eksempel «Oppgåvepanel for telefon (tomt)», men helst «Tomt oppgåvepanel for telefon».
-#: shellcorona.cpp:2129
+#: shellcorona.cpp:2122
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "%1 (tomt)|/|Tomt $[litenfor %1]"
 
-#: softwarerendernotifier.cpp:33
-#, kde-format
-msgid "Software Renderer In Use"
-msgstr "Brukar programvarebasert oppteiknar"
-
 #: softwarerendernotifier.cpp:34
 #, kde-format
-msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "Brukar programvarebasert oppteiknar"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Brukar programvarebasert oppteiknar"
+
+#: softwarerendernotifier.cpp:36
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "Grafikkvaliteten kan verta forringa"
 
-#: softwarerendernotifier.cpp:45
+#: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
 msgstr "Ikkje vis denne meldinga igjen"
@@ -438,7 +438,8 @@ msgstr "Ikkje vis denne meldinga igjen"
 msgid "Panel Count"
 msgstr "Paneltal"
 
+# Den engelske teksten er misvisande. Teksten refererer til talet på panel (vert brukt i telemetri-loggfilene for plasmashell) og bør ha substantivform. Bør òg ha avsluttande punktum, for konsistens med dei andre telemetriskildringane.
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr "Tel panela"
+msgstr "Talet på panel."

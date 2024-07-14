@@ -808,15 +808,3 @@ msgstr "禁用此弹出菜单"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgid "Should Klipper start automatically when you login?"
-#~ msgstr "您想要在登录时自动启动 Klipper 吗？"
-
-#~ msgid "Automatically Start Klipper?"
-#~ msgstr "自动启动 Klipper 吗？"
-
-#~ msgid "Start"
-#~ msgstr "启动"
-
-#~ msgid "Do Not Start"
-#~ msgstr "不启动"

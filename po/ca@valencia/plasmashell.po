@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-13 00:41+0000\n"
+"POT-Creation-Date: 2024-07-14 00:40+0000\n"
 "PO-Revision-Date: 2024-07-05 19:16+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -335,101 +335,101 @@ msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "Mostra la configuració del quadro"
 
-#: shellcontainmentconfig.cpp:105
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "Pantalla interna en %1"
 
-#: shellcontainmentconfig.cpp:109
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%1 %2 en %3"
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "Pantalla desconnectada %1"
 
-#: shellcorona.cpp:206 shellcorona.cpp:208
+#: shellcorona.cpp:199 shellcorona.cpp:201
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostra l'escriptori"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Oculta l'escriptori"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Activa l'iniciador d'aplicacions"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostra el commutador d'activitats"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Para l'activitat actual"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Canvia a l'activitat anterior"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:251
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Canvia a l'activitat següent"
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Activa l'entrada %1 del gestor de tasques"
 
-#: shellcorona.cpp:305
+#: shellcorona.cpp:298
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Gestioneu el quadro i l'escriptori"
 
-#: shellcorona.cpp:327
+#: shellcorona.cpp:320
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mou el focus del teclat entre els quadros"
 
-#: shellcorona.cpp:2077
+#: shellcorona.cpp:2070
 #, kde-format
 msgid "Add Panel"
 msgstr "Afig un quadro"
 
-#: shellcorona.cpp:2129
+#: shellcorona.cpp:2122
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "%1 buit"
 
-#: softwarerendernotifier.cpp:33
-#, kde-format
-msgid "Software Renderer In Use"
-msgstr "Renderitzador per programari en ús"
-
 #: softwarerendernotifier.cpp:34
 #, kde-format
-msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "Renderitzador per programari en ús"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Renderitzador per programari en ús"
+
+#: softwarerendernotifier.cpp:36
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "La renderització pot estar degradada"
 
-#: softwarerendernotifier.cpp:45
+#: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
 msgstr "No ho tornes a mostrar"

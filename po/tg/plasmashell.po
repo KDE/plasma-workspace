@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-13 00:41+0000\n"
+"POT-Creation-Date: 2024-07-14 00:40+0000\n"
 "PO-Revision-Date: 2020-09-19 11:40+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -319,102 +319,102 @@ msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:105
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:109
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr ""
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr ""
 
-#: shellcorona.cpp:206 shellcorona.cpp:208
+#: shellcorona.cpp:199 shellcorona.cpp:201
 #, kde-format
 msgid "Show Desktop"
 msgstr "Намоиш додани мизи корӣ"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Пинҳон кардани мизи корӣ"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr ""
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Намоиши ивазкунандаи фаъолият"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Stop Current Activity"
 msgstr ""
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr ""
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:251
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr ""
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr ""
 
-#: shellcorona.cpp:305
+#: shellcorona.cpp:298
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr ""
 
-#: shellcorona.cpp:327
+#: shellcorona.cpp:320
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr ""
 
-#: shellcorona.cpp:2077
+#: shellcorona.cpp:2070
 #, kde-format
 msgid "Add Panel"
 msgstr "Илова кардани лавҳа"
 
-#: shellcorona.cpp:2129
+#: shellcorona.cpp:2122
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "Холӣ кардани %1"
 
-#: softwarerendernotifier.cpp:33
-#, kde-format
-msgid "Software Renderer In Use"
-msgstr ""
-
 #: softwarerendernotifier.cpp:34
 #, kde-format
-msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr ""
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr ""
+
+#: softwarerendernotifier.cpp:36
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr ""
 
-#: softwarerendernotifier.cpp:45
+#: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
 msgstr "Дигар нишон дода нашавад"

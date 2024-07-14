@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-13 00:41+0000\n"
+"POT-Creation-Date: 2024-07-14 00:40+0000\n"
 "PO-Revision-Date: 2024-06-09 21:23+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -331,101 +331,101 @@ msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
 msgstr "Panel Yapılandırmasını Göster"
 
-#: shellcontainmentconfig.cpp:105
+#: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
 msgstr "%1 Üzerindeki İç Ekran"
 
-#: shellcontainmentconfig.cpp:109
+#: shellcontainmentconfig.cpp:110
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
 msgstr "%3 Üzerindeki %1 %2"
 
-#: shellcontainmentconfig.cpp:132
+#: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
 msgstr "%1. Ekran Bağlantısı Kesildi"
 
-#: shellcorona.cpp:206 shellcorona.cpp:208
+#: shellcorona.cpp:199 shellcorona.cpp:201
 #, kde-format
 msgid "Show Desktop"
 msgstr "Masaüstünü Göster"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:201
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Masaüstünü Gizle"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Uygulama Başlatıcısını Etkinleştir"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Etkinlik Değiştiriciyi Göster"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:235
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Geçerli Etkinliği Durdur"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Önceki Etkinliğe Geç"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:251
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Sonraki Etkinliğe Geç"
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Etkin Görev Yöneticisi Girdisi %1"
 
-#: shellcorona.cpp:305
+#: shellcorona.cpp:298
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Panel ve Masaüstü Yönetimi"
 
-#: shellcorona.cpp:327
+#: shellcorona.cpp:320
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Klavye odağını paneller arasında taşı"
 
-#: shellcorona.cpp:2077
+#: shellcorona.cpp:2070
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel Ekle"
 
-#: shellcorona.cpp:2129
+#: shellcorona.cpp:2122
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
 msgstr "Boşalt: %1"
 
-#: softwarerendernotifier.cpp:33
-#, kde-format
-msgid "Software Renderer In Use"
-msgstr "Kullanımdaki Yazılımsal Sunucu"
-
 #: softwarerendernotifier.cpp:34
 #, kde-format
-msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
 msgstr "Kullanımdaki Yazılımsal Sunucu"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "Kullanımdaki Yazılımsal Sunucu"
+
+#: softwarerendernotifier.cpp:36
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
 msgstr "Sunum kalitesi düşebilir"
 
-#: softwarerendernotifier.cpp:45
+#: softwarerendernotifier.cpp:46
 #, kde-format
 msgid "Never show again"
 msgstr "Bir daha asla gösterme"
