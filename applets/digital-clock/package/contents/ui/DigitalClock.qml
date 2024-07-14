@@ -266,7 +266,9 @@ MouseArea {
 
                 font.pixelSize: 1024
                 verticalAlignment: Text.AlignVCenter
-                anchors.rightMargin: labelsGrid.columnSpacing
+                // between date and time; they are styled the same, so
+                // a space is more appropriate than smallSpacing
+                anchors.rightMargin: timeMetrics.advanceWidth(" ")
 
                 fontSizeMode: Text.VerticalFit
             }
@@ -524,6 +526,8 @@ MouseArea {
             verticalItemAlignment: Grid.AlignVCenter
 
             flow: Grid.TopToBottom
+            // between time and timezone; timezone is styled differently, so
+            // smallSpacing is more appropriate than a space
             columnSpacing: Kirigami.Units.smallSpacing
 
             PlasmaComponents.Label  {
