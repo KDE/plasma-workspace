@@ -29,7 +29,9 @@ std::shared_ptr<HistoryModel> HistoryModel::self()
 {
     static std::weak_ptr<HistoryModel> instance;
     if (instance.expired()) {
-        std::shared_ptr<HistoryModel> ptr{new HistoryModel};
+        struct make_shared_enabler : public HistoryModel {
+        };
+        std::shared_ptr<HistoryModel> ptr = std::make_shared<make_shared_enabler>();
         instance = ptr;
         return ptr;
     }
