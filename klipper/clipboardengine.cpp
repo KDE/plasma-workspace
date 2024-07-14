@@ -21,6 +21,8 @@ ClipboardEngine::ClipboardEngine(QObject *parent)
 {
     // TODO: use a filterproxymodel
     setModel(s_clipboardSourceName, m_model.get());
+    // Unset parent to avoid double delete as DataEngine::setModel will set parent for the model
+    m_model.get()->setParent(nullptr);
     setData(s_clipboardSourceName, s_barcodeKey, true);
     auto updateCurrent = [this]() {
         setData(s_clipboardSourceName, QStringLiteral("current"), m_klipper->history()->empty() ? QString() : m_klipper->history()->first()->text());
