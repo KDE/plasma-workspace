@@ -11,7 +11,6 @@
 
 #include <QDir>
 #include <QFile>
-#include <QQmlEngine>
 #include <QSaveFile>
 #include <QStandardPaths>
 #include <QtConcurrentRun>
@@ -33,7 +32,6 @@ std::shared_ptr<HistoryModel> HistoryModel::self()
         struct make_shared_enabler : public HistoryModel {
         };
         std::shared_ptr<HistoryModel> ptr = std::make_shared<make_shared_enabler>();
-        QQmlEngine::setObjectOwnership(ptr.get(), QQmlEngine::CppOwnership);
         instance = ptr;
         return ptr;
     }
