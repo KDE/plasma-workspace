@@ -32,6 +32,7 @@ generate_export_header(klipper)
 target_link_libraries(klipper
     Qt::Concurrent
     Qt::DBus
+    Qt::Qml
     Qt::Widgets
     KF6::ConfigGui
     KF6::CoreAddons
