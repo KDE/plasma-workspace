@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-15 00:40+0000\n"
 "PO-Revision-Date: 2006-01-10 20:23+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -450,12 +450,12 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: historymodel.cpp:66
+#: historymodel.cpp:68
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: historymodel.cpp:67
+#: historymodel.cpp:69
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr ""

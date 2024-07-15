@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-15 00:40+0000\n"
 "PO-Revision-Date: 2024-03-10 05:14+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -507,13 +507,13 @@ msgstr "Icona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:66
+#: historymodel.cpp:68
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Vuoi davvero cancellare ed eliminare l'intera cronologia degli appunti?"
 
-#: historymodel.cpp:67
+#: historymodel.cpp:69
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Cancella la cronologia degli appunti"

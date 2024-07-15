@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-15 00:40+0000\n"
 "PO-Revision-Date: 2023-08-14 21:38+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -508,12 +508,12 @@ msgstr "Symbol:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:66
+#: historymodel.cpp:68
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Möchten Sie wirklich den gesamten Verlauf der Zwischenablage löschen?"
 
-#: historymodel.cpp:67
+#: historymodel.cpp:69
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bisherigen Inhalt der Zwischenablage löschen"

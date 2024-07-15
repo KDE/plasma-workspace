@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-15 00:40+0000\n"
 "PO-Revision-Date: 2024-03-18 15:21-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -490,13 +490,13 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:66
+#: historymodel.cpp:68
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Deseja realmente excluir o histórico da área de transferência?"
 
-#: historymodel.cpp:67
+#: historymodel.cpp:69
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"

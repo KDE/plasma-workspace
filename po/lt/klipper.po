@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-15 00:40+0000\n"
 "PO-Revision-Date: 2022-12-12 21:00+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -467,12 +467,12 @@ msgstr "Piktograma:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:66
+#: historymodel.cpp:68
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Ar tikrai norite išvalyti ir ištrinti visą iškarpinės istoriją?"
 
-#: historymodel.cpp:67
+#: historymodel.cpp:69
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Išvalyti iškarpinės istoriją"
