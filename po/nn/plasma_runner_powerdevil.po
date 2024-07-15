@@ -116,7 +116,7 @@ msgstr ""
 #: PowerDevilRunner.cpp:85
 #, kde-format
 msgid "Set Brightness to %1%"
-msgstr "Vel %1 % som lysstryke"
+msgstr "Vel %1 % som lysstyrke"
 
 #: PowerDevilRunner.cpp:94
 #, kde-format
