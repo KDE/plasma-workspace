@@ -87,14 +87,6 @@ RowLayout {
         return date;
     }
 
-    function getNormedDate(): date {
-        const normedDate = new Date();
-        const backendDate = backendToDate();
-        normedDate.setHours(backendDate.getHours());
-        normedDate.setMinutes(backendDate.getMinutes());
-        return normedDate;
-    }
-
     function preventOverlapWith(otherDate : date, transitionTime : int): void {
         const currentDate = backendToDate();
         if (!currentDate || !otherDate) {

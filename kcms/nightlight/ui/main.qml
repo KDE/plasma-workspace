@@ -397,7 +397,8 @@ KCM.SimpleKCM {
                 visible: kcm.nightLightSettings.mode === Private.NightLightMode.Timings && kcm.nightLightSettings.active
                 Kirigami.FormData.label: i18n("Transition duration:")
                 from: 1
-                to: 600 // less than 12 hours (in minutes: 720)
+                to: 600 // less than 10 hours (in minutes: 600)
+                stepSize: 5
                 value: kcm.nightLightSettings.transitionTime
                 editable: true
                 onValueModified: {
