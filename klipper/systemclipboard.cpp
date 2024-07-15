@@ -178,7 +178,7 @@ void SystemClipboard::checkClipData(QClipboard::Mode mode)
         // Might be a timeout. Try again
         x11RoundTrip();
         data = m_clip->mimeData(mode);
-        if (data->formats().isEmpty()) {
+        if (!data || data->formats().isEmpty()) {
             qCDebug(KLIPPER_LOG) << "was empty. Retried, now still empty";
             Q_EMIT receivedEmptyClipboard(mode);
             return;
