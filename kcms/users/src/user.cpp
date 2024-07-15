@@ -277,7 +277,7 @@ void User::apply()
                                 opt(mOriginalName != mName, mName),
                                 opt(mOriginalEmail != mEmail, mEmail),
                                 opt(mOriginalRealName != mRealName, mRealName),
-                                opt(mOriginalFace != mFace, mFace.toString().replace("file://", "")),
+                                opt(mOriginalFace != mFace, mFace.toString(QUrl::PreferLocalFile).replace("file://", "")),
                                 opt(mOriginalAdministrator != mAdministrator, mAdministrator ? 1 : 0));
     connect(
         job,
