@@ -11,7 +11,7 @@ import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.private.kcms.style as Private
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: effectSettingsPopup
 
     readonly property int paddings: Kirigami.Units.largeSpacing * 2
