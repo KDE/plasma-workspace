@@ -36,7 +36,7 @@ Kirigami.PromptDialog {
                 debouncer.isTriggered = true
                 return
             }
-            passwordRoot.user.password = passwordField.text
+            passwordRoot.user.setPassword(passwordField.text)
             passwordRoot.close()
         }
     }

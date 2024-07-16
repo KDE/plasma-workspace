@@ -71,8 +71,6 @@ class User : public QObject
 
     Q_PROPERTY(bool faceValid READ faceValid NOTIFY faceValidChanged)
 
-    Q_PROPERTY(QString password READ _ WRITE setPassword)
-
     Q_PROPERTY(bool loggedIn READ loggedIn CONSTANT)
 
     Q_PROPERTY(bool administrator READ administrator WRITE setAdministrator NOTIFY administratorChanged)
@@ -98,24 +96,18 @@ public:
     void setRealName(const QString &value);
     void setEmail(const QString &value);
     void setFace(const QUrl &value);
-    void setPassword(const QString &value);
     void setAdministrator(bool value);
     void setPath(const QDBusObjectPath &path);
 
     void loadData();
 
-    QString _()
-    {
-        return QString();
-    };
-
 public Q_SLOTS:
     Q_SCRIPTABLE void apply();
     Q_SCRIPTABLE bool usesDefaultWallet();
     Q_SCRIPTABLE void changeWalletPassword();
+    Q_SCRIPTABLE void setPassword(const QString &value);
 
 Q_SIGNALS:
-
     void dataChanged();
     void uidChanged();
     void nameChanged();
