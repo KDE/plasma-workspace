@@ -117,7 +117,6 @@ PlasmoidItem {
                 Layout.fillWidth: root.vertical
                 Layout.fillHeight: !root.vertical
                 text: activeMenu
-                // TODO: Alt and other modifiers might be unavailable on Wayland
                 Kirigami.MnemonicData.active: altState.pressed
 
                 down: pressed || Plasmoid.currentIndex === index
