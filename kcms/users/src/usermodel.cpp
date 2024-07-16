@@ -57,7 +57,7 @@ UserModel::UserModel(QObject *parent)
         User *user = new User(this);
         user->setPath(path);
 
-        const std::list<QPair<void (User::*const)(), int>> set = {
+        static constexpr const std::array<std::pair<void (User::*)(), int>, 8> set = {{
             {&User::uidChanged, UidRole},
             {&User::nameChanged, NameRole},
             {&User::displayNamesChanged, DisplayPrimaryNameRole},
@@ -66,11 +66,10 @@ UserModel::UserModel(QObject *parent)
             {&User::realNameChanged, RealNameRole},
             {&User::emailChanged, EmailRole},
             {&User::administratorChanged, AdministratorRole},
-        };
+        }};
 
-        for (const auto &item : set) {
-            const auto role = item.second;
-            connect(user, item.first, this, [this, user, role] {
+        for (const auto &[signal, role] : set) {
+            connect(user, signal, this, [this, user, role] {
                 auto idx = index(m_userList.lastIndexOf(user));
                 Q_EMIT dataChanged(idx, idx, {role});
             });
@@ -78,7 +77,8 @@ UserModel::UserModel(QObject *parent)
 
         m_userList.append(user);
     }
-    std::sort(m_userList.begin(), m_userList.end(), [](User *lhs, User *) {
+
+    std::ranges::sort(m_userList, [](User *lhs, User *) {
         return lhs->loggedIn();
     });
 
