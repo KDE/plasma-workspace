@@ -131,14 +131,14 @@ Q_SIGNALS:
 private:
     qulonglong mUid = 0;
     int mOriginalUid = 0;
-    QString mName = QString();
-    QString mOriginalName = QString();
-    QString mRealName = QString();
-    QString mOriginalRealName = QString();
-    QString mEmail = QString();
-    QString mOriginalEmail = QString();
-    QUrl mFace = QUrl();
-    QUrl mOriginalFace = QUrl();
+    QString mName;
+    QString mOriginalName;
+    QString mRealName;
+    QString mOriginalRealName;
+    QString mEmail;
+    QString mOriginalEmail;
+    QUrl mFace;
+    QUrl mOriginalFace;
     bool mAdministrator = false;
     bool mOriginalAdministrator = false;
     bool mFaceValid = false;
