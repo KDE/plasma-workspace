@@ -16,7 +16,7 @@ Kirigami.OverlaySheet {
 
     readonly property int paddings: Kirigami.Units.largeSpacing * 2
 
-    title: i18nc("@title:window", "Configure Icon and Toolbars")
+    title: i18nc("@title:window", "Configure Icons and Toolbars")
 
     implicitWidth: Math.max((formLayout.implicitWidth + paddings), Kirigami.Units.gridUnit * 20)
     implicitHeight: Math.max((formLayout.implicitHeight + paddings), Kirigami.Units.gridUnit * 11)
