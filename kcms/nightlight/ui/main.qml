@@ -366,6 +366,7 @@ KCM.SimpleKCM {
 
                 backend: kcm.nightLightSettings.eveningBeginFixed
                 onBackendChanged: {
+                    morningBeginFixedField.preventOverlapWith(backendToDate(), transitionDurationField.value)
                     kcm.nightLightSettings.eveningBeginFixed = backend;
                 }
                 KCM.SettingStateBinding {
@@ -381,6 +382,7 @@ KCM.SimpleKCM {
                 Kirigami.FormData.label: i18n("Begin day light at:")
                 backend: kcm.nightLightSettings.morningBeginFixed
                 onBackendChanged: {
+                    eveningBeginFixedField.preventOverlapWith(backendToDate(), transitionDurationField.value)
                     kcm.nightLightSettings.morningBeginFixed = backend;
                 }
                 KCM.SettingStateBinding {
@@ -400,6 +402,7 @@ KCM.SimpleKCM {
                 editable: true
                 onValueModified: {
                     kcm.nightLightSettings.transitionTime = value;
+                    eveningBeginFixedField.preventOverlapWith(morningBeginFixedField.backendToDate(), value);
                 }
                 textFromValue: function(value, locale) {
                     return i18np("%1 minute", "%1 minutes", value);
@@ -417,25 +420,6 @@ KCM.SimpleKCM {
                 QQC2.ToolTip {
                     text: i18n("Input minutes - min. 1, max. 600")
                 }
-            }
-
-            QQC2.Label {
-                id: manualTimingsError
-                visible: {
-                    const day = 86400000; // 24h * 60m * 60s * 1000ms
-                    const duration = transitionDurationField.value * 60 * 1000;
-                    const morning = morningBeginFixedField.getNormedDate();
-                    const evening = eveningBeginFixedField.getNormedDate();
-
-                    const diff = Math.abs(evening - morning);
-                    const diffMin = Math.min(diff, day - diff);
-
-                    return diffMin <= duration && kcm.nightLightSettings.active
-                        && kcm.nightLightSettings.mode === Private.NightLightMode.Timings;
-                }
-                font.italic: true
-                text: i18n("Error: Transition time overlaps.")
-                textFormat: Text.PlainText
             }
         }
 

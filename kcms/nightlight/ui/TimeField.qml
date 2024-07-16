@@ -94,4 +94,24 @@ RowLayout {
         normedDate.setMinutes(backendDate.getMinutes());
         return normedDate;
     }
+
+    function preventOverlapWith(otherDate : date, transitionTime : int): void {
+        const currentDate = backendToDate();
+        if (!currentDate || !otherDate) {
+            return;
+        }
+
+        const DAY = 24 * 60
+        const diff = Math.floor(Math.abs(currentDate - otherDate) / 60000);
+        const distance = Math.min(diff, DAY - diff);
+
+        if (distance <= transitionTime) {
+            // Keep the minimum distance strictly over the transition time
+            const direction = ((currentDate > otherDate) ^ (diff > DAY/2)) ? 1 : -1
+            const newTime = new Date(otherDate.getTime() + direction * (transitionTime + 1) * 60 * 1000);
+            hoursField.value = newTime.getHours();
+            minutesField.value = newTime.getMinutes();
+            updateBackendFromFields();
+        }
+    }
 }
