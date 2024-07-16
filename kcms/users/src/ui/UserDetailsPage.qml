@@ -53,7 +53,7 @@ KCM.SimpleKCM {
             usersDetailPage.user.realName = realNametextField.text
             usersDetailPage.user.email = emailTextField.text
             usersDetailPage.user.name = userNameField.text
-            usersDetailPage.user.administrator = (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator")
+            usersDetailPage.user.administrator = (usertypeBox.currentValue === "administrator")
             user.apply()
             usersDetailPage.overrideImage = false
             usersDetailPage.oldImage = ""
@@ -78,7 +78,7 @@ KCM.SimpleKCM {
         pending = pending || user.realName != realNametextField.text
         pending = pending || user.email != emailTextField.text
         pending = pending || user.name != userNameField.text
-        pending = pending || user.administrator != (usertypeBox.model[usertypeBox.currentIndex]["type"] == "administrator")
+        pending = pending || user.administrator != (usertypeBox.currentValue === "administrator")
         pending = pending || usersDetailPage.overrideImage
         return pending
     }
@@ -153,6 +153,7 @@ KCM.SimpleKCM {
                     readonly property bool shouldBeEnabled: kcm.userModel.moreThanOneAdminUser || !user.administrator
 
                     textRole: "label"
+                    valueRole: "type"
                     model: [
                         { "type": "standard", "label": i18n("Standard") },
                         { "type": "administrator", "label": i18n("Administrator") },
