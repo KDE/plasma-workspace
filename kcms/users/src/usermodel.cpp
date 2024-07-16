@@ -81,6 +81,11 @@ UserModel::UserModel(QObject *parent)
     std::sort(m_userList.begin(), m_userList.end(), [](User *lhs, User *) {
         return lhs->loggedIn();
     });
+
+    connect(this, &QAbstractItemModel::rowsInserted, this, &UserModel::moreThanOneAdminUserChanged);
+    connect(this, &QAbstractItemModel::rowsRemoved, this, &UserModel::moreThanOneAdminUserChanged);
+    connect(this, &QAbstractItemModel::dataChanged, this, &UserModel::moreThanOneAdminUserChanged);
+    connect(this, &QAbstractItemModel::modelReset, this, &UserModel::moreThanOneAdminUserChanged);
 }
 
 QHash<int, QByteArray> UserModel::roleNames() const
@@ -111,6 +116,20 @@ User *UserModel::getLoggedInUser() const
         }
     }
     return nullptr;
+}
+
+bool UserModel::hasMoreThanOneAdminUser() const
+{
+    int c = 0;
+    for (const auto *user : std::as_const(m_userList)) {
+        if (user->administrator()) {
+            c++;
+        }
+        if (c > 1) {
+            return true;
+        }
+    }
+    return false;
 }
 
 QVariant UserModel::data(const QModelIndex &index, int role) const

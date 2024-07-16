@@ -34,6 +34,8 @@ public:
     };
     Q_ENUM(Roles)
 
+    Q_PROPERTY(bool moreThanOneAdminUser READ hasMoreThanOneAdminUser NOTIFY moreThanOneAdminUserChanged FINAL)
+
     explicit UserModel(QObject *parent = nullptr);
     ~UserModel() override;
 
@@ -44,7 +46,12 @@ public:
 
     QHash<int, QByteArray> roleNames() const override;
 
+Q_SIGNALS:
+    void moreThanOneAdminUserChanged();
+
 private:
     OrgFreedesktopAccountsInterface *m_dbusInterface;
     QList<User *> m_userList;
+
+    bool hasMoreThanOneAdminUser() const;
 };

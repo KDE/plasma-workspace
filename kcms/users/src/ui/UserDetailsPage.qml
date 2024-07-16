@@ -9,7 +9,7 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.kirigami 2.13 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kirigamiaddons.components 1.0 as KirigamiComponents
 import org.kde.kcmutils as KCM
 import org.kde.plasma.kcm.users 1.0 as UsersKCM
@@ -143,20 +143,31 @@ KCM.SimpleKCM {
                 KeyNavigation.down: usertypeBox
             }
 
-            QQC2.ComboBox {
-                id: usertypeBox
-
-                textRole: "label"
-                model: [
-                    { "type": "standard", "label": i18n("Standard") },
-                    { "type": "administrator", "label": i18n("Administrator") },
-                ]
-
+            RowLayout {
+                spacing: Kirigami.Units.smallSpacing
                 Kirigami.FormData.label: i18n("Account type:")
 
-                currentIndex: user.administrator ? 1 : 0
+                QQC2.ComboBox {
+                    id: usertypeBox
 
-                KeyNavigation.down: emailTextField
+                    readonly property bool shouldBeEnabled: kcm.userModel.moreThanOneAdminUser || !user.administrator
+
+                    textRole: "label"
+                    model: [
+                        { "type": "standard", "label": i18n("Standard") },
+                        { "type": "administrator", "label": i18n("Administrator") },
+                    ]
+
+                    currentIndex: user.administrator ? 1 : 0
+                    enabled: shouldBeEnabled
+
+                    KeyNavigation.down: emailTextField
+                }
+
+                Kirigami.ContextualHelpButton {
+                    toolTipText: i18n("Cannot change the account type to Standard unless there is at least one other Administrator account on the system. Without one, authentication would become impossible or require the insecure use of the root password.")
+                    visible: !usertypeBox.shouldBeEnabled
+                }
             }
 
             QQC2.TextField {
