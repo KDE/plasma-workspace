@@ -14,9 +14,6 @@ import org.kde.kirigami 2.20 as Kirigami
 KCM.SimpleKCM {
     title: i18n("Create User")
 
-    width: mainColumn.childrenRect.width + (Kirigami.Units.largeSpacing * 10)
-    height: mainColumn.childrenRect.height + (Kirigami.Units.largeSpacing * 10)
-
     onVisibleChanged: {
         realNameField.text = "";
         userNameField.text = "";
