@@ -19,7 +19,7 @@ Kirigami.PromptDialog {
         verifyField.text = ""
         passwordField.text = ""
         passwordField.forceActiveFocus()
-        this.open()
+        open()
     }
 
     property UsersKCM.User user
