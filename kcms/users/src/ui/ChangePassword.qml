@@ -31,9 +31,7 @@ Kirigami.PromptDialog {
         id: passAction
         text: i18n("Set Password")
         enabled: !passwordWarning.visible && verifyField.text && passwordField.text
-        onTriggered: apply()
-
-        function apply() {
+        onTriggered: {
             if (passwordField.text !== verifyField.text) {
                 debouncer.isTriggered = true
                 return
