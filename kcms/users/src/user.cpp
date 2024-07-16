@@ -131,9 +131,11 @@ void User::setAdministrator(bool value)
 
 void User::setPath(const QDBusObjectPath &path)
 {
-    if (!m_dbusIface.isNull())
+    if (!m_dbusIface.isNull()) {
         delete m_dbusIface;
+    }
     m_dbusIface = new OrgFreedesktopAccountsUserInterface(QStringLiteral("org.freedesktop.Accounts"), path.path(), QDBusConnection::systemBus(), this);
+    m_dbusIface->setInteractiveAuthorizationAllowed(true);
 
     if (m_dbusIface->systemAccount()) {
         return;
@@ -251,13 +253,11 @@ void User::setPassword(const QString &password)
     // Blocking because we need to wait for the password to be changed before we
     // can ask the user about also possibly changing their KWallet password
 
-    auto mc = QDBusMessage::createMethodCall(m_dbusIface->service(), m_dbusIface->path(), m_dbusIface->interface(), u"SetPassword"_s);
-    mc.setArguments({saltPassword(password), QString()});
-    mc.setInteractiveAuthorizationAllowed(true);
-    auto message = QDBusConnection::systemBus().call(mc);
+    auto message = m_dbusIface->SetPassword(saltPassword(password), QString());
+    message.waitForFinished();
 
     // Not an error or invalid message
-    if (message.type() == QDBusMessage::ReplyMessage) {
+    if (message.isValid()) {
         Q_EMIT passwordSuccessfullyChanged();
     }
 }
@@ -337,15 +337,6 @@ UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIfa
 {
 }
 
-// Work around QTBUG-100458
-inline auto asyncCall(OrgFreedesktopAccountsUserInterface *ptr, const QString &method, const QVariantList &arguments)
-{
-    auto mc = QDBusMessage::createMethodCall(ptr->service(), ptr->path(), ptr->interface(), method);
-    mc.setArguments(arguments);
-    mc.setInteractiveAuthorizationAllowed(true);
-    return QDBusConnection::systemBus().asyncCall(mc);
-}
-
 void UserApplyJob::start()
 {
     // With our UI the user expects the as a single transaction, but the accountsservice API does not provide that
@@ -356,7 +347,7 @@ void UserApplyJob::start()
     // Subsequent calls do not trigger the auth dialog again
 
     if (m_type.has_value()) {
-        auto setAccount = asyncCall(m_dbusIface, u"SetAccountType"_s, {*m_type});
+        auto setAccount = m_dbusIface->SetAccountType(*m_type);
         setAccount.waitForFinished();
         if (setAccount.isError()) {
             setError(setAccount.error());
@@ -366,16 +357,18 @@ void UserApplyJob::start()
         }
     }
 
-    const std::multimap<std::optional<QString>, QString> set = {
-        {m_name, u"SetUserName"_s},
-        {m_email, u"SetEmail"_s},
-        {m_realname, u"SetRealName"_s},
-    };
-    for (auto const &x : set) {
-        if (!x.first.has_value())
+    using UserPropertySetter = QDBusPendingReply<> (OrgFreedesktopAccountsUserInterface::*)(const QString &name);
+    const std::array<std::pair<std::optional<QString>, UserPropertySetter>, 3> set = {{
+        {m_name, &OrgFreedesktopAccountsUserInterface::SetUserName},
+        {m_email, &OrgFreedesktopAccountsUserInterface::SetEmail},
+        {m_realname, &OrgFreedesktopAccountsUserInterface::SetRealName},
+    }};
+    for (auto const &[field, setter] : set) {
+        if (!field.has_value()) {
             continue;
+        }
 
-        auto resp = asyncCall(m_dbusIface, x.second, {*x.first});
+        auto resp = (m_dbusIface->*setter)(field.value());
         resp.waitForFinished();
         if (resp.isError()) {
             setError(resp.error());
@@ -410,7 +403,7 @@ void UserApplyJob::start()
 
         file.close();
 
-        auto resp = asyncCall(m_dbusIface, u"SetIconFile"_s, {file.fileName()});
+        auto resp = m_dbusIface->SetIconFile(file.fileName());
 
         resp.waitForFinished();
         if (resp.isError()) {
