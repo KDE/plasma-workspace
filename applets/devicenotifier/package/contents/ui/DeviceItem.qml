@@ -8,45 +8,49 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Controls 2.12 as QQC2
-import QtQml.Models 2.14
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQml.Models
 
-import org.kde.plasma.plasmoid 2.0
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.plasmoid
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
-import org.kde.kquickcontrolsaddons 2.0
+import org.kde.kquickcontrolsaddons
+
+import org.kde.plasma.private.devicenotifier as DN
 
 PlasmaExtras.ExpandableListItem {
     id: deviceItem
 
-    property string udi
-    readonly property int state: sdSource.data[udi] ? sdSource.data[udi].State : 0
-    readonly property int operationResult: (model["Operation result"])
+    required property int index
 
-    readonly property bool isMounted: devicenotifier.isMounted(udi)
-    readonly property bool hasMessage: statusSource.lastUdi === deviceItem.udi
-    readonly property var types: model["Device Types"]
-    readonly property bool hasStorageAccess: !!types && types.indexOf("Storage Access") !== -1
-    readonly property bool hasPortableMediaPlayer: !!types && types.indexOf("Portable Media Player") !== -1
-    readonly property var supportedProtocols: model["Supported Protocols"]
-    readonly property bool supportsMTP: !!supportedProtocols && supportedProtocols.indexOf("mtp") !== -1
-    readonly property bool supportsAFC: !!supportedProtocols && supportedProtocols.includes("afc")
+    required property string deviceDescription
+    required property string deviceIcon
+    required property double deviceFreeSpace
+    required property double deviceSize
+    required property string deviceFreeSpaceText
+    required property string deviceSizeText
+    required property bool deviceMounted
+    required property int deviceOperationResult
+    required property int deviceError
+    required property string deviceErrorMessage
+    required property var deviceActions
+    required property var deviceEmblems
 
-    readonly property double freeSpace: sdSource.data[udi] && sdSource.data[udi]["Free Space"] ? sdSource.data[udi]["Free Space"] : -1.0
-    readonly property double totalSpace: sdSource.data[udi] && sdSource.data[udi]["Size"] ? sdSource.data[udi]["Size"] : -1.0
-    property bool freeSpaceKnown: freeSpace > 0 && totalSpace > 0
+    property bool hasMessage: deviceErrorMessage !== ""
 
-    readonly property bool isRootVolume: sdSource.data[udi] && sdSource.data[udi]["File Path"] ? sdSource.data[udi]["File Path"] == "/" : false
-    readonly property bool isRemovable: sdSource.data[udi] && sdSource.data[udi]["Removable"] ? sdSource.data[udi]["Removable"] : false
-
-    onOperationResultChanged: {
+    onDeviceOperationResultChanged: {
         if (!popupIconTimer.running) {
-            if (operationResult == 1) {
+            if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working) {
+                if(deviceMounted){
+                    unmountTimer.restart();
+                }
+            } else if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Successful) {
                 devicenotifier.popupIcon = "dialog-ok"
                 popupIconTimer.restart()
-            } else if (operationResult == 2) {
+            } else if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Unsuccessful) {
                 devicenotifier.popupIcon = "dialog-error"
                 popupIconTimer.restart()
             }
@@ -59,23 +63,10 @@ PlasmaExtras.ExpandableListItem {
         }
     }
 
-    Connections {
-        target: unmountAll
-        function onClicked() {
-            removableActionTriggered();
-        }
-    }
-
-    Connections {
-         target: devicenotifier
-         function onUnmountAllRequested() {
-             removableActionTriggered();
-         }
-     }
-
     // this keeps the delegate around for 5 seconds after the device has been
     // removed in case there was a message, such as "you can now safely remove this"
     ListView.onRemove: removeAnimation.start()
+
 
     SequentialAnimation {
         id: removeAnimation
@@ -83,30 +74,16 @@ PlasmaExtras.ExpandableListItem {
         PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: deviceItem.hasMessage }
         PropertyAction { target: deviceItem; property: "enabled"; value: false }
         // Reset action model to hide the arrow
-        PropertyAction { target: deviceItem; property: "contextualActions"; value: [] }
-        PropertyAction { target: deviceItem; property: "icon"; value: statusSource.lastIcon || "device-notifier" }
-        PropertyAction { target: deviceItem; property: "title"; value: statusSource.lastDescription }
-        PropertyAction { target: deviceItem; property: "subtitle"; value: statusSource.lastMessage }
+        PropertyAction { target: deviceItem; property: "customExpandedViewContent"; value: []}
+        PropertyAction { target: deviceItem; property: "defaultActionButtonAction"; value: null}
+        PropertyAction { target: deviceItem; property: "icon"; value: deviceItem.deviceIcon || "device-notifier" }
+        PropertyAction { target: deviceItem; property: "subtitle"; value: deviceItem.deviceErrorMessage }
         PauseAnimation { duration: messageHighlightAnimator.duration }
-        // Otherwise the last message will show again when this device reappears
-        ScriptAction { script: statusSource.clearMessage(); }
         // Otherwise there are briefly multiple highlight effects
         PropertyAction { target: devicenotifier; property: "currentIndex"; value: -1 }
         PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: false }
     }
 
-    Timer {
-        id: updateStorageSpaceTimer
-        interval: 5000
-        repeat: true
-        running: isMounted && devicenotifier.expanded
-        triggeredOnStart: true     // Update the storage space as soon as we open the plasmoid
-        onTriggered: {
-            const service = sdSource.serviceForSource(udi);
-            const operation = service.operationDescription("updateFreespace");
-            service.startOperationCall(operation);
-        }
-    }
 
     Timer {
         id: unmountTimer
@@ -114,81 +91,34 @@ PlasmaExtras.ExpandableListItem {
         repeat: false
     }
 
-    Component {
-        id: deviceActionComponent
-        QQC2.Action { }
-    }
-
-    function removableActionTriggered() {
-        if (model["Removable"] && isMounted) {
-            actionTriggered();
-        }
-    }
-
-    function actionTriggered() {
-        let service
-        let operationName
-        let operation
-        const wasMounted = isMounted;
-        if (!hasStorageAccess || !isRemovable || !isMounted) {
-            service = hpSource.serviceForSource(udi);
-            operation = service.operationDescription('invokeAction');
-            operation.predicate = "openWithFileManager.desktop";
-
-            if (!hasStorageAccess && hasPortableMediaPlayer) {
-                if (deviceItem.supportsMTP) {
-                    operation.predicate = "solid_mtp.desktop" // this lives in kio-extras!
-                } else if (deviceItem.supportsAFC) {
-                    operation.predicate = "solid_afc.desktop" // this lives in kio-extras!
-                }
-            }
-        } else {
-            service = sdSource.serviceForSource(udi);
-            operation = service.operationDescription("unmount");
-            unmountTimer.restart();
-        }
-        service.startOperationCall(operation);
-        if (wasMounted) {
-            deviceItem.collapse();
-        }
-    }
-
-
-    // When there's no better icon available, show a placeholder icon instead
-    // of nothing
-    icon: sdSource.data[udi] ? sdSource.data[udi].Icon : "device-notifier"
+    icon: deviceItem.deviceIcon
 
     iconEmblem: {
         if (deviceItem.hasMessage) {
-            if (statusSource.lastErrorType === 0) {
+            if (filterModel.deviceError === 0) {
                 return "emblem-information"
             } else {
                 return "emblem-error"
             }
-        } else if (deviceItem.state == 0 && Emblems && Emblems[0]) {
-            return Emblems[0]
+        } else if (deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working && deviceItem.deviceEmblems[0]) {
+            return deviceItem.deviceEmblems[0]
         } else {
             return ""
         }
     }
 
-    title: sdSource.data[udi] ? sdSource.data[udi].Description : ""
+    title: deviceItem.deviceDescription
 
     subtitle: {
         if (deviceItem.hasMessage) {
-            return statusSource.lastMessage
+            return filterModel.lastErrorMessage
         }
-        if (deviceItem.state == 0) {
-            if (!hpSource.data[udi]) {
-                return ""
-            }
-            if (freeSpaceKnown) {
-                const freeSpaceText = sdSource.data[udi]["Free Space Text"]
-                const totalSpaceText = sdSource.data[udi]["Size Text"]
-                return i18nc("@info:status Free disk space", "%1 free of %2", freeSpaceText, totalSpaceText)
+        if (deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working) {
+            if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
+                return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText)
             }
             return ""
-        } else if (deviceItem.state == 1) {
+        } else if (!deviceItem.deviceMounted && deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working) {
             return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Accessing…")
         } else if (unmountTimer.running) {
             // Unmounting; shown if unmount takes less than 1 second
@@ -203,8 +133,8 @@ PlasmaExtras.ExpandableListItem {
 
     // Color the subtitle red for disks with less than 5% free space
     subtitleColor: {
-        if (freeSpaceKnown) {
-            if (freeSpace / totalSpace <= 0.05) {
+        if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
+            if (deviceItem.deviceFreeSpace / deviceItem.deviceSize <= 0.05) {
                 return Kirigami.Theme.negativeTextColor
             }
         }
@@ -212,79 +142,55 @@ PlasmaExtras.ExpandableListItem {
     }
 
     defaultActionButtonAction: QQC2.Action {
-        icon.name: {
-            if (isRemovable) {
-                return isMounted ? "media-eject" : "document-open-folder"
-            } else {
-                return "document-open-folder"
-            }
-        }
-        text: {
-            // TODO: this entire logic and the semi-replication thereof in actionTriggered is really silly.
-            //  We have a fairly exhaustive predicate system, we should use it to assertain if a given udi is actionable
-            //  and then we simply pick the sensible default action of a suitable predicate.
-            // - It's possible for there to be no StorageAccess (e.g. MTP devices don't have one)
-            // - It's possible for the root volume to be on a removable disk
-            if (!hasStorageAccess || !isRemovable || isRootVolume) {
-                return i18n("Open in File Manager")
-            } else {
-                if (!isMounted) {
-                    return i18n("Mount and Open")
-                } else if (types && types.indexOf("OpticalDisc") !== -1) {
-                    return i18n("Eject")
-                } else {
-                    return i18n("Safely remove")
-                }
-            }
-        }
-        onTriggered: actionTriggered()
-    }
-
-    isBusy: deviceItem.state != 0
-
-    // We need a JS array full of QQC2 actions; this Instantiator creates them
-    // from the actions list of the data source
-    Instantiator {
-        model: hpSource.data[udi] ? hpSource.data[udi].actions : []
-        delegate: QQC2.Action {
-            text: modelData.text
-            icon.name: modelData.icon
-            // We only want to show the "Show in file manager" action for
-            // mounted removable disks (for everything else, this action is
-            // already the primary one shown on the list item)
-            enabled: {
-                if (modelData.predicate != "openWithFileManager.desktop") {
-                    return true;
-                }
-                return deviceItem.isRemovable && deviceItem.isMounted;
-            }
-            onTriggered: {
-                const service = hpSource.serviceForSource(udi);
-                const operation = service.operationDescription('invokeAction');
-                operation.predicate = modelData.predicate;
-                service.startOperationCall(operation);
-                devicenotifier.currentIndex = -1;
-            }
-        }
-        onObjectAdded: (index, object) => deviceItem.contextualActions.push(object)
-        onObjectRemoved: (index, object) => {
-            deviceItem.contextualActions = Array.prototype.slice.call(deviceItem.contextualActions)
-                .filter(action => action !== object);
-        }
-    }
-
-    // "Mount" action that does not open it in the file manager
-    contextualActions: QQC2.Action {
-        text: i18n("Mount")
-        icon.name: "media-mount"
-
-        // Only show for unmounted removable devices not in MTP mode
-        enabled: deviceItem.isRemovable && !deviceItem.isMounted && !deviceItem.supportsMTP
-
+        id: defaultAction
+        icon.name: deviceActions.defaultActionIcon
+        text: deviceActions.defaultActionText
         onTriggered: {
-            const service = sdSource.serviceForSource(udi);
-            const operation = service.operationDescription("mount");
-            service.startOperationCall(operation);
+            if(deviceItem.deviceMounted){
+                unmountTimer.restart();
+            }
+            deviceActions.actionTriggered(deviceActions.defaultActionName)
         }
+    }
+
+    isBusy: deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working
+
+    customExpandedViewContent: deviceActions.rowCount() === 0 ? null : actionComponent
+
+    Component {
+        id: actionComponent
+
+        ListView {
+            id: actionRepeater
+
+            contentWidth: parent.width
+            contentHeight: contentItem.height
+            width: contentWidth
+            height: contentHeight
+
+            model: deviceItem.deviceActions
+
+            delegate: PlasmaComponents3.ToolButton
+            {
+                width: parent.width
+                text: model.Text
+                icon.name: model.Icon
+
+                KeyNavigation.up: currentIndex > 0 ? actionRepeater.itemAtIndex(currentIndex - 1) : deviceItem
+                KeyNavigation.down: {
+                    if (currentIndex <= actionRepeater.count - 1) {
+                        return actionRepeater.itemAtIndex(currentIndex + 1);
+                    } else {
+                        return actionRepeater.itemAtIndex(0);
+                    }
+                }
+
+                onClicked: {
+                    deviceActions.actionTriggered(model.Name)
+                }
+
+            }
+        }
+
     }
 }

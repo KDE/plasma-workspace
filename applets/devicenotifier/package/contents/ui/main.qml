@@ -7,13 +7,11 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.1
-import org.kde.plasma.plasmoid 2.0
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.plasma5support 2.0 as P5Support
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.kitemmodels 1.1 as KItemModels
+import org.kde.kirigami as Kirigami
 
 import org.kde.kcmutils // For KCMLauncher
 import org.kde.config // KAuthorized
@@ -22,6 +20,31 @@ import org.kde.plasma.private.devicenotifier as DN
 PlasmoidItem {
     id: devicenotifier
 
+    DN.DeviceFilterControl {
+        id: filterModel
+
+        filterType: {
+            if (Plasmoid.configuration.allDevices) {
+                return DN.DeviceFilterControl.All
+            } else if (Plasmoid.configuration.removableDevices) {
+                return DN.DeviceFilterControl.Removable
+            } else {
+                return DN.DeviceFilterControl.Unremovable
+            }
+        }
+
+        onLastUdiChanged: {
+            if (lastDeviceAdded) {
+                if (Plasmoid.configuration.popupOnNewDevice) {
+                    devicenotifier.expanded = true;
+                    fullRepresentationItem.spontaneousOpen = true;
+                }
+                devicenotifier.popupIcon = "preferences-desktop-notification";
+                popupIconTimer.restart();
+            }
+        }
+    }
+
     readonly property bool openAutomounterKcmAuthorized: KAuthorized.authorizeControlModule("device_automounter_kcm")
 
     readonly property bool inPanel: (Plasmoid.location === PlasmaCore.Types.TopEdge
@@ -29,21 +52,13 @@ PlasmoidItem {
         || Plasmoid.location === PlasmaCore.Types.BottomEdge
         || Plasmoid.location === PlasmaCore.Types.LeftEdge)
 
-    property string devicesType: {
-        if (Plasmoid.configuration.allDevices) {
-            return "all"
-        } else if (Plasmoid.configuration.removableDevices) {
-            return "removable"
-        } else {
-            return "nonRemovable"
-        }
-    }
-    property string popupIcon: "device-notifier-symbolic"
+    property string popupIcon: ""
 
     property bool itemClicked: false
     property int currentIndex: -1
     property var connectedRemovables: []
     property int mountedRemovables: 0
+
     signal unmountAllRequested
 
     // QTBUG-50380: As soon as the item gets removed from the model, all of ListView's
@@ -54,22 +69,19 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 10
     switchHeight: Kirigami.Units.gridUnit * 10
 
-    toolTipMainText: filterModel.count > 0 ? i18n("Most Recent Device") : i18n("No Devices Available")
+    toolTipMainText: filterModel.lastUdi !== "" ? i18n("Most Recent Device") : i18n("No Devices Available")
     toolTipSubText: {
-        if (filterModel.count > 0) {
-            const m = filterModel;
-            const index = m.index(0, 0);
-            const description = m.data(index, m.KItemModels.KRoleNames.role("Description"))
-            return description;
+        if (filterModel.lastUdi !== "") {
+            return filterModel.lastDescription;
         }
         return ""
     }
     Plasmoid.icon: {
         let iconName;
-        if (filterModel.count > 0) {
-            const m = filterModel;
-            const index = m.index(0, 0);
-            iconName = m.data(index, m.KItemModels.KRoleNames.role("Icon"))
+        if (popupIcon !== ""){
+            iconName = popupIcon;
+        } else if (filterModel.lastUdi !== "") {
+            iconName = filterModel.lastIcon;
         } else {
             iconName = "device-notifier";
         }
@@ -84,121 +96,10 @@ PlasmoidItem {
         return iconName;
     }
 
-    Plasmoid.status: (filterModel.count > 0 || isMessageHighlightAnimatorRunning) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
+    Plasmoid.status: (filterModel.deviceCount > 0 || isMessageHighlightAnimatorRunning) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
 
-    P5Support.DataSource {
-        id: hpSource
-        engine: "hotplug"
-        connectedSources: sources
-        interval: 0
-
-        onSourceAdded: source => {
-            disconnectSource(source);
-            connectSource(source);
-            sdSource.connectedSources = sources
-        }
-        onSourceRemoved: source => {
-            disconnectSource(source);
-        }
-    }
-
-    fullRepresentation: FullRepresentation {}
-
-    P5Support.DataSource {
-        id: sdSource
-        engine: "soliddevice"
-        interval: 0
-        property string last
-        onSourceAdded: source => {
-            disconnectSource(source);
-            connectSource(source);
-            last = source;
-            processLastDevice(true);
-            if (data[source].Removable) {
-                devicenotifier.connectedRemovables.push(source);
-                devicenotifier.connectedRemovables = devicenotifier.connectedRemovables;
-            }
-        }
-
-        onSourceRemoved: source => {
-            disconnectSource(source);
-            var index = devicenotifier.connectedRemovables.indexOf(source);
-            if (index >= 0) {
-                devicenotifier.connectedRemovables.splice(index, 1);
-                devicenotifier.connectedRemovables = devicenotifier.connectedRemovables;
-            }
-        }
-
-        onDataChanged: {
-            processLastDevice(true);
-            var counter = 0;
-            for (var i = 0; i < devicenotifier.connectedRemovables.length; i++) {
-                if (isMounted(devicenotifier.connectedRemovables[i])) {
-                    counter++;
-                }
-            }
-            if (counter !== devicenotifier.mountedRemovables) {
-                devicenotifier.mountedRemovables = counter;
-            }
-        }
-
-        onNewData: (sourceName, data) => {
-            last = sourceName;
-            processLastDevice(false);
-        }
-
-        function isViableDevice(udi) {
-            if (devicesType === "all") {
-                return true;
-            }
-
-            var device = data[udi];
-            if (!device) {
-                return false;
-            }
-
-            return (devicesType === "removable" && device.Removable)
-                || (devicesType === "nonRemovable" && !device.Removable);
-        }
-
-        function processLastDevice(expand) {
-            if (last && isViableDevice(last)) {
-                if (expand && hpSource.data[last] && hpSource.data[last].added) {
-                    devicenotifier.popupIcon = "preferences-desktop-notification";
-                    expandTimer.restart();
-                    popupIconTimer.restart();
-                }
-                last = "";
-            }
-        }
-    }
-
-    KItemModels.KSortFilterProxyModel {
-        id: filterModel
-        sourceModel: P5Support.DataModel {
-            dataSource: sdSource
-        }
-        filterRoleName: "Removable"
-        filterString: {
-            if (devicesType === "removable") {
-                return "true"
-            } else if (devicesType === "nonRemovable") {
-                return "false"
-            } else {
-                return ""
-            }
-        }
-        sortRoleName: "Timestamp"
-        sortOrder: Qt.DescendingOrder
-    }
-
-    DN.KSolidNotify {
-        id: statusSource
-
-        onLastUdiChanged: if (statusSource.lastUdi.length > 0 && sdSource.isViableDevice(statusSource.lastUdi)) {
-            devicenotifier.expanded = true
-            fullRepresentationItem.spontaneousOpen = true;
-        }
+    fullRepresentation: FullRepresentation {
+        model: filterModel
     }
 
     PlasmaCore.Action {
@@ -211,7 +112,7 @@ PlasmoidItem {
     }
 
     Component.onCompleted: {
-        if (sdSource.connectedSources.count === 0) {
+        if (devicenotifier.deviceCount === 0) {
             Plasmoid.status = PlasmaCore.Types.PassiveStatus;
         }
         Plasmoid.setInternalAction("configure", configureAction);
@@ -223,8 +124,8 @@ PlasmoidItem {
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             text: i18n("Remove All")
-            visible: devicenotifier.mountedRemovables > 0
-            onTriggered: devicenotifier.unmountAllRequested()
+            visible: filterModel.unmountableCount > 0
+            onTriggered: filterModel.unmountAllRemovables()
         },
         PlasmaCore.Action {
             isSeparator: true
@@ -290,6 +191,7 @@ PlasmoidItem {
     ]
 
     onExpandedChanged: {
+        filterModel.isVisible = devicenotifier.expanded;
         popupEventSlot(devicenotifier.expanded);
     }
 
@@ -300,19 +202,6 @@ PlasmoidItem {
             devicenotifier.itemClicked = true;
             devicenotifier.currentIndex = -1;
         }
-    }
-
-    function isMounted(udi) {
-        if (!sdSource.data[udi]) {
-            return false;
-        }
-
-        var types = sdSource.data[udi]["Device Types"];
-        if (types.indexOf("Storage Access") >= 0) {
-            return sdSource.data[udi]["Accessible"];
-        }
-
-        return (types.indexOf("Storage Volume") >= 0 && types.indexOf("OpticalDisc") >= 0)
     }
 
     function symbolicizeIconName(iconName) {
@@ -328,22 +217,6 @@ PlasmoidItem {
     Timer {
         id: popupIconTimer
         interval: 3000
-        onTriggered: devicenotifier.popupIcon  = "device-notifier";
+        onTriggered: devicenotifier.popupIcon  = "";
     }
-
-    Timer {
-        id: expandTimer
-        interval: 250
-        onTriggered: {
-            // We don't show a UI for it, but there is a hidden option to not
-            // show the popup on new device attachment if the user has added
-            // the text "popupOnNewDevice=false" to their
-            // plasma-org.kde.plasma.desktop-appletsrc file.
-            if (Plasmoid.configuration.popupOnNewDevice) { // Bug 351592
-                devicenotifier.expanded = true;
-                fullRepresentationItem.spontaneousOpen = true;
-            }
-        }
-    }
-
 }
