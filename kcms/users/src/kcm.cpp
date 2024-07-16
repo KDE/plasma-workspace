@@ -32,15 +32,6 @@ K_PLUGIN_CLASS_WITH_JSON(KCMUser, "kcm_users.json")
 
 using namespace Qt::StringLiterals;
 
-// Work around QTBUG-100458
-inline auto asyncCall(OrgFreedesktopAccountsInterface *ptr, const QString &method, const QVariantList &arguments)
-{
-    auto mc = QDBusMessage::createMethodCall(ptr->service(), ptr->path(), ptr->interface(), method);
-    mc.setArguments(arguments);
-    mc.setInteractiveAuthorizationAllowed(true);
-    return QDBusConnection::systemBus().asyncCall(mc);
-}
-
 KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
     , m_dbusInterface(new OrgFreedesktopAccountsInterface(QStringLiteral("org.freedesktop.Accounts"),
@@ -50,6 +41,8 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data)
     , m_model(new UserModel(this))
     , m_fingerprintModel(new FingerprintModel(this))
 {
+    m_dbusInterface->setInteractiveAuthorizationAllowed(true);
+
     constexpr const char *uri = "org.kde.plasma.kcm.users";
 
     qmlRegisterUncreatableType<UserModel>(uri, 1, 0, "UserModel", QStringLiteral("Registered for enum access only"));
@@ -77,7 +70,7 @@ KCMUser::KCMUser(QObject *parent, const KPluginMetaData &data)
 
 bool KCMUser::createUser(const QString &name, const QString &realName, const QString &password, bool isAdmin)
 {
-    QDBusPendingReply<QDBusObjectPath> reply = asyncCall(m_dbusInterface, u"CreateUser"_s, {name, realName, static_cast<qint32>(isAdmin)});
+    QDBusPendingReply<QDBusObjectPath> reply = m_dbusInterface->CreateUser(name, realName, static_cast<qint32>(isAdmin));
     reply.waitForFinished();
     if (reply.isValid()) {
         User *createdUser = new User(this);
@@ -91,7 +84,7 @@ bool KCMUser::createUser(const QString &name, const QString &realName, const QSt
 
 bool KCMUser::deleteUser(qint64 id, bool deleteHome)
 {
-    QDBusPendingReply<> reply = asyncCall(m_dbusInterface, u"DeleteUser"_s, {id, deleteHome});
+    QDBusPendingReply<> reply = m_dbusInterface->DeleteUser(id, deleteHome);
     reply.waitForFinished();
     if (reply.isError()) {
         return false;
