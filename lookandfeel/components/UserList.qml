@@ -54,13 +54,11 @@ ListView {
     interactive: count > 1
 
     delegate: UserDelegate {
-        avatarPath: model.icon || ""
-        iconSource: model.iconName || "user-identity"
-        fontSize: view.fontSize
-        needsPassword: model.needsPassword !== undefined ? model.needsPassword : true
-        vtNumber: model.vtNumber
+        avatarPath: model.icon ?? ""
+        iconName: model.iconName ?? ""
+        needsPassword: model.needsPassword ?? true
 
-        name: {
+        displayName: {
             const displayName = model.realName || model.name
 
             if (model.vtNumber === undefined || model.vtNumber < 0) {
@@ -94,7 +92,7 @@ ListView {
         //if we only have one delegate, we don't need to clip the text as it won't be overlapping with anything
         constrainText: view.constrainText
 
-        isCurrent: ListView.isCurrentItem
+        highlighted: ListView.isCurrentItem
 
         onClicked: {
             ListView.view.currentIndex = index;
