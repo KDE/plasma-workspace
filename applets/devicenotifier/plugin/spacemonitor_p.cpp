@@ -14,9 +14,6 @@
 
 #include <KIO/FileSystemFreeSpaceJob>
 
-#include <KLocalizedString>
-#include <KNotification>
-
 #include <QTimer>
 #include <QUrl>
 
@@ -142,23 +139,12 @@ void SpaceMonitor::updateStorageSpace(const QString &udi)
     }
 
     QString path = storageaccess->filePath();
-    QTimer *timer = new QTimer(this);
-    timer->setSingleShot(true);
-    connect(timer, &QTimer::timeout, [path, udi]() {
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: timeout when updating filesystem size for device " << udi << ". Not responding";
-        KNotification::event(KNotification::Error, i18n("Filesystem is not responding"), i18n("Filesystem mounted at '%1' is not responding", path));
-    });
 
     // create job
     KIO::FileSystemFreeSpaceJob *job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(path));
 
-    // delete later timer
-    connect(job, &KJob::result, timer, &QTimer::deleteLater);
-
     // collect and process info
-    connect(job, &KJob::result, this, [this, timer, udi, job]() {
-        timer->stop();
-
+    connect(job, &KJob::result, this, [this, udi, job]() {
         if (!job->error()) {
             KIO::filesize_t size = job->size();
             KIO::filesize_t available = job->availableSize();
@@ -170,9 +156,6 @@ void SpaceMonitor::updateStorageSpace(const QString &udi)
             qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: Failed to get size for : " << udi;
         }
     });
-
-    // start timer: after 15 seconds we will get an error
-    timer->start(std::chrono::seconds(15));
 }
 
 #include "moc_spacemonitor_p.cpp"
