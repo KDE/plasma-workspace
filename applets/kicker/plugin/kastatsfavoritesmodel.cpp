@@ -193,9 +193,11 @@ public:
                 // https://crash-reports.kde.org/organizations/kde/issues/23450/
                 const auto itemEntries = m_itemEntries;
                 for (auto it = itemEntries.cbegin(); it != itemEntries.cend(); it = std::next(it)) {
-                    it.value()->reload();
-                    if (it.value() && !it.value()->isValid()) {
-                        keys << it.key();
+                    if (it.value()) {
+                        it.value()->reload();
+                        if (!it.value()->isValid()) {
+                            keys << it.key();
+                        }
                     }
                 }
                 if (!keys.isEmpty()) {
