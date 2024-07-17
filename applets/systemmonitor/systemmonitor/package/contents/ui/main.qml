@@ -21,12 +21,41 @@ PlasmoidItem {
     id: root
     Plasmoid.backgroundHints: PlasmaCore.Types.DefaultBackground | PlasmaCore.Types.ConfigurableBackground
 
-    switchWidth: Plasmoid.formFactor === PlasmaCore.Types.Planar
-        ? -1
-        : (fullRepresentationItem ? fullRepresentationItem.Layout.minimumWidth : Kirigami.Units.gridUnit * 8)
-    switchHeight: Plasmoid.formFactor === PlasmaCore.Types.Planar
-        ? -1
-        : (fullRepresentationItem ? fullRepresentationItem.Layout.minimumHeight : Kirigami.Units.gridUnit * 12)
+    // Determine the right value to use for representation switching
+    function switchSizeFromSize(formFactor, compactMax, fullMin) {
+        // If we are planar (aka on the desktop), do not do any switching
+        if (Plasmoid.formFactor === PlasmaCore.Types.Planar) {
+            return -1
+        }
+
+        // If we are in a form factor where we can extend freely one way, don't
+        // use that for determining switching.
+        if (Plasmoid.formFactor === formFactor) {
+            // 0 or less is considered as "no switching" so return the smallest
+            // possible still valid value.
+            return 1
+        }
+
+        // Layout.maximumWidth will return Infinity if it isn't set, so handle that.
+        if (!Number.isFinite(compactMax)) {
+            // This is the default maximum size for compact reps, with 1 subtracted
+            // to ensure we switch if the maximum is reached.
+            compactMax = Kirigami.Units.iconSizes.enormous - 1
+        }
+
+        // Layout.minimumWidth will return -1 if it is not set, handle that.
+        if (fullMin <= 0) {
+            fullMin = Kirigami.Units.iconSizes.enormous - 1
+        }
+
+        // Use the larger of the two sizes to ensure we switch when the compact
+        // rep reaches its maximum but we don't try to cram in a full rep that
+        // won't actually fit.
+        return Math.max(compactMax, fullMin)
+    }
+
+    switchWidth: switchSizeFromSize(PlasmaCore.Types.Horizontal, compactRepresentationItem?.Layout.maximumWidth ?? Infinity, fullRepresentationItem?.Layout.minimumWidth ?? -1)
+    switchHeight: switchSizeFromSize(PlasmaCore.Types.Vertical, compactRepresentationItem?.Layout.maximumHeight ?? Infinity, fullRepresentationItem?.Layout.minimumHeight ?? -1)
 
     preferredRepresentation: Plasmoid.formFactor === PlasmaCore.Types.Planar ? fullRepresentation : null
 
