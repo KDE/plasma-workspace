@@ -7,6 +7,7 @@
 import QtQuick 2.2
 import QtQuick.Layouts 1.2
 import QtQuick.Controls 2.12 as QQC2
+import QtQuick.Templates as T
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
 import org.kde.coreaddons 1.0 as KCoreAddons
@@ -17,12 +18,13 @@ import "timer.js" as AutoTriggerTimer
 
 import org.kde.plasma.private.sessions 2.0
 
-Item {
+T.Pane {
     id: root
     Kirigami.Theme.inherit: false
     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
     height: screenGeometry.height
     width: screenGeometry.width
+    font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
 
     signal logoutRequested()
     signal haltRequested()
