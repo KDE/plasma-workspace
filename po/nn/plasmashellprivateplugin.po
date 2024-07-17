@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-05-15 20:50+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -176,12 +176,12 @@ msgstr "Skjermen vert låst etter så mange minutt."
 msgid "New Session"
 msgstr "Ny økt"
 
-#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#: shellprivate/kcategorizeditemsviewmodels.cpp:64
 #, kde-format
 msgid "Filters"
 msgstr "Filter"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
+#: shellprivate/plasmaappletitemmodel.cpp:164
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -192,7 +192,7 @@ msgstr ""
 "kompatibelt med Plasma %1. Ta kontakt med utviklaren av skjerm­elementet for "
 "å skaffa ein oppdatert versjon."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
+#: shellprivate/plasmaappletitemmodel.cpp:168
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -202,7 +202,7 @@ msgstr ""
 "med Plasma %2. Ta kontakt med utviklaren av skjerm­elementet for å skaffa ein "
 "oppdatert versjon."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
+#: shellprivate/plasmaappletitemmodel.cpp:172
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -211,7 +211,7 @@ msgstr ""
 "Dette skjermelementet er laga for Plasma versjon %1 og er ikkje kompatibelt "
 "med Plasma %2. Oppdater Plasma-versjonen din for å ta elementet i bruk."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -221,127 +221,127 @@ msgstr ""
 "med den nyaste versjonen av Plasma. Oppdater Plasma-versjonen din for å ta "
 "elementet i bruk."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:109
+#: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "Tilgjenge"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "Programstartarar"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
+#: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "Astronomi"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "Dato og klokkeslett"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "Utviklingsverktøy"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
 msgstr "Utdanning"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "Vêr og miljø"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
 msgstr "Eksempel"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
 msgstr "Filsystem"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "Spel og moro"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "Bilete"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
 msgstr "Språk"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "Kart"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "Ymse"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "Multimedia"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "Nett-tenester"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "Produktivitet"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
 msgstr "Systeminformasjon"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "Verktøy"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "Vindauge og oppgåver"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "Utklippstavle"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Oppgåver"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:146
 #, kde-format
 msgid "All Widgets"
 msgstr "Alle element"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:150
 #, kde-format
 msgid "Running"
 msgstr "Element som køyrer"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:156
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -350,32 +350,32 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Avinstallerbare element"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:160
 #, kde-format
 msgid "Categories:"
 msgstr "Kategoriar:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:230
+#: shellprivate/widgetexplorer.cpp:230
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Last ned nye skjermelement"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:239
+#: shellprivate/widgetexplorer.cpp:239
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Installer skjermelement frå lokal fil …"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:501
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Vel skjermelement-fil"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:515
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Feil ved installering av pakken %1."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:515
 #, kde-format
 msgid "Installation Failure"
 msgstr "Mislukka installering"

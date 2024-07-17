@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2014-08-11 12:31+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "X-Generator: Lokalize 1.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/DeviceItem.qml:188
+#: package/contents/ui/DeviceItem.qml:118
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -27,7 +27,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 free"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:122
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -39,7 +39,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "An't Togriepen..."
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:125
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -51,143 +51,143 @@ msgctxt ""
 msgid "Removing…"
 msgstr "An't Wegmaken..."
 
-#: package/contents/ui/DeviceItem.qml:198
+#: package/contents/ui/DeviceItem.qml:128
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:229
-#, kde-format
-msgid "Open in File Manager"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:232
-#, kde-format
-msgid "Mount and Open"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:234
-#, kde-format
-msgid "Eject"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:236
-#, kde-format
-msgid "Safely remove"
-msgstr ""
-
-#: package/contents/ui/DeviceItem.qml:278
-#, kde-format
-msgid "Mount"
-msgstr ""
-
-#: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/FullRepresentation.qml:45
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Remove All"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:44
+#: package/contents/ui/FullRepresentation.qml:46
 #, fuzzy, kde-format
 #| msgid "Click to safely remove this device."
 msgid "Click to safely remove all devices"
 msgstr "Klick hier, wenn Du disse Reedschap seker afkoppeln wullt."
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:158
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "No removable devices attached"
 msgstr "Keen Wesselreedschappen"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:158
 #, fuzzy, kde-format
 #| msgid "No devices available"
 msgid "No disks available"
 msgstr "Keen Reedschappen verföögbor"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:72
 #, fuzzy, kde-format
 #| msgid "Most recent device"
 msgid "Most Recent Device"
 msgstr "Tolest bruukt Reedschap"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "Keen Reedschap to finnen"
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:108
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Keen Wesselreedschappen"
 
-#: package/contents/ui/main.qml:233
+#: package/contents/ui/main.qml:134
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Bloots Wesselreedschappen"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:149
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Keen Wesselreedschappen"
 
-#: package/contents/ui/main.qml:263
+#: package/contents/ui/main.qml:164
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "All Reedschappen"
 
-#: package/contents/ui/main.qml:280
+#: package/contents/ui/main.qml:181
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"
 msgstr "Keen Reedschap tokoppelt"
 
-#: plugin/ksolidnotify.cpp:192
+#: plugin/actions/mountaction.cpp:88
+#, kde-format
+msgid "Mount"
+msgstr ""
+
+#: plugin/actions/mountandopenaction.cpp:152
+#, kde-format
+msgid "Open in File Manager"
+msgstr ""
+
+#: plugin/actions/mountandopenaction.cpp:155
+#, kde-format
+msgid "Mount and Open"
+msgstr ""
+
+#: plugin/actions/mountandopenaction.cpp:157
+#, kde-format
+msgid "Eject"
+msgstr ""
+
+#: plugin/actions/mountandopenaction.cpp:159
+#, kde-format
+msgid "Safely remove"
+msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:193
+#: plugin/deviceerrormonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:197
+#: plugin/deviceerrormonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/deviceerrormonitor_p.cpp:192
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "You are not authorized to mount this device."
 msgstr "Klick hier, wenn Du disse Reedschap inhangen wullt."
 
-#: plugin/ksolidnotify.cpp:207
+#: plugin/deviceerrormonitor_p.cpp:195
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Opstunns lett sik disse Reedschap seker afkoppeln."
 
-#: plugin/ksolidnotify.cpp:210
+#: plugin/deviceerrormonitor_p.cpp:198
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
 msgstr "Klick hier, wenn Du disse Schiev rutfohren wullt."
 
-#: plugin/ksolidnotify.cpp:217
+#: plugin/deviceerrormonitor_p.cpp:205
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "Tolest tokoppelt Reedschap: %1"
 
-#: plugin/ksolidnotify.cpp:248
+#: plugin/deviceerrormonitor_p.cpp:229
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -197,7 +197,7 @@ msgstr ""
 "De Schiev lett sik nich rutfohren.\n"
 "En Programm hett dor noch een oder mehr Dateien op apen."
 
-#: plugin/ksolidnotify.cpp:250
+#: plugin/deviceerrormonitor_p.cpp:231
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount the device.\n"
@@ -212,30 +212,40 @@ msgstr[1] ""
 "Reedschap lett sik nich afhangen.\n"
 "En Programm hölltt dor noch een oder mehr Dateien op opmaakt."
 
-#: plugin/ksolidnotify.cpp:253
+#: plugin/deviceerrormonitor_p.cpp:234
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/deviceerrormonitor_p.cpp:254
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "Tolest tokoppelt Reedschap: %1"
 
-#: plugin/ksolidnotify.cpp:274
+#: plugin/deviceerrormonitor_p.cpp:257
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Tolest tokoppelt Reedschap: %1"
 
-#: plugin/ksolidnotify.cpp:277
+#: plugin/deviceerrormonitor_p.cpp:260
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "Klick hier, wenn Du disse Schiev rutfohren wullt."
+
+#: plugin/spacemonitor_p.cpp:137
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr ""
+
+#: plugin/spacemonitor_p.cpp:137
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr ""
 
 #~ msgid "General"
 #~ msgstr "Allmeen"

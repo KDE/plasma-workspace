@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2008-11-13 00:55+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,13 +17,13 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: package/contents/ui/DeviceItem.qml:188
+#: package/contents/ui/DeviceItem.qml:118
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 swobodne z %2"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:122
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -31,7 +31,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Wočinjam..."
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:125
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -39,116 +39,116 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Wotwjazuju..."
 
-#: package/contents/ui/DeviceItem.qml:198
+#: package/contents/ui/DeviceItem.qml:128
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:229
-#, kde-format
-msgid "Open in File Manager"
-msgstr "Z datajowym rjadowakom wočinić"
-
-#: package/contents/ui/DeviceItem.qml:232
-#, kde-format
-msgid "Mount and Open"
-msgstr "Zapójsnyć a wočinić"
-
-#: package/contents/ui/DeviceItem.qml:234
-#, kde-format
-msgid "Eject"
-msgstr "Wućisnyć"
-
-#: package/contents/ui/DeviceItem.qml:236
-#, kde-format
-msgid "Safely remove"
-msgstr "Kedźbliwje wotpójsnyć"
-
-#: package/contents/ui/DeviceItem.qml:278
-#, kde-format
-msgid "Mount"
-msgstr "Zapójsnyć"
-
-#: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/FullRepresentation.qml:45
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Remove All"
 msgstr "Wšě zwotpójšować"
 
-#: package/contents/ui/FullRepresentation.qml:44
+#: package/contents/ui/FullRepresentation.qml:46
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Klikńće, zo byšće wšitke graty kedźbliwje wotwjazali"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Žane wotwjazujomne graty přizamknjene"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "No disks available"
 msgstr "Žane tačele přistupne"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Posledni přizamknjeny grat"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "Žane graty přistupne"
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:108
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Wotwjazujomne graty připrawić..."
 
-#: package/contents/ui/main.qml:233
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Removable Devices"
 msgstr "Wotwjazujomne graty (USB)"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Njewotwjazujomne graty"
 
-#: package/contents/ui/main.qml:263
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "All Devices"
 msgstr "Wšitke graty"
 
-#: package/contents/ui/main.qml:280
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Pokaž wuskakotawku (popup), hdyž so nowy grat přityknje"
 
-#: plugin/ksolidnotify.cpp:192
+#: plugin/actions/mountaction.cpp:88
+#, kde-format
+msgid "Mount"
+msgstr "Zapójsnyć"
+
+#: plugin/actions/mountandopenaction.cpp:152
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Z datajowym rjadowakom wočinić"
+
+#: plugin/actions/mountandopenaction.cpp:155
+#, kde-format
+msgid "Mount and Open"
+msgstr "Zapójsnyć a wočinić"
+
+#: plugin/actions/mountandopenaction.cpp:157
+#, kde-format
+msgid "Eject"
+msgstr "Wućisnyć"
+
+#: plugin/actions/mountandopenaction.cpp:159
+#, kde-format
+msgid "Safely remove"
+msgstr "Kedźbliwje wotpójsnyć"
+
+#: plugin/deviceerrormonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:193
+#: plugin/deviceerrormonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:197
+#: plugin/deviceerrormonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/deviceerrormonitor_p.cpp:192
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to mount this device."
 msgstr "%1 akcija za tutón grat"
 
-#: plugin/ksolidnotify.cpp:207
+#: plugin/deviceerrormonitor_p.cpp:195
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
@@ -156,20 +156,20 @@ msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "%1 akcija za tutón grat"
 
-#: plugin/ksolidnotify.cpp:210
+#: plugin/deviceerrormonitor_p.cpp:198
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to eject this disc."
 msgstr "%1 akcija za tutón grat"
 
-#: plugin/ksolidnotify.cpp:217
+#: plugin/deviceerrormonitor_p.cpp:205
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "Posledni přizamknjeny grat: %1"
 
-#: plugin/ksolidnotify.cpp:248
+#: plugin/deviceerrormonitor_p.cpp:229
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -179,7 +179,7 @@ msgstr ""
 "Njemóžu CD/DVD wućisnyć.\n"
 "Někajka aplikacija hišće jednu abo wjace datajow na tutym disku wužiwa."
 
-#: plugin/ksolidnotify.cpp:250
+#: plugin/deviceerrormonitor_p.cpp:231
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot unmount the device.\n"
@@ -200,31 +200,41 @@ msgstr[3] ""
 "Njemóžu grat wotmontować.\n"
 "Někajka aplikacija hišće jednu abo wjace datajow na tutym graće wužiwa."
 
-#: plugin/ksolidnotify.cpp:253
+#: plugin/deviceerrormonitor_p.cpp:234
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/deviceerrormonitor_p.cpp:254
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "Posledni přizamknjeny grat: %1"
 
-#: plugin/ksolidnotify.cpp:274
+#: plugin/deviceerrormonitor_p.cpp:257
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Posledni přizamknjeny grat: %1"
 
-#: plugin/ksolidnotify.cpp:277
+#: plugin/deviceerrormonitor_p.cpp:260
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "Could not eject this disc."
 msgstr "%1 akcija za tutón grat"
+
+#: plugin/spacemonitor_p.cpp:137
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr ""
+
+#: plugin/spacemonitor_p.cpp:137
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr ""
 
 #, fuzzy
 #~| msgid "1 action for this device"

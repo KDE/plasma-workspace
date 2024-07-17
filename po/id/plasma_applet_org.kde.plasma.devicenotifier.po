@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2022-08-26 23:44+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: package/contents/ui/DeviceItem.qml:188
+#: package/contents/ui/DeviceItem.qml:118
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 bebas dari %2"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:122
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -33,7 +33,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Mengakses..."
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:125
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -41,136 +41,136 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Melepas..."
 
-#: package/contents/ui/DeviceItem.qml:198
+#: package/contents/ui/DeviceItem.qml:128
 #, fuzzy, kde-format
 #| msgid "Don't unplug yet! Files are still being transferred..."
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Jangan dicabut dulu! File-file sedang ditranster..."
 
-#: package/contents/ui/DeviceItem.qml:229
-#, kde-format
-msgid "Open in File Manager"
-msgstr "Buka di File Manager"
-
-#: package/contents/ui/DeviceItem.qml:232
-#, kde-format
-msgid "Mount and Open"
-msgstr "Kaitkan dan Buka"
-
-#: package/contents/ui/DeviceItem.qml:234
-#, kde-format
-msgid "Eject"
-msgstr "Keluarkan"
-
-#: package/contents/ui/DeviceItem.qml:236
-#, kde-format
-msgid "Safely remove"
-msgstr "Lepas dengan aman"
-
-#: package/contents/ui/DeviceItem.qml:278
-#, kde-format
-msgid "Mount"
-msgstr "Kaitkan"
-
 # Melepas Perangkat
-#: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/FullRepresentation.qml:45
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Remove All"
 msgstr "Lepas Semua"
 
-#: package/contents/ui/FullRepresentation.qml:44
+#: package/contents/ui/FullRepresentation.qml:46
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "Klik untuk secara aman melepas semua peranti"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Tidak ada peranti bisa-dilepas yang tercantol"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "No disks available"
 msgstr "Tidak ada disk yang tersedia"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "Sebagian Besar Peranti Belakangan Ini"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "Tidak ada Peranti Tersedia"
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:108
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Konfigurasi Peranti Bisa-dilepas..."
 
-#: package/contents/ui/main.qml:233
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Removable Devices"
 msgstr "Peranti Bisa-dilepas"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Peranti Non Bisa-dilepas"
 
-#: package/contents/ui/main.qml:263
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "All Devices"
 msgstr "Semua Peranti"
 
-#: package/contents/ui/main.qml:280
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Tampilkan sembulan ketika peranti baru sudah tercolok"
 
-#: plugin/ksolidnotify.cpp:192
+#: plugin/actions/mountaction.cpp:88
+#, kde-format
+msgid "Mount"
+msgstr "Kaitkan"
+
+#: plugin/actions/mountandopenaction.cpp:152
+#, kde-format
+msgid "Open in File Manager"
+msgstr "Buka di File Manager"
+
+#: plugin/actions/mountandopenaction.cpp:155
+#, kde-format
+msgid "Mount and Open"
+msgstr "Kaitkan dan Buka"
+
+#: plugin/actions/mountandopenaction.cpp:157
+#, kde-format
+msgid "Eject"
+msgstr "Keluarkan"
+
+#: plugin/actions/mountandopenaction.cpp:159
+#, kde-format
+msgid "Safely remove"
+msgstr "Lepas dengan aman"
+
+#: plugin/deviceerrormonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:193
+#: plugin/deviceerrormonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:197
+#: plugin/deviceerrormonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/deviceerrormonitor_p.cpp:192
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "You are not authorized to mount this device."
 msgstr "Klik untuk mengaitkan divais ini."
 
-#: plugin/ksolidnotify.cpp:207
+#: plugin/deviceerrormonitor_p.cpp:195
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "Saat ini telah aman untuk melepas perangkat ini."
 
-#: plugin/ksolidnotify.cpp:210
+#: plugin/deviceerrormonitor_p.cpp:198
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
 msgstr "Klik untuk mengeluarkan cakram ini."
 
-#: plugin/ksolidnotify.cpp:217
+#: plugin/deviceerrormonitor_p.cpp:205
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "Divais yang terakhir kali ditancapkan: %1"
 
-#: plugin/ksolidnotify.cpp:248
+#: plugin/deviceerrormonitor_p.cpp:229
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -180,7 +180,7 @@ msgstr ""
 "Tak dapat mengeluarkan cakram.\n"
 "Satu atau beberapa berkas di cakram ini dibuka dengan aplikasi."
 
-#: plugin/ksolidnotify.cpp:250
+#: plugin/deviceerrormonitor_p.cpp:231
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount the device.\n"
@@ -195,30 +195,40 @@ msgstr[1] ""
 "Tak dapat melepas kaitan divais.\n"
 "Satu atau beberapa berkas di divais ini dibuka dengan aplikasi."
 
-#: plugin/ksolidnotify.cpp:253
+#: plugin/deviceerrormonitor_p.cpp:234
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/deviceerrormonitor_p.cpp:254
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "Divais yang terakhir kali ditancapkan: %1"
 
-#: plugin/ksolidnotify.cpp:274
+#: plugin/deviceerrormonitor_p.cpp:257
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Divais yang terakhir kali ditancapkan: %1"
 
-#: plugin/ksolidnotify.cpp:277
+#: plugin/deviceerrormonitor_p.cpp:260
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "Klik untuk mengeluarkan cakram ini."
+
+#: plugin/spacemonitor_p.cpp:137
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr ""
+
+#: plugin/spacemonitor_p.cpp:137
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr ""
 
 #~ msgid "Show:"
 #~ msgstr "Tampilkan:"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-07-07 10:32+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -71,7 +71,7 @@ msgstr "S'ha desconnectat el dispositiu."
 msgid "An unknown error has occurred."
 msgstr "S'ha produït un error desconegut."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:171
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Change Password"
 msgstr "Canvi de contrasenya"
@@ -81,17 +81,17 @@ msgstr "Canvi de contrasenya"
 msgid "Set Password"
 msgstr "Estableix la contrasenya"
 
-#: src/ui/ChangePassword.qml:55
+#: src/ui/ChangePassword.qml:53
 #, kde-format
 msgid "Password"
 msgstr "Contrasenya"
 
-#: src/ui/ChangePassword.qml:70
+#: src/ui/ChangePassword.qml:68
 #, kde-format
 msgid "Confirm password"
 msgstr "Confirma la contrasenya"
 
-#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "Cal que les contrasenyes coincideixin"
@@ -156,17 +156,17 @@ msgstr "Nom:"
 msgid "Username:"
 msgstr "Nom d'usuari:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:151
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Standard"
 msgstr "Estàndard"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:152
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Administrator"
 msgstr "Administrador"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:155
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Tipus de compte:"
@@ -558,32 +558,40 @@ msgstr "Icona de substitució de l'avatar d'usuari"
 msgid "Change avatar"
 msgstr "Canvia l'avatar"
 
-#: src/ui/UserDetailsPage.qml:165
+#: src/ui/UserDetailsPage.qml:169
+#, kde-format
+msgid ""
+"Cannot change the account type to Standard unless there is at least one "
+"other Administrator account on the system. Without one, authentication would "
+"become impossible or require the insecure use of the root password."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:177
 #, kde-format
 msgid "Email address:"
 msgstr "Adreça de correu electrònic:"
 
-#: src/ui/UserDetailsPage.qml:194
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Delete files"
 msgstr "Suprimeix els fitxers"
 
-#: src/ui/UserDetailsPage.qml:201
+#: src/ui/UserDetailsPage.qml:213
 #, kde-format
 msgid "Keep files"
 msgstr "Conserva els fitxers"
 
-#: src/ui/UserDetailsPage.qml:208
+#: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Delete User…"
 msgstr "Suprimeix l'usuari…"
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:232
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Configura l'autenticació d'empremtes dactilars…"
 
-#: src/ui/UserDetailsPage.qml:252
+#: src/ui/UserDetailsPage.qml:264
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -621,12 +629,12 @@ msgstr ""
 "Ha fallat en redimensionar la imatge: ha fallat en escriure al fitxer "
 "temporal"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Your Account"
 msgstr "El vostre compte"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"

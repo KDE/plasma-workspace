@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -111,9 +111,11 @@ msgid "Secondary toolbar label"
 msgstr "副工具栏项文字"
 
 #: ui/EffectSettingsPopup.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure Icon and Toolbars"
 msgctxt "@title:window"
-msgid "Configure Icon and Toolbars"
+msgid "Configure Icons and Toolbars"
 msgstr "配置图标和工具栏"
 
 #: ui/EffectSettingsPopup.qml:36

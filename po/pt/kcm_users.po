@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2023-01-11 09:35+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "O dispositivo foi desligado."
 msgid "An unknown error has occurred."
 msgstr "Ocorreu um erro desconhecido."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:171
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Change Password"
 msgstr "Mudar a Senha"
@@ -78,17 +78,17 @@ msgstr "Mudar a Senha"
 msgid "Set Password"
 msgstr "Definir a Senha"
 
-#: src/ui/ChangePassword.qml:55
+#: src/ui/ChangePassword.qml:53
 #, kde-format
 msgid "Password"
 msgstr "Senha"
 
-#: src/ui/ChangePassword.qml:70
+#: src/ui/ChangePassword.qml:68
 #, kde-format
 msgid "Confirm password"
 msgstr "Confirmar a senha"
 
-#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "As senhas devem ser iguais"
@@ -153,17 +153,17 @@ msgstr "Nome:"
 msgid "Username:"
 msgstr "Utilizador:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:151
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Standard"
 msgstr "Normal"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:152
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Administrator"
 msgstr "Administrador"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:155
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Tipo de conta:"
@@ -563,32 +563,40 @@ msgstr ""
 msgid "Change avatar"
 msgstr "Mudar o avatar"
 
-#: src/ui/UserDetailsPage.qml:165
+#: src/ui/UserDetailsPage.qml:169
+#, kde-format
+msgid ""
+"Cannot change the account type to Standard unless there is at least one "
+"other Administrator account on the system. Without one, authentication would "
+"become impossible or require the insecure use of the root password."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:177
 #, kde-format
 msgid "Email address:"
 msgstr "Endereço de e-mail:"
 
-#: src/ui/UserDetailsPage.qml:194
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Delete files"
 msgstr "Apagar os ficheiros"
 
-#: src/ui/UserDetailsPage.qml:201
+#: src/ui/UserDetailsPage.qml:213
 #, kde-format
 msgid "Keep files"
 msgstr "Manter os ficheiros"
 
-#: src/ui/UserDetailsPage.qml:208
+#: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Delete User…"
 msgstr "Apagar o Utilizador…"
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:232
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Configurar a Autenticação por Impressão Digital…"
 
-#: src/ui/UserDetailsPage.qml:252
+#: src/ui/UserDetailsPage.qml:264
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -626,12 +634,12 @@ msgstr ""
 "Não foi possível dimensionar a imagem: a gravação no ficheiro temporário "
 "falhou"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Your Account"
 msgstr "A Sua Conta"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Other Accounts"
 msgstr "Outras Contas"

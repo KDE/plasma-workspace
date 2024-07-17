@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 14:13+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "Bu cihazla bağlantı kəsildi."
 msgid "An unknown error has occurred."
 msgstr "Bilinməyən xəta baş verdi."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:171
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Change Password"
 msgstr "Şifrəni dəyiş"
@@ -76,17 +76,17 @@ msgstr "Şifrəni dəyiş"
 msgid "Set Password"
 msgstr "Şifrə yaratmaq"
 
-#: src/ui/ChangePassword.qml:55
+#: src/ui/ChangePassword.qml:53
 #, kde-format
 msgid "Password"
 msgstr "Şifrə"
 
-#: src/ui/ChangePassword.qml:70
+#: src/ui/ChangePassword.qml:68
 #, kde-format
 msgid "Confirm password"
 msgstr "Şifrəni təsdiq etmək"
 
-#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "Şifrələr eyni olmalıdır"
@@ -151,17 +151,17 @@ msgstr "Ad:"
 msgid "Username:"
 msgstr "İstifadəçi adı:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:151
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:152
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Administrator"
 msgstr "Administrator"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:155
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Hesab növü:"
@@ -537,32 +537,40 @@ msgstr "İstifadəçi avatarı əvəzetmə nişanı"
 msgid "Change avatar"
 msgstr "Avatarı dəyişmək"
 
-#: src/ui/UserDetailsPage.qml:165
+#: src/ui/UserDetailsPage.qml:169
+#, kde-format
+msgid ""
+"Cannot change the account type to Standard unless there is at least one "
+"other Administrator account on the system. Without one, authentication would "
+"become impossible or require the insecure use of the root password."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:177
 #, kde-format
 msgid "Email address:"
 msgstr "E-poçt ünvanı:"
 
-#: src/ui/UserDetailsPage.qml:194
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Delete files"
 msgstr "Faylları Silmək"
 
-#: src/ui/UserDetailsPage.qml:201
+#: src/ui/UserDetailsPage.qml:213
 #, kde-format
 msgid "Keep files"
 msgstr "Faylları saxlamaq"
 
-#: src/ui/UserDetailsPage.qml:208
+#: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Delete User…"
 msgstr "İstifadəçini silmək..."
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:232
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Barmaq izi ilə kimlik doğrulamasını tənzimləyin..."
 
-#: src/ui/UserDetailsPage.qml:252
+#: src/ui/UserDetailsPage.qml:264
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -595,12 +603,12 @@ msgstr "Şəklin ölçüsü dəyişdirilə bilmədi: müvəqqəti fayl açıla b
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Şəklin ölçüsü dəyişdirilə bilmədi: müvəqqəti fayl yazıla bilmədi"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Your Account"
 msgstr "Hesabınız"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Other Accounts"
 msgstr "Digər hesablar"

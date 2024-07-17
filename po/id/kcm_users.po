@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2023-12-03 13:47+0700\n"
 "Last-Translator: Linerly <linerly@linerly.xyz>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -68,7 +68,7 @@ msgstr "Perangkat terputus."
 msgid "An unknown error has occurred."
 msgstr "Sebuah galat tak diketahui telah terjadi."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:171
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Change Password"
 msgstr "Ubah Sandi"
@@ -78,17 +78,17 @@ msgstr "Ubah Sandi"
 msgid "Set Password"
 msgstr "Atur Sandi"
 
-#: src/ui/ChangePassword.qml:55
+#: src/ui/ChangePassword.qml:53
 #, kde-format
 msgid "Password"
 msgstr "Sandi"
 
-#: src/ui/ChangePassword.qml:70
+#: src/ui/ChangePassword.qml:68
 #, kde-format
 msgid "Confirm password"
 msgstr "Konfirmasi sandi"
 
-#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "Sandi harus cocok"
@@ -153,17 +153,17 @@ msgstr "Nama:"
 msgid "Username:"
 msgstr "Nama pengguna:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:151
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Standard"
 msgstr "Standar"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:152
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Administrator"
 msgstr "Administrator"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:155
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Tipe akun:"
@@ -550,32 +550,40 @@ msgstr "Ikon penampung avatar pengguna"
 msgid "Change avatar"
 msgstr "Ubah avatar"
 
-#: src/ui/UserDetailsPage.qml:165
+#: src/ui/UserDetailsPage.qml:169
+#, kde-format
+msgid ""
+"Cannot change the account type to Standard unless there is at least one "
+"other Administrator account on the system. Without one, authentication would "
+"become impossible or require the insecure use of the root password."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:177
 #, kde-format
 msgid "Email address:"
 msgstr "Alamat surel:"
 
-#: src/ui/UserDetailsPage.qml:194
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Delete files"
 msgstr "Hapus file"
 
-#: src/ui/UserDetailsPage.qml:201
+#: src/ui/UserDetailsPage.qml:213
 #, kde-format
 msgid "Keep files"
 msgstr "Jaga file-file"
 
-#: src/ui/UserDetailsPage.qml:208
+#: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Delete User…"
 msgstr "Hapus Pengguna..."
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:232
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Konfigurasikan Autentikasi Sidik Jari..."
 
-#: src/ui/UserDetailsPage.qml:252
+#: src/ui/UserDetailsPage.qml:264
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -609,12 +617,12 @@ msgstr "Gagal mengubah ukuran citra: pembukaan file temp gagal"
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Gagal mengubah ukuran citra: penulisan file temp gagal"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Your Account"
 msgstr "Akun Anda"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Other Accounts"
 msgstr "Akun Lain"

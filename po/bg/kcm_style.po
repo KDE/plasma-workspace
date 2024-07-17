@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-07-05 15:45+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -113,9 +113,11 @@ msgid "Secondary toolbar label"
 msgstr "Етикет на вторичната лента с инструменти"
 
 #: ui/EffectSettingsPopup.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure Icon and Toolbars"
 msgctxt "@title:window"
-msgid "Configure Icon and Toolbars"
+msgid "Configure Icons and Toolbars"
 msgstr "Конфигуриране на икони и ленти с инструменти"
 
 #: ui/EffectSettingsPopup.qml:36

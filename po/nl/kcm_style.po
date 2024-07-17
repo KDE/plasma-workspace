@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-07-05 11:39+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -112,9 +112,11 @@ msgid "Secondary toolbar label"
 msgstr "Label van secondaire werkbalk"
 
 #: ui/EffectSettingsPopup.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure Icon and Toolbars"
 msgctxt "@title:window"
-msgid "Configure Icon and Toolbars"
+msgid "Configure Icons and Toolbars"
 msgstr "Pictogrammen en werkbalken configureren"
 
 #: ui/EffectSettingsPopup.qml:36

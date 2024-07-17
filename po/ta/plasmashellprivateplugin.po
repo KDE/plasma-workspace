@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-05-12 11:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -175,12 +175,12 @@ msgstr "எத்தனை நிமிடங்களுக்குப் ப�
 msgid "New Session"
 msgstr "புதிய அமர்வு"
 
-#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#: shellprivate/kcategorizeditemsviewmodels.cpp:64
 #, kde-format
 msgid "Filters"
 msgstr "வடிகட்டிகள்"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
+#: shellprivate/plasmaappletitemmodel.cpp:164
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -190,7 +190,7 @@ msgstr ""
 "பிளாஸ்மாவின் கண்டறிய முடியாத பழைய பதிப்பிற்கு இந்த பிளாஸ்மாய்ட் எழுதப்பட்டுள்ளதால் %1-வது "
 "பதிப்பில் இயங்காது. புதுப்பிக்கப்பட்ட பதிப்பை இதை இயற்றியவரிடம் கோரவும்."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
+#: shellprivate/plasmaappletitemmodel.cpp:168
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -199,7 +199,7 @@ msgstr ""
 "பிளாஸ்மாவின் %1-வது பதிப்பிற்கு இந்த பிளாஸ்மாய்ட் எழுதப்பட்டுள்ளதால் தற்போதைய %2-வது "
 "பதிப்பில் இயங்காது. புதுப்பிக்கப்பட்ட பதிப்பை இதை இயற்றியவரிடம் கோரவும்."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
+#: shellprivate/plasmaappletitemmodel.cpp:172
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -208,7 +208,7 @@ msgstr ""
 "பிளாஸ்மாவின் %1-வது பதிப்பிற்கு இந்த பிளாஸ்மாய்ட் எழுதப்பட்டுள்ளதால் தற்போதைய %2-வது "
 "பதிப்பில் இயங்காது. இதைப் பயன்படுத்த பிளாஸ்மாவைப் புதுப்பிக்கவும்."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -217,127 +217,127 @@ msgstr ""
 "பிளாஸ்மாவின் %1-வது பதிப்பிற்கு இந்த பிளாஸ்மாய்ட் எழுதப்பட்டுள்ளதால் மிகப்புதிய பதிப்பில் "
 "இயங்காது. இதைப் பயன்படுத்த பிளாஸ்மாவைப் புதுப்பிக்கவும்."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:109
+#: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "அணுகல்தன்மை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "செயலி ஏவிகள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
+#: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "வானியல்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "தேதி மற்றும் நேரம்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "உருவாக்க நிரல்கள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
 msgstr "கல்வி"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "சுற்றுச்சூழல் மற்றும் வானிலை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
 msgstr "உதாரணங்கள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
 msgstr "கோப்பு முறைமை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "விளையாட்டுகள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "வரைகலை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
 msgstr "மொழியில்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "நிலப்படவியல்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "மற்றவை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "பல்லூடகம்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "இணைய சேவைகள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "வேலைக்கானவை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
 msgstr "கணினி விவரங்கள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "பயனுள்ளவை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "சாளரங்கள் மற்றும் பணிகள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "பிடிப்புப்பலகை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "பணிகள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:146
 #, kde-format
 msgid "All Widgets"
 msgstr "அனைத்து பிளாஸ்மாய்டுகள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:150
 #, kde-format
 msgid "Running"
 msgstr "இயங்குகிறவை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:156
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -346,32 +346,32 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "நிறுவல்நீக்கக்கூடியவை"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:160
 #, kde-format
 msgid "Categories:"
 msgstr "வகைகள்:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:230
+#: shellprivate/widgetexplorer.cpp:230
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "பிளாஸ்மா பிளாஸ்மாய்டுகளை பெறு"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:239
+#: shellprivate/widgetexplorer.cpp:239
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "பிளாஸ்மாய்டை உள்ளமை கோப்பிலிருந்து நிறுவு…"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:501
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "பிளாஸ்மாய்ட் கோப்பை தேர்ந்தெடுங்கள்"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:515
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "%1 என்ற தொகுப்பை நிறுவுவது தோல்வியடைந்த‍து."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:515
 #, kde-format
 msgid "Installation Failure"
 msgstr "நிறுவல் தோல்வியடைந்த‍து"

@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-06-27 20:20+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -193,12 +193,12 @@ msgstr "Экран будет блокироваться спустя указа
 msgid "New Session"
 msgstr "Начать новый сеанс"
 
-#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#: shellprivate/kcategorizeditemsviewmodels.cpp:64
 #, kde-format
 msgid "Filters"
 msgstr "Фильтры"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
+#: shellprivate/plasmaappletitemmodel.cpp:164
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -209,7 +209,7 @@ msgstr ""
 "Plasma %1. Напомните автору виджета о необходимости подготовить обновлённую "
 "версию виджета."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
+#: shellprivate/plasmaappletitemmodel.cpp:168
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -219,7 +219,7 @@ msgstr ""
 "%2. Напомните автору виджета о необходимости подготовить обновлённую версию "
 "виджета."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
+#: shellprivate/plasmaappletitemmodel.cpp:172
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -228,7 +228,7 @@ msgstr ""
 "Этот виджет предназначен для Plasma версии %1 и не может работать в Plasma "
 "%2. Обновите используемую версию Plasma для использования этого виджета."
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -238,127 +238,127 @@ msgstr ""
 "актуальной версии Plasma.Обновите используемую версию Plasma для "
 "использования этого виджета."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:109
+#: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "Специальные возможности"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "Запуск приложений"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
+#: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "Астрономия"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "Дата и время"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "Средства разработки"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
 msgstr "Образование"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "Погода"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
 msgstr "Примеры"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
 msgstr "Файловая система"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "Игры и развлечения"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "Графика"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
 msgstr "Язык"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "Картография"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "Прочее"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "Мультимедиа"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "Интернет-службы"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "Офис"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
 msgstr "Сведения о системе"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "Служебные"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "Окна и задачи"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "Буфер обмена"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Задачи"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:146
 #, kde-format
 msgid "All Widgets"
 msgstr "Все виджеты"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:150
 #, kde-format
 msgid "Running"
 msgstr "Запущенные"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:156
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -367,32 +367,32 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Возможно удалить"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:160
 #, kde-format
 msgid "Categories:"
 msgstr "Категории:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:230
+#: shellprivate/widgetexplorer.cpp:230
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Загрузить виджеты Plasma..."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:239
+#: shellprivate/widgetexplorer.cpp:239
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Установить виджет из файла..."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:501
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Выбор файла виджета Plasma"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:515
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Не удалось установить пакет %1."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:515
 #, kde-format
 msgid "Installation Failure"
 msgstr "Ошибка установки"

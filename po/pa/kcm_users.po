@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-07 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-01-19 17:45-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -64,7 +64,7 @@ msgstr "ਡਿਵਾਈਸ ਡਿਸ-ਕਨੈਕਟ ਸੀ।"
 msgid "An unknown error has occurred."
 msgstr "ਅਣਪਛਾਤੀ ਗਲਤੀ ਆਈ ਹੈ।"
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:171
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Change Password"
 msgstr "ਪਾਸਵਰਡ ਬਦਲੋ"
@@ -74,17 +74,17 @@ msgstr "ਪਾਸਵਰਡ ਬਦਲੋ"
 msgid "Set Password"
 msgstr "ਪਾਸਵਰਡ ਸੈੱਟ ਕਰੋ"
 
-#: src/ui/ChangePassword.qml:55
+#: src/ui/ChangePassword.qml:53
 #, kde-format
 msgid "Password"
 msgstr "ਪਾਸਵਰਡ"
 
-#: src/ui/ChangePassword.qml:70
+#: src/ui/ChangePassword.qml:68
 #, kde-format
 msgid "Confirm password"
 msgstr "ਪਾਸਵਰਡ ਤਸਦੀਕ ਕਰੋ"
 
-#: src/ui/ChangePassword.qml:89 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:68
 #, kde-format
 msgid "Passwords must match"
 msgstr "ਪਾਸਵਰਡ ਮਿਲਦੇ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ"
@@ -148,17 +148,17 @@ msgstr "ਨਾਂ:"
 msgid "Username:"
 msgstr "ਵਰਤੋਂਕਾਰ-ਨਾਂ:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:151
+#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Standard"
 msgstr "ਸਟੈਂਡਰਡ"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:152
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Administrator"
 msgstr "ਪਰਸ਼ਾਸ਼ਕ"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:155
+#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "ਖਾਤੇ ਦੀ ਕਿਸਮ:"
@@ -520,32 +520,40 @@ msgstr "ਵਰਤੋਂਕਾਰ ਅਵਤਾਰ ਥਾਂ ਆਈਕਾਨ"
 msgid "Change avatar"
 msgstr "ਅਵਤਾਰ ਬਦਲੋ"
 
-#: src/ui/UserDetailsPage.qml:165
+#: src/ui/UserDetailsPage.qml:169
+#, kde-format
+msgid ""
+"Cannot change the account type to Standard unless there is at least one "
+"other Administrator account on the system. Without one, authentication would "
+"become impossible or require the insecure use of the root password."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:177
 #, kde-format
 msgid "Email address:"
 msgstr "ਈਮੇਲ ਐਡਰੈਸ:"
 
-#: src/ui/UserDetailsPage.qml:194
+#: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Delete files"
 msgstr "ਫ਼ਾਇਲਾਂ ਨੂੰ ਹਟਾਓ"
 
-#: src/ui/UserDetailsPage.qml:201
+#: src/ui/UserDetailsPage.qml:213
 #, kde-format
 msgid "Keep files"
 msgstr "ਫਾਇਲਾਂ ਨੂੰ ਰੱਖੋ"
 
-#: src/ui/UserDetailsPage.qml:208
+#: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Delete User…"
 msgstr "…ਵਰਤੋਂਕਾਰ ਨੂੰ ਹਟਾਓ"
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:232
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "…ਫਿੰਗਰ-ਪਰਿੰਟ ਪਰਮਾਣਕਿਤਾ ਦੀ ਸੰਰਚਨਾ"
 
-#: src/ui/UserDetailsPage.qml:252
+#: src/ui/UserDetailsPage.qml:264
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -578,12 +586,12 @@ msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ:
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਲਿਖਣ ਲਈ ਫੇਲ੍ਹ"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Your Account"
 msgstr "ਤੁਹਾਡਾ ਖਾਤਾ"
 
-#: src/usermodel.cpp:146
+#: src/usermodel.cpp:165
 #, kde-format
 msgid "Other Accounts"
 msgstr "ਹੋਰ ਖਾਤੇ"

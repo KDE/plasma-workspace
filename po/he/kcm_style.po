@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-07-05 08:00+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -123,9 +123,11 @@ msgid "Secondary toolbar label"
 msgstr "תווית סרגל כלים משני"
 
 #: ui/EffectSettingsPopup.qml:19
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure Icon and Toolbars"
 msgctxt "@title:window"
-msgid "Configure Icon and Toolbars"
+msgid "Configure Icons and Toolbars"
 msgstr "הגדרת סמל וסרגלי כלים"
 
 #: ui/EffectSettingsPopup.qml:36

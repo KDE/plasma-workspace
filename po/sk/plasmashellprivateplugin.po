@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2023-11-11 14:56+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -176,12 +176,12 @@ msgstr "Nastaví počet minút, po uplynutí ktorých sa obrazovka zamkne."
 msgid "New Session"
 msgstr "Nové sedenie"
 
-#: shellprivate/widgetexplorer/kcategorizeditemsviewmodels.cpp:64
+#: shellprivate/kcategorizeditemsviewmodels.cpp:64
 #, kde-format
 msgid "Filters"
 msgstr "Filtre"
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:164
+#: shellprivate/plasmaappletitemmodel.cpp:164
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -189,148 +189,148 @@ msgid ""
 "version."
 msgstr ""
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:168
+#: shellprivate/plasmaappletitemmodel.cpp:168
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:172
+#: shellprivate/plasmaappletitemmodel.cpp:172
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
 
-#: shellprivate/widgetexplorer/plasmaappletitemmodel.cpp:177
+#: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:109
+#: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
 msgstr "Dostupnosť"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:110
+#: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
 msgstr "Spúšťače aplikácií"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:111
+#: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
 msgstr "Astronómia"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:112
+#: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
 msgstr "Dátum a čas"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:113
+#: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
 msgstr "Vývojové nástroje"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:114
+#: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
 msgstr "Vzdelávanie"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:115
+#: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
 msgstr "Prostredie a počasie"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:116
+#: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
 msgstr "Príklady"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:117
+#: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
 msgstr "Súborový systém"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:118
+#: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Fun and Games"
 msgstr "Zábava a hry"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:119
+#: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
 msgstr "Grafika"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:120
+#: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
 msgstr "Jazyk"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:121
+#: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
 msgstr "Kartografia"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:122
+#: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
 msgstr "Rôzne"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:123
+#: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
 msgstr "Multimédiá"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:124
+#: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
 msgstr "Online služby"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:125
+#: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "Produktivita"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
 msgstr "Systémové informácie"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "Nástroje"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "Okná a úlohy"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "Schránka"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Úlohy"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:146
 #, kde-format
 msgid "All Widgets"
 msgstr "Všetky widgety"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:150
 #, kde-format
 msgid "Running"
 msgstr "Beží"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:156
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -339,32 +339,32 @@ msgctxt ""
 msgid "Uninstallable"
 msgstr "Odinštalovateľné"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:160
 #, kde-format
 msgid "Categories:"
 msgstr "Kategórie:"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:230
+#: shellprivate/widgetexplorer.cpp:230
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Stiahnuť nové Plasma widgety"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:239
+#: shellprivate/widgetexplorer.cpp:239
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Inštalovať widget z lokálneho súboru..."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:501
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Vybrať súbor plazmoidu"
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:515
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Inštalácia balíčka %1 zlyhala."
 
-#: shellprivate/widgetexplorer/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:515
 #, kde-format
 msgid "Installation Failure"
 msgstr "Zlyhanie inštalácie"

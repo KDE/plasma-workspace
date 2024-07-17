@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -19,13 +19,13 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: package/contents/ui/DeviceItem.qml:188
+#: package/contents/ui/DeviceItem.qml:118
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%2 ൽ %1 ലഭ്യമാണ്"
 
-#: package/contents/ui/DeviceItem.qml:192
+#: package/contents/ui/DeviceItem.qml:122
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -33,7 +33,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "സമീപിക്കുന്നു…"
 
-#: package/contents/ui/DeviceItem.qml:195
+#: package/contents/ui/DeviceItem.qml:125
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -41,130 +41,130 @@ msgctxt ""
 msgid "Removing…"
 msgstr "ഒഴിവാക്കുന്നു…"
 
-#: package/contents/ui/DeviceItem.qml:198
+#: package/contents/ui/DeviceItem.qml:128
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
-#: package/contents/ui/DeviceItem.qml:229
-#, kde-format
-msgid "Open in File Manager"
-msgstr "ഫയല്‍ മാനേജറിൽ തുറക്കുക"
-
-#: package/contents/ui/DeviceItem.qml:232
-#, kde-format
-msgid "Mount and Open"
-msgstr "ഘടിപ്പിച്ച് തുറക്കുക"
-
-#: package/contents/ui/DeviceItem.qml:234
-#, kde-format
-msgid "Eject"
-msgstr "നീക്കം ചെയ്യുക"
-
-#: package/contents/ui/DeviceItem.qml:236
-#, kde-format
-msgid "Safely remove"
-msgstr "സുരക്ഷിതമായി നീക്കംചെയ്യുക"
-
-#: package/contents/ui/DeviceItem.qml:278
-#, kde-format
-msgid "Mount"
-msgstr "ഘടിപ്പിയ്ക്കുക"
-
-#: package/contents/ui/FullRepresentation.qml:43
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/FullRepresentation.qml:45
+#: package/contents/ui/main.qml:126
 #, kde-format
 msgid "Remove All"
 msgstr "എല്ലാം നീക്കം ചെയ്യുക"
 
-#: package/contents/ui/FullRepresentation.qml:44
+#: package/contents/ui/FullRepresentation.qml:46
 #, kde-format
 msgid "Click to safely remove all devices"
 msgstr "എല്ലാ ഉപകരണങ്ങളും സുരക്ഷിതമായി നീക്കംചെയ്യാൻ ക്ലിക്കുചെയ്യുക"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "No removable devices attached"
 msgstr "നീക്കംചെയ്യാവുന്ന ഉപകരണങ്ങളൊന്നും ബന്ധിപ്പിച്ചിട്ടില്ല"
 
-#: package/contents/ui/FullRepresentation.qml:186
+#: package/contents/ui/FullRepresentation.qml:158
 #, kde-format
 msgid "No disks available"
 msgstr "ഡിസ്കുകളൊന്നും ലഭ്യമല്ല"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgid "Most Recent Device"
 msgstr "ഏറ്റവും പുതിയ ഉപകരണം"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:72
 #, kde-format
 msgid "No Devices Available"
 msgstr "ഉപകരണങ്ങളൊന്നും ലഭ്യമല്ല"
 
-#: package/contents/ui/main.qml:207
+#: package/contents/ui/main.qml:108
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "നീക്കംചെയ്യാവുന്ന ഉപകരണങ്ങൾ ക്രമീകരിക്കുക…"
 
-#: package/contents/ui/main.qml:233
+#: package/contents/ui/main.qml:134
 #, kde-format
 msgid "Removable Devices"
 msgstr "നീക്കംചെയ്യാവുന്ന ഉപകരണങ്ങൾ"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:149
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "നീക്കംചെയ്യാനാകാത്ത ഉപകരണങ്ങൾ"
 
-#: package/contents/ui/main.qml:263
+#: package/contents/ui/main.qml:164
 #, kde-format
 msgid "All Devices"
 msgstr "എല്ലാ ഉപകരണങ്ങളും"
 
-#: package/contents/ui/main.qml:280
+#: package/contents/ui/main.qml:181
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "പുതിയ ഉപകരണം ബന്ധിപ്പിക്കുമ്പോൾ പോപ്പ്അപ്പ് കാണിക്കുക"
 
-#: plugin/ksolidnotify.cpp:192
+#: plugin/actions/mountaction.cpp:88
+#, kde-format
+msgid "Mount"
+msgstr "ഘടിപ്പിയ്ക്കുക"
+
+#: plugin/actions/mountandopenaction.cpp:152
+#, kde-format
+msgid "Open in File Manager"
+msgstr "ഫയല്‍ മാനേജറിൽ തുറക്കുക"
+
+#: plugin/actions/mountandopenaction.cpp:155
+#, kde-format
+msgid "Mount and Open"
+msgstr "ഘടിപ്പിച്ച് തുറക്കുക"
+
+#: plugin/actions/mountandopenaction.cpp:157
+#, kde-format
+msgid "Eject"
+msgstr "നീക്കം ചെയ്യുക"
+
+#: plugin/actions/mountandopenaction.cpp:159
+#, kde-format
+msgid "Safely remove"
+msgstr "സുരക്ഷിതമായി നീക്കംചെയ്യുക"
+
+#: plugin/deviceerrormonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:193
+#: plugin/deviceerrormonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:197
+#: plugin/deviceerrormonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:204
+#: plugin/deviceerrormonitor_p.cpp:192
 #, fuzzy, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "%1 ഈ ഉപകരണത്തിനെടുക്കേണ്ട നടപടി"
 
-#: plugin/ksolidnotify.cpp:207
+#: plugin/deviceerrormonitor_p.cpp:195
 #, fuzzy, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "%1 ഈ ഉപകരണത്തിനെടുക്കേണ്ട നടപടി"
 
-#: plugin/ksolidnotify.cpp:210
+#: plugin/deviceerrormonitor_p.cpp:198
 #, fuzzy, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "%1 ഈ ഉപകരണത്തിനെടുക്കേണ്ട നടപടി"
 
-#: plugin/ksolidnotify.cpp:217
+#: plugin/deviceerrormonitor_p.cpp:205
 #, fuzzy, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "അവസാനമായി കുത്തിയ ഉപകരണം: %1"
 
-#: plugin/ksolidnotify.cpp:248
+#: plugin/deviceerrormonitor_p.cpp:229
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -174,7 +174,7 @@ msgstr ""
 "ഡിസ്ക് പുറത്തെടുക്കാന്‍ സാധ്യമല്ല.\n"
 "ഈ ഉപകരണത്തിലെ ഒന്നോ അതിലധികമോ ഫയലുകള്‍ ഒരു പ്രയോഗത്തില്‍ തുറന്നിട്ടുണ്ടു്."
 
-#: plugin/ksolidnotify.cpp:250
+#: plugin/deviceerrormonitor_p.cpp:231
 #, fuzzy, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -186,27 +186,37 @@ msgstr[1] ""
 "ഉപകരണത്തെ അണ്‍മൌണ്ടു് ചെയ്യാന്‍ സാധ്യമല്ല.\n"
 "ഈ ഉപകരണത്തിലെ ഒന്നോ അതിലധികമോ ഫയലുകള്‍ ഒരു പ്രയോഗത്തില്‍ തുറന്നിട്ടുണ്ടു്."
 
-#: plugin/ksolidnotify.cpp:253
+#: plugin/deviceerrormonitor_p.cpp:234
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/ksolidnotify.cpp:271
+#: plugin/deviceerrormonitor_p.cpp:254
 #, fuzzy, kde-format
 msgid "Could not mount this device."
 msgstr "അവസാനമായി കുത്തിയ ഉപകരണം: %1"
 
-#: plugin/ksolidnotify.cpp:274
+#: plugin/deviceerrormonitor_p.cpp:257
 #, fuzzy, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "അവസാനമായി കുത്തിയ ഉപകരണം: %1"
 
-#: plugin/ksolidnotify.cpp:277
+#: plugin/deviceerrormonitor_p.cpp:260
 #, fuzzy, kde-format
 msgid "Could not eject this disc."
 msgstr "%1 ഈ ഉപകരണത്തിനെടുക്കേണ്ട നടപടി"
+
+#: plugin/spacemonitor_p.cpp:137
+#, kde-format
+msgid "Filesystem is not responding"
+msgstr ""
+
+#: plugin/spacemonitor_p.cpp:137
+#, kde-format
+msgid "Filesystem mounted at '%1' is not responding"
+msgstr ""
 
 #, fuzzy
 #~ msgid "1 action for this device"

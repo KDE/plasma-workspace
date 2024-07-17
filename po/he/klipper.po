@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-15 00:40+0000\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
 "PO-Revision-Date: 2024-03-05 07:43+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -563,7 +563,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "הצגת פריטי לוח גזירים במקום של העכבר"
 
-#: klipper.cpp:338
+#: klipper.cpp:341
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -573,27 +573,27 @@ msgstr ""
 "ניתן להפעיל פקודות על כתובות מאוחר יותר דרך עמוד ה<interface>פעולות</"
 "interface> בחלון הגדרות היישומונית של לוח הגזירים"
 
-#: klipper.cpp:608
+#: klipper.cpp:611
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "ברקוד נייד"
 
-#: klipper.cpp:651 klipper.cpp:660
+#: klipper.cpp:654 klipper.cpp:663
 #, kde-format
 msgid "Clipboard history"
 msgstr "היסטוריית לוח הגזירים"
 
-#: klipper.cpp:677
+#: klipper.cpp:680
 #, kde-format
 msgid "up"
 msgstr "למעלה"
 
-#: klipper.cpp:684
+#: klipper.cpp:687
 #, kde-format
 msgid "current"
 msgstr "נוכחי"
 
-#: klipper.cpp:691
+#: klipper.cpp:694
 #, kde-format
 msgid "down"
 msgstr "למטה"
