@@ -15,9 +15,6 @@ import org.kde.kirigami as Kirigami
 Loader {
     id: loader
 
-    required property Item screenRoot
-    required property T.StackView mainStack
-    required property /* MainBlock | Login */ Item mainBlock
     required property T.TextField passwordField
 
     readonly property bool keyboardActive: item?.active ?? false
@@ -54,23 +51,15 @@ Loader {
         State {
             name: "visible"
             PropertyChanges {
-                target: mainStack
-                y: Math.min(0, screenRoot.height - loader.height - mainBlock.visibleBoundary)
-            }
-            PropertyChanges {
                 target: loader
-                y: screenRoot.height - loader.height
+                y: Window.height - loader.height
             }
         },
         State {
             name: "hidden"
             PropertyChanges {
-                target: mainStack
-                y: 0
-            }
-            PropertyChanges {
                 target: loader
-                y: screenRoot.height * 0.75
+                y: Window.height * 0.75
             }
         }
     ]
@@ -86,19 +75,10 @@ Loader {
                         Qt.inputMethod.show();
                     }
                 }
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: mainStack
-                        property: "y"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        target: loader
-                        property: "y"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.OutQuad
-                    }
+                NumberAnimation {
+                    property: "y"
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.OutQuad
                 }
             }
         },
@@ -106,19 +86,10 @@ Loader {
             from: "visible"
             to: "hidden"
             SequentialAnimation {
-                ParallelAnimation {
-                    NumberAnimation {
-                        target: mainStack
-                        property: "y"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InOutQuad
-                    }
-                    NumberAnimation {
-                        target: loader
-                        property: "y"
-                        duration: Kirigami.Units.longDuration
-                        easing.type: Easing.InQuad
-                    }
+                NumberAnimation {
+                    property: "y"
+                    duration: Kirigami.Units.longDuration
+                    easing.type: Easing.InQuad
                 }
                 ScriptAction {
                     script: {
