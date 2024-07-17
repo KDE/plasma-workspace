@@ -16,7 +16,7 @@ import org.kde.plasma.private.battery
 RowLayout {
     id: root
 
-    property real fontSize: Kirigami.Theme.defaultFont.pointSize
+    property alias font: batteryLabel.font
 
     BatteryControlModel {
         id: batteryControl
@@ -37,7 +37,6 @@ RowLayout {
 
     PlasmaComponents3.Label {
         id: batteryLabel
-        font.pointSize: root.fontSize
         text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "%1%", batteryControl.percent)
         textFormat: Text.PlainText
         Accessible.name: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Battery at %1%", batteryControl.percent)
