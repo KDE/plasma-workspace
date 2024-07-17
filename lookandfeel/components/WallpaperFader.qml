@@ -14,25 +14,14 @@ import org.kde.breeze.components
 
 Item {
     id: wallpaperFader
-    property Item clock
-    property Item mainStack
-    property Item footer
     property alias source: wallpaperBlur.source
-    property real factor: 0
+    property real factor: 1
+    // Use this to control the opacity of UI elements so that they fade in/out
+    property real uiOpacity: 1
     readonly property bool lightColorScheme: Math.max(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b) > 0.5
-
-    property bool alwaysShowClock: typeof config === "undefined" || typeof config.alwaysShowClock === "undefined" || config.alwaysShowClock === true
 
     state: "on"
 
-    Behavior on factor {
-        NumberAnimation {
-            target: wallpaperFader
-            property: "factor"
-            duration: Kirigami.Units.veryLongDuration * 2
-            easing.type: Easing.InOutQuad
-        }
-    }
     FastBlur {
         id: wallpaperBlur
         anchors.fill: parent
@@ -80,71 +69,25 @@ Item {
         State {
             name: "on"
             PropertyChanges {
-                target: mainStack
-                opacity: 1
-            }
-            PropertyChanges {
-                target: footer
-                opacity: 1
-            }
-            PropertyChanges {
                 target: wallpaperFader
                 factor: 1
-            }
-            PropertyChanges {
-                target: clock.shadow
-                opacity: 0
-            }
-            PropertyChanges {
-                target: clock
-                opacity: 1
+                uiOpacity: 1
             }
         },
         State {
             name: "off"
             PropertyChanges {
-                target: mainStack
-                opacity: 0
-            }
-            PropertyChanges {
-                target: footer
-                opacity: 0
-            }
-            PropertyChanges {
                 target: wallpaperFader
                 factor: 0
-            }
-            PropertyChanges {
-                target: clock.shadow
-                opacity: wallpaperFader.alwaysShowClock ? 1 : 0
-            }
-            PropertyChanges {
-                target: clock
-                opacity: wallpaperFader.alwaysShowClock ? 1 : 0
+                uiOpacity: 0
             }
         }
     ]
-    transitions: [
-        Transition {
-            from: "off"
-            to: "on"
-            //Note: can't use animators as they don't play well with parallelanimations
-            NumberAnimation {
-                targets: [mainStack, footer, clock]
-                property: "opacity"
-                duration: Kirigami.Units.veryLongDuration
-                easing.type: Easing.InOutQuad
-            }
-        },
-        Transition {
-            from: "on"
-            to: "off"
-            NumberAnimation {
-                targets: [mainStack, footer, clock]
-                property: "opacity"
-                duration: Kirigami.Units.veryLongDuration
-                easing.type: Easing.InOutQuad
-            }
+    transitions: Transition {
+        NumberAnimation {
+            properties: "factor,uiOpacity"
+            duration: Kirigami.Units.veryLongDuration * 2
+            easing.type: Easing.InOutQuad
         }
-    ]
+    }
 }
