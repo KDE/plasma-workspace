@@ -109,17 +109,14 @@ Item {
         onClicked: root.cancelRequested()
     }
     UserDelegate {
-        width: Kirigami.Units.gridUnit * 8
-        height: Kirigami.Units.gridUnit * 9
         anchors {
             horizontalCenter: parent.horizontalCenter
             bottom: parent.verticalCenter
         }
         constrainText: false
         avatarPath: kuser.faceIconUrl
-        iconSource: "user-identity"
-        isCurrent: true
-        name: kuser.fullName
+        displayName: kuser.fullName
+        highlighted: true
     }
     ColumnLayout {
         id: column
