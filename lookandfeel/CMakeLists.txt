@@ -10,6 +10,7 @@ ecm_target_qml_sources(components SOURCES
     components/ActivityDetectorItem.qml
     components/Battery.qml
     components/Clock.qml
+    components/LoginForm.qml
     components/SessionManagementScreen.qml
     components/UserDelegate.qml
     components/UserList.qml
