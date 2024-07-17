@@ -7,6 +7,7 @@ ecm_target_qml_sources(components SOURCES
     components/animation/RejectPasswordAnimation.qml
     components/animation/RejectPasswordPathAnimation.qml
     components/ActionButton.qml
+    components/ActivityDetectorItem.qml
     components/Battery.qml
     components/Clock.qml
     components/SessionManagementScreen.qml
