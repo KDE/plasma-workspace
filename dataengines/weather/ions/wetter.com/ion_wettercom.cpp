@@ -253,26 +253,26 @@ bool WetterComIon::updateIonSource(const QString &source)
 
     if (sourceAction[1] == QLatin1String("weather") && sourceAction.size() >= 3) {
         if (sourceAction.count() >= 4) {
-            if (sourceAction[2].isEmpty()) {
+            if (sourceAction[3].isEmpty()) {
                 setData(source, QStringLiteral("validate"), QStringLiteral("wettercom|malformed"));
                 return true;
             }
 
             // Extra data format: placeCode;displayName
             const QStringList extraData = sourceAction[3].split(QLatin1Char(';'));
-
             if (extraData.count() != 2) {
                 setData(source, QStringLiteral("validate"), QStringLiteral("wettercom|malformed"));
                 return true;
             }
 
-            m_place[sourceAction[2]].placeCode = extraData[0];
+            const QString &placeCode = extraData[0];
+            m_place[placeCode].name = sourceAction[2];
+            m_place[placeCode].placeCode = placeCode;
+            m_place[placeCode].displayName = extraData[1];
 
-            m_place[sourceAction[2]].displayName = extraData[1];
+            qCDebug(IONENGINE_WETTERCOM) << "About to retrieve forecast for source: " << placeCode << sourceAction[2];
 
-            qCDebug(IONENGINE_WETTERCOM) << "About to retrieve forecast for source: " << sourceAction[2];
-
-            fetchForecast(sourceAction[2]);
+            fetchForecast(placeCode);
 
             return true;
         }
@@ -363,13 +363,13 @@ void WetterComIon::parseSearchResults(const QString &source, QXmlStreamReader &x
                     placeName = i18nc("Geographical location: quarter (city), state, ISO-country-code", "%1 (%2), %3, %4", quarter, name, state, country);
                 }
 
-                qCDebug(IONENGINE_WETTERCOM) << "Storing place data for place:" << placeName;
+                qCDebug(IONENGINE_WETTERCOM) << "Storing place data for place:" << placeName << "with code" << code;
 
-                PlaceInfo &place = m_place[placeName];
+                PlaceInfo &place = m_place[code];
                 place.name = placeName;
                 place.displayName = name;
                 place.placeCode = code;
-                m_locations.append(placeName);
+                m_locations.append(code);
 
                 name.clear();
                 code.clear();
@@ -412,10 +412,10 @@ void WetterComIon::validate(const QString &source, bool parseError)
     }
 
     QString placeList;
-    for (const QString &place : std::as_const(m_locations)) {
+    for (const QString &code : std::as_const(m_locations)) {
+        const PlaceInfo &place = m_place[code];
         // Extra data format: placeCode;displayName
-        placeList.append(QLatin1String("|place|") + place + QLatin1String("|extra|") + m_place[place].placeCode + QLatin1Char(';')
-                         + m_place[place].displayName);
+        placeList.append(QStringLiteral("|place|%1|extra|%2;%3").arg(place.name, place.placeCode, place.displayName));
     }
 
     qCDebug(IONENGINE_WETTERCOM) << "Returning place list:" << placeList;
@@ -488,7 +488,8 @@ void WetterComIon::forecast_slotJobFinished(KJob *job)
 
     if (m_sourcesToReset.contains(source)) {
         m_sourcesToReset.removeAll(source);
-        const QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3").arg(source, m_place[source].placeCode, m_place[source].displayName);
+        const PlaceInfo &place = m_place[source];
+        const QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3").arg(place.name, place.placeCode, place.displayName);
 
         // so the weather engine updates it's data
         forceImmediateUpdateOfAllVisualizations();
@@ -514,7 +515,7 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
     uint summaryUtcTime = 0, utcTime = 0, localTime = 0;
     QString date, time;
 
-    weatherData.place = source;
+    weatherData.place = m_place[source].name;
 
     while (!xml.atEnd()) {
         xml.readNext();
@@ -651,7 +652,7 @@ void WetterComIon::updateWeather(const QString &source, bool parseError)
 
     const PlaceInfo &placeInfo = m_place[source];
 
-    QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3").arg(source, placeInfo.placeCode, placeInfo.displayName);
+    QString weatherSource = QStringLiteral("wettercom|weather|%1|%2;%3").arg(placeInfo.name, placeInfo.placeCode, placeInfo.displayName);
 
     const WeatherData &weatherData = m_weatherData[source];
 
@@ -708,7 +709,7 @@ void WetterComIon::updateWeather(const QString &source, bool parseError)
 
         qCDebug(IONENGINE_WETTERCOM) << "updated weather data:" << weatherSource << data;
     } else {
-        qCDebug(IONENGINE_WETTERCOM) << "Something went wrong when parsing weather data for source:" << source;
+        qCDebug(IONENGINE_WETTERCOM) << "Something went wrong when parsing weather data for source:" << source << placeInfo.displayName;
     }
 
     setData(weatherSource, data);
