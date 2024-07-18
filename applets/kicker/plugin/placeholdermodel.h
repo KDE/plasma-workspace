@@ -55,7 +55,7 @@ public Q_SLOTS:
     void reset();
 
 Q_SIGNALS:
-    void sourceModelChanged() const;
+    void sourceModelChanged();
     void dropPlaceholderIndexChanged();
 
 protected:

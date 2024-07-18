@@ -176,11 +176,11 @@ public:
         , m_clientId(clientId)
     {
         // Connecting the watcher
-        connect(&m_watcher, &ResultWatcher::resultLinked, [this](const QString &resource) {
+        connect(&m_watcher, &ResultWatcher::resultLinked, parent, [this](const QString &resource) {
             addResult(resource, -1);
         });
 
-        connect(&m_watcher, &ResultWatcher::resultUnlinked, [this](const QString &resource) {
+        connect(&m_watcher, &ResultWatcher::resultUnlinked, parent, [this](const QString &resource) {
             removeResult(resource);
         });
         connect(
@@ -260,7 +260,7 @@ public:
                         std::transform(groupOrdering.begin(), groupOrdering.end(), groupOrdering.begin(), [&](const QString &item) {
                             return normalizedId(item).value();
                         });
-                        for (auto item : m_items) {
+                        for (const auto &item : m_items) {
                             if (!groupOrdering.contains(item.value())) {
                                 continue;
                             }
@@ -325,18 +325,6 @@ public:
 
         if (!entry || !entry->isValid()) {
             qCDebug(KICKER_DEBUG) << "Entry is not valid!" << resource;
-            return;
-        }
-
-        // TODO Remove a few releases after Plasma 5.25 as this should become dead code, once users have run this code at least once
-        // Converts old-style applications favorites with path (/usrshare/applications/org.kde.dolphin.desktop) or storageId (org.kde.dolphin.desktop)
-        if ((_resource.startsWith(QLatin1String("/")) || QUrl(_resource).scheme().isEmpty()) && _resource.endsWith(QLatin1String(".desktop"))) {
-            m_watcher.unlinkFromActivity(QUrl(_resource), QStringLiteral(":any"), agentForUrl(resource));
-
-            const auto normalized = normalizedId(resource).value();
-            qCDebug(KICKER_DEBUG) << "Converting old-style application favorite entry" << _resource << "to" << normalized;
-
-            m_watcher.linkToActivity(QUrl(normalized), QStringLiteral(":any"), agentForUrl(resource));
             return;
         }
 

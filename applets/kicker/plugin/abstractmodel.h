@@ -65,12 +65,12 @@ public:
     virtual void entryChanged(AbstractEntry *entry);
 
 Q_SIGNALS:
-    void descriptionChanged() const;
-    void countChanged() const;
-    void separatorCountChanged() const;
-    void iconSizeChanged() const;
-    void favoritesModelChanged() const;
-    void sectionsChanged() const;
+    void descriptionChanged();
+    void countChanged();
+    void separatorCountChanged();
+    void iconSizeChanged();
+    void favoritesModelChanged();
+    void sectionsChanged();
 
 protected:
     AbstractModel *m_favoritesModel = nullptr;

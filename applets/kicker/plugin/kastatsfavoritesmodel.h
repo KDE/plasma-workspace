@@ -81,9 +81,9 @@ public Q_SLOTS:
     void refresh() override;
 
 Q_SIGNALS:
-    void enabledChanged() const;
-    void favoritesChanged() const;
-    void maxFavoritesChanged() const;
+    void enabledChanged();
+    void favoritesChanged();
+    void maxFavoritesChanged();
 
 private:
     class Private;
