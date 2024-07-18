@@ -645,7 +645,7 @@ void WetterComIon::updateWeather(const QString &source, bool parseError)
     data.insert(QStringLiteral("Place"), placeInfo.displayName);
 
     if (!parseError && !weatherData.forecasts.isEmpty()) {
-        data.insert(QStringLiteral("Station"), placeInfo.displayName);
+        data.insert(QStringLiteral("Station"), placeInfo.name);
         // data.insert("Condition Icon", "N/A");
         // data.insert("Temperature", "N/A");
         data.insert(QStringLiteral("Temperature Unit"), KUnitConversion::Celsius);
