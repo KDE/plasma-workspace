@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-07 10:32+0200\n"
+"POT-Creation-Date: 2024-07-18 00:40+0000\n"
+"PO-Revision-Date: 2024-07-17 10:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "X-Accelerator-Marker: &\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
@@ -91,7 +91,7 @@ msgstr "Contrasenya"
 msgid "Confirm password"
 msgstr "Confirma la contrasenya"
 
-#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "Cal que les contrasenyes coincidisquen"
@@ -146,42 +146,42 @@ msgstr "Deixa sense canviar"
 msgid "Create User"
 msgstr "Creeu un usuari"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Name:"
 msgstr "Nom:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Username:"
 msgstr "Nom d'usuari:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:158
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Standard"
 msgstr "Estàndard"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:159
+#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Administrator"
 msgstr "Administrador"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Tipus de compte:"
 
-#: src/ui/CreateUser.qml:56
+#: src/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
 msgstr "Contrasenya:"
 
-#: src/ui/CreateUser.qml:61
+#: src/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
 msgstr "Confirma la contrasenya:"
 
-#: src/ui/CreateUser.qml:78
+#: src/ui/CreateUser.qml:75
 #, kde-format
 msgid "Create"
 msgstr "Crea"
@@ -571,6 +571,10 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"No es pot canviar el tipus de compte a estàndard a menys que hi haja com a "
+"mínim un altre compte d'administrador en el sistema. Sense ell, "
+"l'autenticació seria impossible o requeriria l'ús insegur de la contrasenya "
+"arrel."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

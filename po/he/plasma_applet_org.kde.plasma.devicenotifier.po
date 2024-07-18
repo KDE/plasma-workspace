@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-01-12 22:00+0200\n"
+"PO-Revision-Date: 2024-07-17 09:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.1\n"
 
 #: package/contents/ui/DeviceItem.qml:118
 #, kde-format
@@ -210,12 +210,12 @@ msgstr "לא ניתן לשלוף את התקליטור הזה."
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "מערכת הקבצים לא מגיבה"
 
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "מערכת הקבצים שמעוגנת תחת ‚%1’ לא מגיבה"
 
 #~ msgid "General"
 #~ msgstr "כללי"

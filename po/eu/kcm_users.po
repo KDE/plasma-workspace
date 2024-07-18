@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-07 11:23+0200\n"
+"POT-Creation-Date: 2024-07-18 00:40+0000\n"
+"PO-Revision-Date: 2024-07-17 06:21+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -89,7 +89,7 @@ msgstr "Pasahitza"
 msgid "Confirm password"
 msgstr "Berretsi pasahitza:"
 
-#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:68
+#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "Pasahitzak bat etorri behar du"
@@ -145,42 +145,42 @@ msgstr "Utzi aldatzeke"
 msgid "Create User"
 msgstr "Sortu erabiltzailea"
 
-#: src/ui/CreateUser.qml:33 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Name:"
 msgstr "Izena:"
 
-#: src/ui/CreateUser.qml:37 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Username:"
 msgstr "Erabiltzaile-izena:"
 
-#: src/ui/CreateUser.qml:47 src/ui/UserDetailsPage.qml:158
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Standard"
 msgstr "Arrunta"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:159
+#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Administrator"
 msgstr "Administratzailea"
 
-#: src/ui/CreateUser.qml:51 src/ui/UserDetailsPage.qml:148
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
 msgstr "Kontu mota:"
 
-#: src/ui/CreateUser.qml:56
+#: src/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
 msgstr "Pasahitza:"
 
-#: src/ui/CreateUser.qml:61
+#: src/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
 msgstr "Berretsi pasahitza::"
 
-#: src/ui/CreateUser.qml:78
+#: src/ui/CreateUser.qml:75
 #, kde-format
 msgid "Create"
 msgstr "Sortu"
@@ -570,6 +570,10 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Ezin da kontu-mota estandarrera aldatu sisteman gutxienez beste "
+"administratzaile konturik ez badago behintzat. Halakorik gabe, ezingo "
+"litzateke autentifikaziorik egin edo root-en pasahitzaren erabilera ez "
+"segurua beharko luke."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

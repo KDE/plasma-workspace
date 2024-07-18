@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_style\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 13:17+0300\n"
+"PO-Revision-Date: 2024-07-17 09:42+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
 "Language: uk\n"
@@ -117,12 +117,10 @@ msgid "Secondary toolbar label"
 msgstr "Мітка додаткової панелі інструментів"
 
 #: ui/EffectSettingsPopup.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Icon and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
-msgstr "Налаштування піктограми та панелей інструментів"
+msgstr "Налаштування піктограм та панелей інструментів"
 
 #: ui/EffectSettingsPopup.qml:36
 #, kde-format

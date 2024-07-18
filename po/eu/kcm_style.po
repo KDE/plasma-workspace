@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 12:09+0200\n"
+"PO-Revision-Date: 2024-07-17 06:16+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -121,12 +121,10 @@ msgid "Secondary toolbar label"
 msgstr "Bigarren mailako tresna-barrako etiketa"
 
 #: ui/EffectSettingsPopup.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Icon and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
-msgstr "Konfiguratu ikono eta tresna-barrak"
+msgstr "Konfiguratu ikonoak eta tresna-barrak"
 
 #: ui/EffectSettingsPopup.qml:36
 #, kde-format
