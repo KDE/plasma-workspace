@@ -297,6 +297,7 @@ void WetterComIon::findPlace(const QString &place, const QString &source)
     const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
     const QUrl url(QStringLiteral(SEARCH_URL).arg(place, encodedKey));
+    qCDebug(IONENGINE_WETTERCOM) << "Search URL for" << place << url;
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none")); // Disable displaying cookies
@@ -450,6 +451,7 @@ void WetterComIon::fetchForecast(const QString &source)
     const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
     const QUrl url(QStringLiteral(FORECAST_URL).arg(m_place[source].placeCode, encodedKey));
+    qCDebug(IONENGINE_WETTERCOM) << "Fetch Weather URL for" << source << url;
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::Reload, KIO::HideProgressInfo);
     getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
@@ -520,8 +522,6 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
     while (!xml.atEnd()) {
         xml.readNext();
 
-        qCDebug(IONENGINE_WETTERCOM) << "parsing xml elem: " << xml.name();
-
         const auto elementName = xml.name();
 
         if (xml.isEndElement()) {
@@ -546,9 +546,6 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
                 summaryUtcTime = 0;
             } else if (elementName == QLatin1String("time")) {
                 // we have parsed one forecast
-
-                qCDebug(IONENGINE_WETTERCOM) << "Parsed a forecast interval:" << date << time;
-
                 // yep, that field is written to more often than needed...
                 weatherData.timeDifference = localTime - utcTime;
 
@@ -560,8 +557,6 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
 
                 QTime localWeatherTime = QDateTime::fromSecsSinceEpoch(utcTime, Qt::LocalTime).time();
                 localWeatherTime = localWeatherTime.addSecs(weatherData.timeDifference);
-
-                qCDebug(IONENGINE_WETTERCOM) << "localWeatherTime =" << localWeatherTime;
 
                 // TODO use local sunset/sunrise time
 
@@ -593,10 +588,8 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
                 time = xml.attributes().value(QStringLiteral("value")).toString();
             } else if (elementName == QLatin1String("tx")) {
                 tempMax = qRound(xml.readElementText().toDouble());
-                qCDebug(IONENGINE_WETTERCOM) << "parsed t_max:" << tempMax;
             } else if (elementName == QLatin1String("tn")) {
                 tempMin = qRound(xml.readElementText().toDouble());
-                qCDebug(IONENGINE_WETTERCOM) << "parsed t_min:" << tempMin;
             } else if (elementName == QLatin1Char('w')) {
                 int tmp = xml.readElementText().toInt();
 
@@ -605,10 +598,8 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
                 else
                     summaryWeather = tmp;
 
-                qCDebug(IONENGINE_WETTERCOM) << "parsed weather condition:" << tmp;
             } else if (elementName == QLatin1String("name")) {
                 weatherData.stationName = xml.readElementText();
-                qCDebug(IONENGINE_WETTERCOM) << "parsed station name:" << weatherData.stationName;
             } else if (elementName == QLatin1String("pc")) {
                 int tmp = xml.readElementText().toInt();
 
@@ -617,16 +608,12 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
                 else
                     summaryProbability = tmp;
 
-                qCDebug(IONENGINE_WETTERCOM) << "parsed probability:" << probability;
             } else if (elementName == QLatin1String("text")) {
                 weatherData.credits = xml.readElementText();
-                qCDebug(IONENGINE_WETTERCOM) << "parsed credits:" << weatherData.credits;
             } else if (elementName == QLatin1String("link")) {
                 weatherData.creditsUrl = xml.readElementText();
-                qCDebug(IONENGINE_WETTERCOM) << "parsed credits url:" << weatherData.creditsUrl;
             } else if (elementName == QLatin1Char('d')) {
                 localTime = xml.readElementText().toInt();
-                qCDebug(IONENGINE_WETTERCOM) << "parsed local time:" << localTime;
             } else if (elementName == QLatin1String("du")) {
                 int tmp = xml.readElementText().toInt();
 
@@ -634,8 +621,6 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
                     utcTime = tmp;
                 else
                     summaryUtcTime = tmp;
-
-                qCDebug(IONENGINE_WETTERCOM) << "parsed UTC time:" << tmp;
             }
         }
     }
