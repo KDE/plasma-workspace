@@ -111,9 +111,7 @@ msgid "Secondary toolbar label"
 msgstr "副工具栏项文字"
 
 #: ui/EffectSettingsPopup.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Icon and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
 msgstr "配置图标和工具栏"

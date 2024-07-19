@@ -212,9 +212,9 @@ msgstr "Nelze odpojit tento disk."
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "Souborový systém neodpovídá"
 
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "Souborový systém připojeny v '%1' neodpovídá"

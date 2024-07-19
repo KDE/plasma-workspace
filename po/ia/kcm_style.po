@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-05 16:02+0200\n"
+"PO-Revision-Date: 2024-07-18 12:40+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -113,12 +113,10 @@ msgid "Secondary toolbar label"
 msgstr "Etiquetta de barra de instrumentos secundari"
 
 #: ui/EffectSettingsPopup.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Icon and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
-msgstr "Configura icone e  barras de instrumentos"
+msgstr "Configura icones e le barras de instrumentos"
 
 #: ui/EffectSettingsPopup.qml:36
 #, kde-format

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-18 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 15:53+0900\n"
+"PO-Revision-Date: 2024-07-18 16:46+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -518,6 +518,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"系統上沒有其他管理員帳號時無法將此帳號的類型更換為「標準」。沒有管理員帳號的"
+"時候將會無法進行任何管理員權限的驗證，使得不安全的根使用者變成利用管理員權限"
+"的唯一途徑。"
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format
