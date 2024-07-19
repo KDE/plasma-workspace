@@ -36,7 +36,7 @@ SessionShortcutsModule::SessionShortcutsModule(QObject *parent, const KPluginMet
     // "Just show the logout dialog with all options" action
     // TODO: change ID to "Show Logout Prompt" and migrate settings
     a = actionCollection->addAction(QStringLiteral("Log Out"));
-    a->setText(i18nc("@action", "Show Logout Prompt"));
+    a->setText(i18nc("@action", "Show Logout Screen"));
     KGlobalAccel::self()->setGlobalShortcut(a, QList<QKeySequence>() << (Qt::ALT | Qt::CTRL | Qt::Key_Delete));
     connect(a, &QAction::triggered, this, [sessionManagement]() {
         sessionManagement->requestLogoutPrompt();

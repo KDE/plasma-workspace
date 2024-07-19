@@ -137,7 +137,7 @@ SessionManagement::State SessionManagement::state() const
 void SessionManagement::requestLogoutPrompt()
 {
     if (qEnvironmentVariableIntValue("PLASMA_SESSION_GUI_TEST")) {
-        std::cout << "show logout prompt " << std::endl;
+        std::cout << "show logout screen " << std::endl;
         return;
     }
 
