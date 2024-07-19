@@ -495,7 +495,7 @@ void EnvCanadaIon::getXMLSetup()
 
     // If network is down, we need to spin and wait
 
-    const QUrl url(QStringLiteral("http://dd.weather.gc.ca/citypage_weather/xml/siteList.xml"));
+    const QUrl url(QStringLiteral("https://dd.weather.gc.ca/citypage_weather/xml/siteList.xml"));
 
     KIO::TransferJob *getJob = KIO::get(url, KIO::NoReload, KIO::HideProgressInfo);
 
@@ -521,8 +521,7 @@ void EnvCanadaIon::getXMLData(const QString &source)
     dataKey.remove(QStringLiteral("envcan|weather|"));
     const XMLMapInfo &place = m_places[dataKey];
 
-    const QUrl url(QLatin1String("http://dd.weather.gc.ca/citypage_weather/xml/") + place.territoryName + QLatin1Char('/') + place.cityCode
-                   + QStringLiteral("_e.xml"));
+    const QUrl url(QStringLiteral("https://dd.weather.gc.ca/citypage_weather/xml/%1/%2_e.xml").arg(place.territoryName, place.cityCode));
     // url="file:///home/spstarr/Desktop/s0000649_e.xml";
     // qCDebug(IONENGINE_ENVCAN) << "Will Try URL: " << url;
 
