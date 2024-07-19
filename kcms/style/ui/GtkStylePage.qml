@@ -21,7 +21,7 @@ Kirigami.Page {
 
         position: Kirigami.InlineMessage.Position.Header
         showCloseButton: true
-        visible: true
+        visible: false
 
         Connections {
             target: kcm.gtkPage
