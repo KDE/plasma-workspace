@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2024-03-19 00:42-0300\n"
+"PO-Revision-Date: 2024-07-19 13:12-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/ui/BatteryItem.qml:100
 #, kde-format
@@ -106,10 +106,9 @@ msgid "%1%"
 msgstr "%1%"
 
 #: package/contents/ui/main.qml:75
-#, fuzzy, kde-format
-#| msgid "An application is preventing sleep and screen locking:"
+#, kde-format
 msgid "The battery applet has enabled suppressing sleep and screen locking"
-msgstr "Um aplicativo está prevenindo a suspensão e bloqueio de tela:"
+msgstr "O miniaplicativo de bateria inibiu a suspensão e o bloqueio de tela"
 
 #: package/contents/ui/main.qml:97
 #: package/contents/ui/PowerManagementItem.qml:51
@@ -126,7 +125,7 @@ msgstr "Bateria e energia"
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Battery is not present in the bay"
-msgstr ""
+msgstr "Bateria não está presente no compartimento"
 
 #: package/contents/ui/main.qml:130
 #, kde-format
@@ -176,18 +175,18 @@ msgid "Not charging"
 msgstr "Não está carregando"
 
 #: package/contents/ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "Automatic sleep and screen locking are disabled"
+#, kde-format
 msgid ""
 "Automatic sleep and screen locking are disabled; middle-click to re-enable"
-msgstr "A suspensão automática e bloqueio de tela estão desabilitados"
+msgstr ""
+"A suspensão automática e bloqueio de tela estão desabilitados; clique com o "
+"botão do meio para habilitar"
 
 #: package/contents/ui/main.qml:168
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Middle-click to disable automatic sleep and screen locking"
-msgstr "Bloquear manualmente a suspensão e bloqueio da tela"
+msgstr ""
+"Clique com o botão do meio para desabilitar a suspensão e o bloqueio da tela"
 
 #: package/contents/ui/main.qml:173
 #, kde-format
@@ -197,10 +196,9 @@ msgstr[0] "Um aplicativo solicitou a ativação do modo performance"
 msgstr[1] "%1 aplicativos solicitaram a ativação do modo performance"
 
 #: package/contents/ui/main.qml:177
-#, fuzzy, kde-format
-#| msgid "System is in Performance mode"
+#, kde-format
 msgid "System is in Performance mode; scroll to change"
-msgstr "O sistema está no modo performance"
+msgstr "O sistema está no modo performance; use a rolagem para trocar"
 
 #: package/contents/ui/main.qml:181
 #, kde-format
@@ -210,15 +208,15 @@ msgstr[0] "Um aplicativo solicitou a ativação do modo economia de energia"
 msgstr[1] "%1 aplicativos solicitaram a ativação do modo economia de energia"
 
 #: package/contents/ui/main.qml:185
-#, fuzzy, kde-format
-#| msgid "System is in Power Save mode"
+#, kde-format
 msgid "System is in Power Save mode; scroll to change"
-msgstr "O sistema está no modo economia de energia"
+msgstr "O sistema está no modo economia de energia; use a rolagem para trocar"
 
 #: package/contents/ui/main.qml:188
 #, kde-format
 msgid "System is in Balanced Power mode; scroll to change"
 msgstr ""
+"O sistema está no modo balanceado de energia; use a rolagem para trocar"
 
 #: package/contents/ui/main.qml:300
 #, kde-format
@@ -241,40 +239,36 @@ msgstr "&Configurar o gerenciamento de energia..."
 #, kde-format
 msgctxt "@title:group"
 msgid "Sleep and Screen Locking after Inactivity"
-msgstr ""
+msgstr "Suspensão e bloqueio de tela após inatividade"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Blocked"
-msgstr ""
+msgstr "Bloqueado"
 
 #: package/contents/ui/PowerManagementItem.qml:89
 #, kde-format
 msgctxt "Sleep and Screen Locking after Inactivity"
 msgid "Automatic"
-msgstr ""
+msgstr "Automático"
 
 #: package/contents/ui/PowerManagementItem.qml:99
 #, kde-format
 msgctxt ""
 "@option:check Manually block sleep and screen locking after inactivity"
 msgid "Manually block"
-msgstr ""
+msgstr "Bloqueado manualmente"
 
 #: package/contents/ui/PowerManagementItem.qml:133
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "Bloquear manualmente a suspensão e bloqueio da tela"
+msgstr "Falha ao desbloquear a suspensão automática e o bloqueio de tela"
 
 #: package/contents/ui/PowerManagementItem.qml:136
-#, fuzzy, kde-format
-#| msgctxt "Minimize the length of this string as much as possible"
-#| msgid "Manually block sleep and screen locking"
+#, kde-format
 msgid "Failed to block automatic sleep and screen locking"
-msgstr "Bloquear manualmente a suspensão e bloqueio da tela"
+msgstr "Falha ao bloquear a suspensão automática e o bloqueio de tela"
 
 #: package/contents/ui/PowerManagementItem.qml:174
 #, kde-format
