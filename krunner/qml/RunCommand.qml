@@ -393,7 +393,7 @@ ColumnLayout {
                 width: listView.width
                 typeText: index === 0 ? i18n("Recent Queries") : ""
                 additionalActions: [{
-                    icon: "list-remove",
+                    iconSource: "list-remove-symbolic",
                     text: i18n("Remove")
                 }]
                 Accessible.description: i18n("Recent Queries")
