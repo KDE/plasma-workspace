@@ -4,41 +4,43 @@
 #
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2017, 2018, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2023-02-07 11:13-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
-"Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
+"PO-Revision-Date: 2024-07-19 13:43-0300\n"
+"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Luiz Fernando Ranghetti"
+msgstr "Luiz Fernando Ranghetti, Geraldo Simião, Zic Stardust"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "elchevive@opensuse.org"
+msgstr ""
+"elchevive@opensuse.org, geraldosimiao@fedoraproject.org, zic@zicstardust.com"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:25
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Bateria %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:27
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Bateria"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -189,6 +191,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Este widget foi escrito para uma versão antiga desconhecida do Plasma e não "
+"é compatível com o Plasma %1. Entre em contato com o autor do widget para "
+"obter uma versão atualizada."
 
 #: shellprivate/plasmaappletitemmodel.cpp:168
 #, kde-format
@@ -196,6 +201,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Este widget foi escrito para o Plasma %1 e não é compatível com o Plasma %2. "
+"Entre em contato com o autor do widget para obter uma versão atualizada."
 
 #: shellprivate/plasmaappletitemmodel.cpp:172
 #, kde-format
@@ -203,6 +210,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Este widget foi escrito para o Plasma %1 e não é compatível com o Plasma %2. "
+"Atualize o Plasma para usar o widget."
 
 #: shellprivate/plasmaappletitemmodel.cpp:177
 #, kde-format
@@ -210,119 +219,118 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Este widget foi escrito para o Plasma %1 e não é compatível com a versão "
+"mais recente do Plasma. Atualize o Plasma para usar o widget."
 
 #: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Acessibilidade"
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Lançadores de aplicativos"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Astronomia"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Data e hora"
 
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Ferramentas de desenvolvimento"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Educação"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Clima e ambiente"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Exemplos"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Sistema de arquivos"
 
 #: shellprivate/widgetexplorer.cpp:118
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Luiz Fernando Ranghetti"
+msgstr "Jogos e passatempos"
 
 #: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Gráficos"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Idioma"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Mapeamento"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Diversos"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimídia"
 
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Serviços online"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Produtividade"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Informações do sistema"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Utilitários"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Janelas e tarefas"
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Área de transferência"
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Tarefas"
 
 #: shellprivate/widgetexplorer.cpp:146
 #, kde-format

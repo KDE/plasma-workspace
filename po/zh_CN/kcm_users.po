@@ -522,6 +522,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"除非系统中至少存在另外一个管理员账户，否则无法将账户类型更改为标准账户。如果"
+"系统中不存在任何管理员账户，您将无法为需要管理员权限的操作进行身份验证，或者"
+"必须使用根密码进行身份验证 (这是不安全的)。"
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

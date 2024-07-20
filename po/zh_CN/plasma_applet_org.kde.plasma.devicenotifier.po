@@ -200,9 +200,9 @@ msgstr "无法弹出此光盘。"
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "文件系统没有响应"
 
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "挂载于“%1”的文件系统没有响应"

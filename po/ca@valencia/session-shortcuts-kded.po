@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-30 00:39+0000\n"
+"POT-Creation-Date: 2024-07-20 00:41+0000\n"
 "PO-Revision-Date: 2024-01-30 09:09+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -25,9 +25,11 @@ msgid "Session Management"
 msgstr "Gestió de sessions"
 
 #: main.cpp:39
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action"
+#| msgid "Show Logout Prompt"
 msgctxt "@action"
-msgid "Show Logout Prompt"
+msgid "Show Logout Screen"
 msgstr "Mostra l'indicatiu d'eixida"
 
 #: main.cpp:48
