@@ -26,6 +26,7 @@
 #include <QQmlEngine>
 #include <QRegularExpression>
 #include <QScreen>
+#include <QStyleHints>
 
 #include <KLocalizedString>
 #include <KX11Extras>
@@ -116,6 +117,11 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
 
     m_strutsTimer.setSingleShot(true);
     connect(&m_strutsTimer, &QTimer::timeout, this, &PanelView::updateExclusiveZone);
+
+    m_pressAndHoldTimer.setSingleShot(true);
+    connect(&m_pressAndHoldTimer, &QTimer::timeout, this, [&]() {
+        containment()->internalAction(u"configure"_s)->trigger();
+    });
 
     connect(m_corona, &Plasma::Corona::editModeChanged, this, &PanelView::updateEditModeLabel);
 
@@ -1218,6 +1224,26 @@ bool PanelView::event(QEvent *e)
         }
         break;
     }
+
+    case QEvent::TouchBegin: {
+        QTouchEvent *te = static_cast<QTouchEvent *>(e);
+        const auto &point = *(te->points().cbegin());
+        m_pressAndHoldTimer.start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
+        m_touchDownPosition = point.scenePosition();
+        break;
+    }
+    case QEvent::TouchUpdate: {
+        QTouchEvent *te = static_cast<QTouchEvent *>(e);
+        const auto &point = *(te->points().cbegin());
+        if ((m_touchDownPosition - point.scenePosition()).manhattanLength() > 10) {
+            m_pressAndHoldTimer.stop();
+        }
+        break;
+    }
+    case QEvent::TouchCancel:
+    case QEvent::TouchEnd:
+        m_pressAndHoldTimer.stop();
+        break;
 
     case QEvent::Wheel: {
         QWheelEvent *we = static_cast<QWheelEvent *>(e);
