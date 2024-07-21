@@ -352,6 +352,8 @@ private:
     QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView;
     ShellCorona *m_corona;
     QTimer m_strutsTimer;
+    QTimer m_pressAndHoldTimer;
+    QPointF m_touchDownPosition;
     VisibilityMode m_visibilityMode;
     OpacityMode m_opacityMode;
     LengthMode m_lengthMode;
