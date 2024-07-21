@@ -1,16 +1,13 @@
-# translation of plasma_applet_battery.po to
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the powerdevil package.
+# SPDX-FileCopyrightText: 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2008, 2009, 2010, 2011, 2013.
-# Katarzyna Gierlach <gierlach_k@yahoo.pl>, 2011.
-# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_battery\n"
+"Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-12 00:40+0000\n"
-"PO-Revision-Date: 2024-04-28 12:13+0200\n"
+"PO-Revision-Date: 2024-07-20 09:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -111,7 +108,7 @@ msgstr "Aplet baterii zapobiega uśpieniu i blokowaniu ekranu"
 #: package/contents/ui/PowerProfileItem.qml:75
 #, kde-format
 msgid "Power Management"
-msgstr "Zarządzanie energią"
+msgstr "Zarządzanie zasilaniem"
 
 #: package/contents/ui/main.qml:97
 #, kde-format
@@ -355,7 +352,7 @@ msgstr "Tryb zasilania"
 #, kde-format
 msgctxt "Power profile"
 msgid "Not available"
-msgstr "Niedostępny"
+msgstr "Niedostępna"
 
 #: package/contents/ui/PowerProfileItem.qml:143
 #, kde-format

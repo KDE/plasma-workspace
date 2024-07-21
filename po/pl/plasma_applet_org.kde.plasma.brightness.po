@@ -1,13 +1,13 @@
-# Copyright (C) 2023 This file is copyright:
-# This file is distributed under the same license as the plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the powerdevil package.
+# SPDX-FileCopyrightText: 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# SPDX-FileCopyrightText: 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmai.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-workspace\n"
+"Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-05-12 08:35+0200\n"
+"PO-Revision-Date: 2024-07-20 10:26+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
 #, kde-format
@@ -66,12 +67,12 @@ msgstr "Jasność i barwa"
 #: package/contents/ui/main.qml:77
 #, kde-format
 msgid "Screen brightness at %1%"
-msgstr "jasność ekranu przy %1%"
+msgstr "Jasność ekranu przy %1%"
 
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Keyboard brightness at %1%"
-msgstr "jasność klawiatury przy %1%"
+msgstr "Jasność klawiatury przy %1%"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
@@ -89,37 +90,37 @@ msgstr "Wycofano nocne barwy"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr "Nocne barwy o temperaturze barwowej jak za dnia"
+msgstr "Temperatura nocnych barw w dzień"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr "Nocne barwy o temperaturze barwowej jak w nocy"
+msgstr "Temperatura nocnych barw w nocy"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr "Przejście na nocne barwy o poranku (do ukończenia o %1)"
+msgstr "Nocne barwy w porannym przejściu (ukończ przed %1)"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr "Przejście na nocne barwy wieczorem (do ukończenia o %1)"
+msgstr "Nocne barwy w wieczornym przejściu (ukończ przed %1)"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr "Przejście na nocne barwy wieczorem zaplanowane na %1"
+msgstr "Wieczorne przejście nocnych barw zaplanowano na %1"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr "Przejście na nocne barwy o poranku zaplanowane na %1"
+msgstr "Poranne przejście nocnych barw zaplanowano na %1"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
@@ -135,7 +136,7 @@ msgstr "Kliknij środkowym, aby wycofać nocne barwy"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Configure Night Light…"
-msgstr "Ustawienia nocnych barw…"
+msgstr "Ustawienia barw nocnych..."
 
 #: package/contents/ui/NightLightItem.qml:75
 #, kde-format
@@ -171,7 +172,7 @@ msgstr "Wł."
 #, kde-format
 msgctxt "Night light phase"
 msgid "Morning Transition"
-msgstr "Przejście o poranku"
+msgstr "Przejście poranne"
 
 #: package/contents/ui/NightLightItem.qml:92
 #, kde-format
@@ -183,7 +184,7 @@ msgstr "Dzień"
 #, kde-format
 msgctxt "Night light phase"
 msgid "Evening Transition"
-msgstr "Przejście wieczorem"
+msgstr "Przejście wieczorne"
 
 #: package/contents/ui/NightLightItem.qml:96
 #, kde-format
@@ -217,25 +218,25 @@ msgstr "Włącz i ustaw…"
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day complete by:"
-msgstr "Przejście na dzień kończące się o:"
+msgstr "Przejście na nocne dzienne zakończy się o:"
 
 #: package/contents/ui/NightLightItem.qml:172
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night scheduled for:"
-msgstr "Przejście na noc zaplanowane na:"
+msgstr "Przejście na nocne barwy zaplanowano na:"
 
 #: package/contents/ui/NightLightItem.qml:174
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to night complete by:"
-msgstr "Przejście na noc kończące się o:"
+msgstr "Przejście na nocne barwy zakończy się o:"
 
 #: package/contents/ui/NightLightItem.qml:176
 #, kde-format
 msgctxt "Label for a time"
 msgid "Transition to day scheduled for:"
-msgstr "Przejście na dzień zaplanowane na:"
+msgstr "Przejście na dzienne barwy zaplanowano na:"
 
 #: package/contents/ui/PopupDialog.qml:66
 #, kde-format
@@ -255,7 +256,7 @@ msgstr "Barwa klawiatury"
 #: package/contents/ui/PopupDialog.qml:140
 #, kde-format
 msgid "Night Light"
-msgstr "Nocne światło"
+msgstr "Nocne barwy"
 
 #~ msgctxt "Status"
 #~ msgid "Night Light off"
