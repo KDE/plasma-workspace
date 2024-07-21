@@ -19,11 +19,16 @@ class DeclarativeHistoryModel : public QIdentityProxyModel
     Q_OBJECT
     QML_NAMED_ELEMENT(HistoryModel)
 
+    Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
+
 public:
     explicit DeclarativeHistoryModel(QObject *parent = nullptr);
     ~DeclarativeHistoryModel() override;
 
     Q_INVOKABLE void clearHistory();
+
+Q_SIGNALS:
+    void countChanged();
 
 private:
     std::shared_ptr<HistoryModel> m_model;

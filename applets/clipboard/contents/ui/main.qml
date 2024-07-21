@@ -20,7 +20,7 @@ import org.kde.plasma.private.clipboard 0.1 as Private
 PlasmoidItem {
     id: main
 
-    property bool isClipboardEmpty: clipboardSource.data["clipboard"]["empty"]
+    readonly property bool isClipboardEmpty: historyModel.count === 0
     property bool editing: false
     property alias clearHistoryAction: clearAction
 

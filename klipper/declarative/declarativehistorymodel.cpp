@@ -12,6 +12,10 @@ DeclarativeHistoryModel::DeclarativeHistoryModel(QObject *parent)
     , m_model(HistoryModel::self())
 {
     setSourceModel(m_model.get());
+
+    connect(this, &QIdentityProxyModel::rowsInserted, this, &DeclarativeHistoryModel::countChanged);
+    connect(this, &QIdentityProxyModel::rowsRemoved, this, &DeclarativeHistoryModel::countChanged);
+    connect(this, &QIdentityProxyModel::modelReset, this, &DeclarativeHistoryModel::countChanged);
 }
 
 DeclarativeHistoryModel::~DeclarativeHistoryModel()
