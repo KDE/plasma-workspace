@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-18 00:40+0000\n"
-"PO-Revision-Date: 2023-10-07 07:45+0200\n"
+"PO-Revision-Date: 2024-07-20 09:05+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -379,20 +380,16 @@ msgid "Users"
 msgstr "Użytkownicy"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Dodaj nowy"
+msgstr "Dodaj nowy…"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Dodaj nowy"
+msgstr "Dodaj nowego użytkownika…"
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -561,6 +558,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Nie można zmienić rodzaju konta na zwyczajne, gdy nie istnieje konto żadnego "
+"innego administratora na tym systemie. Bez niego, uwierzytelnianie jest "
+"niemożliwe lub będzie wymagało niebezpiecznego użycia hasła administratora."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

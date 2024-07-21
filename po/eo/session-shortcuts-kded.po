@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: desktop files\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-20 00:41+0000\n"
-"PO-Revision-Date: 2024-02-02 22:38+0100\n"
+"PO-Revision-Date: 2024-07-20 17:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -26,12 +26,10 @@ msgid "Session Management"
 msgstr "Seanca Administrado"
 
 #: main.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Logout Prompt"
+#, kde-format
 msgctxt "@action"
 msgid "Show Logout Screen"
-msgstr "Montri Elsalutan Invitilon"
+msgstr "Montri Elsalutan Ekranon"
 
 #: main.cpp:48
 #, kde-format

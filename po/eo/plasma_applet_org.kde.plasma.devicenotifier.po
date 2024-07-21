@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-01-11 07:32+0100\n"
+"PO-Revision-Date: 2024-07-20 17:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -208,9 +208,9 @@ msgstr "Ne eblis elĵeti ĉi tiun diskon."
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "Dosiersistemo ne estas respondanta"
 
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "Dosiersistemo surmetita ĉe '%1' ne estas respondanta"

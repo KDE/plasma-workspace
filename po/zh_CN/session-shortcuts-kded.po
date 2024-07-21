@@ -24,9 +24,7 @@ msgid "Session Management"
 msgstr "会话管理"
 
 #: main.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Logout Prompt"
+#, kde-format
 msgctxt "@action"
 msgid "Show Logout Screen"
 msgstr "显示注销屏幕"

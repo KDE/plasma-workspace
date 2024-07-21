@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-18 00:40+0000\n"
-"PO-Revision-Date: 2024-07-12 22:08+0200\n"
+"PO-Revision-Date: 2024-07-20 17:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -562,6 +562,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Ne povas ŝanĝi la kontotipon al Norma krom se ekzistas almenaŭ alia "
+"Administra konto en la sistemo. Sen unu, aŭtentigo fariĝus neebla aŭ "
+"postulus la nesekuran uzon de la radika pasvorto."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format
