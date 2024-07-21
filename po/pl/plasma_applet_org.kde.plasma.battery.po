@@ -1,16 +1,13 @@
-# translation of plasma_applet_battery.po to
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2007, 2008, 2009, 2010, 2011, 2013.
-# Katarzyna Gierlach <gierlach_k@yahoo.pl>, 2011.
-# SPDX-FileCopyrightText: 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the powerdevil package.
+# SPDX-FileCopyrightText: 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_battery\n"
+"Project-Id-Version: powerdevil\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 03:09+0000\n"
-"PO-Revision-Date: 2023-04-09 09:59+0200\n"
+"PO-Revision-Date: 2024-07-20 09:32+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -125,7 +122,7 @@ msgstr "Bateria"
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Power Management"
-msgstr "Zarządzanie energią"
+msgstr "Zarządzanie zasilaniem"
 
 #: package/contents/ui/main.qml:152
 #, kde-format
@@ -208,7 +205,7 @@ msgstr "System działa w trybie oszczędzania energii"
 #: package/contents/ui/main.qml:208
 #, kde-format
 msgid "Scroll to adjust screen brightness"
-msgstr "Kółko dostosowuje jasność ekranu"
+msgstr "Przewiń, aby dostosować jasność ekranu"
 
 #: package/contents/ui/main.qml:310
 #, kde-format
