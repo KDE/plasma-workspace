@@ -155,7 +155,7 @@ PlasmaExtras.ExpandableListItem {
 
     isBusy: deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working
 
-    customExpandedViewContent: deviceActions.rowCount() === 0 ? null : actionComponent
+    customExpandedViewContent: deviceActions.rowCount() === 0 || deviceOperationResult === DN.DevicesStateMonitor.Working ? null : actionComponent
 
     Component {
         id: actionComponent
