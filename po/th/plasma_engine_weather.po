@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-23 00:41+0000\n"
 "PO-Revision-Date: 2010-10-25 16:19+0700\n"
 "Last-Translator: Phuwanat Sakornsakolpat <narachai@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -3021,24 +3021,24 @@ msgctxt "weather condition"
 msgid "n/a"
 msgstr "ไม่มีข้อมูล"
 
-#: ions/wetter.com/ion_wettercom.cpp:361
+#: ions/wetter.com/ion_wettercom.cpp:362
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
 msgstr "%1, %2, %3"
 
-#: ions/wetter.com/ion_wettercom.cpp:363
+#: ions/wetter.com/ion_wettercom.cpp:364
 #, kde-format
 msgctxt "Geographical location: quarter (city), state, ISO-country-code"
 msgid "%1 (%2), %3, %4"
 msgstr "%1 (%2), %3, %4"
 
-#: ions/wetter.com/ion_wettercom.cpp:684
+#: ions/wetter.com/ion_wettercom.cpp:670
 #, kde-format
 msgid "Day"
 msgstr "กลางวัน"
 
-#: ions/wetter.com/ion_wettercom.cpp:694
+#: ions/wetter.com/ion_wettercom.cpp:680
 #, kde-format
 msgid "Night"
 msgstr "กลางคืน"

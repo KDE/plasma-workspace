@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-18 00:40+0000\n"
-"PO-Revision-Date: 2024-07-08 18:10+0200\n"
+"PO-Revision-Date: 2024-07-22 19:25+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -530,6 +530,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Non é posíbel cambiar o tipo de conta a «estándar» a menos que haxa polo "
+"menos outra conta de administración no sistema. Sen unha,non sería posíbel "
+"autenticarse ou requiriría o uso inseguro do contrasinal de «root»."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

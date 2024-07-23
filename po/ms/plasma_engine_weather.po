@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-23 00:41+0000\n"
 "PO-Revision-Date: 2010-06-20 22:06+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -2990,24 +2990,24 @@ msgctxt "weather condition"
 msgid "n/a"
 msgstr "tiada"
 
-#: ions/wetter.com/ion_wettercom.cpp:361
+#: ions/wetter.com/ion_wettercom.cpp:362
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
 msgstr ""
 
-#: ions/wetter.com/ion_wettercom.cpp:363
+#: ions/wetter.com/ion_wettercom.cpp:364
 #, kde-format
 msgctxt "Geographical location: quarter (city), state, ISO-country-code"
 msgid "%1 (%2), %3, %4"
 msgstr ""
 
-#: ions/wetter.com/ion_wettercom.cpp:684
+#: ions/wetter.com/ion_wettercom.cpp:670
 #, kde-format
 msgid "Day"
 msgstr "Siang"
 
-#: ions/wetter.com/ion_wettercom.cpp:694
+#: ions/wetter.com/ion_wettercom.cpp:680
 #, kde-format
 msgid "Night"
 msgstr "Malam"

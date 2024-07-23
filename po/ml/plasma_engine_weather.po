@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-22 00:41+0000\n"
+"POT-Creation-Date: 2024-07-23 00:41+0000\n"
 "PO-Revision-Date: 2021-03-08 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc-"
@@ -2970,24 +2970,24 @@ msgctxt "weather condition"
 msgid "n/a"
 msgstr "ലഭ്യമല്ല"
 
-#: ions/wetter.com/ion_wettercom.cpp:361
+#: ions/wetter.com/ion_wettercom.cpp:362
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
 msgstr "%1, %2, %3"
 
-#: ions/wetter.com/ion_wettercom.cpp:363
+#: ions/wetter.com/ion_wettercom.cpp:364
 #, kde-format
 msgctxt "Geographical location: quarter (city), state, ISO-country-code"
 msgid "%1 (%2), %3, %4"
 msgstr "%1 (%2), %3, %4"
 
-#: ions/wetter.com/ion_wettercom.cpp:684
+#: ions/wetter.com/ion_wettercom.cpp:670
 #, kde-format
 msgid "Day"
 msgstr "ദിവസം"
 
-#: ions/wetter.com/ion_wettercom.cpp:694
+#: ions/wetter.com/ion_wettercom.cpp:680
 #, kde-format
 msgid "Night"
 msgstr "രാത്രി"
