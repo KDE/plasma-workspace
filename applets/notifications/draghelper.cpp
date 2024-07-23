@@ -75,7 +75,7 @@ void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pix
             m_dragActive = true;
             Q_EMIT dragActiveChanged();
 
-            drag->exec();
+            drag->exec(Qt::CopyAction);
 
             m_dragActive = false;
             Q_EMIT dragActiveChanged();
