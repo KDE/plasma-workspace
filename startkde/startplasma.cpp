@@ -125,7 +125,8 @@ inline bool isSessionVariable(QStringView name)
 
 void setEnvironmentVariable(const char *name, QByteArrayView value)
 {
-    if (qgetenv(name) != value) {
+    const QByteArray currentValue = qgetenv(name);
+    if (currentValue.isNull() || currentValue != value) {
         qputenv(name, value);
     }
 }
