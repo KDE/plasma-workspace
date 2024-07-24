@@ -9,8 +9,8 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-01-26 20:50+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-07-22 13:09+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 "\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/DeviceItem.qml:118
 #, kde-format
@@ -205,12 +205,12 @@ msgstr "Gat ekki ýtt þessum diski úr."
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "Skráakerfi svarar ekki"
 
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "Skráakerfið sem tengt er á '%1' svarar ekki"
 
 #, fuzzy
 #~| msgid "General"
