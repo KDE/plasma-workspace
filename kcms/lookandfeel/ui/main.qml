@@ -122,7 +122,13 @@ KCM.GridViewKCM {
             },
             Kirigami.Action {
                 icon.name: "edit-delete"
-                tooltip: i18nc("@action:button", "Remove Theme")
+                tooltip: if (enabled) {
+                    return i18nc("@info:tooltip", "Remove theme");
+                } else if (delegate.GridView.isCurrentItem) {
+                    return i18nc("@info:tooltip", "Cannot delete the active theme");
+                } else {
+                    return i18nc("@info:tooltip", "Cannot delete system-installed themes");
+                }
                 enabled: model.uninstallable && !delegate.GridView.isCurrentItem
                 onTriggered: confirmDeletionDialog.incubateObject(root, {
                     "index": model.index,
