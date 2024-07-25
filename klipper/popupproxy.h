@@ -8,12 +8,11 @@
 #include <QObject>
 #include <QRegularExpression>
 
-#include "history.h"
-
 class QMenu;
 
 class HistoryItem;
 class KlipperPopup;
+class HistoryModel;
 
 /**
  * Proxy helper for the "more" menu item
@@ -66,6 +65,7 @@ private:
     void deleteMoreMenus();
 
 private:
+    std::shared_ptr<HistoryModel> m_model;
     QMenu *m_proxy_for_menu;
     QByteArray m_spill_uuid;
     QRegularExpression m_filter;

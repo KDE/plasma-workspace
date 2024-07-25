@@ -8,6 +8,7 @@
 #include "../historyimageitem.h"
 #include "../historystringitem.h"
 #include "../historyurlitem.h"
+#include "systemclipboard.h"
 
 #include <QAbstractItemModelTester>
 #include <QTest>
@@ -26,11 +27,13 @@ private Q_SLOTS:
 
 void HistoryModelTest::testSetMaxSize()
 {
+    SystemClipboard::self()->clear();
     std::shared_ptr<HistoryModel> history = HistoryModel::self();
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
+    history->setMaxSize(0);
 
     QCOMPARE(history->rowCount(), 0);
-    QCOMPARE(history->maxSize(), 0);
+    QCOMPARE(history->maxSize(), 0); // Default value
 
     // insert an item - should still be empty
     history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));

@@ -5,7 +5,6 @@
 */
 
 #include "clipboardjob.h"
-#include "history.h"
 #include "historyitem.h"
 #include "historymodel.h"
 #include "historystringitem.h"
@@ -47,24 +46,25 @@ void ClipboardJob::start()
     }
 
     // other operations need the item
-    HistoryItemConstPtr item = m_klipper->history()->find(QByteArray::fromBase64(destination().toUtf8()));
-    if (!item) {
+    const int itemIndex = m_model->indexOf(QByteArray::fromBase64(destination().toUtf8()));
+    if (itemIndex < 0) {
         setResult(false);
         return;
     }
+    HistoryItemConstPtr item = m_model->index(itemIndex).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
     if (operation == QLatin1String("select")) {
-        m_klipper->history()->slotMoveToTop(item->uuid());
+        m_model->moveToTop(item->uuid());
         setResult(true);
     } else if (operation == QLatin1String("remove")) {
-        m_klipper->history()->remove(item);
+        m_model->remove(item->uuid());
         setResult(true);
     } else if (operation == QLatin1String("edit")) {
         if (parameters().contains(QLatin1String("text"))) {
             const QString text = parameters()[QLatin1String("text")].toString();
-            m_klipper->history()->remove(item);
-            m_klipper->history()->insert(HistoryItemPtr(new HistoryStringItem(text)));
+            m_model->remove(item->uuid());
+            m_model->insert(HistoryItemPtr(new HistoryStringItem(text)));
             if (m_klipper->urlGrabber()) {
-                m_klipper->urlGrabber()->checkNewData(HistoryItemConstPtr(m_klipper->history()->first()));
+                m_klipper->urlGrabber()->checkNewData(HistoryItemConstPtr(m_model->first()));
             }
             setResult(true);
             return;
@@ -113,7 +113,6 @@ void ClipboardJob::start()
     } else if (operation == QLatin1String("action")) {
         m_klipper->urlGrabber()->invokeAction(item);
         setResult(true);
-
     } else if (operation == s_previewKey) {
         const int pixelWidth = parameters().value(s_previewWidthKey).toInt();
         const int pixelHeight = parameters().value(s_previewHeightKey).toInt();

@@ -21,8 +21,8 @@
 class KToggleAction;
 class KActionCollection;
 class KlipperPopup;
+class HistoryCycler;
 class QTime;
-class History;
 class QAction;
 class QMenu;
 class QMimeData;
@@ -61,14 +61,6 @@ public:
 
     bool eventFilter(QObject *object, QEvent *event) override;
 
-    /**
-     * Get clipboard history (the "document")
-     */
-    History *history()
-    {
-        return m_history;
-    }
-
     URLGrabber *urlGrabber() const
     {
         return m_myURLGrabber;
@@ -83,7 +75,7 @@ public:
 
     KlipperPopup *popup()
     {
-        return m_popup;
+        return m_popup.get();
     }
 
     void showBarcode(std::shared_ptr<const HistoryItem> item);
@@ -131,7 +123,7 @@ protected Q_SLOTS:
     void disableURLGrabber();
 
 private Q_SLOTS:
-    void slotHistoryChanged();
+    void slotHistoryChanged(bool isTop = false);
 
     void slotStartShowTimer();
 
@@ -142,12 +134,12 @@ private:
     static void updateTimestamp();
 
     std::shared_ptr<SystemClipboard> m_clip;
+    HistoryCycler *m_historyCycler = nullptr;
 
     QElapsedTimer m_showTimer;
 
-    History *m_history;
     std::shared_ptr<HistoryModel> m_historyModel;
-    KlipperPopup *m_popup;
+    std::unique_ptr<KlipperPopup> m_popup;
 
     KToggleAction *m_toggleURLGrabAction;
     QAction *m_clearHistoryAction;

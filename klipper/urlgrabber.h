@@ -14,7 +14,7 @@
 
 #include "klipper_export.h"
 
-class History;
+class HistoryCycler;
 class HistoryItem;
 class QTimer;
 
@@ -31,7 +31,7 @@ class KLIPPER_EXPORT URLGrabber : public QObject
     Q_OBJECT
 
 public:
-    explicit URLGrabber(History *history);
+    explicit URLGrabber(QObject *parent);
     ~URLGrabber() override;
 
     /**
@@ -96,7 +96,7 @@ private:
     QTimer *m_myPopupKillTimer;
     int m_myPopupKillTimeout;
     bool m_stripWhiteSpace;
-    History *m_history;
+    HistoryCycler *m_history;
 
 private Q_SLOTS:
     void slotItemSelected(QAction *action);

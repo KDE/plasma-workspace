@@ -8,12 +8,14 @@
 #include <memory>
 
 #include <QAbstractListModel>
+#include <QBindable>
 #include <QRecursiveMutex>
 #include <QTimer>
 
 #include "klipper_export.h"
 
 class HistoryItem;
+class SystemClipboard;
 
 class KLIPPER_EXPORT HistoryModel : public QAbstractListModel
 {
@@ -34,10 +36,14 @@ public:
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
     QHash<int, QByteArray> roleNames() const override;
+
+    /**
+     * Remove (first) history item equal to item from history
+     */
     bool remove(const QByteArray &uuid);
 
-    int maxSize() const;
-    void setMaxSize(int size);
+    qsizetype maxSize() const;
+    void setMaxSize(qsizetype size);
 
     bool displayImages() const;
     void setDisplayImages(bool show);
@@ -47,6 +53,10 @@ public:
      */
     void clear();
     void clearHistory();
+
+    /**
+     * Move the history in position pos to top
+     */
     void moveToTop(const QByteArray &uuid);
     void moveTopToBack();
     void moveBackToTop();
@@ -54,11 +64,25 @@ public:
     int indexOf(const QByteArray &uuid) const;
     int indexOf(const HistoryItem *item) const;
 
+    /**
+     * Traversal: Get first item
+     */
+    std::shared_ptr<const HistoryItem> first() const;
+
+    /**
+     * Inserts item into clipboard history top
+     * if duplicate entry exist, the older duplicate is deleted.
+     * The duplicate concept is "deep", so that two text string
+     * are considerd duplicate if identical.
+     */
     void insert(const std::shared_ptr<HistoryItem> &item);
 
-    QRecursiveMutex *mutex()
+    /**
+     * @return true if the user has selected the top item
+     */
+    QBindable<bool> topIsUserSelected() const
     {
-        return &m_mutex;
+        return &m_topIsUserSelected;
     }
 
     /**
@@ -70,35 +94,37 @@ public:
      */
     bool loadHistory();
 
+    void loadSettings();
+
     /**
      * Save history to disk
      */
     bool saveHistory(bool empty = false);
     void startSaveHistoryTimer(std::chrono::seconds delay = std::chrono::seconds(5));
 
+Q_SIGNALS:
+    void changed(bool isTop = false);
+
+    /**
+     * Emitted when the first history item has changed.
+     */
+    void topChanged();
+
 private:
     explicit HistoryModel();
 
-    void moveToTop(int row);
+    void moveToTop(qsizetype row);
+
+    std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
-    int m_maxSize;
+    qsizetype m_maxSize = 0;
     bool m_displayImages;
     QRecursiveMutex m_mutex;
 
+    /**
+     * True if the top is selected by the user
+     */
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(HistoryModel, bool, m_topIsUserSelected, false)
+
     QTimer m_saveFileTimer;
 };
-
-inline int HistoryModel::maxSize() const
-{
-    return m_maxSize;
-}
-
-inline bool HistoryModel::displayImages() const
-{
-    return m_displayImages;
-}
-
-inline void HistoryModel::setDisplayImages(bool show)
-{
-    m_displayImages = show;
-}

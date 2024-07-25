@@ -12,21 +12,29 @@
 #include <KLocalizedString>
 
 #include "historyitem.h"
+#include "historymodel.h"
 #include "klipperpopup.h"
 #include "utils.h"
 
 PopupProxy::PopupProxy(KlipperPopup *parent, int menu_height, int menu_width)
     : QObject(parent)
+    , m_model(HistoryModel::self())
     , m_proxy_for_menu(parent)
     , m_spill_uuid()
     , m_menu_height(menu_height)
     , m_menu_width(menu_width)
 {
-    if (!parent->history()->empty()) {
-        m_spill_uuid = parent->history()->first()->uuid();
+    if (m_model->rowCount() > 0) {
+        m_spill_uuid = m_model->first()->uuid();
     }
-    connect(parent->history(), &History::changed, this, &PopupProxy::slotHistoryChanged);
-    connect(m_proxy_for_menu, SIGNAL(triggered(QAction *)), parent->history(), SLOT(slotMoveToTop(QAction *)));
+    connect(m_model.get(), &HistoryModel::changed, this, &PopupProxy::slotHistoryChanged);
+    connect(m_proxy_for_menu, &QMenu::triggered, m_model.get(), [this](QAction *action) {
+        QByteArray uuid = action->data().toByteArray();
+        if (uuid.isNull()) { // not an action from popupproxy
+            return;
+        }
+        m_model->moveToTop(uuid);
+    });
 }
 
 void PopupProxy::slotHistoryChanged()
@@ -54,7 +62,7 @@ int PopupProxy::buildParent(int index, const QRegularExpression &filter)
 {
     deleteMoreMenus();
     // Start from top of  history (again)
-    m_spill_uuid = parent()->history()->empty() ? QByteArray() : parent()->history()->first()->uuid();
+    m_spill_uuid = m_model->rowCount() == 0 ? QByteArray() : m_model->first()->uuid();
     if (filter.isValid()) {
         m_filter = filter;
     }
@@ -115,7 +123,6 @@ void PopupProxy::tryInsertItem(HistoryItem const *const item, int &remainingHeig
 
 int PopupProxy::insertFromSpill(int index)
 {
-    const History *history = parent()->history();
     // This menu is going to be filled, so we don't need the aboutToShow()
     // signal anymore
     disconnect(m_proxy_for_menu, nullptr, this, nullptr);
@@ -125,22 +132,24 @@ int PopupProxy::insertFromSpill(int index)
     // stop when the total number of items equal m_itemsPerMenu;
     int count = 0;
     int remainingHeight = m_menu_height - m_proxy_for_menu->sizeHint().height();
-    auto item = history->find(m_spill_uuid);
-    if (!item) {
+    const int _index = m_model->indexOf(m_spill_uuid);
+    if (_index < 0) {
         return count;
     }
+
+    auto item = m_model->index(_index, 0).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
     do {
         if (m_filter.match(item->text()).hasMatch()) {
             tryInsertItem(item.get(), remainingHeight, index++);
             count++;
         }
-        item = history->find(item->next_uuid());
-    } while (item && history->first() != item && remainingHeight >= 0);
+        item = m_model->index(m_model->indexOf(item->next_uuid()), 0).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
+    } while (item && m_model->first() != item && remainingHeight >= 0);
     m_spill_uuid = item->uuid();
 
     // If there is more items in the history, insert a new "More..." menu and
     // make *this a proxy for that menu ('s content).
-    if (history->first() && m_spill_uuid != history->first()->uuid()) {
+    if (m_model->rowCount() > 0 && m_spill_uuid != m_model->first()->uuid()) {
         QMenu *moreMenu = new QMenu(i18n("&More"), m_proxy_for_menu);
         connect(moreMenu, &QMenu::aboutToShow, this, &PopupProxy::slotAboutToShow);
         QAction *before = index < m_proxy_for_menu->actions().count() ? m_proxy_for_menu->actions().at(index) : nullptr;

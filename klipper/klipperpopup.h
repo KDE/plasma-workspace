@@ -6,8 +6,8 @@
 #pragma once
 
 #include <QList>
-
 #include <QMenu>
+#include <QPropertyNotifier>
 
 class QAction;
 class QWidgetAction;
@@ -16,7 +16,7 @@ class QKeyEvent;
 class KLineEdit;
 
 class PopupProxy;
-class History;
+class HistoryModel;
 
 /**
  * Default view of clipboard history.
@@ -27,7 +27,7 @@ class KlipperPopup : public QMenu
     Q_OBJECT
 
 public:
-    explicit KlipperPopup(History *history);
+    explicit KlipperPopup();
     ~KlipperPopup() override = default;
 
     /**
@@ -37,21 +37,11 @@ public:
      */
     void ensureClean();
 
-    History *history()
-    {
-        return m_history;
-    }
-    const History *history() const
-    {
-        return m_history;
-    }
-
 public Q_SLOTS:
     void slotHistoryChanged()
     {
         m_dirty = true;
     }
-    void slotTopIsUserSelectedSet();
     void slotAboutToShow();
     /**
      * set the top history item active, to easy kb navigation
@@ -73,7 +63,7 @@ private:
     /**
      * The "document" (clipboard history)
      */
-    History *m_history;
+    std::shared_ptr<HistoryModel> m_model;
 
     /**
      * Proxy helper object used to track history items
@@ -94,4 +84,6 @@ private:
      * The last event which was received. Used to avoid an infinite event loop
      */
     QKeyEvent *m_lastEvent;
+
+    QPropertyNotifier m_notifier;
 };
