@@ -43,13 +43,13 @@ KCM.SimpleKCM {
 
     actions: [
         Kirigami.Action {
-            text: i18nc("@action:button Plasma-specific notifications", "System Notifications…")
+            text: i18nc("@action:button Plasma-specific notifications", "System Notifications")
             icon.name: "notifications-symbolic"
             enabled: root.notificationsAvailable
             onTriggered: root.openSystemNotificationSettings()
         },
         Kirigami.Action {
-            text: i18nc("@action:button Application-specific notifications", "Application Settings…")
+            text: i18nc("@action:button Application-specific notifications", "Application Settings")
             icon.name: "applications-all-symbolic"
             enabled: root.notificationsAvailable
             onTriggered: root.openSourcesSettings()
