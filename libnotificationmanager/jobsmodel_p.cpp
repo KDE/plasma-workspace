@@ -13,6 +13,8 @@
 
 #include "utils_p.h"
 
+#include "settings.h"
+
 #include "jobviewserveradaptor.h"
 #include "jobviewserverv2adaptor.h"
 #include "kuiserveradaptor.h"
