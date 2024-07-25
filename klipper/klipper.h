@@ -90,7 +90,6 @@ public:
 
 public Q_SLOTS:
     void saveSession();
-    void slotHistoryTopChanged();
     void slotConfigure();
     void slotCycleNext();
     void slotCyclePrev();
@@ -132,8 +131,6 @@ protected Q_SLOTS:
     void disableURLGrabber();
 
 private Q_SLOTS:
-    void slotClearClipboard();
-
     void slotHistoryChanged();
 
     void slotStartShowTimer();

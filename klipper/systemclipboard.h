@@ -64,8 +64,8 @@ public:
      * a boolean true as a mode.
      */
     enum SelectionMode {
-        Clipboard = 2,
-        Selection = 4,
+        Clipboard = 1 << 1,
+        Selection = 1 << 2,
     };
 
     enum class ClipboardUpdateReason {
@@ -77,8 +77,10 @@ public:
     static std::shared_ptr<SystemClipboard> self();
     ~SystemClipboard() override;
 
-    void clear(QClipboard::Mode mode);
-    void setMimeData(const std::shared_ptr<const HistoryItem> &data, int mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
+    void clear(SelectionMode mode = SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+    void setMimeData(const std::shared_ptr<const HistoryItem> &data,
+                     SelectionMode mode,
+                     ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
 
     bool isLocked(QClipboard::Mode mode);
 

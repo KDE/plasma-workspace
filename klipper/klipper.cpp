@@ -214,7 +214,7 @@ void Klipper::setClipboardContents(const QString &s)
         return;
     updateTimestamp();
     HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
-    m_clip->setMimeData(item, SystemClipboard::Clipboard | SystemClipboard::Selection);
+    m_clip->setMimeData(item, SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
     history()->insert(item);
 }
 
@@ -222,7 +222,7 @@ void Klipper::setClipboardContents(const QString &s)
 void Klipper::clearClipboardContents()
 {
     updateTimestamp();
-    slotClearClipboard();
+    m_clip->clear();
 }
 
 // DBUS - don't call from Klipper itself
@@ -444,12 +444,6 @@ void Klipper::slotHistoryTopChanged()
     }
 }
 
-void Klipper::slotClearClipboard()
-{
-    m_clip->clear(QClipboard::Selection);
-    m_clip->clear(QClipboard::Clipboard);
-}
-
 HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
 {
     Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
@@ -470,13 +464,6 @@ HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
     }
 
     return item;
-}
-
-void Klipper::slotHistoryChanged()
-{
-    if (history()->empty()) {
-        slotClearClipboard();
-    }
 }
 
 void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)

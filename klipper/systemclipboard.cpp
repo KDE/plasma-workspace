@@ -102,13 +102,21 @@ SystemClipboard::~SystemClipboard()
 {
 }
 
-void SystemClipboard::clear(QClipboard::Mode mode)
+void SystemClipboard::clear(SelectionMode mode)
 {
-    Ignore lock(mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel);
-    m_clip->clear(mode);
+    Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
+
+    if (mode & Selection) {
+        Ignore lock(m_selectionLocklevel);
+        m_clip->clear(QClipboard::Selection);
+    }
+    if (mode & Clipboard) {
+        Ignore lock(m_clipboardLocklevel);
+        m_clip->clear(QClipboard::Clipboard);
+    }
 }
 
-void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, int mode, ClipboardUpdateReason updateReason)
+void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode mode, ClipboardUpdateReason updateReason)
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
