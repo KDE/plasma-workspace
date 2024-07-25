@@ -45,6 +45,11 @@ public:
     QStringList outputOrder() const;
 
     /**
+     * Returns the list of disabled outputs. Only valid on X11.
+     */
+    QStringList disabledOutputs() const;
+
+    /**
      * @internal
      * For X11 we know libkscreen takes a server grab whilst changing properties.
      * This means we know at the time of any runtime screen addition and removal the priorities will
@@ -74,6 +79,7 @@ protected:
     void useFallback(bool fallback);
 
     QStringList m_outputOrder;
+    QStringList m_disabledOutputs;
     bool m_orderProtocolPresent = false;
 
 private:

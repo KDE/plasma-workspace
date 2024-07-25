@@ -100,6 +100,7 @@ OutputOrderWatcher *OutputOrderWatcher::instance(QObject *parent)
 void OutputOrderWatcher::refresh()
 {
     Q_ASSERT(!m_orderProtocolPresent);
+    m_disabledOutputs.clear();
 
     QStringList pendingOutputOrder;
 
@@ -129,6 +130,11 @@ void OutputOrderWatcher::refresh()
 QStringList OutputOrderWatcher::outputOrder() const
 {
     return m_outputOrder;
+}
+
+QStringList OutputOrderWatcher::disabledOutputs() const
+{
+    return m_disabledOutputs;
 }
 
 X11OutputOrderWatcher::X11OutputOrderWatcher(QObject *parent)
@@ -174,6 +180,10 @@ void X11OutputOrderWatcher::refresh()
         OutputOrderWatcher::refresh();
         return;
     }
+
+    m_disabledOutputs.clear();
+    const auto screens = qGuiApp->screens();
+    const auto screenNames = screens | std::views::transform(&QScreen::name);
     QList<std::pair<uint, QString>> orderMap;
 
     ScopedPointer<xcb_randr_get_screen_resources_current_reply_t> reply(xcb_randr_get_screen_resources_current_reply(
@@ -211,15 +221,16 @@ void X11OutputOrderWatcher::refresh()
 
         const uint32_t order = *xcb_randr_get_output_property_data(orderReply.data());
 
+        const QString screenName = QString::fromUtf8(reinterpret_cast<const char *>(xcb_randr_get_output_info_name(output.get())),
+                                                     xcb_randr_get_output_info_name_length(output.get()));
         if (order > 0) { // 0 is the special case for disabled, so we ignore it
-            orderMap.emplace_back(order,
-                                  QString::fromUtf8(reinterpret_cast<const char *>(xcb_randr_get_output_info_name(output.get())),
-                                                    xcb_randr_get_output_info_name_length(output.get())));
+            orderMap.emplace_back(order, screenName);
+        } else if (std::ranges::find(screenNames, screenName) != screenNames.end()) {
+            // Can be available in QGuiApplication::screens(), save it to keep two lists synced
+            m_disabledOutputs.emplace_back(screenName);
         }
     }
 
-    const auto screens = qGuiApp->screens();
-    const auto screenNames = screens | std::views::transform(&QScreen::name);
     const bool isScreenPresent = std::ranges::all_of(std::as_const(orderMap), [&screenNames](const auto &pr) {
         return std::ranges::find(screenNames, std::get<QString>(pr)) != screenNames.end();
     });

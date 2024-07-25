@@ -372,7 +372,8 @@ void ScreenPool::screenInvariants()
     Q_ASSERT_X((m_availableScreens.count() + m_redundantScreens.count()) == m_outputOrderWatcher->outputOrder().count(),
                Q_FUNC_INFO,
                qUtf8Printable(debugMessage())); // https://crash-reports.kde.org/organizations/kde/issues/5249/
-    Q_ASSERT_X(allScreens.count() == m_sizeSortedScreens.count(),
+    // BUG 490746: QGuiApplication::screens() might not remove disabled screens from the list
+    Q_ASSERT_X(allScreens.size() == m_sizeSortedScreens.size() + m_outputOrderWatcher->disabledOutputs().size(),
                Q_FUNC_INFO,
                qUtf8Printable(debugMessage())); // https://crash-reports.kde.org/organizations/kde/issues/6337/
 
