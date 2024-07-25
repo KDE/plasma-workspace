@@ -269,22 +269,6 @@ void Klipper::loadSettings()
     setURLGrabberEnabled(m_bURLGrabber);
     history()->setMaxSize(KlipperSettings::maxClipItems());
     m_historyModel->setDisplayImages(!m_bIgnoreImages);
-
-    // Convert 4.3 settings
-    if (KlipperSettings::synchronize() != 3) {
-        // 2 was the id of "Ignore selection" radiobutton
-        m_bIgnoreSelection = KlipperSettings::synchronize() == 2;
-        // 0 was the id of "Synchronize contents" radiobutton
-        m_bSynchronize = KlipperSettings::synchronize() == 0;
-        KConfigSkeletonItem *item = KlipperSettings::self()->findItem(QStringLiteral("SyncClipboards"));
-        item->setProperty(m_bSynchronize);
-        item = KlipperSettings::self()->findItem(QStringLiteral("IgnoreSelection"));
-        item->setProperty(m_bIgnoreSelection);
-        item = KlipperSettings::self()->findItem(QStringLiteral("Synchronize")); // Mark property as converted.
-        item->setProperty(3);
-        KlipperSettings::self()->save();
-        KlipperSettings::self()->load();
-    }
 }
 
 void Klipper::saveSettings() const
