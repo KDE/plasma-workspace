@@ -10,7 +10,6 @@ set(libklipper_common_SRCS
     historymodel.cpp
     historystringitem.cpp
     klipperpopup.cpp
-    popupproxy.cpp
     historyimageitem.cpp
     historyurlitem.cpp
     actionstreewidget.cpp
@@ -37,6 +36,7 @@ target_link_libraries(klipper
     KF6::CoreAddons
     KF6::GuiAddons
     KF6::GlobalAccel
+    KF6::I18n
     KF6::IconThemes
     KF6::IconWidgets
     KF6::KIOWidgets
@@ -48,7 +48,9 @@ target_link_libraries(klipper
     KF6::WindowSystem
     KF6::XmlGui
     Plasma::KWaylandClient
+    Plasma::PlasmaQuick
     Wayland::Client
+    LayerShellQt::Interface
     ${ZLIB_LIBRARY}
 )
 

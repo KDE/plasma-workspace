@@ -56,6 +56,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void showKlipperManuallyInvokeActionMenu();
 
 public:
+    static std::shared_ptr<Klipper> self();
     Klipper(QObject *parent, const KSharedConfigPtr &config);
     ~Klipper() override;
 

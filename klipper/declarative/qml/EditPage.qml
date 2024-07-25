@@ -4,51 +4,55 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as QQC2 // For StackView
+import QtQuick.Templates as T // For StackView
 import QtQuick.Layouts 1.1
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kquickcontrolsaddons 2.0
+import org.kde.plasma.private.clipboard 0.1 as Private
 
 ColumnLayout {
+    id: editPage
     spacing: 0
+
+    required property PlasmaExtras.Representation dialogItem
+    required property ClipboardMenu clipboardMenu
+    required property T.StackView stack
+    required property Private.HistoryModel historyModel
+    required property var modelData
     property alias text: textArea.text
-    property string uuid
 
-    property var header: Item {}
+    property Item header: null
 
-    Keys.onPressed: event => {
-        if (event.key === Qt.Key_Escape) {
-            stack.pop()
-            event.accepted = true;
-        }
-    }
+    Keys.onEscapePressed: stack.pop()
 
     function saveAndExit() {
-        clipboardSource.edit(uuid, text);
+        modelData.display = text;
+        historyModel.moveToTop(modelData.uuid);
         stack.pop();
-        done();
+        stack.initialItem.view.currentIndex = 0;
     }
 
-    function done() {
-        // The modified item will be pushed to the top, and we would like to highlight the real first item
-        Qt.callLater(() => {stack.initialItem.view.currentIndex = 0;});
-    }
-
-    QQC2.StackView.onStatusChanged: {
-        if (QQC2.StackView.status === QQC2.StackView.Active) {
-            textArea.forceActiveFocus(Qt.ActiveWindowFocusReason);
-            textArea.cursorPosition = textArea.text.length;
-            main.editing = true;
-        } else {
-            main.editing = false;
+    Connections {
+        target: editPage.stack
+        function onStatusChanged() {
+            if (editPage.T.StackView.status === T.StackView.Active) {
+                textArea.forceActiveFocus(Qt.ActiveWindowFocusReason);
+                textArea.cursorPosition = textArea.text.length;
+                editPage.clipboardMenu.editing = true;
+            } else {
+                editPage.clipboardMenu.editing = false;
+            }
         }
     }
 
     Shortcut {
         sequence: StandardKey.Save
-        onActivated: saveAndExit()
+        onActivated: editPage.saveAndExit()
     }
 
     PlasmaComponents3.ScrollView {
@@ -62,11 +66,12 @@ ColumnLayout {
             id: textArea
             wrapMode: TextEdit.Wrap
             textFormat: TextEdit.PlainText
+            text: editPage.modelData?.display ?? ""
 
-            KeyNavigation.up: dialogItem.KeyNavigation.up
+            KeyNavigation.up: editPage.dialogItem.KeyNavigation.up
             Keys.onPressed: event => {
                 if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
-                    saveAndExit();
+                    editPage.saveAndExit();
                     event.accepted = true;
                 } else {
                     event.accepted = false;
@@ -79,18 +84,18 @@ ColumnLayout {
         Layout.alignment: Qt.AlignRight
         Layout.margins: Kirigami.Units.smallSpacing * 2
         PlasmaComponents3.Button {
-            text: i18nc("@action:button", "Save")
+            text: i18ndc("klipper", "@action:button", "Save")
             icon.name: "document-save"
             KeyNavigation.up: textArea
             KeyNavigation.right: cancelButton
-            onClicked: saveAndExit()
+            onClicked: editPage.saveAndExit()
         }
         PlasmaComponents3.Button {
             id: cancelButton
-            text: i18nc("@action:button", "Cancel")
+            text: i18ndc("klipper", "@action:button", "Cancel")
             icon.name: "dialog-cancel"
             KeyNavigation.up: textArea
-            onClicked: stack.pop()
+            onClicked: editPage.stack.pop()
         }
     }
 }

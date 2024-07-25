@@ -23,43 +23,41 @@ RowLayout {
         icon.name: "system-run"
 
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18n("Invoke action")
+        text: i18nd("klipper", "Invoke action")
 
-        onClicked: menuItem.triggerAction(UuidRole)
+        onClicked: menuItem.triggerAction()
 
         PlasmaComponents3.ToolTip {
-            text: parent.text
+            text: actionToolButton.text
         }
         KeyNavigation.right: barcodeToolButton
     }
     PlasmaComponents3.ToolButton {
         id: barcodeToolButton
         icon.name: "view-barcode-qr"
-        visible: supportsBarcodes
-
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18n("Show QR code")
+        text: i18nd("klipper", "Show QR code")
 
-        onClicked: menuItem.barcode(DisplayRole)
+        onClicked: menuItem.barcode()
 
         PlasmaComponents3.ToolTip {
-            text: parent.text
+            text: barcodeToolButton.text
         }
         KeyNavigation.right: editToolButton
     }
     PlasmaComponents3.ToolButton {
         id: editToolButton
         icon.name: "document-edit"
-        enabled: !clipboardSource.editing
-        visible: TypeRole === 0
+        enabled: !clipboardMenu.editing
+        visible: menuItem.type === 0
 
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18n("Edit contents")
+        text: i18nd("klipper", "Edit contents")
 
-        onClicked: menuItem.edit(UuidRole)
+        onClicked: menuItem.edit()
 
         PlasmaComponents3.ToolTip {
-            text: parent.text
+            text: editToolButton.text
         }
         KeyNavigation.right: deleteToolButton
     }
@@ -68,12 +66,12 @@ RowLayout {
         icon.name: "edit-delete"
 
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18n("Remove from history")
+        text: i18nd("klipper", "Remove from history")
 
-        onClicked: menuItem.remove(UuidRole)
+        onClicked: menuItem.remove()
 
         PlasmaComponents3.ToolTip {
-            text: parent.text
+            text: deleteToolButton.text
         }
     }
 }

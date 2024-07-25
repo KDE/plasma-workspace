@@ -21,6 +21,7 @@
 
 #include "config-klipper.h"
 #include "historyitem.h"
+#include "historystringitem.h"
 #include "klipper_debug.h"
 #include "klippersettings.h"
 #include "systemclipboard.h"
@@ -70,7 +71,6 @@ HistoryModel::HistoryModel()
     });
 
     connect(this, &HistoryModel::changed, this, [this](bool isTop) {
-        m_topIsUserSelected = false;
         if (m_items.empty()) {
             m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
         }
@@ -169,6 +169,26 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return int(item->type());
     }
     return QVariant();
+}
+
+bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (!checkIndex(index, CheckIndexOption::IndexIsValid)) {
+        return false;
+    }
+
+    switch (auto &item = m_items[index.row()]; role) {
+    case Qt::DisplayRole: {
+        if (item->type() == HistoryItemType::Text && value.canConvert<QString>()) {
+            item = std::make_shared<HistoryStringItem>(value.toString());
+            Q_EMIT dataChanged(index, index, {Qt::DisplayRole});
+            return true;
+        }
+        break;
+    }
+    }
+
+    return false;
 }
 
 bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
@@ -408,15 +428,12 @@ void HistoryModel::moveToTop(qsizetype row)
         // The item is already at the top, but it still may be not be set as the actual clipboard
         // contents, normally this happens if the item is only in the X11 mouse selection but
         // not in the Ctrl+V clipboard.
-        m_topIsUserSelected = true;
         return;
     }
     QMutexLocker lock(&m_mutex);
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
-
-    m_topIsUserSelected = true;
 }
 
 void HistoryModel::moveTopToBack()
@@ -439,9 +456,9 @@ void HistoryModel::moveBackToTop()
 QHash<int, QByteArray> HistoryModel::roleNames() const
 {
     QHash<int, QByteArray> hash;
-    hash.insert(Qt::DisplayRole, QByteArrayLiteral("DisplayRole"));
-    hash.insert(Qt::DecorationRole, QByteArrayLiteral("DecorationRole"));
-    hash.insert(Base64UuidRole, QByteArrayLiteral("UuidRole"));
-    hash.insert(TypeIntRole, QByteArrayLiteral("TypeRole"));
+    hash.insert(Qt::DisplayRole, QByteArrayLiteral("display"));
+    hash.insert(Qt::DecorationRole, QByteArrayLiteral("decoration"));
+    hash.insert(UuidRole, QByteArrayLiteral("uuid"));
+    hash.insert(TypeIntRole, QByteArrayLiteral("type"));
     return hash;
 }

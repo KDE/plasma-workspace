@@ -54,6 +54,17 @@
 #include <xcb/xcb.h>
 #endif
 
+std::shared_ptr<Klipper> Klipper::self()
+{
+    static std::weak_ptr<Klipper> s_instance;
+    if (s_instance.expired()) {
+        std::shared_ptr<Klipper> ptr = std::make_shared<Klipper>(nullptr, KSharedConfig::openConfig(QStringLiteral("klipperrc")));
+        s_instance = ptr;
+        return ptr;
+    }
+    return s_instance.lock();
+}
+
 // config == KGlobal::config for process, otherwise applet
 Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     : QObject(parent)
@@ -73,9 +84,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
 
     m_historyModel = HistoryModel::self();
     m_popup = std::make_unique<KlipperPopup>();
-    m_popup->setWindowFlags(m_popup->windowFlags() | Qt::FramelessWindowHint);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
-    connect(m_historyModel.get(), &HistoryModel::changed, m_popup.get(), &KlipperPopup::slotHistoryChanged);
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::clipboardHistoryUpdated);
 
     // we need that collection, otherwise KToggleAction is not happy :}
@@ -93,6 +102,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     m_myURLGrabber = new URLGrabber(this);
     connect(m_myURLGrabber, &URLGrabber::sigPopup, this, &Klipper::showPopupMenu);
     connect(m_myURLGrabber, &URLGrabber::sigDisablePopup, this, &Klipper::disableURLGrabber);
+    connect(m_historyModel.get(), &HistoryModel::actionInvoked, m_myURLGrabber, &URLGrabber::invokeAction);
 
     /*
      * Load configuration settings
@@ -162,6 +172,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
         connect(registry, &KWayland::Client::Registry::plasmaShellAnnounced, this, [registry, this](quint32 name, quint32 version) {
             if (!m_plasmashell) {
                 m_plasmashell = registry->createPlasmaShell(name, version);
+                m_popup->setPlasmaShell(m_plasmashell);
             }
         });
         connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, registry, [registry] {
@@ -185,7 +196,7 @@ QString Klipper::getClipboardContents()
 
 void Klipper::showKlipperPopupMenu()
 {
-    slotPopupMenu();
+    m_popup->show();
 }
 
 void Klipper::showKlipperManuallyInvokeActionMenu()
@@ -367,9 +378,7 @@ void Klipper::slotReceivedEmptyClipboard(QClipboard::Mode mode)
 
 void Klipper::slotPopupMenu()
 {
-    m_popup->ensureClean();
-    m_popup->slotSetTopActive();
-    showPopupMenu(m_popup.get());
+    m_popup->show();
 }
 
 void Klipper::slotRepeatAction()
@@ -620,7 +629,7 @@ QString Klipper::cycleText() const
     auto item = m_historyModel->first();
     auto itemNext = m_historyCycler->nextInCycle();
 
-    QFontMetrics font_metrics(m_popup->fontMetrics());
+    QFontMetrics font_metrics(QWidget().fontMetrics());
     QString result(QStringLiteral("<table>"));
 
     if (itemPrev) {

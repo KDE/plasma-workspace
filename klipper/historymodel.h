@@ -33,6 +33,7 @@ public:
     [[nodiscard]] static std::shared_ptr<HistoryModel> self();
     ~HistoryModel() override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
     QHash<int, QByteArray> roleNames() const override;
@@ -78,14 +79,6 @@ public:
     void insert(const std::shared_ptr<HistoryItem> &item);
 
     /**
-     * @return true if the user has selected the top item
-     */
-    QBindable<bool> topIsUserSelected() const
-    {
-        return &m_topIsUserSelected;
-    }
-
-    /**
      * @short Loads history from disk.
      * Inserts items into clipboard without any checks
      * Used when restoring a saved history and internally.
@@ -105,10 +98,7 @@ public:
 Q_SIGNALS:
     void changed(bool isTop = false);
 
-    /**
-     * Emitted when the first history item has changed.
-     */
-    void topChanged();
+    void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
 
 private:
     explicit HistoryModel();
@@ -121,10 +111,7 @@ private:
     bool m_displayImages;
     QRecursiveMutex m_mutex;
 
-    /**
-     * True if the top is selected by the user
-     */
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(HistoryModel, bool, m_topIsUserSelected, false)
-
     QTimer m_saveFileTimer;
+
+    friend class DeclarativeHistoryModel;
 };

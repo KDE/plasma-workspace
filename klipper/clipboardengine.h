@@ -20,6 +20,6 @@ public:
     Plasma5Support::Service *serviceForSource(const QString &source) override;
 
 private:
-    Klipper *m_klipper;
+    std::shared_ptr<Klipper> m_klipper;
     std::shared_ptr<HistoryModel> m_model;
 };

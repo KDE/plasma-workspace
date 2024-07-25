@@ -20,15 +20,24 @@ class DeclarativeHistoryModel : public QIdentityProxyModel
     QML_NAMED_ELEMENT(HistoryModel)
 
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
+    Q_PROPERTY(QString currentText READ currentText NOTIFY currentTextChanged)
 
 public:
     explicit DeclarativeHistoryModel(QObject *parent = nullptr);
     ~DeclarativeHistoryModel() override;
 
+    QString currentText() const;
+
+    Q_INVOKABLE void moveToTop(const QByteArray &uuid);
+
+    Q_INVOKABLE void remove(const QByteArray &uuid);
     Q_INVOKABLE void clearHistory();
+
+    Q_INVOKABLE void invokeAction(const QByteArray &uuid);
 
 Q_SIGNALS:
     void countChanged();
+    void currentTextChanged();
 
 private:
     std::shared_ptr<HistoryModel> m_model;
