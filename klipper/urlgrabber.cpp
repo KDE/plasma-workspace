@@ -29,16 +29,16 @@
 #include "klippersettings.h"
 
 // TODO: script-interface?
-#include "history.h"
+#include "historycycler.h"
 #include "historystringitem.h"
 
-URLGrabber::URLGrabber(History *history)
-    : m_myCurrentAction(nullptr)
+URLGrabber::URLGrabber(QObject *parent)
+    : QObject(parent)
+    , m_myCurrentAction(nullptr)
     , m_myMenu(nullptr)
     , m_myPopupKillTimer(new QTimer(this))
     , m_myPopupKillTimeout(8)
     , m_stripWhiteSpace(true)
-    , m_history(history)
 {
     m_myPopupKillTimer->setSingleShot(true);
     connect(m_myPopupKillTimer, &QTimer::timeout, this, &URLGrabber::slotKillPopupMenu);
@@ -257,7 +257,7 @@ void URLGrabber::execute(const ClipAction *action, int cmdIdx) const
             job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled));
             job->start();
         } else {
-            ClipCommandProcess *proc = new ClipCommandProcess(*action, command, text, m_history, m_myClipItem);
+            ClipCommandProcess *proc = new ClipCommandProcess(*action, command, text, m_myClipItem);
             if (proc->program().isEmpty()) {
                 delete proc;
                 proc = nullptr;

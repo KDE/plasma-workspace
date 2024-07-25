@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Martin Gräßlin <mgraesslin@kde.org>
+    SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -21,6 +22,7 @@
 #include "config-klipper.h"
 #include "historyitem.h"
 #include "klipper_debug.h"
+#include "klippersettings.h"
 #include "systemclipboard.h"
 
 using namespace std::chrono_literals;
@@ -40,13 +42,43 @@ std::shared_ptr<HistoryModel> HistoryModel::self()
 
 HistoryModel::HistoryModel()
     : QAbstractListModel(nullptr)
-    , m_maxSize(0)
+    , m_clip(SystemClipboard::self())
     , m_displayImages(true)
 {
     m_saveFileTimer.setSingleShot(true);
     connect(&m_saveFileTimer, &QTimer::timeout, this, [this] {
         const QFuture<bool> future = QtConcurrent::run(&HistoryModel::saveHistory, this, false);
         // Destroying the future neither waits nor cancels the asynchronous computation
+    });
+
+    loadSettings();
+    loadHistory();
+    // Only connect to this signal after loading the history, to avoid the action of loading triggering a save
+    auto modelChanged = [this](const QModelIndex & /*parent*/, int first, int /*last*/) {
+        changed(first == 0);
+    };
+    connect(this, &HistoryModel::rowsInserted, this, modelChanged);
+    connect(this, &HistoryModel::rowsRemoved, this, modelChanged);
+    connect(this,
+            &HistoryModel::rowsMoved,
+            this,
+            [this](const QModelIndex & /*sourceParent*/, int sourceStart, int /*sourceEnd*/, const QModelIndex & /*destinationParent*/, int destinationRow) {
+                Q_EMIT changed(sourceStart == 0 || destinationRow == 0);
+            });
+    connect(this, &HistoryModel::modelReset, this, [this] {
+        Q_EMIT changed(true);
+    });
+
+    connect(this, &HistoryModel::changed, this, [this](bool isTop) {
+        m_topIsUserSelected = false;
+        if (m_items.empty()) {
+            m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+        }
+        startSaveHistoryTimer();
+        if (!isTop || m_items.empty() || m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
+            return;
+        }
+        m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
     });
 }
 
@@ -77,16 +109,31 @@ void HistoryModel::clearHistory()
     }
 }
 
-void HistoryModel::setMaxSize(int size)
+qsizetype HistoryModel::maxSize() const
+{
+    return m_maxSize;
+}
+
+void HistoryModel::setMaxSize(qsizetype size)
 {
     if (m_maxSize == size) {
         return;
     }
     QMutexLocker lock(&m_mutex);
     m_maxSize = size;
-    if (m_items.count() > m_maxSize) {
-        removeRows(m_maxSize, m_items.count() - m_maxSize);
+    if (m_items.size() > m_maxSize) {
+        removeRows(m_maxSize, m_items.size() - m_maxSize);
     }
+}
+
+bool HistoryModel::displayImages() const
+{
+    return m_displayImages;
+}
+
+void HistoryModel::setDisplayImages(bool show)
+{
+    m_displayImages = show;
 }
 
 int HistoryModel::rowCount(const QModelIndex &parent) const
@@ -94,12 +141,12 @@ int HistoryModel::rowCount(const QModelIndex &parent) const
     if (parent.isValid()) {
         return 0;
     }
-    return m_items.count();
+    return m_items.size();
 }
 
 QVariant HistoryModel::data(const QModelIndex &index, int role) const
 {
-    if (!index.isValid() || index.row() >= m_items.count() || index.column() != 0) {
+    if (!index.isValid() || index.row() >= m_items.size() || index.column() != 0) {
         return QVariant();
     }
 
@@ -129,14 +176,12 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
     if (parent.isValid()) {
         return false;
     }
-    if ((row + count) > m_items.count()) {
+    if (qsizetype(row + count) > m_items.size()) {
         return false;
     }
     QMutexLocker lock(&m_mutex);
     beginRemoveRows(QModelIndex(), row, row + count - 1);
-    for (int i = 0; i < count; ++i) {
-        m_items.removeAt(row);
-    }
+    m_items.erase(std::next(m_items.cbegin(), row), std::next(m_items.cbegin(), row + count));
     endRemoveRows();
     return true;
 }
@@ -166,12 +211,16 @@ int HistoryModel::indexOf(const HistoryItem *item) const
     return indexOf(item->uuid());
 }
 
+HistoryItemConstPtr HistoryModel::first() const
+{
+    if (m_items.empty()) {
+        return HistoryItemConstPtr();
+    }
+    return m_items[0];
+}
+
 void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
 {
-    if (!item) {
-        return;
-    }
-
     if (m_maxSize == 0) {
         // special case - cannot insert any items
         return;
@@ -190,16 +239,16 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
     m_items.prepend(item);
     endInsertRows();
 
-    if (m_items.count() > m_maxSize) {
-        beginRemoveRows(QModelIndex(), m_items.count() - 1, m_items.count() - 1);
-        m_items.removeLast();
+    if (m_items.size() > m_maxSize) {
+        beginRemoveRows(QModelIndex(), m_items.size() - 1, m_items.size() - 1);
+        m_items.pop_back();
         endRemoveRows();
     }
 }
 
 bool HistoryModel::loadHistory()
 {
-    if (m_maxSize == 0) [[unlikely]] {
+    if (m_maxSize == 0 || !KlipperSettings::keepClipboardContents()) [[unlikely]] {
         // rare special case - cannot insert any items
         return true;
     }
@@ -260,9 +309,15 @@ bool HistoryModel::loadHistory()
         endResetModel();
     }
 
-    SystemClipboard::self()->setMimeData(m_items[0], SystemClipboard::Clipboard | SystemClipboard::Selection);
+    m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
 
     return true;
+}
+
+void HistoryModel::loadSettings()
+{
+    setMaxSize(KlipperSettings::maxClipItems());
+    setDisplayImages(!KlipperSettings::ignoreImages());
 }
 
 void HistoryModel::startSaveHistoryTimer(std::chrono::seconds delay)
@@ -272,6 +327,10 @@ void HistoryModel::startSaveHistoryTimer(std::chrono::seconds delay)
 
 bool HistoryModel::saveHistory(bool empty)
 {
+    if (!KlipperSettings::keepClipboardContents()) [[unlikely]] {
+        return true;
+    }
+
     QMutexLocker lock(&m_mutex);
     constexpr const char *failedSaveWarning = "Failed to save history. Clipboard history cannot be saved. Reason:";
     static const QString relativeHistoryFilePath = QStringLiteral("klipper/history2.lst");
@@ -309,7 +368,7 @@ bool HistoryModel::saveHistory(bool empty)
     QDataStream history_stream(&data, QIODevice::WriteOnly);
     history_stream << KLIPPER_VERSION_STRING; // const char*
 
-    if (!empty && !m_items.isEmpty()) {
+    if (!empty && !m_items.empty()) {
         HistoryItemPtr item = m_items[0];
         if (item) {
             do {
@@ -339,24 +398,34 @@ void HistoryModel::moveToTop(const QByteArray &uuid)
     moveToTop(existingItemIndex);
 }
 
-void HistoryModel::moveToTop(int row)
+void HistoryModel::moveToTop(qsizetype row)
 {
-    if (row == 0 || row >= m_items.count()) {
+    if (row >= m_items.size()) [[unlikely]] {
+        Q_ASSERT_X(false, Q_FUNC_INFO, std::to_string(row).c_str());
+        return;
+    }
+    if (row == 0) {
+        // The item is already at the top, but it still may be not be set as the actual clipboard
+        // contents, normally this happens if the item is only in the X11 mouse selection but
+        // not in the Ctrl+V clipboard.
+        m_topIsUserSelected = true;
         return;
     }
     QMutexLocker lock(&m_mutex);
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
+
+    m_topIsUserSelected = true;
 }
 
 void HistoryModel::moveTopToBack()
 {
-    if (m_items.count() < 2) {
+    if (m_items.size() < 2) {
         return;
     }
     QMutexLocker lock(&m_mutex);
-    beginMoveRows(QModelIndex(), 0, 0, QModelIndex(), m_items.count());
+    beginMoveRows(QModelIndex(), 0, 0, QModelIndex(), m_items.size());
     auto item = m_items.takeFirst();
     m_items.append(item);
     endMoveRows();
@@ -364,7 +433,7 @@ void HistoryModel::moveTopToBack()
 
 void HistoryModel::moveBackToTop()
 {
-    moveToTop(m_items.count() - 1);
+    moveToTop(m_items.size() - 1);
 }
 
 QHash<int, QByteArray> HistoryModel::roleNames() const

@@ -6,7 +6,7 @@
 
 #include "clipboardengine.h"
 #include "clipboardservice.h"
-#include "history.h"
+#include "historycycler.h"
 #include "historyitem.h"
 #include "historymodel.h"
 #include "klipper.h"
@@ -26,15 +26,17 @@ ClipboardEngine::ClipboardEngine(QObject *parent)
     // Unset parent to avoid double delete as DataEngine::setModel will set parent for the model
     m_model.get()->setParent(nullptr);
     setData(s_clipboardSourceName, s_barcodeKey, true);
-    auto updateCurrent = [this]() {
-        setData(s_clipboardSourceName, QStringLiteral("current"), m_klipper->history()->empty() ? QString() : m_klipper->history()->first()->text());
+    auto updateCurrent = [this](bool isTop = true) {
+        if (isTop) {
+            setData(s_clipboardSourceName, QStringLiteral("current"), m_model->rowCount() == 0 ? QString() : m_model->first()->text());
+        }
     };
-    connect(m_klipper->history(), &History::topChanged, this, updateCurrent);
+    connect(m_model.get(), &HistoryModel::changed, this, updateCurrent);
     updateCurrent();
     auto updateEmpty = [this]() {
-        setData(s_clipboardSourceName, QStringLiteral("empty"), m_klipper->history()->empty());
+        setData(s_clipboardSourceName, QStringLiteral("empty"), m_model->rowCount() == 0);
     };
-    connect(m_klipper->history(), &History::changed, this, updateEmpty);
+    connect(m_model.get(), &HistoryModel::changed, this, updateEmpty);
     updateEmpty();
 }
 

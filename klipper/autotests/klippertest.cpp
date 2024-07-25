@@ -5,7 +5,7 @@
 */
 
 #include "../klipper.h"
-#include "../history.h"
+#include "../historycycler.h"
 #include "../historyitem.h"
 #include "../historymodel.h"
 
@@ -75,9 +75,9 @@ void KlipperTest::testBug465225()
         clipboard->clear(QClipboard::Clipboard); // Reset local clipboard
         auto klipper = std::make_unique<Klipper>(this, klipperConfig);
         QCOMPARE(HistoryModel::self()->rowCount(), 1);
-        QCOMPARE(klipper->history()->first()->type(), HistoryItemType::Image);
+        QCOMPARE(HistoryModel::self()->first()->type(), HistoryItemType::Image);
 
-        auto mimeData = klipper->history()->first()->mimeData();
+        auto mimeData = HistoryModel::self()->first()->mimeData();
 
         QMimeData *data = new QMimeData;
         data->setText(QDateTime::currentDateTime().toString());
@@ -88,7 +88,7 @@ void KlipperTest::testBug465225()
         clipboard->setMimeData(mimeData, QClipboard::Clipboard);
         QCoreApplication::processEvents();
         QCOMPARE(HistoryModel::self()->rowCount(), 2);
-        QCOMPARE(klipper->history()->first()->type(), HistoryItemType::Image);
+        QCOMPARE(HistoryModel::self()->first()->type(), HistoryItemType::Image);
 
         klipper->saveClipboardHistory();
     }
@@ -98,8 +98,8 @@ void KlipperTest::testBug465225()
         clipboard->clear(QClipboard::Clipboard); // Reset local clipboard
         auto klipper = std::make_unique<Klipper>(this, klipperConfig);
         QCOMPARE(HistoryModel::self()->rowCount(), 2);
-        QCOMPARE(klipper->history()->first()->type(), HistoryItemType::Image);
-        QVERIFY(klipper->history()->first()->uuid() != klipper->history()->first()->next_uuid());
+        QCOMPARE(HistoryModel::self()->first()->type(), HistoryItemType::Image);
+        QVERIFY(HistoryModel::self()->first()->uuid() != HistoryModel::self()->first()->next_uuid());
     }
 }
 

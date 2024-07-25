@@ -8,17 +8,13 @@
 
 #include <KMacroExpander>
 
-#include "history.h"
+#include "historymodel.h"
 #include "historystringitem.h"
 #include "urlgrabber.h"
 
-ClipCommandProcess::ClipCommandProcess(const ClipAction &action,
-                                       const ClipCommand &command,
-                                       const QString &clip,
-                                       History *history,
-                                       HistoryItemConstPtr original_item)
+ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipCommand &command, const QString &clip, HistoryItemConstPtr original_item)
     : KProcess()
-    , m_history(history)
+    , m_model(HistoryModel::self())
     , m_historyItem(original_item)
     , m_newhistoryItem()
 {
@@ -52,14 +48,12 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction &action,
 
 void ClipCommandProcess::slotFinished(int /*exitCode*/, QProcess::ExitStatus /*newState*/)
 {
-    if (m_history) {
-        // If an history item was provided, remove it so that the new item can replace it
-        if (m_historyItem) {
-            m_history->remove(m_historyItem);
-        }
-        if (!m_newhistoryItem.isEmpty()) {
-            m_history->insert(HistoryItemPtr(new HistoryStringItem(m_newhistoryItem)));
-        }
+    // If an history item was provided, remove it so that the new item can replace it
+    if (m_historyItem) {
+        m_model->remove(m_historyItem->uuid());
+    }
+    if (!m_newhistoryItem.isEmpty()) {
+        m_model->insert(HistoryItemPtr(new HistoryStringItem(m_newhistoryItem)));
     }
     deleteLater();
 }

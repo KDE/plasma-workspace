@@ -19,7 +19,7 @@
 #include <KWindowInfo>
 #include <KWindowSystem>
 
-#include "history.h"
+#include "historymodel.h"
 #include "klipper.h"
 #include "popupproxy.h"
 
@@ -56,9 +56,9 @@ kdbgstream &operator<<(kdbgstream &stream, const QKeyEvent &e)
 }
 #endif
 
-KlipperPopup::KlipperPopup(History *history)
+KlipperPopup::KlipperPopup()
     : m_dirty(true)
-    , m_history(history)
+    , m_model(HistoryModel::self())
     , m_popupProxy(nullptr)
     , m_filterWidget(nullptr)
     , m_filterWidgetAction(nullptr)
@@ -80,6 +80,14 @@ KlipperPopup::KlipperPopup(History *history)
     m_popupProxy = new PopupProxy(this, menuHeight, menuWidth);
 
     connect(this, &KlipperPopup::aboutToShow, this, &KlipperPopup::slotAboutToShow);
+
+    m_notifier = m_model->topIsUserSelected().addNotifier([this] {
+        if (!m_dirty && actions().count() > TOP_HISTORY_ITEM_INDEX && m_model->topIsUserSelected().value()) {
+            QAction *topAction = actions().at(TOP_HISTORY_ITEM_INDEX);
+            topAction->setCheckable(true);
+            topAction->setChecked(true);
+        }
+    });
 }
 
 void KlipperPopup::slotAboutToShow()
@@ -170,13 +178,13 @@ void KlipperPopup::rebuild(const QString &filter)
     } else {
         const int nHistoryItems = m_popupProxy->buildParent(TOP_HISTORY_ITEM_INDEX, filterexp);
         if (nHistoryItems == 0) {
-            if (m_history->empty()) {
+            if (m_model->rowCount() == 0) {
                 errorText = i18n("Clipboard is empty");
             } else {
                 errorText = i18n("No matches");
             }
         } else {
-            if (history()->topIsUserSelected()) {
+            if (m_model->topIsUserSelected().value()) {
                 QAction *topAction = actions().at(TOP_HISTORY_ITEM_INDEX);
                 topAction->setCheckable(true);
                 topAction->setChecked(true);
@@ -186,15 +194,6 @@ void KlipperPopup::rebuild(const QString &filter)
 
     showStatus(errorText);
     m_dirty = false;
-}
-
-void KlipperPopup::slotTopIsUserSelectedSet()
-{
-    if (!m_dirty && actions().count() > TOP_HISTORY_ITEM_INDEX && history()->topIsUserSelected()) {
-        QAction *topAction = actions().at(TOP_HISTORY_ITEM_INDEX);
-        topAction->setCheckable(true);
-        topAction->setChecked(true);
-    }
 }
 
 void KlipperPopup::showEvent(QShowEvent *)

@@ -1,13 +1,8 @@
 include(ECMMarkAsTest)
 
-# Test History
-add_executable(testHistory historytest.cpp)
-target_link_libraries(testHistory
-    Qt::Test
-    klipper
-)
-add_test(NAME klipper-testHistory COMMAND testHistory)
-ecm_mark_as_test(testHistory)
+# Test History Cycler
+ecm_add_test(historycyclertest.cpp TEST_NAME klipper-testHistoryCycler
+    LINK_LIBRARIES Qt::Test klipper)
 
 # Test History Model
 add_executable(testHistoryModel historymodeltest.cpp)

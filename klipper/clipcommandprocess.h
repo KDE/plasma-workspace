@@ -10,25 +10,21 @@
 #include <memory>
 
 class ClipAction;
-class History;
 struct ClipCommand;
 class HistoryItem;
+class HistoryModel;
 
 class ClipCommandProcess : public KProcess
 {
     Q_OBJECT
 public:
-    ClipCommandProcess(const ClipAction &action,
-                       const ClipCommand &command,
-                       const QString &clip,
-                       History *history = nullptr,
-                       std::shared_ptr<const HistoryItem> original_item = nullptr);
+    ClipCommandProcess(const ClipAction &action, const ClipCommand &command, const QString &clip, std::shared_ptr<const HistoryItem> original_item = nullptr);
 public Q_SLOTS:
     void slotStdOutputAvailable();
     void slotFinished(int exitCode, QProcess::ExitStatus newState);
 
 private:
-    History *m_history;
+    std::shared_ptr<HistoryModel> m_model;
     std::shared_ptr<const HistoryItem> m_historyItem;
     QString m_newhistoryItem;
 };

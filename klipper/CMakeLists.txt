@@ -5,7 +5,7 @@ set(libklipper_common_SRCS
     klipper.cpp
     urlgrabber.cpp
     configdialog.cpp
-    history.cpp
+    historycycler.cpp
     historyitem.cpp
     historymodel.cpp
     historystringitem.cpp
