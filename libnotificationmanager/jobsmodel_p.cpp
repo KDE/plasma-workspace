@@ -67,6 +67,10 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
 
         m_pendingDirtyRoles.clear();
     });
+
+    connect(m_settings, &Settings::settingsChanged, this, [this] {
+        Q_EMIT requiresJobTrackerChanged(!m_settings->jobsInNotifications());
+    });
 }
 
 JobsModelPrivate::~JobsModelPrivate()
