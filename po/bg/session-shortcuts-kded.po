@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-20 00:41+0000\n"
-"PO-Revision-Date: 2024-06-04 13:40+0200\n"
+"PO-Revision-Date: 2024-07-24 12:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: main.cpp:32
 #, kde-format
@@ -23,9 +23,7 @@ msgid "Session Management"
 msgstr "Управление на сесиите"
 
 #: main.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Logout Prompt"
+#, kde-format
 msgctxt "@action"
 msgid "Show Logout Screen"
 msgstr "Показване на екран за напускане на сесията"

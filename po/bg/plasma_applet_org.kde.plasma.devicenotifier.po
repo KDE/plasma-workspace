@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-01-11 21:48+0100\n"
+"PO-Revision-Date: 2024-07-24 12:54+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: package/contents/ui/DeviceItem.qml:118
 #, kde-format
@@ -205,9 +205,9 @@ msgstr "Неуспех при изваждане на диска."
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "Файловата система не реагира"
 
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "Файловата система, монтирана на '%1', не реагира"
