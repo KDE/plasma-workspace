@@ -16,11 +16,11 @@
 
 class QDBusServiceWatcher;
 class QTimer;
-class Settings;
 
 namespace NotificationManager
 {
 class Job;
+class Settings;
 
 class Q_DECL_HIDDEN JobsModelPrivate : public QObject, protected QDBusContext
 {
