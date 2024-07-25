@@ -13,10 +13,10 @@
 #include <QSet>
 
 #include "notifications.h"
-#include "settings.h"
 
 class QDBusServiceWatcher;
 class QTimer;
+class Settings;
 
 namespace NotificationManager
 {
@@ -73,9 +73,10 @@ private:
 
     QStringList jobUrls() const;
     void scheduleUpdate(Job *job, int role);
-    Settings *m_settings = nullptr;
 
     QDBusServiceWatcher *m_serviceWatcher = nullptr;
+    Settings *m_settings = nullptr;
+
     // Job -> serviceName
     QHash<Job *, QString> m_jobServices;
     int m_highestJobId = 1;

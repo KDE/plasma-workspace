@@ -194,7 +194,7 @@ void JobsModelPrivate::emitJobUrlsChanged()
 
 bool JobsModelPrivate::requiresJobTracker() const
 {
-    return m_settings && !m_settings->jobsInNotifications();
+    return !m_settings->jobsInNotifications();
 }
 
 QStringList JobsModelPrivate::registeredJobContacts() const
