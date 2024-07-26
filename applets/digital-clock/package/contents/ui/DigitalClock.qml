@@ -537,6 +537,7 @@ MouseArea {
                     family: fontHelper.font.family
                     weight: fontHelper.font.weight
                     italic: fontHelper.font.italic
+                    features: { "tnum": 1 }
                     pixelSize: 1024
                     pointSize: -1 // Because we're setting the pixel size instead
                                   // TODO: remove once this label is ported to PC3

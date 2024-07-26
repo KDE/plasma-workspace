@@ -81,6 +81,7 @@ Item {
             }
             opacity: 0.6
             visible: !clocks.visible
+            font.features: { "tnum": 1 }
         }
 
         PlasmaComponents.Label {
@@ -129,6 +130,13 @@ Item {
                     }
                     textFormat: Text.PlainText
                     font.weight: root.timeZoneResolvesToLastSelectedTimeZone(modelData) ? Font.Bold : Font.Normal
+                    font.features: {
+                        if (index % 2 === 1) {
+                            return { "tnum": 1 }
+                        } else {
+                            return {}
+                        }
+                    }
                     wrapMode: Text.NoWrap
                     elide: Text.ElideNone
                 }
