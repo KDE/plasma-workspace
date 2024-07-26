@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -135,13 +135,27 @@ msgstr "包含桌面布局"
 msgid "Preview Theme"
 msgstr "预览主题"
 
-#: ui/main.qml:125
-#, kde-format
-msgctxt "@action:button"
-msgid "Remove Theme"
+#: ui/main.qml:126
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Remove Theme"
+msgctxt "@info:tooltip"
+msgid "Remove theme"
 msgstr "移除主题"
 
-#: ui/main.qml:141
+#: ui/main.qml:128
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active theme"
+msgstr ""
+
+#: ui/main.qml:130
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed themes"
+msgstr ""
+
+#: ui/main.qml:147
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -149,22 +163,22 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "应用 %1 吗？"
 
-#: ui/main.qml:159
+#: ui/main.qml:165
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "选择要应用的内容…"
 
-#: ui/main.qml:159
+#: ui/main.qml:165
 #, kde-format
 msgid "Show fewer options…"
 msgstr "显示更少选项…"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Apply"
 msgstr "应用"
 
-#: ui/main.qml:188
+#: ui/main.qml:194
 #, kde-format
 msgid "Cancel"
 msgstr "取消"

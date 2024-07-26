@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-05-06 09:24+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -140,13 +140,27 @@ msgstr "Содержит определённое расположение ви�
 msgid "Preview Theme"
 msgstr "Предварительный просмотр"
 
-#: ui/main.qml:125
-#, kde-format
-msgctxt "@action:button"
-msgid "Remove Theme"
+#: ui/main.qml:126
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Remove Theme"
+msgctxt "@info:tooltip"
+msgid "Remove theme"
 msgstr "Удалить оформление"
 
-#: ui/main.qml:141
+#: ui/main.qml:128
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active theme"
+msgstr ""
+
+#: ui/main.qml:130
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed themes"
+msgstr ""
+
+#: ui/main.qml:147
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -154,22 +168,22 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Применить «%1»?"
 
-#: ui/main.qml:159
+#: ui/main.qml:165
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Выбрать компоненты оформления…"
 
-#: ui/main.qml:159
+#: ui/main.qml:165
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Скрыть подробности…"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Apply"
 msgstr "Применить"
 
-#: ui/main.qml:188
+#: ui/main.qml:194
 #, kde-format
 msgid "Cancel"
 msgstr "Отмена"

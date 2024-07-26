@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-03 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-05-03 11:29+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -141,13 +141,27 @@ msgstr "Bevat de indeling van het bureaublad"
 msgid "Preview Theme"
 msgstr "Voorbeeldthema"
 
-#: ui/main.qml:125
-#, kde-format
-msgctxt "@action:button"
-msgid "Remove Theme"
+#: ui/main.qml:126
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Remove Theme"
+msgctxt "@info:tooltip"
+msgid "Remove theme"
 msgstr "Thema verwijderen"
 
-#: ui/main.qml:141
+#: ui/main.qml:128
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete the active theme"
+msgstr ""
+
+#: ui/main.qml:130
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Cannot delete system-installed themes"
+msgstr ""
+
+#: ui/main.qml:147
 #, kde-format
 msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
@@ -155,22 +169,22 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 toepassen?"
 
-#: ui/main.qml:159
+#: ui/main.qml:165
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Kies wat toe te passen…"
 
-#: ui/main.qml:159
+#: ui/main.qml:165
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Minder opties tonen…"
 
-#: ui/main.qml:176
+#: ui/main.qml:182
 #, kde-format
 msgid "Apply"
 msgstr "Toepassen"
 
-#: ui/main.qml:188
+#: ui/main.qml:194
 #, kde-format
 msgid "Cancel"
 msgstr "Annuleren"

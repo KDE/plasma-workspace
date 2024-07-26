@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -94,16 +94,19 @@ msgid "Choose sound file"
 msgstr "Абраць гукавы файл"
 
 #: ui/main.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Plasma-specific notifications"
+#| msgid "System Notifications…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Сістэмныя апавяшчэнні…"
 
 #: ui/main.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
-msgstr "Налады праграмы…"
+msgid "Application Settings"
+msgstr "Налады праграмы"
 
 #: ui/main.qml:80
 #, kde-format
@@ -297,6 +300,10 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Абярыце праграму са спіса, каб наладзіць яе апавяшчэнні і паводзіны"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Налады праграмы…"
 
 #~| msgid "Application Settings"
 #~ msgctxt "@action:button Application-specific notifications"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2023-08-14 21:40+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -95,14 +95,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Benachrichtigungen"
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
+msgid "Application Settings"
 msgstr "Programm-Einstellungen"
 
 #: ui/main.qml:80
@@ -302,6 +302,12 @@ msgid ""
 msgstr ""
 "Wählen Sie eine Anwendung aus der Liste, um die Einstellungen und das "
 "Verhalten von Benachrichtigungen einzurichten"
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Programm-Einstellungen"
 
 #, fuzzy
 #~| msgid "Application Settings"

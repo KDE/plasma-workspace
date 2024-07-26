@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-11 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-06-07 14:58+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -18,58 +18,58 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.07.70\n"
 
-#: contents/ui/BarcodePage.qml:23
+#: contents/ui/BarcodePage.qml:25
 #, kde-format
 msgid "QR Code"
 msgstr "QR kod"
 
-#: contents/ui/BarcodePage.qml:24
+#: contents/ui/BarcodePage.qml:26
 #, kde-format
 msgid "Data Matrix"
 msgstr "Data Matrix"
 
-#: contents/ui/BarcodePage.qml:25
+#: contents/ui/BarcodePage.qml:27
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
 msgstr "Aztec"
 
-#: contents/ui/BarcodePage.qml:26
+#: contents/ui/BarcodePage.qml:28
 #, kde-format
 msgid "Code 39"
 msgstr "kod 39"
 
-#: contents/ui/BarcodePage.qml:27
+#: contents/ui/BarcodePage.qml:29
 #, kde-format
 msgid "Code 93"
 msgstr "Kod 93"
 
-#: contents/ui/BarcodePage.qml:28
+#: contents/ui/BarcodePage.qml:30
 #, kde-format
 msgid "Code 128"
 msgstr "Kod 128"
 
-#: contents/ui/BarcodePage.qml:44
+#: contents/ui/BarcodePage.qml:46
 #, kde-format
 msgid "Return to Clipboard"
 msgstr "Mübadilə buferinə qayıtmaq"
 
-#: contents/ui/BarcodePage.qml:79
+#: contents/ui/BarcodePage.qml:81
 #, kde-format
 msgid "Change the QR code type"
 msgstr "QR kodu növünü dəyişmək"
 
-#: contents/ui/BarcodePage.qml:136
-#, kde-format
-msgid "Creating QR code failed"
-msgstr "QR kodu yardılması alınmadı"
-
-#: contents/ui/BarcodePage.qml:148
+#: contents/ui/BarcodePage.qml:134
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
 "QR kodu göstərmək üçün kifayət qədər yer yoxdur. Qoşmanın ölçüsünü dəyişin."
+
+#: contents/ui/BarcodePage.qml:134
+#, kde-format
+msgid "Creating QR code failed"
+msgstr "QR kodu yardılması alınmadı"
 
 #: contents/ui/DelegateToolButtons.qml:26
 #, kde-format

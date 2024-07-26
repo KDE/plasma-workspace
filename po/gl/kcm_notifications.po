@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-03-23 20:57+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -88,16 +88,19 @@ msgid "Choose sound file"
 msgstr "Escoller un ficheiro de son"
 
 #: ui/main.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Plasma-specific notifications"
+#| msgid "System Notifications…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Notificacións do sistema…"
 
 #: ui/main.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
-msgstr "Configuración da aplicación…"
+msgid "Application Settings"
+msgstr "Configuración da aplicación"
 
 #: ui/main.qml:80
 #, kde-format
@@ -289,6 +292,10 @@ msgid ""
 msgstr ""
 "Seleccione unha aplicación da lista para configurar as súas opcións e "
 "comportamento."
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Configuración da aplicación…"
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Configure Application Settings…"

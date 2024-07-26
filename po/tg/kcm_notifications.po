@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2019-10-10 07:59+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -94,14 +94,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Огоҳиҳо"
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
+msgid "Application Settings"
 msgstr "Танзимоти барнома"
 
 #: ui/main.qml:80
@@ -298,6 +298,12 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Танзимоти барнома"
 
 #, fuzzy
 #~| msgid "Application Settings"

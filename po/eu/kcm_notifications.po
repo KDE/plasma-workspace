@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-03-24 11:20+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -93,16 +93,19 @@ msgid "Choose sound file"
 msgstr "Hautatu soinu-fitxategia"
 
 #: ui/main.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Plasma-specific notifications"
+#| msgid "System Notifications…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Sistemaren jakinarazpenak..."
 
 #: ui/main.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
-msgstr "Aplikazio-ezarpenak..."
+msgid "Application Settings"
+msgstr "Aplikazio-ezarpenak"
 
 #: ui/main.qml:80
 #, kde-format
@@ -297,6 +300,10 @@ msgid ""
 msgstr ""
 "Hautatu aplikazio bat zerrendatik bere jakinarazpen ezarpenak eta jokabidea "
 "konfiguratzeko"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Aplikazio-ezarpenak..."
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Configure Application Settings…"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -96,14 +96,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Notifikasi"
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
+msgid "Application Settings"
 msgstr "Pengaturan Aplikasi"
 
 #: ui/main.qml:80
@@ -310,6 +310,12 @@ msgid ""
 msgstr ""
 "Pilih sebuah aplikasi dari daftar untuk mengkonfigurasi pengaturan "
 "notifikasi dan perilakunya"
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Pengaturan Aplikasi"
 
 #, fuzzy
 #~| msgid "Application Settings"

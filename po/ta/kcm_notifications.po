@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-03-24 17:33+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -88,16 +88,19 @@ msgid "Choose sound file"
 msgstr "ஒலிக்கோப்பை தேர்ந்தெடு"
 
 #: ui/main.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Plasma-specific notifications"
+#| msgid "System Notifications…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "கணினி அறிவிப்புகள்…"
 
 #: ui/main.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
-msgstr "செயலி அமைப்புகள்…"
+msgid "Application Settings"
+msgstr "செயலி அமைப்புகள்"
 
 #: ui/main.qml:80
 #, kde-format
@@ -288,6 +291,10 @@ msgid ""
 msgstr ""
 "ஒரு செயலியின் அறிவிப்பு அமைப்புகள் மற்றும் நடத்தையை மாற்ற, அதை பட்டியலிலிருந்து தேர்வு "
 "செய்யுங்கள்"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "செயலி அமைப்புகள்…"
 
 #, fuzzy
 #~| msgid "Application Settings"

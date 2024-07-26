@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-03-22 19:14+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -93,16 +93,19 @@ msgid "Choose sound file"
 msgstr "Виберіть звуковий файл"
 
 #: ui/main.qml:46
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Plasma-specific notifications"
+#| msgid "System Notifications…"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Системні сповіщення…"
 
 #: ui/main.qml:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
-msgstr "Параметри програм…"
+msgid "Application Settings"
+msgstr "Параметри програм"
 
 #: ui/main.qml:80
 #, kde-format
@@ -296,6 +299,10 @@ msgid ""
 msgstr ""
 "Виберіть програму зі списку, щоб налаштувати параметри та поведінку для її "
 "сповіщень"
+
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Параметри програм…"
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Configure Application Settings…"

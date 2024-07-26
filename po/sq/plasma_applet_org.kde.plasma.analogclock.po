@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the kdebase-workspace package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2009.
 #
+# SPDX-FileCopyrightText: 2024 Agron Selimaj <as9902613@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdebase-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2009-08-08 18:24+0000\n"
-"Last-Translator: Vilson Gjeci <vilsongjeci@gmail.com>\n"
-"Language-Team: Albanian <sq@li.org>\n"
+"PO-Revision-Date: 2024-07-24 23:19-0400\n"
+"Last-Translator: Agron Selimaj <as9902613@gmail.com>\n"
+"Language-Team: sq\n"
 "Language: sq\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2011-05-05 23:18+0000\n"
-"X-Generator: Launchpad (build 12959)\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: contents/config/config.qml:13
@@ -25,27 +26,25 @@ msgid "Appearance"
 msgstr "Paraqitja"
 
 #: contents/ui/configGeneral.qml:19
-#, fuzzy, kde-format
-#| msgid "Show &seconds hand"
+#, kde-format
 msgid "Show seconds hand"
-msgstr "Shfaq &dorën e sekondave"
+msgstr "Shfaq dorën e sekondave"
 
 #: contents/ui/configGeneral.qml:20
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Të Përgjithshme:"
 
 #: contents/ui/configGeneral.qml:24
-#, fuzzy, kde-format
-#| msgid "Show &time zone"
+#, kde-format
 msgid "Show time zone"
-msgstr "Shfaq &zonën kohore"
+msgstr "Shfaq zonën kohore"
 
 #: contents/ui/main.qml:80
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Current time is %1; Current date is %2"
-msgstr ""
+msgstr "Ora e tashme është %1; Data e tashme është %2"
 
 #~ msgid "Show the seconds"
 #~ msgstr "Shfaq sekondat"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2023-11-11 14:51+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -92,14 +92,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Upozornenia"
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
+msgid "Application Settings"
 msgstr "Nastavenia aplikácií"
 
 #: ui/main.qml:80
@@ -296,6 +296,12 @@ msgid ""
 "and behavior"
 msgstr ""
 "Vyberte aplikáciu zo zoznamu na zmenu jej nastavení upozornení a správania"
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Nastavenia aplikácií"
 
 #, fuzzy
 #~| msgid "Application Settings"

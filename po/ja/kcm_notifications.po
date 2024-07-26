@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2024-02-26 03:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: ja\n"
@@ -92,14 +92,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Normal notifications:"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "通常の通知:"
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
+msgid "Application Settings"
 msgstr "アプリケーションの設定"
 
 #: ui/main.qml:80
@@ -289,6 +289,12 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "リストからアプリケーションを選択して通知設定と動作を設定できます"
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "アプリケーションの設定"
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Configure Application Settings…"

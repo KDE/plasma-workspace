@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-26 00:41+0000\n"
 "PO-Revision-Date: 2023-01-08 16:04+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -95,14 +95,14 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Notifications"
 msgctxt "@action:button Plasma-specific notifications"
-msgid "System Notifications…"
+msgid "System Notifications"
 msgstr "Thông báo"
 
 #: ui/main.qml:52
 #, fuzzy, kde-format
 #| msgid "Application Settings"
 msgctxt "@action:button Application-specific notifications"
-msgid "Application Settings…"
+msgid "Application Settings"
 msgstr "Thiết lập ứng dụng"
 
 #: ui/main.qml:80
@@ -302,6 +302,12 @@ msgid ""
 msgstr ""
 "Chọn một ứng dụng trong danh sách để cấu hình các thiết lập và ứng xử của nó "
 "với thông báo."
+
+#, fuzzy
+#~| msgid "Application Settings"
+#~ msgctxt "@action:button Application-specific notifications"
+#~ msgid "Application Settings…"
+#~ msgstr "Thiết lập ứng dụng"
 
 #, fuzzy
 #~| msgid "Application Settings"
