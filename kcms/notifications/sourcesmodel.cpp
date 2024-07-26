@@ -309,7 +309,12 @@ void SourcesModel::load()
             notifyRcFiles.append(file);
 
             KSharedConfig::Ptr config = KSharedConfig::openConfig(file, KConfig::NoGlobals);
-            config->addConfigSources(QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("%2/%1").arg(file).arg(dirInfo.dirName())));
+            QStringList configSources = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, //
+                                                                  QStringLiteral("%2/%1").arg(file).arg(dirInfo.dirName()));
+            // `QStandardPaths` follows the order of precedence given by `$XDG_DATA_DIRS
+            // (more priority goest first), but for `addConfigSources() it is the opposite
+            std::reverse(configSources.begin(), configSources.end());
+            config->addConfigSources(configSources);
 
             KConfigGroup globalGroup(config, QLatin1String("Global"));
 

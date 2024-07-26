@@ -331,6 +331,9 @@ void Notification::Private::setDesktopEntry(const QString &desktopEntry)
         if (configSources.isEmpty()) {
             configSources = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("knotifications5/%1.notifyrc").arg(notifyRcName));
         }
+        // `QStandardPaths` follows the order of precedence given by `$XDG_DATA_DIRS
+        // (more priority goest first), but for `addConfigSources() it is the opposite
+        std::reverse(configSources.begin(), configSources.end());
         config.addConfigSources(configSources);
 
         KConfigGroup globalGroup(&config, u"Global"_s);
