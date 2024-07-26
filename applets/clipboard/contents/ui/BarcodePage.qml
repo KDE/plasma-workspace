@@ -14,9 +14,11 @@ import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.prison 1.0 as Prison
 
-ColumnLayout {
+Item {
     id: barcodeView
 
+    readonly property bool valid: barcodeItem.implicitWidth > 0 && barcodeItem.implicitHeight > 0
+    readonly property bool fit: barcodeItem.implicitWidth <= barcodeItem.width && barcodeItem.implicitHeight <= barcodeItem.height
     property alias text: barcodeItem.content
 
     readonly property var barcodeMap: [
@@ -87,68 +89,48 @@ ColumnLayout {
         }
     }
 
-    Item {
-        Layout.fillWidth: parent
-        Layout.fillHeight: parent
-        Layout.topMargin: Kirigami.Units.smallSpacing
+    Prison.Barcode {
+        id: barcodeItem
+        anchors.fill: parent
+        anchors.topMargin: Kirigami.Units.smallSpacing
+        barcodeType: barcodeView.barcodeMap.find(data => data.code === Plasmoid.configuration.barcodeType)?.type ?? barcodeView.barcodeMap[0].type
+        // Cannot set visible to false as we need it to re-render when changing its size
+        opacity: barcodeView.valid && barcodeView.fit ? 1 : 0
 
-        Prison.Barcode {
-            id: barcodeItem
-            readonly property bool valid: implicitWidth > 0 && implicitHeight > 0 && implicitWidth <= width && implicitHeight <= height
-            anchors.fill: parent
-            barcodeType: barcodeView.barcodeMap.find(data => data.code === Plasmoid.configuration.barcodeType)?.type ?? barcodeView.barcodeMap[0].type
-            // Cannot set visible to false as we need it to re-render when changing its size
-            opacity: valid ? 1 : 0
+        Accessible.name: barcodeView.barcodeMap.find(data => data.type === barcodeItem.barcodeType)?.text ?? barcodeView.barcodeMap[0].text
+        Accessible.role: Accessible.Graphic
+        Drag.dragType: Drag.Automatic
+        Drag.supportedActions: Qt.CopyAction
 
-            Accessible.name: barcodeView.barcodeMap.find(data => data.type === barcodeItem.barcodeType)?.text ?? barcodeView.barcodeMap[0].text
-            Accessible.role: Accessible.Graphic
-            Drag.dragType: Drag.Automatic
-            Drag.supportedActions: Qt.CopyAction
+        HoverHandler {
+            enabled: barcodeView.valid && barcodeView.fit
+            cursorShape: Qt.OpenHandCursor
+        }
 
-            HoverHandler {
-                enabled: barcodeItem.valid
-                cursorShape: Qt.OpenHandCursor
-            }
+        DragHandler {
+            id: dragHandler
+            enabled: barcodeView.valid && barcodeView.fit
 
-            DragHandler {
-                id: dragHandler
-                enabled: barcodeItem.valid
-
-                onActiveChanged: {
-                    if (active) {
-                        barcodeItem.grabToImage((result) => {
-                            barcodeItem.Drag.mimeData = {
-                                "image/png": result.image,
-                            };
-                            barcodeItem.Drag.active = dragHandler.active;
-                        });
-                    } else {
-                        barcodeItem.Drag.active = false;
-                    }
+            onActiveChanged: {
+                if (active) {
+                    barcodeItem.grabToImage((result) => {
+                        barcodeItem.Drag.mimeData = {
+                            "image/png": result.image,
+                        };
+                        barcodeItem.Drag.active = dragHandler.active;
+                    });
+                } else {
+                    barcodeItem.Drag.active = false;
                 }
             }
         }
+    }
 
-        PlasmaComponents3.Label {
-            anchors.fill: parent
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            text: i18n("Creating QR code failed")
-            textFormat: Text.PlainText
-            wrapMode: Text.WordWrap
-            visible: barcodeItem.implicitWidth === 0 && barcodeItem.implicitHeight === 0
-        }
-
-        PlasmaComponents3.Label {
-            anchors.fill: parent
-            leftPadding: Kirigami.Units.gridUnit * 2
-            rightPadding: Kirigami.Units.gridUnit * 2
-            horizontalAlignment: Text.AlignHCenter
-            verticalAlignment: Text.AlignVCenter
-            text: i18n("There is not enough space to display the QR code. Try resizing this applet.")
-            textFormat: Text.PlainText
-            wrapMode: Text.WordWrap
-            visible: barcodeItem.implicitWidth > barcodeItem.width || barcodeItem.implicitHeight > barcodeItem.height
-        }
+    PlasmaExtras.PlaceholderMessage {
+        anchors.centerIn: parent
+        width: parent.width - (Kirigami.Units.gridUnit * 4)
+        visible: !barcodeView.valid || !barcodeView.fit
+        iconName: barcodeView.valid ? "dialog-transform" : "data-error"
+        text: barcodeView.valid ? i18n("There is not enough space to display the QR code. Try resizing this applet.") : i18n("Creating QR code failed")
     }
 }
