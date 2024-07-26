@@ -36,7 +36,6 @@ class AppMenuModule : public KDEDModule, protected QDBusContext
 public:
     AppMenuModule(QObject *parent, const QList<QVariant> &list);
     ~AppMenuModule() override;
-    bool eventFilter(QObject *object, QEvent *event) override;
 
 Q_SIGNALS:
     /**
@@ -76,11 +75,11 @@ private Q_SLOTS:
 
 private:
     void hideMenu();
+    void ensureSerial(QWindow *window);
 
     void fakeUnityAboutToShow(const QString &service, const QDBusObjectPath &menuObjectPath);
 
     KDBusMenuImporter *getImporter(const QString &service, const QString &path);
-    void initMenuWayland();
 
     MenuImporter *m_menuImporter = nullptr;
     AppmenuDBus *m_appmenuDBus;

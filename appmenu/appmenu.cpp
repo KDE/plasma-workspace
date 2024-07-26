@@ -18,6 +18,8 @@
 #include <QApplication>
 #include <QDBusInterface>
 #include <QMenu>
+#include <QPainter>
+#include <QRasterWindow>
 #include <private/qwaylanddisplay_p.h>
 #include <private/qwaylandinputdevice_p.h>
 #include <private/qwaylandwindow_p.h>
@@ -29,6 +31,14 @@
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(AppMenuFactory, "appmenu.json", registerPlugin<AppMenuModule>();)
+
+class ToplevelWindow : public QRasterWindow
+{
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter(this).fillRect(geometry(), Qt::transparent);
+    }
+};
 
 AppMenuModule::AppMenuModule(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
@@ -192,9 +202,27 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
             importer->deleteLater();
         });
 
-        if (m_plasmashell) {
-            connect(m_menu.data(), &QMenu::aboutToShow, this, &AppMenuModule::initMenuWayland, Qt::UniqueConnection);
-            m_menu.data()->popup(QPoint(x, y));
+        if (m_plasmashell && !m_menu->isVisible()) {
+            // We create a invisible toplevel so the menu can be an xdg_popup which is important
+            // to have the expected UX of an menu. By using the ToolTip role it cannot receive
+            // focus which is important because some apps misbehave when they dont have focus when
+            // a menu is triggered
+            auto toplevelWindow = new ToplevelWindow;
+            toplevelWindow->setFlag(Qt::FramelessWindowHint);
+            toplevelWindow->QObject::setParent(menu);
+            toplevelWindow->setGeometry(x, y, 1, 1);
+            auto surface = KWayland::Client::Surface::fromWindow(toplevelWindow);
+            auto plasmaSurface = m_plasmashell->createSurface(surface, surface);
+            plasmaSurface->setSkipSwitcher(true);
+            plasmaSurface->setSkipTaskbar(true);
+            plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::ToolTip);
+            plasmaSurface->setPosition({x - 1, y - 1});
+            toplevelWindow->show();
+            connect(m_menu, &QMenu::aboutToShow, toplevelWindow, [toplevelWindow, this] {
+                m_menu->windowHandle()->setTransientParent(toplevelWindow);
+            });
+            ensureSerial(toplevelWindow);
+            m_menu.data()->popup(QPoint(0, 0));
         } else {
             m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
         }
@@ -227,31 +255,18 @@ void AppMenuModule::reconfigure()
 {
 }
 
-void AppMenuModule::initMenuWayland()
-{
-    auto window = m_menu->windowHandle();
-    if (window && m_plasmashell) {
-        window->setFlag(Qt::FramelessWindowHint);
-        window->requestActivate();
-        auto plasmaSurface = m_plasmashell->createSurface(KWayland::Client::Surface::fromWindow(window), m_menu.data());
-        plasmaSurface->setPosition(window->position());
-        plasmaSurface->setSkipSwitcher(true);
-        plasmaSurface->setSkipTaskbar(true);
-        m_menu->installEventFilter(this);
-    }
-}
-
-bool AppMenuModule::eventFilter(QObject *object, QEvent *event)
+void AppMenuModule::ensureSerial(QWindow *w)
 {
     // HACK we need an input serial to create popups but Qt only sets them on click
-    if (object == m_menu && event->type() == QEvent::Enter && m_plasmashell) {
-        auto waylandWindow = dynamic_cast<QtWaylandClient::QWaylandWindow *>(m_menu->windowHandle()->handle());
-        if (waylandWindow) {
-            const auto device = waylandWindow->display()->currentInputDevice();
-            waylandWindow->display()->setLastInputDevice(device, device->pointer()->mEnterSerial, waylandWindow);
+    if (auto waylandApp = qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>()) {
+        if (!waylandApp->lastInputSerial()) {
+            auto waylandWindow = dynamic_cast<QtWaylandClient::QWaylandWindow *>(w->handle());
+            if (waylandWindow) {
+                const auto device = waylandWindow->display()->currentInputDevice();
+                waylandWindow->display()->setLastInputDevice(device, 1, waylandWindow);
+            }
         }
     }
-    return KDEDModule::eventFilter(object, event);
 }
 
 #include "appmenu.moc"
