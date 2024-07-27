@@ -27,6 +27,7 @@
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
+#include <KRecentDocument>
 #include <KService>
 #include <PlasmaActivities/ResourceInstance>
 
@@ -418,6 +419,14 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
         return true;
     } else if (actionId == QLatin1String("forget") && withinBounds) {
+        const QString &resource = resourceAt(row);
+
+        if (!resource.startsWith(QLatin1String("applications:"))) {
+            const QString &mimeType = rowValueAt(row, ResultModel::MimeType).toString();
+            const QUrl resourceUrl = docData(resource, Kicker::UrlRole, mimeType).toUrl();
+            KRecentDocument::removeFile(resourceUrl);
+        }
+
         if (m_activitiesModel) {
             QModelIndex idx = sourceModel()->index(row, 0);
             auto *sourceProxy = qobject_cast<QSortFilterProxyModel *>(sourceModel());
@@ -429,12 +438,13 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
 
             static_cast<ResultModel *>(m_activitiesModel.data())->forgetResource(idx.row());
         }
-
         return false;
     } else if (actionId == QLatin1String("openParentFolder") && withinBounds) {
         const auto url = QUrl::fromUserInput(resourceAt(row));
         KIO::highlightInFileManager({url});
     } else if (actionId == QLatin1String("forgetAll")) {
+        KRecentDocument::clear();
+
         if (m_activitiesModel) {
             static_cast<ResultModel *>(m_activitiesModel.data())->forgetAllResources();
         }
