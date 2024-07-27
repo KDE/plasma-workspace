@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:53+0000\n"
+"POT-Creation-Date: 2024-07-27 02:35+0000\n"
 "PO-Revision-Date: 2009-12-24 06:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -17,19 +17,19 @@ msgstr ""
 "Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
 "3 : 4\n"
 
-#: freespacenotifier.cpp:93
+#: freespacenotifier.cpp:126
 #, kde-format
 msgid "Open in Filelight"
 msgstr ""
 
-#: freespacenotifier.cpp:99
+#: freespacenotifier.cpp:132
 #, fuzzy, kde-format
 #| msgctxt "Opens a file manager like dolphin"
 #| msgid "Open File Manager"
 msgid "Open in File Manager"
 msgstr "Oscail Bainisteoir Comhad"
 
-#: freespacenotifier.cpp:106
+#: freespacenotifier.cpp:139
 #, fuzzy, kde-format
 #| msgctxt "Allows the user to configure the warning notification being shown"
 #| msgid "Configure Warning"
@@ -66,21 +66,21 @@ msgstr "Tabhair rabhadh nuair a bheidh níos lú ná an mhéid seo spáis:"
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:37
+#: module.cpp:38
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
 
-#: module.cpp:45
+#: module.cpp:43
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr ""
 
-#: module.cpp:62
+#: module.cpp:60
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

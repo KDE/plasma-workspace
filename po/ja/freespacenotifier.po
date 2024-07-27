@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kded_susefreespacenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:53+0000\n"
+"POT-Creation-Date: 2024-07-27 02:35+0000\n"
 "PO-Revision-Date: 2022-08-18 09:13+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -20,17 +20,17 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 22.04.1\n"
 
-#: freespacenotifier.cpp:93
+#: freespacenotifier.cpp:126
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Filelight で開く"
 
-#: freespacenotifier.cpp:99
+#: freespacenotifier.cpp:132
 #, kde-format
 msgid "Open in File Manager"
 msgstr "ファイルマネージャで開く"
 
-#: freespacenotifier.cpp:106
+#: freespacenotifier.cpp:139
 #, kde-format
 msgid "Configure Warning…"
 msgstr "警告の設定..."
@@ -65,7 +65,7 @@ msgstr "空き領域が次の量を下回ったら警告する:"
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:37
+#: module.cpp:38
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
@@ -73,7 +73,7 @@ msgid ""
 msgstr ""
 "ホームフォルダのディスク領域は残り僅かです。残りの領域は %1 MiB です (%2%)。"
 
-#: module.cpp:45
+#: module.cpp:43
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
@@ -82,7 +82,7 @@ msgstr ""
 "ルート パーティションのディスク領域は残り僅かです。残りの領域は %1 MiB です "
 "(%2%)"
 
-#: module.cpp:62
+#: module.cpp:60
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

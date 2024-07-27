@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:53+0000\n"
+"POT-Creation-Date: 2024-07-27 02:35+0000\n"
 "PO-Revision-Date: 2021-09-27 20:40+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "X-Generator: Lokalize 20.04.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: freespacenotifier.cpp:93
+#: freespacenotifier.cpp:126
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Åbn i Filelight"
 
-#: freespacenotifier.cpp:99
+#: freespacenotifier.cpp:132
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Åbn i filhåndtering"
 
-#: freespacenotifier.cpp:106
+#: freespacenotifier.cpp:139
 #, kde-format
 msgid "Configure Warning…"
 msgstr "Indstil advarsel..."
@@ -62,7 +62,7 @@ msgstr "Advar når ledig diskplads er under:"
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:37
+#: module.cpp:38
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
@@ -70,7 +70,7 @@ msgid ""
 msgstr ""
 "Din hjemmemappe er ved at løbe tør for diskplads. Du har %1 MiB tilbage (%2%)"
 
-#: module.cpp:45
+#: module.cpp:43
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
@@ -79,7 +79,7 @@ msgstr ""
 "Din rod-partition er ved at løbe tør for diskplads. Du har %1 MiB tilbage "
 "(%2%)"
 
-#: module.cpp:62
+#: module.cpp:60
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:53+0000\n"
+"POT-Creation-Date: 2024-07-27 02:35+0000\n"
 "PO-Revision-Date: 2023-12-17 16:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: freespacenotifier.cpp:93
+#: freespacenotifier.cpp:126
 #, kde-format
 msgid "Open in Filelight"
 msgstr "ஃபைல்-லைட்டில் திற"
 
-#: freespacenotifier.cpp:99
+#: freespacenotifier.cpp:132
 #, kde-format
 msgid "Open in File Manager"
 msgstr "கோப்பு உலாவியில் திற"
 
-#: freespacenotifier.cpp:106
+#: freespacenotifier.cpp:139
 #, kde-format
 msgid "Configure Warning…"
 msgstr "எச்சரிக்கையை அமை…"
@@ -62,21 +62,21 @@ msgstr "இதைவிட குறைவாக காலியிடம் இ
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:37
+#: module.cpp:38
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr "உங்கள் முகப்பு அடைவில் இடம் குறைவாக உள்ளது, %1 MiB மீதி உள்ளது (%2%)."
 
-#: module.cpp:45
+#: module.cpp:43
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr "உங்கள் ரூட் அடைவில் இடம் குறைவாக உள்ளது, %1 MiB மீதி உள்ளது (%2%)."
 
-#: module.cpp:62
+#: module.cpp:60
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

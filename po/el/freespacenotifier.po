@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:53+0000\n"
+"POT-Creation-Date: 2024-07-27 02:35+0000\n"
 "PO-Revision-Date: 2014-10-08 13:14+0300\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -20,19 +20,19 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: freespacenotifier.cpp:93
+#: freespacenotifier.cpp:126
 #, kde-format
 msgid "Open in Filelight"
 msgstr ""
 
-#: freespacenotifier.cpp:99
+#: freespacenotifier.cpp:132
 #, fuzzy, kde-format
 #| msgctxt "Opens a file manager like dolphin"
 #| msgid "Open File Manager..."
 msgid "Open in File Manager"
 msgstr "Άνοιγμα διαχειριστή αρχείων..."
 
-#: freespacenotifier.cpp:106
+#: freespacenotifier.cpp:139
 #, fuzzy, kde-format
 #| msgctxt "Allows the user to configure the warning notification being shown"
 #| msgid "Configure Warning..."
@@ -69,7 +69,7 @@ msgstr "Προειδοποίηση όταν ο ελεύθερος χώρος ε�
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:37
+#: module.cpp:38
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -83,7 +83,7 @@ msgid ""
 msgstr ""
 "Ο ελεύθερος χώρος στον Προσωπικό Φάκελό σας τελειώνει, απομένουν %1 MiB (%2%)"
 
-#: module.cpp:45
+#: module.cpp:43
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Warns the user that the system is running low on space on his home "
@@ -97,7 +97,7 @@ msgid ""
 msgstr ""
 "Ο ελεύθερος χώρος στον Προσωπικό Φάκελό σας τελειώνει, απομένουν %1 MiB (%2%)"
 
-#: module.cpp:62
+#: module.cpp:60
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

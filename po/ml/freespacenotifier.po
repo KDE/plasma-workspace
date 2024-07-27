@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: freespacenotifier trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:53+0000\n"
+"POT-Creation-Date: 2024-07-27 02:35+0000\n"
 "PO-Revision-Date: 2021-08-07 20:47+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -18,17 +18,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.7.2\n"
 
-#: freespacenotifier.cpp:93
+#: freespacenotifier.cpp:126
 #, kde-format
 msgid "Open in Filelight"
 msgstr "ഫയൽലൈറ്റില്‍ തുറക്കുക"
 
-#: freespacenotifier.cpp:99
+#: freespacenotifier.cpp:132
 #, kde-format
 msgid "Open in File Manager"
 msgstr "ഫയല്‍ മാനേജറിൽ തുറക്കുക"
 
-#: freespacenotifier.cpp:106
+#: freespacenotifier.cpp:139
 #, kde-format
 msgid "Configure Warning…"
 msgstr "മുന്നറിയിപ്പ് ക്രമീകരിയ്ക്കുക…"
@@ -63,21 +63,21 @@ msgstr "ലഭ്യമായ ഡിസ്ക്സ്പെയ്സ് ഇത�
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:37
+#: module.cpp:38
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr "നിങ്ങളുടെ ഹോം അറ നിറയാറായിരിക്കുന്നു, %1 MiB മാത്രമേ ബാക്കിയുള്ളു (%2%)."
 
-#: module.cpp:45
+#: module.cpp:43
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr "നിങ്ങളുടെ റുട്ട് പാർട്ടീഷൻ നിറയാറായിരിക്കുന്നു, %1 MiB മാത്രമേ ബാക്കിയുള്ളു (%2%)."
 
-#: module.cpp:62
+#: module.cpp:60
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"

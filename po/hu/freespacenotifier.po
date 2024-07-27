@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-04 16:53+0000\n"
+"POT-Creation-Date: 2024-07-27 02:35+0000\n"
 "PO-Revision-Date: 2021-07-01 22:50+0200\n"
 "Last-Translator: Kristóf Kiszel <kiszel.kristof@gmail.com>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 21.07.70\n"
 
-#: freespacenotifier.cpp:93
+#: freespacenotifier.cpp:126
 #, kde-format
 msgid "Open in Filelight"
 msgstr "Megnyitás Filelightban"
 
-#: freespacenotifier.cpp:99
+#: freespacenotifier.cpp:132
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Megnyitás fájlkezelőben"
 
-#: freespacenotifier.cpp:106
+#: freespacenotifier.cpp:139
 #, kde-format
 msgid "Configure Warning…"
 msgstr "Figyelmeztetési beállítások…"
@@ -62,21 +62,21 @@ msgstr "Figyelmeztessen, ha a szabad lemez terület kevesebb mint:"
 msgid " MiB"
 msgstr " MiB"
 
-#: module.cpp:37
+#: module.cpp:38
 #, kde-format
 msgid ""
 "Your Home folder is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr "A saját mappájában fogy a hely, %1 MiB van hátra (%2%)."
 
-#: module.cpp:45
+#: module.cpp:43
 #, kde-format
 msgid ""
 "Your Root partition is running out of disk space, you have %1 MiB remaining "
 "(%2%)."
 msgstr "A root partíción fogy a hely, %1 MiB van hátra (%2%)."
 
-#: module.cpp:62
+#: module.cpp:60
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
