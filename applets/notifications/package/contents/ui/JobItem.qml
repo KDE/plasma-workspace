@@ -29,23 +29,24 @@ ColumnLayout {
     property QtObject jobDetails
 
     readonly property int totalFiles: jobItem.jobDetails && jobItem.jobDetails.totalFiles || 0
-    readonly property var url: {
-       if (jobItem.jobState !== NotificationManager.Notifications.JobStateStopped
-               || jobItem.jobError) {
-           return null;
-       }
 
-       // For a single file show actions for it
-       // Otherwise the destination folder all of them were copied into
-       const url = totalFiles === 1 ? jobItem.jobDetails.descriptionUrl
-                                    : jobItem.jobDetails.destUrl;
+    readonly property url url: {
+        if (jobState !== NotificationManager.Notifications.JobStateStopped || jobError !== 0) {
+            return Qt.url("");
+        }
 
-       // Don't offer opening files in Trash
-       if (url && url.toString().startsWith("trash:")) {
-           return null;
-       }
+        // For a single file show actions for it
+        // Otherwise the destination folder all of them were copied into
+        const url = totalFiles === 1
+            ? jobDetails.descriptionUrl
+            : jobDetails.destUrl;
 
-       return url;
+        // Don't offer opening files in Trash
+        if (url.toString().startsWith("trash:")) {
+            return Qt.url("");
+        }
+
+        return url;
    }
 
     property alias iconContainerItem: jobDragIconItem.parent
@@ -64,7 +65,7 @@ ColumnLayout {
 
     Notifications.FileInfo {
         id: fileInfo
-        url: jobItem.totalFiles === 1 && jobItem.url ? jobItem.url : ""
+        url: jobItem.totalFiles === 1 ? jobItem.url : ""
     }
 
     // This item is parented to the NotificationItem iconContainer
@@ -219,7 +220,7 @@ ColumnLayout {
         // We want the actions to be right-aligned but Row also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft
-        visible: jobItem.url && jobItem.url.toString() !== "" && !fileInfo.error
+        visible: jobItem.url.toString() !== "" && !fileInfo.error
 
         PlasmaComponents3.Button {
             id: otherFileActionsButton
@@ -246,7 +247,7 @@ ColumnLayout {
 
             Notifications.FileMenu {
                 id: otherFileActionsMenu
-                url: jobItem.url || ""
+                url: jobItem.url
                 onActionTriggered: jobItem.fileActionInvoked(action)
             }
         }
