@@ -22,6 +22,7 @@
 #include <KNotificationJobUiDelegate>
 #include <KPropertiesDialog>
 #include <KProtocolInfo>
+#include <KRecentDocument>
 
 #include <KIO/DesktopExecParser>
 #include <PlasmaActivities/Stats/Cleaning>
@@ -333,6 +334,8 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
         if (storageId.isEmpty()) {
             return false;
         }
+
+        KRecentDocument::removeApplication(storageId);
 
         // clang-format off
         auto query = UsedResources
