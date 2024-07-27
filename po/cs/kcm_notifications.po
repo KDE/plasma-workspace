@@ -88,19 +88,16 @@ msgid "Choose sound file"
 msgstr "Vybrat zvukový soubor"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@action:button Plasma-specific notifications"
-#| msgid "System Notifications…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications"
-msgstr "Systémová upozornění…"
+msgstr ""
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
-msgstr "Nastavení aplikace"
+msgstr ""
 
 #: ui/main.qml:80
 #, kde-format
@@ -291,7 +288,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Vyberte v seznamu aplikaci, jejíž upozornění chcete nastavit"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings…"
-#~ msgstr "Nastavení aplikace…"
