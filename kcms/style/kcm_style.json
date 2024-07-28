@@ -104,8 +104,7 @@
         "Name[zh_TW]": "應用程式風格"
     },
     "X-DocPath": "kcontrol/kcmstyle/index.html",
-    "X-KDE-Init-Phase": "0",
-    "X-KDE-Init-Symbol": "kcminit_style",
+    "X-KDE-Init-Phase": 0,
     "X-KDE-Keywords": "style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode",
     "X-KDE-Keywords[ar]": "نمط,أنماط,مظهر,قطعة,أيقونة,أشرطة أدوات,نص,تمييز,تطبيقات,تطبيقات كدي,سمة,بلازما,قائمة,قائمة عالمية,GTK,جنوم,نمط التطبيق,التطبيق,البرامج,المظهر ,الجلد,السمات,الوضع الفاتح,الوضع الداكن",
     "X-KDE-Keywords[az]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode,üslub,növ,baxmaq,vidjet,ikonlar,alətlər çubuğu,mətn,işıqlanan,tətbiqlər,KDE tətbiqləri,mövzu,menyu,qlobal menyu,tətəbiq tərzi,tətbiq,proqramlar,görünüş,örtük,mövzular,işıqlı rejim,qaranlıq rejim",

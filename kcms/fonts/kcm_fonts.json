@@ -110,8 +110,7 @@
         "Name[zh_TW]": "字型"
     },
     "X-DocPath": "kcontrol/fonts/index.html",
-    "X-KDE-Init-Phase": "0",
-    "X-KDE-Init-Symbol": "kcminit_fonts",
+    "X-KDE-Init-Phase": 0,
     "X-KDE-Keywords": "fonts,font size,styles,charsets,character sets,panel,control panel,desktops,FileManager,Toolbars,Menu,Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts,typography,type,letters,character,hinting,sub-pixel,text,big text,change font,size",
     "X-KDE-Keywords[ar]": "خطوط,حجم خط,أنماط,مجموعات أحرف,مجموعات أحرف,لوحة,لوحة تحكم,أسطح مكتب,مدير ملفات,أشرطة أدوات,قائمة,عنوان نافذة,عنوان,DPI,صقل,خطوط سطح مكتب,خطوط أدوات,أحرف,خطوط عامة,حرف,نص,نص كبير,تغيير الخط,الحجم",
     "X-KDE-Keywords[az]": "fonts,font size,styles,charsets,character sets,panel,control panel,desktops,FileManager,Toolbars,Menu,Window Title,Title,DPI,anti-aliasing,desktop fonts,toolbar fonts,character,general fonts,typography,type,letters,character,hinting,sub-pixel,text,big text,change font,size,şriftlər,şrift ölçüsü,üslublar,tablolar,simvol dəstləri,panel,idarəetmə paneli,iş masaları,Fayl Menecer,Alət panelləri,Menyu,Pəncərə başlığı,Başlıq, DPI,şrift hamarlaması,masaüstü şriftlər,alətlər paneli şriftləri,simvol,ümumi şriftlər,nəşriyyat şriftləri,simvollar,işarə etmək,alt-piksellər,mətn,böyük mətn,şrifti dəyişmək,ölçü",

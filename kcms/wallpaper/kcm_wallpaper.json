@@ -102,7 +102,7 @@
         "Name[zh_TW]": "桌布"
     },
     "X-DocPath": "kcontrol/kcm_wallpaper/index.html",
-    "X-KDE-Init-Phase": "0",
+    "X-KDE-Init-Phase": 0,
     "X-KDE-Keywords": "wallpaper,desktop",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 10
