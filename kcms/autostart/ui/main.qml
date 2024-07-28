@@ -65,7 +65,7 @@ KCM.ScrollViewKCM {
     actions: [
         Kirigami.Action {
             icon.name: "list-add-symbolic"
-            text: i18nc("@action:button", "Add…")
+            text: i18nc("@action:button", "Add")
 
             Kirigami.Action {
                 text: i18nc("@action:button", "Add Application…")
