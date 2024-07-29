@@ -65,20 +65,20 @@ KCM.ScrollViewKCM {
     actions: [
         Kirigami.Action {
             icon.name: "list-add-symbolic"
-            text: i18nc("@action:button", "Add")
+            text: i18nc("@action:button menu button; add new application etc", "Add New")
 
             Kirigami.Action {
-                text: i18nc("@action:button", "Add Application…")
+                text: i18nc("@action:inmenu completes: add new application", "Application…")
                 icon.name: "list-add-symbolic"
                 onTriggered: kcm.model.showApplicationDialog(root)
             }
             Kirigami.Action {
-                text: i18nc("@action:button", "Add Login Script…")
+                text: i18nc("@action:inmenu completes: add new login script", "Login Script…")
                 icon.name: "list-add-symbolic"
                 onTriggered: loginFileDialogLoader.active = true
             }
             Kirigami.Action {
-                text: i18nc("@action:button", "Add Logout Script…")
+                text: i18nc("@action:inmenu completes: add new logout script", "Logout Script…")
                 icon.name: "list-add-symbolic"
                 onTriggered: logoutFileDialogLoader.active = true
             }
@@ -191,7 +191,7 @@ KCM.ScrollViewKCM {
             width: parent.width - (Kirigami.Units.largeSpacing * 4)
             visible: parent.count === 0
             text: i18n("No user-specified autostart items")
-            explanation: xi18nc("@info 'some' refers to autostart items", "Click the <interface>Add…</interface> button to add some")
+            explanation: xi18nc("@info 'some' refers to autostart items", "Click the <interface>Add New</interface> button to add some")
         }
     }
 

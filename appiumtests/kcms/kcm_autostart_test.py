@@ -52,7 +52,7 @@ class KCMAutoStartTest(unittest.TestCase):
         """
         Tests the KCM can be opened
         """
-        self.driver.find_element(AppiumBy.NAME, "Add")
+        self.driver.find_element(AppiumBy.NAME, "Add New")
 
 
 if __name__ == '__main__':
