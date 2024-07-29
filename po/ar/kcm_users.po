@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-18 00:40+0000\n"
-"PO-Revision-Date: 2024-02-10 17:14+0400\n"
+"PO-Revision-Date: 2024-07-28 12:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -345,20 +346,16 @@ msgid "Users"
 msgstr "المستخدمين"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "أضف مستخدم جديد"
+msgstr "أضف جديد…"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "أضف مستخدم جديد"
+msgstr "أضف مستخدم جديد…"
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -527,6 +524,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"لا يمكن تغيير نوع الحساب إلى \"قياسي\" إلا إذا كان هناك حساب مسؤول آخر على "
+"الأقل على النظام. بدون هذا الحساب، يصبح المصادقة مستحيلة أو تتطلب استخدام "
+"كلمة سر الجذر بشكل غير آمن."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

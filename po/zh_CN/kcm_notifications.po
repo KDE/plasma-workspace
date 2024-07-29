@@ -91,7 +91,7 @@ msgstr "选择声音文件"
 #, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications"
-msgstr ""
+msgstr "系统通知"
 
 #: ui/main.qml:52
 #, kde-format

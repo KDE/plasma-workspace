@@ -139,19 +139,19 @@ msgstr "预览主题"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove theme"
-msgstr ""
+msgstr "移除主题"
 
 #: ui/main.qml:128
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "无法删除活动主题"
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "无法删除系统安装的主题"
 
 #: ui/main.qml:147
 #, kde-format
