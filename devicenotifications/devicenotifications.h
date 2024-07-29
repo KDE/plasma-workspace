@@ -10,6 +10,7 @@
 #include <QList>
 #include <QSocketNotifier>
 #include <QString>
+#include <QTimer>
 
 #include <KDEDModule>
 
@@ -84,4 +85,7 @@ private:
     Udev m_udev;
     QHash<QString, QString> m_displayNames;
     QList<QString> m_removableDevices;
+
+    QTimer m_deviceAddedTimer;
+    QTimer m_deviceRemovedTimer;
 };

@@ -12,7 +12,11 @@
 #include <KNotification>
 #include <KPluginFactory>
 
+#include <chrono>
+
 K_PLUGIN_CLASS_WITH_JSON(KdedDeviceNotifications, "devicenotifications.json")
+
+using namespace std::chrono_literals;
 
 // TODO Can we put this in KStringHandler?
 static QString decodePropertyValue(const QByteArray &encoded)
@@ -249,6 +253,13 @@ void Udev::onSocketActivated()
 KdedDeviceNotifications::KdedDeviceNotifications(QObject *parent, const QList<QVariant> &)
     : KDEDModule(parent)
 {
+    // Suppress changes in quick succession in case of (un)plugging a docking station with several outputs and USB devices.
+    m_deviceAddedTimer.setInterval(500ms);
+    m_deviceAddedTimer.setSingleShot(true);
+
+    m_deviceRemovedTimer.setInterval(500ms);
+    m_deviceRemovedTimer.setSingleShot(true);
+
     connect(&m_udev, &Udev::deviceAdded, this, &KdedDeviceNotifications::onDeviceAdded);
     connect(&m_udev, &Udev::deviceRemoved, this, &KdedDeviceNotifications::onDeviceRemoved);
 }
@@ -275,6 +286,11 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
     if (!displayName.isEmpty()) {
         m_displayNames.insert(device.sysfsPath(), displayName);
     }
+
+    if (m_deviceAddedTimer.isActive()) {
+        return;
+    }
+
     const QString text = !displayName.isEmpty() ? i18n("%1 has been plugged in.", displayName.toHtmlEscaped()) : i18n("A USB device has been plugged in.");
 
     KNotification::event(QStringLiteral("deviceAdded"),
@@ -282,6 +298,7 @@ void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
                          text,
                          QStringLiteral("drive-removable-media-usb"),
                          KNotification::DefaultEvent);
+    m_deviceAddedTimer.start();
 }
 
 void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
@@ -296,6 +313,10 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
         return;
     }
 
+    if (m_deviceRemovedTimer.isActive()) {
+        return;
+    }
+
     const QString text = !displayName.isEmpty() ? i18n("%1 has been unplugged.", displayName.toHtmlEscaped()) : i18n("A USB device has been unplugged.");
 
     KNotification::event(QStringLiteral("deviceRemoved"),
@@ -303,6 +324,7 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
                          text,
                          QStringLiteral("drive-removable-media-usb"),
                          KNotification::DefaultEvent);
+    m_deviceRemovedTimer.start();
 }
 
 #include "devicenotifications.moc"
