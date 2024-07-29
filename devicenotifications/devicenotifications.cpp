@@ -6,6 +6,7 @@
 
 #include "devicenotifications.h"
 
+#include <QGuiApplication>
 #include <QSocketNotifier>
 
 #include <KLocalizedString>
@@ -13,6 +14,8 @@
 #include <KPluginFactory>
 
 #include <chrono>
+
+#include <wayland-client.h>
 
 K_PLUGIN_CLASS_WITH_JSON(KdedDeviceNotifications, "devicenotifications.json")
 
@@ -262,9 +265,91 @@ KdedDeviceNotifications::KdedDeviceNotifications(QObject *parent, const QList<QV
 
     connect(&m_udev, &Udev::deviceAdded, this, &KdedDeviceNotifications::onDeviceAdded);
     connect(&m_udev, &Udev::deviceRemoved, this, &KdedDeviceNotifications::onDeviceRemoved);
+
+    setupWaylandOutputListener();
 }
 
-KdedDeviceNotifications::~KdedDeviceNotifications() = default;
+KdedDeviceNotifications::~KdedDeviceNotifications()
+{
+    if (m_registry) {
+        wl_registry_destroy(m_registry);
+    }
+}
+
+void KdedDeviceNotifications::setupWaylandOutputListener()
+{
+    auto waylandApp = qGuiApp->nativeInterface<QNativeInterface::QWaylandApplication>();
+    if (!waylandApp) {
+        return;
+    }
+
+    wl_display *display = waylandApp->display();
+
+    m_registry = wl_display_get_registry(display);
+
+    auto globalAdded = [](void *data, wl_registry *registry, uint32_t name, const char *interface, uint32_t version) {
+        Q_UNUSED(registry)
+        Q_UNUSED(name)
+        Q_UNUSED(version)
+        auto *self = static_cast<KdedDeviceNotifications *>(data);
+        if (qstrcmp(interface, "kde_output_device_v2") == 0) {
+            self->m_outputs.append(name);
+
+            if (self->m_initialOutputsReceived) {
+                self->notifyOutputAdded();
+            }
+        }
+    };
+    auto globalRemoved = [](void *data, wl_registry *registry, uint32_t name) {
+        Q_UNUSED(registry)
+        auto *self = static_cast<KdedDeviceNotifications *>(data);
+        if (self->m_outputs.removeOne(name)) {
+            self->notifyOutputRemoved();
+        }
+    };
+
+    static const wl_registry_listener registryListener{globalAdded, globalRemoved};
+    wl_registry_add_listener(m_registry, &registryListener, this);
+
+    // Suppress notifications until the inital list of outputs has been received.
+    auto syncDone = [](void *data, struct wl_callback *wl_callback, uint32_t callback_data) {
+        Q_UNUSED(wl_callback);
+        Q_UNUSED(callback_data);
+        auto *self = static_cast<KdedDeviceNotifications *>(data);
+        self->m_initialOutputsReceived = true;
+    };
+    auto syncCallback = wl_display_sync(display);
+    static const wl_callback_listener syncCallbackListener{syncDone};
+    wl_callback_add_listener(syncCallback, &syncCallbackListener, this);
+}
+
+void KdedDeviceNotifications::notifyOutputAdded()
+{
+    if (m_deviceAddedTimer.isActive()) {
+        return;
+    }
+
+    KNotification::event(QStringLiteral("deviceAdded"),
+                         i18nc("@title:notifications", "Display Detected"),
+                         i18n("A display has been plugged in."),
+                         QStringLiteral("video-display-add"),
+                         KNotification::DefaultEvent);
+    m_deviceAddedTimer.start();
+}
+
+void KdedDeviceNotifications::notifyOutputRemoved()
+{
+    if (m_deviceRemovedTimer.isActive()) {
+        return;
+    }
+
+    KNotification::event(QStringLiteral("deviceRemoved"),
+                         i18nc("@title:notifications", "Display Removed"),
+                         i18n("A display has been unplugged."),
+                         QStringLiteral("video-display-remove"),
+                         KNotification::DefaultEvent);
+    m_deviceRemovedTimer.start();
+}
 
 void KdedDeviceNotifications::onDeviceAdded(const UdevDevice &device)
 {

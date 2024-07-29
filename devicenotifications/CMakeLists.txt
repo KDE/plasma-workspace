@@ -7,4 +7,5 @@ target_link_libraries(devicenotifications
     KF6::I18n
     KF6::Notifications
     UDev::UDev
+    Wayland::Client
 )

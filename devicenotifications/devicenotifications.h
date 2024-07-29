@@ -16,6 +16,8 @@
 
 #include <libudev.h>
 
+struct wl_registry;
+
 class UdevDevice
 {
 public:
@@ -78,13 +80,21 @@ public:
     KdedDeviceNotifications(QObject *parent, const QVariantList &args);
     ~KdedDeviceNotifications() override;
 
+    void setupWaylandOutputListener();
+
 private:
+    void notifyOutputAdded();
+    void notifyOutputRemoved();
     void onDeviceAdded(const UdevDevice &device);
     void onDeviceRemoved(const UdevDevice &device);
 
     Udev m_udev;
     QHash<QString, QString> m_displayNames;
     QList<QString> m_removableDevices;
+
+    wl_registry *m_registry = nullptr;
+    QVector<uint32_t> m_outputs;
+    bool m_initialOutputsReceived = false;
 
     QTimer m_deviceAddedTimer;
     QTimer m_deviceRemovedTimer;
