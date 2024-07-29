@@ -66,20 +66,28 @@ KCM.ScrollViewKCM {
         Kirigami.Action {
             icon.name: "list-add-symbolic"
             text: i18nc("@action:button menu button; add new application etc", "Add New")
+            // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
+            // Accessible.name: i18nc("@action:button accessible menu button", "Add new application or script")
 
             Kirigami.Action {
                 text: i18nc("@action:inmenu completes: add new application", "Application…")
                 icon.name: "list-add-symbolic"
+                // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
+                // Accessible.name: i18nc("@action:inmenu accessible", "Add new application")
                 onTriggered: kcm.model.showApplicationDialog(root)
             }
             Kirigami.Action {
                 text: i18nc("@action:inmenu completes: add new login script", "Login Script…")
                 icon.name: "list-add-symbolic"
+                // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
+                // Accessible.name: i18nc("@action:inmenu accessible", "Add login script")
                 onTriggered: loginFileDialogLoader.active = true
             }
             Kirigami.Action {
                 text: i18nc("@action:inmenu completes: add new logout script", "Logout Script…")
                 icon.name: "list-add-symbolic"
+                // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
+                // Accessible.name: i18nc("@action:inmenu accessible", "Add new logout script")
                 onTriggered: logoutFileDialogLoader.active = true
             }
         }
