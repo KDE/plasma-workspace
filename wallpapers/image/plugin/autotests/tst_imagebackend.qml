@@ -88,19 +88,20 @@ TestCase {
 
         verify(testPackage.toString().length > 0);
         imageWallpaper.image = testPackage;
-        compare(mediaProxy.modelImage.toString().indexOf("image://package/get?dir="), 0);
+        verify(mediaProxy.modelImage.toString().indexOf("plasma-workspace/wallpapers/image/plugin/autotests/testdata/default/package/contents/images/1024x768.jpg") > 0);
 
         const image = createTemporaryObject(mainImage, window, {source: mediaProxy.modelImage});
-        compare(image.status, Image.Loading);
-        image.wait();
+
+        // Loads immediately
         compare(image.status, Image.Ready);
         const grabbed1 = grabImage(image);
         compare(grabbed1.pixel(0, 0), Qt.rgba(255, 255, 255, 255));
 
         // Change target size
         image.sourceSize = Qt.size(1920, 1080);
-        compare(image.status, Image.Loading);
-        image.wait();
+        mediaProxy.targetSize = image.sourceSize;
+        verify(mediaProxy.modelImage.toString().indexOf("plasma-workspace/wallpapers/image/plugin/autotests/testdata/default/package/contents/images/1920x1080.jpg") > 0);
+        image.source = mediaProxy.modelImage;
         compare(image.status, Image.Ready);
 
         const grabbed2 = grabImage(image);
@@ -108,7 +109,8 @@ TestCase {
 
         // Change backend's target size
         modelImageChangedSignalSpy.clear();
-        imageWallpaper.targetSize = Qt.size(root.width + 1, root.height + 1);
+        // ModelImage will change only if it actually found an image of that size in the package
+        mediaProxy.targetSize = Qt.size(1440, 900);
         compare(modelImageChangedSignalSpy.count, 1);
     }
 

@@ -288,6 +288,8 @@ void MediaProxy::determineBackgroundType(KPackage::Package *package)
     if (isAnimated) {
         // Derived from the suffix
         m_backgroundType = BackgroundType::Type::AnimatedImage;
+    } else if (type.startsWith(QLatin1String("image/svg"))) {
+        m_backgroundType = BackgroundType::Type::VectorImage;
     } else if (type.startsWith(QLatin1String("image/"))) {
         m_backgroundType = BackgroundType::Type::Image;
     } else {
@@ -384,9 +386,11 @@ void MediaProxy::updateModelImage(KPackage::Package *package, bool doesBlockSign
             Q_EMIT customColorChanged();
         }
 
-        if (m_backgroundType == BackgroundType::Type::AnimatedImage) {
+        if (m_backgroundType != BackgroundType::Type::VectorImage) {
             // Is an animated image
             newRealSource = findPreferredImageInPackage(*package);
+            // This is to convince Image to reload wehn we ask for another size
+            newRealSource.setQuery(QString::number(QDateTime::currentSecsSinceEpoch()));
             break;
         }
 
