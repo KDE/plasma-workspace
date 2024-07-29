@@ -24,7 +24,8 @@ BaseMediaComponent {
 
         fillMode: staticImageComponent.fillMode
         source: staticImageComponent.source
-        sourceSize: staticImageComponent.sourceSize
+        // For centered and tiled images,
+        sourceSize: fillMode === Image.Pad ? undefined : staticImageComponent.sourceSize
     }
 
     Loader {

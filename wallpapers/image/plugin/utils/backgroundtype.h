@@ -13,7 +13,8 @@ Q_NAMESPACE
 enum class Type {
     Unknown,
     Image,
-    AnimatedImage, /**< AnimatedImage doesn't support \QQuickImageProvider , @see https://bugreports.qt.io/browse/QTBUG-30524 */
+    AnimatedImage,
+    VectorImage, // VectorImage is the only one that uses \QQuickImageProvider, because if QQuickImageProvider is used, then Image considers it always scalable
 };
 Q_ENUM_NS(Type)
 }

@@ -265,7 +265,7 @@ void ImageFrontendTest::testReloadWallpaperOnScreenSizeChanged()
 
     // Case 1: 1024x768
     QUrl source = evaluate<QUrl>(firstItem, "source");
-    QVERIFY(source.toString().contains(QLatin1String("targetWidth=1024&targetHeight=768")));
+    QVERIFY(source.toString().contains(QLatin1String("1024x768.jpg")));
     QCOMPARE(evaluate<QSizeF>(firstItem, "sourceSize"), QSizeF(1024, 768));
 
     // Change sourceSize
@@ -279,7 +279,7 @@ void ImageFrontendTest::testReloadWallpaperOnScreenSizeChanged()
     QSignalSpy secondItemDestroySpy(secondItem, &QObject::destroyed);
     // Case 2: 1920x1080
     source = evaluate<QUrl>(secondItem, "source");
-    QVERIFY(source.toString().contains(QLatin1String("targetWidth=1920&targetHeight=1080")));
+    QVERIFY(source.toString().contains(QLatin1String("1920x1080.jpg")));
     QCOMPARE(evaluate<QSizeF>(secondItem, "sourceSize"), QSizeF(1920, 1080));
 
     // Now set a single image to test if the frontend will still reload the wallpaper in different sizes
