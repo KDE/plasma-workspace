@@ -20,7 +20,7 @@ class DeviceFilterControl : public QSortFilterProxyModel
     Q_OBJECT
     QML_ELEMENT
 
-    Q_PROPERTY(bool isVisible READ isVisible WRITE setIsVisible);
+    Q_PROPERTY(bool isVisible READ isVisible WRITE setIsVisible)
     Q_PROPERTY(DevicesType filterType READ filterType WRITE setFilterType)
 
     Q_PROPERTY(qsizetype deviceCount READ default NOTIFY deviceCountChanged BINDABLE bindableDeviceCount)
@@ -82,12 +82,12 @@ private Q_SLOTS:
 private:
     void handleDeviceAdded(const QModelIndex &index);
 
-    Q_OBJECT_BINDABLE_PROPERTY(DeviceFilterControl, QString, m_lastUdi, &DeviceFilterControl::lastUdiChanged);
-    Q_OBJECT_BINDABLE_PROPERTY(DeviceFilterControl, QString, m_lastDescription, &DeviceFilterControl::lastDescriptionChanged);
-    Q_OBJECT_BINDABLE_PROPERTY(DeviceFilterControl, QString, m_lastIcon, &DeviceFilterControl::lastIconChanged);
+    Q_OBJECT_BINDABLE_PROPERTY(DeviceFilterControl, QString, m_lastUdi, &DeviceFilterControl::lastUdiChanged)
+    Q_OBJECT_BINDABLE_PROPERTY(DeviceFilterControl, QString, m_lastDescription, &DeviceFilterControl::lastDescriptionChanged)
+    Q_OBJECT_BINDABLE_PROPERTY(DeviceFilterControl, QString, m_lastIcon, &DeviceFilterControl::lastIconChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, bool, m_lastDeviceAdded, false, &DeviceFilterControl::lastDeviceAddedChanged)
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, qsizetype, m_deviceCount, 0, &DeviceFilterControl::deviceCountChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, qsizetype, m_unmountableCount, 0, &DeviceFilterControl::unmountableCountChanged);
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, qsizetype, m_deviceCount, 0, &DeviceFilterControl::deviceCountChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(DeviceFilterControl, qsizetype, m_unmountableCount, 0, &DeviceFilterControl::unmountableCountChanged)
 
     DevicesType m_filterType;
     bool m_isVisible;

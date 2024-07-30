@@ -46,11 +46,11 @@ class KCMSoundTheme : public KQuickManagedConfigModule
 {
     Q_OBJECT
 
-    Q_PROPERTY(SoundThemeSettings *settings READ settings CONSTANT);
-    Q_PROPERTY(QList<ThemeInfo *> themes MEMBER m_themes NOTIFY themesLoaded);
-    Q_PROPERTY(int currentIndex READ currentIndex NOTIFY themeChanged);
-    Q_PROPERTY(QString playingTheme MEMBER m_playingTheme NOTIFY playingChanged);
-    Q_PROPERTY(QString playingSound MEMBER m_playingSound NOTIFY playingChanged);
+    Q_PROPERTY(SoundThemeSettings *settings READ settings CONSTANT)
+    Q_PROPERTY(QList<ThemeInfo *> themes MEMBER m_themes NOTIFY themesLoaded)
+    Q_PROPERTY(int currentIndex READ currentIndex NOTIFY themeChanged)
+    Q_PROPERTY(QString playingTheme MEMBER m_playingTheme NOTIFY playingChanged)
+    Q_PROPERTY(QString playingSound MEMBER m_playingSound NOTIFY playingChanged)
 
 public:
     KCMSoundTheme(QObject *parent, const KPluginMetaData &data);
