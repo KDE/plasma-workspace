@@ -25,7 +25,7 @@ MouseArea {
             return compactRepresentation.parent.width;
         case CompactRepresentation.LayoutType.HorizontalPanel:
         case CompactRepresentation.LayoutType.HorizontalDesktop:
-            return iconLoader.active ? iconLoader.item.implicitWidth : playerRow.width;
+            return iconLoader.active ? iconLoader.item.implicitWidth : playerRow.implicitWidth;
         case CompactRepresentation.LayoutType.IconOnly:
         default:
             return -1;
@@ -135,7 +135,6 @@ MouseArea {
             case CompactRepresentation.LayoutType.VerticalDesktop:
                 return compactRepresentation.parent.width;
             case CompactRepresentation.LayoutType.HorizontalPanel:
-                return item.implicitWidth;
             case CompactRepresentation.LayoutType.HorizontalDesktop:
                 return Math.min(item.implicitWidth, compactRepresentation.parent.width);
             case CompactRepresentation.LayoutType.IconOnly:
