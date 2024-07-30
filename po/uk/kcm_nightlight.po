@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-04-20 08:58+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -179,17 +179,17 @@ msgstr ""
 msgid "Begin night light at:"
 msgstr "Вмикати нічні кольори о:"
 
-#: ui/main.qml:381
+#: ui/main.qml:382
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Вмикати денні кольори о:"
 
-#: ui/main.qml:396
+#: ui/main.qml:398
 #, kde-format
 msgid "Transition duration:"
 msgstr "Тривалість кульмінації:"
 
-#: ui/main.qml:405
+#: ui/main.qml:409
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -198,17 +198,12 @@ msgstr[1] "%1 хвилини"
 msgstr[2] "%1 хвилин"
 msgstr[3] "хвилина"
 
-#: ui/main.qml:418
+#: ui/main.qml:422
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Вхідні дані у хвилинах — мін. 1, макс. 600"
 
-#: ui/main.qml:437
-#, kde-format
-msgid "Error: Transition time overlaps."
-msgstr "Помилка: перекриття часів кульмінації."
-
-#: ui/main.qml:460
+#: ui/main.qml:445
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
@@ -231,6 +226,9 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "хвилина"
+
+#~ msgid "Error: Transition time overlaps."
+#~ msgstr "Помилка: перекриття часів кульмінації."
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "Формат вхідних даних: ГГ:ХХ"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-01-06 01:24+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -173,33 +173,28 @@ msgstr ""
 msgid "Begin night light at:"
 msgstr "夜モードを開始する時刻:"
 
-#: ui/main.qml:381
+#: ui/main.qml:382
 #, kde-format
 msgid "Begin day light at:"
 msgstr "昼モードを開始する時刻:"
 
-#: ui/main.qml:396
+#: ui/main.qml:398
 #, kde-format
 msgid "Transition duration:"
 msgstr "切り替えにかける時間:"
 
-#: ui/main.qml:405
+#: ui/main.qml:409
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 分"
 
-#: ui/main.qml:418
+#: ui/main.qml:422
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "分を入力 - 1-600"
 
-#: ui/main.qml:437
-#, kde-format
-msgid "Error: Transition time overlaps."
-msgstr "エラー: 切り替わる時間が重複しています。"
-
-#: ui/main.qml:460
+#: ui/main.qml:445
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
@@ -224,6 +219,9 @@ msgstr ""
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "%1 分"
+
+#~ msgid "Error: Transition time overlaps."
+#~ msgstr "エラー: 切り替わる時間が重複しています。"
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "入力フォーマット: HH:MM"

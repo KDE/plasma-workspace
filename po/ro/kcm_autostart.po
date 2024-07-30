@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-02-25 18:58+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -102,29 +102,35 @@ msgstr ""
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "@action:button"
-msgid "Add…"
-msgstr "Adaugă…"
+msgctxt "@action:button menu button; add new application etc"
+msgid "Add New"
+msgstr ""
 
-#: ui/main.qml:71
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Application…"
+#: ui/main.qml:73
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Application…"
+msgctxt "@action:inmenu completes: add new application"
+msgid "Application…"
 msgstr "Adaugă aplicație…"
 
-#: ui/main.qml:76
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Login Script…"
+#: ui/main.qml:80
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Login Script…"
+msgctxt "@action:inmenu completes: add new login script"
+msgid "Login Script…"
 msgstr "Adaugă script pentru autentificare…"
 
-#: ui/main.qml:81
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Logout Script…"
+#: ui/main.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Logout Script…"
+msgctxt "@action:inmenu completes: add new logout script"
+msgid "Logout Script…"
 msgstr "Adaugă script pentru ieșire…"
 
-#: ui/main.qml:116
+#: ui/main.qml:124
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -133,62 +139,64 @@ msgstr ""
 "%1 încă nu a fost pornit automat. Detaliile vor fi disponibile după "
 "repornirea sistemului."
 
-#: ui/main.qml:139
+#: ui/main.qml:147
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Încă n-a pornit automat"
 
-#: ui/main.qml:148
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Vezi proprietățile"
 
-#: ui/main.qml:159
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Elimină înregistrarea"
 
-#: ui/main.qml:175
+#: ui/main.qml:183
 #, kde-format
 msgid "Applications"
 msgstr "Aplicații"
 
-#: ui/main.qml:178
+#: ui/main.qml:186
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripturi pentru autentificare"
 
-#: ui/main.qml:181
+#: ui/main.qml:189
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Alege script pentru pre-pornire"
 
-#: ui/main.qml:184
+#: ui/main.qml:192
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Scripturi pentru ieșire"
 
-#: ui/main.qml:193
+#: ui/main.qml:201
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Niciun element de pornire automată specificat"
 
-#: ui/main.qml:194
-#, kde-kuit-format
+#: ui/main.qml:202
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info 'some' refers to autostart items"
+#| msgid "Click the <interface>Add…</interface> button to add some"
 msgctxt "@info 'some' refers to autostart items"
-msgid "Click the <interface>Add…</interface> button to add some"
+msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "Apăsați butonul <interface>Adaugă…</interface> pentru a adăuga câteva"
 
-#: ui/main.qml:209
+#: ui/main.qml:217
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Alege script pentru autentificare"
 
-#: ui/main.qml:229
+#: ui/main.qml:237
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Alege script pentru ieșire"
@@ -232,6 +240,10 @@ msgstr "A intervenit o eroare la primirea răspunsului pentru apelul GetAll %1"
 #, kde-format
 msgid "Failed to open journal"
 msgstr "Deschiderea jurnalului a eșuat"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add…"
+#~ msgstr "Adaugă…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

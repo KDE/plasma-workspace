@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-05-02 10:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -172,17 +172,17 @@ msgstr ""
 msgid "Begin night light at:"
 msgstr "تبدأ الإضاءة الليلية عند:"
 
-#: ui/main.qml:381
+#: ui/main.qml:382
 #, kde-format
 msgid "Begin day light at:"
 msgstr "تبدأ الإضاءة النهارية عند:"
 
-#: ui/main.qml:396
+#: ui/main.qml:398
 #, kde-format
 msgid "Transition duration:"
 msgstr "مدة الانتقال:"
 
-#: ui/main.qml:405
+#: ui/main.qml:409
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
@@ -193,17 +193,12 @@ msgstr[3] "%1 دقائق"
 msgstr[4] "%1 دقيقة"
 msgstr[5] "%1 دقيقة"
 
-#: ui/main.qml:418
+#: ui/main.qml:422
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "الإدخال دقائق أقل شيء 1 و أكثر شيء 600"
 
-#: ui/main.qml:437
-#, kde-format
-msgid "Error: Transition time overlaps."
-msgstr "خطأ: يتداخل الوقت الانتقالي. "
-
-#: ui/main.qml:460
+#: ui/main.qml:445
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
@@ -226,6 +221,9 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "الدقيقة"
+
+#~ msgid "Error: Transition time overlaps."
+#~ msgstr "خطأ: يتداخل الوقت الانتقالي. "
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "تنسيق الإدخال: س س : دد"

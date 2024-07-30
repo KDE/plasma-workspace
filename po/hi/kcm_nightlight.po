@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2022-03-29 20:45+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -185,34 +185,29 @@ msgstr ""
 msgid "Begin night light at:"
 msgstr ""
 
-#: ui/main.qml:381
+#: ui/main.qml:382
 #, kde-format
 msgid "Begin day light at:"
 msgstr ""
 
-#: ui/main.qml:396
+#: ui/main.qml:398
 #, kde-format
 msgid "Transition duration:"
 msgstr "अवस्थांतर अवधि :"
 
-#: ui/main.qml:405
+#: ui/main.qml:409
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 मिनट"
 msgstr[1] "%1 मिनट"
 
-#: ui/main.qml:418
+#: ui/main.qml:422
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "इनपुट मिनट - न्यूनतम १, अधिकतम ६००"
 
-#: ui/main.qml:437
-#, kde-format
-msgid "Error: Transition time overlaps."
-msgstr "त्रुटि : अवस्थांतर अवधि परस्पर-व्याप्त हो रहा है।"
-
-#: ui/main.qml:460
+#: ui/main.qml:445
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
@@ -237,6 +232,9 @@ msgstr ""
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "%1 मिनट"
+
+#~ msgid "Error: Transition time overlaps."
+#~ msgstr "त्रुटि : अवस्थांतर अवधि परस्पर-व्याप्त हो रहा है।"
 
 #~ msgid "Input format: HH:MM"
 #~ msgstr "इनपुट प्रारूप: HH:MM"

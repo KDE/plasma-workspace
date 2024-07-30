@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-05-15 20:50+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -174,34 +174,29 @@ msgstr ""
 msgid "Begin night light at:"
 msgstr "Kveldsfargar tek til:"
 
-#: ui/main.qml:381
+#: ui/main.qml:382
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Dagfargar tek til:"
 
-#: ui/main.qml:396
+#: ui/main.qml:398
 #, kde-format
 msgid "Transition duration:"
 msgstr "Overgangstid:"
 
-#: ui/main.qml:405
+#: ui/main.qml:409
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minutt"
 msgstr[1] "%1 minutt"
 
-#: ui/main.qml:418
+#: ui/main.qml:422
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "I minutt, frå 1 til 600."
 
-#: ui/main.qml:437
-#, kde-format
-msgid "Error: Transition time overlaps."
-msgstr "Feil: Overgangstidene overlappar."
-
-#: ui/main.qml:460
+#: ui/main.qml:445
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
@@ -224,3 +219,6 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "minutt"
+
+#~ msgid "Error: Transition time overlaps."
+#~ msgstr "Feil: Overgangstidene overlappar."

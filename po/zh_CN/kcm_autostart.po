@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -100,91 +100,99 @@ msgstr "文件“%1”必须被标注为可执行后才能在登录时运行。"
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "@action:button"
-msgid "Add…"
-msgstr "添加…"
+msgctxt "@action:button menu button; add new application etc"
+msgid "Add New"
+msgstr ""
 
-#: ui/main.qml:71
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Application…"
+#: ui/main.qml:73
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Application…"
+msgctxt "@action:inmenu completes: add new application"
+msgid "Application…"
 msgstr "添加应用程序…"
 
-#: ui/main.qml:76
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Login Script…"
+#: ui/main.qml:80
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Login Script…"
+msgctxt "@action:inmenu completes: add new login script"
+msgid "Login Script…"
 msgstr "添加登录脚本…"
 
-#: ui/main.qml:81
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Logout Script…"
+#: ui/main.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Logout Script…"
+msgctxt "@action:inmenu completes: add new logout script"
+msgid "Logout Script…"
 msgstr "添加注销脚本…"
 
-#: ui/main.qml:116
+#: ui/main.qml:124
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr "%1 尚未自动启动。详细信息将在系统重启后可用。"
 
-#: ui/main.qml:139
+#: ui/main.qml:147
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "尚未自动启动"
 
-#: ui/main.qml:148
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "查看属性"
 
-#: ui/main.qml:159
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "移除条目"
 
-#: ui/main.qml:175
+#: ui/main.qml:183
 #, kde-format
 msgid "Applications"
 msgstr "应用"
 
-#: ui/main.qml:178
+#: ui/main.qml:186
 #, kde-format
 msgid "Login Scripts"
 msgstr "登录脚本"
 
-#: ui/main.qml:181
+#: ui/main.qml:189
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "启动前脚本"
 
-#: ui/main.qml:184
+#: ui/main.qml:192
 #, kde-format
 msgid "Logout Scripts"
 msgstr "注销脚本"
 
-#: ui/main.qml:193
+#: ui/main.qml:201
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "没有用户指定的自动启动项目"
 
-#: ui/main.qml:194
-#, kde-kuit-format
+#: ui/main.qml:202
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info 'some' refers to autostart items"
+#| msgid "Click the <interface>Add…</interface> button to add some"
 msgctxt "@info 'some' refers to autostart items"
-msgid "Click the <interface>Add…</interface> button to add some"
+msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "点击 <interface>添加…</interface> 按钮以添加项目"
 
-#: ui/main.qml:209
+#: ui/main.qml:217
 #, kde-format
 msgid "Choose Login Script"
 msgstr "选择登录脚本"
 
-#: ui/main.qml:229
+#: ui/main.qml:237
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "选择注销脚本"
@@ -228,3 +236,7 @@ msgstr "接收 GetAll 调用 %1 的回复时发生错误"
 #, kde-format
 msgid "Failed to open journal"
 msgstr "打开日志失败"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add…"
+#~ msgstr "添加…"

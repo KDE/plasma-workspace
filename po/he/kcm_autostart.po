@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2023-10-27 16:42+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -104,91 +104,99 @@ msgstr "חובה שהקובץ ‚%1’ יהיה ניתן להרצה כדי שי�
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "@action:button"
-msgid "Add…"
-msgstr "הוספה…"
+msgctxt "@action:button menu button; add new application etc"
+msgid "Add New"
+msgstr ""
 
-#: ui/main.qml:71
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Application…"
+#: ui/main.qml:73
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Application…"
+msgctxt "@action:inmenu completes: add new application"
+msgid "Application…"
 msgstr "הוספת יישום…"
 
-#: ui/main.qml:76
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Login Script…"
+#: ui/main.qml:80
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Login Script…"
+msgctxt "@action:inmenu completes: add new login script"
+msgid "Login Script…"
 msgstr "הוספת סקריפט בכניסה…"
 
-#: ui/main.qml:81
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Logout Script…"
+#: ui/main.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Logout Script…"
+msgctxt "@action:inmenu completes: add new logout script"
+msgid "Logout Script…"
 msgstr "הוספת סקריפט ביציאה…"
 
-#: ui/main.qml:116
+#: ui/main.qml:124
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr "%1 לא הופעל אוטומטית עדיין. הפרטים יהיו זמינים לאחר הפעלת המערכת מחדש."
 
-#: ui/main.qml:139
+#: ui/main.qml:147
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "לא הופעל אוטומטית עדיין"
 
-#: ui/main.qml:148
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "הצגת מאפיינים…"
 
-#: ui/main.qml:159
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "הסרת רשומה"
 
-#: ui/main.qml:175
+#: ui/main.qml:183
 #, kde-format
 msgid "Applications"
 msgstr "יישומים"
 
-#: ui/main.qml:178
+#: ui/main.qml:186
 #, kde-format
 msgid "Login Scripts"
 msgstr "סקריפטים לכניסה"
 
-#: ui/main.qml:181
+#: ui/main.qml:189
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "סקריפטים לפני התחלה"
 
-#: ui/main.qml:184
+#: ui/main.qml:192
 #, kde-format
 msgid "Logout Scripts"
 msgstr "סקריפטים ביציאה"
 
-#: ui/main.qml:193
+#: ui/main.qml:201
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "אין פריטים שהוגדרו להפעלה אוטומטית ע״י המשתמש"
 
-#: ui/main.qml:194
-#, kde-kuit-format
+#: ui/main.qml:202
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info 'some' refers to autostart items"
+#| msgid "Click the <interface>Add…</interface> button to add some"
 msgctxt "@info 'some' refers to autostart items"
-msgid "Click the <interface>Add…</interface> button to add some"
+msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "יש ללחוץ על הכפתור <interface>הוספה…</interface> כדי להוסיף כאלה"
 
-#: ui/main.qml:209
+#: ui/main.qml:217
 #, kde-format
 msgid "Choose Login Script"
 msgstr "בחירת סקריפט כניסה"
 
-#: ui/main.qml:229
+#: ui/main.qml:237
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "בחירת סקריפט יציאה"
@@ -232,6 +240,10 @@ msgstr "שגיאה בקבלת תגובה מקריאת GetAll (משיכה של ה
 #, kde-format
 msgid "Failed to open journal"
 msgstr "פתיחת יומן המערכת נכשלה"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add…"
+#~ msgstr "הוספה…"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

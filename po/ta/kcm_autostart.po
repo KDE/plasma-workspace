@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-07-30 00:43+0000\n"
 "PO-Revision-Date: 2023-12-04 21:08+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -100,91 +100,99 @@ msgstr "நுழையும்போது இயக்கப்பட, '%1' �
 
 #: ui/main.qml:68
 #, kde-format
-msgctxt "@action:button"
-msgid "Add…"
-msgstr "சேர்…"
+msgctxt "@action:button menu button; add new application etc"
+msgid "Add New"
+msgstr ""
 
-#: ui/main.qml:71
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Application…"
+#: ui/main.qml:73
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Application…"
+msgctxt "@action:inmenu completes: add new application"
+msgid "Application…"
 msgstr "செயலியை சேர்…"
 
-#: ui/main.qml:76
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Login Script…"
+#: ui/main.qml:80
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Login Script…"
+msgctxt "@action:inmenu completes: add new login script"
+msgid "Login Script…"
 msgstr "நுழைவு சிறுநிரலை சேர்…"
 
-#: ui/main.qml:81
-#, kde-format
-msgctxt "@action:button"
-msgid "Add Logout Script…"
+#: ui/main.qml:87
+#, fuzzy, kde-format
+#| msgctxt "@action:button"
+#| msgid "Add Logout Script…"
+msgctxt "@action:inmenu completes: add new logout script"
+msgid "Logout Script…"
 msgstr "வெளியேற்ற சிறுநிரலை சேர்…"
 
-#: ui/main.qml:116
+#: ui/main.qml:124
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr "%1 இன்னும் தானாக துவக்கப்படவில்லை. கணினியை மீள்துவக்கிய பின் விவரங்கள் காட்டப்படும்."
 
-#: ui/main.qml:139
+#: ui/main.qml:147
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "இன்னும் தானாக துவக்கப்படவில்லை"
 
-#: ui/main.qml:148
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "பண்புகளை காட்டு"
 
-#: ui/main.qml:159
+#: ui/main.qml:167
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "பதிவை நீக்கு"
 
-#: ui/main.qml:175
+#: ui/main.qml:183
 #, kde-format
 msgid "Applications"
 msgstr "செயலிகள்"
 
-#: ui/main.qml:178
+#: ui/main.qml:186
 #, kde-format
 msgid "Login Scripts"
 msgstr "நுழைவு சிறுநிரல்கள்"
 
-#: ui/main.qml:181
+#: ui/main.qml:189
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "துவக்கத்திற்கு முன் இயக்க வேண்டிய சிறுநிரல்கள்"
 
-#: ui/main.qml:184
+#: ui/main.qml:192
 #, kde-format
 msgid "Logout Scripts"
 msgstr "வெளியேற்ற சிறுநிரல்கள்"
 
-#: ui/main.qml:193
+#: ui/main.qml:201
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "பயனரால் அமைக்கப்பட்ட சுயதுவக்க நிரல்கள் எதுவும் இல்லை"
 
-#: ui/main.qml:194
-#, kde-kuit-format
+#: ui/main.qml:202
+#, fuzzy, kde-kuit-format
+#| msgctxt "@info 'some' refers to autostart items"
+#| msgid "Click the <interface>Add…</interface> button to add some"
 msgctxt "@info 'some' refers to autostart items"
-msgid "Click the <interface>Add…</interface> button to add some"
+msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "சிலவற்றை சேர்க்க <interface>சேர்…</interface> பட்டனை அழுத்தவும்"
 
-#: ui/main.qml:209
+#: ui/main.qml:217
 #, kde-format
 msgid "Choose Login Script"
 msgstr "நுழைவு சிறுநிரலைத் தேர்ந்தெடுத்தல்"
 
-#: ui/main.qml:229
+#: ui/main.qml:237
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "வெளியேற்ற சிறுநிரலைத் தேர்ந்தெடுத்தல்"
@@ -228,6 +236,10 @@ msgstr ""
 #, kde-format
 msgid "Failed to open journal"
 msgstr "பதிவுத்தொகுப்பை (journal தனை) திறக்க முடியவில்லை"
+
+#~ msgctxt "@action:button"
+#~ msgid "Add…"
+#~ msgstr "சேர்…"
 
 #~ msgid "Autostart"
 #~ msgstr "சுயதுவக்கம்"
