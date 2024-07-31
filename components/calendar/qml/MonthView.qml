@@ -10,7 +10,6 @@
 pragma ComponentBehavior: Bound
 
 import QtQuick
-import QtQuick.Layouts
 
 import org.kde.plasma.components as PlasmaComponents
 import org.kde.plasma.workspace.calendar as PlasmaCalendar
@@ -76,7 +75,7 @@ Item {
         swipeView.currentItem.focusFirstCellOfView();
     }
 
-    function isToday(date) {
+    function isToday(date: date): bool {
         return date.toDateString() === new Date().toDateString();
     }
 
@@ -197,8 +196,8 @@ Item {
         }
 
         onYearChanged: {
-            updateYearOverview()
-            updateDecadeOverview()
+            root.updateYearOverview()
+            root.updateDecadeOverview()
         }
     }
 
@@ -214,7 +213,7 @@ Item {
                     isCurrent: true,
                 })
             }
-            updateYearOverview()
+            root.updateYearOverview()
         }
     }
 
@@ -229,7 +228,7 @@ Item {
                     isCurrent: (i > 0 && i < 11), // first and last year are outside the decade
                 })
             }
-            updateDecadeOverview()
+            root.updateDecadeOverview()
         }
     }
 
@@ -274,7 +273,7 @@ Item {
         }
 
         onCurrentIndexChanged: if (currentIndex > 1) {
-            updateDecadeOverview();
+            root.updateDecadeOverview();
         }
 
         // Reduce visual glitches when resizing the view.
@@ -311,7 +310,7 @@ Item {
         InfiniteList {
             id: mainDaysCalendar
 
-            function handleUpPress(event) {
+            function handleUpPress(event: var) {
                 if (root.showDigitalClockHeader) {
                     root.Keys.upPressed(event);
                     return;
