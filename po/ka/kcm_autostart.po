@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-10-28 05:39+0200\n"
+"PO-Revision-Date: 2024-07-30 06:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.4.1\n"
+"X-Generator: Poedit 3.3.2\n"
 
 #: autostartmodel.cpp:383
 #, kde-format
@@ -103,31 +103,25 @@ msgstr "შესვლისას შესასრულებლად ფ�
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "ახლის დამატება"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "აპლიკაციის დამატება…"
+msgstr "აპლიკაცია…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "შესვლის სკრიპტის დამატება…"
+msgstr "შესვლის სკრიპტი…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "გასვლის სკრიპტის დამატება…"
+msgstr "გასვლის სკრიპტი…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -183,12 +177,10 @@ msgid "No user-specified autostart items"
 msgstr "მომხმარებელს ავტომატურად გასაშვებლად არაფერი მიუთითებია"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "დასამატებლად, <interface>დამატების…</interface> ღილაკს დააწექით"
+msgstr "დასამატებლად, <interface>ახლის დამატების…</interface> ღილაკს დააწექით"
 
 #: ui/main.qml:217
 #, kde-format

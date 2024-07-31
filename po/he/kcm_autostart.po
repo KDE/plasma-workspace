@@ -4,13 +4,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2012.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-10-27 16:42+0300\n"
+"PO-Revision-Date: 2024-07-30 10:03+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: autostartmodel.cpp:383
 #, kde-format
@@ -106,31 +106,25 @@ msgstr "חובה שהקובץ ‚%1’ יהיה ניתן להרצה כדי שי�
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "הוספת חדש"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "הוספת יישום…"
+msgstr "יישום…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "הוספת סקריפט בכניסה…"
+msgstr "סקריפט בכניסה…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "הוספת סקריפט ביציאה…"
+msgstr "סקריפט ביציאה…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -184,12 +178,10 @@ msgid "No user-specified autostart items"
 msgstr "אין פריטים שהוגדרו להפעלה אוטומטית ע״י המשתמש"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "יש ללחוץ על הכפתור <interface>הוספה…</interface> כדי להוסיף כאלה"
+msgstr "יש ללחוץ על הכפתור <interface>הוספת חדש</interface> כדי להוסיף כאלה"
 
 #: ui/main.qml:217
 #, kde-format

@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2024-03-17 10:50+0100\n"
+"PO-Revision-Date: 2024-07-30 22:00+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -105,31 +105,25 @@ msgstr "Fila «%1» må vera køyrbar for å kunna køyrast ved innlogging."
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Legg til ny"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Legg til program …"
+msgstr "Program …"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Legg til skript for innlogging …"
+msgstr "Skript for innlogging …"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Legg til skript for utlogging …"
+msgstr "Skript for utlogging …"
 
 #: ui/main.qml:124
 #, kde-format
@@ -185,9 +179,7 @@ msgid "No user-specified autostart items"
 msgstr "Ingen brukardefinerte autostart-oppføringar"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "Trykk <interface>Legg til</interface> for å leggja til ei ny oppføring"
@@ -241,7 +233,3 @@ msgstr "Det oppstod ein feil ved mottak av svar etter GetAll-kallet %1"
 #, kde-format
 msgid "Failed to open journal"
 msgstr "Klarte ikkje opna journal"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add…"
-#~ msgstr "Legg til …"

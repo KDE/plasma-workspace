@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-10-27 11:03+0200\n"
+"PO-Revision-Date: 2024-07-30 09:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: autostartmodel.cpp:383
 #, kde-format
@@ -106,31 +106,25 @@ msgstr "Datoteka '%1' mora biti izvedljiva za zagon ob prijavi."
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Dodaj novo"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Dodaj aplikacijo…"
+msgstr "Aplikacijo…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Dodaj prijavni skript…"
+msgstr "Prijavni skript…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Dodaj odjavni skript…"
+msgstr "Odjavni skript…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -185,12 +179,11 @@ msgid "No user-specified autostart items"
 msgstr "Nobenih uporabniško določenih postavk za samodejni zagon"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "Kliknite na gumb <interface>Dodaj…</interface>, da jih nekaj dodate"
+msgstr ""
+"Kliknite na gumb <interface>Dodaj novo</interface>, da jih nekaj dodate"
 
 #: ui/main.qml:217
 #, kde-format

@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2024-06-21 09:23+0200\n"
+"PO-Revision-Date: 2024-07-30 07:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: autostartmodel.cpp:383
@@ -103,31 +103,25 @@ msgstr "Filen '%1' måste vara körbar för att köra vid inloggning."
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Lägg till ny"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Lägg till program…"
+msgstr "Program…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Lägg till inloggningsskript…"
+msgstr "Inloggningsskript…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Lägg till utloggningsskript…"
+msgstr "Utloggningsskript…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -183,13 +177,12 @@ msgid "No user-specified autostart items"
 msgstr "Inget användarspecificerade objekt för automatisk start"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr ""
-"Klicka på knappen <interface>Lägg till…</interface> för att lägga till några"
+"Klicka på knappen <interface>Lägg till ny</interface> för att lägga till "
+"några"
 
 #: ui/main.qml:217
 #, kde-format

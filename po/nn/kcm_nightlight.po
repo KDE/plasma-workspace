@@ -219,6 +219,3 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "minutt"
-
-#~ msgid "Error: Transition time overlaps."
-#~ msgstr "Feil: Overgangstidene overlappar."

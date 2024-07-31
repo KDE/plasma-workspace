@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-05 00:39+0000\n"
+"POT-Creation-Date: 2024-07-31 00:42+0000\n"
 "PO-Revision-Date: 2023-07-24 21:18+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -19,33 +19,61 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 23.11.70\n"
 
-#: devicenotifications.cpp:278
+#: devicenotifications.cpp:333
+#, fuzzy, kde-format
+#| msgctxt "@title:notifications"
+#| msgid "USB Device Detected"
+msgctxt "@title:notifications"
+msgid "Display Detected"
+msgstr "USB-Gerät erkannt"
+
+#: devicenotifications.cpp:334
+#, fuzzy, kde-format
+#| msgid "A USB device has been plugged in."
+msgid "A display has been plugged in."
+msgstr "Ein USB-Gerät ist angeschlossen worden."
+
+#: devicenotifications.cpp:347
+#, fuzzy, kde-format
+#| msgctxt "@title:notifications"
+#| msgid "USB Device Removed"
+msgctxt "@title:notifications"
+msgid "Display Removed"
+msgstr "USB-Gerät entfernt"
+
+#: devicenotifications.cpp:348
+#, fuzzy, kde-format
+#| msgid "A USB device has been unplugged."
+msgid "A display has been unplugged."
+msgstr "Ein USB-Gerät ist vom Rechner getrennt worden."
+
+#: devicenotifications.cpp:379
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "%1 ist angeschlossen worden."
 
-#: devicenotifications.cpp:278
+#: devicenotifications.cpp:379
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "Ein USB-Gerät ist angeschlossen worden."
 
-#: devicenotifications.cpp:281
+#: devicenotifications.cpp:382
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB-Gerät erkannt"
 
-#: devicenotifications.cpp:299
+#: devicenotifications.cpp:405
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 ist vom Rechner getrennt worden."
 
-#: devicenotifications.cpp:299
+#: devicenotifications.cpp:405
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "Ein USB-Gerät ist vom Rechner getrennt worden."
 
-#: devicenotifications.cpp:302
+#: devicenotifications.cpp:408
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

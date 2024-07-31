@@ -4,7 +4,7 @@
 #
 # Ignacio Poggi <ignaciop.3@gmail.com>, 2008.
 # Jaime Robles <jaime@kde.org>, 2008.
-# SPDX-FileCopyrightText: 2010, 2012, 2014, 2015, 2017, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010, 2012, 2014, 2015, 2017, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-10-28 02:36+0200\n"
+"PO-Revision-Date: 2024-07-30 16:19+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: autostartmodel.cpp:383
@@ -110,31 +110,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Añadir nuevo"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Añadir aplicación..."
+msgstr "Aplicación..."
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Añadir guion de inicio de sesión..."
+msgstr "Guion de inicio de sesión..."
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Añadir guion de cierre de sesión..."
+msgstr "Guion de cierre de sesión..."
 
 #: ui/main.qml:124
 #, kde-format
@@ -190,12 +184,11 @@ msgid "No user-specified autostart items"
 msgstr "No hay elementos de inicio automático especificados por el usuario"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "Pulse el botón <interface>Añadir...</interface> para añadir algunos"
+msgstr ""
+"Pulse el botón <interface>Añadir nuevo</interface> para añadir entradas"
 
 #: ui/main.qml:217
 #, kde-format
