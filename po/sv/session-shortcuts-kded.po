@@ -31,29 +31,29 @@ msgstr "Visa utloggningsskärm"
 #: main.cpp:48
 #, kde-format
 msgid "Log Out"
-msgstr "Utloggning"
+msgstr "Logga ut"
 
 #: main.cpp:54
 #, kde-format
 msgid "Shut Down"
-msgstr "Avstängning"
+msgstr "Stäng av"
 
 #: main.cpp:60
 #, kde-format
 msgid "Reboot"
-msgstr "Omstart"
+msgstr "Starta om"
 
 #: main.cpp:68
 #, kde-format
 msgid "Log Out Without Confirmation"
-msgstr "Utloggning utan bekräftelse"
+msgstr "Logga ut utan bekräftelse"
 
 #: main.cpp:74
 #, kde-format
 msgid "Shut Down Without Confirmation"
-msgstr "Avstängning utan bekräftelse"
+msgstr "Stäng av utan bekräftelse"
 
 #: main.cpp:80
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "Omstart utan bekräftelse"
+msgstr "Starta om utan bekräftelse"

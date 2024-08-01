@@ -106,22 +106,22 @@ msgstr "Installera uppdateringar och starta om nu"
 #: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
 msgid "Restart"
-msgstr "Omstart"
+msgstr "Starta om"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, kde-format
 msgid "Restart Now"
-msgstr "Omstart nu"
+msgstr "Starta om nu"
 
 #: contents/logout/Logout.qml:251
 #, kde-format
 msgid "Shut Down"
-msgstr "Avstängning"
+msgstr "Stäng av"
 
 #: contents/logout/Logout.qml:252
 #, kde-format
 msgid "Shut Down Now"
-msgstr "Avstängning nu"
+msgstr "Stäng av nu"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "Logga ut"
 #: contents/logout/Logout.qml:263
 #, kde-format
 msgid "Log Out Now"
-msgstr "Utloggning nu"
+msgstr "Logga ut nu"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

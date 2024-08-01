@@ -1,15 +1,15 @@
 # Translation of kded_devicenotifications.po to Catalan (Valencian)
-# Copyright (C) 2023 This_file_is_part_of_KDE
+# Copyright (C) 2023-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-31 00:42+0000\n"
-"PO-Revision-Date: 2023-07-18 15:33+0300\n"
+"PO-Revision-Date: 2024-07-31 09:42+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -17,35 +17,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: devicenotifications.cpp:333
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr "S'ha detectat un dispositiu USB"
+msgstr "S'ha detectat una pantalla"
 
 #: devicenotifications.cpp:334
-#, fuzzy, kde-format
-#| msgid "A USB device has been plugged in."
+#, kde-format
 msgid "A display has been plugged in."
-msgstr "S'ha connectat un dispositiu USB."
+msgstr "S'ha connectat una pantalla."
 
 #: devicenotifications.cpp:347
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Removed"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr "S'ha extret un dispositiu USB"
+msgstr "S'ha extret una pantalla"
 
 #: devicenotifications.cpp:348
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A display has been unplugged."
-msgstr "S'ha desconnectat un dispositiu USB."
+msgstr "S'ha desconnectat una pantalla."
 
 #: devicenotifications.cpp:379
 #, kde-format

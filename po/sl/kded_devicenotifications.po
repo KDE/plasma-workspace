@@ -7,44 +7,38 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-31 00:42+0000\n"
-"PO-Revision-Date: 2023-07-19 06:44+0200\n"
+"PO-Revision-Date: 2024-07-31 06:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.2\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: devicenotifications.cpp:333
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr "Zaznana naprava USB"
+msgstr "Zaznan zaslon"
 
 #: devicenotifications.cpp:334
-#, fuzzy, kde-format
-#| msgid "A USB device has been plugged in."
+#, kde-format
 msgid "A display has been plugged in."
-msgstr "Naprava USB je bila priključena."
+msgstr "Zaslon je bil priključen."
 
 #: devicenotifications.cpp:347
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Removed"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr "Naprava USB odstranjena"
+msgstr "Zaslon odstranjen"
 
 #: devicenotifications.cpp:348
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A display has been unplugged."
-msgstr "Naprava USB je bila odklopljena."
+msgstr "Zaslon je bil odklopljen."
 
 #: devicenotifications.cpp:379
 #, kde-format

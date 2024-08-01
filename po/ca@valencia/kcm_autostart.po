@@ -1,9 +1,9 @@
 # Translation of kcm_autostart.po to Catalan (Valencian)
-# Copyright (C) 2008-2023 This_file_is_part_of_KDE
+# Copyright (C) 2008-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2010, 2012, 2015, 2016, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2008, 2010, 2012, 2015, 2016, 2017, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2015, 2016, 2017, 2020.
 # Alfredo Vicente <alviboi@gmail.com>, 2019.
 msgid ""
@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-10-27 11:40+0200\n"
+"PO-Revision-Date: 2024-07-30 11:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -107,31 +107,25 @@ msgstr "El fitxer «%1» ha de ser executable per a executar-se en entrar."
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Afig nou"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Afig una aplicació…"
+msgstr "Aplicació…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Afig un script d'inici…"
+msgstr "Script d'inici…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Afig un script d'eixida…"
+msgstr "Script d'eixida…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -187,12 +181,10 @@ msgid "No user-specified autostart items"
 msgstr "No hi ha cap element d'inici automàtic especificat per l'usuari"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "Feu clic en el botó <interface>Afig…</interface> per a afegir-ne"
+msgstr "Feu clic en el botó <interface>Afig nou</interface> per a afegir-ne"
 
 #: ui/main.qml:217
 #, kde-format
@@ -243,7 +235,3 @@ msgstr "S'ha produït un error en rebre la resposta de la crida «GetAll» %1"
 #, kde-format
 msgid "Failed to open journal"
 msgstr "No s'ha pogut obrir el diari"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add…"
-#~ msgstr "Afig…"

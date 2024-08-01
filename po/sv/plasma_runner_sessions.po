@@ -126,19 +126,19 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr "Utloggning"
+msgstr "Logga ut"
 
 #: sessionrunner.cpp:91
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "avstängning"
+msgstr "Stäng av"
 
 #: sessionrunner.cpp:98
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "Omstart"
+msgstr "Starta om"
 
 #: sessionrunner.cpp:105
 #, kde-format
