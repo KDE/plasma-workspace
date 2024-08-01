@@ -103,7 +103,7 @@
 ></inlinemediaobject
 >. Si premeu el botó <guibutton
 >Aplica</guibutton
-> els estils seleccionats per a la seva eliminació seran realment suprimits, de manera que podreu desfer les eliminacions individuals o totes. </para>
+> els estils seleccionats per a la seva eliminació seran realment suprimits, de manera que podreu desfer les supressions individuals o totes. </para>
 
 <para
 >Si el paquet plasma-sdk està instal·lat al vostre sistema, apareixerà un botó sobre la vista prèvia d'un estil i us permetrà iniciar-lo a l'<application
