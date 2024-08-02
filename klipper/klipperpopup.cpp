@@ -64,7 +64,7 @@ void KlipperPopup::showEvent(QShowEvent *event)
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::setOnAllDesktops(winId(), true);
     }
-    QQuickWindow::showEvent(event);
+    PlasmaWindow::showEvent(event); // NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher
     requestActivate();
     if (KWindowSystem::isPlatformX11()) {
         KX11Extras::forceActiveWindow(winId());
@@ -76,7 +76,6 @@ void KlipperPopup::positionOnScreen()
     if (KWindowSystem::isPlatformX11()) {
         setPosition(QCursor::pos());
         KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
-        KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager);
     } else if (m_plasmashell && KWindowSystem::isPlatformWayland()) {
         auto surface = KWayland::Client::Surface::fromWindow(this);
         auto plasmaSurface = m_plasmashell->createSurface(surface, this);
