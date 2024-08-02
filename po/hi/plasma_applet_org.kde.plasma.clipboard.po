@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2021-10-11 12:06+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -17,121 +17,73 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 21.08.2\n"
 
-#: contents/ui/BarcodePage.qml:25
-#, kde-format
-msgid "QR Code"
-msgstr "क्यूआर कोड"
-
-#: contents/ui/BarcodePage.qml:26
-#, kde-format
-msgid "Data Matrix"
-msgstr "डाटा माट्रिक्स"
-
-#: contents/ui/BarcodePage.qml:27
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr "एज़्टेक"
-
-#: contents/ui/BarcodePage.qml:28
-#, kde-format
-msgid "Code 39"
-msgstr "कोड ३९"
-
-#: contents/ui/BarcodePage.qml:29
-#, kde-format
-msgid "Code 93"
-msgstr "कोड ९३"
-
-#: contents/ui/BarcodePage.qml:30
-#, kde-format
-msgid "Code 128"
-msgstr "कोड १२८"
-
-#: contents/ui/BarcodePage.qml:46
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "क्लिपबोर्ड पर लौटें"
-
-#: contents/ui/BarcodePage.qml:81
-#, kde-format
-msgid "Change the QR code type"
-msgstr "क्यूआर कोड प्रकार बदलें"
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid ""
-"There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid "Creating QR code failed"
-msgstr "क्यूआर कोड बनाना विफल हुआ"
-
-#: contents/ui/DelegateToolButtons.qml:26
-#, kde-format
-msgid "Invoke action"
-msgstr "क्रिया शुरू करें"
-
-#: contents/ui/DelegateToolButtons.qml:41
-#, kde-format
-msgid "Show QR code"
-msgstr "क्यूआर कोड दिखाएँ"
-
-#: contents/ui/DelegateToolButtons.qml:57
-#, kde-format
-msgid "Edit contents"
-msgstr "विषय-वस्तु का संपादन करें"
-
-#: contents/ui/DelegateToolButtons.qml:71
-#, kde-format
-msgid "Remove from history"
-msgstr "इतिहास सूची से हटाएँ"
-
-#: contents/ui/EditPage.qml:82
-#, kde-format
-msgctxt "@action:button"
-msgid "Save"
-msgstr ""
-
-#: contents/ui/EditPage.qml:90
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr ""
-
-#: contents/ui/main.qml:32
+#: contents/ui/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "क्लिपबोर्ड के वस्तुएँ"
 
-#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "क्लिपबोर्ड खाली है"
 
-#: contents/ui/main.qml:61
+#: contents/ui/main.qml:62
 #, kde-format
 msgid "Clear History"
 msgstr "इतिहास साफ करें"
 
-#: contents/ui/main.qml:73
+#: contents/ui/main.qml:74
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "क्लिपबोर्ड विन्यस्त करें..."
 
-#: contents/ui/Menu.qml:136
-#, kde-format
-msgid "No matches"
-msgstr "कोई मेल नहीं"
+#~ msgid "QR Code"
+#~ msgstr "क्यूआर कोड"
 
-#: contents/ui/UrlItemDelegate.qml:107
-#, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
-msgid "+%1"
-msgstr "+%1"
+#~ msgid "Data Matrix"
+#~ msgstr "डाटा माट्रिक्स"
+
+#~ msgctxt "Aztec barcode"
+#~ msgid "Aztec"
+#~ msgstr "एज़्टेक"
+
+#~ msgid "Code 39"
+#~ msgstr "कोड ३९"
+
+#~ msgid "Code 93"
+#~ msgstr "कोड ९३"
+
+#~ msgid "Code 128"
+#~ msgstr "कोड १२८"
+
+#~ msgid "Return to Clipboard"
+#~ msgstr "क्लिपबोर्ड पर लौटें"
+
+#~ msgid "Change the QR code type"
+#~ msgstr "क्यूआर कोड प्रकार बदलें"
+
+#~ msgid "Creating QR code failed"
+#~ msgstr "क्यूआर कोड बनाना विफल हुआ"
+
+#~ msgid "Invoke action"
+#~ msgstr "क्रिया शुरू करें"
+
+#~ msgid "Show QR code"
+#~ msgstr "क्यूआर कोड दिखाएँ"
+
+#~ msgid "Edit contents"
+#~ msgstr "विषय-वस्तु का संपादन करें"
+
+#~ msgid "Remove from history"
+#~ msgstr "इतिहास सूची से हटाएँ"
+
+#~ msgid "No matches"
+#~ msgstr "कोई मेल नहीं"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the clipboard than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
 
 #~ msgid "The QR code is too large to be displayed"
 #~ msgstr "क्यूआर कोड प्रदर्शित होने के लिए बहुत बड़ा है"

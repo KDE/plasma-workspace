@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2024-07-10 12:58+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -306,6 +306,120 @@ msgstr ""
 "indtastes i en anden terminal, og klik så på vinduet, du vil ekskludere. Det "
 "første navn, der vises efter lighedstegnet er det du skal indtaste."
 
+#: declarative/qml/BarcodePage.qml:31
+#, kde-format
+msgid "QR Code"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:32
+#, kde-format
+msgid "Data Matrix"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:33
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:34
+#, kde-format
+msgid "Code 39"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:35
+#, kde-format
+msgid "Code 93"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:36
+#, kde-format
+msgid "Code 128"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:52
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Return to Clipboard"
+msgstr "Føj til udklipsholder"
+
+#: declarative/qml/BarcodePage.qml:88
+#, kde-format
+msgid "Change the QR code type"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid "Creating QR code failed"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:175
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clear History"
+msgstr "Udklipsholderhistorik"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "No matches"
+msgstr "Ingen fund"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Udklipsholderen er tom"
+
+#: declarative/qml/DelegateToolButtons.qml:26
+#, fuzzy, kde-format
+#| msgid "Ignore Selection"
+msgid "Invoke action"
+msgstr "Ignorér markering"
+
+#: declarative/qml/DelegateToolButtons.qml:39
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Show Barcode…"
+msgid "Show QR code"
+msgstr "&Vis stregkode..."
+
+#: declarative/qml/DelegateToolButtons.qml:55
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "Redigér indhold"
+
+#: declarative/qml/DelegateToolButtons.qml:69
+#, fuzzy, kde-format
+#| msgid "For an item chosen from history"
+msgid "Remove from history"
+msgstr "For et element valgt i historikken"
+
+#: declarative/qml/EditPage.qml:87
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:95
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "&Annullér"
+
+#: declarative/qml/UrlItemDelegate.qml:95
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr ""
+
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
@@ -504,65 +618,65 @@ msgstr "Ikon:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:68
+#: historymodel.cpp:100
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Vil du virkelig rydde og slette hele udklipsholderhistorikken?"
 
-#: historymodel.cpp:69
+#: historymodel.cpp:101
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Ryd udklipsholderhistorik"
 
-#: klipper.cpp:87
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatisk handlings-pop-up-menu"
 
-#: klipper.cpp:116
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "R&yd udklipsholderhistorik"
 
-#: klipper.cpp:123
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Konfigurér Klipper..."
 
-#: klipper.cpp:127
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Udfør handling på denne udklipsholder manuelt"
 
-#: klipper.cpp:134
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Vis stregkode..."
 
-#: klipper.cpp:143
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Næste historikelement"
 
-#: klipper.cpp:148
+#: klipper.cpp:146
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Forrige historikelement"
 
-#: klipper.cpp:155
+#: klipper.cpp:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Åbn udklipsholderelementer ved musseposition"
 
-#: klipper.cpp:341
+#: klipper.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -572,27 +686,27 @@ msgstr ""
 "Du kan aktivere URL-handlinger under siden <interface>Handlinger</interface> "
 "i udklipsholder-applettens indstillingsvindue"
 
-#: klipper.cpp:611
+#: klipper.cpp:568
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil stregkode"
 
-#: klipper.cpp:654 klipper.cpp:663
+#: klipper.cpp:611 klipper.cpp:620
 #, kde-format
 msgid "Clipboard history"
 msgstr "Udklipsholderhistorik"
 
-#: klipper.cpp:680
+#: klipper.cpp:637
 #, kde-format
 msgid "up"
 msgstr "op"
 
-#: klipper.cpp:687
+#: klipper.cpp:644
 #, kde-format
 msgid "current"
 msgstr "nuværende"
 
-#: klipper.cpp:694
+#: klipper.cpp:651
 #, kde-format
 msgid "down"
 msgstr "ned"
@@ -808,35 +922,11 @@ msgstr ""
 "Hvis et filnavn eller URL er valgt, inkludér applikationer, der kan "
 "acceptere dets MIME-type i pop-up-menuen."
 
-#: klipperpopup.cpp:107
-#, kde-format
-msgid "Clipboard Items"
-msgstr "Udklipsholderelementer"
-
-#: klipperpopup.cpp:111
-#, kde-format
-msgid "Search…"
-msgstr "Søg…"
-
-#: klipperpopup.cpp:169
-#, kde-format
-msgid "Invalid regular expression, %1"
-msgstr "Ugyldigtr egulært udtryk, %1"
-
-#: klipperpopup.cpp:174
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "Udklipsholderen er tom"
-
-#: klipperpopup.cpp:176
-#, kde-format
-msgid "No matches"
-msgstr "Ingen fund"
-
-#: popupproxy.cpp:144
-#, kde-format
-msgid "&More"
-msgstr "&Mere"
+#: klipperpopup.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clipboard Popup"
+msgstr "Udklipsholderhistorik"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -847,6 +937,18 @@ msgstr "Deaktivér denne popop"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Annullér"
+
+#~ msgid "Clipboard Items"
+#~ msgstr "Udklipsholderelementer"
+
+#~ msgid "Search…"
+#~ msgstr "Søg…"
+
+#~ msgid "Invalid regular expression, %1"
+#~ msgstr "Ugyldigtr egulært udtryk, %1"
+
+#~ msgid "&More"
+#~ msgstr "&Mere"
 
 #~ msgid "Should Klipper start automatically when you login?"
 #~ msgstr "Skal Klipper starte automatisk når du logger ind?"
@@ -931,9 +1033,6 @@ msgstr "&Annullér"
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Edit Contents…"
 #~ msgstr "R&edigér indhold..."
-
-#~ msgid "Edit Contents"
-#~ msgstr "Redigér indhold"
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "Udklipsholderindhold"
@@ -1031,9 +1130,6 @@ msgstr "&Annullér"
 #~ "Dette tilvalg har den virkning at udklipsholderen aldrig kan være tom. "
 #~ "For eksempel når et program afsluttes, ville udklipsholderen ellers "
 #~ "normalt være tom."
-
-#~ msgid "Ignore Selection"
-#~ msgstr "Ignorér markering"
 
 #~ msgid ""
 #~ "When an area of the screen is selected with mouse or keyboard, this is "

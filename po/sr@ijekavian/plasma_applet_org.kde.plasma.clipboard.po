@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2015-02-21 13:02+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -18,132 +18,81 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Environment: kde\n"
 
-# >> @item:inmenu
-#: contents/ui/BarcodePage.qml:25
-#, kde-format
-msgid "QR Code"
-msgstr "КуР код"
-
-# >> @item:inmenu
-#: contents/ui/BarcodePage.qml:26
-#, kde-format
-msgid "Data Matrix"
-msgstr "матрица података"
-
-#: contents/ui/BarcodePage.qml:27
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr ""
-
-# >> @item:inmenu
-#: contents/ui/BarcodePage.qml:28
-#, kde-format
-msgid "Code 39"
-msgstr "код 39"
-
-# >> @item:inmenu
-#: contents/ui/BarcodePage.qml:29
-#, kde-format
-msgid "Code 93"
-msgstr "код 93"
-
-# >> @item:inmenu
-#: contents/ui/BarcodePage.qml:30
-#, fuzzy, kde-format
-#| msgid "Code 39"
-msgid "Code 128"
-msgstr "код 39"
-
-#: contents/ui/BarcodePage.qml:46
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "Назад у клипборд"
-
-#: contents/ui/BarcodePage.qml:81
-#, fuzzy, kde-format
-#| msgid "Change the barcode type"
-msgid "Change the QR code type"
-msgstr "Промени тип бар‑кода"
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid ""
-"There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
-
-#: contents/ui/BarcodePage.qml:134
-#, fuzzy, kde-format
-#| msgid "Creating barcode failed"
-msgid "Creating QR code failed"
-msgstr "Стварање бар‑кода пропало"
-
-#: contents/ui/DelegateToolButtons.qml:26
-#, kde-format
-msgid "Invoke action"
-msgstr "Изврши радњу"
-
-#: contents/ui/DelegateToolButtons.qml:41
-#, fuzzy, kde-format
-#| msgid "Show barcode"
-msgid "Show QR code"
-msgstr "Прикажи бар‑код"
-
-#: contents/ui/DelegateToolButtons.qml:57
-#, kde-format
-msgid "Edit contents"
-msgstr "Уреди садржај"
-
-#: contents/ui/DelegateToolButtons.qml:71
-#, kde-format
-msgid "Remove from history"
-msgstr "Уклони из историјата"
-
-#: contents/ui/EditPage.qml:82
-#, kde-format
-msgctxt "@action:button"
-msgid "Save"
-msgstr ""
-
-#: contents/ui/EditPage.qml:90
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr ""
-
-#: contents/ui/main.qml:32
+#: contents/ui/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Садржај клипборда"
 
-#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Клипборд је празан."
 
-#: contents/ui/main.qml:61
+#: contents/ui/main.qml:62
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"
 msgstr "Очисти историјат"
 
-#: contents/ui/main.qml:73
+#: contents/ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"
 msgstr "Подеси клипборд..."
 
-#: contents/ui/Menu.qml:136
-#, kde-format
-msgid "No matches"
-msgstr ""
+# >> @item:inmenu
+#~ msgid "QR Code"
+#~ msgstr "КуР код"
 
-#: contents/ui/UrlItemDelegate.qml:107
-#, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
-msgid "+%1"
-msgstr "+%1"
+# >> @item:inmenu
+#~ msgid "Data Matrix"
+#~ msgstr "матрица података"
+
+# >> @item:inmenu
+#~ msgid "Code 39"
+#~ msgstr "код 39"
+
+# >> @item:inmenu
+#~ msgid "Code 93"
+#~ msgstr "код 93"
+
+# >> @item:inmenu
+#, fuzzy
+#~| msgid "Code 39"
+#~ msgid "Code 128"
+#~ msgstr "код 39"
+
+#~ msgid "Return to Clipboard"
+#~ msgstr "Назад у клипборд"
+
+#, fuzzy
+#~| msgid "Change the barcode type"
+#~ msgid "Change the QR code type"
+#~ msgstr "Промени тип бар‑кода"
+
+#, fuzzy
+#~| msgid "Creating barcode failed"
+#~ msgid "Creating QR code failed"
+#~ msgstr "Стварање бар‑кода пропало"
+
+#~ msgid "Invoke action"
+#~ msgstr "Изврши радњу"
+
+#, fuzzy
+#~| msgid "Show barcode"
+#~ msgid "Show QR code"
+#~ msgstr "Прикажи бар‑код"
+
+#~ msgid "Edit contents"
+#~ msgstr "Уреди садржај"
+
+#~ msgid "Remove from history"
+#~ msgstr "Уклони из историјата"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the clipboard than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
 
 #, fuzzy
 #~| msgid "Search"

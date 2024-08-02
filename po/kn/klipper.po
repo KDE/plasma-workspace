@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -307,6 +307,119 @@ msgid ""
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
 
+#: declarative/qml/BarcodePage.qml:31
+#, kde-format
+msgid "QR Code"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:32
+#, kde-format
+msgid "Data Matrix"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:33
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:34
+#, kde-format
+msgid "Code 39"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:35
+#, kde-format
+msgid "Code 93"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:36
+#, kde-format
+msgid "Code 128"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:52
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Return to Clipboard"
+msgstr "ನಕಲು ಫಲಕಕ್ಕೆ ಸೇರಿಸು"
+
+#: declarative/qml/BarcodePage.qml:88
+#, kde-format
+msgid "Change the QR code type"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid "Creating QR code failed"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:175
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clear History"
+msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆ"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, fuzzy, kde-format
+#| msgid "<no matches>"
+msgid "No matches"
+msgstr "<ಹೋಲಿಕೆ ಇಲ್ಲ>"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "ನಕಲು ಫಲಕವು ಖಾಲಿ ಇದೆ"
+
+#: declarative/qml/DelegateToolButtons.qml:26
+#, fuzzy, kde-format
+#| msgid "<new action>"
+msgid "Invoke action"
+msgstr "<ಹೊಸ ಕ್ರಿಯೆ>"
+
+#: declarative/qml/DelegateToolButtons.qml:39
+#, kde-format
+msgid "Show QR code"
+msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:55
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "ಒಳ ವಿಷಯಗಳನ್ನು (&ಸ)ಸಂಸ್ಕರಿಸು"
+
+#: declarative/qml/DelegateToolButtons.qml:69
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "Remove from history"
+msgstr "ಚರಿತ್ರೆಯಿಂದ ಆಯ್ಕೆ ಮಾಡಿದ ವಸ್ತುವಿನಲ್ಲಿ ಕ್ರಿಯೆಗಳನ್ನು ಮರಳಿ ಚಲಾಯಿಸು"
+
+#: declarative/qml/EditPage.qml:87
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:95
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "ರದ್ದುಮಾಡು(&C)"
+
+#: declarative/qml/UrlItemDelegate.qml:95
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr ""
+
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
@@ -495,74 +608,74 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: historymodel.cpp:68
+#: historymodel.cpp:100
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "ಸಂಪೂರ್ಣ ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ಖಚಿತವಾಗಿಯೂ ಅಳಿಸಿಹಾಕಲು ಬಯಸುತ್ತೀರಾ?"
 
-#: historymodel.cpp:69
+#: historymodel.cpp:101
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ತೆರ(&ವ)ವುಮಾಡು"
 
-#: klipper.cpp:87
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ಕ್ರಿಯಾಪುಟಿಕೆಗಳ ಕಾಲಾವಧಿ ತೀರಿಕೆ:"
 
-#: klipper.cpp:116
+#: klipper.cpp:114
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆಯನ್ನು ತೆರ(&ವ)ವುಮಾಡು"
 
-#: klipper.cpp:123
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper ಅನ್ನು ಸಂರ(&ಚ)ಚಿಸು"
 
-#: klipper.cpp:127
+#: klipper.cpp:125
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ಹಾಲಿ ನಕಲು ಫಲಕದ ಮೇಲೆ ಕ್ರಿಯೆಯನ್ನು ಸ್ವಹಸ್ತದಿಂದ ಚಲಾಯಿಸು"
 
-#: klipper.cpp:134
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:143
+#: klipper.cpp:141
 #, fuzzy, kde-format
 #| msgid "Next history item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ಚರಿತ್ರೆಯ ಮುಂದಿನ ಅಂಶ"
 
-#: klipper.cpp:148
+#: klipper.cpp:146
 #, fuzzy, kde-format
 #| msgid "Previous history item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ಚರಿತ್ರೆಯ ಹಿಂದಿನ ಅಂಶ"
 
-#: klipper.cpp:155
+#: klipper.cpp:153
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "ಮೌಸ್ ಸೂಚಕನ ಸ್ಥಾನದಲ್ಲಿ ಪುಟಿಕೆ ಮೂಡಿಸು"
 
-#: klipper.cpp:341
+#: klipper.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -570,27 +683,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:611
+#: klipper.cpp:568
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:654 klipper.cpp:663
+#: klipper.cpp:611 klipper.cpp:620
 #, kde-format
 msgid "Clipboard history"
 msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆ"
 
-#: klipper.cpp:680
+#: klipper.cpp:637
 #, kde-format
 msgid "up"
 msgstr "ಮೇಲಕ್ಕೆ"
 
-#: klipper.cpp:687
+#: klipper.cpp:644
 #, kde-format
 msgid "current"
 msgstr "ಪ್ರಸ್ತುತ"
 
-#: klipper.cpp:694
+#: klipper.cpp:651
 #, kde-format
 msgid "down"
 msgstr "ಕೆಳಕ್ಕೆ"
@@ -797,38 +910,11 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:107
+#: klipperpopup.cpp:33
 #, fuzzy, kde-format
-#| msgid "Keep clipboard contents"
-msgid "Clipboard Items"
-msgstr "ನಕಲು ಫಲಕದ ವಿಷಯಗಳನ್ನು ಇರಿಸು"
-
-#: klipperpopup.cpp:111
-#, kde-format
-msgid "Search…"
-msgstr ""
-
-#: klipperpopup.cpp:169
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
-msgid "Invalid regular expression, %1"
-msgstr "ಸಾಮಾನ್ಯ ಎಕ್ಸ್‍ಪ್ರೆಶನ್:"
-
-#: klipperpopup.cpp:174
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "ನಕಲು ಫಲಕವು ಖಾಲಿ ಇದೆ"
-
-#: klipperpopup.cpp:176
-#, fuzzy, kde-format
-#| msgid "<no matches>"
-msgid "No matches"
-msgstr "<ಹೋಲಿಕೆ ಇಲ್ಲ>"
-
-#: popupproxy.cpp:144
-#, kde-format
-msgid "&More"
-msgstr "(&ಹ)ಹೆಚ್ಚು"
+#| msgid "Clipboard history"
+msgid "Clipboard Popup"
+msgstr "ನಕಲುಫಲಕದ ಚರಿತ್ರೆ"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -839,6 +925,19 @@ msgstr "ಈ ಪುಟಿಕೆಯನ್ನು ನಿಶ್ಚೇತಗೊಳಿ�
 #, kde-format
 msgid "&Cancel"
 msgstr "ರದ್ದುಮಾಡು(&C)"
+
+#, fuzzy
+#~| msgid "Keep clipboard contents"
+#~ msgid "Clipboard Items"
+#~ msgstr "ನಕಲು ಫಲಕದ ವಿಷಯಗಳನ್ನು ಇರಿಸು"
+
+#, fuzzy
+#~| msgid "Regular expression:"
+#~ msgid "Invalid regular expression, %1"
+#~ msgstr "ಸಾಮಾನ್ಯ ಎಕ್ಸ್‍ಪ್ರೆಶನ್:"
+
+#~ msgid "&More"
+#~ msgstr "(&ಹ)ಹೆಚ್ಚು"
 
 #~ msgid "Should Klipper start automatically when you login?"
 #~ msgstr "ನೀವು ಪ್ರವೇಶಿಸಿದಾಗ Klipper ತಾನಾಗಿಯೆ ಆರಂಭಿಸಲ್ಪಡಬೇಕೆ?"
@@ -925,9 +1024,6 @@ msgstr "ರದ್ದುಮಾಡು(&C)"
 #~| msgid "Edit Contents"
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Edit Contents…"
-#~ msgstr "ಒಳ ವಿಷಯಗಳನ್ನು (&ಸ)ಸಂಸ್ಕರಿಸು"
-
-#~ msgid "Edit Contents"
 #~ msgstr "ಒಳ ವಿಷಯಗಳನ್ನು (&ಸ)ಸಂಸ್ಕರಿಸು"
 
 #, fuzzy
@@ -1122,9 +1218,6 @@ msgstr "ರದ್ದುಮಾಡು(&C)"
 #, fuzzy
 #~ msgid "Double-click here to set the regular expression"
 #~ msgstr "regexp ಅನ್ನು ಸಚೇತಗೊಳಿಸಲು ಇಲ್ಲಿ ಅದುಮಿ"
-
-#~ msgid "<new action>"
-#~ msgstr "<ಹೊಸ ಕ್ರಿಯೆ>"
 
 #, fuzzy
 #~ msgid "Selecting this option synchronizes these two buffers."

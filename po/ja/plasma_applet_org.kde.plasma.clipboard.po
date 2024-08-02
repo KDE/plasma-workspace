@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2022-07-06 12:51+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-i18n-doc@kde.org>\n"
@@ -18,118 +18,78 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: contents/ui/BarcodePage.qml:25
-#, kde-format
-msgid "QR Code"
-msgstr "QR コード"
-
-#: contents/ui/BarcodePage.qml:26
-#, kde-format
-msgid "Data Matrix"
-msgstr "DataMatrix"
-
-#: contents/ui/BarcodePage.qml:27
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr "Aztec"
-
-#: contents/ui/BarcodePage.qml:28
-#, kde-format
-msgid "Code 39"
-msgstr "CODE39"
-
-#: contents/ui/BarcodePage.qml:29
-#, kde-format
-msgid "Code 93"
-msgstr "CODE93"
-
-#: contents/ui/BarcodePage.qml:30
-#, kde-format
-msgid "Code 128"
-msgstr "Code 128"
-
-#: contents/ui/BarcodePage.qml:46
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "クリップボードへ戻る"
-
-#: contents/ui/BarcodePage.qml:81
-#, kde-format
-msgid "Change the QR code type"
-msgstr "QR コードの種類を変更"
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid ""
-"There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid "Creating QR code failed"
-msgstr "QR コードの作成に失敗しました"
-
-#: contents/ui/DelegateToolButtons.qml:26
-#, kde-format
-msgid "Invoke action"
-msgstr "アクションを呼び出し"
-
-#: contents/ui/DelegateToolButtons.qml:41
-#, kde-format
-msgid "Show QR code"
-msgstr "QR コードを表示"
-
-#: contents/ui/DelegateToolButtons.qml:57
-#, kde-format
-msgid "Edit contents"
-msgstr "内容を編集"
-
-#: contents/ui/DelegateToolButtons.qml:71
-#, kde-format
-msgid "Remove from history"
-msgstr "履歴から削除"
-
-#: contents/ui/EditPage.qml:82
-#, kde-format
-msgctxt "@action:button"
-msgid "Save"
-msgstr "保存"
-
-#: contents/ui/EditPage.qml:90
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr "キャンセル"
-
-#: contents/ui/main.qml:32
+#: contents/ui/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "クリップボードの内容"
 
-#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "クリップボードは空です"
 
-#: contents/ui/main.qml:61
+#: contents/ui/main.qml:62
 #, kde-format
 msgid "Clear History"
 msgstr "履歴を消去"
 
-#: contents/ui/main.qml:73
+#: contents/ui/main.qml:74
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "クリップボードを設定…"
 
-#: contents/ui/Menu.qml:136
-#, kde-format
-msgid "No matches"
-msgstr "一致するものがありません"
+#~ msgid "QR Code"
+#~ msgstr "QR コード"
 
-#: contents/ui/UrlItemDelegate.qml:107
-#, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
-msgid "+%1"
-msgstr "+%1"
+#~ msgid "Data Matrix"
+#~ msgstr "DataMatrix"
+
+#~ msgctxt "Aztec barcode"
+#~ msgid "Aztec"
+#~ msgstr "Aztec"
+
+#~ msgid "Code 39"
+#~ msgstr "CODE39"
+
+#~ msgid "Code 93"
+#~ msgstr "CODE93"
+
+#~ msgid "Code 128"
+#~ msgstr "Code 128"
+
+#~ msgid "Return to Clipboard"
+#~ msgstr "クリップボードへ戻る"
+
+#~ msgid "Change the QR code type"
+#~ msgstr "QR コードの種類を変更"
+
+#~ msgid "Creating QR code failed"
+#~ msgstr "QR コードの作成に失敗しました"
+
+#~ msgid "Invoke action"
+#~ msgstr "アクションを呼び出し"
+
+#~ msgid "Show QR code"
+#~ msgstr "QR コードを表示"
+
+#~ msgid "Edit contents"
+#~ msgstr "内容を編集"
+
+#~ msgid "Remove from history"
+#~ msgstr "履歴から削除"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save"
+#~ msgstr "保存"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "キャンセル"
+
+#~ msgid "No matches"
+#~ msgstr "一致するものがありません"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the clipboard than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"

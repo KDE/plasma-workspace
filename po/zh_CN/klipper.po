@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -287,6 +287,119 @@ msgstr ""
 "WM_CLASS</icode><nl/><nl/>然后点击需要排除的窗口。在等号后面显示的第一个名称"
 "就是需要输入的名称。"
 
+#: declarative/qml/BarcodePage.qml:31
+#, kde-format
+msgid "QR Code"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:32
+#, kde-format
+msgid "Data Matrix"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:33
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:34
+#, kde-format
+msgid "Code 39"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:35
+#, kde-format
+msgid "Code 93"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:36
+#, kde-format
+msgid "Code 128"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:52
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Return to Clipboard"
+msgstr "添加到剪贴板"
+
+#: declarative/qml/BarcodePage.qml:88
+#, kde-format
+msgid "Change the QR code type"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid "Creating QR code failed"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:175
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clear History"
+msgstr "剪贴板历史"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "No matches"
+msgstr "无匹配条目"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "剪贴板为空"
+
+#: declarative/qml/DelegateToolButtons.qml:26
+#, fuzzy, kde-format
+#| msgid "Include MIME actions"
+msgid "Invoke action"
+msgstr "包含 MIME 操作"
+
+#: declarative/qml/DelegateToolButtons.qml:39
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Show Barcode…"
+msgid "Show QR code"
+msgstr "显示条形码(&S)…"
+
+#: declarative/qml/DelegateToolButtons.qml:55
+#, kde-format
+msgid "Edit contents"
+msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:69
+#, fuzzy, kde-format
+#| msgid "For an item chosen from history"
+msgid "Remove from history"
+msgstr "在历史记录中选择项目时弹出"
+
+#: declarative/qml/EditPage.qml:87
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:95
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "取消(&C)"
+
+#: declarative/qml/UrlItemDelegate.qml:95
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr ""
+
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
@@ -479,65 +592,65 @@ msgstr "图标："
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3 位/像素"
 
-#: historymodel.cpp:68
+#: historymodel.cpp:100
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "您确定要清除剪贴板的所有历史记录吗？"
 
-#: historymodel.cpp:69
+#: historymodel.cpp:101
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "清除剪贴板历史记录"
 
-#: klipper.cpp:87
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "自动弹出操作菜单"
 
-#: klipper.cpp:116
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "清除剪贴板历史(&L)"
 
-#: klipper.cpp:123
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "配置 Klipper(&C)…"
 
-#: klipper.cpp:127
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "在当前剪贴板上手动执行操作"
 
-#: klipper.cpp:134
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "显示条形码(&S)…"
 
-#: klipper.cpp:143
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "下一条历史记录"
 
-#: klipper.cpp:148
+#: klipper.cpp:146
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "上一条历史记录"
 
-#: klipper.cpp:155
+#: klipper.cpp:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "在鼠标位置显示剪贴板项目"
 
-#: klipper.cpp:341
+#: klipper.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -547,27 +660,27 @@ msgstr ""
 "您可以稍后在剪贴板小程序的配置窗口中的<interface>操作</interface>页面启用 "
 "URL 操作。"
 
-#: klipper.cpp:611
+#: klipper.cpp:568
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "移动条形码"
 
-#: klipper.cpp:654 klipper.cpp:663
+#: klipper.cpp:611 klipper.cpp:620
 #, kde-format
 msgid "Clipboard history"
 msgstr "剪贴板历史"
 
-#: klipper.cpp:680
+#: klipper.cpp:637
 #, kde-format
 msgid "up"
 msgstr "向上"
 
-#: klipper.cpp:687
+#: klipper.cpp:644
 #, kde-format
 msgid "current"
 msgstr "当前"
 
-#: klipper.cpp:694
+#: klipper.cpp:651
 #, kde-format
 msgid "down"
 msgstr "向下"
@@ -769,35 +882,11 @@ msgid ""
 msgstr ""
 "如果选择的是文件名或 URL，在弹出菜单中包含能够接受该 MIME 类型的应用程序。"
 
-#: klipperpopup.cpp:107
-#, kde-format
-msgid "Clipboard Items"
-msgstr "剪贴板项目"
-
-#: klipperpopup.cpp:111
-#, kde-format
-msgid "Search…"
-msgstr "搜索…"
-
-#: klipperpopup.cpp:169
-#, kde-format
-msgid "Invalid regular expression, %1"
-msgstr "无效的正则表达式，%1"
-
-#: klipperpopup.cpp:174
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "剪贴板为空"
-
-#: klipperpopup.cpp:176
-#, kde-format
-msgid "No matches"
-msgstr "无匹配条目"
-
-#: popupproxy.cpp:144
-#, kde-format
-msgid "&More"
-msgstr "更多(&M)"
+#: klipperpopup.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clipboard Popup"
+msgstr "剪贴板历史"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -808,3 +897,15 @@ msgstr "禁用此弹出菜单"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
+
+#~ msgid "Clipboard Items"
+#~ msgstr "剪贴板项目"
+
+#~ msgid "Search…"
+#~ msgstr "搜索…"
+
+#~ msgid "Invalid regular expression, %1"
+#~ msgstr "无效的正则表达式，%1"
+
+#~ msgid "&More"
+#~ msgstr "更多(&M)"

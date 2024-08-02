@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2021-11-09 18:50+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -13,121 +13,81 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-POFile-SpellExtra: QR Azteca\n"
 
-#: contents/ui/BarcodePage.qml:25
-#, kde-format
-msgid "QR Code"
-msgstr "Código QR"
-
-#: contents/ui/BarcodePage.qml:26
-#, kde-format
-msgid "Data Matrix"
-msgstr "Matriz de Dados"
-
-#: contents/ui/BarcodePage.qml:27
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr "Azteca"
-
-#: contents/ui/BarcodePage.qml:28
-#, kde-format
-msgid "Code 39"
-msgstr "Código 39"
-
-#: contents/ui/BarcodePage.qml:29
-#, kde-format
-msgid "Code 93"
-msgstr "Código 93"
-
-#: contents/ui/BarcodePage.qml:30
-#, kde-format
-msgid "Code 128"
-msgstr "Código 128"
-
-#: contents/ui/BarcodePage.qml:46
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "Voltar à Área de Transferência"
-
-#: contents/ui/BarcodePage.qml:81
-#, kde-format
-msgid "Change the QR code type"
-msgstr "Mudar o tipo de código QR"
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid ""
-"There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid "Creating QR code failed"
-msgstr "Não foi possível criar o código QR"
-
-#: contents/ui/DelegateToolButtons.qml:26
-#, kde-format
-msgid "Invoke action"
-msgstr "Invocar a acção"
-
-#: contents/ui/DelegateToolButtons.qml:41
-#, kde-format
-msgid "Show QR code"
-msgstr "Mostrar o código QR"
-
-#: contents/ui/DelegateToolButtons.qml:57
-#, kde-format
-msgid "Edit contents"
-msgstr "Editar o conteúdo"
-
-#: contents/ui/DelegateToolButtons.qml:71
-#, kde-format
-msgid "Remove from history"
-msgstr "Remover do histórico"
-
-#: contents/ui/EditPage.qml:82
-#, kde-format
-msgctxt "@action:button"
-msgid "Save"
-msgstr "Gravar"
-
-#: contents/ui/EditPage.qml:90
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr "Cancelar"
-
-#: contents/ui/main.qml:32
+#: contents/ui/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Conteúdo da Área de Transferência"
 
-#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"
 
-#: contents/ui/main.qml:61
+#: contents/ui/main.qml:62
 #, kde-format
 msgid "Clear History"
 msgstr "Limpar o Histórico"
 
-#: contents/ui/main.qml:73
+#: contents/ui/main.qml:74
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Configurar a Área de Transferência…"
 
-#: contents/ui/Menu.qml:136
-#, kde-format
-msgid "No matches"
-msgstr "Sem correspondências"
+#~ msgid "QR Code"
+#~ msgstr "Código QR"
 
-#: contents/ui/UrlItemDelegate.qml:107
-#, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
-msgid "+%1"
-msgstr "+%1"
+#~ msgid "Data Matrix"
+#~ msgstr "Matriz de Dados"
+
+#~ msgctxt "Aztec barcode"
+#~ msgid "Aztec"
+#~ msgstr "Azteca"
+
+#~ msgid "Code 39"
+#~ msgstr "Código 39"
+
+#~ msgid "Code 93"
+#~ msgstr "Código 93"
+
+#~ msgid "Code 128"
+#~ msgstr "Código 128"
+
+#~ msgid "Return to Clipboard"
+#~ msgstr "Voltar à Área de Transferência"
+
+#~ msgid "Change the QR code type"
+#~ msgstr "Mudar o tipo de código QR"
+
+#~ msgid "Creating QR code failed"
+#~ msgstr "Não foi possível criar o código QR"
+
+#~ msgid "Invoke action"
+#~ msgstr "Invocar a acção"
+
+#~ msgid "Show QR code"
+#~ msgstr "Mostrar o código QR"
+
+#~ msgid "Edit contents"
+#~ msgstr "Editar o conteúdo"
+
+#~ msgid "Remove from history"
+#~ msgstr "Remover do histórico"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save"
+#~ msgstr "Gravar"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
+
+#~ msgid "No matches"
+#~ msgstr "Sem correspondências"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the clipboard than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
 
 #~ msgid "The QR code is too large to be displayed"
 #~ msgstr "O código QR é demasiado grande para ser apresentado"

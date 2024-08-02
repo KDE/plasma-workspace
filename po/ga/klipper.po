@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2004-12-03 14:52-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -296,6 +296,120 @@ msgid ""
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
 
+#: declarative/qml/BarcodePage.qml:31
+#, kde-format
+msgid "QR Code"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:32
+#, kde-format
+msgid "Data Matrix"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:33
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:34
+#, kde-format
+msgid "Code 39"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:35
+#, kde-format
+msgid "Code 93"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:36
+#, kde-format
+msgid "Code 128"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:52
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Return to Clipboard"
+msgstr "Cuir leis an nGearrthaisce"
+
+#: declarative/qml/BarcodePage.qml:88
+#, kde-format
+msgid "Change the QR code type"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid "Creating QR code failed"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:175
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clear History"
+msgstr "Stair na gearrthaisce"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, fuzzy, kde-format
+#| msgid "<no matches>"
+msgid "No matches"
+msgstr "<níl aon rud comhoiriúnach>"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Tá an ghearrthaisce folamh"
+
+#: declarative/qml/DelegateToolButtons.qml:26
+#, fuzzy, kde-format
+#| msgid "<new action>"
+msgid "Invoke action"
+msgstr "<gníomh nua>"
+
+#: declarative/qml/DelegateToolButtons.qml:39
+#, fuzzy, kde-format
+#| msgid "&Show Barcode..."
+msgid "Show QR code"
+msgstr "Tai&speáin Barrachód..."
+
+#: declarative/qml/DelegateToolButtons.qml:55
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "Cuir an tÁbhar in Eagar"
+
+#: declarative/qml/DelegateToolButtons.qml:69
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "Remove from history"
+msgstr "Athdhéan gníomhartha ar mhír a roghnaíonn tú as an stair"
+
+#: declarative/qml/EditPage.qml:87
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:95
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "&Cealaigh"
+
+#: declarative/qml/UrlItemDelegate.qml:95
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr ""
+
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
@@ -484,76 +598,76 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: historymodel.cpp:68
+#: historymodel.cpp:100
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "An bhfuil tú cinnte gur mhaith leat stair iomlán na gearrthaisce a scriosadh?"
 
-#: historymodel.cpp:69
+#: historymodel.cpp:101
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "G&lan Stair na Gearrthaisce"
 
-#: klipper.cpp:87
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Teorainn ama do phreabfhuinneoga gnímh:"
 
-#: klipper.cpp:116
+#: klipper.cpp:114
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "G&lan Stair na Gearrthaisce"
 
-#: klipper.cpp:123
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Cumraigh Klipper..."
 
-#: klipper.cpp:127
+#: klipper.cpp:125
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Cuir an gníomh i bhfeidhm ar an ngearrthaisce reatha de láimh"
 
-#: klipper.cpp:134
+#: klipper.cpp:132
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Tai&speáin Barrachód..."
 
-#: klipper.cpp:143
+#: klipper.cpp:141
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "An chéad mhír eile sa stair"
 
-#: klipper.cpp:148
+#: klipper.cpp:146
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "An mhír roimhe seo sa stair"
 
-#: klipper.cpp:155
+#: klipper.cpp:153
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Oscail Klipper ag ionad an chúrsóra luiche"
 
-#: klipper.cpp:341
+#: klipper.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -561,27 +675,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:611
+#: klipper.cpp:568
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Barrachód Soghluaiste"
 
-#: klipper.cpp:654 klipper.cpp:663
+#: klipper.cpp:611 klipper.cpp:620
 #, kde-format
 msgid "Clipboard history"
 msgstr "Stair na gearrthaisce"
 
-#: klipper.cpp:680
+#: klipper.cpp:637
 #, kde-format
 msgid "up"
 msgstr "suas"
 
-#: klipper.cpp:687
+#: klipper.cpp:644
 #, kde-format
 msgid "current"
 msgstr "reatha"
 
-#: klipper.cpp:694
+#: klipper.cpp:651
 #, kde-format
 msgid "down"
 msgstr "síos"
@@ -789,38 +903,11 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:107
+#: klipperpopup.cpp:33
 #, fuzzy, kde-format
-#| msgid "Clipboard Contents"
-msgid "Clipboard Items"
-msgstr "Inneachar na Gearrthaisce"
-
-#: klipperpopup.cpp:111
-#, kde-format
-msgid "Search…"
-msgstr ""
-
-#: klipperpopup.cpp:169
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
-msgid "Invalid regular expression, %1"
-msgstr "Slonn ionadaíochta:"
-
-#: klipperpopup.cpp:174
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "Tá an ghearrthaisce folamh"
-
-#: klipperpopup.cpp:176
-#, fuzzy, kde-format
-#| msgid "<no matches>"
-msgid "No matches"
-msgstr "<níl aon rud comhoiriúnach>"
-
-#: popupproxy.cpp:144
-#, kde-format
-msgid "&More"
-msgstr "&Tuilleadh"
+#| msgid "Clipboard history"
+msgid "Clipboard Popup"
+msgstr "Stair na gearrthaisce"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -831,6 +918,19 @@ msgstr "Díchumasaigh an phreabfhuinneog seo"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cealaigh"
+
+#, fuzzy
+#~| msgid "Clipboard Contents"
+#~ msgid "Clipboard Items"
+#~ msgstr "Inneachar na Gearrthaisce"
+
+#, fuzzy
+#~| msgid "Regular expression:"
+#~ msgid "Invalid regular expression, %1"
+#~ msgstr "Slonn ionadaíochta:"
+
+#~ msgid "&More"
+#~ msgstr "&Tuilleadh"
 
 #~ msgid "Should Klipper start automatically when you login?"
 #~ msgstr ""
@@ -914,9 +1014,6 @@ msgstr "&Cealaigh"
 #~| msgid "Edit Contents"
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Edit Contents…"
-#~ msgstr "Cuir an tÁbhar in Eagar"
-
-#~ msgid "Edit Contents"
 #~ msgstr "Cuir an tÁbhar in Eagar"
 
 #~ msgid "Clipboard Contents"
@@ -1181,9 +1278,6 @@ msgstr "&Cealaigh"
 
 #~ msgid "Double-click here to set the regular expression"
 #~ msgstr "Déchliceáil anseo chun an slonn ionadaíochta a shocrú"
-
-#~ msgid "<new action>"
-#~ msgstr "<gníomh nua>"
 
 #~ msgid "Selecting this option synchronizes these two buffers."
 #~ msgstr "Sioncrónaítear an dá mhaolán seo nuair a roghnaítear é seo."

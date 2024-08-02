@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2023-05-26 06:24+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -20,123 +20,88 @@ msgstr ""
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: contents/ui/BarcodePage.qml:25
-#, kde-format
-msgid "QR Code"
-msgstr "Koda QR"
-
-#: contents/ui/BarcodePage.qml:26
-#, kde-format
-msgid "Data Matrix"
-msgstr "Podatkovna matrika"
-
-#: contents/ui/BarcodePage.qml:27
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr "Aztec"
-
-#: contents/ui/BarcodePage.qml:28
-#, kde-format
-msgid "Code 39"
-msgstr "Koda 39"
-
-#: contents/ui/BarcodePage.qml:29
-#, kde-format
-msgid "Code 93"
-msgstr "Koda 93"
-
-#: contents/ui/BarcodePage.qml:30
-#, kde-format
-msgid "Code 128"
-msgstr "Koda 128"
-
-#: contents/ui/BarcodePage.qml:46
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "Vrni na odložišče"
-
-#: contents/ui/BarcodePage.qml:81
-#, kde-format
-msgid "Change the QR code type"
-msgstr "Spremeni vrsto kode QR"
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid ""
-"There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
-"Ni dovolj prostora za prikaz kode QR. Poskusite spremeniti velikost "
-"programčka."
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid "Creating QR code failed"
-msgstr "Ustvarjanje kode QR ni uspelo"
-
-#: contents/ui/DelegateToolButtons.qml:26
-#, kde-format
-msgid "Invoke action"
-msgstr "Vpoklic aktivnosti"
-
-#: contents/ui/DelegateToolButtons.qml:41
-#, kde-format
-msgid "Show QR code"
-msgstr "Prikaži kodo"
-
-#: contents/ui/DelegateToolButtons.qml:57
-#, kde-format
-msgid "Edit contents"
-msgstr "Uredi vsebino"
-
-#: contents/ui/DelegateToolButtons.qml:71
-#, kde-format
-msgid "Remove from history"
-msgstr "Odstrani iz zgodovine"
-
-#: contents/ui/EditPage.qml:82
-#, kde-format
-msgctxt "@action:button"
-msgid "Save"
-msgstr "Shrani"
-
-#: contents/ui/EditPage.qml:90
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr "Prekliči"
-
-#: contents/ui/main.qml:32
+#: contents/ui/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Vsebina odložišča"
 
-#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
 
-#: contents/ui/main.qml:61
+#: contents/ui/main.qml:62
 #, kde-format
 msgid "Clear History"
 msgstr "Počisti zgodovino"
 
-#: contents/ui/main.qml:73
+#: contents/ui/main.qml:74
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Nastavi odložišče…"
 
-#: contents/ui/Menu.qml:136
-#, kde-format
-msgid "No matches"
-msgstr "Ni zadetkov"
+#~ msgid "QR Code"
+#~ msgstr "Koda QR"
 
-#: contents/ui/UrlItemDelegate.qml:107
-#, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
-msgid "+%1"
-msgstr "+%1"
+#~ msgid "Data Matrix"
+#~ msgstr "Podatkovna matrika"
+
+#~ msgctxt "Aztec barcode"
+#~ msgid "Aztec"
+#~ msgstr "Aztec"
+
+#~ msgid "Code 39"
+#~ msgstr "Koda 39"
+
+#~ msgid "Code 93"
+#~ msgstr "Koda 93"
+
+#~ msgid "Code 128"
+#~ msgstr "Koda 128"
+
+#~ msgid "Return to Clipboard"
+#~ msgstr "Vrni na odložišče"
+
+#~ msgid "Change the QR code type"
+#~ msgstr "Spremeni vrsto kode QR"
+
+#~ msgid ""
+#~ "There is not enough space to display the QR code. Try resizing this "
+#~ "applet."
+#~ msgstr ""
+#~ "Ni dovolj prostora za prikaz kode QR. Poskusite spremeniti velikost "
+#~ "programčka."
+
+#~ msgid "Creating QR code failed"
+#~ msgstr "Ustvarjanje kode QR ni uspelo"
+
+#~ msgid "Invoke action"
+#~ msgstr "Vpoklic aktivnosti"
+
+#~ msgid "Show QR code"
+#~ msgstr "Prikaži kodo"
+
+#~ msgid "Edit contents"
+#~ msgstr "Uredi vsebino"
+
+#~ msgid "Remove from history"
+#~ msgstr "Odstrani iz zgodovine"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save"
+#~ msgstr "Shrani"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "Prekliči"
+
+#~ msgid "No matches"
+#~ msgstr "Ni zadetkov"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the clipboard than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
 
 #~ msgid "The QR code is too large to be displayed"
 #~ msgstr "QR koda je prevelika, da bi jo lahko prikazal"

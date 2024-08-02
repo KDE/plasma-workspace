@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2003-12-27 14:52+0000\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -295,6 +295,118 @@ msgid ""
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
 
+#: declarative/qml/BarcodePage.qml:31
+#, kde-format
+msgid "QR Code"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:32
+#, kde-format
+msgid "Data Matrix"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:33
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:34
+#, kde-format
+msgid "Code 39"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:35
+#, kde-format
+msgid "Code 93"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:36
+#, kde-format
+msgid "Code 128"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:52
+#, fuzzy, kde-format
+#| msgid "Clipboard"
+msgid "Return to Clipboard"
+msgstr "Clipfwrdd"
+
+#: declarative/qml/BarcodePage.qml:88
+#, kde-format
+msgid "Change the QR code type"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid "Creating QR code failed"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:175
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "Clear History"
+msgstr "Maint hanes y c&lipfwrdd"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "No matches"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, fuzzy, kde-format
+#| msgid "C&lipboard history size:"
+msgid "Clipboard is empty"
+msgstr "Maint hanes y c&lipfwrdd"
+
+#: declarative/qml/DelegateToolButtons.qml:26
+#, fuzzy, kde-format
+#| msgid "<new action>"
+msgid "Invoke action"
+msgstr "<gweithred newydd>"
+
+#: declarative/qml/DelegateToolButtons.qml:39
+#, kde-format
+msgid "Show QR code"
+msgstr ""
+
+#: declarative/qml/DelegateToolButtons.qml:55
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "Golygu'r Cynnwys"
+
+#: declarative/qml/DelegateToolButtons.qml:69
+#, fuzzy, kde-format
+#| msgid "&Replay actions on an item selected from history"
+msgid "Remove from history"
+msgstr "&Ailadrodd gweithredoedd ar eitem wedi'i ddewis o'r hanes"
+
+#: declarative/qml/EditPage.qml:87
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:95
+#, kde-format
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr ""
+
+#: declarative/qml/UrlItemDelegate.qml:95
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr ""
+
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
@@ -487,74 +599,74 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: historymodel.cpp:68
+#: historymodel.cpp:100
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "G&wagio Hanes y Clipfwrdd"
 
-#: historymodel.cpp:69
+#: historymodel.cpp:101
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "G&wagio Hanes y Clipfwrdd"
 
-#: klipper.cpp:87
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "&Goramser naidlenni gweithredoedd:"
 
-#: klipper.cpp:116
+#: klipper.cpp:114
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "G&wagio Hanes y Clipfwrdd"
 
-#: klipper.cpp:123
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Ffurfweddu Klipper..."
 
-#: klipper.cpp:127
+#: klipper.cpp:125
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Achosi Gweithred â Llaw ar y Clipfwrdd Cyfredol"
 
-#: klipper.cpp:134
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:143
+#: klipper.cpp:141
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Maint hanes y c&lipfwrdd"
 
-#: klipper.cpp:148
+#: klipper.cpp:146
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Maint hanes y c&lipfwrdd"
 
-#: klipper.cpp:155
+#: klipper.cpp:153
 #, fuzzy, kde-format
 #| msgid "&Popup menu at mouse-cursor position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "&Naidlen wrth leoliad cyrchydd y llygoden"
 
-#: klipper.cpp:341
+#: klipper.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -562,28 +674,28 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:611
+#: klipper.cpp:568
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:654 klipper.cpp:663
+#: klipper.cpp:611 klipper.cpp:620
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history"
 msgstr "Maint hanes y c&lipfwrdd"
 
-#: klipper.cpp:680
+#: klipper.cpp:637
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:687
+#: klipper.cpp:644
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:694
+#: klipper.cpp:651
 #, kde-format
 msgid "down"
 msgstr ""
@@ -791,37 +903,11 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:107
-#, fuzzy, kde-format
-#| msgid "Save clipboard contents on e&xit"
-msgid "Clipboard Items"
-msgstr "Cadw cynnwys y clipfwrdd ar &adael"
-
-#: klipperpopup.cpp:111
-#, kde-format
-msgid "Search…"
-msgstr ""
-
-#: klipperpopup.cpp:169
-#, kde-format
-msgid "Invalid regular expression, %1"
-msgstr ""
-
-#: klipperpopup.cpp:174
+#: klipperpopup.cpp:33
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
-msgid "Clipboard is empty"
+msgid "Clipboard Popup"
 msgstr "Maint hanes y c&lipfwrdd"
-
-#: klipperpopup.cpp:176
-#, kde-format
-msgid "No matches"
-msgstr ""
-
-#: popupproxy.cpp:144
-#, kde-format
-msgid "&More"
-msgstr "&Mwy"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -832,6 +918,14 @@ msgstr "Analluogi'r Naidlen Hon"
 #, kde-format
 msgid "&Cancel"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Clipboard Items"
+#~ msgstr "Cadw cynnwys y clipfwrdd ar &adael"
+
+#~ msgid "&More"
+#~ msgstr "&Mwy"
 
 #, fuzzy
 #~| msgid ""
@@ -885,9 +979,6 @@ msgstr ""
 #~| msgid "Edit Contents"
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Edit Contents…"
-#~ msgstr "Golygu'r Cynnwys"
-
-#~ msgid "Edit Contents"
 #~ msgstr "Golygu'r Cynnwys"
 
 #, fuzzy
@@ -1096,9 +1187,6 @@ msgstr ""
 #~| msgid "Click here to set the regexp"
 #~ msgid "Double-click here to set the regular expression"
 #~ msgstr "Cliciwch yma i osod y myn. rheol."
-
-#~ msgid "<new action>"
-#~ msgstr "<gweithred newydd>"
 
 #, fuzzy
 #~| msgid ""

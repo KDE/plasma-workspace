@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2020-10-08 10:12+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -18,126 +18,78 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.08.1\n"
 
-#: contents/ui/BarcodePage.qml:25
-#, kde-format
-msgid "QR Code"
-msgstr "QR-kood"
-
-#: contents/ui/BarcodePage.qml:26
-#, kde-format
-msgid "Data Matrix"
-msgstr "Andmemaatriks"
-
-#: contents/ui/BarcodePage.qml:27
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr "Aztec"
-
-#: contents/ui/BarcodePage.qml:28
-#, kde-format
-msgid "Code 39"
-msgstr "Code 39"
-
-#: contents/ui/BarcodePage.qml:29
-#, kde-format
-msgid "Code 93"
-msgstr "Code 93"
-
-#: contents/ui/BarcodePage.qml:30
-#, kde-format
-msgid "Code 128"
-msgstr "Code 128"
-
-#: contents/ui/BarcodePage.qml:46
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "Tagasi lõikepuhvrisse"
-
-#: contents/ui/BarcodePage.qml:81
-#, fuzzy, kde-format
-#| msgid "Change the barcode type"
-msgid "Change the QR code type"
-msgstr "Muuda ribakoodi tüüpi"
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid ""
-"There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
-
-#: contents/ui/BarcodePage.qml:134
-#, fuzzy, kde-format
-#| msgid "Creating barcode failed"
-msgid "Creating QR code failed"
-msgstr "Ribakoodi loomine nurjus"
-
-#: contents/ui/DelegateToolButtons.qml:26
-#, kde-format
-msgid "Invoke action"
-msgstr "Toimingu rakendamine"
-
-#: contents/ui/DelegateToolButtons.qml:41
-#, fuzzy, kde-format
-#| msgid "Show barcode"
-msgid "Show QR code"
-msgstr "Ribakoodi näitamine"
-
-#: contents/ui/DelegateToolButtons.qml:57
-#, kde-format
-msgid "Edit contents"
-msgstr "Sisu muutmine"
-
-#: contents/ui/DelegateToolButtons.qml:71
-#, kde-format
-msgid "Remove from history"
-msgstr "Eemaldamine ajaloost"
-
-#: contents/ui/EditPage.qml:82
-#, kde-format
-msgctxt "@action:button"
-msgid "Save"
-msgstr ""
-
-#: contents/ui/EditPage.qml:90
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr ""
-
-#: contents/ui/main.qml:32
+#: contents/ui/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Lõikepuhvri sisu"
 
-#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Lõikepuhver on tühi"
 
-#: contents/ui/main.qml:61
+#: contents/ui/main.qml:62
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"
 msgstr "Ajaloo puhastamine"
 
-#: contents/ui/main.qml:73
+#: contents/ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"
 msgstr "Seadista lõikepuhvrit ..."
 
-#: contents/ui/Menu.qml:136
-#, kde-format
-msgid "No matches"
-msgstr ""
+#~ msgid "QR Code"
+#~ msgstr "QR-kood"
 
-#: contents/ui/UrlItemDelegate.qml:107
-#, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
-msgid "+%1"
-msgstr "+%1"
+#~ msgid "Data Matrix"
+#~ msgstr "Andmemaatriks"
+
+#~ msgctxt "Aztec barcode"
+#~ msgid "Aztec"
+#~ msgstr "Aztec"
+
+#~ msgid "Code 39"
+#~ msgstr "Code 39"
+
+#~ msgid "Code 93"
+#~ msgstr "Code 93"
+
+#~ msgid "Code 128"
+#~ msgstr "Code 128"
+
+#~ msgid "Return to Clipboard"
+#~ msgstr "Tagasi lõikepuhvrisse"
+
+#, fuzzy
+#~| msgid "Change the barcode type"
+#~ msgid "Change the QR code type"
+#~ msgstr "Muuda ribakoodi tüüpi"
+
+#, fuzzy
+#~| msgid "Creating barcode failed"
+#~ msgid "Creating QR code failed"
+#~ msgstr "Ribakoodi loomine nurjus"
+
+#~ msgid "Invoke action"
+#~ msgstr "Toimingu rakendamine"
+
+#, fuzzy
+#~| msgid "Show barcode"
+#~ msgid "Show QR code"
+#~ msgstr "Ribakoodi näitamine"
+
+#~ msgid "Edit contents"
+#~ msgstr "Sisu muutmine"
+
+#~ msgid "Remove from history"
+#~ msgstr "Eemaldamine ajaloost"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the clipboard than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
 
 #, fuzzy
 #~| msgid "The barcode is too large to be displayed"

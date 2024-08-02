@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2024-03-05 07:43+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -312,6 +312,120 @@ msgstr ""
 "&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/><nl/>וללחוץ על החלון שמיועד "
 "להחרגה. השם הראשון שמופיע לאחר סימן השווה הוא השם שיש להכניס."
 
+#: declarative/qml/BarcodePage.qml:31
+#, kde-format
+msgid "QR Code"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:32
+#, kde-format
+msgid "Data Matrix"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:33
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:34
+#, kde-format
+msgid "Code 39"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:35
+#, kde-format
+msgid "Code 93"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:36
+#, kde-format
+msgid "Code 128"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:52
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Return to Clipboard"
+msgstr "הוספה ללוח הגזירים"
+
+#: declarative/qml/BarcodePage.qml:88
+#, kde-format
+msgid "Change the QR code type"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid "Creating QR code failed"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:175
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clear History"
+msgstr "היסטוריית לוח הגזירים"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "No matches"
+msgstr "אין לכידות"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "לוח הגזירים ריק"
+
+#: declarative/qml/DelegateToolButtons.qml:26
+#, fuzzy, kde-format
+#| msgid "Ignore Selection"
+msgid "Invoke action"
+msgstr "התעלם מבחירות"
+
+#: declarative/qml/DelegateToolButtons.qml:39
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Show Barcode…"
+msgid "Show QR code"
+msgstr "ה&צגת ברקוד…"
+
+#: declarative/qml/DelegateToolButtons.qml:55
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "עריכת תוכן"
+
+#: declarative/qml/DelegateToolButtons.qml:69
+#, fuzzy, kde-format
+#| msgid "For an item chosen from history"
+msgid "Remove from history"
+msgstr "לפריט שנבחר מההיסטוריה"
+
+#: declarative/qml/EditPage.qml:87
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:95
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "&ביטול"
+
+#: declarative/qml/UrlItemDelegate.qml:95
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr ""
+
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
@@ -505,65 +619,65 @@ msgstr "סמל:"
 msgid "%1x%2 %3bpp"
 msgstr "%1×%2 %3 סיביות לפיקסלים"
 
-#: historymodel.cpp:68
+#: historymodel.cpp:100
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "האם לפנות ולמחוק את כל היסטוריית לוח הגזירים?"
 
-#: historymodel.cpp:69
+#: historymodel.cpp:101
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "פינוי היסטוריית לוח הגזירים"
 
-#: klipper.cpp:87
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "תפריט פעולות קופץ אוטומטי"
 
-#: klipper.cpp:116
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&פינוי היסטוריית לוח הגזירים"
 
-#: klipper.cpp:123
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "ה&גדרת Klipper…"
 
-#: klipper.cpp:127
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "הפעלת פעולה ידנית על לוח הגזירים הנוכחי"
 
-#: klipper.cpp:134
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "ה&צגת ברקוד…"
 
-#: klipper.cpp:143
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "הפריט הבא בהיסטוריה"
 
-#: klipper.cpp:148
+#: klipper.cpp:146
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "הפריט הקודם בהיסטוריה"
 
-#: klipper.cpp:155
+#: klipper.cpp:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "הצגת פריטי לוח גזירים במקום של העכבר"
 
-#: klipper.cpp:341
+#: klipper.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -573,27 +687,27 @@ msgstr ""
 "ניתן להפעיל פקודות על כתובות מאוחר יותר דרך עמוד ה<interface>פעולות</"
 "interface> בחלון הגדרות היישומונית של לוח הגזירים"
 
-#: klipper.cpp:611
+#: klipper.cpp:568
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "ברקוד נייד"
 
-#: klipper.cpp:654 klipper.cpp:663
+#: klipper.cpp:611 klipper.cpp:620
 #, kde-format
 msgid "Clipboard history"
 msgstr "היסטוריית לוח הגזירים"
 
-#: klipper.cpp:680
+#: klipper.cpp:637
 #, kde-format
 msgid "up"
 msgstr "למעלה"
 
-#: klipper.cpp:687
+#: klipper.cpp:644
 #, kde-format
 msgid "current"
 msgstr "נוכחי"
 
-#: klipper.cpp:694
+#: klipper.cpp:651
 #, kde-format
 msgid "down"
 msgstr "למטה"
@@ -803,35 +917,11 @@ msgstr ""
 "אם נבחר שם קובץ או כתובת, לכלול יישומים שיכולים לקבל את סוג ה־MIME בתפריט "
 "הקופץ."
 
-#: klipperpopup.cpp:107
-#, kde-format
-msgid "Clipboard Items"
-msgstr "פריטי לוח הגזירים"
-
-#: klipperpopup.cpp:111
-#, kde-format
-msgid "Search…"
-msgstr "חיפוש…"
-
-#: klipperpopup.cpp:169
-#, kde-format
-msgid "Invalid regular expression, %1"
-msgstr "ביטוי רגולרי שגוי, %1"
-
-#: klipperpopup.cpp:174
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "לוח הגזירים ריק"
-
-#: klipperpopup.cpp:176
-#, kde-format
-msgid "No matches"
-msgstr "אין לכידות"
-
-#: popupproxy.cpp:144
-#, kde-format
-msgid "&More"
-msgstr "&עוד"
+#: klipperpopup.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clipboard Popup"
+msgstr "היסטוריית לוח הגזירים"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -842,6 +932,18 @@ msgstr "ביטול תפריט מוקפץ זה"
 #, kde-format
 msgid "&Cancel"
 msgstr "&ביטול"
+
+#~ msgid "Clipboard Items"
+#~ msgstr "פריטי לוח הגזירים"
+
+#~ msgid "Search…"
+#~ msgstr "חיפוש…"
+
+#~ msgid "Invalid regular expression, %1"
+#~ msgstr "ביטוי רגולרי שגוי, %1"
+
+#~ msgid "&More"
+#~ msgstr "&עוד"
 
 #~ msgid "Should Klipper start automatically when you login?"
 #~ msgstr "האם להפעיל את Klipper אוטומטית בעת הכניסה למערכת?"
@@ -918,9 +1020,6 @@ msgstr "&ביטול"
 #~| msgid "Edit Contents"
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Edit Contents…"
-#~ msgstr "עריכת תוכן"
-
-#~ msgid "Edit Contents"
 #~ msgstr "עריכת תוכן"
 
 #~ msgid "Clipboard Contents"
@@ -1024,9 +1123,6 @@ msgstr "&ביטול"
 #~ msgstr ""
 #~ "בחירה באפשרות זו תגרום לכך שלוח העריכה לא ירוקן אף פעם. לדוגמה, כאשר "
 #~ "היישום  יוצא, לוח העריכה בדרך כלל מרוקן."
-
-#~ msgid "Ignore Selection"
-#~ msgstr "התעלם מבחירות"
 
 #, fuzzy
 #~| msgid ""

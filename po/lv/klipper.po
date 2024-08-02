@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2024-04-05 10:20+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -311,6 +311,120 @@ msgstr ""
 "klikšķinot uz loga, kuru vēlaties ievietot ignorēšanas sarakstā. Ievadāmais "
 "loga nosaukums ir pirmais parādāmais nosaukums pēc vienādības zīmes."
 
+#: declarative/qml/BarcodePage.qml:31
+#, kde-format
+msgid "QR Code"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:32
+#, kde-format
+msgid "Data Matrix"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:33
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:34
+#, kde-format
+msgid "Code 39"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:35
+#, kde-format
+msgid "Code 93"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:36
+#, kde-format
+msgid "Code 128"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:52
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Return to Clipboard"
+msgstr "Pievienot starpliktuvei"
+
+#: declarative/qml/BarcodePage.qml:88
+#, kde-format
+msgid "Change the QR code type"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid "Creating QR code failed"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:175
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clear History"
+msgstr "Starpliktuves vēsture"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "No matches"
+msgstr "Nav atbilsmju"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Starpliktuve ir tukša"
+
+#: declarative/qml/DelegateToolButtons.qml:26
+#, fuzzy, kde-format
+#| msgid "Ignore Selection"
+msgid "Invoke action"
+msgstr "Ignorēt iezīmēto"
+
+#: declarative/qml/DelegateToolButtons.qml:39
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "&Show Barcode…"
+msgid "Show QR code"
+msgstr "&Rādīt svītrkodu..."
+
+#: declarative/qml/DelegateToolButtons.qml:55
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "Rediģēt saturu"
+
+#: declarative/qml/DelegateToolButtons.qml:69
+#, fuzzy, kde-format
+#| msgid "For an item chosen from history"
+msgid "Remove from history"
+msgstr "Attiecībā uz vienumu, kas ņemts no vēstures"
+
+#: declarative/qml/EditPage.qml:87
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:95
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "&Atcelt"
+
+#: declarative/qml/UrlItemDelegate.qml:95
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr ""
+
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
@@ -507,65 +621,65 @@ msgstr "Ikona:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:68
+#: historymodel.cpp:100
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Vai tiešām vēlaties notīrīt un dzēst visu starpliktuves vēsturi?"
 
-#: historymodel.cpp:69
+#: historymodel.cpp:101
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "&Tīrīt starpliktuves vēsturi"
 
-#: klipper.cpp:87
+#: klipper.cpp:95
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automātiskās darbības uzlecošā izvēlne"
 
-#: klipper.cpp:116
+#: klipper.cpp:114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Tīrīt starpliktuves vēsturi"
 
-#: klipper.cpp:123
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Konfigurēt „Klipper“..."
 
-#: klipper.cpp:127
+#: klipper.cpp:125
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Manuāli izsaukt darbību ar pašreizējo starpliktuvi"
 
-#: klipper.cpp:134
+#: klipper.cpp:132
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Rādīt svītrkodu..."
 
-#: klipper.cpp:143
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nākamais vēstures ieraksts"
 
-#: klipper.cpp:148
+#: klipper.cpp:146
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Iepriekšējais vēstures ieraksts"
 
-#: klipper.cpp:155
+#: klipper.cpp:153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Atvērt starpliktuves vienumu pie peles kursora"
 
-#: klipper.cpp:341
+#: klipper.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -575,27 +689,27 @@ msgstr ""
 "URL darbības varat ieslēgt vēlāk starpliktuves logdaļas konfigurācijas loga "
 "<interface>Darbību</interface> lapā"
 
-#: klipper.cpp:611
+#: klipper.cpp:568
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilais svītrkods"
 
-#: klipper.cpp:654 klipper.cpp:663
+#: klipper.cpp:611 klipper.cpp:620
 #, kde-format
 msgid "Clipboard history"
 msgstr "Starpliktuves vēsture"
 
-#: klipper.cpp:680
+#: klipper.cpp:637
 #, kde-format
 msgid "up"
 msgstr "augšup"
 
-#: klipper.cpp:687
+#: klipper.cpp:644
 #, kde-format
 msgid "current"
 msgstr "aktīvais"
 
-#: klipper.cpp:694
+#: klipper.cpp:651
 #, kde-format
 msgid "down"
 msgstr "lejup"
@@ -808,35 +922,11 @@ msgstr ""
 "Ja ir atlasīts datnes nosaukums vai URL, izlecošajā izvēlnē iekļaut "
 "programmas, kas var pieņemt šādu MIME tipu."
 
-#: klipperpopup.cpp:107
-#, kde-format
-msgid "Clipboard Items"
-msgstr "Starpliktuves vienumi"
-
-#: klipperpopup.cpp:111
-#, kde-format
-msgid "Search…"
-msgstr "Meklēt..."
-
-#: klipperpopup.cpp:169
-#, kde-format
-msgid "Invalid regular expression, %1"
-msgstr "Nederīga regulārā izteiksme, %1"
-
-#: klipperpopup.cpp:174
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "Starpliktuve ir tukša"
-
-#: klipperpopup.cpp:176
-#, kde-format
-msgid "No matches"
-msgstr "Nav atbilsmju"
-
-#: popupproxy.cpp:144
-#, kde-format
-msgid "&More"
-msgstr "&Vairāk"
+#: klipperpopup.cpp:33
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clipboard Popup"
+msgstr "Starpliktuves vēsture"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -847,6 +937,18 @@ msgstr "Izslēgt šo uzlecošo logu"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Atcelt"
+
+#~ msgid "Clipboard Items"
+#~ msgstr "Starpliktuves vienumi"
+
+#~ msgid "Search…"
+#~ msgstr "Meklēt..."
+
+#~ msgid "Invalid regular expression, %1"
+#~ msgstr "Nederīga regulārā izteiksme, %1"
+
+#~ msgid "&More"
+#~ msgstr "&Vairāk"
 
 #~ msgid "Should Klipper start automatically when you login?"
 #~ msgstr "Vai automātiski palaist „Klipper“ pēc ierakstīšanās?"
@@ -927,9 +1029,6 @@ msgstr "&Atcelt"
 #~| msgid "Edit Contents"
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Edit Contents…"
-#~ msgstr "Rediģēt saturu"
-
-#~ msgid "Edit Contents"
 #~ msgstr "Rediģēt saturu"
 
 #~ msgid "Clipboard Contents"
@@ -1036,9 +1135,6 @@ msgstr "&Atcelt"
 #~ "Izvēloties šo opciju, starpliktuve nekad nevarēs tikt iztukšota. "
 #~ "Piemēram, kad programma iziet, starpliktuve parasti tiek iztukšota - šī "
 #~ "opcija to nepieļauj."
-
-#~ msgid "Ignore Selection"
-#~ msgstr "Ignorēt iezīmēto"
 
 #, fuzzy
 #~| msgid ""

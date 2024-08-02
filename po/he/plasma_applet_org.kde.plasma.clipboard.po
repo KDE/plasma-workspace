@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2023-10-04 09:21+0300\n"
 "Last-Translator: Copied by Zanata <copied-by-zanata@zanata.org>\n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -19,121 +19,86 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: contents/ui/BarcodePage.qml:25
-#, kde-format
-msgid "QR Code"
-msgstr "קוד QR"
-
-#: contents/ui/BarcodePage.qml:26
-#, kde-format
-msgid "Data Matrix"
-msgstr "מטריצת נתונים"
-
-#: contents/ui/BarcodePage.qml:27
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr "Aztec (אצטק)"
-
-#: contents/ui/BarcodePage.qml:28
-#, kde-format
-msgid "Code 39"
-msgstr "קוד 39"
-
-#: contents/ui/BarcodePage.qml:29
-#, kde-format
-msgid "Code 93"
-msgstr "קוד 93"
-
-#: contents/ui/BarcodePage.qml:30
-#, kde-format
-msgid "Code 128"
-msgstr "קוד 128"
-
-#: contents/ui/BarcodePage.qml:46
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "חזרה ללוח הגזירים"
-
-#: contents/ui/BarcodePage.qml:81
-#, kde-format
-msgid "Change the QR code type"
-msgstr "שינוי סוג ברקוד ה־QR"
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid ""
-"There is not enough space to display the QR code. Try resizing this applet."
-msgstr "אין מספיק מקום להציג קוד QR. נא לנסות לשנות את גודל היישומונית."
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid "Creating QR code failed"
-msgstr "יצירת קוד ה־QR נכשלה"
-
-#: contents/ui/DelegateToolButtons.qml:26
-#, kde-format
-msgid "Invoke action"
-msgstr "לעורר פעולה"
-
-#: contents/ui/DelegateToolButtons.qml:41
-#, kde-format
-msgid "Show QR code"
-msgstr "הצגת קוד QR"
-
-#: contents/ui/DelegateToolButtons.qml:57
-#, kde-format
-msgid "Edit contents"
-msgstr "עריכת תוכן"
-
-#: contents/ui/DelegateToolButtons.qml:71
-#, kde-format
-msgid "Remove from history"
-msgstr "הסרה מההיסטוריה"
-
-#: contents/ui/EditPage.qml:82
-#, kde-format
-msgctxt "@action:button"
-msgid "Save"
-msgstr "שמירה"
-
-#: contents/ui/EditPage.qml:90
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr "ביטול"
-
-#: contents/ui/main.qml:32
+#: contents/ui/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "תוכן לוח הגזירים"
 
-#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "לוח גזירים ריק"
 
-#: contents/ui/main.qml:61
+#: contents/ui/main.qml:62
 #, kde-format
 msgid "Clear History"
 msgstr "פינוי ההיסטוריה"
 
-#: contents/ui/main.qml:73
+#: contents/ui/main.qml:74
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "הגדרת לוח גזירים…"
 
-#: contents/ui/Menu.qml:136
-#, kde-format
-msgid "No matches"
-msgstr "אין התאמות"
+#~ msgid "QR Code"
+#~ msgstr "קוד QR"
 
-#: contents/ui/UrlItemDelegate.qml:107
-#, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
-msgid "+%1"
-msgstr "+%1"
+#~ msgid "Data Matrix"
+#~ msgstr "מטריצת נתונים"
+
+#~ msgctxt "Aztec barcode"
+#~ msgid "Aztec"
+#~ msgstr "Aztec (אצטק)"
+
+#~ msgid "Code 39"
+#~ msgstr "קוד 39"
+
+#~ msgid "Code 93"
+#~ msgstr "קוד 93"
+
+#~ msgid "Code 128"
+#~ msgstr "קוד 128"
+
+#~ msgid "Return to Clipboard"
+#~ msgstr "חזרה ללוח הגזירים"
+
+#~ msgid "Change the QR code type"
+#~ msgstr "שינוי סוג ברקוד ה־QR"
+
+#~ msgid ""
+#~ "There is not enough space to display the QR code. Try resizing this "
+#~ "applet."
+#~ msgstr "אין מספיק מקום להציג קוד QR. נא לנסות לשנות את גודל היישומונית."
+
+#~ msgid "Creating QR code failed"
+#~ msgstr "יצירת קוד ה־QR נכשלה"
+
+#~ msgid "Invoke action"
+#~ msgstr "לעורר פעולה"
+
+#~ msgid "Show QR code"
+#~ msgstr "הצגת קוד QR"
+
+#~ msgid "Edit contents"
+#~ msgstr "עריכת תוכן"
+
+#~ msgid "Remove from history"
+#~ msgstr "הסרה מההיסטוריה"
+
+#~ msgctxt "@action:button"
+#~ msgid "Save"
+#~ msgstr "שמירה"
+
+#~ msgctxt "@action:button"
+#~ msgid "Cancel"
+#~ msgstr "ביטול"
+
+#~ msgid "No matches"
+#~ msgstr "אין התאמות"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the clipboard than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
 
 #~ msgid "Clear history"
 #~ msgstr "נקה היסטוריה"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2014-08-15 14:42+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -291,6 +291,120 @@ msgid ""
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
 
+#: declarative/qml/BarcodePage.qml:31
+#, kde-format
+msgid "QR Code"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:32
+#, kde-format
+msgid "Data Matrix"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:33
+#, kde-format
+msgctxt "Aztec barcode"
+msgid "Aztec"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:34
+#, kde-format
+msgid "Code 39"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:35
+#, kde-format
+msgid "Code 93"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:36
+#, kde-format
+msgid "Code 128"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:52
+#, fuzzy, kde-format
+#| msgid "Add to Clipboard"
+msgid "Return to Clipboard"
+msgstr "Na Twischenaflaag tofögen"
+
+#: declarative/qml/BarcodePage.qml:88
+#, kde-format
+msgid "Change the QR code type"
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid ""
+"There is not enough space to display the QR code. Try resizing this applet."
+msgstr ""
+
+#: declarative/qml/BarcodePage.qml:141
+#, kde-format
+msgid "Creating QR code failed"
+msgstr ""
+
+#: declarative/qml/ClipboardMenu.qml:175
+#, fuzzy, kde-format
+#| msgid "Clipboard history"
+msgid "Clear History"
+msgstr "Twischenaflaag-Vörgeschicht"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, fuzzy, kde-format
+#| msgid "<no matches>"
+msgid "No matches"
+msgstr "<keen Övereenstimmen>"
+
+#: declarative/qml/ClipboardMenu.qml:266
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "Twischenaflaag is leddig"
+
+#: declarative/qml/DelegateToolButtons.qml:26
+#, fuzzy, kde-format
+#| msgid "<new action>"
+msgid "Invoke action"
+msgstr "<Nieg Akschoon>"
+
+#: declarative/qml/DelegateToolButtons.qml:39
+#, fuzzy, kde-format
+#| msgid "&Show Barcode..."
+msgid "Show QR code"
+msgstr "Streekkode &wiesen..."
+
+#: declarative/qml/DelegateToolButtons.qml:55
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgid "Edit contents"
+msgstr "Inholden bewerken"
+
+#: declarative/qml/DelegateToolButtons.qml:69
+#, fuzzy, kde-format
+#| msgid "Replay actions on an item selected from history"
+msgid "Remove from history"
+msgstr "Akschonen för en Indrag ut de Vörgeschicht nochmaal utföhren"
+
+#: declarative/qml/EditPage.qml:87
+#, kde-format
+msgctxt "@action:button"
+msgid "Save"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:95
+#, fuzzy, kde-format
+#| msgid "&Cancel"
+msgctxt "@action:button"
+msgid "Cancel"
+msgstr "&Afbreken"
+
+#: declarative/qml/UrlItemDelegate.qml:95
+#, kde-format
+msgctxt ""
+"Indicator that there are more urls in the clipboard than previews shown"
+msgid "+%1"
+msgstr ""
+
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
@@ -480,75 +594,75 @@ msgstr ""
 msgid "%1x%2 %3bpp"
 msgstr ""
 
-#: historymodel.cpp:68
+#: historymodel.cpp:100
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Twischenaflaag-Vörgeschicht redig heel leddig maken?"
 
-#: historymodel.cpp:69
+#: historymodel.cpp:101
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Twischenaflaag-Vörgeschicht &leddig maken"
 
-#: klipper.cpp:87
+#: klipper.cpp:95
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Tietgrenz för't Akschonen-Menü:"
 
-#: klipper.cpp:116
+#: klipper.cpp:114
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Twischenaflaag-Vörgeschicht &leddig maken"
 
-#: klipper.cpp:123
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper &instellen..."
 
-#: klipper.cpp:127
+#: klipper.cpp:125
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Akschoon för de aktuelle Twischenaflaag vun Hand opropen"
 
-#: klipper.cpp:134
+#: klipper.cpp:132
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Streekkode &wiesen..."
 
-#: klipper.cpp:143
+#: klipper.cpp:141
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Nakamen Vörgeschicht-Indrag"
 
-#: klipper.cpp:148
+#: klipper.cpp:146
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Verleden Vörgeschicht-Indrag"
 
-#: klipper.cpp:155
+#: klipper.cpp:153
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Klipper bi Steed vun de Muus opmaken"
 
-#: klipper.cpp:341
+#: klipper.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -556,27 +670,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:611
+#: klipper.cpp:568
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Streekkode för Handreedschappen"
 
-#: klipper.cpp:654 klipper.cpp:663
+#: klipper.cpp:611 klipper.cpp:620
 #, kde-format
 msgid "Clipboard history"
 msgstr "Twischenaflaag-Vörgeschicht"
 
-#: klipper.cpp:680
+#: klipper.cpp:637
 #, kde-format
 msgid "up"
 msgstr "na baven"
 
-#: klipper.cpp:687
+#: klipper.cpp:644
 #, kde-format
 msgid "current"
 msgstr "aktuell"
 
-#: klipper.cpp:694
+#: klipper.cpp:651
 #, kde-format
 msgid "down"
 msgstr "na nerrn"
@@ -783,39 +897,11 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 
-#: klipperpopup.cpp:107
+#: klipperpopup.cpp:33
 #, fuzzy, kde-format
-#| msgid "Clipboard Contents"
-msgid "Clipboard Items"
-msgstr "Twischenaflaag-Inholt"
-
-#: klipperpopup.cpp:111
-#, fuzzy, kde-format
-#| msgid "Search..."
-msgid "Search…"
-msgstr "Söken..."
-
-#: klipperpopup.cpp:169
-#, fuzzy, kde-format
-#| msgid "Regular expression:"
-msgid "Invalid regular expression, %1"
-msgstr "Reguleer Utdruck:"
-
-#: klipperpopup.cpp:174
-#, kde-format
-msgid "Clipboard is empty"
-msgstr "Twischenaflaag is leddig"
-
-#: klipperpopup.cpp:176
-#, fuzzy, kde-format
-#| msgid "<no matches>"
-msgid "No matches"
-msgstr "<keen Övereenstimmen>"
-
-#: popupproxy.cpp:144
-#, kde-format
-msgid "&More"
-msgstr "&Mehr"
+#| msgid "Clipboard history"
+msgid "Clipboard Popup"
+msgstr "Twischenaflaag-Vörgeschicht"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -826,6 +912,24 @@ msgstr "Dit Popup utmaken"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Afbreken"
+
+#, fuzzy
+#~| msgid "Clipboard Contents"
+#~ msgid "Clipboard Items"
+#~ msgstr "Twischenaflaag-Inholt"
+
+#, fuzzy
+#~| msgid "Search..."
+#~ msgid "Search…"
+#~ msgstr "Söken..."
+
+#, fuzzy
+#~| msgid "Regular expression:"
+#~ msgid "Invalid regular expression, %1"
+#~ msgstr "Reguleer Utdruck:"
+
+#~ msgid "&More"
+#~ msgstr "&Mehr"
 
 #~ msgid "Should Klipper start automatically when you login?"
 #~ msgstr "Wullt Du Klipper bi't Anmellen automaatsch opropen?"
@@ -909,9 +1013,6 @@ msgstr "&Afbreken"
 #~| msgid "Edit Contents"
 #~ msgctxt "@action:inmenu"
 #~ msgid "&Edit Contents…"
-#~ msgstr "Inholden bewerken"
-
-#~ msgid "Edit Contents"
 #~ msgstr "Inholden bewerken"
 
 #~ msgid "Clipboard Contents"
@@ -1181,9 +1282,6 @@ msgstr "&Afbreken"
 
 #~ msgid "Double-click here to set the regular expression"
 #~ msgstr "Dubbelklick hier, wenn Du den reguleren Utdruck fastleggen wullt"
-
-#~ msgid "<new action>"
-#~ msgstr "<Nieg Akschoon>"
 
 #~ msgid "Selecting this option synchronizes these two buffers."
 #~ msgstr "Disse Optschoon synkroniseert disse twee Puffers."

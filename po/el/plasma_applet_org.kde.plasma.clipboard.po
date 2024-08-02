@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
 "PO-Revision-Date: 2015-03-05 15:28+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -17,127 +17,76 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: contents/ui/BarcodePage.qml:25
-#, kde-format
-msgid "QR Code"
-msgstr "Κώδικας QR"
-
-#: contents/ui/BarcodePage.qml:26
-#, kde-format
-msgid "Data Matrix"
-msgstr "Πίνακας δεδομένων"
-
-#: contents/ui/BarcodePage.qml:27
-#, kde-format
-msgctxt "Aztec barcode"
-msgid "Aztec"
-msgstr ""
-
-#: contents/ui/BarcodePage.qml:28
-#, kde-format
-msgid "Code 39"
-msgstr "Κωδικοποίηση 39"
-
-#: contents/ui/BarcodePage.qml:29
-#, kde-format
-msgid "Code 93"
-msgstr "Κωδικοποίηση 93"
-
-#: contents/ui/BarcodePage.qml:30
-#, fuzzy, kde-format
-#| msgid "Code 39"
-msgid "Code 128"
-msgstr "Κωδικοποίηση 39"
-
-#: contents/ui/BarcodePage.qml:46
-#, kde-format
-msgid "Return to Clipboard"
-msgstr "Επιστροφή στο πρόχειρο"
-
-#: contents/ui/BarcodePage.qml:81
-#, fuzzy, kde-format
-#| msgid "Change the barcode type"
-msgid "Change the QR code type"
-msgstr "Αλλαγή τύπου γραμμωτού κώδικα"
-
-#: contents/ui/BarcodePage.qml:134
-#, kde-format
-msgid ""
-"There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
-
-#: contents/ui/BarcodePage.qml:134
-#, fuzzy, kde-format
-#| msgid "Creating barcode failed"
-msgid "Creating QR code failed"
-msgstr "Αποτυχία δημιουργίας γραμμωτού κώδικα"
-
-#: contents/ui/DelegateToolButtons.qml:26
-#, kde-format
-msgid "Invoke action"
-msgstr "Κλήση ενέργειας"
-
-#: contents/ui/DelegateToolButtons.qml:41
-#, fuzzy, kde-format
-#| msgid "Show barcode"
-msgid "Show QR code"
-msgstr "Εμφάνιση γραμμωτού κώδικα"
-
-#: contents/ui/DelegateToolButtons.qml:57
-#, kde-format
-msgid "Edit contents"
-msgstr "Επεξεργασία περιεχομένων"
-
-#: contents/ui/DelegateToolButtons.qml:71
-#, kde-format
-msgid "Remove from history"
-msgstr "Αφαίρεση από το ιστορικό"
-
-#: contents/ui/EditPage.qml:82
-#, kde-format
-msgctxt "@action:button"
-msgid "Save"
-msgstr ""
-
-#: contents/ui/EditPage.qml:90
-#, kde-format
-msgctxt "@action:button"
-msgid "Cancel"
-msgstr ""
-
-#: contents/ui/main.qml:32
+#: contents/ui/main.qml:29
 #, kde-format
 msgid "Clipboard Contents"
 msgstr "Περιεχόμενα προχείρου"
 
-#: contents/ui/main.qml:33 contents/ui/Menu.qml:136
+#: contents/ui/main.qml:30
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Το πρόχειρο είναι άδειο"
 
-#: contents/ui/main.qml:61
+#: contents/ui/main.qml:62
 #, fuzzy, kde-format
 #| msgid "Clear history"
 msgid "Clear History"
 msgstr "Καθαρισμός ιστορικού"
 
-#: contents/ui/main.qml:73
+#: contents/ui/main.qml:74
 #, fuzzy, kde-format
 #| msgid "Configure Clipboard..."
 msgid "Configure Clipboard…"
 msgstr "Διαμόρφωση πρόχειρου..."
 
-#: contents/ui/Menu.qml:136
-#, kde-format
-msgid "No matches"
-msgstr ""
+#~ msgid "QR Code"
+#~ msgstr "Κώδικας QR"
 
-#: contents/ui/UrlItemDelegate.qml:107
-#, kde-format
-msgctxt ""
-"Indicator that there are more urls in the clipboard than previews shown"
-msgid "+%1"
-msgstr "+%1"
+#~ msgid "Data Matrix"
+#~ msgstr "Πίνακας δεδομένων"
+
+#~ msgid "Code 39"
+#~ msgstr "Κωδικοποίηση 39"
+
+#~ msgid "Code 93"
+#~ msgstr "Κωδικοποίηση 93"
+
+#, fuzzy
+#~| msgid "Code 39"
+#~ msgid "Code 128"
+#~ msgstr "Κωδικοποίηση 39"
+
+#~ msgid "Return to Clipboard"
+#~ msgstr "Επιστροφή στο πρόχειρο"
+
+#, fuzzy
+#~| msgid "Change the barcode type"
+#~ msgid "Change the QR code type"
+#~ msgstr "Αλλαγή τύπου γραμμωτού κώδικα"
+
+#, fuzzy
+#~| msgid "Creating barcode failed"
+#~ msgid "Creating QR code failed"
+#~ msgstr "Αποτυχία δημιουργίας γραμμωτού κώδικα"
+
+#~ msgid "Invoke action"
+#~ msgstr "Κλήση ενέργειας"
+
+#, fuzzy
+#~| msgid "Show barcode"
+#~ msgid "Show QR code"
+#~ msgstr "Εμφάνιση γραμμωτού κώδικα"
+
+#~ msgid "Edit contents"
+#~ msgstr "Επεξεργασία περιεχομένων"
+
+#~ msgid "Remove from history"
+#~ msgstr "Αφαίρεση από το ιστορικό"
+
+#~ msgctxt ""
+#~ "Indicator that there are more urls in the clipboard than previews shown"
+#~ msgid "+%1"
+#~ msgstr "+%1"
 
 #~ msgid "Clear history"
 #~ msgstr "Καθαρισμός ιστορικού"
