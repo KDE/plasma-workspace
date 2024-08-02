@@ -55,8 +55,10 @@ void KlipperPopup::setPlasmaShell(KWayland::Client::PlasmaShell *plasmashell)
 
 void KlipperPopup::hide()
 {
-    setVisible(false);
-    destroy(); // Required to recreate wl_surface
+    QWindow::hide();
+    if (m_plasmashell) {
+        destroy(); // Required to recreate wl_surface
+    }
 }
 
 void KlipperPopup::showEvent(QShowEvent *event)
