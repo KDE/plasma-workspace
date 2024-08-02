@@ -81,6 +81,7 @@ LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage:
     contents.setFlag(SplashScreen, !pkg.filePath("splashmainscript").isEmpty());
 
     contents.setFlag(DesktopLayout, !pkg.filePath("layouts").isEmpty());
+    contents.setFlag(DesktopDefaults, !pkg.filePath("plasmoidsetupscripts").isEmpty());
 
     // TODO: Those seem unused... are deprecated?
     contents.setFlag(RunCommand, !pkg.filePath("runcommandmainscript").isEmpty());
@@ -428,7 +429,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
 {
     // The items to apply are the package contents filtered with the user selection mask
     const Contents itemsToApply = packageContents(package) & applyMask;
-
+    qWarning() << "AAAA" << itemsToApply;
     if (itemsToApply.testFlag(DesktopLayout) && m_mode == Mode::Apply) {
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
                                                               QStringLiteral("/PlasmaShell"),
@@ -445,6 +446,17 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
             //! latte exists in system and user has chosen to update desktop layout
             setLatteLayout(package.filePath("layouts", u"looknfeel.layout.latte"_s), package.metadata().name());
         }
+    } else if (itemsToApply.testFlag(DesktopDefaults) && m_mode == Mode::Apply) {
+        QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                              QStringLiteral("/PlasmaShell"),
+                                                              QStringLiteral("org.kde.PlasmaShell"),
+                                                              QStringLiteral("loadLookAndFeelSetupScripts"));
+
+        QList<QVariant> args;
+        args << m_data->settings()->lookAndFeelPackage();
+        message.setArguments(args);
+
+        QDBusConnection::sessionBus().call(message, QDBus::NoBlock);
     }
 
     if (!package.filePath("layoutdefaults").isEmpty()) {

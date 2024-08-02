@@ -312,7 +312,7 @@ void KCMLookandFeel::setSelectedContents(LookAndFeelManager::Contents items)
     if (selectedContents() == items) {
         return;
     }
-
+    qWarning() << "BBBB" << items;
     m_selectedContents = items;
     Q_EMIT selectedContentsChanged();
 }

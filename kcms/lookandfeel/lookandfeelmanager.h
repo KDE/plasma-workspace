@@ -54,9 +54,10 @@ public:
         // Maybe unused or deprecated?
         RunCommand = 1 << 24,
         LogOutScript = 1 << 25,
+        DesktopDefaults = 1 << 26,
         // General Flag combinations
         KWinSettings = WindowSwitcher | WindowDecoration | WindowPlacement | TitlebarLayout | BorderSize,
-        AllSettings = (1 << 26) - 1,
+        AllSettings = (1 << 27) - 1,
     };
     Q_DECLARE_FLAGS(Contents, ContentFlags)
     Q_FLAG(Contents)

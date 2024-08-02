@@ -194,6 +194,8 @@ public Q_SLOTS:
      */
     void loadLookAndFeelDefaultLayout(const QString &layout);
 
+    void loadLookAndFeelSetupScripts(const QString &packageName);
+
     Plasma::Containment *addPanel(const QString &plugin);
 
     void nextActivity();

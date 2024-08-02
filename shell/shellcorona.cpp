@@ -696,6 +696,25 @@ void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
     QTimer::singleShot(0, this, &ShellCorona::load);
 }
 
+void ShellCorona::loadLookAndFeelSetupScripts(const QString &packageName)
+{
+    KPackage::Package newPack = m_lookAndFeelPackage;
+    newPack.setPath(packageName);
+
+    if (!newPack.isValid()) {
+        return;
+    }
+
+    m_lookAndFeelPackage.setPath(packageName);
+
+    for (auto *c : containments()) {
+        executeSetupPlasmoidScript(c, c);
+        for (auto *a : c->applets()) {
+            executeSetupPlasmoidScript(c, a);
+        }
+    }
+}
+
 QString ShellCorona::shell() const
 {
     return m_shell;
