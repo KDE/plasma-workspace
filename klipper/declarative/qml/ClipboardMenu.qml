@@ -45,6 +45,8 @@ PlasmaComponents3.ScrollView {
     background: null
     contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
 
+    PlasmaComponents3.ScrollBar.horizontal.policy: PlasmaComponents3.ScrollBar.AlwaysOff
+
     onItemSelected: uuid => model.moveToTop(uuid);
     onRemove: uuid => model.remove(uuid)
     onEdit: modelData => {
