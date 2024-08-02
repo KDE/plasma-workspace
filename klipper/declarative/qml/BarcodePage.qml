@@ -49,7 +49,7 @@ Item {
             PlasmaComponents3.Button {
                 Layout.fillWidth: true
                 icon.name: "go-previous-view"
-                text: i18n("Return to Clipboard")
+                text: i18nd("klipper", "Return to Clipboard")
                 onClicked: barcodeView.stack.popCurrentItem()
             }
 
@@ -85,7 +85,7 @@ Item {
                 icon.name: "configure"
 
                 display: PlasmaComponents3.AbstractButton.IconOnly
-                text: i18n("Change the QR code type")
+                text: i18nd("klipper", "Change the QR code type")
 
                 onClicked: menu.opened ? menu.close() : menu.popup()
 
