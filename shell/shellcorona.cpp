@@ -125,13 +125,21 @@ ShellCorona::ShellCorona(QObject *parent)
     KConfigGroup accentColorConfigGroup(globalConfig, u"General"_s);
     m_accentColorFromWallpaperEnabled = accentColorConfigGroup.readEntry("accentColorFromWallpaper", false);
 
-    m_accentColorConfigWatcher = KConfigWatcher::create(globalConfig);
-    connect(m_accentColorConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+    m_kdeGlobalsConfigWatcher = KConfigWatcher::create(globalConfig);
+    connect(m_kdeGlobalsConfigWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
         if (names.contains(QByteArrayLiteral("accentColorFromWallpaper"))) {
             const bool result = group.readEntry("accentColorFromWallpaper", false);
             if (m_accentColorFromWallpaperEnabled != result) {
                 m_accentColorFromWallpaperEnabled = result;
                 Q_EMIT accentColorFromWallpaperEnabledChanged();
+            }
+        }
+        if (names.contains(QByteArrayLiteral("LookAndFeelPackage"))) {
+            const QString packageName = group.readEntry("LookAndFeelPackage", QString());
+            KPackage::Package newPack = m_lookAndFeelPackage;
+            newPack.setPath(packageName);
+            if (newPack.isValid()) {
+                m_lookAndFeelPackage.setPath(packageName);
             }
         }
     });

@@ -277,7 +277,7 @@ private:
     QString m_configPath;
 
     // Accent color setting
-    KConfigWatcher::Ptr m_accentColorConfigWatcher;
+    KConfigWatcher::Ptr m_kdeGlobalsConfigWatcher;
     bool m_accentColorFromWallpaperEnabled = false;
     QMetaObject::Connection m_fakeColorRequestConn;
 
