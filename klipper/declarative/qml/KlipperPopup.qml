@@ -31,7 +31,7 @@ PlasmaExtras.Representation {
     Connections {
         target: dialogItem
         function onRequestHidePopup() {
-            ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = -1;
+            ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = 0;
             ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
         }
     }

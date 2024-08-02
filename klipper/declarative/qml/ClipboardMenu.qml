@@ -163,6 +163,16 @@ PlasmaComponents3.ScrollView {
                     clipboardMenu.view.incrementCurrentIndex();
                     event.accepted = false;
                 }
+                Keys.onEnterPressed: event => Keys.returnPressed(event)
+                Keys.onReturnPressed: event => {
+                    if (menuListView.currentItem !== null) {
+                        menuListView.currentItem.Keys.returnPressed(event);
+                    } else if (menuListView.count > 0) {
+                        menuListView.itemAtIndex(0).Keys.returnPressed(event);
+                    } else {
+                        event.accepted = false;
+                    }
+                }
             }
 
             PlasmaComponents3.ToolButton {
@@ -224,7 +234,7 @@ PlasmaComponents3.ScrollView {
         highlight: PlasmaExtras.Highlight { }
         highlightMoveDuration: 0
         highlightResizeDuration: 0
-        currentIndex: -1
+        currentIndex: 0
         model: KItemModels.KSortFilterProxyModel {
             sourceModel: clipboardMenu.model
             filterRoleName: "display"
