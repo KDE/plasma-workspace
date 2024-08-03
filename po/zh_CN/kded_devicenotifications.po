@@ -19,32 +19,26 @@ msgstr ""
 "X-Crowdin-File-ID: 44499\n"
 
 #: devicenotifications.cpp:333
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr "检测到 USB 设备"
+msgstr "检测到显示器"
 
 #: devicenotifications.cpp:334
-#, fuzzy, kde-format
-#| msgid "A USB device has been plugged in."
+#, kde-format
 msgid "A display has been plugged in."
-msgstr "已插入 USB 设备。"
+msgstr "一个显示器已被插入。"
 
 #: devicenotifications.cpp:347
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Removed"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr "已移除 USB 设备"
+msgstr "显示器已移除"
 
 #: devicenotifications.cpp:348
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A display has been unplugged."
-msgstr "已拔出 USB 设备。"
+msgstr "一个显示器已被拔出。"
 
 #: devicenotifications.cpp:379
 #, kde-format

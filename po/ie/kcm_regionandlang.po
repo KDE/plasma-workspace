@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-19 00:40+0000\n"
-"PO-Revision-Date: 2024-07-28 23:18+0700\n"
+"PO-Revision-Date: 2024-08-02 14:52+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <>\n"
 "Language: ie\n"
@@ -90,7 +90,7 @@ msgstr ""
 #, kde-format
 msgctxt "Firm name"
 msgid "Acme Corporation"
-msgstr ""
+msgstr "Corporation Acme"
 
 #: exampleutility.cpp:95
 #, kde-format
@@ -126,7 +126,7 @@ msgstr " "
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr ""
+msgstr "Chambre 2"
 
 #: exampleutility.cpp:102
 #, kde-format
@@ -470,10 +470,10 @@ msgid ""
 msgstr "OIS"
 
 #: ui/AdvancedLanguageSelectPage.qml:42
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr "Lingue"
+msgstr "Li lingue «%1» es ínsupportat"
 
 #: ui/AdvancedLanguageSelectPage.qml:55
 #, fuzzy, kde-format
@@ -481,16 +481,16 @@ msgid "Add languages in the order you want to see them in your applications."
 msgstr "OIS"
 
 #: ui/AdvancedLanguageSelectPage.qml:93
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
-msgstr "Lingue"
+msgstr "Cambiar li lingue"
 
 #: ui/AdvancedLanguageSelectPage.qml:97
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
-msgstr "Lingue"
+msgstr "Cambiar li lingue"
 
 #: ui/AdvancedLanguageSelectPage.qml:108
 #, fuzzy, kde-format
@@ -517,10 +517,10 @@ msgid "Add Languages"
 msgstr "Adjunter lingues"
 
 #: ui/AdvancedLanguageSelectPage.qml:186
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Add More…"
-msgstr "Adjunter un nota"
+msgstr "Adjunter plu..."
 
 #: ui/main.qml:34
 #, fuzzy, kde-format

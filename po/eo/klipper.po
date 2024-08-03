@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:42+0000\n"
-"PO-Revision-Date: 2024-03-10 10:31+0100\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
+"PO-Revision-Date: 2024-08-02 22:29+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -307,44 +307,43 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR-Kodo"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Data Matrix"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Aztec"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Kodo 39"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Kodo 93"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Kodo 128"
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "Aldoni al Poŝo"
+msgstr "Reveni al Poŝo"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Ŝanĝi QR-kodan tipon"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
@@ -357,65 +356,59 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:175
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#: declarative/qml/ClipboardMenu.qml:187
+#, kde-format
 msgid "Clear History"
-msgstr "Poŝa historio"
+msgstr "Viŝi Historion"
 
-#: declarative/qml/ClipboardMenu.qml:266
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "No matches"
 msgstr "Neniuj kongruaĵoj"
 
-#: declarative/qml/ClipboardMenu.qml:266
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Poŝo estas malplena"
 
 #: declarative/qml/DelegateToolButtons.qml:26
-#, fuzzy, kde-format
-#| msgid "Include MIME actions"
+#, kde-format
 msgid "Invoke action"
-msgstr "Inkluzivi MIME agojn"
+msgstr "Alvoki agon"
 
 #: declarative/qml/DelegateToolButtons.qml:39
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "&Montri Strekokodon..."
+msgstr "Montri QR-kodon"
 
 #: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Edit contents"
-msgstr ""
+msgstr "Redakti enhavon"
 
 #: declarative/qml/DelegateToolButtons.qml:69
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "Por ero elektita el la historio"
+msgstr "Forigi el historio"
 
 #: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Konservi"
 
 #: declarative/qml/EditPage.qml:95
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "&Rezigni"
+msgstr "Nuligi"
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -917,10 +910,9 @@ msgstr ""
 "ĝian MIME-tipo en la ŝprucmenuo."
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "Poŝa historio"
+msgstr "Poŝa Ŝprucfenestro"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -931,27 +923,3 @@ msgstr "Malebligi ĉi tiun ŝprucmesaĝon"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Rezigni"
-
-#~ msgid "Clipboard Items"
-#~ msgstr "Poŝaj Eroj"
-
-#~ msgid "Search…"
-#~ msgstr "Serĉi…"
-
-#~ msgid "Invalid regular expression, %1"
-#~ msgstr "Nevalida regula esprimo, %1"
-
-#~ msgid "&More"
-#~ msgstr "&Pliaj"
-
-#~ msgid "Should Klipper start automatically when you login?"
-#~ msgstr "Ĉu Klipper lanĉiĝu aŭtomate ĉe la lanĉo de KDE?"
-
-#~ msgid "Automatically Start Klipper?"
-#~ msgstr "Ĉu aŭtomate lanĉi Klipper?"
-
-#~ msgid "Start"
-#~ msgstr "Lanĉi"
-
-#~ msgid "Do Not Start"
-#~ msgstr "Ne lanĉi"

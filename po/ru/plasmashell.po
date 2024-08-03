@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-14 00:40+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-06-28 10:07+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -362,62 +362,62 @@ msgstr "%1 %2 (%3)"
 msgid "Disconnected Screen %1"
 msgstr "Отключённый экран %1"
 
-#: shellcorona.cpp:199 shellcorona.cpp:201
+#: shellcorona.cpp:207 shellcorona.cpp:209
 #, kde-format
 msgid "Show Desktop"
 msgstr "Показать рабочий стол"
 
-#: shellcorona.cpp:201
+#: shellcorona.cpp:209
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Скрыть рабочий стол"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:224
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr ""
 
-#: shellcorona.cpp:224
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Показать переключатель комнат"
 
-#: shellcorona.cpp:235
+#: shellcorona.cpp:243
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Прекратить выполнение текущей комнаты"
 
-#: shellcorona.cpp:243
+#: shellcorona.cpp:251
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Переключиться в предыдущую комнату"
 
-#: shellcorona.cpp:251
+#: shellcorona.cpp:259
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Переключиться в следующую комнату"
 
-#: shellcorona.cpp:266
+#: shellcorona.cpp:274
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Открыть %1-ю кнопку на панели задач"
 
-#: shellcorona.cpp:298
+#: shellcorona.cpp:306
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Управление панелями и рабочими столами"
 
-#: shellcorona.cpp:320
+#: shellcorona.cpp:328
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Перемещение фокуса ввода с клавиатуры между панелями"
 
-#: shellcorona.cpp:2070
+#: shellcorona.cpp:2078
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавить панель"
 
-#: shellcorona.cpp:2122
+#: shellcorona.cpp:2130
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -102,31 +102,25 @@ msgstr "文件“%1”必须被标注为可执行后才能在登录时运行。"
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "添加"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "添加应用程序…"
+msgstr "应用程序…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "添加登录脚本…"
+msgstr "登录脚本…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "添加注销脚本…"
+msgstr "注销脚本…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -180,12 +174,10 @@ msgid "No user-specified autostart items"
 msgstr "没有用户指定的自动启动项目"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "点击 <interface>添加…</interface> 按钮以添加项目"
+msgstr "点击 <interface>添加…</interface> 按钮以添加自动启动项目"
 
 #: ui/main.qml:217
 #, kde-format
@@ -236,7 +228,3 @@ msgstr "接收 GetAll 调用 %1 的回复时发生错误"
 #, kde-format
 msgid "Failed to open journal"
 msgstr "打开日志失败"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add…"
-#~ msgstr "添加…"

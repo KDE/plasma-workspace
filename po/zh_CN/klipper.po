@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:42+0000\n"
+"POT-Creation-Date: 2024-08-03 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -319,10 +319,9 @@ msgid "Code 128"
 msgstr ""
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "添加到剪贴板"
+msgstr ""
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
@@ -340,34 +339,30 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:175
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#: declarative/qml/ClipboardMenu.qml:187
+#, kde-format
 msgid "Clear History"
-msgstr "剪贴板历史"
+msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:266
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "No matches"
 msgstr "无匹配条目"
 
-#: declarative/qml/ClipboardMenu.qml:266
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪贴板为空"
 
 #: declarative/qml/DelegateToolButtons.qml:26
-#, fuzzy, kde-format
-#| msgid "Include MIME actions"
+#, kde-format
 msgid "Invoke action"
-msgstr "包含 MIME 操作"
+msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:39
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "显示条形码(&S)…"
+msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
@@ -375,10 +370,9 @@ msgid "Edit contents"
 msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:69
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "在历史记录中选择项目时弹出"
+msgstr ""
 
 #: declarative/qml/EditPage.qml:87
 #, kde-format
@@ -387,11 +381,10 @@ msgid "Save"
 msgstr ""
 
 #: declarative/qml/EditPage.qml:95
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "取消(&C)"
+msgstr ""
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
@@ -883,10 +876,9 @@ msgstr ""
 "如果选择的是文件名或 URL，在弹出菜单中包含能够接受该 MIME 类型的应用程序。"
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "剪贴板历史"
+msgstr ""
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -897,15 +889,3 @@ msgstr "禁用此弹出菜单"
 #, kde-format
 msgid "&Cancel"
 msgstr "取消(&C)"
-
-#~ msgid "Clipboard Items"
-#~ msgstr "剪贴板项目"
-
-#~ msgid "Search…"
-#~ msgstr "搜索…"
-
-#~ msgid "Invalid regular expression, %1"
-#~ msgstr "无效的正则表达式，%1"
-
-#~ msgid "&More"
-#~ msgstr "更多(&M)"
