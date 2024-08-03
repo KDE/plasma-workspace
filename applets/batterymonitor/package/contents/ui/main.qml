@@ -31,7 +31,7 @@ PlasmoidItem {
         readonly property bool isInBalancedProfile: powerProfilesControl.activeProfile === "balanced"
         readonly property bool isInPerformanceProfile: powerProfilesControl.activeProfile === "performance"
         readonly property bool isInPowersaveProfile: powerProfilesControl.activeProfile === "power-saver"
-        readonly property bool isHeldOPowerProfile: powerProfilesControl.profileHolds.length > 0
+        readonly property bool isHeldOnPowerProfile: powerProfilesControl.profileHolds.length > 0
         readonly property string defaultPowerProfile: powerProfilesControl.configuredProfile ? powerProfilesControl.configuredProfile : "balanced"
         readonly property bool isInNonDefaultPowerProfile: powerProfilesControl.activeProfile && powerProfilesControl.activeProfile != powerProfilesControl.defaultPowerProfile
     }
@@ -172,7 +172,7 @@ PlasmoidItem {
             if (powerProfilesControl.isHeldOnPowerProfile) {
                 parts.push(i18np("An application has requested activating Performance mode",
                                  "%1 applications have requested activating Performance mode",
-                                 powerProfilesControl.activeProfileHolds.length));
+                                 powerProfilesControl.profileHolds.length));
             } else {
                 parts.push(i18n("System is in Performance mode; scroll to change"));
             }
@@ -180,7 +180,7 @@ PlasmoidItem {
             if (powerProfilesControl.isHeldOnPowerProfile) {
                 parts.push(i18np("An application has requested activating Power Save mode",
                                 "%1 applications have requested activating Power Save mode",
-                                powerProfilesControl.activeProfileHolds.length));
+                                powerProfilesControl.profileHolds.length));
             } else {
                 parts.push(i18n("System is in Power Save mode; scroll to change"));
             }
