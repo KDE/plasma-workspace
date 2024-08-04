@@ -91,23 +91,6 @@ public:
      */
     static HistoryItemPtr create(QDataStream &dataStream);
 
-    /**
-     * previous item's uuid
-     * TODO: drop, only used in unit test now
-     */
-    QByteArray previous_uuid() const;
-
-    /**
-     * next item's uuid
-     * TODO: drop, only used in unit test now
-     */
-    QByteArray next_uuid() const;
-
-    void setModel(HistoryModel *model);
-
-protected:
-    HistoryModel *m_model;
-
 private:
     QByteArray m_uuid;
 };

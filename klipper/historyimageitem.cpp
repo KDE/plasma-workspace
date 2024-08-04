@@ -53,9 +53,5 @@ QMimeData *HistoryImageItem::mimeData() const
 
 QImage HistoryImageItem::image() const
 {
-    if (m_model->displayImages()) {
-        return m_data;
-    }
-    static const QImage imageIcon(QIcon::fromTheme(QStringLiteral("view-preview")).pixmap(QSize(48, 48)).toImage());
-    return imageIcon;
+    return m_data;
 }

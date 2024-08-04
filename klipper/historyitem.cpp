@@ -16,8 +16,7 @@
 #include "historyurlitem.h"
 
 HistoryItem::HistoryItem(const QByteArray &uuid)
-    : m_model(nullptr)
-    , m_uuid(uuid)
+    : m_uuid(uuid)
 {
 }
 
@@ -85,37 +84,4 @@ HistoryItemPtr HistoryItem::create(QDataStream &dataStream)
     return HistoryItemPtr();
 }
 
-QByteArray HistoryItem::next_uuid() const
-{
-    if (!m_model) {
-        return m_uuid;
-    }
-    // go via the model to the next
-    const int ownIndex = m_model->indexOf(m_uuid);
-    if (ownIndex < 0) {
-        // that was wrong, model doesn't contain our item, so there is no chain
-        return m_uuid;
-    }
-    const int nextRow = (ownIndex + 1) % m_model->rowCount();
-    return m_model->index(nextRow, 0).data(HistoryModel::UuidRole).toByteArray();
-}
-
-QByteArray HistoryItem::previous_uuid() const
-{
-    if (!m_model) {
-        return m_uuid;
-    }
-    // go via the model to the next
-    const int ownIndex = m_model->indexOf(m_uuid);
-    if (ownIndex < 0) {
-        // that was wrong, model doesn't contain our item, so there is no chain
-        return m_uuid;
-    }
-    const int nextRow = ((ownIndex == 0) ? m_model->rowCount() : ownIndex) - 1;
-    return m_model->index(nextRow, 0).data(HistoryModel::UuidRole).toByteArray();
-}
-
-void HistoryItem::setModel(HistoryModel *model)
-{
-    m_model = model;
-}
+#include "moc_historyitem.cpp"

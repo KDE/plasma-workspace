@@ -126,16 +126,6 @@ void HistoryModel::setMaxSize(qsizetype size)
     }
 }
 
-bool HistoryModel::displayImages() const
-{
-    return m_displayImages;
-}
-
-void HistoryModel::setDisplayImages(bool show)
-{
-    m_displayImages = show;
-}
-
 int HistoryModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {
@@ -155,8 +145,13 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case Qt::DisplayRole:
         return item->text();
-    case Qt::DecorationRole:
+    case Qt::DecorationRole: {
+        if (item->type() == HistoryItemType::Image && !m_displayImages) {
+            static const QImage imageIcon(QIcon::fromTheme(QStringLiteral("view-preview")).pixmap(QSize(48, 48)).toImage());
+            return imageIcon;
+        }
         return item->image();
+    }
     case HistoryItemConstPtrRole:
         return QVariant::fromValue<HistoryItemConstPtr>(std::const_pointer_cast<const HistoryItem>(item));
     case UuidRole:
@@ -255,7 +250,6 @@ void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
     }
 
     beginInsertRows(QModelIndex(), 0, 0);
-    item->setModel(this);
     m_items.prepend(item);
     endInsertRows();
 
@@ -312,7 +306,6 @@ bool HistoryModel::loadHistory()
     // The last row is either items.size() - 1 or m_maxSize - 1.
     decltype(m_items) items;
     for (HistoryItemPtr item = HistoryItem::create(historyStream); item && items.size() < m_maxSize; item = HistoryItem::create(historyStream)) {
-        item->setModel(this);
         items.emplace_back(std::move(item));
     }
 
@@ -337,7 +330,7 @@ bool HistoryModel::loadHistory()
 void HistoryModel::loadSettings()
 {
     setMaxSize(KlipperSettings::maxClipItems());
-    setDisplayImages(!KlipperSettings::ignoreImages());
+    m_displayImages = !KlipperSettings::ignoreImages();
 }
 
 void HistoryModel::startSaveHistoryTimer(std::chrono::seconds delay)
@@ -389,12 +382,8 @@ bool HistoryModel::saveHistory(bool empty)
     history_stream << KLIPPER_VERSION_STRING; // const char*
 
     if (!empty && !m_items.empty()) {
-        HistoryItemPtr item = m_items[0];
-        if (item) {
-            do {
-                history_stream << item.get();
-                item = m_items[indexOf(item->next_uuid())];
-            } while (item != m_items[0]);
+        for (const auto &item : std::as_const(m_items)) {
+            history_stream << item.get();
         }
     }
 

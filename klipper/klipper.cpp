@@ -488,12 +488,8 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
 QStringList Klipper::getClipboardHistoryMenu()
 {
     QStringList menu;
-    auto item = m_historyModel->first();
-    if (item) {
-        do {
-            menu << item->text();
-            item = m_historyModel->index(m_historyModel->indexOf(item->next_uuid())).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
-        } while (item != m_historyModel->first());
+    for (int i = 0, count = m_historyModel->rowCount(); i < count; ++i) {
+        menu.emplace_back(m_historyModel->index(i).data(Qt::DisplayRole).toString());
     }
 
     return menu;
@@ -501,16 +497,7 @@ QStringList Klipper::getClipboardHistoryMenu()
 
 QString Klipper::getClipboardHistoryItem(int i)
 {
-    auto item = m_historyModel->first();
-    if (item) {
-        do {
-            if (i-- == 0) {
-                return item->text();
-            }
-            item = m_historyModel->index(m_historyModel->indexOf(item->next_uuid())).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
-        } while (item != m_historyModel->first());
-    }
-    return QString();
+    return m_historyModel->index(i).data(Qt::DisplayRole).toString();
 }
 
 //

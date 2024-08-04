@@ -46,9 +46,6 @@ public:
     qsizetype maxSize() const;
     void setMaxSize(qsizetype size);
 
-    bool displayImages() const;
-    void setDisplayImages(bool show);
-
     /**
      * Clear history
      */

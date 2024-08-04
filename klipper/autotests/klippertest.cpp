@@ -99,7 +99,6 @@ void KlipperTest::testBug465225()
         auto klipper = std::make_unique<Klipper>(this, klipperConfig);
         QCOMPARE(HistoryModel::self()->rowCount(), 2);
         QCOMPARE(HistoryModel::self()->first()->type(), HistoryItemType::Image);
-        QVERIFY(HistoryModel::self()->first()->uuid() != HistoryModel::self()->first()->next_uuid());
     }
 }
 
