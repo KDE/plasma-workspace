@@ -935,15 +935,3 @@ msgstr "Slå av dette sprettoppvindauget"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#~ msgid "Clipboard Items"
-#~ msgstr "Utklippstavleelement"
-
-#~ msgid "Search…"
-#~ msgstr "Søk …"
-
-#~ msgid "Invalid regular expression, %1"
-#~ msgstr "Ugyldig regulært uttrykk: %1"
-
-#~ msgid "&More"
-#~ msgstr "&Fleire"

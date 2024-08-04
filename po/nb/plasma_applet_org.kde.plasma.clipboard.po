@@ -38,17 +38,3 @@ msgstr ""
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr ""
-
-#~ msgid "Invoke action"
-#~ msgstr "Utfør operasjon"
-
-#~ msgid "Edit contents"
-#~ msgstr "Rediger innhold"
-
-#~ msgid "Remove from history"
-#~ msgstr "Fjern fra historie"
-
-#~ msgctxt ""
-#~ "Indicator that there are more urls in the clipboard than previews shown"
-#~ msgid "+%1"
-#~ msgstr "+%1"

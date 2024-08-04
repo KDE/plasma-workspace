@@ -1,16 +1,16 @@
 # translation of kcm_autostart.po to
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Maciej Wikło <maciej.wiklo@wp.pl>, 2008.
 # Marta Rybczyńska <kde-i18n@rybczynska.net>, 2008, 2009.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2011, 2012, 2015, 2017, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2011, 2012, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-10-28 09:31+0200\n"
+"PO-Revision-Date: 2024-08-03 11:46+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: autostartmodel.cpp:383
 #, kde-format
@@ -106,31 +107,25 @@ msgstr "Plik '%1' musi być wykonywalnym, aby móc go uruchomi przy logowaniu."
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Dodaj nowy"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Dodaj program..."
+msgstr "Aplikacja…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Dodaj skrypt wykonywany na wejściu..."
+msgstr "Skrypt logowania…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Dodaj skrypt wykonywany na wyjściu..."
+msgstr "Skrypt wylogowywania…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -187,22 +182,20 @@ msgstr ""
 "Nie ma żadnych rzeczy określonych przez użytkownika do samo-uruchomienia"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "Naciśnij przycisk <interface>Dodaj…</interface>, aby dodać jakąś rzecz"
+msgstr "Naciśnij przycisk <interface>Dodaj nowy</interface>, aby dodać wpis"
 
 #: ui/main.qml:217
 #, kde-format
 msgid "Choose Login Script"
-msgstr "Wybierz skrypty wykonywany na wejściu"
+msgstr "Wybierz skrypty wykonywany po zalogowaniu"
 
 #: ui/main.qml:237
 #, kde-format
 msgid "Choose Logout Script"
-msgstr "Wybierz skrypty wykonywany na wyjściu"
+msgstr "Wybierz skrypty wykonywany przed wylogowaniem"
 
 #: unit.cpp:26
 #, kde-format
@@ -214,7 +207,7 @@ msgstr "Uruchomione"
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr "Nieuruchomiona"
+msgstr "Nieuruchomione"
 
 #: unit.cpp:28
 #, kde-format

@@ -860,11 +860,3 @@ msgstr "Skru av denne sprettoppmenyen"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"
-
-#, fuzzy
-#~| msgid "Clipboard is empty"
-#~ msgid "Clipboard Items"
-#~ msgstr "Utklippstavla er tom"
-
-#~ msgid "&More"
-#~ msgstr "&Flere"
