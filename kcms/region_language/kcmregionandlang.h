@@ -53,6 +53,7 @@ public:
     Q_INVOKABLE void applyToLocal();
     Q_INVOKABLE void applyToSystem();
     Q_INVOKABLE void saveCanceled();
+    Q_INVOKABLE QQuickItem *currentPage();
 
 Q_SIGNALS:
     void saveClicked();
@@ -75,6 +76,9 @@ private:
 #ifdef GLIBC_LOCALE
     std::unordered_map<QString, QString> constructGlibcLocaleMap();
 #endif
+    // try to get system wide locale settings via localed, only works if m_localedAvailable is true
+    void getSystemLocale(const std::function<void(const QStringList &)> &);
+    void setSystemLocale(const QStringList &locale);
     static QString failedFindLocalesMessage();
     static QString localeFileDirPath();
     static QString toUTF8Locale(const QString &locale);

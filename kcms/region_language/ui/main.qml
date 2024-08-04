@@ -100,6 +100,9 @@ KCM.ScrollViewKCM {
             // return to first page
             while (kcm.depth > 1) {
                 kcm.takeLast();
+                // set parent to null to reset the width and hieght binding
+                // the next time this dialog gets opened, the parent maybe not the same
+                applyDialog.parent = null;
             }
         }
         onRejected: {
@@ -107,6 +110,9 @@ KCM.ScrollViewKCM {
             // return to first page
             while (kcm.depth > 1) {
                 kcm.takeLast();
+                // set parent to null to reset the width and hieght binding
+                // the next time this dialog gets opened, the parent maybe not the same
+                applyDialog.parent = null;
             }
         }
 
@@ -120,9 +126,18 @@ KCM.ScrollViewKCM {
                 }
             },
             Kirigami.Action {
-                text: i18nc("@action:button", "System and current user")
+                text: i18nc("@action:button", "System")
                 icon.name: "computer-symbolic"
-                enabled: kcm.localedAvailable
+                visible: kcm.localedAvailable
+                onTriggered: {
+                    kcm.applyToSystem();
+                    applyDialog.accept();
+                }
+            },
+            Kirigami.Action {
+                text: i18nc("@action:button", "Both")
+                icon.name: "computer-symbolic"
+                visible: kcm.localedAvailable
                 onTriggered: {
                     kcm.applyToLocal();
                     kcm.applyToSystem();
@@ -159,9 +174,7 @@ KCM.ScrollViewKCM {
         }
         function onSaveClicked() {
             // open apply dialog
-            if (kcm.depth === 1) {
-                applyDialog.parent = root;
-            }
+            applyDialog.parent = kcm.currentPage();
             applyDialog.open();
         }
         function onDefaultsClicked() {

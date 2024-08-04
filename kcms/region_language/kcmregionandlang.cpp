@@ -150,10 +150,8 @@ QString KCMRegionAndLang::localeFileDirPath()
 void KCMRegionAndLang::save()
 {
     if (settings()->isSaveNeeded()) {
-        applyToLocal();
-        applyToSystem();
+        Q_EMIT saveClicked();
     }
-    Q_EMIT saveClicked();
 }
 
 void KCMRegionAndLang::applyToLocal()
@@ -281,12 +279,7 @@ void KCMRegionAndLang::applyToSystem()
     }
 
     // SetLocale call will generate locales for us
-    auto setLocaleCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.locale1"),
-                                                        QStringLiteral("/org/freedesktop/locale1"),
-                                                        QStringLiteral("org.freedesktop.locale1"),
-                                                        QStringLiteral("SetLocale"));
-    setLocaleCall.setArguments({args, true});
-    QDBusConnection::systemBus().asyncCall(setLocaleCall);
+    setSystemLocale(args);
 }
 
 void KCMRegionAndLang::saveCanceled()
@@ -525,6 +518,65 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
 bool KCMRegionAndLang::isDefaults() const
 {
     return m_settings->isDefaults() && m_optionsModel->binaryDialect() == KFormat::BinaryUnitDialect::IECBinaryDialect;
+}
+
+void KCMRegionAndLang::getSystemLocale(const std::function<void(const QStringList &)> &lambda)
+{
+    // try to get current system locale
+    auto getSystemLocaleCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.locale1"),
+                                                              QStringLiteral("/org/freedesktop/locale1"),
+                                                              QStringLiteral("org.freedesktop.DBus.Properties"),
+                                                              QStringLiteral("Get"));
+    getSystemLocaleCall.setArguments({QStringLiteral("org.freedesktop.locale1"), QStringLiteral("Locale")});
+    auto async = QDBusConnection::systemBus().asyncCall(getSystemLocaleCall);
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
+
+    std::function<void(const QStringList &)> copied = lambda;
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, [this, copied](QDBusPendingCallWatcher *call) {
+        // locale1 actually returns StringList, but Qt can't parse the reply if I use QStringList here
+        QDBusPendingReply<QVariant> reply = *call;
+        if (reply.isError()) {
+            qWarning() << "failed to get Locale from org.freedesktop.locale1: " << reply.error().message();
+        } else {
+            auto variant = reply.value();
+            if (variant.type() != QVariant::StringList) {
+                qWarning() << "failed to get Locale from org.freedesktop.locale1: reply type isn't StringList";
+            } else {
+                copied(variant.toStringList());
+            }
+        }
+        call->deleteLater();
+    });
+}
+
+void KCMRegionAndLang::setSystemLocale(const QStringList &locale)
+{
+    auto setLocaleCall = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.locale1"),
+                                                        QStringLiteral("/org/freedesktop/locale1"),
+                                                        QStringLiteral("org.freedesktop.locale1"),
+                                                        QStringLiteral("SetLocale"));
+    setLocaleCall.setArguments({locale, true});
+    auto async = QDBusConnection::systemBus().asyncCall(setLocaleCall);
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
+    QObject::connect(watcher, &QDBusPendingCallWatcher::finished, [](QDBusPendingCallWatcher *call) {
+        QDBusPendingReply<void> reply = *call;
+        if (reply.isError()) {
+            qWarning() << "failed to set Locale via org.freedesktop.locale1: " << reply.error().message();
+        }
+        call->deleteLater();
+    });
+}
+
+QQuickItem *KCMRegionAndLang::currentPage()
+{
+    // because subPage doesn't take mainUi into consideration,
+    // but currentIndex does, substract one
+    int _currentIndex = currentIndex() - 1;
+    if (_currentIndex < 0) {
+        return mainUi();
+    } else {
+        return subPage(currentIndex() - 1);
+    }
 }
 
 #include "kcmregionandlang.moc"
