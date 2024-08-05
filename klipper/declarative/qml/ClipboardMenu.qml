@@ -226,6 +226,13 @@ PlasmaComponents3.ScrollView {
         }
     }
 
+    KItemModels.KSortFilterProxyModel {
+        id: filterModel
+        sourceModel: clipboardMenu.model
+        filterRoleName: "display"
+        filterRegularExpression: RegExp(filter.text, "i")
+    }
+
     contentItem: ListView {
         id: menuListView
 
@@ -235,11 +242,7 @@ PlasmaComponents3.ScrollView {
         highlightMoveDuration: 0
         highlightResizeDuration: 0
         currentIndex: 0
-        model: KItemModels.KSortFilterProxyModel {
-            sourceModel: clipboardMenu.model
-            filterRoleName: "display"
-            filterRegularExpression: RegExp(filter.text, "i")
-        }
+        model: clipboardMenu.expanded || clipboardMenu.T.StackView.view.currentItem !== clipboardMenu ? filterModel : null
 
         topMargin: Kirigami.Units.largeSpacing
         bottomMargin: Kirigami.Units.largeSpacing
