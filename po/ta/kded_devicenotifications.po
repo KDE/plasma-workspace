@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-31 00:42+0000\n"
-"PO-Revision-Date: 2024-03-30 21:01+0530\n"
+"PO-Revision-Date: 2024-08-04 17:04+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,35 +15,29 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: devicenotifications.cpp:333
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr "USB சாதனம் கண்டறியப்பட்டது"
+msgstr "திரை கண்டறியப்பட்டது"
 
 #: devicenotifications.cpp:334
-#, fuzzy, kde-format
-#| msgid "A USB device has been plugged in."
+#, kde-format
 msgid "A display has been plugged in."
-msgstr "USB சாதனம் சொருகப்பட்டுள்ளது."
+msgstr "திரை சொருகப்பட்டுள்ளது."
 
 #: devicenotifications.cpp:347
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Removed"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr "USB சாதனம் கழற்றப்பட்டுள்ளது"
+msgstr "திரை கழற்றப்பட்டுள்ளது"
 
 #: devicenotifications.cpp:348
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A display has been unplugged."
-msgstr "ஓர் USB சாதனம் கழற்றப்பட்டுள்ளது."
+msgstr "ஓர் திரை கழற்றப்பட்டுள்ளது."
 
 #: devicenotifications.cpp:379
 #, kde-format

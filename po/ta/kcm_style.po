@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-06 20:01+0530\n"
+"PO-Revision-Date: 2024-08-04 17:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -114,12 +114,10 @@ msgid "Secondary toolbar label"
 msgstr "மற்ற கருவிப்பட்டைகளில் பெயர்கள்"
 
 #: ui/EffectSettingsPopup.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Icon and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
-msgstr "சின்னத்தையும் கருவிப்பட்டைகளையும் அமை"
+msgstr "சின்னங்களையும் கருவிப்பட்டைகளையும் அமை"
 
 #: ui/EffectSettingsPopup.qml:36
 #, kde-format

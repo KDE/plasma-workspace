@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-20 00:41+0000\n"
-"PO-Revision-Date: 2024-03-30 20:52+0530\n"
+"PO-Revision-Date: 2024-08-04 16:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: main.cpp:32
 #, kde-format
@@ -23,12 +23,10 @@ msgid "Session Management"
 msgstr "அமர்வு மேலாண்மை"
 
 #: main.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Logout Prompt"
+#, kde-format
 msgctxt "@action"
 msgid "Show Logout Screen"
-msgstr "வெளியேற்ற சாளரத்தைக் காட்டு"
+msgstr "வெளியேற்றத் திரையைக் காட்டு"
 
 #: main.cpp:48
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-03 00:41+0000\n"
-"PO-Revision-Date: 2024-07-06 19:57+0530\n"
+"PO-Revision-Date: 2024-08-04 17:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -283,7 +283,7 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR குறி"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -312,32 +312,30 @@ msgid "Code 128"
 msgstr ""
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "பிடிப்புப்பலகைக்கு சேர்"
+msgstr "பிடிப்புப்பலகைக்கு திரும்பசெல்"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "QR குறியின் வகையை மாற்று"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
+msgstr "QR குறியை காட்ட போதிய இடம் இல்லை. இச்சாளரத்தை பெரிதாக்கி பாருங்கள்."
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "QR குறியை உருவாக்குவது தோல்வியடைந்தது"
 
 #: declarative/qml/ClipboardMenu.qml:187
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "பிடிப்புப்பலகை வரலாறு"
+msgstr "வரலாற்றை காலியாக்கு"
 
 #: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
@@ -350,49 +348,43 @@ msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
 
 #: declarative/qml/DelegateToolButtons.qml:26
-#, fuzzy, kde-format
-#| msgid "<new action>"
+#, kde-format
 msgid "Invoke action"
-msgstr "<new action>"
+msgstr "செயலை இயக்கு"
 
 #: declarative/qml/DelegateToolButtons.qml:39
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "&பட்டைக்குறியீட்டை காட்டு…"
+msgstr "QR குறியைக் காட்டு"
 
 #: declarative/qml/DelegateToolButtons.qml:55
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgid "Edit contents"
-msgstr "உள்ளடக்கங்களை திருத்து"
+msgstr "உள்ளடக்கத்தை திருத்து"
 
 #: declarative/qml/DelegateToolButtons.qml:69
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "வரலாற்றிலிருந்து தேர்ந்தெடுக்கப்படும் உருப்படிக்கு"
+msgstr "வரலாற்றிலிருந்து நீக்கு"
 
 #: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "சேமி"
 
 #: declarative/qml/EditPage.qml:95
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "&ரத்து செய்"
+msgstr "ரத்து செய்"
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -882,10 +874,9 @@ msgstr ""
 "செயலிகளையும் மேல்தோன்றும் பட்டியில் காட்டு."
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "பிடிப்புப்பலகை வரலாறு"
+msgstr "மேல்தோன்றும் பிடிப்புப்பலகை சாளரம்"
 
 #: urlgrabber.cpp:200
 #, kde-format

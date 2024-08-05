@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-18 00:40+0000\n"
-"PO-Revision-Date: 2023-10-15 12:26+0530\n"
+"PO-Revision-Date: 2024-08-04 16:58+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -92,7 +92,7 @@ msgstr "கடவுச்சொற்கள் ஒன்றாயிருக�
 #: src/ui/ChangeWalletPassword.qml:16
 #, kde-format
 msgid "Change Wallet Password?"
-msgstr ""
+msgstr "வால்லட்டின் கடவுச்சொல்லையும் மாற்ற வேண்டுமா?"
 
 #: src/ui/ChangeWalletPassword.qml:25
 #, kde-kuit-format
@@ -101,11 +101,13 @@ msgid ""
 "Now that you have changed your login password, you may also want to change "
 "the password on your default KWallet to match it."
 msgstr ""
+"நுழைவுக் கடவுச்சொல்லை மாற்றியுள்ளதால், கேவால்லட்டின் இயல்பிருப்பு வால்லட்டின் "
+"கடவுச்சொல்லையும் அதேபோல மாற்ற நீங்கள் விரும்பலாம்."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format
 msgid "What is KWallet?"
-msgstr ""
+msgstr "கேவால்லட் என்றால் என்ன?"
 
 #: src/ui/ChangeWalletPassword.qml:41
 #, kde-format
@@ -116,11 +118,15 @@ msgid ""
 "be unlocked at login automatically so you don't have to enter the KWallet "
 "password yourself."
 msgstr ""
+"கம்பியில்லா இணைப்புகள் போன்றவற்றின் கடவுச்சொற்களை சேமிக்கும் சேவை கேவால்லட் ஆகும். உங்கள் "
+"கணக்கின் கடவுச்சொல் அல்லாத தனிப்பட்ட கடவுச்சொல்லால் அது பாதுகாக்கப்பட்டிருக்கும். இரண்டு "
+"கடவுச்சொற்களும் ஒன்றாக இருந்தால, நீங்கள் நுழையும்போது கேவால்லட் தானாக திறக்கப்படும்; "
+"இல்லையேல், அதன் கடவுச்சொல்லை நீங்கள் கைமுறையாக உள்ளிட வேண்டியிருக்கலாம்."
 
 #: src/ui/ChangeWalletPassword.qml:58
 #, kde-format
 msgid "Change Wallet Password"
-msgstr ""
+msgstr "வால்லட்டின் கடவுச்சொல்லை மாற்று"
 
 #: src/ui/ChangeWalletPassword.qml:67
 #, kde-format
@@ -339,20 +345,16 @@ msgid "Users"
 msgstr "பயனர்கள்"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "புதியவரை சேர்"
+msgstr "புதியவரை சேர்…"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "புதியவரை சேர்"
+msgstr "புதிய பயனரை சேர்…"
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -521,6 +523,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"இன்னொரு நிர்வாகி இல்லாததால் இக்கணக்கை சாதாரண கணக்காக மாற்ற முடியாது. எந்த நிர்வாகக் "
+"கணக்கும் இல்லையேல், நிர்வாகப் பணிகளுக்கு நேரடியாக ரூட்டின் கடவுச்சொல்லைப் பயன்படுத்த "
+"வேண்டியிருக்கும்; இது பாதுகாப்பற்றது."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

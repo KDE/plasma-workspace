@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-02-18 14:51+0530\n"
+"PO-Revision-Date: 2024-08-04 16:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/ui/DeviceItem.qml:118
 #, kde-format
@@ -202,12 +202,12 @@ msgstr "இந்த வட்டை வெளியேற்ற முடிய
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "கோப்பு முறைமை பதிலளிக்கவில்லை"
 
 #: plugin/spacemonitor_p.cpp:137
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "'%1'-இல் ஏற்றப்பட்டுள்ள கோப்பு முறைமை பதிலளிக்கவில்லை"
 
 #, fuzzy
 #~| msgid "1 action for this device"
