@@ -29,47 +29,54 @@ ColumnLayout {
         Layout.rightMargin: Kirigami.Units.largeSpacing
 
         QtControls.CheckBox {
-            visible: root.hasAppearance && root.hasLayout
+            visible: root.hasAppearance && (root.hasLayout || root.hasDesktopDefaults)
             text: i18n("Appearance settings")
             checked: kcm.selectedContents & Private.LookandFeelManager.AppearanceSettings
             onToggled: kcm.selectedContents ^= Private.LookandFeelManager.AppearanceSettings
         }
         QtControls.Label { // These labels sub in for the checkboxes when they're the only visible checkbox in this page
             Layout.fillWidth: true
-            visible: root.hasAppearance && !root.hasLayout
+            visible: root.hasAppearance && !root.hasLayout && !root.hasDesktopDefaults
             text: i18nc("List item", "• Appearance settings")
             textFormat: Text.PlainText
             wrapMode: Text.WordWrap
         }
 
-        QtControls.CheckBox {
-            id: resetLayoutCheckbox
-            visible: root.hasAppearance && root.hasLayout
-            text: i18n("Desktop and window layout")
-            checked: kcm.selectedContents & Private.LookandFeelManager.LayoutSettings
-            onToggled: kcm.selectedContents ^= Private.LookandFeelManager.LayoutSettings
+        QtControls.RadioButton {
+            visible: root.hasLayout || root.hasDesktopDefaults
+            text: i18n("Leave desktop layout and settings unchanged")
+            checked: !(kcm.selectedContents & Private.LookandFeelManager.DesktopDefaults)
+                    && !(kcm.selectedContents & Private.LookandFeelManager.LayoutSettings)
+            onToggled: kcm.selectedContents &= ~(Private.LookandFeelManager.DesktopDefaults | kcm.selectedContents & Private.LookandFeelManager.LayoutSettings)
         }
-        QtControls.Label {
-            Layout.fillWidth: true
-            visible: root.hasLayout && !root.hasAppearance
-            text: i18nc("List item", "• Desktop and window layout")
-            textFormat: Text.PlainText
-            wrapMode: Text.WordWrap
-        }
-        QtControls.CheckBox {
-            enabled: !resetLayoutCheckbox.checked
-            visible: root.hasAppearance && root.hasLayout
+        QtControls.RadioButton {
+            visible: (root.hasAppearance || root.hasLayout) && root.hasDesktopDefaults
             text: i18n("Desktop default settings")
             checked: kcm.selectedContents & Private.LookandFeelManager.DesktopDefaults
             onToggled: kcm.selectedContents ^= Private.LookandFeelManager.DesktopDefaults
         }
         QtControls.Label {
             Layout.fillWidth: true
-            visible: root.hasLayout && !root.hasAppearance
+            visible: root.hasDesktopDefaults && !root.hasAppearance && !root.hasLayout
             text: i18nc("List item", "• Desktop default settings")
             textFormat: Text.PlainText
             wrapMode: Text.WordWrap
         }
+        QtControls.RadioButton {
+            id: resetLayoutCheckbox
+            visible: (root.hasAppearance || root.hasDesktopDefaults) && root.hasLayout
+            text: i18n("Desktop and window layout")
+            checked: kcm.selectedContents & Private.LookandFeelManager.LayoutSettings
+            onToggled: kcm.selectedContents ^= Private.LookandFeelManager.LayoutSettings
+        }
+        QtControls.Label {
+            Layout.fillWidth: true
+            visible: root.hasLayout && !root.hasAppearance && !root.hasDesktopDefaults
+            text: i18nc("List item", "• Desktop and window layout")
+            textFormat: Text.PlainText
+            wrapMode: Text.WordWrap
+        }
+
 
         Kirigami.InlineMessage {
             Layout.fillWidth: true

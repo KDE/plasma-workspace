@@ -312,7 +312,6 @@ void KCMLookandFeel::setSelectedContents(LookAndFeelManager::Contents items)
     if (selectedContents() == items) {
         return;
     }
-    qWarning() << "BBBB" << items;
     m_selectedContents = items;
     Q_EMIT selectedContentsChanged();
 }
@@ -324,6 +323,7 @@ void KCMLookandFeel::resetSelectedContents()
     // But do not select layout contents by default if there appaerance settings
     if (m_themeContents & LookAndFeelManager::AppearanceSettings) {
         resetContents &= ~LookAndFeelManager::LayoutSettings;
+        resetContents &= ~LookAndFeelManager::DesktopDefaults;
     }
     setSelectedContents(resetContents);
 }

@@ -16,33 +16,32 @@ ColumnLayout {
     Kirigami.FormLayout {
         id: layoutForm
         twinFormLayouts: root.hasAppearance ? appearanceForm : null
-        visible: root.hasLayout
+        visible: root.hasLayout || root.hasDesktopDefaults
         Layout.leftMargin: Kirigami.Units.largeSpacing
         Layout.rightMargin: Kirigami.Units.largeSpacing
 
         ColumnLayout {
             Kirigami.FormData.label: i18n("Layout settings:")
-            Repeater {
-                model: [
-                    { text: i18n("Desktop layout"),
-                      flag: Private.LookandFeelManager.DesktopLayout
-                            | Private.LookandFeelManager.WindowPlacement
-                            | Private.LookandFeelManager.ShellPackage
-                    },
-                    { text: i18n("Titlebar Buttons layout"), flag: Private.LookandFeelManager.TitlebarLayout },
-                ]
-                delegate: QtControls.CheckBox {
-                    required property var modelData
-                    text: modelData.text
-                    visible: kcm.themeContents & modelData.flag
-                    checked: kcm.selectedContents & modelData.flag
-                    onToggled: {
-                        kcm.selectedContents ^= modelData.flag
-                        if (modelData.flag | Private.LookandFeelManager.DesktopLayout) {
-                            resetLayoutWarning.visible = checked;
-                        }
-                    }
-                }
+
+            QtControls.RadioButton {
+                visible: root.hasLayout || root.hasDesktopDefaults
+                text: i18n("Leave desktop layout and settings unchanged")
+                checked: !(kcm.selectedContents & Private.LookandFeelManager.DesktopDefaults)
+                        && !(kcm.selectedContents & Private.LookandFeelManager.LayoutSettings)
+                onToggled: kcm.selectedContents &= ~(Private.LookandFeelManager.DesktopDefaults | kcm.selectedContents & Private.LookandFeelManager.LayoutSettings)
+            }
+            QtControls.RadioButton {
+                visible: (root.hasAppearance || root.hasLayout) && root.hasDesktopDefaults
+                text: i18n("Desktop default settings")
+                checked: kcm.selectedContents & Private.LookandFeelManager.DesktopDefaults
+                onToggled: kcm.selectedContents ^= Private.LookandFeelManager.DesktopDefaults
+            }
+            QtControls.RadioButton {
+                id: resetLayoutCheckbox
+                visible: (root.hasAppearance || root.hasDesktopDefaults) && root.hasLayout
+                text: i18n("Desktop and window layout")
+                checked: kcm.selectedContents & Private.LookandFeelManager.LayoutSettings
+                onToggled: kcm.selectedContents ^= Private.LookandFeelManager.LayoutSettings
             }
         }
     }

@@ -24,6 +24,9 @@
     <method name="loadLookAndFeelDefaultLayout">
         <arg name="layout" type="s" direction="in"/>
     </method>
+    <method name="loadLookAndFeelSetupScripts">
+        <arg name="layout" type="s" direction="in"/>
+    </method>
     <method name="activateLauncherMenu">
     </method>
     <method name="refreshCurrentShell" />

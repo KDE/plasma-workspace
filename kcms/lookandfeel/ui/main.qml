@@ -20,6 +20,7 @@ KCM.GridViewKCM {
 
     readonly property bool hasAppearance: kcm.themeContents & Private.LookandFeelManager.AppearanceSettings
     readonly property bool hasLayout: kcm.themeContents & Private.LookandFeelManager.LayoutSettings
+    readonly property bool hasDesktopDefaults: kcm.themeContents & Private.LookandFeelManager.DesktopDefaults
     readonly property bool showLayoutInfo: kcm.themeContents & Private.LookandFeelManager.DesktopLayout
 
     function currentThemeRole(role) {

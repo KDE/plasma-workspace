@@ -429,7 +429,6 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
 {
     // The items to apply are the package contents filtered with the user selection mask
     const Contents itemsToApply = packageContents(package) & applyMask;
-    qWarning() << "AAAA" << itemsToApply;
     if (itemsToApply.testFlag(DesktopLayout) && m_mode == Mode::Apply) {
         QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
                                                               QStringLiteral("/PlasmaShell"),
@@ -451,7 +450,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
                                                               QStringLiteral("/PlasmaShell"),
                                                               QStringLiteral("org.kde.PlasmaShell"),
                                                               QStringLiteral("loadLookAndFeelSetupScripts"));
-
+        qWarning() << "AAAABBBrunning setup scripts" << m_data->settings()->lookAndFeelPackage();
         QList<QVariant> args;
         args << m_data->settings()->lookAndFeelPackage();
         message.setArguments(args);
