@@ -56,13 +56,15 @@ public:
 
     // Forecasts
     struct ForecastInfo {
-        QString period;
+        QDate period;
+        bool isNight = false;
         QString iconName;
         QString summary;
         float tempHigh = qQNaN();
         float tempLow = qQNaN();
         float windSpeed = qQNaN();
         QString windDirection;
+        int precipitationPct = 0;
     };
 
     QList<WeatherData::ForecastInfo> forecasts;
@@ -115,21 +117,13 @@ private:
 
     // Load and parse the weather forecast
     void getForecast(const QString &source);
-    bool readForecast(const QString &source, QXmlStreamReader &xml);
-    void parseForecast(const QString &source, QXmlStreamReader &xml);
-    void parseWeatherForecast(const QString &source, QXmlStreamReader &xml);
-    void parsePlaceForecast(const QString &source, QXmlStreamReader &xml);
+    bool readForecast(const QString &source, const QJsonDocument &doc);
+    WeatherData::ForecastInfo parseForecastReport(const QJsonObject &report, bool isNight) const;
 
-    // Observation parsing methods
+    // Load and parse current observation data
     void getObservation(const QString &source);
     void getSolarData(const QString &source);
-    bool readObservationData(const QString &source, QXmlStreamReader &xml);
-    void parsePlaceObservation(const QString &source, WeatherData &data, QXmlStreamReader &xml);
-    void parseWeatherChannel(const QString &source, WeatherData &data, QXmlStreamReader &xml);
-    void parseWeatherObservation(const QString &source, WeatherData &data, QXmlStreamReader &xml);
-
-    void parseUnknownElement(QXmlStreamReader &xml) const;
-    void parseFloat(float &value, const QString &string);
+    bool readObservationData(const QString &source, const QJsonDocument &doc);
 
 private:
     struct XMLMapInfo {
