@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-19 02:32+0000\n"
+"POT-Creation-Date: 2024-08-06 02:32+0000\n"
 "PO-Revision-Date: 2024-05-28 11:12+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -286,62 +286,62 @@ msgstr "%1 %2 itt: %3"
 msgid "Disconnected Screen %1"
 msgstr "Leválasztott képernyő %1"
 
-#: shellcorona.cpp:206 shellcorona.cpp:208
+#: shellcorona.cpp:214 shellcorona.cpp:216
 #, kde-format
 msgid "Show Desktop"
 msgstr "Asztal megjelenítése"
 
-#: shellcorona.cpp:208
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Asztal elrejtése"
 
-#: shellcorona.cpp:223
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Alkalmazásindító aktiválása"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:239
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Aktivitásváltó megjelenítése"
 
-#: shellcorona.cpp:242
+#: shellcorona.cpp:250
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Jelenlegi aktivitás leállítása"
 
-#: shellcorona.cpp:250
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Váltás az előző aktivitásra"
 
-#: shellcorona.cpp:258
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Váltás a következő aktivitásra"
 
-#: shellcorona.cpp:273
+#: shellcorona.cpp:281
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "A(z) %1. bejegyzés aktiválása"
 
-#: shellcorona.cpp:305
+#: shellcorona.cpp:313
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "Panel- és asztalkezelés"
 
-#: shellcorona.cpp:327
+#: shellcorona.cpp:335
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "A billentyűzet fókuszának váltogatása panelek között"
 
-#: shellcorona.cpp:2077
+#: shellcorona.cpp:2085
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel hozzáadása"
 
-#: shellcorona.cpp:2129
+#: shellcorona.cpp:2137
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
