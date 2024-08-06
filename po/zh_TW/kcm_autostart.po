@@ -5,13 +5,13 @@
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2008, 2010, 2012.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-11-10 23:03+0900\n"
+"PO-Revision-Date: 2024-08-06 05:17+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "dot tw>\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: autostartmodel.cpp:383
@@ -107,31 +107,25 @@ msgstr "檔案「%1」必須是可執行檔才可以在登入時執行。"
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "新增"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "新增應用程式…"
+msgstr "應用程式…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "新增登入文稿…"
+msgstr "登入文稿…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "新增登出文稿…"
+msgstr "登出文稿…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -185,12 +179,10 @@ msgid "No user-specified autostart items"
 msgstr "沒有使用者指定的自動啟動項目"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "點擊下方的<interface>新增…</interface>按鈕以新增一些"
+msgstr "點擊下方的<interface>新增</interface>按鈕以新增一些"
 
 #: ui/main.qml:217
 #, kde-format

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:41+0000\n"
-"PO-Revision-Date: 2024-05-05 17:02+0900\n"
+"PO-Revision-Date: 2024-08-06 05:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -140,9 +140,7 @@ msgid "Preview Theme"
 msgstr "預覽主題"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Remove Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove theme"
 msgstr "移除主題"
@@ -151,13 +149,13 @@ msgstr "移除主題"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "無法刪除作用中的主題"
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "無法刪除系統安裝的主題"
 
 #: ui/main.qml:147
 #, kde-format

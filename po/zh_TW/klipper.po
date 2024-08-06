@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-03 00:41+0000\n"
-"PO-Revision-Date: 2024-08-03 14:43+0900\n"
+"PO-Revision-Date: 2024-08-06 05:20+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -333,10 +333,9 @@ msgid "Code 128"
 msgstr "Code 128"
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "新增到剪貼簿"
+msgstr "移回到剪貼簿"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
@@ -385,10 +384,9 @@ msgid "Edit contents"
 msgstr "編輯內容"
 
 #: declarative/qml/DelegateToolButtons.qml:69
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "為從歷史紀錄中選擇的項目"
+msgstr "從歷史紀錄中移除"
 
 #: declarative/qml/EditPage.qml:87
 #, kde-format

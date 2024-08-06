@@ -1,25 +1,25 @@
 # Translation for kcm_autostart.po to Euskara/Basque (eu).
-# Copyright (C) 2008-2023 This file is copyright:
+# Copyright (C) 2008-2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2023, 2024 KDE euskaratzeko proiektuko arduraduna <xalba@ni.eus>
 #
 # Translators:
 # Asier Urio Larrea <asieriko@gmail.com>, 2008.
-# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2014, 2017, 2020, 2021, 2022, 2023.
+# Iñigo Salvador Azurmendi <xalba@ni.eus>, 2010, 2014, 2017, 2020, 2021, 2022, 2023, 2024.
 # Hizkuntza Politikarako Sailburuordetza <hizpol@ej-gv.es>, 2013.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-10-27 21:19+0200\n"
+"PO-Revision-Date: 2024-08-06 00:04+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: autostartmodel.cpp:383
@@ -107,31 +107,25 @@ msgstr "«%1» fitxategia exekutagarria izan behar da saio-hastean ibiltzeko."
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Gehitu berria"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Gehitu aplikazioa..."
+msgstr "Aplikazioa…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Gehitu saio-hasteko gidoia..."
+msgstr "Saioa hasteko gidoia..."
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Gehitu saio-ixteko gidoia..."
+msgstr "Saioa ixteko gidoia..."
 
 #: ui/main.qml:124
 #, kde-format
@@ -187,12 +181,11 @@ msgid "No user-specified autostart items"
 msgstr "Ez dago erabiltzaileak abio automatikorako zehaztutako elementurik"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "Egin klik <interface>Gehitu...</interface> botoiari batzuk gehitzeko"
+msgstr ""
+"Egin klik <interface>Gehitu berria</interface> botoian batzuk gehitzeko"
 
 #: ui/main.qml:217
 #, kde-format
