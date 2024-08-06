@@ -57,11 +57,21 @@ private Q_SLOTS:
     void onDeviceErrorChanged(const QString &udi);
 
 private:
+    void deviceDelayRemove(const QString &udi);
+
     QList<Solid::Device> m_devices;
     QHash<QString, ActionsControl *> m_actions;
-    QHash<QString, QString> m_encryptedContainerMap;
+
+    // save device type to properly sort and icon and description as workaround because
+    // solid removes it and list model show empty device(without icon and description).
+    // first = type
+    // second.first = icon
+    // second.second = description
+    QHash<QString, std::pair<QString, std::pair<QString, QString>>> m_deviceTypes;
+
+    QHash<QString, QList<Solid::Device>> m_parentDevices;
+    QHash<QString, QTimer *> m_removeTimers;
     Solid::Predicate m_predicateDeviceMatch;
-    Solid::Predicate m_encryptedPredicate;
     const QList<Solid::DeviceInterface::Type> m_types;
     bool m_isVisible;
 

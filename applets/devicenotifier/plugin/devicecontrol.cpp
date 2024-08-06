@@ -40,8 +40,6 @@ DeviceControl::DeviceControl(QObject *parent)
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
                                      << "Begin initializing";
 
-    m_encryptedPredicate = Solid::Predicate(QStringLiteral("StorageVolume"), QStringLiteral("usage"), QLatin1String("Encrypted"));
-
     for (auto type : m_types) {
         m_predicateDeviceMatch |= Solid::Predicate(type);
     }
@@ -82,11 +80,11 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
     case Udi:
         return m_devices[index.row()].udi();
     case Icon:
-        return m_devices[index.row()].icon();
+        return m_deviceTypes[m_devices[index.row()].udi()].second.first;
     case Emblems:
         return m_devices[index.row()].emblems();
     case Description:
-        return m_devices[index.row()].description();
+        return m_deviceTypes[m_devices[index.row()].udi()].second.second;
     case IsRemovable: {
         return m_stateMonitor->isRemovable(m_devices[index.row()].udi());
     }
@@ -110,24 +108,20 @@ QVariant DeviceControl::data(const QModelIndex &index, int role) const
         return m_stateMonitor->getOperationResult(m_devices[index.row()].udi());
     }
     case Timestamp: {
-        return QDateTime::currentDateTimeUtc();
+        return m_stateMonitor->getDeviceTimeStamp(m_devices[index.row()].udi());
     }
-
     case Type: {
-        for (auto type : m_types) {
-            const Solid::DeviceInterface *interface = m_devices[index.row()].asDeviceInterface(type);
-            if (interface) {
-                return Solid::DeviceInterface::typeDescription(type);
-            }
-        }
-        return QString();
+        return m_deviceTypes[m_devices[index.row()].udi()].first;
     }
     case Error:
         return m_errorMonitor->getError(m_devices[index.row()].udi());
     case ErrorMessage:
         return m_errorMonitor->getErrorMassage(m_devices[index.row()].udi());
     case Actions: {
-        return QVariant::fromValue(m_actions[m_devices[index.row()].udi()]);
+        if (auto it = m_actions.constFind(m_devices[index.row()].udi()); it != m_actions.end()) {
+            return QVariant::fromValue(*it);
+        }
+        return {};
     }
     }
 
@@ -202,7 +196,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     }
 
     auto actions = new ActionsControl(udi, this);
-    if (actions->isEmpty() && !m_encryptedPredicate.matches(device)) {
+    if (actions->isEmpty()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
                                          << "device : " << udi << " is not in our interest. Skipping";
         actions->deleteLater();
@@ -214,15 +208,38 @@ void DeviceControl::onDeviceAdded(const QString &udi)
                                      << "New device added : " << udi;
 
     int position = m_devices.size();
+
+    for (auto type : m_types) {
+        const Solid::DeviceInterface *interface = device.asDeviceInterface(type);
+        if (interface) {
+            m_deviceTypes[udi].first = Solid::DeviceInterface::typeDescription(type);
+        }
+    }
+
+    m_deviceTypes[udi].second.first = device.icon();
+    m_deviceTypes[udi].second.second = device.description();
+
     beginInsertRows(QModelIndex(), position, position);
 
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
                                      << "Add device: " << udi << " to the model at position : " << position;
-    m_devices.append(device);
     m_stateMonitor->addMonitoringDevice(udi);
     m_spaceMonitor->addMonitoringDevice(udi);
     m_errorMonitor->addMonitoringDevice(udi);
+    m_devices.append(device);
     endInsertRows();
+
+    // save parent if device is removable to properly remove it later
+    if (m_stateMonitor->isRemovable(udi)) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Save parent device: " << m_devices[position].parent().udi() << "for device: " << udi;
+        if (auto it = m_parentDevices.find(udi); it != m_parentDevices.end()) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: " << "Parent already present: append to parent`s list";
+            it->append(m_devices[position]);
+        } else {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: " << "Creating a new parent list";
+            m_parentDevices.insert(m_devices[position].parent().udi(), {m_devices[position]});
+        }
+    }
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
                                      << "device: " << udi << " successfully added to the model";
 }
@@ -231,6 +248,19 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
                                      << "Removed device signal arrived : " << udi;
+
+    // No need to keep device anymore because it was physically removed.
+    if (auto it = m_parentDevices.constFind(udi); it != m_parentDevices.cend()) {
+        int size = it->size();
+        for (int device = 0; device < size; ++device) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
+                                             << "Parent was removed for : " << udi;
+
+            deviceDelayRemove(it->at(device).udi());
+        }
+        return;
+    }
+
     if (!m_actions.contains(udi)) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
                                          << "Removed device not exist. Skipping : " << udi;
@@ -240,20 +270,84 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].udi() == udi) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
-                                             << "Remove device: " << udi << " from the model at position : " << position;
-            beginRemoveRows(QModelIndex(), position, position);
+                                             << "Begin remove device: " << udi << " from the model at position : " << position;
+
             m_actions[udi]->deleteLater();
             m_actions.remove(udi);
-            m_spaceMonitor->removeMonitoringDevice(udi);
-            m_errorMonitor->removeMonitoringDevice(udi);
-            m_stateMonitor->removeMonitoringDevice(udi);
-            m_devices.removeAt(position);
-            endRemoveRows();
+            QModelIndex index = DeviceControl::index(position);
+            Q_EMIT dataChanged(index, index, {Actions});
 
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
-                                             << "device: " << udi << " successfully removed from the model";
+            // remove space monitoring because device not mounted
+            m_spaceMonitor->removeMonitoringDevice(udi);
+
+            auto it = m_removeTimers.insert(udi, new QTimer(this));
+            it.value()->setSingleShot(true);
+            it.value()->setInterval(std::chrono::seconds(5));
+            // this keeps the delegate around for 5 seconds after the device has been
+            // removed in case there was a message, such as "you can now safely remove this"
+            connect(it.value(), &QTimer::timeout, this, [this, udi]() {
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Timer activated for " << udi;
+                for (int position = 0; position < m_devices.size(); ++position) {
+                    if (m_devices[position].udi() == udi) {
+                        deviceDelayRemove(udi);
+                        break;
+                    }
+                }
+            });
+
+            it.value()->start();
 
             return;
+        }
+    }
+}
+
+void DeviceControl::deviceDelayRemove(const QString &udi)
+{
+    if (auto it = m_removeTimers.find(udi); it != m_removeTimers.end()) {
+        if (it.value()->isActive()) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: " << "device " << udi << " Timer was active: stop";
+            it.value()->stop();
+        }
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: " << "device " << udi << " Remove timer";
+        it.value()->deleteLater();
+        m_removeTimers.erase(it);
+    }
+
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: " << "device " << udi << " : start delay remove";
+    if (m_stateMonitor->isRemovable(udi)) {
+        bool isRemoved = false;
+        for (auto it = m_parentDevices.begin(); !isRemoved && it != m_parentDevices.end(); ++it) {
+            for (int position = 0; position < it->size(); ++position) {
+                if (udi == it->at(position).udi()) {
+                    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: " << "device " << udi << " : found parent device. Removing";
+                    it->removeAt(position);
+                    if (it->isEmpty()) {
+                        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: " << "parent don't have any child devices. Erase parent";
+                        m_parentDevices.erase(it);
+                    }
+                    isRemoved = true;
+                    break;
+                }
+            }
+        }
+    }
+
+    for (int position = 0; position < m_devices.size(); ++position) {
+        if (m_devices[position].udi() == udi) {
+            beginRemoveRows(QModelIndex(), position, position);
+            if (auto it = m_deviceTypes.find(udi); it != m_deviceTypes.end()) {
+                m_deviceTypes.remove(m_devices[position].udi());
+            }
+
+            m_stateMonitor->removeMonitoringDevice(m_devices[position].udi());
+            m_errorMonitor->removeMonitoringDevice(m_devices[position].udi());
+
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
+                                             << "device: " << m_devices[position].udi() << " successfully removed from the model";
+            m_devices.removeAt(position);
+            endRemoveRows();
+            break;
         }
     }
 }

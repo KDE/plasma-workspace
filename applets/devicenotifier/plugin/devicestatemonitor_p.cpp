@@ -51,9 +51,10 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
         return;
     }
 
-    auto it = m_devicesStates.emplace(udi, std::make_pair(false, Idle));
-
     Solid::Device device(udi);
+
+    auto it = m_devicesStates.emplace(udi, DeviceInfo(false, false, Idle, QDateTime::currentDateTimeUtc()));
+
     if (device.is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
         if (drive) {
@@ -69,7 +70,34 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
             connect(access, &Solid::StorageAccess::teardownDone, this, &DevicesStateMonitor::setIdleState);
 
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state : " << access->isAccessible();
-            it->first = access->isAccessible();
+            it->isMounted = access->isAccessible();
+        }
+    }
+
+    if (device.is<Solid::StorageDrive>()) {
+        Solid::StorageDrive *storagedrive = device.as<Solid::StorageDrive>();
+        if (storagedrive) {
+            it->isRemovable = storagedrive->isRemovable();
+        }
+    }
+
+    Solid::StorageDrive *drive = getAncestorAs<Solid::StorageDrive>(device);
+    if (drive) {
+        // remove check for isHotpluggable() when plasmoids are changed to check for both properties
+        it->isRemovable = drive->isRemovable() || drive->isHotpluggable();
+    }
+
+    if (device.is<Solid::Camera>()) {
+        Solid::Camera *camera = device.as<Solid::Camera>();
+        if (camera) {
+            it->isRemovable = true;
+        }
+    }
+
+    if (device.is<Solid::PortableMediaPlayer>()) {
+        Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
+        if (!mediaplayer) {
+            it->isRemovable = true;
         }
     }
 
@@ -96,6 +124,8 @@ void DevicesStateMonitor::removeMonitoringDevice(const QString &udi)
             }
         }
 
+        Q_EMIT stateChanged(udi);
+
         qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " successfully removed";
     } else {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " was not monitored";
@@ -104,32 +134,8 @@ void DevicesStateMonitor::removeMonitoringDevice(const QString &udi)
 
 bool DevicesStateMonitor::isRemovable(const QString &udi) const
 {
-    Solid::Device device(udi);
-    if (device.is<Solid::StorageDrive>()) {
-        Solid::StorageDrive *storagedrive = device.as<Solid::StorageDrive>();
-        if (storagedrive) {
-            return storagedrive->isRemovable();
-        }
-    }
-
-    Solid::StorageDrive *drive = getAncestorAs<Solid::StorageDrive>(device);
-    if (drive) {
-        // remove check for isHotpluggable() when plasmoids are changed to check for both properties
-        return drive->isRemovable() || drive->isHotpluggable();
-    }
-
-    if (device.is<Solid::Camera>()) {
-        Solid::Camera *camera = device.as<Solid::Camera>();
-        if (camera) {
-            return true;
-        }
-    }
-
-    if (device.is<Solid::PortableMediaPlayer>()) {
-        Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
-        if (!mediaplayer) {
-            return true;
-        }
+    if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
+        return it->isRemovable;
     }
     return false;
 }
@@ -137,24 +143,32 @@ bool DevicesStateMonitor::isRemovable(const QString &udi) const
 bool DevicesStateMonitor::isMounted(const QString &udi) const
 {
     if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
-        return it->first;
+        return it->isMounted;
     }
     return false;
+}
+
+QDateTime DevicesStateMonitor::getDeviceTimeStamp(const QString &udi) const
+{
+    if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
+        return it->deviceTimeStamp;
+    }
+    return {};
 }
 
 DevicesStateMonitor::OperationResult DevicesStateMonitor::getOperationResult(const QString &udi) const
 {
     if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
-        return it->second;
+        return it->operationResult;
     }
-    return Idle;
+    return NotPresent;
 }
 
 void DevicesStateMonitor::setMountingState(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed";
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
-        it->second = Working;
+        it->operationResult = Working;
         Q_EMIT stateChanged(udi);
     }
 }
@@ -163,7 +177,7 @@ void DevicesStateMonitor::setUnmountingState(const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed";
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
-        it->second = Working;
+        it->operationResult = Working;
         Q_EMIT stateChanged(udi);
     }
 }
@@ -179,12 +193,12 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType error, QVariant errorDat
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
         if (error == Solid::NoError) {
             Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
-            it->first = access->isAccessible();
+            it->isMounted = access->isAccessible();
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state changed : " << access->isAccessible();
-            it->second = Successful;
+            it->operationResult = Successful;
         } else {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " Error! state don't changed. Error data: " << errorData.toString();
-            it->second = Unsuccessful;
+            it->operationResult = Unsuccessful;
         }
         Q_EMIT stateChanged(udi);
 
@@ -194,9 +208,9 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType error, QVariant errorDat
         stateTimer->setInterval(std::chrono::seconds(2));
         stateTimer->callOnTimeout([this, device, stateTimer]() {
             if (auto it = m_devicesStates.find(device.udi()); it != m_devicesStates.end() && device.isValid()) {
-                it->second = Idle;
-                Q_EMIT stateChanged(device.udi());
+                it->operationResult = it->isMounted ? Idle : it->operationResult == Successful ? NotPresent : Idle;
             }
+            Q_EMIT stateChanged(device.udi());
             stateTimer->deleteLater();
         });
         stateTimer->start();

@@ -8,6 +8,9 @@
 
 #include <Solid/Device>
 #include <Solid/StorageAccess>
+
+#include <QDateTime>
+
 #include <qqmlintegration.h>
 
 // TODO: implement in libsolid2
@@ -25,7 +28,6 @@ DevIface *getAncestorAs(const Solid::Device &device)
 /**
  * This class is connected with solid, and monitors state of devices
  */
-
 class DevicesStateMonitor : public QObject
 {
     Q_OBJECT
@@ -34,7 +36,8 @@ class DevicesStateMonitor : public QObject
 
 public:
     enum OperationResult {
-        Idle = 0,
+        NotPresent = 0,
+        Idle,
         Working,
         Successful,
         Unsuccessful,
@@ -50,9 +53,11 @@ public:
 
     bool isRemovable(const QString &udi) const;
     bool isMounted(const QString &udi) const;
+    QDateTime getDeviceTimeStamp(const QString &udi) const;
 
     /**
      * Return current status of device:
+     *  NotPresent: when device was removed
      *  Idle: when device not do anything
      *  Working: If device in work(mounted, unmounted...)
      *  Successful: When last work was successful
@@ -78,5 +83,12 @@ Q_SIGNALS:
     void stateChanged(const QString &udi);
 
 private:
-    QHash<QString, std::pair<bool, OperationResult>> m_devicesStates;
+    struct DeviceInfo {
+        bool isRemovable;
+        bool isMounted;
+        OperationResult operationResult;
+        QDateTime deviceTimeStamp;
+    };
+
+    QHash<QString, DeviceInfo> m_devicesStates;
 };

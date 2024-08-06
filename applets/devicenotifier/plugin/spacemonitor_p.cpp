@@ -49,18 +49,18 @@ std::shared_ptr<SpaceMonitor> SpaceMonitor::instance()
 
 double SpaceMonitor::getFullSize(const QString &udi) const
 {
-    if (!m_sizes.contains(udi)) {
-        return -1;
+    if (auto it = m_sizes.constFind(udi); it != m_sizes.constEnd()) {
+        return it->first;
     }
-    return m_sizes[udi].first;
+    return -1;
 }
 
 double SpaceMonitor::getFreeSize(const QString &udi) const
 {
-    if (!m_sizes.contains(udi)) {
-        return -1;
+    if (auto it = m_sizes.constFind(udi); it != m_sizes.constEnd()) {
+        return it->second;
     }
-    return m_sizes[udi].second;
+    return -1;
 }
 
 void SpaceMonitor::setIsVisible(bool status)
@@ -85,14 +85,23 @@ void SpaceMonitor::addMonitoringDevice(const QString &udi)
 
 void SpaceMonitor::removeMonitoringDevice(const QString &udi)
 {
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: remove device " << udi;
-    m_sizes.remove(udi);
+    if (auto it = m_sizes.find(udi); it != m_sizes.end()) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: remove device " << udi;
+        m_sizes.remove(udi);
+        Q_EMIT sizeChanged(udi);
+    } else {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: device " << udi << " not found";
+    }
 }
 
 void SpaceMonitor::forceUpdateSize(const QString &udi)
 {
-    qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: forced to update size for device  " << udi;
-    updateStorageSpace(udi);
+    if (auto it = m_sizes.find(udi); it != m_sizes.end()) {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: forced to update size for device  " << udi;
+        updateStorageSpace(udi);
+    } else {
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Space Monitor: device " << udi << " not found";
+    }
 }
 
 void SpaceMonitor::deviceStateChanged(QString udi)

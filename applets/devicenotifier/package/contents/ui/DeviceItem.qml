@@ -39,7 +39,9 @@ PlasmaExtras.ExpandableListItem {
     required property var deviceActions
     required property var deviceEmblems
 
-    property bool hasMessage: deviceErrorMessage !== ""
+    property bool hasMessage: deviceItem.deviceErrorMessage !== ""
+
+    property bool isFree: deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working && deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.NotPresent && !(deviceItem.deviceMounted === false && deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Successful)
 
     onDeviceOperationResultChanged: {
         if (!popupIconTimer.running) {
@@ -63,28 +65,6 @@ PlasmaExtras.ExpandableListItem {
         }
     }
 
-    // this keeps the delegate around for 5 seconds after the device has been
-    // removed in case there was a message, such as "you can now safely remove this"
-    ListView.onRemove: removeAnimation.start()
-
-
-    SequentialAnimation {
-        id: removeAnimation
-        running: false
-        PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: deviceItem.hasMessage }
-        PropertyAction { target: deviceItem; property: "enabled"; value: false }
-        // Reset action model to hide the arrow
-        PropertyAction { target: deviceItem; property: "customExpandedViewContent"; value: []}
-        PropertyAction { target: deviceItem; property: "defaultActionButtonAction"; value: null}
-        PropertyAction { target: deviceItem; property: "icon"; value: deviceItem.deviceIcon || "device-notifier" }
-        PropertyAction { target: deviceItem; property: "subtitle"; value: deviceItem.deviceErrorMessage }
-        PauseAnimation { duration: messageHighlightAnimator.duration }
-        // Otherwise there are briefly multiple highlight effects
-        PropertyAction { target: devicenotifier; property: "currentIndex"; value: -1 }
-        PropertyAction { target: deviceItem; property: "ListView.delayRemove"; value: false }
-    }
-
-
     Timer {
         id: unmountTimer
         interval: 1000
@@ -95,7 +75,7 @@ PlasmaExtras.ExpandableListItem {
 
     iconEmblem: {
         if (deviceItem.hasMessage) {
-            if (filterModel.deviceError === 0) {
+            if (deviceItem.deviceError === 0) {
                 return "emblem-information"
             } else {
                 return "emblem-error"
@@ -111,7 +91,7 @@ PlasmaExtras.ExpandableListItem {
 
     subtitle: {
         if (deviceItem.hasMessage) {
-            return filterModel.lastErrorMessage
+            return deviceItem.deviceErrorMessage
         }
         if (deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working) {
             if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
@@ -141,12 +121,14 @@ PlasmaExtras.ExpandableListItem {
         return Kirigami.Theme.textColor
     }
 
-    defaultActionButtonAction: QQC2.Action {
+    defaultActionButtonAction: isFree ? defaultAction : null
+
+    QQC2.Action {
         id: defaultAction
         icon.name: deviceActions.defaultActionIcon
         text: deviceActions.defaultActionText
         onTriggered: {
-            if(deviceItem.deviceMounted){
+            if (deviceItem.deviceMounted) {
                 unmountTimer.restart();
             }
             deviceActions.actionTriggered(deviceActions.defaultActionName)
@@ -155,7 +137,7 @@ PlasmaExtras.ExpandableListItem {
 
     isBusy: deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working
 
-    customExpandedViewContent: deviceActions.rowCount() === 0 || deviceOperationResult === DN.DevicesStateMonitor.Working ? null : actionComponent
+    customExpandedViewContent: deviceActions !== undefined && deviceActions.rowCount() !== 0 && isFree ? actionComponent : null
 
     Component {
         id: actionComponent
