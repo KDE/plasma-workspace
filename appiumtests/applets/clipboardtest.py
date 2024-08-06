@@ -38,7 +38,7 @@ def spin_glib_main_loop() -> None:
     """
     context = GLib.MainContext.default()
     count = 0
-    while context.pending() or count < 10:
+    while context.pending() or count < 20:
         if not context.pending():
             time.sleep(0.1)
         context.iteration(may_block=False)
