@@ -1194,8 +1194,11 @@ bool PanelView::event(QEvent *e)
         }
         break;
     }
-    // DragLeave just works
     case QEvent::DragLeave:
+        m_containsMouse = false;
+        if (edgeActivated()) {
+            m_unhideTimer.start();
+        }
         break;
     case QEvent::DragMove: {
         QDragMoveEvent *de = static_cast<QDragMoveEvent *>(e);
