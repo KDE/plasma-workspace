@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-07 00:42+0000\n"
 "PO-Revision-Date: 2024-07-18 16:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -23,13 +23,13 @@ msgstr ""
 "X-Generator: Lokalize 24.04.70\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: package/contents/ui/DeviceItem.qml:118
+#: package/contents/ui/DeviceItem.qml:98
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "剩餘 %1，共 %2"
 
-#: package/contents/ui/DeviceItem.qml:122
+#: package/contents/ui/DeviceItem.qml:102
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -37,7 +37,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "存取中…"
 
-#: package/contents/ui/DeviceItem.qml:125
+#: package/contents/ui/DeviceItem.qml:105
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -45,7 +45,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "移除中…"
 
-#: package/contents/ui/DeviceItem.qml:128
+#: package/contents/ui/DeviceItem.qml:108
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "請還不要拔！檔案還在傳輸…"
@@ -202,12 +202,12 @@ msgstr "無法移除此裝置。"
 msgid "Could not eject this disc."
 msgstr "無法退出碟片。"
 
-#: plugin/spacemonitor_p.cpp:137
+#: plugin/spacemonitor_p.cpp:146
 #, kde-format
 msgid "Filesystem is not responding"
 msgstr "檔案系統無回應"
 
-#: plugin/spacemonitor_p.cpp:137
+#: plugin/spacemonitor_p.cpp:146
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr "掛載於「%1」的檔案系統沒有回應"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-07 00:42+0000\n"
 "PO-Revision-Date: 2013-01-02 05:14+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -22,7 +22,7 @@ msgstr ""
 "\n"
 "X-Generator: Lokalize 1.2\n"
 
-#: package/contents/ui/DeviceItem.qml:118
+#: package/contents/ui/DeviceItem.qml:98
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -30,7 +30,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 бос"
 
-#: package/contents/ui/DeviceItem.qml:122
+#: package/contents/ui/DeviceItem.qml:102
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -42,7 +42,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Қатынау..."
 
-#: package/contents/ui/DeviceItem.qml:125
+#: package/contents/ui/DeviceItem.qml:105
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -54,7 +54,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Алып шығару..."
 
-#: package/contents/ui/DeviceItem.qml:128
+#: package/contents/ui/DeviceItem.qml:108
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
@@ -238,12 +238,12 @@ msgstr "%1 құрылғысы тіркелмеді."
 msgid "Could not eject this disc."
 msgstr "Дискін алып-шығу үшін түртіңіз."
 
-#: plugin/spacemonitor_p.cpp:137
+#: plugin/spacemonitor_p.cpp:146
 #, kde-format
 msgid "Filesystem is not responding"
 msgstr ""
 
-#: plugin/spacemonitor_p.cpp:137
+#: plugin/spacemonitor_p.cpp:146
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
 msgstr ""
