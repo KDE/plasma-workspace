@@ -92,7 +92,6 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
                                      "SettingType",
                                      QStringLiteral("Error: SettingType is an enum"));
 
-#if GLIBC_LOCALE_GENERATED
     // fedora pre generate locales, fetch available locales from localectl. /usr/share/i18n/locales is empty in fedora
     QDir glibcLocaleDir(localeFileDirPath());
     if (glibcLocaleDir.isEmpty()) {
@@ -109,13 +108,12 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
                 Q_EMIT enabledChanged();
             });
             m_localectl->start();
+        } else {
+            m_enabled = true;
         }
     } else {
         m_enabled = true;
     }
-#else
-    m_enabled = true;
-#endif
 
     m_loadedBinaryDialect = m_optionsModel->binaryDialect();
 
