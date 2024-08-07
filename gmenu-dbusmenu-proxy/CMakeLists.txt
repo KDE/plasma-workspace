@@ -55,6 +55,7 @@ target_link_libraries(gmenudbusmenuproxy
     KF6::ConfigCore
     KF6::DBusAddons
     KF6::WindowSystem
+    KF6::Crash
     XCB::XCB
 )
 target_link_libraries(gmenudbusmenuproxy Qt::GuiPrivate)

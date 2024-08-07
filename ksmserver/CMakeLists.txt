@@ -48,6 +48,7 @@ target_link_libraries(ksmserver
     KF6::Notifications
     KF6::Package
     KF6::WindowSystem
+    KF6::Crash
     Qt::Concurrent
     X11::X11
     X11::SM

@@ -10,6 +10,7 @@
 
 #include "fdoselectionmanager.h"
 
+#include "config-workspace.h"
 #include "debug.h"
 #include "snidbus.h"
 #include "xcbutils.h"
@@ -26,6 +27,8 @@ inline constexpr XID None = XNone;
 
 #include <QDBusMetaType>
 
+#include <KAboutData>
+#include <KCrash>
 #include <KDBusService>
 #include <KWindowSystem>
 
@@ -48,14 +51,17 @@ int main(int argc, char **argv)
         qFatal("xembed-sni-proxy is only useful XCB. Aborting");
     }
 
+    KAboutData about(QStringLiteral("xembedsniproxy"), QString(), QStringLiteral(WORKSPACE_VERSION_STRING));
+    KAboutData::setApplicationData(about);
+
+    KCrash::initialize();
+
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);
     };
     app.connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     app.connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-    app.setApplicationName(QStringLiteral("xembedsniproxy"));
-    app.setOrganizationDomain(QStringLiteral("kde.org"));
     app.setQuitOnLastWindowClosed(false);
 
     qDBusRegisterMetaType<KDbusImageStruct>();
