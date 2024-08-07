@@ -55,6 +55,8 @@ target_link_libraries(xembedsniproxy
     Qt::DBus
     KF6::DBusAddons
     KF6::WindowSystem
+    KF6::CoreAddons
+    KF6::Crash
     ${XCB_LIBS}
     X11::Xtst
 )

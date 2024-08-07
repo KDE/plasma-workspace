@@ -19,6 +19,8 @@
 #include <Baloo/IndexerConfig>
 #include <Baloo/Query>
 
+#include <KAboutData>
+#include <KCrash>
 #include <KIO/JobUiDelegate>
 #include <KIO/JobUiDelegateFactory>
 #include <KIO/OpenFileManagerWindowJob>
@@ -26,6 +28,7 @@
 #include <KNotificationJobUiDelegate>
 #include <KShell>
 
+#include "config-workspace.h"
 #include "krunner1adaptor.h"
 
 static const QString s_openParentDirId = QStringLiteral("openParentDir");
@@ -35,6 +38,12 @@ int main(int argc, char **argv)
     QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QApplication::setQuitOnLastWindowClosed(false);
     QApplication app(argc, argv); // KRun needs widgets for error message boxes
+
+    KAboutData about(QStringLiteral("baloorunner"), QString(), QStringLiteral(WORKSPACE_VERSION_STRING));
+    KAboutData::setApplicationData(about);
+
+    KCrash::initialize();
+
     SearchRunner r;
     return app.exec();
 }

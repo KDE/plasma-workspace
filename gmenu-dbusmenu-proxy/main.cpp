@@ -7,9 +7,12 @@
 #include <QGuiApplication>
 #include <QSessionManager>
 
+#include <KAboutData>
+#include <KCrash>
 #include <KDBusService>
 #include <KWindowSystem>
 
+#include "config-workspace.h"
 #include "menuproxy.h"
 
 using namespace Qt::StringLiterals;
@@ -26,14 +29,17 @@ int main(int argc, char **argv)
         qFatal("gmenudbusmenuproxy is only useful XCB. Aborting");
     }
 
+    KAboutData about(QStringLiteral("gmenudbusmenuproxy"), QString(), QStringLiteral(WORKSPACE_VERSION_STRING));
+    KAboutData::setApplicationData(about);
+
+    KCrash::initialize();
+
     auto disableSessionManagement = [](QSessionManager &sm) {
         sm.setRestartHint(QSessionManager::RestartNever);
     };
     app.connect(&app, &QGuiApplication::commitDataRequest, disableSessionManagement);
     app.connect(&app, &QGuiApplication::saveStateRequest, disableSessionManagement);
 
-    app.setApplicationName(u"gmenudbusmenuproxy"_s);
-    app.setOrganizationDomain(u"kde.org"_s);
     app.setQuitOnLastWindowClosed(false);
 
     KDBusService service(KDBusService::Unique);

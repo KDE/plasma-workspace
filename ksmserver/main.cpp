@@ -16,6 +16,8 @@
 #include <unistd.h>
 
 #include "server.h"
+#include <KAboutData>
+#include <KCrash>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KRuntimePlatform>
@@ -30,8 +32,6 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QFile>
-
-static const char version[] = "0.4";
 
 void IoErrorHandler(IceConn iceConn)
 {
@@ -181,9 +181,10 @@ int main(int argc, char *argv[])
         qputenv("QT_QPA_PLATFORM", origQpaPlatform);
     }
 
-    QCoreApplication::setApplicationName(QStringLiteral("ksmserver"));
-    QCoreApplication::setApplicationVersion(QString::fromLatin1(version));
-    QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
+    KAboutData about(QStringLiteral("ksmserver"), QString(), QStringLiteral(WORKSPACE_VERSION_STRING));
+    KAboutData::setApplicationData(about);
+
+    KCrash::initialize();
 
     fcntl(ConnectionNumber(a->nativeInterface<QNativeInterface::QX11Application>()->display()), F_SETFD, 1);
 

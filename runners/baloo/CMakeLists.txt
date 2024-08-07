@@ -15,6 +15,7 @@ target_link_libraries(baloorunner
   KF6::I18n
   KF6::Baloo
   KF6::Notifications
+  KF6::Crash
   Qt::DBus
 )
 
