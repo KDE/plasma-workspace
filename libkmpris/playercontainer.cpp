@@ -711,15 +711,11 @@ void PlayerContainer::onGetPropsFinished(QDBusPendingCallWatcher *watcher)
 
 void PlayerContainer::onPropertiesChanged(const QString &interfaceName, const QVariantMap &changedProperties, const QStringList &invalidatedProperties)
 {
-    if (interfaceName != QLatin1String("org.mpris.MediaPlayer2.Player") && interfaceName != QLatin1String("org.mpris.MediaPlayer2")) {
-        // org.mpris.MediaPlayer2.TrackList is ignored for now
-        return;
-    }
-    if (!invalidatedProperties.empty()) {
+    if (!invalidatedProperties.empty() || interfaceName == u"org.mpris.MediaPlayer2.TrackList") {
         disconnect(m_propsIface, &OrgFreedesktopDBusPropertiesInterface::PropertiesChanged, this, &PlayerContainer::onPropertiesChanged);
         disconnect(m_playerIface, &OrgMprisMediaPlayer2PlayerInterface::Seeked, this, &PlayerContainer::onSeeked);
         refresh();
-    } else {
+    } else if (interfaceName == u"org.mpris.MediaPlayer2.Player" || interfaceName == u"org.mpris.MediaPlayer2") [[likely]] {
         updateFromMap(changedProperties);
     }
 }
