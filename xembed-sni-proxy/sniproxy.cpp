@@ -9,6 +9,7 @@
 #include "sniproxy.h"
 
 #include <algorithm>
+#include <span>
 #include <xcb/xcb_atom.h>
 #include <xcb/xcb_event.h>
 
