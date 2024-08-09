@@ -99,7 +99,7 @@ KCMRegionAndLang::KCMRegionAndLang(QObject *parent, const KPluginMetaData &data)
         if (!localectlPath.isEmpty()) {
             m_localectl = new QProcess(this);
             m_localectl->setProgram(localectlPath);
-            m_localectl->setArguments({QStringLiteral("list-locales")});
+            m_localectl->setArguments({QStringLiteral("list-locales"), QStringLiteral("--no-pager")});
             connect(m_localectl, &QProcess::finished, this, [this](int exitCode, QProcess::ExitStatus status) {
                 m_enabled = true; // set to true even if failed. otherwise our failed notification is also grey out
                 if (exitCode != 0 || status != QProcess::NormalExit) {
