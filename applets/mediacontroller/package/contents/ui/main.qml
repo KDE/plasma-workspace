@@ -174,7 +174,11 @@ PlasmoidItem {
         mpris2Model.currentPlayer.Pause();
     }
     function togglePlaying() {
-        mpris2Model.currentPlayer.PlayPause();
+        if (root.isPlaying) {
+            mpris2Model.currentPlayer.Pause();
+        } else {
+            mpris2Model.currentPlayer.Play();
+        }
     }
     function stop() {
         mpris2Model.currentPlayer.Stop();
