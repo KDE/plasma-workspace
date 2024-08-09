@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-03 00:41+0000\n"
+"POT-Creation-Date: 2024-08-09 00:41+0000\n"
 "PO-Revision-Date: 2024-08-03 12:38+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -678,27 +678,27 @@ msgstr ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 
-#: klipper.cpp:568
+#: klipper.cpp:555
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobile Barcode"
 
-#: klipper.cpp:611 klipper.cpp:620
+#: klipper.cpp:598 klipper.cpp:607
 #, kde-format
 msgid "Clipboard history"
 msgstr "Clipboard history"
 
-#: klipper.cpp:637
+#: klipper.cpp:624
 #, kde-format
 msgid "up"
 msgstr "up"
 
-#: klipper.cpp:644
+#: klipper.cpp:631
 #, kde-format
 msgid "current"
 msgstr "current"
 
-#: klipper.cpp:651
+#: klipper.cpp:638
 #, kde-format
 msgid "down"
 msgstr "down"

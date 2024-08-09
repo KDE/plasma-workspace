@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-03 00:41+0000\n"
+"POT-Creation-Date: 2024-08-09 00:41+0000\n"
 "PO-Revision-Date: 2024-04-14 10:54+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -693,27 +693,27 @@ msgstr ""
 "Verkko-osoitetoiminnot voi ottaa käyttöön myöhemmin leikepöytäsovelman "
 "asetusikkunan <interface>Toiminnot</interface>-sivulla"
 
-#: klipper.cpp:568
+#: klipper.cpp:555
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Kuviokoodi mobiilikäyttöön"
 
-#: klipper.cpp:611 klipper.cpp:620
+#: klipper.cpp:598 klipper.cpp:607
 #, kde-format
 msgid "Clipboard history"
 msgstr "Leikepöydän historia"
 
-#: klipper.cpp:637
+#: klipper.cpp:624
 #, kde-format
 msgid "up"
 msgstr "ylemmäs"
 
-#: klipper.cpp:644
+#: klipper.cpp:631
 #, kde-format
 msgid "current"
 msgstr "nykyinen"
 
-#: klipper.cpp:651
+#: klipper.cpp:638
 #, kde-format
 msgid "down"
 msgstr "alemmas"
