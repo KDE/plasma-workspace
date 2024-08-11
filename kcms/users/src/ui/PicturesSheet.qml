@@ -135,6 +135,10 @@ Kirigami.OverlaySheet {
                     Dialogs.FileDialog {
                         id: fileDialog
                         title: i18nc("@title", "Choose a picture")
+                        nameFilters: [
+                            i18nc("@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate *.avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, *.tiff, *.wbmp, *.webp, *.xbm, *.xpm",
+                                "Image files \(All major file types\) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)")
+                        ]
                         onAccepted: {
                             usersDetailPage.oldImage = usersDetailPage.user.face
                             usersDetailPage.user.face = fileDialog.selectedFile
