@@ -121,7 +121,7 @@ PlasmaExtras.ExpandableListItem {
         return Kirigami.Theme.textColor
     }
 
-    defaultActionButtonAction: isFree ? defaultAction : null
+    defaultActionButtonAction: deviceActions !== undefined && isFree ? defaultAction : null
 
     QQC2.Action {
         id: defaultAction
