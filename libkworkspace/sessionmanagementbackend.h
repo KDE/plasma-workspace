@@ -31,6 +31,7 @@ public:
 
     virtual void shutdown() = 0;
     virtual void reboot() = 0;
+    virtual void sleep() = 0;
     virtual void suspend() = 0;
     virtual void hybridSuspend() = 0;
     virtual void hibernate() = 0;
@@ -38,6 +39,7 @@ public:
 
     virtual bool canShutdown() const = 0;
     virtual bool canReboot() const = 0;
+    virtual bool canSleep() const = 0;
     virtual bool canSuspend() const = 0;
     virtual bool canHybridSuspend() const = 0;
     virtual bool canHibernate() const = 0;
@@ -51,6 +53,7 @@ Q_SIGNALS:
     void stateChanged();
     void canShutdownChanged();
     void canRebootChanged();
+    void canSleepChanged();
     void canSuspendChanged();
     void canHybridSuspendChanged();
     void canHibernateChanged();
@@ -81,12 +84,14 @@ public:
     SessionManagement::State state() const override;
     void shutdown() override;
     void reboot() override;
+    void sleep() override;
     void suspend() override;
     void hybridSuspend() override;
     void hibernate() override;
     void suspendThenHibernate() override;
     bool canShutdown() const override;
     bool canReboot() const override;
+    bool canSleep() const override;
     bool canSuspend() const override;
     bool canHybridSuspend() const override;
     bool canHibernate() const override;
@@ -98,6 +103,7 @@ private:
     SessionManagement::State m_state = SessionManagement::State::Loading;
     bool m_canShutdown = false;
     bool m_canReboot = false;
+    bool m_canSleep = false;
     bool m_canSuspend = false;
     bool m_canHybridSuspend = false;
     bool m_canHibernate = false;
@@ -121,6 +127,9 @@ public:
     void reboot() override
     {
     }
+    void sleep() override
+    {
+    }
     void suspend() override
     {
     }
@@ -138,6 +147,10 @@ public:
         return false;
     }
     bool canReboot() const override
+    {
+        return false;
+    }
+    bool canSleep() const override
     {
         return false;
     }
@@ -171,6 +184,7 @@ public:
     }
     void shutdown() override;
     void reboot() override;
+    void sleep() override;
     void suspend() override;
     void hybridSuspend() override;
     void hibernate() override;
@@ -181,6 +195,10 @@ public:
         return true;
     }
     bool canReboot() const override
+    {
+        return true;
+    }
+    bool canSleep() const override
     {
         return true;
     }
