@@ -76,6 +76,11 @@ void TestSessionBackend::reboot()
     std::cout << "reboot" << std::endl;
 }
 
+void TestSessionBackend::sleep()
+{
+    std::cout << "sleep" << std::endl;
+}
+
 void TestSessionBackend::suspend()
 {
     std::cout << "suspend" << std::endl;
@@ -125,13 +130,14 @@ LogindSessionBackend::LogindSessionBackend()
             Q_EMIT stateChanged();
             Q_EMIT canShutdownChanged();
             Q_EMIT canRebootChanged();
+            Q_EMIT canSleepChanged();
             Q_EMIT canSuspendChanged();
             Q_EMIT canHibernateChanged();
             Q_EMIT canSuspendThenHibernateChanged();
         }
     };
 
-    m_pendingJobs = 5;
+    m_pendingJobs = 7;
     {
         auto watcher = new QDBusPendingCallWatcher(m_login1->CanPowerOff(), this);
         connect(watcher, &QDBusPendingCallWatcher::finished, this, std::bind(propLoaded, std::placeholders::_1, &m_canShutdown));
@@ -139,6 +145,10 @@ LogindSessionBackend::LogindSessionBackend()
     {
         auto watcher = new QDBusPendingCallWatcher(m_login1->CanReboot(), this);
         connect(watcher, &QDBusPendingCallWatcher::finished, this, std::bind(propLoaded, std::placeholders::_1, &m_canReboot));
+    }
+    {
+        auto watcher = new QDBusPendingCallWatcher(m_login1->CanSleep(), this);
+        connect(watcher, &QDBusPendingCallWatcher::finished, this, std::bind(propLoaded, std::placeholders::_1, &m_canSleep));
     }
     {
         auto watcher = new QDBusPendingCallWatcher(m_login1->CanSuspend(), this);
@@ -183,6 +193,11 @@ void LogindSessionBackend::reboot()
     m_login1->Reboot(true).waitForFinished();
 }
 
+void LogindSessionBackend::sleep()
+{
+    m_login1->Sleep(0x0).waitForFinished();
+}
+
 void LogindSessionBackend::suspend()
 {
     // these need to be synchronous as well - ksmserver-logout-greeter specifically calls these
@@ -213,6 +228,11 @@ bool LogindSessionBackend::canShutdown() const
 bool LogindSessionBackend::canReboot() const
 {
     return m_canReboot;
+}
+
+bool LogindSessionBackend::canSleep() const
+{
+    return m_canSleep;
 }
 
 bool LogindSessionBackend::canSuspend() const

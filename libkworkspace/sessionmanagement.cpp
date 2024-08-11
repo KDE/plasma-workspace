@@ -68,6 +68,7 @@ SessionManagement::SessionManagement(QObject *parent)
     connect(backend, &SessionBackend::stateChanged, this, &SessionManagement::stateChanged);
     connect(backend, &SessionBackend::canShutdownChanged, this, &SessionManagement::canShutdownChanged);
     connect(backend, &SessionBackend::canRebootChanged, this, &SessionManagement::canRebootChanged);
+    connect(backend, &SessionBackend::canSleepChanged, this, &SessionManagement::canSleepChanged);
     connect(backend, &SessionBackend::canSuspendChanged, this, &SessionManagement::canSuspendChanged);
     connect(backend, &SessionBackend::canHybridSuspendChanged, this, &SessionManagement::canHybridSuspendChanged);
     connect(backend, &SessionBackend::canHibernateChanged, this, &SessionManagement::canHibernateChanged);
@@ -91,6 +92,11 @@ bool SessionManagement::canLogout() const
     // checking both is for compatibility with old kiosk configs
     // authorizeAction is the "correct" one
     return KAuthorized::authorizeAction(QStringLiteral("logout")) && KAuthorized::authorize(QStringLiteral("logout"));
+}
+
+bool SessionManagement::canSleep() const
+{
+    return SessionBackend::self()->canSleep();
 }
 
 bool SessionManagement::canSuspend() const
@@ -213,6 +219,14 @@ void SessionManagement::requestLogout(ConfirmationMode confirmationMode)
         ShutdownIface iface;
         lockQuitUntilFinished(iface.logout());
     }
+}
+
+void SessionManagement::sleep()
+{
+    if (!canSleep()) {
+        return;
+    }
+    SessionBackend::self()->sleep();
 }
 
 void SessionManagement::suspend()

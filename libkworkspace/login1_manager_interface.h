@@ -166,6 +166,12 @@ public Q_SLOTS: // METHODS
         return asyncCallWithArgumentList(QStringLiteral("AttachDevice"), argumentList);
     }
 
+    inline QDBusPendingReply<QString> CanSleep()
+    {
+        QList<QVariant> argumentList;
+        return asyncCallWithArgumentList(QStringLiteral("CanSleep"), argumentList);
+    }
+
     inline QDBusPendingReply<QString> CanHibernate()
     {
         QList<QVariant> argumentList;
@@ -242,6 +248,13 @@ public Q_SLOTS: // METHODS
         QList<QVariant> argumentList;
         argumentList << QVariant::fromValue(in0);
         return asyncCallWithArgumentList(QStringLiteral("GetUserByPID"), argumentList);
+    }
+
+    inline QDBusPendingReply<> Sleep(quint64 in0)
+    {
+        QList<QVariant> argumentList;
+        argumentList << QVariant::fromValue(in0);
+        return asyncCallWithArgumentList(QStringLiteral("Sleep"), argumentList);
     }
 
     inline QDBusPendingReply<> Hibernate(bool in0)
