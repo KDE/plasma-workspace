@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-20 00:41+0000\n"
+"POT-Creation-Date: 2024-08-11 00:42+0000\n"
 "PO-Revision-Date: 2021-11-22 18:59+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "Wočinić z %1"
 msgid "Open with…"
 msgstr "Wočinić z..."
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:266
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:267
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Zapisk  z tutym elementom wočinić"
@@ -254,13 +254,13 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/s"
 
-#: package/contents/ui/JobItem.qml:164
+#: package/contents/ui/JobItem.qml:165
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:179
+#: package/contents/ui/JobItem.qml:180
 #, fuzzy, kde-format
 #| msgctxt "A button tooltip; hides item details"
 #| msgid "Hide Details"
@@ -268,25 +268,25 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Nadrobnosće chować"
 
-#: package/contents/ui/JobItem.qml:190
+#: package/contents/ui/JobItem.qml:191
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pozastajić"
 
-#: package/contents/ui/JobItem.qml:199
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Přetorhnyć"
 
-#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "Wjace opcijow..."
 
-#: package/contents/ui/JobItem.qml:258
+#: package/contents/ui/JobItem.qml:259
 #, kde-format
 msgid "Open"
 msgstr "Wočinić"

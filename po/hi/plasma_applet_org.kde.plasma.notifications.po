@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-20 00:41+0000\n"
+"POT-Creation-Date: 2024-08-11 00:42+0000\n"
 "PO-Revision-Date: 2021-09-07 10:37+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -28,7 +28,7 @@ msgstr "%1 के साथ खोलें"
 msgid "Open with…"
 msgstr "इसके साथ खोलें..."
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:266
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:267
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "युक्त फोल्डर खोलें"
@@ -244,7 +244,7 @@ msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/से"
 
-#: package/contents/ui/JobItem.qml:164
+#: package/contents/ui/JobItem.qml:165
 #, fuzzy, kde-format
 #| msgctxt "Row description, e.g. Source"
 #| msgid "%1:"
@@ -252,7 +252,7 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1:"
 
-#: package/contents/ui/JobItem.qml:179
+#: package/contents/ui/JobItem.qml:180
 #, fuzzy, kde-format
 #| msgctxt "A button tooltip; hides item details"
 #| msgid "Hide Details"
@@ -260,25 +260,25 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "विवरण छुपाएँ"
 
-#: package/contents/ui/JobItem.qml:190
+#: package/contents/ui/JobItem.qml:191
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "ठहरें"
 
-#: package/contents/ui/JobItem.qml:199
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "रद्द करें"
 
-#: package/contents/ui/JobItem.qml:230
+#: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "अधिक विकल्प…"
 
-#: package/contents/ui/JobItem.qml:258
+#: package/contents/ui/JobItem.qml:259
 #, kde-format
 msgid "Open"
 msgstr "खोलें"
