@@ -484,7 +484,25 @@ void DesktopView::slotContainmentChanged()
     if (m_containment) {
         connect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::slotScreenChanged);
         slotScreenChanged(m_containment->screen());
+
+        QAction *desktopEditMode = new QAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Enter Edit Mode"), m_containment);
+        QAction *editMode = m_containment->corona()->action(QStringLiteral("edit mode"));
+        m_containment->setInternalAction(QStringLiteral("desktop edit mode"), desktopEditMode);
+        connect(desktopEditMode, &QAction::triggered, editMode, &QAction::triggered);
+        connect(desktopEditMode, &QAction::triggered, [&]() {
+            m_enteredEditMode = true;
+        });
+        connect(m_containment->corona(), &Plasma::Corona::editModeChanged, this, [&](bool editMode) {
+            if (!editMode) {
+                m_enteredEditMode = false;
+            }
+        });
     }
+}
+
+bool DesktopView::enteredEditMode() const
+{
+    return m_enteredEditMode;
 }
 
 void DesktopView::slotScreenChanged(int newId)

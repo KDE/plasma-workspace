@@ -2097,6 +2097,16 @@ PanelView *ShellCorona::panelBeingConfigured() const
     return nullptr;
 }
 
+bool ShellCorona::enteredEditModeViaDesktop()
+{
+    for (DesktopView *desktop : m_desktopViewForScreen) {
+        if (desktop->enteredEditMode()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 void ShellCorona::populateAddPanelsMenu()
 {
     m_addPanelsMenu->clear();

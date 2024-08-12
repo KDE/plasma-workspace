@@ -10,6 +10,7 @@
 
 #include "autohidescreenedge.h"
 #include "debug.h"
+#include "desktopview.h"
 #include "panelconfigview.h"
 #include "panelshadows_p.h"
 #include "panelview.h"
@@ -908,7 +909,14 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
     if (isPanelConfig) {
         if (m_panelConfigView && m_panelConfigView->isVisible()) {
             m_panelConfigView->hide();
-            cont->corona()->setEditMode(false);
+
+            // We only exit edit mode if there's no other containment
+            // being configured.
+
+            if (!m_corona->enteredEditModeViaDesktop()) {
+                m_corona->setEditMode(false);
+            }
+
         } else if (m_panelConfigView) {
             m_panelConfigView->show();
             m_panelConfigView->requestActivate();

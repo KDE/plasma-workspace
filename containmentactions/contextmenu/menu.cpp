@@ -70,9 +70,15 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("add widgets")
                       << QStringLiteral("_add panel")
                       << QStringLiteral("manage activities")
-                      << QStringLiteral("remove")
-                      << QStringLiteral("edit mode")
-                      << QStringLiteral("_sep2")
+                      << QStringLiteral("remove");
+
+        if (c->containmentType() == Plasma::Containment::Desktop) {
+            m_actionOrder << QStringLiteral("desktop edit mode");
+        } else {
+            m_actionOrder << QStringLiteral("edit mode");
+        }
+
+        m_actionOrder << QStringLiteral("_sep2")
                       << QStringLiteral("_lock_screen")
                       << QStringLiteral("_logout")
                       << QStringLiteral("_sep3")

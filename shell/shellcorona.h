@@ -142,6 +142,8 @@ public:
 
     PanelView *panelBeingConfigured() const;
 
+    Q_INVOKABLE bool enteredEditModeViaDesktop();
+
 Q_SIGNALS:
     void glInitializationFailed();
     // A preview for this containment has been rendered and saved to disk

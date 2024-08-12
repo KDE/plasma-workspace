@@ -69,6 +69,8 @@ public:
     void setAccentColor(const QColor &);
     void resetAccentColor();
 
+    bool enteredEditMode() const;
+
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
     bool showPreviewBanner() const;
     QString previewBannerTitle() const;
@@ -124,6 +126,8 @@ private:
     // Accent color config
     Plasma::Containment *m_containment = nullptr;
     int m_containmentScreenId = -1;
+
+    bool m_enteredEditMode;
 
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
     bool m_showPreviewBanner;
