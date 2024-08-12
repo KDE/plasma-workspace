@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2023-12-26 08:31-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -18,6 +18,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "aalam@users.sf.net"
 
 #: logout.cpp:273
 #, kde-format
@@ -106,7 +116,7 @@ msgstr ""
 msgid "Plasma Workspace installation problem!"
 msgstr "ਪਲਾਜ਼ਮਾ ਵਰਕਸਪੇਸ ਇੰਸਟਾਲੇਸ਼ਨ ਦੀ ਸਮੱਸਿਆ ਹੈ!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -115,22 +125,22 @@ msgstr ""
 "ਇੱਕ ਭਰੋਸੇਯੋਗ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਮੈਨੇਜਰ, ਜੋ ਕਿ ਸਟੈਂਡਰਡ X11R6 \n"
 "ਸ਼ੈਸ਼ਨ ਪਰਬੰਧ ਪਰੋਟੋਕਾਲ (XSMP) ਨਾਲ ਸੰਚਾਰ ਕਰਦਾ ਹੈ।"
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "ਵਰਤੋਂਕਾਰ ਦਾ, ਜੇ ਸੰਭਾਲਿਆ ਸ਼ੈਸ਼ਨ ਹੈ, ਤਾਂ ਮੁੜ-ਸਟੋਰ ਕਰੋ"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "ਰਿਮੋਟ ਕੁਨੈਕਸ਼ਨ ਵੀ ਮਨਜ਼ੂਰ ਹਨ"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "ਸ਼ੈਸ਼ਨ ਲਾਕ ਕੀਤੇ ਮੋਡ ਵਿੱਚ ਸ਼ੁਰੂ ਕਰੋ"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -256,14 +266,6 @@ msgstr ""
 
 #~ msgid "Suspend to &Disk"
 #~ msgstr "ਡਿਸਕ ਉੱਤੇ ਸਸਪੈਂਡ ਕਰੋ(&D)"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "aalam@users.sf.net"
 
 #~ msgid "(C) 2000, The KDE Developers"
 #~ msgstr "(C) ੨੦੦੦, KDE ਡਿਵੈਲਪਰ"

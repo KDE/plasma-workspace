@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-19 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2024-03-21 16:42+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -18,12 +18,22 @@ msgstr ""
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.3\n"
 
-#: baloosearchrunner.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: baloosearchrunner.cpp:69
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Opna möppu sem skráin er í"
 
-#: baloosearchrunner.cpp:84
+#: baloosearchrunner.cpp:93
 #, kde-format
 msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
@@ -31,47 +41,47 @@ msgctxt ""
 msgid "Audio"
 msgstr "Hljóð"
 
-#: baloosearchrunner.cpp:86
+#: baloosearchrunner.cpp:95
 #, kde-format
 msgid "Images"
 msgstr "Myndir"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Videos"
 msgstr "Myndskeið"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:97
 #, kde-format
 msgid "Spreadsheets"
 msgstr "Töflureiknar"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:98
 #, kde-format
 msgid "Presentations"
 msgstr "Kynningar"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:99
 #, kde-format
 msgid "Folders"
 msgstr "Möppur"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:100
 #, kde-format
 msgid "Documents"
 msgstr "Skjöl"
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:101
 #, kde-format
 msgid "Archives"
 msgstr "Safnskrár"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:102
 #, kde-format
 msgid "Texts"
 msgstr "Textar"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:103
 #, kde-format
 msgid "Files"
 msgstr "Skrár"

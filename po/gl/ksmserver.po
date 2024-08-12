@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2023-11-11 14:28+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -30,6 +30,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.2\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Xabi García, Jesús Bravo, Marce Villarino"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xabigf@gmx.net, jba@pobox.com, mvillarino@users.sourceforge.net"
 
 #: logout.cpp:273
 #, kde-format
@@ -117,7 +127,7 @@ msgstr ""
 msgid "Plasma Workspace installation problem!"
 msgstr "Detectouse un problema na instalación do espazo de traballo de Plasma!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -126,22 +136,22 @@ msgstr ""
 "O xestor de sesións de Plasma que conversa co protocolo estándar de\n"
 "X11R6 para xestión de sesións (XSMP)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Restaura a sesión de persoa usuaria gardada se está dispoñíbel."
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permitir tamén conexións remotas"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Inicia a sesión no modo trancado"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -272,14 +282,6 @@ msgstr ""
 
 #~ msgid "Suspend to &Disk"
 #~ msgstr "Suspender no &disco"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Xabi García, Jesús Bravo, Marce Villarino"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "xabigf@gmx.net, jba@pobox.com, mvillarino@users.sourceforge.net"
 
 #~ msgid "(C) 2000, The KDE Developers"
 #~ msgstr "(C) 2000, Os desenvolventes de KDE"

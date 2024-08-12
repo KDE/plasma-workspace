@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-19 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2024-05-28 11:13+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -19,12 +19,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.02.2\n"
 
-#: baloosearchrunner.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: baloosearchrunner.cpp:69
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Tartalmazó mappa megnyitása"
 
-#: baloosearchrunner.cpp:84
+#: baloosearchrunner.cpp:93
 #, kde-format
 msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
@@ -32,47 +42,47 @@ msgctxt ""
 msgid "Audio"
 msgstr "Hang"
 
-#: baloosearchrunner.cpp:86
+#: baloosearchrunner.cpp:95
 #, kde-format
 msgid "Images"
 msgstr "Képek"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Videos"
 msgstr "Videók"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:97
 #, kde-format
 msgid "Spreadsheets"
 msgstr "Táblázatok"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:98
 #, kde-format
 msgid "Presentations"
 msgstr "Bemutatók"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:99
 #, kde-format
 msgid "Folders"
 msgstr "Mappák"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:100
 #, kde-format
 msgid "Documents"
 msgstr "Dokumentumok"
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:101
 #, kde-format
 msgid "Archives"
 msgstr "Archívumok"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:102
 #, kde-format
 msgid "Texts"
 msgstr "Szövegek"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:103
 #, kde-format
 msgid "Files"
 msgstr "Fájlok"

@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-03 00:41+0000\n"
-"PO-Revision-Date: 2024-06-28 10:07+0300\n"
+"PO-Revision-Date: 2024-08-11 07:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -375,7 +375,7 @@ msgstr "Скрыть рабочий стол"
 #: shellcorona.cpp:224
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Вызвать меню запуска приложений"
 
 #: shellcorona.cpp:232
 #, kde-format

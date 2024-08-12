@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,6 +22,16 @@ msgstr ""
 "X-Crowdin-File: /[antikruk.KDE] main/KDE6/be/messages/plasma-workspace/"
 "ksmserver.po\n"
 "X-Crowdin-File-ID: 10794\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Дарафей Праляскоўскі"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "komzpa@licei2.com"
 
 #: logout.cpp:273
 #, kde-format
@@ -114,7 +124,7 @@ msgstr ""
 msgid "Plasma Workspace installation problem!"
 msgstr "Пры ўсталяванні працоўнага асяроддзя Plasma паўстала праблема!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -123,22 +133,22 @@ msgstr ""
 "Надзейны кіраўнік сеансаў для Plasma, які дзейнічае па стандартным пратаколе "
 "кіравання сеансамі X11R6 (XSMP)."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Аднаўляе захаваны сеанс, калі ён даступны"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Таксама дазволіць адлеглыя падлучэнні"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Запускаць сеанс у заблакаваным рэжыме"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -274,14 +284,6 @@ msgstr ""
 #~| msgid "Suspend to Disk"
 #~ msgid "Suspend to &Disk"
 #~ msgstr "Запісацца на дыск"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Дарафей Праляскоўскі"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "komzpa@licei2.com"
 
 #~ msgid "(C) 2000, The KDE Developers"
 #~ msgstr "(C) 2000, Распрацоўшчыкі KDE"

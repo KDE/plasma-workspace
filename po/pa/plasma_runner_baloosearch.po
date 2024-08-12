@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-19 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2024-01-01 09:47-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -17,12 +17,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.08.4\n"
 
-#: baloosearchrunner.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: baloosearchrunner.cpp:69
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ਰੱਖਣ ਵਾਲਾ ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
 
-#: baloosearchrunner.cpp:84
+#: baloosearchrunner.cpp:93
 #, fuzzy, kde-format
 #| msgid "Audios"
 msgctxt ""
@@ -31,47 +41,47 @@ msgctxt ""
 msgid "Audio"
 msgstr "ਆਡੀਓ"
 
-#: baloosearchrunner.cpp:86
+#: baloosearchrunner.cpp:95
 #, kde-format
 msgid "Images"
 msgstr "ਚਿੱਤਰ"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Videos"
 msgstr "ਵੀਡੀਓ"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:97
 #, kde-format
 msgid "Spreadsheets"
 msgstr "ਸਪਰੈਡਸ਼ੀਟ"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:98
 #, kde-format
 msgid "Presentations"
 msgstr "ਪੇਸ਼ਕਾਰੀਆਂ"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:99
 #, kde-format
 msgid "Folders"
 msgstr "ਫੋਲਡਰ"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:100
 #, kde-format
 msgid "Documents"
 msgstr "ਦਸਤਾਵੇਜ਼"
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:101
 #, kde-format
 msgid "Archives"
 msgstr "ਅਕਾਇਵ"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:102
 #, kde-format
 msgid "Texts"
 msgstr "ਲਿਖਤਾਂ"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:103
 #, kde-format
 msgid "Files"
 msgstr "ਫਾਇਲਾਂ"

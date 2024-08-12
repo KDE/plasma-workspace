@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-18 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2024-07-21 22:02-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -499,13 +499,25 @@ msgctxt "@title"
 msgid "Choose a picture"
 msgstr "ਤਸਵੀਰ ਚੁਣੋ"
 
-#: src/ui/PicturesSheet.qml:185
+#: src/ui/PicturesSheet.qml:140
+#, kde-format
+msgctxt ""
+"@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
+"png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate *."
+"avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, *."
+"tiff, *.wbmp, *.webp, *.xbm, *.xpm"
+msgid ""
+"Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
+"pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
+msgstr ""
+
+#: src/ui/PicturesSheet.qml:189
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "ਪਲੇਸਹੋਲਡਰ ਆਈਕਾਨ"
 
-#: src/ui/PicturesSheet.qml:274
+#: src/ui/PicturesSheet.qml:278
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_baloosearchrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-19 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2023-02-15 16:02+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -13,12 +13,22 @@ msgstr ""
 "X-POFile-SpellExtra: mails Áudios\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: baloosearchrunner.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: baloosearchrunner.cpp:69
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Abrir a Pasta Respectiva"
 
-#: baloosearchrunner.cpp:84
+#: baloosearchrunner.cpp:93
 #, fuzzy, kde-format
 #| msgid "Audios"
 msgctxt ""
@@ -27,47 +37,47 @@ msgctxt ""
 msgid "Audio"
 msgstr "Áudios"
 
-#: baloosearchrunner.cpp:86
+#: baloosearchrunner.cpp:95
 #, kde-format
 msgid "Images"
 msgstr "Imagens"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Videos"
 msgstr "Vídeos"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:97
 #, kde-format
 msgid "Spreadsheets"
 msgstr "Folhas de Cálculo"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:98
 #, kde-format
 msgid "Presentations"
 msgstr "Apresentações"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:99
 #, kde-format
 msgid "Folders"
 msgstr "Pastas"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:100
 #, kde-format
 msgid "Documents"
 msgstr "Documentos"
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:101
 #, kde-format
 msgid "Archives"
 msgstr "Pacotes"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:102
 #, kde-format
 msgid "Texts"
 msgstr "Textos"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:103
 #, kde-format
 msgid "Files"
 msgstr "Ficheiros"

@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2023-11-22 21:36+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -29,6 +29,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-POT-Import-Date: 2012-12-01 22:22:27+0000\n"
 "X-Generator: Lokalize 22.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Kim Enkovaara,Tapio Kautto,Teemu Rytilahti,Ilpo Kantonen,Lasse Liehu"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+"kim.enkovaara@iki.fi,eleknader@phnet.fi,teemu.rytilahti@kde-fi.org,ilpo@iki."
+"fi,lliehu@kolumbus.fi"
 
 #: logout.cpp:273
 #, kde-format
@@ -119,7 +131,7 @@ msgstr ""
 msgid "Plasma Workspace installation problem!"
 msgstr "Plasma-työtilan asennusongelma!"
 
-#: main.cpp:193
+#: main.cpp:194
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -128,22 +140,22 @@ msgstr ""
 "Standardinmukaista X11R6-istunnonhallintayhteyskäytäntöä (XSMP)\n"
 "käyttävä luotettava Plasma-istunnonhallinta."
 
-#: main.cpp:197
+#: main.cpp:198
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Palauttaa tallennetun käyttäjän istunnon, jos mahdollista"
 
-#: main.cpp:200
+#: main.cpp:201
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Salli myös etäyhteydet"
 
-#: main.cpp:203
+#: main.cpp:204
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Aloittaa istunnon lukittuna"
 
-#: main.cpp:207
+#: main.cpp:208
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -272,17 +284,6 @@ msgstr ""
 
 #~ msgid "Suspend to &Disk"
 #~ msgstr "Keskeytä &levylle"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr ""
-#~ "Kim Enkovaara,Tapio Kautto,Teemu Rytilahti,Ilpo Kantonen,Lasse Liehu"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr ""
-#~ "kim.enkovaara@iki.fi,eleknader@phnet.fi,teemu.rytilahti@kde-fi.org,"
-#~ "ilpo@iki.fi,lliehu@kolumbus.fi"
 
 #~ msgid "(C) 2000, The KDE Developers"
 #~ msgstr "© 2000, KDE-kehittäjät"

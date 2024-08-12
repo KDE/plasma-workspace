@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-07 00:42+0000\n"
-"PO-Revision-Date: 2024-01-11 10:32+0300\n"
+"PO-Revision-Date: 2024-08-11 07:32+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -219,12 +219,12 @@ msgstr "Не удалось извлечь диск."
 #: plugin/spacemonitor_p.cpp:146
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "Файловая система не отвечает"
 
 #: plugin/spacemonitor_p.cpp:146
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "Файловая система, подключённая к «%1», не отвечает"
 
 #~ msgid "Show:"
 #~ msgstr "Показывать:"

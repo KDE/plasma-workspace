@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-19 00:40+0000\n"
+"POT-Creation-Date: 2024-08-12 00:41+0000\n"
 "PO-Revision-Date: 2024-03-20 18:15+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -20,12 +20,22 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.04.70\n"
 
-#: baloosearchrunner.cpp:60
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: baloosearchrunner.cpp:69
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "開啟所在資料夾"
 
-#: baloosearchrunner.cpp:84
+#: baloosearchrunner.cpp:93
 #, kde-format
 msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
@@ -33,47 +43,47 @@ msgctxt ""
 msgid "Audio"
 msgstr "音效"
 
-#: baloosearchrunner.cpp:86
+#: baloosearchrunner.cpp:95
 #, kde-format
 msgid "Images"
 msgstr "影像"
 
-#: baloosearchrunner.cpp:87
+#: baloosearchrunner.cpp:96
 #, kde-format
 msgid "Videos"
 msgstr "影片"
 
-#: baloosearchrunner.cpp:88
+#: baloosearchrunner.cpp:97
 #, kde-format
 msgid "Spreadsheets"
 msgstr "試算表"
 
-#: baloosearchrunner.cpp:89
+#: baloosearchrunner.cpp:98
 #, kde-format
 msgid "Presentations"
 msgstr "簡報"
 
-#: baloosearchrunner.cpp:90
+#: baloosearchrunner.cpp:99
 #, kde-format
 msgid "Folders"
 msgstr "資料夾"
 
-#: baloosearchrunner.cpp:91
+#: baloosearchrunner.cpp:100
 #, kde-format
 msgid "Documents"
 msgstr "文件"
 
-#: baloosearchrunner.cpp:92
+#: baloosearchrunner.cpp:101
 #, kde-format
 msgid "Archives"
 msgstr "封存"
 
-#: baloosearchrunner.cpp:93
+#: baloosearchrunner.cpp:102
 #, kde-format
 msgid "Texts"
 msgstr "文字"
 
-#: baloosearchrunner.cpp:94
+#: baloosearchrunner.cpp:103
 #, kde-format
 msgid "Files"
 msgstr "檔案"
