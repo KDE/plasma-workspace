@@ -210,6 +210,7 @@ ColumnLayout {
         Kirigami.Heading {
             id: summaryLabel
             Layout.fillWidth: true
+            Layout.maximumWidth: bodyLabel.width
             Layout.preferredHeight: implicitHeight
             Layout.topMargin: notificationItem.inGroup && lineCount > 1 ? Math.max(0, (headingElement.Layout.preferredHeight - summaryLabelTextMetrics.height) / 2) : 0
             Layout.leftMargin: extraSpaceForCriticalNotificationLine
