@@ -43,7 +43,8 @@ QQC2.StackView {
 
     function createBackgroundComponent() {
         switch (mediaProxy.backgroundType) {
-        case Wallpaper.BackgroundType.Image: {
+        case Wallpaper.BackgroundType.Image:
+        case Wallpaper.BackgroundType.VectorImage: {
             if (!staticImageComponent) {
                 staticImageComponent = Qt.createComponent("mediacomponent/StaticImageComponent.qml");
             }
