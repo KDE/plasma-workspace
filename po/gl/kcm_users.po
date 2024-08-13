@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-08-13 00:41+0000\n"
 "PO-Revision-Date: 2024-07-22 19:25+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -595,14 +595,14 @@ msgstr "Non foi posíbel obter permiso para gardar a conta de %1."
 msgid "There was an error while saving changes"
 msgstr "Produciuse un erro ao gardar os cambios."
 
-#: src/user.cpp:396
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Non foi posíbel cambiar o tamaño da imaxe: a apertura dun ficheiro temporal "
 "fallou."
 
-#: src/user.cpp:404
+#: src/user.cpp:397
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

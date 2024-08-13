@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-08-13 00:41+0000\n"
 "PO-Revision-Date: 2024-01-16 15:04+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -625,12 +625,12 @@ msgstr "Neizdevās iegūt atļaujas lietotāja %1 saglabāšanai"
 msgid "There was an error while saving changes"
 msgstr "Kļūda, saglabājot izmaiņas"
 
-#: src/user.cpp:396
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Neizdevās mainīt attēla izmēru: kļūda, atverot pagaidu datni"
 
-#: src/user.cpp:404
+#: src/user.cpp:397
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Neizdevās mainīt attēla izmēru: kļūda, rakstot pagaidu datnē"

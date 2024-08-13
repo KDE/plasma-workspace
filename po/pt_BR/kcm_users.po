@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-08-13 00:41+0000\n"
 "PO-Revision-Date: 2024-08-05 15:21-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -616,12 +616,12 @@ msgstr "Não foi possível obter permissões para salvar o usuário %1"
 msgid "There was an error while saving changes"
 msgstr "Um erro ocorreu ao salvar as alterações"
 
-#: src/user.cpp:396
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Falha ao redimensionar imagem: falha ao abrir o arquivo temporário"
 
-#: src/user.cpp:404
+#: src/user.cpp:397
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Falha ao redimensionar imagem: falha ao gravar o arquivo temporário"

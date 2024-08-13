@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:41+0000\n"
-"PO-Revision-Date: 2024-05-08 22:22+0300\n"
+"PO-Revision-Date: 2024-08-12 16:19+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -143,9 +143,7 @@ msgid "Preview Theme"
 msgstr "Peržiūrėti apipavidalinimą"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Remove Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove theme"
 msgstr "Šalinti apipavidalinimą"
@@ -154,13 +152,13 @@ msgstr "Šalinti apipavidalinimą"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "Negalima ištrinti aktyvaus apipavidalinimo"
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "Negalima ištrinti sistemos mastu įdiegtų apipavidalinimų"
 
 #: ui/main.qml:147
 #, kde-format

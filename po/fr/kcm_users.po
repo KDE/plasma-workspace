@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-08-13 00:41+0000\n"
 "PO-Revision-Date: 2024-07-18 08:44+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -633,14 +633,14 @@ msgstr "Impossible d'obtenir les permissions pour enregistrer l'utilisateur %1"
 msgid "There was an error while saving changes"
 msgstr "Une erreur est survenue durant l'enregistrement des modifications."
 
-#: src/user.cpp:396
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Impossible de redimensionner l'image : échec de l'ouverture du fichier "
 "temporaire"
 
-#: src/user.cpp:404
+#: src/user.cpp:397
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

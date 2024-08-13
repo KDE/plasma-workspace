@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
-"PO-Revision-Date: 2024-07-17 09:15+0300\n"
+"POT-Creation-Date: 2024-08-13 00:41+0000\n"
+"PO-Revision-Date: 2024-08-12 08:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 
@@ -511,6 +511,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"קובצי תמונה (כל הסוגים העיקריים) (‎*.avif‏ ‎*.bmp‏ ‎*.gif‏ ‎*.jp2‏ ‎*.jpeg‏ ‎*.jpg ‏‎*.pbm"
+" ‏‎*.pgm‏ ‎*.png‏ ‎*.ppm ‎*.tiff‏ ‎*.wbmp‏ ‎*.webp‏ ‎*.xbm‏ ‎*.xpm)"
 
 #: src/ui/PicturesSheet.qml:189
 #, kde-format
@@ -588,12 +590,12 @@ msgstr "לא ניתן לקבל הרשאה לשמירת המשתמש %1"
 msgid "There was an error while saving changes"
 msgstr "אירעה שגיאה בשמירת השינויים"
 
-#: src/user.cpp:396
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "שינוי גודל התמונה נכשל: פתיחת הקובץ הזמני נכשלה"
 
-#: src/user.cpp:404
+#: src/user.cpp:397
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "שינוי גודל התמונה נכשל: כתיבה לקובץ הזמני נכשלה"

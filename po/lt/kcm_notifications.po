@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:41+0000\n"
-"PO-Revision-Date: 2024-03-27 23:02+0200\n"
+"PO-Revision-Date: 2024-08-12 16:20+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -92,16 +92,13 @@ msgid "Choose sound file"
 msgstr "Pasirinkti garso failą"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@action:button Plasma-specific notifications"
-#| msgid "System Notifications…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications"
-msgstr "Sistemos pranešimai…"
+msgstr "Sistemos pranešimai"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "Programos nuostatos"

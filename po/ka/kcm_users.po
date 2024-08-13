@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
-"PO-Revision-Date: 2024-07-17 05:48+0200\n"
+"POT-Creation-Date: 2024-08-13 00:41+0000\n"
+"PO-Revision-Date: 2024-08-12 05:10+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -515,6 +515,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"გამოსახულების ფაილები (ყველა ძირითიადი ფაილის ტიპი) (*.avif *.bmp *.gif *."
+"jp2 *.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:189
 #, kde-format
@@ -593,12 +595,12 @@ msgstr "მომხმარებლის (%1) ჩაწერის წვ�
 msgid "There was an error while saving changes"
 msgstr "ცვლილებების შენახვის შეცდომა"
 
-#: src/user.cpp:396
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "გამოსახულების ზომის შეცვლის შეცდომა: დროებითი ფაილის გახსნის შეცდომა"
 
-#: src/user.cpp:404
+#: src/user.cpp:397
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "გამოსახულების ზომის შეცვლის შეცდომა: დროებითი ფაილის ჩაწერის შეცდომა"

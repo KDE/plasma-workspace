@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-08-13 00:41+0000\n"
 "PO-Revision-Date: 2024-07-21 22:02-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -584,12 +584,12 @@ msgstr "ਸੰਭਾਲੇ ਹੋਏ ਵਰਤੋਂਕਾਰ %1 ਲਈ ਇਜ�
 msgid "There was an error while saving changes"
 msgstr "ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: src/user.cpp:396
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਖੋਲ੍ਹਣ ਲਈ ਫੇਲ੍ਹ"
 
-#: src/user.cpp:404
+#: src/user.cpp:397
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਲਿਖਣ ਲਈ ਫੇਲ੍ਹ"

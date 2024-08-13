@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
-"PO-Revision-Date: 2024-01-13 15:58+0200\n"
+"POT-Creation-Date: 2024-08-13 00:41+0000\n"
+"PO-Revision-Date: 2024-08-12 16:32+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.0.1\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -382,20 +382,16 @@ msgid "Users"
 msgstr "Naudotojai"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Pridėti naują"
+msgstr "Pridėti naują…"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Pridėti naują"
+msgstr "Pridėti naują naudotoją…"
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -551,6 +547,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Paveikslo failai (Visi pagrindiniai failo tipai) (*.avif *.bmp *.gif *.jp2 *."
+"jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:189
 #, kde-format
@@ -576,6 +574,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Negalima pakeisti paskyros tipo į standartinį, nebent sistemoje yra bent "
+"viena administratoriaus paskyra. Be jos, būtų neįmanoma nustatyti tapatybės "
+"arba tektų naudoti nesaugų pagrindinio naudotojo slaptažodį."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format
@@ -626,12 +627,12 @@ msgstr "Nepavyko gauti leidimo įrašyti naudotoją %1"
 msgid "There was an error while saving changes"
 msgstr "Įrašant pakeitimus, įvyko klaida"
 
-#: src/user.cpp:396
+#: src/user.cpp:389
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Nepavyko pakeisti paveikslo dydžio: nepavyko atverti laikinojo failo"
 
-#: src/user.cpp:404
+#: src/user.cpp:397
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Nepavyko pakeisti paveikslo dydžio: nepavyko rašyti į laikinąjį failą"
