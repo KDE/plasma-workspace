@@ -121,12 +121,9 @@ bool ContainmentInterface::hasLauncher(QObject *appletInterface, ContainmentInte
             return false;
         }
 
-        QVariant ret;
-        QMetaObject::invokeMethod(taskManagerQuickItem,
-                                  "hasLauncher",
-                                  Q_RETURN_ARG(QVariant, ret),
-                                  Q_ARG(QVariant, QUrl(QLatin1String("applications:") + service->storageId())));
-        return ret.toBool();
+        bool ret = false;
+        QMetaObject::invokeMethod(taskManagerQuickItem, "hasLauncher", qReturnArg(ret), QUrl(QLatin1String("applications:") + service->storageId()));
+        return ret;
     }
 
     return false;
@@ -168,7 +165,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                 return;
             }
 
-            QMetaObject::invokeMethod(folderQuickItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+            QMetaObject::invokeMethod(folderQuickItem, "addLauncher", QUrl::fromLocalFile(entryPath));
         } else {
             containment->createApplet(QStringLiteral("org.kde.plasma.icon"), QVariantList() << QUrl::fromLocalFile(entryPath));
         }
@@ -196,7 +193,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                 return;
             }
 
-            QMetaObject::invokeMethod(taskManagerQuickItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+            QMetaObject::invokeMethod(taskManagerQuickItem, "addLauncher", QUrl::fromLocalFile(entryPath));
         }
 
         break;
