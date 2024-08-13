@@ -77,6 +77,9 @@ static bool checkWindowOrDescendantWantButtonEvents(xcb_window_t window)
     }
     auto treeCookie = xcb_query_tree(connection, window);
     UniqueCPointer<xcb_query_tree_reply_t> tree(xcb_query_tree_reply(connection, treeCookie, nullptr));
+    if (!tree) {
+        return false;
+    }
     std::span<xcb_window_t> children(xcb_query_tree_children(tree.get()), xcb_query_tree_children_length(tree.get()));
     return std::ranges::any_of(children, &checkWindowOrDescendantWantButtonEvents);
 }
