@@ -8,8 +8,8 @@
 
 #include "historymodel.h"
 
+#include <QBuffer>
 #include <QCryptographicHash>
-#include <QIODevice>
 #include <QIcon>
 #include <QMimeData>
 
@@ -24,8 +24,10 @@ QByteArray compute_uuid(const QImage &data)
 
 }
 
-HistoryImageItem::HistoryImageItem(const QImage &data)
-    : HistoryItem(compute_uuid(data))
+HistoryImageItem::HistoryImageItem(const QImage &image, const QString &mimetype, const QByteArray &data)
+    : HistoryItem(compute_uuid(image))
+    , m_image(image)
+    , m_mimetype(mimetype)
     , m_data(data)
 {
 }
@@ -33,7 +35,7 @@ HistoryImageItem::HistoryImageItem(const QImage &data)
 QString HistoryImageItem::text() const
 {
     if (m_text.isNull()) {
-        m_text = u"▨ " + i18n("%1x%2 %3bpp", m_data.width(), m_data.height(), m_data.depth());
+        m_text = u"▨ " + i18n("%1x%2 %3bpp", m_image.width(), m_image.height(), m_image.depth());
     }
     return m_text;
 }
@@ -41,17 +43,30 @@ QString HistoryImageItem::text() const
 /* virtual */
 void HistoryImageItem::write(QDataStream &stream) const
 {
-    stream << QStringLiteral("image") << m_data;
+    stream << QStringLiteral("image") << m_image;
 }
 
 QMimeData *HistoryImageItem::mimeData() const
 {
     QMimeData *data = new QMimeData();
-    data->setImageData(m_data);
+    if (!m_mimetype.isEmpty() && !m_data.isEmpty()) {
+        data->setData(m_mimetype, m_data);
+        // Also give PNG for compatibility.
+        static const auto imagePng = QStringLiteral("image/png");
+        if (m_mimetype != imagePng) {
+            // QBuffer buffer;
+            // buffer.open(QBuffer::ReadWrite);
+            // m_image.save(&buffer, "png");
+            // buffer.reset();
+            // data->setData(imagePng, buffer.readAll());
+        }
+    } else {
+        data->setImageData(m_image);
+    }
     return data;
 }
 
 QImage HistoryImageItem::image() const
 {
-    return m_data;
+    return m_image;
 }

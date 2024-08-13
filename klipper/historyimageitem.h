@@ -15,7 +15,7 @@
 class KLIPPER_EXPORT HistoryImageItem : public HistoryItem
 {
 public:
-    explicit HistoryImageItem(const QImage &data);
+    explicit HistoryImageItem(const QImage &image, const QString &mimetype, const QByteArray &data);
     ~HistoryImageItem() override
     {
     }
@@ -29,7 +29,7 @@ public:
     bool operator==(const HistoryItem &rhs) const override
     {
         if (const HistoryImageItem *casted_rhs = dynamic_cast<const HistoryImageItem *>(&rhs)) {
-            return &casted_rhs->m_data == &m_data; // Not perfect, but better than nothing.
+            return &casted_rhs->m_image == &m_image; // Not perfect, but better than nothing.
         }
         return false;
     }
@@ -40,9 +40,18 @@ public:
 
 private:
     /**
-     *
+     * Image decoration for this item.
+     * Also image data when copying an unformatted image.
      */
-    const QImage m_data;
+    const QImage m_image;
+    /**
+     * MIME type when copying a formatted image.
+     */
+    const QString m_mimetype;
+    /**
+     * Image data when copying a formatted image.
+     */
+    const QByteArray m_data;
     /**
      * Cache for m_data's string representation
      */
