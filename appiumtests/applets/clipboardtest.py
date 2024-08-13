@@ -242,10 +242,16 @@ class ClipboardTest(unittest.TestCase):
         """
         window = Gtk.Window()
         window.set_default_size(20, 20)
+        button = Gtk.Button(label="Copy Content")
+        window.set_child(button)
         window.set_visible(True)
         spin_glib_main_loop()
 
-        clipboard: Gdk.Clipboard
+        # Click the button to update the latest serial. See also:
+        # https://invent.kde.org/plasma/kwin/-/commit/31018c000bbad5dc3b263b7f452b0795dd153ceb
+        # https://github.com/GNOME/gtk/blob/7da4844dcc2fb2a35457fc4e251c504c8f3d0206/gdk/wayland/gdkseat-wayland.c#L4390
+        ActionChains(self.driver).send_keys(Keys.SPACE).perform()
+        spin_glib_main_loop()
         if clipboard_mode == 0:
             clipboard = window.get_display().get_clipboard()  # Clipboard
         else:
@@ -278,7 +284,11 @@ class ClipboardTest(unittest.TestCase):
         content_union = Gdk.ContentProvider.new_union([content_text, content_application])
         self.gtk_copy(content_union)
         self.driver.find_element(AppiumBy.NAME, "Fushan Wen")  # Still alive
-        self.gtk_copy(Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes("Fushan Wen", "utf-8"))))
+
+        new_text = "Hello World"
+        self.gtk_copy(Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(new_text, "utf-8"))))
+        # self.assertEqual(self.driver.get_clipboard_text(), new_text) Broken in CI
+        self.driver.find_element(AppiumBy.NAME, new_text)  # Still alive
 
     def test_4_ignore_image(self) -> None:
         """
@@ -300,6 +310,7 @@ class ClipboardTest(unittest.TestCase):
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
+    @unittest.expectedFailure  # https://invent.kde.org/plasma/kwin/-/commit/31018c000bbad5dc3b263b7f452b0795dd153ceb#note_1013530
     def test_6_sync_selection_with_ignore_selection(self) -> None:
         """
         When `SyncClipboards` is true but `IgnoreSelection` is true, the clipboard should still sync clipboard and selection.
