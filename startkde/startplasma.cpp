@@ -115,6 +115,11 @@ inline bool isShellVariable(ViewType auto name)
     return name == "_"_L1 || name == "SHELL"_L1 || name.startsWith("SHLVL"_L1);
 }
 
+inline bool isConfinementVariable(QStringView name)
+{
+    return name == "SNAP"_L1 || name.startsWith("SNAP_"_L1);
+}
+
 inline bool isSessionVariable(QStringView name)
 {
     // Check is variable is specific to session.
@@ -473,12 +478,12 @@ bool syncDBusEnvironment()
 {
     dropSessionVarsFromSystemdEnvironment();
 
-    // Shell variables are filtered out of things we explicitly load, but they
+    // Shell and confinement variables are filtered out of things we explicitly load, but they
     // still might have been inherited from the parent process
     QProcessEnvironment environment = QProcessEnvironment::systemEnvironment();
     const auto keys = environment.keys();
     for (const QString &name : keys) {
-        if (isShellVariable(QStringView(name))) {
+        if (isShellVariable(QStringView(name)) || isConfinementVariable(QStringView(name))) {
             environment.remove(name);
         }
     }
