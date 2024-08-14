@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-13 00:41+0000\n"
-"PO-Revision-Date: 2024-06-11 14:13+0400\n"
-"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-08-13 16:03+0400\n"
+"Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -362,20 +362,16 @@ msgid "Users"
 msgstr "İstifadəçilər"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "İstifadəçi əlavə edin"
+msgstr "Yenisini əlavə edin..."
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "İstifadəçi əlavə edin"
+msgstr "Yeni istifadəçi əlavə edin..."
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -531,6 +527,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Şəkil faylları (Bütün əsas fayl növləri) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
+"jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:189
 #, kde-format
@@ -556,6 +554,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Sistemdə ən az bir inzibatçı hesabı olmayana qədər hesab növünü standart  "
+"hesab kimi təyin etmək mümkün deyil. Belə bir hesab olmadan kimlik "
+"doğrulaması mümkün deyil və tələb olunan kök şifrədən istifadə təhlükəlidir."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

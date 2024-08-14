@@ -8,21 +8,21 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-07 00:42+0000\n"
-"PO-Revision-Date: 2024-06-11 16:23+0400\n"
-"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-08-09 16:03+0400\n"
+"Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/ui/DeviceItem.qml:98
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr "%2-dan %1 boş"
+msgstr "%1/%2 boş"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -201,12 +201,12 @@ msgstr "Bu diski çıxartmaq mümkün olmadı."
 #: plugin/spacemonitor_p.cpp:146
 #, kde-format
 msgid "Filesystem is not responding"
-msgstr ""
+msgstr "Fayl sistemi cavab vermir"
 
 #: plugin/spacemonitor_p.cpp:146
 #, kde-format
 msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
+msgstr "\"%1\"-ə qoşulmuş fayl sistemi cavab vermir"
 
 #~ msgid "Show:"
 #~ msgstr "Göstərmək:"

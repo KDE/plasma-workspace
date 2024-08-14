@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:41+0000\n"
-"PO-Revision-Date: 2024-06-10 12:10+0400\n"
-"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-08-09 16:10+0400\n"
+"Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -306,61 +306,59 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR kod"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Məlumat Matrixi"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Aztec"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Kod 39"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Kod 93"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Kod 128"
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "Mübadilə buferinə əlavə etmək"
+msgstr "Mübadilə buferinə qayıtmaq"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "QR kod növünü dəyişmək"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
-msgstr ""
+msgstr "QR kodu göstərmək üçün yer kifayət etmir. Əlavəinin ölçüsünü dəyişin."
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "QR kod yaratmaq mümkün olmadı"
 
 #: declarative/qml/ClipboardMenu.qml:187
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "Mübadilə tarixçəsi"
+msgstr "Tarixçəni silmək"
 
 #: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
@@ -373,49 +371,43 @@ msgid "Clipboard is empty"
 msgstr "Mübadilə buferi boşdur"
 
 #: declarative/qml/DelegateToolButtons.qml:26
-#, fuzzy, kde-format
-#| msgid "Ignore Selection"
+#, kde-format
 msgid "Invoke action"
-msgstr "Seçilmişlərdən imtina etmək"
+msgstr "Əməli çağırmaq"
 
 #: declarative/qml/DelegateToolButtons.qml:39
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "Barkodu gö&stərmək..."
+msgstr "QR kodu göstərmək"
 
 #: declarative/qml/DelegateToolButtons.qml:55
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgid "Edit contents"
 msgstr "Tərkiblərinə düzəliş etmək"
 
 #: declarative/qml/DelegateToolButtons.qml:69
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "Tarixçədən seçilmiş element üçün"
+msgstr "Tarixçədən silmək"
 
 #: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Saxlamaq"
 
 #: declarative/qml/EditPage.qml:95
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "&İmtina etmək"
+msgstr "İmtina etmək"
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -924,10 +916,9 @@ msgstr ""
 "tətbiqləri daxil edin."
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "Mübadilə tarixçəsi"
+msgstr "Mübadilə yaddaşı pəncərəsi"
 
 #: urlgrabber.cpp:200
 #, kde-format

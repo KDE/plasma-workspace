@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-20 00:41+0000\n"
-"PO-Revision-Date: 2024-06-11 17:27+0400\n"
-"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2024-08-09 16:04+0400\n"
+"Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: main.cpp:32
 #, kde-format
@@ -23,12 +23,10 @@ msgid "Session Management"
 msgstr "Sessiyaların idarə edilməsi"
 
 #: main.cpp:39
-#, fuzzy, kde-format
-#| msgctxt "@action"
-#| msgid "Show Logout Prompt"
+#, kde-format
 msgctxt "@action"
 msgid "Show Logout Screen"
-msgstr "Çəxış sorğusunu göstərmək"
+msgstr "Çıxış ekranını göstərmək"
 
 #: main.cpp:48
 #, kde-format
