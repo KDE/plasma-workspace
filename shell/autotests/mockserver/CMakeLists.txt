@@ -18,18 +18,26 @@ set(SharedClientTest_LIB_SRCS
 )
 
 add_library(SharedClientTest OBJECT)
-qt6_generate_wayland_protocol_client_sources(SharedClientTest FILES
-    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
-    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
+
+if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
+    set(private_code_option  "PRIVATE_CODE")
+endif()
+qt6_generate_wayland_protocol_client_sources(SharedClientTest
+    ${private_code_option}
+    FILES
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-screen-edge-v1.xml
 )
-qt6_generate_wayland_protocol_server_sources(SharedClientTest FILES
-    ${Wayland_DATADIR}/wayland.xml
-    ${WaylandProtocols_DATADIR}/unstable/xdg-output/xdg-output-unstable-v1.xml
-    ${WaylandProtocols_DATADIR}/stable/xdg-shell/xdg-shell.xml
-    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
-    ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
-    ${CMAKE_CURRENT_SOURCE_DIR}/wlr-layer-shell-unstable-v1.xml
+qt6_generate_wayland_protocol_server_sources(SharedClientTest
+    ${private_code_option}
+    FILES
+        ${Wayland_DATADIR}/wayland.xml
+        ${WaylandProtocols_DATADIR}/unstable/xdg-output/xdg-output-unstable-v1.xml
+        ${WaylandProtocols_DATADIR}/stable/xdg-shell/xdg-shell.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-primary-output-v1.xml
+        ${PLASMA_WAYLAND_PROTOCOLS_DIR}/kde-output-order-v1.xml
+        ${CMAKE_CURRENT_SOURCE_DIR}/wlr-layer-shell-unstable-v1.xml
 )
 
 

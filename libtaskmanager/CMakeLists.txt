@@ -43,7 +43,11 @@ ecm_add_qml_module(taskmanager
     DEPENDENCIES QtCore
 )
 
+if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
+    set(private_code_option  "PRIVATE_CODE")
+endif()
 qt6_generate_wayland_protocol_client_sources(taskmanager
+    ${private_code_option}
     FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/org-kde-plasma-virtual-desktop.xml
     FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/plasma-window-management.xml
     FILES ${PLASMA_WAYLAND_PROTOCOLS_DIR}/zkde-screencast-unstable-v1.xml
