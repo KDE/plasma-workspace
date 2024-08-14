@@ -1,20 +1,21 @@
 # translation of kcminit.po to Persian
 # Saied Taghavi <s.taghavi@gmail.com>, 2008.
 # Mohamad Reza Mirdamadi <mohi@linuxshop.ir>, 2011, 2012.
+# SPDX-FileCopyrightText: 2024 Mohi Mirdamadi <mohi.pub@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminit\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-09 01:39+0000\n"
-"PO-Revision-Date: 2012-01-12 16:54+0330\n"
-"Last-Translator: Mohammad Reza Mirdamadi <mohi@linuxshop.ir>\n"
-"Language-Team: Farsi (Persian) <>\n"
+"PO-Revision-Date: 2024-08-14 00:22+0330\n"
+"Last-Translator: Mohi Mirdamadi <mohi.pub@gmail.com>\n"
+"Language-Team: fa\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -24,7 +25,7 @@ msgstr "محمدرضا میردامادی , محمد ابراهیم محمدی�
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "mohi@linuxshop.ir , mebrahim@gmail.com"
+msgstr "mohi.pub@gmail.com , mebrahim@gmail.com"
 
 #: main.cpp:168
 #, kde-format
