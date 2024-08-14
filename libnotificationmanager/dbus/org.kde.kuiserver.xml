@@ -24,5 +24,9 @@
         <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QList&lt;QString&gt;"/>
     </signal>
 
+    <signal name="requiresJobTrackerChanged">
+        <arg type="b" direction="out"/>
+    </signal>
+
     </interface>
 </node>

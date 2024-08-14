@@ -20,6 +20,7 @@ class QTimer;
 namespace NotificationManager
 {
 class Job;
+class Settings;
 
 class Q_DECL_HIDDEN JobsModelPrivate : public QObject, protected QDBusContext
 {
@@ -54,6 +55,7 @@ Q_SIGNALS:
     // DBus
     // kuiserver
     void jobUrlsChanged(const QStringList &urls);
+    void requiresJobTrackerChanged(const bool req);
 
 public: // stuff used by public class
     bool init();
@@ -73,7 +75,6 @@ private:
     QStringList jobUrls() const;
     void scheduleUpdate(Job *job, int role);
 
-    QDBusServiceWatcher *m_serviceWatcher = nullptr;
     // Job -> serviceName
     QHash<Job *, QString> m_jobServices;
     int m_highestJobId = 1;
@@ -82,6 +83,9 @@ private:
     QHash<Job *, QList<int>> m_pendingDirtyRoles;
 
     QList<Job *> m_pendingJobViews;
+    
+    QDBusServiceWatcher *m_serviceWatcher = nullptr;
+    Settings *m_settings = nullptr;
 };
 
 } // namespace NotificationManager

@@ -13,6 +13,8 @@
 
 #include "utils_p.h"
 
+#include "settings.h"
+
 #include "jobviewserveradaptor.h"
 #include "jobviewserverv2adaptor.h"
 #include "kuiserveradaptor.h"
@@ -38,6 +40,7 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
     : QObject(parent)
     , m_serviceWatcher(new QDBusServiceWatcher(this))
     , m_compressUpdatesTimer(new QTimer(this))
+    , m_settings(new Settings(this))
 {
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
     m_serviceWatcher->setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
@@ -63,6 +66,10 @@ JobsModelPrivate::JobsModelPrivate(QObject *parent)
         }
 
         m_pendingDirtyRoles.clear();
+    });
+
+    connect(m_settings, &Settings::settingsChanged, this, [this] {
+        Q_EMIT requiresJobTrackerChanged(!m_settings->jobsInNotifications());
     });
 }
 
@@ -193,7 +200,7 @@ void JobsModelPrivate::emitJobUrlsChanged()
 
 bool JobsModelPrivate::requiresJobTracker() const
 {
-    return false;
+    return !m_settings->jobsInNotifications();
 }
 
 QStringList JobsModelPrivate::registeredJobContacts() const
