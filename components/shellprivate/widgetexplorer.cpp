@@ -486,6 +486,7 @@ void WidgetExplorer::downloadWidgets()
 {
     if (WidgetExplorerPrivate::newStuffDialog.isNull()) {
         WidgetExplorerPrivate::newStuffDialog = new KNSWidgets::Dialog(QStringLiteral("plasmoids.knsrc"));
+        WidgetExplorerPrivate::newStuffDialog->setWindowTitle(i18nc("@title:window", "Get New Widgets"));
         connect(WidgetExplorerPrivate::newStuffDialog, &KNSWidgets::Dialog::finished, WidgetExplorerPrivate::newStuffDialog, &QObject::deleteLater);
 
         WidgetExplorerPrivate::newStuffDialog->open();
