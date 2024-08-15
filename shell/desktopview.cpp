@@ -437,6 +437,8 @@ void DesktopView::showConfigurationInterface(Plasma::Applet *applet)
         return;
     }
 
+    applet->containment()->corona()->setEditMode(false);
+
     Plasma::Containment *cont = qobject_cast<Plasma::Containment *>(applet);
 
     if (cont && cont->isContainment() && cont->containmentType() == Plasma::Containment::Desktop) {
