@@ -1,6 +1,6 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2017, 2019, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2014, 2017, 2019, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 # Lukáš Tinkl <ltinkl@redhat.com>, 2011, 2012.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2012, 2013.
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-09 00:41+0000\n"
-"PO-Revision-Date: 2024-04-17 09:53+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"PO-Revision-Date: 2024-08-06 11:22+0200\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -297,61 +297,60 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "Kód QR"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Matice dat"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Aztec"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Kód 39"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Kód 93"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Kód 128"
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "Přidat do schránky"
+msgstr "Vrátit se do schránky"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Změnit typ QR kódu"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Pro zobrazení QR kódu není k dispozici dostatek místa. Zkuste applet zvětšit."
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "Vytvoření QR kódu selhalo"
 
 #: declarative/qml/ClipboardMenu.qml:187
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "Historie schránky"
+msgstr "Vyprázdnit historii"
 
 #: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
@@ -364,48 +363,43 @@ msgid "Clipboard is empty"
 msgstr "Schránka je prázdná"
 
 #: declarative/qml/DelegateToolButtons.qml:26
-#, fuzzy, kde-format
-#| msgid "Include MIME actions"
+#, kde-format
 msgid "Invoke action"
-msgstr "Zahrnout činnosti MIME"
+msgstr "Vyvolat činnost"
 
 #: declarative/qml/DelegateToolButtons.qml:39
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "Zobrazit čárový &kód..."
+msgstr "Zobrazit QR kód"
 
 #: declarative/qml/DelegateToolButtons.qml:55
 #, kde-format
 msgid "Edit contents"
-msgstr ""
+msgstr "Upravit obsah"
 
 #: declarative/qml/DelegateToolButtons.qml:69
-#, fuzzy, kde-format
-#| msgid "Never save in history"
+#, kde-format
 msgid "Remove from history"
-msgstr "Nikdy neukládat v historii"
+msgstr "Odstranit z historie"
 
 #: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Uložit"
 
 #: declarative/qml/EditPage.qml:95
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "Z&rušit"
+msgstr "Zrušit"
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -898,10 +892,9 @@ msgstr ""
 "aplikace, které přijímají tento typ MIME."
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "Historie schránky"
+msgstr ""
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -912,15 +905,3 @@ msgstr "Zakázat toto okno"
 #, kde-format
 msgid "&Cancel"
 msgstr "Z&rušit"
-
-#~ msgid "Clipboard Items"
-#~ msgstr "Položky ve schránce"
-
-#~ msgid "Search…"
-#~ msgstr "Hledat…"
-
-#~ msgid "Invalid regular expression, %1"
-#~ msgstr "Neplatný regulární výraz, %1"
-
-#~ msgid "&More"
-#~ msgstr "&Více"

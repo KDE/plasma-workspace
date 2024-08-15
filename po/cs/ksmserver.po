@@ -1,14 +1,14 @@
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
-# SPDX-FileCopyrightText: 2012, 2013, 2014, 2020, 2023 Vít Pelčák <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2020, 2023, 2024 Vít Pelčák <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-12 00:41+0000\n"
-"PO-Revision-Date: 2023-11-08 14:25+0100\n"
+"PO-Revision-Date: 2024-08-14 09:08+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,19 +16,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 "X-Language: cs_CZ\n"
 "X-Source-Language: en_US\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Vít Pelčák"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "vit@pelcak.org"
 
 #: logout.cpp:273
 #, kde-format

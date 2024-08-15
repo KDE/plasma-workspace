@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-09 00:40+0000\n"
+"POT-Creation-Date: 2024-08-15 00:41+0000\n"
 "PO-Revision-Date: 2019-09-26 14:31+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -109,7 +109,7 @@ msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
 msgstr "%1 файл ба %2"
 
-#: jobsmodel_p.cpp:477
+#: jobsmodel_p.cpp:484
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "Барнома ногаҳон қатъ шудааст."

@@ -218,6 +218,3 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "minuta"
-
-#~ msgid "Error: Transition time overlaps."
-#~ msgstr "Chyba: Délka přechodu se překrývá."

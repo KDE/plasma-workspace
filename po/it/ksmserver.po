@@ -25,12 +25,13 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Nicola Ruggero,Andrea Rizzi,Federico Cozzi,Luca Bellonda"
+msgstr ""
+"Vincenzo Reale,Nicola Ruggero,Andrea Rizzi,Federico Cozzi,Luca Bellonda"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "nicola@nxnt.org,,,"
+msgstr "smart2128vr@gmail.com,,,,"
 
 #: logout.cpp:273
 #, kde-format
