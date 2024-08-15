@@ -6,6 +6,7 @@
 
 #include "panelconfigview.h"
 #include "config-X11.h"
+#include "desktopview.h"
 #include "panelshadows_p.h"
 #include "panelview.h"
 #include "shellcorona.h"
@@ -386,7 +387,12 @@ void PanelConfigView::focusVisibilityCheck(QWindow *focusWindow)
             return;
         }
     }
-    if (auto popup = qobject_cast<const PopupPlasmaWindow *>(oldFocusWindow); popup && oldFocusWindow != this) {
+    // When the dialogs that appear when hovering applets in the panel close,
+    // the focus will switch back to the desktop. If that happens, we
+    // instead want to requestActivate to preserve it.
+    auto popup = qobject_cast<const PopupPlasmaWindow *>(oldFocusWindow);
+    auto desktop = qobject_cast<const DesktopView *>(focusWindow);
+    if (desktop && popup && oldFocusWindow != this) {
         requestActivate();
         return;
     }
