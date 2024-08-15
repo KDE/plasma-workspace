@@ -41,17 +41,6 @@ PlasmoidItem {
         return null;
     }
 
-    Plasmoid.contextualActions: [
-        PlasmaCore.Action {
-            text: i18n("Set flexible size")
-            checkable: true
-            checked: Plasmoid.configuration.expanding
-            onTriggered: checked => {
-                Plasmoid.configuration.expanding = checked;
-            }
-        }
-    ]
-
     Component.onCompleted: {
         Plasmoid.removeInternalAction("configure");
     }
