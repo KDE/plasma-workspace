@@ -46,8 +46,8 @@ RowLayout {
                     break;
 
                 case 2: // custom
-                    if(!colorRepeater.model.some(color => Qt.colorEqual(color, kcm.accentColor))) { // if not accent is from the provided list, assign the last used color, if any, or a sensible value
-                        kcm.accentColor = Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? colorRepeater.model[0] : kcm.lastUsedCustomAccentColor;
+                    if(!colorRepeater.model.some(color => Qt.colorEqual(color.color, kcm.accentColor))) { // if not accent is from the provided list, assign the last used color, if any, or a sensible value
+                        kcm.accentColor = Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? colorRepeater.model[0].color : kcm.lastUsedCustomAccentColor;
                         kcm.accentColorFromWallpaper = false;
                     }
                     break;
@@ -117,27 +117,40 @@ RowLayout {
             id: colorRepeater
 
             model: [
-                "#e93a9a",
-                "#e93d58",
-                "#e9643a",
-                "#e8cb2d",
-                "#3dd425",
-                "#00d3b8",
-                "#3daee9",
-                "#b875dc",
-                "#926ee4",
-                "#686b6f",
+                {"name": i18nc("color name, pick a fun name for #e93a9a in your language (does not have to be a literal translation)", "Feisty Flamingo"),   "color": "#e93a9a"},
+                {"name": i18nc("color name, pick a fun name for #e93d58 in your language (does not have to be a literal translation)", "Dragon's Fruit"),    "color": "#e93d58"},
+                {"name": i18nc("color name, pick a fun name for #e9643a in your language (does not have to be a literal translation)", "Sweet Potato"),      "color": "#e9643a"},
+                // {"name": i18nc("color name, pick a fun name for #ef973c in your language (does not have to be a literal translation)", "Ambient Amber"),  "color": "#ef973c"},
+                {"name": i18nc("color name, pick a fun name for #e8cb2d in your language (does not have to be a literal translation)", "Sparkle Sunbeam"),   "color": "#e8cb2d"},
+                // {"name": i18nc("color name, pick a fun name for #b6e521 in your language (does not have to be a literal translation)", "Lemon-Lime"),     "color": "#b6e521"},
+                {"name": i18nc("color name, pick a fun name for #3dd425 in your language (does not have to be a literal translation)", "Verdant Charm"),     "color": "#3dd425"},
+                // {"name": i18nc("color name, pick a fun name for #00d485 in your language (does not have to be a literal translation)", "Mellow Meadow"),  "color": "#00d485"},
+                {"name": i18nc("color name, pick a fun name for #00d3b8 in your language (does not have to be a literal translation)", "Tepid Teal"),        "color": "#00d3b8"},
+                {"name": i18nc("color name, pick a fun name for #3daee9 in your language (does not have to be a literal translation)", "Plasma Blue"),       "color": "#3daee9"},
+                {"name": i18nc("color name, pick a fun name for #b875dc in your language (does not have to be a literal translation)", "Pon Purple"),        "color": "#b875dc"},
+                {"name": i18nc("color name, pick a fun name for #926ee4 in your language (does not have to be a literal translation)", "Bajo Purple"),       "color": "#926ee4"},
+                {"name": i18nc("color name, pick a fun name for #686b6f in your language (does not have to be a literal translation)", "Summer Shade"),      "color": "#686b6f"},
+                // {"name": i18nc("color name, pick a fun name for #232629 in your language (does not have to be a literal translation)", "Burnt Charcoal"), "color": "#232629"},
+                // {"name": i18nc("color name, pick a fun name for #cb775a in your language (does not have to be a literal translation)", "Cafétera Brown"), "color": "#cb775a"},
+                // {"name": i18nc("color name, pick a fun name for #6a250e in your language (does not have to be a literal translation)", "Rich Hardwood"),  "color": "#6a250e"}
             ]
 
             delegate: ColorRadioButton {
-                color: modelData
-                checked: Qt.colorEqual(kcm.accentColor, modelData) && !kcm.accentColorFromWallpaper
+                id: control
+                color: modelData.color
+                checked: Qt.colorEqual(kcm.accentColor, modelData.color) && !kcm.accentColorFromWallpaper
+
+                QQC2.ToolTip {
+                    text: modelData.name
+                    visible: control.hovered || control.visualFocus
+                    delay: -1
+                }
 
                 onToggled: {
                     kcm.accentColorFromWallpaper = false;
-                    kcm.accentColor = modelData;
-                    kcm.lastUsedCustomAccentColor = modelData;
-                    checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData) && !kcm.accentColorFromWallpaper);
+                    kcm.accentColor = modelData.color;
+                    kcm.lastUsedCustomAccentColor = modelData.color;
+                    checked = Qt.binding(() => Qt.colorEqual(kcm.accentColor, modelData.color) && !kcm.accentColorFromWallpaper);
                 }
             }
         }
@@ -174,7 +187,7 @@ RowLayout {
 
                 readonly property bool isCustomColor: !kcm.accentColorFromWallpaper
                     && !Qt.colorEqual(kcm.accentColor, "transparent")
-                    && !colorRepeater.model.some(color => Qt.colorEqual(color, root.accentColor))
+                    && !colorRepeater.model.some(color => Qt.colorEqual(color.color, root.accentColor))
 
                 readonly property real visibleWidth: visible ? width + Kirigami.Units.smallSpacing : 0
 
