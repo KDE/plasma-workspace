@@ -24,7 +24,6 @@ DeviceFilterControl::DeviceFilterControl(QObject *parent)
     qCDebug(APPLETS::DEVICENOTIFIER) << "Begin initializing Device Filter Control";
     setSourceModel(new DeviceControl(this));
     setDynamicSortFilter(false);
-    sort(0, Qt::AscendingOrder);
 
     onModelReset();
 
@@ -127,8 +126,12 @@ bool DeviceFilterControl::filterAcceptsRow(int sourceRow, const QModelIndex &sou
 }
 bool DeviceFilterControl::lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const
 {
-    if (!source_left.isValid() && !source_right.isValid()) {
+    if (!source_left.isValid()) {
         return true;
+    }
+
+    if (!source_right.isValid()) {
+        return false;
     }
 
     QString leftType = sourceModel()->data(source_left, DeviceControl::Type).toString();
@@ -143,7 +146,7 @@ bool DeviceFilterControl::lessThan(const QModelIndex &source_left, const QModelI
     }
 
     QDateTime leftTime = sourceModel()->data(source_left, DeviceControl::Timestamp).toDateTime();
-    QDateTime rightTime = sourceModel()->data(source_left, DeviceControl::Timestamp).toDateTime();
+    QDateTime rightTime = sourceModel()->data(source_right, DeviceControl::Timestamp).toDateTime();
 
     if (leftTime < rightTime) {
         return false;
