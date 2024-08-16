@@ -147,7 +147,9 @@ void DelayedExecutor::delayedExecute(const QString &udi)
     if (m_service.service()->storageId().endsWith(QLatin1String("openWithFileManager.desktop"))) {
         // We know that we are going to launch the default file manager, so query the desktop file name of that
         const KService::Ptr defaultFileManager = KApplicationTrader::preferredService(QStringLiteral("inode/directory"));
-        job->setDesktopName(defaultFileManager->desktopEntryName());
+        if (defaultFileManager) [[likely]] {
+            job->setDesktopName(defaultFileManager->desktopEntryName());
+        }
     } else {
         // Read the app that will be launched from the desktop file
         KDesktopFile desktopFile(m_service.service()->storageId());
