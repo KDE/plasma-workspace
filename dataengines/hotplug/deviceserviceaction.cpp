@@ -132,9 +132,7 @@ void DelayedExecutor::delayedExecute(const QString &udi)
 {
     Solid::Device device(udi);
 
-    qWarning() << "About the execute the service...";
     QString exec = m_service.exec();
-    qWarning() << "Executed the service!!!";
     MacroExpander mx(device);
     mx.expandMacrosShellQuote(exec);
 
