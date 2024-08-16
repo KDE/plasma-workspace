@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Martin Klapetek <mklapetek@kde.org>
+    SPDX-FileCopyrightText: 2024 Jakob Petsovits <jpetso@petsovits.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -9,12 +10,16 @@
 #include "shellcorona.h"
 
 #include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusReply>
 #include <QDebug>
 #include <QTimer>
 #include <QWindow>
 
 #include <PlasmaQuick/SharedQmlEngine>
 #include <klocalizedstring.h>
+
+#include <algorithm> // std::ranges::sort
 
 using namespace Qt::StringLiterals;
 
@@ -28,6 +33,36 @@ Osd::Osd(const KSharedConfig::Ptr &config, ShellCorona *corona)
 
 Osd::~Osd()
 {
+}
+
+void Osd::screenBrightnessChanged(int percent, const QString &displayId, const QString &displayLabel, int priority, const QRect &screenRect)
+{
+    // Ensure that an element in m_screenBrightnessInfo exists with unique displayId and sorting by priority
+    m_screenBrightnessInfo.insert(displayId,
+                                  {
+                                      .id = displayId,
+                                      .label = displayLabel,
+                                      .screenRect = screenRect,
+                                      .priority = priority,
+                                      .percent = percent,
+                                  });
+
+    if (m_corona->numScreens() == 1 && m_screenBrightnessInfo.size() == 1 && screenRect == m_corona->screenGeometry(0)) {
+        showProgress(u"video-display-brightness"_s, percent, 100);
+    } else if (m_screenBrightnessInfo.size() == 1) {
+        showProgress(u"video-display-brightness"_s, percent, 100, displayLabel);
+    } else {
+        // TODO: show one progress OSD on each corresponding screen
+        QList<ScreenBrightnessInfo> sortedByPriority = m_screenBrightnessInfo.values();
+        std::ranges::sort(sortedByPriority, [](const auto &a, const auto &b) {
+            return a.priority < b.priority;
+        });
+        QStringList percentages;
+        for (const auto &info : std::as_const(sortedByPriority)) {
+            percentages += i18nc("Brightness OSD: display name and brightness percentage", "%1: %2%", info.label, info.percent);
+        }
+        showText(u"video-display-brightness"_s, percentages.join(u"\n"_s));
+    }
 }
 
 void Osd::brightnessChanged(int percent)
@@ -293,4 +328,6 @@ void Osd::hideOsd()
 
     // this is needed to prevent fading from "old" values when the OSD shows up
     rootObject->setProperty("osdValue", 0);
+
+    m_screenBrightnessInfo.clear();
 }

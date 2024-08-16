@@ -31,6 +31,7 @@ public:
 
 public Q_SLOTS:
     void brightnessChanged(int percent);
+    void screenBrightnessChanged(int percent, const QString &displayId, const QString &displayLabel, int priority, const QRect &screenRect);
     void keyboardBrightnessChanged(int percent);
     void volumeChanged(int percent);
     void volumeChanged(int percent, int maximumPercent);
@@ -66,4 +67,13 @@ private:
     int m_timeout = 0;
 
     KConfigGroup m_osdConfigGroup;
+
+    struct ScreenBrightnessInfo {
+        QString id;
+        QString label;
+        QRect screenRect;
+        int priority;
+        int percent;
+    };
+    QMap<QString, ScreenBrightnessInfo> m_screenBrightnessInfo;
 };
