@@ -57,7 +57,7 @@ private Q_SLOTS:
     void onDeviceErrorChanged(const QString &udi);
 
 private:
-    void deviceDelayRemove(const QString &udi);
+    void deviceDelayRemove(const QString &udi, const QString &parentUdi);
 
     QList<Solid::Device> m_devices;
     QHash<QString, ActionsControl *> m_actions;
