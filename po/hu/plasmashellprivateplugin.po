@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-17 00:41+0000\n"
 "PO-Revision-Date: 2024-05-28 11:06+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -362,17 +362,24 @@ msgstr "Új Plasma widgetek letöltése"
 msgid "Install Widget From Local File…"
 msgstr "Telepítés helyi fájlból…"
 
-#: shellprivate/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:489
+#, fuzzy, kde-format
+#| msgid "All Widgets"
+msgctxt "@title:window"
+msgid "Get New Widgets"
+msgstr "Minden widget"
+
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Plasmoid fájl kiválasztása"
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "A(z) %1 csomag telepítése meghiúsult."
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installation Failure"
 msgstr "Telepítési hiba"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-17 00:41+0000\n"
 "PO-Revision-Date: 2024-05-12 04:02+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -362,17 +362,24 @@ msgstr "Plasma-ის ახალი ვიჯეტების გადმ�
 msgid "Install Widget From Local File…"
 msgstr "ვიჯეტის ლოკალური ფაილიდან დაყენება…"
 
-#: shellprivate/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:489
+#, fuzzy, kde-format
+#| msgid "All Widgets"
+msgctxt "@title:window"
+msgid "Get New Widgets"
+msgstr "ყველა ვიჯეტი"
+
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "აირჩიეთ პლაზმოიდის ფაილი"
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "პაკეტის დაყენების შეცდომა: %1."
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installation Failure"
 msgstr "დაყენების შეცდომა"

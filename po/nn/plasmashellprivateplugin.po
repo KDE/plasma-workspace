@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-17 00:41+0000\n"
 "PO-Revision-Date: 2024-05-15 20:50+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -365,17 +365,24 @@ msgstr "Last ned nye skjermelement"
 msgid "Install Widget From Local File…"
 msgstr "Installer skjermelement frå lokal fil …"
 
-#: shellprivate/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:489
+#, fuzzy, kde-format
+#| msgid "All Widgets"
+msgctxt "@title:window"
+msgid "Get New Widgets"
+msgstr "Alle element"
+
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Vel skjermelement-fil"
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Feil ved installering av pakken %1."
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installation Failure"
 msgstr "Mislukka installering"

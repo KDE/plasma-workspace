@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-17 00:41+0000\n"
 "PO-Revision-Date: 2014-09-02 20:48+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -355,17 +355,24 @@ msgstr "Last ned nye Plasma-elementer"
 msgid "Install Widget From Local File…"
 msgstr ""
 
-#: shellprivate/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:489
+#, fuzzy, kde-format
+#| msgid "All Widgets"
+msgctxt "@title:window"
+msgid "Get New Widgets"
+msgstr "Alle elementer"
+
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Velg plasmoidefil"
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Klarte ikke å installere pakka %1."
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installation Failure"
 msgstr "Installering mislyktes"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-17 00:41+0000\n"
 "PO-Revision-Date: 2024-01-03 14:00-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -353,17 +353,24 @@ msgstr "ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਵਿਦਜੈਟ ਡਾਊਨਲੋਡ
 msgid "Install Widget From Local File…"
 msgstr "…ਲੋਕਲ ਫਾਇਲ ਤੋਂ ਵਿਜੈਟ ਇੰਸਟਾਲ ਕਰੋ"
 
-#: shellprivate/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:489
+#, fuzzy, kde-format
+#| msgid "All Widgets"
+msgctxt "@title:window"
+msgid "Get New Widgets"
+msgstr "ਸਭ ਵਿਦਜੈਟ"
+
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "ਪਲਾਜ਼ਮੋਡ ਫ਼ਾਇਲ ਚੁਣੋ"
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "ਪੈਕੇਜ %1 ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਫ਼ੇਲ੍ਹ ਹੈ"
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installation Failure"
 msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਅਸਫ਼ਲ"

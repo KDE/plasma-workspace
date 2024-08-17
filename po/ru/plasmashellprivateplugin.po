@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-17 00:41+0000\n"
 "PO-Revision-Date: 2024-06-27 20:20+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -382,17 +382,24 @@ msgstr "Загрузить виджеты Plasma..."
 msgid "Install Widget From Local File…"
 msgstr "Установить виджет из файла..."
 
-#: shellprivate/widgetexplorer.cpp:501
+#: shellprivate/widgetexplorer.cpp:489
+#, fuzzy, kde-format
+#| msgid "Get New Templates..."
+msgctxt "@title:window"
+msgid "Get New Widgets"
+msgstr "Загрузить новые шаблоны..."
+
+#: shellprivate/widgetexplorer.cpp:502
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Выбор файла виджета Plasma"
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Не удалось установить пакет %1."
 
-#: shellprivate/widgetexplorer.cpp:515
+#: shellprivate/widgetexplorer.cpp:516
 #, kde-format
 msgid "Installation Failure"
 msgstr "Ошибка установки"
@@ -443,9 +450,6 @@ msgstr "Ошибка установки"
 
 #~ msgid "Download Wallpaper Plugins"
 #~ msgstr "Загрузка подключаемых модулей, предоставляющих обои рабочего стола"
-
-#~ msgid "Get New Templates..."
-#~ msgstr "Загрузить новые шаблоны..."
 
 #~ msgid "Hide Dashboard"
 #~ msgstr "Скрыть панель"
