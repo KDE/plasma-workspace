@@ -213,6 +213,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
         const Solid::DeviceInterface *interface = device.asDeviceInterface(type);
         if (interface) {
             m_deviceTypes[udi].first = Solid::DeviceInterface::typeDescription(type);
+            break;
         }
     }
 
