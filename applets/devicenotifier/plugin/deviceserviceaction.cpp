@@ -134,9 +134,7 @@ DelayedExecutor::DelayedExecutor(const KServiceAction &service, Solid::Device &d
 
 void DelayedExecutor::delayedExecute(const QString &udi)
 {
-    qCWarning(APPLETS::DEVICENOTIFIER) << "About the execute the service...";
     QString exec = m_service.exec();
-    qCWarning(APPLETS::DEVICENOTIFIER) << "Executed the service!!!";
     MacroExpander mx(udi);
     mx.expandMacrosShellQuote(exec);
 
