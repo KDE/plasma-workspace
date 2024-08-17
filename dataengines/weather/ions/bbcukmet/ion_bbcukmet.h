@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2007-2009 Shawn Starr <shawn.starr@rogers.com>
+    SPDX-FileCopyrightText: 2024 Ismael Asensio <isma.af@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
 */
@@ -26,46 +27,45 @@ class QXmlStreamReader;
 class WeatherData
 {
 public:
-    WeatherData();
-
     QString place;
     QString stationName;
-    double stationLatitude;
-    double stationLongitude;
+    double stationLatitude = qQNaN();
+    double stationLongitude = qQNaN();
 
     // Current observation information.
-    QString obsTime;
-    QDateTime observationDateTime;
+    struct Observation {
+        QString obsTime;
+        QDateTime observationDateTime;
 
-    QString condition;
-    QString conditionIcon;
-    float temperature_C;
-    QString windDirection;
-    float windSpeed_miles;
-    float humidity;
-    float pressure;
-    QString pressureTendency;
-    QString visibilityStr;
+        QString condition;
+        QString conditionIcon;
+        float temperature_C = qQNaN();
+        QString windDirection;
+        float windSpeed_miles = qQNaN();
+        float humidity = qQNaN();
+        float pressure = qQNaN();
+        QString pressureTendency;
+        QString visibilityStr;
+    };
+    Observation current;
+    bool isObservationDataPending = false;
 
     QString solarDataTimeEngineSourceName;
     bool isNight = false;
     bool isSolarDataPending = false;
 
-    // Five day forecast
+    // Forecasts
     struct ForecastInfo {
-        ForecastInfo();
         QString period;
         QString iconName;
         QString summary;
-        float tempHigh;
-        float tempLow;
-        float windSpeed;
+        float tempHigh = qQNaN();
+        float tempLow = qQNaN();
+        float windSpeed = qQNaN();
         QString windDirection;
     };
 
-    // 5 day Forecast
-    QList<WeatherData::ForecastInfo *> forecasts;
-
+    QList<WeatherData::ForecastInfo> forecasts;
     bool isForecastsDataPending = false;
 };
 
@@ -78,7 +78,6 @@ class Q_DECL_EXPORT UKMETIon : public IonInterface, public Plasma5Support::DataE
 
 public:
     UKMETIon(QObject *parent);
-    ~UKMETIon() override;
 
 public: // IonInterface API
     bool updateIonSource(const QString &source) override;
@@ -91,20 +90,12 @@ protected: // IonInterface API
     void reset() override;
 
 private Q_SLOTS:
-    void setup_slotDataArrived(KIO::Job *, const QByteArray &);
-    void setup_slotJobFinished(KJob *, const QString &);
-    // void setup_slotRedirected(KIO::Job *, const KUrl &url);
-
-    void observation_slotDataArrived(KIO::Job *, const QByteArray &);
+    void search_slotJobFinished(KJob *);
     void observation_slotJobFinished(KJob *);
-
-    void forecast_slotDataArrived(KIO::Job *, const QByteArray &);
     void forecast_slotJobFinished(KJob *);
 
 private:
     void updateWeather(const QString &source);
-
-    // bool night(const QString& source) const;
 
     /* UKMET Methods - Internal for Ion */
     QMap<QString, ConditionIcons> setupDayIconMappings() const;
@@ -115,35 +106,36 @@ private:
     QMap<QString, ConditionIcons> const &dayIcons() const;
     QMap<QString, IonInterface::WindDirections> const &windIcons() const;
 
-    // Load and Parse the place search XML listings
+    KJob *requestAPIJob(const QString &source, const QUrl &url);
+
+    // Load and Parse the place search listings
     void findPlace(const QString &place, const QString &source);
+    void readSearchData(const QString &source, const QByteArray &json);
     void validate(const QString &source); // Sync data source with Applet
-    void getFiveDayForecast(const QString &source);
-    void getXMLData(const QString &source);
-    void readSearchHTMLData(const QString &source, const QList<QByteArray *> htmls);
-    bool readFiveDayForecastXMLData(const QString &source, QXmlStreamReader &xml);
-    void parseSearchLocations(const QString &source, QXmlStreamReader &xml);
+
+    // Load and parse the weather forecast
+    void getForecast(const QString &source);
+    bool readForecast(const QString &source, QXmlStreamReader &xml);
+    void parseForecast(const QString &source, QXmlStreamReader &xml);
+    void parseWeatherForecast(const QString &source, QXmlStreamReader &xml);
+    void parsePlaceForecast(const QString &source, QXmlStreamReader &xml);
 
     // Observation parsing methods
-    bool readObservationXMLData(const QString &source, QXmlStreamReader &xml);
+    void getObservation(const QString &source);
+    void getSolarData(const QString &source);
+    bool readObservationData(const QString &source, QXmlStreamReader &xml);
     void parsePlaceObservation(const QString &source, WeatherData &data, QXmlStreamReader &xml);
     void parseWeatherChannel(const QString &source, WeatherData &data, QXmlStreamReader &xml);
     void parseWeatherObservation(const QString &source, WeatherData &data, QXmlStreamReader &xml);
-    void parseFiveDayForecast(const QString &source, QXmlStreamReader &xml);
-    void parsePlaceForecast(const QString &source, QXmlStreamReader &xml);
-    void parseWeatherForecast(const QString &source, QXmlStreamReader &xml);
+
     void parseUnknownElement(QXmlStreamReader &xml) const;
-
     void parseFloat(float &value, const QString &string);
-
-    void deleteForecasts();
 
 private:
     struct XMLMapInfo {
         QString stationId;
         QString place;
         QString forecastHTMLUrl;
-        QString sourceExtraArg;
     };
 
     // Key dicts
@@ -154,17 +146,10 @@ private:
     QHash<QString, WeatherData> m_weatherData;
 
     // Store KIO jobs - Search list
-    QHash<KJob *, QByteArray *> m_jobHtml;
+    QHash<KJob *, std::shared_ptr<QByteArray>> m_jobData;
     QHash<KJob *, QString> m_jobList;
 
-    bool m_normalSearchArrived = false;
-    bool m_autoSearchArrived = false;
-
-    QHash<KJob *, QXmlStreamReader *> m_obsJobXml;
-    QHash<KJob *, QString> m_obsJobList;
-
-    QHash<KJob *, QXmlStreamReader *> m_forecastJobXml;
-    QHash<KJob *, QString> m_forecastJobList;
+    int m_pendingSearchCount = 0;
 
     QStringList m_sourcesToReset;
 };
