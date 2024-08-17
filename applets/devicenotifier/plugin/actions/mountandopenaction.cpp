@@ -6,6 +6,7 @@
 
 #include "mountandopenaction.h"
 
+#include <Solid/Camera>
 #include <Solid/OpticalDisc>
 #include <Solid/OpticalDrive>
 #include <Solid/PortableMediaPlayer>
@@ -25,6 +26,7 @@ MountAndOpenAction::MountAndOpenAction(const QString &udi, QObject *parent)
     m_isRoot = false;
 
     m_hasPortableMediaPlayer = false;
+    m_hasCamera = false;
 
     if (device.is<Solid::StorageAccess>()) {
         Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
@@ -44,8 +46,20 @@ MountAndOpenAction::MountAndOpenAction(const QString &udi, QObject *parent)
     if (device.is<Solid::PortableMediaPlayer>()) {
         Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
         if (mediaplayer) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "MountAndOpenAction: Device " << udi << " has a media player";
             m_hasPortableMediaPlayer = true;
-            m_supportedProtocols = mediaplayer->supportedProtocols();
+            m_supportedProtocols.append(mediaplayer->supportedProtocols());
+            qCDebug(APPLETS::DEVICENOTIFIER) << "MountAndOpenAction: Supported protocols: " << m_supportedProtocols;
+        }
+    }
+
+    if (device.is<Solid::Camera>()) {
+        Solid::Camera *camera = device.as<Solid::Camera>();
+        if (camera) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "MountAndOpenAction: Device " << udi << " has a camera";
+            m_hasCamera = true;
+            m_supportedProtocols.append(camera->supportedProtocols());
+            qCDebug(APPLETS::DEVICENOTIFIER) << "MountAndOpenAction: Supported protocols: " << m_supportedProtocols;
         }
     }
 
@@ -65,17 +79,17 @@ QString MountAndOpenAction::predicate() const
     if (!m_hasStorageAccess || !m_stateMonitor->isRemovable(m_udi) || !m_stateMonitor->isMounted(m_udi)) {
         newPredicate = QLatin1String("openWithFileManager.desktop");
 
-        if (!m_hasStorageAccess && m_hasPortableMediaPlayer) {
-            if (!m_supportedProtocols.isEmpty()) {
+        if (!m_hasStorageAccess && (m_hasPortableMediaPlayer || m_hasCamera)) {
+            if (m_supportedProtocols.isEmpty()) {
                 return newPredicate;
             }
 
-            for (auto protocol : m_supportedProtocols) {
-                if (protocol == QLatin1String("mtp")) {
+            for (const QString &protocol : m_supportedProtocols) {
+                if (protocol == QStringLiteral("mtp")) {
                     newPredicate = QLatin1String("solid_mtp.desktop"); // this lives in kio-extras!
                     break;
                 }
-                if (protocol == QLatin1String("afc")) {
+                if (protocol == QStringLiteral("afc")) {
                     newPredicate = QLatin1String("solid_afc.desktop"); // this lives in kio-extras!
                     break;
                 }

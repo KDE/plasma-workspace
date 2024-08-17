@@ -164,6 +164,15 @@ bool ActionsControl::blockActions(const QString &action)
     if (action == QLatin1String("openWithFileManager.desktop")) {
         return false;
     }
+
+    if (action == QLatin1String("solid_mtp.desktop")) {
+        return false;
+    }
+
+    if (action == QLatin1String("solid_afc.desktop")) {
+        return false;
+    }
+
     return true;
 }
 

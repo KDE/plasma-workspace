@@ -41,6 +41,7 @@ private:
     bool m_isOpticalDisk;
     bool m_isRoot;
 
+    bool m_hasCamera;
     bool m_hasPortableMediaPlayer;
     QStringList m_supportedProtocols;
 
