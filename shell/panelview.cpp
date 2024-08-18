@@ -449,6 +449,11 @@ void PanelView::fixUnsupportedConfiguration()
     }
 }
 
+void PanelView::clonePanelTo(Plasma::Types::Location location, QScreen *screen)
+{
+    m_corona->clonePanelTo(this, location, screen);
+}
+
 QRect PanelView::relativeConfigRect() const
 {
     PanelConfigView *panelConfigView = qobject_cast<PanelConfigView *>(m_panelConfigView);

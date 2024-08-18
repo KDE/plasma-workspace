@@ -235,6 +235,8 @@ public:
 
     Q_INVOKABLE void fixUnsupportedConfiguration();
 
+    Q_INVOKABLE void clonePanelTo(Plasma::Types::Location location, QScreen *screen);
+
     /* Both Shared with script/panel.cpp */
     static KConfigGroup panelConfig(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
     static KConfigGroup panelConfigDefaults(ShellCorona *corona, Plasma::Containment *containment, QScreen *screen);
@@ -248,6 +250,7 @@ public:
     QScreen *screenToFollow() const;
 
     bool isUserConfiguring() const;
+    void restore();
 
 protected:
     QSize preferredSize() const;
@@ -290,7 +293,6 @@ protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet) override;
 
 private Q_SLOTS:
-    void restore();
     void setAutoHideEnabled(bool autoHideEnabled);
     void showTemporarily();
     void refreshContainment();

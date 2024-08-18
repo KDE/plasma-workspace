@@ -2228,6 +2228,137 @@ void ShellCorona::addPanel(QAction *action)
     }
 }
 
+void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location location, QScreen *wantedScreen)
+{
+    Plasma::Containment *targetPanel = createContainment(QStringLiteral("org.kde.panel"));
+    if (!targetPanel) {
+        return;
+    }
+
+    // We copy all the containment configuration options, we add the same
+    // applet as the old panel, and we make sure to change the old applet
+    // ids to new ones.
+
+    auto *oldPanel = oldPanelView->containment();
+
+    KConfigGroup oldPanelConfig = oldPanel->config();
+    KConfigGroup targetConfig = targetPanel->config();
+    oldPanelConfig.copyTo(&targetConfig);
+
+    KConfigGroup targetAppletsConfig = targetConfig.group(QStringLiteral("Applets"));
+    KConfigGroup targetGeneralConfig = targetConfig.group(QStringLiteral("General"));
+    QString appletsOrder = targetGeneralConfig.readEntry(QStringLiteral("AppletOrder"), QStringLiteral());
+    QStringList appletsOrderList = appletsOrder.split(QStringLiteral(";"));
+
+    for (auto applet : oldPanel->applets()) {
+        auto newApplet = targetPanel->createApplet(applet->pluginName());
+
+        for (int i = 0; i < appletsOrderList.size(); ++i) {
+            if (appletsOrderList[i] == QString::number(applet->id())) {
+                appletsOrderList[i] = QString::number(newApplet->id());
+            }
+        }
+
+        KConfigGroup oldAppletConfig = targetAppletsConfig.group(QString::number(applet->id()));
+        KConfigGroup newAppletConfig = targetAppletsConfig.group(QString::number(newApplet->id()));
+
+        if (newApplet->pluginName() == QStringLiteral("org.kde.plasma.systemtray")) {
+            // System trays are their own containments, so we have to handle their
+            // scenario separately. Firstly, do not copy the settings over: the only
+            // setting of "org.kde.plasma.systemtray" applet is the id of the actual
+            // system tray containment, and by creating a new tray applet, we've also
+            // created a new tray containment with a new id. We now read that id and
+            // we copy over the old tray containment settings to the new tray.
+
+            auto oldTrayId = oldAppletConfig.group(QStringLiteral("Configuration")).readEntry("SystrayContainmentId");
+            auto newTrayId = newAppletConfig.group(QStringLiteral("Configuration")).readEntry("SystrayContainmentId");
+
+            Plasma::Containment *oldTrayContainment;
+            Plasma::Containment *newTrayContainment;
+
+            for (auto c : containments()) {
+                if (c->id() == oldTrayId.toUInt()) {
+                    oldTrayContainment = c;
+                } else if (c->id() == newTrayId.toUInt()) {
+                    newTrayContainment = c;
+                }
+            }
+
+            auto newTrayConfig = newTrayContainment->config();
+            auto oldTrayConfig = oldTrayContainment->config();
+            oldTrayConfig.copyTo(&newTrayConfig);
+
+            for (auto oldTrayApplet : oldTrayContainment->applets()) {
+                auto oldTrayAppletConfig = newTrayConfig.group(QStringLiteral("Applets")).group(QString::number(oldTrayApplet->id()));
+                KConfigGroup newTrayAppletConfig;
+
+                Plasma::Applet *newTrayApplet = nullptr;
+
+                for (auto a : newTrayContainment->applets()) {
+                    if (oldTrayApplet->pluginName() == a->pluginName()) {
+                        newTrayApplet = a;
+                    }
+                }
+
+                if (newTrayApplet == nullptr) {
+                    newTrayApplet = newTrayContainment->createApplet(oldTrayApplet->pluginName());
+                }
+
+                newTrayAppletConfig = newTrayConfig.group(QStringLiteral("Applets")).group(QString::number(newTrayApplet->id()));
+                oldTrayAppletConfig.copyTo(&newTrayAppletConfig);
+
+                if (applicationConfig()->group(QStringLiteral("Applets")).hasGroup(QString::number(oldTrayApplet->id()))) {
+                    auto oldCoronaConfig = applicationConfig()->group(QStringLiteral("Applets")).group(QString::number(oldTrayApplet->id()));
+                    auto newCoronaConfig = applicationConfig()->group(QStringLiteral("Applets")).group(QString::number(newTrayApplet->id()));
+                    oldCoronaConfig.copyTo(&newCoronaConfig);
+                }
+
+                Q_EMIT newTrayApplet->configScheme()->configChanged();
+                oldTrayAppletConfig.deleteGroup();
+            }
+
+            Q_EMIT newTrayContainment->configScheme()->configChanged();
+            oldAppletConfig.deleteGroup();
+
+        } else {
+            // All the applet ids are different, so we re-parent their settings.
+            oldAppletConfig.copyTo(&newAppletConfig);
+            oldAppletConfig.deleteGroup();
+
+            if (applicationConfig()->group(QStringLiteral("Applets")).hasGroup(QString::number(applet->id()))) {
+                auto oldCoronaConfig = applicationConfig()->group(QStringLiteral("Applets")).group(QString::number(applet->id()));
+                auto newCoronaConfig = applicationConfig()->group(QStringLiteral("Applets")).group(QString::number(newApplet->id()));
+                oldCoronaConfig.copyTo(&newCoronaConfig);
+            }
+        }
+    }
+
+    targetGeneralConfig.writeEntry("AppletOrder", appletsOrderList.join(QStringLiteral(";")));
+
+    Q_ASSERT(targetPanel);
+    m_waitingPanels << targetPanel;
+    // immediately create the panel here so that we have access to the panel view
+    createWaitingPanels();
+
+    // Now that we created the Panel View too, we will copy its
+    // config files; this includes alignment, thickness, and such.
+    if (m_panelViews.contains(targetPanel)) {
+        PanelView *targetPanelView = m_panelViews.value(targetPanel);
+
+        KConfigGroup viewConfig = oldPanelView->config().parent();
+        KConfigGroup targetViewConfig = targetPanelView->config().parent();
+
+        viewConfig.copyTo(&targetViewConfig);
+
+        if (wantedScreen) {
+            targetPanelView->setScreenToFollow(wantedScreen);
+            targetPanel->setLocation(location);
+        }
+
+        targetPanelView->restore();
+    }
+}
+
 Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
 {
     Plasma::Containment *panel = createContainment(plugin);
