@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:41+0000\n"
-"PO-Revision-Date: 2024-05-12 04:02+0200\n"
+"PO-Revision-Date: 2024-08-17 04:03+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -363,11 +363,10 @@ msgid "Install Widget From Local File…"
 msgstr "ვიჯეტის ლოკალური ფაილიდან დაყენება…"
 
 #: shellprivate/widgetexplorer.cpp:489
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "ყველა ვიჯეტი"
+msgstr "ახალი ვიჯეტების მიღება"
 
 #: shellprivate/widgetexplorer.cpp:502
 #, kde-format

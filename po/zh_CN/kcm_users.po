@@ -509,6 +509,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"图像文件 (所有主要文件类型) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *.pbm *."
+"pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:189
 #, kde-format

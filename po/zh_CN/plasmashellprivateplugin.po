@@ -362,11 +362,10 @@ msgid "Install Widget From Local File…"
 msgstr "从本地文件安装挂件…"
 
 #: shellprivate/widgetexplorer.cpp:489
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "所有挂件"
+msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:502
 #, kde-format

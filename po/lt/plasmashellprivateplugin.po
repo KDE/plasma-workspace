@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:41+0000\n"
-"PO-Revision-Date: 2024-05-16 21:13+0300\n"
+"PO-Revision-Date: 2024-08-17 23:39+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -371,11 +371,10 @@ msgid "Install Widget From Local File…"
 msgstr "Įdiegti valdiklį iš vietinio failo…"
 
 #: shellprivate/widgetexplorer.cpp:489
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Visi valdikliai"
+msgstr "Gauti naujų valdiklių"
 
 #: shellprivate/widgetexplorer.cpp:502
 #, kde-format
