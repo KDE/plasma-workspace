@@ -2102,6 +2102,14 @@ void ShellCorona::populateAddPanelsMenu()
     m_addPanelsMenu->clear();
     const KPluginMetaData emptyInfo;
 
+    if (panelBeingConfigured()) {
+        QAction *action = m_addPanelsMenu->addAction(i18n("Clone selected panel here…"));
+        action->setData(QStringLiteral("plasma-clone-panel"));
+    } else {
+        QAction *action = m_addPanelsMenu->addAction(i18n("Click on a panel to enable cloning"));
+        action->setEnabled(false);
+    }
+
     const QList<KPluginMetaData> panelContainmentPlugins = Plasma::PluginLoader::listContainmentsMetaDataOfType(QStringLiteral("Panel"));
     QMap<QString, QPair<KPluginMetaData, KPluginMetaData>> sorted;
     for (const KPluginMetaData &plugin : panelContainmentPlugins) {
@@ -2172,8 +2180,95 @@ void ShellCorona::addPanel(QAction *action)
         scriptEngine.evaluateScript(QStringLiteral("loadTemplate(\"%1\")").arg(templateName));
     } else
 #endif
-        if (!plugin.isEmpty()) {
+        if (plugin == QStringLiteral("plasma-clone-panel") && panelBeingConfigured()) {
+        clonePanel();
+    } else if (!plugin.isEmpty()) {
         addPanel(plugin);
+    }
+}
+
+void ShellCorona::clonePanel()
+{
+    if (!panelBeingConfigured()) {
+        return;
+    }
+
+    Plasma::Containment *targetPanel = createContainment(QStringLiteral("org.kde.panel"));
+    if (!targetPanel) {
+        return;
+    }
+
+    // find out what screen this panel should go on
+    QScreen *wantedScreen = nullptr;
+    auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
+    QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
+    if (reply.isValid()) {
+        const auto screens = QGuiApplication::screens();
+        auto screenIt = screens.cend();
+        const QString activeOutputName = reply.value();
+        screenIt = std::find_if(screens.cbegin(), screens.cend(), [&activeOutputName](QScreen *screen) {
+            return screen->name() == activeOutputName;
+        });
+        if (screenIt != screens.cend()) {
+            wantedScreen = *screenIt;
+        }
+    }
+
+    // We copy all the containment configuration options, we add the same
+    // applet as the old panel, and we make sure to change the old applet
+    // ids to new ones.
+
+    auto *oldPanelView = panelBeingConfigured();
+    auto *oldPanel = oldPanelView->containment();
+
+    KConfigGroup config = oldPanel->config();
+    KConfigGroup targetConfig = targetPanel->config();
+    config.copyTo(&targetConfig);
+
+    KConfigGroup targetAppletsConfig = targetConfig.group(QStringLiteral("Applets"));
+    KConfigGroup targetGeneralConfig = targetConfig.group(QStringLiteral("General"));
+    QString appletsOrder = targetGeneralConfig.readEntry(QStringLiteral("AppletOrder"), QStringLiteral());
+    QStringList appletsOrderList = appletsOrder.split(QStringLiteral(";"));
+
+    for (auto applet : oldPanel->applets()) {
+        auto newApplet = targetPanel->createApplet(applet->pluginName());
+
+        for (int i = 0; i < appletsOrderList.size(); ++i) {
+            if (appletsOrderList[i] == QString::number(applet->id())) {
+                appletsOrderList[i] = QString::number(newApplet->id());
+            }
+        }
+
+        // All the applet ids are different, so we re-parent their settings.
+        KConfigGroup oldAppletConfig = targetAppletsConfig.group(QString::number(applet->id()));
+        KConfigGroup newAppletConfig = targetAppletsConfig.group(QString::number(newApplet->id()));
+        oldAppletConfig.copyTo(&newAppletConfig);
+        oldAppletConfig.deleteGroup();
+    }
+
+    targetGeneralConfig.writeEntry("AppletOrder", appletsOrderList.join(QStringLiteral(";")));
+
+    Q_ASSERT(targetPanel);
+    m_waitingPanels << targetPanel;
+    // immediately create the panel here so that we have access to the panel view
+    createWaitingPanels();
+
+    // Now that we created the Panel View too, we will copy its
+    // config files; this includes alignment, thickness, and such.
+    if (m_panelViews.contains(targetPanel)) {
+        PanelView *targetPanelView = m_panelViews.value(targetPanel);
+
+        KConfigGroup viewConfig = oldPanelView->config().parent();
+        KConfigGroup targetViewConfig = targetPanelView->config().parent();
+
+        viewConfig.copyTo(&targetViewConfig);
+
+        if (wantedScreen) {
+            targetPanelView->setScreenToFollow(wantedScreen);
+            targetPanel->setLocation(oldPanel->location());
+        }
+
+        targetPanelView->restore();
     }
 }
 

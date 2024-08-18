@@ -249,6 +249,7 @@ public:
     QScreen *screenToFollow() const;
 
     bool isUserConfiguring() const;
+    void restore();
 
 protected:
     QSize preferredSize() const;
@@ -291,7 +292,6 @@ protected Q_SLOTS:
     void showConfigurationInterface(Plasma::Applet *applet) override;
 
 private Q_SLOTS:
-    void restore();
     void setAutoHideEnabled(bool autoHideEnabled);
     void showTemporarily();
     void refreshContainment();

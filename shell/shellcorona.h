@@ -246,6 +246,7 @@ private Q_SLOTS:
     void activityAdded(const QString &id);
     void activityRemoved(const QString &id);
     void checkAddPanelAction();
+    void clonePanel();
     void addPanel();
     void addPanel(QAction *action);
     void populateAddPanelsMenu();
