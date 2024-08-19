@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-07 00:42+0000\n"
+"POT-Creation-Date: 2024-08-19 00:41+0000\n"
 "PO-Revision-Date: 2024-01-12 21:41+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -109,22 +109,22 @@ msgstr "Felugró ablak új eszköz csatlakoztatásakor"
 msgid "Mount"
 msgstr "Csatlakoztatás"
 
-#: plugin/actions/mountandopenaction.cpp:152
+#: plugin/actions/mountandopenaction.cpp:166
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Megnyitás fájlkezelőben"
 
-#: plugin/actions/mountandopenaction.cpp:155
+#: plugin/actions/mountandopenaction.cpp:169
 #, kde-format
 msgid "Mount and Open"
 msgstr "Csatolás és megnyitás"
 
-#: plugin/actions/mountandopenaction.cpp:157
+#: plugin/actions/mountandopenaction.cpp:171
 #, kde-format
 msgid "Eject"
 msgstr "Kiadás"
 
-#: plugin/actions/mountandopenaction.cpp:159
+#: plugin/actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Safely remove"
 msgstr "Biztonságos eltávolítás"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-07 00:42+0000\n"
+"POT-Creation-Date: 2024-08-19 00:41+0000\n"
 "PO-Revision-Date: 2024-01-19 17:39-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -108,22 +108,22 @@ msgstr "ਜਦੋਂ ਨਵੇਂ ਡਿਵਾਈਸ ਨੂੰ ਲਗਾਇਆ �
 msgid "Mount"
 msgstr "ਮਾਊਂਟ ਕਰੋ"
 
-#: plugin/actions/mountandopenaction.cpp:152
+#: plugin/actions/mountandopenaction.cpp:166
 #, kde-format
 msgid "Open in File Manager"
 msgstr "ਫਾਇਲ ਮੈਨੇਜਰ ਵਿੱਚ ਖੋਲ੍ਹੋ"
 
-#: plugin/actions/mountandopenaction.cpp:155
+#: plugin/actions/mountandopenaction.cpp:169
 #, kde-format
 msgid "Mount and Open"
 msgstr "ਮਾਊਂਟ ਕਰੋ ਤੇ ਖੋਲ੍ਹੋ"
 
-#: plugin/actions/mountandopenaction.cpp:157
+#: plugin/actions/mountandopenaction.cpp:171
 #, kde-format
 msgid "Eject"
 msgstr "ਕੱਢੋ"
 
-#: plugin/actions/mountandopenaction.cpp:159
+#: plugin/actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Safely remove"
 msgstr "ਸਹੀ ਸਲਾਮਤੀ ਹਟਾਓ"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:43+0000\n"
+"POT-Creation-Date: 2024-08-19 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 18:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -82,81 +82,81 @@ msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "經度："
 
-#: ui/main.qml:102
+#: ui/main.qml:75
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "藍光濾鏡讓螢幕顏色偏向暖色調。"
 
-#: ui/main.qml:155 ui/main.qml:206 ui/main.qml:270
+#: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:163
+#: ui/main.qml:136
 #, kde-format
 msgid "Day light temperature:"
 msgstr "日光色溫："
 
-#: ui/main.qml:213 ui/main.qml:277
+#: ui/main.qml:186 ui/main.qml:250
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "冷色調（無濾鏡）"
 
-#: ui/main.qml:220 ui/main.qml:284
+#: ui/main.qml:193 ui/main.qml:257
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "暖色調"
 
-#: ui/main.qml:227
+#: ui/main.qml:200
 #, kde-format
 msgid "Night light temperature:"
 msgstr "夜光色溫："
 
-#: ui/main.qml:296
+#: ui/main.qml:269
 #, kde-format
 msgid "Switching times:"
 msgstr "切換時間："
 
-#: ui/main.qml:299
+#: ui/main.qml:272
 #, kde-format
 msgid "Always off"
 msgstr "永遠關閉"
 
-#: ui/main.qml:300
+#: ui/main.qml:273
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "目前所在地的日落及日出"
 
-#: ui/main.qml:301
+#: ui/main.qml:274
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "手動指定所在地的日落及日出"
 
-#: ui/main.qml:302
+#: ui/main.qml:275
 #, kde-format
 msgid "Custom times"
 msgstr "自訂時間"
 
-#: ui/main.qml:303
+#: ui/main.qml:276
 #, kde-format
 msgid "Always on night light"
 msgstr "總是使用夜光模式"
 
-#: ui/main.qml:320
+#: ui/main.qml:288
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "目前位置："
 
-#: ui/main.qml:326
+#: ui/main.qml:293
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "緯度：%1°  經度：%2°"
 
-#: ui/main.qml:350
+#: ui/main.qml:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -168,33 +168,33 @@ msgstr ""
 "mozilla.com'>Mozilla 定位服務 (Mozilla Location Service)</link> 來定期更新本"
 "裝置的所在地。"
 
-#: ui/main.qml:365
+#: ui/main.qml:332
 #, kde-format
 msgid "Begin night light at:"
 msgstr "夜光開始時間："
 
-#: ui/main.qml:382
+#: ui/main.qml:349
 #, kde-format
 msgid "Begin day light at:"
 msgstr "日光開始時間："
 
-#: ui/main.qml:398
+#: ui/main.qml:365
 #, kde-format
 msgid "Transition duration:"
 msgstr "過渡時間："
 
-#: ui/main.qml:409
+#: ui/main.qml:376
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1分鐘"
 
-#: ui/main.qml:422
+#: ui/main.qml:389
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "輸入分鐘 - 最小值：1，最大值：600"
 
-#: ui/main.qml:445
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

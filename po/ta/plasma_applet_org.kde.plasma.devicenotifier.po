@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-07 00:42+0000\n"
+"POT-Creation-Date: 2024-08-19 00:41+0000\n"
 "PO-Revision-Date: 2024-08-04 16:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -106,22 +106,22 @@ msgstr "புதிய சாதனம் செருகப்படும்�
 msgid "Mount"
 msgstr "ஏற்று"
 
-#: plugin/actions/mountandopenaction.cpp:152
+#: plugin/actions/mountandopenaction.cpp:166
 #, kde-format
 msgid "Open in File Manager"
 msgstr "கோப்பு மேலாளரில் திற"
 
-#: plugin/actions/mountandopenaction.cpp:155
+#: plugin/actions/mountandopenaction.cpp:169
 #, kde-format
 msgid "Mount and Open"
 msgstr "ஏற்றி திற"
 
-#: plugin/actions/mountandopenaction.cpp:157
+#: plugin/actions/mountandopenaction.cpp:171
 #, kde-format
 msgid "Eject"
 msgstr "வெளியேற்று"
 
-#: plugin/actions/mountandopenaction.cpp:159
+#: plugin/actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Safely remove"
 msgstr "பத்திரமாக நீக்கு"

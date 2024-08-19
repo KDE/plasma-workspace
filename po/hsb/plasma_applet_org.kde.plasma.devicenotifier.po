@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-07 00:42+0000\n"
+"POT-Creation-Date: 2024-08-19 00:41+0000\n"
 "PO-Revision-Date: 2008-11-13 00:55+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -106,22 +106,22 @@ msgstr "Pokaž wuskakotawku (popup), hdyž so nowy grat přityknje"
 msgid "Mount"
 msgstr "Zapójsnyć"
 
-#: plugin/actions/mountandopenaction.cpp:152
+#: plugin/actions/mountandopenaction.cpp:166
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Z datajowym rjadowakom wočinić"
 
-#: plugin/actions/mountandopenaction.cpp:155
+#: plugin/actions/mountandopenaction.cpp:169
 #, kde-format
 msgid "Mount and Open"
 msgstr "Zapójsnyć a wočinić"
 
-#: plugin/actions/mountandopenaction.cpp:157
+#: plugin/actions/mountandopenaction.cpp:171
 #, kde-format
 msgid "Eject"
 msgstr "Wućisnyć"
 
-#: plugin/actions/mountandopenaction.cpp:159
+#: plugin/actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Safely remove"
 msgstr "Kedźbliwje wotpójsnyć"

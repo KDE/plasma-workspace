@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-07 00:42+0000\n"
+"POT-Creation-Date: 2024-08-19 00:41+0000\n"
 "PO-Revision-Date: 2024-02-09 19:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -107,22 +107,22 @@ msgstr "새 장치가 연결되었을 때 팝업 표시"
 msgid "Mount"
 msgstr "마운트"
 
-#: plugin/actions/mountandopenaction.cpp:152
+#: plugin/actions/mountandopenaction.cpp:166
 #, kde-format
 msgid "Open in File Manager"
 msgstr "파일 관리자에서 열기"
 
-#: plugin/actions/mountandopenaction.cpp:155
+#: plugin/actions/mountandopenaction.cpp:169
 #, kde-format
 msgid "Mount and Open"
 msgstr "마운트하고 열기"
 
-#: plugin/actions/mountandopenaction.cpp:157
+#: plugin/actions/mountandopenaction.cpp:171
 #, kde-format
 msgid "Eject"
 msgstr "꺼내기"
 
-#: plugin/actions/mountandopenaction.cpp:159
+#: plugin/actions/mountandopenaction.cpp:173
 #, kde-format
 msgid "Safely remove"
 msgstr "안전하게 제거"

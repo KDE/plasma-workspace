@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:43+0000\n"
+"POT-Creation-Date: 2024-08-19 00:41+0000\n"
 "PO-Revision-Date: 2024-04-21 09:04+0200\n"
 "Last-Translator: Paolo Zamponi <feus73@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -85,81 +85,81 @@ msgctxt "@label: textbox"
 msgid "Longitude:"
 msgstr "Longitudine:"
 
-#: ui/main.qml:102
+#: ui/main.qml:75
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr "Il filtro per la luce blu rende i colori dello schermo più caldi."
 
-#: ui/main.qml:155 ui/main.qml:206 ui/main.qml:270
+#: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
 msgstr "%1K"
 
-#: ui/main.qml:163
+#: ui/main.qml:136
 #, kde-format
 msgid "Day light temperature:"
 msgstr "Temperatura della luce diurna:"
 
-#: ui/main.qml:213 ui/main.qml:277
+#: ui/main.qml:186 ui/main.qml:250
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
 msgstr "Fredda (nessun filtro)"
 
-#: ui/main.qml:220 ui/main.qml:284
+#: ui/main.qml:193 ui/main.qml:257
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
 msgstr "Calda"
 
-#: ui/main.qml:227
+#: ui/main.qml:200
 #, kde-format
 msgid "Night light temperature:"
 msgstr "Temperatura della luce notturna:"
 
-#: ui/main.qml:296
+#: ui/main.qml:269
 #, kde-format
 msgid "Switching times:"
 msgstr "Orari di cambiamento:"
 
-#: ui/main.qml:299
+#: ui/main.qml:272
 #, kde-format
 msgid "Always off"
 msgstr "Sempre disattivato"
 
-#: ui/main.qml:300
+#: ui/main.qml:273
 #, kde-format
 msgid "Sunset and sunrise at current location"
 msgstr "Tramonto e alba nella posizione attuale"
 
-#: ui/main.qml:301
+#: ui/main.qml:274
 #, kde-format
 msgid "Sunset and sunrise at manual location"
 msgstr "Tramonto e alba in una posizione manuale"
 
-#: ui/main.qml:302
+#: ui/main.qml:275
 #, kde-format
 msgid "Custom times"
 msgstr "Orari personalizzati"
 
-#: ui/main.qml:303
+#: ui/main.qml:276
 #, kde-format
 msgid "Always on night light"
 msgstr "Luce notturna sempre attiva"
 
-#: ui/main.qml:320
+#: ui/main.qml:288
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
 msgstr "Posizione corrente:"
 
-#: ui/main.qml:326
+#: ui/main.qml:293
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "Latitudine: %1°   Longitudine: %2°"
 
-#: ui/main.qml:350
+#: ui/main.qml:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -171,34 +171,34 @@ msgstr ""
 "(se disponibile), oppure inviando le informazioni di rete al <link "
 "url='https://location.services.mozilla.com'>Mozilla Location Service</link>."
 
-#: ui/main.qml:365
+#: ui/main.qml:332
 #, kde-format
 msgid "Begin night light at:"
 msgstr "La luce notturna inizia alle:"
 
-#: ui/main.qml:382
+#: ui/main.qml:349
 #, kde-format
 msgid "Begin day light at:"
 msgstr "La luce diurna inizia alle:"
 
-#: ui/main.qml:398
+#: ui/main.qml:365
 #, kde-format
 msgid "Transition duration:"
 msgstr "Durata della transizione:"
 
-#: ui/main.qml:409
+#: ui/main.qml:376
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 minuto"
 msgstr[1] "%1 minuti"
 
-#: ui/main.qml:422
+#: ui/main.qml:389
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Minuti inseriti - min. 1, max. 600"
 
-#: ui/main.qml:445
+#: ui/main.qml:410
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"

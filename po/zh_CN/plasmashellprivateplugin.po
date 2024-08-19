@@ -365,7 +365,7 @@ msgstr "从本地文件安装挂件…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr ""
+msgstr "获取新挂件"
 
 #: shellprivate/widgetexplorer.cpp:502
 #, kde-format

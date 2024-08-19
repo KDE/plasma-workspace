@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-19 00:41+0000\n"
 "PO-Revision-Date: 2024-06-20 00:58-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -321,13 +321,13 @@ msgstr ""
 "adaptável são conhecidos por causar baixo desempenho de arrastar e "
 "redimensionar janelas. Considere usar outras configurações."
 
-#: panelview.cpp:1092
+#: panelview.cpp:1095
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Ocultar configuração do painel"
 
-#: panelview.cpp:1094
+#: panelview.cpp:1097
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
