@@ -130,7 +130,7 @@ int main(int argc, char **argv)
     } else if (parser->isSet(QStringLiteral("accent-color"))) {
         QString accentColor = parser->value(u"accent-color"_s);
 
-        if (QColor::isValidColor(accentColor)) {
+        if (QColor::isValidColorName(accentColor)) {
             const QString path =
                 QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("color-schemes/%1.colors").arg(settings->colorScheme()));
 
