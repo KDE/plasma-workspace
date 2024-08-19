@@ -175,7 +175,7 @@ void WidgetExplorerPrivate::initFilters()
         }
     }
     std::sort(categories.begin(), categories.end(), [](const CategoryInfo &left, const CategoryInfo &right) {
-        return left.translated < right.translated;
+        return QString::localeAwareCompare(left.translated, right.translated) < 0;
     });
     auto end = std::unique(categories.begin(), categories.end(), [](const CategoryInfo left, const CategoryInfo right) {
         return left.translated == right.translated;
