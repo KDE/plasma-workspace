@@ -941,10 +941,7 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             updateEditModeLabel();
         }
     } else {
-        // In plasmawindowed there is no corona
-        if (Plasma::Corona *corona = cont->corona(); corona) [[likely]] {
-            corona->setEditMode(false);
-        }
+        cont->corona()->setEditMode(false);
         if (m_appletConfigView && m_appletConfigView->applet() == applet) {
             m_appletConfigView->show();
             m_appletConfigView->requestActivate();
