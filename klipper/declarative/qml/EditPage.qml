@@ -20,33 +20,25 @@ ColumnLayout {
     spacing: 0
 
     required property PlasmaExtras.Representation dialogItem
-    required property ClipboardMenu clipboardMenu
-    required property T.StackView stack
     required property Private.HistoryModel historyModel
     required property var modelData
     property alias text: textArea.text
 
     property Item header: null
 
-    Keys.onEscapePressed: stack.pop()
+    Keys.onEscapePressed: T.StackView.view.popCurrentItem()
 
     function saveAndExit() {
         modelData.display = text;
         historyModel.moveToTop(modelData.uuid);
-        stack.pop();
-        stack.initialItem.view.currentIndex = 0;
+        T.StackView.view.popCurrentItem();
+        T.StackView.view.initialItem.view.currentIndex = 0;
     }
 
-    Connections {
-        target: editPage.stack
-        function onStatusChanged() {
-            if (editPage.T.StackView.status === T.StackView.Active) {
-                textArea.forceActiveFocus(Qt.ActiveWindowFocusReason);
-                textArea.cursorPosition = textArea.text.length;
-                editPage.clipboardMenu.editing = true;
-            } else {
-                editPage.clipboardMenu.editing = false;
-            }
+    T.StackView.onStatusChanged: {
+        if (editPage.T.StackView.status === T.StackView.Active) {
+            textArea.forceActiveFocus(Qt.ActiveWindowFocusReason);
+            textArea.cursorPosition = textArea.text.length;
         }
     }
 
@@ -95,7 +87,7 @@ ColumnLayout {
             text: i18ndc("klipper", "@action:button", "Cancel")
             icon.name: "dialog-cancel"
             KeyNavigation.up: textArea
-            onClicked: editPage.stack.pop()
+            onClicked: editPage.T.StackView.view.popCurrentItem()
         }
     }
 }

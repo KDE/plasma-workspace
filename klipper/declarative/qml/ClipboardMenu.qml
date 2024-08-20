@@ -37,10 +37,10 @@ PlasmaComponents3.ScrollView {
     required property string barcodeType
 
     readonly property int pageUpPageDownSkipCount: menuListView.visibleArea.heightRatio * menuListView.count
+    readonly property bool editing: T.StackView.view.currentItem instanceof EditPage
 
     property alias view: menuListView
     property alias filter: filter
-    property bool editing: false
 
     background: null
     contentWidth: availableWidth - (contentItem as ListView).leftMargin - (contentItem as ListView).rightMargin
@@ -52,8 +52,6 @@ PlasmaComponents3.ScrollView {
     onEdit: modelData => {
         clipboardMenu.T.StackView.view.push(Qt.resolvedUrl("EditPage.qml"), {
             dialogItem: clipboardMenu.dialogItem,
-            clipboardMenu: clipboardMenu,
-            stack: clipboardMenu.T.StackView.view,
             historyModel: clipboardMenu.model,
             modelData: modelData,
         });
