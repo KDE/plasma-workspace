@@ -314,7 +314,9 @@ KCM.SimpleKCM {
                 selectedTextColor: Kirigami.Theme.highlightedTextColor
                 selectionColor: Kirigami.Theme.highlightColor
 
-                text: xi18nc("@info", "The device's location will be periodically updated using GPS (if available), or by sending network information to <link url='https://location.services.mozilla.com'>Mozilla Location Service</link>.")
+                text: automaticLocationProvider.name === "geoclue2"
+                    ? xi18nc("@info", "The <application>GeoClue2</application> service will be used to periodically update the device's location using GPS or cell tower triangulation if available, or else by sending its IP address to <link url='https://geoip.com/privacy/'>GeoIP</link>.")
+                    : xi18nc("@info", "The <application>%1</application> service will be used to periodically update the device's location. Please open a bug report at <link url='https://bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a detailed description of what this service will do.", automaticLocationProvider.name)
                 font: Kirigami.Theme.smallFont
 
                 onLinkActivated: (url) => Qt.openUrlExternally(url)
