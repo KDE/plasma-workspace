@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:41+0000\n"
-"PO-Revision-Date: 2024-05-12 12:16+0200\n"
+"PO-Revision-Date: 2024-08-19 15:18+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -365,11 +365,10 @@ msgid "Install Widget From Local File…"
 msgstr "Instalar o trebello dun ficheiro local…"
 
 #: shellprivate/widgetexplorer.cpp:489
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Todos os trebellos"
+msgstr "Obter novos trebellos"
 
 #: shellprivate/widgetexplorer.cpp:502
 #, kde-format

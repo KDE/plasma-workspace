@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-08-20 00:42+0000\n"
 "PO-Revision-Date: 2024-06-13 09:26+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -319,13 +319,13 @@ msgstr ""
 "ووضع العتامة التكيفي في ضعف أداء سحب النافذة وتغيير حجمها. فكر في استخدام "
 "إعدادات أخرى."
 
-#: panelview.cpp:1095
+#: panelview.cpp:1092
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "أخف ضبط اللوحة"
 
-#: panelview.cpp:1097
+#: panelview.cpp:1094
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

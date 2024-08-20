@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-13 00:41+0000\n"
-"PO-Revision-Date: 2024-07-22 19:25+0200\n"
+"PO-Revision-Date: 2024-08-19 15:46+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -517,6 +517,9 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Ficheiros de imaxe (todos os principais tipos de ficheiro) (*.avif *.bmp *."
+"gif *.jp2 *.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *."
+"xpm)"
 
 #: src/ui/PicturesSheet.qml:189
 #, kde-format
