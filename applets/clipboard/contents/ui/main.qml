@@ -53,7 +53,7 @@ PlasmoidItem {
     }
 
     function clearSearchField() {
-        (main.fullRepresentation.stack.initialItem as Private.ClipboardMenu).filter.clear();
+        (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).filter.clear();
     }
 
     Plasmoid.contextualActions: [
@@ -61,10 +61,10 @@ PlasmoidItem {
             id: clearAction
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
-            visible: !main.isClipboardEmpty && !main.editing
+            visible: !main.isClipboardEmpty && !(main.fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).editing
             onTriggered: {
                 historyModel.clearHistory();
-                clearSearchField()
+                main.clearSearchField()
             }
         }
     ]
@@ -102,6 +102,7 @@ PlasmoidItem {
         header: stack.currentItem.header
 
         readonly property var appletInterface: main
+        readonly property alias clipboardMenu: stack.initialItem // Required to let the outside world access the property
 
         Keys.forwardTo: [stack.currentItem]
 
