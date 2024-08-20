@@ -241,7 +241,7 @@ void ImageProxyModel::openContainingFolder(int row) const
 
 void ImageProxyModel::slotHandleLoaded(AbstractImageListModel *model)
 {
-    disconnect(model, &AbstractImageListModel::loaded, this, 0);
+    disconnect(model, &AbstractImageListModel::loaded, this, nullptr);
     if (m_loaded + 1 == 2) {
         // All models are loaded, now add them.
         addSourceModel(m_imageModel);
