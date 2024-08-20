@@ -8,7 +8,9 @@
 
 #pragma once
 
-#include <QScreen>
+#ifdef PACKAGEKIT_OFFLINE_UPDATES
+#include <PackageKit/Offline>
+#endif
 
 #include <PlasmaQuick/QuickViewSharedEngine>
 #include <kworkspace.h>
@@ -36,8 +38,10 @@ public Q_SLOTS:
     void reject();
     void slotLogout();
     void slotHalt();
+    void slotHaltUpdate();
     void slotReboot();
     void slotReboot(int);
+    void slotRebootUpdate();
     void slotSuspend(int);
     void slotLockScreen();
     void slotCancelSoftwareUpdate();
@@ -50,7 +54,11 @@ protected:
     void resizeEvent(QResizeEvent *e) override;
 
 private:
-    void checkSoftwareUpdatePending();
+#ifdef PACKAGEKIT_OFFLINE_UPDATES
+    void updateSetAction(PackageKit::Offline::Action action);
+#endif
+    void cancelSoftwareUpdate();
+    bool softwareUpdatePending() const;
 
     bool m_windowed = false;
     QString m_bootOption;

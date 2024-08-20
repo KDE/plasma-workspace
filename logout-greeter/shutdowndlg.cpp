@@ -9,9 +9,6 @@
 
 #include <QApplication>
 #include <QDBusConnection>
-#include <QDBusMessage>
-#include <QDBusPendingCall>
-#include <QDBusPendingCallWatcher>
 #include <QDBusPendingReply>
 #include <QDBusVariant>
 #include <QFile>
@@ -21,28 +18,28 @@
 #include <QQmlPropertyMap>
 #include <QQuickItem>
 #include <QQuickView>
-#include <QStandardPaths>
 #include <QTimer>
 #include <private/qtx11extras_p.h>
 
-#include <KAuthorized>
-#include <KConfigGroup>
+#ifdef PACKAGEKIT_OFFLINE_UPDATES
+#include <PackageKit/Daemon>
+#include <PackageKit/Offline>
+#endif
+
 #include <KLocalizedString>
-#include <KSharedConfig>
 #include <KUser>
 #include <KWindowEffects>
 #include <KWindowSystem>
 #include <KX11Extras>
 #include <LayerShellQt/Window>
 
+#include <cstdio>
 #include <netwm.h>
-#include <stdio.h>
 
 #include <X11/Xatom.h>
 #include <X11/Xutil.h>
 #include <fixx11h.h>
 
-#include <config-workspace.h>
 #include <debug.h>
 
 using namespace Qt::StringLiterals;
@@ -52,10 +49,6 @@ static const QString s_login1Path = QStringLiteral("/org/freedesktop/login1");
 static const QString s_dbusPropertiesInterface = QStringLiteral("org.freedesktop.DBus.Properties");
 static const QString s_login1ManagerInterface = QStringLiteral("org.freedesktop.login1.Manager");
 static const QString s_login1RebootToFirmwareSetup = QStringLiteral("RebootToFirmwareSetup");
-
-static const QString s_packageKitService = QStringLiteral("org.freedesktop.PackageKit");
-static const QString s_packageKitPath = QStringLiteral("/org/freedesktop/PackageKit");
-static const QString s_packageKitOfflineInterface = QStringLiteral("org.freedesktop.PackageKit.Offline");
 
 KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype, QScreen *screen)
     : QuickViewSharedEngine(parent)
@@ -80,14 +73,17 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     // Qt doesn't set this on unmanaged windows
     // FIXME: or does it?
     if (KWindowSystem::isPlatformX11()) {
+        constexpr auto role = std::string_view("logoutdialog");
+        constexpr std::size_t roleLength = role.length();
+
         XChangeProperty(QX11Info::display(),
                         winId(),
                         XInternAtom(QX11Info::display(), "WM_WINDOW_ROLE", False),
                         XA_STRING,
                         8,
                         PropModeReplace,
-                        (unsigned char *)"logoutdialog",
-                        strlen("logoutdialog"));
+                        reinterpret_cast<const unsigned char *>(role.data()),
+                        roleLength);
 
         XClassHint classHint;
         classHint.res_name = const_cast<char *>("ksmserver-logout-greeter");
@@ -102,7 +98,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     context->setContextProperty(QStringLiteral("maysd"), m_session.canShutdown());
     context->setContextProperty(QStringLiteral("sdtype"), sdtype);
 
-    QQmlPropertyMap *mapShutdownType = new QQmlPropertyMap(this);
+    auto *mapShutdownType = new QQmlPropertyMap(this);
     mapShutdownType->insert(QStringLiteral("ShutdownTypeDefault"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeDefault));
     mapShutdownType->insert(QStringLiteral("ShutdownTypeNone"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeNone));
     mapShutdownType->insert(QStringLiteral("ShutdownTypeReboot"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeReboot));
@@ -110,7 +106,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     mapShutdownType->insert(QStringLiteral("ShutdownTypeLogout"), QVariant::fromValue<int>(KWorkSpace::ShutdownTypeLogout));
     context->setContextProperty(QStringLiteral("ShutdownType"), mapShutdownType);
 
-    QQmlPropertyMap *mapSpdMethods = new QQmlPropertyMap(this);
+    auto *mapSpdMethods = new QQmlPropertyMap(this);
     mapSpdMethods->insert(QStringLiteral("StandbyState"), m_session.canSuspend());
     mapSpdMethods->insert(QStringLiteral("SuspendState"), m_session.canSuspend());
     mapSpdMethods->insert(QStringLiteral("HibernateState"), m_session.canHibernate());
@@ -123,7 +119,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     QDBusMessage message = QDBusMessage::createMethodCall(s_login1Service, s_login1Path, s_dbusPropertiesInterface, QStringLiteral("Get"));
     message.setArguments({s_login1ManagerInterface, s_login1RebootToFirmwareSetup});
     QDBusPendingReply<QVariant> call = QDBusConnection::systemBus().asyncCall(message);
-    QDBusPendingCallWatcher *callWatcher = new QDBusPendingCallWatcher(call, this);
+    auto *callWatcher = new QDBusPendingCallWatcher(call, this);
     connect(callWatcher, &QDBusPendingCallWatcher::finished, context, [context](QDBusPendingCallWatcher *watcher) {
         QDBusPendingReply<QVariant> reply = *watcher;
         watcher->deleteLater();
@@ -133,8 +129,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         }
     });
 
-    context->setContextProperty(u"softwareUpdatePending"_s, false);
-    checkSoftwareUpdatePending();
+    context->setContextProperty(u"softwareUpdatePending"_s, softwareUpdatePending());
 
     // TODO KF6 remove, used to read "BootManager" from kdmrc
     context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));
@@ -145,7 +140,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     // TODO KF6 remove, used to call KDisplayManager::bootOptions
     QStringList rebootOptions;
     int def = 0;
-    QQmlPropertyMap *rebootOptionsMap = new QQmlPropertyMap(this);
+    auto *rebootOptionsMap = new QQmlPropertyMap(this);
     rebootOptionsMap->insert(QStringLiteral("options"), QVariant::fromValue(rebootOptions));
     rebootOptionsMap->insert(QStringLiteral("default"), QVariant::fromValue(def));
     context->setContextProperty(QStringLiteral("rebootOptions"), rebootOptionsMap);
@@ -179,9 +174,11 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
 
     connect(rootObject(), SIGNAL(logoutRequested()), SLOT(slotLogout()));
     connect(rootObject(), SIGNAL(haltRequested()), SLOT(slotHalt()));
+    connect(rootObject(), SIGNAL(haltUpdateRequested()), SLOT(slotHaltUpdate()));
     connect(rootObject(), SIGNAL(suspendRequested(int)), SLOT(slotSuspend(int)));
     connect(rootObject(), SIGNAL(rebootRequested()), SLOT(slotReboot()));
     connect(rootObject(), SIGNAL(rebootRequested2(int)), SLOT(slotReboot(int)));
+    connect(rootObject(), SIGNAL(rebootUpdateRequested()), SLOT(slotRebootUpdate()));
     connect(rootObject(), SIGNAL(cancelRequested()), SLOT(reject()));
     connect(rootObject(), SIGNAL(lockScreenRequested()), SLOT(slotLockScreen()));
     connect(rootObject(), SIGNAL(cancelSoftwareUpdateRequested()), SLOT(slotCancelSoftwareUpdate()));
@@ -209,7 +206,7 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
 
 void KSMShutdownDlg::resizeEvent(QResizeEvent *e)
 {
-    PlasmaQuick::QuickViewSharedEngine::resizeEvent(e);
+    QuickViewSharedEngine::resizeEvent(e);
 
     if (KX11Extras::compositingActive()) {
         // TODO: reenable window mask when we are without composite?
@@ -229,16 +226,32 @@ void KSMShutdownDlg::slotReboot()
 {
     // no boot option selected -> current
     m_bootOption.clear();
+    if (softwareUpdatePending()) {
+        cancelSoftwareUpdate();
+    }
     m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
     accept();
 }
 
 void KSMShutdownDlg::slotReboot(int opt)
 {
-    if (int(rebootOptions.size()) > opt)
+    if (static_cast<int>(rebootOptions.size()) > opt)
         m_bootOption = rebootOptions[opt];
+    if (softwareUpdatePending()) {
+        cancelSoftwareUpdate();
+    }
     m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
     accept();
+}
+
+void KSMShutdownDlg::slotRebootUpdate()
+{
+#ifdef PACKAGEKIT_OFFLINE_UPDATES
+    m_bootOption.clear();
+    updateSetAction(PackageKit::Offline::Action::ActionReboot);
+    m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
+    accept();
+#endif
 }
 
 void KSMShutdownDlg::slotLockScreen()
@@ -251,8 +264,21 @@ void KSMShutdownDlg::slotLockScreen()
 void KSMShutdownDlg::slotHalt()
 {
     m_bootOption.clear();
+    if (softwareUpdatePending()) {
+        cancelSoftwareUpdate();
+    }
     m_session.requestShutdown(SessionManagement::ConfirmationMode::Skip);
     accept();
+}
+
+void KSMShutdownDlg::slotHaltUpdate()
+{
+#ifdef PACKAGEKIT_OFFLINE_UPDATES
+    m_bootOption.clear();
+    updateSetAction(PackageKit::Offline::Action::ActionPowerOff);
+    m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
+    accept();
+#endif
 }
 
 void KSMShutdownDlg::slotSuspend(int spdMethod)
@@ -270,43 +296,60 @@ void KSMShutdownDlg::slotSuspend(int spdMethod)
     reject();
 }
 
-void KSMShutdownDlg::slotCancelSoftwareUpdate()
+#ifdef PACKAGEKIT_OFFLINE_UPDATES
+void KSMShutdownDlg::cancelSoftwareUpdate()
 {
-    QDBusMessage packageKitMessage =
-        QDBusMessage::createMethodCall(s_packageKitService, s_packageKitPath, s_packageKitOfflineInterface, QStringLiteral("Cancel"));
-    QDBusPendingReply<> packageKitCall = QDBusConnection::systemBus().asyncCall(packageKitMessage);
-    QDBusPendingCallWatcher *packageKitCallWatcher = new QDBusPendingCallWatcher(packageKitCall, this);
-    connect(packageKitCallWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-        QDBusPendingReply<> reply = *watcher;
-        watcher->deleteLater();
-
-        if (reply.isError()) {
-            qWarning() << "Failed to cancel pending software update" << reply.error().message();
-        } else {
-            checkSoftwareUpdatePending();
-        }
-    });
+    QDBusPendingReply<> packageKitCall = PackageKit::Daemon::global()->offline()->cancel();
+    packageKitCall.waitForFinished();
+    if (packageKitCall.isError()) {
+        qWarning() << "Failed to cancel pending software update" << packageKitCall.error().message();
+    } else {
+        rootContext()->setContextProperty(u"softwareUpdatePending"_s, softwareUpdatePending());
+    }
 }
 
-void KSMShutdownDlg::checkSoftwareUpdatePending()
+void KSMShutdownDlg::updateSetAction(PackageKit::Offline::Action action)
 {
-    QDBusMessage packageKitMessage = QDBusMessage::createMethodCall(s_packageKitService, s_packageKitPath, s_dbusPropertiesInterface, QStringLiteral("GetAll"));
-    packageKitMessage.setArguments({s_packageKitOfflineInterface});
-    QDBusPendingReply<QVariantMap> packageKitCall = QDBusConnection::systemBus().asyncCall(packageKitMessage);
-    QDBusPendingCallWatcher *packageKitCallWatcher = new QDBusPendingCallWatcher(packageKitCall, this);
-    connect(packageKitCallWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
-        QDBusPendingReply<QVariantMap> reply = *watcher;
-        watcher->deleteLater();
+    QDBusPendingReply packageKitCall = PackageKit::Daemon::global()->offline()->trigger(action);
+    packageKitCall.waitForFinished();
+    if (packageKitCall.isError()) {
+        qWarning() << "Failed to trigger action after update" << packageKitCall.error().message();
+    }
+}
 
-        if (reply.isError() || !rootContext()) {
-            return;
-        }
+bool KSMShutdownDlg::softwareUpdatePending() const
+{
+    // Unfortunately necessary because properties in PackageKitQt are wrong if the daemon isn't running,
+    // and there's no built in mechanism to start it. Would also be wasteful to have to start it up again.
+    QDBusMessage packageKitMessage = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PackageKit"),
+                                                                    QStringLiteral("/org/freedesktop/PackageKit"),
+                                                                    s_dbusPropertiesInterface,
+                                                                    QStringLiteral("GetAll"));
+    packageKitMessage.setArguments({QStringLiteral("org.freedesktop.PackageKit.Offline")});
+    QDBusPendingReply<QVariantMap> reply = QDBusConnection::systemBus().asyncCall(packageKitMessage);
+    reply.waitForFinished();
+    if (reply.isError()) {
+        qWarning() << "Failed to check if software update is pending" << reply.error().message();
+        return false;
+    }
 
-        const QVariantMap properties = reply.value();
-        if (properties.value(QStringLiteral("UpdateTriggered")).toBool() || properties.value(QStringLiteral("UpgradeTriggered")).toBool()) {
-            rootContext()->setContextProperty(u"softwareUpdatePending"_s, true);
-        }
-    });
+    return reply.value().value(QStringLiteral("UpdateTriggered")).toBool();
+}
+
+#else
+bool KSMShutdownDlg::softwareUpdatePending() const
+{
+    return false;
+}
+
+void KSMShutdownDlg::cancelSoftwareUpdate()
+{
+}
+#endif
+
+void KSMShutdownDlg::slotCancelSoftwareUpdate()
+{
+    cancelSoftwareUpdate();
 }
 
 void KSMShutdownDlg::accept()

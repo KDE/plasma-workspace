@@ -15,7 +15,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.breeze.components
 import "timer.js" as AutoTriggerTimer
 
-import org.kde.plasma.private.sessions 2.0
+import org.kde.plasma.private.sessions
 
 Item {
     id: root
@@ -26,9 +26,11 @@ Item {
 
     signal logoutRequested()
     signal haltRequested()
+    signal haltUpdateRequested()
     signal suspendRequested(int spdMethod)
     signal rebootRequested()
     signal rebootRequested2(int opt)
+    signal rebootUpdateRequested()
     signal cancelRequested()
     signal lockScreenRequested()
     signal cancelSoftwareUpdateRequested()
@@ -49,11 +51,11 @@ Item {
     property var currentAction: {
         switch (sdtype) {
         case ShutdownType.ShutdownTypeReboot:
-            return () => root.rebootRequested();
+            return () => softwareUpdatePending ? rebootUpdateRequested() : rebootRequested();
         case ShutdownType.ShutdownTypeHalt:
-            return () => root.haltRequested();
+            return () => softwareUpdatePending ? haltUpdateRequested() : haltRequested();
         default:
-            return () => root.logoutRequested();
+            return () => logoutRequested();
         }
     }
 
@@ -63,7 +65,7 @@ Item {
         id: kuser
     }
 
-    // For showing a "other users are logged in" hint
+    // For showing an "other users are logged in" hint
     SessionsModel {
         id: sessionsModel
         includeUnusedSessions: false
@@ -76,13 +78,13 @@ Item {
 
     onRemainingTimeChanged: {
         if (remainingTime <= 0) {
-            (root.currentAction)();
+            (currentAction)();
         }
     }
 
     Timer {
         id: countDownTimer
-        running: !root.showAllOptions
+        running: !showAllOptions
         repeat: true
         interval: 1000
         onTriggered: remainingTime--
@@ -101,12 +103,12 @@ Item {
         id: backgroundRect
         anchors.fill: parent
         //use "black" because this is intended to look like a general darkening of the scene. a dark gray as normal background would just look too "washed out"
-        color: root.isLightColor(Kirigami.Theme.backgroundColor) ? Kirigami.Theme.backgroundColor : "black"
+        color: isLightColor(Kirigami.Theme.backgroundColor) ? Kirigami.Theme.backgroundColor : "black"
         opacity: 0.5
     }
     MouseArea {
         anchors.fill: parent
-        onClicked: root.cancelRequested()
+        onClicked: cancelRequested()
     }
     UserDelegate {
         width: Kirigami.Units.gridUnit * 8
@@ -154,7 +156,8 @@ Item {
                         return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Logging out in 1 second", "Logging out in %1 seconds", root.remainingTime);
                     case ShutdownType.ShutdownTypeHalt:
                     default:
-                        return i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
+                        return softwareUpdatePending ? i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Installing software updates and shutting down in 1 second", "Installing software updates and shutting down in %1 seconds", root.remainingTime)
+                        : i18ndp("plasma_lookandfeel_org.kde.lookandfeel", "Shutting down in 1 second", "Shutting down in %1 seconds", root.remainingTime);
                 }
             }
             textFormat: Text.PlainText
@@ -199,7 +202,7 @@ Item {
                 icon.name: "system-suspend"
                 text: root.showAllOptions ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
                                           : i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep Now")
-                onClicked: root.sleepRequested()
+                onClicked: sleepRequested()
                 KeyNavigation.left: cancelButton
                 KeyNavigation.right: hibernateButton.visible ? hibernateButton : (rebootButton.visible ? rebootButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton)))
                 visible: spdMethods.SuspendState && root.showAllOptions
@@ -209,14 +212,14 @@ Item {
                 icon.name: "system-suspend-hibernate"
                 text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
                                           : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate Now")
-                onClicked: root.hibernateRequested()
+                onClicked: hibernateRequested()
                 KeyNavigation.left: suspendButton.visible ? suspendButton : cancelButton
                 KeyNavigation.right: rebootButton.visible ? rebootButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton))
                 visible: spdMethods.HibernateState && root.showAllOptions
             }
             LogoutButton {
                 id: rebootButton
-                icon.name: softwareUpdatePending ? "update-none" : "system-reboot"
+                icon.name: softwareUpdatePending ? "system-reboot-update" : "system-reboot"
                 text: {
                     if (softwareUpdatePending) {
                         return root.showAllOptions ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Restart")
@@ -226,7 +229,13 @@ Item {
                                                    : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart Now")
                     }
                 }
-                onClicked: root.rebootRequested()
+                onClicked: {
+                    if (softwareUpdatePending) {
+                        rebootUpdateRequested();
+                    } else {
+                        rebootRequested();
+                    }
+                }
                 KeyNavigation.left: hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)
                 KeyNavigation.right: rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton))
                 focus: sdtype === ShutdownType.ShutdownTypeReboot
@@ -238,8 +247,7 @@ Item {
                 text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
                                           : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart Now")
                 onClicked: {
-                    root.cancelSoftwareUpdateRequested()
-                    root.rebootRequested()
+                    rebootRequested();
                 }
                 KeyNavigation.left: rebootButton
                 KeyNavigation.right: shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton)
@@ -247,22 +255,48 @@ Item {
             }
             LogoutButton {
                 id: shutdownButton
+                icon.name: softwareUpdatePending ? "system-shutdown-update" : "system-shutdown"
+                text: {
+                    if (softwareUpdatePending) {
+                        return root.showAllOptions ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Shut Down")
+                                                   : i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Shut Down Now")
+                    } else {
+                        return root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
+                                                   : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down Now")
+                    }
+                }
+                onClicked: {
+                    if (softwareUpdatePending) {
+                        haltUpdateRequested();
+                    } else {
+                        haltRequested();
+                    }
+                }
+                KeyNavigation.left: rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)))
+                KeyNavigation.right: shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (logoutButton.visible ? logoutButton : cancelButton)
+                focus: sdtype === ShutdownType.ShutdownTypeHalt || root.showAllOptions
+                visible: maysd && (sdtype === ShutdownType.ShutdownTypeHalt || root.showAllOptions)
+            }
+            LogoutButton {
+                id: shutdownWithoutUpdatesButton
                 icon.name: "system-shutdown"
                 text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
                                           : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down Now")
-                onClicked: root.haltRequested()
-                KeyNavigation.left: rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)))
+                onClicked: {
+                    haltRequested();
+                }
+                KeyNavigation.left: shutdownButton
                 KeyNavigation.right: logoutButton.visible ? logoutButton : cancelButton
                 focus: sdtype === ShutdownType.ShutdownTypeHalt || root.showAllOptions
-                visible: maysd && (sdtype === ShutdownType.ShutdownTypeHalt || root.showAllOptions)
+                visible: maysd && softwareUpdatePending && (sdtype === ShutdownType.ShutdownTypeHalt || root.showAllOptions)
             }
             LogoutButton {
                 id: logoutButton
                 icon.name: "system-log-out"
                 text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log Out")
                                           : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log Out Now")
-                onClicked: root.logoutRequested()
-                KeyNavigation.left: shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton))))
+                onClicked: logoutRequested()
+                KeyNavigation.left: shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)))))
                 KeyNavigation.right: cancelButton
                 focus: sdtype === ShutdownType.ShutdownTypeNone
                 visible: canLogout && (sdtype === ShutdownType.ShutdownTypeNone || root.showAllOptions)
@@ -271,8 +305,8 @@ Item {
                 id: cancelButton
                 icon.name: "dialog-cancel"
                 text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
-                onClicked: root.cancelRequested()
-                KeyNavigation.left: logoutButton.visible ? logoutButton : (shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : suspendButton))))
+                onClicked: cancelRequested()
+                KeyNavigation.left: logoutButton.visible ? logoutButton : (shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : suspendButton)))))
                 KeyNavigation.right: suspendButton.visible ? suspendButton : (hibernateButton.visible ? hibernateButton : rebootButton)
             }
         }

@@ -145,6 +145,16 @@ set_package_properties(Fontconfig PROPERTIES DESCRIPTION "Font access configurat
                        PURPOSE "Needed to build font configuration and installation tools"
                       )
 
+find_package(PackageKitQt6)
+set_package_properties(PackageKitQt6
+        PROPERTIES DESCRIPTION "Software Manager integration"
+        TYPE OPTIONAL
+        PURPOSE "Used to install additional language packages on demand and integrate for offline updates"
+)
+option(PACKAGEKIT_OFFLINE_UPDATES "Integrate with PackageKit for offline updates" OFF)
+add_feature_info(PACKAGEKIT_OFFLINE_UPDATES PackageKitQt6_FOUND "Integrate with PackageKit for offline updates")
+set(PACKAGEKIT_OFFLINE_UPDATES ${PackageKitQt6_FOUND})
+
 if(PLASMA_X11_DEFAULT_SESSION)
     set(WITH_X11 1)
 endif()
@@ -268,12 +278,6 @@ if(${CMAKE_SYSTEM_NAME} MATCHES "Linux")
     set(UBUNTU_LOCALE FALSE)
     option(UBUNTU_PACKAGEKIT "Install required package for language on Ubuntu Based systems, PackageKitQt6 required" ${SYSTEM_UBUNTU_BASED})
     if(UBUNTU_PACKAGEKIT)
-        find_package(PackageKitQt6)
-        set_package_properties(PackageKitQt6
-                PROPERTIES DESCRIPTION "Software Manager integration"
-                TYPE OPTIONAL
-                PURPOSE "Used to install additional language packages on demand"
-                )
         set(UBUNTU_LOCALE ${PackageKitQt6_FOUND})
     endif()
 
