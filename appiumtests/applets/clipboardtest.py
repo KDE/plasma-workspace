@@ -393,6 +393,23 @@ class ClipboardTest(unittest.TestCase):
         self.assertEqual(self.driver.get_clipboard_text(), selected_text)
         self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, selected_text)
 
+    def test_7_edit_page(self) -> None:
+        """
+        In edit mode, the text area should be focused by default.
+        """
+        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["true", "false"], True)
+        ActionChains(self.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
+        self.driver.find_element(AppiumBy.NAME, "Edit contents").click()
+        self.driver.find_element(AppiumBy.NAME, "Text edit area")
+
+        # By default the text area is focused, so typing anything will appear in the text area.
+        new_text = "clip bold"
+        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()  # Select all
+        ActionChains(self.driver).send_keys(new_text).pause(1).perform()
+        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("s").key_up(Keys.CONTROL).perform()  # Save
+        self.driver.find_element(AppiumBy.NAME, new_text)
+        # self.assertEqual(self.driver.get_clipboard_text(), new_text)
+
 
 if __name__ == '__main__':
     logging.getLogger().setLevel(logging.INFO)

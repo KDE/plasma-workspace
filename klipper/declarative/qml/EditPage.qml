@@ -60,6 +60,7 @@ ColumnLayout {
             textFormat: TextEdit.PlainText
             text: editPage.modelData?.display ?? ""
 
+            Accessible.name: i18ndc("klipper", "@info:whatsthis", "Text edit area")
             KeyNavigation.up: editPage.dialogItem.KeyNavigation.up
             Keys.onPressed: event => {
                 if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
