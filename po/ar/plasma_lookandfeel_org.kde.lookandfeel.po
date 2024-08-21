@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2024-02-10 19:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: contents/logout/Logout.qml:151
+#: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
@@ -28,7 +28,7 @@ msgstr[3] "تثبيت تحديثات البرامج وإعادة التشغيل 
 msgstr[4] "تثبيت تحديثات البرامج وإعادة التشغيل خلال %1 ثانية"
 msgstr[5] "تثبيت تحديثات البرامج وإعادة التشغيل خلال %1 ثانية"
 
-#: contents/logout/Logout.qml:152
+#: contents/logout/Logout.qml:154
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
@@ -39,7 +39,7 @@ msgstr[3] "يعيد التشغيل بعد %1 ثواني"
 msgstr[4] "يعيد التشغيل بعد %1 ثانية"
 msgstr[5] "يعيد التشغيل بعد %1 ثانية"
 
-#: contents/logout/Logout.qml:154
+#: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
@@ -50,7 +50,20 @@ msgstr[3] "يخرج بعد %1 ثواني"
 msgstr[4] "يخرج بعد %1 ثانية"
 msgstr[5] "يخرج بعد %1 ثانية"
 
-#: contents/logout/Logout.qml:157
+#: contents/logout/Logout.qml:159
+#, fuzzy, kde-format
+#| msgid "Installing software updates and restarting in 1 second"
+#| msgid_plural "Installing software updates and restarting in %1 seconds"
+msgid "Installing software updates and shutting down in 1 second"
+msgid_plural "Installing software updates and shutting down in %1 seconds"
+msgstr[0] "تثبيت تحديثات البرامج وإعادة التشغيل خلال ثانية واحدة"
+msgstr[1] "تثبيت تحديثات البرامج وإعادة التشغيل خلال ثانية واحدة"
+msgstr[2] "تثبيت تحديثات البرامج وإعادة التشغيل خلال ثانيتين"
+msgstr[3] "تثبيت تحديثات البرامج وإعادة التشغيل خلال %1 ثواني"
+msgstr[4] "تثبيت تحديثات البرامج وإعادة التشغيل خلال %1 ثانية"
+msgstr[5] "تثبيت تحديثات البرامج وإعادة التشغيل خلال %1 ثانية"
+
+#: contents/logout/Logout.qml:160
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
@@ -61,7 +74,7 @@ msgstr[3] "يطفئ بعد %1 ثواني"
 msgstr[4] "يطفئ بعد %1 ثانية"
 msgstr[5] "يطفئ بعد %1 ثانية"
 
-#: contents/logout/Logout.qml:172
+#: contents/logout/Logout.qml:175
 #, kde-format
 msgid ""
 "One other user is currently logged in. If the computer is shut down or "
@@ -88,76 +101,92 @@ msgstr[5] ""
 "يوجد %1 مستخدم آخر يعمل على هذا الجهاز. إذا أوقف تشغيل الجهاز أو إعادة "
 "تشغيله، فقد يفقد هؤلاء المستخدمين عملهم."
 
-#: contents/logout/Logout.qml:187
+#: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "عند إعادة التشغيل ، سيدخل الحاسوب إلى شاشة إعداد البرنامج الثابت."
 
-#: contents/logout/Logout.qml:200
+#: contents/logout/Logout.qml:203
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "نَم"
 
-#: contents/logout/Logout.qml:201
+#: contents/logout/Logout.qml:204
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "نَم الآن"
 
-#: contents/logout/Logout.qml:210
+#: contents/logout/Logout.qml:213
 #, kde-format
 msgid "Hibernate"
 msgstr "أسبِت"
 
-#: contents/logout/Logout.qml:211
+#: contents/logout/Logout.qml:214
 #, kde-format
 msgid "Hibernate Now"
 msgstr "أسبت الآن"
 
-#: contents/logout/Logout.qml:222
+#: contents/logout/Logout.qml:225
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
 msgstr "ثبت التحديثات وأعد التشغيل"
 
-#: contents/logout/Logout.qml:223
+#: contents/logout/Logout.qml:226
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
 msgstr "ثبت التحديثات وأعد التشغيل الآن"
 
-#: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
+#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restart"
 msgstr "أعد التّشغيل"
 
-#: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
+#: contents/logout/Logout.qml:229 contents/logout/Logout.qml:248
 #, kde-format
 msgid "Restart Now"
 msgstr "أعِد التشغيل الآن"
 
-#: contents/logout/Logout.qml:251
+#: contents/logout/Logout.qml:261
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Restart Now"
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Shut Down"
+msgstr "ثبت التحديثات وأعد التشغيل الآن"
+
+#: contents/logout/Logout.qml:262
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Restart Now"
+msgctxt "@action:button Keep short"
+msgid "Install Updates & Shut Down Now"
+msgstr "ثبت التحديثات وأعد التشغيل الآن"
+
+#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
 msgid "Shut Down"
 msgstr "أطفئ"
 
-#: contents/logout/Logout.qml:252
+#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
 #, kde-format
 msgid "Shut Down Now"
 msgstr "أطفئ الآن"
 
-#: contents/logout/Logout.qml:262
+#: contents/logout/Logout.qml:296
 #, kde-format
 msgid "Log Out"
 msgstr "اخرج"
 
-#: contents/logout/Logout.qml:263
+#: contents/logout/Logout.qml:297
 #, kde-format
 msgid "Log Out Now"
 msgstr "اخرج الآن"
 
-#: contents/logout/Logout.qml:273
+#: contents/logout/Logout.qml:307
 #, kde-format
 msgid "Cancel"
 msgstr "ألغِ"

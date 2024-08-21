@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-09 00:41+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2006-12-17 12:20+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -337,19 +337,19 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:187
+#: declarative/qml/ClipboardMenu.qml:185
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clear History"
 msgstr "&Клипборд тарихининг ҳажми:"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<ҳеч нарса мос келамади>"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"
@@ -377,13 +377,13 @@ msgstr "Таҳрирлаш"
 msgid "Remove from history"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:95
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

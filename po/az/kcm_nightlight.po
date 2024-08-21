@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2024-06-11 15:55+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -160,46 +160,54 @@ msgstr "Hazırkı yeriniz:"
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "En dairəsi: %1°   Üzunluq dairəsi: %2°"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"The device's location will be periodically updated using GPS (if available), "
-"or by sending network information to <link url='https://location.services."
-"mozilla.com'>Mozilla Location Service</link>."
+"The <application>GeoClue2</application> service will be used to periodically "
+"update the device's location using GPS or cell tower triangulation if "
+"available, or else by sending its IP address to <link url='https://geoip.com/"
+"privacy/'>GeoIP</link>."
 msgstr ""
-"Cihazın yeri vaxtaşırı GPS-dən istifadə edilərək (əgər əlçatandırsa) və ya "
-"<link url='https://location.services.mozilla.com'>Mozilla Location Service</"
-"link> ünvanına şəbəkə məlumatları göndərilərək yenilənəcəkdirs."
 
-#: ui/main.qml:332
+#: ui/main.qml:319
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>%1</application> service will be used to periodically "
+"update the device's location. Please open a bug report at <link url='https://"
+"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
+"detailed description of what this service will do."
+msgstr ""
+
+#: ui/main.qml:334
 #, kde-format
 msgid "Begin night light at:"
 msgstr "Gecə rejimini başlatma vaxtı:"
 
-#: ui/main.qml:349
+#: ui/main.qml:351
 #, kde-format
 msgid "Begin day light at:"
 msgstr "Gündüz rejimini başlatma vaxtı:"
 
-#: ui/main.qml:365
+#: ui/main.qml:367
 #, kde-format
 msgid "Transition duration:"
 msgstr "Keçid müddəti:"
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 dəqiqə"
 msgstr[1] "%1 dəqiqə"
 
-#: ui/main.qml:389
+#: ui/main.qml:391
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "Dəqiqə ilə - min. 1, max. 600"
 
-#: ui/main.qml:410
+#: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
@@ -222,6 +230,16 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "dəqiqə"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The device's location will be periodically updated using GPS (if "
+#~ "available), or by sending network information to <link url='https://"
+#~ "location.services.mozilla.com'>Mozilla Location Service</link>."
+#~ msgstr ""
+#~ "Cihazın yeri vaxtaşırı GPS-dən istifadə edilərək (əgər əlçatandırsa) və "
+#~ "ya <link url='https://location.services.mozilla.com'>Mozilla Location "
+#~ "Service</link> ünvanına şəbəkə məlumatları göndərilərək yenilənəcəkdirs."
 
 #~ msgid "Error: Transition time overlaps."
 #~ msgstr "Xəta: keçid müddətləri kəsişir."

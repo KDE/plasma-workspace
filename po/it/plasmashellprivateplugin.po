@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:41+0000\n"
-"PO-Revision-Date: 2024-05-12 17:49+0200\n"
+"PO-Revision-Date: 2024-08-17 13:10+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -363,11 +363,10 @@ msgid "Install Widget From Local File…"
 msgstr "Installa oggetto da file locale…"
 
 #: shellprivate/widgetexplorer.cpp:489
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Tutti gli oggetti"
+msgstr "Ottieni nuovi oggetti"
 
 #: shellprivate/widgetexplorer.cpp:502
 #, kde-format

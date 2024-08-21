@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-04-05 15:36+0300\n"
+"PO-Revision-Date: 2024-08-15 19:17+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -104,31 +104,31 @@ msgstr "Apmeklējiet bugs.kde.org, lai ziņotu par kļūdām"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Kopēt „Plasma“ versiju"
 
 #: desktopview.cpp:293
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Ziņot par kļūdu…"
 
 #: desktopview.cpp:303
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Slēpt priekšskatījuma baneri"
 
 #: desktopview.cpp:306
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Slēpt līdz pārstartēšanai"
 
 #: desktopview.cpp:313
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Slēpt pavisam…"
 
 #: desktopview.cpp:319
 #, kde-kuit-format
@@ -139,12 +139,15 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Vai tiešām vēlaties pavisam paslēpt priekšskatījuma baneri?<nl/><nl/>Šo "
+"darbību atcelt varēsiet tikai, konfigurācijas datnē <filename>kdeglobals</"
+"filename> noņemot sākumu rindai ar <icode>ShowDesktopPreviewBanner</icode>."
 
 #: desktopview.cpp:321
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Vai paslēpt priekšskatījuma baneri?"
 
 #: main.cpp:84
 #, kde-format
@@ -311,6 +314,9 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Lietojot NVIDIA grafikas karti kombinācijā ar X11, peldošais stils un "
+"adaptīvā caurspīdība reizēm rada sliktu veiktspēju, velkot logus un mainot "
+"to izmēru. Apsveriet citu iestatījumu izmantošanu."
 
 #: panelview.cpp:1092
 #, kde-format

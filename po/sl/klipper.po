@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-09 00:41+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2024-08-02 05:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -370,17 +370,17 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Kreiranje kode QR ni uspelo"
 
-#: declarative/qml/ClipboardMenu.qml:187
+#: declarative/qml/ClipboardMenu.qml:185
 #, kde-format
 msgid "Clear History"
 msgstr "Počisti zgodovino"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "No matches"
 msgstr "Ni ujemanj"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Odložišče je prazno"
@@ -405,13 +405,13 @@ msgstr "Uredi vsebine"
 msgid "Remove from history"
 msgstr "Odstrani iz zgodovine"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Shrani"
 
-#: declarative/qml/EditPage.qml:95
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

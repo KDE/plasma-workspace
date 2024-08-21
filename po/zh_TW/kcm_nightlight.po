@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2024-04-22 18:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -156,45 +156,53 @@ msgstr "目前位置："
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "緯度：%1°  經度：%2°"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"The device's location will be periodically updated using GPS (if available), "
-"or by sending network information to <link url='https://location.services."
-"mozilla.com'>Mozilla Location Service</link>."
+"The <application>GeoClue2</application> service will be used to periodically "
+"update the device's location using GPS or cell tower triangulation if "
+"available, or else by sending its IP address to <link url='https://geoip.com/"
+"privacy/'>GeoIP</link>."
 msgstr ""
-"將會使用 GPS 或透過傳送網路資訊至 <link url='https://location.services."
-"mozilla.com'>Mozilla 定位服務 (Mozilla Location Service)</link> 來定期更新本"
-"裝置的所在地。"
 
-#: ui/main.qml:332
+#: ui/main.qml:319
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>%1</application> service will be used to periodically "
+"update the device's location. Please open a bug report at <link url='https://"
+"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
+"detailed description of what this service will do."
+msgstr ""
+
+#: ui/main.qml:334
 #, kde-format
 msgid "Begin night light at:"
 msgstr "夜光開始時間："
 
-#: ui/main.qml:349
+#: ui/main.qml:351
 #, kde-format
 msgid "Begin day light at:"
 msgstr "日光開始時間："
 
-#: ui/main.qml:365
+#: ui/main.qml:367
 #, kde-format
 msgid "Transition duration:"
 msgstr "過渡時間："
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1分鐘"
 
-#: ui/main.qml:389
+#: ui/main.qml:391
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "輸入分鐘 - 最小值：1，最大值：600"
 
-#: ui/main.qml:410
+#: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
@@ -217,6 +225,16 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "分鐘"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The device's location will be periodically updated using GPS (if "
+#~ "available), or by sending network information to <link url='https://"
+#~ "location.services.mozilla.com'>Mozilla Location Service</link>."
+#~ msgstr ""
+#~ "將會使用 GPS 或透過傳送網路資訊至 <link url='https://location.services."
+#~ "mozilla.com'>Mozilla 定位服務 (Mozilla Location Service)</link> 來定期更新"
+#~ "本裝置的所在地。"
 
 #~ msgid "Error: Transition time overlaps."
 #~ msgstr "錯誤：過渡時間重疊。"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -155,44 +155,53 @@ msgstr "当前位置："
 msgid "Latitude: %1°   Longitude: %2°"
 msgstr "纬度：%1°   经度：%2°"
 
-#: ui/main.qml:317
+#: ui/main.qml:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
-"The device's location will be periodically updated using GPS (if available), "
-"or by sending network information to <link url='https://location.services."
-"mozilla.com'>Mozilla Location Service</link>."
+"The <application>GeoClue2</application> service will be used to periodically "
+"update the device's location using GPS or cell tower triangulation if "
+"available, or else by sending its IP address to <link url='https://geoip.com/"
+"privacy/'>GeoIP</link>."
 msgstr ""
-"系统将定期通过 GPS (如果可用)、或者发送信息到 <link url='https://location."
-"services.mozilla.com'>Mozilla 定位服务</link>以对设备进行持续定位。"
 
-#: ui/main.qml:332
+#: ui/main.qml:319
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The <application>%1</application> service will be used to periodically "
+"update the device's location. Please open a bug report at <link url='https://"
+"bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
+"detailed description of what this service will do."
+msgstr ""
+
+#: ui/main.qml:334
 #, kde-format
 msgid "Begin night light at:"
 msgstr "夜间色温开始时间："
 
-#: ui/main.qml:349
+#: ui/main.qml:351
 #, kde-format
 msgid "Begin day light at:"
 msgstr "日间颜色开始时间："
 
-#: ui/main.qml:365
+#: ui/main.qml:367
 #, kde-format
 msgid "Transition duration:"
 msgstr "过渡时长："
 
-#: ui/main.qml:376
+#: ui/main.qml:378
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
 msgstr[0] "%1 分钟"
 
-#: ui/main.qml:389
+#: ui/main.qml:391
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
 msgstr "输入分钟，最小为 1，最大为 600"
 
-#: ui/main.qml:410
+#: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
@@ -215,3 +224,12 @@ msgstr ":"
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
 msgstr "分钟"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "The device's location will be periodically updated using GPS (if "
+#~ "available), or by sending network information to <link url='https://"
+#~ "location.services.mozilla.com'>Mozilla Location Service</link>."
+#~ msgstr ""
+#~ "系统将定期通过 GPS (如果可用)、或者发送信息到 <link url='https://location."
+#~ "services.mozilla.com'>Mozilla 定位服务</link>以对设备进行持续定位。"

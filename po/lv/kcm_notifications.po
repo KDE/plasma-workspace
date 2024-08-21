@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:41+0000\n"
-"PO-Revision-Date: 2024-04-05 10:06+0300\n"
+"PO-Revision-Date: 2024-08-15 19:03+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -90,16 +90,13 @@ msgid "Choose sound file"
 msgstr "Atlasīt skaņas datni"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@action:button Plasma-specific notifications"
-#| msgid "System Notifications…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications"
-msgstr "Sistēmas paziņojumi..."
+msgstr "Sistēmas paziņojumi"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "Programmu iestatījumi"
@@ -213,7 +210,7 @@ msgstr "Pie paziņojuma ikonas"
 #: ui/main.qml:250
 #, kde-format
 msgid "Choose Custom Position…"
-msgstr "Izvēlēties pielāgotu rādīšanās vietu..."
+msgstr "Izvēlēties pielāgotu rādīšanās vietu…"
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format

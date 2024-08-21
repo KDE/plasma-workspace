@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Vít Pelčák <vit@pelcak.org>, 2014, 2017, 2019.
+# SPDX-FileCopyrightText: 2014, 2017, 2019, 2024 Vít Pelčák <vit@pelcak.org>
 # Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-17 00:41+0000\n"
-"PO-Revision-Date: 2023-06-14 14:55+0200\n"
+"PO-Revision-Date: 2024-08-20 08:40+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -356,11 +356,10 @@ msgid "Install Widget From Local File…"
 msgstr "Instalovat widget ze souboru…"
 
 #: shellprivate/widgetexplorer.cpp:489
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Všechny widgety"
+msgstr "Získat nové widgety"
 
 #: shellprivate/widgetexplorer.cpp:502
 #, kde-format

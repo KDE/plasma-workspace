@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-09 00:41+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2010-06-01 11:22-0700\n"
 "Last-Translator: Deepayan Sarkar <deepayan.sarkar@gmail.com>\n"
 "Language-Team: Bengali <kde-translation@bengalinux.org>\n"
@@ -335,19 +335,19 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:187
+#: declarative/qml/ClipboardMenu.qml:185
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "ক্লিপবোর্ড ইতিহাস"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<কোন মিল পাওয়া যায়নি>"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "ক্লিপবোর্ড ফাঁকা"
@@ -375,13 +375,13 @@ msgstr "বিষয়বস্তু সম্পাদন করো"
 msgid "Remove from history"
 msgstr "ইতিবৃত্ত থেকে নির্বাচিত একটি বস্তুর উপর প্রক্রিয়া &আবার চালাও"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:95
+#: declarative/qml/EditPage.qml:87
 #, fuzzy, kde-format
 #| msgid "&Cancel"
 msgctxt "@action:button"

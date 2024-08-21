@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-09 00:41+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -357,18 +357,18 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:187
+#: declarative/qml/ClipboardMenu.qml:185
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Lịch sử bảng nháp"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "No matches"
 msgstr "Không mục nào khớp"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Bảng nháp trống"
@@ -398,13 +398,13 @@ msgstr "Sửa nội dung"
 msgid "Remove from history"
 msgstr "Với một mục được chọn trong lịch sử"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:95
+#: declarative/qml/EditPage.qml:87
 #, fuzzy, kde-format
 #| msgid "&Cancel"
 msgctxt "@action:button"

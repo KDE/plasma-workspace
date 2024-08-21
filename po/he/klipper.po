@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-09 00:41+0000\n"
+"POT-Creation-Date: 2024-08-21 00:49+0000\n"
 "PO-Revision-Date: 2024-08-02 07:51+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -364,17 +364,17 @@ msgstr "אין מספיק מקום להציג קוד QR. נא לנסות לשנ�
 msgid "Creating QR code failed"
 msgstr "יצירת קוד QR נכשלה"
 
-#: declarative/qml/ClipboardMenu.qml:187
+#: declarative/qml/ClipboardMenu.qml:185
 #, kde-format
 msgid "Clear History"
 msgstr "פינוי ההיסטוריה"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "No matches"
 msgstr "אין לכידות"
 
-#: declarative/qml/ClipboardMenu.qml:278
+#: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "לוח הגזירים ריק"
@@ -399,13 +399,13 @@ msgstr "עריכת תוכן"
 msgid "Remove from history"
 msgstr "הסרה מההיסטוריה"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:79
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "שמירה"
 
-#: declarative/qml/EditPage.qml:95
+#: declarative/qml/EditPage.qml:87
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

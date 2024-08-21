@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-13 00:41+0000\n"
-"PO-Revision-Date: 2024-01-16 15:04+0200\n"
+"PO-Revision-Date: 2024-08-15 19:06+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -381,20 +381,16 @@ msgid "Users"
 msgstr "Lietotāji"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Pievienot jaunu"
+msgstr "Pievienot jaunu…"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Pievienot jaunu"
+msgstr "Pievienot jaunu lietotāju…"
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -531,7 +527,7 @@ msgstr "Iniciāļi"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr "Izvēlieties datni..."
+msgstr "Izvēlieties datni…"
 
 #: src/ui/PicturesSheet.qml:137
 #, kde-format
@@ -550,6 +546,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Attēlu datnes (visi populārākie datņu veidi) (*.avif *.bmp *.gif *.jp2 *."
+"jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:189
 #, kde-format
@@ -575,6 +573,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Nav iespējams konta veidu nomainīt uz „Standarta“ kamēr sistēmā nav neviena "
+"cita „Administratora“ konta. Bez šāda konta ierakstīšanās kļūtu neiespējama "
+"vai prasītu nedrošu saknes paroles izmantošanu."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format
@@ -594,12 +595,12 @@ msgstr "Paturēt datnes"
 #: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Delete User…"
-msgstr "Dzēst lietotāju..."
+msgstr "Dzēst lietotāju…"
 
 #: src/ui/UserDetailsPage.qml:232
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
-msgstr "Konfigurēt autentifikāciju ar pirkstu nospiedumu..."
+msgstr "Konfigurēt autentifikāciju ar pirkstu nospiedumu…"
 
 #: src/ui/UserDetailsPage.qml:264
 #, kde-kuit-format
