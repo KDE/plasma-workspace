@@ -498,7 +498,13 @@ void WidgetExplorer::downloadWidgets()
 void WidgetExplorer::openWidgetFile()
 {
     QFileDialog *dialog = new QFileDialog;
-    dialog->setMimeTypeFilters({u"application/x-plasma"_s});
+    dialog->setMimeTypeFilters({u"application/x-plasma"_s,
+                                u"application/zip"_s,
+                                u"application/x-xz"_s,
+                                u"application/x-compressed-tar"_s,
+                                u"application/x-tar"_s,
+                                u"application/x-bzip-compressed-tar"_s,
+                                u"application/x-lzma"_s});
     dialog->setWindowTitle(i18n("Select Plasmoid File"));
     dialog->setFileMode(QFileDialog::ExistingFile);
     dialog->setAttribute(Qt::WA_DeleteOnClose, true);
