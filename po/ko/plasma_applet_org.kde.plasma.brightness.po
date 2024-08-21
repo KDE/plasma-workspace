@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-03 00:40+0000\n"
-"PO-Revision-Date: 2024-02-09 19:56+0100\n"
+"PO-Revision-Date: 2024-08-21 00:01+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,12 +15,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/BrightnessItem.qml:29
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "Off"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "Off"
 msgstr "꺼짐"
@@ -29,27 +27,25 @@ msgstr "꺼짐"
 #, kde-format
 msgctxt "Brightness level"
 msgid "Low"
-msgstr ""
+msgstr "낮음"
 
 #: package/contents/ui/BrightnessItem.qml:31
 #, kde-format
 msgctxt "Brightness level"
 msgid "Medium"
-msgstr ""
+msgstr "중간"
 
 #: package/contents/ui/BrightnessItem.qml:32
 #, kde-format
 msgctxt "Brightness level"
 msgid "High"
-msgstr ""
+msgstr "높음"
 
 #: package/contents/ui/BrightnessItem.qml:33
-#, fuzzy, kde-format
-#| msgctxt "Night light status"
-#| msgid "On"
+#, kde-format
 msgctxt "Backlight on or off"
 msgid "On"
-msgstr "켜짐"
+msgstr "켬"
 
 #: package/contents/ui/BrightnessItem.qml:45
 #, kde-format
@@ -60,7 +56,7 @@ msgstr "%1%"
 #: package/contents/ui/KeyboardColorItem.qml:78
 #, kde-format
 msgid "Follow accent color"
-msgstr ""
+msgstr "강조색 따르기"
 
 #: package/contents/ui/main.qml:65
 #, kde-format
@@ -81,50 +77,49 @@ msgstr "키보드 밝기: %1%"
 #, kde-format
 msgctxt "Status"
 msgid "Night Light suspended; middle-click to resume"
-msgstr ""
+msgstr "야간 조명 중단됨. 가운데 단추로 클릭하여 다시 시작"
 
 #: package/contents/ui/main.qml:87
-#, fuzzy, kde-format
-#| msgid "Night Light"
+#, kde-format
 msgctxt "Status"
 msgid "Night Light suspended"
-msgstr "야간 조명"
+msgstr "야간 조명 중단됨"
 
 #: package/contents/ui/main.qml:92
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at day color temperature"
-msgstr ""
+msgstr "야간 조명이 주간 색온도임"
 
 #: package/contents/ui/main.qml:94
 #, kde-format
 msgctxt "Status"
 msgid "Night Light at night color temperature"
-msgstr ""
+msgstr "야간 조명이 야간 색온도임"
 
 #: package/contents/ui/main.qml:99
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in morning transition (complete by %1)"
-msgstr ""
+msgstr "야간 조명이 일출 전환 중(%1에 완료됨)"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light in evening transition (complete by %1)"
-msgstr ""
+msgstr "야간 조명이 일몰 전환 중(%1에 완료됨)"
 
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light evening transition scheduled for %1"
-msgstr ""
+msgstr "야간 조명 일몰 전환이 %1에 예정됨"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
 msgctxt "Status; placeholder is a time"
 msgid "Night Light morning transition scheduled for %1"
-msgstr ""
+msgstr "야간 조명 일출 전환이 %1에 예정됨"
 
 #: package/contents/ui/main.qml:122
 #, kde-format
@@ -132,10 +127,9 @@ msgid "Scroll to adjust screen brightness"
 msgstr "스크롤하여 화면 밝기 조정"
 
 #: package/contents/ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Middle-click to toggle Night Light"
+#, kde-format
 msgid "Middle-click to suspend Night Light"
-msgstr "가운데 단추로 클릭하여 야간 조명 전환"
+msgstr "가운데 단추로 클릭하여 야간 조명 일시 정지"
 
 #: package/contents/ui/main.qml:213
 #, kde-format
@@ -147,7 +141,7 @@ msgstr "야간 조명 설정…"
 #, kde-format
 msgctxt "Night light status"
 msgid "Suspended"
-msgstr ""
+msgstr "일시 정지됨"
 
 #: package/contents/ui/NightLightItem.qml:78
 #, kde-format
@@ -207,7 +201,7 @@ msgstr "%1 K"
 #, kde-format
 msgctxt "@action:button Night Light"
 msgid "Suspend"
-msgstr ""
+msgstr "일시 정지"
 
 #: package/contents/ui/NightLightItem.qml:144
 #, kde-format
@@ -254,10 +248,9 @@ msgid "Keyboard Brightness"
 msgstr "키보드 밝기"
 
 #: package/contents/ui/PopupDialog.qml:130
-#, fuzzy, kde-format
-#| msgid "Keyboard Brightness"
+#, kde-format
 msgid "Keyboard Color"
-msgstr "키보드 밝기"
+msgstr "키보드 색상"
 
 #: package/contents/ui/PopupDialog.qml:140
 #, kde-format
