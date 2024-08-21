@@ -108,7 +108,11 @@ private:
     QMap<QString, ConditionIcons> const &dayIcons() const;
     QMap<QString, IonInterface::WindDirections> const &windIcons() const;
 
+    // General util methods to request API Calls
+    // TODO: Very barebones. Abstract away to a class which can internally
+    // handle the state of requests, pending calls, retries and server errors
     KJob *requestAPIJob(const QString &source, const QUrl &url);
+    int secondsToRetry();
 
     // Load and Parse the place search listings
     void findPlace(const QString &place, const QString &source);
@@ -144,6 +148,7 @@ private:
     QHash<KJob *, QString> m_jobList;
 
     int m_pendingSearchCount = 0;
+    std::atomic<int> m_retryAttemps = 0;
 
     QStringList m_sourcesToReset;
 };

@@ -19,6 +19,7 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QTimeZone>
+#include <QTimer>
 
 using namespace Qt::StringLiterals;
 
@@ -261,6 +262,23 @@ KJob *UKMETIon::requestAPIJob(const QString &source, const QUrl &url)
     return getJob;
 }
 
+int UKMETIon::secondsToRetry()
+{
+    constexpr int MAX_RETRY_ATTEMPS = 5;
+
+    m_retryAttemps++;
+
+    if (m_retryAttemps > MAX_RETRY_ATTEMPS) {
+        qCWarning(IONENGINE_BBCUKMET) << "Coudn't get a valid response after" << MAX_RETRY_ATTEMPS << "attemps";
+        return -1;
+    }
+
+    const int delay_sec = 2 << m_retryAttemps; // exponential increase, starting at 4 seconds
+    qCDebug(IONENGINE_BBCUKMET) << "Retry in" << delay_sec << "seconds";
+
+    return delay_sec;
+}
+
 void UKMETIon::getObservation(const QString &source)
 {
     m_weatherData[source].isObservationDataPending = true;
@@ -383,12 +401,30 @@ void UKMETIon::observation_slotJobFinished(KJob *job)
     const QString source = m_jobList.take(job);
     const auto data = m_jobData.take(job);
 
-    if (!data->isEmpty()) {
-        const auto doc = QJsonDocument::fromJson(*data);
+    QJsonParseError jsonError;
+    const auto doc = QJsonDocument::fromJson(*data, &jsonError);
+
+    if (doc.isNull()) {
+        qCWarning(IONENGINE_BBCUKMET) << "Received invalid data:" << jsonError.errorString();
+    } else if (const auto response = doc[u"response"_s].toObject(); !response.isEmpty()) {
+        // Server returns some HTTP states as JSON data.
+        const int errorCode = response[u"code"_s].toInt();
+        qCWarning(IONENGINE_BBCUKMET) << "Received server error:" << errorCode << response[u"message"_s].toString();
+        if (errorCode == 202) {
+            // State "202 Accepted" means it's getting the data ready. Retry
+            if (const int delay_sec = secondsToRetry(); delay_sec > 0) {
+                QTimer::singleShot(delay_sec * 1000, [this, source]() {
+                    getObservation(source);
+                });
+                return;
+            }
+        }
+    } else {
         readObservationData(source, doc);
         getSolarData(source);
     }
 
+    m_retryAttemps = 0;
     m_weatherData[source].isObservationDataPending = false;
     getForecast(source);
 
@@ -403,11 +439,29 @@ void UKMETIon::forecast_slotJobFinished(KJob *job)
     const QString source = m_jobList.take(job);
     const auto data = m_jobData.take(job);
 
-    if (!data->isEmpty()) {
-        const auto doc = QJsonDocument::fromJson(*data);
+    QJsonParseError jsonError;
+    const auto doc = QJsonDocument::fromJson(*data, &jsonError);
+
+    if (doc.isNull()) {
+        qCWarning(IONENGINE_BBCUKMET) << "Received invalid data:" << jsonError.errorString();
+    } else if (const auto response = doc[u"response"_s].toObject(); !response.isEmpty()) {
+        // Server returns some HTTP states as JSON data.
+        const int errorCode = response[u"code"_s].toInt();
+        qCWarning(IONENGINE_BBCUKMET) << "Received server error:" << errorCode << response[u"message"_s].toString();
+        if (errorCode == 202) {
+            // State "202 Accepted" means it's getting the data ready. Retry
+            if (const int delay_sec = secondsToRetry(); delay_sec > 0) {
+                QTimer::singleShot(delay_sec * 1000, [this, source]() {
+                    getForecast(source);
+                });
+                return;
+            }
+        }
+    } else {
         readForecast(source, doc);
     }
 
+    m_retryAttemps = 0;
     m_weatherData[source].isForecastsDataPending = false;
     updateWeather(source);
 }
