@@ -218,7 +218,8 @@ MouseArea {
                 PC3.Label {
                     id: songTitle
 
-                    Layout.fillWidth: true
+                    Layout.alignment: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalPanel || compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? Qt.AlignHCenter : Qt.AlignLeft
+                    Layout.preferredWidth: contentWidth // BUG 491946: Don't fill width
                     Layout.maximumWidth: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ? Kirigami.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
