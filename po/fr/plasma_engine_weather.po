@@ -13,8 +13,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 03:31+0000\n"
-"PO-Revision-Date: 2021-12-10 08:18+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"PO-Revision-Date: 2024-08-09 14:19+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -2782,7 +2782,7 @@ msgstr "Données de la météo BBC"
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
-msgstr "Source : Deutscher Wetterdienst (DWD)"
+msgstr "Source : site Deutscher Wetterdienst (DWD)"
 
 #: ions/envcan/ion_envcan.cpp:903 ions/envcan/ion_envcan.cpp:905
 #: ions/envcan/ion_envcan.cpp:1409 ions/envcan/ion_envcan.cpp:1550
