@@ -6,6 +6,8 @@
 
 #include "plasmaappletitemmodel_p.h"
 
+#include <QDateTime>
+#include <QDir>
 #include <QFileInfo>
 #include <QMimeData>
 #include <QStandardPaths>
@@ -48,6 +50,7 @@ PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
     setData(unsupportedMessage(), PlasmaAppletItemModel::UnsupportedMessageRole);
     setData(0, PlasmaAppletItemModel::RunningRole);
     setData(m_local, PlasmaAppletItemModel::LocalRole);
+    setData(isRecent(), PlasmaAppletItemModel::RecentRole);
 
     QString iconName;
 
@@ -140,6 +143,36 @@ void PlasmaAppletItem::setRunning(int count)
 QString PlasmaAppletItem::apiVersion() const
 {
     return m_info.value(QStringLiteral("X-Plasma-API-Minimum-Version"));
+}
+
+bool PlasmaAppletItem::isRecent() const
+{
+    const QFileInfo configInformation(m_info.fileName());
+    QDir dir = configInformation.dir();
+
+    // The manifest file is in the folder of its theme,
+    // which is in the plasmashell folder, which is in
+    // a share folder. We use the latter as a reference
+    // of system creation date.
+    dir.cdUp();
+    dir.cdUp();
+    bool directoryExists = dir.cdUp();
+
+    if (!directoryExists) {
+        return false;
+    }
+
+    const QFileInfo shareFolderInformation(dir.absolutePath());
+
+    const auto shareFolderBirthTime = shareFolderInformation.birthTime();
+    const auto configBirthTime = configInformation.birthTime();
+    const auto oneHourAgo = QDateTime::currentDateTime().addSecs(-3600);
+
+    // A widget is considered recent when it was created within the last hour,
+    // but is also at least three minutes older compared to the configuration folder.
+    // This requirement is to avoid all widgets being considered recent on
+    // first boot, after initial installation.
+    return configBirthTime > oneHourAgo && configBirthTime > shareFolderBirthTime.addSecs(180);
 }
 
 bool PlasmaAppletItem::isSupported() const
@@ -237,6 +270,8 @@ bool PlasmaAppletItem::passesFiltering(const KCategorizedItemsViewModels::Filter
         return running();
     } else if (filter.first == QLatin1String("local")) {
         return isLocal();
+    } else if (filter.first == QLatin1String("recent")) {
+        return isRecent();
     } else if (filter.first == QLatin1String("category")) {
         return m_info.category().compare(filter.second.toString(), Qt::CaseInsensitive) == 0;
     } else {
@@ -310,6 +345,7 @@ QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
     newRoleNames[ApiVersionRole] = "apiVersion";
     newRoleNames[IsSupportedRole] = "isSupported";
     newRoleNames[UnsupportedMessageRole] = "unsupportedMessage";
+    newRoleNames[RecentRole] = "recent";
     return newRoleNames;
 }
 

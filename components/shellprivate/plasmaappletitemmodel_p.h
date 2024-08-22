@@ -36,6 +36,7 @@ public:
 
     int running() const override;
     bool isLocal() const;
+    bool isRecent() const;
     bool matches(const QString &pattern) const override;
     QStringList keywords() const override;
 
@@ -72,7 +73,8 @@ public:
         ScreenshotRole = Qt::UserRole + 12,
         ApiVersionRole = Qt::UserRole + 13,
         IsSupportedRole = Qt::UserRole + 14,
-        UnsupportedMessageRole = Qt::UserRole + 15
+        UnsupportedMessageRole = Qt::UserRole + 15,
+        RecentRole = Qt::UserRole + 16
     };
 
     explicit PlasmaAppletItemModel(QObject *parent = nullptr);

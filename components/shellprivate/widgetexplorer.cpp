@@ -157,6 +157,10 @@ void WidgetExplorerPrivate::initFilters()
                               KCategorizedItemsViewModels::Filter(QStringLiteral("local"), true),
                               QIcon::fromTheme(QStringLiteral("edit-delete")));
 
+        filterModel.addFilter(i18nc("@item:inmenu used in the widget filter. Filter widgets that can were recently installed.", "Recently installed"),
+                              KCategorizedItemsViewModels::Filter(QStringLiteral("recent"), true),
+                              QIcon::fromTheme(QStringLiteral("folder-recent-symbolic")));
+
         filterModel.addSeparator(i18n("Categories:"));
     }
 

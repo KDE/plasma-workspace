@@ -5,6 +5,7 @@
 */
 
 #include "kcategorizeditemsviewmodels_p.h"
+#include "plasmaappletitemmodel_p.h"
 #include <KLocalizedString>
 #include <QDebug>
 
@@ -184,6 +185,12 @@ QVariantHash DefaultItemFilterProxyModel::get(int row) const
 
 bool DefaultItemFilterProxyModel::lessThan(const QModelIndex &left, const QModelIndex &right) const
 {
+    bool leftRecent = sourceModel()->data(left, PlasmaAppletItemModel::RecentRole).toBool();
+    bool rightRecent = sourceModel()->data(right, PlasmaAppletItemModel::RecentRole).toBool();
+    if (leftRecent && !rightRecent)
+        return true;
+    if (rightRecent && !leftRecent)
+        return false;
     return sourceModel()->data(left).toString().localeAwareCompare(sourceModel()->data(right).toString()) < 0;
 }
 
