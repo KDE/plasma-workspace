@@ -124,6 +124,10 @@ public:
      * Uninstall a plasmoid with a given plugin name. only user-installed ones are uninstallable
      */
     Q_INVOKABLE void uninstall(const QString &pluginName);
+    /**
+     * Remove all instances of a plasmoid with a given plugin name.
+     */
+    Q_INVOKABLE void removeAllInstances(const QString &pluginName);
 
     void classBegin() override;
     void componentComplete() override;
