@@ -15,18 +15,17 @@ import org.kde.kirigami 2 as Kirigami
 /**
  * [Album Art][Now Playing]
  */
-MouseArea {
+Loader {
     id: compactRepresentation
+
+    Layout.fillWidth: layoutForm !== CompactRepresentation.LayoutType.HorizontalPanel && layoutForm !== CompactRepresentation.LayoutType.HorizontalDesktop
+    Layout.fillHeight: layoutForm !== CompactRepresentation.LayoutType.VerticalPanel && layoutForm !== CompactRepresentation.LayoutType.VerticalDesktop
 
     Layout.preferredWidth: {
         switch (compactRepresentation.layoutForm) {
-        case CompactRepresentation.LayoutType.VerticalPanel:
-        case CompactRepresentation.LayoutType.VerticalDesktop:
-            return compactRepresentation.parent.width;
         case CompactRepresentation.LayoutType.HorizontalPanel:
         case CompactRepresentation.LayoutType.HorizontalDesktop:
-            return iconLoader.active ? iconLoader.item.implicitWidth : playerRow.implicitWidth;
-        case CompactRepresentation.LayoutType.IconOnly:
+            return implicitWidth;
         default:
             return -1;
         }
@@ -34,12 +33,14 @@ MouseArea {
     Layout.preferredHeight: {
         switch (compactRepresentation.layoutForm) {
         case CompactRepresentation.LayoutType.VerticalPanel:
-            return iconLoader.active ? compactRepresentation.parent.width : playerRow.height;
+        case CompactRepresentation.LayoutType.VerticalDesktop:
+            return implicitHeight;
         default:
             return -1;
         }
     }
-    Layout.maximumHeight: Layout.preferredHeight
+
+    Layout.maximumWidth: layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ? (Kirigami.Units.gridUnit * 10 + compactRepresentation.height + Kirigami.Units.smallSpacing) : -1
 
     enum LayoutType {
         Tray,
@@ -50,120 +51,78 @@ MouseArea {
         IconOnly
     }
 
-    property int layoutForm: CompactRepresentation.LayoutType.IconOnly
-
-    Binding on layoutForm {
-        when: playerRow.active
-        delayed: true
-        restoreMode: Binding.RestoreBindingOrValue
-        value: {
-            if (compactRepresentation.inTray) {
-                return CompactRepresentation.LayoutType.Tray;
-            } else if (compactRepresentation.inPanel) {
-                return compactRepresentation.isVertical ? CompactRepresentation.LayoutType.VerticalPanel : CompactRepresentation.LayoutType.HorizontalPanel;
-            } else if (compactRepresentation.parent.width > compactRepresentation.parent.height + playerRow.item.columnSpacing) {
+    readonly property int layoutForm: {
+        if (compactRepresentation.inTray) {
+            return CompactRepresentation.LayoutType.Tray;
+        } else if (compactRepresentation.inPanel) {
+            return compactRepresentation.isVertical ? CompactRepresentation.LayoutType.VerticalPanel : CompactRepresentation.LayoutType.HorizontalPanel;
+        } else if (compactRepresentation.item instanceof GridLayout) {
+            if (compactRepresentation.parent.width > compactRepresentation.parent.height + (compactRepresentation.item as GridLayout).columnSpacing) {
                 return CompactRepresentation.LayoutType.HorizontalDesktop;
-            } else if (compactRepresentation.parent.height - compactRepresentation.parent.width >= playerRow.item.labelHeight + playerRow.item.rowSpacing) {
+            } else if (compactRepresentation.parent.height - compactRepresentation.parent.width >= compactRepresentation.item.labelHeight + (compactRepresentation.item as GridLayout).rowSpacing) {
                 return CompactRepresentation.LayoutType.VerticalDesktop;
             }
-            return CompactRepresentation.LayoutType.IconOnly;
         }
+        return CompactRepresentation.LayoutType.IconOnly;
     }
-
     readonly property bool isVertical: Plasmoid.formFactor === PlasmaCore.Types.Vertical
     readonly property bool inPanel: [PlasmaCore.Types.TopEdge, PlasmaCore.Types.RightEdge, PlasmaCore.Types.BottomEdge, PlasmaCore.Types.LeftEdge].includes(Plasmoid.location)
     readonly property bool inTray: parent.objectName === "org.kde.desktop-CompactApplet"
 
-    acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
-    hoverEnabled: true
+    sourceComponent: inTray || root.track.length === 0 ? icon : playerRow
 
-    property int wheelDelta: 0
-
-    onWheel: wheel => {
-        wheelDelta += (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x)
-        while (wheelDelta >= 120) {
-            wheelDelta -= 120;
-            mpris2Model.currentPlayer?.changeVolume(volumePercentStep / 100, true);
-        }
-        while (wheelDelta <= -120) {
-            wheelDelta += 120;
-            mpris2Model.currentPlayer?.changeVolume(-volumePercentStep / 100, true);
-        }
-    }
-
-    onClicked: mouse => {
-        switch (mouse.button) {
-        case Qt.MiddleButton:
-            root.togglePlaying()
-            break
-        case Qt.BackButton:
-            if (root.canGoPrevious) {
-                root.previous();
-            }
-            break
-        case Qt.ForwardButton:
-            if (root.canGoNext) {
-                root.next();
-            }
-            break
-        default:
-            root.expanded = !root.expanded
-        }
-    }
-
-    Loader {
-        id: iconLoader
+    MouseArea {
+        id: mouseArea
         anchors.fill: parent
-        visible: active
+        acceptedButtons: Qt.LeftButton | Qt.MiddleButton | Qt.BackButton | Qt.ForwardButton
+        hoverEnabled: compactRepresentation.item instanceof Kirigami.Icon
+        property int wheelDelta: 0
+        onWheel: wheel => {
+            if (mpris2Model.currentPlayer === null) {
+                return;
+            }
+            wheelDelta += (wheel.inverted ? -1 : 1) * (wheel.angleDelta.y ? wheel.angleDelta.y : -wheel.angleDelta.x)
+            while (wheelDelta >= 120) {
+                wheelDelta -= 120;
+                mpris2Model.currentPlayer.changeVolume(volumePercentStep / 100, true);
+            }
+            while (wheelDelta <= -120) {
+                wheelDelta += 120;
+                mpris2Model.currentPlayer.changeVolume(-volumePercentStep / 100, true);
+            }
+        }
+        onClicked: (mouse) => {
+            switch (mouse.button) {
+            case Qt.MiddleButton:
+                root.togglePlaying()
+                break
+            case Qt.BackButton:
+                if (root.canGoPrevious) {
+                    root.previous();
+                }
+                break
+            case Qt.ForwardButton:
+                if (root.canGoNext) {
+                    root.next();
+                }
+                break
+            default:
+                root.expanded = !root.expanded
+            }
+        }
+    }
 
-        active: inTray || root.track.length === 0
-        sourceComponent: Kirigami.Icon {
-            active: compactRepresentation.containsMouse
+    Component {
+        id: icon
+        Kirigami.Icon {
+            active: mouseArea.containsMouse
             source: Plasmoid.icon
         }
     }
 
-    Loader {
+    Component {
         id: playerRow
-
-        width: {
-            if (!active) {
-                return 0;
-            }
-            switch (compactRepresentation.layoutForm) {
-            case CompactRepresentation.LayoutType.VerticalPanel:
-            case CompactRepresentation.LayoutType.VerticalDesktop:
-                return compactRepresentation.parent.width;
-            case CompactRepresentation.LayoutType.HorizontalPanel:
-            case CompactRepresentation.LayoutType.HorizontalDesktop:
-                return Math.min(item.implicitWidth, compactRepresentation.parent.width);
-            case CompactRepresentation.LayoutType.IconOnly:
-            default:
-                return Math.min(compactRepresentation.parent.width, compactRepresentation.parent.height);
-            }
-        }
-
-        height: {
-            if (!active) {
-                return 0;
-            }
-            switch (compactRepresentation.layoutForm) {
-            case CompactRepresentation.LayoutType.VerticalPanel:
-                return item.implicitHeight;
-            case CompactRepresentation.LayoutType.VerticalDesktop:
-            case CompactRepresentation.LayoutType.HorizontalPanel:
-            case CompactRepresentation.LayoutType.HorizontalDesktop:
-                return compactRepresentation.parent.height;
-            case CompactRepresentation.LayoutType.IconOnly:
-            default:
-                return Math.min(compactRepresentation.parent.width, compactRepresentation.parent.height);
-            }
-        }
-
-        visible: active
-
-        active: !iconLoader.active
-        sourceComponent: GridLayout {
+        GridLayout {
             id: grid
             readonly property real labelHeight: songTitle.contentHeight
 
@@ -189,8 +148,10 @@ MouseArea {
                 id: albumArt
 
                 Layout.alignment: Qt.AlignVCenter
-                Layout.preferredWidth: Math.min(compactRepresentation.parent.width, compactRepresentation.parent.height)
-                Layout.preferredHeight: Layout.preferredWidth
+                Layout.fillWidth: compactRepresentation.Layout.fillWidth
+                Layout.fillHeight: compactRepresentation.Layout.fillHeight
+                Layout.preferredWidth: compactRepresentation.Layout.fillWidth ? -1 : compactRepresentation.height
+                Layout.preferredHeight: compactRepresentation.Layout.fillHeight ? -1 : compactRepresentation.width
 
                 inCompactRepresentation: true
 
@@ -207,10 +168,8 @@ MouseArea {
 
             ColumnLayout {
                 Layout.alignment: Qt.AlignVCenter
-                visible: (compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.VerticalPanel
-                    && compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.IconOnly)
-                    || (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalPanel
-                    && compactRepresentation.parent.width >= Kirigami.Units.gridUnit * 5)
+                visible: compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.VerticalPanel && compactRepresentation.layoutForm !== CompactRepresentation.LayoutType.IconOnly
+                    || (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalPanel && compactRepresentation.parent.width >= Kirigami.Units.gridUnit * 5)
 
                 spacing: 0
 
@@ -219,7 +178,6 @@ MouseArea {
                     id: songTitle
 
                     Layout.fillWidth: true
-                    Layout.preferredWidth: contentWidth // BUG 491946
                     Layout.maximumWidth: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ? Kirigami.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
@@ -236,7 +194,7 @@ MouseArea {
 
                     text: root.track
                     textFormat: Text.PlainText
-                    wrapMode: Text.Wrap
+                    wrapMode: Text.NoWrap  // BUG 491946
                 }
 
                 // Song Artist
@@ -244,8 +202,7 @@ MouseArea {
                     id: songArtist
 
                     Layout.fillWidth: true
-                    Layout.maximumWidth: songTitle.Layout.maximumWidth
-                    visible: root.artist.length > 0 && playerRow.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */ + (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? albumArt.Layout.preferredHeight + grid.rowSpacing : 0)
+                    visible: root.artist.length > 0 && compactRepresentation.height >= songTitle.contentHeight + contentHeight * 0.8 /* For CJK */ + (compactRepresentation.layoutForm === CompactRepresentation.LayoutType.VerticalDesktop ? albumArt.height + grid.rowSpacing : 0)
 
                     elide: Text.ElideRight
                     font.pointSize: Kirigami.Theme.smallFont.pointSize
