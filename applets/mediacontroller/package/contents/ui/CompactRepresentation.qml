@@ -219,6 +219,7 @@ MouseArea {
                     id: songTitle
 
                     Layout.fillWidth: true
+                    Layout.preferredWidth: contentWidth // BUG 491946
                     Layout.maximumWidth: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ? Kirigami.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
