@@ -222,7 +222,7 @@ MouseArea {
                     Layout.maximumWidth: compactRepresentation.layoutForm === CompactRepresentation.LayoutType.HorizontalPanel ? Kirigami.Units.gridUnit * 10 : -1
 
                     elide: Text.ElideRight
-                    horizontalAlignment: grid.flow === GridLayout.TopToBottom ? Text.AlignHCenter : Text.AlignJustify
+                    horizontalAlignment: grid.flow === GridLayout.TopToBottom ? Text.AlignHCenter : Text.AlignLeft
                     maximumLineCount: 1
 
                     opacity: root.isPlaying ? 1 : 0.6
