@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1688224 $
+# Version: $Revision: 1688311 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2024-08-03 11:48+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -400,13 +400,19 @@ msgstr "Edytuj zawartość"
 msgid "Remove from history"
 msgstr "Usuń z historii"
 
-#: declarative/qml/EditPage.qml:79
+#: declarative/qml/EditPage.qml:63
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Text edit area"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Zapisz"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

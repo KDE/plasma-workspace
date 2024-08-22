@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-20 00:42+0000\n"
-"PO-Revision-Date: 2024-06-10 09:28+0200\n"
+"PO-Revision-Date: 2024-08-13 15:11+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -43,7 +43,7 @@ msgstr "Configurer le module externe pour les actions de la souris"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "KDE Plasma 6.0 Dev"
+msgstr "KDE Plasma 6.0 (Développement)"
 
 #: desktopview.cpp:224
 #, kde-format
@@ -322,7 +322,7 @@ msgid ""
 "settings."
 msgstr ""
 "Avec un processeur graphique NVIDIA sous X11, le style flottant et le mode "
-"d’opacité adaptative sont connus pour provoquer une baisse de performances "
+"d'opacité adaptative sont connus pour provoquer une baisse de performances "
 "lors des glisser et des redimensionnements de fenêtre. Veuillez penser à "
 "utiliser une autre configuration."
 

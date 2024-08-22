@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2024-08-22 00:41+0000\n"
 "PO-Revision-Date: 2024-08-02 14:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -398,13 +398,19 @@ msgstr "İçeriği Düzenle"
 msgid "Remove from history"
 msgstr "Geçmişten Kaldır"
 
-#: declarative/qml/EditPage.qml:79
+#: declarative/qml/EditPage.qml:63
+#, kde-format
+msgctxt "@info:whatsthis"
+msgid "Text edit area"
+msgstr ""
+
+#: declarative/qml/EditPage.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Kaydet"
 
-#: declarative/qml/EditPage.qml:87
+#: declarative/qml/EditPage.qml:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

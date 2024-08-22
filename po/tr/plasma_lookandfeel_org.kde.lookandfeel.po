@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-01-30 16:26+0300\n"
+"PO-Revision-Date: 2024-08-21 12:00+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -43,15 +43,11 @@ msgstr[0] "1 saniye içinde oturum kapatılacak"
 msgstr[1] "%1 saniye içinde oturum kapatılacak"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-"Yazılım güncellemeleri kuruluyor ve 1 saniye içinde yeniden başlatılacak"
-msgstr[1] ""
-"Yazılım güncellemeleri kuruluyor ve %1 saniye içinde yeniden başlatılacak"
+msgstr[0] "Yazılım güncellemeleri kuruluyor ve 1 saniye içinde kapatılacak"
+msgstr[1] "Yazılım güncellemeleri kuruluyor ve %1 saniye içinde kapatılacak"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -114,7 +110,7 @@ msgstr "Güncellemeleri Kur ve Yeniden Başlat"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Şimdi Kur ve Yeniden Başlat"
+msgstr "Şimdi Güncellemeleri Kur ve Yeniden Başlat"
 
 #: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
 #, kde-format
@@ -127,20 +123,16 @@ msgid "Restart Now"
 msgstr "Şimdi Yeniden Başlat"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Şimdi Kur ve Yeniden Başlat"
+msgstr "Güncellemeleri Kur ve Kapat"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Şimdi Kur ve Yeniden Başlat"
+msgstr "Şimdi Güncellemeleri Kur ve Kapat"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format

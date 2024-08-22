@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-06-21 09:32+0200\n"
+"PO-Revision-Date: 2024-08-21 08:12+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -41,15 +41,11 @@ msgstr[0] "Loggar ut om 1 sekund"
 msgstr[1] "Loggar ut om %1 sekunder"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-"Installerar programvaruuppdateringar och startar om datorn om 1 sekund"
-msgstr[1] ""
-"Installerar programvaruuppdateringar och startar om datorn om %1 sekunder"
+msgstr[0] "Installerar programvaruuppdateringar och stänger av om 1 sekund"
+msgstr[1] "Installerar programvaruuppdateringar och stänger av om %1 sekunder"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -125,20 +121,16 @@ msgid "Restart Now"
 msgstr "Starta om nu"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Installera uppdateringar och starta om nu"
+msgstr "Installera uppdateringar och stäng av"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Installera uppdateringar och starta om nu"
+msgstr "Installera uppdateringar och stäng av nu"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format

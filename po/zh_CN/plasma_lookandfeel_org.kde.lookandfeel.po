@@ -37,12 +37,10 @@ msgid_plural "Logging out in %1 seconds"
 msgstr[0] "在 %1 秒后注销"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "正在安装软件更新，将在 %1 秒后重启"
+msgstr[0] ""
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -111,20 +109,16 @@ msgid "Restart Now"
 msgstr "立即重新启动"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "安装更新并立即重启"
+msgstr ""
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "安装更新并立即重启"
+msgstr ""
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format

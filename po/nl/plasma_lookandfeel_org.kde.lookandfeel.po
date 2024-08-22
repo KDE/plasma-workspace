@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-01-30 13:32+0100\n"
+"PO-Revision-Date: 2024-08-21 11:09+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -42,16 +42,13 @@ msgstr[0] "Na 1 seconde afmelden"
 msgstr[1] "Na %1 seconden afmelden"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
-"Elementen voor bijwerken van software installeren en herstarten na 1 seconde"
+"Elementen voor bijwerken van software installeren en afsluiten na 1 seconde"
 msgstr[1] ""
-"Elementen voor bijwerken van software installeren en herstarten na %1 "
-"seconden"
+"Elementen voor bijwerken van software installeren en afsluiten na %1 seconden"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -125,20 +122,16 @@ msgid "Restart Now"
 msgstr "Nu herstarten"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Elementen voor bijwerken installeren & nu herstarten"
+msgstr "Elementen voor bijwerken installeren & afsluiten"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Elementen voor bijwerken installeren & nu herstarten"
+msgstr "Elementen voor bijwerken installeren & nu afsluiten"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format

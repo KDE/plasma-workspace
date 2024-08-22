@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-01-30 06:18+0100\n"
+"PO-Revision-Date: 2024-08-21 05:22+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -40,13 +40,11 @@ msgstr[0] "გასვლა %1 წამში"
 msgstr[1] "გასვლა %1 წამში"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "განახლებების დაყენება და გადატვირთვა 1 წამში"
-msgstr[1] "განახლებების დაყენება და გადატვირთვა %1 წამში"
+msgstr[0] "განახლებების დაყენება და მოწყობილობის გამორთვა 1 წამში"
+msgstr[1] "განახლებების დაყენება და მოწყობილობის გამორთვა %1 წამში"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -121,20 +119,16 @@ msgid "Restart Now"
 msgstr "გადატვირთვა ახლავე"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "განახლებების დაყენება და გადატვირთვა ახლავე"
+msgstr "განახლებების დაყენება და მოწყობილობის გამორთვა"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "განახლებების დაყენება და გადატვირთვა ახლავე"
+msgstr "განახლებების დაყენება და მოწყობილობის გამორთვა ახლავე"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format

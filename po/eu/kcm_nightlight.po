@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-04-20 09:06+0200\n"
+"PO-Revision-Date: 2024-08-21 12:51+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -171,6 +171,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"<application>GeoClue2</application> zerbitzua, gailuaren kokapena aldizka "
+"eguneratzeko erabiliko da, erabilgarri badago, GPS edo mugikor-dorre "
+"triangulazioa erabiliz, edo bestela, bere IP helbidea <link url='https://"
+"geoip.com/privacy/'>GeoIP</link>era bidaliz."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -181,6 +185,11 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"<application>%1</application> zerbitzua, gailuaren kokapena aldizka "
+"eguneratzeko erabiliko da. Mesedez, akats txosten bat ireki <link "
+"url='https://bugs.kde.org'>https://bugs.kde.org</link>en KDE garatzaileei "
+"zerbitzu honek egiten duenari buruzko deskribapen zehatz bat idaztea "
+"eskatzeko."
 
 #: ui/main.qml:334
 #, kde-format

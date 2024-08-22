@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-01-30 18:22+0100\n"
+"PO-Revision-Date: 2024-08-21 04:01+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -42,14 +42,11 @@ msgstr[0] "Cierre de sesión en 1 segundo"
 msgstr[1] "Cierre de sesión en %1 segundos"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Instalando actualizaciones del software y reiniciando en 1 segundo"
-msgstr[1] ""
-"Instalando actualizaciones del software y reiniciando en %1 segundos"
+msgstr[0] "Instalando actualizaciones del software y apagando en 1 segundo"
+msgstr[1] "Instalando actualizaciones del software y apagando en %1 segundos"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -125,20 +122,16 @@ msgid "Restart Now"
 msgstr "Reiniciar ahora"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Instalar actualizaciones y reiniciar ahora"
+msgstr "Instalar actualizaciones y apagar"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Instalar actualizaciones y reiniciar ahora"
+msgstr "Instalar actualizaciones y apagar ahora"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format

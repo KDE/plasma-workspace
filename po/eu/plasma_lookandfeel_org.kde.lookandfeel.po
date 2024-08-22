@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-01-30 19:23+0100\n"
+"PO-Revision-Date: 2024-08-21 12:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,14 +18,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] "Software eguneratzeak instalatu eta segundo 1 barru berrabiarazten"
-msgstr[1] "Software eguneratzeak instalatu eta %1 segundo barru berrabiarazten"
+msgstr[0] "Software eguneratzeak instalatzen, berrabiatzeko segundo 1"
+msgstr[1] "Software eguneratzeak instalatzen, berrabiatzeko %1 segundo"
 
 #: contents/logout/Logout.qml:154
 #, kde-format
@@ -42,13 +42,11 @@ msgstr[0] "Saio-ixteko segundo 1"
 msgstr[1] "Saio-ixteko %1 segundo"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Software eguneratzeak instalatu eta segundo 1 barru berrabiarazten"
-msgstr[1] "Software eguneratzeak instalatu eta %1 segundo barru berrabiarazten"
+msgstr[0] "Software eguneratzeak instalatzen, itzaltzeko segundo 1"
+msgstr[1] "Software eguneratzeak instalatzen, itzaltzeko %1 segundo"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -122,20 +120,16 @@ msgid "Restart Now"
 msgstr "Berrabiarazi orain"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Instalatu eguneratzeak eta berrabiarazi orain"
+msgstr "Instalatu eguneratzeak eta itzali"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Instalatu eguneratzeak eta berrabiarazi orain"
+msgstr "Instalatu eguneratzeak eta itzali orain"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
