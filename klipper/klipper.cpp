@@ -79,9 +79,6 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
                                                  this,
                                                  QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
-    connect(m_clip.get(), &SystemClipboard::ignored, this, &Klipper::slotIgnored);
-    connect(m_clip.get(), &SystemClipboard::newClipData, this, &Klipper::checkClipData);
-
     m_historyModel = HistoryModel::self();
     m_popup = std::make_unique<KlipperPopup>();
     connect(m_historyModel.get(), &HistoryModel::changed, this, &Klipper::slotHistoryChanged);
@@ -245,19 +242,8 @@ void Klipper::loadSettings()
 {
     m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
-    m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
-    if (m_bNoNullClipboard) {
-        connect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &Klipper::slotReceivedEmptyClipboard, Qt::UniqueConnection);
-    } else {
-        disconnect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &Klipper::slotReceivedEmptyClipboard);
-    }
-    // 0 is the id of "Ignore selection" radiobutton
-    m_bIgnoreSelection = KlipperSettings::ignoreSelection();
-    m_bIgnoreImages = KlipperSettings::ignoreImages();
-    m_bSynchronize = KlipperSettings::syncClipboards();
     // NOTE: not used atm - kregexpeditor is not ported to kde4
     m_bUseGUIRegExpEditor = KlipperSettings::useGUIRegExpEditor();
-    m_bSelectionTextOnly = KlipperSettings::selectionTextOnly();
 
     m_bURLGrabber = KlipperSettings::uRLGrabberEnabled();
     // this will cause it to loadSettings too
@@ -352,30 +338,6 @@ void Klipper::slotConfigure()
     dlg->show();
 }
 
-void Klipper::slotIgnored(QClipboard::Mode mode)
-{
-    // internal to klipper, ignoring QSpinBox selections
-    // keep our old clipboard, thanks
-    // This won't quite work, but it's close enough for now.
-    // The trouble is that the top selection =! top clipboard
-    // but we don't track that yet. We will....
-    if (auto top = m_historyModel->first()) {
-        m_clip->setMimeData(top, mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard);
-    }
-}
-
-void Klipper::slotReceivedEmptyClipboard(QClipboard::Mode mode)
-{
-    Q_ASSERT(m_bNoNullClipboard);
-    if (auto top = m_historyModel->first()) {
-        // keep old clipboard after someone set it to null
-        qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
-        m_clip->setMimeData(top,
-                            mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
-                            SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
-    }
-}
-
 void Klipper::slotPopupMenu()
 {
     m_popup->show();
@@ -406,72 +368,13 @@ void Klipper::setURLGrabberEnabled(bool enable)
 
 void Klipper::slotHistoryChanged(bool isTop)
 {
-    if (!isTop || m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
-        return;
-    }
-    if (m_bReplayActionInHistory && m_bURLGrabber) {
-        slotRepeatAction();
-    }
-}
-
-HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
-{
-    Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
-    if (m_historyModel->rowCount() > 0) {
-        if (m_bIgnoreImages && m_historyModel->first()->type() == HistoryItemType::Image) {
-            m_historyModel->remove(m_historyModel->first()->uuid());
-        }
-    }
-
-    HistoryItemPtr item = HistoryItem::create(clipData);
-
-    bool saveToHistory = true;
-    if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayLiteral("secret")) {
-        saveToHistory = false;
-    }
-    if (saveToHistory && item) {
-        m_historyModel->insert(item);
-    }
-
-    return item;
-}
-
-void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
-{
-    Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
-    bool changed = true; // ### FIXME (only relevant under polling, might be better to simply remove polling and rely on XFixes)
-
-    // this must be below the "bNoNullClipboard" handling code!
-    // XXX: I want a better handling of selection/clipboard in general.
-    // XXX: Order sensitive code. Must die.
-    const bool selectionMode = mode == QClipboard::Selection;
-    if (selectionMode && m_bIgnoreSelection) {
-        if (m_bSynchronize) {
-            auto item = HistoryItem::create(data);
-            if (item) [[likely]] { // applyClipChanges can return nullptr
-                m_clip->setMimeData(item, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
-            }
-        }
+    if (!isTop) {
         return;
     }
 
-    if (selectionMode && m_bSelectionTextOnly && !data->hasText())
-        return;
-
-    if (m_bIgnoreImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
-        return;
-    }
-
-    HistoryItemPtr item = applyClipChanges(data);
-    if (changed) {
-        qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
-        if (m_bSynchronize && item) { // applyClipChanges can return nullptr
-            m_clip->setMimeData(item, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
-        }
-    }
-    QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
-    if (m_bURLGrabber && item && data->hasText()) {
-        m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
+    QString &lastURLGrabberText = m_clip->isLocked(QClipboard::Selection) ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
+    if (auto item = m_historyModel->first(); m_bURLGrabber && item && item->type() == HistoryItemType::Text) {
+        m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(m_historyModel->first()));
 
         // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
         // text all the time (e.g. because XFixes is not available and the application
@@ -482,6 +385,13 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         }
     } else {
         lastURLGrabberText.clear();
+    }
+
+    if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
+        return;
+    }
+    if (m_bReplayActionInHistory && m_bURLGrabber) {
+        slotRepeatAction();
     }
 }
 
@@ -498,24 +408,6 @@ QStringList Klipper::getClipboardHistoryMenu()
 QString Klipper::getClipboardHistoryItem(int i)
 {
     return m_historyModel->index(i).data(Qt::DisplayRole).toString();
-}
-
-//
-// changing a spinbox in klipper's config-dialog causes the lineedit-contents
-// of the spinbox to be selected and hence the clipboard changes. But we don't
-// want all those items in klipper's history. See #41917
-//
-bool Klipper::ignoreClipboardChanges() const
-{
-    QWidget *focusWidget = qApp->focusWidget();
-    if (focusWidget) {
-        if (focusWidget->inherits("QSpinBox")
-            || (focusWidget->parentWidget() && focusWidget->inherits("QLineEdit") && focusWidget->parentWidget()->inherits("QSpinWidget"))) {
-            return true;
-        }
-    }
-
-    return false;
 }
 
 void Klipper::updateTimestamp()

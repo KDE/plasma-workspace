@@ -9,6 +9,7 @@
 
 #include <QAbstractListModel>
 #include <QBindable>
+#include <QClipboard>
 #include <QRecursiveMutex>
 #include <QTimer>
 
@@ -97,15 +98,34 @@ Q_SIGNALS:
 
     void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
 
+private Q_SLOTS:
+    /**
+     * Check data in clipboard, and if it passes these checks,
+     * store the data in the clipboard history.
+     */
+    void checkClipData(QClipboard::Mode mode, const QMimeData *data);
+
+    void slotIgnored(QClipboard::Mode mode);
+    void slotReceivedEmptyClipboard(QClipboard::Mode mode);
+
 private:
     explicit HistoryModel();
+
+    /**
+     * Enter clipboard data in the history.
+     */
+    [[nodiscard]] std::shared_ptr<HistoryItem> applyClipChanges(const QMimeData *data);
 
     void moveToTop(qsizetype row);
 
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
     qsizetype m_maxSize = 0;
-    bool m_displayImages;
+    bool m_displayImages = false;
+    bool m_bNoNullClipboard = true;
+    bool m_bIgnoreSelection = true;
+    bool m_bSynchronize = false;
+    bool m_bSelectionTextOnly = true;
     QRecursiveMutex m_mutex;
 
     QTimer m_saveFileTimer;
