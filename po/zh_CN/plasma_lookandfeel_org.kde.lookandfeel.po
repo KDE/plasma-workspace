@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -40,7 +40,7 @@ msgstr[0] "在 %1 秒后注销"
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
+msgstr[0] "正在安装软件更新，将在 %1 秒后关机"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -112,13 +112,13 @@ msgstr "立即重新启动"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr ""
+msgstr "安装更新并关机"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr ""
+msgstr "安装更新并立即关机"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "立即注销"
 msgid "Cancel"
 msgstr "取消"
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

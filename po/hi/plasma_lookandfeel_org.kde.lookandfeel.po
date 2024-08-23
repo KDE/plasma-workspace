@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -159,7 +159,7 @@ msgstr "लॉग-आउट"
 msgid "Cancel"
 msgstr "रद्द करें"
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

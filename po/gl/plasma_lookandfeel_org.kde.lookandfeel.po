@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-02-04 12:54+0100\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"PO-Revision-Date: 2024-08-22 09:15+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -42,15 +42,12 @@ msgstr[0] "Sairase en 1 segundo"
 msgstr[1] "Sairase en %1 segundos"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-"Instalando actualizacións de soporte lóxico e reiniciando en 1 segundo"
+msgstr[0] "Instalando actualizacións de soporte lóxico e apagando en 1 segundo"
 msgstr[1] ""
-"Instalando actualizacións de soporte lóxico e reiniciando en %1 segundos"
+"Instalando actualizacións de soporte lóxico e apagando en %1 segundos"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -125,20 +122,16 @@ msgid "Restart Now"
 msgstr "Reiniciar agora"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Instalar as actualizacións e reiniciar agora"
+msgstr "Instalar as actualizacións e apagar agora"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Instalar as actualizacións e reiniciar agora"
+msgstr "Instalar as actualizacións e apagar agora"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
@@ -165,7 +158,7 @@ msgstr "Saír agora"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"

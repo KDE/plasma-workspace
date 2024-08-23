@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-05-12 11:23+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -368,17 +368,17 @@ msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "அனைத்து பிளாஸ்மாய்டுகள்"
 
-#: shellprivate/widgetexplorer.cpp:502
+#: shellprivate/widgetexplorer.cpp:508
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "பிளாஸ்மாய்ட் கோப்பை தேர்ந்தெடுங்கள்"
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "%1 என்ற தொகுப்பை நிறுவுவது தோல்வியடைந்த‍து."
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installation Failure"
 msgstr "நிறுவல் தோல்வியடைந்த‍து"

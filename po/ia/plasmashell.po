@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-06-10 12:20+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -194,73 +194,79 @@ msgstr ""
 "le recadita de software\n"
 "Pro favor tu verifica que tu driver graphic es configurate correctemente."
 
-#: osd.cpp:53
+#: osd.cpp:62
+#, kde-format
+msgctxt "Brightness OSD: display name and brightness percentage"
+msgid "%1: %2%"
+msgstr ""
+
+#: osd.cpp:88
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Audio Silentiate"
 
-#: osd.cpp:75
+#: osd.cpp:110
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Microphono silentiate"
 
-#: osd.cpp:91
+#: osd.cpp:126
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 Silentiate"
 
-#: osd.cpp:113
+#: osd.cpp:148
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Touchpad Activate (On)"
 
-#: osd.cpp:115
+#: osd.cpp:150
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Touchpad deactivate (off)"
 
-#: osd.cpp:122
+#: osd.cpp:157
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi Activate (On)"
 
-#: osd.cpp:124
+#: osd.cpp:159
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi DeActivate (Off)"
 
-#: osd.cpp:131
+#: osd.cpp:166
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth activate (on)"
 
-#: osd.cpp:133
+#: osd.cpp:168
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth deactivate (off)"
 
-#: osd.cpp:140
+#: osd.cpp:175
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Internet Mobile activate (on)"
 
-#: osd.cpp:142
+#: osd.cpp:177
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Internet Mobile deactivate (off)"
 
-#: osd.cpp:150
+#: osd.cpp:185
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -268,7 +274,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Claviero sur shermo activate"
 
-#: osd.cpp:153
+#: osd.cpp:188
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -276,31 +282,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Claviero sur shermo deactivate"
 
-#: osd.cpp:160
+#: osd.cpp:195
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Somno e Blocar de Schermo blocate"
 
-#: osd.cpp:162
+#: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Somno e Blocar de Schermo disblocate"
 
-#: osd.cpp:172
+#: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Modo de Sparnio de Energia"
 
-#: osd.cpp:175
+#: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Modo de Sparnio de Energia Balanciate"
 
-#: osd.cpp:178
+#: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-02 08:05+0200\n"
+"PO-Revision-Date: 2024-08-22 08:18+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -396,7 +396,7 @@ msgstr "Ta bort från historik"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Textredigeringsområde"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format

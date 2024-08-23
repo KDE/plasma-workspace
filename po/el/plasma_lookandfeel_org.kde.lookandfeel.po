@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2017-03-24 14:32+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -158,7 +158,7 @@ msgstr "Αποσύνδεση"
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: contents/osd/OsdItem.qml:32
+#: contents/osd/OsdItem.qml:34
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "Percentage value"

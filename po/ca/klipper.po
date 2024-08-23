@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-02 13:12+0200\n"
+"PO-Revision-Date: 2024-08-22 10:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -405,7 +405,7 @@ msgstr "Elimina de l'historial"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Àrea d'edició de text"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-05-12 10:35+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -373,17 +373,17 @@ msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Ĉiuj Fenestraĵoj"
 
-#: shellprivate/widgetexplorer.cpp:502
+#: shellprivate/widgetexplorer.cpp:508
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Elekti Plasmoid-Dosieron"
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Instalado de la pako %1 malsukcesis."
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installation Failure"
 msgstr "Fiasko de instalado"

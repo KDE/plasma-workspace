@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -367,17 +367,17 @@ msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "获取新挂件"
 
-#: shellprivate/widgetexplorer.cpp:502
+#: shellprivate/widgetexplorer.cpp:508
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "选择 Plasma 小程序文件"
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "安装 %1 软件包失败。"
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installation Failure"
 msgstr "安装失败"

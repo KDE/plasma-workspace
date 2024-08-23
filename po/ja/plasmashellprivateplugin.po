@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2023-04-07 23:52-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -363,17 +363,17 @@ msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "すべてのウィジェット"
 
-#: shellprivate/widgetexplorer.cpp:502
+#: shellprivate/widgetexplorer.cpp:508
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Plasmoid ファイルを開く"
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "パッケージ %1 のインストールに失敗しました。"
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installation Failure"
 msgstr "インストール失敗"

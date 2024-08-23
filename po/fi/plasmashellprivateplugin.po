@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-17 00:41+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2023-12-11 18:34+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -371,17 +371,17 @@ msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Kaikki sovelmat"
 
-#: shellprivate/widgetexplorer.cpp:502
+#: shellprivate/widgetexplorer.cpp:508
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Valitse plasmoiditiedosto"
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installing the package %1 failed."
 msgstr "Paketin %1 asennus epäonnistui."
 
-#: shellprivate/widgetexplorer.cpp:516
+#: shellprivate/widgetexplorer.cpp:522
 #, kde-format
 msgid "Installation Failure"
 msgstr "Asennus epäonnistui"

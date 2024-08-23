@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-06-09 19:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -195,73 +195,79 @@ msgstr ""
 "Plasma 無法開啟，因為它無法正確地使用 OpenGL 2 或備用軟體渲染。\n"
 "請檢查您的顯卡驅動程式，並做好設定。"
 
-#: osd.cpp:53
+#: osd.cpp:62
+#, kde-format
+msgctxt "Brightness OSD: display name and brightness percentage"
+msgid "%1: %2%"
+msgstr ""
+
+#: osd.cpp:88
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "音效靜音"
 
-#: osd.cpp:75
+#: osd.cpp:110
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "麥克風靜音"
 
-#: osd.cpp:91
+#: osd.cpp:126
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 已靜音"
 
-#: osd.cpp:113
+#: osd.cpp:148
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "觸控板開啟"
 
-#: osd.cpp:115
+#: osd.cpp:150
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "觸控板關閉"
 
-#: osd.cpp:122
+#: osd.cpp:157
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi 開啟"
 
-#: osd.cpp:124
+#: osd.cpp:159
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi 關閉"
 
-#: osd.cpp:131
+#: osd.cpp:166
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "藍牙開啟"
 
-#: osd.cpp:133
+#: osd.cpp:168
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "藍牙關閉"
 
-#: osd.cpp:140
+#: osd.cpp:175
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "行動網路開啟"
 
-#: osd.cpp:142
+#: osd.cpp:177
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "行動網路關閉"
 
-#: osd.cpp:150
+#: osd.cpp:185
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -269,7 +275,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "螢幕上的虛擬鍵盤開啟"
 
-#: osd.cpp:153
+#: osd.cpp:188
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -277,31 +283,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "螢幕上的虛擬鍵盤關閉"
 
-#: osd.cpp:160
+#: osd.cpp:195
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "已阻擋睡眠與螢幕鎖定"
 
-#: osd.cpp:162
+#: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "已解除阻擋睡眠與螢幕鎖定"
 
-#: osd.cpp:172
+#: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "省電模式"
 
-#: osd.cpp:175
+#: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "均衡電力模式"
 
-#: osd.cpp:178
+#: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"

@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-03 12:35+0200\n"
+"PO-Revision-Date: 2024-08-22 19:03+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -410,7 +410,7 @@ msgstr "Retirar do historial"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Zona de edición de texto."
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format

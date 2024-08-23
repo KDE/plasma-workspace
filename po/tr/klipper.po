@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-02 14:10+0300\n"
+"PO-Revision-Date: 2024-08-22 13:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -402,7 +402,7 @@ msgstr "Geçmişten Kaldır"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Metin düzenleme alanı"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format

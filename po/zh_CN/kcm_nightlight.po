@@ -164,6 +164,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"程序将使用 <application>GeoClue2</application> 服务来定期更新设备的位置。"
+"GeoClue2 将使用 GPS 和移动基站三角测量法来对设备进行定位 (如果可用)，否则将发"
+"送设备的 IP 地址到 <link url='https://geoip.com/privacy/'>GeoIP</link> 服务来"
+"获取定位。"
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -174,6 +178,9 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"triangulation<application>%1</application> 服务来定期更新设备的位置。请在 "
+"<link url='https://bugs.kde.org'>https://bugs.kde.org</link> 网站提交一个程序"
+"缺陷报告，提醒 KDE 开发人员撰写关于此服务的工作方式的详细说明。"
 
 #: ui/main.qml:334
 #, kde-format

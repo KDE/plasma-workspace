@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 09:28+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -193,73 +193,79 @@ msgstr ""
 "softwarovou zálohu.\n"
 "Prosím, zkontrolujte, že máte správně nastaveny ovladače."
 
-#: osd.cpp:53
+#: osd.cpp:62
+#, kde-format
+msgctxt "Brightness OSD: display name and brightness percentage"
+msgid "%1: %2%"
+msgstr ""
+
+#: osd.cpp:88
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Zvuk ztlumen"
 
-#: osd.cpp:75
+#: osd.cpp:110
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofon ztlumen"
 
-#: osd.cpp:91
+#: osd.cpp:126
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 ztlumený"
 
-#: osd.cpp:113
+#: osd.cpp:148
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Touchpad zapnut"
 
-#: osd.cpp:115
+#: osd.cpp:150
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Touchpad vypnut"
 
-#: osd.cpp:122
+#: osd.cpp:157
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "Wifi zapnuta"
 
-#: osd.cpp:124
+#: osd.cpp:159
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "Wifi vypnuta"
 
-#: osd.cpp:131
+#: osd.cpp:166
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth zapnut"
 
-#: osd.cpp:133
+#: osd.cpp:168
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth vypnut"
 
-#: osd.cpp:140
+#: osd.cpp:175
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobilní internet zapnut"
 
-#: osd.cpp:142
+#: osd.cpp:177
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobilní internet vypnut"
 
-#: osd.cpp:150
+#: osd.cpp:185
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -267,7 +273,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Zapnuta klávesnice na obrazovce"
 
-#: osd.cpp:153
+#: osd.cpp:188
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -275,31 +281,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Vypnuta klávesnice na obrazovce"
 
-#: osd.cpp:160
+#: osd.cpp:195
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Uspání a uzamčení obrazovky zakázáno"
 
-#: osd.cpp:162
+#: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Uspání a uzamčení obrazovky povoleno"
 
-#: osd.cpp:172
+#: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Úsporný režim"
 
-#: osd.cpp:175
+#: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Vyvážený režim"
 
-#: osd.cpp:178
+#: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"

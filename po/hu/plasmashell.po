@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-20 00:42+0000\n"
+"POT-Creation-Date: 2024-08-23 00:41+0000\n"
 "PO-Revision-Date: 2024-05-28 11:12+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -192,73 +192,79 @@ msgstr ""
 "OpenGL 2-t vagy a szoftveres visszaállást.\n"
 "Ellenőrizze, hogy a grafikus illesztőprogram megfelelően van-e beállítva."
 
-#: osd.cpp:53
+#: osd.cpp:62
+#, kde-format
+msgctxt "Brightness OSD: display name and brightness percentage"
+msgid "%1: %2%"
+msgstr ""
+
+#: osd.cpp:88
 #, kde-format
 msgctxt "OSD informing that the system is muted, keep short"
 msgid "Audio Muted"
 msgstr "Hang elnémítva"
 
-#: osd.cpp:75
+#: osd.cpp:110
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
 msgstr "Mikrofon némítva"
 
-#: osd.cpp:91
+#: osd.cpp:126
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
 msgstr "%1 elnémítva"
 
-#: osd.cpp:113
+#: osd.cpp:148
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
 msgstr "Érintőpárna bekapcsolva"
 
-#: osd.cpp:115
+#: osd.cpp:150
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
 msgstr "Érintőpárna kikapcsolva"
 
-#: osd.cpp:122
+#: osd.cpp:157
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
 msgstr "WiFi bekapcsolva"
 
-#: osd.cpp:124
+#: osd.cpp:159
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
 msgstr "WiFi kikapcsolva"
 
-#: osd.cpp:131
+#: osd.cpp:166
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
 msgstr "Bluetooth bekapcsolva"
 
-#: osd.cpp:133
+#: osd.cpp:168
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
 msgstr "Bluetooth kikapcsolva"
 
-#: osd.cpp:140
+#: osd.cpp:175
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
 msgstr "Mobilinternet bekapcsolva"
 
-#: osd.cpp:142
+#: osd.cpp:177
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
 msgstr "Mobilinternet kikapcsolva"
 
-#: osd.cpp:150
+#: osd.cpp:185
 #, kde-format
 msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
@@ -266,7 +272,7 @@ msgctxt ""
 msgid "On-Screen Keyboard Activated"
 msgstr "Képernyő-billentyűzet aktiválva"
 
-#: osd.cpp:153
+#: osd.cpp:188
 #, kde-format
 msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
@@ -274,31 +280,31 @@ msgctxt ""
 msgid "On-Screen Keyboard Deactivated"
 msgstr "Képernyő-billentyűzet deaktiválva"
 
-#: osd.cpp:160
+#: osd.cpp:195
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
 msgstr "Alvó állapot és képernyőzárolás tiltva"
 
-#: osd.cpp:162
+#: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
 msgstr "Alvó állapot és képernyőzárolás tiltása feloldva"
 
-#: osd.cpp:172
+#: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
 msgstr "Energiatakarékos mód"
 
-#: osd.cpp:175
+#: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
 msgstr "Kiegyensúlyozott mód"
 
-#: osd.cpp:178
+#: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
