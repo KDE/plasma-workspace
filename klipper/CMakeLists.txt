@@ -8,10 +8,7 @@ set(libklipper_common_SRCS
     historycycler.cpp
     historyitem.cpp
     historymodel.cpp
-    historystringitem.cpp
     klipperpopup.cpp
-    historyimageitem.cpp
-    historyurlitem.cpp
     actionstreewidget.cpp
     editactiondialog.cpp
     editcommanddialog.cpp
@@ -31,6 +28,7 @@ generate_export_header(klipper)
 target_link_libraries(klipper
     Qt::Concurrent
     Qt::DBus
+    Qt::Sql
     Qt::Widgets
     KF6::ConfigGui
     KF6::CoreAddons
@@ -80,3 +78,4 @@ endif()
 
 ecm_qt_install_logging_categories(EXPORT KLIPPER FILE klipper.categories DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR})
 
+add_subdirectory(kconf_update)

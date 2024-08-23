@@ -154,7 +154,7 @@ PlasmaComponents3.ScrollView {
                 id: filter
                 Layout.fillWidth: true
 
-                focus: !Kirigami.InputMethod.willShowOnActive
+                focus: clipboardMenu.Window.window.visible && !Kirigami.InputMethod.willShowOnActive
 
                 KeyNavigation.up: clipboardMenu.dialogItem.KeyNavigation.up /* ToolBar */
                 KeyNavigation.down: menuListView.count > 0 ? menuListView : null
@@ -207,19 +207,19 @@ PlasmaComponents3.ScrollView {
         id: chooser
         role: "type"
         QtLabsModel.DelegateChoice {
-            roleValue: "0"
+            roleValue: "2"
             delegate: TextItemDelegate {
                 listMargins: listItemSvg.margins
             }
         }
         QtLabsModel.DelegateChoice {
-            roleValue: "1"
+            roleValue: "4"
             delegate: ImageItemDelegate  {
                 listMargins: listItemSvg.margins
             }
         }
         QtLabsModel.DelegateChoice {
-            roleValue: "2"
+            roleValue: "8"
             delegate: UrlItemDelegate {
                 listMargins: listItemSvg.margins
             }

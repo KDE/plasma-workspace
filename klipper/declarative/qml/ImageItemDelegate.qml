@@ -9,7 +9,6 @@ pragma ComponentBehavior: Bound
 
 import QtQuick 2.15
 
-import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 import org.kde.kirigami 2.20 as Kirigami
 
 ClipboardItemDelegate {
@@ -21,20 +20,20 @@ ClipboardItemDelegate {
         Drag.dragType: Drag.Automatic
         Drag.supportedActions: Qt.CopyAction
         Drag.mimeData: {
-            "image/png": menuItem.decoration,
+            "text/uri-list": [previewImage.source],
         }
 
-        KQuickControlsAddons.QImageItem {
+        Image {
             id: previewImage
 
-            width: Math.min(Math.round(height * nativeWidth/nativeHeight), parent.width)
-            height: Math.min(nativeHeight, Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 2)
+            width: Math.min(Math.round(height * sourceSize.width/sourceSize.height), parent.width)
+            height: Math.min(sourceSize.height, Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 2)
 
             // align left
             // right in RTL
             anchors.left: parent.left
 
-            image: menuItem.decoration
+            source: menuItem.decoration
             smooth: true
             fillMode: Image.PreserveAspectFit
         }

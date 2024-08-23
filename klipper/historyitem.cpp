@@ -5,83 +5,68 @@
 */
 #include "historyitem.h"
 
-#include "klipper_debug.h"
-#include <QMap>
+#include <QMimeData>
+#include <QSqlQuery>
 
 #include <kurlmimedata.h>
 
-#include "historyimageitem.h"
 #include "historymodel.h"
-#include "historystringitem.h"
-#include "historyurlitem.h"
 
-HistoryItem::HistoryItem(const QByteArray &uuid)
-    : m_uuid(uuid)
+using namespace Qt::StringLiterals;
+
+HistoryItem::HistoryItem(QString &&uuid, QStringList &&mimeTypes, QString &&text)
+    : m_uuid(std::move(uuid))
+    , m_text(std::move(text))
 {
+    if (std::any_of(mimeTypes.cbegin(), mimeTypes.cend(), [](const QString &mimeType) {
+            return mimeType.startsWith(u"text/");
+        })) {
+        m_types |= HistoryItemType::Text;
+    }
+    if (mimeTypes.contains(u"text/uri-list"_s)) {
+        m_types |= HistoryItemType::Url;
+    }
+    if (std::any_of(mimeTypes.cbegin(), mimeTypes.cend(), [](const QString &mimeType) {
+            return mimeType.startsWith(u"image/") || mimeType == u"application/x-qt-image";
+        })) {
+        m_types |= HistoryItemType::Image;
+    }
 }
 
 HistoryItem::~HistoryItem()
 {
 }
 
-HistoryItemPtr HistoryItem::create(const QMimeData *data)
+HistoryItemType HistoryItem::type() const
 {
-    if (data->hasUrls()) {
-        KUrlMimeData::MetaDataMap metaData;
-        QList<QUrl> urls = KUrlMimeData::urlsFromMimeData(data, KUrlMimeData::PreferKdeUrls, &metaData);
-        if (urls.isEmpty()) {
-            return HistoryItemPtr();
-        }
-        QByteArray bytes = data->data(QStringLiteral("application/x-kde-cutselection"));
-        bool cut = !bytes.isEmpty() && (bytes.at(0) == '1'); // true if 1
-        return HistoryItemPtr(new HistoryURLItem(urls, metaData, cut));
+    if (m_types & HistoryItemType::Url) {
+        return HistoryItemType::Url;
+    } else if (m_types & HistoryItemType::Text) {
+        return HistoryItemType::Text;
+    } else if (m_types & HistoryItemType::Image) {
+        return HistoryItemType::Image;
     }
-    if (data->hasText()) {
-        const QString text = data->text();
-        if (text.isEmpty()) { // reading mime data can fail. Avoid ghost entries
-            return HistoryItemPtr();
-        }
-        return HistoryItemPtr(new HistoryStringItem(data->text()));
-    }
-    if (data->hasImage()) {
-        const QImage image = qvariant_cast<QImage>(data->imageData());
-        if (image.isNull()) {
-            return HistoryItemPtr();
-        }
-        return HistoryItemPtr(new HistoryImageItem(image));
-    }
-
-    return HistoryItemPtr(); // Failed.
+    return HistoryItemType::Unknown;
 }
 
-HistoryItemPtr HistoryItem::create(QDataStream &dataStream)
+QString HistoryItem::text() const
 {
-    if (dataStream.atEnd()) {
+    return m_text;
+}
+
+HistoryItemPtr HistoryItem::create(const QSqlQuery &query)
+{
+    QString uuid = query.value(u"uuid"_s).toString();
+    if (uuid.isEmpty()) {
         return HistoryItemPtr();
     }
-    QString type;
-    dataStream >> type;
-    if (type == QLatin1String("url")) {
-        QList<QUrl> urls;
-        QMap<QString, QString> metaData;
-        int cut;
-        dataStream >> urls;
-        dataStream >> metaData;
-        dataStream >> cut;
-        return HistoryItemPtr(new HistoryURLItem(urls, metaData, cut));
+    QStringList mimeTypes = query.value(u"mimetypes"_s).toString().split(u',');
+    if (mimeTypes.empty()) {
+        return HistoryItemPtr();
     }
-    if (type == QLatin1String("string")) {
-        QString text;
-        dataStream >> text;
-        return HistoryItemPtr(new HistoryStringItem(text));
-    }
-    if (type == QLatin1String("image")) {
-        QImage image;
-        dataStream >> image;
-        return HistoryItemPtr(new HistoryImageItem(image));
-    }
-    qCWarning(KLIPPER_LOG) << "Failed to restore history item: Unknown type \"" << type << "\"";
-    return HistoryItemPtr();
+    QString text = query.value(u"text"_s).toString();
+
+    return std::make_shared<HistoryItem>(std::move(uuid), std::move(mimeTypes), std::move(text));
 }
 
 #include "moc_historyitem.cpp"

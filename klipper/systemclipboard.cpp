@@ -12,7 +12,15 @@
 #include <chrono>
 
 #include <QApplication>
+#include <QBuffer>
+#include <QFile>
+#include <QImageWriter>
 #include <QMimeData>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
+#include <QStandardPaths>
+#include <QThreadPool>
 #include <QWidget>
 
 #include <KWindowSystem>
@@ -30,6 +38,7 @@
 #endif // HAVE_X11
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 namespace
 {
@@ -120,32 +129,121 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
+    m_writeLock.lock();
+
+    QSqlDatabase db = QSqlDatabase::database(u"klipper"_s);
+    if (!db.isOpen()) [[unlikely]] {
+        qCWarning(KLIPPER_LOG) << "The database is broken!" << db.lastError().text();
+        return;
+    }
+    std::list<std::pair<QString /*mimetype*/, QString /*dataUuid*/>> mimeDataIndexList;
+    QSqlQuery query(db);
+    query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(data->uuid()));
+    while (query.next()) {
+        mimeDataIndexList.emplace_back(query.value(0).toString(), query.value(1).toString());
+    }
+    if (mimeDataIndexList.empty()) {
+        m_writeLock.unlock();
+        return;
+    }
+
+    QThreadPool::globalInstance()->start([this, uuid = data->uuid(), mimeDataIndexList = std::move(mimeDataIndexList), mode, updateReason] {
+        QScopeGuard unlock([this] {
+            m_writeLock.unlock();
+        });
+
+        std::list<std::pair<QString /*type*/, QByteArray /*data*/>> mimeDataList;
+        QString qtImagePath;
+        for (const auto &[format, dataUuid] : mimeDataIndexList) {
+            if (format.isEmpty() || dataUuid.isEmpty()) {
+                continue;
+            }
+            const QString dataPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data/" + uuid + u'/' + dataUuid;
+            if (format.startsWith(u"image/")) {
+                if (const QByteArray mimeTypeUtf8 = format.toUtf8(); QImageWriter::supportedMimeTypes().contains(mimeTypeUtf8)) {
+                    const auto imageFormats = QImageWriter::imageFormatsForMimeType(mimeTypeUtf8);
+                    if (imageFormats.isEmpty()) [[unlikely]] {
+                        continue;
+                    }
+                    const QImage image(dataPath);
+                    QByteArray bytes;
+                    {
+                        QBuffer buffer(&bytes);
+                        QImageWriter encoder(&buffer, imageFormats.first());
+                        encoder.write(image);
+                    }
+                    mimeDataList.emplace_back(format, std::move(bytes));
+                }
+            } else if (format == u"application/x-qt-image") {
+                qtImagePath = dataPath;
+            } else {
+                QFile dataFile(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data/" + uuid + u'/' + dataUuid);
+                if (dataFile.open(QIODevice::ReadOnly)) {
+                    mimeDataList.emplace_back(format, dataFile.readAll());
+                }
+            }
+        }
+        if (mimeDataList.empty() && qtImagePath.isEmpty()) {
+            return;
+        }
+
+        QMimeData *selectionMimeData = nullptr;
+        if (mode & Selection) {
+            selectionMimeData = new QMimeData;
+            for (auto &[format, value] : mimeDataList) {
+                selectionMimeData->setData(format, value);
+            }
+            if (!qtImagePath.isEmpty()) {
+                selectionMimeData->setImageData(QImage(qtImagePath));
+            }
+        }
+        QMimeData *clipboardMimeData = nullptr;
+        if (mode & Clipboard) {
+            clipboardMimeData = new QMimeData;
+            for (auto &[format, value] : mimeDataList) {
+                clipboardMimeData->setData(format, value);
+            }
+            if (!qtImagePath.isEmpty()) {
+                clipboardMimeData->setImageData(QImage(qtImagePath));
+            }
+        }
+
+        QMetaObject::invokeMethod(this, [this, selectionMimeData, clipboardMimeData, updateReason] {
+            setMimeDataInternal(selectionMimeData, clipboardMimeData, updateReason);
+        });
+    });
+}
+
+void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, ClipboardUpdateReason updateReason)
+{
+    Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
+
+    std::lock_guard writeLock(m_writeLock);
+
+    QStringList formats = data->formats();
+    const bool hasQtImage = formats.removeOne(u"application/x-qt-image"_s);
+    QMimeData *selectionMimeData = nullptr;
     if (mode & Selection) {
-        Ignore lock(m_selectionLocklevel);
-        QMimeData *mimeData = data->mimeData();
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+        selectionMimeData = new QMimeData;
+        for (const QString &format : formats) {
+            selectionMimeData->setData(format, data->data(format));
         }
-        qCDebug(KLIPPER_LOG) << "Setting selection to <" << mimeData->text() << ">";
-        m_clip->setMimeData(mimeData, QClipboard::Selection);
+        if (hasQtImage) {
+            selectionMimeData->setImageData(data->imageData());
+        }
     }
+    QMimeData *clipboardMimeData = nullptr;
     if (mode & Clipboard) {
-        QMimeData *mimeData = data->mimeData(); // NOTE: this has to be a new mimeData because setMimeData will take ownership
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
-            // When plasmashell is not focused, klipper will not receive new clip data immediately. This type is used to filter out selections.
-            mimeData->setData(QStringLiteral("application/x-kde-syncselection"), "1");
+        clipboardMimeData = new QMimeData;
+        for (const auto formats = data->formats(); const QString &format : formats) {
+            clipboardMimeData->setData(format, data->data(format));
         }
-        qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << mimeData->text() << ">";
-        QMetaObject::invokeMethod(
-            this,
-            [this, mimeData]() {
-                Ignore lock(m_clipboardLocklevel);
-                m_clip->setMimeData(mimeData, QClipboard::Clipboard);
-            },
-            updateReason == ClipboardUpdateReason::SyncSelection ? Qt::QueuedConnection : Qt::DirectConnection);
+        if (hasQtImage) {
+            selectionMimeData->setImageData(data->imageData());
+        }
     }
+
+    setMimeDataInternal(selectionMimeData, clipboardMimeData, updateReason);
 }
 
 bool SystemClipboard::isLocked(QClipboard::Mode mode)
@@ -274,4 +372,31 @@ bool SystemClipboard::blockFetchingNewData()
     return false;
 }
 
+void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeData *clipboardMimeData, ClipboardUpdateReason updateReason)
+{
+    if (selectionMimeData) {
+        Ignore lock(m_selectionLocklevel);
+        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
+            selectionMimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+        }
+        qCDebug(KLIPPER_LOG) << "Setting selection to <" << (selectionMimeData->hasImage() ? u"image"_s : selectionMimeData->text()) << ">";
+        m_clip->setMimeData(selectionMimeData, QClipboard::Selection);
+    }
+    if (clipboardMimeData) {
+        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
+            clipboardMimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+        } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
+            // When plasmashell is not focused, klipper will not receive new clip data immediately. This type is used to filter out selections.
+            clipboardMimeData->setData(QStringLiteral("application/x-kde-syncselection"), "1");
+        }
+        QMetaObject::invokeMethod(
+            this,
+            [this, clipboardMimeData]() {
+                Ignore lock(m_clipboardLocklevel);
+                qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << (clipboardMimeData->hasImage() ? u"image"_s : clipboardMimeData->text()) << ">";
+                m_clip->setMimeData(clipboardMimeData, QClipboard::Clipboard);
+            },
+            updateReason == ClipboardUpdateReason::SyncSelection ? Qt::QueuedConnection : Qt::DirectConnection);
+    }
+}
 #include "moc_systemclipboard.cpp"

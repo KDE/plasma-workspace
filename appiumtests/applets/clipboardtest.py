@@ -91,6 +91,7 @@ class ClipboardTest(unittest.TestCase):
     klipper_proxy: Gio.DBusProxy
     klipper_updated_event: threading.Event
     appium_options: AppiumOptions
+    klipper_folder: str = ""
     klipper_data_file: str = ""
 
     @classmethod
@@ -100,13 +101,12 @@ class ClipboardTest(unittest.TestCase):
         """
         # Create history file to suppress warnings
         data_dir: str = GLib.get_user_data_dir()
-        klipper_folder: Final = os.path.join(data_dir, "klipper")
-        cls.klipper_data_file = os.path.join(klipper_folder, "history2.lst")
+        cls.klipper_folder = os.path.join(data_dir, "klipper")
+        cls.klipper_data_file = os.path.join(cls.klipper_folder, "history3.sqlite")
         assert not os.path.exists(cls.klipper_data_file)
-        os.mkdir(klipper_folder)
-        cls.addClassCleanup(lambda: shutil.rmtree(klipper_folder))
+        cls.addClassCleanup(lambda: shutil.rmtree(cls.klipper_folder))
 
-        shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "klipper/autotests/data/onetextentry.lst"), cls.klipper_data_file)
+        shutil.copytree(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "klipper/autotests/data/onetextentry"), cls.klipper_folder)
 
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
@@ -219,7 +219,7 @@ class ClipboardTest(unittest.TestCase):
         Pressing Return on an item should trigger the copy action
         @see https://bugs.kde.org/show_bug.cgi?id=475696
         """
-        ActionChains(self.driver).send_keys(Keys.TAB).send_keys(Keys.DOWN).perform()
+        ActionChains(self.driver).send_keys(Keys.TAB).send_keys(Keys.DOWN).pause(0.5).perform()
         self.driver.find_element(AppiumBy.NAME, "Show QR code")
         ActionChains(self.driver).send_keys(Keys.RETURN).perform()
         self.assertEqual(self.driver.get_clipboard_text(), "clipboard")
@@ -295,7 +295,8 @@ class ClipboardTest(unittest.TestCase):
         self.driver.quit()
 
         if reset_history:
-            shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "klipper/autotests/data/onetextentry.lst"), self.klipper_data_file)
+            shutil.rmtree(self.klipper_folder)
+            shutil.copytree(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "klipper/autotests/data/onetextentry"), self.klipper_folder)
 
         if isinstance(group, str):
             subprocess.check_call([f"kwriteconfig{KDE_VERSION}", "--file", "klipperrc", "--group", group, "--key", key, new_value])
@@ -348,7 +349,6 @@ class ClipboardTest(unittest.TestCase):
         """
         # Enable "Text selection - Always save in history" to test the two bugs
         self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["false", "true"], True)
-
         content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes("", "utf-8")))
         # Clip data from Firefox have additional mime types, which cause the crash
         content_application = Gdk.ContentProvider.new_for_bytes("application/whatever", GLib.Bytes.new(bytes("abc", "utf-8")))
