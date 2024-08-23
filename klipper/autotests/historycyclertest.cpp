@@ -5,8 +5,9 @@
 */
 
 #include "../historycycler.h"
+#include "../historyitem.h"
 #include "../historymodel.h"
-#include "../historystringitem.h"
+#include "../mimetypes.h"
 // Qt
 #include <QObject>
 #include <QSignalSpy>
@@ -36,13 +37,18 @@ void HistoryCyclerTest::testCycle()
     QVERIFY(!history->prevInCycle());
 
     const QString fooText = QStringLiteral("foo");
-    const QString barText = QStringLiteral("bar");
-    const QString fooBarText = QStringLiteral("foobar");
-    const QByteArray fooUuid = QCryptographicHash::hash(fooText.toUtf8(), QCryptographicHash::Sha1);
-    const QByteArray barUuid = QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1);
-    const QByteArray foobarUuid = QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1);
+    const auto fooItem = HistoryItem::create(fooText);
+    const auto fooUuid = fooItem->uuid();
 
-    model->insert(HistoryItemPtr(new HistoryStringItem(fooText)));
+    const QString barText = QStringLiteral("bar");
+    const auto barItem = HistoryItem::create(barText);
+    const auto barUuid = barItem->uuid();
+
+    const QString foobarText = QStringLiteral("foobar");
+    const auto foobarItem = HistoryItem::create(foobarText);
+    const auto foobarUuid = foobarItem->uuid();
+
+    model->insert(fooItem);
     QCOMPARE(changedSpy.size(), 1);
     changedSpy.clear();
     QVERIFY(!history->nextInCycle());
@@ -59,7 +65,7 @@ void HistoryCyclerTest::testCycle()
     QVERIFY(!history->prevInCycle());
 
     // insert more items
-    model->insert(HistoryItemPtr(new HistoryStringItem(barText)));
+    model->insert(barItem);
     QCOMPARE(changedSpy.size(), 1);
     changedSpy.clear();
     QCOMPARE(history->nextInCycle()->uuid(), fooUuid);
@@ -86,7 +92,7 @@ void HistoryCyclerTest::testCycle()
     QVERIFY(changedSpy.isEmpty());
 
     // insert a third item
-    model->insert(HistoryItemPtr(new HistoryStringItem(fooBarText)));
+    model->insert(foobarItem);
     QCOMPARE(changedSpy.size(), 1);
     changedSpy.clear();
     QCOMPARE(history->nextInCycle()->uuid(), barUuid);

@@ -208,19 +208,19 @@ PlasmaComponents3.ScrollView {
         id: chooser
         role: "type"
         QtLabsModel.DelegateChoice {
-            roleValue: "0"
+            roleValue: "1"
             delegate: TextItemDelegate {
                 listMargins: listItemSvg.margins
             }
         }
         QtLabsModel.DelegateChoice {
-            roleValue: "1"
+            roleValue: "2"
             delegate: ImageItemDelegate  {
                 listMargins: listItemSvg.margins
             }
         }
         QtLabsModel.DelegateChoice {
-            roleValue: "2"
+            roleValue: "3"
             delegate: UrlItemDelegate {
                 listMargins: listItemSvg.margins
             }

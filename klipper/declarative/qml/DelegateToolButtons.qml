@@ -67,7 +67,7 @@ GridLayout {
             Layout.fillWidth: toolButtonsLayout.shouldUseOverflowButton
             Layout.leftMargin: toolButtonsLayout.shouldUseOverflowButton ? Kirigami.Units.gridUnit : 0
             Layout.rightMargin: toolButtonsLayout.shouldUseOverflowButton ? Kirigami.Units.gridUnit : 0
-            visible: index != DelegateToolButtons.ButtonRole.Edit || toolButtonsLayout.menuItem.type === 0
+            visible: index != DelegateToolButtons.ButtonRole.Edit || toolButtonsLayout.menuItem.type === 1
             display: toolButtonsLayout.shouldUseOverflowButton ? PlasmaComponents3.AbstractButton.TextBesideIcon : PlasmaComponents3.AbstractButton.IconOnly
             text: toolButtonsLayout.actionNames[index]
             icon.name: toolButtonsLayout.actionIcons[index]

@@ -21,7 +21,6 @@
 
 #include "config-klipper.h"
 #include "historyitem.h"
-#include "historystringitem.h"
 #include "klipper_debug.h"
 #include "klippersettings.h"
 #include "systemclipboard.h"
@@ -174,7 +173,7 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
     switch (auto &item = m_items[index.row()]; role) {
     case Qt::DisplayRole: {
         if (item->type() == HistoryItemType::Text && value.canConvert<QString>()) {
-            item = std::make_shared<HistoryStringItem>(value.toString());
+            item = HistoryItem::create(value.toString());
             Q_EMIT dataChanged(index, index, {Qt::DisplayRole, UuidRole});
             return true;
         }
