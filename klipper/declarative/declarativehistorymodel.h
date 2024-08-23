@@ -22,11 +22,19 @@ class DeclarativeHistoryModel : public QIdentityProxyModel
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_PROPERTY(QString currentText READ currentText NOTIFY currentTextChanged)
 
+    /**
+     * When enabled, temporarily stops adding items to the history
+     */
+    Q_PROPERTY(bool paused READ paused WRITE setPaused NOTIFY pausedChanged)
+
 public:
     explicit DeclarativeHistoryModel(QObject *parent = nullptr);
     ~DeclarativeHistoryModel() override;
 
     QString currentText() const;
+
+    bool paused() const;
+    void setPaused(bool status);
 
     Q_INVOKABLE void moveToTop(const QByteArray &uuid);
 
@@ -38,6 +46,7 @@ public:
 Q_SIGNALS:
     void countChanged();
     void currentTextChanged();
+    void pausedChanged();
 
 private:
     std::shared_ptr<HistoryModel> m_model;

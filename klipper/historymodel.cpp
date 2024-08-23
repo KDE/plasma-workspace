@@ -129,6 +129,26 @@ void HistoryModel::setMaxSize(qsizetype size)
     }
 }
 
+bool HistoryModel::paused() const
+{
+    return m_paused;
+}
+
+void HistoryModel::setPaused(bool status)
+{
+    if (m_paused == status) {
+        return;
+    }
+
+    m_paused = status;
+    if (m_paused) {
+        disconnect(m_clip.get(), &SystemClipboard::newClipData, this, &HistoryModel::checkClipData);
+    } else {
+        connect(m_clip.get(), &SystemClipboard::newClipData, this, &HistoryModel::checkClipData);
+    }
+    Q_EMIT pausedChanged();
+}
+
 int HistoryModel::rowCount(const QModelIndex &parent) const
 {
     if (parent.isValid()) {

@@ -47,6 +47,9 @@ public:
     qsizetype maxSize() const;
     void setMaxSize(qsizetype size);
 
+    bool paused() const;
+    void setPaused(bool status);
+
     /**
      * Clear history
      */
@@ -95,6 +98,7 @@ public:
 
 Q_SIGNALS:
     void changed(bool isTop = false);
+    void pausedChanged();
 
     void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
 
@@ -126,6 +130,7 @@ private:
     bool m_bIgnoreSelection = true;
     bool m_bSynchronize = false;
     bool m_bSelectionTextOnly = true;
+    bool m_paused = false; // This option doesn't preserve through sessions
     QRecursiveMutex m_mutex;
 
     QTimer m_saveFileTimer;

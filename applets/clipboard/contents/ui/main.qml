@@ -29,7 +29,7 @@ PlasmoidItem {
     toolTipMainText: i18n("Clipboard Contents")
     toolTipSubText: isClipboardEmpty ? i18n("Clipboard is empty") : historyModel.currentText
     toolTipTextFormat: Text.PlainText
-    Plasmoid.icon: "klipper-symbolic"
+    Plasmoid.icon: historyModel.paused ? "password-copy-symbolic" : "klipper-symbolic"
 
     function action_configure() {
         klipper.configure();
@@ -56,6 +56,8 @@ PlasmoidItem {
         (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).filter.clear();
     }
 
+    Plasmoid.onSecondaryActivated: historyModel.paused = !pauseAction.checked
+
     Plasmoid.contextualActions: [
         PlasmaCore.Action {
             id: clearAction
@@ -65,6 +67,17 @@ PlasmoidItem {
             onTriggered: {
                 historyModel.clearHistory();
                 main.clearSearchField()
+            }
+        },
+        PlasmaCore.Action {
+            id: pauseAction
+            visible: clearAction.visible
+            checkable: true
+            checked: historyModel.paused
+            icon.name: "media-playback-pause"
+            text: i18nc("@option:check", "Pause remembering history")
+            onTriggered: {
+                historyModel.paused = checked;
             }
         }
     ]

@@ -18,6 +18,7 @@ DeclarativeHistoryModel::DeclarativeHistoryModel(QObject *parent)
     connect(this, &QIdentityProxyModel::rowsRemoved, this, &DeclarativeHistoryModel::countChanged);
     connect(this, &QIdentityProxyModel::modelReset, this, &DeclarativeHistoryModel::countChanged);
     connect(m_model.get(), &HistoryModel::changed, this, &DeclarativeHistoryModel::currentTextChanged);
+    connect(m_model.get(), &HistoryModel::pausedChanged, this, &DeclarativeHistoryModel::pausedChanged);
 }
 
 DeclarativeHistoryModel::~DeclarativeHistoryModel()
@@ -27,6 +28,16 @@ DeclarativeHistoryModel::~DeclarativeHistoryModel()
 QString DeclarativeHistoryModel::currentText() const
 {
     return m_model->rowCount() == 0 ? QString() : m_model->first()->text();
+}
+
+bool DeclarativeHistoryModel::paused() const
+{
+    return m_model->paused();
+}
+
+void DeclarativeHistoryModel::setPaused(bool status)
+{
+    m_model->setPaused(status);
 }
 
 void DeclarativeHistoryModel::moveToTop(const QByteArray &uuid)
