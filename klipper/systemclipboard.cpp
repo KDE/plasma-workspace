@@ -12,15 +12,26 @@
 #include <chrono>
 
 #include <QApplication>
+#include <QBuffer>
+#include <QFile>
+#include <QImageWriter>
 #include <QMimeData>
+#include <QSqlDatabase>
+#include <QSqlError>
+#include <QSqlQuery>
+#include <QStandardPaths>
 #include <QWidget>
 
+#include <KCompositeJob>
+#include <KIO/FileJob>
 #include <KWindowSystem>
+#include <kurlmimedata.h>
 
 #include "../c_ptr.h"
 #include "config-X11.h"
 #include "historyitem.h"
 #include "klipper_debug.h"
+#include "updateclipboardjob.h"
 #include <wayland-client-core.h>
 
 #if HAVE_X11
@@ -30,6 +41,7 @@
 #endif // HAVE_X11
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
 
 namespace
 {
@@ -73,6 +85,93 @@ void x11RoundTrip()
     }
 #endif
 }
+}
+
+class DatabaseRecordToMimeDataJob : public KCompositeJob
+{
+    Q_OBJECT
+
+public:
+    explicit DatabaseRecordToMimeDataJob(QObject *parent, const std::shared_ptr<const HistoryItem> &data);
+    ~DatabaseRecordToMimeDataJob() override;
+
+    void start() override;
+    QMimeData *mimeData() const;
+
+private:
+    void slotResult(KJob *job) override;
+
+    QString m_uuid;
+    std::list<std::pair<QString /*type*/, QByteArray /*data*/>> m_mimeDataList;
+};
+
+DatabaseRecordToMimeDataJob::DatabaseRecordToMimeDataJob(QObject *parent, const std::shared_ptr<const HistoryItem> &data)
+    : KCompositeJob(parent)
+    , m_uuid(data->uuid())
+{
+}
+
+DatabaseRecordToMimeDataJob::~DatabaseRecordToMimeDataJob()
+{
+}
+
+void DatabaseRecordToMimeDataJob::start()
+{
+    QSqlDatabase db = QSqlDatabase::database(u"klipper"_s);
+    if (!db.isOpen()) [[unlikely]] {
+        setError(UserDefinedError);
+        setErrorText(db.lastError().text());
+        emitResult();
+        return;
+    }
+
+    QSqlQuery query(db);
+    query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(m_uuid));
+    while (query.next()) {
+        const QString mimeType = query.value(0).toString();
+        const QString dataUuid = query.value(1).toString();
+        if (mimeType.isEmpty() || dataUuid.isEmpty()) {
+            continue;
+        }
+        const QString dataPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data/" + m_uuid + u'/' + dataUuid;
+        auto job = KIO::open(QUrl::fromLocalFile(dataPath), QIODevice::ReadOnly);
+        connect(job, &KIO::FileJob::open, this, [this, job, mimeType] {
+            connect(job, &KIO::FileJob::data, this, [this, job, mimeType](KJob *, const QByteArray &data) {
+                m_mimeDataList.emplace_back(mimeType, data);
+                job->close();
+            });
+            job->read(job->size());
+        });
+        addSubjob(job);
+    }
+    if (!hasSubjobs()) {
+        emitResult();
+        return;
+    }
+}
+
+QMimeData *DatabaseRecordToMimeDataJob::mimeData() const
+{
+    auto mimeData = new QMimeData;
+    for (auto &[format, data] : m_mimeDataList) {
+        if (format == s_imageFormat) {
+            mimeData->setImageData(QImage::fromData(data, "PNG"));
+        } else {
+            mimeData->setData(format, data);
+        }
+    }
+    return mimeData;
+}
+
+void DatabaseRecordToMimeDataJob::slotResult(KJob *job)
+{
+    removeSubjob(job);
+
+    if (hasSubjobs()) {
+        return;
+    }
+
+    emitResult();
 }
 
 std::shared_ptr<SystemClipboard> SystemClipboard::self()
@@ -119,33 +218,46 @@ void SystemClipboard::clear(SelectionMode mode)
 void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode mode, ClipboardUpdateReason updateReason)
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
+    if (!qobject_cast<QGuiApplication *>(QCoreApplication::instance())) {
+        return;
+    }
 
+    auto job = new DatabaseRecordToMimeDataJob(this, data);
+    connect(job, &KJob::finished, this, [this, job, mode, updateReason] {
+        setMimeDataInternal(mode & Selection ? job->mimeData() : nullptr, mode & Clipboard ? job->mimeData() : nullptr, updateReason);
+    });
+    job->start();
+}
+
+void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, ClipboardUpdateReason updateReason)
+{
+    Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
+    if (!qobject_cast<QGuiApplication *>(QCoreApplication::instance())) {
+        return;
+    }
+
+    QStringList formats = data->formats();
+    const bool hasQtImage = formats.removeOne(u"application/x-qt-image"_s);
+    auto setData = [data, &formats, hasQtImage]() {
+        auto mimeData = new QMimeData;
+        for (const QString &format : formats) {
+            mimeData->setData(format, data->data(format));
+        }
+        if (hasQtImage) {
+            mimeData->setImageData(data->imageData());
+        }
+        return mimeData;
+    };
+    QMimeData *selectionMimeData = nullptr;
     if (mode & Selection) {
-        Ignore lock(m_selectionLocklevel);
-        QMimeData *mimeData = data->mimeData();
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        }
-        qCDebug(KLIPPER_LOG) << "Setting selection to <" << mimeData->text() << ">";
-        m_clip->setMimeData(mimeData, QClipboard::Selection);
+        selectionMimeData = setData();
     }
+    QMimeData *clipboardMimeData = nullptr;
     if (mode & Clipboard) {
-        QMimeData *mimeData = data->mimeData(); // NOTE: this has to be a new mimeData because setMimeData will take ownership
-        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
-            mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
-        } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
-            // When plasmashell is not focused, klipper will not receive new clip data immediately. This type is used to filter out selections.
-            mimeData->setData(QStringLiteral("application/x-kde-syncselection"), "1");
-        }
-        qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << mimeData->text() << ">";
-        QMetaObject::invokeMethod(
-            this,
-            [this, mimeData]() {
-                Ignore lock(m_clipboardLocklevel);
-                m_clip->setMimeData(mimeData, QClipboard::Clipboard);
-            },
-            updateReason == ClipboardUpdateReason::SyncSelection ? Qt::QueuedConnection : Qt::DirectConnection);
+        clipboardMimeData = setData();
     }
+
+    setMimeDataInternal(selectionMimeData, clipboardMimeData, updateReason);
 }
 
 bool SystemClipboard::isLocked(QClipboard::Mode mode)
@@ -274,4 +386,34 @@ bool SystemClipboard::blockFetchingNewData()
     return false;
 }
 
+void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeData *clipboardMimeData, ClipboardUpdateReason updateReason)
+{
+    Q_ASSERT(qGuiApp);
+    if (selectionMimeData) {
+        Ignore lock(m_selectionLocklevel);
+        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
+            selectionMimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+        }
+        qCDebug(KLIPPER_LOG) << "Setting selection to <" << (selectionMimeData->hasImage() ? u"image"_s : selectionMimeData->text()) << ">";
+        m_clip->setMimeData(selectionMimeData, QClipboard::Selection);
+    }
+    if (clipboardMimeData) {
+        if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
+            clipboardMimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
+        } else if (updateReason == ClipboardUpdateReason::SyncSelection) {
+            // When plasmashell is not focused, klipper will not receive new clip data immediately. This type is used to filter out selections.
+            clipboardMimeData->setData(QStringLiteral("application/x-kde-syncselection"), "1");
+        }
+        QMetaObject::invokeMethod(
+            this,
+            [this, clipboardMimeData]() {
+                Ignore lock(m_clipboardLocklevel);
+                qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << (clipboardMimeData->hasImage() ? u"image"_s : clipboardMimeData->text()) << ">";
+                m_clip->setMimeData(clipboardMimeData, QClipboard::Clipboard);
+            },
+            updateReason == ClipboardUpdateReason::SyncSelection ? Qt::QueuedConnection : Qt::DirectConnection);
+    }
+}
+
 #include "moc_systemclipboard.cpp"
+#include "systemclipboard.moc"

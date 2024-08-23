@@ -8,8 +8,8 @@
 
 #include <KMacroExpander>
 
+#include "historyitem.h"
 #include "historymodel.h"
-#include "historystringitem.h"
 #include "urlgrabber.h"
 
 ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipCommand &command, const QString &clip, HistoryItemConstPtr original_item)
@@ -53,7 +53,7 @@ void ClipCommandProcess::slotFinished(int /*exitCode*/, QProcess::ExitStatus /*n
         m_model->remove(m_historyItem->uuid());
     }
     if (!m_newhistoryItem.isEmpty()) {
-        m_model->insert(HistoryItemPtr(new HistoryStringItem(m_newhistoryItem)));
+        m_model->insert(m_newhistoryItem);
     }
     deleteLater();
 }

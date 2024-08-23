@@ -209,19 +209,19 @@ PlasmaComponents3.ScrollView {
         id: chooser
         role: "type"
         DelegateChoice {
-            roleValue: "0"
+            roleValue: "2"
             delegate: TextItemDelegate {
                 listMargins: listItemSvg.margins
             }
         }
         DelegateChoice {
-            roleValue: "1"
+            roleValue: "4"
             delegate: ImageItemDelegate  {
                 listMargins: listItemSvg.margins
             }
         }
         DelegateChoice {
-            roleValue: "2"
+            roleValue: "8"
             delegate: UrlItemDelegate {
                 listMargins: listItemSvg.margins
             }

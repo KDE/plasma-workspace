@@ -5,8 +5,8 @@
 */
 
 #include "../historycycler.h"
+#include "../historyitem.h"
 #include "../historymodel.h"
-#include "../historystringitem.h"
 // Qt
 #include <QObject>
 #include <QSignalSpy>
@@ -30,19 +30,20 @@ void HistoryCyclerTest::testCycle()
 {
     auto model = HistoryModel::self();
     std::unique_ptr<HistoryCycler> history(new HistoryCycler(nullptr));
-    QSignalSpy changedSpy(model.get(), &HistoryModel::changed);
     model->setMaxSize(10);
+    model->clear();
     QVERIFY(!history->nextInCycle());
     QVERIFY(!history->prevInCycle());
 
     const QString fooText = QStringLiteral("foo");
     const QString barText = QStringLiteral("bar");
     const QString fooBarText = QStringLiteral("foobar");
-    const QByteArray fooUuid = QCryptographicHash::hash(fooText.toUtf8(), QCryptographicHash::Sha1);
-    const QByteArray barUuid = QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1);
-    const QByteArray foobarUuid = QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1);
+    const QString fooUuid = QString::fromLatin1(QCryptographicHash::hash(fooText.toUtf8(), QCryptographicHash::Sha1).toHex());
+    const QString barUuid = QString::fromLatin1(QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1).toHex());
+    const QString foobarUuid = QString::fromLatin1(QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1).toHex());
 
-    model->insert(HistoryItemPtr(new HistoryStringItem(fooText)));
+    QSignalSpy changedSpy(model.get(), &HistoryModel::changed);
+    model->insert(fooText);
     QCOMPARE(changedSpy.size(), 1);
     changedSpy.clear();
     QVERIFY(!history->nextInCycle());
@@ -59,7 +60,7 @@ void HistoryCyclerTest::testCycle()
     QVERIFY(!history->prevInCycle());
 
     // insert more items
-    model->insert(HistoryItemPtr(new HistoryStringItem(barText)));
+    model->insert(barText);
     QCOMPARE(changedSpy.size(), 1);
     changedSpy.clear();
     QCOMPARE(history->nextInCycle()->uuid(), fooUuid);
@@ -86,7 +87,7 @@ void HistoryCyclerTest::testCycle()
     QVERIFY(changedSpy.isEmpty());
 
     // insert a third item
-    model->insert(HistoryItemPtr(new HistoryStringItem(fooBarText)));
+    model->insert(fooBarText);
     QCOMPARE(changedSpy.size(), 1);
     changedSpy.clear();
     QCOMPARE(history->nextInCycle()->uuid(), barUuid);

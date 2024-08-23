@@ -8,11 +8,14 @@
 #include "../historycycler.h"
 #include "../historyitem.h"
 #include "../historymodel.h"
+#include "../systemclipboard.h"
 
 #include <KConfigGroup>
+#include <KIO/CopyJob>
 #include <KSharedConfig>
 #include <KSystemClipboard>
 
+#include <QDir>
 #include <QMimeData>
 #include <QScopeGuard>
 #include <QTest>
@@ -54,7 +57,9 @@ void KlipperTest::testBug465225()
 {
     const QString folderPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QDir::separator() + u"klipper" + QDir::separator();
     QVERIFY(QDir().mkpath(folderPath));
-    QVERIFY(QFile(QFINDTESTDATA("./data/bug465225.lst")).copy(QDir(folderPath).absoluteFilePath(QStringLiteral("history2.lst"))));
+    KIO::CopyJob *job =
+        KIO::copy(QUrl::fromLocalFile(QFINDTESTDATA("./data/bug465225/")), QUrl::fromLocalFile(folderPath), KIO::HideProgressInfo | KIO::Overwrite);
+    QVERIFY(job->exec());
 
     const QString fileName = QStringLiteral("klipperrc");
     QScopeGuard cleanup([&folderPath, &fileName] {
@@ -73,32 +78,31 @@ void KlipperTest::testBug465225()
     // Load the history file which contains faulty image data
     {
         clipboard->clear(QClipboard::Clipboard); // Reset local clipboard
-        auto klipper = std::make_unique<Klipper>(this, klipperConfig);
-        QCOMPARE(HistoryModel::self()->rowCount(), 1);
-        QCOMPARE(HistoryModel::self()->first()->type(), HistoryItemType::Image);
-
-        auto mimeData = HistoryModel::self()->first()->mimeData();
+        auto model = HistoryModel::self();
+        QCOMPARE(model->rowCount(), 1);
+        QCOMPARE(model->first()->type(), HistoryItemType::Image);
 
         QMimeData *data = new QMimeData;
         data->setText(QDateTime::currentDateTime().toString());
         clipboard->setMimeData(data, QClipboard::Clipboard);
         QCoreApplication::processEvents();
-        QTRY_COMPARE(HistoryModel::self()->rowCount(), 2);
+        QTRY_COMPARE(model->rowCount(), 2);
 
-        clipboard->setMimeData(mimeData, QClipboard::Clipboard);
-        QCoreApplication::processEvents();
-        QCOMPARE(HistoryModel::self()->rowCount(), 2);
-        QCOMPARE(HistoryModel::self()->first()->type(), HistoryItemType::Image);
-
-        klipper->saveClipboardHistory();
+        data = new QMimeData;
+        data->setImageData(
+            QImage(QFINDTESTDATA("./data/bug465225/data/8f9353dabfdcf9aca5a901cd2c4ae6717cac5adc/"
+                                 "8f9353dabfdcf9aca5a901cd2c4ae6717cac5adc")));
+        clipboard->setMimeData(data, QClipboard::Clipboard);
+        QTRY_COMPARE(model->first()->type(), HistoryItemType::Image);
+        QCOMPARE(model->rowCount(), 2);
     }
 
     // Now load the history file again
     {
         clipboard->clear(QClipboard::Clipboard); // Reset local clipboard
-        auto klipper = std::make_unique<Klipper>(this, klipperConfig);
-        QCOMPARE(HistoryModel::self()->rowCount(), 2);
-        QCOMPARE(HistoryModel::self()->first()->type(), HistoryItemType::Image);
+        auto model = HistoryModel::self();
+        QCOMPARE(model->rowCount(), 2);
+        QCOMPARE(model->first()->type(), HistoryItemType::Image);
     }
 }
 

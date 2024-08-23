@@ -10,13 +10,14 @@
 #include <QAbstractListModel>
 #include <QBindable>
 #include <QClipboard>
-#include <QRecursiveMutex>
-#include <QTimer>
+#include <QDateTime>
+#include <QSqlDatabase>
 
 #include "klipper_export.h"
 
 class HistoryItem;
 class SystemClipboard;
+class UpdateDatabaseJob;
 
 class KLIPPER_EXPORT HistoryModel : public QAbstractListModel
 {
@@ -26,8 +27,8 @@ public:
         HistoryItemConstPtrRole = Qt::UserRole,
         UuidRole,
         TypeRole,
-        Base64UuidRole,
         TypeIntRole,
+        ImageUrlRole,
     };
     Q_ENUM(RoleType)
 
@@ -42,7 +43,7 @@ public:
     /**
      * Remove (first) history item equal to item from history
      */
-    bool remove(const QByteArray &uuid);
+    bool remove(const QString &uuid);
 
     qsizetype maxSize() const;
     void setMaxSize(qsizetype size);
@@ -56,11 +57,11 @@ public:
     /**
      * Move the history in position pos to top
      */
-    void moveToTop(const QByteArray &uuid);
+    void moveToTop(const QString &uuid);
     void moveTopToBack();
     void moveBackToTop();
 
-    int indexOf(const QByteArray &uuid) const;
+    int indexOf(const QString &uuid) const;
     int indexOf(const HistoryItem *item) const;
 
     /**
@@ -74,7 +75,8 @@ public:
      * The duplicate concept is "deep", so that two text string
      * are considerd duplicate if identical.
      */
-    void insert(const std::shared_ptr<HistoryItem> &item);
+    bool insert(const QMimeData *mimeData, qreal timestamp = 0);
+    bool insert(const QString &text);
 
     /**
      * @short Loads history from disk.
@@ -87,11 +89,7 @@ public:
 
     void loadSettings();
 
-    /**
-     * Save history to disk
-     */
-    bool saveHistory(bool empty = false);
-    void startSaveHistoryTimer(std::chrono::seconds delay = std::chrono::seconds(5));
+    int pendingJobs() const;
 
 Q_SIGNALS:
     void changed(bool isTop = false);
@@ -118,17 +116,19 @@ private:
 
     void moveToTop(qsizetype row);
 
+    static void saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid);
+
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
+    int m_pendingJobs = 0;
+    QString m_dbFolder;
+    QSqlDatabase m_db;
     qsizetype m_maxSize = 0;
     bool m_displayImages = false;
     bool m_bNoNullClipboard = true;
     bool m_bIgnoreSelection = true;
     bool m_bSynchronize = false;
     bool m_bSelectionTextOnly = true;
-    QRecursiveMutex m_mutex;
-
-    QTimer m_saveFileTimer;
 
     friend class DeclarativeHistoryModel;
 };

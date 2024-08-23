@@ -10,23 +10,95 @@
 #include <chrono>
 #include <zlib.h>
 
+#include <QCryptographicHash>
 #include <QDir>
 #include <QFile>
+#include <QImageReader>
+#include <QMimeData>
 #include <QSaveFile>
+#include <QSqlError>
+#include <QSqlQuery>
 #include <QStandardPaths>
-#include <QtConcurrentRun>
 
+#include <KIO/DeleteJob>
 #include <KLocalizedString>
 #include <KMessageBox>
 
 #include "config-klipper.h"
 #include "historyitem.h"
-#include "historystringitem.h"
 #include "klipper_debug.h"
 #include "klippersettings.h"
 #include "systemclipboard.h"
+#include "updateclipboardjob.h"
 
 using namespace std::chrono_literals;
+using namespace Qt::StringLiterals;
+
+namespace
+{
+struct TransactionGuard {
+    TransactionGuard(QSqlDatabase *db)
+        : db(db)
+        , inited(db->transaction())
+    {
+        if (!inited) {
+            qCWarning(KLIPPER_LOG) << "A transaction didn't start:" << db->lastError().text();
+        }
+    }
+
+    ~TransactionGuard()
+    {
+        if (!inited) {
+            return;
+        }
+        if (!committed) {
+            qCWarning(KLIPPER_LOG) << "Transaction failed:" << db->lastError().text();
+            db->rollback();
+        }
+        db->commit();
+    }
+
+    bool exec(QSqlQuery &query)
+    {
+        if (!inited || !committed) {
+            return false;
+        }
+        committed = query.exec();
+        if (!committed) {
+            qCWarning(KLIPPER_LOG).nospace().noquote() << "Query \"" << query.lastQuery() << "\" failed: " << query.lastError().text();
+        }
+        return committed;
+    }
+
+    bool exec(const QString &query)
+    {
+        QSqlQuery sqlQuery(query, *db);
+        return exec(sqlQuery);
+    }
+
+    QSqlDatabase *db;
+    bool inited = false;
+    bool committed = true;
+};
+
+QString computeUuid(const QMimeData *data)
+{
+    QCryptographicHash hash(QCryptographicHash::Sha1);
+    if (data->hasText()) {
+        hash.addData(data->text().toUtf8());
+    }
+    if (data->hasUrls()) {
+        for (const auto urls = data->urls(); const QUrl &url : urls) {
+            hash.addData(url.toEncoded());
+        }
+    }
+    if (data->hasImage()) {
+        const QImage image = data->imageData().value<QImage>();
+        hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
+    }
+    return QString::fromLatin1(hash.result().toHex());
+}
+}
 
 std::shared_ptr<HistoryModel> HistoryModel::self()
 {
@@ -46,11 +118,10 @@ HistoryModel::HistoryModel()
     , m_clip(SystemClipboard::self())
     , m_displayImages(true)
 {
-    m_saveFileTimer.setSingleShot(true);
-    connect(&m_saveFileTimer, &QTimer::timeout, this, [this] {
-        const QFuture<bool> future = QtConcurrent::run(&HistoryModel::saveHistory, this, false);
-        // Destroying the future neither waits nor cancels the asynchronous computation
-    });
+    if (!QSqlDatabase::isDriverAvailable(u"QSQLITE"_s)) {
+        qCCritical(KLIPPER_LOG) << "SQLITE driver isn't available";
+        return;
+    }
 
     loadSettings();
     loadHistory();
@@ -76,12 +147,21 @@ HistoryModel::HistoryModel()
     connect(this, &HistoryModel::changed, this, [this](bool isTop) {
         if (m_items.empty()) {
             m_clip->clear(SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
-        }
-        startSaveHistoryTimer();
-        if (!isTop || m_items.empty() || m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
             return;
         }
-        m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
+        if (!isTop) {
+            return;
+        }
+
+        QSqlQuery query(m_db);
+        query.prepare(u"UPDATE main SET last_used_time=? WHERE uuid='%1'"_s.arg(m_items[0]->uuid()));
+        query.addBindValue(QDateTime::currentMSecsSinceEpoch() / 1000.0);
+        if (query.exec()) {
+            if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
+                return;
+            }
+            m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
+        }
     });
 
     connect(m_clip.get(), &SystemClipboard::ignored, this, &HistoryModel::slotIgnored);
@@ -94,7 +174,13 @@ HistoryModel::~HistoryModel()
 
 void HistoryModel::clear()
 {
-    QMutexLocker lock(&m_mutex);
+    if (TransactionGuard transaction(&m_db); !transaction.exec(u"DELETE FROM main"_s) || !transaction.exec(u"DELETE FROM aux"_s)) {
+        return;
+    }
+    for (const auto &item : m_items) {
+        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'));
+    }
+    QSqlQuery(u"VACUUM"_s, m_db).exec();
     beginResetModel();
     m_items.clear();
     endResetModel();
@@ -111,7 +197,6 @@ void HistoryModel::clearHistory()
                                                        KMessageBox::Dangerous);
     if (clearHist == KMessageBox::Continue) {
         clear();
-        startSaveHistoryTimer();
     }
 }
 
@@ -125,7 +210,6 @@ void HistoryModel::setMaxSize(qsizetype size)
     if (m_maxSize == size) {
         return;
     }
-    QMutexLocker lock(&m_mutex);
     m_maxSize = size;
     if (m_items.size() > m_maxSize) {
         removeRows(m_maxSize, m_items.size() - m_maxSize);
@@ -146,13 +230,29 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
+    Q_ASSERT_X(m_db.isOpen(), Q_FUNC_INFO, qPrintable(m_db.lastError().text()));
     const std::shared_ptr<HistoryItem> &item = m_items.at(index.row());
 
     switch (role) {
-    case Qt::DisplayRole:
+    case Qt::DisplayRole: {
+        if (item->type() == HistoryItemType::Image) {
+            QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), s_imageFormat), m_db);
+            if (query.exec() && query.isSelect() && query.next()) {
+                QSize size = QImageReader(QString(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString())).size();
+                return QString(u"▨ " + i18nc("@info:tooltip width x height", "%1x%2", QString::number(size.width()), QString::number(size.height())));
+            }
+        }
         return item->text();
-    case Qt::DecorationRole: {
-        return item->image();
+    }
+    case ImageUrlRole: {
+        if (!(item->allTypes() & HistoryItemType::Image)) {
+            return QUrl();
+        }
+        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), s_imageFormat), m_db);
+        if (query.exec() && query.isSelect() && query.next()) {
+            return QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString());
+        }
+        return QUrl();
     }
     case HistoryItemConstPtrRole:
         return QVariant::fromValue<HistoryItemConstPtr>(std::const_pointer_cast<const HistoryItem>(item));
@@ -160,8 +260,6 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return item->uuid();
     case TypeRole:
         return QVariant::fromValue<HistoryItemType>(item->type());
-    case Base64UuidRole:
-        return item->uuid().toBase64();
     case TypeIntRole:
         return int(item->type());
     }
@@ -170,18 +268,54 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
 
 bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
+    Q_ASSERT_X(m_db.isOpen(), Q_FUNC_INFO, qPrintable(m_db.lastError().text()));
     if (!checkIndex(index, CheckIndexOption::IndexIsValid)) {
         return false;
     }
 
     switch (auto &item = m_items[index.row()]; role) {
     case Qt::DisplayRole: {
-        if (item->type() == HistoryItemType::Text && value.canConvert<QString>()) {
-            item = std::make_shared<HistoryStringItem>(value.toString());
-            Q_EMIT dataChanged(index, index, {Qt::DisplayRole, UuidRole});
-            return true;
+        if (item->type() != HistoryItemType::Text || !value.canConvert<QString>()) [[unlikely]] {
+            return false;
         }
-        break;
+        QString text = value.toString();
+        if (text == item->text()) {
+            return false;
+        }
+        QStringList mimetypes{u"text/plain"_s, u"text/plain;charset=utf-8"_s};
+        QString newUuid = QString::fromLatin1(QCryptographicHash::hash(text.toUtf8(), QCryptographicHash::Sha1).toHex());
+        {
+            TransactionGuard transaction(&m_db);
+            {
+                QSqlQuery query(m_db);
+                query.prepare(u"UPDATE main SET (uuid, mimetypes, text)=(?, ?, ?) WHERE uuid='%1'"_s.arg(item->uuid()));
+                query.addBindValue(newUuid);
+                query.addBindValue(mimetypes.join(u','));
+                query.addBindValue(text);
+                // last_used_time is updated in the signal slot
+                if (!transaction.exec(query) || !transaction.exec(u"DELETE FROM aux WHERE uuid='%1'"_s.arg(item->uuid()))) {
+                    return false;
+                }
+            }
+
+            for (const QString &mimetype : std::as_const(mimetypes)) {
+                QSqlQuery query(m_db);
+                query.prepare(u"INSERT INTO aux (uuid, mimetype, data_uuid) VALUES (?, ?, ?)"_s);
+                query.addBindValue(newUuid);
+                query.addBindValue(mimetype);
+                query.addBindValue(newUuid);
+                if (!transaction.exec(query)) {
+                    return false;
+                }
+            }
+        }
+
+        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'));
+        saveToFile(m_dbFolder, text.toUtf8(), newUuid, newUuid); // Must be synchronous so the clipboard can be updated immediately
+
+        item = std::make_shared<HistoryItem>(std::move(newUuid), std::move(mimetypes), std::move(text));
+        Q_EMIT dataChanged(index, index, {Qt::DisplayRole, UuidRole});
+        return true;
     }
     }
 
@@ -196,14 +330,33 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
     if (qsizetype(row + count) > m_items.size()) {
         return false;
     }
-    QMutexLocker lock(&m_mutex);
+
+    {
+        TransactionGuard transaction(&m_db);
+        QStringList uuidList;
+        for (int i = 0; i < count; ++i) {
+            uuidList.append(u'\'' + m_items[row + i]->uuid() + u'\'');
+        }
+        const QString uuids = uuidList.join(u',');
+        if (!transaction.exec(u"DELETE FROM main WHERE uuid IN (%1)"_s.arg(uuids))) {
+            return false;
+        }
+        if (!transaction.exec(u"DELETE FROM aux WHERE uuid IN (%1)"_s.arg(uuids))) {
+            return false;
+        }
+    }
+
+    for (int i = 0; i < count; ++i) {
+        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + m_items[row + i]->uuid() + u'/'));
+    }
+
     beginRemoveRows(QModelIndex(), row, row + count - 1);
     m_items.erase(std::next(m_items.cbegin(), row), std::next(m_items.cbegin(), row + count));
     endRemoveRows();
     return true;
 }
 
-bool HistoryModel::remove(const QByteArray &uuid)
+bool HistoryModel::remove(const QString &uuid)
 {
     const int index = indexOf(uuid);
     if (index < 0) {
@@ -212,7 +365,7 @@ bool HistoryModel::remove(const QByteArray &uuid)
     return removeRow(index, QModelIndex());
 }
 
-int HistoryModel::indexOf(const QByteArray &uuid) const
+int HistoryModel::indexOf(const QString &uuid) const
 {
     auto it = std::find_if(m_items.cbegin(), m_items.cend(), [&uuid](const auto &item) {
         return item->uuid() == uuid;
@@ -236,30 +389,75 @@ HistoryItemConstPtr HistoryModel::first() const
     return m_items[0];
 }
 
-void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
+bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
 {
     if (m_maxSize == 0) {
         // special case - cannot insert any items
-        return;
+        return false;
     }
-
-    QMutexLocker lock(&m_mutex);
-
-    if (const int existingItemIndex = indexOf(item.get()); existingItemIndex >= 0) {
+    QString uuid = computeUuid(mimeData);
+    if (uuid.size() != 40 /*SHA1*/) [[unlikely]] {
+        return false;
+    }
+    if (const int existingItemIndex = indexOf(uuid); existingItemIndex >= 0) {
         // move to top
         moveToTop(existingItemIndex);
-        return;
+        return true;
+    }
+
+    QStringList formats = mimeData->formats();
+    if (formats.empty() || formats.size() > 50) [[unlikely]] {
+        return false;
+    }
+
+    QString text;
+    if (mimeData->hasUrls()) {
+        QStringList urlText;
+        for (const QList<QUrl> urls = mimeData->urls(); const QUrl &url : urls) {
+            urlText.append(url.toString(QUrl::FullyEncoded));
+        }
+        text = urlText.join(u' ');
+    } else {
+        text = mimeData->text();
+    }
+
+    if (m_items.size() > m_maxSize - 1) {
+        if (!removeRow(m_items.size() - 1)) [[unlikely]] {
+            return false;
+        }
+    }
+
+    auto item = std::make_shared<HistoryItem>(uuid, formats, text);
+    auto updateJob = UpdateDatabaseJob::updateClipboard(this, &m_db, m_dbFolder, uuid, text, mimeData, timestamp);
+    if (item->type() == HistoryItemType::Image) {
+        connect(updateJob, &KJob::finished, this, [this, uuid](KJob *job) {
+            if (job->error()) {
+                return;
+            }
+            if (int row = indexOf(uuid); row >= 0) {
+                Q_EMIT dataChanged(index(row), index(row), {Qt::DisplayRole, ImageUrlRole});
+            }
+        });
     }
 
     beginInsertRows(QModelIndex(), 0, 0);
-    m_items.prepend(item);
+    m_items.prepend(std::move(item));
     endInsertRows();
 
-    if (m_items.size() > m_maxSize) {
-        beginRemoveRows(QModelIndex(), m_items.size() - 1, m_items.size() - 1);
-        m_items.pop_back();
-        endRemoveRows();
-    }
+    ++m_pendingJobs;
+    connect(updateJob, &KJob::finished, this, [this] {
+        --m_pendingJobs;
+    });
+    updateJob->start();
+
+    return true;
+}
+
+bool HistoryModel::insert(const QString &text)
+{
+    auto data = new QMimeData;
+    data->setText(text);
+    return insert(data);
 }
 
 bool HistoryModel::loadHistory()
@@ -271,44 +469,54 @@ bool HistoryModel::loadHistory()
 
     constexpr const char *failedLoadWarning = "Failed to load history resource. Clipboard history cannot be read.";
     // don't use "appdata", klipper is also a kicker applet
-    QString historyFilePath = QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("klipper/history2.lst"));
-    if (historyFilePath.isEmpty()) {
-        qCWarning(KLIPPER_LOG) << failedLoadWarning << ": "
-                               << "History file does not exist";
-        return false;
+    // Try to reuse the previous connection
+    if (qEnvironmentVariableIsSet("KLIPPER_DATABASE")) {
+        m_dbFolder = QFileInfo(qEnvironmentVariable("KLIPPER_DATABASE")).absoluteDir().absolutePath();
+    } else {
+        m_dbFolder = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper";
+    }
+    QDir().mkpath(m_dbFolder + u'/' + u"data");
+    m_db = QSqlDatabase::database(u"klipper"_s);
+    if (!m_db.isValid()) [[likely]] {
+        m_db = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"klipper"_s);
+        m_db.setHostName(u"localhost"_s);
+        if (qEnvironmentVariableIsSet("KLIPPER_DATABASE")) {
+            m_db.setDatabaseName(qEnvironmentVariable("KLIPPER_DATABASE"));
+        } else {
+            m_db.setDatabaseName(m_dbFolder + u"/history3.sqlite");
+        }
+        if (!m_db.open()) {
+            qCWarning(KLIPPER_LOG) << failedLoadWarning << m_db.lastError().text();
+            return false;
+        }
     }
 
-    QFile historyFile(historyFilePath);
-    if (!historyFile.open(QIODevice::ReadOnly)) {
-        qCWarning(KLIPPER_LOG) << failedLoadWarning << ": " << historyFile.errorString();
+    QSqlQuery query(m_db);
+    // The main table only stores text data
+    query.exec(
+        u"CREATE TABLE IF NOT EXISTS main (uuid char(40) PRIMARY KEY, added_time REAL NOT NULL CHECK (added_time > 0), last_used_time REAL CHECK (last_used_time > 0), mimetypes TEXT NOT NULL, text NTEXT, starred BOOLEAN)"_s);
+    // The aux table stores data index
+    query.exec(u"CREATE TABLE IF NOT EXISTS aux (uuid char(40) NOT NULL, mimetype TEXT NOT NULL, data_uuid char(40) NOT NULL, PRIMARY KEY (uuid, mimetype))"_s);
+    // Save the latest version number
+    query.exec(u"CREATE TABLE IF NOT EXISTS version (db_version INT NOT NULL)"_s);
+    constexpr int currentDBVersion = 3;
+    if (query.exec(u"SELECT db_version FROM version"_s) && query.isSelect() && query.next() /* has a record */) {
+        if (query.value(0).toInt() != currentDBVersion) {
+            return false;
+        }
+    } else if (!query.exec(u"INSERT INTO version (db_version) VALUES (%1)"_s.arg(QString::number(currentDBVersion)))) {
+        qCWarning(KLIPPER_LOG) << failedLoadWarning << m_db.lastError().text();
         return false;
     }
-
-    QDataStream fileStream(&historyFile);
-    if (fileStream.atEnd()) {
-        qCWarning(KLIPPER_LOG) << failedLoadWarning << ": "
-                               << "Error in reading data";
-        return false;
-    }
-
-    QByteArray data;
-    quint32 crc;
-    fileStream >> crc >> data;
-    if (crc32(0, reinterpret_cast<unsigned char *>(data.data()), data.size()) != crc) {
-        qCWarning(KLIPPER_LOG) << failedLoadWarning << ": "
-                               << "CRC checksum does not match";
-        return false;
-    }
-
-    QDataStream historyStream(&data, QIODevice::ReadOnly);
-    char *version;
-    historyStream >> version;
-    delete[] version;
 
     // The last row is either items.size() - 1 or m_maxSize - 1.
     decltype(m_items) items;
-    for (HistoryItemPtr item = HistoryItem::create(historyStream); item && items.size() < m_maxSize; item = HistoryItem::create(historyStream)) {
-        items.emplace_back(std::move(item));
+    if (query.exec(u"SELECT * FROM main ORDER BY last_used_time DESC, added_time DESC LIMIT %1"_s.arg(QString::number(m_maxSize))) && query.isSelect()) {
+        while (query.next()) {
+            if (HistoryItemPtr item = HistoryItem::create(query)) {
+                items.emplace_back(std::move(item));
+            }
+        }
     }
 
     if (items.empty()) {
@@ -317,12 +525,9 @@ bool HistoryModel::loadHistory()
         return true;
     }
 
-    {
-        QMutexLocker lock(&m_mutex);
-        beginResetModel();
-        m_items = std::move(items);
-        endResetModel();
-    }
+    beginResetModel();
+    m_items = std::move(items);
+    endResetModel();
 
     m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
 
@@ -346,68 +551,12 @@ void HistoryModel::loadSettings()
     }
 }
 
-void HistoryModel::startSaveHistoryTimer(std::chrono::seconds delay)
+int HistoryModel::pendingJobs() const
 {
-    m_saveFileTimer.start(delay);
+    return m_pendingJobs;
 }
 
-bool HistoryModel::saveHistory(bool empty)
-{
-    QMutexLocker lock(&m_mutex);
-    constexpr const char *failedSaveWarning = "Failed to save history. Clipboard history cannot be saved. Reason:";
-    static const QString relativeHistoryFilePath = QStringLiteral("klipper/history2.lst");
-    // don't use "appdata", klipper is also a kicker applet
-    QString historyFilePath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, relativeHistoryFilePath));
-    if (historyFilePath.isEmpty()) {
-        // try creating the file
-
-        QString path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation);
-        if (path.isEmpty()) {
-            qCWarning(KLIPPER_LOG) << failedSaveWarning << "cannot locate a standard data location to save the clipboard history.";
-            return false;
-        }
-
-        QDir dir(path);
-        if (!dir.mkpath(QStringLiteral("klipper"))) {
-            qCWarning(KLIPPER_LOG) << failedSaveWarning << "Klipper save directory" << path + QStringLiteral("/klipper")
-                                   << "does not exist and cannot be created.";
-            return false;
-        }
-        historyFilePath = dir.absoluteFilePath(relativeHistoryFilePath);
-    }
-    if (historyFilePath.isEmpty()) {
-        qCWarning(KLIPPER_LOG) << failedSaveWarning << "could not construct path to save clipboard history to.";
-        return false;
-    }
-
-    QSaveFile historyFile(historyFilePath);
-    if (!historyFile.open(QIODevice::WriteOnly)) {
-        qCWarning(KLIPPER_LOG) << failedSaveWarning << "unable to open save file" << historyFilePath << ":" << historyFile.errorString();
-        return false;
-    }
-
-    QByteArray data;
-    QDataStream history_stream(&data, QIODevice::WriteOnly);
-    history_stream << KLIPPER_VERSION_STRING; // const char*
-
-    if (!empty && !m_items.empty()) {
-        for (const auto &item : std::as_const(m_items)) {
-            history_stream << item.get();
-        }
-    }
-
-    quint32 crc = crc32(0, reinterpret_cast<unsigned char *>(data.data()), data.size());
-    QDataStream ds(&historyFile);
-    ds << crc << data;
-    if (!historyFile.commit()) {
-        qCWarning(KLIPPER_LOG) << failedSaveWarning << "failed to commit updated save file to disk.";
-        return false;
-    }
-
-    return true;
-}
-
-void HistoryModel::moveToTop(const QByteArray &uuid)
+void HistoryModel::moveToTop(const QString &uuid)
 {
     const int existingItemIndex = indexOf(uuid);
     if (existingItemIndex < 0) {
@@ -428,10 +577,22 @@ void HistoryModel::moveToTop(qsizetype row)
         // not in the Ctrl+V clipboard.
         return;
     }
-    QMutexLocker lock(&m_mutex);
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
+}
+
+void HistoryModel::saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid)
+{
+    const QString folderPath = dbFolder + u"/data/" + newUuid;
+    QDir().mkpath(folderPath);
+    QSaveFile file(folderPath + u'/' + dataUuid);
+    if (!file.open(QIODevice::WriteOnly)) {
+        qCWarning(KLIPPER_LOG) << file.errorString() << folderPath;
+        return;
+    }
+    file.write(data);
+    file.commit();
 }
 
 void HistoryModel::moveTopToBack()
@@ -439,7 +600,6 @@ void HistoryModel::moveTopToBack()
     if (m_items.size() < 2) {
         return;
     }
-    QMutexLocker lock(&m_mutex);
     beginMoveRows(QModelIndex(), 0, 0, QModelIndex(), m_items.size());
     auto item = m_items.takeFirst();
     m_items.append(item);
@@ -455,7 +615,7 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
 {
     QHash<int, QByteArray> hash;
     hash.insert(Qt::DisplayRole, QByteArrayLiteral("display"));
-    hash.insert(Qt::DecorationRole, QByteArrayLiteral("decoration"));
+    hash.insert(ImageUrlRole, QByteArrayLiteral("decoration"));
     hash.insert(UuidRole, QByteArrayLiteral("uuid"));
     hash.insert(TypeIntRole, QByteArrayLiteral("type"));
     return hash;
@@ -472,10 +632,7 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     const bool selectionMode = mode == QClipboard::Selection;
     if (selectionMode && m_bIgnoreSelection) {
         if (m_bSynchronize) {
-            auto item = HistoryItem::create(data);
-            if (item) [[likely]] { // applyClipChanges can return nullptr
-                m_clip->setMimeData(item, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
-            }
+            m_clip->setMimeData(data, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
         }
         return;
     }
@@ -484,39 +641,20 @@ void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         return;
     }
 
+    if (data->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayView("secret")) {
+        return;
+    }
+
     if (!m_displayImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
         return;
     }
 
-    HistoryItemPtr item = applyClipChanges(data);
-    if (changed) [[likely]] {
+    if (changed && insert(data)) [[likely]] {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
-        if (m_bSynchronize && item) { // applyClipChanges can return nullptr
-            m_clip->setMimeData(item, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
+        if (m_bSynchronize) { // applyClipChanges can return nullptr
+            m_clip->setMimeData(data, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
         }
     }
-}
-
-HistoryItemPtr HistoryModel::applyClipChanges(const QMimeData *clipData)
-{
-    Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
-    if (m_items.size() > 0) {
-        if (!m_displayImages && m_items[0]->type() == HistoryItemType::Image) {
-            removeRow(0);
-        }
-    }
-
-    HistoryItemPtr item = HistoryItem::create(clipData);
-
-    bool saveToHistory = true;
-    if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayLiteral("secret")) {
-        saveToHistory = false;
-    }
-    if (saveToHistory && item) {
-        insert(item);
-    }
-
-    return item;
 }
 
 void HistoryModel::slotIgnored(QClipboard::Mode mode)

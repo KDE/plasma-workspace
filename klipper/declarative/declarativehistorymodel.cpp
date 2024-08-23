@@ -26,15 +26,15 @@ DeclarativeHistoryModel::~DeclarativeHistoryModel()
 
 QString DeclarativeHistoryModel::currentText() const
 {
-    return m_model->rowCount() == 0 ? QString() : m_model->first()->text();
+    return m_model->rowCount() == 0 ? QString() : m_model->index(0).data(Qt::DisplayRole).toString();
 }
 
-void DeclarativeHistoryModel::moveToTop(const QByteArray &uuid)
+void DeclarativeHistoryModel::moveToTop(const QString &uuid)
 {
     m_model->moveToTop(uuid);
 }
 
-void DeclarativeHistoryModel::remove(const QByteArray &uuid)
+void DeclarativeHistoryModel::remove(const QString &uuid)
 {
     m_model->remove(uuid);
 }
@@ -44,7 +44,7 @@ void DeclarativeHistoryModel::clearHistory()
     m_model->clearHistory();
 }
 
-void DeclarativeHistoryModel::invokeAction(const QByteArray &uuid)
+void DeclarativeHistoryModel::invokeAction(const QString &uuid)
 {
     if (const qsizetype row = m_model->indexOf(uuid); row >= 0) {
         Q_EMIT m_model->actionInvoked(m_model->m_items[row]);

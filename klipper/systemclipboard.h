@@ -81,6 +81,8 @@ public:
     void setMimeData(const std::shared_ptr<const HistoryItem> &data,
                      SelectionMode mode,
                      ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
+    // Used to sync selection with clipboard
+    void setMimeData(const QMimeData *mimeData, SelectionMode mode, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
 
     bool isLocked(QClipboard::Mode mode);
 
@@ -104,6 +106,7 @@ private:
     explicit SystemClipboard();
 
     bool blockFetchingNewData();
+    void setMimeDataInternal(QMimeData *selection, QMimeData *clipboard, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
 
     KSystemClipboard *m_clip = nullptr;
 
@@ -119,4 +122,5 @@ private:
     QTimer m_overflowClearTimer;
     QTimer m_pendingCheckTimer;
     bool m_pendingContentsCheck = false;
+    int m_pendingJobs = 0;
 };

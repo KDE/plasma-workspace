@@ -5,12 +5,11 @@
 */
 
 #include "../historymodel.h"
-#include "../historyimageitem.h"
-#include "../historystringitem.h"
-#include "../historyurlitem.h"
+#include "../historyitem.h"
 #include "systemclipboard.h"
 
 #include <QAbstractItemModelTester>
+#include <QMimeData>
 #include <QStandardPaths>
 #include <QTest>
 
@@ -43,24 +42,24 @@ void HistoryModelTest::testSetMaxSize()
     QCOMPARE(history->maxSize(), 0); // Default value
 
     // insert an item - should still be empty
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
+    QVERIFY(!history->insert(QStringLiteral("foo")));
     QCOMPARE(history->rowCount(), 0);
 
     // now it should insert again
     history->setMaxSize(1);
     QCOMPARE(history->maxSize(), 1);
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
+    QVERIFY(history->insert(QStringLiteral("foo")));
     QCOMPARE(history->rowCount(), 1);
 
     // insert another item, foo should get removed
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("bar")));
+    history->insert(QStringLiteral("bar"));
     QCOMPARE(history->rowCount(), 1);
     QCOMPARE(history->data(history->index(0, 0)).toString(), QLatin1String("bar"));
 
     // I don't trust the model, add more items
     history->setMaxSize(10);
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foobar")));
+    QVERIFY(history->insert(QStringLiteral("foo")));
+    QVERIFY(history->insert(QStringLiteral("foobar")));
     QCOMPARE(history->rowCount(), 3);
     QCOMPARE(history->data(history->index(0, 0)).toString(), QLatin1String("foobar"));
     QCOMPARE(history->data(history->index(1, 0)).toString(), QLatin1String("foo"));
@@ -82,24 +81,24 @@ void HistoryModelTest::testInsertRemove()
     const QString fooText = QStringLiteral("foo");
     const QString barText = QStringLiteral("bar");
     const QString fooBarText = QStringLiteral("foobar");
-    const QByteArray fooUuid = QCryptographicHash::hash(fooText.toUtf8(), QCryptographicHash::Sha1);
-    const QByteArray barUuid = QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1);
-    const QByteArray foobarUuid = QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1);
+    const QString fooUuid = QString::fromLatin1(QCryptographicHash::hash(fooText.toUtf8(), QCryptographicHash::Sha1).toHex());
+    const QString barUuid = QString::fromLatin1(QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1).toHex());
+    const QString foobarUuid = QString::fromLatin1(QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1).toHex());
 
     // let's insert a few items
-    history->insert(std::make_shared<HistoryStringItem>(fooText));
+    history->insert(fooText);
     QModelIndex index = history->index(0, 0);
     QCOMPARE(index.data().toString(), fooText);
 
-    history->insert(std::make_shared<HistoryStringItem>(barText));
+    history->insert(barText);
     QCOMPARE(index.data().toString(), barText);
 
-    history->insert(std::make_shared<HistoryStringItem>(fooBarText));
+    history->insert(fooBarText);
     QCOMPARE(history->data(history->index(0, 0)).toString(), fooBarText);
     index = history->index(0, 0);
 
     // insert one again - it should be moved to top
-    history->insert(std::make_shared<HistoryStringItem>(barText));
+    history->insert(barText);
     QCOMPARE(history->data(history->index(0, 0)).toString(), barText);
 
     // move one to top using the slot
@@ -133,10 +132,10 @@ void HistoryModelTest::testClear()
     QCOMPARE(history->rowCount(), 0);
 
     // insert some items
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("bar")));
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foobar")));
-    history->moveToTop(QCryptographicHash::hash(QByteArrayLiteral("bar"), QCryptographicHash::Sha1));
+    QVERIFY(history->insert(QStringLiteral("foo")));
+    QVERIFY(history->insert(QStringLiteral("bar")));
+    QVERIFY(history->insert(QStringLiteral("foobar")));
+    history->moveToTop(QString::fromLatin1(QCryptographicHash::hash(QByteArrayLiteral("bar"), QCryptographicHash::Sha1).toHex()));
     QCOMPARE(history->rowCount(), 3);
 
     // and clear
@@ -150,16 +149,16 @@ void HistoryModelTest::testIndexOf()
     std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
-    QVERIFY(history->indexOf(QByteArrayLiteral("whatever")) < 0);
-    QVERIFY(history->indexOf(QByteArray()) < 0);
+    QVERIFY(history->indexOf(QStringLiteral("whatever")) < 0);
+    QVERIFY(history->indexOf(QString()) < 0);
 
     // insert some items
-    history->insert(std::make_shared<HistoryStringItem>(QStringLiteral("foo")));
-    QVERIFY(history->indexOf(QByteArrayLiteral("whatever")) < 0);
-    QVERIFY(history->indexOf(QByteArray()) < 0);
-    const QByteArray fooUuid = QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1);
+    history->insert(QStringLiteral("foo"));
+    QVERIFY(history->indexOf(QStringLiteral("whatever")) < 0);
+    QVERIFY(history->indexOf(QString()) < 0);
+    const QString fooUuid = QString::fromLatin1(QCryptographicHash::hash(QByteArrayLiteral("foo"), QCryptographicHash::Sha1).toHex());
     QVERIFY(history->indexOf(fooUuid) >= 0);
-    QCOMPARE(history->index(history->indexOf(fooUuid)).data(HistoryModel::UuidRole).toByteArray(), fooUuid);
+    QCOMPARE(history->index(history->indexOf(fooUuid)).data(HistoryModel::UuidRole).toString(), fooUuid);
 
     history->clear();
     QVERIFY(history->indexOf(fooUuid) < 0);
@@ -167,28 +166,33 @@ void HistoryModelTest::testIndexOf()
 
 void HistoryModelTest::testType_data()
 {
-    QTest::addColumn<HistoryItem *>("item");
+    QTest::addColumn<QMimeData *>("item");
     QTest::addColumn<HistoryItemType>("expectedType");
 
-    HistoryItem *item = new HistoryStringItem(QStringLiteral("foo"));
+    auto item = new QMimeData;
+    item->setText(QStringLiteral("foo"));
     QTest::newRow("text") << item << HistoryItemType::Text;
-    item = new HistoryImageItem(QImage());
+    item = new QMimeData;
+    item->setImageData(QImage());
     QTest::newRow("image") << item << HistoryItemType::Image;
-    item = new HistoryURLItem(QList<QUrl>(), KUrlMimeData::MetaDataMap(), false);
+    item = new QMimeData;
+    item->setText(QStringLiteral("foo"));
+    item->setUrls({QUrl(QStringLiteral("file:///home/"))});
     QTest::newRow("url") << item << HistoryItemType::Url;
 }
 
 void HistoryModelTest::testType()
 {
     std::shared_ptr<HistoryModel> history = HistoryModel::self();
-    std::unique_ptr<QAbstractItemModelTester> modelTest(new QAbstractItemModelTester(history.get()));
+    QAbstractItemModelTester modelTest(history.get());
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
-    QFETCH(HistoryItem *, item);
+    QFETCH(QMimeData *, item);
     QFETCH(HistoryItemType, expectedType);
-    history->insert(std::shared_ptr<HistoryItem>(item));
+    history->insert(item);
     QCOMPARE(history->index(0).data(HistoryModel::TypeRole).value<HistoryItemType>(), expectedType);
+    history->clear();
 }
 
 QTEST_MAIN(HistoryModelTest)
