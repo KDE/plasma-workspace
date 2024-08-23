@@ -37,8 +37,8 @@ GridLayout {
     required property PlasmaComponents3.ItemDelegate menuItem
     required property bool shouldUseOverflowButton
 
-    rows: shouldUseOverflowButton ? (actionNames.length - (menuItem.type === 0 ? 0 : 1)) : 1
-    columns: shouldUseOverflowButton ? 1 : (actionNames.length - (menuItem.type === 0 ? 0 : 1))
+    rows: shouldUseOverflowButton ? (actionNames.length - (menuItem.type === 2 ? 0 : 1)) : 1
+    columns: shouldUseOverflowButton ? 1 : (actionNames.length - (menuItem.type === 2 ? 0 : 1))
     rowSpacing: Kirigami.Units.smallSpacing
     columnSpacing: Kirigami.Units.smallSpacing
 
@@ -67,7 +67,7 @@ GridLayout {
             Layout.fillWidth: toolButtonsLayout.shouldUseOverflowButton
             Layout.leftMargin: toolButtonsLayout.shouldUseOverflowButton ? Kirigami.Units.gridUnit : 0
             Layout.rightMargin: toolButtonsLayout.shouldUseOverflowButton ? Kirigami.Units.gridUnit : 0
-            visible: index != DelegateToolButtons.ButtonRole.Edit || toolButtonsLayout.menuItem.type === 0
+            visible: index != DelegateToolButtons.ButtonRole.Edit || toolButtonsLayout.menuItem.type === 2
             display: toolButtonsLayout.shouldUseOverflowButton ? PlasmaComponents3.AbstractButton.TextBesideIcon : PlasmaComponents3.AbstractButton.IconOnly
             text: toolButtonsLayout.actionNames[index]
             icon.name: toolButtonsLayout.actionIcons[index]

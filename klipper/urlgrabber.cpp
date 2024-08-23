@@ -30,7 +30,7 @@
 
 // TODO: script-interface?
 #include "historycycler.h"
-#include "historystringitem.h"
+#include "historyitem.h"
 
 URLGrabber::URLGrabber(QObject *parent)
     : QObject(parent)

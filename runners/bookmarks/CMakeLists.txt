@@ -2,8 +2,6 @@
 # SPDX-License-Identifier: BSD-2-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_bookmarksrunner\")
 
-find_package(Qt6 CONFIG REQUIRED COMPONENTS Sql)
-
 add_library(krunner_bookmarks_common STATIC)
 set_property(TARGET krunner_bookmarks_common PROPERTY POSITION_INDEPENDENT_CODE ON)
 
