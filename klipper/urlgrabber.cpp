@@ -7,6 +7,7 @@
 
 #include <netwm.h>
 
+#include "historyitem.h"
 #include "klipper_debug.h"
 #include <QFile>
 #include <QIcon>
@@ -30,7 +31,6 @@
 
 // TODO: script-interface?
 #include "historycycler.h"
-#include "historystringitem.h"
 
 URLGrabber::URLGrabber(QObject *parent)
     : QObject(parent)

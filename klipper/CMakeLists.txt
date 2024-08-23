@@ -8,10 +8,7 @@ set(libklipper_common_SRCS
     historycycler.cpp
     historyitem.cpp
     historymodel.cpp
-    historystringitem.cpp
     klipperpopup.cpp
-    historyimageitem.cpp
-    historyurlitem.cpp
     actionstreewidget.cpp
     editactiondialog.cpp
     editcommanddialog.cpp

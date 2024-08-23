@@ -19,6 +19,7 @@
 #include <QLabel>
 #include <QMenu>
 #include <QMessageBox>
+#include <QMimeData>
 #include <QPushButton>
 #include <QResizeEvent>
 
@@ -41,7 +42,6 @@
 #include "historycycler.h"
 #include "historyitem.h"
 #include "historymodel.h"
-#include "historystringitem.h"
 #include "klipperpopup.h"
 #include "klippersettings.h"
 #include "systemclipboard.h"
@@ -210,7 +210,7 @@ void Klipper::setClipboardContents(const QString &s)
     if (s.isEmpty())
         return;
     updateTimestamp();
-    HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
+    auto item = HistoryItem::create(s);
     m_clip->setMimeData(item, SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
     m_historyModel->insert(item);
 }
@@ -383,8 +383,8 @@ void Klipper::slotPopupMenu()
 
 void Klipper::slotRepeatAction()
 {
-    auto top = std::static_pointer_cast<const HistoryStringItem>(m_historyModel->first());
-    if (top) {
+    auto top = m_historyModel->first();
+    if (top && top->type() == HistoryItemType::Text) {
         m_myURLGrabber->invokeAction(top);
     }
 }
