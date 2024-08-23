@@ -5,6 +5,7 @@
 */
 #pragma once
 
+#include <QMap>
 #include <QPixmap>
 
 #include "klipper_export.h"
@@ -13,12 +14,17 @@ class HistoryModel;
 class QString;
 class QMimeData;
 class QDataStream;
+class QUrl;
 
 class HistoryItem;
 typedef std::shared_ptr<HistoryItem> HistoryItemPtr;
 typedef std::shared_ptr<const HistoryItem> HistoryItemConstPtr;
 
+using MimeDataMap = QVariantMap;
+using QUrlList = QList<QUrl>;
+
 enum class HistoryItemType {
+    Invalid,
     Text,
     Image,
     Url,
@@ -30,20 +36,21 @@ enum class HistoryItemType {
 class KLIPPER_EXPORT HistoryItem
 {
 public:
-    explicit HistoryItem(const QByteArray &uuid);
-    virtual ~HistoryItem();
+    // Only construct with HistoryItem::create externally
+    explicit HistoryItem(const MimeDataMap &mimeDataMap, HistoryItemType type = HistoryItemType::Invalid, const QImage &image = {});
+    ~HistoryItem();
 
     /**
      * Returns the item type.
      */
-    virtual HistoryItemType type() const = 0;
+    HistoryItemType type() const;
 
     /**
      * Return the current item as text
      * An image would be returned as a descriptive
      * text, such as 32x43 image.
      */
-    virtual QString text() const = 0;
+    QString text() const;
 
     /**
      * @return uuid of current item.
@@ -58,25 +65,22 @@ public:
      * A text would be returned as a null \QImage,
      * which is also the default implementation
      */
-    virtual QImage image() const
-    {
-        return {};
-    }
+    QImage image() const;
 
     /**
      * Returns a pointer to a QMimeData suitable for QClipboard::setMimeData().
      */
-    virtual QMimeData *mimeData() const = 0;
+    QMimeData *mimeData() const;
 
     /**
      * Write object on datastream
      */
-    virtual void write(QDataStream &stream) const = 0;
+    void write(QDataStream &stream) const;
 
     /**
      * Equality.
      */
-    virtual bool operator==(const HistoryItem &rhs) const = 0;
+    bool operator==(const HistoryItem &rhs) const;
 
     /**
      * Create an HistoryItem from MimeSources (i.e., clipboard data)
@@ -91,8 +95,19 @@ public:
      */
     static HistoryItemPtr create(QDataStream &dataStream);
 
+    static HistoryItemPtr create(const QString &data);
+
+    static HistoryItemPtr create(const QImage &data);
+
+    static HistoryItemPtr create(const QUrlList &data);
+
 private:
+
+    MimeDataMap m_mimeDataMap;
     QByteArray m_uuid;
+    HistoryItemType m_type;
+    QString m_text;
+    QImage m_image;
 };
 
 inline QDataStream &operator<<(QDataStream &lhs, HistoryItem const *const rhs)
