@@ -640,7 +640,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     if (selectionMode && m_bSelectionTextOnly && !data->hasText())
         return;
 
-    if (m_bIgnoreImages && data->hasImage() && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
+    if (m_bIgnoreImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
         return;
     }
 
