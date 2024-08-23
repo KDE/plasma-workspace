@@ -43,18 +43,6 @@ PlasmaCore.ToolTipArea {
     subText:
     */
 
-    location: {
-        if (inHiddenLayout) {
-            if (LayoutMirroring.enabled && Plasmoid.location !== PlasmaCore.Types.RightEdge) {
-                return PlasmaCore.Types.LeftEdge;
-            } else if (Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
-                return PlasmaCore.Types.RightEdge;
-            }
-        }
-
-        return Plasmoid.location;
-    }
-
     PulseAnimation {
         targetItem: iconContainer
         running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus
