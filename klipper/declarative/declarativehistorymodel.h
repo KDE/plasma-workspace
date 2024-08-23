@@ -28,12 +28,12 @@ public:
 
     QString currentText() const;
 
-    Q_INVOKABLE void moveToTop(const QByteArray &uuid);
+    Q_INVOKABLE void moveToTop(const QString &uuid);
 
-    Q_INVOKABLE void remove(const QByteArray &uuid);
+    Q_INVOKABLE void remove(const QString &uuid);
     Q_INVOKABLE void clearHistory();
 
-    Q_INVOKABLE void invokeAction(const QByteArray &uuid);
+    Q_INVOKABLE void invokeAction(const QString &uuid);
 
 Q_SIGNALS:
     void countChanged();
