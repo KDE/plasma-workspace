@@ -83,6 +83,9 @@ HistoryModel::HistoryModel()
         }
         m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
     });
+
+    connect(m_clip.get(), &SystemClipboard::ignored, this, &HistoryModel::slotIgnored);
+    connect(m_clip.get(), &SystemClipboard::newClipData, this, &HistoryModel::checkClipData);
 }
 
 HistoryModel::~HistoryModel()
@@ -330,6 +333,17 @@ void HistoryModel::loadSettings()
 {
     setMaxSize(KlipperSettings::maxClipItems());
     m_displayImages = !KlipperSettings::ignoreImages();
+    m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
+    // 0 is the id of "Ignore selection" radiobutton
+    m_bIgnoreSelection = KlipperSettings::ignoreSelection();
+    m_bSynchronize = KlipperSettings::syncClipboards();
+    m_bSelectionTextOnly = KlipperSettings::selectionTextOnly();
+
+    if (m_bNoNullClipboard) {
+        connect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard, Qt::UniqueConnection);
+    } else {
+        disconnect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard);
+    }
 }
 
 void HistoryModel::startSaveHistoryTimer(std::chrono::seconds delay)
@@ -445,6 +459,88 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     hash.insert(UuidRole, QByteArrayLiteral("uuid"));
     hash.insert(TypeIntRole, QByteArrayLiteral("type"));
     return hash;
+}
+
+void HistoryModel::checkClipData(QClipboard::Mode mode, const QMimeData *data)
+{
+    Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
+    bool changed = true; // ### FIXME (only relevant under polling, might be better to simply remove polling and rely on XFixes)
+
+    // this must be below the "bNoNullClipboard" handling code!
+    // XXX: I want a better handling of selection/clipboard in general.
+    // XXX: Order sensitive code. Must die.
+    const bool selectionMode = mode == QClipboard::Selection;
+    if (selectionMode && m_bIgnoreSelection) {
+        if (m_bSynchronize) {
+            auto item = HistoryItem::create(data);
+            if (item) [[likely]] { // applyClipChanges can return nullptr
+                m_clip->setMimeData(item, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
+            }
+        }
+        return;
+    }
+
+    if (selectionMode && m_bSelectionTextOnly && !data->hasText()) {
+        return;
+    }
+
+    if (!m_displayImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
+        return;
+    }
+
+    HistoryItemPtr item = applyClipChanges(data);
+    if (changed) [[likely]] {
+        qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
+        if (m_bSynchronize && item) { // applyClipChanges can return nullptr
+            m_clip->setMimeData(item, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
+        }
+    }
+}
+
+HistoryItemPtr HistoryModel::applyClipChanges(const QMimeData *clipData)
+{
+    Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
+    if (m_items.size() > 0) {
+        if (!m_displayImages && m_items[0]->type() == HistoryItemType::Image) {
+            removeRow(0);
+        }
+    }
+
+    HistoryItemPtr item = HistoryItem::create(clipData);
+
+    bool saveToHistory = true;
+    if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayLiteral("secret")) {
+        saveToHistory = false;
+    }
+    if (saveToHistory && item) {
+        insert(item);
+    }
+
+    return item;
+}
+
+void HistoryModel::slotIgnored(QClipboard::Mode mode)
+{
+    // internal to klipper, ignoring QSpinBox selections
+    // keep our old clipboard, thanks
+    // This won't quite work, but it's close enough for now.
+    // The trouble is that the top selection =! top clipboard
+    // but we don't track that yet. We will....
+    if (auto top = first()) {
+        m_clip->setMimeData(top, mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard);
+    }
+}
+
+void HistoryModel::slotReceivedEmptyClipboard(QClipboard::Mode mode)
+{
+    Q_ASSERT(m_bNoNullClipboard);
+    if (auto top = first()) {
+        // keep old clipboard after someone set it to null
+        qCDebug(KLIPPER_LOG) << "Resetting clipboard (Prevent empty clipboard)";
+        m_clip->setMimeData(top,
+                            mode == QClipboard::Selection ? SystemClipboard::Selection : SystemClipboard::Clipboard,
+                            SystemClipboard::ClipboardUpdateReason::PreventEmptyClipboard);
+    }
 }
 
 #include "moc_historymodel.cpp"
