@@ -87,34 +87,12 @@ public Q_SLOTS:
     void slotCycleNext();
     void slotCyclePrev();
 
-protected:
-    /**
-     * Check data in clipboard, and if it passes these checks,
-     * store the data in the clipboard history.
-     */
-    void checkClipData(QClipboard::Mode mode, const QMimeData *data);
-
-    /**
-     * Enter clipboard data in the history.
-     */
-    [[nodiscard]] std::shared_ptr<HistoryItem> applyClipChanges(const QMimeData *data);
-
-    bool ignoreClipboardChanges() const;
-
-    KSharedConfigPtr config() const
-    {
-        return m_config;
-    }
-
 Q_SIGNALS:
     void passivePopup(const QString &caption, const QString &text);
     void editFinished(std::shared_ptr<const HistoryItem> item, int result);
     Q_SCRIPTABLE void clipboardHistoryUpdated();
 
 public Q_SLOTS:
-    void slotIgnored(QClipboard::Mode mode);
-    void slotReceivedEmptyClipboard(QClipboard::Mode mode);
-
     void slotPopupMenu();
     void setURLGrabberEnabled(bool);
 
@@ -156,11 +134,6 @@ private:
     bool m_bURLGrabber : 1;
     bool m_bReplayActionInHistory : 1;
     bool m_bUseGUIRegExpEditor : 1;
-    bool m_bNoNullClipboard : 1;
-    bool m_bIgnoreSelection : 1;
-    bool m_bSynchronize : 1;
-    bool m_bSelectionTextOnly : 1;
-    bool m_bIgnoreImages : 1;
 
     URLGrabber *m_myURLGrabber;
     QString m_lastURLGrabberTextSelection;
