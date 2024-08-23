@@ -230,7 +230,6 @@ ContainmentItem {
 
                     width: tasksGrid.cellWidth
                     height: tasksGrid.cellHeight
-                    minLabelHeight: 0
 
                     // We need to recalculate the stacking order of the z values due to how keyboard navigation works
                     // the tab order depends exclusively from this, so we redo it as the position in the list

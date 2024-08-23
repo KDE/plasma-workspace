@@ -22,8 +22,6 @@ PlasmaCore.ToolTipArea {
     required property int index
     required property var model
 
-    required property real minLabelHeight
-
     required property string itemId
     /*required*/ property alias text: label.text
 
@@ -32,14 +30,17 @@ PlasmaCore.ToolTipArea {
     required subText
     required textFormat
 
-    readonly property alias labelHeight: label.implicitHeight
     readonly property alias iconContainer: iconContainer
     readonly property int /*PlasmaCore.Types.ItemStatus*/ status: model.status || PlasmaCore.Types.UnknownStatus
     readonly property int /*PlasmaCore.Types.ItemStatus*/ effectiveStatus: model.effectiveStatus || PlasmaCore.Types.UnknownStatus
-    readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
+        readonly property bool inHiddenLayout: effectiveStatus === PlasmaCore.Types.PassiveStatus
     readonly property bool inVisibleLayout: effectiveStatus === PlasmaCore.Types.ActiveStatus
 
     property bool effectivePressed: false
+
+    // Keep these in sync with HiddenItems.qml
+    readonly property int margins: Kirigami.Units.smallSpacing
+    readonly property int maxTextLines: 2
 
     // input agnostic way to trigger the main action
     signal activated(var pos)
@@ -97,9 +98,11 @@ PlasmaCore.ToolTipArea {
         }
     }
 
-    ColumnLayout {
+    RowLayout {
         anchors.fill: abstractItem
-        spacing: 0
+        anchors.margins: abstractItem.inHiddenLayout ? abstractItem.margins : 0
+
+        spacing: Kirigami.Units.smallSpacing
 
         FocusScope {
             id: iconContainer
@@ -138,34 +141,22 @@ PlasmaCore.ToolTipArea {
             property alias inVisibleLayout: abstractItem.inVisibleLayout
             readonly property int size: abstractItem.inVisibleLayout ? root.itemSize : Kirigami.Units.iconSizes.medium
 
-            Layout.alignment: Qt.AlignHCenter
-            Layout.fillHeight: abstractItem.inHiddenLayout ? true : false
+            Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
             implicitWidth: root.vertical && abstractItem.inVisibleLayout ? abstractItem.width : size
             implicitHeight: !root.vertical && abstractItem.inVisibleLayout ? abstractItem.height : size
-            Layout.topMargin: abstractItem.inHiddenLayout ? Kirigami.Units.mediumSpacing : 0
         }
         PlasmaComponents3.Label {
             id: label
 
             Layout.fillWidth: true
-            Layout.fillHeight: abstractItem.inHiddenLayout ? true : false
-            //! Minimum required height for all labels is used in order for all
-            //! labels to be aligned properly at all items. At the same time this approach does not
-            //! enforce labels with 3 lines at all cases so translations that require only one or two
-            //! lines will always look consistent with no too much padding
-            Layout.minimumHeight: abstractItem.inHiddenLayout ? abstractItem.minLabelHeight : 0
-            Layout.leftMargin: abstractItem.inHiddenLayout ? Kirigami.Units.smallSpacing : 0
-            Layout.rightMargin: abstractItem.inHiddenLayout ? Kirigami.Units.smallSpacing : 0
-            Layout.bottomMargin: abstractItem.inHiddenLayout ? Kirigami.Units.smallSpacing : 0
+            maximumLineCount: abstractItem.maxTextLines
 
             visible: abstractItem.inHiddenLayout
 
-            verticalAlignment: Text.AlignTop
-            horizontalAlignment: Text.AlignHCenter
+            verticalAlignment: Text.AlignVCenter
             elide: Text.ElideRight
             textFormat: Text.PlainText
             wrapMode: Text.Wrap
-            maximumLineCount: 3
 
             opacity: visible ? 1 : 0
             Behavior on opacity {

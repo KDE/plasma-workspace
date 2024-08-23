@@ -12,8 +12,6 @@ Loader {
     required property int index
     required property var model
 
-    required property real minLabelHeight
-
     z: x + 1 // always be above what it's on top of, even for x==0
 
     readonly property url __url: {
@@ -32,7 +30,6 @@ Loader {
         setSource(__url, {
             index: Qt.binding(() => index),
             model: Qt.binding(() => model),
-            minLabelHeight: Qt.binding(() => minLabelHeight),
         });
     }
 }

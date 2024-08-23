@@ -10,6 +10,7 @@ import QtQuick
 import QtQuick.Layouts
 
 import org.kde.kitemmodels as KItemModels
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
@@ -28,11 +29,22 @@ PlasmaComponents3.ScrollView {
     GridView {
         id: hiddenTasks
 
-        readonly property int minimumRows: 4
+        readonly property int columns: 2
         readonly property int minimumColumns: 4
 
-        cellWidth: Math.floor(Math.min(hiddenTasksView.availableWidth, popup.Layout.minimumWidth) / minimumRows)
-        cellHeight: Math.floor(popup.Layout.minimumHeight / minimumColumns)
+        // Keep these in sync with ItemLoader.qml
+        readonly property int delegateMaxTextLines: 2
+        readonly property int delegateMargins: Kirigami.Units.smallSpacing
+
+        readonly property int delegateHeight: (metrics.height * delegateMaxTextLines) + (delegateMargins * 2)
+
+        TextMetrics {
+            id: metrics
+            text: i18n("Some letters with tall characters, ascenders, descenders, etc", "AILlmyjgGJP")
+        }
+
+        cellWidth: Math.floor(hiddenTasksView.availableWidth / columns)
+        cellHeight: delegateHeight
 
         currentIndex: -1
         highlight: PlasmaExtras.Highlight {}
@@ -42,19 +54,10 @@ PlasmaComponents3.ScrollView {
 
         readonly property int itemCount: model.count
 
-        //! This is used in order to identify the minimum required label height in order for all
-        //! labels to be aligned properly at all items. At the same time this approach does not
-        //! enforce labels with 3 lines at all cases so translations that require only one or two
-        //! lines will always look consistent with no too much padding
-        readonly property int minLabelHeight: Math.max(...contentItem.children.map(gridItem =>
-            ((gridItem as Loader)?.item as Items.AbstractItem)?.labelHeight ?? 0
-        ));
-
         model: root.hiddenModel
         delegate: Items.ItemLoader {
             width: hiddenTasks.cellWidth
             height: hiddenTasks.cellHeight
-            minLabelHeight: hiddenTasks.minLabelHeight
         }
 
         keyNavigationEnabled: true
