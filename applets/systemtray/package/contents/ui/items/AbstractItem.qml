@@ -50,18 +50,6 @@ PlasmaCore.ToolTipArea {
     signal wheel(var wheel)
     signal contextMenu(var mouse)
 
-    location: {
-        if (inHiddenLayout) {
-            if (LayoutMirroring.enabled && Plasmoid.location !== PlasmaCore.Types.RightEdge) {
-                return PlasmaCore.Types.LeftEdge;
-            } else if (Plasmoid.location !== PlasmaCore.Types.LeftEdge) {
-                return PlasmaCore.Types.RightEdge;
-            }
-        }
-
-        return Plasmoid.location;
-    }
-
     PulseAnimation {
         targetItem: iconContainer
         running: (abstractItem.status === PlasmaCore.Types.NeedsAttentionStatus
