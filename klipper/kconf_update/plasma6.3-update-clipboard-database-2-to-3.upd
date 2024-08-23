@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
+# SPDX-License-Identifier: BSD-3-Clause
+
+Version=6
+
+Id=plasma6.3-update-clipboard-database-2-to-3
+Script=plasma6.3-update-clipboard-database-2-to-3
+

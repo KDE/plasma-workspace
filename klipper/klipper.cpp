@@ -19,6 +19,7 @@
 #include <QLabel>
 #include <QMenu>
 #include <QMessageBox>
+#include <QMimeData>
 #include <QPushButton>
 #include <QResizeEvent>
 
@@ -36,12 +37,10 @@
 #include <KWayland/Client/surface.h>
 #include <KWindowSystem>
 
-#include "../c_ptr.h"
 #include "configdialog.h"
 #include "historycycler.h"
 #include "historyitem.h"
 #include "historymodel.h"
-#include "historystringitem.h"
 #include "klipperpopup.h"
 #include "klippersettings.h"
 #include "systemclipboard.h"
@@ -207,9 +206,8 @@ void Klipper::setClipboardContents(const QString &s)
     if (s.isEmpty())
         return;
     updateTimestamp();
-    HistoryItemPtr item(HistoryItemPtr(new HistoryStringItem(s)));
-    m_clip->setMimeData(item, SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
-    m_historyModel->insert(item);
+    m_historyModel->insert(s);
+    m_clip->setMimeData(m_historyModel->first(), SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
 }
 
 // DBUS - don't call from Klipper itself
@@ -230,7 +228,7 @@ void Klipper::clearClipboardHistory()
 // DBUS - don't call from Klipper itself
 void Klipper::saveClipboardHistory()
 {
-    m_historyModel->saveHistory();
+    // Do nothing
 }
 
 void Klipper::slotStartShowTimer()
@@ -292,7 +290,6 @@ bool Klipper::eventFilter(QObject *filtered, QEvent *event)
 // save session on shutdown. Don't simply use the c'tor, as that may not be called.
 void Klipper::saveSession()
 {
-    m_historyModel->saveHistory();
     saveSettings();
 }
 
@@ -326,13 +323,11 @@ void Klipper::slotConfigure()
     dlg->setAttribute(Qt::WA_DeleteOnClose);
 
     connect(dlg, &KConfigDialog::settingsChanged, this, [this]() {
-        const bool bKeepContents_old = m_bKeepContents; // back up old value
         loadSettings();
-
         // BUG: 142882
         // Security: If user has save clipboard turned off, old data should be deleted from disk
-        if (bKeepContents_old != m_bKeepContents) { // keepContents changed
-            m_historyModel->saveHistory(!m_bKeepContents); // save history, empty = !keep
+        if (!m_bKeepContents) {
+            m_historyModel->clear();
         }
     });
     dlg->show();
@@ -345,7 +340,7 @@ void Klipper::slotPopupMenu()
 
 void Klipper::slotRepeatAction()
 {
-    auto top = std::static_pointer_cast<const HistoryStringItem>(m_historyModel->first());
+    auto top = std::static_pointer_cast<const HistoryItem>(m_historyModel->first());
     if (top) {
         m_myURLGrabber->invokeAction(top);
     }

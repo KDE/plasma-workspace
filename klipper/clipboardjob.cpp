@@ -7,7 +7,6 @@
 #include "clipboardjob.h"
 #include "historyitem.h"
 #include "historymodel.h"
-#include "historystringitem.h"
 #include "klipper.h"
 
 #include <KIO/PreviewJob>
@@ -46,7 +45,7 @@ void ClipboardJob::start()
     }
 
     // other operations need the item
-    const int itemIndex = m_model->indexOf(QByteArray::fromBase64(destination().toUtf8()));
+    const int itemIndex = m_model->indexOf(destination());
     if (itemIndex < 0) {
         setResult(false);
         return;
@@ -62,7 +61,7 @@ void ClipboardJob::start()
         if (parameters().contains(QLatin1String("text"))) {
             const QString text = parameters()[QLatin1String("text")].toString();
             m_model->remove(item->uuid());
-            m_model->insert(HistoryItemPtr(new HistoryStringItem(text)));
+            m_model->insert(text);
             if (m_klipper->urlGrabber()) {
                 m_klipper->urlGrabber()->checkNewData(HistoryItemConstPtr(m_model->first()));
             }

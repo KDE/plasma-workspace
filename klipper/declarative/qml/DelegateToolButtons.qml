@@ -49,7 +49,7 @@ RowLayout {
         id: editToolButton
         icon.name: "document-edit"
         enabled: !clipboardMenu.editing
-        visible: menuItem.type === 0
+        visible: menuItem.type === 2
 
         display: PlasmaComponents3.AbstractButton.IconOnly
         text: i18nd("klipper", "Edit contents")
