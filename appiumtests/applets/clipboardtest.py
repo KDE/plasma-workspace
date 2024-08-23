@@ -397,7 +397,7 @@ class ClipboardTest(unittest.TestCase):
         """
         In edit mode, the text area should be focused by default.
         """
-        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["true", "false"], True)
+        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards", "IgnoreImages"], ["true", "false", "true"], True)
         ActionChains(self.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
         self.driver.find_element(AppiumBy.NAME, "Edit contents").click()
         self.driver.find_element(AppiumBy.NAME, "Text edit area")
@@ -409,6 +409,20 @@ class ClipboardTest(unittest.TestCase):
         ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("s").key_up(Keys.CONTROL).perform()  # Save
         self.driver.find_element(AppiumBy.NAME, new_text)
         # self.assertEqual(self.driver.get_clipboard_text(), new_text)
+
+    def test_8_bug491488_copy_cells(self) -> None:
+        """
+        A cell has both image data and text data, which should not be ignored when images are ignored.
+        """
+        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards", "IgnoreImages"], ["true", "false", "true"], True)
+        new_text = "clip thin"
+        pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
+        pixbuf.fill(0xff0000ff)
+        content_image = Gdk.ContentProvider.new_for_bytes("image/png", Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes())
+        content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(new_text, "utf-8")))
+        content_union = Gdk.ContentProvider.new_union([content_text, content_image])
+        self.gtk_copy(content_union)
+        self.driver.find_element(AppiumBy.NAME, new_text)
 
 
 if __name__ == '__main__':
