@@ -1,6 +1,6 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 # Linerly <linerly@protonmail.com>, 2022.
 #
@@ -9,22 +9,24 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2022-06-14 16:55+0700\n"
-"Last-Translator: Linerly <linerly@protonmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-08-23 22:26+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Menginstal pembaruan perangkat lunak dan menyalakan ulang dalam 1 detik"
 msgstr[1] ""
+"Menginstal pembaruan perangkat lunak dan menyalakan ulang dalam %1 detik"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -77,12 +79,10 @@ msgid "Sleep"
 msgstr "Tidur"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Tidur"
+msgstr "Tidur Sekarang"
 
 #: contents/logout/Logout.qml:210
 #, kde-format
@@ -90,22 +90,21 @@ msgid "Hibernate"
 msgstr "Hibernasi"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Hibernasi"
+msgstr "Hibernasi Sekarang"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Instal Pembaruan & Nyalakan Ulang"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr ""
+msgstr "Instal Pembaruan & Nyalakan Ulang Sekarang"
 
 #: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
@@ -113,10 +112,9 @@ msgid "Restart"
 msgstr "Nyalakan Ulang"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Nyalakan Ulang"
+msgstr "Nyalakan Ulang Sekarang"
 
 #: contents/logout/Logout.qml:251
 #, kde-format
@@ -124,10 +122,9 @@ msgid "Shut Down"
 msgstr "Matikan"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Matikan"
+msgstr "Matikan Sekarang"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -135,10 +132,9 @@ msgid "Log Out"
 msgstr "Keluar Log"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Keluar Log"
+msgstr "Keluar Log Sekarang"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
