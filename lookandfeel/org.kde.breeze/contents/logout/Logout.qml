@@ -222,8 +222,7 @@ Item {
                 icon.name: softwareUpdatePending ? "system-reboot-update" : "system-reboot"
                 text: {
                     if (softwareUpdatePending) {
-                        return root.showAllOptions ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Restart")
-                                                   : i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Restart Now")
+                        return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates and Restart")
                     } else {
                         return root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
                                                    : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart Now")
@@ -258,8 +257,7 @@ Item {
                 icon.name: softwareUpdatePending ? "system-shutdown-update" : "system-shutdown"
                 text: {
                     if (softwareUpdatePending) {
-                        return root.showAllOptions ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Shut Down")
-                                                   : i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates & Shut Down Now")
+                        return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates and Shut Down")
                     } else {
                         return root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
                                                    : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down Now")
