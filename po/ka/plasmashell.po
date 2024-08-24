@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-06-09 06:30+0200\n"
+"PO-Revision-Date: 2024-08-23 06:25+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -198,7 +198,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:88
 #, kde-format

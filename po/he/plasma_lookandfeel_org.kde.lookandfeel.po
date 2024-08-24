@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-01-30 21:10+0200\n"
+"PO-Revision-Date: 2024-08-23 07:09+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -48,15 +48,13 @@ msgstr[2] "יציאה מהפעלה עוד %1 שניות"
 msgstr[3] "יציאה מהפעלה עוד %1 שניות"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "התקנת עדכוני תוכנה והפעלה מחדש בעוד שנייה"
-msgstr[1] "התקנת עדכוני תוכנה והפעלה מחדש בעוד שתי שניות"
-msgstr[2] "התקנת עדכוני תוכנה והפעלה מחדש בעוד %1 שניות"
-msgstr[3] "התקנת עדכוני תוכנה והפעלה מחדש בעוד %1 שניות"
+msgstr[0] "התקנת עדכוני תוכנה וכיבוי בעוד שנייה"
+msgstr[1] "התקנת עדכוני תוכנה וכיבוי בעוד שתי שניות"
+msgstr[2] "התקנת עדכוני תוכנה וכיבוי בעוד %1 שניות"
+msgstr[3] "התקנת עדכוני תוכנה וכיבוי בעוד %1 שניות"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -138,20 +136,16 @@ msgid "Restart Now"
 msgstr "הפעלה מחדש עכשיו"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "התקנת &עדכונים והפעלה מחדש עכשיו"
+msgstr "התקנת &עדכונים וכיבוי"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "התקנת &עדכונים והפעלה מחדש עכשיו"
+msgstr "התקנת &עדכונים וכיבוי עכשיו"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-05-12 10:35+0100\n"
+"PO-Revision-Date: 2024-08-23 21:45+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -367,11 +367,10 @@ msgid "Install Widget From Local File…"
 msgstr "Instali Fenestraĵon de Loka Dosiero…"
 
 #: shellprivate/widgetexplorer.cpp:489
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Ĉiuj Fenestraĵoj"
+msgstr "Ekpreni Novajn Fenestraĵojn"
 
 #: shellprivate/widgetexplorer.cpp:508
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-02-02 22:38+0100\n"
+"PO-Revision-Date: 2024-08-23 21:45+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -44,15 +44,13 @@ msgstr[0] "Elsalutante post 1 sekundo"
 msgstr[1] "Elsalutante post %1 sekundoj"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
-"Instalante programarajn ĝisdatigojn kaj restartigante post 1 sekundo"
+"Instalante programarajn ĝisdatigojn kaj sistemfermonte post 1 sekundo"
 msgstr[1] ""
-"Instalante programarajn ĝisdatigojn kaj restartigante post %1 sekundoj"
+"Instalante programarajn ĝisdatigojn kaj sistemfermonte post %1 sekundoj"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -126,20 +124,16 @@ msgid "Restart Now"
 msgstr "Rekomenci Nun"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Instali Ĝisdatigojn & Rekomenci Nun"
+msgstr "Instali Ĝisdatigojn & Sistemfermi"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Instali Ĝisdatigojn & Rekomenci Nun"
+msgstr "Instali Ĝisdatigojn & Sistemfermi Nun"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
@@ -180,91 +174,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma farita de KDE"
-
-#~ msgid "Keyboard Layout: %1"
-#~ msgstr "Klavara aranĝo: %1"
-
-#~ msgid "Username"
-#~ msgstr "Uzantnomo"
-
-#~ msgid "Password"
-#~ msgstr "Pasvorto"
-
-#~ msgid "Log In"
-#~ msgstr "Ensaluti"
-
-#~ msgid "Caps Lock is on"
-#~ msgstr "Majskulo estas aktiva"
-
-#~ msgctxt "For switching to a username and password prompt"
-#~ msgid "Other…"
-#~ msgstr "Alia…"
-
-#~ msgid "Type in Username and Password"
-#~ msgstr "Tajpu Uzantnomon kaj Pasvorton"
-
-#~ msgid "List Users"
-#~ msgstr "Listo de Uzantoj"
-
-#~ msgctxt "Button to show/hide virtual keyboard"
-#~ msgid "Virtual Keyboard"
-#~ msgstr "Virtuala Klavaro"
-
-#~ msgid "Login Failed"
-#~ msgstr "Ensaluto malsukcesis"
-
-#~ msgid "Desktop Session: %1"
-#~ msgstr "Labortabla Sesio: %1"
-
-#~ msgctxt "@title: group"
-#~ msgid "Clock:"
-#~ msgstr "Horloĝo:"
-
-#~ msgctxt "@option:check"
-#~ msgid "Keep visible when unlocking prompt disappears"
-#~ msgstr "Konservi videbla kiam malŝlosa prompto malaperas"
-
-#~ msgctxt "@title: group"
-#~ msgid "Media controls:"
-#~ msgstr "Plurmediaj regiloj:"
-
-#~ msgctxt "@option:check"
-#~ msgid "Show under unlocking prompt"
-#~ msgstr "Montri sub malŝlosa prompto"
-
-#~ msgid "Unlocking failed"
-#~ msgstr "Malŝloso malsukcesis"
-
-#~ msgid "Sleep"
-#~ msgstr "Dormi"
-
-#~ msgid "Switch User"
-#~ msgstr "Ŝanĝi Uzanton"
-
-#~ msgctxt "Button to change keyboard layout"
-#~ msgid "Switch layout"
-#~ msgstr "Ŝanĝi aranĝon"
-
-#~ msgid "Unlock"
-#~ msgstr "Malŝlosi"
-
-#~ msgid "(or scan your fingerprint on the reader)"
-#~ msgstr "(aŭ skanu vian fingrospuron sur la legilo)"
-
-#~ msgid "(or scan your smartcard)"
-#~ msgstr "(aŭ skanu vian inteligentan memorkarton)"
-
-#~ msgid "No title"
-#~ msgstr "Neniu titolo"
-
-#~ msgid "No media playing"
-#~ msgstr "Neniu aŭdvidaĵo ludanta"
-
-#~ msgid "Previous track"
-#~ msgstr "Antaŭa trako"
-
-#~ msgid "Play or Pause media"
-#~ msgstr "Ludi aŭ Paŭzi aŭdvidaĵon"
-
-#~ msgid "Next track"
-#~ msgstr "Sekva aŭtoveturejo"

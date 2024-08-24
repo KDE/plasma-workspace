@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-01-31 21:23+0100\n"
+"PO-Revision-Date: 2024-08-22 09:56+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -48,15 +48,13 @@ msgstr[0] "Déconnexion dans 1 seconde"
 msgstr[1] "Déconnexion dans %1 secondes"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
-"Installation des mises à jour de logiciels et redémarrage dans une seconde"
+"Installation des mises à jour de logiciels et extinction dans une seconde"
 msgstr[1] ""
-"Installation des mises à jour de logiciels et redémarrage dans %1 secondes"
+"Installation des mises à jour de logiciels et extinction %1 secondes"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -133,20 +131,16 @@ msgid "Restart Now"
 msgstr "Redémarrer maintenant"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Installer les mises à jour et re-démarrer maintenant"
+msgstr "Installer les mises à jour et éteindre"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Installer les mises à jour et re-démarrer maintenant"
+msgstr "Installer les mises à jour et éteindre maintenant"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
