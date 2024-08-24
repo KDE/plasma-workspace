@@ -39,6 +39,11 @@ ScreenPool::ScreenPool(QObject *parent)
     });
 
     for (const auto screens = qGuiApp->screens(); auto screen : screens) {
+        if (isOutputFake(screen)) {
+            m_fakeScreens.insert(screen);
+        }
+        insertSortedScreen(screen);
+
         connect(screen, &QScreen::geometryChanged, this, [this, screen]() {
             handleScreenGeometryChanged(screen);
         });
