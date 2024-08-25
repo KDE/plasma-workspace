@@ -122,7 +122,7 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
 
     if (mode & Selection) {
         Ignore lock(m_selectionLocklevel);
-        QMimeData *mimeData = data->mimeData();
+        QMimeData *mimeData = data->newQMimeData();
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
             mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
         }
@@ -130,7 +130,7 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
         m_clip->setMimeData(mimeData, QClipboard::Selection);
     }
     if (mode & Clipboard) {
-        QMimeData *mimeData = data->mimeData(); // NOTE: this has to be a new mimeData because setMimeData will take ownership
+        QMimeData *mimeData = data->newQMimeData(); // The clipboard will take ownership
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
             mimeData->setData(QStringLiteral("application/x-kde-onlyReplaceEmpty"), "1");
         } else if (updateReason == ClipboardUpdateReason::SyncSelection) {

@@ -70,7 +70,7 @@ public:
     /**
      * Returns a pointer to a QMimeData suitable for QClipboard::setMimeData().
      */
-    QMimeData *mimeData() const;
+    QMimeData *newQMimeData() const;
 
     /**
      * Write object on datastream
