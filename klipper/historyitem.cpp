@@ -217,7 +217,7 @@ QImage HistoryItem::image() const
     return m_image;
 }
 
-QMimeData *HistoryItem::mimeData() const
+QMimeData *HistoryItem::newQMimeData() const
 {
     using namespace Mimetypes;
     QMimeData *data = new QMimeData();

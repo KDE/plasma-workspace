@@ -77,7 +77,7 @@ void KlipperTest::testBug465225()
         QCOMPARE(HistoryModel::self()->rowCount(), 1);
         QCOMPARE(HistoryModel::self()->first()->type(), HistoryItemType::Image);
 
-        auto mimeData = HistoryModel::self()->first()->mimeData();
+        auto mimeData = HistoryModel::self()->first()->newQMimeData();
 
         QMimeData *data = new QMimeData;
         data->setText(QDateTime::currentDateTime().toString());
