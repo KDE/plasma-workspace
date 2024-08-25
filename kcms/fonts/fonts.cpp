@@ -158,7 +158,7 @@ void KFonts::save()
 void KFonts::adjustFont(const QFont &font, const QString &category)
 {
     QFont selFont = font;
-    int ret = KFontChooserDialog::getFont(selFont, KFontChooser::NoDisplayFlags);
+    int ret = KFontChooserDialog::getFont(selFont, KFontChooser::NoDisplayFlags, QApplication::activeWindow());
 
     if (ret == QDialog::Accepted) {
         if (category == QLatin1String("font")) {
@@ -182,7 +182,7 @@ void KFonts::adjustAllFonts()
 {
     QFont font = fontsSettings()->font();
     KFontChooser::FontDiffFlags fontDiffFlags;
-    int ret = KFontChooserDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags);
+    int ret = KFontChooserDialog::getFontDiff(font, fontDiffFlags, KFontChooser::NoDisplayFlags, QApplication::activeWindow());
 
     if (ret == QDialog::Accepted && fontDiffFlags) {
         fontsSettings()->setFont(applyFontDiff(fontsSettings()->font(), font, fontDiffFlags));
