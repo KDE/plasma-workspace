@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-05-12 09:49+0200\n"
+"PO-Revision-Date: 2024-08-24 11:54+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -42,9 +43,7 @@ msgstr[1] "Wylogowanie nastąpi za %1 sekundy"
 msgstr[2] "Wylogowanie nastąpi za %1 sekund"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] "Wgrywanie uaktualnień i ponowne uruchomienie za 1 sekundę"
@@ -119,7 +118,7 @@ msgstr "Wgraj uaktualnienia i uruchom ponownie"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Wgraj uaktualnienia i uruchom ponownie"
+msgstr "Wgraj uaktualnienia i uruchom ponownie teraz"
 
 #: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
 #, kde-format
@@ -132,20 +131,16 @@ msgid "Restart Now"
 msgstr "Uruchom ponownie"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Wgraj uaktualnienia i uruchom ponownie"
+msgstr "Wgraj uaktualnienia i wyłącz"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Wgraj uaktualnienia i uruchom ponownie"
+msgstr "Wgraj uaktualnienia i wyłącz teraz"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format
