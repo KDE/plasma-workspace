@@ -20,18 +20,20 @@ KSvg.SvgItem {
     property double verticalRotationOffset: 0
     property string rotationCenterHintId
     readonly property double horizontalRotationCenter: {
-        if (svg.hasElement(rotationCenterHintId)) {
-            var hintedCenterRect = svg.elementRect(rotationCenterHintId),
-                handRect = svg.elementRect(elementId),
+        const { elements } = svg;
+        if (elements.has(rotationCenterHintId)) {
+            var hintedCenterRect = elements.rect(rotationCenterHintId),
+                handRect = elements.rect(elementId),
                 hintedX = hintedCenterRect.x - handRect.x + hintedCenterRect.width/2;
             return Math.round(hintedX * svgScale) + Math.round(hintedX * svgScale) % 2;
         }
         return width/2;
     }
     readonly property double verticalRotationCenter: {
-        if (svg.hasElement(rotationCenterHintId)) {
-            var hintedCenterRect = svg.elementRect(rotationCenterHintId),
-                handRect = svg.elementRect(elementId),
+        const { elements } = svg;
+        if (elements.has(rotationCenterHintId)) {
+            var hintedCenterRect = elements.rect(rotationCenterHintId),
+                handRect = elements.rect(elementId),
                 hintedY = hintedCenterRect.y - handRect.y + hintedCenterRect.height/2;
             return Math.round(hintedY * svgScale) + width % 2;
         }

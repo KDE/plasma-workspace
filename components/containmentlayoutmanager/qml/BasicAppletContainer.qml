@@ -85,7 +85,6 @@ ContainmentLayoutManager.AppletContainer {
     background: KSvg.FrameSvgItem {
         id: background
 
-        property bool blurEnabled: false
         property Item maskItem: null
 
         prefix: blurEnabled ? "blurred" : ""
@@ -103,17 +102,9 @@ ContainmentLayoutManager.AppletContainer {
             }
         }
 
-        function bindBlurEnabled() {
-            // bind to api and hints automatically, refresh non-observable prefix manually
-            blurEnabled = Qt.binding(() =>
-                   GraphicsInfo.api !== GraphicsInfo.Software
-                && (appletContainer.applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
-                && hasElementPrefix("blurred")
-            );
-        }
-
-        Component.onCompleted: bindBlurEnabled()
-        onRepaintNeeded: bindBlurEnabled()
+        readonly property bool blurEnabled: GraphicsInfo.api !== GraphicsInfo.Software
+            && (appletContainer.applet.plasmoid.effectiveBackgroundHints & PlasmaCore.Types.StandardBackground)
+            && elements.hasPrefix("blurred")
 
         onBlurEnabledChanged: {
             if (blurEnabled) {

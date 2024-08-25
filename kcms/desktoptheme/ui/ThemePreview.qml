@@ -68,34 +68,31 @@ Item {
 
             KSvg.Svg {
                 id: clockSvg
+
                 imagePath: "widgets/clock"
-                function estimateHorizontalHandShadowOffset() {
-                    var id = "hint-hands-shadow-offset-to-west";
-                    if (hasElement(id)) {
-                        return -elementSize(id).width;
+
+                readonly property real naturalHorizontalHandShadowOffset: {
+                    let id = "hint-hands-shadow-offset-to-west";
+                    if (elements.has(id)) {
+                        return -elements.size(id).width;
                     }
                     id = "hint-hands-shadows-offset-to-east";
-                    if (hasElement(id)) {
-                        return elementSize(id).width;
+                    if (elements.has(id)) {
+                        return elements.size(id).width;
                     }
                     return 0;
                 }
-                function estimateVerticalHandShadowOffset() {
-                    var id = "hint-hands-shadow-offset-to-north";
-                    if (hasElement(id)) {
-                        return -elementSize(id).height;
+
+                readonly property real naturalVerticalHandShadowOffset: {
+                    let id = "hint-hands-shadow-offset-to-north";
+                    if (elements.has(id)) {
+                        return -elements.size(id).height;
                     }
                     id = "hint-hands-shadow-offset-to-south";
-                    if (hasElement(id)) {
-                        return elementSize(id).height;
+                    if (elements.has(id)) {
+                        return elements.size(id).height;
                     }
                     return 0;
-                }
-                property double naturalHorizontalHandShadowOffset: estimateHorizontalHandShadowOffset()
-                property double naturalVerticalHandShadowOffset: estimateVerticalHandShadowOffset()
-                onRepaintNeeded: {
-                    naturalHorizontalHandShadowOffset = estimateHorizontalHandShadowOffset();
-                    naturalVerticalHandShadowOffset = estimateVerticalHandShadowOffset();
                 }
             }
 
