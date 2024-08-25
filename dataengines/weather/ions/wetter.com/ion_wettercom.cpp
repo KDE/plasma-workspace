@@ -697,6 +697,7 @@ void WetterComIon::updateWeather(const QString &source, bool parseError)
         qCDebug(IONENGINE_WETTERCOM) << "Something went wrong when parsing weather data for source:" << source << placeInfo.displayName;
     }
 
+    Q_EMIT cleanUpData(source);
     setData(weatherSource, data);
 }
 

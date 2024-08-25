@@ -74,6 +74,8 @@ void WeatherEngine::removeIonSource(const QString &source)
                 // forget about it
                 m_ionUsage.erase(it);
                 disconnect(ion, &IonInterface::forceUpdate, this, &WeatherEngine::forceUpdate);
+                disconnect(ion, &IonInterface::cleanUpData, this, &WeatherEngine::removeAllData);
+
                 qCDebug(WEATHER) << "Ion no longer used as source:" << ionName;
             } else {
                 --(it.value());
@@ -111,6 +113,8 @@ bool WeatherEngine::sourceRequestEvent(const QString &source)
     if (it == m_ionUsage.end()) {
         m_ionUsage.insert(ionName, 1);
         connect(ion, &IonInterface::forceUpdate, this, &WeatherEngine::forceUpdate);
+        connect(ion, &IonInterface::cleanUpData, this, &WeatherEngine::removeAllData);
+
         qCDebug(WEATHER) << "Ion now used as source:" << ionName;
     } else {
         ++(*it);

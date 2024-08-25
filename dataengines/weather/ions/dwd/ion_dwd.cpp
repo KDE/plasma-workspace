@@ -659,6 +659,7 @@ void DWDIon::updateWeather(const QString &source)
     data.insert(QStringLiteral("Credit"), i18nc("credit line, don't change name!", "Source: Deutscher Wetterdienst"));
     data.insert(QStringLiteral("Credit Url"), QStringLiteral("https://www.dwd.de/"));
 
+    Q_EMIT cleanUpData(source);
     setData(weatherSource, data);
 }
 

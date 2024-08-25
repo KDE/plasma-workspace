@@ -205,6 +205,10 @@ public Q_SLOTS:
 
 Q_SIGNALS:
     void forceUpdate(IonInterface *ion, const QString &source);
+    /**
+     * Provides a way for the ion to request clean-up data in the Wether Engine
+     */
+    void cleanUpData(const QString &source);
 
 protected:
     /**

@@ -1562,6 +1562,8 @@ void EnvCanadaIon::updateWeather(const QString &source)
 
     data.insert(QStringLiteral("Credit"), i18nc("credit line, keep string short", "Data from Environment and Climate Change\302\240Canada"));
     data.insert(QStringLiteral("Credit Url"), weatherData.creditUrl);
+
+    Q_EMIT cleanUpData(source);
     setData(source, data);
 
     qCDebug(IONENGINE_ENVCAN) << "Updated weather:" << source << data;

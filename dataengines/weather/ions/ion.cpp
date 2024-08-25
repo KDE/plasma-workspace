@@ -27,6 +27,7 @@ IonInterface::IonInterface(QObject *parent)
     : Plasma5Support::DataEngine(parent)
     , d(new Private(this))
 {
+    connect(this, &IonInterface::cleanUpData, this, &IonInterface::removeAllData);
 }
 
 IonInterface::~IonInterface()

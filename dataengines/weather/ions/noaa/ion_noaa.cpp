@@ -200,7 +200,7 @@ void NOAAIon::getStationList()
 
 void NOAAIon::setUpStation(const QString &source)
 {
-    removeAllData(source);
+    Q_EMIT cleanUpData(source);
 
     QString dataKey = source;
     dataKey.remove(u"noaa|weather|"_s);
@@ -516,6 +516,7 @@ void NOAAIon::updateWeather(const QString &source)
 
     data.insert(u"Credit"_s, i18nc("credit line, keep string short)", "Data from NOAA National\302\240Weather\302\240Service"));
 
+    Q_EMIT cleanUpData(source);
     setData(source, data);
 }
 
