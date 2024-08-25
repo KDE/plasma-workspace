@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2024-05-12 09:49+0200\n"
+"PO-Revision-Date: 2024-08-24 11:54+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
@@ -109,7 +110,7 @@ msgstr "Wgraj uaktualnienia i uruchom ponownie"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr "Wgraj uaktualnienia i uruchom ponownie"
+msgstr "Wgraj uaktualnienia i uruchom ponownie teraz"
 
 #: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
