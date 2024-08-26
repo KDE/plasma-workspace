@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # Frederik Schwarzer <schwarzer@kde.org>, 2009, 2014, 2022.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2019, 2021.
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: menu.cpp:99
 #, kde-format
