@@ -31,7 +31,6 @@ msgstr ""
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
 msgctxt "@title:window"
 msgid "Open Image"
 msgstr "Åpne bakgrunnsbilde"
@@ -104,7 +103,6 @@ msgstr "Neste bakgrunnsbilde"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
 #, fuzzy, kde-format
-#| msgid "Image Files"
 msgid "Images"
 msgstr "Bildefiler"
 
@@ -182,7 +180,6 @@ msgstr ""
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:330
 #, fuzzy, kde-format
-#| msgid "Image Files"
 msgid "Media Files"
 msgstr "Bildefiler"
 

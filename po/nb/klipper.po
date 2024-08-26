@@ -758,7 +758,6 @@ msgstr ""
 
 #: klipperpopup.cpp:107
 #, fuzzy, kde-format
-#| msgid "Clipboard is empty"
 msgid "Clipboard Items"
 msgstr "Utklippstavla er tom"
 

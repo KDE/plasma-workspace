@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-06 02:32+0000\n"
-"PO-Revision-Date: 2024-04-05 12:05+0300\n"
+"PO-Revision-Date: 2024-08-25 20:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,7 +39,7 @@ msgstr "Fare Eylemleri Eklentisini Yapılandır"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "KDE Plasma 6.0 Geliştirme"
+msgstr "KDE Plasma 6.0 Geliştirme Sürümü"
 
 #: desktopview.cpp:214
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "KDE Plasma 6.0 Sürüm Adayı 2"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "KDE Plasma %1 Geliştirme"
+msgstr "KDE Plasma %1 Geliştirme Sürümü"
 
 #: desktopview.cpp:256
 #, kde-format

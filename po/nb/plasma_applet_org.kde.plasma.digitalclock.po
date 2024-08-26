@@ -340,7 +340,6 @@ msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:206
 #, fuzzy, kde-format
-#| msgid "Time Zones"
 msgid "Add More Time Zones"
 msgstr "Tidssoner"
 

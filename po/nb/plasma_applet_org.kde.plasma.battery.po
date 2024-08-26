@@ -99,7 +99,6 @@ msgstr "%1%"
 
 #: package/contents/ui/main.qml:75
 #, fuzzy, kde-format
-#| msgid "The battery applet has enabled system-wide inhibition"
 msgid "The battery applet has enabled suppressing sleep and screen locking"
 msgstr "Batteri-miniprogrammet har slått på hindring for hele systemet"
 
@@ -340,7 +339,6 @@ msgstr ""
 
 #: package/contents/ui/PowerProfileItem.qml:107
 #, fuzzy, kde-format
-#| msgid "No Batteries Available"
 msgctxt "Power profile"
 msgid "Not available"
 msgstr "Ingen batterier tilgjengelig"

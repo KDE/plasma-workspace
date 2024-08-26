@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2018, 2020, 2022.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
@@ -6,22 +7,22 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2023-02-01 23:20+0100\n"
-"Last-Translator: Jannick Kuhr <opensource@kuhr.org>\n"
+"PO-Revision-Date: 2024-07-25 21:58+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:151
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Aktualisierungen installieren und neu starten in 1 Sekunde"
+msgstr[1] "Aktualisierungen installieren und neu starten in %1 Sekunden"
 
 #: contents/logout/Logout.qml:152
 #, kde-format
@@ -71,12 +72,10 @@ msgid "Sleep"
 msgstr "Standby-Modus"
 
 #: contents/logout/Logout.qml:201
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr "Standby-Modus"
+msgstr "Standby-Modus jetzt aktivieren"
 
 #: contents/logout/Logout.qml:210
 #, kde-format
@@ -84,22 +83,21 @@ msgid "Hibernate"
 msgstr "Ruhezustand"
 
 #: contents/logout/Logout.qml:211
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "Hibernate Now"
-msgstr "Ruhezustand"
+msgstr "Ruhezustand jetzt aktivieren"
 
 #: contents/logout/Logout.qml:222
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart"
-msgstr ""
+msgstr "Aktualisierungen installieren und neu starten"
 
 #: contents/logout/Logout.qml:223
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Restart Now"
-msgstr ""
+msgstr "Aktualisierungen jetzt installieren und neu starten"
 
 #: contents/logout/Logout.qml:225 contents/logout/Logout.qml:238
 #, kde-format
@@ -107,10 +105,9 @@ msgid "Restart"
 msgstr "Neu starten"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Neu starten"
+msgstr "Jetzt neu starten"
 
 #: contents/logout/Logout.qml:251
 #, kde-format
@@ -118,10 +115,9 @@ msgid "Shut Down"
 msgstr "Herunterfahren"
 
 #: contents/logout/Logout.qml:252
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Herunterfahren"
+msgstr "Jetzt herunterfahren"
 
 #: contents/logout/Logout.qml:262
 #, kde-format
@@ -129,10 +125,9 @@ msgid "Log Out"
 msgstr "Abmelden"
 
 #: contents/logout/Logout.qml:263
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Abmelden"
+msgstr "Jetzt Abmelden"
 
 #: contents/logout/Logout.qml:273
 #, kde-format

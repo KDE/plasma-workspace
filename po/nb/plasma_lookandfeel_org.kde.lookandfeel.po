@@ -105,7 +105,6 @@ msgstr "Start på nytt"
 
 #: contents/logout/Logout.qml:226 contents/logout/Logout.qml:239
 #, fuzzy, kde-format
-#| msgid "Restart"
 msgid "Restart Now"
 msgstr "Start på nytt"
 
