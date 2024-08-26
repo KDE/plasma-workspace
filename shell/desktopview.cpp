@@ -91,7 +91,6 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
             resetAccentColor();
         }
     });
-    connect(this, &ContainmentView::containmentChanged, this, &DesktopView::slotContainmentChanged);
 
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
     m_showPreviewBanner = KConfigGroup(KSharedConfig::openConfig(u"kdeglobals"_s), u"General"_s).readEntry("ShowDesktopPreviewBanner", true);
