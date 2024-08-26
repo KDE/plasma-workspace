@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2009, 2010, 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2009, 2010, 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2014, 2015, 2019, 2021.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2009, 2010.
 # Frederik Schwarzer <schwarzer@kde.org>, 2011, 2012, 2016, 2022.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2023-12-21 18:48+0100\n"
+"PO-Revision-Date: 2024-08-20 20:57+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -35,11 +35,10 @@ msgid "Log Out"
 msgstr "Abmelden"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Knopf zum Abmelden anzeigen"
+msgstr "Abmeldedialog anzeigen"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -118,17 +117,15 @@ msgid "End the session"
 msgstr "Sitzung beenden"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Knopf zum Abmelden anzeigen"
+msgstr "Abmeldedialog anzeigen"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Rechner ausschalten"
+msgstr "Sitzung abmelden, den Rechner ausschalten oder neu starten"
 
 #: contents/ui/data.js:47
 #, kde-format

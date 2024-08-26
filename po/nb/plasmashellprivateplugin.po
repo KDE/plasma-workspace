@@ -357,7 +357,6 @@ msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:489
 #, fuzzy, kde-format
-#| msgid "All Widgets"
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Alle elementer"

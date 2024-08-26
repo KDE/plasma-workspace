@@ -526,25 +526,21 @@ msgstr ""
 
 #: soliddeviceengine.cpp:391
 #, fuzzy
-#| msgid "Camera Battery"
 msgid "Tablet Battery"
 msgstr "Kamerabatterui"
 
 #: soliddeviceengine.cpp:391
 #, fuzzy
-#| msgid "Phone Battery"
 msgid "Headphone Battery"
 msgstr "Telefonbatteri"
 
 #: soliddeviceengine.cpp:392
 #, fuzzy
-#| msgid "Mouse Battery"
 msgid "Headset Battery"
 msgstr "Mus-batteri"
 
 #: soliddeviceengine.cpp:392
 #, fuzzy
-#| msgid "Mouse Battery"
 msgid "Touchpad Battery"
 msgstr "Mus-batteri"
 

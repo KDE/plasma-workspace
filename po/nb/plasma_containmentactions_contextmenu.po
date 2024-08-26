@@ -38,8 +38,6 @@ msgstr "Lås skjermen"
 
 #: menu.cpp:120
 #, fuzzy, kde-format
-#| msgctxt "plasma_containmentactions_contextmenu"
-#| msgid "Lock Screen"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
 msgstr "Lås skjermen"

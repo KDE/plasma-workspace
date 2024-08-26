@@ -38,7 +38,6 @@ msgstr ""
 
 #: contents/ui/ConfigGeneral.qml:42
 #, fuzzy, kde-format
-#| msgid "Lock the screen"
 msgctxt "@option:check"
 msgid "Show logout screen"
 msgstr "Lås skjermen"
@@ -121,7 +120,6 @@ msgstr ""
 
 #: contents/ui/data.js:39
 #, fuzzy, kde-format
-#| msgid "Lock the screen"
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
 msgstr "Lås skjermen"

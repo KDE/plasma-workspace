@@ -307,7 +307,6 @@ msgstr ""
 
 #: declarative/qml/BarcodePage.qml:52
 #, fuzzy, kde-format
-#| msgid "Add to Clipboard"
 msgid "Return to Clipboard"
 msgstr "Legg til utklippstavla"
 
@@ -329,7 +328,6 @@ msgstr ""
 
 #: declarative/qml/ClipboardMenu.qml:185
 #, fuzzy, kde-format
-#| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Historie for utklippstavle"
 
@@ -377,7 +375,6 @@ msgstr ""
 
 #: declarative/qml/EditPage.qml:88
 #, fuzzy, kde-format
-#| msgid "&Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "&Avbryt"
@@ -853,7 +850,6 @@ msgstr ""
 
 #: klipperpopup.cpp:33
 #, fuzzy, kde-format
-#| msgid "Clipboard history"
 msgid "Clipboard Popup"
 msgstr "Historie for utklippstavle"
 

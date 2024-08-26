@@ -339,7 +339,6 @@ msgstr ""
 
 #: declarative/qml/BarcodePage.qml:52
 #, fuzzy, kde-format
-#| msgid "Add to Clipboard"
 msgid "Return to Clipboard"
 msgstr "Legg til på utklippstavla"
 
@@ -361,7 +360,6 @@ msgstr ""
 
 #: declarative/qml/ClipboardMenu.qml:185
 #, fuzzy, kde-format
-#| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Utklippshistorikk"
 
@@ -377,14 +375,11 @@ msgstr "Utklippstavla er tom"
 
 #: declarative/qml/DelegateToolButtons.qml:26
 #, fuzzy, kde-format
-#| msgid "Include MIME actions"
 msgid "Invoke action"
 msgstr "Ta med MIME-handlingar"
 
 #: declarative/qml/DelegateToolButtons.qml:39
 #, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
 msgid "Show QR code"
 msgstr "Vis &strekkode …"
 
@@ -395,7 +390,6 @@ msgstr ""
 
 #: declarative/qml/DelegateToolButtons.qml:69
 #, fuzzy, kde-format
-#| msgid "For an item chosen from history"
 msgid "Remove from history"
 msgstr "For ei oppføring valt i historikken"
 
@@ -413,7 +407,6 @@ msgstr ""
 
 #: declarative/qml/EditPage.qml:88
 #, fuzzy, kde-format
-#| msgid "&Cancel"
 msgctxt "@action:button"
 msgid "Cancel"
 msgstr "&Avbryt"
@@ -928,7 +921,6 @@ msgstr ""
 
 #: klipperpopup.cpp:33
 #, fuzzy, kde-format
-#| msgid "Clipboard history"
 msgid "Clipboard Popup"
 msgstr "Utklippshistorikk"
 

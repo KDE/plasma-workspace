@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-06-09 21:23+0300\n"
+"PO-Revision-Date: 2024-08-25 20:51+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -39,7 +39,7 @@ msgstr "Fare Eylemleri Eklentisini Yapılandır"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
-msgstr "KDE Plasma 6.0 Geliştirme"
+msgstr "KDE Plasma 6.0 Geliştirme Sürümü"
 
 #: desktopview.cpp:224
 #, kde-format
@@ -75,7 +75,7 @@ msgstr "KDE Plasma 6.0 Sürüm Adayı 2"
 #, kde-format
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
-msgstr "KDE Plasma %1 Geliştirme"
+msgstr "KDE Plasma %1 Geliştirme Sürümü"
 
 #: desktopview.cpp:266
 #, kde-format
@@ -200,7 +200,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %​%2"
 
 #: osd.cpp:88
 #, kde-format

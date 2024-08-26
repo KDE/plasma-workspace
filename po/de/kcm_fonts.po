@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Alois Spitzbart <spitz234@hotmail.com>
 # Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
 # Stephan Johach <hunsum@gmx.de>, 2005, 2006.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2010.
@@ -9,15 +10,15 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2023-04-26 20:10+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
-"Language-Team: German <kde-i18n-de@kde.org>\n"
+"PO-Revision-Date: 2024-05-20 13:02+0200\n"
+"Last-Translator: Alois Spitzbart <spitz234@hotmail.com>\n"
+"Language-Team: de\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -289,6 +290,16 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>Auf TFT- oder LCD-Bildschirmen besteht jedes einzelne Pixel aus drei "
+"oder vier kleineren monochromen Lichtpunkten. Diese <emphasis>Subpixel</"
+"emphasis> können unabhängig voneinander verändert werden, um die Qualität "
+"der dargestellten Schriften weiter zu verbessern.</para> <para>Die "
+"Darstellungsqualität wird nur dann verbessert, wenn die Auswahl mit der Art "
+"und Weise übereinstimmt, in der die Subpixel Ihres Displays ausgerichtet "
+"sind. Die meisten Bildschirme haben eine lineare Anordnung von "
+"<emphasis>RGB</emphasis>-Subpixeln, einige haben <emphasis>BGR</emphasis> "
+"und einige exotische Anordnungen werden von dieser Funktion nicht "
+"unterstützt.</para>Dies funktioniert nicht mit CRT-Monitoren."
 
 #: ui/main.qml:314
 #, kde-format
@@ -305,6 +316,10 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"Hinting ist eine Technik, bei der in eine Schrift eingebettete Hinweise "
+"verwendet werden, um die Rendering-Qualität besonders bei kleinen Größen zu "
+"verbessern. Stärkeres Hinting führt im Allgemeinen zu schärferen Kanten, "
+"aber die kleinen Buchstaben ähneln ihrer Form in großen Größen weniger stark."
 
 #: ui/main.qml:372
 #, kde-format
@@ -322,6 +337,14 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>Geben Sie hier den DPI-Wert Ihres Bildschirms ein, damit die Schrift "
+"auf dem Bildschirm mit ihrer physischen Größe übereinstimmt, wenn sie "
+"ausgegeben wird. Das Ändern dieser Option gegenüber dem Standardwert führt "
+"bei vielen Anwendungen zu Konflikten; einige Symbole und Bilder werden "
+"möglicherweise nicht wie erwartet skaliert.</para><para>Um die Textgröße zu "
+"erhöhen, ändern Sie die Größe der Schriftarten oben. Um alles zu skalieren, "
+"verwenden Sie den Skalierungsschieber auf der Seite <interface>Anzeige & "
+"Monitor</interface>.</para>"
 
 #: ui/main.qml:406
 #, kde-format

@@ -66,7 +66,6 @@ msgstr "© Craig Drummond, 2007"
 
 #: apps/Installer.cpp:124
 #, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr "Gjør dialogvinduet forbigående for et X-program oppgitt ved winId"
 

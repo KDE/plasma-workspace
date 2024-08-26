@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-03-09 18:30+0100\n"
+"PO-Revision-Date: 2024-08-25 12:08+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.11.70\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -41,13 +41,11 @@ msgstr[0] "Loggar ut om 1 sekund"
 msgstr[1] "Loggar ut om %1 sekund"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Installerer programoppdateringar og startar på nytt om 1 sekund"
-msgstr[1] "Installerer programoppdateringar og startar på nytt om %1 sekund"
+msgstr[0] "Installerer programoppdateringar og slår av om 1 sekund"
+msgstr[1] "Installerer programoppdateringar og slår av om %1 sekund"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -123,20 +121,16 @@ msgid "Restart Now"
 msgstr "Start på nytt no"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "Installer oppdateringar og start på nytt"
+msgstr "Installer oppdateringar og slå av"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "Installer oppdateringar og start på nytt"
+msgstr "Installer oppdateringar og slå av no"
 
 # Teksten bør vera kort, for å unngå å bli delt over fleire linjer (så «Slå av maskina», som stod før, er gjerne hakket for langt), sidan dei andre tekstane er på éi linje.
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
