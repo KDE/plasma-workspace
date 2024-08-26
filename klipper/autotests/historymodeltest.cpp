@@ -7,8 +7,10 @@
 #include "../historymodel.h"
 #include "../historyitem.h"
 #include "systemclipboard.h"
+#include "mimetypes.h"
 
 #include <QAbstractItemModelTester>
+#include <QMimeData>
 #include <QStandardPaths>
 #include <QTest>
 
@@ -180,12 +182,50 @@ void HistoryModelTest::testType_data()
     QTest::addColumn<HistoryItem *>("item");
     QTest::addColumn<HistoryItemType>("expectedType");
 
-    auto item = HistoryItem::create(QStringLiteral("foo"));
-    QTest::newRow("text") << item << HistoryItemType::Text;
-    item = HistoryItem::create(QImage());
-    QTest::newRow("image") << item << HistoryItemType::Image;
-    item = HistoryItem::create(QList<QUrl>());
-    QTest::newRow("url") << item << HistoryItemType::Url;
+    auto mimeDataRow = []<typename KF, typename V>(const char *tag, const KF &keyOrFunc, const V &value, HistoryItemType type) {
+        QMimeData mimeData;
+        if constexpr (std::is_same_v<QString, KF>) {
+            mimeData.setData(keyOrFunc, value);
+        } else if constexpr (std::is_member_function_pointer_v<KF>) {
+            (mimeData.*keyOrFunc)(value);
+        }
+        // `QTestData &operator<<(QTestData &data, const T &value)` will try to
+        // append a pointer to the smart pointer instead of the smart pointer.
+        // Because of that, we have to use a raw pointer or else we'll segfault.
+        QTest::newRow(tag) << HistoryItem::create(&mimeData).release() << type;
+    };
+    auto readFile = [](const char *filePath) {
+        QFile file(QFINDTESTDATA(filePath));
+        file.open(QFile::ReadOnly);
+        auto data = file.readAll();
+        file.close();
+        return data;
+    };
+
+    mimeDataRow("mimedata_invalid", nullptr, nullptr, HistoryItemType::Invalid);
+
+    mimeDataRow("mimedata_text_text", &QMimeData::setText, QStringLiteral("foo"), HistoryItemType::Text);
+    mimeDataRow("mimedata_text_invalid", &QMimeData::setText, QString{}, HistoryItemType::Invalid);
+
+    mimeDataRow("mimedata_html_text", &QMimeData::setHtml, QStringLiteral("foo"), HistoryItemType::Text);
+    mimeDataRow("mimedata_html_invalid", &QMimeData::setHtml, QString{}, HistoryItemType::Invalid);
+
+    mimeDataRow("mimedata_image_image", &QMimeData::setImageData, QImage{1, 1, QImage::Format_ARGB32_Premultiplied}, HistoryItemType::Image);
+    mimeDataRow("mimedata_image_invalid", &QMimeData::setImageData, QImage{}, HistoryItemType::Invalid);
+
+    mimeDataRow("mimedata_urls_url", &QMimeData::setUrls, QList<QUrl>{QUrl::fromUserInput(QStringLiteral("url"))}, HistoryItemType::Url);
+    mimeDataRow("mimedata_urls_invalid", &QMimeData::setUrls, QList<QUrl>{QUrl{}}, HistoryItemType::Invalid);
+
+    mimeDataRow("mimedata_data_invalid", QStringLiteral("asdf"), "asdf", HistoryItemType::Invalid);
+
+    mimeDataRow("mimedata_markdown_text", Mimetypes::Text::markdown, "foo", HistoryItemType::Text);
+    mimeDataRow("mimedata_markdown_invalid", Mimetypes::Text::markdown, "", HistoryItemType::Invalid);
+
+    mimeDataRow("mimedata_png_image", Mimetypes::Image::png, readFile("./data/1x1.png"), HistoryItemType::Image);
+    mimeDataRow("mimedata_png_invalid", Mimetypes::Image::png, "", HistoryItemType::Invalid);
+
+    QTest::newRow("string_text") << HistoryItem::create(QStringLiteral("foo")).release() << HistoryItemType::Text;
+    QTest::newRow("string_invalid") << HistoryItem::create(QString{}).release() << HistoryItemType::Invalid;
 }
 
 void HistoryModelTest::testType()
@@ -197,8 +237,11 @@ void HistoryModelTest::testType()
 
     QFETCH(HistoryItem *, item);
     QFETCH(HistoryItemType, expectedType);
-    history->insert(HistoryItemSharedPtr(item));
-    QCOMPARE(history->index(0).data(HistoryModel::TypeRole).value<HistoryItemType>(), expectedType);
+    QCOMPARE(item ? item->type() : HistoryItemType::Invalid, expectedType);
+    if (item) {
+        history->insert(HistoryItemSharedPtr(item));
+        QCOMPARE(history->index(0).data(HistoryModel::TypeRole).value<HistoryItemType>(), expectedType);
+    }
 }
 
 QTEST_MAIN(HistoryModelTest)
