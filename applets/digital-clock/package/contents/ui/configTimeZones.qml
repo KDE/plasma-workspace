@@ -130,7 +130,7 @@ KCMUtils.ScrollViewKCM {
 
                 QQC2.Button {
                     visible: !timeZoneListItem.model.isLocalTimeZone && configuredTimeZoneList.count > 1
-                    icon.name: "edit-delete"
+                    icon.name: "edit-delete-remove"
                     font.bold: false
                     onClicked: timeZoneListItem.model.checked = false;
                     QQC2.ToolTip {
