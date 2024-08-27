@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"POT-Creation-Date: 2024-08-27 00:41+0000\n"
 "PO-Revision-Date: 2020-10-08 10:40+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -33,112 +33,112 @@ msgstr "qiilaq69@gmail.com"
 msgid "Configure Mouse Actions Plugin"
 msgstr "Hiiretoimingute plugina seadistamine"
 
-#: desktopview.cpp:221
+#: desktopview.cpp:220
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Dev"
 msgstr "Plasma"
 
-#: desktopview.cpp:224
+#: desktopview.cpp:223
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Alpha"
 msgstr "Plasma"
 
-#: desktopview.cpp:227
+#: desktopview.cpp:226
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 1"
 msgstr "Plasma"
 
-#: desktopview.cpp:230
+#: desktopview.cpp:229
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma 6.0 Beta 2"
 msgstr "Plasma"
 
-#: desktopview.cpp:233
+#: desktopview.cpp:232
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC1"
 msgstr "Plasma"
 
-#: desktopview.cpp:236
+#: desktopview.cpp:235
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
 msgid "KDE Plasma 6.0 RC2"
 msgstr "Plasma"
 
-#: desktopview.cpp:262
+#: desktopview.cpp:261
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Dev"
 msgstr "Plasma"
 
-#: desktopview.cpp:266
+#: desktopview.cpp:265
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1 Beta"
 msgstr "Plasma"
 
-#: desktopview.cpp:269
+#: desktopview.cpp:268
 #, kde-format
 msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
 msgid "KDE Plasma %1 Beta %2"
 msgstr ""
 
-#: desktopview.cpp:273
+#: desktopview.cpp:272
 #, fuzzy, kde-format
 #| msgid "Plasma"
 msgctxt "@label %1 is the Plasma version"
 msgid "KDE Plasma %1"
 msgstr "Plasma"
 
-#: desktopview.cpp:279
+#: desktopview.cpp:278
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Visit bugs.kde.org to report issues"
 msgstr ""
 
-#: desktopview.cpp:287
+#: desktopview.cpp:286
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
 msgstr ""
 
-#: desktopview.cpp:293
+#: desktopview.cpp:292
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
 msgstr ""
 
-#: desktopview.cpp:303
+#: desktopview.cpp:302
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
 msgstr ""
 
-#: desktopview.cpp:306
+#: desktopview.cpp:305
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
 msgstr ""
 
-#: desktopview.cpp:313
+#: desktopview.cpp:312
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
 msgstr ""
 
-#: desktopview.cpp:319
+#: desktopview.cpp:318
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -148,7 +148,7 @@ msgid ""
 "filename> config file."
 msgstr ""
 
-#: desktopview.cpp:321
+#: desktopview.cpp:320
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"

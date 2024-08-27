@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-06 05:20+0900\n"
+"PO-Revision-Date: 2024-08-25 02:28+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -392,7 +392,7 @@ msgstr "從歷史紀錄中移除"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "文字編輯區域"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format

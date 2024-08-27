@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-02-05 17:24+0900\n"
+"PO-Revision-Date: 2024-08-25 02:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -41,12 +41,10 @@ msgid_plural "Logging out in %1 seconds"
 msgstr[0] "在 %1 秒內登出"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "%1 秒後將安裝軟體更新並重新啟動"
+msgstr[0] "%1 秒後將安裝軟體更新並關機"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -116,20 +114,16 @@ msgid "Restart Now"
 msgstr "立即重新啟動"
 
 #: contents/logout/Logout.qml:261
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down"
-msgstr "立即安裝更新並重新啟動"
+msgstr "安裝更新並關機"
 
 #: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates & Shut Down Now"
-msgstr "立即安裝更新並重新啟動"
+msgstr "立即安裝更新並關機"
 
 #: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
 #, kde-format

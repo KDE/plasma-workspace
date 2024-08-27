@@ -378,7 +378,7 @@ msgstr "移出历史记录"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "文本编辑区域"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
