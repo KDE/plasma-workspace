@@ -15,6 +15,7 @@
 
 #include <KSharedConfig>
 
+#include "historyitem.h"
 #include "klipper_export.h"
 #include "urlgrabber.h"
 
@@ -97,7 +98,7 @@ protected:
     /**
      * Enter clipboard data in the history.
      */
-    [[nodiscard]] std::shared_ptr<HistoryItem> applyClipChanges(const QMimeData *data);
+    [[nodiscard]] HistoryItemSharedPtr applyClipChanges(const QMimeData *data);
 
     bool ignoreClipboardChanges() const;
 

@@ -12,6 +12,7 @@
 #include <QRecursiveMutex>
 #include <QTimer>
 
+#include "historyitem.h"
 #include "klipper_export.h"
 
 class HistoryItem;
@@ -65,7 +66,7 @@ public:
     /**
      * Traversal: Get first item
      */
-    std::shared_ptr<const HistoryItem> first() const;
+    HistoryItemSharedPtr first() const;
 
     /**
      * Inserts item into clipboard history top
@@ -73,7 +74,7 @@ public:
      * The duplicate concept is "deep", so that two text string
      * are considerd duplicate if identical.
      */
-    void insert(const std::shared_ptr<HistoryItem> &item);
+    void insert(const HistoryItemSharedPtr &item);
 
     /**
      * @short Loads history from disk.
@@ -95,7 +96,7 @@ public:
 Q_SIGNALS:
     void changed(bool isTop = false);
 
-    void actionInvoked(const std::shared_ptr<const HistoryItem> &item);
+    void actionInvoked(const HistoryItemSharedPtr &item);
 
 private:
     explicit HistoryModel();
@@ -103,7 +104,7 @@ private:
     void moveToTop(qsizetype row);
 
     std::shared_ptr<SystemClipboard> m_clip;
-    QList<std::shared_ptr<HistoryItem>> m_items;
+    QList<HistoryItemSharedPtr> m_items;
     qsizetype m_maxSize = 0;
     bool m_displayImages;
     QRecursiveMutex m_mutex;

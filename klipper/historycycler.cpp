@@ -83,26 +83,26 @@ void HistoryCycler::cyclePrev()
     }
 }
 
-HistoryItemConstPtr HistoryCycler::nextInCycle() const
+HistoryItemSharedPtr HistoryCycler::nextInCycle() const
 {
     if (m_model->hasIndex(1, 0)) {
         if (!m_cycleStartUuid.isEmpty()) {
             // check whether we are not at the end
             if (m_cycleStartUuid == m_model->index(1).data(HistoryModel::UuidRole).toByteArray()) {
-                return HistoryItemConstPtr();
+                return HistoryItemSharedPtr();
             }
         }
-        return m_model->index(1).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
+        return m_model->index(1).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemSharedPtr>();
     }
-    return HistoryItemConstPtr();
+    return HistoryItemSharedPtr();
 }
 
-HistoryItemConstPtr HistoryCycler::prevInCycle() const
+HistoryItemSharedPtr HistoryCycler::prevInCycle() const
 {
     if (m_cycleStartUuid.isEmpty()) {
-        return HistoryItemConstPtr();
+        return HistoryItemSharedPtr();
     }
-    return m_model->index(m_model->rowCount() - 1).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
+    return m_model->index(m_model->rowCount() - 1).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemSharedPtr>();
 }
 
 #include "moc_historycycler.cpp"

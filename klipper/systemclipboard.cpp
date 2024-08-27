@@ -116,7 +116,7 @@ void SystemClipboard::clear(SelectionMode mode)
     }
 }
 
-void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode mode, ClipboardUpdateReason updateReason)
+void SystemClipboard::setMimeData(const HistoryItemSharedPtr &data, SelectionMode mode, ClipboardUpdateReason updateReason)
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 

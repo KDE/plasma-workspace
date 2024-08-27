@@ -37,15 +37,15 @@ void HistoryCyclerTest::testCycle()
     QVERIFY(!history->prevInCycle());
 
     const QString fooText = QStringLiteral("foo");
-    const auto fooItem = HistoryItem::create(fooText);
+    const HistoryItemSharedPtr fooItem = HistoryItem::create(fooText);
     const auto fooUuid = fooItem->uuid();
 
     const QString barText = QStringLiteral("bar");
-    const auto barItem = HistoryItem::create(barText);
+    const HistoryItemSharedPtr barItem = HistoryItem::create(barText);
     const auto barUuid = barItem->uuid();
 
     const QString foobarText = QStringLiteral("foobar");
-    const auto foobarItem = HistoryItem::create(foobarText);
+    const HistoryItemSharedPtr foobarItem = HistoryItem::create(foobarText);
     const auto foobarUuid = foobarItem->uuid();
 
     model->insert(fooItem);
