@@ -142,7 +142,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    const std::shared_ptr<HistoryItem> &item = m_items.at(index.row());
+    const auto &item = m_items.at(index.row());
 
     switch (role) {
     case Qt::DisplayRole:
@@ -151,7 +151,7 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return item->image();
     }
     case HistoryItemConstPtrRole:
-        return QVariant::fromValue<HistoryItemConstPtr>(std::const_pointer_cast<const HistoryItem>(item));
+        return QVariant::fromValue<HistoryItemSharedPtr>(item);
     case UuidRole:
         return item->uuid();
     case TypeRole:
@@ -224,15 +224,15 @@ int HistoryModel::indexOf(const HistoryItem *item) const
     return indexOf(item->uuid());
 }
 
-HistoryItemConstPtr HistoryModel::first() const
+HistoryItemSharedPtr HistoryModel::first() const
 {
     if (m_items.empty()) {
-        return HistoryItemConstPtr();
+        return HistoryItemSharedPtr();
     }
     return m_items[0];
 }
 
-void HistoryModel::insert(const std::shared_ptr<HistoryItem> &item)
+void HistoryModel::insert(const HistoryItemSharedPtr &item)
 {
     if (m_maxSize == 0) {
         // special case - cannot insert any items

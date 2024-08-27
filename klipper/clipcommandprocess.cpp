@@ -12,7 +12,7 @@
 #include "historymodel.h"
 #include "urlgrabber.h"
 
-ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipCommand &command, const QString &clip, HistoryItemConstPtr original_item)
+ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipCommand &command, const QString &clip, HistoryItemSharedPtr original_item)
     : KProcess()
     , m_model(HistoryModel::self())
     , m_historyItem(original_item)

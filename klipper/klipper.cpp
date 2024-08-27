@@ -210,7 +210,7 @@ void Klipper::setClipboardContents(const QString &s)
     if (s.isEmpty())
         return;
     updateTimestamp();
-    auto item = HistoryItem::create(s);
+    HistoryItemSharedPtr item = HistoryItem::create(s);
     m_clip->setMimeData(item, SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
     m_historyModel->insert(item);
 }
@@ -414,7 +414,7 @@ void Klipper::slotHistoryChanged(bool isTop)
     }
 }
 
-HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
+HistoryItemSharedPtr Klipper::applyClipChanges(const QMimeData *clipData)
 {
     Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
     if (m_historyModel->rowCount() > 0) {
@@ -423,7 +423,7 @@ HistoryItemPtr Klipper::applyClipChanges(const QMimeData *clipData)
         }
     }
 
-    HistoryItemPtr item = HistoryItem::create(clipData);
+    HistoryItemSharedPtr item = HistoryItem::create(clipData);
 
     bool saveToHistory = true;
     if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayLiteral("secret")) {
@@ -447,7 +447,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     const bool selectionMode = mode == QClipboard::Selection;
     if (selectionMode && m_bIgnoreSelection) {
         if (m_bSynchronize) {
-            auto item = HistoryItem::create(data);
+            HistoryItemSharedPtr item = HistoryItem::create(data);
             if (item) [[likely]] { // applyClipChanges can return nullptr
                 m_clip->setMimeData(item, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
             }
@@ -462,7 +462,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         return;
     }
 
-    HistoryItemPtr item = applyClipChanges(data);
+    HistoryItemSharedPtr item = applyClipChanges(data);
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize && item) { // applyClipChanges can return nullptr
@@ -471,7 +471,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     }
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
     if (m_bURLGrabber && item && data->hasText()) {
-        m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
+        m_myURLGrabber->checkNewData(item);
 
         // Make sure URLGrabber doesn't repeat all the time if klipper reads the same
         // text all the time (e.g. because XFixes is not available and the application

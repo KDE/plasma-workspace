@@ -78,15 +78,15 @@ void HistoryModelTest::testInsertRemove()
     QCOMPARE(history->rowCount(), 0);
 
     const QString fooText = QStringLiteral("foo");
-    const auto fooItem = HistoryItem::create(fooText);
+    const HistoryItemSharedPtr fooItem = HistoryItem::create(fooText);
     const auto fooUuid = fooItem->uuid();
 
     const QString barText = QStringLiteral("bar");
-    const auto barItem = HistoryItem::create(barText);
+    const HistoryItemSharedPtr barItem = HistoryItem::create(barText);
     const auto barUuid = barItem->uuid();
 
     const QString foobarText = QStringLiteral("foobar");
-    const auto foobarItem = HistoryItem::create(foobarText);
+    const HistoryItemSharedPtr foobarItem = HistoryItem::create(foobarText);
     const auto foobarUuid = foobarItem->uuid();
 
     // let's insert a few items
@@ -136,7 +136,7 @@ void HistoryModelTest::testClear()
     QCOMPARE(history->rowCount(), 0);
 
     const QString barText = QStringLiteral("bar");
-    const auto barItem = HistoryItem::create(barText);
+    const HistoryItemSharedPtr barItem = HistoryItem::create(barText);
     const auto barUuid = barItem->uuid();
 
     // insert some items
@@ -161,7 +161,7 @@ void HistoryModelTest::testIndexOf()
     QVERIFY(history->indexOf(QByteArray()) < 0);
 
     const QString fooText = QStringLiteral("foo");
-    const auto fooItem = HistoryItem::create(fooText);
+    const HistoryItemSharedPtr fooItem = HistoryItem::create(fooText);
     const auto fooUuid = fooItem->uuid();
 
     // insert some items
@@ -195,9 +195,9 @@ void HistoryModelTest::testType()
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
-    QFETCH(HistoryItemPtr, item);
+    QFETCH(HistoryItem *, item);
     QFETCH(HistoryItemType, expectedType);
-    history->insert(item);
+    history->insert(HistoryItemSharedPtr(item));
     QCOMPARE(history->index(0).data(HistoryModel::TypeRole).value<HistoryItemType>(), expectedType);
 }
 

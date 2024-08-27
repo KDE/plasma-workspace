@@ -17,8 +17,8 @@ class QDataStream;
 class QUrl;
 
 class HistoryItem;
-typedef std::shared_ptr<HistoryItem> HistoryItemPtr;
-typedef std::shared_ptr<const HistoryItem> HistoryItemConstPtr;
+typedef std::unique_ptr<HistoryItem> HistoryItemPtr;
+typedef std::shared_ptr<const HistoryItem> HistoryItemSharedPtr;
 
 using MimeDataMap = QVariantMap;
 using QUrlList = QList<QUrl>;

@@ -346,7 +346,7 @@ HistoryItemPtr HistoryItem::create(const QMimeData *data)
         }
     }
     if (auto type = getType(mimeDataMap); type != HistoryItemType::Invalid) {
-        return std::make_shared<HistoryItem>(mimeDataMap, type, image);
+        return std::make_unique<HistoryItem>(mimeDataMap, type, image);
     }
     return HistoryItemPtr(); // Failed.
 }
@@ -366,7 +366,7 @@ HistoryItemPtr HistoryItem::create(QDataStream &dataStream)
     // or on startup when a previous session's clipboard history is being read.
     QImage image = mimeDataMap.value(Application::xQtImage).value<QImage>();
     if (auto type = getType(mimeDataMap); type != HistoryItemType::Invalid) {
-        return std::make_shared<HistoryItem>(mimeDataMap, type, image);
+        return std::make_unique<HistoryItem>(mimeDataMap, type, image);
     }
     qCWarning(KLIPPER_LOG) << "Failed to restore history item: Could not read MIME data";
     return HistoryItemPtr();
@@ -377,7 +377,7 @@ HistoryItemPtr HistoryItem::create(const QString &text)
     if (text.isEmpty()) {
         return nullptr;
     }
-    return std::make_shared<HistoryItem>(MimeDataMap{{Mimetypes::Text::plain, text}}, HistoryItemType::Text);
+    return std::make_unique<HistoryItem>(MimeDataMap{{Mimetypes::Text::plain, text}}, HistoryItemType::Text);
 }
 
 HistoryItemPtr HistoryItem::create(const QImage &image)
@@ -385,7 +385,7 @@ HistoryItemPtr HistoryItem::create(const QImage &image)
     if (image.isNull()) {
         return nullptr;
     }
-    return std::make_shared<HistoryItem>(MimeDataMap{{Mimetypes::Application::xQtImage, image}}, HistoryItemType::Image, image);
+    return std::make_unique<HistoryItem>(MimeDataMap{{Mimetypes::Application::xQtImage, image}}, HistoryItemType::Image, image);
 }
 
 HistoryItemPtr HistoryItem::create(const QUrlList &urls)
@@ -393,7 +393,7 @@ HistoryItemPtr HistoryItem::create(const QUrlList &urls)
     if (isEmpty(urls)) {
         return nullptr;
     }
-    return std::make_shared<HistoryItem>(MimeDataMap{{Mimetypes::Text::uriList, QVariant::fromValue(urls)}}, HistoryItemType::Url);
+    return std::make_unique<HistoryItem>(MimeDataMap{{Mimetypes::Text::uriList, QVariant::fromValue(urls)}}, HistoryItemType::Url);
 }
 
 #include "moc_historyitem.cpp"

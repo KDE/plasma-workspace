@@ -50,7 +50,7 @@ void ClipboardJob::start()
         setResult(false);
         return;
     }
-    HistoryItemConstPtr item = m_model->index(itemIndex).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemConstPtr>();
+    HistoryItemSharedPtr item = m_model->index(itemIndex).data(HistoryModel::HistoryItemConstPtrRole).value<HistoryItemSharedPtr>();
     if (operation == QLatin1String("select")) {
         m_model->moveToTop(item->uuid());
         setResult(true);
@@ -63,7 +63,7 @@ void ClipboardJob::start()
             m_model->remove(item->uuid());
             m_model->insert(HistoryItem::create(text));
             if (m_klipper->urlGrabber()) {
-                m_klipper->urlGrabber()->checkNewData(HistoryItemConstPtr(m_model->first()));
+                m_klipper->urlGrabber()->checkNewData(HistoryItemSharedPtr(m_model->first()));
             }
             setResult(true);
             return;
