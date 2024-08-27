@@ -415,7 +415,7 @@ class ClipboardTest(unittest.TestCase):
         """
         A cell has both image data and text data, which should not be ignored when images are ignored.
         """
-        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards", "IgnoreImages"], ["true", "false", "true"], True)
+        self.update_config_and_restart_clipboard(["General"] * 3, ["IgnoreSelection", "SyncClipboards", "IgnoreImages"], ["true", "false", "true"], True)
         new_text = "clip thin"
         pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
         pixbuf.fill(0xff0000ff)
@@ -424,6 +424,13 @@ class ClipboardTest(unittest.TestCase):
         content_union = Gdk.ContentProvider.new_union([content_text, content_image])
         self.gtk_copy(content_union)
         self.driver.find_element(AppiumBy.NAME, new_text)
+
+    def test_9_bug492170_disable_history_across_session(self) -> None:
+        """
+        Clips should not be saved across desktop sessions when "Save history across desktop sessions" is disabled.
+        """
+        self.update_config_and_restart_clipboard("General", "KeepClipboardContents", "false", False)
+        self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, "Fushan Wen")
 
 
 if __name__ == '__main__':
