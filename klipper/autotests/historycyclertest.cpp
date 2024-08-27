@@ -10,14 +10,21 @@
 // Qt
 #include <QObject>
 #include <QSignalSpy>
+#include <QStandardPaths>
 #include <QTest>
 
 class HistoryCyclerTest : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:
+    void initTestCase();
     void testCycle();
 };
+
+void HistoryCyclerTest::initTestCase()
+{
+    QStandardPaths::setTestModeEnabled(true);
+}
 
 void HistoryCyclerTest::testCycle()
 {

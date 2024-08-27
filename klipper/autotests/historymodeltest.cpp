@@ -11,12 +11,14 @@
 #include "systemclipboard.h"
 
 #include <QAbstractItemModelTester>
+#include <QStandardPaths>
 #include <QTest>
 
 class HistoryModelTest : public QObject
 {
     Q_OBJECT
 private Q_SLOTS:
+    void initTestCase();
     void testSetMaxSize();
     void testInsertRemove();
     void testClear();
@@ -24,6 +26,11 @@ private Q_SLOTS:
     void testType_data();
     void testType();
 };
+
+void HistoryModelTest::initTestCase()
+{
+    QStandardPaths::setTestModeEnabled(true);
+}
 
 void HistoryModelTest::testSetMaxSize()
 {
