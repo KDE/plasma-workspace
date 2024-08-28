@@ -120,13 +120,13 @@ TestCase {
             {
                 member: "testAllTypes",
                 arguments: args,
-                signature: "", // Deduct the signature automatically
+                signature: "", // Deduce the signature automatically
                 replyArgument: replyArgs
             },
             {
                 member: "testAllTypes",
                 arguments: nativeArgs,
-                signature: "", // Deduct the signature automatically
+                signature: "", // Deduce the signature automatically
                 replyArgument: replyArgs
             },
             {
