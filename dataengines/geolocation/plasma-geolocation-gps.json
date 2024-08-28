@@ -10,6 +10,7 @@
         "Description[cs]": "Geolokace z GPS adresy.",
         "Description[da]": "Geo-lokalisering ud fra GPS-adresse.",
         "Description[de]": "Geolokalisierung mittels GPS-Koordinate.",
+        "Description[en_GB]": "Geolocation from GPS address.",
         "Description[eo]": "Loktrovado el GPS adreso.",
         "Description[es]": "Geolocalización desde una dirección GPS.",
         "Description[et]": "Geolokatsioon GPS-aadressi põhjal",
@@ -60,6 +61,7 @@
         "Name[da]": "GPS til geo-lokalisering",
         "Name[de]": "Geolokalisierung GPS",
         "Name[el]": "GPS Γεωτοποθέτηση",
+        "Name[en_GB]": "Geolocation GPS",
         "Name[eo]": "GPS loktrovado",
         "Name[es]": "Geolocalización mediante GPS",
         "Name[et]": "Geolokatsioon GPS-ist",
@@ -74,6 +76,7 @@
         "Name[hr]": "GPS geolociranje",
         "Name[hsb]": "Geolokacija GPS",
         "Name[hu]": "GPS-alapú helyzetjelző",
+        "Name[ia]": "Geolocation GPS",
         "Name[id]": "Geolokasi GPS",
         "Name[is]": "GPS hnattstaðsetning",
         "Name[it]": "Geolocalizzazione GPS",
@@ -92,6 +95,7 @@
         "Name[nb]": "Geografisk plassering GPS",
         "Name[nds]": "GPS-Eersteed",
         "Name[nl]": "Geolocatie GPS",
+        "Name[nn]": "Geolocation GPS",
         "Name[pa]": "ਭੂਗੋਲਿਕ-ਟਿਕਾਣਾ GPS",
         "Name[pl]": "Geopołożenie: GPS",
         "Name[pt]": "Geo-Localização por GPS",
@@ -115,7 +119,8 @@
         "Name[vi]": "Định vị địa lí GPS",
         "Name[wa]": "GPS di djeyoplaeçmint",
         "Name[x-test]": "xxGeolocation GPSxx",
-        "Name[zh_CN]": "GPS 地理位置"
+        "Name[zh_CN]": "GPS 地理位置",
+        "Name[zh_TW]": "Geolocation GPS"
     },
     "X-KDE-ParentApp": "geolocation"
 }
