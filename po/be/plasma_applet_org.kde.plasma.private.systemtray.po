@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -189,6 +189,11 @@ msgstr "Закрыць выплыўное акно"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Паказваць схаваныя значкі"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgid "Some letters with tall characters, ascenders, descenders, etc"
+msgstr ""
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Пашырыць прастору апавяшчэнняў"

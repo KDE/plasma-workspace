@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
 "PO-Revision-Date: 2022-07-25 12:29+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -189,6 +189,11 @@ msgstr "Tanca la finestra emergent"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Mostra les icones ocultes"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgid "Some letters with tall characters, ascenders, descenders, etc"
+msgstr ""
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Expandeix la safata del sistema"

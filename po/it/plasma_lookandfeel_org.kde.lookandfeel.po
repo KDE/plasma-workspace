@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
-"PO-Revision-Date: 2024-01-31 08:50+0100\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"PO-Revision-Date: 2024-08-21 18:29+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -39,13 +39,13 @@ msgstr[0] "Chiusura della sessione in 1 secondo"
 msgstr[1] "Chiusura della sessione in %1 secondi"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Installazione degli aggiornamenti software e riavvio tra 1 secondo"
-msgstr[1] "Installazione degli aggiornamenti software e riavvio tra %1 secondi"
+msgstr[0] ""
+"Installazione degli aggiornamenti software e spegnimento tra 1 secondo"
+msgstr[1] ""
+"Installazione degli aggiornamenti software e spegnimento tra %1 secondi"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -99,64 +99,52 @@ msgid "Hibernate Now"
 msgstr "Iberna subito"
 
 #: contents/logout/Logout.qml:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Restart"
 msgctxt "@action:button Keep short"
-msgid "Install Updates & Restart"
+msgid "Install Updates and Restart"
 msgstr "Installa gli aggiornamenti e riavvia"
 
-#: contents/logout/Logout.qml:226
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates & Restart Now"
-msgstr "Installa gli aggiornamenti e riavvia subito"
-
-#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
 msgid "Restart"
 msgstr "Riavvia"
 
-#: contents/logout/Logout.qml:229 contents/logout/Logout.qml:248
+#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restart Now"
 msgstr "Riavvia subito"
 
-#: contents/logout/Logout.qml:261
+#: contents/logout/Logout.qml:260
 #, fuzzy, kde-format
 #| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#| msgid "Install Updates & Shut Down"
 msgctxt "@action:button Keep short"
-msgid "Install Updates & Shut Down"
-msgstr "Installa gli aggiornamenti e riavvia subito"
+msgid "Install Updates and Shut Down"
+msgstr "Installa gli aggiornamenti e spegni"
 
-#: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
-msgctxt "@action:button Keep short"
-msgid "Install Updates & Shut Down Now"
-msgstr "Installa gli aggiornamenti e riavvia subito"
-
-#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
+#: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
 msgid "Shut Down"
 msgstr "Spegni"
 
-#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
+#: contents/logout/Logout.qml:263 contents/logout/Logout.qml:282
 #, kde-format
 msgid "Shut Down Now"
 msgstr "Spegni subito"
 
-#: contents/logout/Logout.qml:296
+#: contents/logout/Logout.qml:294
 #, kde-format
 msgid "Log Out"
 msgstr "Chiudi sessione"
 
-#: contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:295
 #, kde-format
 msgid "Log Out Now"
 msgstr "Chiudi sessione subito"
 
-#: contents/logout/Logout.qml:307
+#: contents/logout/Logout.qml:305
 #, kde-format
 msgid "Cancel"
 msgstr "Annulla"
@@ -175,6 +163,14 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma creato da KDE"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates & Restart Now"
+#~ msgstr "Installa gli aggiornamenti e riavvia subito"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates & Shut Down Now"
+#~ msgstr "Installa gli aggiornamenti e spegni subito"
 
 #~ msgid "Keyboard Layout: %1"
 #~ msgstr "Mappatura della tastiera: %1"

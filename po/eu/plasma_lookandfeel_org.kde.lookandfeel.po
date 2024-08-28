@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
 "PO-Revision-Date: 2024-08-21 12:42+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -98,60 +98,52 @@ msgid "Hibernate Now"
 msgstr "Hibernatu orain"
 
 #: contents/logout/Logout.qml:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Restart"
 msgctxt "@action:button Keep short"
-msgid "Install Updates & Restart"
+msgid "Install Updates and Restart"
 msgstr "Instalatu eguneratzeak eta berrabiarazi"
 
-#: contents/logout/Logout.qml:226
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates & Restart Now"
-msgstr "Instalatu eguneratzeak eta berrabiarazi orain"
-
-#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
 msgid "Restart"
 msgstr "Berrabiarazi"
 
-#: contents/logout/Logout.qml:229 contents/logout/Logout.qml:248
+#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restart Now"
 msgstr "Berrabiarazi orain"
 
-#: contents/logout/Logout.qml:261
-#, kde-format
+#: contents/logout/Logout.qml:260
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Shut Down"
 msgctxt "@action:button Keep short"
-msgid "Install Updates & Shut Down"
+msgid "Install Updates and Shut Down"
 msgstr "Instalatu eguneratzeak eta itzali"
 
-#: contents/logout/Logout.qml:262
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates & Shut Down Now"
-msgstr "Instalatu eguneratzeak eta itzali orain"
-
-#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
+#: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
 msgid "Shut Down"
 msgstr "Itzali"
 
-#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
+#: contents/logout/Logout.qml:263 contents/logout/Logout.qml:282
 #, kde-format
 msgid "Shut Down Now"
 msgstr "Itzali orain"
 
-#: contents/logout/Logout.qml:296
+#: contents/logout/Logout.qml:294
 #, kde-format
 msgid "Log Out"
 msgstr "Itxi saioa"
 
-#: contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:295
 #, kde-format
 msgid "Log Out Now"
 msgstr "Itxi saioa orain"
 
-#: contents/logout/Logout.qml:307
+#: contents/logout/Logout.qml:305
 #, kde-format
 msgid "Cancel"
 msgstr "Utzi"
@@ -170,6 +162,14 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma KDEk egin du"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates & Restart Now"
+#~ msgstr "Instalatu eguneratzeak eta berrabiarazi orain"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates & Shut Down Now"
+#~ msgstr "Instalatu eguneratzeak eta itzali orain"
 
 #~ msgid "Keyboard Layout: %1"
 #~ msgstr "Teklatu-antolaera: %1"

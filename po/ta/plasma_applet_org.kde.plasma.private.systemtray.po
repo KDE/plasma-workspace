@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
 "PO-Revision-Date: 2023-12-17 16:38+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -184,6 +184,11 @@ msgstr "தெரித்தெழும் பட்டியை மூடு"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "மறைந்துள்ள சின்னங்களை காட்டு"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgid "Some letters with tall characters, ascenders, descenders, etc"
+msgstr ""
 
 #~ msgid "Expand System Tray"
 #~ msgstr "கணினித் தட்டை பெரிதாக்கு"

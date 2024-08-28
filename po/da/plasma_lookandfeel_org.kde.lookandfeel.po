@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
 "PO-Revision-Date: 2024-07-08 12:30+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -100,64 +100,52 @@ msgid "Hibernate Now"
 msgstr "Gå i dvale nu"
 
 #: contents/logout/Logout.qml:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Restart"
 msgctxt "@action:button Keep short"
-msgid "Install Updates & Restart"
+msgid "Install Updates and Restart"
 msgstr "Installér opdateringer og genstart"
 
-#: contents/logout/Logout.qml:226
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates & Restart Now"
-msgstr "Installér opdateringer og genstart nu"
-
-#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
 msgid "Restart"
 msgstr "Genstart"
 
-#: contents/logout/Logout.qml:229 contents/logout/Logout.qml:248
+#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restart Now"
 msgstr "Genstart nu"
 
-#: contents/logout/Logout.qml:261
+#: contents/logout/Logout.qml:260
 #, fuzzy, kde-format
 #| msgctxt "@action:button Keep short"
 #| msgid "Install Updates & Restart Now"
 msgctxt "@action:button Keep short"
-msgid "Install Updates & Shut Down"
+msgid "Install Updates and Shut Down"
 msgstr "Installér opdateringer og genstart nu"
 
-#: contents/logout/Logout.qml:262
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
-msgctxt "@action:button Keep short"
-msgid "Install Updates & Shut Down Now"
-msgstr "Installér opdateringer og genstart nu"
-
-#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
+#: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
 msgid "Shut Down"
 msgstr "Luk ned"
 
-#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
+#: contents/logout/Logout.qml:263 contents/logout/Logout.qml:282
 #, kde-format
 msgid "Shut Down Now"
 msgstr "Luk ned ned"
 
-#: contents/logout/Logout.qml:296
+#: contents/logout/Logout.qml:294
 #, kde-format
 msgid "Log Out"
 msgstr "Log ud"
 
-#: contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:295
 #, kde-format
 msgid "Log Out Now"
 msgstr "Log ud nu"
 
-#: contents/logout/Logout.qml:307
+#: contents/logout/Logout.qml:305
 #, kde-format
 msgid "Cancel"
 msgstr "Annullér"
@@ -176,6 +164,17 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma skabt af KDE"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates & Restart Now"
+#~ msgstr "Installér opdateringer og genstart nu"
+
+#, fuzzy
+#~| msgctxt "@action:button Keep short"
+#~| msgid "Install Updates & Restart Now"
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates & Shut Down Now"
+#~ msgstr "Installér opdateringer og genstart nu"
 
 #~ msgid "Keyboard Layout: %1"
 #~ msgstr "Tastaturlayout: %1"

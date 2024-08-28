@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
 "PO-Revision-Date: 2024-08-25 02:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -92,60 +92,52 @@ msgid "Hibernate Now"
 msgstr "立即休眠"
 
 #: contents/logout/Logout.qml:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Restart"
 msgctxt "@action:button Keep short"
-msgid "Install Updates & Restart"
+msgid "Install Updates and Restart"
 msgstr "安裝更新後重新啟動"
 
-#: contents/logout/Logout.qml:226
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates & Restart Now"
-msgstr "立即安裝更新並重新啟動"
-
-#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
 msgid "Restart"
 msgstr "重新啟動"
 
-#: contents/logout/Logout.qml:229 contents/logout/Logout.qml:248
+#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
 #, kde-format
 msgid "Restart Now"
 msgstr "立即重新啟動"
 
-#: contents/logout/Logout.qml:261
-#, kde-format
+#: contents/logout/Logout.qml:260
+#, fuzzy, kde-format
+#| msgctxt "@action:button Keep short"
+#| msgid "Install Updates & Shut Down"
 msgctxt "@action:button Keep short"
-msgid "Install Updates & Shut Down"
+msgid "Install Updates and Shut Down"
 msgstr "安裝更新並關機"
 
-#: contents/logout/Logout.qml:262
-#, kde-format
-msgctxt "@action:button Keep short"
-msgid "Install Updates & Shut Down Now"
-msgstr "立即安裝更新並關機"
-
-#: contents/logout/Logout.qml:264 contents/logout/Logout.qml:283
+#: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
 msgid "Shut Down"
 msgstr "關機"
 
-#: contents/logout/Logout.qml:265 contents/logout/Logout.qml:284
+#: contents/logout/Logout.qml:263 contents/logout/Logout.qml:282
 #, kde-format
 msgid "Shut Down Now"
 msgstr "立即關機"
 
-#: contents/logout/Logout.qml:296
+#: contents/logout/Logout.qml:294
 #, kde-format
 msgid "Log Out"
 msgstr "登出"
 
-#: contents/logout/Logout.qml:297
+#: contents/logout/Logout.qml:295
 #, kde-format
 msgid "Log Out Now"
 msgstr "立即登出"
 
-#: contents/logout/Logout.qml:307
+#: contents/logout/Logout.qml:305
 #, kde-format
 msgid "Cancel"
 msgstr "取消"
@@ -164,6 +156,14 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "由 KDE 製作的 Plasma"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates & Restart Now"
+#~ msgstr "立即安裝更新並重新啟動"
+
+#~ msgctxt "@action:button Keep short"
+#~ msgid "Install Updates & Shut Down Now"
+#~ msgstr "立即安裝更新並關機"
 
 #~ msgid "Keyboard Layout: %1"
 #~ msgstr "鍵盤佈局：%1"

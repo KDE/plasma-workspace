@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-05 00:40+0000\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
 "PO-Revision-Date: 2022-08-03 13:59+0200\n"
 "Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
 "com>\n"
@@ -188,3 +188,8 @@ msgstr "Lukk sprettopp"
 #, kde-format
 msgid "Show hidden icons"
 msgstr "Vis gøymde ikon"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgid "Some letters with tall characters, ascenders, descenders, etc"
+msgstr ""
