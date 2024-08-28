@@ -10,7 +10,6 @@
 #include <QApplication>
 #include <QDBusConnection>
 #include <QDBusPendingReply>
-#include <QDBusVariant>
 #include <QFile>
 #include <QPainter>
 #include <QQmlContext>
@@ -129,7 +128,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         }
     });
 
-    context->setContextProperty(u"softwareUpdatePending"_s, softwareUpdatePending());
+    context->setContextProperty(u"softwareUpdatePending"_s, updateTriggered() || upgradeTriggered());
 
     // TODO KF6 remove, used to read "BootManager" from kdmrc
     context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));
@@ -226,7 +225,7 @@ void KSMShutdownDlg::slotReboot()
 {
     // no boot option selected -> current
     m_bootOption.clear();
-    if (softwareUpdatePending()) {
+    if (updateTriggered() || upgradeTriggered()) {
         cancelSoftwareUpdate();
     }
     m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
@@ -237,7 +236,7 @@ void KSMShutdownDlg::slotReboot(int opt)
 {
     if (static_cast<int>(rebootOptions.size()) > opt)
         m_bootOption = rebootOptions[opt];
-    if (softwareUpdatePending()) {
+    if (updateTriggered() || upgradeTriggered()) {
         cancelSoftwareUpdate();
     }
     m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
@@ -248,7 +247,7 @@ void KSMShutdownDlg::slotRebootUpdate()
 {
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
     m_bootOption.clear();
-    updateSetAction(PackageKit::Offline::Action::ActionReboot);
+    setTriggerAction(PackageKit::Offline::Action::ActionReboot);
     m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
     accept();
 #endif
@@ -264,7 +263,7 @@ void KSMShutdownDlg::slotLockScreen()
 void KSMShutdownDlg::slotHalt()
 {
     m_bootOption.clear();
-    if (softwareUpdatePending()) {
+    if (updateTriggered() || upgradeTriggered()) {
         cancelSoftwareUpdate();
     }
     m_session.requestShutdown(SessionManagement::ConfirmationMode::Skip);
@@ -275,7 +274,7 @@ void KSMShutdownDlg::slotHaltUpdate()
 {
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
     m_bootOption.clear();
-    updateSetAction(PackageKit::Offline::Action::ActionPowerOff);
+    setTriggerAction(PackageKit::Offline::Action::ActionPowerOff);
     m_session.requestReboot(SessionManagement::ConfirmationMode::Skip);
     accept();
 #endif
@@ -304,23 +303,32 @@ void KSMShutdownDlg::cancelSoftwareUpdate()
     if (packageKitCall.isError()) {
         qWarning() << "Failed to cancel pending software update" << packageKitCall.error().message();
     } else {
-        rootContext()->setContextProperty(u"softwareUpdatePending"_s, softwareUpdatePending());
+        rootContext()->setContextProperty(u"softwareUpdatePending"_s, updateTriggered() || upgradeTriggered());
     }
 }
 
-void KSMShutdownDlg::updateSetAction(PackageKit::Offline::Action action)
+void KSMShutdownDlg::setTriggerAction(PackageKit::Offline::Action action)
 {
-    QDBusPendingReply packageKitCall = PackageKit::Daemon::global()->offline()->trigger(action);
-    packageKitCall.waitForFinished();
-    if (packageKitCall.isError()) {
-        qWarning() << "Failed to trigger action after update" << packageKitCall.error().message();
+    if (updateTriggered() || upgradeTriggered()) {
+        QDBusPendingReply packageKitCall;
+        if (updateTriggered()) {
+            packageKitCall = PackageKit::Daemon::global()->offline()->trigger(action);
+        } else if (upgradeTriggered()) {
+            packageKitCall = PackageKit::Daemon::global()->offline()->triggerUpgrade(action);
+        }
+        packageKitCall.waitForFinished();
+        if (packageKitCall.isError()) {
+            qWarning() << "Failed to trigger action after update" << packageKitCall.error().message();
+        }
+    } else {
+        qWarning() << "Update was attempted to be triggered without a pending update already existing";
     }
 }
 
-bool KSMShutdownDlg::softwareUpdatePending() const
+bool KSMShutdownDlg::checkTrigger(const QString &trigger) const
 {
-    // Unfortunately necessary because properties in PackageKitQt are wrong if the daemon isn't running,
-    // and there's no built in mechanism to start it. Would also be wasteful to have to start it up again.
+    // Unfortunately necessary to use a direct DBus call because properties in PackageKitQt are wrong if the daemon isn't
+    // already running, and there's no built in mechanism to start it. Would also be wasteful to have to start it up again.
     QDBusMessage packageKitMessage = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PackageKit"),
                                                                     QStringLiteral("/org/freedesktop/PackageKit"),
                                                                     s_dbusPropertiesInterface,
@@ -333,11 +341,26 @@ bool KSMShutdownDlg::softwareUpdatePending() const
         return false;
     }
 
-    return reply.value().value(QStringLiteral("UpdateTriggered")).toBool();
+    return reply.value().value(trigger).toBool();
+}
+
+bool KSMShutdownDlg::updateTriggered() const
+{
+    return checkTrigger(QStringLiteral("UpdateTriggered"));
+}
+
+bool KSMShutdownDlg::upgradeTriggered() const
+{
+    return checkTrigger(QStringLiteral("UpgradeTriggered"));
 }
 
 #else
-bool KSMShutdownDlg::softwareUpdatePending() const
+bool KSMShutdownDlg::updateTriggered() const
+{
+    return false;
+}
+
+bool KSMShutdownDlg::upgradeTriggered() const
 {
     return false;
 }

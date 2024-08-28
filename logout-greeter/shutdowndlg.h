@@ -55,10 +55,12 @@ protected:
 
 private:
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
-    void updateSetAction(PackageKit::Offline::Action action);
+    void setTriggerAction(PackageKit::Offline::Action action);
+    bool checkTrigger(const QString &trigger) const;
 #endif
     void cancelSoftwareUpdate();
-    bool softwareUpdatePending() const;
+    bool updateTriggered() const;
+    bool upgradeTriggered() const;
 
     bool m_windowed = false;
     QString m_bootOption;
