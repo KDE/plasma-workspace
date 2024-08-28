@@ -28,10 +28,27 @@ int main(int argc, char **argv)
     parser.setApplicationDescription(i18n("This tool allows you to set an image as the wallpaper for the Plasma session."));
     parser.addPositionalArgument(QStringLiteral("imagefile"),
                                  i18n("An image file or an installed wallpaper kpackage that you wish to set as the wallpaper for your Plasma session"));
+
+    QCommandLineOption fillModeOption(QStringList() << QStringLiteral("f") << QStringLiteral("fill-mode"),
+                                      i18n("Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"),
+                                      QStringLiteral("fill-mode"));
+    parser.addOption(fillModeOption);
+
     parser.process(app);
 
     int errorCode{EXIT_SUCCESS};
     QTextStream ts(stdout);
+
+    QMap<QString, int> wallpaperFillModeTypes = {
+        {QStringLiteral("stretch"), 0},
+        {QStringLiteral("preserveAspectFit"), 1},
+        {QStringLiteral("preserveAspectCrop"), 2},
+        {QStringLiteral("tile"), 3},
+        {QStringLiteral("tileVertically"), 4},
+        {QStringLiteral("tileHorizontally"), 5},
+        {QStringLiteral("pad"), 6}
+    };
+
     if (!parser.positionalArguments().isEmpty()) {
         QString wallpaperFile{parser.positionalArguments().first()};
         QFileInfo wallpaperInfo{wallpaperFile};
@@ -71,23 +88,38 @@ int main(int argc, char **argv)
                 << "var d = desktops()[key];" //
                 << "d.wallpaperPlugin = 'org.kde.image';" //
                 << "d.currentConfigGroup = ['Wallpaper', 'org.kde.image', 'General'];" //
-                << u"d.writeConfig('Image', 'file://" + wallpaperFile + u"');" //
-                << "}";
-            auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
-                                                          QStringLiteral("/PlasmaShell"),
-                                                          QStringLiteral("org.kde.PlasmaShell"),
-                                                          QStringLiteral("evaluateScript"));
-            message.setArguments(QVariantList() << QVariant(script));
-            auto reply = QDBusConnection::sessionBus().call(message);
+                << u"d.writeConfig('Image', 'file://" + wallpaperFile + u"');";
 
-            if (reply.type() == QDBusMessage::ErrorMessage) {
-                ts << i18n("An error occurred while attempting to set the Plasma wallpaper:\n") << reply.errorMessage() << Qt::endl;
-                errorCode = EXIT_FAILURE;
-            } else {
-                if (isKPackage) {
-                    ts << i18n("Successfully set the wallpaper for all desktops to the KPackage based %1", wallpaperFile) << Qt::endl;
+            // Add fill mode to the script if provided
+            if (parser.isSet(fillModeOption)) {
+                QString fillMode = parser.value(fillModeOption);
+                if (wallpaperFillModeTypes.contains(fillMode)) {
+                    out << "d.writeConfig('FillMode', " << wallpaperFillModeTypes.value(fillMode) << ");";
                 } else {
-                    ts << i18n("Successfully set the wallpaper for all desktops to the image %1", wallpaperFile) << Qt::endl;
+                    ts << i18n("Invalid fill mode specified: %1", fillMode) << Qt::endl;
+                    errorCode = EXIT_FAILURE;
+                }
+            }
+
+            out << "}";
+
+            if (errorCode == EXIT_SUCCESS) {
+                auto message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                              QStringLiteral("/PlasmaShell"),
+                                                              QStringLiteral("org.kde.PlasmaShell"),
+                                                              QStringLiteral("evaluateScript"));
+                message.setArguments(QVariantList() << QVariant(script));
+                auto reply = QDBusConnection::sessionBus().call(message);
+
+                if (reply.type() == QDBusMessage::ErrorMessage) {
+                    ts << i18n("An error occurred while attempting to set the Plasma wallpaper:\n") << reply.errorMessage() << Qt::endl;
+                    errorCode = EXIT_FAILURE;
+                } else {
+                    if (isKPackage) {
+                        ts << i18n("Successfully set the wallpaper for all desktops to the KPackage based %1", wallpaperFile) << Qt::endl;
+                    } else {
+                        ts << i18n("Successfully set the wallpaper for all desktops to the image %1", wallpaperFile) << Qt::endl;
+                    }
                 }
             }
 
