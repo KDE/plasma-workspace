@@ -155,16 +155,23 @@ KJob *NOAAIon::requestAPIJob(const QString &source, const QUrl &url, Callback on
     }
 
     connect(getJob, &KJob::result, this, [this, source, onResult](KJob *job) {
-        if (!job->error()) {
-            QJsonDocument doc = QJsonDocument::fromJson(m_jobData.value(job));
-            if (!doc.isEmpty()) {
-                (this->*onResult)(source, doc);
-            }
-        } else {
+        if (job->error()) {
             qCWarning(IONENGINE_NOAA) << "Error retrieving data" << job->errorText();
+            m_jobData.remove(job);
+            return;
         }
 
+        QJsonParseError jsonError;
+        QJsonDocument doc = QJsonDocument::fromJson(m_jobData.value(job), &jsonError);
         m_jobData.remove(job);
+
+        if (doc.isNull()) {
+            qCWarning(IONENGINE_NOAA) << "Received invalid JSON data:" << jsonError.errorString();
+            return;
+        }
+
+        // Invoke callback method
+        (this->*onResult)(source, doc);
     });
 
     return getJob;
@@ -200,8 +207,6 @@ void NOAAIon::getStationList()
 
 void NOAAIon::setUpStation(const QString &source)
 {
-    Q_EMIT cleanUpData(source);
-
     QString dataKey = source;
     dataKey.remove(u"noaa|weather|"_s);
     // If this is empty we have no valid data, send out an error and abort.
@@ -319,16 +324,14 @@ void NOAAIon::getObservation(const QString &source)
 
 void NOAAIon::readObservation(const QString &source, const QJsonDocument &doc)
 {
-    WeatherData::Observation &data = m_weatherData[source].observation;
-
-    if (doc.isEmpty()) {
-        return;
-    }
-
     const QJsonValue properties = doc[u"properties"_s];
     if (!properties.isObject()) {
+        qCWarning(IONENGINE_NOAA) << "Malformed observation report" << doc;
         return;
     }
+
+    WeatherData::Observation &data = m_weatherData[source].observation;
+    data = WeatherData::Observation{};
 
     data.weather = properties[u"textDescription"_s].toString();
     data.timestamp = QDateTime::fromString(properties[u"timestamp"_s].toString(), Qt::ISODate);
@@ -345,6 +348,8 @@ void NOAAIon::readObservation(const QString &source, const QJsonDocument &doc)
     data.dewpoint_F = parseQV(properties[u"dewpoint"_s], Fahrenheit);
     data.heatindex_F = parseQV(properties[u"heatIndex"_s], Fahrenheit);
     data.windchill_F = parseQV(properties[u"windChill"_s], Fahrenheit);
+
+    qCDebug(IONENGINE_NOAA) << "Received observation data:" << data.timestamp << data.weather;
 
     Q_EMIT observationUpdated(source);
 }
@@ -518,6 +523,8 @@ void NOAAIon::updateWeather(const QString &source)
 
     Q_EMIT cleanUpData(source);
     setData(source, data);
+
+    qCDebug(IONENGINE_NOAA) << "Updated weather data for" << source;
 }
 
 /**
@@ -758,20 +765,16 @@ void NOAAIon::getForecast(const QString &source)
 void NOAAIon::readForecast(const QString &source, const QJsonDocument &doc)
 {
     WeatherData &weatherData = m_weatherData[source];
-    QList<WeatherData::Forecast> &forecasts = weatherData.forecasts;
-
-    // Clear the current forecasts
-    forecasts.clear();
     weatherData.isForecastsDataPending = false;
-
-    if (doc.isEmpty()) {
-        return;
-    }
 
     const QJsonValue properties = doc[u"properties"_s];
     if (!properties.isObject()) {
+        qCWarning(IONENGINE_NOAA) << "Malformed forecast report" << doc;
         return;
     }
+
+    QList<WeatherData::Forecast> &forecasts = weatherData.forecasts;
+    forecasts.clear();
 
     const QJsonArray periods = properties[u"periods"_s].toArray();
     forecasts.reserve(periods.count());
@@ -811,6 +814,9 @@ void NOAAIon::readForecast(const QString &source, const QJsonDocument &doc)
         forecasts << forecast;
     }
 
+    qCDebug(IONENGINE_NOAA) << "Received forecast data:" << forecasts.count() << "periods."
+                            << "Starts at night:" << (!forecasts.isEmpty() && !forecasts.first().isDayTime);
+
     updateWeather(source);
 }
 
@@ -829,12 +835,9 @@ void NOAAIon::getPointsInfo(const QString &source)
 
 void NOAAIon::readPointsInfo(const QString &source, const QJsonDocument &doc)
 {
-    if (doc.isEmpty()) {
-        return;
-    }
-
     const auto properties = doc[u"properties"_s];
     if (!properties.isObject()) {
+        qCWarning(IONENGINE_NOAA) << "Malformed points information" << doc;
         return;
     }
 
@@ -906,10 +909,6 @@ QString formatAlertDescription(QString description)
 
 void NOAAIon::readAlerts(const QString &source, const QJsonDocument &doc)
 {
-    if (doc.isEmpty()) {
-        return;
-    }
-
     auto &alerts = m_weatherData[source].alerts;
     alerts.clear();
 
