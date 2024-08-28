@@ -52,7 +52,7 @@ class KCMColorsTest(unittest.TestCase):
         """
         Tests the KCM can be opened
         """
-        self.driver.find_element(AppiumBy.NAME, "All Schemes")
+        self.driver.find_element(AppiumBy.NAME, "All schemes")
         self.driver.find_element(AppiumBy.NAME, "Breeze Dark")
 
 

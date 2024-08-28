@@ -24,9 +24,9 @@ RowLayout {
         Layout.alignment: Qt.AlignTop | Qt.AlignRight
 
         model: [
-            i18nc("@item:inlistbox Accent color from color scheme", "Accent Color From Color Scheme"),
-            i18nc("@item:inlistbox Accent color from wallpaper", "Accent Color From Wallpaper"),
-            i18nc("@item:inlistbox User-chosen custom accent color", "Custom Accent Color")
+            i18nc("@item:inlistbox Accent color from color scheme", "Accent color from color scheme"),
+            i18nc("@item:inlistbox Accent color from wallpaper", "Accent color from wallpaper"),
+            i18nc("@item:inlistbox User-chosen custom accent color", "Custom accent color")
         ]
 
         currentIndex: {

@@ -120,9 +120,9 @@ KCM.GridViewKCM {
                     Layout.rightMargin: parent.spacing * 3
                     textRole: "text"
                     model: [
-                        {text: i18n("All Schemes"), filter: Private.KCM.AllSchemes},
-                        {text: i18n("Light Schemes"), filter: Private.KCM.LightSchemes},
-                        {text: i18n("Dark Schemes"), filter: Private.KCM.DarkSchemes}
+                        {text: i18nc("@item:inlistbox filter displayed schemes", "All schemes"), filter: Private.KCM.AllSchemes},
+                        {text: i18nc("@item:inlistbox filter displayed schemes", "Light schemes"), filter: Private.KCM.LightSchemes},
+                        {text: i18nc("@item:inlistbox filter displayed schemes", "Dark schemes"), filter: Private.KCM.DarkSchemes}
                     ]
 
                     // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background

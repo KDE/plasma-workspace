@@ -37,7 +37,7 @@
      </property>
      <item>
       <property name="text">
-       <string comment="color-sets" extracomment="'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;">Common Colors</string>
+       <string comment="color-sets" extracomment="'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;">Common colors</string>
       </property>
      </item>
      <item>
