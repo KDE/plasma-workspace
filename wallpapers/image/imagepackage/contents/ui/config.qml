@@ -125,26 +125,26 @@ ColumnLayout {
 
         QtControls2.ComboBox {
             id: resizeComboBox
-            Kirigami.FormData.label: i18nd("plasma_wallpaper_org.kde.image", "Positioning:")
+            Kirigami.FormData.label: i18ndc("plasma_wallpaper_org.kde.image", "@label:listbox", "Positioning:")
             model: [
                         {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled and Cropped"),
+                            'label': i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Scaled and cropped"),
                             'fillMode': Image.PreserveAspectCrop
                         },
                         {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled"),
+                            'label': i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Scaled"),
                             'fillMode': Image.Stretch
                         },
                         {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Scaled, Keep Proportions"),
+                            'label': i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Scaled, keep proportions"),
                             'fillMode': Image.PreserveAspectFit
                         },
                         {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Centered"),
+                            'label': i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Centered"),
                             'fillMode': Image.Pad
                         },
                         {
-                            'label': i18nd("plasma_wallpaper_org.kde.image", "Tiled"),
+                            'label': i18ndc("plasma_wallpaper_org.kde.image", "@item:inlistbox", "Tiled"),
                             'fillMode': Image.Tile
                         }
             ]
