@@ -11,6 +11,7 @@
 #include <QDBusObjectPath>
 #include <QObject>
 #include <QPointer>
+#include <QRect>
 #include <QUrl>
 
 #include <optional>
@@ -69,6 +70,8 @@ class User : public QObject
 
     Q_PROPERTY(QUrl face READ face WRITE setFace NOTIFY faceChanged)
 
+    Q_PROPERTY(QRect faceCrop READ faceCrop WRITE setFaceCrop)
+
     Q_PROPERTY(bool faceValid READ faceValid NOTIFY faceValidChanged)
 
     Q_PROPERTY(bool loggedIn READ loggedIn CONSTANT)
@@ -91,6 +94,7 @@ public:
     bool loggedIn() const;
     bool administrator() const;
     QDBusObjectPath path() const;
+    QRect faceCrop() const;
 
     void setName(const QString &value);
     void setRealName(const QString &value);
@@ -98,6 +102,7 @@ public:
     void setFace(const QUrl &value);
     void setAdministrator(bool value);
     void setPath(const QDBusObjectPath &path);
+    void setFaceCrop(const QRect &rect);
 
     void loadData();
 
@@ -131,6 +136,7 @@ private:
     QString mOriginalEmail;
     QUrl mFace;
     QUrl mOriginalFace;
+    QRect mFaceCrop = QRect(0, -1, 0, -1);
     bool mAdministrator = false;
     bool mOriginalAdministrator = false;
     bool mFaceValid = false;

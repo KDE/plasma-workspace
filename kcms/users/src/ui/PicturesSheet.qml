@@ -140,10 +140,17 @@ Kirigami.OverlaySheet {
                                 "Image files \(All major file types\) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)")
                         ]
                         onAccepted: {
-                            usersDetailPage.oldImage = usersDetailPage.user.face
-                            usersDetailPage.user.face = fileDialog.selectedFile
-                            usersDetailPage.overrideImage = true
-                            picturesSheet.close()
+                            const component = Qt.createComponent("CropSheet.qml");
+                            const obj = component.incubateObject(usersDetailPage, {
+                                imageUrl: fileDialog.selectedFile,
+                                usersDetailPage: usersDetailPage,
+                                picturesSheet: picturesSheet,
+                                focus: true
+                            });
+                            if (obj == null) {
+                                console.log(component.errorString())
+                            }
+                            component.destroy();
                         }
                     }
 

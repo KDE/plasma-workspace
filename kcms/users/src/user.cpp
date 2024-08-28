@@ -7,11 +7,14 @@
 */
 
 #include "user.h"
+#include "config-users.h"
 #include "kcmusers_debug.h"
 #include "user_interface.h"
 #include <KLocalizedString>
 #include <KWallet>
+#include <QDir>
 #include <QImage>
+#include <QImageWriter>
 #include <config-workspace.h>
 #include <sys/types.h>
 #include <unistd.h>
@@ -107,10 +110,25 @@ bool User::faceValid() const
 
 void User::setFace(const QUrl &value)
 {
-    if (mFace == value) {
-        return;
+    if (value.toString().contains(PLASMA_AVATAR_PATH) || value.toString().contains(u"/var/lib/AccountsService/icons")) {
+        mFace = value;
+    } else {
+        const QString croppedImagesCache = QString::fromUtf8(PLASMA_FACE_CACHE_PATH);
+        const QString faceFile = croppedImagesCache + QString::number(QRandomGenerator::global()->bounded(8192)) + u".png";
+
+        if (!QDir(croppedImagesCache).exists()) {
+            QDir().mkpath(croppedImagesCache);
+        }
+
+        QFile tempFile(faceFile);
+
+        QImageWriter writer(faceFile);
+        QImage image(value.toLocalFile());
+        image = image.copy(mFaceCrop);
+        writer.write(image);
+        mFace = QUrl(QString(u"file://" + faceFile));
     }
-    mFace = value;
+
     mFaceValid = QFile::exists(value.path());
     Q_EMIT faceValidChanged();
     Q_EMIT faceChanged();
@@ -319,6 +337,16 @@ void User::changeWalletPassword()
 bool User::loggedIn() const
 {
     return mLoggedIn;
+}
+
+void User::setFaceCrop(const QRect &rect)
+{
+    mFaceCrop = rect;
+}
+
+QRect User::faceCrop() const
+{
+    return mFaceCrop;
 }
 
 UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface,
