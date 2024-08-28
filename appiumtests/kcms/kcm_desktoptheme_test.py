@@ -52,7 +52,7 @@ class KCMDesktopThemeTest(unittest.TestCase):
         """
         Tests the KCM can be opened
         """
-        self.driver.find_element(AppiumBy.NAME, "All Themes")
+        self.driver.find_element(AppiumBy.NAME, "All themes")
         self.driver.find_element(AppiumBy.NAME, "Breeze Light")
 
 

@@ -98,10 +98,10 @@ KCM.GridViewKCM {
                 id: filterCombo
                 textRole: "text"
                 model: [
-                    {text: i18n("All Themes"), filter: Private.FilterProxyModel.AllThemes},
-                    {text: i18n("Light Themes"), filter: Private.FilterProxyModel.LightThemes},
-                    {text: i18n("Dark Themes"), filter: Private.FilterProxyModel.DarkThemes},
-                    {text: i18n("Color scheme compatible"), filter: Private.FilterProxyModel.ThemesFollowingColors}
+                    {text: i18nc("@item:inlistbox filters displayed themes", "All themes"), filter: Private.FilterProxyModel.AllThemes},
+                    {text: i18nc("@item:inlistbox filters displayed themes", "Light themes"), filter: Private.FilterProxyModel.LightThemes},
+                    {text: i18nc("@item:inlistbox filters displayed themes", "Dark themes"), filter: Private.FilterProxyModel.DarkThemes},
+                    {text: i18nc("@item:inlistbox filters displayed themes", "Color scheme compatible"), filter: Private.FilterProxyModel.ThemesFollowingColors}
                 ]
 
                 // HACK QQC2 doesn't support icons, so we just tamper with the desktop style ComboBox's background
