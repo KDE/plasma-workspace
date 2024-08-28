@@ -121,12 +121,12 @@ bool ContainmentInterface::hasLauncher(QObject *appletInterface, ContainmentInte
             return false;
         }
 
-        QVariant ret;
+        bool ret;
         QMetaObject::invokeMethod(taskManagerQuickItem,
                                   "hasLauncher",
-                                  Q_RETURN_ARG(QVariant, ret),
-                                  Q_ARG(QVariant, QUrl(QLatin1String("applications:") + service->storageId())));
-        return ret.toBool();
+                                  Q_RETURN_ARG(bool, ret),
+                                  Q_ARG(QUrl, QUrl(QLatin1String("applications:") + service->storageId())));
+        return ret;
     }
 
     return false;
@@ -196,7 +196,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
                 return;
             }
 
-            QMetaObject::invokeMethod(taskManagerQuickItem, "addLauncher", Q_ARG(QVariant, QUrl::fromLocalFile(entryPath)));
+            QMetaObject::invokeMethod(taskManagerQuickItem, "addLauncher", Q_ARG(QUrl, QUrl::fromLocalFile(entryPath)));
         }
 
         break;
