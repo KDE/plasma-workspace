@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # Thomas Diehl <thd@kde.org>, 2003, 2004.
 # Stephan Johach <hunsum@gmx.de>, 2005, 2006, 2007.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2009.
@@ -10,15 +11,15 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2022-07-14 00:29+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2024-08-04 13:43+0200\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.07.70\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -1333,7 +1334,7 @@ msgstr "Systemverwalter"
 
 #: lib/KfiConstants.h:74
 msgid "Thin"
-msgstr "Leicht"
+msgstr "Fein"
 
 #: lib/KfiConstants.h:75
 msgid "Extra Light"
@@ -1389,15 +1390,15 @@ msgstr "Schwer"
 
 #: lib/KfiConstants.h:89
 msgid "Roman"
-msgstr "Unecht Kursiv (Roman)"
+msgstr "Aufrecht (Roman)"
 
 #: lib/KfiConstants.h:90
 msgid "Italic"
-msgstr "Kursiv"
+msgstr "Kursiv (Italic)"
 
 #: lib/KfiConstants.h:91
 msgid "Oblique"
-msgstr "Kursiv (Oblique)"
+msgstr "Schräg (Oblique)"
 
 #: lib/KfiConstants.h:93
 msgid "Ultra Condensed"
@@ -1745,7 +1746,7 @@ msgstr "Thaana"
 
 #: viewpart/UnicodeBlocks.h:33
 msgid "NKo"
-msgstr "N´Ko"
+msgstr "N’Ko"
 
 #: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
 msgid "Devanagari"
