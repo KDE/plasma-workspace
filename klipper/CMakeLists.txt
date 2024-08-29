@@ -61,6 +61,7 @@ set_target_properties(klipper PROPERTIES
 install(TARGETS klipper ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(declarative)
+add_subdirectory(kconf_update)
 
 # Plasma Data Engine
 set(plasma_engine_clipboard_SRCS clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)

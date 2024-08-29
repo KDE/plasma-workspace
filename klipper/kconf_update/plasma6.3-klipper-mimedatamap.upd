@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2024 Noah Davis <noahadvs@gmail.com>
+# SPDX-License-Identifier: LGPL-2.0-or-later
+
+Version=6
+
+Id=plasma6.3-klipper-mimedatamap
+Script=plasma6.3-klipper-mimedatamap
