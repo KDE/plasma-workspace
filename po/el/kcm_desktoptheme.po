@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2016-06-04 15:12+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -104,22 +104,26 @@ msgstr ""
 #: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "Available themes"
-msgid "All Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
 msgstr "Διαθέσιμα θέματα"
 
 #: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Theme"
-msgid "Light Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
 msgstr "Θέμα"
 
 #: ui/main.qml:103
 #, kde-format
-msgid "Dark Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
 msgstr ""
 
 #: ui/main.qml:104
 #, kde-format
+msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr ""
 

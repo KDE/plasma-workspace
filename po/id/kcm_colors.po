@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2022-09-27 18:12+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -447,9 +447,11 @@ msgstr "Perangkat warna untuk ditampilkan/dimodifikasi"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "Warna Umum"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1247,20 +1249,21 @@ msgstr "* %1 (skema warna saat ini)"
 #, fuzzy, kde-format
 #| msgid "Restore Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "Kembalikan Skema Warna"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Whether accent color from wallpaper should be applied"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "Apakah warna aksen dari wallpaper akan diterapkan"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Choose custom accent color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "Pilih warna aksen kustom"
 
 #: ui/AccentColorUI.qml:147
@@ -1275,18 +1278,24 @@ msgid ""
 msgstr "Skema warna '%1' belum terinstal. Pilihlah tema baku sebagai gantinya."
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Semua Skema"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "Skema Terang"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Skema Gelap"
 
 #: ui/main.qml:152

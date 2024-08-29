@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-06-08 17:17+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -42,32 +42,44 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Dosar cu tapete din care să fie arătate diapozitive"
 
 #: imagepackage/contents/ui/config.qml:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Positioning:"
+msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Poziționare:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, kde-format
-msgid "Scaled and Cropped"
+#, fuzzy, kde-format
+#| msgid "Scaled and Cropped"
+msgctxt "@item:inlistbox"
+msgid "Scaled and cropped"
 msgstr "Scalat și decupat"
 
 #: imagepackage/contents/ui/config.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scaled"
+msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Scalat"
 
 #: imagepackage/contents/ui/config.qml:139
-#, kde-format
-msgid "Scaled, Keep Proportions"
+#, fuzzy, kde-format
+#| msgid "Scaled, Keep Proportions"
+msgctxt "@item:inlistbox"
+msgid "Scaled, keep proportions"
 msgstr "Scalat, păstrare proporții"
 
 #: imagepackage/contents/ui/config.qml:143
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Centered"
+msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centrat"
 
 #: imagepackage/contents/ui/config.qml:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tiled"
+msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Dale"
 
@@ -164,7 +176,12 @@ msgstr ""
 "Un fișier cu imagine sau un kpackage cu fundaluri instalat pe care doriți să "
 "le stabiliți ca tapet pentru sesiunea Plasma"
 
-#: plasma-apply-wallpaperimage.cpp:44
+#: plasma-apply-wallpaperimage.cpp:33
+#, kde-format
+msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -175,12 +192,17 @@ msgstr ""
 "contactați autorul tapetului să rezolve problema, sau redenumiți "
 "dumneavoastră fișierul: %1"
 
-#: plasma-apply-wallpaperimage.cpp:84
+#: plasma-apply-wallpaperimage.cpp:99
+#, kde-format
+msgid "Invalid fill mode specified: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "A intervenit o eroare la încercarea de a stabili tapetul Plasma:\n"
 
-#: plasma-apply-wallpaperimage.cpp:88
+#: plasma-apply-wallpaperimage.cpp:119
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
@@ -188,13 +210,13 @@ msgstr ""
 "Tapetul pentru toate birourile a fost stabilit cu succes la %1 bazat pe "
 "KPackage"
 
-#: plasma-apply-wallpaperimage.cpp:90
+#: plasma-apply-wallpaperimage.cpp:121
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
 "Tapetul pentru toate birourile a fost stabilit cu succes la imaginea %1"
 
-#: plasma-apply-wallpaperimage.cpp:96
+#: plasma-apply-wallpaperimage.cpp:128
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

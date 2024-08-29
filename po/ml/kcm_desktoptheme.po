@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails trunk\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2019-12-12 22:40+0000\n"
 "Last-Translator: Vivek KJ Pazhedath <vivekkj2004@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -97,21 +97,25 @@ msgstr ""
 
 #: ui/main.qml:101
 #, fuzzy, kde-format
-msgid "All Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
 msgstr "പ്രമേയത്തിന്റെ ഇനം"
 
 #: ui/main.qml:102
 #, fuzzy, kde-format
-msgid "Light Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
 msgstr "പ്രമേയത്തിന്റെ ഇനം"
 
 #: ui/main.qml:103
 #, kde-format
-msgid "Dark Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
 msgstr ""
 
 #: ui/main.qml:104
 #, kde-format
+msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr ""
 

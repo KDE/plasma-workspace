@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-01-03 13:59-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -41,32 +41,44 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "ਵਾਲਪੇਪਰਾਂ ਵਾਲੀ ਡਾਇਰੈਕਟਰੀ, ਜਿਸ ਤੋਂ ਸਲਾਈਡ ਸ਼ੋਅ ਵੇਖਾਉਣਾ ਹੈ"
 
 #: imagepackage/contents/ui/config.qml:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Positioning:"
+msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "ਸਥਿਤੀ:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, kde-format
-msgid "Scaled and Cropped"
+#, fuzzy, kde-format
+#| msgid "Scaled and Cropped"
+msgctxt "@item:inlistbox"
+msgid "Scaled and cropped"
 msgstr "ਸਕੇਲ ਤੇ ਕਰੋਪ ਕੀਤਾ"
 
 #: imagepackage/contents/ui/config.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scaled"
+msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "ਸਕੇਲ ਕੀਤਾ"
 
 #: imagepackage/contents/ui/config.qml:139
-#, kde-format
-msgid "Scaled, Keep Proportions"
+#, fuzzy, kde-format
+#| msgid "Scaled, Keep Proportions"
+msgctxt "@item:inlistbox"
+msgid "Scaled, keep proportions"
 msgstr "ਸਕੇਲ ਕੀਤਾ, ਆਕਾਰ ਅਨੁਪਾਤ ਬਣਾਈ ਰੱਖੋ"
 
 #: imagepackage/contents/ui/config.qml:143
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Centered"
+msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "ਸੈਂਟਰ"
 
 #: imagepackage/contents/ui/config.qml:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tiled"
+msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "ਟਾਈਲ"
 
@@ -159,7 +171,12 @@ msgid ""
 "wallpaper for your Plasma session"
 msgstr ""
 
-#: plasma-apply-wallpaperimage.cpp:44
+#: plasma-apply-wallpaperimage.cpp:33
+#, kde-format
+msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -167,23 +184,28 @@ msgid ""
 "yourself: %1"
 msgstr ""
 
-#: plasma-apply-wallpaperimage.cpp:84
+#: plasma-apply-wallpaperimage.cpp:99
+#, kde-format
+msgid "Invalid fill mode specified: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "ਪਲਾਜ਼ਮਾ ਵਾਲਪੇਪਰ ਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ:\n"
 
-#: plasma-apply-wallpaperimage.cpp:88
+#: plasma-apply-wallpaperimage.cpp:119
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "ਸਾਰੇ ਡੈਸਕਟਾਪਾਂ ਲਈ ਕੇ-ਪੈਕੇਜ ਅਧਾਰਿਤ %1 ਨੂੰ ਵਾਲਪੇਪਰ ਵਜੋਂ ਕਾਮਯਾਬੀ ਨਾਲ ਲਾਇਆ ਗਿਆ"
 
-#: plasma-apply-wallpaperimage.cpp:90
+#: plasma-apply-wallpaperimage.cpp:121
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "ਸਾਰੇ ਡੈਸਕਟਾਪਾਂ ਲਈ ਚਿੱਤਰ %1 ਨੂੰ ਵਾਲਪੇਪਰ ਵਜੋਂ ਕਾਮਯਾਬੀ ਨਾਲ ਲਾਇਆ ਗਿਆ"
 
-#: plasma-apply-wallpaperimage.cpp:96
+#: plasma-apply-wallpaperimage.cpp:128
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

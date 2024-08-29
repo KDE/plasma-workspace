@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-13 00:41+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2023-09-19 22:34+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -180,131 +180,134 @@ msgstr "パスワードを確認:"
 msgid "Create"
 msgstr "作成"
 
-#: src/ui/EnrollFeedback.qml:27
+#: src/ui/CropSheet.qml:27
 #, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "指紋を登録しています"
+msgctxt "@title:window"
+msgid "Select Picture Area"
+msgstr ""
 
-#: src/ui/EnrollFeedback.qml:37
+#: src/ui/EnrolledConfirmation.qml:20
+#, fuzzy, kde-format
+#| msgid "Finger Enrolled"
+msgctxt "@info:status"
+msgid "Finger enrolled"
+msgstr "登録された指"
+
+#: src/ui/EnrollFeedback.qml:28
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr "指紋センサーに右人差し指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:39
+#: src/ui/EnrollFeedback.qml:30
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "指紋センサーに右中指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:41
+#: src/ui/EnrollFeedback.qml:32
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "指紋センサーに右薬指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:43
+#: src/ui/EnrollFeedback.qml:34
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr "指紋センサーに右小指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:45
+#: src/ui/EnrollFeedback.qml:36
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "指紋センサーに右親指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:47
+#: src/ui/EnrollFeedback.qml:38
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "指紋センサーに左人差し指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:49
+#: src/ui/EnrollFeedback.qml:40
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "指紋センサーに左中指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:51
+#: src/ui/EnrollFeedback.qml:42
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "指紋センサーに左薬指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:53
+#: src/ui/EnrollFeedback.qml:44
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr "指紋センサーに左小指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:55
+#: src/ui/EnrollFeedback.qml:46
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "指紋センサーに左親指を繰り返し押し当ててください。"
 
-#: src/ui/EnrollFeedback.qml:59
+#: src/ui/EnrollFeedback.qml:50
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr "指紋センサーに右人差し指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:61
+#: src/ui/EnrollFeedback.qml:52
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr "指紋センサーに右中指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:63
+#: src/ui/EnrollFeedback.qml:54
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr "指紋センサーに右薬指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:65
+#: src/ui/EnrollFeedback.qml:56
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr "指紋センサーに右小指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:67
+#: src/ui/EnrollFeedback.qml:58
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr "指紋センサーに右親指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:69
+#: src/ui/EnrollFeedback.qml:60
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr "指紋センサーに左人差し指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:71
+#: src/ui/EnrollFeedback.qml:62
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr "指紋センサーに左中指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:73
+#: src/ui/EnrollFeedback.qml:64
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr "指紋センサーに左薬指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:75
+#: src/ui/EnrollFeedback.qml:66
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr "指紋センサーに左小指を繰り返しスワイプしてください。"
 
-#: src/ui/EnrollFeedback.qml:77
+#: src/ui/EnrollFeedback.qml:68
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr "指紋センサーに左親指を繰り返しスワイプしてください。"
-
-#: src/ui/EnrollFeedback.qml:93
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "登録された指"
 
 #: src/ui/FingerprintDialog.qml:28
 #, kde-format
@@ -517,13 +520,13 @@ msgid ""
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:189
+#: src/ui/PicturesSheet.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:278
+#: src/ui/PicturesSheet.qml:285
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -580,22 +583,22 @@ msgstr ""
 "ンプログラムに管理者の許可を与える時に使用できます。<nl/><nl/>指紋を用いたシ"
 "ステムへのログインはまだサポートされていません。"
 
-#: src/user.cpp:292
+#: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "ユーザ %1 を保存する許可が得られませんでした"
 
-#: src/user.cpp:297
+#: src/user.cpp:315
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "変更の保存時にエラーが発生しました"
 
-#: src/user.cpp:389
+#: src/user.cpp:417
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "画像のリサイズに失敗しました: 一時ファイルを開けませんでした"
 
-#: src/user.cpp:397
+#: src/user.cpp:425
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "画像のリサイズに失敗しました: 一時ファイルへの書き込みが失敗しました"
@@ -609,6 +612,9 @@ msgstr "あなたのアカウント"
 #, kde-format
 msgid "Other Accounts"
 msgstr "他のアカウント"
+
+#~ msgid "Enrolling Fingerprint"
+#~ msgstr "指紋を登録しています"
 
 #~ msgctxt "@action:button 'all' refers to fingerprints"
 #~ msgid "Clear All"

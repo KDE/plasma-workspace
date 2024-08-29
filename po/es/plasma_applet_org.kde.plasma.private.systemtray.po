@@ -1,13 +1,12 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Translation of plasma_private_systemtray to Spanish
 #
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma_private_systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2023-10-02 22:26+0200\n"
+"PO-Revision-Date: 2024-08-29 00:16+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -15,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -190,7 +189,7 @@ msgstr "Mostrar los iconos ocultos"
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
 msgid "Some letters with tall characters, ascenders, descenders, etc"
-msgstr ""
+msgstr "Algunas letras con caracteres altos, ascendentes, descendentes, etc."
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Expandir la bandeja del sistema"

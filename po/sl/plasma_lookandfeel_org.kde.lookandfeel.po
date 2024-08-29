@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-08-21 07:37+0200\n"
+"PO-Revision-Date: 2024-08-28 06:41+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -123,9 +123,7 @@ msgid "Hibernate Now"
 msgstr "V mirovanje zdaj"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Namesti posodobitve in znova zaženi"
@@ -141,9 +139,7 @@ msgid "Restart Now"
 msgstr "Znova zaženi zdaj"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Shut Down"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Namesti posodobitve in izklopi"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -482,7 +482,7 @@ msgstr "వీక్షించుటకు/సవరించుటకు ర�
 #, fuzzy, kde-format
 #| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "ఉమ్మడి రంగులు"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1292,20 +1292,21 @@ msgstr "ప్రస్తుత రంగు స్కీమాను దాయ
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "రంగు స్కీమాను దిగుమతిచేయుము"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "రంగు స్కీమాను దిగుమతిచేయుము"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "క్రియాహీన రంగు"
 
 #: ui/AccentColorUI.qml:147
@@ -1322,19 +1323,22 @@ msgstr ""
 #: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "Import Scheme..."
-msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "స్కీమాను దిగుమతి చేయుము..."
 
 #: ui/main.qml:124
 #, fuzzy, kde-format
 #| msgid "&Scheme"
-msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "(&S) స్కీమా"
 
 #: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
-msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "స్కీమాను దాయుము..."
 
 #: ui/main.qml:152

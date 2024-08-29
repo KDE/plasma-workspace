@@ -106,12 +106,10 @@ msgid "Hibernate Now"
 msgstr "Hibernovat nyní"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr "Nainstalovat aktualizace a restartovat"
+msgstr ""
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -124,12 +122,10 @@ msgid "Restart Now"
 msgstr "Restartovat nyní"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Shut Down"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Nainstalovat aktualizace a vypnout"
+msgstr ""
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
@@ -170,11 +166,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma byla vytvořena v rámci projektu KDE"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Restart Now"
-#~ msgstr "Nainstalovat aktualizace a restartovat nyní"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Shut Down Now"
-#~ msgstr "Nainstalovat aktualizace a vypnout nyní"

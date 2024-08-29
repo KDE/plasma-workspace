@@ -87,12 +87,10 @@ msgid "Hibernate Now"
 msgstr "立即休眠"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr "安装更新并重启"
+msgstr ""
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -105,12 +103,10 @@ msgid "Restart Now"
 msgstr "立即重新启动"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Shut Down"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "安装更新并关机"
+msgstr ""
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
@@ -151,11 +147,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "KDE Plasma 桌面环境"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Restart Now"
-#~ msgstr "安装更新并立即重启"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Shut Down Now"
-#~ msgstr "安装更新并立即关机"

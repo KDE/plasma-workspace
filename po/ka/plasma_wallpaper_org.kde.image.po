@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-07-06 06:33+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -41,32 +41,44 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "საქაღალდე სურათებით, რომლიდანაც სლაიდშოუ იქნება ნაჩვენები"
 
 #: imagepackage/contents/ui/config.qml:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Positioning:"
+msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "მდებარეობა:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, kde-format
-msgid "Scaled and Cropped"
+#, fuzzy, kde-format
+#| msgid "Scaled and Cropped"
+msgctxt "@item:inlistbox"
+msgid "Scaled and cropped"
 msgstr "გადიდებული და შემოჭრილი"
 
 #: imagepackage/contents/ui/config.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scaled"
+msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "გადიდებული"
 
 #: imagepackage/contents/ui/config.qml:139
-#, kde-format
-msgid "Scaled, Keep Proportions"
+#, fuzzy, kde-format
+#| msgid "Scaled, Keep Proportions"
+msgctxt "@item:inlistbox"
+msgid "Scaled, keep proportions"
 msgstr "გადიდებული, პროპორციების შენარჩუნებით"
 
 #: imagepackage/contents/ui/config.qml:143
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Centered"
+msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "შუაზე გასწორებული"
 
 #: imagepackage/contents/ui/config.qml:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tiled"
+msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "გადახურული"
 
@@ -159,7 +171,12 @@ msgstr ""
 "გამოსახულება ან ფონის სურათების დაყენებული kpackage, რომლის გამოყენებაც "
 "გნებავთ Plasma-ის ამ სესიაში"
 
-#: plasma-apply-wallpaperimage.cpp:44
+#: plasma-apply-wallpaperimage.cpp:33
+#, kde-format
+msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -169,23 +186,28 @@ msgstr ""
 "ამ ფონის სურათის ფაილის სახელში ერთი უცხო ბრჭყალია (\") მიმართეთ ფონური "
 "სურათის ავტორს, გაასწოროს ეს, ან სახელი თვითონ გადაარქვით: %1"
 
-#: plasma-apply-wallpaperimage.cpp:84
+#: plasma-apply-wallpaperimage.cpp:99
+#, kde-format
+msgid "Invalid fill mode specified: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "Plasma-ის ფონის სურათის დაყენების შეცდომა\n"
 
-#: plasma-apply-wallpaperimage.cpp:88
+#: plasma-apply-wallpaperimage.cpp:119
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr "ფონის სურათი ყველა სამუშაო მაგიდაზე დაყენდა Kpackage: %1"
 
-#: plasma-apply-wallpaperimage.cpp:90
+#: plasma-apply-wallpaperimage.cpp:121
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr "ფონის სურათი ყველა სამუშაო მაგიდაზე დაყენდა: %1"
 
-#: plasma-apply-wallpaperimage.cpp:96
+#: plasma-apply-wallpaperimage.cpp:128
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

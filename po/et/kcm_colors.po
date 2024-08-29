@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2020-09-26 10:16+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -447,9 +447,11 @@ msgstr "Vaadatav/muudetav värvivalik"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "Üldised värvid"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1233,20 +1235,21 @@ msgstr "Aktiivse värviskeemi seadistamine"
 #, fuzzy, kde-format
 #| msgid "Restore Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "Taasta värviskeem"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restore Color Scheme"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "Taasta värviskeem"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "Mitteaktiivne värv"
 
 #: ui/AccentColorUI.qml:147
@@ -1261,18 +1264,24 @@ msgid ""
 msgstr "Värviskeemi '%1' ei ole paigaldatud. Vali vaikimisi teema."
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Kõik skeemid"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "Heledad skeemid"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Tumedad skeemid"
 
 #: ui/main.qml:152

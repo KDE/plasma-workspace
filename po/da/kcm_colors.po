@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-07-07 22:19+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -447,9 +447,11 @@ msgstr "Farvesæt at vise/ændre"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "Fælles farver"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1245,21 +1247,27 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (nuværende farvetema)"
 
 #: ui/AccentColorUI.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Accent color from color scheme"
+#| msgid "Accent Color From Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "Accentfarve fra farvetema"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Accent color from wallpaper"
+#| msgid "Accent Color From Wallpaper"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
+msgid "Accent color from wallpaper"
 msgstr "Accentfarve fra baggrunden"
 
 #: ui/AccentColorUI.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox User-chosen custom accent color"
+#| msgid "Custom Accent Color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "Brugerdefineret accentfarve"
 
 #: ui/AccentColorUI.qml:147
@@ -1275,18 +1283,24 @@ msgstr ""
 "Farvetemaet \"%1\" er ikke installeret. Standardtemaet vælges i stedet."
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Alle temaer"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "Lyse temaer"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Mørke temaer"
 
 #: ui/main.qml:152

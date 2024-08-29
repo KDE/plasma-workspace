@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2004-07-03 06:53+0100\n"
 "Last-Translator: KD at KGyfieithu <kyfieithu@dotmon.com>\n"
 "Language-Team: Cymraeg <cy@li.org>\n"
@@ -469,7 +469,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "Lliwiau"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1280,20 +1280,21 @@ msgstr "Cadw cynllun lliwiau"
 #, fuzzy, kde-format
 #| msgid "Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "Cynllun Lliwiau"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Color Scheme"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "Cynllun Lliwiau"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Inactive window"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "Ffenestr anweithredol"
 
 #: ui/AccentColorUI.qml:147
@@ -1310,19 +1311,22 @@ msgstr ""
 #: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "Color Scheme"
-msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Cynllun Lliwiau"
 
 #: ui/main.qml:124
 #, fuzzy, kde-format
 #| msgid "R&emove Scheme"
-msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "G&waredu Cynllun"
 
 #: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
-msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Cadw cynllun lliwiau"
 
 #: ui/main.qml:152

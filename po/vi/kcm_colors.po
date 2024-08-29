@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2022-07-11 19:58+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -446,9 +446,11 @@ msgstr "Bộ màu để xem/chỉnh sửa"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "Màu phổ biến"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1244,20 +1246,21 @@ msgstr " * %1 (quy hoạch màu hiện tại)"
 #, fuzzy, kde-format
 #| msgid "Restore Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "Khôi phục quy hoạch màu"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Whether accent color from wallpaper should be applied"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "Có áp dụng màu chủ đạo lấy từ phông nền hay không"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Choose custom accent color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "Chọn màu chủ đạo riêng:"
 
 #: ui/AccentColorUI.qml:147
@@ -1273,18 +1276,24 @@ msgstr ""
 "Quy hoạch màu '%1' chưa được cài. Đang chọn chủ đề mặc định để thay thế."
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Tất cả các quy hoạch"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "Các quy hoạch sáng"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Các quy hoạch tối"
 
 #: ui/main.qml:152

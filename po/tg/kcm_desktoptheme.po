@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2021-09-09 23:30-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -97,21 +97,27 @@ msgstr ""
 #: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "Open Theme"
-msgid "All Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
 msgstr "Кушодани мавзӯъ"
 
 #: ui/main.qml:102
-#, kde-format
-msgid "Light Themes"
+#, fuzzy, kde-format
+#| msgid "Light Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
 msgstr "Мавзӯъҳои равшан"
 
 #: ui/main.qml:103
-#, kde-format
-msgid "Dark Themes"
+#, fuzzy, kde-format
+#| msgid "Dark Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
 msgstr "Мавзӯъҳои торик"
 
 #: ui/main.qml:104
 #, kde-format
+msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr ""
 

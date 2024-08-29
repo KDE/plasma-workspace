@@ -197,7 +197,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1：%2%"
 
 #: osd.cpp:88
 #, kde-format

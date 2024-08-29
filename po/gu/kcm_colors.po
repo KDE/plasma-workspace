@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2010-06-24 14:20+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
@@ -473,9 +473,11 @@ msgstr "જોવા/બદલવાનો રંગસમૂહ"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "સામાન્ય રંગો"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1258,20 +1260,21 @@ msgstr "હાલની રંગ પધ્ધતિ સંગ્રહ કર�
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "રંગ પધ્ધતિ આયાત કરો"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "રંગ પધ્ધતિ આયાત કરો"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "અસક્રિય રંગ"
 
 #: ui/AccentColorUI.qml:147
@@ -1288,19 +1291,22 @@ msgstr ""
 #: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "&Upload Scheme..."
-msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "યોજનાને અપલોડ કરો (&U)..."
 
 #: ui/main.qml:124
 #, fuzzy, kde-format
 #| msgid "&Scheme"
-msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "પધ્ધતિ (&S)"
 
 #: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Save Scheme..."
-msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "પધ્ધતિ સંગ્રહ કરો..."
 
 #: ui/main.qml:152

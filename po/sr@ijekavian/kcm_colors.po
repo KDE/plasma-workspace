@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2017-12-03 22:53+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -468,7 +468,7 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "Боје|/|$[својства дат 'Бојама']"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1292,20 +1292,21 @@ msgstr ""
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "Увези шему боја"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Import Color Scheme"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "Увези шему боја"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Colors"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "Боје|/|$[својства дат 'Бојама']"
 
 #: ui/AccentColorUI.qml:147
@@ -1322,18 +1323,21 @@ msgstr ""
 #: ui/main.qml:123
 #, fuzzy, kde-format
 #| msgid "Upload Scheme"
-msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Отпреми шему"
 
 #: ui/main.qml:124
 #, kde-format
-msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr ""
 
 #: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Upload Scheme"
-msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Отпреми шему"
 
 #: ui/main.qml:152

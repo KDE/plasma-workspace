@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-08-23 07:09+0300\n"
+"PO-Revision-Date: 2024-08-28 11:07+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -114,12 +114,10 @@ msgid "Hibernate Now"
 msgstr "תרדמת עכשיו"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr "התקנת &עדכונים והפעלה מחדש"
+msgstr "התקנת עדכונים והפעלה מחדש"
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -132,12 +130,10 @@ msgid "Restart Now"
 msgstr "הפעלה מחדש עכשיו"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Shut Down"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "התקנת &עדכונים וכיבוי"
+msgstr "התקנת עדכונים וכיבוי"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format

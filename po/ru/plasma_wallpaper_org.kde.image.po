@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-08-11 07:39+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -50,32 +50,44 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог с изображениями для слайд-шоу в качестве обоев"
 
 #: imagepackage/contents/ui/config.qml:128
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Positioning:"
+msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Расположение:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, kde-format
-msgid "Scaled and Cropped"
+#, fuzzy, kde-format
+#| msgid "Scaled and Cropped"
+msgctxt "@item:inlistbox"
+msgid "Scaled and cropped"
 msgstr "Масштабирование с кадрированием"
 
 #: imagepackage/contents/ui/config.qml:135
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Scaled"
+msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "На весь рабочий стол"
 
 #: imagepackage/contents/ui/config.qml:139
-#, kde-format
-msgid "Scaled, Keep Proportions"
+#, fuzzy, kde-format
+#| msgid "Scaled, Keep Proportions"
+msgctxt "@item:inlistbox"
+msgid "Scaled, keep proportions"
 msgstr "По центру пропорционально"
 
 #: imagepackage/contents/ui/config.qml:143
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Centered"
+msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "По центру"
 
 #: imagepackage/contents/ui/config.qml:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Tiled"
+msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Черепицей"
 
@@ -170,7 +182,12 @@ msgstr ""
 "Файл изображения или пакет фона рабочего стола в формате kpackage для "
 "использования в качестве фона рабочего стола Plasma"
 
-#: plasma-apply-wallpaperimage.cpp:44
+#: plasma-apply-wallpaperimage.cpp:33
+#, kde-format
+msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
 msgid ""
 "There is a stray single quote in the filename of this wallpaper (') - please "
@@ -180,12 +197,17 @@ msgstr ""
 "Имя файла этих обоев содержит лишний символ одинарной кавычки ('). Попросите "
 "автора исправить эту ошибку или самостоятельно переименуйте файл «%1»."
 
-#: plasma-apply-wallpaperimage.cpp:84
+#: plasma-apply-wallpaperimage.cpp:99
+#, kde-format
+msgid "Invalid fill mode specified: %1"
+msgstr ""
+
+#: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
 msgstr "Не удалось задать обои рабочего стола Plasma:\n"
 
-#: plasma-apply-wallpaperimage.cpp:88
+#: plasma-apply-wallpaperimage.cpp:119
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
@@ -193,13 +215,13 @@ msgstr ""
 "Пакет в формате KPackage «%1» успешно использовано в качестве обоев всех "
 "рабочих столов"
 
-#: plasma-apply-wallpaperimage.cpp:90
+#: plasma-apply-wallpaperimage.cpp:121
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
 "Изображение «%1» успешно использовано в качестве обоев всех рабочих столов"
 
-#: plasma-apply-wallpaperimage.cpp:96
+#: plasma-apply-wallpaperimage.cpp:128
 #, kde-format
 msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "

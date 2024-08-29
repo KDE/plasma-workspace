@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2013-10-20 04:00+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -106,22 +106,26 @@ msgstr ""
 #: ui/main.qml:101
 #, fuzzy, kde-format
 #| msgid "Available themes"
-msgid "All Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
 msgstr "Бар нақыштары"
 
 #: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Theme"
-msgid "Light Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
 msgstr "Нақышы"
 
 #: ui/main.qml:103
 #, kde-format
-msgid "Dark Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
 msgstr ""
 
 #: ui/main.qml:104
 #, kde-format
+msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr ""
 

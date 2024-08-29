@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2023-08-13 16:26+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -453,9 +453,11 @@ msgstr "Farbschema zum Ändern/Ansehen"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "Allgemeine Farben"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1255,21 +1257,27 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (Aktuelles Farbschema)"
 
 #: ui/AccentColorUI.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Accent color from color scheme"
+#| msgid "Accent Color From Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "Akzentfarbe aus dem Farbschema"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Accent color from wallpaper"
+#| msgid "Accent Color From Wallpaper"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
+msgid "Accent color from wallpaper"
 msgstr "Akzentfarbe aus dem Hintergrundbild"
 
 #: ui/AccentColorUI.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox User-chosen custom accent color"
+#| msgid "Custom Accent Color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "Benutzerdefinierte Akzentfarbe"
 
 #: ui/AccentColorUI.qml:147
@@ -1286,18 +1294,24 @@ msgstr ""
 "Standardschema installiert."
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Alle Schemata"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "Helle Schemata"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Dunkle Schemata"
 
 #: ui/main.qml:152

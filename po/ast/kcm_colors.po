@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -442,7 +442,7 @@ msgstr ""
 #: editor/scmeditorcolors.ui:40
 #, kde-format
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr ""
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1202,19 +1202,19 @@ msgstr ""
 #: ui/AccentColorUI.qml:27
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr ""
 
 #: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
+msgid "Accent color from wallpaper"
 msgstr ""
 
 #: ui/AccentColorUI.qml:29
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr ""
 
 #: ui/AccentColorUI.qml:147
@@ -1229,18 +1229,24 @@ msgid ""
 msgstr ""
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Tolos esquemes"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "Esquemes claros"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Esquemes escuros"
 
 #: ui/main.qml:152

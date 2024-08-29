@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -98,22 +98,30 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "您的系统已安装以下 Plasma 主题："
 
 #: ui/main.qml:101
-#, kde-format
-msgid "All Themes"
+#, fuzzy, kde-format
+#| msgid "All Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
 msgstr "所有主题"
 
 #: ui/main.qml:102
-#, kde-format
-msgid "Light Themes"
+#, fuzzy, kde-format
+#| msgid "Light Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
 msgstr "浅色主题"
 
 #: ui/main.qml:103
-#, kde-format
-msgid "Dark Themes"
+#, fuzzy, kde-format
+#| msgid "Dark Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
 msgstr "深色主题"
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Color scheme compatible"
+msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "兼容配色方案"
 

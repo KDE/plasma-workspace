@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2022-07-26 07:34+0200\n"
+"PO-Revision-Date: 2024-08-28 06:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -191,7 +191,7 @@ msgstr "Prikaži skrite ikone"
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
 msgid "Some letters with tall characters, ascenders, descenders, etc"
-msgstr ""
+msgstr "Nekaj črk z visokimi črkami, ostrivci, krativci, itd."
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Razširi sistemski pladenj"

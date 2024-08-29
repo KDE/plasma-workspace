@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 04:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -2761,7 +2761,7 @@ msgstr "წყარო: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:883 ions/envcan/ion_envcan.cpp:885
 #: ions/envcan/ion_envcan.cpp:1371 ions/envcan/ion_envcan.cpp:1500
-#: ions/envcan/ion_envcan.cpp:1516 ions/noaa/ion_noaa.cpp:418
+#: ions/envcan/ion_envcan.cpp:1516 ions/noaa/ion_noaa.cpp:423
 #, kde-format
 msgid "N/A"
 msgstr "შეუსაბამო"
@@ -2795,7 +2795,7 @@ msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
 msgstr "მონაცემები კანადის გარემოს დაცვის სერვისიდან"
 
-#: ions/noaa/ion_noaa.cpp:517
+#: ions/noaa/ion_noaa.cpp:522
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
@@ -2804,7 +2804,7 @@ msgstr "მონაცემები NOAA-ის ნაციონალუ�
 #. i18n: The forecast summary can include several single conditions that follow
 #. a temporary sequence, separated by " then ". Also include spaces if necessary.
 #. If there is no suitable separtor, a sentence separator might do.
-#: ions/noaa/ion_noaa.cpp:651
+#: ions/noaa/ion_noaa.cpp:658
 #, kde-format
 msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "

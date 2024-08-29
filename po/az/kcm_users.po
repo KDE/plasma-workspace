@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-13 00:41+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2024-08-13 16:03+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -181,73 +181,81 @@ msgstr "Şifrəni təsdiq etmək:"
 msgid "Create"
 msgstr "Yaratmaq"
 
-#: src/ui/EnrollFeedback.qml:27
+#: src/ui/CropSheet.qml:27
 #, kde-format
-msgid "Enrolling Fingerprint"
-msgstr "Barmaq izi qeydiyyatı"
+msgctxt "@title:window"
+msgid "Select Picture Area"
+msgstr ""
 
-#: src/ui/EnrollFeedback.qml:37
+#: src/ui/EnrolledConfirmation.qml:20
+#, fuzzy, kde-format
+#| msgid "Finger Enrolled"
+msgctxt "@info:status"
+msgid "Finger enrolled"
+msgstr "Barmaq izi qeyd olundu"
+
+#: src/ui/EnrollFeedback.qml:28
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ şəhadət barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:39
+#: src/ui/EnrollFeedback.qml:30
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr "Lütfən, sağ orta barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:41
+#: src/ui/EnrollFeedback.qml:32
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr "Lütfən, sağ üzük barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:43
+#: src/ui/EnrollFeedback.qml:34
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ kiçik barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:45
+#: src/ui/EnrollFeedback.qml:36
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr "Lütfən, sağ baş barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:47
+#: src/ui/EnrollFeedback.qml:38
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr "Lütfən, sol şəhadət barmağınızı barmaq izi sensoruna təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:49
+#: src/ui/EnrollFeedback.qml:40
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr "Lütfən, sol orta barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:51
+#: src/ui/EnrollFeedback.qml:42
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr "Lütfən, sol üzük barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:53
+#: src/ui/EnrollFeedback.qml:44
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sol kiçik barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:55
+#: src/ui/EnrollFeedback.qml:46
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr "Lütfən, sol baş barmağınızı barmaq izi sensoruna təkrar-təkrar basın."
 
-#: src/ui/EnrollFeedback.qml:59
+#: src/ui/EnrollFeedback.qml:50
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
@@ -255,71 +263,66 @@ msgstr ""
 "Lütfən, sağ şəhadət barmağınızı barmaq izi sensorunda təkrar-təkrar "
 "sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:61
+#: src/ui/EnrollFeedback.qml:52
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ orta barmağınızı barmaq izi sensorundaa təkrar-təkrar sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:63
+#: src/ui/EnrollFeedback.qml:54
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ üzük barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:65
+#: src/ui/EnrollFeedback.qml:56
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, barmaq izi sensorunda sağ kiçik barmağınızı dəfələrlə sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:67
+#: src/ui/EnrollFeedback.qml:58
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
 "Lütfən, sağ baş barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:69
+#: src/ui/EnrollFeedback.qml:60
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sol şəhadət barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:71
+#: src/ui/EnrollFeedback.qml:62
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sol orta barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:73
+#: src/ui/EnrollFeedback.qml:64
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, sol üzük barmağınızı barmaq izi sensorunda dəfələrlə sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:75
+#: src/ui/EnrollFeedback.qml:66
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
 "Lütfən, barmaq izi sensorunda sol kiçik barmağınızı dəfələrlə sürüşdürün."
 
-#: src/ui/EnrollFeedback.qml:77
+#: src/ui/EnrollFeedback.qml:68
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
 "Lütfən, barmaq izi sensorunda sol baş barmağınızı dəfələrlə sürüşdürün."
-
-#: src/ui/EnrollFeedback.qml:93
-#, kde-format
-msgid "Finger Enrolled"
-msgstr "Barmaq izi qeyd olundu"
 
 #: src/ui/FingerprintDialog.qml:28
 #, kde-format
@@ -530,13 +533,13 @@ msgstr ""
 "Şəkil faylları (Bütün əsas fayl növləri) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
 "jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:189
+#: src/ui/PicturesSheet.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Əvəzetmə nişanı"
 
-#: src/ui/PicturesSheet.qml:278
+#: src/ui/PicturesSheet.qml:285
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -596,22 +599,22 @@ msgstr ""
 "üçün şifrə tələb olunduqda həmin şifrənin əvəzinə istifadə olunur.<nl/><nl/"
 ">Barmaq izi istifadə etməklə sistemə daxil olmaq həhləlik dəstəklənmir."
 
-#: src/user.cpp:292
+#: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "%1 istifadəçini saxlamaq üçün icazə alına bilmədi"
 
-#: src/user.cpp:297
+#: src/user.cpp:315
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Dəyişikliklərin saxlanılmasında xəta baş verdi"
 
-#: src/user.cpp:389
+#: src/user.cpp:417
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Şəklin ölçüsü dəyişdirilə bilmədi: müvəqqəti fayl açıla bilmədi"
 
-#: src/user.cpp:397
+#: src/user.cpp:425
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Şəklin ölçüsü dəyişdirilə bilmədi: müvəqqəti fayl yazıla bilmədi"
@@ -625,6 +628,9 @@ msgstr "Hesabınız"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Digər hesablar"
+
+#~ msgid "Enrolling Fingerprint"
+#~ msgstr "Barmaq izi qeydiyyatı"
 
 #~ msgctxt "@action:button 'all' refers to fingerprints"
 #~ msgid "Clear All"

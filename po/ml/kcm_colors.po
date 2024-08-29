@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2021-08-27 12:19+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -448,9 +448,11 @@ msgstr "കാണേണ്ട/മാറ്റേണ്ട നിറക്കൂ�
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "സാധാരണ നിറങ്ങള്‍"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1241,20 +1243,21 @@ msgstr " * %1 (നിലവിലെ കളർ സ്കീം)"
 #, fuzzy, kde-format
 #| msgid "Restore Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Restore Color Scheme"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "നിറക്കൂട്ടു് പുനഃസ്ഥാപിക്കുക"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 #| msgid "Inactive color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "സജീവമല്ലാത്തവയുടെ നിറം"
 
 #: ui/AccentColorUI.qml:147
@@ -1269,18 +1272,24 @@ msgid ""
 msgstr "നിറക്കൂട്ടു് '%1' ഇൻസ്റ്റാൾ ചെയ്തിട്ടില്ല. പകരം തനത് തീം തിരഞ്ഞെടുക്കുന്നു."
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "എല്ലാ സ്കീമുകളും"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "ലൈറ്റ് സ്കീമുകൾ"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "ഇരുണ്ട സ്കീമുകൾ"
 
 #: ui/main.qml:152

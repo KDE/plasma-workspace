@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2023-08-03 23:45+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -452,9 +452,11 @@ msgstr "Набір кольорів для перегляду/зміни"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "Типові кольори"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1249,21 +1251,27 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (поточна схема кольорів)"
 
 #: ui/AccentColorUI.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Accent color from color scheme"
+#| msgid "Accent Color From Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "Колір акценту зі схеми кольорів"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Accent color from wallpaper"
+#| msgid "Accent Color From Wallpaper"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
+msgid "Accent color from wallpaper"
 msgstr "Колір акценту з фонового зображення"
 
 #: ui/AccentColorUI.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox User-chosen custom accent color"
+#| msgid "Custom Accent Color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "Нетиповий колір акценту"
 
 #: ui/AccentColorUI.qml:147
@@ -1278,18 +1286,24 @@ msgid ""
 msgstr "Схему кольорів «%1» не встановлено. Вибираємо замість неї типову тему."
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "Усі схеми"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "Світлі схеми"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "Темні схеми"
 
 #: ui/main.qml:152

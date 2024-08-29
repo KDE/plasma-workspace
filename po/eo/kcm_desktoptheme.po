@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2023-08-03 07:04+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -104,22 +104,30 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "Vi havas la sekvajn Plasma-etosojn en via sistemo:"
 
 #: ui/main.qml:101
-#, kde-format
-msgid "All Themes"
+#, fuzzy, kde-format
+#| msgid "All Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
 msgstr "Ĉiuj Etosoj"
 
 #: ui/main.qml:102
-#, kde-format
-msgid "Light Themes"
+#, fuzzy, kde-format
+#| msgid "Light Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
 msgstr "Helaj Etosoj"
 
 #: ui/main.qml:103
-#, kde-format
-msgid "Dark Themes"
+#, fuzzy, kde-format
+#| msgid "Dark Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
 msgstr "Malhelaj Etosoj"
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Color scheme compatible"
+msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Kongrua al kolorskemo"
 

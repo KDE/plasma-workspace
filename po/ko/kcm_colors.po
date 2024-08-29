@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2023-08-06 22:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -447,9 +447,11 @@ msgstr "보거나 수정할 색상 종류"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "color-sets"
+#| msgid "Common Colors"
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "공통 색상"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1228,21 +1230,27 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1(현재 색 구성표)"
 
 #: ui/AccentColorUI.qml:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Accent color from color scheme"
+#| msgid "Accent Color From Color Scheme"
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "색 구성표의 강조 색상"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox Accent color from wallpaper"
+#| msgid "Accent Color From Wallpaper"
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
+msgid "Accent color from wallpaper"
 msgstr "배경 그림의 강조 색상"
 
 #: ui/AccentColorUI.qml:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@item:inlistbox User-chosen custom accent color"
+#| msgid "Custom Accent Color"
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "사용자 정의 강조 색상"
 
 #: ui/AccentColorUI.qml:147
@@ -1257,18 +1265,24 @@ msgid ""
 msgstr "색 구성표 '%1'이(가) 설치되어 있지 않습니다. 기본 테마를 사용합니다."
 
 #: ui/main.qml:123
-#, kde-format
-msgid "All Schemes"
+#, fuzzy, kde-format
+#| msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "모든 색 구성표"
 
 #: ui/main.qml:124
-#, kde-format
-msgid "Light Schemes"
+#, fuzzy, kde-format
+#| msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "밝은 색 구성표"
 
 #: ui/main.qml:125
-#, kde-format
-msgid "Dark Schemes"
+#, fuzzy, kde-format
+#| msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "어두운 색 구성표"
 
 #: ui/main.qml:152

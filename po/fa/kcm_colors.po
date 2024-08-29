@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2007-09-02 12:20+0330\n"
 "Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -447,7 +447,7 @@ msgstr ""
 #: editor/scmeditorcolors.ui:40
 #, fuzzy, kde-format
 msgctxt "color-sets"
-msgid "Common Colors"
+msgid "Common colors"
 msgstr "رنگها"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
@@ -1210,19 +1210,19 @@ msgstr "ذخیره طرحواره رنگ"
 #: ui/AccentColorUI.qml:27
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
-msgid "Accent Color From Color Scheme"
+msgid "Accent color from color scheme"
 msgstr "طرحواره رنگ"
 
 #: ui/AccentColorUI.qml:28
-#, kde-format
+#, fuzzy, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
-msgid "Accent Color From Wallpaper"
-msgstr ""
+msgid "Accent color from wallpaper"
+msgstr "طرحواره رنگ"
 
 #: ui/AccentColorUI.qml:29
 #, fuzzy, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
-msgid "Custom Accent Color"
+msgid "Custom accent color"
 msgstr "پنجره غیرفعال"
 
 #: ui/AccentColorUI.qml:147
@@ -1238,18 +1238,21 @@ msgstr ""
 
 #: ui/main.qml:123
 #, fuzzy, kde-format
-msgid "All Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "All schemes"
 msgstr "طرحواره رنگ"
 
 #: ui/main.qml:124
 #, fuzzy, kde-format
-msgid "Light Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Light schemes"
 msgstr "&حذف طرحواره‌"
 
 #: ui/main.qml:125
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
-msgid "Dark Schemes"
+msgctxt "@item:inlistbox filter displayed schemes"
+msgid "Dark schemes"
 msgstr "ذخیره طرحواره رنگ"
 
 #: ui/main.qml:152

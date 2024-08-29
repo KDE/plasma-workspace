@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2023-08-03 11:46+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -105,22 +105,30 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "Zure sisteman ondoko Plasma-gaiak dituzu:"
 
 #: ui/main.qml:101
-#, kde-format
-msgid "All Themes"
+#, fuzzy, kde-format
+#| msgid "All Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
 msgstr "Gai guztiak"
 
 #: ui/main.qml:102
-#, kde-format
-msgid "Light Themes"
+#, fuzzy, kde-format
+#| msgid "Light Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
 msgstr "Gai argiak"
 
 #: ui/main.qml:103
-#, kde-format
-msgid "Dark Themes"
+#, fuzzy, kde-format
+#| msgid "Dark Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
 msgstr "Gai ilunak"
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Color scheme compatible"
+msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Kolore-antolaerarekin bateragarriak"
 

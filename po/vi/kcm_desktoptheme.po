@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
 "PO-Revision-Date: 2021-05-26 21:12+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -102,22 +102,30 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "Bạn có các chủ đề Plasma sau trong hệ thống:"
 
 #: ui/main.qml:101
-#, kde-format
-msgid "All Themes"
+#, fuzzy, kde-format
+#| msgid "All Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
 msgstr "Tất cả chủ đề"
 
 #: ui/main.qml:102
-#, kde-format
-msgid "Light Themes"
+#, fuzzy, kde-format
+#| msgid "Light Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
 msgstr "Chủ đề sáng"
 
 #: ui/main.qml:103
-#, kde-format
-msgid "Dark Themes"
+#, fuzzy, kde-format
+#| msgid "Dark Themes"
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
 msgstr "Chủ đề tối"
 
 #: ui/main.qml:104
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Color scheme compatible"
+msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Tương thích với quy hoạch màu"
 
