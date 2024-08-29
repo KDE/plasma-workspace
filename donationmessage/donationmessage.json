@@ -1,7 +1,27 @@
 {
     "KPlugin": {
         "Description": "Shows a yearly request to donate to KDE",
-        "Name": "Donation Request"
+        "Description[ca]": "Mostra una sol·licitud anual de donació a KDE",
+        "Description[es]": "Muestra una petición anual para hacer un donativo a KDE",
+        "Description[he]": "הצגת בקשה שנתית לתרום ל־KDE",
+        "Description[ka]": "აჩვენებს KDE-სთვის შეწირვის მოთხოვნას წელიწადში ერთხელ",
+        "Description[nl]": "Toont een jaarlijks verzoek voor doneren aan KDE",
+        "Description[sl]": "Prikazuje letno prošnjo za donacijo KDE",
+        "Description[sv]": "Visar ett årligt önskemål om att bidra till KDE",
+        "Description[tr]": "KDE’ye bağış yapılması için yılda bir kez bir talep gösterir",
+        "Description[uk]": "Показує щорічний запит щодо фінансової підтримки KDE",
+        "Description[x-test]": "xxShows a yearly request to donate to KDExx",
+        "Name": "Donation Request",
+        "Name[ca]": "Sol·licitud de donació",
+        "Name[es]": "Solicitud de donativo",
+        "Name[he]": "בקשת תרומה",
+        "Name[ka]": "შეწირულობის მოთხოვნა",
+        "Name[nl]": "Verzoek om donatie",
+        "Name[sl]": "Prošnja za donacijo",
+        "Name[sv]": "Önskemål om bidrag",
+        "Name[tr]": "Bağış Talebi",
+        "Name[uk]": "Запит щодо фінансової підтримки",
+        "Name[x-test]": "xxDonation Requestxx"
     },
     "X-KDE-Kded-autoload": true
 }
