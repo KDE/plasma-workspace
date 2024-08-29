@@ -16,8 +16,8 @@ import org.kde.kirigami as Kirigami
 PlasmaExtras.Representation {
     id: dialogItem
 
-    implicitWidth: Math.max(Kirigami.Units.gridUnit * 15, Math.min(Screen.width / 4, Kirigami.Units.gridUnit * 40))
-    implicitHeight: Math.min(Screen.height / 2, Kirigami.Units.gridUnit * 40)
+    implicitWidth: 100 // A friendly initial size
+    implicitHeight: 100
 
     signal requestHidePopup()
 
@@ -32,6 +32,9 @@ PlasmaExtras.Representation {
         target: dialogItem.Window.window
         function onVisibleChanged() {
             if (dialogItem.Window.window.visible) {
+                // Break the bindings to avoid resizing loops due to screen changes
+                dialogItem.implicitWidth = Math.max(Kirigami.Units.gridUnit * 15, Math.min(dialogItem.Screen.width / 4, Kirigami.Units.gridUnit * 40));
+                dialogItem.implicitHeight = Math.min(dialogItem.Screen.height / 2, Kirigami.Units.gridUnit * 40);
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = 0;
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
             }
