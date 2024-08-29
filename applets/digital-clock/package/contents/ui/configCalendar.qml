@@ -46,13 +46,13 @@ KCMUtils.SimpleKCM {
         QQC2.ComboBox {
             id: firstDayOfWeekCombo
 
-            Kirigami.FormData.label: i18n("First day of week:")
+            Kirigami.FormData.label: i18nc("@label:listbox", "First day of week:")
             Layout.fillWidth: true
 
             textRole: "text"
             model: [-1, 0, 1, 5, 6].map(day => ({
                 day,
-                text: day === -1 ? i18n("Use Region Defaults") : Qt.locale().dayName(day),
+                text: day === -1 ? i18nc("@item:inlistbox first day of week option", "Use region defaults") : Qt.locale().dayName(day),
             }))
             onActivated: index => {
                 cfg_firstDayOfWeek = model[index].day;

@@ -123,22 +123,22 @@ KCMUtils.SimpleKCM {
 
         RowLayout {
             Layout.fillWidth: true
-            Kirigami.FormData.label: i18n("Time display:")
+            Kirigami.FormData.label: i18nc("@label:listbox", "Time display:")
             spacing: Kirigami.Units.smallSpacing
 
             QQC2.ComboBox {
                 id: use24hFormat
                 model: [
-                    i18n("12-Hour"),
-                    i18n("Use Region Defaults"),
-                    i18n("24-Hour")
+                    i18nc("@item:inlistbox time display option", "12-Hour"),
+                    i18nc("@item:inlistbox time display option", "Use region defaults"),
+                    i18nc("@item:inlistbox time display option", "24-Hour")
                 ]
                 onActivated: cfg_use24hFormat = currentIndex
             }
 
             QQC2.Button {
                 visible: KConfig.KAuthorized.authorizeControlModule("kcm_regionandlang")
-                text: i18n("Change Regional Settings…")
+                text: i18nc("@action:button opens kcm", "Change Regional Settings…")
                 icon.name: "preferences-desktop-locale"
                 onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_regionandlang")
             }
@@ -149,7 +149,7 @@ KCMUtils.SimpleKCM {
         }
 
         RowLayout {
-            Kirigami.FormData.label: i18n("Date format:")
+            Kirigami.FormData.label: i18nc("@label:listbox", "Date format:")
             enabled: showDate.checked
             spacing: Kirigami.Units.smallSpacing
 
@@ -158,28 +158,28 @@ KCMUtils.SimpleKCM {
                 textRole: "label"
                 model: [
                     {
-                        label: i18n("Long Date"),
+                        label: i18nc("@item:inlistbox date display option, includes e.g. day of week and month as word", "Long date"),
                         name: "longDate",
                         formatter(d) {
                             return Qt.formatDate(d, Qt.locale(), Locale.LongFormat);
                         },
                     },
                     {
-                        label: i18n("Short Date"),
+                        label: i18nc("@item:inlistbox date display option, e.g. all numeric", "Short date"),
                         name: "shortDate",
                         formatter(d) {
                             return Qt.formatDate(d, Qt.locale(), Locale.ShortFormat);
                         },
                     },
                     {
-                        label: i18n("ISO Date"),
+                        label: i18nc("@item:inlistbox date display option, yyyy-mm-dd", "ISO date"),
                         name: "isoDate",
                         formatter(d) {
                             return Qt.formatDate(d, Qt.ISODate);
                         },
                     },
                     {
-                        label: i18nc("custom date format", "Custom"),
+                        label: i18nc("@item:inlistbox custom date format", "Custom"),
                         name: "custom",
                         formatter(d) {
                             return Qt.locale().toString(d, customDateFormat.text);
