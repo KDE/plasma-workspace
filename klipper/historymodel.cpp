@@ -146,10 +146,6 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     case Qt::DisplayRole:
         return item->text();
     case Qt::DecorationRole: {
-        if (item->type() == HistoryItemType::Image && !m_displayImages) {
-            static const QImage imageIcon(QIcon::fromTheme(QStringLiteral("view-preview")).pixmap(QSize(48, 48)).toImage());
-            return imageIcon;
-        }
         return item->image();
     }
     case HistoryItemConstPtrRole:
