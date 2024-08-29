@@ -60,6 +60,7 @@ set_target_properties(klipper PROPERTIES
 install(TARGETS klipper ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 add_subdirectory(declarative)
+add_subdirectory(kconf_update)
 
 install(FILES org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
