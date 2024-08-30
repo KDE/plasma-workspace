@@ -623,12 +623,22 @@ void AppletsLayout::touchEvent(QTouchEvent *event)
 {
     const auto &point = *(event->points().cbegin());
 
+    // Do a long press to go in edit mode only with a single point
+    if (event->points().length() != 1) {
+        m_pressAndHoldTimer->stop();
+    }
+
+    if (event->type() == QEvent::TouchCancel) {
+        handleReleaseEvent(point.scenePosition());
+        return;
+    }
+
     switch (point.state()) {
     case QEventPoint::State::Pressed: {
         if (!m_editMode) {
             if (m_editModeCondition == AppletsLayout::Manual) {
                 break;
-            } else if (m_editModeCondition == AppletsLayout::AfterPressAndHold) {
+            } else if (m_editModeCondition == AppletsLayout::AfterPressAndHold && event->points().length() == 1) {
                 m_pressAndHoldTimer->start(QGuiApplication::styleHints()->mousePressAndHoldInterval());
             }
         }
