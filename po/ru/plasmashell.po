@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-11 07:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -163,6 +163,11 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Скрыть баннер?"
+
+#: desktopview.cpp:488
+#, kde-format
+msgid "Enter Edit Mode"
+msgstr ""
 
 #: main.cpp:84
 #, kde-format
@@ -328,7 +333,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Производительный режим"
 
-#: panelview.cpp:437
+#: panelview.cpp:438
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -340,13 +345,13 @@ msgstr ""
 "производительности графики при перетаскивании окон и изменении их размеров. "
 "Рекомендуется использовать другие параметры."
 
-#: panelview.cpp:1092
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Скрыть окно настройки панели"
 
-#: panelview.cpp:1094
+#: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -423,7 +428,7 @@ msgstr "Перемещение фокуса ввода с клавиатуры �
 msgid "Add Panel"
 msgstr "Добавить панель"
 
-#: shellcorona.cpp:2130
+#: shellcorona.cpp:2140
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

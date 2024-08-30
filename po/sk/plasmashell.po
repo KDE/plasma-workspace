@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2023-11-11 15:11+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -142,6 +142,11 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
+msgstr ""
+
+#: desktopview.cpp:488
+#, kde-format
+msgid "Enter Edit Mode"
 msgstr ""
 
 #: main.cpp:84
@@ -307,7 +312,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr ""
 
-#: panelview.cpp:437
+#: panelview.cpp:438
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -315,13 +320,13 @@ msgid ""
 "settings."
 msgstr ""
 
-#: panelview.cpp:1092
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr ""
 
-#: panelview.cpp:1094
+#: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -398,7 +403,7 @@ msgstr "Presúvanie zameranie klávesnice medzi panelmi"
 msgid "Add Panel"
 msgstr "Pridať panel"
 
-#: shellcorona.cpp:2130
+#: shellcorona.cpp:2140
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -617,6 +617,3 @@ msgstr "Kontoen din"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Andre kontoar"
-
-#~ msgid "Enrolling Fingerprint"
-#~ msgstr "Registrerer fingeravtrykk"

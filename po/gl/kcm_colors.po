@@ -10,22 +10,22 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2014.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016, 2017.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2023-10-13 07:01+0200\n"
+"PO-Revision-Date: 2024-08-29 18:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -460,9 +460,7 @@ msgstr "O conxunto de cores a ver/modificar."
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
+#, kde-format
 msgctxt "color-sets"
 msgid "Common colors"
 msgstr "Cores comúns"
@@ -1259,25 +1257,19 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de cores actual)"
 
 #: ui/AccentColorUI.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from color scheme"
-#| msgid "Accent Color From Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
 msgstr "Cor de énfase do esquema de cores"
 
 #: ui/AccentColorUI.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from wallpaper"
-#| msgid "Accent Color From Wallpaper"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
 msgstr "Cor de énfase do fondo"
 
 #: ui/AccentColorUI.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox User-chosen custom accent color"
-#| msgid "Custom Accent Color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Cor de énfase personalizada"
@@ -1296,22 +1288,19 @@ msgstr ""
 "tema predeterminado."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "Todos os esquemas"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Light Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "Esquemas claros"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Dark Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Esquemas escuros"

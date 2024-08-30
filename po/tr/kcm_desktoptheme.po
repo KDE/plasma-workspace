@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-03-18 19:21+0300\n"
+"PO-Revision-Date: 2024-08-29 13:48+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -105,29 +105,25 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "Sisteminizde aşağıdaki Plasma temaları var:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "All Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
-msgstr "Tüm Temalar"
+msgstr "Tüm temalar"
 
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Light Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
-msgstr "Açık Temalar"
+msgstr "Açık temalar"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Dark Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
-msgstr "Koyu Temalar"
+msgstr "Koyu temalar"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Color scheme compatible"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Renk şeması uyumlu"
@@ -170,4 +166,4 @@ msgstr "Tema Aç"
 #: ui/main.qml:201
 #, kde-format
 msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
-msgstr "Tema Dosyaları (*.zip *.tar.gz *.tar.bz2)"
+msgstr "Tema dosyaları (*.zip *.tar.gz *.tar.bz2)"

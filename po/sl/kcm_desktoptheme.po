@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2023-08-03 07:55+0200\n"
+"PO-Revision-Date: 2024-08-29 07:03+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -106,32 +106,28 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "V sistemu imate naslednje teme Plasme:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "All Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
 msgstr "Vse teme"
 
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Light Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
 msgstr "Svetle teme"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Dark Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
 msgstr "Temne teme"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Color scheme compatible"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
-msgstr "Kompatibilne z barvno shemo"
+msgstr "Barvna shema kompatibilna"
 
 #: ui/main.qml:130
 #, kde-format

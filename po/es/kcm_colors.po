@@ -10,7 +10,7 @@
 # Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
 # Jaime Robles <jaime@robles.nu>, 2005.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2009, 2010, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
 # Javier Vinal <fjvinal@gmail.com>, 2012.
 msgid ""
@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2023-08-13 01:02+0200\n"
+"PO-Revision-Date: 2024-08-30 01:09+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -27,7 +27,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -462,9 +462,7 @@ msgstr "Conjunto de color a ver/modificar"
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
+#, kde-format
 msgctxt "color-sets"
 msgid "Common colors"
 msgstr "Colores comunes"
@@ -1264,25 +1262,19 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (esquema de color actual)"
 
 #: ui/AccentColorUI.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from color scheme"
-#| msgid "Accent Color From Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
 msgstr "Color de acento del esquema de color"
 
 #: ui/AccentColorUI.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from wallpaper"
-#| msgid "Accent Color From Wallpaper"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
 msgstr "Color de acento del fondo de escritorio"
 
 #: ui/AccentColorUI.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox User-chosen custom accent color"
-#| msgid "Custom Accent Color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Color de acento personalizado"
@@ -1301,22 +1293,19 @@ msgstr ""
 "omisión en su lugar."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "Todos los esquemas"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Light Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "Esquemas claros"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Dark Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "Esquemas oscuros"

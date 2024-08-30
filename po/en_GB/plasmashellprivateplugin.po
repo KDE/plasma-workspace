@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-24 12:00+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -175,12 +175,12 @@ msgstr "Sets the minutes after which the screen is locked."
 msgid "New Session"
 msgstr "New Session"
 
-#: shellprivate/kcategorizeditemsviewmodels.cpp:64
+#: shellprivate/kcategorizeditemsviewmodels.cpp:65
 #, kde-format
 msgid "Filters"
 msgstr "Filters"
 
-#: shellprivate/plasmaappletitemmodel.cpp:164
+#: shellprivate/plasmaappletitemmodel.cpp:197
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -191,7 +191,7 @@ msgstr ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 
-#: shellprivate/plasmaappletitemmodel.cpp:168
+#: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -200,7 +200,7 @@ msgstr ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 
-#: shellprivate/plasmaappletitemmodel.cpp:172
+#: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -209,7 +209,7 @@ msgstr ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 
-#: shellprivate/plasmaappletitemmodel.cpp:177
+#: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -349,36 +349,46 @@ msgstr "Uninstallable"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can were "
+"recently installed."
+msgid "Recently installed"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:164
+#, kde-format
 msgid "Categories:"
 msgstr "Categories:"
 
-#: shellprivate/widgetexplorer.cpp:230
+#: shellprivate/widgetexplorer.cpp:234
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Download New Plasma Widgets"
 
-#: shellprivate/widgetexplorer.cpp:239
+#: shellprivate/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Install Widget From Local File…"
 
-#: shellprivate/widgetexplorer.cpp:489
+#: shellprivate/widgetexplorer.cpp:493
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Get New Widgets"
 
-#: shellprivate/widgetexplorer.cpp:508
+#: shellprivate/widgetexplorer.cpp:512
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Select Plasmoid File"
 
-#: shellprivate/widgetexplorer.cpp:522
-#, kde-format
-msgid "Installing the package %1 failed."
+#: shellprivate/widgetexplorer.cpp:528
+#, fuzzy, kde-format
+#| msgid "Installing the package %1 failed."
+msgctxt "%1 is the name of an applet, %2 is an error message"
+msgid "Installing the package %1 failed: %2."
 msgstr "Installing the package %1 failed."
 
-#: shellprivate/widgetexplorer.cpp:522
+#: shellprivate/widgetexplorer.cpp:529
 #, kde-format
 msgid "Installation Failure"
 msgstr "Installation Failure"

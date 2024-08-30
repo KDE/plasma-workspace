@@ -179,7 +179,7 @@ msgstr "显示所有项目到系统托盘的弹窗"
 #: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format
 msgid "Close popup"
-msgstr "关闭弹出信息"
+msgstr "关闭弹窗"
 
 #: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format
@@ -189,4 +189,4 @@ msgstr "显示隐藏的图标"
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
 msgid "Some letters with tall characters, ascenders, descenders, etc"
-msgstr ""
+msgstr "某些带有高字符、上行字符、下行字符等的字母"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-25 15:39+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -149,6 +149,11 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Quere agochar o cadro da vista previa?"
+
+#: desktopview.cpp:488
+#, kde-format
+msgid "Enter Edit Mode"
+msgstr ""
 
 #: main.cpp:84
 #, kde-format
@@ -314,7 +319,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Modo de rendemento"
 
-#: panelview.cpp:437
+#: panelview.cpp:438
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -325,13 +330,13 @@ msgstr ""
 "adaptativa poden provocar un mal rendemento ao arrastrar ou cambiar de "
 "tamaño as xanelas. Considere usar outra configuración."
 
-#: panelview.cpp:1092
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Agochar a configuración do panel"
 
-#: panelview.cpp:1094
+#: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -408,7 +413,7 @@ msgstr "Mover o foco do teclado entre paneis"
 msgid "Add Panel"
 msgstr "Engadir un panel"
 
-#: shellcorona.cpp:2130
+#: shellcorona.cpp:2140
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

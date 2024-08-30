@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-07-10 12:54+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -176,12 +176,12 @@ msgstr "Angiver det antal minutter, hvorefter skærmen låses."
 msgid "New Session"
 msgstr "Ny session"
 
-#: shellprivate/kcategorizeditemsviewmodels.cpp:64
+#: shellprivate/kcategorizeditemsviewmodels.cpp:65
 #, kde-format
 msgid "Filters"
 msgstr "Filtre"
 
-#: shellprivate/plasmaappletitemmodel.cpp:164
+#: shellprivate/plasmaappletitemmodel.cpp:197
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -192,7 +192,7 @@ msgstr ""
 "ikke kompatibel med Plasma %1. Venligst kontakt forfatteren af widgeten for "
 "en opdateret version."
 
-#: shellprivate/plasmaappletitemmodel.cpp:168
+#: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -201,7 +201,7 @@ msgstr ""
 "Denne widget var skrevet til Plasma %1 og er ikke kompatibel med Plasma %2. "
 "Kontakt venligst forfatteren af widgeten for en opdateret version."
 
-#: shellprivate/plasmaappletitemmodel.cpp:172
+#: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -210,7 +210,7 @@ msgstr ""
 "Denne widget var skrevet til Plasma %1 og er ikke kompatibel med Plasma %2. "
 "Opdatér venligst Plasma for at bruge widgeten."
 
-#: shellprivate/plasmaappletitemmodel.cpp:177
+#: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -350,37 +350,47 @@ msgstr "Kan afinstalleres"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can were "
+"recently installed."
+msgid "Recently installed"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:164
+#, kde-format
 msgid "Categories:"
 msgstr "Kategorier:"
 
-#: shellprivate/widgetexplorer.cpp:230
+#: shellprivate/widgetexplorer.cpp:234
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Download nye Plasma-widgets"
 
-#: shellprivate/widgetexplorer.cpp:239
+#: shellprivate/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Installér widget fra lokal fil…"
 
-#: shellprivate/widgetexplorer.cpp:489
+#: shellprivate/widgetexplorer.cpp:493
 #, fuzzy, kde-format
 #| msgid "All Widgets"
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Alle widgets"
 
-#: shellprivate/widgetexplorer.cpp:508
+#: shellprivate/widgetexplorer.cpp:512
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Vælg plasmoid-fil"
 
-#: shellprivate/widgetexplorer.cpp:522
-#, kde-format
-msgid "Installing the package %1 failed."
+#: shellprivate/widgetexplorer.cpp:528
+#, fuzzy, kde-format
+#| msgid "Installing the package %1 failed."
+msgctxt "%1 is the name of an applet, %2 is an error message"
+msgid "Installing the package %1 failed: %2."
 msgstr "Installation af pakken %1 mislykkedes."
 
-#: shellprivate/widgetexplorer.cpp:522
+#: shellprivate/widgetexplorer.cpp:529
 #, kde-format
 msgid "Installation Failure"
 msgstr "Installationsfejl"

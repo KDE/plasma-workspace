@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-02-09 19:44+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -174,12 +174,12 @@ msgstr "화면 보호기를 시작할 시간을 분 단위로 설정합니다."
 msgid "New Session"
 msgstr "새 세션"
 
-#: shellprivate/kcategorizeditemsviewmodels.cpp:64
+#: shellprivate/kcategorizeditemsviewmodels.cpp:65
 #, kde-format
 msgid "Filters"
 msgstr "필터"
 
-#: shellprivate/plasmaappletitemmodel.cpp:164
+#: shellprivate/plasmaappletitemmodel.cpp:197
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -189,7 +189,7 @@ msgstr ""
 "이 위젯은 알 수 없는 과거 Plasma 버전을 위해서 작성되었으며 Plasma %1 버전과 "
 "호환되지 않습니다. 위젯 개발자에게 업데이트된 버전에 대해서 문의하십시오."
 
-#: shellprivate/plasmaappletitemmodel.cpp:168
+#: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -198,7 +198,7 @@ msgstr ""
 "이 위젯은 Plasma %1 버전을 위해서 작성되었으며 Plasma %2 버전과 호환되지 않습"
 "니다. 위젯 개발자에게 업데이트된 버전에 대해서 문의하십시오."
 
-#: shellprivate/plasmaappletitemmodel.cpp:172
+#: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
@@ -207,7 +207,7 @@ msgstr ""
 "이 위젯은 Plasma %1 버전을 위해서 작성되었으며 Plasma %2 버전과 호환되지 않습"
 "니다. 위젯을 사용하려면 Plasma를 업데이트하십시오."
 
-#: shellprivate/plasmaappletitemmodel.cpp:177
+#: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -347,37 +347,47 @@ msgstr "삭제 가능"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can were "
+"recently installed."
+msgid "Recently installed"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:164
+#, kde-format
 msgid "Categories:"
 msgstr "분류:"
 
-#: shellprivate/widgetexplorer.cpp:230
+#: shellprivate/widgetexplorer.cpp:234
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "새 Plasma 위젯 다운로드"
 
-#: shellprivate/widgetexplorer.cpp:239
+#: shellprivate/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "로컬 파일에서 위젯 설치…"
 
-#: shellprivate/widgetexplorer.cpp:489
+#: shellprivate/widgetexplorer.cpp:493
 #, fuzzy, kde-format
 #| msgid "All Widgets"
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "모든 위젯"
 
-#: shellprivate/widgetexplorer.cpp:508
+#: shellprivate/widgetexplorer.cpp:512
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Plasmoid 파일 선택"
 
-#: shellprivate/widgetexplorer.cpp:522
-#, kde-format
-msgid "Installing the package %1 failed."
+#: shellprivate/widgetexplorer.cpp:528
+#, fuzzy, kde-format
+#| msgid "Installing the package %1 failed."
+msgctxt "%1 is the name of an applet, %2 is an error message"
+msgid "Installing the package %1 failed: %2."
 msgstr "패키지 %1을(를) 설치하는 데 실패했습니다."
 
-#: shellprivate/widgetexplorer.cpp:522
+#: shellprivate/widgetexplorer.cpp:529
 #, kde-format
 msgid "Installation Failure"
 msgstr "설치 실패"

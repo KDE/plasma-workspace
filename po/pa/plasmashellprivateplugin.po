@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-23 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-01-03 14:00-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -175,12 +175,12 @@ msgstr "ਮਿੰਟ ਸੈੱਟ ਕਰੋ, ਜਿਸ ਦੇ ਬਾਅਦ ਸ�
 msgid "New Session"
 msgstr "ਨਵਾਂ ਸ਼ੈਸ਼ਨ"
 
-#: shellprivate/kcategorizeditemsviewmodels.cpp:64
+#: shellprivate/kcategorizeditemsviewmodels.cpp:65
 #, kde-format
 msgid "Filters"
 msgstr "ਫਿਲਟਰ"
 
-#: shellprivate/plasmaappletitemmodel.cpp:164
+#: shellprivate/plasmaappletitemmodel.cpp:197
 #, kde-format
 msgid ""
 "This Widget was written for an unknown older version of Plasma and is not "
@@ -188,21 +188,21 @@ msgid ""
 "version."
 msgstr ""
 
-#: shellprivate/plasmaappletitemmodel.cpp:168
+#: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
 
-#: shellprivate/plasmaappletitemmodel.cpp:172
+#: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
 
-#: shellprivate/plasmaappletitemmodel.cpp:177
+#: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
 msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
@@ -340,37 +340,47 @@ msgstr "ਹਟਾਉਣਯੋਗ"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can were "
+"recently installed."
+msgid "Recently installed"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:164
+#, kde-format
 msgid "Categories:"
 msgstr "ਕੈਟਾਗਰੀਆਂ:"
 
-#: shellprivate/widgetexplorer.cpp:230
+#: shellprivate/widgetexplorer.cpp:234
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "ਨਵੇਂ ਪਲਾਜ਼ਮਾ ਵਿਦਜੈਟ ਡਾਊਨਲੋਡ ਕਰੋ"
 
-#: shellprivate/widgetexplorer.cpp:239
+#: shellprivate/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "…ਲੋਕਲ ਫਾਇਲ ਤੋਂ ਵਿਜੈਟ ਇੰਸਟਾਲ ਕਰੋ"
 
-#: shellprivate/widgetexplorer.cpp:489
+#: shellprivate/widgetexplorer.cpp:493
 #, fuzzy, kde-format
 #| msgid "All Widgets"
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "ਸਭ ਵਿਦਜੈਟ"
 
-#: shellprivate/widgetexplorer.cpp:508
+#: shellprivate/widgetexplorer.cpp:512
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "ਪਲਾਜ਼ਮੋਡ ਫ਼ਾਇਲ ਚੁਣੋ"
 
-#: shellprivate/widgetexplorer.cpp:522
-#, kde-format
-msgid "Installing the package %1 failed."
+#: shellprivate/widgetexplorer.cpp:528
+#, fuzzy, kde-format
+#| msgid "Installing the package %1 failed."
+msgctxt "%1 is the name of an applet, %2 is an error message"
+msgid "Installing the package %1 failed: %2."
 msgstr "ਪੈਕੇਜ %1 ਨੂੰ ਇੰਸਟਾਲ ਕਰਨਾ ਫ਼ੇਲ੍ਹ ਹੈ"
 
-#: shellprivate/widgetexplorer.cpp:522
+#: shellprivate/widgetexplorer.cpp:529
 #, kde-format
 msgid "Installation Failure"
 msgstr "ਇੰਸਟਾਲੇਸ਼ਨ ਅਸਫ਼ਲ"

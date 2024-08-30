@@ -184,11 +184,10 @@ msgid "Select Picture Area"
 msgstr ""
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
-msgstr "指纹已录入"
+msgstr ""
 
 #: src/ui/EnrollFeedback.qml:28
 #, kde-format
@@ -609,6 +608,3 @@ msgstr "您的账户"
 #, kde-format
 msgid "Other Accounts"
 msgstr "其他账户"
-
-#~ msgid "Enrolling Fingerprint"
-#~ msgstr "正在录入指纹"

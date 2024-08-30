@@ -7,22 +7,22 @@
 # Marce Villarino <mvillarino@gmail.com>, 2009.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012, 2013, 2014.
 # Adrián Chaves Fernández (Gallaecio) <adriyetichaves@gmail.com>, 2015, 2016.
-# SPDX-FileCopyrightText: 2023 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2023-10-10 15:30+0200\n"
+"PO-Revision-Date: 2024-08-29 18:24+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
-"Language-Team: Galician <proxecto@trasno.gal>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -109,29 +109,25 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "Ten os seguintes temas de Plasma no sistema:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "All Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
 msgstr "Todos os temas"
 
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Light Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
 msgstr "Temas claros"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Dark Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
 msgstr "Temas escuros"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Color scheme compatible"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "Compatíbeis con esquemas de cores"

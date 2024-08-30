@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2014-08-21 16:24+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -161,6 +161,11 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
+msgstr ""
+
+#: desktopview.cpp:488
+#, kde-format
+msgid "Enter Edit Mode"
 msgstr ""
 
 #: main.cpp:84
@@ -326,7 +331,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr ""
 
-#: panelview.cpp:437
+#: panelview.cpp:438
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -334,13 +339,13 @@ msgid ""
 "settings."
 msgstr ""
 
-#: panelview.cpp:1092
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr ""
 
-#: panelview.cpp:1094
+#: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -419,7 +424,7 @@ msgstr ""
 msgid "Add Panel"
 msgstr "Paneel tofögen"
 
-#: shellcorona.cpp:2130
+#: shellcorona.cpp:2140
 #, fuzzy, kde-format
 #| msgid "Empty %1"
 msgctxt "Creates an empty containment (%1 is the containment name)"

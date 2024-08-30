@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -147,6 +147,11 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "隐藏预览横幅？"
+
+#: desktopview.cpp:488
+#, kde-format
+msgid "Enter Edit Mode"
+msgstr ""
 
 #: main.cpp:84
 #, kde-format
@@ -311,7 +316,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "性能模式"
 
-#: panelview.cpp:437
+#: panelview.cpp:438
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -321,13 +326,13 @@ msgstr ""
 "在 X11 环境下使用 NVIDIA GPU 时存在已知问题，会导致浮动样式和自适应不透明度模"
 "式的窗口拖动和缩放性能低下。请考虑使用其他设置。"
 
-#: panelview.cpp:1092
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "隐藏面板配置"
 
-#: panelview.cpp:1094
+#: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -404,7 +409,7 @@ msgstr "在面板之间移动键盘焦点"
 msgid "Add Panel"
 msgstr "添加面板"
 
-#: shellcorona.cpp:2130
+#: shellcorona.cpp:2140
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

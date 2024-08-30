@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-23 10:59+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -151,6 +151,11 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Oculto el bàner de vista prèvia?"
+
+#: desktopview.cpp:488
+#, kde-format
+msgid "Enter Edit Mode"
+msgstr ""
 
 #: main.cpp:84
 #, kde-format
@@ -319,7 +324,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Mode de rendiment"
 
-#: panelview.cpp:437
+#: panelview.cpp:438
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -330,13 +335,13 @@ msgstr ""
 "són coneguts per provocar un rendiment deficient en arrossegar i "
 "redimensionar les finestres. Considereu utilitzar altres paràmetres."
 
-#: panelview.cpp:1092
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Oculta la configuració del plafó"
 
-#: panelview.cpp:1094
+#: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -413,7 +418,7 @@ msgstr "Mou el focus del teclat entre els plafons"
 msgid "Add Panel"
 msgstr "Afegeix un plafó"
 
-#: shellcorona.cpp:2130
+#: shellcorona.cpp:2140
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

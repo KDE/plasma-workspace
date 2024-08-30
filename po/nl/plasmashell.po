@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-27 00:41+0000\n"
+"POT-Creation-Date: 2024-08-30 00:41+0000\n"
 "PO-Revision-Date: 2024-08-23 12:10+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -147,6 +147,11 @@ msgstr ""
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Voorbeeldbanner verbergen?"
+
+#: desktopview.cpp:488
+#, kde-format
+msgid "Enter Edit Mode"
+msgstr ""
 
 #: main.cpp:84
 #, kde-format
@@ -314,7 +319,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Modus prestatie"
 
-#: panelview.cpp:437
+#: panelview.cpp:438
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -325,13 +330,13 @@ msgstr ""
 "Aanpasbare dekking slecht gedrag van vensters verslepen en prestatie van "
 "grootte wijzigen veroorzaakt. Overweeg andere instellingen te gebruiken."
 
-#: panelview.cpp:1092
+#: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Configuratie van paneel verbergen"
 
-#: panelview.cpp:1094
+#: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -408,7 +413,7 @@ msgstr "Toetsenbordfocus tussen panelen verplaatsen"
 msgid "Add Panel"
 msgstr "Paneel toevoegen"
 
-#: shellcorona.cpp:2130
+#: shellcorona.cpp:2140
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -1,28 +1,27 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-08-28 19:23\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2024-08-29 18:28+0200\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kded_donationmessage."
-"pot\n"
-"X-Crowdin-File-ID: 55758\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: donationmessage.cpp:80
 #, kde-format
 msgctxt "@title of a system notification"
 msgid "Donate to KDE"
-msgstr "捐款给 KDE"
+msgstr "Doe a KDE"
 
 #: donationmessage.cpp:82
 #, kde-format
@@ -31,8 +30,8 @@ msgid ""
 "KDE needs your help! Donations fund development and infrastructure important "
 "for KDE's continued existence."
 msgstr ""
-"KDE 需要您的帮助！捐款将被用于维持 KDE 的开发经费和基础设施，这对 KDE 的存续"
-"非常重要。"
+"KDE necesita a súa axuda! As doazóns financian desenvolvemento e "
+"infraestruturas necesarias para a supervivencia de KDE."
 
 #: donationmessage.cpp:84
 #, kde-format
@@ -40,7 +39,7 @@ msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate"
-msgstr "捐款"
+msgstr "Doar"
 
 #: donationmessage.cpp:85
 #, kde-format
@@ -48,4 +47,4 @@ msgctxt ""
 "@action:button don't donate this year; translate this in as short a form as "
 "possible"
 msgid "No Thanks"
-msgstr "不用了，谢谢"
+msgstr "Non, síntoo"

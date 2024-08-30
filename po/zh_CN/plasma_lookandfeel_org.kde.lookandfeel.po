@@ -90,7 +90,7 @@ msgstr "立即休眠"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "安装更新并重启"
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -106,7 +106,7 @@ msgstr "立即重新启动"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "安装更新并关机"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
