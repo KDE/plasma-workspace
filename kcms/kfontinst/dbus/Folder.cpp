@@ -55,7 +55,7 @@ void Folder::init(bool system, bool systemBus)
             dirs.append(Misc::dirSyntax(QString::fromLocal8Bit(QByteArrayView((const char *)fcDir))));
         }
 
-        m_location = Misc::getFolder(Misc::dirSyntax(QDir::homePath() + "/.fonts/"_L1), Misc::dirSyntax(QDir::homePath()), dirs);
+        m_location = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/fonts/");
     } else {
         m_location = KFI_DEFAULT_SYS_FONTS_FOLDER;
     }
