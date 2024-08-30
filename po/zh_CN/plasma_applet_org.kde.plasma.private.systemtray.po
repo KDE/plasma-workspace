@@ -179,7 +179,7 @@ msgstr "显示所有项目到系统托盘的弹窗"
 #: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
 msgid "Close popup"
-msgstr "关闭弹出信息"
+msgstr "关闭弹窗"
 
 #: package/contents/ui/ExpanderArrow.qml:39
 #, kde-format
