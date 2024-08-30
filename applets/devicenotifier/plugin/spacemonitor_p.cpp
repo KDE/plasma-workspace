@@ -17,9 +17,12 @@
 #include <KLocalizedString>
 #include <KNotification>
 
+#include <QTimer>
+#include <QUrl>
+
 SpaceMonitor::SpaceMonitor(QObject *parent)
-    : m_spaceWatcher(new QTimer(this))
-    , QObject(parent)
+    : QObject(parent)
+    , m_spaceWatcher(new QTimer(this))
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Begin initializing Space Monitor";
     m_spaceWatcher->setSingleShot(true);

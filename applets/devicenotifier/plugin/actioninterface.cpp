@@ -17,8 +17,8 @@
 #include <Solid/Device>
 
 ActionInterface::ActionInterface(const QString &udi, QObject *parent)
-    : m_udi(udi)
-    , QObject(parent)
+    : QObject(parent)
+    , m_udi(udi)
 {
 }
 

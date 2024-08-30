@@ -73,7 +73,7 @@ private:
     QHash<QString, QTimer *> m_removeTimers;
     Solid::Predicate m_predicateDeviceMatch;
     const QList<Solid::DeviceInterface::Type> m_types;
-    bool m_isVisible;
+    bool m_isVisible = false;
 
     std::shared_ptr<SpaceMonitor> m_spaceMonitor;
     std::shared_ptr<DevicesStateMonitor> m_stateMonitor;

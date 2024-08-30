@@ -7,13 +7,14 @@
 #pragma once
 
 #include <QHash>
-#include <QTimer>
 
 #include <devicestatemonitor_p.h>
 
 /**
  * This class monitors the full and free size of devices
  */
+
+class QTimer;
 
 class SpaceMonitor : public QObject
 {

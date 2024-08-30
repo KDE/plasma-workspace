@@ -19,9 +19,10 @@
 
 #include <KFormat>
 
+#include <QTimer>
+
 DeviceControl::DeviceControl(QObject *parent)
     : QAbstractListModel(parent)
-    , m_isVisible(false)
     , m_types({
           Solid::DeviceInterface::PortableMediaPlayer,
           Solid::DeviceInterface::Camera,
@@ -32,8 +33,8 @@ DeviceControl::DeviceControl(QObject *parent)
           Solid::DeviceInterface::NetworkShare,
           Solid::DeviceInterface::StorageAccess,
       })
-    , m_stateMonitor(DevicesStateMonitor::instance())
     , m_spaceMonitor(SpaceMonitor::instance())
+    , m_stateMonitor(DevicesStateMonitor::instance())
     , m_errorMonitor(DeviceErrorMonitor::instance())
 
 {

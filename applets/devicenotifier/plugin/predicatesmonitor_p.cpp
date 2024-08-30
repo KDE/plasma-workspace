@@ -13,11 +13,12 @@
 
 #include <KConfigGroup>
 #include <KDesktopFile>
+#include <KDirWatch>
 #include <qloggingcategory.h>
 
 PredicatesMonitor::PredicatesMonitor(QObject *parent)
-    : m_dirWatch(new KDirWatch(this))
-    , QObject(parent)
+    : QObject(parent)
+    , m_dirWatch(new KDirWatch(this))
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Begin initializing predicates monitor";
     const QStringList folders =

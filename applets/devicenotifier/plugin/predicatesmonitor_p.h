@@ -6,12 +6,13 @@
 
 #pragma once
 
-#include <KDirWatch>
 #include <Solid/Predicate>
 
 /**
  * This class get predicates for a given path. Used by ActionControl to create default actions
  */
+
+class KDirWatch;
 
 class PredicatesMonitor : public QObject
 {
@@ -35,6 +36,6 @@ private Q_SLOTS:
     void onPredicatesChanged(const QString &path);
 
 private:
-    QHash<QString, Solid::Predicate> m_predicates;
     KDirWatch *m_dirWatch;
+    QHash<QString, Solid::Predicate> m_predicates;
 };
