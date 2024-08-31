@@ -98,7 +98,7 @@ protected:
     /**
      * Enter clipboard data in the history.
      */
-    [[nodiscard]] HistoryItemSharedPtr applyClipChanges(const QMimeData *data);
+    void applyClipChanges(const HistoryItemSharedPtr &item);
 
     bool ignoreClipboardChanges() const;
 

@@ -11,6 +11,7 @@
 #include "klipper.h"
 
 #include "klipper_debug.h"
+#include "mimetypes.h"
 #include <QApplication>
 #include <QBoxLayout>
 #include <QDBusConnection>
@@ -414,26 +415,18 @@ void Klipper::slotHistoryChanged(bool isTop)
     }
 }
 
-HistoryItemSharedPtr Klipper::applyClipChanges(const QMimeData *clipData)
+void Klipper::applyClipChanges(const HistoryItemSharedPtr &item)
 {
+    if (!item) {
+        return;
+    }
     Q_ASSERT(m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard));
     if (m_historyModel->rowCount() > 0) {
         if (m_bIgnoreImages && m_historyModel->first()->type() == HistoryItemType::Image) {
             m_historyModel->remove(m_historyModel->first()->uuid());
         }
     }
-
-    HistoryItemSharedPtr item = HistoryItem::create(clipData);
-
-    bool saveToHistory = true;
-    if (clipData->data(QStringLiteral("x-kde-passwordManagerHint")) == QByteArrayLiteral("secret")) {
-        saveToHistory = false;
-    }
-    if (saveToHistory && item) {
-        m_historyModel->insert(item);
-    }
-
-    return item;
+    m_historyModel->insert(item);
 }
 
 void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
@@ -448,21 +441,35 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     if (selectionMode && m_bIgnoreSelection) {
         if (m_bSynchronize) {
             HistoryItemSharedPtr item = HistoryItem::create(data);
-            if (item) [[likely]] { // applyClipChanges can return nullptr
+            if (item) [[likely]] { // HistoryItem::create can return nullptr
                 m_clip->setMimeData(item, SystemClipboard::Clipboard, SystemClipboard::ClipboardUpdateReason::SyncSelection);
             }
         }
         return;
     }
 
-    if (selectionMode && m_bSelectionTextOnly && !data->hasText())
+    const bool hasText = data->hasText();
+    if (selectionMode && m_bSelectionTextOnly && !hasText)
         return;
 
-    if (m_bIgnoreImages && data->hasImage() && !data->hasText() /*BUG 491488*/ && !data->hasFormat(QStringLiteral("x-kde-force-image-copy"))) {
+    using namespace Mimetypes;
+    const bool ignoreImages = m_bIgnoreImages && !data->hasFormat(NoType::xKdeForceImageCopy);
+    const bool hasImage = data->hasImage();
+    if (ignoreImages && hasImage && !hasText /*BUG 491488*/) {
         return;
     }
 
-    HistoryItemSharedPtr item = applyClipChanges(data);
+    auto formats = data->formats();
+    if (ignoreImages && hasImage) {
+        erase_if(formats, [](const auto &mimetype) {
+            return Utils::isImage(mimetype);
+        });
+    }
+    HistoryItemSharedPtr item = HistoryItem::create(data, formats);
+
+    if (data->data(NoType::xKdePasswordManagerHint) != "secret") {
+        applyClipChanges(item);
+    }
     if (changed) {
         qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
         if (m_bSynchronize && item) { // applyClipChanges can return nullptr
