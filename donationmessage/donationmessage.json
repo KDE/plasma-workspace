@@ -1,8 +1,10 @@
 {
     "KPlugin": {
         "Description": "Shows a yearly request to donate to KDE",
+        "Description[ca@valencia]": "Mostra una sol·licitud anual de donació a KDE",
         "Description[ca]": "Mostra una sol·licitud anual de donació a KDE",
         "Description[es]": "Muestra una petición anual para hacer un donativo a KDE",
+        "Description[eu]": "KDEri dohaintza egiteko urteroko eskaera erakusten du",
         "Description[gl]": "Amosa unha solicitude anual de doazón a KDE.",
         "Description[he]": "הצגת בקשה שנתית לתרום ל־KDE",
         "Description[ka]": "აჩვენებს KDE-სთვის შეწირვის მოთხოვნას წელიწადში ერთხელ",
@@ -14,8 +16,11 @@
         "Description[x-test]": "xxShows a yearly request to donate to KDExx",
         "Description[zh_CN]": "每年显示一次 KDE 捐款请求",
         "Name": "Donation Request",
+        "Name[ca@valencia]": "Sol·licitud de donació",
         "Name[ca]": "Sol·licitud de donació",
+        "Name[cs]": "Žádost o dar",
         "Name[es]": "Solicitud de donativo",
+        "Name[eu]": "Dohaintza eskaera",
         "Name[gl]": "Solicitude de doazón",
         "Name[he]": "בקשת תרומה",
         "Name[ka]": "შეწირულობის მოთხოვნა",
