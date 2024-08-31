@@ -91,8 +91,6 @@ void ScreenPoolTest::testScreenInsertion()
         outputOrder()->setList({u"WL-1"_s, u"WL-2"_s});
     });
 
-    addedSpy.wait();
-
     orderChangeSpy.wait();
 
     QCOMPARE(orderChangeSpy.size(), 1);
@@ -124,7 +122,6 @@ void ScreenPoolTest::testRedundantScreenInsertion()
         outputOrder()->setList({u"WL-1"_s, u"WL-2"_s, u"WL-3"_s});
     });
 
-    addedFromAppSpy.wait();
     orderChangeSpy.wait(250);
     // only addedFromAppSpy will have registered something, nothing in orderChangeSpy,
     // on ScreenPool API POV is like this new screen doesn't exist, because is redundant to WL-2
