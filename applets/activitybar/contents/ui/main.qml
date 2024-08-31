@@ -12,6 +12,7 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents // FIXME: PC3 Tabbar only has top and bottom tab positions, not left and right
 
 import org.kde.activities 0.1 as Activities
+import org.kde.plasma.activityswitcher as ActivitySwitcher
 import org.kde.kcmutils // KCMLauncher
 import org.kde.config // KAuthorized
 
@@ -85,6 +86,14 @@ PlasmoidItem {
             }
         }
     }
+
+    Plasmoid.contextualActions: [
+        PlasmaCore.Action {
+            text: i18nc("@action:inmenu widget context menu", "Show Activity Manager")
+            icon.name: "activities"
+            onTriggered: ActivitySwitcher.Backend.toggleActivityManager()
+        }
+    ]
 
     PlasmaCore.Action {
         id: configureAction
