@@ -86,7 +86,7 @@ public:
      * Create an HistoryItem from MimeSources (i.e., clipboard data)
      * returns null if create fails (e.g, unsupported mimetype)
      */
-    static HistoryItemPtr create(const QMimeData *data);
+    static HistoryItemPtr create(const QMimeData *data, std::optional<QStringList> formats = {});
 
     /**
      * Create an HistoryItem from data stream (i.e., disk file)

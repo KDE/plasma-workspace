@@ -267,16 +267,18 @@ inline bool isMisc(const QString &mimetype)
     // Exclude these hints because klipper adds them automatically.
 }
 
-HistoryItemPtr HistoryItem::create(const QMimeData *data)
+HistoryItemPtr HistoryItem::create(const QMimeData *data, std::optional<QStringList> formats)
 {
     using namespace Mimetypes;
     MimeDataMap mimeDataMap;
-    const auto &formats = data->formats();
+    if (!formats) {
+        formats.emplace(data->formats());
+    }
     // QMimeData can hold multiple types of data, so we check for all of them.
     // NOTE: The platform abstraction can change how QMimeData functions work.
     // In general, we want to set mime data in the order that it comes with.
     QImage image;
-    for (const auto &format : formats) {
+    for (const auto &format : std::as_const(*formats)) {
         if (auto it = mimeDataMap.find(format); it != mimeDataMap.cend() && it->isValid()) {
             continue;
         }
