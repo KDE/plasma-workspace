@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:42+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2024-06-30 15:09+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -151,54 +151,75 @@ msgid "Offset from UTC time"
 msgstr "Hliðrun frá UTC-tíma"
 
 #: package/contents/ui/configAppearance.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Time display:"
+msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Birting tíma:"
 
 #: package/contents/ui/configAppearance.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "12-Hour"
+msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-klukkustunda"
 
 #: package/contents/ui/configAppearance.qml:133
-#: package/contents/ui/configCalendar.qml:55
-#, kde-format
-msgid "Use Region Defaults"
+#, fuzzy, kde-format
+#| msgid "Use Region Defaults"
+msgctxt "@item:inlistbox time display option"
+msgid "Use region defaults"
 msgstr "Nota sjálfgildi fyrir landssvæðið"
 
 #: package/contents/ui/configAppearance.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "24-Hour"
+msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-klukkustunda"
 
 #: package/contents/ui/configAppearance.qml:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Regional Settings…"
+msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Breyta svæðisstillingum…"
 
 #: package/contents/ui/configAppearance.qml:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Date format:"
+msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Snið dagsetninga:"
 
 #: package/contents/ui/configAppearance.qml:161
-#, kde-format
-msgid "Long Date"
+#, fuzzy, kde-format
+#| msgid "Long Date"
+msgctxt ""
+"@item:inlistbox date display option, includes e.g. day of week and month as "
+"word"
+msgid "Long date"
 msgstr "Löng dagsetning"
 
 #: package/contents/ui/configAppearance.qml:168
-#, kde-format
-msgid "Short Date"
+#, fuzzy, kde-format
+#| msgid "Short Date"
+msgctxt "@item:inlistbox date display option, e.g. all numeric"
+msgid "Short date"
 msgstr "Stutt dagsetning"
 
 #: package/contents/ui/configAppearance.qml:175
-#, kde-format
-msgid "ISO Date"
+#, fuzzy, kde-format
+#| msgid "ISO Date"
+msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
+msgid "ISO date"
 msgstr "ISO-dagsetning"
 
 #: package/contents/ui/configAppearance.qml:182
-#, kde-format
-msgctxt "custom date format"
+#, fuzzy, kde-format
+#| msgctxt "custom date format"
+#| msgid "Custom"
+msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Sérstillt"
 
@@ -265,9 +286,18 @@ msgid "Show week numbers"
 msgstr "Sýna vikunúmer"
 
 #: package/contents/ui/configCalendar.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "First day of week:"
+msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Fyrsti dagur viku:"
+
+#: package/contents/ui/configCalendar.qml:55
+#, fuzzy, kde-format
+#| msgid "Use Region Defaults"
+msgctxt "@item:inlistbox first day of week option"
+msgid "Use region defaults"
+msgstr "Nota sjálfgildi fyrir landssvæðið"
 
 #: package/contents/ui/configCalendar.qml:72
 #, kde-format

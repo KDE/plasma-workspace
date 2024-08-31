@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-25 15:39+0200\n"
+"PO-Revision-Date: 2024-08-30 12:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -153,7 +153,7 @@ msgstr "Quere agochar o cadro da vista previa?"
 #: desktopview.cpp:488
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Activar o modo de edición"
 
 #: main.cpp:84
 #, kde-format

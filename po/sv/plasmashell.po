@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-23 07:38+0200\n"
+"PO-Revision-Date: 2024-08-30 06:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -151,7 +151,7 @@ msgstr "Dölj förhandsgranskningsbaner"
 #: desktopview.cpp:488
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Starta redigeringsläge"
 
 #: main.cpp:84
 #, kde-format

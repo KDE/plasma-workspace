@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-08-13 18:16+0200\n"
+"PO-Revision-Date: 2024-08-30 10:40+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -189,11 +189,10 @@ msgstr "Sortu"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "Aukeratu irudiaren azalera"
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
 msgstr "Hatza erroldatu da"
@@ -415,7 +414,7 @@ msgstr "Sakatu zuriunea erabiltzailearen profila editatzeko"
 #: src/ui/PickFinger.qml:28
 #, kde-format
 msgid "Pick a finger to enroll"
-msgstr "Hautatu hatz bat erroldatzeko"
+msgstr "Hautatu erroldatzeko hatz bat"
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format

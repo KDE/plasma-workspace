@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:42+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2024-06-16 16:43+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -150,54 +150,75 @@ msgid "Offset from UTC time"
 msgstr "UTC நேரத்திலிருந்து உள்ள வித்தியாசமாக"
 
 #: package/contents/ui/configAppearance.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Time display:"
+msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "நேரம் காட்டப்படுவது:"
 
 #: package/contents/ui/configAppearance.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "12-Hour"
+msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-மணிநேரம்"
 
 #: package/contents/ui/configAppearance.qml:133
-#: package/contents/ui/configCalendar.qml:55
-#, kde-format
-msgid "Use Region Defaults"
+#, fuzzy, kde-format
+#| msgid "Use Region Defaults"
+msgctxt "@item:inlistbox time display option"
+msgid "Use region defaults"
 msgstr "வட்டார இயல்பிருப்பு"
 
 #: package/contents/ui/configAppearance.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "24-Hour"
+msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-மணிநேரம்"
 
 #: package/contents/ui/configAppearance.qml:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Regional Settings…"
+msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "வட்டார அமைப்புகளை மாற்று…"
 
 #: package/contents/ui/configAppearance.qml:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Date format:"
+msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "தேதி எவ்வாறு காட்டப்படும்:"
 
 #: package/contents/ui/configAppearance.qml:161
-#, kde-format
-msgid "Long Date"
+#, fuzzy, kde-format
+#| msgid "Long Date"
+msgctxt ""
+"@item:inlistbox date display option, includes e.g. day of week and month as "
+"word"
+msgid "Long date"
 msgstr "விவரமான தேதி"
 
 #: package/contents/ui/configAppearance.qml:168
-#, kde-format
-msgid "Short Date"
+#, fuzzy, kde-format
+#| msgid "Short Date"
+msgctxt "@item:inlistbox date display option, e.g. all numeric"
+msgid "Short date"
 msgstr "சுருக்கமான தேதி"
 
 #: package/contents/ui/configAppearance.qml:175
-#, kde-format
-msgid "ISO Date"
+#, fuzzy, kde-format
+#| msgid "ISO Date"
+msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
+msgid "ISO date"
 msgstr "ISO தேதி"
 
 #: package/contents/ui/configAppearance.qml:182
-#, kde-format
-msgctxt "custom date format"
+#, fuzzy, kde-format
+#| msgctxt "custom date format"
+#| msgid "Custom"
+msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "வேறு"
 
@@ -266,9 +287,18 @@ msgid "Show week numbers"
 msgstr "வார எண்களைக் காட்டு"
 
 #: package/contents/ui/configCalendar.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "First day of week:"
+msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "வாரத்தின் முதல் நாள்:"
+
+#: package/contents/ui/configCalendar.qml:55
+#, fuzzy, kde-format
+#| msgid "Use Region Defaults"
+msgctxt "@item:inlistbox first day of week option"
+msgid "Use region defaults"
+msgstr "வட்டார இயல்பிருப்பு"
 
 #: package/contents/ui/configCalendar.qml:72
 #, kde-format

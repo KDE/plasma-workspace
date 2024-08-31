@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:42+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2015-02-05 00:34+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -159,54 +159,67 @@ msgstr ""
 
 #: package/contents/ui/configAppearance.qml:126
 #, kde-format
+msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:132
 #, kde-format
+msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:133
-#: package/contents/ui/configCalendar.qml:55
 #, kde-format
-msgid "Use Region Defaults"
+msgctxt "@item:inlistbox time display option"
+msgid "Use region defaults"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:134
 #, kde-format
+msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:141
 #, kde-format
+msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Date format:"
+msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Format datuma:"
 
 #: package/contents/ui/configAppearance.qml:161
-#, kde-format
-msgid "Long Date"
+#, fuzzy, kde-format
+#| msgid "Long Date"
+msgctxt ""
+"@item:inlistbox date display option, includes e.g. day of week and month as "
+"word"
+msgid "Long date"
 msgstr "Dugi datum"
 
 #: package/contents/ui/configAppearance.qml:168
-#, kde-format
-msgid "Short Date"
+#, fuzzy, kde-format
+#| msgid "Short Date"
+msgctxt "@item:inlistbox date display option, e.g. all numeric"
+msgid "Short date"
 msgstr "Kratki datum"
 
 #: package/contents/ui/configAppearance.qml:175
 #, fuzzy, kde-format
 #| msgid "Short Date"
-msgid "ISO Date"
+msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
+msgid "ISO date"
 msgstr "Kratki datum"
 
 #: package/contents/ui/configAppearance.qml:182
 #, kde-format
-msgctxt "custom date format"
+msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr ""
 
@@ -276,7 +289,14 @@ msgstr ""
 
 #: package/contents/ui/configCalendar.qml:49
 #, kde-format
+msgctxt "@label:listbox"
 msgid "First day of week:"
+msgstr ""
+
+#: package/contents/ui/configCalendar.qml:55
+#, kde-format
+msgctxt "@item:inlistbox first day of week option"
+msgid "Use region defaults"
 msgstr ""
 
 #: package/contents/ui/configCalendar.qml:72

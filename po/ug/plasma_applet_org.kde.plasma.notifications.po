@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-11 00:42+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Open with…"
 msgstr ""
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:267
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
@@ -263,33 +263,33 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1:"
 
-#: package/contents/ui/JobItem.qml:180
+#: package/contents/ui/JobItem.qml:183
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:191
+#: package/contents/ui/JobItem.qml:197
 #, fuzzy, kde-format
 #| msgid "Paused"
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "ۋاقىتلىق توختىدى"
 
-#: package/contents/ui/JobItem.qml:200
+#: package/contents/ui/JobItem.qml:209
 #, fuzzy, kde-format
 #| msgid "Cancel job"
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "ۋەزىپىنى ئەمەلدىن قالدۇر"
 
-#: package/contents/ui/JobItem.qml:231
+#: package/contents/ui/JobItem.qml:240
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:259
+#: package/contents/ui/JobItem.qml:268
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open"
@@ -410,7 +410,7 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: package/contents/ui/NotificationItem.qml:227
+#: package/contents/ui/NotificationItem.qml:230
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "%1 is the name of the job, can be things like Copying, deleting, moving"
@@ -419,33 +419,33 @@ msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 [ۋاقىتلىق توختىدى]"
 
-#: package/contents/ui/NotificationItem.qml:232
+#: package/contents/ui/NotificationItem.qml:235
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 [تاماملاندى]"
 
-#: package/contents/ui/NotificationItem.qml:234
+#: package/contents/ui/NotificationItem.qml:237
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgid "Job Failed"
 msgstr "%1 [تاماملاندى]"
 
-#: package/contents/ui/NotificationItem.qml:238
+#: package/contents/ui/NotificationItem.qml:241
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 [تاماملاندى]"
 
-#: package/contents/ui/NotificationItem.qml:240
+#: package/contents/ui/NotificationItem.qml:243
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgid "Job Finished"
 msgstr "%1 [تاماملاندى]"
 
-#: package/contents/ui/NotificationItem.qml:379
+#: package/contents/ui/NotificationItem.qml:394
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

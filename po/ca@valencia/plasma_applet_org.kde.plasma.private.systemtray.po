@@ -1,16 +1,16 @@
 # Translation of plasma_applet_org.kde.plasma.private.systemtray.po to Catalan (Valencian)
-# Copyright (C) 2013-2022 This_file_is_part_of_KDE
+# Copyright (C) 2013-2024 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2022-07-25 12:29+0200\n"
+"PO-Revision-Date: 2024-08-28 18:47+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,8 +19,9 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 24.08.0\n"
 
+# skip-rule: punctuation-period-no
 #: package/contents/config/config.qml:13
 #, kde-format
 msgid "General"
@@ -190,10 +191,8 @@ msgstr "Tanca la finestra emergent"
 msgid "Show hidden icons"
 msgstr "Mostra les icones ocultes"
 
+# skip-rule: punctuation-period-no
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
 msgid "Some letters with tall characters, ascenders, descenders, etc"
-msgstr ""
-
-#~ msgid "Expand System Tray"
-#~ msgstr "Expandix la safata del sistema"
+msgstr "Diverses lletres amb caràcters alts, ascendents, descendents, etc."

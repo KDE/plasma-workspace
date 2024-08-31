@@ -150,7 +150,7 @@ msgstr "Skrýt pruh náhledu?"
 #: desktopview.cpp:488
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Spustit režim úprav"
 
 #: main.cpp:84
 #, kde-format

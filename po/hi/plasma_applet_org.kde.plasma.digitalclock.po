@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:42+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2022-02-17 23:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -152,54 +152,75 @@ msgid "Offset from UTC time"
 msgstr "यूटीसी समय से अन्तर्लम्ब"
 
 #: package/contents/ui/configAppearance.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Time display:"
+msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "समय प्रदर्शन :"
 
 #: package/contents/ui/configAppearance.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "12-Hour"
+msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "१२-घंटे"
 
 #: package/contents/ui/configAppearance.qml:133
-#: package/contents/ui/configCalendar.qml:55
-#, kde-format
-msgid "Use Region Defaults"
+#, fuzzy, kde-format
+#| msgid "Use Region Defaults"
+msgctxt "@item:inlistbox time display option"
+msgid "Use region defaults"
 msgstr "क्षेत्र पूर्वन्यस्तों का प्रयोग करें"
 
 #: package/contents/ui/configAppearance.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "24-Hour"
+msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "२४-घंटे"
 
 #: package/contents/ui/configAppearance.qml:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Regional Settings…"
+msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "क्षेत्रीय सेटिंग्स बदलें..."
 
 #: package/contents/ui/configAppearance.qml:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Date format:"
+msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "दिनांक प्रारूप :"
 
 #: package/contents/ui/configAppearance.qml:161
-#, kde-format
-msgid "Long Date"
+#, fuzzy, kde-format
+#| msgid "Long Date"
+msgctxt ""
+"@item:inlistbox date display option, includes e.g. day of week and month as "
+"word"
+msgid "Long date"
 msgstr "लंबा दिनांक"
 
 #: package/contents/ui/configAppearance.qml:168
-#, kde-format
-msgid "Short Date"
+#, fuzzy, kde-format
+#| msgid "Short Date"
+msgctxt "@item:inlistbox date display option, e.g. all numeric"
+msgid "Short date"
 msgstr "छोटा दिनांक"
 
 #: package/contents/ui/configAppearance.qml:175
-#, kde-format
-msgid "ISO Date"
+#, fuzzy, kde-format
+#| msgid "ISO Date"
+msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
+msgid "ISO date"
 msgstr "आइएसओ दिनांक"
 
 #: package/contents/ui/configAppearance.qml:182
-#, kde-format
-msgctxt "custom date format"
+#, fuzzy, kde-format
+#| msgctxt "custom date format"
+#| msgid "Custom"
+msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "तदनुकूल"
 
@@ -270,9 +291,18 @@ msgid "Show week numbers"
 msgstr "सप्ताह की क्रमसंख्या दिखाएँ"
 
 #: package/contents/ui/configCalendar.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "First day of week:"
+msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "सप्ताह का पहला दिन :"
+
+#: package/contents/ui/configCalendar.qml:55
+#, fuzzy, kde-format
+#| msgid "Use Region Defaults"
+msgctxt "@item:inlistbox first day of week option"
+msgid "Use region defaults"
+msgstr "क्षेत्र पूर्वन्यस्तों का प्रयोग करें"
 
 #: package/contents/ui/configCalendar.qml:72
 #, kde-format

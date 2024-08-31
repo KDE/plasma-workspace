@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-27 00:42+0000\n"
+"POT-Creation-Date: 2024-08-31 00:40+0000\n"
 "PO-Revision-Date: 2023-02-23 12:00+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -152,54 +152,75 @@ msgid "Offset from UTC time"
 msgstr "UTC 時刻からのオフセット"
 
 #: package/contents/ui/configAppearance.qml:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Time display:"
+msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "時刻表示:"
 
 #: package/contents/ui/configAppearance.qml:132
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "12-Hour"
+msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12時間"
 
 #: package/contents/ui/configAppearance.qml:133
-#: package/contents/ui/configCalendar.qml:55
-#, kde-format
-msgid "Use Region Defaults"
+#, fuzzy, kde-format
+#| msgid "Use Region Defaults"
+msgctxt "@item:inlistbox time display option"
+msgid "Use region defaults"
 msgstr "地域設定の標準を使用"
 
 #: package/contents/ui/configAppearance.qml:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "24-Hour"
+msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24時間"
 
 #: package/contents/ui/configAppearance.qml:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Change Regional Settings…"
+msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "地域設定を変更…"
 
 #: package/contents/ui/configAppearance.qml:152
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Date format:"
+msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "日付書式:"
 
 #: package/contents/ui/configAppearance.qml:161
-#, kde-format
-msgid "Long Date"
+#, fuzzy, kde-format
+#| msgid "Long Date"
+msgctxt ""
+"@item:inlistbox date display option, includes e.g. day of week and month as "
+"word"
+msgid "Long date"
 msgstr "長い日付書式"
 
 #: package/contents/ui/configAppearance.qml:168
-#, kde-format
-msgid "Short Date"
+#, fuzzy, kde-format
+#| msgid "Short Date"
+msgctxt "@item:inlistbox date display option, e.g. all numeric"
+msgid "Short date"
 msgstr "短い日付書式"
 
 #: package/contents/ui/configAppearance.qml:175
-#, kde-format
-msgid "ISO Date"
+#, fuzzy, kde-format
+#| msgid "ISO Date"
+msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
+msgid "ISO date"
 msgstr "ISO 日付書式"
 
 #: package/contents/ui/configAppearance.qml:182
-#, kde-format
-msgctxt "custom date format"
+#, fuzzy, kde-format
+#| msgctxt "custom date format"
+#| msgid "Custom"
+msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "カスタム"
 
@@ -269,9 +290,18 @@ msgid "Show week numbers"
 msgstr "週番号を表示"
 
 #: package/contents/ui/configCalendar.qml:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "First day of week:"
+msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "週の最初の日:"
+
+#: package/contents/ui/configCalendar.qml:55
+#, fuzzy, kde-format
+#| msgid "Use Region Defaults"
+msgctxt "@item:inlistbox first day of week option"
+msgid "Use region defaults"
+msgstr "地域設定の標準を使用"
 
 #: package/contents/ui/configCalendar.qml:72
 #, kde-format
