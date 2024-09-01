@@ -484,7 +484,6 @@ void runRdb(unsigned int flags)
             applyQtSettings(kglobalcfg, *settings); // For kcmstyle
 
         delete settings;
-        QCoreApplication::processEvents();
 #if HAVE_X11
         if (qApp->platformName() == QLatin1String("xcb")) {
             // We let KIPC take care of ourselves, as we are in a KDE app with
@@ -514,7 +513,6 @@ void runRdb(unsigned int flags)
                             PropModeReplace,
                             (unsigned char *)stamp.buffer().data(),
                             stamp.buffer().size());
-            qApp->processEvents();
         }
 #endif
     }
