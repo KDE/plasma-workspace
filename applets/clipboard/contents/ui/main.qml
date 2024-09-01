@@ -61,7 +61,7 @@ PlasmoidItem {
             id: clearAction
             text: i18n("Clear History")
             icon.name: "edit-clear-history"
-            visible: !main.isClipboardEmpty && !(main.fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).editing
+            visible: !main.isClipboardEmpty && !(main.fullRepresentationItem?.clipboardMenu as Private.ClipboardMenu)?.editing
             onTriggered: {
                 historyModel.clearHistory();
                 main.clearSearchField()
