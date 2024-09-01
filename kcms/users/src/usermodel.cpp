@@ -31,15 +31,15 @@ UserModel::UserModel(QObject *parent)
 
     connect(m_dbusInterface, &OrgFreedesktopAccountsInterface::UserDeleted, this, [this](const QDBusObjectPath &path) {
         QList<User *> toRemove;
-        for (int i = 0; i < m_userList.length(); i++) {
-            if (m_userList[i]->path().path() == path.path()) {
-                toRemove << m_userList[i];
+        for (auto user : std::as_const(m_userList)) {
+            if (user->path().path() == path.path()) {
+                toRemove << user;
             }
         }
         for (auto user : toRemove) {
             auto index = m_userList.indexOf(user);
             beginRemoveRows(QModelIndex(), index, index);
-            m_userList.removeOne(user);
+            m_userList.removeAt(index);
             endRemoveRows();
         }
     });
@@ -108,9 +108,7 @@ QHash<int, QByteArray> UserModel::roleNames() const
     return names;
 }
 
-UserModel::~UserModel()
-{
-}
+UserModel::~UserModel() = default;
 
 User *UserModel::getLoggedInUser() const
 {
