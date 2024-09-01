@@ -246,7 +246,7 @@ msgstr "手动阻止"
 #: package/contents/ui/PowerManagementItem.qml:133
 #, kde-format
 msgid "Failed to unblock automatic sleep and screen locking"
-msgstr "解除阻止自动睡眠和锁屏失败"
+msgstr "取消阻止自动睡眠和锁屏失败"
 
 #: package/contents/ui/PowerManagementItem.qml:136
 #, kde-format
