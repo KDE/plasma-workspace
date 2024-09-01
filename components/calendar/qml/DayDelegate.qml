@@ -206,7 +206,6 @@ PlasmaComponents.AbstractButton {
             font.pixelSize: Math.max(
                 Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
                 dayStyle.height / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
-            font.pointSize: -1 // Avoid QML warnings
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: dayStyle.model.label || dayStyle.model.dayLabel
@@ -233,7 +232,6 @@ PlasmaComponents.AbstractButton {
                 font.pixelSize: Math.max(
                     Kirigami.Theme.smallFont.pixelSize,
                     dayStyle.height / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 6 : 12))
-                font.pointSize: -1 // Avoid QML warnings
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 1

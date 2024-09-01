@@ -539,8 +539,6 @@ MouseArea {
                     italic: fontHelper.font.italic
                     features: { "tnum": 1 }
                     pixelSize: 1024
-                    pointSize: -1 // Because we're setting the pixel size instead
-                                  // TODO: remove once this label is ported to PC3
                 }
                 minimumPixelSize: 1
 
@@ -557,8 +555,6 @@ MouseArea {
                 font.weight: timeLabel.font.weight
                 font.italic: timeLabel.font.italic
                 font.pixelSize: 1024
-                font.pointSize: -1 // Because we're setting the pixel size instead
-                                   // TODO: remove once this label is ported to PC3
                 minimumPixelSize: 1
 
                 visible: text.length > 0
@@ -577,8 +573,6 @@ MouseArea {
             font.weight: timeLabel.font.weight
             font.italic: timeLabel.font.italic
             font.pixelSize: 1024
-            font.pointSize: -1 // Because we're setting the pixel size instead
-                               // TODO: remove once this label is ported to PC3
             minimumPixelSize: 1
 
             horizontalAlignment: Text.AlignHCenter
@@ -613,7 +607,6 @@ MouseArea {
         font.weight: Plasmoid.configuration.autoFontAndSize ? Kirigami.Theme.defaultFont.weight : Plasmoid.configuration.fontWeight
         font.italic: Plasmoid.configuration.autoFontAndSize ? Kirigami.Theme.defaultFont.italic : Plasmoid.configuration.italicText
         font.pixelSize: Plasmoid.configuration.autoFontAndSize ? 3 * Kirigami.Theme.defaultFont.pixelSize : pointToPixel(Plasmoid.configuration.fontSize)
-        font.pointSize: -1
         fontSizeMode: Text.VerticalFit
 
         visible: false

@@ -77,7 +77,6 @@ MouseArea {
             height: width
             fontSizeMode: Text.Fit
             font.pointSize: 1024
-            font.pixelSize: -1
             minimumPointSize: 5//Kirigami.Theme.smallFont.pointSize
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
