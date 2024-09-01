@@ -151,7 +151,7 @@ msgstr "隐藏预览横幅？"
 #: desktopview.cpp:488
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "进入编辑模式"
 
 #: main.cpp:84
 #, kde-format

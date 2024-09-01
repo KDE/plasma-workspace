@@ -50,7 +50,7 @@ msgstr "位置："
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
-msgstr ""
+msgstr "缩放并裁剪"
 
 #: imagepackage/contents/ui/config.qml:135
 #, kde-format
@@ -62,7 +62,7 @@ msgstr "缩放"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
-msgstr ""
+msgstr "缩放，保持比例"
 
 #: imagepackage/contents/ui/config.qml:143
 #, kde-format
@@ -166,7 +166,7 @@ msgstr "您想要为当前 Plasma 会话设置的壁纸的图像文件或已安�
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
-msgstr ""
+msgstr "指定填充模式 (例如拉伸、裁剪并保持宽高比等)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -181,7 +181,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "指定了无效的填充模式：%1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format

@@ -443,7 +443,7 @@ msgstr "要查看/修改的配色集合"
 #, kde-format
 msgctxt "color-sets"
 msgid "Common colors"
-msgstr ""
+msgstr "通用颜色"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -1224,19 +1224,19 @@ msgstr " * %1 (当前配色方案)"
 #, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
-msgstr ""
+msgstr "基于配色方案获取强调色"
 
 #: ui/AccentColorUI.qml:28
 #, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
-msgstr ""
+msgstr "基于壁纸获取强调色"
 
 #: ui/AccentColorUI.qml:29
 #, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
-msgstr ""
+msgstr "自定义强调色"
 
 #: ui/AccentColorUI.qml:147
 #, kde-format
@@ -1253,19 +1253,19 @@ msgstr "未安装配色方案 \"%1\"。选择默认主题替代。"
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
-msgstr ""
+msgstr "所有配色方案"
 
 #: ui/main.qml:124
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
-msgstr ""
+msgstr "浅色配色方案"
 
 #: ui/main.qml:125
 #, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
-msgstr ""
+msgstr "深色配色方案"
 
 #: ui/main.qml:152
 #, kde-format

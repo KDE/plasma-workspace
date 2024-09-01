@@ -181,13 +181,13 @@ msgstr "创建"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "选择图片区域"
 
 #: src/ui/EnrolledConfirmation.qml:20
 #, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
-msgstr ""
+msgstr "指纹已录入"
 
 #: src/ui/EnrollFeedback.qml:28
 #, kde-format

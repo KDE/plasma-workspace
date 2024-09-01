@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-04-24 00:03+0300\n"
+"PO-Revision-Date: 2024-09-01 01:03+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt\n"
 "Language: lt\n"
@@ -170,6 +170,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"<application>GeoClue2</application> tarnyba bus naudojama, kad periodiškai "
+"būtų atnaujinama įrenginio vieta naudojant GPS arba, jei prieinama, "
+"mobiliojo ryšio bokštų trianguliaciją arba, kitais atvejais, siunčiant IP "
+"adresą į <link url='https://geoip.com/privacy/'>GeoIP</link>."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -180,6 +184,10 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"<application>%1</application> tarnyba bus naudojama, kad periodiškai būtų "
+"atnaujinama įrenginio vieta. Pateikite pranešimą apie klaidą, adresu <link "
+"url='https://bugs.kde.org'>https://bugs.kde.org</link>, ir paprašykite KDE "
+"plėtotojų, kad parašytų išsamų aprašą apie tai, ką ši tarnyba darys."
 
 #: ui/main.qml:334
 #, kde-format

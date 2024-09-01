@@ -4923,9 +4923,3 @@ msgstr "Utrygt for byger eller tordenvær"
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
 msgstr "Tordenvær sannsynlig"
-
-#~ msgid "UK"
-#~ msgstr "Storbritannia"
-
-#~ msgid "USA"
-#~ msgstr "USA"
