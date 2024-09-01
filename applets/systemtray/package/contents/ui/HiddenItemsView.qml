@@ -40,7 +40,7 @@ PlasmaComponents3.ScrollView {
 
         TextMetrics {
             id: metrics
-            text: i18n("Some letters with tall characters, ascenders, descenders, etc", "AILlmyjgGJP")
+            text: i18nc("Some letters with tall characters, ascenders, descenders, etc", "AILlmyjgGJP")
         }
 
         cellWidth: Math.floor(hiddenTasksView.availableWidth / columns)
