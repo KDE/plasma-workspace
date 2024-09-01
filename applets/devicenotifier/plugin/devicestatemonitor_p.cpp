@@ -53,7 +53,7 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
 
     Solid::Device device(udi);
 
-    auto it = m_devicesStates.emplace(udi, DeviceInfo(false, false, Idle, QDateTime::currentDateTimeUtc()));
+    auto it = m_devicesStates.emplace(udi, DeviceInfo{false, false, Idle, QDateTime::currentDateTimeUtc()});
 
     if (device.is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = getAncestorAs<Solid::OpticalDrive>(device);
