@@ -57,7 +57,11 @@ UserModel::UserModel(QObject *parent)
         User *user = new User(this);
         user->setPath(path);
 
-        static constexpr const std::array<std::pair<void (User::*)(), int>, 8> set = {{
+        struct SignalEnumMapping {
+            void (User::*signalFnc)();
+            int role;
+        };
+        static constexpr const std::array<SignalEnumMapping, 8> set{{
             {&User::uidChanged, UidRole},
             {&User::nameChanged, NameRole},
             {&User::displayNamesChanged, DisplayPrimaryNameRole},
@@ -68,10 +72,10 @@ UserModel::UserModel(QObject *parent)
             {&User::administratorChanged, AdministratorRole},
         }};
 
-        for (const auto &[signal, role] : set) {
-            connect(user, signal, this, [this, user, role] {
+        for (const SignalEnumMapping &entry : set) {
+            connect(user, entry.signalFnc, this, [this, user, entry] {
                 auto idx = index(m_userList.lastIndexOf(user));
-                Q_EMIT dataChanged(idx, idx, {role});
+                Q_EMIT dataChanged(idx, idx, {entry.role});
             });
         }
 
