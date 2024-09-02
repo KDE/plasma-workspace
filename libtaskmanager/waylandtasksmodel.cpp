@@ -158,12 +158,12 @@ protected:
         };
         QFuture<QIcon> future = QtConcurrent::run(readIcon, pipeFds[0]);
         auto watcher = new QFutureWatcher<QIcon>();
-        watcher->setFuture(future);
         connect(watcher, &QFutureWatcher<QIcon>::finished, this, [this, watcher] {
             icon = watcher->future().result();
             Q_EMIT iconChanged();
         });
         connect(watcher, &QFutureWatcher<QIcon>::finished, watcher, &QObject::deleteLater);
+        watcher->setFuture(future);
     }
     void org_kde_plasma_window_themed_icon_name_changed(const QString &name) override
     {
