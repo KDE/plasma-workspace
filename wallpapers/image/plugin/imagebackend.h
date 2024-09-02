@@ -183,6 +183,8 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(ImageBackend, bool, m_slideshowFoldersFirst, false, &ImageBackend::slideshowFoldersFirstChanged)
 
     QTimer m_timer;
+    static constexpr int m_timer_duration_min = 1000;
+    static constexpr int m_timer_duration_offset = 10;
     bool m_pauseSlideshow = false;
     std::optional<decltype(std::declval<QTimer>().remainingTimeAsDuration())> m_remainingTime;
 
