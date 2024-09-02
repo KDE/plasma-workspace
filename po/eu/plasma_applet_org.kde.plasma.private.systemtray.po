@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"POT-Creation-Date: 2024-09-02 00:40+0000\n"
 "PO-Revision-Date: 2024-08-30 10:35+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -191,8 +191,12 @@ msgstr "Erakutsi ezkutuko ikonoak"
 
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
-msgid "Some letters with tall characters, ascenders, descenders, etc"
-msgstr "Karaktere altuko letra batzuk, goranzkoak, beheranzkoak, etab."
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr ""
+
+#~ msgid "Some letters with tall characters, ascenders, descenders, etc"
+#~ msgstr "Karaktere altuko letra batzuk, goranzkoak, beheranzkoak, etab."
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Zabaldu sistemako erretilua"

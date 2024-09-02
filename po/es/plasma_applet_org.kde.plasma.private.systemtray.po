@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_private_systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"POT-Creation-Date: 2024-09-02 00:40+0000\n"
 "PO-Revision-Date: 2024-08-29 00:16+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -188,8 +188,13 @@ msgstr "Mostrar los iconos ocultos"
 
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
-msgid "Some letters with tall characters, ascenders, descenders, etc"
-msgstr "Algunas letras con caracteres altos, ascendentes, descendentes, etc."
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr ""
+
+#~ msgid "Some letters with tall characters, ascenders, descenders, etc"
+#~ msgstr ""
+#~ "Algunas letras con caracteres altos, ascendentes, descendentes, etc."
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Expandir la bandeja del sistema"

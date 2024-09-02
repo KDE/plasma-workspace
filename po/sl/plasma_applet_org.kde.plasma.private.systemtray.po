@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"POT-Creation-Date: 2024-09-02 00:40+0000\n"
 "PO-Revision-Date: 2024-08-28 06:43+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -190,8 +190,12 @@ msgstr "Prikaži skrite ikone"
 
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
-msgid "Some letters with tall characters, ascenders, descenders, etc"
-msgstr "Nekaj črk z visokimi črkami, ostrivci, krativci, itd."
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr ""
+
+#~ msgid "Some letters with tall characters, ascenders, descenders, etc"
+#~ msgstr "Nekaj črk z visokimi črkami, ostrivci, krativci, itd."
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Razširi sistemski pladenj"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"POT-Creation-Date: 2024-09-02 00:40+0000\n"
 "PO-Revision-Date: 2022-12-16 22:37+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -187,7 +187,8 @@ msgstr "Monstra icones celate"
 
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
-msgid "Some letters with tall characters, ascenders, descenders, etc"
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
 msgstr ""
 
 #~ msgid "Expand System Tray"

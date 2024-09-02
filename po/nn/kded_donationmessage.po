@@ -1,30 +1,30 @@
-# Translation for kded_donationmessage.po to Euskara/Basque (eu).
-# Copyright (C) 2024 This file is copyright:
-# This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# Translation of kded_donationmessage to Norwegian Nynorsk
 #
-# Translators:
-# SPDX-FileCopyrightText: 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2024 Karl Ove Hufthammer <karl@huftis.org>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-08-30 10:54+0200\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
-"Language: eu\n"
+"PO-Revision-Date: 2024-09-01 14:54+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
+"Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.0\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
 
 #: donationmessage.cpp:80
 #, kde-format
 msgctxt "@title of a system notification"
 msgid "Donate to KDE"
-msgstr "Egin dohaintza KDEri"
+msgstr "Gje pengegåve til KDE"
 
 #: donationmessage.cpp:82
 #, kde-format
@@ -33,8 +33,8 @@ msgid ""
 "KDE needs your help! Donations fund development and infrastructure important "
 "for KDE's continued existence."
 msgstr ""
-"KDEk zure laguntza behar du! Dohaintzek KDEren iraupenerako garrantzitsuak "
-"diren garapena eta azpiegitura finantzatzen dituzte."
+"KDE treng di hjelp! Frivillige penge­gåver finansierer vidare utvikling og "
+"infrastruktur som er viktig for at KDE kan halda fram."
 
 #: donationmessage.cpp:84
 #, kde-format
@@ -42,7 +42,7 @@ msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate"
-msgstr "Egin dohaintza"
+msgstr "Gje pengegåve"
 
 #: donationmessage.cpp:85
 #, kde-format
@@ -50,4 +50,4 @@ msgctxt ""
 "@action:button don't donate this year; translate this in as short a form as "
 "possible"
 msgid "No Thanks"
-msgstr "Ez, eskerrik asko"
+msgstr "Nei takk"

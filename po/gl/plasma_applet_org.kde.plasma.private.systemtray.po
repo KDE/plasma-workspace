@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"POT-Creation-Date: 2024-09-02 00:40+0000\n"
 "PO-Revision-Date: 2024-08-29 18:23+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -190,8 +190,13 @@ msgstr "Amosar as iconas agochadas"
 
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
-msgid "Some letters with tall characters, ascenders, descenders, etc"
-msgstr "Algunhas letras con caracteres altos, ascendentes, descendentes, etc."
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr ""
+
+#~ msgid "Some letters with tall characters, ascenders, descenders, etc"
+#~ msgstr ""
+#~ "Algunhas letras con caracteres altos, ascendentes, descendentes, etc."
 
 #~ msgid "Expand System Tray"
 #~ msgstr "Expandir a área de notificación"

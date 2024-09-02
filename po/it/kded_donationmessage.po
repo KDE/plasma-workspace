@@ -1,19 +1,16 @@
-# Translation for kded_donationmessage.po to Euskara/Basque (eu).
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+# SPDX-FileCopyrightText: 2024 Vincenzo Reale <smart2128vr@gmail.com>
 #
-# Translators:
-# SPDX-FileCopyrightText: 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-08-30 10:54+0200\n"
-"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
-"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
-"Language: eu\n"
+"PO-Revision-Date: 2024-08-29 03:34+0200\n"
+"Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
+"Language-Team: Italian <kde-i18n-it@kde.org>\n"
+"Language: it\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title of a system notification"
 msgid "Donate to KDE"
-msgstr "Egin dohaintza KDEri"
+msgstr "Fai una donazione a KDE"
 
 #: donationmessage.cpp:82
 #, kde-format
@@ -33,8 +30,8 @@ msgid ""
 "KDE needs your help! Donations fund development and infrastructure important "
 "for KDE's continued existence."
 msgstr ""
-"KDEk zure laguntza behar du! Dohaintzek KDEren iraupenerako garrantzitsuak "
-"diren garapena eta azpiegitura finantzatzen dituzte."
+"KDE ha bisogno del tuo aiuto! Le donazioni finanziano lo sviluppo e le "
+"infrastrutture importanti per la continua esistenza di KDE."
 
 #: donationmessage.cpp:84
 #, kde-format
@@ -42,7 +39,7 @@ msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate"
-msgstr "Egin dohaintza"
+msgstr "Fai una donazione"
 
 #: donationmessage.cpp:85
 #, kde-format
@@ -50,4 +47,4 @@ msgctxt ""
 "@action:button don't donate this year; translate this in as short a form as "
 "possible"
 msgid "No Thanks"
-msgstr "Ez, eskerrik asko"
+msgstr "No, grazie"

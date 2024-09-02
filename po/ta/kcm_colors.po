@@ -1,13 +1,13 @@
 # Copyright (C).
 #
 # ஆமாச்சு <amachu@ubuntu.com>, 2008.
-# Kishore G <kishore96@gmail.com>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2023-08-06 19:12+0530\n"
+"PO-Revision-Date: 2024-09-01 17:02+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -456,9 +456,7 @@ msgstr "காண/மாற்ற வேண்டிய நிறத்தொக
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
+#, kde-format
 msgctxt "color-sets"
 msgid "Common colors"
 msgstr "பொதுவான நிறங்கள்"
@@ -834,11 +832,10 @@ msgstr "ஏதுமில்லை"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:190
-#, fuzzy, kde-format
-#| msgid "Fade"
+#, kde-format
 msgctxt "disabled contrast"
 msgid "Fade"
-msgstr "வெளிர்"
+msgstr "மங்கச்செய்"
 
 #. i18n: ectx: property (text), item, widget (QComboBox, contrastBox)
 #: editor/scmeditoreffects.ui:195
@@ -1242,25 +1239,19 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (தற்போதைய நிறத்திட்டம்)"
 
 #: ui/AccentColorUI.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from color scheme"
-#| msgid "Accent Color From Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
 msgstr "நிறத்திட்டத்திலிருந்தான சிறப்பு நிறம்"
 
 #: ui/AccentColorUI.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from wallpaper"
-#| msgid "Accent Color From Wallpaper"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
 msgstr "பின்புலப்படத்திலிருந்தான சிறப்பு நிறம்"
 
 #: ui/AccentColorUI.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox User-chosen custom accent color"
-#| msgid "Custom Accent Color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "விருப்பமான சிறப்பு நிறம்"
@@ -1278,22 +1269,19 @@ msgstr ""
 "'%1' என்ற நிறத்திட்டம் நிறுவப்படாமையால் இயல்பிருப்பு நிறத்திட்டமே தேர்ந்தெடுக்கப்பட்டுள்ளது."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "அனைத்து திட்டங்கள்"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Light Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "வெளிர்ந்த திட்டங்கள்"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Dark Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "கருமையான திட்டங்கள்"
@@ -1306,7 +1294,7 @@ msgstr "கோப்பிலிருந்து நிறுவு…"
 #: ui/main.qml:157
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "புதியவற்றை பெறு…"
 
 #: ui/main.qml:204
 #, kde-format

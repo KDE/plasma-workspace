@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-07-06 20:02+0530\n"
+"PO-Revision-Date: 2024-09-01 17:16+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -40,36 +40,31 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "காட்ட வேண்டிய படங்களை கொண்ட அடைவு"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "காட்டப்படும் விதம்:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "வெட்டி அளவுமாற்றி"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "அளவுமாற்றி"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "அளவுமாற்றி, உருவத்தை மாற்றாமல்"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "நடுப்படுத்தி"
@@ -78,7 +73,7 @@ msgstr "நடுப்படுத்தி"
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
-msgstr ""
+msgstr "பக்கத்துப்பக்கதில் பலமுறை"
 
 #: imagepackage/contents/ui/config.qml:175
 #, kde-format
@@ -173,6 +168,7 @@ msgstr ""
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
+"நிரப்பும் முறையைக் குறிப்பிடலாம் (எ.கா. stretch, preserveAspectCrop, போன்றவை)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -187,7 +183,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "நிரப்பும் முறை செல்லுபடியாகாதது: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
