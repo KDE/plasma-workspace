@@ -20,8 +20,8 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2021-10-13 19:49+0200\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
+"PO-Revision-Date: 2024-09-01 17:00+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -1756,7 +1756,7 @@ msgstr "Thâna"
 
 #: viewpart/UnicodeBlocks.h:33
 msgid "NKo"
-msgstr "N'ko"
+msgstr "NKo"
 
 #: viewpart/UnicodeBlocks.h:34 viewpart/UnicodeScripts.h:31
 msgid "Devanagari"
@@ -2288,7 +2288,7 @@ msgstr "Idéogrammes unifiés « CJK » Extension B"
 
 #: viewpart/UnicodeBlocks.h:166
 msgid "CJK Compatibility Ideographs Supplement"
-msgstr "Supplément d'idéographes de compatibilité CJK"
+msgstr "Supplément d'idéogrammes pour compatibilité « CJK »"
 
 #: viewpart/UnicodeBlocks.h:167
 msgid "Tags"
