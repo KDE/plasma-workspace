@@ -575,7 +575,7 @@ void WidgetExplorer::removeAllInstances(const QString &pluginName)
                 const auto &appletInfo = applet->pluginMetaData();
 
                 if (appletInfo.isValid() && appletInfo.pluginId() == pluginName) {
-                    applet->internalAction(QStringLiteral("remove"))->trigger();
+                    applet->destroy();
                 }
             }
         }

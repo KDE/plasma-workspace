@@ -710,24 +710,22 @@ void AppletsLayout::appletRemoved(Plasma::Applet *applet)
 {
     PlasmaQuick::AppletQuickItem *appletItem = PlasmaQuick::AppletQuickItem::itemForApplet(applet);
 
-    if (!appletItem) {
-        return;
-    }
-
-    AppletContainer *container = m_containerForApplet.value(appletItem);
+    AppletContainer *container = m_containerForApplet.value(applet);
     if (!container) {
         return;
     }
 
     m_layoutManager->releaseSpace(container);
-    m_containerForApplet.remove(appletItem);
-    appletItem->setParentItem(nullptr);
+    m_containerForApplet.remove(applet);
+    if (appletItem) {
+        appletItem->setParentItem(nullptr);
+    }
     container->deleteLater();
 }
 
 AppletContainer *AppletsLayout::createContainerForApplet(PlasmaQuick::AppletQuickItem *appletItem)
 {
-    AppletContainer *container = m_containerForApplet.value(appletItem);
+    AppletContainer *container = m_containerForApplet.value(appletItem->applet());
 
     if (container) {
         return container;
@@ -760,7 +758,7 @@ AppletContainer *AppletsLayout::createContainerForApplet(PlasmaQuick::AppletQuic
     const QSizeF appletSize = appletItem->size();
     container->setContentItem(appletItem);
 
-    m_containerForApplet[appletItem] = container;
+    m_containerForApplet[appletItem->applet()] = container;
     container->setLayout(this);
     container->setKey(QLatin1String("Applet-") + QString::number(appletItem->applet()->id()));
 

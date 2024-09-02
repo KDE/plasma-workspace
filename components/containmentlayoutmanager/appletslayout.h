@@ -234,7 +234,7 @@ private:
 
     AppletsLayout::EditModeCondition m_editModeCondition = AppletsLayout::Manual;
 
-    QHash<PlasmaQuick::AppletQuickItem *, AppletContainer *> m_containerForApplet;
+    QHash<Plasma::Applet *, AppletContainer *> m_containerForApplet;
 
     QSizeF m_minimumItemSize;
     QSizeF m_defaultItemSize;
