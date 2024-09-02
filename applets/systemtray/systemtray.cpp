@@ -59,6 +59,16 @@ void SystemTray::init()
     m_plasmoidRegistry = new PlasmoidRegistry(m_settings, this);
     connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidEnabled, this, &SystemTray::startApplet);
     connect(m_plasmoidRegistry, &PlasmoidRegistry::plasmoidStopped, this, &SystemTray::stopApplet);
+    connect(this, &Containment::appletRemoved, this, [&](auto applet) {
+        // First of all, let's immediately add the applet back. If we allow the user to entirely
+        // remove the applet from the system tray, they won't have any way to add it back (it won't
+        // even be on the list of plugins to enable in tray settings.)
+        m_settings->addEnabledPlugin(applet->pluginName());
+
+        // Then, let's "cleanup" the applet, i.e. remove it from the list of shown/hidden applets.
+        // This will leave the applet within the system tray, but it will be marked as disabled.
+        m_settings->cleanupPlugin(applet->pluginName());
+    });
 
     // we don't want to automatically propagate the activated signal from the Applet to the Containment
     // even if SystemTray is of type Containment, it is de facto Applet and should act like one
