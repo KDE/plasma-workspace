@@ -9,7 +9,7 @@
 #include <optional>
 
 #include <QGuiApplication>
-#include <QQuickItem>
+#include <QQuickPaintedItem>
 #include <QTimer>
 
 struct InterceptedQuickItemData {
@@ -46,7 +46,7 @@ struct InterceptedQuickItemData {
  *
  * See: https://bjk5.com/post/44698559168/breaking-down-amazons-mega-dropdown
  */
-class TriangleMouseFilter : public QQuickItem
+class TriangleMouseFilter : public QQuickPaintedItem
 {
     Q_OBJECT
     QML_ELEMENT
@@ -97,6 +97,8 @@ public:
     TriangleMouseFilter(QQuickItem *parent = nullptr);
     ~TriangleMouseFilter() = default;
 
+    void paint(QPainter *painter) override;
+
 Q_SIGNALS:
     void filterTimoutChanged();
     void edgeChanged();
@@ -112,6 +114,7 @@ private:
     static constexpr double VELOCITY_THRESHOLD = 0.1;
     static constexpr int JITTER_THRESHOLD = 1;
 
+    QPolygonF filterShape() const;
     bool filterContains(const QPointF &p) const;
     void resendHoverEvents(const QPointF &cursorPosition);
 

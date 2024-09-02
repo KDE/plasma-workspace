@@ -11,8 +11,10 @@
 #include <QPolygonF>
 #include <cmath>
 
+#include <QPainter>
+
 TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
-    : QQuickItem(parent)
+    : QQuickPaintedItem(parent)
     , m_edgeLine()
     , m_active(true)
     , m_blockFirstEnter(false)
@@ -29,11 +31,13 @@ TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
         }
 
         m_interceptionPos.reset();
+        update();
     });
 };
 
 bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
 {
+    update();
     if (!m_active) {
         // Even if inactive, we still need to record the current item so when active becomes true after the child item is hovered, the filter can still work
         // correctly
@@ -162,12 +166,8 @@ void TriangleMouseFilter::resendHoverEvents(const QPointF &cursorPosition)
     m_interceptedHoverItem = nullptr;
 }
 
-bool TriangleMouseFilter::filterContains(const QPointF &p) const
+QPolygonF TriangleMouseFilter::filterShape() const
 {
-    if (!m_interceptionPos) {
-        return false;
-    }
-
     // QPolygonF.contains returns false if we're on the edge, so we pad our main item
     const QRectF shape = (m_edgeLine.size() == 4) ? QRect(m_edgeLine[0] - 1, m_edgeLine[1] - 1, width() + m_edgeLine[2] + 1, height() + m_edgeLine[3] + 1)
                                                   : QRect(-1, -1, width() + 1, height() + 1);
@@ -188,9 +188,34 @@ bool TriangleMouseFilter::filterContains(const QPointF &p) const
     case Qt::BottomEdge:
         poly << m_interceptionPos.value() + QPointF(0, JITTER_THRESHOLD) << shape.bottomLeft() << shape.bottomRight();
     }
+    return poly;
+}
+
+bool TriangleMouseFilter::filterContains(const QPointF &p) const
+{
+    if (!m_interceptionPos) {
+        return false;
+    }
+
+    QPolygonF poly = filterShape();
 
     bool firstCheck = poly.containsPoint(p, Qt::OddEvenFill);
     poly.replace(0, m_secondaryPoint);
     bool secondCheck = m_secondaryPoint != QPointF(0, 0) && poly.containsPoint(p, Qt::OddEvenFill);
     return (firstCheck || secondCheck);
+}
+
+void TriangleMouseFilter::paint(QPainter *p)
+{
+    if (!m_interceptionPos) {
+        return;
+    }
+
+    QPolygonF poly = filterShape();
+    p->setBrush(QBrush(QColor(255, 0, 0, 100)));
+    p->drawPolygon(filterShape());
+
+    poly.replace(0, m_secondaryPoint);
+    p->setBrush(QBrush(QColor(0, 0, 255, 100)));
+    p->drawPolygon(filterShape());
 }
