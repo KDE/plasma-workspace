@@ -129,8 +129,6 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
-    m_writeLock.lock();
-
     QSqlDatabase db = QSqlDatabase::database(u"klipper"_s);
     if (!db.isOpen()) [[unlikely]] {
         qCWarning(KLIPPER_LOG) << "The database is broken!" << db.lastError().text();
@@ -145,13 +143,15 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
     }
     qCritical("setMimeData2");
     if (mimeDataIndexList.empty()) {
-        m_writeLock.unlock();
         return;
     }
     qCritical("setMimeData3");
 
     QThreadPool::globalInstance()->start([this, uuid = data->uuid(), mimeDataIndexList = std::move(mimeDataIndexList), mode, updateReason] {
         qCritical("setMimeData4");
+        if (!m_writeLock.try_lock()) {
+            return;
+        }
 
         std::list<std::pair<QString /*type*/, QByteArray /*data*/>> mimeDataList;
         QString qtImagePath;
@@ -225,7 +225,9 @@ void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, Cli
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
 
-    std::lock_guard writeLock(m_writeLock);
+    if (!m_writeLock.try_lock()) {
+        return;
+    }
 
     QStringList formats = data->formats();
     const bool hasQtImage = formats.removeOne(u"application/x-qt-image"_s);
