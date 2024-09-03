@@ -136,21 +136,25 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
         qCWarning(KLIPPER_LOG) << "The database is broken!" << db.lastError().text();
         return;
     }
+    qCritical("setMimeData1");
     std::list<std::pair<QString /*mimetype*/, QString /*dataUuid*/>> mimeDataIndexList;
     QSqlQuery query(db);
     query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(data->uuid()));
     while (query.next()) {
         mimeDataIndexList.emplace_back(query.value(0).toString(), query.value(1).toString());
     }
+    qCritical("setMimeData2");
     if (mimeDataIndexList.empty()) {
         m_writeLock.unlock();
         return;
     }
+    qCritical("setMimeData3");
 
     QThreadPool::globalInstance()->start([this, uuid = data->uuid(), mimeDataIndexList = std::move(mimeDataIndexList), mode, updateReason] {
         QScopeGuard unlock([this] {
             m_writeLock.unlock();
         });
+        qCritical("setMimeData4");
 
         std::list<std::pair<QString /*type*/, QByteArray /*data*/>> mimeDataList;
         QString qtImagePath;
@@ -186,6 +190,7 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
         if (mimeDataList.empty() && qtImagePath.isEmpty()) {
             return;
         }
+        qCritical("setMimeData5");
 
         QMimeData *selectionMimeData = nullptr;
         if (mode & Selection) {
@@ -207,8 +212,10 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
                 clipboardMimeData->setImageData(QImage(qtImagePath));
             }
         }
+        qCritical("setMimeData6");
 
         QMetaObject::invokeMethod(this, [this, selectionMimeData, clipboardMimeData, updateReason] {
+            qCritical("setMimeData7");
             setMimeDataInternal(selectionMimeData, clipboardMimeData, updateReason);
         });
     });
