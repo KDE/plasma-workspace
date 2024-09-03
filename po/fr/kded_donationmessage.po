@@ -1,0 +1,48 @@
+#
+# SPDX-FileCopyrightText: 2024 Xavier Besnard <xavier.besnard@kde.org>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"PO-Revision-Date: 2024-08-29 08:55+0200\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
+"Language-Team: French <French <kde-francophone@kde.org>>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: donationmessage.cpp:80
+#, kde-format
+msgctxt "@title of a system notification"
+msgid "Donate to KDE"
+msgstr "Faire un don à KDE"
+
+#: donationmessage.cpp:82
+#, kde-format
+msgctxt "@info body text of a system notification"
+msgid ""
+"KDE needs your help! Donations fund development and infrastructure important "
+"for KDE's continued existence."
+msgstr ""
+"KDE a besoin de votre aide ! Les dons financent le développement et les "
+"infrastructures importantes pour la poursuite des activités de KDE."
+
+#: donationmessage.cpp:84
+#, kde-format
+msgctxt ""
+"@action:button Make a donation now; translate this in as short a form as "
+"possible"
+msgid "Donate"
+msgstr "Faire un don"
+
+#: donationmessage.cpp:85
+#, kde-format
+msgctxt ""
+"@action:button don't donate this year; translate this in as short a form as "
+"possible"
+msgid "No Thanks"
+msgstr "Non merci"

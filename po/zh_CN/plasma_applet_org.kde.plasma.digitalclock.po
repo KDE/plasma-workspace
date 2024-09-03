@@ -151,43 +151,43 @@ msgid "Offset from UTC time"
 msgstr "UTC 时间偏移"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "时间显示方式："
 
 #: package/contents/ui/configAppearance.qml:132
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 小时制"
 
 #: package/contents/ui/configAppearance.qml:133
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "使用当前区域设置的默认值"
 
 #: package/contents/ui/configAppearance.qml:134
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 小时制"
 
 #: package/contents/ui/configAppearance.qml:141
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "更改区域设置…"
 
 #: package/contents/ui/configAppearance.qml:152
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "日期格式："
 
 #: package/contents/ui/configAppearance.qml:161
-#, fuzzy, kde-format
+#, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
@@ -195,19 +195,19 @@ msgid "Long date"
 msgstr "长日期"
 
 #: package/contents/ui/configAppearance.qml:168
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "短日期"
 
 #: package/contents/ui/configAppearance.qml:175
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO 日期"
 
 #: package/contents/ui/configAppearance.qml:182
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "自定义"
@@ -275,13 +275,13 @@ msgid "Show week numbers"
 msgstr "显示周数"
 
 #: package/contents/ui/configCalendar.qml:49
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "星期起始日："
 
 #: package/contents/ui/configCalendar.qml:55
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "使用当前区域设置的默认值"
