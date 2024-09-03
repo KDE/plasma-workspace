@@ -166,6 +166,7 @@ HistoryModel::HistoryModel()
 
     connect(m_clip.get(), &SystemClipboard::ignored, this, &HistoryModel::slotIgnored);
     connect(m_clip.get(), &SystemClipboard::newClipData, this, &HistoryModel::checkClipData);
+    qCritical() << "m1";
 }
 
 HistoryModel::~HistoryModel()
@@ -177,6 +178,7 @@ void HistoryModel::clear()
     if (TransactionGuard transaction(&m_db); !transaction.exec(u"DELETE FROM main"_s) || !transaction.exec(u"DELETE FROM aux"_s)) {
         return;
     }
+    qCritical() << "m2";
     for (const auto &item : m_items) {
         KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'));
     }
@@ -337,7 +339,7 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
             return false;
         }
     }
-
+    qCritical() << "m3";
     for (int i = 0; i < count; ++i) {
         KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + m_items[row + i]->uuid() + u'/'));
     }

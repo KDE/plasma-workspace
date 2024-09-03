@@ -29,9 +29,11 @@ void HistoryCyclerTest::initTestCase()
 void HistoryCyclerTest::testCycle()
 {
     auto model = HistoryModel::self();
+    qCritical() << "1";
     std::unique_ptr<HistoryCycler> history(new HistoryCycler(nullptr));
     model->setMaxSize(10);
     model->clear();
+    qCritical() << "2";
     QVERIFY(!history->nextInCycle());
     QVERIFY(!history->prevInCycle());
 
@@ -41,7 +43,7 @@ void HistoryCyclerTest::testCycle()
     const QString fooUuid = QString::fromLatin1(QCryptographicHash::hash(fooText.toUtf8(), QCryptographicHash::Sha1).toHex());
     const QString barUuid = QString::fromLatin1(QCryptographicHash::hash(barText.toUtf8(), QCryptographicHash::Sha1).toHex());
     const QString foobarUuid = QString::fromLatin1(QCryptographicHash::hash(fooBarText.toUtf8(), QCryptographicHash::Sha1).toHex());
-
+    qCritical() << "3";
     QSignalSpy changedSpy(model.get(), &HistoryModel::changed);
     model->insert(fooText);
     QCOMPARE(changedSpy.size(), 1);
@@ -58,7 +60,7 @@ void HistoryCyclerTest::testCycle()
     QVERIFY(changedSpy.isEmpty());
     QVERIFY(!history->nextInCycle());
     QVERIFY(!history->prevInCycle());
-
+    qCritical() << "4";
     // insert more items
     model->insert(barText);
     QCOMPARE(changedSpy.size(), 1);
@@ -85,7 +87,7 @@ void HistoryCyclerTest::testCycle()
     // there are no more prev
     history->cyclePrev();
     QVERIFY(changedSpy.isEmpty());
-
+    qCritical() << "5";
     // insert a third item
     model->insert(fooBarText);
     QCOMPARE(changedSpy.size(), 1);
@@ -126,6 +128,8 @@ void HistoryCyclerTest::testCycle()
     // there are no more prev
     history->cyclePrev();
     QVERIFY(changedSpy.isEmpty());
+    qCritical() << "6";
+    QThreadPool::globalInstance()->waitForDone(30000);
 }
 
 QTEST_MAIN(HistoryCyclerTest)
