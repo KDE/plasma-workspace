@@ -152,16 +152,20 @@ HistoryModel::HistoryModel()
         if (!isTop) {
             return;
         }
-
+        qCritical() << "changed1";
         QSqlQuery query(m_db);
         query.prepare(u"UPDATE main SET last_used_time=? WHERE uuid='%1'"_s.arg(m_items[0]->uuid()));
         query.addBindValue(QDateTime::currentMSecsSinceEpoch() / 1000.0);
+        qCritical() << "changed2";
         if (TransactionGuard transaction(&m_db); transaction.exec(query)) {
+            qCritical() << "changed3";
             if (m_clip->isLocked(QClipboard::Selection) || m_clip->isLocked(QClipboard::Clipboard)) {
                 return;
             }
+            qCritical() << "changed4";
             m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
         }
+        qCritical() << "changed5";
     });
 
     connect(m_clip.get(), &SystemClipboard::ignored, this, &HistoryModel::slotIgnored);
