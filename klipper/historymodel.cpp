@@ -485,7 +485,9 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
     }
     qCritical() << "insert6";
     beginInsertRows(QModelIndex(), 0, 0);
+    qCritical() << "insert6a";
     m_items.prepend(std::make_shared<HistoryItem>(std::move(uuid), std::move(formats), std::move(text)));
+    qCritical() << "insert6b";
     endInsertRows();
     qCritical() << "insert7";
     return true;
