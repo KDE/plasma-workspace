@@ -68,6 +68,7 @@ void HistoryCyclerTest::testCycle()
     changedSpy.clear();
     QCOMPARE(history->nextInCycle()->uuid(), fooUuid);
     QVERIFY(!history->prevInCycle());
+    qCritical() << "4a";
     // cycle to next
     history->cycleNext();
     QCOMPARE(changedSpy.size(), 1);
@@ -75,6 +76,7 @@ void HistoryCyclerTest::testCycle()
     QCOMPARE(model->first()->uuid(), fooUuid);
     QVERIFY(!history->nextInCycle());
     QCOMPARE(history->prevInCycle()->uuid(), barUuid);
+    qCritical() << "4b";
     // there are no more next
     history->cycleNext();
     QVERIFY(changedSpy.isEmpty());
@@ -85,6 +87,7 @@ void HistoryCyclerTest::testCycle()
     QCOMPARE(model->first()->uuid(), barUuid);
     QCOMPARE(history->nextInCycle()->uuid(), fooUuid);
     QVERIFY(!history->prevInCycle());
+    qCritical() << "4c";
     // there are no more prev
     history->cyclePrev();
     QVERIFY(changedSpy.isEmpty());
