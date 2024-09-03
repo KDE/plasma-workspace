@@ -14,8 +14,6 @@
 #include <klocalizedstring.h>
 
 #include <KFormat>
-#include <KNotification>
-#include <QApplication>
 #include <QDebug>
 
 #include <Plasma/DataContainer>
@@ -529,24 +527,13 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
 
     QString path = storageaccess->filePath();
     if (!m_paths.contains(path)) {
-        QTimer *timer = new QTimer(this);
-        timer->setSingleShot(true);
-        connect(timer, &QTimer::timeout, [path]() {
-            KNotification::event(KNotification::Error, i18n("Filesystem is not responding"), i18n("Filesystem mounted at '%1' is not responding", path));
-        });
-
         m_paths.insert(path);
 
         // create job
         KIO::FileSystemFreeSpaceJob *job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(path));
 
-        // delete later timer
-        connect(job, &KIO::FileSystemFreeSpaceJob::result, timer, &QTimer::deleteLater);
-
         // collect and process info
-        connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this, timer, path, udi](KIO::Job *job, KIO::filesize_t size, KIO::filesize_t available) {
-            timer->stop();
-
+        connect(job, &KIO::FileSystemFreeSpaceJob::result, this, [this, path, udi](KIO::Job *job, KIO::filesize_t size, KIO::filesize_t available) {
             if (!job->error()) {
                 setData(udi, kli18n("Free Space").untranslatedText(), QVariant(available).toDouble());
                 setData(udi, kli18n("Free Space Text").untranslatedText(), KFormat().formatByteSize(available));
@@ -556,9 +543,6 @@ bool SolidDeviceEngine::updateStorageSpace(const QString &udi)
 
             m_paths.remove(path);
         });
-
-        // start timer: after 15 seconds we will get an error
-        timer->start(15000);
     }
 
     return false;

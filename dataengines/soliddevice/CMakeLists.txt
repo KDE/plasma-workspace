@@ -24,7 +24,6 @@ target_link_libraries(plasma_engine_soliddevice
   KF5::Plasma
   KF5::Solid
   KF5::CoreAddons
-  KF5::Notifications
 )
 
 install(FILES soliddevice.operations DESTINATION ${PLASMA_DATA_INSTALL_DIR}/services )
