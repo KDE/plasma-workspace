@@ -151,9 +151,6 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
     qCritical("setMimeData3");
 
     QThreadPool::globalInstance()->start([this, uuid = data->uuid(), mimeDataIndexList = std::move(mimeDataIndexList), mode, updateReason] {
-        QScopeGuard unlock([this] {
-            m_writeLock.unlock();
-        });
         qCritical("setMimeData4");
 
         std::list<std::pair<QString /*type*/, QByteArray /*data*/>> mimeDataList;
@@ -188,6 +185,7 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
             }
         }
         if (mimeDataList.empty() && qtImagePath.isEmpty()) {
+            m_writeLock.unlock();
             return;
         }
         qCritical("setMimeData5");
@@ -218,6 +216,7 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
             qCritical("setMimeData7");
             setMimeDataInternal(selectionMimeData, clipboardMimeData, updateReason);
             qCritical("setMimeData8");
+            m_writeLock.unlock();
         });
     });
 }
