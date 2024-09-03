@@ -15,34 +15,59 @@
 #include <QMimeData>
 #include <QMimeDatabase>
 
-#include "historymodel.h"
+#include <ranges>
 
 using namespace Qt::StringLiterals;
 
-inline QByteArray computeUuid(const QByteArray &data)
+using RefView = std::ranges::ref_view<const MimeDataList>;
+// std::ranges::key_view only works with lists of std::tuples or std::pairs
+using KeysView = std::ranges::keys_view<RefView>;
+
+// Get the key part of the key-value pair with more meaningful terminology.
+inline const QString &key(const MimeData &mimeData)
 {
-    return QCryptographicHash::hash(data, QCryptographicHash::Sha1);
+    return mimeData.first;
 }
 
-inline QByteArray computeUuid(const MimeDataMap &data)
+// Get the value part of the key-value pair with more meaningful terminology.
+// Automatically converts the type when requesting a different type.
+template<typename T = const QVariant &>
+inline T value(const MimeData &mimeData)
 {
-    using namespace Mimetypes;
-    QByteArray buffer;
-    QDataStream stream(&buffer, QIODevice::WriteOnly);
-    QMimeDatabase db;
-    for (auto it = data.begin(); it != data.end(); ++it) {
-        const auto &mimetype = it.key();
-        // Use known types.
-        // We don't want custom application specific mimetypes to cause entries
-        // that look like duplicates to users.
-        // Apps that would cause visual duplicates include LibreOffice Calc.
-        if (db.mimeTypeForName(mimetype).isValid() //
-            || mimetype == Application::xQtImage //
-            || mimetype == Application::xColor) {
-            stream << it.key() << it.value();
-        }
+    if constexpr (std::is_same_v<std::decay_t<T>, QVariant>) {
+        return mimeData.second;
+    } else {
+        return mimeData.second.value<T>();
     }
-    return computeUuid(buffer);
+}
+
+// QMap-like key-value pair finder.
+inline MimeDataList::const_iterator find(const MimeDataList &list, const QString &mimetype)
+{
+    return std::find_if(list.begin(), list.end(), [&](const MimeData &mimeData) {
+        return mimetype == key(mimeData);
+    });
+}
+
+// QMap-like value getter.
+// Automatically converts the type when requesting a different type.
+template<typename T = const QVariant &>
+inline T value(const MimeDataList &list, const QString &mimetype, const T &defaultValue = {})
+{
+    auto it = find(list, mimetype);
+    return it != list.end() ? value<T>(*it) : defaultValue;
+}
+
+// QMap-like key-value pair insertion.
+inline MimeDataList::const_reference insert(MimeDataList &list, MimeData &&mimeData)
+{
+    auto it = std::find_if(list.begin(), list.end(), [&](const MimeData &element) {
+        return key(mimeData) == key(element);
+    });
+    if (it != list.cend()) {
+        return *it = std::move(mimeData);
+    }
+    return list.emplace_back(std::move(mimeData));
 }
 
 template<typename T>
@@ -89,20 +114,46 @@ inline bool isEmpty(const QVariant &arg)
     return true;
 }
 
-inline HistoryItemType getType(const MimeDataMap &map)
+inline QByteArray computeUuid(const QByteArray &data)
+{
+    return QCryptographicHash::hash(data, QCryptographicHash::Sha1);
+}
+
+inline QByteArray computeUuid(const MimeDataList &data)
+{
+    using namespace Mimetypes;
+    QByteArray buffer;
+    QDataStream stream(&buffer, QIODevice::WriteOnly);
+    QMimeDatabase db;
+    for (auto it = data.begin(); it != data.end(); ++it) {
+        // Use known types.
+        // We don't want custom application specific mimetypes to cause entries
+        // that look like duplicates to users.
+        // Apps that would cause visual duplicates include LibreOffice Calc.
+        const auto &mimetype = key(*it);
+        if (db.mimeTypeForName(mimetype).isValid() //
+            || mimetype == Application::xQtImage //
+            || mimetype == Application::xColor) {
+            stream << *it;
+        }
+    }
+    return computeUuid(buffer);
+}
+
+inline HistoryItemType getType(const MimeDataList &list)
 {
     using namespace Mimetypes;
     // Most important to show since it can cause file operations.
-    if (auto it = map.find(Text::uriList); it != map.cend()) {
+    if (auto it = find(list, Text::uriList); it != list.cend()) {
         return HistoryItemType::Url;
     }
     // Next most important since it can be heavy and if you're copying an image
     // it's probably the main thing after file operations.
-    if (auto it = map.find(Application::xQtImage); it != map.cend()) {
+    if (auto it = find(list, Application::xQtImage); it != list.cend()) {
         return HistoryItemType::Image;
     }
     // Text is the safest and typically least heavy kind of thing to display.
-    if (Utils::anyOfType(map.keys(), Type::text)) {
+    if (Utils::anyOfType(KeysView{list}, Type::text)) {
         return HistoryItemType::Text;
     }
     // We don't check for color because there doesn't seem to be a way to use it
@@ -158,42 +209,48 @@ inline QString getText(const QVariant &arg)
 }
 
 template<>
-inline QString getText(const MimeDataMap &map)
+inline QString getText(const MimeData &arg)
+{
+    return getText(value(arg));
+}
+
+template<>
+inline QString getText(const MimeDataList &list)
 {
     using namespace Mimetypes;
     // The best text format.
-    if (auto it = map.find(Text::plain); it != map.cend()) {
+    if (auto it = find(list, Text::plain); it != list.cend()) {
         return getText(*it);
     }
     // A text format, but not as good for viewing in a plain format.
-    if (auto it = map.find(Text::html); it != map.cend()) {
+    if (auto it = find(list, Text::html); it != list.cend()) {
         return getText(*it);
     }
     // Could be anything, but still text
-    for (auto it = map.cbegin(); it != map.cend(); ++it) {
-        if (!it->canConvert<QByteArray>() || !Utils::hasType(it.key(), Type::text)) {
+    for (auto it = list.cbegin(); it != list.cend(); ++it) {
+        if (!value(*it).canConvert<QByteArray>() || !Utils::hasType(key(*it), Type::text)) {
             continue;
         }
-        if (auto bytes = it->toByteArray(); !bytes.isEmpty()) {
+        if (auto bytes = value<QByteArray>(*it); !bytes.isEmpty()) {
             return getText(bytes);
         }
     }
     // Technically text, but not really handled like text most of the time.
-    if (auto it = map.find(Text::uriList); it != map.cend()) {
+    if (auto it = find(list, Text::uriList); it != list.cend()) {
         return getText(*it);
     }
     // Least text-like known type.
-    if (auto it = map.find(Application::xQtImage); it != map.cend()) {
+    if (auto it = find(list, Application::xQtImage); it != list.cend()) {
         return getText(*it);
     }
     return {};
 }
 
-HistoryItem::HistoryItem(const MimeDataMap &mimeDataMap, HistoryItemType type, const QImage &image)
-    : m_mimeDataMap(mimeDataMap)
-    , m_uuid(computeUuid(m_mimeDataMap))
+HistoryItem::HistoryItem(const MimeDataList &mimeData, HistoryItemType type, const QImage &image)
+    : m_mimeDataList(mimeData)
+    , m_uuid(computeUuid(m_mimeDataList))
     , m_type(type)
-    , m_text(getText(mimeDataMap))
+    , m_text(getText(mimeData))
     , m_image(image)
 {
 }
@@ -222,21 +279,20 @@ QMimeData *HistoryItem::newQMimeData() const
     using namespace Mimetypes;
     QMimeData *data = new QMimeData();
     bool hasUrls = false;
-    for (auto it = m_mimeDataMap.cbegin(); it != m_mimeDataMap.cend(); ++it) {
-        const auto &mimetype = it.key();
-        if (mimetype == Text::uriList) {
-            data->setUrls(it->value<QUrlList>());
+    for (auto it = m_mimeDataList.cbegin(); it != m_mimeDataList.cend(); ++it) {
+        if (key(*it) == Text::uriList) {
+            data->setUrls(value<QUrlList>(*it));
             hasUrls = true;
-        } else if (mimetype == Application::xQtImage) {
-            data->setImageData(*it);
-        } else if (mimetype == Application::xColor) {
-            data->setColorData(*it);
-        } else if (mimetype == Text::plain) {
-            data->setText(it->toString());
-        } else if (mimetype == Text::html) {
-            data->setText(it->toString());
+        } else if (key(*it) == Application::xQtImage) {
+            data->setImageData(value(*it));
+        } else if (key(*it) == Application::xColor) {
+            data->setColorData(value(*it));
+        } else if (key(*it) == Text::plain) {
+            data->setText(value<QString>(*it));
+        } else if (key(*it) == Text::html) {
+            data->setText(value<QString>(*it));
         } else {
-            data->setData(mimetype, it->toByteArray());
+            data->setData(key(*it), value<QByteArray>(*it));
         }
     }
     if (hasUrls) {
@@ -247,12 +303,12 @@ QMimeData *HistoryItem::newQMimeData() const
 
 void HistoryItem::write(QDataStream &stream) const
 {
-    stream << m_mimeDataMap;
+    stream << m_mimeDataList;
 }
 
 bool HistoryItem::operator==(const HistoryItem &rhs) const
 {
-    return m_mimeDataMap == rhs.m_mimeDataMap;
+    return m_mimeDataList == rhs.m_mimeDataList;
 }
 
 // Allows miscellaneous types and hints to be stored.
@@ -270,7 +326,7 @@ inline bool isMisc(const QString &mimetype)
 HistoryItemPtr HistoryItem::create(const QMimeData *data, std::optional<QStringList> formats)
 {
     using namespace Mimetypes;
-    MimeDataMap mimeDataMap;
+    MimeDataList mimeDataList;
     if (!formats) {
         formats.emplace(data->formats());
     }
@@ -279,13 +335,10 @@ HistoryItemPtr HistoryItem::create(const QMimeData *data, std::optional<QStringL
     // In general, we want to set mime data in the order that it comes with.
     QImage image;
     for (const auto &format : std::as_const(*formats)) {
-        if (auto it = mimeDataMap.find(format); it != mimeDataMap.cend() && it->isValid()) {
-            continue;
-        }
         if (format == Text::uriList) {
             QUrlList urls = KUrlMimeData::urlsFromMimeData(data, KUrlMimeData::PreferKdeUrls);
             if (!isEmpty(urls)) {
-                mimeDataMap[Text::uriList] = QVariant::fromValue(std::move(urls));
+                insert(mimeDataList, {Text::uriList, QVariant::fromValue(std::move(urls))});
             }
         } else if (isEmpty(image) && Utils::isImage(format)) {
             // Convert whatever image format is there into a QImage and set it
@@ -303,30 +356,30 @@ HistoryItemPtr HistoryItem::create(const QMimeData *data, std::optional<QStringL
             // Only works if Klipper did not create the QMimeData.
             image = data->imageData().value<QImage>();
             if (!isEmpty(image)) {
-                mimeDataMap[Application::xQtImage] = image; // Shallow copy
+                insert(mimeDataList, {Application::xQtImage, image}); // Shallow copy
             }
         } else if (format == Application::xColor) {
             auto color = data->colorData().value<QColor>();
             if (!isEmpty(color)) {
                 // fromValue() can do move operations, but QVariant() can't.
-                mimeDataMap[Application::xColor] = QVariant::fromValue(std::move(color));
+                insert(mimeDataList, {Application::xColor, QVariant::fromValue(std::move(color))});
             }
         } else if (Utils::isPlainText(format)) {
             QString text = data->text();
             if (!isEmpty(text)) {
-                mimeDataMap[Text::plain] = QVariant::fromValue(std::move(text));
+                insert(mimeDataList, {Text::plain, QVariant::fromValue(std::move(text))});
             }
         } else if (format == Text::html) {
             // When copying rich text from a Qt app, you often get plain, html,
             // markdown and ODT formatted text.
             QString html = data->html();
             if (!isEmpty(html)) {
-                mimeDataMap[Text::html] = QVariant::fromValue(std::move(html));
+                insert(mimeDataList, {Text::html, QVariant::fromValue(std::move(html))});
             }
         } else if (Utils::hasType(format, Type::text)) {
             QByteArray bytes = data->data(format);
             if (!isEmpty(bytes)) {
-                mimeDataMap[format] = QVariant::fromValue(std::move(bytes));
+                insert(mimeDataList, {format, QVariant::fromValue(std::move(bytes))});
             }
         } else if (isMisc(format)) {
             auto bytes = data->data(format);
@@ -338,17 +391,15 @@ HistoryItemPtr HistoryItem::create(const QMimeData *data, std::optional<QStringL
             // Some hints aren't set with data, so we keep them all.
             // Use an invalid QVariant when bytes are empty so that we don't
             // need to convert to the correct format first to check if valid.
-            mimeDataMap[format] = isEmpty(bytes) //
-                ? QVariant{}
-                : QVariant::fromValue(std::move(bytes));
+            insert(mimeDataList, {format, isEmpty(bytes) ? QVariant{} : QVariant::fromValue(std::move(bytes))});
             // NOTE: Hopefully there are no platform abstractions that allow
             // stupidly expensive formats to be created when requested.
             // Images should be the worst that can happen (already handled above),
             // but in theory a platform abstraction could do almost anything.
         }
     }
-    if (auto type = getType(mimeDataMap); type != HistoryItemType::Invalid) {
-        return std::make_unique<HistoryItem>(mimeDataMap, type, image);
+    if (auto type = getType(mimeDataList); type != HistoryItemType::Invalid) {
+        return std::make_unique<HistoryItem>(mimeDataList, type, image);
     }
     return HistoryItemPtr(); // Failed.
 }
@@ -359,16 +410,16 @@ HistoryItemPtr HistoryItem::create(QDataStream &dataStream)
     if (dataStream.atEnd()) {
         return HistoryItemPtr();
     }
-    MimeDataMap mimeDataMap;
-    dataStream >> mimeDataMap;
+    MimeDataList mimeDataList;
+    dataStream >> mimeDataList;
     // We don't check if image formats other than application/x-qt-image produce
     // a null QImage because it could get really expensive with large images and
     // slow image formats. This function may be called whenever an app that did
     // a copy is closed and klipper takes responsibility for the clipboard item
     // or on startup when a previous session's clipboard history is being read.
-    QImage image = mimeDataMap.value(Application::xQtImage).value<QImage>();
-    if (auto type = getType(mimeDataMap); type != HistoryItemType::Invalid) {
-        return std::make_unique<HistoryItem>(mimeDataMap, type, image);
+    QImage image = value<QImage>(mimeDataList, Application::xQtImage);
+    if (auto type = getType(mimeDataList); type != HistoryItemType::Invalid) {
+        return std::make_unique<HistoryItem>(mimeDataList, type, image);
     }
     qCWarning(KLIPPER_LOG) << "Failed to restore history item: Could not read MIME data";
     return HistoryItemPtr();
@@ -379,7 +430,7 @@ HistoryItemPtr HistoryItem::create(const QString &text)
     if (text.isEmpty()) {
         return nullptr;
     }
-    return std::make_unique<HistoryItem>(MimeDataMap{{Mimetypes::Text::plain, text}}, HistoryItemType::Text);
+    return std::make_unique<HistoryItem>(MimeDataList{{Mimetypes::Text::plain, text}}, HistoryItemType::Text);
 }
 
 HistoryItemPtr HistoryItem::create(const QImage &image)
@@ -387,7 +438,7 @@ HistoryItemPtr HistoryItem::create(const QImage &image)
     if (image.isNull()) {
         return nullptr;
     }
-    return std::make_unique<HistoryItem>(MimeDataMap{{Mimetypes::Application::xQtImage, image}}, HistoryItemType::Image, image);
+    return std::make_unique<HistoryItem>(MimeDataList{{Mimetypes::Application::xQtImage, image}}, HistoryItemType::Image, image);
 }
 
 HistoryItemPtr HistoryItem::create(const QUrlList &urls)
@@ -395,7 +446,7 @@ HistoryItemPtr HistoryItem::create(const QUrlList &urls)
     if (isEmpty(urls)) {
         return nullptr;
     }
-    return std::make_unique<HistoryItem>(MimeDataMap{{Mimetypes::Text::uriList, QVariant::fromValue(urls)}}, HistoryItemType::Url);
+    return std::make_unique<HistoryItem>(MimeDataList{{Mimetypes::Text::uriList, QVariant::fromValue(urls)}}, HistoryItemType::Url);
 }
 
 #include "moc_historyitem.cpp"

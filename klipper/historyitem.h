@@ -7,6 +7,7 @@
 
 #include <QMap>
 #include <QPixmap>
+#include <QVariant>
 
 #include "klipper_export.h"
 
@@ -20,7 +21,10 @@ class HistoryItem;
 typedef std::unique_ptr<HistoryItem> HistoryItemPtr;
 typedef std::shared_ptr<const HistoryItem> HistoryItemSharedPtr;
 
-using MimeDataMap = QVariantMap;
+using MimeData = std::pair<QString, QVariant>;
+// We want to preserve the order in which each key-value pair was added,
+// so we use a QList instead of a QMap.
+using MimeDataList = QList<MimeData>;
 using QUrlList = QList<QUrl>;
 
 enum class HistoryItemType {
@@ -37,7 +41,7 @@ class KLIPPER_EXPORT HistoryItem
 {
 public:
     // Only construct with HistoryItem::create externally
-    explicit HistoryItem(const MimeDataMap &mimeDataMap, HistoryItemType type = HistoryItemType::Invalid, const QImage &image = {});
+    explicit HistoryItem(const MimeDataList &mimeDataList, HistoryItemType type = HistoryItemType::Invalid, const QImage &image = {});
     ~HistoryItem();
 
     /**
@@ -102,8 +106,7 @@ public:
     static HistoryItemPtr create(const QUrlList &data);
 
 private:
-
-    MimeDataMap m_mimeDataMap;
+    MimeDataList m_mimeDataList;
     QByteArray m_uuid;
     HistoryItemType m_type;
     QString m_text;
