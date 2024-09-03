@@ -389,17 +389,18 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
         // special case - cannot insert any items
         return false;
     }
-
+    qCritical() << "insert1";
     QString uuid = computeUuid(mimeData);
     if (uuid.isEmpty()) {
         return false;
     }
+    qCritical() << "insert2";
     if (const int existingItemIndex = indexOf(uuid); existingItemIndex >= 0) {
         // move to top
         moveToTop(existingItemIndex);
         return true;
     }
-
+    qCritical() << "insert3";
     QString text;
     if (mimeData->hasUrls()) {
         QStringList urlText;
@@ -413,7 +414,7 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
     } else {
         text = mimeData->text();
     }
-
+    qCritical() << "insert4";
     QStringList formats = mimeData->formats();
     {
         TransactionGuard transaction(&m_db);
@@ -475,16 +476,18 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
             }
         }
     }
+    qCritical() << "insert5";
 
     if (m_items.size() > m_maxSize - 1) {
         if (!removeRow(m_items.size() - 1)) [[unlikely]] {
             return false;
         }
     }
-
+    qCritical() << "insert6";
     beginInsertRows(QModelIndex(), 0, 0);
     m_items.prepend(std::make_shared<HistoryItem>(std::move(uuid), std::move(formats), std::move(text)));
     endInsertRows();
+    qCritical() << "insert7";
     return true;
 }
 
