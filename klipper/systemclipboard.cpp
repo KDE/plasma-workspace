@@ -149,10 +149,6 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
 
     QThreadPool::globalInstance()->start([this, uuid = data->uuid(), mimeDataIndexList = std::move(mimeDataIndexList), mode, updateReason] {
         qCritical("setMimeData4");
-        if (!m_writeLock.try_lock()) {
-            return;
-        }
-
         std::list<std::pair<QString /*type*/, QByteArray /*data*/>> mimeDataList;
         QString qtImagePath;
         for (const auto &[format, dataUuid] : mimeDataIndexList) {
@@ -185,7 +181,6 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
             }
         }
         if (mimeDataList.empty() && qtImagePath.isEmpty()) {
-            m_writeLock.unlock();
             return;
         }
         qCritical("setMimeData5");
@@ -216,7 +211,6 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
             qCritical("setMimeData7");
             setMimeDataInternal(selectionMimeData, clipboardMimeData, updateReason);
             qCritical("setMimeData8");
-            m_writeLock.unlock();
         });
     });
 }
@@ -224,10 +218,6 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
 void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, ClipboardUpdateReason updateReason)
 {
     Q_ASSERT((mode & 1) == 0); // Warn if trying to pass a boolean as a mode.
-
-    if (!m_writeLock.try_lock()) {
-        return;
-    }
 
     QStringList formats = data->formats();
     const bool hasQtImage = formats.removeOne(u"application/x-qt-image"_s);

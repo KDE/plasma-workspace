@@ -8,8 +8,6 @@
 */
 #pragma once
 
-#include <mutex>
-
 #include <QClipboard>
 #include <QObject>
 #include <QTimer>
@@ -124,5 +122,4 @@ private:
     QTimer m_overflowClearTimer;
     QTimer m_pendingCheckTimer;
     bool m_pendingContentsCheck = false;
-    std::mutex m_writeLock;
 };
