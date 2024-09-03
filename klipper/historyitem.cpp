@@ -18,19 +18,23 @@ HistoryItem::HistoryItem(QString &&uuid, QStringList &&mimeTypes, QString &&text
     : m_uuid(std::move(uuid))
     , m_text(std::move(text))
 {
+    qCritical("HistoryItem1");
     if (std::any_of(mimeTypes.cbegin(), mimeTypes.cend(), [](const QString &mimeType) {
             return mimeType.startsWith(u"text/");
         })) {
         m_types |= HistoryItemType::Text;
     }
+    qCritical("HistoryItem2");
     if (mimeTypes.contains(u"text/uri-list"_s)) {
         m_types |= HistoryItemType::Url;
     }
+    qCritical("HistoryItem3");
     if (std::any_of(mimeTypes.cbegin(), mimeTypes.cend(), [](const QString &mimeType) {
             return mimeType.startsWith(u"image/") || mimeType == u"application/x-qt-image";
         })) {
         m_types |= HistoryItemType::Image;
     }
+    qCritical("HistoryItem4");
 }
 
 HistoryItem::~HistoryItem()
