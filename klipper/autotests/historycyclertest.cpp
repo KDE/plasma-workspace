@@ -12,6 +12,7 @@
 #include <QSignalSpy>
 #include <QStandardPaths>
 #include <QTest>
+#include <QThreadPool>
 
 class HistoryCyclerTest : public QObject
 {
