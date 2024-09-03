@@ -217,6 +217,7 @@ void SystemClipboard::setMimeData(const HistoryItemConstPtr &data, SelectionMode
         QMetaObject::invokeMethod(this, [this, selectionMimeData, clipboardMimeData, updateReason] {
             qCritical("setMimeData7");
             setMimeDataInternal(selectionMimeData, clipboardMimeData, updateReason);
+            qCritical("setMimeData8");
         });
     });
 }
@@ -381,6 +382,7 @@ bool SystemClipboard::blockFetchingNewData()
 
 void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeData *clipboardMimeData, ClipboardUpdateReason updateReason)
 {
+    qCritical("setMimeDataInternal1");
     if (selectionMimeData) {
         Ignore lock(m_selectionLocklevel);
         if (updateReason == ClipboardUpdateReason::PreventEmptyClipboard) {
@@ -399,11 +401,15 @@ void SystemClipboard::setMimeDataInternal(QMimeData *selectionMimeData, QMimeDat
         QMetaObject::invokeMethod(
             this,
             [this, clipboardMimeData]() {
+                qCritical("setMimeDataInternalinvokeMethod1");
+
                 Ignore lock(m_clipboardLocklevel);
                 qCDebug(KLIPPER_LOG) << "Setting clipboard to <" << (clipboardMimeData->hasImage() ? u"image"_s : clipboardMimeData->text()) << ">";
                 m_clip->setMimeData(clipboardMimeData, QClipboard::Clipboard);
+                qCritical("setMimeDataInternalinvokeMethod2");
             },
             updateReason == ClipboardUpdateReason::SyncSelection ? Qt::QueuedConnection : Qt::DirectConnection);
     }
+    qCritical("setMimeDataInternal2");
 }
 #include "moc_systemclipboard.cpp"
