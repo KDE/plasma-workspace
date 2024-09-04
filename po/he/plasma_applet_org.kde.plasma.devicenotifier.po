@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-17 09:15+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -207,15 +207,11 @@ msgstr "לא ניתן להסיר את ההתקן הזה."
 msgid "Could not eject this disc."
 msgstr "לא ניתן לשלוף את התקליטור הזה."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "מערכת הקבצים לא מגיבה"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "מערכת הקבצים לא מגיבה"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "מערכת הקבצים שמעוגנת תחת ‚%1’ לא מגיבה"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "מערכת הקבצים שמעוגנת תחת ‚%1’ לא מגיבה"
 
 #~ msgid "General"
 #~ msgstr "כללי"

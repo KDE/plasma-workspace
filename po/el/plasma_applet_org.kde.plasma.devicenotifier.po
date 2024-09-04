@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2016-08-04 13:01+0200\n"
 "Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -240,16 +240,6 @@ msgstr "Τελευταία συνδεδεμένη συσκευή: %1"
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "Κάντε κλικ για την εξαγωγή του δίσκου."
-
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr ""
-
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
 
 #~ msgid "General"
 #~ msgstr "Γενικά"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -194,14 +194,4 @@ msgstr ""
 #: plugin/deviceerrormonitor_p.cpp:260
 #, kde-format
 msgid "Could not eject this disc."
-msgstr ""
-
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr ""
-
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
 msgstr ""

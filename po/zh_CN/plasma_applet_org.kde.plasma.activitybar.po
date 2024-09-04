@@ -27,7 +27,7 @@ msgstr "切换到活动：%1"
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr ""
+msgstr "显示活动管理器"
 
 #: contents/ui/main.qml:100
 #, kde-format

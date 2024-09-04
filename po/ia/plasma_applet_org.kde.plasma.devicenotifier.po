@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-18 12:43+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -198,15 +198,11 @@ msgstr "Non poteva remover iste dispositivo."
 msgid "Could not eject this disc."
 msgstr "Non poteva ejectar iste disco."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Systema de file non es respondente"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Systema de file non es respondente"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "Systema de file montate in '%1'  non es respondente"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "Systema de file montate in '%1'  non es respondente"
 
 #~ msgid "Show:"
 #~ msgstr "Monstra:"

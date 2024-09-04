@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -197,12 +197,8 @@ msgstr "无法移除此设备。"
 msgid "Could not eject this disc."
 msgstr "无法弹出此光盘。"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "文件系统没有响应"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "文件系统没有响应"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "挂载于“%1”的文件系统没有响应"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "挂载于“%1”的文件系统没有响应"

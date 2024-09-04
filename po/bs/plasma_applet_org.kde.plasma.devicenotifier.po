@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2015-02-04 15:04+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -229,16 +229,6 @@ msgstr "Kliknite da bezbjedno uklonite ovaj uređaj."
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "Kliknite za izbacivanje ovog diska."
-
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr ""
-
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
 
 #~ msgid "General"
 #~ msgstr "Opšte"

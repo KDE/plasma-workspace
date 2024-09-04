@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-17 14:00+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -203,15 +203,11 @@ msgstr "Impossibile rimuovere questo dispositivo."
 msgid "Could not eject this disc."
 msgstr "Impossibile espellere questo disco."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Il filesystem non risponde"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Il filesystem non risponde"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "Il filesystem montato in «%1» non risponde"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "Il filesystem montato in «%1» non risponde"
 
 #~ msgid "Show:"
 #~ msgstr "Mostra:"

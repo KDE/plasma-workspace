@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2012-06-14 10:53+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -219,16 +219,6 @@ msgstr "ចុច​ដើម្បី​យក​ឧបករណ៍​នេះ
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "ចុច​ដើម្បី​ច្រាន​ថាស​នេះ​ចេញ ។"
-
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr ""
-
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr ""
 
 #~ msgid ""
 #~ "It is currently <b>not safe</b> to remove this device: applications may "

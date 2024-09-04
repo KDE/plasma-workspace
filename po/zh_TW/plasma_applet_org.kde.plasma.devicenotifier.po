@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-18 16:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -202,15 +202,11 @@ msgstr "無法移除此裝置。"
 msgid "Could not eject this disc."
 msgstr "無法退出碟片。"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "檔案系統無回應"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "檔案系統無回應"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "掛載於「%1」的檔案系統沒有回應"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "掛載於「%1」的檔案系統沒有回應"
 
 #~ msgid "Show:"
 #~ msgstr "顯示："

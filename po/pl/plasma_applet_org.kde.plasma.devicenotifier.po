@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-20 09:05+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -207,15 +207,11 @@ msgstr "Nie można wysunąć tego urządzenia."
 msgid "Could not eject this disc."
 msgstr "Nie można wysunąć dysku."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "System plików nie odpowiada"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "System plików nie odpowiada"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "System plików podpięty w '%1' nie odpowiada"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "System plików podpięty w '%1' nie odpowiada"
 
 #~ msgid "Show:"
 #~ msgstr "Pokaż:"

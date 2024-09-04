@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-17 10:53+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -201,15 +201,11 @@ msgstr "Kon dit apparaat niet verwijderen."
 msgid "Could not eject this disc."
 msgstr "Kon deze schijf miet uitwerpen."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Bestandssysteem geeft geen respons"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Bestandssysteem geeft geen respons"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "Bestandssysteem aangekoppeld op '%1' geeft geen respons"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "Bestandssysteem aangekoppeld op '%1' geeft geen respons"
 
 #~ msgid "Show:"
 #~ msgstr "Tonen:"

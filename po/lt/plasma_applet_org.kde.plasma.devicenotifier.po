@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-12 16:28+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -209,15 +209,11 @@ msgstr "Nepavyko pašalinti šio įrenginio."
 msgid "Could not eject this disc."
 msgstr "Nepavyko išstumti šio disko."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Failų sistema nereaguoja"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Failų sistema nereaguoja"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "Failų sistema, prijungta ties „%1“, nereaguoja"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "Failų sistema, prijungta ties „%1“, nereaguoja"
 
 #~ msgid "Show:"
 #~ msgstr "Rodyti:"

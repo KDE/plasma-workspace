@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-17 10:44+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -206,12 +206,8 @@ msgstr "No s'ha pogut extraure este dispositiu."
 msgid "Could not eject this disc."
 msgstr "No s'ha pogut expulsar este disc."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "El sistema de fitxers no respon"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "El sistema de fitxers no respon"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "El sistema de fitxers muntat a «%1» no respon"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "El sistema de fitxers muntat a «%1» no respon"

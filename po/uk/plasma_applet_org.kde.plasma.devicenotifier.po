@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-17 09:45+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -208,15 +208,11 @@ msgstr "Не вдалося вилучити цей пристрій."
 msgid "Could not eject this disc."
 msgstr "Не вдалося виштовхнути цей диск."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Файлова система не відповідає"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Файлова система не відповідає"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "Змонтована до «%1» файлова система не відповідає"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "Змонтована до «%1» файлова система не відповідає"
 
 #~ msgid "Show:"
 #~ msgstr "Показати:"

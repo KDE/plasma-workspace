@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-04 16:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -199,15 +199,11 @@ msgstr "இந்த சாதனத்தை நீக்க முடியவ
 msgid "Could not eject this disc."
 msgstr "இந்த வட்டை வெளியேற்ற முடியவில்லை."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "கோப்பு முறைமை பதிலளிக்கவில்லை"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "கோப்பு முறைமை பதிலளிக்கவில்லை"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "'%1'-இல் ஏற்றப்பட்டுள்ள கோப்பு முறைமை பதிலளிக்கவில்லை"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "'%1'-இல் ஏற்றப்பட்டுள்ள கோப்பு முறைமை பதிலளிக்கவில்லை"
 
 #, fuzzy
 #~| msgid "1 action for this device"

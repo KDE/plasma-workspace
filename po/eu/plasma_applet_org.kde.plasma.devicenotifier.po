@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-17 06:23+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -204,15 +204,11 @@ msgstr "Ezin izan du gailu hori kendu."
 msgid "Could not eject this disc."
 msgstr "Ezin izan du disko hori egotzi."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Fitxategi sistemak ez du erantzuten"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Fitxategi sistemak ez du erantzuten"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "'%1'(e)(a)n muntatutako fitxategi-sistemak ez du erantzuten"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "'%1'(e)(a)n muntatutako fitxategi-sistemak ez du erantzuten"
 
 #~ msgid "Show:"
 #~ msgstr "Erakutsi:"

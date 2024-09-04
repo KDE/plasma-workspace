@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2019, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-04-22 12:44+0200\n"
+"PO-Revision-Date: 2024-09-03 12:23+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -168,6 +168,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"Le servicio de  <application>GeoClue2</application> essera usate per "
+"actualisar periodicament le location del dispositivo usante GPS o le "
+"triangulation de repetitores si disponibile, o alteremente per inviar su "
+"adresse IP a <link url='https://geoip.com/privacy/'>GeoIP</link>."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -178,6 +182,11 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"Le servicio <application>%1</application> essera usate per actualisar "
+"periodicamente le location del dispositivo. Pro favor tu aperi un reporto de "
+"error-bug a <link url='https://bugs.kde.org'>https://bugs.kde.org</link> "
+"demandante al disveloppatores de KDE a scriber un description detaliate de "
+"lo que iste servicio facera."
 
 #: ui/main.qml:334
 #, kde-format

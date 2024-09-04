@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-22 13:09+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -202,15 +202,11 @@ msgstr "Gat ekki fjarlægt þetta tæki."
 msgid "Could not eject this disc."
 msgstr "Gat ekki ýtt þessum diski úr."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Skráakerfi svarar ekki"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Skráakerfi svarar ekki"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "Skráakerfið sem tengt er á '%1' svarar ekki"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "Skráakerfið sem tengt er á '%1' svarar ekki"
 
 #, fuzzy
 #~| msgid "General"

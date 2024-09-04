@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-08-07 00:19-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -207,15 +207,11 @@ msgstr "Não foi possível remover o dispositivo."
 msgid "Could not eject this disc."
 msgstr "Não foi possível ejetar o disco."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "O sistema de arquivos não está respondendo"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "O sistema de arquivos não está respondendo"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "O sistema de arquivos montado em '%1' não está respondendo"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "O sistema de arquivos montado em '%1' não está respondendo"
 
 #~ msgid "Show:"
 #~ msgstr "Mostrar:"

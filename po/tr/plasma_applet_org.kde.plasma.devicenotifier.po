@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-17 13:59+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -204,12 +204,8 @@ msgstr "Bu aygıt kaldırılamadı."
 msgid "Could not eject this disc."
 msgstr "Bu disk çıkarılamadı."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Dosya sistemi yanıt vermiyor"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Dosya sistemi yanıt vermiyor"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "“%1” konumunda bağlı dosya sistemi yanıt vermiyor"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "“%1” konumunda bağlı dosya sistemi yanıt vermiyor"

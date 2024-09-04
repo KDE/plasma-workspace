@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-17 05:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -200,12 +200,8 @@ msgstr "მოწყობილობის მოხსნის შეცდ�
 msgid "Could not eject this disc."
 msgstr "დისკის გამოღების შეცდომა."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "ფაილური სისტემა არ პასუხობს"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "ფაილური სისტემა არ პასუხობს"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "%1-ზე მიმაგრებული ფაილური სისტემა არ პასუხობს"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "%1-ზე მიმაგრებული ფაილური სისტემა არ პასუხობს"

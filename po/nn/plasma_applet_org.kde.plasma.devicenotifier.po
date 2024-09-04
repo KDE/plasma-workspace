@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-18 11:53+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -200,12 +200,8 @@ msgstr "Klarte ikkje fjerna eininga."
 msgid "Could not eject this disc."
 msgstr "Klarte ikkje løysa ut plata."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "Filsystemet svarar ikkje"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Filsystemet svarar ikkje"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "Filsystemet montert på «%1» svarar ikkje"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "Filsystemet montert på «%1» svarar ikkje"

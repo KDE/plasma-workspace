@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-19 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:41+0000\n"
 "PO-Revision-Date: 2024-07-28 12:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -205,15 +205,11 @@ msgstr "تعذّرت إزالة هذا الجهاز."
 msgid "Could not eject this disc."
 msgstr "تعذّر إخراج هذا القرص."
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem is not responding"
-msgstr "نظام الملفات لا يستجيب"
+#~ msgid "Filesystem is not responding"
+#~ msgstr "نظام الملفات لا يستجيب"
 
-#: plugin/spacemonitor_p.cpp:146
-#, kde-format
-msgid "Filesystem mounted at '%1' is not responding"
-msgstr "نظام الملفات المربوط في '%1' لا يستجيب"
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "نظام الملفات المربوط في '%1' لا يستجيب"
 
 #~ msgid "General"
 #~ msgstr "عامّ"

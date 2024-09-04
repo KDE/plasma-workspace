@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2014, 2020, 2021, 2022, 2023, 2024.
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2022, 2023, 2024 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-01-30 08:31+0100\n"
+"PO-Revision-Date: 2024-09-03 12:12+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -40,14 +40,11 @@ msgstr[0] "Clausura de session in 1 secunda"
 msgstr[1] "Clausura de session in%1 secundas"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Installante actualisationes de software e reinitiante in 1 secunda"
-msgstr[1] ""
-"Installante actualisationes de software e reinitiante in %1 secundas"
+msgstr[0] "Installante actualisationes de software e arrestante in 1 secunda"
+msgstr[1] "Installante actualisationes de software e arrestante in %1 secundas"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -101,12 +98,10 @@ msgid "Hibernate Now"
 msgstr "Hiberna Nunc"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr "Installa Actualisationes & ReInitia"
+msgstr "Installa actualisationes e Restarta"
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -119,12 +114,10 @@ msgid "Restart Now"
 msgstr "Re-Initia nunc"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Installa Actualisationes & ReInitia Nunc"
+msgstr "Installa actualisationes e Arresta (shutdown)"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
