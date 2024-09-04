@@ -29,6 +29,8 @@
 #include <QLocale>
 #include <QVariant>
 
+using namespace Qt::StringLiterals;
+
 /*
  * Initialization
  */
@@ -404,14 +406,21 @@ void DWDIon::parseStationData(QByteArray data)
 
 void DWDIon::searchInStationList(const QString searchText)
 {
-    qCDebug(IONENGINE_dwd) << searchText;
+    QString flatSearchText = searchText;
+    flatSearchText // The station list does not contains umlauts
+        .replace(u"ä"_s, u"ae"_s)
+        .replace(u"ö"_s, u"oe"_s)
+        .replace(u"ü"_s, u"ue"_s)
+        .replace(u"ß"_s, u"ss"_s);
+
+    qCDebug(IONENGINE_dwd) << "Searching in station list:" << flatSearchText;
 
     QMap<QString, QString>::const_iterator it = m_place.constBegin();
     auto end = m_place.constEnd();
 
     while (it != end) {
         QString name = it.key();
-        if (name.contains(searchText, Qt::CaseInsensitive)) {
+        if (name.contains(flatSearchText, Qt::CaseInsensitive)) {
             m_locations.append(it.key());
         }
         ++it;
