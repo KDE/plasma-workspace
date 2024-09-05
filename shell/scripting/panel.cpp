@@ -359,4 +359,44 @@ void Panel::setFloating(bool floating)
         panelConfig().writeEntry("floating", (int)floating);
     }
 }
+
+QString Panel::opacity() const
+{
+    int opacity;
+    if (panel()) {
+        opacity = panel()->opacityMode();
+    } else {
+        opacity = panelConfig().readEntry("panelOpacity", 0);
+    }
+
+    switch (opacity) {
+    case PanelView::OpacityMode::Adaptive:
+        return u"adaptive"_s;
+    case PanelView::OpacityMode::Opaque:
+        return u"opaque"_s;
+    case PanelView::OpacityMode::Translucent:
+        return u"translucent"_s;
+    }
+    return u"adaptive"_s;
+}
+
+void Panel::setOpacity(const QString &mode)
+{
+    PanelView::OpacityMode opacityMode = PanelView::OpacityMode::Adaptive;
+    if (mode.compare(u"adaptive", Qt::CaseInsensitive) == 0) {
+        opacityMode = PanelView::OpacityMode::Adaptive;
+    }
+    if (mode.compare(u"opaque", Qt::CaseInsensitive) == 0) {
+        opacityMode = PanelView::OpacityMode::Opaque;
+    }
+    if (mode.compare(u"translucent", Qt::CaseInsensitive) == 0) {
+        opacityMode = PanelView::OpacityMode::Translucent;
+    }
+
+    if (panel()) {
+        panel()->setOpacity(opacityMode);
+    } else {
+        panelConfig().writeEntry("panelOpacity", (int)opacityMode);
+    }
+}
 }

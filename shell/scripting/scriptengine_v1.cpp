@@ -403,6 +403,7 @@ QJSValue ScriptEngine::V1::loadSerializedLayout(const QJSValue &data)
         panel->setOffset(panelData.property(u"offset"_s).toNumber() * gridUnit());
         panel->setAlignment(panelData.property(u"alignment"_s).toString());
         panel->setHiding(panelData.property(u"hiding"_s).toString());
+        panel->setOpacity(panelData.property(u"opacity"_s).toString());
 
         // Loading the config for the panel
         loadSerializedConfigs(panel, panelData.property(u"config"_s));
