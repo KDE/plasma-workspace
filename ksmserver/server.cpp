@@ -752,6 +752,10 @@ void KSMServer::deleteClient(KSMClient *client)
 
 void KSMServer::newConnection(int /*socket*/)
 {
+    if (state == Killing) {
+        return;
+    }
+
     IceAcceptStatus status = IceAcceptFailure;
     auto iceConn = IceAcceptConnection(((KSMListener *)sender())->listenObj, &status);
     if (!iceConn) {
