@@ -1,7 +1,7 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma_engine_applicationjobs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
 "PO-Revision-Date: 2014-06-28 17:55+0200\n"

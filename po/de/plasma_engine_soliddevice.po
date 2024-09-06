@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2011, 2012, 2013.
 # Rolf Eike Beer <kde@opensource.sf-tec.de>, 2009.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2010.
@@ -16,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"

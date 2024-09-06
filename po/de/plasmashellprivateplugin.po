@@ -4,7 +4,7 @@
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-31 02:25+0000\n"
 "PO-Revision-Date: 2023-08-14 21:37+0200\n"

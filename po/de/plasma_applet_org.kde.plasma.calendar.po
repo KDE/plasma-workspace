@@ -2,7 +2,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.calendar\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2021-08-15 00:20+0000\n"
 "PO-Revision-Date: 2019-05-22 07:38+0200\n"

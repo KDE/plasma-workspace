@@ -5,7 +5,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2019.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-workspace\n"
+"Project-Id-Version: plasma_engine_hotplug\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-13 00:48+0000\n"
 "PO-Revision-Date: 2019-08-06 21:02+0200\n"

@@ -2,7 +2,7 @@
 # Frederik Schwarzer <schwarzer@kde.org>, 2018, 2022, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.clipboard\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
 "PO-Revision-Date: 2022-03-13 09:55+0100\n"
