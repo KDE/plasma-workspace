@@ -4,6 +4,7 @@
 [Global]
 IconName=love
 Name=Request for Donation
+Name[ar]=طلب تبرع
 Name[ca]=Sol·licitud de donació
 Name[ca@valencia]=Sol·licitud de donació
 Name[cs]=Žádost o dar
@@ -27,6 +28,7 @@ Name[uk]=Запит щодо фінансової підтримки
 Name[x-test]=xxRequest for Donationxx
 Name[zh_CN]=显示捐款请求
 Comment=Shows a yearly request to donate to KDE
+Comment[ar]=تظهر طلب سنوي للتبرع لكيدي
 Comment[ca]=Mostra una sol·licitud anual de donació a KDE
 Comment[ca@valencia]=Mostra una sol·licitud anual de donació a KDE
 Comment[es]=Muestra una petición anual para hacer un donativo a KDE
@@ -114,6 +116,7 @@ Name[zh_TW]=應用程式
 
 [Event/ShowDonationMessage]
 Name=Request for Donation
+Name[ar]=طلب تبرع
 Name[ca]=Sol·licitud de donació
 Name[ca@valencia]=Sol·licitud de donació
 Name[cs]=Žádost o dar
@@ -137,6 +140,7 @@ Name[uk]=Запит щодо фінансової підтримки
 Name[x-test]=xxRequest for Donationxx
 Name[zh_CN]=显示捐款请求
 Comment=Shows a yearly request to donate to KDE
+Comment[ar]=تظهر طلب سنوي للتبرع لكيدي
 Comment[ca]=Mostra una sol·licitud anual de donació a KDE
 Comment[ca@valencia]=Mostra una sol·licitud anual de donació a KDE
 Comment[es]=Muestra una petición anual para hacer un donativo a KDE
