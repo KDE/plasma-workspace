@@ -5,7 +5,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2018, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma_runner_appstream\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-26 00:38+0000\n"
 "PO-Revision-Date: 2021-05-26 07:16+0200\n"
