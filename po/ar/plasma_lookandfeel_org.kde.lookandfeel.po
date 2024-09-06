@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-02-10 19:34+0400\n"
+"PO-Revision-Date: 2024-09-05 09:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -51,17 +52,15 @@ msgstr[4] "يخرج بعد %1 ثانية"
 msgstr[5] "يخرج بعد %1 ثانية"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "تثبيت تحديثات البرامج وإعادة التشغيل خلال ثانية واحدة"
-msgstr[1] "تثبيت تحديثات البرامج وإعادة التشغيل خلال ثانية واحدة"
-msgstr[2] "تثبيت تحديثات البرامج وإعادة التشغيل خلال ثانيتين"
-msgstr[3] "تثبيت تحديثات البرامج وإعادة التشغيل خلال %1 ثواني"
-msgstr[4] "تثبيت تحديثات البرامج وإعادة التشغيل خلال %1 ثانية"
-msgstr[5] "تثبيت تحديثات البرامج وإعادة التشغيل خلال %1 ثانية"
+msgstr[0] "تثبيت تحديثات البرامج وإطفاء الجهاز خلال ثانية واحدة"
+msgstr[1] "تثبيت تحديثات البرامج وإطفاء الجهاز خلال ثانية واحدة"
+msgstr[2] "تثبيت تحديثات البرامج وإطفاء الجهاز خلال ثانيتين"
+msgstr[3] "تثبيت تحديثات البرامج وإطفاء الجهاز خلال %1 ثواني"
+msgstr[4] "تثبيت تحديثات البرامج وإطفاء الجهاز خلال %1 ثانية"
+msgstr[5] "تثبيت تحديثات البرامج وإطفاء الجهاز خلال %1 ثانية"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -129,9 +128,7 @@ msgid "Hibernate Now"
 msgstr "أسبت الآن"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "ثبت التحديثات وأعد التشغيل"
@@ -147,12 +144,10 @@ msgid "Restart Now"
 msgstr "أعِد التشغيل الآن"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "ثبت التحديثات وأعد التشغيل الآن"
+msgstr "ثبت التحديثات وأطفئ الجهاز"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format

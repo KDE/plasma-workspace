@@ -6,7 +6,7 @@
 # Automatically generated, 2023.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-workspace\n"
+"Project-Id-Version: kded_devicenotifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-31 00:42+0000\n"
 "PO-Revision-Date: 2023-07-24 21:18+0200\n"

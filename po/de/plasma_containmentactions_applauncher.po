@@ -4,7 +4,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2017, 2021.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma_containmentactions_applauncher\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-24 00:46+0000\n"
 "PO-Revision-Date: 2021-04-19 15:46+0200\n"

@@ -4,7 +4,7 @@
 # Nils Naumann <nau@gmx.net>, 2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-20 00:41+0000\n"
 "PO-Revision-Date: 2021-05-26 07:11+0200\n"

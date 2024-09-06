@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-01-17 21:11+0400\n"
+"PO-Revision-Date: 2024-09-05 09:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -100,29 +101,25 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "لديك سمات بلازما التالية على نظامك:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "All Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
 msgstr "جميع السمات"
 
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Light Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
 msgstr "سمات فاتحة"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Dark Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
 msgstr "سمات مظلمة"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Color scheme compatible"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
 msgstr "متوافق مع تشكيلة الألوان"

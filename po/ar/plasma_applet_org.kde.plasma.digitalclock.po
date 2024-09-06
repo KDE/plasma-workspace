@@ -9,15 +9,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-31 00:40+0000\n"
-"PO-Revision-Date: 2024-05-25 16:15+0400\n"
+"PO-Revision-Date: 2024-09-05 09:50+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
-"Language-Team: \n"
+"Language-Team: ar\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -152,50 +153,43 @@ msgid "Offset from UTC time"
 msgstr "الإزاحة من التوقيت العالمي المنسق"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "عرض الوقت:"
 
 #: package/contents/ui/configAppearance.qml:132
-#, fuzzy, kde-format
-#| msgid "12-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-ساعة"
 
 #: package/contents/ui/configAppearance.qml:133
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "استخدام مبدئيات المنطقة"
 
 #: package/contents/ui/configAppearance.qml:134
-#, fuzzy, kde-format
-#| msgid "24-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-ساعة"
 
 #: package/contents/ui/configAppearance.qml:141
-#, fuzzy, kde-format
-#| msgid "Change Regional Settings…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "غير إعدادات الإقليمية..."
 
 #: package/contents/ui/configAppearance.qml:152
-#, fuzzy, kde-format
-#| msgid "Date format:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "نسق التّاريخ:"
 
 #: package/contents/ui/configAppearance.qml:161
-#, fuzzy, kde-format
-#| msgid "Long Date"
+#, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
@@ -203,23 +197,19 @@ msgid "Long date"
 msgstr "تاريخ طويل"
 
 #: package/contents/ui/configAppearance.qml:168
-#, fuzzy, kde-format
-#| msgid "Short Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "تاريخ قصير"
 
 #: package/contents/ui/configAppearance.qml:175
-#, fuzzy, kde-format
-#| msgid "ISO Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "تاريخ آيزو"
 
 #: package/contents/ui/configAppearance.qml:182
-#, fuzzy, kde-format
-#| msgctxt "custom date format"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "مخصّص"
@@ -287,15 +277,13 @@ msgid "Show week numbers"
 msgstr "أظهر أرقام الأسابيع"
 
 #: package/contents/ui/configCalendar.qml:49
-#, fuzzy, kde-format
-#| msgid "First day of week:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "أول يوم في الأسبوع:"
 
 #: package/contents/ui/configCalendar.qml:55
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "استخدام مبدئيات المنطقة"

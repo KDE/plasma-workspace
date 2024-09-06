@@ -1,28 +1,28 @@
-# German translations for plasma-workspace package
-# German translation for plasma-workspace.
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Automatically generated, 2024.
+# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: kded_donationmessage\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-08-28 10:46+0200\n"
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
-"Language: de\n"
+"PO-Revision-Date: 2024-09-05 09:51+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: donationmessage.cpp:80
 #, kde-format
 msgctxt "@title of a system notification"
 msgid "Donate to KDE"
-msgstr ""
+msgstr "تبرع لكِيدِي"
 
 #: donationmessage.cpp:82
 #, kde-format
@@ -31,6 +31,8 @@ msgid ""
 "KDE needs your help! Donations fund development and infrastructure important "
 "for KDE's continued existence."
 msgstr ""
+"تحتاج كيدي إلى مساعدتك! تساهم التبرعات في تمويل التطوير والبنية الأساسية "
+"المهمة لاستمرار وجود كيدي."
 
 #: donationmessage.cpp:84
 #, kde-format
@@ -38,7 +40,7 @@ msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate"
-msgstr ""
+msgstr "تبرّع"
 
 #: donationmessage.cpp:85
 #, kde-format
@@ -46,4 +48,4 @@ msgctxt ""
 "@action:button don't donate this year; translate this in as short a form as "
 "possible"
 msgid "No Thanks"
-msgstr ""
+msgstr "لا شكرًا"

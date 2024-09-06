@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-07-28 12:20+0400\n"
+"PO-Revision-Date: 2024-09-05 09:48+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -43,43 +43,37 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "الدّليل الذي فيه الخلفيّات لعرض الشّرائح منه"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "الموضع:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "مكبّرة ومقصوصة"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "مكبّرة"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "مكبّرة مع إبقاء النّسب"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "موسّطة"
 
 #: imagepackage/contents/ui/config.qml:147
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "مكرّرة"
@@ -177,6 +171,8 @@ msgstr ""
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
+"حدد وضع التعبئة (على سبيل المثال، التمديد، الحفاظ على اقتصاص المظهر، وما إلى "
+"ذلك)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -191,7 +187,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "حُدّد وضع تعبئة غير صالح: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format

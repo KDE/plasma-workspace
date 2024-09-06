@@ -196,9 +196,3 @@ msgstr "无法移除此设备。"
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "无法弹出此光盘。"
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "文件系统没有响应"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "挂载于“%1”的文件系统没有响应"

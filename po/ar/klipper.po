@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-15 10:52+0400\n"
+"PO-Revision-Date: 2024-09-05 09:40+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -401,7 +401,7 @@ msgstr "أزل من التّاريخ"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "منطقة تحرير النص"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-17 20:27+0400\n"
+"PO-Revision-Date: 2024-09-05 09:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -358,7 +358,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "المثبتة حديثًا"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -387,11 +387,10 @@ msgid "Select Plasmoid File"
 msgstr "اختر ملفّ بلازمويد"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "فشل تثبيت الحزمة %1."
+msgstr "فشل تثبيت الحزمة %1: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
