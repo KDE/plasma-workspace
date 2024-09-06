@@ -214,35 +214,40 @@ KCM.ScrollViewKCM {
             BinaryDialectModel {
                 id: binaryDialectModel
             }
+            
+            QQC2.ButtonGroup {
+                id: buttonGroup
+            }
 
             view: ListView {
                 id: binaryDialectListView
                 clip: true
                 model: binaryDialectModel
-                delegate: Kirigami.SubtitleDelegate {
+                
+                delegate: QQC2.RadioDelegate {
                     id: binaryDialectDelegate
-
-                    required property var model
-
+                    
                     width: ListView.view.width
+                    Kirigami.Theme.useAlternateBackgroundColor: true
+                    hoverEnabled: false
 
                     text: model.name
-                    subtitle: model.example ? model.example : ""
-
-                    Kirigami.Theme.useAlternateBackgroundColor: true
-
-                    contentItem: RowLayout {
+                    
+                    checked: model.index === kcm.optionsModel.binaryDialect
+                    QQC2.ButtonGroup.group: buttonGroup
+                    
+                    contentItem:RowLayout {
                         spacing: Kirigami.Units.smallSpacing
+                        Kirigami.Theme.useAlternateBackgroundColor: true
+
                         Kirigami.TitleSubtitle {
                             id: titleSubtitle
                             Layout.fillWidth: true
                             title: binaryDialectDelegate.text
-                            subtitle: binaryDialectDelegate.subtitle
-                            selected: model.index === kcm.optionsModel.binaryDialect
+                            subtitle: model.example ? model.example : ""
                         }
 
                         QQC2.Label {
-                            color: !titleSubtitle.selected ? Kirigami.Theme.disabledTextColor: titleSubtitle.color
                             text: model.description
                         }
                     }
