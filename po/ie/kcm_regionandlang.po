@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-09 00:41+0000\n"
+"POT-Creation-Date: 2024-09-07 00:41+0000\n"
 "PO-Revision-Date: 2024-08-02 14:52+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <>\n"
@@ -329,7 +329,7 @@ msgstr "Ínconosset"
 msgid "Default for System"
 msgstr "Predefinit del sistema"
 
-#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:372
+#: localelistmodel.cpp:22 localelistmodel.cpp:71 ui/main.qml:377
 #, kde-format
 msgid "Default"
 msgstr "Predefinit"
@@ -572,44 +572,44 @@ msgctxt "@title:window"
 msgid "Data and Storage Sizes"
 msgstr "date e/o hora"
 
-#: ui/main.qml:270
+#: ui/main.qml:275
 #, kde-format
 msgid "Numbers"
 msgstr "Númeres"
 
-#: ui/main.qml:272
+#: ui/main.qml:277
 #, kde-format
 msgid "Time"
 msgstr "Hora"
 
-#: ui/main.qml:274
+#: ui/main.qml:279
 #, kde-format
 msgid "Currency"
 msgstr "Valuta"
 
-#: ui/main.qml:276
+#: ui/main.qml:281
 #, kde-format
 msgid "Measurements"
 msgstr "Mesuras"
 
-#: ui/main.qml:278
+#: ui/main.qml:283
 #, kde-format
 msgid "Paper Size"
 msgstr "Dimension de papere"
 
-#: ui/main.qml:280
+#: ui/main.qml:285
 #, kde-format
 msgctxt "Postal Address"
 msgid "Address"
 msgstr "Adresse"
 
-#: ui/main.qml:282
+#: ui/main.qml:287
 #, kde-format
 msgctxt "Name Style"
 msgid "Name"
 msgstr "Nómine"
 
-#: ui/main.qml:284
+#: ui/main.qml:289
 #, kde-format
 msgctxt "Phone Numbers"
 msgid "Phone number"
