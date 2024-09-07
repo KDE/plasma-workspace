@@ -379,9 +379,9 @@ ColumnLayout {
                     incrementCurrentIndex()
                 } else if (ctrl && event.key === Qt.Key_K) {
                     decrementCurrentIndex()
-                } else if (event.key === Qt.Key_Home) {
+                } else if (event.key === Qt.Key_Home || event.key === Qt.Key_PageUp) {
                     results.currentIndex = 0
-                } else if (event.key === Qt.Key_End) {
+                } else if (event.key === Qt.Key_End || event.key === Qt.Key_PageDown) {
                     results.currentIndex = results.count - 1
                 } else if (event.text !== "") {
                     // This prevents unprintable control characters from being inserted
