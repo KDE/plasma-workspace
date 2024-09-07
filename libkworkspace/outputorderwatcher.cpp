@@ -219,8 +219,12 @@ void X11OutputOrderWatcher::refresh()
     }
 
     const auto screens = qGuiApp->screens();
-    const auto screenNames = screens | std::views::transform(&QScreen::name);
-    const bool isScreenPresent = std::ranges::all_of(std::as_const(orderMap), [&screenNames](const auto &pr) {
+    std::vector<QString> screenNames;
+    screenNames.reserve(screens.size());
+    std::transform(screens.begin(), screens.end(), std::back_inserter(screenNames), [](const QScreen *screen) {
+        return screen->name();
+    });
+    const bool isScreenPresent = std::all_of(orderMap.cbegin(), orderMap.cend(), [&screenNames](const auto &pr) {
         return std::ranges::find(screenNames, std::get<QString>(pr)) != screenNames.end();
     });
     if (!isScreenPresent) [[unlikely]] {
@@ -232,8 +236,23 @@ void X11OutputOrderWatcher::refresh()
     }
 
     std::sort(orderMap.begin(), orderMap.end());
+
+    // Rather verbose ifdef due to clang support of ranges API
+#if defined(__clang__) && __clang_major__ < 16
+    const auto getAllValues = [](const QList<std::pair<uint, QString>> &orderMap) -> QList<QString> {
+        QList<QString> values;
+        values.reserve(orderMap.size());
+        std::transform(orderMap.begin(), orderMap.end(), std::back_inserter(values), [](const auto &pair) {
+            return pair.second;
+        });
+        return values;
+    };
+    if (const auto pendingOutputs = getAllValues(orderMap); pendingOutputs != m_outputOrder) {
+        m_outputOrder = pendingOutputs;
+#else
     if (const auto pendingOutputs = std::views::values(std::as_const(orderMap)); !std::ranges::equal(pendingOutputs, std::as_const(m_outputOrder))) {
         m_outputOrder = QStringList{pendingOutputs.begin(), pendingOutputs.end()};
+#endif
         Q_EMIT outputOrderChanged(m_outputOrder);
     }
 }
