@@ -3,19 +3,20 @@
 # Tahereh Dadkhahfar <dadkhahfar@itland.ir>, 2006.
 # MaryamSadat Razavi <razavi@itland.ir>, 2006.
 # Nasim Daniarzadeh <daniarzadeh@itland.ir>, 2006.
+# SPDX-FileCopyrightText: 2024 Mohi Mirdamadi <mohi.pub@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:40+0000\n"
-"PO-Revision-Date: 2007-07-31 19:19+0330\n"
-"Last-Translator: Nazanin Kazemi <kazemi@itland.ir>\n"
-"Language-Team: Persian <kde-i18n-fa@kde.org>\n"
+"PO-Revision-Date: 2024-09-06 22:32+0330\n"
+"Last-Translator: Mohi Mirdamadi <mohi.pub@gmail.com>\n"
+"Language-Team: fa\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #, kde-format
@@ -35,7 +36,7 @@ msgid ""
 "or system-wide (available to all users)?"
 msgstr ""
 "می‌خواهید قلم)ها( را برای استفاده شخصی )فقط قابل استفاده برای خودتان( نصب "
-"کنید، یا کل سیستم )قابل استفاده برای همه کاربران(؟"
+"کنید، یا کل سامانه )قابل استفاده برای همه کاربران(؟"
 
 #: apps/Installer.cpp:35 kcmfontinst/KCmFontInst.cpp:956
 #, kde-format
@@ -292,7 +293,7 @@ msgstr "محل پرونده"
 #: kcmfontinst/FontFilter.cpp:117
 #, kde-format
 msgid "Writing System"
-msgstr "سیستم نوشتن"
+msgstr "سامانه نوشتن"
 
 #: kcmfontinst/FontFilter.cpp:128
 #, kde-format
@@ -396,7 +397,7 @@ msgstr "قلمهای شخصی"
 #: kcmfontinst/GroupList.cpp:65
 #, kde-format
 msgid "System Fonts"
-msgstr "قلمهای سیستم"
+msgstr "قلمهای سامانه"
 
 #: kcmfontinst/GroupList.cpp:68
 #, kde-format
@@ -443,7 +444,7 @@ msgid ""
 "remove a family from the group, drag the font onto the \"All Fonts\" group.</"
 "li></ul></p>"
 msgstr ""
-"<h3>گروههای قلم</h3><p>این فهرست گروههای موجود روی سیستمتان را نمایش می‌دهد. "
+"<h3>گروههای قلم</h3><p>این فهرست گروههای موجود روی سامانهتان را نمایش می‌دهد. "
 "۲ نوع اصلی گروههای قلم وجود دارد:<ul><li><b>استاندارد</b> گروههای ویژه مورد "
 "استفاده توسط مدیر قلم می‌باشد.<ul>%1</ul></li><li><b>سفارشی</b> گروههای "
 "ایجادشده توسط شماست. برای افزودن خانواده قلم به  یکی از این گروهها به سادگی "
@@ -457,8 +458,9 @@ msgid ""
 "li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
 "within a \"Custom\" group.</li>"
 msgstr ""
-"<li><i>همه قلمها</i> شامل همه قلمهای نصب‌شده روی سیستمتان.</li><li><i>غیرسری</"
-"i> شامل همه قلمهایی که تاکنون در یک گروه »سفارشی« جا نگرفته‌اند.</li>"
+"<li><i>همه قلمها</i> شامل همه قلمهای نصب‌شده روی سامانهتان.</"
+"li><li><i>غیرسری</i> شامل همه قلمهایی که تاکنون در یک گروه »سفارشی« جا "
+"نگرفته‌اند.</li>"
 
 #: kcmfontinst/GroupList.cpp:597
 #, kde-format
@@ -470,8 +472,8 @@ msgid ""
 "li><li><i>Unclassified</i> contains all fonts that have not yet been placed "
 "within a \"Custom\" group.</li>"
 msgstr ""
-"<li><i>همه قلمها</i> شامل همه قلمهای نصب‌شده روی سیستم شما - هردو »سیستم« و "
-"»شخصی«.</li><li><i>سیستم</i>شامل همه قلمهایی که برای کل سیستم نصب "
+"<li><i>همه قلمها</i> شامل همه قلمهای نصب‌شده روی سامانه شما - هردو »سامانه« و "
+"»شخصی«.</li><li><i>سامانه</i>شامل همه قلمهایی که برای کل سامانه نصب "
 "هستند )یعنی برای همه کاربران موجود است(.</li><li><i>شخصی</i> شامل همه قلمهای "
 "شخصی.</li><li><i>غیر سری</i> شامل همه قلمهایی که تاکنون در یک گروه »سفارشی« "
 "جا نگرفته‌اند.</li>"
@@ -622,7 +624,7 @@ msgstr ""
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
-"نمی‌توانید قلمهای نگاشت بیت را نصب کنید، چون اینها روی سیستم شما غیرفعالند."
+"نمی‌توانید قلمهای نگاشت بیت را نصب کنید، چون اینها روی سامانه شما غیرفعالند."
 
 #: kcmfontinst/JobRunner.cpp:694
 #, fuzzy, kde-format
@@ -1214,7 +1216,7 @@ msgstr ""
 #| "system."
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
-"نمی‌توانید قلمهای نگاشت بیت را نصب کنید، چون اینها روی سیستم شما غیرفعالند."
+"نمی‌توانید قلمهای نگاشت بیت را نصب کنید، چون اینها روی سامانه شما غیرفعالند."
 
 #: kio/KioFonts.cpp:709
 #, fuzzy, kde-format
@@ -1309,7 +1311,7 @@ msgstr "شخصی"
 
 #: lib/KfiConstants.h:23
 msgid "System"
-msgstr "سیستم"
+msgstr "سامانه"
 
 #: lib/KfiConstants.h:24
 msgid "All"
