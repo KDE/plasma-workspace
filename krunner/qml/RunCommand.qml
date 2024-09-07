@@ -89,43 +89,6 @@ ColumnLayout {
         return results.model.data(results.model.index(i, 0), Milou.ResultsModel.CategoryRole)
     }
 
-    // Moving up/down categories, see 
-    function go_up_category(event) {
-        event.accepted = true;
-        const originalCategory = getCategoryName(results.currentIndex);
-        const originalIdx = results.currentIndex;;
-        let idx = results.currentIndex;
-        while (originalCategory === getCategoryName(idx)
-            || getCategoryName(idx) === getCategoryName(idx - 1)
-        ) {
-            idx--;
-            if (idx < 0) { // IF we are at the top and want to go to the previous category, we have to check from the bottom
-                idx = results.count -1;
-            }
-            if (idx === originalIdx) {
-                return; // Avoid endless loop if we only have one category
-            }
-        } 
-        results.currentIndex = idx;
-        queryField.focus && results.forceActiveFocus();
-    }
-
-    function go_down_category(event) {
-        event.accepted = true;
-        const originalCategory = getCategoryName(results.currentIndex);
-        let idx = results.currentIndex;
-        while (originalCategory === getCategoryName(idx)) {
-            idx++;
-            if (idx === results.count) {
-                idx = 0; // The first item is always the first item if it's category'
-                break;
-            }
-        } 
-        results.currentIndex = idx;
-        queryField.focus && results.forceActiveFocus();
-    }
-
-
     RowLayout {
         Layout.alignment: Qt.AlignTop
         PlasmaComponents3.ToolButton {
@@ -255,16 +218,6 @@ ColumnLayout {
             }
             Keys.onPressed: event => {
                 allowCompletion = (event.key !== Qt.Key_Backspace && event.key !== Qt.Key_Delete)
-
-                if (event.modifiers & Qt.ControlModifier) {
-                    if (event.key === Qt.Key_J) {
-                        move_down()
-                        event.accepted = true;
-                    } else if (event.key === Qt.Key_K) {
-                        move_up()
-                        event.accepted = true;
-                    }
-                }
                 // We only need to handle the Key_End case, the first item is focused by default
                 if (event.key === Qt.Key_End && results.count > 0 && cursorPosition === text.length) {
                     results.currentIndex = results.count - 1
@@ -278,7 +231,14 @@ ColumnLayout {
                 ) {
                     queryField.text = fadedTextCompletion.text
                     fadedTextCompletion.text = ""
+                    event.accepted = true
                 }
+                if (queryField.text.length === 0 && (event.key === Qt.Key_Up || event.key === Qt.Key_Down)) {
+                    event.accepted = true
+                    root.showHistory = true;
+                    focusCurrentListView()
+                }
+                !event.accepted && results.navigationKeyHandler(event)
             }
             Keys.onTabPressed: event => {
                 if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
@@ -290,8 +250,6 @@ ColumnLayout {
                     }
                 }
             }
-            Keys.onUpPressed: event => event.modifiers & Qt.ControlModifier ? go_up_category(event) : move_up()
-            Keys.onDownPressed: event => event.modifiers & Qt.ControlModifier ? go_down_category(event) : move_down()
             function closeOrRun(event) {
                 // Close KRunner if no text was typed and enter was pressed, FEATURE: 211225
                 if (!root.query) {
@@ -374,16 +332,7 @@ ColumnLayout {
             singleRunner: root.singleRunner
 
             Keys.onPressed: event => {
-                var ctrl = event.modifiers & Qt.ControlModifier;
-                if (ctrl && event.key === Qt.Key_J) {
-                    incrementCurrentIndex()
-                } else if (ctrl && event.key === Qt.Key_K) {
-                    decrementCurrentIndex()
-                } else if (event.key === Qt.Key_Home || event.key === Qt.Key_PageUp) {
-                    results.currentIndex = 0
-                } else if (event.key === Qt.Key_End || event.key === Qt.Key_PageDown) {
-                    results.currentIndex = results.count - 1
-                } else if (event.text !== "") {
+                if (event.text !== "" && !event.accepted) {
                     // This prevents unprintable control characters from being inserted
                     if (!/[\x00-\x1F\x7F]/.test(event.text)) {
                         queryField.text += event.text;
@@ -393,8 +342,6 @@ ColumnLayout {
                 }
             }
 
-            Keys.onUpPressed: event => event.modifiers & Qt.ControlModifier ? go_up_category(event) : decrementCurrentIndex()
-            Keys.onDownPressed: event => event.modifiers & Qt.ControlModifier ? go_down_category(event) : incrementCurrentIndex()
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
             }
@@ -465,16 +412,7 @@ ColumnLayout {
                 }
             }
             Keys.onPressed: event => {
-                var ctrl = event.modifiers & Qt.ControlModifier;
-                if (ctrl && event.key === Qt.Key_J) {
-                    incrementCurrentIndex()
-                } else if (ctrl && event.key === Qt.Key_K) {
-                    decrementCurrentIndex()
-                } else if (event.key === Qt.Key_Home) {
-                    currentIndex = 0
-                } else if (event.key === Qt.Key_End) {
-                    currentIndex = count - 1
-                } else if (event.text !== "") {
+                if (event.text !== "" && !event.accepted) {
                     // This prevents unprintable control characters from being inserted
                     if (event.key == Qt.Key_Escape) {
                         root.showHistory = false
