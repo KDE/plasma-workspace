@@ -40,6 +40,7 @@ private Q_SLOTS:
     void testThirdScreenRemoval();
     void testLastScreenRemoval();
     void testFakeToRealScreen();
+    void testFakeOutputInitially();
 
 private:
     ScreenPool *m_screenPool;
@@ -411,6 +412,54 @@ void ScreenPoolTest::testFakeToRealScreen()
     QCOMPARE(newScreen->geometry(), QRect(0, 0, 1920, 1080));
 
     QCOMPARE(m_screenPool->idForScreen(newScreen), 0);
+}
+
+void ScreenPoolTest::testFakeOutputInitially()
+{
+    QSignalSpy screenScreenRemovedSpy(qGuiApp, &QGuiApplication::screenRemoved);
+    // Remove an output
+    exec([this] {
+        remove(output(0));
+        outputOrder()->setList({});
+    });
+    screenScreenRemovedSpy.wait();
+
+    // no real out put initially
+    ScreenPool screenPool;
+
+    QCOMPARE(QGuiApplication::screens().size(), 1);
+    QCOMPARE(screenPool.screenOrder().size(), 0);
+    QScreen *fakeScreen = QGuiApplication::screens().first();
+    QCOMPARE(fakeScreen->name(), QString());
+    QCOMPARE(fakeScreen->geometry(), QRect(0, 0, 0, 0));
+
+    QSignalSpy orderChangeSpy(&screenPool, &ScreenPool::screenOrderChanged);
+
+    // Add a new output
+    exec([this] {
+        OutputData data;
+        data.mode.resolution = {1920, 1080};
+        data.position = {0, 0};
+        data.physicalSize = data.mode.physicalSizeForDpi(96);
+        auto *out = add<Output>(data);
+        auto *xdgOut = xdgOutput(out);
+        xdgOut->m_name = QStringLiteral("WL-1");
+        outputOrder()->setList({QStringLiteral("WL-1")});
+    });
+
+    orderChangeSpy.wait();
+
+    QList<QScreen *> newOrder = orderChangeSpy[0].at(0).value<QList<QScreen *>>();
+    QCOMPARE(newOrder.size(), 1);
+    QCOMPARE(QGuiApplication::screens().size(), 1);
+    QCOMPARE(screenPool.screenOrder().size(), 1);
+
+    QScreen *newScreen = newOrder[0];
+    QCOMPARE(newScreen, QGuiApplication::screens()[0]);
+    QCOMPARE(newScreen->name(), QStringLiteral("WL-1"));
+    QCOMPARE(newScreen->geometry(), QRect(0, 0, 1920, 1080));
+
+    QCOMPARE(screenPool.idForScreen(newScreen), 0);
 }
 
 QCOMPOSITOR_TEST_MAIN(ScreenPoolTest)
