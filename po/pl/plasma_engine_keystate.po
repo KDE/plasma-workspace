@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma5support\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-03-10 00:46+0000\n"
-"PO-Revision-Date: 2024-05-30 10:47+0200\n"
+"PO-Revision-Date: 2024-09-07 11:46+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -85,7 +85,7 @@ msgstr "Naciśnięty"
 
 #: keystate.cpp:45 keystate.cpp:88 keystate.cpp:111
 msgid "Latched"
-msgstr "Zatrzaśnięte"
+msgstr "Zatrzaśnięty"
 
 #: keystate.cpp:46 keystate.cpp:95 keystate.cpp:112
 msgid "Locked"
