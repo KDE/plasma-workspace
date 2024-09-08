@@ -199,9 +199,3 @@ msgstr "Klarte ikkje fjerna eininga."
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Klarte ikkje løysa ut plata."
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "Filsystemet svarar ikkje"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "Filsystemet montert på «%1» svarar ikkje"

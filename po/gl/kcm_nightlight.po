@@ -185,7 +185,7 @@ msgstr ""
 "O servizo <application>%1</application> usarase periodicamente para "
 "actualizar a localización do dispositivo. Remita un informe de fallo "
 "mediante <link url='https://bugs.kde.org'>https://bugs.kde.org</link> para "
-"solicitar ao equipo de desenvolvemento de KDE que forneza unha descrición "
+"solicitar ao equipo desenvolvedor de KDE que forneza unha descrición "
 "detallada do que fai o servizo."
 
 #: ui/main.qml:334

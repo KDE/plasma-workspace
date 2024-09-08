@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Kishore G <kishore96@gmail.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2024 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2022-02-27 16:23+0530\n"
+"PO-Revision-Date: 2024-09-07 20:20+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: ui/main.qml:32
 #, kde-format
@@ -45,7 +45,7 @@ msgstr ""
 "மேம்படுத்த உதவலாம்; இவ்வாறு செய்வதன் மூலம், பயனர்களுக்கு தேவையான அம்சங்கள் எவையென்று "
 "நாங்கள் தெரிந்துகொள்கிறோம்.<nl/><nl/>இவ்விவரங்களை அனுப்புதல் கட்டாயமில்லை, மேலும் உங்கள் "
 "அடையாளத்தை எங்களுக்கு தெரியப்படுத்தாது. உங்கள் தனிப்பட்ட தரவுகள், நீங்கள் பயன்படுத்தும் "
-"கோப்புகள், நீங்கள் பார்க்கும் இணையதளங்கள், அல்லது உங்களை அடையாளங்கான பயன்படும் விவரங்களை "
+"கோப்புகள், நீங்கள் பார்க்கும் இணையதளங்கள், அல்லது உங்களை அடையாளங்காண பயன்படும் விவரங்களை "
 "நாங்கள் ஒருபோதும் சேகரிக்க மாட்டோம். <nl/><nl/>எங்கள் தனியுரிமை கொள்கையை பற்றி <link "
 "url='https://kde.org/privacypolicy-apps.php'>இங்கு படிக்கலாம்.</link>"
 
