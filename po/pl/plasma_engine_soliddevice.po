@@ -1,15 +1,13 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma5support package.
+# SPDX-FileCopyrightText: 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Maciej Wikło <maciej.wiklo@wp.pl>, 2009.
-# Marta Rybczyńska <kde-i18n@rybczynska.net>, 2010.
-# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2018, 2019, 2020, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma5support\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-24 00:38+0000\n"
-"PO-Revision-Date: 2024-02-24 16:50+0100\n"
+"PO-Revision-Date: 2024-09-07 11:45+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -18,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: soliddeviceengine.cpp:112
 msgid "Parent UDI"
@@ -64,11 +63,11 @@ msgstr "Procesor"
 
 #: soliddeviceengine.cpp:129
 msgid "Number"
-msgstr "Liczba"
+msgstr "Numer"
 
 #: soliddeviceengine.cpp:130
 msgid "Max Speed"
-msgstr "Maksymalna prędkość"
+msgstr "Najwyższa szybkość"
 
 #: soliddeviceengine.cpp:131
 msgid "Can Change Frequency"
@@ -76,15 +75,15 @@ msgstr "Potrafi zmieniać częstotliwość"
 
 #: soliddeviceengine.cpp:139
 msgid "Block"
-msgstr "Blokada"
+msgstr "Blok"
 
 #: soliddeviceengine.cpp:140
 msgid "Major"
-msgstr "Główna"
+msgstr "Główny"
 
 #: soliddeviceengine.cpp:141
 msgid "Minor"
-msgstr "Dodatkowa"
+msgstr "Podrzędny"
 
 #: soliddeviceengine.cpp:142
 msgid "Device"
@@ -101,7 +100,7 @@ msgstr "Dostępny"
 
 #: soliddeviceengine.cpp:152 soliddeviceengine.cpp:508
 msgid "File Path"
-msgstr "Ścieżka pliku"
+msgstr "Ścieżka do pliku"
 
 #: soliddeviceengine.cpp:167
 msgid "Storage Drive"
@@ -183,7 +182,7 @@ msgstr "Wymienny"
 #: soliddeviceengine.cpp:180 soliddeviceengine.cpp:193
 #: soliddeviceengine.cpp:361 soliddeviceengine.cpp:375
 msgid "Hotpluggable"
-msgstr "Typu Hotplug"
+msgstr "Podłączany \"na gorąco\""
 
 #: soliddeviceengine.cpp:202
 msgid "Optical Drive"
@@ -259,15 +258,15 @@ msgstr "Obsługiwane nośniki"
 
 #: soliddeviceengine.cpp:256
 msgid "Read Speed"
-msgstr "Prędkość odczytu"
+msgstr "Szybkość odczytu"
 
 #: soliddeviceengine.cpp:257
 msgid "Write Speed"
-msgstr "Prędkość zapisu"
+msgstr "Szybkość zapisu"
 
 #: soliddeviceengine.cpp:265
 msgid "Write Speeds"
-msgstr "Prędkości zapisu"
+msgstr "Szybkości zapisu"
 
 #: soliddeviceengine.cpp:273
 msgid "Storage Volume"
@@ -276,12 +275,12 @@ msgstr "Wolumin pamięci"
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Other"
-msgstr "Inny"
+msgstr "Inne"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Unused"
-msgstr "Nieużyty"
+msgstr "Nieużywana"
 
 #: soliddeviceengine.cpp:276
 #, kde-format
@@ -301,11 +300,11 @@ msgstr "Raid"
 #: soliddeviceengine.cpp:276
 #, kde-format
 msgid "Encrypted"
-msgstr "Szyfrowany"
+msgstr "Zaszyfrowane"
 
 #: soliddeviceengine.cpp:279 soliddeviceengine.cpp:281
 msgid "Usage"
-msgstr "Sposób użycia"
+msgstr "Użycie"
 
 #: soliddeviceengine.cpp:281
 #, kde-format
@@ -314,7 +313,7 @@ msgstr "Nieznany"
 
 #: soliddeviceengine.cpp:284
 msgid "Ignored"
-msgstr "Ignorowany"
+msgstr "Pomijany"
 
 #: soliddeviceengine.cpp:285
 msgid "File System Type"
@@ -346,15 +345,15 @@ msgstr "Dane"
 
 #: soliddeviceengine.cpp:320
 msgid "Video CD"
-msgstr "Wideo CD"
+msgstr "CD z filmem"
 
 #: soliddeviceengine.cpp:323
 msgid "Super Video CD"
-msgstr "Super Wideo CD"
+msgstr "Super Video CD"
 
 #: soliddeviceengine.cpp:326
 msgid "Video DVD"
-msgstr "Wideo DVD"
+msgstr "DVD z filmem"
 
 #: soliddeviceengine.cpp:329
 msgid "Video Blu Ray"
@@ -442,7 +441,7 @@ msgstr "Rodzaj dysku"
 
 #: soliddeviceengine.cpp:344
 msgid "Appendable"
-msgstr "Rozszerzalny"
+msgstr "Z możliwością dopisywania"
 
 #: soliddeviceengine.cpp:345
 msgid "Blank"
@@ -470,7 +469,7 @@ msgstr "Obsługiwane sterowniki"
 
 #: soliddeviceengine.cpp:369
 msgid "Portable Media Player"
-msgstr "Przenośny odtwarzacz multimedialny"
+msgstr "Odtwarzacz przenośny"
 
 #: soliddeviceengine.cpp:383
 msgid "Battery"
@@ -534,7 +533,7 @@ msgstr "Bateria słuchawek"
 
 #: soliddeviceengine.cpp:392
 msgid "Headset Battery"
-msgstr "Bateria zestawu głośnomówiącego"
+msgstr "Bateria zestawu słuchawkowego"
 
 #: soliddeviceengine.cpp:392
 msgid "Touchpad Battery"
@@ -542,19 +541,19 @@ msgstr "Bateria gładzika"
 
 #: soliddeviceengine.cpp:395
 msgid "Not Charging"
-msgstr "Nie ładuje"
+msgstr "Nie ładuje się"
 
 #: soliddeviceengine.cpp:395
 msgid "Charging"
-msgstr "Ładowanie"
+msgstr "Ładuje się"
 
 #: soliddeviceengine.cpp:395
 msgid "Discharging"
-msgstr "Rozładowywanie"
+msgstr "Rozładowuje się"
 
 #: soliddeviceengine.cpp:396
 msgid "Fully Charged"
-msgstr "Naładowana do pełna"
+msgstr "W pełni naładowana"
 
 #: soliddeviceengine.cpp:398
 msgid "Plugged In"
@@ -570,7 +569,7 @@ msgstr "Procent naładowania"
 
 #: soliddeviceengine.cpp:401
 msgid "Rechargeable"
-msgstr "Ładowalna"
+msgstr "Do wielokrotnego ładowania"
 
 #: soliddeviceengine.cpp:402
 msgid "Charge State"
