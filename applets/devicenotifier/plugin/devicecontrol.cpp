@@ -422,7 +422,7 @@ void DeviceControl::onDeviceStatusChanged(const QString &udi)
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].udi() == udi) {
             QModelIndex index = DeviceControl::index(position);
-            Q_EMIT dataChanged(index, index, {Mounted, OperationResult});
+            Q_EMIT dataChanged(index, index, {Mounted, OperationResult, Emblems});
             return;
         }
     }
