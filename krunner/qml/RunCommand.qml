@@ -28,6 +28,13 @@ ColumnLayout {
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
 
+    function isKeyUp(event) {
+        return event.key === Qt.Key_Up || (event.modifiers & Qt.ControlModifier && event.key === Qt.Key_K)
+    }
+    function isKeyDown(event) {
+        return event.key === Qt.Key_Down || (event.modifiers & Qt.ControlModifier && event.key === Qt.Key_J)
+    }
+
     // Spacing needs to be 0 to not make the last spacer item add a fake margin
     spacing: 0
 
@@ -85,10 +92,6 @@ ColumnLayout {
         }
     }
     
-    function getCategoryName(i) {
-        return results.model.data(results.model.index(i, 0), Milou.ResultsModel.CategoryRole)
-    }
-
     RowLayout {
         Layout.alignment: Qt.AlignTop
         PlasmaComponents3.ToolButton {
@@ -233,7 +236,7 @@ ColumnLayout {
                     fadedTextCompletion.text = ""
                     event.accepted = true
                 }
-                if (queryField.text.length === 0 && (event.key === Qt.Key_Up || event.key === Qt.Key_Down)) {
+                if (queryField.text.length === 0 && (isKeyUp(event) || isKeyDown(event))) {
                     event.accepted = true
                     root.showHistory = true;
                     focusCurrentListView()
@@ -412,7 +415,11 @@ ColumnLayout {
                 }
             }
             Keys.onPressed: event => {
-                if (event.text !== "" && !event.accepted) {
+                if (isKeyUp(event)) {
+                    decrementCurrentIndex();
+                } else if (isKeyDown(event)) {
+                    incrementCurrentIndex();
+                } else if (event.text !== "" && !event.accepted) {
                     // This prevents unprintable control characters from being inserted
                     if (event.key == Qt.Key_Escape) {
                         root.showHistory = false
