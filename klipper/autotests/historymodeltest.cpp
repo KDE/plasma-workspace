@@ -221,8 +221,9 @@ void HistoryModelTest::testType_data()
     mimeDataRow("mimedata_markdown_text", Mimetypes::Text::markdown, "foo", HistoryItemType::Text);
     mimeDataRow("mimedata_markdown_invalid", Mimetypes::Text::markdown, "", HistoryItemType::Invalid);
 
-    mimeDataRow("mimedata_png_image", Mimetypes::Image::png, readFile("./data/1x1.png"), HistoryItemType::Image);
-    mimeDataRow("mimedata_png_invalid", Mimetypes::Image::png, "", HistoryItemType::Invalid);
+    // Image mimetypes will be tested by an appium test because
+    // QMimeData::imageData() does not give a QImage for image mimetypes when
+    // the data is created by the application calling QMimeData::imageData().
 
     QTest::newRow("string_text") << HistoryItem::create(QStringLiteral("foo")).release() << HistoryItemType::Text;
     QTest::newRow("string_invalid") << HistoryItem::create(QString{}).release() << HistoryItemType::Invalid;
