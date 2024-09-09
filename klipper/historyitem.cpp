@@ -355,11 +355,6 @@ HistoryItemPtr HistoryItem::create(const QMimeData *data, std::optional<QStringL
             // "application/x-qt-image", but it could be heavy on memory usage.
             // Only works if Klipper did not create the QMimeData.
             image = data->imageData().value<QImage>();
-            // Needed for HistoryModelTest when created from an owned QMimeData
-            // that sets raw image data for an image mimetype.
-            if (isEmpty(image)) {
-                image = QImage::fromData(data->data(format));
-            }
             if (!isEmpty(image)) {
                 insert(mimeDataList, {Application::xQtImage, image}); // Shallow copy
             }
