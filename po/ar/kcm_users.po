@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-09-09 00:40+0000\n"
 "PO-Revision-Date: 2024-09-05 09:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -602,12 +602,12 @@ msgstr "فشل في تغيير حجم الصورة: فشل في فتح المل�
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشلت الكتابة إلى ملف مؤقت"
 
-#: src/usermodel.cpp:165
+#: src/usermodel.cpp:167
 #, kde-format
 msgid "Your Account"
 msgstr "حسابك"
 
-#: src/usermodel.cpp:165
+#: src/usermodel.cpp:167
 #, kde-format
 msgid "Other Accounts"
 msgstr "حسابات أخرى"

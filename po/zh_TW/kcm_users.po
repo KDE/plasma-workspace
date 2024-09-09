@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-09-09 00:40+0000\n"
 "PO-Revision-Date: 2024-08-18 00:50+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -596,12 +596,12 @@ msgstr "圖片尺寸調整失敗：無法開啟暫存檔"
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "圖片尺寸調整失敗：無法寫入至暫存檔"
 
-#: src/usermodel.cpp:165
+#: src/usermodel.cpp:167
 #, kde-format
 msgid "Your Account"
 msgstr "您的帳號"
 
-#: src/usermodel.cpp:165
+#: src/usermodel.cpp:167
 #, kde-format
 msgid "Other Accounts"
 msgstr "其他帳號"

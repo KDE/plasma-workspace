@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-09-09 00:40+0000\n"
 "PO-Revision-Date: 2024-08-29 13:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -648,12 +648,12 @@ msgstr ""
 "Ha fallat en redimensionar la imatge: ha fallat en escriure al fitxer "
 "temporal"
 
-#: src/usermodel.cpp:165
+#: src/usermodel.cpp:167
 #, kde-format
 msgid "Your Account"
 msgstr "El vostre compte"
 
-#: src/usermodel.cpp:165
+#: src/usermodel.cpp:167
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-09-09 00:40+0000\n"
 "PO-Revision-Date: 2024-08-30 13:41+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -651,12 +651,12 @@ msgstr ""
 "Impossible de redimensionner l'image : échec de l'écriture du fichier "
 "temporaire"
 
-#: src/usermodel.cpp:165
+#: src/usermodel.cpp:167
 #, kde-format
 msgid "Your Account"
 msgstr "Votre compte"
 
-#: src/usermodel.cpp:165
+#: src/usermodel.cpp:167
 #, kde-format
 msgid "Other Accounts"
 msgstr "Autres comptes"

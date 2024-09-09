@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2018, 2020, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2023-12-18 16:17+0100\n"
+"PO-Revision-Date: 2024-09-08 19:12+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -102,31 +102,31 @@ msgstr "Besuchen Sie bugs.kde.org, um Probleme zu berichten"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Plasma-Version kopieren"
 
 #: desktopview.cpp:292
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "Probleme oder Wünsche berichten …"
 
 #: desktopview.cpp:302
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "Vorschaubanner ausblenden"
 
 #: desktopview.cpp:305
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "Bis zum Neustart ausblenden"
 
 #: desktopview.cpp:312
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "Dauerhaft ausblenden …"
 
 #: desktopview.cpp:318
 #, kde-kuit-format
@@ -137,17 +137,21 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"Möchten Sie den Vorschaubanner dauerhaft ausblenden?<nl/><nl/>Dies kann nur "
+"durch das Entfernen der mit <icode>ShowDesktopPreviewBanner</icode> "
+"beginnenden Zeile in der <filename>kdeglobals</filename>-Einrichtungsdatei "
+"rückgängig gemacht werden."
 
 #: desktopview.cpp:320
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "Vorschaubanner ausblenden?"
 
 #: desktopview.cpp:488
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Bearbeitungsmodus starten"
 
 #: main.cpp:84
 #, kde-format
@@ -199,7 +203,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2 %"
 
 #: osd.cpp:88
 #, kde-format
@@ -287,31 +291,31 @@ msgstr "Bildschirmtastatur deaktiviert"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Ruhezustand/Bildschirmsperre sind blockiert"
 
 #: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Ruhezustand/Bildschirmsperre sind möglich"
 
 #: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Energiesparmodus"
 
 #: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Ausbalancierter Leistungsmodus"
 
 #: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Leistungsmodus"
 
 #: panelview.cpp:438
 #, kde-format
@@ -320,18 +324,22 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Mit einer Grafikkarte von NVIDIA sind mit X11 der schwebende Stil und die "
+"adaptive Deckkraft für eine schlechte Leistung beim Ziehen und der "
+"Größenänderung der Fenster bekannt. Bitte ziehen Sie andere Einstellungen in "
+"Betracht."
 
 #: panelview.cpp:1100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Kontrollleisteneinstellungen ausblenden"
 
 #: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Kontrollleisteneinstellungen anzeigen"
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format
@@ -362,7 +370,7 @@ msgstr "Arbeitsfläche ausblenden"
 #: shellcorona.cpp:224
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Anwendungsstarter aktivieren"
 
 #: shellcorona.cpp:232
 #, kde-format
@@ -392,7 +400,7 @@ msgstr "Fensterleisteneintrag %1 aktivieren"
 #: shellcorona.cpp:306
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Verwaltung der Kontrollleisten und Arbeitsflächen"
 
 #: shellcorona.cpp:328
 #, kde-format
