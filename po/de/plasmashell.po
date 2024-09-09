@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Frederik Schwarzer <schwarzer@kde.org>, 2014, 2016, 2018, 2020, 2022, 2023.
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2015, 2016, 2017, 2018, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-06 02:32+0000\n"
-"PO-Revision-Date: 2023-12-18 16:17+0100\n"
+"PO-Revision-Date: 2024-09-08 19:12+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -230,43 +230,43 @@ msgstr "Bildschirmtastatur deaktiviert"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Ruhezustand/Bildschirmsperre sind blockiert"
 
 #: osd.cpp:162
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Ruhezustand/Bildschirmsperre sind möglich"
 
 #: osd.cpp:172
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "Energiesparmodus"
 
 #: osd.cpp:175
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "Ausbalancierter Leistungsmodus"
 
 #: osd.cpp:178
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "Leistungsmodus"
 
 #: panelview.cpp:1028
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "Kontrollleisteneinstellungen ausblenden"
 
 #: panelview.cpp:1030
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Kontrollleisteneinstellungen anzeigen"
 
 #: shellcontainmentconfig.cpp:105
 #, kde-format
@@ -297,7 +297,7 @@ msgstr "Arbeitsfläche ausblenden"
 #: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Anwendungsstarter aktivieren"
 
 #: shellcorona.cpp:239
 #, kde-format
@@ -327,7 +327,7 @@ msgstr "Fensterleisteneintrag %1 aktivieren"
 #: shellcorona.cpp:313
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Verwaltung der Kontrollleisten und Arbeitsflächen"
 
 #: shellcorona.cpp:335
 #, kde-format

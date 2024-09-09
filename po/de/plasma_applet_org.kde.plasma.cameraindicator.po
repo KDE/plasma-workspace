@@ -2,7 +2,7 @@
 # German translation for plasma-workspace.
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2023, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Automatically generated, 2023.
 #
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.cameraindicator\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2023-12-17 18:39+0100\n"
+"PO-Revision-Date: 2024-09-08 20:35+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: contents/ui/FullRepresentation.qml:47
 #, kde-format
@@ -48,7 +48,7 @@ msgstr "Fehler"
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
-msgstr ""
+msgstr "Wird erstellt"
 
 #: contents/ui/FullRepresentation.qml:58
 #, kde-format
@@ -72,7 +72,7 @@ msgstr "%1 wird verwendet"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
-msgstr ""
+msgstr "Die Kameraanzeige ist nicht verfügbar"
 
 #: contents/ui/main.qml:25
 #, kde-format
