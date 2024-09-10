@@ -4,21 +4,21 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2013, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2020.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-02 00:40+0000\n"
-"PO-Revision-Date: 2023-02-09 01:22+0900\n"
+"PO-Revision-Date: 2024-09-10 02:27+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.03.70\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -188,11 +188,13 @@ msgstr "關閉彈出式視窗"
 msgid "Show hidden icons"
 msgstr "顯示隱藏圖示"
 
+# 這應該是拿來在內部測量 font metrics 用的；有時候漢字的高度跟羅馬字的高度會不同，但漢字之間沒有太多不同，所以只要有包含漢字應該就夠了。
+# --Kisaragi
 #: package/contents/ui/HiddenItemsView.qml:43
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr ""
+msgstr "AILlmyjgGJP漢字"
 
 #~ msgid "Expand System Tray"
 #~ msgstr "展開系統匣"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-31 02:21+0200\n"
+"PO-Revision-Date: 2024-09-09 20:41+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -336,13 +336,13 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr "Configuración de ocultación del panel"
+msgstr "Ocultar configuración del panel"
 
 #: panelview.cpp:1102
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr "Configuración de mostrar el panel"
+msgstr "Mostrar configuración del panel"
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format
