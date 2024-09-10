@@ -6,6 +6,7 @@
         "Description[bg]": "Издаване на звуков сигнал за обратна връзка при добавяне или отделяне на устройства",
         "Description[ca@valencia]": "Reproduïx una reacció audible quan s'inserisquen o s'extraguen dispositius",
         "Description[ca]": "Reprodueix una reacció audible quan s'insereixin o s'extreguin dispositius",
+        "Description[de]": "Ein akustisches Signal beim Anschließen oder Entfernen von Geräten wiedergeben",
         "Description[en_GB]": "Play audible feedback when devices are inserted or removed",
         "Description[eo]": "Ludi aŭdeblan retroinformon kiam aparatoj estas enmetitaj aŭ malmetitaj",
         "Description[es]": "Reproducir un sonido cuando se insertan o extraen dispositivos",
