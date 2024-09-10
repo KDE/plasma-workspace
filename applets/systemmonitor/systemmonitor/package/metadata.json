@@ -111,7 +111,7 @@
         "Icon": "ksysguardd",
         "Id": "org.kde.plasma.systemmonitor",
         "License": "GPL",
-        "Name": "System monitor Sensor",
+        "Name": "System Monitor Sensor",
         "Name[ar]": "متحسس مراقبة النظام",
         "Name[ast]": "Sensor del supervisor del sistema",
         "Name[az]": "Sistem İzləməsi Sensoru",

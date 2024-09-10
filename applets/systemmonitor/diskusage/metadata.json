@@ -58,7 +58,7 @@
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
         "Category": "System Information",
-        "Description": "System monitor Widget that shows the usage of the root partition",
+        "Description": "System monitor widget that shows the usage of the root partition",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام قسم الجذر",
         "Description[ast]": "Un widget del supervisor del sistema qu'amuesa l'usu de la partición root",
         "Description[az]": "Sistem monitoru vidjeti kök bölməsinin istifadəsini göstərir",

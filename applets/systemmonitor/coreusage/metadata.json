@@ -58,7 +58,7 @@
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
         "Category": "System Information",
-        "Description": "System monitor Widget that shows usage of individual CPU cores",
+        "Description": "System monitor widget that shows usage of individual CPU cores",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام كل نواة من المعالج",
         "Description[az]": "Sistem monitoru vidjeti hər CPU nüvəsinin istifadəsini göstərir",
         "Description[be]": "Віджэт сістэмнага назіральніка, які паказвае выкарыстанне ядзер працэсара паасобку",
