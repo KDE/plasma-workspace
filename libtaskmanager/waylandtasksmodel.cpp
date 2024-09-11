@@ -532,7 +532,7 @@ auto WaylandTasksModel::Private::findWindow(PlasmaWindow *window) const
 
 void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
 {
-    if (findWindow(window) != windows.end() || transients.contains(window)) {
+    if (findWindow(window) != windows.end()) {
         return;
     }
 
@@ -556,7 +556,6 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
             appDataCache.remove(window);
             lastActivated.remove(window);
             q->endRemoveRows();
-        } else { // Could be a transient.
             // Removing a transient might change the demands attention state of the leader.
             if (transients.remove(window)) {
                 if (PlasmaWindow *leader = transientsDemandingAttention.key(window)) {
@@ -651,23 +650,11 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
             if (leader) { // leader change.
                 transients.insert(window, leader);
             } else { // lost a leader, add to regular windows list.
-                Q_ASSERT(findWindow(window) == windows.end());
-
-                const int count = windows.size();
-                q->beginInsertRows(QModelIndex(), count, count);
-                windows.emplace_back(window);
-                q->endInsertRows();
+                dataChanged(window, SkipTaskbar);
             }
         } else if (leader) { // gained a leader, remove from regular windows list.
-            auto it = findWindow(window);
-            Q_ASSERT(it != windows.end());
-
-            const int row = it - windows.begin();
-            q->beginRemoveRows(QModelIndex(), row, row);
-            windows.erase(it);
-            appDataCache.remove(window);
-            lastActivated.remove(window);
-            q->endRemoveRows();
+            transients.insert(window, leader);
+            dataChanged(window, SkipTaskbar);
         }
     });
 
@@ -783,15 +770,15 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
             transientsDemandingAttention.insert(leader, window);
             dataChanged(leader, QVector<int>{IsDemandingAttention});
         }
-    } else {
-        const int count = windows.size();
-
-        q->beginInsertRows(QModelIndex(), count, count);
-
-        windows.emplace_back(window);
-
-        q->endInsertRows();
     }
+
+    const int count = windows.size();
+
+    q->beginInsertRows(QModelIndex(), count, count);
+
+    windows.emplace_back(window);
+
+    q->endInsertRows();
 }
 
 const AppData &WaylandTasksModel::Private::appData(PlasmaWindow *window)
@@ -938,7 +925,7 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
     } else if (role == IsDemandingAttention) {
         return window->windowState.testFlag(PlasmaWindow::state::state_demands_attention) || d->transientsDemandingAttention.contains(window);
     } else if (role == SkipTaskbar) {
-        return window->windowState.testFlag(PlasmaWindow::state::state_skiptaskbar) || d->appData(window).skipTaskbar;
+        return window->windowState.testFlag(PlasmaWindow::state::state_skiptaskbar) || d->appData(window).skipTaskbar || d->transients.contains(window);
     } else if (role == SkipPager) {
         // FIXME Implement.
     } else if (role == AppPid) {
