@@ -46,7 +46,7 @@ int main(int argc, char **argv)
         {QStringLiteral("tile"), 3},
         {QStringLiteral("tileVertically"), 4},
         {QStringLiteral("tileHorizontally"), 5},
-        {QStringLiteral("pad"), 6}
+        {QStringLiteral("pad"), 6},
     };
 
     if (!parser.positionalArguments().isEmpty()) {
