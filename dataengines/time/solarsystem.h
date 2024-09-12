@@ -68,8 +68,12 @@ protected:
     {
         return false;
     };
-    virtual void rotate(double *, double *){};
-    virtual void topocentricCorrection(double *, double *){};
+    virtual void rotate(double *, double *)
+    {
+    }
+    virtual void topocentricCorrection(double *, double *)
+    {
+    }
 
     inline double rev(double x);
     inline double asind(double x);
@@ -121,7 +125,6 @@ class Moon : public SolarSystemObject
 {
 public:
     explicit Moon(Sun *sun);
-    ~Moon() override{}; // to not delete the Sun
 
     void calcForDateTime(const QDateTime &local, int offset) override;
     double phase();
