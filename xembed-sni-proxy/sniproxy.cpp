@@ -63,7 +63,6 @@ void xembed_message_send(xcb_window_t towin, long message, long d1, long d2, lon
     xcb_send_event(qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection(), false, towin, XCB_EVENT_MASK_NO_EVENT, (char *)&ev);
 }
 
-
 static bool checkWindowOrDescendantWantButtonEvents(xcb_window_t window)
 {
     auto connection = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection();

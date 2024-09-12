@@ -17,8 +17,8 @@
 #include <Solid/StorageDrive>
 #include <Solid/StorageVolume>
 
-#include <KNotification>
 #include <KLocalizedString>
+#include <KNotification>
 
 #include <processcore/process.h>
 #include <processcore/processes.h>

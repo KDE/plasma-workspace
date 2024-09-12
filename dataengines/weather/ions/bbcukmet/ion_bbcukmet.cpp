@@ -317,7 +317,7 @@ void UKMETIon::getForecast(const QString &source)
     connect(getJob, &KJob::result, this, &UKMETIon::forecast_slotJobFinished);
 }
 
-void UKMETIon::readSearchData(const QString &/*source*/, const QByteArray &json)
+void UKMETIon::readSearchData(const QString & /*source*/, const QByteArray &json)
 {
     QJsonObject jsonDocumentObject = QJsonDocument::fromJson(json).object().value(QStringLiteral("response")).toObject();
 

@@ -83,7 +83,7 @@ private:
     QHash<Job *, QList<int>> m_pendingDirtyRoles;
 
     QList<Job *> m_pendingJobViews;
-    
+
     QDBusServiceWatcher *m_serviceWatcher = nullptr;
     Settings *m_settings = nullptr;
 };
