@@ -1106,50 +1106,35 @@ void CKCmFontInst::toggleFonts(CJobRunner::ItemList &urls, const QStringList &fo
     switch (fonts.count()) {
     case 0:
         break;
-    case 1:
-        // clang-format off
-            doIt = KMessageBox::Continue==KMessageBox::warningContinueCancel(widget(),
-                       grp.isEmpty()
-                            ? enable ? i18n("<p>Do you really want to "
-                                            "enable</p><p>\'<b>%1</b>\'?</p>", fonts.first())
-                                     : i18n("<p>Do you really want to "
-                                            "disable</p><p>\'<b>%1</b>\'?</p>", fonts.first())
-                            : enable ? i18n("<p>Do you really want to "
-                                            "enable</p><p>\'<b>%1</b>\', "
-                                            "contained within group \'<b>%2</b>\'?</p>",
-                                            fonts.first(), grp)
-                                     : i18n("<p>Do you really want to "
-                                            "disable</p><p>\'<b>%1</b>\', "
-                                            "contained within group \'<b>%2</b>\'?</p>",
-                                            fonts.first(), grp),
-                       enable ? i18n("Enable Font") : i18n("Disable Font"),
-                       enable ? KGuiItem(i18n("Enable"), u"font-enable"_s, i18n("Enable Font"))
-                              : KGuiItem(i18n("Disable"), u"font-disable"_s, i18n("Disable Font")));
-            break;
-        default:
-            doIt = KMessageBox::Continue==KMessageBox::warningContinueCancelList(widget(),
-                       grp.isEmpty()
-                            ? enable ? i18np("Do you really want to enable this font?",
-                                             "Do you really want to enable these %1 fonts?",
-                                             urls.count())
-                                     : i18np("Do you really want to disable this font?",
-                                             "Do you really want to disable these %1 fonts?",
-                                             urls.count())
-                            : enable ? i18np("<p>Do you really want to enable this font "
-                                             "contained within group \'<b>%2</b>\'?</p>",
-                                             "<p>Do you really want to enable these %1 fonts "
-                                             "contained within group \'<b>%2</b>\'?</p>",
-                                             urls.count(), grp)
-                                     : i18np("<p>Do you really want to disable this font "
-                                             "contained within group \'<b>%2</b>\'?</p>",
-                                             "<p>Do you really want to disable these %1 fonts "
-                                             "contained within group \'<b>%2</b>\'?</p>",
-                                             urls.count(), grp),
-                       fonts,
-                       enable ? i18n("Enable Fonts") : i18n("Disable Fonts"),
-                       enable ? KGuiItem(i18n("Enable"), u"font-enable"_s, i18n("Enable Fonts"))
-                              : KGuiItem(i18n("Disable"), u"font-disable"_s, i18n("Disable Fonts")));
-            // clang-format on
+    case 1: {
+        const QString text = grp.isEmpty() ? enable ? i18n("<p>Do you really want to enable</p><p>\'<b>%1</b>\'?</p>", fonts.first())
+                                                    : i18n("<p>Do you really want to disable</p><p>\'<b>%1</b>\'?</p>", fonts.first())
+            : enable ? i18n("<p>Do you really want to enable</p><p>\'<b>%1</b>\', contained within group \'<b>%2</b>\'?</p>", fonts.first(), grp)
+                     : i18n("<p>Do you really want to disable</p><p>\'<b>%1</b>\', contained within group \'<b>%2</b>\'?</p>", fonts.first(), grp);
+        const QString title = enable ? i18n("Enable Font") : i18n("Disable Font");
+        const KGuiItem buttonContinue = enable ? KGuiItem(i18n("Enable"), u"font-enable"_s, i18n("Enable Font")) //
+                                               : KGuiItem(i18n("Disable"), u"font-disable"_s, i18n("Disable Font"));
+        doIt = KMessageBox::Continue == KMessageBox::warningContinueCancel(widget(), text, title, buttonContinue);
+        break;
+    }
+    default: {
+        const QString text = grp.isEmpty() ? enable
+                ? i18np("Do you really want to enable this font?", "Do you really want to enable these %1 fonts?", urls.count())
+                : i18np("Do you really want to disable this font?", "Do you really want to disable these %1 fonts?", urls.count())
+            : enable // no group, differentiate based on enable
+            ? i18np("<p>Do you really want to enable this font contained within group \'<b>%2</b>\'?</p>",
+                    "<p>Do you really want to enable these %1 fonts contained within group \'<b>%2</b>\'?</p>",
+                    urls.count(),
+                    grp)
+            : i18np("<p>Do you really want to disable this font contained within group \'<b>%2</b>\'?</p>",
+                    "<p>Do you really want to disable these %1 fonts contained within group \'<b>%2</b>\'?</p>",
+                    urls.count(),
+                    grp);
+        const QString title = enable ? i18n("Enable Fonts") : i18n("Disable Fonts");
+        const KGuiItem buttonContinue =
+            enable ? KGuiItem(i18n("Enable"), u"font-enable"_s, i18n("Enable Fonts")) : KGuiItem(i18n("Disable"), u"font-disable"_s, i18n("Disable Fonts"));
+        doIt = KMessageBox::Continue == KMessageBox::warningContinueCancelList(widget(), text, fonts, title, buttonContinue);
+    }
     }
 
     if (doIt) {
