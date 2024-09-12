@@ -110,18 +110,17 @@ void Applet::writeConfig(const QString &key, const QJSValue &value)
                 auto *config = static_cast<QQmlPropertyMap *>(wallpaperGraphicsObject->property("configuration").value<QObject *>());
                 config->setProperty(key.toLatin1().constData(), value.toVariant());
             }
-        } else if (applet()->configScheme()) {
+        } else if (KConfigLoader *configScheme = applet()->configScheme()) {
             // check if it can be written in the applets' configScheme
-            KConfigSkeletonItem *item = applet()->configScheme()->findItemByName(key);
-            if (item) {
+            if (KConfigSkeletonItem *item = configScheme->findItemByName(key)) {
                 item->setProperty(value.toVariant());
-                applet()->configScheme()->blockSignals(true);
-                applet()->configScheme()->save();
+                configScheme->blockSignals(true);
+                configScheme->save();
                 // why read? read will update KConfigSkeletonItem::mLoadedValue,
                 // allowing a write operation to be performed next time
-                applet()->configScheme()->read();
-                applet()->configScheme()->blockSignals(false);
-                Q_EMIT applet()->configScheme()->configChanged();
+                configScheme->read();
+                configScheme->blockSignals(false);
+                Q_EMIT configScheme->configChanged();
             }
         }
 

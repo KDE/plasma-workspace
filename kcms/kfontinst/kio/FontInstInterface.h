@@ -39,7 +39,7 @@ private Q_SLOTS:
     void fontStat(int pid, const KFI::Family &font);
 
 private:
-    OrgKdeFontinstInterface *m_interface;
+    OrgKdeFontinstInterface *const m_interface;
     bool m_active;
     int m_status;
     Families m_families;

@@ -241,7 +241,7 @@ void KCMLookandFeel::loadModel()
     }
 
     // Model has been cleared so pretend the selected look and fell changed to force view update
-    Q_EMIT lookAndFeelSettings()->lookAndFeelPackageChanged();
+    Q_EMIT(lookAndFeelSettings()->lookAndFeelPackageChanged());
 }
 
 void KCMLookandFeel::addKPackageToModel(const KPackage::Package &pkg)

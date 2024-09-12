@@ -327,7 +327,7 @@ void KCMStyle::defaults()
 
 void KCMStyle::loadSettingsToModel()
 {
-    Q_EMIT styleSettings()->widgetStyleChanged();
+    Q_EMIT(styleSettings()->widgetStyleChanged());
 
     const QMetaEnum toolBarStyleEnum = QMetaEnum::fromType<ToolBarStyle>();
     setMainToolBarStyle(static_cast<ToolBarStyle>(toolBarStyleEnum.keyToValue(qUtf8Printable(styleSettings()->toolButtonStyle()))));

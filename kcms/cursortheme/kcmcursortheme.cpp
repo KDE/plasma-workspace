@@ -193,9 +193,10 @@ void CursorThemeConfig::updateSizeComboBox()
 {
     // clear the combo box
     m_sizesModel->clear();
+    const auto settings = cursorThemeSettings();
 
     // refill the combo box and adopt its icon size
-    int row = cursorThemeIndex(cursorThemeSettings()->cursorTheme());
+    int row = cursorThemeIndex(settings->cursorTheme());
     QModelIndex selected = m_themeProxyModel->index(row, 0);
     if (selected.isValid()) {
         const CursorTheme *theme = m_themeProxyModel->theme(selected);
@@ -243,18 +244,18 @@ void CursorThemeConfig::updateSizeComboBox()
                     }
                 }
             }
-            cursorThemeSettings()->setCursorSize(size);
+            settings->setCursorSize(size);
         }
     }
 
     // enable or disable the combobox
-    if (cursorThemeSettings()->isImmutable(u"cursorSize"_s)) {
+    if (settings->isImmutable(u"cursorSize"_s)) {
         setCanResize(false);
     } else {
         setCanResize(m_sizesModel->rowCount() > 0);
     }
     // We need to Q_EMIT a cursorSizeChanged in all case to refresh UI
-    Q_EMIT cursorThemeSettings()->cursorSizeChanged();
+    Q_EMIT settings->cursorSizeChanged();
 }
 
 int CursorThemeConfig::cursorSizeIndex(int cursorSize) const

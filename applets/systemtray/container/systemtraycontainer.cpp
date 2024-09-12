@@ -92,7 +92,7 @@ void SystemTrayContainer::ensureSystrayExists()
 
     setInternalAction(u"configure"_s, m_innerContainment->internalAction(u"configure"_s));
     connect(m_innerContainment.data(), &Plasma::Containment::configureRequested, this, [this](Plasma::Applet *applet) {
-        Q_EMIT containment()->configureRequested(applet);
+        Q_EMIT(containment()->configureRequested(applet));
     });
 
     if (m_internalSystray) {

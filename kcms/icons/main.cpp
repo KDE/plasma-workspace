@@ -94,7 +94,7 @@ void IconModule::load()
     KQuickManagedConfigModule::load();
     m_model->load();
     // Model has been cleared so pretend the theme name changed to force view update
-    Q_EMIT iconsSettings()->ThemeChanged();
+    Q_EMIT(iconsSettings()->ThemeChanged());
 }
 
 void IconModule::save()
