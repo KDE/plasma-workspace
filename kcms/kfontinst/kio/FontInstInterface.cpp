@@ -16,8 +16,7 @@
 namespace KFI
 {
 FontInstInterface::FontInstInterface()
-    : m_interface(
-        new OrgKdeFontinstInterface(QLatin1String(OrgKdeFontinstInterface::staticInterfaceName()), FONTINST_PATH, QDBusConnection::sessionBus(), nullptr))
+    : m_interface(new OrgKdeFontinstInterface(QStringLiteral(KFI_IFACE), FONTINST_PATH, QDBusConnection::sessionBus()))
     , m_active(false)
 {
     FontInst::registerTypes();
