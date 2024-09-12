@@ -1,6 +1,5 @@
 # Translation of kded_donationmessage to Norwegian Nynorsk
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
