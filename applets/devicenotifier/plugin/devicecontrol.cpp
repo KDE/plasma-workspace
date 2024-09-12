@@ -231,7 +231,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
             it->append(m_devices[position]);
         } else {
             if (m_devices[position].parent().is<Solid::StorageDrive>()) {
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: " << "Creating a new parent list";
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Creating a new parent list";
                 m_parentDevices.insert(m_devices[position].parent().udi(), {m_devices[position]});
             } else {
                 qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Parent device is not valid. Don't add one";
