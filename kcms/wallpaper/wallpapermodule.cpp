@@ -57,6 +57,11 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, QColor &color)
     return argument;
 }
 
+WallpaperModule::~WallpaperModule()
+{
+    disconnect(m_wallpaperConfiguration.get(), &QQmlPropertyMap::valueChanged, this, nullptr);
+}
+
 WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
     : KQuickConfigModule(parent, data)
     , m_config(KSharedConfig::openConfig(QStandardPaths::writableLocation(QStandardPaths::GenericConfigLocation) + u"/plasma-org.kde.plasma.desktop-appletsrc",
