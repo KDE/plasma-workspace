@@ -35,7 +35,7 @@ class WallpaperModule : public KQuickConfigModule
 
 public:
     explicit WallpaperModule(QObject *parent, const KPluginMetaData &data);
-
+    ~WallpaperModule();
     PlasmaQuick::ConfigModel *wallpaperConfigModel();
 
     QQmlPropertyMap *wallpaperConfiguration() const;
