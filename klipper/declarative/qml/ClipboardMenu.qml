@@ -154,7 +154,7 @@ PlasmaComponents3.ScrollView {
                 id: filter
                 Layout.fillWidth: true
 
-                focus: !Kirigami.InputMethod.willShowOnActive
+                focus: clipboardMenu.Window.window.visible && !Kirigami.InputMethod.willShowOnActive
 
                 KeyNavigation.up: clipboardMenu.dialogItem.KeyNavigation.up /* ToolBar */
                 KeyNavigation.down: menuListView.count > 0 ? menuListView : null

@@ -381,8 +381,35 @@ class ClipboardTest(unittest.TestCase):
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
+    def test_6_url_preview(self) -> None:
+        """
+        The PreviewImageProvider registers a custom image provider to load previews for URLs.
+        """
+        self.update_config_and_restart_clipboard(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["true", "true", "false"], True)
+        new_text = "clip thin"
+        pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
+        with tempfile.TemporaryDirectory() as temp_dir:
+            colors = (0xff0000ff, 0x00ff00ff, 0x0000ffff)
+            for color in colors:
+                pixbuf.fill(color)
+                pixbuf.savev(os.path.join(temp_dir, f"{str(color)}.png"), "png")
+
+            uri_list = '\r\n'.join([f"file://{os.path.join(temp_dir, path)}" for path in os.listdir(temp_dir)]) + '\r\n'
+            content_urls = Gdk.ContentProvider.new_for_bytes("text/uri-list", GLib.Bytes.new(bytes(uri_list, "utf-8")))
+            content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(new_text, "utf-8")))
+            content_union = Gdk.ContentProvider.new_union([content_text, content_urls])
+            self.gtk_copy(content_union)  # URL has the highest priority
+
+            partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
+            for color in colors:
+                partial_pixbuf.fill(color)
+                partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
+                self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+
+            self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, new_text)
+
     @unittest.expectedFailure  # https://invent.kde.org/plasma/kwin/-/commit/31018c000bbad5dc3b263b7f452b0795dd153ceb#note_1013530
-    def test_6_sync_selection_with_ignore_selection(self) -> None:
+    def test_7_sync_selection_with_ignore_selection(self) -> None:
         """
         When `SyncClipboards` is true but `IgnoreSelection` is true, the clipboard should still sync clipboard and selection.
         """
@@ -393,7 +420,7 @@ class ClipboardTest(unittest.TestCase):
         self.assertEqual(self.driver.get_clipboard_text(), selected_text)
         self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, selected_text)
 
-    def test_7_edit_page(self) -> None:
+    def test_8_edit_page(self) -> None:
         """
         In edit mode, the text area should be focused by default.
         """
@@ -411,7 +438,7 @@ class ClipboardTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, new_text)
         # self.assertEqual(self.driver.get_clipboard_text(), new_text)
 
-    def test_8_bug491488_copy_cells(self) -> None:
+    def test_9_bug491488_copy_cells(self) -> None:
         """
         A cell has both image data and text data, which should not be ignored when images are ignored.
         """
