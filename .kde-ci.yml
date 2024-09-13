@@ -57,7 +57,6 @@ Dependencies:
     'plasma/libkscreen': '@same'
     'plasma/kwin': '@same'
     'plasma/libksysguard': '@same'
-    'plasma/kpipewire': '@same'
     'plasma/plasma-nano': '@same'
     'plasma/plasma5support': '@same'
     'plasma/plasma-activities': '@latest-kf6' # Different branch scheme due to formerly being a Framework

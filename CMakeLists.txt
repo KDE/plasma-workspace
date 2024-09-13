@@ -64,7 +64,6 @@ if (BUILD_TESTING)
 endif()
 
 find_package(KF6KDED CONFIG REQUIRED)
-find_package(KPipeWire CONFIG)
 
 find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
 set_package_properties(KF6NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
