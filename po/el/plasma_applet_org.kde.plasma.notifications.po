@@ -6,89 +6,84 @@
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2013, 2014.
 # Stelios <sstavra@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-31 00:40+0000\n"
-"PO-Revision-Date: 2017-09-08 16:25+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-24 11:39+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: fileinfo.cpp:170
 #, kde-format
 msgid "Open with %1"
-msgstr ""
+msgstr "Άνοιγμα με %1"
 
 #: fileinfo.cpp:174
 #, kde-format
 msgid "Open with…"
-msgstr ""
+msgstr "Άνοιγμα με…"
 
 #: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Άνοιγμα περιέχοντος φακέλου"
 
 #: filemenu.cpp:131
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgid "&Copy"
-msgstr "Αντιγραφή"
+msgstr "&Αντιγραφή"
 
 #: filemenu.cpp:139
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
-msgstr ""
+msgstr "Αντιγραφή τοποθεσίας"
 
 #: filemenu.cpp:195
 #, kde-format
 msgid "Properties"
-msgstr ""
+msgstr "Ιδιότητες"
 
 #: globalshortcuts.cpp:23
 #, kde-format
 msgid "Toggle do not disturb"
-msgstr ""
+msgstr "Εναλλαγή μην ενοχλείτε"
 
 #: globalshortcuts.cpp:42
-#, fuzzy, kde-format
-#| msgid "Clear Notifications"
+#, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
-msgstr "Καθαρισμός ειδοποιήσεων"
+msgstr "Ειδοποιήσεις ανενεργές"
 
 #: globalshortcuts.cpp:43
-#, fuzzy, kde-format
-#| msgid "Clear Notifications"
+#, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
-msgstr "Καθαρισμός ειδοποιήσεων"
+msgstr "Ειδοποιήσεις ενεργές"
 
 #: package/contents/ui/EditContextMenu.qml:32
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
-msgstr "Αντιγραφή"
+msgstr "Αντιγραφή διεύθυνσης σύνδεσμου"
 
 #: package/contents/ui/EditContextMenu.qml:44
-#, fuzzy, kde-format
-#| msgid "Copy"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "Αντιγραφή"
 
 #: package/contents/ui/EditContextMenu.qml:61
-#, fuzzy, kde-format
-#| msgid "Select All"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Επιλογή όλων"
@@ -96,220 +91,193 @@ msgstr "Επιλογή όλων"
 #: package/contents/ui/FullRepresentation.qml:69
 #, kde-format
 msgid "Do not disturb"
-msgstr ""
+msgstr "Μην ενοχλείτε"
 
 #: package/contents/ui/FullRepresentation.qml:111
 #, kde-format
 msgid "For 1 hour"
-msgstr ""
+msgstr "Για 1 ώρα"
 
 #: package/contents/ui/FullRepresentation.qml:116
 #, kde-format
 msgid "For 4 hours"
-msgstr ""
+msgstr "Για 4 ώρες"
 
 #: package/contents/ui/FullRepresentation.qml:125
 #, kde-format
 msgid "Until this evening"
-msgstr ""
+msgstr "Μέχρι σήμερα το απόγευμα"
 
 #: package/contents/ui/FullRepresentation.qml:135
 #, kde-format
 msgid "Until tomorrow morning"
-msgstr ""
+msgstr "Μέχρι αύριο το πρωί"
 
 #: package/contents/ui/FullRepresentation.qml:147
 #, kde-format
 msgid "Until Monday"
-msgstr ""
+msgstr "Μέχρι τη Δευτέρα"
 
 #: package/contents/ui/FullRepresentation.qml:154
 #, kde-format
 msgid "Until manually disabled"
-msgstr ""
+msgstr "Μέχρι να απενεργοποιηθεί χειροκίνητα"
 
 #: package/contents/ui/FullRepresentation.qml:204
-#, fuzzy, kde-format
-#| msgid "Automatically hide"
+#, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr "Αυτόματη απόκρυψη"
+msgstr "Τελειώνει αυτόματα: %1"
 
 #: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
-msgstr ""
+msgstr "Ενώ το %1 είναι ενεργό (%2)"
 
 #: package/contents/ui/FullRepresentation.qml:218
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
-msgstr ""
+msgstr "Ενώ το %1 είναι ενεργό"
 
 #: package/contents/ui/FullRepresentation.qml:224
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
-msgstr ""
+msgstr "Οι οθόνες καθρεφτίζονται"
 
 #: package/contents/ui/FullRepresentation.qml:432
 #, kde-format
 msgid "Close Group"
-msgstr ""
+msgstr "Κλείσιμο ομάδας"
 
 #: package/contents/ui/FullRepresentation.qml:577
 #, kde-format
 msgid "Show Fewer"
-msgstr ""
+msgstr "Εμφάνιση λιγότερων"
 
 #: package/contents/ui/FullRepresentation.qml:579
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
-msgstr ""
+msgstr "Εμφάνιση %1 περισσότερων"
 
 #: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:105
-#, fuzzy, kde-format
-#| msgid "No new notifications."
+#, kde-format
 msgid "No unread notifications"
-msgstr "Καμιά νέα ειδοποίηση."
+msgstr "Καμία μη αναγνωσμένη ειδοποίηση"
 
 #: package/contents/ui/FullRepresentation.qml:635
 #: package/contents/ui/main.qml:79
-#, fuzzy, kde-format
-#| msgid "Notifications and Jobs"
+#, kde-format
 msgid "Notification service not available"
-msgstr "Ειδοποιήσεις και εργασίες"
+msgstr "Η υπηρεσία ειδοποίησης δεν είναι διαθέσιμη"
 
 #: package/contents/ui/FullRepresentation.qml:637
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
-msgstr ""
+msgstr "Οι ειδοποιήσεις παρέχονται επί του παρόντος από το '%1 %2'"
 
 #: package/contents/ui/JobDetails.qml:34
-#, fuzzy, kde-format
-#| msgctxt "placeholder is row description, such as Source or Destination"
-#| msgid "%1:"
+#, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
 #: package/contents/ui/JobDetails.qml:105
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "How much many bytes (or whether unit in the locale has been copied over "
-#| "total"
-#| msgid "%1 of %2"
+#, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
-msgstr "%1 από %2"
+msgstr "%2 από %1"
 
 #: package/contents/ui/JobDetails.qml:109
-#, fuzzy, kde-format
-#| msgid "%2 / 1 file"
-#| msgid_plural "%2 / %1 files"
+#, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] "%2 / 1 αρχείο"
-msgstr[1] "%2 / %1 αρχεία"
+msgstr[0] "%2 από το %1 αρχείο"
+msgstr[1] "%2 από %1 αρχεία"
 
 #: package/contents/ui/JobDetails.qml:112
-#, fuzzy, kde-format
-#| msgid "%2 / 1 folder"
-#| msgid_plural "%2 / %1 folders"
+#, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
-msgstr[0] "%2 / 1 φάκελος"
-msgstr[1] "%2 / %1 φάκελοι"
+msgstr[0] "%2 από %1 φάκελος"
+msgstr[1] "%2 από %1 φάκελοι"
 
 #: package/contents/ui/JobDetails.qml:115
-#, fuzzy, kde-format
-#| msgid "%2 / 1 file"
-#| msgid_plural "%2 / %1 files"
+#, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] "%2 / 1 αρχείο"
-msgstr[1] "%2 / %1 αρχεία"
+msgstr[0] "%2 από %1 στοιχείο"
+msgstr[1] "%2 από %1 στοιχεία"
 
 #: package/contents/ui/JobDetails.qml:123
-#, fuzzy, kde-format
-#| msgctxt "Either just 1 file or m of n files are being processed"
-#| msgid "1 file"
-#| msgid_plural "%2 of %1 files"
+#, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] "1 αρχείο"
-msgstr[1] "%2 από %1 αρχεία"
+msgstr[0] "%1 αρχείο"
+msgstr[1] "%1 αρχεία"
 
 #: package/contents/ui/JobDetails.qml:125
-#, fuzzy, kde-format
-#| msgid "%2 / 1 folder"
-#| msgid_plural "%2 / %1 folders"
+#, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
-msgstr[0] "%2 / 1 φάκελος"
-msgstr[1] "%2 / %1 φάκελοι"
+msgstr[0] "%1 φάκελος"
+msgstr[1] "%1 φάκελοι"
 
 #: package/contents/ui/JobDetails.qml:127
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 στοιχείο"
+msgstr[1] "%1 στοιχεία"
 
 #: package/contents/ui/JobDetails.qml:144
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
-msgstr ""
+msgstr "%1/s"
 
 #: package/contents/ui/JobItem.qml:165
-#, fuzzy, kde-format
-#| msgctxt "placeholder is row description, such as Source or Destination"
-#| msgid "%1:"
+#, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr "%1:"
+msgstr "%1%"
 
 #: package/contents/ui/JobItem.qml:183
-#, fuzzy, kde-format
-#| msgctxt "A button tooltip; hides item details"
-#| msgid "Hide Details"
+#, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr "Απόκρυψη λεπτομερειών"
+msgstr "Λεπτομέρειες"
 
 #: package/contents/ui/JobItem.qml:197
-#, fuzzy, kde-format
-#| msgid "Paused"
+#, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
-msgstr "Σε παύση"
+msgstr "Παύση"
 
 #: package/contents/ui/JobItem.qml:209
-#, fuzzy, kde-format
-#| msgid "Cancel job"
+#, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
-msgstr "Ακύρωση εργασίας"
+msgstr "Ακύρωση"
 
 #: package/contents/ui/JobItem.qml:240
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
-msgstr ""
+msgstr "Περισσότερες επιλογές…"
 
 #: package/contents/ui/JobItem.qml:268
-#, fuzzy, kde-format
-#| msgid "Open..."
+#, kde-format
 msgid "Open"
-msgstr "Άνοιγμα..."
+msgstr "Άνοιγμα"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
@@ -322,139 +290,117 @@ msgstr[1] "%1 εκτελούμενες εργασίες"
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr ""
+msgstr "%1 (%2%)"
 
 #: package/contents/ui/main.qml:72
-#, fuzzy, kde-format
-#| msgctxt "Number of jobs and the speed at which they are downloading"
-#| msgid "%1 running job (%2/s)"
-#| msgid_plural "%1 running jobs (%2/s)"
+#, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "%1 εκτελούμενη εργασία (%2/s)"
-msgstr[1] "%1 εκτελούμενες εργασίες (%2/s)"
+msgstr[0] "%1 εκτελούμενη εργασία (%2%)"
+msgstr[1] "%1 εκτελούμενες εργασίες (%2%)"
 
 #: package/contents/ui/main.qml:85
-#, fuzzy, kde-format
-#| msgid "%1 notification"
-#| msgid_plural "%1 notifications"
+#, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
-msgstr[0] "%1 ειδοποίηση"
-msgstr[1] "%1 ειδοποιήσεις"
+msgstr[0] "%1 μη αναγνωσμένη ειδοποίηση"
+msgstr[1] "%1 μη αναγνωσμένες ειδοποιήσεις"
 
 #: package/contents/ui/main.qml:98
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
-msgstr ""
+msgstr "Μην ενοχλείτε μέχρι %1, κάντε μεσαίο κλικ για να βγείτε τώρα"
 
 #: package/contents/ui/main.qml:101
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
-msgstr ""
+msgstr "Λειτουργία «μην ενοχλείτε» ενεργή, μεσαίο κλικ για έξοδο"
 
 #: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr ""
+msgstr "Κάντε μεσαίο κλικ για να εισέλθετε στη λειτουργία «μην ενοχλείτε»."
 
 #: package/contents/ui/main.qml:229
-#, fuzzy, kde-format
-#| msgid "Clear Notifications"
+#, kde-format
 msgid "Clear All Notifications"
-msgstr "Καθαρισμός ειδοποιήσεων"
+msgstr "Εκκαθάριση όλων των ειδοποιήσεων"
 
 #: package/contents/ui/main.qml:248
-#, fuzzy, kde-format
-#| msgid "&Configure Event Notifications and Actions..."
+#, kde-format
 msgid "&Configure Event Notifications and Actions…"
-msgstr "&Διαμόρφωση ειδοποιήσεων συμβάντων και ενεργειών..."
+msgstr "&Διαμόρφωση ειδοποιήσεων συμβάντων και ενεργειών…"
 
 #: package/contents/ui/NotificationHeader.qml:121
-#, fuzzy, kde-format
-#| msgctxt "notification was just added, keep short"
-#| msgid "Just now"
+#, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Μόλις τώρα"
 
 #: package/contents/ui/NotificationHeader.qml:127
-#, fuzzy, kde-format
-#| msgctxt "minutes ago, keep short"
-#| msgid "%1 min ago"
-#| msgid_plural "%1 min ago"
+#, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
 msgid_plural "%1 min ago"
-msgstr[0] "1 λεπτό πριν"
+msgstr[0] "%1 λεπτό πριν"
 msgstr[1] "%1 λεπτά πριν"
 
 #: package/contents/ui/NotificationHeader.qml:161
-#, fuzzy, kde-format
-#| msgctxt "Speed and estimated time to completion"
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
-msgstr[0] "%1 (%2 απομένει)"
-msgstr[1] "%1 (%2 απομένει)"
+msgstr[0] "%1 δευτ. απομένει"
+msgstr[1] "%1 δευτ. απομένουν"
 
 #: package/contents/ui/NotificationHeader.qml:165
-#, fuzzy, kde-format
-#| msgctxt "Speed and estimated time to completion"
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
-msgstr[0] "%1 (%2 απομένει)"
-msgstr[1] "%1 (%2 απομένει)"
+msgstr[0] "%1 λεπτό απομένει"
+msgstr[1] "%1 λεπτά απομένουν"
 
 #: package/contents/ui/NotificationHeader.qml:170
-#, fuzzy, kde-format
-#| msgctxt "Speed and estimated time to completion"
-#| msgid "%1 (%2 remaining)"
+#, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
-msgstr[0] "%1 (%2 απομένει)"
-msgstr[1] "%1 (%2 απομένει)"
+msgstr[0] "%1 ώρα απομένει"
+msgstr[1] "%1 ώρες απομένουν"
 
 #: package/contents/ui/NotificationHeader.qml:190
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Διαμόρφωση"
 
 #: package/contents/ui/NotificationHeader.qml:207
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
-msgstr ""
+msgstr "Επαναφορά"
 
 #: package/contents/ui/NotificationHeader.qml:208
 #, kde-format
 msgid "Minimize"
-msgstr ""
+msgstr "Ελαχιστοποίηση"
 
 #: package/contents/ui/NotificationHeader.qml:231
 #, kde-format
 msgid "Close"
-msgstr ""
+msgstr "Κλείσιμο"
 
 #: package/contents/ui/NotificationItem.qml:230
-#, fuzzy, kde-format
-#| msgctxt "Placeholder is job name, eg. 'Copying'"
-#| msgid "%1 (Paused)"
+#, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (σε παύση)"
 
 #: package/contents/ui/NotificationItem.qml:235
-#, fuzzy, kde-format
-#| msgctxt "the job, which can be anything, failed to complete"
-#| msgid "%1: Failed"
+#, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
-msgstr "%1: Απέτυχε"
+msgstr "%1 (απέτυχε)"
 
 #: package/contents/ui/NotificationItem.qml:237
 #, kde-format
@@ -462,35 +408,33 @@ msgid "Job Failed"
 msgstr "Αποτυχία εργασίας"
 
 #: package/contents/ui/NotificationItem.qml:241
-#, fuzzy, kde-format
-#| msgctxt "the job, which can be anything, has finished"
-#| msgid "%1: Finished"
+#, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
-msgstr "%1: Ολοκληρώθηκε"
+msgstr "%1 (ολοκληρώθηκε)"
 
 #: package/contents/ui/NotificationItem.qml:243
 #, kde-format
 msgid "Job Finished"
-msgstr "Η εργασία ολοκληρώθηκε"
+msgstr "Ολοκληρωμένη εργασία"
 
 #: package/contents/ui/NotificationItem.qml:394
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
-msgstr ""
+msgstr "Απάντηση"
 
 #: package/contents/ui/NotificationReplyField.qml:36
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
-msgstr ""
+msgstr "Γράψτε μια απάντηση…"
 
 #: package/contents/ui/NotificationReplyField.qml:56
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "Αποστολή"
 
 #~ msgctxt "A button tooltip; expands the item to show details"
 #~ msgid "Show Details"

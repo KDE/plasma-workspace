@@ -3,20 +3,21 @@
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2017.
 # Dimitrios Glentadakis <dglent@free.fr>, 2014.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-02 00:40+0000\n"
-"PO-Revision-Date: 2017-01-19 19:38+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-24 11:46+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -72,24 +73,22 @@ msgstr "Συντόμευση πληκτρολογίου"
 #: package/contents/ui/ConfigEntries.qml:242
 #, kde-format
 msgid "Shown when relevant"
-msgstr ""
+msgstr "Εμφάνιση όταν είναι σχετικό"
 
 #: package/contents/ui/ConfigEntries.qml:243
-#, fuzzy, kde-format
-#| msgid "Always show all entries"
+#, kde-format
 msgid "Always shown"
-msgstr "Εμφάνιση πάντοτε όλων των καταχωρήσεων"
+msgstr "Εμφανίζεται πάντα"
 
 #: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Always hidden"
-msgstr ""
+msgstr "Πάντα κρυμμένο"
 
 #: package/contents/ui/ConfigEntries.qml:245
-#, fuzzy, kde-format
-#| msgid "Enabled"
+#, kde-format
 msgid "Disabled"
-msgstr "Ενεργοποιημένη"
+msgstr "Απενεργοποιημένο"
 
 #: package/contents/ui/ConfigEntries.qml:311
 #, kde-format
@@ -97,89 +96,88 @@ msgid "Always show all entries"
 msgstr "Εμφάνιση πάντοτε όλων των καταχωρήσεων"
 
 #: package/contents/ui/ConfigGeneral.qml:23
-#, fuzzy, kde-format
-#| msgid "Icon size:"
+#, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr "Μέγεθος εικονιδίων:"
+msgstr "Μέγεθος εικονιδίου πίνακα:"
 
 #: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
 msgid "Small"
-msgstr ""
+msgstr "Μικρό"
 
 #: package/contents/ui/ConfigGeneral.qml:32
 #, kde-format
 msgid "Scale with Panel height"
-msgstr ""
+msgstr "Κλίμακα με το ύψος πίνακα"
 
 #: package/contents/ui/ConfigGeneral.qml:33
 #, kde-format
 msgid "Scale with Panel width"
-msgstr ""
+msgstr "Κλίμακα με το πλάτος πίνακα"
 
 #: package/contents/ui/ConfigGeneral.qml:39
 #, kde-format
 msgid "Automatically enabled when in Touch Mode"
-msgstr ""
+msgstr "Αυτόματη ενεργοποίηση σε λειτουργία αφής"
 
 #: package/contents/ui/ConfigGeneral.qml:49
-#, fuzzy, kde-format
-#| msgid "Icon size:"
+#, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr "Μέγεθος εικονιδίων:"
+msgstr "Απόσταση εικονιδίων πίνακα:"
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Small"
-msgstr ""
+msgstr "Μικρό"
 
 #: package/contents/ui/ConfigGeneral.qml:56
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "Κανονικό"
 
 #: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "Μεγάλο"
 
 #: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "Αυτόματη ρύθμιση σε μεγάλο όταν βρίσκεται σε λειτουργία αφής"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Μετάβαση πίσω"
 
 #: package/contents/ui/ExpandedRepresentation.qml:71
-#, fuzzy, kde-format
-#| msgid "Status & Notifications"
+#, kde-format
 msgid "Status and Notifications"
 msgstr "Κατάσταση και ειδοποιήσεις"
 
 #: package/contents/ui/ExpandedRepresentation.qml:140
 #, kde-format
 msgid "More actions"
-msgstr ""
+msgstr "Περισσότερες ενέργειες"
 
 #: package/contents/ui/ExpandedRepresentation.qml:240
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Διατήρηση ανοιχτό"
 
 #: package/contents/ui/ExpanderArrow.qml:26
 #, kde-format
 msgid "Show all the items in the system tray in a popup"
 msgstr ""
+"Εμφάνιση όλων των στοιχείων στο δίσκο συστήματος \n"
+"σε ένα αναδυόμενο παράθυρο"
 
 #: package/contents/ui/ExpanderArrow.qml:40
 #, kde-format

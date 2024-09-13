@@ -12,81 +12,69 @@
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012.
 # Antonis Geralis <capoiosct@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2017.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2017-03-14 12:21+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-13 20:59+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI on X11"
-msgstr "Εξαναγκασμός DPI για τις γραμματοσειρές:"
+msgstr "Εξαναγκασμός DPI γραμματοσειράς στο X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General font"
-msgstr "Γενικά"
+msgstr "Γενική γραμματοσειρά"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width font"
-msgstr "Σταθερό πλάτος"
+msgstr "Γραμματοσειρά σταθερού πλάτους"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small font"
-msgstr "Μικρό"
+msgstr "Μικρή γραμματοσειρά"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Tool bar font"
-msgstr "Γραμμή εργαλείων"
+msgstr "Γραμματοσειρά γραμμής εργαλείων"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "Γραμματοσειρά μενού"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title font"
-msgstr "Τίτλος παραθύρου"
+msgstr "Γραμματοσειρά τίτλου παραθύρου"
 
 #: kxftconfig.cpp:455
-#, fuzzy, kde-format
-#| msgctxt "use system subpixel setting"
-#| msgid "System default"
+#, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr "Προκαθορισμένο συστήματος"
+msgstr "Προεπιλογή προμηθευτή"
 
 #: kxftconfig.cpp:457
 #, kde-format
@@ -115,12 +103,10 @@ msgid "Vertical BGR"
 msgstr "Κατακόρυφο BGR"
 
 #: kxftconfig.cpp:493
-#, fuzzy, kde-format
-#| msgctxt "use system hinting settings"
-#| msgid "System default"
+#, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr "Προκαθορισμένο συστήματος"
+msgstr "Προεπιλογή προμηθευτή"
 
 #: kxftconfig.cpp:495
 #, kde-format
@@ -152,25 +138,21 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2pt"
 
 #: ui/main.qml:23
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "Adjust Global Scale…"
-msgstr "&Προσαρμογή όλων των γραμματοσειρών..."
+msgstr "Προσαρμογή καθολικής κλίμακας…"
 
 #: ui/main.qml:37
-#, fuzzy, kde-format
-#| msgid ""
-#| "<p>Some changes such as anti-aliasing or DPI will only affect newly "
-#| "started applications.</p>"
+#, kde-format
 msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
-"<p>Κάποιες αλλαγές όπως αυτές σχετικά με την εξομάλυνση ή το DPI θα "
-"επηρεάσουν μόνο τις εφαρμογές που θα ξεκινήσουν από τώρα.</p>"
+"Ορισμένες αλλαγές, όπως η εξομάλυνση ή το DPI, θα επηρεάσουν μόνο τις "
+"εφαρμογές που θα ξεκινήσουν από τώρα."
 
 #: ui/main.qml:52
 #, kde-format
@@ -178,6 +160,9 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"Οι πολύ μεγάλες γραμματοσειρές μπορεί να παράγουν περίεργα αποτελέσματα. "
+"Αντί να χρησιμοποιείτε πολύ μεγάλο μέγεθος γραμματοσειράς, σκεφτείτε να "
+"προσαρμόσετε την καθολική κλίμακα της οθόνης."
 
 #: ui/main.qml:73
 #, kde-format
@@ -185,107 +170,83 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"Ο συνιστώμενος τρόπος για την κλιμάκωση της διεπαφής χρήστη είναι η χρήση "
+"της δυνατότητας για καθολική κλιμάκωση οθόνης."
 
 #: ui/main.qml:86
-#, fuzzy, kde-format
-#| msgid "Ad&just All Fonts..."
+#, kde-format
 msgid "&Adjust All Fonts…"
-msgstr "&Προσαρμογή όλων των γραμματοσειρών..."
+msgstr "&Διαμόρφωση όλων των γραμματοσειρών…"
 
 #: ui/main.qml:99
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "General:"
-msgstr "Γενικά"
+msgstr "Γενικά:"
 
 #: ui/main.qml:100
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "General"
+#, kde-format
 msgid "Select general font"
-msgstr "Γενικά"
+msgstr "Επιλογή γενικής γραμματοσειράς"
 
 #: ui/main.qml:111
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Fixed width:"
-msgstr "Σταθερό πλάτος"
+msgstr "Σταθερό πλάτος:"
 
 #: ui/main.qml:112
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Fixed width"
+#, kde-format
 msgid "Select fixed width font"
-msgstr "Σταθερό πλάτος"
+msgstr "Επιλογή γραμματοσειράς σταθερού πλάτους"
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Small:"
-msgstr "Μικρό"
+msgstr "Μικρό:"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Small"
+#, kde-format
 msgid "Select small font"
-msgstr "Μικρό"
+msgstr "Επιλογή μικρής γραμματοσειράς"
 
 #: ui/main.qml:135
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Toolbar:"
-msgstr "Γραμμή εργαλείων"
+msgstr "Γραμμή εργαλείων:"
 
 #: ui/main.qml:136
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Toolbar"
+#, kde-format
 msgid "Select toolbar font"
-msgstr "Γραμμή εργαλείων"
+msgstr "Επιλογή γραμματοσειράς γραμμής εργαλείων"
 
 #: ui/main.qml:147
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Menu"
+#, kde-format
 msgid "Menu:"
-msgstr "Μενού"
+msgstr "Μενού:"
 
 #: ui/main.qml:148
 #, kde-format
 msgid "Select menu font"
-msgstr ""
+msgstr "Επιλογή γραμματοσειράς μενού"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Window title:"
-msgstr "Τίτλος παραθύρου"
+msgstr "Τίτλος παραθύρου:"
 
 #: ui/main.qml:159
-#, fuzzy, kde-format
-#| msgctxt "font usage"
-#| msgid "Window title"
+#, kde-format
 msgid "Select window title font"
-msgstr "Τίτλος παραθύρου"
+msgstr "Επιλογή γραμματοσειράς τίτλου παραθύρου"
 
 #: ui/main.qml:174
-#, fuzzy, kde-format
-#| msgid "Use a&nti-aliasing:"
+#, kde-format
 msgid "Anti-Aliasing:"
-msgstr "Χρήση &εξομάλυνσης για γραμματοσειρές:"
+msgstr "Εξομάλυνση:"
 
 #: ui/main.qml:179
-#, fuzzy, kde-format
-#| msgctxt "Use anti-aliasing"
-#| msgid "Enabled"
+#, kde-format
 msgid "Enable"
-msgstr "Ενεργό"
+msgstr "Ενεργοποίηση"
 
 #: ui/main.qml:183
 #, kde-kuit-format
@@ -297,29 +258,33 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Τα pixel στις οθόνες είναι γενικά ευθυγραμμισμένα σε ένα πλέγμα. Ως εκ "
+"τούτου, τα σχήματα των γραμματοσειρών που δεν ευθυγραμμίζονται με αυτό το "
+"πλέγμα θα φαίνονται τετράγωνα και λανθασμένα, εκτός εάν χρησιμοποιούνται "
+"τεχνικές <emphasis>εξομάλυνσης</emphasis> για τη μείωση αυτού του "
+"φαινομένου. Γενικά, θέλετε να διατηρείτε αυτή την επιλογή ενεργοποιημένη, "
+"εκτός αν προκαλεί προβλήματα."
 
 #: ui/main.qml:197
 #, kde-format
 msgid "Exclude range from anti-aliasing"
-msgstr ""
+msgstr "Εξαίρεση εύρους από την εξομάλυνση"
 
 #: ui/main.qml:216 ui/main.qml:240
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 pt"
 
 #: ui/main.qml:231
-#, fuzzy, kde-format
-#| msgid " to "
+#, kde-format
 msgid "to"
-msgstr " έως "
+msgstr "έως"
 
 #: ui/main.qml:263
-#, fuzzy, kde-format
-#| msgid "Sub-pixel rendering type:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "Τύπος αποτύπωσης sub-pixel:"
+msgstr "Απεικόνιση υπο-pixel:"
 
 #: ui/main.qml:309
 #, kde-kuit-format
@@ -334,13 +299,22 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>Στις οθόνες TFT ή LCD κάθε εικονοστοιχείο αποτελείται στην "
+"πραγματικότητα από τρία ή τέσσερα μικρότερα μονόχρωμα φώτα. Αυτά τα "
+"<emphasis>υπο-pixels</emphasis> μπορούν να αλλάξουν ανεξάρτητα για να "
+"βελτιωθεί περαιτέρω η ποιότητα των εμφανιζόμενων γραμματοσειρών.</para> "
+"<para>Η ποιότητα απόδοσης βελτιώνεται μόνο εάν η επιλογή ταιριάζει με τον "
+"τρόπο με τον οποίο είναι ευθυγραμμισμένα τα υπο-pixels της οθόνης σας. Οι "
+"περισσότερες οθόνες έχουν γραμμική διάταξη των <emphasis>RGB</emphasis> υπο-"
+"pixels, ορισμένες έχουν <emphasis>BGR</emphasis> και ορισμένες εξωτικές "
+"διατάξεις δεν υποστηρίζονται από αυτή τη λειτουργία.</para>Αυτό δεν "
+"λειτουργεί με οθόνες CRT."
 
 #: ui/main.qml:314
-#, fuzzy, kde-format
-#| msgid "Hinting style:"
+#, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "Στυλ υπόδειξης:"
+msgstr "Υπόδειξη:"
 
 #: ui/main.qml:359
 #, kde-kuit-format
@@ -351,12 +325,16 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"Η υπόδειξη είναι μια τεχνική στην οποία χρησιμοποιούνται υποδείξεις "
+"ενσωματωμένες σε μια γραμματοσειρά για να βελτιωθεί η ποιότητα απόδοσης, "
+"ειδικά σε μικρά μεγέθη. Η ισχυρότερη υπόδειξη οδηγεί γενικά σε πιο ευκρινείς "
+"άκρες, αλλά τα μικρά γράμματα θα μοιάζουν λιγότερο με το σχήμα τους σε "
+"μεγάλα μεγέθη."
 
 #: ui/main.qml:372
-#, fuzzy, kde-format
-#| msgid "Force fonts DPI:"
+#, kde-format
 msgid "Force font DPI:"
-msgstr "Εξαναγκασμός DPI για τις γραμματοσειρές:"
+msgstr "Εξαναγκασμός DPI γραμματοσειράς:"
 
 #: ui/main.qml:400
 #, kde-kuit-format
@@ -369,11 +347,19 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para> Εισάγετε εδώ το DPI της οθόνης σας για να κάνετε τις γραμματοσειρές "
+"στην οθόνη να ταιριάζουν με τα φυσικά τους μεγέθη όταν εκτυπώνονται. Η "
+"αλλαγή αυτής της επιλογής από την προεπιλεγμένη τιμή της θα προκαλέσει "
+"σύγκρουση με πολλές εφαρμογές- ορισμένα εικονίδια και εικόνες ενδέχεται να "
+"μην έχουν την αναμενόμενη κλίμακα.</para><para>Για να αυξήσετε το μέγεθος "
+"του κειμένου, αλλάξτε το μέγεθος των γραμματοσειρών παραπάνω. Για να "
+"κλιμακώσετε τα πάντα, χρησιμοποιήστε το ρυθμιστή κλιμάκωσης στη σελίδα "
+"<interface>Οθόνη</interface>.</para>"
 
 #: ui/main.qml:406
 #, kde-format
 msgid "Select Font"
-msgstr ""
+msgstr "Επιλογή γραμματοσειράς"
 
 #, fuzzy
 #~| msgid "Force fonts DPI:"

@@ -7,44 +7,42 @@
 # Petros Vidalis <p_vidalis@hotmail.com>, 2010.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011.
 # Antonis Geralis <capoiosct@gmail.com>, 2013.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2013-11-07 15:01+0200\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2024-08-24 14:37+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:22
-#, fuzzy, kde-format
-#| msgid "log out"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr "αποσύνδεση"
+msgstr "αποσύνδεση;αποσύνδεση"
 
 #: sessionrunner.cpp:25
 #, kde-format
 msgid "Logs out, exiting the current desktop session"
-msgstr "Αποσύνδεση από την τρέχουσα συνεδρία επιφάνειας εργασίας"
+msgstr "Αποσύνδεση, τερματίζοντας την τρέχουσα συνεδρία επιφάνειας εργασίας"
 
 #: sessionrunner.cpp:28
-#, fuzzy, kde-format
-#| msgctxt "shutdown computer command"
-#| msgid "shutdown"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr "κλείσιμο"
+msgstr "τερματισμός;τερματισμός;ενέργεια;απενεργοποίηση"
 
 #: sessionrunner.cpp:31
 #, kde-format
@@ -52,14 +50,12 @@ msgid "Turns off the computer"
 msgstr "Κλείσιμο του υπολογιστή"
 
 #: sessionrunner.cpp:34
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr "επανεκκίνηση"
+msgstr "επανεκκίνηση;επανεκκίνηση"
 
 #: sessionrunner.cpp:37
 #, kde-format
@@ -67,12 +63,11 @@ msgid "Reboots the computer"
 msgstr "Επανεκκίνηση του υπολογιστή"
 
 #: sessionrunner.cpp:41
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr "Κλείδωμα της οθόνης"
+msgstr "κλείδωμα;κλείδωμα οθόνης"
 
 #: sessionrunner.cpp:43
 #, kde-format
@@ -80,27 +75,25 @@ msgid "Locks the current sessions and starts the screen saver"
 msgstr "Κλείδωμα των τρεχουσών συνεδριών και εκκίνηση της προφύλαξης οθόνης"
 
 #: sessionrunner.cpp:46
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr "νέα συνεδρία"
+msgstr "αποθήκευση;αποθήκευση συνεδρίας"
 
 #: sessionrunner.cpp:49
 #, kde-format
 msgid "Saves the current session for session restoration"
-msgstr ""
+msgstr "Αποθηκεύει την τρέχουσα συνεδρία για την επαναφορά της"
 
 #: sessionrunner.cpp:52
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr "εναλλαγή χρήστη"
+msgstr "εναλλαγή χρήστη;νέα συνεδρία"
 
 #: sessionrunner.cpp:55
 #, kde-format
@@ -108,9 +101,7 @@ msgid "Starts a new session as a different user"
 msgstr "Εκκίνηση μιας νέας συνεδρίας ως διαφορετικός χρήστης"
 
 #: sessionrunner.cpp:58
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
+#, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
 msgstr "συνεδρίες"
@@ -121,9 +112,7 @@ msgid "Lists all sessions"
 msgstr "Εμφάνιση όλων των συνεδριών"
 
 #: sessionrunner.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
+#, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
 msgstr "εναλλαγή"
@@ -141,41 +130,35 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Αποσύνδεση"
 
 #: sessionrunner.cpp:91
-#, fuzzy, kde-format
-#| msgctxt "shutdown computer command"
-#| msgid "shutdown"
+#, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr "κλείσιμο"
+msgstr "Τερματισμός"
 
 #: sessionrunner.cpp:98
-#, fuzzy, kde-format
-#| msgctxt "restart computer command"
-#| msgid "restart"
+#, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr "επανεκκίνηση"
+msgstr "Επανεκκίνηση"
 
 #: sessionrunner.cpp:105
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "Κλείδωμα"
 
 #: sessionrunner.cpp:112
-#, fuzzy, kde-format
-#| msgid "new session"
+#, kde-format
 msgid "Save Session"
-msgstr "νέα συνεδρία"
+msgstr "Αποθήκευση συνεδρίας"
 
 #: sessionrunner.cpp:153
-#, fuzzy, kde-format
-#| msgid "switch user"
+#, kde-format
 msgid "Switch User"
-msgstr "εναλλαγή χρήστη"
+msgstr "Εναλλαγή χρήστη"
 
 #: sessionrunner.cpp:239
 #, kde-format
@@ -186,12 +169,17 @@ msgid ""
 "li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
 "application launcher)</li></ul>"
 msgstr ""
+"<p>Πρόκειται να εισέλθετε σε μια νέα συνεδρία επιφάνειας εργασίας.</p><p>Θα "
+"εμφανιστεί μια οθόνη σύνδεσης και η τρέχουσα συνεδρία θα κρυφτεί.</"
+"p><p>Μπορείτε να εναλλάσσεστε μεταξύ των συνεδριών επιφάνειας εργασίας "
+"χρησιμοποιώντας:</p><ul><li>Ctrl+Alt+F{αριθμός συνεδρίας}</li><li>Αναζήτηση "
+"Plasma (τύπος '%1')</li><li>συστατικά του Plasma (όπως ο εκκινητής "
+"εφαρμογών)</li></ul>"
 
 #: sessionrunner.cpp:248
-#, fuzzy, kde-format
-#| msgid "New Session"
+#, kde-format
 msgid "New Desktop Session"
-msgstr "Νέα συνεδρία"
+msgstr "Νέα συνεδρία επιφάνειας εργασίας"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

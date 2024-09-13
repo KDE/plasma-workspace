@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgid "'%1' needs a password to be accessed. Please enter a password."
 msgstr ""
-"Απαιτείται κωδικός για την πρόσβασης του '%1'. Παρακαλώ εισάγετε έναν κωδικό "
+"Απαιτείται κωδικός για την πρόσβασης του «%1». Παρακαλώ εισάγετε έναν κωδικό "
 "πρόσβασης."
 
 #~ msgid "A new device has been detected.<br><b>What do you want to do?</b>"

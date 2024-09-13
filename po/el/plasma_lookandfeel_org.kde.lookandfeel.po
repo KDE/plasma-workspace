@@ -2,32 +2,33 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2017-03-24 14:32+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-24 14:05+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
 msgstr[0] ""
+"Εγκατάσταση ενημερώσεων λογισμικού και επανεκκίνηση σε 1 δευτερόλεπτο"
 msgstr[1] ""
+"Εγκατάσταση ενημερώσεων λογισμικού και επανεκκίνηση σε %1 δευτερόλεπτα"
 
 #: contents/logout/Logout.qml:154
-#, fuzzy, kde-format
-#| msgid "Reboot in 1 second"
-#| msgid_plural "Reboot in %1 seconds"
+#, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
 msgstr[0] "Επανεκκίνηση σε 1 δευτερόλεπτο"
@@ -45,7 +46,9 @@ msgstr[1] "Αποσύνδεση σε %1 δευτερόλεπτα"
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
+"Εγκατάσταση ενημερώσεων λογισμικού και τερματισμός σε 1 δευτερόλεπτο"
 msgstr[1] ""
+"Εγκατάσταση ενημερώσεων λογισμικού και τερματισμός σε %1 δευτερόλεπτα"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -63,40 +66,46 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"Ένας άλλος χρήστης είναι συνδεδεμένος αυτή τη στιγμή. Εάν ο υπολογιστής "
+"κλείσει ή επανεκκινηθεί, αυτός ο χρήστης ενδέχεται να χάσει την εργασία του."
 msgstr[1] ""
+"%1 άλλοι χρήστες είναι συνδεδεμένοι. Εάν ο υπολογιστής κλείσει ή "
+"επανεκκινηθεί, οι χρήστες αυτοί ενδέχεται να χάσουν την εργασία τους."
 
 #: contents/logout/Logout.qml:190
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
+"Κατά την επανεκκίνηση, ο υπολογιστής θα εισέλθει στην οθόνη ρύθμισης "
+"υλικολογισμικού."
 
 #: contents/logout/Logout.qml:203
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "Κοίμηση"
 
 #: contents/logout/Logout.qml:204
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr ""
+msgstr "Κοίμηση τώρα"
 
 #: contents/logout/Logout.qml:213
 #, kde-format
 msgid "Hibernate"
-msgstr ""
+msgstr "Νάρκη"
 
 #: contents/logout/Logout.qml:214
 #, kde-format
 msgid "Hibernate Now"
-msgstr ""
+msgstr "Νάρκη τώρα"
 
 #: contents/logout/Logout.qml:225
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "Εγκατάσταση ενημερώσεων και επανεκκίνηση"
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -104,42 +113,35 @@ msgid "Restart"
 msgstr "Επανεκκίνηση"
 
 #: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "Restart Now"
-msgstr "Επανεκκίνηση"
+msgstr "Επανεκκίνηση τώρα"
 
 #: contents/logout/Logout.qml:260
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "Εγκατάσταση ενημερώσεων και τερματισμός"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
-#, fuzzy, kde-format
-#| msgid "Shut down"
+#, kde-format
 msgid "Shut Down"
 msgstr "Τερματισμός"
 
 #: contents/logout/Logout.qml:263 contents/logout/Logout.qml:282
-#, fuzzy, kde-format
-#| msgid "Shut down"
+#, kde-format
 msgid "Shut Down Now"
-msgstr "Τερματισμός"
+msgstr "Τερματισμός τώρα"
 
 #: contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgctxt "Button to log out of the desktop session"
-#| msgid "Log out"
+#, kde-format
 msgid "Log Out"
 msgstr "Αποσύνδεση"
 
 #: contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgctxt "Button to log out of the desktop session"
-#| msgid "Log out"
+#, kde-format
 msgid "Log Out Now"
-msgstr "Αποσύνδεση"
+msgstr "Αποσύνδεση τώρα"
 
 #: contents/logout/Logout.qml:305
 #, kde-format
@@ -147,8 +149,7 @@ msgid "Cancel"
 msgstr "Ακύρωση"
 
 #: contents/osd/OsdItem.qml:34
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
 msgstr "%1%"
@@ -267,14 +268,14 @@ msgstr "Plasma από το KDE"
 #~| msgid "Search '%1'..."
 #~ msgctxt "Textfield placeholder text, query specific KRunner"
 #~ msgid "Search '%1'…"
-#~ msgstr "Αναζήτηση '%1'..."
+#~ msgstr "Αναζήτηση '%1'…"
 
 #, fuzzy
 #~| msgctxt "Textfield placeholder text"
 #~| msgid "Search..."
 #~ msgctxt "Textfield placeholder text"
 #~ msgid "Search…"
-#~ msgstr "Αναζήτηση..."
+#~ msgstr "Αναζήτηση…"
 
 #, fuzzy
 #~| msgid "Close Search"

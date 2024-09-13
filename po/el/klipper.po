@@ -10,19 +10,20 @@
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012, 2014.
 # Stelios <sstavra@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2014-10-28 16:44+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-16 10:21+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -36,15 +37,12 @@ msgid "Your emails"
 msgstr "sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org"
 
 #: configdialog.cpp:81
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard history:"
-msgstr "Ιστορικό του προχείρου"
+msgstr "Ιστορικό πρόχειρου:"
 
 #: configdialog.cpp:87
-#, fuzzy, kde-format
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid " entry"
 msgid_plural " entries"
@@ -52,10 +50,9 @@ msgstr[0] " καταχώρηση"
 msgstr[1] " καταχωρήσεις"
 
 #: configdialog.cpp:96
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Selection and Clipboard:"
-msgstr "Αποφυγή κενού προχείρου"
+msgstr "Επιλογή και πρόχειρο:"
 
 #: configdialog.cpp:103
 #, kde-kuit-format
@@ -72,41 +69,49 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"Όταν το κείμενο ή μια περιοχή της οθόνης επισημαίνεται με το ποντίκι ή το "
+"πληκτρολόγιο, πρόκειται για την <emphasis>επιλογή</emphasis>. Μπορεί να "
+"επικολληθεί χρησιμοποιώντας το μεσαίο κουμπί του ποντικιού.<nl/><nl/>Εάν η "
+"επιλογή αντιγραφεί ρητά χρησιμοποιώντας μια ενέργεια <interface>Αντιγραφή</"
+"interface> ή <interface>Αποκοπή</interface>, αποθηκεύεται στο "
+"<emphasis>πρόχειρο</emphasis>. Μπορεί να επικολληθεί χρησιμοποιώντας μια "
+"ενέργεια <interface>Επικόλληση</interface>. <nl/><nl/>Όταν είναι "
+"ενεργοποιημένη αυτή η επιλογή διατηρεί την επιλογή και το πρόχειρο το ίδιο, "
+"έτσι ώστε οποιαδήποτε επιλογή να είναι άμεσα διαθέσιμη για επικόλληση με "
+"οποιοδήποτε μέσο. Εάν είναι απενεργοποιημένη, η επιλογή μπορεί να "
+"εξακολουθεί να αποθηκεύεται στο ιστορικό του πρόχειρου (με την επιφύλαξη των "
+"παρακάτω επιλογών), αλλά μπορεί να επικολληθεί μόνο με τη χρήση του μεσαίου "
+"πλήκτρου του ποντικιού."
 
 #: configdialog.cpp:132 configdialog.cpp:170
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Always save in history"
-msgstr "Επανάληψη ενέργειας από το ιστορικό"
+msgstr "Πάντα αποθήκευση στο ιστορικό"
 
 #: configdialog.cpp:136
-#, fuzzy, kde-format
-#| msgid "Text selection only"
+#, kde-format
 msgid "Text selection:"
-msgstr "Μόνο κείμενο επιλογής"
+msgstr "Επιλογή κειμένου:"
 
 #: configdialog.cpp:138 configdialog.cpp:176
 #, kde-format
 msgid "Only when explicitly copied"
-msgstr ""
+msgstr "Μόνο όταν αντιγράφεται ρητά"
 
 #: configdialog.cpp:143
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Whether text selections are saved in the clipboard history."
-msgstr "Επιθυμείτε πραγματικά τη διαγραφή του ιστορικού του προχείρου;"
+msgstr "Εάν οι επιλογές κειμένου αποθηκεύονται στο ιστορικό του πρόχειρου."
 
 #: configdialog.cpp:174
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Non-text selection:"
-msgstr "Παράβλεψη επιλογής"
+msgstr "Επιλογή μη κειμένου:"
 
 #: configdialog.cpp:181
-#, fuzzy, kde-format
-#| msgid "Replay action in history"
+#, kde-format
 msgid "Never save in history"
-msgstr "Επανάληψη ενέργειας από το ιστορικό"
+msgstr "Να μην αποθηκεύεται ποτέ στο ιστορικό"
 
 #: configdialog.cpp:186
 #, kde-format
@@ -114,12 +119,13 @@ msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
+"Εάν οι επιλογές μη κειμένου (όπως εικόνες) αποθηκεύονται στο ιστορικό του "
+"πρόχειρου."
 
 #: configdialog.cpp:260
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Show action popup menu:"
-msgstr "Χρονικό όριο για αναδυόμενα μενού ενεργειών:"
+msgstr "Εμφάνιση αναδυόμενου μενού ενεργειών:"
 
 #: configdialog.cpp:270
 #, kde-kuit-format
@@ -131,39 +137,40 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Όταν επιλέγεται κείμενο που ταιριάζει με ένα μοτίβο ενέργειας ή επιλέγεται "
+"από το ιστορικό του πρόχειρου, εμφανίζεται αυτόματα το αναδυόμενο μενού με "
+"τις κατάλληλες ενέργειες. Εάν το αυτόματο μενού είναι απενεργοποιημένο εδώ ή "
+"δεν εμφανίζεται για ένα αποκλεισμένο παράθυρο, τότε μπορεί να εμφανιστεί με "
+"τη χρήση της συντόμευσης πλήκτρου <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:279
 #, kde-format
 msgid "Exclude Windows..."
-msgstr ""
+msgstr "Εξαίρεση παραθύρων..."
 
 #: configdialog.cpp:293
-#, fuzzy, kde-format
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid " second"
 msgid_plural " seconds"
-msgstr[0] " δευτερόλεπτο"
+msgstr[0] "δεύτερο"
 msgstr[1] " δευτερόλεπτα"
 
 #: configdialog.cpp:294
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr ""
+msgstr "Κανένα"
 
 #: configdialog.cpp:303
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Options:"
-msgstr "Ενέργειες"
+msgstr "Επιλογές:"
 
 #: configdialog.cpp:330
 #, kde-format
 msgid "Exclude Windows"
-msgstr ""
+msgstr "Εξαίρεση παραθύρων"
 
 #: configdialog.cpp:360
 #, kde-kuit-format
@@ -173,16 +180,18 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"Όταν ένα <interface>αντίστοιχο μοτίβο</interface> ταιριάζει με τα "
+"περιεχόμενα του πρόχειρου, οι <interface>εντολές</interface> του "
+"εμφανίζονται στο αναδυόμενο μενού Klipper και μπορούν να εκτελεστούν."
 
 #: configdialog.cpp:369
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "Μοτίβο αντιστοίχισης και εντολές"
 
 #: configdialog.cpp:369
-#, fuzzy, kde-format
-#| msgid "Description"
+#, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Περιγραφή"
@@ -209,6 +218,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"Αυτές οι ενέργειες εμφανίζονται στο αναδυόμενο μενού, το οποίο μπορεί να "
+"ρυθμιστεί στη σελίδα <interface>Μενού ενεργειών</interface>."
 
 #: configdialog.cpp:575
 #, kde-kuit-format
@@ -217,12 +228,13 @@ msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
 msgstr ""
+"Διαγραφή της επιλεγμένης ενέργειας <resource>%1</resource><nl/>και όλων των "
+"εντολών της;"
 
 #: configdialog.cpp:576
-#, fuzzy, kde-format
-#| msgid "Delete Action"
+#, kde-format
 msgid "Confirm Delete Action"
-msgstr "Διαγραφή ενέργειας"
+msgstr "Επιβεβαίωση διαγραφής ενέργειας"
 
 #: configdialog.cpp:605
 #, kde-format
@@ -236,23 +248,18 @@ msgid "General Configuration"
 msgstr "Γενική διαμόρφωση"
 
 #: configdialog.cpp:606
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
-msgstr "Ενέργειες"
+msgstr "Μενού ενεργειών"
 
 #: configdialog.cpp:606
-#, fuzzy, kde-format
-#| msgctxt "Actions Config"
-#| msgid "Actions"
+#, kde-format
 msgid "Action Menu"
-msgstr "Ενέργειες"
+msgstr "Μενού ενεργειών"
 
 #: configdialog.cpp:607
-#, fuzzy, kde-format
-#| msgid "Actions Configuration"
+#, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Διαμόρφωση ενεργειών"
@@ -284,6 +291,14 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"Το αναδυόμενο παράθυρο δράσης δεν θα εμφανίζεται αυτόματα για αυτά τα "
+"παράθυρα, ακόμη και αν είναι ενεργοποιημένο. Αυτό συμβαίνει επειδή, για "
+"παράδειγμα, ένα πρόγραμμα περιήγησης ιστού μπορεί να επισημάνει μια "
+"διεύθυνση URL στη γραμμή διευθύνσεων κατά την πληκτρολόγηση, οπότε το μενού "
+"θα εμφανιζόταν για κάθε πληκτρολόγηση.<nl/><nl/>Αν το μενού ενεργειών "
+"εμφανίζεται απροσδόκητα κατά τη χρήση μιας συγκεκριμένης εφαρμογής, τότε "
+"προσθέστε το σε αυτή τη λίστα. <link>Πώς να βρείτε το όνομα που πρέπει να "
+"πληκτρολογήσετε</link>."
 
 #: configdialog.cpp:704
 #, kde-kuit-format
@@ -295,136 +310,136 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Το όνομα που πρέπει να εισαχθεί εδώ είναι το όνομα WM_CLASS του παραθύρου "
+"που πρέπει να εξαιρεθεί. Για να βρείτε το όνομα WM_CLASS ενός παραθύρου, σε "
+"ένα άλλο παράθυρο τερματικού πληκτρολογήστε την εντολή:<nl/><nl/>&nbsp;&nbsp;"
+"<icode>xprop | grep WM_CLASS</icode><nl/><nl/>και κάντε κλικ στο παράθυρο "
+"που θέλετε να αποκλείσετε. Το πρώτο όνομα που εμφανίζει μετά το σύμβολο "
+"ισότητας είναι αυτό που πρέπει να πληκτρολογήσετε."
 
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "Κωδικός QR"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Matrix δεδομένων"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Άζτεκ"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Κωδικός 39"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Κωδικός 93"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Κωδικός 128"
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "Προσθήκη στο πρόχειρο"
+msgstr "Επιστροφή στο πρόχειρο"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Αλλαγή του τύπου κώδικα QR"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Δεν υπάρχει αρκετός χώρος για την εμφάνιση κωδικού QR. Δοκιμάστε να αλλάξετε "
+"το μέγεθος αυτού του συστατικού."
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "Αποτυχία δημιουργίας κώδικα QR"
 
 #: declarative/qml/ClipboardMenu.qml:185
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "Ιστορικό του προχείρου"
+msgstr "Εκκαθάριση ιστορικού"
 
 #: declarative/qml/ClipboardMenu.qml:276
-#, fuzzy, kde-format
-#| msgid "<no matches>"
+#, kde-format
 msgid "No matches"
-msgstr "<κανένα ταίριασμα>"
+msgstr "Κανένα αντίστοιχο"
 
 #: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
 msgid "Clipboard is empty"
-msgstr "Το πρόχειρο είναι κενό"
+msgstr "Το πρόχειρο είναι άδειο"
 
 #: declarative/qml/DelegateToolButtons.qml:26
-#, fuzzy, kde-format
-#| msgid "<new action>"
+#, kde-format
 msgid "Invoke action"
-msgstr "<νέα ενέργεια>"
+msgstr "Ανάκληση δράσης"
 
 #: declarative/qml/DelegateToolButtons.qml:39
-#, fuzzy, kde-format
-#| msgid "&Show Barcode..."
+#, kde-format
 msgid "Show QR code"
-msgstr "&Εμφάνιση Barcode..."
+msgstr "Εμφάνιση κώδικα QR"
 
 #: declarative/qml/DelegateToolButtons.qml:55
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgid "Edit contents"
 msgstr "Επεξεργασία περιεχομένων"
 
 #: declarative/qml/DelegateToolButtons.qml:69
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "Επανάληψη ενεργειών σε ένα αντικείμενο επιλεγμένο από το ιστορικό"
+msgstr "Αφαίρεση από το ιστορικό"
 
 #: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Περιοχή επεξεργασίας κειμένου"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Αποθήκευση"
 
 #: declarative/qml/EditPage.qml:88
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "&Ακύρωση"
+msgstr "Ακύρωση"
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
 msgid "Ignore"
-msgstr "Παράβλεψη"
+msgstr "Αγνόηση"
 
 #: editactiondialog.cpp:36
 #, kde-format
 msgid "Replace Clipboard"
-msgstr "Αντικατάσταση προχείρου"
+msgstr "Αντικατάσταση πρόχειρου"
 
 #: editactiondialog.cpp:38
 #, kde-format
@@ -439,7 +454,7 @@ msgstr "Εντολή"
 #: editactiondialog.cpp:124
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "Έξοδος"
 
 #: editactiondialog.cpp:126
 #, kde-format
@@ -460,16 +475,20 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Μια ενέργεια τίθεται σε ισχύ όταν το <interface>αντίστοιχο μοτίβο</"
+"interface> ταιριάζει με τα περιεχόμενα του πρόχειρου. Όταν συμβεί αυτό, οι "
+"<interface>εντολές</interface> της ενέργειας εμφανίζονται στο αναδυόμενο "
+"μενού Klipper. Αν επιλεγεί μία από αυτές, η εντολή εκτελείται."
 
 #: editactiondialog.cpp:203
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
-msgstr ""
+msgstr "Εισαγάγετε ένα μοτίβο για αντιστοίχιση με το πρόχειρο"
 
 #: editactiondialog.cpp:205
 #, kde-format
 msgid "Match pattern:"
-msgstr ""
+msgstr "Μοτίβο αντιστοίχισης:"
 
 #: editactiondialog.cpp:208
 #, kde-kuit-format
@@ -479,11 +498,14 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"Το μοτίβο αντιστοιχίας είναι μια κανονική έκφραση. Για περισσότερες "
+"πληροφορίες ανατρέξτε στο λήμμα <link url=\"https://en.wikipedia.org/wiki/"
+"Regular_expression\">Wikipedia</link> για αυτό το θέμα."
 
 #: editactiondialog.cpp:219
 #, kde-format
 msgid "Enter a description for the action"
-msgstr ""
+msgstr "Εισάγετε μια περιγραφή για την ενέργεια"
 
 #: editactiondialog.cpp:220 editcommanddialog.cpp:83
 #, kde-format
@@ -493,7 +515,7 @@ msgstr "Περιγραφή:"
 #: editactiondialog.cpp:223
 #, kde-format
 msgid "Include in automatic popup"
-msgstr ""
+msgstr "Συμπερίληψη σε αυτόματο αναδυόμενο παράθυρο"
 
 #: editactiondialog.cpp:227
 #, kde-kuit-format
@@ -505,52 +527,53 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"Οι εντολές για αυτόν τον συνδυασμό θα συμπεριληφθούν στο αναδυόμενο παράθυρο "
+"αυτόματης ενέργειας, εάν είναι ενεργοποιημένο στη σελίδα <επιφάνεια>Μενού "
+"Ενεργειών</επιφάνεια>. Εάν αυτή η επιλογή είναι απενεργοποιημένη, οι εντολές "
+"για αυτόν τον συνδυασμό δεν θα συμπεριληφθούν στο αυτόματο αναδυόμενο "
+"παράθυρο, αλλά θα συμπεριληφθούν εάν το αναδυόμενο παράθυρο ενεργοποιηθεί "
+"χειροκίνητα με τη συντόμευση πλήκτρων <shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Add Command..."
-msgstr "Προσθήκη εντολής"
+msgstr "Προσθήκη εντολής..."
 
 #: editactiondialog.cpp:267
-#, fuzzy, kde-format
-#| msgid "Add Command"
+#, kde-format
 msgid "Edit Command..."
-msgstr "Προσθήκη εντολής"
+msgstr "Επεξεργασία εντολής..."
 
 #: editactiondialog.cpp:273
-#, fuzzy, kde-format
-#| msgid "Remove Command"
+#, kde-format
 msgid "Delete Command"
-msgstr "Αφαίρεση εντολής"
+msgstr "Διαγραφή εντολής"
 
 #: editactiondialog.cpp:388
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "Διαγραφή της επιλεγμένης εντολής <resource>%1</resource>;"
 
 #: editactiondialog.cpp:389
 #, kde-format
 msgid "Confirm Delete Command"
-msgstr ""
+msgstr "Επιβεβαίωση διαγραφής εντολής"
 
 #: editcommanddialog.cpp:46
-#, fuzzy, kde-format
-#| msgid "Action Properties"
+#, kde-format
 msgid "Command Properties"
-msgstr "Ιδιότητες ενέργειας"
+msgstr "Ιδιότητες εντολής"
 
 #: editcommanddialog.cpp:59
 #, kde-format
 msgid "Enter the command and arguments"
-msgstr ""
+msgstr "Εισάγετε την εντολή και τις παραμέτρους"
 
 #: editcommanddialog.cpp:62
-#, fuzzy, kde-format
-#| msgid "Command"
+#, kde-format
 msgid "Command:"
-msgstr "Εντολή"
+msgstr "Εντολή:"
 
 #: editcommanddialog.cpp:71
 #, kde-kuit-format
@@ -561,116 +584,110 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"Ένα <placeholder>&#37;s</placeholder> στην εντολή θα αντικατασταθεί από τα "
+"πλήρη περιεχόμενα του πρόχειρου. Τα <placeholder>&#37;0</placeholder> έως "
+"<placeholder>&#37;9</placeholder> θα αντικατασταθούν από τα αντίστοιχα "
+"συλληφθέντα κείμενα από το μοτίβο αντιστοίχισης."
 
 #: editcommanddialog.cpp:81
 #, kde-format
 msgid "Enter a description for the command"
-msgstr ""
+msgstr "Εισάγετε μια περιγραφή για την εντολή"
 
 #: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
-msgstr ""
+msgstr "Έξοδος της εντολής:"
 
 #: editcommanddialog.cpp:93
-#, fuzzy, kde-format
-#| msgid "Replace Clipboard"
+#, kde-format
 msgid "Replace current clipboard"
-msgstr "Αντικατάσταση προχείρου"
+msgstr "Αντικατάσταση τρέχοντος πρόχειρου"
 
 #: editcommanddialog.cpp:97
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Append to clipboard"
-msgstr "Προσθήκη στο πρόχειρο"
+msgstr "Προσάρτηση στο πρόχειρο"
 
 #: editcommanddialog.cpp:101
 #, kde-format
 msgid "What happens to the standard output of the command executed."
-msgstr ""
+msgstr "Τι συμβαίνει στην τυπική έξοδο της εντολής που εκτελέστηκε."
 
 #: editcommanddialog.cpp:115
 #, kde-format
 msgid "Reset the icon to the default for the command"
-msgstr ""
+msgstr "Επαναφορά του εικονιδίου στην προεπιλογή για την εντολή"
 
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr ""
+msgstr "Εικονίδιο:"
 
 #: historyimageitem.cpp:36
 #, kde-format
 msgid "%1x%2 %3bpp"
-msgstr ""
+msgstr "%1x%2 %3bpp"
 
 #: historymodel.cpp:100
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
-msgstr "Επιθυμείτε πραγματικά τη διαγραφή του ιστορικού του προχείρου;"
+msgstr ""
+"Θέλετε πραγματικά να καθαρίσετε και να διαγράψετε ολόκληρο το ιστορικό του "
+"πρόχειρου;"
 
 #: historymodel.cpp:101
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgid "Clear Clipboard History"
-msgstr "Κα&θαρισμός ιστορικού προχείρου"
+msgstr "Εκκαθάριση ιστορικού πρόχειρου"
 
 #: klipper.cpp:95
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr "Χρονικό όριο για αναδυόμενα μενού ενεργειών:"
+msgstr "Αυτόματο αναδυόμενο μενού ενεργειών"
 
 #: klipper.cpp:114
-#, fuzzy, kde-format
-#| msgid "C&lear Clipboard History"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr "Κα&θαρισμός ιστορικού προχείρου"
+msgstr "Εκ&καθάριση ιστορικού πρόχειρου"
 
 #: klipper.cpp:121
-#, fuzzy, kde-format
-#| msgid "&Configure Klipper..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr "&Διαμόρφωση Klipper..."
+msgstr "&Διαμόρφωση Klipper…"
 
 #: klipper.cpp:125
-#, fuzzy, kde-format
-#| msgid "Manually Invoke Action on Current Clipboard"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr "Χειροκίνητη κλήση ενέργειας στο τρέχον πρόχειρο"
+msgstr "Κλήση ενέργειας χειροκίνητα στο τρέχον πρόχειρο"
 
 #: klipper.cpp:132
-#, fuzzy, kde-format
-#| msgid "&Show Barcode..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr "&Εμφάνιση Barcode..."
+msgstr "&Εμφάνιση Barcode…"
 
 #: klipper.cpp:141
-#, fuzzy, kde-format
-#| msgid "Next History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr "Επόμενο αντικείμενο ιστορικού"
+msgstr "Επόμενο στοιχείο ιστορικού"
 
 #: klipper.cpp:146
-#, fuzzy, kde-format
-#| msgid "Previous History Item"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr "Προηγούμενο αντικείμενο ιστορικού"
+msgstr "Προηγούμενο στοιχείο ιστορικού"
 
 #: klipper.cpp:153
-#, fuzzy, kde-format
-#| msgid "Open Klipper at Mouse Position"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
-msgstr "Άνοιγμα του Klipper στη θέση του ποντικιού"
+msgstr "Εμφάνιση στοιχείων πρόχειρου στη θέση του ποντικιού"
 
 #: klipper.cpp:318
 #, kde-kuit-format
@@ -679,6 +696,9 @@ msgid ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 msgstr ""
+"Μπορείτε να ενεργοποιήσετε τις ενέργειες URL αργότερα στη σελίδα "
+"<interface>Ενέργειες</interface> του παραθύρου ρυθμίσεων της εφαρμογής του "
+"πρόχειρου"
 
 #: klipper.cpp:555
 #, kde-format
@@ -715,7 +735,7 @@ msgstr "Έκδοση Klipper"
 #: klipper.kcfg:13
 #, kde-format
 msgid "Save history across desktop sessions"
-msgstr ""
+msgstr "Αποθήκευση ιστορικού σε όλες τις συνεδρίες επιφάνειας εργασίας"
 
 #. i18n: ectx: tooltip, entry (KeepClipboardContents), group (General)
 #: klipper.kcfg:15
@@ -724,13 +744,14 @@ msgid ""
 "Retain the clipboard history, so it will be available the next time you log "
 "in."
 msgstr ""
+"Διατήρηση του ιστορικού πρόχειρου, ώστε να είναι διαθέσιμο την επόμενη φορά "
+"που θα συνδεθείτε."
 
 #. i18n: ectx: label, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:18
-#, fuzzy, kde-format
-#| msgid "Prevent empty clipboard"
+#, kde-format
 msgid "Prevent the clipboard from being cleared"
-msgstr "Αποφυγή κενού προχείρου"
+msgstr "Αποτροπή της εκκαθάρισης πρόχειρου"
 
 #. i18n: ectx: whatsthis, entry (PreventEmptyClipboard), group (General)
 #: klipper.kcfg:20
@@ -739,13 +760,14 @@ msgid ""
 "Do not allow the clipboard to be cleared, for example when an application "
 "exits."
 msgstr ""
+"Να μην επιτρέπεται η εκκαθάριση του πρόχειρου, για παράδειγμα κατά την έξοδο "
+"μιας εφαρμογής."
 
 #. i18n: ectx: label, entry (SyncClipboards), group (General)
 #: klipper.kcfg:27
-#, fuzzy, kde-format
-#| msgid "Selection and Clipboard"
+#, kde-format
 msgid "Keep the selection and clipboard the same"
-msgstr "Αποφυγή κενού προχείρου"
+msgstr "Διατήρηση της επιλογής και προχείρου στο ίδιο σημείο"
 
 #. i18n: ectx: whatsthis, entry (SyncClipboards), group (General)
 #: klipper.kcfg:29
@@ -755,13 +777,16 @@ msgid ""
 "that it can be pasted with either a Paste action or a middle-click.<br/><a "
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
+"Το περιεχόμενο που επιλέγεται με τον κέρσορα αντιγράφεται αυτόματα στο "
+"πρόχειρο, ώστε να μπορεί να επικολληθεί είτε με την ενέργεια Eπικόλληση είτε "
+"με μεσαίο κλικ.<br/><a href=\"1\">Περισσότερα για την επιλογή και το "
+"πρόχειρο</a>."
 
 #. i18n: ectx: label, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:32
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Ignore the selection"
-msgstr "Παράβλεψη επιλογής"
+msgstr "Αγνόηση της επιλογής"
 
 #. i18n: ectx: whatsthis, entry (IgnoreSelection), group (General)
 #: klipper.kcfg:34
@@ -771,6 +796,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"Το περιεχόμενο που έχει επιλεγεί με τον κέρσορα αλλά δεν έχει αντιγραφεί "
+"ρητά στο πρόχειρο δεν αποθηκεύεται αυτόματα στο ιστορικό του πρόχειρου και "
+"μπορεί να επικολληθεί μόνο με μεσαίο κλικ."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -785,13 +813,14 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"Αποθήκευση μόνο επιλογών κειμένου στο ιστορικό του πρόχειρου, όχι εικόνων ή "
+"οποιουδήποτε άλλου τύπου δεδομένων."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
-#, fuzzy, kde-format
-#| msgid "Ignore images"
+#, kde-format
 msgid "Always ignore images"
-msgstr "Αγνόηση εικόνων"
+msgstr "Πάντα αγνόηση εικόνων"
 
 #. i18n: ectx: whatsthis, entry (IgnoreImages), group (General)
 #: klipper.kcfg:44
@@ -799,6 +828,8 @@ msgstr "Αγνόηση εικόνων"
 msgid ""
 "Do not store images in the clipboard history, even if explicitly copied."
 msgstr ""
+"Να μην αποθηκεύονται εικόνες στο ιστορικό πρόχειρου, ακόμη και αν έχουν "
+"αντιγραφεί ρητά."
 
 #. i18n: ectx: label, entry (UseGUIRegExpEditor), group (General)
 #: klipper.kcfg:47
@@ -808,10 +839,9 @@ msgstr "Χρήση γραφικού επεξεργαστή κανονικών ε
 
 #. i18n: ectx: label, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:51
-#, fuzzy, kde-format
-#| msgid "Ignore selection"
+#, kde-format
 msgid "Immediately on selection"
-msgstr "Παράβλεψη επιλογής"
+msgstr "Αμέσως μετά την επιλογή"
 
 #. i18n: ectx: tooltip, entry (URLGrabberEnabled), group (General)
 #: klipper.kcfg:52
@@ -819,6 +849,8 @@ msgstr "Παράβλεψη επιλογής"
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
+"Εμφάνιση του αναδυόμενου μενού των εφαρμοζόμενων ενεργειών μόλις γίνει μια "
+"επιλογή."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
@@ -828,30 +860,27 @@ msgstr "Καμία ενέργεια για το WM_CLASS"
 
 #. i18n: ectx: label, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:60
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Automatic action menu time:"
-msgstr "Χρονικό όριο για αναδυόμενα μενού ενεργειών:"
+msgstr "Χρόνος μενού αυτόματης ενέργειας:"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
-#, fuzzy, kde-format
-#| msgid "Timeout for action popups:"
+#, kde-format
 msgid "Display the automatic action popup menu for this time."
-msgstr "Χρονικό όριο για αναδυόμενα μενού ενεργειών:"
+msgstr "Εμφάνιση του αναδυόμενου μενού αυτόματης ενέργειας για αυτή τη στιγμή."
 
 #. i18n: ectx: label, entry (MaxClipItems), group (General)
 #: klipper.kcfg:67
-#, fuzzy, kde-format
-#| msgid "Clipboard history size:"
+#, kde-format
 msgid "History size:"
-msgstr "Μέγεθος ιστορικού του προχείρου:"
+msgstr "Μέγεθος ιστορικού:"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71
 #, kde-format
 msgid "The clipboard history will store up to this many items."
-msgstr ""
+msgstr "Το ιστορικό του πρόχειρου θα αποθηκεύσει έως και τόσα αντικείμενα."
 
 #. i18n: ectx: label, entry (ActionList), group (General)
 #: klipper.kcfg:74
@@ -863,10 +892,9 @@ msgstr ""
 
 #. i18n: ectx: label, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:84
-#, fuzzy, kde-format
-#| msgid "Strip whitespace when executing an action"
+#, kde-format
 msgid "Trim whitespace from selection"
-msgstr "Αφαίρεση των κενών κατά την εκτέλεση ενεργειών"
+msgstr "Αποκοπή λευκών διαστημάτων από την επιλογή"
 
 #. i18n: ectx: whatsthis, entry (StripWhiteSpace), group (Actions)
 #: klipper.kcfg:86
@@ -877,29 +905,32 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"Αφαιρεί τυχόν κενά από την αρχή και το τέλος του επιλεγμένου κειμένου, πριν "
+"από την εκτέλεση μιας ενέργειας. Για παράδειγμα, αυτό διασφαλίζει ότι μια "
+"διεύθυνση URL που επικολλάται σε ένα πρόγραμμα περιήγησης ερμηνεύεται όπως "
+"αναμένεται. Το κείμενο που αποθηκεύεται στο πρόχειρο δεν επηρεάζεται."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
-#, fuzzy, kde-format
-#| msgid "Replay actions on an item selected from history"
+#, kde-format
 msgid "For an item chosen from history"
-msgstr "Επανάληψη ενεργειών σε ένα αντικείμενο επιλεγμένο από το ιστορικό"
+msgstr "Για ένα αντικείμενο που επιλέγεται από το ιστορικό"
 
 #. i18n: ectx: tooltip, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:91
-#, fuzzy, kde-format
-#| msgid "Really delete entire clipboard history?"
+#, kde-format
 msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
-msgstr "Επιθυμείτε πραγματικά τη διαγραφή του ιστορικού του προχείρου;"
+msgstr ""
+"Εμφάνιση του αναδυόμενου μενού των εφαρμοζόμενων ενεργειών εάν επιλεγεί μια "
+"καταχώρηση από το ιστορικό του πρόχειρου."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
-#, fuzzy, kde-format
-#| msgid "Enable MIME-based actions"
+#, kde-format
 msgid "Include MIME actions"
-msgstr "Ενεργοποίηση ενεργειών με βάση τον τύπο MIME"
+msgstr "Συμπερίληψη ενεργειών MIME"
 
 #. i18n: ectx: whatsthis, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:96
@@ -908,12 +939,13 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"Εάν έχει επιλεγεί ένα όνομα αρχείου ή μια διεύθυνση URL, συμπεριλάβετε στο "
+"αναδυόμενο μενού εφαρμογές που μπορούν να δεχτούν τον τύπο MIME."
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "Ιστορικό του προχείρου"
+msgstr "Αναδυόμενο μενού πρόχειρου"
 
 #: urlgrabber.cpp:200
 #, kde-format
@@ -933,7 +965,7 @@ msgstr "&Ακύρωση"
 #, fuzzy
 #~| msgid "Search..."
 #~ msgid "Search…"
-#~ msgstr "Αναζήτηση..."
+#~ msgstr "Αναζήτηση…"
 
 #, fuzzy
 #~| msgid "Regular expression:"

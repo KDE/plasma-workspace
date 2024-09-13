@@ -29,7 +29,7 @@ msgstr "Η προβολή εργασίας %1 δεν μπορεί να βρεθ�
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
-msgstr "%1/δ"
+msgstr "%1/s"
 
 #~ msgid "Job canceled by user."
 #~ msgstr "Η εργασία ακυρώθηκε από τον χρήστη."

@@ -10,19 +10,20 @@
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012.
 # Bouklis Panos <panos@echidna-band.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2016.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2016-09-16 14:37+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-15 11:41+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -41,13 +42,13 @@ msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
-"Επιθυμείτε την εγκατάσταση της(των) γραμματοσειράς(ών) για προσωπική χρήση, "
-"ή για όλο το σύστημα (διαθέσιμη σε όλους τους χρήστες);"
+"Θέλετε να εγκαταστήσετε τη γραμματοσειρά (ές) για προσωπική χρήση (διαθέσιμη "
+"μόνο σε εσάς) ή σε όλο το σύστημα (διαθέσιμη σε όλους τους χρήστες);"
 
 #: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:957
 #, kde-format
 msgid "Where to Install"
-msgstr "Που θα γίνει η εγκατάσταση"
+msgstr "Πού να εγκατασταθεί"
 
 #: apps/Installer.cpp:113
 #, kde-format
@@ -57,7 +58,7 @@ msgstr "Εγκαταστάτης γραμματοσειρών"
 #: apps/Installer.cpp:115
 #, kde-format
 msgid "Simple font installer"
-msgstr "Απλή εγκατάσταση γραμματοσειρών"
+msgstr "Απλός εγκαταστάτης γραμματοσειρών"
 
 #: apps/Installer.cpp:117 apps/Printer.cpp:332
 #, kde-format
@@ -65,16 +66,16 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:124
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"Κάνει το διάλογο μεταβατικό για μία εφαρμογή X που καθορίζεται από το winId"
+"Κάνει το διάλογο μεταβατικό για ένα παράθυρο που καθορίζεται από το "
+"windowHandle"
 
 #: apps/Installer.cpp:127
 #, kde-format
 msgid "URL to install"
-msgstr "URL εγκατάστασης"
+msgstr "URL για εγκατάσταση"
 
 #: apps/Printer.cpp:241
 #, kde-format
@@ -82,10 +83,9 @@ msgid "Print"
 msgstr "Εκτύπωση"
 
 #: apps/Printer.cpp:311 kcmfontinst/DuplicatesDialog.cpp:224
-#, fuzzy, kde-format
-#| msgid "Canceling..."
+#, kde-format
 msgid "Canceling…"
-msgstr "Ακύρωση..."
+msgstr "Ακύρωση…"
 
 #: apps/Printer.cpp:328
 #, kde-format
@@ -128,17 +128,14 @@ msgid "Remove file containing list of fonts to print"
 msgstr "Αφαίρεση αρχείου λίστας γραμματοσειρών προς εκτύπωση"
 
 #: apps/Viewer.cpp:48
-#, fuzzy, kde-format
-#| msgid "Open font in font viewer?"
-#| msgid_plural "Open all %1 fonts in font viewer?"
+#, kde-format
 msgid "Open an existing font file"
-msgstr "Άνοιγμα γραμματοσειράς στον προβολέα;"
+msgstr "Άνοιγμα υπάρχοντος αρχείου γραμματοσειράς"
 
 #: apps/Viewer.cpp:49
-#, fuzzy, kde-format
-#| msgid "Print Font Samples"
+#, kde-format
 msgid "Print font preview"
-msgstr "Δείγματα εκτύπωσης γραμματοσειράς"
+msgstr "Προεπισκόπηση γραμματοσειράς εκτύπωσης"
 
 #: apps/Viewer.cpp:66
 #, kde-format
@@ -168,23 +165,22 @@ msgstr "(C) Craig Drummond, 2004-2007"
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
 msgid "Duplicate Fonts"
-msgstr "Διπλές γραμματοσειρές"
+msgstr "Διπλότυπες γραμματοσειρές"
 
 #: kcmfontinst/DuplicatesDialog.cpp:79
-#, fuzzy, kde-format
-#| msgid "Scanning for duplicate fonts. Please wait..."
+#, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr "Σάρωση για διπλές γραμματοσειρές. Παρακαλώ περιμένετε..."
+msgstr "Σάρωση για διπλότυπες γραμματοσειρές. Παρακαλώ περιμένετε…"
 
 #: kcmfontinst/DuplicatesDialog.cpp:98
 #, kde-format
 msgid "No duplicate fonts found."
-msgstr "Δε βρέθηκαν διπλές γραμματοσειρές."
+msgstr "Δε βρέθηκαν διπλότυπες γραμματοσειρές."
 
 #: kcmfontinst/DuplicatesDialog.cpp:106
 #, kde-format
 msgid "Delete Marked Files"
-msgstr "Διαγραφή επιλεγμένων αρχείων"
+msgstr "Διαγραφή επισημασμένων αρχείων"
 
 #: kcmfontinst/DuplicatesDialog.cpp:108
 #, kde-format
@@ -312,7 +308,7 @@ msgstr "Σύμβολο/άλλο"
 #: kcmfontinst/FontFilter.cpp:267 kcmfontinst/FontFilter.cpp:335
 #, kde-format
 msgid "Filter by %1…"
-msgstr ""
+msgstr "Φίλτρο κατά %1…"
 
 #: kcmfontinst/FontList.cpp:548
 #, kde-format
@@ -348,10 +344,9 @@ msgstr ""
 "li><li>Πλάγια</li></ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
-#, fuzzy, kde-format
-#| msgid "...plus %1 more"
+#, kde-format
 msgid "…plus %1 more"
-msgstr "...και %1 επιπλέον"
+msgstr "…και %1 επιπλέον"
 
 #: kcmfontinst/FontList.cpp:1001
 #, kde-format
@@ -376,10 +371,9 @@ msgid "Disable"
 msgstr "Απενεργοποίηση"
 
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:798
-#, fuzzy, kde-format
-#| msgid "Print"
+#, kde-format
 msgid "Print…"
-msgstr "Εκτύπωση"
+msgstr "Εκτύπωση…"
 
 #: kcmfontinst/FontList.cpp:1312
 #, kde-format
@@ -409,7 +403,7 @@ msgstr "Γραμματοσειρές συστήματος"
 #: kcmfontinst/GroupList.cpp:70
 #, kde-format
 msgid "Unclassified"
-msgstr "Μη κατηγοριοποιημένες"
+msgstr "Αταξινόμητες"
 
 #: kcmfontinst/GroupList.cpp:352
 #, kde-format
@@ -497,21 +491,19 @@ msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
 msgstr "<qt>Μια ομάδα με το όνομα <b>'%1'</b> υπάρχει ήδη.</qt>"
 
 #: kcmfontinst/GroupList.cpp:794
-#, fuzzy, kde-format
-#| msgid "Rename..."
+#, kde-format
 msgid "Rename…"
-msgstr "Μετονομασία..."
+msgstr "Μετονομασία…"
 
 #: kcmfontinst/GroupList.cpp:803
-#, fuzzy, kde-format
-#| msgid "Export..."
+#, kde-format
 msgid "Export…"
-msgstr "Εξαγωγή..."
+msgstr "Εξαγωγή…"
 
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
 msgid "Add to \"%1\"."
-msgstr "Προσθήκη σε \"%1\"."
+msgstr "Προσθήκη σε «%1»."
 
 #: kcmfontinst/GroupList.cpp:899
 #, kde-format
@@ -593,10 +585,9 @@ msgid "Disabling"
 msgstr "Απενεργοποίηση"
 
 #: kcmfontinst/JobRunner.cpp:372
-#, fuzzy, kde-format
-#| msgid "Updating font configuration. Please wait..."
+#, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr "Ενημέρωση ρυθμίσεων γραμματοσειρών. Παρακαλώ περιμένετε..."
+msgstr "Ενημέρωση των ρυθμίσεων γραμματοσειράς. Παρακαλώ περιμένετε…"
 
 #: kcmfontinst/JobRunner.cpp:444
 #, kde-format
@@ -690,28 +681,24 @@ msgid "Unexpected error while processing: <i>%1</i>"
 msgstr "Απρόβλεπτο σφάλμα κατά την επεξεργασία: <i>%1</i>"
 
 #: kcmfontinst/KCmFontInst.cpp:213
-#, fuzzy, kde-format
-#| msgid "Create New Group"
+#, kde-format
 msgid "Create New Group…"
-msgstr "Δημιουργία νέας ομάδας"
+msgstr "Δημιουργία νέας ομάδας…"
 
 #: kcmfontinst/KCmFontInst.cpp:216
-#, fuzzy, kde-format
-#| msgid "Remove Group"
+#, kde-format
 msgid "Remove Group…"
-msgstr "Αφαίρεση ομάδας"
+msgstr "Αφαίρεση ομάδας…"
 
 #: kcmfontinst/KCmFontInst.cpp:219
-#, fuzzy, kde-format
-#| msgid "Enable Fonts"
+#, kde-format
 msgid "Enable Fonts in Group…"
-msgstr "Ενεργοποίηση γραμματοσειρών"
+msgstr "Ενεργοποίηση γραμματοσειρών στην ομάδα…"
 
 #: kcmfontinst/KCmFontInst.cpp:222
-#, fuzzy, kde-format
-#| msgid "Disable Fonts"
+#, kde-format
 msgid "Disable Fonts in Group…"
-msgstr "Απενεργοποίηση γραμματοσειρών"
+msgstr "Απενεργοποίηση γραμματοσειρών σε ομάδα…"
 
 #: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
@@ -719,50 +706,44 @@ msgid "This displays a preview of the selected font."
 msgstr "Αυτό εμφανίζει μια προεπισκόπηση της επιλεγμένης γραμματοσειράς."
 
 #: kcmfontinst/KCmFontInst.cpp:260
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
+#, kde-format
 msgid "Find Duplicates…"
-msgstr "Σάρωση για διπλές γραμματοσειρές..."
+msgstr "Εύρεση διπλότυπων"
 
 #: kcmfontinst/KCmFontInst.cpp:260
-#, fuzzy, kde-format
-#| msgid "Scan for Duplicate Fonts..."
+#, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr "Σάρωση για διπλές γραμματοσειρές..."
+msgstr "Σάρωση για διπλότυπες γραμματοσειρές…"
 
 #: kcmfontinst/KCmFontInst.cpp:262
-#, fuzzy, kde-format
-#| msgid "Install..."
+#, kde-format
 msgid "Install from File…"
-msgstr "Εγκατάσταση..."
+msgstr "Εγκατάσταση από αρχείο…"
 
 #: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr ""
+msgstr "Εγκατάσταση γραμματοσειρών από τοπικό αρχείο"
 
 #: kcmfontinst/KCmFontInst.cpp:263
-#, fuzzy, kde-format
-#| msgid "Get New Fonts..."
+#, kde-format
 msgid "Get New Fonts…"
-msgstr "Λήψη νέων γραμματοσειρών..."
+msgstr "Λήψη νέων γραμματοσειρών…"
 
 #: kcmfontinst/KCmFontInst.cpp:264
 #, kde-format
 msgid "Download new fonts"
-msgstr ""
+msgstr "Λήψη νέων γραμματοσειρών"
 
 #: kcmfontinst/KCmFontInst.cpp:266
-#, fuzzy, kde-format
-#| msgid "Delete all selected fonts"
+#, kde-format
 msgid "Delete Selected Fonts…"
-msgstr "Διαγραφή όλων των επιλεγμένων γραμματοσειρών"
+msgstr "Διαγραφή επιλεγμένων γραμματοσειρών…"
 
 #: kcmfontinst/KCmFontInst.cpp:336
-#, fuzzy, kde-format
-#| msgid "Change Preview Text..."
+#, kde-format
 msgid "Change Preview Text…"
-msgstr "Αλλαγή κειμένου προεπισκόπησης..."
+msgstr "Αλλαγή κειμένου προεπισκόπησης…"
 
 #: kcmfontinst/KCmFontInst.cpp:435
 #, kde-format
@@ -826,10 +807,9 @@ msgid "Delete Fonts"
 msgstr "Διαγραφή γραμματοσειρών"
 
 #: kcmfontinst/KCmFontInst.cpp:637
-#, fuzzy, kde-format
-#| msgid "Deleting font(s)..."
+#, kde-format
 msgid "Deleting font(s)…"
-msgstr "Διαγραφή γραμματοσειρών..."
+msgstr "Διαγραφή γραμματοσειράς(ών)…"
 
 #: kcmfontinst/KCmFontInst.cpp:652
 #, kde-format
@@ -879,10 +859,9 @@ msgid "Move Fonts"
 msgstr "Μετακίνηση γραμματοσειρών"
 
 #: kcmfontinst/KCmFontInst.cpp:684
-#, fuzzy, kde-format
-#| msgid "Moving font(s)..."
+#, kde-format
 msgid "Moving font(s)…"
-msgstr "Μετακίνηση γραμματοσειράς(ών)..."
+msgstr "Μετακίνηση γραμματοσειράς(ών)…"
 
 #: kcmfontinst/KCmFontInst.cpp:698
 #, kde-format
@@ -905,10 +884,9 @@ msgid "Create New Group"
 msgstr "Δημιουργία νέας ομάδας"
 
 #: kcmfontinst/KCmFontInst.cpp:747
-#, fuzzy, kde-format
-#| msgid "Create New Group"
+#, kde-format
 msgid "Name of new group:"
-msgstr "Δημιουργία νέας ομάδας"
+msgstr "Όνομα νέας ομάδας:"
 
 #: kcmfontinst/KCmFontInst.cpp:747
 #, kde-format
@@ -918,7 +896,7 @@ msgstr "Νέα ομάδα"
 #: kcmfontinst/KCmFontInst.cpp:775
 #, kde-format
 msgid "Preview Text"
-msgstr "Κείμενο προεπισκόπησης"
+msgstr "Προεπισκόπηση κειμένου"
 
 #: kcmfontinst/KCmFontInst.cpp:775
 #, kde-format
@@ -926,10 +904,9 @@ msgid "Please enter new text:"
 msgstr "Παρακαλώ εισάγετε νέο κείμενο:"
 
 #: kcmfontinst/KCmFontInst.cpp:827
-#, fuzzy, kde-format
-#| msgid "Scanning font list..."
+#, kde-format
 msgid "Scanning font list…"
-msgstr "Σάρωση λίστας γραμματοσειρών..."
+msgstr "Σάρωση λίστας γραμματοσειρών…"
 
 #: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
@@ -940,7 +917,7 @@ msgstr "Καμία γραμματοσειρά"
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
-msgstr[0] "Μία γραμματοσειρά"
+msgstr[0] "1 γραμματοσειρά"
 msgstr[1] "%1 γραμματοσειρές"
 
 #: kcmfontinst/KCmFontInst.cpp:900
@@ -968,22 +945,19 @@ msgstr ""
 "\">Σύνολο:</td><td>%3</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:987
-#, fuzzy, kde-format
-#| msgid "Looking for any associated files..."
+#, kde-format
 msgid "Looking for any associated files…"
-msgstr "Αναζήτηση συσχετιζόμενων αρχείων..."
+msgstr "Αναζήτηση τυχόν σχετικών αρχείων…"
 
 #: kcmfontinst/KCmFontInst.cpp:991
-#, fuzzy, kde-format
-#| msgid "Scanning Files..."
+#, kde-format
 msgid "Scanning Files…"
-msgstr "Σάρωση αρχείων..."
+msgstr "Σάρωση αρχείων…"
 
 #: kcmfontinst/KCmFontInst.cpp:992
-#, fuzzy, kde-format
-#| msgid "Looking for additional files to install..."
+#, kde-format
 msgid "Looking for additional files to install…"
-msgstr "Αναζήτηση πρόσθετων αρχείων για εγκατάσταση..."
+msgstr "Αναζήτηση πρόσθετων αρχείων για εγκατάσταση…"
 
 #: kcmfontinst/KCmFontInst.cpp:1007
 #, kde-format
@@ -991,10 +965,9 @@ msgid "Looking for files associated with %1"
 msgstr "Αναζήτηση συσχετιζόμενων αρχείων με την %1"
 
 #: kcmfontinst/KCmFontInst.cpp:1035
-#, fuzzy, kde-format
-#| msgid "Installing font(s)..."
+#, kde-format
 msgid "Installing font(s)…"
-msgstr "Εγκατάσταση γραμματοσειρών..."
+msgstr "Εγκατάσταση γραμματοσειράς(ών)…"
 
 #: kcmfontinst/KCmFontInst.cpp:1100
 #, kde-format
@@ -1109,16 +1082,14 @@ msgid "Disable Fonts"
 msgstr "Απενεργοποίηση γραμματοσειρών"
 
 #: kcmfontinst/KCmFontInst.cpp:1162
-#, fuzzy, kde-format
-#| msgid "Enabling font(s)..."
+#, kde-format
 msgid "Enabling font(s)…"
-msgstr "Ενεργοποίηση γραμματοσειρών..."
+msgstr "Ενεργοποίηση γραμματοσειράς(ών)…"
 
 #: kcmfontinst/KCmFontInst.cpp:1164
-#, fuzzy, kde-format
-#| msgid "Disabling font(s)..."
+#, kde-format
 msgid "Disabling font(s)…"
-msgstr "Απενεργοποίηση γραμματοσειρών..."
+msgstr "Απενεργοποίηση γραμματοσειράς(ών)…"
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
@@ -1421,11 +1392,11 @@ msgstr "Υπερβολικά ανεπτυγμένα"
 
 #: lib/KfiConstants.h:104
 msgid "Monospaced"
-msgstr "Ίσων αποστάσεων"
+msgstr "Μονόστηλο"
 
 #: lib/KfiConstants.h:105
 msgid "Charcell"
-msgstr "Ίδιου μεγέθους"
+msgstr "Σαρσέλ"
 
 #: lib/KfiConstants.h:106
 msgid "Proportional"
@@ -1494,7 +1465,7 @@ msgstr "Σήμανση, περικλείοντα"
 #: viewpart/CharTip.cpp:68
 #, kde-format
 msgid "Mark, Non-Spacing"
-msgstr "Σήμανση, μη-κενά"
+msgstr "Σήμανση, κη-κενά"
 
 #: viewpart/CharTip.cpp:70
 #, kde-format
@@ -1609,19 +1580,17 @@ msgstr "Δεκαδική οντότητα XML"
 #: viewpart/FontViewPart.cpp:91
 #, kde-format
 msgid "Show Face:"
-msgstr "Πρόσωπο:"
+msgstr "Εμφάνιση προσώπου:"
 
 #: viewpart/FontViewPart.cpp:94
-#, fuzzy, kde-format
-#| msgid "Installing"
+#, kde-format
 msgid "Install…"
-msgstr "Εγκατάσταση"
+msgstr "Εγκατάσταση…"
 
 #: viewpart/FontViewPart.cpp:115
-#, fuzzy, kde-format
-#| msgid "Change Text..."
+#, kde-format
 msgid "Change Text…"
-msgstr "Αλλαγή κειμένου..."
+msgstr "Αλλαγή κειμένου…"
 
 #: viewpart/FontViewPart.cpp:341
 #, kde-format
@@ -1631,12 +1600,12 @@ msgstr "Αδυναμία ανάγνωσης γραμματοσειράς."
 #: viewpart/FontViewPart.cpp:407
 #, kde-format
 msgid "Preview String"
-msgstr "Συμβολοσειρά προεπισκόπησης"
+msgstr "Προεπισκόπηση συμβολοσειράς"
 
 #: viewpart/FontViewPart.cpp:407
 #, kde-format
 msgid "Please enter new string:"
-msgstr "Παρακαλώ εισάγετε μια νέα συμβολοσειρά:"
+msgstr "Eισάγετε μια νέα συμβολοσειρά:"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: viewpart/kfontviewpart.rc:4
@@ -1647,7 +1616,7 @@ msgstr "&Κύρια γραμμή εργαλείων"
 #: viewpart/PreviewSelectAction.cpp:15
 #, kde-format
 msgid "Preview Type"
-msgstr "Τύπος προεπισκόπησης"
+msgstr "Προεπισκόπηση τύπος"
 
 #: viewpart/PreviewSelectAction.cpp:33
 #, kde-format

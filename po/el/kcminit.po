@@ -47,7 +47,7 @@ msgstr "Λίστα αρθρωμάτων που εκτελούνται κατά �
 #: main.cpp:177
 #, kde-format
 msgid "Configuration module to run"
-msgstr "Ρύθμιση εκτέλεσης αρθρώματος"
+msgstr "Άρθρωμα ρύθμισης για εκτέλεση"
 
 #~ msgid "Module %1 not found"
 #~ msgstr "Το άρθρωμα %1 δε βρέθηκε"
