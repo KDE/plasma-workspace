@@ -4,19 +4,20 @@
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2009.
 # Bouklis Panos <panos@echidna-band.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2016, 2017.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2017-06-12 16:41+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-24 13:43+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: bbcukmet_i18n.dat:1
@@ -130,12 +131,10 @@ msgid "heavy rain shower"
 msgstr "ισχυρές βροχοπτώσεις κατά διαστήματα"
 
 #: bbcukmet_i18n.dat:19
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "heavy rain showers"
-msgstr "ισχυρές βροχοπτώσεις κατά διαστήματα"
+msgstr "ισχυρές βροχές"
 
 #: bbcukmet_i18n.dat:20
 #, kde-format
@@ -187,12 +186,10 @@ msgid "light rain shower"
 msgstr "ασθενής βροχόπτωση κατά διαστήματα"
 
 #: bbcukmet_i18n.dat:28
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "light rain showers"
-msgstr "ασθενής βροχόπτωση κατά διαστήματα"
+msgstr "ελαφρές βροχοπτώσεις"
 
 #: bbcukmet_i18n.dat:29
 #, kde-format
@@ -311,12 +308,10 @@ msgid "thundery shower"
 msgstr "Μπόρα με αστραπές"
 
 #: bbcukmet_i18n.dat:48
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "thundery shower"
+#, kde-format
 msgctxt "weather condition"
 msgid "thundery showers"
-msgstr "Μπόρα με αστραπές"
+msgstr "βροχές με καταιγίδες"
 
 #: bbcukmet_i18n.dat:49
 #, kde-format
@@ -439,12 +434,10 @@ msgid "heavy rain shower"
 msgstr "ισχυρές βροχοπτώσεις κατά διαστήματα"
 
 #: bbcukmet_i18n.dat:69
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "heavy rain shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain showers"
-msgstr "ισχυρές βροχοπτώσεις κατά διαστήματα"
+msgstr "έντονες βροχοπτώσεις"
 
 #: bbcukmet_i18n.dat:70
 #, kde-format
@@ -495,12 +488,10 @@ msgid "light rain shower"
 msgstr "ασθενής βροχόπτωση κατά διαστήματα"
 
 #: bbcukmet_i18n.dat:78
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "light rain showers"
-msgstr "ασθενής βροχόπτωση κατά διαστήματα"
+msgstr "ελαφρές βροχοπτώσεις"
 
 #: bbcukmet_i18n.dat:79
 #, kde-format
@@ -611,12 +602,10 @@ msgid "thundery shower"
 msgstr "Μπόρα με αστραπές"
 
 #: bbcukmet_i18n.dat:97
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "thundery shower"
+#, kde-format
 msgctxt "weather forecast"
 msgid "thundery showers"
-msgstr "Μπόρα με αστραπές"
+msgstr "βροχές με καταιγίδες"
 
 #: bbcukmet_i18n.dat:98
 #, kde-format
@@ -1096,7 +1085,7 @@ msgstr "Πρόσφατη καταιγίδα με βροχή"
 #, kde-format
 msgctxt "weather condition"
 msgid "Sand or Dust Storm"
-msgstr "Αμμοθύελλα "
+msgstr "Αμμοθύελλα"
 
 #: envcan_i18n.dat:74
 #, kde-format
@@ -1159,20 +1148,16 @@ msgid "Thunderstorm with Rain"
 msgstr "Καταιγίδα με βροχή"
 
 #: envcan_i18n.dat:84
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Thunderstorm with Rain"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with light rainshowers"
-msgstr "Καταιγίδα με βροχή"
+msgstr "Καταιγίδα με ελαφρές βροχοπτώσεις"
 
 #: envcan_i18n.dat:85
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Recent Thunderstorm with Heavy Rain"
+#, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with heavy rainshowers"
-msgstr "Πρόσφατη καταιγίδα με ισχυρή βροχή"
+msgstr "Καταιγίδα με ισχυρές βροχοπτώσεις"
 
 #: envcan_i18n.dat:86
 #, kde-format
@@ -1370,7 +1355,7 @@ msgstr "Πιθανότητα παγωμένης βροχής"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of freezing rain mixed with snow"
-msgstr "Πιθανότητα βροχής με χιόνι"
+msgstr "Πιθανότητα παγωμένης βροχής με χιόνι"
 
 #: envcan_i18n.dat:119
 #, kde-format
@@ -1649,20 +1634,16 @@ msgid "Cloudy"
 msgstr "Συννεφιασμένος"
 
 #: envcan_i18n.dat:165
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "partly cloudy"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Partly cloudy"
-msgstr "μερικώς συννεφιασμένος"
+msgstr "Μερικώς συννεφιασμένος"
 
 #: envcan_i18n.dat:166
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "partly cloudy"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Mainly cloudy"
-msgstr "μερικώς συννεφιασμένος"
+msgstr "Κυρίως συννεφιασμένος"
 
 #: envcan_i18n.dat:167
 #, kde-format
@@ -1839,44 +1820,34 @@ msgid "Ice fog dissipating"
 msgstr "Παγωμένη ομίχλη υπό διάλυση"
 
 #: envcan_i18n.dat:196
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets"
-msgstr "Παγόκοκκοι"
+msgstr "Σφαιρίδια πάγου"
 
 #: envcan_i18n.dat:197
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet mixed with freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with freezing rain"
-msgstr "Παγόκοκκοι με παγωμένη βροχή"
+msgstr "Σφαιρίδια πάγου αναμεμειγμένα με παγωμένη βροχή"
 
 #: envcan_i18n.dat:198
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet mixed with snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with snow"
-msgstr "Παγόκοκκοι με χιόνι"
+msgstr "Σφαιρίδια πάγου αναμεμειγμένα με χιόνι"
 
 #: envcan_i18n.dat:199
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet or freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or freezing rain"
-msgstr "Παγόκοκκοι ή παγωμένη βροχή"
+msgstr "Σφαιρίδια πάγου ή παγωμένη βροχή"
 
 #: envcan_i18n.dat:200
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Ice pellet or snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or snow"
-msgstr "Παγόκοκκοι ή χιόνι"
+msgstr "Σφαιρίδια πάγου ή χιόνι"
 
 #: envcan_i18n.dat:201
 #, kde-format
@@ -2083,44 +2054,34 @@ msgid "Periods of freezing rain or snow"
 msgstr "Παγωμένη βροχή ή χιόνι κατά διαστήματα"
 
 #: envcan_i18n.dat:235
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets"
-msgstr "Παγόκοκκοι κατά διαστήματα"
+msgstr "Περίοδοι σφαιριδίων πάγου"
 
 #: envcan_i18n.dat:236
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet mixed with freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with freezing rain"
-msgstr "Παγόκοκκοι με παγωμένη βροχή κατά διαστήματα"
+msgstr "Περιόδους με σφαιρίδια πάγου αναμεμειγμένα με παγωμένη βροχή"
 
 #: envcan_i18n.dat:237
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet mixed with snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with snow"
-msgstr "Παγόκοκκοι με χιόνι κατά διαστήματα"
+msgstr "Περιόδους με σφαιρίδια πάγου αναμεμειγμένα με χιόνι"
 
 #: envcan_i18n.dat:238
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet or freezing rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or freezing rain"
-msgstr "Παγόκοκκοι ή παγωμένη βροχή κατά διαστήματα"
+msgstr "Περίοδοι με σφαιρίδια πάγου ή παγωμένη βροχή"
 
 #: envcan_i18n.dat:239
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Periods of ice pellet or snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or snow"
-msgstr "Παγόκοκκοι ή χιόνι κατά διαστήματα"
+msgstr "Περίοδοι με σφαιρίδια πάγου ή χιόνι"
 
 #: envcan_i18n.dat:240
 #, kde-format
@@ -2652,12 +2613,10 @@ msgid "Sunny"
 msgstr "Λιακάδα"
 
 #: envcan_i18n.dat:328
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mainly Sunny"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Mainly sunny"
-msgstr "Κυρίως λιακάδα"
+msgstr "Κυρίως ηλιόλουστη"
 
 #: envcan_i18n.dat:329
 #, kde-format
@@ -2742,14 +2701,13 @@ msgstr "Ανεμώδης"
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
-msgstr ""
+msgstr "Σήμερα"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:697
-#, fuzzy, kde-format
-#| msgid "Night"
+#, kde-format
 msgctxt "Short for Tonight"
 msgid "Tonight"
-msgstr "Νύχτα"
+msgstr "Απόψε"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:718
 #, kde-format
@@ -2803,7 +2761,7 @@ msgstr "Παρ"
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
-msgstr ""
+msgstr "Πηγή: γερμανική μετεωρολογική υπηρεσία"
 
 #: ions/envcan/ion_envcan.cpp:883 ions/envcan/ion_envcan.cpp:885
 #: ions/envcan/ion_envcan.cpp:1371 ions/envcan/ion_envcan.cpp:1500
@@ -2836,12 +2794,10 @@ msgid "Trace"
 msgstr "Ίχνη"
 
 #: ions/envcan/ion_envcan.cpp:1563
-#, fuzzy, kde-format
-#| msgctxt "credit line, keep string short"
-#| msgid "Data from Environment Canada"
+#, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
-msgstr "Δεδομένα από Environment Canada"
+msgstr "Δεδομένα από την καναδική μετεωρολογική υπηρεσία"
 
 #: ions/noaa/ion_noaa.cpp:522
 #, kde-format
@@ -2858,7 +2814,7 @@ msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "
 "\"Rain then Sunny\")"
 msgid " then "
-msgstr ""
+msgstr " τότε "
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -3091,7 +3047,7 @@ msgstr "Ψιλόβροχο Ομίχλη"
 #, kde-format
 msgctxt "weather condition"
 msgid "Drizzle Fog/Mist"
-msgstr "Ψιλόβροχο Ομίχλη/υγρή αχλή"
+msgstr "Ψιλόβροχο ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:16
 #, kde-format
@@ -3121,7 +3077,7 @@ msgstr "Αμμοστρόβιλοι σε κοντινή απόσταση"
 #, kde-format
 msgctxt "weather condition"
 msgid "Dust Storm"
-msgstr "Αμμοθύελλα "
+msgstr "Αμμοθύελλα"
 
 #: noaa_i18n.dat:22
 #, kde-format
@@ -3181,13 +3137,13 @@ msgstr "Παγωμένο ψιλόβροχο σε κοντινή απόσταση
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle Rain"
-msgstr "Παγωμένο ψιλόβροχο Βροχή"
+msgstr "Παγωμένο ψιλόβροχο βροχή"
 
 #: noaa_i18n.dat:33
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Drizzle Snow"
-msgstr "Παγωμένο ψιλόβροχο Χιόνι"
+msgstr "Παγωμένο ψιλόβροχο χιόνι"
 
 #: noaa_i18n.dat:34
 #, kde-format
@@ -3217,19 +3173,19 @@ msgstr "Παγωμένη βροχή σε κοντινή απόσταση"
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain Rain"
-msgstr "Παγωμένη βροχή Βροχή"
+msgstr "Παγωμένη βροχή βροχή"
 
 #: noaa_i18n.dat:39
 #, kde-format
 msgctxt "weather condition"
 msgid "Freezing Rain Snow"
-msgstr "Παγωμένη βροχή Χιόνι"
+msgstr "Παγωμένη βροχή χιόνι"
 
 #: noaa_i18n.dat:41
 #, kde-format
 msgctxt "weather condition"
 msgid "Funnel Cloud in Vicinity"
-msgstr "Σύννεφο-χοάνη σε κοντινή απόσταση"
+msgstr "Σύννεφο-Χοάνη σε κοντινή απόσταση"
 
 #: noaa_i18n.dat:43
 #, kde-format
@@ -3241,25 +3197,25 @@ msgstr "Χαλαζοπτώσεις κατά διαστήματα"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Fog"
-msgstr "Ισχυρό ψιλόβροχο Ομίχλη"
+msgstr "Ισχυρό ψιλόβροχο ομίχλη"
 
 #: noaa_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Fog/Mist"
-msgstr "Ισχυρό ψιλόβροχο Ομίχλη/υγρή αχλή"
+msgstr "Ισχυρό ψιλόβροχο ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:49
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Ice Pellets"
-msgstr "Ισχυρό ψιλόβροχο Παγόκοκκοι"
+msgstr "Ισχυρό ψιλόβροχο παγόκοκκοι"
 
 #: noaa_i18n.dat:50
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Snow"
-msgstr "Ισχυρό ψιλόβροχο Χιόνι"
+msgstr "Ισχυρό ψιλόβροχο χιόνι"
 
 #: noaa_i18n.dat:51
 #, kde-format
@@ -3277,13 +3233,13 @@ msgstr "Ισχυρό παγωμένο ψιλόβροχο"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle Rain"
-msgstr "Ισχυρό παγωμένο ψιλόβροχο Βροχή"
+msgstr "Ισχυρό παγωμένο ψιλόβροχο βροχή"
 
 #: noaa_i18n.dat:54
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Drizzle Snow"
-msgstr "Ισχυρό παγωμένο ψιλόβροχο Χιόνι"
+msgstr "Ισχυρό παγωμένο ψιλόβροχο χιόνι"
 
 #: noaa_i18n.dat:55
 #, kde-format
@@ -3301,13 +3257,13 @@ msgstr "Ισχυρή παγωμένη βροχόπτωση"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain Rain"
-msgstr "Ισχυρή παγωμένη βροχόπτωση Βροχή"
+msgstr "Ισχυρή παγωμένη βροχόπτωση βροχή"
 
 #: noaa_i18n.dat:58
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Freezing Rain Snow"
-msgstr "Ισχυρή παγωμένη βροχόπτωση Χιόνι"
+msgstr "Ισχυρή παγωμένη βροχόπτωση χιόνι"
 
 #: noaa_i18n.dat:59
 #, kde-format
@@ -3319,43 +3275,43 @@ msgstr "Ισχυρή πτώση παγόκοκκων"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Ice Pellets Drizzle"
-msgstr "Ισχυρή πτώση παγόκοκκων Ψιλόβροχο"
+msgstr "Ισχυρή πτώση παγόκοκκων ψιλόβροχο"
 
 #: noaa_i18n.dat:61
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Ice Pellets Rain"
-msgstr "Ισχυρή πτώση παγόκοκκων Βροχή"
+msgstr "Ισχυρή πτώση παγόκοκκων βροχή"
 
 #: noaa_i18n.dat:63
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Fog"
-msgstr "Ισχυρή βροχόπτωση Ομίχλη"
+msgstr "Ισχυρή βροχόπτωση ομίχλη"
 
 #: noaa_i18n.dat:64
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Fog/Mist"
-msgstr "Ισχυρή βροχόπτωση Ομίχλη/υγρή αχλή"
+msgstr "Ισχυρή βροχόπτωση ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:65
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Freezing Drizzle"
-msgstr "Ισχυρή βροχόπτωση Παγωμένο ψιλόβροχο"
+msgstr "Ισχυρή βροχόπτωση παγωμένο ψιλόβροχο"
 
 #: noaa_i18n.dat:66
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Freezing Rain"
-msgstr "Ισχυρή βροχόπτωση Παγωμένη βροχή"
+msgstr "Ισχυρή βροχόπτωση παγωμένη βροχή"
 
 #: noaa_i18n.dat:67
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Ice Pellets"
-msgstr "Ισχυρή βροχόπτωση Παγόκοκκοι"
+msgstr "Ισχυρή βροχόπτωση παγόκοκκοι"
 
 #: noaa_i18n.dat:68
 #, kde-format
@@ -3367,13 +3323,13 @@ msgstr "Ισχυρές βροχοπτώσεις κατά διαστήματα"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Showers Fog/Mist"
-msgstr "Ισχυρή βροχόπτωση κατά διαστήματα Ομίχλη/υγρή αχλή"
+msgstr "Ισχυρή βροχόπτωση κατά διαστήματα ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:70
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rain Snow"
-msgstr "Ισχυρή βροχόπτωση Χιόνι"
+msgstr "Ισχυρή βροχόπτωση χιόνι"
 
 #: noaa_i18n.dat:71
 #, kde-format
@@ -3385,31 +3341,31 @@ msgstr "Ισχυρή αμμοθύελλα"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Rain"
-msgstr "Ισχυρές μπόρες Βροχή"
+msgstr "Ισχυρές μπόρες βροχή"
 
 #: noaa_i18n.dat:73
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Rain Fog/Mist"
-msgstr "Ισχυρή μπόρα Βροχή Ομίχλη/υγρή αχλή"
+msgstr "Ισχυρή μπόρα βροχή ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:74
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow"
-msgstr "Ισχυρές μπόρες Χιόνι"
+msgstr "Ισχυρές μπόρες χιόνι"
 
 #: noaa_i18n.dat:75
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow Fog"
-msgstr "Ισχυρές μπόρες Χιόνι Ομίχλη"
+msgstr "Ισχυρές μπόρες χιόνι ομίχλη"
 
 #: noaa_i18n.dat:76
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Showers Snow Fog/Mist"
-msgstr "Ισχυρή μπόρα Χιόνι Ομίχλη/υγρή αχλή"
+msgstr "Ισχυρή μπόρα χιόνι ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:77
 #, kde-format
@@ -3421,31 +3377,31 @@ msgstr "Ισχυρές χαλαζοπτώσεις/παγόκοκκοι"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Blowing Snow"
-msgstr "Ισχυρή χιονόπτωση Ανυψούμενο χιόνι"
+msgstr "Ισχυρή χιονόπτωση ανυψούμενο χιόνι"
 
 #: noaa_i18n.dat:80
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Fog"
-msgstr "Ισχυρή χιονόπτωση Ομίχλη"
+msgstr "Ισχυρή χιονόπτωση ομίχλη"
 
 #: noaa_i18n.dat:81
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Fog/Mist"
-msgstr "Ισχυρή χιονόπτωση Ομίχλη/υγρή αχλή"
+msgstr "Ισχυρή χιονόπτωση ομίχλη/Υγρή αχλή"
 
 #: noaa_i18n.dat:82
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Freezing Drizzle"
-msgstr "Ισχυρή χιονόπτωση Παγωμένο ψιλόβροχο"
+msgstr "Ισχυρή χιονόπτωση παγωμένο ψιλόβροχο"
 
 #: noaa_i18n.dat:83
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Freezing Rain"
-msgstr "Ισχυρή χιονόπτωση Παγωμένη βροχή"
+msgstr "Ισχυρή χιονόπτωση παγωμένη βροχή"
 
 #: noaa_i18n.dat:84
 #, kde-format
@@ -3457,13 +3413,13 @@ msgstr "Ισχυρή πτώση ρυζόχιονου"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Low Drifting Snow"
-msgstr "Ισχυρή χιονόπτωση Χαμηλά παρασυρόμενο χιόνι"
+msgstr "Ισχυρή χιονόπτωση χαμηλά παρασυρόμενο χιόνι"
 
 #: noaa_i18n.dat:86
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Rain"
-msgstr "Ισχυρή χιονόπτωση Βροχή"
+msgstr "Ισχυρή χιονόπτωση βροχή"
 
 #: noaa_i18n.dat:87
 #, kde-format
@@ -3475,37 +3431,37 @@ msgstr "ισχυρές χιονοπτώσεις κατά διαστήματα"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Showers Fog"
-msgstr "Ισχυρές χιονοπτώσεις κατά διαστήματα Ομίχλη"
+msgstr "Ισχυρές χιονοπτώσεις κατά διαστήματα ομίχλη"
 
 #: noaa_i18n.dat:89
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Showers Fog/Mist"
-msgstr "Ισχυρή χιονόπτωση Μπόρες Ομίχλη/υγρή αχλή"
+msgstr "Ισχυρή χιονόπτωση μπόρες ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:90
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain"
-msgstr "Ισχυρή καταιγίδα Βροχή"
+msgstr "Ισχυρή καταιγίδα βροχή"
 
 #: noaa_i18n.dat:91
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog"
-msgstr "Ισχυρή καταιγίδα Βροχή Ομίχλη"
+msgstr "Ισχυρή καταιγίδα βροχή ομίχλη"
 
 #: noaa_i18n.dat:92
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog and Windy"
-msgstr "Ισχυρή καταιγίδα Βροχή Ομίχλη και άνεμοι"
+msgstr "Ισχυρή καταιγίδα βροχή ομίχλη και άνεμοι"
 
 #: noaa_i18n.dat:93
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Fog/Mist"
-msgstr "Ισχυρή καταιγίδα Βροχή Ομίχλη/υγρή αχλή"
+msgstr "Ισχυρή καταιγίδα βροχή ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:94
 #, kde-format
@@ -3517,37 +3473,37 @@ msgstr "Ισχυρή καταιγίδα Βροχή Χαλάζι"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Fog"
-msgstr "Ισχυρή καταιγίδα Βροχή Χαλάζι Ομίχλη"
+msgstr "Ισχυρή καταιγίδα βροχή χαλάζι ομίχλη"
 
 #: noaa_i18n.dat:96
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Fog/Hail"
-msgstr "Ισχυρή καταιγίδα Βροχή Χαλάζι Ομίχλη/χαλάζι"
+msgstr "Ισχυρή καταιγίδα βροχή χαλάζι ομίχλη/χαλάζι"
 
 #: noaa_i18n.dat:97
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Haze"
-msgstr "Ισχυρή καταιγίδα Βροχή Χαλάζι Ξηρή αχλή"
+msgstr "Ισχυρή καταιγίδα βροχή χαλάζι ξηρή αχλή"
 
 #: noaa_i18n.dat:98
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Haze"
-msgstr "Ισχυρή καταιγίδα Βροχή Ξηρή αχλή"
+msgstr "Ισχυρή καταιγίδα βροχή ξηρή αχλή"
 
 #: noaa_i18n.dat:99
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr "Ισχυρή καταιγίδα Βροχή Χαλάζι/παγόκοκκοι"
+msgstr "Ισχυρή καταιγίδα βροχή χαλάζι/παγόκοκκοι"
 
 #: noaa_i18n.dat:100
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Snow"
-msgstr "Ισχυρή καταιγίδα Χιόνι"
+msgstr "Ισχυρή καταιγίδα χιόνι"
 
 #: noaa_i18n.dat:103
 #, kde-format
@@ -3571,37 +3527,37 @@ msgstr "Παγόκοκκοι Βροχή"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Fog"
-msgstr "Ασθενές ψιλόβροχο Ομίχλη"
+msgstr "Ασθενές ψιλόβροχο ομίχλη"
 
 #: noaa_i18n.dat:108
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Fog/Mist"
-msgstr "Ασθενές ψιλόβροχο Ομίχλη/υγρή αχλή"
+msgstr "Ασθενές ψιλόβροχο ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:109
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Ice Pellets"
-msgstr "Ασθενές ψιλόβροχο Παγόκοκκοι"
+msgstr "Ασθενές ψιλόβροχο παγόκοκκοι"
 
 #: noaa_i18n.dat:110
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Snow"
-msgstr "Ασθενές ψιλόβροχο Χιόνι"
+msgstr "Ασθενές ψιλόβροχο χιόνι"
 
 #: noaa_i18n.dat:112
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle Rain"
-msgstr "Ασθενές παγωμένο ψιλόβροχο Βροχή"
+msgstr "Ασθενές παγωμένο ψιλόβροχο βροχή"
 
 #: noaa_i18n.dat:113
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Drizzle Snow"
-msgstr "Ασθενές παγωμένο ψιλόβροχο Χιόνι"
+msgstr "Ασθενές παγωμένο ψιλόβροχο χιόνι"
 
 #: noaa_i18n.dat:114
 #, kde-format
@@ -3613,13 +3569,13 @@ msgstr "Ασθενής παγωμένη ομίχλη"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain Rain"
-msgstr "Ασθενής παγωμένη βροχόπτωση Βροχή"
+msgstr "Ασθενής παγωμένη βροχόπτωση βροχή"
 
 #: noaa_i18n.dat:117
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Freezing Rain Snow"
-msgstr "Ασθενής παγωμένη βροχόπτωση Χιόνι"
+msgstr "Ασθενής παγωμένη βροχόπτωση χιόνι"
 
 #: noaa_i18n.dat:118
 #, kde-format
@@ -3631,13 +3587,13 @@ msgstr "Ασθενής πτώση παγόκοκκων"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Ice Pellets Drizzle"
-msgstr "Ασθενής πτώση παγόκοκκων Ψιλόβροχο"
+msgstr "Ασθενής πτώση παγόκοκκων ψιλόβροχο"
 
 #: noaa_i18n.dat:120
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Ice Pellets Rain"
-msgstr "Ασθενής πτώση παγόκοκκων Βροχή"
+msgstr "Ασθενής πτώση παγόκοκκων βροχή"
 
 #: noaa_i18n.dat:122
 #, kde-format
@@ -3649,31 +3605,31 @@ msgstr "Ασθενής βροχόπτωση και δροσιά"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Fog"
-msgstr "Ασθενής βροχόπτωση Ομίχλη"
+msgstr "Ασθενής βροχόπτωση ομίχλη"
 
 #: noaa_i18n.dat:124
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Fog/Mist"
-msgstr "Ασθενής βροχόπτωση Ομίχλη/υγρή αχλή"
+msgstr "Ασθενής βροχόπτωση ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:125
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Freezing Drizzle"
-msgstr "Ασθενής βροχόπτωση Παγωμένο ψιλόβροχο"
+msgstr "Ασθενής βροχόπτωση παγωμένο ψιλόβροχο"
 
 #: noaa_i18n.dat:126
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Freezing Rain"
-msgstr "Ασθενής βροχόπτωση Παγωμένη βροχή"
+msgstr "Ασθενής βροχόπτωση παγωμένη βροχή"
 
 #: noaa_i18n.dat:127
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Ice Pellets"
-msgstr "Ασθενής βροχόπτωση Παγόκοκκοι"
+msgstr "Ασθενής βροχόπτωση παγόκοκκοι"
 
 #: noaa_i18n.dat:128
 #, kde-format
@@ -3685,91 +3641,91 @@ msgstr "Ασθενείς βροχοπτώσεις κατά διαστήματα"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Showers Fog/Mist"
-msgstr "Ασθενείς βροχοπτώσεις κατά διαστήματα Ομίχλη/υγρή αχλή"
+msgstr "Ασθενείς βροχοπτώσεις κατά διαστήματα ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:130
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Snow"
-msgstr "Ασθενής βροχόπτωση Χιόνι"
+msgstr "Ασθενής βροχόπτωση χιόνι"
 
 #: noaa_i18n.dat:131
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Rain"
-msgstr "Ασθενείς μπόρες Βροχή"
+msgstr "Ασθενείς μπόρες βροχή"
 
 #: noaa_i18n.dat:132
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Rain Fog/Mist"
-msgstr "Ασθενείς μπόρες Βροχή Ομίχλη/υγρή αχλή"
+msgstr "Ασθενείς μπόρες βροχή ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:133
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow"
-msgstr "Ασθενείς μπόρες Χιόνι"
+msgstr "Ασθενείς μπόρες χιόνι"
 
 #: noaa_i18n.dat:134
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow Fog"
-msgstr "Ασθενείς μπόρες Χιόνι Ομίχλη"
+msgstr "Ασθενείς μπόρες χιόνι ομίχλη"
 
 #: noaa_i18n.dat:135
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Snow Fog/Mist"
-msgstr "Ασθενείς μπόρες Χιόνι Ομίχλη/υγρή αχλή"
+msgstr "Ασθενείς μπόρες χιόνι ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:136
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Small Hail/Snow Pellets"
-msgstr "Ασθενείς χαλαζοπτώσεις/παγόκοκκοι"
+msgstr "Ασθενείς χαλαζοπτώσεις/Παγόκοκκοι"
 
 #: noaa_i18n.dat:138
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Blowing Snow"
-msgstr "Ασθενής χιονόπτωση Ανυψούμενο χιόνι"
+msgstr "Ασθενής χιονόπτωση ανυψούμενο χιόνι"
 
 #: noaa_i18n.dat:139
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Blowing Snow Fog/Mist"
-msgstr "Ασθενής χιονόπτωση Ανυψούμενο χιόνι Ομίχλη/υγρή αχλή"
+msgstr "Ασθενής χιονόπτωση ανυψούμενο χιόνι ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:140
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Drizzle"
-msgstr "Ασθενής χιονόπτωση Ψιλόβροχο"
+msgstr "Ασθενής χιονόπτωση ψιλόβροχο"
 
 #: noaa_i18n.dat:141
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Fog"
-msgstr "Ασθενής χιονόπτωση Ομίχλη"
+msgstr "Ασθενής χιονόπτωση ομίχλη"
 
 #: noaa_i18n.dat:142
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Fog/Mist"
-msgstr "Ασθενής χιονόπτωση Ομίχλη/υγρή αχλή"
+msgstr "Ασθενής χιονόπτωση ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:143
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Freezing Drizzle"
-msgstr "Ασθενής χιονόπτωση Παγωμένο ψιλόβροχο"
+msgstr "Ασθενής χιονόπτωση παγωμένο ψιλόβροχο"
 
 #: noaa_i18n.dat:144
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Freezing Rain"
-msgstr "Ασθενής χιονόπτωση Παγωμένη βροχή"
+msgstr "Ασθενής χιονόπτωση παγωμένη βροχή"
 
 #: noaa_i18n.dat:145
 #, kde-format
@@ -3781,13 +3737,13 @@ msgstr "Ασθενής πτώση ρυζόχιονου"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Low Drifting Snow"
-msgstr "Ασθενής χιονόπτωση Χαμηλά παρασυρόμενο χιόνι"
+msgstr "Ασθενής χιονόπτωση χαμηλά παρασυρόμενο χιόνι"
 
 #: noaa_i18n.dat:147
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Rain"
-msgstr "Ασθενής χιονόπτωση Βροχή"
+msgstr "Ασθενής χιονόπτωση βροχή"
 
 #: noaa_i18n.dat:148
 #, kde-format
@@ -3799,37 +3755,37 @@ msgstr "Ασθενείς χιονοπτώσεις κατά διαστήματα"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers Fog"
-msgstr "Ασθενείς χιονοπτώσεις κατά διαστήματα Ομίχλη"
+msgstr "Ασθενείς χιονοπτώσεις κατά διαστήματα ομίχλη"
 
 #: noaa_i18n.dat:150
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers Fog/Mist"
-msgstr "Ασθενείς χιονοπτώσεις κατά διαστήματα Ομίχλη/υγρή αχλή"
+msgstr "Ασθενείς χιονοπτώσεις κατά διαστήματα ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:151
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain"
-msgstr "Ασθενής καταιγίδα Βροχή"
+msgstr "Ασθενής καταιγίδα βροχή"
 
 #: noaa_i18n.dat:152
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Fog"
-msgstr "Ασθενής καταιγίδα Βροχή Ομίχλη"
+msgstr "Ασθενής καταιγίδα βροχή ομίχλη"
 
 #: noaa_i18n.dat:153
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Fog/Mist"
-msgstr "Ασθενής καταιγίδα Βροχή Ομίχλη/υγρή αχλή"
+msgstr "Ασθενής καταιγίδα βροχή ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:154
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail"
-msgstr "Ασθενής καταιγίδα Βροχή Χαλάζι"
+msgstr "Ασθενής καταιγίδα βροχή χαλάζι"
 
 #: noaa_i18n.dat:155
 #, kde-format
@@ -3841,31 +3797,31 @@ msgstr "Ασθενής καταιγίδα Βροχή Χαλάζι Ομίχλη"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Fog/Mist"
-msgstr "Ασθενής καταιγίδα Βροχή Χαλάζι Ομίχλη/υγρή αχλή"
+msgstr "Ασθενής καταιγίδα βροχή χαλάζι ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:157
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Haze"
-msgstr "Ασθενής καταιγίδα Βροχή Χαλάζι Ξηρή αχλή"
+msgstr "Ασθενής καταιγίδα βροχή χαλάζι ξηρή αχλή"
 
 #: noaa_i18n.dat:158
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Haze"
-msgstr "Ασθενής καταιγίδα Βροχή Ξηρή αχλή"
+msgstr "Ασθενής καταιγίδα βροχή ξηρή αχλή"
 
 #: noaa_i18n.dat:159
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr "Ασθενής καταιγίδα Βροχή Χαλάζι/παγόκοκκοι"
+msgstr "Ασθενής καταιγίδα βροχή χαλάζι/παγόκοκκοι"
 
 #: noaa_i18n.dat:160
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Snow"
-msgstr "Ασθενής καταιγίδα Χιόνι"
+msgstr "Ασθενής καταιγίδα χιόνι"
 
 #: noaa_i18n.dat:161
 #, kde-format
@@ -3886,9 +3842,7 @@ msgid "Low Drifting Snow"
 msgstr "Χαμηλά παρασυρόμενο χιόνι"
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Clear"
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
 msgstr "Κυρίως καθαρός"
@@ -3966,9 +3920,7 @@ msgid "Partly Cloudy with Haze"
 msgstr "Μερικώς συννεφιασμένος με ξηρή αχλή"
 
 #: noaa_i18n.dat:179
-#, fuzzy, kde-format
-#| msgctxt "weather condition"
-#| msgid "Heavy Freezing Fog"
+#, kde-format
 msgctxt "weather condition"
 msgid "Patchy Freezing Fog"
 msgstr "Ισχυρή παγωμένη ομίχλη"
@@ -3995,19 +3947,19 @@ msgstr "Βροχή Ομίχλη"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Fog/Mist"
-msgstr "Βροχή Ομίχλη/υγρή αχλή"
+msgstr "Βροχή ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:184
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Freezing Drizzle"
-msgstr "Βροχή Παγωμένο ψιλόβροχο"
+msgstr "Βροχή παγωμένο ψιλόβροχο"
 
 #: noaa_i18n.dat:185
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Freezing Rain"
-msgstr "Βροχή Παγωμένη βροχή"
+msgstr "Βροχή παγωμένη βροχή"
 
 #: noaa_i18n.dat:186
 #, kde-format
@@ -4025,7 +3977,7 @@ msgstr "Βροχοπτώσεις κατά διαστήματα"
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers Fog/Mist"
-msgstr "Βροχοπτώσεις κατά διαστήματα Ομίχλη/υγρή αχλή"
+msgstr "Βροχοπτώσεις κατά διαστήματα ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:189
 #, kde-format
@@ -4037,7 +3989,7 @@ msgstr "Βροχοπτώσεις κατά διαστήματα σε κοντιν
 #, kde-format
 msgctxt "weather condition"
 msgid "Rain Showers in Vicinity Fog/Mist"
-msgstr "Βροχοπτώσεις κατά διαστήματα σε κοντινή απόσταση Ομίχλη/υγρή αχλή"
+msgstr "Βροχοπτώσεις κατά διαστήματα σε κοντινή απόσταση ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:191
 #, kde-format
@@ -4055,7 +4007,7 @@ msgstr "Άμμος"
 #, kde-format
 msgctxt "weather condition"
 msgid "Sand Storm"
-msgstr "Αμμοθύελλα "
+msgstr "Αμμοθύελλα"
 
 #: noaa_i18n.dat:194
 #, kde-format
@@ -4085,13 +4037,13 @@ msgstr "Μπόρες Παγόκοκκοι"
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Fog"
-msgstr "Μπόρες σε κοντινή απόσταση Ομίχλη"
+msgstr "Μπόρες σε κοντινή απόσταση ομίχλη"
 
 #: noaa_i18n.dat:200
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Snow"
-msgstr "Μπόρες σε κοντινή απόσταση Χιόνι"
+msgstr "Μπόρες σε κοντινή απόσταση χιόνι"
 
 #: noaa_i18n.dat:201
 #, kde-format
@@ -4103,19 +4055,19 @@ msgstr "Μπόρες Βροχή"
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain Fog/Mist"
-msgstr "Μπόρες Βροχή Ομίχλη/υγρή αχλή"
+msgstr "Μπόρες βροχή ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:203
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity"
-msgstr "Μπόρες Βροχή σε κοντινή απόσταση"
+msgstr "Μπόρες βροχή σε κοντινή απόσταση"
 
 #: noaa_i18n.dat:204
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity Fog/Mist"
-msgstr "Μπόρες Βροχή σε κοντινή απόσταση Ομίχλη/υγρή αχλή"
+msgstr "Μπόρες βροχή σε κοντινή απόσταση ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:205
 #, kde-format
@@ -4133,19 +4085,19 @@ msgstr "Μπόρες Χιόνι Ομίχλη"
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Snow Fog/Mist"
-msgstr "Μπόρες Βροχή Ομίχλη/υγρή αχλή"
+msgstr "Μπόρες βροχή ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:208
 #, kde-format
 msgctxt "weather condition"
 msgid "Small Hail/Snow Pellets"
-msgstr "Χαλάζι/παγόκοκκοι"
+msgstr "Χαλάζι/Παγόκοκκοι"
 
 #: noaa_i18n.dat:211
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Blowing Snow"
-msgstr "Χιόνι Ανυψούμενο χιόνι"
+msgstr "Χιόνι ανυψούμενο χιόνι"
 
 #: noaa_i18n.dat:212
 #, kde-format
@@ -4163,25 +4115,25 @@ msgstr "Χιόνι Ομίχλη"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Fog/Mist"
-msgstr "Χιόνι Ομίχλη/υγρή αχλή"
+msgstr "Χιόνι ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:215
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Freezing Drizzle"
-msgstr "Χιόνι Παγωμένο ψιλόβροχο"
+msgstr "Χιόνι παγωμένο ψιλόβροχο"
 
 #: noaa_i18n.dat:216
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Freezing Rain"
-msgstr "Χιόνι Παγωμένη βροχή"
+msgstr "Χιόνι παγωμένη βροχή"
 
 #: noaa_i18n.dat:218
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Low Drifting Snow"
-msgstr "Χιόνι Χαμηλά παρασυρόμενο χιόνι"
+msgstr "Χιόνι χαμηλά παρασυρόμενο χιόνι"
 
 #: noaa_i18n.dat:219
 #, kde-format
@@ -4199,7 +4151,7 @@ msgstr "Χιονοπτώσεις κατά διαστήματα"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers Fog"
-msgstr "Χιονοπτώσεις κατά διαστήματα Ομίχλη"
+msgstr "Χιονοπτώσεις κατά διαστήματα ομίχλη"
 
 #: noaa_i18n.dat:222
 #, kde-format
@@ -4217,13 +4169,13 @@ msgstr "Χιονοπτώσεις κατά διαστήματα σε κοντιν
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers in Vicinity Fog"
-msgstr "Χιονοπτώσεις κατά διαστήματα σε κοντινή απόσταση Ομίχλη"
+msgstr "Χιονοπτώσεις κατά διαστήματα σε κοντινή απόσταση ομίχλη"
 
 #: noaa_i18n.dat:225
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Showers in Vicinity Fog/Mist"
-msgstr "Χιονοπτώσεις κατά διαστήματα σε κοντινή απόσταση Ομίχλη/υγρή αχλή"
+msgstr "Χιονοπτώσεις κατά διαστήματα σε κοντινή απόσταση ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:227
 #, kde-format
@@ -4247,61 +4199,61 @@ msgstr "Καταιγίδα Χαλάζι Ομίχλη"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Haze in Vicinity"
-msgstr "Καταιγίδα Ξηρή αχλή σε κοντινή απόσταση"
+msgstr "Καταιγίδα ξηρή αχλή σε κοντινή απόσταση"
 
 #: noaa_i18n.dat:231
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Haze in Vicinity Hail"
-msgstr "Καταιγίδα Ξηρή αχλή σε κοντινή απόσταση Χαλάζι"
+msgstr "Καταιγίδα ξηρή αχλή σε κοντινή απόσταση χαλάζι"
 
 #: noaa_i18n.dat:232
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain"
-msgstr "Καταιγίδα Ισχυρή βροχόπτωση"
+msgstr "Καταιγίδα ισχυρή βροχόπτωση"
 
 #: noaa_i18n.dat:233
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Fog"
-msgstr "Καταιγίδα Ισχυρή βροχόπτωση Ομίχλη"
+msgstr "Καταιγίδα ισχυρή βροχόπτωση ομίχλη"
 
 #: noaa_i18n.dat:234
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Fog/Mist"
-msgstr "Καταιγίδα Ισχυρή βροχόπτωση Ομίχλη/υγρή αχλή"
+msgstr "Καταιγίδα ισχυρή βροχόπτωση ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:235
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail"
-msgstr "Καταιγίδα Ισχυρή βροχόπτωση Χαλάζι"
+msgstr "Καταιγίδα ισχυρή βροχόπτωση χαλάζι"
 
 #: noaa_i18n.dat:236
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Fog"
-msgstr "Καταιγίδα Ισχυρή βροχόπτωση Χαλάζι Ομίχλη"
+msgstr "Καταιγίδα ισχυρή βροχόπτωση χαλάζι ομίχλη"
 
 #: noaa_i18n.dat:237
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Fog/Mist"
-msgstr "Καταιγίδα Ισχυρή βροχόπτωση Χαλάζι Ομίχλη/υγρή αχλή"
+msgstr "Καταιγίδα ισχυρή βροχόπτωση χαλάζι ομίχλη/υγρή αχλή"
 
 #: noaa_i18n.dat:238
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Hail Haze"
-msgstr "Καταιγίδα Ισχυρή βροχόπτωση Χαλάζι Ξηρή αχλή"
+msgstr "Καταιγίδα ισχυρή βροχόπτωση χαλάζι ξηρή αχλή"
 
 #: noaa_i18n.dat:239
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Heavy Rain Haze"
-msgstr "Καταιγίδα Ισχυρή βροχόπτωση Ξηρή αχλή"
+msgstr "Καταιγίδα ισχυρή βροχόπτωση ξηρή αχλή"
 
 #: noaa_i18n.dat:240
 #, kde-format
@@ -4508,12 +4460,10 @@ msgid "Severe Tstms"
 msgstr "Σφοδρές καταιγίδες"
 
 #: noaa_i18n.dat:276
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow/Sleet"
-msgstr "Πιθανότητα χιονιού"
+msgstr "Μικρή πιθανότητα χιονιού"
 
 #: noaa_i18n.dat:277
 #, kde-format
@@ -4534,12 +4484,10 @@ msgid "Snow/Sleet"
 msgstr "Χιόνι/χιονόκοκκοι"
 
 #: noaa_i18n.dat:280
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Sleet"
-msgstr "Πιθανότητα βροχής"
+msgstr "Μικρή πιθανότητα χιονιού"
 
 #: noaa_i18n.dat:281
 #, kde-format
@@ -4560,12 +4508,10 @@ msgid "Rain/Sleet"
 msgstr "Βροχή/χιονόκοκκοι"
 
 #: noaa_i18n.dat:284
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain/Freezing Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Freezing Rain"
-msgstr "Πιθανότητα βροχής/παγωμένης βροχής"
+msgstr "Μικρή πιθανότητα βροχής/παγωμένης βροχής"
 
 #: noaa_i18n.dat:285
 #, kde-format
@@ -4586,12 +4532,10 @@ msgid "Rain/Freezing Rain"
 msgstr "Βροχή/παγωμένη βροχή"
 
 #: noaa_i18n.dat:288
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Wintry Mix"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix Likely"
-msgstr "Χειμερινό μείγμα"
+msgstr "Χειμωνιάτικο μίγμα πιθανόν"
 
 #: noaa_i18n.dat:289
 #, kde-format
@@ -4600,12 +4544,10 @@ msgid "Wintry Mix"
 msgstr "Χειμερινό μείγμα"
 
 #: noaa_i18n.dat:290
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Freezing Drizzle"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Drizzle"
-msgstr "Πιθανότητα παγωμένου ψιλόβροχου"
+msgstr "Μικρή πιθανότητα παγωμένου ψιλόβροχου"
 
 #: noaa_i18n.dat:291
 #, kde-format
@@ -4626,12 +4568,10 @@ msgid "Freezing Drizzle"
 msgstr "Παγωμένο ψιλόβροχο"
 
 #: noaa_i18n.dat:294
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Freezing Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Rain"
-msgstr "Πιθανότητα παγωμένης βροχής"
+msgstr "Μικρή πιθανότητα παγωμένης βροχής"
 
 #: noaa_i18n.dat:295
 #, kde-format
@@ -4652,12 +4592,10 @@ msgid "Freezing Rain"
 msgstr "Παγωμένη βροχή"
 
 #: noaa_i18n.dat:298
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Snow"
-msgstr "Πιθανότητα βροχής"
+msgstr "Μικρή πιθανότητα βροχής/χιονιού"
 
 #: noaa_i18n.dat:299
 #, kde-format
@@ -4678,12 +4616,10 @@ msgid "Rain/Snow"
 msgstr "Βροχή/χιόνι"
 
 #: noaa_i18n.dat:302
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow"
-msgstr "Πιθανότητα χιονιού"
+msgstr "Μικρή πιθανότητα χιονιού"
 
 #: noaa_i18n.dat:303
 #, kde-format
@@ -4704,12 +4640,10 @@ msgid "Heavy Snow"
 msgstr "Ισχυρή χιονόπτωση"
 
 #: noaa_i18n.dat:307
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Flurries"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Flurries"
-msgstr "Πιθανότητα νιφάδων"
+msgstr "Ελαφριά πιθανότητα νιφάδων"
 
 #: noaa_i18n.dat:308
 #, kde-format
@@ -4724,12 +4658,10 @@ msgid "Flurries Likely"
 msgstr "Αναμένονται νιφάδες"
 
 #: noaa_i18n.dat:311
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow Showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow Showers"
-msgstr "Πιθανότητα χιονοπτώσεων κατά διαστήματα"
+msgstr "Μικρή πιθανότητα χιονοπτώσεων"
 
 #: noaa_i18n.dat:312
 #, kde-format
@@ -4750,12 +4682,10 @@ msgid "Snow Showers"
 msgstr "Χιονοπτώσεις κατά διαστήματα"
 
 #: noaa_i18n.dat:315
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Drizzle"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Drizzle"
-msgstr "Πιθανότητα ψιλόβροχου"
+msgstr "Μικρή πιθανότητα ψιχάλας"
 
 #: noaa_i18n.dat:316
 #, kde-format
@@ -4770,12 +4700,10 @@ msgid "Drizzle Likely"
 msgstr "Αναμένεται ψιλόβροχο"
 
 #: noaa_i18n.dat:319
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain"
-msgstr "Πιθανότητα βροχής"
+msgstr "Μικρή πιθανότητα βροχής"
 
 #: noaa_i18n.dat:320
 #, kde-format
@@ -4796,12 +4724,10 @@ msgid "Heavy Rain"
 msgstr "Ισχυρή βροχόπτωση"
 
 #: noaa_i18n.dat:324
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Snow Showers"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain Showers"
-msgstr "Πιθανότητα χιονοπτώσεων κατά διαστήματα"
+msgstr "Μικρή πιθανότητα βροχόπτωσης"
 
 #: noaa_i18n.dat:325
 #, kde-format
@@ -4912,12 +4838,10 @@ msgid "Mostly Sunny"
 msgstr "Κυρίως λιακάδα"
 
 #: noaa_i18n.dat:347
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Sunny"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Partly Sunny"
-msgstr "Κυρίως λιακάδα"
+msgstr "Μερικώς ηλιοφάνεια"
 
 #: noaa_i18n.dat:349
 #, kde-format
@@ -4962,36 +4886,28 @@ msgid "Mostly Clear"
 msgstr "Κυρίως καθαρός"
 
 #: noaa_i18n.dat:358
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Showers or thunderstorms"
+#, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr "Μπόρες ή καταιγίδες"
+msgstr "Βροχές και καταιγίδες"
 
 #: noaa_i18n.dat:359
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Slight Chance Thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr "Μικρή πιθανότητα για καταιγίδες"
+msgstr "Μικρή πιθανότητα βροχών και καταιγίδων"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance of showers or thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "Πιθανότητα για μπόρες ή καταιγίδες"
+msgstr "Πιθανότητα βροχών και καταιγίδων"
 
 #: noaa_i18n.dat:361
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Thunderstorms Likely"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr "Αναμένονται καταιγίδες"
+msgstr "Πιθανές μπόρες και καταιγίδες"
 
 #~ msgid "UK"
 #~ msgstr "ΗΒ"

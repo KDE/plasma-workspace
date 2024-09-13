@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-17 00:39+0000\n"
-"PO-Revision-Date: 2016-09-19 17:00+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-19 20:27+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,113 +29,114 @@ msgid "Your emails"
 msgstr "dimkard@gmail.com"
 
 #: main.cpp:57 view.cpp:49
-#, fuzzy, kde-format
-#| msgid "krunner"
+#, kde-format
 msgid "KRunner"
-msgstr "krunner"
+msgstr "KRunner"
 
 #: main.cpp:57
 #, kde-format
 msgid "Run Command interface"
-msgstr "Περιβάλλον εκτέλεσης εντολών"
+msgstr "Διεπαφή εντολών εκτέλεσης"
 
 #: main.cpp:63
 #, kde-format
 msgid "Use the clipboard contents as query for KRunner"
-msgstr ""
+msgstr "Χρήση του περιεχομένου πρόχειρου ως ερώτημα για το KRunner"
 
 #: main.cpp:64
 #, kde-format
 msgid "Start KRunner in the background, don't show it."
-msgstr ""
+msgstr "Έναρξη KRunner στο παρασκήνιο, να μην φαίνεται."
 
 #: main.cpp:65
 #, kde-format
 msgid "Replace an existing instance"
-msgstr ""
+msgstr "Αντικατάσταση μιας υπάρχουσας διεργασίας"
 
 #: main.cpp:66
 #, kde-format
 msgid "Show only results from the given plugin"
-msgstr ""
+msgstr "Εμφάνιση μόνο των αποτελεσμάτων από το συγκεκριμένο πρόσθετο"
 
 #: main.cpp:67
 #, kde-format
 msgid "List available plugins"
-msgstr ""
+msgstr "Λίστα διαθέσιμων πρόσθετων"
 
 #: main.cpp:74
 #, kde-format
 msgid "The query to run, only used if -c is not provided"
 msgstr ""
+"Το ερώτημα που θα εκτελεστεί, χρησιμοποιείται μόνο αν δεν παρέχεται η "
+"επιλογή -c"
 
 #: main.cpp:83
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "Διαθέσιμα πρόσθετα KRunner, pluginId"
 
 #: qml/RunCommand.qml:96
 #, kde-format
 msgid "Configure"
-msgstr ""
+msgstr "Διαμόρφωση"
 
 #: qml/RunCommand.qml:97
 #, kde-format
 msgid "Configure KRunner Behavior"
-msgstr ""
+msgstr "Διαμόρφωση συμπεριφοράς KRunner"
 
 #: qml/RunCommand.qml:100
 #, kde-format
 msgid "Configure KRunner…"
-msgstr ""
+msgstr "Διαμόρφωση KRunner…"
 
 #: qml/RunCommand.qml:113
 #, kde-format
 msgid "Showing only results from %1"
-msgstr ""
+msgstr "Εμφάνιση μόνο αποτελεσμάτων από %1"
 
 #: qml/RunCommand.qml:127
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr ""
+msgstr "Αναζήτηση «%1»…"
 
 #: qml/RunCommand.qml:128
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr ""
+msgstr "Αναζήτηση…"
 
 #: qml/RunCommand.qml:302 qml/RunCommand.qml:303 qml/RunCommand.qml:305
 #, kde-format
 msgid "Show Usage Help"
-msgstr ""
+msgstr "Εμφάνιση βοήθειας χρήσης"
 
 #: qml/RunCommand.qml:313
 #, kde-format
 msgid "Pin"
-msgstr ""
+msgstr "Καρφίτσωμα"
 
 #: qml/RunCommand.qml:314
 #, kde-format
 msgid "Pin Search"
-msgstr ""
+msgstr "Καρφίτσωμα αναζήτησης"
 
 #: qml/RunCommand.qml:316
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Διατήρηση ανοικτό"
 
 #: qml/RunCommand.qml:394 qml/RunCommand.qml:399
 #, kde-format
 msgid "Recent Queries"
-msgstr ""
+msgstr "Πρόσφατα ερωτήματα"
 
 #: qml/RunCommand.qml:397
 #, kde-format
 msgid "Remove"
-msgstr ""
+msgstr "Αφαίρεση"
 
 #~ msgid "krunner"
 #~ msgstr "krunner"

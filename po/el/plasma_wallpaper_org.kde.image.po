@@ -6,19 +6,20 @@
 # Antonis Geralis <capoiosct@gmail.com>, 2012, 2013.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2017-07-22 15:56+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-24 16:01+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -32,18 +33,16 @@ msgid "Your emails"
 msgstr "manolis@koppermind.homelinux.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "Άνοιγμα εικόνας ταπετσαρίας"
+msgstr "Άνοιγμα εικόνας"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
-#, fuzzy, kde-format
-#| msgid "Directory with the wallpaper to show slides from"
+#, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr "Κατάλογος με την ταπετσαρία για την προβολή των διαφανειών"
+msgstr "Κατάλογος από τον οποίο θα προβληθούν οι διαφάνειες"
 
 #: imagepackage/contents/ui/config.qml:128
 #, fuzzy, kde-format
@@ -57,7 +56,7 @@ msgstr "Τοποθέτηση:"
 #| msgid "Scaled and Cropped"
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
-msgstr "Υπό κλίμακα και κοπή"
+msgstr "Κλιμάκωση και περικοπή"
 
 #: imagepackage/contents/ui/config.qml:135
 #, fuzzy, kde-format
@@ -71,14 +70,14 @@ msgstr "Υπό κλίμακα"
 #| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
-msgstr "Υπό κλίμακα, διατήρηση αναλογιών"
+msgstr "Κλιμάκωση, διατήρηση αναλογιών"
 
 #: imagepackage/contents/ui/config.qml:143
 #, fuzzy, kde-format
 #| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr "Στο κέντρο"
+msgstr "Κεντρικό"
 
 #: imagepackage/contents/ui/config.qml:147
 #, fuzzy, kde-format
@@ -88,20 +87,19 @@ msgid "Tiled"
 msgstr "Σε παράθεση"
 
 #: imagepackage/contents/ui/config.qml:175
-#, fuzzy, kde-format
-#| msgid "Background Color:"
+#, kde-format
 msgid "Background:"
-msgstr "Χρώμα φόντου:"
+msgstr "Παρασκήνιο:"
 
 #: imagepackage/contents/ui/config.qml:176
 #, kde-format
 msgid "Blur"
-msgstr ""
+msgstr "Θολούρα"
 
 #: imagepackage/contents/ui/config.qml:185
 #, kde-format
 msgid "Solid color"
-msgstr ""
+msgstr "Αμιγές χρώμα"
 
 #: imagepackage/contents/ui/config.qml:196
 #, kde-format
@@ -119,37 +117,33 @@ msgid "Next Wallpaper Image"
 msgstr "Επόμενη εικόνα ταπετσαρίας"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:60
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Images"
-msgstr "Αρχεία εικόνας"
+msgstr "Εικόνες"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:64
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "Προσθήκη…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Άνοιγμα εικόνας ταπετσαρίας"
+msgstr "Προσθήκη εικόνας ταπετσαρίας…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr "Λήψη νέων ταπετσαριών..."
+msgstr "Λήψη νέων…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Επόμενη εικόνα ταπετσαρίας"
+msgstr "Λήψη νέων εικόνων ταπετσαρίας…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -162,8 +156,7 @@ msgid "Restore wallpaper"
 msgstr "Επαναφορά ταπετσαρίας"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:42
-#, fuzzy, kde-format
-#| msgid "Remove wallpaper"
+#, kde-format
 msgid "Remove Wallpaper"
 msgstr "Αφαίρεση ταπετσαρίας"
 
@@ -172,6 +165,8 @@ msgstr "Αφαίρεση ταπετσαρίας"
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
 msgstr ""
+"Αυτό το εργαλείο σας επιτρέπει να ορίσετε μια εικόνα ως ταπετσαρία για τη "
+"συνεδρία Plasma."
 
 #: plasma-apply-wallpaperimage.cpp:30
 #, kde-format
@@ -179,11 +174,14 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"Ένα αρχείο εικόνας ή ένα εγκατεστημένο πακέτο ταπετσαρίας kpackage που "
+"θέλετε να ορίσετε ως ταπετσαρία για τη συνεδρία Plasma."
 
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
+"Καθορίστε τη λειτουργία γέμισης (π.χ., επέκταση, preserveAspectCrop, κ.λπ.)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -192,27 +190,34 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"Υπάρχει ένα αδέσποτο μονό εισαγωγικό στο όνομα αρχείου αυτής της ταπετσαρίας "
+"(') - παρακαλούμε επικοινωνήστε με τον δημιουργό της ταπετσαρίας για να το "
+"διορθώσει ή μετονομάστε το αρχείο μόνοι σας: %1"
 
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Καθορίστηκε μη έγκυρη λειτουργία γέμισης: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "Προέκυψε σφάλμα κατά την προσπάθεια ρύθμισης της ταπετσαρίας Plasma:\n"
 
 #: plasma-apply-wallpaperimage.cpp:119
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr ""
+"Επιτυχής ρύθμιση της ταπετσαρίας για όλες τις επιφάνειες εργασίας στο "
+"KPackage με βάση το %1"
 
 #: plasma-apply-wallpaperimage.cpp:121
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
 msgstr ""
+"Επιτυχής ρύθμιση της ταπετσαρίας για όλες τις επιφάνειες εργασίας στην "
+"εικόνα %1"
 
 #: plasma-apply-wallpaperimage.cpp:128
 #, kde-format
@@ -220,48 +225,49 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"Το αρχείο που δόθηκε για να οριστεί ως ταπετσαρία δεν υπάρχει ή δεν μπορεί "
+"να αναγνωριστεί ως ταπετσαρία: %1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:330
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "Αρχεία εικόνας"
+msgstr "Αρχεία πολυμέσων"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
 msgid "Order:"
-msgstr ""
+msgstr "Διάταξη:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:59
 #, kde-format
 msgid "Random"
-msgstr ""
+msgstr "Τυχαία"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:63
 #, kde-format
 msgid "A to Z"
-msgstr ""
+msgstr "Από το Α στο Ω"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:67
 #, kde-format
 msgid "Z to A"
-msgstr ""
+msgstr "Από το Ω στο A"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:71
 #, kde-format
 msgid "Date modified (newest first)"
-msgstr ""
+msgstr "Ημερομηνία τροποποίησης (η νεότερη πρώτη)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:75
 #, kde-format
 msgid "Date modified (oldest first)"
-msgstr ""
+msgstr "Ημερομηνία τροποποίησης (η παλαιότερη πρώτα)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:100
 #, kde-format
 msgid "Group by folders"
-msgstr ""
+msgstr "Ομαδοποίηση ανά φακέλους"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:112
 #, kde-format
@@ -272,96 +278,92 @@ msgstr "Αλλαγή κάθε:"
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ώρα"
+msgstr[1] "%1 ώρες"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:142
-#, fuzzy, kde-format
-#| msgid "Minutes"
+#, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] "Λεπτά"
-msgstr[1] "Λεπτά"
+msgstr[0] "%1 λεπτό"
+msgstr[1] "%1 λεπτά"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
-#, fuzzy, kde-format
-#| msgid "Seconds"
+#, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] "Δευτερόλεπτα"
-msgstr[1] "Δευτερόλεπτα"
+msgstr[0] "%1 δευτερόλεπτο"
+msgstr[1] "%1 δευτερόλεπτα"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:206
-#, fuzzy, kde-format
-#| msgid "Open Containing Folder"
+#, kde-format
 msgid "Folders"
-msgstr "Άνοιγμα περιέχοντος φακέλου"
+msgstr "Φάκελοι"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:210
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "Προσθήκη…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
-#, fuzzy, kde-format
-#| msgid "Add Folder"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
-msgstr "Προσθήκη φακέλου"
+msgstr "Προσθήκη φακέλου…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:249
-#, fuzzy, kde-format
-#| msgid "&Remove Folder"
+#, kde-format
 msgid "Remove Folder"
-msgstr "&Αφαίρεση φακέλου"
+msgstr "Αφαίρεση φακέλου"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:260
-#, fuzzy, kde-format
-#| msgid "Open Containing Folder"
+#, kde-format
 msgid "Open Folder…"
-msgstr "Άνοιγμα περιέχοντος φακέλου"
+msgstr "Άνοιγμα φακέλου…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:275
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr ""
+msgstr "Δεν έχουν ρυθμιστεί τοποθεσίες ταπετσαρίας"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
-#, fuzzy, kde-format
-#| msgid "Get New Wallpapers..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr "Λήψη νέων ταπετσαριών..."
+msgstr "Ορισμός ως ταπετσαρία"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "Επιφάνεια εργασίας"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "Οθόνη κλειδώματος"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "Και τα δύο"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
 msgstr ""
+"Προέκυψε σφάλμα κατά την προσπάθεια ρύθμισης της ταπετσαρίας Plasma:<nl/>%1"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format
 msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
+"Προέκυψε σφάλμα κατά την προσπάθεια ανοίγματος του αρχείου ρυθμίσεων "
+"kscreenlockerrc."
 
 #, fuzzy
 #~| msgid "Open Image"

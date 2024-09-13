@@ -2,25 +2,26 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2016, 2017.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2017-06-12 16:32+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-24 11:15+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Χωρίς τίτλο"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #: package/contents/ui/main.qml:54
@@ -39,7 +40,7 @@ msgstr "-%1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
-msgstr ""
+msgstr "Ανάμειξη"
 
 #: package/contents/ui/ExpandedRepresentation.qml:559
 #: package/contents/ui/main.qml:111
@@ -70,27 +71,26 @@ msgid "Next Track"
 msgstr "Επόμενο κομμάτι"
 
 #: package/contents/ui/ExpandedRepresentation.qml:622
-#, fuzzy, kde-format
-#| msgctxt "Play next track"
-#| msgid "Next Track"
+#, kde-format
 msgid "Repeat Track"
-msgstr "Επόμενο κομμάτι"
+msgstr "Επανάληψη κομματιού"
 
 #: package/contents/ui/ExpandedRepresentation.qml:622
 #, kde-format
 msgid "Repeat"
-msgstr ""
+msgstr "Επανάληψη"
 
 #: package/contents/ui/main.qml:57
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (%2)\n"
 "Middle-click to pause\n"
 "Scroll to adjust volume"
-msgstr "από τον/την %1 (σε παύση)"
+msgstr ""
+"από %1 (%2)\n"
+"Μεσαίο κλικ για παύση\n"
+"Κύλιση για ρύθμιση έντασης ήχου"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -100,28 +100,33 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"Μεσαίο κλικ για παύση\n"
+"Κύλιση για ρύθμιση έντασης ήχου"
 
 #: package/contents/ui/main.qml:60
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
+#, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
 "by %1 (paused, %2)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "από τον/την %1 (σε παύση)"
+msgstr ""
+"από %1 (σε παύση, %2)\n"
+"Μεσαίο κλικ για αναπαραγωγή\n"
+"Κύλιση για ρύθμιση έντασης ήχου"
 
 #: package/contents/ui/main.qml:61
-#, fuzzy, kde-format
-#| msgctxt "Artist of the song"
-#| msgid "by %1 (paused)"
+#, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
 "Paused (%1)\n"
 "Middle-click to play\n"
 "Scroll to adjust volume"
-msgstr "από τον/την %1 (σε παύση)"
+msgstr ""
+"Σε παύση (%1)\n"
+"Μεσαίο κλικ για αναπαραγωγή\n"
+"Κύλιση για ρύθμιση έντασης ήχου"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

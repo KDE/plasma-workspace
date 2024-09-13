@@ -6,20 +6,21 @@
 # Stelios <<sstavra@gmail.com>>, 2013.
 # Antonis Geralis <gaantonio@civil.auth.gr>, 2013, 2014.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016, 2017.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-20 00:41+0000\n"
-"PO-Revision-Date: 2017-09-08 16:23+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-31 14:44+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -44,31 +45,28 @@ msgstr "Καρφίτσωμα στον διαχειριστή εργασιών"
 #: plugin/actionlist.cpp:156
 #, kde-format
 msgid "Add to Panel (Widget)"
-msgstr "Προσθήκη στον πίνακα (γραφικό συστατικό)"
+msgstr "Προσθήκη στον πίνακα (συστατικό)"
 
 #: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
-#, fuzzy, kde-format
-#| msgid "Recent Documents"
+#, kde-format
 msgid "Recent Files"
-msgstr "Πρόσφατα έγγραφα"
+msgstr "Πρόσφατα αρχεία"
 
 #: plugin/actionlist.cpp:317
-#, fuzzy, kde-format
-#| msgid "Forget Recent Documents"
+#, kde-format
 msgid "Forget Recent Files"
-msgstr "Να ξεχαστούν τα πρόσφατα έγγραφα"
+msgstr "Αγνόηση πρόσφατων αρχείων"
 
 #: plugin/actionlist.cpp:395
-#, fuzzy, kde-format
-#| msgid "Edit Application..."
+#, kde-format
 msgid "Edit Application…"
-msgstr "Επεξεργασία εφαρμογής..."
+msgstr "Επεξεργασία εφαρμογής…"
 
 #: plugin/actionlist.cpp:428
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr ""
+msgstr "Απεγκατάσταση ή διαχείριση πρόσθετων…"
 
 #: plugin/appentry.cpp:301
 #, kde-format
@@ -97,7 +95,7 @@ msgstr "Εφαρμογές"
 #: plugin/appsmodel.cpp:165
 #, kde-format
 msgid "Unhide Applications in this Submenu"
-msgstr "Αναίρεση απόκρυψης εφαρμογών σε αυτό το υπο-μενού"
+msgstr "Αναίρεση απόκρυψης εφαρμογών σε αυτό το υπομενού"
 
 #: plugin/appsmodel.cpp:174
 #, kde-format
@@ -105,14 +103,14 @@ msgid "Unhide Applications in '%1'"
 msgstr "Αναίρεση απόκρυψης εφαρμογών στο '%1'"
 
 #: plugin/computermodel.cpp:91
-#, fuzzy, kde-format
+#, kde-format
 msgid "Show KRunner"
-msgstr "KRunner"
+msgstr "Εμφάνιση KRunner"
 
 #: plugin/computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
-msgstr ""
+msgstr "Αναζήτηση, υπολογισμός ή εκτέλεση μιας εντολής"
 
 #: plugin/computermodel.cpp:148
 #, kde-format
@@ -129,35 +127,32 @@ msgstr "Αγαπημένα"
 #: plugin/recentusagemodel.cpp:150
 #, kde-format
 msgid "Recently Used"
-msgstr "Χρησιμοποιημένα πρόσφατα"
+msgstr "Πρόσφατα χρησιμοποιημένα"
 
 #: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
-#, fuzzy, kde-format
-#| msgctxt "Tab title"
-#| msgid "Files"
+#, kde-format
 msgid "Files"
 msgstr "Αρχεία"
 
 #: plugin/recentusagemodel.cpp:237
 #, kde-format
 msgid "Forget Application"
-msgstr "Αγνόηση της εφαρμογής"
+msgstr "Αγνόηση εφαρμογής"
 
 #: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Άνοιγμα περιέχοντος φακέλου"
 
 #: plugin/recentusagemodel.cpp:334
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget File"
-msgstr "Να ξεχαστούν όλα"
+msgstr "Αγνόηση αρχείου"
 
 #: plugin/recentusagemodel.cpp:471
 #, kde-format
 msgid "Forget All"
-msgstr "Να ξεχαστούν όλα"
+msgstr "Αγνόηση όλων"
 
 #: plugin/recentusagemodel.cpp:473
 #, kde-format
@@ -165,10 +160,9 @@ msgid "Forget All Applications"
 msgstr "Αγνόηση όλων των εφαρμογών"
 
 #: plugin/recentusagemodel.cpp:476
-#, fuzzy, kde-format
-#| msgid "Forget All"
+#, kde-format
 msgid "Forget All Files"
-msgstr "Να ξεχαστούν όλα"
+msgstr "Αγνόηση όλων των αρχείων"
 
 #: plugin/rootmodel.cpp:92
 #, kde-format
@@ -184,12 +178,12 @@ msgstr "Όλες οι εφαρμογές"
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
+"Αυτό δεν θα έπρεπε να είναι ορατό! Χρησιμοποιήστε το KICKER_FAVORITES_MODEL"
 
 #: plugin/rootmodel.cpp:399
-#, fuzzy, kde-format
-#| msgid "Often Used Documents"
+#, kde-format
 msgid "Often Used Files"
-msgstr "Έγγραφα που χρησιμοποιούνται συχνά"
+msgstr "Συχνά χρησιμοποιούμενα αρχεία"
 
 #: plugin/rootmodel.cpp:408
 #, kde-format
@@ -199,7 +193,7 @@ msgstr "Πρόσφατες εφαρμογές"
 #: plugin/rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
-msgstr "Εφαρμογές που χρησιμοποιούνται συχνά"
+msgstr "Συχνά χρησιμοποιούμενες εφαρμογές"
 
 #: plugin/rootmodel.cpp:423
 #, kde-format
@@ -219,7 +213,7 @@ msgstr "Κλείδωμα"
 #: plugin/systementry.cpp:197
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Αποσύνδεση"
 
 #: plugin/systementry.cpp:200 plugin/systementry.cpp:254
 #, kde-format
@@ -235,7 +229,7 @@ msgstr "Εναλλαγή χρήστη"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "Κοίμηση"
 
 #: plugin/systementry.cpp:209
 #, kde-format
@@ -305,7 +299,7 @@ msgstr "Ενέργειες συστήματος"
 #, fuzzy
 #~| msgid "Show Contact Information..."
 #~ msgid "Show Contact Information…"
-#~ msgstr "Εμφάνιση πληροφοριών επαφής..."
+#~ msgstr "Εμφάνιση πληροφοριών επαφής…"
 
 #~ msgid "Contacts"
 #~ msgstr "Επαφές"

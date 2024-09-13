@@ -2,20 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2017.
+# Antonis Geralis <capoiosct@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-11-19 01:53+0000\n"
-"PO-Revision-Date: 2017-01-15 17:56+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-24 09:49+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -36,17 +37,17 @@ msgstr "Εμφάνιση πλήρους μενού εφαρμογής"
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"
-msgstr ""
+msgstr "Άνοιγμα ενός μενού"
 
 #: plugin/appmenumodel.cpp:84
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 #: plugin/appmenumodel.cpp:91
 #, kde-format
 msgid "Search…"
-msgstr ""
+msgstr "Αναζήτηση…"
 
 #~ msgid "application-menu"
 #~ msgstr "application-menu"

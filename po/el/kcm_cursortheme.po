@@ -12,65 +12,61 @@
 # Petros <pvidalis@gmail.com>, 2010.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-25 00:40+0000\n"
-"PO-Revision-Date: 2016-09-04 14:40+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-13 19:19+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
 #: cursorthemesettings.kcfg:9
 #, kde-format
 msgid "Name of the current cursor theme"
-msgstr ""
+msgstr "Όνομα του τρέχοντος θέματος του δρομέα"
 
 #. i18n: ectx: label, entry (cursorSize), group (Mouse)
 #: cursorthemesettings.kcfg:13
 #, kde-format
 msgid "Current cursor size"
-msgstr ""
+msgstr "Τρέχον μέγεθος δρομέα"
 
 #: kcmcursortheme.cpp:313
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have to restart the Plasma session for these changes to take effect."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr ""
-"Πρέπει να επανεκκινήσετε τη συνεδρία του Plasma για να εφαρμοστούν αυτές οι "
+"Πρέπει να επανεκκινήσετε τη συνεδρία Plasma για να τεθούν σε ισχύ αυτές οι "
 "αλλαγές."
 
 #: kcmcursortheme.cpp:387
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Αδυναμία δημιουργίας προσωρινού αρχείου."
 
 #: kcmcursortheme.cpp:398
-#, fuzzy, kde-format
-#| msgid "Unable to find the cursor theme archive %1."
+#, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr "Αδύνατο να βρεθεί η αρχειοθήκη θέματος δρομέα %1."
+msgstr "Δεν είναι δυνατή η λήψη του αρχείου θέματος εικονιδίων: %1"
 
 #: kcmcursortheme.cpp:429
-#, fuzzy, kde-format
-#| msgid "The file %1 does not appear to be a valid cursor theme archive."
+#, kde-format
 msgid "The file is not a valid icon theme archive."
-msgstr ""
-"Το αρχείο %1 δε φαίνεται να είναι μια έγκυρη αρχειοθήκη θέματος δρομέα."
+msgstr "Το αρχείο δεν είναι έγκυρο αρχείο θέματος εικονιδίων."
 
 #: kcmcursortheme.cpp:436
 #, kde-format
 msgid "Failed to create 'icons' folder."
-msgstr ""
+msgstr "Αποτυχία δημιουργίας φακέλου 'icons'."
 
 #: kcmcursortheme.cpp:445
 #, kde-format
@@ -78,8 +74,8 @@ msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
 msgstr ""
-"Ένα θέμα με όνομα %1 υπάρχει ήδη στο φάκελο θεμάτων εικονιδίων σας. Θέλετε "
-"να το αντικαταστήσετε με αυτό;"
+"Ένα θέμα με το όνομα %1 υπάρχει ήδη στο φάκελο με τα θέματα των εικονιδίων "
+"σας. Θέλετε να το αντικαταστήσετε με αυτό;"
 
 #: kcmcursortheme.cpp:449
 #, kde-format
@@ -89,19 +85,19 @@ msgstr "Αντικατάσταση θέματος;"
 #: kcmcursortheme.cpp:473
 #, kde-format
 msgid "Theme installed successfully."
-msgstr ""
+msgstr "Το θέμα εγκαταστάθηκε με επιτυχία."
 
 #. i18n: ectx: label, entry (cursorTimeout), group (BusyCursorSettings)
 #. i18n: ectx: label, entry (taskbarTimeout), group (TaskbarButtonSettings)
 #: launchfeedbacksettings.kcfg:19 launchfeedbacksettings.kcfg:33
 #, kde-format
 msgid "Timeout in seconds"
-msgstr ""
+msgstr "Χρονικό όριο σε δευτερόλεπτα"
 
 #: plasma-apply-cursortheme.cpp:44
 #, kde-format
 msgid "The requested size '%1' is not available, using %2 instead."
-msgstr ""
+msgstr "Το ζητούμενο μέγεθος «%1» δεν είναι διαθέσιμο, χρησιμοποιήστε %2."
 
 #: plasma-apply-cursortheme.cpp:65
 #, kde-format
@@ -110,6 +106,9 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"Αυτό το εργαλείο σας επιτρέπει να ορίσετε το θέμα του δρομέα ποντικιού για "
+"την τρέχουσα συνεδρία του Plasma, χωρίς να το ορίσετε κατά λάθος σε ένα θέμα "
+"που είτε δεν είναι διαθέσιμο είτε είναι ήδη ορισμένο."
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
@@ -117,17 +116,23 @@ msgid ""
 "The name of the cursor theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Το όνομα του θέματος δρομέα που επιθυμείτε να ορίσετε για την τρέχουσα "
+"συνεδρία του Plasma (περνώντας μια πλήρη διαδρομή θα χρησιμοποιηθεί μόνο το "
+"τελευταίο μέρος της διαδρομής)."
 
 #: plasma-apply-cursortheme.cpp:70
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
+"Εμφάνιση όλων των θεμάτων που είναι διαθέσιμα στο σύστημα (και ποιο είναι το "
+"τρέχον θέμα)"
 
 #: plasma-apply-cursortheme.cpp:71
 #, kde-format
 msgid "Use a specific size, rather than the theme default size"
 msgstr ""
+"Χρήση συγκεκριμένου μεγέθους, αντί για το προεπιλεγμένο μέγεθος του θέματος"
 
 #: plasma-apply-cursortheme.cpp:92
 #, kde-format
@@ -135,23 +140,25 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Το ζητούμενο θέμα «%1» έχει ήδη οριστεί ως θέμα για την τρέχουσα συνεδρία "
+"Plasma."
 
 #: plasma-apply-cursortheme.cpp:103
 #, kde-format
 msgid ""
 "Successfully applied the mouse cursor theme %1 to your current Plasma session"
 msgstr ""
+"Επιτυχής εφαρμογή του θέματος δρομέα ποντικιού %1 στην τρέχουσα συνεδρία "
+"Plasma"
 
 #: plasma-apply-cursortheme.cpp:105
-#, fuzzy, kde-format
-#| msgid ""
-#| "You have to restart the Plasma session for these changes to take effect."
+#, kde-format
 msgid ""
 "You have to restart the Plasma session for your newly applied mouse cursor "
 "theme to display correctly."
 msgstr ""
-"Πρέπει να επανεκκινήσετε τη συνεδρία του Plasma για να εφαρμοστούν αυτές οι "
-"αλλαγές."
+"Πρέπει να επανεκκινήσετε τη συνεδρία Plasma για να εμφανιστεί σωστά το νέο "
+"θέμα δρομέα ποντικιού που εφαρμόσατε."
 
 #: plasma-apply-cursortheme.cpp:115
 #, kde-format
@@ -159,16 +166,18 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Αδυναμία εύρεσης του θέματος «%1». Το θέμα πρέπει να είναι μία από τις "
+"ακόλουθες επιλογές: %2"
 
 #: plasma-apply-cursortheme.cpp:123
 #, kde-format
 msgid "You have the following mouse cursor themes on your system:"
-msgstr ""
+msgstr "Έχετε τα ακόλουθα θέματα δρομέα ποντικιού στο σύστημά σας:"
 
 #: plasma-apply-cursortheme.cpp:128
 #, kde-format
 msgid "(Current theme for this Plasma session)"
-msgstr ""
+msgstr "(Τρέχον θέμα αυτής της συνεδρίας Plasma)"
 
 #: ui/Delegate.qml:43
 #, kde-format
@@ -176,113 +185,108 @@ msgid "Remove Theme"
 msgstr "Αφαίρεση θέματος"
 
 #: ui/Delegate.qml:50
-#, fuzzy, kde-format
-#| msgid "Cursor Theme"
+#, kde-format
 msgid "Restore Cursor Theme"
-msgstr "Θέμα δρομέα"
+msgstr "Επαναφορά θέματος δρομέα"
 
 #: ui/LaunchFeedbackDialog.qml:16
 #, kde-format
 msgctxt "@title"
 msgid "Launch Feedback"
-msgstr ""
+msgstr "Απόκριση εκκίνησης"
 
 #: ui/LaunchFeedbackDialog.qml:25
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr ""
+"Διαμόρφωση εφέ κίνησης που αναπαράγονται κατά την εκκίνηση μιας εφαρμογής."
 
 #: ui/LaunchFeedbackDialog.qml:47
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr ""
+msgstr "Απόκριση δρομέα:"
 
 #: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
-msgstr ""
+msgstr "Καμία"
 
 #: ui/LaunchFeedbackDialog.qml:57
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
-msgstr ""
+msgstr "Στατικό"
 
 #: ui/LaunchFeedbackDialog.qml:66
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
-msgstr ""
+msgstr "Αναβόσβημα"
 
 #: ui/LaunchFeedbackDialog.qml:75
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
-msgstr ""
+msgstr "Αναπήδηση"
 
 #: ui/LaunchFeedbackDialog.qml:90
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr ""
+msgstr "Απόκριση του διαχειριστή εργασιών:"
 
 #: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
-msgstr ""
+msgstr "Ενεργοποίηση εφέ κίνησης"
 
 #: ui/LaunchFeedbackDialog.qml:111
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
-msgstr ""
+msgstr "Διακοπή εφέ κίνησης μετά:"
 
 #: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 δευτερόλεπτο"
+msgstr[1] "%1 δευτερόλεπτα"
 
 #: ui/main.qml:91 ui/main.qml:129
-#, fuzzy, kde-format
-#| msgctxt "@label:listbox cursor size"
-#| msgid "Size:"
+#, kde-format
 msgid "Size: %1"
-msgstr "Μέγεθος:"
+msgstr "Μέγεθος: %1"
 
 #: ui/main.qml:144
 #, kde-format
 msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
-msgstr ""
+msgstr "&Διαμόρφωση απόκρισης εκκίνησης…"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "Install from File"
+#, kde-format
 msgid "&Install from File…"
-msgstr "Εγκατάσταση από αρχείο"
+msgstr "&Εγκατάσταση από αρχείο…"
 
 #: ui/main.qml:164
-#, fuzzy, kde-format
-#| msgid "Get new Theme"
+#, kde-format
 msgid "&Get New…"
-msgstr "Λήψη νέου θέματος..."
+msgstr "&Λήψη νέων…"
 
 #: ui/main.qml:178
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Open Theme"
-msgstr "Αφαίρεση θέματος"
+msgstr "Άνοιγμα θέματος"
 
 #: ui/main.qml:180
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "Αρχεία θέματος δρομέα (*.tar.gz *.tar.bz2)"
 
 #: xcursor/xcursortheme.cpp:58
 #, kde-format

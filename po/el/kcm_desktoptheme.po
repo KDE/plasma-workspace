@@ -7,39 +7,37 @@
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011.
 # Antonis Geralis <capoiosct@gmail.com>, 2013.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2016.
+# Dimitrys Meliates <demetresmeliates+i18n@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2016-06-04 15:12+0200\n"
-"Last-Translator: Dimitris Kardarakos <dimkard@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"PO-Revision-Date: 2024-08-13 19:53+0300\n"
+"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
-#, fuzzy, kde-format
-#| msgid "Get new Theme"
+#, kde-format
 msgid "Name of the current Plasma Style"
-msgstr "Λήψη νέου θέματος"
+msgstr "Όνομα του τρέχοντος στυλ Plasma"
 
 #: kcm.cpp:112
-#, fuzzy, kde-format
-#| msgid "Unable to save theme."
+#, kde-format
 msgid "Unable to create a temporary file."
-msgstr "Αδυναμία αποθήκευσης θέματος."
+msgstr "Αδυναμία δημιουργίας προσωρινού αρχείου."
 
 #: kcm.cpp:123
-#, fuzzy, kde-format
-#| msgid "Unable to save theme."
+#, kde-format
 msgid "Unable to download the theme: %1"
-msgstr "Αδυναμία αποθήκευσης θέματος."
+msgstr "Αδυναμία λήψης του θέματος: %1"
 
 #: kcm.cpp:148
 #, kde-format
@@ -54,7 +52,7 @@ msgstr "Η εγκατάσταση του θέματος απέτυχε."
 #: kcm.cpp:251
 #, kde-format
 msgid "Removing theme failed: %1"
-msgstr ""
+msgstr "Η αφαίρεση του θέματος απέτυχε: %1"
 
 #: plasma-apply-desktoptheme.cpp:33
 #, kde-format
@@ -63,6 +61,9 @@ msgid ""
 "accidentally setting it to one that is either not available, or which is "
 "already set."
 msgstr ""
+"Αυτό το εργαλείο σας επιτρέπει να ορίσετε το θέμα της τρέχουσας συνεδρίας "
+"του Plasma, χωρίς να το ορίσετε κατά λάθος σε ένα θέμα που είτε δεν είναι "
+"διαθέσιμο είτε έχει ήδη οριστεί."
 
 #: plasma-apply-desktoptheme.cpp:37
 #, kde-format
@@ -70,12 +71,17 @@ msgid ""
 "The name of the theme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Το όνομα του θέματος που θέλετε να ορίσετε για την τρέχουσα συνεδρία του "
+"Plasma (περνώντας μια πλήρη διαδρομή θα χρησιμοποιηθεί μόνο το τελευταίο "
+"μέρος της διαδρομής)"
 
 #: plasma-apply-desktoptheme.cpp:38
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
 msgstr ""
+"Εμφάνιση όλων των θεμάτων που είναι διαθέσιμα στο σύστημα (και ποιο είναι το "
+"τρέχον θέμα)"
 
 #: plasma-apply-desktoptheme.cpp:51
 #, kde-format
@@ -83,11 +89,13 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Το ζητούμενο θέμα «%1» έχει ήδη οριστεί ως θέμα για την τρέχουσα συνεδρία "
+"Plasma."
 
 #: plasma-apply-desktoptheme.cpp:67
 #, kde-format
 msgid "The current Plasma session's theme has been set to %1"
-msgstr ""
+msgstr "Το θέμα της τρέχουσας συνεδρίας Plasma έχει οριστεί σε %1"
 
 #: plasma-apply-desktoptheme.cpp:69
 #, kde-format
@@ -95,61 +103,57 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
+"Αδυναμία εύρεσης του θέματος «%1». Το θέμα πρέπει να είναι μία από τις "
+"ακόλουθες επιλογές: %2"
 
 #: plasma-apply-desktoptheme.cpp:77
 #, kde-format
 msgid "You have the following Plasma themes on your system:"
-msgstr ""
+msgstr "Έχετε τα ακόλουθα θέματα Plasma στο σύστημά σας:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "Available themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
-msgstr "Διαθέσιμα θέματα"
+msgstr "Όλα τα θέματα"
 
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
-msgstr "Θέμα"
+msgstr "Φωτεινά θέματα"
 
 #: ui/main.qml:103
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
-msgstr ""
+msgstr "Σκοτεινά θέματα"
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
-msgstr ""
+msgstr "Θέμα χρωμάτων συμβατό"
 
 #: ui/main.qml:130
-#, fuzzy, kde-format
-#| msgid "Install from File"
+#, kde-format
 msgid "Install from File…"
-msgstr "Εγκατάσταση από αρχείο"
+msgstr "Εγκατάσταση από αρχείο…"
 
 #: ui/main.qml:135
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Λήψη νέων…"
 
 #: ui/main.qml:148
-#, fuzzy, kde-format
-#| msgctxt "plasma name"
-#| msgid "Color Scheme"
+#, kde-format
 msgid "Follows color scheme"
-msgstr "Θέμα χρωμάτων"
+msgstr "Ακολουθεί το σχέδιο χρωμάτων"
 
 #: ui/main.qml:166
-#, fuzzy, kde-format
-#| msgid "Theme"
+#, kde-format
 msgid "Edit Theme…"
-msgstr "Θέμα"
+msgstr "Επεξεργασία θέματος…"
 
 #: ui/main.qml:173
 #, kde-format
@@ -157,10 +161,9 @@ msgid "Remove Theme"
 msgstr "Αφαίρεση θέματος"
 
 #: ui/main.qml:180
-#, fuzzy, kde-format
-#| msgid "Remove Theme"
+#, kde-format
 msgid "Restore Theme"
-msgstr "Αφαίρεση θέματος"
+msgstr "Επαναφορά θέματος"
 
 #: ui/main.qml:199
 #, kde-format
