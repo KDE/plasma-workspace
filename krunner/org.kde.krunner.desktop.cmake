@@ -82,6 +82,7 @@ Name[ca@valencia]=Executa una ordre al contingut del porta-retalls
 Name[cs]=Spustit příkaz nad obsahem schránky
 Name[da]=Kør kommando på udklipsholderindholdet
 Name[de]=Befehl mit dem Inhalt der Zwischenablage ausführen
+Name[el]=Εκτέλεση εντολής στα περιεχόμενα πρόχειρου
 Name[en_GB]=Run command on clipboard contents
 Name[eo]=Lanĉi komandon sur tonduja enhavo
 Name[es]=Ejecutar orden sobre el contenido del portapapeles
