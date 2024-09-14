@@ -428,6 +428,7 @@ class ClipboardTest(unittest.TestCase):
         ActionChains(self.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
         self.driver.find_element(AppiumBy.NAME, "Edit contents").click()
         self.driver.find_element(AppiumBy.NAME, "Text edit area")
+        time.sleep(1)
 
         # By default the text area is focused, so typing anything will appear in the text area.
         new_text = "clip bold"
