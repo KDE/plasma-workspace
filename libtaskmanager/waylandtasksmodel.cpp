@@ -845,7 +845,12 @@ WaylandTasksModel::WaylandTasksModel(QObject *parent)
     d->init();
 }
 
-WaylandTasksModel::~WaylandTasksModel() = default;
+WaylandTasksModel::~WaylandTasksModel()
+{
+    for (auto &window : d->windows) {
+        QObject::disconnect(window.get(), &PlasmaWindow::parentWindowChanged, this, nullptr);
+    }
+}
 
 QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
 {
