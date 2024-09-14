@@ -99,15 +99,7 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
             Qt::ConnectionType::SingleShotConnection);
     });
 
-    const bool connected = QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.plasmashell"),
-                                                                 QStringLiteral("/PlasmaShell"),
-                                                                 QStringLiteral("org.kde.PlasmaShell"),
-                                                                 QStringLiteral("wallpaperChanged"),
-                                                                 this,
-                                                                 SLOT(onWallpaperChanged(uint)));
-    if (!connected) {
-        qCFatal(KCM_WALLPAPER_DEBUG) << "Could not connect to dbus service org.kde.plasmashell";
-    }
+    connectToPlasmaShell();
 
     setButtons(Apply | Default);
 
@@ -120,6 +112,29 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
         m_screens << screen;
         Q_EMIT screensChanged();
     });
+}
+
+void WallpaperModule::connectToPlasmaShell()
+{
+    const bool connected = QDBusConnection::sessionBus().connect(QStringLiteral("org.kde.plasmashell"),
+                                                                 QStringLiteral("/PlasmaShell"),
+                                                                 QStringLiteral("org.kde.PlasmaShell"),
+                                                                 QStringLiteral("wallpaperChanged"),
+                                                                 this,
+                                                                 SLOT(onWallpaperChanged(uint)));
+    if (!connected) {
+        qCFatal(KCM_WALLPAPER_DEBUG) << "Could not connect to dbus service org.kde.plasmashell";
+    }
+}
+
+void WallpaperModule::disconnectFromPlasmaShell()
+{
+    QDBusConnection::sessionBus().disconnect(QStringLiteral("org.kde.plasmashell"),
+                                             QStringLiteral("/PlasmaShell"),
+                                             QStringLiteral("org.kde.PlasmaShell"),
+                                             QStringLiteral("wallpaperChanged"),
+                                             this,
+                                             SLOT(onWallpaperChanged(uint)));
 }
 
 void WallpaperModule::onScreenChanged()
@@ -196,6 +211,9 @@ int WallpaperModule::screenIdFromName(const QString &screenName) const
 
 void WallpaperModule::setWallpaperPluginConfiguration(const QString &wallpaperplugin, bool loadDefaults)
 {
+    // avoid recursive updating state
+    disconnectFromPlasmaShell();
+
     auto wallpaperConfig = m_config->group(QStringLiteral("Containments")).group(m_containmentIdx).group(QStringLiteral("Wallpaper")).group(wallpaperplugin);
     m_wallpaperConfigGeneral = wallpaperConfig.group(QStringLiteral("General"));
 
@@ -223,6 +241,8 @@ void WallpaperModule::setWallpaperPluginConfiguration(const QString &wallpaperpl
         setRepresentsDefaults(isDefault());
         setNeedsSave(m_configLoader->isSaveNeeded() || m_loadedWallpaperplugin != m_currentWallpaperPlugin);
     });
+
+    connectToPlasmaShell();
 }
 
 class WallpaperConfigModel : public PlasmaQuick::ConfigModel

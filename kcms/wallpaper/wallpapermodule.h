@@ -74,6 +74,9 @@ private:
     void loadConfiguration();
     bool isDefault() const;
 
+    void connectToPlasmaShell();
+    void disconnectFromPlasmaShell();
+
     KSharedConfig::Ptr m_config;
     KConfigLoader *m_configLoader;
     KActivities::Consumer *m_activityConsumer = nullptr;
