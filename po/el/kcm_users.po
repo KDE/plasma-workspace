@@ -1,51 +1,51 @@
-# Copyright (C) 2023 This file is copyright:
-# This file is distributed under the same license as the plasma-desktop package.
-#
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-desktop\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:40+0000\n"
-"PO-Revision-Date: 2024-09-13 20:40+0200\n"
-"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
-"Language: bg\n"
+"PO-Revision-Date: 2024-09-13 18:18+0300\n"
+"Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
+"Language-Team: el <kde-i18n-el@kde.org>\n"
+"Language: Greek\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
 msgid "No fingerprint device found."
-msgstr "Не е намерено устройство за пръстов отпечатък."
+msgstr ""
 
 #: src/fingerprintmodel.cpp:294
 #, kde-format
 msgid "Retry scanning your finger."
-msgstr "Опитайте повторно сканиране на пръста."
+msgstr ""
 
 #: src/fingerprintmodel.cpp:296
 #, kde-format
 msgid "Swipe too short. Try again."
-msgstr "Плъзгането е прекалено кратко.Опитайте отново."
+msgstr ""
 
 #: src/fingerprintmodel.cpp:298
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
-msgstr "Пръстът не е центриран на четеца. Опитайте отново."
+msgstr ""
 
 #: src/fingerprintmodel.cpp:300
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
-msgstr "Махнете пръста от четеца и опитайте отново."
+msgstr ""
 
 #: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Fingerprint enrollment has failed."
-msgstr "Снемането на пръстовия отпечатък е неуспешно."
+msgstr ""
 
 #: src/fingerprintmodel.cpp:311
 #, kde-format
@@ -53,48 +53,46 @@ msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr ""
-"Няма достатъчно място на това устройство. Изтрийте пръстови отпечатъци, за "
-"да продължите."
 
 #: src/fingerprintmodel.cpp:314
 #, kde-format
 msgid "The device was disconnected."
-msgstr "Връзката с устройството е прекъсната."
+msgstr ""
 
 #: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid "An unknown error has occurred."
-msgstr "Възникна неизвестна грешка."
+msgstr ""
 
 #: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:183
 #, kde-format
 msgid "Change Password"
-msgstr "Промяна на парола"
+msgstr ""
 
 #: src/ui/ChangePassword.qml:32
 #, kde-format
 msgid "Set Password"
-msgstr "Задаване на парола"
+msgstr ""
 
 #: src/ui/ChangePassword.qml:53
 #, kde-format
 msgid "Password"
-msgstr "Парола"
+msgstr ""
 
 #: src/ui/ChangePassword.qml:68
 #, kde-format
 msgid "Confirm password"
-msgstr "Потвърждаване на парола"
+msgstr ""
 
 #: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
-msgstr "Паролите трябва да съвпадат"
+msgstr ""
 
 #: src/ui/ChangeWalletPassword.qml:16
 #, kde-format
 msgid "Change Wallet Password?"
-msgstr "Да се смени ли паролата на Портфейла?"
+msgstr ""
 
 #: src/ui/ChangeWalletPassword.qml:25
 #, kde-kuit-format
@@ -103,13 +101,11 @@ msgid ""
 "Now that you have changed your login password, you may also want to change "
 "the password on your default KWallet to match it."
 msgstr ""
-"Сега, когато сте променили паролата си за влизане, може да искате да "
-"промените паролата на вашия Kwallet, за да съвпада."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format
 msgid "What is KWallet?"
-msgstr "Какво е  KWallet?"
+msgstr ""
 
 #: src/ui/ChangeWalletPassword.qml:41
 #, kde-format
@@ -120,429 +116,384 @@ msgid ""
 "be unlocked at login automatically so you don't have to enter the KWallet "
 "password yourself."
 msgstr ""
-"Kwallet е мениджър на пароли, който съхранява паролите ви за безжични мрежи "
-"и други криптирани ресурси. Той е заключен със собствена парола, която се "
-"различава от паролата за влизане. Ако двете пароли съвпадат, тя може да бъде "
-"отключена автоматично при влизане, така че не е нужно да въвеждате паролата "
-"на Kwallet."
 
 #: src/ui/ChangeWalletPassword.qml:58
 #, kde-format
 msgid "Change Wallet Password"
-msgstr "Смяна на парола на Портфейла"
+msgstr ""
 
 #: src/ui/ChangeWalletPassword.qml:67
 #, kde-format
 msgid "Leave Unchanged"
-msgstr "Оставяне непроменено"
+msgstr ""
 
 #: src/ui/CreateUser.qml:15
 #, kde-format
 msgid "Create User"
-msgstr "Създаване на потребител"
+msgstr ""
 
 #: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:133
 #, kde-format
 msgid "Name:"
-msgstr "Име:"
+msgstr ""
 
 #: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:141
 #, kde-format
 msgid "Username:"
-msgstr "Потребителско име:"
+msgstr ""
 
 #: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:158
 #, kde-format
 msgid "Standard"
-msgstr "Стандартно"
+msgstr ""
 
 #: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:159
 #, kde-format
 msgid "Administrator"
-msgstr "Администратор"
+msgstr ""
 
 #: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:148
 #, kde-format
 msgid "Account type:"
-msgstr "Вид на акаунта:"
+msgstr ""
 
 #: src/ui/CreateUser.qml:53
 #, kde-format
 msgid "Password:"
-msgstr "Парола:"
+msgstr ""
 
 #: src/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
-msgstr "Потвърждаване на парола:"
+msgstr ""
 
 #: src/ui/CreateUser.qml:75
 #, kde-format
 msgid "Create"
-msgstr "Създаване"
+msgstr ""
 
 #: src/ui/CropSheet.qml:27
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr "Избиране на област на изображение"
+msgstr ""
 
 #: src/ui/EnrolledConfirmation.qml:20
 #, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
-msgstr "Пръстът е регистриран"
+msgstr ""
 
 #: src/ui/EnrollFeedback.qml:28
 #, kde-format
 msgid ""
 "Please repeatedly press your right index finger on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно десния си показалец върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:30
 #, kde-format
 msgid ""
 "Please repeatedly press your right middle finger on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно десния си среден пръст върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:32
 #, kde-format
 msgid ""
 "Please repeatedly press your right ring finger on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно десния си безименен пръст върху сензора за "
-"пръстови отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:34
 #, kde-format
 msgid ""
 "Please repeatedly press your right little finger on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно десния си малък пръст върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:36
 #, kde-format
 msgid "Please repeatedly press your right thumb on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно десния си палец върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:38
 #, kde-format
 msgid ""
 "Please repeatedly press your left index finger on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно левия си показалец върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:40
 #, kde-format
 msgid ""
 "Please repeatedly press your left middle finger on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно левия си среден пръст върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:42
 #, kde-format
 msgid ""
 "Please repeatedly press your left ring finger on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно левия си безименен пръст върху сензора за "
-"пръстови отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:44
 #, kde-format
 msgid ""
 "Please repeatedly press your left little finger on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно левия си малък пръст върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:46
 #, kde-format
 msgid "Please repeatedly press your left thumb on the fingerprint sensor."
 msgstr ""
-"Моля, натиснете многократно левия си палец върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:50
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right index finger on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно десния си показалец върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:52
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right middle finger on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно десния си среден пръст върху сензора за "
-"пръстови отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:54
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right ring finger on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно десния си безименен пръст върху сензора за "
-"пръстови отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:56
 #, kde-format
 msgid ""
 "Please repeatedly swipe your right little finger on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно десния си малък пръст върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:58
 #, kde-format
 msgid "Please repeatedly swipe your right thumb on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно десния си палец върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:60
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left index finger on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно левия си показалец върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:62
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left middle finger on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно левия си среден пръст върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:64
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left ring finger on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно левия си безименен пръст върху сензора за "
-"пръстови отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:66
 #, kde-format
 msgid ""
 "Please repeatedly swipe your left little finger on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно левия си малък пръст върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/EnrollFeedback.qml:68
 #, kde-format
 msgid "Please repeatedly swipe your left thumb on the fingerprint sensor."
 msgstr ""
-"Моля, прокарайте многократно левия си палец върху сензора за пръстови "
-"отпечатъци."
 
 #: src/ui/FingerprintDialog.qml:28
 #, kde-format
 msgid "Configure Fingerprints"
-msgstr "Конфигуриране на отпечатъци"
+msgstr ""
 
 #: src/ui/FingerprintDialog.qml:40
 #, kde-format
 msgid "Add"
-msgstr "Добавяне"
+msgstr ""
 
 #: src/ui/FingerprintDialog.qml:52
 #, kde-format
 msgid "Cancel"
-msgstr "Отказване"
+msgstr ""
 
 #: src/ui/FingerprintDialog.qml:60
 #, kde-format
 msgid "Done"
-msgstr "Завършен"
+msgstr ""
 
 #: src/ui/FingerprintList.qml:46
 #, kde-format
 msgid "Re-enroll finger"
-msgstr "Сложете отново пръста"
+msgstr ""
 
 #: src/ui/FingerprintList.qml:58
 #, kde-format
 msgid "Delete fingerprint"
-msgstr "Изтриване на отпечатъци"
+msgstr ""
 
 #: src/ui/FingerprintList.qml:74
 #, kde-format
 msgid "No fingerprints added"
-msgstr "Не са добавени отпечатъци"
+msgstr ""
 
 #: src/ui/main.qml:20
 #, kde-format
 msgid "Users"
-msgstr "Потребители"
+msgstr ""
 
 #: src/ui/main.qml:31
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Добавяне..."
+msgstr ""
 
 #: src/ui/main.qml:32
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Добавяне на нов потребител..."
+msgstr ""
 
 #: src/ui/main.qml:108
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
-msgstr "Натиснете интервал, за да редактирате потребителския профил"
+msgstr ""
 
 #: src/ui/PickFinger.qml:28
 #, kde-format
 msgid "Pick a finger to enroll"
-msgstr "Сложете пръст за вземане на отпечатък"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:18
 #, kde-format
 msgctxt "@title"
 msgid "Change Avatar"
-msgstr "Промяна на аватара"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:22
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
-msgstr "Това не е нищо"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:23
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
-msgstr "Feisty Flamingo"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:24
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
-msgstr "Dragon's Fruit"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
-msgstr "Sweet Potato"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
-msgstr "Ambient Amber"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
-msgstr "Sparkle Sunbeam"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
-msgstr "Lemon-Lime"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
-msgstr "Verdant Charm"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
-msgstr "Mellow Meadow"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
-msgstr "Tepid Teal"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
-msgstr "Plasma Blue"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
-msgstr "Pon Purple"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
-msgstr "Bajo Purple"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
-msgstr "Burnt Charcoal"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
-msgstr "Paper Perfection"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
-msgstr "Cafétera Brown"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
-msgstr "Rich Hardwood"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr "Връщане назад"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:78
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
-msgstr "Инициали"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:132
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr "Избиране на файл…"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:137
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
-msgstr "Избиране на снимка"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:140
 #, kde-format
@@ -555,25 +506,23 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
-"Файлове с изображения (Всички основни видове файлове) (*.avif *.bmp *.gif *."
-"jp2 *.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:196
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
-msgstr "Заместваща икона"
+msgstr ""
 
 #: src/ui/PicturesSheet.qml:285
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
-msgstr "Използване на заместваща икона аватар"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:112
 #, kde-format
 msgid "Change avatar"
-msgstr "Промяна на аватара"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:169
 #, kde-format
@@ -582,35 +531,31 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
-"Не може да се промени типа на акаунта на стандартен, освен ако няма поне "
-"един друг акаунт на администратор в системата. Без такъв, удостоверяването "
-"би станало невъзможно или би изисквало несигурното използване на root "
-"паролата."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format
 msgid "Email address:"
-msgstr "Адрес за е-поща:"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:206
 #, kde-format
 msgid "Delete files"
-msgstr "Изтриване на файлове"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:213
 #, kde-format
 msgid "Keep files"
-msgstr "Запазване на файлове"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Delete User…"
-msgstr "Изтриване на потребител…"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:232
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
-msgstr "Конфигуриране на идентификация с пръстов отпечатък…"
+msgstr ""
 
 #: src/ui/UserDetailsPage.qml:264
 #, kde-kuit-format
@@ -621,44 +566,33 @@ msgid ""
 "programs that request them.<nl/><nl/>Logging into the system with your "
 "fingerprint is not yet supported."
 msgstr ""
-"Пръстовите отпечатъци могат да се използват вместо парола, когато отключвате "
-"екрана и при предоставяне на администраторски разрешения за приложения и "
-"команди, които ги изискват.<nl/><nl/> Влизане в системата с пръстов "
-"отпечатък все още не се поддържа."
 
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
-msgstr "Не можа да се получи разрешение за запазване на потребител %1"
+msgstr ""
 
 #: src/user.cpp:315
 #, kde-format
 msgid "There was an error while saving changes"
-msgstr "При запазването на промените възникна грешка"
+msgstr ""
 
 #: src/user.cpp:417
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
-"Неуспех при преоразмеряване на изображение: отварянето на временния файл "
-"пропадна"
 
 #: src/user.cpp:425
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
-"Неуспех при преоразмеряване на изображение: записът във временния файл "
-"пропадна"
 
 #: src/usermodel.cpp:167
 #, kde-format
 msgid "Your Account"
-msgstr "Вашия акаунт"
+msgstr ""
 
 #: src/usermodel.cpp:167
 #, kde-format
 msgid "Other Accounts"
-msgstr "Други акаунти"
-
-#~ msgid "Enrolling Fingerprint"
-#~ msgstr "Снемане на отпечатък"
+msgstr ""
