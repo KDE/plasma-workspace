@@ -314,11 +314,9 @@ void WallpaperModule::save()
     QList<uint> screenIds;
 
     if (m_allScreens) {
-        uint idx = 0;
         const auto outputOrder = m_outputOrderWatcher->outputOrder();
-        for (const auto &output : outputOrder) {
+        for (uint idx = 0; idx < outputOrder.size(); ++idx) {
             screenIds.append(idx);
-            ++idx;
         }
     } else {
         int screenId = screenIdFromName(m_selectedScreen->name());
