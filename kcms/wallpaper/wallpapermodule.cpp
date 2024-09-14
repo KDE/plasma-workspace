@@ -16,7 +16,6 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KConfigLoader>
-#include <KConfigPropertyMap>
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <plasmaactivities/consumer.h>
@@ -177,7 +176,6 @@ void WallpaperModule::onScreenChanged()
     auto containmentConfigGroup = containmentsGroup.group(m_containmentIdx);
     m_loadedWallpaperplugin = containmentConfigGroup.readEntry("wallpaperplugin");
 
-    auto previousConfig = m_wallpaperConfiguration;
     setWallpaperPluginConfiguration(m_loadedWallpaperplugin);
 
     setRepresentsDefaults(isDefault());
@@ -189,8 +187,6 @@ void WallpaperModule::onScreenChanged()
     } else {
         Q_EMIT wallpaperConfigurationChanged();
     }
-
-    delete previousConfig;
 }
 
 int WallpaperModule::screenIdFromName(const QString &screenName) const
@@ -226,7 +222,7 @@ void WallpaperModule::setWallpaperPluginConfiguration(const QString &wallpaperpl
     if (loadDefaults) {
         m_configLoader->setDefaults();
     }
-    m_wallpaperConfiguration = new KConfigPropertyMap(m_configLoader, this);
+    m_wallpaperConfiguration.reset(new KConfigPropertyMap(m_configLoader, this));
 
     // set the default wallpaper value
     m_defaultWallpaper = DefaultWallpaper::defaultWallpaperPackage().path();
@@ -237,7 +233,7 @@ void WallpaperModule::setWallpaperPluginConfiguration(const QString &wallpaperpl
         m_wallpaperConfiguration->insert(QStringLiteral("Image"), m_defaultWallpaper);
     }
 
-    connect(m_wallpaperConfiguration, &QQmlPropertyMap::valueChanged, this, [this](const QString & /* key */, const QVariant & /* value */) {
+    connect(m_wallpaperConfiguration.get(), &QQmlPropertyMap::valueChanged, this, [this](const QString & /* key */, const QVariant & /* value */) {
         setRepresentsDefaults(isDefault());
         setNeedsSave(m_configLoader->isSaveNeeded() || m_loadedWallpaperplugin != m_currentWallpaperPlugin);
     });
@@ -302,9 +298,6 @@ void WallpaperModule::defaults()
         Q_EMIT currentWallpaperPluginChanged();
     }
 
-    auto previousConfig = m_wallpaperConfiguration;
-    disconnect(previousConfig, nullptr);
-
     setWallpaperPluginConfiguration(m_currentWallpaperPlugin, true);
     m_wallpaperConfiguration->insert(QStringLiteral("Image"), m_defaultWallpaper);
 
@@ -312,8 +305,6 @@ void WallpaperModule::defaults()
     setNeedsSave(m_configLoader->isSaveNeeded() || m_loadedWallpaperplugin != m_currentWallpaperPlugin);
 
     Q_EMIT wallpaperConfigurationChanged();
-
-    delete previousConfig;
 }
 
 void WallpaperModule::load()
@@ -369,7 +360,7 @@ void WallpaperModule::save()
 
 QQmlPropertyMap *WallpaperModule::wallpaperConfiguration() const
 {
-    return m_wallpaperConfiguration;
+    return m_wallpaperConfiguration.get();
 }
 
 QString WallpaperModule::currentWallpaperPlugin() const
@@ -439,16 +430,12 @@ void WallpaperModule::setCurrentWallpaperPlugin(const QString &wallpaperPlugin)
     }
 
     m_currentWallpaperPlugin = wallpaperPlugin;
-    auto previousConfig = m_wallpaperConfiguration;
-    disconnect(previousConfig, nullptr);
 
     setWallpaperPluginConfiguration(m_currentWallpaperPlugin);
 
     setNeedsSave(needsSave() || m_loadedWallpaperplugin != m_currentWallpaperPlugin);
 
     Q_EMIT currentWallpaperPluginChanged();
-
-    delete previousConfig;
 }
 
 PlasmaQuick::ConfigModel *WallpaperModule::wallpaperConfigModel()

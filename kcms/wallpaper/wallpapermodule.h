@@ -2,6 +2,7 @@
 #define WALLPAPERMODULE_H
 
 #include <KConfigGroup>
+#include <KConfigPropertyMap>
 #include <KQuickConfigModule>
 #include <KSharedConfig>
 #include <PlasmaQuick/ConfigModel>
@@ -12,7 +13,6 @@
 class KConfigLoader;
 class WallpaperConfigModel;
 class OutputOrderWatcher;
-class KConfigPropertyMap;
 
 namespace KActivities
 {
@@ -82,7 +82,7 @@ private:
     KActivities::Consumer *m_activityConsumer = nullptr;
     OutputOrderWatcher *m_outputOrderWatcher = nullptr;
     WallpaperConfigModel *m_wallpaperConfigModel = nullptr;
-    KConfigPropertyMap *m_wallpaperConfiguration = nullptr;
+    std::unique_ptr<KConfigPropertyMap> m_wallpaperConfiguration = nullptr;
     QString m_loadedWallpaperplugin;
     QString m_currentWallpaperPlugin;
     QScreen *m_selectedScreen = nullptr;
