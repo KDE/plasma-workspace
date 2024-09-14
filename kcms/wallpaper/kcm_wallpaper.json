@@ -108,6 +108,16 @@
     "X-DocPath": "kcontrol/kcm_wallpaper/index.html",
     "X-KDE-Init-Phase": 0,
     "X-KDE-Keywords": "wallpaper,desktop",
+    "X-KDE-Keywords[bg]": "тапет,работен плот",
+    "X-KDE-Keywords[ca]": "fons de pantalla,escriptori",
+    "X-KDE-Keywords[he]": "רקעים,רקע,שולחן עבודה,דסקטופ",
+    "X-KDE-Keywords[ia]": "Tapetes de papiro",
+    "X-KDE-Keywords[ka]": "ფონური სურათი;სამუშაო მაგიდა",
+    "X-KDE-Keywords[lt]": "darbalaukio fonas,darbalaukis,darbastalio fonas,darbastalis",
+    "X-KDE-Keywords[sl]": "ozadje,namizje",
+    "X-KDE-Keywords[sv]": "skrivbordsunderlägg,skrivbord",
+    "X-KDE-Keywords[uk]": "wallpaper,desktop,шпалери,тло,фон,стільниця",
+    "X-KDE-Keywords[x-test]": "xxwallpaperxx,xxdesktopxx",
     "X-KDE-System-Settings-Parent-Category": "appearance",
     "X-KDE-Weight": 10
 }

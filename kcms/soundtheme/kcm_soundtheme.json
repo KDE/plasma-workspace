@@ -96,6 +96,14 @@
         "Name[zh_TW]": "系統音效"
     },
     "X-KDE-Keywords": "system sounds,sound theme,sound,sounds,alert,notification,bell",
+    "X-KDE-Keywords[ca]": "sons del sistema,tema de sons,so,sons,alerta,notificació,timbre",
+    "X-KDE-Keywords[ia]": "system sounds,sound theme,sound,sounds,alert,notification,bell",
+    "X-KDE-Keywords[ka]": "system sounds,sound theme,sound,sounds,alert,notification,bell",
+    "X-KDE-Keywords[lt]": "sistemos garsai,sisteminiai garsai,garsų rinkinys,garsu rinkinys,apipavidalinimas,tema,įspėjimas,signalas,ispejimas,pranešimas,pranesimas,skambutis",
+    "X-KDE-Keywords[sl]": "sistemski zvoki,zvočna tema,zvok,zvoki,opozorilo,obvestilo,zvonec",
+    "X-KDE-Keywords[sv]": "systemljud,ljudtema,ljud,varning,underrättelse,alarm",
+    "X-KDE-Keywords[uk]": "system sounds,sound theme,sound,sounds,alert,notification,bell,системні звуки,звукова тема,звук,звуки,нагадування,сповіщення,дзвінок,гудок",
+    "X-KDE-Keywords[x-test]": "xxsystem soundsxx,xxsound themexx,xxsoundxx,xxsoundsxx,xxalertxx,xxnotificationxx,xxbellxx",
     "X-KDE-System-Settings-Parent-Category": "themes",
     "X-KDE-Weight": 90
 }
