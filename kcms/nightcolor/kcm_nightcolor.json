@@ -98,6 +98,7 @@
     },
     "X-DocPath": "https://userbase.kde.org/TODOX",
     "X-KDE-Keywords": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,blue,light",
+    "X-KDE-Keywords[x-test]": "xxkwinxx,xxwindowxx,xxmanagerxx,xxnightxx,xxcolorsxx,xxredshiftxx,xxeyesxx,xxnight modexx,xxcolourxx,xxdark modexx,xxdarkxx,xxdimxx,xxsleepxx,xxeye strainxx,xxredxx,xxshiftxx,xxorangexx,xxyellowxx,xxwarmxx,xxscreen tintxx,xxtemperaturexx,xxbluexx,xxlightxx",
     "X-KDE-System-Settings-Parent-Category": "display",
     "X-KDE-Weight": 120
 }
