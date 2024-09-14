@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-02-03 15:42+0100\n"
+"PO-Revision-Date: 2024-09-13 21:43+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -39,13 +39,11 @@ msgstr[0] "Излизане след 1 секунда"
 msgstr[1] "Излизане след %1 секунди"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Инсталиране на актуализациите и рестартиране след 1 секунда"
-msgstr[1] "Инсталиране на актуализациите и рестартиране след %1 секунди"
+msgstr[0] "Инсталиране на актуализациите и изключване след 1 секунда"
+msgstr[1] "Инсталиране на актуализациите и изключване след %1 секунди"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -98,9 +96,7 @@ msgid "Hibernate Now"
 msgstr "Моментална хибернация"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Инсталиране на актуализациите и рестартиране"
@@ -116,12 +112,10 @@ msgid "Restart Now"
 msgstr "Моментално рестартиране"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Инсталиране на актуализациите и рестартиране сега"
+msgstr "Инсталиране на актуализациите и изключване"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format

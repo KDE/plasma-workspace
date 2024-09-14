@@ -293,18 +293,3 @@ msgstr "Apaga l'ordinador"
 #, kde-format
 msgid "System actions"
 msgstr "Accions del sistema"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "Mostra la informació del contacte…"
-
-#~ msgid "Contacts"
-#~ msgstr "Contactes"
-
-#~ msgid "Forget Contact"
-#~ msgstr "Oblida el contacte"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "Oblida tots els contactes"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "Contactes recents"

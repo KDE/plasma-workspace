@@ -455,16 +455,3 @@ msgstr "Nombre de plafons"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els plafons"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "Activa el mode prova i especifica el fitxer en JavaScript de disposició "
-#~ "per a definir l'entorn de prova"
-
-#~ msgid "file"
-#~ msgstr "fitxer"
-
-#~ msgid "Manage Desktops And Panels..."
-#~ msgstr "Gestiona escriptoris i plafons..."

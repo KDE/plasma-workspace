@@ -205,9 +205,3 @@ msgstr "No s'ha pogut extreure aquest dispositiu."
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "No s'ha pogut expulsar aquest disc."
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "El sistema de fitxers no respon"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "El sistema de fitxers muntat a «%1» no respon"

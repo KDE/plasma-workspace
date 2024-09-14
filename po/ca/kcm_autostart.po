@@ -235,7 +235,3 @@ msgstr "S'ha produït un error en rebre la resposta de la crida GetAll %1"
 #, kde-format
 msgid "Failed to open journal"
 msgstr "Ha fallat en obrir el diari"
-
-#~ msgctxt "@action:button"
-#~ msgid "Add…"
-#~ msgstr "Afegeix…"

@@ -434,7 +434,3 @@ msgstr "Teclegeu una resposta…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Envia"
-
-#~ msgctxt "A button tooltip; expands the item to show details"
-#~ msgid "Show Details"
-#~ msgstr "Mostra els detalls"
