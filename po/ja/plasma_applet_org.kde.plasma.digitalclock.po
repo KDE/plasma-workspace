@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: package/contents/config/config.qml:19
 #, kde-format

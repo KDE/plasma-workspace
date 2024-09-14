@@ -597,9 +597,3 @@ msgstr "Unitat de temperatura"
 #: soliddeviceengine.cpp:609 soliddeviceengine.cpp:613
 msgid "In Use"
 msgstr "En ús"
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "El sistema de fitxers no respon"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "El sistema de fitxers muntat a «%1» no respon"
