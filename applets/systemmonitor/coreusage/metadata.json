@@ -60,6 +60,7 @@
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
         "Category": "System Information",
         "Description": "System monitor widget that shows usage of individual CPU cores",
+        "Description[bg]": "Уиджет за системен монитор, който показва използването на отделни ядра на процесора",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU",
         "Description[el]": "Συστατικό παρακολούθησης συστήματος που δείχνει τη χρήση των πυρήνων ΚΜΕ ξεχωριστά",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de los núcleos individuales de la CPU",

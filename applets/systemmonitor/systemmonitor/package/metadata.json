@@ -114,6 +114,7 @@
         "Id": "org.kde.plasma.systemmonitor",
         "License": "GPL",
         "Name": "System Monitor Sensor",
+        "Name[bg]": "Сензор на системния монитор",
         "Name[ca]": "Sensor del monitor del sistema",
         "Name[el]": "Αισθητήρας παρακολούθησης συστήματος",
         "Name[es]": "Sensor del monitor del sistema",

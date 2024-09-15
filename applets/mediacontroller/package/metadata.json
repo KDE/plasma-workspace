@@ -60,6 +60,7 @@
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Media%20Player",
         "Category": "Multimedia",
         "Description": "Media player controls",
+        "Description[bg]": "Контроли на медиен плеър",
         "Description[ca]": "Controls del reproductor multimèdia",
         "Description[el]": "Έλεγχοι αναπαραγωγής πολυμέσων",
         "Description[es]": "Controles del reproductor multimedia",

@@ -60,6 +60,7 @@
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Input%20Method",
         "Category": "Accessibility",
         "Description": "Manage your input methods",
+        "Description[bg]": "Управлявайте вашите методи за въвеждане",
         "Description[ca]": "Gestioneu els mètodes d'entrada",
         "Description[el]": "Διαχειριστείτε τις μεθόδους εισόδου σας",
         "Description[es]": "Gestión de métodos de entrada",

@@ -180,6 +180,9 @@
         "Website": "https://kde.org/plasma-desktop/"
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
+    "X-KDE-Keywords[ca]": "klipper,porta-retalls,copiar,enganxar,copia,enganxa",
+    "X-KDE-Keywords[sl]": "klipper,odložišče,kopiraj,prilepi",
+    "X-KDE-Keywords[sv]": "klipper,klippbord,kopiera,klistra in",
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-NotificationAreaCategory": "SystemServices"
 }
