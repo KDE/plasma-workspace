@@ -70,7 +70,7 @@ target_link_libraries(plasma-apply-cursortheme
 )
 
 if (HAVE_X11)
-   target_link_libraries(plasma-apply-cursortheme X11::X11 X11::Xcursor X11::Xfixes Qt::GuiPrivate)
+   target_link_libraries(plasma-apply-cursortheme X11::X11 X11::Xcursor X11::Xfixes XCB::XCB XCB::CURSOR Qt::GuiPrivate)
 endif()
 
 install(TARGETS plasma-apply-cursortheme  DESTINATION ${KDE_INSTALL_BINDIR})
