@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
@@ -10,23 +10,25 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: ui/main.qml:32
 #, kde-format
 msgid ""
 "User Feedback has been disabled centrally. Please contact your distributor."
 msgstr ""
+"Τα Σχόλια χρηστών έχουν απενεργοποιηθεί κεντρικά. Επικοινωνήστε με τον "
+"διανομέα σας."
 
 #: ui/main.qml:45 ui/main.qml:78
 #, kde-format
 msgid "Plasma:"
-msgstr ""
+msgstr "Plasma:"
 
 #: ui/main.qml:52
 #, kde-kuit-format
@@ -39,18 +41,26 @@ msgid ""
 "identify you.<nl/><nl/>You can read about <link url='https://kde.org/"
 "privacypolicy-apps.php'>our privacy policy here.</link>"
 msgstr ""
+"Μπορείτε να βοηθήσετε το KDE να βελτιώσει το Plasma συνεισφέροντας "
+"πληροφορίες σχετικά με τον τρόπο που το χρησιμοποιείτε, ώστε να μπορούμε να "
+"επικεντρωθούμε σε πράγματα που έχουν σημασία για εσάς.<nl/><nl/>Η συνεισφορά "
+"αυτών των πληροφοριών είναι προαιρετική και εντελώς ανώνυμη. Δεν συλλέγουμε "
+"ποτέ τα προσωπικά σας δεδομένα, τα αρχεία που χρησιμοποιείτε, τους "
+"ιστότοπους που επισκέπτεστε ή πληροφορίες που θα μπορούσαν να σας "
+"ταυτοποιήσουν.<nl/><nl/>Μπορείτε να διαβάσετε για την <link url='https://kde."
+"org/privacypolicy-apps.php'>πολιτική απορρήτου μας εδώ.</link>"
 
 #: ui/main.qml:113
 #, kde-format
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: ui/main.qml:135
 #, kde-format
 msgid "The following information will be sent:"
-msgstr ""
+msgstr "Θα αποσταλούν οι ακόλουθες πληροφορίες:"
 
 #: ui/main.qml:182
 #, kde-format
 msgid "View sent data:"
-msgstr ""
+msgstr "Προβολή απεσταλμένων δεδομένων:"

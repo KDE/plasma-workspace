@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2022-12-12 21:03+0200\n"
+"PO-Revision-Date: 2024-09-15 00:59+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
 #: fontsaasettingsbase.kcfg:9
@@ -116,13 +116,13 @@ msgstr "Nėra"
 #, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
-msgstr "Lengva"
+msgstr "Silpna"
 
 #: kxftconfig.cpp:501
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"
-msgstr "Pilna"
+msgstr "Visiška"
 
 #: ui/FontWidget.qml:32
 #, kde-format
@@ -130,7 +130,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2 tšk."
 
 #: ui/main.qml:23
 #, kde-format
@@ -250,6 +250,11 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Paprastai, pikseliai ekranuose yra lygiuojami tinkleliu. Štai kodėl šriftų, "
+"kurie nesilygiuoja su šiuo tinkleliu, forma atrodys blokų pavidalu ir "
+"neteisingai, nebent bus naudojamos <emphasis>glodinimo</emphasis> technikos, "
+"kad būtų sumažintas šis efektas. Įprastai, pageidautumėte palikti šią "
+"parinktį įjungtą, nebent ji sukelia problemų."
 
 #: ui/main.qml:197
 #, kde-format
@@ -285,6 +290,15 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>TFT ir LCD ekranuose kiekvienas pikselis, iš tikrųjų, yra sudarytas iš "
+"trijų ar keturių mažesnių vienos spalvos šviesų. Šie <emphasis>subpikseliai</"
+"emphasis> gali būti atskirai keičiami, siekiant dar labiau pagerinti "
+"atvaizduojamų šriftų kokybę.</para> <para>Atvaizdavimo kokybė pagerinama tik "
+"tuo atveju, jei pasirinkimas atitinka metodą, kuriuo yra sulygiuoti jūsų "
+"ekrano subpikseliai. Dauguma ekranų naudoja linijinę <emphasis>RGB</"
+"emphasis> subpikselių tvarką, kai kurie <emphasis>BGR</emphasis>, o kai "
+"kurių egzotinių tvarkų ši ypatybė nepalaiko.</para>Tai neveikia CRT "
+"monitoriuose."
 
 #: ui/main.qml:314
 #, kde-format
@@ -301,6 +315,10 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"Taškinė korekcija yra technika, kurios metu į šriftą įtaisyti taškai yra "
+"naudojami pagerinti atvaizdavimo kokybę, ypač kalbant apie mažus dydžius. "
+"Stipresnė taškinė korekcija įprastai veda prie smailesnių kraštų, bet mažos "
+"raidės labiau praras savo formas būdamos didelio dydžio."
 
 #: ui/main.qml:372
 #, kde-format
@@ -318,6 +336,14 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>Čia įveskite savo ekrano DPI (taškų colyje) skaičių, kad spausdinant "
+"priverstumėte ekrane esančius šriftus atitikti jų fizinį dydį. Pakeitus šios "
+"parinkties numatytąją reikšmę, daugelyje programų bus sukelta konfliktų; kai "
+"kurios piktogramos ir paveikslai gali būti rodomi ne tokio mastelio, kaip "
+"tikimasi.</para><para>Norėdami padidinti teksto dydį, keiskite aukščiau "
+"esančių šriftų dydį. Norėdami keisti visuotinį mastelį, naudokite mastelio "
+"slinktuką, esantį puslapyje, pavadinimu <interface>Ekranas ir monitorius</"
+"interface>.</para>"
 
 #: ui/main.qml:406
 #, kde-format

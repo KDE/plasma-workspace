@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
@@ -10,22 +10,22 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: main.cpp:47 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
-msgstr ""
+msgstr "Plasma σε παράθυρο"
 
 #: main.cpp:49
 #, kde-format
 msgid "Enable QML Javascript debugger"
-msgstr ""
+msgstr "Ενεργοποίηση του αποσφαλματωτή QML Javascript"
 
 #: main.cpp:52 plasmawindowedcorona.cpp:105
 #, kde-format
@@ -33,23 +33,25 @@ msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
 "is closed."
 msgstr ""
+"Κάνει το πλασμοειδές να παραμένει ζωντανό στην περιοχή ειδοποιήσεων, ακόμη "
+"και όταν το παράθυρο είναι κλειστό."
 
 #: main.cpp:54
 #, kde-format
 msgid "Force loading the given shell plugin"
-msgstr ""
+msgstr "Αναγκαστική φόρτωση του συγκεκριμένου πρόσθετου κελύφους"
 
 #: main.cpp:58 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
-msgstr ""
+msgstr "Η μικροεφαρμογή που θα ανοίξει."
 
 #: main.cpp:59 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
-msgstr ""
+msgstr "Τα ορίσματα για χρήση από το πλασμοειδές."
 
 #: plasmawindowedview.cpp:120
 #, kde-format
 msgid "Close %1"
-msgstr ""
+msgstr "Κλείσιμο %1"

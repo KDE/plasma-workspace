@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
@@ -10,63 +10,63 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: devicenotifications.cpp:333
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr ""
+msgstr "Ανιχνεύθηκε οθόνη"
 
 #: devicenotifications.cpp:334
 #, kde-format
 msgid "A display has been plugged in."
-msgstr ""
+msgstr "Μια οθόνη έχει συνδεθεί."
 
 #: devicenotifications.cpp:347
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr ""
+msgstr "Αφαιρέθηκε οθόνη"
 
 #: devicenotifications.cpp:348
 #, kde-format
 msgid "A display has been unplugged."
-msgstr ""
+msgstr "Μια οθόνη έχει αποσυνδεθεί."
 
 #: devicenotifications.cpp:379
 #, kde-format
 msgid "%1 has been plugged in."
-msgstr ""
+msgstr "%1 έχει συνδεθεί."
 
 #: devicenotifications.cpp:379
 #, kde-format
 msgid "A USB device has been plugged in."
-msgstr ""
+msgstr "Μια συσκευή USB έχει συνδεθεί."
 
 #: devicenotifications.cpp:382
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
-msgstr ""
+msgstr "Ανιχνεύθηκε συσκευή USB"
 
 #: devicenotifications.cpp:405
 #, kde-format
 msgid "%1 has been unplugged."
-msgstr ""
+msgstr "%1 έχει αποσυνδεθεί."
 
 #: devicenotifications.cpp:405
 #, kde-format
 msgid "A USB device has been unplugged."
-msgstr ""
+msgstr "Μια συσκευή USB έχει αποσυνδεθεί."
 
 #: devicenotifications.cpp:408
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
-msgstr ""
+msgstr "Η συσκευή USB αφαιρέθηκε"

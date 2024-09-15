@@ -1,22 +1,22 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
+# SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-09-13 18:18+0300\n"
-"Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
-"Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"PO-Revision-Date: 2024-09-14 11:25+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -24,6 +24,8 @@ msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr ""
+"Η θερμοκρασία χρώματος αρχίζει να αλλάζει για τη νυχτερινή λειτουργία στις "
+"%1 και έχει αλλάξει πλήρως μέχρι τις %2"
 
 #: ui/DayNightView.qml:135
 #, kde-format
@@ -31,30 +33,32 @@ msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
 "%2"
 msgstr ""
+"Η θερμοκρασία χρώματος αρχίζει να αλλάζει για τη ημερήσια λειτουργία στις %1 "
+"και έχει αλλάξει πλήρως μέχρι τις %2"
 
 #: ui/LocationsFixedView.qml:72
 #, kde-format
 msgctxt ""
 "@label:chooser Tap should be translated to mean touching using a touchscreen"
 msgid "Tap to choose your location on the map."
-msgstr ""
+msgstr "Πατήστε για να επιλέξετε τη θέση σας στο χάρτη."
 
 #: ui/LocationsFixedView.qml:73
 #, kde-format
 msgctxt ""
 "@label:chooser Click should be translated to mean clicking using a mouse"
 msgid "Click to choose your location on the map."
-msgstr ""
+msgstr "Κάντε κλικ για να επιλέξετε τη θέση σας στο χάρτη."
 
 #: ui/LocationsFixedView.qml:112
 #, kde-format
 msgid "Zoom in"
-msgstr ""
+msgstr "Μεγέθυνση"
 
 #: ui/LocationsFixedView.qml:129
 #, kde-format
 msgid "Zoom out"
-msgstr ""
+msgstr "Σμίκρυνση"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
@@ -65,92 +69,96 @@ msgid ""
 "TUBS / Wikimedia Commons / <link url='https://creativecommons.org/licenses/"
 "by-sa/3.0'>CC BY-SA 3.0</link>"
 msgstr ""
+"Τροποποιήθηκε από <link url='https://commons.wikimedia.org/wiki/File:"
+"World_location_map_(equirectangular_180).svg'>Παγκόσμιος χάρτης τοποθεσίας</"
+"link> από TUBS / Wikimedia Commons / <link url='https://creativecommons.org/"
+"licenses/by-sa/3.0'>CC BY-SA 3.0</link>"
 
 #: ui/LocationsFixedView.qml:240
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
-msgstr ""
+msgstr "Γεωγραφικό πλάτος:"
 
 #: ui/LocationsFixedView.qml:271
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
-msgstr ""
+msgstr "Γεωγραφικό μήκος:"
 
 #: ui/main.qml:75
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
-msgstr ""
+msgstr "Το φίλτρο μπλε φωτός κάνει τα χρώματα στην οθόνη πιο ζεστά."
 
 #: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
 #, kde-format
 msgctxt "Color temperature in Kelvin"
 msgid "%1K"
-msgstr ""
+msgstr "%1K"
 
 #: ui/main.qml:136
 #, kde-format
 msgid "Day light temperature:"
-msgstr ""
+msgstr "Θερμοκρασία ημερησίου φωτισμού:"
 
 #: ui/main.qml:186 ui/main.qml:250
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr ""
+msgstr "Δροσερό (χωρίς φίλτρο)"
 
 #: ui/main.qml:193 ui/main.qml:257
 #, kde-format
 msgctxt "Night colour red-ish"
 msgid "Warm"
-msgstr ""
+msgstr "Ζεστό"
 
 #: ui/main.qml:200
 #, kde-format
 msgid "Night light temperature:"
-msgstr ""
+msgstr "Θερμοκρασία νυχτερινού φωτισμού:"
 
 #: ui/main.qml:269
 #, kde-format
 msgid "Switching times:"
-msgstr ""
+msgstr "Αλλαγή χρόνων:"
 
 #: ui/main.qml:272
 #, kde-format
 msgid "Always off"
-msgstr ""
+msgstr "Πάντα ανενεργό"
 
 #: ui/main.qml:273
 #, kde-format
 msgid "Sunset and sunrise at current location"
-msgstr ""
+msgstr "Ηλιοβασίλεμα και ανατολή στην τρέχουσα τοποθεσία"
 
 #: ui/main.qml:274
 #, kde-format
 msgid "Sunset and sunrise at manual location"
-msgstr ""
+msgstr "Ηλιοβασίλεμα και ανατολή σε χειροκίνητη θέση"
 
 #: ui/main.qml:275
 #, kde-format
 msgid "Custom times"
-msgstr ""
+msgstr "Προσαρμοσμένες ώρες"
 
 #: ui/main.qml:276
 #, kde-format
 msgid "Always on night light"
-msgstr ""
+msgstr "Νυχτερινός φωτισμός πάντα ενεργός"
 
 #: ui/main.qml:288
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr ""
+msgstr "Τρέχουσα τοποθεσία:"
 
 #: ui/main.qml:293
 #, kde-format
 msgid "Latitude: %1°   Longitude: %2°"
-msgstr ""
+msgstr "Γεωγραφικό πλάτος: %1° Γεωγραφικό μήκος: %2°"
 
 #: ui/main.qml:318
 #, kde-kuit-format
@@ -161,6 +169,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"Η τοποθεσία της συσκευής θα ενημερώνεται περιοδικά με τη χρήση GPS (εάν "
+"είναι διαθέσιμη) ή με την αποστολή πληροφοριών δικτύου στην <link "
+"url='https://location.services.mozilla.com'>Υπηρεσία Τοποθεσίας Mozilla</"
+"link>."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -175,50 +187,50 @@ msgstr ""
 #: ui/main.qml:334
 #, kde-format
 msgid "Begin night light at:"
-msgstr ""
+msgstr "Έναρξη νυχτερινού φωτισμού σε:"
 
 #: ui/main.qml:351
 #, kde-format
 msgid "Begin day light at:"
-msgstr ""
+msgstr "Έναρξη ημερησίου φωτισμού σε:"
 
 #: ui/main.qml:367
 #, kde-format
 msgid "Transition duration:"
-msgstr ""
+msgstr "Διάρκεια μετάβασης:"
 
 #: ui/main.qml:378
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 λεπτό"
+msgstr[1] "%1 λεπτά"
 
 #: ui/main.qml:391
 #, kde-format
 msgid "Input minutes - min. 1, max. 600"
-msgstr ""
+msgstr "Λεπτά εισόδου - λεπτ. 1, μεγ. 600"
 
 #: ui/main.qml:412
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr ""
+msgstr "Γεωεντοπισμός…"
 
 #: ui/TimeField.qml:43
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "ώρα"
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:56
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr ""
+msgstr "λεπτό"

@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
@@ -10,41 +10,41 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/config/config.qml:9
 #, kde-format
 msgid "Appearance"
-msgstr ""
+msgstr "Εμφάνιση"
 
 #: package/contents/config/config.qml:14
 #, kde-format
 msgid "%1 Details"
-msgstr ""
+msgstr "%1 Λεπτομέρειες"
 
 #: package/contents/config/config.qml:20
 #, kde-format
 msgid "Sensors Details"
-msgstr ""
+msgstr "Λεπτομέρειες αισθητήρων"
 
 #: package/contents/ui/main.qml:62
 #, kde-format
 msgid "System Monitor"
-msgstr ""
+msgstr "Παρακολούθηση συστήματος"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgctxt "Sensor name: value"
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"
-msgstr ""
+msgstr "Άνοιγμα της Παρακολούθησης συστήματος…"

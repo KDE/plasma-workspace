@@ -1,7 +1,7 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+# SPDX-FileCopyrightText: 2024 Dimitrys Meliates <demetresmeliates+i18n@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
@@ -10,81 +10,81 @@ msgstr ""
 "PO-Revision-Date: 2024-09-13 18:18+0300\n"
 "Last-Translator: Antonis G. <capoiosct@gmail.com>\n"
 "Language-Team: el <kde-i18n-el@kde.org>\n"
-"Language: Greek\n"
+"Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: interactiveconsole.cpp:63
 #, kde-format
 msgid "&Execute"
-msgstr ""
+msgstr "&Εκτέλεση"
 
 #: interactiveconsole.cpp:64
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
-msgstr ""
+msgstr "Plasma"
 
 #: interactiveconsole.cpp:65
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
-msgstr ""
+msgstr "KWin"
 
 #: interactiveconsole.cpp:66
 #, kde-format
 msgid "Templates"
-msgstr ""
+msgstr "Πρότυπα"
 
 #: interactiveconsole.cpp:75
 #, kde-format
 msgid "Desktop Shell Scripting Console"
-msgstr ""
+msgstr "Κονσόλα σεναρίων κέλυφους επιφάνειας εργασίας"
 
 #: interactiveconsole.cpp:82
 #, kde-format
 msgid "Editor"
-msgstr ""
+msgstr "Εκδότης"
 
 #: interactiveconsole.cpp:93
 #, kde-format
 msgid "Load"
-msgstr ""
+msgstr "Φόρτωση"
 
 #: interactiveconsole.cpp:99
 #, kde-format
 msgid "Use"
-msgstr ""
+msgstr "Χρήση"
 
 #: interactiveconsole.cpp:159
 #, kde-format
 msgid "Output"
-msgstr ""
+msgstr "Έξοδος"
 
 #: interactiveconsole.cpp:266
 #, kde-format
 msgid "Unable to load script file <b>%1</b>"
-msgstr ""
+msgstr "Αδύνατη η φόρτωσης του αρχείου δέσμης ενεργειών <b>%1</b>"
 
 #: interactiveconsole.cpp:316
 #, kde-format
 msgid "Open Script File"
-msgstr ""
+msgstr "Άνοιγμα αρχείου σεναρίου"
 
 #: interactiveconsole.cpp:431
 #, kde-format
 msgid "Save Script File"
-msgstr ""
+msgstr "Αποθήκευση αρχείου σεναρίου"
 
 #: interactiveconsole.cpp:520
 #, kde-format
 msgid "Executing script at %1"
-msgstr ""
+msgstr "Εκτέλεση δέσμης ενεργειών στο %1"
 
 #: interactiveconsole.cpp:572
 #, no-c-format, kde-format
 msgid "Runtime: %1ms"
-msgstr ""
+msgstr "Χρόνος εκτέλεσης: %1ms"

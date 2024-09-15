@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-09-15 00:42+0000\n"
 "PO-Revision-Date: 2024-08-03 00:10-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -229,7 +229,7 @@ msgstr ""
 "pôde ser identificado como papel de parede: %1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:330
+#: plugin/imagebackend.cpp:333
 #, kde-format
 msgid "Media Files"
 msgstr "Arquivos de mídia"

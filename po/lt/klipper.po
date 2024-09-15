@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-09-05 00:28+0300\n"
+"PO-Revision-Date: 2024-09-15 01:55+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -67,6 +67,18 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"Kai tekstas ar sritis ekrane yra paryškinami naudojant pelę ar klaviatūrą, "
+"tai yra vadinama <emphasis>žymėjimu</emphasis>. Žymėjimas gali būti įdėtas "
+"naudojant vidurinįjį pelės mygtuką.<nl/><nl/>Jeigu žymėjimas yra aiškiai "
+"nukopijuojamas naudojant veiksmą <interface>Kopijuoti</interface> ar "
+"<interface>Iškirpti</interface>, tuomet jis yra įrašomas į "
+"<emphasis>iškarpinę</emphasis>. Jis gali būti įdėtas naudojant veiksmą "
+"<interface>Įdėti</interface>. <nl/><nl/>Kai įjungta, ši parinktis padaro "
+"žymėjimą ir iškarpinę vienodais, tokiu būdu bet koks žymėjimas yra "
+"nedelsiant prieinamas įdėti bet kokiais būdais. Jei ši parinktis išjungta, "
+"žymėjimas vis tiek gali būti įrašytas į iškarpinės istoriją (priklausomai "
+"nuo žemiau pasirinktų parinkčių), bet gali būti įdėtas tik naudojant "
+"vidurinįjį pelės mygtuką."
 
 #: configdialog.cpp:132 configdialog.cpp:170
 #, kde-format
@@ -121,6 +133,11 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"Kai pažymimas ar iš iškarpinės istorijos pasirenkamas tekstas, kuris "
+"atitinka veiksmo šabloną, automatiškai rodyti iškylantįjį meniu su "
+"pritaikyti galimais veiksmais. Jei automatinis meniu čia yra išjungtas arba "
+"nėra rodomas išskirtam langui, tuomet jis gali būti parodytas naudojant "
+"spartųjį klavišą <shortcut>%1</shortcut>."
 
 #: configdialog.cpp:279
 #, kde-format
@@ -161,9 +178,9 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
-"Kai <interface>match pattern</interface> matches the clipboard contents, its "
-"<interface>commands</interface> appear in the Klipper popup menu and can be "
-"executed."
+"Kai <interface>atitikimo šablonas</interface> atitinka iškarpinės turinį, jo "
+"<interface>komandos</interface> atsiranda Klipper iškylančiajame meniu ir "
+"gali būti įvykdytos."
 
 #: configdialog.cpp:369
 #, kde-format
@@ -271,6 +288,12 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"Šiems langams veiksmo iškylantysis meniu nebus automatiškai rodomas net tuo "
+"atveju, jei jis įjungtas. Taip yra todėl, kad, pavyzdžiui, saityno naršyklė, "
+"adreso juostoje rašant URL adresą, gali jį paryškinti, todėl meniu būtų "
+"rodomas po kiekvieno klavišo paspaudimo.<nl/><nl/>Jei naudojant tam tikrą "
+"programą netikėtai atsiranda veiksmo meniu, tuomet pridėkite ją į šį sąrašą. "
+"<link>Kaip sužinoti, kokį pavadinimą įvesti</link>."
 
 #: configdialog.cpp:704
 #, kde-kuit-format
@@ -282,6 +305,12 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Pavadinimas, kuris čia turi būti įvestas, yra lango, kuris turi būti "
+"išskirtas, WM_CLASS pavadinimas. Norėdami sužinoti lango WM_CLASS "
+"pavadinimą, kitame terminalo lange įveskite komandą:<nl/><nl/>&nbsp;&nbsp;"
+"<icode>xprop | grep WM_CLASS</icode><nl/><nl/>ir spustelėkite ant lango, "
+"kurį norite išskirti. Pirmas pavadinimas, kuris bus rodomas po lygybės "
+"ženklo, yra pavadinimas, kurį turite įvesti."
 
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
@@ -441,6 +470,10 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"Veiksmas įsigalioja, kuomet jo <interface>atitikimo šablonas</interface> "
+"atitinka iškarpinės turinį. Kai tai nutinka, veiksmo <interface>komandos</"
+"interface> atsiranda Klipper iškylančiajame meniu; pasirinkus vieną iš jų, "
+"komanda bus įvykdyta."
 
 #: editactiondialog.cpp:203
 #, kde-format
@@ -489,6 +522,12 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"Šio atitikmens komandos bus įtrauktos į automatinį veiksmo iškylantįjį "
+"meniu, jeigu jis įjungtas <interface>Veiksmų meniu</interface> puslapyje. "
+"Jei ši parinktis išjungta, šio atitikmens komandos nebus įtrauktos į "
+"automatinį iškylantįjį meniu, bet jos bus įtrauktos tuo atveju, jei "
+"iškylantysis meniu bus aktyvintas rankiniu būdu naudojant spartųjį klavišą "
+"<shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:262
 #, kde-format
@@ -540,6 +579,9 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"<placeholder>&#37;s</placeholder> komandoje bus pakeista visu iškarpinės "
+"turiniu. Nuo <placeholder>&#37;0</placeholder> iki <placeholder>&#37;9</"
+"placeholder> bus pakeista atitinkamais iš atitikimo šablono gautais tekstais."
 
 #: editcommanddialog.cpp:81
 #, kde-format
@@ -744,6 +786,9 @@ msgid ""
 "is not automatically stored in the clipboard history, and can only be pasted "
 "using a middle-click."
 msgstr ""
+"Turinys, kuris nebuvo aiškiai nukopijuotas į iškarpinę, o buvo tik pažymėtas "
+"žymekliu, nėra automatiškai laikomas iškarpinės istorijoje ir gali būti "
+"įdėtas tik naudojant vidurinįjį pelės mygtuką."
 
 #. i18n: ectx: label, entry (SelectionTextOnly), group (General)
 #: klipper.kcfg:37
@@ -758,6 +803,8 @@ msgid ""
 "Only store text selections in the clipboard history, not images or any other "
 "type of data."
 msgstr ""
+"Laikyti iškarpinės istorijoje tik teksto žymėjimus, o ne paveikslus ar "
+"kažkokius kito tipo duomenis."
 
 #. i18n: ectx: label, entry (IgnoreImages), group (General)
 #: klipper.kcfg:42
@@ -792,6 +839,8 @@ msgstr "Iš karto atlikus žymėjimą"
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
+"Rodyti iškylantįjį pritaikyti galimų veiksmų meniu iš karto, kai tik "
+"atliekamas žymėjimas."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
@@ -844,6 +893,10 @@ msgid ""
 "browser is interpreted as expected. The text saved on the clipboard is not "
 "affected."
 msgstr ""
+"Prieš atliekant veiksmą, šalinti bet kokius tarpus iš pažymėto teksto "
+"pradžios ir pabaigos. Pavyzdžiui, tai užtikrina, kad į naršyklę įdėtas URL "
+"adresas būtų tinkamai interpretuotas. Iškarpinėje įrašytas tekstas nėra "
+"paveikiamas."
 
 #. i18n: ectx: label, entry (ReplayActionInHistory), group (Actions)
 #: klipper.kcfg:89
@@ -858,8 +911,8 @@ msgid ""
 "Show the popup menu of applicable actions if an entry is chosen from the "
 "clipboard history."
 msgstr ""
-"Rodyti iškylantįjį taikomų veiksmų meniu, jei įrašas yra pasirenkamas iš "
-"iškarpinės istorijos."
+"Rodyti iškylantįjį pritaikyti galimų veiksmų meniu, jei įrašas yra "
+"pasirenkamas iš iškarpinės istorijos."
 
 #. i18n: ectx: label, entry (EnableMagicMimeActions), group (Actions)
 #: klipper.kcfg:94
@@ -874,6 +927,8 @@ msgid ""
 "If a file name or URL is selected, include applications that can accept its "
 "MIME type in the popup menu."
 msgstr ""
+"Jei yra pažymimas failo pavadinimas ar URL, tuomet įtraukti į iškylantįjį "
+"meniu programas, galinčias priimti failo pavadinimo ar URL adreso MIME tipą."
 
 #: klipperpopup.cpp:33
 #, kde-format
