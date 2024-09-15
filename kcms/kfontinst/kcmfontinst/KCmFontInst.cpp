@@ -283,11 +283,6 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
 
     mainLayout->addWidget(m_groupSplitter);
 
-    separator = new QFrame(widget());
-    separator->setFrameShape(QFrame::HLine);
-    separator->setMaximumHeight(1);
-    mainLayout->addWidget(separator);
-
     fontControlLayout->addWidget(m_deleteFontControl);
     fontControlLayout->addStretch();
     fontControlLayout->addWidget(m_listingProgress);
