@@ -54,6 +54,8 @@
 #if HAVE_X11
 #include <X11/Xlib.h>
 #include <private/qtx11extras_p.h>
+#include <xcb/xcb.h>
+#include <xcb/xcb_cursor.h>
 #endif
 
 #include <filesystem>
@@ -467,8 +469,27 @@ void runRdb(unsigned int flags)
 #endif
     proc.execute();
 
-    // Needed for applications that don't set their own cursor.
-    QProcess::execute(QStringLiteral("xsetroot"), {QStringLiteral("-cursor_name"), QStringLiteral("left_ptr")});
+#if HAVE_X11
+    xcb_connection_t *connection = xcb_connect(nullptr, nullptr);
+    if (!xcb_connection_has_error(connection)) {
+        xcb_screen_t *screen = xcb_setup_roots_iterator(xcb_get_setup(connection)).data;
+
+        // Needed for applications that don't set their own cursor.
+        xcb_cursor_context_t *context = nullptr;
+        if (xcb_cursor_context_new(connection, screen, &context) < 0) {
+            qWarning() << "xcb_cursor_context_new() failed";
+        } else {
+            xcb_cursor_t cursor = xcb_cursor_load_cursor(context, "left_ptr");
+            xcb_change_window_attributes(connection, screen->root, XCB_CW_CURSOR, &cursor);
+            xcb_free_cursor(connection, cursor);
+            xcb_cursor_context_free(context);
+        }
+    } else {
+        qWarning() << "xcb_connect() failed";
+    }
+
+    xcb_disconnect(connection);
+#endif
 
     applyGtkStyles(1);
     applyGtkStyles(2);
