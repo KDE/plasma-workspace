@@ -98,6 +98,10 @@
     },
     "X-DocPath": "https://userbase.kde.org/TODOX",
     "X-KDE-Keywords": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,blue,light",
+    "X-KDE-Keywords[ca]": "kwin,finestra,gestor,nit,colors,redshift,ulls,mode nocturn,color,mode fosc,fosc,enfosquiment,dormir,fatiga ocular,vermell,desplaçament,taronja,groc,càlid,tint de la pantalla,temperatura,blau,clar",
+    "X-KDE-Keywords[es]": "kwin,ventana,gestor,noche,colores,redshift,ojos,modo nocturno,color,modo oscuro,oscurecer,dormir,esfuerzo visual,fatiga visual,rojo,desplazamiento,naranja,amarillo,cálido,tono de la pantalla,temperatura,azul,claro,luz",
+    "X-KDE-Keywords[sl]": "kwin,okno,upravljalnik,nočne barve,rdeči pomik,oči,nočni način,barve,temni način,temina,zabrisanje,spanje,napenjanje oči,pomik,oranžna,rumena,toplo,odtenek zaslona,temperatura,modra,svetloba",
+    "X-KDE-Keywords[sv]": "kwin,fönster,hanterare,natt,färger,rödskift,ögon,nattläge,färg,mörkt läge,mörk,ljussvag,viloläge,ögonbelastning,röd,skift,orange,gul,varm,skärmfärgton,temperatur,blå,ljus",
     "X-KDE-Keywords[x-test]": "xxkwinxx,xxwindowxx,xxmanagerxx,xxnightxx,xxcolorsxx,xxredshiftxx,xxeyesxx,xxnight modexx,xxcolourxx,xxdark modexx,xxdarkxx,xxdimxx,xxsleepxx,xxeye strainxx,xxredxx,xxshiftxx,xxorangexx,xxyellowxx,xxwarmxx,xxscreen tintxx,xxtemperaturexx,xxbluexx,xxlightxx",
     "X-KDE-System-Settings-Parent-Category": "display",
     "X-KDE-Weight": 120

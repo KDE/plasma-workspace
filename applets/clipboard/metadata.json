@@ -169,6 +169,10 @@
         "Version": "1.0"
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
+    "X-KDE-Keywords[ca]": "klipper,porta-retalls,copiar,enganxar,copia,enganxa",
+    "X-KDE-Keywords[es]": "klipper,portapapeles,copiar,pegar",
+    "X-KDE-Keywords[sl]": "klipper,odložišče,kopiraj,prilepi",
+    "X-KDE-Keywords[sv]": "klipper,klippbord,kopiera,klistra in",
     "X-KDE-Keywords[x-test]": "xxklipperxx,xxclipboardxx,xxcopyxx,xxpastexx",
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/clipboard.qml",

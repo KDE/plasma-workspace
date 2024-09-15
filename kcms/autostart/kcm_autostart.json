@@ -105,6 +105,7 @@
     "X-DocPath": "kcontrol/autostart/index.html",
     "X-KDE-Keywords": "Autostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session,startup,launch,login",
     "X-KDE-Keywords[az]": "Avtobaşlama meneceri,sistemin açılması,plasma'nın açılması,cron,avtomatik,başlama,başladılma,önyükləmə,yüklənmə,sessiya,işə düşmə,giriş",
+    "X-KDE-Keywords[ca]": "Gestor d'inic automàtic,inici del sistema,inici del plasma,cron,auto,inici,arrencada,càrrega,sessió,llançament,inici de sessió",
     "X-KDE-Keywords[es]": "Gestor de inicio automático,inicio del sistema,inicio de plasma,cron,automático,inicio,arranque,cargar,sesión,lanzamiento,lanzar,inicio de sesión",
     "X-KDE-Keywords[fr]": "Gestionnaire de démarrage automatique, démarrage du système, démarrage de Plasma, cron, auto, démarrage, boot, chargement, session, démarrage, lancement, connexion",
     "X-KDE-Keywords[hu]": "Automatikus indítás kezelő,rendszerindítás,plasma indítása,cron,auto,start,indítás,boot,betöltés,munkamenet,indulás,indítás,bejelentkezés",
