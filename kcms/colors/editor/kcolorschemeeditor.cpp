@@ -71,6 +71,7 @@ int main(int argc, char *argv[])
                 dialog.setModal(true);
                 dialog.setAttribute(Qt::WA_NativeWindow, true);
                 KWindowSystem::setMainWindow(dialog.windowHandle(), winId);
+                QObject::connect(&dialog, &QDialog::finished, &app, &QApplication::quit);
             }
         }
     }
