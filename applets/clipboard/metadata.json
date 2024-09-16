@@ -181,6 +181,8 @@
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
     "X-KDE-Keywords[ca]": "klipper,porta-retalls,copiar,enganxar,copia,enganxa",
+    "X-KDE-Keywords[he]": "klipper,לוח גזירים,העתקה,הדבקה",
+    "X-KDE-Keywords[ka]": "klipper,clipboard,copy,paste;ამოჭრა;ჩასმა;ბუფერი;კოპირება",
     "X-KDE-Keywords[sl]": "klipper,odložišče,kopiraj,prilepi",
     "X-KDE-Keywords[sv]": "klipper,klippbord,kopiera,klistra in",
     "X-Plasma-API-Minimum-Version": "6.0",

@@ -153,6 +153,8 @@
     "X-DocPath": "kcontrol/notifications/index.html",
     "X-KDE-Keywords": "System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute",
     "X-KDE-Keywords[ca]": "Sons del sistema,Àudio,So,Notifica,Alertes,Notificació,emergents,destorbar,no destorbis,tranquil,concentrar-se,concentració,alarma,emergent,progrés,distintius,sons d'alerta,sons d'avís,dnd,silenci",
+    "X-KDE-Keywords[he]": "צלילי מערכת,שמע,צליל,התראה,הודעה,התראות,הודעות,חלוניות קופצות,חלוניות צצות,פופאפ,חלוניות,הפרעה,להפריע,לא להפריע,שקט,ריכוז,התרכזות,מיקוד,התמקדות,התראה,אזעקה,תזכורת,חלונית,חלונית קופצת,חלונית צצה,עיטורים,תגים,תגיות,צלילי תזכורת,צלילי התראה,צלילי הודעה,צלילי אזהרה,לא להפריע,השתקה",
+    "X-KDE-Keywords[ka]": "System sounds,Audio,Sound,Notify,Alerts,Notification,popups,disturb,do not disturb,quiet,concentrate,concentration,alarm,popup,pop up,progress,badges,alert sounds,warning sounds,dnd,mute",
     "X-KDE-Keywords[sl]": "Sistemski zvoki,avdio,zvok,obvestilo,opozorila,obvestilo,pojavna okna,moti,ne moti,tiho,osredotoči se,koncentracija,alarm,pojavno okno, pojavno okno,napredek,značke,opozorilni zvoki,zvoki opozoril,dnd,utišaj",
     "X-KDE-Keywords[sv]": "Systemljud,Ljud,Underrätta,Varningar,Underrättelse,meddelanderuta,stör,stör ej,tyst,koncentrera,koncentration,alarm,meddelanderuta,förlopp,sköldar,alarmljud,varningsljud,dnd,tyst",
     "X-KDE-System-Settings-Parent-Category": "applications",
