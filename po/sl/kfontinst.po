@@ -1,6 +1,6 @@
 # translation of kfontinst.po to Slovenian
 # Translation of kfontinst.po to Slovenian
-# $Id: kfontinst.po 1681664 2024-06-06 01:11:40Z scripty $
+# $Id: kfontinst.po 1690499 2024-09-16 01:14:50Z scripty $
 # $Source$
 #
 # Copyright (C) 2003, 2004, 2005, 2007 Free Software Foundation, Inc.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-09-16 00:41+0000\n"
 "PO-Revision-Date: 2024-04-07 07:12+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -41,7 +41,7 @@ msgstr ""
 "gregor.rakar@kiss.si,jlp@holodeck1.com,andrej.vernekar@moj.net,andrej."
 "znidarsic@gmail.com,andrejm@ubuntu.si,matjaz.jeran@amis.net"
 
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:954
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -50,7 +50,7 @@ msgstr ""
 "Ali želite namestiti pisave za osebno rabo (na voljo samo vam), ali za ves "
 "sistem (na voljo vsem uporabnikom)?"
 
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:957
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:952
 #, kde-format
 msgid "Where to Install"
 msgstr "Kam namestiti"
@@ -362,13 +362,13 @@ msgid "Delete"
 msgstr "Izbriši"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
 msgid "Enable"
 msgstr "Omogoči"
 
 #: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1151
 #, kde-format
 msgid "Disable"
 msgstr "Onemogoči"
@@ -731,27 +731,27 @@ msgstr "Prenesi nove pisave"
 msgid "Delete Selected Fonts…"
 msgstr "Izbriši izbrane pisave …"
 
-#: kcmfontinst/KCmFontInst.cpp:336
+#: kcmfontinst/KCmFontInst.cpp:331
 #, kde-format
 msgid "Change Preview Text…"
 msgstr "Spremeni besedilo predogleda …"
 
-#: kcmfontinst/KCmFontInst.cpp:435
+#: kcmfontinst/KCmFontInst.cpp:430
 #, kde-format
 msgid "Add Fonts"
 msgstr "Dodaj pisave"
 
-#: kcmfontinst/KCmFontInst.cpp:560
+#: kcmfontinst/KCmFontInst.cpp:555
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "Ni bilo mogoče shraniti seznama pisav za tiskanje."
 
-#: kcmfontinst/KCmFontInst.cpp:581
+#: kcmfontinst/KCmFontInst.cpp:576
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "Ni bilo mogoče zagnati tiskalnika pisav."
 
-#: kcmfontinst/KCmFontInst.cpp:588
+#: kcmfontinst/KCmFontInst.cpp:583
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -760,32 +760,32 @@ msgstr ""
 "Ni pisav, ki bi jih bilo mogoče natisniti.\n"
 "Natisnete lahko le pisave, ki niso bitne in so omogočene."
 
-#: kcmfontinst/KCmFontInst.cpp:590
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "Cannot Print"
 msgstr "Ni mogoče natisniti"
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "Ničesar niste izbrali za brisanje."
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "Nič za izbrisati"
 
-#: kcmfontinst/KCmFontInst.cpp:620
+#: kcmfontinst/KCmFontInst.cpp:615
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Ali res želite izbrisati</p><p><b>%1</b>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:623
+#: kcmfontinst/KCmFontInst.cpp:618
 #, kde-format
 msgid "Delete Font"
 msgstr "Izbriši pisavo"
 
-#: kcmfontinst/KCmFontInst.cpp:630
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
@@ -794,27 +794,27 @@ msgstr[1] "Ali res želite izbrisati to %1 pisavo?"
 msgstr[2] "Ali res želite izbrisati ti %1 pisavi?"
 msgstr[3] "Ali res želite izbrisati te %1 pisave?"
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:627
 #, kde-format
 msgid "Delete Fonts"
 msgstr "Izbriši pisave"
 
-#: kcmfontinst/KCmFontInst.cpp:637
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "Brisanje pisav …"
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "Ničesar niste izbrali za premikanje."
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "Nothing to Move"
 msgstr "Nič ni za premakniti"
 
-#: kcmfontinst/KCmFontInst.cpp:662
+#: kcmfontinst/KCmFontInst.cpp:657
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -823,17 +823,17 @@ msgstr ""
 "<p>Ali res želite premakniti</p><p><b>%1</b></p><p>iz <i>%2</i> v <i>%3</i>?"
 "</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:667
+#: kcmfontinst/KCmFontInst.cpp:662
 #, kde-format
 msgid "Move Font"
 msgstr "Premakni pisavo"
 
-#: kcmfontinst/KCmFontInst.cpp:668 kcmfontinst/KCmFontInst.cpp:680
+#: kcmfontinst/KCmFontInst.cpp:663 kcmfontinst/KCmFontInst.cpp:675
 #, kde-format
 msgid "Move"
 msgstr "Premakni"
 
-#: kcmfontinst/KCmFontInst.cpp:673
+#: kcmfontinst/KCmFontInst.cpp:668
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -847,67 +847,67 @@ msgstr[2] ""
 msgstr[3] ""
 "<p>Ali res želite premakniti %1 pisave iz <i>%2</i> v <i>%3</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:679
+#: kcmfontinst/KCmFontInst.cpp:674
 #, kde-format
 msgid "Move Fonts"
 msgstr "Premakni pisave"
 
-#: kcmfontinst/KCmFontInst.cpp:684
+#: kcmfontinst/KCmFontInst.cpp:679
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "Premikanje pisav …"
 
-#: kcmfontinst/KCmFontInst.cpp:698
+#: kcmfontinst/KCmFontInst.cpp:693
 #, kde-format
 msgid "Export Group"
 msgstr "Izvozi skupino"
 
-#: kcmfontinst/KCmFontInst.cpp:724
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "No files?"
 msgstr "Brez datotek?"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:722
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "%1 ni bilo mogoče odpreti za pisanje"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "Create New Group"
 msgstr "Ustvari novo skupino"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "Name of new group:"
 msgstr "Ime nove skupine:"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "New Group"
 msgstr "Nova skupina"
 
-#: kcmfontinst/KCmFontInst.cpp:775
+#: kcmfontinst/KCmFontInst.cpp:770
 #, kde-format
 msgid "Preview Text"
 msgstr "Predogled besedila"
 
-#: kcmfontinst/KCmFontInst.cpp:775
+#: kcmfontinst/KCmFontInst.cpp:770
 #, kde-format
 msgid "Please enter new text:"
 msgstr "Vnesite novo besedilo:"
 
-#: kcmfontinst/KCmFontInst.cpp:827
+#: kcmfontinst/KCmFontInst.cpp:822
 #, kde-format
 msgid "Scanning font list…"
 msgstr "Preiskovanje seznama pisav …"
 
-#: kcmfontinst/KCmFontInst.cpp:886
+#: kcmfontinst/KCmFontInst.cpp:881
 #, kde-format
 msgid "No fonts"
 msgstr "Ni pisav"
 
-#: kcmfontinst/KCmFontInst.cpp:891
+#: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
@@ -916,7 +916,7 @@ msgstr[1] "%1 pisava"
 msgstr[2] "%1 pisavi"
 msgstr[3] "%1 pisave"
 
-#: kcmfontinst/KCmFontInst.cpp:900
+#: kcmfontinst/KCmFontInst.cpp:895
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -929,7 +929,7 @@ msgstr ""
 "omogočene:</td><td>%3</td></tr><tr><td align=\"right\">Vse:</td><td>%4</td></"
 "tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:910
+#: kcmfontinst/KCmFontInst.cpp:905
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -940,62 +940,62 @@ msgstr ""
 "\"right\">Onemogočene:</td><td>%2</td></tr><tr><td align=\"right\">Vse:</"
 "td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:987
+#: kcmfontinst/KCmFontInst.cpp:982
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "Iskanje povezanih datotek …"
 
-#: kcmfontinst/KCmFontInst.cpp:991
+#: kcmfontinst/KCmFontInst.cpp:986
 #, kde-format
 msgid "Scanning Files…"
 msgstr "Preiskovanje datotek …"
 
-#: kcmfontinst/KCmFontInst.cpp:992
+#: kcmfontinst/KCmFontInst.cpp:987
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "Iskanje dodatnih datotek za namestitev …"
 
-#: kcmfontinst/KCmFontInst.cpp:1007
+#: kcmfontinst/KCmFontInst.cpp:1002
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "Iskanje datotek asociiranih z %1"
 
-#: kcmfontinst/KCmFontInst.cpp:1035
+#: kcmfontinst/KCmFontInst.cpp:1030
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "Nameščanje pisav …"
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "Ničesar niste izbrali za omogočiti."
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "Ničesar niste izbrali za onemogočiti."
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1096
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "Ni česa omogočiti"
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1096
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "Ni česa onemogočiti"
 
-#: kcmfontinst/KCmFontInst.cpp:1118
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Ali res želite omogočiti</p><p><b>%1</b>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1115
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>Ali res želite onemogočiti</p><p><b>%1</b>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: kcmfontinst/KCmFontInst.cpp:1117
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1004,7 +1004,7 @@ msgstr ""
 "<p>Ali res želite omogočiti</p><p><b>%1</b>, ki se nahaja v skupini <b>%2</"
 "b>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1126
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1013,17 +1013,17 @@ msgstr ""
 "<p>Ali res želite onemogočiti</p><p><b>%1</b>, ki se nahaja v skupini <b>%2</"
 "b>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1131
+#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1126
 #, kde-format
 msgid "Enable Font"
 msgstr "Omogoči pisavo"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Disable Font"
 msgstr "Onemogoči pisavo"
 
-#: kcmfontinst/KCmFontInst.cpp:1137
+#: kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
@@ -1032,7 +1032,7 @@ msgstr[1] "Ali res želite omogočiti to %1 pisavo?"
 msgstr[2] "Ali res želite omogočiti ti %1 pisavi?"
 msgstr[3] "Ali res želite omogočiti te %1 pisave?"
 
-#: kcmfontinst/KCmFontInst.cpp:1140
+#: kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
@@ -1041,7 +1041,7 @@ msgstr[1] "Ali res želite onemogočiti to %1 pisavo?"
 msgstr[2] "Ali res želite onemogočiti ti %1 pisavi?"
 msgstr[3] "Ali res želite onemogočiti te %1 pisave?"
 
-#: kcmfontinst/KCmFontInst.cpp:1143
+#: kcmfontinst/KCmFontInst.cpp:1138
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1054,7 +1054,7 @@ msgstr[1] "<p>Ali res želite omogočiti to %1 pisavo iz skupine <b>%2</b>?</p>"
 msgstr[2] "<p>Ali res želite omogočiti ti %1 pisavi iz skupine <b>%2</b>?</p>"
 msgstr[3] "<p>Ali res želite omogočiti te %1 pisave iz skupine <b>%2</b>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1148
+#: kcmfontinst/KCmFontInst.cpp:1143
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1069,22 +1069,22 @@ msgstr[2] ""
 msgstr[3] ""
 "<p>Ali res želite onemogočiti te %1 pisave iz skupine <b>%2</b>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1155
+#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
 msgid "Enable Fonts"
 msgstr "Omogoči pisave"
 
-#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1151
 #, kde-format
 msgid "Disable Fonts"
 msgstr "Onemogoči pisave"
 
-#: kcmfontinst/KCmFontInst.cpp:1162
+#: kcmfontinst/KCmFontInst.cpp:1157
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "Omogočanje pisav …"
 
-#: kcmfontinst/KCmFontInst.cpp:1164
+#: kcmfontinst/KCmFontInst.cpp:1159
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "Onemogočanje pisav …"

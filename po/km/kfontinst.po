@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-09-16 00:41+0000\n"
 "PO-Revision-Date: 2012-06-13 15:24+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -26,7 +26,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "khoemsokhem@khmeros.info,​​mornmet@khmeros.info,sutha@khmeros.info"
 
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:954
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -35,7 +35,7 @@ msgstr ""
 "តើ​អ្នក​ចង់​ដំឡើង​ពុម្ព​អក្សរ​សម្រាប់​ប្រើ​ផ្ទាល់​ខ្លួន​ (ប្រើ​បាន​តែ​អ្នក) ឬ​សម្រាប់​​ប្រព័ន្ធ​ទាំងមូល (អ្នក​ប្រើ​ទាំងអស់​"
 "អាច​ប្រើ​បាន​)?"
 
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:957
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:952
 #, kde-format
 msgid "Where to Install"
 msgstr "កន្លែង​ដែល​ត្រូវ​ដំឡើង"
@@ -347,13 +347,13 @@ msgid "Delete"
 msgstr "លុប"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
 msgid "Enable"
 msgstr "អនុញ្ញាត"
 
 #: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1151
 #, kde-format
 msgid "Disable"
 msgstr "មិន​អនុញ្ញាត​"
@@ -727,28 +727,28 @@ msgstr ""
 msgid "Delete Selected Fonts…"
 msgstr "លុប​ពុម្ព​អក្សរ​ដែល​បាន​ជ្រើស​"
 
-#: kcmfontinst/KCmFontInst.cpp:336
+#: kcmfontinst/KCmFontInst.cpp:331
 #, fuzzy, kde-format
 #| msgid "Change Preview Text..."
 msgid "Change Preview Text…"
 msgstr "ផ្លាស់ប្ដូរ​អត្ថបទ​មើល​ជាមុន​..."
 
-#: kcmfontinst/KCmFontInst.cpp:435
+#: kcmfontinst/KCmFontInst.cpp:430
 #, kde-format
 msgid "Add Fonts"
 msgstr "បន្ថែម​ពុម្ព​អក្សរ"
 
-#: kcmfontinst/KCmFontInst.cpp:560
+#: kcmfontinst/KCmFontInst.cpp:555
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "បរាជ័យ​ក្នុង​ការ​រក្សា​ទុក​បញ្ជី​នៃ​ពុម្ព​អក្សរ​សម្រាប់​បោះពុម្ព ។"
 
-#: kcmfontinst/KCmFontInst.cpp:581
+#: kcmfontinst/KCmFontInst.cpp:576
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "បរាជ័យ​ក្នុង​ការ​ចាប់ផ្ដើម​ម៉ាស៊ីន​បោះពុម្ព​ពុម្ព​អក្សរ ។"
 
-#: kcmfontinst/KCmFontInst.cpp:588
+#: kcmfontinst/KCmFontInst.cpp:583
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -757,59 +757,59 @@ msgstr ""
 "គ្មាន​ពុម្ព​អក្សរ​ដែល​អាច​បោះពុម្ព​បាន​ទេ ។\n"
 "អ្នក​អាច​បោះពុម្ព​បាន​តែ​ពុម្ព​អក្សរ​ដែល​មិន​មែន​ជា​រូបភាព​ប៉ុណ្ណោះ ។"
 
-#: kcmfontinst/KCmFontInst.cpp:590
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "Cannot Print"
 msgstr "មិន​អាច​បោះពុម្ព"
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "អ្នក​មិន​បាន​ជ្រើស​អ្វី​ដែល​ត្រូវ​លុប ។"
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "គ្មាន​អ្វី​ដែល​ត្រូវ​លុប"
 
-#: kcmfontinst/KCmFontInst.cpp:620
+#: kcmfontinst/KCmFontInst.cpp:615
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>តើ​អ្នក​ពិត​ជា​ចង់​លុប​</p><p>'<b>%1</b>' ឬ​?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:623
+#: kcmfontinst/KCmFontInst.cpp:618
 #, kde-format
 msgid "Delete Font"
 msgstr "លុប​ពុម្ព​អក្សរ"
 
-#: kcmfontinst/KCmFontInst.cpp:630
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "តើ​អ្នក​ពិតជា​ចង់​លុប​ពុម្ពអក្សរ %1 ​ឬ ?"
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:627
 #, kde-format
 msgid "Delete Fonts"
 msgstr "លុប​ពុម្ព​អក្សរ"
 
-#: kcmfontinst/KCmFontInst.cpp:637
+#: kcmfontinst/KCmFontInst.cpp:632
 #, fuzzy, kde-format
 #| msgid "Deleting font(s)..."
 msgid "Deleting font(s)…"
 msgstr "កំពុង​លុប​ពុម្ព​អក្សរ..."
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "អ្នក​មិន​បាន​ជ្រើស​អ្វី​ដែល​ត្រូវ​ផ្លាស់ទី ។"
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "Nothing to Move"
 msgstr "គ្មាន​អ្វី​ដែល​ត្រូវ​ផ្លាស់ទី​"
 
-#: kcmfontinst/KCmFontInst.cpp:662
+#: kcmfontinst/KCmFontInst.cpp:657
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -817,17 +817,17 @@ msgid ""
 msgstr ""
 "<p>តើ​អ្នក​ពិត​ជា​ចង់​ផ្លាស់ទី</p><p>'<b>%1</b>'</p><p>ពី <i>%2</i> ទៅ <i>%3</i>ឬ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:667
+#: kcmfontinst/KCmFontInst.cpp:662
 #, kde-format
 msgid "Move Font"
 msgstr "ផ្លាស់ទី​ពុម្ព​អក្សរ​"
 
-#: kcmfontinst/KCmFontInst.cpp:668 kcmfontinst/KCmFontInst.cpp:680
+#: kcmfontinst/KCmFontInst.cpp:663 kcmfontinst/KCmFontInst.cpp:675
 #, kde-format
 msgid "Move"
 msgstr "ផ្លាស់ទី​"
 
-#: kcmfontinst/KCmFontInst.cpp:673
+#: kcmfontinst/KCmFontInst.cpp:668
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -835,76 +835,76 @@ msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] "<p>តើ​អ្នក​ពិត​ជា​ចង់​ផ្លាស់ទី​ព្ពអក្សរទាំង %1 នេះ​ពី <i>%2</i> ទៅ <i>%3</i>ឬ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:679
+#: kcmfontinst/KCmFontInst.cpp:674
 #, kde-format
 msgid "Move Fonts"
 msgstr "ផ្លាស់ទី​ពុម្ព​អក្សរ​"
 
-#: kcmfontinst/KCmFontInst.cpp:684
+#: kcmfontinst/KCmFontInst.cpp:679
 #, fuzzy, kde-format
 #| msgid "Moving font(s)..."
 msgid "Moving font(s)…"
 msgstr "កំពុង​ផ្លាស់ទី​ពុម្ព​អក្សរ​..."
 
-#: kcmfontinst/KCmFontInst.cpp:698
+#: kcmfontinst/KCmFontInst.cpp:693
 #, kde-format
 msgid "Export Group"
 msgstr "នាំក្រុម​ចេញ"
 
-#: kcmfontinst/KCmFontInst.cpp:724
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "No files?"
 msgstr "គ្មាន​ឯកសារ​ទេ ?"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:722
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "បានបរាជ័យ​ក្នុង​កា​របើក​ %1 ដើម្បី​សរសេរ"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "Create New Group"
 msgstr "បង្កើត​ក្រុម​ថ្មី​"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, fuzzy, kde-format
 #| msgid "Create New Group"
 msgid "Name of new group:"
 msgstr "បង្កើត​ក្រុម​ថ្មី​"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "New Group"
 msgstr "ក្រុម​ថ្មី​"
 
-#: kcmfontinst/KCmFontInst.cpp:775
+#: kcmfontinst/KCmFontInst.cpp:770
 #, kde-format
 msgid "Preview Text"
 msgstr "មើល​អត្ថបទ​ជា​មុន​"
 
-#: kcmfontinst/KCmFontInst.cpp:775
+#: kcmfontinst/KCmFontInst.cpp:770
 #, kde-format
 msgid "Please enter new text:"
 msgstr "សូម​បញ្ចូល​អត្ថបទ​ថ្មី​ ៖"
 
-#: kcmfontinst/KCmFontInst.cpp:827
+#: kcmfontinst/KCmFontInst.cpp:822
 #, fuzzy, kde-format
 #| msgid "Scanning font list..."
 msgid "Scanning font list…"
 msgstr "កំពុង​ស្កេន​បញ្ជី​ពុម្ព​អក្សរ​..."
 
-#: kcmfontinst/KCmFontInst.cpp:886
+#: kcmfontinst/KCmFontInst.cpp:881
 #, kde-format
 msgid "No fonts"
 msgstr "គ្មាន​ពុម្ព​អក្សរ​"
 
-#: kcmfontinst/KCmFontInst.cpp:891
+#: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "ពុម្ព​អក្សរ %1"
 
-#: kcmfontinst/KCmFontInst.cpp:900
+#: kcmfontinst/KCmFontInst.cpp:895
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -917,7 +917,7 @@ msgstr ""
 "</td><td>%3</td></tr><tr><td align=\"right\">សរុប ៖</td><td>%4</td></tr></"
 "table>"
 
-#: kcmfontinst/KCmFontInst.cpp:910
+#: kcmfontinst/KCmFontInst.cpp:905
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -928,66 +928,66 @@ msgstr ""
 "\"right\">បាន​បិទ ៖</td><td>%2</td></tr><tr><td align=\"right\">សរុប ៖</td><td>"
 "%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:987
+#: kcmfontinst/KCmFontInst.cpp:982
 #, fuzzy, kde-format
 #| msgid "Looking for any associated files..."
 msgid "Looking for any associated files…"
 msgstr "កំពុង​រក​មើល​ឯកសារ​ដែល​បាន​ត​ភ្ជាប់..."
 
-#: kcmfontinst/KCmFontInst.cpp:991
+#: kcmfontinst/KCmFontInst.cpp:986
 #, fuzzy, kde-format
 #| msgid "Scanning Files..."
 msgid "Scanning Files…"
 msgstr "កំពុង​ស្កេន​ឯកសារ​​..."
 
-#: kcmfontinst/KCmFontInst.cpp:992
+#: kcmfontinst/KCmFontInst.cpp:987
 #, fuzzy, kde-format
 #| msgid "Looking for additional files to install..."
 msgid "Looking for additional files to install…"
 msgstr "កំពុង​រក​ឯកសារ​បន្ថែម​ត្រូវ​ដំឡើង..."
 
-#: kcmfontinst/KCmFontInst.cpp:1007
+#: kcmfontinst/KCmFontInst.cpp:1002
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "កំពុង​រក​មើល​ឯកសារ​ដែល​បាន​តភ្ជាប់​ជាមួយ %1"
 
-#: kcmfontinst/KCmFontInst.cpp:1035
+#: kcmfontinst/KCmFontInst.cpp:1030
 #, fuzzy, kde-format
 #| msgid "Installing font(s)..."
 msgid "Installing font(s)…"
 msgstr "កំពុង​ដំឡើង​ពុម្ពអក្សរ​..."
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "អ្នក​មិន​បាន​ជ្រើស​អ្វី​ដែល​ត្រូវ​អនុញ្ញាត ។"
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "អ្នក​មិន​បាន​ជ្រើស​អ្វី​ដែល​មិន​ត្រូវ​អនុញ្ញាត ។​"
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1096
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "គ្មាន​អ្វីដែល​ត្រូវ​អនុញ្ញាត​"
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1096
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "គ្មាន​អ្វីដែល​មិន​ត្រូវ​អនុញ្ញាត​"
 
-#: kcmfontinst/KCmFontInst.cpp:1118
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>តើ​អ្នក​ពិត​ជា​ចង់​អនុញ្ញាត</p><p>'<b>%1</b>' ឬ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1115
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>តើ​អ្នក​ពិត​ជា​ចង់​មិន​អនុញ្ញាត​</p><p>'<b>%1</b>' ឬ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: kcmfontinst/KCmFontInst.cpp:1117
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -995,7 +995,7 @@ msgid ""
 msgstr ""
 "<p>តើ​អ្នក​ពិត​ជា​ចង់​អនុញ្ញាត​​</p><p>'<b>%1</b>' ដែល​បាន​ផ្ទុក​ក្នុង​ក្រុម​'<b>%2</b>' ឬ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1126
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1003,29 +1003,29 @@ msgid ""
 msgstr ""
 "<p>តើ​អ្នក​ពិត​ជា​ចង់​មិន​អនុញ្ញាត​</p><p>'<b>%1</b>' ដែល​បាន​ផ្ទុក​ក្នុង​ក្រុម​'<b>%2</b>' ឬ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1131
+#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1126
 #, kde-format
 msgid "Enable Font"
 msgstr "ពុម្ពអក្សរ​អនុញ្ញាត"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Disable Font"
 msgstr "ពុម្ពអក្សរ​មិន​អនុញ្ញាត​"
 
-#: kcmfontinst/KCmFontInst.cpp:1137
+#: kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "តើ​អ្នក​ពិតជា​ចង់​អនុញ្ញាត​ពុម្ពអក្សរ %1 ​ឬ ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1140
+#: kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "តើ​អ្នក​ពិតជា​មិន​ចង់​​​អនុញ្ញាត​ពុម្ពអក្សរ %1 ​ឬ ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1143
+#: kcmfontinst/KCmFontInst.cpp:1138
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1035,7 +1035,7 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] "<p>តើ​អ្នក​ពិតជា​ចង់​អនុញ្ញាត​ពុម្ពអក្សរ %1 ​ដែលមាន​នៅ​ក្នុង​ក្រុម '<b>%2</b>' ឬ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1148
+#: kcmfontinst/KCmFontInst.cpp:1143
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1045,23 +1045,23 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] "<p>តើ​អ្នក​ពិតជា​ចង់​អនុញ្ញាត​ពុម្ពអក្សរ %1 ​ដែល​មាន​នៅ​ក្នុង​ក្រុម '<b>%2</b>' ឬ ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1155
+#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
 msgid "Enable Fonts"
 msgstr "ពុម្ពអក្សរ​អនុញ្ញាត​"
 
-#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1151
 #, kde-format
 msgid "Disable Fonts"
 msgstr "ពុម្ពអក្សរ​មិន​អនុញ្ញាត​"
 
-#: kcmfontinst/KCmFontInst.cpp:1162
+#: kcmfontinst/KCmFontInst.cpp:1157
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "កំពុង​អនុញ្ញាត​ពុម្ពអក្សរ​..."
 
-#: kcmfontinst/KCmFontInst.cpp:1164
+#: kcmfontinst/KCmFontInst.cpp:1159
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"

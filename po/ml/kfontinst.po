@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2024-09-16 00:41+0000\n"
 "PO-Revision-Date: 2021-09-26 16:00+0000\n"
 "Last-Translator: Subin Siby <subins2000@gmail.com>\n"
 "Language-Team: SMC <smc.org.in>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "peter.ani@gmail.com,mail@subinsb.com"
 
-#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:954
+#: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
 msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
@@ -37,7 +37,7 @@ msgstr ""
 "അക്ഷരസഞ്ചയം ഇന്‍സ്റ്റോള്‍ ചെയ്യുന്നതു് നിങ്ങളുടെ സ്വകാര്യ ആവശ്യങ്ങള്‍ക്കു് മാത്രമാണോ അതോ സിസ്റ്റത്തിലുള്ള "
 "മറ്റു് ഉപയോക്താക്കള്‍ക്കും ലഭ്യമാണോ?"
 
-#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:957
+#: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:952
 #, kde-format
 msgid "Where to Install"
 msgstr "എവിടെ ഇന്‍സ്റ്റാള്‍ ചെയ്യണം"
@@ -349,13 +349,13 @@ msgid "Delete"
 msgstr "വെട്ടിമാറ്റുക"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1131 kcmfontinst/KCmFontInst.cpp:1155
+#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
 msgid "Enable"
 msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുക"
 
 #: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
-#: kcmfontinst/KCmFontInst.cpp:1132 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1151
 #, kde-format
 msgid "Disable"
 msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുക"
@@ -722,27 +722,27 @@ msgstr "പുതിയ ഫോണ്ടുകൾ ഡൗൺലോഡു ചെയ
 msgid "Delete Selected Fonts…"
 msgstr "തിരഞ്ഞെടുത്ത ഫോണ്ടുകൾ ഇല്ലാതാക്കുക…"
 
-#: kcmfontinst/KCmFontInst.cpp:336
+#: kcmfontinst/KCmFontInst.cpp:331
 #, kde-format
 msgid "Change Preview Text…"
 msgstr "പൂര്‍വ്വദൃശ്യത്തിനുള്ള വാചകം മാറ്റൂക…"
 
-#: kcmfontinst/KCmFontInst.cpp:435
+#: kcmfontinst/KCmFontInst.cpp:430
 #, kde-format
 msgid "Add Fonts"
 msgstr "അക്ഷരസഞ്ചയം ചേര്‍ക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:560
+#: kcmfontinst/KCmFontInst.cpp:555
 #, kde-format
 msgid "Failed to save list of fonts to print."
 msgstr "അച്ചടിക്കാനുള്ള ഫോണ്ടുകളുടെ പട്ടിക സംരക്ഷിക്കുന്നതിൽ പരാജയപ്പെട്ടു."
 
-#: kcmfontinst/KCmFontInst.cpp:581
+#: kcmfontinst/KCmFontInst.cpp:576
 #, kde-format
 msgid "Failed to start font printer."
 msgstr "അക്ഷരസഞ്ചയ പ്രിന്റര്‍ ആരംഭിക്കുവാനായില്ല."
 
-#: kcmfontinst/KCmFontInst.cpp:588
+#: kcmfontinst/KCmFontInst.cpp:583
 #, kde-format
 msgid ""
 "There are no printable fonts.\n"
@@ -751,59 +751,59 @@ msgstr ""
 "അച്ചടിക്കാവുന്ന ഫോണ്ടുകളൊന്നുമില്ല.\n"
 "നിങ്ങൾക്ക് നോൺ-ബിറ്റ്മാപ്പും പ്രാപ്തമാക്കിയ ഫോണ്ടുകളും മാത്രമേ അച്ചടിക്കാൻ കഴിയൂ."
 
-#: kcmfontinst/KCmFontInst.cpp:590
+#: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
 msgid "Cannot Print"
 msgstr "പ്രിന്റ് ചെയ്യുവാന്‍ സാധ്യമല്ല"
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "You did not select anything to delete."
 msgstr "വെട്ടിമാറ്റുവാനായി നിങ്ങള്‍ ഒന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
 
-#: kcmfontinst/KCmFontInst.cpp:605
+#: kcmfontinst/KCmFontInst.cpp:600
 #, kde-format
 msgid "Nothing to Delete"
 msgstr "വെട്ടിമാറ്റുവാനൊന്നുമില്ല"
 
-#: kcmfontinst/KCmFontInst.cpp:620
+#: kcmfontinst/KCmFontInst.cpp:615
 #, kde-format
 msgid "<p>Do you really want to delete</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>നിങ്ങള്‍ക്കു്</p><p>'<b>%1</b>' വെട്ടിമാറ്റണമോ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:623
+#: kcmfontinst/KCmFontInst.cpp:618
 #, kde-format
 msgid "Delete Font"
 msgstr "അക്ഷരസഞ്ചയം വെട്ടിമാറ്റുക"
 
-#: kcmfontinst/KCmFontInst.cpp:630
+#: kcmfontinst/KCmFontInst.cpp:625
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
 msgstr[0] "നിങ്ങള്‍ക്കു് ഈ അക്ഷരസഞ്ചയം വെട്ടിമാറ്റണോ?"
 msgstr[1] "നിങ്ങള്‍ക്കു് ഈ %1 അക്ഷരസഞ്ചയങ്ങള്‍ വെട്ടിമാറ്റണോ?"
 
-#: kcmfontinst/KCmFontInst.cpp:632
+#: kcmfontinst/KCmFontInst.cpp:627
 #, kde-format
 msgid "Delete Fonts"
 msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ വെട്ടിമാറ്റുക"
 
-#: kcmfontinst/KCmFontInst.cpp:637
+#: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Deleting font(s)…"
 msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ ഇല്ലാതാക്കുന്നു…"
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "You did not select anything to move."
 msgstr "നീക്കുന്നതിനായി നിങ്ങളൊന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
 
-#: kcmfontinst/KCmFontInst.cpp:652
+#: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
 msgid "Nothing to Move"
 msgstr "നീക്കുവാനൊന്നുമില്ല"
 
-#: kcmfontinst/KCmFontInst.cpp:662
+#: kcmfontinst/KCmFontInst.cpp:657
 #, kde-format
 msgid ""
 "<p>Do you really want to move</p><p>'<b>%1</b>'</p><p>from <i>%2</i> to <i>"
@@ -812,17 +812,17 @@ msgstr ""
 "<p>നിങ്ങൾക്ക് ശരിക്കും നീക്കാൻ ആഗ്രഹമുണ്ടോ </p><p>'<b>%1</b>'</p><p><i>%2</i>ൽ നിന്ന് "
 "<i>%3 ലേക്ക്</i>?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:667
+#: kcmfontinst/KCmFontInst.cpp:662
 #, kde-format
 msgid "Move Font"
 msgstr "അക്ഷരസഞ്ചയം നീക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:668 kcmfontinst/KCmFontInst.cpp:680
+#: kcmfontinst/KCmFontInst.cpp:663 kcmfontinst/KCmFontInst.cpp:675
 #, kde-format
 msgid "Move"
 msgstr "നീക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:673
+#: kcmfontinst/KCmFontInst.cpp:668
 #, kde-format
 msgid ""
 "<p>Do you really want to move this font from <i>%2</i> to <i>%3</i>?</p>"
@@ -833,74 +833,74 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>ഈ %1 ഫോണ്ടുകൾ <i>%2</i>ൽ നിന്ന് <i>%3</i>ലേക്ക് നീക്കാൻ നിങ്ങൾ ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:679
+#: kcmfontinst/KCmFontInst.cpp:674
 #, kde-format
 msgid "Move Fonts"
 msgstr "അക്ഷസഞ്ചയങ്ങള്‍ നീക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:684
+#: kcmfontinst/KCmFontInst.cpp:679
 #, kde-format
 msgid "Moving font(s)…"
 msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ നീക്കുന്നു…"
 
-#: kcmfontinst/KCmFontInst.cpp:698
+#: kcmfontinst/KCmFontInst.cpp:693
 #, kde-format
 msgid "Export Group"
 msgstr "കൂട്ടം എക്സ്പോർട്ട് ചെയ്യുക"
 
-#: kcmfontinst/KCmFontInst.cpp:724
+#: kcmfontinst/KCmFontInst.cpp:719
 #, kde-format
 msgid "No files?"
 msgstr "ഫയലുകളൊന്നുമില്ലേ?"
 
-#: kcmfontinst/KCmFontInst.cpp:727
+#: kcmfontinst/KCmFontInst.cpp:722
 #, kde-format
 msgid "Failed to open %1 for writing"
 msgstr "എഴുതുന്നതിനായി %1 തുറക്കുന്നതിൽ പരാജയപ്പെട്ടു"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "Create New Group"
 msgstr "പുതിയ കൂട്ടമുണ്ടാക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "Name of new group:"
 msgstr "പുതിയ കൂട്ടത്തിന്റെ പേര്:"
 
-#: kcmfontinst/KCmFontInst.cpp:747
+#: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "New Group"
 msgstr "പുതിയ കൂട്ടം"
 
-#: kcmfontinst/KCmFontInst.cpp:775
+#: kcmfontinst/KCmFontInst.cpp:770
 #, kde-format
 msgid "Preview Text"
 msgstr "തിരനോട്ടത്തിനുള്ള പദാവലി"
 
-#: kcmfontinst/KCmFontInst.cpp:775
+#: kcmfontinst/KCmFontInst.cpp:770
 #, kde-format
 msgid "Please enter new text:"
 msgstr "പുതിയ വാചകം നല്‍കുക:"
 
-#: kcmfontinst/KCmFontInst.cpp:827
+#: kcmfontinst/KCmFontInst.cpp:822
 #, kde-format
 msgid "Scanning font list…"
 msgstr "അക്ഷരസഞ്ചയങ്ങളുടെ പട്ടിക പരിശോധിക്കുന്നു…"
 
-#: kcmfontinst/KCmFontInst.cpp:886
+#: kcmfontinst/KCmFontInst.cpp:881
 #, kde-format
 msgid "No fonts"
 msgstr "അക്ഷരസഞ്ചയങ്ങള്‍ ലഭ്യമല്ല"
 
-#: kcmfontinst/KCmFontInst.cpp:891
+#: kcmfontinst/KCmFontInst.cpp:886
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
 msgstr[0] "ഒരു അക്ഷസഞ്ചയം"
 msgstr[1] "%1 അക്ഷരസഞ്ചയങ്ങള്‍"
 
-#: kcmfontinst/KCmFontInst.cpp:900
+#: kcmfontinst/KCmFontInst.cpp:895
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -913,7 +913,7 @@ msgstr ""
 "\">ഭാഗികമായി പ്രവർത്തനക്ഷമമാക്കിയവ:</td><td>%3</td></tr><tr><td align=\"right"
 "\">ആകെ:</td><td>%4</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:910
+#: kcmfontinst/KCmFontInst.cpp:905
 #, kde-format
 msgid ""
 "<table><tr><td align=\"right\">Enabled:</td><td>%1</td></tr><tr><td align="
@@ -924,62 +924,62 @@ msgstr ""
 "tr><tr><td align=\"right\">അപ്രാപ്തമാക്കിയവ:</td><td>%2</td></tr><tr><td align="
 "\"right\">ആകെ:</td><td>%3</td></tr></table>"
 
-#: kcmfontinst/KCmFontInst.cpp:987
+#: kcmfontinst/KCmFontInst.cpp:982
 #, kde-format
 msgid "Looking for any associated files…"
 msgstr "ഇതിനോടനുബന്ധിച്ചുള്ള ഫയലുകള്‍ തിരയുന്നു…"
 
-#: kcmfontinst/KCmFontInst.cpp:991
+#: kcmfontinst/KCmFontInst.cpp:986
 #, kde-format
 msgid "Scanning Files…"
 msgstr "ഫയലുകള്‍ തെരയുന്നു…"
 
-#: kcmfontinst/KCmFontInst.cpp:992
+#: kcmfontinst/KCmFontInst.cpp:987
 #, kde-format
 msgid "Looking for additional files to install…"
 msgstr "ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നതിനായി കൂടുതല്‍ ഫയലുകള്‍ തെരയുന്നു…"
 
-#: kcmfontinst/KCmFontInst.cpp:1007
+#: kcmfontinst/KCmFontInst.cpp:1002
 #, kde-format
 msgid "Looking for files associated with %1"
 msgstr "%1-നോടനുബന്ധിച്ചുള്ള കൂടുതല്‍ ഫയലുകള്‍ തെരയുന്നു"
 
-#: kcmfontinst/KCmFontInst.cpp:1035
+#: kcmfontinst/KCmFontInst.cpp:1030
 #, kde-format
 msgid "Installing font(s)…"
 msgstr "അക്ഷരസഞ്ചയം ഇന്‍സ്റ്റാള്‍ ചെയ്യുന്നു…"
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid "You did not select anything to enable."
 msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുന്നതിനായി ഒന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
 
-#: kcmfontinst/KCmFontInst.cpp:1100
+#: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
 msgid "You did not select anything to disable."
 msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുന്നതിനായി ഒന്നും തെരഞ്ഞെടുത്തിട്ടില്ല."
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1096
 #, kde-format
 msgid "Nothing to Enable"
 msgstr "പ്രവര്‍ത്തന സജ്ജമാക്കുവാനൊന്നുമില്ല"
 
-#: kcmfontinst/KCmFontInst.cpp:1101
+#: kcmfontinst/KCmFontInst.cpp:1096
 #, kde-format
 msgid "Nothing to Disable"
 msgstr "പ്രവര്‍ത്തന രഹിതമാക്കുവാനൊന്നുമില്ല"
 
-#: kcmfontinst/KCmFontInst.cpp:1118
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>നിങ്ങള്‍ക്കു് </p><p>'<b>%1</b>' പ്രവര്‍ത്തന സജ്ജമാക്കണമോ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1120
+#: kcmfontinst/KCmFontInst.cpp:1115
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>നിങ്ങള്‍ക്കു് </p><p>'<b>%1</b>' പ്രവര്‍ത്തന രഹിതമാക്കണമോ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1122
+#: kcmfontinst/KCmFontInst.cpp:1117
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -988,7 +988,7 @@ msgstr ""
 "<p>'<b>%2</b>' കൂട്ടത്തിൽ അടങ്ങിയിട്ടുള്ള '<b>%1</b>' നെ പ്രവർത്തനക്ഷമമാക്കാൻ നിങ്ങൾ "
 "ശരിക്കും തീരുമാനിച്ചോ</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1126
+#: kcmfontinst/KCmFontInst.cpp:1121
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -997,31 +997,31 @@ msgstr ""
 "<p>'<b>%2</b>' കൂട്ടത്തിൽ അടങ്ങിയിട്ടുള്ള '<b>%1</b>' നെ അപ്രാപ്തമാക്കാൻ നിങ്ങൾ ശരിക്കും "
 "തീരുമാനിച്ചോ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1131
+#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1126
 #, kde-format
 msgid "Enable Font"
 msgstr "അക്ഷരസഞ്ചയം സജ്ജമാക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:1130 kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1127
 #, kde-format
 msgid "Disable Font"
 msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:1137
+#: kcmfontinst/KCmFontInst.cpp:1132
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "നിങ്ങള്‍ക്കു് ഈ അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന സജ്ജമാക്കണമോ?"
 msgstr[1] "നിങ്ങള്‍ക്കു് ഈ %1 അക്ഷരസഞ്ചയങ്ങള്‍ പ്രവര്‍ത്തന സജ്ജമാക്കണമോ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1140
+#: kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "നിങ്ങള്‍ക്കു് ഈ അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന രഹിതമാക്കണമോ?"
 msgstr[1] "നിങ്ങള്‍ക്കു് ഈ %1 അക്ഷരസഞ്ചയങ്ങള്‍ പ്രവര്‍ത്തന രഹിതമാക്കണമോ?"
 
-#: kcmfontinst/KCmFontInst.cpp:1143
+#: kcmfontinst/KCmFontInst.cpp:1138
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1036,7 +1036,7 @@ msgstr[1] ""
 "<p>'<b>%2</b>' ഗ്രൂപ്പിൽ അടങ്ങിയിരിക്കുന്ന ഈ %1 ഫോണ്ടുകൾ പ്രാപ്തമാക്കാൻ നിങ്ങൾ ശരിക്കും "
 "ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1148
+#: kcmfontinst/KCmFontInst.cpp:1143
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1051,22 +1051,22 @@ msgstr[1] ""
 "<p>'<b>%2 </b>' ഗ്രൂപ്പിൽ അടങ്ങിയിരിക്കുന്ന ഈ %1 ഫോണ്ടുകൾ പ്രവർത്തനരഹിതമാക്കാൻ നിങ്ങൾ "
 "ശരിക്കും ആഗ്രഹിക്കുന്നുണ്ടോ?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1155
+#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format
 msgid "Enable Fonts"
 msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന സജ്ജമാക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:1154 kcmfontinst/KCmFontInst.cpp:1156
+#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1151
 #, kde-format
 msgid "Disable Fonts"
 msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന രഹിതമാക്കുക"
 
-#: kcmfontinst/KCmFontInst.cpp:1162
+#: kcmfontinst/KCmFontInst.cpp:1157
 #, kde-format
 msgid "Enabling font(s)…"
 msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തന സജ്ജമാക്കുന്നു…"
 
-#: kcmfontinst/KCmFontInst.cpp:1164
+#: kcmfontinst/KCmFontInst.cpp:1159
 #, kde-format
 msgid "Disabling font(s)…"
 msgstr "അക്ഷരസഞ്ചയം പ്രവര്‍ത്തനരഹിതമാക്കുന്നു…"
