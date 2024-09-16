@@ -354,11 +354,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Seleccioneu la lletra"
-
-#~ msgid ""
-#~ "Decimal font sizes can cause text layout problems in some applications. "
-#~ "Consider using only integer font sizes."
-#~ msgstr ""
-#~ "Les mides amb decimals de les lletres poden provocar problemes de "
-#~ "disposició del text en algunes aplicacions. Considereu utilitzar només "
-#~ "mides enteres de lletres."
