@@ -154,7 +154,8 @@ PlasmaComponents3.ScrollView {
                 id: filter
                 Layout.fillWidth: true
 
-                focus: clipboardMenu.Window.window.visible && !Kirigami.InputMethod.willShowOnActive
+                // reset focus when popup becomes visible so down arrow always moves to first entry
+                focus: (clipboardMenu.Window.window?.visible && !Kirigami.InputMethod.willShowOnActive) ?? false
 
                 KeyNavigation.up: clipboardMenu.dialogItem.KeyNavigation.up /* ToolBar */
                 KeyNavigation.down: menuListView.count > 0 ? menuListView : null
