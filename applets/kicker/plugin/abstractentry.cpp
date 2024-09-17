@@ -37,6 +37,11 @@ QString AbstractEntry::name() const
     return QString();
 }
 
+QString AbstractEntry::compactName() const
+{
+    return name();
+}
+
 QString AbstractEntry::group() const
 {
     return QString();
@@ -86,6 +91,11 @@ bool AbstractEntry::run(const QString &actionId, const QVariant &argument)
 }
 
 void AbstractEntry::reload()
+{
+    return;
+}
+
+void AbstractEntry::refreshLabels()
 {
     return;
 }

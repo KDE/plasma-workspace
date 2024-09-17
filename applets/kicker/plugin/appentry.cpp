@@ -150,11 +150,21 @@ AppEntry::AppEntry(AbstractModel *owner, const QString &id)
 void AppEntry::init(NameFormat nameFormat)
 {
     m_name = nameFromService(m_service, nameFormat);
+    QString comment = m_service->comment();
+    if (comment.isEmpty()) {
+        comment = m_service->genericName();
+    }
 
-    if (nameFormat == GenericNameOnly) {
-        m_description = nameFromService(m_service, NameOnly);
-    } else {
-        m_description = nameFromService(m_service, GenericNameOnly);
+    switch (nameFormat) {
+    case NameOnly:
+    case NameAndGenericName:
+        m_compactName = nameFromService(m_service, NameOnly);
+        m_description = comment;
+        break;
+    case GenericNameOnly:
+    case GenericNameAndName:
+        m_compactName = nameFromService(m_service, GenericNameOnly);
+        m_description = m_service->name();
     }
 }
 
@@ -174,6 +184,11 @@ QString AppEntry::icon() const
 QString AppEntry::name() const
 {
     return m_name;
+}
+
+QString AppEntry::compactName() const
+{
+    return m_compactName;
 }
 
 QString AppEntry::description() const
@@ -230,6 +245,18 @@ void AppEntry::reload()
     }
     if (!m_service) {
         m_service = new KService(QString());
+    }
+}
+
+void AppEntry::refreshLabels()
+{
+    if (m_service) {
+        NameFormat format = NameOnly;
+        QVariant varFormat = owner()->rootModel()->property("appNameFormat");
+        if (varFormat.canConvert<int>()) {
+            format = (NameFormat)varFormat.toInt();
+        }
+        init(format);
     }
 }
 
@@ -346,9 +373,10 @@ QString AppEntry::nameFromService(const KService::Ptr &service, NameFormat nameF
 {
     const QString &name = service->name();
     QString genericName = service->genericName();
+    QString comment = service->comment();
 
     if (genericName.isEmpty()) {
-        genericName = service->comment();
+        genericName = comment;
     }
 
     if (nameFormat == NameOnly || genericName.isEmpty() || name == genericName) {
@@ -356,7 +384,10 @@ QString AppEntry::nameFromService(const KService::Ptr &service, NameFormat nameF
     } else if (nameFormat == GenericNameOnly) {
         return genericName;
     } else if (nameFormat == NameAndGenericName) {
-        return i18nc("App name (Generic name)", "%1 (%2)", name, genericName);
+        if (comment.isEmpty()) {
+            comment = genericName;
+        }
+        return i18nc("App name (Comment or Generic name)", "%1 (%2)", name, comment);
     } else {
         return i18nc("Generic name (App name)", "%1 (%2)", genericName, name);
     }

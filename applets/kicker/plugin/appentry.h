@@ -39,6 +39,7 @@ public:
 
     QString icon() const override;
     QString name() const override;
+    QString compactName() const override;
     QString description() const override;
     KService::Ptr service() const;
     QString group() const override;
@@ -54,6 +55,7 @@ public:
     QString menuId() const;
 
     void reload() override;
+    void refreshLabels() override;
 
     static QString nameFromService(const KService::Ptr &service, NameFormat nameFormat);
     static KService::Ptr defaultAppByName(const QString &name);
@@ -63,6 +65,7 @@ private:
 
     QString m_id;
     QString m_name;
+    QString m_compactName;
     QString m_description;
     // Not an actual group name, but the first character for transliterated name.
     mutable QString m_group;

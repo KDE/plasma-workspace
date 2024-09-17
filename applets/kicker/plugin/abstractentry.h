@@ -31,6 +31,7 @@ public:
 
     virtual QString icon() const;
     virtual QString name() const;
+    virtual QString compactName() const;
     virtual QString group() const;
     virtual QString description() const;
 
@@ -46,6 +47,7 @@ public:
     virtual bool run(const QString &actionId = QString(), const QVariant &argument = QVariant());
 
     virtual void reload();
+    virtual void refreshLabels();
 
 protected:
     AbstractModel *m_owner;
