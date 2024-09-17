@@ -84,7 +84,7 @@ void Shutdown::ksmServerComplete()
 {
     const KConfigGroup c(KSharedConfig::openConfig(QStringLiteral("ksmserverrc")), QStringLiteral("General"));
 
-    if (c.readEntry("loginMode", "restorePreviousLogout") == QLatin1String("restoreSavedSession")) {
+    if (c.readEntry("loginMode", "restorePreviousLogout") == QLatin1String("restorePreviousLogout")) {
         // Now record windows that are not session managed
         int ret = QProcess::execute(QStringLiteral(PLASMA_FALLBACK_SESSION_SAVE_BIN));
         if (ret) {
