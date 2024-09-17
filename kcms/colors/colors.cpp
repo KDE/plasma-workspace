@@ -209,31 +209,10 @@ void KCMColors::knsEntryChanged(const KNSCore::Entry &entry)
     if (!entry.isValid()) {
         return;
     }
+    QString selectedScheme = m_model->selectedScheme();
     m_model->load();
-
-    // If a new theme was installed, select the first color file in it
-    QStringList installedThemes;
-    const QString suffix = QStringLiteral(".colors");
-    if (entry.status() == KNSCore::Entry::Installed) {
-        for (const QString &path : entry.installedFiles()) {
-            const QString fileName = path.section(QLatin1Char('/'), -1, -1);
-
-            const int suffixPos = fileName.indexOf(suffix);
-            if (suffixPos != fileName.length() - suffix.length()) {
-                continue;
-            }
-
-            installedThemes.append(fileName.left(suffixPos));
-        }
-
-        if (!installedThemes.isEmpty()) {
-            // The list is sorted by (potentially translated) name
-            // but that would require us parse every file, so this should be close enough
-            std::sort(installedThemes.begin(), installedThemes.end());
-
-            m_model->setSelectedScheme(installedThemes.constFirst());
-        }
-    }
+    m_model->setSelectedScheme(selectedScheme);
+    m_filteredModel->setSelectedScheme(selectedScheme);
 }
 
 void KCMColors::loadSelectedColorScheme()
