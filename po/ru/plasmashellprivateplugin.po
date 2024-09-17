@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-06-27 20:20+0300\n"
+"PO-Revision-Date: 2024-09-16 13:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -373,7 +373,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Недавно установленные"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -391,11 +391,10 @@ msgid "Install Widget From Local File…"
 msgstr "Установить виджет из файла..."
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "Get New Templates..."
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Загрузить новые шаблоны..."
+msgstr "Загрузка новых виджетов"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -403,11 +402,10 @@ msgid "Select Plasmoid File"
 msgstr "Выбор файла виджета Plasma"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Не удалось установить пакет %1."
+msgstr "Ошибка при установке пакета «%1»: %2"
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
