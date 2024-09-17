@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2024-08-11 07:39+0300\n"
+"PO-Revision-Date: 2024-09-16 13:55+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -50,43 +50,37 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог с изображениями для слайд-шоу в качестве обоев"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Расположение:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Масштабирование с кадрированием"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "На весь рабочий стол"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "По центру пропорционально"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "По центру"
 
 #: imagepackage/contents/ui/config.qml:147
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Черепицей"
@@ -200,7 +194,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Указан неверный режим заполнения: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-02-18 21:39+0300\n"
+"PO-Revision-Date: 2024-09-16 13:53+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -50,15 +50,13 @@ msgstr[2] "Завершение сеанса через %1 секунд"
 msgstr[3] "Завершение сеанса через %1 секунду"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Установка обновлений и перезагрузка через %1 секунду"
-msgstr[1] "Установка обновлений и перезагрузка через %1 секунды"
-msgstr[2] "Установка обновлений и перезагрузка через %1 секунд"
-msgstr[3] "Установка обновлений и перезагрузка через одну секунду"
+msgstr[0] "Установка обновлений и выключение через %1 секунду"
+msgstr[1] "Установка обновлений и выключение через %1 секунды"
+msgstr[2] "Установка обновлений и выключение через %1 секунд"
+msgstr[3] "Установка обновлений и выключение через одну секунду"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -118,9 +116,7 @@ msgid "Hibernate Now"
 msgstr "Спящий режим"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Установить обновления и перезагрузить"
@@ -136,12 +132,10 @@ msgid "Restart Now"
 msgstr "Перезагрузить"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Установить обновления и перезагрузить"
+msgstr "Установить обновления и выключить"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format

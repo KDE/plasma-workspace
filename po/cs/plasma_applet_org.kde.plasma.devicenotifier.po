@@ -208,9 +208,3 @@ msgstr "Nelze odpojit  toto zařízení."
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Nelze odpojit tento disk."
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "Souborový systém neodpovídá"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "Souborový systém připojeny v '%1' neodpovídá"

@@ -18,7 +18,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-30 00:41+0000\n"
-"PO-Revision-Date: 2024-08-11 07:37+0300\n"
+"PO-Revision-Date: 2024-09-16 13:56+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -167,7 +167,7 @@ msgstr "Скрыть баннер?"
 #: desktopview.cpp:488
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Перейти в режим редактирования"
 
 #: main.cpp:84
 #, kde-format
@@ -219,7 +219,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:88
 #, kde-format
