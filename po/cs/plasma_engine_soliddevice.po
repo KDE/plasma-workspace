@@ -597,9 +597,3 @@ msgstr "Jednotka teploty"
 #: soliddeviceengine.cpp:609 soliddeviceengine.cpp:613
 msgid "In Use"
 msgstr "Používá se"
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "Souborový systém neodpovídá"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "Souborový systém připojeny v '%1' neodpovídá"
