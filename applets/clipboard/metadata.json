@@ -169,9 +169,13 @@
         "Version": "1.0"
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
+    "X-KDE-Keywords[ca@valencia]": "klipper,porta-retalls,copiar,apegar,copia,apega",
     "X-KDE-Keywords[ca]": "klipper,porta-retalls,copiar,enganxar,copia,enganxa",
+    "X-KDE-Keywords[en_GB]": "klipper,clipboard,copy,paste",
     "X-KDE-Keywords[es]": "klipper,portapapeles,copiar,pegar",
     "X-KDE-Keywords[fr]": "klipper, presse-papier, copier, coller",
+    "X-KDE-Keywords[it]": "klipper,appunti,copia,incolla",
+    "X-KDE-Keywords[nl]": "klipper,klembord,kopiëren,plakken",
     "X-KDE-Keywords[sl]": "klipper,odložišče,kopiraj,prilepi",
     "X-KDE-Keywords[sv]": "klipper,klippbord,kopiera,klistra in",
     "X-KDE-Keywords[x-test]": "xxklipperxx,xxclipboardxx,xxcopyxx,xxpastexx",
