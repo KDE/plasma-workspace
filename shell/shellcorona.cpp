@@ -1176,6 +1176,34 @@ QRegion ShellCorona::_availableScreenRegion(int id) const
     });
 }
 
+QRect ShellCorona::strictAvailableScreenRect(int id) const
+{
+    QRect rect = availableScreenRect(id);
+
+    // Remove previously ignored autohide panels
+    for (PanelView *v : m_panelViews) {
+        if (v->visibilityMode() == PanelView::AutoHide) {
+            switch (v->location()) {
+            case Plasma::Types::LeftEdge:
+                rect.setLeft(rect.left() + v->totalThickness());
+                break;
+            case Plasma::Types::RightEdge:
+                rect.setRight(rect.right() - v->totalThickness());
+                break;
+            case Plasma::Types::TopEdge:
+                rect.setTop(rect.top() + v->totalThickness());
+                break;
+            case Plasma::Types::BottomEdge:
+                rect.setBottom(rect.bottom() - v->totalThickness());
+            default:
+                break;
+            }
+        }
+    }
+
+    return rect;
+}
+
 QRect ShellCorona::availableScreenRect(int id) const
 {
     return m_strutManager->availableScreenRect(id);
@@ -1195,7 +1223,7 @@ QRect ShellCorona::_availableScreenRect(int id) const
     int topThickness, leftThickness, rightThickness, bottomThickness;
     topThickness = leftThickness = rightThickness = bottomThickness = 0;
     for (PanelView *v : m_panelViews) {
-        if (v->isVisible() && v->screen() == screen && (v->visibilityMode() != PanelView::AutoHide || isEditMode())) {
+        if (v->isVisible() && v->screen() == screen && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
                 leftThickness = qMax(leftThickness, v->totalThickness());

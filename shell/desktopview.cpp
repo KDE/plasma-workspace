@@ -333,6 +333,34 @@ void DesktopView::showPreviewBannerMenu(const QPoint &pos)
 }
 #endif
 
+QRect DesktopView::strictAvailableScreenRect() const
+{
+    if (!m_containment) {
+        return {};
+    }
+
+    int screenId = m_containment->screen();
+
+    // If corona returned an invalid screenId, try to use lastScreen value if it is valid
+    if (screenId == -1 && m_containment->lastScreen() > -1) {
+        screenId = m_containment->lastScreen();
+        // Is this a screen not actually valid?
+        if (screenId >= corona()->numScreens()) {
+            screenId = -1;
+        }
+    }
+
+    if (screenId < 0) {
+        return {};
+    }
+
+    QRect rect = static_cast<ShellCorona *>(corona())->strictAvailableScreenRect(containment()->screen());
+    // make it relative
+    QRect geometry = corona()->screenGeometry(screenId);
+    rect.moveTo(rect.topLeft() - geometry.topLeft());
+    return rect;
+}
+
 QVariantMap DesktopView::candidateContainmentsGraphicItems() const
 {
     QVariantMap map;
@@ -477,6 +505,7 @@ void DesktopView::slotContainmentChanged()
 {
     if (m_containment) {
         disconnect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::slotScreenChanged);
+        disconnect(m_containment, &Plasma::Containment::availableRelativeScreenRectChanged, this, &DesktopView::strictAvailableScreenRectChanged);
     }
 
     m_containment = containment();
@@ -484,6 +513,7 @@ void DesktopView::slotContainmentChanged()
     if (m_containment) {
         connect(m_containment, &Plasma::Containment::screenChanged, this, &DesktopView::slotScreenChanged);
         slotScreenChanged(m_containment->screen());
+        connect(m_containment, &Plasma::Containment::availableRelativeScreenRectChanged, this, &DesktopView::strictAvailableScreenRectChanged);
 
         QAction *desktopEditMode = new QAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Enter Edit Mode"), m_containment);
         QAction *editMode = m_containment->corona()->action(QStringLiteral("edit mode"));
