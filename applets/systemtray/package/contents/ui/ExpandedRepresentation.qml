@@ -52,25 +52,44 @@ Item {
 
             PlasmaComponents.ToolButton {
                 id: backButton
-                visible: systemTrayState.activeApplet && systemTrayState.activeApplet.expanded && (hiddenLayout.itemCount > 0)
-                icon.name: mirrored ? "go-previous-symbolic-rtl" : "go-previous-symbolic"
-
-                display: PlasmaComponents.AbstractButton.IconOnly
+                Layout.fillWidth: true
+                Layout.maximumWidth: implicitWidth
+                enabled: systemTrayState.activeApplet && systemTrayState.activeApplet.expanded && (hiddenLayout.itemCount > 0)
+                icon.name: enabled ? (mirrored ? "go-previous-symbolic-rtl" : "go-previous-symbolic") : ""
                 text: i18nc("@action:button", "Go Back")
+                hoverEnabled: enabled && !Kirigami.Settings.tabletMode
 
                 KeyNavigation.down: hiddenItemsView.visible ? hiddenLayout : container
 
                 onClicked: systemTrayState.setActiveApplet(null)
+
+                contentItem: RowLayout {
+                    spacing: backButton.spacing
+
+                    Kirigami.Icon {
+                        id: icon
+
+                        Layout.alignment: Qt.AlignCenter
+                        Layout.fillHeight: true
+                        implicitWidth: Kirigami.Units.iconSizes.smallMedium
+                        implicitHeight: Kirigami.Units.iconSizes.smallMedium
+                        source: backButton.icon.name
+                        visible: source !== ""
+                    }
+
+                    Kirigami.Heading {
+                        Layout.fillWidth: true
+                        leftPadding: systemTrayState.activeApplet ? 0 : Kirigami.Units.largeSpacing - backButton.leftPadding
+                        level: 1
+                        text: (systemTrayState.activeApplet ? systemTrayState.activeApplet.plasmoid.title : i18n("Status and Notifications"))
+                        textFormat: Text.PlainText
+                        elide: Text.ElideRight
+                    }
+                }
             }
 
-            Kirigami.Heading {
+            Item {
                 Layout.fillWidth: true
-                leftPadding: systemTrayState.activeApplet ? 0 : Kirigami.Units.largeSpacing
-
-                level: 1
-                text: systemTrayState.activeApplet ? systemTrayState.activeApplet.plasmoid.title : i18n("Status and Notifications")
-                textFormat: Text.PlainText
-                elide: Text.ElideRight
             }
 
             Repeater {
