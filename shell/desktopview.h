@@ -39,6 +39,12 @@ class DesktopView : public PlasmaQuick::ContainmentView
 
     Q_PROPERTY(QColor accentColor READ accentColor WRITE setAccentColor RESET resetAccentColor NOTIFY accentColorChanged)
 
+    /**
+     * The available screen rect excluding every panel, including autohide ones.
+     * This should be used only for computing the area for the desktop zoom out in edit mode
+     */
+    Q_PROPERTY(QRect strictAvailableScreenRect READ strictAvailableScreenRect NOTIFY strictAvailableScreenRectChanged)
+
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
     Q_PROPERTY(bool showPreviewBanner READ showPreviewBanner NOTIFY showPreviewBannerChanged)
     Q_PROPERTY(QString previewBannerTitle READ previewBannerTitle CONSTANT)
@@ -78,6 +84,8 @@ public:
     Q_INVOKABLE void showPreviewBannerMenu(const QPoint &pos);
 #endif
 
+    QRect strictAvailableScreenRect() const;
+
     QVariantMap candidateContainmentsGraphicItems() const;
 
     Q_INVOKABLE QString fileFromPackage(const QString &key, const QString &fileName);
@@ -107,6 +115,7 @@ Q_SIGNALS:
 #if PROJECT_VERSION_PATCH >= 80 || PROJECT_VERSION_MINOR >= 80
     void showPreviewBannerChanged();
 #endif
+    void strictAvailableScreenRectChanged();
 
 private:
     void coronaPackageChanged(const KPackage::Package &package);

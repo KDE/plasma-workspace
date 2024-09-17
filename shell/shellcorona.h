@@ -83,6 +83,7 @@ public:
     Q_INVOKABLE QRect screenGeometry(int id) const override;
     Q_INVOKABLE QRegion availableScreenRegion(int id) const override;
     Q_INVOKABLE QRect availableScreenRect(int id) const override;
+    QRect strictAvailableScreenRect(int id) const;
 
     // plasmashellCorona's value
     QRegion _availableScreenRegion(int id) const;
