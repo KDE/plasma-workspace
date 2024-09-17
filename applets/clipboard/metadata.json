@@ -180,11 +180,18 @@
         "Website": "https://kde.org/plasma-desktop/"
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
+    "X-KDE-Keywords[ca@valencia]": "klipper,porta-retalls,copiar,apegar,copia,apega",
     "X-KDE-Keywords[ca]": "klipper,porta-retalls,copiar,enganxar,copia,enganxa",
+    "X-KDE-Keywords[en_GB]": "klipper,clipboard,copy,paste",
+    "X-KDE-Keywords[es]": "klipper,portapapeles,copiar,pegar",
+    "X-KDE-Keywords[eu]": "klipper,arbela,kopiatu,itsatsi",
+    "X-KDE-Keywords[fr]": "klipper, presse-papier, copier, coller",
     "X-KDE-Keywords[he]": "klipper,לוח גזירים,העתקה,הדבקה",
+    "X-KDE-Keywords[it]": "klipper,appunti,copia,incolla",
     "X-KDE-Keywords[ka]": "klipper,clipboard,copy,paste;ამოჭრა;ჩასმა;ბუფერი;კოპირება",
     "X-KDE-Keywords[sl]": "klipper,odložišče,kopiraj,prilepi",
     "X-KDE-Keywords[sv]": "klipper,klippbord,kopiera,klistra in",
+    "X-KDE-Keywords[tr]": "klipper,pano,kopyala,yapıştır,kes",
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-NotificationAreaCategory": "SystemServices"
 }
