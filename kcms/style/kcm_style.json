@@ -138,6 +138,7 @@
     "X-KDE-Keywords[uk]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode,стиль,стилі,вигляд,віджет,піктограма,піктограми,значок,значки,іконки,панель,панель інструментів,текст,підсвічування,позначення,програма,програми,тема,плазма,меню,загальне меню,жтк,жетека,гном,гноме,стиль програм,програма,застосунок,аплікація,вигляд,оболонка,шкірка,теми,світлий режим,темний режим",
     "X-KDE-Keywords[vi]": "style,styles,look,widget,icons,toolbars,text,highlight,apps,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode,kiểu cách,nhìn,phụ kiện,biểu tượng,thanh công cụ,chữ,văn bản,tô sáng,ứng dụng,ứng dụng KDE,chủ đề,trình đơn,trình đơn toàn cục,kiểu cách ứng dụng,chương trình,diện mạo,da,chế độ sáng,chế độ tối",
     "X-KDE-Keywords[x-test]": "xxstylexx,xxstylesxx,xxlookxx,xxwidgetxx,xxiconsxx,xxtoolbarsxx,xxtextxx,xxhighlightxx,xxappsxx,xxKDE applicationsxx,xxthemexx,xxplasmaxx,xxmenuxx,xxglobal menuxx,xxGTKxx,xxGNOMExx,xxapplication stylexx,xxappxx,xxprogramsxx,xxappearancexx,xxskinxx,xxthemesxx,xxlight modexx,xxdark modexx",
+    "X-KDE-Keywords[zh_TW]": "風格,樣式,外觀,元件,工具,圖示,工具列,文字,突顯,應用程式,程式,主題,選單,全域選單,應用程式風格,亮色模式,暗色模式,深色模式,明亮模式",
     "X-KDE-System-Settings-Parent-Category": "themes",
     "X-KDE-Weight": 40
 }

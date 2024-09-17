@@ -130,12 +130,14 @@
     "X-KDE-Keywords[lt]": "Automatinio paleidimo tvarkytuvė,automatinio paleidimo tvarkytuve,automatinis paleidimas,paleistis,sistemos paleidimas,kde paleidimas,plasma paleidimas,cron,auto,automatinis,automatinė,automatine,startas,įkėlimas,ikelimas,įkelti,ikelti,seansas,sesija,prisijungimas",
     "X-KDE-Keywords[nl]": "Autostartbeheerder,systeem,opstarten systeem,opstarten plasma,automatisch,starten,opstarten,systeemopstart,boot,laden,sessie,aanmelden",
     "X-KDE-Keywords[pt_BR]": "Gerenciado de inicialização,inicialização do sistema,início do plasma,cron, automático,início,inicialização,boot,carregar,sessão,inicialização,lançar,lançamento",
-    "X-KDE-Keywords[sl]": "Upravljalnik samodejnega zagona,zagon sistema,zagon Plasme,zagon cron;samodejno;zagon;hladni zagon;inicialno nalaganje;cron,nalaganje,seja;prijava",
+    "X-KDE-Keywords[ru]": "Autostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session,startup,launch,login,диспетчер автоматического запуска,загрузка системы,запуск Plasma,загрузка,сеанс,запуск,вход",
+    "X-KDE-Keywords[sl]": "Upravljalnik samodejnega zagona,zagon sistema,zagon Plasme,zagon cron,samodejno,zagon,hladni zagon,inicialno nalaganje,cron,nalaganje,seja,prijava",
     "X-KDE-Keywords[sv]": "Hantering av autostart,systemstart,plasma start,cron,auto,start,ladda,session,inloggning",
     "X-KDE-Keywords[tr]": "otomatik başlat yöneticisi,kendiliğinden başlat yöneticisi,sistem başlangıcı,cron,oto,otomatik,kendiliğinden,önyükle,yükle,oturum,başlangıç,oturum aç,giriş yap",
     "X-KDE-Keywords[uk]": "AAutostart Manager,system startup,plasma start,cron,auto,start,start up,boot,load,session,startup,launch,login,керування автозапуском,автозапуск,запуск,запуск системи,запуск плазми,завантаження,сеанс,запуск,вхід,логін,лоґін",
     "X-KDE-Keywords[vi]": "trình quản lí khởi động tự động,khởi động hệ thống,khởi động plasma,cron,khởi động,tự động,tải,phiên,đăng nhập",
     "X-KDE-Keywords[x-test]": "xxAutostart Managerxx,xxsystem startupxx,xxplasma startxx,xxcronxx,xxautoxx,xxstartxx,xxstart upxx,xxbootxx,xxloadxx,xxsessionxx,xxstartupxx,xxlaunchxx,xxloginxx",
+    "X-KDE-Keywords[zh_TW]": "自動啟動管理器,系統啟動,cron,自動,啟動,開機,載入,工作階段,作業階段,開啟,登入",
     "X-KDE-System-Settings-Parent-Category": "system-administration",
     "X-KDE-Weight": 50
 }
