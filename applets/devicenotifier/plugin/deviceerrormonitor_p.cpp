@@ -114,7 +114,7 @@ bool DeviceErrorMonitor::isSafelyRemovable(const QString &udi) const
     Solid::Device device(udi);
     if (device.is<Solid::StorageVolume>()) {
         auto drive = getAncestorAs<Solid::StorageDrive>(device);
-        if (!drive->isValid()) {
+        if (!drive /* Already removed from elsewhere */ || !drive->isValid()) {
             return true;
         }
         return !drive->isInUse() && (drive->isHotpluggable() || drive->isRemovable());
