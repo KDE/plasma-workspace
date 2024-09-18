@@ -5,7 +5,7 @@
             {
                 "Email": "aleixpol@kde.org",
                 "Name": "Aleix Pol Gonzalez",
-                "Name[ar]": "Aleix Pol Gonzalez",
+                "Name[ar]": "أليكس بول غونزاليس",
                 "Name[ast]": "Aleix Pol i Gonzàlez",
                 "Name[az]": "Aleix Pol Gonzalez",
                 "Name[be]": "Aleix Pol Gonzalez",
@@ -60,6 +60,7 @@
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Input%20Method",
         "Category": "Accessibility",
         "Description": "Manage your input methods",
+        "Description[ar]": "أدر طريقة إدخالك للنص",
         "Description[bg]": "Управлявайте вашите методи за въвеждане",
         "Description[ca@valencia]": "Gestioneu els mètodes d'entrada",
         "Description[ca]": "Gestioneu els mètodes d'entrada",

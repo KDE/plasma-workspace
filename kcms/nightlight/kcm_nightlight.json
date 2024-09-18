@@ -99,6 +99,7 @@
     },
     "X-DocPath": "https://userbase.kde.org/TODOX",
     "X-KDE-Keywords": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,blue,light",
+    "X-KDE-Keywords[ar]": "كوين,نافذة,مدير,ليل,ألوان,تحول أحمر,عيون,الوضع الليلي,اللون,الوضع الداكن,داكن,خافت,نوم,إجهاد العين,أحمر,تحول,برتقالي,أصفر,دافئ,لون الشاشة,درجة الحرارة,أزرق,فاتح",
     "X-KDE-Keywords[ca@valencia]": "kwin,finestra,gestor,nit,colors,redshift,ulls,mode nocturn,color,mode fosc,fosc,enfosquiment,dormir,fatiga ocular,roig,desplaçament,taronja,groc,càlid,tint de la pantalla,temperatura,blau,clar",
     "X-KDE-Keywords[ca]": "kwin,finestra,gestor,nit,colors,redshift,ulls,mode nocturn,color,mode fosc,fosc,enfosquiment,dormir,fatiga ocular,vermell,desplaçament,taronja,groc,càlid,tint de la pantalla,temperatura,blau,clar",
     "X-KDE-Keywords[en_GB]": "kwin,window,manager,night,colors,redshift,eyes,night mode,colour,dark mode,dark,dim,sleep,eye strain,red,shift,orange,yellow,warm,screen tint,temperature,blue,light",
