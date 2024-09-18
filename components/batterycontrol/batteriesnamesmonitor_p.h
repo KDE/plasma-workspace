@@ -6,12 +6,10 @@
 
 #pragma once
 
-#include <QHash>
+#include <QMap>
 
 #include <Solid/Battery>
 #include <Solid/Device>
-
-#include <QQueue>
 
 class BatteriesNamesMonitor
 {
@@ -20,7 +18,5 @@ public:
     void removeBatteryName(const QString &udi);
 
 private:
-    QHash<QString, uint> m_unnamedBatteries;
-    QQueue<uint> m_freeNames;
-    uint m_unnamedBatteriesCount = 0;
+    QMap<QString, uint> m_namedBatteries;
 };

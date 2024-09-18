@@ -19,27 +19,37 @@ QString BatteriesNamesMonitor::updateBatteryName(const Solid::Device &deviceBatt
         }
         return deviceBattery.product();
     }
-    ++m_unnamedBatteriesCount;
-    m_unnamedBatteries[deviceBattery.udi()] = m_unnamedBatteriesCount;
-    if (m_unnamedBatteriesCount > 1) {
-        return i18nc("Placeholder is the battery number", "Battery %1", m_freeNames.isEmpty() ? m_unnamedBatteriesCount : m_freeNames.dequeue());
+
+    // If we can't show a real name, let's do it ourselves
+    uint batteryIndex;
+    if (auto it = m_namedBatteries.constFind(deviceBattery.udi()); it != m_namedBatteries.constEnd()) {
+        // We've already named this battery
+        batteryIndex = *it;
+    } else {
+        // Let's name it - use the lowest unused index
+        QList<uint> batteryIndexes = m_namedBatteries.values();
+        std::ranges::sort(batteryIndexes);
+
+        batteryIndex = 1;
+        for (uint currentIndex : batteryIndexes) {
+            if (currentIndex == batteryIndex) {
+                ++batteryIndex;
+            } else {
+                break;
+            }
+        }
+
+        m_namedBatteries.insert(deviceBattery.udi(), batteryIndex);
     }
-    return i18n("Battery");
+
+    if (batteryIndex > 1) {
+        return i18nc("Placeholder is the battery number", "Battery %1", batteryIndex);
+    } else {
+        return i18n("Battery");
+    }
 }
 
 void BatteriesNamesMonitor::removeBatteryName(const QString &udi)
 {
-    if (m_unnamedBatteriesCount > 1) {
-        auto position = m_unnamedBatteries.constFind(udi);
-        if (position != m_unnamedBatteries.constEnd()) {
-            if (*position == m_unnamedBatteriesCount) {
-                --m_unnamedBatteriesCount;
-            } else {
-                if (*position != 1) {
-                    m_freeNames.enqueue(*position);
-                }
-            }
-            m_unnamedBatteries.erase(position);
-        }
-    }
+    m_namedBatteries.remove(udi);
 }
