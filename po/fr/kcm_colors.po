@@ -21,7 +21,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 02:37+0000\n"
 "PO-Revision-Date: 2024-08-30 13:42+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -49,34 +49,34 @@ msgstr ""
 "xavier.besnard@kde.org, nicolas.ternisien@gmail.com, mrjay01@users."
 "sourceforge.net, mcorteel@gmail.com, vpinon@kde.org, sdepiets@gmail.com"
 
-#: colors.cpp:272
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Impossible de créer un fichier temporaire."
 
-#: colors.cpp:285
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Impossible de télécharger le modèle de couleurs : %1"
 
-#: colors.cpp:303
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Ceci n'est pas un fichier de modèle de couleurs"
 
-#: colors.cpp:322
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Impossible de créer le dossier de données « color-scheme »."
 
-#: colors.cpp:329
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
 "Impossible de copier le modèle de couleurs dans le dossier de données "
 "« color-scheme »."
 
-#: colors.cpp:346
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Modèle de couleurs installé avec succès."

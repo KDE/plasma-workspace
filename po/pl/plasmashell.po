@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 02:37+0000\n"
 "PO-Revision-Date: 2024-08-31 06:31+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -149,7 +149,7 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Czy ukryć pasek podglądu?"
 
-#: desktopview.cpp:488
+#: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Wejdź do trybu dostosowywania"
@@ -406,12 +406,12 @@ msgstr "Zarządzanie paskami i pulpitem"
 msgid "Move keyboard focus between panels"
 msgstr "Przełączaj panele, które są obsługiwane przez klawiaturę"
 
-#: shellcorona.cpp:2078
+#: shellcorona.cpp:2106
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj panel"
 
-#: shellcorona.cpp:2140
+#: shellcorona.cpp:2168
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

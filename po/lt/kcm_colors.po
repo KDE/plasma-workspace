@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 02:37+0000\n"
 "PO-Revision-Date: 2024-09-01 00:56+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -29,32 +29,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dgvirtual@akl.lt, <>"
 
-#: colors.cpp:272
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Nepavyko sukurti laikinojo failo."
 
-#: colors.cpp:285
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Nepavyko atsisiųsti spalvų rinkinio: %1"
 
-#: colors.cpp:303
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Šis failas nėra spalvų rinkinys."
 
-#: colors.cpp:322
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Nepavyko sukurti 'color-scheme' duomenų aplanko."
 
-#: colors.cpp:329
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Nepavyko nukopijuoti spalvų rinkinio į 'color-scheme' duomenų aplanką."
 
-#: colors.cpp:346
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Spalvų rinkinys sėkmingai įdiegtas."

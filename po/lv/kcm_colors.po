@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 02:37+0000\n"
 "PO-Revision-Date: 2024-04-24 16:17+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -34,32 +34,32 @@ msgid "Your emails"
 msgstr ""
 "locale@aleksejs.id.lv, viesturs.zarins@mii.lu.lv, toms.trasuns@posteo.net"
 
-#: colors.cpp:272
+#: colors.cpp:251
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Neizdevās izveidot pagaidu datni."
 
-#: colors.cpp:285
+#: colors.cpp:264
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Neizdevās lejupielādēt krāsu shēmu: %1"
 
-#: colors.cpp:303
+#: colors.cpp:282
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Šī datne nav krāsu shēmas datne."
 
-#: colors.cpp:322
+#: colors.cpp:301
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Neizdevās izveidot „color-scheme“ datu mapi."
 
-#: colors.cpp:329
+#: colors.cpp:308
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Neizdevās krāsu shēmu iekopēt „color-scheme“ datu mapē."
 
-#: colors.cpp:346
+#: colors.cpp:325
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Krāsu shēma ir veiksmīgi ieinstalēta."

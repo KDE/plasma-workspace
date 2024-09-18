@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 02:37+0000\n"
 "PO-Revision-Date: 2024-06-20 17:30\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -153,7 +153,7 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Схаваць банер папярэдняга прагляду?"
 
-#: desktopview.cpp:488
+#: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr ""
@@ -412,12 +412,12 @@ msgstr "Панэль і кіраванне працоўным сталом"
 msgid "Move keyboard focus between panels"
 msgstr "Перамяшчэнне фокуса клавіятуры паміж панэлямі"
 
-#: shellcorona.cpp:2078
+#: shellcorona.cpp:2106
 #, kde-format
 msgid "Add Panel"
 msgstr "Дадаць панэль"
 
-#: shellcorona.cpp:2140
+#: shellcorona.cpp:2168
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

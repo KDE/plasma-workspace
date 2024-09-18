@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-18 02:37+0000\n"
 "PO-Revision-Date: 2024-08-30 13:31+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -148,7 +148,7 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Voorbeeldbanner verbergen?"
 
-#: desktopview.cpp:488
+#: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
 msgstr "Bewerkingsmodus ingaan"
@@ -408,12 +408,12 @@ msgstr "Beheer van panelen en bureaublad"
 msgid "Move keyboard focus between panels"
 msgstr "Toetsenbordfocus tussen panelen verplaatsen"
 
-#: shellcorona.cpp:2078
+#: shellcorona.cpp:2106
 #, kde-format
 msgid "Add Panel"
 msgstr "Paneel toevoegen"
 
-#: shellcorona.cpp:2140
+#: shellcorona.cpp:2168
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
