@@ -387,11 +387,10 @@ msgid "Select Plasmoid File"
 msgstr "Επιλέξτε αρχείο πλασμοειδούς"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Η εγκατάσταση του πακέτου %1 απέτυχε."
+msgstr "Η εγκατάσταση του πακέτου %1 απέτυχε: %2"
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
