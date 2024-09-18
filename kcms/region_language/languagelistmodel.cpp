@@ -35,7 +35,11 @@ LanguageListModel::LanguageListModel(QObject *parent)
     }
 
     m_availableLanguages = availableLanguages.values();
-    m_availableLanguages.sort();
+    std::sort(m_availableLanguages.begin(), m_availableLanguages.end(), [](const QString &a, const QString &b) {
+        const QString languageNameA = languageCodeToName(a);
+        const QString languageNameB = languageCodeToName(b);
+        return languageNameA.localeAwareCompare(languageNameB) < 0;
+    });
     m_availableLanguages.push_front(QStringLiteral("C"));
 }
 
