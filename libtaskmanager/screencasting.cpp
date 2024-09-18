@@ -43,7 +43,6 @@ Screencasting::Screencasting()
     if (!isInitialized()) {
         qWarning() << "Remember requesting the interface on your desktop file: X-KDE-Wayland-Interfaces=zkde_screencast_unstable_v1";
     }
-    Q_ASSERT(isInitialized());
 }
 
 Screencasting::~Screencasting()
