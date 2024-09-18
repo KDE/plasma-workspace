@@ -72,11 +72,13 @@
         "Description[ia]": "Widget de supervision de systema que monstra le uso del partition de root (radice)",
         "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo della partizione radice",
         "Description[ka]": "სისტემური მონიტორის ვიჯეტი, რომელიც საწყისი დანაყოფის გამოყენებას გაჩვენებთ",
+        "Description[ru]": "Мониторинг использования дискового пространства корневым разделом",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje rabo korenske particije",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar användning av rotpartitionen",
         "Description[tr]": "Kök bölüntünün kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання кореневого розділу",
         "Description[x-test]": "xxSystem monitor widget that shows the usage of the root partitionxx",
+        "Description[zh_TW]": "顯示 root 分割區用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

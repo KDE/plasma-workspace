@@ -72,11 +72,13 @@
         "Description[ia]": "Widget de supervision de systema que monstra le uso de memoria physic",
         "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo della memoria fisica",
         "Description[ka]": "სისტემური მონიტორის ვიჯეტი, რომელიც ფიზიკური მეხსიერების გამოყენებას აჩვენებს",
+        "Description[ru]": "Мониторинг использования физической памяти",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje rabo fizičnega pomnilnika",
         "Description[sv]": "Grafisk systemövervakningskomponent som fysisk minnesanvändning",
         "Description[tr]": "Fiziksel bellek kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання фізичної пам'яті",
         "Description[x-test]": "xxSystem monitor widget that shows physical memory usagexx",
+        "Description[zh_TW]": "顯示實體記憶體用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

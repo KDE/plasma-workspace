@@ -103,11 +103,14 @@
     "X-KDE-Keywords[eu]": "sistemaren soinuak,soinu-gaia,soinua,soinuak,alerta,jakinarazpena,txirrina",
     "X-KDE-Keywords[fr]": "sons du système, thème sonore, son, sons, alerte, notification, sonnerie",
     "X-KDE-Keywords[he]": "צלילי מערכת,ערכת צלילים,צליל,צלילים,התראה,הודעה,פעמון,צלצול",
+    "X-KDE-Keywords[ia]": "system sounds,sound theme,sound,sounds,alert,notification,bell",
     "X-KDE-Keywords[it]": "suoni di sistema, tema sonoro, suono, suoni, avviso, notifica, campanello",
     "X-KDE-Keywords[ka]": "system sounds,sound theme,sound,sounds,alert,notification,bell",
+    "X-KDE-Keywords[ru]": "system sounds,sound theme,sound,sounds,alert,notification,bell,системные звуки,звуковое оформление,сигнал,уведомление",
     "X-KDE-Keywords[sl]": "sistemski zvoki,zvočna tema,zvok,zvoki,opozorilo,obvestilo,zvonec",
     "X-KDE-Keywords[sv]": "systemljud,ljudtema,ljud,varning,underrättelse,alarm",
     "X-KDE-Keywords[tr]": "sistem sesleri,ses teması,ses,uyarı,ikaz,bildirim,zil",
+    "X-KDE-Keywords[zh_TW]": "系統聲音,聲音主題,音效主題,警示,主題,響鈴",
     "X-KDE-System-Settings-Parent-Category": "themes",
     "X-KDE-Weight": 90
 }

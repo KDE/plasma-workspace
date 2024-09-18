@@ -140,6 +140,7 @@
     "X-KDE-Keywords[tr]": "geri bildirim,rapor,raporla,rapor et,bildir,iletişim,veri toplama,istatistik,kullanım,günlük,günlükleme,telemetri",
     "X-KDE-Keywords[uk]": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,відгук,звіт,зв'язок,контакт,збирання даних,статистика,користування,журнал,журналювання,телеметрія",
     "X-KDE-Keywords[vi]": "feedback,report,contact,data collection,statistics,usage,log,logging,telemetry,phản hồi,báo cáo,liên hệ,thu thập dữ liệu,thống kê,sử dụng,nhật kí,ghi nhật kí,viễn trắc",
+    "X-KDE-Keywords[zh_TW]": "回饋,資料蒐集,資料收集,統計資料,使用量,記錄,紀錄",
     "X-KDE-System-Settings-Parent-Category": "security-privacy",
     "X-KDE-Weight": 50
 }

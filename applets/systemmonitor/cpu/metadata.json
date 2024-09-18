@@ -72,11 +72,13 @@
         "Description[ia]": "Widget de supervision de systema que monstra le uso total de CPU",
         "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo totale del processore",
         "Description[ka]": "სისტემური მონიტორის ვიჯეტი, რომელიც CPU-ის ჯამურ დატვირთვას აჩვენებს",
+        "Description[ru]": "Мониторинг общей загрузки процессора",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje celotno rabo CPE",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar total processoranvändning",
         "Description[tr]": "Toplam CPU kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує загальне використання процесора",
         "Description[x-test]": "xxSystem monitor widget that shows the total CPU usagexx",
+        "Description[zh_TW]": "顯示總 CPU 用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
             "desktop"

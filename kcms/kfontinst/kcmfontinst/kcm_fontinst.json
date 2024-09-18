@@ -112,6 +112,7 @@
     "X-KDE-Keywords[az]": "font,fonts,installer,truetype,type1,bitmap,şrift,şriftlər,",
     "X-KDE-Keywords[ca@valencia]": "lletra,lletres,instal·lador,truetype,type1,mapa de bits",
     "X-KDE-Keywords[ca]": "lletra,lletres,instal·lador,truetype,type1,mapa de bits",
+    "X-KDE-Keywords[cs]": "písmo,písma,instalátor,truetype,type1,bitmap",
     "X-KDE-Keywords[da]": "font,fonts,skrifttype,skrifttyper,installer,truetype,type1,bitmap",
     "X-KDE-Keywords[de]": "Schrift,Fonts,Schriftarten,Installation,TrueType,Type1,Bitmapschriften",
     "X-KDE-Keywords[en_GB]": "font,fonts,installer,truetype,type1,bitmap",
@@ -143,6 +144,7 @@
     "X-KDE-Keywords[tr]": "yazıtipi,yazıtipleri,yazı tipi,yazı tipleri,font,fontlar,truetype,type1,biteşlem,bitmap",
     "X-KDE-Keywords[uk]": "font,fonts,installer,truetype,type1,bitmap,шрифт,шрифти,встановлювач,растрові",
     "X-KDE-Keywords[vi]": "font,fonts,phông chữ,installer,trình cài đặt,truetype,type1,bitmap,bản đồ bit",
+    "X-KDE-Keywords[zh_TW]": "字體,字型,安裝器,字體管理",
     "X-KDE-System-Settings-Parent-Category": "font",
     "X-KDE-Weight": 20
 }

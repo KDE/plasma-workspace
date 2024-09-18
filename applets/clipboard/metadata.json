@@ -187,11 +187,14 @@
     "X-KDE-Keywords[eu]": "klipper,arbela,kopiatu,itsatsi",
     "X-KDE-Keywords[fr]": "klipper, presse-papier, copier, coller",
     "X-KDE-Keywords[he]": "klipper,לוח גזירים,העתקה,הדבקה",
+    "X-KDE-Keywords[ia]": "klipper,clipboard,copy,paste",
     "X-KDE-Keywords[it]": "klipper,appunti,copia,incolla",
     "X-KDE-Keywords[ka]": "klipper,clipboard,copy,paste;ამოჭრა;ჩასმა;ბუფერი;კოპირება",
+    "X-KDE-Keywords[ru]": "klipper,clipboard,copy,paste,буфер обмена,копировать,скопировать,вставить",
     "X-KDE-Keywords[sl]": "klipper,odložišče,kopiraj,prilepi",
     "X-KDE-Keywords[sv]": "klipper,klippbord,kopiera,klistra in",
     "X-KDE-Keywords[tr]": "klipper,pano,kopyala,yapıştır,kes",
+    "X-KDE-Keywords[zh_TW]": "剪貼簿,複製,貼上",
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-NotificationAreaCategory": "SystemServices"
 }
