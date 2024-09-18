@@ -59,7 +59,7 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, QColor &color)
 
 WallpaperModule::~WallpaperModule()
 {
-    disconnect(m_wallpaperConfiguration.get(), &QQmlPropertyMap::valueChanged, this, nullptr);
+    disconnect(m_wallpaperConfiguration, &QQmlPropertyMap::valueChanged, this, nullptr);
 }
 
 WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
