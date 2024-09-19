@@ -25,7 +25,7 @@ static constexpr QLatin1String SOLID_POWERMANAGEMENT_SERVICE("org.kde.Solid.Powe
 
 BatteryControlModel::BatteryControlModel(QObject *parent)
     : QAbstractListModel(parent)
-    , namesMonitor(new BatteriesNamesMonitor)
+    , m_namesMonitor(new BatteriesNamesMonitor)
 {
     m_internalBatteries.reserve(2);
 
@@ -185,7 +185,7 @@ QVariant BatteryControlModel::data(const QModelIndex &index, int role) const
     case ChargeState:
         return QVariant::fromValue(updateBatteryState(battery));
     case PrettyName:
-        return QVariant::fromValue(namesMonitor->updateBatteryName(deviceBattery, battery));
+        return QVariant::fromValue(m_namesMonitor->updateBatteryName(deviceBattery, battery));
     case Type:
         return QVariant::fromValue(batteryTypeToString(battery));
     }
@@ -272,7 +272,7 @@ void BatteryControlModel::deviceRemoved(const QString &udi)
         return;
     }
 
-    namesMonitor->removeBatteryName(udi);
+    m_namesMonitor->removeBatteryName(udi);
 
     if (m_internalBatteries.removeOne(udi)) {
         m_hasInternalBatteries = !m_internalBatteries.isEmpty();
