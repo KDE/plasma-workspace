@@ -4,7 +4,7 @@
             {
                 "Email": "kde@privat.broulik.de",
                 "Name": "Kai Uwe Broulik",
-                "Name[ar]": "Kai Uwe Broulik",
+                "Name[ar]": "كاي أووي بروتيك",
                 "Name[az]": "Kai Uwe Broulik",
                 "Name[be]": "Kai Uwe Broulik",
                 "Name[bg]": "Kai Uwe Broulik",
@@ -157,7 +157,7 @@
     },
     "X-DocPath": "kcontrol/colors/index.html",
     "X-KDE-Keywords": "color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour",
-    "X-KDE-Keywords[ar]": "ألوان,تشكيلة,تباين,ألوان الأدوات,تشكيلة ألوان,لون نمط,سمة ألوان,تمييز,نمط داكن,نمط فاتح",
+    "X-KDE-Keywords[ar]": "اللون،اللون،المخطط،التباين،ألوان الأدوات،مخطط الألوان،نمط اللون،موضوع اللون،الصبغة،لون مميز،مخطط الألوان،الوضع الداكن،الوضع الفاتح،لون مميز،تمييز،لون",
     "X-KDE-Keywords[az]": "color,colour,scheme,contrast,Widget colors,Color Scheme,color style,color theme,tint,accent color,color scheme,dark mode,light mode,accent colour,accent,highlight,colour,rəng,rəngləmək,sxem,təzad.vidjet rəngləri,Rəng Sxemi, rəng üslubu,rəng mövzusu,ton,vurğulama,rəng,rəng sxemi,qaranlıq rejim,işılı rejim,vurğulamanın rənglənməsi",
     "X-KDE-Keywords[ca@valencia]": "color,esquema,contrast,colors de giny,esquema de color,estil de color,tema de color,tint,color d'accent,esquema de color,esquema de colors,mode fosc,mode clar,clor d'accent,accent,ressaltat,color",
     "X-KDE-Keywords[ca]": "color,esquema,contrast,colors de giny,esquema de color,estil de color,tema de color,tint,color d'accent,esquema de color,esquema de colors,mode fosc,mode clar,clor d'accent,accent,ressaltat,color",

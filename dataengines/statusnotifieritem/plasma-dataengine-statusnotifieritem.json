@@ -50,7 +50,7 @@
             }
         ],
         "Description": "Engine for applications' status information, based on the Status Notifier protocol.",
-        "Description[ar]": "محرّك لمعلومات حالة التطبيقات، بناءً على ميفاق مُخطِر الحالة.",
+        "Description[ar]": "محرّك لمعلومات حالة التطبيقات,بناءً على ميفاق مُخطِر الحالة.",
         "Description[az]": "Tətbiqlərin vəziyyəti haqqında, vəziyyət Bildirişi protokoluna əsaslanan məlumatlar mənbəyi.",
         "Description[be]": "Сістэма для вызначэння стану праграм на аснове пратакола апавяшчэнняў пра стан.",
         "Description[bg]": "Енджин за информация за състоянието на приложенията, базиран на протокола Status Notifier.",

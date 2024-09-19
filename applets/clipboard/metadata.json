@@ -4,7 +4,7 @@
             {
                 "Email": "mgraesslin@kde.org",
                 "Name": "Martin Gräßlin",
-                "Name[ar]": "Martin Gräßlin",
+                "Name[ar]": "مارتن جراجلين",
                 "Name[az]": "Martin Gräßlin",
                 "Name[be]": "Martin Gräßlin",
                 "Name[bg]": "Martin Gräßlin",
@@ -169,6 +169,7 @@
         "Version": "1.0"
     },
     "X-KDE-Keywords": "klipper,clipboard,copy,paste",
+    "X-KDE-Keywords[ar]": "كليبر,الحافظة,نسخ,لصق",
     "X-KDE-Keywords[ca@valencia]": "klipper,porta-retalls,copiar,apegar,copia,apega",
     "X-KDE-Keywords[ca]": "klipper,porta-retalls,copiar,enganxar,copia,enganxa",
     "X-KDE-Keywords[en_GB]": "klipper,clipboard,copy,paste",
