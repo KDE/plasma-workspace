@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-02-05 22:54+0100\n"
+"PO-Revision-Date: 2024-09-18 21:30+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -41,13 +41,11 @@ msgstr[0] "Kijelentkezés 1 másodperc múlva"
 msgstr[1] "Kijelentkezés %1 másodperc múlva"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Szoftverfrissítések telepítése és újraindítás 1 másodperc múlva"
-msgstr[1] "Szoftverfrissítések telepítése és újraindítás %1 másodperc múlva"
+msgstr[0] "Szoftverfrissítések telepítése és leállítás 1 másodperc múlva"
+msgstr[1] "Szoftverfrissítések telepítése és leállítás %1 másodperc múlva"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -99,9 +97,7 @@ msgid "Hibernate Now"
 msgstr "Hibernálás most"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Frissítés és újraindítás"
@@ -117,12 +113,10 @@ msgid "Restart Now"
 msgstr "Újraindítás most"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Frissítés és újraindítás most"
+msgstr "Frissítés és leállítás"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format

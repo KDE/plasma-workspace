@@ -72,12 +72,10 @@ msgid "Hide Application"
 msgstr "Skrýt aplikaci"
 
 #: plugin/appentry.cpp:390
-#, fuzzy, kde-format
-#| msgctxt "App name (Generic name)"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
-msgstr "%1 (%2)"
+msgstr ""
 
 #: plugin/appentry.cpp:392
 #, kde-format
