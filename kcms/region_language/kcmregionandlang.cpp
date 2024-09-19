@@ -367,10 +367,12 @@ std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
     for (const auto &glibcLocale : availableLocales) {
         // we want only absolute base locale code, for sr@ijekavian and en_US, we get sr and en
         auto baseLocale = glibcLocale.split(u'_')[0].split(u'@')[0];
+        // clear glibcLocale from .UTF-8 and other similar items since it can break comparison
+        auto glibcLocaleName = glibcLocale.split(u'.')[0];
         if (baseLocaleMap.contains(baseLocale)) {
-            baseLocaleMap[baseLocale].push_back(glibcLocale);
+            baseLocaleMap[baseLocale].push_back(glibcLocaleName);
         } else {
-            baseLocaleMap.insert({baseLocale, {glibcLocale}});
+            baseLocaleMap.insert({baseLocale, {glibcLocaleName}});
         }
     }
 
