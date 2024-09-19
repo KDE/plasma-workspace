@@ -4,13 +4,13 @@
 # Tamas Szanto <tszanto@interware.hu>, 2009.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2010, 2011, 2012, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2023 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2023, 2024 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2023-12-28 11:19+0100\n"
+"PO-Revision-Date: 2024-09-18 21:28+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -38,11 +38,10 @@ msgid "Log Out"
 msgstr "Kijelentkezés"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Kijelentkezés gomb"
+msgstr "Kijelentkező képernyő megjelenítése"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -121,17 +120,15 @@ msgid "End the session"
 msgstr "A munkamenet befejezése"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Show logout button"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Kijelentkezés gomb"
+msgstr "Kijelentkező képernyő megjelenítése"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "A számítógép kikapcsolása"
+msgstr "Kijelentkezés, kikapcsolás, vagy újraindítás"
 
 #: contents/ui/data.js:47
 #, kde-format
