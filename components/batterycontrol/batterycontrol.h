@@ -14,7 +14,8 @@
 
 #include <solid/battery.h>
 
-#include "batteriesnamesmonitor_p.h"
+class QDBusServiceWatcher;
+class BatteriesNamesMonitor;
 
 class BatteryControlModel : public QAbstractListModel
 {
@@ -66,6 +67,9 @@ private:
     QString batteryTypeToString(const Solid::Battery *battery) const;
 
 private Q_SLOTS:
+    void onServiceRegistered(const QString &serviceName);
+    void onServiceUnregistered(const QString &serviceName);
+
     void batteryRemainingTimeChanged(qulonglong time);
     void smoothedBatteryRemainingTimeChanged(qulonglong time);
     void updateBatteryChargeStopThreshold(int threshold);
@@ -105,6 +109,7 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, int, m_percent, 0, &BatteryControlModel::percentChanged);
 
     std::unique_ptr<BatteriesNamesMonitor> m_namesMonitor;
+    std::unique_ptr<QDBusServiceWatcher> m_solidWatcher;
 
     QList<QString> m_batterySources;
     QHash<QString, uint> m_batteryPositions;
