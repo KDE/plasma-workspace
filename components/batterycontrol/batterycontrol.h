@@ -104,7 +104,7 @@ private:
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_smoothedRemainingMsec, 0, &BatteryControlModel::smoothedRemainingMsecChanged);
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, int, m_percent, 0, &BatteryControlModel::percentChanged);
 
-    std::unique_ptr<BatteriesNamesMonitor> namesMonitor;
+    std::unique_ptr<BatteriesNamesMonitor> m_namesMonitor;
 
     QList<QString> m_batterySources;
     QHash<QString, uint> m_batteryPositions;
