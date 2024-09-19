@@ -341,7 +341,7 @@ MouseArea {
                 width: main.width
 
                 font.pixelSize: Math.min(timeLabel.height, fontHelper.font.pixelSize)
-                fontSizeMode: Text.VerticalFit
+                fontSizeMode: Text.Fit
             }
 
             PropertyChanges {
