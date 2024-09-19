@@ -5,7 +5,7 @@
             {
                 "Email": "kde@privat.broulik.de",
                 "Name": "Kai Uwe Broulik",
-                "Name[ar]": "Kai Uwe Broulik",
+                "Name[ar]": "كاي أووي بروتيك",
                 "Name[ast]": "Kai Uwe Broulik",
                 "Name[az]": "Kai Uwe Broulik",
                 "Name[be]": "Kai Uwe Broulik",
@@ -60,6 +60,7 @@
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=System%20Monitor",
         "Category": "System Information",
         "Description": "System monitor widget that shows the total CPU usage",
+        "Description[ar]": "أداة مراقبة النظام التي تعرض مجموع استخدام المعالج",
         "Description[bg]": "Уиджет за системен монитор, което показва общото използване на процесора",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús total de la CPU",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús total de la CPU",

@@ -4,7 +4,7 @@
         "Authors": [
             {
                 "Name": "Marco Martin",
-                "Name[ar]": "Marco Martin",
+                "Name[ar]": "ماركو مارتن",
                 "Name[ast]": "Marco Martin",
                 "Name[az]": "Marco Martin",
                 "Name[be]": "Marco Martin",
@@ -114,6 +114,7 @@
         "Id": "org.kde.plasma.systemmonitor",
         "License": "GPL",
         "Name": "System Monitor Sensor",
+        "Name[ar]": "مستشعر مراقبة النظام",
         "Name[bg]": "Сензор на системния монитор",
         "Name[ca@valencia]": "Sensor del monitor del sistema",
         "Name[ca]": "Sensor del monitor del sistema",
