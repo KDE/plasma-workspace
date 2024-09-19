@@ -83,7 +83,7 @@ PlasmaComponents.ItemDelegate {
 
     DragHandler {
         id: dragHandler
-        enabled: !(toolButtonsLoader.item as DelegateToolButtons)?.hovered
+        enabled: !toolButtonsLoader.item?.hovered
         target: null
     }
 
@@ -116,7 +116,7 @@ PlasmaComponents.ItemDelegate {
         visible: !!source && menuItem.ListView.isCurrentItem
 
         TapHandler {
-            enabled: !(toolButtonsLoader.item as DelegateToolButtons)?.hovered // https://bugreports.qt.io/browse/QTBUG-108821
+            enabled: !toolButtonsLoader.item?.hovered // https://bugreports.qt.io/browse/QTBUG-108821
             onTapped: {
                 menuItem.clicked() // https://bugreports.qt.io/browse/QTBUG-63395
             }
