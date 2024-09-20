@@ -190,13 +190,17 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: suspendButton
 
+            readonly property bool paused: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended
+
             Layout.fillWidth: true
             Layout.maximumWidth: implicitWidth
 
-            icon.name: "media-playback-pause-symbolic"
-            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
-            onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked()
-                                                                                                : jobItem.suspendJobClicked()
+            icon.name: paused ? "media-playback-start-symbolic"
+                              : "media-playback-pause-symbolic"
+            text: paused ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Resume paused job", "Resume")
+                         : i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
+            onClicked: paused ? jobItem.resumeJobClicked()
+                              : jobItem.suspendJobClicked()
         }
 
         PlasmaComponents3.Button {
@@ -296,20 +300,7 @@ ColumnLayout {
 
     states: [
         State {
-            when: jobItem.jobState === NotificationManager.Notifications.JobStateRunning
-            PropertyChanges {
-                target: suspendButton
-                // Explicitly set it to false so it unchecks when pausing from applet
-                // and then the job unpauses programmatically elsewhere.
-                checked: false
-            }
-        },
-        State {
             when: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended
-            PropertyChanges {
-                target: suspendButton
-                checked: true
-            }
             PropertyChanges {
                 target: progressBar
                 enabled: false
