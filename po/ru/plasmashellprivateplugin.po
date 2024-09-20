@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-20 02:40+0000\n"
 "PO-Revision-Date: 2024-09-16 13:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -41,13 +41,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "shafff@ukr.net, darkstar@altlinux.ru, kekcuha@gmail.com"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:25
+#: batterycontrol/batteriesnamesmonitor_p.cpp:46
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "Батарея №%1"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:27
+#: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
 msgstr "Батарея"

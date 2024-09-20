@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-20 02:40+0000\n"
 "PO-Revision-Date: 2024-08-24 18:43+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -28,13 +28,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "demetresmeliates+i18n@gmail.com"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:25
+#: batterycontrol/batteriesnamesmonitor_p.cpp:46
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr "Μπαταρία %1"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:27
+#: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
 msgstr "Μπαταρία"
