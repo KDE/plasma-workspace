@@ -6,7 +6,7 @@
 # Spiros Georgaras <sngeorgaras@otenet.gr>, 2005, 2006, 2007.
 # Spiros Georgaras <sng@hellug.gr>, 2007.
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008, 2009.
-# Antonis Geralis <capoiosct@gmail.com>, 2011, 2012.
+# SPDX-FileCopyrightText: 2011, 2012, 2024 Antonis Geralis <capoiosct@gmail.com>
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012, 2014.
 # Stelios <sstavra@gmail.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014.
@@ -16,15 +16,15 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-08-16 10:21+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-09-19 16:56+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -778,7 +778,7 @@ msgid ""
 "href=\"1\">More about the selection and clipboard</a>."
 msgstr ""
 "Το περιεχόμενο που επιλέγεται με τον κέρσορα αντιγράφεται αυτόματα στο "
-"πρόχειρο, ώστε να μπορεί να επικολληθεί είτε με την ενέργεια Eπικόλληση είτε "
+"πρόχειρο, ώστε να μπορεί να επικολληθεί είτε με την ενέργεια Επικόλληση είτε "
 "με μεσαίο κλικ.<br/><a href=\"1\">Περισσότερα για την επιλογή και το "
 "πρόχειρο</a>."
 

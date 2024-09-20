@@ -10,21 +10,21 @@
 # Dimitrios Glentadakis <dglent@gmail.com>, 2011, 2012.
 # Bouklis Panos <panos@echidna-band.com>, 2012.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2016.
-# Antonis Geralis <capoiosct@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-16 00:41+0000\n"
-"PO-Revision-Date: 2024-08-15 11:41+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-09-19 17:04+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -42,7 +42,7 @@ msgid ""
 "Do you wish to install the font(s) for personal use (only available to you), "
 "or system-wide (available to all users)?"
 msgstr ""
-"Θέλετε να εγκαταστήσετε τη γραμματοσειρά (ές) για προσωπική χρήση (διαθέσιμη "
+"Θέλετε να εγκαταστήσετε τη γραμματοσειρά(ές) για προσωπική χρήση (διαθέσιμη "
 "μόνο σε εσάς) ή σε όλο το σύστημα (διαθέσιμη σε όλους τους χρήστες);"
 
 #: apps/Installer.cpp:37 kcmfontinst/KCmFontInst.cpp:952
@@ -450,7 +450,7 @@ msgstr ""
 "<b>Τυπικές</b> είναι ειδικές ομάδες που χρησιμοποιούνται από το διαχειριστή "
 "γραμματοσειρών.<ul>%1</ul></li><li>Οι <b>Προσαρμοσμένες</b> ομάδες "
 "δημιουργούνται από εσάς. Για την προσθήκη μιας οικογένειας γραμματοσειράς σε "
-"μια από αυτές τις ομάδες απλά σύρετέ την από τη λίστα γραμματοσειρών και "
+"μια από αυτές τις ομάδες απλά σύρετε την από τη λίστα γραμματοσειρών και "
 "ελευθερώστε την πάνω στην επιθυμητή ομάδα. Για την αφαίρεση μιας οικογένειας "
 "από την ομάδα, σύρετε τη γραμματοσειρά στην ομάδα \"Όλες οι γραμματοσειρές\"."
 "</li></ul></p>"
@@ -1465,7 +1465,7 @@ msgstr "Σήμανση, περικλείοντα"
 #: viewpart/CharTip.cpp:68
 #, kde-format
 msgid "Mark, Non-Spacing"
-msgstr "Σήμανση, κη-κενά"
+msgstr "Σήμανση, μη-κενά"
 
 #: viewpart/CharTip.cpp:70
 #, kde-format
@@ -1605,7 +1605,7 @@ msgstr "Προεπισκόπηση συμβολοσειράς"
 #: viewpart/FontViewPart.cpp:407
 #, kde-format
 msgid "Please enter new string:"
-msgstr "Eισάγετε μια νέα συμβολοσειρά:"
+msgstr "Εισάγετε μια νέα συμβολοσειρά:"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: viewpart/kfontviewpart.rc:4

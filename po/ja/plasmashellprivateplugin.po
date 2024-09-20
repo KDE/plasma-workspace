@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-09-20 00:43+0000\n"
 "PO-Revision-Date: 2023-04-07 23:52-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -27,13 +27,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ryuichi_ya220@outlook.jp"
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:25
+#: batterycontrol/batteriesnamesmonitor_p.cpp:46
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
 msgstr ""
 
-#: batterycontrol/batteriesnamesmonitor_p.cpp:27
+#: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
 msgstr ""

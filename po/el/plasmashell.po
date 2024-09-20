@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014, 2015, 2016.
-# Antonis Geralis <capoiosct@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:41+0000\n"
-"PO-Revision-Date: 2024-08-24 18:21+0300\n"
-"Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
-"Language-Team: Greek <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-09-19 17:01+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -379,7 +379,7 @@ msgstr "Ενεργοποίηση εκκινητή εφαρμογών"
 #: shellcorona.cpp:232
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr "Εμφάνιση εναλλακτήρα δραστηριοτήτων"
+msgstr "Εμφάνιση εναλλάκτης δραστηριοτήτων"
 
 #: shellcorona.cpp:243
 #, kde-format

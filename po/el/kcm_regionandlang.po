@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-07 00:41+0000\n"
-"PO-Revision-Date: 2024-09-14 10:10+0300\n"
+"PO-Revision-Date: 2024-09-19 16:50+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -412,7 +412,7 @@ msgstr "Στυλ ονόματος"
 #, kde-format
 msgctxt "@info:title"
 msgid "Phone Numbers"
-msgstr "Αριθμοί τηλέφωνου"
+msgstr "Αριθμοί τηλεφώνου"
 
 #: optionsmodel.cpp:57
 #, kde-format
