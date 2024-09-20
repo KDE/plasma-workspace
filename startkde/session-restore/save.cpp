@@ -29,6 +29,7 @@ using namespace Qt::StringLiterals;
 
 int main(int argc, char *argv[])
 {
+    QCoreApplication::setAttribute(Qt::AA_DisableSessionManager);
     QGuiApplication::setDesktopFileName(u"plasma-fallback-session-save"_s);
     QGuiApplication a(argc, argv);
     a.setApplicationName(u"plasmasessionrestore"_s);
