@@ -35,6 +35,8 @@ class DigitalClockTests(unittest.TestCase):
             "LC_ALL": "en_US.UTF-8",
         })
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        # Check the current time in the compact representation
+        cls.driver.find_element(AppiumBy.XPATH, f"//label[contains(@name, '{time.strftime('%I:%M', time.localtime()).lstrip('0')}')]")
         # Open Applet
         cls.driver.find_element(AppiumBy.ACCESSIBILITY_ID, "digital-clock-compactrepresentation").click()
 
