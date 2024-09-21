@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 00:43+0000\n"
+"POT-Creation-Date: 2024-09-21 00:42+0000\n"
 "PO-Revision-Date: 2024-06-07 14:59+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "%1 ilə açın"
 msgid "Open with…"
 msgstr "Bunula açın..."
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:280
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Bu tərkibli qovluğu açın"
@@ -252,25 +252,31 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Təfərrüatlar"
 
-#: package/contents/ui/JobItem.qml:197
+#: package/contents/ui/JobItem.qml:200
+#, kde-format
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "Bərpa etmək"
+
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Fasilə"
 
-#: package/contents/ui/JobItem.qml:209
+#: package/contents/ui/JobItem.qml:213
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "İmtina"
 
-#: package/contents/ui/JobItem.qml:240
+#: package/contents/ui/JobItem.qml:244
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "Digər Seçimlər..."
 
-#: package/contents/ui/JobItem.qml:268
+#: package/contents/ui/JobItem.qml:272
 #, kde-format
 msgid "Open"
 msgstr "Açmaq"
@@ -451,10 +457,6 @@ msgstr "Göndərmək"
 #~ msgctxt "Clear all notifications"
 #~ msgid "Clear All"
 #~ msgstr "1"
-
-#~ msgctxt "Resume paused job"
-#~ msgid "Resume"
-#~ msgstr "Bərpa etmək"
 
 #~ msgid "Until turned off"
 #~ msgstr "Söndürülənədək"

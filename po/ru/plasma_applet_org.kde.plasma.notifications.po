@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 00:43+0000\n"
+"POT-Creation-Date: 2024-09-21 00:42+0000\n"
 "PO-Revision-Date: 2024-02-04 19:16+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -35,7 +35,7 @@ msgstr "Открыть в %1"
 msgid "Open with…"
 msgstr "Открыть в…"
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:280
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Открыть содержащую объект папку"
@@ -271,25 +271,31 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Подробности"
 
-#: package/contents/ui/JobItem.qml:197
+#: package/contents/ui/JobItem.qml:200
+#, kde-format
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "Продолжить"
+
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Приостановить"
 
-#: package/contents/ui/JobItem.qml:209
+#: package/contents/ui/JobItem.qml:213
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Отменить"
 
-#: package/contents/ui/JobItem.qml:240
+#: package/contents/ui/JobItem.qml:244
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "Дополнительные параметры..."
 
-#: package/contents/ui/JobItem.qml:268
+#: package/contents/ui/JobItem.qml:272
 #, kde-format
 msgid "Open"
 msgstr "Открыть"
@@ -484,10 +490,6 @@ msgstr "Отправить"
 #~ msgctxt "Clear all notifications"
 #~ msgid "Clear All"
 #~ msgstr "Выделить всё"
-
-#~ msgctxt "Resume paused job"
-#~ msgid "Resume"
-#~ msgstr "Продолжить"
 
 #~ msgid "Until turned off"
 #~ msgstr "до отключения"

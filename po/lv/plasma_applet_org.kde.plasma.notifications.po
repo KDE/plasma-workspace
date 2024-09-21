@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 00:43+0000\n"
+"POT-Creation-Date: 2024-09-21 00:42+0000\n"
 "PO-Revision-Date: 2024-04-05 11:00+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Atvērt ar %1"
 msgid "Open with…"
 msgstr "Atvērt ar..."
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:280
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Atvērt saturošo mapi"
@@ -261,25 +261,32 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Informācija"
 
-#: package/contents/ui/JobItem.qml:197
+#: package/contents/ui/JobItem.qml:200
+#, fuzzy, kde-format
+#| msgid "Resume job"
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "Atsākt darbu"
+
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pauzēt"
 
-#: package/contents/ui/JobItem.qml:209
+#: package/contents/ui/JobItem.qml:213
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Atcelt"
 
-#: package/contents/ui/JobItem.qml:240
+#: package/contents/ui/JobItem.qml:244
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "Vairāk iespēju..."
 
-#: package/contents/ui/JobItem.qml:268
+#: package/contents/ui/JobItem.qml:272
 #, kde-format
 msgid "Open"
 msgstr "Atvērt"
@@ -453,12 +460,6 @@ msgstr "Nosūtīt"
 #~ msgctxt "A button tooltip; expands the item to show details"
 #~ msgid "Show Details"
 #~ msgstr "Rādīt informāciju"
-
-#, fuzzy
-#~| msgid "Resume job"
-#~ msgctxt "Resume paused job"
-#~ msgid "Resume"
-#~ msgstr "Atsākt darbu"
 
 #, fuzzy
 #~| msgid "Notifications"

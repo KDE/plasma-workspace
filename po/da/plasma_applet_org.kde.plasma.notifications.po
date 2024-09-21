@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 00:43+0000\n"
+"POT-Creation-Date: 2024-09-21 00:42+0000\n"
 "PO-Revision-Date: 2024-07-08 12:14+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Åbn med %1"
 msgid "Open with…"
 msgstr "Åbn med..."
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:280
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Åbn indeholdende mappe"
@@ -252,25 +252,31 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Detaljer"
 
-#: package/contents/ui/JobItem.qml:197
+#: package/contents/ui/JobItem.qml:200
+#, kde-format
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "Genoptag"
+
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pause"
 
-#: package/contents/ui/JobItem.qml:209
+#: package/contents/ui/JobItem.qml:213
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Annullér"
 
-#: package/contents/ui/JobItem.qml:240
+#: package/contents/ui/JobItem.qml:244
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "Flere indstillinger…"
 
-#: package/contents/ui/JobItem.qml:268
+#: package/contents/ui/JobItem.qml:272
 #, kde-format
 msgid "Open"
 msgstr "Åbn"
@@ -448,10 +454,6 @@ msgstr "Send"
 #~ msgctxt "Clear all notifications"
 #~ msgid "Clear All"
 #~ msgstr "Markér alt"
-
-#~ msgctxt "Resume paused job"
-#~ msgid "Resume"
-#~ msgstr "Genoptag"
 
 #~ msgid "Until turned off"
 #~ msgstr "Indtil computeren slukkes"

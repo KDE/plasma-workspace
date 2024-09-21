@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 00:43+0000\n"
+"POT-Creation-Date: 2024-09-21 00:42+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "Otvoriť s %1"
 msgid "Open with…"
 msgstr "Otvoriť s..."
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:280
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Otvoriť priečinok s obsahom"
@@ -263,25 +263,31 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Skryť podrobnosti"
 
-#: package/contents/ui/JobItem.qml:197
+#: package/contents/ui/JobItem.qml:200
+#, kde-format
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "Pokračovať"
+
+#: package/contents/ui/JobItem.qml:201
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Pozastaviť"
 
-#: package/contents/ui/JobItem.qml:209
+#: package/contents/ui/JobItem.qml:213
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Zrušiť"
 
-#: package/contents/ui/JobItem.qml:240
+#: package/contents/ui/JobItem.qml:244
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "Viac možností..."
 
-#: package/contents/ui/JobItem.qml:268
+#: package/contents/ui/JobItem.qml:272
 #, kde-format
 msgid "Open"
 msgstr "Otvoriť"
@@ -469,10 +475,6 @@ msgstr "Odoslať"
 #~ msgctxt "Clear all notifications"
 #~ msgid "Clear All"
 #~ msgstr "Vybrať všetko"
-
-#~ msgctxt "Resume paused job"
-#~ msgid "Resume"
-#~ msgstr "Pokračovať"
 
 #~ msgid "Until turned off"
 #~ msgstr "Do vypnutia"

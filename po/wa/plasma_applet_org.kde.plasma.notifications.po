@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-20 00:43+0000\n"
+"POT-Creation-Date: 2024-09-21 00:42+0000\n"
 "PO-Revision-Date: 2011-01-09 11:22+0100\n"
 "Last-Translator: Jean Cayron <jean.cayron@gmail.com>\n"
 "Language-Team: Walloon <linux@walon.org>\n"
@@ -27,7 +27,7 @@ msgstr ""
 msgid "Open with…"
 msgstr ""
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:280
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
@@ -267,27 +267,34 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:197
+#: package/contents/ui/JobItem.qml:200
+#, fuzzy, kde-format
+#| msgid "Resume job"
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr "Rataker l' bouye"
+
+#: package/contents/ui/JobItem.qml:201
 #, fuzzy, kde-format
 #| msgid "Paused"
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Djoké"
 
-#: package/contents/ui/JobItem.qml:209
+#: package/contents/ui/JobItem.qml:213
 #, fuzzy, kde-format
 #| msgid "Cancel job"
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Rinoncî al bouye"
 
-#: package/contents/ui/JobItem.qml:240
+#: package/contents/ui/JobItem.qml:244
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr ""
 
-#: package/contents/ui/JobItem.qml:268
+#: package/contents/ui/JobItem.qml:272
 #, fuzzy, kde-format
 #| msgid "Open"
 msgid "Open"
@@ -465,12 +472,6 @@ msgstr ""
 msgctxt "@action:button"
 msgid "Send"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Resume job"
-#~ msgctxt "Resume paused job"
-#~ msgid "Resume"
-#~ msgstr "Rataker l' bouye"
 
 #, fuzzy
 #~| msgid "%1 notification"
