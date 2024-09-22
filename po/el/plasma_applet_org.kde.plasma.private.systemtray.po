@@ -193,7 +193,7 @@ msgstr "Εμφάνιση κρυφών εικονιδίων"
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr ""
+msgstr "ΑΒΙΥΓλξχμζβψΞΘΠΡ"
 
 #, fuzzy
 #~| msgid " (Automatic load)"

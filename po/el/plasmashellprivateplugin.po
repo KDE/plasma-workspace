@@ -375,11 +375,10 @@ msgid "Install Widget From Local File…"
 msgstr "Εγκατάσταση συστατικού από τοπικό αρχείο…"
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Όλα τα συστατικά"
+msgstr "Λήψη νέων γραφικών στοιχειών"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format

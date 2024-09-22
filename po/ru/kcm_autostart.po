@@ -8,13 +8,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2016, 2017.
 # Julia Dronova <juliette.tux@gmail.com>, 2012, 2020.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2020, 2021, 2022, 2023.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2018, 2020, 2021, 2022, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-12-24 18:03+0300\n"
+"PO-Revision-Date: 2024-09-21 11:42+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -114,31 +114,25 @@ msgstr "Файл «%1» должен быть исполняемым для ег
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Добавить"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Добавить приложение…"
+msgstr "Приложение…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Добавить сценарий входа в систему..."
+msgstr "Сценарий входа в систему…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Добавить сценарий выхода из системы..."
+msgstr "Сценарий выхода из системы…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -194,12 +188,10 @@ msgid "No user-specified autostart items"
 msgstr "Нет ни одного объекта для автоматического запуска"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "Для добавления нажмите кнопку <interface>Добавить…</interface>"
+msgstr "Для добавления нажмите кнопку <interface>Добавить</interface>"
 
 #: ui/main.qml:217
 #, kde-format

@@ -286,7 +286,7 @@ msgstr "Εμφάνιση αριθμών εβδομάδας"
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
-msgstr ""
+msgstr "Χρήση προεπιλογών περιοχής"
 
 #: package/contents/ui/configCalendar.qml:72
 #, kde-format

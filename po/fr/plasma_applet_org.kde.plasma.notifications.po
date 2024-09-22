@@ -263,7 +263,9 @@ msgid "Details"
 msgstr "Détails"
 
 #: package/contents/ui/JobItem.qml:200
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Resume paused job"
+#| msgid "Resume"
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "Reprendre"

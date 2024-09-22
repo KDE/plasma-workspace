@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-09-18 14:57+0300\n"
-"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
+"PO-Revision-Date: 2024-09-21 13:07+0300\n"
+"Last-Translator: Δημήτρης Μηλιάτης <demetresmeliates+i18n@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -183,6 +183,11 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"Η υπηρεσία <application>%1</application> θα χρησιμοποιείται για την "
+"περιοδική ενημέρωση της θέσης της συσκευής. Παρακαλούμε ανοίξτε μια αναφορά "
+"σφάλματος στη διεύθυνση <link url='https://bugs.kde.org'>https://bugs.kde."
+"org</link> ζητώντας από τους προγραμματιστές του KDE να γράψουν μια "
+"λεπτομερή περιγραφή του τι θα κάνει αυτή η υπηρεσία."
 
 #: ui/main.qml:334
 #, kde-format

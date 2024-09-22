@@ -257,11 +257,10 @@ msgid "Details"
 msgstr "Λεπτομέρειες"
 
 #: package/contents/ui/JobItem.qml:200
-#, fuzzy, kde-format
-#| msgid "Resume job"
+#, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
-msgstr "Συνέχιση εργασίας"
+msgstr "Συνέχεια"
 
 #: package/contents/ui/JobItem.qml:201
 #, kde-format
