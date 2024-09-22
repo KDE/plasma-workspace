@@ -46,7 +46,7 @@ add_subdirectory(session-restore)
 #FIXME: reconsider, looks fishy
 if(NOT CMAKE_INSTALL_PREFIX STREQUAL "/usr")
     set_property(SOURCE startplasma.cpp APPEND PROPERTY COMPILE_DEFINITIONS
-        XCURSOR_PATH="${KDE_INSTALL_FULL_DATAROOTDIR}/icons:$XCURSOR_PATH:~/.icons:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons")
+        XCURSOR_PATH="~/.local/share/icons:~/.icons:${KDE_INSTALL_FULL_DATAROOTDIR}/icons:$XCURSOR_PATH:/usr/share/icons:/usr/share/pixmaps:/usr/X11R6/lib/X11/icons")
 endif()
 
 configure_file(config-startplasma.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-startplasma.h)
