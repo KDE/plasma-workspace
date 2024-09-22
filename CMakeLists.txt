@@ -459,6 +459,7 @@ endif()
 ki18n_install(po)
 
 install(FILES completions/plasmashell.zsh RENAME _plasmashell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
+install(FILES completions/plasmawindowed.zsh RENAME _plasmawindowed DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
 
 ecm_qt_install_logging_categories(
         EXPORT PLASMAWORKSPACE
