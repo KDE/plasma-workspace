@@ -6,6 +6,8 @@
 
 #define QT_FORCE_ASSERTS 1
 
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QProcess>
 #include <qpa/qplatformnativeinterface.h>
 
@@ -24,6 +26,7 @@ class WaylandTasksModelTest : public QObject
 private Q_SLOTS:
     void initTestCase();
     void cleanupTestCase();
+    void cleanup();
 
     void test_openCloseWindow();
     void test_modelData();
@@ -37,8 +40,12 @@ private Q_SLOTS:
     // plasmashell runs out of file descriptors when emacs visits lots of files
     void test_bug478831();
 
+    // Sometimes non-modal windows can be missing from the taskbar
+    void test_transientWindow();
+
 private:
     WaylandTasksModel m_model;
+    QProcess gtkWindow;
 };
 
 void WaylandTasksModelTest::initTestCase()
@@ -65,7 +72,17 @@ void WaylandTasksModelTest::initTestCase()
 
 void WaylandTasksModelTest::cleanupTestCase()
 {
+    if (gtkWindow.state() == QProcess::Running) {
+        gtkWindow.kill();
+    }
     TestUtils::cleanupTestCase();
+}
+
+void WaylandTasksModelTest::cleanup()
+{
+    if (gtkWindow.state() == QProcess::Running) {
+        gtkWindow.kill();
+    }
 }
 
 void WaylandTasksModelTest::test_openCloseWindow()
@@ -153,7 +170,6 @@ void WaylandTasksModelTest::test_bug478831()
 
     QSignalSpy rowsInsertedSpy(&m_model, &AbstractWindowTasksModel::rowsInserted);
 
-    QProcess gtkWindow;
     gtkWindow.setProgram(u"python3"_s);
     QProcessEnvironment newEnv = QProcessEnvironment::systemEnvironment();
     newEnv.insert(u"GDK_BACKEND"_s, u"x11"_s);
@@ -180,6 +196,107 @@ void WaylandTasksModelTest::test_bug478831()
     QVERIFY(fdCountBefore > 10);
     QVERIFY(fdCountAfter > 10);
     QVERIFY(fdCountAfter - fdCountBefore < 10);
+}
+
+void WaylandTasksModelTest::test_transientWindow()
+{
+    QSignalSpy rowsInsertedSpy(&m_model, &AbstractWindowTasksModel::rowsInserted);
+
+    gtkWindow.setProgram(u"python3"_s);
+    QProcessEnvironment newEnv = QProcessEnvironment::systemEnvironment();
+    newEnv.insert(u"GDK_BACKEND"_s, u"x11"_s);
+    // Otherwise the following tests will fail
+    newEnv.insert(u"NO_AT_BRIDGE"_s, u"1"_s);
+    newEnv.insert(u"GTK_A11Y"_s, u"none"_s);
+    // Avoid temporary files
+    newEnv.insert(u"GSETTINGS_BACKEND"_s, u"memory"_s);
+    newEnv.insert(u"GVFS_DISABLE_FUSE"_s, u"1"_s);
+    newEnv.insert(u"GIO_USE_VFS"_s, u"local"_s);
+    gtkWindow.setProcessEnvironment(newEnv);
+    gtkWindow.setArguments({QFINDTESTDATA(u"data/windows/bug484647.py"_s)});
+    gtkWindow.start(QIODeviceBase::ReadOnly);
+    QVERIFY(!rowsInsertedSpy.empty() || rowsInsertedSpy.wait());
+
+    QModelIndexList results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Frame1"_s);
+    QCOMPARE(results.size(), 1);
+    QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+    results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Frame2"_s);
+    QCOMPARE(results.size(), 1);
+    QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+    results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Dialog1"_s);
+    QCOMPARE(results.size(), 1);
+    QVERIFY(get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+
+    // Change the transient parent
+    {
+        QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.bug484647"_s, u"/484647"_s, u"org.kde.bug484647"_s, u"ChangeLeader1"_s);
+        QDBusMessage::MessageType type = QDBusConnection::sessionBus().call(msg).type();
+        QVERIFY(type != QDBusMessage::ErrorMessage || type != QDBusMessage::InvalidMessage);
+
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Frame1"_s);
+        QCOMPARE(results.size(), 1);
+        QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Frame2"_s);
+        QCOMPARE(results.size(), 1);
+        QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Dialog1"_s);
+        QCOMPARE(results.size(), 1);
+        QVERIFY(get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+    }
+
+    // Close the transient window
+    {
+        QSignalSpy rowsRemovedSpy(&m_model, &AbstractWindowTasksModel::rowsRemoved);
+        QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.bug484647"_s, u"/484647"_s, u"org.kde.bug484647"_s, u"CloseTransientWindow"_s);
+        QDBusMessage::MessageType type = QDBusConnection::sessionBus().call(msg).type();
+        QVERIFY(type != QDBusMessage::ErrorMessage || type != QDBusMessage::InvalidMessage);
+        QVERIFY(!rowsRemovedSpy.empty() || rowsRemovedSpy.wait()); // No crash: BUG 488596
+
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Frame1"_s);
+        QCOMPARE(results.size(), 1);
+        QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Frame2"_s);
+        QCOMPARE(results.size(), 1);
+        QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Dialog1"_s);
+        QVERIFY(results.empty());
+    }
+
+    // Show the transient window again
+    {
+        QSignalSpy rowsInsertedSpy(&m_model, &AbstractWindowTasksModel::rowsInserted);
+        QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.bug484647"_s, u"/484647"_s, u"org.kde.bug484647"_s, u"ShowTransientWindow"_s);
+        QDBusMessage::MessageType type = QDBusConnection::sessionBus().call(msg).type();
+        QVERIFY(type != QDBusMessage::ErrorMessage || type != QDBusMessage::InvalidMessage);
+        QVERIFY(!rowsInsertedSpy.empty() || rowsInsertedSpy.wait());
+
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Dialog1"_s);
+        QCOMPARE(results.size(), 1);
+        QVERIFY(get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+    }
+
+    // Unset the transient parent
+    {
+        QSignalSpy dataChangedSpy(&m_model, &AbstractWindowTasksModel::dataChanged);
+        QDBusMessage msg = QDBusMessage::createMethodCall(u"org.kde.bug484647"_s, u"/484647"_s, u"org.kde.bug484647"_s, u"UnsetLeader"_s);
+        QDBusMessage::MessageType type = QDBusConnection::sessionBus().call(msg).type();
+        QVERIFY(type != QDBusMessage::ErrorMessage || type != QDBusMessage::InvalidMessage);
+        QVERIFY(!dataChangedSpy.empty() || dataChangedSpy.wait());
+        QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
+            return list.at(2).value<QList<int>>().contains(AbstractTasksModel::SkipTaskbar);
+        }));
+
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Frame1"_s);
+        QCOMPARE(results.size(), 1);
+        QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Frame2"_s);
+        QCOMPARE(results.size(), 1);
+        QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+        results = m_model.match(m_model.index(0, 0), Qt::DisplayRole, u"Dialog1"_s);
+        QVERIFY(!get<bool>(results[0].data(AbstractTasksModel::SkipTaskbar)));
+    }
+
+    gtkWindow.kill();
 }
 
 QTEST_MAIN(WaylandTasksModelTest)

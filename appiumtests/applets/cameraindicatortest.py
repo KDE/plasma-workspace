@@ -24,9 +24,8 @@ class CameraIndicatorTest(unittest.TestCase):
     """
 
     driver: webdriver.Remote
-    pipewire: subprocess.Popen | None = None
-    wireplumber: subprocess.Popen | None = None
     pipewire_already_running_before_test: bool = False
+    process_list: list[subprocess.Popen] = []
 
     @classmethod
     def setUpClass(cls) -> None:
@@ -57,13 +56,11 @@ class CameraIndicatorTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        assert len(cls.process_list) > 0, len(cls.process_list)
+        for p in reversed(cls.process_list):
+            p.kill()
+            p.wait(10)
         cls.driver.quit()
-        if cls.pipewire is not None:
-            cls.pipewire.terminate()
-            cls.pipewire.wait()
-        if cls.wireplumber is not None:
-            cls.wireplumber.terminate()
-            cls.wireplumber.wait()
 
     def test_0_open(self) -> None:
         """
@@ -81,8 +78,8 @@ class CameraIndicatorTest(unittest.TestCase):
         if self.pipewire_already_running_before_test:
             self.skipTest("Pipewire is already running.")
 
-        self.pipewire = subprocess.Popen(["pipewire"], stdout=sys.stderr, stderr=sys.stderr)
-        self.wireplumber = subprocess.Popen(["wireplumber"], stdout=sys.stderr, stderr=sys.stderr)
+        self.process_list.append(subprocess.Popen(["pipewire"], stdout=sys.stderr, stderr=sys.stderr))
+        self.process_list.append(subprocess.Popen(["wireplumber"], stdout=sys.stderr, stderr=sys.stderr))
 
         # Reconnecting takes at least 5s
         WebDriverWait(self.driver, 20).until(EC.presence_of_element_located((AppiumBy.NAME, "No camera is in use")))
@@ -95,8 +92,8 @@ class CameraIndicatorTest(unittest.TestCase):
         bin_dir = os.getenv("CMAKE_RUNTIME_OUTPUT_DIRECTORY", os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "build", "bin"))
         mock_camera1 = subprocess.Popen([os.path.join(bin_dir, "pipewiremockcamera")], stdout=subprocess.PIPE, stderr=sys.stderr)
         mock_camera2 = subprocess.Popen([os.path.join(bin_dir, "pipewiremockcamera")], stdout=sys.stderr, stderr=sys.stderr)
-        self.addCleanup(mock_camera1.terminate)
-        self.addCleanup(mock_camera2.terminate)
+        self.process_list.append(mock_camera1)
+        self.process_list.append(mock_camera2)
         self.driver.find_element(AppiumBy.NAME, "KDE Camera")
         self.driver.find_element("description", "Suspended")
 
@@ -112,7 +109,7 @@ class CameraIndicatorTest(unittest.TestCase):
 
         # Open the camera player and connect to the first mock camera
         camera_player = subprocess.Popen([os.path.join(bin_dir, "pipewirecameraplay"), node_id], stdout=sys.stderr, stderr=sys.stderr)
-        self.addCleanup(camera_player.terminate)
+        self.process_list.append(camera_player)
         self.driver.find_element("description", "Active")
 
         # Show the placeholder message when there is only one camera

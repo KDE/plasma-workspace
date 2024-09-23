@@ -24,7 +24,7 @@ if(NOT CMAKE_SYSTEM_NAME MATCHES "Linux")
     return()
 endif()
 add_executable(waylandtasksmodeltest waylandtasksmodeltest.cpp)
-target_link_libraries(waylandtasksmodeltest PRIVATE taskmanager Qt::Test Qt::GuiPrivate Qt::WaylandClient Wayland::Client KF6::Service KF6::IconThemes KF6::WindowSystem)
+target_link_libraries(waylandtasksmodeltest PRIVATE taskmanager Qt::Test Qt::DBus Qt::GuiPrivate Qt::WaylandClient Wayland::Client KF6::Service KF6::IconThemes KF6::WindowSystem)
 
 add_test(
     NAME waylandtasksmodeltest
