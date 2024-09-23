@@ -227,7 +227,7 @@ void XWindowTasksModelTest::test_modelData()
                 != newWindowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2));
 
         window->setIcon(QIcon());
-        QVERIFY(dataChangedSpy.wait());
+        QVERIFY(!dataChangedSpy.empty() || dataChangedSpy.wait());
         QVERIFY(dataChangedSpy.takeLast().at(2).value<QList<int>>().contains(Qt::DecorationRole));
     } // END Icon
 
