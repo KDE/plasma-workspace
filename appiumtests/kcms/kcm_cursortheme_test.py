@@ -72,6 +72,13 @@ class KCMCursorThemeTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
+        cls.driver.find_element(AppiumBy.XPATH, "//push_button[@name='Close']").click()
+        for _ in range(10):
+            try:
+                subprocess.check_call(["pidof", f"kcmshell{KDE_VERSION}"])
+            except subprocess.CalledProcessError:
+                break
+            time.sleep(1)
         cls.driver.quit()
 
     def test_0_open(self) -> None:
