@@ -137,6 +137,10 @@ QString KCMRegionAndLang::localeFileDirPath()
 
 void KCMRegionAndLang::save()
 {
+    if (!settings()->isDefaultSetting(SettingType::Lang)) {
+        settings()->setLC_Vars(settings()->lang());
+    }
+
     if (settings()->isSaveNeeded()) {
         // assemble full locales in use
         QStringList locales;
