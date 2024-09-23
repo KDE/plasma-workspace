@@ -462,5 +462,6 @@ class ClipboardTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
+    assert subprocess.call(["pidof", "plasmashell"]) != 0, "The test requires plasmashell to quit"
     logging.getLogger().setLevel(logging.INFO)
     unittest.main()
