@@ -7,7 +7,7 @@
   <group name="Mouse">
     <entry name="cursorTheme" type="String">
       <label>Name of the current cursor theme</label>
-      <default>breeze_cursors</default>
+      <default>default</default>
     </entry>
     <entry name="cursorSize" type="Int">
       <label>Current cursor size</label>
