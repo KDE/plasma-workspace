@@ -367,7 +367,10 @@ void KSMServer::completeShutdownOrCheckpoint()
 
     qCDebug(KSMSERVER) << "state is " << state;
     if (state == Shutdown) {
-        KNotification *n = KNotification::event(QStringLiteral("exitkde"), QString(), QPixmap(), KNotification::DefaultEvent); // Plasma says good bye
+        KNotification *n = KNotification::event(QStringLiteral("exitkde"),
+                                                i18nc("@info:status", "Session is exiting"),
+                                                QPixmap(),
+                                                KNotification::DefaultEvent); // Plasma says good bye
         connect(n, &KNotification::closed, this, &KSMServer::startKilling);
         state = WaitingForKNotify;
         // https://bugs.kde.org/show_bug.cgi?id=228005
