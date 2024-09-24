@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<!DOCTYPE article PUBLIC "-//KDE//DTD DocBook XML V4.5-Based Variant V1.1//EN"
+"dtd/kdedbx45.dtd" [
+<!ENTITY % addindex "IGNORE">
+<!ENTITY % Slovenian "INCLUDE"
+> <!-- change language only here -->
+]>
+
+<article id="icons" lang="&language;">
+<articleinfo>
+<title
+>Ikone</title>
+<authorgroup>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Mike.McBride; &Mike.McBride.mail;</author>
+<author
+>&Anne-Marie.Mahfouf; &Anne-Marie.Mahfouf.mail;</author>
+<othercredit role="translator"
+><contrib
+>Prevod</contrib
+><firstname
+>Matej</firstname
+><surname
+>Badalič</surname
+><affiliation
+><address
+><email
+>matej_badalic@slo.net</email
+></address
+></affiliation
+></othercredit
+> 
+</authorgroup>
+
+<date
+>09.04.2021</date>
+<releaseinfo
+>Plasma 5.20</releaseinfo>
+
+<keywordset>
+<keyword
+>KDE</keyword>
+<keyword
+>KControl</keyword>
+<keyword
+>ikona</keyword>
+</keywordset>
+</articleinfo>
+
+<para
+>&kde; prihaja s polno množico ikon različnih velikosti. Te ikone se uporabljajo v celotnem &kde; namizje, pult, datotečni upravljalnik &konqueror;, v vsaki orodni vrstici vseh &kde; aplikacij, itd. Modul za nadziranje ikon vam ponuja zelo fleksibilne poti za prilagoditev, kako naj &kde; ravna z ikonami.</para>
+
+<para>
+<screenshot>
+<screeninfo
+>Tukaj je posnetek zaslona upravljalnika tem ikon</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="main.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Prilagajanje &plasma; ikone</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+
+<para
+>V tem modulu lahko:</para>
+<itemizedlist>
+<listitem
+><para
+>namestite in izberite teme ikon</para
+></listitem>
+<listitem
+><para
+>izbirate različne velikosti ikon</para
+></listitem>
+<listitem
+><para
+>odstranite teme ikon</para
+></listitem>
+</itemizedlist>
+
+<important
+><para
+>Upoštevajte, da so nekatere od teh nastavitev lahko odvisne od izbrane ikonetema. &plasma; privzeto ima več tem ikon, Sapica, Sapica temna in Oxygen.</para
+></important>
+
+<para
+>Na vrhu je predogled trenutnih ikon tem. Večina privzetih namestitev bo imela na voljo le nekaj tem ikon, med njimi &plasma; privzeta tema Sapica. Več lahko prenesete tudi iz interneta iz <ulink url="https://store.kde.org/"
+>https://store.kde.org/</ulink
+> alijih namestite iz lokalne datoteke.</para>
+
+<para
+>Ko premaknete miškin kazalec nad ikono, animirani predogled prikaže naključno izbiro, pogoste vrste mime in skupne ikone map. </para>
+
+<para
+>Če želite odstraniti temo, uporabite prekrivno ikono <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-delete.png" format="PNG"/></imageobject
+></inlinemediaobject
+> v spodnjem desnem kotu ikona teme. Če želite razveljaviti to dejanje, kliknite ikono <inlinemediaobject
+><imageobject
+><imagedata fileref="edit-undo.png" format="PNG"/></imageobject
+></inlinemediaobject
+>. Če pritisnete gumb <guibutton
+>Uporabi</guibutton
+>, so teme, izbrane za odstranitev, dejansko izbrisane, tako da ne morete razveljaviti posameznih ali vseh izbrisov. </para>
+
+<variablelist>
+<varlistentry
+><term
+><guilabel
+>Konfigurirajte velikosti ikon</guilabel
+></term>
+<listitem>
+<para
+>Izberite eno od komponent in z drsnikom prilagodite ustrezno velikost. </para>
+<para>
+<screenshot>
+<screeninfo
+>Konfigurirajte Velikosti Ikon</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="use-of-icons.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Konfigurirajte Velikosti Ikon</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Pridobite Nove Ikone ...</guilabel
+></term>
+<listitem>
+<para
+>Za uporabo morate biti povezani z internetom. S klikom na ta gumb se prikaže dialog, kjer lahko izberete novo temo ikone. Če v pogovornem oknu kliknete <guibutton
+>Namesti</guibutton
+>, boste namestili izbrano temo ikon in ko <guibutton
+>Zaprite</guibutton
+> namestitveni program, bo vaša nova tema takoj na voljo. </para>
+<para>
+<screenshot>
+<screeninfo
+>Pridobite Nove Ikone</screeninfo>
+  <mediaobject>
+    <imageobject>
+      <imagedata fileref="get-new-theme.png" format="PNG"/>
+    </imageobject>
+    <textobject>
+      <phrase
+>Pridobite Nove Ikone</phrase>
+    </textobject>
+  </mediaobject>
+</screenshot>
+</para>
+</listitem>
+</varlistentry>
+<varlistentry
+><term
+><guilabel
+>Namesti iz datoteke ...</guilabel
+></term>
+<listitem>
+<para
+>Če ste prenesli nove teme iz interneta, lahko to uporabite za brskanje do lokacije teh na novo prenesenih tem. S klikom na ta gumb se odpre pogovorno okno datoteke, ki kaže na arhiv teme ikon, ki ga imate na disku.</para>
+
+<para
+>Če kliknete <guibutton
+>Odpri</guibutton
+> v tem pogovornem oknu, boste namestili temo, na katero ste pokazali, in jo dali na voljo na seznamu tem. </para>
+</listitem>
+</varlistentry>
+</variablelist>
+
+</article>
