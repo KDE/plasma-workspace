@@ -45,6 +45,27 @@ PlasmaComponents.AbstractButton {
     required property int yearNumber
 
     required property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision
+    /*
+     * The layout of this button is
+     * [label]
+     * [eventIndicatorsRow]
+     * [subDayLabel]
+     */
+    property double mainLabelFontPixelSize: Math.max(
+        Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
+        height / (dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
+    property double eventIndicatorsRowSize: Math.min(
+        Kirigami.Units.smallSpacing,
+        height / 6
+    )
+    // This is set to such that `subDayLabel` does not overlap with `label`
+    // and `eventIndicatorsRow`.
+    property double subDayLabelFontPixelSize: Math.min(
+        Math.max(
+            Kirigami.Theme.smallFont.pixelSize,
+            height / (dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 6 : 12)),
+        (height - mainLabelFontPixelSize) / 2 - eventIndicatorsRowSize
+    )
 
     objectName: {
         switch (dateMatchingPrecision) {
@@ -160,15 +181,13 @@ PlasmaComponents.AbstractButton {
 
             spacing: Kirigami.Units.smallSpacing
 
-            property bool hasSubDayLabel: false
-
             Repeater {
                 model: DelegateModel {
                     model: dayStyle.dayModel
                     delegate: Rectangle {
                         required property string eventColor
 
-                        width: eventIndicatorsRow.hasSubDayLabel ? Kirigami.Units.mediumSpacing : Kirigami.Units.smallSpacing
+                        width: dayStyle.eventIndicatorsRowSize
                         height: width
                         radius: width / 2
                         color: eventColor
@@ -181,10 +200,6 @@ PlasmaComponents.AbstractButton {
                     }
                 }
             }
-        }
-
-        onLoaded: {
-            item.hasSubDayLabel = Qt.binding(() => subDayLabel.active);
         }
     }
 
@@ -201,11 +216,9 @@ PlasmaComponents.AbstractButton {
                 left: parent.left
                 right: parent.right
                 top: parent.top
-                bottom: subDayLabel.top
+                bottom: parent.bottom
             }
-            font.pixelSize: Math.max(
-                Kirigami.Theme.defaultFont.pixelSize * 1.35 /* Level 1 Heading */,
-                dayStyle.height / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 3 /* weeksColumn */ : 6))
+            font.pixelSize: dayStyle.mainLabelFontPixelSize
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             text: dayStyle.model.label || dayStyle.model.dayLabel
@@ -215,10 +228,10 @@ PlasmaComponents.AbstractButton {
             elide: Text.ElideRight
         }
 
+        // This is always displayed to align the position of eventIndicatorsRow
+        // even when it is empty.
         Loader {
             id: subDayLabel
-            active: (typeof dayStyle.model.subDayLabel !== "undefined" && dayStyle.model.subDayLabel.length > 0)
-                 || typeof dayStyle.model.alternateDayNumber === "number"
             anchors {
                 left: parent.left
                 right: parent.right
@@ -229,15 +242,13 @@ PlasmaComponents.AbstractButton {
 
             sourceComponent: PlasmaComponents.Label {
                 elide: Text.ElideRight
-                font.pixelSize: Math.max(
-                    Kirigami.Theme.smallFont.pixelSize,
-                    dayStyle.height / (dayStyle.dateMatchingPrecision === PlasmaCalendar.Calendar.MatchYearMonthAndDay ? 6 : 12))
+                font.pixelSize: dayStyle.subDayLabelFontPixelSize
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
                 maximumLineCount: 1
                 opacity: label.opacity
                 // Prefer sublabel over day number
-                text: dayStyle.model.subDayLabel || dayStyle.model.alternateDayNumber.toString()
+                text: dayStyle.model.subDayLabel || dayStyle.model.alternateDayNumber?.toString() || ''
                 textFormat: Text.PlainText
                 wrapMode: Text.NoWrap
             }
