@@ -51,6 +51,9 @@ PlasmaExtras.Representation {
     readonly property bool showClocks: Plasmoid.configuration.selectedTimeZones.length > 1
 
     readonly property alias monthView: monthView
+    // This helps synchronize the header of the agenda and the monthView.
+    // We cannot use Kirigami.SizeGroup here because monthView's header is not in a layout.
+    readonly property double headerHeight: Math.max(agendaHeader.implicitHeight, monthView.viewHeader.implicitHeight)
 
     Keys.onDownPressed: event => {
         monthView.Keys.downPressed(event);
@@ -92,8 +95,9 @@ PlasmaExtras.Representation {
         spacing: 0
 
         PlasmaExtras.PlasmoidHeading {
+            id: agendaHeader
+            Layout.preferredHeight: calendar.headerHeight
             Layout.fillWidth: true
-            Layout.preferredHeight: monthView.viewHeader.height
             leftInset: 0
             rightInset: 0
 
@@ -572,6 +576,7 @@ PlasmaExtras.Representation {
 
         PlasmaCalendar.MonthView {
             id: monthView
+            viewHeader.height: calendar.headerHeight
 
             anchors {
                 fill: parent
