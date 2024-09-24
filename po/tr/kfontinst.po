@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-16 00:41+0000\n"
-"PO-Revision-Date: 2024-04-07 12:33+0300\n"
+"PO-Revision-Date: 2024-09-23 15:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -65,7 +65,7 @@ msgstr "Basit yazıtipi kurucu"
 #: apps/Installer.cpp:117 apps/Printer.cpp:332
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
-msgstr "(C) Craig Drummond, 2007"
+msgstr "© Craig Drummond, 2007"
 
 #: apps/Installer.cpp:124
 #, kde-format
@@ -160,7 +160,7 @@ msgstr "Basit yazıtipi görüntüleyicisi"
 #: apps/Viewer.cpp:152
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
-msgstr "(C) Craig Drummond, 2004–2007"
+msgstr "© Craig Drummond, 2004–2007"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
