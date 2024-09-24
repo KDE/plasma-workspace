@@ -82,6 +82,9 @@ QString LanguageListModel::languageCodeToName(const QString &languageCode)
     if (languageName.isEmpty()) {
         return languageCode;
     }
+    // QLocale::nativeLanguageName returns sentence case, this looks bad in a list
+    // Force something that looks better
+    languageName[0] = languageName[0].toUpper();
 
     if (languageCode.contains(QLatin1Char('@'))) {
         return i18nc("%1 is language name, %2 is language code name", "%1 (%2)", languageName, languageCode);
