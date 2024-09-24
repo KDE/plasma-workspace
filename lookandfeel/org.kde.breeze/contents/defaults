@@ -24,6 +24,7 @@ LayoutName=org.kde.breeze.desktop
 
 [kwinrc][org.kde.kdecoration2]
 library=org.kde.breeze
+theme=Breeze
 
 [KSplash]
 Theme=org.kde.Breeze
