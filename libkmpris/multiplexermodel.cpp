@@ -58,6 +58,10 @@ MultiplexerModel::MultiplexerModel(QObject *parent)
 
 MultiplexerModel::~MultiplexerModel()
 {
+    // MultiplexerModel is destroyed before PlayerContainer but it's not guaranteed the destroyed signal is disconnected after ~MultiplexerModel()
+    if (m_activePlayer) {
+        m_activePlayer->disconnect(this);
+    }
 }
 
 QVariant MultiplexerModel::data(const QModelIndex &index, int role) const
