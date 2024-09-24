@@ -4,10 +4,9 @@
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 # SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
-import subprocess
-import sys
-import unittest
 import os
+import subprocess
+import unittest
 
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
@@ -33,6 +32,7 @@ class LogoutGreeterTests(unittest.TestCase):
         self.assertEqual(self.proc.returncode != None, True)
         try:
             self.proc.terminate()
+            self.proc.wait(10)
         except subprocess.TimeoutExpired:
             self.proc.kill()
         if not self._outcome.result.wasSuccessful():
