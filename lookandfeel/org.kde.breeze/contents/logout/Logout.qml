@@ -107,10 +107,28 @@ Item {
         opacity: 0.5
     }
     MouseArea {
+        id: mouseArea
+
         anchors.fill: parent
+
+        hoverEnabled: true
         onClicked: cancelRequested()
+        onEntered: {
+            userAvatar.opacity = 1;
+            column.opacity = 1;
+            column.forceActiveFocus();
+            console.warn("You entered me!");
+        }
+        onExited: {
+            userAvatar.opacity = 0;
+            column.opacity = 0;
+            console.warn("You left me!");
+        }
+
     }
     UserDelegate {
+        id: userAvatar
+
         width: Kirigami.Units.gridUnit * 8
         height: Kirigami.Units.gridUnit * 9
         anchors {
@@ -122,6 +140,14 @@ Item {
         iconSource: "user-identity"
         isCurrent: true
         name: kuser.fullName
+
+        visible: opacity > 0
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: Kirigami.Units.veryLongDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
     }
     ColumnLayout {
         id: column
@@ -135,6 +161,14 @@ Item {
 
         height: Math.max(implicitHeight, Kirigami.Units.gridUnit * 10)
         width: Math.max(implicitWidth, Kirigami.Units.gridUnit * 16)
+
+        visible: opacity > 0
+        Behavior on opacity {
+            OpacityAnimator {
+                duration: Kirigami.Units.veryLongDuration
+                easing.type: Easing.InOutQuad
+            }
+        }
 
         PlasmaComponents.Label {
             font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
