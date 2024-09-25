@@ -1587,8 +1587,10 @@ void ShellCorona::panelContainmentDestroyed(QObject *obj)
     auto view = m_panelViews.take(cont);
     // ~PanelView -> visibleChanged -> rectNotify -> "AddressSanitizer: heap-use-after-free"
     // https://bugreports.qt.io/browse/QTBUG-118841
-    view->disconnect(this);
-    delete view;
+    if (view) {
+        view->disconnect(this);
+        delete view;
+    }
     // don't make things relayout when the application is quitting
     // NOTE: qApp->closingDown() is still false here
     if (!m_closingDown && !m_screenReorderInProgress) {
