@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=DONT TRANSLATE TEST ONLY
+Comment=DONT TRANSLATE TEST ONLY
+Exec=xterm
+Icon=xorg
+Terminal=false
+Type=Application
+Categories=Game;

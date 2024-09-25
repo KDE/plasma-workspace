@@ -67,6 +67,8 @@ add_test(
 )
 set_tests_properties(digitalclocktest PROPERTIES TIMEOUT 300)
 
+add_subdirectory(kicker)
+
 add_test(
     NAME mediacontrollertest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/mediacontrollertest.py --failfast
