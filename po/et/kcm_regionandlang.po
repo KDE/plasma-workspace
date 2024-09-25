@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-07 00:41+0000\n"
+"POT-Creation-Date: 2024-09-25 02:32+0000\n"
 "PO-Revision-Date: 2022-11-17 23:25+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -259,13 +259,13 @@ msgid ""
 "org</link>"
 msgstr ""
 
-#: languagelistmodel.cpp:87
+#: languagelistmodel.cpp:94
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:93
+#: languagelistmodel.cpp:100
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "

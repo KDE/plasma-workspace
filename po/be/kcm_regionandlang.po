@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-07 00:41+0000\n"
+"POT-Creation-Date: 2024-09-25 02:32+0000\n"
 "PO-Revision-Date: 2024-06-20 05:35\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -267,13 +267,13 @@ msgstr ""
 "даступныя лакалі сістэмы. Калі ласка, адпраўце справаздачу пра хібу на "
 "<link>https://bugs.kde.org</link>"
 
-#: languagelistmodel.cpp:87
+#: languagelistmodel.cpp:94
 #, kde-format
 msgctxt "%1 is language name, %2 is language code name"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: languagelistmodel.cpp:93
+#: languagelistmodel.cpp:100
 #, kde-format
 msgctxt ""
 "%1 is português in system locale name, Brazil is to distinguish European "
