@@ -1,8 +1,6 @@
 # SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: BSD-3-Clause
 
-return() # due to broken AT-SPI
-
 add_test(
     NAME systemdialogtest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/systemdialogtest.py
