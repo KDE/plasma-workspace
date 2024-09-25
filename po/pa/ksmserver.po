@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-09-25 00:41+0000\n"
 "PO-Revision-Date: 2023-12-26 08:31-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -33,6 +33,12 @@ msgstr "aalam@users.sf.net"
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "ਲਾਗ ਆਉਟ '%1' ਵਲੋਂ ਰੱਦ ਕੀਤਾ ਹੈ"
+
+#: logout.cpp:371
+#, kde-format
+msgctxt "@info:status"
+msgid "Session is exiting"
+msgstr ""
 
 #: main.cpp:66
 #, kde-format

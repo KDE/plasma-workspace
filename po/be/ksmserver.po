@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-09-25 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -37,6 +37,12 @@ msgstr "komzpa@licei2.com"
 #, kde-format
 msgid "Logout canceled by '%1'"
 msgstr "Выхад скасаваны \"%1\""
+
+#: logout.cpp:371
+#, kde-format
+msgctxt "@info:status"
+msgid "Session is exiting"
+msgstr ""
 
 #: main.cpp:66
 #, kde-format

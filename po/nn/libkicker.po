@@ -1,14 +1,13 @@
 # Translation of libkicker to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2015, 2016, 2017, 2018, 2019, 2020.
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:41+0000\n"
-"PO-Revision-Date: 2021-12-16 12:54+0100\n"
-"Last-Translator: Oystein Steffensen-Alvaervik <ystein@posteo.net>\n"
+"PO-Revision-Date: 2024-09-24 19:23+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +17,7 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -73,9 +72,7 @@ msgid "Hide Application"
 msgstr "Gøym program"
 
 #: plugin/appentry.cpp:390
-#, fuzzy, kde-format
-#| msgctxt "App name (Generic name)"
-#| msgid "%1 (%2)"
+#, kde-format
 msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
