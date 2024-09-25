@@ -17,7 +17,6 @@ endif ()
 add_subdirectory(notifications)
 add_subdirectory(packagekit)
 add_subdirectory(places)
-add_subdirectory(powermanagement)
 
 add_subdirectory(time)
 add_subdirectory(weather)
