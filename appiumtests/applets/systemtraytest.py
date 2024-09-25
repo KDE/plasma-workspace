@@ -368,6 +368,7 @@ class SystemTrayTests(unittest.TestCase):
         # Scroll right
         self.scroll_center(rect, 15, 0)
 
+    @unittest.skipIf(os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0", "inputsynth only works on Wayland")
     def test_2_statusnotifieritem(self) -> None:
         """
         Tests for org.kde.StatusNotifierItem
@@ -378,9 +379,6 @@ class SystemTrayTests(unittest.TestCase):
         5. Activate menu actions
         6. NeedsAttention/Active/Passive status
         """
-        if os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-            self.skipTest("inputsynth only works on Wayland")
-
         status_notifier = subprocess.Popen([os.path.join(CMAKE_RUNTIME_OUTPUT_DIRECTORY, "systemtray_statusnotifiertest")], stdout=subprocess.PIPE)
         self.addCleanup(status_notifier.terminate)
         time.sleep(1)  # Wait until the icon appears
@@ -452,13 +450,11 @@ class SystemTrayTests(unittest.TestCase):
         for l in range(0, len(expected_result)):
             self.assertEqual(output[l].decode().strip(), expected_result[l])
 
+    @unittest.skipIf(os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0", "In openbox, the popup is not focused by default, so sending keys will not work.")
     def test_3_bug479466_keyboard_navigation_in_HiddenItemsView(self) -> None:
         """
         Make sure iconContainer in AbstractItem.qml has the default focus so it can receive key presses
         """
-        if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
-            self.skipTest("In openbox, the popup is not focused by default, so sending keys will not work.")
-
         self.driver.find_element(AppiumBy.NAME, "Show hidden icons").click()
         wait = WebDriverWait(self.driver, 10)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Notifications")))

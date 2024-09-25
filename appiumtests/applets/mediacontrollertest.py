@@ -169,13 +169,12 @@ class MediaControllerTests(unittest.TestCase):
         self.driver.find_element(by=AppiumBy.NAME, value="-15:00")
         self.driver.find_element(by=AppiumBy.NAME, value=', '.join(self.mpris_interface.metadata[self.mpris_interface.current_index]["xesam:artist"].unpack()))
 
+    @unittest.skipIf("KDECI_BUILD" in os.environ, "Too unstable to test in the CI")
     def test_touch_gestures(self) -> None:
         """
         Tests touch gestures like swipe up/down/left/right to adjust volume/progress
         @see https://invent.kde.org/plasma/plasma-workspace/-/merge_requests/2438
         """
-        if "KDECI_BUILD" in os.environ:
-            self.skipTest("Too unstable to test in the CI")
         assert self.mpris_interface
         wait: WebDriverWait = WebDriverWait(self.driver, 5)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "0:00")))  # Current position
