@@ -109,6 +109,7 @@
     "X-DocPath": "kcontrol/kcmstyle/index.html",
     "X-KDE-Init-Phase": 0,
     "X-KDE-Keywords": "style,styles,look,widget,icons,toolbars,text,highlight,apps,windows,KDE applications,theme,plasma,menu,global menu,GTK,GNOME,application style,app,programs,appearance,skin,themes,light mode,dark mode",
+    "X-KDE-Keywords[bg]": "стил, стилове, изглед, уиджет, икони, ленти с инструменти, текст, подчертаване, приложения, KDE приложения, тема, плазма, меню, глобално меню, GTK, GNOME, стил на приложение, приложение, програми, външен вид, кожа, теми, светъл режим, тъмен режим",
     "X-KDE-Keywords[ca]": "estil,estils,aspecte,giny,icones,barres d'eines,text,ressaltat,aplicacions,finestres,aplicacions de KDE,tema,plasma,menú,menú global,GTK,GNOME,estil d'aplicacions,aplicació,programes,aparença,temes,mode clar,mode fosc",
     "X-KDE-Keywords[el]": "στυλ,στυλ,εμφάνιση,γραφικό στοιχείο,εικονίδια,γραμμές εργαλείων,κείμενο,επισήμανση,εφαρμογές,παράθυρα,εφαρμογές KDE,θέμα,plasma,μενού,καθολικό μενού,GTK,GNOME,στυλ εφαρμογής,εφαρμογή,προγράμματα,εμφάνιση,εμφάνιση,θέματα,ανοιχτόχρωμη λειτουργία,σκοτεινή λειτουργία",
     "X-KDE-Keywords[es]": "estilo,estilos,apariencia,controles,iconos,barras de herramientas,texto,resaltado,aplicaciones,ventanas,aplicaciones de KDE,tema,plasma,menú,menú global,GTK,GNOME,estilo de las aplicaciones,app,programas,aspecto,piel,temas,modo claro,modo oscuro",
