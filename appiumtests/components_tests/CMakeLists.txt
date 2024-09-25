@@ -5,7 +5,7 @@ return() # due to broken AT-SPI
 
 add_test(
     NAME systemdialogtest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/systemdialogtest.py
+    COMMAND dbus-launch selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/systemdialogtest.py
 )
 execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
 set_tests_properties(systemdialogtest PROPERTIES
