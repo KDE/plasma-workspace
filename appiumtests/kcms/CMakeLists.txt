@@ -1,6 +1,8 @@
 # SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: BSD-3-Clause
 
+return() # due to broken AT-SPI
+
 # KCM autotests
 add_test(
     NAME kcm_autostart_test
