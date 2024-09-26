@@ -181,8 +181,8 @@ ColumnLayout {
 
             icon.name: checked ? "collapse-symbolic" : "expand-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Hides/expands item details", "Details")
-            checkable: true
-            enabled: jobItem.jobDetails && jobItem.jobDetails.hasDetails
+            checkable: jobItem.jobDetails && jobItem.jobDetails.hasDetails
+            visible: checkable
         }
 
         Item { Layout.fillWidth: true }
