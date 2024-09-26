@@ -57,12 +57,13 @@ Item {
 
     ColumnLayout {
         id: viewHeader
-        width: parent.width
+        anchors.fill: parent
         spacing: Kirigami.Units.smallSpacing
 
         RowLayout {
             spacing: 0
             Layout.leftMargin: Kirigami.Units.largeSpacing
+            Layout.alignment: Qt.AlignTop
 
             Kirigami.Heading {
                 id: heading
@@ -104,6 +105,7 @@ Item {
 
         RowLayout {
             spacing: 0
+            Layout.alignment: Qt.AlignBottom
             PlasmaComponents.TabBar {
                 id: tabBar
 
