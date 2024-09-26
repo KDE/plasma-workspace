@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkmpris\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 00:39+0000\n"
+"POT-Creation-Date: 2024-09-26 02:31+0000\n"
 "PO-Revision-Date: 2023-12-09 09:39+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -69,7 +69,7 @@ msgctxt "@title shortcut"
 msgid "Media volume down"
 msgstr ""
 
-#: multiplexermodel.cpp:71
+#: multiplexermodel.cpp:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"

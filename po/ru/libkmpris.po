@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-09 00:39+0000\n"
+"POT-Creation-Date: 2024-09-26 02:31+0000\n"
 "PO-Revision-Date: 2024-02-09 22:36+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -72,7 +72,7 @@ msgctxt "@title shortcut"
 msgid "Media volume down"
 msgstr "Уменьшить громкость"
 
-#: multiplexermodel.cpp:71
+#: multiplexermodel.cpp:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
