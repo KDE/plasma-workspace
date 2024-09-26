@@ -336,10 +336,6 @@ void HistoryModel::startSaveHistoryTimer(std::chrono::seconds delay)
 
 bool HistoryModel::saveHistory(bool empty)
 {
-    if (!KlipperSettings::keepClipboardContents()) [[unlikely]] {
-        return true;
-    }
-
     QMutexLocker lock(&m_mutex);
     constexpr const char *failedSaveWarning = "Failed to save history. Clipboard history cannot be saved. Reason:";
     static const QString relativeHistoryFilePath = QStringLiteral("klipper/history2.lst");
