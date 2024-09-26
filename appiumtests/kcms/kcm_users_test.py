@@ -49,7 +49,7 @@ class KCMUsersTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
-        cls.driver.find_element(AppiumBy.XPATH, "//push_button[@name='Close']").click()
+        cls.driver.find_element(AppiumBy.XPATH, "//*[@name='Close' and contains(@accessibility-id, 'Button')]").click()
         for _ in range(10):
             try:
                 subprocess.check_call(["pidof", f"kcmshell{KDE_VERSION}"])
