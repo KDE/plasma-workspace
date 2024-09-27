@@ -58,7 +58,11 @@ AbstractItem {
             const appletItem = applet.compactRepresentationItem ?? applet.fullRepresentationItem
             const mouseArea = findMouseArea(appletItem)
             if (mouseArea) {
-                mouseArea.pressed(mouse)
+                // The correct way here would be to invoke the "pressed"
+                // signal; however, mouseArea.pressed signal is overridden
+                // by its bool value, and our only option is to call the
+                // handler directly.
+                mouseArea.onPressed(mouse)
             }
         }
     }
