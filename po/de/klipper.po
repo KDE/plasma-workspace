@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # Thomas Diehl <thd@kde.org>, 2002, 2003, 2004.
 # Stephan Johach <hunsum@gmx.de>, 2005, 2006.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2005, 2006, 2007, 2008, 2009, 2010.
@@ -10,15 +11,15 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2023-08-14 21:38+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2024-09-23 17:27+0200\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -193,12 +194,12 @@ msgstr "Beschreibung"
 #: configdialog.cpp:375
 #, kde-format
 msgid "Add Action..."
-msgstr "Aktion hinzufügen ..."
+msgstr "Aktion hinzufügen …"
 
 #: configdialog.cpp:379
 #, kde-format
 msgid "Edit Action..."
-msgstr "Aktion bearbeiten ..."
+msgstr "Aktion bearbeiten …"
 
 #: configdialog.cpp:384
 #, kde-format
@@ -313,61 +314,61 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR-Code"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Datenmatrix"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Aztec"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Code 39"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Code 93"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Code 128"
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "In die Zwischenablage"
+msgstr "Zurück zur Zwischenablage"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Den QR-Code-Typ ändern"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Es gibt nicht genug Platz zum Anzeigen des QR-Codes. Versuchen Sie, das "
+"Miniprogramm zu vergrößern."
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "Das Erstellen des QR-Codes ist fehlgeschlagen"
 
 #: declarative/qml/ClipboardMenu.qml:185
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "Verlauf der Zwischenablage"
+msgstr "Verlauf leeren"
 
 #: declarative/qml/ClipboardMenu.qml:276
 #, kde-format
@@ -380,55 +381,49 @@ msgid "Clipboard is empty"
 msgstr "Die Zwischenablage ist leer"
 
 #: declarative/qml/DelegateToolButtons.qml:26
-#, fuzzy, kde-format
-#| msgid "<new action>"
+#, kde-format
 msgid "Invoke action"
-msgstr "<Neue Aktion>"
+msgstr "Aktion aufrufen"
 
 #: declarative/qml/DelegateToolButtons.qml:39
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "&Strichcode anzeigen ..."
+msgstr "QR-Code anzeigen"
 
 #: declarative/qml/DelegateToolButtons.qml:55
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgid "Edit contents"
 msgstr "Inhalt bearbeiten"
 
 #: declarative/qml/DelegateToolButtons.qml:69
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "Für ein Element aus dem Verlauf"
+msgstr "Aus Verlauf löschen"
 
 #: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Textbearbeitungsbereich"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Speichern"
 
 #: declarative/qml/EditPage.qml:88
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "&Abbrechen"
+msgstr "Abbrechen"
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -654,7 +649,7 @@ msgstr "&Bisherigen Inhalt der Zwischenablage löschen"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr "&Klipper einrichten ..."
+msgstr "&Klipper einrichten …"
 
 #: klipper.cpp:125
 #, kde-format
@@ -666,7 +661,7 @@ msgstr "Aktionen der aktuellen Zwischenablage manuell aufrufen"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr "&Strichcode anzeigen ..."
+msgstr "&Strichcode anzeigen …"
 
 #: klipper.cpp:141
 #, kde-format
@@ -937,10 +932,9 @@ msgstr ""
 "entsprechenden MIME-Typ akzeptieren, in das Aufklappmenü einschließen."
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "Verlauf der Zwischenablage"
+msgstr "Aufklappfenster der Zwischenablage"
 
 #: urlgrabber.cpp:200
 #, kde-format

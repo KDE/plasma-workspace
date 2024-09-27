@@ -156,14 +156,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Сесия на Plasma"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Restart Now"
-#~ msgstr "Инсталиране на актуализациите и рестартиране сега"
-
-#, fuzzy
-#~| msgctxt "@action:button Keep short"
-#~| msgid "Install Updates & Restart Now"
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Shut Down Now"
-#~ msgstr "Инсталиране на актуализациите и рестартиране сега"

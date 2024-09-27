@@ -348,11 +348,3 @@ msgstr ""
 #, kde-format
 msgid "Select Font"
 msgstr "Избиране на шрифт"
-
-#~ msgid ""
-#~ "Decimal font sizes can cause text layout problems in some applications. "
-#~ "Consider using only integer font sizes."
-#~ msgstr ""
-#~ "Размери на шрифта с десетични стойности могат да причинят проблеми с "
-#~ "оформлението на текста в някои приложения. Препоръчително е използване "
-#~ "само на цели числа."

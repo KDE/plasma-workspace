@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:41+0000\n"
+"POT-Creation-Date: 2024-09-27 00:41+0000\n"
 "PO-Revision-Date: 2024-09-07 12:04+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -74,69 +74,69 @@ msgstr[1] "%1 events"
 msgid "No events"
 msgstr "No events"
 
-#: calendar/qml/MonthViewHeader.qml:73
+#: calendar/qml/MonthViewHeader.qml:74
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:129
+#: calendar/qml/MonthViewHeader.qml:131
 #, kde-format
 msgid "Days"
 msgstr "Days"
 
-#: calendar/qml/MonthViewHeader.qml:135
+#: calendar/qml/MonthViewHeader.qml:137
 #, kde-format
 msgid "Months"
 msgstr "Months"
 
-#: calendar/qml/MonthViewHeader.qml:141
+#: calendar/qml/MonthViewHeader.qml:143
 #, kde-format
 msgid "Years"
 msgstr "Years"
 
-#: calendar/qml/MonthViewHeader.qml:179
+#: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Month"
 msgstr "Previous Month"
 
-#: calendar/qml/MonthViewHeader.qml:181
+#: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Year"
 msgstr "Previous Year"
 
-#: calendar/qml/MonthViewHeader.qml:183
+#: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Previous Decade"
 msgstr "Previous Decade"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:202
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Today"
 
-#: calendar/qml/MonthViewHeader.qml:201
+#: calendar/qml/MonthViewHeader.qml:203
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Reset calendar to today"
 
-#: calendar/qml/MonthViewHeader.qml:212
+#: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Month"
 msgstr "Next Month"
 
-#: calendar/qml/MonthViewHeader.qml:214
+#: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Year"
 msgstr "Next Year"
 
-#: calendar/qml/MonthViewHeader.qml:216
+#: calendar/qml/MonthViewHeader.qml:218
 #, kde-format
 msgid "Next Decade"
 msgstr "Next Decade"
 
-#: calendar/qml/MonthViewHeader.qml:272
+#: calendar/qml/MonthViewHeader.qml:274
 #, kde-format
 msgid "Keep Open"
 msgstr "Keep Open"

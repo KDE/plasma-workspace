@@ -940,27 +940,3 @@ msgstr "Изключване на този изскачащ прозорец"
 #, kde-format
 msgid "&Cancel"
 msgstr "От&каз"
-
-#~ msgid "Clipboard Items"
-#~ msgstr "Елементи на клипборда"
-
-#~ msgid "Search…"
-#~ msgstr "Търсене…"
-
-#~ msgid "Invalid regular expression, %1"
-#~ msgstr "Неправилен регулярен израз, %1"
-
-#~ msgid "&More"
-#~ msgstr "&Допълнителни"
-
-#~ msgid "Should Klipper start automatically when you login?"
-#~ msgstr "Автоматично стартиране на системния буфер при влизане в системата?"
-
-#~ msgid "Automatically Start Klipper?"
-#~ msgstr "Автоматично стартиране?"
-
-#~ msgid "Start"
-#~ msgstr "Стартиране"
-
-#~ msgid "Do Not Start"
-#~ msgstr "Без стартиране"
