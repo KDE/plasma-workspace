@@ -33,6 +33,7 @@ DeviceControl::DeviceControl(QObject *parent)
           Solid::DeviceInterface::NetworkShare,
           Solid::DeviceInterface::StorageAccess,
       })
+    , m_encryptedPredicate(Solid::Predicate(QStringLiteral("StorageVolume"), QStringLiteral("usage"), QLatin1String("Encrypted")))
     , m_spaceMonitor(SpaceMonitor::instance())
     , m_stateMonitor(DevicesStateMonitor::instance())
     , m_errorMonitor(DeviceErrorMonitor::instance())
@@ -200,7 +201,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     }
 
     auto actions = new ActionsControl(udi, this);
-    if (actions->isEmpty()) {
+    if (!m_encryptedPredicate.matches(device) && actions->isEmpty()) {
         qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: "
                                          << "device : " << udi << " is not in our interest. Skipping";
         actions->deleteLater();

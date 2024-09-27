@@ -72,6 +72,7 @@ private:
     QHash<QString, QList<Solid::Device>> m_parentDevices;
     QHash<QString, QTimer *> m_removeTimers;
     Solid::Predicate m_predicateDeviceMatch;
+    Solid::Predicate m_encryptedPredicate;
     const QList<Solid::DeviceInterface::Type> m_types;
     bool m_isVisible = false;
 
