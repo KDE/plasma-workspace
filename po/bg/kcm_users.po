@@ -659,6 +659,3 @@ msgstr "Вашия акаунт"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Други акаунти"
-
-#~ msgid "Enrolling Fingerprint"
-#~ msgstr "Снемане на отпечатък"

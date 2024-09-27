@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-26 02:31+0000\n"
+"POT-Creation-Date: 2024-09-27 02:38+0000\n"
 "PO-Revision-Date: 2024-01-03 14:00-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -74,69 +74,69 @@ msgstr[1] "%1 ਘਟਨਾਵਾਂ"
 msgid "No events"
 msgstr "ਕੋਈ ਘਟਨਾ ਨਹੀਂ"
 
-#: calendar/qml/MonthViewHeader.qml:73
+#: calendar/qml/MonthViewHeader.qml:74
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%1 %2"
 
-#: calendar/qml/MonthViewHeader.qml:129
+#: calendar/qml/MonthViewHeader.qml:131
 #, kde-format
 msgid "Days"
 msgstr "ਦਿਨ"
 
-#: calendar/qml/MonthViewHeader.qml:135
+#: calendar/qml/MonthViewHeader.qml:137
 #, kde-format
 msgid "Months"
 msgstr "ਮਹੀਨੇ"
 
-#: calendar/qml/MonthViewHeader.qml:141
+#: calendar/qml/MonthViewHeader.qml:143
 #, kde-format
 msgid "Years"
 msgstr "ਸਾਲ"
 
-#: calendar/qml/MonthViewHeader.qml:179
+#: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Month"
 msgstr "ਪਿਛਲਾ ਮਹੀਨਾ"
 
-#: calendar/qml/MonthViewHeader.qml:181
+#: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Year"
 msgstr "ਪਿਛਲਾ ਸਾਲ"
 
-#: calendar/qml/MonthViewHeader.qml:183
+#: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Previous Decade"
 msgstr "ਪਿਛਲਾ ਦਹਾਕਾ"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:202
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "ਅੱਜ"
 
-#: calendar/qml/MonthViewHeader.qml:201
+#: calendar/qml/MonthViewHeader.qml:203
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "ਕੈਲੰਡਰ ਨੂੰ ਅੱਜ ਲਈ ਮੁੜ-ਸੈੱਟ ਕਰੋ"
 
-#: calendar/qml/MonthViewHeader.qml:212
+#: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Month"
 msgstr "ਅਗਲੇ ਮਹੀਨੇ"
 
-#: calendar/qml/MonthViewHeader.qml:214
+#: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Year"
 msgstr "ਅਗਲਾ ਸਾਲ"
 
-#: calendar/qml/MonthViewHeader.qml:216
+#: calendar/qml/MonthViewHeader.qml:218
 #, kde-format
 msgid "Next Decade"
 msgstr "ਅਗਲਾ ਦਹਾਕਾ"
 
-#: calendar/qml/MonthViewHeader.qml:272
+#: calendar/qml/MonthViewHeader.qml:274
 #, kde-format
 msgid "Keep Open"
 msgstr "ਖੁੱਲਾ ਰੱਖੋ"

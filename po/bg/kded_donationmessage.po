@@ -1,0 +1,50 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Mincho Kondarev <mkondarev@yahoo.de>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"PO-Revision-Date: 2024-09-13 21:44+0200\n"
+"Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.07.70\n"
+
+#: donationmessage.cpp:80
+#, kde-format
+msgctxt "@title of a system notification"
+msgid "Donate to KDE"
+msgstr "Направете дарение за KDE"
+
+#: donationmessage.cpp:82
+#, kde-format
+msgctxt "@info body text of a system notification"
+msgid ""
+"KDE needs your help! Donations fund development and infrastructure important "
+"for KDE's continued existence."
+msgstr ""
+"KDE се нуждае от вашата помощ! Даренията финансират развитието и "
+"инфраструктурата, важни за продължаващото съществуване на KDE."
+
+#: donationmessage.cpp:84
+#, kde-format
+msgctxt ""
+"@action:button Make a donation now; translate this in as short a form as "
+"possible"
+msgid "Donate"
+msgstr "Дарение"
+
+#: donationmessage.cpp:85
+#, kde-format
+msgctxt ""
+"@action:button don't donate this year; translate this in as short a form as "
+"possible"
+msgid "No Thanks"
+msgstr "Не, благодаря"

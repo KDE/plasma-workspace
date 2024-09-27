@@ -4904,9 +4904,3 @@ msgstr "Вероятност за превалявания или гръмоте
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
 msgstr "С вероятност за гръмотевични бури и превалявания"
-
-#~ msgid "UK"
-#~ msgstr "Великобритания"
-
-#~ msgid "USA"
-#~ msgstr "САЩ"

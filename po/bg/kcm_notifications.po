@@ -291,7 +291,3 @@ msgid ""
 msgstr ""
 "Изберете приложение от списъка, за да конфигурирате настройките му за "
 "известяване и поведение"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings…"
-#~ msgstr "Настройки на приложения…"

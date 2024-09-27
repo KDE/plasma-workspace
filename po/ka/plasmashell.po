@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-18 02:37+0000\n"
+"POT-Creation-Date: 2024-09-27 02:38+0000\n"
 "PO-Revision-Date: 2024-08-30 05:42+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -406,12 +406,12 @@ msgstr "პანელისა და სამუშაო მაგიდი
 msgid "Move keyboard focus between panels"
 msgstr "კლავიატურის ფოკუსის პანელებს შორის გადატანა"
 
-#: shellcorona.cpp:2106
+#: shellcorona.cpp:2108
 #, kde-format
 msgid "Add Panel"
 msgstr "პანელის დამატება"
 
-#: shellcorona.cpp:2168
+#: shellcorona.cpp:2170
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

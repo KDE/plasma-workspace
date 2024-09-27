@@ -201,9 +201,3 @@ msgstr "Неуспех при премахване на устройството
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Неуспех при изваждане на диска."
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "Файловата система не реагира"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "Файловата система, монтирана на '%1', не реагира"

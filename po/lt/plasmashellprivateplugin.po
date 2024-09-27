@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-26 02:31+0000\n"
+"POT-Creation-Date: 2024-09-27 02:38+0000\n"
 "PO-Revision-Date: 2024-08-31 22:56+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -80,69 +80,69 @@ msgstr[3] "%1 įvykis"
 msgid "No events"
 msgstr "Nėra įvykių"
 
-#: calendar/qml/MonthViewHeader.qml:73
+#: calendar/qml/MonthViewHeader.qml:74
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
 msgstr "%2 %1"
 
-#: calendar/qml/MonthViewHeader.qml:129
+#: calendar/qml/MonthViewHeader.qml:131
 #, kde-format
 msgid "Days"
 msgstr "Dienos"
 
-#: calendar/qml/MonthViewHeader.qml:135
+#: calendar/qml/MonthViewHeader.qml:137
 #, kde-format
 msgid "Months"
 msgstr "Mėnesiai"
 
-#: calendar/qml/MonthViewHeader.qml:141
+#: calendar/qml/MonthViewHeader.qml:143
 #, kde-format
 msgid "Years"
 msgstr "Metai"
 
-#: calendar/qml/MonthViewHeader.qml:179
+#: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Month"
 msgstr "Ankstesnis mėnuo"
 
-#: calendar/qml/MonthViewHeader.qml:181
+#: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Year"
 msgstr "Ankstesni metai"
 
-#: calendar/qml/MonthViewHeader.qml:183
+#: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Previous Decade"
 msgstr "Ankstesnis dešimtmetis"
 
-#: calendar/qml/MonthViewHeader.qml:200
+#: calendar/qml/MonthViewHeader.qml:202
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
 msgstr "Šiandien"
 
-#: calendar/qml/MonthViewHeader.qml:201
+#: calendar/qml/MonthViewHeader.qml:203
 #, kde-format
 msgid "Reset calendar to today"
 msgstr "Atstatyti kalendorių į šiandieną"
 
-#: calendar/qml/MonthViewHeader.qml:212
+#: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Month"
 msgstr "Kitas mėnuo"
 
-#: calendar/qml/MonthViewHeader.qml:214
+#: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Year"
 msgstr "Kiti metai"
 
-#: calendar/qml/MonthViewHeader.qml:216
+#: calendar/qml/MonthViewHeader.qml:218
 #, kde-format
 msgid "Next Decade"
 msgstr "Kitas dešimtmetis"
 
-#: calendar/qml/MonthViewHeader.qml:272
+#: calendar/qml/MonthViewHeader.qml:274
 #, kde-format
 msgid "Keep Open"
 msgstr "Palikti atvertą"
