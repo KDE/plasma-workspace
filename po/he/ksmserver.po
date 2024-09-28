@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 00:41+0000\n"
-"PO-Revision-Date: 2024-08-12 08:31+0300\n"
+"PO-Revision-Date: 2024-09-27 07:46+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -50,7 +50,7 @@ msgstr "היציאה בוטלה על ידי ‚%1’"
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "ההפעלה נסגרת"
 
 #: main.cpp:66
 #, kde-format
