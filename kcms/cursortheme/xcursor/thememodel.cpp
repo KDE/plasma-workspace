@@ -276,9 +276,12 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
             return;
     }
 
-    // If the directory doesn't have a cursors subdir and lacks an
-    // index.theme file it can't be a cursor theme.
-    if (!themeDir.exists(QStringLiteral("index.theme")) && !haveCursors)
+    // If the directory lacks an index.theme file it can't be a cursor theme.
+    // If the directory has an index.theme but not a cursors subdir, then although
+    // it might be a valid cursor theme (by inheriting another cursor theme), for
+    // the purpose of this KCM it's a duplicate of the inherited theme, so we'll
+    // skip it.
+    if (!themeDir.exists(QStringLiteral("index.theme")) || !haveCursors)
         return;
 
     // Create a cursor theme object for the theme dir
@@ -288,21 +291,6 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
     if (theme->isHidden()) {
         delete theme;
         return;
-    }
-
-    // If there's no cursors subdirectory we'll do a recursive scan
-    // to check if the theme inherits a theme with one.
-    if (!haveCursors) {
-        bool foundCursorTheme = false;
-
-        for (const QString &name : theme->inherits())
-            if ((foundCursorTheme = isCursorTheme(name)))
-                break;
-
-        if (!foundCursorTheme) {
-            delete theme;
-            return;
-        }
     }
 
     // Append the theme to the list
