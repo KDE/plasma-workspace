@@ -74,13 +74,13 @@ PlasmoidItem {
 
         let formattedTime;
         if (showSeconds) {
-            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormatWithSeconds);
+            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.item.timeFormatWithSeconds);
         } else {
-            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.timeFormat);
+            formattedTime = Qt.formatTime(dateTime, compactRepresentationItem.item.timeFormat);
         }
 
         if (dateTime.getDay() !== dataSource.data["Local"]["DateTime"].getDay()) {
-            formattedTime += " (" + compactRepresentationItem.dateFormatter(dateTime) + ")";
+            formattedTime += " (" + compactRepresentationItem.item.dateFormatter(dateTime) + ")";
         }
 
         return formattedTime;
@@ -126,14 +126,37 @@ PlasmoidItem {
     }
 
     preferredRepresentation: compactRepresentation
-    compactRepresentation: DigitalClock {
-        activeFocusOnTab: true
-        hoverEnabled: true
 
-        Accessible.name: tooltipLoader.item.Accessible.name
-        Accessible.description: tooltipLoader.item.Accessible.description
-    }
     fullRepresentation: CalendarView { }
+
+    compactRepresentation: Loader {
+        id: conditionalLoader
+
+        Layout.minimumWidth: item.Layout.minimumWidth
+        Layout.minimumHeight: item.Layout.minimumHeight
+        Layout.preferredWidth: item.Layout.preferredWidth
+        Layout.preferredHeight: item.Layout.preferredHeight
+        Layout.maximumWidth: item.Layout.maximumWidth
+        Layout.maximumHeight: item.Layout.maximumHeight
+
+        sourceComponent: (currentDateTimeInSelectedTimeZone == "Invalid Date") ? noTimezoneComponent : digitalClockComponent
+    }
+
+    Component {
+        id: digitalClockComponent
+        DigitalClock {
+            activeFocusOnTab: true
+            hoverEnabled: true
+
+            Accessible.name: tooltipLoader.item.Accessible.name
+            Accessible.description: tooltipLoader.item.Accessible.description
+        }
+    }
+
+    Component {
+        id: noTimezoneComponent
+        NoTimezoneWarning { }
+    }
 
     toolTipItem: Loader {
         id: tooltipLoader
