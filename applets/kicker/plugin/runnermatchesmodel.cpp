@@ -28,7 +28,9 @@ RunnerMatchesModel::RunnerMatchesModel(const QString &runnerId, const std::optio
                             parent)
     , m_runnerId(runnerId)
 {
-    runnerManager()->setHistoryEnvironmentIdentifier(m_consumer.currentActivity());
+    if (const QString activity = m_consumer.currentActivity(); !activity.isEmpty()) {
+        runnerManager()->setHistoryEnvironmentIdentifier(activity);
+    }
     connect(&m_consumer, &KActivities::Consumer::currentActivityChanged, runnerManager(), &KRunner::RunnerManager::setHistoryEnvironmentIdentifier);
     connect(this, &RunnerMatchesModel::rowsInserted, this, &RunnerMatchesModel::countChanged);
     connect(this, &RunnerMatchesModel::rowsRemoved, this, &RunnerMatchesModel::countChanged);
