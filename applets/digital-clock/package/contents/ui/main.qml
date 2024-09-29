@@ -126,14 +126,38 @@ PlasmoidItem {
     }
 
     preferredRepresentation: compactRepresentation
-    compactRepresentation: DigitalClock {
+    property var digitalClockItem: DigitalClock {
         activeFocusOnTab: true
         hoverEnabled: true
 
         Accessible.name: tooltipLoader.item.Accessible.name
         Accessible.description: tooltipLoader.item.Accessible.description
     }
+
     fullRepresentation: CalendarView { }
+
+    compactRepresentation: Loader {
+        id: conditionalLoader
+
+        Layout.minimumWidth: item.Layout.minimumWidth
+        Layout.minimumHeight: item.Layout.minimumHeight
+        Layout.preferredWidth: item.Layout.preferredWidth
+        Layout.preferredHeight: item.Layout.preferredHeight
+        Layout.maximumWidth: item.Layout.maximumWidth
+        Layout.maximumHeight: item.Layout.maximumHeight
+
+        sourceComponent: (currentDateTimeInSelectedTimeZone == "Invalid Date") ? noTimezoneComponent : digitalClockComponent
+    }
+
+    Component {
+        id: digitalClockComponent
+        DigitalClock { }
+    }
+
+    Component {
+        id: noTimezoneComponent
+        NoTimezoneWarning { }
+    }
 
     toolTipItem: Loader {
         id: tooltipLoader

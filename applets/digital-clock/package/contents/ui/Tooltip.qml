@@ -60,7 +60,9 @@ Item {
             level: 3
             elide: Text.ElideRight
             // keep this consistent with toolTipMainText in analog-clock
-            text: clocks.visible ? Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(root.currentDateTimeInSelectedTimeZone, "dddd")
+            property var mainText: clocks.visible ? Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), Locale.LongFormat) : Qt.locale().toString(root.currentDateTimeInSelectedTimeZone, "dddd")
+            property bool anyTimezoneSet: !!mainText
+            text: anyTimezoneSet ? mainText : i18nc("@label main text shown in digital clock's tooltip when timezone is missing", "Time zone is not set")
             textFormat: Text.PlainText
         }
 
@@ -69,8 +71,10 @@ Item {
 
             Layout.minimumWidth: Math.min(implicitWidth, toolTipContentItem.preferredTextWidth)
             Layout.maximumWidth: toolTipContentItem.preferredTextWidth
+            maximumLineCount: 2
+            wrapMode: Text.Wrap
 
-            text: {
+            property var subText: {
                 if (Plasmoid.configuration.showSeconds === 0) {
                     return Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), root.dateFormatString);
                 } else {
@@ -79,6 +83,7 @@ Item {
                         .arg(Qt.formatDate(root.currentDateTimeInSelectedTimeZone, Qt.locale(), root.dateFormatString))
                 }
             }
+            text: tooltipMaintext.anyTimezoneSet ? subText : i18nc("@label sub text shown in digital clock's tooltip when timezone is missing", "Click the clock icon to open Date & Time settings and set a time zone.")
             opacity: 0.6
             visible: !clocks.visible
             font.features: { "tnum": 1 }
@@ -100,7 +105,7 @@ Item {
             Layout.minimumWidth: Math.min(implicitWidth, toolTipContentItem.preferredTextWidth)
             Layout.maximumWidth: toolTipContentItem.preferredTextWidth
             Layout.minimumHeight: childrenRect.height
-            visible: timeZoneRepeater.count > 2
+            visible: timeZoneRepeater.count > 0 && tooltipMaintext.anyTimezoneSet
             columns: 2
             rowSpacing: 0
 
