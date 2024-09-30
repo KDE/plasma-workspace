@@ -29,6 +29,8 @@ enum {
     DisabledRole,
     IsMultilineTextRole,
     DisplayWrappedRole,
+    CompactNameRole,
+    CompactNameWrappedRole
 };
 
 QVariantMap createActionItem(const QString &label, const QString &icon, const QString &actionId, const QVariant &argument = QVariant());

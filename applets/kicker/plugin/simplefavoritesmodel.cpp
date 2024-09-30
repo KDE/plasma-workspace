@@ -65,6 +65,10 @@ QVariant SimpleFavoritesModel::data(const QModelIndex &index, int role) const
             return entry->icon();
         else
             return entry->icon();
+    } else if (role == Kicker::CompactNameRole) {
+        return entry->compactName();
+    } else if (role == Kicker::CompactNameWrappedRole) {
+        return KStringHandler::preProcessWrap(entry->compactName());
     } else if (role == Kicker::DescriptionRole) {
         return entry->description();
     } else if (role == Kicker::FavoriteIdRole) {

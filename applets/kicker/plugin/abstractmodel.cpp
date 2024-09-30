@@ -22,6 +22,7 @@ QHash<int, QByteArray> AbstractModel::staticRoleNames()
     roles.insert(Qt::DisplayRole, "display");
     roles.insert(Qt::DecorationRole, "decoration");
     roles.insert(Kicker::GroupRole, "group");
+    roles.insert(Kicker::CompactNameRole, "compactName");
     roles.insert(Kicker::DescriptionRole, "description");
     roles.insert(Kicker::FavoriteIdRole, "favoriteId");
     roles.insert(Kicker::IsParentRole, "isParent");
@@ -33,6 +34,7 @@ QHash<int, QByteArray> AbstractModel::staticRoleNames()
     roles.insert(Kicker::DisabledRole, "disabled");
     roles.insert(Kicker::IsMultilineTextRole, "isMultilineText");
     roles.insert(Kicker::DisplayWrappedRole, "displayWrapped");
+    roles.insert(Kicker::CompactNameWrappedRole, "compactNameWrapped");
 
     return roles;
 }

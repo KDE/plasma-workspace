@@ -411,6 +411,8 @@ public:
         // clang-format off
         return entry == nullptr ? QVariant()
              : role == Qt::DisplayRole ? entry->name()
+             : role == Kicker::CompactNameRole ? entry->compactName()
+             : role == Kicker::CompactNameWrappedRole ? KStringHandler::preProcessWrap(entry->compactName())
              : role == Kicker::DisplayWrappedRole ? KStringHandler::preProcessWrap(entry->name())
              : role == Qt::DecorationRole ? entry->icon()
              : role == Kicker::DescriptionRole ? entry->description()
@@ -736,6 +738,13 @@ AbstractModel *KAStatsFavoritesModel::favoritesModel()
 
 void KAStatsFavoritesModel::refresh()
 {
+    for (auto it = d->m_itemEntries.cbegin(); it != d->m_itemEntries.cend(); it = std::next(it)) {
+        if (it.value()) {
+            it.value()->refreshLabels();
+        }
+    }
+
+    Q_EMIT dataChanged(index(0, 0), index(rowCount(), 0));
 }
 
 QObject *KAStatsFavoritesModel::activities() const
