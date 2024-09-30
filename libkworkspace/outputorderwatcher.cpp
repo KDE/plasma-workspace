@@ -284,6 +284,32 @@ bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void 
                 roundtrip();
                 m_delayTimer->start();
             }
+        } else if (randrEvent->subCode == XCB_RANDR_NOTIFY_OUTPUT_CHANGE) {
+            // When the ast screen is removed, its qscreen becomes name ":0.0" as the fake screen, but nothing happens really,
+            // screenpool doesn't notice (and looking at the assert_x there are, that was expected"
+            // then the screen gets connected again, a new screen gets conencted, the old 0.0 one
+            // gets disconnected, but the screen order stuff doesn't say anything as it's still
+            // the same connector name as before
+            // so screenpool finds itself with an empty screenorder
+            if (randrEvent->u.oc.connection == XCB_RANDR_CONNECTION_DISCONNECTED) {
+                xcb_randr_output_t output = randrEvent->u.oc.output;
+                xcb_connection_t *connection = m_x11Interface->connection();
+                xcb_randr_get_output_info_cookie_t cookie = xcb_randr_get_output_info(connection, output, XCB_CURRENT_TIME);
+                xcb_randr_get_output_info_reply_t *reply = xcb_randr_get_output_info_reply(connection, cookie, nullptr);
+
+                if (reply) {
+                    int name_len = xcb_randr_get_output_info_name_length(reply);
+                    char *name = reinterpret_cast<char *>(xcb_randr_get_output_info_name(reply));
+                    QString connectorName = QString::fromLatin1(name, name_len);
+
+                    free(reply);
+
+                    m_outputOrder.removeAll(connectorName);
+                    // Cause ScreenPool to reevaluate screenorder again, so the screen :0.0 will
+                    // be correctly moved to fakeScreens
+                    m_delayTimer->start();
+                }
+            }
         }
     }
     return false;
