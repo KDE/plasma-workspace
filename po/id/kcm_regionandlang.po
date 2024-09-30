@@ -1,0 +1,571 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2024 Wantoyèk <wantoyek@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-08-10 02:27+0000\n"
+"PO-Revision-Date: 2024-09-29 21:38+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
+
+#: exampleutility.cpp:29
+#, kde-format
+msgctxt "Measurement combobox"
+msgid "Imperial UK"
+msgstr "Imperial UK"
+
+#: exampleutility.cpp:31
+#, kde-format
+msgctxt "Measurement combobox"
+msgid "Imperial US"
+msgstr "Imperial AS"
+
+#: exampleutility.cpp:33
+#, kde-format
+msgctxt "Measurement combobox"
+msgid "Metric"
+msgstr "Metrik"
+
+#: exampleutility.cpp:47
+#, kde-format
+msgctxt "PaperSize combobox"
+msgid "Letter"
+msgstr "Letter"
+
+#: exampleutility.cpp:49
+#, kde-format
+msgctxt "PaperSize combobox"
+msgid "A4"
+msgstr "A4"
+
+#: exampleutility.cpp:64
+#, kde-format
+msgctxt "Care of person or organization"
+msgid "c/o"
+msgstr ""
+
+#: exampleutility.cpp:65
+#, kde-format
+msgctxt "Firm name"
+msgid "Acme Corporation"
+msgstr "Perusahaan Acme"
+
+#: exampleutility.cpp:66
+#, kde-format
+msgctxt "Department name"
+msgid "Development Department"
+msgstr "Departemen Pengembangan"
+
+#: exampleutility.cpp:67
+#, kde-format
+msgctxt "Building name"
+msgid "Dev-Building"
+msgstr "Membangun Pengembangan"
+
+#: exampleutility.cpp:68
+#, kde-format
+msgctxt "Street or block name"
+msgid "Main Street"
+msgstr "Jalan Utama"
+
+#: exampleutility.cpp:69
+#, kde-format
+msgctxt "House number"
+msgid "House 1"
+msgstr "Rumah 1"
+
+#: exampleutility.cpp:71
+#, kde-format
+msgctxt "Whitespace field for locale address style example"
+msgid " "
+msgstr " "
+
+#: exampleutility.cpp:72
+#, kde-format
+msgctxt "Room number"
+msgid "Room 2"
+msgstr "Kamar 2"
+
+#: exampleutility.cpp:73
+#, kde-format
+msgctxt "Floor number"
+msgid "Floor 3"
+msgstr "Lantai 3"
+
+#: exampleutility.cpp:75
+#, kde-format
+msgctxt "Local township within town or city"
+msgid "Downtown"
+msgstr "Pusat Kota"
+
+#: exampleutility.cpp:76
+#, kde-format
+msgctxt "Zip number, postal code"
+msgid "123456"
+msgstr "123456"
+
+#: exampleutility.cpp:77
+#, kde-format
+msgctxt "Town or city"
+msgid "City"
+msgstr "Kota"
+
+#: exampleutility.cpp:78
+#, kde-format
+msgctxt "State, province or prefecture"
+msgid "State"
+msgstr "Negara"
+
+#: exampleutility.cpp:91
+#, kde-format
+msgctxt "Family names"
+msgid "FamilyName"
+msgstr "Nama_Keluarga"
+
+#: exampleutility.cpp:92
+#, kde-format
+msgctxt "Family names in uppercase"
+msgid "FAMILYNAME"
+msgstr "NAMA_KELUARGA"
+
+#: exampleutility.cpp:93
+#, kde-format
+msgctxt "First given name"
+msgid "FirstName"
+msgstr "Nama_Depan"
+
+#: exampleutility.cpp:94
+#, kde-format
+msgctxt "First given initial"
+msgid "F"
+msgstr "F"
+
+#: exampleutility.cpp:95
+#, kde-format
+msgctxt "First given name with latin letters"
+msgid "FirstName"
+msgstr "Nama_Depan"
+
+#: exampleutility.cpp:96
+#, kde-format
+msgctxt "Other shorter name"
+msgid "OtherName"
+msgstr "Nama_Lain"
+
+#: exampleutility.cpp:97
+#, kde-format
+msgctxt "Additional given names"
+msgid "AdditionalName"
+msgstr "Nama_Tambahan"
+
+#: exampleutility.cpp:98
+#, kde-format
+msgctxt "Initials for additional given names"
+msgid "A"
+msgstr "A"
+
+#: exampleutility.cpp:99
+#, kde-format
+msgctxt "Profession"
+msgid "Profession"
+msgstr "Peofesi"
+
+#: exampleutility.cpp:100
+#, kde-format
+msgctxt "Salutation"
+msgid "Doctor"
+msgstr "Dokter"
+
+#: exampleutility.cpp:101
+#, kde-format
+msgctxt "Abbreviated salutation"
+msgid "Dr."
+msgstr "Dr."
+
+#: exampleutility.cpp:102
+#, kde-format
+msgctxt "Salutation using the FDCC-sets conventions"
+msgid "Dr."
+msgstr "Dr."
+
+#: exampleutility.cpp:103
+#, kde-format
+msgctxt "Space or dot for locale name style example"
+msgid " "
+msgstr " "
+
+#: exampleutility.cpp:119
+#, kde-format
+msgctxt "Whitespace for telephone style example"
+msgid " "
+msgstr " "
+
+#: exampleutility.cpp:133
+#, kde-format
+msgctxt ""
+"This is returned when an example test could not be made from locale "
+"information"
+msgid "Could not find an example for this locale"
+msgstr "Tidak bisa menemukan contoh untuk lokal ini"
+
+#: kcmregionandlang.cpp:54
+#, kde-format
+msgid ""
+"You can configure the formats used for time, dates, money and other numbers "
+"here."
+msgstr ""
+"Anda bisa mengonfigurasi format yang digunakan untuk waktu, tanggal, uang "
+"dan angka lainnya di sini."
+
+#: kcmregionandlang.cpp:93
+#, kde-kuit-format
+msgctxt "@info this will be shown as an error message"
+msgid ""
+"Could not find the system's available locales using the <command>localectl</"
+"command> tool. Please file a bug report about this at <link>https://bugs.kde."
+"org</link>"
+msgstr ""
+"Tidak bisa menemukan lokal sistem yang tersedia menggunakan alat "
+"<command>localectl</command>. Silakan buat laporan bug tentang ini di "
+"<link>https://bugs.kde.org</link>"
+
+#: languagelistmodel.cpp:86
+#, kde-format
+msgctxt "%1 is language name, %2 is language code name"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: languagelistmodel.cpp:92
+#, kde-format
+msgctxt ""
+"%1 is português in system locale name, Brazil is to distinguish European "
+"português and Brazilian português"
+msgid "%1 (Brazil)"
+msgstr "%1 (Brazil)"
+
+#: localegeneratorubuntu.cpp:42
+#, kde-format
+msgctxt "@info:warning"
+msgid "Can't locate executable `check-language-support`"
+msgstr ""
+"Tidak dapat menemukan perintah yang dapat dieksekusi `check-language-support`"
+
+#: localegeneratorubuntu.cpp:52
+#, kde-format
+msgctxt "the arg is the output of failed check-language-support call"
+msgid "check-language-support failed, output: %1"
+msgstr "check-language-support gagal, keluaran: %1"
+
+#: localegeneratorubuntu.cpp:83
+#, kde-format
+msgctxt "%1 is a list of package names"
+msgid "Not all missing packages managed to resolve! %1"
+msgstr "Tidak semua paket yang hilang berhasil diatasi! %1"
+
+#: localegeneratorubuntu.cpp:89
+#, kde-format
+msgctxt "%1 is a list of package names"
+msgid "Failed to install package %1"
+msgstr "Gagal memasang paket %1"
+
+#: localegenhelper/localegenhelper.cpp:43
+#, kde-format
+msgid "Another process is already running, please retry later"
+msgstr "Proses lain sedang berjalan, silakan coba lagi nanti"
+
+#: localegenhelper/localegenhelper.cpp:63
+#, kde-format
+msgid "Unauthorized to edit locale configuration file"
+msgstr "Tidak diizinkan untuk mengedit file konfigurasi lokal"
+
+#: localegenhelper/localegenhelper.cpp:113
+#, kde-format
+msgid "Can't open file `/etc/locale.gen`"
+msgstr "Tidak bisa membuka file `/etc/locale.gen`"
+
+#: localegenhelper/localegenhelper.cpp:146
+#, kde-format
+msgid "Can't locate executable `locale-gen`"
+msgstr "Tidak bisa menemukan `locale-gen` yang dapat dieksekusi"
+
+#: localegenhelper/localegenhelper.cpp:159
+#, kde-format
+msgid "Unknown"
+msgstr "Tak diketahui"
+
+#: localelistmodel.cpp:34
+#, kde-format
+msgid "Default for System"
+msgstr "Baku untuk Sistem"
+
+#: localelistmodel.cpp:34 localelistmodel.cpp:85
+#: package/contents/ui/main.qml:239
+#, kde-format
+msgid "Default"
+msgstr "Baku"
+
+#: localelistmodel.cpp:81
+#, kde-format
+msgctxt ""
+"the first is language name, the second is the country name, like 'English "
+"(America)'"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: localelistmodel.cpp:164
+#, kde-format
+msgctxt ""
+"@info:title, meaning the current locale is system default(which is `C`)"
+msgid "System Default C"
+msgstr "Baku Sistem C"
+
+#: localelistmodel.cpp:167
+#, kde-format
+msgctxt ""
+"@info:title the current locale is the default for %1, %1 is the country name"
+msgid "Default for %1"
+msgstr "Baku untuk %1"
+
+#: optionsmodel.cpp:23
+#, kde-format
+msgctxt "@info:title"
+msgid "Language"
+msgstr "Bahasa"
+
+#: optionsmodel.cpp:24
+#, kde-format
+msgctxt "@info:title"
+msgid "Numbers"
+msgstr "Angka"
+
+#: optionsmodel.cpp:25
+#, kde-format
+msgctxt "@info:title"
+msgid "Time"
+msgstr "Waktu"
+
+#: optionsmodel.cpp:26
+#, kde-format
+msgctxt "@info:title"
+msgid "Currency"
+msgstr "Mata Uang"
+
+#: optionsmodel.cpp:27
+#, kde-format
+msgctxt "@info:title"
+msgid "Measurements"
+msgstr "Pengukuran"
+
+#: optionsmodel.cpp:28
+#, kde-format
+msgctxt "@info:title"
+msgid "Paper Size"
+msgstr "Ukuran Kertas"
+
+#: optionsmodel.cpp:30
+#, kde-format
+msgctxt "@info:title"
+msgid "Address"
+msgstr "Alamat"
+
+#: optionsmodel.cpp:31
+#, kde-format
+msgctxt "@info:title"
+msgid "Name Style"
+msgstr "Gaya Nama"
+
+#: optionsmodel.cpp:32
+#, kde-format
+msgctxt "@info:title"
+msgid "Phone Numbers"
+msgstr "Nomor Telepon"
+
+#: optionsmodel.cpp:114 optionsmodel.cpp:304
+#, kde-format
+msgctxt "@info:title, the current setting is system default"
+msgid "System Default"
+msgstr "Baku Sistem"
+
+#: optionsmodel.cpp:306
+#, kde-format
+msgctxt ""
+"as subtitle, remind user that the format used now is inherited from locale %1"
+msgid " (Standard format for %1)"
+msgstr ""
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:20
+#, kde-format
+msgid "Language"
+msgstr "Bahasa"
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:31
+#, kde-format
+msgid ""
+"Putting American English above other languages will cause undesired behavior "
+"in some applications. If you would like your system to use American English, "
+"remove all other languages."
+msgstr ""
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:39
+#, kde-format
+msgctxt "Error message, %1 is the language name"
+msgid "The language \"%1\" is unsupported"
+msgstr ""
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:49
+#, kde-format
+msgid "Add languages in the order you want to see them in your applications."
+msgstr ""
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:83
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Change Language"
+msgstr "Ubah Bahasa"
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:87
+#, kde-format
+msgctxt "@title:window"
+msgid "Change Language"
+msgstr "Ubah Bahasa"
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:98
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Move to top"
+msgstr ""
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:104
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Remove"
+msgstr "Hapus"
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:117
+#, kde-format
+msgctxt "@info:placeholder"
+msgid "No Language Configured"
+msgstr ""
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:147
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:167
+#, kde-format
+msgctxt "@title:window"
+msgid "Add Languages"
+msgstr "Tambahkan Bahasa"
+
+#: package/contents/ui/AdvancedLanguageSelectPage.qml:176
+#, kde-format
+msgctxt "@action:button"
+msgid "Add More…"
+msgstr "Tambahkan Lagi…"
+
+#: package/contents/ui/main.qml:32
+#, kde-format
+msgctxt "@info"
+msgid "Changes will take effect the next time you log in."
+msgstr ""
+
+#: package/contents/ui/main.qml:38
+#, kde-format
+msgid "Restart now"
+msgstr "Nyalakan ulang sekarang"
+
+#: package/contents/ui/main.qml:52
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Generating locale and language support files; don't turn off the computer "
+"yet."
+msgstr ""
+
+#: package/contents/ui/main.qml:61
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Locale and language support files have been generated, but language-specific "
+"fonts could not be automatically installed. If your language requires "
+"specialized fonts to be displayed properly, you will need to discover what "
+"they are and install them yourself."
+msgstr ""
+"File dukungan lokal dan bahasa telah dibuat, tetapi khusus bahasa font tidak "
+"dapat diinstal secara otomatis. Jika bahasa Anda memerlukan font khusus agar "
+"dapat ditampilkan dengan benar, Anda perlu menemukan apa mereka ada dan "
+"installlah sendiri."
+
+#: package/contents/ui/main.qml:75
+#, kde-format
+msgctxt "@info"
+msgid ""
+"Necessary locale and language support files have been installed. It is now "
+"safe to turn off the computer."
+msgstr ""
+"File dukungan bahasa dan lokal yang diperlukan telah terinstal. Sekarang "
+"aman untuk mematikan komputer."
+
+#: package/contents/ui/main.qml:139
+#, kde-format
+msgctxt "@action:button for change the locale used"
+msgid "Modify…"
+msgstr "Modifikasi..."
+
+#: package/contents/ui/main.qml:180
+#, kde-format
+msgid "Numbers"
+msgstr "Angka"
+
+#: package/contents/ui/main.qml:182
+#, kde-format
+msgid "Time"
+msgstr "Waktu"
+
+#: package/contents/ui/main.qml:184
+#, kde-format
+msgid "Currency"
+msgstr "Mata Uang"
+
+#: package/contents/ui/main.qml:186
+#, kde-format
+msgid "Measurements"
+msgstr ""
+
+#: package/contents/ui/main.qml:188
+#, kde-format
+msgid "Paper Size"
+msgstr ""
+
+#: package/contents/ui/main.qml:190
+#, kde-format
+msgctxt "Postal Address"
+msgid "Address"
+msgstr "Alamat"
+
+#: package/contents/ui/main.qml:192
+#, kde-format
+msgctxt "Name Style"
+msgid "Name"
+msgstr "Nama"
+
+#: package/contents/ui/main.qml:194
+#, kde-format
+msgctxt "Phone Numbers"
+msgid "Phone number"
+msgstr "Nomor telepon"
+
+#: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
+#: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
+#: regionandlangsettingsbase.kcfg:30 regionandlangsettingsbase.kcfg:33
+#: regionandlangsettingsbase.kcfg:36 regionandlangsettingsbase.kcfg:39
+#: regionandlangsettingsbase.kcfg:42
+#, kde-format
+msgid "Inherit Language"
+msgstr ""
