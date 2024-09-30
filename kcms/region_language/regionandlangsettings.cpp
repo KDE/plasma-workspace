@@ -87,3 +87,15 @@ QString RegionAndLangSettings::LC_LocaleWithLang(SettingType setting) const
 
     return langWithFallback();
 }
+
+void RegionAndLangSettings::setLC_Vars(const QString &LANG)
+{
+    setNumeric(LANG);
+    setTime(LANG);
+    setMonetary(LANG);
+    setMeasurement(LANG);
+    setPaperSize(LANG);
+    setAddress(LANG);
+    setNameStyle(LANG);
+    setPhoneNumbers(LANG);
+}
