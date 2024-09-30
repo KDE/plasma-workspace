@@ -76,8 +76,8 @@ public:
 
             std::shared_ptr<AbstractEntry> entry = nullptr;
 
-            if (parent->m_itemEntries.contains(id)) {
-                entry = parent->m_itemEntries.value(id);
+            if (auto it = parent->m_itemEntries.find(id); it != parent->m_itemEntries.cend()) {
+                entry = it->second;
             } else {
                 // This entry is not cached - it is temporary,
                 // so let's clean up when we exit this function
@@ -194,11 +194,9 @@ public:
                 // https://crash-reports.kde.org/organizations/kde/issues/23450/
                 const auto itemEntries = m_itemEntries;
                 for (auto it = itemEntries.cbegin(); it != itemEntries.cend(); it = std::next(it)) {
-                    if (it.value()) {
-                        it.value()->reload();
-                        if (!it.value()->isValid()) {
-                            keys << it.key();
-                        }
+                    it->second->reload();
+                    if (!it->second->isValid()) {
+                        keys << it->first;
                     }
                 }
                 if (!keys.isEmpty()) {
@@ -377,11 +375,11 @@ public:
         m_items.removeAt(index);
 
         // Removing the entry from the cache
-        QMutableHashIterator<QString, std::shared_ptr<AbstractEntry>> i(m_itemEntries);
-        while (i.hasNext()) {
-            i.next();
-            if (i.value()->id() == resource) {
-                i.remove();
+        for (auto it = m_itemEntries.cbegin(); it != m_itemEntries.cend();) {
+            if (it->second->id() == resource) {
+                it = m_itemEntries.erase(it);
+            } else {
+                it = std::next(it);
             }
         }
 
@@ -407,10 +405,13 @@ public:
 
         // If index is out of bounds, m_items.value returns default constructed value.
         // In that case, m_itemEntries.value will return default constructed value which is nullptr.
-        const auto entry = m_itemEntries.value(m_items.value(index).value());
+        auto it = m_itemEntries.find(m_items.value(index).value());
+        if (it == m_itemEntries.cend()) {
+            return QVariant();
+        }
+        const auto &entry = it->second;
         // clang-format off
-        return entry == nullptr ? QVariant()
-             : role == Qt::DisplayRole ? entry->name()
+        return role == Qt::DisplayRole ? entry->name()
              : role == Kicker::CompactNameRole ? entry->compactName()
              : role == Kicker::CompactNameWrappedRole ? KStringHandler::preProcessWrap(entry->compactName())
              : role == Kicker::DisplayWrappedRole ? KStringHandler::preProcessWrap(entry->name())
@@ -432,11 +433,15 @@ public:
 
         const QString id = data(index(row, 0), Kicker::UrlRole).toString();
         if (m_itemEntries.contains(id)) {
-            return m_itemEntries.value(id)->run(actionId, argument);
+            return m_itemEntries.at(id)->run(actionId, argument);
         }
         // Entries with preferred:// can be changed by the user, BUG: 416161
         // then the list of entries could be out of sync
-        const auto entry = m_itemEntries.value(m_items.value(row).value());
+        auto it = m_itemEntries.find(m_items.value(row).value());
+        if (it == m_itemEntries.cend()) {
+            return false;
+        }
+        const auto &entry = it->second;
         if (QUrl(entry->id()).scheme() == QLatin1String("preferred")) {
             return entry->run(actionId, argument);
         }
@@ -506,7 +511,7 @@ public:
     QString m_clientId;
 
     QList<NormalizedId> m_items;
-    QHash<QString, std::shared_ptr<AbstractEntry>> m_itemEntries;
+    std::unordered_map<QString, std::shared_ptr<AbstractEntry>> m_itemEntries; // Don't use QHash: https://bugreports.qt.io/browse/QTBUG-129293
     QStringList m_ignoredItems;
 };
 
@@ -739,9 +744,7 @@ AbstractModel *KAStatsFavoritesModel::favoritesModel()
 void KAStatsFavoritesModel::refresh()
 {
     for (auto it = d->m_itemEntries.cbegin(); it != d->m_itemEntries.cend(); it = std::next(it)) {
-        if (it.value()) {
-            it.value()->refreshLabels();
-        }
+        it->second->refreshLabels();
     }
 
     Q_EMIT dataChanged(index(0, 0), index(rowCount(), 0));
