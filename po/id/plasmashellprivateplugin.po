@@ -1,6 +1,6 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 #
 msgid ""
@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2022-06-03 10:46+0700\n"
-"Last-Translator: Aziz Adam Adrian <4.adam.adrian@gmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-09-29 07:45+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -32,12 +32,12 @@ msgstr "wantoyek@gmail.com"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Baterai %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Baterai"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -67,87 +67,85 @@ msgstr "Lainnya"
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Peristiwa:"
+msgstr[1] "%1 event"
 
 #: calendar/qml/DayDelegate.qml:96
-#, fuzzy, kde-format
-#| msgctxt "Agenda listview section title"
-#| msgid "Events"
+#, kde-format
 msgid "No events"
-msgstr "Peristiwa"
+msgstr "Tidak ada peristiwa"
 
 #: calendar/qml/MonthViewHeader.qml:74
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:131
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Hari"
 
 #: calendar/qml/MonthViewHeader.qml:137
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Bulan"
 
 #: calendar/qml/MonthViewHeader.qml:143
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "Tahun"
 
 #: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Bulan Kemarin"
 
 #: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "Tahun Kemarin"
 
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Dekade Lalu"
 
 #: calendar/qml/MonthViewHeader.qml:202
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "Hari ini"
 
 #: calendar/qml/MonthViewHeader.qml:203
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Set ulang kalender ke hari ini"
 
 #: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Bulan Depan"
 
 #: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Tahun Depan"
 
 #: calendar/qml/MonthViewHeader.qml:218
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Dasawarsa Depan"
 
 #: calendar/qml/MonthViewHeader.qml:274
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Tetap Buka"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Konfigurasi..."
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -190,6 +188,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Widget ini ditulis untuk Plasma dengan versi kuno yang tidak diketahui dan "
+"tidak kompatibel dengan Plasma %1. Silakan hubungi penulis widget untuk "
+"pembaruan versi."
 
 #: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
@@ -197,6 +198,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Widget ini ditulis untuk Plasma %1 dan tidak kompatibel dengan Plasma %2. "
+"Silakan hubungi penulis widget untuk pembaruan versi."
 
 #: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
@@ -204,6 +207,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Widget ini ditulis untuk Plasma %1 dan tidak kompatibel dengan Plasma %2. "
+"Silakan perbarui Plasma supaya bisa menggunakan widget."
 
 #: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
@@ -211,119 +216,118 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Widget ini ditulis untuk Plasma %1 dan tidak kompatibel dengan versi Plasma "
+"yang terakhir. Silakan perbarui Plasma supaya bisa menggunakan widget."
 
 #: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Aksesibilitas"
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Peluncur Aplikasi"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Ilmu Perbintangan"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Tanggal dan Waktu"
 
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Alat Pengembangan"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Pendidikan"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Lingkungan dan Cuaca"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Contoh"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Sistem File"
 
 #: shellprivate/widgetexplorer.cpp:118
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Wantoyèk"
+msgstr "Permainan dan Kesenangan"
 
 #: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Grafik"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Bahasa"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Pemetaan"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Beraneka"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Layanan Daring"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Produktivitas"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Informasi Sistem"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Utilitas"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Jendela dan Tugas"
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Papan Klip"
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Tugas"
 
 #: shellprivate/widgetexplorer.cpp:146
 #, kde-format
@@ -350,7 +354,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Yang baru-baru ini diinstal"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -368,11 +372,10 @@ msgid "Install Widget From Local File…"
 msgstr "Instal Widget Dari File Lokal..."
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Semua Widget"
+msgstr "Dapatkan Widget Baru"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -380,11 +383,10 @@ msgid "Select Plasmoid File"
 msgstr "Pilih File Plasmoid"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Menginstal paket %1, gagal."
+msgstr "Menginstal paket %1 gagal: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
