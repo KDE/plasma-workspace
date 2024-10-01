@@ -43,7 +43,6 @@ target_link_libraries(klipper
     KF6::Notifications
     KF6::Prison
     KF6::Service
-    KF6::TextWidgets
     KF6::WidgetsAddons
     KF6::WindowSystem
     KF6::XmlGui

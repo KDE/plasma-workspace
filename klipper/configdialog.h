@@ -16,10 +16,10 @@ class KShortcutsEditor;
 class Klipper;
 class KEditListWidget;
 class KActionCollection;
-class KPluralHandlingSpinBox;
 class EditActionDialog;
 class QCheckBox;
 class QRadioButton;
+class QSpinBox;
 class QTreeWidgetItem;
 class QLabel;
 class ActionsTreeWidget;
@@ -52,7 +52,7 @@ private:
     QRadioButton *m_copiedImageRb;
     QRadioButton *m_neverImageRb;
 
-    KPluralHandlingSpinBox *m_historySizeSb;
+    QSpinBox *m_historySizeSb;
 
     bool m_havePrevAlwaysImageTextConfig;
     bool m_prevAlwaysImage;
@@ -79,7 +79,7 @@ private:
     QCheckBox *m_stripWhitespaceCb;
     QCheckBox *m_mimeActionsCb;
 
-    KPluralHandlingSpinBox *m_actionTimeoutSb;
+    QSpinBox *m_actionTimeoutSb;
 
     QStringList m_exclWMClasses;
 };

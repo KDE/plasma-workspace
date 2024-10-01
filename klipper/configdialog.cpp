@@ -16,17 +16,18 @@
 #include <qlabel.h>
 #include <qpushbutton.h>
 #include <qradiobutton.h>
+#include <qspinbox.h>
 #include <qtooltip.h>
 #include <qwindow.h>
 
 #include <KConfigSkeleton>
 #include <KEditListWidget>
+#include <KLocalization>
 #include <KShortcutsEditor>
 #include <kconfigskeleton.h>
 #include <kglobalaccel.h>
 #include <kmessagebox.h>
 #include <kmessagewidget.h>
-#include <kpluralhandlingspinbox.h>
 #include <kwindowconfig.h>
 
 #include "klipper_debug.h"
@@ -82,9 +83,9 @@ GeneralWidget::GeneralWidget(QWidget *parent)
 
     // Clipboard history size
     item = KlipperSettings::self()->maxClipItemsItem();
-    m_historySizeSb = new KPluralHandlingSpinBox(this);
+    m_historySizeSb = new QSpinBox(this);
     m_historySizeSb->setObjectName(QLatin1String("kcfg_MaxClipItems"));
-    m_historySizeSb->setSuffix(ki18ncp("Number of entries", " entry", " entries"));
+    KLocalization::setupSpinBoxFormatString(m_historySizeSb, ki18ncp("Number of entries", "%v entry", "%v entries"));
     layout->addRow(item->label(), m_historySizeSb);
 
     layout->addRow(QString(), new QLabel(this));
@@ -288,9 +289,9 @@ then it can be shown by using the <shortcut>%1</shortcut> key shortcut.",
 
     // Action popup time
     item = KlipperSettings::self()->timeoutForActionPopupsItem();
-    m_actionTimeoutSb = new KPluralHandlingSpinBox(this);
+    m_actionTimeoutSb = new QSpinBox(this);
     m_actionTimeoutSb->setObjectName(QLatin1String("kcfg_TimeoutForActionPopups"));
-    m_actionTimeoutSb->setSuffix(ki18ncp("Unit of time", " second", " seconds"));
+    KLocalization::setupSpinBoxFormatString(m_actionTimeoutSb, ki18ncp("Unit of time", "%v second", "%v seconds"));
     m_actionTimeoutSb->setSpecialValueText(i18nc("No timeout", "None"));
     layout->addRow(item->label(), m_actionTimeoutSb);
 
