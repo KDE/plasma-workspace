@@ -261,7 +261,7 @@ msgstr "Podrobnosti"
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
-msgstr ""
+msgstr "Obnovit"
 
 #: package/contents/ui/JobItem.qml:201
 #, kde-format
