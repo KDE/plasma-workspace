@@ -341,9 +341,6 @@ ColumnLayout {
         Layout.preferredHeight: childrenRect.height
         visible: actionRepeater.count > 0 && actionFlow.parent === this
 
-        implicitWidth: actionFlow.implicitWidth
-        implicitHeight: actionFlow.implicitHeight
-
         // Notification actions
         Flow { // it's a Flow so it can wrap if too long
             id: actionFlow

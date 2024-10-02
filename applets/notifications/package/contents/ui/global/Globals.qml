@@ -176,7 +176,7 @@ QtObject {
         positionPopups()
     }
 
-    // The minimum width of the popup's content item, the Dialog itself adds some margins
+    // The raw width of the popup's content item, the Dialog itself adds some margins
     // Make it wider when on the top or the bottom center, since there's more horizontal
     // space available without looking weird
     // On mobile however we don't really want to have larger notifications
@@ -349,13 +349,15 @@ QtObject {
                 continue;
             }
 
+            // Popup width is fixed, so don't rely on the actual window size
+            var popupEffectiveWidth = popupWidth + popup.margins.left + popup.margins.right;
 
             const leftMostX = screenRect.x + popupEdgeDistance;
-            const rightMostX = screenRect.x + screenRect.width - popupEdgeDistance - popup.width;
+            const rightMostX = screenRect.x + screenRect.width - popupEdgeDistance - popupEffectiveWidth;
 
             // If available screen rect is narrower than the popup, center it in the available rect
-            if (screenRect.width < popup.width || effectivePopupLocation & Qt.AlignHCenter) {
-                popup.x = screenRect.x + (screenRect.width - popup.width) / 2
+            if (screenRect.width < popupEffectiveWidth || effectivePopupLocation & Qt.AlignHCenter) {
+                popup.x = screenRect.x + (screenRect.width - popupEffectiveWidth) / 2
             } else if (effectivePopupLocation & Qt.AlignLeft) {
                 popup.x = leftMostX;
             } else if (effectivePopupLocation & Qt.AlignRight) {

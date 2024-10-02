@@ -15,18 +15,10 @@ import org.kde.notificationmanager as NotificationManager
 
 import ".."
 
-import "global"
-
 PlasmaCore.Dialog {
     id: notificationPopup
 
     property int popupWidth
-
-    // Maximum width the popup can take to not break out of the screen geometry.
-    readonly property int availableWidth: globals.screenRect.width - globals.popupEdgeDistance * 2 - margins.left - margins.right
-
-    readonly property int minimumContentWidth: popupWidth
-    readonly property int maximumContentWidth: Math.min((availableWidth > 0 ? availableWidth : Number.MAX_VALUE), popupWidth * 3)
 
     property alias notificationType: notificationItem.notificationType
 
@@ -116,7 +108,7 @@ PlasmaCore.Dialog {
         id: focusListener
         property bool wantsFocus: false
 
-        width: Math.min(Math.max(notificationPopup.minimumContentWidth, notificationItem.implicitWidth), Math.max(notificationPopup.minimumContentWidth, notificationPopup.maximumContentWidth))
+        width: notificationPopup.popupWidth
         height: notificationItem.implicitHeight + notificationItem.y
 
         acceptedButtons: Qt.AllButtons
