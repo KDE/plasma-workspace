@@ -339,19 +339,19 @@ ColumnLayout {
         id: actionContainer
         Layout.fillWidth: true
         Layout.preferredHeight: childrenRect.height
-        visible: actionRepeater.count > 0 && actionRow.parent === this
+        visible: actionRepeater.count > 0 && actionFlow.parent === this
 
-        implicitWidth: actionRow.implicitWidth
-        implicitHeight: actionRow.implicitHeight
+        implicitWidth: actionFlow.implicitWidth
+        implicitHeight: actionFlow.implicitHeight
 
         // Notification actions
-        RowLayout {
-            id: actionRow
+        Flow { // it's a Flow so it can wrap if too long
+            id: actionFlow
             // For a cleaner look, if there is a thumbnail, puts the actions next to the thumbnail strip's menu button
             parent: thumbnailStripLoader.item?.actionContainer ?? actionContainer
             width: parent.width
             spacing: Kirigami.Units.smallSpacing
-
+            layoutDirection: Qt.RightToLeft
             enabled: !replyLoader.active
             opacity: replyLoader.active ? 0 : 1
             Behavior on opacity {
@@ -361,16 +361,6 @@ ColumnLayout {
                 }
             }
 
-            Item {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-
-                // If the actions are large enough to be the thing that determines
-                // the popup size, we should hide it as otherwise we end up with a
-                // `spacing` sized gap on the leading side of the row.
-                visible: actionRow.implicitWidth < notificationItem.width
-            }
-
             Repeater {
                 id: actionRepeater
 
@@ -378,8 +368,8 @@ ColumnLayout {
                     var buttons = [];
                     var actionNames = (notificationItem.actionNames || []);
                     var actionLabels = (notificationItem.actionLabels || []);
-
-                    for (var i = 0; i < actionNames.length; ++i) {
+                    // HACK We want the actions to be right-aligned but Flow also reverses
+                    for (var i = actionNames.length - 1; i >= 0; --i) {
                         buttons.push({
                             actionName: actionNames[i],
                             label: actionLabels[i]
@@ -397,9 +387,6 @@ ColumnLayout {
                 }
 
                 PlasmaComponents3.ToolButton {
-                    Layout.fillWidth: true
-                    Layout.maximumWidth: implicitWidth
-
                     flat: false
                     // why does it spit "cannot assign undefined to string" when a notification becomes expired?
                     text: modelData.label || ""
