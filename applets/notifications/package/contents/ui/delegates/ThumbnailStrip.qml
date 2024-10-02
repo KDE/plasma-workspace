@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2016 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2024 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -15,7 +16,7 @@ import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
-import "global"
+import "../global"
 
 Item {
     id: thumbnailArea
@@ -34,10 +35,25 @@ Item {
     property int topPadding: 0
     property int bottomPadding: 0
 
-    property alias actionContainer: thumbnailActionContainer
-
     signal openUrl(string url)
     signal fileActionInvoked(QtObject action)
+
+//BEGIN ActionContainer-related api
+    property alias actionNames: actionContainer.actionNames
+    property alias actionLabels: actionContainer.actionLabels
+
+    property alias hasReplyAction: actionContainer.hasReplyAction
+    property alias replying: actionContainer.replying
+    property alias hasPendingReply: actionContainer.hasPendingReply
+    property alias replyActionLabel: actionContainer.replyActionLabel
+    property alias replyPlaceholderText: actionContainer.replyPlaceholderText
+    property alias replySubmitButtonIconName: actionContainer.replySubmitButtonIconName
+    property alias replySubmitButtonText: actionContainer.replySubmitButtonText
+
+    signal forceActiveFocusRequested()
+    signal actionInvoked(string actionName)
+    signal replied(string text)
+//END ActionContainer-related api
 
     // Fix for BUG:462399
     implicitHeight: Kirigami.Units.iconSizes.enormous
@@ -63,21 +79,27 @@ Item {
 
     KQCAddons.QPixmapItem {
         id: previewBackground
-        anchors.fill: parent
+        anchors {
+            fill: parent
+            leftMargin: thumbnailArea.leftPadding
+            rightMargin: thumbnailArea.rightPadding
+            topMargin: thumbnailArea.topPadding
+            bottomMargin: thumbnailArea.bottomPadding
+        }
         fillMode: Image.PreserveAspectCrop
         layer.enabled: true
         opacity: 0.25
         pixmap: thumbnailer.pixmap
         layer.effect: FastBlur {
             source: previewBackground
-            anchors.fill: parent
+            anchors.fill: previewBackground
             radius: 30
         }
     }
 
     DraggableFileArea {
         id: dragArea
-        anchors.fill: parent
+        anchors.fill: previewBackground
         dragParent: previewIcon
         dragPixmapSize: previewIcon.height
         dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
@@ -96,11 +118,8 @@ Item {
     KQCAddons.QPixmapItem {
         id: previewPixmap
         anchors {
-            fill: parent
-            leftMargin: thumbnailArea.leftPadding
-            rightMargin: thumbnailArea.rightPadding
-            topMargin: thumbnailArea.topPadding
-            bottomMargin: thumbnailArea.bottomPadding
+            fill: previewBackground
+            margins: Kirigami.Units.smallSpacing
         }
         pixmap: thumbnailer.pixmap
         smooth: true
@@ -132,12 +151,14 @@ Item {
             spacing: Kirigami.Units.smallSpacing
 
             Item {
-                id: thumbnailActionContainer
-                Layout.alignment: Qt.AlignTop
                 Layout.fillWidth: true
-                Layout.preferredHeight: childrenRect.height
+            }
+            ActionContainer {
+                id: actionContainer
 
-                // actionFlow is reparented here
+                onForceActiveFocusRequested: thumbnailArea.forceActiveFocusRequested()
+                onActionInvoked: actionName => thumbnailArea.actionInvoked(actionName)
+                onReplied: text => thumbnailArea.replied(text)
             }
 
             PlasmaComponents3.Button {

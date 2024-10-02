@@ -18,7 +18,7 @@ import org.kde.coreaddons 1.0 as KCoreAddons
 
 import org.kde.quickcharts 1.0 as Charts
 
-import "global"
+import "../global"
 
 RowLayout {
     id: notificationHeading
