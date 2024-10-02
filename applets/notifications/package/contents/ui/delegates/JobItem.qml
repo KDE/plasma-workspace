@@ -16,6 +16,8 @@ import org.kde.notificationmanager as NotificationManager
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
+import "../global"
+
 ColumnLayout {
     id: jobItem
 
@@ -217,6 +219,7 @@ ColumnLayout {
 
     Loader {
         Layout.fillWidth: true
+        Layout.preferredWidth: Globals.popupWidth
         Layout.preferredHeight: item ? item.implicitHeight : 0
         active: expandButton.checked
         // Loader doesn't reset its height when unloaded, just hide it altogether
