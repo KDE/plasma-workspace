@@ -26,6 +26,7 @@
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
+#include <KOpenWithDialog>
 #include <KProtocolManager>
 #include <KService>
 #include <KServiceAction>
@@ -89,6 +90,27 @@ void IconApplet::populate()
 
     if (!m_url.isValid()) {
         // invalid url, use dummy data
+        KOpenWithDialog *owdlg = new KOpenWithDialog();
+        owdlg->setAttribute(Qt::WA_DeleteOnClose);
+
+        connect(owdlg, &QDialog::finished, this, [this, owdlg, entryName](int result) {
+            if (result != QDialog::Accepted) {
+                return;
+            }
+
+            const KService::Ptr service = owdlg->service();
+
+            Q_ASSERT(service);
+            if (!service || service->entryPath().isEmpty()) {
+                return; // Don't crash if KOpenWith wasn't able to create service.
+            }
+
+            m_url = QUrl::fromLocalFile(service->entryPath());
+            config().writeEntry(entryName, m_url);
+
+            populate();
+        });
+        owdlg->open();
         populateFromDesktopFile(QString());
         return;
     }
