@@ -85,7 +85,6 @@ ColumnLayout {
     property bool replying: false
     readonly property bool hasPendingReply: replyLoader.item?.text !== ""
     readonly property alias headerHeight: headingElement.height
-    readonly property real textPreferredWidth: Kirigami.Units.gridUnit * 18
 
     signal bodyClicked
     signal closeClicked
@@ -164,7 +163,6 @@ ColumnLayout {
 
         LayoutItemProxy {
             Layout.fillWidth: true
-            Layout.preferredWidth: Math.min(textPreferredWidth, summaryRow.implicitWidth)
             target: summaryRow
         }
         LayoutItemProxy {
@@ -174,7 +172,7 @@ ColumnLayout {
         LayoutItemProxy {
             // Workaround for https://bugreports.qt.io/browse/QTBUG-126196
             // remove as soon as we can depend from a fixed Qt
-            Layout.preferredWidth: Math.min(textPreferredWidth, notificationItem.width - iconContainer.width - notificationItem.spacing)
+            Layout.preferredWidth: notificationItem.width - iconContainer.width - notificationItem.spacing
             Layout.fillWidth: true
             target: bodyLabel
         }
@@ -215,6 +213,7 @@ ColumnLayout {
         Kirigami.Heading {
             id: summaryLabel
             Layout.fillWidth: true
+            Layout.maximumWidth: bodyLabel.width
             Layout.preferredHeight: implicitHeight
             Layout.topMargin: notificationItem.inGroup && lineCount > 1 ? Math.max(0, (headingElement.Layout.preferredHeight - summaryLabelTextMetrics.height) / 2) : 0
             textFormat: Text.PlainText
