@@ -17,6 +17,7 @@
 #include <QMimeData>
 #include <QMimeDatabase>
 #include <QProcess>
+#include <QTimer>
 
 #include <KAuthorized>
 #include <KDesktopFile>
@@ -26,6 +27,7 @@
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KNotificationJobUiDelegate>
+#include <KOpenWithDialog>
 #include <KProtocolManager>
 #include <KService>
 #include <KServiceAction>
@@ -60,12 +62,42 @@ IconApplet::~IconApplet()
 
 void IconApplet::init()
 {
+    m_popupTimer = new QTimer(this);
+    m_popupTimer->setSingleShot(true);
+    connect(m_popupTimer, &QTimer::timeout, this, &IconApplet::showConfigurationDialog);
+
     populate();
 }
 
 void IconApplet::configChanged()
 {
     populate();
+}
+
+void IconApplet::showConfigurationDialog()
+{
+    const QString entryName = u"url"_s;
+    KOpenWithDialog *openWidthDialog = new KOpenWithDialog();
+    openWidthDialog->setAttribute(Qt::WA_DeleteOnClose);
+
+    connect(openWidthDialog, &QDialog::finished, this, [this, openWidthDialog, entryName](int result) {
+        if (result != QDialog::Accepted) {
+            return;
+        }
+
+        const KService::Ptr service = openWidthDialog->service();
+
+        Q_ASSERT(service);
+        if (!service || service->entryPath().isEmpty()) {
+            return; // Don't crash if KOpenWith wasn't able to create service.
+        }
+
+        m_url = QUrl::fromLocalFile(service->entryPath());
+        config().writeEntry(entryName, m_url);
+
+        populate();
+    });
+    openWidthDialog->open();
 }
 
 void IconApplet::populate()
@@ -84,14 +116,24 @@ void IconApplet::populate()
     const QString path = localPath();
     if (QFileInfo::exists(path)) {
         populateFromDesktopFile(path);
+        m_popupTimer->stop();
         return;
     }
 
     if (!m_url.isValid()) {
-        // invalid url, use dummy data
+        // We wait 500ms before displaying a dialog since
+        // when we create a valid icon applet (e.g. by drag
+        // and dropping an application from kickoff to the
+        // panel), the widget is first created and then
+        // the URL is immediately set. Without a timer, the
+        // dialog will be immediately created, even if
+        // the URL will be set immediately.
+        m_popupTimer->start(100);
         populateFromDesktopFile(QString());
         return;
     }
+
+    m_popupTimer->stop();
 
     const QString plasmaIconsFolderPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/plasma_icons");
     if (!QDir().mkpath(plasmaIconsFolderPath)) {
@@ -404,7 +446,6 @@ QList<QAction *> IconApplet::extraActions()
 
     return actions;
 }
-
 void IconApplet::run()
 {
     if (!m_startupTasksModel) {
