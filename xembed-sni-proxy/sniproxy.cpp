@@ -619,5 +619,18 @@ void SNIProxy::sendClick(uint8_t mouseButton, int x, int y)
         sendXTestReleased(m_x11Interface->display(), mouseButton);
     }
 
-    setActiveForInput(false);
+    if (m_injectMode == Direct) {
+        setActiveForInput(false);
+    } else {
+        // delayed because on xwayland with the new libei path it will go to XWayland
+        // then kwin, then back to X
+        // we need to delay slightly until that happens
+        if (qgetenv("XDG_SESSION_TYPE") == QByteArrayLiteral("wayland")) {
+            QTimer::singleShot(300, this, [this]() {
+                setActiveForInput(false);
+            });
+        } else {
+            setActiveForInput(false);
+        }
+    }
 }
