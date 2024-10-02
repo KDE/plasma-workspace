@@ -4,9 +4,9 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick
-import QtQuick.Layouts
-import QtQuick.Window
+import QtQuick 2.8
+import QtQuick.Layouts 1.1
+import QtQuick.Window 2.2
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
@@ -152,149 +152,116 @@ ColumnLayout {
         Accessible.name: summaryLabel.text
         Accessible.description: notificationItem.accessibleDescription
         columns: 2
-        visible: !notificationItem.inGroup
 
-        LayoutItemProxy {
-            Layout.fillWidth: true
-            target: summaryRow
-        }
-        LayoutItemProxy {
-            Layout.rowSpan: 2
-            target: iconContainer
-        }
-        LayoutItemProxy {
-            Layout.fillWidth: true
-            target: bodyLabel
-        }
-    }
+        // Notification body
+        RowLayout {
+            id: summaryRow
 
-    GridLayout {
-        Layout.fillWidth: true
+            Layout.alignment: Qt.AlignTop
+            Layout.columnSpan: notificationItem.inGroup ? 2 : 1
+            visible: summaryLabel.text !== ""
 
-        rowSpacing: notificationItem.spacing
-        columnSpacing: notificationItem.spacing
-
-        Accessible.role: notificationItem.inHistory ? Accessible.NoRole : Accessible.Notification
-        Accessible.name: summaryLabel.text
-        Accessible.description: notificationItem.accessibleDescription
-        visible: notificationItem.inGroup
-        columns: 2
-
-        LayoutItemProxy {
-            target: summaryRow
-            Layout.fillWidth: true
-            Layout.columnSpan: 2
-        }
-        LayoutItemProxy {
-            Layout.fillWidth: true
-            target: bodyLabel
-        }
-        LayoutItemProxy { target: iconContainer }
-    }
-
-
-    // Notification body
-    RowLayout {
-        id: summaryRow
-
-        Layout.alignment: Qt.AlignTop
-        visible: summaryLabel.text !== ""
-
-        Kirigami.Heading {
-            id: summaryLabel
-            Layout.fillWidth: true
-            Layout.preferredHeight: implicitHeight
-            Layout.topMargin: notificationItem.inGroup && lineCount > 1 ? Math.max(0, (headingElement.Layout.preferredHeight - summaryLabelTextMetrics.height) / 2) : 0
-            textFormat: Text.PlainText
-            maximumLineCount: 3
-            wrapMode: Text.WordWrap
-            elide: Text.ElideRight
-            level: 4
-            // Give it a bit more visual prominence than the app name in the header
-            type: Kirigami.Heading.Type.Primary
-            text: {
-                if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
-                    if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
-                        if (notificationItem.summary) {
-                            return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
-                        }
-                    } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
-                        if (notificationItem.jobError) {
+            Kirigami.Heading {
+                id: summaryLabel
+                Layout.fillWidth: true
+                Layout.preferredHeight: implicitHeight
+                Layout.topMargin: notificationItem.inGroup && lineCount > 1 ? Math.max(0, (headingElement.Layout.preferredHeight - summaryLabelTextMetrics.height) / 2) : 0
+                textFormat: Text.PlainText
+                maximumLineCount: 3
+                wrapMode: Text.WordWrap
+                elide: Text.ElideRight
+                level: 4
+                // Give it a bit more visual prominence than the app name in the header
+                type: Kirigami.Heading.Type.Primary
+                text: {
+                    if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
+                        if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
                             if (notificationItem.summary) {
-                                return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
-                            } else {
-                                return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Failed");
+                                return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
                             }
-                        } else {
-                            if (notificationItem.summary) {
-                                return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+                        } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
+                            if (notificationItem.jobError) {
+                                if (notificationItem.summary) {
+                                    return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
+                                } else {
+                                    return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Failed");
+                                }
                             } else {
-                                return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Finished");
+                                if (notificationItem.summary) {
+                                    return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
+                                } else {
+                                    return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Finished");
+                                }
                             }
                         }
                     }
+                    // some apps use their app name as summary, avoid showing the same text twice
+                    // try very hard to match the two
+                    if (notificationItem.summary && notificationItem.summary.toLocaleLowerCase().trim() != notificationItem.applicationName.toLocaleLowerCase().trim()) {
+                        return notificationItem.summary;
+                    }
+                    return "";
                 }
-                // some apps use their app name as summary, avoid showing the same text twice
-                // try very hard to match the two
-                if (notificationItem.summary && notificationItem.summary.toLocaleLowerCase().trim() != notificationItem.applicationName.toLocaleLowerCase().trim()) {
-                    return notificationItem.summary;
-                }
-                return "";
-            }
-            visible: text !== ""
+                visible: text !== ""
 
-            TextMetrics {
-                id: summaryLabelTextMetrics
-                font: summaryLabel.font
-                text: summaryLabel.text
+                TextMetrics {
+                    id: summaryLabelTextMetrics
+                    font: summaryLabel.font
+                    text: summaryLabel.text
+                }
             }
+
+            // inGroup headerItem is reparented here
         }
 
-        // inGroup headerItem is reparented here
-    }
+        SelectableLabel {
+            id: bodyLabel
 
-    SelectableLabel {
-        id: bodyLabel
+            Layout.fillWidth: true
+            Layout.row: 1
+            Layout.column: 0
+            Layout.alignment: Qt.AlignTop
+            readonly property real maximumHeight: Kirigami.Units.gridUnit * notificationItem.maximumLineCount
+            readonly property bool truncated: notificationItem.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
+            Layout.maximumHeight: truncated ? maximumHeight : implicitHeight
 
-        Layout.fillWidth: true
-        Layout.alignment: Qt.AlignTop
-        readonly property real maximumHeight: Kirigami.Units.gridUnit * notificationItem.maximumLineCount
-        readonly property bool truncated: notificationItem.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
-        Layout.maximumHeight: truncated ? maximumHeight : implicitHeight
+            listViewParent: notificationItem.listViewParent
+            // HACK RichText does not allow to specify link color and since LineEdit
+            // does not support StyledText, we have to inject some CSS to force the color,
+            // cf. QTBUG-81463 and to some extent QTBUG-80354
+            text: "<style>a { color: " + Kirigami.Theme.linkColor + "; }</style>" + notificationItem.body
 
-        listViewParent: notificationItem.listViewParent
-        // HACK RichText does not allow to specify link color and since LineEdit
-        // does not support StyledText, we have to inject some CSS to force the color,
-        // cf. QTBUG-81463 and to some extent QTBUG-80354
-        text: "<style>a { color: " + Kirigami.Theme.linkColor + "; }</style>" + notificationItem.body
+            // Cannot do text !== "" because RichText adds some HTML tags even when empty
+            visible: notificationItem.body !== ""
+            onClicked: notificationItem.bodyClicked()
+            onLinkActivated: Qt.openUrlExternally(link)
+        }
 
-        // Cannot do text !== "" because RichText adds some HTML tags even when empty
-        visible: notificationItem.body !== ""
-        onClicked: notificationItem.bodyClicked()
-        onLinkActivated: Qt.openUrlExternally(link)
-    }
+        Item {
+            id: iconContainer
 
-    Item {
-        id: iconContainer
+            Layout.alignment: Qt.AlignTop
+            Layout.rowSpan: notificationItem.inGroup ? 1 : 2
+            Layout.row: notificationItem.inGroup ? 1 : 0
+            Layout.column: 1
+            implicitWidth: visible ? iconItem.width : 0
+            implicitHeight: visible ? Math.max(iconItem.height, bodyLabel.height + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
 
-        Layout.alignment: Qt.AlignTop
-        implicitWidth: visible ? iconItem.width : 0
-        implicitHeight: visible ? Math.max(iconItem.height, bodyLabel.height + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
+            visible: iconItem.shouldBeShown
 
-        visible: iconItem.shouldBeShown
+            Kirigami.Icon {
+                id: iconItem
 
-        Kirigami.Icon {
-            id: iconItem
+                width: Kirigami.Units.iconSizes.large
+                height: Kirigami.Units.iconSizes.large
+                anchors.verticalCenter: parent.verticalCenter
 
-            width: Kirigami.Units.iconSizes.large
-            height: Kirigami.Units.iconSizes.large
-            anchors.verticalCenter: parent.verticalCenter
+                // don't show two identical icons
+                readonly property bool shouldBeShown: valid && source != notificationItem.applicationIconSource
 
-            // don't show two identical icons
-            readonly property bool shouldBeShown: valid && source != notificationItem.applicationIconSource
-
-            smooth: true
-            source: notificationItem.icon
+                smooth: true
+                source: notificationItem.icon
+            }
         }
     }
 
