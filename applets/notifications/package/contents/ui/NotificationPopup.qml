@@ -237,19 +237,10 @@ PlasmaCore.Dialog {
 
             NotificationItem {
                 id: notificationItem
-
-                anchors.left: parent.left
-                anchors.leftMargin: !LayoutMirroring.enabled && criticalNotificationLine.visible ? criticalNotificationLine.implicitWidth : 0
-                anchors.right: parent.right
-
                 // let the item bleed into the dialog margins so the close button margins cancel out
                 y: closable || dismissable || configurable ? -notificationPopup.margins.top : 0
-
-                headingLeftMargin: -anchors.leftMargin
-
-                headingLeftPadding: LayoutMirroring.enabled ? -notificationPopup.margins.left : 0
-                headingRightPadding: LayoutMirroring.enabled ? 0 : -notificationPopup.margins.right
-
+                headingRightPadding: -notificationPopup.margins.right
+                width: parent.width
                 maximumLineCount: 8
                 bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
 
@@ -257,6 +248,8 @@ PlasmaCore.Dialog {
                 thumbnailRightPadding: -notificationPopup.margins.right
                 thumbnailTopPadding: -notificationPopup.margins.top
                 thumbnailBottomPadding: -notificationPopup.margins.bottom
+
+                extraSpaceForCriticalNotificationLine: criticalNotificationLine.visible ? criticalNotificationLine.implicitWidth : 0
 
                 timeout: timer.running ? timer.interval : 0
 
