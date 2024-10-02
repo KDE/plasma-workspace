@@ -163,9 +163,6 @@ ColumnLayout {
             target: iconContainer
         }
         LayoutItemProxy {
-            // Workaround for https://bugreports.qt.io/browse/QTBUG-126196
-            // remove as soon as we can depend from a fixed Qt
-            Layout.preferredWidth: notificationItem.width - iconContainer.width - notificationItem.spacing
             Layout.fillWidth: true
             target: bodyLabel
         }
