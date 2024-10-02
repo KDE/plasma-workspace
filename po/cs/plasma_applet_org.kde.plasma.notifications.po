@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-21 00:42+0000\n"
+"POT-Creation-Date: 2024-10-02 00:41+0000\n"
 "PO-Revision-Date: 2024-08-14 15:39+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -404,35 +404,35 @@ msgstr "Minimalizovat"
 msgid "Close"
 msgstr "Zavřít"
 
-#: package/contents/ui/NotificationItem.qml:231
+#: package/contents/ui/NotificationItem.qml:237
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (Pozastaveno)"
 
-#: package/contents/ui/NotificationItem.qml:236
+#: package/contents/ui/NotificationItem.qml:242
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (Selhalo)"
 
-#: package/contents/ui/NotificationItem.qml:238
+#: package/contents/ui/NotificationItem.qml:244
 #, kde-format
 msgid "Job Failed"
 msgstr "Úloha selhala"
 
-#: package/contents/ui/NotificationItem.qml:242
+#: package/contents/ui/NotificationItem.qml:248
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1: (Dokončeno)"
 
-#: package/contents/ui/NotificationItem.qml:244
+#: package/contents/ui/NotificationItem.qml:250
 #, kde-format
 msgid "Job Finished"
 msgstr "Úloha byla dokončena"
 
-#: package/contents/ui/NotificationItem.qml:395
+#: package/contents/ui/NotificationItem.qml:401
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
