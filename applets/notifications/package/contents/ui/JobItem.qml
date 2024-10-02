@@ -176,9 +176,6 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: expandButton
 
-            Layout.fillWidth: true
-            Layout.maximumWidth: implicitWidth
-
             icon.name: checked ? "collapse-symbolic" : "expand-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Hides/expands item details", "Details")
             checkable: jobItem.jobDetails && jobItem.jobDetails.hasDetails
@@ -190,9 +187,6 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: suspendButton
 
-            Layout.fillWidth: true
-            Layout.maximumWidth: implicitWidth
-
             icon.name: "media-playback-pause-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
             onClicked: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended ? jobItem.resumeJobClicked()
@@ -201,9 +195,6 @@ ColumnLayout {
 
         PlasmaComponents3.Button {
             id: killButton
-
-            Layout.fillWidth: true
-            Layout.maximumWidth: implicitWidth
 
             icon.name: "dialog-cancel-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
