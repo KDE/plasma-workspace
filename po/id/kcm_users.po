@@ -1,6 +1,6 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Wantoyèk <wantoyek@gmail.com>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Wantoyèk <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 # SPDX-FileCopyrightText: 2023 Linerly <linerly@linerly.xyz>
 #
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:40+0000\n"
-"PO-Revision-Date: 2023-12-03 13:47+0700\n"
-"Last-Translator: Linerly <linerly@linerly.xyz>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-09-30 21:39+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -187,14 +187,13 @@ msgstr "Buat"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "Pilih Area Gambar"
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
-msgstr "Jari Didaftarkan"
+msgstr "Jari didaftarkan"
 
 #: src/ui/EnrollFeedback.qml:28
 #, kde-format
@@ -378,20 +377,16 @@ msgid "Users"
 msgstr "Pengguna"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Tambahkan Baru"
+msgstr "Tambahkan Baru..."
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Tambahkan Baru"
+msgstr "Tambahkan Pengguna Baru..."
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -547,6 +542,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"File-file gambar (Semua jenis file utama) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
+"jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:196
 #, kde-format
@@ -572,6 +569,10 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Tidak dapat mengubah jenis akun ke Standar kecuali jika terdapat setidaknya "
+"satu akun Administrator lain di sistem. Tanpa akun Administrator, "
+"autentikasi tidak akan mungkin dilakukan atau memerlukan penggunaan kata "
+"sandi root yang tidak aman."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format

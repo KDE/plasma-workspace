@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-20 00:41+0000\n"
+"POT-Creation-Date: 2024-10-02 02:33+0000\n"
 "PO-Revision-Date: 2024-02-05 07:41-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -64,18 +64,20 @@ msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "…ਐਡ-ਆਨ ਅਣ-ਇੰਸਟਾਲ ਕਰੋ ਜਾਂ ਇੰਤਜ਼ਾਮ ਕਰੋ"
 
-#: plugin/appentry.cpp:301
+#: plugin/appentry.cpp:328
 #, kde-format
 msgid "Hide Application"
 msgstr "ਐਪਲੀਕੇਸ਼ਨ ਓਹਲੇ ਕਰੋ"
 
-#: plugin/appentry.cpp:359
-#, kde-format
-msgctxt "App name (Generic name)"
+#: plugin/appentry.cpp:390
+#, fuzzy, kde-format
+#| msgctxt "App name (Generic name)"
+#| msgid "%1 (%2)"
+msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:361
+#: plugin/appentry.cpp:392
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
@@ -88,12 +90,12 @@ msgstr "%1 (%2)"
 msgid "Applications"
 msgstr "ਐਪਲੀਕੇਸ਼ਨਾਂ"
 
-#: plugin/appsmodel.cpp:165
+#: plugin/appsmodel.cpp:167
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "ਇਸ ਅਧੀਨ-ਮੇਨੂ ਵਿੱਚ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨੂੰ ਲੁਕਾਓ"
 
-#: plugin/appsmodel.cpp:174
+#: plugin/appsmodel.cpp:176
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "'%1' ਵਿੱਚ ਐਪਲੀਕੇਸਨਾਂ ਨੂੰ ਨਾ-ਲੁਕਾਓ"
@@ -114,7 +116,7 @@ msgid "Computer"
 msgstr "ਕੰਪਿਊਟਰ"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:546 plugin/rootmodel.cpp:392
+#: plugin/kastatsfavoritesmodel.cpp:553 plugin/rootmodel.cpp:392
 #: plugin/simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"

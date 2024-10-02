@@ -4,21 +4,22 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2020, 2021.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
 # SPDX-FileCopyrightText: 2023 Johannes Obermayr <johannesobermayr@gmx.de>
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-09 00:40+0000\n"
-"PO-Revision-Date: 2023-12-21 18:41+0100\n"
-"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
+"PO-Revision-Date: 2024-09-29 18:48+0200\n"
+"Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
 #, kde-format
@@ -189,11 +190,10 @@ msgstr "Erstellen"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "Bildbereich auswählen"
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
 msgstr "Finger registriert"
@@ -380,20 +380,16 @@ msgid "Users"
 msgstr "Benutzer"
 
 #: src/ui/main.qml:31
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Neu hinzufügen"
+msgstr "Neu hinzufügen …"
 
 #: src/ui/main.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Neu hinzufügen"
+msgstr "Neuen Benutzer hinzufügen …"
 
 #: src/ui/main.qml:108
 #, kde-format
@@ -530,7 +526,7 @@ msgstr "Initialen"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr "Datei wählen ..."
+msgstr "Datei wählen …"
 
 #: src/ui/PicturesSheet.qml:137
 #, kde-format
@@ -549,6 +545,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Bilddateien (Alle wichtigen Dateiformate) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
+"jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:196
 #, kde-format
@@ -574,6 +572,10 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Ändern der Kontoart auf Standard nicht möglich, es sei denn, es gibt "
+"mindestens ein weiteres Administratorkonto auf dem System. Ohne dieses wäre "
+"die Authentifizierung unmöglich oder würde die unsichere Verwendung des "
+"Passworts vom Systemverwalter erfordern."
 
 #: src/ui/UserDetailsPage.qml:177
 #, kde-format
@@ -593,12 +595,12 @@ msgstr "Dateien behalten"
 #: src/ui/UserDetailsPage.qml:220
 #, kde-format
 msgid "Delete User…"
-msgstr "Benutzer löschen ..."
+msgstr "Benutzer löschen …"
 
 #: src/ui/UserDetailsPage.qml:232
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
-msgstr "Fingerabdruck-Authentifizierung konfigurieren ..."
+msgstr "Fingerabdruck-Authentifizierung konfigurieren …"
 
 #: src/ui/UserDetailsPage.qml:264
 #, kde-kuit-format

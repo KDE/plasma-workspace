@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 02:32+0000\n"
-"PO-Revision-Date: 2024-09-29 21:38+0700\n"
+"PO-Revision-Date: 2024-09-30 21:30+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -416,7 +416,7 @@ msgstr "Nomor Telepon"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Ukuran Penyimpanan dan Data"
 
 #: optionsmodel.cpp:131 optionsmodel.cpp:375
 #, kde-format
@@ -428,26 +428,26 @@ msgstr "Baku Sistem"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:300
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:303
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:377
 #, kde-format
 msgctxt ""
 "as subtitle, remind user that the format used now is inherited from locale %1"
 msgid " (Standard format for %1)"
-msgstr ""
+msgstr " (Format standar untuk %1)"
 
 #: regionandlangsettingsbase.kcfg:18 regionandlangsettingsbase.kcfg:21
 #: regionandlangsettingsbase.kcfg:24 regionandlangsettingsbase.kcfg:27
@@ -456,7 +456,7 @@ msgstr ""
 #: regionandlangsettingsbase.kcfg:42
 #, kde-format
 msgid "Inherit Language"
-msgstr ""
+msgstr "Bahasa Warisan"
 
 #: ui/AdvancedLanguageSelectPage.qml:20
 #, kde-format
@@ -478,12 +478,12 @@ msgstr ""
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr ""
+msgstr "Bahasa \"%1\" tidak didukung"
 
 #: ui/AdvancedLanguageSelectPage.qml:55
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
-msgstr ""
+msgstr "Tambahkan bahasa di urutan yang Anda mau untuk Anda lihat di aplikasi."
 
 #: ui/AdvancedLanguageSelectPage.qml:93
 #, kde-format
@@ -501,7 +501,7 @@ msgstr "Ubah Bahasa"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
-msgstr ""
+msgstr "Pindah ke atas"
 
 #: ui/AdvancedLanguageSelectPage.qml:114
 #, kde-format
@@ -513,7 +513,7 @@ msgstr "Hapus"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
-msgstr ""
+msgstr "Tidak Ada Bahasa yang Dikonfigurasi"
 
 #: ui/AdvancedLanguageSelectPage.qml:158 ui/AdvancedLanguageSelectPage.qml:169
 #, kde-format
@@ -531,7 +531,7 @@ msgstr "Tambahkan Lagi…"
 #, kde-format
 msgctxt "@info"
 msgid "Changes will take effect the next time you log in."
-msgstr ""
+msgstr "Perubahan akan berpengaruh di lain waktu saat Anda masuk login."
 
 #: ui/main.qml:40
 #, kde-format
@@ -545,6 +545,7 @@ msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
 msgstr ""
+"Menghasilkan file dukungan bahasa dan lokal; jangan dulu mematikan komputer."
 
 #: ui/main.qml:65
 #, kde-format
@@ -580,7 +581,7 @@ msgstr "Modifikasi..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Ukuran Penyimpanan dan Data"
 
 #: ui/main.qml:275
 #, kde-format
@@ -600,12 +601,12 @@ msgstr "Mata Uang"
 #: ui/main.qml:281
 #, kde-format
 msgid "Measurements"
-msgstr ""
+msgstr "Pengukuran"
 
 #: ui/main.qml:283
 #, kde-format
 msgid "Paper Size"
-msgstr ""
+msgstr "Ukuran Kertas"
 
 #: ui/main.qml:285
 #, kde-format

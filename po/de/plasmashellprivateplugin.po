@@ -2,6 +2,7 @@
 # Burkhard Lück <lueck@hube-lueck.de>, 2014, 2016, 2018, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2016, 2022, 2023.
 # Jannick Kuhr <opensource@kuhr.org>, 2023.
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
@@ -15,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,12 +32,12 @@ msgstr "kde-i18n-de@kde.org"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Akku %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Akku"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -144,7 +145,7 @@ msgstr "Offen halten"
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:270
 #, kde-format
 msgid "Configure…"
-msgstr "Einrichten ..."
+msgstr "Einrichten …"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -358,7 +359,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Kürzlich installiert"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -373,14 +374,13 @@ msgstr "Neue Miniprogramme herunterladen"
 #: shellprivate/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr "Miniprogramm aus lokaler Datei installieren ..."
+msgstr "Miniprogramm aus lokaler Datei installieren …"
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Alle Miniprogramme"
+msgstr "Neue Miniprogramme holen"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -388,11 +388,10 @@ msgid "Select Plasmoid File"
 msgstr "Plasmoid-Datei auswählen"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Die Installation des Pakets %1 ist fehlgeschlagen."
+msgstr "Die Installation des Pakets %1 ist fehlgeschlagen: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format

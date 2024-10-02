@@ -2,14 +2,14 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kfontinst package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2022-08-19 20:36+0700\n"
+"PO-Revision-Date: 2024-09-30 21:52+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -59,11 +59,10 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "(C) Craig Drummond, 2007"
 
 #: apps/Installer.cpp:124
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
 msgstr ""
-"Buat dialog tampak sebentar untuk aplikasi X yang ditentukan oleh winid"
+"Buat dialog tampak sebentar untuk jendela yang ditentukan oleh windowHandle"
 
 #: apps/Installer.cpp:127
 #, kde-format
