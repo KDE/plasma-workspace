@@ -2,14 +2,14 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kcmstyle package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-24 03:15+0000\n"
-"PO-Revision-Date: 2022-08-19 20:36+0700\n"
+"PO-Revision-Date: 2024-09-30 21:36+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: gtkpage.cpp:59
 #, kde-format
@@ -131,12 +131,12 @@ msgstr "Konfigurasi Gaya...."
 #: package/contents/ui/main.qml:116
 #, kde-format
 msgid "Configure Icons and Toolbars"
-msgstr "Konfigurasikan Ikon dan Bilah Alat"
+msgstr "Konfigurasi Ikon dan Bilah Alat"
 
 #: package/contents/ui/main.qml:132
 #, kde-format
 msgid "Configure GNOME/GTK Application Style…"
-msgstr "Konfigurasikan Gaya Aplikasi GNOME/GTK..."
+msgstr "Konfigurasi Gaya Aplikasi GNOME/GTK..."
 
 #: styleconfdialog.cpp:21
 #, kde-format
@@ -178,7 +178,7 @@ msgstr "Tombol radio"
 #: stylepreview.ui:128
 #, no-c-format, kde-format
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #. i18n: ectx: attribute (title), widget (QWidget, tab_2)
 #: stylepreview.ui:136
