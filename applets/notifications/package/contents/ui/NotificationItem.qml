@@ -341,14 +341,12 @@ ColumnLayout {
     }
 
     // Actions
-    Item {
+    StackLayout {
         id: actionContainer
         Layout.fillWidth: true
-        Layout.preferredHeight: childrenRect.height
         visible: actionRepeater.count > 0 && actionRow.parent === this
 
-        implicitWidth: actionRow.implicitWidth
-        implicitHeight: actionRow.implicitHeight
+        currentIndex: replyLoader.active ? 1 : 0
 
         // Notification actions
         RowLayout {
