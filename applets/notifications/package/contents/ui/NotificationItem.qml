@@ -363,7 +363,7 @@ ColumnLayout {
             // For a cleaner look, if there is a thumbnail, puts the actions next to the thumbnail strip's menu button
             parent: thumbnailStripLoader.item?.actionContainer ?? actionContainer
             width: parent.width
-            spacing: Kirigami.Units.smallSpacing
+            spacing: 0
 
             enabled: !replyLoader.active
             opacity: replyLoader.active ? 0 : 1
@@ -377,11 +377,6 @@ ColumnLayout {
             Item {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
-
-                // If the actions are large enough to be the thing that determines
-                // the popup size, we should hide it as otherwise we end up with a
-                // `spacing` sized gap on the leading side of the row.
-                visible: actionRow.implicitWidth < notificationItem.width
             }
 
             Repeater {
@@ -412,6 +407,7 @@ ColumnLayout {
                 PlasmaComponents3.ToolButton {
                     Layout.fillWidth: true
                     Layout.maximumWidth: implicitWidth
+                    Layout.leftMargin: index > 0 ? Kirigami.Units.smallSpacing : 0
 
                     flat: false
                     // why does it spit "cannot assign undefined to string" when a notification becomes expired?
