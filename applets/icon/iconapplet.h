@@ -56,6 +56,8 @@ public:
 
     Q_INVOKABLE bool isAcceptableDrag(QObject *dropEvent);
 
+    void showConfigurationDialog();
+
 Q_SIGNALS:
     void urlChanged(const QUrl &url);
 
@@ -96,4 +98,6 @@ private:
     QPointer<KPropertiesDialog> m_configDialog;
 
     TaskManager::StartupTasksModel *m_startupTasksModel = nullptr;
+
+    QTimer *m_popupTimer;
 };
