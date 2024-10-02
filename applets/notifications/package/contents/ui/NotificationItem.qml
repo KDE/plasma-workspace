@@ -17,14 +17,8 @@ import org.kde.notificationmanager as NotificationManager
 
 import org.kde.plasma.private.notifications 2.0 as Notifications
 
-import "global"
-
 ColumnLayout {
     id: notificationItem
-
-    // We don't want the popups to grow too much due to very long labels
-    Layout.preferredWidth: Math.max(actionRow.implicitWidth, Globals.popupWidth - Kirigami.Units.smallSpacing * 2)
-    Layout.preferredHeight: implicitHeight
 
     property int maximumLineCount: 0
     property alias bodyCursorShape: bodyLabel.cursorShape

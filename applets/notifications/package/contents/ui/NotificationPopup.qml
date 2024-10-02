@@ -116,12 +116,8 @@ PlasmaCore.Dialog {
         id: focusListener
         property bool wantsFocus: false
 
-        // Layout.minimumWidth/MaximumWidth controls the actual
-        // window minimum/maximum size for Plasma.Dialog
-        Layout.minimumWidth: Math.min(Math.max(notificationPopup.minimumContentWidth, notificationItem.Layout.preferredWidth), Math.max(notificationPopup.minimumContentWidth, notificationPopup.maximumContentWidth))
-        Layout.minimumHeight: notificationItem.Layout.preferredHeight + notificationItem.y
-        Layout.maximumWidth: Layout.minimumWidth
-        Layout.maximumHeight: Layout.minimumHeight
+        width: Math.min(Math.max(notificationPopup.minimumContentWidth, notificationItem.implicitWidth), Math.max(notificationPopup.minimumContentWidth, notificationPopup.maximumContentWidth))
+        height: notificationItem.implicitHeight + notificationItem.y
 
         acceptedButtons: Qt.AllButtons
         hoverEnabled: true
