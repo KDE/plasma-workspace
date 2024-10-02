@@ -19,11 +19,13 @@ import org.kde.plasma.private.notifications 2.0 as Notifications
 
 import "global"
 
+import "delegates" as Delegates
+
 ColumnLayout {
     id: notificationItem
 
     // We don't want the popups to grow too much due to very long labels
-    Layout.preferredWidth: Math.max(actionRow.implicitWidth, Globals.popupWidth - Kirigami.Units.smallSpacing * 2)
+    Layout.preferredWidth: Math.max(footerLoader.implicitWidth, Globals.popupWidth)
     Layout.preferredHeight: implicitHeight
 
     property int maximumLineCount: 0
@@ -85,11 +87,11 @@ ColumnLayout {
     property alias remainingTime: notificationHeading.remainingTime
 
     readonly property bool menuOpen: bodyLabel.contextMenu !== null
-                                     || Boolean(thumbnailStripLoader.item?.menuOpen || jobLoader.item?.menuOpen)
+                                     || Boolean(footerLoader.item?.menuOpen)
 
-    readonly property bool dragging: Boolean(thumbnailStripLoader.item?.dragging || jobLoader.item?.dragging)
-    property bool replying: false
-    readonly property bool hasPendingReply: replyLoader.item?.text !== ""
+    readonly property bool dragging: Boolean(footerLoader.item?.dragging)
+    readonly property bool replying: footerLoader.item?.replying ?? false
+    readonly property bool hasPendingReply: footerLoader.item?.hasPendingReply ?? false
     readonly property alias headerHeight: headingElement.height
     readonly property real textPreferredWidth: Kirigami.Units.gridUnit * 18
 
@@ -136,7 +138,7 @@ ColumnLayout {
             // which breaks the popup default action mouse handler, cf. QTBUG-89785
             Component.onCompleted: Notifications.InputDisabler.makeTransparentForInput(this)
 
-            contentItem: NotificationHeader {
+            contentItem: Delegates.NotificationHeader {
                 id: notificationHeading
 
                 inGroup: notificationItem.inGroup
@@ -215,269 +217,45 @@ ColumnLayout {
         Layout.alignment: Qt.AlignTop
         visible: summaryLabel.text !== ""
 
-        Kirigami.Heading {
+        Delegates.Heading {
             id: summaryLabel
-            Layout.fillWidth: true
-            Layout.preferredHeight: implicitHeight
+            summary: notificationItem.summary
+            notificationType: notificationItem.notificationType
+            jobState: notificationItem.jobState
+            applicationName: notificationItem.applicationName
             Layout.topMargin: notificationItem.inGroup && lineCount > 1 ? Math.max(0, (headingElement.Layout.preferredHeight - summaryLabelTextMetrics.height) / 2) : 0
-            textFormat: Text.PlainText
-            maximumLineCount: 3
-            wrapMode: Text.WordWrap
-            elide: Text.ElideRight
-            level: 4
-            // Give it a bit more visual prominence than the app name in the header
-            type: Kirigami.Heading.Type.Primary
-            text: {
-                if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
-                    if (notificationItem.jobState === NotificationManager.Notifications.JobStateSuspended) {
-                        if (notificationItem.summary) {
-                            return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying is paused", "%1 (Paused)", notificationItem.summary);
-                        }
-                    } else if (notificationItem.jobState === NotificationManager.Notifications.JobStateStopped) {
-                        if (notificationItem.jobError) {
-                            if (notificationItem.summary) {
-                                return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has failed", "%1 (Failed)", notificationItem.summary);
-                            } else {
-                                return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Failed");
-                            }
-                        } else {
-                            if (notificationItem.summary) {
-                                return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has finished", "%1 (Finished)", notificationItem.summary);
-                            } else {
-                                return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Finished");
-                            }
-                        }
-                    }
-                }
-                // some apps use their app name as summary, avoid showing the same text twice
-                // try very hard to match the two
-                if (notificationItem.summary && notificationItem.summary.toLocaleLowerCase().trim() != notificationItem.applicationName.toLocaleLowerCase().trim()) {
-                    return notificationItem.summary;
-                }
-                return "";
-            }
-            visible: text !== ""
-
-            TextMetrics {
-                id: summaryLabelTextMetrics
-                font: summaryLabel.font
-                text: summaryLabel.text
-            }
         }
 
         // inGroup headerItem is reparented here
     }
 
-    SelectableLabel {
+    Delegates.Body {
         id: bodyLabel
-
-        Layout.fillWidth: true
-        Layout.alignment: Qt.AlignTop
-        readonly property real maximumHeight: Kirigami.Units.gridUnit * notificationItem.maximumLineCount
-        readonly property bool truncated: notificationItem.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
-        Layout.maximumHeight: truncated ? maximumHeight : implicitHeight
-
-        listViewParent: notificationItem.listViewParent
-        // HACK RichText does not allow to specify link color and since LineEdit
-        // does not support StyledText, we have to inject some CSS to force the color,
-        // cf. QTBUG-81463 and to some extent QTBUG-80354
-        text: "<style>a { color: " + Kirigami.Theme.linkColor + "; }</style>" + notificationItem.body
-
-        // Cannot do text !== "" because RichText adds some HTML tags even when empty
-        visible: notificationItem.body !== ""
+        maximumLineCount: notificationItem.maximumLineCount
+        body: notificationItem.body
         onClicked: notificationItem.bodyClicked()
-        onLinkActivated: Qt.openUrlExternally(link)
     }
 
-    Item {
+    Delegates.Icon {
         id: iconContainer
 
-        Layout.alignment: Qt.AlignTop
-        implicitWidth: visible ? iconItem.width : 0
-        implicitHeight: visible ? Math.max(iconItem.height, bodyLabel.height + (notificationItem.inGroup ? 0 : summaryRow.implicitHeight)) : 0
-
-        visible: iconItem.shouldBeShown
-
-        Kirigami.Icon {
-            id: iconItem
-
-            width: Kirigami.Units.iconSizes.large
-            height: Kirigami.Units.iconSizes.large
-            anchors.verticalCenter: parent.verticalCenter
-
-            // don't show two identical icons
-            readonly property bool shouldBeShown: valid && source != notificationItem.applicationIconSource
-
-            smooth: true
-            source: notificationItem.icon
-        }
+        source: notificationItem.icon
+        applicationIconSource: notificationItem.applicationIconSource
     }
 
-    // Job progress reporting
     Loader {
-        id: jobLoader
+        id: footerLoader
         Layout.fillWidth: true
-        Layout.preferredHeight: item ? item.implicitHeight : 0
-        active: notificationItem.notificationType === NotificationManager.Notifications.JobType
         visible: active
-        sourceComponent: JobItem {
-            iconContainerItem: iconContainer
-
-            jobState: notificationItem.jobState
-            jobError: notificationItem.jobError
-            percentage: notificationItem.percentage
-            suspendable: notificationItem.suspendable
-            killable: notificationItem.killable
-
-            jobDetails: notificationItem.jobDetails
-
-            onSuspendJobClicked: notificationItem.suspendJobClicked()
-            onResumeJobClicked: notificationItem.resumeJobClicked()
-            onKillJobClicked: notificationItem.killJobClicked()
-
-            onOpenUrl: notificationItem.openUrl(url)
-            onFileActionInvoked: notificationItem.fileActionInvoked(action)
-        }
-    }
-
-    // Actions
-    StackLayout {
-        id: actionContainer
-        Layout.fillWidth: true
-        visible: actionRepeater.count > 0 && actionRow.parent === this
-
-        currentIndex: replyLoader.active ? 1 : 0
-
-        // Notification actions
-        RowLayout {
-            id: actionRow
-            // For a cleaner look, if there is a thumbnail, puts the actions next to the thumbnail strip's menu button
-            parent: thumbnailStripLoader.item?.actionContainer ?? actionContainer
-            width: parent.width
-            spacing: 0
-
-            enabled: !replyLoader.active
-            opacity: replyLoader.active ? 0 : 1
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
+        sourceComponent: {
+            if (notificationItem.notificationType === NotificationManager.Notifications.JobType) {
+                return jobComponent;
+            } else if (notificationItem.urls.length > 0) {
+                return thumbnailComponent
+            } else if (notificationItem.actionNames.length > 0) {
+                return actionComponent;
             }
-
-            Item {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-            }
-
-            Repeater {
-                id: actionRepeater
-
-                model: {
-                    var buttons = [];
-                    var actionNames = (notificationItem.actionNames || []);
-                    var actionLabels = (notificationItem.actionLabels || []);
-
-                    for (var i = 0; i < actionNames.length; ++i) {
-                        buttons.push({
-                            actionName: actionNames[i],
-                            label: actionLabels[i]
-                        });
-                    }
-
-                    if (notificationItem.hasReplyAction) {
-                        buttons.unshift({
-                            actionName: "inline-reply",
-                            label: notificationItem.replyActionLabel || i18nc("Reply to message", "Reply")
-                        });
-                    }
-
-                    return buttons;
-                }
-
-                PlasmaComponents3.ToolButton {
-                    Layout.fillWidth: true
-                    Layout.maximumWidth: implicitWidth
-                    Layout.leftMargin: index > 0 ? Kirigami.Units.smallSpacing : 0
-
-                    flat: false
-                    // why does it spit "cannot assign undefined to string" when a notification becomes expired?
-                    text: modelData.label || ""
-
-                    onClicked: {
-                        if (modelData.actionName === "inline-reply") {
-                            replyLoader.beginReply();
-                            return;
-                        }
-
-                        notificationItem.actionInvoked(modelData.actionName);
-                    }
-                }
-            }
-        }
-
-        // inline reply field
-        Loader {
-            id: replyLoader
-            width: parent.width
-            height: active && item ? item.implicitHeight : 0
-            // When there is only one action and it is a reply action, show text field right away
-            active: notificationItem.replying || (notificationItem.hasReplyAction && (notificationItem.actionNames || []).length === 0)
-            visible: active
-            opacity: active ? 1 : 0
-            x: active ? 0 : parent.width
-            Behavior on x {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-
-            function beginReply() {
-                notificationItem.replying = true;
-
-                notificationItem.forceActiveFocusRequested();
-                replyLoader.item.activate();
-            }
-
-            sourceComponent: NotificationReplyField {
-                placeholderText: notificationItem.replyPlaceholderText
-                buttonIconName: notificationItem.replySubmitButtonIconName
-                buttonText: notificationItem.replySubmitButtonText
-                onReplied: notificationItem.replied(text)
-
-                replying: notificationItem.replying
-                onBeginReplyRequested: replyLoader.beginReply()
-            }
-        }
-    }
-
-    // Thumbnails
-    Loader {
-        id: thumbnailStripLoader
-        Layout.leftMargin: notificationItem.thumbnailLeftPadding
-        Layout.rightMargin: notificationItem.thumbnailRightPadding
-        // no change in Layout.topMargin to keep spacing to notification text consistent
-        Layout.topMargin: 0
-        Layout.bottomMargin: notificationItem.thumbnailBottomPadding
-        Layout.fillWidth: true
-        Layout.preferredHeight: item ? item.implicitHeight : 0
-        active: notificationItem.urls.length > 0
-        visible: active
-        sourceComponent: ThumbnailStrip {
-            leftPadding: -thumbnailStripLoader.Layout.leftMargin
-            rightPadding: -thumbnailStripLoader.Layout.rightMargin
-            topPadding: -notificationItem.thumbnailTopPadding
-            bottomPadding: -thumbnailStripLoader.Layout.bottomMargin
-            urls: notificationItem.urls
-            onOpenUrl: notificationItem.openUrl(url)
-            onFileActionInvoked: notificationItem.fileActionInvoked(action)
+            return undefined;
         }
     }
 
@@ -504,4 +282,79 @@ ColumnLayout {
             }*/
         }
     ]
+
+
+    // Actions
+    Component {
+        id: actionComponent
+        Delegates.ActionContainer {
+            id: actionContainer
+            Layout.fillWidth: true
+
+            actionNames: notificationItem.actionNames
+            actionLabels: notificationItem.actionLabels
+
+            hasReplyAction: notificationItem.hasReplyAction
+            //replying: notificationItem.replying
+            replyActionLabel: notificationItem.replyActionLabel
+            replyPlaceholderText: notificationItem.replyPlaceholderText
+            replySubmitButtonIconName: notificationItem.replySubmitButtonIconName
+            replySubmitButtonText: notificationItem.replySubmitButtonText
+
+            onForceActiveFocusRequested: notificationItem.forceActiveFocusRequested()
+            onActionInvoked: actionName => notificationItem.actionInvoked(actionName)
+            onReplied: text => notificationItem.replied(text)
+        }
+    }
+
+    // Jobs
+    Component {
+        id: jobComponent
+        Delegates.JobItem {
+            iconContainerItem: iconContainer
+
+            jobState: notificationItem.jobState
+            jobError: notificationItem.jobError
+            percentage: notificationItem.percentage
+            suspendable: notificationItem.suspendable
+            killable: notificationItem.killable
+
+            jobDetails: notificationItem.jobDetails
+
+            onSuspendJobClicked: notificationItem.suspendJobClicked()
+            onResumeJobClicked: notificationItem.resumeJobClicked()
+            onKillJobClicked: notificationItem.killJobClicked()
+
+            onOpenUrl: notificationItem.openUrl(url)
+            onFileActionInvoked: notificationItem.fileActionInvoked(action)
+        }
+    }
+
+    // Thumbnails (contains actions as well)
+    Component {
+        id: thumbnailComponent
+        Delegates.ThumbnailStrip {
+            leftPadding: notificationItem.thumbnailLeftPadding
+            rightPadding: notificationItem.thumbnailRightPadding
+            topPadding: notificationItem.thumbnailTopPadding
+            bottomPadding: notificationItem.thumbnailBottomPadding
+            urls: notificationItem.urls
+            onOpenUrl: notificationItem.openUrl(url)
+            onFileActionInvoked: notificationItem.fileActionInvoked(action)
+
+            actionNames: notificationItem.actionNames
+            actionLabels: notificationItem.actionLabels
+
+            hasReplyAction: notificationItem.hasReplyAction
+            //replying: notificationItem.replying
+            replyActionLabel: notificationItem.replyActionLabel
+            replyPlaceholderText: notificationItem.replyPlaceholderText
+            replySubmitButtonIconName: notificationItem.replySubmitButtonIconName
+            replySubmitButtonText: notificationItem.replySubmitButtonText
+
+            onForceActiveFocusRequested: notificationItem.forceActiveFocusRequested()
+            onActionInvoked: actionName => notificationItem.actionInvoked(actionName)
+            onReplied: text => notificationItem.replied(text)
+        }
+    }
 }
