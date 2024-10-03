@@ -13,6 +13,7 @@
 #include <QRegularExpression>
 #include <private/qtx11extras_p.h>
 
+#include "cursorthemesettings.h"
 #include "thememodel.h"
 #include "xcursortheme.h"
 
@@ -196,46 +197,6 @@ bool CursorThemeModel::hasTheme(const QString &name) const
     return false;
 }
 
-bool CursorThemeModel::isCursorTheme(const QString &theme, const int depth)
-{
-    // Prevent infinite recursion
-    if (depth > 10)
-        return false;
-
-    // Search each icon theme directory for 'theme'
-    for (const QString &baseDir : searchPaths()) {
-        QDir dir(baseDir);
-        if (!dir.exists() || !dir.cd(theme))
-            continue;
-
-        // If there's a cursors subdir, we'll assume this is a cursor theme
-        if (dir.exists(QStringLiteral("cursors")))
-            return true;
-
-        // If the theme doesn't have an index.theme file, it can't inherit any themes.
-        if (!dir.exists(QStringLiteral("index.theme")))
-            continue;
-
-        // Open the index.theme file, so we can get the list of inherited themes
-        KConfig config(dir.path() + "/index.theme"_L1, KConfig::NoGlobals);
-        KConfigGroup cg(&config, u"Icon Theme"_s);
-
-        // Recurse through the list of inherited themes, to check if one of them
-        // is a cursor theme.
-        const QStringList inherits = cg.readEntry("Inherits", QStringList());
-        for (const QString &inherit : inherits) {
-            // Avoid possible DoS
-            if (inherit == theme)
-                continue;
-
-            if (isCursorTheme(inherit, depth + 1))
-                return true;
-        }
-    }
-
-    return false;
-}
-
 bool CursorThemeModel::handleDefault(const QDir &themeDir)
 {
     QFileInfo info(themeDir.path());
@@ -263,7 +224,7 @@ bool CursorThemeModel::handleDefault(const QDir &themeDir)
     return false;
 }
 
-void CursorThemeModel::processThemeDir(const QDir &themeDir)
+void CursorThemeModel::processThemeDir(const QDir &themeDir, const QStringList &whitelist)
 {
     qCDebug(KCM_CURSORTHEME) << "Searching in" << themeDir;
     bool haveCursors = themeDir.exists(QStringLiteral("cursors"));
@@ -280,8 +241,8 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
     // If the directory has an index.theme but not a cursors subdir, then although
     // it might be a valid cursor theme (by inheriting another cursor theme), for
     // the purpose of this KCM it's a duplicate of the inherited theme, so we'll
-    // skip it.
-    if (!themeDir.exists(QStringLiteral("index.theme")) || !haveCursors)
+    // skip it (unless it's in the whitelist)
+    if ((!themeDir.exists(QStringLiteral("index.theme")) || !haveCursors) && !whitelist.contains(themeDir.dirName()))
         return;
 
     // Create a cursor theme object for the theme dir
@@ -301,6 +262,11 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir)
 
 void CursorThemeModel::insertThemes()
 {
+    // Always show the active theme and the default theme, even if they are just duplicates of other themes
+    QStringList whitelist;
+    CursorThemeSettings settings;
+    whitelist << settings.cursorTheme() << settings.defaultCursorThemeValue();
+
     // Scan each base dir for Xcursor themes and add them to the list.
     const QStringList paths{searchPaths()};
     qCDebug(KCM_CURSORTHEME) << "searchPaths:" << paths;
@@ -318,7 +284,7 @@ void CursorThemeModel::insertThemes()
             if (hasTheme(name) || !dir.cd(name))
                 continue;
 
-            processThemeDir(dir);
+            processThemeDir(dir, whitelist);
             dir.cdUp(); // Return to the base dir
         }
     }

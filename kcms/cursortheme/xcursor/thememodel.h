@@ -72,10 +72,9 @@ public:
 
 private:
     bool handleDefault(const QDir &dir);
-    void processThemeDir(const QDir &dir);
+    void processThemeDir(const QDir &dir, const QStringList &whitelist);
     void insertThemes();
     bool hasTheme(const QString &theme) const;
-    bool isCursorTheme(const QString &theme, const int depth = 0);
 
 private:
     QList<CursorTheme *> list;
