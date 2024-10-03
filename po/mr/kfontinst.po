@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-16 00:41+0000\n"
+"POT-Creation-Date: 2024-10-03 00:41+0000\n"
 "PO-Revision-Date: 2013-03-23 15:09+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -353,13 +353,13 @@ msgid "Delete"
 msgstr "काढून टाका"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1150
+#: kcmfontinst/KCmFontInst.cpp:1115 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable"
 msgstr "कार्यान्वित"
 
 #: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
-#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1151
+#: kcmfontinst/KCmFontInst.cpp:1116 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Disable"
 msgstr "अकार्यान्वित"
@@ -978,17 +978,17 @@ msgstr "कार्यान्वित करिता काहिच उप
 msgid "Nothing to Disable"
 msgstr "अकार्यान्वित करिता काहिच उपलब्ध नाही"
 
-#: kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>तुम्हाला नक्की </p><p>'<b>%1</b>' कार्यान्वित करायचे?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1115
+#: kcmfontinst/KCmFontInst.cpp:1111
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>तुम्हाला नक्की </p><p>'<b>%1</b>' अकार्यान्वित करायचे?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1117
+#: kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -996,7 +996,7 @@ msgid ""
 msgstr ""
 "<p>तुम्हाला नक्की </p><p>'<b>%1</b>', अंतर्गत '<b>%2</b>' समूह कार्यान्वित करायचे?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
@@ -1005,31 +1005,31 @@ msgstr ""
 "<p>तुम्हाला नक्की </p><p>'<b>%1</b>', अंतर्गत '<b>%2</b>' समूह अकार्यान्वित करायचे?</"
 "p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1126
+#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1115
 #, kde-format
 msgid "Enable Font"
 msgstr "फॉन्ट कार्यान्वित करा"
 
-#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1116
 #, kde-format
 msgid "Disable Font"
 msgstr "फॉन्ट अकार्यान्वित करा"
 
-#: kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1122
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "तुम्हाला नक्की हे फॉन्ट कार्यान्वित करायचे?"
 msgstr[1] "तुम्हाला नक्की हे %1 फॉन्ट कार्यान्वित करायचे?"
 
-#: kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1123
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "तुम्हाला नक्की हे फॉन्ट अकार्यान्वित करायचे?"
 msgstr[1] "तुम्हाला नक्की हे %1 फॉन्ट अकार्यान्वित करायचे?"
 
-#: kcmfontinst/KCmFontInst.cpp:1138
+#: kcmfontinst/KCmFontInst.cpp:1125
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1042,7 +1042,7 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>तुम्हाला नक्की %1 फॉन्ट समूह '<b>%2</b>' अंतर्गत समाविष्टीत, कार्यान्वित करायचे?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1143
+#: kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1055,23 +1055,23 @@ msgstr[0] ""
 msgstr[1] ""
 "<p>तुम्हाला नक्की %1 फॉन्ट समूह '<b>%2</b>' अंतर्गत समाविष्टीत, अकार्यान्वित करायचे?</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1150
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable Fonts"
 msgstr "फॉन्ट कार्यान्वित करा"
 
-#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1151
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Disable Fonts"
 msgstr "फॉन्ट अकार्यान्वित करा"
 
-#: kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1142
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "फॉन्ट कार्यान्वित करत आहे..."
 
-#: kcmfontinst/KCmFontInst.cpp:1159
+#: kcmfontinst/KCmFontInst.cpp:1144
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"

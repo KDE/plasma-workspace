@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-16 00:41+0000\n"
+"POT-Creation-Date: 2024-10-03 00:41+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -356,13 +356,13 @@ msgid "Delete"
 msgstr "ئۆچۈر"
 
 #: kcmfontinst/FontList.cpp:1302 kcmfontinst/GroupList.cpp:791
-#: kcmfontinst/KCmFontInst.cpp:1126 kcmfontinst/KCmFontInst.cpp:1150
+#: kcmfontinst/KCmFontInst.cpp:1115 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable"
 msgstr "قوزغات"
 
 #: kcmfontinst/FontList.cpp:1303 kcmfontinst/GroupList.cpp:792
-#: kcmfontinst/KCmFontInst.cpp:1127 kcmfontinst/KCmFontInst.cpp:1151
+#: kcmfontinst/KCmFontInst.cpp:1116 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Disable"
 msgstr "چەكلە"
@@ -987,17 +987,17 @@ msgstr "ئىناۋەتلىك قىلىدىغان ھېچنەرسە يوق"
 msgid "Nothing to Disable"
 msgstr "ئىناۋەتسىز قىلىدىغان ھېچنەرسە يوق"
 
-#: kcmfontinst/KCmFontInst.cpp:1113
+#: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>راستلا </p><p>«<b>%1</b>» نى ئىناۋەتلىك قىلماقچىمۇ؟</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1115
+#: kcmfontinst/KCmFontInst.cpp:1111
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
 msgstr "<p>راستلا </p><p>«<b>%1</b>» نى ئىناۋەتسىز قىلماقچىمۇ؟ </p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1117
+#: kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
 msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
@@ -1005,36 +1005,36 @@ msgid ""
 msgstr ""
 "<p>سىز راستلا <b>%2</b> گۇرۇپپىدىكى </p><p><b>%1</b>نى قوزغىتامسىز؟</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1121
+#: kcmfontinst/KCmFontInst.cpp:1113
 #, kde-format
 msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr "<p>سىز راستلا <b>%2</b> گۇرۇپپىدىكى <b>%1</b>نى چەكلەمسىز؟</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1126
+#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1115
 #, kde-format
 msgid "Enable Font"
 msgstr "خەت نۇسخىنى ئىناۋەتلىك قىلىش"
 
-#: kcmfontinst/KCmFontInst.cpp:1125 kcmfontinst/KCmFontInst.cpp:1127
+#: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1116
 #, kde-format
 msgid "Disable Font"
 msgstr "خەت نۇسخىسىنى ئىناۋەتسىز قىلىش"
 
-#: kcmfontinst/KCmFontInst.cpp:1132
+#: kcmfontinst/KCmFontInst.cpp:1122
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
 msgstr[0] "%1 دېگەن خەت نۇسخىلىرىنى ئىناۋەتلىك قىلامسىز؟"
 
-#: kcmfontinst/KCmFontInst.cpp:1135
+#: kcmfontinst/KCmFontInst.cpp:1123
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
 msgstr[0] "%1 دېگەن خەت نۇسخىلىرىنى ئىناۋەتسىز قىلامسىز؟"
 
-#: kcmfontinst/KCmFontInst.cpp:1138
+#: kcmfontinst/KCmFontInst.cpp:1125
 #, kde-format
 msgid ""
 "<p>Do you really want to enable this font contained within group '<b>%2</b>'?"
@@ -1045,7 +1045,7 @@ msgid_plural ""
 msgstr[0] ""
 "<p>سىز راستلا <b>%2</b> گۇرۇپپىدىكى <b>%1</b> خەت نۇسخىسىنى قوزغىتامسىز؟</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1143
+#: kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
 msgid ""
 "<p>Do you really want to disable this font contained within group '<b>%2</"
@@ -1056,23 +1056,23 @@ msgid_plural ""
 msgstr[0] ""
 "<p>سىز راستلا <b>%2</b> گۇرۇپپىدىكى <b>%1</b> خەت نۇسخىسىنى چەكلەمسىز؟</p>"
 
-#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1150
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Enable Fonts"
 msgstr "خەت نۇسخىلىرىنى ئىناۋەتلىك قىلىش"
 
-#: kcmfontinst/KCmFontInst.cpp:1149 kcmfontinst/KCmFontInst.cpp:1151
+#: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
 msgid "Disable Fonts"
 msgstr "خەت نۇسخىلىرىنى ئىناۋەتسىز قىلىش"
 
-#: kcmfontinst/KCmFontInst.cpp:1157
+#: kcmfontinst/KCmFontInst.cpp:1142
 #, fuzzy, kde-format
 #| msgid "Enabling font(s)..."
 msgid "Enabling font(s)…"
 msgstr "خەت نۇسخىلىرىنى ئىناۋەتلىك قىلىۋاتىدۇ…"
 
-#: kcmfontinst/KCmFontInst.cpp:1159
+#: kcmfontinst/KCmFontInst.cpp:1144
 #, fuzzy, kde-format
 #| msgid "Disabling font(s)..."
 msgid "Disabling font(s)…"

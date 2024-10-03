@@ -2,14 +2,14 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_applet_devicenotifier package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2022-08-26 23:44+0700\n"
+"PO-Revision-Date: 2024-10-02 18:38+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/ui/DeviceItem.qml:98
 #, kde-format
@@ -42,10 +42,9 @@ msgid "Removing…"
 msgstr "Melepas..."
 
 #: package/contents/ui/DeviceItem.qml:108
-#, fuzzy, kde-format
-#| msgid "Don't unplug yet! Files are still being transferred..."
+#, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "Jangan dicabut dulu! File-file sedang ditranster..."
+msgstr "Jangan cabut dulu! File-file masih sedang ditransfer..."
 
 # Melepas Perangkat
 #: package/contents/ui/FullRepresentation.qml:45
@@ -133,92 +132,77 @@ msgstr "Lepas dengan aman"
 #: plugin/deviceerrormonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Status Peranti"
 
 #: plugin/deviceerrormonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Sekarang peranti bisa dilepas dengan aman"
 
 #: plugin/deviceerrormonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Peranti ini sekarang bisa dilepas dengan aman."
 
 #: plugin/deviceerrormonitor_p.cpp:192
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Klik untuk mengaitkan divais ini."
+msgstr "Anda tidak diotorisasi untuk mengaitkan peranti ini."
 
 #: plugin/deviceerrormonitor_p.cpp:195
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Saat ini telah aman untuk melepas perangkat ini."
+msgstr "Anda tidak diotorisasi untuk melepaskan peranti ini."
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Klik untuk mengeluarkan cakram ini."
+msgstr "Anda tidak diotorisasi untuk mengeluarkan cakram ini."
 
 #: plugin/deviceerrormonitor_p.cpp:205
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Divais yang terakhir kali ditancapkan: %1"
+msgstr "Tidak bisa mengaitkan peranti ini karena ia sedang sibuk."
 
 #: plugin/deviceerrormonitor_p.cpp:229
-#, fuzzy, kde-format
-#| msgid ""
-#| "Cannot eject the disc.\n"
-#| "One or more files on this disc are open within an application."
+#, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
-"Tak dapat mengeluarkan cakram.\n"
-"Satu atau beberapa berkas di cakram ini dibuka dengan aplikasi."
+"Satu atau lebih file pada peranti ini sedang dibuka oleh suatu aplikasi."
 
 #: plugin/deviceerrormonitor_p.cpp:231
-#, fuzzy, kde-format
-#| msgid ""
-#| "Could not unmount the device.\n"
-#| "One or more files on this device are open within an application."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
-"Tak dapat melepas kaitan divais.\n"
-"Satu atau beberapa berkas di divais ini dibuka dengan aplikasi."
+"Satu atau lebih file pada peranti ini sedang dibuka oleh aplikasi \"%2\"."
 msgstr[1] ""
-"Tak dapat melepas kaitan divais.\n"
-"Satu atau beberapa berkas di divais ini dibuka dengan aplikasi."
+"Satu atau lebih file pada peranti ini sedang dibuka oleh aplikasi berikut "
+"ini: %2."
 
 #: plugin/deviceerrormonitor_p.cpp:234
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/deviceerrormonitor_p.cpp:254
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Divais yang terakhir kali ditancapkan: %1"
+msgstr "Tidak dapat mengaitkan peranti ini."
 
 #: plugin/deviceerrormonitor_p.cpp:257
-#, fuzzy, kde-format
-#| msgid "Last plugged in device: %1"
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Divais yang terakhir kali ditancapkan: %1"
+msgstr "Tidak dapat melepas peranti ini."
 
 #: plugin/deviceerrormonitor_p.cpp:260
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Klik untuk mengeluarkan cakram ini."
+msgstr "Tidak dapat mengeluarkan cakram ini."
 
 #~ msgid "Show:"
 #~ msgstr "Tampilkan:"

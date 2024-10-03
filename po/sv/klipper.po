@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-03 00:41+0000\n"
 "PO-Revision-Date: 2024-08-22 08:18+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -29,25 +29,28 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "newzella@linux.nu"
 
-#: configdialog.cpp:81
+#: configdialog.cpp:82
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Klippbordshistorik:"
 
-#: configdialog.cpp:87
-#, kde-format
+#: configdialog.cpp:88
+#, fuzzy, kde-format
+#| msgctxt "Number of entries"
+#| msgid " entry"
+#| msgid_plural " entries"
 msgctxt "Number of entries"
-msgid " entry"
-msgid_plural " entries"
+msgid "%v entry"
+msgid_plural "%v entries"
 msgstr[0] " post"
 msgstr[1] " poster"
 
-#: configdialog.cpp:96
+#: configdialog.cpp:97
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Markering och klippbord:"
 
-#: configdialog.cpp:103
+#: configdialog.cpp:104
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -74,49 +77,49 @@ msgstr ""
 "klippbordshistoriken (i enlighet med alternativen nedan), men den kan bara "
 "klistras in med musens mittenknapp."
 
-#: configdialog.cpp:132 configdialog.cpp:170
+#: configdialog.cpp:133 configdialog.cpp:171
 #, kde-format
 msgid "Always save in history"
 msgstr "Spara alltid i historiken"
 
-#: configdialog.cpp:136
+#: configdialog.cpp:137
 #, kde-format
 msgid "Text selection:"
 msgstr "Textmarkering:"
 
-#: configdialog.cpp:138 configdialog.cpp:176
+#: configdialog.cpp:139 configdialog.cpp:177
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Bara om explicit kopierad"
 
-#: configdialog.cpp:143
+#: configdialog.cpp:144
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Om textmarkeringar sparas i klippbordshistoriken."
 
-#: configdialog.cpp:174
+#: configdialog.cpp:175
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Icke-text markering:"
 
-#: configdialog.cpp:181
+#: configdialog.cpp:182
 #, kde-format
 msgid "Never save in history"
 msgstr "Spela aldrig i historiken"
 
-#: configdialog.cpp:186
+#: configdialog.cpp:187
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr "Om icke-textmarkeringar (såsom bilder) sparas i klippbordshistoriken."
 
-#: configdialog.cpp:260
+#: configdialog.cpp:261
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Visa sammanhangsberoende åtgärdsmeny:"
 
-#: configdialog.cpp:270
+#: configdialog.cpp:271
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -132,36 +135,39 @@ msgstr ""
 "visas för ett undantaget fönster, kan den visas igen genom att använda "
 "snabbtangenten <shortcut>%1</shortcut>."
 
-#: configdialog.cpp:279
+#: configdialog.cpp:280
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Undanta fönster..."
 
-#: configdialog.cpp:293
-#, kde-format
+#: configdialog.cpp:294
+#, fuzzy, kde-format
+#| msgctxt "Unit of time"
+#| msgid " second"
+#| msgid_plural " seconds"
 msgctxt "Unit of time"
-msgid " second"
-msgid_plural " seconds"
+msgid "%v second"
+msgid_plural "%v seconds"
 msgstr[0] " sekund"
 msgstr[1] " sekunder"
 
-#: configdialog.cpp:294
+#: configdialog.cpp:295
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Ingen"
 
-#: configdialog.cpp:303
+#: configdialog.cpp:304
 #, kde-format
 msgid "Options:"
 msgstr "Alternativ:"
 
-#: configdialog.cpp:330
+#: configdialog.cpp:331
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Undanta fönster"
 
-#: configdialog.cpp:360
+#: configdialog.cpp:361
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -173,34 +179,34 @@ msgstr ""
 "innehåll, visas dess <interface>kommandon</interface> i Klippers "
 "sammanhangsberoende meny, och kan utföras."
 
-#: configdialog.cpp:369
+#: configdialog.cpp:370
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Matchningsmönster och kommandon"
 
-#: configdialog.cpp:369
+#: configdialog.cpp:370
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Beskrivning"
 
-#: configdialog.cpp:375
+#: configdialog.cpp:376
 #, kde-format
 msgid "Add Action..."
 msgstr "Lägg till åtgärd..."
 
-#: configdialog.cpp:379
+#: configdialog.cpp:380
 #, kde-format
 msgid "Edit Action..."
 msgstr "Redigera åtgärd..."
 
-#: configdialog.cpp:384
+#: configdialog.cpp:385
 #, kde-format
 msgid "Delete Action"
 msgstr "Ta bort åtgärd"
 
-#: configdialog.cpp:391
+#: configdialog.cpp:392
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -210,7 +216,7 @@ msgstr ""
 "Åtgärderna visas i den sammanhangsberoende menyn, som kan ställas in på "
 "sidan <interface>Åtgärdsmeny</interface>"
 
-#: configdialog.cpp:575
+#: configdialog.cpp:576
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -220,56 +226,56 @@ msgstr ""
 "Ta bort den markerade åtgärden <resource>%1</resource><nl/>och alla dess "
 "kommandon?"
 
-#: configdialog.cpp:576
+#: configdialog.cpp:577
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Bekräfta borttagningsåtgärd"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:606
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Allmänt"
 
-#: configdialog.cpp:605
+#: configdialog.cpp:606
 #, kde-format
 msgid "General Configuration"
 msgstr "Allmän inställning"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Åtgärdsmeny"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgid "Action Menu"
 msgstr "Åtgärdsmeny"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Inställning av åtgärder"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Inställning av åtgärder"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:611
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Genvägar"
 
-#: configdialog.cpp:610
+#: configdialog.cpp:611
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Inställning av genvägar"
 
-#: configdialog.cpp:691
+#: configdialog.cpp:692
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -287,7 +293,7 @@ msgstr ""
 "dyker upp när ett visst program används, lägg då till det i listan. "
 "<link>Hur man hittar namnet att mata in</link>."
 
-#: configdialog.cpp:704
+#: configdialog.cpp:705
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -357,17 +363,17 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Misslyckades skapa QR-kod"
 
-#: declarative/qml/ClipboardMenu.qml:185
+#: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
 msgid "Clear History"
 msgstr "Rensa historik"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "No matches"
 msgstr "Inga träffar"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klippbordet är tomt"

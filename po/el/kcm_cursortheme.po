@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-10-03 00:41+0000\n"
 "PO-Revision-Date: 2024-08-13 19:19+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -40,7 +40,7 @@ msgstr "Όνομα του τρέχοντος θέματος του δρομέα"
 msgid "Current cursor size"
 msgstr "Τρέχον μέγεθος δρομέα"
 
-#: kcmcursortheme.cpp:313
+#: kcmcursortheme.cpp:314
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -48,27 +48,27 @@ msgstr ""
 "Πρέπει να επανεκκινήσετε τη συνεδρία Plasma για να τεθούν σε ισχύ αυτές οι "
 "αλλαγές."
 
-#: kcmcursortheme.cpp:387
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Αδυναμία δημιουργίας προσωρινού αρχείου."
 
-#: kcmcursortheme.cpp:398
+#: kcmcursortheme.cpp:399
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Δεν είναι δυνατή η λήψη του αρχείου θέματος εικονιδίων: %1"
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:430
 #, kde-format
 msgid "The file is not a valid icon theme archive."
 msgstr "Το αρχείο δεν είναι έγκυρο αρχείο θέματος εικονιδίων."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr "Αποτυχία δημιουργίας φακέλου 'icons'."
 
-#: kcmcursortheme.cpp:445
+#: kcmcursortheme.cpp:446
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -77,12 +77,12 @@ msgstr ""
 "Ένα θέμα με το όνομα %1 υπάρχει ήδη στο φάκελο με τα θέματα των εικονιδίων "
 "σας. Θέλετε να το αντικαταστήσετε με αυτό;"
 
-#: kcmcursortheme.cpp:449
+#: kcmcursortheme.cpp:450
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Αντικατάσταση θέματος;"
 
-#: kcmcursortheme.cpp:473
+#: kcmcursortheme.cpp:474
 #, kde-format
 msgid "Theme installed successfully."
 msgstr "Το θέμα εγκαταστάθηκε με επιτυχία."

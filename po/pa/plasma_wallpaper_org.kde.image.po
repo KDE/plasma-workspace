@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-15 00:42+0000\n"
-"PO-Revision-Date: 2024-01-03 13:59-0600\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-01 21:21-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -28,11 +28,10 @@ msgid "Your emails"
 msgstr "aalam@punlinux.org"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr "ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
+msgstr "ਚਿੱਤਰ ਨੂੰ ਖੋਲ੍ਹੋ"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
@@ -41,43 +40,37 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "ਵਾਲਪੇਪਰਾਂ ਵਾਲੀ ਡਾਇਰੈਕਟਰੀ, ਜਿਸ ਤੋਂ ਸਲਾਈਡ ਸ਼ੋਅ ਵੇਖਾਉਣਾ ਹੈ"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "ਸਥਿਤੀ:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "ਸਕੇਲ ਤੇ ਕਰੋਪ ਕੀਤਾ"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "ਸਕੇਲ ਕੀਤਾ"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "ਸਕੇਲ ਕੀਤਾ, ਆਕਾਰ ਅਨੁਪਾਤ ਬਣਾਈ ਰੱਖੋ"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "ਸੈਂਟਰ"
 
 #: imagepackage/contents/ui/config.qml:147
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "ਟਾਈਲ"
@@ -85,7 +78,7 @@ msgstr "ਟਾਈਲ"
 #: imagepackage/contents/ui/config.qml:175
 #, kde-format
 msgid "Background:"
-msgstr "ਬੈਕਗਰਾਊਂਡ"
+msgstr "ਬੈਕਗਰਾਊਂਡ:"
 
 #: imagepackage/contents/ui/config.qml:176
 #, kde-format
@@ -124,11 +117,10 @@ msgid "Add…"
 msgstr "…ਜੋੜੋ"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਖੋਲ੍ਹੋ"
+msgstr "…ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਜੋੜੋ"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
@@ -137,11 +129,10 @@ msgid "Get New…"
 msgstr "…ਨਵੇਂ ਲਵੋ"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "ਅਗਲਾ ਵਾਲਪੇਪਰ ਚਿੱਤਰ"
+msgstr "…ਨਵੇਂ ਵਾਲਪੇਪਰ ਚਿੱਤਰ ਲਵੋ"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -215,10 +206,9 @@ msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:333
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "ਚਿੱਤਰ ਫਾਇਲਾਂ"
+msgstr "ਮੀਡੀਆ ਫਾਇਲਾਂ"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
@@ -293,8 +283,7 @@ msgid "Add…"
 msgstr "…ਜੋੜੋ"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
-#, fuzzy, kde-format
-#| msgid "Add Folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "…ਫੋਲਡਰ ਜੋੜੋ"

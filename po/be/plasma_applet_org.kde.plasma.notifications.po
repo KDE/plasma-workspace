@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:41+0000\n"
+"POT-Creation-Date: 2024-10-03 00:41+0000\n"
 "PO-Revision-Date: 2024-06-12 20:16\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -425,35 +425,35 @@ msgstr "Згарнуць"
 msgid "Close"
 msgstr "Закрыць"
 
-#: package/contents/ui/NotificationItem.qml:237
+#: package/contents/ui/NotificationItem.qml:234
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (прыпынена)"
 
-#: package/contents/ui/NotificationItem.qml:242
+#: package/contents/ui/NotificationItem.qml:239
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (не ўдалося)"
 
-#: package/contents/ui/NotificationItem.qml:244
+#: package/contents/ui/NotificationItem.qml:241
 #, kde-format
 msgid "Job Failed"
 msgstr "Не ўдалося выканаць задачу"
 
-#: package/contents/ui/NotificationItem.qml:248
+#: package/contents/ui/NotificationItem.qml:245
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (завершана)"
 
-#: package/contents/ui/NotificationItem.qml:250
+#: package/contents/ui/NotificationItem.qml:247
 #, kde-format
 msgid "Job Finished"
 msgstr "Задача завершаная"
 
-#: package/contents/ui/NotificationItem.qml:401
+#: package/contents/ui/NotificationItem.qml:393
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

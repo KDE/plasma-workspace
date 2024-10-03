@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-10-03 00:41+0000\n"
 "PO-Revision-Date: 2011-01-12 20:48+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -31,36 +31,36 @@ msgstr ""
 msgid "Current cursor size"
 msgstr ""
 
-#: kcmcursortheme.cpp:313
+#: kcmcursortheme.cpp:314
 #, fuzzy, kde-format
 #| msgid "You have to restart KDE for these changes to take effect."
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Anda perlu mulakan semula KDE agar perubahan ini berkesan."
 
-#: kcmcursortheme.cpp:387
+#: kcmcursortheme.cpp:388
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: kcmcursortheme.cpp:398
+#: kcmcursortheme.cpp:399
 #, fuzzy, kde-format
 #| msgid "Unable to find the cursor theme archive %1."
 msgid "Unable to download the icon theme archive: %1"
 msgstr "Tidak dapat mencari arkib tema kursor %1."
 
-#: kcmcursortheme.cpp:429
+#: kcmcursortheme.cpp:430
 #, fuzzy, kde-format
 #| msgid "The file %1 does not appear to be a valid cursor theme archive."
 msgid "The file is not a valid icon theme archive."
 msgstr "Fail %1 bukannya arkib tema kursor yang sah."
 
-#: kcmcursortheme.cpp:436
+#: kcmcursortheme.cpp:437
 #, kde-format
 msgid "Failed to create 'icons' folder."
 msgstr ""
 
-#: kcmcursortheme.cpp:445
+#: kcmcursortheme.cpp:446
 #, kde-format
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
@@ -69,12 +69,12 @@ msgstr ""
 "Tema bernama %1 sudah wujud dalam folder tema ikon anda. Anda ingin "
 "menggantikannya dengan yang ini?"
 
-#: kcmcursortheme.cpp:449
+#: kcmcursortheme.cpp:450
 #, kde-format
 msgid "Overwrite Theme?"
 msgstr "Tulisganti Tema?"
 
-#: kcmcursortheme.cpp:473
+#: kcmcursortheme.cpp:474
 #, kde-format
 msgid "Theme installed successfully."
 msgstr ""

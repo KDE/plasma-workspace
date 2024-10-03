@@ -1,21 +1,21 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 00:41+0000\n"
-"PO-Revision-Date: 2022-06-05 07:46+0700\n"
+"PO-Revision-Date: 2024-10-02 19:20+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -48,7 +48,7 @@ msgstr "Tambah..."
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Add a new event"
-msgstr ""
+msgstr "Tambahkan peristiwa baru"
 
 #: package/contents/ui/CalendarView.qml:386
 #, kde-format
@@ -67,8 +67,7 @@ msgstr "Beralih..."
 
 #: package/contents/ui/CalendarView.qml:440
 #: package/contents/ui/CalendarView.qml:441
-#, fuzzy, kde-format
-#| msgid "Switch to another timezone"
+#, kde-format
 msgid "Switch to another time zone"
 msgstr "Alihkan ke zona waktu lainnya"
 
@@ -98,22 +97,21 @@ msgid "Always below time"
 msgstr "Selalu di bawah waktu"
 
 #: package/contents/ui/configAppearance.qml:74
-#, fuzzy, kde-format
-#| msgid "Show seconds"
+#, kde-format
 msgid "Show seconds:"
-msgstr "Tampilkan detik"
+msgstr "Tampilkan detik:"
 
 #: package/contents/ui/configAppearance.qml:76
 #, kde-format
 msgctxt "@option:check"
 msgid "Never"
-msgstr ""
+msgstr "Tidak pernah"
 
 #: package/contents/ui/configAppearance.qml:77
 #, kde-format
 msgctxt "@option:check"
 msgid "Only in the tooltip"
-msgstr ""
+msgstr "Hanya di tooltip"
 
 #: package/contents/ui/configAppearance.qml:78
 #: package/contents/ui/configAppearance.qml:99
@@ -129,7 +127,7 @@ msgstr "Tampilkan zona waktu:"
 #: package/contents/ui/configAppearance.qml:94
 #, kde-format
 msgid "Only when different from local time zone"
-msgstr "Hanya ketika berbeda dari zona waktu lokal"
+msgstr "Hanya ketika berbeda dari zona waktu setempat"
 
 #: package/contents/ui/configAppearance.qml:110
 #, kde-format
@@ -152,51 +150,44 @@ msgid "Offset from UTC time"
 msgstr "Ofset dari waktu UTC"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
-msgstr "Displai waktu:"
+msgstr "Tampilan waktu:"
 
 #: package/contents/ui/configAppearance.qml:132
-#, fuzzy, kde-format
-#| msgid "12-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-Jam"
 
 #: package/contents/ui/configAppearance.qml:133
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
-msgstr "Gunakan Region Baku"
+msgstr "Gunakan region baku"
 
 #: package/contents/ui/configAppearance.qml:134
-#, fuzzy, kde-format
-#| msgid "24-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-Jam"
 
 #: package/contents/ui/configAppearance.qml:141
-#, fuzzy, kde-format
-#| msgid "Change Regional Settings…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Ubah Pengaturan Regional..."
 
 #: package/contents/ui/configAppearance.qml:152
-#, fuzzy, kde-format
-#| msgid "Date format:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Format tanggal:"
 
 # Satu kata cukup
 #: package/contents/ui/configAppearance.qml:161
-#, fuzzy, kde-format
-#| msgid "Long Date"
+#, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
@@ -205,52 +196,44 @@ msgstr "Panjang"
 
 # Satu kata cukup
 #: package/contents/ui/configAppearance.qml:168
-#, fuzzy, kde-format
-#| msgid "Short Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Pendek"
 
 # Satu kata cukup
 #: package/contents/ui/configAppearance.qml:175
-#, fuzzy, kde-format
-#| msgid "ISO Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO"
 
 #: package/contents/ui/configAppearance.qml:182
-#, fuzzy, kde-format
-#| msgctxt "custom date format"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Kustom"
 
 #: package/contents/ui/configAppearance.qml:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
-#| "\">Time Format Documentation</a>"
+#, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
-"<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
+"<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Dokumentasi Format Waktu</a>"
 
 #: package/contents/ui/configAppearance.qml:237
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
-msgstr "Displai waktu:"
+msgstr "Tampilan teks:"
 
 #: package/contents/ui/configAppearance.qml:238
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
-msgstr ""
+msgstr "Otomatis"
 
 #: package/contents/ui/configAppearance.qml:242
 #, kde-format
@@ -258,30 +241,32 @@ msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
+"Teks akan mengikuti font sistem dan diperluas untuk mengisi ruang yang "
+"tersedia."
 
 #: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
-msgstr ""
+msgstr "Manual"
 
 #: package/contents/ui/configAppearance.qml:264
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr ""
+msgstr "Pilih Gaya..."
 
 #: package/contents/ui/configAppearance.qml:277
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
-msgstr ""
+msgstr "%1pt %2"
 
 #: package/contents/ui/configAppearance.qml:285
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
-msgstr ""
+msgstr "Pilih Font"
 
 #: package/contents/ui/configCalendar.qml:41
 #, kde-format
@@ -294,18 +279,16 @@ msgid "Show week numbers"
 msgstr "Tampilkan nomor pekan"
 
 #: package/contents/ui/configCalendar.qml:49
-#, fuzzy, kde-format
-#| msgid "First day of week:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Hari pertama pekan:"
 
 #: package/contents/ui/configCalendar.qml:55
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
-msgstr "Gunakan Region Baku"
+msgstr "Gunakan region baku"
 
 #: package/contents/ui/configCalendar.qml:72
 #, kde-format
@@ -318,6 +301,9 @@ msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
+"Kiat: jika Anda sering bepergian,tambahkanlah zona waktu rumah Anda ke "
+"daftar ini. Ini akan muncul hanya ketika Anda mengubah zona waktu systemwide "
+"untuk suatu hal."
 
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
@@ -336,13 +322,12 @@ msgctxt ""
 "local time zone's city, and will be hidden in the time zone display in the "
 "plasmoid's popup"
 msgid "Hidden while this is the local time zone's city"
-msgstr ""
+msgstr "Sembunyikan ketika ini adalah kota zona waktu setempat"
 
 #: package/contents/ui/configTimeZones.qml:125
-#, fuzzy, kde-format
-#| msgid "Switch Local Time Zone…"
+#, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Alihkan Zona Waktu Lokal..."
+msgstr "Alihkan Zona Waktu Systemwide..."
 
 #: package/contents/ui/configTimeZones.qml:137
 #, kde-format
@@ -350,10 +335,9 @@ msgid "Remove this time zone"
 msgstr "Singkirkan zona waktu ini"
 
 #: package/contents/ui/configTimeZones.qml:149
-#, fuzzy, kde-format
-#| msgid "System's Local Time Zone"
+#, kde-format
 msgid "Systemwide Time Zone"
-msgstr "Zona Waktu Lokal si Sistem"
+msgstr "Zona Waktu Systemwide"
 
 #: package/contents/ui/configTimeZones.qml:149
 #, kde-format
@@ -377,35 +361,26 @@ msgstr ""
 "jam"
 
 #: package/contents/ui/configTimeZones.qml:183
-#, fuzzy, kde-format
-#| msgid ""
-#| "Note that using a different time zone for the clock does not change the "
-#| "systemwide local time zone. When you travel, switch the local time zone "
-#| "instead."
+#, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
-"Perhatikan bahwa menggunakan zona waktu yang berbeda untuk jam tidak "
-"mengubah zona waktu lokal di seluruh sistem. Saat kamu bepergian, alihkan "
-"zona waktu lokal"
+"Menggunakan fitur ini tidak mengubah zona waktu systemwide. Ketika Anda "
+"bepergian, alihkan zona waktu systemwide sebagai gantinya."
 
 #: package/contents/ui/configTimeZones.qml:208
-#, fuzzy, kde-format
-#| msgid "Add More Timezones"
+#, kde-format
 msgid "Add More Time Zones"
-msgstr "Tambahkan Lagi Zona Waktu"
+msgstr "Tambahkan Zona Waktu Selebihnya"
 
 #: package/contents/ui/configTimeZones.qml:220
-#, fuzzy, kde-format
-#| msgid ""
-#| "At least one time zone needs to be enabled. Your local timezone was "
-#| "enabled automatically."
+#, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
 msgstr ""
-"Setidaknya satu zona waktu perlu difungsikan. Zona waktu lokalmu telah "
+"Setidaknya satu zona waktu perlu difungsikan. Zona waktu lokal Anda telah "
 "difungsikan secara otomatis."
 
 #: package/contents/ui/configTimeZones.qml:256
@@ -434,18 +409,16 @@ msgid "Set Time Format…"
 msgstr "Atur Format Waktu..."
 
 #: package/contents/ui/Tooltip.qml:34
-#, fuzzy, kde-format
-#| msgctxt "Reset calendar to today"
-#| msgid "Today"
+#, kde-format
 msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
-msgstr "Hari ini"
+msgstr "Hari ini adalah %1"
 
 #: package/contents/ui/Tooltip.qml:126
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
-msgstr ""
+msgstr "%1:"
 
 #: plugin/clipboardmenu.cpp:110
 #, kde-format
@@ -468,12 +441,12 @@ msgstr "%1 (Tanggal Julian)"
 #, kde-format
 msgctxt "This means \"Local Timezone\""
 msgid "Local"
-msgstr "Lokal"
+msgstr "Setempat"
 
 #: plugin/timezonemodel.cpp:149
 #, kde-format
 msgid "System's local time zone"
-msgstr "Zona waktu lokal si sistem"
+msgstr "Zona waktu sistem setempat"
 
 #~ msgctxt "Format: month year"
 #~ msgid "%1 %2"
