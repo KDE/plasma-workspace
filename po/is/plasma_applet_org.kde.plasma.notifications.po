@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 02:33+0000\n"
+"POT-Creation-Date: 2024-10-03 02:31+0000\n"
 "PO-Revision-Date: 2024-02-19 18:34+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -33,7 +33,7 @@ msgstr "Opna með %1"
 msgid "Open with…"
 msgstr "Opna með…"
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:267
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Opna möppu sem skráin er í"
@@ -251,31 +251,31 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:183
+#: package/contents/ui/JobItem.qml:180
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Upplýsingar"
 
-#: package/contents/ui/JobItem.qml:197
+#: package/contents/ui/JobItem.qml:191
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Á pásu"
 
-#: package/contents/ui/JobItem.qml:209
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Hætta við"
 
-#: package/contents/ui/JobItem.qml:240
+#: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "Fleiri valkostir…"
 
-#: package/contents/ui/JobItem.qml:268
+#: package/contents/ui/JobItem.qml:259
 #, kde-format
 msgid "Open"
 msgstr "Opna"
@@ -391,35 +391,35 @@ msgstr "Fela"
 msgid "Close"
 msgstr "Loka"
 
-#: package/contents/ui/NotificationItem.qml:237
+#: package/contents/ui/NotificationItem.qml:186
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (sett á pásu)"
 
-#: package/contents/ui/NotificationItem.qml:242
+#: package/contents/ui/NotificationItem.qml:191
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (mistókst)"
 
-#: package/contents/ui/NotificationItem.qml:244
+#: package/contents/ui/NotificationItem.qml:193
 #, kde-format
 msgid "Job Failed"
 msgstr "Verk mistókst"
 
-#: package/contents/ui/NotificationItem.qml:248
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (lokið)"
 
-#: package/contents/ui/NotificationItem.qml:250
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Finished"
 msgstr "Verki lokið"
 
-#: package/contents/ui/NotificationItem.qml:401
+#: package/contents/ui/NotificationItem.qml:346
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

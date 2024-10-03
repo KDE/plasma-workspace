@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-06 00:39+0000\n"
-"PO-Revision-Date: 2024-10-01 21:11+0700\n"
+"PO-Revision-Date: 2024-10-02 18:26+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
-msgstr ""
+msgstr "Kamera"
 
 #: contents/ui/FullRepresentation.qml:50
 #, kde-format

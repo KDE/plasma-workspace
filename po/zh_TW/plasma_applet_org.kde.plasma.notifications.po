@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 02:33+0000\n"
+"POT-Creation-Date: 2024-10-03 02:31+0000\n"
 "PO-Revision-Date: 2024-02-05 17:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -32,7 +32,7 @@ msgstr "以 %1 開啟"
 msgid "Open with…"
 msgstr "以其他程式開啟…"
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:276
+#: filemenu.cpp:117 package/contents/ui/JobItem.qml:267
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "開啟包含資料夾"
@@ -244,31 +244,31 @@ msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:183
+#: package/contents/ui/JobItem.qml:180
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "詳細資料"
 
-#: package/contents/ui/JobItem.qml:197
+#: package/contents/ui/JobItem.qml:191
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "暫停"
 
-#: package/contents/ui/JobItem.qml:209
+#: package/contents/ui/JobItem.qml:200
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "取消"
 
-#: package/contents/ui/JobItem.qml:240
+#: package/contents/ui/JobItem.qml:231
 #: package/contents/ui/ThumbnailStrip.qml:165
 #, kde-format
 msgid "More Options…"
 msgstr "更多選項…"
 
-#: package/contents/ui/JobItem.qml:268
+#: package/contents/ui/JobItem.qml:259
 #, kde-format
 msgid "Open"
 msgstr "開啟"
@@ -377,35 +377,35 @@ msgstr "最小化"
 msgid "Close"
 msgstr "關閉"
 
-#: package/contents/ui/NotificationItem.qml:237
+#: package/contents/ui/NotificationItem.qml:186
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 （已暫停）"
 
-#: package/contents/ui/NotificationItem.qml:242
+#: package/contents/ui/NotificationItem.qml:191
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 （失敗）"
 
-#: package/contents/ui/NotificationItem.qml:244
+#: package/contents/ui/NotificationItem.qml:193
 #, kde-format
 msgid "Job Failed"
 msgstr "工作已失敗"
 
-#: package/contents/ui/NotificationItem.qml:248
+#: package/contents/ui/NotificationItem.qml:197
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 （完成）"
 
-#: package/contents/ui/NotificationItem.qml:250
+#: package/contents/ui/NotificationItem.qml:199
 #, kde-format
 msgid "Job Finished"
 msgstr "工作已完成"
 
-#: package/contents/ui/NotificationItem.qml:401
+#: package/contents/ui/NotificationItem.qml:346
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

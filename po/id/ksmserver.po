@@ -2,7 +2,7 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the ksmserver package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2020.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2024 Wantoyo <wantoyek@gmail.com>
 # SPDX-FileCopyrightText: 2023 Linerly <linerly@linerly.xyz>
 #
 msgid ""
@@ -10,29 +10,25 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-12 00:41+0000\n"
-"PO-Revision-Date: 2023-12-03 13:50+0700\n"
-"Last-Translator: Linerly <linerly@linerly.xyz>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-02 18:21+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
-#, fuzzy, kde-format
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
+#, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Andhika Padmawan"
+msgstr "Wantoyèk"
 
-#, fuzzy, kde-format
-#| msgctxt "EMAIL OF TRANSLATORS"
-#| msgid "Your emails"
+#, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "andhika.padmawan@gmail.com"
+msgstr "wantoyek@gmail.com"
 
 #: logout.cpp:273
 #, kde-format
@@ -160,7 +156,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "(tak diketahui)"
 
 #: server.cpp:798
 #, kde-kuit-format
@@ -170,6 +166,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Tidak dapat mengelola beberapa apps karena sumberdaya pengelolaan sesi "
+"sistem kepayahan. Berikut adalah tiga pengonsumsi teratas sumberdaya sesi:\n"
+"%1"
 
 #: server.cpp:1070
 #, kde-kuit-format
@@ -179,6 +178,9 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Tidak dapat memulihkan <application>%1</application> karena ia rusak dan "
+"sumberdaya pemulihan sesi sistem kepayahan. Silakan laporkan ini ke "
+"pengembang aplikasi."
 
 #~ msgid "Session Management"
 #~ msgstr "Pengelolaan Sesi"

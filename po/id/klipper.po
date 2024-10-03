@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-22 00:41+0000\n"
-"PO-Revision-Date: 2024-10-02 08:22+0700\n"
+"PO-Revision-Date: 2024-10-02 18:02+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -282,6 +282,13 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"Sembulan tindakan tidak akan ditampilkan secara otomatis untuk jendela "
+"tersebut, bahkan jika ia difungsikan. Ini karena, peramban web mungkin "
+"sedang menyoroti URL di bilah alamat selagi mengetik, sehingga menu tampak "
+"setiap penekanan tombol.\n"
+"<nl/>Jika menu tindakan muncul secara tiba-tiba saat menggunakan aplikasi "
+"tertentu, maka tambahkanlah ke daftar ini. <link>Bagaimana menemukan nama "
+"untuk memasukkan</link>."
 
 #: configdialog.cpp:704
 #, kde-kuit-format
@@ -293,6 +300,12 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"Nama yang perlu dimasukkan di sini adalah nama WM_CLASS dari jendela yang "
+"akan dikecualikan. Untuk menemukan nama WM_CLASS untuk jendela, dalam "
+"jendela terminal lain masukkan perintah:<nl/><nl/>&nbsp;&nbsp;<icode>xprop | "
+"grep WM_CLASS</icode><nl/><nl/>dan klik pada jendela yang Anda ingin "
+"dikecualikan. Nama pertama yang ditampilkan sesudah tanda sama dengan, "
+"adalah nama yang perlu Anda masukkan."
 
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
@@ -340,6 +353,8 @@ msgstr "Ubah jenis kode QR"
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Ada ketidakcukupan ruang untuk menampilkan kode QR. Cobalah mengubah ukuran "
+"applet ini."
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
@@ -385,7 +400,7 @@ msgstr "Hapus dari riwayat"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Area edit teks"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
@@ -404,7 +419,7 @@ msgstr "Batal"
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
