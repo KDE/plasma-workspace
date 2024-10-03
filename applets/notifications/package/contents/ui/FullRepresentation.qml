@@ -20,6 +20,7 @@ import org.kde.notificationmanager as NotificationManager
 import org.kde.plasma.private.notifications as Notifications
 
 import "global"
+import "delegates" as Delegates
 
 PlasmaExtras.Representation {
     // TODO these should be configurable in the future
@@ -420,19 +421,19 @@ PlasmaExtras.Representation {
 
                     Component {
                         id: groupDelegate
-                        NotificationHeader {
-                            applicationName: model.applicationName
-                            applicationIconSource: model.applicationIconName
-                            originName: model.originName || ""
+                        Delegates.NotificationHeader {
+                            modelInterface {
+                                applicationName: model.applicationName
+                                applicationIconSource: model.applicationIconName
+                                originName: model.originName || ""
 
-                            // don't show timestamp for group
+                                configurable: model.configurable
+                                closable: model.closable
 
-                            configurable: model.configurable
-                            closable: model.closable
+                                onCloseClicked: historyModel.close(historyModel.index(index, 0));
+                                onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+                            }
                             closeButtonTooltip: i18n("Close Group")
-
-                            onCloseClicked: historyModel.close(historyModel.index(index, 0));
-                            onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
                         }
                     }
 
@@ -465,43 +466,94 @@ PlasmaExtras.Representation {
                                 NotificationItem {
                                     Layout.fillWidth: true
 
-                                    notificationType: model.type
+                                    modelInterface {
+                                        notificationType: model.type
 
-                                    inGroup: model.isInGroup
-                                    inHistory: true
-                                    listViewParent: list
+                                        inGroup: model.isInGroup
+                                        inHistory: true
+                                        listViewParent: list
 
-                                    applicationName: model.applicationName
-                                    applicationIconSource: model.applicationIconName
-                                    originName: model.originName || ""
+                                        applicationName: model.applicationName
+                                        applicationIconSource: model.applicationIconName
+                                        originName: model.originName || ""
 
-                                    time: model.updated || model.created
+                                        time: model.updated || model.created
 
-                                    // configure button on every single notifications is bit overwhelming
-                                    configurable: !inGroup && model.configurable
+                                        // configure button on every single notifications is bit overwhelming
+                                        configurable: !modelInterface.inGroup && model.configurable
 
-                                    dismissable: model.type === NotificationManager.Notifications.JobType
-                                        && model.jobState !== NotificationManager.Notifications.JobStateStopped
-                                        && model.dismissed
-                                        // TODO would be nice to be able to undismiss jobs even when they autohide
-                                        && notificationSettings.permanentJobPopups
-                                    dismissed: model.dismissed || false
-                                    closable: model.closable
+                                        dismissable: model.type === NotificationManager.Notifications.JobType
+                                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                                            && model.dismissed
+                                            // TODO would be nice to be able to undismiss jobs even when they autohide
+                                            && notificationSettings.permanentJobPopups
+                                        dismissed: model.dismissed || false
+                                        closable: model.closable
 
-                                    summary: model.summary
-                                    body: model.body || ""
-                                    icon: model.image || model.iconName
+                                        summary: model.summary
+                                        body: model.body || ""
+                                        icon: model.image || model.iconName
 
-                                    urls: model.urls || []
+                                        urls: model.urls || []
 
-                                    jobState: model.jobState || 0
-                                    percentage: model.percentage || 0
-                                    jobError: model.jobError || 0
-                                    suspendable: !!model.suspendable
-                                    killable: !!model.killable
-                                    jobDetails: model.jobDetails || null
+                                        jobState: model.jobState || 0
+                                        percentage: model.percentage || 0
+                                        jobError: model.jobError || 0
+                                        suspendable: !!model.suspendable
+                                        killable: !!model.killable
+                                        jobDetails: model.jobDetails || null
 
-                                    configureActionLabel: model.configureActionLabel || ""
+                                        configureActionLabel: model.configureActionLabel || ""
+
+                                        actionNames: {
+                                            var actions = (model.actionNames || []);
+                                            if (parent.addDefaultAction) {
+                                                actions.unshift("default"); // prepend
+                                            }
+                                            return actions;
+                                        }
+                                        actionLabels: {
+                                            var labels = (model.actionLabels || []);
+                                            if (parent.addDefaultAction) {
+                                                labels.unshift(model.defaultActionLabel);
+                                            }
+                                            return labels;
+                                        }
+
+                                        onCloseClicked: close()
+
+                                        onDismissClicked: {
+                                            model.dismissed = false;
+                                            root.closePlasmoid();
+                                        }
+                                        onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+
+                                        onActionInvoked: {
+                                            if (actionName === "default") {
+                                                historyModel.invokeDefaultAction(historyModel.index(index, 0));
+                                            } else {
+                                                historyModel.invokeAction(historyModel.index(index, 0), actionName);
+                                            }
+
+                                            expire();
+                                        }
+                                        onOpenUrl: {
+                                            Qt.openUrlExternally(url);
+                                            expire();
+                                        }
+                                        onFileActionInvoked: {
+                                            if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
+                                                close();
+                                            } else {
+                                                expire();
+                                            }
+                                        }
+
+                                        onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
+                                        onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
+                                        onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
+                                    }
+
                                     // In the popup the default action is triggered by clicking on the popup
                                     // however in the list this is undesirable, so instead show a clickable button
                                     // in case you have a non-expired notification in history (do not disturb mode)
@@ -509,54 +561,6 @@ PlasmaExtras.Representation {
                                     readonly property bool addDefaultAction: (model.hasDefaultAction
                                                                             && model.defaultActionLabel
                                                                             && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
-                                    actionNames: {
-                                        var actions = (model.actionNames || []);
-                                        if (addDefaultAction) {
-                                            actions.unshift("default"); // prepend
-                                        }
-                                        return actions;
-                                    }
-                                    actionLabels: {
-                                        var labels = (model.actionLabels || []);
-                                        if (addDefaultAction) {
-                                            labels.unshift(model.defaultActionLabel);
-                                        }
-                                        return labels;
-                                    }
-
-                                    onCloseClicked: close()
-
-                                    onDismissClicked: {
-                                        model.dismissed = false;
-                                        root.closePlasmoid();
-                                    }
-                                    onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
-
-                                    onActionInvoked: {
-                                        if (actionName === "default") {
-                                            historyModel.invokeDefaultAction(historyModel.index(index, 0));
-                                        } else {
-                                            historyModel.invokeAction(historyModel.index(index, 0), actionName);
-                                        }
-
-                                        expire();
-                                    }
-                                    onOpenUrl: {
-                                        Qt.openUrlExternally(url);
-                                        expire();
-                                    }
-                                    onFileActionInvoked: {
-                                        if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
-                                            close();
-                                        } else {
-                                            expire();
-                                        }
-                                    }
-
-                                    onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
-                                    onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
-                                    onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
-
                                     function expire() {
                                         if (model.resident) {
                                             model.expired = true;
