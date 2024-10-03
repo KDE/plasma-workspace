@@ -463,30 +463,9 @@ QtObject {
             readonly property var notificationId: model.notificationId
 
             popupWidth: globals.popupWidth
+
             isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && notificationSettings.keepNormalAlwaysOnTop)
 
-            notificationType: model.type
-
-            applicationName: model.applicationName
-            applicationIconSource: model.applicationIconName
-            originName: model.originName || ""
-
-            time: model.updated || model.created
-
-            configurable: model.configurable
-            // For running jobs instead of offering a "close" button that might lead the user to
-            // think that will cancel the job, we offer a "dismiss" button that hides it in the history
-            dismissable: model.type === NotificationManager.Notifications.JobType
-                && model.jobState !== NotificationManager.Notifications.JobStateStopped
-            // TODO would be nice to be able to "pin" jobs when they autohide
-                && notificationSettings.permanentJobPopups
-            closable: model.closable
-
-            summary: model.summary
-            body: model.body || ""
-            accessibleDescription: model.accessibleDescription
-            icon: model.image || model.iconName
-            hasDefaultAction: model.hasDefaultAction || false
             timeout: model.timeout
             // Increase default timeout for notifications with a URL so you have enough time
             // to interact with the thumbnail or bring the window to the front where you want to drag it into
@@ -497,26 +476,133 @@ QtObject {
                             && model.jobState !== NotificationManager.Notifications.JobStateStopped
                             ? defaultTimeout : 0
 
-            urls: model.urls || []
-            urgency: model.urgency || NotificationManager.Notifications.NormalUrgency
+            modelInterface {
+                notificationType: model.type
 
-            jobState: model.jobState || 0
-            percentage: model.percentage || 0
-            jobError: model.jobError || 0
-            suspendable: !!model.suspendable
-            killable: !!model.killable
-            jobDetails: model.jobDetails || null
+                applicationName: model.applicationName
+                applicationIconSource: model.applicationIconName
+                originName: model.originName || ""
 
-            configureActionLabel: model.configureActionLabel || ""
-            actionNames: model.actionNames
-            actionLabels: model.actionLabels
+                time: model.updated || model.created
 
-            hasReplyAction: model.hasReplyAction || false
-            replyActionLabel: model.replyActionLabel || ""
-            replyPlaceholderText: model.replyPlaceholderText || ""
-            replySubmitButtonText: model.replySubmitButtonText || ""
-            replySubmitButtonIconName: model.replySubmitButtonIconName || ""
+                configurable: model.configurable
+                // For running jobs instead of offering a "close" button that might lead the user to
+                // think that will cancel the job, we offer a "dismiss" button that hides it in the history
+                dismissable: model.type === NotificationManager.Notifications.JobType
+                    && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                // TODO would be nice to be able to "pin" jobs when they autohide
+                    && notificationSettings.permanentJobPopups
+                closable: model.closable
 
+                summary: model.summary
+                body: model.body || ""
+                accessibleDescription: model.accessibleDescription
+                icon: model.image || model.iconName
+                hasDefaultAction: model.hasDefaultAction || false
+
+                urls: model.urls || []
+                urgency: model.urgency || NotificationManager.Notifications.NormalUrgency
+
+                jobState: model.jobState || 0
+                percentage: model.percentage || 0
+                jobError: model.jobError || 0
+                suspendable: !!model.suspendable
+                killable: !!model.killable
+                jobDetails: model.jobDetails || null
+
+                configureActionLabel: model.configureActionLabel || ""
+                actionNames: model.actionNames
+                actionLabels: model.actionLabels
+
+                hasReplyAction: model.hasReplyAction || false
+                replyActionLabel: model.replyActionLabel || ""
+                replyPlaceholderText: model.replyPlaceholderText || ""
+                replySubmitButtonText: model.replySubmitButtonText || ""
+                replySubmitButtonIconName: model.replySubmitButtonIconName || ""
+
+                // explicit close, even when resident
+                onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                onDismissClicked: model.dismissed = true
+                onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
+                onDefaultActionInvoked: {
+                    if (defaultActionFallbackWindowIdx) {
+                        if (!defaultActionFallbackWindowIdx.valid) {
+                            console.warn("Failed fallback notification activation as window no longer exists");
+                            return;
+                        }
+
+                        // When it's a group, activate the window highest in stacking order (presumably last used)
+                        if (tasksModel.data(defaultActionFallbackWindowIdx, TaskManager.AbstractTasksModel.IsGroupParent)) {
+                            let highestStacking = -1;
+                            let highestIdx = undefined;
+
+                            for (let i = 0; i < tasksModel.rowCount(defaultActionFallbackWindowIdx); ++i) {
+                                const idx = tasksModel.index(i, 0, defaultActionFallbackWindowIdx);
+
+                                const stacking = tasksModel.data(idx, TaskManager.AbstractTasksModel.StackingOrder);
+
+                                if (stacking > highestStacking) {
+                                    highestStacking = stacking;
+                                    highestIdx = tasksModel.makePersistentModelIndex(defaultActionFallbackWindowIdx.row, i);
+                                }
+                            }
+
+                            if (highestIdx && highestIdx.valid) {
+                                tasksModel.requestActivate(highestIdx);
+                                if (!model.resident) {
+                                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                                }
+
+                            }
+                            return;
+                        }
+
+                        tasksModel.requestActivate(defaultActionFallbackWindowIdx);
+                        if (!model.resident) {
+                            popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                        }
+                        return;
+                    }
+
+                    const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                    popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0), behavior)
+                }
+                onActionInvoked: actionName => {
+                    const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                    popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior)
+                }
+                onReplied: {
+                    const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                    popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text, behavior);
+                }
+                onOpenUrl: url => {
+                    Qt.openUrlExternally(url);
+                    // Client isn't informed of this action, so we always hide the popup
+                    if (model.resident) {
+                        model.expired = true;
+                    } else {
+                        popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
+                    }
+                }
+                onFileActionInvoked: action => {
+                    if (!model.resident
+                        || (action.objectName === "movetotrash" || action.objectName === "deletefile")) {
+                        popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
+                    } else {
+                        model.expired = true;
+                    }
+                }
+                onForceActiveFocusRequested: {
+                    // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
+                    plasmoid.forceActivateWindow(popup);
+                }
+
+                onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))
+                onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.index(index, 0))
+                onKillJobClicked: popupNotificationsModel.killJob(popupNotificationsModel.index(index, 0))
+            }
+
+            onHoverEntered: model.read = true
             onExpired: {
                 if (model.resident) {
                     // When resident, only mark it as expired so the popup disappears
@@ -526,88 +612,6 @@ QtObject {
                     popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))
                 }
             }
-            onHoverEntered: model.read = true
-            // explicit close, even when resident
-            onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-            onDismissClicked: model.dismissed = true
-            onConfigureClicked: popupNotificationsModel.configure(popupNotificationsModel.index(index, 0))
-            onDefaultActionInvoked: {
-                if (defaultActionFallbackWindowIdx) {
-                    if (!defaultActionFallbackWindowIdx.valid) {
-                        console.warn("Failed fallback notification activation as window no longer exists");
-                        return;
-                    }
-
-                    // When it's a group, activate the window highest in stacking order (presumably last used)
-                    if (tasksModel.data(defaultActionFallbackWindowIdx, TaskManager.AbstractTasksModel.IsGroupParent)) {
-                        let highestStacking = -1;
-                        let highestIdx = undefined;
-
-                        for (let i = 0; i < tasksModel.rowCount(defaultActionFallbackWindowIdx); ++i) {
-                            const idx = tasksModel.index(i, 0, defaultActionFallbackWindowIdx);
-
-                            const stacking = tasksModel.data(idx, TaskManager.AbstractTasksModel.StackingOrder);
-
-                            if (stacking > highestStacking) {
-                                highestStacking = stacking;
-                                highestIdx = tasksModel.makePersistentModelIndex(defaultActionFallbackWindowIdx.row, i);
-                            }
-                        }
-
-                        if (highestIdx && highestIdx.valid) {
-                            tasksModel.requestActivate(highestIdx);
-                            if (!model.resident) {
-                                popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                            }
-
-                        }
-                        return;
-                    }
-
-                    tasksModel.requestActivate(defaultActionFallbackWindowIdx);
-                    if (!model.resident) {
-                        popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                    }
-                    return;
-                }
-
-                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                popupNotificationsModel.invokeDefaultAction(popupNotificationsModel.index(index, 0), behavior)
-            }
-            onActionInvoked: actionName => {
-                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior)
-            }
-            onReplied: {
-                const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
-                popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text, behavior);
-            }
-            onOpenUrl: url => {
-                Qt.openUrlExternally(url);
-                // Client isn't informed of this action, so we always hide the popup
-                if (model.resident) {
-                    model.expired = true;
-                } else {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
-                }
-            }
-            onFileActionInvoked: action => {
-                if (!model.resident
-                    || (action.objectName === "movetotrash" || action.objectName === "deletefile")) {
-                    popupNotificationsModel.close(popupNotificationsModel.index(index, 0));
-                } else {
-                    model.expired = true;
-                }
-            }
-            onForceActiveFocusRequested: {
-                // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-                plasmoid.forceActivateWindow(popup);
-            }
-
-            onSuspendJobClicked: popupNotificationsModel.suspendJob(popupNotificationsModel.index(index, 0))
-            onResumeJobClicked: popupNotificationsModel.resumeJob(popupNotificationsModel.index(index, 0))
-            onKillJobClicked: popupNotificationsModel.killJob(popupNotificationsModel.index(index, 0))
-
             // popup width is fixed
             onHeightChanged: positionPopups()
 

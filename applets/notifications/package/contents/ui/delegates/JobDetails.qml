@@ -16,7 +16,7 @@ import org.kde.coreaddons 1.0 as KCoreAddons
 GridLayout {
     id: detailsGrid
 
-    property QtObject jobDetails
+    property ModelInterface modelInterface
 
     columns: 2
     rowSpacing: Math.round(Kirigami.Units.smallSpacing / 2)
@@ -30,8 +30,8 @@ GridLayout {
             Layout.column: 0
             Layout.row: index
             Layout.alignment: Qt.AlignTop | Qt.AlignRight
-            text: jobDetails["descriptionLabel" + modelData] && jobDetails["descriptionValue" + modelData]
-                ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", jobDetails["descriptionLabel" + modelData]) : ""
+            text: modelInterface.jobDetails["descriptionLabel" + modelData] && modelInterface.jobDetails["descriptionValue" + modelData]
+                ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Row description, e.g. Source", "%1:", modelInterface.jobDetails["descriptionLabel" + modelData]) : ""
             font: Kirigami.Theme.smallFont
             textFormat: Text.PlainText
             visible: text !== ""
@@ -64,7 +64,7 @@ GridLayout {
             Component.onCompleted: bindText()
             function bindText() {
                 text = Qt.binding(function() {
-                    return jobDetails["descriptionValue" + modelData] || "";
+                    return modelInterface.jobDetails["descriptionValue" + modelData] || "";
                 });
             }
 
@@ -95,8 +95,8 @@ GridLayout {
             Layout.row: 2 + index
             Layout.fillWidth: true
             text: {
-                var processed = jobDetails["processed" + modelData];
-                var total = jobDetails["total" + modelData];
+                var processed = modelInterface.jobDetails["processed" + modelData];
+                var total = modelInterface.jobDetails["total" + modelData];
 
                 if (processed > 0 || total > 1) {
                     if (processed > 0 && total > 0 && processed <= total) {
@@ -141,8 +141,8 @@ GridLayout {
         Layout.column: 1
         Layout.row: 2 + 4
         Layout.fillWidth: true
-        text: jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
-                                           KCoreAddons.Format.formatByteSize(jobDetails.speed)) : ""
+        text: modelInterface.jobDetails.speed > 0 ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
+                                           KCoreAddons.Format.formatByteSize(modelInterface.jobDetails.speed)) : ""
         font: Kirigami.Theme.smallFont
         textFormat: Text.PlainText
         visible: text !== ""

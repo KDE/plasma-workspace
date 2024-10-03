@@ -15,13 +15,13 @@ import org.kde.plasma.private.notifications as Notifications
 
 PlasmaComponents3.ScrollView {
     id: bodyTextContainer
+    property ModelInterface modelInterface
 
     property alias text: bodyText.text
 
     property int cursorShape
 
     property QtObject contextMenu: null
-    property ListView listViewParent: null
 
     signal clicked(var mouse)
     signal linkActivated(string link)
@@ -86,7 +86,7 @@ PlasmaComponents3.ScrollView {
         }
     }
 
-    Component.onCompleted: if (bodyTextContainer.listViewParent !== null) {
-        bodyTextContainer.listViewParent.wheelForwarder.interceptWheelEvent(bodyText);
+    Component.onCompleted: if (modelInterface.listViewParent !== null) {
+        modelInterface.listViewParent.wheelForwarder.interceptWheelEvent(bodyText);
     }
 }

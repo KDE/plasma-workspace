@@ -14,20 +14,10 @@ import org.kde.kirigami as Kirigami
 StackLayout { // TODO: StackView?
     id: actionContainer
 
-    property var actionNames: []
-    property var actionLabels: []
+    property ModelInterface modelInterface
 
-    property bool hasReplyAction
     property bool replying
     readonly property bool hasPendingReply: replyLoader.item?.text.length > 0
-    property string replyActionLabel
-    property string replyPlaceholderText
-    property string replySubmitButtonIconName
-    property string replySubmitButtonText
-
-    signal forceActiveFocusRequested()
-    signal actionInvoked(string actionName)
-    signal replied(string text)
 
     Layout.fillWidth: true
     visible: actionRepeater.count > 0
@@ -61,8 +51,8 @@ StackLayout { // TODO: StackView?
 
             model: {
                 var buttons = [];
-                var actionNames = (actionContainer.actionNames || []);
-                var actionLabels = (actionContainer.actionLabels || []);
+                var actionNames = (actionContainer.modelInterface.actionNames || []);
+                var actionLabels = (actionContainer.modelInterface.actionLabels || []);
 
                 for (var i = 0; i < actionNames.length; ++i) {
                     buttons.push({
@@ -71,10 +61,10 @@ StackLayout { // TODO: StackView?
                     });
                 }
 
-                if (actionContainer.hasReplyAction) {
+                if (actionContainer.modelInterface.hasReplyAction) {
                     buttons.unshift({
                         actionName: "inline-reply",
-                        label: actionContainer.replyActionLabel || i18nc("Reply to message", "Reply")
+                        label: actionContainer.modelInterface.replyActionLabel || i18nc("Reply to message", "Reply")
                     });
                 }
 
@@ -96,7 +86,7 @@ StackLayout { // TODO: StackView?
                         return;
                     }
 
-                    actionContainer.actionInvoked(modelData.actionName);
+                    actionContainer.modelInterface.actionInvoked(modelData.actionName);
                 }
             }
         }
@@ -108,7 +98,7 @@ StackLayout { // TODO: StackView?
         width: parent.width
         height: active && item ? item.implicitHeight : 0
         // When there is only one action and it is a reply action, show text field right away
-        active: actionContainer.replying || (actionContainer.hasReplyAction && (actionContainer.actionNames || []).length === 0)
+        active: actionContainer.replying || (actionContainer.modelInterface.hasReplyAction && (actionContainer.modelInterface.actionNames || []).length === 0)
         visible: active
         opacity: active ? 1 : 0
         x: active ? 0 : parent.width
@@ -128,15 +118,15 @@ StackLayout { // TODO: StackView?
         function beginReply() {
             actionContainer.replying = true;
 
-            actionContainer.forceActiveFocusRequested();
+            actionContainer.modelInterface.forceActiveFocusRequested();
             replyLoader.item.activate();
         }
 
         sourceComponent: NotificationReplyField {
-            placeholderText: actionContainer.replyPlaceholderText
-            buttonIconName: actionContainer.replySubmitButtonIconName
-            buttonText: actionContainer.replySubmitButtonText
-            onReplied: actionContainer.replied(text)
+            placeholderText: actionContainer.modelInterface.replyPlaceholderText
+            buttonIconName: actionContainer.modelInterface.replySubmitButtonIconName
+            buttonText: actionContainer.modelInterface.replySubmitButtonText
+            onReplied: actionContainer.modelInterface.replied(text)
 
             replying: actionContainer.replying
             onBeginReplyRequested: replyLoader.beginReply()

@@ -1,64 +1,42 @@
 /*
     SPDX-FileCopyrightText: 2018-2019 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2024 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.8
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.2
+import QtQuick
+import QtQuick.Layouts
 
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
 import org.kde.notificationmanager as NotificationManager
 
-import org.kde.coreaddons 1.0 as KCoreAddons
+import org.kde.coreaddons as KCoreAddons
 
-import org.kde.quickcharts 1.0 as Charts
+import org.kde.quickcharts as Charts
 
 import "../global"
 
 RowLayout {
     id: notificationHeading
-    property bool inGroup
-    property bool inHistory
-    property int notificationType
 
-    property var applicationIconSource
-    property string applicationName
-    property string originName
-
-    property string configureActionLabel
-
-    property alias configurable: configureButton.visible
-    property alias dismissable: dismissButton.visible
-    property bool dismissed
+    property ModelInterface modelInterface: ModelInterface {}
     property alias closeButtonTooltip: closeButtonToolTip.text
-    property alias closable: closeButton.visible
 
-    property var time
-
-    property int jobState
-    property QtObject jobDetails
-
-    property real timeout: 5000
-    property real remainingTime: 0
-
-    signal configureClicked
-    signal dismissClicked
-    signal closeClicked
-
-    // notification created/updated time changed
-    onTimeChanged: updateAgoText()
-
+    Connections {
+        target: modelInterface
+        function onTimeChanged() {
+            notificationHeading.updateAgoText()
+        }
+    }
     function updateAgoText() {
         ageLabel.agoText = ageLabel.generateAgoText();
     }
 
     spacing: Kirigami.Units.smallSpacing
-    Layout.preferredHeight: Math.max(applicationNameLabel.implicitHeight, Kirigami.Units.iconSizes.small)
 
     Component.onCompleted: updateAgoText()
 
@@ -74,7 +52,7 @@ RowLayout {
         id: applicationIconItem
         Layout.preferredWidth: Kirigami.Units.iconSizes.small
         Layout.preferredHeight: Kirigami.Units.iconSizes.small
-        source: notificationHeading.applicationIconSource
+        source: modelInterface.applicationIconSource
         visible: valid
     }
 
@@ -86,7 +64,7 @@ RowLayout {
         textFormat: Text.PlainText
         elide: Text.ElideMiddle
         maximumLineCount: 2
-        text: notificationHeading.applicationName + (notificationHeading.originName ? " · " + notificationHeading.originName : "")
+        text: modelInterface.applicationName + (modelInterface.originName ? " · " + modelInterface.originName : "")
     }
 
     Item {
@@ -108,16 +86,17 @@ RowLayout {
         textFormat: Text.PlainText
 
         function generateAgoText() {
+            const time = modelInterface.time;
             if (!time || isNaN(time.getTime())
-                    || notificationHeading.jobState === NotificationManager.Notifications.JobStateRunning
-                    || notificationHeading.jobState === NotificationManager.Notifications.JobStateSuspended) {
+                    || modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
+                    || modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended) {
                 return "";
             }
 
             var deltaMinutes = Math.floor((Date.now() - time.getTime()) / 1000 / 60);
             if (deltaMinutes < 1) {
                 // "Just now" is implied by
-                return notificationHeading.inHistory
+                return modelInterface.inHistory
                     ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Notification was added less than a minute ago, keep short", "Just now")
                     : "";
             }
@@ -136,12 +115,12 @@ RowLayout {
         }
 
         function generateRemainingText() {
-            if (notificationHeading.notificationType !== NotificationManager.Notifications.JobType
-                || notificationHeading.jobState !== NotificationManager.Notifications.JobStateRunning) {
+            if (modelInterface.notificationType !== NotificationManager.Notifications.JobType
+                || modelInterface.jobState !== NotificationManager.Notifications.JobStateRunning) {
                 return "";
             }
 
-            var details = notificationHeading.jobDetails;
+            var details = modelInterface.jobDetails;
             if (!details || !details.speed) {
                 return "";
             }
@@ -177,20 +156,20 @@ RowLayout {
         PlasmaCore.ToolTipArea {
             anchors.fill: parent
             active: ageLabel.agoText !== ""
-            subText: notificationHeading.time ? notificationHeading.time.toLocaleString(Qt.locale(), Locale.LongFormat) : ""
+            subText: modelInterface.time ? modelInterface.time.toLocaleString(Qt.locale(), Locale.LongFormat) : ""
         }
     }
 
     PlasmaComponents3.ToolButton {
         id: configureButton
         icon.name: "configure"
-        visible: false
+        visible: modelInterface.configurable
 
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: notificationHeading.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
+        text: modelInterface.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
         Accessible.description: applicationNameLabel.text
 
-        onClicked: notificationHeading.configureClicked()
+        onClicked: modelInterface.configureClicked()
 
         PlasmaComponents3.ToolTip {
             text: parent.text
@@ -199,16 +178,16 @@ RowLayout {
 
     PlasmaComponents3.ToolButton {
         id: dismissButton
-        icon.name: notificationHeading.dismissed ? "window-restore" : "window-minimize"
-        visible: false
+        icon.name: modelInterface.dismissed ? "window-restore" : "window-minimize"
+        visible: modelInterface.dismissable
 
         display: PlasmaComponents3.AbstractButton.IconOnly
-        text: notificationHeading.dismissed
+        text: modelInterface.dismissed
             ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
             : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
         Accessible.description: applicationNameLabel.text
 
-        onClicked: notificationHeading.dismissClicked()
+        onClicked: modelInterface.dismissClicked()
 
         PlasmaComponents3.ToolTip {
             text: parent.text
@@ -217,18 +196,18 @@ RowLayout {
 
     PlasmaComponents3.ToolButton {
         id: closeButton
-        visible: false
+        visible: modelInterface.closable
         icon.name: "window-close"
 
         display: PlasmaComponents3.AbstractButton.IconOnly
         text: closeButtonToolTip.text
         Accessible.description: applicationNameLabel.text
 
-        onClicked: notificationHeading.closeClicked()
+        onClicked: modelInterface.closeClicked()
 
         PlasmaComponents3.ToolTip {
             id: closeButtonToolTip
-            text: i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
+            text: modelInterface.closeButtonToolTip || i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
         }
 
         Charts.PieChart {
@@ -236,14 +215,16 @@ RowLayout {
             anchors.fill: parent.contentItem
             anchors.margins: 1
 
-            opacity: (notificationHeading.remainingTime > 0 && notificationHeading.remainingTime < notificationHeading.timeout) ? 1 : 0
+            opacity: (modelInterface.remainingTime > 0 && modelInterface.remainingTime < modelInterface.timeout) ? 1 : 0
             Behavior on opacity {
                 NumberAnimation { duration: Kirigami.Units.longDuration }
             }
 
-            range { from: 0; to: notificationHeading.timeout; automatic: false }
+            range { from: 0; to: modelInterface.timeout; automatic: false }
 
-            valueSources: Charts.SingleValueSource { value: notificationHeading.remainingTime }
+            valueSources: Charts.SingleValueSource { value: modelInterface.remainingTime }
+            range { from: 0; to: 2000; automatic: false }
+
             colorSource: Charts.SingleValueSource { value: Kirigami.Theme.highlightColor }
 
             thickness: 5
@@ -254,7 +235,7 @@ RowLayout {
 
     states: [
         State {
-            when: notificationHeading.inGroup
+            when: modelInterface.inGroup
             PropertyChanges {
                 target: applicationIconItem
                 source: ""
