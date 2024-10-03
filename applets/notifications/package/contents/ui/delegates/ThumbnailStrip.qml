@@ -21,39 +21,16 @@ import "../global"
 Item {
     id: thumbnailArea
 
+    property ModelInterface modelInterface
+
     // The protocol supports multiple URLs but so far it's only used to show
     // a single preview image, so this code is simplified a lot to accommodate
     // this usecase and drops everything else (fallback to app icon or ListView
     // for multiple files)
-    property var urls
+    property var urls: modelInterface.urls
 
     readonly property alias menuOpen: fileMenu.visible
     readonly property alias dragging: dragArea.dragging
-
-    property int leftPadding: 0
-    property int rightPadding: 0
-    property int topPadding: 0
-    property int bottomPadding: 0
-
-    signal openUrl(string url)
-    signal fileActionInvoked(QtObject action)
-
-//BEGIN ActionContainer-related api
-    property alias actionNames: actionContainer.actionNames
-    property alias actionLabels: actionContainer.actionLabels
-
-    property alias hasReplyAction: actionContainer.hasReplyAction
-    property alias replying: actionContainer.replying
-    property alias hasPendingReply: actionContainer.hasPendingReply
-    property alias replyActionLabel: actionContainer.replyActionLabel
-    property alias replyPlaceholderText: actionContainer.replyPlaceholderText
-    property alias replySubmitButtonIconName: actionContainer.replySubmitButtonIconName
-    property alias replySubmitButtonText: actionContainer.replySubmitButtonText
-
-    signal forceActiveFocusRequested()
-    signal actionInvoked(string actionName)
-    signal replied(string text)
-//END ActionContainer-related api
 
     // Fix for BUG:462399
     implicitHeight: Kirigami.Units.iconSizes.enormous
@@ -62,7 +39,7 @@ Item {
         id: fileMenu
         url: thumbnailer.url
         visualParent: menuButton
-        onActionTriggered: thumbnailArea.fileActionInvoked(action)
+        onActionTriggered: modelInterface.fileActionInvoked(action)
     }
 
     Notifications.Thumbnailer {
@@ -81,10 +58,10 @@ Item {
         id: previewBackground
         anchors {
             fill: parent
-            leftMargin: thumbnailArea.leftPadding
-            rightMargin: thumbnailArea.rightPadding
-            topMargin: thumbnailArea.topPadding
-            bottomMargin: thumbnailArea.bottomPadding
+            leftMargin: modelInterface.leftPadding
+            rightMargin: modelInterface.rightPadding
+            topMargin: modelInterface.topPadding
+            bottomMargin: modelInterface.bottomPadding
         }
         fillMode: Image.PreserveAspectCrop
         layer.enabled: true
@@ -105,7 +82,7 @@ Item {
         dragPixmap: thumbnailer.hasPreview ? thumbnailer.pixmap : thumbnailer.iconName
         dragUrl: thumbnailer.url
 
-        onActivated: thumbnailArea.openUrl(thumbnailer.url)
+        onActivated: modelInterface.openUrl(thumbnailer.url)
         onContextMenuRequested: (pos) => {
             // avoid menu button glowing if we didn't actually press it
             menuButton.checked = false;
@@ -155,10 +132,7 @@ Item {
             }
             ActionContainer {
                 id: actionContainer
-
-                onForceActiveFocusRequested: thumbnailArea.forceActiveFocusRequested()
-                onActionInvoked: actionName => thumbnailArea.actionInvoked(actionName)
-                onReplied: text => thumbnailArea.replied(text)
+                modelInterface: thumbnailArea.modelInterface
             }
 
             PlasmaComponents3.Button {

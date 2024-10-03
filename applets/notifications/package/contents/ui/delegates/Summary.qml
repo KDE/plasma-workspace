@@ -12,17 +12,15 @@ import QtQuick.Window
 import org.kde.kirigami as Kirigami
 import org.kde.notificationmanager as NotificationManager
 
-
+//TODO remove this file?
 Kirigami.Heading {
     id: summaryLabel
 
-    property string summary
-    property string applicationName
-    property int notificationType
-    property int jobState
-
     Layout.fillWidth: true
-    Layout.preferredHeight: implicitHeight
+
+    property ModelInterface modelInterface
+    property alias metrics: summaryLabelTextMetrics
+
     textFormat: Text.PlainText
     maximumLineCount: 3
     wrapMode: Text.WordWrap
@@ -31,21 +29,21 @@ Kirigami.Heading {
     // Give it a bit more visual prominence than the app name in the header
     type: Kirigami.Heading.Type.Primary
     text: {
-        if (notificationType === NotificationManager.Notifications.JobType) {
-            if (jobState === NotificationManager.Notifications.JobStateSuspended) {
-                if (summary) {
-                    return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying is paused", "%1 (Paused)", summary);
+        if (modelInterface.notificationType === NotificationManager.Notifications.JobType) {
+            if (modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended) {
+                if (modelInterface.summary) {
+                    return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying is paused", "%1 (Paused)", modelInterface.summary);
                 }
             } else if (jobState === NotificationManager.Notifications.JobStateStopped) {
-                if (jobError) {
-                    if (summary) {
-                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has failed", "%1 (Failed)", summary);
+                if (modelInterface.jobError) {
+                    if (modelInterface.summary) {
+                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has failed", "%1 (Failed)", modelInterface.summary);
                     } else {
                         return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Failed");
                     }
                 } else {
-                    if (summary) {
-                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has finished", "%1 (Finished)", summary);
+                    if (modelInterface.summary) {
+                        return i18ndc("plasma_applet_org.kde.plasma.notifications", "Job name, e.g. Copying has finished", "%1 (Finished)", modelInterface.summary);
                     } else {
                         return i18nd("plasma_applet_org.kde.plasma.notifications", "Job Finished");
                     }
@@ -54,8 +52,8 @@ Kirigami.Heading {
         }
         // some apps use their app name as summary, avoid showing the same text twice
         // try very hard to match the two
-        if (summary && summary.toLocaleLowerCase().trim() != applicationName.toLocaleLowerCase().trim()) {
-            return summary;
+        if (modelInterface.summary && modelInterface.summary.toLocaleLowerCase().trim() != modelInterface.applicationName.toLocaleLowerCase().trim()) {
+            return modelInterface.summary;
         }
         return "";
     }

@@ -21,27 +21,20 @@ import "../global"
 ColumnLayout {
     id: jobItem
 
-    property int jobState
-    property int jobError
+    property ModelInterface modelInterface
 
-    property alias percentage: progressBar.value
-    property alias suspendable: suspendButton.visible
-    property alias killable: killButton.visible
-
-    property QtObject jobDetails
-
-    readonly property int totalFiles: jobItem.jobDetails && jobItem.jobDetails.totalFiles || 0
+    readonly property int totalFiles: modelInterface.jobDetails && modelInterface.jobDetails.totalFiles || 0
 
     readonly property url url: {
-        if (jobState !== NotificationManager.Notifications.JobStateStopped || jobError !== 0) {
+        if (modelInterface.jobState !== NotificationManager.Notifications.JobStateStopped || modelInterface.jobError !== 0) {
             return Qt.url("");
         }
 
         // For a single file show actions for it
         // Otherwise the destination folder all of them were copied into
         const url = totalFiles === 1
-            ? jobDetails.descriptionUrl
-            : jobDetails.destUrl;
+            ? modelInterface.jobDetails.descriptionUrl
+            : modelInterface.jobDetails.destUrl;
 
         // Don't offer opening files in Trash
         if (url.toString().startsWith("trash:")) {
@@ -55,13 +48,6 @@ ColumnLayout {
 
     readonly property alias dragging: jobDragArea.dragging
     readonly property alias menuOpen: otherFileActionsMenu.visible
-
-    signal suspendJobClicked
-    signal resumeJobClicked
-    signal killJobClicked
-
-    signal openUrl(string url)
-    signal fileActionInvoked(QtObject action)
 
     spacing: Kirigami.Units.smallSpacing
 
@@ -109,7 +95,7 @@ ColumnLayout {
                 dragUrl: jobItem.url
                 dragPixmap: jobDragIcon.source
 
-                onActivated: jobItem.openUrl(jobItem.url)
+                onActivated: modelInterface.openUrl(jobItem.url)
                 onContextMenuRequested: (pos) => {
                     // avoid menu button glowing if we didn't actually press it
                     otherFileActionsButton.checked = false;
@@ -149,13 +135,14 @@ ColumnLayout {
             Layout.fillWidth: true
             from: 0
             to: 100
+            value: modelInterface.percentage
             // TODO do we actually need the window visible check? perhaps I do because it can be in popup or expanded plasmoid
-            indeterminate: visible && Window.window && Window.window.visible && percentage < 1
-                           && jobItem.jobState === NotificationManager.Notifications.JobStateRunning
+            indeterminate: visible && Window.window && Window.window.visible && modelInterface.percentage < 1
+                           && modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
                            // is this too annoying?
-                           && (jobItem.jobDetails.processedBytes === 0 || jobItem.jobDetails.totalBytes === 0)
-                           && jobItem.jobDetails.processedFiles === 0
-                           //&& jobItem.jobDetails.processedDirectories === 0
+                           && (modelInterface.jobDetails.processedBytes === 0 || modelInterface.jobDetails.totalBytes === 0)
+                           && modelInterface.jobDetails.processedFiles === 0
+                           //&& modelInterface.jobDetails.processedDirectories === 0
         }
 
         PlasmaComponents3.Label {
@@ -164,7 +151,7 @@ ColumnLayout {
             visible: !progressBar.indeterminate
             // the || "0" is a workaround for the fact that 0 as number is falsey, and is wrongly considered a missing argument
             // BUG: 451807
-            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", jobItem.percentage || "0")
+            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", modelInterface.percentage || "0")
             textFormat: Text.PlainText
         }
     }
@@ -183,7 +170,7 @@ ColumnLayout {
 
             icon.name: checked ? "collapse-symbolic" : "expand-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Hides/expands item details", "Details")
-            checkable: jobItem.jobDetails && jobItem.jobDetails.hasDetails
+            checkable: modelInterface.jobDetails && modelInterface.jobDetails.hasDetails
             visible: checkable
         }
 
@@ -192,7 +179,9 @@ ColumnLayout {
         PlasmaComponents3.Button {
             id: suspendButton
 
-            readonly property bool paused: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended
+            readonly property bool paused: modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended
+
+            visible: modelInterface.suspendable
 
             Layout.fillWidth: true
             Layout.maximumWidth: implicitWidth
@@ -201,8 +190,8 @@ ColumnLayout {
                               : "media-playback-pause-symbolic"
             text: paused ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Resume paused job", "Resume")
                          : i18ndc("plasma_applet_org.kde.plasma.notifications", "Pause running job", "Pause")
-            onClicked: paused ? jobItem.resumeJobClicked()
-                              : jobItem.suspendJobClicked()
+            onClicked: paused ? modelInterface.resumeJobClicked()
+                              : modelInterface.suspendJobClicked()
         }
 
         PlasmaComponents3.Button {
@@ -211,9 +200,11 @@ ColumnLayout {
             Layout.fillWidth: true
             Layout.maximumWidth: implicitWidth
 
+            visible: modelInterface.killable
+
             icon.name: "dialog-cancel-symbolic"
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Cancel running job", "Cancel")
-            onClicked: jobItem.killJobClicked()
+            onClicked: modelInterface.killJobClicked()
         }
     }
 
@@ -225,7 +216,7 @@ ColumnLayout {
         // Loader doesn't reset its height when unloaded, just hide it altogether
         visible: active
         sourceComponent: JobDetails {
-            jobDetails: jobItem.jobDetails
+            modelInterface: jobItem.modelInterface
         }
     }
 
@@ -264,7 +255,7 @@ ColumnLayout {
             Notifications.FileMenu {
                 id: otherFileActionsMenu
                 url: jobItem.url
-                onActionTriggered: jobItem.fileActionInvoked(action)
+                onActionTriggered: modelInterface.fileActionInvoked(action)
             }
         }
 
@@ -273,11 +264,11 @@ ColumnLayout {
             width: Math.min(implicitWidth, jobItem.width - otherFileActionsButton.width - fileActionsRow.spacing)
             height: Math.max(implicitHeight, otherFileActionsButton.implicitHeight)
             text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
-            onClicked: jobItem.openUrl(jobItem.url)
+            onClicked: modelInterface.openUrl(jobItem.url)
 
             states: [
                 State {
-                    when: jobItem.jobDetails && jobItem.jobDetails.totalFiles !== 1
+                    when: modelInterface.jobDetails && modelInterface.jobDetails.totalFiles !== 1
                     PropertyChanges {
                         target: openButton
                         text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open Containing Folder")
@@ -293,7 +284,7 @@ ColumnLayout {
                         visible: fileInfo.openAction.enabled
                         onClicked: {
                             fileInfo.openAction.trigger();
-                            jobItem.fileActionInvoked(fileInfo.openAction);
+                            modelInterface.fileActionInvoked(fileInfo.openAction);
                         }
                     }
                 }
@@ -303,14 +294,14 @@ ColumnLayout {
 
     states: [
         State {
-            when: jobItem.jobState === NotificationManager.Notifications.JobStateSuspended
+            when: modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended
             PropertyChanges {
                 target: progressBar
                 enabled: false
             }
         },
         State {
-            when: jobItem.jobState === NotificationManager.Notifications.JobStateStopped
+            when: modelInterface.jobState === NotificationManager.Notifications.JobStateStopped
             PropertyChanges {
                 target: progressRow
                 visible: false

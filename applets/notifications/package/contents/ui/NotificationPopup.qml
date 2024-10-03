@@ -29,65 +29,14 @@ NotificationsApplet.NotificationWindow {
     readonly property int minimumContentWidth: popupWidth
     readonly property int maximumContentWidth: Math.min((availableWidth > 0 ? availableWidth : Number.MAX_VALUE), popupWidth * 3)
 
-    property alias notificationType: notificationItem.notificationType
+    property alias modelInterface: notificationItem.modelInterface
 
-    property alias applicationName: notificationItem.applicationName
-    property alias applicationIconSource: notificationItem.applicationIconSource
-    property alias originName: notificationItem.originName
-
-    property alias time: notificationItem.time
-
-    property alias summary: notificationItem.summary
-    property alias body: notificationItem.body
-    property alias accessibleDescription: notificationItem.accessibleDescription
-    property alias icon: notificationItem.icon
-    property alias urls: notificationItem.urls
-
-    property int urgency
     property int timeout
     property int dismissTimeout
-
-    property alias jobState: notificationItem.jobState
-    property alias percentage: notificationItem.percentage
-    property alias jobError: notificationItem.jobError
-    property alias suspendable: notificationItem.suspendable
-    property alias killable: notificationItem.killable
-    property alias jobDetails: notificationItem.jobDetails
-
-    property alias configureActionLabel: notificationItem.configureActionLabel
-    property alias configurable: notificationItem.configurable
-    property alias dismissable: notificationItem.dismissable
-    property alias closable: notificationItem.closable
-
-    property bool hasDefaultAction
-    property var defaultActionFallbackWindowIdx
-    property alias actionNames: notificationItem.actionNames
-    property alias actionLabels: notificationItem.actionLabels
-
-    property alias hasReplyAction: notificationItem.hasReplyAction
-    property alias replyActionLabel: notificationItem.replyActionLabel
-    property alias replyPlaceholderText: notificationItem.replyPlaceholderText
-    property alias replySubmitButtonText: notificationItem.replySubmitButtonText
-    property alias replySubmitButtonIconName: notificationItem.replySubmitButtonIconName
-
-    signal configureClicked
-    signal dismissClicked
-    signal closeClicked
-
-    signal defaultActionInvoked
-    signal actionInvoked(string actionName)
-    signal replied(string text)
-    signal openUrl(string url)
-    signal fileActionInvoked(QtObject action)
-    signal forceActiveFocusRequested
 
     signal expired
     signal hoverEntered
     signal hoverExited
-
-    signal suspendJobClicked
-    signal resumeJobClicked
-    signal killJobClicked
 
     property int defaultTimeout: 5000
     readonly property int effectiveTimeout: {
@@ -97,20 +46,13 @@ NotificationsApplet.NotificationWindow {
         if (dismissTimeout) {
             return dismissTimeout;
         }
-        return timeout;
+        return modelInterface.timeout;
     }
 
     // On wayland we need focus to copy to the clipboard, we change on mouse interaction until the cursor leaves 
     takeFocus: notificationItem.replying || focusListener.wantsFocus
 
     visible: false
-
-    // When notification is updated, restart hide timer
-    onTimeChanged: {
-        if (timer.running) {
-            timer.restart();
-        }
-    }
 
     height: mainItem.implicitHeight + topPadding + bottomPadding
     width: mainItem.implicitWidth + leftPadding + rightPadding
@@ -161,7 +103,7 @@ NotificationsApplet.NotificationWindow {
             }
             implicitWidth: 4
 
-            visible: notificationPopup.urgency === NotificationManager.Notifications.CriticalUrgency
+            visible: notificationPopup.modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
 
             color: Kirigami.Theme.neutralTextColor
         }
@@ -230,7 +172,7 @@ NotificationsApplet.NotificationWindow {
             }
 
             NumberAnimation {
-                target: notificationItem
+                target: notificationItem.modelInterface
                 property: "remainingTime"
                 from: timer.interval
                 to: 0
@@ -246,42 +188,38 @@ NotificationsApplet.NotificationWindow {
                 anchors.right: parent.right
 
                 // let the item bleed into the dialog margins so the close button margins cancel out
-                y: closable || dismissable || configurable ? -notificationPopup.topPadding : 0
+                y: modelInterface.closable || modelInterface.dismissable || modelInterface.configurable ? -notificationPopup.topPadding : 0
 
-                headingLeftMargin: -anchors.leftMargin
+                modelInterface {
+                    headingLeftMargin: -anchors.leftMargin
 
-                headingLeftPadding: LayoutMirroring.enabled ? -notificationPopup.leftPadding : 0
-                headingRightPadding: LayoutMirroring.enabled ? 0 : -notificationPopup.rightPadding
+                    headingLeftPadding: LayoutMirroring.enabled ? -notificationPopup.leftPadding : 0
+                    headingRightPadding: LayoutMirroring.enabled ? 0 : -notificationPopup.rightPadding
 
-                maximumLineCount: 8
-                bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
+                    maximumLineCount: 8
+                    bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
 
-                thumbnailLeftPadding: -notificationPopup.leftPadding
-                thumbnailRightPadding: -notificationPopup.rightPadding
-                thumbnailTopPadding: -notificationPopup.topPadding
-                thumbnailBottomPadding: -notificationPopup.bottomPadding
+                    thumbnailLeftPadding: -notificationPopup.leftPadding
+                    thumbnailRightPadding: -notificationPopup.rightPadding
+                    thumbnailTopPadding: -notificationPopup.topPadding
+                    thumbnailBottomPadding: -notificationPopup.bottomPadding
 
-                timeout: timer.running ? timer.interval : 0
+                    // When notification is updated, restart hide timer
+                    onTimeChanged: {
+                        if (timer.running) {
+                            timer.restart();
+                        }
+                    }
+                    timeout: timer.running ? timer.interval : 0
 
-                closable: true
+                    closable: true
 
-                onBodyClicked: {
-                    if (area.acceptedButtons & Qt.LeftButton) {
-                        area.clicked(null /*mouse*/);
+                    onBodyClicked: {
+                        if (area.acceptedButtons & Qt.LeftButton) {
+                            area.clicked(null /*mouse*/);
+                        }
                     }
                 }
-                onCloseClicked: notificationPopup.closeClicked()
-                onDismissClicked: notificationPopup.dismissClicked()
-                onConfigureClicked: notificationPopup.configureClicked()
-                onActionInvoked: actionName =>  notificationPopup.actionInvoked(actionName)
-                onReplied: text => notificationPopup.replied(text)
-                onOpenUrl: url => notificationPopup.openUrl(url)
-                onFileActionInvoked: action => notificationPopup.fileActionInvoked(action)
-                onForceActiveFocusRequested: notificationPopup.forceActiveFocusRequested()
-
-                onSuspendJobClicked: notificationPopup.suspendJobClicked()
-                onResumeJobClicked: notificationPopup.resumeJobClicked()
-                onKillJobClicked: notificationPopup.killJobClicked()
             }
         }
     }
