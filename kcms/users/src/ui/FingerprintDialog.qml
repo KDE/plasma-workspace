@@ -29,8 +29,8 @@ Kirigami.Dialog {
 
     visible: true
 
-    implicitWidth: Kirigami.Units.gridUnit * 20
-    implicitHeight: Kirigami.Units.gridUnit * 18
+    implicitWidth: contentItem.implicitWidth + Kirigami.Units.gridUnit * 20
+    implicitHeight: contentItem.implicitHeight + Kirigami.Units.gridUnit * 18
 
     standardButtons: QQC2.Dialog.NoButton
 
@@ -38,7 +38,7 @@ Kirigami.Dialog {
         // FingerprintList State
         Kirigami.Action {
             text: i18n("Add")
-            visible: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+            visible: root.fingerprintModel.deviceFound && root.fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
             enabled: root.fingerprintModel.availableFingersToEnroll.length !== 0
             icon.name: "list-add"
             onTriggered: {
@@ -64,8 +64,7 @@ Kirigami.Dialog {
         }
     ]
 
-    ColumnLayout {
-        anchors.fill: parent
+    contentItem: ColumnLayout {
 
         Kirigami.InlineMessage {
             type: Kirigami.MessageType.Error
