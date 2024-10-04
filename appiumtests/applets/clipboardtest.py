@@ -437,7 +437,7 @@ class ClipboardTest(unittest.TestCase):
         ActionChains(self.driver).send_keys(new_text).pause(1).perform()
         ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("s").key_up(Keys.CONTROL).perform()  # Save
         self.driver.find_element(AppiumBy.NAME, new_text)
-        # self.assertEqual(self.driver.get_clipboard_text(), new_text)
+        self.assertEqual(self.driver.get_clipboard_text(), new_text)
 
     def test_9_bug491488_copy_cells(self) -> None:
         """
