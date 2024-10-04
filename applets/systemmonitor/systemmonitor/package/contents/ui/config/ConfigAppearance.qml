@@ -21,15 +21,34 @@ KCM.SimpleKCM {
     signal configurationChanged
 
     function saveConfig() {
-        contentItem.saveConfig();
+        configUi.saveConfig()
         Plasmoid.faceController.reloadConfig()
     }
 
     // Workaround for Bug 424458, when reusing the controller/item things break
-    contentItem: Plasmoid.workaroundController(root).appearanceConfigUi
+    readonly property Item configUi: Plasmoid.workaroundController(root).appearanceConfigUi
+
+    // We cannot directly override the contentItem since SimpleKCM is a
+    // Kirigami.ScrollablePage which breaks if we override the contentItem. So
+    // instead use a placeholder item and reparent the config UI into that item,
+    // making sure to bind the required properties so sizing is correct.
+    Item {
+        id: contents
+
+        implicitWidth: root.configUi.implicitWidth
+        implicitHeight: root.configUi.implicitHeight
+
+        children: root.configUi
+
+        Binding {
+            target: root.configUi
+            property: "width"
+            value: contents.width
+        }
+    }
 
     Connections {
-        target: contentItem
+        target: root.configUi
         function onConfigurationChanged() {
             root.configurationChanged()
         }
