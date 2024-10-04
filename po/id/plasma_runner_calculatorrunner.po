@@ -2,22 +2,22 @@
 # Copyright (C) 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_runner_calculatorrunner package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010.
-# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_calculatorrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-20 00:52+0000\n"
-"PO-Revision-Date: 2022-03-13 22:15+0700\n"
+"PO-Revision-Date: 2024-10-03 20:24+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: calculatorrunner.cpp:33
 #, kde-format
@@ -31,7 +31,7 @@ msgstr ""
 #: calculatorrunner.cpp:39
 #, kde-format
 msgid "Copy to Clipboard"
-msgstr "Salin ke Papan-klip"
+msgstr "Salin ke Papan Klip"
 
 #: calculatorrunner.cpp:133
 #, kde-format
