@@ -525,7 +525,7 @@ KAStatsFavoritesModel::KAStatsFavoritesModel(QObject *parent)
     connect(m_activities, &KActivities::Consumer::currentActivityChanged, this, [&](const QString &currentActivity) {
         qCDebug(KICKER_DEBUG) << "Activity just got changed to" << currentActivity;
         Q_UNUSED(currentActivity);
-        if (d) {
+        if (d && m_activities->serviceStatus() == KActivities::Consumer::Running /*PLASMA-WORKSPACE-125Z*/) {
             auto clientId = d->m_clientId;
             initForClient(clientId);
         }
