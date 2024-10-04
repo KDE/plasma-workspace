@@ -72,7 +72,6 @@ Dependencies:
 
 - 'on': ['Linux']
   'require':
-    'frameworks/networkmanager-qt': '@latest-kf6'
     'libraries/polkit-qt-1': '@latest-kf6'
     'third-party/packagekit-qt': '@latest'
 

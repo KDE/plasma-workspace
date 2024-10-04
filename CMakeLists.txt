@@ -65,12 +65,6 @@ endif()
 
 find_package(KF6KDED CONFIG REQUIRED)
 
-find_package(KF6NetworkManagerQt ${KF6_MIN_VERSION})
-set_package_properties(KF6NetworkManagerQt PROPERTIES DESCRIPTION "Qt wrapper for NetworkManager API"
-                       TYPE OPTIONAL
-                       PURPOSE "Needed by geolocation data engine."
-                      )
-
 find_package(KF6Kirigami ${KF6_MIN_VERSION} CONFIG)
 set_package_properties(KF6Kirigami PROPERTIES
     DESCRIPTION "A QtQuick based components set"
