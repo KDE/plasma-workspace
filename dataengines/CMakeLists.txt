@@ -15,7 +15,6 @@ if (KF6NetworkManagerQt_FOUND)
     add_subdirectory(geolocation)
 endif ()
 add_subdirectory(notifications)
-add_subdirectory(packagekit)
 add_subdirectory(places)
 
 add_subdirectory(time)
