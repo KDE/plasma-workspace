@@ -38,7 +38,7 @@ Kirigami.Dialog {
         // FingerprintList State
         Kirigami.Action {
             text: i18n("Add")
-            visible: root.fingerprintModel.deviceFound && root.fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
+            visible: root.fingerprintModel.dialogState === FingerprintDialog.DialogState.FingerprintList
             enabled: root.fingerprintModel.availableFingersToEnroll.length !== 0
             icon.name: "list-add"
             onTriggered: {
