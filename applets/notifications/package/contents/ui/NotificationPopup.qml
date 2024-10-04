@@ -12,18 +12,19 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami 2.20 as Kirigami
 
 import org.kde.notificationmanager as NotificationManager
+import org.kde.plasma.private.notifications 2.0 as NotificationsApplet
 
 import ".."
 
 import "global"
 
-PlasmaCore.Dialog {
+NotificationsApplet.NotificationWindow {
     id: notificationPopup
 
     property int popupWidth
 
     // Maximum width the popup can take to not break out of the screen geometry.
-    readonly property int availableWidth: globals.screenRect.width - globals.popupEdgeDistance * 2 - margins.left - margins.right
+    readonly property int availableWidth: globals.screenRect.width - globals.popupEdgeDistance * 2 - leftPadding - rightPadding
 
     readonly property int minimumContentWidth: popupWidth
     readonly property int maximumContentWidth: Math.min((availableWidth > 0 ? availableWidth : Number.MAX_VALUE), popupWidth * 3)
@@ -99,9 +100,8 @@ PlasmaCore.Dialog {
         return timeout;
     }
 
-    location: PlasmaCore.Types.Floating
     // On wayland we need focus to copy to the clipboard, we change on mouse interaction until the cursor leaves 
-    flags: notificationItem.replying || focusListener.wantsFocus ? 0 : Qt.WindowDoesNotAcceptFocus
+    takeFocus: notificationItem.replying || focusListener.wantsFocus
 
     visible: false
 
@@ -112,16 +112,15 @@ PlasmaCore.Dialog {
         }
     }
 
+    height: mainItem.implicitHeight + topPadding + bottomPadding
+    width: mainItem.implicitWidth + leftPadding + rightPadding
+
     mainItem: KQuickAddons.MouseEventListener {
         id: focusListener
         property bool wantsFocus: false
 
-        // Layout.minimumWidth/MaximumWidth controls the actual
-        // window minimum/maximum size for Plasma.Dialog
-        Layout.minimumWidth: Math.min(Math.max(notificationPopup.minimumContentWidth, notificationItem.Layout.preferredWidth), Math.max(notificationPopup.minimumContentWidth, notificationPopup.maximumContentWidth))
-        Layout.minimumHeight: notificationItem.Layout.preferredHeight + notificationItem.y
-        Layout.maximumWidth: Layout.minimumWidth
-        Layout.maximumHeight: Layout.minimumHeight
+        implicitWidth: Math.min(Math.max(notificationPopup.minimumContentWidth, notificationItem.Layout.preferredWidth), Math.max(notificationPopup.minimumContentWidth, notificationPopup.maximumContentWidth))
+        implicitHeight: notificationItem.Layout.preferredHeight + notificationItem.y
 
         acceptedButtons: Qt.AllButtons
         hoverEnabled: true
@@ -156,9 +155,9 @@ PlasmaCore.Dialog {
                 // its height, and also the PlasmoidHeading's bottom line
                 topMargin: notificationItem.headerHeight - notificationItem.spacing - 1
                 bottom: parent.bottom
-                bottomMargin: -notificationPopup.margins.bottom
+                bottomMargin: -notificationPopup.bottomPadding
                 left: parent.left
-                leftMargin: -notificationPopup.margins.left
+                leftMargin: -notificationPopup.leftPadding
             }
             implicitWidth: 4
 
@@ -247,20 +246,20 @@ PlasmaCore.Dialog {
                 anchors.right: parent.right
 
                 // let the item bleed into the dialog margins so the close button margins cancel out
-                y: closable || dismissable || configurable ? -notificationPopup.margins.top : 0
+                y: closable || dismissable || configurable ? -notificationPopup.topPadding : 0
 
                 headingLeftMargin: -anchors.leftMargin
 
-                headingLeftPadding: LayoutMirroring.enabled ? -notificationPopup.margins.left : 0
-                headingRightPadding: LayoutMirroring.enabled ? 0 : -notificationPopup.margins.right
+                headingLeftPadding: LayoutMirroring.enabled ? -notificationPopup.leftPadding : 0
+                headingRightPadding: LayoutMirroring.enabled ? 0 : -notificationPopup.rightPadding
 
                 maximumLineCount: 8
                 bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
 
-                thumbnailLeftPadding: -notificationPopup.margins.left
-                thumbnailRightPadding: -notificationPopup.margins.right
-                thumbnailTopPadding: -notificationPopup.margins.top
-                thumbnailBottomPadding: -notificationPopup.margins.bottom
+                thumbnailLeftPadding: -notificationPopup.leftPadding
+                thumbnailRightPadding: -notificationPopup.rightPadding
+                thumbnailTopPadding: -notificationPopup.topPadding
+                thumbnailBottomPadding: -notificationPopup.bottomPadding
 
                 timeout: timer.running ? timer.interval : 0
 

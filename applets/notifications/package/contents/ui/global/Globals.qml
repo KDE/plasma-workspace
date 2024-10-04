@@ -463,9 +463,7 @@ QtObject {
             readonly property var notificationId: model.notificationId
 
             popupWidth: globals.popupWidth
-            type: model.urgency === NotificationManager.Notifications.CriticalUrgency
-                  || (model.urgency === NotificationManager.Notifications.NormalUrgency && notificationSettings.keepNormalAlwaysOnTop)
-                  ? PlasmaCore.Dialog.CriticalNotification : PlasmaCore.Dialog.Notification
+            isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && notificationSettings.keepNormalAlwaysOnTop)
 
             notificationType: model.type
 

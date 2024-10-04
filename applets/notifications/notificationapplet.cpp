@@ -25,6 +25,7 @@
 #include "filemenu.h"
 #include "globalshortcuts.h"
 #include "jobaggregator.h"
+#include "notificationwindow.h"
 #include "thumbnailer.h"
 #include "wheelforwarder.h"
 
@@ -62,6 +63,7 @@ NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &d
         qmlRegisterSingletonType(uri, 2, 0, "InputDisabler", [](QQmlEngine *, QJSEngine *jsEngine) -> QJSValue {
             return jsEngine->toScriptValue(InputDisabler());
         });
+        qmlRegisterType<NotificationWindow>(uri, 2, 0, "NotificationWindow");
         qmlProtectModule(uri, 2);
         s_typesRegistered = true;
     }
