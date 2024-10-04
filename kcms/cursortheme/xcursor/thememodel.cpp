@@ -263,9 +263,8 @@ void CursorThemeModel::processThemeDir(const QDir &themeDir, const QStringList &
 void CursorThemeModel::insertThemes()
 {
     // Always show the active theme and the default theme, even if they are just duplicates of other themes
-    QStringList whitelist;
-    CursorThemeSettings settings;
-    whitelist << settings.cursorTheme() << settings.defaultCursorThemeValue();
+    const CursorThemeSettings settings;
+    const QStringList whitelist{settings.cursorTheme(), settings.defaultCursorThemeValue()};
 
     // Scan each base dir for Xcursor themes and add them to the list.
     const QStringList paths{searchPaths()};
