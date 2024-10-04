@@ -105,7 +105,6 @@ FingerprintModel::DialogState FingerprintModel::dialogState()
 void FingerprintModel::setDialogState(DialogState dialogState)
 {
     if (m_dialogState != dialogState) {
-        qWarning() << "mdialogstaet" << dialogState;
         m_dialogState = dialogState;
         Q_EMIT dialogStateChanged();
     }
