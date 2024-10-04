@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-01 00:41+0000\n"
-"PO-Revision-Date: 2024-10-02 18:22+0700\n"
+"PO-Revision-Date: 2024-10-03 20:40+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -139,7 +139,7 @@ msgstr "Lupakan Aplikasi"
 #: plugin/recentusagemodel.cpp:331
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "Buka Folder Yang Mengandungnya"
+msgstr "Buka Folder Konten"
 
 #: plugin/recentusagemodel.cpp:334
 #, kde-format

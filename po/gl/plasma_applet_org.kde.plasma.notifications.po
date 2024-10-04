@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-10-04 00:41+0000\n"
 "PO-Revision-Date: 2024-02-04 12:44+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -422,7 +422,7 @@ msgstr "%1 (rematou)"
 msgid "Job Finished"
 msgstr "Rematou a tarefa"
 
-#: package/contents/ui/NotificationItem.qml:393
+#: package/contents/ui/NotificationItem.qml:391
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

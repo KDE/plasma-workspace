@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 00:41+0000\n"
-"PO-Revision-Date: 2024-03-18 16:03-0300\n"
+"PO-Revision-Date: 2024-10-03 19:20-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -249,7 +249,7 @@ msgctxt ""
 "This is returned when an example test could not be made from locale "
 "information"
 msgid "Could not find an example for this locale"
-msgstr ""
+msgstr "Não foi possível encontrar um exemplo para esta localidade"
 
 #: kcmregionandlang.cpp:129
 #, kde-kuit-format
@@ -259,6 +259,9 @@ msgid ""
 "command> tool. Please file a bug report about this at <link>https://bugs.kde."
 "org</link>"
 msgstr ""
+"Não foi possível encontrar os locais disponíveis do sistema usando a "
+"ferramenta <command>localectl</command>. Por favor, registre um relatório de "
+"bug sobre isso em <link>https://bugs.kde.org</link>"
 
 #: languagelistmodel.cpp:94
 #, kde-format
@@ -278,7 +281,7 @@ msgstr "%1 (Brasil)"
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
-msgstr ""
+msgstr "Não é possível localizar o executável `check-language-support`"
 
 #: localegeneratorubuntu.cpp:52
 #, kde-format
@@ -401,7 +404,7 @@ msgstr "Endereço"
 #, kde-format
 msgctxt "@info:title"
 msgid "Name Style"
-msgstr ""
+msgstr "Estilo do nome"
 
 #: optionsmodel.cpp:55
 #, kde-format
@@ -413,7 +416,7 @@ msgstr "Números de telefone"
 #, kde-format
 msgctxt "@info:title"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Tamanhos de dados e armazenamento"
 
 #: optionsmodel.cpp:131 optionsmodel.cpp:375
 #, kde-format
@@ -425,19 +428,19 @@ msgstr "Padrão do sistema"
 #, kde-format
 msgctxt "the prefix for IECBinaryDialect, %1 is an example for 1 KiB"
 msgid "KiB, MiB, GiB; %1"
-msgstr ""
+msgstr "KiB, MiB, GiB; %1"
 
 #: optionsmodel.cpp:300
 #, kde-format
 msgctxt "the prefix for JEDECBinaryDialect, %1 is an example for 1 KB"
 msgid "KB, MB, GB; %1"
-msgstr ""
+msgstr "KB, MB, GB; %1"
 
 #: optionsmodel.cpp:303
 #, kde-format
 msgctxt "the prefix for MetricBinaryDialect, %1 is an example for 1 kB"
 msgid "kB, MB, GB; %1"
-msgstr ""
+msgstr "kB, MB, GB; %1"
 
 #: optionsmodel.cpp:377
 #, kde-format
@@ -453,7 +456,7 @@ msgstr " (formato padrão para %1)"
 #: regionandlangsettingsbase.kcfg:42
 #, kde-format
 msgid "Inherit Language"
-msgstr ""
+msgstr "Herdar idioma"
 
 #: ui/AdvancedLanguageSelectPage.qml:20
 #, kde-format
@@ -467,6 +470,9 @@ msgid ""
 "some applications. If you would like to use your system in English, remove "
 "all other languages."
 msgstr ""
+"Colocar qualquer outro idioma abaixo do inglês causará comportamento "
+"indesejado em alguns aplicativos. Se você quiser usar seu sistema em inglês, "
+"remova todos os outros idiomas."
 
 #: ui/AdvancedLanguageSelectPage.qml:42
 #, kde-format
@@ -539,6 +545,8 @@ msgid ""
 "Generating locale and language support files; don't turn off the computer "
 "yet."
 msgstr ""
+"Gerando arquivos de suporte de localidade e idioma; não desligue o "
+"computador ainda."
 
 #: ui/main.qml:65
 #, kde-format
@@ -549,6 +557,10 @@ msgid ""
 "specialized fonts to be displayed properly, you will need to discover what "
 "they are and install them yourself."
 msgstr ""
+"Arquivos de suporte de local e idioma foram gerados, mas fontes específicas "
+"do idioma não puderam ser instaladas automaticamente. Se o seu idioma requer "
+"fontes especializadas para serem exibidas corretamente, você precisará "
+"descobrir o que são e instalá-las você mesmo."
 
 #: ui/main.qml:81
 #, kde-format
@@ -557,6 +569,8 @@ msgid ""
 "Necessary locale and language support files have been installed. It is now "
 "safe to turn off the computer."
 msgstr ""
+"Os arquivos de suporte de idioma e locale necessários foram instalados. "
+"Agora é seguro desligar o computador."
 
 #: ui/main.qml:176
 #, kde-format
@@ -568,7 +582,7 @@ msgstr "Modificar…"
 #, kde-format
 msgctxt "@title:window"
 msgid "Data and Storage Sizes"
-msgstr ""
+msgstr "Tamanhos de dados e armazenamento"
 
 #: ui/main.qml:275
 #, kde-format

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-03 00:41+0000\n"
-"PO-Revision-Date: 2024-08-23 09:16+0300\n"
+"PO-Revision-Date: 2024-10-03 17:01+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -39,17 +39,14 @@ msgid "Clipboard history:"
 msgstr "Журнал буфера даних:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " запис"
-msgstr[1] " записи"
-msgstr[2] " записів"
-msgstr[3] " запис"
+msgstr[0] "%v запис"
+msgstr[1] "%v записи"
+msgstr[2] "%v записів"
+msgstr[3] "%v запис"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -152,17 +149,14 @@ msgid "Exclude Windows..."
 msgstr "Виключити вікна…"
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " секунда"
-msgstr[1] " секунди"
-msgstr[2] " секунд"
-msgstr[3] " секунда"
+msgstr[0] "%v секунда"
+msgstr[1] "%v секунди"
+msgstr[2] "%v секунд"
+msgstr[3] "%v секунда"
 
 #: configdialog.cpp:295
 #, kde-format

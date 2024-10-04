@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-03 00:41+0000\n"
-"PO-Revision-Date: 2024-08-22 13:48+0300\n"
+"PO-Revision-Date: 2024-10-03 06:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -41,15 +41,12 @@ msgid "Clipboard history:"
 msgstr "Pano geçmişi:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " girdi"
-msgstr[1] " girdi"
+msgstr[0] "%v girdi"
+msgstr[1] "%v girdi"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -147,15 +144,12 @@ msgid "Exclude Windows..."
 msgstr "Pencereleri Dışla"
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " saniye"
-msgstr[1] " saniye"
+msgstr[0] "%v saniye"
+msgstr[1] "%v saniye"
 
 #: configdialog.cpp:295
 #, kde-format

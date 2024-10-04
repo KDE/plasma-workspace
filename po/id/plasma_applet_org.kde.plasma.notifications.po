@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
-"PO-Revision-Date: 2024-10-02 18:48+0700\n"
+"POT-Creation-Date: 2024-10-04 00:41+0000\n"
+"PO-Revision-Date: 2024-10-03 20:40+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -34,7 +34,7 @@ msgstr "Buka dengan..."
 #: filemenu.cpp:117 package/contents/ui/JobItem.qml:280
 #, kde-format
 msgid "Open Containing Folder"
-msgstr "Buka Folder Yang Mengandungnya"
+msgstr "Buka Folder Konten"
 
 #: filemenu.cpp:131
 #, kde-format
@@ -423,7 +423,7 @@ msgstr "%1 (Selesai)"
 msgid "Job Finished"
 msgstr "Pekerjaan Selesai"
 
-#: package/contents/ui/NotificationItem.qml:393
+#: package/contents/ui/NotificationItem.qml:391
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

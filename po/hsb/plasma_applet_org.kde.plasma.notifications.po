@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-10-04 00:41+0000\n"
 "PO-Revision-Date: 2021-11-22 18:59+0100\n"
 "Last-Translator: Edward Wornar <edi.werner@gmx.de>\n"
 "Language-Team: Upper Sorbian <kde-i18n-doc@kde.org>\n"
@@ -453,7 +453,7 @@ msgstr "%1 (Zakónčene)"
 msgid "Job Finished"
 msgstr "Nadawk zakónčeny"
 
-#: package/contents/ui/NotificationItem.qml:393
+#: package/contents/ui/NotificationItem.qml:391
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

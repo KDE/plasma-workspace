@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-10-04 00:41+0000\n"
 "PO-Revision-Date: 2019-09-30 16:21+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -438,7 +438,7 @@ msgstr "%1 (Иҷро шуд)"
 msgid "Job Finished"
 msgstr "Вазифа иҷро шуд"
 
-#: package/contents/ui/NotificationItem.qml:393
+#: package/contents/ui/NotificationItem.qml:391
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

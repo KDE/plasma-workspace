@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-10-04 00:41+0000\n"
 "PO-Revision-Date: 2011-03-01 13:40+0100\n"
 "Last-Translator: Marko Dimjasevic <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -472,7 +472,7 @@ msgstr "%1 [završeno]"
 msgid "Job Finished"
 msgstr "%1 [završeno]"
 
-#: package/contents/ui/NotificationItem.qml:393
+#: package/contents/ui/NotificationItem.qml:391
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-03 00:41+0000\n"
-"PO-Revision-Date: 2024-08-22 05:10+0200\n"
+"PO-Revision-Date: 2024-10-03 05:43+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,15 +34,12 @@ msgid "Clipboard history:"
 msgstr "ბაფერის ისტორია:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " ჩანაწერი"
-msgstr[1] " ჩანაწერი"
+msgstr[0] "%v ჩანაწერი"
+msgstr[1] "%v ჩანაწერი"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -141,15 +138,12 @@ msgid "Exclude Windows..."
 msgstr "ფანჯრების გამორიცხვა..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " წამი"
-msgstr[1] " წამი"
+msgstr[0] "%v წამი"
+msgstr[1] "%v წამი"
 
 #: configdialog.cpp:295
 #, kde-format

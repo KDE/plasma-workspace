@@ -2,22 +2,22 @@
 # Copyright (C) 2009 This_file_is_part_of_KDE
 # This file is distributed under the same license as the plasma_engine_weather package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2009-2014.
-# Wantoyo <wantoyek@gmail.com>, 2017, 2018, 2019, 2022.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2022-03-13 22:09+0700\n"
+"PO-Revision-Date: 2024-10-03 20:29+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -2811,7 +2811,7 @@ msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "
 "\"Rain then Sunny\")"
 msgid " then "
-msgstr ""
+msgstr " kemudian "
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -3839,9 +3839,7 @@ msgid "Low Drifting Snow"
 msgstr "Salju Terbawa Angin Rendah"
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Clear"
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
 msgstr "Sebagian Besar Terang"
@@ -4885,36 +4883,28 @@ msgid "Mostly Clear"
 msgstr "Sebagian Besar Terang"
 
 #: noaa_i18n.dat:358
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Showers or thunderstorms"
+#, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr "Hujan singkat atau badai petir"
+msgstr "Hujan Singkat Dan Badai Petir"
 
 #: noaa_i18n.dat:359
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Slight Chance Thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr "Berpeluang Kecil Badai Petir"
+msgstr "Berpeluang Kecil Hujan Singkat Dan Badai Petir"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance of showers or thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "Berpeluang hujan singkat atau badai petir"
+msgstr "Berpeluang Hujan Singkat Dan Badai Petir"
 
 #: noaa_i18n.dat:361
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Thunderstorms Likely"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr "Sepertinya Badai Petir"
+msgstr "Sepertinya Hujan Singkat Dan Badai Petir"
 
 #~ msgid "UK"
 #~ msgstr "BR"

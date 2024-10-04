@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-03 00:41+0000\n"
-"PO-Revision-Date: 2024-08-22 10:18+0200\n"
+"PO-Revision-Date: 2024-10-03 12:16+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -40,15 +40,12 @@ msgid "Clipboard history:"
 msgstr "Historial del porta-retalls:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " entrada"
-msgstr[1] " entrades"
+msgstr[0] "%v entrada"
+msgstr[1] "%v entrades"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -148,15 +145,12 @@ msgid "Exclude Windows..."
 msgstr "Exclou finestres..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " segon"
-msgstr[1] " segons"
+msgstr[0] "%v segon"
+msgstr[1] "%v segons"
 
 #: configdialog.cpp:295
 #, kde-format

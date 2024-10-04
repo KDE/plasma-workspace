@@ -16,7 +16,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-03 00:41+0000\n"
-"PO-Revision-Date: 2024-08-22 07:46+0200\n"
+"PO-Revision-Date: 2024-10-03 06:32+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,17 +46,14 @@ msgid "Clipboard history:"
 msgstr "Zgodovina odložišča:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " vnos"
-msgstr[1] " vnosa"
-msgstr[2] " vnosi"
-msgstr[3] " vnosov"
+msgstr[0] "%v vnosov"
+msgstr[1] "%v vnos"
+msgstr[2] "%v vnosa"
+msgstr[3] "%v vnosi"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -153,17 +150,14 @@ msgid "Exclude Windows..."
 msgstr "Izključi okna..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " sekunda"
-msgstr[1] " sekundi"
-msgstr[2] " sekunde"
-msgstr[3] " sekund"
+msgstr[0] "%v sekund"
+msgstr[1] "%v sekund"
+msgstr[2] "%v sekundi"
+msgstr[3] "%v sekunde"
 
 #: configdialog.cpp:295
 #, kde-format
