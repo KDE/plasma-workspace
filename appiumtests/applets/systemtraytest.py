@@ -8,6 +8,7 @@ import base64
 import logging
 import os
 import queue
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -172,6 +173,10 @@ class SystemTrayTests(unittest.TestCase):
         """
         Opens the widget and initialize the webdriver
         """
+        # Install the test widget
+        os.makedirs(os.path.join(GLib.get_user_data_dir(), "plasma", "plasmoids"))
+        shutil.copytree(os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "org.kde.testdbusactivation"), os.path.join(GLib.get_user_data_dir(), "plasma", "plasmoids", "org.kde.testdbusactivation"))
+
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
         options.set_capability("environ", {
@@ -468,8 +473,24 @@ class SystemTrayTests(unittest.TestCase):
             actions = ActionChains(self.driver)
             actions.send_keys(Keys.ENTER).perform()
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Do not disturb")))
+        if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
+            subprocess.check_call(["xdotool", "key", "Escape"])
+        else:
+            ActionChains(self.driver).send_keys(Keys.ESCAPE).perform()
+
+    def test_4_dbus_activated_plasmoid(self) -> None:
+        """
+        Dynamically load a Plasmoid into the systemtray when a specific service becomes available
+        """
+        with subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "dbusservice.py")], stdout=sys.stderr, stderr=sys.stderr) as process:
+            plasmoid_title = "Do not translate Test only"
+            element = self.driver.find_element(AppiumBy.NAME, plasmoid_title)
+            process.kill()
+        WebDriverWait(self.driver, 10).until_not(lambda _: element.is_displayed())
 
 
 if __name__ == '__main__':
+    assert "USE_CUSTOM_BUS" in os.environ
+    assert "GDK_BACKEND" in os.environ or "TEST_WITH_KWIN_WAYLAND" in os.environ
     logging.getLogger().setLevel(logging.INFO)
     unittest.main()

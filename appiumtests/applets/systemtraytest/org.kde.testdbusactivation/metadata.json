@@ -1,0 +1,13 @@
+{
+    "KPackageStructure": "Plasma/Applet",
+    "KPlugin": {
+        "Category": "System Information",
+        "EnabledByDefault": true,
+        "Icon": "preferences-system-bluetooth",
+        "Id": "org.kde.testdbusactivation",
+        "Name": "Do not translate Test only"
+    },
+    "X-Plasma-API-Minimum-Version": "6.0",
+    "X-Plasma-DBusActivationService": "org.kde.testdbusactivation",
+    "X-Plasma-NotificationAreaCategory": "Hardware"
+}
