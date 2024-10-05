@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-05 02:31+0000\n"
 "PO-Revision-Date: 2024-03-06 14:12+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -632,12 +632,12 @@ msgstr "Tákn:"
 msgid "%1x%2 %3bpp"
 msgstr "%1x%2 %3bpp"
 
-#: historymodel.cpp:100
+#: historymodel.cpp:103
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Viltu örugglega hreinsa og eyða öllum ferli klippispjaldsins?"
 
-#: historymodel.cpp:101
+#: historymodel.cpp:104
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Hreinsa klippispjaldsferil"
