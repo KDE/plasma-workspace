@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-25 11:48+0200\n"
+"PO-Revision-Date: 2024-10-04 14:31+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -49,15 +49,12 @@ msgid "Clipboard history:"
 msgstr "Historique du presse-papier :"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " entrée"
-msgstr[1] " entrées"
+msgstr[0] "Entrée %v"
+msgstr[1] "%v entrées"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -161,15 +158,12 @@ msgid "Exclude Windows..."
 msgstr "Exclure des fenêtres..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " seconde"
-msgstr[1] " secondes"
+msgstr[0] "%v secondes"
+msgstr[1] "%v secondes"
 
 #: configdialog.cpp:295
 #, kde-format

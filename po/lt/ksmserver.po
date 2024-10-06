@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 00:41+0000\n"
-"PO-Revision-Date: 2024-08-17 23:42+0300\n"
+"PO-Revision-Date: 2024-10-05 19:30+0300\n"
 "Last-Translator: Moo\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -38,7 +38,7 @@ msgstr "„%1“ atsisakė atsijungimo"
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "Seansas užbaigiamas"
 
 #: main.cpp:66
 #, kde-format

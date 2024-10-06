@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-13 20:38+0200\n"
+"PO-Revision-Date: 2024-10-05 13:09+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -35,15 +35,12 @@ msgid "Clipboard history:"
 msgstr "История на клипборда:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " запис"
-msgstr[1] " записи"
+msgstr[0] "%v запис"
+msgstr[1] "%v записи"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -143,15 +140,12 @@ msgid "Exclude Windows..."
 msgstr "Изключване на прозорци..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " секунда"
-msgstr[1] " секунди"
+msgstr[0] "%v секунда"
+msgstr[1] "%v секунди"
 
 #: configdialog.cpp:295
 #, kde-format

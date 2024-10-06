@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1692129 $
+# Version: $Revision: 1692178 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-24 11:53+0200\n"
+"PO-Revision-Date: 2024-10-05 12:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -43,16 +43,13 @@ msgid "Clipboard history:"
 msgstr "Historia schowka:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " wpis"
-msgstr[1] " wpisy"
-msgstr[2] " wpisów"
+msgstr[0] "%v wpis"
+msgstr[1] "%v wpisy"
+msgstr[2] "%v wpisów"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -150,14 +147,11 @@ msgid "Exclude Windows..."
 msgstr "Wyklucz okna..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " sekunda"
+msgstr[0] "%v sekundzie"
 msgstr[1] " sekundy"
 msgstr[2] " sekund"
 

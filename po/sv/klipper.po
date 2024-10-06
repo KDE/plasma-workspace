@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-22 08:18+0200\n"
+"PO-Revision-Date: 2024-10-05 08:13+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -35,15 +35,12 @@ msgid "Clipboard history:"
 msgstr "Klippbordshistorik:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " post"
-msgstr[1] " poster"
+msgstr[0] "%v post"
+msgstr[1] "%v poster"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -141,15 +138,12 @@ msgid "Exclude Windows..."
 msgstr "Undanta fönster..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " sekund"
-msgstr[1] " sekunder"
+msgstr[0] "%v sekund"
+msgstr[1] "%v sekunder"
 
 #: configdialog.cpp:295
 #, kde-format

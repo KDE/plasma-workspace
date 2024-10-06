@@ -1,25 +1,22 @@
 # Translation of klipper to Spanish
-# traducción de klipper.po a Español
-# translation of klipper.po to Spanish
-# Translation to spanish.
-# Copyright (C) 2000-2002.
+# Copyright (C) 2000-2024.
 #
-# Pablo de Vicente <vicente@oan.es>,2000-2002.
-# Jaime Robles <jaime@kde.org>, 2003, 2005, 2007, 2008, 2009.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2003.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004.
-# Santiago Fernandez Sancho <santi@kde-es.org>, 2005.
-# Pablo de Vicente <pablo.devicente@gmail.com>, 2006.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
+# SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2003, 2005, 2007, 2008, 2009 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2003 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2005 Santiago Fernandez Sancho <santi@kde-es.org>
+# SPDX-FileCopyrightText: 2006 Pablo de Vicente <pablo.devicente@gmail.com>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
 # SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-22 17:29+0200\n"
+"PO-Revision-Date: 2024-10-06 01:39+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -28,7 +25,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "com>\n"
 "First-Translator: Valux (Manuel Soriano) <manu@europa3.com>\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -48,15 +45,12 @@ msgid "Clipboard history:"
 msgstr "Historial del portapapeles:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " entrada"
-msgstr[1] " entradas"
+msgstr[0] "%v entrada"
+msgstr[1] "%v entradas"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -158,15 +152,12 @@ msgid "Exclude Windows..."
 msgstr "Excluir ventanas..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " segundo"
-msgstr[1] " segundos"
+msgstr[0] "%v segundo"
+msgstr[1] "%v segundos"
 
 #: configdialog.cpp:295
 #, kde-format

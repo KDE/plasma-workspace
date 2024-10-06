@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-08-23 22:26+0700\n"
+"PO-Revision-Date: 2024-10-04 06:45+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -47,7 +47,11 @@ msgstr[1] "Mengeluarkan log dalam waktu %1 detik"
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
+"Menginstal pembaruan perangkat lunak dan mematikan komputer dalam waktu 1 "
+"detik"
 msgstr[1] ""
+"Menginstal pembaruan perangkat lunak dan mematikan komputer dalam waktu %1 "
+"detik"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -102,12 +106,10 @@ msgid "Hibernate Now"
 msgstr "Hibernasi Sekarang"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr "Instal Pembaruan & Nyalakan Ulang"
+msgstr "Instal Pembaruan dan Nyalakan Ulang"
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -120,12 +122,10 @@ msgid "Restart Now"
 msgstr "Nyalakan Ulang Sekarang"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Instal Pembaruan & Nyalakan Ulang Sekarang"
+msgstr "Instal Pembaruan dan Matikan"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
