@@ -76,6 +76,7 @@
         "Description[ia]": "Widget de supervision de systema que monstra le uso del partition de root (radice)",
         "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo della partizione radice",
         "Description[ka]": "სისტემური მონიტორის ვიჯეტი, რომელიც საწყისი დანაყოფის გამოყენებას გაჩვენებთ",
+        "Description[lt]": "Sistemos prižiūryklės valdiklis, kuris rodo šaknies skaidinio naudojimą",
         "Description[nn]": "System­overvaking som viser bruk av rotpartisjonen",
         "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie głównej partycji",
         "Description[ru]": "Мониторинг использования дискового пространства корневым разделом",

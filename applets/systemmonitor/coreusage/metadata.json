@@ -76,6 +76,7 @@
         "Description[ia]": "Widget de supervision de systema que monstra le uso del nucleos individual",
         "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo dei singoli core del processore",
         "Description[ka]": "სისტემური მონიტორის ვიჯეტი, რომელიც CPU-ის ბირთვების დატვირთვას სათითაოდ აჩვენებს",
+        "Description[lt]": "Sistemos prižiūryklės valdiklis, kuris rodo atskirų procesoriaus branduolių naudojimą",
         "Description[nn]": "System­overvaking som viser bruk av einskilde prosessor­kjernar",
         "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie poszczególnych rdzeni procesora",
         "Description[ru]": "Мониторинг загрузки процессора, предоставляющий сведения об индивидуальном использовании ядер",
