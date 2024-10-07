@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-22 19:03+0200\n"
+"PO-Revision-Date: 2024-10-07 01:35+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,15 +47,12 @@ msgid "Clipboard history:"
 msgstr "Historial do portapapeis:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " entrada"
-msgstr[1] " entradas"
+msgstr[0] "%v entrada"
+msgstr[1] "%v entradas"
 
 #: configdialog.cpp:97
 #, kde-format
