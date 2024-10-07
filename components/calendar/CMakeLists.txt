@@ -38,5 +38,8 @@ target_link_libraries(calendarplugin PRIVATE
 
 ecm_finalize_qml_module(calendarplugin)
 
-install(PROGRAMS kconf_update/migrate-calendar-to-plugin-id.py DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+set(QTPATHS_PATH "$<TARGET_FILE:${QT_CMAKE_EXPORT_NAMESPACE}::qtpaths>")
+configure_file(kconf_update/migrate-calendar-to-plugin-id.py.in ${CMAKE_CURRENT_BINARY_DIR}/migrate-calendar-to-plugin-id.py.in @ONLY)
+file(GENERATE OUTPUT ${CMAKE_CURRENT_BINARY_DIR}/migrate-calendar-to-plugin-id.py INPUT ${CMAKE_CURRENT_BINARY_DIR}/migrate-calendar-to-plugin-id.py.in)
+install(PROGRAMS ${CMAKE_CURRENT_BINARY_DIR}/migrate-calendar-to-plugin-id.py DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
 install(FILES kconf_update/migrate-calendar-to-plugin-id.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
