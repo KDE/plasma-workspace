@@ -87,9 +87,16 @@ void ImageBackend::setRenderingMode(RenderingMode mode)
     }
 
     m_mode = mode;
-    Q_EMIT renderingModeChanged();
+    if (m_ready) {
+        if (m_usedInConfig) {
+            ensureWallpaperModel();
+            ensureSlideshowModel();
+        } else {
+            startSlideshow();
+        }
+    }
 
-    startSlideshow();
+    Q_EMIT renderingModeChanged();
 }
 
 SortingMode::Mode ImageBackend::slideshowMode() const
