@@ -15,8 +15,8 @@ import org.kde.notificationmanager as NotificationManager
 import org.kde.plasma.private.notifications 2.0 as NotificationsApplet
 
 import ".."
-
 import "global"
+import "delegates" as Delegates
 
 NotificationsApplet.NotificationWindow {
     id: notificationPopup
@@ -33,6 +33,8 @@ NotificationsApplet.NotificationWindow {
 
     property int timeout
     property int dismissTimeout
+
+    property var defaultActionFallbackWindowIdx
 
     signal expired
     signal hoverEntered
@@ -72,7 +74,7 @@ NotificationsApplet.NotificationWindow {
         DropArea {
             anchors.fill: parent
             onEntered: {
-                if (notificationPopup.hasDefaultAction && !notificationItem.dragging) {
+                if (notificationItem.modelInterface.hasDefaultAction && !notificationItem.dragging) {
                     dragActivationTimer.start();
                 } else {
                     drag.accepted = false;
@@ -84,28 +86,7 @@ NotificationsApplet.NotificationWindow {
             id: dragActivationTimer
             interval: 250 // same as Task Manager
             repeat: false
-            onTriggered: notificationPopup.defaultActionInvoked()
-        }
-
-        // Visual flourish for critical notifications to make them stand out more
-        Rectangle {
-            id: criticalNotificationLine
-
-            anchors {
-                top: parent.top
-                // Subtract bottom margin that header sets which is not a part of
-                // its height, and also the PlasmoidHeading's bottom line
-                topMargin: notificationItem.headerHeight - notificationItem.spacing - 1
-                bottom: parent.bottom
-                bottomMargin: -notificationPopup.bottomPadding
-                left: parent.left
-                leftMargin: -notificationPopup.leftPadding
-            }
-            implicitWidth: 4
-
-            visible: notificationPopup.modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
-
-            color: Kirigami.Theme.neutralTextColor
+            onTriggered: notificationItem.modelInterface.defaultActionInvoked()
         }
 
         DraggableDelegate {
@@ -127,11 +108,11 @@ NotificationsApplet.NotificationWindow {
             onClicked: mouse => {
                 // NOTE "mouse" can be null when faked by the SelectableLabel
                 if (mouse && mouse.button === Qt.MiddleButton) {
-                    if (notificationItem.closable) {
-                        notificationItem.closeClicked();
+                    if (notificationItem.modelInterface.closable) {
+                        notificationItem.modelInterface.closeClicked();
                     }
                 } else if (hasDefaultAction) {
-                    notificationPopup.defaultActionInvoked();
+                    notificationItem.modelInterface.defaultActionInvoked();
                 }
             }
             onEntered: notificationPopup.hoverEntered()
@@ -180,12 +161,12 @@ NotificationsApplet.NotificationWindow {
                 running: timer.running && Kirigami.Units.longDuration > 1
             }
 
-            NotificationItem {
+            Delegates.DelegatePopup {
                 id: notificationItem
 
                 anchors.left: parent.left
-                anchors.leftMargin: !LayoutMirroring.enabled && criticalNotificationLine.visible ? criticalNotificationLine.implicitWidth : 0
                 anchors.right: parent.right
+                Layout.preferredHeight: implicitHeight // Why is this necessary?
 
                 // let the item bleed into the dialog margins so the close button margins cancel out
                 y: modelInterface.closable || modelInterface.dismissable || modelInterface.configurable ? -notificationPopup.topPadding : 0
@@ -193,8 +174,8 @@ NotificationsApplet.NotificationWindow {
                 modelInterface {
                     headingLeftMargin: -anchors.leftMargin
 
-                    headingLeftPadding: LayoutMirroring.enabled ? -notificationPopup.leftPadding : 0
-                    headingRightPadding: LayoutMirroring.enabled ? 0 : -notificationPopup.rightPadding
+                    headingLeftPadding: notificationPopup.leftPadding
+                    headingRightPadding: notificationPopup.rightPadding
 
                     maximumLineCount: 8
                     bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0

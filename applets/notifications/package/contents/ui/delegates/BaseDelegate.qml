@@ -10,14 +10,25 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 
+import "../components" as Components
+
 GridLayout {
     id: baseDelegate
 
     Layout.fillWidth: true
 
-    property ModelInterface modelInterface
+    //property ModelInterface modelInterface
+    property Components.ModelInterface modelInterface: Components.ModelInterface {}
 
-    property bool menuOpen
+    property Item body
+    property Item footer
+    //property bool menuOpen
+    readonly property real textPreferredWidth: Kirigami.Units.gridUnit * 18
+    readonly property bool menuOpen: Boolean(body?.item?.menuOpen)
+                                     || Boolean(footer?.item?.menuOpen)
+    readonly property bool dragging: Boolean(footer?.item?.dragging)
+    readonly property bool replying: footer?.item?.replying ?? false
+    readonly property bool hasPendingReply: footer?.item?.hasPendingReply ?? false
 
     rowSpacing: Kirigami.Units.smallSpacing
     columnSpacing: Kirigami.Units.smallSpacing
@@ -25,9 +36,6 @@ GridLayout {
     Accessible.role: Accessible.NoRole
     Accessible.name: modelInterface.summary
     Accessible.description: modelInterface.accessibleDescription
-    columns: 2
-
-    //TODO: REMOVE
-    property real headerHeight: 0
+    columns: 3
 }
 

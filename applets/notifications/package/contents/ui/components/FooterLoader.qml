@@ -15,8 +15,10 @@ Loader {
     Layout.fillWidth: true
 
     property ModelInterface modelInterface
+    property Item iconContainerItem
 
-    visible: active
+    visible: active && sourceComponent !== null
+
     sourceComponent: {
         if (modelInterface.notificationType === NotificationManager.Notifications.JobType) {
             return jobComponent;
@@ -25,7 +27,7 @@ Loader {
         } else if (modelInterface.actionNames.length > 0 || modelInterface.hasReplyAction) {
             return actionComponent;
         }
-        return undefined;
+        return null;
     }
 
     // Actions
@@ -43,7 +45,7 @@ Loader {
         id: jobComponent
         JobItem {
             modelInterface: footerLoader.modelInterface
-            iconContainerItem: iconContainer //FIXME
+            iconContainerItem: footerLoader.iconContainerItem
         }
     }
 

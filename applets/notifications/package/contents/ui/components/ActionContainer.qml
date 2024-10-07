@@ -7,39 +7,53 @@
 
 import QtQuick
 import QtQuick.Layouts
+import QtQuick.Templates as T
 
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
-StackLayout { // TODO: StackView?
+T.StackView { // FIXME: put a StackView in PlasmaComponents3
     id: actionContainer
 
     property ModelInterface modelInterface
 
     property bool replying
-    readonly property bool hasPendingReply: replyLoader.item?.text.length > 0
+    readonly property bool hasPendingReply: depth > 1 && currentItem?.text?.length > 0
 
-    Layout.fillWidth: true
-    visible: actionRepeater.count > 0
+    implicitWidth: currentItem.implicitWidth
+    implicitHeight: currentItem.implicitHeight
 
-    currentIndex: replyLoader.active ? 1 : 0
+    function beginReply() {
+        replying = true;
+        modelInterface.forceActiveFocusRequested();
+        if (currentItem === actionRow) {
+            push(replyFieldComponent);
+        }
+    }
+
+    pushEnter: Transition {
+        NumberAnimation {
+            property: "opacity"
+            from: 0
+            to: 1
+            duration: Kirigami.Units.longDuration
+            easing.type: Easing.InQuad
+        }
+    }
+    pushExit: Transition {
+        NumberAnimation {
+            property: "opacity"
+            from: 1
+            to: 0
+            duration: Kirigami.Units.longDuration
+            easing.type: Easing.OutQuad
+        }
+    }
 
     // Notification actions
-    RowLayout {
+    initialItem: RowLayout {
         id: actionRow
-        // For a cleaner look, if there is a thumbnail, puts the actions next to the thumbnail strip's menu button
-        //FIXME parent: thumbnailStripLoader.item?.actionContainer ?? actionContainer
-        width: parent.width
         spacing: 0
-
-        enabled: !replyLoader.active
-        opacity: replyLoader.active ? 0 : 1
-        Behavior on opacity {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
 
         Item {
             Layout.fillWidth: true
@@ -82,7 +96,7 @@ StackLayout { // TODO: StackView?
 
                 onClicked: {
                     if (modelData.actionName === "inline-reply") {
-                        replyLoader.beginReply();
+                        actionContainer.beginReply();
                         return;
                     }
 
@@ -92,44 +106,16 @@ StackLayout { // TODO: StackView?
         }
     }
 
-    // inline reply field
-    Loader {
-        id: replyLoader
-        width: parent.width
-        height: active && item ? item.implicitHeight : 0
-        // When there is only one action and it is a reply action, show text field right away
-        active: actionContainer.replying || (actionContainer.modelInterface.hasReplyAction && (actionContainer.modelInterface.actionNames || []).length === 0)
-        visible: active
-        opacity: active ? 1 : 0
-        x: active ? 0 : parent.width
-        Behavior on x {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-        Behavior on opacity {
-            NumberAnimation {
-                duration: Kirigami.Units.longDuration
-                easing.type: Easing.InOutQuad
-            }
-        }
-
-        function beginReply() {
-            actionContainer.replying = true;
-
-            actionContainer.modelInterface.forceActiveFocusRequested();
-            replyLoader.item.activate();
-        }
-
-        sourceComponent: NotificationReplyField {
+    Component {
+        id: replyFieldComponent
+        NotificationReplyField {
             placeholderText: actionContainer.modelInterface.replyPlaceholderText
             buttonIconName: actionContainer.modelInterface.replySubmitButtonIconName
             buttonText: actionContainer.modelInterface.replySubmitButtonText
             onReplied: actionContainer.modelInterface.replied(text)
 
             replying: actionContainer.replying
-            onBeginReplyRequested: replyLoader.beginReply()
+            onBeginReplyRequested: actionContainer.beginReply()
         }
     }
 }
