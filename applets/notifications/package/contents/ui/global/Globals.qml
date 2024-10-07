@@ -571,7 +571,7 @@ QtObject {
                     const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                     popupNotificationsModel.invokeAction(popupNotificationsModel.index(index, 0), actionName, behavior)
                 }
-                onReplied: {
+                onReplied: text => {
                     const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
                     popupNotificationsModel.reply(popupNotificationsModel.index(index, 0), text, behavior);
                 }

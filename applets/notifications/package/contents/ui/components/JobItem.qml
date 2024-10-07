@@ -1,20 +1,21 @@
 /*
     SPDX-FileCopyrightText: 2019 Kai Uwe Broulik <kde@privat.broulik.de>
+    SPDX-FileCopyrightText: 2024 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.8
-import QtQuick.Window 2.2
-import QtQuick.Layouts 1.1
-import QtQml 2.15
+import QtQuick
+import QtQuick.Window
+import QtQuick.Layouts
+import QtQml
 
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
 import org.kde.notificationmanager as NotificationManager
 
-import org.kde.plasma.private.notifications 2.0 as Notifications
+import org.kde.plasma.private.notifications as Notifications
 
 import "../global"
 
@@ -25,101 +26,13 @@ ColumnLayout {
 
     readonly property int totalFiles: modelInterface.jobDetails && modelInterface.jobDetails.totalFiles || 0
 
-    readonly property url url: {
-        if (modelInterface.jobState !== NotificationManager.Notifications.JobStateStopped || modelInterface.jobError !== 0) {
-            return Qt.url("");
-        }
-
-        // For a single file show actions for it
-        // Otherwise the destination folder all of them were copied into
-        const url = totalFiles === 1
-            ? modelInterface.jobDetails.descriptionUrl
-            : modelInterface.jobDetails.destUrl;
-
-        // Don't offer opening files in Trash
-        if (url.toString().startsWith("trash:")) {
-            return Qt.url("");
-        }
-
-        return url;
-   }
-
-    property alias iconContainerItem: jobDragIconItem.parent
-
-    readonly property alias dragging: jobDragArea.dragging
     readonly property alias menuOpen: otherFileActionsMenu.visible
 
     spacing: Kirigami.Units.smallSpacing
 
     Notifications.FileInfo {
         id: fileInfo
-        url: jobItem.totalFiles === 1 ? jobItem.url : ""
-    }
-
-    // This item is parented to the NotificationItem iconContainer
-    Item {
-        id: jobDragIconItem
-        readonly property bool shown: jobDragIcon.valid
-        width: parent ? parent.width : 0
-        height: parent ? parent.height : 0
-        visible: shown
-
-        Binding {
-            target: jobDragIconItem.parent
-            property: "visible"
-            value: true
-            when: jobDragIconItem.shown
-            restoreMode: Binding.RestoreBinding
-        }
-
-        Kirigami.Icon {
-            id: jobDragIcon
-
-            anchors.fill: parent
-            active: jobDragArea.hovered
-            opacity: busyIndicator.running ? 0.6 : 1
-            source: !fileInfo.error ? fileInfo.iconName : ""
-
-            Behavior on opacity {
-                NumberAnimation {
-                    duration: Kirigami.Units.longDuration
-                    easing.type: Easing.InOutQuad
-                }
-            }
-
-            DraggableFileArea {
-                id: jobDragArea
-                anchors.fill: parent
-
-                dragParent: jobDragIcon
-                dragUrl: jobItem.url
-                dragPixmap: jobDragIcon.source
-
-                onActivated: modelInterface.openUrl(jobItem.url)
-                onContextMenuRequested: (pos) => {
-                    // avoid menu button glowing if we didn't actually press it
-                    otherFileActionsButton.checked = false;
-
-                    otherFileActionsMenu.visualParent = this;
-                    otherFileActionsMenu.open(pos.x, pos.y);
-                }
-            }
-        }
-
-        PlasmaComponents3.BusyIndicator {
-            id: busyIndicator
-            anchors.centerIn: parent
-            running: fileInfo.busy && !delayBusyTimer.running
-            visible: running
-
-            // Avoid briefly flashing the busy indicator
-            Timer {
-                id: delayBusyTimer
-                interval: 500
-                repeat: false
-                running: fileInfo.busy
-            }
-        }
+        url: jobItem.totalFiles === 1 ? modelInterface.jobDetails.effectiveDestUrl : ""
     }
 
     RowLayout {
@@ -227,7 +140,7 @@ ColumnLayout {
         // We want the actions to be right-aligned but Row also reverses
         // the order of items, so we put them in reverse order
         layoutDirection: Qt.RightToLeft
-        visible: jobItem.url.toString() !== "" && !fileInfo.error
+        visible: modelInterface.jobDetails.effectiveDestUrl.toString() !== "" && !fileInfo.error
 
         PlasmaComponents3.Button {
             id: otherFileActionsButton
@@ -254,7 +167,7 @@ ColumnLayout {
 
             Notifications.FileMenu {
                 id: otherFileActionsMenu
-                url: jobItem.url
+                url: modelInterface.jobDetails.effectiveDestUrl
                 onActionTriggered: modelInterface.fileActionInvoked(action)
             }
         }
@@ -264,7 +177,7 @@ ColumnLayout {
             width: Math.min(implicitWidth, jobItem.width - otherFileActionsButton.width - fileActionsRow.spacing)
             height: Math.max(implicitHeight, otherFileActionsButton.implicitHeight)
             text: i18nd("plasma_applet_org.kde.plasma.notifications", "Open")
-            onClicked: modelInterface.openUrl(jobItem.url)
+            onClicked: modelInterface.openUrl(modelInterface.jobDetails.effectiveDestUrl)
 
             states: [
                 State {

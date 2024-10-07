@@ -126,6 +126,12 @@ class NOTIFICATIONMANAGER_EXPORT Job : public QObject
      */
     Q_PROPERTY(QUrl descriptionUrl READ descriptionUrl NOTIFY descriptionUrlChanged)
 
+    /**
+     * The final destination url: it's the final copied file if is single, the destination folder url if
+     * more than one, it will be empty if the job is still running or if the destination is within trash:/
+     */
+    Q_PROPERTY(QUrl effectiveDestUrl READ effectiveDestUrl NOTIFY effectiveDestUrlChanged)
+
 public:
     explicit Job(uint id, QObject *parent = nullptr);
     ~Job() override;
@@ -176,6 +182,8 @@ public:
 
     QUrl destUrl() const;
 
+    QUrl effectiveDestUrl() const;
+
     qulonglong speed() const;
 
     qulonglong processedBytes() const;
@@ -217,6 +225,7 @@ Q_SIGNALS:
     void errorChanged(int error);
     void errorTextChanged(const QString &errorText);
     void destUrlChanged();
+    void effectiveDestUrlChanged();
     void speedChanged();
     void processedBytesChanged();
     void processedFilesChanged();

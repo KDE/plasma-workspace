@@ -4,40 +4,39 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.8
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
 RowLayout {
     id: replyRow
 
+    required property ModelInterface modelInterface
+
     signal beginReplyRequested
-    signal replied(string text)
-
-    property bool replying: false
-
-    property alias text: replyTextField.text
-    property string placeholderText
-    property string buttonIconName
-    property string buttonText
 
     spacing: Kirigami.Units.smallSpacing
 
     function activate() {
-        replyTextField.forceActiveFocus();
+        replyTextField.forceActiveFocus(Qt.ActiveWindowFocusReason);
     }
 
+    Binding {
+        target: modelInterface
+        property: "hasPendingReply"
+        value: replyTextField.text !== ""
+    }
     PlasmaComponents3.TextField {
         id: replyTextField
         Layout.fillWidth: true
-        placeholderText: replyRow.placeholderText
+        placeholderText: modelInterface.replyPlaceholderText
                          || i18ndc("plasma_applet_org.kde.plasma.notifications", "Text field placeholder", "Type a reply…")
         Accessible.name: placeholderText
         onAccepted: {
             if (replyButton.enabled) {
-                replyRow.replied(text);
+                modelInterface.replied(text);
             }
         }
 
@@ -45,7 +44,7 @@ RowLayout {
         MouseArea {
             anchors.fill: parent
             cursorShape: Qt.IBeamCursor
-            visible: !replyRow.replying
+            visible: !modelInterface.replying
             Accessible.name: "begin reply"
             Accessible.role: Accessible.Button
             Accessible.onPressAction: replyRow.beginReplyRequested()
@@ -55,10 +54,10 @@ RowLayout {
 
     PlasmaComponents3.Button {
         id: replyButton
-        icon.name: replyRow.buttonIconName || "document-send"
-        text: replyRow.buttonText
+        icon.name: modelInterface.replySubmitButtonIconName || "document-send"
+        text: modelInterface.replySubmitButtonText
               || i18ndc("plasma_applet_org.kde.plasma.notifications", "@action:button", "Send")
         enabled: replyTextField.length > 0
-        onClicked: replyRow.replied(replyTextField.text)
+        onClicked: modelInterface.replied(replyTextField.text)
     }
 }

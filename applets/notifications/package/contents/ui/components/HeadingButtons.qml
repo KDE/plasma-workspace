@@ -21,15 +21,17 @@ import org.kde.quickcharts as Charts
 import "../global"
 
 RowLayout {
-    id: notificationHeading
+    id: headingButtons
 
     property ModelInterface modelInterface: ModelInterface {}
     property alias closeButtonTooltip: closeButtonToolTip.text
 
+    readonly property string __applicationName: modelInterface.applicationName + (modelInterface.originName ? " · " + modelInterface.originName : "")
+
     Connections {
         target: modelInterface
         function onTimeChanged() {
-            notificationHeading.updateAgoText()
+            headingButtons.updateAgoText()
         }
     }
     function updateAgoText() {
@@ -44,32 +46,8 @@ RowLayout {
         target: Globals
         // clock time changed
         function onTimeChanged() {
-            notificationHeading.updateAgoText()
+            headingButtons.updateAgoText()
         }
-    }
-
-    Kirigami.Icon {
-        id: applicationIconItem
-        Layout.preferredWidth: Kirigami.Units.iconSizes.small
-        Layout.preferredHeight: Kirigami.Units.iconSizes.small
-        source: modelInterface.applicationIconSource
-        visible: valid
-    }
-
-    Kirigami.Heading {
-        id: applicationNameLabel
-        Layout.fillWidth: true
-        level: 5
-        opacity: 0.9
-        textFormat: Text.PlainText
-        elide: Text.ElideMiddle
-        maximumLineCount: 2
-        text: modelInterface.applicationName + (modelInterface.originName ? " · " + modelInterface.originName : "")
-    }
-
-    Item {
-        id: spacer
-        Layout.fillWidth: true
     }
 
     Kirigami.Heading {
@@ -167,7 +145,7 @@ RowLayout {
 
         display: PlasmaComponents3.AbstractButton.IconOnly
         text: modelInterface.configureActionLabel || i18nd("plasma_applet_org.kde.plasma.notifications", "Configure")
-        Accessible.description: applicationNameLabel.text
+        Accessible.description: __applicationName
 
         onClicked: modelInterface.configureClicked()
 
@@ -185,7 +163,7 @@ RowLayout {
         text: modelInterface.dismissed
             ? i18ndc("plasma_applet_org.kde.plasma.notifications", "Opposite of minimize", "Restore")
             : i18nd("plasma_applet_org.kde.plasma.notifications", "Minimize")
-        Accessible.description: applicationNameLabel.text
+        Accessible.description: __applicationName
 
         onClicked: modelInterface.dismissClicked()
 
@@ -201,7 +179,7 @@ RowLayout {
 
         display: PlasmaComponents3.AbstractButton.IconOnly
         text: closeButtonToolTip.text
-        Accessible.description: applicationNameLabel.text
+        Accessible.description: __applicationName
 
         onClicked: modelInterface.closeClicked()
 
@@ -232,19 +210,4 @@ RowLayout {
             transform: Scale { origin.x: chart.width / 2; xScale: -1 }
         }
     }
-
-    states: [
-        State {
-            when: modelInterface.inGroup
-            PropertyChanges {
-                target: applicationIconItem
-                source: ""
-            }
-            PropertyChanges {
-                target: applicationNameLabel
-                visible: false
-            }
-        }
-
-    ]
 }

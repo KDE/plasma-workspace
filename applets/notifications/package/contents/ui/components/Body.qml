@@ -8,17 +8,20 @@
 import QtQuick
 import QtQuick.Layouts
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
-SelectableLabel {
+Kirigami.SelectableLabel {
     id: bodyLabel
+
+    property ModelInterface modelInterface
 
     Layout.fillWidth: true
     Layout.alignment: Qt.AlignTop
 
-    readonly property real maximumHeight: Kirigami.Units.gridUnit * modelInterface.maximumLineCount
-    readonly property bool truncated: modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
-    Layout.maximumHeight: truncated ? maximumHeight : implicitHeight
+    leftPadding: 0
+    rightPadding: 0
+    topPadding: 0
+    bottomPadding: 0
 
     // HACK RichText does not allow to specify link color and since LineEdit
     // does not support StyledText, we have to inject some CSS to force the color,
@@ -27,6 +30,10 @@ SelectableLabel {
 
     // Cannot do text !== "" because RichText adds some HTML tags even when empty
     visible: modelInterface.body.length > 0
+
+    // Selectable only when we are in desktop mode
+    selectByMouse: !Kirigami.Settings.tabletMode
+
     onLinkActivated: Qt.openUrlExternally(link)
 
     onClicked: modelInterface.bodyClicked()

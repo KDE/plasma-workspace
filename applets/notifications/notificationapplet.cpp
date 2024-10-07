@@ -27,7 +27,6 @@
 #include "jobaggregator.h"
 #include "notificationwindow.h"
 #include "thumbnailer.h"
-#include "wheelforwarder.h"
 
 class InputDisabler
 {
@@ -59,7 +58,6 @@ NotificationApplet::NotificationApplet(QObject *parent, const KPluginMetaData &d
         qmlRegisterType<GlobalShortcuts>(uri, 2, 0, "GlobalShortcuts");
         qmlRegisterType<JobAggregator>(uri, 2, 0, "JobAggregator");
         qmlRegisterType<Thumbnailer>(uri, 2, 0, "Thumbnailer");
-        qmlRegisterType<WheelForwarder>(uri, 2, 0, "WheelForwarder");
         qmlRegisterSingletonType(uri, 2, 0, "InputDisabler", [](QQmlEngine *, QJSEngine *jsEngine) -> QJSValue {
             return jsEngine->toScriptValue(InputDisabler());
         });
