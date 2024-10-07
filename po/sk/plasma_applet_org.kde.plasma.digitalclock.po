@@ -1,7 +1,7 @@
 # translation of plasma_applet_org.kde.plasma.digitalclock.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 # Dusan Kazik <prescott66@gmail.com>, 2020.
 # Ferdinand Galko <galko.ferdinand@gmail.com>, 2023.
 msgid ""
@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2023-11-11 15:16+0100\n"
+"PO-Revision-Date: 2024-10-06 12:27+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/config/config.qml:20
@@ -69,8 +69,7 @@ msgstr "Prepnúť…"
 
 #: package/contents/ui/CalendarView.qml:440
 #: package/contents/ui/CalendarView.qml:441
-#, fuzzy, kde-format
-#| msgid "Switch to another timezone"
+#, kde-format
 msgid "Switch to another time zone"
 msgstr "Prepnúť na iné časové pásmo"
 
@@ -153,50 +152,43 @@ msgid "Offset from UTC time"
 msgstr "Posun od času UTC"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Zobrazenie času:"
 
 #: package/contents/ui/configAppearance.qml:132
-#, fuzzy, kde-format
-#| msgid "12-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-hodinové"
 
 #: package/contents/ui/configAppearance.qml:133
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "Použiť predvolené pre región"
 
 #: package/contents/ui/configAppearance.qml:134
-#, fuzzy, kde-format
-#| msgid "24-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-hodinové"
 
 #: package/contents/ui/configAppearance.qml:141
-#, fuzzy, kde-format
-#| msgid "Change Regional Settings…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Zmeniť regionálne nastavenia…"
 
 #: package/contents/ui/configAppearance.qml:152
-#, fuzzy, kde-format
-#| msgid "Date format:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Formát dátumu:"
 
 #: package/contents/ui/configAppearance.qml:161
-#, fuzzy, kde-format
-#| msgid "Long Date"
+#, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
@@ -204,23 +196,19 @@ msgid "Long date"
 msgstr "Dlhý dátum"
 
 #: package/contents/ui/configAppearance.qml:168
-#, fuzzy, kde-format
-#| msgid "Short Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Krátky dátum"
 
 #: package/contents/ui/configAppearance.qml:175
-#, fuzzy, kde-format
-#| msgid "ISO Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO dátum"
 
 #: package/contents/ui/configAppearance.qml:182
-#, fuzzy, kde-format
-#| msgctxt "custom date format"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Vlastný"
@@ -290,15 +278,13 @@ msgid "Show week numbers"
 msgstr "Zobraziť čísla týždňov"
 
 #: package/contents/ui/configCalendar.qml:49
-#, fuzzy, kde-format
-#| msgid "First day of week:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Prvý deň v týždni:"
 
 #: package/contents/ui/configCalendar.qml:55
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Použiť predvolené pre región"
@@ -328,12 +314,7 @@ msgid "Clock is currently using this time zone"
 msgstr "Hodiny momentálne používajú toto časové pásmo"
 
 #: package/contents/ui/configTimeZones.qml:95
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label This list item shows a time zone city name that is identical to "
-#| "the local time zone's city, and will be hidden in the timezone display in "
-#| "the plasmoid's popup"
-#| msgid "Hidden while this is the local time zone's city"
+#, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
 "local time zone's city, and will be hidden in the time zone display in the "
@@ -386,16 +367,12 @@ msgstr ""
 "prepnite namiesto toho systémové časové pásmo."
 
 #: package/contents/ui/configTimeZones.qml:208
-#, fuzzy, kde-format
-#| msgid "Add More Timezones"
+#, kde-format
 msgid "Add More Time Zones"
 msgstr "Pridať ďalšie časové pásma"
 
 #: package/contents/ui/configTimeZones.qml:220
-#, fuzzy, kde-format
-#| msgid ""
-#| "At least one time zone needs to be enabled. Your local timezone was "
-#| "enabled automatically."
+#, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."

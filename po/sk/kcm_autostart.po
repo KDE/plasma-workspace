@@ -3,20 +3,20 @@
 # sparc3 <sparc3@azet.sk>, 2008.
 # Michal Sulek <misurel@gmail.com>, 2010, 2011.
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2015, 2017.
-# SPDX-FileCopyrightText: 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-30 00:43+0000\n"
-"PO-Revision-Date: 2023-11-11 14:56+0100\n"
+"PO-Revision-Date: 2024-10-06 12:35+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: autostartmodel.cpp:383
@@ -104,31 +104,25 @@ msgstr "Súbor '%1' musí byť spustiteľný, aby sa spustil pri prihlásení."
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Pridať novú"
 
 #: ui/main.qml:73
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Pridať aplikáciu…"
+msgstr "Aplikáciu…"
 
 #: ui/main.qml:80
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Pridať skript pri prihlásení…"
+msgstr "Skript pri prihlásení…"
 
 #: ui/main.qml:87
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Pridať skript pri odhlásení…"
+msgstr "Skript pri odhlásení…"
 
 #: ui/main.qml:124
 #, kde-format
@@ -184,9 +178,7 @@ msgid "No user-specified autostart items"
 msgstr "Žiadne položky automatického spustenia zadané používateľom"
 
 #: ui/main.qml:202
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "Nové pridáte kliknutím na tlačidlo <interface>Pridať…</interface>"

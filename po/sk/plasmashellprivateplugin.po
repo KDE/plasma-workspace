@@ -1,20 +1,20 @@
 # translation of plasmashellprivateplugin.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016.
 # Mthw <jari_45@hotmail.com>, 2018.
-# SPDX-FileCopyrightText: 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2023-11-11 14:56+0100\n"
+"PO-Revision-Date: 2024-10-06 12:13+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -31,12 +31,12 @@ msgstr "matejm98mthw@gmail.com"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Batéria %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Batéria"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -345,7 +345,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Nedávno nainštalované"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -363,11 +363,10 @@ msgid "Install Widget From Local File…"
 msgstr "Inštalovať widget z lokálneho súboru..."
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Všetky widgety"
+msgstr "Získať nové widgety"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -375,11 +374,10 @@ msgid "Select Plasmoid File"
 msgstr "Vybrať súbor plazmoidu"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Inštalácia balíčka %1 zlyhala."
+msgstr "Inštalácia balíčka %1 zlyhala: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format

@@ -1,20 +1,20 @@
 # translation of plasma_applet_org.kde.plasma.lock_logout.po to Slovak
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015.
 # Mthw <jari_45@hotmail.com>, 2019.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.lock_logout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2023-11-11 15:16+0100\n"
+"PO-Revision-Date: 2024-10-06 12:23+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: contents/config/config.qml:13
@@ -35,11 +35,10 @@ msgid "Log Out"
 msgstr "Odhlásiť sa"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "Zamknúť obrazovku"
+msgstr "Zobraziť obrazovku odhlásenia"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -118,17 +117,15 @@ msgid "End the session"
 msgstr "Ukončiť sedenie"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "Zamknúť obrazovku"
+msgstr "Zobraziť obrazovku odhlásenia"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "Vypnúť počítač"
+msgstr "Odhlásiť sa, vypnúť, alebo reštartovať počítač"
 
 #: contents/ui/data.js:47
 #, kde-format

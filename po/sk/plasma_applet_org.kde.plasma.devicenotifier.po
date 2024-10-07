@@ -5,20 +5,20 @@
 # Roman Paholík <wizzardsk@gmail.com>, 2012, 2014, 2016.
 # Mthw <jari_45@hotmail.com>, 2018, 2019.
 # Dusan Kazik <prescott66@gmail.com>, 2020.
-# Matej Mrenica <matejm98mthw@gmail.com>, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Matej Mrenica <matejm98mthw@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2023-12-02 19:50+0100\n"
+"PO-Revision-Date: 2024-10-06 12:29+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/ui/DeviceItem.qml:98
@@ -133,48 +133,43 @@ msgstr "Bezpečne odstrániť"
 #: plugin/deviceerrormonitor_p.cpp:180
 #, kde-format
 msgid "Device Status"
-msgstr ""
+msgstr "Stav zariadenia"
 
 #: plugin/deviceerrormonitor_p.cpp:181
 #, kde-format
 msgid "A device can now be safely removed"
-msgstr ""
+msgstr "Zariadenie je teraz možné bezpečne odstrániť"
 
 #: plugin/deviceerrormonitor_p.cpp:185
 #, kde-format
 msgid "This device can now be safely removed."
-msgstr ""
+msgstr "Toto zariadenie teraz môžete bezpečne odstrániť."
 
 #: plugin/deviceerrormonitor_p.cpp:192
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "Kliknite na pripojenie tohto zariadenia."
+msgstr "Nemáte oprávnenie na pripojenie tohto zariadenia."
 
 #: plugin/deviceerrormonitor_p.cpp:195
-#, fuzzy, kde-format
-#| msgid "It is currently safe to remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "Toto zariadenie je možné teraz bezpečne odstrániť."
+msgstr "Nie ste oprávnení odstrániť toto zariadenie."
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "Kliknutím vysuniete tento disk."
+msgstr "Nie ste oprávnení vysunúť tento disk."
 
 #: plugin/deviceerrormonitor_p.cpp:205
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device as it is busy."
-msgstr "Kliknite na pripojenie tohto zariadenia."
+msgstr "Toto zariadenie sa nepodarilo pripojiť, pretože sa používa."
 
 #: plugin/deviceerrormonitor_p.cpp:229
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are open within an application."
-msgstr "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
+msgstr "V aplikácii je otvorený jeden alebo viac súborov v tomto zariadení."
 
 #: plugin/deviceerrormonitor_p.cpp:231
 #, fuzzy, kde-format
@@ -190,26 +185,23 @@ msgstr[2] "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", "
 
 #: plugin/deviceerrormonitor_p.cpp:254
-#, fuzzy, kde-format
-#| msgid "Click to mount this device."
+#, kde-format
 msgid "Could not mount this device."
-msgstr "Kliknite na pripojenie tohto zariadenia."
+msgstr "Toto zariadenie sa nepodarilo pripojiť."
 
 #: plugin/deviceerrormonitor_p.cpp:257
-#, fuzzy, kde-format
-#| msgid "Click to safely remove this device."
+#, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr "Kliknutím bezpečne odstránite toto zariadenie."
+msgstr "Toto zariadenie sa nepodarilo odstrániť."
 
 #: plugin/deviceerrormonitor_p.cpp:260
-#, fuzzy, kde-format
-#| msgid "Click to eject this disc."
+#, kde-format
 msgid "Could not eject this disc."
-msgstr "Kliknutím vysuniete tento disk."
+msgstr "Tento disk sa nepodarilo vysunúť."
 
 #~ msgid "Show:"
 #~ msgstr "Zobraziť:"
