@@ -9,15 +9,26 @@ import QtQuick
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
+
+import "../components" as Components
 
 GridLayout {
     id: baseDelegate
 
     Layout.fillWidth: true
 
-    property ModelInterface modelInterface
+    //property ModelInterface modelInterface
+    property Components.ModelInterface modelInterface: Components.ModelInterface {}
 
-    property bool menuOpen
+    property Components.Body body
+    property Components.Icon icon
+    property Item footer // It's not the FooterLoader, but the loaded item
+    //property bool menuOpen
+    readonly property real textPreferredWidth: Kirigami.Units.gridUnit * 18
+    readonly property bool menuOpen: Boolean(body?.menuOpen)
+                                     || Boolean(footer?.item?.menuOpen)
+    readonly property bool dragging: Boolean(icon?.dragging) || Boolean(footer?.item?.dragging)
 
     rowSpacing: Kirigami.Units.smallSpacing
     columnSpacing: Kirigami.Units.smallSpacing
@@ -25,9 +36,6 @@ GridLayout {
     Accessible.role: Accessible.NoRole
     Accessible.name: modelInterface.summary
     Accessible.description: modelInterface.accessibleDescription
-    columns: 2
-
-    //TODO: REMOVE
-    property real headerHeight: 0
+    columns: 3
 }
 

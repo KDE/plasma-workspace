@@ -20,8 +20,6 @@ QtObject {
 
     property bool inGroup: false
     property bool inHistory: false
-    //TODO: REMOVE
-    property ListView listViewParent: null
 
     property var applicationIconSource
     property string applicationName
@@ -60,16 +58,13 @@ QtObject {
     property string replyPlaceholderText
     property string replySubmitButtonText
     property string replySubmitButtonIconName
+    property bool replying: false
+    property bool hasPendingReply: false
 
-    property int headingLeftMargin: 0
-    property int headingRightMargin: 0
-    property int headingLeftPadding: 0
-    property int headingRightPadding: 0
-
-    property int thumbnailLeftPadding: 0
-    property int thumbnailRightPadding: 0
-    property int thumbnailTopPadding: 0
-    property int thumbnailBottomPadding: 0
+    property int popupLeftPadding: 0
+    property int popupTopPadding: 0
+    property int popupRightPadding: 0
+    property int popupBottomPadding: 0
 
     property real timeout
     property real remainingTime

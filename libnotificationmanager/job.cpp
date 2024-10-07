@@ -27,6 +27,9 @@ Job::Job(uint id, QObject *parent)
     connect(this, &Job::descriptionValue2Changed, this, &Job::textChanged);
     connect(this, &Job::destUrlChanged, this, &Job::textChanged);
     connect(this, &Job::errorTextChanged, this, &Job::textChanged);
+    connect(this, &Job::destUrlChanged, this, &Job::effectiveDestUrlChanged);
+    connect(this, &Job::descriptionUrlChanged, this, &Job::effectiveDestUrlChanged);
+    connect(this, &Job::stateChanged, this, &Job::effectiveDestUrlChanged);
 }
 
 Job::~Job() = default;
@@ -174,6 +177,29 @@ void Job::setTransient(bool transient)
 QUrl Job::destUrl() const
 {
     return d->m_destUrl;
+}
+
+QUrl Job::effectiveDestUrl() const
+{
+    if (d->m_state != Notifications::JobState::JobStateStopped || d->m_error != 0) {
+        return QUrl();
+    }
+
+    QUrl url;
+    // For a single file show the file url
+    // Otherwise the destination folder
+    if (d->m_totalFiles == 1) {
+        url = d->descriptionUrl();
+    } else {
+        url = d->m_destUrl;
+    }
+
+    // Don't offer opening files in Trash
+    if (url.scheme() == QStringLiteral("trash")) {
+        return QUrl();
+    }
+
+    return url;
 }
 
 qulonglong Job::speed() const

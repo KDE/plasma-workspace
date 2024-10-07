@@ -5,16 +5,16 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
-import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
+import org.kde.kquickcontrolsaddons as KQCAddons
 
-import org.kde.plasma.private.notifications 2.0 as Notifications
+import org.kde.plasma.private.notifications as Notifications
 
 import "../global"
 
@@ -58,10 +58,10 @@ Item {
         id: previewBackground
         anchors {
             fill: parent
-            leftMargin: modelInterface.leftPadding
-            rightMargin: modelInterface.rightPadding
-            topMargin: modelInterface.topPadding
-            bottomMargin: modelInterface.bottomPadding
+            leftMargin: -modelInterface.popupLeftPadding
+            topMargin: -modelInterface.popupTopPadding
+            rightMargin: -modelInterface.popupRightPadding
+            bottomMargin: -modelInterface.popupBottomPadding
         }
         fillMode: Image.PreserveAspectCrop
         layer.enabled: true

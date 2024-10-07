@@ -4,23 +4,24 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.10
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
 
-import org.kde.coreaddons 1.0 as KCoreAddons
+import org.kde.coreaddons as KCoreAddons
 
 import org.kde.notificationmanager as NotificationManager
 import org.kde.plasma.private.notifications as Notifications
 
 import "global"
 import "delegates" as Delegates
+import "components" as Components
 
 PlasmaExtras.Representation {
     // TODO these should be configurable in the future
@@ -232,11 +233,6 @@ PlasmaExtras.Representation {
         }
     }
 
-    Notifications.WheelForwarder {
-        id: wheelForwarder
-        toItem: scrollView.contentItem
-    }
-
     PlasmaComponents3.ScrollView {
         id: scrollView
         anchors.fill: parent
@@ -253,8 +249,6 @@ PlasmaExtras.Representation {
             topMargin: Kirigami.Units.largeSpacing
             bottomMargin: Kirigami.Units.largeSpacing
             spacing: Kirigami.Units.smallSpacing
-
-            readonly property alias wheelForwarder: wheelForwarder
 
             KeyNavigation.up: dndCheck
 
@@ -324,16 +318,35 @@ PlasmaExtras.Representation {
                 prefix: "pressed"
             }
 
-            // This is so the delegates can detect the change in "isInGroup" and show a separator
             section {
-                property: "isInGroup"
+                property: "desktopEntry"
                 criteria: ViewSection.FullString
+                delegate: Item {
+                    width: list.width
+                    // Within a section delegate we don't have other ways to detect whether we are the first section
+                    height: y > 0 ? Math.round(Kirigami.Units.smallSpacing * 2) : 0
+
+                    KSvg.SvgItem {
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            verticalCenter: parent.verticalCenter
+                            margins: Kirigami.Units.largeSpacing
+                        }
+                        imagePath: "widgets/line"
+                        elementId: "horizontal-line"
+                        visible: parent.y > 0
+                    }
+                }
             }
 
             delegate: DraggableDelegate {
                 id: delegate
                 width: ListView.view.width
-                contentItem: delegateLoader
+                opacity: 0
+
+                required property int index
+                required property var model
 
                 // NOTE: The following animations replace the Transitions in the ListView
                 // because they don't work when the items change size during the animation
@@ -348,7 +361,8 @@ PlasmaExtras.Representation {
                         return;
                     }
                     traslAnim.from = oldY - y;
-                    traslAnim.running = true;
+                    //traslAnim.running = true;
+                    traslAnim.restart()
                     oldY = y;
                     oldListCount = list.count;
                 }
@@ -362,7 +376,7 @@ PlasmaExtras.Representation {
                     to: 0
                     duration: Kirigami.Units.longDuration
                 }
-                opacity: 0
+
                 ListView.onAdd: appearAnim.restart();
                 Component.onCompleted: {
                     Qt.callLater(() => {
@@ -375,7 +389,7 @@ PlasmaExtras.Representation {
 
                 SequentialAnimation {
                     id: appearAnim
-                    PropertyAnimation { target: delegate; property: "opacity"; to: 0 }
+                    PropertyAction { target: delegate; property: "opacity"; value: 0 }
                     PauseAnimation { duration: Kirigami.Units.longDuration}
                     NumberAnimation {
                         target: delegate
@@ -386,42 +400,130 @@ PlasmaExtras.Representation {
                     }
                 }
 
-                SequentialAnimation {
-                    id: removeAnimation
-                    PropertyAction { target: delegate; property: "ListView.delayRemove"; value: true }
-                    ParallelAnimation {
-                        NumberAnimation { target: delegate; property: "opacity"; to: 0; duration: Kirigami.Units.longDuration }
-                        NumberAnimation {
-                            target: transl
-                            property: "x"
-                            to: list.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? Kirigami.Units.largeSpacing * 2 : 0)
-                            duration: Kirigami.Units.longDuration
-                        }
-                    }
-                    PropertyAction { target: delegate; property: "ListView.delayRemove"; value: false }
-                }
-
                 draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
-                onDismissRequested: {
-                    removeAnimation.start();
+                onDismissRequested: historyModel.close(historyModel.index(index, 0));
 
-                    historyModel.close(historyModel.index(index, 0));
-                }
-
-                Loader {
+                contentItem: Loader {
                     id: delegateLoader
-                    anchors {
-                        left: parent.left
-                        leftMargin: Kirigami.Units.largeSpacing
-                        right: parent.right
-                        rightMargin: Kirigami.Units.largeSpacing
+
+                    sourceComponent: {
+                        if (model.isGroup) {
+                            return groupDelegate;
+                        } else if (model.isInGroup) {
+                            return notificationGroupedDelegate;
+                        } else {
+                            return notificationDelegate;
+                        }
                     }
-                    sourceComponent: model.isGroup ? groupDelegate : notificationDelegate
+
+                    readonly property Components.ModelInterface modelInterface: Components.ModelInterface {
+                        notificationType: model.type
+
+                        inGroup: model.isInGroup
+                        inHistory: true
+
+                        applicationName: model.applicationName
+                        applicationIconSource: model.applicationIconName
+                        originName: model.originName || ""
+
+                        time: model.updated || model.created
+
+                        // configure button on every single notifications is bit overwhelming
+                        configurable: !inGroup && model.configurable
+
+                        dismissable: model.type === NotificationManager.Notifications.JobType
+                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                            && model.dismissed
+                            // TODO would be nice to be able to undismiss jobs even when they autohide
+                            && notificationSettings.permanentJobPopups
+                        dismissed: model.dismissed || false
+                        closable: model.closable
+
+                        summary: model.summary
+                        body: model.body || ""
+                        icon: model.image || model.iconName
+
+                        urls: model.urls || []
+
+                        jobState: model.jobState || 0
+                        percentage: model.percentage || 0
+                        jobError: model.jobError || 0
+                        suspendable: !!model.suspendable
+                        killable: !!model.killable
+                        jobDetails: model.jobDetails || null
+
+                        configureActionLabel: model.configureActionLabel || ""
+
+                        actionNames: {
+                            // This syntax actually ensures model.actions is copied and not a reference
+                            // otherwise we modify model.actions and we have a binding loop
+                            let actions = [... (model.actions || [])];
+                            if (delegateLoader.addDefaultAction) {
+                                actions.unshift("default"); // prepend
+                            }
+                            return actions;
+                        }
+                        actionLabels: {
+                            let labels = [... (model.actionLabels || [])];
+                            if (delegateLoader.addDefaultAction) {
+                                labels.unshift(model.defaultActionLabel);
+                            }
+                            return labels;
+                        }
+
+                        onCloseClicked: delegate.close()
+
+                        onDismissClicked: {
+                            model.dismissed = false;
+                            root.closePlasmoid();
+                        }
+                        onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
+
+                        onActionInvoked: {
+                            if (actionName === "default") {
+                                historyModel.invokeDefaultAction(historyModel.index(index, 0));
+                            } else {
+                                historyModel.invokeAction(historyModel.index(index, 0), actionName);
+                            }
+
+                            delegateLoader.expire();
+                        }
+                        onOpenUrl: {
+                            Qt.openUrlExternally(url);
+                            delegateLoader.expire();
+                        }
+                        onFileActionInvoked: {
+                            if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
+                                delegate.close();
+                            } else {
+                                delegateLoader.expire();
+                            }
+                        }
+
+                        onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
+                        onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
+                        onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
+                    }
+
+                    // In the popup the default action is triggered by clicking on the popup
+                    // however in the list this is undesirable, so instead show a clickable button
+                    // in case you have a non-expired notification in history (do not disturb mode)
+                    // unless it has the same label as an action
+                    readonly property bool addDefaultAction: (model.hasDefaultAction
+                                                            && model.defaultActionLabel
+                                                            && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
+                    function expire() {
+                        if (model.resident) {
+                            model.expired = true;
+                        } else {
+                            historyModel.expire(historyModel.index(index, 0));
+                        }
+                    }
 
                     Component {
                         id: groupDelegate
-                        Delegates.NotificationHeader {
+                        Components.NotificationHeader {
                             modelInterface {
                                 applicationName: model.applicationName
                                 applicationIconSource: model.applicationIconName
@@ -436,144 +538,21 @@ PlasmaExtras.Representation {
                             closeButtonTooltip: i18n("Close Group")
                         }
                     }
-
                     Component {
                         id: notificationDelegate
+                        Delegates.DelegateHistory {
+                            Layout.fillWidth: true
+                            modelInterface: delegateLoader.modelInterface
+                        }
+                    }
+                    Component {
+                        id: notificationGroupedDelegate
                         ColumnLayout {
                             spacing: Kirigami.Units.smallSpacing
 
-                            RowLayout {
-                                Item {
-                                    id: groupLineContainer
-                                    Layout.fillHeight: true
-                                    Layout.topMargin: Kirigami.Units.smallSpacing
-                                    width: Kirigami.Units.iconSizes.small
-                                    visible: model.isInGroup
-
-                                    // Not using the Plasma theme's vertical line SVG because we want something thicker
-                                    // than a hairline, and thickening a thin line SVG does not necessarily look good
-                                    // with all Plasma themes.
-                                    Rectangle {
-                                        anchors.horizontalCenter: parent.horizontalCenter
-                                        width: 3
-                                        height: parent.height
-                                        // TODO: use separator color here, once that color role is implemented
-                                        color: Kirigami.Theme.textColor
-                                        opacity: 0.2
-                                    }
-                                }
-
-                                NotificationItem {
-                                    Layout.fillWidth: true
-
-                                    modelInterface {
-                                        notificationType: model.type
-
-                                        inGroup: model.isInGroup
-                                        inHistory: true
-                                        listViewParent: list
-
-                                        applicationName: model.applicationName
-                                        applicationIconSource: model.applicationIconName
-                                        originName: model.originName || ""
-
-                                        time: model.updated || model.created
-
-                                        // configure button on every single notifications is bit overwhelming
-                                        configurable: !modelInterface.inGroup && model.configurable
-
-                                        dismissable: model.type === NotificationManager.Notifications.JobType
-                                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
-                                            && model.dismissed
-                                            // TODO would be nice to be able to undismiss jobs even when they autohide
-                                            && notificationSettings.permanentJobPopups
-                                        dismissed: model.dismissed || false
-                                        closable: model.closable
-
-                                        summary: model.summary
-                                        body: model.body || ""
-                                        icon: model.image || model.iconName
-
-                                        urls: model.urls || []
-
-                                        jobState: model.jobState || 0
-                                        percentage: model.percentage || 0
-                                        jobError: model.jobError || 0
-                                        suspendable: !!model.suspendable
-                                        killable: !!model.killable
-                                        jobDetails: model.jobDetails || null
-
-                                        configureActionLabel: model.configureActionLabel || ""
-
-                                        actionNames: {
-                                            var actions = (model.actionNames || []);
-                                            if (parent.addDefaultAction) {
-                                                actions.unshift("default"); // prepend
-                                            }
-                                            return actions;
-                                        }
-                                        actionLabels: {
-                                            var labels = (model.actionLabels || []);
-                                            if (parent.addDefaultAction) {
-                                                labels.unshift(model.defaultActionLabel);
-                                            }
-                                            return labels;
-                                        }
-
-                                        onCloseClicked: close()
-
-                                        onDismissClicked: {
-                                            model.dismissed = false;
-                                            root.closePlasmoid();
-                                        }
-                                        onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
-
-                                        onActionInvoked: {
-                                            if (actionName === "default") {
-                                                historyModel.invokeDefaultAction(historyModel.index(index, 0));
-                                            } else {
-                                                historyModel.invokeAction(historyModel.index(index, 0), actionName);
-                                            }
-
-                                            expire();
-                                        }
-                                        onOpenUrl: {
-                                            Qt.openUrlExternally(url);
-                                            expire();
-                                        }
-                                        onFileActionInvoked: {
-                                            if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
-                                                close();
-                                            } else {
-                                                expire();
-                                            }
-                                        }
-
-                                        onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
-                                        onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
-                                        onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
-                                    }
-
-                                    // In the popup the default action is triggered by clicking on the popup
-                                    // however in the list this is undesirable, so instead show a clickable button
-                                    // in case you have a non-expired notification in history (do not disturb mode)
-                                    // unless it has the same label as an action
-                                    readonly property bool addDefaultAction: (model.hasDefaultAction
-                                                                            && model.defaultActionLabel
-                                                                            && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
-                                    function expire() {
-                                        if (model.resident) {
-                                            model.expired = true;
-                                        } else {
-                                            historyModel.expire(historyModel.index(index, 0));
-                                        }
-                                    }
-
-                                    function close() {
-                                        removeAnimation.start();
-                                        historyModel.close(historyModel.index(index, 0));
-                                    }
-                                }
+                            Delegates.DelegateHistoryGrouped {
+                                Layout.fillWidth: true
+                                modelInterface: delegateLoader.modelInterface
                             }
 
                             PlasmaComponents3.ToolButton {
@@ -584,18 +563,6 @@ PlasmaExtras.Representation {
                                 visible: (model.groupChildrenCount > model.expandedGroupChildrenCount || model.isGroupExpanded)
                                     && delegate.ListView.nextSection !== delegate.ListView.section
                                 onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
-                            }
-
-                            KSvg.SvgItem {
-                                Layout.fillWidth: true
-                                Layout.bottomMargin: Kirigami.Units.smallSpacing
-                                imagePath: "widgets/line"
-                                elementId: "horizontal-line"
-
-                                // property is only atached to the delegate itself (the Loader in our case)
-                                visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)
-                                                && delegate.ListView.nextSection !== "" // don't show after last item
-                                                && !removeAnimation.running
                             }
                         }
                     }
