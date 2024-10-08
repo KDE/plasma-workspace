@@ -6,19 +6,23 @@
 import re
 import io
 import subprocess
+import sys
 
 # removes the full path from calendar plugin entries and only stores the plugin id, e.g.
 # /usr/lib64/qt5/plugins/plasmacalendarplugins/holidaysevents.so -> holidaysevents
 
 proc = subprocess.Popen(
     [
-        "qtpaths",
+        "@QTPATHS_PATH@",
         "--locate-file",
         "ConfigLocation",
         "plasma-org.kde.plasma.desktop-appletsrc",
     ],
     stdout=subprocess.PIPE,
 )
+if proc.wait(3) != 0:
+    sys.exit(1)
+
 for line in io.TextIOWrapper(proc.stdout, encoding="utf-8"):
     appletsrcPath = line.removesuffix("\n")
 
