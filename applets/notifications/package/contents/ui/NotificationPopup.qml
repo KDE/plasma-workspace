@@ -4,15 +4,15 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.8
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.kquickcontrolsaddons as KQuickAddons
 import org.kde.plasma.core as PlasmaCore
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
 import org.kde.notificationmanager as NotificationManager
-import org.kde.plasma.private.notifications 2.0 as NotificationsApplet
+import org.kde.plasma.private.notifications as NotificationsApplet
 
 import ".."
 import "global"
@@ -69,7 +69,14 @@ NotificationsApplet.NotificationWindow {
         acceptedButtons: Qt.AllButtons
         hoverEnabled: true
         onPressed: wantsFocus = true
-        onContainsMouseChanged: wantsFocus = wantsFocus && containsMouse
+        onContainsMouseChanged: {
+            wantsFocus = wantsFocus && containsMouse
+            if (containsMouse) {
+                onEntered: notificationPopup.hoverEntered()
+            } else {
+                onExited: notificationPopup.hoverExited()
+            }
+        }
 
         DropArea {
             anchors.fill: parent
@@ -90,33 +97,36 @@ NotificationsApplet.NotificationWindow {
         }
 
         DraggableDelegate {
-            id: area
-            anchors.fill: parent
+            anchors {
+                fill: parent
+                topMargin: modelInterface.closable || modelInterface.dismissable || modelInterface.configurable ? -notificationPopup.topPadding : 0
+            }
+            leftPadding: 0
+            rightPadding: 0
             hoverEnabled: true
             draggable: notificationItem.notificationType != NotificationManager.Notifications.JobType
             onDismissRequested: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
 
-            cursorShape: hasDefaultAction ? Qt.PointingHandCursor : Qt.ArrowCursor
-            acceptedButtons: {
-                let buttons = Qt.MiddleButton;
-                if (hasDefaultAction || draggable) {
-                    buttons |= Qt.LeftButton;
-                }
-                return buttons;
-            }
-
-            onClicked: mouse => {
-                // NOTE "mouse" can be null when faked by the SelectableLabel
-                if (mouse && mouse.button === Qt.MiddleButton) {
-                    if (notificationItem.modelInterface.closable) {
-                        notificationItem.modelInterface.closeClicked();
+            TapHandler {
+                id: tapHandler
+                grabPermissions: PointerHandler.ApprovesTakeOverByAnything
+                acceptedButtons: {
+                    let buttons = Qt.MiddleButton;
+                    if (hasDefaultAction) {
+                        buttons |= Qt.LeftButton;
                     }
-                } else if (hasDefaultAction) {
-                    notificationItem.modelInterface.defaultActionInvoked();
+                    return buttons;
+                }
+                onTapped: (_eventPoint, button) => {
+                    if (button === Qt.MiddleButton) {
+                        if (notificationItem.modelInterface.closable) {
+                            notificationItem.modelInterface.closeClicked();
+                        }
+                    } else if (hasDefaultAction) {
+                        notificationItem.modelInterface.defaultActionInvoked();
+                    }
                 }
             }
-            onEntered: notificationPopup.hoverEntered()
-            onExited: notificationPopup.hoverExited()
 
             LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
             LayoutMirroring.childrenInherit: true
@@ -128,7 +138,7 @@ NotificationsApplet.NotificationWindow {
                     if (!notificationPopup.visible) {
                         return false;
                     }
-                    if (area.containsMouse) {
+                    if (focusListener.containsMouse) {
                         return false;
                     }
                     if (interval <= 0) {
@@ -161,29 +171,19 @@ NotificationsApplet.NotificationWindow {
                 running: timer.running && Kirigami.Units.longDuration > 1
             }
 
-            Delegates.DelegatePopup {
+            contentItem: Delegates.DelegatePopup {
                 id: notificationItem
 
-                anchors.left: parent.left
-                anchors.right: parent.right
                 Layout.preferredHeight: implicitHeight // Why is this necessary?
 
-                // let the item bleed into the dialog margins so the close button margins cancel out
-                y: modelInterface.closable || modelInterface.dismissable || modelInterface.configurable ? -notificationPopup.topPadding : 0
-
                 modelInterface {
-                    headingLeftMargin: -anchors.leftMargin
-
-                    headingLeftPadding: notificationPopup.leftPadding
-                    headingRightPadding: notificationPopup.rightPadding
-
                     maximumLineCount: 8
                     bodyCursorShape: notificationPopup.hasDefaultAction ? Qt.PointingHandCursor : 0
 
-                    thumbnailLeftPadding: -notificationPopup.leftPadding
-                    thumbnailRightPadding: -notificationPopup.rightPadding
-                    thumbnailTopPadding: -notificationPopup.topPadding
-                    thumbnailBottomPadding: -notificationPopup.bottomPadding
+                    popupLeftPadding: notificationPopup.leftPadding
+                    popupTopPadding: notificationPopup.topPadding
+                    popupRightPadding: notificationPopup.rightPadding
+                    popupBottomPadding: notificationPopup.bottomPadding
 
                     // When notification is updated, restart hide timer
                     onTimeChanged: {
@@ -196,8 +196,8 @@ NotificationsApplet.NotificationWindow {
                     closable: true
 
                     onBodyClicked: {
-                        if (area.acceptedButtons & Qt.LeftButton) {
-                            area.clicked(null /*mouse*/);
+                        if (hasDefaultAction) {
+                            notificationItem.modelInterface.defaultActionInvoked();
                         }
                     }
                 }

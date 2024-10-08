@@ -33,10 +33,11 @@ BaseDelegate {
         id: heading
         topInset: 0
         Layout.fillWidth: true
-        Layout.columnSpan: __firstColumn + 2
+        Layout.columnSpan: delegateRoot.__firstColumn + 2
         bottomPadding: 0
-        leftPadding: Layout.mirrored ? -modelInterface.headingLeftPadding : 0
-        rightPadding: Layout.mirrored ? 0 : -modelInterface.headingRightPadding
+        // We want the close button brders to touch popup borders
+        leftPadding: Layout.mirrored ? -modelInterface.popupLeftPadding : 0
+        rightPadding: Layout.mirrored ? 0 : -modelInterface.popupRightPadding
 
         // HACK PlasmoidHeading is a QQC2 Control which accepts left mouse button by default,
         // which breaks the popup default action mouse handler, cf. QTBUG-89785
@@ -49,8 +50,8 @@ BaseDelegate {
 
     Rectangle {
         Layout.fillHeight: true
-        Layout.leftMargin: Layout.mirrored ? 0 : -modelInterface.headingLeftPadding
-        Layout.rightMargin: Layout.mirrored ? -modelInterface.headingRightPadding : 0
+        Layout.leftMargin: Layout.mirrored ? 0 : -modelInterface.popupLeftPadding
+        Layout.rightMargin: Layout.mirrored ? -modelInterface.popupRightPadding : 0
         Layout.topMargin: -delegateRoot.rowSpacing
         Layout.bottomMargin: -delegateRoot.rowSpacing
         Layout.rowSpan: 3
@@ -65,14 +66,14 @@ BaseDelegate {
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         Layout.row: 1
-        Layout.column: __firstColumn
+        Layout.column: delegateRoot.__firstColumn
         modelInterface: delegateRoot.modelInterface
     }
 
     Components.Icon {
         id: icon
         Layout.row: 1
-        Layout.column: __firstColumn + 1
+        Layout.column: delegateRoot.__firstColumn + 1
         Layout.rowSpan: 2
         source: modelInterface.icon
         applicationIconSource: modelInterface.applicationIconSource
@@ -81,10 +82,14 @@ BaseDelegate {
     PlasmaComponents3.ScrollView {
         Layout.fillWidth: true
         Layout.row: 2
-        Layout.column: __firstColumn
-        readonly property real maximumHeight: Kirigami.Units.gridUnit * modelInterface.maximumLineCount
-        readonly property bool truncated: modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > maximumHeight
-        Layout.maximumHeight: truncated ? maximumHeight : implicitHeight
+        Layout.column: delegateRoot.__firstColumn
+        Layout.maximumHeight: Kirigami.Units.gridUnit * modelInterface.maximumLineCount
+        // The body doesn't need to influence the implicit width in any way, this avoids a binding loop
+        implicitWidth: -1
+
+        // This avoids a binding loop
+        PlasmaComponents3.ScrollBar.vertical.visible: modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > Layout.maximumHeight
+
         Components.Body {
             id: bodyLabel
             modelInterface: delegateRoot.modelInterface
@@ -95,7 +100,7 @@ BaseDelegate {
         id: footerLoader
         Layout.fillWidth: true
         Layout.row: 3
-        Layout.column: __firstColumn
+        Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: 2
         modelInterface: delegateRoot.modelInterface
         iconContainerItem: icon

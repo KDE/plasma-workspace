@@ -1,41 +1,42 @@
 /*
-    SPDX-FileCopyrightText: 2019 Marco Martin <mart@kde.org>
+    SPDX-FileCopyrightText: 2024 Marco Martin <mart@kde.org>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.10
-import org.kde.kirigami 2.11 as Kirigami
+import QtQuick
+import QtQuick.Templates as T
 
-MouseArea {
-    id: delegate
+import org.kde.kirigami as Kirigami
 
-    property Item contentItem
-    property bool draggable: false
+T.SwipeDelegate {
+    id: swipeDelegate
+
+    property bool draggable
     signal dismissRequested
 
-    implicitWidth: contentItem ? contentItem.implicitWidth : 0
-    implicitHeight: contentItem ? contentItem.implicitHeight : 0
-    opacity: 1 - Math.min(1, 1.5 * Math.abs(x) / width)
-
-    drag {
-        axis: Drag.XAxis
-        target: draggable && Kirigami.Settings.tabletMode ? this : null
+    function close() {
+        swipe.open(T.SwipeDelegate.Left)
     }
 
-    onReleased: {
-        if (Math.abs(x) > width / 2) {
-            delegate.dismissRequested();
-        } else {
-            slideAnim.restart();
+    implicitWidth: contentItem.implicitWidth + leftPadding + rightPadding
+    implicitHeight: contentItem.implicitHeight
+    leftPadding: Kirigami.Units.largeSpacing
+    rightPadding: Kirigami.Units.largeSpacing
+
+    swipe.enabled: draggable && Kirigami.Settings.tabletMode
+    swipe.onCompleted: dismissRequested()
+    swipe.transition: Transition {
+        NumberAnimation {
+            duration: Kirigami.Units.longDuration
+            easing.type: Easing.InQuad
         }
     }
-
-    NumberAnimation {
-        id: slideAnim
-        target: delegate
-        property:"x"
-        to: 0
-        duration: Kirigami.Units.longDuration
+    opacity: 1 - Math.abs(swipe.position)
+    swipe.right: Item {
+        anchors.fill:parent
+    }
+    swipe.left: Item {
+        anchors.fill:parent
     }
 }

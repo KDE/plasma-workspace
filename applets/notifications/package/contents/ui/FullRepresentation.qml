@@ -4,17 +4,17 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.10
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Layouts
 
-import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
-import org.kde.ksvg 1.0 as KSvg
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.ksvg as KSvg
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.kirigami as Kirigami
 
-import org.kde.coreaddons 1.0 as KCoreAddons
+import org.kde.coreaddons as KCoreAddons
 
 import org.kde.notificationmanager as NotificationManager
 import org.kde.plasma.private.notifications as Notifications
@@ -325,16 +325,33 @@ PlasmaExtras.Representation {
                 prefix: "pressed"
             }
 
-            // This is so the delegates can detect the change in "isInGroup" and show a separator
             section {
-                property: "isInGroup"
+                property: "desktopEntry"
                 criteria: ViewSection.FullString
+                delegate: Item {
+                    width: list.width
+                    // Within a section delegate we don't have other ways to detect whether we are the first section
+                    height: y > 0 ? Math.round(Kirigami.Units.smallSpacing * 2) : 0
+
+                    KSvg.SvgItem {
+                        anchors {
+                            left: parent.left
+                            right: parent.right
+                            verticalCenter: parent.verticalCenter
+                            margins: Kirigami.Units.largeSpacing
+                        }
+                        imagePath: "widgets/line"
+                        elementId: "horizontal-line"
+                        visible: parent.y > 0
+                    }
+                }
             }
 
             delegate: DraggableDelegate {
                 id: delegate
                 width: ListView.view.width
-                contentItem: delegateLoader
+                opacity: 0
+
                 required property int index
                 required property var model
 
@@ -351,7 +368,8 @@ PlasmaExtras.Representation {
                         return;
                     }
                     traslAnim.from = oldY - y;
-                    traslAnim.running = true;
+                    //traslAnim.running = true;
+                    traslAnim.restart()
                     oldY = y;
                     oldListCount = list.count;
                 }
@@ -365,7 +383,7 @@ PlasmaExtras.Representation {
                     to: 0
                     duration: Kirigami.Units.longDuration
                 }
-                opacity: 0
+
                 ListView.onAdd: appearAnim.restart();
                 Component.onCompleted: {
                     Qt.callLater(() => {
@@ -378,7 +396,7 @@ PlasmaExtras.Representation {
 
                 SequentialAnimation {
                     id: appearAnim
-                    PropertyAnimation { target: delegate; property: "opacity"; to: 0 }
+                    PropertyAction { target: delegate; property: "opacity"; value: 0 }
                     PauseAnimation { duration: Kirigami.Units.longDuration}
                     NumberAnimation {
                         target: delegate
@@ -389,37 +407,13 @@ PlasmaExtras.Representation {
                     }
                 }
 
-                SequentialAnimation {
-                    id: removeAnimation
-                    PropertyAction { target: delegate; property: "ListView.delayRemove"; value: true }
-                    ParallelAnimation {
-                        NumberAnimation { target: delegate; property: "opacity"; to: 0; duration: Kirigami.Units.longDuration }
-                        NumberAnimation {
-                            target: transl
-                            property: "x"
-                            to: list.width - (scrollView.PlasmaComponents3.ScrollBar.vertical.visible ? Kirigami.Units.largeSpacing * 2 : 0)
-                            duration: Kirigami.Units.longDuration
-                        }
-                    }
-                    PropertyAction { target: delegate; property: "ListView.delayRemove"; value: false }
-                }
-
                 draggable: !model.isGroup && model.type != NotificationManager.Notifications.JobType
 
-                onDismissRequested: {
-                    removeAnimation.start();
+                onDismissRequested: historyModel.close(historyModel.index(index, 0));
 
-                    historyModel.close(historyModel.index(index, 0));
-                }
-
-                Loader {
+                contentItem: Loader {
                     id: delegateLoader
-                    anchors {
-                        left: parent.left
-                        leftMargin: Kirigami.Units.largeSpacing
-                        right: parent.right
-                        rightMargin: Kirigami.Units.largeSpacing
-                    }
+
                     sourceComponent: {
                         if (model.isGroup) {
                             return groupDelegate;
@@ -470,21 +464,23 @@ PlasmaExtras.Representation {
                         configureActionLabel: model.configureActionLabel || ""
 
                         actionNames: {
-                            let actions = (model.actionNames || []);
+                            // This syntax actually ensures model.actions is copied and not a reference
+                            // otherwise we modify model.actions and we have a binding loop
+                            let actions = [... (model.actions || [])];
                             if (delegateLoader.addDefaultAction) {
                                 actions.unshift("default"); // prepend
                             }
                             return actions;
                         }
                         actionLabels: {
-                            let labels = (model.actionLabels || []);
+                            let labels = [... (model.actionLabels || [])];
                             if (delegateLoader.addDefaultAction) {
                                 labels.unshift(model.defaultActionLabel);
                             }
                             return labels;
                         }
 
-                        onCloseClicked: delegateLoader.close()
+                        onCloseClicked: delegate.close()
 
                         onDismissClicked: {
                             model.dismissed = false;
@@ -507,7 +503,7 @@ PlasmaExtras.Representation {
                         }
                         onFileActionInvoked: {
                             if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
-                                delegateLoader.close();
+                                delegate.close();
                             } else {
                                 delegateLoader.expire();
                             }
@@ -533,22 +529,6 @@ PlasmaExtras.Representation {
                         }
                     }
 
-                    function close() {
-                        removeAnimation.start();
-                        historyModel.close(historyModel.index(index, 0));
-                    }
-
-                    component GroupSeparator: KSvg.SvgItem { // FIXME: remove redundancy
-                        Layout.fillWidth: true
-                        Layout.bottomMargin: Kirigami.Units.smallSpacing
-                        imagePath: "widgets/line"
-                        elementId: "horizontal-line"
-
-                        // property is only atached to the delegate itself (the Loader in our case)
-                        visible: (!model.isInGroup || delegate.ListView.nextSection !== delegate.ListView.section)
-                                        && delegate.ListView.nextSection !== "" // don't show after last item
-                                        && !removeAnimation.running
-                    }
                     Component {
                         id: groupDelegate
                         Components.NotificationHeader {
@@ -568,13 +548,9 @@ PlasmaExtras.Representation {
                     }
                     Component {
                         id: notificationDelegate
-                        ColumnLayout {
-                            spacing: Kirigami.Units.smallSpacing
-                            Delegates.DelegateHistory {
-                                Layout.fillWidth: true
-                                modelInterface: delegateLoader.modelInterface
-                            }
-                            GroupSeparator {}
+                        Delegates.DelegateHistory {
+                            Layout.fillWidth: true
+                            modelInterface: delegateLoader.modelInterface
                         }
                     }
                     Component {
@@ -596,8 +572,6 @@ PlasmaExtras.Representation {
                                     && delegate.ListView.nextSection !== delegate.ListView.section
                                 onClicked: list.setGroupExpanded(model.index, !model.isGroupExpanded)
                             }
-
-                            GroupSeparator {}
                         }
                     }
                 }

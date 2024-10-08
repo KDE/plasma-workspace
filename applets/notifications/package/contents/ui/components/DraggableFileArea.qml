@@ -6,9 +6,9 @@
 
 import QtQuick
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.private.notifications 2.0 as NotificationsApplet
+import org.kde.plasma.private.notifications as NotificationsApplet
 
 Item {
     id: area

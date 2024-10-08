@@ -118,4 +118,10 @@ T.StackView { // FIXME: put a StackView in PlasmaComponents3
             onBeginReplyRequested: actionContainer.beginReply()
         }
     }
+
+    Component.onCompleted: {
+        if (actionContainer.modelInterface.hasReplyAction && (actionContainer.modelInterface.actionNames || []).length === 0) {
+            actionContainer.beginReply();
+        }
+    }
 }

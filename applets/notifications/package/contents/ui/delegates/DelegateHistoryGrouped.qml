@@ -55,6 +55,8 @@ BaseDelegate {
             modelInterface: delegateRoot.modelInterface
         }
 
+        Item {Layout.fillWidth: true}
+
         Components.HeadingButtons {
             id: headingElement
             Layout.alignment: Qt.AlignRight | Qt.AlignTop

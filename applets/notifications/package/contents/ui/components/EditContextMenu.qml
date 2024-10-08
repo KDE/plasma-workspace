@@ -4,11 +4,11 @@
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 
-import QtQuick 2.8
+import QtQuick
 
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import org.kde.plasma.extras as PlasmaExtras
 
-import org.kde.kquickcontrolsaddons 2.0 as KQCAddons
+import org.kde.kquickcontrolsaddons as KQCAddons
 
 PlasmaExtras.Menu {
     id: contextMenu
