@@ -19,7 +19,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-23 07:08+0300\n"
+"PO-Revision-Date: 2024-10-07 06:58+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -46,17 +46,14 @@ msgid "Clipboard history:"
 msgstr "היסטוריית לוח הגזירים:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " רשומה"
-msgstr[1] " רשומות"
-msgstr[2] "רשומות"
-msgstr[3] "רשומות"
+msgstr[0] "רשומה"
+msgstr[1] "שתי רשומות"
+msgstr[2] "%v רשומות"
+msgstr[3] "%v רשומות"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -151,17 +148,14 @@ msgid "Exclude Windows..."
 msgstr "החרגת חלונות…"
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " שנייה"
-msgstr[1] " שניות"
-msgstr[2] " שניות"
-msgstr[3] " שניות"
+msgstr[0] "שנייה"
+msgstr[1] "שתי שניות"
+msgstr[2] "%v שניות"
+msgstr[3] "%v שניות"
 
 #: configdialog.cpp:295
 #, kde-format

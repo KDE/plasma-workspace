@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-15 00:42+0000\n"
+"POT-Creation-Date: 2024-10-08 00:41+0000\n"
 "PO-Revision-Date: 2024-09-18 21:34+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -217,7 +217,7 @@ msgstr ""
 "háttérképként: %1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:333
+#: plugin/imagebackend.cpp:340
 #, kde-format
 msgid "Media Files"
 msgstr "Médiafájlok"

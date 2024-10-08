@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-15 00:42+0000\n"
+"POT-Creation-Date: 2024-10-08 00:41+0000\n"
 "PO-Revision-Date: 2013-09-26 05:29+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -218,7 +218,7 @@ msgid ""
 msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:333
+#: plugin/imagebackend.cpp:340
 #, fuzzy, kde-format
 #| msgid "Images"
 msgid "Media Files"
