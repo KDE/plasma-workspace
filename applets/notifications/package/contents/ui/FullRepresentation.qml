@@ -233,11 +233,6 @@ PlasmaExtras.Representation {
         }
     }
 
-    Notifications.WheelForwarder {
-        id: wheelForwarder
-        toItem: scrollView.contentItem
-    }
-
     PlasmaComponents3.ScrollView {
         id: scrollView
         anchors.fill: parent
@@ -254,8 +249,6 @@ PlasmaExtras.Representation {
             topMargin: Kirigami.Units.largeSpacing
             bottomMargin: Kirigami.Units.largeSpacing
             spacing: Kirigami.Units.smallSpacing
-
-            readonly property alias wheelForwarder: wheelForwarder
 
             KeyNavigation.up: dndCheck
 
@@ -429,7 +422,6 @@ PlasmaExtras.Representation {
 
                         inGroup: model.isInGroup
                         inHistory: true
-                        listViewParent: list
 
                         applicationName: model.applicationName
                         applicationIconSource: model.applicationIconName

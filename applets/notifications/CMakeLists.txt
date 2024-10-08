@@ -9,7 +9,6 @@ set(notificationapplet_SRCS
     globalshortcuts.cpp
     jobaggregator.cpp
     thumbnailer.cpp
-    wheelforwarder.cpp
     notificationapplet.h
     notificationwindow.h
     draghelper.h

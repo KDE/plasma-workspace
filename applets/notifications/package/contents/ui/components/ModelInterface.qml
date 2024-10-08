@@ -20,8 +20,6 @@ QtObject {
 
     property bool inGroup: false
     property bool inHistory: false
-    //TODO: REMOVE
-    property ListView listViewParent: null
 
     property var applicationIconSource
     property string applicationName

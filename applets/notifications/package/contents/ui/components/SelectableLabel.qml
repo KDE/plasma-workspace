@@ -11,9 +11,7 @@ import QtQuick.Layouts
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
-import org.kde.plasma.private.notifications as Notifications
-
-// TODO: possible to port to Kirigami.SelectableText/selectableLabel? (colors should be fine)
+// TODO: Port to Kirigami.SelectableText/selectableLabel (colors should be fine)
 PlasmaComponents3.TextArea {
     id: bodyTextContainer
     property ModelInterface modelInterface
@@ -73,9 +71,5 @@ PlasmaComponents3.TextArea {
         EditContextMenu {
             target: bodyTextContainer
         }
-    }
-
-    Component.onCompleted: if (modelInterface.listViewParent !== null) {
-        modelInterface.listViewParent.wheelForwarder.interceptWheelEvent(bodyTextContainer);
     }
 }
