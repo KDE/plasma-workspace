@@ -38,7 +38,7 @@ class Containment : public Applet
     Q_PROPERTY(QString type READ type)
     Q_PROPERTY(QString formFactor READ formFactor)
     Q_PROPERTY(QList<int> widgetIds READ widgetIds)
-    Q_PROPERTY(int screen READ screen)
+    Q_PROPERTY(int screen READ screen WRITE setScreen)
     Q_PROPERTY(int id READ id)
 
 public:
@@ -51,6 +51,7 @@ public:
     QList<int> widgetIds() const;
 
     int screen() const;
+    void setScreen(int screen);
 
     Plasma::Applet *applet() const override;
     Plasma::Containment *containment() const;
