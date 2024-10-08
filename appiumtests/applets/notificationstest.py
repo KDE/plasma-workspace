@@ -36,6 +36,9 @@ IFACE_NAME: Final = BUS_NAME
 
 
 def send_notification(data: dict[str, str | int | list[str] | dict[str, GLib.Variant] | GLib.Variant], session_bus: Gio.DBusConnection | None = None) -> int:
+    """
+    @returns Notification id
+    """
     app_name: str = str(data.get("app_name", "Appium Test"))
     replaces_id: int = int(data.get("replaces_id", 0))
     app_icon: str = str(data.get("app_icon", "wayland"))
@@ -223,6 +226,78 @@ class NotificationsTest(unittest.TestCase):
         self.assertEqual(params_3[0], notification_id)
         self.assertEqual(params_3[1], 3)  # reason: Revoked
         self.assertFalse(element.is_displayed())
+
+    def test_5_inline_reply(self) -> None:
+        """
+        When the action list has "inline-reply", the notification popup will contain a text field and a reply button.
+        """
+        notification_replied = threading.Event()
+        params: list[Any] = []  # id, text
+
+        def notification_signal_handler(d_bus_proxy: Gio.DBusProxy, sender_name: str, signal_name: str, parameters: GLib.Variant) -> None:
+            nonlocal params
+            logging.info(f"received signal {signal_name}")
+            if signal_name == "NotificationReplied":
+                params = parameters.unpack()
+                notification_replied.set()
+
+        connection_id = self.notification_proxy.connect("g-signal", notification_signal_handler)
+        self.addCleanup(lambda: self.notification_proxy.disconnect(connection_id))
+
+        # When there is only one action and it is a reply action, show text field right away
+        notification_id = send_notification({
+            "app_name": "Appium Test",
+            "body": "A notification with actions",
+            "actions": ["inline-reply", ""],  # Use the default label
+        })
+        reply_text = "this is a reply"
+        self.driver.find_element(AppiumBy.NAME, "begin reply").click()
+        self.driver.find_element(AppiumBy.NAME, "Type a reply…").send_keys(reply_text)
+        element = self.driver.find_element(AppiumBy.NAME, "Send")
+        element.click()
+        notification_replied.wait(10)
+        self.assertEqual(params[0], notification_id)
+        self.assertEqual(params[1], reply_text)
+        self.assertFalse(element.is_displayed())
+
+        notification_replied.clear()
+        notification_id = send_notification({
+            "app_name": "Appium Test",
+            "body": "A notification with actions",
+            "actions": ["inline-reply", ""],
+            "hints": {
+                "x-kde-reply-submit-button-text": GLib.Variant("s", "Reeply"),  # Use a custom label
+                "x-kde-reply-placeholder-text": GLib.Variant("s", "A placeholder"),  # Use a custom placeholder
+            },
+        })
+        reply_text = "this is another reply"
+        self.driver.find_element(AppiumBy.NAME, "begin reply").click()
+        self.driver.find_element(AppiumBy.NAME, "A placeholder").send_keys(reply_text)
+        element = self.driver.find_element(AppiumBy.NAME, "Reeply")
+        element.click()
+        notification_replied.wait(10)
+        self.assertEqual(params[0], notification_id)
+        self.assertEqual(params[1], reply_text)
+        self.assertFalse(element.is_displayed())
+
+        notification_replied.clear()
+        notification_id = send_notification({
+            "app_name": "Appium Test",
+            "body": "A notification with actions",
+            "actions": ["inline-reply", "Replyy", "foo", "Foo", "bar", "Bar"],  # Click to show the text field
+        })
+        self.driver.find_element(AppiumBy.NAME, "Foo")
+        self.driver.find_element(AppiumBy.NAME, "Bar")
+        element = self.driver.find_element(AppiumBy.NAME, "Replyy")
+        element.click()
+        reply_text = "Click Replyy to reply"
+        self.driver.find_element(AppiumBy.NAME, "Type a reply…").send_keys(reply_text)
+        self.assertFalse(element.is_displayed())
+        element = self.driver.find_element(AppiumBy.NAME, "Send")
+        element.click()
+        notification_replied.wait(10)
+        self.assertEqual(params[0], notification_id)
+        self.assertEqual(params[1], reply_text)
 
 
 if __name__ == '__main__':

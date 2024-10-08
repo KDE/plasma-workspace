@@ -34,6 +34,7 @@ RowLayout {
         Layout.fillWidth: true
         placeholderText: replyRow.placeholderText
                          || i18ndc("plasma_applet_org.kde.plasma.notifications", "Text field placeholder", "Type a reply…")
+        Accessible.name: placeholderText
         onAccepted: {
             if (replyButton.enabled) {
                 replyRow.replied(text);
@@ -45,6 +46,9 @@ RowLayout {
             anchors.fill: parent
             cursorShape: Qt.IBeamCursor
             visible: !replyRow.replying
+            Accessible.name: "begin reply"
+            Accessible.role: Accessible.Button
+            Accessible.onPressAction: replyRow.beginReplyRequested()
             onPressed: replyRow.beginReplyRequested()
         }
     }
