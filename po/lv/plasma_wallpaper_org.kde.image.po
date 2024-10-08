@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"POT-Creation-Date: 2024-10-08 02:31+0000\n"
 "PO-Revision-Date: 2024-08-15 19:13+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -221,7 +221,7 @@ msgstr ""
 "kā tapeti: %1"
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
-#: plugin/imagebackend.cpp:330
+#: plugin/imagebackend.cpp:337
 #, kde-format
 msgid "Media Files"
 msgstr "Multivides datnes"
