@@ -18,6 +18,7 @@ import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
+from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -298,6 +299,43 @@ class NotificationsTest(unittest.TestCase):
         notification_replied.wait(10)
         self.assertEqual(params[0], notification_id)
         self.assertEqual(params[1], reply_text)
+
+    def test_6_thumbnail(self) -> None:
+        """
+        When a notification has "x-kde-urls" hint, a thumbnail will be shown for the first url in the list
+        """
+        with tempfile.TemporaryDirectory() as temp_dir:
+            pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
+            colors = (0xff0000ff, 0x00ff00ff, 0x0000ffff)
+            for color in colors:
+                pixbuf.fill(color)
+                pixbuf.savev(os.path.join(temp_dir, f"{str(color)}.png"), "png")
+
+            url_list = [f"file://{os.path.join(temp_dir, path)}" for path in os.listdir(temp_dir)]
+            url_list.sort()
+            send_notification({
+                "app_name": "Appium Test",
+                "body": "Thumbnail",
+                "hints": {
+                    "x-kde-urls": GLib.Variant("as", url_list),
+                },
+                "timeout": 10 * 1000,
+            })
+
+            self.driver.find_element(AppiumBy.NAME, "More Options…")
+
+            partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 100, 100)
+            partial_pixbuf.fill(colors[1])  # Green is the first item
+            partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
+
+            def match_image(driver) -> bool:
+                try:
+                    self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+                    return True
+                except WebDriverException:
+                    return False
+
+            WebDriverWait(self.driver, 10).until(match_image)
 
 
 if __name__ == '__main__':
