@@ -129,6 +129,9 @@ class NotificationsTest(unittest.TestCase):
 
         wait = WebDriverWait(self.driver, 5)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, summary)))
+        close_button = self.driver.find_element(AppiumBy.NAME, "Close")
+        close_button.click()
+        wait.until_not(lambda _: close_button.is_displayed())
 
     def take_screenshot(self) -> str:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -169,6 +172,9 @@ class NotificationsTest(unittest.TestCase):
             partial_pixbuf.fill(color)
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+            close_button = self.driver.find_element(AppiumBy.NAME, "Close")
+            close_button.click()
+            wait.until_not(lambda _: close_button.is_displayed())
 
     def test_3_accessible_description_html_to_plaintext(self) -> None:
         """
@@ -180,6 +186,9 @@ class NotificationsTest(unittest.TestCase):
         })
         wait = WebDriverWait(self.driver, 5)
         wait.until(EC.presence_of_element_located(("description", "biublinkwww.example.org  from Appium Test")))
+        close_button = self.driver.find_element(AppiumBy.NAME, "Close")
+        close_button.click()
+        wait.until_not(lambda _: close_button.is_displayed())
 
     def test_4_actions(self) -> None:
         """
