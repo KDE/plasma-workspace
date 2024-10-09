@@ -62,7 +62,7 @@ class PlasmaWindowManagement;
 class ShellCorona : public Plasma::Corona, QDBusContext
 {
     Q_OBJECT
-    Q_PROPERTY(QString shell READ shell WRITE setShell)
+    Q_PROPERTY(QString shell READ shell NOTIFY shellChanged)
     Q_PROPERTY(int numScreens READ numScreens)
     Q_PROPERTY(PanelView *panelBeingConfigured READ panelBeingConfigured NOTIFY panelBeingConfiguredChanged)
     Q_CLASSINFO("D-Bus Interface", "org.kde.PlasmaShell")
@@ -156,6 +156,7 @@ Q_SIGNALS:
 
     void wallpaperChanged(uint screenNum);
     void panelBeingConfiguredChanged();
+    void shellChanged(const QString &shell);
 
 public Q_SLOTS:
     /**
@@ -179,6 +180,11 @@ public Q_SLOTS:
     QString shell() const;
 
     /// DBUS methods
+
+    /**
+     * Set the shell and reload containments while an existing shell is displayed
+     */
+    void changeShell(const QString &shell);
     void toggleDashboard();
     void setDashboardShown(bool show);
     void toggleActivityManager();
