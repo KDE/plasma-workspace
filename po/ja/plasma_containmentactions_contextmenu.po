@@ -1,7 +1,7 @@
 # Translation of plasma_containmentactions_contextmenu into Japanese.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Yukiko Bando <ybando@k6.dion.ne.jp>, 2009.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2019.
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #: menu.cpp:99
 #, kde-format

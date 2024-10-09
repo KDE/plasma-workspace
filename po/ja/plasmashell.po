@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:34+0000\n"
-"PO-Revision-Date: 2024-02-09 21:47+0900\n"
+"PO-Revision-Date: 2024-10-06 21:40+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -90,7 +90,7 @@ msgstr "ファイル"
 #: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr "ユーザフィードバックのために利用可能なオプションをリスト"
+msgstr "ユーザフィードバックのために利用可能なオプションをリストします"
 
 #: main.cpp:221
 #, kde-format
@@ -188,7 +188,7 @@ msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
-msgstr "オンスクリーンキーボードが非アクティブになりました"
+msgstr "オンスクリーンキーボードが非アクティブ化されました"
 
 #: shellcontainmentconfig.cpp:104
 #, kde-format
@@ -249,7 +249,7 @@ msgstr "デスクトップとパネルを管理..."
 #: shellcorona.cpp:279
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr "キーボードのパネルへのフォーカスを移動"
+msgstr "キーボードフォーカスをパネル間で移動"
 
 #: shellcorona.cpp:1923
 #, kde-format
@@ -265,19 +265,19 @@ msgstr "空の%1"
 #: softwarerendernotifier.cpp:27
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr "使用中のソフトウェアレンダラ"
+msgstr "ソフトウェアレンダラを使用中"
 
 #: softwarerendernotifier.cpp:28
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr "使用中のソフトウェアレンダラ"
+msgstr "ソフトウェアレンダラを使用中"
 
 #: softwarerendernotifier.cpp:29
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr "レンダリングの質が低下している可能性があります"
+msgstr "レンダリングの質が低下する可能性があります"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format
