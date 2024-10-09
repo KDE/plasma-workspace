@@ -50,8 +50,8 @@ bool SortedSystemTrayModel::lessThanConfigurationPage(const QModelIndex &left, c
 
 bool SortedSystemTrayModel::lessThanSystemTray(const QModelIndex &left, const QModelIndex &right) const
 {
-    QVariant itemIdLeft = sourceModel()->data(left, static_cast<int>(BaseModel::BaseRole::ItemId));
-    QVariant itemIdRight = sourceModel()->data(right, static_cast<int>(BaseModel::BaseRole::ItemId));
+    QVariant itemIdLeft = left.data(static_cast<int>(BaseModel::BaseRole::ItemId));
+    QVariant itemIdRight = right.data(static_cast<int>(BaseModel::BaseRole::ItemId));
     if (itemIdRight.toString() == QLatin1String("org.kde.plasma.notifications")) {
         // return false when at least right is "org.kde.plasma.notifications"
         return false;
@@ -70,10 +70,10 @@ bool SortedSystemTrayModel::lessThanSystemTray(const QModelIndex &left, const QM
 
 int SortedSystemTrayModel::compareCategoriesAlphabetically(const QModelIndex &left, const QModelIndex &right) const
 {
-    QVariant leftData = sourceModel()->data(left, static_cast<int>(BaseModel::BaseRole::Category));
+    QVariant leftData = left.data(static_cast<int>(BaseModel::BaseRole::Category));
     QString leftCategory = leftData.isNull() ? QStringLiteral("UnknownCategory") : leftData.toString();
 
-    QVariant rightData = sourceModel()->data(right, static_cast<int>(BaseModel::BaseRole::Category));
+    QVariant rightData = right.data(static_cast<int>(BaseModel::BaseRole::Category));
     QString rightCategory = rightData.isNull() ? QStringLiteral("UnknownCategory") : rightData.toString();
 
     return QString::localeAwareCompare(leftCategory, rightCategory);
@@ -81,10 +81,10 @@ int SortedSystemTrayModel::compareCategoriesAlphabetically(const QModelIndex &le
 
 int SortedSystemTrayModel::compareCategoriesOrderly(const QModelIndex &left, const QModelIndex &right) const
 {
-    QVariant leftData = sourceModel()->data(left, static_cast<int>(BaseModel::BaseRole::Category));
+    QVariant leftData = left.data(static_cast<int>(BaseModel::BaseRole::Category));
     QString leftCategory = leftData.isNull() ? QStringLiteral("UnknownCategory") : leftData.toString();
 
-    QVariant rightData = sourceModel()->data(right, static_cast<int>(BaseModel::BaseRole::Category));
+    QVariant rightData = right.data(static_cast<int>(BaseModel::BaseRole::Category));
     QString rightCategory = rightData.isNull() ? QStringLiteral("UnknownCategory") : rightData.toString();
 
     int leftIndex = s_categoryOrder.indexOf(leftCategory);
