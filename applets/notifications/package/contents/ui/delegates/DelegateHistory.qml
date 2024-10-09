@@ -27,6 +27,7 @@ BaseDelegate {
 
 
     Components.Summary {
+        id: summary
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         Layout.row: 1
@@ -46,7 +47,7 @@ BaseDelegate {
     Components.Body {
         id: bodyLabel
         Layout.fillWidth: true
-        Layout.row: 2
+        Layout.row: summary.visible ? 2 : 1
         Layout.column: 0
         modelInterface: delegateRoot.modelInterface
     }

@@ -63,6 +63,7 @@ BaseDelegate {
     }
 
     Components.Summary {
+        id: summary
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
         Layout.row: 1
@@ -81,7 +82,7 @@ BaseDelegate {
 
     PlasmaComponents3.ScrollView {
         Layout.fillWidth: true
-        Layout.row: 2
+        Layout.row: summary.visible ? 2 : 1
         Layout.column: delegateRoot.__firstColumn
         Layout.maximumHeight: Kirigami.Units.gridUnit * modelInterface.maximumLineCount
         // The body doesn't need to influence the implicit width in any way, this avoids a binding loop
