@@ -743,6 +743,10 @@ AbstractModel *KAStatsFavoritesModel::favoritesModel()
 
 void KAStatsFavoritesModel::refresh()
 {
+    if (!d) {
+        return;
+    }
+
     for (auto it = d->m_itemEntries.cbegin(); it != d->m_itemEntries.cend(); it = std::next(it)) {
         it->second->refreshLabels();
     }
