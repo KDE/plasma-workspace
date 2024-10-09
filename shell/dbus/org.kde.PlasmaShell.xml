@@ -2,6 +2,10 @@
 <node>
   <interface name="org.kde.PlasmaShell">
     <property name="editMode" type="b" access="readwrite"/>
+    <property name="shell" type="s" access="read"/>
+    <method name="changeShell">
+      <arg name="shell" type="s" direction="in"/>
+    </method>
     <method name="toggleDashboard">
     </method>
     <method name="toggleActivityManager">
@@ -42,10 +46,13 @@
       <arg name="screenNum" type="u" direction="in"/>
       <annotation name="org.qtproject.QtDBus.QtTypeName.In1" value="QVariantMap"/>
     </method>
+    <signal name="shellChanged">
+      <arg name="shell" type="s" direction="out"/>
+    </signal>
     <signal name="wallpaperChanged">
       <arg name="screenNum" type="u" direction="out"/>
     </signal>
-    
+
     <signal name="colorChanged">
       <arg name="changedColor" type="s" direction="out"/>
     </signal>

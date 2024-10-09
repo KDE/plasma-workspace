@@ -404,6 +404,21 @@ void ShellCorona::setShell(const QString &shell)
         Plasma::Theme *t = new Plasma::Theme(this);
         t->setThemeName(themeName);
     }
+
+    Q_EMIT shellChanged(m_shell);
+}
+
+void ShellCorona::changeShell(const QString &shell)
+{
+    if (m_shell == shell) {
+        return;
+    }
+
+    setShell(shell);
+    unload();
+    // Put load in queue of the event loop to wait for the whole set of containments to have been deleteLater(), as some like FolderView operate on singletons
+    // which can cause inconsistent states
+    QTimer::singleShot(0, this, &ShellCorona::load);
 }
 
 QJsonObject dumpconfigGroupJS(const KConfigGroup &rootGroup)
