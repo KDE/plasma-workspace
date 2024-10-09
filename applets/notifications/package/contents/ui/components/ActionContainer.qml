@@ -28,6 +28,7 @@ T.StackView { // FIXME: put a StackView in PlasmaComponents3
         modelInterface.forceActiveFocusRequested();
         if (currentItem === actionRow) {
             push(replyFieldComponent);
+            currentItem.activate()
         }
     }
 
