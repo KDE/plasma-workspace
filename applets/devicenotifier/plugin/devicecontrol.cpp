@@ -248,9 +248,15 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
     // No need to keep device anymore because it was physically removed.
     if (auto it = m_parentDevices.constFind(udi); it != m_parentDevices.cend()) {
         int size = it->size();
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Parent was removed for : " << udi;
         for (int device = 0; device < size; ++device) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Parent was removed for : " << udi;
-
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Remove child : " << it->at(device).udi();
+            if (auto childIt = m_actions.find(it->at(device).udi()); childIt != m_actions.end()) {
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Remove actions for : " << it->at(device).udi();
+                childIt.value()->deleteLater();
+                m_actions.erase(childIt);
+                m_spaceMonitor->removeMonitoringDevice(udi);
+            }
             deviceDelayRemove(it->at(device).udi(), udi);
         }
         return;
