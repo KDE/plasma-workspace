@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-04 00:41+0000\n"
+"POT-Creation-Date: 2024-10-09 00:41+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -450,7 +450,7 @@ msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "Zadajte odpoveď..."
 
-#: package/contents/ui/NotificationReplyField.qml:56
+#: package/contents/ui/NotificationReplyField.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

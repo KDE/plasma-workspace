@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-04 00:41+0000\n"
+"POT-Creation-Date: 2024-10-09 00:41+0000\n"
 "PO-Revision-Date: 2024-06-07 14:59+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -432,7 +432,7 @@ msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "Cavab yazmaq..."
 
-#: package/contents/ui/NotificationReplyField.qml:56
+#: package/contents/ui/NotificationReplyField.qml:60
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
