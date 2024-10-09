@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2024-02-09 21:47+0900\n"
+"PO-Revision-Date: 2024-10-06 21:40+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -104,31 +104,31 @@ msgstr "bugs.kde.org で問題を報告してください"
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Plasma バージョンをコピー"
 
 #: desktopview.cpp:292
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "バグを報告…"
 
 #: desktopview.cpp:302
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "プレビューバナーを隠す"
 
 #: desktopview.cpp:305
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "再起動するまで隠す"
 
 #: desktopview.cpp:312
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "完全に隠す..."
 
 #: desktopview.cpp:318
 #, kde-kuit-format
@@ -139,17 +139,21 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"本当にプレビューバナーを完全に隠しますか？<nl/><nl/>このアクションは "
+"<filename>kdeglobals</filename> 設定ファイルの "
+"<icode>ShowDesktopPreviewBanner</icode> で始まる行を削除することによってのみ"
+"取り消せます。"
 
 #: desktopview.cpp:320
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "プレビューバナーを隠しますか？"
 
 #: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "編集モードに入る"
 
 #: main.cpp:84
 #, kde-format
@@ -179,7 +183,7 @@ msgstr "既存のインスタンスを置換"
 #: main.cpp:109
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr "ユーザフィードバックのために利用可能なオプションをリスト"
+msgstr "ユーザフィードバックのために利用可能なオプションをリストします"
 
 #: main.cpp:174
 #, kde-format
@@ -201,7 +205,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:88
 #, kde-format
@@ -283,37 +287,37 @@ msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
-msgstr "オンスクリーンキーボードが非アクティブになりました"
+msgstr "オンスクリーンキーボードが非アクティブ化されました"
 
 #: osd.cpp:195
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "自動的なスリープと画面ロックが無効化されました"
 
 #: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "自動的なスリープと画面ロックが有効化されました"
 
 #: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "省電力モード"
 
 #: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "バランスモード"
 
 #: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "パフォーマンスモード"
 
 #: panelview.cpp:438
 #, kde-format
@@ -322,6 +326,10 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"X11 環境で NVIDIA GPU が使用されている場合、フローティングスタイルと「自動調"
+"整」透明化モードがウィンドウのドラッグもしくはリサイズ操作時にパフォーマンス"
+"の問題を起こすことが知られています。別の設定を使用することを検討してくださ"
+"い。"
 
 #: panelview.cpp:1100
 #, kde-format
@@ -364,7 +372,7 @@ msgstr "デスクトップを隠す"
 #: shellcorona.cpp:224
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "アプリケーションランチャーをアクティブ化"
 
 #: shellcorona.cpp:232
 #, kde-format
@@ -394,12 +402,12 @@ msgstr "タスクマネージャのエントリ %1 をアクティベート"
 #: shellcorona.cpp:306
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "パネルとデスクトップの管理"
 
 #: shellcorona.cpp:328
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr "キーボードのパネルへのフォーカスを移動"
+msgstr "キーボードフォーカスをパネル間で移動"
 
 #: shellcorona.cpp:2108
 #, kde-format
@@ -415,19 +423,19 @@ msgstr "空の%1"
 #: softwarerendernotifier.cpp:34
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr "使用中のソフトウェアレンダラ"
+msgstr "ソフトウェアレンダラを使用中"
 
 #: softwarerendernotifier.cpp:35
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr "使用中のソフトウェアレンダラ"
+msgstr "ソフトウェアレンダラを使用中"
 
 #: softwarerendernotifier.cpp:36
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr "レンダリングの質が低下している可能性があります"
+msgstr "レンダリングの質が低下する可能性があります"
 
 #: softwarerendernotifier.cpp:46
 #, kde-format
@@ -443,16 +451,3 @@ msgstr "パネルの数"
 #, kde-format
 msgid "Counts the panels"
 msgstr "パネルの数を数えます"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "テスト環境を設定するためにテストモードを有効化してレイアウト javascript を"
-#~ "指定"
-
-#~ msgid "file"
-#~ msgstr "ファイル"
-
-#~ msgid "Manage Desktops And Panels..."
-#~ msgstr "デスクトップとパネルを管理..."
