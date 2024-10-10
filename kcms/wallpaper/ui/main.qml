@@ -24,6 +24,8 @@ import org.kde.plasma.configuration 2.0
 Kirigami.Page {
     id: appearanceRoot
 
+    title: i18nc("@title:window", "Wallpaper")
+
     signal configurationChanged
 
     property alias parentLayout: parentLayout
