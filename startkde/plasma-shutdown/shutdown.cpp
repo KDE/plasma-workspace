@@ -153,7 +153,7 @@ void Shutdown::logoutComplete()
                                                   QStringLiteral("/org/freedesktop/systemd1"),
                                                   QStringLiteral("org.freedesktop.systemd1.Manager"),
                                                   QStringLiteral("StopUnit"));
-        msg << QStringLiteral("plasma-workspace.target") << QStringLiteral("fail");
+        msg << QStringLiteral("plasma-workspace.target") << QStringLiteral("replace");
         QDBusConnection::sessionBus().call(msg);
     } else {
         auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.ksmserver"),
