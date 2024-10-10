@@ -6,5 +6,5 @@ PartOf=graphical-session.target
 
 [Service]
 Type=oneshot
-ExecStart=-@QtBinariesDir@/qdbus org.kde.KSplash /KSplash org.kde.KSplash.setStage ready
+ExecStart=dbus-send --session  --reply-timeout=1 --dest=org.kde.KSplash /KSplash org.kde.KSplash.setStage string:ready
 Slice=session.slice
