@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-09 00:41+0000\n"
-"PO-Revision-Date: 2024-02-18 14:54+0530\n"
+"PO-Revision-Date: 2024-10-09 20:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -255,7 +255,7 @@ msgstr "விவரங்கள்"
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
-msgstr ""
+msgstr "தொடர்"
 
 #: package/contents/ui/JobItem.qml:201
 #, kde-format

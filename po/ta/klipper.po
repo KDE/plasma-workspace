@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-08-04 17:02+0530\n"
+"PO-Revision-Date: 2024-10-09 20:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -38,15 +38,12 @@ msgid "Clipboard history:"
 msgstr "பிடிப்புப்பலகை வரலாறு:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " பதிவு"
-msgstr[1] " பதிவுகள்"
+msgstr[0] "%v பதிவு"
+msgstr[1] "%v பதிவுகள்"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -129,15 +126,12 @@ msgid "Exclude Windows..."
 msgstr "குறிப்பிட்ட சாளரங்களை தவிர்…"
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " நொடி"
-msgstr[1] " நொடிகள்"
+msgstr[0] "%v நொடி"
+msgstr[1] "%v நொடி"
 
 #: configdialog.cpp:295
 #, kde-format
@@ -377,7 +371,7 @@ msgstr "வரலாற்றிலிருந்து நீக்கு"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "உரைதிருத்த பகுதி"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
