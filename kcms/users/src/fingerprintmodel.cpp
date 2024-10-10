@@ -93,8 +93,8 @@ void FingerprintModel::setEnrollStage(int stage)
 {
     if (m_enrollStage != stage) {
         m_enrollStage = stage;
+        Q_EMIT enrollProgressChanged();
     }
-    Q_EMIT enrollProgressChanged();
 }
 
 FingerprintModel::DialogState FingerprintModel::dialogState()
