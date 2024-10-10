@@ -927,19 +927,6 @@ msgstr "غیرفعال کردن این بالاپر"
 msgid "&Cancel"
 msgstr "&لغو‌"
 
-#, fuzzy
-#~| msgid "Save clipboard contents on e&xit"
-#~ msgid "Clipboard Items"
-#~ msgstr "ذخیره محتویات تخته یادداشت هنگام &خروج‌"
-
-#, fuzzy
-#~| msgid "Regular Expression"
-#~ msgid "Invalid regular expression, %1"
-#~ msgstr "عبارت منظم"
-
-#~ msgid "&More"
-#~ msgstr "&بیشتر‌"
-
 #  msgid ""
 #  "Should Klipper start automatically\n"
 #  "when you login?"
@@ -954,6 +941,19 @@ msgstr "&لغو‌"
 
 #~ msgid "Do Not Start"
 #~ msgstr "آغاز نشود"
+
+#, fuzzy
+#~| msgid "Save clipboard contents on e&xit"
+#~ msgid "Clipboard Items"
+#~ msgstr "ذخیره محتویات تخته یادداشت هنگام &خروج‌"
+
+#, fuzzy
+#~| msgid "Regular Expression"
+#~ msgid "Invalid regular expression, %1"
+#~ msgstr "عبارت منظم"
+
+#~ msgid "&More"
+#~ msgstr "&بیشتر‌"
 
 #, fuzzy
 #~| msgid "&Quit"
