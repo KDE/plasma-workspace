@@ -84,6 +84,7 @@
         "Description[ru]": "Мониторинг общей загрузки процессора",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje celotno rabo CPE",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar total processoranvändning",
+        "Description[ta]": "மொத்த CPU பயன்பாட்டைக் காட்டும் பிளாஸ்மாய்ட்",
         "Description[tr]": "Toplam CPU kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує загальне використання процесора",
         "Description[x-test]": "xxSystem monitor widget that shows the total CPU usagexx",
