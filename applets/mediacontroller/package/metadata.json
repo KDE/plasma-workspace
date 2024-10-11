@@ -88,6 +88,7 @@
         "Description[tr]": "Ortam oynatıcısı denetimleri",
         "Description[uk]": "Керування мультимедійним програвачем",
         "Description[x-test]": "xxMedia player controlsxx",
+        "Description[zh_CN]": "媒体播放器控制",
         "Description[zh_TW]": "媒體播放器控制",
         "EnabledByDefault": true,
         "FormFactors": [

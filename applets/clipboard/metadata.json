@@ -206,6 +206,7 @@
     "X-KDE-Keywords[tr]": "klipper,pano,kopyala,yapıştır,kes",
     "X-KDE-Keywords[uk]": "klipper,clipboard,copy,paste,кліпер,буфер,копіювання,вставлення",
     "X-KDE-Keywords[x-test]": "xxklipperxx,xxclipboardxx,xxcopyxx,xxpastexx",
+    "X-KDE-Keywords[zh_CN]": "klipper,clipboard,copy,paste,jiantieban,fuzhi,zhantie,剪贴板,复制,粘贴",
     "X-KDE-Keywords[zh_TW]": "剪貼簿,複製,貼上",
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-NotificationAreaCategory": "SystemServices"

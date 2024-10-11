@@ -18,7 +18,8 @@
         "Name[sv]": "Do not translate Test only",
         "Name[tr]": "Do not translate Test only",
         "Name[uk]": "Do not translate Test only",
-        "Name[x-test]": "xxDo not translate Test onlyxx"
+        "Name[x-test]": "xxDo not translate Test onlyxx",
+        "Name[zh_CN]": "Do not translate Test only"
     },
     "X-Plasma-API-Minimum-Version": "6.0",
     "X-Plasma-DBusActivationService": "org.kde.testdbusactivation",

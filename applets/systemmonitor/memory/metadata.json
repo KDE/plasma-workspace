@@ -88,6 +88,7 @@
         "Description[tr]": "Fiziksel bellek kullanımını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує використання фізичної пам'яті",
         "Description[x-test]": "xxSystem monitor widget that shows physical memory usagexx",
+        "Description[zh_CN]": "显示物理内存占用率的系统监视挂件",
         "Description[zh_TW]": "顯示實體記憶體用量的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [

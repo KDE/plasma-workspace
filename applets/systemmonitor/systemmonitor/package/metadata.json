@@ -142,6 +142,7 @@
         "Name[tr]": "Sistem Monitörü Algılayıcısı",
         "Name[uk]": "Датчик нагляду за системою",
         "Name[x-test]": "xxSystem Monitor Sensorxx",
+        "Name[zh_CN]": "系统监视传感器",
         "Name[zh_TW]": "系統監控感測器",
         "Website": "https://www.kde.org/plasma-desktop"
     },
