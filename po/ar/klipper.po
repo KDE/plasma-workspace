@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 00:41+0000\n"
-"PO-Revision-Date: 2024-09-05 09:40+0400\n"
+"PO-Revision-Date: 2024-10-10 08:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -40,19 +40,16 @@ msgid "Clipboard history:"
 msgstr "تاريخ الحافظة:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
 msgstr[0] "لا يوجد مدخلة"
-msgstr[1] " مدخلة واحدة"
-msgstr[2] " مدخلتين"
-msgstr[3] " مدخلات"
-msgstr[4] " مدخلة"
-msgstr[5] " مدخلة"
+msgstr[1] "مدخلة واحدة"
+msgstr[2] "مدخلتين"
+msgstr[3] "%v مدخلات"
+msgstr[4] "%v مدخلة"
+msgstr[5] "%v مدخلة"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -148,19 +145,16 @@ msgid "Exclude Windows..."
 msgstr "استثنِ النوافذ..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " ثانية"
-msgstr[1] " ثانية"
-msgstr[2] " ثانيتين"
-msgstr[3] " ثواني"
-msgstr[4] " ثانية"
-msgstr[5] " ثانية"
+msgstr[0] "أقل من ثانية"
+msgstr[1] "ثانية"
+msgstr[2] "ثانيتين"
+msgstr[3] "%v ثواني"
+msgstr[4] "%v ثانية"
+msgstr[5] "%v ثانية"
 
 #: configdialog.cpp:295
 #, kde-format

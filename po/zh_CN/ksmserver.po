@@ -36,7 +36,7 @@ msgstr "“%1”取消了注销"
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "会话正在退出"
 
 #: main.cpp:66
 #, kde-format
