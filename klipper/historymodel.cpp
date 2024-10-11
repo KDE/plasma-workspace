@@ -175,7 +175,7 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
     case Qt::DisplayRole: {
         if (item->type() == HistoryItemType::Text && value.canConvert<QString>()) {
             item = std::make_shared<HistoryStringItem>(value.toString());
-            Q_EMIT dataChanged(index, index, {Qt::DisplayRole});
+            Q_EMIT dataChanged(index, index, {Qt::DisplayRole, UuidRole});
             return true;
         }
         break;
