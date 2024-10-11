@@ -257,7 +257,7 @@ class NotificationsTest(unittest.TestCase):
         # When there is only one action and it is a reply action, show text field right away
         notification_id = send_notification({
             "app_name": "Appium Test",
-            "body": "A notification with actions",
+            "body": "A notification with actions 1",
             "actions": ["inline-reply", ""],  # Use the default label
         })
         reply_text = "this is a reply"
@@ -273,7 +273,7 @@ class NotificationsTest(unittest.TestCase):
         notification_replied.clear()
         notification_id = send_notification({
             "app_name": "Appium Test",
-            "body": "A notification with actions",
+            "body": "A notification with actions 2",
             "actions": ["inline-reply", ""],
             "hints": {
                 "x-kde-reply-submit-button-text": GLib.Variant("s", "Reeply"),  # Use a custom label
@@ -293,7 +293,7 @@ class NotificationsTest(unittest.TestCase):
         notification_replied.clear()
         notification_id = send_notification({
             "app_name": "Appium Test",
-            "body": "A notification with actions",
+            "body": "A notification with actions 3",
             "actions": ["inline-reply", "Replyy", "foo", "Foo", "bar", "Bar"],  # Click to show the text field
         })
         self.driver.find_element(AppiumBy.NAME, "Foo")
