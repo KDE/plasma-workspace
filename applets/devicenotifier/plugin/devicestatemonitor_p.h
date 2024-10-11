@@ -70,6 +70,8 @@ public:
 private:
     explicit DevicesStateMonitor(QObject *parent = nullptr);
 
+    void updateEncryptedContainer(const QString &udi);
+
 private Q_SLOTS:
     void setMountingState(const QString &udi);
     void setUnmountingState(const QString &udi);
@@ -90,5 +92,6 @@ private:
         QDateTime deviceTimeStamp;
     };
 
+    QHash<QString, QString> m_encryptedContainerMap;
     QHash<QString, DeviceInfo> m_devicesStates;
 };

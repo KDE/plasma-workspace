@@ -72,6 +72,21 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
             qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Device " << udi << " state : " << access->isAccessible();
             it->isMounted = access->isAccessible();
         }
+
+        Solid::StorageVolume *storagevolume = device.as<Solid::StorageVolume>();
+        if (storagevolume) {
+            // Check if the volume is part of an encrypted container
+            // This needs to trigger an update for the encrypted container volume since
+            // libsolid cannot notify us when the accessibility of the container changes
+            Solid::Device encryptedContainer = storagevolume->encryptedContainer();
+            if (encryptedContainer.isValid()) {
+                if (!m_encryptedContainerMap.contains(udi)) {
+                    const QString containerUdi = encryptedContainer.udi();
+                    m_encryptedContainerMap[udi] = containerUdi;
+                    updateEncryptedContainer(containerUdi);
+                }
+            }
+        }
     }
 
     if (device.is<Solid::StorageDrive>()) {
@@ -110,6 +125,13 @@ void DevicesStateMonitor::removeMonitoringDevice(const QString &udi)
     qCDebug(APPLETS::DEVICENOTIFIER) << "Devices State Monitor : Remove Signal arrived for " << udi;
     if (auto it = m_devicesStates.constFind(udi); it != m_devicesStates.constEnd()) {
         m_devicesStates.erase(it);
+
+        // libsolid cannot notify us when an encrypted container is closed,
+        // hence we trigger an update when a device contained in an encrypted container device dies
+        if (auto it = m_encryptedContainerMap.constFind(udi); it != m_encryptedContainerMap.constEnd()) {
+            updateEncryptedContainer(it.value());
+            m_encryptedContainerMap.erase(it);
+        }
 
         Solid::Device device(udi);
         if (device.is<Solid::StorageVolume>()) {
@@ -214,6 +236,25 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType error, QVariant errorDat
             stateTimer->deleteLater();
         });
         stateTimer->start();
+    }
+}
+
+void DevicesStateMonitor::updateEncryptedContainer(const QString &udi)
+{
+    if (auto it = m_devicesStates.find(udi); it == m_devicesStates.end()) {
+        Solid::Device device = Solid::Device(udi);
+        if (!device.isValid()) {
+            return;
+        }
+
+        it->operationResult = Idle;
+
+        Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
+        if (storageaccess) {
+            it->isMounted = storageaccess->isAccessible();
+        }
+
+        Q_EMIT stateChanged(udi);
     }
 }
 
