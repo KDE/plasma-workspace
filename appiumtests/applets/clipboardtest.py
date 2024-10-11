@@ -439,6 +439,12 @@ class ClipboardTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, new_text)
         self.assertEqual(self.driver.get_clipboard_text(), new_text)
 
+        # BUG 494145: update uuid after editing so the item can be removed
+        delete_button = self.driver.find_element(AppiumBy.NAME, "Remove from history")
+        delete_button.click()
+        WebDriverWait(self.driver, 5).until_not(lambda _: delete_button.is_displayed())
+        self.assertNotEqual(self.driver.get_clipboard_text(), new_text)
+
     def test_9_bug491488_copy_cells(self) -> None:
         """
         A cell has both image data and text data, which should not be ignored when images are ignored.
