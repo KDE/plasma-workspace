@@ -32,7 +32,7 @@ ColumnLayout {
 
     Item {
         id: handContainer
-        implicitHeight: basePalm.height
+        implicitHeight: basePalm.implicitHeight
         Layout.fillWidth: true
 
         property string currentFinger: ""

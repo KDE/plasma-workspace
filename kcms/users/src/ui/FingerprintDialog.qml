@@ -29,8 +29,6 @@ Kirigami.Dialog {
 
     visible: true
 
-    implicitWidth: Kirigami.Units.gridUnit * 20
-    implicitHeight: Kirigami.Units.gridUnit * 18
 
     standardButtons: QQC2.Dialog.NoButton
 
@@ -65,7 +63,6 @@ Kirigami.Dialog {
     ]
 
     ColumnLayout {
-        anchors.fill: parent
 
         Kirigami.InlineMessage {
             type: Kirigami.MessageType.Error
@@ -83,6 +80,8 @@ Kirigami.Dialog {
         QQC2.StackView {
             id: stack
 
+            Layout.minimumWidth: Kirigami.Units.gridUnit * 20
+            Layout.minimumHeight: Kirigami.Units.gridUnit * 18
             Layout.fillWidth: true
             Layout.fillHeight: true
 

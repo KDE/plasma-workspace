@@ -65,8 +65,10 @@ QString FingerprintModel::enrollFeedback()
 
 void FingerprintModel::setEnrollFeedback(const QString &feedback)
 {
-    m_enrollFeedback = feedback;
-    Q_EMIT enrollFeedbackChanged();
+    if (m_enrollFeedback != feedback) {
+        m_enrollFeedback = feedback;
+        Q_EMIT enrollFeedbackChanged();
+    }
 }
 
 bool FingerprintModel::currentlyEnrolling()
@@ -89,8 +91,10 @@ double FingerprintModel::enrollProgress()
 
 void FingerprintModel::setEnrollStage(int stage)
 {
-    m_enrollStage = stage;
-    Q_EMIT enrollProgressChanged();
+    if (m_enrollStage != stage) {
+        m_enrollStage = stage;
+        Q_EMIT enrollProgressChanged();
+    }
 }
 
 FingerprintModel::DialogState FingerprintModel::dialogState()
@@ -100,19 +104,23 @@ FingerprintModel::DialogState FingerprintModel::dialogState()
 
 void FingerprintModel::setDialogState(DialogState dialogState)
 {
-    m_dialogState = dialogState;
-    Q_EMIT dialogStateChanged();
+    if (m_dialogState != dialogState) {
+        m_dialogState = dialogState;
+        Q_EMIT dialogStateChanged();
+    }
 }
 
 void FingerprintModel::switchUser(const QString &username)
 {
-    m_username = username;
+    if (m_username != username) {
+        m_username = username;
 
-    if (deviceFound()) {
-        stopEnrolling(); // stop enrolling if ongoing
-        m_device->release(); // release from old user
+        if (deviceFound()) {
+            stopEnrolling(); // stop enrolling if ongoing
+            m_device->release(); // release from old user
 
-        Q_EMIT enrolledFingerprintsChanged();
+            Q_EMIT enrolledFingerprintsChanged();
+        }
     }
 }
 

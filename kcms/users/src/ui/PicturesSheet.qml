@@ -312,7 +312,7 @@ Kirigami.OverlaySheet {
     QQC2.StackView {
         id: stackSwitcher
 
-        implicitWidth: usersDetailPage.width - Kirigami.Units.largeSpacing * 4
+        implicitWidth: usersDetailPage.implicitWidth - Kirigami.Units.largeSpacing * 4
         implicitHeight: currentItem.implicitHeight
 
         focus: true
