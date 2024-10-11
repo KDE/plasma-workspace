@@ -329,15 +329,17 @@ void DeviceControl::deviceDelayRemove(const QString &udi, const QString &parentU
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device " << udi << " : start delay remove";
     if (!parentUdi.isEmpty() && m_stateMonitor->isRemovable(udi)) {
         auto it = m_parentDevices.find(parentUdi);
-        for (int position = 0; position < it->size(); ++position) {
-            if (udi == it->at(position).udi()) {
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device " << udi << " : found parent device. Removing";
-                it->removeAt(position);
-                if (it->isEmpty()) {
-                    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: parent don't have any child devices. Erase parent";
-                    m_parentDevices.erase(it);
+        if (it != m_parentDevices.end()) { // PLASMA-WORKSPACE-146Y: If a parent device is not of StorageDrive type
+            for (int position = 0; position < it->size(); ++position) {
+                if (udi == it->at(position).udi()) {
+                    qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device " << udi << " : found parent device. Removing";
+                    it->removeAt(position);
+                    if (it->isEmpty()) {
+                        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: parent don't have any child devices. Erase parent";
+                        m_parentDevices.erase(it);
+                    }
+                    break;
                 }
-                break;
             }
         }
     }
