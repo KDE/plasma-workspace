@@ -86,6 +86,7 @@
         "Description[tr]": "Veri indirme ve karşıya yükleme hızını gösteren sistem monitörü araç takımı",
         "Description[uk]": "Віджет нагляду за системою, який показує швидкість отримання та вивантаження даних",
         "Description[x-test]": "xxSystem monitor widget that shows the download and upload data ratexx",
+        "Description[zh_CN]": "显示下载和上传速率的系统监视挂件",
         "Description[zh_TW]": "顯示下載與上傳之資料速率的系統監控元件",
         "EnabledByDefault": true,
         "FormFactors": [
@@ -122,6 +123,7 @@
         "Name[tr]": "Ağ Hızı",
         "Name[uk]": "Швидкість мережі",
         "Name[x-test]": "xxNetwork Speedxx",
+        "Name[zh_CN]": "网络速度",
         "Name[zh_TW]": "網路速度",
         "Website": "https://www.kde.org/plasma-desktop"
     },
