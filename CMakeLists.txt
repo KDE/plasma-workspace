@@ -42,6 +42,15 @@ include(ECMGenerateQmlTypes)
 include(ECMDeprecationSettings)
 include(ECMQmlModule)
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(PipeWire QUIET IMPORTED_TARGET libpipewire-0.3)
+add_feature_info(PipeWire PipeWire_FOUND "Required for camera indicator applet and Wayland screencasting testing")
+set(BUILD_CAMERAINDICATOR_DEFAULT OFF)
+if(PipeWire_FOUND)
+    set(BUILD_CAMERAINDICATOR_DEFAULT ON)
+endif()
+option(BUILD_CAMERAINDICATOR "Build the camera indicator Plasma applet" ${BUILD_CAMERAINDICATOR_DEFAULT})
+
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat DBus ShaderTools Positioning Sql)
 find_package(QCoro6 REQUIRED COMPONENTS Core)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
@@ -93,7 +102,6 @@ set_package_properties(KF6Baloo PROPERTIES DESCRIPTION "File Searching"
                        PURPOSE "Needed for the File Search runner."
                       )
 
-find_package(PkgConfig REQUIRED)
 pkg_check_modules(QALCULATE libqalculate>2.0 REQUIRED IMPORTED_TARGET)
 pkg_check_modules(DBus dbus-1 REQUIRED IMPORTED_TARGET)
 
@@ -186,9 +194,6 @@ else()
     set(HAVE_XCURSOR 0)
     set(HAVE_XFIXES 0)
 endif()
-
-pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
-add_feature_info(PipeWire PipeWire_FOUND "Required for Wayland screencasting")
 
 if(PipeWire_FOUND)
   find_package(Libdrm REQUIRED)
