@@ -195,10 +195,6 @@ else()
     set(HAVE_XFIXES 0)
 endif()
 
-if(PipeWire_FOUND)
-  find_package(Libdrm REQUIRED)
-endif()
-
 # FreeBSD systems might have libxcrypt but their shadow equivalent doesn't use it
 if(CMAKE_SYSTEM_NAME MATCHES "Linux")
     pkg_check_modules(libxcrypt libxcrypt>=4)
