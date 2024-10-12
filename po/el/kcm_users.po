@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-09 00:40+0000\n"
+"POT-Creation-Date: 2024-10-12 00:40+0000\n"
 "PO-Revision-Date: 2024-09-21 13:07+0300\n"
 "Last-Translator: Δημήτρης Μηλιάτης <demetresmeliates+i18n@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -18,37 +18,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
+#: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Δεν βρέθηκε συσκευή δακτυλικών αποτυπωμάτων."
 
-#: src/fingerprintmodel.cpp:294
+#: src/fingerprintmodel.cpp:302
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Επαναλάβετε τη σάρωση του δακτύλου σας."
 
-#: src/fingerprintmodel.cpp:296
+#: src/fingerprintmodel.cpp:304
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Πολύ σύντομη κίνηση. Δοκιμάστε ξανά."
 
-#: src/fingerprintmodel.cpp:298
+#: src/fingerprintmodel.cpp:306
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Το δάχτυλο δεν είναι κεντραρισμένο στον αναγνώστη. Δοκιμάστε ξανά."
 
-#: src/fingerprintmodel.cpp:300
+#: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Αφαιρέστε το δάχτυλό σας από τον αναγνώστη και δοκιμάστε ξανά."
 
-#: src/fingerprintmodel.cpp:308
+#: src/fingerprintmodel.cpp:316
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Η εγγραφή δακτυλικών αποτυπωμάτων απέτυχε."
 
-#: src/fingerprintmodel.cpp:311
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -57,12 +57,12 @@ msgstr ""
 "Δεν υπάρχει διαθέσιμος χώρος για αυτή τη συσκευή. Διαγράψτε άλλα δακτυλικά "
 "αποτυπώματα για να συνεχίσετε."
 
-#: src/fingerprintmodel.cpp:314
+#: src/fingerprintmodel.cpp:322
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Η συσκευή αποσυνδέθηκε."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:327
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Προέκυψε ένα άγνωστο σφάλμα."
@@ -357,17 +357,17 @@ msgstr ""
 msgid "Configure Fingerprints"
 msgstr "Διαμόρφωση αποτυπωμάτων"
 
-#: src/ui/FingerprintDialog.qml:40
+#: src/ui/FingerprintDialog.qml:38
 #, kde-format
 msgid "Add"
 msgstr "Προσθήκη"
 
-#: src/ui/FingerprintDialog.qml:52
+#: src/ui/FingerprintDialog.qml:50
 #, kde-format
 msgid "Cancel"
 msgstr "Ακύρωση"
 
-#: src/ui/FingerprintDialog.qml:60
+#: src/ui/FingerprintDialog.qml:58
 #, kde-format
 msgid "Done"
 msgstr "Έγινε"

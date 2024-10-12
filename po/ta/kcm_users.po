@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-09 00:40+0000\n"
+"POT-Creation-Date: 2024-10-12 00:40+0000\n"
 "PO-Revision-Date: 2024-09-07 20:47+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -17,49 +17,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
+#: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "கைரேகைக்கான சாதனம் கண்டுபிடிக்கப்படவில்லை."
 
-#: src/fingerprintmodel.cpp:294
+#: src/fingerprintmodel.cpp:302
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "விரலை மறுபடியும் வைக்கவும்."
 
-#: src/fingerprintmodel.cpp:296
+#: src/fingerprintmodel.cpp:304
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "மிக சீக்கிரமாக விரலை எடுத்துவிட்டீர்கள். மீண்டும் முயற்சிக்கவும்."
 
-#: src/fingerprintmodel.cpp:298
+#: src/fingerprintmodel.cpp:306
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "வருடியின் நடுவில் விரல் இல்லை. மீண்டும் முயற்சிக்கவும்."
 
-#: src/fingerprintmodel.cpp:300
+#: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "வருடியிலிருந்து உங்கள் விரலை எடுத்து, மீண்டும் முயற்சிக்கவும்."
 
-#: src/fingerprintmodel.cpp:308
+#: src/fingerprintmodel.cpp:316
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "கைரேகை பதிவு தோல்வியடைந்தது."
 
-#: src/fingerprintmodel.cpp:311
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr "இச்சாதனத்தில் சேமிப்பக இடம் இல்லை. தொடர, வேறு கைரேகைகளை நீக்குங்கள்."
 
-#: src/fingerprintmodel.cpp:314
+#: src/fingerprintmodel.cpp:322
 #, kde-format
 msgid "The device was disconnected."
 msgstr "சாதனம் கழற்றப்பட்டது."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:327
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "தெரியாத சிக்கல் நேர்ந்துள்ளது."
@@ -311,17 +311,17 @@ msgstr "உங்கள் இடது பெருவிரலை கைரே
 msgid "Configure Fingerprints"
 msgstr "கைரேகைகளை அமை"
 
-#: src/ui/FingerprintDialog.qml:40
+#: src/ui/FingerprintDialog.qml:38
 #, kde-format
 msgid "Add"
 msgstr "சேர்"
 
-#: src/ui/FingerprintDialog.qml:52
+#: src/ui/FingerprintDialog.qml:50
 #, kde-format
 msgid "Cancel"
 msgstr "ரத்து செய்"
 
-#: src/ui/FingerprintDialog.qml:60
+#: src/ui/FingerprintDialog.qml:58
 #, kde-format
 msgid "Done"
 msgstr "முடிந்தது"

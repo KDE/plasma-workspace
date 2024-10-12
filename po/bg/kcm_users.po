@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-09 00:40+0000\n"
+"POT-Creation-Date: 2024-10-12 00:40+0000\n"
 "PO-Revision-Date: 2024-09-13 20:40+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -17,37 +17,37 @@ msgstr ""
 "X-Generator: Lokalize 24.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
+#: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "Не е намерено устройство за пръстов отпечатък."
 
-#: src/fingerprintmodel.cpp:294
+#: src/fingerprintmodel.cpp:302
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "Опитайте повторно сканиране на пръста."
 
-#: src/fingerprintmodel.cpp:296
+#: src/fingerprintmodel.cpp:304
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "Плъзгането е прекалено кратко.Опитайте отново."
 
-#: src/fingerprintmodel.cpp:298
+#: src/fingerprintmodel.cpp:306
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "Пръстът не е центриран на четеца. Опитайте отново."
 
-#: src/fingerprintmodel.cpp:300
+#: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "Махнете пръста от четеца и опитайте отново."
 
-#: src/fingerprintmodel.cpp:308
+#: src/fingerprintmodel.cpp:316
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "Снемането на пръстовия отпечатък е неуспешно."
 
-#: src/fingerprintmodel.cpp:311
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
@@ -56,12 +56,12 @@ msgstr ""
 "Няма достатъчно място на това устройство. Изтрийте пръстови отпечатъци, за "
 "да продължите."
 
-#: src/fingerprintmodel.cpp:314
+#: src/fingerprintmodel.cpp:322
 #, kde-format
 msgid "The device was disconnected."
 msgstr "Връзката с устройството е прекъсната."
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:327
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "Възникна неизвестна грешка."
@@ -354,17 +354,17 @@ msgstr ""
 msgid "Configure Fingerprints"
 msgstr "Конфигуриране на отпечатъци"
 
-#: src/ui/FingerprintDialog.qml:40
+#: src/ui/FingerprintDialog.qml:38
 #, kde-format
 msgid "Add"
 msgstr "Добавяне"
 
-#: src/ui/FingerprintDialog.qml:52
+#: src/ui/FingerprintDialog.qml:50
 #, kde-format
 msgid "Cancel"
 msgstr "Отказване"
 
-#: src/ui/FingerprintDialog.qml:60
+#: src/ui/FingerprintDialog.qml:58
 #, kde-format
 msgid "Done"
 msgstr "Завършен"

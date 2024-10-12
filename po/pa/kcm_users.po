@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-09 00:40+0000\n"
+"POT-Creation-Date: 2024-10-12 00:40+0000\n"
 "PO-Revision-Date: 2024-07-21 22:02-0500\n"
 "Last-Translator: aalam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -17,49 +17,49 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: src/fingerprintmodel.cpp:137 src/fingerprintmodel.cpp:221
+#: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
 msgid "No fingerprint device found."
 msgstr "ਕੋਈ ਫਿੰਗਰਪਰਿੰਟ ਡਿਵਾਈਸ ਨਹੀਂ ਹੈ।"
 
-#: src/fingerprintmodel.cpp:294
+#: src/fingerprintmodel.cpp:302
 #, kde-format
 msgid "Retry scanning your finger."
 msgstr "ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਮੁੜ ਸਕੈਨ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: src/fingerprintmodel.cpp:296
+#: src/fingerprintmodel.cpp:304
 #, kde-format
 msgid "Swipe too short. Try again."
 msgstr "ਬਹੁਤ ਕਾਹਲੀ ਨਾਲ ਘਸਾਇਆ। ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: src/fingerprintmodel.cpp:298
+#: src/fingerprintmodel.cpp:306
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
 msgstr "ਉਂਗਲ ਰੀਡਰ ਦੇ ਕੇਂਦਰ ਉੱਤੇ ਨਹੀਂ ਹੈ। ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: src/fingerprintmodel.cpp:300
+#: src/fingerprintmodel.cpp:308
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
 msgstr "ਰੀਡਰ ਤੋਂ ਆਪਣੀ ਉਂਗਲ ਨੂੰ ਹਟਾਓ ਅਤੇ ਫੇਰ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 
-#: src/fingerprintmodel.cpp:308
+#: src/fingerprintmodel.cpp:316
 #, kde-format
 msgid "Fingerprint enrollment has failed."
 msgstr "ਫਿੰਗਰ-ਪਰਿੰਟ ਦਾਖਲਾ ਅਸਫ਼ਲ ਹੈ।"
 
-#: src/fingerprintmodel.cpp:311
+#: src/fingerprintmodel.cpp:319
 #, kde-format
 msgid ""
 "There is no space left for this device, delete other fingerprints to "
 "continue."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਕੋਈ ਖਾਲੀ ਥਾਂ ਨਹੀਂ ਬਚੀ ਹੈ, ਜਾਰੀ ਰੱਖਣ ਲਈ ਹੋਰ ਫਿੰਗਰ-ਪਰਿੰਟਾਂ ਨੂੰ ਹਟਾਓ।"
 
-#: src/fingerprintmodel.cpp:314
+#: src/fingerprintmodel.cpp:322
 #, kde-format
 msgid "The device was disconnected."
 msgstr "ਡਿਵਾਈਸ ਡਿਸ-ਕਨੈਕਟ ਸੀ।"
 
-#: src/fingerprintmodel.cpp:319
+#: src/fingerprintmodel.cpp:327
 #, kde-format
 msgid "An unknown error has occurred."
 msgstr "ਅਣਪਛਾਤੀ ਗਲਤੀ ਆਈ ਹੈ।"
@@ -312,17 +312,17 @@ msgstr "ਫਿੰਗਰ-ਪਰਿੰਟ ਸੈਂਸਰ ਉੱਤੇ ਆਪਣ�
 msgid "Configure Fingerprints"
 msgstr "ਫਿੰਗਰਪਰਿੰਟਾਂ ਦੀ ਸੰਰਚਨਾ"
 
-#: src/ui/FingerprintDialog.qml:40
+#: src/ui/FingerprintDialog.qml:38
 #, kde-format
 msgid "Add"
 msgstr "ਜੋੜੋ"
 
-#: src/ui/FingerprintDialog.qml:52
+#: src/ui/FingerprintDialog.qml:50
 #, kde-format
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
-#: src/ui/FingerprintDialog.qml:60
+#: src/ui/FingerprintDialog.qml:58
 #, kde-format
 msgid "Done"
 msgstr "ਮੁਕੰਮਲ"
