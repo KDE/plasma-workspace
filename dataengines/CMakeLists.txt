@@ -9,7 +9,6 @@ if (PlasmaActivities_FOUND)
 endif ()
 add_subdirectory(apps)
 add_subdirectory(executable)
-add_subdirectory(filebrowser)
 add_subdirectory(notifications)
 add_subdirectory(places)
 
