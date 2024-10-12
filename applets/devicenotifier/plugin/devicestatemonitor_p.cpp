@@ -241,8 +241,8 @@ void DevicesStateMonitor::setIdleState(Solid::ErrorType error, QVariant errorDat
 
 void DevicesStateMonitor::updateEncryptedContainer(const QString &udi)
 {
-    if (auto it = m_devicesStates.find(udi); it == m_devicesStates.end()) {
-        Solid::Device device = Solid::Device(udi);
+    if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
+        Solid::Device device(udi);
         if (!device.isValid()) {
             return;
         }
