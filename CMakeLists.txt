@@ -61,6 +61,8 @@ if (BUILD_TESTING)
     include(ECMAddTests)
     find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Test QuickTest)
     find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
+    pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3) # cameraindicator
+    add_feature_info(PipeWire PipeWire_FOUND "Required for Wayland screencasting testing")
 endif()
 
 find_package(KF6KDED CONFIG REQUIRED)
@@ -186,9 +188,6 @@ else()
     set(HAVE_XCURSOR 0)
     set(HAVE_XFIXES 0)
 endif()
-
-pkg_check_modules(PipeWire IMPORTED_TARGET libpipewire-0.3)
-add_feature_info(PipeWire PipeWire_FOUND "Required for Wayland screencasting")
 
 if(PipeWire_FOUND)
   find_package(Libdrm REQUIRED)
