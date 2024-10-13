@@ -10,7 +10,6 @@ endif ()
 add_subdirectory(apps)
 add_subdirectory(executable)
 add_subdirectory(notifications)
-add_subdirectory(places)
 
 add_subdirectory(time)
 add_subdirectory(weather)
