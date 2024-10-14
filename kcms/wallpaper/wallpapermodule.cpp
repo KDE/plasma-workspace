@@ -336,7 +336,10 @@ void WallpaperModule::save()
 
     QVariantMap params;
     for (const auto &key : m_wallpaperConfiguration->keys()) {
-        params.insert(key, m_wallpaperConfiguration->value(key));
+        const QVariant value = m_wallpaperConfiguration->value(key);
+        if (value.isValid()) { // https://bugreports.qt.io/browse/QTBUG-130038
+            params.insert(key, value);
+        }
     }
 
     if (m_currentWallpaperPlugin == QLatin1String("org.kde.image")) {
