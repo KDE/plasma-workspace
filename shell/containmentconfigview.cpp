@@ -197,8 +197,9 @@ void ContainmentConfigView::applyWallpaper()
         if (key.endsWith(QLatin1String("Default"))) {
             continue;
         }
-        if (!m_currentWallpaperConfig->value(key).isNull()) {
-            params.insert(key, m_currentWallpaperConfig->value(key));
+        const QVariant value = m_currentWallpaperConfig->value(key); // https://bugreports.qt.io/browse/QTBUG-130038
+        if (value.isValid()) {
+            params.insert(key, value);
         }
     }
 
