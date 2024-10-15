@@ -52,7 +52,7 @@ inline QString decodeUnitName(const QStringView &input)
 // https://systemd.io/DESKTOP_ENVIRONMENTS/
 inline QStringView unitNameToServiceName(QStringView unitName)
 {
-    Q_ASSERT_X(!unitName.contains(QLatin1Char('/')), Q_FUNC_INFO, qUtf8Printable(unitName));
+    Q_ASSERT_X(!unitName.contains(QLatin1Char('/')), Q_FUNC_INFO, unitName.toUtf8().constData());
 
     if (!unitName.startsWith(QLatin1String("app-"))) {
         return {};
