@@ -6,6 +6,7 @@
         "Icon": "preferences-system-bluetooth",
         "Id": "org.kde.testdbusactivation",
         "Name": "Do not translate Test only",
+        "Name[bg]": "Само тест без превод",
         "Name[ca@valencia]": "Do not translate Test only",
         "Name[ca]": "Do not translate Test only",
         "Name[es]": "No traducir. Solo prueba",

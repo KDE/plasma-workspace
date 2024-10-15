@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=DONT TRANSLATE TEST ONLY
+Name[bg]=ДА НЕ СЕ ПРЕВЕЖДА, САМО ТЕСТВАНЕ
 Name[ca]=DONT TRANSLATE TEST ONLY
 Name[ca@valencia]=DONT TRANSLATE TEST ONLY
 Name[es]=DONT TRANSLATE TEST ONLY
@@ -18,6 +19,7 @@ Name[uk]=DONT TRANSLATE TEST ONLY
 Name[x-test]=xxDONT TRANSLATE TEST ONLYxx
 Name[zh_CN]=DONT TRANSLATE TEST ONLY
 Comment=DONT TRANSLATE TEST ONLY
+Comment[bg]=ДА НЕ СЕ ПРЕВЕЖДА, САМО ТЕСТВАНЕ
 Comment[ca]=DONT TRANSLATE TEST ONLY
 Comment[ca@valencia]=DONT TRANSLATE TEST ONLY
 Comment[es]=DONT TRANSLATE TEST ONLY
