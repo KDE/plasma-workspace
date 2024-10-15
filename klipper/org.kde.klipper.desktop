@@ -181,7 +181,7 @@ Terminal=false
 # Tell AppStream generators not to merge info in this file so Discover and other
 # software centers don't show two Klipper entries
 X-AppStream-Ignore=true
-NoDisplay=true;
+NoDisplay=true
 Categories=Qt;KDE;Utility;X-KDE-Utilities-Desktop;
 Comment=A cut & paste history utility
 Comment[af]='n Knip & plak geskiedenis program
