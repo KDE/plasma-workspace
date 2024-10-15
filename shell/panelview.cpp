@@ -1360,26 +1360,29 @@ void PanelView::updateMask()
         return;
     }
 
+    // Popups now align to the mask, without it they appear in the wrong position
+    // always create it and show blur and contrast when needed
+    QRegion mask;
+    QQuickItem *rootObject = this->rootObject();
+    QRect screenPanelRect = geometry();
+    screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
+    if (rootObject) {
+        QVariant maskProperty = rootObject->property("panelMask");
+        if (static_cast<QMetaType::Type>(maskProperty.typeId()) == QMetaType::QRegion) {
+            mask = get<QRegion>(std::move(maskProperty));
+            const QPoint floatingTranslucentItemOffset = rootObject->property("floatingTranslucentItemOffset").toPoint();
+            mask.translate(floatingTranslucentItemOffset);
+        }
+    }
+
+    if (mask.isEmpty()) {
+        mask = QRegion(QRect(screenPanelRect));
+    }
+
     if (m_backgroundHints == Plasma::Types::NoBackground) {
         KWindowEffects::enableBlurBehind(this, false);
         KWindowEffects::enableBackgroundContrast(this, false);
-        setMask(QRegion());
     } else {
-        QRegion mask;
-        QQuickItem *rootObject = this->rootObject();
-        QRect screenPanelRect = geometry();
-        screenPanelRect.moveTo(mapFromGlobal(screenPanelRect.topLeft()));
-        if (rootObject) {
-            QVariant maskProperty = rootObject->property("panelMask");
-            if (static_cast<QMetaType::Type>(maskProperty.typeId()) == QMetaType::QRegion) {
-                mask = get<QRegion>(std::move(maskProperty));
-                const QPoint floatingTranslucentItemOffset = rootObject->property("floatingTranslucentItemOffset").toPoint();
-                mask.translate(floatingTranslucentItemOffset);
-            }
-        }
-        if (mask.isEmpty()) {
-            mask = QRegion(QRect(screenPanelRect));
-        }
         // We use mask for graphical effect which tightly  covers the panel
         // For the input region (QWindow::mask) screenPanelRect includes area around the floating
         // panel in order to respect Fitt's law
