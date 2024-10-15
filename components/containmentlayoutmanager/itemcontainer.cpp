@@ -254,6 +254,12 @@ void ItemContainer::onConfigOverlayComponentStatusChanged(QQmlComponent::Status 
 
     connect(m_configOverlay, &ConfigOverlay::openChanged, this, &ItemContainer::configOverlayVisibleChanged);
 
+    connect(m_configOverlay, &QQuickItem::visibleChanged, this, [&]() {
+        if (!m_configOverlay->isVisible()) {
+            unsetCursor();
+        }
+    });
+
     Q_EMIT configOverlayItemChanged();
 
     m_configOverlay->setOpen(m_configOverlayVisible);
