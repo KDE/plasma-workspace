@@ -286,8 +286,7 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
             for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
                 for (int position = 0; position < it->size(); ++position) {
                     if (udi == it->at(position).udi()) {
-                        const QString &parentUdi = it.key();
-                        std::function<void()> slot = [this, udi, parentUdi]() {
+                        std::function<void()> slot = [this, udi, parentUdi = it.key()]() {
                             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Timer activated for " << udi;
                             for (int position = 0; position < m_devices.size(); ++position) {
                                 if (m_devices[position].udi() == udi) {
@@ -347,9 +346,7 @@ void DeviceControl::deviceDelayRemove(const QString &udi, const QString &parentU
     for (int position = 0; position < m_devices.size(); ++position) {
         if (m_devices[position].udi() == udi) {
             beginRemoveRows(QModelIndex(), position, position);
-            if (auto it = m_deviceTypes.find(udi); it != m_deviceTypes.end()) {
-                m_deviceTypes.remove(m_devices[position].udi());
-            }
+            m_deviceTypes.remove(udi);
 
             m_stateMonitor->removeMonitoringDevice(m_devices[position].udi());
             m_errorMonitor->removeMonitoringDevice(m_devices[position].udi());
