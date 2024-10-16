@@ -6,5 +6,5 @@ PartOf=graphical-session.target
 
 [Service]
 Type=oneshot
-ExecStart=dbus-send --session  --reply-timeout=1 --dest=org.kde.KSplash /KSplash org.kde.KSplash.setStage string:ready
+ExecStart=dbus-send --session --reply-timeout=1 --type=method_call --dest=org.kde.KSplash /KSplash org.kde.KSplash.setStage string:ready
 Slice=session.slice
