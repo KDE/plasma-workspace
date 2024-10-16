@@ -14,8 +14,6 @@
 #include <QDir>
 #include <QMetaObject>
 
-constexpr int maxEventDisplayed = 5;
-
 class DaysModelPrivate
 {
 public:
@@ -62,15 +60,10 @@ int DaysModel::rowCount(const QModelIndex &parent) const
 {
     if (!parent.isValid()) {
         // day count
-        if (d->data->size() <= 0) {
-            return 0;
-        } else {
-            return d->data->size();
-        }
+        return std::max<int>(d->data->size(), 0);
     } else {
         // event count
         const auto &eventDatas = data(parent, Roles::Events).value<QList<CalendarEvents::EventData>>();
-        Q_ASSERT(eventDatas.count() <= maxEventDisplayed);
         return eventDatas.count();
     }
 }
@@ -196,22 +189,11 @@ void DaysModel::onDataReady(const QMultiHash<QDate, CalendarEvents::EventData> &
         const DayData &currentData = d->data->at(i);
         const QDate currentDate(currentData.yearNumber, currentData.monthNumber, currentData.dayNumber);
         if (!data.values(currentDate).isEmpty()) {
-            // Make sure we don't display more than maxEventDisplayed events.
-            const int currentCount = d->eventsData.values(currentDate).count();
-            if (currentCount >= maxEventDisplayed) {
-                break;
-            }
-
-            const int addedEventCount = std::min<int>(currentCount + data.values(currentDate).count(), maxEventDisplayed) - currentCount;
+            const int addedEventCount = data.values(currentDate).count();
 
             // Add event
             beginInsertRows(index(i, 0), 0, addedEventCount - 1);
-            int stopCounter = currentCount;
             for (const auto &dataDay : data.values(currentDate)) {
-                if (stopCounter >= maxEventDisplayed) {
-                    break;
-                }
-                stopCounter++;
                 d->eventsData.insert(currentDate, dataDay);
             }
             endInsertRows();

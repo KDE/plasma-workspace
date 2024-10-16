@@ -182,9 +182,13 @@ PlasmaComponents.AbstractButton {
             spacing: Kirigami.Units.smallSpacing
 
             Repeater {
+                id: eventIndicatorsRepeater
                 model: DelegateModel {
                     model: dayStyle.dayModel
                     delegate: Rectangle {
+                        // If there are <= 3 events for the day, show them as individual dots.
+                        // Otherwise, show a little bar to not overflow the box.
+                        visible: eventIndicatorsRepeater.count <= 3
                         required property string eventColor
 
                         width: dayStyle.eventIndicatorsRowSize
@@ -199,6 +203,13 @@ PlasmaComponents.AbstractButton {
                         rootIndex = modelIndex(dayStyle.index);
                     }
                 }
+            }
+            Rectangle {
+                visible: eventIndicatorsRepeater.count > 3
+                width: dayStyle.width * 0.5
+                height: dayStyle.eventIndicatorsRowSize
+                radius: height / 2
+                color: Kirigami.Theme.highlightColor
             }
         }
     }
