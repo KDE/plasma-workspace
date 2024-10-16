@@ -309,8 +309,8 @@ void DBusMenuImporter::slotLayoutUpdated(uint revision, int parentId)
 
 void DBusMenuImporter::processPendingLayoutUpdates()
 {
-    const QSet<int> ids = d->m_pendingLayoutUpdates;
-    d->m_pendingLayoutUpdates.clear();
+    const QSet<int> ids = std::move(d->m_pendingLayoutUpdates);
+    Q_ASSERT(d->m_pendingLayoutUpdates.empty());
     for (int id : ids) {
         d->refresh(id);
     }
