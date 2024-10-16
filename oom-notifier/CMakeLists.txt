@@ -12,5 +12,6 @@ target_link_libraries(oom-notifier
     KF6::Service
     KF6::KIOGui
 )
+install(FILES oom-notifier.notifyrc DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
 
 add_subdirectory(autotests)

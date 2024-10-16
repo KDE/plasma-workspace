@@ -1,0 +1,14 @@
+# SPDX-License-Identifier: CC0-1.0
+# SPDX-FileCopyrightText: none
+
+[Global]
+IconName=preferences-system-linux
+Name=Linux Kernel
+Comment=The core of the operating system
+
+[Event/catastrophe]
+Urgency=Critical
+Action=Popup|Sound
+Sound=dialog-error-serious
+Name=Catastrophe
+Comment=A very serious error has occurred

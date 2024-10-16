@@ -60,8 +60,16 @@ public:
 
                     const auto unit = decodeUnitName(QFileInfo(msg.path()).fileName());
                     const auto service = serviceForUnitName(unit);
+                    const QString eventId = u"catastrophe"_s;
+                    const QString component = u"oom-notifier"_s;
                     const QString title = i18nc("@title", "Memory Shortage Avoided");
-                    const auto message = [](const QString &command) -> QString {
+                    const auto programMessage = [](const QString &command) -> QString {
+                        return xi18nc("@info",
+                                      "The process of <command>%1</command> has been terminated by the Linux kernel because "
+                                      "the system is low on memory. Consider closing unused applications or browser tabs.",
+                                      command);
+                    };
+                    const auto unitMessage = [](const QString &command) -> QString {
                         return xi18nc("@info",
                                       "The process of unit <command>%1</command> has been terminated by the Linux kernel because "
                                       "the system is low on memory. Consider closing unused applications or browser tabs.",
@@ -70,7 +78,7 @@ public:
 
                     if (service && service->isValid()) {
                         auto notification =
-                            KNotification::event(KNotification::Catastrophe, title, message(service->name()), service->icon(), KNotification::Persistent);
+                            KNotification::event(eventId, title, programMessage(service->name()), service->icon(), KNotification::Persistent, component);
                         auto action = notification->addAction(i18nc("@action", "Restart Application"));
                         connect(action, &KNotificationAction::activated, this, [this, service] {
                             auto job = new KIO::ApplicationLauncherJob(service, this);
@@ -78,7 +86,7 @@ public:
                             job->start();
                         });
                     } else {
-                        KNotification::event(KNotification::Catastrophe, title, message(unit), u"edit-bomb-symbolic"_s, KNotification::Persistent)->sendEvent();
+                        KNotification::event(eventId, title, unitMessage(unit), u"edit-bomb-symbolic"_s, KNotification::Persistent, component)->sendEvent();
                     }
                 });
     }

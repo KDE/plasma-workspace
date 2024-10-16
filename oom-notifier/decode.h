@@ -16,7 +16,7 @@ inline std::optional<char> narrow(int i)
 
 inline QString decodeUnitName(const QStringView &input)
 {
-    QString decoded;
+    QByteArray decoded;
     decoded.reserve(input.size());
     const QByteArray bytes = input.toUtf8();
     for (auto it = bytes.cbegin(); it != bytes.cend(); it++) {
@@ -43,10 +43,10 @@ inline QString decodeUnitName(const QStringView &input)
             continue;
         }
 
-        decoded.append(QChar::fromLatin1(decodedChar.value()));
+        decoded.append(decodedChar.value());
         it = nextIt;
     }
-    return decoded;
+    return QString::fromUtf8(decoded);
 }
 
 // https://systemd.io/DESKTOP_ENVIRONMENTS/
