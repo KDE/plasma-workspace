@@ -60,32 +60,25 @@ public:
 
                     const auto unit = decodeUnitName(QFileInfo(msg.path()).fileName());
                     const auto service = serviceForUnitName(unit);
+                    const QString title = i18nc("@title", "Memory Shortage Avoided");
+                    const auto message = [](const QString &command) -> QString {
+                        return xi18nc("@info",
+                                      "The process of unit <command>%1</command> has been terminated by the Linux kernel because "
+                                      "the system is low on memory. Consider closing unused applications or browser tabs.",
+                                      command);
+                    };
 
                     if (service && service->isValid()) {
-                        auto notification = KNotification::event(KNotification::Catastrophe,
-                                                                 i18nc("@title", "Memory Shortage Avoided"),
-                                                                 xi18nc("@info",
-                                                                        "The process <command>%1</command> has been terminated by the Linux kernel because "
-                                                                        "the system is low on memory. Consider closing unused applications or browser tabs.",
-                                                                       service->name()),
-                                                                 service->icon(),
-                                                                 KNotification::Persistent);
+                        auto notification =
+                            KNotification::event(KNotification::Catastrophe, title, message(service->name()), service->icon(), KNotification::Persistent);
                         auto action = notification->addAction(i18nc("@action", "Restart Application"));
                         connect(action, &KNotificationAction::activated, this, [this, service] {
                             auto job = new KIO::ApplicationLauncherJob(service, this);
                             job->setUiDelegate(KIO::createDefaultJobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, nullptr));
                             job->start();
                         });
-                    }else {
-                        KNotification::event(KNotification::Catastrophe,
-                                             i18nc("@title", "Memory Shortage Avoided"),
-                                             xi18nc("@info",
-                                                    "A process of unit <command>%1</command> has been terminated by the Linux kernel because "
-                                                    "the system is low on memory. Consider closing unused applications or browser tabs.",
-                                                   unit),
-                                             "edit-bomb-symbolic",
-                                             KNotification::Persistent)
-                            ->sendEvent();
+                    } else {
+                        KNotification::event(KNotification::Catastrophe, title, message(unit), u"edit-bomb-symbolic"_s, KNotification::Persistent)->sendEvent();
                     }
                 });
     }
