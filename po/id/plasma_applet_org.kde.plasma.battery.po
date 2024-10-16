@@ -3,22 +3,22 @@
 # This file is distributed under the same license as the plasma_applet_battery package.
 # Andhika Padmawan <andhika.padmawan@gmail.com>, 2010-2014.
 # SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2021, 2024 Wantoyo <wantoyek@gmail.com>
-# Linerly <linerly@protonmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Linerly <linerly@protonmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 03:09+0000\n"
-"PO-Revision-Date: 2024-07-22 08:35+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
-"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
+"PO-Revision-Date: 2024-10-14 17:21+0700\n"
+"Last-Translator: Linerly <linerly@protonmail.com>\n"
+"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -263,8 +263,8 @@ msgstr ""
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "%1 aplikasi telah mencegah tidur dan penguncian layar:"
-msgstr[1] "%1 aplikasi telah mencegah tidur dan penguncian layar:"
+msgstr[0] "%1 aplikasi saat ini mencegah tidur dan penguncian layar:"
+msgstr[1] "%1 aplikasi saat ini mencegah tidur dan penguncian layar:"
 
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format

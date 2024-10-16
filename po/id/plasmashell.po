@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:34+0000\n"
-"PO-Revision-Date: 2024-10-04 21:38+0700\n"
+"PO-Revision-Date: 2024-10-15 05:51+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -192,7 +192,7 @@ msgstr "Keyboard Pada-Layar Dinonaktifkan"
 #: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Layar Internal pada %1"
 
 #: shellcontainmentconfig.cpp:108
 #, kde-format
@@ -203,7 +203,7 @@ msgstr "%1 %2 di %3"
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Layar %1 Terputus"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
