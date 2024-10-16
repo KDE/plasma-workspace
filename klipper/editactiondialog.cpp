@@ -284,7 +284,7 @@ popup is activated manually with the <shortcut>%1</shortcut> key shortcut.",
     mainLayout->setStretch(1, 1);
     mainLayout->addWidget(buttons);
 
-    (void)winId();
+    create();
     windowHandle()->resize(540, 560); // default, if there is no saved size
     const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
