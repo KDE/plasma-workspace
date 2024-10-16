@@ -196,7 +196,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     }
 
     if (auto it = m_removeTimers.constFind(udi); it != m_removeTimers.cend()) {
-        it->second(); // A device is removed and added back immediately
+        it->second(); // A device is removed and added back immediately, can happen during formatting
     }
 
     m_actions[udi] = actions;
