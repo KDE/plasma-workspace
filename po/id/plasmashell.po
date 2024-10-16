@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2024-10-04 21:38+0700\n"
+"PO-Revision-Date: 2024-10-15 05:51+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -292,13 +292,13 @@ msgstr "Keyboard Pada-Layar Dinonaktifkan"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Tidur dan Penguncian Layar Diblokir"
 
 #: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Tidur dan Penguncian Layar Tidak Diblokir"
 
 #: osd.cpp:207
 #, kde-format
@@ -325,6 +325,9 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Memakai GPU NVIDIA pada X11, mode opasitas Adaptive dan gaya Mengambang "
+"diketahui menyebabkan kinerja sèrèt dan ubah ukuran jendela menjadi buruk. "
+"Pertimbangkan untuk menggunakan pengaturan lain."
 
 #: panelview.cpp:1100
 #, kde-format
@@ -341,7 +344,7 @@ msgstr "Tampilkan Panel Konfigurasi"
 #: shellcontainmentconfig.cpp:106
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Layar Internal pada %1"
 
 #: shellcontainmentconfig.cpp:110
 #, kde-format
@@ -352,7 +355,7 @@ msgstr "%1 %2 di %3"
 #: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Layar %1 Terputus"
 
 #: shellcorona.cpp:207 shellcorona.cpp:209
 #, kde-format
@@ -367,7 +370,7 @@ msgstr "Sembunyikan Desktop"
 #: shellcorona.cpp:224
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "Aktifkan Peluncur Aplikasi"
 
 #: shellcorona.cpp:232
 #, kde-format
@@ -397,7 +400,7 @@ msgstr "Aktifkan Entri Task Manager %1"
 #: shellcorona.cpp:306
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "Pengelolaan Desktop dan Panel"
 
 #: shellcorona.cpp:328
 #, kde-format
