@@ -82,21 +82,38 @@ void DWDIon::deleteForecasts()
     }
 }
 
+QMap<QString, IonInterface::ConditionIcons> DWDIon::getUniversalIcons() const
+{
+    return QMap<QString, ConditionIcons>{
+        {QStringLiteral("4"), Overcast},      {QStringLiteral("5"), Mist},          {QStringLiteral("6"), Mist},          {QStringLiteral("7"), LightRain},
+        {QStringLiteral("8"), Rain},          {QStringLiteral("9"), Rain},          {QStringLiteral("10"), LightRain},    {QStringLiteral("11"), Rain},
+        {QStringLiteral("12"), Flurries},     {QStringLiteral("13"), RainSnow},     {QStringLiteral("14"), LightSnow},    {QStringLiteral("15"), Snow},
+        {QStringLiteral("16"), Snow},         {QStringLiteral("17"), Hail},         {QStringLiteral("18"), LightRain},    {QStringLiteral("19"), Rain},
+        {QStringLiteral("20"), Flurries},     {QStringLiteral("21"), RainSnow},     {QStringLiteral("22"), LightSnow},    {QStringLiteral("23"), Snow},
+        {QStringLiteral("24"), Hail},         {QStringLiteral("25"), Hail},         {QStringLiteral("26"), Thunderstorm}, {QStringLiteral("27"), Thunderstorm},
+        {QStringLiteral("28"), Thunderstorm}, {QStringLiteral("29"), Thunderstorm}, {QStringLiteral("30"), Thunderstorm}};
+}
+
 QMap<QString, IonInterface::ConditionIcons> DWDIon::setupDayIconMappings() const
 {
-    //    DWD supplies it's own icon number which we can use to determine a condition
+    QMap<QString, ConditionIcons> universalIcons = getUniversalIcons();
+    QMap<QString, ConditionIcons> dayIcons = {{QStringLiteral("1"), ClearDay},
+                                              {QStringLiteral("2"), FewCloudsDay},
+                                              {QStringLiteral("3"), PartlyCloudyDay},
+                                              {QStringLiteral("31"), ClearWindyDay}};
+    dayIcons.insert(universalIcons);
+    return dayIcons;
+}
 
-    return QMap<QString, ConditionIcons>{{QStringLiteral("1"), ClearDay},      {QStringLiteral("2"), FewCloudsDay},  {QStringLiteral("3"), PartlyCloudyDay},
-                                         {QStringLiteral("4"), Overcast},      {QStringLiteral("5"), Mist},          {QStringLiteral("6"), Mist},
-                                         {QStringLiteral("7"), LightRain},     {QStringLiteral("8"), Rain},          {QStringLiteral("9"), Rain},
-                                         {QStringLiteral("10"), LightRain},    {QStringLiteral("11"), Rain},         {QStringLiteral("12"), Flurries},
-                                         {QStringLiteral("13"), RainSnow},     {QStringLiteral("14"), LightSnow},    {QStringLiteral("15"), Snow},
-                                         {QStringLiteral("16"), Snow},         {QStringLiteral("17"), Hail},         {QStringLiteral("18"), LightRain},
-                                         {QStringLiteral("19"), Rain},         {QStringLiteral("20"), Flurries},     {QStringLiteral("21"), RainSnow},
-                                         {QStringLiteral("22"), LightSnow},    {QStringLiteral("23"), Snow},         {QStringLiteral("24"), Hail},
-                                         {QStringLiteral("25"), Hail},         {QStringLiteral("26"), Thunderstorm}, {QStringLiteral("27"), Thunderstorm},
-                                         {QStringLiteral("28"), Thunderstorm}, {QStringLiteral("29"), Thunderstorm}, {QStringLiteral("30"), Thunderstorm},
-                                         {QStringLiteral("31"), ClearWindyDay}};
+QMap<QString, IonInterface::ConditionIcons> DWDIon::setupNightIconMappings() const
+{
+    QMap<QString, ConditionIcons> universalIcons = getUniversalIcons();
+    QMap<QString, ConditionIcons> nightIcons = {{QStringLiteral("1"), ClearNight},
+                                                {QStringLiteral("2"), FewCloudsNight},
+                                                {QStringLiteral("3"), PartlyCloudyNight},
+                                                {QStringLiteral("31"), ClearWindyNight}};
+    nightIcons.insert(universalIcons);
+    return nightIcons;
 }
 
 QMap<QString, IonInterface::WindDirections> DWDIon::setupWindIconMappings() const
@@ -116,6 +133,12 @@ QMap<QString, IonInterface::WindDirections> DWDIon::setupWindIconMappings() cons
 QMap<QString, IonInterface::ConditionIcons> const &DWDIon::dayIcons() const
 {
     static QMap<QString, ConditionIcons> const dval = setupDayIconMappings();
+    return dval;
+}
+
+QMap<QString, IonInterface::ConditionIcons> const &DWDIon::nightIcons() const
+{
+    static QMap<QString, ConditionIcons> const dval = setupNightIconMappings();
     return dval;
 }
 
@@ -448,6 +471,10 @@ void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
                 weatherData.gustSpeedAlt = parseNumber(dayMap[QStringLiteral("windGust")]);
                 QString windDirection = roundWindDirections(dayMap[QStringLiteral("windDirection")].toInt());
                 weatherData.windDirectionAlt = getWindDirectionIcon(windIcons(), windDirection);
+
+                // Also fetch today's sunrise and sunset times to determine whether to pick day or night icons
+                weatherData.sunriseTime = parseDateFromMSecs(dayMap[QStringLiteral("sunrise")].toLongLong());
+                weatherData.sunsetTime = parseDateFromMSecs(dayMap[QStringLiteral("sunset")].toLongLong());
             }
 
             forecasts.append(forecast);
@@ -500,10 +527,7 @@ void DWDIon::parseMeasureData(const QString source, QJsonDocument doc)
     if (!weatherMap.isEmpty()) {
         weatherData.observationDateTime = parseDateFromMSecs(weatherMap[QStringLiteral("time")]);
 
-        QString condIconNumber = weatherMap[QStringLiteral("icon")].toString();
-        if (condIconNumber != QLatin1String("")) {
-            weatherData.conditionIcon = getWeatherIcon(dayIcons(), condIconNumber);
-        }
+        weatherData.condIconNumber = weatherMap[QStringLiteral("icon")].toString();
 
         bool windIconValid = false;
         const int windDirection = weatherMap[QStringLiteral("winddirection")].toInt(&windIconValid);
@@ -573,8 +597,8 @@ void DWDIon::updateWeather(const QString &source)
     else
         data.insert(QStringLiteral("Observation Timestamp"), QDateTime::currentDateTime());
 
-    if (!weatherData.conditionIcon.isEmpty())
-        data.insert(QStringLiteral("Condition Icon"), weatherData.conditionIcon);
+    if (!weatherData.condIconNumber.isEmpty())
+        data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(isNightTime(weatherData) ? nightIcons() : dayIcons(), weatherData.condIconNumber));
 
     if (!qIsNaN(weatherData.temperature))
         data.insert(QStringLiteral("Temperature"), weatherData.temperature);
@@ -715,6 +739,16 @@ QString DWDIon::camelCaseString(const QString text)
     }
 
     return result;
+}
+
+bool DWDIon::isNightTime(const WeatherData &weatherData)
+{
+    if (weatherData.sunriseTime.isNull() || weatherData.sunsetTime.isNull()) {
+        // default to daytime icons if we're missing sunrise/sunset times
+        return false;
+    }
+
+    return weatherData.observationDateTime < weatherData.sunriseTime || weatherData.observationDateTime > weatherData.sunsetTime;
 }
 
 K_PLUGIN_CLASS_WITH_JSON(DWDIon, "ion-dwd.json")

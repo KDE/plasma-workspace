@@ -40,8 +40,10 @@ public:
 
     // Current observation information.
     QDateTime observationDateTime;
+    QDateTime sunriseTime;
+    QDateTime sunsetTime;
 
-    QString conditionIcon;
+    QString condIconNumber;
     QString windDirection;
     float temperature;
     float humidity;
@@ -110,10 +112,13 @@ private Q_SLOTS:
     void forecast_slotJobFinished(KJob *);
 
 private:
+    QMap<QString, ConditionIcons> getUniversalIcons() const;
     QMap<QString, ConditionIcons> setupDayIconMappings() const;
+    QMap<QString, ConditionIcons> setupNightIconMappings() const;
     QMap<QString, WindDirections> setupWindIconMappings() const;
 
     QMap<QString, ConditionIcons> const &dayIcons() const;
+    QMap<QString, ConditionIcons> const &nightIcons() const;
     QMap<QString, WindDirections> const &windIcons() const;
 
     void findPlace(const QString &searchText);
@@ -134,6 +139,7 @@ private:
     QString camelCaseString(const QString text);
     QString extractString(QByteArray array, int start, int length);
     QString roundWindDirections(int windDirection);
+    bool isNightTime(const WeatherData &weatherData);
     float parseNumber(QVariant number);
     QDateTime parseDateFromMSecs(QVariant timestamp);
 
