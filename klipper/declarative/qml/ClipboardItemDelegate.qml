@@ -48,7 +48,16 @@ PlasmaComponents.ItemDelegate {
     signal triggerAction()
 
     // the 1.6 comes from ToolButton's default height
-    height: Math.max(label.height, Math.round(Kirigami.Units.gridUnit * 1.6)) + 2 * Kirigami.Units.smallSpacing
+    height: Math.max(label.height, Math.round(Kirigami.Units.gridUnit * 1.6)) + 2 * Kirigami.Units.smallSpacing + (!!expandButtonLoader.item?.checked ? toolButtonsLoader.implicitHeight : 0)
+    Behavior on height {
+        enabled: menuItem.shouldUseOverflowButton
+        SmoothedAnimation { // to match the highlight
+            id: heightAnimation
+            duration: Kirigami.Units.longDuration
+            velocity: Kirigami.Units.longDuration
+            easing.type: Easing.InOutCubic
+        }
+    }
 
     enabled: true
 
@@ -69,6 +78,9 @@ PlasmaComponents.ItemDelegate {
         if (ListView.isCurrentItem) {
             labelMask.source = label // calculate on demand
         }
+    }
+    ListView.onPooled: if (expandButtonLoader.active) {
+        expandButtonLoader.item.checked = false;
     }
 
     Binding {
@@ -133,13 +145,22 @@ PlasmaComponents.ItemDelegate {
             left: parent.left
             leftMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - menuItem.listMargins.left
             right: parent.right
-            rightMargin: (menuItem.shouldUseOverflowButton ? toolButtonsLoader.implicitWidth : 0) + toolButtonsLoader.anchors.rightMargin
+            rightMargin: expandButtonLoader.implicitWidth + expandButtonLoader.anchors.rightMargin
             verticalCenter: parent.verticalCenter
         }
+        states: [
+            State {
+                when: toolButtonsLoader.active
+                AnchorChanges {
+                    target: label
+                    anchors.verticalCenter: undefined
+                }
+            }
+        ]
     }
 
     Loader {
-        id: toolButtonsLoader
+        id: expandButtonLoader
 
         anchors {
             right: parent.right
@@ -148,21 +169,84 @@ PlasmaComponents.ItemDelegate {
             // This is here because you can't assign to it in AnchorChanges below
             topMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - menuItem.listMargins.top
         }
-        source: "DelegateToolButtons.qml"
-        active: menuItem.ListView.view.clipboardMenu.expanded && (menuItem.ListView.isCurrentItem || menuItem.shouldUseOverflowButton)
+        active: menuItem.shouldUseOverflowButton
+        sourceComponent: PlasmaComponents.ToolButton {
+            id: expandButton
+            visible: menuItem.shouldUseOverflowButton
+            checkable: true
+            display: PlasmaComponents.AbstractButton.IconOnly
+            text: checked ? i18ndc("libplasma6", "@action:button", "Collapse") : i18ndc("libplasma6", "@action:button", "Expand")
+            icon.name: checked ? "collapse" : "expand"
+            PlasmaComponents.ToolTip.text: text
+            PlasmaComponents.ToolTip.delay: Kirigami.Units.toolTipDelay
+            PlasmaComponents.ToolTip.visible: pressed
+
+            Connections {
+                target: menuItem.ListView.view.clipboardMenu
+                function onExpandedChanged() {
+                    expandButton.checked = false;
+                }
+            }
+        }
+        states: [
+            State {
+                when: toolButtonsLoader.active
+                AnchorChanges {
+                    target: expandButtonLoader
+                    anchors.verticalCenter: undefined
+                }
+            }
+        ]
+    }
+
+    Loader {
+        id: toolButtonsLoader
+
+        anchors {
+            right: parent.right
+            rightMargin: expandButtonLoader.anchors.rightMargin
+            verticalCenter: parent.verticalCenter
+            // This is here because you can't assign to it in AnchorChanges below
+            topMargin: expandButtonLoader.anchors.topMargin
+        }
+        width: menuItem.shouldUseOverflowButton ? label.width + label.anchors.rightMargin - label.anchors.leftMargin : implicitWidth
+        sourceComponent: DelegateToolButtons {
+            menuItem: menuItem
+            shouldUseOverflowButton: menuItem.shouldUseOverflowButton
+        }
+        active: (menuItem.ListView.isCurrentItem && !menuItem.shouldUseOverflowButton) || (menuItem.shouldUseOverflowButton && (!!expandButtonLoader.item?.checked || opacity > 0))
+        opacity: !expandButtonLoader.active || expandButtonLoader.item.checked ? 1 : 0
 
         // It's not recommended to change anchors via conditional bindings, use AnchorChanges instead.
         // See https://doc.qt.io/qt-5/qtquick-positioning-anchors.html#changing-anchors
         states: [
             State {
-                when: menuItem.isTall
-
+                when: menuItem.isTall && !menuItem.shouldUseOverflowButton
                 AnchorChanges {
                     target: toolButtonsLoader
                     anchors.top: toolButtonsLoader.parent.top
                     anchors.verticalCenter: undefined
                 }
+            },
+            State {
+                when: menuItem.shouldUseOverflowButton
+                AnchorChanges {
+                    target: toolButtonsLoader
+                    anchors.top: label.bottom
+                    anchors.verticalCenter: undefined
+                }
             }
         ]
+
+        Behavior on opacity {
+            enabled: menuItem.shouldUseOverflowButton
+            SmoothedAnimation { // to match the highlight
+                id: expandedItemOpacityFade
+                duration: heightAnimation.duration
+                // velocity is divided by the default speed, as we're in the range 0-1
+                velocity: heightAnimation.velocity / 200
+                easing.type: Easing.InOutCubic
+            }
+        }
     }
 }

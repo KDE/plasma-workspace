@@ -5,18 +5,27 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
-import QtQuick.Layouts 1.1
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-RowLayout {
+GridLayout {
     id: toolButtonsLayout
 
-    // https://bugreports.qt.io/browse/QTBUG-108821
+    enum ButtonRole {
+        InvokeAction,
+        ShowQRCode,
+        Edit,
+        Remove
+    }
+
     readonly property Item defaultButton: visibleChildren.length > 0 ? visibleChildren[0] : this
-    readonly property bool hovered: !menuButton.visible && visibleChildren.filter(x => x.hovered).length > 0
+    // https://bugreports.qt.io/browse/QTBUG-108821
+    readonly property bool hovered: visibleChildren.filter(x => x.hovered).length > 0
     readonly property list<string> actionIcons: ["system-run", "view-barcode-qr", "document-edit", "edit-delete"]
     readonly property list<string> actionNames: [
         i18nd("klipper", "Invoke action"),
@@ -25,18 +34,26 @@ RowLayout {
         i18nd("klipper", "Remove from history")
     ]
 
+    required property PlasmaComponents3.ItemDelegate menuItem
+    required property bool shouldUseOverflowButton
+
+    rows: shouldUseOverflowButton ? (actionNames.length - (menuItem.type === 0 ? 0 : 1)) : 1
+    columns: shouldUseOverflowButton ? 1 : (actionNames.length - (menuItem.type === 0 ? 0 : 1))
+    rowSpacing: Kirigami.Units.smallSpacing
+    columnSpacing: Kirigami.Units.smallSpacing
+
     function trigger(actionIndex: int): void {
         switch (actionIndex) {
-        case 0:
+        case DelegateToolButtons.ButtonRole.InvokeAction:
             menuItem.triggerAction();
             break;
-        case 1:
+        case DelegateToolButtons.ButtonRole.ShowQRCode:
             menuItem.barcode();
             break;
-        case 2:
+        case DelegateToolButtons.ButtonRole.Edit:
             menuItem.edit();
             break;
-        case 3:
+        case DelegateToolButtons.ButtonRole.Remove:
             menuItem.remove();
             break;
         }
@@ -44,52 +61,21 @@ RowLayout {
 
     Repeater {
         id: repeater
-        model: !menuButton.visible ? 4 : 0
+        model: 4
         PlasmaComponents3.ToolButton {
             required property int index
-            visible: index != 2 || menuItem.type === 0
-            focus: index === 0
-            display: PlasmaComponents3.AbstractButton.IconOnly
+            Layout.fillWidth: toolButtonsLayout.shouldUseOverflowButton
+            Layout.leftMargin: toolButtonsLayout.shouldUseOverflowButton ? Kirigami.Units.gridUnit : 0
+            Layout.rightMargin: toolButtonsLayout.shouldUseOverflowButton ? Kirigami.Units.gridUnit : 0
+            visible: index != DelegateToolButtons.ButtonRole.Edit || toolButtonsLayout.menuItem.type === 0
+            display: toolButtonsLayout.shouldUseOverflowButton ? PlasmaComponents3.AbstractButton.TextBesideIcon : PlasmaComponents3.AbstractButton.IconOnly
             text: toolButtonsLayout.actionNames[index]
             icon.name: toolButtonsLayout.actionIcons[index]
-            KeyNavigation.right: index === repeater.count - 1 ? this : repeater.itemAt(index + 1)
+            KeyNavigation.right: (index === repeater.count - 1 ? this : repeater.itemAt(index + 1)) as PlasmaComponents3.ToolButton
             PlasmaComponents3.ToolTip.text: text
             PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
             PlasmaComponents3.ToolTip.visible: hovered || (activeFocus && (focusReason === Qt.TabFocusReason || focusReason === Qt.BacktabFocusReason))
             onClicked: toolButtonsLayout.trigger(index)
-        }
-    }
-
-    PlasmaComponents3.Menu {
-        id: menu
-        Repeater {
-            model: menu.opened ? 4 : 0
-            PlasmaComponents3.MenuItem {
-                required property int index
-                visible: index != 2 || menuItem.type === 0
-                height: index != 2 || menuItem.type === 0 ? undefined : 0
-                text: toolButtonsLayout.actionNames[index]
-                icon.name: toolButtonsLayout.actionIcons[index]
-                onClicked: toolButtonsLayout.trigger(index)
-            }
-        }
-    }
-
-    PlasmaComponents3.ToolButton {
-        id: menuButton
-
-        visible: Kirigami.Settings.tabletMode || Kirigami.Settings.hasTransientTouchInput
-        checked: menu.opened
-        icon.name: "overflow-menu"
-        PlasmaComponents3.ToolTip.text: i18ndc("klipper", "@action:button", "More actions")
-        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
-        PlasmaComponents3.ToolTip.visible: pressed
-
-        onClicked: if (checked) {
-            menu.close();
-        } else {
-            menuItem.ListView.view.currentIndex = menuItem.index;
-            menu.popup(menuButton);
         }
     }
 }
