@@ -5,73 +5,91 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-import QtQuick 2.0
+import QtQuick
 import QtQuick.Layouts 1.1
 
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 RowLayout {
     id: toolButtonsLayout
-    visible: menuItem.ListView.isCurrentItem
 
     // https://bugreports.qt.io/browse/QTBUG-108821
-    readonly property bool hovered: actionToolButton.hovered || barcodeToolButton.hovered || editToolButton.hovered || deleteToolButton.hovered
+    readonly property Item defaultButton: visibleChildren.length > 0 ? visibleChildren[0] : this
+    readonly property bool hovered: !menuButton.visible && visibleChildren.filter(x => x.hovered).length > 0
+    readonly property list<string> actionIcons: ["system-run", "view-barcode-qr", "document-edit", "edit-delete"]
+    readonly property list<string> actionNames: [
+        i18nd("klipper", "Invoke action"),
+        i18nd("klipper", "Show QR code"),
+        i18nd("klipper", "Edit contents"),
+        i18nd("klipper", "Remove from history")
+    ]
 
-    PlasmaComponents3.ToolButton {
-        id: actionToolButton
-        // TODO: only show for items supporting actions?
-        icon.name: "system-run"
-
-        display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18nd("klipper", "Invoke action")
-
-        onClicked: menuItem.triggerAction()
-
-        PlasmaComponents3.ToolTip {
-            text: actionToolButton.text
+    function trigger(actionIndex: int): void {
+        switch (actionIndex) {
+        case 0:
+            menuItem.triggerAction();
+            break;
+        case 1:
+            menuItem.barcode();
+            break;
+        case 2:
+            menuItem.edit();
+            break;
+        case 3:
+            menuItem.remove();
+            break;
         }
-        KeyNavigation.right: barcodeToolButton
     }
-    PlasmaComponents3.ToolButton {
-        id: barcodeToolButton
-        icon.name: "view-barcode-qr"
-        display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18nd("klipper", "Show QR code")
 
-        onClicked: menuItem.barcode()
-
-        PlasmaComponents3.ToolTip {
-            text: barcodeToolButton.text
+    Repeater {
+        id: repeater
+        model: !menuButton.visible ? 4 : 0
+        PlasmaComponents3.ToolButton {
+            required property int index
+            visible: index != 2 || menuItem.type === 0
+            focus: index === 0
+            display: PlasmaComponents3.AbstractButton.IconOnly
+            text: toolButtonsLayout.actionNames[index]
+            icon.name: toolButtonsLayout.actionIcons[index]
+            KeyNavigation.right: index === repeater.count - 1 ? this : repeater.itemAt(index + 1)
+            PlasmaComponents3.ToolTip.text: text
+            PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
+            PlasmaComponents3.ToolTip.visible: hovered || (activeFocus && (focusReason === Qt.TabFocusReason || focusReason === Qt.BacktabFocusReason))
+            onClicked: toolButtonsLayout.trigger(index)
         }
-        KeyNavigation.right: editToolButton
     }
-    PlasmaComponents3.ToolButton {
-        id: editToolButton
-        icon.name: "document-edit"
-        enabled: !clipboardMenu.editing
-        visible: menuItem.type === 0
 
-        display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18nd("klipper", "Edit contents")
-
-        onClicked: menuItem.edit()
-
-        PlasmaComponents3.ToolTip {
-            text: editToolButton.text
+    PlasmaComponents3.Menu {
+        id: menu
+        Repeater {
+            model: menu.opened ? 4 : 0
+            PlasmaComponents3.MenuItem {
+                required property int index
+                visible: index != 2 || menuItem.type === 0
+                height: index != 2 || menuItem.type === 0 ? undefined : 0
+                text: toolButtonsLayout.actionNames[index]
+                icon.name: toolButtonsLayout.actionIcons[index]
+                onClicked: toolButtonsLayout.trigger(index)
+            }
         }
-        KeyNavigation.right: deleteToolButton
     }
+
     PlasmaComponents3.ToolButton {
-        id: deleteToolButton
-        icon.name: "edit-delete"
+        id: menuButton
 
-        display: PlasmaComponents3.AbstractButton.IconOnly
-        text: i18nd("klipper", "Remove from history")
+        visible: Kirigami.Settings.tabletMode || Kirigami.Settings.hasTransientTouchInput
+        checked: menu.opened
+        icon.name: "overflow-menu"
+        PlasmaComponents3.ToolTip.text: i18ndc("klipper", "@action:button", "More actions")
+        PlasmaComponents3.ToolTip.delay: Kirigami.Units.toolTipDelay
+        PlasmaComponents3.ToolTip.visible: pressed
 
-        onClicked: menuItem.remove()
-
-        PlasmaComponents3.ToolTip {
-            text: deleteToolButton.text
+        onClicked: if (checked) {
+            menu.close();
+        } else {
+            menuItem.ListView.view.currentIndex = menuItem.index;
+            menu.popup(menuButton);
         }
     }
 }

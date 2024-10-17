@@ -39,6 +39,7 @@ PlasmaComponents.ItemDelegate {
     // or else the top-alignment doesn't look deliberate enough and people will think
     // it's a bug
     readonly property bool isTall: height > Math.round(Kirigami.Units.gridUnit * 2.5)
+    readonly property bool shouldUseOverflowButton: Kirigami.Settings.tabletMode || Kirigami.Settings.hasTransientTouchInput
 
     signal itemSelected()
     signal remove()
@@ -62,6 +63,7 @@ PlasmaComponents.ItemDelegate {
     Keys.onEnterPressed: event => Keys.returnPressed(event)
     Keys.onReturnPressed: menuItem.clicked()
     Keys.onDeletePressed: menuItem.remove()
+    KeyNavigation.right: toolButtonsLoader.active ? toolButtonsLoader.item.defaultButton : toolButtonsLoader
 
     ListView.onIsCurrentItemChanged: {
         if (ListView.isCurrentItem) {
@@ -131,7 +133,7 @@ PlasmaComponents.ItemDelegate {
             left: parent.left
             leftMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - menuItem.listMargins.left
             right: parent.right
-            rightMargin: Math.ceil(Kirigami.Units.gridUnit / 2)  - menuItem.listMargins.right
+            rightMargin: (menuItem.shouldUseOverflowButton ? toolButtonsLoader.implicitWidth : 0) + toolButtonsLoader.anchors.rightMargin
             verticalCenter: parent.verticalCenter
         }
     }
@@ -140,13 +142,14 @@ PlasmaComponents.ItemDelegate {
         id: toolButtonsLoader
 
         anchors {
-            right: label.right
+            right: parent.right
+            rightMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - menuItem.listMargins.right
             verticalCenter: parent.verticalCenter
             // This is here because you can't assign to it in AnchorChanges below
             topMargin: Math.ceil(Kirigami.Units.gridUnit / 2) - menuItem.listMargins.top
         }
         source: "DelegateToolButtons.qml"
-        active: menuItem.ListView.isCurrentItem
+        active: menuItem.ListView.view.clipboardMenu.expanded && (menuItem.ListView.isCurrentItem || menuItem.shouldUseOverflowButton)
 
         // It's not recommended to change anchors via conditional bindings, use AnchorChanges instead.
         // See https://doc.qt.io/qt-5/qtquick-positioning-anchors.html#changing-anchors
@@ -161,14 +164,5 @@ PlasmaComponents.ItemDelegate {
                 }
             }
         ]
-
-        onActiveChanged: {
-            if (active) {
-                menuItem.KeyNavigation.tab =  toolButtonsLoader.item.children[0]
-                menuItem.KeyNavigation.right = toolButtonsLoader.item.children[0]
-                // break binding, once it was loaded, never unload
-                active = true;
-            }
-        }
     }
 }

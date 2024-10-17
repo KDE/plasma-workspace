@@ -65,6 +65,7 @@ void PlasmaWindowedView::setApplet(Plasma::Applet *applet)
     m_appletInterface->setParentItem(m_rootObject);
     m_rootObject->setProperty("appletInterface", QVariant::fromValue(m_appletInterface.data()));
     m_appletInterface->setVisible(true);
+    m_appletInterface->setProperty("hideOnWindowDeactivate", false);
     setTitle(applet->title());
     setIcon(QIcon::fromTheme(applet->icon()));
 
