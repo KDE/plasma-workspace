@@ -197,6 +197,14 @@ PlasmaComponents3.ScrollView {
         }
     }
 
+    Timer {
+        id: resetSearchTimer
+        interval: Kirigami.Units.humanMoment * 5 // A reasonable amount of time to keep the search result in case the menu is closed accidentally
+        repeat: false
+        running: !clipboardMenu.expanded && filter.text.length > 0
+        onTriggered: filter.clear()
+    }
+
     KSvg.FrameSvgItem {
         id: listItemSvg
         imagePath: "widgets/listitem"
