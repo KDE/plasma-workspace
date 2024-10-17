@@ -2,14 +2,15 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2023, 2024 gummi <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2024 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2024-06-30 15:32+0000\n"
-"Last-Translator: Gummi <gudmundure@gmail.com>\n"
-"Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-16 23:55+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -187,8 +188,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
-"Þessi græja var gerð fyrir óþekkta eldri útgáfu af Plasma og virkar ekki í "
-"Plasma %1. Hafðu samband við höfund græjunnar til að fá uppfærða útgáfu."
+"Þessi viðmótshluti var gerð fyrir óþekkta eldri útgáfu af Plasma og virkar "
+"ekki í Plasma %1. Hafðu samband við höfund viðmótshlutans til að fá uppfærða "
+"útgáfu."
 
 #: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
@@ -196,8 +198,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
-"Þessi græja var gerð fyrir %1 og virkar ekki í %2. Hafðu samband við höfund "
-"græjunnar til að fá uppfærða útgáfu."
+"Þessi viðmótshluti var gerð fyrir %1 og virkar ekki í %2. Hafðu samband við "
+"höfund viðmótshlutans til að fá uppfærða útgáfu."
 
 #: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
@@ -205,8 +207,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
-"Þessi græja var gerð fyrir Plasma %1 og virkar ekki í Plasma %2. Uppfærðu "
-"Plasma til að geta notað græjuna."
+"Þessi viðmótshluti var gerð fyrir Plasma %1 og virkar ekki í Plasma %2. "
+"Uppfærðu Plasma til að geta notað viðmótshlutann."
 
 #: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
@@ -214,8 +216,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
-"Þessi græja var gerð fyrir Plasma %1 og virkar ekki í nýjustu útgáfunni af "
-"Plasma. Uppfærðu Plasma til að geta notað græjuna."
+"Þessi viðmótshluti var gerð fyrir Plasma %1 og virkar ekki í nýjustu "
+"útgáfunni af Plasma. Uppfærðu Plasma til að geta notað viðmótshlutann."
 
 #: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
@@ -330,7 +332,7 @@ msgstr "Verk"
 #: shellprivate/widgetexplorer.cpp:146
 #, kde-format
 msgid "All Widgets"
-msgstr "Allar græjur"
+msgstr "Allir viðmótshlutar"
 
 #: shellprivate/widgetexplorer.cpp:150
 #, kde-format
@@ -352,7 +354,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Nýlega sett upp"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -362,19 +364,18 @@ msgstr "Flokkar:"
 #: shellprivate/widgetexplorer.cpp:234
 #, kde-format
 msgid "Download New Plasma Widgets"
-msgstr "Sækja nýjar Plasma-græjur"
+msgstr "Sækja nýja Plasma-viðmótshluta"
 
 #: shellprivate/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr "Setja upp græju úr staðbundinni skrá..."
+msgstr "Setja upp viðmótshluta úr staðbundinni skrá..."
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Allar græjur"
+msgstr "Ná í nýja viðmótshluta"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -382,11 +383,10 @@ msgid "Select Plasmoid File"
 msgstr "Velja græjuskrá"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Uppsetning á pakkanum %1 mistókst."
+msgstr "Uppsetning á pakkanum %1 mistókst: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
