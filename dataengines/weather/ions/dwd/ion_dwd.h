@@ -135,6 +135,7 @@ private:
     QString extractString(QByteArray array, int start, int length);
     QString roundWindDirections(int windDirection);
     float parseNumber(QVariant number);
+    QDateTime parseDateFromMSecs(QVariant timestamp);
 
 private:
     // Key dicts

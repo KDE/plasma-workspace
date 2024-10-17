@@ -498,8 +498,7 @@ void DWDIon::parseMeasureData(const QString source, QJsonDocument doc)
     QVariantMap weatherMap = doc.object().toVariantMap();
 
     if (!weatherMap.isEmpty()) {
-        QDateTime time = QDateTime::fromMSecsSinceEpoch(weatherMap[QStringLiteral("time")].toLongLong());
-        weatherData.observationDateTime = time;
+        weatherData.observationDateTime = parseDateFromMSecs(weatherMap[QStringLiteral("time")]);
 
         QString condIconNumber = weatherMap[QStringLiteral("icon")].toString();
         if (condIconNumber != QLatin1String("")) {
@@ -667,6 +666,14 @@ float DWDIon::parseNumber(QVariant number)
     }
     // e.g. DWD API int 17 equals 1.7
     return static_cast<float>(intValue) / 10;
+}
+
+QDateTime DWDIon::parseDateFromMSecs(QVariant timestamp)
+{
+    bool isValid = false;
+    const qint64 msecs = timestamp.toLongLong(&isValid);
+
+    return isValid ? QDateTime::fromMSecsSinceEpoch(msecs) : QDateTime();
 }
 
 QString DWDIon::roundWindDirections(int windDirection)
