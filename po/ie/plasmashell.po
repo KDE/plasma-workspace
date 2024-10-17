@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-26 00:41+0000\n"
+"POT-Creation-Date: 2024-10-17 00:42+0000\n"
 "PO-Revision-Date: 2024-07-28 22:14+0700\n"
 "Last-Translator: OIS <mistresssilvara@hotmail.com>\n"
 "Language-Team: Interlingue <>\n"
@@ -149,42 +149,42 @@ msgstr ""
 msgid "Enter Edit Mode"
 msgstr ""
 
-#: main.cpp:84
+#: main.cpp:88
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Shell Plasma"
 
-#: main.cpp:96
+#: main.cpp:100
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr ""
 
-#: main.cpp:99
+#: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr ""
 
-#: main.cpp:102
+#: main.cpp:106
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr ""
 
-#: main.cpp:106
+#: main.cpp:110
 #, kde-format
 msgid "Replace an existing instance"
 msgstr ""
 
-#: main.cpp:109
+#: main.cpp:113
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr ""
 
-#: main.cpp:174
+#: main.cpp:178
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Ne successat lansar Plasma"
 
-#: main.cpp:175
+#: main.cpp:179
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

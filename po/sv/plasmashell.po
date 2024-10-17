@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-26 00:41+0000\n"
+"POT-Creation-Date: 2024-10-17 00:42+0000\n"
 "PO-Revision-Date: 2024-08-30 06:48+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -153,42 +153,42 @@ msgstr "Dölj förhandsgranskningsbaner"
 msgid "Enter Edit Mode"
 msgstr "Starta redigeringsläge"
 
-#: main.cpp:84
+#: main.cpp:88
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Plasma-skal"
 
-#: main.cpp:96
+#: main.cpp:100
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Aktivera QML Javaskript-avlusare"
 
-#: main.cpp:99
+#: main.cpp:103
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Starta inte om Plasma-skalet automatiskt efter en krasch"
 
-#: main.cpp:102
+#: main.cpp:106
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Tvinga laddning av givet skalinsticksprogram"
 
-#: main.cpp:106
+#: main.cpp:110
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Ersätt en befintlig instans"
 
-#: main.cpp:109
+#: main.cpp:113
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Lista tillgängliga alternativ för användaråterkoppling"
 
-#: main.cpp:174
+#: main.cpp:178
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma misslyckades starta"
 
-#: main.cpp:175
+#: main.cpp:179
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
