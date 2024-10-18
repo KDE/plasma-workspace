@@ -7,12 +7,11 @@
 
 import QtQuick
 import QtQuick.Layouts
-import QtQuick.Templates as T
 
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.kirigami as Kirigami
 
-T.StackView { // FIXME: put a StackView in PlasmaComponents3
+PlasmaComponents3.StackView {
     id: actionContainer
 
     property ModelInterface modelInterface
