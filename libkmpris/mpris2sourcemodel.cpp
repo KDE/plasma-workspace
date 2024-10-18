@@ -390,9 +390,9 @@ void Mpris2SourceModel::addMediaPlayer(const QString &serviceName, const QString
     connect(container, &PlayerContainer::initialFetchFailed, this, &Mpris2SourceModel::onInitialFetchFailed);
 }
 
-void Mpris2SourceModel::removeMediaPlayer(const QString &sourceName)
+void Mpris2SourceModel::removeMediaPlayer(QStringView sourceName)
 {
-    auto it = std::find_if(m_containers.begin(), m_containers.end(), [&sourceName](PlayerContainer *c) {
+    auto it = std::find_if(m_containers.begin(), m_containers.end(), [sourceName](PlayerContainer *c) {
         return c->objectName() == sourceName;
     });
     if (it == m_containers.end()) {

@@ -74,14 +74,26 @@ private Q_SLOTS:
     void onInitialFetchFailed(PlayerContainer *container);
 
 private:
+    struct string_hash {
+        using is_transparent = void;
+        [[nodiscard]] size_t operator()(QStringView txt) const
+        {
+            return std::hash<QStringView>{}(txt);
+        }
+        [[nodiscard]] size_t operator()(const QString &txt) const
+        {
+            return std::hash<QString>{}(txt);
+        }
+    };
+
     Mpris2SourceModel(QObject *parent = nullptr);
 
     void fetchServiceNames();
     void addMediaPlayer(const QString &serviceName, const QString &sourceName);
-    void removeMediaPlayer(const QString &sourceName);
+    void removeMediaPlayer(QStringView sourceName);
 
     std::vector<PlayerContainer *> m_containers;
-    std::unordered_map<QString, PlayerContainer *> m_pendingContainers;
+    std::unordered_map<QString, PlayerContainer *, string_hash, std::equal_to<>> m_pendingContainers;
 
     friend class Multiplexer;
 };
