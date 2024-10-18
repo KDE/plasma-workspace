@@ -25,15 +25,18 @@ BaseDelegate {
         Layout.fillHeight: true
         Layout.topMargin: Kirigami.Units.smallSpacing
         Layout.rowSpan: 3
-        width: Kirigami.Units.iconSizes.small
+        implicitWidth: Kirigami.Units.iconSizes.small
 
         // Not using the Plasma theme's vertical line SVG because we want something thicker
         // than a hairline, and thickening a thin line SVG does not necessarily look good
         // with all Plasma themes.
         Rectangle {
-            anchors.horizontalCenter: parent.horizontalCenter
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+                horizontalCenter: parent.horizontalCenter
+            }
             width: 3
-            height: parent.height
             // TODO: use separator color here, once that color role is implemented
             color: Kirigami.Theme.textColor
             opacity: 0.2

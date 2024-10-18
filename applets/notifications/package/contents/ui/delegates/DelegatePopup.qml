@@ -38,7 +38,7 @@ BaseDelegate {
         Layout.fillWidth: true
         Layout.columnSpan: delegateRoot.__firstColumn + 2
         bottomPadding: 0
-        // We want the close button brders to touch popup borders
+        // We want the close button borders to touch popup borders
         leftPadding: Layout.mirrored ? -modelInterface.popupLeftPadding : 0
         rightPadding: Layout.mirrored ? 0 : -modelInterface.popupRightPadding
 
