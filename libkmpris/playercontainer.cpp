@@ -617,7 +617,7 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
             QVariantMap map;
             arg >> map;
 
-            if (auto metaDataIt = map.constFind(QStringLiteral("mpris:trackid")); metaDataIt != map.cend()) [[likely]] {
+            if (auto metaDataIt = map.constFind(QStringView(u"mpris:trackid")); metaDataIt != map.cend()) [[likely]] {
                 if (metaDataIt->metaType() == QMetaType::fromType<QDBusObjectPath>()) {
                     m_trackId = get<QDBusObjectPath>(*metaDataIt).path();
                 } else {
@@ -630,14 +630,14 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
             } else {
                 m_trackId = QString();
             }
-            m_xesamTitle = map[QStringLiteral("xesam:title")].toString();
-            m_xesamUrl = map[QStringLiteral("xesam:url")].toString();
-            m_xesamArtist = map[QStringLiteral("xesam:artist")].toStringList();
-            m_xesamAlbumArtist = map[QStringLiteral("xesam:albumArtist")].toStringList();
-            m_xesamAlbum = map[QStringLiteral("xesam:album")].toString();
-            m_artUrl = map[QStringLiteral("mpris:artUrl")].toString();
-            m_length = map[QStringLiteral("mpris:length")].toDouble();
-            m_kdePid = map[QStringLiteral("kde:pid")].toUInt();
+            m_xesamTitle = map.value(QStringView(u"xesam:title")).toString();
+            m_xesamUrl = map.value(QStringView(u"xesam:url")).toString();
+            m_xesamArtist = map.value(QStringView(u"xesam:artist")).toStringList();
+            m_xesamAlbumArtist = map.value(QStringView(u"xesam:albumArtist")).toStringList();
+            m_xesamAlbum = map.value(QStringView(u"xesam:album")).toString();
+            m_artUrl = map.value(QStringView(u"mpris:artUrl")).toString();
+            m_length = map.value(QStringView(u"mpris:length")).toDouble();
+            m_kdePid = map.value(QStringView(u"kde:pid")).toUInt();
         }
         // we give out CanControl, as this may completely
         // change the UI of the widget
@@ -662,7 +662,7 @@ void PlayerContainer::updateFromMap(const QVariantMap &map)
         }
     }
 
-    if (map.contains(QStringLiteral("Position"))) {
+    if (map.contains(QStringView(u"Position"))) {
         return;
     }
 
