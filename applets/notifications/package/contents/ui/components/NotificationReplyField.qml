@@ -48,7 +48,10 @@ RowLayout {
             Accessible.name: "begin reply"
             Accessible.role: Accessible.Button
             Accessible.onPressAction: replyRow.beginReplyRequested()
-            onPressed: replyRow.beginReplyRequested()
+            onClicked: {
+                mouse.accepted = true
+                replyRow.beginReplyRequested()
+            }
         }
     }
 

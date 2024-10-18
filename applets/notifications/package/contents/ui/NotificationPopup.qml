@@ -109,7 +109,6 @@ NotificationsApplet.NotificationWindow {
 
             TapHandler {
                 id: tapHandler
-                grabPermissions: PointerHandler.ApprovesTakeOverByAnything
                 acceptedButtons: {
                     let buttons = Qt.MiddleButton;
                     if (hasDefaultAction) {
