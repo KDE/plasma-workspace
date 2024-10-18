@@ -319,12 +319,12 @@ void UKMETIon::getForecast(const QString &source)
 
 void UKMETIon::readSearchData(const QString & /*source*/, const QByteArray &json)
 {
-    QJsonObject jsonDocumentObject = QJsonDocument::fromJson(json).object().value(QStringLiteral("response")).toObject();
+    QJsonObject jsonDocumentObject = QJsonDocument::fromJson(json).object().value(QStringView(u"response")).toObject();
 
     if (jsonDocumentObject.isEmpty()) {
         return;
     }
-    QJsonValue resultsVariant = jsonDocumentObject.value(QStringLiteral("locations"));
+    QJsonValue resultsVariant = jsonDocumentObject.value(QStringView(u"locations"));
 
     if (resultsVariant.isUndefined()) {
         // this is a response from an auto=true query
@@ -335,10 +335,10 @@ void UKMETIon::readSearchData(const QString & /*source*/, const QByteArray &json
 
     for (const QJsonValue &resultValue : results) {
         QJsonObject result = resultValue.toObject();
-        const QString id = result.value(QStringLiteral("id")).toString();
-        const QString name = result.value(QStringLiteral("name")).toString();
-        const QString area = result.value(QStringLiteral("container")).toString();
-        const QString country = result.value(QStringLiteral("country")).toString();
+        const QString id = result.value(QStringView(u"id")).toString();
+        const QString name = result.value(QStringView(u"name")).toString();
+        const QString area = result.value(QStringView(u"container")).toString();
+        const QString country = result.value(QStringView(u"country")).toString();
 
         if (id.isEmpty() || name.isEmpty() || area.isEmpty() || country.isEmpty()) {
             continue;
@@ -472,15 +472,15 @@ bool UKMETIon::readObservationData(const QString &source, const QJsonDocument &d
     WeatherData::Observation &current = data.current;
 
     // Station data
-    const QJsonObject station = doc[u"station"_s].toObject();
+    const QJsonObject station = doc[u"station"].toObject();
     if (!station.isEmpty()) {
-        data.stationName = station[u"name"_s].toString();
+        data.stationName = station[u"name"].toString();
         data.stationLatitude = station[u"latitude"].toDouble(qQNaN());
         data.stationLongitude = station[u"longitude"].toDouble(qQNaN());
     }
 
     // Observation data
-    const QJsonArray observations = doc[u"observations"_s].toArray();
+    const QJsonArray observations = doc[u"observations"].toArray();
     if (observations.isEmpty()) {
         qCDebug(IONENGINE_BBCUKMET) << "Malformed observation report" << doc;
         return false;
@@ -489,28 +489,28 @@ bool UKMETIon::readObservationData(const QString &source, const QJsonDocument &d
 
     current = WeatherData::Observation(); // Clean-up
 
-    current.observationDateTime = QDateTime::fromString(observation[u"updateTimestamp"_s].toString(), Qt::ISODate);
-    current.obsTime = observation[u"localDate"_s].toString() + u" " + observation[u"localTime"_s].toString();
+    current.observationDateTime = QDateTime::fromString(observation[u"updateTimestamp"].toString(), Qt::ISODate);
+    current.obsTime = observation[u"localDate"].toString() + u" " + observation[u"localTime"].toString();
 
-    current.condition = observation[u"weatherTypeText"_s].toString();
+    current.condition = observation[u"weatherTypeText"].toString();
     if (current.condition == "null"_L1 || current.condition == "Not Available"_L1) {
         current.condition.clear();
     }
 
-    current.temperature_C = observation[u"temperature"_s][u"C"_s].toDouble(qQNaN());
-    current.humidity = observation[u"humidityPercent"_s].toDouble(qQNaN());
-    current.pressure = observation[u"pressureMb"_s].toDouble(qQNaN());
+    current.temperature_C = observation[u"temperature"][u"C"].toDouble(qQNaN());
+    current.humidity = observation[u"humidityPercent"].toDouble(qQNaN());
+    current.pressure = observation[u"pressureMb"].toDouble(qQNaN());
 
     // <ion.h> "Pressure Tendency": string, "rising", "falling", "steady"
-    current.pressureTendency = observation[u"pressureDirection"_s].toString().toLower();
+    current.pressureTendency = observation[u"pressureDirection"].toString().toLower();
     if (current.pressureTendency == "no change"_L1) {
         current.pressureTendency = u"steady"_s;
     }
 
-    current.windSpeed_miles = observation[u"wind"_s][u"windSpeedMph"_s].toDouble(qQNaN());
-    current.windDirection = (current.windSpeed_miles > 0) ? observation[u"wind"_s][u"windDirectionAbbreviation"_s].toString() : u"VR"_s;
+    current.windSpeed_miles = observation[u"wind"][u"windSpeedMph"].toDouble(qQNaN());
+    current.windDirection = (current.windSpeed_miles > 0) ? observation[u"wind"][u"windDirectionAbbreviation"].toString() : u"VR"_s;
 
-    current.visibilityStr = observation[u"visibility"_s].toString();
+    current.visibilityStr = observation[u"visibility"].toString();
 
     qCDebug(IONENGINE_BBCUKMET) << "Read observation data:" << m_weatherData[source].current.obsTime << m_weatherData[source].current.condition;
 
@@ -581,19 +581,19 @@ WeatherData::ForecastInfo UKMETIon::parseForecastReport(const QJsonObject &repor
 {
     WeatherData::ForecastInfo forecast;
 
-    forecast.period = QDate::fromString(report[u"localDate"_s].toString(), Qt::ISODate); // "YYYY-MM-DD" (ISO8601)
+    forecast.period = QDate::fromString(report[u"localDate"].toString(), Qt::ISODate); // "YYYY-MM-DD" (ISO8601)
     forecast.isNight = isNight;
 
-    forecast.summary = report[u"weatherTypeText"_s].toString().toLower();
+    forecast.summary = report[u"weatherTypeText"].toString().toLower();
     forecast.iconName = getWeatherIcon(isNight ? nightIcons() : dayIcons(), forecast.summary);
 
-    forecast.tempLow = report[u"minTempC"_s].toDouble(qQNaN());
+    forecast.tempLow = report[u"minTempC"].toDouble(qQNaN());
     if (!isNight) { // Don't include max temperatures in a nightly report
-        forecast.tempHigh = report[u"maxTempC"_s].toDouble(qQNaN());
+        forecast.tempHigh = report[u"maxTempC"].toDouble(qQNaN());
     }
     forecast.precipitationPct = report[u"precipitationProbabilityInPercent"].toInt();
-    forecast.windSpeed = report[u"windSpeedKph"_s].toDouble(qQNaN());
-    forecast.windDirection = report[u"windDirectionAbbreviation"_s].toString();
+    forecast.windSpeed = report[u"windSpeedKph"].toDouble(qQNaN());
+    forecast.windDirection = report[u"windDirectionAbbreviation"].toString();
 
     return forecast;
 }
