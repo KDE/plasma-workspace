@@ -10,6 +10,7 @@ set(notificationmanager_LIB_SRCS
     serverinfo.cpp
     settings.cpp
     mirroredscreenstracker.cpp
+    fullscreentracker.cpp
     notifications.cpp
     notification.cpp
 

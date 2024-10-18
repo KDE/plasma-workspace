@@ -41,10 +41,6 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
      */
     Q_PROPERTY(bool criticalPopupsInDoNotDisturbMode READ criticalPopupsInDoNotDisturbMode WRITE setCriticalPopupsInDoNotDisturbMode NOTIFY settingsChanged)
     /**
-     * Whether to keep normal notifications always on top.
-     */
-    Q_PROPERTY(bool keepNormalAlwaysOnTop READ keepNormalAlwaysOnTop WRITE setKeepNormalAlwaysOnTop NOTIFY settingsChanged)
-    /**
      * Whether to show popups for low priority notifications.
      */
     Q_PROPERTY(bool lowPriorityPopups READ lowPriorityPopups WRITE setLowPriorityPopups NOTIFY settingsChanged)
@@ -169,6 +165,26 @@ class NOTIFICATIONMANAGER_EXPORT Settings : public QObject
                    settingsChanged)
 
     /**
+     * Whether to enable do not disturb mode when a fullscreen window is active
+     *
+     * @since 6.3
+     */
+    Q_PROPERTY(
+        bool inhibitNotificationsWhenFullscreen READ inhibitNotificationsWhenFullscreen WRITE setInhibitNotificationsWhenFullscreen NOTIFY settingsChanged)
+
+    /**
+     * Whether a fullscreen window is currently focused
+     *
+     * This property is only updated when @c inhibitNotificationsWhenFullscreen
+     * is set to true, otherwise it is always false.
+     * You can assign false to this property if you want to temporarily revoke automatic do not disturb
+     * mode when a fullscreen window is focused until the window is no longer fullscreen.
+     *
+     * @since 6.3
+     */
+    Q_PROPERTY(bool fullscreenFocused READ fullscreenFocused WRITE setFullscreenFocused NOTIFY fullscreenFocusedChanged)
+
+    /**
      * Whether notification sounds should be disabled
      *
      * This does not reflect the actual mute state of the Notification Sounds
@@ -249,9 +265,6 @@ public:
     bool criticalPopupsInDoNotDisturbMode() const;
     void setCriticalPopupsInDoNotDisturbMode(bool enable);
 
-    bool keepNormalAlwaysOnTop() const;
-    void setKeepNormalAlwaysOnTop(bool enable);
-
     bool lowPriorityPopups() const;
     void setLowPriorityPopups(bool enable);
 
@@ -304,6 +317,12 @@ public:
     bool inhibitNotificationsWhenScreenSharing() const;
     void setInhibitNotificationsWhenScreenSharing(bool inhibit);
 
+    bool inhibitNotificationsWhenFullscreen() const;
+    void setInhibitNotificationsWhenFullscreen(bool inhibit);
+
+    bool fullscreenFocused() const;
+    void setFullscreenFocused(bool focused);
+
     bool notificationSoundsInhibited() const;
     void setNotificationSoundsInhibited(bool inhibited);
 
@@ -327,6 +346,8 @@ Q_SIGNALS:
     void notificationInhibitionApplicationsChanged();
 
     void screensMirroredChanged();
+
+    void fullscreenFocusedChanged();
 
 private:
     class Private;

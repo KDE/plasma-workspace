@@ -12,6 +12,7 @@
 #include <KService>
 
 #include "debug.h"
+#include "fullscreentracker_p.h"
 #include "mirroredscreenstracker_p.h"
 #include "server.h"
 
@@ -47,6 +48,7 @@ public:
     KConfigWatcher::Ptr watcher;
     QMetaObject::Connection watcherConnection;
 
+    FullscreenTracker::Ptr fullscreenTracker;
     MirroredScreensTracker::Ptr mirroredScreensTracker;
 
     DoNotDisturbSettings dndSettings;
@@ -155,6 +157,11 @@ Settings::Settings(QObject *parent)
 
     connect(&Server::self(), &Server::inhibitedByApplicationChanged, this, &Settings::notificationsInhibitedByApplicationChanged);
     connect(&Server::self(), &Server::inhibitionApplicationsChanged, this, &Settings::notificationInhibitionApplicationsChanged);
+
+    if (d->dndSettings.whenFullscreen()) {
+        d->fullscreenTracker = FullscreenTracker::createTracker();
+        connect(d->fullscreenTracker.get(), &FullscreenTracker::fullscreenActiveChanged, this, &Settings::fullscreenFocusedChanged);
+    }
 
     if (d->dndSettings.whenScreensMirrored()) {
         d->mirroredScreensTracker = MirroredScreensTracker::createTracker();
@@ -303,6 +310,22 @@ void Settings::setLive(bool live)
                 if (emitScreensMirroredChanged) {
                     Q_EMIT screensMirroredChanged();
                 }
+
+                bool emitFullscreenChanged = false;
+                if (d->dndSettings.whenFullscreen()) {
+                    if (!d->fullscreenTracker) {
+                        d->fullscreenTracker = FullscreenTracker::createTracker();
+                        emitFullscreenChanged = d->fullscreenTracker->fullscreenActive();
+                        connect(d->fullscreenTracker.get(), &FullscreenTracker::fullscreenActiveChanged, this, &Settings::fullscreenFocusedChanged);
+                    }
+                } else if (d->fullscreenTracker) {
+                    emitFullscreenChanged = d->fullscreenTracker->fullscreenActive();
+                    d->fullscreenTracker.reset();
+                }
+
+                if (emitFullscreenChanged) {
+                    Q_EMIT fullscreenFocusedChanged();
+                }
             } else if (group.name() == QLatin1String("Notifications")) {
                 d->notificationSettings.load();
             } else if (group.name() == QLatin1String("Jobs")) {
@@ -340,20 +363,6 @@ void Settings::setCriticalPopupsInDoNotDisturbMode(bool enable)
         return;
     }
     d->notificationSettings.setCriticalInDndMode(enable);
-    d->setDirty(true);
-}
-
-bool Settings::keepNormalAlwaysOnTop() const
-{
-    return d->notificationSettings.normalAlwaysOnTop();
-}
-
-void Settings::setKeepNormalAlwaysOnTop(bool enable)
-{
-    if (this->keepNormalAlwaysOnTop() == enable) {
-        return;
-    }
-    d->notificationSettings.setNormalAlwaysOnTop(enable);
     d->setDirty(true);
 }
 
@@ -575,6 +584,38 @@ void Settings::setInhibitNotificationsWhenScreenSharing(bool inhibit)
 
     d->dndSettings.setWhenScreenSharing(inhibit);
     d->setDirty(true);
+}
+
+bool Settings::inhibitNotificationsWhenFullscreen() const
+{
+    return d->dndSettings.whenFullscreen();
+}
+
+void Settings::setInhibitNotificationsWhenFullscreen(bool inhibit)
+{
+    if (inhibit == inhibitNotificationsWhenFullscreen()) {
+        return;
+    }
+
+    d->dndSettings.setWhenFullscreen(inhibit);
+    d->setDirty(true);
+}
+
+bool Settings::fullscreenFocused() const
+{
+    return d->fullscreenTracker && d->fullscreenTracker->fullscreenActive();
+}
+
+void Settings::setFullscreenFocused(bool focused)
+{
+    if (focused) {
+        qCWarning(NOTIFICATIONMANAGER) << "Cannot forcefully set fullscreen focused";
+        return;
+    }
+
+    if (d->fullscreenTracker) {
+        d->fullscreenTracker->setFullscreenActive(focused);
+    }
 }
 
 void Settings::revokeApplicationInhibitions()
