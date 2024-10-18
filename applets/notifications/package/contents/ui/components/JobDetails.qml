@@ -220,11 +220,17 @@ GridLayout {
         AreaSeries {
             axisX: valueAxis
             axisY: dataAxis
+            borderColor: Kirigami.Theme.highligtedTextColor
+            borderWidth: 1
 
             upperSeries: speedSerie
+            color: Kirigami.Theme.highlightColor
 
-            onHovered: (point) => {
-                console.log("clicked", averageSpeed,  point)
+            onHovered: (point, hovered) => {
+                if (!hovered) {
+                    id_tooltip.visible = false;
+                    return;
+                }
                 var p = chart.mapToPosition(point)
                 var text = i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
                                            KCoreAddons.Format.formatByteSize(point.y * 1000000))
@@ -238,11 +244,12 @@ GridLayout {
         ToolTip {
             id: id_tooltip
             contentItem: Text {
-                color: "#21be2b"
+                color: Kirigami.Theme.textColor
                 text: id_tooltip.text
             }
             background: Rectangle {
-                border.color: "#21be2b"
+                color: Kirigami.Theme.backgroundColor
+                border.color: Kirigami.Theme.alternateBackgroundColor
             }
         }
 
@@ -251,13 +258,14 @@ GridLayout {
             useOpenGL: true
 
             color: "red"
+            width: 3
 
             axisX: valueAxis
             axisY: dataAxis
 
             onHovered: (point) => {
                 var p = chart.mapToPosition(point)
-                var text = i18ndc("plasma_applet_org.kde.plasma.notifications", "average Bytes per second", "average %1/s",
+                var text = i18ndc("plasma_applet_org.kde.plasma.notifications", "Average Bytes per second", "Average: %1/s",
                                            KCoreAddons.Format.formatByteSize(averageSpeed * 1000000))
                 id_tooltip.x = p.x
                 id_tooltip.y = p.y - id_tooltip.height
