@@ -97,8 +97,8 @@ QList<BookmarkMatch> Chrome::match(const QString &term, bool addEveryThing, Prof
     Favicon *favicon = profileBookmarks->profile().favicon();
     for (const QJsonValue &bookmarkValue : bookmarks) {
         const QJsonObject bookmark = bookmarkValue.toObject();
-        const QString url = bookmark.value(QStringLiteral("url")).toString();
-        BookmarkMatch bookmarkMatch(favicon->iconFor(url), term, bookmark.value(QStringLiteral("name")).toString(), url);
+        const QString url = bookmark.value(QStringView(u"url")).toString();
+        BookmarkMatch bookmarkMatch(favicon->iconFor(url), term, bookmark.value(QStringView(u"name")).toString(), url);
         bookmarkMatch.addTo(results, addEveryThing);
     }
     return results;
