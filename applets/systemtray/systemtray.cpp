@@ -121,7 +121,7 @@ void SystemTray::restoreContents(KConfigGroup &group)
     m_plasmoidRegistry->init();
 }
 
-void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
+void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface)
 {
     if (!appletInterface) {
         return;
@@ -129,34 +129,9 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
 
     Plasma::Applet *applet = appletInterface->property("_plasma_applet").value<Plasma::Applet *>();
 
-    QPointF pos = appletInterface->mapToScene(QPointF(x, y));
-
-    if (appletInterface->window() && appletInterface->window()->screen()) {
-        pos = appletInterface->window()->mapToGlobal(pos.toPoint());
-    } else {
-        pos = QPoint();
-    }
-
     QMenu *desktopMenu = new QMenu;
     connect(this, &QObject::destroyed, desktopMenu, &QMenu::close);
     desktopMenu->setAttribute(Qt::WA_DeleteOnClose);
-
-    // this is a workaround where Qt will fail to realize a mouse has been released
-
-    // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
-    // whilst the mouse is depressed
-    // https://bugreports.qt.io/browse/QTBUG-59044
-    // this causes the next click to go missing
-
-    // by releasing manually we avoid that situation
-    auto ungrabMouseHack = [appletInterface]() {
-        if (appletInterface->window() && appletInterface->window()->mouseGrabberItem()) {
-            appletInterface->window()->mouseGrabberItem()->ungrabMouse();
-        }
-    };
-
-    QTimer::singleShot(0, appletInterface, ungrabMouseHack);
-    // end workaround
 
     Q_EMIT applet->contextualActionsAboutToShow();
     const auto contextActions = applet->contextualActions();
@@ -175,19 +150,7 @@ void SystemTray::showPlasmoidMenu(QQuickItem *appletInterface, int x, int y)
         return;
     }
 
-    desktopMenu->adjustSize();
-
-    if (QScreen *screen = appletInterface->window()->screen()) {
-        const QRect geo = screen->availableGeometry();
-
-        pos = QPoint(qBound(geo.left(), (int)pos.x(), geo.right() - desktopMenu->width()), //
-                     qBound(geo.top(), (int)pos.y(), geo.bottom() - desktopMenu->height()));
-    }
-
-    KAcceleratorManager::manage(desktopMenu);
-    desktopMenu->winId();
-    desktopMenu->windowHandle()->setTransientParent(appletInterface->window());
-    desktopMenu->popup(pos.toPoint());
+    showContextMenu(appletInterface, desktopMenu);
 }
 
 void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNotifierIcon)
@@ -206,55 +169,79 @@ void SystemTray::showStatusNotifierContextMenu(KJob *job, QQuickItem *statusNoti
     QMenu *menu = qobject_cast<QMenu *>(sjob->result().value<QObject *>());
 
     if (menu && !menu->isEmpty()) {
-        menu->adjustSize();
-        const auto parameters = sjob->parameters();
-        int x = parameters[QStringLiteral("x")].toInt();
-        int y = parameters[QStringLiteral("y")].toInt();
+        showContextMenu(statusNotifierIcon, menu);
+    }
+}
 
-        // try tofind the icon screen coordinates, and adjust the position as a poor
-        // man's popupPosition
+void SystemTray::showContextMenu(QQuickItem *iconItem, QMenu *menu)
+{
+    // this is a workaround where Qt will fail to realize a mouse has been released
 
-        QRect screenItemRect(statusNotifierIcon->mapToScene(QPointF(0, 0)).toPoint(), QSize(statusNotifierIcon->width(), statusNotifierIcon->height()));
+    // this happens if a window which does not accept focus spawns a new window that takes focus and X grab
+    // whilst the mouse is depressed
+    // https://bugreports.qt.io/browse/QTBUG-59044
+    // this causes the next click to go missing
 
-        if (statusNotifierIcon->window()) {
-            screenItemRect.moveTopLeft(statusNotifierIcon->window()->mapToGlobal(screenItemRect.topLeft()));
+    // by releasing manually we avoid that situation
+    auto ungrabMouseHack = [iconItem]() {
+        if (iconItem->window() && iconItem->window()->mouseGrabberItem()) {
+            iconItem->window()->mouseGrabberItem()->ungrabMouse();
         }
+    };
 
-        switch (location()) {
-        case Plasma::Types::LeftEdge:
-            x = screenItemRect.right();
-            y = screenItemRect.top();
-            break;
-        case Plasma::Types::RightEdge:
-            x = screenItemRect.left() - menu->width();
-            y = screenItemRect.top();
-            break;
-        case Plasma::Types::TopEdge:
-            x = screenItemRect.left();
-            y = screenItemRect.bottom();
-            break;
-        case Plasma::Types::BottomEdge:
-            x = screenItemRect.left();
+    QTimer::singleShot(0, iconItem, ungrabMouseHack);
+    // end workaround
+
+    menu->adjustSize();
+
+    // try to find the icon screen coordinates, and adjust the position as a poor
+    // man's popupPosition
+
+    int x = 0;
+    int y = 0;
+
+    QRect screenItemRect(iconItem->mapToScene(QPointF(0, 0)).toPoint(), QSize(iconItem->width(), iconItem->height()));
+
+    if (iconItem->window()) {
+        screenItemRect.moveTopLeft(iconItem->window()->mapToGlobal(screenItemRect.topLeft()));
+    }
+
+    switch (location()) {
+    case Plasma::Types::LeftEdge:
+        x = screenItemRect.right();
+        y = screenItemRect.top();
+        break;
+    case Plasma::Types::RightEdge:
+        x = screenItemRect.left() - menu->width();
+        y = screenItemRect.top();
+        break;
+    case Plasma::Types::TopEdge:
+        x = screenItemRect.left();
+        y = screenItemRect.bottom();
+        break;
+    case Plasma::Types::BottomEdge:
+        x = screenItemRect.left();
+        y = screenItemRect.top() - menu->height();
+        break;
+    default:
+        x = screenItemRect.left();
+        if (screenItemRect.top() - menu->height() >= iconItem->window()->screen()->geometry().top()) {
             y = screenItemRect.top() - menu->height();
-            break;
-        default:
-            x = screenItemRect.left();
-            if (screenItemRect.top() - menu->height() >= statusNotifierIcon->window()->screen()->geometry().top()) {
-                y = screenItemRect.top() - menu->height();
-            } else {
-                y = screenItemRect.bottom();
-            }
-        }
-
-        KAcceleratorManager::manage(menu);
-        menu->winId();
-        menu->windowHandle()->setTransientParent(statusNotifierIcon->window());
-        menu->popup(QPoint(x, y));
-        // Workaround for QTBUG-59044
-        if (auto item = statusNotifierIcon->window()->mouseGrabberItem()) {
-            item->ungrabMouse();
+        } else {
+            y = screenItemRect.bottom();
         }
     }
+
+    if (QScreen *screen = iconItem->window()->screen()) {
+        const QRect geo = screen->availableGeometry();
+        x = qBound(geo.left(), x, geo.right() - menu->width());
+        y = qBound(geo.top(), y, geo.bottom() - menu->height());
+    }
+
+    KAcceleratorManager::manage(menu);
+    menu->winId();
+    menu->windowHandle()->setTransientParent(iconItem->window());
+    menu->popup(QPoint(x, y));
 }
 
 QPointF SystemTray::popupPosition(QQuickItem *visualParent, int x, int y)

@@ -51,7 +51,7 @@ public:
     /**
      * Given an AppletInterface pointer, shows a proper context menu for it
      */
-    Q_INVOKABLE void showPlasmoidMenu(QQuickItem *appletInterface, int x, int y);
+    Q_INVOKABLE void showPlasmoidMenu(QQuickItem *appletInterface);
 
     /**
      * Shows the context menu for a statusnotifieritem
@@ -88,6 +88,7 @@ private Q_SLOTS:
 
 private:
     SystemTrayModel *systemTrayModel();
+    void showContextMenu(QQuickItem *iconItem, QMenu *menu);
 
     KConfigWatcher::Ptr m_configWatcher;
     bool m_xwaylandClientsScale = true;

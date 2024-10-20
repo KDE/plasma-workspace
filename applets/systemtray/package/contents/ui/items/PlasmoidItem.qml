@@ -69,7 +69,7 @@ AbstractItem {
     onContextMenu: mouse => {
         if (applet) {
             effectivePressed = false;
-            Plasmoid.showPlasmoidMenu(applet, 0, inHiddenLayout ? applet.height : 0);
+            Plasmoid.showPlasmoidMenu(applet);
         }
     }
     onWheel: wheel => {
