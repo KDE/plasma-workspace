@@ -70,7 +70,13 @@ private:
     QHash<QString, std::pair<QString, std::pair<QString, QString>>> m_deviceTypes;
 
     QHash<QString, QList<Solid::Device>> m_parentDevices;
-    QHash<QString, std::pair<QTimer *, std::function<void()>>> m_removeTimers;
+
+    struct RemoveTimerData {
+        QTimer *timer = nullptr;
+        QString udi;
+        QString parentUdi;
+    };
+    QHash<QString, RemoveTimerData> m_removeTimers;
     Solid::Predicate m_predicateDeviceMatch;
     Solid::Predicate m_encryptedPredicate;
     const QList<Solid::DeviceInterface::Type> m_types;
