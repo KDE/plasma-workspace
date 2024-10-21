@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-10-06 12:29+0200\n"
+"PO-Revision-Date: 2024-10-20 11:02+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: package/contents/ui/DeviceItem.qml:98
@@ -172,14 +172,18 @@ msgid "One or more files on this device are open within an application."
 msgstr "V aplikácii je otvorený jeden alebo viac súborov v tomto zariadení."
 
 #: plugin/deviceerrormonitor_p.cpp:231
-#, fuzzy, kde-format
-#| msgid "Click to access this device from other applications."
+#, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
-msgstr[0] "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
-msgstr[1] "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
-msgstr[2] "Kliknutím sprístupníte toto zariadenie iným aplikáciám."
+msgstr[0] ""
+"V aplikácii „%2“ je otvorený jeden alebo viac súborov na tomto zariadení."
+msgstr[1] ""
+"Jeden alebo viac súborov na tomto zariadení je otvorených v nasledujúcich "
+"aplikáciách: %2."
+msgstr[2] ""
+"Jeden alebo viac súborov na tomto zariadení je otvorených v nasledujúcich "
+"aplikáciách: %2."
 
 #: plugin/deviceerrormonitor_p.cpp:234
 #, kde-format

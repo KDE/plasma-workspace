@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2024-10-06 12:19+0200\n"
+"PO-Revision-Date: 2024-10-20 11:07+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -286,13 +286,13 @@ msgstr "Klávesnica na obrazovke deaktivovaná"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "Uspatie a zamknutie obrazovky je blokované"
 
 #: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "Uspatie a zamknutie obrazovky je odblokované"
 
 #: osd.cpp:207
 #, kde-format
@@ -319,6 +319,9 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"Je známe, že pri grafickom procesore NVIDIA v systéme X11 spôsobujú "
+"plávajúci štýl a režim adaptívnej nepriehľadnosti slabý výkon pri posúvaní "
+"okien a zmene veľkosti. Zvážte použitie iných nastavení."
 
 #: panelview.cpp:1100
 #, kde-format
