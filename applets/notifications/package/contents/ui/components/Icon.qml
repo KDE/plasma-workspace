@@ -22,7 +22,7 @@ Kirigami.Icon {
 
     source: modelInterface.icon
     // don't show two identical icons
-    visible: (valid && source != modelInterface.applicationIconSource) || (jobIconLoader.item?.shown ?? false)
+    visible: valid || (jobIconLoader.item?.shown ?? false)
 
     smooth: true
 
