@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-07-08 12:30+0200\n"
+"PO-Revision-Date: 2024-10-20 21:23+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -41,13 +41,11 @@ msgstr[0] "Logger ud om 1 sekund"
 msgstr[1] "Logger ud om %1 sekunder"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Installere softwareopdateringer og genstarter om et sekund"
-msgstr[1] "Installere softwareopdateringer og genstarter om %1 sekunder"
+msgstr[0] "Installerer softwareopdateringer og genstarter om ét sekund"
+msgstr[1] "Installerer softwareopdateringer og genstarter om %1 sekunder"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -100,9 +98,7 @@ msgid "Hibernate Now"
 msgstr "Gå i dvale nu"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Installér opdateringer og genstart"
@@ -118,12 +114,10 @@ msgid "Restart Now"
 msgstr "Genstart nu"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Installér opdateringer og genstart nu"
+msgstr "Installér opdateringer og luk ned"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
@@ -133,7 +127,7 @@ msgstr "Luk ned"
 #: contents/logout/Logout.qml:263 contents/logout/Logout.qml:282
 #, kde-format
 msgid "Shut Down Now"
-msgstr "Luk ned ned"
+msgstr "Luk ned nu"
 
 #: contents/logout/Logout.qml:294
 #, kde-format
