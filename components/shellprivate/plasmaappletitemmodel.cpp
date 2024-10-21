@@ -147,9 +147,9 @@ QString PlasmaAppletItem::apiVersion() const
 
 bool PlasmaAppletItem::isRecent() const
 {
-    const QFileInfo configInformation(m_info.fileName());
-    QDir dir = configInformation.dir();
-
+    QDir dir = QDir(m_info.fileName());
+    dir.cdUp();
+    const QFileInfo appletFolderInfo(dir.absolutePath());
     // The manifest file is in the folder of its theme,
     // which is in the plasmashell folder, which is in
     // a share folder. We use the latter as a reference
@@ -165,7 +165,7 @@ bool PlasmaAppletItem::isRecent() const
     const QFileInfo shareFolderInformation(dir.absolutePath());
 
     const auto shareFolderBirthTime = shareFolderInformation.birthTime();
-    const auto configBirthTime = configInformation.birthTime();
+    const auto configBirthTime = appletFolderInfo.birthTime();
     const auto oneHourAgo = QDateTime::currentDateTime().addSecs(-3600);
 
     // A widget is considered recent when it was created within the last hour,
