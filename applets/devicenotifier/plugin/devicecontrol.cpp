@@ -196,7 +196,7 @@ void DeviceControl::onDeviceAdded(const QString &udi)
     }
 
     if (auto it = m_removeTimers.constFind(udi); it != m_removeTimers.cend()) {
-        it->second(); // A device is removed and added back immediately, can happen during formatting
+        deviceDelayRemove(it->udi, it->parentUdi); // A device is removed and added back immediately, can happen during formatting
     }
 
     m_actions[udi] = actions;
@@ -286,24 +286,19 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
             for (auto it = m_parentDevices.begin(); it != m_parentDevices.end(); ++it) {
                 for (int position = 0; position < it->size(); ++position) {
                     if (udi == it->at(position).udi()) {
-                        std::function<void()> slot = [this, udi, parentUdi = it.key()]() {
-                            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Timer activated for " << udi;
-                            for (int position = 0; position < m_devices.size(); ++position) {
-                                if (m_devices[position].udi() == udi) {
-                                    deviceDelayRemove(udi, parentUdi);
-                                    break;
-                                }
-                            }
-                        };
                         auto timer = new QTimer(this);
                         timer->setSingleShot(true);
                         timer->setInterval(std::chrono::seconds(5));
                         // this keeps the delegate around for 5 seconds after the device has been
                         // removed in case there was a message, such as "you can now safely remove this"
-                        connect(timer, &QTimer::timeout, this, slot);
+                        connect(timer, &QTimer::timeout, this, [this, udi] {
+                            const RemoveTimerData &data = m_removeTimers[udi];
+                            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Timer activated for " << udi;
+                            Q_ASSERT(udi == data.udi);
+                            deviceDelayRemove(udi, data.parentUdi);
+                        });
                         timer->start();
-                        m_removeTimers.insert(udi, {timer, slot});
-
+                        m_removeTimers.insert(udi, {timer, udi, it.key()});
                         return;
                     }
                 }
@@ -315,16 +310,6 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
 
 void DeviceControl::deviceDelayRemove(const QString &udi, const QString &parentUdi)
 {
-    if (auto it = m_removeTimers.find(udi); it != m_removeTimers.end()) {
-        if (it->first->isActive()) {
-            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device " << udi << " Timer was active: stop";
-            it->first->stop();
-        }
-        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device " << udi << " Remove timer";
-        it->first->deleteLater();
-        m_removeTimers.erase(it);
-    }
-
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device " << udi << " : start delay remove";
     if (!parentUdi.isEmpty() && m_stateMonitor->isRemovable(udi)) {
         auto it = m_parentDevices.find(parentUdi);
@@ -356,6 +341,16 @@ void DeviceControl::deviceDelayRemove(const QString &udi, const QString &parentU
             endRemoveRows();
             break;
         }
+    }
+
+    if (auto it = m_removeTimers.find(udi); it != m_removeTimers.end()) {
+        if (it->timer->isActive()) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device " << udi << " Timer was active: stop";
+            it->timer->stop();
+        }
+        qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: device " << udi << " Remove timer";
+        it->timer->deleteLater();
+        m_removeTimers.erase(it); // PLASMA-WORKSPACE-15SV: This must be removed at the end to ensure udi and parentUdi are not dangling
     }
 }
 
