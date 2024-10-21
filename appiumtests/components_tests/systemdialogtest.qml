@@ -75,6 +75,7 @@ Kirigami.AbstractApplicationWindow {
                 text: "Details"
                 icon.name: "documentinfo"
                 onTriggered: desktopPolkit.close()
+                Accessible.name: "Details"
             }
         ]
     }
