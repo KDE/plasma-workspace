@@ -320,7 +320,7 @@ void KSMShutdownDlg::cancelSoftwareUpdate()
     if (packageKitCall.isError()) {
         qCWarning(LOGOUT_GREETER) << "Failed to cancel pending software update" << packageKitCall.error().message();
     } else {
-        rootContext()->setContextProperty(u"softwareUpdatePending"_s, updateTriggered() || upgradeTriggered());
+        rootContext()->setContextProperty(u"softwareUpdatePending"_s, false);
     }
 }
 
