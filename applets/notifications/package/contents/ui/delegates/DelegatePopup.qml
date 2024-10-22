@@ -8,12 +8,13 @@
 import QtQuick
 import QtQuick.Layouts
 
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.extras as PlasmaExtras
 import org.kde.kirigami as Kirigami
+import org.kde.kquickcontrolsaddons as KQuickControlsAddons
 
 import org.kde.notificationmanager as NotificationManager
-import org.kde.plasma.private.notifications 2.0 as Notifications
+import org.kde.plasma.private.notifications as Notifications
 
 import "../components" as Components
 
@@ -97,10 +98,20 @@ BaseDelegate {
         PlasmaComponents3.ScrollBar.vertical.visible: modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > Layout.maximumHeight
         PlasmaComponents3.ScrollBar.horizontal.visible: false
 
-        Components.Body {
-            id: bodyLabel
+        KQuickControlsAddons.MouseEventListener {
             implicitWidth: scroll.contentItem.width
-            modelInterface: delegateRoot.modelInterface
+            implicitHeight: bodyLabel.implicitHeight
+            onClicked: {
+                if (modelInterface.hasDefaultAction) {
+                    modelInterface.defaultActionInvoked();
+                }
+            }
+            Components.Body {
+                id: bodyLabel
+                anchors.fill: parent
+                modelInterface: delegateRoot.modelInterface
+
+            }
         }
     }
 
