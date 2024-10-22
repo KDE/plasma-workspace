@@ -56,7 +56,6 @@ protected:
 private:
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
     void setTriggerAction(PackageKit::Offline::Action action);
-    bool checkTrigger(const QString &trigger) const;
 #endif
     void cancelSoftwareUpdate();
     bool updateTriggered() const;
