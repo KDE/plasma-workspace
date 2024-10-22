@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 00:41+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2024-10-09 20:41+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -332,6 +332,18 @@ msgstr "QR குறியை காட்ட போதிய இடம் இ�
 msgid "Creating QR code failed"
 msgstr "QR குறியை உருவாக்குவது தோல்வியடைந்தது"
 
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Collapse"
+msgstr ""
+
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Expand"
+msgstr ""
+
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
 msgid "Clear History"
@@ -347,22 +359,22 @@ msgstr "பொருத்தங்கள் இல்லை"
 msgid "Clipboard is empty"
 msgstr "பிடிப்புப்பலகை காலியாக உள்ளது"
 
-#: declarative/qml/DelegateToolButtons.qml:26
+#: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
 msgid "Invoke action"
 msgstr "செயலை இயக்கு"
 
-#: declarative/qml/DelegateToolButtons.qml:39
+#: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
 msgid "Show QR code"
 msgstr "QR குறியைக் காட்டு"
 
-#: declarative/qml/DelegateToolButtons.qml:55
+#: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
 msgid "Edit contents"
 msgstr "உள்ளடக்கத்தை திருத்து"
 
-#: declarative/qml/DelegateToolButtons.qml:69
+#: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format
 msgid "Remove from history"
 msgstr "வரலாற்றிலிருந்து நீக்கு"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 00:41+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -347,6 +347,18 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Collapse"
+msgstr ""
+
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Expand"
+msgstr ""
+
 #: declarative/qml/ClipboardMenu.qml:186
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
@@ -364,25 +376,25 @@ msgstr "<जुळवणी आढळली नाही>"
 msgid "Clipboard is empty"
 msgstr "क्लिपबोर्ड रिकामा आहे"
 
-#: declarative/qml/DelegateToolButtons.qml:26
+#: declarative/qml/DelegateToolButtons.qml:31
 #, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<नविन क्रिया>"
 
-#: declarative/qml/DelegateToolButtons.qml:39
+#: declarative/qml/DelegateToolButtons.qml:32
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgid "Show QR code"
 msgstr "बारकोड दर्शवा (&S)..."
 
-#: declarative/qml/DelegateToolButtons.qml:55
+#: declarative/qml/DelegateToolButtons.qml:33
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "Edit contents"
 msgstr "अनुक्रम संपादित करा"
 
-#: declarative/qml/DelegateToolButtons.qml:69
+#: declarative/qml/DelegateToolButtons.qml:34
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove from history"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 00:41+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -363,6 +363,18 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Kreo de QR-kodo malsukcesis"
 
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Collapse"
+msgstr ""
+
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Expand"
+msgstr ""
+
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
 msgid "Clear History"
@@ -378,22 +390,22 @@ msgstr "Neniuj kongruaĵoj"
 msgid "Clipboard is empty"
 msgstr "Poŝo estas malplena"
 
-#: declarative/qml/DelegateToolButtons.qml:26
+#: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
 msgid "Invoke action"
 msgstr "Alvoki agon"
 
-#: declarative/qml/DelegateToolButtons.qml:39
+#: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
 msgid "Show QR code"
 msgstr "Montri QR-kodon"
 
-#: declarative/qml/DelegateToolButtons.qml:55
+#: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
 msgid "Edit contents"
 msgstr "Redakti enhavon"
 
-#: declarative/qml/DelegateToolButtons.qml:69
+#: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format
 msgid "Remove from history"
 msgstr "Forigi el historio"

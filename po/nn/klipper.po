@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 00:41+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2024-10-06 14:07+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -358,6 +358,18 @@ msgstr "Det er ikkje plass til å visa QR-koden. Prøv å gjera vindauget størr
 msgid "Creating QR code failed"
 msgstr "Klarte ikkje laga QR-kode"
 
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Collapse"
+msgstr ""
+
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Expand"
+msgstr ""
+
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
 msgid "Clear History"
@@ -373,22 +385,22 @@ msgstr "Ingen treff"
 msgid "Clipboard is empty"
 msgstr "Utklippstavla er tom"
 
-#: declarative/qml/DelegateToolButtons.qml:26
+#: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
 msgid "Invoke action"
 msgstr "Utfør handling"
 
-#: declarative/qml/DelegateToolButtons.qml:39
+#: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
 msgid "Show QR code"
 msgstr "Vis QR-kode"
 
-#: declarative/qml/DelegateToolButtons.qml:55
+#: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
 msgid "Edit contents"
 msgstr "Rediger innhald"
 
-#: declarative/qml/DelegateToolButtons.qml:69
+#: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format
 msgid "Remove from history"
 msgstr "Fjern frå loggen"

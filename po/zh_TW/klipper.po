@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 00:41+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2024-10-19 20:00+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -353,6 +353,18 @@ msgstr "沒有足夠空間來顯示 QR 碼。請嘗試調整此小程式的大�
 msgid "Creating QR code failed"
 msgstr "建立 QR 碼失敗"
 
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Collapse"
+msgstr ""
+
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Expand"
+msgstr ""
+
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
 msgid "Clear History"
@@ -368,22 +380,22 @@ msgstr "無相符"
 msgid "Clipboard is empty"
 msgstr "剪貼簿是空的"
 
-#: declarative/qml/DelegateToolButtons.qml:26
+#: declarative/qml/DelegateToolButtons.qml:31
 #, kde-format
 msgid "Invoke action"
 msgstr "觸發動作"
 
-#: declarative/qml/DelegateToolButtons.qml:39
+#: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
 msgid "Show QR code"
 msgstr "顯示 QR 碼"
 
-#: declarative/qml/DelegateToolButtons.qml:55
+#: declarative/qml/DelegateToolButtons.qml:33
 #, kde-format
 msgid "Edit contents"
 msgstr "編輯內容"
 
-#: declarative/qml/DelegateToolButtons.qml:69
+#: declarative/qml/DelegateToolButtons.qml:34
 #, kde-format
 msgid "Remove from history"
 msgstr "從歷史紀錄中移除"

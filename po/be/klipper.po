@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 00:41+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -371,6 +371,18 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Collapse"
+msgstr ""
+
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Expand"
+msgstr ""
+
 #: declarative/qml/ClipboardMenu.qml:186
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
@@ -387,26 +399,26 @@ msgstr "Няма супадзенняў"
 msgid "Clipboard is empty"
 msgstr "Буфер абмену пусты"
 
-#: declarative/qml/DelegateToolButtons.qml:26
+#: declarative/qml/DelegateToolButtons.qml:31
 #, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<новае дзеянне>"
 
-#: declarative/qml/DelegateToolButtons.qml:39
+#: declarative/qml/DelegateToolButtons.qml:32
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "&Show Barcode…"
 msgid "Show QR code"
 msgstr "&Паказаць штрых-код…"
 
-#: declarative/qml/DelegateToolButtons.qml:55
+#: declarative/qml/DelegateToolButtons.qml:33
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "Edit contents"
 msgstr "Рэдагаваць змесціва"
 
-#: declarative/qml/DelegateToolButtons.qml:69
+#: declarative/qml/DelegateToolButtons.qml:34
 #, fuzzy, kde-format
 #| msgid "For an item chosen from history"
 msgid "Remove from history"

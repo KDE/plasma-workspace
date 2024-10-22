@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 00:41+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2010-01-29 11:32+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -360,6 +360,18 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Collapse"
+msgstr ""
+
+#: declarative/qml/ClipboardItemDelegate.qml:178
+#, kde-format
+msgctxt "@action:button"
+msgid "Expand"
+msgstr ""
+
 #: declarative/qml/ClipboardMenu.qml:186
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
@@ -377,24 +389,24 @@ msgstr "<ಹೋಲಿಕೆ ಇಲ್ಲ>"
 msgid "Clipboard is empty"
 msgstr "ನಕಲು ಫಲಕವು ಖಾಲಿ ಇದೆ"
 
-#: declarative/qml/DelegateToolButtons.qml:26
+#: declarative/qml/DelegateToolButtons.qml:31
 #, fuzzy, kde-format
 #| msgid "<new action>"
 msgid "Invoke action"
 msgstr "<ಹೊಸ ಕ್ರಿಯೆ>"
 
-#: declarative/qml/DelegateToolButtons.qml:39
+#: declarative/qml/DelegateToolButtons.qml:32
 #, kde-format
 msgid "Show QR code"
 msgstr ""
 
-#: declarative/qml/DelegateToolButtons.qml:55
+#: declarative/qml/DelegateToolButtons.qml:33
 #, fuzzy, kde-format
 #| msgid "Edit Contents"
 msgid "Edit contents"
 msgstr "ಒಳ ವಿಷಯಗಳನ್ನು (&ಸ)ಸಂಸ್ಕರಿಸು"
 
-#: declarative/qml/DelegateToolButtons.qml:69
+#: declarative/qml/DelegateToolButtons.qml:34
 #, fuzzy, kde-format
 #| msgid "Replay actions on an item selected from history"
 msgid "Remove from history"

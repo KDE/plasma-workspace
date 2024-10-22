@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-23 00:40+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2023-11-10 23:09+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -49,7 +49,7 @@ msgstr "要開啟的小程式。"
 msgid "Arguments to pass to the plasmoid."
 msgstr "要傳遞給小元件的引數。"
 
-#: plasmawindowedview.cpp:120
+#: plasmawindowedview.cpp:121
 #, kde-format
 msgid "Close %1"
 msgstr "關閉 %1"

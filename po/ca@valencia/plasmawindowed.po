@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-23 00:40+0000\n"
+"POT-Creation-Date: 2024-10-22 00:41+0000\n"
 "PO-Revision-Date: 2023-09-26 12:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -53,7 +53,7 @@ msgstr "La miniaplicació que s'obrirà."
 msgid "Arguments to pass to the plasmoid."
 msgstr "Els arguments que es passaran al plasmoide."
 
-#: plasmawindowedview.cpp:120
+#: plasmawindowedview.cpp:121
 #, kde-format
 msgid "Close %1"
 msgstr "Tanca %1"
