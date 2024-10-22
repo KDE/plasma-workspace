@@ -11,6 +11,7 @@
 #include <QDBusConnection>
 #include <QDBusPendingReply>
 #include <QFile>
+#include <QFileInfo>
 #include <QPainter>
 #include <QQmlContext>
 #include <QQmlEngine>
@@ -42,6 +43,22 @@
 #include <debug.h>
 
 using namespace Qt::StringLiterals;
+
+namespace
+{
+constexpr auto PK_OFFLINE_PREPARED_FILENAME = "/var/lib/PackageKit/prepared-update"_L1;
+constexpr auto PK_OFFLINE_PREPARED_UPGRADE_FILENAME = "/var/lib/PackageKit/prepared-upgrade"_L1;
+constexpr auto PK_OFFLINE_TRIGGER_FILENAME = "/system-update"_L1;
+
+QFileInfo systemdUpdateTriggerFileInfo()
+{
+    QFileInfo info(PK_OFFLINE_TRIGGER_FILENAME);
+    if (info.exists() && info.isSymLink()) {
+        return info;
+    }
+    return {};
+}
+} // namespace
 
 static const QString s_login1Service = QStringLiteral("org.freedesktop.login1");
 static const QString s_login1Path = QStringLiteral("/org/freedesktop/login1");
@@ -325,33 +342,16 @@ void KSMShutdownDlg::setTriggerAction(PackageKit::Offline::Action action)
     }
 }
 
-bool KSMShutdownDlg::checkTrigger(const QString &trigger) const
-{
-    // Unfortunately necessary to use a direct DBus call because properties in PackageKitQt are wrong if the daemon isn't
-    // already running, and there's no built in mechanism to start it. Would also be wasteful to have to start it up again.
-    QDBusMessage packageKitMessage = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.PackageKit"),
-                                                                    QStringLiteral("/org/freedesktop/PackageKit"),
-                                                                    s_dbusPropertiesInterface,
-                                                                    QStringLiteral("GetAll"));
-    packageKitMessage.setArguments({QStringLiteral("org.freedesktop.PackageKit.Offline")});
-    QDBusPendingReply<QVariantMap> reply = QDBusConnection::systemBus().asyncCall(packageKitMessage);
-    reply.waitForFinished();
-    if (reply.isError()) {
-        qWarning() << "Failed to check if software update is pending" << reply.error().message();
-        return false;
-    }
-
-    return reply.value().value(trigger).toBool();
-}
-
 bool KSMShutdownDlg::updateTriggered() const
 {
-    return checkTrigger(QStringLiteral("UpdateTriggered"));
+    // This is part of a hot code path. Do not use blocking dbus calls here.
+    return systemdUpdateTriggerFileInfo().symLinkTarget() == PK_OFFLINE_PREPARED_FILENAME;
 }
 
 bool KSMShutdownDlg::upgradeTriggered() const
 {
-    return checkTrigger(QStringLiteral("UpgradeTriggered"));
+    // This is part of a hot code path. Do not use blocking dbus calls here.
+    return systemdUpdateTriggerFileInfo().symLinkTarget() == PK_OFFLINE_PREPARED_UPGRADE_FILENAME;
 }
 
 #else
