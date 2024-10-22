@@ -20,6 +20,7 @@
    kf5-games-strategy.directory
    kf5-games-logic.directory
    kf5-graphics.directory
+   kf5-help.directory
    kf5-internet.directory
    kf5-internet-terminal.directory
    kf5-main.directory

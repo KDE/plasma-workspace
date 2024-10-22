@@ -399,6 +399,13 @@
 			</Include>
 		</Menu>
 	</Menu>
+	<Menu>
+		<Name>Help</Name>
+		<Directory>kf5-help.directory</Directory>
+		<Include>
+			<Category>Documentation</Category>
+		</Include>
+	</Menu>
 	<Include>
 		<And>
 			<Category>KDE</Category>
