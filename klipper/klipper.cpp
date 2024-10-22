@@ -124,7 +124,7 @@ Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
     m_repeatAction = m_collection->addAction(QStringLiteral("repeat_action"));
     m_repeatAction->setText(i18nc("@action:inmenu", "Manually Invoke Action on Current Clipboard"));
     m_repeatAction->setIcon(QIcon::fromTheme(QStringLiteral("open-menu-symbolic")));
-    KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence(Qt::META | Qt::CTRL | Qt::Key_R));
+    KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence());
     connect(m_repeatAction, &QAction::triggered, this, &Klipper::slotRepeatAction);
 
     // add barcode for mobile phones

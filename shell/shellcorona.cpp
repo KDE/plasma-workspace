@@ -272,7 +272,7 @@ void ShellCorona::init()
 
         QAction *action = taskbarActions->addAction(QStringLiteral("activate task manager entry %1").arg(QString::number(entryNumber)));
         action->setText(i18n("Activate Task Manager Entry %1", entryNumber));
-        KGlobalAccel::setGlobalShortcut(action, QKeySequence(Qt::META | key));
+        KGlobalAccel::setGlobalShortcut(action, entryNumber < 10 ? QKeySequence(Qt::META | key) : QKeySequence());
         connect(action, &QAction::triggered, this, [this, i] {
             activateTaskManagerEntry(i);
         });
