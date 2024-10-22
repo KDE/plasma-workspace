@@ -58,6 +58,7 @@ private:
     void setTriggerAction(PackageKit::Offline::Action action);
 #endif
     void cancelSoftwareUpdate();
+    void setError(const QString &message);
     bool updateTriggered() const;
     bool upgradeTriggered() const;
 

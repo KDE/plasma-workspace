@@ -1,7 +1,7 @@
 /*
     SPDX-FileCopyrightText: 2000 Matthias Ettrich <ettrich@kde.org>
     SPDX-FileCopyrightText: 2007 Urs Wolfer <uwolfer @ kde.org>
-
+    SPDX-FileCopyrightText: 2024 Harald Sitter <sitter@kde.org>
     SPDX-License-Identifier: MIT
 */
 
@@ -46,6 +46,8 @@ using namespace Qt::StringLiterals;
 
 namespace
 {
+constexpr auto PROPERTY_ERROR = "contextualError"_L1;
+
 constexpr auto PK_OFFLINE_PREPARED_FILENAME = "/var/lib/PackageKit/prepared-update"_L1;
 constexpr auto PK_OFFLINE_PREPARED_UPGRADE_FILENAME = "/var/lib/PackageKit/prepared-upgrade"_L1;
 constexpr auto PK_OFFLINE_TRIGGER_FILENAME = "/system-update"_L1;
@@ -146,6 +148,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
     });
 
     context->setContextProperty(u"softwareUpdatePending"_s, updateTriggered() || upgradeTriggered());
+    context->setContextProperty(PROPERTY_ERROR, QVariant());
 
     // TODO KF6 remove, used to read "BootManager" from kdmrc
     context->setContextProperty(QStringLiteral("bootManager"), QStringLiteral("None"));
@@ -318,6 +321,7 @@ void KSMShutdownDlg::cancelSoftwareUpdate()
     QDBusPendingReply<> packageKitCall = PackageKit::Daemon::global()->offline()->cancel();
     packageKitCall.waitForFinished();
     if (packageKitCall.isError()) {
+        setError(i18nc("@info", "Failed to cancel pending software update: %1", packageKitCall.error().message()));
         qCWarning(LOGOUT_GREETER) << "Failed to cancel pending software update" << packageKitCall.error().message();
     } else {
         rootContext()->setContextProperty(u"softwareUpdatePending"_s, false);
@@ -335,6 +339,7 @@ void KSMShutdownDlg::setTriggerAction(PackageKit::Offline::Action action)
         }
         packageKitCall.waitForFinished();
         if (packageKitCall.isError()) {
+            setError(i18nc("@info", "Failed to set trigger action: %1", packageKitCall.error().message()));
             qCWarning(LOGOUT_GREETER) << "Failed to trigger action after update" << packageKitCall.error().message();
         }
     } else {
@@ -383,4 +388,16 @@ void KSMShutdownDlg::accept()
 void KSMShutdownDlg::reject()
 {
     Q_EMIT rejected();
+}
+
+void KSMShutdownDlg::setError(const QString &message)
+{
+    QQmlComponent component(engine().get());
+    component.loadFromModule("org.kde.plasma.private.logout-greeter"_L1, "Error"_L1);
+    QObject *error = component.createWithInitialProperties({
+        {u"message"_s, message},
+        {u"_actionText"_s, i18nc("@action:button", "Report Bug")},
+        {u"_actionIconName"_s, u"tools-report-bug-symbolic"_s},
+    });
+    rootContext()->setContextProperty(PROPERTY_ERROR, QVariant::fromValue(error));
 }

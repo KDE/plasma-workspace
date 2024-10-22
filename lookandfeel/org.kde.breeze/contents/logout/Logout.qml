@@ -1,6 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2014 Aleix Pol Gonzalez <aleixpol@blue-systems.com>
-
+    SPDX-FileCopyrightText: 2024 Harald Sitter <sitter@kde.org>
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
@@ -84,7 +84,7 @@ Item {
 
     Timer {
         id: countDownTimer
-        running: !showAllOptions
+        running: !showAllOptions && root.state === ""
         repeat: true
         interval: 1000
         onTriggered: remainingTime--
@@ -111,6 +111,8 @@ Item {
         onClicked: cancelRequested()
     }
     UserDelegate {
+        visible: root.state === ""
+
         width: Kirigami.Units.gridUnit * 8
         height: Kirigami.Units.gridUnit * 9
         anchors {
@@ -125,6 +127,7 @@ Item {
     }
     ColumnLayout {
         id: column
+        visible: root.state === ""
 
         anchors {
             top: parent.verticalCenter
@@ -309,4 +312,21 @@ Item {
             }
         }
     }
+
+    Kirigami.PlaceholderMessage {
+        anchors.centerIn: parent
+        width: parent.width - (Kirigami.Units.largeSpacing * 4)
+        visible: root.state === "error"
+
+        text: contextualError.message
+        helpfulAction: contextualError.action
+    }
+
+    states: [
+        State {
+            name: "error"
+            when: contextualError
+        },
+        State { name: "" }
+    ]
 }
