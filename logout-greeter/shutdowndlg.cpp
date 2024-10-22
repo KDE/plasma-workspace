@@ -318,7 +318,7 @@ void KSMShutdownDlg::cancelSoftwareUpdate()
     QDBusPendingReply<> packageKitCall = PackageKit::Daemon::global()->offline()->cancel();
     packageKitCall.waitForFinished();
     if (packageKitCall.isError()) {
-        qWarning() << "Failed to cancel pending software update" << packageKitCall.error().message();
+        qCWarning(LOGOUT_GREETER) << "Failed to cancel pending software update" << packageKitCall.error().message();
     } else {
         rootContext()->setContextProperty(u"softwareUpdatePending"_s, updateTriggered() || upgradeTriggered());
     }
@@ -335,10 +335,10 @@ void KSMShutdownDlg::setTriggerAction(PackageKit::Offline::Action action)
         }
         packageKitCall.waitForFinished();
         if (packageKitCall.isError()) {
-            qWarning() << "Failed to trigger action after update" << packageKitCall.error().message();
+            qCWarning(LOGOUT_GREETER) << "Failed to trigger action after update" << packageKitCall.error().message();
         }
     } else {
-        qWarning() << "Update was attempted to be triggered without a pending update already existing";
+        qCWarning(LOGOUT_GREETER) << "Update was attempted to be triggered without a pending update already existing";
     }
 }
 
