@@ -75,8 +75,8 @@ public:
     explicit VARIANT()
     {
     }
-    Q_INVOKABLE explicit VARIANT(const QJSValue &value)
-        : value(value.toVariant())
+    Q_INVOKABLE explicit VARIANT(const QVariant &_value)
+        : value(_value)
     {
     }
     operator QVariant() const
