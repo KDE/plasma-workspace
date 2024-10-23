@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-22 00:41+0000\n"
-"PO-Revision-Date: 2024-10-03 12:16+0200\n"
+"PO-Revision-Date: 2024-10-22 11:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -370,13 +370,13 @@ msgstr "Ha fallat la creació del codi QR"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "Redueix"
 
 #: declarative/qml/ClipboardItemDelegate.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "Expandeix"
 
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format

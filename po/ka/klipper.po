@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-22 00:41+0000\n"
-"PO-Revision-Date: 2024-10-03 05:43+0200\n"
+"PO-Revision-Date: 2024-10-22 04:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -361,13 +361,13 @@ msgstr "QR კოდის შექმნის შეცდომა"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "ჩამოშლა"
 
 #: declarative/qml/ClipboardItemDelegate.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "ამოკეცვა"
 
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
