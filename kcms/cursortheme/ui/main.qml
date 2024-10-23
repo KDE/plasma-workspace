@@ -142,6 +142,7 @@ KCM.GridViewKCM {
         },
         Kirigami.Action {
             text: i18nc("@action:button", "&Configure Launch Feedback…")
+            Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
             icon.name: "preferences-desktop-launch-feedback"
             onTriggered: {
                 if (root.launchFeedbackDialog === null) {
