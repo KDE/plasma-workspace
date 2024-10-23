@@ -66,6 +66,7 @@ KCM.ScrollViewKCM {
         Kirigami.Action {
             icon.name: "list-add-symbolic"
             text: i18nc("@action:button menu button; add new application etc", "Add New")
+            Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
             // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
             // Accessible.name: i18nc("@action:button accessible menu button", "Add new application or script")
 
