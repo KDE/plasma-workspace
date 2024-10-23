@@ -58,6 +58,7 @@ KCMUtils.ScrollViewKCM {
                 Kirigami.Action {
                     text: i18n("Add Time Zones…")
                     icon.name: "list-add-symbolic"
+                    Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
                     onTriggered: timeZoneSheet.open()
                 }
             ]
