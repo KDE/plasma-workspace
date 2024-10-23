@@ -84,8 +84,7 @@ BaseDelegate {
         modelInterface: delegateRoot.modelInterface
     }
 
-    PlasmaComponents3.ScrollView {
-        id: scroll
+    KQuickControlsAddons.MouseEventListener {
         Layout.fillWidth: true
         Layout.row: summary.visible ? 2 : 1
         Layout.column: delegateRoot.__firstColumn
@@ -93,24 +92,24 @@ BaseDelegate {
         Layout.maximumHeight: Kirigami.Units.gridUnit * modelInterface.maximumLineCount
         // The body doesn't need to influence the implicit width in any way, this avoids a binding loop
         implicitWidth: -1
-
-        // This avoids a binding loop
-        PlasmaComponents3.ScrollBar.vertical.visible: modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > Layout.maximumHeight
-        PlasmaComponents3.ScrollBar.horizontal.visible: false
-
-        KQuickControlsAddons.MouseEventListener {
-            implicitWidth: scroll.contentItem.width
-            implicitHeight: bodyLabel.implicitHeight
-            onClicked: {
-                if (modelInterface.hasDefaultAction) {
-                    modelInterface.defaultActionInvoked();
-                }
+        implicitHeight: scroll.implicitHeight
+        onClicked: {
+            if (modelInterface.hasDefaultAction) {
+                modelInterface.defaultActionInvoked();
             }
+        }
+        PlasmaComponents3.ScrollView {
+            id: scroll
+            anchors.fill: parent
+
+            // This avoids a binding loop
+            PlasmaComponents3.ScrollBar.vertical.visible: modelInterface.maximumLineCount > 0 && bodyLabel.implicitHeight > parent.Layout.maximumHeight
+            PlasmaComponents3.ScrollBar.horizontal.visible: false
+
             Components.Body {
                 id: bodyLabel
-                anchors.fill: parent
+                width: scroll.contentItem.width
                 modelInterface: delegateRoot.modelInterface
-
             }
         }
     }
