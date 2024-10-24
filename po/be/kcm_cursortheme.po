@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2024-05-25 23:55\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -254,22 +254,22 @@ msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Наладжванне водгуку пры запуску…"
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Усталяваць з файла…"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "&Get New…"
 msgstr "&Атрымаць новыя…"
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, kde-format
 msgid "Open Theme"
 msgstr "Адкрыць тэму"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Файлы тэмаў курсора (*.tar.gz *.tar.bz2)"

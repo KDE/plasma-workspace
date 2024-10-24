@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2011-12-09 02:19+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -248,25 +248,25 @@ msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "Install From File..."
 msgid "&Install from File…"
 msgstr "Файлдан орнату..."
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Get New Theme..."
 msgid "&Get New…"
 msgstr "Жаңа нақышты табу..."
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Нақышты кетіру"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

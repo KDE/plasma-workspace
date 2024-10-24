@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2024-04-24 16:19+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -249,22 +249,22 @@ msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "&Konfigurēt palaišanas animāciju..."
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Instalēt no datnes..."
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "&Get New…"
 msgstr "&Iegūt jaunu..."
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, kde-format
 msgid "Open Theme"
 msgstr "Atvērt motīvu"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kursoru motīva datnes (*.tar.gz *.tar.bz2)"

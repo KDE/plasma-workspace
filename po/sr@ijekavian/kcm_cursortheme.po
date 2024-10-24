@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmmousetheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2016-07-23 22:40+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -250,25 +250,25 @@ msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "Install from File"
 msgid "&Install from File…"
 msgstr "Инсталирај из фајла"
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Get new Theme"
 msgid "&Get New…"
 msgstr "Добави нову тему"
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Open Theme"
 msgstr "Уклони тему"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

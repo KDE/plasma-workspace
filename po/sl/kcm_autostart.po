@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:43+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2024-07-30 09:40+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -108,25 +108,25 @@ msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
 msgstr "Dodaj novo"
 
-#: ui/main.qml:73
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
 msgstr "Aplikacijo…"
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
 msgstr "Prijavni skript…"
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
 msgstr "Odjavni skript…"
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -134,63 +134,63 @@ msgid ""
 msgstr ""
 "%1 še ni bil samodejno zagnan. Podrobnosti bodo na voljo po ponovnem zagonu."
 
-#: ui/main.qml:147
+#: ui/main.qml:148
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Še ni samodejno zagnano"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Glej lastnosti"
 
-#: ui/main.qml:167
+#: ui/main.qml:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Odstrani vnos"
 
-#: ui/main.qml:183
+#: ui/main.qml:184
 #, kde-format
 msgid "Applications"
 msgstr "Aplikacije"
 
-#: ui/main.qml:186
+#: ui/main.qml:187
 #, kde-format
 msgid "Login Scripts"
 msgstr "Prijavni skripti"
 
-#: ui/main.qml:189
+#: ui/main.qml:190
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Skripti pred zagonom"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Odjavni skripti"
 
-#: ui/main.qml:201
+#: ui/main.qml:202
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "Nobenih uporabniško določenih postavk za samodejni zagon"
 
-#: ui/main.qml:202
+#: ui/main.qml:203
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr ""
 "Kliknite na gumb <interface>Dodaj novo</interface>, da jih nekaj dodate"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Izberite prijavni skript"
 
-#: ui/main.qml:237
+#: ui/main.qml:238
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Izberi odjavni skript"

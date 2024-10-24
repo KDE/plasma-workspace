@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-27 02:38+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2024-08-24 10:59+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -308,12 +308,12 @@ msgstr ""
 msgid "Add Time Zones…"
 msgstr "Προσθήκη ζωνών ώρας…"
 
-#: package/contents/ui/configTimeZones.qml:93
+#: package/contents/ui/configTimeZones.qml:94
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Το ρολόι χρησιμοποιεί αυτή τη ζώνη ώρας"
 
-#: package/contents/ui/configTimeZones.qml:95
+#: package/contents/ui/configTimeZones.qml:96
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -322,27 +322,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Κρυμμένη ενώ αυτή είναι η πόλη της τοπικής ζώνης ώρας"
 
-#: package/contents/ui/configTimeZones.qml:125
+#: package/contents/ui/configTimeZones.qml:126
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Εναλλαγή ζώνης ώρας σε όλο το σύστημα…"
 
-#: package/contents/ui/configTimeZones.qml:137
+#: package/contents/ui/configTimeZones.qml:138
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Αφαίρεση αυτής της ζώνης ώρας"
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:150
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Ζώνη ώρας σε όλο το σύστημα"
 
-#: package/contents/ui/configTimeZones.qml:149
+#: package/contents/ui/configTimeZones.qml:150
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Πρόσθετες ζώνες ώρας"
 
-#: package/contents/ui/configTimeZones.qml:162
+#: package/contents/ui/configTimeZones.qml:163
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -351,14 +351,14 @@ msgstr ""
 "Προσθέστε περισσότερες ζώνες ώρας για να τις εμφανίσετε όλες στο αναδυόμενο "
 "παράθυρο της εφαρμογής ή χρησιμοποιήστε μία από αυτές για το ίδιο το ρολόι."
 
-#: package/contents/ui/configTimeZones.qml:176
+#: package/contents/ui/configTimeZones.qml:177
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Εναλλαγή της εμφανιζόμενης ζώνης ώρας με κύλιση πάνω από το συστατικό "
 "ρολογιού"
 
-#: package/contents/ui/configTimeZones.qml:183
+#: package/contents/ui/configTimeZones.qml:184
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -367,12 +367,12 @@ msgstr ""
 "Η χρήση αυτής της λειτουργίας δεν αλλάζει τη ζώνη ώρας σε όλο το σύστημα. "
 "Όταν ταξιδεύετε, αλλάξτε τη ζώνη ώρας σε όλο το σύστημα."
 
-#: package/contents/ui/configTimeZones.qml:208
+#: package/contents/ui/configTimeZones.qml:209
 #, kde-format
 msgid "Add More Time Zones"
 msgstr "Προσθήκη περισσότερων ζωνών ώρας"
 
-#: package/contents/ui/configTimeZones.qml:220
+#: package/contents/ui/configTimeZones.qml:221
 #, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
@@ -381,12 +381,12 @@ msgstr ""
 "Πρέπει να είναι ενεργοποιημένη τουλάχιστον μία ζώνη ώρας. Η τοπική σας ζώνη "
 "ώρας ενεργοποιήθηκε αυτόματα."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:257
 #, kde-format
 msgid "%1, %2 (%3)"
 msgstr "%1, %2 (%3)"
 
-#: package/contents/ui/configTimeZones.qml:258
+#: package/contents/ui/configTimeZones.qml:259
 #, kde-format
 msgid "%1, %2"
 msgstr "%1, %2"

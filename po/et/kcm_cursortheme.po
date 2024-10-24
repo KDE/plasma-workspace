@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2024-10-24 02:34+0000\n"
 "PO-Revision-Date: 2020-09-26 10:21+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -243,24 +243,24 @@ msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, fuzzy, kde-format
 #| msgid "&Install from File..."
 msgid "&Install from File…"
 msgstr "Pa&igalda failist ..."
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "&Get New Cursors..."
 msgid "&Get New…"
 msgstr "Han&gi uusi kursoreid ..."
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, kde-format
 msgid "Open Theme"
 msgstr "Teema avamine"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Kursoriteema failid (*.tar.gz *.tar.bz2)"
