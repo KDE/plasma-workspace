@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-10-24 00:41+0000\n"
 "PO-Revision-Date: 2007-11-04 18:50+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -244,24 +244,24 @@ msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr ""
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, kde-format
 msgid "&Install from File…"
 msgstr ""
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, fuzzy, kde-format
 #| msgid "Overwrite Theme?"
 msgid "&Get New…"
 msgstr "विषयवस्तु अधिलेखन गर्नुहुन्छ?"
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, fuzzy, kde-format
 #| msgid "Overwrite Theme?"
 msgid "Open Theme"
 msgstr "विषयवस्तु अधिलेखन गर्नुहुन्छ?"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-10-24 00:41+0000\n"
 "PO-Revision-Date: 2024-06-11 14:10+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -251,22 +251,22 @@ msgctxt "@action:button"
 msgid "&Configure Launch Feedback…"
 msgstr "Tətbiq başladılmasının görünüşünü &tənzimlə..."
 
-#: ui/main.qml:158
+#: ui/main.qml:159
 #, kde-format
 msgid "&Install from File…"
 msgstr "&Fayldan quraşdırın..."
 
-#: ui/main.qml:164
+#: ui/main.qml:165
 #, kde-format
 msgid "&Get New…"
 msgstr "&Yenisini quraşdırın..."
 
-#: ui/main.qml:178
+#: ui/main.qml:179
 #, kde-format
 msgid "Open Theme"
 msgstr "Mövzunu Açmaq"
 
-#: ui/main.qml:180
+#: ui/main.qml:181
 #, kde-format
 msgid "Cursor Theme Files (*.tar.gz *.tar.bz2)"
 msgstr "Cursor Theme Files (*.tar.gz *.tar.bz2)"

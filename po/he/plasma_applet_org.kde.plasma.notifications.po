@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-09 00:41+0000\n"
+"POT-Creation-Date: 2024-10-24 00:41+0000\n"
 "PO-Revision-Date: 2024-09-21 08:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -31,7 +31,7 @@ msgstr "פתיחה עם %1"
 msgid "Open with…"
 msgstr "פתיחה עם…"
 
-#: filemenu.cpp:117 package/contents/ui/JobItem.qml:280
+#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:187
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "פתיחת התיקייה המכילה"
@@ -69,130 +69,110 @@ msgctxt "OSD popup, keep short"
 msgid "Notifications On"
 msgstr "התראות פעילות"
 
-#: package/contents/ui/EditContextMenu.qml:32
+#: package/contents/ui/components/ActionContainer.qml:80
+#, kde-format
+msgctxt "Reply to message"
+msgid "Reply"
+msgstr "תגובה"
+
+#: package/contents/ui/components/EditContextMenu.qml:32
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
 msgstr "העתקת כתובות קישורים"
 
-#: package/contents/ui/EditContextMenu.qml:44
+#: package/contents/ui/components/EditContextMenu.qml:44
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
 msgstr "העתקה"
 
-#: package/contents/ui/EditContextMenu.qml:61
+#: package/contents/ui/components/EditContextMenu.qml:61
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "בחירה בהכול"
 
-#: package/contents/ui/FullRepresentation.qml:69
+#: package/contents/ui/components/HeadingButtons.qml:78
 #, kde-format
-msgid "Do not disturb"
-msgstr "לא להפריע"
+msgctxt "Notification was added less than a minute ago, keep short"
+msgid "Just now"
+msgstr "ממש עכשיו"
 
-#: package/contents/ui/FullRepresentation.qml:111
+#: package/contents/ui/components/HeadingButtons.qml:84
 #, kde-format
-msgid "For 1 hour"
-msgstr "לשעה"
+msgctxt "Notification was added minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] "לפני דקה"
+msgstr[1] "לפני שתי דקות"
+msgstr[2] "לפני %1 דקות"
+msgstr[3] "לפני %1 דקות"
 
-#: package/contents/ui/FullRepresentation.qml:116
+#: package/contents/ui/components/HeadingButtons.qml:118
 #, kde-format
-msgid "For 4 hours"
-msgstr "ל־4 שעות"
+msgctxt "seconds remaining, keep short"
+msgid "%1 s remaining"
+msgid_plural "%1 s remaining"
+msgstr[0] "נותרה שנייה"
+msgstr[1] "נותרו שתי שניות"
+msgstr[2] "נותרו %1 שניות"
+msgstr[3] "נותרו %1 שניות"
 
-#: package/contents/ui/FullRepresentation.qml:125
+#: package/contents/ui/components/HeadingButtons.qml:122
 #, kde-format
-msgid "Until this evening"
-msgstr "עד הערב"
+msgctxt "minutes remaining, keep short"
+msgid "%1 min remaining"
+msgid_plural "%1 min remaining"
+msgstr[0] "נותרה דקה"
+msgstr[1] "נותרו שתי דקות"
+msgstr[2] "נותרו %1 דקות"
+msgstr[3] "נותרו %1 דקות"
 
-#: package/contents/ui/FullRepresentation.qml:135
+#: package/contents/ui/components/HeadingButtons.qml:127
 #, kde-format
-msgid "Until tomorrow morning"
-msgstr "עד מחר בבוקר"
+msgctxt "hours remaining, keep short"
+msgid "%1 h remaining"
+msgid_plural "%1 h remaining"
+msgstr[0] "נותרה שעה"
+msgstr[1] "נותרו שעתיים"
+msgstr[2] "נותרו %1 שעות"
+msgstr[3] "נותרו %1 שעות"
 
-#: package/contents/ui/FullRepresentation.qml:147
+#: package/contents/ui/components/HeadingButtons.qml:147
 #, kde-format
-msgid "Until Monday"
-msgstr "עד יום שני"
+msgid "Configure"
+msgstr "הגדרה"
 
-#: package/contents/ui/FullRepresentation.qml:154
+#: package/contents/ui/components/HeadingButtons.qml:164
 #, kde-format
-msgid "Until manually disabled"
-msgstr "עד להשבתה ידנית"
+msgctxt "Opposite of minimize"
+msgid "Restore"
+msgstr "שחזור"
 
-#: package/contents/ui/FullRepresentation.qml:204
+#: package/contents/ui/components/HeadingButtons.qml:165
 #, kde-format
-msgctxt "Do not disturb until date"
-msgid "Automatically ends: %1"
-msgstr "מסתיים אוטומטית: %1"
+msgid "Minimize"
+msgstr "מזעור"
 
-#: package/contents/ui/FullRepresentation.qml:216
+#: package/contents/ui/components/HeadingButtons.qml:188
 #, kde-format
-msgctxt "Do not disturb until app has finished (reason)"
-msgid "While %1 is active (%2)"
-msgstr "כל עוד %1 פעיל (%2)"
+msgid "Close"
+msgstr "סגירה"
 
-#: package/contents/ui/FullRepresentation.qml:218
-#, kde-format
-msgctxt "Do not disturb until app has finished"
-msgid "While %1 is active"
-msgstr "כל עוד %1 פעיל"
-
-#: package/contents/ui/FullRepresentation.qml:224
-#, kde-format
-msgctxt "Do not disturb because external mirrored screens connected"
-msgid "Screens are mirrored"
-msgstr "המסכים משוקפים"
-
-#: package/contents/ui/FullRepresentation.qml:432
-#, kde-format
-msgid "Close Group"
-msgstr "סגירת קבוצה"
-
-#: package/contents/ui/FullRepresentation.qml:577
-#, kde-format
-msgid "Show Fewer"
-msgstr "להציג פחות"
-
-#: package/contents/ui/FullRepresentation.qml:579
-#, kde-format
-msgctxt "Expand to show n more notifications"
-msgid "Show %1 More"
-msgstr "להציג עוד %1"
-
-#: package/contents/ui/FullRepresentation.qml:620
-#: package/contents/ui/main.qml:105
-#, kde-format
-msgid "No unread notifications"
-msgstr "אין התראות שלא נקראו"
-
-#: package/contents/ui/FullRepresentation.qml:635
-#: package/contents/ui/main.qml:79
-#, kde-format
-msgid "Notification service not available"
-msgstr "שירות התראות לא זמין"
-
-#: package/contents/ui/FullRepresentation.qml:637
-#, kde-format
-msgctxt "Vendor and product name"
-msgid "Notifications are currently provided by '%1 %2'"
-msgstr "התראות מסופקות על ידי ‚%1 %2’"
-
-#: package/contents/ui/JobDetails.qml:34
+#: package/contents/ui/components/JobDetails.qml:34
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/JobDetails.qml:105
+#: package/contents/ui/components/JobDetails.qml:105
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 מתוך %2"
 
-#: package/contents/ui/JobDetails.qml:109
+#: package/contents/ui/components/JobDetails.qml:109
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -202,7 +182,7 @@ msgstr[1] "%2 מתוך שני קבצים"
 msgstr[2] "%2 מתוך %1 קבצים"
 msgstr[3] "%2 מתוך %1 קבצים"
 
-#: package/contents/ui/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:112
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -212,7 +192,7 @@ msgstr[1] "%2 מתוך שתי תיקיות"
 msgstr[2] "%2 מתוך %1 תיקיות"
 msgstr[3] "%2 מתוך %1 תיקיות"
 
-#: package/contents/ui/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:115
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -222,7 +202,7 @@ msgstr[1] "%2 מתוך שני פריטים"
 msgstr[2] "%2 מתוך %1 פריטים"
 msgstr[3] "%2 מתוך %1 פריטים"
 
-#: package/contents/ui/JobDetails.qml:123
+#: package/contents/ui/components/JobDetails.qml:123
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -231,7 +211,7 @@ msgstr[1] "שני קבצים"
 msgstr[2] "%1 קבצים"
 msgstr[3] "%1 קבצים"
 
-#: package/contents/ui/JobDetails.qml:125
+#: package/contents/ui/components/JobDetails.qml:125
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -240,7 +220,7 @@ msgstr[1] "שתי תיקיות"
 msgstr[2] "%1 תיקיות"
 msgstr[3] "%1 תיקיות"
 
-#: package/contents/ui/JobDetails.qml:127
+#: package/contents/ui/components/JobDetails.qml:127
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -249,52 +229,185 @@ msgstr[1] "שני פריטים"
 msgstr[2] "%1 פריטים"
 msgstr[3] "%1 פריטים"
 
-#: package/contents/ui/JobDetails.qml:144
+#: package/contents/ui/components/JobDetails.qml:144
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1 לשנייה"
 
-#: package/contents/ui/JobItem.qml:165
+#: package/contents/ui/components/JobItem.qml:67
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
 msgstr "%1%"
 
-#: package/contents/ui/JobItem.qml:183
+#: package/contents/ui/components/JobItem.qml:85
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "פרטים"
 
-#: package/contents/ui/JobItem.qml:200
+#: package/contents/ui/components/JobItem.qml:104
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "להמשיך"
 
-#: package/contents/ui/JobItem.qml:201
+#: package/contents/ui/components/JobItem.qml:105
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "מושהה"
 
-#: package/contents/ui/JobItem.qml:213
+#: package/contents/ui/components/JobItem.qml:119
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "ביטול"
 
-#: package/contents/ui/JobItem.qml:244
-#: package/contents/ui/ThumbnailStrip.qml:165
+#: package/contents/ui/components/JobItem.qml:151
+#: package/contents/ui/components/ThumbnailStrip.qml:160
 #, kde-format
 msgid "More Options…"
 msgstr "אפשרויות נוספות…"
 
-#: package/contents/ui/JobItem.qml:272
+#: package/contents/ui/components/JobItem.qml:179
 #, kde-format
 msgid "Open"
 msgstr "פתיחה"
+
+#: package/contents/ui/components/NotificationReplyField.qml:35
+#, kde-format
+msgctxt "Text field placeholder"
+msgid "Type a reply…"
+msgstr "נא להקליד תגובה…"
+
+#: package/contents/ui/components/NotificationReplyField.qml:62
+#, kde-format
+msgctxt "@action:button"
+msgid "Send"
+msgstr "שליחה"
+
+#: package/contents/ui/components/Summary.qml:35
+#, kde-format
+msgctxt "Job name, e.g. Copying is paused"
+msgid "%1 (Paused)"
+msgstr "%1 (מושהית)"
+
+#: package/contents/ui/components/Summary.qml:40
+#, kde-format
+msgctxt "Job name, e.g. Copying has failed"
+msgid "%1 (Failed)"
+msgstr "%1 (נכשלה)"
+
+#: package/contents/ui/components/Summary.qml:42
+#, kde-format
+msgid "Job Failed"
+msgstr "המשימה נכשלה"
+
+#: package/contents/ui/components/Summary.qml:46
+#, kde-format
+msgctxt "Job name, e.g. Copying has finished"
+msgid "%1 (Finished)"
+msgstr "%1 (הסתיימה)"
+
+#: package/contents/ui/components/Summary.qml:48
+#, kde-format
+msgid "Job Finished"
+msgstr "המשימה הסתיימה"
+
+#: package/contents/ui/FullRepresentation.qml:71
+#, kde-format
+msgid "Do not disturb"
+msgstr "לא להפריע"
+
+#: package/contents/ui/FullRepresentation.qml:113
+#, kde-format
+msgid "For 1 hour"
+msgstr "לשעה"
+
+#: package/contents/ui/FullRepresentation.qml:118
+#, kde-format
+msgid "For 4 hours"
+msgstr "ל־4 שעות"
+
+#: package/contents/ui/FullRepresentation.qml:127
+#, kde-format
+msgid "Until this evening"
+msgstr "עד הערב"
+
+#: package/contents/ui/FullRepresentation.qml:137
+#, kde-format
+msgid "Until tomorrow morning"
+msgstr "עד מחר בבוקר"
+
+#: package/contents/ui/FullRepresentation.qml:149
+#, kde-format
+msgid "Until Monday"
+msgstr "עד יום שני"
+
+#: package/contents/ui/FullRepresentation.qml:156
+#, kde-format
+msgid "Until manually disabled"
+msgstr "עד להשבתה ידנית"
+
+#: package/contents/ui/FullRepresentation.qml:206
+#, kde-format
+msgctxt "Do not disturb until date"
+msgid "Automatically ends: %1"
+msgstr "מסתיים אוטומטית: %1"
+
+#: package/contents/ui/FullRepresentation.qml:218
+#, kde-format
+msgctxt "Do not disturb until app has finished (reason)"
+msgid "While %1 is active (%2)"
+msgstr "כל עוד %1 פעיל (%2)"
+
+#: package/contents/ui/FullRepresentation.qml:220
+#, kde-format
+msgctxt "Do not disturb until app has finished"
+msgid "While %1 is active"
+msgstr "כל עוד %1 פעיל"
+
+#: package/contents/ui/FullRepresentation.qml:226
+#, kde-format
+msgctxt "Do not disturb because external mirrored screens connected"
+msgid "Screens are mirrored"
+msgstr "המסכים משוקפים"
+
+#: package/contents/ui/FullRepresentation.qml:538
+#, kde-format
+msgid "Close Group"
+msgstr "סגירת קבוצה"
+
+#: package/contents/ui/FullRepresentation.qml:560
+#, kde-format
+msgid "Show Fewer"
+msgstr "להציג פחות"
+
+#: package/contents/ui/FullRepresentation.qml:562
+#, kde-format
+msgctxt "Expand to show n more notifications"
+msgid "Show %1 More"
+msgstr "להציג עוד %1"
+
+#: package/contents/ui/FullRepresentation.qml:591
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgid "No unread notifications"
+msgstr "אין התראות שלא נקראו"
+
+#: package/contents/ui/FullRepresentation.qml:606
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Notification service not available"
+msgstr "שירות התראות לא זמין"
+
+#: package/contents/ui/FullRepresentation.qml:608
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2'"
+msgstr "התראות מסופקות על ידי ‚%1 %2’"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
@@ -353,119 +466,6 @@ msgstr "פינוי כל ההתראות"
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "ה&גדרת התראות ופעולות אירועים…"
-
-#: package/contents/ui/NotificationHeader.qml:121
-#, kde-format
-msgctxt "Notification was added less than a minute ago, keep short"
-msgid "Just now"
-msgstr "ממש עכשיו"
-
-#: package/contents/ui/NotificationHeader.qml:127
-#, kde-format
-msgctxt "Notification was added minutes ago, keep short"
-msgid "%1 min ago"
-msgid_plural "%1 min ago"
-msgstr[0] "לפני דקה"
-msgstr[1] "לפני שתי דקות"
-msgstr[2] "לפני %1 דקות"
-msgstr[3] "לפני %1 דקות"
-
-#: package/contents/ui/NotificationHeader.qml:161
-#, kde-format
-msgctxt "seconds remaining, keep short"
-msgid "%1 s remaining"
-msgid_plural "%1 s remaining"
-msgstr[0] "נותרה שנייה"
-msgstr[1] "נותרו שתי שניות"
-msgstr[2] "נותרו %1 שניות"
-msgstr[3] "נותרו %1 שניות"
-
-#: package/contents/ui/NotificationHeader.qml:165
-#, kde-format
-msgctxt "minutes remaining, keep short"
-msgid "%1 min remaining"
-msgid_plural "%1 min remaining"
-msgstr[0] "נותרה דקה"
-msgstr[1] "נותרו שתי דקות"
-msgstr[2] "נותרו %1 דקות"
-msgstr[3] "נותרו %1 דקות"
-
-#: package/contents/ui/NotificationHeader.qml:170
-#, kde-format
-msgctxt "hours remaining, keep short"
-msgid "%1 h remaining"
-msgid_plural "%1 h remaining"
-msgstr[0] "נותרה שעה"
-msgstr[1] "נותרו שעתיים"
-msgstr[2] "נותרו %1 שעות"
-msgstr[3] "נותרו %1 שעות"
-
-#: package/contents/ui/NotificationHeader.qml:190
-#, kde-format
-msgid "Configure"
-msgstr "הגדרה"
-
-#: package/contents/ui/NotificationHeader.qml:207
-#, kde-format
-msgctxt "Opposite of minimize"
-msgid "Restore"
-msgstr "שחזור"
-
-#: package/contents/ui/NotificationHeader.qml:208
-#, kde-format
-msgid "Minimize"
-msgstr "מזעור"
-
-#: package/contents/ui/NotificationHeader.qml:231
-#, kde-format
-msgid "Close"
-msgstr "סגירה"
-
-#: package/contents/ui/NotificationItem.qml:234
-#, kde-format
-msgctxt "Job name, e.g. Copying is paused"
-msgid "%1 (Paused)"
-msgstr "%1 (מושהית)"
-
-#: package/contents/ui/NotificationItem.qml:239
-#, kde-format
-msgctxt "Job name, e.g. Copying has failed"
-msgid "%1 (Failed)"
-msgstr "%1 (נכשלה)"
-
-#: package/contents/ui/NotificationItem.qml:241
-#, kde-format
-msgid "Job Failed"
-msgstr "המשימה נכשלה"
-
-#: package/contents/ui/NotificationItem.qml:245
-#, kde-format
-msgctxt "Job name, e.g. Copying has finished"
-msgid "%1 (Finished)"
-msgstr "%1 (הסתיימה)"
-
-#: package/contents/ui/NotificationItem.qml:247
-#, kde-format
-msgid "Job Finished"
-msgstr "המשימה הסתיימה"
-
-#: package/contents/ui/NotificationItem.qml:391
-#, kde-format
-msgctxt "Reply to message"
-msgid "Reply"
-msgstr "תגובה"
-
-#: package/contents/ui/NotificationReplyField.qml:36
-#, kde-format
-msgctxt "Text field placeholder"
-msgid "Type a reply…"
-msgstr "נא להקליד תגובה…"
-
-#: package/contents/ui/NotificationReplyField.qml:60
-#, kde-format
-msgctxt "@action:button"
-msgid "Send"
-msgstr "שליחה"
 
 #~ msgctxt "A button tooltip; expands the item to show details"
 #~ msgid "Show Details"

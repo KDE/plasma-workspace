@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-30 00:43+0000\n"
+"POT-Creation-Date: 2024-10-24 00:41+0000\n"
 "PO-Revision-Date: 2024-07-30 16:19+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -112,25 +112,25 @@ msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
 msgstr "Añadir nuevo"
 
-#: ui/main.qml:73
+#: ui/main.qml:74
 #, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
 msgstr "Aplicación..."
 
-#: ui/main.qml:80
+#: ui/main.qml:81
 #, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
 msgstr "Guion de inicio de sesión..."
 
-#: ui/main.qml:87
+#: ui/main.qml:88
 #, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
 msgstr "Guion de cierre de sesión..."
 
-#: ui/main.qml:124
+#: ui/main.qml:125
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -139,63 +139,63 @@ msgstr ""
 "%1 no se ha iniciado automáticamente todavía. Los detalles estarán "
 "disponibles tras reiniciar el sistema."
 
-#: ui/main.qml:147
+#: ui/main.qml:148
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "No iniciado automáticamente todavía"
 
-#: ui/main.qml:156
+#: ui/main.qml:157
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Ver propiedades"
 
-#: ui/main.qml:167
+#: ui/main.qml:168
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Eliminar entrada"
 
-#: ui/main.qml:183
+#: ui/main.qml:184
 #, kde-format
 msgid "Applications"
 msgstr "Aplicaciones"
 
-#: ui/main.qml:186
+#: ui/main.qml:187
 #, kde-format
 msgid "Login Scripts"
 msgstr "Guiones de inicio de sesión"
 
-#: ui/main.qml:189
+#: ui/main.qml:190
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Guiones previos al inicio de sesión"
 
-#: ui/main.qml:192
+#: ui/main.qml:193
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Guiones de cierre de sesión"
 
-#: ui/main.qml:201
+#: ui/main.qml:202
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "No hay elementos de inicio automático especificados por el usuario"
 
-#: ui/main.qml:202
+#: ui/main.qml:203
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr ""
 "Pulse el botón <interface>Añadir nuevo</interface> para añadir entradas"
 
-#: ui/main.qml:217
+#: ui/main.qml:218
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Escoja guion de inicio de sesión"
 
-#: ui/main.qml:237
+#: ui/main.qml:238
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Escoja guion de cierre de sesión"
