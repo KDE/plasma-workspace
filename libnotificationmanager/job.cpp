@@ -272,6 +272,11 @@ bool Job::hasDetails() const
     return d->m_hasDetails;
 }
 
+qint64 Job::elapsedTime() const
+{
+    return d->m_elapsedTime;
+}
+
 QUrl Job::descriptionUrl() const
 {
     return d->descriptionUrl();
