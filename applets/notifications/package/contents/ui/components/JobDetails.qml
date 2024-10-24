@@ -12,8 +12,6 @@ import org.kde.kirigami as Kirigami
 
 import org.kde.coreaddons as KCoreAddons
 
-import QtCharts 2.0
-import QtQuick.Controls
 
 GridLayout {
     id: detailsGrid
@@ -23,21 +21,6 @@ GridLayout {
     columns: 2
     rowSpacing: Math.round(Kirigami.Units.smallSpacing / 2)
     columnSpacing: Kirigami.Units.smallSpacing
-
-    property int maxSpeed: 0
-    property int minSpeed: 0
-
-    property double initialProcessedSize
-    property double initialTime
-    property int averageSpeed
-
-    property LineSeries speedSerie : LineSeries {}
-
-    Component.onCompleted: () => {
-        initialProcessedSize = jobDetails.processedBytes;
-        speedSerie.append(initialProcessedSize, jobDetails.speed / 1000000);
-        initialTime = new Date().getTime();
-    }
 
     // once you use Layout.column/Layout.row *all* of the items in the Layout have to use them
     Repeater {
@@ -163,115 +146,5 @@ GridLayout {
         font: Kirigami.Theme.smallFont
         textFormat: Text.PlainText
         visible: text !== ""
-    }
-
-    Connections {
-        target: jobDetails
-
-        function onProcessedBytesChanged() {
-            var speedMBperSec = jobDetails.speed / 1000000;
-            speedSerie.append(jobDetails.processedBytes, speedMBperSec);
-
-            if (speedMBperSec > maxSpeed) {
-                maxSpeed = speedMBperSec;
-            }
-
-            if (minSpeed == 0 || minSpeed > speedMBperSec ) {
-                minSpeed = speedMBperSec;
-            }
-
-            if (averageLine.count > 0) {
-                averageLine.removePoints(0, 2);
-            }
-            averageSpeed = (jobDetails.processedBytes - initialProcessedSize) / (new Date().getTime() - initialTime) / 1000;
-            averageLine.append(valueAxis.min, averageSpeed);
-            averageLine.append(valueAxis.max, averageSpeed);
-        }
-    }
-
-    ChartView {
-        id: chart
-        antialiasing: true
-        Layout.column: 0
-        Layout.columnSpan: 2
-        Layout.row: 2 + 4 + 1
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        Layout.preferredHeight: 400
-        backgroundColor: Kirigami.Theme.alternateBackgroundColor
-
-        legend.visible: false
-
-        ValueAxis {
-            id: valueAxis
-            min: initialProcessedSize
-            max: jobDetails.totalBytes
-            labelsVisible: false
-        }
-
-        ValueAxis {
-            id: dataAxis
-            min: Math.max(Math.min(averageSpeed - 5, minSpeed - 5), 0)
-            max: Math.max(averageSpeed, maxSpeed) + 2
-            labelsColor: Kirigami.Theme.textColor
-            shadesVisible: false
-        }
-
-        AreaSeries {
-            axisX: valueAxis
-            axisY: dataAxis
-            borderColor: Kirigami.Theme.highligtedTextColor
-            borderWidth: 1
-
-            upperSeries: speedSerie
-            color: Kirigami.Theme.highlightColor
-
-            onHovered: (point, hovered) => {
-                if (!hovered) {
-                    id_tooltip.visible = false;
-                    return;
-                }
-                var p = chart.mapToPosition(point)
-                var text = i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
-                                           KCoreAddons.Format.formatByteSize(point.y * 1000000))
-                id_tooltip.x = p.x
-                id_tooltip.y = p.y - id_tooltip.height
-                id_tooltip.text = text
-                id_tooltip.visible = true
-            }
-        }
-
-        ToolTip {
-            id: id_tooltip
-            contentItem: Text {
-                color: Kirigami.Theme.textColor
-                text: id_tooltip.text
-            }
-            background: Rectangle {
-                color: Kirigami.Theme.backgroundColor
-                border.color: Kirigami.Theme.alternateBackgroundColor
-            }
-        }
-
-        LineSeries {
-            id: averageLine
-            useOpenGL: true
-
-            color: "red"
-            width: 3
-
-            axisX: valueAxis
-            axisY: dataAxis
-
-            onHovered: (point) => {
-                var p = chart.mapToPosition(point)
-                var text = i18ndc("plasma_applet_org.kde.plasma.notifications", "Average Bytes per second", "Average: %1/s",
-                                           KCoreAddons.Format.formatByteSize(averageSpeed * 1000000))
-                id_tooltip.x = p.x
-                id_tooltip.y = p.y - id_tooltip.height
-                id_tooltip.text = text
-                id_tooltip.visible = true
-            }
-        }
     }
 }
