@@ -55,6 +55,7 @@ public:
     void setProcessedAmount(quint64 amount, const QString &unit);
     void setPercent(uint percent);
     void setSpeed(quint64 bytesPerSecond);
+    void setElapsedTime(qint64 elapsedTime);
     void setInfoMessage(const QString &infoMessage);
     bool setDescriptionField(uint number, const QString &name, const QString &value);
     void clearDescriptionField(uint number);
@@ -147,6 +148,7 @@ private:
     QUrl m_destUrl;
 
     qulonglong m_speed = 0;
+    qint64 m_elapsedTime = 0;
 
     qulonglong m_processedBytes = 0;
     qulonglong m_processedFiles = 0;
