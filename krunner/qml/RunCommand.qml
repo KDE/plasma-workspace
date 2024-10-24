@@ -332,18 +332,8 @@ ColumnLayout {
         Milou.ResultsView {
             id: results
             queryString: root.query
+            queryField: queryField
             singleRunner: root.singleRunner
-
-            Keys.onPressed: event => {
-                if (event.text !== "" && !event.accepted) {
-                    // This prevents unprintable control characters from being inserted
-                    if (!/[\x00-\x1F\x7F]/.test(event.text)) {
-                        queryField.text += event.text;
-                    }
-                    queryField.cursorPosition = queryField.text.length
-                    queryField.focus = true;
-                }
-            }
 
             Keys.onEscapePressed: {
                 runnerWindow.visible = false
@@ -355,7 +345,7 @@ ColumnLayout {
                 }
             }
 
-            onUpdateQueryString: {
+            onUpdateQueryString: (text, cursorPosition) => {
                 queryField.text = text
                 queryField.select(cursorPosition, root.query.length)
                 queryField.focus = true;
