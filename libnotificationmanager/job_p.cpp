@@ -154,7 +154,8 @@ void JobPrivate::updateHasDetails()
         || m_processedItems > 0
         || !m_descriptionValue1.isEmpty()
         || !m_descriptionValue2.isEmpty()
-        || m_speed > 0;
+        || m_speed > 0
+        || m_elapsedTime > 0;
     // clang-format on
 
     if (m_hasDetails != hasDetails) {
@@ -377,6 +378,12 @@ void JobPrivate::setSpeed(quint64 bytesPerSecond)
     updateHasDetails();
 }
 
+void JobPrivate::setElapsedTime(qint64 elapsedTime)
+{
+    updateField(elapsedTime, m_elapsedTime, &Job::elapsedTimeChanged);
+    updateHasDetails();
+}
+
 // NOTE infoMessage isn't supposed to be the "Copying..." heading but e.g. a "Connecting to server..." status message
 // JobViewV1/V2 got that wrong but JobView3 uses "title" and "infoMessage" correctly respectively.
 void JobPrivate::setInfoMessage(const QString &infoMessage)
@@ -475,6 +482,11 @@ void JobPrivate::update(const QVariantMap &properties)
     it = properties.find(QStringLiteral("speed"));
     if (it != end) {
         setSpeed(it->value<qulonglong>());
+    }
+
+    it = properties.find(QStringLiteral("elapsedTime"));
+    if (it != end) {
+        setElapsedTime(it->value<qint64>());
     }
 
     updateFieldFromProperties(properties, QStringLiteral("processedFiles"), m_processedFiles, &Job::processedFilesChanged);
