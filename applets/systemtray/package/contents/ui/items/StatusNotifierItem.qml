@@ -26,16 +26,24 @@ AbstractItem {
         parent: taskIcon.iconContainer
         anchors.fill: iconItem.parent
 
+        function appendSymbolic(name: string) {
+            if (!name.endsWith("-symbolic")) {
+                return name + "-symbolic"
+            }
+        }
         source: {
+            let icon = ""
             if (model.status === PlasmaCore.Types.NeedsAttentionStatus) {
-                if (model.AttentionIcon) {
+                if (model.AttentionIconName) {
+                    return appendSymbolic(model.AttentionIconName)
+                } else if (model.AttentionIcon) {
                     return model.AttentionIcon
                 }
-                if (model.AttentionIconName) {
-                    return model.AttentionIconName
-                }
             }
-            return model.Icon || model.IconName
+            if (model.IconName) {
+                return appendSymbolic(model.IconName)
+            }
+            return model.Icon
         }
         active: taskIcon.containsMouse
     }
