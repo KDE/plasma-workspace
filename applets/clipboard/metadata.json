@@ -184,6 +184,7 @@
     "X-KDE-Keywords[pl]": "klipper,schowek,kopiuj,wklej",
     "X-KDE-Keywords[sl]": "klipper,odložišče,kopiraj,prilepi",
     "X-KDE-Keywords[sv]": "klipper,klippbord,kopiera,klistra in",
+    "X-KDE-Keywords[uk]": "klipper,clipboard,copy,paste,кліпер,буфер,копіювання,вставлення",
     "X-KDE-Keywords[x-test]": "xxklipperxx,xxclipboardxx,xxcopyxx,xxpastexx",
     "X-Plasma-API": "declarativeappletscript",
     "X-Plasma-MainScript": "ui/clipboard.qml",
