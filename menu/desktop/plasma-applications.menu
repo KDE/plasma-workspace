@@ -406,12 +406,6 @@
 			<Category>Documentation</Category>
 		</Include>
 	</Menu>
-	<Include>
-		<And>
-			<Category>KDE</Category>
-			<Category>Core</Category>
-		</And>
-	</Include>
 	<DefaultMergeDirs/>
 	<MergeFile>applications-kmenuedit.menu</MergeFile>
 </Menu>
