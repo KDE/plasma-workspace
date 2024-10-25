@@ -10,6 +10,7 @@ set(notificationmanager_LIB_SRCS
     serverinfo.cpp
     settings.cpp
     mirroredscreenstracker.cpp
+    fullscreentracker.cpp
     notifications.cpp
     notification.cpp
 
@@ -87,6 +88,7 @@ target_link_libraries(notificationmanager
         KF6::Notifications # Inhibition summary
         KF6::KIOFileWidgets
         Plasma::Plasma
+        PW::LibTaskManager
         KF6::Screen
         KF6::Service
 )
