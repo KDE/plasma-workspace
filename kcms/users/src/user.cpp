@@ -7,7 +7,6 @@
 */
 
 #include "user.h"
-#include "config-users.h"
 #include "kcmusers_debug.h"
 #include "user_interface.h"
 #include <KLocalizedString>
@@ -110,23 +109,21 @@ bool User::faceValid() const
 
 void User::setFace(const QUrl &value)
 {
-    if (value.toString().contains(PLASMA_AVATAR_PATH) || value.toString().contains(u"/var/lib/AccountsService/icons")) {
-        mFace = value;
-    } else {
-        const QString croppedImagesCache = QString::fromUtf8(PLASMA_FACE_CACHE_PATH);
-        const QString faceFile = croppedImagesCache + QString::number(QRandomGenerator::global()->bounded(8192)) + u".png";
+    if (mFace == value) {
+        return;
+    }
 
-        if (!QDir(croppedImagesCache).exists()) {
-            QDir().mkpath(croppedImagesCache);
+    mFace = value;
+
+    if (mFaceCrop) {
+        QImage face(value.toLocalFile().remove("file://"_L1));
+        mFaceFile = std::make_unique<QTemporaryFile>();
+        if (mFaceFile->open()) {
+            face = face.copy(mFaceCrop.value());
+            face.save(mFaceFile.get(), "PNG");
+            mFace = QUrl("file://"_L1 + mFaceFile->fileName());
         }
-
-        QFile tempFile(faceFile);
-
-        QImageWriter writer(faceFile);
-        QImage image(value.toLocalFile());
-        image = image.copy(mFaceCrop);
-        writer.write(image);
-        mFace = QUrl(QString(u"file://" + faceFile));
+        mFaceCrop.reset(); // crop was applied. reset it to nullopt again so the next face gets its own crop (or none)
     }
 
     mFaceValid = QFile::exists(value.path());
@@ -346,7 +343,7 @@ void User::setFaceCrop(const QRect &rect)
 
 QRect User::faceCrop() const
 {
-    return mFaceCrop;
+    return mFaceCrop.value_or(QRect());
 }
 
 UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface,
