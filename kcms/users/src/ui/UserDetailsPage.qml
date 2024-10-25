@@ -23,8 +23,6 @@ KCM.SimpleKCM {
     property bool overrideImage: false
     property url oldImage
 
-    implicitWidth: Kirigami.Units.gridUnit * 30
-    implicitHeight: Kirigami.Units.gridUnit * 27
     focus: true
 
     Connections {

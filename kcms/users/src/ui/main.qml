@@ -19,12 +19,9 @@ KCM.ScrollViewKCM {
 
     title: i18n("Users")
 
-    sidebarMode: true
+    sidebarMode: !Kirigami.Settings.isMobile
     LayoutMirroring.enabled: Qt.application.layoutDirection === Qt.RightToLeft
     LayoutMirroring.childrenInherit: true
-
-    implicitWidth: Kirigami.Units.gridUnit * 15
-    implicitHeight: Kirigami.Units.gridUnit * 27
 
     actions: Kirigami.Action {
             icon.name: "list-add-symbolic"
@@ -32,7 +29,7 @@ KCM.ScrollViewKCM {
             Accessible.name: i18nc("@action:button", "Add New User…")
 
             onTriggered: {
-                kcm.pop();
+                root.prepareChangePage();
                 kcm.push("CreateUser.qml");
                 userList.currentIndex = -1;
             }
@@ -41,6 +38,13 @@ KCM.ScrollViewKCM {
     // QML cannot update avatar image when override. By increasing this number and
     // appending it to image source with '?', we force avatar to reload
     property int avatarVersion: 0
+
+    function prepareChangePage() {
+        // Only pop page in sidebar mode
+        if (root.sidebarMode) {
+            kcm.pop();
+        }
+    }
 
     function createUser(userName, realName, password, isAdministrator) {
         if (kcm.createUser(userName, realName, password, isAdministrator)) {
@@ -61,8 +65,13 @@ KCM.ScrollViewKCM {
     }
 
     Component.onCompleted: {
-        kcm.columnWidth = Kirigami.Units.gridUnit * 15
-        kcm.push("UserDetailsPage.qml", { user: kcm.userModel.getLoggedInUser() })
+        if (!Kirigami.Settings.isMobile) {
+            // Set two column mode
+            kcm.columnWidth = Kirigami.Units.gridUnit * 15
+
+            // Push users page on desktop for two pane layout
+            kcm.push("UserDetailsPage.qml", { user: kcm.userModel.getLoggedInUser() })
+        }
     }
 
     view: ListView {
@@ -71,6 +80,9 @@ KCM.ScrollViewKCM {
         property int indexToActivate: -1
 
         model: kcm.userModel
+
+        // Don't select a user by default on mobile, since it's a single column layout
+        currentIndex: Kirigami.Settings.isMobile ? -1 : 0
 
         onCountChanged: {
             if (indexToActivate >= 0) {
@@ -109,7 +121,7 @@ KCM.ScrollViewKCM {
 
             onClicked: {
                 userList.currentIndex = index;
-                kcm.pop();
+                root.prepareChangePage();
                 kcm.push("UserDetailsPage.qml", { user });
             }
 
