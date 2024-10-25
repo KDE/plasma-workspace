@@ -1,4 +1,13 @@
 [Desktop Entry]
 Type=Directory
 Name=Help
+Name[ca]=Ajuda
+Name[es]=Ayuda
+Name[ka]=დახმარება
+Name[nl]=Help
+Name[sl]=Pomoč
+Name[tr]=Yardım
+Name[uk]=Довідка
+Name[x-test]=xxHelpxx
+Name[zh_TW]=說明
 Icon=help-about
