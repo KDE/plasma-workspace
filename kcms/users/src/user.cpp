@@ -122,6 +122,8 @@ void User::setFace(const QUrl &value)
             face = face.copy(mFaceCrop.value());
             face.save(mFaceFile.get(), "PNG");
             mFace = QUrl("file://"_L1 + mFaceFile->fileName());
+        } else {
+            mError = i18nc("@info", "Failed to crop image: %1", mFaceFile->errorString());
         }
         mFaceCrop.reset(); // crop was applied. reset it to nullopt again so the next face gets its own crop (or none)
     }
@@ -295,7 +297,8 @@ void User::apply()
                                 opt(mOriginalEmail != mEmail, mEmail),
                                 opt(mOriginalRealName != mRealName, mRealName),
                                 opt(mOriginalFace != mFace, mFace.toString(QUrl::PreferLocalFile).remove("file://"_L1)),
-                                opt(mOriginalAdministrator != mAdministrator, mAdministrator ? 1 : 0));
+                                opt(mOriginalAdministrator != mAdministrator, mAdministrator ? 1 : 0),
+                                mError);
     connect(
         job,
         &UserApplyJob::result,
@@ -351,7 +354,8 @@ UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIfa
                            std::optional<QString> email,
                            std::optional<QString> realname,
                            std::optional<QString> icon,
-                           std::optional<int> type)
+                           std::optional<int> type,
+                           std::optional<QString> error)
     : KJob()
     , m_name(name)
     , m_email(email)
@@ -359,6 +363,7 @@ UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIfa
     , m_icon(icon)
     , m_type(type)
     , m_dbusIface(dbusIface)
+    , m_error(error)
 {
 }
 
@@ -370,6 +375,13 @@ void UserApplyJob::start()
     // Therefore make a blocking call to SetAccountType first to trigger the auth dialog. If the user declines don't attempt to write anything else
     // This avoids settings any data when the user thinks they aborted the transaction, see https://bugs.kde.org/show_bug.cgi?id=425036
     // Subsequent calls do not trigger the auth dialog again
+
+    if (m_error) {
+        setErrorText(m_error.value());
+        KJob::setError(static_cast<int>(Error::UserFacing));
+        emitResult();
+        return;
+    }
 
     if (m_type.has_value()) {
         auto setAccount = m_dbusIface->SetAccountType(*m_type);

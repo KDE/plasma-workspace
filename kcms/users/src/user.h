@@ -30,7 +30,8 @@ public:
                  std::optional<QString> email,
                  std::optional<QString> realname,
                  std::optional<QString> icon,
-                 std::optional<int> type);
+                 std::optional<int> type,
+                 std::optional<QString> error);
     void start() override;
 
     enum class Error {
@@ -50,6 +51,7 @@ private:
     std::optional<QString> m_icon;
     std::optional<int> m_type;
     QPointer<OrgFreedesktopAccountsUserInterface> m_dbusIface;
+    std::optional<QString> m_error;
 };
 
 class User : public QObject
@@ -147,4 +149,5 @@ private:
     bool mOriginalLoggedIn = false;
     QDBusObjectPath mPath;
     QPointer<OrgFreedesktopAccountsUserInterface> m_dbusIface;
+    std::optional<QString> mError;
 };
