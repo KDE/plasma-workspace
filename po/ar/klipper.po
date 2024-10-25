@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-22 00:41+0000\n"
-"PO-Revision-Date: 2024-10-10 08:39+0400\n"
+"PO-Revision-Date: 2024-10-24 06:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -366,13 +366,13 @@ msgstr "فشل إنشاء رمز الاستجابة السريعة"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "اطوِ"
 
 #: declarative/qml/ClipboardItemDelegate.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "وسع"
 
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format

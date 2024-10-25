@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2024-10-25 00:41+0000\n"
 "PO-Revision-Date: 2024-02-11 18:57\n"
 "Last-Translator: Darafei Praliaskouski <symbol@akeeri.tk>\n"
 "Language-Team: Belarusian\n"
@@ -22,7 +22,7 @@ msgstr ""
 "po\n"
 "X-Crowdin-File-ID: 10790\n"
 
-#: krdb.cpp:260
+#: krdb.cpp:262
 #, kde-format
 msgid ""
 "# created by KDE Plasma, %1\n"
