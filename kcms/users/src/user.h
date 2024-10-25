@@ -136,7 +136,7 @@ private:
     QString mOriginalEmail;
     QUrl mFace;
     QUrl mOriginalFace;
-    QRect mFaceCrop = QRect(0, -1, 0, -1);
+    QRect mFaceCrop = QRect(0, 0, 0, 0);
     bool mAdministrator = false;
     bool mOriginalAdministrator = false;
     bool mFaceValid = false;
