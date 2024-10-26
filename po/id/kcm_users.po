@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-12 00:40+0000\n"
+"POT-Creation-Date: 2024-10-26 00:42+0000\n"
 "PO-Revision-Date: 2024-09-30 21:39+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -68,7 +68,7 @@ msgstr "Perangkat terputus."
 msgid "An unknown error has occurred."
 msgstr "Sebuah galat tak diketahui telah terjadi."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:183
+#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Change Password"
 msgstr "Ubah Sandi"
@@ -143,27 +143,27 @@ msgstr "Tak Usah Diubah"
 msgid "Create User"
 msgstr "Buat Pengguna"
 
-#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:133
+#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:131
 #, kde-format
 msgid "Name:"
 msgstr "Nama:"
 
-#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:141
+#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Username:"
 msgstr "Nama pengguna:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:158
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:156
 #, kde-format
 msgid "Standard"
 msgstr "Standar"
 
-#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:159
+#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:157
 #, kde-format
 msgid "Administrator"
 msgstr "Administrator"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:148
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:146
 #, kde-format
 msgid "Account type:"
 msgstr "Tipe akun:"
@@ -376,19 +376,19 @@ msgstr "Tidak ada sidik jari yang ditambahkan"
 msgid "Users"
 msgstr "Pengguna"
 
-#: src/ui/main.qml:31
+#: src/ui/main.qml:28
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
 msgstr "Tambahkan Baru..."
 
-#: src/ui/main.qml:32
+#: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "Tambahkan Pengguna Baru..."
 
-#: src/ui/main.qml:108
+#: src/ui/main.qml:120
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"
@@ -557,12 +557,12 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "Ikon penampung avatar pengguna"
 
-#: src/ui/UserDetailsPage.qml:112
+#: src/ui/UserDetailsPage.qml:110
 #, kde-format
 msgid "Change avatar"
 msgstr "Ubah avatar"
 
-#: src/ui/UserDetailsPage.qml:169
+#: src/ui/UserDetailsPage.qml:167
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -574,32 +574,32 @@ msgstr ""
 "autentikasi tidak akan mungkin dilakukan atau memerlukan penggunaan kata "
 "sandi root yang tidak aman."
 
-#: src/ui/UserDetailsPage.qml:177
+#: src/ui/UserDetailsPage.qml:175
 #, kde-format
 msgid "Email address:"
 msgstr "Alamat surel:"
 
-#: src/ui/UserDetailsPage.qml:206
+#: src/ui/UserDetailsPage.qml:204
 #, kde-format
 msgid "Delete files"
 msgstr "Hapus file"
 
-#: src/ui/UserDetailsPage.qml:213
+#: src/ui/UserDetailsPage.qml:211
 #, kde-format
 msgid "Keep files"
 msgstr "Jaga file-file"
 
-#: src/ui/UserDetailsPage.qml:220
+#: src/ui/UserDetailsPage.qml:218
 #, kde-format
 msgid "Delete User…"
 msgstr "Hapus Pengguna..."
 
-#: src/ui/UserDetailsPage.qml:232
+#: src/ui/UserDetailsPage.qml:230
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Konfigurasikan Autentikasi Sidik Jari..."
 
-#: src/ui/UserDetailsPage.qml:264
+#: src/ui/UserDetailsPage.qml:262
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
