@@ -2,7 +2,10 @@
 Type=Directory
 Name=Help
 Name[ca]=Ajuda
+Name[ca@valencia]=Ajuda
 Name[es]=Ayuda
+Name[he]=עזרה
+Name[it]=Aiuto
 Name[ka]=დახმარება
 Name[nl]=Help
 Name[sl]=Pomoč
