@@ -29,7 +29,13 @@ class ScreenPoolModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    enum ScreenPoolModelRoles { ScreenIdRole = Qt::UserRole + 1, ScreenNameRole, ContainmentsRole, PrimaryRole, EnabledRole };
+    enum ScreenPoolModelRoles {
+        ScreenIdRole = Qt::UserRole + 1,
+        ScreenNameRole,
+        ContainmentsRole,
+        PrimaryRole,
+        EnabledRole
+    };
 
 public:
     explicit ScreenPoolModel(ShellCorona *corona, QObject *parent = nullptr);

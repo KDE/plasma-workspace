@@ -24,7 +24,12 @@ class OptionsModel : public QAbstractListModel
     Q_PROPERTY(int binaryDialect READ binaryDialect WRITE setBinaryDialect NOTIFY binaryDialectChanged)
 
 public:
-    enum Roles { Name = Qt::DisplayRole, Subtitle, Example, Page };
+    enum Roles {
+        Name = Qt::DisplayRole,
+        Subtitle,
+        Example,
+        Page
+    };
     explicit OptionsModel(KCMRegionAndLang *parent);
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;

@@ -27,7 +27,13 @@ class LocaleListModel : public QAbstractListModel
     Q_OBJECT
     Q_PROPERTY(int selectedConfig READ selectedConfig WRITE setSelectedConfig NOTIFY selectedConfigChanged)
 public:
-    enum RoleName { DisplayName = Qt::DisplayRole, LocaleName, FlagIcon, Example, FilterRole };
+    enum RoleName {
+        DisplayName = Qt::DisplayRole,
+        LocaleName,
+        FlagIcon,
+        Example,
+        FilterRole
+    };
     explicit LocaleListModel(QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

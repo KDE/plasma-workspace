@@ -40,7 +40,10 @@ private:
         return mLayoutsList;
     }
 
-    enum DBusData { Layout, LayoutsList };
+    enum DBusData {
+        Layout,
+        LayoutsList
+    };
 
     template<class T>
     void requestDBusData(QDBusPendingReply<T> pendingReply, T &out, void (KeyboardLayout::*notify)());

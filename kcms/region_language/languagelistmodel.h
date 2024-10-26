@@ -23,7 +23,11 @@ class LanguageListModel : public QAbstractListModel
     Q_PROPERTY(QString metric READ metric NOTIFY exampleChanged)
     Q_PROPERTY(bool isPreviewExample READ isPreviewExample WRITE setIsPreviewExample NOTIFY isPreviewExampleChanged)
 public:
-    enum Roles { NativeName = Qt::UserRole + 1, LanguageCode, Flag };
+    enum Roles {
+        NativeName = Qt::UserRole + 1,
+        LanguageCode,
+        Flag
+    };
     explicit LanguageListModel(QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

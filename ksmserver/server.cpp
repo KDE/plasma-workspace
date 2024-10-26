@@ -98,8 +98,7 @@ namespace
 size_t fileNumberLimit()
 {
     static auto limit = []() -> size_t {
-        struct rlimit limit {
-        };
+        struct rlimit limit{};
         if (getrlimit(RLIMIT_NOFILE, &limit) != 0) {
             const auto err = errno;
             qCWarning(KSMSERVER) << "Failed to getrlimit:" << strerror(err);

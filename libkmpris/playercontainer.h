@@ -25,38 +25,35 @@ inline constexpr QLatin1String MPRIS2_PREFIX{"org.mpris.MediaPlayer2."};
 namespace LoopStatus
 {
 QML_ELEMENT
-KMPRIS_EXPORT Q_NAMESPACE //
-    enum KMPRIS_EXPORT Status : std::uint32_t {
-        Unknown = 0,
-        None,
-        Playlist,
-        Track,
-    };
+KMPRIS_EXPORT Q_NAMESPACE enum KMPRIS_EXPORT Status : std::uint32_t {
+    Unknown = 0,
+    None,
+    Playlist,
+    Track,
+};
 KMPRIS_EXPORT Q_ENUM_NS(Status)
 }
 
 namespace ShuffleStatus
 {
 QML_ELEMENT
-KMPRIS_EXPORT Q_NAMESPACE //
-    enum KMPRIS_EXPORT Status : std::uint32_t {
-        Unknown = 0,
-        Off,
-        On,
-    };
+KMPRIS_EXPORT Q_NAMESPACE enum KMPRIS_EXPORT Status : std::uint32_t {
+    Unknown = 0,
+    Off,
+    On,
+};
 KMPRIS_EXPORT Q_ENUM_NS(Status)
 }
 
 namespace PlaybackStatus
 {
 QML_ELEMENT
-KMPRIS_EXPORT Q_NAMESPACE //
-    enum KMPRIS_EXPORT Status : std::uint32_t {
-        Unknown = 0,
-        Stopped,
-        Playing,
-        Paused,
-    };
+KMPRIS_EXPORT Q_NAMESPACE enum KMPRIS_EXPORT Status : std::uint32_t {
+    Unknown = 0,
+    Stopped,
+    Playing,
+    Paused,
+};
 KMPRIS_EXPORT Q_ENUM_NS(Status)
 }
 

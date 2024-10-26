@@ -114,7 +114,11 @@ private:
         return ret;
     }
 
-    enum class Category { Name, GenericName, Comment };
+    enum class Category {
+        Name,
+        GenericName,
+        Comment
+    };
     qreal increaseMatchRelavance(const QString &serviceProperty, const QList<QStringView> &strList, Category category)
     {
         // Increment the relevance based on all the words (other than the first) of the query list

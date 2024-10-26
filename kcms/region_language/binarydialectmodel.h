@@ -13,7 +13,11 @@ class BinaryDialectModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
-    enum RoleName { DisplayName = Qt::DisplayRole, Example, Description };
+    enum RoleName {
+        DisplayName = Qt::DisplayRole,
+        Example,
+        Description
+    };
     explicit BinaryDialectModel(QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

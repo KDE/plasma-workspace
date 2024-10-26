@@ -50,7 +50,14 @@ private:
     class WindecoColors
     {
     public:
-        enum Role { ActiveForeground = 0, ActiveBackground = 1, InactiveForeground = 2, InactiveBackground = 3, ActiveBlend = 4, InactiveBlend = 5 };
+        enum Role {
+            ActiveForeground = 0,
+            ActiveBackground = 1,
+            InactiveForeground = 2,
+            InactiveBackground = 3,
+            ActiveBlend = 4,
+            InactiveBlend = 5
+        };
 
         WindecoColors()
         {

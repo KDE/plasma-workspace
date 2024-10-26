@@ -12,6 +12,18 @@
 namespace KCM_RegionAndLang
 {
 Q_NAMESPACE_EXPORT()
-enum SettingType { Lang, Numeric, Time, Currency, Measurement, PaperSize, Address, NameStyle, PhoneNumbers, BinaryDialect, Language };
+enum SettingType {
+    Lang,
+    Numeric,
+    Time,
+    Currency,
+    Measurement,
+    PaperSize,
+    Address,
+    NameStyle,
+    PhoneNumbers,
+    BinaryDialect,
+    Language
+};
 Q_ENUM_NS(SettingType)
 } // namespace KCM_RegionAndLang
