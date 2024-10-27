@@ -1,16 +1,24 @@
 [Desktop Entry]
 Type=Directory
 Name=Help
+Name[bg]=Помощ
 Name[ca]=Ajuda
 Name[ca@valencia]=Ajuda
+Name[da]=Hjælp
 Name[es]=Ayuda
+Name[eu]=Laguntza
+Name[fr]=Aide
 Name[he]=עזרה
+Name[ia]=Adjuta
 Name[it]=Aiuto
 Name[ka]=დახმარება
 Name[nl]=Help
+Name[pa]=ਮਦਦ
+Name[pl]=Pomoc
 Name[sl]=Pomoč
 Name[tr]=Yardım
 Name[uk]=Довідка
 Name[x-test]=xxHelpxx
+Name[zh_CN]=帮助
 Name[zh_TW]=說明
 Icon=help-about
