@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:42+0000\n"
 "PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -450,27 +450,27 @@ msgstr "Anstataŭigi Poŝon"
 msgid "Add to Clipboard"
 msgstr "Aldoni al Poŝo"
 
-#: editactiondialog.cpp:122
+#: editactiondialog.cpp:126
 #, kde-format
 msgid "Command"
 msgstr "Komando"
 
-#: editactiondialog.cpp:124
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Output"
 msgstr "Eligo"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Description"
 msgstr "Priskribo"
 
-#: editactiondialog.cpp:179
+#: editactiondialog.cpp:183
 #, kde-format
 msgid "Action Properties"
 msgstr "Agaj Propraĵoj"
 
-#: editactiondialog.cpp:191
+#: editactiondialog.cpp:195
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -484,17 +484,17 @@ msgstr ""
 "de la ago aperas en la ŝprucmenuo de Klipper; se unu el ili estas elektita, "
 "la komando estas plenumita."
 
-#: editactiondialog.cpp:203
+#: editactiondialog.cpp:207
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Enigi ŝablonon por kongrui kun la tondujo"
 
-#: editactiondialog.cpp:205
+#: editactiondialog.cpp:209
 #, kde-format
 msgid "Match pattern:"
 msgstr "Kongrua ŝablono:"
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:212
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -506,22 +506,22 @@ msgstr ""
 "url=\"https://en.wikipedia.org/wiki/Regular_expression\">Vikipedia enskribo</"
 "link> por ĉi tiu etoso."
 
-#: editactiondialog.cpp:219
+#: editactiondialog.cpp:223
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Enigi priskribon por la ago"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:83
+#: editactiondialog.cpp:224 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Priskribo:"
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:227
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Inkluzivi en aŭtomata ŝprucfenestro"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -538,28 +538,28 @@ msgstr ""
 "inkluzivitaj se la ŝprucfenestro estas aktivigita permane per la klavkomando "
 "<shortcut>%1</shortcut>."
 
-#: editactiondialog.cpp:262
+#: editactiondialog.cpp:266
 #, kde-format
 msgid "Add Command..."
 msgstr "Aldoni Komandon..."
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:271
 #, kde-format
 msgid "Edit Command..."
 msgstr "Redakti Komandon..."
 
-#: editactiondialog.cpp:273
+#: editactiondialog.cpp:277
 #, kde-format
 msgid "Delete Command"
 msgstr "Forigi Komandon"
 
-#: editactiondialog.cpp:388
+#: editactiondialog.cpp:392
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Ĉu forigi la elektitan komandon <resource>%1</resource>?"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:393
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Konfirmi Forigan Komandon"

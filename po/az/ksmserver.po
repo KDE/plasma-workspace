@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:42+0000\n"
 "PO-Revision-Date: 2024-08-13 16:03+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -156,13 +156,13 @@ msgstr ""
 "Kilid ekranını dəstəklənmədən başladılır. Kilid ekranını yalnız başqa "
 "komponentlər təmin etdikdə tələb olunur."
 
-#: server.cpp:775
+#: server.cpp:774
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[naməlum]"
 
-#: server.cpp:798
+#: server.cpp:797
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -175,7 +175,7 @@ msgstr ""
 "sessiyanın resurslarını ən çox istifadə edən üç tətbiq göstərilir\n"
 " %1"
 
-#: server.cpp:1070
+#: server.cpp:1069
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

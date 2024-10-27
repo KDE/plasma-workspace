@@ -19,7 +19,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:42+0000\n"
 "PO-Revision-Date: 2024-10-23 11:12+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -466,27 +466,27 @@ msgstr "Remplacer le presse-papier"
 msgid "Add to Clipboard"
 msgstr "Ajouter au presse-papier"
 
-#: editactiondialog.cpp:122
+#: editactiondialog.cpp:126
 #, kde-format
 msgid "Command"
 msgstr "Commande"
 
-#: editactiondialog.cpp:124
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Output"
 msgstr "Sortie"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Description"
 msgstr "Description"
 
-#: editactiondialog.cpp:179
+#: editactiondialog.cpp:183
 #, kde-format
 msgid "Action Properties"
 msgstr "Propriétés de l'action"
 
-#: editactiondialog.cpp:191
+#: editactiondialog.cpp:195
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -501,17 +501,17 @@ msgstr ""
 "le menu contextuel de Klipper. Si l'une d'entre elles est sélectionnée, la "
 "commande est exécutée."
 
-#: editactiondialog.cpp:203
+#: editactiondialog.cpp:207
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Saisir un schéma pour faire une correspondance avec le presse-papier"
 
-#: editactiondialog.cpp:205
+#: editactiondialog.cpp:209
 #, kde-format
 msgid "Match pattern:"
 msgstr "Schéma de correspondance :"
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:212
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -523,22 +523,22 @@ msgstr ""
 "d'informations, veuillez consulter <link url=\"https://en.wikipedia.org/wiki/"
 "Regular_expression\">la page de Wikipedia</link> concernant ce sujet."
 
-#: editactiondialog.cpp:219
+#: editactiondialog.cpp:223
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Saisir une description de l'action"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:83
+#: editactiondialog.cpp:224 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Description :"
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:227
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Inclure un menu contextuel automatique"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -556,28 +556,28 @@ msgstr ""
 "contextuelle est activée manuellement grâce au raccourci clavier <shortcut>"
 "%1</shortcut>."
 
-#: editactiondialog.cpp:262
+#: editactiondialog.cpp:266
 #, kde-format
 msgid "Add Command..."
 msgstr "Ajouter une commande..."
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:271
 #, kde-format
 msgid "Edit Command..."
 msgstr "Modifier une commande..."
 
-#: editactiondialog.cpp:273
+#: editactiondialog.cpp:277
 #, kde-format
 msgid "Delete Command"
 msgstr "Supprimer une commande"
 
-#: editactiondialog.cpp:388
+#: editactiondialog.cpp:392
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Supprimer la commande sectionnée <resource>%1</resource> ?"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:393
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Confirmer une commande de suppression"

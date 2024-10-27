@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:42+0000\n"
 "PO-Revision-Date: 2023-08-06 11:28+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -460,27 +460,27 @@ msgstr "Nahradiť schránku"
 msgid "Add to Clipboard"
 msgstr "Pridať do schránky"
 
-#: editactiondialog.cpp:122
+#: editactiondialog.cpp:126
 #, kde-format
 msgid "Command"
 msgstr "Príkaz"
 
-#: editactiondialog.cpp:124
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Output"
 msgstr "Výstup"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Description"
 msgstr "Popis"
 
-#: editactiondialog.cpp:179
+#: editactiondialog.cpp:183
 #, kde-format
 msgid "Action Properties"
 msgstr "Vlastnosti akcie"
 
-#: editactiondialog.cpp:191
+#: editactiondialog.cpp:195
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -494,17 +494,17 @@ msgstr ""
 "sa zobrazia vo vyskakovacej ponuke aplikácie Klipper; ak je vybraný jeden z "
 "nich, vykoná sa sa vykoná príkaz."
 
-#: editactiondialog.cpp:203
+#: editactiondialog.cpp:207
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Zadajte vzor, ktorý sa má porovnať so schránkou"
 
-#: editactiondialog.cpp:205
+#: editactiondialog.cpp:209
 #, kde-format
 msgid "Match pattern:"
 msgstr "Vzor zhody:"
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:212
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -516,22 +516,22 @@ msgstr ""
 "\"https://en.wikipedia.org/wiki/Regular_expression\">Stránke Wikipedie </"
 "link> pre túto tému."
 
-#: editactiondialog.cpp:219
+#: editactiondialog.cpp:223
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Zadajte popis akcie"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:83
+#: editactiondialog.cpp:224 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Popis:"
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:227
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Zahrnúť do automatického vyskakovacieho okna"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -547,28 +547,28 @@ msgstr ""
 "vyskakovacom okne, ale budú zahrnuté, ak je vyskakovacie okno aktivované "
 "ručne pomocou klávesovej skratky <shortcut>%1</shortcut>."
 
-#: editactiondialog.cpp:262
+#: editactiondialog.cpp:266
 #, kde-format
 msgid "Add Command..."
 msgstr "Pridať príkaz..."
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:271
 #, kde-format
 msgid "Edit Command..."
 msgstr "Upraviť príkaz..."
 
-#: editactiondialog.cpp:273
+#: editactiondialog.cpp:277
 #, kde-format
 msgid "Delete Command"
 msgstr "Odstrániť príkaz"
 
-#: editactiondialog.cpp:388
+#: editactiondialog.cpp:392
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Odstrániť vybraný príkaz <resource>%1</resource>?"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:393
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Potvrdenie príkazu na odstránenie"

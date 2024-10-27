@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:42+0000\n"
 "PO-Revision-Date: 2024-10-05 08:13+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -444,27 +444,27 @@ msgstr "Ersätt klippbordet"
 msgid "Add to Clipboard"
 msgstr "Lägg till på klippbordet"
 
-#: editactiondialog.cpp:122
+#: editactiondialog.cpp:126
 #, kde-format
 msgid "Command"
 msgstr "Kommando"
 
-#: editactiondialog.cpp:124
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Output"
 msgstr "Utmatning"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Description"
 msgstr "Beskrivning"
 
-#: editactiondialog.cpp:179
+#: editactiondialog.cpp:183
 #, kde-format
 msgid "Action Properties"
 msgstr "Åtgärdsegenskaper"
 
-#: editactiondialog.cpp:191
+#: editactiondialog.cpp:195
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -478,17 +478,17 @@ msgstr ""
 "<interface>kommandon</interface> i Klippers sammanhangsberoende meny. Om ett "
 "av dem väljes, utförs kommandot."
 
-#: editactiondialog.cpp:203
+#: editactiondialog.cpp:207
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr "Ange ett mönster att matcha mot klippbordet"
 
-#: editactiondialog.cpp:205
+#: editactiondialog.cpp:209
 #, kde-format
 msgid "Match pattern:"
 msgstr "Matchningsmönster:"
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:212
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -500,22 +500,22 @@ msgstr ""
 "url=\"https://sv.wikipedia.org/wiki/Reguljära_uttryck\">Wikipedia-artikeln</"
 "link> om ämnet."
 
-#: editactiondialog.cpp:219
+#: editactiondialog.cpp:223
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "Ange en beskrivning av åtgärden"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:83
+#: editactiondialog.cpp:224 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "Beskrivning:"
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:227
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "Inkludera i automatisk sammanhangsberoende meny"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -532,28 +532,28 @@ msgstr ""
 "åtgärdsmeny, men de inkluderas om den sammanhangsberoende åtgärdsmenyn "
 "snabbtangenten <shortcut>%1</shortcut>."
 
-#: editactiondialog.cpp:262
+#: editactiondialog.cpp:266
 #, kde-format
 msgid "Add Command..."
 msgstr "Lägg till kommando..."
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:271
 #, kde-format
 msgid "Edit Command..."
 msgstr "Redigera kommando..."
 
-#: editactiondialog.cpp:273
+#: editactiondialog.cpp:277
 #, kde-format
 msgid "Delete Command"
 msgstr "Ta bort kommando"
 
-#: editactiondialog.cpp:388
+#: editactiondialog.cpp:392
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "Tar bort det markerade kommandot <resource>%1</resource>?"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:393
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "Bekräfta borttagningskommando"

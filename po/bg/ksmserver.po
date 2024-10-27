@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:41+0000\n"
+"POT-Creation-Date: 2024-10-27 00:42+0000\n"
 "PO-Revision-Date: 2024-09-29 14:39+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -157,13 +157,13 @@ msgstr ""
 "Стартира без поддръжка на заключен екран. Необходимо е само ако друг "
 "компонент осигурява заключването на екрана."
 
-#: server.cpp:775
+#: server.cpp:774
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[неизвестно]"
 
-#: server.cpp:798
+#: server.cpp:797
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -176,7 +176,7 @@ msgstr ""
 "ресурси в сесията:\n"
 "%1"
 
-#: server.cpp:1070
+#: server.cpp:1069
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

@@ -8,15 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
-"PO-Revision-Date: 2024-03-11 07:43-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"POT-Creation-Date: 2024-10-27 00:42+0000\n"
+"PO-Revision-Date: 2024-10-25 23:34-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "\n"
 
@@ -36,15 +36,12 @@ msgid "Clipboard history:"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਦਾ ਅਤੀਤ:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " ਐਂਟਰੀ"
-msgstr[1] " ਐਂਟਰੀਆਂ"
+msgstr[0] "%v ਐਂਟਰੀ"
+msgstr[1] "%v ਐਂਟਰੀਆਂ"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -126,15 +123,12 @@ msgid "Exclude Windows..."
 msgstr "ਵਿੰਡੋਆਂ ਤੋਂ ਬਿਨਾਂ..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " ਸਕਿੰਟ"
-msgstr[1] " ਸਕਿੰਟ"
+msgstr[0] "%v ਸਕਿੰਟ"
+msgstr[1] "%v ਸਕਿੰਟ"
 
 #: configdialog.cpp:295
 #, kde-format
@@ -280,7 +274,7 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR ਕੋਡ"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
@@ -296,28 +290,27 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "ਕੋਡ 39"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "ਕੋਡ 93"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "ਕੋਡ 128"
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਜੋੜੋ"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਵਾਪਸ"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "QR ਕੋਡ ਦੀ ਕਿਸਮ ਨੂੰ ਬਦਲੋ"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
@@ -328,25 +321,24 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "QR ਕੋਡ ਬਣਾਉਣਾ ਫੇਲ੍ਹ ਹੈ"
 
 #: declarative/qml/ClipboardItemDelegate.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "ਸਮੇਟੋ"
 
 #: declarative/qml/ClipboardItemDelegate.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "ਫੈਲਾਓ"
 
 #: declarative/qml/ClipboardMenu.qml:186
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ"
+msgstr "ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ"
 
 #: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
@@ -359,55 +351,49 @@ msgid "Clipboard is empty"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਖਾਲੀ ਹੈ"
 
 #: declarative/qml/DelegateToolButtons.qml:31
-#, fuzzy, kde-format
-#| msgid "<new action>"
+#, kde-format
 msgid "Invoke action"
-msgstr "<ਨਵੀਂ ਕਾਰਵਾਈ>"
+msgstr "ਸ਼ਾਮਲ ਕਾਰਵਾਈ"
 
 #: declarative/qml/DelegateToolButtons.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "…ਬਾਰਕੋਡ ਵੇਖੋ(&S)"
+msgstr "QR ਕੋਡ ਵੇਖਾਓ"
 
 #: declarative/qml/DelegateToolButtons.qml:33
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgid "Edit contents"
-msgstr "ਸਮੱਗਰੀ ਸੋਧ"
+msgstr "ਸਮੱਗਰੀਆਂ ਨੂੰ ਸੋਧੋ"
 
 #: declarative/qml/DelegateToolButtons.qml:34
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "ਅਤੀਤ ਤੋਂ ਚੁਣੀ ਆਈਟਮ ਲਈ"
+msgstr "ਅਤੀਤ ਤੋਂ ਹਟਾਓ"
 
 #: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "ਲਿਖਤ ਸੋਧ ਖੇਤਰ"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "ਸੰਭਾਲੋ"
 
 #: declarative/qml/EditPage.qml:88
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "ਰੱਦ ਕਰੋ(&C)"
+msgstr "ਰੱਦ ਕਰੋ"
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -424,27 +410,27 @@ msgstr "ਕਲਿੱਪਬੋਰਡ ਬਦਲੋ"
 msgid "Add to Clipboard"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਵਿੱਚ ਜੋੜੋ"
 
-#: editactiondialog.cpp:122
+#: editactiondialog.cpp:126
 #, kde-format
 msgid "Command"
 msgstr "ਕਮਾਂਡ"
 
-#: editactiondialog.cpp:124
+#: editactiondialog.cpp:128
 #, kde-format
 msgid "Output"
 msgstr "ਆਉਟਪੁੱਟ"
 
-#: editactiondialog.cpp:126
+#: editactiondialog.cpp:130
 #, kde-format
 msgid "Description"
 msgstr "ਵਰਣਨ"
 
-#: editactiondialog.cpp:179
+#: editactiondialog.cpp:183
 #, kde-format
 msgid "Action Properties"
 msgstr "ਐਕਸ਼ਨ ਦੀਆਂ ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ"
 
-#: editactiondialog.cpp:191
+#: editactiondialog.cpp:195
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -454,17 +440,17 @@ msgid ""
 "command is executed."
 msgstr ""
 
-#: editactiondialog.cpp:203
+#: editactiondialog.cpp:207
 #, kde-format
 msgid "Enter a pattern to match against the clipboard"
 msgstr ""
 
-#: editactiondialog.cpp:205
+#: editactiondialog.cpp:209
 #, kde-format
 msgid "Match pattern:"
 msgstr "ਮਿਲਦਾ ਪੈਟਰਨ:"
 
-#: editactiondialog.cpp:208
+#: editactiondialog.cpp:212
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -473,22 +459,22 @@ msgid ""
 "entry</link> for this topic."
 msgstr ""
 
-#: editactiondialog.cpp:219
+#: editactiondialog.cpp:223
 #, kde-format
 msgid "Enter a description for the action"
 msgstr "ਕਾਰਵਾਈ ਲਈ ਜਾਣਕਾਰੀ ਦਿਓ"
 
-#: editactiondialog.cpp:220 editcommanddialog.cpp:83
+#: editactiondialog.cpp:224 editcommanddialog.cpp:83
 #, kde-format
 msgid "Description:"
 msgstr "ਵਰਣਨ:"
 
-#: editactiondialog.cpp:223
+#: editactiondialog.cpp:227
 #, kde-format
 msgid "Include in automatic popup"
 msgstr "ਆਪਣੇ-ਆਪ ਪੌਪ-ਅੱਪ ਸਮੇਤ"
 
-#: editactiondialog.cpp:227
+#: editactiondialog.cpp:231
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -499,28 +485,28 @@ msgid ""
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
 
-#: editactiondialog.cpp:262
+#: editactiondialog.cpp:266
 #, kde-format
 msgid "Add Command..."
 msgstr "ਕਮਾਂਡ ਨੂੰ ਜੋੜੋ…"
 
-#: editactiondialog.cpp:267
+#: editactiondialog.cpp:271
 #, kde-format
 msgid "Edit Command..."
 msgstr "ਕਮਾਂਡ ਨੂੰ ਸੋਧੋ…"
 
-#: editactiondialog.cpp:273
+#: editactiondialog.cpp:277
 #, kde-format
 msgid "Delete Command"
 msgstr "ਕਮਾਂਡ ਨੂੰ ਹਟਾਓ"
 
-#: editactiondialog.cpp:388
+#: editactiondialog.cpp:392
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
 msgstr "ਚੁਣੀ <resource>%1</resource> ਕਮਾਂਡ ਨੂੰ ਹਟਾਉਣਾ ਹੈ?"
 
-#: editactiondialog.cpp:389
+#: editactiondialog.cpp:393
 #, kde-format
 msgid "Confirm Delete Command"
 msgstr "ਕਮਾਂਡ ਨੂੰ ਹਟਾਉਣ ਦੀ ਤਸਦੀਕ"
@@ -873,10 +859,9 @@ msgid ""
 msgstr ""
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ"
+msgstr "ਕਲਿੱਪਬੋਰਡ ਪੌਪਅੱਪ"
 
 #: urlgrabber.cpp:200
 #, kde-format

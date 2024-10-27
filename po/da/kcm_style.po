@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-07-08 12:25+0200\n"
+"PO-Revision-Date: 2024-10-26 10:55+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
 "Language: da\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: gtkpage.cpp:58
@@ -115,9 +115,7 @@ msgid "Secondary toolbar label"
 msgstr "Etiket på sekundær værktøjslinje"
 
 #: ui/EffectSettingsPopup.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Icon and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
 msgstr "Konfigurér ikoner og værktøjslinjer"
@@ -203,10 +201,9 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK temaarkiv (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Configure Icons and Toolbars"
+#, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr "Indstil ikoner og værktøjslinjer"
+msgstr "Indstil ikoner og værktøjslinjer…"
 
 #: ui/main.qml:73
 #, kde-format

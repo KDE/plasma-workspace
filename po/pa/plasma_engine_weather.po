@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-18 00:41+0000\n"
-"PO-Revision-Date: 2024-03-11 07:41-0500\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-25 23:04-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: bbcukmet_i18n.dat:1
@@ -1790,7 +1790,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing rain or rain"
-msgstr ""
+msgstr "ਜਮਾਉ ਮੀਂਹ ਜਾਂ ਮੀਂਹ"
 
 #: envcan_i18n.dat:192
 #, kde-format
@@ -3843,9 +3843,7 @@ msgid "Low Drifting Snow"
 msgstr ""
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Clear"
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
 msgstr "ਆਮ ਤੌਰ ਉੱਤੇ ਸਾਫ਼"
@@ -4112,7 +4110,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Fog"
-msgstr ""
+msgstr "ਬਰਫ਼ ਧੁੰਦ"
 
 #: noaa_i18n.dat:214
 #, kde-format
@@ -4142,7 +4140,7 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Rain"
-msgstr ""
+msgstr "ਬਰਫ਼ਬਾਰੀ ਮੀਂਹ"
 
 #: noaa_i18n.dat:220
 #, kde-format
@@ -4721,12 +4719,10 @@ msgid "Drizzle Likely"
 msgstr "ਬੂੰਦਾਬਾਂਦੀ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:319
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "light rain"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain"
-msgstr "ਹਲਕਾ ਮੀਂਹ"
+msgstr "ਮੀਂਹ ਦੀ ਹਲਕੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:320
 #, kde-format
@@ -4925,12 +4921,10 @@ msgid "Slight Chance Showers And Thunderstorms"
 msgstr "ਗਰਜ਼-ਤੂਫ਼ਾਨ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance Thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "ਗਰਜ਼-ਤੂਫ਼ਾਨ ਦੀ ਸੰਭਾਵਨਾ"
+msgstr "ਛਿੱਟਿਆਂ ਤੇ ਗਰਜ਼-ਤੂਫ਼ਾਨ ਦੀ ਸੰਭਾਵਨਾ"
 
 #: noaa_i18n.dat:361
 #, fuzzy, kde-format

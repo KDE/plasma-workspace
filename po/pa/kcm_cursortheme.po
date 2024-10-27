@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2024-02-05 07:32-0600\n"
-"Last-Translator: A S Alam <aalam@punlinux.org>\n"
-"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-10-25 23:38-0500\n"
+"Last-Translator: A S Alam <aman@punlinux.org>\n"
+"Language-Team: pa\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
@@ -94,6 +94,8 @@ msgid ""
 "session, without accidentally setting it to one that is either not "
 "available, or which is already set."
 msgstr ""
+"ਇਹ ਟੂਲ ਤੁਹਾਨੂੰ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਮਾਊਸ ਕਰਸਰ ਥੀਮ ਸੈੱਟ ਕਰਨ ਲਈ ਸਹਾਇਕ ਹੈ, ਬਿਨਾਂ ਗਲਤੀ ਨਾਲ "
+"ਅਜਿਹੀ ਸੈਟਿੰਗ ਕਰਨ ਦੇ, ਜੋ ਮੌਜੂਦ ਨਾ ਹੋਵੇ ਜਾਂ ਜੋ ਪਹਿਲਾਂ ਹੀ ਸੈੱਟ ਹੋਵੇ।"
 
 #: plasma-apply-cursortheme.cpp:69
 #, kde-format
@@ -106,7 +108,7 @@ msgstr ""
 #, kde-format
 msgid ""
 "Show all the themes available on the system (and which is the current theme)"
-msgstr ""
+msgstr "ਸਿਸਟਮ ਉੱਤੇ ਮੌਜੂਦ ਸਭ ਥੀਮ ਵੇਖਾਓ (ਅਤੇ ਜੋ ਵੀ ਮੌਜੂਦਾ ਥੀਮ ਹੈ)"
 
 #: plasma-apply-cursortheme.cpp:71
 #, kde-format
@@ -118,7 +120,7 @@ msgstr "ਥੀਮ ਦੇ ਮੂਲ ਆਕਾਰ ਦੀ ਬਜਾਏ ਖਾਸ �
 msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
-msgstr ""
+msgstr "ਮੰਗਿਆ ਥੀਮ \"%1\" ਪਹਿਲਾਂ ਹੀ ਮੌਜੂਦਾ ਪਲਾਜ਼ਮਾ ਸ਼ੈਸ਼ਨ ਲਈ ਥੀਮ ਵਜੋਂ ਸੈੱਟ ਹੈ।"
 
 #: plasma-apply-cursortheme.cpp:103
 #, kde-format
