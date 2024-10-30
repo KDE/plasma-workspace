@@ -1,0 +1,56 @@
+# Translation of oom-notifier.po to Catalan
+# Copyright (C) 2024 This_file_is_part_of_KDE
+# This file is distributed under the license LGPL version 2.1 or
+# version 3 or later versions approved by the membership of KDE e.V.
+#
+# SPDX-FileCopyrightText: 2024 Josep M. Ferrer <txemaq@gmail.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"PO-Revision-Date: 2024-10-29 10:11+0100\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
+"Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
+"Language: ca\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
+
+#: module.cpp:65
+#, kde-format
+msgctxt "@title"
+msgid "Memory Shortage Avoided"
+msgstr "S'ha evitat una escassetat de memòria"
+
+#: module.cpp:68
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<command>%1</command> has been terminated by the Linux kernel because the "
+"system is low on memory. Consider closing unused applications or browser "
+"tabs."
+msgstr ""
+"El nucli del Linux ha terminat <command>%1</command> perquè el sistema tenia "
+"poca memòria. Considereu tancar les aplicacions no usades o les pestanyes "
+"del navegador."
+
+#: module.cpp:74
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The background service <command>%1</command> has been terminated by the "
+"Linux kernel because the system is low on memory. Consider closing unused "
+"applications or browser tabs."
+msgstr ""
+"El nucli del Linux ha terminat el servei en segon pla <command>%1</command> "
+"perquè el sistema tenia poca memòria. Considereu tancar les aplicacions no "
+"usades o les pestanyes del navegador."
+
+#: module.cpp:82
+#, kde-format
+msgctxt "@action"
+msgid "Restart Application"
+msgstr "Torna a iniciar l'aplicació"

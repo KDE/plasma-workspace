@@ -1,0 +1,54 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# giovanni <g.sora@tiscali.it>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"PO-Revision-Date: 2024-10-29 10:18+0100\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.1\n"
+
+#: module.cpp:65
+#, kde-format
+msgctxt "@title"
+msgid "Memory Shortage Avoided"
+msgstr "Carentia de memoria evitate"
+
+#: module.cpp:68
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<command>%1</command> has been terminated by the Linux kernel because the "
+"system is low on memory. Consider closing unused applications or browser "
+"tabs."
+msgstr ""
+"<command>%1</command> has essite terminate per le kernel de Linux proque le "
+"systema es basse in memoria. Considera clauder applicationes non usate o "
+"schedas del navigator."
+
+#: module.cpp:74
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The background service <command>%1</command> has been terminated by the "
+"Linux kernel because the system is low on memory. Consider closing unused "
+"applications or browser tabs."
+msgstr ""
+"Le servicio de fundo  <command>%1</command> has essite terminate per le "
+"kernel de Linux proque le systema es basse in memoria. Considera clauder "
+"applicationes non usate o schedas del navigator."
+
+#: module.cpp:82
+#, kde-format
+msgctxt "@action"
+msgid "Restart Application"
+msgstr "Re-Initia Application"

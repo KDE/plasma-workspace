@@ -1,0 +1,54 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2024 Emir SARI <emir_sari@icloud.com>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"PO-Revision-Date: 2024-10-29 15:49+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 24.11.70\n"
+
+#: module.cpp:65
+#, kde-format
+msgctxt "@title"
+msgid "Memory Shortage Avoided"
+msgstr "Bellek Sıkıntısı Önlendi"
+
+#: module.cpp:68
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<command>%1</command> has been terminated by the Linux kernel because the "
+"system is low on memory. Consider closing unused applications or browser "
+"tabs."
+msgstr ""
+"<komut>%1</komut>, sistemde bellek yetersiz olduğu için Linux çekirdeği "
+"tarafından sonlandırıldı. Kullanılmayan uygulamaları veya tarayıcı "
+"sekmelerini kapatmayı düşünün."
+
+#: module.cpp:74
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The background service <command>%1</command> has been terminated by the "
+"Linux kernel because the system is low on memory. Consider closing unused "
+"applications or browser tabs."
+msgstr ""
+"<komut>%1</komut> arka plan hizmeti, sistemde bellek yetersiz olduğu için "
+"Linux çekirdeği tarafından sonlandırıldı. Kullanılmayan uygulamaları veya "
+"tarayıcı sekmelerini kapatmayı düşünün."
+
+#: module.cpp:82
+#, kde-format
+msgctxt "@action"
+msgid "Restart Application"
+msgstr "Uygulamayı Yeniden Başlat"
