@@ -1,7 +1,31 @@
 {
     "KPlugin": {
         "Description": "Informs when applications get terminated to prevent out of memory conditions",
-        "Name": "Out of Memory Notifier"
+        "Description[bg]": "Информира, когато приложенията бъдат прекратени, за да се предотвратят условия на липса на памет",
+        "Description[ca@valencia]": "Informa quan es termina una aplicació per a evitar condicions d'exhauriment de memòria",
+        "Description[ca]": "Informa quan es termina una aplicació per a evitar condicions d'exhauriment de memòria",
+        "Description[es]": "Informa cuando se cierran aplicaciones para evitar situaciones de falta de memoria",
+        "Description[he]": "מודיע כאשר יישומים מושמדים כדי למנוע מצבים בהם ינצלו את כל הזיכרון",
+        "Description[ia]": "informa quando applicationes es terminate per prevenir conditiones de fin de memoria (forsa de memoria)",
+        "Description[ka]": "გაგაფრთხილებთ, როცა აპლიკაციები ძალით დასრულდება მეხსიერების რაოდენობასთან დაკავშირებული პრობლემების გამო",
+        "Description[nl]": "Informeert wanneer toepassingen beëindigd worden om condities van geen geheugen meer te voorkomen",
+        "Description[sl]": "Obvesti, ko se aplikacije prekinejo, da se preprečijo pogoji pomanjkanja pomnilnika",
+        "Description[tr]": "Uygulamalar var olan belleğin tükenmesinden ötürü sonlandırıldığında bildirir",
+        "Description[uk]": "Інформує про переривання роботи програм для запобігання нестачі пам'яті",
+        "Description[x-test]": "xxInforms when applications get terminated to prevent out of memory conditionsxx",
+        "Name": "Out of Memory Notifier",
+        "Name[bg]": "Известие за недостиг на памет",
+        "Name[ca@valencia]": "Notificador de memòria exhaurida",
+        "Name[ca]": "Notificador de memòria exhaurida",
+        "Name[es]": "Notificador de falta de memoria",
+        "Name[he]": "מודיע על ניצול הזיכרון במלואו",
+        "Name[ia]": "Notificator de Foras de Memoria",
+        "Name[ka]": "მეხსიერების გადავსების გაფრთხილება",
+        "Name[nl]": "Kennisgever van geen geheugen meer",
+        "Name[sl]": "Obvestilo o pomanjkanju pomnilnika",
+        "Name[tr]": "Bellek Tükendi Bildiricisi",
+        "Name[uk]": "Сповіщувач про нестачу пам'яті",
+        "Name[x-test]": "xxOut of Memory Notifierxx"
     },
     "X-KDE-Kded-autoload": true
 }
