@@ -319,12 +319,12 @@ void UKMETIon::getForecast(const QString &source)
 
 void UKMETIon::readSearchData(const QString & /*source*/, const QByteArray &json)
 {
-    QJsonObject jsonDocumentObject = QJsonDocument::fromJson(json).object().value(QStringView(u"response")).toObject();
+    QJsonObject jsonDocumentObject = QJsonDocument::fromJson(json).object().value(u"response").toObject();
 
     if (jsonDocumentObject.isEmpty()) {
         return;
     }
-    QJsonValue resultsVariant = jsonDocumentObject.value(QStringView(u"locations"));
+    QJsonValue resultsVariant = jsonDocumentObject.value(u"locations");
 
     if (resultsVariant.isUndefined()) {
         // this is a response from an auto=true query
@@ -335,10 +335,10 @@ void UKMETIon::readSearchData(const QString & /*source*/, const QByteArray &json
 
     for (const QJsonValue &resultValue : results) {
         QJsonObject result = resultValue.toObject();
-        const QString id = result.value(QStringView(u"id")).toString();
-        const QString name = result.value(QStringView(u"name")).toString();
-        const QString area = result.value(QStringView(u"container")).toString();
-        const QString country = result.value(QStringView(u"country")).toString();
+        const QString id = result.value(u"id").toString();
+        const QString name = result.value(u"name").toString();
+        const QString area = result.value(u"container").toString();
+        const QString country = result.value(u"country").toString();
 
         if (id.isEmpty() || name.isEmpty() || area.isEmpty() || country.isEmpty()) {
             continue;

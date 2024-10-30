@@ -56,7 +56,7 @@ DBusServiceObserver::DBusServiceObserver(const QPointer<SystemTraySettings> &set
 
 void DBusServiceObserver::registerPlugin(const KPluginMetaData &pluginMetaData)
 {
-    const QString dbusactivation = pluginMetaData.value(QStringLiteral("X-Plasma-DBusActivationService"));
+    const QString dbusactivation = pluginMetaData.value(QStringView(u"X-Plasma-DBusActivationService"));
     if (!dbusactivation.isEmpty()) {
         qCDebug(SYSTEM_TRAY) << "Found DBus-able Applet: " << pluginMetaData.pluginId() << dbusactivation;
         QRegularExpression rx = QRegularExpression::fromWildcard(dbusactivation);

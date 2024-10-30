@@ -68,7 +68,7 @@ void KCMInit::runModules(int phase)
 {
     for (const KPluginMetaData &data : std::as_const(m_list)) {
         // see ksmserver's README for the description of the phases
-        int libphase = data.value(QStringLiteral("X-KDE-Init-Phase"), 1);
+        int libphase = data.value(u"X-KDE-Init-Phase", 1);
 
         if (libphase > 1) {
             libphase = 1;

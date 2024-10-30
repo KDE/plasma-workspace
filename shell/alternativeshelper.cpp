@@ -27,7 +27,7 @@ AlternativesHelper::~AlternativesHelper()
 
 QStringList AlternativesHelper::appletProvides() const
 {
-    return m_applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
+    return m_applet->pluginMetaData().value(u"X-Plasma-Provides", QStringList());
 }
 
 QString AlternativesHelper::currentPlugin() const

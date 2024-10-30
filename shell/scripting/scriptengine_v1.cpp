@@ -507,7 +507,7 @@ bool ScriptEngine::V1::loadTemplate(const QString &layout)
     }
 
     auto filter = [&layout](const KPluginMetaData &md) -> bool {
-        return md.pluginId() == layout && md.value(QStringLiteral("X-Plasma-ContainmentCategories"), QStringList()).contains(QLatin1String("panel"));
+        return md.pluginId() == layout && md.value(u"X-Plasma-ContainmentCategories", QStringList()).contains(QLatin1String("panel"));
     };
     QList<KPluginMetaData> offers = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
 

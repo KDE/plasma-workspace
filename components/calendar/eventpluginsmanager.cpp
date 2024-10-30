@@ -140,7 +140,7 @@ EventPluginsManagerPrivate::EventPluginsManagerPrivate()
     const auto plugins = KPluginMetaData::findPlugins(QStringLiteral("plasmacalendarplugins"));
     for (const KPluginMetaData &plugin : plugins) {
         const QString prefix = plugin.fileName().left(plugin.fileName().lastIndexOf(QLatin1Char('/')));
-        const QString configName = plugin.value(QStringLiteral("X-KDE-PlasmaCalendar-ConfigUi"));
+        const QString configName = plugin.value(u"X-KDE-PlasmaCalendar-ConfigUi");
 
         availablePlugins.insert(plugin.pluginId(), {plugin.name(), plugin.description(), plugin.iconName(), prefix + QLatin1Char('/') + configName});
     }

@@ -50,7 +50,7 @@ void TestRunnerModel::initTestCase()
     KConfigGroup pluginsConfig = KSharedConfig::openConfig(QStringLiteral("krunnerrc"))->group(QStringLiteral("Plugins"));
     const auto runners = KRunner::RunnerManager::runnerMetaDataList();
     for (const KPluginMetaData &runner : runners) {
-        if (runner.value(QStringLiteral("X-Plasma-API")).startsWith(QLatin1String("DBus"))) {
+        if (runner.value(u"X-Plasma-API").startsWith(QLatin1String("DBus"))) {
             pluginsConfig.writeEntry(runner.pluginId() + QLatin1String("Enabled"), false);
         }
     }

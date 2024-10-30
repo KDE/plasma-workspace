@@ -142,7 +142,7 @@ void PlasmaAppletItem::setRunning(int count)
 
 QString PlasmaAppletItem::apiVersion() const
 {
-    return m_info.value(QStringLiteral("X-Plasma-API-Minimum-Version"));
+    return m_info.value(u"X-Plasma-API-Minimum-Version");
 }
 
 bool PlasmaAppletItem::isRecent() const
@@ -354,7 +354,7 @@ void PlasmaAppletItemModel::populateModel()
     clear();
 
     auto filter = [this](const KPluginMetaData &plugin) -> bool {
-        const QStringList provides = plugin.value(QStringLiteral("X-Plasma-Provides"), QStringList());
+        const QStringList provides = plugin.value(u"X-Plasma-Provides", QStringList());
 
         if (!m_provides.isEmpty()) {
             const bool providesFulfilled = std::any_of(m_provides.cbegin(), m_provides.cend(), [&provides](const QString &p) {
@@ -366,7 +366,7 @@ void PlasmaAppletItemModel::populateModel()
             }
         }
 
-        if (!plugin.isValid() || plugin.rawData().value(QStringLiteral("NoDisplay")).toBool() || plugin.category() == QLatin1String("Containments")) {
+        if (!plugin.isValid() || plugin.rawData().value(u"NoDisplay").toBool() || plugin.category() == QLatin1String("Containments")) {
             // we don't want to show the hidden category
             return false;
         }
@@ -407,7 +407,7 @@ void PlasmaAppletItemModel::populateModel()
     // Search all packages that have json metadata but not a correct Plasma/Applet and put them at the end: assume they are plasma5 plasmoids
     packages.append(
         KPackage::PackageLoader::self()->findPackages(QString(), QStringLiteral("plasma/plasmoids"), [&filter](const KPluginMetaData &plugin) -> bool {
-            return plugin.value(QStringLiteral("KPackageStructure")) != QStringLiteral("Plasma/Applet") && filter(plugin);
+            return plugin.value(u"KPackageStructure") != u"Plasma/Applet" && filter(plugin);
         }));
 
     for (const KPluginMetaData &plugin : packages) {

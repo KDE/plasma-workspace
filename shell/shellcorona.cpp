@@ -2088,8 +2088,7 @@ void ShellCorona::checkAddPanelAction()
     const QList<KPluginMetaData> panelContainmentPlugins = Plasma::PluginLoader::listContainmentsMetaDataOfType(QStringLiteral("Panel"));
 
     auto filter = [](const KPluginMetaData &md) -> bool {
-        return !md.rawData().value(QStringLiteral("NoDisplay")).toBool()
-            && md.value(QStringLiteral("X-Plasma-ContainmentCategories"), QStringList()).contains(QLatin1String("panel"));
+        return !md.rawData().value(u"NoDisplay").toBool() && md.value(u"X-Plasma-ContainmentCategories", QStringList()).contains(QLatin1String("panel"));
     };
     QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
 
@@ -2145,15 +2144,14 @@ void ShellCorona::populateAddPanelsMenu()
     const QList<KPluginMetaData> panelContainmentPlugins = Plasma::PluginLoader::listContainmentsMetaDataOfType(QStringLiteral("Panel"));
     QMap<QString, QPair<KPluginMetaData, KPluginMetaData>> sorted;
     for (const KPluginMetaData &plugin : panelContainmentPlugins) {
-        if (plugin.rawData().value(QStringLiteral("NoDisplay")).toBool()) {
+        if (plugin.rawData().value(u"NoDisplay").toBool()) {
             continue;
         }
         sorted.insert(plugin.name(), qMakePair(plugin, KPluginMetaData()));
     }
 
     auto filter = [](const KPluginMetaData &md) -> bool {
-        return !md.rawData().value(QStringLiteral("NoDisplay")).toBool()
-            && md.value(QStringLiteral("X-Plasma-ContainmentCategories"), QStringList()).contains(QLatin1String("panel"));
+        return !md.rawData().value(u"NoDisplay").toBool() && md.value(u"X-Plasma-ContainmentCategories", QStringList()).contains(QLatin1String("panel"));
     };
     const QList<KPluginMetaData> templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), filter);
     for (const auto &tpl : templates) {
@@ -2659,7 +2657,7 @@ void ShellCorona::activateLauncherMenu()
 void ShellCorona::activateLauncherMenu(const QString &screenName)
 {
     auto activateLauncher = [](Plasma::Applet *applet) -> bool {
-        const auto provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
+        const auto provides = applet->pluginMetaData().value(u"X-Plasma-Provides", QStringList());
         if (provides.contains(QLatin1String("org.kde.plasma.launchermenu"))) {
             Q_EMIT applet->activated();
             return true;
@@ -2708,7 +2706,7 @@ void ShellCorona::activateTaskManagerEntry(int index)
     auto activateTaskManagerEntryOnContainment = [](const Plasma::Containment *c, int index) {
         const auto &applets = c->applets();
         for (auto *applet : applets) {
-            const auto &provides = applet->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
+            const auto &provides = applet->pluginMetaData().value(u"X-Plasma-Provides", QStringList());
             if (provides.contains(QLatin1String("org.kde.plasma.multitasking"))) {
                 if (QQuickItem *appletInterface = PlasmaQuick::AppletQuickItem::itemForApplet(applet)) {
                     if (auto *metaObject = appletInterface->metaObject()) {

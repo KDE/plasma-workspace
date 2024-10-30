@@ -71,7 +71,7 @@ void HelpRunner::match(RunnerContext &context)
             }
         } else {
             QueryMatch match(this);
-            if (runner->metadata().value(QStringLiteral("X-Plasma-ShowDesciptionInOverview"), false)) {
+            if (runner->metadata().value(u"X-Plasma-ShowDesciptionInOverview", false)) {
                 match.setText(runner->metadata().description());
             } else {
                 match.setText(syntaxes.constFirst().exampleQueries().constFirst());
@@ -80,7 +80,7 @@ void HelpRunner::match(RunnerContext &context)
             match.setIconName(runner->metadata().iconName());
             match.setCategoryRelevance(QueryMatch::CategoryRelevance::Low);
             match.setData(QVariant::fromValue(runner->metadata()));
-            if (!runner->metadata().value(QStringLiteral("X-KDE-ConfigModule")).isEmpty()) {
+            if (!runner->metadata().value(u"X-KDE-ConfigModule").isEmpty()) {
                 match.setActions(m_actionList);
             }
             matches << match;

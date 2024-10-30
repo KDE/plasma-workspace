@@ -365,7 +365,7 @@ void InteractiveConsole::populateTemplatesMenu()
 {
     m_snippetsMenu->clear();
     auto templates = KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/LayoutTemplate"), QString(), [](const KPluginMetaData &metaData) {
-        return metaData.value(QStringLiteral("X-Plasma-Shell")) == qApp->applicationName();
+        return metaData.value(u"X-Plasma-Shell") == qApp->applicationName();
     });
     std::sort(templates.begin(), templates.end(), [](const KPluginMetaData &left, const KPluginMetaData &right) {
         return left.name() < right.name();

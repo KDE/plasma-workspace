@@ -80,7 +80,7 @@ Plasma::Types::ItemStatus BaseModel::calculateEffectiveStatus(bool canRender, Pl
 static QString plasmoidCategoryForMetadata(const KPluginMetaData &metadata)
 {
     Q_ASSERT(metadata.isValid());
-    return metadata.value(QStringLiteral("X-Plasma-NotificationAreaCategory"));
+    return metadata.value(u"X-Plasma-NotificationAreaCategory");
 }
 
 PlasmoidModel::PlasmoidModel(const QPointer<SystemTraySettings> &settings, const QPointer<PlasmoidRegistry> &plasmoidRegistry, QObject *parent)
@@ -92,7 +92,7 @@ PlasmoidModel::PlasmoidModel(const QPointer<SystemTraySettings> &settings, const
 
     const auto appletMetaDataList = m_plasmoidRegistry->systemTrayApplets();
     for (const auto &info : appletMetaDataList) {
-        if (!info.isValid() || info.value(QStringLiteral("X-Plasma-NotificationAreaCategory")).isEmpty()) {
+        if (!info.isValid() || info.value(u"X-Plasma-NotificationAreaCategory").isEmpty()) {
             continue;
         }
         appendRow(info);
