@@ -256,23 +256,7 @@ void ContextMenu::runCommand()
 
 void ContextMenu::startLogout()
 {
-    KConfig config(u"ksmserverrc"_s);
-    const auto group = config.group(u"General"_s);
-    switch (group.readEntry("shutdownType", int(KWorkSpace::ShutdownTypeDefault))) {
-    case int(KWorkSpace::ShutdownTypeHalt):
-        m_session->requestShutdown();
-        break;
-    case int(KWorkSpace::ShutdownTypeReboot):
-        m_session->requestReboot();
-        break;
-    case int(KWorkSpace::ShutdownTypeLogout):
-        m_session->requestLogout();
-        break;
-    case int(KWorkSpace::ShutdownTypeDefault):
-    default:
-        m_session->requestLogoutPrompt();
-        break;
-    }
+    m_session->requestLogoutPrompt();
 }
 
 void ContextMenu::configureDisplays()
