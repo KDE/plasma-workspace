@@ -35,7 +35,7 @@ qt_generate_wayland_protocol_client_sources(org.kde.plasma.notifications
 target_link_libraries(org.kde.plasma.notifications
                       Qt::Gui
                       Qt::Quick # for QQmlParserStatus
-                      KF6::ConfigWidgets # for KStandardAction
+                      KF6::ConfigGui # for KStandardActions
                       KF6::I18n
                       Plasma::Plasma
                       Plasma::PlasmaQuick

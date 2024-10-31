@@ -21,7 +21,7 @@
 #include <KPropertiesDialog>
 #include <KProtocolManager>
 #include <KSharedConfig>
-#include <KStandardAction>
+#include <KStandardActions>
 #include <KUrlMimeData>
 
 #include <KIO/CopyJob> // for KIO::trash
@@ -161,7 +161,7 @@ void FileMenu::open(int x, int y)
             });
             handler->askUserDelete({m_url}, KIO::AskUserActionInterface::Trash, KIO::AskUserActionInterface::DefaultConfirmation);
         };
-        QAction *moveToTrashAction = KStandardAction::moveToTrash(this, moveToTrashLambda, menu);
+        QAction *moveToTrashAction = KStandardActions::moveToTrash(this, moveToTrashLambda, menu);
         moveToTrashAction->setShortcut({}); // Can't focus notification to press Delete
         menu->addAction(moveToTrashAction);
     }
@@ -181,7 +181,7 @@ void FileMenu::open(int x, int y)
             });
             handler->askUserDelete({m_url}, KIO::AskUserActionInterface::Delete, KIO::AskUserActionInterface::DefaultConfirmation);
         };
-        QAction *deleteAction = KStandardAction::deleteFile(this, deleteLambda, menu);
+        QAction *deleteAction = KStandardActions::deleteFile(this, deleteLambda, menu);
         deleteAction->setShortcut({});
         menu->addAction(deleteAction);
     }
