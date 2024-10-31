@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-04-24 16:22+0300\n"
+"PO-Revision-Date: 2024-10-29 11:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -169,6 +169,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"Lai periodiski atjauninātu ierīces atrašanās vietu, sistēma izmantos "
+"„<application>GeoClue2</application>“ pakalpojumu. Atrašanās vietu sistēma "
+"noteiks pēc GPS, mobilo torņu triangulācijas, ja pieejams, vai arī sūtot "
+"ierīces IP adresi uz „<link url='https://geoip.com/privacy/'>GeoIP</link>“."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -179,6 +183,10 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"Lai periodiski atjauninātu ierīces atrašanās vietu, izmantos <application>"
+"%1</application> pakalpojumu. Lūdzu, atveriet kļūdas ziņojumu lapā <link "
+"url='https://bugs.kde.org'>https://bugs.kde.org</link>, lūdzot KDE "
+"izstrādātājiem sīkāk izskaidrot šī pakalpojuma darbību."
 
 #: ui/main.qml:334
 #, kde-format
@@ -212,7 +220,7 @@ msgstr "Ievades minūtes — min. 1, maks. 600"
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "Locating…"
-msgstr "Nosaka vietu..."
+msgstr "Nosaka vietu…"
 
 #: ui/TimeField.qml:43
 #, kde-format

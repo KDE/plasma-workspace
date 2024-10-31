@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2024-04-05 11:00+0300\n"
+"PO-Revision-Date: 2024-10-29 11:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -19,17 +19,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: fileinfo.cpp:170
 #, kde-format
 msgid "Open with %1"
-msgstr "Atvērt ar %1"
+msgstr "Atvērt ar „%1“"
 
 #: fileinfo.cpp:174
 #, kde-format
 msgid "Open with…"
-msgstr "Atvērt ar..."
+msgstr "Atvērt ar…"
 
 #: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:187
 #, kde-format
@@ -238,11 +238,10 @@ msgid "Details"
 msgstr "Informācija"
 
 #: package/contents/ui/components/JobItem.qml:104
-#, fuzzy, kde-format
-#| msgid "Resume job"
+#, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
-msgstr "Atsākt darbu"
+msgstr "Turpināt"
 
 #: package/contents/ui/components/JobItem.qml:105
 #, kde-format
@@ -260,7 +259,7 @@ msgstr "Atcelt"
 #: package/contents/ui/components/ThumbnailStrip.qml:160
 #, kde-format
 msgid "More Options…"
-msgstr "Vairāk iespēju..."
+msgstr "Vairāk iespēju…"
 
 #: package/contents/ui/components/JobItem.qml:179
 #, kde-format
@@ -271,7 +270,7 @@ msgstr "Atvērt"
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
-msgstr "Ievadiet atbildi..."
+msgstr "Ievadiet atbildi…"
 
 #: package/contents/ui/components/NotificationReplyField.qml:62
 #, kde-format
@@ -455,7 +454,7 @@ msgstr "Notīrīt visus paziņojumus"
 #: package/contents/ui/main.qml:248
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
-msgstr "&Konfigurēt notikumu paziņojumus un darbības..."
+msgstr "&Konfigurēt notikumu paziņojumus un darbības…"
 
 #~ msgctxt "A button tooltip; expands the item to show details"
 #~ msgid "Show Details"

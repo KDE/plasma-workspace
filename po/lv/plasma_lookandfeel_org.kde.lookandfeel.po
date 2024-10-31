@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-04-05 11:11+0300\n"
+"PO-Revision-Date: 2024-10-29 12:02+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -46,9 +46,7 @@ msgstr[1] "Izrakstās pēc %1 sekundēm"
 msgstr[2] "Izrakstās pēc %1 sekundēm"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
 msgstr[0] ""
@@ -114,9 +112,7 @@ msgid "Hibernate Now"
 msgstr "Hibernēt"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Instalēt atjauninājumus un pārstartēt"
@@ -132,9 +128,7 @@ msgid "Restart Now"
 msgstr "Pārstartēt"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr "Instalēt atjauninājumus un pārstartēt"
@@ -168,7 +162,7 @@ msgstr "Atcelt"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: contents/splash/Splash.qml:79
 #, kde-format

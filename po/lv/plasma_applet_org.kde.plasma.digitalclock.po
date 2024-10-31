@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2024-05-27 18:53+0300\n"
+"PO-Revision-Date: 2024-10-29 11:58+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -44,7 +44,7 @@ msgstr "Notikumi"
 #, kde-format
 msgctxt "@action:button Add event"
 msgid "Add…"
-msgstr "Pievienot..."
+msgstr "Pievienot…"
 
 #: package/contents/ui/CalendarView.qml:161
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "Šai dienai nav notikumu"
 #: package/contents/ui/CalendarView.qml:437
 #, kde-format
 msgid "Switch…"
-msgstr "Pārslēgt..."
+msgstr "Pārslēgt…"
 
 #: package/contents/ui/CalendarView.qml:440
 #: package/contents/ui/CalendarView.qml:441
@@ -152,50 +152,43 @@ msgid "Offset from UTC time"
 msgstr "Atšķirību no UTC laika"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Laika attēlošana:"
 
 #: package/contents/ui/configAppearance.qml:132
-#, fuzzy, kde-format
-#| msgid "12-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 stundu"
 
 #: package/contents/ui/configAppearance.qml:133
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "Izmantot reģiona noklusējumus"
 
 #: package/contents/ui/configAppearance.qml:134
-#, fuzzy, kde-format
-#| msgid "24-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 stundu"
 
 #: package/contents/ui/configAppearance.qml:141
-#, fuzzy, kde-format
-#| msgid "Change Regional Settings…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
-msgstr "Mainīt reģionālos iestatījumus..."
+msgstr "Mainīt reģionālos iestatījumus…"
 
 #: package/contents/ui/configAppearance.qml:152
-#, fuzzy, kde-format
-#| msgid "Date format:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Datuma formāts:"
 
 #: package/contents/ui/configAppearance.qml:161
-#, fuzzy, kde-format
-#| msgid "Long Date"
+#, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
@@ -203,23 +196,19 @@ msgid "Long date"
 msgstr "Garais datums"
 
 #: package/contents/ui/configAppearance.qml:168
-#, fuzzy, kde-format
-#| msgid "Short Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Īsais datums"
 
 #: package/contents/ui/configAppearance.qml:175
-#, fuzzy, kde-format
-#| msgid "ISO Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO datums"
 
 #: package/contents/ui/configAppearance.qml:182
-#, fuzzy, kde-format
-#| msgctxt "custom date format"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Pielāgots"
@@ -262,7 +251,7 @@ msgstr "Manuāla"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
-msgstr "Izvēlēties stilu..."
+msgstr "Izvēlēties stilu…"
 
 #: package/contents/ui/configAppearance.qml:277
 #, kde-format
@@ -287,15 +276,13 @@ msgid "Show week numbers"
 msgstr "Rādīt nedēļu numurus"
 
 #: package/contents/ui/configCalendar.qml:49
-#, fuzzy, kde-format
-#| msgid "First day of week:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Pirmā nedēļas diena:"
 
 #: package/contents/ui/configCalendar.qml:55
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Izmantot reģiona noklusējumus"
@@ -318,7 +305,7 @@ msgstr ""
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Add Time Zones…"
-msgstr "Pievienot laika joslas..."
+msgstr "Pievienot laika joslas…"
 
 #: package/contents/ui/configTimeZones.qml:94
 #, kde-format
@@ -337,7 +324,7 @@ msgstr "Paslēpta, kamēr šī pilsēta atrodas vietējā laika joslā"
 #: package/contents/ui/configTimeZones.qml:126
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
-msgstr "Mainīt sistēmas laika joslu..."
+msgstr "Mainīt sistēmas laika joslu…"
 
 #: package/contents/ui/configTimeZones.qml:138
 #, kde-format
@@ -409,12 +396,12 @@ msgstr "Kopēt uz starpliktuvi"
 #: package/contents/ui/main.qml:196
 #, kde-format
 msgid "Adjust Date and Time…"
-msgstr "Mainīt datumu un laiku..."
+msgstr "Mainīt datumu un laiku…"
 
 #: package/contents/ui/main.qml:202
 #, kde-format
 msgid "Set Time Format…"
-msgstr "Iestatīt laika formātu..."
+msgstr "Iestatīt laika formātu…"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
