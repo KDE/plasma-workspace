@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-10-31 02:32+0000\n"
 "PO-Revision-Date: 2009-12-24 06:59-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -48,28 +48,28 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
 msgstr ""
 
-#: menu.cpp:291
+#: menu.cpp:275
 #, fuzzy, kde-format
 #| msgid "Configure Contextual Menu Plugin"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Cumraigh Breiseán an Roghchláir Chomhthéacsúil"
 
-#: menu.cpp:301
+#: menu.cpp:285
 #, fuzzy, kde-format
 #| msgid "[Other Actions]"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Gníomhartha Eile]"
 
-#: menu.cpp:304
+#: menu.cpp:288
 #, fuzzy, kde-format
 #| msgid "Wallpaper Actions"
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Gníomhartha Cúlbhrait"
 
-#: menu.cpp:308
+#: menu.cpp:292
 #, fuzzy, kde-format
 #| msgid "[Separator]"
 msgctxt "plasma_containmentactions_contextmenu"

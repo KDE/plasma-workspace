@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-10-31 02:32+0000\n"
 "PO-Revision-Date: 2024-06-26 10:48+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -47,25 +47,25 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
 msgstr "Configuratie van het scherm"
 
-#: menu.cpp:291
+#: menu.cpp:275
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "De plug-in voor het contextmenu configureren"
 
-#: menu.cpp:301
+#: menu.cpp:285
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Andere acties]"
 
-#: menu.cpp:304
+#: menu.cpp:288
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Acties van achtergrondafbeeldingen"
 
-#: menu.cpp:308
+#: menu.cpp:292
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

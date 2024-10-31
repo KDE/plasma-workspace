@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-10-31 02:32+0000\n"
 "PO-Revision-Date: 2024-06-26 10:58+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -46,25 +46,25 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
 msgstr "Configuration  de monstrator"
 
-#: menu.cpp:291
+#: menu.cpp:275
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Configura Plugin de Menu Contextual"
 
-#: menu.cpp:301
+#: menu.cpp:285
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Altere actiones]"
 
-#: menu.cpp:304
+#: menu.cpp:288
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Actiones de tapete de papiro"
 
-#: menu.cpp:308
+#: menu.cpp:292
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

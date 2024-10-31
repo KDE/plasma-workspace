@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-30 00:41+0000\n"
+"POT-Creation-Date: 2024-10-31 02:32+0000\n"
 "PO-Revision-Date: 2024-10-17 12:09+0000\n"
 "Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
 "Language-Team: Icelandic\n"
@@ -50,25 +50,25 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
 msgstr "Skjástillingar"
 
-#: menu.cpp:291
+#: menu.cpp:275
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Grunnstilla tengiviðbót fyrir samhengisvalmynd"
 
-#: menu.cpp:301
+#: menu.cpp:285
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[aðrar aðgerðir]"
 
-#: menu.cpp:304
+#: menu.cpp:288
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Aðgerðir við bakgrunn"
 
-#: menu.cpp:308
+#: menu.cpp:292
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
