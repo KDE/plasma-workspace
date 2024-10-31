@@ -26,7 +26,9 @@ ki18n_wrap_ui(scheme_editor_SRCS
 add_executable(kcolorschemeeditor ${scheme_editor_SRCS})
 
 target_link_libraries(kcolorschemeeditor
-    KF6::ConfigWidgets
+    Qt6::Widgets
+    KF6::WidgetsAddons
+    KF6::ColorScheme
     KF6::GuiAddons
     KF6::I18n
     KF6::CoreAddons
