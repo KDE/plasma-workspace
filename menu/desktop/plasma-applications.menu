@@ -335,16 +335,10 @@
 		</Menu>
 	</Menu>
 	<Menu>
-		<Name>Settingsmenu</Name>
-		<Directory>kf5-settingsmenu.directory</Directory>
-		<Include>
-			<Category>Settings</Category>
-		</Include>
-	</Menu>
-	<Menu>
 		<Name>System</Name>
 		<Directory>kf5-system.directory</Directory>
 		<Include>
+			<Category>Settings</Category>
 			<And>
 				<Category>System</Category>
 				<Not><Category>X-KDE-More</Category></Not>
