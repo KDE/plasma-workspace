@@ -8,11 +8,13 @@
         "Description[he]": "מודיע כאשר יישומים מושמדים כדי למנוע מצבים בהם ינצלו את כל הזיכרון",
         "Description[ia]": "informa quando applicationes es terminate per prevenir conditiones de fin de memoria (forsa de memoria)",
         "Description[ka]": "გაგაფრთხილებთ, როცა აპლიკაციები ძალით დასრულდება მეხსიერების რაოდენობასთან დაკავშირებული პრობლემების გამო",
+        "Description[lv]": "Informē, kas programma tiek nobeigta, lai izvairītos no pilnīgas atmiņas izmelšanas",
         "Description[nl]": "Informeert wanneer toepassingen beëindigd worden om condities van geen geheugen meer te voorkomen",
         "Description[sl]": "Obvesti, ko se aplikacije prekinejo, da se preprečijo pogoji pomanjkanja pomnilnika",
         "Description[tr]": "Uygulamalar var olan belleğin tükenmesinden ötürü sonlandırıldığında bildirir",
         "Description[uk]": "Інформує про переривання роботи програм для запобігання нестачі пам'яті",
         "Description[x-test]": "xxInforms when applications get terminated to prevent out of memory conditionsxx",
+        "Description[zh_CN]": "当应用程序被终止以防止内存不足时通知用户",
         "Name": "Out of Memory Notifier",
         "Name[bg]": "Известие за недостиг на памет",
         "Name[ca@valencia]": "Notificador de memòria exhaurida",
@@ -21,11 +23,13 @@
         "Name[he]": "מודיע על ניצול הזיכרון במלואו",
         "Name[ia]": "Notificator de Foras de Memoria",
         "Name[ka]": "მეხსიერების გადავსების გაფრთხილება",
+        "Name[lv]": "Ziņotājs, ka trūkst atmiņas",
         "Name[nl]": "Kennisgever van geen geheugen meer",
         "Name[sl]": "Obvestilo o pomanjkanju pomnilnika",
         "Name[tr]": "Bellek Tükendi Bildiricisi",
         "Name[uk]": "Сповіщувач про нестачу пам'яті",
-        "Name[x-test]": "xxOut of Memory Notifierxx"
+        "Name[x-test]": "xxOut of Memory Notifierxx",
+        "Name[zh_CN]": "内存不足通知程序"
     },
     "X-KDE-Kded-autoload": true
 }
