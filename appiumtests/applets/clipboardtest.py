@@ -172,7 +172,7 @@ class ClipboardTest(unittest.TestCase):
         self.assertEqual(self.klipper_proxy.getClipboardContents(), "Fushan Wen")
         self.klipper_proxy.connect("g-signal", self.klipper_signal_handler)
 
-    def test_1_barcode_1_open_barcode_page(self) -> None:
+    def test_1_barcode(self) -> None:
         """
         Tests the barcode page can be opened
         """
@@ -189,10 +189,7 @@ class ClipboardTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Return to Clipboard")
         self.driver.find_element(AppiumBy.NAME, "Change the QR code type")
 
-    def test_1_barcode_2_change_barcode_type(self) -> None:
-        """
-        Opens the barcode type menu and changes the current barcode type
-        """
+        # Opens the barcode type menu and changes the current barcode type
         self.driver.find_element(AppiumBy.NAME, "Change the QR code type").click()
         menu_item = self.driver.find_element(AppiumBy.NAME, "Aztec")
         # Switch to Aztec
@@ -204,10 +201,7 @@ class ClipboardTest(unittest.TestCase):
         WebDriverWait(self.driver, 5).until_not(lambda _: menu_item.is_displayed())
         self.driver.find_element(AppiumBy.NAME, "Aztec")  # This is from barcodeItem
 
-    def test_1_barcode_3_go_back_to_list_from_barcode_page(self) -> None:
-        """
-        Go back to the list from the barcode page
-        """
+        # Go back to the list from the barcode page
         button_item = self.driver.find_element(AppiumBy.NAME, "Return to Clipboard")
         self.assertTrue(button_item.is_displayed())
         button_item.click()
@@ -247,6 +241,34 @@ class ClipboardTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Delete").click()
         WebDriverWait(self.driver, 5).until_not(lambda _: item.is_displayed())
         self.assertTrue(self.klipper_updated_event.wait(5))
+
+    def test_2_list_3_edit(self) -> None:
+        """
+        In edit mode, the text area should be focused by default.
+        """
+        self.klipper_proxy.setClipboardContents("(s)", "clip thin")
+        self.klipper_proxy.setClipboardContents("(s)", "clip medium")
+        self.driver.find_element(AppiumBy.NAME, "clip medium")
+
+        ActionChains(self.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
+        self.driver.find_element(AppiumBy.NAME, "Edit contents").click()
+        self.driver.find_element(AppiumBy.NAME, "Text edit area")
+        time.sleep(1)
+
+        # By default the text area is focused, so typing anything will appear in the text area.
+        new_text = "clip bold"
+        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()  # Select all
+        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()  # Perform twice to make it less flaky
+        ActionChains(self.driver).send_keys(new_text).pause(1).perform()
+        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("s").key_up(Keys.CONTROL).perform()  # Save
+        self.driver.find_element(AppiumBy.NAME, new_text)
+        self.assertEqual(self.driver.get_clipboard_text(), new_text)
+
+        # BUG 494145: update uuid after editing so the item can be removed
+        delete_button = self.driver.find_element(AppiumBy.NAME, "Remove from history")
+        delete_button.click()
+        WebDriverWait(self.driver, 5).until_not(lambda _: delete_button.is_displayed())
+        self.assertNotEqual(self.driver.get_clipboard_text(), new_text)
 
     def test_3_dbus_interface(self) -> None:
         """
@@ -340,52 +362,10 @@ class ClipboardTest(unittest.TestCase):
             self.driver.get_screenshot_as_file(saved_image_path)
             return base64.b64encode(Gdk.Texture.new_from_filename(saved_image_path).save_to_png_bytes().get_data()).decode()
 
-    def test_4_bug487843_bug466414_empty_clip_crash(self) -> None:
-        """
-        When "Text selection - Always save in history" is enabled, a clip with empty text can crash klipper.
-        @see https://bugs.kde.org/show_bug.cgi?id=487843
-        @see https://bugs.kde.org/show_bug.cgi?id=466414
-        """
-        # Enable "Text selection - Always save in history" to test the two bugs
-        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["false", "true"], True)
-
-        content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes("", "utf-8")))
-        # Clip data from Firefox have additional mime types, which cause the crash
-        content_application = Gdk.ContentProvider.new_for_bytes("application/whatever", GLib.Bytes.new(bytes("abc", "utf-8")))
-        content_union = Gdk.ContentProvider.new_union([content_text, content_application])
-        self.gtk_copy(content_union)
-        self.driver.find_element(AppiumBy.NAME, "Fushan Wen")  # Still alive
-
-        new_text = "Hello World"
-        self.gtk_copy(Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(new_text, "utf-8"))))
-        # self.assertEqual(self.driver.get_clipboard_text(), new_text) Broken in CI
-        self.driver.find_element(AppiumBy.NAME, new_text)  # Still alive
-
-    def test_5_ignore_image(self) -> None:
-        """
-        When `IgnoreImages` is set to false, the clipboard should save images.
-        """
-        # Enable "Only when explicitly copied" to test the two bugs
-        self.update_config_and_restart_clipboard(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"], True)
-
-        # Copy 3 color blocks to clipboard
-        for color in (0xff0000ff, 0x00ff00ff, 0x0000ffff):
-            pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
-            pixbuf.fill(color)
-            content_image = Gdk.ContentProvider.new_for_bytes("image/png", Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes())
-            self.gtk_copy(content_image)
-            time.sleep(1)
-            # Match the color block in the history
-            partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
-            partial_pixbuf.fill(color)
-            partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
-            self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
-
-    def test_6_url_preview(self) -> None:
+    def test_4_url_preview(self) -> None:
         """
         The PreviewImageProvider registers a custom image provider to load previews for URLs.
         """
-        self.update_config_and_restart_clipboard(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["true", "true", "false"], True)
         new_text = "clip thin"
         pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -408,48 +388,10 @@ class ClipboardTest(unittest.TestCase):
 
             self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, new_text)
 
-    @unittest.expectedFailure  # https://invent.kde.org/plasma/kwin/-/commit/31018c000bbad5dc3b263b7f452b0795dd153ceb#note_1013530
-    def test_7_sync_selection_with_ignore_selection(self) -> None:
-        """
-        When `SyncClipboards` is true but `IgnoreSelection` is true, the clipboard should still sync clipboard and selection.
-        """
-        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["true", "true"], True)
-        selected_text = "appiumtest123"
-        content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(selected_text, "utf-8")))
-        self.gtk_copy(content_text, 1)
-        self.assertEqual(self.driver.get_clipboard_text(), selected_text)
-        self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, selected_text)
-
-    def test_8_edit_page(self) -> None:
-        """
-        In edit mode, the text area should be focused by default.
-        """
-        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards", "IgnoreImages"], ["true", "false", "true"], True)
-        ActionChains(self.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
-        self.driver.find_element(AppiumBy.NAME, "Edit contents").click()
-        self.driver.find_element(AppiumBy.NAME, "Text edit area")
-        time.sleep(1)
-
-        # By default the text area is focused, so typing anything will appear in the text area.
-        new_text = "clip bold"
-        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()  # Select all
-        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("a").key_up(Keys.CONTROL).perform()  # Perform twice to make it less flaky
-        ActionChains(self.driver).send_keys(new_text).pause(1).perform()
-        ActionChains(self.driver).key_down(Keys.CONTROL).send_keys("s").key_up(Keys.CONTROL).perform()  # Save
-        self.driver.find_element(AppiumBy.NAME, new_text)
-        self.assertEqual(self.driver.get_clipboard_text(), new_text)
-
-        # BUG 494145: update uuid after editing so the item can be removed
-        delete_button = self.driver.find_element(AppiumBy.NAME, "Remove from history")
-        delete_button.click()
-        WebDriverWait(self.driver, 5).until_not(lambda _: delete_button.is_displayed())
-        self.assertNotEqual(self.driver.get_clipboard_text(), new_text)
-
-    def test_9_bug491488_copy_cells(self) -> None:
+    def test_5_bug491488_copy_cells(self) -> None:
         """
         A cell has both image data and text data, which should not be ignored when images are ignored.
         """
-        self.update_config_and_restart_clipboard(["General"] * 3, ["IgnoreSelection", "SyncClipboards", "IgnoreImages"], ["true", "false", "true"], True)
         new_text = "clip thin"
         pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
         pixbuf.fill(0xff0000ff)
@@ -459,7 +401,48 @@ class ClipboardTest(unittest.TestCase):
         self.gtk_copy(content_union)
         self.driver.find_element(AppiumBy.NAME, new_text)
 
-    def test_9_bug492170_disable_history_across_session(self) -> None:
+    def test_6_bug487843_bug466414_empty_clip_crash(self) -> None:
+        """
+        When "Text selection - Always save in history" is enabled, a clip with empty text can crash klipper.
+        @see https://bugs.kde.org/show_bug.cgi?id=487843
+        @see https://bugs.kde.org/show_bug.cgi?id=466414
+        """
+        # Enable "Text selection - Always save in history" to test the two bugs
+        self.update_config_and_restart_clipboard(["General"] * 2, ["IgnoreSelection", "SyncClipboards"], ["false", "true"], True)
+
+        content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes("", "utf-8")))
+        # Clip data from Firefox have additional mime types, which cause the crash
+        content_application = Gdk.ContentProvider.new_for_bytes("application/whatever", GLib.Bytes.new(bytes("abc", "utf-8")))
+        content_union = Gdk.ContentProvider.new_union([content_text, content_application])
+        self.gtk_copy(content_union)
+        self.driver.find_element(AppiumBy.NAME, "Fushan Wen")  # Still alive
+
+        new_text = "Hello World"
+        self.gtk_copy(Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(new_text, "utf-8"))))
+        # self.assertEqual(self.driver.get_clipboard_text(), new_text) Broken in CI
+        self.driver.find_element(AppiumBy.NAME, new_text)  # Still alive
+
+    def test_7_ignore_image(self) -> None:
+        """
+        When `IgnoreImages` is set to false, the clipboard should save images.
+        """
+        # Enable "Only when explicitly copied" to test the two bugs
+        self.update_config_and_restart_clipboard(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"], True)
+
+        # Copy 3 color blocks to clipboard
+        for color in (0xff0000ff, 0x00ff00ff, 0x0000ffff):
+            pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
+            pixbuf.fill(color)
+            content_image = Gdk.ContentProvider.new_for_bytes("image/png", Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes())
+            self.gtk_copy(content_image)
+            time.sleep(1)
+            # Match the color block in the history
+            partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
+            partial_pixbuf.fill(color)
+            partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
+            self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+
+    def test_8_bug492170_disable_history_across_session(self) -> None:
         """
         Clips should not be saved across desktop sessions when "Save history across desktop sessions" is disabled.
         """
