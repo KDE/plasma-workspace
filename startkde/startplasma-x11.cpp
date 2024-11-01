@@ -21,7 +21,7 @@ int main(int argc, char **argv)
     // When the X server dies we get a HUP signal from xinit. We must ignore it
     // because we still need to do some cleanup.
     signal(SIGHUP, sighupHandler);
-    qputenv("QT_NO_XDG_DESKTOP_PORTAL", QByteArrayLiteral("1"));
+    qputenv("QT_NO_XDG_DESKTOP_PORTAL", QByteArrayView("1"));
 
     QCoreApplication app(argc, argv);
 
