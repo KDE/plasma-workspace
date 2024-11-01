@@ -61,6 +61,7 @@
         "Category": "System Information",
         "Description": "System monitor widget that shows the total CPU usage",
         "Description[ar]": "أداة مراقبة النظام التي تعرض مجموع استخدام المعالج",
+        "Description[be]": "Віджэт сістэмнага назіральніка, які паказвае агульнае выкарыстанне працэсара",
         "Description[bg]": "Уиджет за системен монитор, което показва общото използване на процесора",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús total de la CPU",
         "Description[ca]": "Giny del monitor del sistema que mostra l'ús total de la CPU",
