@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-04 00:41+0000\n"
-"PO-Revision-Date: 2024-06-11 20:16\n"
+"PO-Revision-Date: 2024-08-11 21:06\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -211,6 +211,12 @@ msgstr "Не ўдалося адлучыць гэтую прыладу."
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Не ўдалося выняць гэты дыск."
+
+#~ msgid "Filesystem is not responding"
+#~ msgstr "Файлавая сістэма не адказвае"
+
+#~ msgid "Filesystem mounted at '%1' is not responding"
+#~ msgstr "Файлавая сістэма, прымантаваная ў \"%1\", не адказвае"
 
 #, fuzzy
 #~| msgid "1 action for this device"

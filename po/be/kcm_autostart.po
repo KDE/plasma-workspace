@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2024-06-11 20:16\n"
+"PO-Revision-Date: 2024-10-29 20:10\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -111,31 +111,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Дадаць"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Дадаць праграму…"
+msgstr "Праграма…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Дадаць скрыпт пры ўваходзе…"
+msgstr "Скрыпт пры ўваходзе…"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Дадаць скрыпт пры выхадзе…"
+msgstr "Скрыпт пры выхадзе…"
 
 #: ui/main.qml:125
 #, kde-format
@@ -191,9 +185,7 @@ msgid "No user-specified autostart items"
 msgstr "Няма элементаў для аўтазапуску, вызначаных карыстальнікам"
 
 #: ui/main.qml:203
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "Пстрыкніце <interface>Дадаць…</interface>, каб дадаць"

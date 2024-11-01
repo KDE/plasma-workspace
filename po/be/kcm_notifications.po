@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:41+0000\n"
-"PO-Revision-Date: 2024-06-11 20:16\n"
+"PO-Revision-Date: 2024-08-11 21:06\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -94,16 +94,13 @@ msgid "Choose sound file"
 msgstr "Абраць гукавы файл"
 
 #: ui/main.qml:46
-#, fuzzy, kde-format
-#| msgctxt "@action:button Plasma-specific notifications"
-#| msgid "System Notifications…"
+#, kde-format
 msgctxt "@action:button Plasma-specific notifications"
 msgid "System Notifications"
-msgstr "Сістэмныя апавяшчэнні…"
+msgstr "Сістэмныя апавяшчэнні"
 
 #: ui/main.qml:52
-#, fuzzy, kde-format
-#| msgid "Application Settings"
+#, kde-format
 msgctxt "@action:button Application-specific notifications"
 msgid "Application Settings"
 msgstr "Налады праграмы"

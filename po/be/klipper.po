@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:42+0000\n"
-"PO-Revision-Date: 2024-06-11 20:16\n"
+"PO-Revision-Date: 2024-10-29 20:10\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -39,17 +39,14 @@ msgid "Clipboard history:"
 msgstr "Гісторыя буфера абмену:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " запіс"
-msgstr[1] " запісы"
-msgstr[2] " запісаў"
-msgstr[3] " запісы"
+msgstr[0] "%v запіс"
+msgstr[1] "%v запісы"
+msgstr[2] "%v запісаў"
+msgstr[3] "%v запісы"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -149,17 +146,14 @@ msgid "Exclude Windows..."
 msgstr "Выключыць вокны..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " секунда"
-msgstr[1] " секунды"
-msgstr[2] " секунд"
-msgstr[3] " секунды"
+msgstr[0] "%v секунда"
+msgstr[1] "%v секунды"
+msgstr[2] "%v секунд"
+msgstr[3] "%v секунды"
 
 #: configdialog.cpp:295
 #, kde-format
@@ -321,55 +315,56 @@ msgstr ""
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR-код"
 
 #: declarative/qml/BarcodePage.qml:32
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Матрыца даных"
 
 #: declarative/qml/BarcodePage.qml:33
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Ацтэкскі"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Код 39"
 
 #: declarative/qml/BarcodePage.qml:35
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Код 93"
 
 #: declarative/qml/BarcodePage.qml:36
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Код 128"
 
 #: declarative/qml/BarcodePage.qml:52
-#, fuzzy, kde-format
-#| msgid "Add to Clipboard"
+#, kde-format
 msgid "Return to Clipboard"
-msgstr "Дадаць у буфер абмену"
+msgstr "Вярнуцца да буфера абмену"
 
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Змяніць тып QR-кода"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Недастаткова месца для паказу QR-кода. Паспрабуйце змяніць памер гэтага "
+"аплета."
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "Не ўдалося стварыць QR-код"
 
 #: declarative/qml/ClipboardItemDelegate.qml:178
 #, kde-format
@@ -384,10 +379,9 @@ msgid "Expand"
 msgstr ""
 
 #: declarative/qml/ClipboardMenu.qml:186
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clear History"
-msgstr "Гісторыя буфера абмену"
+msgstr "Ачысціць гісторыю"
 
 #: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
@@ -400,55 +394,49 @@ msgid "Clipboard is empty"
 msgstr "Буфер абмену пусты"
 
 #: declarative/qml/DelegateToolButtons.qml:31
-#, fuzzy, kde-format
-#| msgid "<new action>"
+#, kde-format
 msgid "Invoke action"
-msgstr "<новае дзеянне>"
+msgstr "Выклікаць дзеянне"
 
 #: declarative/qml/DelegateToolButtons.qml:32
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "&Show Barcode…"
+#, kde-format
 msgid "Show QR code"
-msgstr "&Паказаць штрых-код…"
+msgstr "Паказваць QR-код"
 
 #: declarative/qml/DelegateToolButtons.qml:33
-#, fuzzy, kde-format
-#| msgid "Edit Contents"
+#, kde-format
 msgid "Edit contents"
 msgstr "Рэдагаваць змесціва"
 
 #: declarative/qml/DelegateToolButtons.qml:34
-#, fuzzy, kde-format
-#| msgid "For an item chosen from history"
+#, kde-format
 msgid "Remove from history"
-msgstr "Для элемента, абранага з гісторыі"
+msgstr "Выдаліць з гісторыі"
 
 #: declarative/qml/EditPage.qml:63
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Вобласць рэдагавання тэксту"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Захаваць"
 
 #: declarative/qml/EditPage.qml:88
-#, fuzzy, kde-format
-#| msgid "&Cancel"
+#, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr "&Скасаваць"
+msgstr "Скасаваць"
 
 #: declarative/qml/UrlItemDelegate.qml:95
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -949,10 +937,9 @@ msgstr ""
 "якія могуць апрацоўваць адпаведны тып MIME."
 
 #: klipperpopup.cpp:33
-#, fuzzy, kde-format
-#| msgid "Clipboard history"
+#, kde-format
 msgid "Clipboard Popup"
-msgstr "Гісторыя буфера абмену"
+msgstr "Выплыўное акно буфера абмену"
 
 #: urlgrabber.cpp:200
 #, kde-format

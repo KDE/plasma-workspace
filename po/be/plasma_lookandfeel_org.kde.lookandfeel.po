@@ -191,17 +191,6 @@ msgctxt ""
 msgid "Plasma made by KDE"
 msgstr "Plasma ад KDE"
 
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Restart Now"
-#~ msgstr "Усталяваць абнаўленні і перазапусціць зараз"
-
-#, fuzzy
-#~| msgctxt "@action:button Keep short"
-#~| msgid "Install Updates & Restart Now"
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Shut Down Now"
-#~ msgstr "Усталяваць абнаўленні і перазапусціць зараз"
-
 #~ msgid "Keyboard Layout: %1"
 #~ msgstr "Раскладка клавіятуры: %1"
 

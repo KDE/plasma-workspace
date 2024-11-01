@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-31 00:42+0000\n"
-"PO-Revision-Date: 2024-05-19 21:16\n"
+"PO-Revision-Date: 2024-10-29 20:10\n"
 "Last-Translator: Zmicier Turok <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -23,32 +23,26 @@ msgstr ""
 "X-Crowdin-File-ID: 17862\n"
 
 #: devicenotifications.cpp:333
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr "Выяўлена USB-прылада"
+msgstr "Выяўлены дысплэй"
 
 #: devicenotifications.cpp:334
-#, fuzzy, kde-format
-#| msgid "A USB device has been plugged in."
+#, kde-format
 msgid "A display has been plugged in."
-msgstr "USB-прылада падлучаная."
+msgstr "Дысплэй быў падлучаны."
 
 #: devicenotifications.cpp:347
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Removed"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr "USB-прылада адлучаная"
+msgstr "Дысплэй выдалены"
 
 #: devicenotifications.cpp:348
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A display has been unplugged."
-msgstr "USB-прылада адлучаная."
+msgstr "Дысплэй быў адлучаны."
 
 #: devicenotifications.cpp:379
 #, kde-format

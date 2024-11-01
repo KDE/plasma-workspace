@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2024-05-25 23:55\n"
+"PO-Revision-Date: 2024-10-29 20:10\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -120,9 +120,7 @@ msgid "Secondary toolbar label"
 msgstr "Адмеціна другаснай панэлі інструментаў"
 
 #: ui/EffectSettingsPopup.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Icon and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
 msgstr "Наладжванне значкоў і панэляў інструментаў"
@@ -208,10 +206,9 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "Архіў тэмы GTK (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Configure Icons and Toolbars"
+#, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr "Наладжванне значкоў і панэляў інструментаў"
+msgstr "Наладжванне значкоў і панэляў інструментаў…"
 
 #: ui/main.qml:73
 #, kde-format

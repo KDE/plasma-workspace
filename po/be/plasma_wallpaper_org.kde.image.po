@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-08 00:41+0000\n"
-"PO-Revision-Date: 2024-06-11 20:17\n"
+"PO-Revision-Date: 2024-10-29 20:10\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -45,43 +45,37 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Каталог са шпалерамі для паказу слайдаў"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Становішча:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Маштабавана і абрэзана"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Маштабавана"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Маштабавана, прапорцыі захаваныя"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Па цэнтры"
 
 #: imagepackage/contents/ui/config.qml:147
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Скампанавана"
@@ -128,11 +122,10 @@ msgid "Add…"
 msgstr "Дадаць…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Адкрыць выяву шпалер"
+msgstr "Дадаць выяву шпалер…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
@@ -141,11 +134,10 @@ msgid "Get New…"
 msgstr "Атрымаць новыя…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Наступная выява шпалер"
+msgstr "Атрымаць новыя шпалеры…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -180,7 +172,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
-msgstr ""
+msgstr "Вызначыць рэжым залівання"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -195,7 +187,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Вызначаны няправільны рэжым залівання: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
@@ -307,8 +299,7 @@ msgid "Add…"
 msgstr "Дадаць…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
-#, fuzzy, kde-format
-#| msgid "Add Folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Дадаць каталог…"

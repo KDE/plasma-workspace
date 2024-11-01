@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-26 00:42+0000\n"
-"PO-Revision-Date: 2024-06-11 20:16\n"
+"PO-Revision-Date: 2024-10-29 20:10\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -190,11 +190,10 @@ msgstr "Стварыць"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "Абраць вобласць выявы"
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
 msgstr "Палец зарэгістраваны"
@@ -380,20 +379,16 @@ msgid "Users"
 msgstr "Карыстальнікі"
 
 #: src/ui/main.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Дадаць"
+msgstr "Дадаць…"
 
 #: src/ui/main.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@action:button As in, 'add new user'"
-#| msgid "Add New"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Дадаць"
+msgstr "Дадаць новага карыстальніка…"
 
 #: src/ui/main.qml:120
 #, kde-format
@@ -549,6 +544,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Файлы выяў (усе асноўныя тыпы файлаў) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg "
+"*.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *. xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:196
 #, kde-format
@@ -574,6 +571,10 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Немагчыма змяніць тып акаўнта на стандартны, калі ў сістэме няма прынамсі "
+"аднаго акаўнта адміністратара. Без яго немагчыма будзе выканаць "
+"аўтэнтыфікацыю або спатрэбіцца выкарыстоўваць пароль суперкарыстальніка "
+"(root), што можа быць небяспечна."
 
 #: src/ui/UserDetailsPage.qml:175
 #, kde-format

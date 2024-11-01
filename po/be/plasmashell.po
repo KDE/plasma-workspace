@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-17 00:42+0000\n"
-"PO-Revision-Date: 2024-06-20 17:30\n"
+"POT-Creation-Date: 2024-11-01 00:41+0000\n"
+"PO-Revision-Date: 2024-07-06 23:49\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -412,12 +412,12 @@ msgstr "Панэль і кіраванне працоўным сталом"
 msgid "Move keyboard focus between panels"
 msgstr "Перамяшчэнне фокуса клавіятуры паміж панэлямі"
 
-#: shellcorona.cpp:2108
+#: shellcorona.cpp:2107
 #, kde-format
 msgid "Add Panel"
 msgstr "Дадаць панэль"
 
-#: shellcorona.cpp:2170
+#: shellcorona.cpp:2168
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

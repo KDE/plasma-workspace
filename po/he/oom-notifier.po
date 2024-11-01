@@ -1,27 +1,27 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-29 00:41+0000\n"
-"PO-Revision-Date: 2024-10-29 13:41+0100\n"
-"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
-"Language-Team: \n"
-"Language: nl\n"
+"PO-Revision-Date: 2024-11-01 01:18+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #: module.cpp:65
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
-msgstr "Te kort aan geheugen vermeden"
+msgstr "נמנע מחסור בזיכרון"
 
 #: module.cpp:68
 #, kde-kuit-format
@@ -31,9 +31,8 @@ msgid ""
 "system is low on memory. Consider closing unused applications or browser "
 "tabs."
 msgstr ""
-"<command>%1</command> is beëindigd door de Linux kernel omdat het systeem "
-"weinig geheugen meer bezat. Overweeg ongebruikte toepassingen of tabbladen "
-"in browser te sluiten."
+"‏<command>%1</command> חוסל על ידי ליבת הלינוקס כיוון שלמערכת חסר זיכרון. "
+"כדאי לשקול לסגור יישומים או לשוניות דפדפן שאינם בשימוש."
 
 #: module.cpp:74
 #, kde-kuit-format
@@ -43,12 +42,11 @@ msgid ""
 "Linux kernel because the system is low on memory. Consider closing unused "
 "applications or browser tabs."
 msgstr ""
-"De achtergrondservice <command>%1</command> is beëindigd door de Linux "
-"kernel omdat het systeem weinig geheugen meer bezat. Overweeg het sluiten "
-"van ongebruikte toepassingen of tabbladen van de browser."
+"שירות הרקע <command>%1</command> חוסל על ידי ליבת הלינוקס כיוון שלמערכת חסר "
+"זיכרון. כדאי לשקול לסגור יישומים או לשוניות דפדפן שאינם בשימוש."
 
 #: module.cpp:82
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"
-msgstr "Toepassing opnieuw starten"
+msgstr "הפעלת היישום מחדש"

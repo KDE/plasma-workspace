@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2024-06-12 20:16\n"
+"PO-Revision-Date: 2024-10-14 09:36\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -252,7 +252,7 @@ msgstr "Падрабязнасці"
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
-msgstr ""
+msgstr "Узнавіць"
 
 #: package/contents/ui/components/JobItem.qml:105
 #, kde-format
