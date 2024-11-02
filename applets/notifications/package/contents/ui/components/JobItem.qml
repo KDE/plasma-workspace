@@ -36,11 +36,9 @@ ColumnLayout {
     }
 
     SpeedChart {
-        width: jobItem.width
         id: speedChart
+        width: jobItem.width
         modelInterface: jobItem.modelInterface
-        Layout.fillWidth: true
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 10
     }
 
     RowLayout {
