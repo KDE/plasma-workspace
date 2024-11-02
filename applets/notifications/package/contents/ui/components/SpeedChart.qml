@@ -6,9 +6,11 @@
 
 import QtQuick
 import QtQml
+import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.coreaddons as KCoreAddons
+import org.kde.plasma.components as PlasmaComponents3
 
 import QtCharts 2.0
 import QtQuick.Controls
@@ -23,6 +25,12 @@ Item {
     property int averageSpeed
 
     property LineSeries speedSerie : LineSeries {}
+
+    Layout.minimumHeight: chart.visible ? Kirigami.Units.gridUnit * 10 :
+        // Even when indeterminate, we want to reserve the height for the text, otherwise it's too tightly spaced
+        progressText.implicitHeight
+
+    Layout.fillWidth: true
 
     Component.onCompleted: () => {
         speedSerie.append(0, modelInterface.jobDetails.processedBytes / (1000 * modelInterface.jobDetails.elapsedTime));
@@ -53,21 +61,10 @@ Item {
         }
     }
 
-    ToolTip {
-        id: tooltip
-        contentItem: Text {
-            color: Kirigami.Theme.textColor
-            text: tooltip.text
-        }
-        background: Rectangle {
-            color: Kirigami.Theme.backgroundColor
-            border.color: Kirigami.Theme.alternateBackgroundColor
-        }
-    }
-
     ChartView {
         id: chart
         anchors.fill: root
+        visible: speedSerie.count > 2
 
         margins { top: 0; bottom: 0; left: 0; right: 0 }
 
@@ -75,6 +72,18 @@ Item {
         backgroundColor: Kirigami.Theme.backgroundColor
 
         legend.visible: false
+
+        ToolTip {
+            id: tooltip
+            contentItem: Text {
+                color: Kirigami.Theme.textColor
+                text: tooltip.text
+            }
+            background: Rectangle {
+                color: Kirigami.Theme.backgroundColor
+                border.color: Kirigami.Theme.alternateBackgroundColor
+            }
+        }
 
         ValueAxis {
             id: valueAxis
@@ -121,6 +130,7 @@ Item {
 
             color: "red"
             width: 3
+            visible: modelInterface.jobDetails.elapsedTime > 0
 
             axisX: valueAxis
             axisY: dataAxis
@@ -134,6 +144,41 @@ Item {
                 tooltip.text = text
                 tooltip.visible = true
             }
+        }
+    }
+
+    RowLayout {
+        id: progressRow
+        visible: speedSerie.count < 2
+        anchors.fill: root
+        // We want largeSpacing between the progress bar and the label
+        spacing: Kirigami.Units.largeSpacing
+
+        PlasmaComponents3.ProgressBar {
+            id: progressBar
+
+            Layout.fillWidth: true
+
+            from: 0
+            to: 100
+            value: modelInterface.percentage
+            // TODO do we actually need the window visible check? perhaps I do because it can be in popup or expanded plasmoid
+            indeterminate: visible && Window.window && Window.window.visible && modelInterface.percentage < 1
+                           && modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
+                           // is this too annoying?
+                           && (modelInterface.jobDetails.processedBytes === 0 || modelInterface.jobDetails.totalBytes === 0)
+                           && modelInterface.jobDetails.processedFiles === 0
+                           //&& modelInterface.jobDetails.processedDirectories === 0
+        }
+
+        PlasmaComponents3.Label {
+            id: progressText
+
+            visible: !progressBar.indeterminate
+            // the || "0" is a workaround for the fact that 0 as number is falsey, and is wrongly considered a missing argument
+            // BUG: 451807
+            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", modelInterface.percentage || "0")
+            textFormat: Text.PlainText
         }
     }
 }
