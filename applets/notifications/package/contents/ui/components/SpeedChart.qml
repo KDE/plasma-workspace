@@ -64,7 +64,7 @@ Item {
     ChartView {
         id: chart
         anchors.fill: root
-        visible: speedSerie.count > 2
+        visible: speedSerie.count >= 2
 
         margins { top: 0; bottom: 0; left: 0; right: 0 }
 
@@ -98,6 +98,7 @@ Item {
             max: Math.max(root.averageSpeed, root.maxSpeed) + 2
             labelsColor: Kirigami.Theme.textColor
             shadesVisible: false
+            // See https://bugreports.qt.io/browse/QTBUG-130594 to be able to customize the unit displayed
             labelFormat: i18ndc("plasma_applet_org.kde.plasma.notifications", "MBytes per second as printf format", "%u MiB/s")
         }
 
