@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-05 02:31+0000\n"
-"PO-Revision-Date: 2024-10-06 12:39+0200\n"
+"PO-Revision-Date: 2024-11-02 21:08+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -346,18 +346,20 @@ msgstr "Návrat do schránky"
 #: declarative/qml/BarcodePage.qml:88
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Zmena typu QR kódu"
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid ""
 "There is not enough space to display the QR code. Try resizing this applet."
 msgstr ""
+"Na zobrazenie QR kódu nie je dostatok miesta. Skúste zmeniť veľkosť tohto "
+"appletu."
 
 #: declarative/qml/BarcodePage.qml:141
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "Vytvorenie kódu QR sa nepodarilo"
 
 #: declarative/qml/ClipboardMenu.qml:185
 #, kde-format
@@ -398,7 +400,7 @@ msgstr "Odstrániť z histórie"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Oblasť úpravy textu"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
