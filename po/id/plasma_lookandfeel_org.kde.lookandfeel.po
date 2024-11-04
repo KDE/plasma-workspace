@@ -1,6 +1,6 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Wantoyo <wantoyek@gmail.com>, 2018, 2019, 2022.
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 # Linerly <linerly@protonmail.com>, 2022.
 #
@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2022-06-14 16:55+0700\n"
-"Last-Translator: Linerly <linerly@protonmail.com>\n"
-"Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
+"PO-Revision-Date: 2024-11-03 20:08+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ../sddm-theme/KeyboardButton.qml:19
 #, kde-format
@@ -130,30 +130,28 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: contents/lockscreen/config.qml:19
-#, fuzzy, kde-format
-#| msgid "Clock"
+#, kde-format
 msgctxt "@title: group"
 msgid "Clock:"
-msgstr "Jam"
+msgstr "Jam:"
 
 #: contents/lockscreen/config.qml:22
 #, kde-format
 msgctxt "@option:check"
 msgid "Keep visible when unlocking prompt disappears"
-msgstr ""
+msgstr "Tetap terlihat ketika prompt pembukaan kunci tidak ada"
 
 #: contents/lockscreen/config.qml:33
-#, fuzzy, kde-format
-#| msgid "Media Controls"
+#, kde-format
 msgctxt "@title: group"
 msgid "Media controls:"
-msgstr "Kendali Media"
+msgstr "Kontrol media:"
 
 #: contents/lockscreen/config.qml:36
 #, kde-format
 msgctxt "@option:check"
 msgid "Show under unlocking prompt"
-msgstr ""
+msgstr "Tampilkan di bawah prompt pembukaan kunci"
 
 #: contents/lockscreen/LockScreenUi.qml:55
 #, kde-format
@@ -205,12 +203,12 @@ msgstr "Buka kunci"
 #: contents/lockscreen/MediaControls.qml:109
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Tidak ada judul"
 
 #: contents/lockscreen/MediaControls.qml:110
 #, kde-format
 msgid "No media playing"
-msgstr "Tidak ada media yang dimainkan"
+msgstr "Tidak ada media yang diputar"
 
 #: contents/lockscreen/MediaControls.qml:139
 #, kde-format
@@ -220,7 +218,7 @@ msgstr "Trek sebelumnya"
 #: contents/lockscreen/MediaControls.qml:151
 #, kde-format
 msgid "Play or Pause media"
-msgstr "Putarkan atau Jedakan media"
+msgstr "Putar atau Jeda media"
 
 #: contents/lockscreen/MediaControls.qml:165
 #, kde-format
