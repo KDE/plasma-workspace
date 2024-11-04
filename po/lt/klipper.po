@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:42+0000\n"
-"PO-Revision-Date: 2024-10-05 19:31+0300\n"
+"PO-Revision-Date: 2024-11-04 00:08+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -370,13 +370,13 @@ msgstr "Nepavyko sukurti QR kodo"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "Suskleisti"
 
 #: declarative/qml/ClipboardItemDelegate.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "Išskleisti"
 
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
