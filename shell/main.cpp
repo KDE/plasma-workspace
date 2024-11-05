@@ -28,6 +28,7 @@
 #include <QQuickWindow>
 #include <QSessionManager>
 #include <QSurfaceFormat>
+#include <QtWebEngineQuick>
 
 #include <KAboutData>
 #include <KCrash>
@@ -52,6 +53,7 @@ int main(int argc, char *argv[])
     QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
 
     QQuickWindow::setDefaultAlphaBuffer(true);
+    QtWebEngineQuick::initialize();
 
     // this works around a bug of Qt and the plasmashell protocol
     // consider disabling when layer-shell lands

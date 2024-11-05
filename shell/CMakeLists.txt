@@ -111,6 +111,7 @@ target_link_libraries(plasmashell
  Qt::Quick
  Qt::DBus
  Qt::WaylandClient
+ Qt::WebEngineQuick
  Wayland::Client
 )
 target_link_libraries(plasmashell KF6::ConfigQml)

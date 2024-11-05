@@ -10,6 +10,7 @@
 #include <QApplication>
 #include <QQmlDebuggingEnabler>
 #include <QSurfaceFormat>
+#include <QtWebEngineQuick>
 #include <qcommandlineoption.h>
 #include <qcommandlineparser.h>
 
@@ -30,6 +31,7 @@ int main(int argc, char **argv)
     }
 #endif
 
+    QtWebEngineQuick::initialize();
     QQuickWindow::setDefaultAlphaBuffer(true);
 
     auto format = QSurfaceFormat::defaultFormat();

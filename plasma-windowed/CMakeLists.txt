@@ -15,6 +15,7 @@ target_link_libraries(
     Qt::Widgets
     Qt::Quick
     Qt::Qml
+    Qt::WebEngineQuick
     KF6::I18n
     KF6::IconThemes
     KF6::XmlGui
