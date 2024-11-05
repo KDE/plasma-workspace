@@ -86,8 +86,7 @@ QQC2.StackView {
             "color": view.configColor,
             "blur": view.blur,
             "opacity": 0,
-            "width": view.width,
-            "height": view.height,
+            "parent": view,
         });
 
         pendingImage.statusChanged.connect(replaceWhenLoaded);
