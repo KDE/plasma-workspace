@@ -27,8 +27,8 @@ GridLayout {
     //property bool menuOpen
     readonly property real textPreferredWidth: Kirigami.Units.gridUnit * 18
     readonly property bool menuOpen: Boolean(body?.menuOpen)
-                                     || Boolean(footer?.item?.menuOpen)
-    readonly property bool dragging: Boolean(icon?.dragging) || Boolean(footer?.item?.dragging)
+                                     || Boolean(footer?.menuOpen)
+    readonly property bool dragging: Boolean(icon?.dragging) || Boolean(footer?.dragging)
 
     rowSpacing: Kirigami.Units.smallSpacing
     columnSpacing: Kirigami.Units.smallSpacing
