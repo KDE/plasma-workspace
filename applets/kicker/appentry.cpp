@@ -160,6 +160,7 @@ void AppEntry::init(NameFormat nameFormat)
 
     switch (nameFormat) {
     case NameOnly:
+        m_description = comment;
     case NameAndGenericName:
         m_compactName = nameFromService(m_service, NameOnly);
         m_description = comment;
