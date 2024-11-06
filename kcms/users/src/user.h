@@ -12,6 +12,7 @@
 #include <QObject>
 #include <QPointer>
 #include <QRect>
+#include <QTemporaryFile>
 #include <QUrl>
 
 #include <optional>
@@ -136,7 +137,8 @@ private:
     QString mOriginalEmail;
     QUrl mFace;
     QUrl mOriginalFace;
-    QRect mFaceCrop = QRect(0, 0, 0, 0);
+    std::unique_ptr<QTemporaryFile> mFaceFile;
+    std::optional<QRect> mFaceCrop;
     bool mAdministrator = false;
     bool mOriginalAdministrator = false;
     bool mFaceValid = false;
