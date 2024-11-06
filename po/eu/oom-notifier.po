@@ -1,0 +1,57 @@
+# Translation for oom-notifier.po to Euskara/Basque (eu).
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.eus>.
+#
+# Translators:
+# SPDX-FileCopyrightText: 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"PO-Revision-Date: 2024-11-05 22:08+0100\n"
+"Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
+"Language-Team: Basque <kde-i18n-eu@kde.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
+
+#: module.cpp:65
+#, kde-format
+msgctxt "@title"
+msgid "Memory Shortage Avoided"
+msgstr "Memoria urritasuna saihestu da"
+
+#: module.cpp:68
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<command>%1</command> has been terminated by the Linux kernel because the "
+"system is low on memory. Consider closing unused applications or browser "
+"tabs."
+msgstr ""
+"Linux-en muinak <command>%1</command> bukatu du, sistema memoriarik gabe "
+"gelditzen ari delako. Kontuan hartu erabili gabeko aplikazioak edo "
+"arakatzailearen fitxak ixteko aukera."
+
+#: module.cpp:74
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The background service <command>%1</command> has been terminated by the "
+"Linux kernel because the system is low on memory. Consider closing unused "
+"applications or browser tabs."
+msgstr ""
+"Linux-en muinak atzeko planoko <command>%1</command> zerbitzua bukatu du, "
+"sistemari memoria agortzen ari zaiolako. Kontuan hartu erabili gabeko "
+"aplikazioak edo arakatzailearen fitxak ixteko aukera."
+
+#: module.cpp:82
+#, kde-format
+msgctxt "@action"
+msgid "Restart Application"
+msgstr "Aplikazioa berrabiarazi"
