@@ -39,10 +39,12 @@ CViewer::CViewer()
 
     m_preview = result.plugin;
 
-    m_openAct = actionCollection()->addAction(KStandardAction::Open, this, SLOT(fileOpen()));
-    actionCollection()->addAction(KStandardAction::Quit, this, SLOT(close()));
-    actionCollection()->addAction(KStandardAction::KeyBindings, this, SLOT(configureKeys()));
-    m_printAct = actionCollection()->addAction(KStandardAction::Print, m_preview, SLOT(print()));
+    m_openAct = actionCollection()->addAction(KStandardActions::Open, this, &CViewer::fileOpen);
+    actionCollection()->addAction(KStandardActions::Quit, this, &CViewer::close);
+    actionCollection()->addAction(KStandardActions::KeyBindings, this, &CViewer::configureKeys);
+    m_printAct = actionCollection()->addAction(KStandardActions::Print, m_preview, [this] {
+        QMetaObject::invokeMethod(m_preview, "print");
+    });
 
     // Make tooltips more specific, instead of "document".
     m_openAct->setToolTip(i18n("Open an existing font file"));

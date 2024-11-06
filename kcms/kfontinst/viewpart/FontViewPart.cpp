@@ -119,8 +119,8 @@ CFontViewPart::CFontViewPart(QWidget *parentWidget, QObject *parent, const KPlug
     actionCollection()->addAction(u"displayType"_s, displayTypeAction);
     connect(displayTypeAction, &CPreviewSelectAction::range, this, &CFontViewPart::displayType);
 
-    QAction *zoomIn = actionCollection()->addAction(KStandardAction::ZoomIn, m_preview, SLOT(zoomIn())),
-            *zoomOut = actionCollection()->addAction(KStandardAction::ZoomOut, m_preview, SLOT(zoomOut()));
+    QAction *zoomIn = actionCollection()->addAction(KStandardActions::ZoomIn, m_preview, &CFontPreview::zoomIn),
+            *zoomOut = actionCollection()->addAction(KStandardActions::ZoomOut, m_preview, &CFontPreview::zoomOut);
 
     connect(m_preview, &CFontPreview::atMax, zoomIn, &QAction::setDisabled);
     connect(m_preview, &CFontPreview::atMin, zoomOut, &QAction::setDisabled);
