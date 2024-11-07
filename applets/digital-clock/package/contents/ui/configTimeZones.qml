@@ -14,7 +14,7 @@ import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
 import org.kde.kcmutils as KCMUtils
-import org.kde.kirigamiaddons.components as KirigamiComponents
+import org.kde.plasma.workspace.timezoneselector as TimeZone
 
 Kirigami.PageRow {
     id: timeZonesRow
@@ -23,6 +23,56 @@ Kirigami.PageRow {
     property string cfg_lastSelectedTimezone
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
+
+    defaultColumnWidth: timeZonesRow.width
+
+    /*Component.onCompleted: {
+        applicationWindow().footer.visible = Qt.binding(function() {
+            return timeZonesRow.currentIndex !== 1 || !timeZonesRow.visible
+        })
+    }*/
+
+    Component.onCompleted: {
+        timeZonesRow.realFooter = applicationWindow().footer
+    }
+
+    onVisibleChanged: {
+        if (!visible && timeZonesRow.fakeFooter.parent) {
+            applicationWindow().footer = timeZonesRow.realFooter
+            timeZonesRow.fakeFooter.parent = null
+        }
+    }
+
+    onCurrentIndexChanged: {
+        if (currentIndex == 1) {
+            applicationWindow().footer = timeZonesRow.fakeFooter
+            timeZonesRow.realFooter.parent = null
+        } else {
+            applicationWindow().footer = timeZonesRow.realFooter
+            timeZonesRow.fakeFooter.parent = null
+        }
+    }
+
+    property Item realFooter
+    property Item fakeFooter: QQC2.DialogButtonBox {
+        QQC2.Button {
+            text: i18n("Cancel")
+            onClicked: {
+                timeZonesRow.currentIndex = 0
+                timeZoneSelector.selectedTimeZone = ""
+            }
+        }
+        QQC2.Button {
+            text: i18n("Add Selected Time Zone")
+            icon.name: "list-add"
+            enabled: timeZoneSelector.selectedTimeZone
+            onClicked: {
+                timeZones.selectedTimeZones = [...timeZones.selectedTimeZones, timeZoneSelector.selectedTimeZone]
+                timeZoneSelector.selectedTimeZone = ""
+                timeZonesRow.currentIndex = 0
+            }
+        }
+    }
 
     initialPage: KCMUtils.ScrollViewKCM {
 
@@ -202,33 +252,15 @@ Kirigami.PageRow {
     }
 
     property Item addTimeZonePage: Kirigami.Page {
+        padding: 0
         title: i18n("Choose Time Zone")
 
         Layout.fillHeight: true
         Layout.fillWidth: true
 
-        KirigamiComponents.TimezoneSelector {
+        TimeZone.TimezoneSelector {
             id: timeZoneSelector
             anchors.fill: parent
-        }
-
-        footer: QQC2.DialogButtonBox {
-            QQC2.Button {
-                text: i18n("Undo")
-                onClicked: {
-                    timeZonesRow.currentIndex = 0
-                }
-            }
-            QQC2.Button {
-                text: i18n("Add Selected Timezone")
-                icon.name: "list-add"
-                enabled: timeZoneSelector.selectedTimeZone
-                onClicked: {
-                    timeZones.selectedTimeZones = [...timeZones.selectedTimeZones, timeZoneSelector.selectedTimeZone]
-                    timeZoneSelector.selectedTimeZone = ""
-                    timeZonesRow.currentIndex = 0
-                }
-            }
         }
     }
 
