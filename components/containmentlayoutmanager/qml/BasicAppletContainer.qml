@@ -10,6 +10,7 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Window 2.15
 import Qt5Compat.GraphicalEffects
+import QtQuick.Effects as Effects
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
@@ -156,8 +157,8 @@ ContainmentLayoutManager.AppletContainer {
     Component {
         id: maskComponent
 
-        OpacityMask {
-            id: mask
+        Effects.MultiEffect {
+            id: backgroundEffect
 
             readonly property rect appletContainerScreenRect: {
                 const win = appletContainer.Window.window;
@@ -169,8 +170,8 @@ ContainmentLayoutManager.AppletContainer {
                 return clipRect(
                     boundsForTransformedRect(
                         Qt.rect(
-                            position.x,
-                            position.y,
+                            position.x - parent.Kirigami.ScenePosition.x,
+                            position.y - parent.Kirigami.ScenePosition.y,
                             appletContainer.width,
                             appletContainer.height),
                         appletContainer.rotation,
@@ -219,13 +220,24 @@ ContainmentLayoutManager.AppletContainer {
             y: appletContainerScreenRect.y
             width: appletContainerScreenRect.width
             height: appletContainerScreenRect.height
+            visible: appletContainer.visible
 
             z: -2
-            maskSource: Item {
+
+            maskEnabled: true
+            maskSource: mask
+            // In the config they are more or less from 0 to 2, here from -1 to 1
+            contrast: PlasmaCore.Theme.backgroundContrast - 1.0
+            brightness: PlasmaCore.Theme.backgroundIntensity - 1.0
+            saturation: PlasmaCore.Theme.backgroundSaturation - 1.0
+
+            Item {
+                id: mask
                 // optimized (clipped) blurred-mask
 
-                width: mask.appletContainerScreenRect.width
-                height: mask.appletContainerScreenRect.height
+                layer.enabled: true
+                width: backgroundEffect.appletContainerScreenRect.width
+                height: backgroundEffect.appletContainerScreenRect.height
 
                 clip: true
 
@@ -233,8 +245,8 @@ ContainmentLayoutManager.AppletContainer {
                     imagePath: "widgets/background"
                     prefix: "blurred-mask"
 
-                    x: appletContainer.Kirigami.ScenePosition.x - mask.appletContainerScreenRect.x
-                    y: appletContainer.Kirigami.ScenePosition.y - mask.appletContainerScreenRect.y
+                    x: appletContainer.Kirigami.ScenePosition.x - backgroundEffect.appletContainerScreenRect.x - appletContainer.layout.containmentItem.Kirigami.ScenePosition.x
+                    y: appletContainer.Kirigami.ScenePosition.y - backgroundEffect.appletContainerScreenRect.y - appletContainer.layout.containmentItem.Kirigami.ScenePosition.y
 
                     width: background.width
                     height: background.height
@@ -244,16 +256,20 @@ ContainmentLayoutManager.AppletContainer {
                 }
             }
 
-            source: FastBlur {
-                width: mask.appletContainerScreenRect.width
-                height: mask.appletContainerScreenRect.height
+            source: Effects.MultiEffect {
+                // Blur needs to be a separed MultiEffect because otherwise it blurs
+                // the mask as well
+                width: backgroundEffect.appletContainerScreenRect.width
+                height: backgroundEffect.appletContainerScreenRect.height
 
-                radius: 128
+                blurEnabled: true
+                blur: 1
+                blurMax: 128
 
                 source: ShaderEffectSource {
-                    width: mask.appletContainerScreenRect.width
-                    height: mask.appletContainerScreenRect.height
-                    sourceRect: mask.appletContainerScreenRect
+                    width: backgroundEffect.appletContainerScreenRect.width
+                    height: backgroundEffect.appletContainerScreenRect.height
+                    sourceRect: backgroundEffect.appletContainerScreenRect
                     sourceItem: appletContainer.layout.containmentItem.wallpaper
                 }
             }
