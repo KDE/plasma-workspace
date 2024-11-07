@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 02:35+0000\n"
+"POT-Creation-Date: 2024-11-07 02:30+0000\n"
 "PO-Revision-Date: 2024-08-30 10:40+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -629,24 +629,24 @@ msgstr ""
 "eta behar duten aplikazio eta komando-erroko programei administratzaile "
 "baimenak emateko.<nl/><nl/>Zure sisteman saio-hastea ez da onartzen oraindik."
 
-#: src/user.cpp:310
+#: src/user.cpp:307
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Ezin izan da %1 erabiltzailea gordetzeko baimenik lortu"
 
-#: src/user.cpp:315
+#: src/user.cpp:312
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Errore bat gertatu da aldaketak gordetzean"
 
-#: src/user.cpp:417
+#: src/user.cpp:414
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Irudiaren neurria aldatzea huts egin du: aldi baterako fitxategia irekitzea "
 "huts egin du."
 
-#: src/user.cpp:425
+#: src/user.cpp:422
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

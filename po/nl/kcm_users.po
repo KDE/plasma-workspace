@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 02:35+0000\n"
+"POT-Creation-Date: 2024-11-07 02:30+0000\n"
 "PO-Revision-Date: 2024-08-29 10:18+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -586,24 +586,24 @@ msgstr ""
 "toepassingen en opdrachtregelprogramma's die er om vragen.<nl/><nl/"
 ">Aanmelden in het systeem met uw vingerafdruk wordt nog niet ondersteund."
 
-#: src/user.cpp:310
+#: src/user.cpp:307
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Kon geen toegangsrechten verkrijgen om gebruiker %1 op te slaan"
 
-#: src/user.cpp:315
+#: src/user.cpp:312
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Er was een fout tijdens opslaan van wijzigingen"
 
-#: src/user.cpp:417
+#: src/user.cpp:414
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Afbeelding van grootte wijzigen is mislukt: openen van tijdelijk bestand is "
 "mislukt "
 
-#: src/user.cpp:425
+#: src/user.cpp:422
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 02:35+0000\n"
+"POT-Creation-Date: 2024-11-07 02:30+0000\n"
 "PO-Revision-Date: 2024-09-29 18:48+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -616,24 +616,24 @@ msgstr ""
 "sie anfordern, Administratorrechte zu erteilen.<nl/><nl/>Die Anmeldung am "
 "System mit Ihrem Fingerabdruck wird noch nicht unterstützt."
 
-#: src/user.cpp:310
+#: src/user.cpp:307
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Keine Berechtigung um den Benutzer %1 zu speichern"
 
-#: src/user.cpp:315
+#: src/user.cpp:312
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Fehler beim Speichern der Änderungen"
 
-#: src/user.cpp:417
+#: src/user.cpp:414
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Größenänderung des Bilds ist fehlgeschlagen: Öffnen der temporären Datei ist "
 "nicht möglich"
 
-#: src/user.cpp:425
+#: src/user.cpp:422
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

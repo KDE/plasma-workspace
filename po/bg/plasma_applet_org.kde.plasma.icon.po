@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-15 00:39+0000\n"
-"PO-Revision-Date: 2022-06-28 09:54+0200\n"
+"PO-Revision-Date: 2024-11-06 23:59+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,19 +15,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: iconapplet.cpp:98
 #, kde-format
 msgid "Failed to create icon widgets folder '%1'"
-msgstr "Създаването на папка с приставки за икони \"%1\" е неуспешно"
+msgstr "Създаването на папка с приставки за икони „%1“ е неуспешно"
 
 #: iconapplet.cpp:144
 #, kde-format
 msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
 msgstr ""
-"Копирането на работния файл на приставка за икони от \"%1\" в \"%2\" е "
-"неуспешно"
+"Копирането на работния файл на приставка за икони от „%1“ в „%2“ е неуспешно"
 
 #: iconapplet.cpp:356
 #, kde-format
