@@ -14,7 +14,7 @@ import org.kde.plasma.private.digitalclock
 import org.kde.kirigami as Kirigami
 import org.kde.config as KConfig
 import org.kde.kcmutils as KCMUtils
-import org.kde.kirigamiaddons.components as KirigamiComponents
+import org.kde.plasma.workspace.timezoneselector as TimeZone
 
 Kirigami.PageRow {
     id: timeZonesRow
@@ -23,6 +23,8 @@ Kirigami.PageRow {
     property string cfg_lastSelectedTimezone
     property alias cfg_selectedTimeZones: timeZones.selectedTimeZones
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
+
+    defaultColumnWidth: timeZonesRow.width
 
     initialPage: KCMUtils.ScrollViewKCM {
 
@@ -202,12 +204,13 @@ Kirigami.PageRow {
     }
 
     property Item addTimeZonePage: Kirigami.Page {
+        padding: 0
         title: i18n("Choose Time Zone")
 
         Layout.fillHeight: true
         Layout.fillWidth: true
 
-        KirigamiComponents.TimezoneSelector {
+        TimeZone.TimezoneSelector {
             id: timeZoneSelector
             anchors.fill: parent
         }
