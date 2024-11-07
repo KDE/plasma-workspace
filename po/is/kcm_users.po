@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 00:42+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-07-22 13:09+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -585,6 +585,12 @@ msgstr ""
 "skipanalínu sem fara fram á slík.<nl/><nl/>Ekki er enn kominn stuðningur við "
 "að skrá þig inn í tölvuna með fingrafari."
 
+#: src/user.cpp:126
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
@@ -595,12 +601,12 @@ msgstr "Ekki tókst að fá heimild til að vista notandann %1"
 msgid "There was an error while saving changes"
 msgstr "Villa kom upp þegar breytingar voru vistaðar"
 
-#: src/user.cpp:417
+#: src/user.cpp:426
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Mistókst að breyta stærð myndar: tókst ekki að opna bráðabirgðaskrá"
 
-#: src/user.cpp:425
+#: src/user.cpp:434
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

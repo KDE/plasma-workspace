@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 00:42+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-09-05 09:41+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -582,6 +582,12 @@ msgstr ""
 "أذونات المسؤول للتطبيقات وبرامج سطر الأوامر التي تطلبها. <nl/><nl/> الولوج "
 "إلى النظام باستخدام البصمة غير مدعوم لحد الآن."
 
+#: src/user.cpp:126
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
@@ -592,12 +598,12 @@ msgstr "تعذر الحصول على إذن لحفظ المستخدم %1"
 msgid "There was an error while saving changes"
 msgstr "حدث خطأ أثناء حفظ التغييرات"
 
-#: src/user.cpp:417
+#: src/user.cpp:426
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشل في فتح الملف المؤقت"
 
-#: src/user.cpp:425
+#: src/user.cpp:434
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشلت الكتابة إلى ملف مؤقت"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 00:42+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -621,6 +621,12 @@ msgstr ""
 "programoj kiuj petas ilin.<nl/><nl/>Ensaluti en la sistemon per via "
 "fingrospuro ankoraŭ ne estas subtenata."
 
+#: src/user.cpp:126
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
@@ -631,12 +637,12 @@ msgstr "Ne eblis akiri permeson konservi uzanton %1"
 msgid "There was an error while saving changes"
 msgstr "Okazis eraro dum konservado de ŝanĝoj"
 
-#: src/user.cpp:417
+#: src/user.cpp:426
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Malsukcesis regrandigi bildon: malfermi tempdosieron malsukcesis"
 
-#: src/user.cpp:425
+#: src/user.cpp:434
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Malsukcesis regrandigi bildon: skribo al tempdosiero malsukcesis"

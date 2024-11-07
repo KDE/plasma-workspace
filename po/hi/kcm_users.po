@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 00:42+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2022-02-26 14:04+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -600,6 +600,12 @@ msgstr ""
 "है और अनुप्रयोग और अनुरोध करनेवाले कमांड-लाइन प्रोग्राम के लिए व्यवस्थापक अनुमतियां  प्रदान "
 "की जाती हैं। <nl/><nl/>अपने अंगुलि छाप के साथ तंत्र में लॉग इन करना अभी समर्थित नहीं है।"
 
+#: src/user.cpp:126
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
@@ -610,12 +616,12 @@ msgstr "उपयोगकर्ता %1 को सहेजने की अ�
 msgid "There was an error while saving changes"
 msgstr "परिवर्तन सहेजते समय एक त्रुटि हुई"
 
-#: src/user.cpp:417
+#: src/user.cpp:426
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "छवि का आकार बदलने में विफल: अस्थायी फ़ाइल खोलना विफल रहा"
 
-#: src/user.cpp:425
+#: src/user.cpp:434
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "छवि का आकार बदलने में विफल: अस्थायी फ़ाइल में लिखना विफल रहा"

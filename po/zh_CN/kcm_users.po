@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 00:42+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -579,6 +579,12 @@ msgstr ""
 "指纹可以用于替代密码来解除锁屏，或在应用程序和命令行程序请求管理员权限时进行"
 "身份验证。<nl/><nl/>目前暂不支持使用指纹登录系统。"
 
+#: src/user.cpp:126
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
@@ -589,12 +595,12 @@ msgstr "无法获取保存用户 %1 的权限"
 msgid "There was an error while saving changes"
 msgstr "保存更改时出错"
 
-#: src/user.cpp:417
+#: src/user.cpp:426
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "调整图像大小失败：无法打开临时文件"
 
-#: src/user.cpp:425
+#: src/user.cpp:434
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "调整图像大小失败：无法写入临时文件"

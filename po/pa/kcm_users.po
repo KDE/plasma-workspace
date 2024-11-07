@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 00:42+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-10-25 23:42-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -578,6 +578,12 @@ msgstr ""
 "ਪਰਸ਼ਾਸ਼ਕੀ ਇਜਾਜ਼ਤਾਂ ਦੇਣ ਲਈ ਪਾਸਵਰਡ ਦੀ ਥਾਂ ਉੱਤੇ ਫਿੰਗਰ-ਪਰਿੰਟਾਂ ਨੂੰ ਵਰਤਿਆ ਜਾ ਸਕਦਾ ਹੈ।<nl/><nl/"
 ">ਸਿਸਟਮ ਵਿੱਚ ਤੁਹਾਡੇ ਫਿੰਗਰਪਰਿੰਟ ਨਾਲ ਲਾਗਇਨ ਕਰਨਾ ਹਾਲੇ ਸਹਾਇਕ ਨਹੀਂ ਹੈ।"
 
+#: src/user.cpp:126
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
@@ -588,12 +594,12 @@ msgstr "ਸੰਭਾਲੇ ਹੋਏ ਵਰਤੋਂਕਾਰ %1 ਲਈ ਇਜ�
 msgid "There was an error while saving changes"
 msgstr "ਤਬਦੀਲੀਆਂ ਸੰਭਾਲਣ ਦੌਰਾਨ ਗਲਤੀ ਆਈ ਹੈ"
 
-#: src/user.cpp:417
+#: src/user.cpp:426
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਖੋਲ੍ਹਣ ਲਈ ਫੇਲ੍ਹ"
 
-#: src/user.cpp:425
+#: src/user.cpp:434
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "ਚਿੱਤਰ ਦਾ ਆਕਾਰ ਬਦਲਣ ਲਈ ਫੇਲ੍ਹ: ਆਰਜ਼ੀ ਫਾਇਲ ਲਿਖਣ ਲਈ ਫੇਲ੍ਹ"

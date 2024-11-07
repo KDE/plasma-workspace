@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 00:42+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-10-29 11:52+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -618,6 +618,12 @@ msgstr ""
 ">Pagaidām vēl nav atbalstīta ierakstīšanās sistēmā, izmantojot pirkstu "
 "nospiedumu."
 
+#: src/user.cpp:126
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
@@ -628,12 +634,12 @@ msgstr "Neizdevās iegūt atļaujas lietotāja %1 saglabāšanai"
 msgid "There was an error while saving changes"
 msgstr "Kļūda, saglabājot izmaiņas"
 
-#: src/user.cpp:417
+#: src/user.cpp:426
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Neizdevās mainīt attēla izmēru: kļūda, atverot pagaidu datni"
 
-#: src/user.cpp:425
+#: src/user.cpp:434
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Neizdevās mainīt attēla izmēru: kļūda, rakstot pagaidu datnē"

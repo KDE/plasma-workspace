@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-26 00:42+0000\n"
+"POT-Creation-Date: 2024-11-07 00:41+0000\n"
 "PO-Revision-Date: 2024-09-01 00:54+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: none\n"
@@ -619,6 +619,12 @@ msgstr ""
 "eilutės programoms.<nl/><nl/>Prisijungimas prie sistemos naudojant piršto "
 "atspaudą kol kas yra nepalaikomas."
 
+#: src/user.cpp:126
+#, kde-format
+msgctxt "@info"
+msgid "Failed to crop image: %1"
+msgstr ""
+
 #: src/user.cpp:310
 #, kde-format
 msgid "Could not get permission to save user %1"
@@ -629,12 +635,12 @@ msgstr "Nepavyko gauti leidimo įrašyti naudotoją %1"
 msgid "There was an error while saving changes"
 msgstr "Įrašant pakeitimus, įvyko klaida"
 
-#: src/user.cpp:417
+#: src/user.cpp:426
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Nepavyko pakeisti paveikslo dydžio: nepavyko atverti laikinojo failo"
 
-#: src/user.cpp:425
+#: src/user.cpp:434
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Nepavyko pakeisti paveikslo dydžio: nepavyko rašyti į laikinąjį failą"
