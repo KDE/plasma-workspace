@@ -121,7 +121,7 @@ void IconApplet::populate()
     }
 
     if (!m_url.isValid()) {
-        // We wait 500ms before displaying a dialog since
+        // We wait 100ms before displaying a dialog since
         // when we create a valid icon applet (e.g. by drag
         // and dropping an application from kickoff to the
         // panel), the widget is first created and then
