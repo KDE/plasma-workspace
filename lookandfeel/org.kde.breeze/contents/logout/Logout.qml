@@ -192,6 +192,19 @@ Item {
             visible: rebootToFirmwareSetup
         }
 
+        PlasmaComponents.Label {
+            font.pointSize: Kirigami.Theme.defaultFont.pointSize + 1
+            Layout.maximumWidth: Math.max(Kirigami.Units.gridUnit * 16, logoutButtonsRow.implicitWidth)
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            horizontalAlignment: Text.AlignHCenter
+            wrapMode: Text.WordWrap
+            font.italic: true
+            text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "When restarted, the computer will enter the boot loader menu.")
+            textFormat: Text.PlainText
+            visible: rebootToBootLoaderMenu
+        }
+
         RowLayout {
             id: logoutButtonsRow
             spacing: Kirigami.Units.gridUnit * 2
