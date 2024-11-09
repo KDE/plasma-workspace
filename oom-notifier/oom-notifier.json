@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Informs when applications get terminated to prevent out of memory conditions",
+        "Description[be]": "Паведамляе, калі праграмы спыняюцца, каб прадухіліць недахоп памяці",
         "Description[bg]": "Информира, когато приложенията бъдат прекратени, за да се предотвратят условия на липса на памет",
         "Description[ca@valencia]": "Informa quan es termina una aplicació per a evitar condicions d'exhauriment de memòria",
         "Description[ca]": "Informa quan es termina una aplicació per a evitar condicions d'exhauriment de memòria",
@@ -21,6 +22,7 @@
         "Description[x-test]": "xxInforms when applications get terminated to prevent out of memory conditionsxx",
         "Description[zh_CN]": "当应用程序被终止以防止内存不足时通知用户",
         "Name": "Out of Memory Notifier",
+        "Name[be]": "Сродак апавяшчэння пра недахоп памяці",
         "Name[bg]": "Известие за недостиг на памет",
         "Name[ca@valencia]": "Notificador de memòria exhaurida",
         "Name[ca]": "Notificador de memòria exhaurida",
