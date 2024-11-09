@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 00:42+0000\n"
 "PO-Revision-Date: 2019-09-23 21:28+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -394,19 +394,26 @@ msgstr ""
 msgid "%1, %2"
 msgstr ""
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:215
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr ""
 
-#: package/contents/ui/main.qml:202
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Set Time Format…"
+msgstr ""
+
+#: package/contents/ui/NoTimezoneWarning.qml:37
+#, kde-format
+msgctxt "@label Shown in place of digital clock when no timezone is set"
+msgid ""
+"Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
 
 #: package/contents/ui/Tooltip.qml:34
@@ -415,7 +422,22 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr ""
 
-#: package/contents/ui/Tooltip.qml:126
+#: package/contents/ui/Tooltip.qml:65
+#, fuzzy, kde-format
+#| msgid "Time zone city"
+msgctxt ""
+"@label main text shown in digital clock's tooltip when timezone is missing"
+msgid "Time zone is not set"
+msgstr "Шаҳри минтақаи вақт"
+
+#: package/contents/ui/Tooltip.qml:86
+#, kde-format
+msgctxt ""
+"@label sub text shown in digital clock's tooltip when timezone is missing"
+msgid "Click the clock icon to open Date & Time settings and set a time zone."
+msgstr ""
+
+#: package/contents/ui/Tooltip.qml:131
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
@@ -456,9 +478,6 @@ msgstr "Нишон додани минтақаи вақти маҳаллӣ"
 #~ msgctxt "Use default font"
 #~ msgid "Default"
 #~ msgstr "Стандартӣ"
-
-#~ msgid "Time zone city"
-#~ msgstr "Шаҳри минтақаи вақт"
 
 #~ msgid "Time zone code"
 #~ msgstr "Рамзи минтақаи вақт"

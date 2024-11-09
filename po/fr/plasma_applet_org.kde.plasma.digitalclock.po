@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 00:42+0000\n"
 "PO-Revision-Date: 2024-09-01 10:17+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -399,20 +399,27 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:215
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Copier dans le presse-papiers"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Ajuster la date et l'heure…"
 
-#: package/contents/ui/main.qml:202
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Définir le format de l'heure…"
+
+#: package/contents/ui/NoTimezoneWarning.qml:37
+#, kde-format
+msgctxt "@label Shown in place of digital clock when no timezone is set"
+msgid ""
+"Time zone is not set; click here to open Date & Time settings and set one"
+msgstr ""
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -420,7 +427,22 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "La date d’aujourd’hui est %1"
 
-#: package/contents/ui/Tooltip.qml:126
+#: package/contents/ui/Tooltip.qml:65
+#, fuzzy, kde-format
+#| msgid "Time zone city"
+msgctxt ""
+"@label main text shown in digital clock's tooltip when timezone is missing"
+msgid "Time zone is not set"
+msgstr "Ville du fuseau horaire"
+
+#: package/contents/ui/Tooltip.qml:86
+#, kde-format
+msgctxt ""
+"@label sub text shown in digital clock's tooltip when timezone is missing"
+msgid "Click the clock icon to open Date & Time settings and set a time zone."
+msgstr ""
+
+#: package/contents/ui/Tooltip.qml:131
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
@@ -2431,9 +2453,6 @@ msgstr "Fuseau horaire local du système"
 #~ msgctxt "@action:button Add event"
 #~ msgid "Add..."
 #~ msgstr "Ajouter..."
-
-#~ msgid "Time zone city"
-#~ msgstr "Ville du fuseau horaire"
 
 #~ msgid "Time zone code"
 #~ msgstr "Code de fuseau horaire"

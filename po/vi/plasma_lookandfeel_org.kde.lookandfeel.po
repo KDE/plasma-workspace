@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 00:42+0000\n"
 "PO-Revision-Date: 2022-10-14 18:32+0200\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -65,12 +65,18 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Khi khởi động lại, máy tính sẽ đi vào màn hình cài đặt phần sụn."
 
 #: contents/logout/Logout.qml:203
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter the boot loader menu."
+msgstr "Khi khởi động lại, máy tính sẽ đi vào màn hình cài đặt phần sụn."
+
+#: contents/logout/Logout.qml:216
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Ngủ"
 
-#: contents/logout/Logout.qml:204
+#: contents/logout/Logout.qml:217
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -78,63 +84,63 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Ngủ"
 
-#: contents/logout/Logout.qml:213
+#: contents/logout/Logout.qml:226
 #, kde-format
 msgid "Hibernate"
 msgstr "Ngủ đông"
 
-#: contents/logout/Logout.qml:214
+#: contents/logout/Logout.qml:227
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "Hibernate Now"
 msgstr "Ngủ đông"
 
-#: contents/logout/Logout.qml:225
+#: contents/logout/Logout.qml:238
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
+#: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
 #, kde-format
 msgid "Restart"
 msgstr "Khởi động lại"
 
-#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "Khởi động lại"
 
-#: contents/logout/Logout.qml:260
+#: contents/logout/Logout.qml:273
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr ""
 
-#: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
+#: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
 #, kde-format
 msgid "Shut Down"
 msgstr "Tắt"
 
-#: contents/logout/Logout.qml:263 contents/logout/Logout.qml:282
+#: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "Shut Down Now"
 msgstr "Tắt"
 
-#: contents/logout/Logout.qml:294
+#: contents/logout/Logout.qml:307
 #, kde-format
 msgid "Log Out"
 msgstr "Đăng xuất"
 
-#: contents/logout/Logout.qml:295
+#: contents/logout/Logout.qml:308
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "Log Out Now"
 msgstr "Đăng xuất"
 
-#: contents/logout/Logout.qml:305
+#: contents/logout/Logout.qml:318
 #, kde-format
 msgid "Cancel"
 msgstr "Huỷ"

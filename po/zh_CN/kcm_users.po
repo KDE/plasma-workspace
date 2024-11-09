@@ -583,7 +583,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "裁剪图像失败：%1"
 
 #: src/user.cpp:310
 #, kde-format

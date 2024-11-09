@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 00:42+0000\n"
 "PO-Revision-Date: 2022-10-11 17:14+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -72,12 +72,20 @@ msgstr ""
 "'firmware'."
 
 #: contents/logout/Logout.qml:203
+#, fuzzy, kde-format
+#| msgid "When restarted, the computer will enter the firmware setup screen."
+msgid "When restarted, the computer will enter the boot loader menu."
+msgstr ""
+"Quando reiniciar, o computador irá entrar no ecrã de configuração do "
+"'firmware'."
+
+#: contents/logout/Logout.qml:216
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Suspender"
 
-#: contents/logout/Logout.qml:204
+#: contents/logout/Logout.qml:217
 #, fuzzy, kde-format
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
@@ -85,63 +93,63 @@ msgctxt "Suspend to RAM"
 msgid "Sleep Now"
 msgstr "Suspender"
 
-#: contents/logout/Logout.qml:213
+#: contents/logout/Logout.qml:226
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernar"
 
-#: contents/logout/Logout.qml:214
+#: contents/logout/Logout.qml:227
 #, fuzzy, kde-format
 #| msgid "Hibernate"
 msgid "Hibernate Now"
 msgstr "Hibernar"
 
-#: contents/logout/Logout.qml:225
+#: contents/logout/Logout.qml:238
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr ""
 
-#: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
+#: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
 #, kde-format
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: contents/logout/Logout.qml:228 contents/logout/Logout.qml:247
+#: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
 #, fuzzy, kde-format
 #| msgid "Restart"
 msgid "Restart Now"
 msgstr "Reiniciar"
 
-#: contents/logout/Logout.qml:260
+#: contents/logout/Logout.qml:273
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
 msgstr ""
 
-#: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
+#: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
 #, kde-format
 msgid "Shut Down"
 msgstr "Desligar"
 
-#: contents/logout/Logout.qml:263 contents/logout/Logout.qml:282
+#: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
 #, fuzzy, kde-format
 #| msgid "Shut Down"
 msgid "Shut Down Now"
 msgstr "Desligar"
 
-#: contents/logout/Logout.qml:294
+#: contents/logout/Logout.qml:307
 #, kde-format
 msgid "Log Out"
 msgstr "Sair"
 
-#: contents/logout/Logout.qml:295
+#: contents/logout/Logout.qml:308
 #, fuzzy, kde-format
 #| msgid "Log Out"
 msgid "Log Out Now"
 msgstr "Sair"
 
-#: contents/logout/Logout.qml:305
+#: contents/logout/Logout.qml:318
 #, kde-format
 msgid "Cancel"
 msgstr "Cancelar"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 00:42+0000\n"
 "PO-Revision-Date: 2024-02-09 19:41+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -408,20 +408,27 @@ msgstr "%1, %2(%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:215
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "클립보드에 복사"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "날짜와 시간 조정…"
 
-#: package/contents/ui/main.qml:202
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Set Time Format…"
 msgstr "시간 형식 설정…"
+
+#: package/contents/ui/NoTimezoneWarning.qml:37
+#, kde-format
+msgctxt "@label Shown in place of digital clock when no timezone is set"
+msgid ""
+"Time zone is not set; click here to open Date & Time settings and set one"
+msgstr ""
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -429,7 +436,22 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "오늘: %1"
 
-#: package/contents/ui/Tooltip.qml:126
+#: package/contents/ui/Tooltip.qml:65
+#, fuzzy, kde-format
+#| msgid "Time zone city"
+msgctxt ""
+"@label main text shown in digital clock's tooltip when timezone is missing"
+msgid "Time zone is not set"
+msgstr "시간대 도시"
+
+#: package/contents/ui/Tooltip.qml:86
+#, kde-format
+msgctxt ""
+"@label sub text shown in digital clock's tooltip when timezone is missing"
+msgid "Click the clock icon to open Date & Time settings and set a time zone."
+msgstr ""
+
+#: package/contents/ui/Tooltip.qml:131
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"
@@ -2440,9 +2462,6 @@ msgstr "시스템 지역 시간대"
 #~ msgctxt "@action:button Add event"
 #~ msgid "Add..."
 #~ msgstr "추가..."
-
-#~ msgid "Time zone city"
-#~ msgstr "시간대 도시"
 
 #~ msgid "Time zone code"
 #~ msgstr "시간대 코드"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kgeography\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-11-09 00:42+0000\n"
 "PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: Pedro Morais <morais@kde.org>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -1165,20 +1165,27 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:192
+#: package/contents/ui/main.qml:215
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Copiar para a Área de Transferência"
 
-#: package/contents/ui/main.qml:196
+#: package/contents/ui/main.qml:219
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Acertar a Data e Hora…"
 
-#: package/contents/ui/main.qml:202
+#: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Mudar o Formato da Hora…"
+
+#: package/contents/ui/NoTimezoneWarning.qml:37
+#, kde-format
+msgctxt "@label Shown in place of digital clock when no timezone is set"
+msgid ""
+"Time zone is not set; click here to open Date & Time settings and set one"
+msgstr ""
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -1186,7 +1193,22 @@ msgctxt "@info:tooltip %1 is a localized long date"
 msgid "Today is %1"
 msgstr "Hoje é %1"
 
-#: package/contents/ui/Tooltip.qml:126
+#: package/contents/ui/Tooltip.qml:65
+#, fuzzy, kde-format
+#| msgid "Time Zones"
+msgctxt ""
+"@label main text shown in digital clock's tooltip when timezone is missing"
+msgid "Time zone is not set"
+msgstr "Fusos-Horários"
+
+#: package/contents/ui/Tooltip.qml:86
+#, kde-format
+msgctxt ""
+"@label sub text shown in digital clock's tooltip when timezone is missing"
+msgid "Click the clock icon to open Date & Time settings and set a time zone."
+msgstr ""
+
+#: package/contents/ui/Tooltip.qml:131
 #, kde-format
 msgctxt "@label %1 is a city or time zone name"
 msgid "%1:"

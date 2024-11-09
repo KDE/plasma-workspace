@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-08 00:42+0000\n"
-"PO-Revision-Date: 2024-06-17 08:07\n"
+"PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -360,7 +360,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Нядаўна ўсталяваныя"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -378,11 +378,10 @@ msgid "Install Widget From Local File…"
 msgstr "Усталяваць віджэт з лакальнага файла…"
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Усе віджэты"
+msgstr "Атрымаць новыя віджэты"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -390,11 +389,10 @@ msgid "Select Plasmoid File"
 msgstr "Абраць файл плазмоіда"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Не ўдалося ўсталяваць пакет %1."
+msgstr "Не ўдалося ўсталяваць пакет %1: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format

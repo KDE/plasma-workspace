@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-06 23:49\n"
+"PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -156,7 +156,7 @@ msgstr "Схаваць банер папярэдняга прагляду?"
 #: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Увайсці ў рэжым рэдагавання"
 
 #: main.cpp:88
 #, kde-format
@@ -208,7 +208,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:88
 #, kde-format

@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-08-11 21:07\n"
+"PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
 "Language: be\n"
@@ -172,6 +172,11 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"Служба <application>GeoClue2</application> будзе выкарыстоўвацца для "
+"перыядычнага абнаўлення месцазнаходжання прылады з дапамогай GPS або "
+"трыангуляцыі вышкі сотавай сувязі, калі яна даступная, або спосабам "
+"адпраўлення яе ip-адраса на <link url='https://geoip.com/privacy /'>GeoIP</"
+"link>."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -182,6 +187,11 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"Служба <application>%1</application> будзе выкарыстоўвацца для перыядычнага "
+"абнаўлення месцазнаходжання прылады. Адпраўце справаздачу пра хібу на <link "
+"url='https://bugs.kde.org'>https://bugs.kde.org</link> з просьбай да "
+"распрацоўнікаў KDE напісаць падрабязнае апісанне таго, што будзе рабіць "
+"гэтая служба."
 
 #: ui/main.qml:334
 #, kde-format
