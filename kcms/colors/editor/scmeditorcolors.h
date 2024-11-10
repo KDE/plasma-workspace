@@ -56,7 +56,7 @@ private:
             InactiveForeground = 2,
             InactiveBackground = 3,
             ActiveBlend = 4,
-            InactiveBlend = 5
+            InactiveBlend = 5,
         };
 
         WindecoColors()

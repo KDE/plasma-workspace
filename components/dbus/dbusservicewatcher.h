@@ -16,9 +16,9 @@ namespace BusType
 QML_ELEMENT
 Q_NAMESPACE //
     enum Type {
-    Session = 0,
-    System,
-};
+        Session = 0,
+        System,
+    };
 Q_ENUM_NS(Type)
 }
 

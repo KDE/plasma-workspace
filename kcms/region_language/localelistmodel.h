@@ -32,7 +32,7 @@ public:
         LocaleName,
         FlagIcon,
         Example,
-        FilterRole
+        FilterRole,
     };
     explicit LocaleListModel(QObject *parent = nullptr);
 

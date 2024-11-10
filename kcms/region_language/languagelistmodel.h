@@ -26,7 +26,7 @@ public:
     enum Roles {
         NativeName = Qt::UserRole + 1,
         LanguageCode,
-        Flag
+        Flag,
     };
     explicit LanguageListModel(QObject *parent = nullptr);
 

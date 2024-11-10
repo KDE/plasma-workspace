@@ -34,7 +34,7 @@ public:
         ScreenNameRole,
         ContainmentsRole,
         PrimaryRole,
-        EnabledRole
+        EnabledRole,
     };
 
 public:

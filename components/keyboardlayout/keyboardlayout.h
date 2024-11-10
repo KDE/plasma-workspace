@@ -42,7 +42,7 @@ private:
 
     enum DBusData {
         Layout,
-        LayoutsList
+        LayoutsList,
     };
 
     template<class T>

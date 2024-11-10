@@ -7,8 +7,6 @@
 
 #pragma once
 
-#include <array>
-
 #include <QAbstractListModel>
 
 #include "kformat.h"
@@ -28,7 +26,7 @@ public:
         Name = Qt::DisplayRole,
         Subtitle,
         Example,
-        Page
+        Page,
     };
     explicit OptionsModel(KCMRegionAndLang *parent);
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;

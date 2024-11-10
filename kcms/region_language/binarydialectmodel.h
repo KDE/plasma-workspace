@@ -16,7 +16,7 @@ public:
     enum RoleName {
         DisplayName = Qt::DisplayRole,
         Example,
-        Description
+        Description,
     };
     explicit BinaryDialectModel(QObject *parent = nullptr);
 

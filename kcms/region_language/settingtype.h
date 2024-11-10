@@ -23,7 +23,7 @@ enum SettingType {
     NameStyle,
     PhoneNumbers,
     BinaryDialect,
-    Language
+    Language,
 };
 Q_ENUM_NS(SettingType)
 } // namespace KCM_RegionAndLang

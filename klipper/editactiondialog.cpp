@@ -65,7 +65,7 @@ private:
     enum column_t {
         COMMAND_COL = 0,
         OUTPUT_COL = 1,
-        DESCRIPTION_COL = 2
+        DESCRIPTION_COL = 2,
     };
     QList<ClipCommand> m_commands;
     QVariant displayData(ClipCommand *command, column_t column) const;
