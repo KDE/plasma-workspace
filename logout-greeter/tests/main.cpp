@@ -75,12 +75,12 @@ int main(int argc, char *argv[])
     arguments << QString::number(pipeFds[1]);
     p.setArguments(arguments);
 
-    QObject::connect(&p, static_cast<void (QProcess::*)(QProcess::ProcessError)>(&QProcess::errorOccurred), &app, [] {
+    QObject::connect(&p, &QProcess::errorOccurred, &app, [] {
         QCoreApplication::exit(1);
     });
 
     const int resultPipe = pipeFds[0];
-    QObject::connect(&p, static_cast<void (QProcess::*)(int, QProcess::ExitStatus)>(&QProcess::finished), &app, [resultPipe](int exitCode) {
+    QObject::connect(&p, &QProcess::finished, &app, [resultPipe](int exitCode) {
         if (exitCode != 0) {
             qDebug() << "!!!! finished with exit code: " << exitCode;
             close(resultPipe);

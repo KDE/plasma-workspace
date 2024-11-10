@@ -44,7 +44,7 @@ SchemeEditorColors::SchemeEditorColors(KSharedConfigPtr config, QWidget *parent)
 {
     setupUi(this);
     setupColorTable();
-    connect(colorSet, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &SchemeEditorColors::updateColorTable);
+    connect(colorSet, &QComboBox::currentIndexChanged, this, &SchemeEditorColors::updateColorTable);
 }
 
 void SchemeEditorColors::updateValues()
