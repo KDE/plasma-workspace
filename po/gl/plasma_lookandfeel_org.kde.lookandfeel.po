@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-08-29 18:24+0200\n"
+"PO-Revision-Date: 2024-11-09 16:14+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -78,11 +78,9 @@ msgstr ""
 "Ao reinicialo, o computador entrará na pantalla de configuración do firmware."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
-"Ao reinicialo, o computador entrará na pantalla de configuración do firmware."
+msgstr "Ao reinicialo, o computador entrará no menú do cargador de arranque."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

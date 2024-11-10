@@ -413,12 +413,11 @@ msgid "Today is %1"
 msgstr "今天是 %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "时区"
+msgstr ""
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format

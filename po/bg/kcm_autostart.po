@@ -9,35 +9,35 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2024-08-07 09:41+0200\n"
+"PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: autostartmodel.cpp:383
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr "\"%1\" не е абсолютен URL адрес."
+msgstr "„%1“ не е абсолютен URL адрес."
 
 #: autostartmodel.cpp:386
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr "\"%1\" не съществува."
+msgstr "„%1“ не съществува."
 
 #: autostartmodel.cpp:389
 #, kde-format
 msgid "\"%1\" is not a file."
-msgstr "\"%1\" не е файл."
+msgstr "„%1“ не е файл."
 
 #: autostartmodel.cpp:392
 #, kde-format
 msgid "\"%1\" is not readable."
-msgstr "\"%1\" не се чете."
+msgstr "„%1“ не се чете."
 
 #: ui/entry.qml:30
 #, kde-format
@@ -94,15 +94,14 @@ msgstr "Задаване като изпълним"
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
-"Файлът \"%1\" трябва да е изпълним, за да се стартира при излизане от "
+"Файлът „%1“ трябва да е изпълним, за да се стартира при излизане от "
 "системата."
 
 #: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
 msgstr ""
-"Файлът \"%1\" трябва да е изпълним, за да се стартира при влизане в "
-"системата."
+"Файлът „%1“ трябва да е изпълним, за да се стартира при влизане в системата."
 
 #: ui/main.qml:68
 #, kde-format

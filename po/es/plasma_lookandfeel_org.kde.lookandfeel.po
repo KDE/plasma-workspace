@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kde_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-08-29 00:16+0200\n"
+"PO-Revision-Date: 2024-11-09 19:20+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -75,12 +75,11 @@ msgstr ""
 "firmware."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr ""
-"Cuando reinicie el equipo, entrará en la pantalla de configuración del "
-"firmware."
+"Cuando reinicie el equipo, entrará en la pantalla del menú del cargador de "
+"arranque."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

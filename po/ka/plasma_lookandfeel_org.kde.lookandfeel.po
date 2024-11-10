@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-08-28 04:24+0200\n"
+"PO-Revision-Date: 2024-11-09 05:05+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -75,11 +75,9 @@ msgstr ""
 "გადატვირთვის შემდეგ კომპიუტერი მიკროკოდის მორგების ეკრანზე გადაირთვება."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
-"გადატვირთვის შემდეგ კომპიუტერი მიკროკოდის მორგების ეკრანზე გადაირთვება."
+msgstr "გადატვირთვის შემდეგ კომპიუტერი ჩამტვირთავი პროგრამის მენიუში შევა."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

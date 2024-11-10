@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-13 20:48+0200\n"
+"PO-Revision-Date: 2024-11-09 19:24+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -74,11 +74,11 @@ msgstr ""
 "Когато се рестартира, компютърът ще влезе в екрана за настройка на фърмуера."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
 msgstr ""
-"Когато се рестартира, компютърът ще влезе в екрана за настройка на фърмуера."
+"Когато се рестартира, компютърът ще влезе в екрана за настройка на "
+"програмата за начално зареждане."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

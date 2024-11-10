@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-03 00:41+0000\n"
-"PO-Revision-Date: 2024-05-30 21:04+0200\n"
+"PO-Revision-Date: 2024-11-09 20:09+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -491,7 +491,7 @@ msgstr "Експортиране…"
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
 msgid "Add to \"%1\"."
-msgstr "Добавяне към \"%1\"."
+msgstr "Добавяне към „%1“."
 
 #: kcmfontinst/GroupList.cpp:899
 #, kde-format
@@ -1118,7 +1118,7 @@ msgstr "48"
 #: kio/KioFonts.cpp:209
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr "Може да инсталира шрифтове само на \"%1 \" или \"%2 \"."
+msgstr "Може да инсталира шрифтове само на „%1“  или „%2“."
 
 #: kio/KioFonts.cpp:212
 #, kde-format
@@ -1147,12 +1147,12 @@ msgstr "Може да се трият само шрифтове."
 #: kio/KioFonts.cpp:455
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
-msgstr "Може да се премахнат шрифтове само от \"%1 \" или \"%2 \"."
+msgstr "Може да се премахнат шрифтове само от „%1“  или „%2“."
 
 #: kio/KioFonts.cpp:484
 #, kde-format
 msgid "Please specify \"%1\" or \"%2\"."
-msgstr "Моля, задайте \"%1\" или \"%2\"."
+msgstr "Моля, задайте „%1“ или „%2“."
 
 #: kio/KioFonts.cpp:502
 #, kde-format

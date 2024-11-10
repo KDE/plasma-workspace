@@ -3,20 +3,20 @@
 #
 # Zlatko Popov <zlatkopopov@fsa-bg.org>, 2006, 2007, 2008.
 # Yasen Pramatarov <yasen@lindeas.com>, 2010, 2011.
-# Mincho Kondarev <mkondarev@yahoo.de>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2023-08-09 08:42+0200\n"
+"PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
-"Language-Team: \n"
+"Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.04.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (cursorTheme), group (Mouse)
@@ -62,7 +62,7 @@ msgstr "Създаването на папка  \"икони\" е неуспеш
 msgid ""
 "A theme named %1 already exists in your icon theme folder. Do you want "
 "replace it with this one?"
-msgstr "Вече има тема с име \"%1\". Искате ли да бъде презаписана?"
+msgstr "Вече има тема с име „%1“. Искате ли да бъде презаписана?"
 
 #: kcmcursortheme.cpp:450
 #, kde-format
@@ -124,7 +124,7 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
-"Заявената тема \"%1\" вече е зададена като тема за текущата сесия на Plasma."
+"Заявената тема „%1“ вече е зададена като тема за текущата сесия на Plasma."
 
 #: plasma-apply-cursortheme.cpp:103
 #, kde-format
@@ -147,7 +147,7 @@ msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
 msgstr ""
-"Не може да се намери тема \"%1\". Темата трябва да има следните опции: %2"
+"Не може да се намери тема „%1“. Темата трябва да има следните опции: %2"
 
 #: plasma-apply-cursortheme.cpp:123
 #, kde-format

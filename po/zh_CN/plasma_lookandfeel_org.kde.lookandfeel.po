@@ -65,10 +65,9 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "重新启动时，电脑将进入固件设置界面。"
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "重新启动时，电脑将进入固件设置界面。"
+msgstr ""
 
 #: contents/logout/Logout.qml:216
 #, kde-format
