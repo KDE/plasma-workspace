@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 02:32+0000\n"
-"PO-Revision-Date: 2024-04-29 09:03+0200\n"
+"PO-Revision-Date: 2024-11-10 15:06+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: binarydialectmodel.cpp:52
 #, kde-format
@@ -548,7 +548,7 @@ msgid ""
 "yet."
 msgstr ""
 "Генериране на файлове за локализация и езиковата поддръжка; Не изключвайте "
-"компютъраоще."
+"компютъра още."
 
 #: ui/main.qml:65
 #, kde-format
@@ -560,8 +560,8 @@ msgid ""
 "they are and install them yourself."
 msgstr ""
 "Генерирани са файлове за локализация и езиковата поддръжка, но специфични за "
-"езикашрифтовете не могат да бъдат инсталирани автоматично. Ако вашият език "
-"изискваспециални шрифтове, ще трябва сами да ги посочите и инсталирате."
+"езика шрифтове не могат да бъдат инсталирани автоматично. Ако вашият език "
+"изисква специални шрифтове, ще трябва сами да ги посочите и инсталирате."
 
 #: ui/main.qml:81
 #, kde-format
