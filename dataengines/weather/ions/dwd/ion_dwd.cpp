@@ -31,76 +31,36 @@
 
 using namespace Qt::StringLiterals;
 
-/*
- * Initialization
- */
-
-WeatherData::WeatherData()
-    : temperature(qQNaN())
-    , humidity(qQNaN())
-    , pressure(qQNaN())
-    , windSpeed(qQNaN())
-    , gustSpeed(qQNaN())
-    , dewpoint(qQNaN())
-    , windSpeedAlt(qQNaN())
-    , gustSpeedAlt(qQNaN())
-{
-}
-
-WeatherData::ForecastInfo::ForecastInfo()
-    : tempHigh(qQNaN())
-    , tempLow(qQNaN())
-    , windSpeed(qQNaN())
-{
-}
+constexpr QLatin1String CATALOGUE_URL = "https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg?view=nasPublication&nn=16102"_L1;
+constexpr QLatin1String FORECAST_URL = "https://app-prod-ws.warnwetter.de/v30/stationOverviewExtended?stationIds=%1"_L1;
+constexpr QLatin1String MEASURE_URL = "https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16/current_measurement_%1.json"_L1;
 
 DWDIon::DWDIon(QObject *parent)
     : IonInterface(parent)
-
 {
     setInitialized(true);
 }
 
-DWDIon::~DWDIon()
-{
-    deleteForecasts();
-}
-
 void DWDIon::reset()
 {
-    deleteForecasts();
     m_sourcesToReset = sources();
     updateAllSources();
-}
-
-void DWDIon::deleteForecasts()
-{
-    // Destroy each forecast stored in a QList
-    for (auto it = m_weatherData.begin(), end = m_weatherData.end(); it != end; ++it) {
-        qDeleteAll(it.value().forecasts);
-        it.value().forecasts.clear();
-    }
 }
 
 QMap<QString, IonInterface::ConditionIcons> DWDIon::getUniversalIcons() const
 {
     return QMap<QString, ConditionIcons>{
-        {QStringLiteral("4"), Overcast},      {QStringLiteral("5"), Mist},          {QStringLiteral("6"), Mist},          {QStringLiteral("7"), LightRain},
-        {QStringLiteral("8"), Rain},          {QStringLiteral("9"), Rain},          {QStringLiteral("10"), LightRain},    {QStringLiteral("11"), Rain},
-        {QStringLiteral("12"), Flurries},     {QStringLiteral("13"), RainSnow},     {QStringLiteral("14"), LightSnow},    {QStringLiteral("15"), Snow},
-        {QStringLiteral("16"), Snow},         {QStringLiteral("17"), Hail},         {QStringLiteral("18"), LightRain},    {QStringLiteral("19"), Rain},
-        {QStringLiteral("20"), Flurries},     {QStringLiteral("21"), RainSnow},     {QStringLiteral("22"), LightSnow},    {QStringLiteral("23"), Snow},
-        {QStringLiteral("24"), Hail},         {QStringLiteral("25"), Hail},         {QStringLiteral("26"), Thunderstorm}, {QStringLiteral("27"), Thunderstorm},
-        {QStringLiteral("28"), Thunderstorm}, {QStringLiteral("29"), Thunderstorm}, {QStringLiteral("30"), Thunderstorm}};
+        {u"4"_s, Overcast},      {u"5"_s, Mist},          {u"6"_s, Mist},         {u"7"_s, LightRain}, {u"8"_s, Rain},          {u"9"_s, Rain},
+        {u"10"_s, LightRain},    {u"11"_s, Rain},         {u"12"_s, Flurries},    {u"13"_s, RainSnow}, {u"14"_s, LightSnow},    {u"15"_s, Snow},
+        {u"16"_s, Snow},         {u"17"_s, Hail},         {u"18"_s, LightRain},   {u"19"_s, Rain},     {u"20"_s, Flurries},     {u"21"_s, RainSnow},
+        {u"22"_s, LightSnow},    {u"23"_s, Snow},         {u"24"_s, Hail},        {u"25"_s, Hail},     {u"26"_s, Thunderstorm}, {u"27"_s, Thunderstorm},
+        {u"28"_s, Thunderstorm}, {u"29"_s, Thunderstorm}, {u"30"_s, Thunderstorm}};
 }
 
 QMap<QString, IonInterface::ConditionIcons> DWDIon::setupDayIconMappings() const
 {
     QMap<QString, ConditionIcons> universalIcons = getUniversalIcons();
-    QMap<QString, ConditionIcons> dayIcons = {{QStringLiteral("1"), ClearDay},
-                                              {QStringLiteral("2"), FewCloudsDay},
-                                              {QStringLiteral("3"), PartlyCloudyDay},
-                                              {QStringLiteral("31"), ClearWindyDay}};
+    QMap<QString, ConditionIcons> dayIcons = {{u"1"_s, ClearDay}, {u"2"_s, FewCloudsDay}, {u"3"_s, PartlyCloudyDay}, {u"31"_s, ClearWindyDay}};
     dayIcons.insert(universalIcons);
     return dayIcons;
 }
@@ -108,10 +68,7 @@ QMap<QString, IonInterface::ConditionIcons> DWDIon::setupDayIconMappings() const
 QMap<QString, IonInterface::ConditionIcons> DWDIon::setupNightIconMappings() const
 {
     QMap<QString, ConditionIcons> universalIcons = getUniversalIcons();
-    QMap<QString, ConditionIcons> nightIcons = {{QStringLiteral("1"), ClearNight},
-                                                {QStringLiteral("2"), FewCloudsNight},
-                                                {QStringLiteral("3"), PartlyCloudyNight},
-                                                {QStringLiteral("31"), ClearWindyNight}};
+    QMap<QString, ConditionIcons> nightIcons = {{u"1"_s, ClearNight}, {u"2"_s, FewCloudsNight}, {u"3"_s, PartlyCloudyNight}, {u"31"_s, ClearWindyNight}};
     nightIcons.insert(universalIcons);
     return nightIcons;
 }
@@ -119,14 +76,10 @@ QMap<QString, IonInterface::ConditionIcons> DWDIon::setupNightIconMappings() con
 QMap<QString, IonInterface::WindDirections> DWDIon::setupWindIconMappings() const
 {
     return QMap<QString, WindDirections>{
-        {QStringLiteral("0"), N},     {QStringLiteral("10"), N},    {QStringLiteral("20"), NNE},  {QStringLiteral("30"), NNE},  {QStringLiteral("40"), NE},
-        {QStringLiteral("50"), NE},   {QStringLiteral("60"), ENE},  {QStringLiteral("70"), ENE},  {QStringLiteral("80"), E},    {QStringLiteral("90"), E},
-        {QStringLiteral("100"), E},   {QStringLiteral("120"), ESE}, {QStringLiteral("130"), ESE}, {QStringLiteral("140"), SE},  {QStringLiteral("150"), SE},
-        {QStringLiteral("160"), SSE}, {QStringLiteral("170"), SSE}, {QStringLiteral("180"), S},   {QStringLiteral("190"), S},   {QStringLiteral("200"), SSW},
-        {QStringLiteral("210"), SSW}, {QStringLiteral("220"), SW},  {QStringLiteral("230"), SW},  {QStringLiteral("240"), WSW}, {QStringLiteral("250"), WSW},
-        {QStringLiteral("260"), W},   {QStringLiteral("270"), W},   {QStringLiteral("280"), W},   {QStringLiteral("290"), WNW}, {QStringLiteral("300"), WNW},
-        {QStringLiteral("310"), NW},  {QStringLiteral("320"), NW},  {QStringLiteral("330"), NNW}, {QStringLiteral("340"), NNW}, {QStringLiteral("350"), N},
-        {QStringLiteral("360"), N},
+        {u"0"_s, N},   {u"10"_s, N},    {u"20"_s, NNE},  {u"30"_s, NNE},  {u"40"_s, NE},  {u"50"_s, NE},   {u"60"_s, ENE},  {u"70"_s, ENE},  {u"80"_s, E},
+        {u"90"_s, E},  {u"100"_s, E},   {u"120"_s, ESE}, {u"130"_s, ESE}, {u"140"_s, SE}, {u"150"_s, SE},  {u"160"_s, SSE}, {u"170"_s, SSE}, {u"180"_s, S},
+        {u"190"_s, S}, {u"200"_s, SSW}, {u"210"_s, SSW}, {u"220"_s, SW},  {u"230"_s, SW}, {u"240"_s, WSW}, {u"250"_s, WSW}, {u"260"_s, W},   {u"270"_s, W},
+        {u"280"_s, W}, {u"290"_s, WNW}, {u"300"_s, WNW}, {u"310"_s, NW},  {u"320"_s, NW}, {u"330"_s, NNW}, {u"340"_s, NNW}, {u"350"_s, N},   {u"360"_s, N},
     };
 }
 
@@ -151,41 +104,39 @@ QMap<QString, IonInterface::WindDirections> const &DWDIon::windIcons() const
 bool DWDIon::updateIonSource(const QString &source)
 {
     // We expect the applet to send the source in the following tokenization:
-    // ionname|validate|place_name|extra - Triggers validation (search) of place
+    // ionname|validate|place_name - Triggers validation (search) of place
     // ionname|weather|place_name|extra - Triggers receiving weather of place
-    const QStringList sourceAction = source.split(QLatin1Char('|'));
+    const QList<QStringView> sourceAction = QStringView(source).split('|'_L1);
 
-    if (sourceAction.size() < 3) {
-        setData(source, QStringLiteral("validate"), QStringLiteral("dwd|malformed"));
+    if (sourceAction.size() < 3 || sourceAction[2].isEmpty()) {
+        setData(source, u"validate"_s, u"dwd|malformed"_s);
         return true;
     }
 
-    if (sourceAction[1] == QLatin1String("validate") && sourceAction.size() >= 3) {
+    const QString placeName = sourceAction[2].toString();
+
+    if (sourceAction[1] == "validate"_L1) {
         // Look for places to match
-        findPlace(sourceAction[2]);
+        findPlace(placeName);
         return true;
     }
-    if (sourceAction[1] == QLatin1String("weather") && sourceAction.size() >= 3) {
-        if (sourceAction.count() >= 4) {
-            if (sourceAction[2].isEmpty()) {
-                setData(source, QStringLiteral("validate"), QStringLiteral("dwd|malformed"));
-                return true;
-            }
 
-            // Extra data: station_id
-            m_place[sourceAction[2]] = sourceAction[3];
-
-            qCDebug(IONENGINE_dwd) << "About to retrieve forecast for source: " << sourceAction[2];
-
-            fetchWeather(sourceAction[2], m_place[sourceAction[2]]);
-
-            return true;
+    if (sourceAction[1] == "weather"_L1) {
+        if (sourceAction.count() < 4) {
+            setData(source, u"validate"_s, u"dwd|malformed"_s);
+            return false;
         }
 
-        return false;
+        const QString stationId = sourceAction[3].toString();
+        m_place[placeName] = stationId;
+
+        qCDebug(IONENGINE_dwd) << "About to retrieve forecast for source: " << placeName << stationId;
+        fetchWeather(placeName, stationId);
+
+        return true;
     }
 
-    setData(source, QStringLiteral("validate"), QStringLiteral("dwd|malformed"));
+    setData(source, u"validate"_s, u"dwd|malformed"_s);
     return true;
 }
 
@@ -196,9 +147,9 @@ void DWDIon::findPlace(const QString &searchText)
         setData(QString(u"dwd|validate|" + searchText), Data());
         searchInStationList(searchText);
     } else {
-        const QUrl forecastURL(QStringLiteral(CATALOGUE_URL));
+        const QUrl forecastURL(CATALOGUE_URL);
         KIO::TransferJob *getJob = KIO::get(forecastURL, KIO::Reload, KIO::HideProgressInfo);
-        getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
+        getJob->addMetaData(u"cookies"_s, u"none"_s);
 
         m_searchJobList.insert(getJob, searchText);
         m_searchJobData.insert(getJob, QByteArray(""));
@@ -208,7 +159,7 @@ void DWDIon::findPlace(const QString &searchText)
     }
 }
 
-void DWDIon::fetchWeather(QString placeName, QString placeID)
+void DWDIon::fetchWeather(const QString &placeName, const QString &placeID)
 {
     for (const QString &fetching : std::as_const(m_forecastJobList)) {
         if (fetching == placeName) {
@@ -218,10 +169,9 @@ void DWDIon::fetchWeather(QString placeName, QString placeID)
     }
 
     // Fetch forecast data
-
-    const QUrl forecastURL(QStringLiteral(FORECAST_URL).arg(placeID));
+    const QUrl forecastURL(FORECAST_URL.arg(placeID));
     KIO::TransferJob *getJob = KIO::get(forecastURL, KIO::Reload, KIO::HideProgressInfo);
-    getJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
+    getJob->addMetaData(u"cookies"_s, u"none"_s);
 
     m_forecastJobList.insert(getJob, placeName);
     m_forecastJobJSON.insert(getJob, QByteArray(""));
@@ -233,10 +183,9 @@ void DWDIon::fetchWeather(QString placeName, QString placeID)
     m_weatherData[placeName].isForecastsDataPending = true;
 
     // Fetch current measurements (different url AND different API, AMAZING)
-
-    const QUrl measureURL(QStringLiteral(MEASURE_URL).arg(placeID));
+    const QUrl measureURL(MEASURE_URL.arg(placeID));
     KIO::TransferJob *getMeasureJob = KIO::get(measureURL, KIO::Reload, KIO::HideProgressInfo);
-    getMeasureJob->addMetaData(QStringLiteral("cookies"), QStringLiteral("none"));
+    getMeasureJob->addMetaData(u"cookies"_s, u"none"_s);
 
     m_measureJobList.insert(getMeasureJob, placeName);
     m_measureJobJSON.insert(getMeasureJob, QByteArray(""));
@@ -333,7 +282,7 @@ void DWDIon::forecast_slotJobFinished(KJob *job)
 
         if (m_sourcesToReset.contains(source)) {
             m_sourcesToReset.removeAll(source);
-            const QString weatherSource = QStringLiteral("dwd|weather|%1|%2").arg(source, m_place[source]);
+            const QString weatherSource = u"dwd|weather|%1|%2"_s.arg(source, m_place[source]);
 
             // so the weather engine updates it's data
             forceImmediateUpdateOfAllVisualizations();
@@ -349,7 +298,7 @@ void DWDIon::forecast_slotJobFinished(KJob *job)
     m_forecastJobJSON.remove(job);
 }
 
-void DWDIon::calculatePositions(QStringList lines, QList<int> &namePositionalInfo, QList<int> &stationIdPositionalInfo)
+void DWDIon::calculatePositions(const QStringList &lines, QList<int> &namePositionalInfo, QList<int> &stationIdPositionalInfo) const
 {
     QStringList stringLengths = lines[1].split(QChar::Space);
     QList<int> lengths;
@@ -362,10 +311,10 @@ void DWDIon::calculatePositions(QStringList lines, QList<int> &namePositionalInf
     for (int labelLength : lengths) {
         QString label = lines[0].mid(curpos, labelLength).toLower();
 
-        if (label.contains(QStringLiteral("name"))) {
+        if (label.contains(u"name"_s)) {
             namePositionalInfo[0] = curpos;
             namePositionalInfo[1] = labelLength;
-        } else if (label.contains(QStringLiteral("id"))) {
+        } else if (label.contains(u"id"_s)) {
             stationIdPositionalInfo[0] = curpos;
             stationIdPositionalInfo[1] = labelLength;
         }
@@ -374,7 +323,7 @@ void DWDIon::calculatePositions(QStringList lines, QList<int> &namePositionalInf
     }
 }
 
-void DWDIon::parseStationData(QByteArray data)
+void DWDIon::parseStationData(const QByteArray &data)
 {
     QString stringData = QString::fromLatin1(data);
     QStringList lines = stringData.split(QChar::LineFeed);
@@ -407,7 +356,7 @@ void DWDIon::parseStationData(QByteArray data)
     qCDebug(IONENGINE_dwd) << "Number of parsed stations: " << m_place.size();
 }
 
-void DWDIon::searchInStationList(const QString searchText)
+void DWDIon::searchInStationList(const QString &searchText)
 {
     QString flatSearchText = searchText;
     flatSearchText // The station list does not contains umlauts
@@ -418,21 +367,16 @@ void DWDIon::searchInStationList(const QString searchText)
 
     qCDebug(IONENGINE_dwd) << "Searching in station list:" << flatSearchText;
 
-    QMap<QString, QString>::const_iterator it = m_place.constBegin();
-    auto end = m_place.constEnd();
-
-    while (it != end) {
-        QString name = it.key();
+    for (const auto [name, id] : m_place.asKeyValueRange()) {
         if (name.contains(flatSearchText, Qt::CaseInsensitive)) {
-            m_locations.append(it.key());
+            m_locations.append(name);
         }
-        ++it;
     }
 
     validate(searchText);
 }
 
-void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
+void DWDIon::parseForecastData(const QString &source, const QJsonDocument &doc)
 {
     QVariantMap weatherMap = doc.object().toVariantMap();
     if (weatherMap.isEmpty()) {
@@ -441,77 +385,69 @@ void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
     weatherMap = weatherMap.first().toMap(); // Mind the .first(). It needs guarding against isEmpty.
     if (!weatherMap.isEmpty()) {
         // Forecast data
-        QVariantList daysList = weatherMap[QStringLiteral("days")].toList();
+        QVariantList daysList = weatherMap[u"days"_s].toList();
 
         WeatherData &weatherData = m_weatherData[source];
-        QList<WeatherData::ForecastInfo *> &forecasts = weatherData.forecasts;
+        QList<WeatherData::ForecastInfo> &forecasts = weatherData.forecasts;
 
         // Flush out the old forecasts when updating.
         forecasts.clear();
-
-        WeatherData::ForecastInfo *forecast = new WeatherData::ForecastInfo;
 
         int dayNumber = 0;
 
         for (const QVariant &day : daysList) {
             QMap dayMap = day.toMap();
-            QString period = dayMap[QStringLiteral("dayDate")].toString();
-            QString cond = dayMap[QStringLiteral("icon")].toString();
+            QString period = dayMap[u"dayDate"_s].toString();
+            QString cond = dayMap[u"icon"_s].toString();
 
-            forecast->period = QDateTime::fromString(period, QStringLiteral("yyyy-MM-dd"));
-            forecast->tempHigh = parseNumber(dayMap[QStringLiteral("temperatureMax")]);
-            forecast->tempLow = parseNumber(dayMap[QStringLiteral("temperatureMin")]);
-            forecast->precipitation = dayMap[QStringLiteral("precipitation")].toInt();
-            forecast->iconName = getWeatherIcon(dayIcons(), cond);
-            ;
+            WeatherData::ForecastInfo forecast;
+            forecast.period = QDateTime::fromString(period, u"yyyy-MM-dd"_s);
+            forecast.tempHigh = parseNumber(dayMap[u"temperatureMax"_s]);
+            forecast.tempLow = parseNumber(dayMap[u"temperatureMin"_s]);
+            forecast.precipitation = dayMap[u"precipitation"_s].toInt();
+            forecast.iconName = getWeatherIcon(dayIcons(), cond);
 
             if (dayNumber == 0) {
                 // These alternative measurements are used, when the stations doesn't have it's own measurements, uses forecast data from the current day
-                weatherData.windSpeedAlt = parseNumber(dayMap[QStringLiteral("windSpeed")]);
-                weatherData.gustSpeedAlt = parseNumber(dayMap[QStringLiteral("windGust")]);
-                QString windDirection = roundWindDirections(dayMap[QStringLiteral("windDirection")].toInt());
+                weatherData.windSpeedAlt = parseNumber(dayMap[u"windSpeed"_s]);
+                weatherData.gustSpeedAlt = parseNumber(dayMap[u"windGust"_s]);
+                QString windDirection = roundWindDirections(dayMap[u"windDirection"_s].toInt());
                 weatherData.windDirectionAlt = getWindDirectionIcon(windIcons(), windDirection);
 
                 // Also fetch today's sunrise and sunset times to determine whether to pick day or night icons
-                weatherData.sunriseTime = parseDateFromMSecs(dayMap[QStringLiteral("sunrise")].toLongLong());
-                weatherData.sunsetTime = parseDateFromMSecs(dayMap[QStringLiteral("sunset")].toLongLong());
+                weatherData.sunriseTime = parseDateFromMSecs(dayMap[u"sunrise"_s].toLongLong());
+                weatherData.sunsetTime = parseDateFromMSecs(dayMap[u"sunset"_s].toLongLong());
             }
 
             forecasts.append(forecast);
-            forecast = new WeatherData::ForecastInfo;
 
             dayNumber++;
             // Only get the next 7 days (including today)
-            if (dayNumber == 7)
+            if (dayNumber == 7) {
                 break;
+            }
         }
 
-        delete forecast;
-
         // Warnings data
-        QVariantList warningData = weatherMap[QStringLiteral("warnings")].toList();
+        QVariantList warningData = weatherMap[u"warnings"_s].toList();
 
-        QList<WeatherData::WarningInfo *> &warningList = weatherData.warnings;
+        QList<WeatherData::WarningInfo> &warningList = weatherData.warnings;
 
         // Flush out the old forecasts when updating.
         warningList.clear();
 
-        WeatherData::WarningInfo *warning = new WeatherData::WarningInfo;
-
         for (const QVariant &warningElement : warningData) {
             QMap warningMap = warningElement.toMap();
 
-            warning->headline = warningMap[QStringLiteral("headline")].toString();
-            warning->description = warningMap[QStringLiteral("description")].toString();
-            warning->priority = warningMap[QStringLiteral("level")].toInt();
-            warning->type = warningMap[QStringLiteral("event")].toString();
-            warning->timestamp = QDateTime::fromMSecsSinceEpoch(warningMap[QStringLiteral("start")].toLongLong());
+            WeatherData::WarningInfo warning;
+            warning.headline = warningMap[u"headline"_s].toString();
+            warning.description = warningMap[u"description"_s].toString();
+            warning.priority = warningMap[u"level"_s].toInt();
+            warning.type = warningMap[u"event"_s].toString();
+            warning.timestamp = QDateTime::fromMSecsSinceEpoch(warningMap[u"start"_s].toLongLong());
 
             warningList.append(warning);
-            warning = new WeatherData::WarningInfo;
         }
-
-        delete warning;
 
         weatherData.isForecastsDataPending = false;
 
@@ -519,28 +455,28 @@ void DWDIon::parseForecastData(const QString source, QJsonDocument doc)
     }
 }
 
-void DWDIon::parseMeasureData(const QString source, QJsonDocument doc)
+void DWDIon::parseMeasureData(const QString &source, const QJsonDocument &doc)
 {
     WeatherData &weatherData = m_weatherData[source];
     QVariantMap weatherMap = doc.object().toVariantMap();
 
     if (!weatherMap.isEmpty()) {
-        weatherData.observationDateTime = parseDateFromMSecs(weatherMap[QStringLiteral("time")]);
+        weatherData.observationDateTime = parseDateFromMSecs(weatherMap[u"time"_s]);
 
-        weatherData.condIconNumber = weatherMap[QStringLiteral("icon")].toString();
+        weatherData.condIconNumber = weatherMap[u"icon"_s].toString();
 
         bool windIconValid = false;
-        const int windDirection = weatherMap[QStringLiteral("winddirection")].toInt(&windIconValid);
+        const int windDirection = weatherMap[u"winddirection"_s].toInt(&windIconValid);
         if (windIconValid) {
             weatherData.windDirection = getWindDirectionIcon(windIcons(), roundWindDirections(windDirection));
         }
 
-        weatherData.temperature = parseNumber(weatherMap[QStringLiteral("temperature")]);
-        weatherData.humidity = parseNumber(weatherMap[QStringLiteral("humidity")]);
-        weatherData.pressure = parseNumber(weatherMap[QStringLiteral("pressure")]);
-        weatherData.windSpeed = parseNumber(weatherMap[QStringLiteral("meanwind")]);
-        weatherData.gustSpeed = parseNumber(weatherMap[QStringLiteral("maxwind")]);
-        weatherData.dewpoint = parseNumber(weatherMap[QStringLiteral("dewpoint")]);
+        weatherData.temperature = parseNumber(weatherMap[u"temperature"_s]);
+        weatherData.humidity = parseNumber(weatherMap[u"humidity"_s]);
+        weatherData.pressure = parseNumber(weatherMap[u"pressure"_s]);
+        weatherData.windSpeed = parseNumber(weatherMap[u"meanwind"_s]);
+        weatherData.gustSpeed = parseNumber(weatherMap[u"maxwind"_s]);
+        weatherData.dewpoint = parseNumber(weatherMap[u"dewpoint"_s]);
     }
 
     weatherData.isMeasureDataPending = false;
@@ -554,7 +490,7 @@ void DWDIon::validate(const QString &searchText)
 
     if (m_locations.isEmpty()) {
         const QString invalidPlace = searchText;
-        setData(source, QStringLiteral("validate"), QVariant(QString(u"dwd|invalid|multiple|" + invalidPlace)));
+        setData(source, u"validate"_s, QVariant(QString(u"dwd|invalid|multiple|" + invalidPlace)));
         return;
     }
 
@@ -563,10 +499,10 @@ void DWDIon::validate(const QString &searchText)
         placeList.append(u"|place|" + place + u"|extra|" + m_place[place]);
     }
     if (m_locations.count() > 1) {
-        setData(source, QStringLiteral("validate"), QVariant(QString(u"dwd|valid|multiple" + placeList)));
+        setData(source, u"validate"_s, QVariant(QString(u"dwd|valid|multiple" + placeList)));
     } else {
         placeList[7] = placeList[7].toUpper();
-        setData(source, QStringLiteral("validate"), QVariant(QString(u"dwd|valid|single" + placeList)));
+        setData(source, u"validate"_s, QVariant(QString(u"dwd|valid|single" + placeList)));
     }
     m_locations.clear();
 }
@@ -580,96 +516,100 @@ void DWDIon::updateWeather(const QString &source)
     }
 
     QString placeCode = m_place[source];
-    QString weatherSource = QStringLiteral("dwd|weather|%1|%2").arg(source, placeCode);
+    QString weatherSource = u"dwd|weather|%1|%2"_s.arg(source, placeCode);
 
     Plasma5Support::DataEngine::Data data;
 
-    data.insert(QStringLiteral("Place"), source);
-    data.insert(QStringLiteral("Station"), source);
+    data.insert(u"Place"_s, source);
+    data.insert(u"Station"_s, source);
 
-    data.insert(QStringLiteral("Temperature Unit"), KUnitConversion::Celsius);
-    data.insert(QStringLiteral("Wind Speed Unit"), KUnitConversion::KilometerPerHour);
-    data.insert(QStringLiteral("Humidity Unit"), KUnitConversion::Percent);
-    data.insert(QStringLiteral("Pressure Unit"), KUnitConversion::Hectopascal);
+    data.insert(u"Temperature Unit"_s, KUnitConversion::Celsius);
+    data.insert(u"Wind Speed Unit"_s, KUnitConversion::KilometerPerHour);
+    data.insert(u"Humidity Unit"_s, KUnitConversion::Percent);
+    data.insert(u"Pressure Unit"_s, KUnitConversion::Hectopascal);
 
-    if (!weatherData.observationDateTime.isNull())
-        data.insert(QStringLiteral("Observation Timestamp"), weatherData.observationDateTime);
-    else
-        data.insert(QStringLiteral("Observation Timestamp"), QDateTime::currentDateTime());
+    if (!weatherData.observationDateTime.isNull()) {
+        data.insert(u"Observation Timestamp"_s, weatherData.observationDateTime);
+    } else {
+        data.insert(u"Observation Timestamp"_s, QDateTime::currentDateTime());
+    }
 
-    if (!weatherData.condIconNumber.isEmpty())
-        data.insert(QStringLiteral("Condition Icon"), getWeatherIcon(isNightTime(weatherData) ? nightIcons() : dayIcons(), weatherData.condIconNumber));
+    if (!weatherData.condIconNumber.isEmpty()) {
+        data.insert(u"Condition Icon"_s, getWeatherIcon(isNightTime(weatherData) ? nightIcons() : dayIcons(), weatherData.condIconNumber));
+    }
 
-    if (!qIsNaN(weatherData.temperature))
-        data.insert(QStringLiteral("Temperature"), weatherData.temperature);
+    if (!qIsNaN(weatherData.temperature)) {
+        data.insert(u"Temperature"_s, weatherData.temperature);
+    }
+    if (!qIsNaN(weatherData.humidity)) {
+        data.insert(u"Humidity"_s, weatherData.humidity);
+    }
+    if (!qIsNaN(weatherData.pressure)) {
+        data.insert(u"Pressure"_s, weatherData.pressure);
+    }
+    if (!qIsNaN(weatherData.dewpoint)) {
+        data.insert(u"Dewpoint"_s, weatherData.dewpoint);
+    }
 
-    if (!qIsNaN(weatherData.humidity))
-        data.insert(QStringLiteral("Humidity"), weatherData.humidity);
+    if (!qIsNaN(weatherData.windSpeed)) {
+        data.insert(u"Wind Speed"_s, weatherData.windSpeed);
+    } else {
+        data.insert(u"Wind Speed"_s, weatherData.windSpeedAlt);
+    }
 
-    if (!qIsNaN(weatherData.pressure))
-        data.insert(QStringLiteral("Pressure"), weatherData.pressure);
-
-    if (!qIsNaN(weatherData.dewpoint))
-        data.insert(QStringLiteral("Dewpoint"), weatherData.dewpoint);
-
-    if (!qIsNaN(weatherData.windSpeed))
-        data.insert(QStringLiteral("Wind Speed"), weatherData.windSpeed);
-    else
-        data.insert(QStringLiteral("Wind Speed"), weatherData.windSpeedAlt);
-
-    if (!qIsNaN(weatherData.gustSpeed))
-        data.insert(QStringLiteral("Wind Gust Speed"), weatherData.gustSpeed);
-    else
-        data.insert(QStringLiteral("Wind Gust Speed"), weatherData.gustSpeedAlt);
+    if (!qIsNaN(weatherData.gustSpeed)) {
+        data.insert(u"Wind Gust Speed"_s, weatherData.gustSpeed);
+    } else {
+        data.insert(u"Wind Gust Speed"_s, weatherData.gustSpeedAlt);
+    }
 
     if (!weatherData.windDirection.isEmpty()) {
-        data.insert(QStringLiteral("Wind Direction"), weatherData.windDirection);
+        data.insert(u"Wind Direction"_s, weatherData.windDirection);
     } else {
-        data.insert(QStringLiteral("Wind Direction"), weatherData.windDirectionAlt);
+        data.insert(u"Wind Direction"_s, weatherData.windDirectionAlt);
     }
 
     int dayNumber = 0;
-    for (const WeatherData::ForecastInfo *dayForecast : weatherData.forecasts) {
+    for (const auto &dayForecast : weatherData.forecasts) {
         QString period;
         if (dayNumber == 0) {
             period = i18nc("Short for Today", "Today");
         } else {
-            period = dayForecast->period.toString(QStringLiteral("dddd"));
+            period = dayForecast.period.toString(u"dddd"_s);
 
-            period.replace(QStringLiteral("Saturday"), i18nc("Short for Saturday", "Sat"));
-            period.replace(QStringLiteral("Sunday"), i18nc("Short for Sunday", "Sun"));
-            period.replace(QStringLiteral("Monday"), i18nc("Short for Monday", "Mon"));
-            period.replace(QStringLiteral("Tuesday"), i18nc("Short for Tuesday", "Tue"));
-            period.replace(QStringLiteral("Wednesday"), i18nc("Short for Wednesday", "Wed"));
-            period.replace(QStringLiteral("Thursday"), i18nc("Short for Thursday", "Thu"));
-            period.replace(QStringLiteral("Friday"), i18nc("Short for Friday", "Fri"));
+            period.replace(u"Saturday"_s, i18nc("Short for Saturday", "Sat"));
+            period.replace(u"Sunday"_s, i18nc("Short for Sunday", "Sun"));
+            period.replace(u"Monday"_s, i18nc("Short for Monday", "Mon"));
+            period.replace(u"Tuesday"_s, i18nc("Short for Tuesday", "Tue"));
+            period.replace(u"Wednesday"_s, i18nc("Short for Wednesday", "Wed"));
+            period.replace(u"Thursday"_s, i18nc("Short for Thursday", "Thu"));
+            period.replace(u"Friday"_s, i18nc("Short for Friday", "Fri"));
         }
 
-        data.insert(QStringLiteral("Short Forecast Day %1").arg(dayNumber),
-                    QStringLiteral("%1|%2|%3|%4|%5|%6")
-                        .arg(period, dayForecast->iconName, QLatin1String(""))
-                        .arg(dayForecast->tempHigh)
-                        .arg(dayForecast->tempLow)
-                        .arg(QLatin1String(""))); // dayForecast->precipitation is a quantity, not a probability
+        data.insert(u"Short Forecast Day %1"_s.arg(dayNumber),
+                    u"%1|%2|%3|%4|%5|%6"_s.arg(period, dayForecast.iconName, ""_L1)
+                        .arg(dayForecast.tempHigh)
+                        .arg(dayForecast.tempLow)
+                        .arg(""_L1)); // dayForecast.precipitation is a quantity, not a probability
         dayNumber++;
     }
 
     int k = 0;
 
-    for (const WeatherData::WarningInfo *warning : weatherData.warnings) {
+    for (const auto &warning : weatherData.warnings) {
         const QString number = QString::number(k);
 
-        data.insert(QString(u"Warning Priority " + number), warning->priority);
-        data.insert(QString(u"Warning Description " + number), QStringLiteral("<p><b>%1</b></p>%2").arg(warning->headline, warning->description));
-        data.insert(QString(u"Warning Timestamp " + number), warning->timestamp.toString(QStringLiteral("dd.MM.yyyy")));
+        data.insert(QString(u"Warning Priority " + number), warning.priority);
+        data.insert(QString(u"Warning Description " + number), u"<p><b>%1</b></p>%2"_s.arg(warning.headline, warning.description));
+        data.insert(QString(u"Warning Timestamp " + number), warning.timestamp.toString(u"dd.MM.yyyy"_s));
 
         ++k;
     }
 
-    data.insert(QStringLiteral("Total Weather Days"), weatherData.forecasts.size());
-    data.insert(QStringLiteral("Total Warnings Issued"), weatherData.warnings.size());
-    data.insert(QStringLiteral("Credit"), i18nc("credit line, don't change name!", "Source: Deutscher Wetterdienst"));
-    data.insert(QStringLiteral("Credit Url"), QStringLiteral("https://www.dwd.de/"));
+    data.insert(u"Total Weather Days"_s, weatherData.forecasts.size());
+    data.insert(u"Total Warnings Issued"_s, weatherData.warnings.size());
+    data.insert(u"Credit"_s, i18nc("credit line, don't change name!", "Source: Deutscher Wetterdienst"));
+    data.insert(u"Credit Url"_s, u"https://www.dwd.de/"_s);
 
     Q_EMIT cleanUpData(source);
     setData(weatherSource, data);
@@ -678,7 +618,7 @@ void DWDIon::updateWeather(const QString &source)
 /*
  * Helper methods
  */
-float DWDIon::parseNumber(QVariant number)
+float DWDIon::parseNumber(const QVariant &number) const
 {
     bool isValid = false;
     const int intValue = number.toInt(&isValid);
@@ -692,7 +632,7 @@ float DWDIon::parseNumber(QVariant number)
     return static_cast<float>(intValue) / 10;
 }
 
-QDateTime DWDIon::parseDateFromMSecs(QVariant timestamp)
+QDateTime DWDIon::parseDateFromMSecs(const QVariant &timestamp) const
 {
     bool isValid = false;
     const qint64 msecs = timestamp.toLongLong(&isValid);
@@ -700,13 +640,13 @@ QDateTime DWDIon::parseDateFromMSecs(QVariant timestamp)
     return isValid ? QDateTime::fromMSecsSinceEpoch(msecs) : QDateTime();
 }
 
-QString DWDIon::roundWindDirections(int windDirection)
+QString DWDIon::roundWindDirections(int windDirection) const
 {
     QString roundedWindDirection = QString::number(qRound(((float)windDirection) / 100) * 10);
     return roundedWindDirection;
 }
 
-QString DWDIon::extractString(QByteArray array, int start, int length)
+QString DWDIon::extractString(const QByteArray &array, int start, int length) const
 {
     QString string;
 
@@ -717,7 +657,7 @@ QString DWDIon::extractString(QByteArray array, int start, int length)
     return string;
 }
 
-QString DWDIon::camelCaseString(const QString text)
+QString DWDIon::camelCaseString(const QString &text) const
 {
     QString result;
     bool nextBig = true;
@@ -731,7 +671,7 @@ QString DWDIon::camelCaseString(const QString text)
                 result.append(c.toLower());
             }
         } else {
-            if (c == QChar::Space || c == QLatin1Char('-')) {
+            if (c == QChar::Space || c == '-'_L1) {
                 nextBig = true;
             }
             result.append(c);
@@ -741,7 +681,7 @@ QString DWDIon::camelCaseString(const QString text)
     return result;
 }
 
-bool DWDIon::isNightTime(const WeatherData &weatherData)
+bool DWDIon::isNightTime(const WeatherData &weatherData) const
 {
     if (weatherData.sunriseTime.isNull() || weatherData.sunsetTime.isNull()) {
         // default to daytime icons if we're missing sunrise/sunset times

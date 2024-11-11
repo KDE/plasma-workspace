@@ -20,10 +20,6 @@
 
 #include <QList>
 
-#define CATALOGUE_URL "https://www.dwd.de/DE/leistungen/met_verfahren_mosmix/mosmix_stationskatalog.cfg?view=nasPublication&nn=16102"
-#define FORECAST_URL "https://app-prod-ws.warnwetter.de/v30/stationOverviewExtended?stationIds=%1"
-#define MEASURE_URL "https://s3.eu-central-1.amazonaws.com/app-prod-static.warnwetter.de/v16/current_measurement_%1.json"
-
 class KJob;
 namespace KIO
 {
@@ -34,8 +30,6 @@ class TransferJob;
 class WeatherData
 {
 public:
-    WeatherData();
-
     QString place;
 
     // Current observation information.
@@ -45,43 +39,42 @@ public:
 
     QString condIconNumber;
     QString windDirection;
-    float temperature;
-    float humidity;
-    float pressure;
-    float windSpeed;
-    float gustSpeed;
-    float dewpoint;
+    float temperature = qQNaN();
+    float humidity = qQNaN();
+    float pressure = qQNaN();
+    float windSpeed = qQNaN();
+    float gustSpeed = qQNaN();
+    float dewpoint = qQNaN();
 
     // If current observations not available, use forecast data for current day
     QString windDirectionAlt;
-    float windSpeedAlt;
-    float gustSpeedAlt;
+    float windSpeedAlt = qQNaN();
+    float gustSpeedAlt = qQNaN();
 
     // 7 forecast
     struct ForecastInfo {
-        ForecastInfo();
         QDateTime period;
         QString iconName;
         QString summary;
-        float tempHigh;
-        float tempLow;
-        int precipitation;
-        float windSpeed;
+        float tempHigh = qQNaN();
+        float tempLow = qQNaN();
+        int precipitation = 0;
+        float windSpeed = qQNaN();
         QString windDirection;
     };
 
     // 7 day forecast
-    QList<WeatherData::ForecastInfo *> forecasts;
+    QList<WeatherData::ForecastInfo> forecasts;
 
     struct WarningInfo {
         QString type;
-        int priority;
+        int priority = 0;
         QString headline;
         QString description;
         QDateTime timestamp;
     };
 
-    QList<WeatherData::WarningInfo *> warnings;
+    QList<WeatherData::WarningInfo> warnings;
 
     bool isForecastsDataPending = false;
     bool isMeasureDataPending = false;
@@ -93,7 +86,6 @@ class Q_DECL_EXPORT DWDIon : public IonInterface
 
 public:
     DWDIon(QObject *parent);
-    ~DWDIon() override;
 
 public: // IonInterface API
     bool updateIonSource(const QString &source) override;
@@ -122,26 +114,24 @@ private:
     QMap<QString, WindDirections> const &windIcons() const;
 
     void findPlace(const QString &searchText);
-    void parseStationData(QByteArray data);
-    void searchInStationList(const QString place);
+    void parseStationData(const QByteArray &data);
+    void searchInStationList(const QString &place);
 
     void validate(const QString &source);
 
-    void fetchWeather(QString placeName, QString placeID);
-    void parseForecastData(const QString source, QJsonDocument doc);
-    void parseMeasureData(const QString source, QJsonDocument doc);
+    void fetchWeather(const QString &placeName, const QString &placeID);
+    void parseForecastData(const QString &source, const QJsonDocument &doc);
+    void parseMeasureData(const QString &source, const QJsonDocument &doc);
     void updateWeather(const QString &source);
 
-    void deleteForecasts();
-
     // Helper methods
-    void calculatePositions(QStringList lines, QList<int> &namePositionalInfo, QList<int> &stationIdPositionalInfo);
-    QString camelCaseString(const QString text);
-    QString extractString(QByteArray array, int start, int length);
-    QString roundWindDirections(int windDirection);
-    bool isNightTime(const WeatherData &weatherData);
-    float parseNumber(QVariant number);
-    QDateTime parseDateFromMSecs(QVariant timestamp);
+    void calculatePositions(const QStringList &lines, QList<int> &namePositionalInfo, QList<int> &stationIdPositionalInfo) const;
+    QString camelCaseString(const QString &text) const;
+    QString extractString(const QByteArray &array, int start, int length) const;
+    QString roundWindDirections(int windDirection) const;
+    bool isNightTime(const WeatherData &weatherData) const;
+    float parseNumber(const QVariant &number) const;
+    QDateTime parseDateFromMSecs(const QVariant &timestamp) const;
 
 private:
     // Key dicts
@@ -162,4 +152,3 @@ private:
 
     QStringList m_sourcesToReset;
 };
-// kate: indent-mode cstyle; space-indent on; indent-width 4;
