@@ -310,7 +310,7 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
 
         auto loadIcon = [this, &properties, &overlay](const QString &iconKey, const QString &pixmapKey) -> std::tuple<QIcon, QString> {
             if (QString iconName = properties[iconKey].toString(); !iconName.isEmpty()) {
-                if (iconLoader()->hasIcon(iconName + QStringLiteral("-symbolic"))) {
+                if (!QDir::isAbsolutePath(iconName) && iconLoader()->hasIcon(iconName + QStringLiteral("-symbolic"))) {
                     iconName += QStringLiteral("-symbolic");
                 }
                 QIcon icon = QIcon(new KIconEngine(iconName, KIconColors(Plasma::Theme::globalPalette()), iconLoader(), {m_overlayIconName}));
