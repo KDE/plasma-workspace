@@ -1,0 +1,57 @@
+# translation of session-shortcuts-kded.po to Slovak
+# Roman Paholik <wizzardsk@gmail.com>, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: session-shortcuts-kded\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-07-20 00:41+0000\n"
+"PO-Revision-Date: 2017-11-01 11:06+0100\n"
+"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"Language-Team: Slovak <kde-sk@linux.sk>\n"
+"Language: sk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 2.0\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr ""
+
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Screen"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Log Out"
+msgstr ""
+
+#: main.cpp:54
+#, kde-format
+msgid "Shut Down"
+msgstr ""
+
+#: main.cpp:60
+#, kde-format
+msgid "Reboot"
+msgstr ""
+
+#: main.cpp:68
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr ""
+
+#: main.cpp:74
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr ""
+
+#: main.cpp:80
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr ""

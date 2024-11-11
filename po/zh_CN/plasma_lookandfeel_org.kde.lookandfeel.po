@@ -67,7 +67,7 @@ msgstr "重新启动时，电脑将进入固件设置界面。"
 #: contents/logout/Logout.qml:203
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
+msgstr "重新启动时，电脑将进入引导加载程序菜单。"
 
 #: contents/logout/Logout.qml:216
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-08-30 10:45+0200\n"
+"PO-Revision-Date: 2024-11-10 20:02+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -76,10 +76,9 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Berrabiatzean, ordenagailua firmwarea ezartzeko pantailan sartuko da."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "Berrabiatzean, ordenagailua firmwarea ezartzeko pantailan sartuko da."
+msgstr "Berrabiatzean, ordenagailua abio-zamatzailearen menura sartuko da."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

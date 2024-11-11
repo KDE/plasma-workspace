@@ -404,7 +404,7 @@ msgstr "设置时间格式…"
 msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
-msgstr ""
+msgstr "时区尚未设置，点击此处打开日期和时间对话框并设置时区"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -417,14 +417,14 @@ msgstr "今天是 %1"
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr ""
+msgstr "时区尚未设置"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
-msgstr ""
+msgstr "点击时钟图标打开日期和时间对话框并设置时区。"
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format
