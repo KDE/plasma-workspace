@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2024-08-03 11:46+0200\n"
+"PO-Revision-Date: 2024-11-10 15:46+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: autostartmodel.cpp:322
 #, kde-format
@@ -50,12 +50,15 @@ msgstr "Uczyń wykonywalnym"
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
 msgstr ""
-"Plik '%1' musi być wykonywalnym, aby móc go uruchomi przy wylogowywaniu."
+"Plik '%1' musi mieć uprawnienia do wykonywania samego siebie, aby móc go "
+"uruchomić przed wylogowaniem."
 
 #: package/contents/ui/main.qml:56
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
-msgstr "Plik '%1' musi być wykonywalnym, aby móc go uruchomi przy logowaniu."
+msgstr ""
+"Plik '%1' musi mieć uprawnienia do wykonywania samego siebie, aby móc go "
+"uruchomić po zalogowaniu."
 
 #: package/contents/ui/main.qml:94
 #, kde-format
@@ -70,22 +73,22 @@ msgstr "Usuń"
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "Applications"
-msgstr "Programy"
+msgstr "Aplikacje"
 
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgid "Login Scripts"
-msgstr "Skrypty wykonywane na wejściu"
+msgstr "Skrypty wykonywane po zalogowaniu"
 
 #: package/contents/ui/main.qml:117
 #, kde-format
 msgid "Pre-startup Scripts"
-msgstr "Skrypty wykonywane przed uruchomieniem"
+msgstr "Skrypty wykonywane przed zalogowaniem"
 
 #: package/contents/ui/main.qml:120
 #, kde-format
 msgid "Logout Scripts"
-msgstr "Skrypty wykonywane na wyjściu"
+msgstr "Skrypty wykonywane przed wylogowaniem"
 
 #: package/contents/ui/main.qml:129
 #, kde-format
@@ -117,17 +120,17 @@ msgstr "Dodaj..."
 #: package/contents/ui/main.qml:198
 #, kde-format
 msgid "Add Application…"
-msgstr "Dodaj program..."
+msgstr "Dodaj aplikację…"
 
 #: package/contents/ui/main.qml:204
 #, kde-format
 msgid "Add Login Script…"
-msgstr "Dodaj skrypt wykonywany na wejściu..."
+msgstr "Dodaj skrypt wykonywany po zalogowaniu..."
 
 #: package/contents/ui/main.qml:210
 #, kde-format
 msgid "Add Logout Script…"
-msgstr "Dodaj skrypt wykonywany na wyjściu..."
+msgstr "Dodaj skrypt wykonywany przed wylogowaniem..."
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"
