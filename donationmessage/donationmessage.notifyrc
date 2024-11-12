@@ -2,7 +2,7 @@
 # SPDX-FileCopyrightText: none
 
 [Global]
-IconName=love
+IconName=kde-symbolic
 Name=Request for Donation
 Name[ar]=طلب تبرع
 Name[be]=Запыт на ахвяраванне
@@ -139,6 +139,7 @@ Name[zh_TW]=應用程式
 
 [Event/ShowDonationMessage]
 Name=Request for Donation
+IconName=help-donate
 Name[ar]=طلب تبرع
 Name[be]=Запыт на ахвяраванне
 Name[bg]=Заявка за дарения
