@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-10 02:33+0900\n"
+"PO-Revision-Date: 2024-11-11 16:11+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -406,7 +406,7 @@ msgstr "設定時間格式…"
 msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
-msgstr ""
+msgstr "時區尚未設定；請點擊此處來開啟日期和時間設定頁面以設定時區"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -415,19 +415,18 @@ msgid "Today is %1"
 msgstr "今天是 %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "城市時區"
+msgstr "時區未設定"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
-msgstr ""
+msgstr "點擊時鐘圖示來開啟日期和時間設定頁面以設定時區。"
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

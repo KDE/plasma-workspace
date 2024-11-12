@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-02 16:15+0200\n"
+"PO-Revision-Date: 2024-11-11 16:03+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -410,6 +410,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Fuso horari nn es assignate; clicca hic per aperir preferentias de Data & "
+"Tempore e assignar un"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -418,12 +420,11 @@ msgid "Today is %1"
 msgstr "Hodie es %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Citate de fuso horari"
+msgstr "Fuso horari non es assignate"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -431,6 +432,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Clicca le icone de horologio per aperir preferentias de Data & Tempore e "
+"assignar un fuso horari."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

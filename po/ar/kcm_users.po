@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-07 00:41+0000\n"
-"PO-Revision-Date: 2024-09-05 09:41+0400\n"
+"PO-Revision-Date: 2024-11-11 16:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -586,7 +586,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "فشل اقتصاص الصورة: %1"
 
 #: src/user.cpp:310
 #, kde-format

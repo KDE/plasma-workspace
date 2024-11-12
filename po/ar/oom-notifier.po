@@ -1,0 +1,54 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-29 00:41+0000\n"
+"PO-Revision-Date: 2024-11-11 16:57+0400\n"
+"Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
+"Language-Team: ar\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: module.cpp:65
+#, kde-format
+msgctxt "@title"
+msgid "Memory Shortage Avoided"
+msgstr "تجنب نقص الذاكرة"
+
+#: module.cpp:68
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"<command>%1</command> has been terminated by the Linux kernel because the "
+"system is low on memory. Consider closing unused applications or browser "
+"tabs."
+msgstr ""
+"أنهي الأمر <command>%1</command> بواسطة نواة لينكس لأن النظام يعاني من نقص "
+"في الذاكرة. فكر في إغلاق التطبيقات أو علامات تبويب المتصفح غير المستخدمة."
+
+#: module.cpp:74
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"The background service <command>%1</command> has been terminated by the "
+"Linux kernel because the system is low on memory. Consider closing unused "
+"applications or browser tabs."
+msgstr ""
+"أنهيت الخدمة الخلفية <command>%1</command> بواسطة نواة لينكس لأن النظام "
+"يعاني من نقص في الذاكرة. فكر في إغلاق التطبيقات أو علامات تبويب المتصفح غير "
+"المستخدمة."
+
+#: module.cpp:82
+#, kde-format
+msgctxt "@action"
+msgid "Restart Application"
+msgstr "أعد تشغيل التطبيق"

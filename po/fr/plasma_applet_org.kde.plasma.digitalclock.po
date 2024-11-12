@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-01 10:17+0200\n"
+"PO-Revision-Date: 2024-11-10 10:43+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -19,9 +19,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.5\n"
-"X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
+"X-Environment: kde\n"
+"X-Generator: Lokalize 24.08.3\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/config/config.qml:20
@@ -420,6 +420,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Le fuseau horaire n'est pas défini. Veuillez cliquer ici pour ouvrir la "
+"configuration de date et d'heure et en définir une."
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -428,12 +430,11 @@ msgid "Today is %1"
 msgstr "La date d’aujourd’hui est %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Ville du fuseau horaire"
+msgstr "Le fuseau horaire n'est pas défini. "
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -441,6 +442,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Veuillez cliquer ici pour ouvrir la configuration de date et d'heure et "
+"définir un fuseau horaire."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

@@ -1,25 +1,25 @@
 # translation of kded_donationmessage.po to Slovak
-# Roman Paholik <wizzardsk@gmail.com>, 2024.
+# SPDX-FileCopyrightText: 2024 Roman Paholik <wizzardsk@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kded_donationmessage\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2017-11-01 11:06+0100\n"
-"Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
+"PO-Revision-Date: 2024-11-11 17:57+0100\n"
+"Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: donationmessage.cpp:80
 #, kde-format
 msgctxt "@title of a system notification"
 msgid "Donate to KDE"
-msgstr ""
+msgstr "Darovať KDE"
 
 #: donationmessage.cpp:82
 #, kde-format
@@ -35,7 +35,7 @@ msgctxt ""
 "@action:button Make a donation now; translate this in as short a form as "
 "possible"
 msgid "Donate"
-msgstr ""
+msgstr "Venovať peniaze"
 
 #: donationmessage.cpp:85
 #, kde-format
