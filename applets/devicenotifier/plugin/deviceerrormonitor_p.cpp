@@ -204,26 +204,30 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
         if (type == SolidReplyType::Setup) { // can this even happen?
             errorMsg = i18n("Could not mount this device as it is busy.");
         } else {
-            Solid::Device device;
+            QString deviceUdi = udi;
 
             if (type == SolidReplyType::Eject) {
-                QString discUdi = device.parentUdi();
-
-                if (discUdi.isNull()) {
-                    Q_ASSERT_X(false, Q_FUNC_INFO, "This should not happen, bail out");
+                const auto discs = Solid::Device::listFromType(Solid::DeviceInterface::OpticalDisc);
+                for (const auto &disc : discs) {
+                    if (disc.parentUdi() == udi) {
+                        deviceUdi = disc.udi();
+                        break;
+                    }
                 }
 
-                device = Solid::Device(discUdi);
-            } else {
-                device = Solid::Device(udi);
+                if (deviceUdi.isNull()) {
+                    Q_ASSERT_X(false, Q_FUNC_INFO, "This should not happen, bail out");
+                }
             }
+
+            Solid::Device device(deviceUdi);
 
             Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
 
             // Without that, our lambda function would capture an uninitialized object, resulting in UB
             // and random crashes
             QMetaObject::Connection *c = new QMetaObject::Connection();
-            *c = connect(this, &DeviceErrorMonitor::blockingAppsReady, [c, error, errorData, udi, this](const QStringList &blockApps) {
+            *c = connect(this, &DeviceErrorMonitor::blockingAppsReady, [c, error, errorData, deviceUdi, this](const QStringList &blockApps) {
                 QString errorMessage;
                 if (blockApps.isEmpty()) {
                     errorMessage = i18n("One or more files on this device are open within an application.");
@@ -233,9 +237,9 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
                                          blockApps.size(),
                                          blockApps.join(i18nc("separator in list of apps blocking device unmount", ", ")));
                 }
-                notify(error, errorMessage, errorData.toString(), udi);
-                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
-                                                 << "Error for device " << udi << " error: " << error << " error message:" << errorMessage;
+                notify(error, errorMessage, errorData.toString(), deviceUdi);
+                qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: " << "Error for device " << deviceUdi << " error: " << error
+                                                 << " error message:" << errorMessage;
                 disconnect(*c);
                 delete c;
             });
