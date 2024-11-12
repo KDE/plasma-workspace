@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "Informs when applications get terminated to prevent out of memory conditions",
+        "Description[ar]": "يخبرك عند إنهاء التطبيقات لتجنب حالات نفاد الذاكرة",
         "Description[be]": "Паведамляе, калі праграмы спыняюцца, каб прадухіліць недахоп памяці",
         "Description[bg]": "Информира, когато приложенията бъдат прекратени, за да се предотвратят условия на липса на памет",
         "Description[ca@valencia]": "Informa quan es termina una aplicació per a evitar condicions d'exhauriment de memòria",
@@ -23,6 +24,7 @@
         "Description[uk]": "Інформує про переривання роботи програм для запобігання нестачі пам'яті",
         "Description[x-test]": "xxInforms when applications get terminated to prevent out of memory conditionsxx",
         "Description[zh_CN]": "当应用程序被终止以防止内存不足时通知用户",
+        "Description[zh_TW]": "在應用程式因為記憶體不足而被終止時告知",
         "Name": "Out of Memory Notifier",
         "Name[be]": "Сродак апавяшчэння пра недахоп памяці",
         "Name[bg]": "Известие за недостиг на памет",
@@ -45,7 +47,8 @@
         "Name[tr]": "Bellek Tükendi Bildiricisi",
         "Name[uk]": "Сповіщувач про нестачу пам'яті",
         "Name[x-test]": "xxOut of Memory Notifierxx",
-        "Name[zh_CN]": "内存不足通知程序"
+        "Name[zh_CN]": "内存不足通知程序",
+        "Name[zh_TW]": "記憶體不足狀態通知工具"
     },
     "X-KDE-Kded-autoload": true
 }

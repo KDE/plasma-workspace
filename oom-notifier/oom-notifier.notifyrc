@@ -4,6 +4,7 @@
 [Global]
 IconName=preferences-system-linux
 Name=Linux Kernel
+Name[ar]=نواة لينكس
 Name[be]=Ядро Linux
 Name[bg]=Ядро на Линукс
 Name[ca]=Nucli Linux
@@ -25,7 +26,9 @@ Name[tr]=Linux Çekirdeği
 Name[uk]=Ядро Linux
 Name[x-test]=xxLinux Kernelxx
 Name[zh_CN]=Linux 内核
+Name[zh_TW]=Linux 核心
 Comment=The core of the operating system
+Comment[ar]=نواة نظام التشغيل
 Comment[be]=Ядро аперацыйнай сістэмы
 Comment[bg]=Ядрото на операционната система
 Comment[ca]=La part central del sistema operatiu
@@ -47,6 +50,7 @@ Comment[tr]=İşletim sisteminin çekirdeği
 Comment[uk]=Ядро операційної системи
 Comment[x-test]=xxThe core of the operating systemxx
 Comment[zh_CN]=操作系统的内核
+Comment[zh_TW]=作業系統的核心
 
 [Event/catastrophe]
 Urgency=Critical
@@ -86,7 +90,9 @@ Name[tr]=Facia
 Name[uk]=Катастрофа
 Name[x-test]=xxCatastrophexx
 Name[zh_CN]=严重故障
+Name[zh_TW]=災難
 Comment=A very serious error has occurred
+Comment[ar]=لقد حدث خطأ خطير للغاية
 Comment[be]=Адбылася вельмі сур'ёзная памылка
 Comment[bg]=Възникна много сериозна грешка.
 Comment[ca]=S'ha produït un error molt seriós
@@ -108,3 +114,4 @@ Comment[tr]=Çok ciddi bir hata oluştu
 Comment[uk]=Сталася дуже серйозна помилка
 Comment[x-test]=xxA very serious error has occurredxx
 Comment[zh_CN]=发生严重错误
+Comment[zh_TW]=發生了非常嚴重的問題
