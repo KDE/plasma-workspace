@@ -65,7 +65,14 @@ void SchemeEditorColors::setupColorTable()
     commonColorTable->horizontalHeader()->setMinimumSectionSize(minWidth);
     commonColorTable->horizontalHeader()->setSectionResizeMode(1, QHeaderView::ResizeToContents);
 
-    for (int i = 0; i < 26; ++i) {
+    // If colorscheme has header set, do not show the Active and Inactive titlebar settings
+    // since header overrides them.
+    // BUG:433059
+    if (KColorScheme::isColorSetSupported(m_config, KColorScheme::Header)) {
+        commonColorTable->setRowCount(20); // Rowcount is from ui_scmeditorcolors.h
+    }
+
+    for (int i = 0; i < commonColorTable->rowCount(); ++i) {
         KColorButton *button = new KColorButton(this);
         commonColorTable->setRowHeight(i, button->sizeHint().height());
         button->setObjectName(QString::number(i));
@@ -398,12 +405,17 @@ void SchemeEditorColors::updateColorTable()
         m_commonColorButtons[18]->setColor(m_colorSchemes[KColorScheme::Tooltip].background(KColorScheme::NormalBackground).color());
         m_commonColorButtons[19]->setColor(m_colorSchemes[KColorScheme::Tooltip].foreground(KColorScheme::NormalText).color());
 
-        m_commonColorButtons[20]->setColor(m_wmColors.color(WindecoColors::ActiveBackground));
-        m_commonColorButtons[21]->setColor(m_wmColors.color(WindecoColors::ActiveForeground));
-        m_commonColorButtons[22]->setColor(m_wmColors.color(WindecoColors::ActiveBlend));
-        m_commonColorButtons[23]->setColor(m_wmColors.color(WindecoColors::InactiveBackground));
-        m_commonColorButtons[24]->setColor(m_wmColors.color(WindecoColors::InactiveForeground));
-        m_commonColorButtons[25]->setColor(m_wmColors.color(WindecoColors::InactiveBlend));
+        // If colorscheme has no header set, we can then add the WindecoColor button colors
+        // otherwise these colors are used from Header
+        // BUG:433059
+        if (!KColorScheme::isColorSetSupported(m_config, KColorScheme::Header)) {
+            m_commonColorButtons[20]->setColor(m_wmColors.color(WindecoColors::ActiveBackground));
+            m_commonColorButtons[21]->setColor(m_wmColors.color(WindecoColors::ActiveForeground));
+            m_commonColorButtons[22]->setColor(m_wmColors.color(WindecoColors::ActiveBlend));
+            m_commonColorButtons[23]->setColor(m_wmColors.color(WindecoColors::InactiveBackground));
+            m_commonColorButtons[24]->setColor(m_wmColors.color(WindecoColors::InactiveForeground));
+            m_commonColorButtons[25]->setColor(m_wmColors.color(WindecoColors::InactiveBlend));
+        }
 
         for (KColorButton *button : std::as_const(m_commonColorButtons)) {
             button->blockSignals(false);
