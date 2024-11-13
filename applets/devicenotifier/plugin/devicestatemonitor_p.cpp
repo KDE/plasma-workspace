@@ -61,7 +61,9 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
             connect(drive, &Solid::OpticalDrive::ejectRequested, this, &DevicesStateMonitor::setUnmountingState);
             connect(drive, &Solid::OpticalDrive::ejectDone, this, &DevicesStateMonitor::setIdleState);
         }
-    } else if (device.is<Solid::StorageVolume>()) {
+    }
+
+    if (device.is<Solid::StorageVolume>()) {
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
         if (access) {
             connect(access, &Solid::StorageAccess::setupRequested, this, &DevicesStateMonitor::setMountingState);
