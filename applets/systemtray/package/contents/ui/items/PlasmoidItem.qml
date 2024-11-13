@@ -23,7 +23,7 @@ AbstractItem {
     subText: applet?.toolTipSubText ?? ""
     mainItem: applet?.toolTipItem ?? null
     textFormat: applet?.toolTipTextFormat ?? 0 /* Text.AutoText, the default value */
-    active: systemTrayState.activeApplet !== applet
+    active: inVisibleLayout || (systemTrayState.activeApplet !== applet && (text != mainText || subText.length > 0))
 
     // FIXME: Use an input type agnostic way to activate whatever the primary
     // action of a plasmoid is supposed to be, even if it's just expanding the
