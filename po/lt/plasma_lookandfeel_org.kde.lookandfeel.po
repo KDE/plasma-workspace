@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-08-31 23:31+0300\n"
+"PO-Revision-Date: 2024-11-13 00:16+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -106,12 +106,9 @@ msgstr ""
 "sąrankos ekraną."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
-"Paleidus iš naujo, kompiuteris įžengs į programinės aparatinės įrangos "
-"sąrankos ekraną."
+msgstr "Paleidus iš naujo, kompiuteris įžengs į pradinio įkėliklio meniu."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

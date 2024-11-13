@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-01 00:53+0300\n"
+"PO-Revision-Date: 2024-11-13 00:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -414,6 +414,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Laiko juosta nėra nustatyta; spustelėkite čia, kad atvertumėte datos ir "
+"laiko nuostatas, ir nustatytumėte laiko juostą"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -422,12 +424,11 @@ msgid "Today is %1"
 msgstr "Šiandien yra %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Laiko juostos miestas"
+msgstr "Laiko juosta nėra nustatyta"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -435,6 +436,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Spustelėkite laikrodžio piktogramą, kad atvertumėte datos ir laiko "
+"nuostatas, ir nustatytumėte laiko juostą."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-12 00:42+0000\n"
+"POT-Creation-Date: 2024-11-13 00:42+0000\n"
 "PO-Revision-Date: 2017-05-21 12:19+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -2741,7 +2741,7 @@ msgctxt "weather forecast"
 msgid "Windy"
 msgstr "vetrovito"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:697 ions/dwd/ion_dwd.cpp:576
+#: ions/bbcukmet/ion_bbcukmet.cpp:697 ions/dwd/ion_dwd.cpp:516
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
@@ -2761,49 +2761,49 @@ msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
 msgstr "Podaci sa BBC‑ovog vremena"
 
-#: ions/dwd/ion_dwd.cpp:580 ions/envcan/ion_envcan.cpp:1507
+#: ions/dwd/ion_dwd.cpp:520 ions/envcan/ion_envcan.cpp:1507
 #, kde-format
 msgctxt "Short for Saturday"
 msgid "Sat"
 msgstr "sub"
 
-#: ions/dwd/ion_dwd.cpp:581 ions/envcan/ion_envcan.cpp:1508
+#: ions/dwd/ion_dwd.cpp:521 ions/envcan/ion_envcan.cpp:1508
 #, kde-format
 msgctxt "Short for Sunday"
 msgid "Sun"
 msgstr "ned"
 
-#: ions/dwd/ion_dwd.cpp:582 ions/envcan/ion_envcan.cpp:1509
+#: ions/dwd/ion_dwd.cpp:522 ions/envcan/ion_envcan.cpp:1509
 #, kde-format
 msgctxt "Short for Monday"
 msgid "Mon"
 msgstr "pon"
 
-#: ions/dwd/ion_dwd.cpp:583 ions/envcan/ion_envcan.cpp:1510
+#: ions/dwd/ion_dwd.cpp:523 ions/envcan/ion_envcan.cpp:1510
 #, kde-format
 msgctxt "Short for Tuesday"
 msgid "Tue"
 msgstr "uto"
 
-#: ions/dwd/ion_dwd.cpp:584 ions/envcan/ion_envcan.cpp:1511
+#: ions/dwd/ion_dwd.cpp:524 ions/envcan/ion_envcan.cpp:1511
 #, kde-format
 msgctxt "Short for Wednesday"
 msgid "Wed"
 msgstr "sre"
 
-#: ions/dwd/ion_dwd.cpp:585 ions/envcan/ion_envcan.cpp:1512
+#: ions/dwd/ion_dwd.cpp:525 ions/envcan/ion_envcan.cpp:1512
 #, kde-format
 msgctxt "Short for Thursday"
 msgid "Thu"
 msgstr "čet"
 
-#: ions/dwd/ion_dwd.cpp:586 ions/envcan/ion_envcan.cpp:1513
+#: ions/dwd/ion_dwd.cpp:526 ions/envcan/ion_envcan.cpp:1513
 #, kde-format
 msgctxt "Short for Friday"
 msgid "Fri"
 msgstr "pet"
 
-#: ions/dwd/ion_dwd.cpp:611
+#: ions/dwd/ion_dwd.cpp:551
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
