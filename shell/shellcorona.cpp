@@ -116,10 +116,6 @@ ShellCorona::ShellCorona(QObject *parent)
 
     qDBusRegisterMetaType<QColor>();
 
-    KConfigGroup cg(KSharedConfig::openConfig(u"kdeglobals"_s), u"KDE"_s);
-    const QString packageName = cg.readEntry("LookAndFeelPackage", QString());
-    m_lookAndFeelPackage = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
-
     // Accent color setting
     KSharedConfigPtr globalConfig = KSharedConfig::openConfig();
     KConfigGroup accentColorConfigGroup(globalConfig, u"General"_s);
@@ -132,14 +128,6 @@ ShellCorona::ShellCorona(QObject *parent)
             if (m_accentColorFromWallpaperEnabled != result) {
                 m_accentColorFromWallpaperEnabled = result;
                 Q_EMIT accentColorFromWallpaperEnabledChanged();
-            }
-        }
-        if (names.contains(QByteArrayLiteral("LookAndFeelPackage"))) {
-            const QString packageName = group.readEntry("LookAndFeelPackage", QString());
-            KPackage::Package newPack = m_lookAndFeelPackage;
-            newPack.setPath(packageName);
-            if (newPack.isValid()) {
-                m_lookAndFeelPackage.setPath(packageName);
             }
         }
     });
@@ -182,7 +170,7 @@ void ShellCorona::init()
 #endif
 
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(kPackage().filePath("defaults")), u"Desktop"_s);
-    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), u"Desktop"_s);
+    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(lookAndFeelPackage().filePath("defaults")), u"Desktop"_s);
     m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, QStringLiteral("org.kde.plasma.desktop"));
 
     new PlasmaShellAdaptor(this);
@@ -360,11 +348,6 @@ ShellCorona::~ShellCorona()
     }
 }
 
-KPackage::Package ShellCorona::lookAndFeelPackage()
-{
-    return m_lookAndFeelPackage;
-}
-
 void ShellCorona::setShell(const QString &shell)
 {
     if (m_shell == shell) {
@@ -377,7 +360,7 @@ void ShellCorona::setShell(const QString &shell)
     package.setAllowExternalPaths(true);
     setKPackage(package);
     m_desktopDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(package.filePath("defaults")), u"Desktop"_s);
-    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(m_lookAndFeelPackage.filePath("defaults")), u"Desktop"_s);
+    m_lnfDefaultsConfig = KConfigGroup(KSharedConfig::openConfig(lookAndFeelPackage().filePath("defaults")), u"Desktop"_s);
     m_lnfDefaultsConfig = KConfigGroup(&m_lnfDefaultsConfig, shell);
 
     const QString themeGroupKey = QStringLiteral("Theme");
@@ -673,7 +656,9 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
 void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
 {
-    KPackage::Package newPack = m_lookAndFeelPackage;
+    // Theoriginal behavior of this function is to load the layout for a new lnf, but to not save it
+    // as this is a job for the KCM
+    KPackage::Package newPack = lookAndFeelPackage();
     newPack.setPath(packageName);
 
     if (!newPack.isValid()) {
@@ -681,8 +666,6 @@ void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
     }
 
     KSharedConfig::Ptr conf = KSharedConfig::openConfig(QLatin1String("plasma-") + m_shell + QLatin1String("-appletsrc"), KConfig::SimpleConfig);
-
-    m_lookAndFeelPackage.setPath(packageName);
 
     // get rid of old config
     const QStringList groupList = conf->groupList();
@@ -1040,7 +1023,8 @@ void ShellCorona::loadDefaultLayout()
 {
 #if USE_SCRIPTING
     // pre-startup scripts
-    QString script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + u"-prelayout.js"));
+    KPackage::Package lnfPack = lookAndFeelPackage();
+    QString script = lnfPack.filePath("layouts", QString(shell() + u"-prelayout.js"));
     if (!script.isEmpty()) {
         QFile file(script);
         if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
@@ -1072,7 +1056,7 @@ void ShellCorona::loadDefaultLayout()
     script = m_testModeLayout;
 
     if (script.isEmpty()) {
-        script = m_lookAndFeelPackage.filePath("layouts", QString(shell() + u"-layout.js"));
+        script = lnfPack.filePath("layouts", QString(shell() + u"-layout.js"));
     }
     if (script.isEmpty()) {
         script = kPackage().filePath("defaultlayout");
@@ -1626,7 +1610,7 @@ void ShellCorona::executeSetupPlasmoidScript(Plasma::Containment *containment, P
         return;
     }
 
-    const QString scriptFile = m_lookAndFeelPackage.filePath("plasmoidsetupscripts", QString(applet->pluginMetaData().pluginId() + u".js"));
+    const QString scriptFile = lookAndFeelPackage().filePath("plasmoidsetupscripts", QString(applet->pluginMetaData().pluginId() + u".js"));
 
     if (scriptFile.isEmpty()) {
         return;

@@ -71,7 +71,6 @@ public:
     explicit ShellCorona(QObject *parent = nullptr);
     ~ShellCorona() override;
 
-    KPackage::Package lookAndFeelPackage();
     void init();
 
     /**
@@ -297,7 +296,6 @@ private:
     QHash<QString, QString> m_activityContainmentPlugins;
     QAction *m_addPanelAction;
     std::unique_ptr<QMenu> m_addPanelsMenu;
-    KPackage::Package m_lookAndFeelPackage;
 
 #if HAVE_X11
     WId m_previousWId = 0;
