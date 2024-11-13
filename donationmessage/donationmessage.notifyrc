@@ -139,7 +139,6 @@ Name[zh_TW]=應用程式
 
 [Event/ShowDonationMessage]
 Name=Request for Donation
-IconName=help-donate
 Name[ar]=طلب تبرع
 Name[be]=Запыт на ахвяраванне
 Name[bg]=Заявка за дарения
@@ -175,6 +174,7 @@ Name[uk]=Запит щодо фінансової підтримки
 Name[x-test]=xxRequest for Donationxx
 Name[zh_CN]=显示捐款请求
 Name[zh_TW]=請求贊助
+IconName=help-donate
 Comment=Shows a yearly request to donate to KDE
 Comment[ar]=تظهر طلب سنوي للتبرع لكيدي
 Comment[be]=Паказвае штогадовы запыт на ахвяраванне KDE
