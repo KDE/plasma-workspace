@@ -1393,30 +1393,30 @@ void PanelView::updateMask()
                                                  m_theme.backgroundIntensity(),
                                                  m_theme.backgroundSaturation(),
                                                  mask);
+    }
 
-        if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
-            const QRect bounding = mask.boundingRect();
-            // Always go to screen edge, to preserve fitts law
-            switch (containment()->location()) {
-            case Plasma::Types::LeftEdge:
-                screenPanelRect.setRight(bounding.right());
-                break;
-            case Plasma::Types::TopEdge:
-                screenPanelRect.setBottom(bounding.bottom());
-                break;
-            case Plasma::Types::RightEdge:
-                screenPanelRect.setLeft(bounding.left());
-                break;
-            case Plasma::Types::BottomEdge:
-                screenPanelRect.setTop(bounding.top());
-                break;
-            default:
-                break;
-            }
-            setMask(screenPanelRect);
-        } else {
-            setMask(mask);
+    if (!KWindowSystem::isPlatformX11() || KX11Extras::compositingActive()) {
+        const QRect bounding = mask.boundingRect();
+        // Always go to screen edge, to preserve fitts law
+        switch (containment()->location()) {
+        case Plasma::Types::LeftEdge:
+            screenPanelRect.setRight(bounding.right());
+            break;
+        case Plasma::Types::TopEdge:
+            screenPanelRect.setBottom(bounding.bottom());
+            break;
+        case Plasma::Types::RightEdge:
+            screenPanelRect.setLeft(bounding.left());
+            break;
+        case Plasma::Types::BottomEdge:
+            screenPanelRect.setTop(bounding.top());
+            break;
+        default:
+            break;
         }
+        setMask(screenPanelRect);
+    } else {
+        setMask(mask);
     }
 }
 
