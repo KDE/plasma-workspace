@@ -63,11 +63,12 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     , m_visibilityMode(NormalPanel)
     , m_opacityMode(Adaptive)
     , m_lengthMode(FillAvailable)
+    , m_layerMode(LayerShellQt::Window::LayerTop)
     , m_backgroundHints(Plasma::Types::StandardBackground)
 {
     if (KWindowSystem::isPlatformWayland()) {
         m_layerWindow = LayerShellQt::Window::get(this);
-        m_layerWindow->setLayer(LayerShellQt::Window::LayerTop);
+        m_layerWindow->setLayer(m_layerMode);
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
         m_layerWindow->setScope(QStringLiteral("dock"));
         m_layerWindow->setCloseOnDismissed(false);
@@ -526,6 +527,11 @@ PanelView::LengthMode PanelView::lengthMode() const
     return m_lengthMode;
 }
 
+LayerShellQt::Window::Layer PanelView::layerMode() const
+{
+    return m_layerMode;
+}
+
 bool PanelView::adaptiveOpacityEnabled()
 {
     return m_theme.adaptiveTransparencyEnabled();
@@ -556,6 +562,21 @@ void PanelView::setLengthMode(PanelView::LengthMode mode)
         positionAndResizePanel();
         Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
     }
+}
+
+void PanelView::setLayerMode(LayerShellQt::Window::Layer layer)
+{
+    if (m_layerMode == layer) {
+        return;
+    }
+
+    m_layerMode = layer;
+
+    if (KWindowSystem::isPlatformWayland()) {
+        m_layerWindow->setLayer(m_layerMode);
+    }
+
+    Q_EMIT layerModeChanged();
 }
 
 void PanelView::updateAdaptiveOpacityEnabled()

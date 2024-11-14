@@ -20,6 +20,7 @@
 #include <PlasmaQuick/ConfigView>
 #include <PlasmaQuick/ContainmentView>
 #include <PlasmaQuick/PopupPlasmaWindow>
+#include <LayerShellQt/Window>
 
 class AutoHideScreenEdge;
 class ShellCorona;
@@ -106,6 +107,13 @@ class PanelView : public PlasmaQuick::ContainmentView
      * @see LengthMode
      */
     Q_PROPERTY(LengthMode lengthMode READ lengthMode WRITE setLengthMode NOTIFY lengthModeChanged)
+
+    /**
+     * Property that determines the layer the panel is currently placed on using LayerShellQt.
+     *
+     * @since 6.3
+     */
+    Q_PROPERTY(LayerShellQt::Window::Layer layerMode READ layerMode WRITE setLayerMode NOTIFY layerModeChanged)
 
     /**
      *  Property that determines whether adaptive opacity is used.
@@ -222,6 +230,8 @@ public:
     void setOpacityMode(PanelView::OpacityMode mode);
     PanelView::LengthMode lengthMode() const;
     void setLengthMode(PanelView::LengthMode mode);
+    LayerShellQt::Window::Layer layerMode() const;
+    void setLayerMode(LayerShellQt::Window::Layer layer);
     void updateAdaptiveOpacityEnabled();
 
     /**
@@ -281,6 +291,7 @@ Q_SIGNALS:
     void visibilityModeChanged();
     void opacityModeChanged();
     void lengthModeChanged();
+    void layerModeChanged();
     void adaptiveOpacityEnabledChanged();
     void userConfiguringChanged();
 
@@ -355,6 +366,7 @@ private:
     VisibilityMode m_visibilityMode;
     OpacityMode m_opacityMode;
     LengthMode m_lengthMode;
+    LayerShellQt::Window::Layer m_layerMode;
     Plasma::Theme m_theme;
     QTimer m_unhideTimer;
     Plasma::Types::BackgroundHints m_backgroundHints;
