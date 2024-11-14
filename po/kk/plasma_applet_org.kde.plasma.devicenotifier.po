@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2013-01-02 05:14+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -191,7 +191,7 @@ msgstr "Дискін алып-шығу үшін түртіңіз."
 msgid "Could not mount this device as it is busy."
 msgstr "%1 құрылғысы тіркелмеді."
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -201,7 +201,7 @@ msgstr ""
 "Дискіні алып-шығаруға болмайды.\n"
 "Діскідегі бір не бірнеше файл бір қолданбада ашылып тұр."
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount device %1.\n"
@@ -213,26 +213,26 @@ msgstr[0] ""
 "%1 құрылғысы тіркеуден шығарылмады.\n"
 "Құрылғыдағы бір не бірнеше файл бір қолданбада ашылып тұр."
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, fuzzy, kde-format
 #| msgid "Could not mount device %1."
 msgid "Could not mount this device."
 msgstr "%1 құрылғысы тіркелмеді."
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, fuzzy, kde-format
 #| msgid "Could not mount device %1."
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "%1 құрылғысы тіркелмеді."
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."

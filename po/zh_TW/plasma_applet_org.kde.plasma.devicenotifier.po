@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2024-07-18 16:44+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -168,36 +168,36 @@ msgstr "您沒有退出此碟片的權限。"
 msgid "Could not mount this device as it is busy."
 msgstr "無法掛載裝置，裝置忙碌中。"
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "裝置上的一或多個檔案正被應用程式開啟。"
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] "裝置上的一或多個檔案正被以下應用程式開啟：%2。"
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr "、"
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
 msgstr "無法掛載此裝置。"
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "無法移除此裝置。"
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "無法退出碟片。"

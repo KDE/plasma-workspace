@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2008-04-18 14:31+0330\n"
 "Last-Translator: Saied Taghavi <s.taghavi@gmail.com>\n"
 "Language-Team: Persian <kde-i18n-fa@kde.org>\n"
@@ -173,12 +173,12 @@ msgstr "%1 کنش برای دستگاه"
 msgid "Could not mount this device as it is busy."
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -186,26 +186,26 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, fuzzy, kde-format
 #| msgid "Recently plugged devices :"
 msgid "Could not mount this device."
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, fuzzy, kde-format
 #| msgid "Recently plugged devices :"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "دستگاه‌های تازه‌متصل‌شده :"
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"

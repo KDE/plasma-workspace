@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2008-10-05 10:34+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -180,7 +180,7 @@ msgstr "%1 aperacyja dla hetaj pryłady"
 msgid "Could not mount this device as it is busy."
 msgstr "Apošniaja padłučanaja pryłada: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -190,7 +190,7 @@ msgstr ""
 "Nie ŭdałosia vysunuć dysk.\n"
 "Prynamsi, adzin fajł z hetaj pryłady adčynieny ŭ niejkaj aplikacyi."
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot unmount the device.\n"
@@ -211,26 +211,26 @@ msgstr[3] ""
 "Nie ŭdałosia admantavać pryładu.\n"
 "Prynamsi, adzin fajł z hetaj pryłady adčynieny ŭ niejkaj aplikacyi."
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "Apošniaja padłučanaja pryłada: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Apošniaja padłučanaja pryłada: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"

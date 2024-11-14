@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2009-06-02 00:19+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@myrealbox.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -178,7 +178,7 @@ msgstr "1 tindakan untuk peranti ini"
 msgid "Could not mount this device as it is busy."
 msgstr "Peranti terakhir dipasang: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -188,7 +188,7 @@ msgstr ""
 "Tidak dapat melentingkan cakera.\n"
 "Satu atau lebih fail dalam cakera ini terbuka didalam aplikasi."
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount the device.\n"
@@ -203,26 +203,26 @@ msgstr[1] ""
 "Tidak dapat menyahlekap peranti.\n"
 "Satu atau lebih fail pada peranti ini terbuka didalam aplikasi."
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "Peranti terakhir dipasang: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Peranti terakhir dipasang: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"

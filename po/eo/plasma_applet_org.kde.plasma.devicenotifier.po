@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2024-07-20 17:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -165,13 +165,13 @@ msgstr "Vi ne estas rajtigita elĵeti ĉi tiun diskon."
 msgid "Could not mount this device as it is busy."
 msgstr "Ne eblis kroĉi ĉi tiun aparaton ĉar ĝi estas okupita."
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 "Unu aŭ pluraj dosieroj sur ĉi tiu aparato estas malfermitaj en aplikaĵo."
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -183,24 +183,24 @@ msgstr[1] ""
 "Unu aŭ pluraj dosieroj sur ĉi tiu aparato estas malfermitaj en sekvaj "
 "aplikaĵoj: %2."
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Ne eblis kroĉi ci aparaton."
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Ne eblis forigi tiun ĉi aparaton."
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Ne eblis elĵeti ĉi tiun diskon."

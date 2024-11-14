@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -168,12 +168,12 @@ msgstr "У вас няма правоў на выманне гэтага дыс�
 msgid "Could not mount this device as it is busy."
 msgstr "Не ўдалося прымантаваць гэтую прыладу, бо яна занятая."
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "Адзін або некалькі файлаў на гэтай прыладзе адкрытыя ў праграме."
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -190,24 +190,24 @@ msgstr[3] ""
 "Адзін або некалькі файлаў на гэтай прыладзе адкрытыя ў наступных праграмах: "
 "\"%2\"."
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
 msgstr "Не ўдалося прымантаваць гэтую прыладу."
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Не ўдалося адлучыць гэтую прыладу."
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "Не ўдалося выняць гэты дыск."

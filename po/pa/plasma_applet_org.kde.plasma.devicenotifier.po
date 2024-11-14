@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2024-01-19 17:39-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -164,12 +164,12 @@ msgstr "ਤੁਸੀਂ ਇਸ ਡਿਸਕ ਨੂੰ ਬਾਹਰ ਕੱਢਣ 
 msgid "Could not mount this device as it is busy."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਰੁਝੇ ਹੋਣ ਕਰਕੇ ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਇਲਾਂ ਐਪਲੀਕੇਸ਼ਨ ਨਾਲ ਖੁੱਲ੍ਹੀਆਂ ਹਨ।"
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -177,24 +177,24 @@ msgid_plural ""
 msgstr[0] "ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਇਲਾਂ \"%2\" ਐਪਲੀਕੇਸ਼ਨ ਨਾਲ ਖੁੱਲ੍ਹੀਆਂ ਹਨ।"
 msgstr[1] "ਇਸ ਡਿਵਾਈਸ ਉੱਤੇ ਇੱਕ ਜਾਂ ਵੱਧ ਫਾਇਲਾਂ ਅੱਗੇ ਦਿੱਤੀਆਂ ਐਪਲੀਕੇਸ਼ਨਾਂ ਨਾਲ ਖੁੱਲ੍ਹੀਆਂ ਹਨ: %2"
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, kde-format
 msgid "Could not mount this device."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "ਇਸ ਡਿਵਾਈਸ ਨੂੰ ਮਾਊਂਟ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਿਆ।"
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "ਇਸ ਡਿਸਕ ਨੂੰ ਬਾਹਰ ਨਹੀਂ ਕੱਢਿਆ ਜਾ ਸਕਿਆ।"

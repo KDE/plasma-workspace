@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-18 02:37+0000\n"
+"POT-Creation-Date: 2024-11-14 02:33+0000\n"
 "PO-Revision-Date: 2007-11-05 13:16+0545\n"
 "Last-Translator: Shyam Krishna Bal <shyamkrishna_bal@yahoo.com>\n"
 "Language-Team: Nepali <info@mpp.org.np>\n"
@@ -390,76 +390,76 @@ msgstr "सामान्य पृष्ठभूमि"
 msgid "View Positive Text against View Normal Background"
 msgstr "सामान्य पृष्ठभूमि"
 
-#: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:78
+#: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:85
 #, kde-format
 msgid "Varies"
 msgstr "भिन्न गर्दछ"
 
-#: editor/scmeditorcolors.cpp:101
+#: editor/scmeditorcolors.cpp:108
 #, kde-format
 msgid "Normal Background"
 msgstr "सामान्य पृष्ठभूमि"
 
-#: editor/scmeditorcolors.cpp:102
+#: editor/scmeditorcolors.cpp:109
 #, kde-format
 msgid "Alternate Background"
 msgstr "वैकल्पिक पृष्ठभूमि"
 
-#: editor/scmeditorcolors.cpp:103
+#: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Normal Text"
 msgstr "सामान्य पाठ"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "पाठ निस्क्रिय गर्नुहोस्"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:112 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "पाठ सक्रिय गर्नुहोस्"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:113 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "पाठ लिङ्क गर्नुहोस्"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:114 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "हेरिएको पाठ"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:115 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
 msgstr "नकरात्मक पाठ"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:116 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr "तटस्थ पाठ"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:117 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
 msgstr "सकरात्मक पाठ"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:118 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr "फोकस सजावट"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:112 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:119 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr "होभर सजावट"
