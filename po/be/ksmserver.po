@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:42+0000\n"
+"POT-Creation-Date: 2024-11-14 00:42+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -163,13 +163,13 @@ msgstr ""
 "Запускаць без падтрымкі экрана блакавання. Патрэбна, калі экран блакавання "
 "падаецца іншым кампанентам."
 
-#: server.cpp:774
+#: server.cpp:778
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[невядома]"
 
-#: server.cpp:797
+#: server.cpp:801
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -181,7 +181,7 @@ msgstr ""
 "сістэмы вычарпаныя. Вось тры найбуйнейшыя спажыўцы рэсурсаў:\n"
 " %1"
 
-#: server.cpp:1069
+#: server.cpp:1073
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

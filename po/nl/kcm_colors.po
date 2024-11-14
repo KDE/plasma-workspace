@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-18 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 00:42+0000\n"
 "PO-Revision-Date: 2024-08-29 10:17+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -361,76 +361,76 @@ msgstr "Bekijk neutrale tekst tegen normale achtergrondweergave"
 msgid "View Positive Text against View Normal Background"
 msgstr "Bekijk positieve tekst tegen normale achtergrondweergave"
 
-#: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:78
+#: editor/scmeditorcolors.cpp:64 editor/scmeditorcolors.cpp:85
 #, kde-format
 msgid "Varies"
 msgstr "Diversen"
 
-#: editor/scmeditorcolors.cpp:101
+#: editor/scmeditorcolors.cpp:108
 #, kde-format
 msgid "Normal Background"
 msgstr "Normale achtergrond"
 
-#: editor/scmeditorcolors.cpp:102
+#: editor/scmeditorcolors.cpp:109
 #, kde-format
 msgid "Alternate Background"
 msgstr "Afwisselende achtergrond"
 
-#: editor/scmeditorcolors.cpp:103
+#: editor/scmeditorcolors.cpp:110
 #, kde-format
 msgid "Normal Text"
 msgstr "Normale tekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:104 editor/scmeditorcolors.ui:303
+#: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:303
 #, kde-format
 msgid "Inactive Text"
 msgstr "Inactieve text"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:105 editor/scmeditorcolors.ui:308
+#: editor/scmeditorcolors.cpp:112 editor/scmeditorcolors.ui:308
 #, kde-format
 msgid "Active Text"
 msgstr "Actieve tekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:106 editor/scmeditorcolors.ui:313
+#: editor/scmeditorcolors.cpp:113 editor/scmeditorcolors.ui:313
 #, kde-format
 msgid "Link Text"
 msgstr "Koppelingstekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:107 editor/scmeditorcolors.ui:318
+#: editor/scmeditorcolors.cpp:114 editor/scmeditorcolors.ui:318
 #, kde-format
 msgid "Visited Text"
 msgstr "Bezochte tekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:108 editor/scmeditorcolors.ui:323
+#: editor/scmeditorcolors.cpp:115 editor/scmeditorcolors.ui:323
 #, kde-format
 msgid "Negative Text"
 msgstr "Negatieve tekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:109 editor/scmeditorcolors.ui:328
+#: editor/scmeditorcolors.cpp:116 editor/scmeditorcolors.ui:328
 #, kde-format
 msgid "Neutral Text"
 msgstr "Neutrale tekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:110 editor/scmeditorcolors.ui:333
+#: editor/scmeditorcolors.cpp:117 editor/scmeditorcolors.ui:333
 #, kde-format
 msgid "Positive Text"
 msgstr "Positieve tekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:111 editor/scmeditorcolors.ui:338
+#: editor/scmeditorcolors.cpp:118 editor/scmeditorcolors.ui:338
 #, kde-format
 msgid "Focus Decoration"
 msgstr "Focusdecoratie"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
-#: editor/scmeditorcolors.cpp:112 editor/scmeditorcolors.ui:343
+#: editor/scmeditorcolors.cpp:119 editor/scmeditorcolors.ui:343
 #, kde-format
 msgid "Hover Decoration"
 msgstr "Decoratie onder muis"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:42+0000\n"
+"POT-Creation-Date: 2024-11-14 00:42+0000\n"
 "PO-Revision-Date: 2024-09-25 19:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -159,13 +159,13 @@ msgstr ""
 "Kilit ekranı desteği olmadan başlatılır. Yalnızca diğer bileşen kilit "
 "ekranını sağlarsa gereklidir."
 
-#: server.cpp:774
+#: server.cpp:778
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[bilinmeyen]"
 
-#: server.cpp:797
+#: server.cpp:801
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -177,7 +177,7 @@ msgstr ""
 "yönetilemiyor. Oturum kaynaklarının ilk üç tüketicisi şunlardır:\n"
 "%1"
 
-#: server.cpp:1069
+#: server.cpp:1073
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

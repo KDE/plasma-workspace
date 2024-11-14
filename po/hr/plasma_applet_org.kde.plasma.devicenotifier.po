@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:41+0000\n"
+"POT-Creation-Date: 2024-11-14 00:42+0000\n"
 "PO-Revision-Date: 2011-04-07 10:09+0200\n"
 "Last-Translator: Marko Dimjašević <marko@dimjasevic.net>\n"
 "Language-Team: Croatian <kde-croatia-list@lists.sourceforge.net>\n"
@@ -193,7 +193,7 @@ msgstr "Kliknite kako biste izbacili ovaj disk."
 msgid "Could not mount this device as it is busy."
 msgstr "Nije moguće montirati uređaj %1."
 
-#: plugin/deviceerrormonitor_p.cpp:229
+#: plugin/deviceerrormonitor_p.cpp:233
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -203,7 +203,7 @@ msgstr ""
 "Ne mogu izbaciti disk.\n"
 "Otvorena je jedna ili više datoteka sa ovog uređaja u nekoj aplikaciji."
 
-#: plugin/deviceerrormonitor_p.cpp:231
+#: plugin/deviceerrormonitor_p.cpp:235
 #, fuzzy, kde-format
 #| msgid ""
 #| "Could not unmount device %1.\n"
@@ -221,26 +221,26 @@ msgstr[2] ""
 "Nije moguće odmontirati uređaj %1.\n"
 "Otvorena je jedna ili više datoteka s ovog uređaja u nekoj aplikaciji."
 
-#: plugin/deviceerrormonitor_p.cpp:234
+#: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:254
+#: plugin/deviceerrormonitor_p.cpp:258
 #, fuzzy, kde-format
 #| msgid "Could not mount device %1."
 msgid "Could not mount this device."
 msgstr "Nije moguće montirati uređaj %1."
 
-#: plugin/deviceerrormonitor_p.cpp:257
+#: plugin/deviceerrormonitor_p.cpp:261
 #, fuzzy, kde-format
 #| msgid "Could not mount device %1."
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Nije moguće montirati uređaj %1."
 
-#: plugin/deviceerrormonitor_p.cpp:260
+#: plugin/deviceerrormonitor_p.cpp:264
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
