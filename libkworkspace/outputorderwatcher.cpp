@@ -292,23 +292,9 @@ bool X11OutputOrderWatcher::nativeEventFilter(const QByteArray &eventType, void 
             // the same connector name as before
             // so screenpool finds itself with an empty screenorder
             if (randrEvent->u.oc.connection == XCB_RANDR_CONNECTION_DISCONNECTED) {
-                xcb_randr_output_t output = randrEvent->u.oc.output;
-                xcb_connection_t *connection = m_x11Interface->connection();
-                xcb_randr_get_output_info_cookie_t cookie = xcb_randr_get_output_info(connection, output, XCB_CURRENT_TIME);
-                xcb_randr_get_output_info_reply_t *reply = xcb_randr_get_output_info_reply(connection, cookie, nullptr);
-
-                if (reply) {
-                    int name_len = xcb_randr_get_output_info_name_length(reply);
-                    char *name = reinterpret_cast<char *>(xcb_randr_get_output_info_name(reply));
-                    QString connectorName = QString::fromLatin1(name, name_len);
-
-                    free(reply);
-
-                    m_outputOrder.removeAll(connectorName);
-                    // Cause ScreenPool to reevaluate screenorder again, so the screen :0.0 will
-                    // be correctly moved to fakeScreens
-                    m_delayTimer->start();
-                }
+                // Cause ScreenPool to reevaluate screenorder again, so the screen :0.0 will
+                // be correctly moved to fakeScreens
+                m_delayTimer->start();
             }
         }
     }
