@@ -263,6 +263,11 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
         qCCritical(SCREENPOOL, "Something wrong happened on Wayland.");
         Q_UNREACHABLE();
 #endif
+        Q_ASSERT_X(m_availableScreens.contains(screen), Q_FUNC_INFO, qUtf8Printable(std::invoke([this, screen]() {
+                       QString message;
+                       QDebug(&message) << this << "Current screen:" << screen;
+                       return message;
+                   })));
         Q_ASSERT(!m_redundantScreens.contains(screen));
         Q_ASSERT(!m_fakeScreens.contains(screen));
         m_availableScreens.removeAll(screen);
