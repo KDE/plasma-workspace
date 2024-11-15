@@ -19,7 +19,7 @@ AbstractItem {
     text: applet?.plasmoid.title ?? ""
 
     itemId: applet?.plasmoid.pluginName ?? ""
-    mainText: applet?.toolTipMainText ?? ""
+    mainText: inVisibleLayout || (applet && applet.toolTipMainText && applet.toolTipMainText != text) ? applet.toolTipMainText : ""
     subText: applet?.toolTipSubText ?? ""
     mainItem: applet?.toolTipItem ?? null
     textFormat: applet?.toolTipTextFormat ?? 0 /* Text.AutoText, the default value */

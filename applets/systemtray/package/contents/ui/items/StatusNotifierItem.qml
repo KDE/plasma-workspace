@@ -17,7 +17,7 @@ AbstractItem {
 
     itemId: model.Id
     text: model.Title || model.ToolTipTitle
-    mainText: model.ToolTipTitle !== "" ? model.ToolTipTitle : model.Title
+    mainText: inVisibleLayout || (model.ToolTipTitle !== "" && model.ToolTipTitle !== text) ? model.ToolTipTitle : ""
     subText: model.ToolTipSubTitle
     textFormat: Text.AutoText
     active: inVisibleLayout || text != mainText || subText.length > 0
