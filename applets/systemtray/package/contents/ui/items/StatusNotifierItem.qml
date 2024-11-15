@@ -20,6 +20,7 @@ AbstractItem {
     mainText: model.ToolTipTitle !== "" ? model.ToolTipTitle : model.Title
     subText: model.ToolTipSubTitle
     textFormat: Text.AutoText
+    active: inVisibleLayout || text != mainText || subText.length > 0
 
     Kirigami.Icon {
         id: iconItem
