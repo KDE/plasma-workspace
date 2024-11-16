@@ -67,6 +67,7 @@ public:
         Recent,
         Popular,
     };
+    Q_ENUM(Ordering)
 
     explicit RecentUsageModel(QObject *parent = nullptr, IncludeUsage usage = AppsAndDocs, int ordering = Recent);
     ~RecentUsageModel() override;
