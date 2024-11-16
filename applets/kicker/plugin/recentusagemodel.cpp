@@ -109,7 +109,20 @@ bool GroupSortProxy::lessThan(const QModelIndex &left, const QModelIndex &right)
         return false;
     }
 
-    return (left.row() < right.row());
+    if (lResource.startsWith(QLatin1String("applications:"))) {
+        return left.row() < right.row();
+    }
+
+    const QString &lmime = sourceModel()->data(left, ResultModel::MimeType).toString();
+    const QString &rmime = sourceModel()->data(right, ResultModel::MimeType).toString();
+
+    if (lmime == QLatin1String("inode/directory") && rmime != QLatin1String("inode/directory")) {
+        return true;
+    } else if (lmime != QLatin1String("inode/directory") && rmime == QLatin1String("inode/directory")) {
+        return false;
+    }
+
+    return left.row() < right.row();
 }
 
 RecentUsageModel::RecentUsageModel(QObject *parent, IncludeUsage usage, int ordering)
@@ -294,7 +307,13 @@ QVariant RecentUsageModel::docData(const QString &resource, int role, const QStr
         }
         return fileItem.iconName();
     } else if (role == Kicker::GroupRole) {
-        return i18n("Files");
+        auto fileItem = getFileItem();
+        const auto index = findPlaceForKFileItem(fileItem);
+        if (fileItem.isDir() || index.isValid()) {
+            return i18n("Folders");
+        } else {
+            return i18n("Files");
+        }
     } else if (role == Kicker::FavoriteIdRole || role == Kicker::UrlRole) {
         return url.toString();
     } else if (role == Kicker::DescriptionRole) {
