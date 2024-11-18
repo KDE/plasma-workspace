@@ -13,7 +13,7 @@ qt_generate_dbus_interface(
     OPTIONS -s -m
 )
 qt_add_dbus_adaptor(localegen_Helper_SRCS ${CMAKE_CURRENT_BINARY_DIR}/org.kde.localegenhelper.xml
-                    ${CMAKE_CURRENT_SOURCE_DIR}/localegenhelper.h LocaleGenHelper)
+                    localegenhelper.h LocaleGenHelper)
 add_executable(plasma-localegen-helper ${localegen_Helper_SRCS})
 target_link_libraries(plasma-localegen-helper
     Qt::DBus
