@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-07 20:52+0200\n"
+"PO-Revision-Date: 2024-11-17 21:50+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -73,10 +73,9 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "மீள்துவக்கப்படும்போது கணினி சாதனநிரல் அமைப்புகளில் நுழையும்."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "மீள்துவக்கப்படும்போது கணினி சாதனநிரல் அமைப்புகளில் நுழையும்."
+msgstr "மீள்துவக்கப்படும்போது கணினி துவக்குநிரல் அமைப்புகளில் நுழையும்."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

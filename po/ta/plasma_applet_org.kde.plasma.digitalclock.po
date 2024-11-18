@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-01 17:12+0200\n"
+"PO-Revision-Date: 2024-11-17 21:42+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -409,6 +409,7 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"நேர மண்டலம் அமைக்கப்படவில்லை; தேதி மற்றும் நேரம் அமைப்புகளை திறக்க இங்கு கிளிக் செய்யவும்"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -417,19 +418,18 @@ msgid "Today is %1"
 msgstr "இன்று %1 ஆகும்"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "நேரமண்டலங்கள்"
+msgstr "நேரமண்டலம் அமைக்கப்படவில்லை"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
-msgstr ""
+msgstr "தேதி மற்றும் நேரம் அமைப்புகளை திறக்க கடிகார சின்னத்தை கிளிக் செய்யவும்."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format
