@@ -463,12 +463,7 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
     }
 
     HistoryItemPtr item = applyClipChanges(data);
-    if (changed) {
-        qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
-        if (m_bSynchronize && item) { // applyClipChanges can return nullptr
-            m_clip->setMimeData(item, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
-        }
-    }
+
     QString &lastURLGrabberText = selectionMode ? m_lastURLGrabberTextSelection : m_lastURLGrabberTextClipboard;
     if (m_bURLGrabber && item && data->hasText()) {
         m_myURLGrabber->checkNewData(std::const_pointer_cast<const HistoryItem>(item));
@@ -482,6 +477,14 @@ void Klipper::checkClipData(QClipboard::Mode mode, const QMimeData *data)
         }
     } else {
         lastURLGrabberText.clear();
+    }
+
+    if (changed) {
+        qCDebug(KLIPPER_LOG) << "Synchronize?" << m_bSynchronize;
+        if (m_bSynchronize && item) { // applyClipChanges can return nullptr
+            // Note: m_clip->setMimeData has an internal round trip, state is undefined after this.
+            m_clip->setMimeData(item, mode == QClipboard::Selection ? SystemClipboard::Clipboard : SystemClipboard::Selection);
+        }
     }
 }
 
