@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-11-19 02:32+0000\n"
 "PO-Revision-Date: 2024-11-10 19:28+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -154,13 +154,13 @@ msgstr ""
 "Spustí bez podpory zamknutia obrazovky. Potrebné iba, ak iný komponent "
 "poskytuje zamykanie obrazovky."
 
-#: server.cpp:775
+#: server.cpp:779
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[neznáme]"
 
-#: server.cpp:798
+#: server.cpp:802
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -173,7 +173,7 @@ msgstr ""
 "sedenia:\n"
 "%1"
 
-#: server.cpp:1070
+#: server.cpp:1074
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""

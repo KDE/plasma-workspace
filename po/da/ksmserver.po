@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-12 00:41+0000\n"
+"POT-Creation-Date: 2024-11-19 02:32+0000\n"
 "PO-Revision-Date: 2024-07-07 21:25+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -152,13 +152,13 @@ msgstr ""
 "Starter uden understøttelse af låseskærm. Kun nødvendigt hvis en anden "
 "komponent giver en låseskærm."
 
-#: server.cpp:775
+#: server.cpp:779
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
 msgstr "[ukendt]"
 
-#: server.cpp:798
+#: server.cpp:802
 #, kde-kuit-format
 msgctxt "@label notification; %1 is a list of executables"
 msgid ""
@@ -171,7 +171,7 @@ msgstr ""
 "af sessionsressourcer:\n"
 "%1"
 
-#: server.cpp:1070
+#: server.cpp:1074
 #, kde-kuit-format
 msgctxt "@label notification; %1 is an executable name"
 msgid ""
