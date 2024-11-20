@@ -305,6 +305,7 @@ class ClipboardTest(unittest.TestCase):
         self.assertEqual(self.klipper_proxy.getClipboardHistoryItem("(i)", 123), "")  # Invalid index
 
         self.spin_thread.quit_event.set()
+        self.spin_thread.join()
 
     def update_config_and_restart_clipboard(self, group: str | list[str], key: str | list[str], new_value: str | list[str], reset_history: bool = False) -> None:
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
