@@ -79,6 +79,7 @@
         "Description[ia]": "Widget de supervision de systema que monstra le uso del nucleos individual",
         "Description[id]": "Widget pemantau sistem yang menampilkan penggunaan core CPU individual",
         "Description[it]": "Oggetto di monitoraggio del sistema che mostra l'utilizzo dei singoli core del processore",
+        "Description[ja]": "CPU の各コアの使用率を表示するウィジェット",
         "Description[ka]": "სისტემური მონიტორის ვიჯეტი, რომელიც CPU-ის ბირთვების დატვირთვას სათითაოდ აჩვენებს",
         "Description[lt]": "Sistemos prižiūryklės valdiklis, kuris rodo atskirų procesoriaus branduolių naudojimą",
         "Description[lv]": "Sistēmas pārraudzības logdaļa, kas parāda atsevišķu CPU kodolu noslodzi",
