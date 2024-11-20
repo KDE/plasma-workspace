@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_battery\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 03:09+0000\n"
-"PO-Revision-Date: 2024-09-12 22:32+0900\n"
+"PO-Revision-Date: 2024-11-17 22:42+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
@@ -153,7 +153,7 @@ msgstr "バッテリ %1%"
 #: package/contents/ui/main.qml:167
 #, kde-format
 msgid "The power supply is not powerful enough to charge the battery"
-msgstr "供給電力はバッテリを充電するには不十分です"
+msgstr "供給されている電力はバッテリを充電するには不十分です"
 
 #: package/contents/ui/main.qml:171
 #, kde-format
@@ -257,14 +257,14 @@ msgid ""
 "Your laptop is configured not to sleep when closing the lid while an "
 "external monitor is connected."
 msgstr ""
-"このラップトップは外部モニタが接続されている間は画面を閉じてもスリープしない"
-"ように設定されています。"
+"このラップトップは、外部モニタが接続されている間は画面を閉じてもスリープしな"
+"いように設定されています。"
 
 #: package/contents/ui/PowerManagementItem.qml:88
 #, kde-format
 msgid "%1 application is currently blocking sleep and screen locking:"
 msgid_plural "%1 applications are currently blocking sleep and screen locking:"
-msgstr[0] "現在 %1 つのアプリケーションがスリープと画面ロックを妨げています:"
+msgstr[0] "現在 %1 個のアプリケーションがスリープと画面ロックを妨げています:"
 
 #: package/contents/ui/PowerManagementItem.qml:109
 #, kde-format

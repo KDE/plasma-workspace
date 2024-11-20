@@ -1,3 +1,4 @@
+# SPDX-FileCopyrightText: 2024 Flori G <Renner03@protonmail.com>
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2008, 2009, 2010.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2018, 2019, 2021.
 # Johannes Obermayr <johannesobermayr@gmx.de>, 2009.
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: PowerDevilRunner.cpp:32
 #, kde-format
