@@ -331,7 +331,9 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
             file_entry->protocol_data_length = 0;
             file_entry->network_id = IceGetListenConnectionString(listenObjs[i / 2]);
             file_entry->auth_name = strdup("MIT-MAGIC-COOKIE-1");
-            file_entry->auth_data = strdup((*authDataEntries)[i].auth_data);
+            if (file_entry->auth_data = (char *)malloc(MAGIC_COOKIE_LEN)) {
+                memcpy(file_entry->auth_data, (*authDataEntries)[i].auth_data, MAGIC_COOKIE_LEN);
+            }
             file_entry->auth_data_length = MAGIC_COOKIE_LEN;
             if (IceWriteAuthFileEntry(fp, file_entry) == 0) {
                 qWarning("Failed to write ice auth file entry");
@@ -355,7 +357,9 @@ Status SetAuthentication(int count, IceListenObj *listenObjs, IceAuthDataEntry *
             file_entry->protocol_data_length = 0;
             file_entry->network_id = IceGetListenConnectionString(listenObjs[i / 2]);
             file_entry->auth_name = strdup("MIT-MAGIC-COOKIE-1");
-            file_entry->auth_data = strdup((*authDataEntries)[i + 1].auth_data);
+            if (file_entry->auth_data = (char *)malloc(MAGIC_COOKIE_LEN)) {
+                memcpy(file_entry->auth_data, (*authDataEntries)[i + 1].auth_data, MAGIC_COOKIE_LEN);
+            }
             file_entry->auth_data_length = MAGIC_COOKIE_LEN;
             if (IceWriteAuthFileEntry(fp, file_entry) == 0) {
                 qWarning("Failed to write xsmp ice auth file entry");
