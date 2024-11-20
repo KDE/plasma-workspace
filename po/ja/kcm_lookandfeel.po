@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:41+0000\n"
-"PO-Revision-Date: 2024-01-18 00:23+0900\n"
+"PO-Revision-Date: 2024-11-17 22:41+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -104,19 +104,19 @@ msgstr "グローバル ルックアンドフィール"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr "永久的に削除"
+msgstr "完全に削除"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr "本当にこのテーマを永久的に削除しますか？"
+msgstr "本当にこのテーマを完全に削除しますか？"
 
 #: ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr "永久的に削除"
+msgstr "完全に削除"
 
 #: ui/main.qml:72
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "キャンセル"
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr "新規入手..."
+msgstr "新しいものを入手..."
 
 #: ui/main.qml:103
 #, kde-format
@@ -140,9 +140,7 @@ msgid "Preview Theme"
 msgstr "テーマをプレビュー"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Remove Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove theme"
 msgstr "テーマを削除"
@@ -151,13 +149,13 @@ msgstr "テーマを削除"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "現在有効化されているテーマは削除できません"
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "システムにインストールされているテーマは削除できません"
 
 #: ui/main.qml:147
 #, kde-format
@@ -203,16 +201,13 @@ msgid "Titlebar Buttons layout"
 msgstr "タイトルバーボタンのレイアウト"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
 "デスクトップレイアウトを適用すると、現在のデスクトップ、パネル、ドックやウィ"
-"ジェットの設定が置き換えられます"
+"ジェットの設定が削除され、テーマが指定するものと置き換えられます。"
 
 #: ui/MoreOptions.qml:66
 #, kde-format
@@ -304,6 +299,3 @@ msgid ""
 msgstr ""
 "このグローバルテーマは適切な設定を提供していません。壊れている可能性があるた"
 "め、このグローバルテーマのメンテナに連絡してください。"
-
-#~ msgid "Lock Screen"
-#~ msgstr "ロックスクリーン"
