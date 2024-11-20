@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:42+0000\n"
+"POT-Creation-Date: 2024-11-20 00:41+0000\n"
 "PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -701,27 +701,27 @@ msgstr ""
 "Vi povas ebligi URL-agojn poste en la paĝo <interface>Agoj</interface> de la "
 "agorda fenestro de la apleto Clipboard."
 
-#: klipper.cpp:555
+#: klipper.cpp:558
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Poŝtelefono Strekokodo"
 
-#: klipper.cpp:598 klipper.cpp:607
+#: klipper.cpp:601 klipper.cpp:610
 #, kde-format
 msgid "Clipboard history"
 msgstr "Poŝa historio"
 
-#: klipper.cpp:624
+#: klipper.cpp:627
 #, kde-format
 msgid "up"
 msgstr "supra"
 
-#: klipper.cpp:631
+#: klipper.cpp:634
 #, kde-format
 msgid "current"
 msgstr "aktuala"
 
-#: klipper.cpp:638
+#: klipper.cpp:641
 #, kde-format
 msgid "down"
 msgstr "malsupra"

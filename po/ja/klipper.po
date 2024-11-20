@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:42+0000\n"
+"POT-Creation-Date: 2024-11-20 00:41+0000\n"
 "PO-Revision-Date: 2010-09-25 16:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -695,27 +695,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:555
+#: klipper.cpp:558
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "モバイルバーコード"
 
-#: klipper.cpp:598 klipper.cpp:607
+#: klipper.cpp:601 klipper.cpp:610
 #, kde-format
 msgid "Clipboard history"
 msgstr "クリップボードの履歴"
 
-#: klipper.cpp:624
+#: klipper.cpp:627
 #, kde-format
 msgid "up"
 msgstr "上"
 
-#: klipper.cpp:631
+#: klipper.cpp:634
 #, kde-format
 msgid "current"
 msgstr "現在"
 
-#: klipper.cpp:638
+#: klipper.cpp:641
 #, kde-format
 msgid "down"
 msgstr "下"

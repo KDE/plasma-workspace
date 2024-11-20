@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:42+0000\n"
+"POT-Creation-Date: 2024-11-20 00:41+0000\n"
 "PO-Revision-Date: 2024-10-08 14:36+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -682,27 +682,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:555
+#: klipper.cpp:558
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilní čárový kód"
 
-#: klipper.cpp:598 klipper.cpp:607
+#: klipper.cpp:601 klipper.cpp:610
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historie schránky"
 
-#: klipper.cpp:624
+#: klipper.cpp:627
 #, kde-format
 msgid "up"
 msgstr "nahoru"
 
-#: klipper.cpp:631
+#: klipper.cpp:634
 #, kde-format
 msgid "current"
 msgstr "současný"
 
-#: klipper.cpp:638
+#: klipper.cpp:641
 #, kde-format
 msgid "down"
 msgstr "dolů"

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:42+0000\n"
+"POT-Creation-Date: 2024-11-20 00:41+0000\n"
 "PO-Revision-Date: 2024-10-22 12:46+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -713,27 +713,27 @@ msgstr ""
 "<interface>Acciones</interface> de la ventana de configuración de la "
 "miniaplicación del portapapeles."
 
-#: klipper.cpp:555
+#: klipper.cpp:558
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Código de barras para móvil"
 
-#: klipper.cpp:598 klipper.cpp:607
+#: klipper.cpp:601 klipper.cpp:610
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del portapapeles"
 
-#: klipper.cpp:624
+#: klipper.cpp:627
 #, kde-format
 msgid "up"
 msgstr "arriba"
 
-#: klipper.cpp:631
+#: klipper.cpp:634
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:638
+#: klipper.cpp:641
 #, kde-format
 msgid "down"
 msgstr "abajo"

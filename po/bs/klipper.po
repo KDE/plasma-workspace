@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:42+0000\n"
+"POT-Creation-Date: 2024-11-20 00:41+0000\n"
 "PO-Revision-Date: 2014-10-20 20:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -702,27 +702,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:555
+#: klipper.cpp:558
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilni prugasti kog"
 
-#: klipper.cpp:598 klipper.cpp:607
+#: klipper.cpp:601 klipper.cpp:610
 #, kde-format
 msgid "Clipboard history"
 msgstr "Istorijat klipborda"
 
-#: klipper.cpp:624
+#: klipper.cpp:627
 #, kde-format
 msgid "up"
 msgstr "gore"
 
-#: klipper.cpp:631
+#: klipper.cpp:634
 #, kde-format
 msgid "current"
 msgstr "tekuće"
 
-#: klipper.cpp:638
+#: klipper.cpp:641
 #, kde-format
 msgid "down"
 msgstr "dolje"

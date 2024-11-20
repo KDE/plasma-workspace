@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 21:30+0200\n"
+"PO-Revision-Date: 2024-11-19 19:55+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -75,10 +75,9 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Újraindításkor a számítógép a firmware-telepítő képernyőre fog lépni."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "Újraindításkor a számítógép a firmware-telepítő képernyőre fog lépni."
+msgstr "Újraindításkor a számítógép a rendszerbetöltő menübe fog lépni."
 
 #: contents/logout/Logout.qml:216
 #, kde-format
