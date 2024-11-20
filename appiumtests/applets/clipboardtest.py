@@ -9,6 +9,7 @@ import logging
 import os
 import shutil
 import subprocess
+import sys
 import tempfile
 import threading
 import time
@@ -389,7 +390,7 @@ class ClipboardTest(unittest.TestCase):
 
             self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, new_text)
 
-    def test_5_bug491488_copy_cells(self) -> None:
+    def test_5_1_bug491488_copy_cells(self) -> None:
         """
         A cell has both image data and text data, which should not be ignored when images are ignored.
         """
@@ -401,6 +402,17 @@ class ClipboardTest(unittest.TestCase):
         content_union = Gdk.ContentProvider.new_union([content_text, content_image])
         self.gtk_copy(content_union)
         self.driver.find_element(AppiumBy.NAME, new_text)
+
+    def test_5_2_bug496331_secret_password_hint(self) -> None:
+        """
+        When a mimedata has "x-kde-passwordManagerHint" set to "secret", the clip should not be saved to history.
+        """
+        process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "copysecret.py")], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        self.addCleanup(process.kill)
+        process.stderr.readline()
+        ActionChains(self.driver).send_keys(Keys.SPACE).perform()
+        self.driver.find_element(AppiumBy.NAME, "123456789")
+        self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.NAME, "123456789test")
 
     def test_6_bug487843_bug466414_empty_clip_crash(self) -> None:
         """
