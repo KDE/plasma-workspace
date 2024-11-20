@@ -20,8 +20,7 @@ public:
     explicit GlobalConfig(QObject *parent = nullptr);
     ~GlobalConfig() override;
 
-public Q_SLOTS:
-    Q_INVOKABLE int volumeStep();
+    int volumeStep() const;
 
 Q_SIGNALS:
     void volumeStepChanged() const;
