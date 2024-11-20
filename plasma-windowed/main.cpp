@@ -29,6 +29,7 @@ int main(int argc, char **argv)
         QQmlDebuggingEnabler::enableDebugging(true);
     }
 #endif
+    QCoreApplication::setAttribute(Qt::AA_ShareOpenGLContexts);
 
     QQuickWindow::setDefaultAlphaBuffer(true);
 
