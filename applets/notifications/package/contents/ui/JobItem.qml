@@ -269,7 +269,7 @@ ColumnLayout {
                     }
                 },
                 State {
-                    when: fileInfo.openAction
+                    when: fileInfo.openAction !== null
                     PropertyChanges {
                         target: openButton
                         text: fileInfo.openAction.text
