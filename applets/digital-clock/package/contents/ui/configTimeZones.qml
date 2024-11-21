@@ -205,7 +205,7 @@ Kirigami.PageRow {
 
     property Item addTimeZonePage: Kirigami.Page {
         padding: 0
-        title: i18n("Choose Time Zone")
+        title: i18nc("@action:button", "Add Another Time Zone")
 
         Layout.fillHeight: true
         Layout.fillWidth: true
