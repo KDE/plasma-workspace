@@ -278,6 +278,12 @@ KCMUtils.SimpleKCM {
             textFormat: Text.PlainText
             font: fontDialog.fontChosen
         }
+        QQC2.Label {
+            visible: manualFontAndSizeRadioButton.checked
+            text: i18nc("@info", "Note: size may be reduced if the panel is not thick enough.")
+            textFormat: Text.PlainText
+            font: Kirigami.Theme.smallFont
+        }
     }
 
     QtDialogs.FontDialog {
