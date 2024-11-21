@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-22 00:41+0000\n"
+"POT-Creation-Date: 2024-11-21 00:42+0000\n"
 "PO-Revision-Date: 2023-09-30 10:10+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
 
-#: main.cpp:47 plasmawindowedcorona.cpp:103
+#: main.cpp:48 plasmawindowedcorona.cpp:103
 #, kde-format
 msgid "Plasma Windowed"
 msgstr "Okienkowa Plazma"
 
-#: main.cpp:49
+#: main.cpp:50
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Włącz debugger QML Javascript"
 
-#: main.cpp:52 plasmawindowedcorona.cpp:105
+#: main.cpp:53 plasmawindowedcorona.cpp:105
 #, kde-format
 msgid ""
 "Makes the plasmoid stay alive in the Notification Area, even when the window "
@@ -35,17 +35,17 @@ msgid ""
 msgstr ""
 "Utrzymuje plazmoida w obszarze powiadomień, nawet gdy okno jest zamknięte."
 
-#: main.cpp:54
+#: main.cpp:55
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Wymuś wczytywanie danej wtyczki powłoki"
 
-#: main.cpp:58 plasmawindowedcorona.cpp:106
+#: main.cpp:59 plasmawindowedcorona.cpp:106
 #, kde-format
 msgid "The applet to open."
 msgstr "Aplet do otwarcia."
 
-#: main.cpp:59 plasmawindowedcorona.cpp:107
+#: main.cpp:60 plasmawindowedcorona.cpp:107
 #, kde-format
 msgid "Arguments to pass to the plasmoid."
 msgstr "Argumenty do przekazania plasmoidowi."

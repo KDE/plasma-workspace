@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2024-11-21 00:42+0000\n"
 "PO-Revision-Date: 2009-01-06 14:36+0200\n"
 "Last-Translator: Erdal Ronahi <erdal.ronahi@nospam.gmail.com>\n"
 "Language-Team: Kurdish <kde-i18n-doc@lists.kde.org>\n"
@@ -32,34 +32,34 @@ msgid "Your emails"
 msgstr ""
 "erdal.ronahi@nospam.gmail.com,amedcj@nospam.gmail.com,oensari@gmail.com"
 
-#: colors.cpp:251
+#: colors.cpp:252
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr ""
 
-#: colors.cpp:264
+#: colors.cpp:265
 #, fuzzy, kde-format
 #| msgid "Save Color Scheme"
 msgid "Unable to download the color scheme: %1"
 msgstr "Dirba Rengê Tomar Bike"
 
-#: colors.cpp:282
+#: colors.cpp:283
 #, fuzzy, kde-format
 #| msgid "Import Color Scheme"
 msgid "This file is not a color scheme file."
 msgstr "Dirba Rengê Bîne Nava Xwe"
 
-#: colors.cpp:301
+#: colors.cpp:302
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr ""
 
-#: colors.cpp:308
+#: colors.cpp:309
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
 
-#: colors.cpp:325
+#: colors.cpp:326
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2024-11-21 00:42+0000\n"
 "PO-Revision-Date: 2024-09-01 17:02+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ubuntu-l10n-tam@lists.ubuntu.com"
 
-#: colors.cpp:251
+#: colors.cpp:252
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "தற்காலிக கோப்பை உருவாக்க முடியவில்லை.."
 
-#: colors.cpp:264
+#: colors.cpp:265
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "நிறத்திட்டத்தை பதிவிறக்க முடியவில்லை: %1"
 
-#: colors.cpp:282
+#: colors.cpp:283
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "இக்கோப்பு ஒரு நிறத்திட்டம் அல்ல."
 
-#: colors.cpp:301
+#: colors.cpp:302
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "'color-scheme' தரவு அடைவை உருவாக்க முடியவில்லை."
 
-#: colors.cpp:308
+#: colors.cpp:309
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "'color-scheme' தரவு அடைவிற்குள் நிறத்திட்டத்தை நகலெடுக்க முடியவில்லை."
 
-#: colors.cpp:325
+#: colors.cpp:326
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "நிறத் திட்டம் வெற்றிகரமாக நிறுவப் பட்டது."

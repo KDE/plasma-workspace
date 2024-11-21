@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2024-11-21 00:42+0000\n"
 "PO-Revision-Date: 2024-08-29 20:08+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -27,32 +27,32 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@gmail.com"
 
-#: colors.cpp:251
+#: colors.cpp:252
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Kan inte skapa en tillfällig fil."
 
-#: colors.cpp:264
+#: colors.cpp:265
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Kan inte ladda ner färgschemat: %1"
 
-#: colors.cpp:282
+#: colors.cpp:283
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Filen är inte en färgschemafil"
 
-#: colors.cpp:301
+#: colors.cpp:302
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Misslyckades skapa datakatalogen 'color-scheme'."
 
-#: colors.cpp:308
+#: colors.cpp:309
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr "Misslyckades kopiera färgschema till datakatalogen 'color-scheme'."
 
-#: colors.cpp:325
+#: colors.cpp:326
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Färgschema installerat med lyckat resultat."

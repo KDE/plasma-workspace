@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2024-11-21 00:42+0000\n"
 "PO-Revision-Date: 2024-09-19 16:48+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -40,33 +40,33 @@ msgstr ""
 "sngeorgaras@otenet.gr, manolis@koppermind.homelinux.org, p_vidalis@hotmail."
 "com"
 
-#: colors.cpp:251
+#: colors.cpp:252
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Αδυναμία δημιουργίας προσωρινού αρχείου."
 
-#: colors.cpp:264
+#: colors.cpp:265
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Αδυναμία λήψης του θέματος χρωμάτων: %1"
 
-#: colors.cpp:282
+#: colors.cpp:283
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Αυτό το αρχείο δεν είναι αρχείο χρωματικού σχήματος."
 
-#: colors.cpp:301
+#: colors.cpp:302
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Αποτυχία δημιουργίας του φακέλου δεδομένων 'color-scheme'."
 
-#: colors.cpp:308
+#: colors.cpp:309
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
 "Αποτυχία αντιγραφής θέματος χρωμάτων στο φάκελο δεδομένων 'color-scheme'."
 
-#: colors.cpp:325
+#: colors.cpp:326
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Το θέμα χρωμάτων εγκαταστάθηκε με επιτυχία."

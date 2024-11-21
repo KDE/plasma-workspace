@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2024-11-21 00:42+0000\n"
 "PO-Revision-Date: 2024-03-18 16:05-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -42,34 +42,34 @@ msgstr ""
 "lisiane@kdemail.net, elchevive@opensuse.org, alvarenga@kde.org, "
 "geraldosimiao@fedoraproject.org"
 
-#: colors.cpp:251
+#: colors.cpp:252
 #, kde-format
 msgid "Unable to create a temporary file."
 msgstr "Não foi possível criar um arquivo temporário."
 
-#: colors.cpp:264
+#: colors.cpp:265
 #, kde-format
 msgid "Unable to download the color scheme: %1"
 msgstr "Não foi possível baixar o esquema de cores: %1"
 
-#: colors.cpp:282
+#: colors.cpp:283
 #, kde-format
 msgid "This file is not a color scheme file."
 msgstr "Este arquivo não é de esquema de cores."
 
-#: colors.cpp:301
+#: colors.cpp:302
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
 msgstr "Não foi possível criar a pasta de dados 'color-scheme'."
 
-#: colors.cpp:308
+#: colors.cpp:309
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
 msgstr ""
 "Não foi possível copiar o esquema de cores para a pasta de dados 'color-"
 "scheme'."
 
-#: colors.cpp:325
+#: colors.cpp:326
 #, kde-format
 msgid "Color scheme installed successfully."
 msgstr "Esquema de cores instalado com sucesso."
