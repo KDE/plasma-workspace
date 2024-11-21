@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 04:02+0000\n"
+"POT-Creation-Date: 2024-11-21 03:16+0000\n"
 "PO-Revision-Date: 2020-09-06 12:20+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -137,27 +137,27 @@ msgstr ""
 "Startet ohne Unterstützung für die Bildschirmsperre. Dies wird nur benötigt, "
 "wenn eine andere Komponente das SPerren des Bildschirms bereitstellt."
 
-#: server.cpp:853
+#: server.cpp:857
 #, kde-format
 msgid "Session Management"
 msgstr "Sitzungsverwaltung"
 
-#: server.cpp:856
+#: server.cpp:860
 #, kde-format
 msgid "Log Out"
 msgstr "Abmelden"
 
-#: server.cpp:861
+#: server.cpp:865
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Ohne Rückfrage abmelden"
 
-#: server.cpp:866
+#: server.cpp:870
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Ohne Rückfrage herunterfahren"
 
-#: server.cpp:871
+#: server.cpp:875
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Ohne Rückfrage neu starten"

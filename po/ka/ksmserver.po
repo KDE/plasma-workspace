@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 04:02+0000\n"
+"POT-Creation-Date: 2024-11-21 03:16+0000\n"
 "PO-Revision-Date: 2023-01-05 07:12+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -135,27 +135,27 @@ msgstr ""
 "ეკრანის დაბლოკვის მხარდაჭერის გარეშე გაშვება. საჭიროა მხოლოდ აშინ, თუ ეკრანს "
 "სხვა კომპონენტი ბლოკავს."
 
-#: server.cpp:853
+#: server.cpp:857
 #, kde-format
 msgid "Session Management"
 msgstr "სესიების მართვა"
 
-#: server.cpp:856
+#: server.cpp:860
 #, kde-format
 msgid "Log Out"
 msgstr "გასვლა"
 
-#: server.cpp:861
+#: server.cpp:865
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "გასვლა დადასტურების გარეშე"
 
-#: server.cpp:866
+#: server.cpp:870
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "გამორთვა დადასტურების გარეშე"
 
-#: server.cpp:871
+#: server.cpp:875
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "გადატვირთვა დადასტურების გარეშე"

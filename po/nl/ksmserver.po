@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 04:02+0000\n"
+"POT-Creation-Date: 2024-11-21 03:16+0000\n"
 "PO-Revision-Date: 2020-04-25 12:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: Dutch <kde-i18n-nl@kde.org>\n"
@@ -144,27 +144,27 @@ msgstr ""
 "Start zonder ondersteuning van schermvergrendeling. Is alleen nodig als een "
 "andere component de schermvergrendeling levert."
 
-#: server.cpp:853
+#: server.cpp:857
 #, kde-format
 msgid "Session Management"
 msgstr "Sessiebeheer"
 
-#: server.cpp:856
+#: server.cpp:860
 #, kde-format
 msgid "Log Out"
 msgstr "Afmelden"
 
-#: server.cpp:861
+#: server.cpp:865
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Afmelden zonder bevestiging"
 
-#: server.cpp:866
+#: server.cpp:870
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Computer afsluiten zonder bevestiging"
 
-#: server.cpp:871
+#: server.cpp:875
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Computer herstarten zonder bevestiging"

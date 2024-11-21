@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-05 04:02+0000\n"
+"POT-Creation-Date: 2024-11-21 03:16+0000\n"
 "PO-Revision-Date: 2020-04-25 13:41+0300\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -138,27 +138,27 @@ msgstr ""
 "Käivitamine lukustusekraani toetuseta. Vajalik ainult siis, kui mõni muu "
 "komponent pakub lukustusekraani."
 
-#: server.cpp:853
+#: server.cpp:857
 #, kde-format
 msgid "Session Management"
 msgstr "Seansihaldur"
 
-#: server.cpp:856
+#: server.cpp:860
 #, kde-format
 msgid "Log Out"
 msgstr "Väljalogimine"
 
-#: server.cpp:861
+#: server.cpp:865
 #, kde-format
 msgid "Log Out Without Confirmation"
 msgstr "Väljalogimine kinnitust küsimata"
 
-#: server.cpp:866
+#: server.cpp:870
 #, kde-format
 msgid "Halt Without Confirmation"
 msgstr "Arvuti seiskamine kinnitust küsimata"
 
-#: server.cpp:871
+#: server.cpp:875
 #, kde-format
 msgid "Reboot Without Confirmation"
 msgstr "Taaskäivitamine kinnitust küsimata"
