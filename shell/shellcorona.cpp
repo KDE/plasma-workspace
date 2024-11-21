@@ -143,6 +143,12 @@ ShellCorona::ShellCorona(QObject *parent)
             }
         }
     });
+
+    connect(this, &Corona::containmentAdded, this, [this](Plasma::Containment *cont) {
+        if (cont->containmentType() == Plasma::Containment::Panel || cont->containmentType() == Plasma::Containment::CustomPanel) {
+            connect(cont, &QObject::destroyed, this, &ShellCorona::panelContainmentDestroyed);
+        }
+    });
 }
 
 void ShellCorona::init()
@@ -1583,6 +1589,13 @@ void ShellCorona::createWaitingPanels()
 void ShellCorona::panelContainmentDestroyed(QObject *obj)
 {
     auto *cont = static_cast<Plasma::Containment *>(obj);
+
+    // The destroyed panel containment was still in the m_waitingPanels list
+    if (m_waitingPanels.contains(cont)) {
+        m_waitingPanels.removeAll(cont);
+        return;
+    }
+
     int screen = cont->screen();
     auto view = m_panelViews.take(cont);
     // ~PanelView -> visibleChanged -> rectNotify -> "AddressSanitizer: heap-use-after-free"
