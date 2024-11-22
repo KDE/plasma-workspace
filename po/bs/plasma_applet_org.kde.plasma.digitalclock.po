@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-11-22 00:42+0000\n"
 "PO-Revision-Date: 2015-02-05 00:34+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -271,7 +271,13 @@ msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:285
+#: package/contents/ui/configAppearance.qml:283
+#, kde-format
+msgctxt "@info"
+msgid "Note: size may be reduced if the panel is not thick enough."
+msgstr ""
+
+#: package/contents/ui/configAppearance.qml:291
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

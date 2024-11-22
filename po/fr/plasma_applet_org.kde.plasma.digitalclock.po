@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-11-22 00:42+0000\n"
 "PO-Revision-Date: 2024-11-10 10:43+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -266,7 +266,13 @@ msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1 pt %2"
 
-#: package/contents/ui/configAppearance.qml:285
+#: package/contents/ui/configAppearance.qml:283
+#, kde-format
+msgctxt "@info"
+msgid "Note: size may be reduced if the panel is not thick enough."
+msgstr ""
+
+#: package/contents/ui/configAppearance.qml:291
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

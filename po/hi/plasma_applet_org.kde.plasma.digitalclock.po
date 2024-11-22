@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-11-22 00:42+0000\n"
 "PO-Revision-Date: 2022-02-17 23:00+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -274,7 +274,13 @@ msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:285
+#: package/contents/ui/configAppearance.qml:283
+#, kde-format
+msgctxt "@info"
+msgid "Note: size may be reduced if the panel is not thick enough."
+msgstr ""
+
+#: package/contents/ui/configAppearance.qml:291
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
