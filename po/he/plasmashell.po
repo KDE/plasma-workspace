@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-23 02:33+0000\n"
+"POT-Creation-Date: 2024-11-22 02:32+0000\n"
 "PO-Revision-Date: 2024-08-30 08:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -357,62 +357,62 @@ msgstr "%1 %2 ב־%3"
 msgid "Disconnected Screen %1"
 msgstr "מסך מנותק %1"
 
-#: shellcorona.cpp:207 shellcorona.cpp:209
+#: shellcorona.cpp:213 shellcorona.cpp:215
 #, kde-format
 msgid "Show Desktop"
 msgstr "הצגת שולחן עבודה"
 
-#: shellcorona.cpp:209
+#: shellcorona.cpp:215
 #, kde-format
 msgid "Hide Desktop"
 msgstr "הסתרת שולחן עבודה"
 
-#: shellcorona.cpp:224
+#: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "הפעלת משגר יישומים"
 
-#: shellcorona.cpp:232
+#: shellcorona.cpp:238
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "הצגת מחליף פעילויות"
 
-#: shellcorona.cpp:243
+#: shellcorona.cpp:249
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "עצירת פעילות נוכחית"
 
-#: shellcorona.cpp:251
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "מעבר לפעילות הקודמת"
 
-#: shellcorona.cpp:259
+#: shellcorona.cpp:265
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "מעבר לפעילות הבאה"
 
-#: shellcorona.cpp:274
+#: shellcorona.cpp:280
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "הפעלת רשומה %1 במנהל המשימות"
 
-#: shellcorona.cpp:306
+#: shellcorona.cpp:312
 #, kde-format
 msgid "Panel and Desktop Management"
 msgstr "ניהול לוחות ושולחנות עבודה"
 
-#: shellcorona.cpp:328
+#: shellcorona.cpp:334
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "העברת מיקוד המקלדת בין לוחות"
 
-#: shellcorona.cpp:2108
+#: shellcorona.cpp:2121
 #, kde-format
 msgid "Add Panel"
 msgstr "הוספת לוח"
 
-#: shellcorona.cpp:2170
+#: shellcorona.cpp:2183
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
