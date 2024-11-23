@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-11-09 05:05+0100\n"
+"PO-Revision-Date: 2024-11-22 04:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -264,7 +264,7 @@ msgstr "%1წრტ %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "შენიშვნა: ზომა შეიძლება შემცირდეს, თუ პანელი არ არის საკმარისად სქელი."
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format

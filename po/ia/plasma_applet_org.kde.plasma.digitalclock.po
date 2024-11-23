@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-11-11 16:03+0100\n"
+"PO-Revision-Date: 2024-11-22 17:20+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -265,6 +265,7 @@ msgstr "%1pt %2"
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
+"Nota: grandor pote esser reducite si le pannello non es assatis spisse."
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
