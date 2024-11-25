@@ -491,7 +491,7 @@ void Notification::Private::playSoundHint()
     }
 
     if (!m_canberraContext) {
-        int ret = ca_context_create(&m_canberraContext);
+        const int ret = ca_context_create(&m_canberraContext);
         if (ret != CA_SUCCESS) {
             qCWarning(NOTIFICATIONMANAGER) << "Failed to initialize canberra context for audio notification:" << ca_strerror(ret);
             m_canberraContext = nullptr;
@@ -502,12 +502,12 @@ void Notification::Private::playSoundHint()
     ca_proplist *props = nullptr;
     ca_proplist_create(&props);
 
-    auto m_soundThemeWatcher = KConfigWatcher::create(KSharedConfig::openConfig(u"kdeglobals"_s));
-    const KConfigGroup soundGroup = m_soundThemeWatcher->config()->group(u"Sounds"_s);
-    auto m_soundTheme = soundGroup.readEntry("Theme", u"ocean"_s);
+    const auto soundThemeWatcher = KConfigWatcher::create(KSharedConfig::openConfig(u"kdeglobals"_s));
+    const KConfigGroup soundGroup = soundThemeWatcher->config()->group(u"Sounds"_s);
+    const auto soundTheme = soundGroup.readEntry("Theme", u"ocean"_s);
 
     ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
-    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME, m_soundTheme.toLatin1().constData());
+    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME, soundTheme.toLatin1().constData());
     if (!fallbackUrl.isEmpty()) {
         ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME, QFile::encodeName(fallbackUrl.toLocalFile()).constData());
     }
@@ -516,7 +516,7 @@ void Notification::Private::playSoundHint()
     // dropped after some time or when the cache is under pressure.
     ca_proplist_sets(props, CA_PROP_CANBERRA_CACHE_CONTROL, "volatile");
 
-    int ret = ca_context_play_full(m_canberraContext, 0, props, nullptr, nullptr);
+    const int ret = ca_context_play_full(m_canberraContext, 0, props, nullptr, nullptr);
 
     ca_proplist_destroy(props);
 
