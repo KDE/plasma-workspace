@@ -95,6 +95,7 @@ public:
     int timeout = -1;
 
     QString soundName;
+    QString soundFile;
 
     bool expired = false;
     bool dismissed = false;
