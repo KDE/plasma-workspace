@@ -90,6 +90,8 @@ Item {
                     return "input-gaming-battery";
                 case "Bluetooth":
                     return "preferences-system-bluetooth-battery";
+                case "Headphone":
+                    return "audio-headphones-battery";
                 case "Headset":
                     return "audio-headset-battery";
                 default:
