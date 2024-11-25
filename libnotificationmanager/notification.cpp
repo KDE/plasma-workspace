@@ -7,6 +7,7 @@
 */
 
 #include "notification.h"
+#include "debug.h"
 #include "notification_p.h"
 
 #include <algorithm>
@@ -20,9 +21,10 @@
 #include <KApplicationTrader>
 #include <KConfig>
 #include <KConfigGroup>
+#include <KConfigWatcher>
 #include <KService>
-
-#include "debug.h"
+#include <QFileInfo>
+#include <canberra.h>
 
 using namespace NotificationManager;
 using namespace Qt::StringLiterals;
@@ -448,6 +450,16 @@ void Notification::Private::processHints(const QVariantMap &hints)
             loadImagePath(it->toString());
         }
     }
+
+    soundName = hints.value(QStringLiteral("sound-name")).toString();
+    // Prefer explicit sound file over name if both are found
+    const QString soundFile = hints.value(QStringLiteral("sound-file")).toString();
+    if (!soundFile.isEmpty()) {
+        soundName = soundFile;
+    }
+    if (!soundName.isEmpty()) {
+        playSoundHint();
+    }
 }
 
 void Notification::Private::setUrgency(Notifications::Urgency urgency)
@@ -460,6 +472,61 @@ void Notification::Private::setUrgency(Notifications::Urgency urgency)
     // "critical updates available"?
     if (urgency == Notifications::CriticalUrgency) {
         timeout = 0;
+    }
+}
+
+void Notification::Private::playSoundHint()
+{
+    // Legacy implementation. Fallback lookup for a full path within the `$XDG_DATA_LOCATION/sounds` dirs
+    QUrl fallbackUrl;
+    const auto dataLocations = QStandardPaths::standardLocations(QStandardPaths::GenericDataLocation);
+    for (const QString &dataLocation : dataLocations) {
+        fallbackUrl = QUrl::fromUserInput(soundName, dataLocation + QStringLiteral("/sounds"), QUrl::AssumeLocalFile);
+        if (fallbackUrl.isLocalFile() && QFileInfo::exists(fallbackUrl.toLocalFile())) {
+            break;
+        } else if (!fallbackUrl.isLocalFile() && fallbackUrl.isValid()) {
+            break;
+        }
+        fallbackUrl.clear();
+    }
+
+    if (!m_canberraContext) {
+        int ret = ca_context_create(&m_canberraContext);
+        if (ret != CA_SUCCESS) {
+            qCWarning(NOTIFICATIONMANAGER) << "Failed to initialize canberra context for audio notification:" << ca_strerror(ret);
+            m_canberraContext = nullptr;
+            return;
+        }
+
+        if (ret != CA_SUCCESS) {
+            qCWarning(NOTIFICATIONMANAGER) << "Failed to set application properties on canberra context for audio notification:" << ca_strerror(ret);
+        }
+    }
+
+    ca_proplist *props = nullptr;
+    ca_proplist_create(&props);
+
+    auto m_soundThemeWatcher = KConfigWatcher::create(KSharedConfig::openConfig(u"kdeglobals"_s));
+    const KConfigGroup soundGroup = m_soundThemeWatcher->config()->group(u"Sounds"_s);
+    auto m_soundTheme = soundGroup.readEntry("Theme", u"ocean"_s);
+
+    ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
+    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME, m_soundTheme.toLatin1().constData());
+    if (!fallbackUrl.isEmpty()) {
+        ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME, QFile::encodeName(fallbackUrl.toLocalFile()).constData());
+    }
+
+    // We'll also want this cached for a time. volatile makes sure the cache is
+    // dropped after some time or when the cache is under pressure.
+    ca_proplist_sets(props, CA_PROP_CANBERRA_CACHE_CONTROL, "volatile");
+
+    int ret = ca_context_play_full(m_canberraContext, 0, props, nullptr, nullptr);
+
+    ca_proplist_destroy(props);
+
+    if (ret != CA_SUCCESS) {
+        qCWarning(NOTIFICATIONMANAGER) << "Failed to play sound" << soundName << "with canberra:" << ca_strerror(ret);
+        return;
     }
 }
 

@@ -12,6 +12,7 @@
 #include <QImage>
 #include <QUrl>
 
+#include "canberra.h"
 #include <KService>
 
 #include "notifications.h"
@@ -39,6 +40,8 @@ public:
     void processHints(const QVariantMap &hints);
 
     void setUrgency(Notifications::Urgency urgency);
+
+    void playSoundHint();
 
     uint id = 0;
     // Bus name of the creator/sender
@@ -91,11 +94,16 @@ public:
     Notifications::Urgency urgency = Notifications::NormalUrgency;
     int timeout = -1;
 
+    QString soundName;
+
     bool expired = false;
     bool dismissed = false;
 
     bool resident = false;
     bool transient = false;
+
+private:
+    ca_context *m_canberraContext = nullptr;
 };
 
 } // namespace NotificationManager
