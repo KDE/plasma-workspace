@@ -497,10 +497,6 @@ void Notification::Private::playSoundHint()
             m_canberraContext = nullptr;
             return;
         }
-
-        if (ret != CA_SUCCESS) {
-            qCWarning(NOTIFICATIONMANAGER) << "Failed to set application properties on canberra context for audio notification:" << ca_strerror(ret);
-        }
     }
 
     ca_proplist *props = nullptr;
