@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-20 00:41+0000\n"
-"PO-Revision-Date: 2024-10-05 08:13+0200\n"
+"PO-Revision-Date: 2024-11-24 19:45+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -361,13 +361,13 @@ msgstr "Misslyckades skapa QR-kod"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "Dra ihop"
 
 #: declarative/qml/ClipboardItemDelegate.qml:178
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "Expandera"
 
 #: declarative/qml/ClipboardMenu.qml:186
 #, kde-format

@@ -262,7 +262,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "注意：如果面板高度不足，大小可能会被压缩。"
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
