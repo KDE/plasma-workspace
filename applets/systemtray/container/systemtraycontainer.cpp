@@ -138,12 +138,59 @@ void SystemTrayContainer::constraintsEvent(Plasma::Applet::Constraints constrain
 
     if (constraints & Plasma::Applet::UiReadyConstraint) {
         ensureSystrayExists();
+        // At this point we are sure that all the contianments and all the applets are loaded
+        cleanupConfig();
     }
 }
 
 QQuickItem *SystemTrayContainer::internalSystray()
 {
     return m_internalSystray;
+}
+
+void SystemTrayContainer::cleanupConfig()
+{
+    // In the past inner systrays were leaked in the config file,
+    // and users might end up with tens or ever hundreds of systrays (and all their applets)
+    // in the config file taking up resources and causing also  https://bugs.kde.org/show_bug.cgi?id=472937
+    // Should be fine to do this every time as when there is nothing to cleanup the whole
+    // cycle is usually under a millisecond
+
+    Plasma::Containment *cont = containment();
+    if (!cont) {
+        return;
+    }
+    Plasma::Corona *c = cont->corona();
+    if (!c) {
+        return;
+    }
+
+    // All inner systray ids we found that are owned by a SystemTrayContainer
+    QSet<int> ownedSystrays = {m_innerContainment->id()};
+
+    // First search all SystemTrayContainer applets, and save the association with
+    // internal systrays
+    for (const auto conts = c->containments(); Plasma::Containment * containment : conts) {
+        for (const auto applets = containment->applets(); Plasma::Applet * applet : applets) {
+            if (SystemTrayContainer *contApplet = qobject_cast<SystemTrayContainer *>(applet)) {
+                if (contApplet->m_innerContainment) {
+                    ownedSystrays.insert(contApplet->m_innerContainment->id());
+                } else {
+                    const uint id = applet->config().readEntry("SystrayContainmentId", 0);
+                    ownedSystrays.insert(id);
+                }
+            }
+        }
+    }
+
+    // Destroy all systrays not owned by a SystemTrayContainer
+    for (const auto conts = c->containments(); Plasma::Containment * containment : conts) {
+        if (containment->pluginName() == u"org.kde.plasma.private.systemtray"_s) {
+            if (!ownedSystrays.contains(containment->id())) {
+                containment->destroy();
+            }
+        }
+    }
 }
 
 K_PLUGIN_CLASS(SystemTrayContainer)

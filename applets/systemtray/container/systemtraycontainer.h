@@ -31,6 +31,7 @@ public:
 protected:
     void constraintsEvent(Plasma::Applet::Constraints constraints) override;
     void ensureSystrayExists();
+    void cleanupConfig();
 
 Q_SIGNALS:
     void internalSystrayChanged();
