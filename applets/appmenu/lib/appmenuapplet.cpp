@@ -227,6 +227,15 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
                 // don't initialize the currentIndex when another menu is already shown
                 disconnect(oldMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide);
                 oldMenu->hide();
+
+                // QGuiApplication and QApplication will close all popups when the application loses
+                // focus. QtWayland will re-evaluate the focused window later after making an async
+                // roundtrip to the compositor even though oldMenu->hide() has been called now. To force
+                // Qt to re-evaluate the focused window (and thus closing actionMenu later) now, we
+                // destroy the window handle.
+                if (oldMenu->windowHandle()) {
+                    oldMenu->windowHandle()->destroy();
+                }
             }
         }
 
