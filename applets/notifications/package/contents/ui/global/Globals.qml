@@ -466,7 +466,7 @@ QtObject {
 
             isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && notificationSettings.keepNormalAlwaysOnTop)
 
-            timeout: model.timeout
+            modelTimeout: model.timeout
             // Increase default timeout for notifications with a URL so you have enough time
             // to interact with the thumbnail or bring the window to the front where you want to drag it into
             defaultTimeout: notificationSettings.popupTimeout + (model.urls && model.urls.length > 0 ? 5000 : 0)

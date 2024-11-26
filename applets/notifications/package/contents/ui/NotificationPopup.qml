@@ -31,7 +31,7 @@ NotificationsApplet.NotificationWindow {
 
     property alias modelInterface: notificationItem.modelInterface
 
-    property int timeout
+    property int modelTimeout
     property int dismissTimeout
 
     property var defaultActionFallbackWindowIdx
@@ -42,16 +42,16 @@ NotificationsApplet.NotificationWindow {
 
     property int defaultTimeout: 5000
     readonly property int effectiveTimeout: {
-        if (timeout === -1) {
+        if (modelTimeout === -1) {
             return defaultTimeout;
         }
         if (dismissTimeout) {
             return dismissTimeout;
         }
-        return modelInterface.timeout;
+        return modelTimeout;
     }
 
-    // On wayland we need focus to copy to the clipboard, we change on mouse interaction until the cursor leaves 
+    // On wayland we need focus to copy to the clipboard, we change on mouse interaction until the cursor leaves
     takeFocus: notificationItem.modelInterface.replying || focusListener.wantsFocus
 
     visible: false
