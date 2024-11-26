@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-11-26 00:42+0000\n"
 "PO-Revision-Date: 2024-11-04 22:07\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -121,37 +121,37 @@ msgstr "Файл са спісам шрыфтоў для друкавання"
 msgid "Remove file containing list of fonts to print"
 msgstr "Выдаліць файл са спісам шрыфтоў для друкавання"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:50
 #, kde-format
 msgid "Open an existing font file"
 msgstr "Адкрыць файл шрыфту"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:51
 #, kde-format
 msgid "Print font preview"
 msgstr "Папярэдні прагляд шрыфту для друкавання"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:68
 #, kde-format
 msgid "Select Font to View"
 msgstr "Абраць шрыфт для прагляду"
 
-#: apps/Viewer.cpp:106
+#: apps/Viewer.cpp:108
 #, kde-format
 msgid "URL to open"
 msgstr "URL для адкрыцця"
 
-#: apps/Viewer.cpp:148
+#: apps/Viewer.cpp:150
 #, kde-format
 msgid "Font Viewer"
 msgstr "Сродак прагляду шрыфту"
 
-#: apps/Viewer.cpp:150
+#: apps/Viewer.cpp:152
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Просты сродак прагляду шрыфтоў"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:154
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(c) Craig Drummond, 2004-2007"

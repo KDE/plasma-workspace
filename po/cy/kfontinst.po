@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-11-26 00:42+0000\n"
 "PO-Revision-Date: 2005-01-27 20:19+0000\n"
 "Last-Translator: Kevin Donnelly <kevin@dotmon.com>\n"
 "Language-Team: Cymraeg\n"
@@ -118,38 +118,38 @@ msgstr ""
 msgid "Remove file containing list of fonts to print"
 msgstr ""
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:50
 #, fuzzy, kde-format
 msgid "Open an existing font file"
 msgstr "Gwelydd Wynebfathau"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:51
 #, fuzzy, kde-format
 #| msgid "Simple font viewer"
 msgid "Print font preview"
 msgstr "Gwelydd wynebfathau syml"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:68
 #, kde-format
 msgid "Select Font to View"
 msgstr "Dewis Wynebfath i'w Gweld"
 
-#: apps/Viewer.cpp:106
+#: apps/Viewer.cpp:108
 #, kde-format
 msgid "URL to open"
 msgstr "URL i agor"
 
-#: apps/Viewer.cpp:148
+#: apps/Viewer.cpp:150
 #, kde-format
 msgid "Font Viewer"
 msgstr "Gwelydd Wynebfathau"
 
-#: apps/Viewer.cpp:150
+#: apps/Viewer.cpp:152
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Gwelydd wynebfathau syml"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:154
 #, fuzzy, kde-format
 #| msgid "(c) Craig Drummond, 2004"
 msgid "(C) Craig Drummond, 2004-2007"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-11-11 16:11+0900\n"
+"PO-Revision-Date: 2024-11-26 00:13+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "請注意：面板不夠厚的時候尺寸可能會縮小。"
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-03 00:41+0000\n"
+"POT-Creation-Date: 2024-11-26 00:42+0000\n"
 "PO-Revision-Date: 2024-04-14 18:39+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -123,37 +123,37 @@ msgstr "Skrá sem inniheldur lista leturgerða sem á að prenta"
 msgid "Remove file containing list of fonts to print"
 msgstr "Fjarlægja skrá með leturgerðum sem á að prenta"
 
-#: apps/Viewer.cpp:48
+#: apps/Viewer.cpp:50
 #, kde-format
 msgid "Open an existing font file"
 msgstr "Opna fyrirliggjandi leturskrá"
 
-#: apps/Viewer.cpp:49
+#: apps/Viewer.cpp:51
 #, kde-format
 msgid "Print font preview"
 msgstr "Prenta forskoðun leturs"
 
-#: apps/Viewer.cpp:66
+#: apps/Viewer.cpp:68
 #, kde-format
 msgid "Select Font to View"
 msgstr "Veldu letur sem þú vilt skoða"
 
-#: apps/Viewer.cpp:106
+#: apps/Viewer.cpp:108
 #, kde-format
 msgid "URL to open"
 msgstr "Slóð til að opna"
 
-#: apps/Viewer.cpp:148
+#: apps/Viewer.cpp:150
 #, kde-format
 msgid "Font Viewer"
 msgstr "Leturskoðari"
 
-#: apps/Viewer.cpp:150
+#: apps/Viewer.cpp:152
 #, kde-format
 msgid "Simple font viewer"
 msgstr "Einfaldur leturskoðari"
 
-#: apps/Viewer.cpp:152
+#: apps/Viewer.cpp:154
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
 msgstr "(C) Craig Drummond, 2004-2007"

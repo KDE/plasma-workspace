@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-09-08 20:32+0200\n"
+"PO-Revision-Date: 2024-11-25 20:11+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -265,6 +265,8 @@ msgstr "%1pt %2"
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
+"Hinweis: Die Größe kann reduziert sein, wenn die Kontrollleiste nicht groß "
+"genug ist."
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
@@ -415,6 +417,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Die Zeitzone ist nicht festgelegt. Zum Festlegen können die „Datum & Zeit“-"
+"Einstellungen durch einen Klick geöffnet werden."
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -423,12 +427,11 @@ msgid "Today is %1"
 msgstr "Das heutige Datum ist: %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Stadt der Zeitzone"
+msgstr "Zeitzone ist nicht festgelegt"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -436,6 +439,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Durch einen Klick auf das Symbol werden die „Datum & Zeit“-Einstellungen zum "
+"Festlegen einer Zeitzone geöffnet."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format
