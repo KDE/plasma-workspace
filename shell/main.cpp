@@ -68,8 +68,6 @@ int main(int argc, char *argv[])
     qputenv("QV4_GC_TIMELIMIT", "0");
 #endif
 
-    KCrash::initialize();
-
     // Quit on SIGTERM to properly save state. See systemd.kill(5).
     // https://bugs.kde.org/show_bug.cgi?id=470604
     KSignalHandler::self()->watchSignal(SIGTERM);
@@ -88,6 +86,7 @@ int main(int argc, char *argv[])
     KAboutData aboutData(QStringLiteral("plasmashell"), QString(), QStringLiteral(PROJECT_VERSION), i18n("Plasma Shell"), KAboutLicense::GPL);
 
     KAboutData::setApplicationData(aboutData);
+    KCrash::initialize();
 
     app.setQuitOnLastWindowClosed(false);
 
