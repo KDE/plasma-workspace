@@ -103,3 +103,5 @@ bool NotificationSortProxyModel::lessThan(const QModelIndex &source_left, const 
 
     return scoreLeft > scoreRight;
 }
+
+#include "moc_notificationsortproxymodel_p.cpp"

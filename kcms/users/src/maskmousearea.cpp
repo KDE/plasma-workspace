@@ -102,3 +102,5 @@ bool MaskMouseArea::hovered() const
 {
     return d->containsMouse;
 }
+
+#include "moc_maskmousearea.cpp"

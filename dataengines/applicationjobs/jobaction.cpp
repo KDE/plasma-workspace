@@ -32,3 +32,5 @@ void JobAction::start()
 
     emitResult();
 }
+
+#include "moc_jobaction.cpp"

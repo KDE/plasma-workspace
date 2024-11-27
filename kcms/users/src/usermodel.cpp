@@ -179,3 +179,5 @@ int UserModel::rowCount(const QModelIndex &parent) const
 
     return m_userList.count();
 }
+
+#include "moc_usermodel.cpp"

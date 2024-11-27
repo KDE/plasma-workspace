@@ -345,3 +345,5 @@ bool KCMStyle::isSaveNeeded() const
 }
 
 #include "kcmstyle.moc"
+
+#include "moc_kcmstyle.cpp"

@@ -53,3 +53,5 @@ void MenuEntryEditor::edit(const QString &entryPath, const QString &menuId)
         }
     }
 }
+
+#include "moc_menuentryeditor.cpp"

@@ -118,3 +118,5 @@ void RecentDocuments::run(const KRunner::RunnerContext & /*context*/, const KRun
 }
 
 #include "recentdocuments.moc"
+
+#include "moc_recentdocuments.cpp"

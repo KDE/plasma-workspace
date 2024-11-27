@@ -68,3 +68,5 @@ void KillRunnerConfig::defaults()
 }
 
 #include "killrunner_config.moc"
+
+#include "moc_killrunner_config.cpp"

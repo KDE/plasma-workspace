@@ -224,3 +224,5 @@ void ForwardingModel::disconnectSignals()
 
     disconnect(m_sourceModel, nullptr, this, nullptr);
 }
+
+#include "moc_forwardingmodel.cpp"

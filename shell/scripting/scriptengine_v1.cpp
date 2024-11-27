@@ -839,3 +839,5 @@ QJSValue ScriptEngine::V1::createContainment(const QString &type, const QString 
 }
 
 } // namespace WorkspaceScripting
+
+#include "moc_scriptengine_v1.cpp"

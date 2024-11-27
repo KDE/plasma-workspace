@@ -596,3 +596,5 @@ void Settings::setNotificationSoundsInhibited(bool inhibited)
     d->dndSettings.setNotificationSoundsMuted(inhibited);
     d->setDirty(true);
 }
+
+#include "moc_settings.cpp"

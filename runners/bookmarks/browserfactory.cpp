@@ -44,3 +44,5 @@ BrowserFactory::BrowserFactory(QObject *parent)
     , m_previousBrowserName(QStringLiteral("invalid"))
 {
 }
+
+#include "moc_browserfactory.cpp"

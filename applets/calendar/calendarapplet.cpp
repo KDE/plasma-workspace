@@ -25,3 +25,5 @@ int CalendarApplet::weekNumber(const QDateTime &dateTime) const
 K_PLUGIN_CLASS(CalendarApplet)
 
 #include "calendarapplet.moc"
+
+#include "moc_calendarapplet.cpp"

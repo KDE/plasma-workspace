@@ -22,3 +22,5 @@ const QDBusArgument &operator>>(const QDBusArgument &argument, LayoutNames &layo
     argument.endStructure();
     return argument;
 }
+
+#include "moc_layoutnames.cpp"

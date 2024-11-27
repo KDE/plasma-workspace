@@ -238,3 +238,5 @@ QVariant DefaultItemFilterProxyModel::filterQuery() const
 }
 
 }
+
+#include "moc_kcategorizeditemsviewmodels_p.cpp"

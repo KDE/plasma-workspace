@@ -99,3 +99,5 @@ void LocaleGeneratorUbuntu::ubuntuLangCheck(int statusCode, QProcess::ExitStatus
         Q_EMIT success();
     }
 }
+
+#include "moc_localegeneratorubuntu.cpp"

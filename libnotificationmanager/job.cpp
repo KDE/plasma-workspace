@@ -317,3 +317,5 @@ void Job::kill()
 {
     d->kill();
 }
+
+#include "moc_job.cpp"

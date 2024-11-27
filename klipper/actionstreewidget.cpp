@@ -47,3 +47,5 @@ int ActionsTreeWidget::actionsChanged() const
 {
     return m_actionsChanged;
 }
+
+#include "moc_actionstreewidget.cpp"

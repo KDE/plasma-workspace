@@ -92,3 +92,5 @@ QModelIndex WindowTasksModel::mapIfaceToSource(const QModelIndex &index) const
 }
 
 }
+
+#include "moc_windowtasksmodel.cpp"

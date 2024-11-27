@@ -201,3 +201,5 @@ void CalculatorRunner::userFriendlyMultiplication(QString &cmd)
 }
 
 #include "calculatorrunner.moc"
+
+#include "moc_calculatorrunner.cpp"

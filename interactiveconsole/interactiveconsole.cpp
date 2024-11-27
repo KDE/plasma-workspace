@@ -588,3 +588,5 @@ void InteractiveConsole::clearOutput()
 {
     m_output->clear();
 }
+
+#include "moc_interactiveconsole.cpp"

@@ -158,3 +158,5 @@ QSize CFontPreview::minimumSizeHint() const
 }
 
 }
+
+#include "moc_FontPreview.cpp"

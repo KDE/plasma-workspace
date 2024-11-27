@@ -300,3 +300,5 @@ void SessionManagement::saveSession()
 }
 
 #include "sessionmanagement.moc"
+
+#include "moc_sessionmanagement.cpp"

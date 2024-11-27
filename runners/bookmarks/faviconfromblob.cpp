@@ -121,3 +121,5 @@ QIcon FaviconFromBlob::iconFor(const QString &url)
     }
     return QIcon(iconFile.fileName());
 }
+
+#include "moc_faviconfromblob.cpp"

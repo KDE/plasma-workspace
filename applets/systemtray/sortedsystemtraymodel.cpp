@@ -99,3 +99,5 @@ int SortedSystemTrayModel::compareCategoriesOrderly(const QModelIndex &left, con
 
     return leftIndex - rightIndex;
 }
+
+#include "moc_sortedsystemtraymodel.cpp"

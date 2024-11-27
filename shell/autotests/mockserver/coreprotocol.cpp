@@ -533,3 +533,5 @@ void ShmPool::shm_pool_destroy_resource(Resource *resource)
 }
 
 } // namespace MockCompositor
+
+#include "moc_coreprotocol.cpp"

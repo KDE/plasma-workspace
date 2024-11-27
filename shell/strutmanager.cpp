@@ -100,3 +100,5 @@ bool StrutManager::addWatchedService(const QString &service)
     }
     return true;
 }
+
+#include "moc_strutmanager.cpp"

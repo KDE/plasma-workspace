@@ -174,3 +174,5 @@ void PlasmaWindowedCorona::setHasStatusNotifier(bool stay)
 {
     m_hasStatusNotifier = stay;
 }
+
+#include "moc_plasmawindowedcorona.cpp"

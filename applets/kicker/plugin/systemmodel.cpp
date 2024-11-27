@@ -116,3 +116,5 @@ void SystemModel::populate()
     addIfValid(SystemEntry::Reboot);
     addIfValid(SystemEntry::Shutdown);
 }
+
+#include "moc_systemmodel.cpp"

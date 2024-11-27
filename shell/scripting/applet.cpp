@@ -262,3 +262,5 @@ ScriptEngine *Applet::engine() const
 }
 
 }
+
+#include "moc_applet.cpp"

@@ -34,3 +34,5 @@ void ProcessRunner::runMenuEditor()
     job->setUiDelegate(delegate);
     job->start();
 }
+
+#include "moc_processrunner.cpp"

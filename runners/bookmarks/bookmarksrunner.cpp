@@ -102,3 +102,5 @@ void BookmarksRunner::run(const KRunner::RunnerContext & /*context*/, const KRun
 }
 
 #include "bookmarksrunner.moc"
+
+#include "moc_bookmarksrunner.cpp"

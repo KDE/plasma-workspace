@@ -56,3 +56,5 @@ bool ActionInterface::isValid() const
     qCWarning(APPLETS::DEVICENOTIFIER) << "Action: " << predicate() << " not valid";
     return false;
 }
+
+#include "moc_actioninterface.cpp"

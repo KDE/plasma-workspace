@@ -132,3 +132,5 @@ void X11WindowScreenRelativePositioner::handleScreenChanged()
     connect(newScreen, &QScreen::availableGeometryChanged, this, &X11WindowScreenRelativePositioner::polish);
     polish();
 }
+
+#include "moc_x11windowscreenrelativepositioner.cpp"

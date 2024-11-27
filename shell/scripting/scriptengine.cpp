@@ -394,3 +394,5 @@ Containment *ScriptEngine::createContainmentWrapper(const QString &type, const Q
 }
 
 } // namespace WorkspaceScripting
+
+#include "moc_scriptengine.cpp"

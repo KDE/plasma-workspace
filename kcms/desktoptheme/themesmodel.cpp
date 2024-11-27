@@ -255,3 +255,5 @@ void ThemesModel::removeRow(int row)
     m_data.erase(m_data.begin() + row);
     endRemoveRows();
 }
+
+#include "moc_themesmodel.cpp"

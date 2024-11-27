@@ -491,3 +491,5 @@ void WallpaperConfigModel::repopulate()
 }
 
 #include "wallpapermodule.moc"
+
+#include "moc_wallpapermodule.cpp"

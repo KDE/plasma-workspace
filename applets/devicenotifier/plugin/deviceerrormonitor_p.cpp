@@ -287,3 +287,5 @@ void DeviceErrorMonitor::notify(Solid::ErrorType error, const QString &errorMess
 
     Q_EMIT errorDataChanged(udi);
 }
+
+#include "moc_deviceerrormonitor_p.cpp"

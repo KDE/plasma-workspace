@@ -184,3 +184,5 @@ void Firefox::teardown()
     }
     m_favicon->teardown();
 }
+
+#include "moc_firefox.cpp"

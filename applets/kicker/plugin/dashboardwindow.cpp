@@ -257,3 +257,5 @@ void DashboardWindow::visualParentScreenChanged(QScreen *screen)
         setGeometry(screen->geometry());
     }
 }
+
+#include "moc_dashboardwindow.cpp"

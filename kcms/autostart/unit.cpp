@@ -249,3 +249,4 @@ void Unit::reloadLogs()
 
     Q_EMIT dataChanged();
 }
+#include "moc_unit.cpp"

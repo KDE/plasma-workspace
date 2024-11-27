@@ -44,3 +44,5 @@ AbstractWindowTasksModel::~AbstractWindowTasksModel()
 }
 
 }
+
+#include "moc_abstractwindowtasksmodel.cpp"

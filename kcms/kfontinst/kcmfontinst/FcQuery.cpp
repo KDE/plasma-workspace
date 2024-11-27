@@ -98,3 +98,5 @@ void CFcQuery::data()
 }
 
 }
+
+#include "moc_FcQuery.cpp"

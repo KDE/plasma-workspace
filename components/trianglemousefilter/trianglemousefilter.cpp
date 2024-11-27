@@ -194,3 +194,5 @@ bool TriangleMouseFilter::filterContains(const QPointF &p) const
     bool secondCheck = m_secondaryPoint != QPointF(0, 0) && poly.containsPoint(p, Qt::OddEvenFill);
     return (firstCheck || secondCheck);
 }
+
+#include "moc_trianglemousefilter.cpp"

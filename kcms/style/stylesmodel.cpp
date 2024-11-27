@@ -204,3 +204,5 @@ void StylesModel::load()
         Q_EMIT selectedStyleIndexChanged();
     }
 }
+
+#include "moc_stylesmodel.cpp"

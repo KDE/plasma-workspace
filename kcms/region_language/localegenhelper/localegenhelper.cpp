@@ -193,3 +193,5 @@ int main(int argc, char *argv[])
     LocaleGenHelper generator;
     return app.exec();
 }
+
+#include "moc_localegenhelper.cpp"

@@ -47,3 +47,5 @@ void AppmenuDBus::reconfigure()
 {
     Q_EMIT reconfigured();
 }
+
+#include "moc_appmenu_dbus.cpp"

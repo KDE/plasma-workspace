@@ -391,3 +391,5 @@ xcb_atom_t MenuProxy::getAtom(const QByteArray &name)
 
     return atom;
 }
+
+#include "moc_menuproxy.cpp"

@@ -171,3 +171,5 @@ void Actions::onActionsChanged(const QStringList &removed, const StringBoolMap &
         Q_EMIT actionsChanged(dirtyActions);
     }
 }
+
+#include "moc_actions.cpp"

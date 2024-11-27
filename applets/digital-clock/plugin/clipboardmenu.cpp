@@ -132,3 +132,5 @@ void ClipboardMenu::setupMenu(QAction *action)
 
     action->setMenu(menu);
 }
+
+#include "moc_clipboardmenu.cpp"

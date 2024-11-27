@@ -61,3 +61,5 @@ void KCMNightLight::save()
 }
 }
 #include "kcm.moc"
+
+#include "moc_kcm.cpp"

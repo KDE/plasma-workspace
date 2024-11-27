@@ -12,3 +12,5 @@ Favicon::Favicon(QObject *parent)
     , m_default_icon(QIcon::fromTheme(QStringLiteral("bookmarks")))
 {
 }
+
+#include "moc_favicon.cpp"

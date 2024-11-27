@@ -106,3 +106,5 @@ int StatusNotifierWatcher::ProtocolVersion() const
 }
 
 #include "statusnotifierwatcher.moc"
+
+#include "moc_statusnotifierwatcher.cpp"

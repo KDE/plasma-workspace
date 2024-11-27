@@ -111,3 +111,5 @@ void AppLauncher::save(KConfigGroup &config)
 K_PLUGIN_CLASS_WITH_JSON(AppLauncher, "plasma-containmentactions-applauncher.json")
 
 #include "launch.moc"
+
+#include "moc_launch.cpp"

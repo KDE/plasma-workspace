@@ -44,3 +44,5 @@ void Autostart::save()
 }
 
 #include "autostart.moc"
+
+#include "moc_autostart.cpp"

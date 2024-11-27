@@ -70,3 +70,5 @@ void NotificationWindow::moveEvent(QMoveEvent *me)
     PlasmaShellWaylandIntegration::get(this)->setPosition(me->pos());
     PlasmaWindow::moveEvent(me);
 }
+
+#include "moc_notificationwindow.cpp"

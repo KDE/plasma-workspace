@@ -60,3 +60,5 @@ void XWindowSystemEventBatcher::timerEvent(QTimerEvent *event)
     killTimer(m_timerId);
     m_timerId = 0;
 }
+
+#include "moc_xwindowsystemeventbatcher.cpp"

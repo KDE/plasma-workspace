@@ -77,3 +77,5 @@ QString UserFeedback::describeDataSources() const
 {
     return m_provider->describeDataSources();
 }
+
+#include "moc_userfeedback.cpp"

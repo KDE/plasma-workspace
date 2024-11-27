@@ -125,3 +125,5 @@ bool FprintDevice::fingerNeeded()
     }
     return reply.value().variant().toBool();
 }
+
+#include "moc_fprintdevice.cpp"

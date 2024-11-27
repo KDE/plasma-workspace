@@ -45,3 +45,5 @@ void IconsSettings::updateIconTheme()
         KBuildSycocaProgressDialog::rebuildKSycoca(QApplication::activeWindow());
     }
 }
+
+#include "moc_iconssettings.cpp"

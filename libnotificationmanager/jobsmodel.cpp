@@ -235,3 +235,5 @@ void JobsModel::clear(Notifications::ClearFlags flags)
         }
     }
 }
+
+#include "moc_jobsmodel.cpp"

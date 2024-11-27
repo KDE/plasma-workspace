@@ -133,3 +133,5 @@ bool TimeEngine::updateSourceEvent(const QString &tz)
 K_PLUGIN_CLASS_WITH_JSON(TimeEngine, "plasma-dataengine-time.json")
 
 #include "timeengine.moc"
+
+#include "moc_timeengine.cpp"

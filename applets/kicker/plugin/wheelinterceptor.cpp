@@ -58,3 +58,5 @@ QQuickItem *WheelInterceptor::findWheelArea(QQuickItem *parent) const
 
     return nullptr;
 }
+
+#include "moc_wheelinterceptor.cpp"

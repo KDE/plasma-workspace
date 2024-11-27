@@ -284,3 +284,5 @@ void ComputerModel::onSetupDone(Solid::ErrorType error, QVariant errorData, cons
     auto job = new KIO::OpenUrlJob(QUrl::fromLocalFile(access->filePath()));
     job->start();
 }
+
+#include "moc_computermodel.cpp"

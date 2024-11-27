@@ -94,3 +94,5 @@ std::optional<QString> ShellRunner::parseShellCommand(const QString &query, QStr
 }
 
 #include "shellrunner.moc"
+
+#include "moc_shellrunner.cpp"

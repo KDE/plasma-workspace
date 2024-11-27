@@ -133,3 +133,5 @@ void SchemeEditorOptions::on_accentTitlebar_stateChanged(int state)
 
     Q_EMIT changed(true);
 }
+
+#include "moc_scmeditoroptions.cpp"

@@ -150,3 +150,5 @@ void Greeter::promptAll()
     m_shutdownType = KWorkSpace::ShutdownTypeDefault;
     init();
 }
+
+#include "moc_greeter.cpp"

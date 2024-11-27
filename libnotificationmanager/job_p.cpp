@@ -503,3 +503,5 @@ void JobPrivate::update(const QVariantMap &properties)
         requestShow();
     }
 }
+
+#include "moc_job_p.cpp"

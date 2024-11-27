@@ -48,3 +48,5 @@ SessionTrack::~SessionTrack()
         }
     }
 }
+
+#include "moc_sessiontrack.cpp"

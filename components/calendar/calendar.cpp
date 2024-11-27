@@ -387,3 +387,5 @@ void Calendar::goToYearAndMonth(int year, int month)
 {
     setDisplayedDate(QDate(year, month, 1));
 }
+
+#include "moc_calendar.cpp"

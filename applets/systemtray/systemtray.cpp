@@ -444,3 +444,5 @@ void SystemTray::stackItemAfter(QQuickItem *newItem, QQuickItem *afterItem)
 K_PLUGIN_CLASS(SystemTray)
 
 #include "systemtray.moc"
+
+#include "moc_systemtray.cpp"

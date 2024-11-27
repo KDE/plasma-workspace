@@ -340,3 +340,5 @@ void PreviewItem::geometryChange(const QRectF &newGeometry, const QRectF &oldGeo
 
     QQuickPaintedItem::geometryChange(newGeometry, oldGeometry);
 }
+
+#include "moc_previewitem.cpp"

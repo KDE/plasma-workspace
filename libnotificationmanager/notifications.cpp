@@ -841,3 +841,5 @@ QHash<int, QByteArray> Notifications::roleNames() const
 {
     return Utils::roleNames();
 }
+
+#include "moc_notifications.cpp"

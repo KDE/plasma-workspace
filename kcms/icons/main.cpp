@@ -385,3 +385,5 @@ void IconModule::defaults()
 }
 
 #include "main.moc"
+
+#include "moc_main.cpp"

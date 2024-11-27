@@ -50,3 +50,5 @@ void KickerPlugin::registerTypes(const char *uri)
     qmlRegisterType<WindowSystem>(uri, 0, 1, "WindowSystem");
     qmlRegisterType<KickerCompatTriangleMouseFilter>(uri, 0, 1, "TriangleMouseFilter");
 }
+
+#include "moc_kickerplugin.cpp"

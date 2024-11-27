@@ -10,3 +10,5 @@ KwinVirtualKeyboardInterface::KwinVirtualKeyboardInterface()
     : OrgKdeKwinVirtualKeyboardInterface(QStringLiteral("org.kde.KWin"), QStringLiteral("/VirtualKeyboard"), QDBusConnection::sessionBus())
 {
 }
+
+#include "moc_virtualkeyboard.cpp"

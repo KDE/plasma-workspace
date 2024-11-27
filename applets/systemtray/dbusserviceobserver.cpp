@@ -182,3 +182,5 @@ void DBusServiceObserver::serviceUnregistered(const QString &service)
         }
     }
 }
+
+#include "moc_dbusserviceobserver.cpp"

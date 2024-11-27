@@ -405,3 +405,5 @@ int Helper::checkWriteAction(const QStringList &files)
 }
 
 }
+
+#include "moc_Helper.cpp"

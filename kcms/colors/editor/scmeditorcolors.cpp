@@ -503,3 +503,5 @@ void SchemeEditorColors::updateFromColorSchemes()
     WMGroup.writeEntry("activeBlend", m_wmColors.color(WindecoColors::ActiveBlend));
     WMGroup.writeEntry("inactiveBlend", m_wmColors.color(WindecoColors::InactiveBlend));
 }
+
+#include "moc_scmeditorcolors.cpp"

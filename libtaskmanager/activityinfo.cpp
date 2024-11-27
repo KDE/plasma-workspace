@@ -116,3 +116,5 @@ QString ActivityInfo::activityIcon(const QString &id)
     return QString();
 }
 }
+
+#include "moc_activityinfo.cpp"

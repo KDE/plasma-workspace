@@ -592,3 +592,5 @@ void LauncherTasksModel::requestOpenUrls(const QModelIndex &index, const QList<Q
 }
 
 }
+
+#include "moc_launchertasksmodel.cpp"

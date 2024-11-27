@@ -293,3 +293,5 @@ QHash<int, QByteArray> SessionsModel::roleNames() const
 
     return roleNames;
 }
+
+#include "moc_sessionsmodel.cpp"

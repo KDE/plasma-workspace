@@ -270,3 +270,5 @@ void AppMenuModule::ensureSerial(QWindow *w)
 }
 
 #include "appmenu.moc"
+
+#include "moc_appmenu.cpp"

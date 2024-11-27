@@ -427,3 +427,5 @@ const QString &SelectedLanguageModel::unsupportedLanguage() const
 {
     return m_unsupportedLanguage;
 }
+
+#include "moc_languagelistmodel.cpp"

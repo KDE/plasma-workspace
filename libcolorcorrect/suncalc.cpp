@@ -167,3 +167,5 @@ QVariantMap SunCalc::getEveningTimings(double latitude, double longitude)
 }
 
 }
+
+#include "moc_suncalc.cpp"

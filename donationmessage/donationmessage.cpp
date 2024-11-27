@@ -117,3 +117,5 @@ void DonationMessage::suppressForThisYear()
 }
 
 #include "donationmessage.moc"
+
+#include "moc_donationmessage.cpp"

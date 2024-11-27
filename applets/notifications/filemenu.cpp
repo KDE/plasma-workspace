@@ -237,3 +237,5 @@ void FileMenu::open(int x, int y)
     m_visible = true;
     Q_EMIT visibleChanged();
 }
+
+#include "moc_filemenu.cpp"

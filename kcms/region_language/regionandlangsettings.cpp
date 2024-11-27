@@ -99,3 +99,4 @@ void RegionAndLangSettings::setLC_Vars(const QString &LANG)
     setNameStyle(LANG);
     setPhoneNumbers(LANG);
 }
+#include "moc_regionandlangsettings.cpp"

@@ -646,3 +646,5 @@ void CFontFileListView::checkFiles()
     }
 }
 }
+
+#include "moc_DuplicatesDialog.cpp"

@@ -56,3 +56,5 @@ void OutputOrder::kde_output_order_v1_bind_resource(Resource *resource)
 }
 
 } // namespace MockCompositor
+
+#include "moc_outputorder.cpp"

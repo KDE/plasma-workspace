@@ -1874,3 +1874,5 @@ bool CFontListView::viewportEvent(QEvent *event)
 }
 
 }
+
+#include "moc_FontList.cpp"

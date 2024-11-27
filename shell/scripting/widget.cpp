@@ -189,3 +189,5 @@ void Widget::setUserBackgroundHints(const QString &hint)
 }
 
 }
+
+#include "moc_widget.cpp"

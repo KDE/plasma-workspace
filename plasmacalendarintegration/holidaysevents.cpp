@@ -101,3 +101,5 @@ void HolidaysEventsPlugin::updateSettings(const KConfigGroup &regionsConfig)
         m_lastData.clear();
     }
 }
+
+#include "moc_holidaysevents.cpp"

@@ -89,3 +89,5 @@ void DesktopNotifier::checkDesktopLocation()
 }
 
 #include <desktopnotifier.moc>
+
+#include "moc_desktopnotifier.cpp"

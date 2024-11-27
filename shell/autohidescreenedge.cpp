@@ -280,3 +280,5 @@ AutoHideScreenEdge *AutoHideScreenEdge::create(PanelView *view)
 }
 
 #include "autohidescreenedge.moc"
+
+#include "moc_autohidescreenedge.cpp"

@@ -256,3 +256,5 @@ void SessionRunner::run(const KRunner::RunnerContext & /*context*/, const KRunne
 }
 
 #include "sessionrunner.moc"
+
+#include "moc_sessionrunner.cpp"

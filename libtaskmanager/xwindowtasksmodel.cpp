@@ -1155,3 +1155,5 @@ QList<WId> XWindowTasksModel::winIdsFromMimeData(const QMimeData *mimeData, bool
 }
 
 }
+
+#include "moc_xwindowtasksmodel.cpp"

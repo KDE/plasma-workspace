@@ -11,3 +11,5 @@ void LocaleGeneratorGeneratedGlibc::localesGenerate(const QStringList &list)
     Q_UNUSED(list)
     Q_EMIT needsFont();
 }
+
+#include "moc_localegeneratorgeneratedglibc.cpp"

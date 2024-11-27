@@ -496,3 +496,5 @@ SourceData SourceData::fromService(KService::Ptr service)
         .events = {},
     };
 }
+
+#include "moc_sourcesmodel.cpp"

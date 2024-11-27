@@ -140,3 +140,5 @@ void FontInstInterface::fontStat(int pid, const KFI::Family &font)
 }
 
 }
+
+#include "moc_FontInstInterface.cpp"

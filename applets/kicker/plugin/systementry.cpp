@@ -350,3 +350,5 @@ bool SystemEntry::run(const QString &actionId, const QVariant &argument)
 
     return true;
 }
+
+#include "moc_systementry.cpp"

@@ -106,3 +106,5 @@ void DataOffer::data_offer_destroy(QtWaylandServer::wl_data_offer::Resource *res
 }
 
 } // namespace MockCompositor
+
+#include "moc_datadevice.cpp"

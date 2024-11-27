@@ -171,3 +171,5 @@ void ClipboardJob::iconResult(const KFileItem &item)
     res.insert(s_previewHeightKey, pix.size().height());
     setResult(res);
 }
+
+#include "moc_clipboardjob.cpp"

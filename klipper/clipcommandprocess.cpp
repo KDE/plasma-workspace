@@ -62,3 +62,5 @@ void ClipCommandProcess::slotStdOutputAvailable()
 {
     m_newhistoryItem.append(QString::fromLocal8Bit(this->readAllStandardOutput()));
 }
+
+#include "moc_clipcommandprocess.cpp"

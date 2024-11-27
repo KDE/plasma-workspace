@@ -152,3 +152,5 @@ QString ServerInfo::specVersion() const
 {
     return d->specVersion;
 }
+
+#include "moc_serverinfo.cpp"

@@ -270,3 +270,5 @@ int XStartupTasksModel::rowCount(const QModelIndex &parent) const
 }
 
 } // namespace TaskManager
+
+#include "moc_xstartuptasksmodel.cpp"

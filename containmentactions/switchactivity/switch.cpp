@@ -86,3 +86,5 @@ void SwitchActivity::performPreviousAction()
 K_PLUGIN_CLASS_WITH_JSON(SwitchActivity, "plasma-containmentactions-switchactivity.json")
 
 #include "switch.moc"
+
+#include "moc_switch.cpp"

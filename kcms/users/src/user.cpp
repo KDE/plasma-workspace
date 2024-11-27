@@ -465,3 +465,5 @@ void UserApplyJob::setError(const QDBusError &error)
         KJob::setError(static_cast<int>(Error::Unknown));
     }
 }
+
+#include "moc_user.cpp"

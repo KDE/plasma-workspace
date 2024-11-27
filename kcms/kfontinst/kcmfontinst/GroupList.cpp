@@ -973,3 +973,5 @@ bool CGroupListView::viewportEvent(QEvent *event)
 }
 
 }
+
+#include "moc_GroupList.cpp"

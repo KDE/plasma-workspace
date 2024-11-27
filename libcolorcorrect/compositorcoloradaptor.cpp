@@ -120,3 +120,5 @@ void CompositorAdaptor::stopPreview()
     m_iface->call(u"stopPreview"_s);
 }
 }
+
+#include "moc_compositorcoloradaptor.cpp"

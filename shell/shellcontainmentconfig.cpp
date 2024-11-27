@@ -480,3 +480,5 @@ void ShellContainmentConfig::init()
         });
     }
 }
+
+#include "moc_shellcontainmentconfig.cpp"

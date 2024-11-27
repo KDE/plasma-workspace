@@ -324,3 +324,5 @@ void PlasmaWindowedView::updateSniStatus()
         break;
     }
 }
+
+#include "moc_plasmawindowedview.cpp"

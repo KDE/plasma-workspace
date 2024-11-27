@@ -85,3 +85,5 @@ QRect SubMenu::availableScreenRectForItem(QQuickItem *item) const
 
     return screen->availableGeometry();
 }
+
+#include "moc_submenu.cpp"

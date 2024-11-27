@@ -591,3 +591,5 @@ void IconApplet::setLocalPath(const QString &localPath)
 K_PLUGIN_CLASS(IconApplet)
 
 #include "iconapplet.moc"
+
+#include "moc_iconapplet.cpp"

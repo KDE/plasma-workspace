@@ -258,3 +258,5 @@ void KCMDesktopTheme::processPendingDeletions()
 }
 
 #include "kcm.moc"
+
+#include "moc_kcm.cpp"

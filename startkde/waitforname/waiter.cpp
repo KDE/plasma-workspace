@@ -118,3 +118,5 @@ void Waiter::timeout()
     qCInfo(LOG_PLASMA) << "WaitForName: Service was not registered within timeout";
     exit(1);
 }
+
+#include "moc_waiter.cpp"

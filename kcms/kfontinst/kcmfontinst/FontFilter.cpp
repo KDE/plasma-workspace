@@ -345,3 +345,5 @@ void CFontFilter::setCriteria(ECriteria crit)
 }
 
 }
+
+#include "moc_FontFilter.cpp"

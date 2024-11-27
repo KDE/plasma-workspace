@@ -239,3 +239,5 @@ bool LogindSessionBackend::canSwitchUser() const
 {
     return true;
 }
+
+#include "moc_sessionmanagementbackend.cpp"

@@ -557,3 +557,5 @@ void RecentUsageModel::refresh()
 
     setSourceModel(model);
 }
+
+#include "moc_recentusagemodel.cpp"

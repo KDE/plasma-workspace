@@ -213,3 +213,5 @@ QString IonInterface::getWeatherIcon(const QMap<QString, ConditionIcons> &condit
 {
     return getWeatherIcon(conditionList[condition.toLower()]);
 }
+
+#include "moc_ion.cpp"

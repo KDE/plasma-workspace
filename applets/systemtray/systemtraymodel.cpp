@@ -479,3 +479,5 @@ void SystemTrayModel::addSourceModel(QAbstractItemModel *sourceModel)
 
     QConcatenateTablesProxyModel::addSourceModel(sourceModel);
 }
+
+#include "moc_systemtraymodel.cpp"

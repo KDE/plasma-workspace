@@ -650,3 +650,5 @@ QVariantMap Window::gMenuToDBusMenuProperties(const QVariantMap &source) const
 
     return result;
 }
+
+#include "moc_window.cpp"

@@ -93,3 +93,5 @@ QList<BookmarkMatch> Konqueror::match(const QString &term, bool addEverything)
     }
     return matches;
 }
+
+#include "moc_konqueror.cpp"

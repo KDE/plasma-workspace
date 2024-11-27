@@ -24,3 +24,5 @@ void KeyboardLayoutPlugin::registerTypes(const char *uri)
         return new KwinVirtualKeyboardInterface;
     });
 }
+
+#include "moc_keyboardlayoutplugin.cpp"

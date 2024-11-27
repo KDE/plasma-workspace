@@ -212,3 +212,5 @@ void SchemeEditorDialog::setUnsavedChanges(bool changes)
         buttonBox->button(QDialogButtonBox::Reset)->setEnabled(false);
     }
 }
+
+#include "moc_scmeditordialog.cpp"

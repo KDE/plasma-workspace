@@ -155,3 +155,5 @@ void GtkThemesModel::setSelectedThemeDirty()
 {
     Q_EMIT selectedThemeChanged(m_selectedTheme);
 }
+
+#include "moc_gtkthemesmodel.cpp"

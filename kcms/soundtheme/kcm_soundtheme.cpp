@@ -238,3 +238,5 @@ ThemeInfo::ThemeInfo(const QString &themeId, QObject *parent)
 }
 
 #include "kcm_soundtheme.moc"
+
+#include "moc_kcm_soundtheme.cpp"

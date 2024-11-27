@@ -382,3 +382,5 @@ bool FontsAASettings::usrSave()
 }
 
 #include "fontsaasettings.moc"
+
+#include "moc_fontsaasettings.cpp"

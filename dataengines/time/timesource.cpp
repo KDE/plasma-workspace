@@ -244,3 +244,5 @@ void TimeSource::addDailySolarPositionData(const QDateTime &dt)
     setData(QStringLiteral("Astronomical Dawn"), times[3].first);
     setData(QStringLiteral("Astronomical Dusk"), times[3].second);
 }
+
+#include "moc_timesource.cpp"

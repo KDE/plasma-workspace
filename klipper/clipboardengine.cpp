@@ -57,3 +57,5 @@ Plasma5Support::Service *ClipboardEngine::serviceForSource(const QString &source
 K_PLUGIN_CLASS_WITH_JSON(ClipboardEngine, "plasma-dataengine-clipboard.json")
 
 #include "clipboardengine.moc"
+
+#include "moc_clipboardengine.cpp"

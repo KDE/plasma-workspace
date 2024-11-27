@@ -101,3 +101,5 @@ void DragHelper::setDragging(bool dragging)
     m_dragging = dragging;
     Q_EMIT draggingChanged();
 }
+
+#include "moc_draghelper.cpp"

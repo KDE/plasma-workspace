@@ -125,3 +125,5 @@ void PlacesRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner
 }
 
 #include "placesrunner.moc"
+
+#include "moc_placesrunner.cpp"

@@ -892,3 +892,5 @@ int FontInst::performAction(const QVariantMap &args)
 }
 
 }
+
+#include "moc_FontInst.cpp"

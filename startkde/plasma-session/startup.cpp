@@ -366,3 +366,5 @@ void StartProcessJob::start()
 }
 
 #include "startup.moc"
+
+#include "moc_startup.cpp"

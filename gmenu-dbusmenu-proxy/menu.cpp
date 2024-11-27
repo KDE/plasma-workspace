@@ -310,3 +310,5 @@ void Menu::actionsChanged(const QStringList &dirtyActions, const QString &prefix
         Q_EMIT itemsChanged(dirtyItems);
     }
 }
+
+#include "moc_menu.cpp"

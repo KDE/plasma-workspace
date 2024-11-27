@@ -413,3 +413,5 @@ void KdedDeviceNotifications::onDeviceRemoved(const UdevDevice &device)
 }
 
 #include "devicenotifications.moc"
+
+#include "moc_devicenotifications.cpp"

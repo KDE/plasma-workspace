@@ -19,3 +19,5 @@ Plasma5Support::ServiceJob *ClipboardService::createJob(const QString &operation
 {
     return new ClipboardJob(m_klipper, m_uuid, operation, parameters, this);
 }
+
+#include "moc_clipboardservice.cpp"

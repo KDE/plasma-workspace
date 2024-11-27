@@ -484,3 +484,5 @@ void BrowserExtension::print()
 }
 
 #include "FontViewPart.moc"
+
+#include "moc_FontViewPart.cpp"

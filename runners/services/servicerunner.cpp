@@ -514,3 +514,5 @@ void ServiceRunner::run(const KRunner::RunnerContext & /*context*/, const KRunne
 K_PLUGIN_CLASS_WITH_JSON(ServiceRunner, "plasma-runner-services.json")
 
 #include "servicerunner.moc"
+
+#include "moc_servicerunner.cpp"

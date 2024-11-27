@@ -108,3 +108,5 @@ QStringList FetchSqlite::tables(QSql::TableType type)
     auto db = openDbConnection(m_databaseFile);
     return db.tables(type);
 }
+
+#include "moc_fetchsqlite.cpp"

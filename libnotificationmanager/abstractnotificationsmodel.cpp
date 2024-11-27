@@ -501,3 +501,5 @@ const QList<Notification> &AbstractNotificationsModel::notifications()
 {
     return d->notifications;
 }
+
+#include "moc_abstractnotificationsmodel.cpp"

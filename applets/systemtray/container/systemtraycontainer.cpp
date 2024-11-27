@@ -143,3 +143,5 @@ QQuickItem *SystemTrayContainer::internalSystray()
 K_PLUGIN_CLASS(SystemTrayContainer)
 
 #include "systemtraycontainer.moc"
+
+#include "moc_systemtraycontainer.cpp"

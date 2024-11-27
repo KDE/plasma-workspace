@@ -797,3 +797,5 @@ QStringList KAStatsFavoritesModel::linkedActivitiesFor(const QString &id) const
     qCDebug(KICKER_DEBUG) << "Returning empty list of activities for" << id << url;
     return {};
 }
+
+#include "moc_kastatsfavoritesmodel.cpp"

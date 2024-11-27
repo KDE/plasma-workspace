@@ -249,3 +249,5 @@ void WallpaperConfigModel::repopulate()
 }
 
 #include "containmentconfigview.moc"
+
+#include "moc_containmentconfigview.cpp"

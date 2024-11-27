@@ -199,3 +199,5 @@ void AbstractTasksModel::requestPublishDelegateGeometry(const QModelIndex &index
 }
 
 }
+
+#include "moc_abstracttasksmodel.cpp"

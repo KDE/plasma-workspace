@@ -647,3 +647,5 @@ QString Klipper::cycleText() const
     result += QLatin1String("</table>");
     return result;
 }
+
+#include "moc_klipper.cpp"

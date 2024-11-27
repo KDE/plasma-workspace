@@ -46,3 +46,5 @@ void SolidAutoEject::connectDevice(const Solid::Device &device)
 }
 
 #include "solidautoeject.moc"
+
+#include "moc_solidautoeject.cpp"

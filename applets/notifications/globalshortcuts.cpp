@@ -46,3 +46,5 @@ void GlobalShortcuts::showDoNotDisturbOsd(bool doNotDisturb) const
 
     QDBusConnection::sessionBus().call(msg, QDBus::NoBlock);
 }
+
+#include "moc_globalshortcuts.cpp"

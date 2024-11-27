@@ -12,3 +12,5 @@ void AppmenuPlugin::registerTypes(const char *uri)
 {
     qmlRegisterType<AppMenuModel>(uri, 1, 0, "AppMenuModel");
 }
+
+#include "moc_appmenuplugin.cpp"

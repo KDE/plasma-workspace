@@ -23,3 +23,5 @@ void SessionsPrivatePlugin::registerTypes(const char *uri)
         return new KPackageInterface(package);
     });
 }
+
+#include "moc_lookandfeelqmlplugin.cpp"

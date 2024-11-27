@@ -197,3 +197,5 @@ void WebshortcutRunner::run(const KRunner::RunnerContext &context, const KRunner
 K_PLUGIN_CLASS_WITH_JSON(WebshortcutRunner, "plasma-runner-webshortcuts.json")
 
 #include "webshortcutrunner.moc"
+
+#include "moc_webshortcutrunner.cpp"

@@ -197,3 +197,5 @@ void CPreviewListView::contextMenuEvent(QContextMenuEvent *ev)
 }
 
 }
+
+#include "moc_PreviewList.cpp"

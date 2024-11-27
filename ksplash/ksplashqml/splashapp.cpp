@@ -147,3 +147,5 @@ void SplashApp::setupWaylandIntegration()
     }
     LayerShellQt::Shell::useLayerShell();
 }
+
+#include "moc_splashapp.cpp"

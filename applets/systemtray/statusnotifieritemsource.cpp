@@ -536,3 +536,5 @@ void StatusNotifierItemSource::provideXdgActivationToken(const QString &token)
         m_statusNotifierItemInterface->ProvideXdgActivationToken(token);
     }
 }
+
+#include "moc_statusnotifieritemsource.cpp"

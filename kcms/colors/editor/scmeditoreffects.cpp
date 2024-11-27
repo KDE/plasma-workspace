@@ -153,3 +153,5 @@ void SchemeEditorEffects::updateFromEffectsPage()
 
     Q_EMIT changed(true);
 }
+
+#include "moc_scmeditoreffects.cpp"

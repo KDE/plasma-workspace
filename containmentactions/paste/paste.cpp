@@ -61,3 +61,5 @@ void Paste::doPaste()
 K_PLUGIN_CLASS_WITH_JSON(Paste, "plasma-containmentactions-paste.json")
 
 #include "paste.moc"
+
+#include "moc_paste.cpp"

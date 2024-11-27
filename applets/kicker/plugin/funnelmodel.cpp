@@ -84,3 +84,5 @@ void FunnelModel::setSourceModel(QAbstractItemModel *model)
     Q_EMIT sourceModelChanged();
     Q_EMIT descriptionChanged();
 }
+
+#include "moc_funnelmodel.cpp"

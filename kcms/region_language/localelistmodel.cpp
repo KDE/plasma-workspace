@@ -160,3 +160,5 @@ void LocaleListModel::setLang(const QString &lang)
 
     Q_EMIT dataChanged(createIndex(0, 0), createIndex(0, 0));
 }
+
+#include "moc_localelistmodel.cpp"

@@ -338,3 +338,5 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         }
     });
 }
+
+#include "moc_appmenumodel.cpp"

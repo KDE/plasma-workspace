@@ -492,3 +492,5 @@ void JobsModelPrivate::scheduleUpdate(Job *job, int role)
     m_pendingDirtyRoles[job].append(role);
     m_compressUpdatesTimer->start();
 }
+
+#include "moc_jobsmodel_p.cpp"

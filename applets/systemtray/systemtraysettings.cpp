@@ -162,3 +162,5 @@ void SystemTraySettings::notifyAboutChangedEnabledPlugins(const QStringList &ena
 
     Q_EMIT enabledPluginsChanged(newlyEnabled, newlyDisabled);
 }
+
+#include "moc_systemtraysettings.cpp"

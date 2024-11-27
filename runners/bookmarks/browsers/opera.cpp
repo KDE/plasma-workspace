@@ -86,3 +86,5 @@ void Opera::teardown()
 {
     m_operaBookmarkEntries.clear();
 }
+
+#include "moc_opera.cpp"

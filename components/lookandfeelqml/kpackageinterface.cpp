@@ -21,3 +21,5 @@ QUrl KPackageInterface::fallbackFileUrl(const QByteArray &key) const
 {
     return m_package.fallbackPackage().fileUrl(key);
 }
+
+#include "moc_kpackageinterface.cpp"

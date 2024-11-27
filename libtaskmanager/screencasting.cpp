@@ -84,3 +84,5 @@ std::unique_ptr<ScreencastingStream> Screencasting::createWindowStream(const QSt
     stream->init(stream_window(uuid, mode));
     return stream;
 }
+
+#include "moc_screencasting.cpp"

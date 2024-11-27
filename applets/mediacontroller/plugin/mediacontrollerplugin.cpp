@@ -13,3 +13,5 @@ void MediaControllerPlugin::registerTypes(const char *uri)
 {
     qmlRegisterType<GlobalConfig>(uri, 1, 0, "GlobalConfig");
 }
+
+#include "moc_mediacontrollerplugin.cpp"

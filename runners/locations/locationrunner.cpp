@@ -102,3 +102,5 @@ void LocationsRunner::run(const KRunner::RunnerContext & /*context*/, const KRun
 }
 
 #include "locationrunner.moc"
+
+#include "moc_locationrunner.cpp"

@@ -149,3 +149,5 @@ void CoreCompositor::warnIfNotLockedByThread(const char *caller)
 }
 
 } // namespace MockCompositor
+
+#include "moc_corecompositor.cpp"

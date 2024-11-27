@@ -734,3 +734,5 @@ QStringList AdvancedWidget::wmClasses() const
 {
     return m_editListBox->items();
 }
+
+#include "moc_configdialog.cpp"

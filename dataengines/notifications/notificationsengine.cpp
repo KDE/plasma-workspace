@@ -238,3 +238,5 @@ NotificationInhibitonPtr NotificationsEngine::createInhibition(const QString &hi
 K_PLUGIN_CLASS_WITH_JSON(NotificationsEngine, "plasma-dataengine-notifications.json")
 
 #include "notificationsengine.moc"
+
+#include "moc_notificationsengine.cpp"

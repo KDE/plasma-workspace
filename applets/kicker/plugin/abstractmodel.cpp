@@ -150,3 +150,5 @@ void AbstractModel::entryChanged(AbstractEntry *entry)
 {
     Q_UNUSED(entry)
 }
+
+#include "moc_abstractmodel.cpp"

@@ -126,3 +126,5 @@ void Chrome::teardown()
         profileBookmarks->tearDown();
     }
 }
+
+#include "moc_chrome.cpp"

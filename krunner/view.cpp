@@ -272,3 +272,5 @@ void View::setPinned(bool pinned)
         Q_EMIT pinnedChanged();
     }
 }
+
+#include "moc_view.cpp"

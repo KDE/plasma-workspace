@@ -22,3 +22,5 @@ Plasma5Support::ServiceJob *JobControl::createJob(const QString &operation, QMap
 {
     return new JobAction(m_job, operation, parameters, this);
 }
+
+#include "moc_jobcontrol.cpp"

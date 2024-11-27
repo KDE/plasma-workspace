@@ -105,3 +105,5 @@ bool GtkPage::isSaveNeeded()
 {
     return m_gtkThemesModel->selectedTheme() != m_gtkConfigInterface.gtkTheme();
 }
+
+#include "moc_gtkpage.cpp"

@@ -514,3 +514,5 @@ QVariant NotificationGroupingProxyModel::data(const QModelIndex &proxyIndex, int
 
     return sourceIndex.data(role);
 }
+
+#include "moc_notificationgroupingproxymodel_p.cpp"

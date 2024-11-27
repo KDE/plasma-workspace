@@ -53,3 +53,5 @@ QString SectionsModel::lastSection() const
     Q_ASSERT(!m_data.empty());
     return m_data.constLast().section;
 }
+
+#include "moc_sectionsmodel.cpp"

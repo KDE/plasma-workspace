@@ -344,3 +344,5 @@ QString Finger::internalName() const
 {
     return m_internalName;
 }
+
+#include "moc_fingerprintmodel.cpp"

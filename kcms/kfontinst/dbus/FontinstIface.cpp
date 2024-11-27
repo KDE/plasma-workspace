@@ -23,3 +23,5 @@ OrgKdeFontinstInterface::OrgKdeFontinstInterface(const QString &service, const Q
 OrgKdeFontinstInterface::~OrgKdeFontinstInterface()
 {
 }
+
+#include "moc_FontinstIface.cpp"

@@ -43,3 +43,5 @@ QModelIndex FlattenTaskGroupsProxyModel::mapIfaceToSource(const QModelIndex &ind
 }
 
 }
+
+#include "moc_flattentaskgroupsproxymodel.cpp"

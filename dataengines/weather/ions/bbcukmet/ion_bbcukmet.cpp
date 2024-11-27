@@ -742,3 +742,5 @@ void UKMETIon::dataUpdated(const QString &sourceName, const Plasma5Support::Data
 K_PLUGIN_CLASS_WITH_JSON(UKMETIon, "ion-bbcukmet.json")
 
 #include "ion_bbcukmet.moc"
+
+#include "moc_ion_bbcukmet.cpp"

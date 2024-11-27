@@ -98,3 +98,5 @@ QHash<int, QByteArray> BinaryDialectModel::roleNames() const
                                                  {Description, QByteArrayLiteral("description")}};
     return roles;
 }
+
+#include "moc_binarydialectmodel.cpp"

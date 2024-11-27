@@ -82,3 +82,5 @@ void DragHelper::startDrag(QQuickItem *item, const QUrl &url, const QPixmap &pix
         },
         Qt::QueuedConnection);
 }
+
+#include "moc_draghelper.cpp"

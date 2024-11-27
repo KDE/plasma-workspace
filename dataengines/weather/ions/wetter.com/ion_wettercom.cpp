@@ -767,3 +767,5 @@ int WeatherData::ForecastPeriod::getMinTemp(const QList<WeatherData::ForecastInf
 K_PLUGIN_CLASS_WITH_JSON(WetterComIon, "ion-wettercom.json")
 
 #include "ion_wettercom.moc"
+
+#include "moc_ion_wettercom.cpp"

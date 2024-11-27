@@ -1295,3 +1295,5 @@ QList<QUuid> WaylandTasksModel::winIdsFromMimeData(const QMimeData *mimeData, bo
 }
 
 #include "waylandtasksmodel.moc"
+
+#include "moc_waylandtasksmodel.cpp"

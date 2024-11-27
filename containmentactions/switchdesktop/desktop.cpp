@@ -117,3 +117,5 @@ void SwitchDesktop::performPreviousAction()
 K_PLUGIN_CLASS_WITH_JSON(SwitchDesktop, "plasma-containmentactions-switchdesktop.json")
 
 #include "desktop.moc"
+
+#include "moc_desktop.cpp"

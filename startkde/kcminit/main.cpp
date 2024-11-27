@@ -182,3 +182,5 @@ int main(int argc, char *argv[])
     KCMInit kcminit(parser);
     return 0;
 }
+
+#include "moc_main.cpp"

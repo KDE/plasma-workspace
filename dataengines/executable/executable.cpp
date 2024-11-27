@@ -63,3 +63,5 @@ bool ExecutableEngine::sourceRequestEvent(const QString &source)
 K_PLUGIN_CLASS_WITH_JSON(ExecutableEngine, "plasma-dataengine-executable.json")
 
 #include "executable.moc"
+
+#include "moc_executable.cpp"

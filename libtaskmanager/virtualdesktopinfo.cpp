@@ -596,3 +596,5 @@ bool VirtualDesktopInfo::navigationWrappingAround() const
 }
 
 #include "virtualdesktopinfo.moc"
+
+#include "moc_virtualdesktopinfo.cpp"

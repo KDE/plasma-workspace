@@ -127,3 +127,5 @@ void KillRunner::run(const KRunner::RunnerContext & /*context*/, const KRunner::
 }
 
 #include "killrunner.moc"
+
+#include "moc_killrunner.cpp"

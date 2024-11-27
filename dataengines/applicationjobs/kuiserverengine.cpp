@@ -260,3 +260,5 @@ void KuiserverEngine::updateEta(Job *job)
 K_PLUGIN_CLASS_WITH_JSON(KuiserverEngine, "plasma-dataengine-applicationjobs.json")
 
 #include "kuiserverengine.moc"
+
+#include "moc_kuiserverengine.cpp"

@@ -28,3 +28,5 @@ PlasmaQuick::AppletQuickItem *PanelSpacer::containmentGraphicObject() const
 K_PLUGIN_CLASS(PanelSpacer)
 
 #include "panelspacer.moc"
+
+#include "moc_panelspacer.cpp"

@@ -184,3 +184,5 @@ void FreeSpaceNotifier::resetLastAvailable()
     m_lastAvailTimer->deleteLater();
     m_lastAvailTimer = nullptr;
 }
+
+#include "moc_freespacenotifier.cpp"

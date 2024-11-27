@@ -331,3 +331,5 @@ void Osd::hideOsd()
 
     m_screenBrightnessInfo.clear();
 }
+
+#include "moc_osd.cpp"

@@ -156,3 +156,5 @@ void Thumbnailer::generatePreview()
 
     job->start();
 }
+
+#include "moc_thumbnailer.cpp"

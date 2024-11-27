@@ -566,3 +566,5 @@ void DesktopView::setAccentColorFromWallpaper(const QColor &accentColor)
     applyAccentColor << accentColor.rgba();
     QDBusConnection::sessionBus().send(applyAccentColor);
 }
+
+#include "moc_desktopview.cpp"

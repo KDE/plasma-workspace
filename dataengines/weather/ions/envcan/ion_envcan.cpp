@@ -1585,3 +1585,5 @@ void EnvCanadaIon::dataUpdated(const QString &sourceName, const Plasma5Support::
 K_PLUGIN_CLASS_WITH_JSON(EnvCanadaIon, "ion-envcan.json")
 
 #include "ion_envcan.moc"
+
+#include "moc_ion_envcan.cpp"

@@ -202,3 +202,5 @@ QString PlasmaAutostart::startAfter() const
 {
     return df->desktopGroup().readEntry("X-KDE-autostart-after");
 }
+
+#include "moc_plasmaautostart.cpp"

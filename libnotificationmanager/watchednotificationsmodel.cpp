@@ -167,3 +167,5 @@ bool WatchedNotificationsModel::valid()
 }
 
 #include "watchednotificationsmodel.moc"
+
+#include "moc_watchednotificationsmodel.cpp"

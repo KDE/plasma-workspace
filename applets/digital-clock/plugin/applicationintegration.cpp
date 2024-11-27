@@ -31,3 +31,5 @@ void ApplicationIntegration::launchCalendar() const
     auto job = new KIO::ApplicationLauncherJob(m_calendarService);
     job->start();
 }
+
+#include "moc_applicationintegration.cpp"

@@ -57,3 +57,5 @@ void XdgOutputV1::addResource(wl_client *client, int id, int version)
 }
 
 } // namespace MockCompositor
+
+#include "moc_xdgoutputv1.cpp"

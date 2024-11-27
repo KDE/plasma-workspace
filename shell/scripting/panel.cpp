@@ -400,3 +400,5 @@ void Panel::setOpacity(const QString &mode)
     }
 }
 }
+
+#include "moc_panel.cpp"

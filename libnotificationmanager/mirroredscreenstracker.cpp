@@ -76,3 +76,5 @@ void MirroredScreensTracker::checkScreensMirrored()
 
     setScreensMirrored(false);
 }
+
+#include "moc_mirroredscreenstracker_p.cpp"

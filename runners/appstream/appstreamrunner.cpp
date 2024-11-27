@@ -163,3 +163,5 @@ QList<AppStream::Component> InstallerRunner::findComponentsByString(const QStrin
 }
 
 #include "appstreamrunner.moc"
+
+#include "moc_appstreamrunner.cpp"

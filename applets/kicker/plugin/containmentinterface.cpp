@@ -252,3 +252,5 @@ Plasma::Applet *ContainmentInterface::findTaskManagerApplet(Plasma::Containment 
     });
     return found != applets.cend() ? *found : nullptr;
 }
+
+#include "moc_containmentinterface.cpp"

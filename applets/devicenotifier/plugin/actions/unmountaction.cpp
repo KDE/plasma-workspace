@@ -84,3 +84,5 @@ void UnmountAction::updateIsValid(const QString &udi)
 
     Q_EMIT isValidChanged(name(), isValid());
 }
+
+#include "moc_unmountaction.cpp"

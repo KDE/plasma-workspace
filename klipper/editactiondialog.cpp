@@ -406,3 +406,5 @@ void EditActionDialog::onSelectionChanged()
     m_removeCommandPb->setEnabled(itemIsSelected);
     m_editCommandPb->setEnabled(itemIsSelected);
 }
+
+#include "moc_editactiondialog.cpp"

@@ -291,3 +291,5 @@ bool QalculateEngine::isKnownFunction(const QString &str)
 {
     return CALCULATOR->getFunction(str.toLocal8Bit().constData()) != nullptr;
 }
+
+#include "moc_qalculate_engine.cpp"

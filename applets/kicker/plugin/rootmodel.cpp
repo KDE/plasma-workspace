@@ -433,3 +433,5 @@ void RootModel::refresh()
 
     Q_EMIT refreshed();
 }
+
+#include "moc_rootmodel.cpp"

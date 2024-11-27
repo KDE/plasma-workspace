@@ -32,3 +32,5 @@ QString SystemSettings::picturesLocation() const
 
     return path;
 }
+
+#include "moc_systemsettings.cpp"

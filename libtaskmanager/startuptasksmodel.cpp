@@ -93,3 +93,5 @@ QModelIndex StartupTasksModel::mapIfaceToSource(const QModelIndex &index) const
 }
 
 }
+
+#include "moc_startuptasksmodel.cpp"

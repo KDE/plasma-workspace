@@ -173,3 +173,5 @@ void KTimeZoned::zonetabChanged()
 
 #include "ktimezoned.moc"
 #include "moc_ktimezonedbase.cpp"
+
+#include "moc_ktimezoned.cpp"

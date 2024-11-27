@@ -137,3 +137,5 @@ void NotificationApplet::forceActivateWindow(QWindow *window)
 K_PLUGIN_CLASS(NotificationApplet)
 
 #include "notificationapplet.moc"
+
+#include "moc_notificationapplet.cpp"

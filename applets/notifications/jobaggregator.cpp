@@ -118,3 +118,5 @@ void JobAggregator::update()
         Q_EMIT percentageChanged();
     }
 }
+
+#include "moc_jobaggregator.cpp"

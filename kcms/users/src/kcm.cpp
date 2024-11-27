@@ -159,3 +159,5 @@ void KCMUser::load()
 }
 
 #include "kcm.moc"
+
+#include "moc_kcm.cpp"

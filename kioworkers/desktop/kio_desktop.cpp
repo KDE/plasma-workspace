@@ -240,3 +240,5 @@ KIO::WorkerResult DesktopProtocol::fileSystemFreeSpace(const QUrl &url)
 }
 
 #include "kio_desktop.moc"
+
+#include "moc_kio_desktop.cpp"

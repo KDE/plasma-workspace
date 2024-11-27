@@ -208,3 +208,5 @@ void ConfigGroup::sync()
         d->configGroup->sync();
     }
 }
+
+#include "moc_configgroup.cpp"

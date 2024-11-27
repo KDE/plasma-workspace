@@ -464,3 +464,5 @@ bool TaskFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &so
 }
 
 }
+
+#include "moc_taskfilterproxymodel.cpp"

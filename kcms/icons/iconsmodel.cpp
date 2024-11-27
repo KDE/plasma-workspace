@@ -174,3 +174,5 @@ void IconsModel::removeItemsPendingDeletion()
         }
     }
 }
+
+#include "moc_iconsmodel.cpp"

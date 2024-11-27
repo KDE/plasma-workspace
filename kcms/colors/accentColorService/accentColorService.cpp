@@ -55,3 +55,5 @@ void AccentColorService::setAccentColor(unsigned accentColor)
 }
 
 #include "accentColorService.moc"
+
+#include "moc_accentColorService.cpp"

@@ -23,3 +23,5 @@ QModelIndex ConcatenateTasksProxyModel::mapIfaceToSource(const QModelIndex &inde
 }
 
 }
+
+#include "moc_concatenatetasksproxymodel.cpp"

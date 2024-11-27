@@ -238,3 +238,5 @@ bool RunnerMatchesModel::trigger(int row, const QString &actionId, const QVarian
 
     return false;
 }
+
+#include "moc_runnermatchesmodel.cpp"

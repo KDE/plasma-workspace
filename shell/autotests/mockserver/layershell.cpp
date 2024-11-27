@@ -76,3 +76,5 @@ LayerSurface::LayerSurface(LayerShell *shell, Surface *surface, Output *output, 
 }
 
 } // namespace MockCompositor
+
+#include "moc_layershell.cpp"

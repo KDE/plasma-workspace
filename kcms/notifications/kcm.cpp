@@ -387,3 +387,5 @@ void KCMNotifications::playSound(const QString &soundName)
 }
 
 #include "kcm.moc"
+
+#include "moc_kcm.cpp"

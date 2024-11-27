@@ -149,3 +149,5 @@ QHash<QByteArray, QVariant> KdePlatformPlugin::objectDescriptionProperties(Objec
 }
 
 } // namespace Phonon
+
+#include "moc_kdeplatformplugin.cpp"

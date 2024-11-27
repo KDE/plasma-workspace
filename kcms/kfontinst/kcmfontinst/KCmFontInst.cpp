@@ -1178,3 +1178,5 @@ void CKCmFontInst::doCmd(CJobRunner::ECommand cmd, const CJobRunner::ItemList &u
 }
 
 #include "KCmFontInst.moc"
+
+#include "moc_KCmFontInst.cpp"

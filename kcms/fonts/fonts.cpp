@@ -249,3 +249,5 @@ void KFonts::setHintingCurrentIndex(int idx)
 }
 
 #include "fonts.moc"
+
+#include "moc_fonts.cpp"

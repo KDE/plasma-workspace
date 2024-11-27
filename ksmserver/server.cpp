@@ -1119,3 +1119,5 @@ void KSMServer::openSwitchUserDialog()
     OrgKdeScreensaverInterface iface(QStringLiteral("org.freedesktop.ScreenSaver"), QStringLiteral("/ScreenSaver"), QDBusConnection::sessionBus());
     iface.SwitchUser();
 }
+
+#include "moc_server.cpp"

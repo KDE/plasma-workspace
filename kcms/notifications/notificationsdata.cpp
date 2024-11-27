@@ -108,3 +108,5 @@ bool NotificationsData::isDefaults() const
 {
     return KCModuleData::isDefaults() && isDefaultsBehaviorSettings();
 }
+
+#include "moc_notificationsdata.cpp"

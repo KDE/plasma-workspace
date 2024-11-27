@@ -71,3 +71,5 @@ void TimeZonesI18n::init()
 
     m_isInitialized = true;
 }
+
+#include "moc_timezonesi18n.cpp"

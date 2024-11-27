@@ -213,3 +213,5 @@ bool NotificationGroupCollapsingProxyModel::filterAcceptsRow(int source_row, con
 
     return true;
 }
+
+#include "moc_notificationgroupcollapsingproxymodel_p.cpp"

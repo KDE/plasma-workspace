@@ -77,3 +77,5 @@ void WindowSystem::monitoredWindowVisibilityChanged(QWindow::Visibility visibili
         Q_EMIT hidden(w);
     }
 }
+
+#include "moc_windowsystem.cpp"

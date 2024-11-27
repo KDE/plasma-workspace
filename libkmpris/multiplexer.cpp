@@ -165,3 +165,5 @@ void Multiplexer::evaluatePlayers()
 
     // If there was an active player and currently there is no player that is playing, keep the previous selection
 }
+
+#include "moc_multiplexer.cpp"

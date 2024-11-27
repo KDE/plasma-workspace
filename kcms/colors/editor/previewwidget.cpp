@@ -142,3 +142,5 @@ void PreviewWidget::setPalette(const KSharedConfigPtr &config, QPalette::ColorGr
     ADJUST_WIDGET_FOREGROUND(labelSelection6, HighlightedText, Selection, NeutralText);
     ADJUST_WIDGET_FOREGROUND(labelSelection7, HighlightedText, Selection, PositiveText);
 }
+
+#include "moc_previewwidget.cpp"

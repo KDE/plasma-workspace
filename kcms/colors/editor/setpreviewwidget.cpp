@@ -116,3 +116,5 @@ void SetPreviewWidget::setPalette(const KSharedConfigPtr &config, KColorScheme::
     SET_DECO_PALETTE(8, HoverColor);
     SET_DECO_PALETTE(9, FocusColor);
 }
+
+#include "moc_setpreviewwidget.cpp"

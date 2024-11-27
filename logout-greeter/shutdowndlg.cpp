@@ -404,3 +404,5 @@ void KSMShutdownDlg::reject()
 {
     Q_EMIT rejected();
 }
+
+#include "moc_shutdowndlg.cpp"

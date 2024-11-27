@@ -227,3 +227,5 @@ void TimeZoneModel::sortTimeZones()
         return m_offsetData.value(a) < m_offsetData.value(b);
     });
 }
+
+#include "moc_timezonemodel.cpp"

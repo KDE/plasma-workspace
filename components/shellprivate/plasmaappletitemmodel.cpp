@@ -523,3 +523,5 @@ QString &PlasmaAppletItemModel::Application()
 }
 
 // #include <plasmaappletitemmodel_p.moc>
+
+#include "moc_plasmaappletitemmodel_p.cpp"

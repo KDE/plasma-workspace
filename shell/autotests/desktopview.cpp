@@ -36,3 +36,5 @@ QScreen *DesktopView::screenToFollow() const
 {
     return m_screenToFollow;
 }
+
+#include "moc_desktopview.cpp"

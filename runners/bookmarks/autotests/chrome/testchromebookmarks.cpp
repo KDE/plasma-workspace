@@ -105,3 +105,5 @@ void TestChromeBookmarks::itShouldFindBookmarksFromAllProfiles()
 }
 
 QTEST_MAIN(TestChromeBookmarks);
+
+#include "moc_testchromebookmarks.cpp"

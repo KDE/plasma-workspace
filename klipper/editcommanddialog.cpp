@@ -183,3 +183,5 @@ void EditCommandDialog::slotAccepted()
     KWindowConfig::saveWindowSize(windowHandle(), grp);
     accept();
 }
+
+#include "moc_editcommanddialog.cpp"

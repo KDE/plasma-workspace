@@ -60,3 +60,5 @@ SignalHandler *SignalHandler::self()
     static SignalHandler s_self;
     return &s_self;
 }
+
+#include "moc_signalhandler.cpp"

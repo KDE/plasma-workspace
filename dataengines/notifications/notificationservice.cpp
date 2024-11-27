@@ -20,3 +20,5 @@ Plasma5Support::ServiceJob *NotificationService::createJob(const QString &operat
 {
     return new NotificationAction(m_notificationEngine, destination(), operation, parameters, this);
 }
+
+#include "moc_notificationservice.cpp"

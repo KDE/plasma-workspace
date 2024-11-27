@@ -446,3 +446,5 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     hash.insert(TypeIntRole, QByteArrayLiteral("type"));
     return hash;
 }
+
+#include "moc_historymodel.cpp"

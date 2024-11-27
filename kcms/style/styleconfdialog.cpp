@@ -60,3 +60,5 @@ void StyleConfigDialog::setMainWidget(QWidget *w)
 {
     mMainLayout->addWidget(w);
 }
+
+#include "moc_styleconfdialog.cpp"

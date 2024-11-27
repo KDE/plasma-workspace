@@ -374,3 +374,5 @@ void WaylandOutputOrderWatcher::refresh()
 }
 
 #include "outputorderwatcher.moc"
+
+#include "moc_outputorderwatcher.cpp"

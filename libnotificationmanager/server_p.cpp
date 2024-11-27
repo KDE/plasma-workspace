@@ -548,3 +548,5 @@ void ServerPrivate::InvokeAction(uint id, const QString &actionKey)
 {
     Q_EMIT ActionInvoked(id, actionKey);
 }
+
+#include "moc_server_p.cpp"

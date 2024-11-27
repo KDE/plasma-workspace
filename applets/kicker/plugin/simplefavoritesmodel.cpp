@@ -328,3 +328,5 @@ AbstractEntry *SimpleFavoritesModel::favoriteFromId(const QString &id)
 
     return nullptr;
 }
+
+#include "moc_simplefavoritesmodel.cpp"

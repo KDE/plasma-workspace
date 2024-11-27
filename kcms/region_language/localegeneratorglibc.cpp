@@ -41,3 +41,5 @@ void LocaleGeneratorGlibc::localesGenerate(const QStringList &list)
         watcher->deleteLater();
     });
 }
+
+#include "moc_localegeneratorglibc.cpp"

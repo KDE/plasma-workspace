@@ -618,3 +618,5 @@ bool DWDIon::isNightTime(const WeatherData &weatherData) const
 K_PLUGIN_CLASS_WITH_JSON(DWDIon, "ion-dwd.json")
 
 #include "ion_dwd.moc"
+
+#include "moc_ion_dwd.cpp"

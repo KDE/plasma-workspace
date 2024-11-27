@@ -385,3 +385,5 @@ QString OptionsModel::getNativeName(const QString &locale) const
     }
     return nativeName;
 }
+
+#include "moc_optionsmodel.cpp"

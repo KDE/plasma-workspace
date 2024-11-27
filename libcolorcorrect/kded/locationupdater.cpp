@@ -71,3 +71,5 @@ void LocationUpdater::disableSelf()
 }
 
 #include "locationupdater.moc"
+
+#include "moc_locationupdater.cpp"

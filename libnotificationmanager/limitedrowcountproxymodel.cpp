@@ -62,3 +62,5 @@ bool LimitedRowCountProxyModel::filterAcceptsRow(int source_row, const QModelInd
 
     return true;
 }
+
+#include "moc_limitedrowcountproxymodel_p.cpp"

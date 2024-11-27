@@ -248,3 +248,5 @@ int WaylandStartupTasksModel::rowCount(const QModelIndex &parent) const
 } // namespace TaskManager
 
 #include "waylandstartuptasksmodel.moc"
+
+#include "moc_waylandstartuptasksmodel.cpp"

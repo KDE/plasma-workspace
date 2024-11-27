@@ -12,3 +12,5 @@ void LocaleGeneratorBase::localesGenerate(const QStringList &list)
     Q_UNUSED(list)
     Q_EMIT userHasToGenerateManually(defaultManuallyGenerateMessage());
 }
+
+#include "moc_localegeneratorbase.cpp"

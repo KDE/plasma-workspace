@@ -11,3 +11,5 @@ KickerCompatTriangleMouseFilter::KickerCompatTriangleMouseFilter(QQuickItem *par
 {
     setProperty("blockFirstEnter", true);
 }
+
+#include "moc_kickercompattrianglemousefilter.cpp"

@@ -633,3 +633,5 @@ QList<AutostartEntry> AutostartModel::sortedEntries(const QList<AutostartEntry> 
 
     return sortedEntries;
 }
+
+#include "moc_autostartmodel.cpp"

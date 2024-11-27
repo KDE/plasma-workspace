@@ -164,3 +164,5 @@ void SolidUiServer::reparentDialog(QWidget *dialog, WId wId, const QString &appI
 }
 
 #include "soliduiserver.moc"
+
+#include "moc_soliduiserver.cpp"

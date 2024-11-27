@@ -74,3 +74,5 @@ void FreeSpaceNotifierModule::showConfiguration()
 }
 
 #include "module.moc"
+
+#include "moc_module.cpp"

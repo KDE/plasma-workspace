@@ -196,3 +196,5 @@ void Shutdown::runShutdownScripts()
         }
     }
 }
+
+#include "moc_shutdown.cpp"

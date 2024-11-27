@@ -20,3 +20,5 @@ VerticalMenu::VerticalMenu(QWidget *parent)
 VerticalMenu::~VerticalMenu()
 {
 }
+
+#include "moc_verticalmenu.cpp"

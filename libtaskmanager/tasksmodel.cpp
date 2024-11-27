@@ -2068,3 +2068,5 @@ std::shared_ptr<ActivityInfo> TasksModel::activityInfo() const
     return s_activityInfo.lock();
 }
 }
+
+#include "moc_tasksmodel.cpp"

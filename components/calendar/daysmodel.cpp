@@ -454,3 +454,5 @@ QModelIndex DaysModel::parent(const QModelIndex &child) const
     }
     return QModelIndex();
 }
+
+#include "moc_daysmodel.cpp"

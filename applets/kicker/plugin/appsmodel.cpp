@@ -774,3 +774,5 @@ void AppsModel::componentComplete()
         refresh();
     }
 }
+
+#include "moc_appsmodel.cpp"

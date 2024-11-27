@@ -102,3 +102,5 @@ QString ScreencastingRequest::outputName() const
 {
     return m_outputName;
 }
+
+#include "moc_screencastingrequest.cpp"

@@ -54,3 +54,5 @@ SoftwareRendererNotifier::SoftwareRendererNotifier(QObject *parent)
 }
 
 SoftwareRendererNotifier::~SoftwareRendererNotifier() = default;
+
+#include "moc_softwarerendernotifier.cpp"

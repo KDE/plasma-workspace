@@ -165,3 +165,5 @@ void PlasmoidRegistry::sanitizeSettings()
         }
     }
 }
+
+#include "moc_plasmoidregistry.cpp"

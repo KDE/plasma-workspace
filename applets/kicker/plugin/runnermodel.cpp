@@ -241,3 +241,5 @@ void RunnerModel::initializeModels()
     endResetModel();
     Q_EMIT countChanged();
 }
+
+#include "moc_runnermodel.cpp"

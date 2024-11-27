@@ -178,3 +178,5 @@ void SearchRunner::Run(const QString &id, const QString &actionId)
     job->setShowOpenOrExecuteDialog(true);
     job->start();
 }
+
+#include "moc_baloosearchrunner.cpp"

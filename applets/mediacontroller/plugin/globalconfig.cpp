@@ -31,3 +31,5 @@ int GlobalConfig::volumeStep() const
 {
     return m_volumeStep;
 }
+
+#include "moc_globalconfig.cpp"

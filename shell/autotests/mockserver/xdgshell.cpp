@@ -243,3 +243,5 @@ void XdgPopup::xdg_popup_destroy(Resource *resource)
 }
 
 } // namespace MockCompositor
+
+#include "moc_xdgshell.cpp"

@@ -359,3 +359,5 @@ void PlaceholderModel::setDropPlaceholderIndex(int index)
 
     Q_EMIT dropPlaceholderIndexChanged();
 }
+
+#include "moc_placeholdermodel.cpp"

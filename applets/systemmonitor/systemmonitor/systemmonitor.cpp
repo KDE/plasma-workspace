@@ -77,3 +77,5 @@ void SystemMonitor::openSystemMonitor()
 K_PLUGIN_CLASS(SystemMonitor)
 
 #include "systemmonitor.moc"
+
+#include "moc_systemmonitor.cpp"

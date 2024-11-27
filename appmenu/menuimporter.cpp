@@ -98,3 +98,5 @@ void MenuImporter::slotServiceUnregistered(const QString &service)
     Q_EMIT WindowUnregistered(id);
     m_serviceWatcher->removeWatchedService(service);
 }
+
+#include "moc_menuimporter.cpp"
