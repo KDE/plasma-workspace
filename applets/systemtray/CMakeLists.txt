@@ -38,7 +38,7 @@ target_link_libraries(systemtray_static
     PUBLIC
         Qt::DBus
         Qt::Gui
-        Qt${QT_VERSION_MAJOR}::GuiPrivate
+        Qt::GuiPrivate
         Qt::Quick
         KF6::ConfigCore
         KF6::IconThemes
