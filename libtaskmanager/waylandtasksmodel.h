@@ -16,10 +16,8 @@ namespace KWayland
 {
 namespace Client
 {
-class PlasmaWindowManagement;
 class Surface;
 }
-
 }
 
 namespace TaskManager

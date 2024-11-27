@@ -19,7 +19,6 @@
 namespace Plasma
 {
 class Applet;
-class PluginLoader;
 }
 
 class PlasmoidRegistry;

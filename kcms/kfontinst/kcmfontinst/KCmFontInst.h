@@ -17,7 +17,6 @@
 class QPushButton;
 class QProgressDialog;
 class QTemporaryDir;
-class QAction;
 class QLabel;
 class QMenu;
 class QProcess;

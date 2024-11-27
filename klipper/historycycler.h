@@ -15,7 +15,6 @@
 
 class HistoryItem;
 class HistoryModel;
-class QAction;
 
 class KLIPPER_EXPORT HistoryCycler : public QObject
 {

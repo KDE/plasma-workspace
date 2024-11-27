@@ -20,9 +20,7 @@ class KJob;
 namespace KIO
 {
 class Job;
-class TransferJob;
 }
-class QXmlStreamReader;
 
 class WeatherData
 {

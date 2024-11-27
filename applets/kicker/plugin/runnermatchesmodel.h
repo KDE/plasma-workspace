@@ -14,11 +14,6 @@
 #include <PlasmaActivities/Consumer>
 #include <optional>
 
-namespace KRunner
-{
-class RunnerManager;
-}
-
 class AbstractModel;
 
 class RunnerMatchesModel : public KRunner::ResultsModel

@@ -9,7 +9,6 @@
 
 #include "klipper_export.h"
 
-class HistoryModel;
 class QString;
 class QMimeData;
 class QDataStream;

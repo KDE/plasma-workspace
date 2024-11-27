@@ -22,12 +22,12 @@
 #include <qevent.h>
 
 class PanelView;
+class PanelConfigView;
 
 namespace Plasma
 {
 class Containment;
 }
-
 class PanelRulerView : public PlasmaQuick::PlasmaWindow
 {
     Q_OBJECT

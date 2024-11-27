@@ -14,7 +14,6 @@
 #include "cursorthemesettings.h"
 #include "launchfeedbacksettings.h"
 
-class QQmlListReference;
 class QStandardItemModel;
 class QTemporaryFile;
 

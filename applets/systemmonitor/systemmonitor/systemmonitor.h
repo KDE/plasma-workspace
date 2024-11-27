@@ -14,15 +14,12 @@
 
 #include <faces/SensorFaceController.h>
 
-class ApplicationListModel;
 class QQuickItem;
 
 namespace KSysGuard
 {
 class SensorFace;
 }
-
-class KConfigLoader;
 
 class SystemMonitor : public Plasma::Applet
 {

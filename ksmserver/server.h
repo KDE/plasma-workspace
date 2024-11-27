@@ -32,8 +32,6 @@ extern "C" {
 #include <KConfigGroup>
 #include <kworkspace.h>
 
-class KProcess;
-
 class KSMListener;
 class KSMConnection;
 class KSMClient;

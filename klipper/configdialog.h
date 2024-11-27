@@ -16,7 +16,6 @@ class KShortcutsEditor;
 class Klipper;
 class KEditListWidget;
 class KActionCollection;
-class EditActionDialog;
 class QCheckBox;
 class QRadioButton;
 class QSpinBox;

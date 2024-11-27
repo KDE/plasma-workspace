@@ -14,7 +14,6 @@
 
 #include "daysmodel.h"
 
-class QAbstractItemModel;
 class CalendarPrivate;
 
 class Calendar : public QObject

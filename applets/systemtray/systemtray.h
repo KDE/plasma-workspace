@@ -13,13 +13,10 @@
 
 #include <Plasma/Containment>
 
-class QDBusPendingCallWatcher;
-class QDBusServiceWatcher;
 class QQuickItem;
 
 namespace Plasma
 {
-class Service;
 }
 class PlasmoidRegistry;
 class PlasmoidModel;

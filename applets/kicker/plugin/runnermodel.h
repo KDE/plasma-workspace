@@ -15,11 +15,6 @@
 #include <QAbstractListModel>
 #include <QTimer>
 
-namespace KRunner
-{
-class RunnerManager;
-}
-
 class AbstractModel;
 class RunnerMatchesModel;
 

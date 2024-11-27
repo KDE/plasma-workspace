@@ -13,8 +13,6 @@
 
 #include "dbuserror.h"
 
-class QDBusPendingCallWatcher;
-
 namespace Plasma
 {
 class DBusConnection;

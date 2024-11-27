@@ -23,7 +23,6 @@
 
 class AutoHideScreenEdge;
 class ShellCorona;
-class PanelConfigView;
 
 namespace LayerShellQt
 {

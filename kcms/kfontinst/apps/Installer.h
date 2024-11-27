@@ -8,7 +8,6 @@
 #include <QSet>
 #include <QUrl>
 
-class QWidget;
 class QTemporaryDir;
 
 namespace KFI

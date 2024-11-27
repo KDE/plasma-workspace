@@ -12,9 +12,6 @@
 
 class OrgFreedesktopAccountsInterface;
 
-class QQuickView;
-class QQuickItemGrabResult;
-
 class KCMUser : public KQuickConfigModule
 {
     Q_OBJECT

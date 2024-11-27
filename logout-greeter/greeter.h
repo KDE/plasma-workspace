@@ -19,7 +19,6 @@
 class KSMShutdownDlg;
 
 class QScreen;
-class QEventLoopLocker;
 
 class Greeter : public QObject
 {

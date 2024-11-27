@@ -22,8 +22,6 @@ class KIconTheme;
 class IconsSettings;
 class IconsData;
 
-class QQuickItem;
-
 namespace KIO
 {
 class FileCopyJob;

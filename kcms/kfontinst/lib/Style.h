@@ -12,7 +12,6 @@
 #include <QSet>
 
 class QDomElement;
-class QTextStream;
 
 namespace KFI
 {

@@ -25,7 +25,6 @@
 #include "lookandfeelmanager.h"
 #include "lookandfeelsettings.h"
 
-class QQuickItem;
 class LookAndFeelManager;
 
 class KCMLookandFeel : public KQuickManagedConfigModule

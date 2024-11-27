@@ -35,11 +35,6 @@ namespace KActivities
 class Controller;
 } // namespace KActivities
 
-namespace KDeclarative
-{
-class QmlObjectSharedEngine;
-} // namespace KDeclarative
-
 namespace KScreen
 {
 class Output;

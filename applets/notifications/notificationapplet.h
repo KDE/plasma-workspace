@@ -11,7 +11,6 @@
 
 #include <Plasma/Applet>
 
-class QString;
 class QRect;
 
 class NotificationApplet : public Plasma::Applet

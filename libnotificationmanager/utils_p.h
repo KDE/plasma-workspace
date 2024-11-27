@@ -10,7 +10,6 @@
 #include <QString>
 
 class QAbstractItemModel;
-class QDBusConnection;
 
 namespace NotificationManager
 {

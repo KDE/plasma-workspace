@@ -22,7 +22,6 @@ class KToggleAction;
 class KActionCollection;
 class KlipperPopup;
 class HistoryCycler;
-class QTime;
 class QAction;
 class QMenu;
 class QMimeData;

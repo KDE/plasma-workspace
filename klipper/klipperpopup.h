@@ -9,7 +9,6 @@
 #include <PlasmaQuick/PlasmaWindow>
 #include <PlasmaQuick/SharedQmlEngine>
 
-class QKeyEvent;
 class QWindow;
 
 class HistoryModel;
@@ -19,7 +18,6 @@ namespace KWayland
 namespace Client
 {
 class PlasmaShell;
-class PlasmaShellSurface;
 }
 }
 

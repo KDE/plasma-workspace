@@ -9,13 +9,6 @@
 #include <Plasma/Applet>
 #include <PlasmaQuick/AppletQuickItem>
 
-namespace Plasma
-{
-class Containment;
-}
-
-class PanelSpacer;
-
 class PanelSpacer : public Plasma::Applet
 {
     Q_OBJECT

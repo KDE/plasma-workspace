@@ -12,7 +12,6 @@
 
 #include <QMap>
 
-class DeviceActionsDialog;
 class KPasswordDialog;
 class QWidget;
 
