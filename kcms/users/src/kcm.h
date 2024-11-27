@@ -20,10 +20,10 @@ class KCMUser : public KQuickConfigModule
     Q_PROPERTY(FingerprintModel *fingerprintModel MEMBER m_fingerprintModel CONSTANT)
 
 private:
-    OrgFreedesktopAccountsInterface *m_dbusInterface;
-    UserModel *m_model;
+    OrgFreedesktopAccountsInterface *const m_dbusInterface;
+    UserModel *const m_model;
     QStringList m_avatarFiles;
-    FingerprintModel *m_fingerprintModel;
+    FingerprintModel *const m_fingerprintModel;
 
 public:
     KCMUser(QObject *parent, const KPluginMetaData &data);

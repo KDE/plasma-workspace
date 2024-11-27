@@ -44,9 +44,9 @@ public:
 private:
     void readBehaviorSettings();
 
-    NotificationManager::DoNotDisturbSettings *m_dndSettings;
-    NotificationManager::NotificationSettings *m_notificationSettings;
-    NotificationManager::JobSettings *m_jobSettings;
-    NotificationManager::BadgeSettings *m_badgeSettings;
+    NotificationManager::DoNotDisturbSettings *const m_dndSettings;
+    NotificationManager::NotificationSettings *const m_notificationSettings;
+    NotificationManager::JobSettings *const m_jobSettings;
+    NotificationManager::BadgeSettings *const m_badgeSettings;
     QHash<int, NotificationManager::BehaviorSettings *> m_behaviorSettingsList;
 };

@@ -50,7 +50,7 @@ Q_SIGNALS:
     void moreThanOneAdminUserChanged();
 
 private:
-    OrgFreedesktopAccountsInterface *m_dbusInterface;
+    OrgFreedesktopAccountsInterface *const m_dbusInterface;
     QList<User *> m_userList;
 
     bool hasMoreThanOneAdminUser() const;

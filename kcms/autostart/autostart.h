@@ -27,5 +27,5 @@ public:
     AutostartModel *model() const;
 
 private:
-    AutostartModel *m_model;
+    AutostartModel *const m_model;
 };

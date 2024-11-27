@@ -122,5 +122,5 @@ private:
 
     FprintDevice *m_device = nullptr;
 
-    NetReactivatedFprintManagerInterface *m_managerDbusInterface;
+    NetReactivatedFprintManagerInterface *const m_managerDbusInterface;
 };

@@ -83,7 +83,7 @@ private:
 
 private:
     ca_context *m_canberraContext = nullptr;
-    SoundThemeData *m_data = nullptr;
+    SoundThemeData *const m_data;
 
     QList<ThemeInfo *> m_themes;
     QString m_playingTheme;
