@@ -63,7 +63,7 @@ void CFontPreview::showFont()
 
     if (!m_image.isNull()) {
         m_lastChar = CFcEngine::TChar();
-        setMouseTracking(m_chars.count() > 0);
+        setMouseTracking(!m_chars.isEmpty());
         update();
         Q_EMIT status(true);
         Q_EMIT atMax(m_engine->atMax());

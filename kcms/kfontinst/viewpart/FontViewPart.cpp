@@ -396,7 +396,7 @@ void CFontViewPart::dbusStatus(int pid, int status)
 void CFontViewPart::fontStat(int pid, const KFI::Family &font)
 {
     if (pid == getpid()) {
-        m_installButton->setEnabled(!Misc::app(KFI_INSTALLER).isEmpty() && font.styles().count() == 0);
+        m_installButton->setEnabled(!Misc::app(KFI_INSTALLER).isEmpty() && font.styles().isEmpty());
     }
 }
 

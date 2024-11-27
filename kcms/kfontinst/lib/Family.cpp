@@ -51,7 +51,7 @@ void Family::toXml(bool disabled, QTextStream &s) const
         }
     }
 
-    if (entries.count() > 0) {
+    if (!entries.isEmpty()) {
         if (!disabled) {
             s << " <"_L1 + FAMILY_TAG + u' ' + NAME_ATTR + "=\""_L1 << KFI::Misc::encodeText(m_name) << "\">\n"_L1;
         }

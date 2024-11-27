@@ -386,7 +386,7 @@ void UKMETIon::search_slotJobFinished(KJob *job)
 
     // Wait until the last search completes before serving the results
     if (m_pendingSearchCount == 0) {
-        if (job->error() == KIO::ERR_SERVER_TIMEOUT && m_locations.count() == 0) {
+        if (job->error() == KIO::ERR_SERVER_TIMEOUT && m_locations.isEmpty()) {
             setData(source, QStringLiteral("validate"), QStringLiteral("bbcukmet|timeout"));
             disconnectSource(source, this);
             return;

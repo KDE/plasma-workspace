@@ -715,7 +715,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
 
         // If the count has changed from 0, the window may no longer be on all virtual
         // desktops.
-        if (window->virtualDesktops.count() > 0) {
+        if (!window->virtualDesktops.isEmpty()) {
             this->dataChanged(window, IsOnAllVirtualDesktops);
         }
     });
@@ -724,7 +724,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         this->dataChanged(window, VirtualDesktops);
 
         // If the count has changed to 0, the window is now on all virtual desktops.
-        if (window->virtualDesktops.count() == 0) {
+        if (window->virtualDesktops.isEmpty()) {
             this->dataChanged(window, IsOnAllVirtualDesktops);
         }
     });

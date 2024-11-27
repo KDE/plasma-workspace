@@ -332,7 +332,7 @@ QList<Containment *> ScriptEngine::desktopsForActivity(const QString &id)
         }
     }
 
-    if (result.count() == 0) {
+    if (result.isEmpty()) {
         // we have no desktops for this activity, so lets make them now
         // this can happen when the activity already exists but has never been activated
         // with the current shell package and layout.js is run to set up the shell for the
