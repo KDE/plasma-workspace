@@ -38,8 +38,8 @@ using namespace std::literals::chrono_literals;
 
 JobsModelPrivate::JobsModelPrivate(QObject *parent)
     : QObject(parent)
-    , m_serviceWatcher(new QDBusServiceWatcher(this))
     , m_compressUpdatesTimer(new QTimer(this))
+    , m_serviceWatcher(new QDBusServiceWatcher(this))
     , m_settings(new Settings(this))
 {
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
