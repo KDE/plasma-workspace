@@ -48,5 +48,5 @@ private:
     KWorkSpace::ShutdownType m_shutdownType = KWorkSpace::ShutdownTypeHalt;
     QList<KSMShutdownDlg *> m_dialogs;
     bool m_windowed = false;
-    KPackage::Package m_package;
+    const KPackage::Package m_package;
 };

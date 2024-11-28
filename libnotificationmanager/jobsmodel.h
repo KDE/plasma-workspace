@@ -79,7 +79,7 @@ private:
     JobsModel();
     Q_DISABLE_COPY(JobsModel)
 
-    JobsModelPrivate *d;
+    JobsModelPrivate *const d;
 };
 
 } // namespace NotificationManager

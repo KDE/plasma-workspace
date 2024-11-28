@@ -78,7 +78,7 @@ public:
     LimitedRowCountProxyModel *limiterModel = nullptr;
 
 private:
-    Notifications *q;
+    Notifications *const q;
 };
 
 Notifications::Private::Private(Notifications *q)

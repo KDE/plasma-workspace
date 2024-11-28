@@ -79,7 +79,7 @@ private:
 
     KSharedConfig::Ptr m_config;
     KConfigLoader *m_configLoader;
-    KActivities::Consumer *m_activityConsumer = nullptr;
+    KActivities::Consumer *const m_activityConsumer;
     OutputOrderWatcher *m_outputOrderWatcher = nullptr;
     WallpaperConfigModel *m_wallpaperConfigModel = nullptr;
     std::unique_ptr<KConfigPropertyMap> m_wallpaperConfiguration = nullptr;

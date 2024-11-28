@@ -63,7 +63,7 @@ private Q_SLOTS:
     void slotServiceUnregistered(const QString &service);
 
 private:
-    QDBusServiceWatcher *m_serviceWatcher;
+    QDBusServiceWatcher *const m_serviceWatcher;
     QHash<WId, QString> m_menuServices;
     QHash<WId, QDBusObjectPath> m_menuPaths;
     QHash<WId, QString> m_windowClasses;

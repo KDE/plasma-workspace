@@ -121,7 +121,7 @@ protected:
 private:
     QRectF candidateGeometry(ItemContainer *item) const;
 
-    AppletsLayout *m_layout;
+    AppletsLayout *const m_layout;
 
     // size in pixels of a crid cell
     QSizeF m_cellSize;

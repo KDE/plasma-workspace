@@ -21,5 +21,5 @@ protected:
     Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;
 
 private:
-    NotificationsEngine *m_notificationEngine;
+    NotificationsEngine *const m_notificationEngine;
 };

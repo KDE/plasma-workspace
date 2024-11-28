@@ -112,9 +112,9 @@ private:
 
     void installSchemeFile(const QString &path);
 
-    ColorsModel *m_model;
-    FilterProxyModel *m_filteredModel;
-    ColorsData *m_data;
+    ColorsModel *const m_model;
+    FilterProxyModel *const m_filteredModel;
+    ColorsData *const m_data;
 
     bool m_selectedSchemeDirty = false;
     bool m_activeSchemeEdited = false;

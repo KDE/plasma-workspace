@@ -130,7 +130,7 @@ public:
     }
 
 private:
-    EventPluginsManagerPrivate *d;
+    EventPluginsManagerPrivate *const d;
     QHash<int, QByteArray> m_roles;
 };
 

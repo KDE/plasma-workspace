@@ -86,8 +86,8 @@ private:
     void loadSettingsToModel();
     void checkGtkConfigKdedModuleLoaded();
 
-    StyleData *m_data;
-    StylesModel *m_model;
+    StyleData *const m_data;
+    StylesModel *const m_model;
 
     QString m_previousStyle;
     bool m_effectsDirty = false;

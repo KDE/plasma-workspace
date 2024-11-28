@@ -68,7 +68,7 @@ Q_SIGNALS:
 private:
     QFont applyFontDiff(const QFont &fnt, const QFont &newFont, int fontDiffFlags);
 
-    FontsData *m_data;
-    QStandardItemModel *m_subPixelOptionsModel;
-    QStandardItemModel *m_hintingOptionsModel;
+    FontsData *const m_data;
+    QStandardItemModel *const m_subPixelOptionsModel;
+    QStandardItemModel *const m_hintingOptionsModel;
 };

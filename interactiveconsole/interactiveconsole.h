@@ -92,13 +92,13 @@ private:
     KTextEditor::Document *m_editorPart;
     KTextEdit *m_editor;
     QTextBrowser *m_output;
-    QAction *m_loadAction;
-    QAction *m_saveAction;
-    QAction *m_clearAction;
-    QAction *m_executeAction;
-    QAction *m_plasmaAction;
-    QAction *m_kwinAction;
-    QMenu *m_snippetsMenu;
+    QAction *const m_loadAction;
+    QAction *const m_saveAction;
+    QAction *const m_clearAction;
+    QAction *const m_executeAction;
+    QAction *const m_plasmaAction;
+    QAction *const m_kwinAction;
+    QMenu *const m_snippetsMenu;
 
     QFileDialog *m_fileDialog;
     QPointer<KIO::Job> m_job;

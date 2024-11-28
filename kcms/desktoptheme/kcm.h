@@ -78,10 +78,10 @@ private:
 
     void installTheme(const QString &path);
 
-    DesktopThemeData *m_data;
+    DesktopThemeData *const m_data;
 
-    ThemesModel *m_model;
-    FilterProxyModel *m_filteredModel;
+    ThemesModel *const m_model;
+    FilterProxyModel *const m_filteredModel;
     QHash<QString, KSvg::ImageSet *> m_themes;
     bool m_haveThemeExplorerInstalled;
 
