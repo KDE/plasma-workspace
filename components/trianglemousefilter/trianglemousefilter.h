@@ -127,6 +127,5 @@ private:
     int m_filterTimeout = 300;
     bool m_active;
     bool m_blockFirstEnter;
-    bool m_usingCustomEdgeLine;
     QPointF m_secondaryPoint;
 };

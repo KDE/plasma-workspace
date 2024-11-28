@@ -98,7 +98,7 @@ GeneralWidget::GeneralWidget(QWidget *parent)
 
     QLabel *hint = ConfigDialog::createHintLabel(item, this);
     layout->addRow(QString(), hint);
-    connect(hint, &QLabel::linkActivated, this, [this, hint]() {
+    connect(hint, &QLabel::linkActivated, this, [hint]() {
         QToolTip::showText(QCursor::pos(),
                            xi18nc("@info:tooltip",
                                   "When text or an area of the screen is highlighted with the mouse or keyboard, \
@@ -699,7 +699,7 @@ If the action menu appears unexpectedly when using a particular application, the
                                                  this);
 
     mainLayout->addWidget(hint);
-    connect(hint, &QLabel::linkActivated, this, [this, hint]() {
+    connect(hint, &QLabel::linkActivated, this, [hint]() {
         QToolTip::showText(QCursor::pos(),
                            xi18nc("@info:tooltip",
                                   "The name that needs to be entered here is the WM_CLASS name of the window to be excluded. \

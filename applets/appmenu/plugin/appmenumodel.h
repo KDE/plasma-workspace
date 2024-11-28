@@ -79,11 +79,6 @@ private:
     Plasma::Types::ItemStatus m_containmentStatus = Plasma::Types::PassiveStatus;
     TaskManager::TasksModel *m_tasksModel;
 
-    //! current active window used
-    WId m_currentWindowId = 0;
-    //! window that its menu initialization may be delayed
-    WId m_delayedMenuWindowId = 0;
-
     std::unique_ptr<QMenu> m_searchMenu;
     QPointer<QMenu> m_menu;
     QPointer<QAction> m_searchAction;
