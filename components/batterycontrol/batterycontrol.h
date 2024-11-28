@@ -98,15 +98,15 @@ Q_SIGNALS:
     void percentChanged(int percent);
 
 private:
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasCumulative, false, &BatteryControlModel::hasCumulativeChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasBatteries, false, &BatteryControlModel::hasBatteriesChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasInternalBatteries, false, &BatteryControlModel::hasInternalBatteriesChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_pluggedIn, false, &BatteryControlModel::pluggedInChanged);
-    Q_OBJECT_BINDABLE_PROPERTY(BatteryControlModel, Solid::Battery::ChargeState, m_state, &BatteryControlModel::stateChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, int, m_chargeStopThreshold, 0, &BatteryControlModel::chargeStopThresholdChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_remainingMsec, 0, &BatteryControlModel::remainingMsecChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_smoothedRemainingMsec, 0, &BatteryControlModel::smoothedRemainingMsecChanged);
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, int, m_percent, 0, &BatteryControlModel::percentChanged);
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasCumulative, false, &BatteryControlModel::hasCumulativeChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasBatteries, false, &BatteryControlModel::hasBatteriesChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_hasInternalBatteries, false, &BatteryControlModel::hasInternalBatteriesChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, bool, m_pluggedIn, false, &BatteryControlModel::pluggedInChanged)
+    Q_OBJECT_BINDABLE_PROPERTY(BatteryControlModel, Solid::Battery::ChargeState, m_state, &BatteryControlModel::stateChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, int, m_chargeStopThreshold, 0, &BatteryControlModel::chargeStopThresholdChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_remainingMsec, 0, &BatteryControlModel::remainingMsecChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, qulonglong, m_smoothedRemainingMsec, 0, &BatteryControlModel::smoothedRemainingMsecChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(BatteryControlModel, int, m_percent, 0, &BatteryControlModel::percentChanged)
 
     std::unique_ptr<BatteriesNamesMonitor> m_namesMonitor;
     std::unique_ptr<QDBusServiceWatcher> m_solidWatcher;
