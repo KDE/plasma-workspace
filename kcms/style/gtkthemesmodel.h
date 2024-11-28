@@ -19,7 +19,7 @@ class GtkThemesModel : public QAbstractListModel
     Q_PROPERTY(QString selectedTheme READ selectedTheme WRITE setSelectedTheme NOTIFY selectedThemeChanged)
 
 public:
-    GtkThemesModel(QObject *parent = nullptr);
+    explicit GtkThemesModel(QObject *parent = nullptr);
 
     enum Roles {
         ThemeNameRole = Qt::UserRole + 1,

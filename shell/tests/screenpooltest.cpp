@@ -16,7 +16,7 @@ class ScreenPoolTester : public QObject
 {
     Q_OBJECT
 public:
-    ScreenPoolTester(QObject *parent = nullptr);
+    explicit ScreenPoolTester(QObject *parent = nullptr);
 
 private:
     void handleScreenRemoved(QScreen *screen);

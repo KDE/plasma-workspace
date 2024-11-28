@@ -20,7 +20,7 @@ class GtkPage : public QObject
     Q_PROPERTY(GtkThemesModel *gtkThemesModel MEMBER m_gtkThemesModel NOTIFY gtkThemesModelChanged)
 
 public:
-    GtkPage(QObject *parent = nullptr);
+    explicit GtkPage(QObject *parent = nullptr);
     ~GtkPage() override;
 
     Q_INVOKABLE void load();

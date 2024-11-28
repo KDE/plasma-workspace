@@ -29,7 +29,7 @@ public:
     Q_PROPERTY(QString query READ query WRITE setQuery NOTIFY queryChanged)
     Q_PROPERTY(ThemeFilter filter READ filter WRITE setFilter NOTIFY filterChanged)
 
-    FilterProxyModel(QObject *parent = nullptr);
+    explicit FilterProxyModel(QObject *parent = nullptr);
     ~FilterProxyModel() override;
 
     QString selectedTheme() const;

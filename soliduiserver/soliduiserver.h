@@ -21,7 +21,7 @@ class SolidUiServer : public KDEDModule
     Q_CLASSINFO("D-Bus Interface", "org.kde.SolidUiServer")
 
 public:
-    SolidUiServer(QObject *parent, const QList<QVariant> &);
+    explicit SolidUiServer(QObject *parent, const QList<QVariant> &);
     ~SolidUiServer() override;
 
 public Q_SLOTS:

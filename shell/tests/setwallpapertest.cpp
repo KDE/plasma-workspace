@@ -16,7 +16,7 @@ class SetWallPaperTest : public QObject
 {
     Q_OBJECT
 public:
-    SetWallPaperTest(QObject *parent = nullptr);
+    explicit SetWallPaperTest(QObject *parent = nullptr);
     void setWallpaper(const QString &wallpaperPath);
 
 public Q_SLOTS:

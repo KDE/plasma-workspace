@@ -20,7 +20,7 @@ class UserFeedback : public QObject
 {
     Q_OBJECT
 public:
-    UserFeedback(ShellCorona *corona, QObject *parent);
+    explicit UserFeedback(ShellCorona *corona, QObject *parent);
     ~UserFeedback() override = default;
     QString describeDataSources() const;
 

@@ -21,6 +21,6 @@ public:
     static void notifyIfRelevant();
 
 private:
-    SoftwareRendererNotifier(QObject *parent = nullptr);
+    explicit SoftwareRendererNotifier(QObject *parent = nullptr);
     ~SoftwareRendererNotifier();
 };

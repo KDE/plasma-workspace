@@ -12,7 +12,7 @@
 class PanelShadows::Private
 {
 public:
-    Private(PanelShadows *shadows)
+    explicit Private(PanelShadows *shadows)
         : q(shadows)
     {
     }

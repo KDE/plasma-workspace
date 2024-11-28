@@ -60,7 +60,7 @@ public:
     };
     Q_ENUM(ConfirmationMode)
 
-    SessionManagement(QObject *parent = nullptr);
+    explicit SessionManagement(QObject *parent = nullptr);
     ~SessionManagement() override = default;
 
     State state() const;

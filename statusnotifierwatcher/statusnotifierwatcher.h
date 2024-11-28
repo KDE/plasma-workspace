@@ -23,7 +23,7 @@ class StatusNotifierWatcher : public KDEDModule, protected QDBusContext
     Q_PROPERTY(int ProtocolVersion READ ProtocolVersion)
 
 public:
-    StatusNotifierWatcher(QObject *parent, const QList<QVariant> &);
+    explicit StatusNotifierWatcher(QObject *parent, const QList<QVariant> &);
     ~StatusNotifierWatcher() override;
 
     QStringList RegisteredStatusNotifierItems() const;
