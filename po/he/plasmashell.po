@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-22 00:42+0000\n"
+"POT-Creation-Date: 2024-11-28 00:41+0000\n"
 "PO-Revision-Date: 2024-08-30 08:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -155,42 +155,42 @@ msgstr "להסתיר את כרזת התצוגה המקדימה?"
 msgid "Enter Edit Mode"
 msgstr "כניסה למצב עריכה"
 
-#: main.cpp:88
+#: main.cpp:86
 #, kde-format
 msgid "Plasma Shell"
 msgstr "מעטפת פלזמה"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "הפעלת מנפה שגיאות JavaScript ל־QML"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "לא להפעיל את plasma-shell (מעטפת פלזמה) אוטומטית לאחר קריסה"
 
-#: main.cpp:106
+#: main.cpp:105
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "לאלץ את טעינת תוסף המעטפת המסופק"
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "החלפת עותק קיים"
 
-#: main.cpp:113
+#: main.cpp:112
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "מציג את האפשרויות הזמינות למשוב המשתמש"
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "הפעלת פלזמה נכשלה"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "

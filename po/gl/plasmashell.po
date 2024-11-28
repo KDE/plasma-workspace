@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-22 00:42+0000\n"
+"POT-Creation-Date: 2024-11-28 00:41+0000\n"
 "PO-Revision-Date: 2024-08-30 12:26+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -155,42 +155,42 @@ msgstr "Quere agochar o cadro da vista previa?"
 msgid "Enter Edit Mode"
 msgstr "Activar o modo de edición"
 
-#: main.cpp:88
+#: main.cpp:86
 #, kde-format
 msgid "Plasma Shell"
 msgstr "Shell de Plasma"
 
-#: main.cpp:100
+#: main.cpp:99
 #, kde-format
 msgid "Enable QML Javascript debugger"
 msgstr "Activar o depurador do JavaScript de QML"
 
-#: main.cpp:103
+#: main.cpp:102
 #, kde-format
 msgid "Do not restart plasma-shell automatically after a crash"
 msgstr "Non reiniciar «plasma-shell» automaticamente cando quebre."
 
-#: main.cpp:106
+#: main.cpp:105
 #, kde-format
 msgid "Force loading the given shell plugin"
 msgstr "Obriga a cargar o complemento da shell indicado."
 
-#: main.cpp:110
+#: main.cpp:109
 #, kde-format
 msgid "Replace an existing instance"
 msgstr "Substituír unha instancia existente"
 
-#: main.cpp:113
+#: main.cpp:112
 #, kde-format
 msgid "Lists the available options for user feedback"
 msgstr "Lista todas as opcións dispoñíbeis de comentarios."
 
-#: main.cpp:178
+#: main.cpp:177
 #, kde-format
 msgid "Plasma Failed To Start"
 msgstr "Plasma non puido iniciarse"
 
-#: main.cpp:179
+#: main.cpp:178
 #, kde-format
 msgid ""
 "Plasma is unable to start as it could not correctly use OpenGL 2 or software "
