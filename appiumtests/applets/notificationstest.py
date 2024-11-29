@@ -176,6 +176,20 @@ class NotificationsTest(unittest.TestCase):
             close_button.click()
             wait.until_not(lambda _: close_button.is_displayed())
 
+    def test_2_notification_with_explicit_timeout(self) -> None:
+        """
+        Sends notifications with expire_timeout
+        """
+        summary = "expire_timeout"
+        send_notification({
+            "app_name": "Appium Test",
+            "summary": summary,
+            "body": "Will it disappear automatically?",
+            "timeout": 2000,
+        })
+        element = self.driver.find_element(AppiumBy.NAME, summary)
+        WebDriverWait(self.driver, 5).until_not(lambda _: element.is_displayed())
+
     def test_3_accessible_description_html_to_plaintext(self) -> None:
         """
         accessibleDescription provides the plain text of the description
