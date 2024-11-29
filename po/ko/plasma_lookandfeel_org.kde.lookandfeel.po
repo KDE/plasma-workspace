@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-02-09 19:42+0100\n"
+"PO-Revision-Date: 2024-11-28 23:48+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -37,12 +37,10 @@ msgid_plural "Logging out in %1 seconds"
 msgstr[0] "%1초 후 로그아웃"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "소프트웨어 업데이트 설치 후 %1초 후 다시 시작"
+msgstr[0] "소프트웨어 업데이트 설치 후 %1초 후 컴퓨터 끄기"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -68,10 +66,9 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "컴퓨터를 다시 시작하면 펌웨어 설정 화면으로 진입합니다."
+msgstr "컴퓨터를 다시 시작하면 부트 로더 메뉴 화면으로 진입합니다."
 
 #: contents/logout/Logout.qml:216
 #, kde-format
@@ -96,9 +93,7 @@ msgid "Hibernate Now"
 msgstr "지금 최대 절전 모드로 전환"
 
 #: contents/logout/Logout.qml:238
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "업데이트 설치 후 다시 시작"
@@ -114,12 +109,10 @@ msgid "Restart Now"
 msgstr "지금 다시 시작"
 
 #: contents/logout/Logout.qml:273
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "업데이트 설치 후 지금 다시 시작"
+msgstr "업데이트 설치 후 컴퓨터 끄기"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
 #, kde-format

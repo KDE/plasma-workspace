@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:41+0000\n"
-"PO-Revision-Date: 2023-08-06 22:35+0200\n"
+"PO-Revision-Date: 2024-11-28 23:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -136,9 +136,7 @@ msgid "Preview Theme"
 msgstr "테마 미리 보기"
 
 #: ui/main.qml:126
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Remove Theme"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove theme"
 msgstr "테마 삭제"
@@ -147,13 +145,13 @@ msgstr "테마 삭제"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "활성 테마를 삭제할 수 없음"
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "시스템에서 설치한 테마를 삭제할 수 없음"
 
 #: ui/main.qml:147
 #, kde-format
@@ -199,16 +197,13 @@ msgid "Titlebar Buttons layout"
 msgstr "제목 표시줄 단추 레이아웃"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
-#, fuzzy, kde-format
-#| msgid ""
-#| "Applying a Desktop layout replaces your current configuration of "
-#| "desktops, panels, docks, and widgets"
+#, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
-"바탕 화면 레이아웃을 적용하면 현재 바탕 화면, 패널, 독, 위젯 설정을 대체합니"
-"다"
+"바탕 화면 레이아웃을 적용하면 현재 바탕 화면, 패널, 독, 위젯 설정을 삭제하고 "
+"테마에서 설정한 것으로 대체합니다."
 
 #: ui/MoreOptions.qml:66
 #, kde-format

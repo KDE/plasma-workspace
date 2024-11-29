@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_lockout\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-02-09 19:42+0100\n"
+"PO-Revision-Date: 2024-11-28 23:46+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -35,11 +35,10 @@ msgid "Log Out"
 msgstr "로그아웃"
 
 #: contents/ui/ConfigGeneral.qml:42
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr "화면 잠그기"
+msgstr "로그아웃 화면 표시"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -118,17 +117,15 @@ msgid "End the session"
 msgstr "세션 끝내기"
 
 #: contents/ui/data.js:39
-#, fuzzy, kde-format
-#| msgid "Lock the screen"
+#, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr "화면 잠그기"
+msgstr "로그아웃 화면 표시"
 
 #: contents/ui/data.js:40
-#, fuzzy, kde-format
-#| msgid "Turn off the computer"
+#, kde-format
 msgid "Log out, turn off, or restart the computer"
-msgstr "컴퓨터 끄기"
+msgstr "로그아웃, 컴퓨터 끄기, 다시 시작"
 
 #: contents/ui/data.js:47
 #, kde-format

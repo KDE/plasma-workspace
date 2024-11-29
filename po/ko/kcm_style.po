@@ -1,14 +1,14 @@
 # Translation of kcmstyle to Korean.
 # Copyright (C) 2001, 2007-2008 Free Software Foundation, Inc.
 # Yu-Chan, Park <super@susekorea.net>, 2001.
-# Shinjo Park <kde@peremen.name>, 2007, 2008, 2009, 2011, 2013, 2017, 2018, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2011, 2013, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcmstyle\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-17 00:41+0000\n"
-"PO-Revision-Date: 2023-08-06 22:36+0200\n"
+"PO-Revision-Date: 2024-11-28 23:37+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: gtkpage.cpp:58
 #, kde-format
@@ -112,9 +112,7 @@ msgid "Secondary toolbar label"
 msgstr "보조 도구 모음 텍스트"
 
 #: ui/EffectSettingsPopup.qml:19
-#, fuzzy, kde-format
-#| msgctxt "@title:window"
-#| msgid "Configure Icon and Toolbars"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
 msgstr "아이콘과 도구 모음 설정"
@@ -200,10 +198,9 @@ msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
 msgstr "GTK 테마 압축 파일 (*.tar.xz *.tar.gz *.tar.bz2)"
 
 #: ui/main.qml:55
-#, fuzzy, kde-format
-#| msgid "Configure Icons and Toolbars"
+#, kde-format
 msgid "Configure Icons and Toolbars…"
-msgstr "아이콘과 도구 모음 설정"
+msgstr "아이콘과 도구 모음 설정…"
 
 #: ui/main.qml:73
 #, kde-format
