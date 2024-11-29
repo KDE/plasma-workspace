@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2008, 2009, 2010, 2011, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2023-08-06 22:35+0200\n"
+"PO-Revision-Date: 2024-11-28 23:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -97,32 +97,28 @@ msgid "You have the following Plasma themes on your system:"
 msgstr "시스템에 다음 Plasma 테마가 설치되어 있습니다:"
 
 #: ui/main.qml:101
-#, fuzzy, kde-format
-#| msgid "All Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
 msgstr "모든 테마"
 
 #: ui/main.qml:102
-#, fuzzy, kde-format
-#| msgid "Light Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
-msgstr "밝은 색상 테마"
+msgstr "밝은 테마"
 
 #: ui/main.qml:103
-#, fuzzy, kde-format
-#| msgid "Dark Themes"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
-msgstr "어두운 색상 테마"
+msgstr "어두운 테마"
 
 #: ui/main.qml:104
-#, fuzzy, kde-format
-#| msgid "Color scheme compatible"
+#, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
-msgstr "색상표 호환"
+msgstr "색 구성표 호환"
 
 #: ui/main.qml:130
 #, kde-format
@@ -137,7 +133,7 @@ msgstr "새 항목 가져오기…"
 #: ui/main.qml:148
 #, kde-format
 msgid "Follows color scheme"
-msgstr "색상표 준수"
+msgstr "색 구성표 준수"
 
 #: ui/main.qml:166
 #, kde-format

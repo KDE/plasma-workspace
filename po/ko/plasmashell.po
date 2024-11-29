@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 02:32+0000\n"
-"PO-Revision-Date: 2024-02-09 19:44+0100\n"
+"PO-Revision-Date: 2024-11-29 00:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -102,31 +102,31 @@ msgstr "문제점을 보고하려면 bugs.kde.org 사이트를 방문하십시�
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "Plasma 버전 복사"
 
 #: desktopview.cpp:292
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "버그 보고…"
 
 #: desktopview.cpp:302
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "미리 보기 배너 숨기기"
 
 #: desktopview.cpp:305
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "다시 시작할 때까지 숨기기"
 
 #: desktopview.cpp:312
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "영원히 숨기기…"
 
 #: desktopview.cpp:318
 #, kde-kuit-format
@@ -137,17 +137,20 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"미리 보기 배너를 영원히 숨기시겠습니까?<nl/><nl/>이 설정을 되돌리려면 "
+"<filename>kdeglobals</filename> 설정 파일에서 "
+"<icode>ShowDesktopPreviewBanner</icode>로 시작하는 줄을 삭제해야 합니다."
 
 #: desktopview.cpp:320
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "미리 보기 배너 숨기기?"
 
 #: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "편집 모드 들어가기"
 
 #: main.cpp:88
 #, kde-format
@@ -199,7 +202,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:88
 #, kde-format
@@ -287,31 +290,31 @@ msgstr "가상 키보드 꺼짐"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "절전 모드 진입과 화면 잠금 차단됨"
 
 #: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "절전 모드 진입과 화면 잠금 차단 해제됨"
 
 #: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "절전 모드"
 
 #: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "균형 조정 전원 모드"
 
 #: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "성능 모드"
 
 #: panelview.cpp:438
 #, kde-format
@@ -320,6 +323,9 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"X11에서 NVIDIA GPU를 사용한다면 떠다니는 스타일과 적응형 투명도 모드 사용 시 "
+"창 드래그와 크기 조정 성능에 악영향을 줄 수 있습니다. 다른 설정을 사용하십시"
+"오."
 
 #: panelview.cpp:1100
 #, kde-format
@@ -362,7 +368,7 @@ msgstr "바탕 화면 숨기기"
 #: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "앱 실행기 활성화"
 
 #: shellcorona.cpp:238
 #, kde-format
@@ -392,7 +398,7 @@ msgstr "활성 작업 관리자 항목 %1"
 #: shellcorona.cpp:312
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "패널과 바탕 화면 관리"
 
 #: shellcorona.cpp:334
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2009, 2013, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
+# SPDX-FileCopyrightText: 2009, 2013, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:41+0000\n"
-"PO-Revision-Date: 2022-02-20 22:30+0100\n"
+"PO-Revision-Date: 2024-11-28 23:47+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -2809,7 +2809,7 @@ msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "
 "\"Rain then Sunny\")"
 msgid " then "
-msgstr ""
+msgstr " 이후 "
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -3837,9 +3837,7 @@ msgid "Low Drifting Snow"
 msgstr "약한 땅날림눈"
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Clear"
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
 msgstr "주로 맑음"
@@ -4883,36 +4881,28 @@ msgid "Mostly Clear"
 msgstr "주로 맑음"
 
 #: noaa_i18n.dat:358
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Showers or thunderstorms"
+#, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr "소나기나 뇌우"
+msgstr "소나기와 뇌우"
 
 #: noaa_i18n.dat:359
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Slight Chance Thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr "약간의 폭풍 가능성 있음"
+msgstr "약간의 소나기와 뇌우 가능성 있음"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance of showers or thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "소나기나 뇌우 가능성 약간 있음"
+msgstr "소나기와 뇌우 가능성 있음"
 
 #: noaa_i18n.dat:361
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Thunderstorms Likely"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr "폭풍 가능성 있음"
+msgstr "소나기와 뇌우 가능성 높음"
 
 #~ msgid "UK"
 #~ msgstr "영국"

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-02-09 19:38+0100\n"
+"PO-Revision-Date: 2024-11-28 23:29+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -51,10 +51,9 @@ msgid "Zoom in"
 msgstr "확대"
 
 #: ui/LocationsFixedView.qml:129
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "확대"
+msgstr "축소"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
@@ -165,6 +164,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"<application>GeoClue2</application> 서비스를 사용하여 장치 위치를 주기적으로 "
+"업데이트합니다. 사용 가능한 경우 GPS, 기지국 측량을 사용하며, <link "
+"url='https://geoip.com/privacy/'>GeoIP</link> 서비스에 현재 IP 주소 정보를 전"
+"송합니다."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -175,6 +178,10 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"<application>%1</application> 서비스를 사용하여 장치 위치를 주기적으로 업데이"
+"트합니다. KDE 개발자들이 이 서비스가 하는 일의 자세한 설명을 적을 수 있도록 "
+"<link url='https://bugs.kde.org'>https://bugs.kde.org</link> 사이트에 버그 보"
+"고서를 작성해 주십시오."
 
 #: ui/main.qml:334
 #, kde-format
@@ -212,21 +219,19 @@ msgstr "위치 찾는 중…"
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "시"
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr ":"
 
 #: ui/TimeField.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 minute"
-#| msgid_plural "%1 minutes"
+#, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr "%1분"
+msgstr "분"
 
 #~ msgctxt "@info"
 #~ msgid ""

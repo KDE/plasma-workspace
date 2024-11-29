@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 02:34+0000\n"
-"PO-Revision-Date: 2024-02-09 19:37+0100\n"
+"PO-Revision-Date: 2024-11-28 23:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: autostartmodel.cpp:383
 #, kde-format
@@ -103,31 +103,25 @@ msgstr "파일 '%1'이(가) 로그인할 때 실행되려면 실행 파일이어
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "새로 추가"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "앱 추가…"
+msgstr "앱…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "로그인 스크립트 추가…"
+msgstr "로그인 스크립트…"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "로그아웃 스크립트 추가…"
+msgstr "로그아웃 스크립트…"
 
 #: ui/main.qml:125
 #, kde-format
@@ -183,12 +177,10 @@ msgid "No user-specified autostart items"
 msgstr "사용자 정의 자동 시작 항목 없음"
 
 #: ui/main.qml:203
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "<interface>추가…</interface>를 클릭해서 추가하십시오"
+msgstr "<interface>새로 추가</interface>를 클릭해서 추가하십시오"
 
 #: ui/main.qml:218
 #, kde-format

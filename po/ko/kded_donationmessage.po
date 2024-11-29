@@ -1,0 +1,50 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2024 Shinjo Park <kde@peremen.name>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-28 00:41+0000\n"
+"PO-Revision-Date: 2024-11-28 23:44+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: donationmessage.cpp:80
+#, kde-format
+msgctxt "@title of a system notification"
+msgid "Donate to KDE"
+msgstr "KDE에 기부하기"
+
+#: donationmessage.cpp:82
+#, kde-format
+msgctxt "@info body text of a system notification"
+msgid ""
+"KDE needs your help! Donations fund development and infrastructure important "
+"for KDE's continued existence."
+msgstr ""
+"KDE를 도와 주세요! 기부를 통해서 KDE가 지속될 수 있도록 개발과 인프라 유지에 "
+"재정적 도움을 줄 수 있습니다."
+
+#: donationmessage.cpp:84
+#, kde-format
+msgctxt ""
+"@action:button Make a donation now; translate this in as short a form as "
+"possible"
+msgid "Donate"
+msgstr "기부하기"
+
+#: donationmessage.cpp:85
+#, kde-format
+msgctxt ""
+"@action:button don't donate this year; translate this in as short a form as "
+"possible"
+msgid "No Thanks"
+msgstr "괜찮습니다"

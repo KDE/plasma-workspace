@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2024-02-09 19:44+0100\n"
+"PO-Revision-Date: 2024-11-29 00:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,12 +31,12 @@ msgstr "kde@peremen.name"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "배터리 %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "배터리"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -351,7 +351,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "최근 설치됨"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -369,11 +369,10 @@ msgid "Install Widget From Local File…"
 msgstr "로컬 파일에서 위젯 설치…"
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "모든 위젯"
+msgstr "새 위젯 가져오기…"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -381,11 +380,10 @@ msgid "Select Plasmoid File"
 msgstr "Plasmoid 파일 선택"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "패키지 %1을(를) 설치하는 데 실패했습니다."
+msgstr "%1 패키지 설치 실패: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
