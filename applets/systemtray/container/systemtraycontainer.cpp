@@ -160,7 +160,7 @@ void SystemTrayContainer::cleanupConfig()
     }
 
     // All inner systray ids we found that are owned by a SystemTrayContainer
-    QSet<int> ownedSystrays = {m_innerContainment->id()};
+    QSet<unsigned int> ownedSystrays = {m_innerContainment->id()};
 
     // First search all SystemTrayContainer applets, and save the association with
     // internal systrays
