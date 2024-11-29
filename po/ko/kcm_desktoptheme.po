@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2008, 2009, 2010, 2011, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2023.
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2014, 2016, 2017, 2018, 2019, 2020, 2021, 2023, 2024 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-10 00:47+0000\n"
-"PO-Revision-Date: 2021-05-28 02:26+0200\n"
+"PO-Revision-Date: 2024-11-28 23:27+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
 #: desktopthemesettings.kcfg:9
@@ -61,22 +61,22 @@ msgstr "모든 테마"
 #: package/contents/ui/main.qml:70
 #, kde-format
 msgid "Light Themes"
-msgstr "밝은 색상 테마"
+msgstr "밝은 테마"
 
 #: package/contents/ui/main.qml:71
 #, kde-format
 msgid "Dark Themes"
-msgstr "어두운 색상 테마"
+msgstr "어두운 테마"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgid "Color scheme compatible"
-msgstr "색상표 호환"
+msgstr "색 구성표 호환"
 
 #: package/contents/ui/main.qml:100
 #, kde-format
 msgid "Follows color scheme"
-msgstr "색상표 준수"
+msgstr "색 구성표 준수"
 
 #: package/contents/ui/main.qml:118
 #, kde-format
