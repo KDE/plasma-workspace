@@ -25,5 +25,5 @@ public:
     QString describeDataSources() const;
 
 private:
-    KUserFeedback::Provider *m_provider;
+    KUserFeedback::Provider *const m_provider;
 };

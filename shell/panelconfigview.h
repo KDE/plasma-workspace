@@ -43,9 +43,9 @@ protected:
     void focusOutEvent(QFocusEvent *ev) override;
 
 private:
-    Plasma::Containment *m_containment;
-    PanelView *m_panelView;
-    PanelConfigView *m_mainConfigView;
+    Plasma::Containment *const m_containment;
+    PanelView *const m_panelView;
+    PanelConfigView *const m_mainConfigView;
     LayerShellQt::Window *m_layerWindow = nullptr;
 };
 

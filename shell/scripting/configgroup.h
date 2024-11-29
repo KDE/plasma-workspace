@@ -49,7 +49,7 @@ Q_SIGNALS:
     void groupListChanged();
 
 private:
-    ConfigGroupPrivate *d;
+    ConfigGroupPrivate *const d;
 
     bool readConfigFile();
 

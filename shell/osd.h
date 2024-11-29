@@ -61,7 +61,7 @@ private:
     void showProgress(const QString &icon, const int percent, const int maximumPercent, const QString &additionalText = QString());
     void showOsd();
 
-    ShellCorona *m_corona;
+    ShellCorona *const m_corona;
     PlasmaQuick::SharedQmlEngine *m_osdObject = nullptr;
     QTimer *m_osdTimer = nullptr;
     int m_timeout = 0;

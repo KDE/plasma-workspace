@@ -50,7 +50,7 @@ public Q_SLOTS:
     void remove(int screenId);
 
 private:
-    ShellCorona *m_corona;
+    ShellCorona *const m_corona;
     struct Data {
         int id;
         QString name;
@@ -123,7 +123,7 @@ private:
         QString image;
         const Plasma::Containment *containment;
     };
-    QTimer *m_reloadTimer = nullptr;
+    QTimer *const m_reloadTimer;
     QList<Data> m_containments;
     ScreenPoolModel *m_screenPoolModel;
     QHash<QString, KActivities::Info *> m_activitiesInfos;

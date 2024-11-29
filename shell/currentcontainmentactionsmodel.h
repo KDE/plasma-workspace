@@ -51,7 +51,7 @@ Q_SIGNALS:
     void configurationChanged();
 
 private:
-    Plasma::Containment *m_containment;
+    Plasma::Containment *const m_containment;
     QHash<QString, Plasma::ContainmentActions *> m_plugins;
     KConfigGroup m_baseCfg;
     KConfigGroup m_tempConfig;

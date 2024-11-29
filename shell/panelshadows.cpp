@@ -29,7 +29,7 @@ public:
     void updateShadows();
     bool hasShadows() const;
 
-    PanelShadows *q;
+    PanelShadows *const q;
 
     QHash<QWindow *, KSvg::FrameSvg::EnabledBorders> m_windows;
     QHash<QWindow *, KWindowShadow *> m_shadows;

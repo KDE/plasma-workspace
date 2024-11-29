@@ -27,8 +27,8 @@ using namespace Qt::StringLiterals;
 ScreenPoolModel::ScreenPoolModel(ShellCorona *corona, QObject *parent)
     : QAbstractListModel(parent)
     , m_corona(corona)
+    , m_reloadTimer(new QTimer(this))
 {
-    m_reloadTimer = new QTimer(this);
     m_reloadTimer->setSingleShot(true);
     m_reloadTimer->setInterval(200ms);
 
@@ -166,10 +166,10 @@ ShellContainmentModel::ShellContainmentModel(ShellCorona *corona, int screenId, 
     : QAbstractListModel(parent)
     , m_screenId(screenId)
     , m_corona(corona)
+    , m_reloadTimer(new QTimer(this))
     , m_screenPoolModel(parent)
     , m_activityConsumer(new KActivities::Consumer(this))
 {
-    m_reloadTimer = new QTimer(this);
     m_reloadTimer->setSingleShot(true);
     m_reloadTimer->setInterval(200ms);
 

@@ -32,7 +32,7 @@ public:
         delete configGroup;
     }
 
-    ConfigGroup *q;
+    ConfigGroup *const q;
     KSharedConfigPtr config;
     KConfigGroup *configGroup;
     QString file;
