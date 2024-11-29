@@ -167,10 +167,8 @@ void SystemTrayContainer::cleanupConfig()
     for (const auto conts = c->containments(); Plasma::Containment * containment : conts) {
         for (const auto applets = containment->applets(); Plasma::Applet * applet : applets) {
             if (SystemTrayContainer *contApplet = qobject_cast<SystemTrayContainer *>(applet)) {
-                if (contApplet->m_innerContainment) {
-                    ownedSystrays.insert(contApplet->m_innerContainment->id());
-                } else {
-                    const uint id = applet->config().readEntry("SystrayContainmentId", 0);
+                const uint id = applet->config().readEntry("SystrayContainmentId", 0);
+                if (id > 0) {
                     ownedSystrays.insert(id);
                 }
             }
