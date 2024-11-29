@@ -185,7 +185,7 @@ void SystemTrayContainer::cleanupConfig()
 
     // Destroy all systrays not owned by a SystemTrayContainer
     for (const auto conts = c->containments(); Plasma::Containment * containment : conts) {
-        if (containment->pluginName() == u"org.kde.plasma.private.systemtray"_s) {
+        if (containment->pluginName() == u"org.kde.plasma.private.systemtray") {
             if (!ownedSystrays.contains(containment->id())) {
                 containment->destroy();
             }
