@@ -560,7 +560,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
             if (transients.remove(window)) {
                 if (PlasmaWindow *leader = transientsDemandingAttention.key(window)) {
                     transientsDemandingAttention.remove(leader, window);
-                    dataChanged(leader, QVector<int>{IsDemandingAttention});
+                    dataChanged(leader, QList<int>{IsDemandingAttention});
                 }
             }
         }
@@ -640,8 +640,8 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
                 if (window->parentWindow != oldLeader) {
                     transientsDemandingAttention.remove(oldLeader, window);
                     transientsDemandingAttention.insert(leader, window);
-                    dataChanged(oldLeader, QVector<int>{IsDemandingAttention});
-                    dataChanged(leader, QVector<int>{IsDemandingAttention});
+                    dataChanged(oldLeader, QList<int>{IsDemandingAttention});
+                    dataChanged(leader, QList<int>{IsDemandingAttention});
                 }
             }
         }
@@ -739,13 +739,13 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
             if (window->windowState.testFlag(PlasmaWindow::state::state_demands_attention)) {
                 if (!transientsDemandingAttention.values(leader).contains(window)) {
                     transientsDemandingAttention.insert(leader, window);
-                    this->dataChanged(leader, QVector<int>{IsDemandingAttention});
+                    this->dataChanged(leader, QList<int>{IsDemandingAttention});
                 }
             } else if (transientsDemandingAttention.remove(window)) {
-                this->dataChanged(leader, QVector<int>{IsDemandingAttention});
+                this->dataChanged(leader, QList<int>{IsDemandingAttention});
             }
         } else {
-            this->dataChanged(window, QVector<int>{IsDemandingAttention});
+            this->dataChanged(window, QList<int>{IsDemandingAttention});
         }
     });
 
@@ -768,7 +768,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         // Update demands attention state for leader.
         if (window->windowState.testFlag(PlasmaWindow::state::state_demands_attention)) {
             transientsDemandingAttention.insert(leader, window);
-            dataChanged(leader, QVector<int>{IsDemandingAttention});
+            dataChanged(leader, QList<int>{IsDemandingAttention});
         }
     }
 

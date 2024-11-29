@@ -93,7 +93,7 @@ private:
     QList<QString> m_removableDevices;
 
     wl_registry *m_registry = nullptr;
-    QVector<uint32_t> m_outputs;
+    QList<uint32_t> m_outputs;
     bool m_initialOutputsReceived = false;
 
     QTimer m_deviceAddedTimer;
