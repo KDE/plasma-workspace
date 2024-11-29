@@ -21,12 +21,6 @@ SystemTrayContainer::SystemTrayContainer(QObject *parent, const KPluginMetaData 
 
 SystemTrayContainer::~SystemTrayContainer()
 {
-    // If we are actually destroyed (to get rid of config file entry)
-    // properly destroy the inner systrayu as well, to not leave orphaned
-    // systrays in the config file
-    if (destroyed() && m_innerContainment) {
-        m_innerContainment->destroy();
-    }
 }
 
 void SystemTrayContainer::init()
