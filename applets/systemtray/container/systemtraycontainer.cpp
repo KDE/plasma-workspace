@@ -145,7 +145,7 @@ QQuickItem *SystemTrayContainer::internalSystray()
 void SystemTrayContainer::cleanupConfig()
 {
     // In the past inner systrays were leaked in the config file,
-    // and users might end up with tens or ever hundreds of systrays (and all their applets)
+    // and users might end up with tens or even hundreds of systrays (and all their applets)
     // in the config file taking up resources and causing also  https://bugs.kde.org/show_bug.cgi?id=472937
     // Should be fine to do this every time as when there is nothing to cleanup the whole
     // cycle is usually under a millisecond
