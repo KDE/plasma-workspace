@@ -1,0 +1,8 @@
+[Global]
+Name=Notification Manager
+IconName=preferences-desktop-notification-bell
+
+[Event/inhibitionSummary]
+Name=Summary for unread inhibited notifications
+Action=Popup
+Urgency=Low

@@ -61,6 +61,8 @@ QtObject {
     property bool replying: false
     property bool hasPendingReply: false
 
+    property bool isAddedDuringInhibition
+
     property int popupLeftPadding: 0
     property int popupTopPadding: 0
     property int popupRightPadding: 0

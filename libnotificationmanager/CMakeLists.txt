@@ -84,6 +84,7 @@ target_link_libraries(notificationmanager
         KF6::I18n
         KF6::WindowSystem
         KF6::ItemModels # KDescendantsProxyModel
+        KF6::Notifications # Inhibition summary
         KF6::KIOFileWidgets
         Plasma::Plasma
         KF6::Screen
@@ -135,3 +136,6 @@ install(EXPORT notificationmanagerLibraryTargets
 
 install(FILES plasmanotifyrc
         DESTINATION ${KDE_INSTALL_CONFDIR})
+
+install(FILES libnotificationmanager.notifyrc
+    DESTINATION ${KDE_INSTALL_KNOTIFYRCDIR})
