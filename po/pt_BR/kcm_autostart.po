@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2024-07-19 23:35-0300\n"
+"PO-Revision-Date: 2024-11-29 00:21-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: autostartmodel.cpp:383
@@ -110,31 +110,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Adicionar novo"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Adicionar aplicativo..."
+msgstr "Aplicativo..."
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Adicionar Script de início de sessão…"
+msgstr "Script de início de sessão…"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Adicionar script ao encerrar sessão..."
+msgstr "Script ao encerrar sessão..."
 
 #: ui/main.qml:125
 #, kde-format
@@ -190,14 +184,10 @@ msgid "No user-specified autostart items"
 msgstr "Nenhum item especificado pelo usuário para iniciar automaticamente"
 
 #: ui/main.qml:203
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr ""
-"Clique no botão <interface>Adicionar...</interface> abaixo para adicionar "
-"alguns"
+msgstr "Clique no botão <interface>Adicionar</interface> para adicionar alguns"
 
 #: ui/main.qml:218
 #, kde-format

@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-07-19 23:37-0300\n"
+"PO-Revision-Date: 2024-11-29 00:23-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -173,6 +173,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"O serviço <application>GeoClue2</application> será usado para atualizar "
+"periodicamente a localização do dispositivo usando GPS ou triangulação de "
+"torre de celular, se disponível, ou então enviando seu endereço IP para "
+"<link url='https://geoip.com/privacy/'>GeoIP</link>."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -183,6 +187,11 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"O serviço <application>%1</application> será usado para atualizar "
+"periodicamente a localização do dispositivo. Abra um relatório de bug em "
+"<link url='https://bugs.kde.org'>https://bugs.kde.org</link> pedindo aos "
+"desenvolvedores do KDE para escrever uma descrição detalhada do que este "
+"serviço fará."
 
 #: ui/main.qml:334
 #, kde-format

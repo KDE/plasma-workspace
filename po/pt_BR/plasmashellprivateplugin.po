@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-08 00:42+0000\n"
-"PO-Revision-Date: 2024-07-19 13:43-0300\n"
+"PO-Revision-Date: 2024-11-29 00:38-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -357,7 +357,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Instalado recentemente"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -375,11 +375,10 @@ msgid "Install Widget From Local File…"
 msgstr "Instalar widget de arquivo local..."
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Todos os widgets"
+msgstr "Obter novos widgets"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -387,11 +386,10 @@ msgid "Select Plasmoid File"
 msgstr "Selecione o arquivo do plasmoide"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Erro na instalação do pacote %1."
+msgstr "A instalação do pacote %1 falhou: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
