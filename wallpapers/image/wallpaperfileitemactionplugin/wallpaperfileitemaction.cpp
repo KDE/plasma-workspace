@@ -92,9 +92,9 @@ void WallpaperFileItemAction::setAsDesktopBackground(const QString &file)
         watcher->deleteLater();
         const QDBusPendingReply<QString> reply = *watcher;
         if (reply.isError()) {
-            auto errorMessage = QString(xi18ndc("plasma_wallpaper_org.kde.image",
-                                                "@info %1 is the dbus error message",
-                                                "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"))
+            auto errorMessage = xi18ndc("plasma_wallpaper_org.kde.image",
+                                        "@info %1 is the dbus error message",
+                                        "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1")
                                     .arg(reply.error().message());
             qWarning() << errorMessage;
             error(errorMessage);
@@ -107,7 +107,7 @@ void WallpaperFileItemAction::setAsLockscreenBackground(const QString &file)
     KSharedConfigPtr screenLockerConfig = KSharedConfig::openConfig(u"kscreenlockerrc"_s);
     KConfigGroup cfgGroup = screenLockerConfig->group(QString()).group(u"Greeter"_s).group(u"Wallpaper"_s).group(u"org.kde.image"_s).group(u"General"_s);
     if (screenLockerConfig->accessMode() != KConfig::ReadWrite) {
-        auto errorMessage = QString(i18nd("plasma_wallpaper_org.kde.image", "An error occurred while attempting to open kscreenlockerrc config file."));
+        auto errorMessage = i18nd("plasma_wallpaper_org.kde.image", "An error occurred while attempting to open kscreenlockerrc config file.");
         qWarning() << errorMessage;
         error(errorMessage);
         return;

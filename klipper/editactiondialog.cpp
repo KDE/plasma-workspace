@@ -31,11 +31,11 @@ static QString output2text(ClipCommand::Output output)
 {
     switch (output) {
     case ClipCommand::IGNORE:
-        return QString(i18n("Ignore"));
+        return i18n("Ignore");
     case ClipCommand::REPLACE:
-        return QString(i18n("Replace Clipboard"));
+        return i18n("Replace Clipboard");
     case ClipCommand::ADD:
-        return QString(i18n("Add to Clipboard"));
+        return i18n("Add to Clipboard");
     }
     return QString();
 }
