@@ -285,6 +285,7 @@ public:
                       ///< notification in a certain way, or group notifications of similar types.  @since 5.21
         ResidentRole, ///< Whether the notification should keep its actions even when they were invoked. @since 5.22
         TransientRole, ///< Whether the notification is transient and should not be kept in history. @since 5.22
+        SoundHintNameRole,
     };
     Q_ENUM(Roles)
 
@@ -528,6 +529,8 @@ public:
     Q_INVOKABLE QModelIndex groupIndex(const QModelIndex &idx) const;
 
     Q_INVOKABLE void collapseAllGroups();
+
+    Q_INVOKABLE void playSoundHint(const QModelIndex &idx) const;
 
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;

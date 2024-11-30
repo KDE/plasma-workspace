@@ -388,6 +388,8 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
         return notification.replySubmitButtonText();
     case Notifications::ReplySubmitButtonIconNameRole:
         return notification.replySubmitButtonIconName();
+    case Notifications::SoundHintNameRole:
+        return notification.soundHintName();
     }
 
     return QVariant();

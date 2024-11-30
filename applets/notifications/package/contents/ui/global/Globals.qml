@@ -647,6 +647,7 @@ QtObject {
         onObjectAdded: (index, object) => {
             positionPopups();
             object.visible = true;
+            popupNotificationsModel.playSoundHint(popupNotificationsModel.index(index, 0));
         }
         onObjectRemoved: (index, object) => {
             var notificationId = object.notificationId

@@ -12,7 +12,6 @@
 #include <QImage>
 #include <QUrl>
 
-#include "canberra.h"
 #include <KService>
 
 #include "notifications.h"
@@ -102,9 +101,6 @@ public:
 
     bool resident = false;
     bool transient = false;
-
-private:
-    ca_context *m_canberraContext = nullptr;
 };
 
 } // namespace NotificationManager

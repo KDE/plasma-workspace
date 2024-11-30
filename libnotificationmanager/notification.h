@@ -131,6 +131,8 @@ public:
 
     void processHints(const QVariantMap &hints);
 
+    QString soundHintName() const;
+
 private:
     friend class NotificationsModel;
     friend class AbstractNotificationsModel;

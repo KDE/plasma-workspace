@@ -6,9 +6,14 @@
 
 #include "notifications.h"
 
+#include <KConfig>
+#include <KConfigGroup>
+#include <KConfigWatcher>
 #include <QConcatenateTablesProxyModel>
 #include <QDebug>
+#include <QFile>
 #include <QMetaEnum>
+#include <canberra.h>
 #include <memory>
 
 #include <KDescendantsProxyModel>
@@ -76,6 +81,7 @@ public:
     KDescendantsProxyModel *flattenModel = nullptr;
 
     LimitedRowCountProxyModel *limiterModel = nullptr;
+    ca_context *canberraContext = nullptr;
 
 private:
     Notifications *const q;
@@ -840,6 +846,45 @@ int Notifications::rowCount(const QModelIndex &parent) const
 QHash<int, QByteArray> Notifications::roleNames() const
 {
     return Utils::roleNames();
+}
+
+void Notifications::playSoundHint(const QModelIndex &idx) const
+{
+    auto soundName = data(idx, Notifications::SoundHintNameRole).toString();
+    if (!d->canberraContext) {
+        const int ret = ca_context_create(&d->canberraContext);
+        if (ret != CA_SUCCESS) {
+            qCWarning(NOTIFICATIONMANAGER) << "Failed to initialize canberra context for audio notification:" << ca_strerror(ret);
+            d->canberraContext = nullptr;
+            return;
+        }
+    }
+
+    ca_proplist *props = nullptr;
+    ca_proplist_create(&props);
+
+    const auto soundThemeWatcher = KConfigWatcher::create(KSharedConfig::openConfig(QStringLiteral("kdeglobals")));
+    const KConfigGroup soundGroup = soundThemeWatcher->config()->group(QStringLiteral("Sounds"));
+    const auto soundTheme = soundGroup.readEntry("Theme", QStringLiteral("ocean"));
+
+    ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
+    if (QFile(soundName).isReadable()) {
+        ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME, QFile::encodeName(soundName).constData());
+    }
+    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME, soundTheme.toLatin1().constData());
+
+    // We'll also want this cached for a time. volatile makes sure the cache is
+    // dropped after some time or when the cache is under pressure.
+    ca_proplist_sets(props, CA_PROP_CANBERRA_CACHE_CONTROL, "volatile");
+
+    const int ret = ca_context_play_full(d->canberraContext, 0, props, nullptr, nullptr);
+
+    ca_proplist_destroy(props);
+
+    if (ret != CA_SUCCESS) {
+        qCWarning(NOTIFICATIONMANAGER) << "Failed to play sound" << soundName << "with canberra:" << ca_strerror(ret);
+        return;
+    }
 }
 
 #include "moc_notifications.cpp"

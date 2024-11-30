@@ -453,9 +453,6 @@ void Notification::Private::processHints(const QVariantMap &hints)
 
     soundName = hints.value(QStringLiteral("sound-name")).toString();
     soundFile = hints.value(QStringLiteral("sound-file")).toString();
-    if (!soundName.isEmpty() || !soundFile.isEmpty()) {
-        playSoundHint();
-    }
 }
 
 void Notification::Private::setUrgency(Notifications::Urgency urgency)
@@ -468,46 +465,6 @@ void Notification::Private::setUrgency(Notifications::Urgency urgency)
     // "critical updates available"?
     if (urgency == Notifications::CriticalUrgency) {
         timeout = 0;
-    }
-}
-
-void Notification::Private::playSoundHint()
-{
-    if (!m_canberraContext) {
-        const int ret = ca_context_create(&m_canberraContext);
-        if (ret != CA_SUCCESS) {
-            qCWarning(NOTIFICATIONMANAGER) << "Failed to initialize canberra context for audio notification:" << ca_strerror(ret);
-            m_canberraContext = nullptr;
-            return;
-        }
-    }
-
-    ca_proplist *props = nullptr;
-    ca_proplist_create(&props);
-
-    const auto soundThemeWatcher = KConfigWatcher::create(KSharedConfig::openConfig(u"kdeglobals"_s));
-    const KConfigGroup soundGroup = soundThemeWatcher->config()->group(u"Sounds"_s);
-    const auto soundTheme = soundGroup.readEntry("Theme", u"ocean"_s);
-
-    if (!soundFile.isEmpty()) {
-        ca_proplist_sets(props, CA_PROP_EVENT_ID, soundFile.toLatin1().constData());
-        ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME, QFile::encodeName(soundFile).constData());
-    } else {
-        ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
-    }
-    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME, soundTheme.toLatin1().constData());
-
-    // We'll also want this cached for a time. volatile makes sure the cache is
-    // dropped after some time or when the cache is under pressure.
-    ca_proplist_sets(props, CA_PROP_CANBERRA_CACHE_CONTROL, "volatile");
-
-    const int ret = ca_context_play_full(m_canberraContext, 0, props, nullptr, nullptr);
-
-    ca_proplist_destroy(props);
-
-    if (ret != CA_SUCCESS) {
-        qCWarning(NOTIFICATIONMANAGER) << "Failed to play sound" << soundName << "with canberra:" << ca_strerror(ret);
-        return;
     }
 }
 
@@ -873,4 +830,12 @@ void Notification::setHints(const QVariantMap &hints)
 void Notification::processHints(const QVariantMap &hints)
 {
     d->processHints(hints);
+}
+
+QString Notification::soundHintName() const
+{
+    if (d->soundName.isEmpty()) {
+        return d->soundFile;
+    }
+    return d->soundName;
 }
