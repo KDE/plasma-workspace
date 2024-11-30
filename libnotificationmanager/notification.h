@@ -131,6 +131,9 @@ public:
 
     void processHints(const QVariantMap &hints);
 
+    bool isAddedDuringInhibition() const;
+    void setIsAddedDuringInhibition(bool value);
+
 private:
     friend class NotificationsModel;
     friend class AbstractNotificationsModel;

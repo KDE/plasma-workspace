@@ -285,6 +285,8 @@ public:
                       ///< notification in a certain way, or group notifications of similar types.  @since 5.21
         ResidentRole, ///< Whether the notification should keep its actions even when they were invoked. @since 5.22
         TransientRole, ///< Whether the notification is transient and should not be kept in history. @since 5.22
+
+        IsAddedDuringInhibitionRole, ///< Whether the notification is added when inhibition is on. @since 6.3
     };
     Q_ENUM(Roles)
 
@@ -528,6 +530,11 @@ public:
     Q_INVOKABLE QModelIndex groupIndex(const QModelIndex &idx) const;
 
     Q_INVOKABLE void collapseAllGroups();
+
+    /**
+     * Shows a notification to report the number of unread inhibited notifications.
+     */
+    Q_INVOKABLE void showInhibitionSummary();
 
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;

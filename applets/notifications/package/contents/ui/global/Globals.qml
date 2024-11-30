@@ -56,6 +56,7 @@ QtObject {
                 stream.unmute();
             }
             notificationSettings.notificationSoundsInhibited = false;
+            popupNotificationsModel.showInhibitionSummary();
         }
         notificationSettings.save();
     }
@@ -351,7 +352,7 @@ QtObject {
 
         for (var i = 0; i < popupInstantiator.count; ++i) {
             let popup = popupInstantiator.objectAt(i);
-            if (!popup) {
+            if (!popup || popup.modelInterface.isAddedDuringInhibition) {
                 continue;
             }
 
@@ -526,6 +527,8 @@ QtObject {
                 replySubmitButtonText: model.replySubmitButtonText || ""
                 replySubmitButtonIconName: model.replySubmitButtonIconName || ""
 
+                isAddedDuringInhibition: model.isAddedDuringInhibition
+
                 // explicit close, even when resident
                 onCloseClicked: popupNotificationsModel.close(popupNotificationsModel.index(index, 0))
                 onDismissClicked: model.dismissed = true
@@ -619,9 +622,18 @@ QtObject {
                 }
             }
             // popup width is fixed
-            onHeightChanged: positionPopups()
+            Connections {
+                enabled: !model.isAddedDuringInhibition
+                function onHeightChanged() {
+                    positionPopups();
+                }
+            }
 
             Component.onCompleted: {
+                if (globals.inhibited) {
+                    model.isAddedDuringInhibition = false; // Don't count already shown notifications
+                }
+
                 if (model.type === NotificationManager.Notifications.NotificationType && model.desktopEntry) {
                     // Register apps that were seen spawning a popup so they can be configured later
                     // Apps with notifyrc can already be configured anyway
@@ -651,6 +663,11 @@ QtObject {
             }
         }
         onObjectAdded: (index, object) => {
+            if (!globals.inhibited && object.modelInterface.isAddedDuringInhibition) {
+                object.hoverEntered();
+                object.expired();
+                return; // Suppress inhibited notifications after "Do not disturb" is off
+            }
             positionPopups();
             object.visible = true;
         }

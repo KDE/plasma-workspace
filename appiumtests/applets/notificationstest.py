@@ -6,6 +6,7 @@
 import base64
 import logging
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -18,7 +19,7 @@ import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import (NoSuchElementException, WebDriverException)
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -28,6 +29,7 @@ from gi.repository import Gdk, GdkPixbuf, Gio, GLib
 
 sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "utils"))
 from GLibMainLoopThread import GLibMainLoopThread
+from kicker.favoritetest import start_kactivitymanagerd
 
 WIDGET_ID: Final = "org.kde.plasma.notifications"
 KDE_VERSION: Final = 6
@@ -65,17 +67,25 @@ class NotificationsTest(unittest.TestCase):
     loop_thread: GLibMainLoopThread
     notification_proxy: Gio.DBusProxy
     driver: webdriver.Remote
+    kactivitymanagerd: subprocess.Popen
 
     @classmethod
     def setUpClass(cls) -> None:
         """
         Opens the widget and initialize the webdriver
         """
+        # Make history work
+        cls.kactivitymanagerd = start_kactivitymanagerd()
+
+        os.makedirs(os.path.join(GLib.get_user_data_dir(), "knotifications6"))
+        shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "libnotificationmanager", "libnotificationmanager.notifyrc"), os.path.join(GLib.get_user_data_dir(), "knotifications6"))
+
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
         options.set_capability("timeouts", {'implicit': 10000})
         options.set_capability("environ", {
             "LC_ALL": "en_US.UTF-8",
+            "QT_LOGGING_RULES": "kf.notification*.debug=true;org.kde.plasma.notificationmanager.debug=true",
         })
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
@@ -98,6 +108,8 @@ class NotificationsTest(unittest.TestCase):
         """
         cls.loop_thread.quit()
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        cls.kactivitymanagerd.kill()
+        cls.kactivitymanagerd.wait(10)
         for _ in range(10):
             try:
                 subprocess.check_call(["pidof", "plasmawindowed"])
@@ -359,6 +371,38 @@ class NotificationsTest(unittest.TestCase):
                     return False
 
             WebDriverWait(self.driver, 10).until(match_image)
+            self.driver.find_element(AppiumBy.NAME, "Close").click()
+
+    def test_7_do_not_disturb(self) -> None:
+        """
+        Suppress inhibited notifications after "Do not disturb" is turned off, and show a summary for unread inhibited notifications.
+        """
+        self.driver.find_element(AppiumBy.NAME, "Do not disturb").click()
+        dnd_button = self.driver.find_element(AppiumBy.XPATH, "//*[@name='Do not disturb' and contains(@states, 'checked')]")
+
+        summary = "Do not disturb me"
+        for i in range(2):
+            send_notification({
+                "app_name": "Appium Test",
+                "summary": summary + str(i),
+                "hints": {
+                    "desktop-entry": GLib.Variant("s", "org.kde.plasmashell"),
+                },
+                "timeout": 60 * 1000,
+            })
+        title = self.driver.find_element(AppiumBy.XPATH, f"//heading[starts-with(@name, '{summary}') and contains(@accessibility-id, 'FullRepresentation')]")
+        self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.XPATH, f"//notification[starts-with(@name, '{summary}')]")
+
+        dnd_button.click()
+        try:
+            self.driver.find_element(AppiumBy.XPATH, "//notification[@name='Unread Notifications' and @description='2 notifications were received while Do Not Disturb was active.  from Notification Manager']")
+            self.driver.find_element(AppiumBy.NAME, "Close").click()
+        except NoSuchElementException:
+            logging.info(self.driver.page_source)
+
+        # Notifications can only be cleared after they are expired, otherwise they will stay in the list
+        self.driver.find_element(AppiumBy.NAME, "Clear All Notifications").click()
+        WebDriverWait(self.driver, 5).until_not(lambda _: title.is_displayed())
 
 
 if __name__ == '__main__':

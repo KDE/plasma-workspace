@@ -826,3 +826,13 @@ void Notification::processHints(const QVariantMap &hints)
 {
     d->processHints(hints);
 }
+
+bool Notification::isAddedDuringInhibition() const
+{
+    return d->isAddedDuringInhibition;
+}
+
+void Notification::setIsAddedDuringInhibition(bool value)
+{
+    d->isAddedDuringInhibition = value;
+}
