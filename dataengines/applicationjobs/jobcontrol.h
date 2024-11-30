@@ -17,7 +17,7 @@ class JobControl : public Plasma5Support::Service
     Q_OBJECT
 
 public:
-    JobControl(QObject *parent, NotificationManager::Job *job);
+    explicit JobControl(QObject *parent, NotificationManager::Job *job);
 
 protected:
     Plasma5Support::ServiceJob *createJob(const QString &operation, QMap<QString, QVariant> &parameters) override;

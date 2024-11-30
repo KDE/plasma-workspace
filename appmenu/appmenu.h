@@ -34,7 +34,7 @@ class AppMenuModule : public KDEDModule, protected QDBusContext
 {
     Q_OBJECT
 public:
-    AppMenuModule(QObject *parent, const QList<QVariant> &list);
+    explicit AppMenuModule(QObject *parent, const QList<QVariant> &list);
     ~AppMenuModule() override;
 
 Q_SIGNALS:
