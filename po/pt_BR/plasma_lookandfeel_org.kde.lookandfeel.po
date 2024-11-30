@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-07-23 20:33-0300\n"
+"PO-Revision-Date: 2024-11-29 00:29-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -44,13 +44,11 @@ msgstr[0] "Encerrando sessão em 1 segundo"
 msgstr[1] "Encerrando sessão em %1 segundos"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Instalando atualizações de software e reiniciando em 1 segundo"
-msgstr[1] "Instalando atualizações de software e reiniciando em %1 segundos"
+msgstr[0] "Instalando atualizações de software e desligando em 1 segundo"
+msgstr[1] "Instalando atualizações de software e desligando em %1 segundos"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
@@ -104,12 +102,10 @@ msgid "Hibernate Now"
 msgstr "Hibernar agora"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr "Instalar atualizações & reiniciar"
+msgstr "Instalar atualizações e reiniciar"
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -122,12 +118,10 @@ msgid "Restart Now"
 msgstr "Reiniciar agora"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Instalar atualizações e reiniciar agora"
+msgstr "Instalar atualizações e desligar"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
