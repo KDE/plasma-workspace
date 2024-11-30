@@ -73,6 +73,14 @@ PlasmaExtras.Representation {
                     checkable: true
                     checked: Globals.inhibited
 
+                    Accessible.onPressAction: if (Globals.inhibited) {
+                        Globals.revokeInhibitions();
+                    } else {
+                        let date = new Date();
+                        date.setFullYear(date.getFullYear() + 1);
+                        notificationSettings.notificationsInhibitedUntil = date;
+                        notificationSettings.save();
+                    }
                     KeyNavigation.down: list
                     KeyNavigation.tab: list
 

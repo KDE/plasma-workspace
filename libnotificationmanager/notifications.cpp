@@ -12,6 +12,8 @@
 #include <memory>
 
 #include <KDescendantsProxyModel>
+#include <KLocalizedString>
+#include <KNotification>
 
 #include "limitedrowcountproxymodel_p.h"
 #include "notificationfilterproxymodel_p.h"
@@ -30,6 +32,7 @@
 
 #include "debug.h"
 
+using namespace Qt::StringLiterals;
 using namespace NotificationManager;
 
 class Q_DECL_HIDDEN Notifications::Private
@@ -166,6 +169,7 @@ void Notifications::Private::initProxyModels()
         connect(filterModel, &NotificationFilterProxyModel::urgenciesChanged, q, &Notifications::urgenciesChanged);
         connect(filterModel, &NotificationFilterProxyModel::showExpiredChanged, q, &Notifications::showExpiredChanged);
         connect(filterModel, &NotificationFilterProxyModel::showDismissedChanged, q, &Notifications::showDismissedChanged);
+        connect(filterModel, &NotificationFilterProxyModel::showAddedDuringInhibitionChanged, q, &Notifications::showAddedDuringInhibitionChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedDesktopEntriesChanged, q, &Notifications::blacklistedDesktopEntriesChanged);
         connect(filterModel, &NotificationFilterProxyModel::blacklistedNotifyRcNamesChanged, q, &Notifications::blacklistedNotifyRcNamesChanged);
 
@@ -245,7 +249,7 @@ void Notifications::Private::updateCount()
     for (int i = 0; i < filterModel->rowCount(); ++i) {
         const QModelIndex idx = filterModel->index(i, 0);
 
-        if (idx.data(Notifications::ExpiredRole).toBool()) {
+        if (idx.data(Notifications::ExpiredRole).toBool() || idx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
             ++expired;
         } else {
             ++active;
@@ -475,6 +479,16 @@ bool Notifications::showDismissed() const
 void Notifications::setShowDismissed(bool show)
 {
     d->filterModel->setShowDismissed(show);
+}
+
+bool Notifications::showAddedDuringInhibition() const
+{
+    return d->filterModel->showAddedDuringInhibition();
+}
+
+void Notifications::setShowAddedDuringInhibition(bool show)
+{
+    d->filterModel->setShowAddedDuringInhibition(show);
 }
 
 QStringList Notifications::blacklistedDesktopEntries() const
@@ -810,6 +824,28 @@ void Notifications::collapseAllGroups()
     if (d->groupCollapsingModel) {
         d->groupCollapsingModel->collapseAll();
     }
+}
+
+void Notifications::showInhibitionSummary()
+{
+    int inhibited = 0;
+    for (int i = 0, count = d->notificationsAndJobsModel->rowCount(); i < count; ++i) {
+        const QModelIndex idx = d->notificationsAndJobsModel->index(i, 0);
+        if (!idx.data(Notifications::ReadRole).toBool() && idx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
+            ++inhibited;
+        }
+    }
+
+    if (!inhibited) {
+        return;
+    }
+
+    KNotification::event(u"inhibitionSummary"_s,
+                         i18nc("@title", "Unread Notifications"),
+                         i18nc("@info", "%1 notifications were received while Do Not Disturb was active.", QString::number(inhibited)),
+                         u"preferences-desktop-notification-bell"_s,
+                         KNotification::CloseOnTimeout,
+                         u"libnotificationmanager"_s);
 }
 
 QVariant Notifications::data(const QModelIndex &index, int role) const

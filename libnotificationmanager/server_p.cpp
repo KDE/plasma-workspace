@@ -164,6 +164,7 @@ uint ServerPrivate::Notify(const QString &app_name,
     notification.setActions(actions);
 
     notification.setTimeout(timeout);
+    notification.setWasAddedDuringInhibition(m_inhibited);
 
     // might override some of the things we set above (like application name)
     notification.d->processHints(hints);

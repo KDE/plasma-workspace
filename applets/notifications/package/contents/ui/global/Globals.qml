@@ -34,6 +34,10 @@ QtObject {
     property bool inhibited: false
 
     onInhibitedChanged: {
+        if (!inhibited) {
+            popupNotificationsModel.showInhibitionSummary();
+        }
+
         var pa = pulseAudio.item;
         if (!pa) {
             return;
@@ -409,6 +413,7 @@ QtObject {
         limit: plasmoid ? (Math.ceil(globals.screenRect.height / (Kirigami.Units.gridUnit * 4))) : 0
         showExpired: false
         showDismissed: false
+        showAddedDuringInhibition: false
         blacklistedDesktopEntries: notificationSettings.popupBlacklistedApplications
         blacklistedNotifyRcNames: notificationSettings.popupBlacklistedServices
         whitelistedDesktopEntries: globals.inhibited ? notificationSettings.doNotDisturbPopupWhitelistedApplications : []
@@ -619,9 +624,13 @@ QtObject {
                 }
             }
             // popup width is fixed
-            onHeightChanged: positionPopups()
+            onHeightChanged: globals.positionPopups()
 
             Component.onCompleted: {
+                if (globals.inhibited) {
+                    model.wasAddedDuringInhibition = false; // Don't count already shown notifications
+                }
+
                 if (model.type === NotificationManager.Notifications.NotificationType && model.desktopEntry) {
                     // Register apps that were seen spawning a popup so they can be configured later
                     // Apps with notifyrc can already be configured anyway

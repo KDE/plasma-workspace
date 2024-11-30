@@ -104,6 +104,7 @@ void AbstractNotificationsModel::Private::onNotificationReplaced(uint replacedId
     newNotification.setExpired(oldNotification.expired());
     newNotification.setDismissed(oldNotification.dismissed());
     newNotification.setRead(oldNotification.read());
+    newNotification.setWasAddedDuringInhibition(Server::self().inhibited());
 
     notifications[row] = newNotification;
     const QModelIndex idx = q->index(row, 0);
@@ -378,6 +379,9 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
     case Notifications::TransientRole:
         return notification.transient();
 
+    case Notifications::WasAddedDuringInhibitionRole:
+        return notification.wasAddedDuringInhibition();
+
     case Notifications::HasReplyActionRole:
         return notification.hasReplyAction();
     case Notifications::ReplyActionLabelRole:
@@ -413,6 +417,12 @@ bool AbstractNotificationsModel::setData(const QModelIndex &index, const QVarian
     case Notifications::ExpiredRole:
         if (value.toBool() != notification.expired()) {
             notification.setExpired(value.toBool());
+            dirty = true;
+        }
+        break;
+    case Notifications::WasAddedDuringInhibitionRole:
+        if (bool v = value.toBool(); v != notification.wasAddedDuringInhibition()) {
+            notification.setWasAddedDuringInhibition(v);
             dirty = true;
         }
         break;
@@ -471,7 +481,7 @@ void AbstractNotificationsModel::clear(Notifications::ClearFlags flags)
     for (int i = 0; i < d->notifications.count(); ++i) {
         const Notification &notification = d->notifications.at(i);
 
-        if (flags.testFlag(Notifications::ClearExpired) && notification.expired()) {
+        if (flags.testFlag(Notifications::ClearExpired) && (notification.expired() || notification.wasAddedDuringInhibition())) {
             close(notification.id());
         }
     }

@@ -96,6 +96,8 @@ public:
 
     bool resident = false;
     bool transient = false;
+
+    bool wasAddedDuringInhibition = false;
 };
 
 } // namespace NotificationManager

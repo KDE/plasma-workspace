@@ -58,6 +58,20 @@ void NotificationFilterProxyModel::setShowDismissed(bool show)
     }
 }
 
+bool NotificationFilterProxyModel::showAddedDuringInhibition() const
+{
+    return m_showDismissed;
+}
+
+void NotificationFilterProxyModel::setShowAddedDuringInhibition(bool show)
+{
+    if (m_showAddedDuringInhibition != show) {
+        m_showAddedDuringInhibition = show;
+        invalidateFilter();
+        Q_EMIT showAddedDuringInhibitionChanged();
+    }
+}
+
 QStringList NotificationFilterProxyModel::blacklistedDesktopEntries() const
 {
     return m_blacklistedDesktopEntries;
@@ -175,6 +189,10 @@ bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModel
         if (!m_urgencies.testFlag(urgency)) {
             return false;
         }
+    }
+
+    if (!m_showAddedDuringInhibition && sourceIdx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
+        return false;
     }
 
     return true;

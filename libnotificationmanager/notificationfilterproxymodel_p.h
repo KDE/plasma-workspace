@@ -30,6 +30,9 @@ public:
     bool showDismissed() const;
     void setShowDismissed(bool show);
 
+    bool showAddedDuringInhibition() const;
+    void setShowAddedDuringInhibition(bool show);
+
     QStringList blacklistedDesktopEntries() const;
     void setBlackListedDesktopEntries(const QStringList &blacklist);
 
@@ -46,6 +49,7 @@ Q_SIGNALS:
     void urgenciesChanged();
     void showExpiredChanged();
     void showDismissedChanged();
+    void showAddedDuringInhibitionChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();
@@ -58,6 +62,7 @@ private:
     Notifications::Urgencies m_urgencies = Notifications::LowUrgency | Notifications::NormalUrgency | Notifications::CriticalUrgency;
     bool m_showDismissed = false;
     bool m_showExpired = false;
+    bool m_showAddedDuringInhibition = true;
 
     QStringList m_blacklistedDesktopEntries;
     QStringList m_blacklistedNotifyRcNames;

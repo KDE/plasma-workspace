@@ -62,6 +62,15 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(bool showDismissed READ showDismissed WRITE setShowDismissed NOTIFY showDismissedChanged)
 
     /**
+     * Whether to show notifications added during inhibition.
+     *
+     * If set to @c false, notifications are suppressed even after leaving "Do not disturb" mode.
+     *
+     * Default is @c true.
+     */
+    Q_PROPERTY(bool showAddedDuringInhibition READ showAddedDuringInhibition WRITE setShowAddedDuringInhibition NOTIFY showAddedDuringInhibitionChanged)
+
+    /**
      * A list of desktop entries for which no notifications should be shown.
      *
      * If the same desktop entry is present in both blacklist and whitelist,
@@ -285,6 +294,8 @@ public:
                       ///< notification in a certain way, or group notifications of similar types.  @since 5.21
         ResidentRole, ///< Whether the notification should keep its actions even when they were invoked. @since 5.22
         TransientRole, ///< Whether the notification is transient and should not be kept in history. @since 5.22
+
+        WasAddedDuringInhibitionRole, ///< Whether the notification was added while inhibition was active. @since 6.3
     };
     Q_ENUM(Roles)
 
@@ -370,6 +381,9 @@ public:
 
     bool showDismissed() const;
     void setShowDismissed(bool show);
+
+    bool showAddedDuringInhibition() const;
+    void setShowAddedDuringInhibition(bool show);
 
     QStringList blacklistedDesktopEntries() const;
     void setBlacklistedDesktopEntries(const QStringList &blacklist);
@@ -529,6 +543,11 @@ public:
 
     Q_INVOKABLE void collapseAllGroups();
 
+    /**
+     * Shows a notification to report the number of unread inhibited notifications.
+     */
+    Q_INVOKABLE void showInhibitionSummary();
+
     QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
@@ -541,6 +560,7 @@ Q_SIGNALS:
     void limitChanged();
     void showExpiredChanged();
     void showDismissedChanged();
+    void showAddedDuringInhibitionChanged();
     void blacklistedDesktopEntriesChanged();
     void blacklistedNotifyRcNamesChanged();
     void whitelistedDesktopEntriesChanged();

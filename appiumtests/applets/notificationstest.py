@@ -6,6 +6,7 @@
 import base64
 import logging
 import os
+import shutil
 import subprocess
 import tempfile
 import time
@@ -16,13 +17,15 @@ import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import (NoSuchElementException, WebDriverException)
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
 
 gi.require_version('Gdk', '4.0')
 gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import Gdk, GdkPixbuf, Gio, GLib
+
+from kicker.favoritetest import start_kactivitymanagerd
 
 WIDGET_ID: Final = "org.kde.plasma.notifications"
 KDE_VERSION: Final = 6
@@ -59,17 +62,25 @@ class NotificationsTest(unittest.TestCase):
 
     notification_proxy: Gio.DBusProxy
     driver: webdriver.Remote
+    kactivitymanagerd: subprocess.Popen
 
     @classmethod
     def setUpClass(cls) -> None:
         """
         Opens the widget and initialize the webdriver
         """
+        # Make history work
+        cls.kactivitymanagerd = start_kactivitymanagerd()
+
+        os.makedirs(os.path.join(GLib.get_user_data_dir(), "knotifications6"))
+        shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, os.pardir, "libnotificationmanager", "libnotificationmanager.notifyrc"), os.path.join(GLib.get_user_data_dir(), "knotifications6"))
+
         options = AppiumOptions()
         options.set_capability("app", f"plasmawindowed -p org.kde.plasma.nano {WIDGET_ID}")
         options.set_capability("timeouts", {'implicit': 10000})
         options.set_capability("environ", {
             "LC_ALL": "en_US.UTF-8",
+            "QT_LOGGING_RULES": "kf.notification*.debug=true;org.kde.plasma.notificationmanager.debug=true",
         })
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
@@ -88,6 +99,8 @@ class NotificationsTest(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
+        cls.kactivitymanagerd.kill()
+        cls.kactivitymanagerd.wait(10)
         for _ in range(10):
             try:
                 subprocess.check_call(["pidof", "plasmawindowed"])
@@ -95,6 +108,15 @@ class NotificationsTest(unittest.TestCase):
                 break
             time.sleep(1)
         cls.driver.quit()
+
+    def close_notifications(self) -> None:
+        wait = WebDriverWait(self.driver, 5)
+        for button in self.driver.find_elements(AppiumBy.XPATH, "//button[@name='Close']"):
+            try:
+                button.click()
+                wait.until_not(lambda _: button.is_displayed())
+            except WebDriverException:
+                pass
 
     def test_0_open(self) -> None:
         """
@@ -119,9 +141,7 @@ class NotificationsTest(unittest.TestCase):
 
         wait = WebDriverWait(self.driver, 5)
         wait.until(EC.presence_of_element_located((AppiumBy.NAME, summary)))
-        close_button = self.driver.find_element(AppiumBy.NAME, "Close")
-        close_button.click()
-        wait.until_not(lambda _: close_button.is_displayed())
+        self.close_notifications()
 
     def take_screenshot(self) -> str:
         with tempfile.TemporaryDirectory() as temp_dir:
@@ -139,6 +159,7 @@ class NotificationsTest(unittest.TestCase):
         partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
         colors = (0xff0000ff, 0x00ff00ff, 0x0000ffff)
         for color in colors:
+            logging.info(f"Testing color: {color}")
             pixbuf.fill(color)
             send_notification({
                 "app_name": "Appium Test",
@@ -161,10 +182,11 @@ class NotificationsTest(unittest.TestCase):
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, summary + str(color))))
             partial_pixbuf.fill(color)
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
-            self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
-            close_button = self.driver.find_element(AppiumBy.NAME, "Close")
-            close_button.click()
-            wait.until_not(lambda _: close_button.is_displayed())
+            try:
+                self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+            except WebDriverException:  # Popup animation
+                self.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+            self.close_notifications()
 
     def test_2_notification_with_explicit_timeout(self) -> None:
         """
@@ -190,9 +212,7 @@ class NotificationsTest(unittest.TestCase):
         })
         wait = WebDriverWait(self.driver, 5)
         wait.until(EC.presence_of_element_located(("description", "biublinkwww.example.org  from Appium Test")))
-        close_button = self.driver.find_element(AppiumBy.NAME, "Close")
-        close_button.click()
-        wait.until_not(lambda _: close_button.is_displayed())
+        self.close_notifications()
 
     def test_4_actions(self) -> None:
         """
@@ -356,6 +376,35 @@ class NotificationsTest(unittest.TestCase):
                     return False
 
             WebDriverWait(self.driver, 10).until(match_image)
+            self.close_notifications()
+
+    def test_7_do_not_disturb(self) -> None:
+        """
+        Suppress inhibited notifications after "Do not disturb" is turned off, and show a summary for unread inhibited notifications.
+        """
+        self.driver.find_element(AppiumBy.NAME, "Do not disturb").click()
+        dnd_button = self.driver.find_element(AppiumBy.XPATH, "//*[@name='Do not disturb' and contains(@states, 'checked')]")
+
+        summary = "Do not disturb me"
+        for i in range(2):
+            send_notification({
+                "app_name": "Appium Test",
+                "summary": summary + str(i),
+                "hints": {
+                    "desktop-entry": GLib.Variant("s", "org.kde.plasmashell"),
+                },
+                "timeout": 60 * 1000,
+            })
+        title = self.driver.find_element(AppiumBy.XPATH, f"//heading[starts-with(@name, '{summary}') and contains(@accessibility-id, 'FullRepresentation')]")
+        self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.XPATH, f"//notification[starts-with(@name, '{summary}')]")
+
+        dnd_button.click()
+        self.driver.find_element(AppiumBy.XPATH, "//notification[@name='Unread Notifications' and @description='2 notifications were received while Do Not Disturb was active.  from Notification Manager']")
+        self.driver.find_element(AppiumBy.XPATH, "//button[@name='Close' and contains(@accessibility-id, 'NotificationPopup')]").click()
+
+        # Notifications can only be cleared after they are expired, otherwise they will stay in the list
+        self.driver.find_element(AppiumBy.NAME, "Clear All Notifications").click()
+        WebDriverWait(self.driver, 5).until_not(lambda _: title.is_displayed())
 
 
 if __name__ == '__main__':

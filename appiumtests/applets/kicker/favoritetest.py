@@ -34,9 +34,17 @@ def name_has_owner(session_bus: Gio.DBusConnection, name: str) -> bool:
     return reply and reply.get_signature() == 'b' and reply.get_body().get_child_value(0).get_boolean()
 
 
+def build_ksycoca() -> None:
+    subprocess.check_call([f"kbuildsycoca{KDE_VERSION}"], stdout=sys.stderr, stderr=sys.stderr, env=os.environ)
+
+
 def start_kactivitymanagerd() -> subprocess.Popen:
     session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
     assert not name_has_owner(session_bus, KACTIVITYMANAGERD_SERVICE_NAME)
+
+    os.makedirs(os.path.join(GLib.get_user_config_dir(), "menus"))
+    shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "applications.menu"), os.path.join(GLib.get_user_config_dir(), "menus"))
+
     kactivitymanagerd = subprocess.Popen([KACTIVITYMANAGERD_PATH], stdout=sys.stderr, stderr=sys.stderr, env=os.environ)
     kactivitymanagerd_started: bool = False
     for _ in range(10):
@@ -46,6 +54,9 @@ def start_kactivitymanagerd() -> subprocess.Popen:
         logging.info("waiting for kactivitymanagerd to appear on the DBus session")
         time.sleep(1)
     assert kactivitymanagerd_started
+
+    build_ksycoca()
+
     return kactivitymanagerd
 
 
@@ -89,11 +100,11 @@ class TestDBusInterface:
 
         if method_name == "DeleteAndRebuildDatabase1":
             os.remove(KickerTest.desktop_entry_1)
-            KickerTest.build_ksycoca()
+            build_ksycoca()
             invocation.return_value(None)
         elif method_name == "DeleteAndRebuildDatabase2":
             os.remove(KickerTest.desktop_entry_2)
-            KickerTest.build_ksycoca()
+            build_ksycoca()
             invocation.return_value(None)
 
 
@@ -107,13 +118,7 @@ class KickerTest(unittest.TestCase):
     desktop_entry_2: str
 
     @classmethod
-    def build_ksycoca(cls) -> None:
-        subprocess.check_call([f"kbuildsycoca{KDE_VERSION}"], stdout=sys.stderr, stderr=sys.stderr, env=os.environ)
-
-    @classmethod
     def setUpClass(cls) -> None:
-        os.makedirs(os.path.join(GLib.get_user_config_dir(), "menus"))
-        shutil.copy(os.path.join(os.path.dirname(os.path.abspath(__file__)), "applications.menu"), os.path.join(GLib.get_user_config_dir(), "menus"))
         # Prepare desktop files
         # 1
         os.makedirs(os.path.join(GLib.get_user_data_dir(), "applications"))
@@ -130,7 +135,6 @@ class KickerTest(unittest.TestCase):
         os.environ["XDG_DATA_DIRS"] = os.environ["XDG_DATA_DIRS"] + ":" + cls.temp_dir.name
 
         cls.kactivitymanagerd = start_kactivitymanagerd()
-        cls.build_ksycoca()
 
         cls.loop_thread = GLibMainLoopThread()
         cls.loop_thread.start()
