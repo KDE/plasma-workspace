@@ -3,6 +3,11 @@ set(kded_appmenu_SRCS
     menuimporter.cpp
     appmenu_dbus.cpp
     verticalmenu.cpp
+
+    appmenu.h
+    menuimporter.h
+    appmenu_dbus.h
+    verticalmenu.h
     )
 
 qt_add_dbus_adaptor(kded_appmenu_SRCS com.canonical.AppMenu.Registrar.xml

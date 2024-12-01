@@ -1,7 +1,7 @@
 set(ksplashqml_SRCS
     main.cpp
-    splashapp.cpp
-    splashwindow.cpp
+    splashapp.cpp splashapp.h
+    splashwindow.cpp splashwindow.h
    )
 
 add_executable(ksplashqml ${ksplashqml_SRCS})

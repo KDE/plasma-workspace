@@ -5,13 +5,13 @@ ecm_add_qml_module(dbusplugin URI org.kde.plasma.workspace.dbus VERSION 1.0 CLAS
 target_sources(dbusplugin
     PRIVATE
         dbusplugin.cpp
-        dbusconnection.cpp
-        dbusdecoder.cpp
-        dbusencoder.cpp
-        dbuserror.cpp
-        dbusmessage.cpp
-        dbuspendingreply.cpp
-        dbusservicewatcher.cpp
+        dbusconnection.cpp dbusconnection.h
+        dbusdecoder.cpp dbusdecoder.h
+        dbusencoder.cpp dbusencoder.h
+        dbuserror.cpp dbuserror.h
+        dbusmessage.cpp dbusmessage.h
+        dbuspendingreply.cpp dbuspendingreply.h
+        dbusservicewatcher.cpp dbusservicewatcher.h
         dbustype.h
 )
 target_link_libraries(dbusplugin

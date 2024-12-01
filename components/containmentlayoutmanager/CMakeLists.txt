@@ -6,13 +6,13 @@ ecm_add_qml_module(containmentlayoutmanagerplugin
 )
 
 target_sources(containmentlayoutmanagerplugin PRIVATE
-    appletcontainer.cpp
-    configoverlay.cpp
-    appletslayout.cpp
-    abstractlayoutmanager.cpp
-    gridlayoutmanager.cpp
-    itemcontainer.cpp
-    resizehandle.cpp
+    appletcontainer.cpp appletcontainer.h
+    configoverlay.cpp configoverlay.h
+    appletslayout.cpp appletslayout.h
+    abstractlayoutmanager.cpp abstractlayoutmanager.h
+    gridlayoutmanager.cpp gridlayoutmanager.h
+    itemcontainer.cpp itemcontainer.h
+    resizehandle.cpp resizehandle.h
 )
 
 ecm_target_qml_sources(containmentlayoutmanagerplugin

@@ -1,6 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_feedback\")
 
-kcmutils_add_qml_kcm(kcm_feedback SOURCES feedback.cpp)
+kcmutils_add_qml_kcm(kcm_feedback SOURCES feedback.cpp feedback.h)
 
 kcmutils_generate_module_data(kcm_feedback
     MODULE_DATA_HEADER feedbackdata.h

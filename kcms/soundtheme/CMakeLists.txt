@@ -5,7 +5,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_soundtheme\")
 
 kcmutils_add_qml_kcm(kcm_soundtheme)
 target_sources(kcm_soundtheme PRIVATE
-    kcm_soundtheme.cpp
+    kcm_soundtheme.cpp kcm_soundtheme.h
 )
 
 kcmutils_generate_module_data(kcm_soundtheme

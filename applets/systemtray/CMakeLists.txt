@@ -5,13 +5,13 @@ plasma_install_package(package org.kde.plasma.private.systemtray)
 include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
 
 set(systemtray_SRCS
-    dbusserviceobserver.cpp
-    plasmoidregistry.cpp
-    statusnotifieritemjob.cpp
-    statusnotifieritemhost.cpp
-    statusnotifieritemservice.cpp
-    statusnotifieritemsource.cpp
-    systemtraysettings.cpp
+    dbusserviceobserver.cpp dbusserviceobserver.h
+    plasmoidregistry.cpp plasmoidregistry.h
+    statusnotifieritemjob.cpp statusnotifieritemjob.h
+    statusnotifieritemhost.cpp statusnotifieritemhost.h
+    statusnotifieritemservice.cpp statusnotifieritemservice.h
+    statusnotifieritemsource.cpp statusnotifieritemsource.h
+    systemtraysettings.cpp systemtraysettings.h
     systemtraytypes.cpp
 )
 
@@ -54,11 +54,11 @@ target_link_libraries(systemtray_static
 
 set_property(TARGET systemtray_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-add_library(systemtraymodel_static STATIC systemtraymodel.cpp sortedsystemtraymodel.cpp)
+add_library(systemtraymodel_static STATIC systemtraymodel.cpp sortedsystemtraymodel.cpp sortedsystemtraymodel.h)
 target_link_libraries(systemtraymodel_static PUBLIC systemtray_static)
 set_property(TARGET systemtraymodel_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp INSTALL_NAMESPACE "plasma/applets")
+kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp systemtray.h INSTALL_NAMESPACE "plasma/applets")
 
 target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)
 

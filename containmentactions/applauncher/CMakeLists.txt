@@ -1,7 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_containmentactions_applauncher\")
 
 set(applauncher_SRCS
-    launch.cpp
+    launch.cpp launch.h
 )
 ki18n_wrap_ui(applauncher_SRCS config.ui)
 

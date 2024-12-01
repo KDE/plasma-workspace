@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 set(batterycontrol_SRCS
-        batterycontrol.cpp
-        batteriesnamesmonitor_p.cpp
+        batterycontrol.cpp batterycontrol.h
+        batteriesnamesmonitor_p.cpp batteriesnamesmonitor_p.h
 )
 
 add_definitions(-DTRANSLATION_DOMAIN=\"batterycontrol\")

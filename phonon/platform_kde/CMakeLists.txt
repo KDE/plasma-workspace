@@ -1,7 +1,7 @@
 set(kde_PART_SRCS
     debug.cpp
-    kdeplatformplugin.cpp
-    kiomediastream.cpp
+    kdeplatformplugin.cpp kdeplatformplugin.h
+    kiomediastream.cpp kiomediastream.h
 )
 
 kcoreaddons_add_plugin(kde SOURCES ${kde_PART_SRCS} INSTALL_NAMESPACE "phonon_platform")

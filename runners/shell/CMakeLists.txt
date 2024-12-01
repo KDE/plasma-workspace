@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_shell\")
 
-kcoreaddons_add_plugin(krunner_shell SOURCES shellrunner.cpp INSTALL_NAMESPACE "kf6/krunner")
+kcoreaddons_add_plugin(krunner_shell SOURCES shellrunner.cpp shellrunner.h INSTALL_NAMESPACE "kf6/krunner")
 target_link_libraries(krunner_shell
     KF6::KIOCore
     KF6::KIOGui

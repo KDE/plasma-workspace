@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 add_definitions(-DTRANSLATION_DOMAIN="plasma_runner_appstream")
 
-kcoreaddons_add_plugin(krunner_appstream SOURCES appstreamrunner.cpp INSTALL_NAMESPACE "kf6/krunner")
+kcoreaddons_add_plugin(krunner_appstream SOURCES appstreamrunner.cpp appstreamrunner.h INSTALL_NAMESPACE "kf6/krunner")
 
 ecm_qt_declare_logging_category(krunner_appstream
     HEADER debug.h

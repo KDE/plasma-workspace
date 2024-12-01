@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-2-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_services\")
 
-kcoreaddons_add_plugin(krunner_services SOURCES servicerunner.cpp INSTALL_NAMESPACE "kf6/krunner")
+kcoreaddons_add_plugin(krunner_services SOURCES servicerunner.cpp servicerunner.h INSTALL_NAMESPACE "kf6/krunner")
 ecm_qt_declare_logging_category(krunner_services
     HEADER debug.h
     IDENTIFIER RUNNER_SERVICES

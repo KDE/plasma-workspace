@@ -23,10 +23,10 @@ set(XCB_LIBS
 
 set(XEMBED_SNI_PROXY_SOURCES
     main.cpp
-    fdoselectionmanager.cpp
-    snidbus.cpp
+    fdoselectionmanager.cpp fdoselectionmanager.h
+    snidbus.cpp snidbus.h
     sniproxy.cpp
-    xtestsender.cpp
+    xtestsender.cpp xtestsender.h
  )
 
 qt_add_dbus_adaptor(XEMBED_SNI_PROXY_SOURCES org.kde.StatusNotifierItem.xml

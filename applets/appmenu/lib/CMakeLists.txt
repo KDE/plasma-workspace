@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(org.kde.plasma.appmenu SOURCES appmenuapplet.cpp INSTALL_NAMESPACE "plasma/applets")
+kcoreaddons_add_plugin(org.kde.plasma.appmenu SOURCES appmenuapplet.cpp appmenuapplet.h INSTALL_NAMESPACE "plasma/applets")
 
 target_link_libraries(org.kde.plasma.appmenu
                       Qt::Widgets

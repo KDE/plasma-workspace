@@ -3,7 +3,7 @@ ecm_add_qml_module(plasmashellprivateplugin URI "org.kde.plasma.private.shell" V
 target_sources(plasmashellprivateplugin PRIVATE
     kcategorizeditemsviewmodels.cpp
     plasmaappletitemmodel.cpp
-    widgetexplorer.cpp
+    widgetexplorer.cpp widgetexplorer.h
 )
 
 target_link_libraries(plasmashellprivateplugin PRIVATE

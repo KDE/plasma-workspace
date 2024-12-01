@@ -4,7 +4,7 @@
 ecm_add_qml_module(keyboardindicatorplugin URI org.kde.plasma.private.keyboardindicator GENERATE_PLUGIN_SOURCE)
 target_sources(keyboardindicatorplugin
     PRIVATE
-        keystate.cpp
+        keystate.cpp keystate.h
 )
 target_link_libraries(keyboardindicatorplugin
     PRIVATE

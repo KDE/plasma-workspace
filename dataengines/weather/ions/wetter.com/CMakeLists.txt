@@ -1,4 +1,4 @@
-set(ion_wettercom_SRCS ion_wettercom.cpp)
+set(ion_wettercom_SRCS ion_wettercom.cpp ion_wettercom.h)
 ecm_qt_declare_logging_category(ion_wettercom_SRCS
     HEADER ion_wettercomdebug.h
     IDENTIFIER IONENGINE_WETTERCOM

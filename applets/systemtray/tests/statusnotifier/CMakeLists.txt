@@ -1,7 +1,7 @@
 set(statusnotifiertest_SRCS
     main.cpp
-    statusnotifiertest.cpp
-    pumpjob.cpp
+    statusnotifiertest.cpp statusnotifiertest.h
+    pumpjob.cpp pumpjob.h
 )
 
 ki18n_wrap_ui(statusnotifiertest_SRCS statusnotifiertest.ui)

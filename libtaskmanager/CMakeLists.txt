@@ -20,15 +20,15 @@ set(taskmanager_LIB_SRCS
     waylandstartuptasksmodel.cpp
     waylandtasksmodel.cpp
     windowtasksmodel.cpp
-    screencasting.cpp
-    screencastingrequest.cpp
+    screencasting.cpp screencasting.h
+    screencastingrequest.cpp screencastingrequest.h
 )
 
 if (HAVE_X11)
     set(taskmanager_LIB_SRCS
         ${taskmanager_LIB_SRCS}
         xstartuptasksmodel.cpp
-        xwindowsystemeventbatcher.cpp
+        xwindowsystemeventbatcher.cpp xwindowsystemeventbatcher.h
         xwindowtasksmodel.cpp
     )
 endif()

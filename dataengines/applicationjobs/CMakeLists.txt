@@ -1,9 +1,9 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_engine_applicationjobs\")
 
 set(kuiserver_engine_SRCS
-    kuiserverengine.cpp
-    jobcontrol.cpp
-    jobaction.cpp
+    kuiserverengine.cpp kuiserverengine.h
+    jobcontrol.cpp jobcontrol.h
+    jobaction.cpp jobaction.h
 )
 
 add_library(plasma_engine_applicationjobs MODULE ${kuiserver_engine_SRCS})

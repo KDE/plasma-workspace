@@ -1,4 +1,4 @@
-set (ion_noaa_SRCS ion_noaa.cpp)
+set (ion_noaa_SRCS ion_noaa.cpp ion_noaa.h)
 ecm_qt_declare_logging_category(ion_noaa_SRCS
     HEADER ion_noaadebug.h
     IDENTIFIER IONENGINE_NOAA

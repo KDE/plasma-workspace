@@ -1,7 +1,7 @@
 set(krunner_SRCS
     main.cpp
     view.cpp
-    x11windowscreenrelativepositioner.cpp
+    x11windowscreenrelativepositioner.cpp x11windowscreenrelativepositioner.h
     qml/krunner.qrc
 )
 

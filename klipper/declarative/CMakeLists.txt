@@ -22,9 +22,9 @@ ecm_add_qml_module(klipperplugin
 target_sources(klipperplugin
     PRIVATE
         klipperplugin.cpp
-        previewimageprovider.cpp
-        declarativehistorymodel.cpp
-        klipperinterface.cpp
+        previewimageprovider.cpp previewimageprovider.h
+        declarativehistorymodel.cpp declarativehistorymodel.h
+        klipperinterface.cpp klipperinterface.h
 )
 target_link_libraries(klipperplugin
     PRIVATE

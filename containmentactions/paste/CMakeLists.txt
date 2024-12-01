@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(plasma_containmentactions_paste SOURCES paste.cpp INSTALL_NAMESPACE "plasma/containmentactions")
+kcoreaddons_add_plugin(plasma_containmentactions_paste SOURCES paste.cpp paste.h INSTALL_NAMESPACE "plasma/containmentactions")
 target_link_libraries(plasma_containmentactions_paste
     Qt::Gui
     Qt::Widgets

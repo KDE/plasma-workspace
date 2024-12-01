@@ -1,8 +1,8 @@
 set(keyboardlayoutplugin_SRCS
-    keyboardlayout.cpp
-    keyboardlayoutplugin.cpp
+    keyboardlayout.cpp keyboardlayout.h
+    keyboardlayoutplugin.cpp keyboardlayoutplugin.h
     layoutnames.cpp
-    virtualkeyboard.cpp
+    virtualkeyboard.cpp virtualkeyboard.h
 )
 
 ecm_qt_declare_logging_category(keyboardlayoutplugin_SRCS HEADER debug.h

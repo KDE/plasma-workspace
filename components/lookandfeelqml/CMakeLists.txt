@@ -1,6 +1,6 @@
 set(lookandfeelqmlplugin_SRCS
-    lookandfeelqmlplugin.cpp
-    kpackageinterface.cpp
+    lookandfeelqmlplugin.cpp lookandfeelqmlplugin.h
+    kpackageinterface.cpp kpackageinterface.h
 )
 
 add_library(lookandfeelqmlplugin SHARED ${lookandfeelqmlplugin_SRCS})

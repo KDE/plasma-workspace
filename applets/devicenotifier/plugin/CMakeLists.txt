@@ -7,20 +7,20 @@ ecm_add_qml_module(devicenotifierplugin URI org.kde.plasma.private.devicenotifie
 
 target_sources(devicenotifierplugin
     PRIVATE
-        actionscontrol.cpp
-        devicecontrol.cpp
-        spacemonitor_p.cpp
-        devicestatemonitor_p.cpp
-        deviceserviceaction.cpp
-        predicatesmonitor_p.cpp
-        deviceerrormonitor_p.cpp
-        actioninterface.cpp
-        devicefiltercontrol.cpp
-        actions/defaultaction.cpp
-        actions/mountandopenaction.cpp
-        actions/mountaction.cpp
-        actions/unmountaction.cpp
-        actions/openwithfilemanageraction.cpp
+        actionscontrol.cpp actionscontrol.h
+        devicecontrol.cpp devicecontrol.h
+        spacemonitor_p.cpp spacemonitor_p.h
+        devicestatemonitor_p.cpp devicestatemonitor_p.h
+        deviceserviceaction.cpp deviceserviceaction.h
+        predicatesmonitor_p.cpp predicatesmonitor_p.h
+        deviceerrormonitor_p.cpp deviceerrormonitor_p.h
+        actioninterface.cpp actioninterface.h
+        devicefiltercontrol.cpp devicefiltercontrol.h
+        actions/defaultaction.cpp actions/defaultaction.h
+        actions/mountandopenaction.cpp actions/mountandopenaction.h
+        actions/mountaction.cpp actions/mountaction.h
+        actions/unmountaction.cpp actions/unmountaction.h
+        actions/openwithfilemanageraction.cpp actions/openwithfilemanageraction.h
 )
 
 target_link_libraries(devicenotifierplugin

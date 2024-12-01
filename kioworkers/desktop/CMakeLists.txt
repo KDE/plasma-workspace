@@ -4,7 +4,7 @@ if(BUILD_TESTING)
   add_subdirectory(tests)
 endif()
 
-set(kio_desktop_SRCS kio_desktop.cpp)
+set(kio_desktop_SRCS kio_desktop.cpp kio_desktop.h)
 qt_add_dbus_interface( kio_desktop_SRCS ${KDED_DBUS_INTERFACE} kded_interface )
 
 qt_generate_dbus_interface( desktopnotifier.h ${CMAKE_CURRENT_BINARY_DIR}/desktopnotifier.xml )

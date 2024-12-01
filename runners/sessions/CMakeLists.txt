@@ -3,7 +3,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_runner_sessions\")
 
 set(krunner_sessions_SRCS
-    sessionrunner.cpp
+    sessionrunner.cpp sessionrunner.h
 )
 
 qt_add_dbus_interface(krunner_sessions_SRCS ${SCREENSAVER_DBUS_INTERFACE} screensaver_interface)

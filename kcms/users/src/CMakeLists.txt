@@ -39,7 +39,7 @@ qt_add_dbus_interface(kcm_users_DBUS_SRCS
 kcmutils_add_qml_kcm(kcm_users)
 target_sources(kcm_users PRIVATE
     kcm.cpp
-    maskmousearea.cpp
+    maskmousearea.cpp maskmousearea.h
     user.cpp
     usermodel.cpp
     fprintdevice.cpp

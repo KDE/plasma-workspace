@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2023 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: BSD-3-Clause
 
-kcoreaddons_add_plugin(mprisservice SOURCES mprisservice.cpp INSTALL_NAMESPACE "kf6/kded")
+kcoreaddons_add_plugin(mprisservice SOURCES mprisservice.cpp mprisservice.h INSTALL_NAMESPACE "kf6/kded")
 target_link_libraries(mprisservice
     Qt::Core
     KF6::CoreAddons

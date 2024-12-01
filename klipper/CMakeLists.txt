@@ -3,21 +3,21 @@ add_definitions(-DTRANSLATION_DOMAIN=\"klipper\")
 
 set(libklipper_common_SRCS
     klipper.cpp
-    urlgrabber.cpp
-    configdialog.cpp
-    historycycler.cpp
-    historyitem.cpp
+    urlgrabber.cpp urlgrabber.h
+    configdialog.cpp configdialog.h
+    historycycler.cpp historycycler.h
+    historyitem.cpp historyitem.h
     historymodel.cpp
-    historystringitem.cpp
-    klipperpopup.cpp
-    historyimageitem.cpp
-    historyurlitem.cpp
-    actionstreewidget.cpp
-    editactiondialog.cpp
-    editcommanddialog.cpp
-    clipcommandprocess.cpp
-    utils.cpp
-    systemclipboard.cpp
+    historystringitem.cpp historystringitem.h
+    klipperpopup.cpp klipperpopup.h
+    historyimageitem.cpp historyimageitem.h
+    historyurlitem.cpp historyurlitem.h
+    actionstreewidget.cpp actionstreewidget.h
+    editactiondialog.cpp editactiondialog.h
+    editcommanddialog.cpp editcommanddialog.h
+    clipcommandprocess.cpp clipcommandprocess.h
+    utils.cpp utils.h
+    systemclipboard.cpp systemclipboard.h
 )
 
 ecm_qt_declare_logging_category(libklipper_common_SRCS HEADER klipper_debug.h IDENTIFIER KLIPPER_LOG CATEGORY_NAME org.kde.klipper DESCRIPTION "klipper" EXPORT KLIPPER)
@@ -67,7 +67,7 @@ add_subdirectory(declarative)
 install(FILES org.kde.klipper.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 # Plasma Data Engine
-set(plasma_engine_clipboard_SRCS clipboardengine.cpp clipboardservice.cpp clipboardjob.cpp)
+set(plasma_engine_clipboard_SRCS clipboardengine.cpp clipboardengine.h clipboardservice.cpp clipboardservice.h clipboardjob.cpp clipboardjob.h)
 kcoreaddons_add_plugin(plasma_engine_clipboard SOURCES ${plasma_engine_clipboard_SRCS} INSTALL_NAMESPACE "plasma5support/dataengine")
 target_link_libraries(plasma_engine_clipboard
     klipper

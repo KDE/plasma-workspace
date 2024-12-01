@@ -15,7 +15,7 @@ target_link_libraries(kcm_krunner_kill
     KF6::Runner
 )
 
-kcoreaddons_add_plugin(krunner_kill SOURCES killrunner.cpp INSTALL_NAMESPACE "kf6/krunner")
+kcoreaddons_add_plugin(krunner_kill SOURCES killrunner.cpp killrunner.h INSTALL_NAMESPACE "kf6/krunner")
 target_link_libraries(krunner_kill
     KF6::I18n
     KF6::ConfigCore

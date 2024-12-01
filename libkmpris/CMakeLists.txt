@@ -4,12 +4,12 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"libkmpris\")
 
 set(libkmpris_SRCS
-    mpris2sourcemodel.cpp
-    mpris2filterproxymodel.cpp
-    mpris2model.cpp
-    multiplexer.cpp
-    multiplexermodel.cpp
-    playercontainer.cpp
+    mpris2sourcemodel.cpp mpris2sourcemodel.h
+    mpris2filterproxymodel.cpp mpris2filterproxymodel.h
+    mpris2model.cpp mpris2model.h
+    multiplexer.cpp multiplexer.h
+    multiplexermodel.cpp multiplexermodel.h
+    playercontainer.cpp playercontainer.h
 )
 
 ecm_qt_declare_logging_category(libkmpris_SRCS HEADER libkmpris_debug.h

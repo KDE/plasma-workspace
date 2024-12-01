@@ -1,5 +1,5 @@
 set(sessionsprivateplugin_SRCS
-    sessionsmodel.cpp
+    sessionsmodel.cpp sessionsmodel.h
     types.h
 )
 

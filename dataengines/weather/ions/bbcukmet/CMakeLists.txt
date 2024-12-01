@@ -1,4 +1,4 @@
-set (ion_bbcukmet_SRCS ion_bbcukmet.cpp)
+set (ion_bbcukmet_SRCS ion_bbcukmet.cpp ion_bbcukmet.h)
 ecm_qt_declare_logging_category(ion_bbcukmet_SRCS
     HEADER ion_bbcukmetdebug.h
     IDENTIFIER IONENGINE_BBCUKMET

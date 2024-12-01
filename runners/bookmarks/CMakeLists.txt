@@ -17,16 +17,16 @@ ecm_qt_declare_logging_category(krunner_bookmarks_common
 )
 
 target_sources(krunner_bookmarks_common PRIVATE
-    bookmarkmatch.cpp
-    faviconfromblob.cpp
-    favicon.cpp
-    fetchsqlite.cpp
-    browsers/chromefindprofile.cpp
-    browsers/chrome.cpp
-    browsers/firefox.cpp
-    browsers/konqueror.cpp
-    browsers/opera.cpp
-    browsers/falkon.cpp
+    bookmarkmatch.cpp bookmarkmatch.h
+    faviconfromblob.cpp faviconfromblob.h
+    favicon.cpp favicon.h
+    fetchsqlite.cpp fetchsqlite.h
+    browsers/chromefindprofile.cpp browsers/chromefindprofile.h
+    browsers/chrome.cpp browsers/chrome.h
+    browsers/firefox.cpp browsers/firefox.h
+    browsers/konqueror.cpp browsers/konqueror.h
+    browsers/opera.cpp browsers/opera.h
+    browsers/falkon.cpp browsers/falkon.h
 )
 target_link_libraries(krunner_bookmarks_common
     Qt::Sql
@@ -37,7 +37,7 @@ target_link_libraries(krunner_bookmarks_common
     KF6::Bookmarks
 )
 
-kcoreaddons_add_plugin(krunner_bookmarksrunner SOURCES bookmarksrunner.cpp browserfactory.cpp INSTALL_NAMESPACE "kf6/krunner")
+kcoreaddons_add_plugin(krunner_bookmarksrunner SOURCES bookmarksrunner.cpp bookmarksrunner.h browserfactory.cpp browserfactory.h INSTALL_NAMESPACE "kf6/krunner")
 target_link_libraries(krunner_bookmarksrunner
     krunner_bookmarks_common
     PW::KWorkspace

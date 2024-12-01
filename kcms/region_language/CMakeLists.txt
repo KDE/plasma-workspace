@@ -4,7 +4,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_regionandlang\")
 ################## Set sources files #################
 set(kcm_regionandlang_example_SRCS
-    exampleutility.cpp
+    exampleutility.cpp exampleutility.h
 )
 add_library(kcm_regionandlang_example_static STATIC ${kcm_regionandlang_example_SRCS})
 set_property(TARGET kcm_regionandlang_example_static PROPERTY POSITION_INDEPENDENT_CODE ON)
@@ -14,14 +14,14 @@ target_link_libraries(kcm_regionandlang_example_static
 )
 set(kcm_regionandlang_PART_SRCS
     settingtype.h
-    kcmregionandlang.cpp
-    localelistmodel.cpp
-    optionsmodel.cpp
-    languagelistmodel.cpp
-    localegenerator.cpp
-    localegeneratorbase.cpp
-    localegeneratorgeneratedglibc.cpp
-    regionandlangsettings.cpp
+    kcmregionandlang.cpp kcmregionandlang.h
+    localelistmodel.cpp localelistmodel.h
+    optionsmodel.cpp optionsmodel.h
+    languagelistmodel.cpp languagelistmodel.h
+    localegenerator.cpp localegenerator.h
+    localegeneratorbase.cpp localegeneratorbase.h
+    localegeneratorgeneratedglibc.cpp localegeneratorgeneratedglibc.h
+    regionandlangsettings.cpp regionandlangsettings.h
     binarydialectmodel.h binarydialectmodel.cpp
 )
 kconfig_add_kcfg_files(kcm_regionandlang_PART_SRCS regionandlangsettingsbase.kcfgc GENERATE_MOC)
@@ -29,12 +29,12 @@ kconfig_add_kcfg_files(kcm_regionandlang_PART_SRCS regionandlangsettingsbase.kcf
 if(GLIBC_LOCALE_GEN)
     set(kcm_regionandlang_PART_SRCS
         ${kcm_regionandlang_PART_SRCS}
-        localegeneratorglibc.cpp)
+        localegeneratorglibc.cpp localegeneratorglibc.h)
 endif()
 if(UBUNTU_LOCALE)
     set(kcm_regionandlang_PART_SRCS
         ${kcm_regionandlang_PART_SRCS}
-        localegeneratorubuntu.cpp)
+        localegeneratorubuntu.cpp localegeneratorubuntu.h)
 endif()
 ecm_qt_declare_logging_category(
     kcm_regionandlang_PART_SRCS

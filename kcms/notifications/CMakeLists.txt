@@ -3,10 +3,10 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kcm_notifications\")
 kcmutils_add_qml_kcm(kcm_notifications)
 target_sources(kcm_notifications PRIVATE
     kcm.cpp
-    sourcesmodel.cpp
+    sourcesmodel.cpp sourcesmodel.h
     filterproxymodel.cpp
-    notificationsdata.cpp
-    soundthemeconfig.cpp
+    notificationsdata.cpp notificationsdata.h
+    soundthemeconfig.cpp soundthemeconfig.h
 )
 
 ecm_qt_declare_logging_category(kcm_notifications

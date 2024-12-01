@@ -6,10 +6,10 @@ ecm_add_qml_module(calendarplugin
 )
 
 target_sources(calendarplugin PRIVATE
-    calendar.cpp
-    daysmodel.cpp
-    eventdatadecorator.cpp
-    eventpluginsmanager.cpp
+    calendar.cpp calendar.h
+    daysmodel.cpp daysmodel.h
+    eventdatadecorator.cpp eventdatadecorator.h
+    eventpluginsmanager.cpp eventpluginsmanager.h
 )
 
 ecm_target_qml_sources(calendarplugin

@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 set(mediacontrollerplugin_SRCS
-    mediacontrollerplugin.cpp
-    globalconfig.cpp
+    mediacontrollerplugin.cpp mediacontrollerplugin.h
+    globalconfig.cpp globalconfig.h
 )
 
 add_library(mediacontrollerplugin SHARED ${mediacontrollerplugin_SRCS})

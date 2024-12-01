@@ -1,4 +1,4 @@
-set(ion_dwd_SRCS ion_dwd.cpp)
+set(ion_dwd_SRCS ion_dwd.cpp ion_dwd.h)
 ecm_qt_declare_logging_category(ion_dwd_SRCS
     HEADER ion_dwddebug.h
     IDENTIFIER IONENGINE_dwd

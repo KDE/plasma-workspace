@@ -1,4 +1,4 @@
-set (ion_envcan_SRCS ion_envcan.cpp)
+set (ion_envcan_SRCS ion_envcan.cpp ion_envcan.h)
 ecm_qt_declare_logging_category(ion_envcan_SRCS
     HEADER ion_envcandebug.h
     IDENTIFIER IONENGINE_ENVCAN

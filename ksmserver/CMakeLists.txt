@@ -12,7 +12,7 @@ set(ksmserver_SRCS
     server.cpp
     legacy.cpp
     logout.cpp
-    client.cpp
+    client.cpp client.h
 )
 ecm_qt_declare_logging_category(ksmserver_SRCS HEADER ksmserver_debug.h IDENTIFIER KSMSERVER CATEGORY_NAME org.kde.kf6.ksmserver
     DESCRIPTION "ksm server"

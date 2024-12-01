@@ -12,13 +12,13 @@ find_package(XCB
 
 set(GMENU_DBUSMENU_PROXY_SRCS
     main.cpp
-    menuproxy.cpp
+    menuproxy.cpp menuproxy.h
     window.cpp
     menu.cpp
-    actions.cpp
+    actions.cpp actions.h
     gdbusmenutypes_p.cpp
-    icons.cpp
-    utils.cpp
+    icons.cpp icons.h
+    utils.cpp utils.h
     ../libdbusmenuqt/dbusmenutypes_p.cpp
 )
 
