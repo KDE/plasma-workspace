@@ -19,7 +19,6 @@ set(kickerplugin_SRCS
     plugin/funnelmodel.cpp
     plugin/dashboardwindow.cpp
     plugin/kickerplugin.cpp
-    plugin/menuentryeditor.cpp
     plugin/processrunner.cpp
     plugin/rootmodel.cpp
     plugin/runnermodel.cpp

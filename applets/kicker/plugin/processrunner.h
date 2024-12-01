@@ -16,5 +16,5 @@ public:
     explicit ProcessRunner(QObject *parent = nullptr);
     ~ProcessRunner() override;
 
-    Q_INVOKABLE void runMenuEditor();
+    Q_INVOKABLE static void runMenuEditor(QString arg = QString());
 };
