@@ -51,8 +51,6 @@ QVariantList systemSettingsActions();
 QVariantList recentDocumentActions(const KService::Ptr &service);
 bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, const QVariant &argument);
 
-bool canEditApplication(const QString &entryPath);
-void editApplication(const QString &entryPath, const QString &menuId);
 QVariantList editApplicationAction(const KService::Ptr &service);
 bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &service);
 

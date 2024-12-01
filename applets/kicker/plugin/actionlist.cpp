@@ -6,7 +6,7 @@
 */
 
 #include "actionlist.h"
-#include "menuentryeditor.h"
+#include "processrunner.h"
 
 #include <config-appstream.h>
 
@@ -374,24 +374,11 @@ bool handleRecentDocumentAction(KService::Ptr service, const QString &actionId, 
     return job->exec();
 }
 
-Q_GLOBAL_STATIC(MenuEntryEditor, menuEntryEditor)
-
-bool canEditApplication(const KService::Ptr &service)
-{
-    return (service->isApplication() && menuEntryEditor->canEdit(service->entryPath()));
-}
-
-void editApplication(const QString &entryPath, const QString &menuId)
-{
-    menuEntryEditor->edit(entryPath, menuId);
-}
-
 QVariantList editApplicationAction(const KService::Ptr &service)
 {
     QVariantList actionList;
 
-    if (canEditApplication(service)) {
-        // TODO: Using the KMenuEdit icon might be misleading.
+    if (service && service->isApplication()) {
         QVariantMap editAction = Kicker::createActionItem(i18n("Edit Application…"), QStringLiteral("kmenuedit"), QStringLiteral("editApplication"));
         actionList << editAction;
     }
@@ -401,9 +388,8 @@ QVariantList editApplicationAction(const KService::Ptr &service)
 
 bool handleEditApplicationAction(const QString &actionId, const KService::Ptr &service)
 {
-    if (service && actionId == QLatin1String("editApplication") && canEditApplication(service)) {
-        Kicker::editApplication(service->entryPath(), service->menuId());
-
+    if (service && service->isApplication() && actionId == QLatin1String("editApplication")) {
+        ProcessRunner::runMenuEditor({service->menuId()});
         return true;
     }
 

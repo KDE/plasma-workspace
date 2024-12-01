@@ -6,9 +6,9 @@
 
 #include "processrunner.h"
 
-#include <KIO/ApplicationLauncherJob>
+#include <KIO/CommandLauncherJob>
 #include <KNotificationJobUiDelegate>
-#include <QDebug>
+#include <KService>
 
 ProcessRunner::ProcessRunner(QObject *parent)
     : QObject(parent)
@@ -19,7 +19,7 @@ ProcessRunner::~ProcessRunner()
 {
 }
 
-void ProcessRunner::runMenuEditor()
+void ProcessRunner::runMenuEditor(QString arg)
 {
     const auto service = KService::serviceByDesktopName(QStringLiteral("org.kde.kmenuedit"));
 
@@ -28,10 +28,13 @@ void ProcessRunner::runMenuEditor()
         return;
     }
 
-    auto *job = new KIO::ApplicationLauncherJob(service);
-    auto *delegate = new KNotificationJobUiDelegate;
-    delegate->setAutoErrorHandlingEnabled(true);
-    job->setUiDelegate(delegate);
+    if (arg.isEmpty()) {
+        arg = QStringLiteral("/"); // If already open, will collapse editor tree
+    }
+
+    auto *job = new KIO::CommandLauncherJob(service->exec(), {arg});
+    job->setDesktopName(service->desktopEntryName());
+    job->setUiDelegate(new KNotificationJobUiDelegate(KJobUiDelegate::AutoErrorHandlingEnabled));
     job->start();
 }
 
