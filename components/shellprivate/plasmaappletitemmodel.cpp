@@ -330,22 +330,22 @@ PlasmaAppletItemModel::PlasmaAppletItemModel(QObject *parent)
 QHash<int, QByteArray> PlasmaAppletItemModel::roleNames() const
 {
     QHash<int, QByteArray> newRoleNames = QAbstractItemModel::roleNames();
-    newRoleNames[NameRole] = "name";
-    newRoleNames[PluginNameRole] = "pluginName";
-    newRoleNames[DescriptionRole] = "description";
-    newRoleNames[CategoryRole] = "category";
-    newRoleNames[LicenseRole] = "license";
-    newRoleNames[WebsiteRole] = "website";
-    newRoleNames[VersionRole] = "version";
-    newRoleNames[AuthorRole] = "author";
-    newRoleNames[EmailRole] = "email";
-    newRoleNames[RunningRole] = "running";
-    newRoleNames[LocalRole] = "local";
-    newRoleNames[ScreenshotRole] = "screenshot";
-    newRoleNames[ApiVersionRole] = "apiVersion";
-    newRoleNames[IsSupportedRole] = "isSupported";
-    newRoleNames[UnsupportedMessageRole] = "unsupportedMessage";
-    newRoleNames[RecentRole] = "recent";
+    newRoleNames[NameRole] = QByteArrayLiteral("name");
+    newRoleNames[PluginNameRole] = QByteArrayLiteral("pluginName");
+    newRoleNames[DescriptionRole] = QByteArrayLiteral("description");
+    newRoleNames[CategoryRole] = QByteArrayLiteral("category");
+    newRoleNames[LicenseRole] = QByteArrayLiteral("license");
+    newRoleNames[WebsiteRole] = QByteArrayLiteral("website");
+    newRoleNames[VersionRole] = QByteArrayLiteral("version");
+    newRoleNames[AuthorRole] = QByteArrayLiteral("author");
+    newRoleNames[EmailRole] = QByteArrayLiteral("email");
+    newRoleNames[RunningRole] = QByteArrayLiteral("running");
+    newRoleNames[LocalRole] = QByteArrayLiteral("local");
+    newRoleNames[ScreenshotRole] = QByteArrayLiteral("screenshot");
+    newRoleNames[ApiVersionRole] = QByteArrayLiteral("apiVersion");
+    newRoleNames[IsSupportedRole] = QByteArrayLiteral("isSupported");
+    newRoleNames[UnsupportedMessageRole] = QByteArrayLiteral("unsupportedMessage");
+    newRoleNames[RecentRole] = QByteArrayLiteral("recent");
     return newRoleNames;
 }
 

@@ -103,9 +103,9 @@ QVariant ActionsControl::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> ActionsControl::roleNames() const
 {
     QHash<int, QByteArray> roles;
-    roles[Name] = "Name";
-    roles[Icon] = "Icon";
-    roles[Text] = "Text";
+    roles[Name] = QByteArrayLiteral("Name");
+    roles[Icon] = QByteArrayLiteral("Icon");
+    roles[Text] = QByteArrayLiteral("Text");
     return roles;
 }
 

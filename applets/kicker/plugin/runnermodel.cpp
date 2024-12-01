@@ -49,7 +49,7 @@ RunnerModel::~RunnerModel()
 
 QHash<int, QByteArray> RunnerModel::roleNames() const
 {
-    return {{Qt::DisplayRole, "display"}};
+    return {{Qt::DisplayRole, QByteArrayLiteral("display")}};
 }
 
 AbstractModel *RunnerModel::favoritesModel() const

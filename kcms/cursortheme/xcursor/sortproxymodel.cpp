@@ -11,7 +11,7 @@
 QHash<int, QByteArray> SortProxyModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames = QSortFilterProxyModel::roleNames();
-    roleNames[CursorTheme::DisplayDetailRole] = "description";
+    roleNames[CursorTheme::DisplayDetailRole] = QByteArrayLiteral("description");
 
     return roleNames;
 }

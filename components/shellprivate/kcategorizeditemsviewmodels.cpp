@@ -74,9 +74,9 @@ QHash<int, QByteArray> DefaultFilterModel::roleNames() const
     static QHash<int, QByteArray> newRoleNames;
     if (newRoleNames.isEmpty()) {
         newRoleNames = QAbstractItemModel::roleNames();
-        newRoleNames[FilterTypeRole] = "filterType";
-        newRoleNames[FilterDataRole] = "filterData";
-        newRoleNames[SeparatorRole] = "separator";
+        newRoleNames[FilterTypeRole] = QByteArrayLiteral("filterType");
+        newRoleNames[FilterDataRole] = QByteArrayLiteral("filterData");
+        newRoleNames[SeparatorRole] = QByteArrayLiteral("separator");
     }
     return newRoleNames;
 }

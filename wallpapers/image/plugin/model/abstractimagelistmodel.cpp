@@ -41,15 +41,15 @@ AbstractImageListModel::AbstractImageListModel(const QBindable<QSize> &bindableT
 QHash<int, QByteArray> AbstractImageListModel::roleNames() const
 {
     return {
-        {Qt::DisplayRole, "display"},
-        {Qt::DecorationRole, "decoration"},
-        {AuthorRole, "author"},
-        {ScreenshotRole, "screenshot"},
-        {PathRole, "path"},
-        {PackageNameRole, "packageName"},
-        {RemovableRole, "removable"},
-        {PendingDeletionRole, "pendingDeletion"},
-        {ToggleRole, "checked"},
+        {Qt::DisplayRole, QByteArrayLiteral("display")},
+        {Qt::DecorationRole, QByteArrayLiteral("decoration")},
+        {AuthorRole, QByteArrayLiteral("author")},
+        {ScreenshotRole, QByteArrayLiteral("screenshot")},
+        {PathRole, QByteArrayLiteral("path")},
+        {PackageNameRole, QByteArrayLiteral("packageName")},
+        {RemovableRole, QByteArrayLiteral("removable")},
+        {PendingDeletionRole, QByteArrayLiteral("pendingDeletion")},
+        {ToggleRole, QByteArrayLiteral("checked")},
     };
 }
 

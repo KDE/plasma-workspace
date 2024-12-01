@@ -262,14 +262,14 @@ QVariant BatteryControlModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> BatteryControlModel::roleNames() const
 {
     QHash<int, QByteArray> roles;
-    roles[Percent] = "Percent";
-    roles[Capacity] = "Capacity";
-    roles[Energy] = "Energy";
-    roles[PluggedIn] = "PluggedIn";
-    roles[IsPowerSupply] = "IsPowerSupply";
-    roles[ChargeState] = "ChargeState";
-    roles[PrettyName] = "PrettyName";
-    roles[Type] = "Type";
+    roles[Percent] = QByteArrayLiteral("Percent");
+    roles[Capacity] = QByteArrayLiteral("Capacity");
+    roles[Energy] = QByteArrayLiteral("Energy");
+    roles[PluggedIn] = QByteArrayLiteral("PluggedIn");
+    roles[IsPowerSupply] = QByteArrayLiteral("IsPowerSupply");
+    roles[ChargeState] = QByteArrayLiteral("ChargeState");
+    roles[PrettyName] = QByteArrayLiteral("PrettyName");
+    roles[Type] = QByteArrayLiteral("Type");
     return roles;
 }
 

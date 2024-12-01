@@ -61,9 +61,9 @@ CurrentContainmentActionsModel::~CurrentContainmentActionsModel()
 QHash<int, QByteArray> CurrentContainmentActionsModel::roleNames() const
 {
     return {
-        {ActionRole, "action"},
-        {PluginNameRole, "pluginName"},
-        {HasConfigurationInterfaceRole, "hasConfigurationInterface"},
+        {ActionRole, QByteArrayLiteral("action")},
+        {PluginNameRole, QByteArrayLiteral("pluginName")},
+        {HasConfigurationInterfaceRole, QByteArrayLiteral("hasConfigurationInterface")},
     };
 }
 

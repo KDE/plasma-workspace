@@ -95,16 +95,16 @@ UserModel::UserModel(QObject *parent)
 QHash<int, QByteArray> UserModel::roleNames() const
 {
     QHash<int, QByteArray> names = QAbstractItemModel::roleNames();
-    names.insert(UidRole, "uid");
-    names.insert(NameRole, "name");
-    names.insert(DisplayPrimaryNameRole, "displayPrimaryName");
-    names.insert(DisplaySecondaryNameRole, "displaySecondaryName");
-    names.insert(EmailRole, "email");
-    names.insert(AdministratorRole, "administrator");
-    names.insert(UserRole, "userObject");
-    names.insert(FaceValidRole, "faceValid");
-    names.insert(LoggedInRole, "loggedIn");
-    names.insert(SectionHeaderRole, "sectionHeader");
+    names.insert(UidRole, QByteArrayLiteral("uid"));
+    names.insert(NameRole, QByteArrayLiteral("name"));
+    names.insert(DisplayPrimaryNameRole, QByteArrayLiteral("displayPrimaryName"));
+    names.insert(DisplaySecondaryNameRole, QByteArrayLiteral("displaySecondaryName"));
+    names.insert(EmailRole, QByteArrayLiteral("email"));
+    names.insert(AdministratorRole, QByteArrayLiteral("administrator"));
+    names.insert(UserRole, QByteArrayLiteral("userObject"));
+    names.insert(FaceValidRole, QByteArrayLiteral("faceValid"));
+    names.insert(LoggedInRole, QByteArrayLiteral("loggedIn"));
+    names.insert(SectionHeaderRole, QByteArrayLiteral("sectionHeader"));
     return names;
 }
 

@@ -75,8 +75,8 @@ QVariant GtkThemesModel::data(const QModelIndex &index, int role) const
 QHash<int, QByteArray> GtkThemesModel::roleNames() const
 {
     QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
-    roles[Roles::ThemeNameRole] = "theme-name";
-    roles[Roles::ThemePathRole] = "theme-path";
+    roles[Roles::ThemeNameRole] = QByteArrayLiteral("theme-name");
+    roles[Roles::ThemePathRole] = QByteArrayLiteral("theme-path");
 
     return roles;
 }

@@ -212,12 +212,12 @@ void TimeZoneModel::slotUpdate()
 QHash<int, QByteArray> TimeZoneModel::roleNames() const
 {
     return QHash<int, QByteArray>({
-        {TimeZoneIdRole, "timeZoneId"},
-        {RegionRole, "region"},
-        {CityRole, "city"},
-        {CommentRole, "comment"},
-        {CheckedRole, "checked"},
-        {IsLocalTimeZoneRole, "isLocalTimeZone"},
+        {TimeZoneIdRole, QByteArrayLiteral("timeZoneId")},
+        {RegionRole, QByteArrayLiteral("region")},
+        {CityRole, QByteArrayLiteral("city")},
+        {CommentRole, QByteArrayLiteral("comment")},
+        {CheckedRole, QByteArrayLiteral("checked")},
+        {IsLocalTimeZoneRole, QByteArrayLiteral("isLocalTimeZone")},
     });
 }
 

@@ -45,9 +45,9 @@ CursorThemeModel::~CursorThemeModel()
 QHash<int, QByteArray> CursorThemeModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames = QAbstractListModel::roleNames();
-    roleNames[CursorTheme::DisplayDetailRole] = "description";
-    roleNames[CursorTheme::IsWritableRole] = "isWritable";
-    roleNames[CursorTheme::PendingDeletionRole] = "pendingDeletion";
+    roleNames[CursorTheme::DisplayDetailRole] = QByteArrayLiteral("description");
+    roleNames[CursorTheme::IsWritableRole] = QByteArrayLiteral("isWritable");
+    roleNames[CursorTheme::PendingDeletionRole] = QByteArrayLiteral("pendingDeletion");
 
     return roleNames;
 }
