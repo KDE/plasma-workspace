@@ -118,8 +118,8 @@ private:
 
     mutable std::unique_ptr<ServerInfo> m_currentOwner;
 
-    QDBusServiceWatcher *m_inhibitionWatcher = nullptr;
-    QDBusServiceWatcher *m_notificationWatchers = nullptr;
+    QDBusServiceWatcher *const m_inhibitionWatcher;
+    QDBusServiceWatcher *const m_notificationWatchers;
     uint m_highestInhibitionCookie = 0;
     QHash<uint /*cookie*/, Inhibition> m_externalInhibitions;
     QHash<uint /*cookie*/, QString> m_inhibitionServices;
