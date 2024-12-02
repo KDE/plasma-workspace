@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # Teemu Rytilahti <tpr@d5k.net>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2011, 2017, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2011, 2017, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2014, 2015.
 #
 # KDE Finnish translation sprint participants:
@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 02:34+0000\n"
-"PO-Revision-Date: 2023-12-11 18:30+0200\n"
+"PO-Revision-Date: 2024-10-16 18:48+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -20,8 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:22:19+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: autostartmodel.cpp:383
 #, kde-format
@@ -112,31 +111,25 @@ msgstr ""
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "Lisää uusi"
 
 #: ui/main.qml:74
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Application…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr "Lisää sovellus…"
+msgstr "Sovellus…"
 
 #: ui/main.qml:81
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Login Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "Lisää kirjautumisskripti…"
+msgstr "Kirjautumisskripti…"
 
 #: ui/main.qml:88
-#, fuzzy, kde-format
-#| msgctxt "@action:button"
-#| msgid "Add Logout Script…"
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "Lisää uloskirjautumisskripti…"
+msgstr "Uloskirjautumisskripti…"
 
 #: ui/main.qml:125
 #, kde-format
@@ -192,12 +185,10 @@ msgid "No user-specified autostart items"
 msgstr "Ei automaattisesti käynnistyviksi asetettuja kohteita"
 
 #: ui/main.qml:203
-#, fuzzy, kde-kuit-format
-#| msgctxt "@info 'some' refers to autostart items"
-#| msgid "Click the <interface>Add…</interface> button to add some"
+#, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr "Niitä voi lisätä napsauttamalla alta <interface>Lisää…</interface>"
+msgstr "Niitä voi lisätä napsauttamalla alta <interface>Lisää uusi</interface>"
 
 #: ui/main.qml:218
 #, kde-format

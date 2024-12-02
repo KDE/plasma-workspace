@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-04-14 10:53+0300\n"
+"PO-Revision-Date: 2024-10-16 18:54+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -55,10 +55,9 @@ msgid "Zoom in"
 msgstr "Lähennä"
 
 #: ui/LocationsFixedView.qml:129
-#, fuzzy, kde-format
-#| msgid "Zoom in"
+#, kde-format
 msgid "Zoom out"
-msgstr "Lähennä"
+msgstr "Loitonna"
 
 #: ui/LocationsFixedView.qml:227
 #, kde-kuit-format
@@ -169,6 +168,10 @@ msgid ""
 "available, or else by sending its IP address to <link url='https://geoip.com/"
 "privacy/'>GeoIP</link>."
 msgstr ""
+"<application>GeoClue2</application>-palvelulla päivitetään laitteen sijainti "
+"aika ajoin GPS:n tai matkapuhelintornitrianguloinnin avulla, jos "
+"käytettävissä, tai muussa tapauksessa lähettämällä laitteen IP-osoite <link "
+"url='https://geoip.com/privacy/'>GeoIP</link>:hen."
 
 #: ui/main.qml:319
 #, kde-kuit-format
@@ -179,6 +182,10 @@ msgid ""
 "bugs.kde.org'>https://bugs.kde.org</link> asking KDE developers to write a "
 "detailed description of what this service will do."
 msgstr ""
+"<application>%1</application>-palvelulla päivitetään laitteen sijainti aika "
+"ajoin. Tee vikailmoitus osoitteessa <link url='https://bugs.kde."
+"org/'>https://bugs.kde.org/</link> ja pyydä KDE-kehittäjiltä "
+"yksityiskohtainen kuvaus siitä, mitä palvelu tekee."
 
 #: ui/main.qml:334
 #, kde-format
@@ -217,21 +224,19 @@ msgstr "Paikannetaan…"
 #, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "hour"
-msgstr ""
+msgstr "tunti"
 
 #: ui/TimeField.qml:50
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ""
+msgstr "."
 
 #: ui/TimeField.qml:56
-#, fuzzy, kde-format
-#| msgid "%1 minute"
-#| msgid_plural "%1 minutes"
+#, kde-format
 msgctxt "@info:tooltip Part of a control for setting a time"
 msgid "minute"
-msgstr "%1 minuutti"
+msgstr "minuutti"
 
 #~ msgctxt "@info"
 #~ msgid ""

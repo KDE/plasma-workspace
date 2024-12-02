@@ -7,7 +7,7 @@
 # Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2006.
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2011, 2012, 2018, 2019, 2020, 2021.
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2018, 2019, 2020, 2021, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2011, 2012, 2013, 2014, 2016.
 #
 # KDE Finnish translation sprint participants:
@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-06 00:40+0000\n"
-"PO-Revision-Date: 2021-12-07 16:49+0200\n"
+"PO-Revision-Date: 2024-10-26 10:44+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -25,8 +25,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:22:25+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -73,11 +72,9 @@ msgid "(C) Craig Drummond, 2007"
 msgstr "© Craig Drummond 2007"
 
 #: apps/Installer.cpp:124
-#, fuzzy, kde-format
-#| msgid "Makes the dialog transient for an X app specified by winid"
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr ""
-"Tekee ikkunatunnisteen määrittämän X-sovelluksen valintaikkunasta läpinäkyvän"
+msgstr "Tekee ikkunatunnisteen määrittämästä valintaikkunasta läpinäkyvän"
 
 #: apps/Installer.cpp:127
 #, kde-format

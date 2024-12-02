@@ -2,7 +2,7 @@
 # Copyright © 2010 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2010, 2014, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 #
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-08 02:31+0000\n"
-"PO-Revision-Date: 2023-09-26 18:19+0300\n"
+"PO-Revision-Date: 2024-10-16 19:05+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -21,8 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:22:37+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -47,43 +46,37 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Kansio, josta kuvia näytetään"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Sijoittelu:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Skaalattu ja rajattu"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Skaalattu"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Skaalattu, säilytä suhteet"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Keskitetty"
 
 #: imagepackage/contents/ui/config.qml:147
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Monistettu"
@@ -130,11 +123,10 @@ msgid "Add…"
 msgstr "Lisää…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Avaa taustakuvatiedosto"
+msgstr "Lisää taustakuva…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
@@ -143,11 +135,10 @@ msgid "Get New…"
 msgstr "Hae uusia…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Seuraava taustakuva"
+msgstr "Hanki uusia taustakuvia…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -182,7 +173,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
-msgstr ""
+msgstr "Määritä täyttötapa (esim. stretch, preserveAspectCrop tms.)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -197,7 +188,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Virheellinen täyttötapa määritetty: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
@@ -227,10 +218,9 @@ msgstr ""
 
 #. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
 #: plugin/imagebackend.cpp:337
-#, fuzzy, kde-format
-#| msgid "Image Files"
+#, kde-format
 msgid "Media Files"
-msgstr "Kuvatiedostot"
+msgstr "Mediatiedostot"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:52
 #, kde-format
@@ -305,8 +295,7 @@ msgid "Add…"
 msgstr "Lisää…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
-#, fuzzy, kde-format
-#| msgid "Add Folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
 msgstr "Lisää kansio…"

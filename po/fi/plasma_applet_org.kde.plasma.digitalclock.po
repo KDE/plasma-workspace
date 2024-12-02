@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2024 Lasse Liehu <lasse.liehu@gmail.com>
-# Tommi Nieminen <translator@legisign.org>, 2018, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
 # Larso, 2014.
@@ -10,15 +10,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 02:34+0000\n"
-"PO-Revision-Date: 2024-02-14 00:48+0200\n"
-"Last-Translator: Lasse Liehu <lasse.liehu@iki.fi>\n"
+"PO-Revision-Date: 2024-10-16 19:02+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -70,8 +70,7 @@ msgstr "Vaihda…"
 
 #: package/contents/ui/CalendarView.qml:440
 #: package/contents/ui/CalendarView.qml:441
-#, fuzzy, kde-format
-#| msgid "Switch to another timezone"
+#, kde-format
 msgid "Switch to another time zone"
 msgstr "Vaihda toiseen aikavyöhykkeeseen"
 
@@ -154,50 +153,43 @@ msgid "Offset from UTC time"
 msgstr "Aikaero UTC:hen"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Time display:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Ajan näyttö:"
 
 #: package/contents/ui/configAppearance.qml:132
-#, fuzzy, kde-format
-#| msgid "12-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-tuntinen"
 
 #: package/contents/ui/configAppearance.qml:133
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "Käytä alueen oletusta"
 
 #: package/contents/ui/configAppearance.qml:134
-#, fuzzy, kde-format
-#| msgid "24-Hour"
+#, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-tuntinen"
 
 #: package/contents/ui/configAppearance.qml:141
-#, fuzzy, kde-format
-#| msgid "Change Regional Settings…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Muuta alueasetuksia…"
 
 #: package/contents/ui/configAppearance.qml:152
-#, fuzzy, kde-format
-#| msgid "Date format:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Päiväyksen muoto:"
 
 #: package/contents/ui/configAppearance.qml:161
-#, fuzzy, kde-format
-#| msgid "Long Date"
+#, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
@@ -205,23 +197,19 @@ msgid "Long date"
 msgstr "Pitkä päiväys"
 
 #: package/contents/ui/configAppearance.qml:168
-#, fuzzy, kde-format
-#| msgid "Short Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Lyhyt päiväys"
 
 #: package/contents/ui/configAppearance.qml:175
-#, fuzzy, kde-format
-#| msgid "ISO Date"
+#, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO-päiväys"
 
 #: package/contents/ui/configAppearance.qml:182
-#, fuzzy, kde-format
-#| msgctxt "custom date format"
-#| msgid "Custom"
+#, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Mukautettu"
@@ -289,15 +277,13 @@ msgid "Show week numbers"
 msgstr "Näytä viikkonumerot"
 
 #: package/contents/ui/configCalendar.qml:49
-#, fuzzy, kde-format
-#| msgid "First day of week:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Viikon ensimmäinen päivä:"
 
 #: package/contents/ui/configCalendar.qml:55
-#, fuzzy, kde-format
-#| msgid "Use Region Defaults"
+#, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Käytä alueen oletusta"
@@ -327,12 +313,7 @@ msgid "Clock is currently using this time zone"
 msgstr "Kello käyttää nyt tätä aikavyöhykettä"
 
 #: package/contents/ui/configTimeZones.qml:96
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@label This list item shows a time zone city name that is identical to "
-#| "the local time zone's city, and will be hidden in the timezone display in "
-#| "the plasmoid's popup"
-#| msgid "Hidden while this is the local time zone's city"
+#, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
 "local time zone's city, and will be hidden in the time zone display in the "
@@ -384,16 +365,12 @@ msgstr ""
 "mieluummin se."
 
 #: package/contents/ui/configTimeZones.qml:209
-#, fuzzy, kde-format
-#| msgid "Add More Timezones"
+#, kde-format
 msgid "Add More Time Zones"
 msgstr "Lisää aikavyöhykkeitä"
 
 #: package/contents/ui/configTimeZones.qml:221
-#, fuzzy, kde-format
-#| msgid ""
-#| "At least one time zone needs to be enabled. Your local timezone was "
-#| "enabled automatically."
+#, kde-format
 msgid ""
 "At least one time zone needs to be enabled. Your local time zone was enabled "
 "automatically."
