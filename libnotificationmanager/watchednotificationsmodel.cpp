@@ -40,7 +40,7 @@ public Q_SLOTS:
     void NotificationClosed(uint id, uint reason);
 
 private:
-    WatchedNotificationsModel *q;
+    WatchedNotificationsModel *const q;
     OrgFreedesktopNotificationsInterface *fdoNotificationsInterface;
 };
 

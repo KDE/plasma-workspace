@@ -29,7 +29,7 @@ public:
 
     void updateServerInformation();
 
-    ServerInfo *q;
+    ServerInfo *const q;
 
     ServerInfo::Status status = ServerInfo::Status::Unknown;
 

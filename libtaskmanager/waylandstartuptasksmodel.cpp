@@ -95,7 +95,7 @@ public:
         std::unique_ptr<PlasmaActivation> activation;
     };
 
-    WaylandStartupTasksModel *q;
+    WaylandStartupTasksModel *const q;
     KConfigWatcher::Ptr configWatcher = nullptr;
     std::unique_ptr<PlasmaActivationFeedback> feedback = nullptr;
     std::vector<Startup> startups;

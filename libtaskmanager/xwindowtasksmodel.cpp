@@ -102,7 +102,7 @@ public:
     bool demandsAttention(WId window);
 
 private:
-    XWindowTasksModel *q;
+    XWindowTasksModel *const q;
 };
 
 XWindowTasksModel::Private::Private(XWindowTasksModel *q)

@@ -52,7 +52,7 @@ public:
     void breakGroupFor(const QModelIndex &index, bool silent = false);
 
 private:
-    TaskGroupingProxyModel *q;
+    TaskGroupingProxyModel *const q;
 };
 
 TaskGroupingProxyModel::Private::Private(TaskGroupingProxyModel *q)

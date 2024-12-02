@@ -36,7 +36,7 @@ public:
     QUrl launcherUrl(const KStartupInfoData &data);
 
 private:
-    XStartupTasksModel *q;
+    XStartupTasksModel *const q;
 };
 
 XStartupTasksModel::Private::Private(XStartupTasksModel *q)

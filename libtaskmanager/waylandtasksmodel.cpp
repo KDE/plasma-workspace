@@ -442,7 +442,7 @@ public:
     void dataChanged(PlasmaWindow *window, const QList<int> &roles);
 
 private:
-    WaylandTasksModel *q;
+    WaylandTasksModel *const q;
 };
 
 QUuid WaylandTasksModel::Private::uuid = QUuid::createUuid();

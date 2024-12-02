@@ -29,7 +29,7 @@ public:
     void initSourceTasksModel();
 
 private:
-    WindowTasksModel *q;
+    WindowTasksModel *const q;
 };
 
 int WindowTasksModel::Private::instanceCount = 0;

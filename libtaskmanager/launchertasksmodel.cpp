@@ -68,7 +68,7 @@ public:
     bool requestRemoveLauncherFromActivities(const QUrl &_url, const QStringList &activities);
 
 private:
-    LauncherTasksModel *q;
+    LauncherTasksModel *const q;
 };
 
 LauncherTasksModel::Private::Private(LauncherTasksModel *q)

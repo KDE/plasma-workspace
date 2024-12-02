@@ -82,7 +82,7 @@ public:
     bool lessThan(const QModelIndex &left, const QModelIndex &right, bool sortOnlyLaunchers = false) const;
 
 private:
-    TasksModel *q;
+    TasksModel *const q;
 };
 
 class TasksModel::TasksModelLessThan

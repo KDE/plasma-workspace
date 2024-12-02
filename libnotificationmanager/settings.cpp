@@ -40,7 +40,7 @@ public:
 
     QStringList behaviorMatchesList(const KConfigGroup &group, Settings::NotificationBehavior behavior, bool on) const;
 
-    Settings *q;
+    Settings *const q;
 
     KSharedConfig::Ptr config;
 

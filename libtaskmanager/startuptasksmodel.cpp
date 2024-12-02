@@ -30,7 +30,7 @@ public:
     void initSourceTasksModel();
 
 private:
-    StartupTasksModel *q;
+    StartupTasksModel *const q;
 };
 
 int StartupTasksModel::Private::instanceCount = 0;
