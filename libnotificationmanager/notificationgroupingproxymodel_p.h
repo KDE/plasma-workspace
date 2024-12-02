@@ -33,9 +33,6 @@ public:
     QModelIndex mapFromSource(const QModelIndex &sourceIndex) const override;
     QModelIndex mapToSource(const QModelIndex &proxyIndex) const override;
 
-protected:
-    // bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
-
 private:
     bool appsMatch(const QModelIndex &a, const QModelIndex &b) const;
     bool isGroup(int row) const;
