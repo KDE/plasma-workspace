@@ -72,6 +72,7 @@
         "Description[eo]": "Sistemmonitora fenestraĵo kiu montras la suman CPU-uzadon",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso total de CPU",
         "Description[eu]": "PUZ erabileraren guztizkoa erakusten duen sistema gainbegiratzeko trepeta",
+        "Description[fi]": "Suorittimen kokonaiskäytön näyttävä järjestelmänvalvontasovelma",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation globale du processeur.",
         "Description[gl]": "Trebello de vixilancia do sistema que mostra o uso total do procesador.",
         "Description[he]": "יישומון צג מערכת שמציג את ניצולת המעבד הכללית",
