@@ -66,6 +66,7 @@ ColumnLayout {
                     if (!query) {
                         queryField.text = priorSearch
                         queryField.select(root.query.length, 0)
+                        fadedTextCompletion.text = ""
                     }
                 }
             } else {
