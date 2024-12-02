@@ -40,5 +40,5 @@ private:
 
     std::shared_ptr<Multiplexer> m_multiplexer;
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(MprisService, PlayerContainer *, m_activePlayer, nullptr)
-    KActionCollection *m_actionCollection = nullptr;
+    KActionCollection *const m_actionCollection;
 };
