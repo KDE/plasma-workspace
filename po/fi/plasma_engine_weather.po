@@ -3,7 +3,7 @@
 # This file is distributed under the same license as the kdebase package.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2015, 2016.
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2011.
-# Tommi Nieminen <translator@legisign.org>, 2017, 2018, 2019, 2020, 2022.
+# SPDX-FileCopyrightText: 2017, 2018, 2019, 2020, 2022, 2024 Tommi Nieminen <translator@legisign.org>
 #
 # KDE Finnish translation sprint participants:
 #
@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-10 03:31+0000\n"
-"PO-Revision-Date: 2022-01-27 21:24+0200\n"
+"PO-Revision-Date: 2024-11-15 10:02+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -21,8 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:22:34+0000\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -303,7 +302,7 @@ msgstr "paksu pilviverho"
 #, kde-format
 msgctxt "weather condition"
 msgid "thunderstorm"
-msgstr "ukkosmyrskyä"
+msgstr "ukkosta"
 
 #: bbcukmet_i18n.dat:47
 #, kde-format
@@ -843,7 +842,7 @@ msgstr "Runsaasti lumipyrykuuroja"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm"
-msgstr "Ukkosmyrsky"
+msgstr "Ukkosta"
 
 #: envcan_i18n.dat:33
 #, kde-format
@@ -1169,7 +1168,7 @@ msgstr "Ukonilma ja rankkasade"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with Sand or Dust Storm"
-msgstr "Ukonilma ja hiekka- tai pölymyrsky"
+msgstr "Ukkosta ja hiekka- tai pölymyrsky"
 
 #: envcan_i18n.dat:87
 #, kde-format
@@ -1247,7 +1246,7 @@ msgstr "Joitain sade- tai ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few showers or thunderstorms"
-msgstr "Joitain sadekuuroja tai ukkosmyrskyjä"
+msgstr "Joitakin sadekuuroja tai ukkosta"
 
 #: envcan_i18n.dat:100
 #, kde-format
@@ -1259,7 +1258,7 @@ msgstr "Joitakin ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "A few thunderstorms"
-msgstr "Joitakin ukkosmyrskyjä"
+msgstr "Vähän ukkosta"
 
 #: envcan_i18n.dat:102
 #, kde-format
@@ -1481,7 +1480,7 @@ msgstr "Mahdollisesti sadekuuroja tai märkiä lumipyrykuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of severe thunderstorms"
-msgstr "Mahdollisesti rajuja ukkosmyrskyjä"
+msgstr "Mahdollisesti kovaa ukkosta"
 
 #: envcan_i18n.dat:139
 #, kde-format
@@ -1505,7 +1504,7 @@ msgstr "Ajoittain runsaat sade- tai ukkoskuurot mahdollisia"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers at times heavy or thunderstorms"
-msgstr "Ajoittain runsaat sadekuurot tai ukkosmyrskyt mahdollisia"
+msgstr "Ajoittain runsaat sadekuurot tai ukkonen mahdollisia"
 
 #: envcan_i18n.dat:143
 #, kde-format
@@ -1523,7 +1522,7 @@ msgstr "Mahdollisesti sade- tai ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers or thunderstorms"
-msgstr "Mahdollisesti sadekuuroja tai ukkosmyrskyjä"
+msgstr "Mahdollisesti sadekuuroja tai ukkosta"
 
 #: envcan_i18n.dat:146
 #, kde-format
@@ -1578,13 +1577,13 @@ msgstr "Mahdollisesti ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of thunderstorms"
-msgstr "Mahdollisesti ukkosmyrskyjä"
+msgstr "Mahdollisesti ukkosta"
 
 #: envcan_i18n.dat:155
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of thunderstorms and possible hail"
-msgstr "Mahdollisesti ukkosmyrskyjä ja rakeita"
+msgstr "Mahdollisesti ukkosta ja rakeita"
 
 #: envcan_i18n.dat:156
 #, kde-format
@@ -2226,7 +2225,7 @@ msgstr "Ajoittain lumisadetta tai ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of rain or thunderstorms"
-msgstr "Ajoittain sadetta tai ukkosmyrskyjä"
+msgstr "Ajoittain sadetta tai ukkosta"
 
 #: envcan_i18n.dat:263
 #, kde-format
@@ -2370,7 +2369,7 @@ msgstr "Toisinaan runsaita sateita tai ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or thunderstorms"
-msgstr "Toisinaan runsaita sateita tai ukkosmyrskyjä"
+msgstr "Toisinaan runsaita sateita tai ukkosta"
 
 #: envcan_i18n.dat:287
 #, kde-format
@@ -2412,7 +2411,7 @@ msgstr "Sadetta tai ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain or thunderstorms"
-msgstr "Sadetta tai ukkosmyrskyjä"
+msgstr "Sadetta tai ukkosta"
 
 #: envcan_i18n.dat:294
 #, kde-format
@@ -2448,7 +2447,7 @@ msgstr "Toisinaan rajuja sade- tai ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers at times heavy or thunderstorms"
-msgstr "Toisinaan sadekuuroja tai ukkosmyrskyjä"
+msgstr "Toisinaan sadekuuroja tai ukkosta"
 
 #: envcan_i18n.dat:300
 #, kde-format
@@ -2466,7 +2465,7 @@ msgstr "Kuuroja tai ukkoskuuroja"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Showers or thunderstorms"
-msgstr "Kuuroja tai ukkosmyrskyjä"
+msgstr "Sadekuuroja tai ukkosta"
 
 #: envcan_i18n.dat:303 noaa_i18n.dat:328
 #, kde-format
@@ -2634,13 +2633,13 @@ msgstr "Aurinkoista ja ajoittain pilvistä"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms"
-msgstr "Ukkosmyrskyjä"
+msgstr "Ukkosta"
 
 #: envcan_i18n.dat:331
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms and possible hail"
-msgstr "Ukkosmyrskyjä ja mahdollisia raekuuroja"
+msgstr "Ukkosta ja mahdollisia raekuuroja"
 
 #: envcan_i18n.dat:332
 #, kde-format
@@ -4536,7 +4535,7 @@ msgstr "Ukonilma ja pieniä rakeita/lumirakeita"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Snow"
-msgstr "Lumiukkosmyrsky"
+msgstr "Lumisadetta ja ukkosta"
 
 #: noaa_i18n.dat:262
 #, kde-format
@@ -4584,25 +4583,25 @@ msgstr "Jäähile"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Thunderstorms"
-msgstr "Pieni mahdollisuus ukkosmyrkyihin"
+msgstr "Pieni ukkosen mahdollisuus"
 
 #: noaa_i18n.dat:271
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Thunderstorms"
-msgstr "Mahdollisesti ukkosmyrskyjä"
+msgstr "Mahdollisesti ukkosta"
 
 #: noaa_i18n.dat:272
 #, kde-format
 msgctxt "weather forecast"
 msgid "Thunderstorms Likely"
-msgstr "Todennäköisesti ukkosmyrskyjä"
+msgstr "Todennäköisesti ukkosta"
 
 #: noaa_i18n.dat:274
 #, kde-format
 msgctxt "weather forecast"
 msgid "Severe Tstms"
-msgstr "Raivoisia ukkosmyrskyjä"
+msgstr "Kovaa ukkosta"
 
 #: noaa_i18n.dat:275
 #, kde-format

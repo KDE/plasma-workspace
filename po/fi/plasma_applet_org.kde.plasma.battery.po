@@ -4,7 +4,7 @@
 # Mikko Piippo <piippo@cc.helsinki.fi>, 2007, 2008.
 # Teemu Rytilahti <teemu.rytilahti@kde-fi.org>, 2008.
 # Teemu Rytilahti <teemu.rytilahti@d5k.net>, 2008.
-# Tommi Nieminen <translator@legisign.org>, 2009, 2010, 2017, 2019, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2009, 2010, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
 # SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2024 Lasse Liehu <lasse.liehu@gmail.com>
 # SPDX-FileCopyrightText: 2024 Kimmo Kujansuu <mrkujansuu@gmail.com>
 #
@@ -24,8 +24,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:22:31+0000\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/BatteryItem.qml:106
 #, kde-format
