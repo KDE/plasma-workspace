@@ -259,4 +259,7 @@ PlasmoidItem {
         // and Networks applets
         Plasmoid.setInternalAction("configure", configureAction)
     }
+    Component.onDestruction: {
+        Globals.forget(root);
+    }
 }

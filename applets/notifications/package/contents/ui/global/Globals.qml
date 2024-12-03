@@ -65,16 +65,6 @@ QtObject {
     property var plasmoidItem: null
     property var plasmoid: null
 
-    // HACK When a plasmoid is destroyed, QML sets its value to "null" in the Array
-    // so we then remove it so we have a working "plasmoid" again
-    onPlasmoidChanged: {
-        if (!plasmoid) {
-            // this doesn't Q_EMIT a change, only in ratePlasmoids() it will detect the change
-            plasmoidItems.splice(0, 1); // remove first
-            ratePlasmoids();
-        }
-    }
-
     // all notification plasmoids
     property var plasmoidItems: []
 
@@ -175,6 +165,7 @@ QtObject {
         }
         positionPopups()
     }
+    onObstructingDialogChanged: repositionTimer.start()
 
     // The minimum width of the popup's content item, the Dialog itself adds some margins
     // Make it wider when on the top or the bottom center, since there's more horizontal
@@ -199,6 +190,12 @@ QtObject {
         ratePlasmoids();
     }
 
+    function forget(plasmoid) {
+        // this doesn't Q_EMIT a change, only in ratePlasmoids() it will detect the change
+        globals.plasmoidItems = globals.plasmoidItems.filter(p => p !== plasmoid);
+        ratePlasmoids();
+    }
+
     // Sorts plasmoids based on a heuristic to find a suitable plasmoid to follow when placing popups
     function ratePlasmoids() {
         var plasmoidScore = function(plasmoidItem) {
@@ -210,13 +207,22 @@ QtObject {
             var score = 0;
 
             // Prefer plasmoids in a panel, prefer horizontal panels over vertical ones
+            // right over left and bottom over top: they need to have all different scores
+            // even if we wouldn't have a clear preference between ie top and bottom,
+            // in order to have a stable sorting algorithm
             // NOTE this is our "plasmoid" property from above, don't port this to Plasmoid attached property!
-            if (plasmoid.location === PlasmaCore.Types.LeftEdge
-                    || plasmoid.location === PlasmaCore.Types.RightEdge) {
+            switch (plasmoid.location) {
+            case PlasmaCore.Types.LeftEdge:
                 score += 1;
-            } else if (plasmoid.location === PlasmaCore.Types.TopEdge
-                       || plasmoid.location === PlasmaCore.Types.BottomEdge) {
+                break;
+            case PlasmaCore.Types.RightEdge:
                 score += 2;
+                break;
+            case PlasmaCore.Types.TopEdge:
+                score += 3;
+                break;
+            case PlasmaCore.Types.BottomEdge:
+                score += 4;
             }
 
             // Prefer iconified plasmoids
@@ -673,6 +679,25 @@ QtObject {
     // so that when user resizes panel we reposition the popups live
     property Connections visualParentWindowConnections: Connections {
         target: visualParent ? visualParent.Window.window : null
+        function onXChanged() {
+            repositionTimer.start();
+        }
+        function onYChanged() {
+            repositionTimer.start();
+        }
+        function onWidthChanged() {
+            repositionTimer.start();
+        }
+        function onHeightChanged() {
+            repositionTimer.start();
+        }
+    }
+    // Tracks movement, size and visibility of obstructingDialog, if any
+    property Connections obstructingDialogConnections: Connections {
+        target: obstructingDialog
+        function onVisibleChanged() {
+            repositionTimer.start();
+        }
         function onXChanged() {
             repositionTimer.start();
         }
