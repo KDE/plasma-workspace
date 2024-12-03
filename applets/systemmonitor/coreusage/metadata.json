@@ -69,6 +69,7 @@
         "Description[en_GB]": "System monitor widget that shows usage of individual CPU cores",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de los núcleos individuales de la CPU",
         "Description[eu]": "PUZeko nukleoen banakako erabilera erakusten duen sistema gainbegiratzeko trepeta",
+        "Description[fi]": "Yksittäisten järjestelmäydinten käytön näyttävä järjestelmänvalvontasovelma",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation de chaque cœur du processeur.",
         "Description[gl]": "Trebello de vixilancia do sistema que mostra o uso de núcleos de procesador individuais.",
         "Description[he]": "יישומון צג מערכת שמציג ניצולת של ליבות מעבד בנפרד",

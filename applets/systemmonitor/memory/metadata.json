@@ -69,6 +69,7 @@
         "Description[en_GB]": "System monitor widget that shows physical memory usage",
         "Description[es]": "Elemento gráfico del monitor del sistema que muestra el uso de la memoria física",
         "Description[eu]": "Memoria fisikoaren erabilera erakusten duen sistema gainbegiratzeko trepeta",
+        "Description[fi]": "Fyysisen muistin käytön näyttävä järjestelmänvalvontasovelma",
         "Description[fr]": "Composant graphique de surveillance du système, affichant l'utilisation de la mémoire physique.",
         "Description[gl]": "Trebello de vixilancia do sistema que mostra o uso da memoria física.",
         "Description[he]": "יישומון צג מערכת שמציג את ניצולת הזיכרון הפיזי",
