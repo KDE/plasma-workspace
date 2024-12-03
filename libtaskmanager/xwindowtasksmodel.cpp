@@ -308,7 +308,7 @@ void XWindowTasksModel::Private::transientChanged(WId window, NET::Properties pr
                 transientsDemandingAttention.insert(leader, window);
                 dataChanged(leader, QList<int>{IsDemandingAttention});
             }
-        } else if (transientsDemandingAttention.remove(window)) {
+        } else if (transientsDemandingAttention.remove(leader, window)) {
             dataChanged(leader, QList<int>{IsDemandingAttention});
         }
         // Leader might have changed.

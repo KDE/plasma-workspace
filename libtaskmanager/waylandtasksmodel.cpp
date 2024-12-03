@@ -741,7 +741,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
                     transientsDemandingAttention.insert(leader, window);
                     this->dataChanged(leader, QList<int>{IsDemandingAttention});
                 }
-            } else if (transientsDemandingAttention.remove(window)) {
+            } else if (transientsDemandingAttention.remove(leader, window)) {
                 this->dataChanged(leader, QList<int>{IsDemandingAttention});
             }
         } else {
