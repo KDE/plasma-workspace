@@ -81,7 +81,7 @@ Q_SIGNALS:
     void print(const QString &string);
 
 private:
-    ScriptEngine *m_env;
+    ScriptEngine *const m_env;
     QStringList m_knownWidgets;
     Plasma::Theme *m_theme;
 };
