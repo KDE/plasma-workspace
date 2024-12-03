@@ -35,8 +35,6 @@ Item {
     signal lockScreenRequested()
     signal cancelSoftwareUpdateRequested()
 
-    property alias backgroundColor: backgroundRect.color
-
     function sleepRequested() {
         root.suspendRequested(2);
     }

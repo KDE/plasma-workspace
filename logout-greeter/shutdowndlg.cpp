@@ -223,11 +223,6 @@ void KSMShutdownDlg::init(const KPackage::Package &package)
         setGeometry(screen()->geometry());
     });
 
-    // decide in backgroundcontrast whether doing things darker or lighter
-    // set backgroundcontrast here, because in QEvent::PlatformSurface
-    // is too early and we don't have the root object yet
-    const QColor backgroundColor = rootObject() ? rootObject()->property("backgroundColor").value<QColor>() : QColor();
-    KWindowEffects::enableBackgroundContrast(this, true, 0.4, (backgroundColor.value() > 128 ? 1.6 : 0.3), 1.7);
     if (m_windowed) {
         show();
     } else {
