@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-07 00:41+0000\n"
-"PO-Revision-Date: 2024-10-29 11:52+0200\n"
+"PO-Revision-Date: 2024-12-01 16:14+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -622,7 +622,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Neizdevās apgriezt attēlu: %1"
 
 #: src/user.cpp:310
 #, kde-format

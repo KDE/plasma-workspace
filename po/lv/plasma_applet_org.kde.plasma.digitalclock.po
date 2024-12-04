@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-10-29 11:58+0200\n"
+"PO-Revision-Date: 2024-12-01 16:16+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -264,6 +264,7 @@ msgstr "%1 pt %2"
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
+"Ievērībai: izmēru sistēma var nesamazināt, ja panelis nav pietiekami biezs."
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
@@ -415,6 +416,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Nav norādīta laika josla. Spiediet te, lai atvērtu datuma un laika "
+"iestatījumus un to norādītu."
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -423,12 +426,11 @@ msgid "Today is %1"
 msgstr "Šodien ir %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Laika joslas"
+msgstr "Nav norādīta laika josla"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -436,6 +438,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Spiediet uz pulksteņa ikonas, lai atvērtu datuma un laika iestatījumus un "
+"norādītu laika joslu."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

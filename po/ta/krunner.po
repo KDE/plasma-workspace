@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-11 00:42+0000\n"
+"POT-Creation-Date: 2024-12-04 00:42+0000\n"
 "PO-Revision-Date: 2023-07-30 12:02+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -73,64 +73,64 @@ msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
 msgstr "உள்ள கேரன்னர் செருகுநிரல்கள், pluginId"
 
-#: qml/RunCommand.qml:103
+#: qml/RunCommand.qml:104
 #, kde-format
 msgid "Configure"
 msgstr "அமை"
 
-#: qml/RunCommand.qml:104
+#: qml/RunCommand.qml:105
 #, kde-format
 msgid "Configure KRunner Behavior"
 msgstr "கேரன்னரின் நடத்தையை மாற்றியமையுங்கள்"
 
-#: qml/RunCommand.qml:107
+#: qml/RunCommand.qml:108
 #, kde-format
 msgid "Configure KRunner…"
 msgstr "கேரன்னரை அமை…"
 
-#: qml/RunCommand.qml:120
+#: qml/RunCommand.qml:121
 #, kde-format
 msgid "Showing only results from %1"
 msgstr "%1 இலிருந்தான முடிவுகள் மட்டும்"
 
-#: qml/RunCommand.qml:134
+#: qml/RunCommand.qml:135
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
 msgstr "'%1' தனில் தேடு…"
 
-#: qml/RunCommand.qml:135
+#: qml/RunCommand.qml:136
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "தேடு…"
 
-#: qml/RunCommand.qml:304 qml/RunCommand.qml:305 qml/RunCommand.qml:307
+#: qml/RunCommand.qml:305 qml/RunCommand.qml:306 qml/RunCommand.qml:308
 #, kde-format
 msgid "Show Usage Help"
 msgstr "பயன்படுத்துவது குறித்த உதவியை காட்டு"
 
-#: qml/RunCommand.qml:315
+#: qml/RunCommand.qml:316
 #, kde-format
 msgid "Pin"
 msgstr "தக்கவை"
 
-#: qml/RunCommand.qml:316
+#: qml/RunCommand.qml:317
 #, kde-format
 msgid "Pin Search"
 msgstr "தேடலை தக்கவை"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:319
 #, kde-format
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"
 
-#: qml/RunCommand.qml:377 qml/RunCommand.qml:382
+#: qml/RunCommand.qml:378 qml/RunCommand.qml:383
 #, kde-format
 msgid "Recent Queries"
 msgstr "சமீப தேடல்கள்"
 
-#: qml/RunCommand.qml:380
+#: qml/RunCommand.qml:381
 #, kde-format
 msgid "Remove"
 msgstr "நீக்கு"

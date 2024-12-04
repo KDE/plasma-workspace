@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-10-29 12:02+0200\n"
+"PO-Revision-Date: 2024-12-01 16:16+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -90,12 +90,9 @@ msgstr ""
 "ekrānā."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
-"Pēc pārstartēšanas dators ieslēgsies aparatūrprogrammatūras iestatīšanas "
-"ekrānā."
+msgstr "Pēc pārstartēšanas dators ieslēgsies sāknēšanas ielādēšanas izvēlni."
 
 #: contents/logout/Logout.qml:216
 #, kde-format
