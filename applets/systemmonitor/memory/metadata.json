@@ -89,6 +89,7 @@
         "Description[nn]": "System­overvaking som viser bruk av fysisk minne",
         "Description[pa]": "ਕੁੱਲ ਫਿਜ਼ੀਕਲ ਮੈਮੋਰੀ ਵਰਤੋਂ ਦਿਖਾਉਣ ਵਾਲਾ ਸਿਸਟਮ ਮਾਨੀਟਰ ਵਿਜੈੱਟ",
         "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie pamięci fizycznej",
+        "Description[pt_BR]": "Widget monitor do sistema que mostra o uso da memória física",
         "Description[ru]": "Мониторинг использования физической памяти",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje rabo fizičnega pomnilnika",
         "Description[sv]": "Grafisk systemövervakningskomponent som fysisk minnesanvändning",

@@ -89,6 +89,7 @@
         "Description[nn]": "System­overvaking som viser bruk av rotpartisjonen",
         "Description[pa]": "ਰੂਟ ਪਾਰਟੀਸ਼ਨ ਦੀ ਵਰਤੋਂ ਬਾਰੇ ਜਾਣਕਾਰੀ ਦਿਖਾਉਣ ਵਾਲਾ ਸਿਸਟਮ ਮਾਨੀਟਰ ਵਿਜੈਟ ",
         "Description[pl]": "Element interfejsu, który pokazuje wykorzystanie głównej partycji",
+        "Description[pt_BR]": "Widget monitor do sistema que mostra o uso da partição raiz",
         "Description[ru]": "Мониторинг использования дискового пространства корневым разделом",
         "Description[sl]": "Gradnik sistemskega monitorja, ki prikazuje rabo korenske particije",
         "Description[sv]": "Grafisk systemövervakningskomponent som visar användning av rotpartitionen",
