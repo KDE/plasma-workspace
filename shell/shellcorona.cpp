@@ -1619,10 +1619,20 @@ void ShellCorona::handleContainmentAdded(Plasma::Containment *c)
         executeSetupPlasmoidScript(c, applet);
     });
 
-    // When a containment is removed, remove the thumbnail as well
+    // When a containment is removed, delete the PanelView (so that you cannot
+    // open applets even through shortcuts) and remove the thumbnail as well.
+    // If "undo" is pressed, destroyedChanged(false) will be called, so we
+    // add the PanelView back.
     connect(c, &Plasma::Containment::destroyedChanged, this, [this, c](bool destroyed) {
         if (!destroyed) {
+            this->m_waitingPanels << c;
+            this->createWaitingPanels();
             return;
+        }
+        auto view = this->m_panelViews.take(c);
+        if (view) {
+            view->disconnect(this);
+            delete view;
         }
         const QString snapshotPath = containmentPreviewPath(c);
         if (!snapshotPath.isEmpty()) {
