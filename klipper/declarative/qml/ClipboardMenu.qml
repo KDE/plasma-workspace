@@ -10,7 +10,8 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Templates as T
 import QtQuick.Layouts
-import Qt.labs.qmlmodels as QtLabsModel // DelegateChooser
+import QtQml.Models // DelegateChoice for Qt >= 6.9
+import Qt.labs.qmlmodels // DelegateChooser
 
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.plasma.core as PlasmaCore
@@ -203,22 +204,22 @@ PlasmaComponents3.ScrollView {
         visible: false
     }
 
-    QtLabsModel.DelegateChooser {
+    DelegateChooser {
         id: chooser
         role: "type"
-        QtLabsModel.DelegateChoice {
+        DelegateChoice {
             roleValue: "0"
             delegate: TextItemDelegate {
                 listMargins: listItemSvg.margins
             }
         }
-        QtLabsModel.DelegateChoice {
+        DelegateChoice {
             roleValue: "1"
             delegate: ImageItemDelegate  {
                 listMargins: listItemSvg.margins
             }
         }
-        QtLabsModel.DelegateChoice {
+        DelegateChoice {
             roleValue: "2"
             delegate: UrlItemDelegate {
                 listMargins: listItemSvg.margins
