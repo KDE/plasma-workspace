@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-20 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-10-26 21:18+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -376,17 +376,17 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Espandi"
 
-#: declarative/qml/ClipboardMenu.qml:186
+#: declarative/qml/ClipboardMenu.qml:187
 #, kde-format
 msgid "Clear History"
 msgstr "Cancella cronologia"
 
-#: declarative/qml/ClipboardMenu.qml:277
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "No matches"
 msgstr "Nessuna corrispondenza"
 
-#: declarative/qml/ClipboardMenu.qml:277
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Gli appunti sono vuoti"

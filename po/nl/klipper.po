@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-20 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-10-22 10:42+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -384,17 +384,17 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Uitvouwen"
 
-#: declarative/qml/ClipboardMenu.qml:186
+#: declarative/qml/ClipboardMenu.qml:187
 #, kde-format
 msgid "Clear History"
 msgstr "Geschiedenis wissen"
 
-#: declarative/qml/ClipboardMenu.qml:277
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "No matches"
 msgstr "geen overeenkomsten"
 
-#: declarative/qml/ClipboardMenu.qml:277
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Klembordgeschiedenis is leeg"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-20 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2010-09-25 16:37-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -366,19 +366,19 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:186
+#: declarative/qml/ClipboardMenu.qml:187
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "クリップボードの履歴"
 
-#: declarative/qml/ClipboardMenu.qml:277
+#: declarative/qml/ClipboardMenu.qml:278
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<一致なし>"
 
-#: declarative/qml/ClipboardMenu.qml:277
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "クリップボードは空です"

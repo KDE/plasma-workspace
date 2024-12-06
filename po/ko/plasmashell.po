@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-11-29 00:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -327,13 +327,13 @@ msgstr ""
 "창 드래그와 크기 조정 성능에 악영향을 줄 수 있습니다. 다른 설정을 사용하십시"
 "오."
 
-#: panelview.cpp:1100
+#: panelview.cpp:1105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "패널 설정 숨기기"
 
-#: panelview.cpp:1102
+#: panelview.cpp:1107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -405,12 +405,12 @@ msgstr "패널과 바탕 화면 관리"
 msgid "Move keyboard focus between panels"
 msgstr "패널간 키보드 포커스 이동"
 
-#: shellcorona.cpp:2120
+#: shellcorona.cpp:2130
 #, kde-format
 msgid "Add Panel"
 msgstr "패널 추가하기"
 
-#: shellcorona.cpp:2181
+#: shellcorona.cpp:2191
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-20 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-10-24 06:35+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -374,17 +374,17 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "وسع"
 
-#: declarative/qml/ClipboardMenu.qml:186
+#: declarative/qml/ClipboardMenu.qml:187
 #, kde-format
 msgid "Clear History"
 msgstr "امسح التاريخ"
 
-#: declarative/qml/ClipboardMenu.qml:277
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "No matches"
 msgstr "لا يوجد تطابق"
 
-#: declarative/qml/ClipboardMenu.qml:277
+#: declarative/qml/ClipboardMenu.qml:278
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "الحافظة فارغة"

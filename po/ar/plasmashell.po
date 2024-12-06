@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-09-05 09:44+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -330,13 +330,13 @@ msgstr ""
 "ووضع العتامة التكيفي في ضعف أداء سحب النافذة وتغيير حجمها. فكر في استخدام "
 "إعدادات أخرى."
 
-#: panelview.cpp:1100
+#: panelview.cpp:1105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "أخف ضبط اللوحة"
 
-#: panelview.cpp:1102
+#: panelview.cpp:1107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -408,12 +408,12 @@ msgstr "إدارة سطح المكتب واللوحة"
 msgid "Move keyboard focus between panels"
 msgstr "حرّك تركيز لوحة المفاتيح بين اللوحات"
 
-#: shellcorona.cpp:2120
+#: shellcorona.cpp:2130
 #, kde-format
 msgid "Add Panel"
 msgstr "أضف لوحة"
 
-#: shellcorona.cpp:2181
+#: shellcorona.cpp:2191
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

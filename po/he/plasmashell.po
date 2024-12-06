@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-08-30 08:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -329,13 +329,13 @@ msgstr ""
 "עם מעבד גרפי של NVidia על X11, מצבי סגנון הציפה והאטימות המסתגלת ידועים בכך "
 "שהם גורמים לגרירה ושינוי גודל מקוטעים. כדאי לשקול להשתמש בהגדרות אחרות."
 
-#: panelview.cpp:1100
+#: panelview.cpp:1105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "הסתרת הגדרות לוח"
 
-#: panelview.cpp:1102
+#: panelview.cpp:1107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -407,12 +407,12 @@ msgstr "ניהול לוחות ושולחנות עבודה"
 msgid "Move keyboard focus between panels"
 msgstr "העברת מיקוד המקלדת בין לוחות"
 
-#: shellcorona.cpp:2120
+#: shellcorona.cpp:2130
 #, kde-format
 msgid "Add Panel"
 msgstr "הוספת לוח"
 
-#: shellcorona.cpp:2181
+#: shellcorona.cpp:2191
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

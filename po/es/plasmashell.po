@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-28 00:41+0000\n"
+"POT-Creation-Date: 2024-12-06 00:42+0000\n"
 "PO-Revision-Date: 2024-09-09 20:41+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -332,13 +332,13 @@ msgstr ""
 "opacidad adaptativa provocan un rendimiento deficiente al arrastrar y "
 "cambiar el tamaño de las ventanas. Considere el uso de otros ajustes."
 
-#: panelview.cpp:1100
+#: panelview.cpp:1105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Ocultar configuración del panel"
 
-#: panelview.cpp:1102
+#: panelview.cpp:1107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
@@ -410,12 +410,12 @@ msgstr "Gestión del panel y el escritorio"
 msgid "Move keyboard focus between panels"
 msgstr "Mover el foco del teclado entre paneles"
 
-#: shellcorona.cpp:2120
+#: shellcorona.cpp:2130
 #, kde-format
 msgid "Add Panel"
 msgstr "Añadir panel"
 
-#: shellcorona.cpp:2181
+#: shellcorona.cpp:2191
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
