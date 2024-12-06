@@ -3,16 +3,30 @@
 # SPDX-FileCopyrightText: 2024 Fushan Wen <qydwhotmail@gmail.com>
 # SPDX-License-Identifier: MIT
 # Idea inspired by Demitrius Belai's Java code: https://bugs.kde.org/attachment.cgi?id=170202
+# See also: https://bugs.kde.org/show_bug.cgi?id=484647
 
 # pylint: disable=global-statement
 
+import os
+
+# set_urgency_hint only works on X11
+os.environ["GDK_BACKEND"] = "x11"
+# Otherwise the following tests will fail
+os.environ["NO_AT_BRIDGE"] = "1"
+os.environ["GTK_A11Y"] = "none"
+# Avoid temporary files
+os.environ["GSETTINGS_BACKEND"] = "memory"
+os.environ["GVFS_DISABLE_FUSE"] = "1"
+os.environ["GIO_USE_VFS"] = "local"
+
 import logging
-from typing import Final
+from typing import Final, cast
 
 import gi
 
 gi.require_version("Gtk", "4.0")
-from gi.repository import Gio, GLib, Gtk
+gi.require_version("GdkX11", "4.0")
+from gi.repository import GdkX11, Gio, GLib, Gtk
 
 app: Gtk.Application | None = None
 frame_1: Gtk.Window | None = None
@@ -52,6 +66,8 @@ class OrgKdeBug484647:
     <method name="UnsetLeader"/>
     <method name="ShowTransientWindow"/>
     <method name="CloseTransientWindow"/>
+    <method name="SetUrgencyHint"/>
+    <method name="UnsetUrgencyHint"/>
   </interface>
 </node>
 """)
@@ -81,6 +97,12 @@ class OrgKdeBug484647:
         elif method_name == "CloseTransientWindow":
             dialog_1.set_visible(False)
             invocation.return_value(None)
+        elif method_name == "SetUrgencyHint":
+            cast(GdkX11.X11Surface, dialog_1.get_surface()).set_urgency_hint(True)
+            invocation.return_value(None)
+        elif method_name == "UnsetUrgencyHint":
+            cast(GdkX11.X11Surface, dialog_1.get_surface()).set_urgency_hint(False)
+            invocation.return_value(None)
         else:
             invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.UNKNOWN_METHOD, f"Unknown method {method_name}")
 
@@ -108,7 +130,7 @@ def on_activate(_app: Gtk.Application) -> None:
     frame_1.set_visible(True)
     frame_2.set_visible(True)
 
-    GLib.timeout_add_seconds(60, app.quit)
+    GLib.timeout_add_seconds(60, _app.quit)
 
 
 if __name__ == "__main__":

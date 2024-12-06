@@ -203,17 +203,7 @@ void WaylandTasksModelTest::test_transientWindow()
     QSignalSpy rowsInsertedSpy(&m_model, &AbstractWindowTasksModel::rowsInserted);
 
     gtkWindow.setProgram(u"python3"_s);
-    QProcessEnvironment newEnv = QProcessEnvironment::systemEnvironment();
-    newEnv.insert(u"GDK_BACKEND"_s, u"x11"_s);
-    // Otherwise the following tests will fail
-    newEnv.insert(u"NO_AT_BRIDGE"_s, u"1"_s);
-    newEnv.insert(u"GTK_A11Y"_s, u"none"_s);
-    // Avoid temporary files
-    newEnv.insert(u"GSETTINGS_BACKEND"_s, u"memory"_s);
-    newEnv.insert(u"GVFS_DISABLE_FUSE"_s, u"1"_s);
-    newEnv.insert(u"GIO_USE_VFS"_s, u"local"_s);
-    gtkWindow.setProcessEnvironment(newEnv);
-    gtkWindow.setArguments({QFINDTESTDATA(u"data/windows/bug484647.py"_s)});
+    gtkWindow.setArguments({QFINDTESTDATA(u"data/windows/transient_window.py"_s)});
     gtkWindow.start(QIODeviceBase::ReadOnly);
     QVERIFY(!rowsInsertedSpy.empty() || rowsInsertedSpy.wait());
 
