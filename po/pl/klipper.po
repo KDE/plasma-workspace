@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1692138 $
+# Version: $Revision: 1696799 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 02:31+0000\n"
+"POT-Creation-Date: 2024-12-06 02:32+0000\n"
 "PO-Revision-Date: 2024-08-24 11:53+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -365,17 +365,17 @@ msgstr "Za mało miejsca, aby wyświetlić kod QR. Spróbuj powiększyć ten apl
 msgid "Creating QR code failed"
 msgstr "Nie udało się utworzyć kodu QR"
 
-#: declarative/qml/ClipboardMenu.qml:185
+#: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
 msgid "Clear History"
 msgstr "Wyczyść historię"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "No matches"
 msgstr "Brak pasujących wyrażeń"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schowek jest pusty"

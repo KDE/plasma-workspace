@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 02:31+0000\n"
+"POT-Creation-Date: 2024-12-06 02:32+0000\n"
 "PO-Revision-Date: 2024-11-02 21:08+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -361,17 +361,17 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Vytvorenie kódu QR sa nepodarilo"
 
-#: declarative/qml/ClipboardMenu.qml:185
+#: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
 msgid "Clear History"
 msgstr "Vymazať históriu schránky"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "No matches"
 msgstr "Žiadne zhody"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schránka je prázdna"

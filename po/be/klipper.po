@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 02:31+0000\n"
+"POT-Creation-Date: 2024-12-06 02:32+0000\n"
 "PO-Revision-Date: 2024-06-11 20:16\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -365,18 +365,18 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:185
+#: declarative/qml/ClipboardMenu.qml:186
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Гісторыя буфера абмену"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "No matches"
 msgstr "Няма супадзенняў"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Буфер абмену пусты"

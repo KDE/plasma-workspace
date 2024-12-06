@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 02:31+0000\n"
+"POT-Creation-Date: 2024-12-06 02:32+0000\n"
 "PO-Revision-Date: 2009-12-16 21:43+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -344,19 +344,19 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:185
+#: declarative/qml/ClipboardMenu.qml:186
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clear History"
 msgstr "ක්ලිප් පුවරු ඉතිහාස ප්‍රමාණය"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<ගැලපුම් නොමැත>"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, fuzzy, kde-format
 #| msgid "Clipboard history size"
 msgid "Clipboard is empty"

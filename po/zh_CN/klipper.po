@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-05 02:31+0000\n"
+"POT-Creation-Date: 2024-12-06 02:32+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -339,17 +339,17 @@ msgstr "没有足够的空间显示二维码。请尝试调整这个小程序的
 msgid "Creating QR code failed"
 msgstr "创建二维码失败"
 
-#: declarative/qml/ClipboardMenu.qml:185
+#: declarative/qml/ClipboardMenu.qml:186
 #, kde-format
 msgid "Clear History"
 msgstr "清除历史记录"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "No matches"
 msgstr "无匹配条目"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:277
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪贴板为空"
