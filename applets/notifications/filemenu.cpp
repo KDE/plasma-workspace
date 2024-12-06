@@ -133,6 +133,7 @@ void FileMenu::open(int x, int y)
         // inspired by KDirModel::mimeData()
         QMimeData *data = new QMimeData(); // who cleans it up?
         KUrlMimeData::setUrls({fileItem.url()}, {fileItem.mostLocalUrl()}, data);
+        KUrlMimeData::exportUrlsToPortal(data);
         QApplication::clipboard()->setMimeData(data);
     });
 
