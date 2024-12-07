@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-12-07 00:42+0000\n"
 "PO-Revision-Date: 2024-09-21 11:57+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -41,13 +41,13 @@ msgstr "Obri la carpeta contenidora"
 msgid "&Copy"
 msgstr "&Copia"
 
-#: filemenu.cpp:139
+#: filemenu.cpp:140
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "Copia la ubicació"
 
-#: filemenu.cpp:195
+#: filemenu.cpp:196
 #, kde-format
 msgid "Properties"
 msgstr "Propietats"

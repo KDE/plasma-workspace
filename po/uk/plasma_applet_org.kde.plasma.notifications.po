@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-12-07 00:42+0000\n"
 "PO-Revision-Date: 2024-02-02 08:39+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -40,13 +40,13 @@ msgstr "Відкрити теку об’єкта"
 msgid "&Copy"
 msgstr "&Копіювати"
 
-#: filemenu.cpp:139
+#: filemenu.cpp:140
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "Копіювати адресу"
 
-#: filemenu.cpp:195
+#: filemenu.cpp:196
 #, kde-format
 msgid "Properties"
 msgstr "Властивості"

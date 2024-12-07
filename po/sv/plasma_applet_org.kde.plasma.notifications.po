@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-12-07 00:42+0000\n"
 "PO-Revision-Date: 2024-06-21 09:40+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -38,13 +38,13 @@ msgstr "Öppna katalog med innehåll"
 msgid "&Copy"
 msgstr "K&opiera"
 
-#: filemenu.cpp:139
+#: filemenu.cpp:140
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "Kopiera plats"
 
-#: filemenu.cpp:195
+#: filemenu.cpp:196
 #, kde-format
 msgid "Properties"
 msgstr "Egenskaper"

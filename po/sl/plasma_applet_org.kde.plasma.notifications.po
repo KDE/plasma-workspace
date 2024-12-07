@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-12-07 00:42+0000\n"
 "PO-Revision-Date: 2024-02-27 00:58+0100\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -42,13 +42,13 @@ msgstr "Odpri mapo, ki to vsebuje"
 msgid "&Copy"
 msgstr "&Kopiraj"
 
-#: filemenu.cpp:139
+#: filemenu.cpp:140
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "Kopiraj mesto"
 
-#: filemenu.cpp:195
+#: filemenu.cpp:196
 #, kde-format
 msgid "Properties"
 msgstr "Lastnosti"

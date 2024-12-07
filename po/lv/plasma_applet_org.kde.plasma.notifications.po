@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2024-12-07 00:42+0000\n"
 "PO-Revision-Date: 2024-10-29 11:59+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -41,13 +41,13 @@ msgstr "Atvērt saturošo mapi"
 msgid "&Copy"
 msgstr "&Kopēt"
 
-#: filemenu.cpp:139
+#: filemenu.cpp:140
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
 msgstr "Kopēt atrašanās vietu"
 
-#: filemenu.cpp:195
+#: filemenu.cpp:196
 #, kde-format
 msgid "Properties"
 msgstr "Īpašības"
