@@ -154,7 +154,7 @@ NotificationsApplet.NotificationWindow {
                 }
                 onTriggered: {
                     if (notificationPopup.dismissTimeout) {
-                        notificationPopup.dismissClicked();
+                        notificationPopup.modelInterface.dismissClicked();
                     } else {
                         notificationPopup.expired();
                     }
