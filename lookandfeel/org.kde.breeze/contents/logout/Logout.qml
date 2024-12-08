@@ -176,7 +176,7 @@ Item {
                          "%1 other users are currently logged in. If the computer is shut down or restarted, those users may lose work.",
                          sessionsModel.count - 1)
             textFormat: Text.PlainText
-            visible: sessionsModel.count > 1
+            visible: sessionsModel.count > 1 && (sdtype !== ShutdownType.ShutdownTypeNone || root.showAllOptions)
         }
 
         PlasmaComponents.Label {
