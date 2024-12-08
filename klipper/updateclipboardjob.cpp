@@ -115,7 +115,7 @@ void UpdateDatabaseJob::start()
         return;
     }
 
-    auto mkdirJob = KIO::mkdir(QUrl::fromLocalFile(m_dataDir + u'/' + m_uuid));
+    auto mkdirJob = KIO::mkdir(QUrl::fromLocalFile(m_dataDir + m_uuid));
     connect(mkdirJob, &KJob::finished, this, &UpdateDatabaseJob::onDataDirReady);
 }
 
@@ -136,7 +136,7 @@ void UpdateDatabaseJob::onDataDirReady(KJob *job)
         query.addBindValue(data.uuid);
         if (query.exec()) {
             KIO::StoredTransferJob *fileJob =
-                KIO::storedPut(data.data, QUrl::fromLocalFile(QString(m_dataDir + u'/' + m_uuid + u'/' + data.uuid)), -1, KIO::HideProgressInfo);
+                KIO::storedPut(data.data, QUrl::fromLocalFile(QString(m_dataDir + m_uuid + u'/' + data.uuid)), -1, KIO::HideProgressInfo);
             addSubjob(fileJob);
         }
     }
