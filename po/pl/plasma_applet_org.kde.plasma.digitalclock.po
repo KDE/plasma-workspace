@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-09-07 11:41+0200\n"
+"PO-Revision-Date: 2024-12-07 12:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -265,6 +265,8 @@ msgstr "%1punkt %2"
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
+"Uwaga: rozmiar może ulec zmniejszeniu, gdy pasek nie jest wystarczająco "
+"szeroki."
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
@@ -418,6 +420,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Nie ustawiono strefy czasowej; naciśnij tutaj, aby otworzyć ustawienia Daty "
+"i Czasu i ustaw ją tam"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -426,12 +430,11 @@ msgid "Today is %1"
 msgstr "Dzisiaj jest %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Miasto strefy czasowej"
+msgstr "Nie ustawiono strefy czasowej"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -439,6 +442,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Naciśnij ikonę zegara, aby otworzyć ustawienia Daty i Czasu i ustaw tam "
+"strefę czasową."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format
