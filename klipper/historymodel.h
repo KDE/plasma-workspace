@@ -29,6 +29,7 @@ public:
         TypeRole,
         TypeIntRole,
         ImageUrlRole,
+        PinnedRole,
     };
     Q_ENUM(RoleType)
 

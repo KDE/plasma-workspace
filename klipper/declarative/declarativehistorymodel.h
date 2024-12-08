@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <QIdentityProxyModel>
+#include <QSortFilterProxyModel>
 #include <qqmlregistration.h>
 
 class HistoryModel;
@@ -14,7 +14,7 @@ class HistoryModel;
 /**
  * This class provides a view for history clip items in QML
  **/
-class DeclarativeHistoryModel : public QIdentityProxyModel
+class DeclarativeHistoryModel : public QSortFilterProxyModel
 {
     Q_OBJECT
     QML_NAMED_ELEMENT(HistoryModel)
@@ -22,11 +22,23 @@ class DeclarativeHistoryModel : public QIdentityProxyModel
     Q_PROPERTY(int count READ rowCount NOTIFY countChanged)
     Q_PROPERTY(QString currentText READ currentText NOTIFY currentTextChanged)
 
+    // Whether to show pinned items only
+    Q_PROPERTY(bool pinnedOnly READ pinnedOnly WRITE setPinnedOnly NOTIFY pinnedOnlyChanged)
+
+    // Whether to prioritize pinned items over other items except for the first item (current clipboard)
+    Q_PROPERTY(bool pinnedPrioritized READ pinnedPrioritized WRITE setPinnedPrioritized NOTIFY pinnedPrioritizedChanged)
+
 public:
     explicit DeclarativeHistoryModel(QObject *parent = nullptr);
     ~DeclarativeHistoryModel() override;
 
     QString currentText() const;
+
+    bool pinnedOnly() const;
+    void setPinnedOnly(bool value);
+
+    bool pinnedPrioritized() const;
+    void setPinnedPrioritized(bool value);
 
     Q_INVOKABLE void moveToTop(const QString &uuid);
 
@@ -38,7 +50,15 @@ public:
 Q_SIGNALS:
     void countChanged();
     void currentTextChanged();
+    void pinnedOnlyChanged();
+    void pinnedPrioritizedChanged();
 
 private:
+    bool filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const override;
+    bool lessThan(const QModelIndex &source_left, const QModelIndex &source_right) const override;
+
     std::shared_ptr<HistoryModel> m_model;
+
+    bool m_pinnedOnly = false;
+    bool m_pinnedPrioritized = false;
 };

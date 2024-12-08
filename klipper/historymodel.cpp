@@ -262,6 +262,12 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         return QVariant::fromValue<HistoryItemType>(item->type());
     case TypeIntRole:
         return int(item->type());
+    case PinnedRole:
+        QSqlQuery query(u"SELECT starred FROM main WHERE uuid='%1'"_s.arg(item->uuid()), m_db);
+        if (query.exec() && query.isSelect() && query.next()) {
+            return query.value(0).toBool();
+        }
+        return false;
     }
     return QVariant();
 }
@@ -316,6 +322,17 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
         item = std::make_shared<HistoryItem>(std::move(newUuid), std::move(mimetypes), std::move(text));
         Q_EMIT dataChanged(index, index, {Qt::DisplayRole, UuidRole});
         return true;
+    }
+
+    case PinnedRole: {
+        QSqlQuery query(m_db);
+        query.prepare(u"UPDATE main SET (starred)=(?) WHERE uuid='%1'"_s.arg(item->uuid()));
+        query.addBindValue(value.toBool());
+        if (query.exec()) {
+            Q_EMIT dataChanged(index, index, {PinnedRole});
+            return true;
+        }
+        break;
     }
     }
 
@@ -618,6 +635,7 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     hash.insert(ImageUrlRole, QByteArrayLiteral("decoration"));
     hash.insert(UuidRole, QByteArrayLiteral("uuid"));
     hash.insert(TypeIntRole, QByteArrayLiteral("type"));
+    hash.insert(PinnedRole, QByteArrayLiteral("pinned"));
     return hash;
 }
 
