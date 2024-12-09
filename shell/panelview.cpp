@@ -428,7 +428,7 @@ int PanelView::minThickness() const
 
 bool PanelView::isUnsupportedConfiguration() const
 {
-    return isUnsupportedEnvironment() && (floating() != defaultFloating() || opacityMode() != defaultOpacityMode());
+    return isUnsupportedEnvironment() && (floating() != defaultFloating() || opacityMode() == Adaptive);
 }
 
 QString PanelView::unsupportedConfigurationDescription() const
