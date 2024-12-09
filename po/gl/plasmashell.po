@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:34+0000\n"
-"PO-Revision-Date: 2023-07-29 09:29+0200\n"
+"PO-Revision-Date: 2024-12-08 15:48+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -103,7 +103,7 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
-"Plasma non pode iniciarse porque non puido usar OpenGL 2 nin o software de "
+"Plasma non pode iniciarse porque non puido usar OpenGL 2 nin o programa de "
 "reserva correctamente.\n"
 "Comprobe que ten correctamente configurado o controlador gráfico."
 
@@ -264,13 +264,13 @@ msgstr "Baleiro %1"
 #: softwarerendernotifier.cpp:27
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr "Renderizador de software en uso"
+msgstr "Renderizador lóxico en uso"
 
 #: softwarerendernotifier.cpp:28
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr "Renderizador de software en uso."
+msgstr "Renderizador lóxico en uso."
 
 #: softwarerendernotifier.cpp:29
 #, kde-format
