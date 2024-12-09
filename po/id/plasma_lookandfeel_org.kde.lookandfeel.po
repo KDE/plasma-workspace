@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-10-04 06:45+0700\n"
-"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"PO-Revision-Date: 2024-12-09 06:45+0700\n"
+"Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -84,11 +84,9 @@ msgstr ""
 "Ketika dinyalakan ulang, komputer akan memasuki layar pengesetan firmware."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
-"Ketika dinyalakan ulang, komputer akan memasuki layar pengesetan firmware."
+msgstr "Ketika dinyalakan ulang, komputer akan memasuki menu boot loader."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

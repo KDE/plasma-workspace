@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-10-16 19:02+0300\n"
+"PO-Revision-Date: 2024-12-01 15:02+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -264,7 +264,7 @@ msgstr "%1 pt %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "Huom! Koko voi pienetä, ellei paneeli ole tarpeeksi leveä."
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
@@ -415,6 +415,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Aikavyöhykettä ei ole asetettu: aseta se avaamalla tästä napsauttamalla aika-"
+"asetukset"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -423,12 +425,11 @@ msgid "Today is %1"
 msgstr "Tänään on %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Aikavyöhykkeen kaupunki"
+msgstr "Aikavyöhykettä ei ole asetettu"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -436,6 +437,7 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Avaa aika-asetukset napsauttamalla kellon kuvaketta ja aseta aikavyöhyke."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

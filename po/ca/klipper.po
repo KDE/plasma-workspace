@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:42+0000\n"
+"POT-Creation-Date: 2024-12-09 00:43+0000\n"
 "PO-Revision-Date: 2024-10-22 11:36+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -631,70 +631,72 @@ msgstr "Reinicia la icona al valor predeterminat per a l'ordre"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: historyimageitem.cpp:36
-#, kde-format
-msgid "%1x%2 %3bpp"
-msgstr "%1x%2 %3bpp"
-
-#: historymodel.cpp:103
+#: historymodel.cpp:192
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Realment voleu netejar i suprimir tot l'historial del porta-retalls?"
 
-#: historymodel.cpp:104
+#: historymodel.cpp:193
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Neteja l'historial del porta-retalls"
 
-#: klipper.cpp:95
+#: historymodel.cpp:242
+#, fuzzy, kde-format
+#| msgid "%1x%2 %3bpp"
+msgctxt "@info:tooltip width x height"
+msgid "%1x%2"
+msgstr "%1x%2 %3bpp"
+
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menú emergent d'acció automàtica"
 
-#: klipper.cpp:114
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Neteja &l'historial del porta-retalls"
 
-#: klipper.cpp:121
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configura el Klipper…"
 
-#: klipper.cpp:125
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualment una acció al porta-retalls actual"
 
-#: klipper.cpp:132
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&stra el codi de barres…"
 
-#: klipper.cpp:141
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Element següent de l'historial"
 
-#: klipper.cpp:146
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Element anterior de l'historial"
 
-#: klipper.cpp:153
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostra els elements del porta-retalls a la posició del ratolí"
 
-#: klipper.cpp:318
+#: klipper.cpp:301
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -705,27 +707,27 @@ msgstr ""
 "interface> de la finestra de configuració de la miniaplicació de porta-"
 "retalls"
 
-#: klipper.cpp:558
+#: klipper.cpp:442
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Codi de barres del mòbil"
 
-#: klipper.cpp:601 klipper.cpp:610
+#: klipper.cpp:485 klipper.cpp:494
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historial del porta-retalls"
 
-#: klipper.cpp:627
+#: klipper.cpp:511
 #, kde-format
 msgid "up"
 msgstr "amunt"
 
-#: klipper.cpp:634
+#: klipper.cpp:518
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:641
+#: klipper.cpp:525
 #, kde-format
 msgid "down"
 msgstr "avall"

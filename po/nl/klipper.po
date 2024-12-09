@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:42+0000\n"
+"POT-Creation-Date: 2024-12-09 00:43+0000\n"
 "PO-Revision-Date: 2024-10-22 10:42+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -637,70 +637,72 @@ msgstr "Het pictogram resetten naar de standaard voor het commando"
 msgid "Icon:"
 msgstr "Pictogram:"
 
-#: historyimageitem.cpp:36
-#, kde-format
-msgid "%1x%2 %3bpp"
-msgstr "%1x%2 %3bpp"
-
-#: historymodel.cpp:103
+#: historymodel.cpp:192
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Wilt u echt de gehele klembordgeschiedenis wissen en verwijderen?"
 
-#: historymodel.cpp:104
+#: historymodel.cpp:193
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Klembordgeschiedenis wissen"
 
-#: klipper.cpp:95
+#: historymodel.cpp:242
+#, fuzzy, kde-format
+#| msgid "%1x%2 %3bpp"
+msgctxt "@info:tooltip width x height"
+msgid "%1x%2"
+msgstr "%1x%2 %3bpp"
+
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatisch actie-pop-up-menu"
 
-#: klipper.cpp:114
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Klembordgeschiedenis &wissen"
 
-#: klipper.cpp:121
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper &instellen…"
 
-#: klipper.cpp:125
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Handmatig een actie op huidig klembord uitvoeren"
 
-#: klipper.cpp:132
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Barcode &tonen…"
 
-#: klipper.cpp:141
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Volgende item uit geschiedenis"
 
-#: klipper.cpp:146
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Vorige item uit geschiedenis"
 
-#: klipper.cpp:153
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Items in klembord op de muispositie tonen"
 
-#: klipper.cpp:318
+#: klipper.cpp:301
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -710,27 +712,27 @@ msgstr ""
 "U kunt URL-acties later in de pagina <interface>Acties</interface> van het "
 "configuratievenster van het klembordapplet inschakelen"
 
-#: klipper.cpp:558
+#: klipper.cpp:442
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Barcode van mobiel"
 
-#: klipper.cpp:601 klipper.cpp:610
+#: klipper.cpp:485 klipper.cpp:494
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klembordgeschiedenis"
 
-#: klipper.cpp:627
+#: klipper.cpp:511
 #, kde-format
 msgid "up"
 msgstr "omhoog"
 
-#: klipper.cpp:634
+#: klipper.cpp:518
 #, kde-format
 msgid "current"
 msgstr "huidige"
 
-#: klipper.cpp:641
+#: klipper.cpp:525
 #, kde-format
 msgid "down"
 msgstr "omlaag"

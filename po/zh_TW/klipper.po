@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:42+0000\n"
+"POT-Creation-Date: 2024-12-09 00:43+0000\n"
 "PO-Revision-Date: 2024-10-24 19:18+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -613,70 +613,72 @@ msgstr "為命令重設圖示為預設值"
 msgid "Icon:"
 msgstr "圖示："
 
-#: historyimageitem.cpp:36
-#, kde-format
-msgid "%1x%2 %3bpp"
-msgstr "%1x%2 %3bpp"
-
-#: historymodel.cpp:103
+#: historymodel.cpp:192
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "您確定要清空並刪除整個剪貼簿歷史紀錄嗎？"
 
-#: historymodel.cpp:104
+#: historymodel.cpp:193
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "清空剪貼簿歷史紀錄"
 
-#: klipper.cpp:95
+#: historymodel.cpp:242
+#, fuzzy, kde-format
+#| msgid "%1x%2 %3bpp"
+msgctxt "@info:tooltip width x height"
+msgid "%1x%2"
+msgstr "%1x%2 %3bpp"
+
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "自動動作彈出選單"
 
-#: klipper.cpp:114
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "清除剪貼簿歷史紀錄(&L)"
 
-#: klipper.cpp:121
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "設定 Klipper(&C)…"
 
-#: klipper.cpp:125
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "手動在目前剪貼簿上觸發動作"
 
-#: klipper.cpp:132
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "顯示條碼(&S)…"
 
-#: klipper.cpp:141
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "下一個歷史紀錄項目"
 
-#: klipper.cpp:146
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "前一個歷史紀錄項目"
 
-#: klipper.cpp:153
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "在滑鼠位置顯示剪貼簿項目"
 
-#: klipper.cpp:318
+#: klipper.cpp:301
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -686,27 +688,27 @@ msgstr ""
 "您可以之後在剪貼簿小工具設定視窗中的 <interface>動作</interface> 頁面啟用網址"
 "動作"
 
-#: klipper.cpp:558
+#: klipper.cpp:442
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "行動條碼"
 
-#: klipper.cpp:601 klipper.cpp:610
+#: klipper.cpp:485 klipper.cpp:494
 #, kde-format
 msgid "Clipboard history"
 msgstr "剪貼簿歷史紀錄"
 
-#: klipper.cpp:627
+#: klipper.cpp:511
 #, kde-format
 msgid "up"
 msgstr "上"
 
-#: klipper.cpp:634
+#: klipper.cpp:518
 #, kde-format
 msgid "current"
 msgstr "目前"
 
-#: klipper.cpp:641
+#: klipper.cpp:525
 #, kde-format
 msgid "down"
 msgstr "下"

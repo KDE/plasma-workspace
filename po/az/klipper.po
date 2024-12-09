@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-06 00:42+0000\n"
+"POT-Creation-Date: 2024-12-09 00:43+0000\n"
 "PO-Revision-Date: 2024-08-09 16:10+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -626,71 +626,73 @@ msgstr "Əmr üçün nişanı standart vəziyyətinə qaytarın"
 msgid "Icon:"
 msgstr "Nişan:"
 
-#: historyimageitem.cpp:36
-#, kde-format
-msgid "%1x%2 %3bpp"
-msgstr "%1x%2 %3bpp"
-
-#: historymodel.cpp:103
+#: historymodel.cpp:192
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Siz bütün mübadilə yaddaşı tarixçəsini təmizləmək və silmək istəyirsiniz?"
 
-#: historymodel.cpp:104
+#: historymodel.cpp:193
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Mübadilə yaddaşı tarixçəsini təmizləyin"
 
-#: klipper.cpp:95
+#: historymodel.cpp:242
+#, fuzzy, kde-format
+#| msgid "%1x%2 %3bpp"
+msgctxt "@info:tooltip width x height"
+msgid "%1x%2"
+msgstr "%1x%2 %3bpp"
+
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Avtomatik fəaliyyət açılan menyusu"
 
-#: klipper.cpp:114
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Mübadilə tarixçəsini təmiz&ləyin"
 
-#: klipper.cpp:121
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper &ayarları..."
 
-#: klipper.cpp:125
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Fəaliyyəti cari mübadilə buferinə özünüz çağırın"
 
-#: klipper.cpp:132
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Barkodu gö&stərmək..."
 
-#: klipper.cpp:141
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Tarixçənin növbəti elementi"
 
-#: klipper.cpp:146
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Tarixçənin əvvəlki elementi"
 
-#: klipper.cpp:153
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Kursorun altında mübadilə yaddaşı elementlərini göstərmək"
 
-#: klipper.cpp:318
+#: klipper.cpp:301
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -700,27 +702,27 @@ msgstr ""
 "Siz URL ilə əməlləri daha sonra Mübadilə buferi qoşması tənzimləməsi "
 "pəncərəsi <interface>Əməllər</interface> səhifəsində aktiv edin"
 
-#: klipper.cpp:558
+#: klipper.cpp:442
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil Barkod"
 
-#: klipper.cpp:601 klipper.cpp:610
+#: klipper.cpp:485 klipper.cpp:494
 #, kde-format
 msgid "Clipboard history"
 msgstr "Mübadilə tarixçəsi"
 
-#: klipper.cpp:627
+#: klipper.cpp:511
 #, kde-format
 msgid "up"
 msgstr "yuxarı"
 
-#: klipper.cpp:634
+#: klipper.cpp:518
 #, kde-format
 msgid "current"
 msgstr "cari"
 
-#: klipper.cpp:641
+#: klipper.cpp:525
 #, kde-format
 msgid "down"
 msgstr "aşağı"
