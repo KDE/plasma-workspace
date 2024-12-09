@@ -310,7 +310,7 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
             }
         }
 
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'));
+        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'), KIO::HideProgressInfo);
         saveToFile(m_dbFolder, text.toUtf8(), newUuid, newUuid); // Must be synchronous so the clipboard can be updated immediately
 
         item = std::make_shared<HistoryItem>(std::move(newUuid), std::move(mimetypes), std::move(text));
@@ -347,7 +347,7 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
     }
 
     for (int i = 0; i < count; ++i) {
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + m_items[row + i]->uuid() + u'/'));
+        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + m_items[row + i]->uuid() + u'/'), KIO::HideProgressInfo);
     }
 
     beginRemoveRows(QModelIndex(), row, row + count - 1);
