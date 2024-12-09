@@ -10,6 +10,7 @@
 #include "config-klipper.h"
 
 #include <QClipboard>
+#include <QDBusContext>
 #include <QElapsedTimer>
 #include <QPointer>
 
@@ -38,7 +39,7 @@ class PlasmaShell;
 }
 }
 
-class KLIPPER_EXPORT Klipper : public QObject
+class KLIPPER_EXPORT Klipper : public QObject, public QDBusContext
 {
     Q_OBJECT
     Q_CLASSINFO("D-Bus Interface", "org.kde.klipper.klipper")
@@ -54,9 +55,15 @@ public Q_SLOTS:
     Q_SCRIPTABLE void showKlipperPopupMenu();
     Q_SCRIPTABLE void showKlipperManuallyInvokeActionMenu();
 
+    /*
+     * Reloads the current configuration
+     * @since 6.3
+     */
+    Q_SCRIPTABLE void reloadConfig();
+
 public:
     static std::shared_ptr<Klipper> self();
-    Klipper(QObject *parent, const KSharedConfigPtr &config);
+    Klipper(QObject *parent = nullptr);
     ~Klipper() override;
 
     bool eventFilter(QObject *object, QEvent *event) override;
@@ -108,7 +115,6 @@ private Q_SLOTS:
     void loadSettings();
 
 private:
-    explicit Klipper(const KSharedConfigPtr &config);
     static void updateTimestamp();
 
     std::shared_ptr<SystemClipboard> m_clip;
@@ -137,7 +143,6 @@ private:
     URLGrabber *m_myURLGrabber;
     QString m_lastURLGrabberTextSelection;
     QString m_lastURLGrabberTextClipboard;
-    KSharedConfigPtr m_config;
 
     QString cycleText() const;
     KActionCollection *m_collection;

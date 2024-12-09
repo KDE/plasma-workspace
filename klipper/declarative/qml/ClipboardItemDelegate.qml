@@ -69,6 +69,7 @@ PlasmaComponents.ItemDelegate {
     onBarcode: (menuItem.ListView.view.parent as ClipboardMenu).barcode(model.display)
     onTriggerAction: (menuItem.ListView.view.parent as ClipboardMenu).triggerAction(uuid)
 
+    Accessible.onPressAction: menuItem.itemSelected()
     Keys.onEnterPressed: event => Keys.returnPressed(event)
     Keys.onReturnPressed: menuItem.clicked()
     Keys.onDeletePressed: menuItem.remove()

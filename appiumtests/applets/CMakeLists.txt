@@ -27,7 +27,7 @@ set_tests_properties(cameraindicatortest PROPERTIES TIMEOUT 120 ENVIRONMENT "CMA
 
 add_test(
     NAME clipboardtest
-    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py --failfast
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py
 )
 set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 ENVIRONMENT "QT_QPA_PLATFORM=wayland;GDK_BACKEND=wayland")
 

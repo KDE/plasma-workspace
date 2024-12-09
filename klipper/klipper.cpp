@@ -57,7 +57,7 @@ std::shared_ptr<Klipper> Klipper::self()
 {
     static std::weak_ptr<Klipper> s_instance;
     if (s_instance.expired()) {
-        std::shared_ptr<Klipper> ptr = std::make_shared<Klipper>(nullptr, KSharedConfig::openConfig(QStringLiteral("klipperrc")));
+        std::shared_ptr<Klipper> ptr = std::make_shared<Klipper>(nullptr);
         s_instance = ptr;
         return ptr;
     }
@@ -65,12 +65,11 @@ std::shared_ptr<Klipper> Klipper::self()
 }
 
 // config == KGlobal::config for process, otherwise applet
-Klipper::Klipper(QObject *parent, const KSharedConfigPtr &config)
+Klipper::Klipper(QObject *parent)
     : QObject(parent)
     , m_clip(SystemClipboard::self())
     , m_historyCycler(new HistoryCycler(this))
     , m_quitAction(nullptr)
-    , m_config(config)
     , m_plasmashell(nullptr)
 {
     QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.klipper"));
@@ -200,6 +199,20 @@ void Klipper::showKlipperManuallyInvokeActionMenu()
     slotRepeatAction();
 }
 
+void Klipper::reloadConfig()
+{
+    if (calledFromDBus()) {
+        KlipperSettings::self()->sharedConfig()->reparseConfiguration();
+        KlipperSettings::self()->read();
+    }
+    loadSettings();
+    // BUG: 142882
+    // Security: If user has save clipboard turned off, old data should be deleted from disk
+    if (!m_bKeepContents) {
+        m_historyModel->clear();
+    }
+}
+
 // DBUS - don't call from Klipper itself
 void Klipper::setClipboardContents(const QString &s)
 {
@@ -322,14 +335,7 @@ void Klipper::slotConfigure()
     // Klipper settings every time that it is shown.
     dlg->setAttribute(Qt::WA_DeleteOnClose);
 
-    connect(dlg, &KConfigDialog::settingsChanged, this, [this]() {
-        loadSettings();
-        // BUG: 142882
-        // Security: If user has save clipboard turned off, old data should be deleted from disk
-        if (!m_bKeepContents) {
-            m_historyModel->clear();
-        }
-    });
+    connect(dlg, &KConfigDialog::settingsChanged, this, &Klipper::reloadConfig);
     dlg->show();
 }
 

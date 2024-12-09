@@ -15,6 +15,7 @@ import org.kde.plasma.private.clipboard 0.1 as Private // image provider
 
 ClipboardItemDelegate {
     id: menuItem
+    Accessible.name: menuItem.model?.display ?? ""
     mainItem: Item {
         id: previewItem
         implicitHeight: Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 2
@@ -85,6 +86,7 @@ ClipboardItemDelegate {
                         return decodeURIComponent(u[u.length - 1]);
                     }
                     textFormat: Text.PlainText
+                    Accessible.ignored: true
                 }
             }
         }

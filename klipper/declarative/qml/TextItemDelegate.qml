@@ -14,6 +14,7 @@ import org.kde.kirigami 2.20 as Kirigami
 
 ClipboardItemDelegate {
     id: menuItem
+    Accessible.name: mainItem.text
     mainItem: PlasmaComponents3.Label {
         maximumLineCount: 3
         verticalAlignment: Text.AlignVCenter
@@ -46,6 +47,8 @@ ClipboardItemDelegate {
         elide: Text.ElideRight
         wrapMode: Text.WrapAtWordBoundaryOrAnywhere
         textFormat: Text.StyledText
+
+        Accessible.ignored: true
 
         Drag.active: menuItem.dragHandler.active
         Drag.dragType: Drag.Automatic
