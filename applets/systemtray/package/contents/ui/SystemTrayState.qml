@@ -29,6 +29,12 @@ QtObject {
     property int newVisualIndex: -1
 
     function setActiveApplet(applet, visualIndex) {
+
+        // Applets which prefer to always show their full
+        // representation will always be expanded, there's
+        // no need to activate them.
+        if (applet.preferredRepresentation == applet.fullRepresentation) return;
+
         if (visualIndex === undefined) {
             oldVisualIndex = -1
             newVisualIndex = -1
