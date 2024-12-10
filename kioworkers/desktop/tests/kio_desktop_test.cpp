@@ -45,7 +45,7 @@ private Q_SLOTS:
     void initTestCase()
     {
         // make KIOs use test mode too
-        setenv("KIOSLAVE_ENABLE_TESTMODE", "1", 1);
+        setenv("KIOWORKER_ENABLE_TESTMODE", "1", 1);
         QStandardPaths::setTestModeEnabled(true);
 
         // Warning: even with test mode enabled, this is the real user's Desktop directory
@@ -140,11 +140,14 @@ private Q_SLOTS:
         QFETCH(QUrl, destUrl);
 
         std::unique_ptr<KDirLister> lister;
+        std::unique_ptr<QSignalSpy> refreshItemSpy;
         if (withDirListerCache) {
             lister.reset(new KDirLister);
             lister->openUrl(QUrl(QStringLiteral("desktop:/")));
             QSignalSpy spyCompleted(lister.get(), static_cast<void (KDirLister::*)()>(&KDirLister::completed));
             spyCompleted.wait();
+
+            refreshItemSpy.reset(new QSignalSpy(lister.get(), &KDirLister::refreshItems));
         }
 
         org::kde::KDirNotify kdirnotify(QString(), QString(), QDBusConnection::sessionBus(), this);
@@ -172,8 +175,10 @@ private Q_SLOTS:
         QTRY_VERIFY(spyFileRenamedWithLocalPath.count() >= 1);
 
         // check that KDirLister now has the correct item (#382341)
+        // KDirLister only updates targetUrl during a list job, so targetUrl() is not always the latest.
         if (lister) {
-            QTRY_COMPARE(lister->findByUrl(destUrl).targetUrl(), QUrl::fromLocalFile(destFilePath));
+            QVERIFY(!refreshItemSpy->empty() || refreshItemSpy->wait());
+            QCOMPARE(lister->findByUrl(destUrl).localPath(), destFilePath);
         }
     }
 
