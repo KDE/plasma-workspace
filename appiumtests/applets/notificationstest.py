@@ -7,9 +7,7 @@ import base64
 import logging
 import os
 import subprocess
-import sys
 import tempfile
-import threading
 import time
 import unittest
 from typing import Any, Final
@@ -25,9 +23,6 @@ from selenium.webdriver.support.ui import WebDriverWait
 gi.require_version('Gdk', '4.0')
 gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import Gdk, GdkPixbuf, Gio, GLib
-
-sys.path.append(os.path.join(os.path.dirname(os.path.abspath(__file__)), os.pardir, "utils"))
-from GLibMainLoopThread import GLibMainLoopThread
 
 WIDGET_ID: Final = "org.kde.plasma.notifications"
 KDE_VERSION: Final = 6
@@ -62,7 +57,6 @@ class NotificationsTest(unittest.TestCase):
     Tests for the notification widget
     """
 
-    loop_thread: GLibMainLoopThread
     notification_proxy: Gio.DBusProxy
     driver: webdriver.Remote
 
@@ -79,9 +73,6 @@ class NotificationsTest(unittest.TestCase):
         })
         cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
 
-        cls.loop_thread = GLibMainLoopThread()
-        cls.loop_thread.start()
-
         cls.notification_proxy = Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION, 0, None, BUS_NAME, OBJECT_PATH, IFACE_NAME)
 
     def tearDown(self) -> None:
@@ -96,7 +87,6 @@ class NotificationsTest(unittest.TestCase):
         """
         Make sure to terminate the driver again, lest it dangles.
         """
-        cls.loop_thread.quit()
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
         for _ in range(10):
             try:
@@ -208,31 +198,32 @@ class NotificationsTest(unittest.TestCase):
         """
         When the "actions" key is set, a notification can provide actions.
         """
-        activation_token = threading.Event()
+        loop = GLib.MainLoop()
+        activation_token = False
         params_1: list[Any] = []
-        action_invoked = threading.Event()
+        action_invoked = False
         params_2: list[Any] = []
-        notification_closed = threading.Event()
+        notification_closed = False
         params_3: list[Any] = []
 
         def notification_signal_handler(d_bus_proxy: Gio.DBusProxy, sender_name: str, signal_name: str, parameters: GLib.Variant) -> None:
-            nonlocal params_2, params_3, params_1
+            nonlocal params_2, params_3, params_1, activation_token, action_invoked, notification_closed
             logging.info(f"received signal {signal_name}")
             match signal_name:
                 case "ActivationToken":
                     params_1 = parameters.unpack()
-                    activation_token.set()
+                    activation_token = True
                 case "ActionInvoked":
                     params_2 = parameters.unpack()
-                    action_invoked.set()
+                    action_invoked = True
                 case "NotificationClosed":
                     params_3 = parameters.unpack()
-                    notification_closed.set()
+                    notification_closed = True
+                    loop.quit()
 
         connection_id = self.notification_proxy.connect("g-signal", notification_signal_handler)
         self.addCleanup(lambda: self.notification_proxy.disconnect(connection_id))
 
-        notification_closed.clear()
         notification_id = send_notification({
             "app_name": "Appium Test",
             "body": "A notification with actions",
@@ -241,12 +232,13 @@ class NotificationsTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "BarAction")
         element = self.driver.find_element(AppiumBy.NAME, "FooAction")
         element.click()
-        self.assertTrue(activation_token.wait(10))
+        loop.run()
+        self.assertTrue(activation_token)
         self.assertEqual(params_1[0], notification_id)
-        self.assertTrue(action_invoked.wait(10))
+        self.assertTrue(action_invoked)
         self.assertEqual(params_2[0], notification_id)
         self.assertEqual(params_2[1], "action1")
-        self.assertTrue(notification_closed.wait(10))
+        self.assertTrue(notification_closed)
         self.assertEqual(params_3[0], notification_id)
         self.assertEqual(params_3[1], 3)  # reason: Revoked
         self.assertFalse(element.is_displayed())
@@ -255,15 +247,17 @@ class NotificationsTest(unittest.TestCase):
         """
         When the action list has "inline-reply", the notification popup will contain a text field and a reply button.
         """
-        notification_replied = threading.Event()
+        loop = GLib.MainLoop()
+        notification_replied = False
         params: list[Any] = []  # id, text
 
         def notification_signal_handler(d_bus_proxy: Gio.DBusProxy, sender_name: str, signal_name: str, parameters: GLib.Variant) -> None:
-            nonlocal params
+            nonlocal params, notification_replied
             logging.info(f"received signal {signal_name}")
             if signal_name == "NotificationReplied":
                 params = parameters.unpack()
-                notification_replied.set()
+                notification_replied = True
+                loop.quit()
 
         connection_id = self.notification_proxy.connect("g-signal", notification_signal_handler)
         self.addCleanup(lambda: self.notification_proxy.disconnect(connection_id))
@@ -279,12 +273,13 @@ class NotificationsTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "Type a reply…").send_keys(reply_text)
         element = self.driver.find_element(AppiumBy.NAME, "Send")
         element.click()
-        self.assertTrue(notification_replied.wait(10))
+        loop.run()
+        self.assertTrue(notification_replied)
         self.assertEqual(params[0], notification_id)
         self.assertEqual(params[1], reply_text)
         self.assertFalse(element.is_displayed())
 
-        notification_replied.clear()
+        notification_replied = False
         notification_id = send_notification({
             "app_name": "Appium Test",
             "body": "A notification with actions 2",
@@ -299,12 +294,13 @@ class NotificationsTest(unittest.TestCase):
         self.driver.find_element(AppiumBy.NAME, "A placeholder").send_keys(reply_text)
         element = self.driver.find_element(AppiumBy.NAME, "Reeply")
         element.click()
-        self.assertTrue(notification_replied.wait(10))
+        loop.run()
+        self.assertTrue(notification_replied)
         self.assertEqual(params[0], notification_id)
         self.assertEqual(params[1], reply_text)
         self.assertFalse(element.is_displayed())
 
-        notification_replied.clear()
+        notification_replied = False
         notification_id = send_notification({
             "app_name": "Appium Test",
             "body": "A notification with actions 3",
@@ -319,7 +315,8 @@ class NotificationsTest(unittest.TestCase):
         self.assertFalse(element.is_displayed())
         element = self.driver.find_element(AppiumBy.NAME, "Send")
         element.click()
-        self.assertTrue(notification_replied.wait(10))
+        loop.run()
+        self.assertTrue(notification_replied)
         self.assertEqual(params[0], notification_id)
         self.assertEqual(params[1], reply_text)
 
@@ -362,6 +359,6 @@ class NotificationsTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    assert "USE_CUSTOM_BUS" in os.environ
+    assert "USE_CUSTOM_BUS" in os.environ or subprocess.call(["pidof", "plasmashell"]) != 0
     logging.getLogger().setLevel(logging.INFO)
-    unittest.main()
+    unittest.main(failfast=True)
