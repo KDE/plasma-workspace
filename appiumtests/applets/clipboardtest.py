@@ -108,6 +108,40 @@ class TestApplication(Gtk.Application):
         window.set_visible(False)
         self.spin()
 
+    def gtk_get_clipboard_mime_data(self, clipboard_mode: int = 0) -> dict[str, GLib.Bytes]:
+        window = Gtk.Window()
+        window.set_default_size(20, 20)
+        button = Gtk.Button(label="Get Content")
+        window.set_child(button)
+        window.set_visible(True)
+        self.spin()
+
+        if clipboard_mode == 0:
+            clipboard = window.get_display().get_clipboard()  # Clipboard
+        else:
+            clipboard = window.get_display().get_primary_clipboard()  # Selection
+        self.spin()
+
+        data: dict[str, GLib.Bytes] = {}
+
+        def on_value_read(_clipboard: Gdk.Clipboard, result: Gio.AsyncResult, user_data) -> None:
+            nonlocal data
+            stream, t = _clipboard.read_finish(result)
+            logging.info(f"reading data for {t}")
+            data[t] = stream.read_bytes(10000, None)
+
+        for t in clipboard.get_formats().get_mime_types():
+            if t.startswith("image/") and not t.endswith("png"):
+                continue
+            ActionChains(self.driver).send_keys(Keys.SPACE).perform()
+            clipboard.read_async([t, None], GLib.PRIORITY_DEFAULT, None, on_value_read, None)
+            self.spin()
+
+        window.set_visible(False)
+        self.spin()
+
+        return data
+
 
 class ClipboardTest(unittest.TestCase):
     """
@@ -346,6 +380,49 @@ class ClipboardTest(unittest.TestCase):
         ActionChains(app.driver).send_keys(Keys.SPACE).perform()
         app.driver.find_element(AppiumBy.NAME, "123456789")
         self.assertRaises(NoSuchElementException, app.driver.find_element, AppiumBy.NAME, "123456789test")
+
+    def test_5_3_bug491961_mimetypes(self) -> None:
+        """
+        Klipper's history should preserve more MIME types
+        """
+        app.klipper_proxy.clearClipboardHistory()
+
+        old_text = "bug491961 appium test"
+        app.gtk_copy(Gdk.ContentProvider.new_for_bytes("text/plain;charset=utf-8", GLib.Bytes.new(bytes(old_text, "utf-8"))))
+
+        pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 1, 1)  # 1x1 pixel
+        pixbuf.fill(0xff0000ff)
+        content_image = Gdk.ContentProvider.new_for_bytes("image/png", Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes())
+        text_data = GLib.Bytes.new(bytes("bug491961", "utf-8"))
+        content_text = Gdk.ContentProvider.new_for_bytes("text/plain;charset=utf-8", text_data)
+        temp_file = tempfile.NamedTemporaryFile(suffix=".txt")
+        urls_data = GLib.Bytes.new(bytes(f"file://{temp_file.name}\r\n", "utf-8"))
+        content_urls = Gdk.ContentProvider.new_for_bytes("text/uri-list", urls_data)
+        content_application = Gdk.ContentProvider.new_for_bytes("application/x-kde-appiumtest", GLib.Bytes.new(bytes("abcdefg", "utf-8")))
+        content_union = Gdk.ContentProvider.new_union([content_text, content_image, content_urls, content_application])
+        app.gtk_copy(content_union)
+        app.driver.find_element(AppiumBy.NAME, f"file://{temp_file.name}")
+
+        actions = ActionChains(app.driver)
+        actions.send_keys(Keys.DOWN).send_keys(Keys.END).perform()
+        try:
+            app.driver.find_element(AppiumBy.XPATH, f"//list_item[@name='{old_text}' and contains(@states, 'focused')]")
+        except NoSuchElementException:
+            actions.send_keys(Keys.DOWN).send_keys(Keys.END).perform()
+        actions.send_keys(Keys.RETURN).perform()
+        self.assertNotIn("image/png", app.gtk_get_clipboard_mime_data())
+
+        app.driver.find_element(AppiumBy.XPATH, f"//list_item[@name='file://{temp_file.name}' and contains(@states, 'focused')]")
+        actions.send_keys(Keys.RETURN).perform()
+        mime_data = app.gtk_get_clipboard_mime_data()
+        self.assertEqual(mime_data["text/plain;charset=utf-8"].get_data(), text_data.get_data())
+        self.assertEqual(mime_data["text/uri-list"].get_data(), urls_data.get_data())
+        self.assertIn("application/x-kde-appiumtest", mime_data)
+        with tempfile.NamedTemporaryFile(mode="wb", suffix=".png") as temp_file:
+            temp_file.write(mime_data["image/png"].get_data())
+            temp_file.flush()
+            image_from_clipboard = GdkPixbuf.Pixbuf.new_from_file(temp_file.name)
+            self.assertEqual(image_from_clipboard.get_pixels(), pixbuf.get_pixels())
 
     def test_6_bug487843_bug466414_empty_clip_crash(self) -> None:
         """
