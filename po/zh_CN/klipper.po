@@ -609,11 +609,10 @@ msgid "Clear Clipboard History"
 msgstr "清除剪贴板历史记录"
 
 #: historymodel.cpp:242
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2 %3 位/像素"
+msgstr ""
 
 #: klipper.cpp:91
 #, kde-format

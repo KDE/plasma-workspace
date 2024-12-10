@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-09 00:43+0000\n"
-"PO-Revision-Date: 2024-10-22 17:18+0300\n"
+"PO-Revision-Date: 2024-12-09 15:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -644,11 +644,10 @@ msgid "Clear Clipboard History"
 msgstr "Спорожнити журнал буфера обміну даними"
 
 #: historymodel.cpp:242
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1⨯%2 %3біт/т."
+msgstr "%1⨯%2"
 
 #: klipper.cpp:91
 #, kde-format
