@@ -377,6 +377,7 @@ class ClipboardTest(unittest.TestCase):
         process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "copysecret.py")], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         self.addCleanup(process.kill)
         process.stderr.readline()
+        process.stderr.readline()
         ActionChains(app.driver).send_keys(Keys.SPACE).perform()
         app.driver.find_element(AppiumBy.NAME, "123456789")
         self.assertRaises(NoSuchElementException, app.driver.find_element, AppiumBy.NAME, "123456789test")
