@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:43+0000\n"
+"POT-Creation-Date: 2024-12-11 00:42+0000\n"
 "PO-Revision-Date: 2024-12-09 05:56+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -357,13 +357,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "QR კოდის შექმნის შეცდომა"
 
-#: declarative/qml/ClipboardItemDelegate.qml:178
+#: declarative/qml/ClipboardItemDelegate.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "ჩამოშლა"
 
-#: declarative/qml/ClipboardItemDelegate.qml:178
+#: declarative/qml/ClipboardItemDelegate.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
@@ -422,7 +422,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "გაუქმება"
 
-#: declarative/qml/UrlItemDelegate.qml:95
+#: declarative/qml/UrlItemDelegate.qml:97
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
@@ -636,55 +636,55 @@ msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: klipper.cpp:91
+#: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ავტომატური ქმედების მხტუნარა მენიუ"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&ბუფერის ისტორიის გასუფთავება"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "Klipper-ის &მორგება…"
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "მიმდინარე ბუფერზე ქმედების ხელით გაშვება"
 
-#: klipper.cpp:128
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&ბარკოდის ჩვენება…"
 
-#: klipper.cpp:137
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ისტორიის შემდეგი ჩანაწერი"
 
-#: klipper.cpp:142
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ისტორიის წინა ჩანაწერი"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "თაგუნას მდგომარეობაზე მყოფი ბუფერის ელემენტების ჩვენება"
 
-#: klipper.cpp:301
+#: klipper.cpp:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -694,27 +694,27 @@ msgstr ""
 "URL მოქმედებების ჩართვა მოგვიანებით ბუფერდის ვაშლის კონფიგურაციის ფანჯრის "
 "<interface>მოქმედებების</interface> გვერდზე"
 
-#: klipper.cpp:442
+#: klipper.cpp:448
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "მობილური შტრიხკოდი"
 
-#: klipper.cpp:485 klipper.cpp:494
+#: klipper.cpp:491 klipper.cpp:500
 #, kde-format
 msgid "Clipboard history"
 msgstr "ბაფერის ისტორია"
 
-#: klipper.cpp:511
+#: klipper.cpp:517
 #, kde-format
 msgid "up"
 msgstr "მაღლა"
 
-#: klipper.cpp:518
+#: klipper.cpp:524
 #, kde-format
 msgid "current"
 msgstr "მიმდინარე"
 
-#: klipper.cpp:525
+#: klipper.cpp:531
 #, kde-format
 msgid "down"
 msgstr "დაბლა"

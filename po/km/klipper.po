@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:43+0000\n"
+"POT-Creation-Date: 2024-12-11 00:42+0000\n"
 "PO-Revision-Date: 2012-06-14 13:47+0700\n"
 "Last-Translator: Khoem Sokhem <khoemsokhem@khmeros.info>\n"
 "Language-Team: Khmer\n"
@@ -340,13 +340,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:178
+#: declarative/qml/ClipboardItemDelegate.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:178
+#: declarative/qml/ClipboardItemDelegate.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
@@ -412,7 +412,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "បោះបង់​"
 
-#: declarative/qml/UrlItemDelegate.qml:95
+#: declarative/qml/UrlItemDelegate.qml:97
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
@@ -620,63 +620,63 @@ msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr ""
 
-#: klipper.cpp:91
+#: klipper.cpp:90
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "អស់ពេល​សម្រាប់​កា​រលេចឡើង​សកម្មភាព ៖"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ជម្រះ​ប្រវត្តិ​ក្ដារ​តម្បៀត​ខ្ទាស់"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "កំណត់​រចនា​សម្ព័ន្ធ Klipper..."
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ហៅ​អំពើ​នៅ​លើ​ក្តារ​តម្បៀត​ខ្ទាស់​បច្ចុប្បន្ន​ដោយ​ដៃ"
 
-#: klipper.cpp:128
+#: klipper.cpp:127
 #, fuzzy, kde-format
 #| msgid "&Show Barcode..."
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "បង្ហាញ​កូដ​ផលិតផល..."
 
-#: klipper.cpp:137
+#: klipper.cpp:136
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ធាតុ​ប្រវត្តិ​បន្ទាប់"
 
-#: klipper.cpp:142
+#: klipper.cpp:141
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ធាតុ​ប្រវត្តិ​មុន"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "បើក​ Klipper នៅ​ទីតាំង​កណ្ដុរ"
 
-#: klipper.cpp:301
+#: klipper.cpp:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -684,27 +684,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:442
+#: klipper.cpp:448
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "កូដផលិតផល​ចល័ត"
 
-#: klipper.cpp:485 klipper.cpp:494
+#: klipper.cpp:491 klipper.cpp:500
 #, kde-format
 msgid "Clipboard history"
 msgstr "ប្រវត្តិ​ក្ដារតម្បៀតខ្ទាស់"
 
-#: klipper.cpp:511
+#: klipper.cpp:517
 #, kde-format
 msgid "up"
 msgstr "ឡើង​លើ"
 
-#: klipper.cpp:518
+#: klipper.cpp:524
 #, kde-format
 msgid "current"
 msgstr "បច្ចុប្បន្ន"
 
-#: klipper.cpp:525
+#: klipper.cpp:531
 #, kde-format
 msgid "down"
 msgstr "ចុះក្រោម"

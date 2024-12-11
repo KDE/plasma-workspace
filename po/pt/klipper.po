@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-09 00:43+0000\n"
+"POT-Creation-Date: 2024-12-11 00:42+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -366,13 +366,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:178
+#: declarative/qml/ClipboardItemDelegate.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr ""
 
-#: declarative/qml/ClipboardItemDelegate.qml:178
+#: declarative/qml/ClipboardItemDelegate.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
@@ -438,7 +438,7 @@ msgctxt "@action:button"
 msgid "Cancel"
 msgstr "&Cancelar"
 
-#: declarative/qml/UrlItemDelegate.qml:95
+#: declarative/qml/UrlItemDelegate.qml:97
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
@@ -654,49 +654,49 @@ msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:91
+#: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Menu de Contexto das Acções Automáticas"
 
-#: klipper.cpp:110
+#: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "&Limpar o Histórico da Área de Transferência"
 
-#: klipper.cpp:117
+#: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurar o Klipper…"
 
-#: klipper.cpp:121
+#: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocar Manualmente a Acção na Área de Transferência Actual"
 
-#: klipper.cpp:128
+#: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Mo&strar o Código de Barras…"
 
-#: klipper.cpp:137
+#: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Item do Histórico Seguinte"
 
-#: klipper.cpp:142
+#: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Item do Histórico Anterior"
 
-#: klipper.cpp:149
+#: klipper.cpp:148
 #, fuzzy, kde-format
 #| msgctxt "@action:inmenu"
 #| msgid "Show Items at Mouse Position"
@@ -704,7 +704,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mostrar os Itens na Posição do Rato"
 
-#: klipper.cpp:301
+#: klipper.cpp:314
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -715,27 +715,27 @@ msgstr ""
 "<interface>Acções</interface> na janela de configuração do elemento da Área "
 "de Transferência"
 
-#: klipper.cpp:442
+#: klipper.cpp:448
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Código de Barras Móvel"
 
-#: klipper.cpp:485 klipper.cpp:494
+#: klipper.cpp:491 klipper.cpp:500
 #, kde-format
 msgid "Clipboard history"
 msgstr "Histórico da área de transferência"
 
-#: klipper.cpp:511
+#: klipper.cpp:517
 #, kde-format
 msgid "up"
 msgstr "cima"
 
-#: klipper.cpp:518
+#: klipper.cpp:524
 #, kde-format
 msgid "current"
 msgstr "actual"
 
-#: klipper.cpp:525
+#: klipper.cpp:531
 #, kde-format
 msgid "down"
 msgstr "baixo"
