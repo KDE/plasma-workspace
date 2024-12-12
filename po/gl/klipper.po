@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-11 00:42+0000\n"
-"PO-Revision-Date: 2024-11-09 16:04+0100\n"
+"PO-Revision-Date: 2024-12-11 20:10+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -646,11 +646,10 @@ msgid "Clear Clipboard History"
 msgstr "Baleirar o historial do portapapeis"
 
 #: historymodel.cpp:242
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1×%2 %3bpp"
+msgstr "%1×%2"
 
 #: klipper.cpp:90
 #, kde-format
