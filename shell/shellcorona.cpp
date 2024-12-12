@@ -1225,6 +1225,26 @@ QRect ShellCorona::_availableScreenRect(int id) const
         return screen ? screen->availableGeometry() : QRect();
     }
 
+    std::function<int(int, int)> accumulator;
+
+    if (KWindowSystem::isPlatformX11()) {
+        // On X11, panels on the same side overlap, and they all
+        // touch the border of the containment. This means that,
+        // to find the total thickness of a side, we only need
+        // to find the thickest panel.
+        accumulator = [](int a, int b) {
+            return qMax(a, b);
+        };
+    } else {
+        // On Wayland, panels on the same side stack on top of
+        // each other. This means that to find the total thickness
+        // of a side we need to add together each panel on that
+        // side.
+        accumulator = [](int a, int b) {
+            return a + b;
+        };
+    }
+
     QRect r = screen->geometry();
     int topThickness, leftThickness, rightThickness, bottomThickness;
     topThickness = leftThickness = rightThickness = bottomThickness = 0;
@@ -1232,16 +1252,16 @@ QRect ShellCorona::_availableScreenRect(int id) const
         if (v->isVisible() && v->screen() == screen && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
-                leftThickness = qMax(leftThickness, v->totalThickness());
+                leftThickness = accumulator(leftThickness, v->totalThickness());
                 break;
             case Plasma::Types::RightEdge:
-                rightThickness = qMax(rightThickness, v->totalThickness());
+                rightThickness = accumulator(rightThickness, v->totalThickness());
                 break;
             case Plasma::Types::TopEdge:
-                topThickness = qMax(topThickness, v->totalThickness());
+                topThickness = accumulator(topThickness, v->totalThickness());
                 break;
             case Plasma::Types::BottomEdge:
-                bottomThickness = qMax(bottomThickness, v->totalThickness());
+                bottomThickness = accumulator(bottomThickness, v->totalThickness());
             default:
                 break;
             }
