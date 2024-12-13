@@ -1338,7 +1338,7 @@ bool PanelView::containmentContainsPosition(const QPointF &point) const
     }
 
     return QRectF(containmentItem->mapToScene(QPoint(m_leftPadding, m_topPadding)),
-                  QSizeF(containmentItem->width() - m_leftPadding - m_rightPadding, containmentItem->height() - m_topPadding - m_bottomPadding))
+                  QSizeF(containmentItem->width() - m_leftPadding - m_rightPadding - 1, containmentItem->height() - m_topPadding - m_bottomPadding - 1))
         .contains(point);
 }
 
