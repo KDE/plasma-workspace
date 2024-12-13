@@ -281,6 +281,16 @@ ContainmentItem {
             }
             margin: (Plasmoid.containmentDisplayHints & PlasmaCore.Types.ContainmentPrefersFloatingApplets) ? Kirigami.Units.largeSpacing : 0
 
+            Behavior on margin {
+                NumberAnimation {
+                    // Since the panel animation won't be perfectly in sync,
+                    // using a duration larger than the panel animation results
+                    // in a better-looking animation.
+                    duration: Kirigami.Units.veryLongDuration
+                    easing.type: Easing.OutCubic
+                }
+            }
+
             floating: Plasmoid.location == PlasmaCore.Desktop
 
             removeBorderStrategy: Plasmoid.location === PlasmaCore.Types.Floating
