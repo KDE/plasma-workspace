@@ -202,26 +202,28 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
             importer->deleteLater();
         });
 
-        if (m_plasmashell && !m_menu->isVisible()) {
-            // We create a invisible toplevel so the menu can be an xdg_popup which is important
-            // to have the expected UX of an menu. By using the ToolTip role it cannot receive
-            // focus which is important because some apps misbehave when they dont have focus when
-            // a menu is triggered
-            auto toplevelWindow = new ToplevelWindow;
-            toplevelWindow->setFlag(Qt::FramelessWindowHint);
-            toplevelWindow->QObject::setParent(menu);
-            toplevelWindow->setGeometry(x, y, 1, 1);
-            auto surface = KWayland::Client::Surface::fromWindow(toplevelWindow);
-            auto plasmaSurface = m_plasmashell->createSurface(surface, surface);
-            plasmaSurface->setSkipSwitcher(true);
-            plasmaSurface->setSkipTaskbar(true);
-            plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::ToolTip);
-            plasmaSurface->setPosition({x - 1, y - 1});
-            toplevelWindow->show();
-            connect(m_menu, &QMenu::aboutToShow, toplevelWindow, [toplevelWindow, this] {
-                m_menu->windowHandle()->setTransientParent(toplevelWindow);
-            });
-            ensureSerial(toplevelWindow);
+        if (m_plasmashell) {
+            if (!m_menu->isVisible()) {
+                // We create a invisible toplevel so the menu can be an xdg_popup which is important
+                // to have the expected UX of an menu. By using the ToolTip role it cannot receive
+                // focus which is important because some apps misbehave when they dont have focus when
+                // a menu is triggered
+                auto toplevelWindow = new ToplevelWindow;
+                toplevelWindow->setFlag(Qt::FramelessWindowHint);
+                toplevelWindow->QObject::setParent(menu);
+                toplevelWindow->setGeometry(0, 0, 1, 1);
+                auto surface = KWayland::Client::Surface::fromWindow(toplevelWindow);
+                auto plasmaSurface = m_plasmashell->createSurface(surface, surface);
+                plasmaSurface->setSkipSwitcher(true);
+                plasmaSurface->setSkipTaskbar(true);
+                plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::ToolTip);
+                plasmaSurface->setPosition({x - 1, y - 1});
+                toplevelWindow->show();
+                connect(m_menu, &QMenu::aboutToShow, toplevelWindow, [toplevelWindow, this] {
+                    m_menu->windowHandle()->setTransientParent(toplevelWindow);
+                });
+                ensureSerial(toplevelWindow);
+            }
             m_menu.data()->popup(QPoint(0, 0));
         } else {
             m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
