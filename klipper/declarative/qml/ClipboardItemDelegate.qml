@@ -26,6 +26,7 @@ PlasmaComponents.ItemDelegate {
     required property var model
     required property int index
     required property var decoration
+    required property size imageSize
     required property var uuid
     required property int type
 
