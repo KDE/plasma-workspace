@@ -453,9 +453,11 @@ class ClipboardTest(unittest.TestCase):
         # Enable "Only when explicitly copied" to test the two bugs
         self.update_config(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
 
+        memory_usage_before = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
+
         # Copy 3 color blocks to clipboard
         for color in (0xff0000ff, 0x00ff00ff, 0x0000ffff):
-            pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
+            pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 2048, 2048)
             pixbuf.fill(color)
             content_image = Gdk.ContentProvider.new_for_bytes("image/png", Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes())
             app.gtk_copy(content_image)
@@ -465,6 +467,10 @@ class ClipboardTest(unittest.TestCase):
             partial_pixbuf.fill(color)
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+
+        memory_usage_after = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
+        logging.info(f"before: {memory_usage_before} after: {memory_usage_after} diff: {memory_usage_after - memory_usage_before}")
+        self.assertTrue(memory_usage_after - memory_usage_before < 80000)
 
     def test_8_bug492170_disable_history_across_session(self) -> None:
         """

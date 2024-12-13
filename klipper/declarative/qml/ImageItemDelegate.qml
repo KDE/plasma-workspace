@@ -26,14 +26,16 @@ ClipboardItemDelegate {
         Image {
             id: previewImage
 
-            width: Math.min(Math.round(height * sourceSize.width/sourceSize.height), parent.width)
-            height: Math.min(sourceSize.height, Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 2)
+            width: Math.min(Math.round(height * menuItem.imageSize.width / menuItem.imageSize.height), parent.width)
+            height: sourceSize.height
 
             // align left
             // right in RTL
             anchors.left: parent.left
 
+            cache: false
             source: menuItem.decoration
+            sourceSize.height: Math.min(menuItem.imageSize.height, Kirigami.Units.gridUnit * 4 + Kirigami.Units.smallSpacing * 2)
             smooth: true
             fillMode: Image.PreserveAspectFit
         }

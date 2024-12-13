@@ -254,6 +254,16 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         }
         return QUrl();
     }
+    case ImageSizeRole: {
+        if (!(item->allTypes() & HistoryItemType::Image)) {
+            return QSize();
+        }
+        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), s_imageFormat), m_db);
+        if (query.exec() && query.isSelect() && query.next()) {
+            return QImageReader(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString()).size();
+        }
+        return QSize();
+    }
     case HistoryItemConstPtrRole:
         return QVariant::fromValue<HistoryItemConstPtr>(std::const_pointer_cast<const HistoryItem>(item));
     case UuidRole:
@@ -435,7 +445,7 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
                 return;
             }
             if (int row = indexOf(uuid); row >= 0) {
-                Q_EMIT dataChanged(index(row), index(row), {Qt::DisplayRole, ImageUrlRole});
+                Q_EMIT dataChanged(index(row), index(row), {Qt::DisplayRole, ImageUrlRole, ImageSizeRole});
             }
         });
     }
@@ -623,6 +633,7 @@ QHash<int, QByteArray> HistoryModel::roleNames() const
     QHash<int, QByteArray> hash;
     hash.insert(Qt::DisplayRole, QByteArrayLiteral("display"));
     hash.insert(ImageUrlRole, QByteArrayLiteral("decoration"));
+    hash.insert(ImageSizeRole, QByteArrayLiteral("imageSize"));
     hash.insert(UuidRole, QByteArrayLiteral("uuid"));
     hash.insert(TypeIntRole, QByteArrayLiteral("type"));
     return hash;
