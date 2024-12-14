@@ -1,0 +1,37 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-02 00:42+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/ui/main.qml:29
+#, kde-format
+msgid "Clipboard Contents"
+msgstr "क्लिपबोर्ड सामग्री"
+
+#: contents/ui/main.qml:30
+#, kde-format
+msgid "Clipboard is empty"
+msgstr "क्लिप्बोर्ड् रिक्तम् अस्ति"
+
+#: contents/ui/main.qml:62
+#, kde-format
+msgid "Clear History"
+msgstr "इतिहासं स्पष्टं कुरुत"
+
+#: contents/ui/main.qml:74
+#, kde-format
+msgid "Configure Clipboard…"
+msgstr "क्लिपबोर्ड विन्यस्तं कुर्वन्तु..."

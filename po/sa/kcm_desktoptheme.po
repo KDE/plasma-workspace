@@ -1,0 +1,161 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-08-29 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#. i18n: ectx: label, entry (name), group (Theme)
+#: desktopthemesettings.kcfg:9
+#, kde-format
+msgid "Name of the current Plasma Style"
+msgstr "वर्तमानप्लाज्माशैल्याः नाम"
+
+#: kcm.cpp:112
+#, kde-format
+msgid "Unable to create a temporary file."
+msgstr "अस्थायीसञ्चिकां निर्मातुं असमर्थः ।"
+
+#: kcm.cpp:123
+#, kde-format
+msgid "Unable to download the theme: %1"
+msgstr "विषयवस्तुं अवतरणं कर्तुं असमर्थः: %1"
+
+#: kcm.cpp:148
+#, kde-format
+msgid "Theme installed successfully."
+msgstr "विषयः सफलतया संस्थापितः।"
+
+#: kcm.cpp:151 kcm.cpp:157
+#, kde-format
+msgid "Theme installation failed."
+msgstr "विषयस्थापनं विफलम् अभवत् ।"
+
+#: kcm.cpp:251
+#, kde-format
+msgid "Removing theme failed: %1"
+msgstr "विषयवस्तुं निष्कासयितुं विफलम्: %1"
+
+#: plasma-apply-desktoptheme.cpp:33
+#, kde-format
+msgid ""
+"This tool allows you to set the theme of the current Plasma session, without "
+"accidentally setting it to one that is either not available, or which is "
+"already set."
+msgstr ""
+"एतत् साधनं वर्तमानस्य Plasma सत्रस्य विषयं सेट् कर्तुं शक्नोति, यदृच्छया एकं न उपलभ्यते, अथवा "
+"यत् पूर्वमेव सेट् कृतम् अस्ति इति सेट् कर्तुं न शक्नोति ।"
+
+#: plasma-apply-desktoptheme.cpp:37
+#, kde-format
+msgid ""
+"The name of the theme you wish to set for your current Plasma session "
+"(passing a full path will only use the last part of the path)"
+msgstr ""
+"यस्य विषयस्य नाम भवान् स्वस्य वर्तमानस्य प्लाज्मा सत्रस्य कृते सेट् कर्तुम् इच्छति (पूर्णमार्गं "
+"पारयन् केवलं मार्गस्य अन्तिमभागस्य उपयोगं करिष्यति)"
+
+#: plasma-apply-desktoptheme.cpp:38
+#, kde-format
+msgid ""
+"Show all the themes available on the system (and which is the current theme)"
+msgstr "प्रणाल्यां उपलभ्यमानानि सर्वाणि विषयाणि दर्शयन्तु (वर्तमानः विषयः च कः)"
+
+#: plasma-apply-desktoptheme.cpp:51
+#, kde-format
+msgid ""
+"The requested theme \"%1\" is already set as the theme for the current "
+"Plasma session."
+msgstr "अनुरोधितः विषयः \"%1\" पूर्वमेव वर्तमानप्लाज्मासत्रस्य विषयरूपेण सेट् कृतः अस्ति ।"
+
+#: plasma-apply-desktoptheme.cpp:67
+#, kde-format
+msgid "The current Plasma session's theme has been set to %1"
+msgstr "वर्तमानस्य Plasma सत्रस्य विषयः %1 इति सेट् कृतः अस्ति"
+
+#: plasma-apply-desktoptheme.cpp:69
+#, kde-format
+msgid ""
+"Could not find theme \"%1\". The theme should be one of the following "
+"options: %2"
+msgstr "\"%1\" इति विषयः न लब्धः । विषयः निम्नलिखितविकल्पेषु अन्यतमः भवेत्: %2"
+
+#: plasma-apply-desktoptheme.cpp:77
+#, kde-format
+msgid "You have the following Plasma themes on your system:"
+msgstr "भवतः प्रणाल्यां निम्नलिखितप्लाज्मा-विषयाणि सन्ति ।"
+
+#: ui/main.qml:101
+#, kde-format
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "All themes"
+msgstr ""
+
+#: ui/main.qml:102
+#, kde-format
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Light themes"
+msgstr ""
+
+#: ui/main.qml:103
+#, kde-format
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Dark themes"
+msgstr ""
+
+#: ui/main.qml:104
+#, kde-format
+msgctxt "@item:inlistbox filters displayed themes"
+msgid "Color scheme compatible"
+msgstr ""
+
+#: ui/main.qml:130
+#, kde-format
+msgid "Install from File…"
+msgstr "सञ्चिकातः संस्थापनं कुर्वन्तु..."
+
+#: ui/main.qml:135
+#, kde-format
+msgid "Get New…"
+msgstr "नवीनं प्राप्तुम्..."
+
+#: ui/main.qml:148
+#, kde-format
+msgid "Follows color scheme"
+msgstr "वर्णयोजनाम् अनुसृत्य भवति"
+
+#: ui/main.qml:166
+#, kde-format
+msgid "Edit Theme…"
+msgstr "विषय सम्पादयतु..."
+
+#: ui/main.qml:173
+#, kde-format
+msgid "Remove Theme"
+msgstr "विषयं निष्कासयतु"
+
+#: ui/main.qml:180
+#, kde-format
+msgid "Restore Theme"
+msgstr "विषयः पुनः स्थापयतु"
+
+#: ui/main.qml:199
+#, kde-format
+msgid "Open Theme"
+msgstr "Open Theme इति विषयः"
+
+#: ui/main.qml:201
+#, kde-format
+msgid "Theme Files (*.zip *.tar.gz *.tar.bz2)"
+msgstr "विषयसञ्चिकाः (*.zip *.tar.gz *.tar.bz2)"

@@ -1,0 +1,135 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-04 00:42+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: main.cpp:57 view.cpp:49
+#, kde-format
+msgid "KRunner"
+msgstr "लॉकर"
+
+#: main.cpp:57
+#, kde-format
+msgid "Run Command interface"
+msgstr "Command अन्तरफलकं चालयन्तु"
+
+#: main.cpp:63
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "KRunner कृते प्रश्नरूपेण क्लिप्बोर्डसामग्रीणां उपयोगं कुर्वन्तु"
+
+#: main.cpp:64
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "पृष्ठभूमितः KRunner आरभत, न दर्शयतु ।"
+
+#: main.cpp:65
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "विद्यमानं दृष्टान्तं प्रतिस्थापयन्तु"
+
+#: main.cpp:66
+#, kde-format
+msgid "Show only results from the given plugin"
+msgstr "केवलं दत्तस्य प्लगिन् तः परिणामान् दर्शयतु"
+
+#: main.cpp:67
+#, kde-format
+msgid "List available plugins"
+msgstr "उपलब्धप्लगिन्स् सूचीबद्धं कुर्वन्तु"
+
+#: main.cpp:74
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "चालयितुं प्रश्नः, केवलं तदा एव उपयुज्यते यदा -c न प्रदत्तं भवति"
+
+#: main.cpp:83
+#, kde-format
+msgctxt "Header for command line output"
+msgid "Available KRunner plugins, pluginId"
+msgstr ""
+
+#: qml/RunCommand.qml:104
+#, kde-format
+msgid "Configure"
+msgstr "विन्यस्तं कुर्वन्तु"
+
+#: qml/RunCommand.qml:105
+#, kde-format
+msgid "Configure KRunner Behavior"
+msgstr "KRunner व्यवहारं विन्यस्यताम्"
+
+#: qml/RunCommand.qml:108
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "KRunner विन्यस्तं कुर्वन्तु..."
+
+#: qml/RunCommand.qml:121
+#, kde-format
+msgid "Showing only results from %1"
+msgstr "केवलं %1 तः परिणामान् दर्शयति"
+
+#: qml/RunCommand.qml:135
+#, kde-format
+msgctxt "Textfield placeholder text, query specific KRunner plugin"
+msgid "Search '%1'…"
+msgstr ""
+
+#: qml/RunCommand.qml:136
+#, kde-format
+msgctxt "Textfield placeholder text"
+msgid "Search…"
+msgstr ""
+
+#: qml/RunCommand.qml:305 qml/RunCommand.qml:306 qml/RunCommand.qml:308
+#, kde-format
+msgid "Show Usage Help"
+msgstr "उपयोगसहायतां दर्शयतु"
+
+#: qml/RunCommand.qml:316
+#, kde-format
+msgid "Pin"
+msgstr "आतप"
+
+#: qml/RunCommand.qml:317
+#, kde-format
+msgid "Pin Search"
+msgstr "पिन अन्वेषण"
+
+#: qml/RunCommand.qml:319
+#, kde-format
+msgid "Keep Open"
+msgstr "खुले रखें"
+
+#: qml/RunCommand.qml:378 qml/RunCommand.qml:383
+#, kde-format
+msgid "Recent Queries"
+msgstr "अद्यतन प्रश्न"
+
+#: qml/RunCommand.qml:381
+#, kde-format
+msgid "Remove"
+msgstr "अपाकरोति"

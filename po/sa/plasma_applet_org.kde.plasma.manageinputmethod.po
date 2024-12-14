@@ -1,0 +1,48 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-10-16 01:40+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: contents/ui/main.qml:70
+#, kde-format
+msgctxt "Opens the system settings module"
+msgid "Configure Virtual Keyboards..."
+msgstr ""
+
+#: contents/ui/main.qml:89
+#, kde-format
+msgid "Virtual Keyboard: unavailable"
+msgstr "आभासी कीबोर्डः अनुपलब्धः"
+
+#: contents/ui/main.qml:102
+#, kde-format
+msgid "Virtual Keyboard: disabled"
+msgstr "आभासी कीबोर्डः अक्षमः"
+
+#: contents/ui/main.qml:118
+#, kde-format
+msgid "Show Virtual Keyboard"
+msgstr "वर्चुअल् कीबोर्डं दर्शयतु"
+
+#: contents/ui/main.qml:133
+#, kde-format
+msgid "Virtual Keyboard: visible"
+msgstr "आभासी कीबोर्डः दृश्यमानः"
+
+#: contents/ui/main.qml:147
+#, kde-format
+msgid "Virtual Keyboard: enabled"
+msgstr "वर्चुअल् कीबोर्ड: सक्षमम्"

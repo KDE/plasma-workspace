@@ -1,0 +1,42 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
+#, kde-format
+msgid "Search %1 for %2"
+msgstr "%2 इत्यस्य कृते %1 अन्वेष्टुम्"
+
+#: webshortcutrunner.cpp:69
+#, kde-format
+msgid "Opens \"%1\" in a web browser with the query :q:."
+msgstr ":q: इति प्रश्नेन सह जालपुटे \"%1\" उद्घाटयति ।"
+
+#: webshortcutrunner.cpp:74
+#, kde-format
+msgid "Search using the DuckDuckGo bang syntax"
+msgstr "DuckDuckGo bang वाक्यविन्यासस्य उपयोगेन अन्वेषणं कुर्वन्तु"
+
+#: webshortcutrunner.cpp:102
+#, kde-format
+msgid "Search in private window"
+msgstr "निजविण्डो मध्ये अन्वेषणं कुर्वन्तु"
+
+#: webshortcutrunner.cpp:102
+#, kde-format
+msgid "Search in incognito window"
+msgstr "गुप्तविण्डो मध्ये अन्वेषणं कुर्वन्तु"

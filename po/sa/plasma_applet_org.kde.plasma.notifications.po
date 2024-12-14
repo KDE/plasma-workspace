@@ -1,0 +1,438 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-07 00:42+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+
+#: fileinfo.cpp:170
+#, kde-format
+msgid "Open with %1"
+msgstr "%1 इत्यनेन उद्घाटयन्तु"
+
+#: fileinfo.cpp:174
+#, kde-format
+msgid "Open with…"
+msgstr "इत्यनेन सह उद्घाटितम्..."
+
+#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:187
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Containing Folder उद्घाटयन्तु"
+
+#: filemenu.cpp:131
+#, kde-format
+msgid "&Copy"
+msgstr "&प्रतिलिपि"
+
+#: filemenu.cpp:140
+#, kde-format
+msgctxt "@action:incontextmenu"
+msgid "Copy Location"
+msgstr ""
+
+#: filemenu.cpp:196
+#, kde-format
+msgid "Properties"
+msgstr "गुणाः"
+
+#: globalshortcuts.cpp:23
+#, kde-format
+msgid "Toggle do not disturb"
+msgstr "टॉगलं न बाधयन्तु"
+
+#: globalshortcuts.cpp:42
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications Off"
+msgstr ""
+
+#: globalshortcuts.cpp:43
+#, kde-format
+msgctxt "OSD popup, keep short"
+msgid "Notifications On"
+msgstr ""
+
+#: package/contents/ui/components/ActionContainer.qml:80
+#, kde-format
+msgctxt "Reply to message"
+msgid "Reply"
+msgstr ""
+
+#: package/contents/ui/components/EditContextMenu.qml:32
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy Link Address"
+msgstr ""
+
+#: package/contents/ui/components/EditContextMenu.qml:44
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Copy"
+msgstr ""
+
+#: package/contents/ui/components/EditContextMenu.qml:61
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Select All"
+msgstr ""
+
+#: package/contents/ui/components/HeadingButtons.qml:78
+#, kde-format
+msgctxt "Notification was added less than a minute ago, keep short"
+msgid "Just now"
+msgstr ""
+
+#: package/contents/ui/components/HeadingButtons.qml:84
+#, kde-format
+msgctxt "Notification was added minutes ago, keep short"
+msgid "%1 min ago"
+msgid_plural "%1 min ago"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/HeadingButtons.qml:118
+#, kde-format
+msgctxt "seconds remaining, keep short"
+msgid "%1 s remaining"
+msgid_plural "%1 s remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/HeadingButtons.qml:122
+#, kde-format
+msgctxt "minutes remaining, keep short"
+msgid "%1 min remaining"
+msgid_plural "%1 min remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/HeadingButtons.qml:127
+#, kde-format
+msgctxt "hours remaining, keep short"
+msgid "%1 h remaining"
+msgid_plural "%1 h remaining"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/HeadingButtons.qml:147
+#, kde-format
+msgid "Configure"
+msgstr "विन्यस्तं कुर्वन्तु"
+
+#: package/contents/ui/components/HeadingButtons.qml:164
+#, kde-format
+msgctxt "Opposite of minimize"
+msgid "Restore"
+msgstr ""
+
+#: package/contents/ui/components/HeadingButtons.qml:165
+#, kde-format
+msgid "Minimize"
+msgstr "न्यूनतमं कुरुत"
+
+#: package/contents/ui/components/HeadingButtons.qml:188
+#, kde-format
+msgid "Close"
+msgstr "पिधानं करोतु"
+
+#: package/contents/ui/components/JobDetails.qml:34
+#, kde-format
+msgctxt "Row description, e.g. Source"
+msgid "%1:"
+msgstr ""
+
+#: package/contents/ui/components/JobDetails.qml:105
+#, kde-format
+msgctxt "How many bytes have been copied"
+msgid "%2 of %1"
+msgstr ""
+
+#: package/contents/ui/components/JobDetails.qml:109
+#, kde-format
+msgctxt "How many files have been copied"
+msgid "%2 of %1 file"
+msgid_plural "%2 of %1 files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/JobDetails.qml:112
+#, kde-format
+msgctxt "How many dirs have been copied"
+msgid "%2 of %1 folder"
+msgid_plural "%2 of %1 folders"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/JobDetails.qml:115
+#, kde-format
+msgctxt "How many items (that includes files and dirs) have been copied"
+msgid "%2 of %1 item"
+msgid_plural "%2 of %1 items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/JobDetails.qml:123
+#, kde-format
+msgid "%1 file"
+msgid_plural "%1 files"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/JobDetails.qml:125
+#, kde-format
+msgid "%1 folder"
+msgid_plural "%1 folders"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/JobDetails.qml:127
+#, kde-format
+msgid "%1 item"
+msgid_plural "%1 items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/components/JobDetails.qml:144
+#, kde-format
+msgctxt "Bytes per second"
+msgid "%1/s"
+msgstr ""
+
+#: package/contents/ui/components/JobItem.qml:67
+#, kde-format
+msgctxt "Percentage of a job"
+msgid "%1%"
+msgstr ""
+
+#: package/contents/ui/components/JobItem.qml:85
+#, kde-format
+msgctxt "Hides/expands item details"
+msgid "Details"
+msgstr ""
+
+#: package/contents/ui/components/JobItem.qml:104
+#, kde-format
+msgctxt "Resume paused job"
+msgid "Resume"
+msgstr ""
+
+#: package/contents/ui/components/JobItem.qml:105
+#, kde-format
+msgctxt "Pause running job"
+msgid "Pause"
+msgstr ""
+
+#: package/contents/ui/components/JobItem.qml:119
+#, kde-format
+msgctxt "Cancel running job"
+msgid "Cancel"
+msgstr ""
+
+#: package/contents/ui/components/JobItem.qml:151
+#: package/contents/ui/components/ThumbnailStrip.qml:160
+#, kde-format
+msgid "More Options…"
+msgstr "अधिकविकल्पाः..."
+
+#: package/contents/ui/components/JobItem.qml:179
+#, kde-format
+msgid "Open"
+msgstr "उद्घाटित"
+
+#: package/contents/ui/components/NotificationReplyField.qml:35
+#, kde-format
+msgctxt "Text field placeholder"
+msgid "Type a reply…"
+msgstr ""
+
+#: package/contents/ui/components/NotificationReplyField.qml:62
+#, kde-format
+msgctxt "@action:button"
+msgid "Send"
+msgstr ""
+
+#: package/contents/ui/components/Summary.qml:35
+#, kde-format
+msgctxt "Job name, e.g. Copying is paused"
+msgid "%1 (Paused)"
+msgstr ""
+
+#: package/contents/ui/components/Summary.qml:40
+#, kde-format
+msgctxt "Job name, e.g. Copying has failed"
+msgid "%1 (Failed)"
+msgstr ""
+
+#: package/contents/ui/components/Summary.qml:42
+#, kde-format
+msgid "Job Failed"
+msgstr "Job Failed इति"
+
+#: package/contents/ui/components/Summary.qml:46
+#, kde-format
+msgctxt "Job name, e.g. Copying has finished"
+msgid "%1 (Finished)"
+msgstr ""
+
+#: package/contents/ui/components/Summary.qml:48
+#, kde-format
+msgid "Job Finished"
+msgstr "Job Finished इति"
+
+#: package/contents/ui/FullRepresentation.qml:71
+#, kde-format
+msgid "Do not disturb"
+msgstr "मा बाधते"
+
+#: package/contents/ui/FullRepresentation.qml:113
+#, kde-format
+msgid "For 1 hour"
+msgstr "१ घण्टा यावत्"
+
+#: package/contents/ui/FullRepresentation.qml:118
+#, kde-format
+msgid "For 4 hours"
+msgstr "४ घण्टापर्यन्तं"
+
+#: package/contents/ui/FullRepresentation.qml:127
+#, kde-format
+msgid "Until this evening"
+msgstr "अद्य सायंकालपर्यन्तम्"
+
+#: package/contents/ui/FullRepresentation.qml:137
+#, kde-format
+msgid "Until tomorrow morning"
+msgstr "श्वः प्रातः यावत्"
+
+#: package/contents/ui/FullRepresentation.qml:149
+#, kde-format
+msgid "Until Monday"
+msgstr "सोमवासरपर्यन्तं"
+
+#: package/contents/ui/FullRepresentation.qml:156
+#, kde-format
+msgid "Until manually disabled"
+msgstr "यावत् मैन्युअल् रूपेण अक्षमम् न भवति"
+
+#: package/contents/ui/FullRepresentation.qml:206
+#, kde-format
+msgctxt "Do not disturb until date"
+msgid "Automatically ends: %1"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:218
+#, kde-format
+msgctxt "Do not disturb until app has finished (reason)"
+msgid "While %1 is active (%2)"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:220
+#, kde-format
+msgctxt "Do not disturb until app has finished"
+msgid "While %1 is active"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:226
+#, kde-format
+msgctxt "Do not disturb because external mirrored screens connected"
+msgid "Screens are mirrored"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:538
+#, kde-format
+msgid "Close Group"
+msgstr "समूहं बन्दं कुर्वन्तु"
+
+#: package/contents/ui/FullRepresentation.qml:560
+#, kde-format
+msgid "Show Fewer"
+msgstr "न्यूनानि दर्शयतु"
+
+#: package/contents/ui/FullRepresentation.qml:562
+#, kde-format
+msgctxt "Expand to show n more notifications"
+msgid "Show %1 More"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:591
+#: package/contents/ui/main.qml:105
+#, kde-format
+msgid "No unread notifications"
+msgstr "अपठितसूचनाः नास्ति"
+
+#: package/contents/ui/FullRepresentation.qml:606
+#: package/contents/ui/main.qml:79
+#, kde-format
+msgid "Notification service not available"
+msgstr "सूचनासेवा उपलब्धा नास्ति"
+
+#: package/contents/ui/FullRepresentation.qml:608
+#, kde-format
+msgctxt "Vendor and product name"
+msgid "Notifications are currently provided by '%1 %2'"
+msgstr ""
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgid "%1 running job"
+msgid_plural "%1 running jobs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:67
+#, kde-format
+msgctxt "Job title (percentage)"
+msgid "%1 (%2%)"
+msgstr ""
+
+#: package/contents/ui/main.qml:72
+#, kde-format
+msgid "%1 running job (%2%)"
+msgid_plural "%1 running jobs (%2%)"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:85
+#, kde-format
+msgid "%1 unread notification"
+msgid_plural "%1 unread notifications"
+msgstr[0] ""
+msgstr[1] ""
+
+#: package/contents/ui/main.qml:98
+#, kde-format
+msgid "Do not disturb until %1; middle-click to exit now"
+msgstr "%1 यावत् न बाधतु; इदानीं निर्गन्तुं मध्य-क्लिक् कुर्वन्तु"
+
+#: package/contents/ui/main.qml:101
+#, kde-format
+msgid "Do not disturb mode active; middle-click to exit"
+msgstr "मोड सक्रियं मा बाधतु; निर्गन्तुं मध्य-क्लिक् कुर्वन्तु"
+
+#: package/contents/ui/main.qml:107
+#, kde-format
+msgid "Middle-click to enter do not disturb mode"
+msgstr "do not disturb mode इति प्रविष्टुं मध्य-क्लिक् कुर्वन्तु"
+
+#: package/contents/ui/main.qml:229
+#, kde-format
+msgid "Clear All Notifications"
+msgstr "सर्वाणि सूचनानि स्वच्छं कुर्वन्तु"
+
+#: package/contents/ui/main.qml:248
+#, kde-format
+msgid "&Configure Event Notifications and Actions…"
+msgstr "&इवेण्ट् सूचनाः क्रियाः च विन्यस्तं कुर्वन्तु..."

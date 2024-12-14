@@ -1,0 +1,176 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: logout.cpp:273
+#, kde-format
+msgid "Logout canceled by '%1'"
+msgstr "'%1' द्वारा लॉगआउट् रद्दम्।"
+
+#: logout.cpp:371
+#, kde-format
+msgctxt "@info:status"
+msgid "Session is exiting"
+msgstr ""
+
+#: main.cpp:66
+#, kde-format
+msgid "$HOME not set!"
+msgstr "$HOME न सेट्!"
+
+#: main.cpp:70 main.cpp:79
+#, kde-format
+msgid "$HOME directory (%1) does not exist."
+msgstr "$HOME निर्देशिका (%1) नास्ति ।"
+
+#: main.cpp:73
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"No write access to $HOME directory (%1). If this is intentional, set "
+"<envar>KDE_HOME_READONLY=1</envar> in your environment."
+msgstr ""
+
+#: main.cpp:81
+#, kde-format
+msgid "No read access to $HOME directory (%1)."
+msgstr "$HOME निर्देशिकायाः (%1) पठनप्रवेशः नास्ति ।"
+
+#: main.cpp:86
+#, kde-format
+msgid "$HOME directory (%1) is out of disk space."
+msgstr "$HOME निर्देशिका (%1) डिस्कस्थानात् बहिः अस्ति ।"
+
+#: main.cpp:89
+#, kde-format
+msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+msgstr "$HOME निर्देशिकायां (%2) लेखनं '%1' इति त्रुटिना विफलम् अभवत् ।"
+
+#: main.cpp:103 main.cpp:142
+#, kde-format
+msgid "No write access to '%1'."
+msgstr "'%1' कृते लेखनप्रवेशः नास्ति ।"
+
+#: main.cpp:105 main.cpp:144
+#, kde-format
+msgid "No read access to '%1'."
+msgstr "'%1' इत्यस्य पठनप्रवेशः नास्ति ।"
+
+#: main.cpp:115 main.cpp:129
+#, kde-format
+msgid "Temp directory (%1) is out of disk space."
+msgstr "Temp निर्देशिका (%1) डिस्कस्थानात् बहिः अस्ति ।"
+
+#: main.cpp:118 main.cpp:132
+#, kde-format
+msgid ""
+"Writing to the temp directory (%2) failed with\n"
+"    the error '%1'"
+msgstr ""
+"temp निर्देशिकायां (%2) लेखनं विफलम् अभवत्\n"
+"    '%1' इति त्रुटिः ।"
+
+#: main.cpp:149
+#, kde-format
+msgid ""
+"The following installation problem was detected\n"
+"while trying to start Plasma:"
+msgstr ""
+"निम्नलिखितस्थापनसमस्या ज्ञाता\n"
+"प्लाज्मा आरभ्यतुं प्रयतमानोऽपि : १."
+
+#: main.cpp:152
+#, kde-format
+msgid ""
+"\n"
+"\n"
+"Plasma is unable to start.\n"
+msgstr ""
+"\n"
+"\n"
+"प्लाज्मा आरम्भं कर्तुं असमर्थः अस्ति।\n"
+
+#: main.cpp:159
+#, kde-format
+msgid "Plasma Workspace installation problem!"
+msgstr "प्लाज्मा कार्यक्षेत्र संस्थापन समस्या!"
+
+#: main.cpp:194
+#, kde-format
+msgid ""
+"The reliable Plasma session manager that talks the standard X11R6 \n"
+"session management protocol (XSMP)."
+msgstr ""
+"विश्वसनीयः प्लाज्मा सत्रप्रबन्धकः यः मानक X11R6 इत्यस्य चर्चां करोति \n"
+"सत्रप्रबन्धनप्रोटोकॉल (XSMP)।"
+
+#: main.cpp:198
+#, kde-format
+msgid "Restores the saved user session if available"
+msgstr "यदि उपलब्धं भवति तर्हि रक्षितं उपयोक्तृसत्रं पुनः स्थापयति"
+
+#: main.cpp:201
+#, kde-format
+msgid "Also allow remote connections"
+msgstr "दूरस्थसंयोजनानि अपि अनुमन्यताम्"
+
+#: main.cpp:204
+#, kde-format
+msgid "Starts the session in locked mode"
+msgstr "सत्रं लॉक्ड् मोड् मध्ये आरभते"
+
+#: main.cpp:208
+#, kde-format
+msgid ""
+"Starts without lock screen support. Only needed if other component provides "
+"the lock screen."
+msgstr ""
+"लॉक् स्क्रीन समर्थनं विना आरभ्यते। केवलं तदा एव आवश्यकं यदा अन्यः घटकः लॉक स्क्रीन् प्रदाति।"
+
+#: server.cpp:778
+#, kde-format
+msgctxt "@label an unknown executable is using resources"
+msgid "[unknown]"
+msgstr ""
+
+#: server.cpp:801
+#, kde-kuit-format
+msgctxt "@label notification; %1 is a list of executables"
+msgid ""
+"Unable to manage some apps because the system's session management resources "
+"are exhausted. Here are the top three consumers of session resources:\n"
+"%1"
+msgstr ""
+
+#: server.cpp:1073
+#, kde-kuit-format
+msgctxt "@label notification; %1 is an executable name"
+msgid ""
+"Unable to restore <application>%1</application> because it is broken and has "
+"exhausted the system's session restoration resources. Please report this to "
+"the app's developers."
+msgstr ""

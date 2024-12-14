@@ -1,0 +1,392 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-08 00:42+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: batterycontrol/batteriesnamesmonitor_p.cpp:46
+#, kde-format
+msgctxt "Placeholder is the battery number"
+msgid "Battery %1"
+msgstr ""
+
+#: batterycontrol/batteriesnamesmonitor_p.cpp:48
+#, kde-format
+msgid "Battery"
+msgstr "विद्युत्कोष"
+
+#: calendar/eventdatadecorator.cpp:50
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Holidays"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:52
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Events"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:54
+#, kde-format
+msgctxt "Agenda listview section title"
+msgid "Todo"
+msgstr ""
+
+#: calendar/eventdatadecorator.cpp:56
+#, kde-format
+msgctxt "Means 'Other calendar items'"
+msgid "Other"
+msgstr ""
+
+#: calendar/qml/DayDelegate.qml:95
+#, kde-format
+msgid "%1 event"
+msgid_plural "%1 events"
+msgstr[0] ""
+msgstr[1] ""
+
+#: calendar/qml/DayDelegate.qml:96
+#, kde-format
+msgid "No events"
+msgstr "न घटनाः"
+
+#: calendar/qml/MonthViewHeader.qml:74
+#, kde-format
+msgctxt "Format: month year"
+msgid "%1 %2"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:131
+#, kde-format
+msgid "Days"
+msgstr "दिवसाः"
+
+#: calendar/qml/MonthViewHeader.qml:137
+#, kde-format
+msgid "Months"
+msgstr "मासाः"
+
+#: calendar/qml/MonthViewHeader.qml:143
+#, kde-format
+msgid "Years"
+msgstr "वर्षाः"
+
+#: calendar/qml/MonthViewHeader.qml:181
+#, kde-format
+msgid "Previous Month"
+msgstr "पूर्वमासः"
+
+#: calendar/qml/MonthViewHeader.qml:183
+#, kde-format
+msgid "Previous Year"
+msgstr "पूर्ववर्षम्"
+
+#: calendar/qml/MonthViewHeader.qml:185
+#, kde-format
+msgid "Previous Decade"
+msgstr "पूर्वदशकम्"
+
+#: calendar/qml/MonthViewHeader.qml:202
+#, kde-format
+msgctxt "Reset calendar to today"
+msgid "Today"
+msgstr ""
+
+#: calendar/qml/MonthViewHeader.qml:203
+#, kde-format
+msgid "Reset calendar to today"
+msgstr "अद्यत्वे पञ्चाङ्गं पुनः सेट् कुर्वन्तु"
+
+#: calendar/qml/MonthViewHeader.qml:214
+#, kde-format
+msgid "Next Month"
+msgstr "अग्रिमे मासे"
+
+#: calendar/qml/MonthViewHeader.qml:216
+#, kde-format
+msgid "Next Year"
+msgstr "अग्रिमवर्षे"
+
+#: calendar/qml/MonthViewHeader.qml:218
+#, kde-format
+msgid "Next Decade"
+msgstr "अग्रिमः दशकः"
+
+#: calendar/qml/MonthViewHeader.qml:274
+#, kde-format
+msgid "Keep Open"
+msgstr "खुले रखें"
+
+#: containmentlayoutmanager/qml/BasicAppletContainer.qml:286
+#, kde-format
+msgid "Configure…"
+msgstr "विन्यस्तं कुर्वन्तु..."
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:10
+#, kde-format
+msgid "Screen lock enabled"
+msgstr "स्क्रीन ताला सक्षमम्"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:11
+#, kde-format
+msgid "Sets whether the screen will be locked after the specified time."
+msgstr "निर्दिष्टसमयानन्तरं पटलः ताडितः भविष्यति वा इति सेट् करोति ।"
+
+#. i18n: ectx: label, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:16
+#, kde-format
+msgid "Screen saver timeout"
+msgstr "स्क्रीन सेवर समय समाप्त"
+
+#. i18n: ectx: whatsthis, entry, group (Daemon)
+#: sessionsprivate/kscreenlockersettings.kcfg:17
+#, kde-format
+msgid "Sets the minutes after which the screen is locked."
+msgstr "ततः परं स्क्रीन लॉक् भवति इति निमेषान् सेट् करोति ।"
+
+#: sessionsprivate/sessionsmodel.cpp:235 sessionsprivate/sessionsmodel.cpp:239
+#, kde-format
+msgid "New Session"
+msgstr "नव सत्र"
+
+#: shellprivate/kcategorizeditemsviewmodels.cpp:65
+#, kde-format
+msgid "Filters"
+msgstr "फ़िल्टर"
+
+#: shellprivate/plasmaappletitemmodel.cpp:197
+#, kde-format
+msgid ""
+"This Widget was written for an unknown older version of Plasma and is not "
+"compatible with Plasma %1. Please contact the widget's author for an updated "
+"version."
+msgstr ""
+"इदं विजेट् प्लाज्मा इत्यस्य अज्ञातस्य प्राचीनसंस्करणस्य कृते लिखितम् अस्ति तथा च प्लाज्मा %1 "
+"इत्यनेन सह सङ्गतं नास्ति । अद्यतनसंस्करणार्थं विजेट्-लेखकस्य सम्पर्कं कुर्वन्तु ।"
+
+#: shellprivate/plasmaappletitemmodel.cpp:201
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"Please contact the widget's author for an updated version."
+msgstr ""
+"इदं विजेट् प्लाज्मा %1 कृते लिखितम् अस्ति तथा च प्लाज्मा %2 इत्यनेन सह सङ्गतं नास्ति । "
+"अद्यतनसंस्करणार्थं विजेट्-लेखकस्य सम्पर्कं कुर्वन्तु ।"
+
+#: shellprivate/plasmaappletitemmodel.cpp:205
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
+"Please update Plasma in order to use the widget."
+msgstr ""
+"इदं विजेट् प्लाज्मा %1 कृते लिखितम् अस्ति तथा च प्लाज्मा %2 इत्यनेन सह सङ्गतं नास्ति । कृपया "
+"विजेट् इत्यस्य उपयोगाय प्लाज्मा अपडेट् कुर्वन्तु ।"
+
+#: shellprivate/plasmaappletitemmodel.cpp:210
+#, kde-format
+msgid ""
+"This Widget was written for Plasma %1 and is not compatible with the latest "
+"version of Plasma. Please update Plasma in order to use the widget."
+msgstr ""
+"इदं विजेट् प्लाज्मा %1 कृते लिखितम् अस्ति तथा च प्लाज्मा इत्यस्य नवीनतमसंस्करणेन सह सङ्गतं "
+"नास्ति । कृपया विजेट् इत्यस्य उपयोगाय प्लाज्मा अपडेट् कुर्वन्तु ।"
+
+#: shellprivate/widgetexplorer.cpp:109
+msgctxt "applet category"
+msgid "Accessibility"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:110
+msgctxt "applet category"
+msgid "Application Launchers"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:111
+msgctxt "applet category"
+msgid "Astronomy"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:112
+msgctxt "applet category"
+msgid "Date and Time"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:113
+msgctxt "applet category"
+msgid "Development Tools"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:114
+msgctxt "applet category"
+msgid "Education"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:115
+msgctxt "applet category"
+msgid "Environment and Weather"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:116
+msgctxt "applet category"
+msgid "Examples"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:117
+msgctxt "applet category"
+msgid "File System"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:118
+msgctxt "applet category"
+msgid "Fun and Games"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:119
+msgctxt "applet category"
+msgid "Graphics"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:120
+msgctxt "applet category"
+msgid "Language"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:121
+msgctxt "applet category"
+msgid "Mapping"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:122
+msgctxt "applet category"
+msgid "Miscellaneous"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:123
+msgctxt "applet category"
+msgid "Multimedia"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:124
+msgctxt "applet category"
+msgid "Online Services"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:125
+msgctxt "applet category"
+msgid "Productivity"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:126
+msgctxt "applet category"
+msgid "System Information"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:127
+msgctxt "applet category"
+msgid "Utilities"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:128
+msgctxt "applet category"
+msgid "Windows and Tasks"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:129
+msgctxt "applet category"
+msgid "Clipboard"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:130
+msgctxt "applet category"
+msgid "Tasks"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:146
+#, kde-format
+msgid "All Widgets"
+msgstr "सर्वे विजेट्"
+
+#: shellprivate/widgetexplorer.cpp:150
+#, kde-format
+msgid "Running"
+msgstr "चलति"
+
+#: shellprivate/widgetexplorer.cpp:156
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can be un-"
+"installed from the system, which are usually installed by the user to a "
+"local place."
+msgid "Uninstallable"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:160
+#, kde-format
+msgctxt ""
+"@item:inmenu used in the widget filter. Filter widgets that can were "
+"recently installed."
+msgid "Recently installed"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:164
+#, kde-format
+msgid "Categories:"
+msgstr "श्रेणियाँ : १."
+
+#: shellprivate/widgetexplorer.cpp:234
+#, kde-format
+msgid "Download New Plasma Widgets"
+msgstr "नवीनप्लाज्मा विजेट् डाउनलोड् कुर्वन्तु"
+
+#: shellprivate/widgetexplorer.cpp:243
+#, kde-format
+msgid "Install Widget From Local File…"
+msgstr "स्थानीयसञ्चिकातः विजेट् संस्थापयन्तु..."
+
+#: shellprivate/widgetexplorer.cpp:493
+#, kde-format
+msgctxt "@title:window"
+msgid "Get New Widgets"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:512
+#, kde-format
+msgid "Select Plasmoid File"
+msgstr "Plasmoid File इति चिनोतु"
+
+#: shellprivate/widgetexplorer.cpp:528
+#, kde-format
+msgctxt "%1 is the name of an applet, %2 is an error message"
+msgid "Installing the package %1 failed: %2."
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:529
+#, kde-format
+msgid "Installation Failure"
+msgstr "स्थापना विफलता"

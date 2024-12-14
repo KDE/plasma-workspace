@@ -1,0 +1,42 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-04-15 00:39+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: iconapplet.cpp:98
+#, kde-format
+msgid "Failed to create icon widgets folder '%1'"
+msgstr "'%1' इति चिह्नविजेट्-पुटस्य निर्माणे असफलम् ।"
+
+#: iconapplet.cpp:144
+#, kde-format
+msgid "Failed to copy icon widget desktop file from '%1' to '%2'"
+msgstr "'%1' तः '%2' पर्यन्तं चिह्नविजेट् डेस्कटॉपसञ्चिकां प्रतिलिपिं कर्तुं असफलम् ।"
+
+#: iconapplet.cpp:356
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Containing Folder उद्घाटयन्तु"
+
+#: iconapplet.cpp:571
+#, kde-format
+msgid "Properties for %1"
+msgstr "%1 कृते गुणाः"
+
+#: package/contents/ui/main.qml:40
+#, kde-format
+msgid "Properties"
+msgstr "गुणाः"

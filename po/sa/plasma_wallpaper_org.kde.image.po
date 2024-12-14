@@ -1,0 +1,344 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-10-08 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: imagepackage/contents/ui/AddFileDialog.qml:58
+#, kde-format
+msgctxt "@title:window"
+msgid "Open Image"
+msgstr ""
+
+#: imagepackage/contents/ui/AddFileDialog.qml:70
+#, kde-format
+msgctxt "@title:window"
+msgid "Directory with the wallpaper to show slides from"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:128
+#, kde-format
+msgctxt "@label:listbox"
+msgid "Positioning:"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:131
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Scaled and cropped"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:135
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Scaled"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:139
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Scaled, keep proportions"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:143
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Centered"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:147
+#, kde-format
+msgctxt "@item:inlistbox"
+msgid "Tiled"
+msgstr ""
+
+#: imagepackage/contents/ui/config.qml:175
+#, kde-format
+msgid "Background:"
+msgstr "पृष्ठभूमि:"
+
+#: imagepackage/contents/ui/config.qml:176
+#, kde-format
+msgid "Blur"
+msgstr "धुन्धला"
+
+#: imagepackage/contents/ui/config.qml:185
+#, kde-format
+msgid "Solid color"
+msgstr "ठोसवर्णः"
+
+#: imagepackage/contents/ui/config.qml:196
+#, kde-format
+msgid "Select Background Color"
+msgstr "Background Color इति चिनोतु"
+
+#: imagepackage/contents/ui/main.qml:34
+#, kde-format
+msgid "Open Wallpaper Image"
+msgstr "वॉलपेपर इमेज उद्घाटयन्तु"
+
+#: imagepackage/contents/ui/main.qml:40
+#, kde-format
+msgid "Next Wallpaper Image"
+msgstr "अग्रिमः वॉलपेपरः चित्रः"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:60
+#, kde-format
+msgid "Images"
+msgstr "बिम्बाः"
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:64
+#, kde-format
+msgctxt "@action:button the thing being added is an image file"
+msgid "Add…"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:65
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Wallpaper Image…"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:71
+#, kde-format
+msgctxt "@action:button the new things being gotten are wallpapers"
+msgid "Get New…"
+msgstr ""
+
+#: imagepackage/contents/ui/ThumbnailsComponent.qml:72
+#, kde-format
+msgctxt "@action:button"
+msgid "Get New Wallpaper Images…"
+msgstr ""
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:31
+#, kde-format
+msgid "Open Containing Folder"
+msgstr "Containing Folder उद्घाटयन्तु"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:37
+#, kde-format
+msgid "Restore wallpaper"
+msgstr "वॉलपेपरं पुनर्स्थापयन्तु"
+
+#: imagepackage/contents/ui/WallpaperDelegate.qml:42
+#, kde-format
+msgid "Remove Wallpaper"
+msgstr "वॉलपेपरं निष्कासयन्तु"
+
+#: plasma-apply-wallpaperimage.cpp:28
+#, kde-format
+msgid ""
+"This tool allows you to set an image as the wallpaper for the Plasma session."
+msgstr "एतत् साधनं भवन्तं Plasma सत्रस्य कृते वॉलपेपररूपेण चित्रं सेट् कर्तुं शक्नोति ।"
+
+#: plasma-apply-wallpaperimage.cpp:30
+#, kde-format
+msgid ""
+"An image file or an installed wallpaper kpackage that you wish to set as the "
+"wallpaper for your Plasma session"
+msgstr ""
+"एकं चित्रसञ्चिका अथवा संस्थापितं वॉलपेपर kpackage यत् भवान् स्वस्य Plasma सत्रस्य "
+"वॉलपेपररूपेण सेट् कर्तुम् इच्छति"
+
+#: plasma-apply-wallpaperimage.cpp:33
+#, kde-format
+msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
+msgstr "पूरणविधिं निर्दिशन्तु (उदा., stretch, preserveAspectCrop इत्यादि)"
+
+#: plasma-apply-wallpaperimage.cpp:61
+#, kde-format
+msgid ""
+"There is a stray single quote in the filename of this wallpaper (') - please "
+"contact the author of the wallpaper to fix this, or rename the file "
+"yourself: %1"
+msgstr ""
+"अस्य वॉलपेपरस्य सञ्चिकानाम्नि (') एकः आवारा एकल उद्धरणम् अस्ति - कृपया एतत् समाधातुं "
+"वॉलपेपरस्य लेखकेन सह सम्पर्कं कुर्वन्तु, अथवा सञ्चिकायाः नाम स्वयमेव परिवर्तयन्तु: %1"
+
+#: plasma-apply-wallpaperimage.cpp:99
+#, kde-format
+msgid "Invalid fill mode specified: %1"
+msgstr "अमान्यपूरणविधिः निर्दिष्टः: %1"
+
+#: plasma-apply-wallpaperimage.cpp:115
+#, kde-format
+msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
+msgstr "Plasma wallpaper सेट् कर्तुं प्रयतमाने त्रुटिः अभवत्:\n"
+
+#: plasma-apply-wallpaperimage.cpp:119
+#, kde-format
+msgid ""
+"Successfully set the wallpaper for all desktops to the KPackage based %1"
+msgstr "सर्वेषां डेस्कटॉप् कृते वॉलपेपरं KPackage आधारित %1 इत्यत्र सफलतया सेट् कुर्वन्तु"
+
+#: plasma-apply-wallpaperimage.cpp:121
+#, kde-format
+msgid "Successfully set the wallpaper for all desktops to the image %1"
+msgstr "सर्वेषां डेस्कटॉप् कृते वॉलपेपरं %1 प्रतिबिम्बे सफलतया सेट् कुर्वन्तु"
+
+#: plasma-apply-wallpaperimage.cpp:128
+#, kde-format
+msgid ""
+"The file passed to be set as wallpaper does not exist, or we cannot identify "
+"it as a wallpaper: %1"
+msgstr ""
+"वॉलपेपररूपेण सेट् कर्तुं पारिता सञ्चिका नास्ति, अथवा वयं तां वॉलपेपररूपेण परिचययितुं न शक्नुमः: "
+"%1"
+
+#. i18n people, this isn't a "word puzzle". there is a specific string format for QFileDialog::setNameFilters
+#: plugin/imagebackend.cpp:340
+#, kde-format
+msgid "Media Files"
+msgstr "मीडिया सञ्चिकाः"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:52
+#, kde-format
+msgid "Order:"
+msgstr "आदेशः:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:59
+#, kde-format
+msgid "Random"
+msgstr "यदृच्छासङ्ख्या"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:63
+#, kde-format
+msgid "A to Z"
+msgstr "अयं च Z"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:67
+#, kde-format
+msgid "Z to A"
+msgstr "Z इति A"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:71
+#, kde-format
+msgid "Date modified (newest first)"
+msgstr "परिवर्तिता तिथि (नवीनतम प्रथम) ."
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:75
+#, kde-format
+msgid "Date modified (oldest first)"
+msgstr "परिवर्तिता तिथि (प्राचीनतमः प्रथमः) २."
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:100
+#, kde-format
+msgid "Group by folders"
+msgstr "पुटैः समूहयन्तु"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:112
+#, kde-format
+msgid "Change every:"
+msgstr "प्रत्येकं परिवर्तनं कुर्वन्तु:"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:122
+#, kde-format
+msgid "%1 hour"
+msgid_plural "%1 hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:142
+#, kde-format
+msgid "%1 minute"
+msgid_plural "%1 minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:162
+#, kde-format
+msgid "%1 second"
+msgid_plural "%1 seconds"
+msgstr[0] ""
+msgstr[1] ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:206
+#, kde-format
+msgid "Folders"
+msgstr "पुटम्"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:210
+#, kde-format
+msgctxt "@action button the thing being added is a folder"
+msgid "Add…"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:211
+#, kde-format
+msgctxt "@action:button"
+msgid "Add Folder…"
+msgstr ""
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:249
+#, kde-format
+msgid "Remove Folder"
+msgstr "फोल्डरं निष्कासयन्तु"
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:260
+#, kde-format
+msgid "Open Folder…"
+msgstr "Open Folder..."
+
+#: slideshowpackage/contents/ui/SlideshowComponent.qml:275
+#, kde-format
+msgid "There are no wallpaper locations configured"
+msgstr "तत्र वॉलपेपरस्थानानि विन्यस्तानि नास्ति"
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:49
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Set as Wallpaper"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
+#, kde-format
+msgctxt "@action:inmenu Set as Desktop Wallpaper"
+msgid "Desktop"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
+#, kde-format
+msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
+msgid "Lockscreen"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
+#, kde-format
+msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
+msgid "Both"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
+#, kde-kuit-format
+msgctxt "@info %1 is the dbus error message"
+msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
+msgstr ""
+
+#: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
+#, kde-format
+msgid "An error occurred while attempting to open kscreenlockerrc config file."
+msgstr "kscreenlockerrc config सञ्चिकां उद्घाटयितुं प्रयतमाने त्रुटिः अभवत् ।"

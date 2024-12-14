@@ -1,0 +1,46 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-23 01:39+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: locationrunner.cpp:30
+#, kde-format
+msgid ""
+"Finds local directories and files, network locations and Internet sites with "
+"paths matching :q:."
+msgstr ""
+":q: इत्यनेन सह मेलनं कृत्वा स्थानीयनिर्देशिकाः सञ्चिकाः च, संजालस्थानानि अन्तर्जालस्थलानि च "
+"अन्वेषयति ।"
+
+#: locationrunner.cpp:52
+#, kde-format
+msgid "Open %1"
+msgstr "%1 उद्घाटयन्तु"
+
+#: locationrunner.cpp:72 locationrunner.cpp:76
+#, kde-format
+msgid "Launch with %1"
+msgstr "%1 इत्यनेन प्रारम्भं कुर्वन्तु"
+
+#: locationrunner.cpp:82
+#, kde-format
+msgid "Go to %1"
+msgstr "%1 प्रति गच्छन्तु"
+
+#: locationrunner.cpp:90
+#, kde-format
+msgid "Send email to %1"
+msgstr "%1 इत्यस्मै ईमेल प्रेषयन्तु"

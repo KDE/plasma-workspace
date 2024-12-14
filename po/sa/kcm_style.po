@@ -1,0 +1,211 @@
+# Sanskrit translations for plasma-workspace package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-07-17 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gtkpage.cpp:58
+#, kde-format
+msgid "%1 is not a valid GTK Theme archive."
+msgstr "%1 वैधः GTK Theme संग्रहणं नास्ति ।"
+
+#: kcmstyle.cpp:163 kcmstyle.cpp:170
+#, kde-format
+msgid "There was an error loading the configuration dialog for this style."
+msgstr "अस्याः शैल्याः कृते विन्याससंवादं लोड् करणं त्रुटिः आसीत् ।"
+
+#: kcmstyle.cpp:276
+#, kde-format
+msgid "Failed to apply selected style '%1'."
+msgstr "चयनितशैलीं '%1' प्रयोक्तुं असफलम् ।"
+
+#: styleconfdialog.cpp:21
+#, kde-format
+msgid "Configure %1"
+msgstr "%1 विन्यस्यताम्"
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_1)
+#: stylepreview.ui:33
+#, kde-format
+msgid "Tab 1"
+msgstr "टब 1"
+
+#. i18n: ectx: property (text), widget (QPushButton, pushButton)
+#: stylepreview.ui:65
+#, kde-format
+msgid "Push Button"
+msgstr "पुश बटन"
+
+#. i18n: ectx: property (text), item, widget (QComboBox, comboBox)
+#: stylepreview.ui:86
+#, kde-format
+msgid "Combo box"
+msgstr "कम्बो बॉक्स"
+
+#. i18n: ectx: property (text), widget (QCheckBox, checkBox)
+#: stylepreview.ui:96
+#, kde-format
+msgid "Checkbox"
+msgstr "चेकबॉक्स"
+
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_2)
+#. i18n: ectx: property (text), widget (QRadioButton, radioButton_1)
+#: stylepreview.ui:106 stylepreview.ui:116
+#, kde-format
+msgid "Radio button"
+msgstr "रेडियो बटन"
+
+#. i18n: ectx: property (format), widget (QProgressBar, progressBar)
+#: stylepreview.ui:128
+#, no-c-format, kde-format
+msgid "%p%"
+msgstr "%प% ९."
+
+#. i18n: ectx: attribute (title), widget (QWidget, tab_2)
+#: stylepreview.ui:136
+#, kde-format
+msgid "Tab 2"
+msgstr "टब 2"
+
+#. i18n: ectx: label, entry (widgetStyle), group (KDE)
+#: stylesettings.kcfg:9
+#, kde-format
+msgid "Application style"
+msgstr "अनुप्रयोगशैली"
+
+#. i18n: ectx: label, entry (iconsOnButtons), group (KDE)
+#: stylesettings.kcfg:13
+#, kde-format
+msgid "Show icons on buttons"
+msgstr "बटनेषु चिह्नानि दर्शयन्तु"
+
+#. i18n: ectx: label, entry (iconsInMenus), group (KDE)
+#: stylesettings.kcfg:17
+#, kde-format
+msgid "Show icons in menus"
+msgstr "मेनूषु चिह्नानि दर्शयन्तु"
+
+#. i18n: ectx: label, entry (toolButtonStyle), group (Toolbar style)
+#: stylesettings.kcfg:23
+#, kde-format
+msgid "Main toolbar label"
+msgstr "मुख्य साधनपट्टी लेबल"
+
+#. i18n: ectx: label, entry (toolButtonStyleOtherToolbars), group (Toolbar style)
+#: stylesettings.kcfg:27
+#, kde-format
+msgid "Secondary toolbar label"
+msgstr "गौण साधनपट्टी लेबल"
+
+#: ui/EffectSettingsPopup.qml:19
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure Icons and Toolbars"
+msgstr ""
+
+#: ui/EffectSettingsPopup.qml:36
+#, kde-format
+msgid "Show icons:"
+msgstr "चिह्नानि दर्शयतु : १."
+
+#: ui/EffectSettingsPopup.qml:37
+#, kde-format
+msgid "On buttons"
+msgstr "बटनेषु"
+
+#: ui/EffectSettingsPopup.qml:48
+#, kde-format
+msgid "In menus"
+msgstr "मेनूषु"
+
+#: ui/EffectSettingsPopup.qml:60
+#, kde-format
+msgid "Main toolbar label:"
+msgstr "मुख्यसाधनपट्टिकालेबलम् : १."
+
+#: ui/EffectSettingsPopup.qml:62
+#, kde-format
+msgid "None"
+msgstr "न कश्चित्"
+
+#: ui/EffectSettingsPopup.qml:63
+#, kde-format
+msgid "Text only"
+msgstr "पाठमात्रम्"
+
+#: ui/EffectSettingsPopup.qml:64
+#, kde-format
+msgid "Beside icons"
+msgstr "चिह्नानां पार्श्वे"
+
+#: ui/EffectSettingsPopup.qml:65
+#, kde-format
+msgid "Below icon"
+msgstr "चिह्नस्य अधः"
+
+#: ui/EffectSettingsPopup.qml:80
+#, kde-format
+msgid "Secondary toolbar label:"
+msgstr "गौणसाधनपट्टिकालेबलम् : १."
+
+#: ui/GtkStylePage.qml:17
+#, kde-format
+msgid "GNOME/GTK Application Style"
+msgstr "GNOME/GTK अनुप्रयोगशैली"
+
+#: ui/GtkStylePage.qml:43
+#, kde-format
+msgid "GTK theme:"
+msgstr "जीटीके विषयः : १."
+
+#: ui/GtkStylePage.qml:68
+#, kde-format
+msgid "Preview…"
+msgstr "पूर्वावलोकन..."
+
+#: ui/GtkStylePage.qml:87
+#, kde-format
+msgid "Install from File…"
+msgstr "सञ्चिकातः संस्थापनं कुर्वन्तु..."
+
+#: ui/GtkStylePage.qml:92
+#, kde-format
+msgid "Get New GNOME/GTK Application Styles…"
+msgstr "नवीन GNOME/GTK अनुप्रयोगशैल्याः प्राप्तुम्..."
+
+#: ui/GtkStylePage.qml:108
+#, kde-format
+msgid "Select GTK Theme Archive"
+msgstr "GTK Theme Archive इति चिनोतु"
+
+#: ui/GtkStylePage.qml:110
+#, kde-format
+msgid "GTK Theme Archive (*.tar.xz *.tar.gz *.tar.bz2)"
+msgstr "जीटीके थीम आर्काइव (*.tar.xz *.tar.gz *.tar.bz2)"
+
+#: ui/main.qml:55
+#, kde-format
+msgid "Configure Icons and Toolbars…"
+msgstr "चिह्नानि तथा साधनपट्टिकाः विन्यस्यताम्..."
+
+#: ui/main.qml:73
+#, kde-format
+msgid "Configure GNOME/GTK Application Style…"
+msgstr "GNOME/GTK अनुप्रयोगशैलीं विन्यस्यताम्..."
+
+#: ui/main.qml:106
+#, kde-format
+msgid "Configure Style…"
+msgstr "शैली विन्यस्तं कुर्वन्तु..."
