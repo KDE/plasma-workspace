@@ -33,7 +33,7 @@ QtObject {
         // Applets which prefer to always show their full
         // representation will always be expanded, there's
         // no need to activate them.
-        if (applet.preferredRepresentation == applet.fullRepresentation) return;
+        if (applet && applet.preferredRepresentation == applet.fullRepresentation) return;
 
         if (visualIndex === undefined) {
             oldVisualIndex = -1

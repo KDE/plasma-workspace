@@ -472,7 +472,11 @@ class SystemTrayTests(unittest.TestCase):
         else:
             actions = ActionChains(self.driver)
             actions.send_keys(Keys.ENTER).perform()
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Do not disturb")))
+        element = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Do not disturb")))
+
+        self.driver.find_element(AppiumBy.NAME, "Go Back").click()
+        wait.until_not(lambda _: element.is_displayed())
+
         if os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0":
             subprocess.check_call(["xdotool", "key", "Escape"])
         else:
