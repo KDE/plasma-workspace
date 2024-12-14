@@ -15,6 +15,7 @@
 
 #include <qwayland-plasma-window-management.h>
 
+#include <QDateTime>
 #include <QFuture>
 #include <QFutureWatcher>
 #include <QGuiApplication>
@@ -412,7 +413,7 @@ class Q_DECL_HIDDEN WaylandTasksModel::Private
 public:
     Private(WaylandTasksModel *q);
     QHash<PlasmaWindow *, AppData> appDataCache;
-    QHash<PlasmaWindow *, QTime> lastActivated;
+    QHash<PlasmaWindow *, QDateTime> lastActivated;
     PlasmaWindow *activeWindow = nullptr;
     std::vector<std::unique_ptr<PlasmaWindow>> windows;
     // key=transient child, value=leader
@@ -603,7 +604,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
             effectiveActive = effectiveActive->parentWindow;
         }
 
-        lastActivated[effectiveActive] = QTime::currentTime();
+        lastActivated[effectiveActive] = QDateTime::currentDateTime();
         activeWindow = effectiveActive;
     }
 
@@ -617,7 +618,7 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         }
 
         if (active) {
-            lastActivated[effectiveWindow] = QTime::currentTime();
+            lastActivated[effectiveWindow] = QDateTime::currentDateTime();
 
             if (activeWindow != effectiveWindow) {
                 activeWindow = effectiveWindow;

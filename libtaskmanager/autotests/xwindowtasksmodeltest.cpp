@@ -373,7 +373,7 @@ void XWindowTasksModelTest::test_lastActivated()
     window->showNormal();
     window->raise();
     window->requestActivate();
-    const QTime lastActivatedTime = QTime::currentTime();
+    const QDateTime lastActivatedDateTime = QDateTime::currentDateTime();
     dataChangedSpy.wait();
     // There can be more than one dataChanged signal being emitted due to caching
     QTRY_VERIFY(!index.data(AbstractTasksModel::IsMinimized).toBool());
@@ -381,8 +381,8 @@ void XWindowTasksModelTest::test_lastActivated()
     QTRY_VERIFY(std::none_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &list) {
         return list.at(2).value<QList<int>>().contains(AbstractTasksModel::LastActivated);
     }));
-    qDebug() << lastActivatedTime.msecsSinceStartOfDay() << index.data(AbstractTasksModel::LastActivated).toTime().msecsSinceStartOfDay();
-    QVERIFY(std::abs(lastActivatedTime.msecsSinceStartOfDay() - index.data(AbstractTasksModel::LastActivated).toTime().msecsSinceStartOfDay()) < 1000);
+    qDebug() << lastActivatedDateTime.toMSecsSinceEpoch() << index.data(AbstractTasksModel::LastActivated).toDateTime().toMSecsSinceEpoch();
+    QVERIFY(std::abs(lastActivatedDateTime.toMSecsSinceEpoch() - index.data(AbstractTasksModel::LastActivated).toDateTime().toMSecsSinceEpoch()) < 1000);
 }
 
 void XWindowTasksModelTest::test_modelDataFromDesktopFile()

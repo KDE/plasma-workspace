@@ -8,8 +8,8 @@
 #include "abstracttasksmodel.h"
 #include "tasktools.h"
 
+#include <QDateTime>
 #include <QSet>
-#include <QTime>
 
 namespace TaskManager
 {
@@ -727,10 +727,10 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
         } else if (role == AbstractTasksModel::LastActivated) {
             // Find the last activated task in the single group
             const int groupSize = d->rowMap.at(proxyIndex.row())->size();
-            QTime lastActivated = mapToSource(index(0, 0, proxyIndex)).data(AbstractTasksModel::LastActivated).toTime();
+            QDateTime lastActivated = mapToSource(index(0, 0, proxyIndex)).data(AbstractTasksModel::LastActivated).toDateTime();
 
             for (int i = 1; i < groupSize; i++) {
-                const QTime activated = mapToSource(index(i, 0, proxyIndex)).data(AbstractTasksModel::LastActivated).toTime();
+                const QDateTime activated = mapToSource(index(i, 0, proxyIndex)).data(AbstractTasksModel::LastActivated).toDateTime();
 
                 if (lastActivated < activated) {
                     lastActivated = activated;

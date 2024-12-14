@@ -19,6 +19,7 @@
 #include <KX11Extras>
 
 #include <QBuffer>
+#include <QDateTime>
 #include <QDir>
 #include <QFile>
 #include <QGuiApplication>
@@ -75,7 +76,7 @@ public:
     QHash<WId, AppData> appDataCache;
     QHash<WId, QRect> delegateGeometries;
     QSet<WId> usingFallbackIcon;
-    QHash<WId, QTime> lastActivated;
+    QHash<WId, QDateTime> lastActivated;
     QList<WId> cachedStackingOrder;
     WId activeWindow = -1;
     KSharedConfig::Ptr rulesConfig;
@@ -189,7 +190,7 @@ void XWindowTasksModel::Private::init()
         }
 
         activeWindow = window;
-        lastActivated[activeWindow] = QTime::currentTime();
+        lastActivated[activeWindow] = QDateTime::currentDateTime();
 
         int row = windows.indexOf(oldActiveWindow);
 
