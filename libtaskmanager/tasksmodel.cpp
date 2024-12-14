@@ -19,9 +19,9 @@
 
 #include "launchertasksmodel_p.h"
 
+#include <QDateTime>
 #include <QGuiApplication>
 #include <QList>
-#include <QTime>
 #include <QTimer>
 #include <QUrl>
 
@@ -820,32 +820,32 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
     // Sort other cases by sort mode.
     switch (sortMode) {
     case SortLastActivated: {
-        QTime leftSortTime, rightSortTime;
+        QDateTime leftSortDateTime, rightSortDateTime;
 
         // Check if the task is in a group
         if (left.parent().isValid()) {
-            leftSortTime = left.parent().data(AbstractTasksModel::LastActivated).toTime();
+            leftSortDateTime = left.parent().data(AbstractTasksModel::LastActivated).toDateTime();
         } else {
-            leftSortTime = left.data(AbstractTasksModel::LastActivated).toTime();
+            leftSortDateTime = left.data(AbstractTasksModel::LastActivated).toDateTime();
         }
 
-        if (!leftSortTime.isValid()) {
-            leftSortTime = left.data(Qt::DisplayRole).toTime();
+        if (!leftSortDateTime.isValid()) {
+            leftSortDateTime = left.data(Qt::DisplayRole).toDateTime();
         }
 
         if (right.parent().isValid()) {
-            rightSortTime = right.parent().data(AbstractTasksModel::LastActivated).toTime();
+            rightSortDateTime = right.parent().data(AbstractTasksModel::LastActivated).toDateTime();
         } else {
-            rightSortTime = right.data(AbstractTasksModel::LastActivated).toTime();
+            rightSortDateTime = right.data(AbstractTasksModel::LastActivated).toDateTime();
         }
 
-        if (!rightSortTime.isValid()) {
-            rightSortTime = right.data(Qt::DisplayRole).toTime();
+        if (!rightSortDateTime.isValid()) {
+            rightSortDateTime = right.data(Qt::DisplayRole).toDateTime();
         }
 
-        if (leftSortTime != rightSortTime) {
+        if (leftSortDateTime != rightSortDateTime) {
             // Move latest to leftmost
-            return leftSortTime > rightSortTime;
+            return leftSortDateTime > rightSortDateTime;
         }
 
         Q_FALLTHROUGH();
