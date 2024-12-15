@@ -39,4 +39,4 @@ msgstr "एकं सामान्यं गणितं कार्यं �
 #, kde-format
 msgctxt "The result of the calculation is only an approximation"
 msgid "Approximation"
-msgstr ""
+msgstr "सन्निकर्षः"

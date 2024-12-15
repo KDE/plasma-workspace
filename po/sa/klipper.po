@@ -20,12 +20,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: configdialog.cpp:82
 #, kde-format
@@ -37,8 +37,8 @@ msgstr "क्लिपबोर्ड इतिहासः : १."
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%v प्रविष्टिः"
+msgstr[1] "%v प्रविष्टयः"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -60,6 +60,15 @@ msgid ""
 "selection may still be saved in the clipboard history (subject to the "
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
+"यदा मूषकेन कीबोर्डेन वा पाठः अथवा पटलस्य क्षेत्रं प्रकाशितं भवति तदा एतत् <emphasis>चयनं</"
+"emphasis> भवति । मध्यमूषकस्य बटनस्य उपयोगेन चिनोतुं शक्यते ।<nl/><nl/>यदि चयनं स्पष्टतया "
+"<interface>Copy</interface> अथवा <interface>Cut</interface> क्रियायाः उपयोगेन "
+"प्रतिलिपितः भवति तर्हि तत्... <emphasis>क्लिपबोर्ड</emphasis> इति । "
+"<interface>Paste</interface> क्रियायाः उपयोगेन तत् चिनोतुं शक्यते । <nl/><nl/>यदा "
+"चालू भवति तदा एषः विकल्पः चयनं क्लिप्बोर्डं च समानं करोति, येन किमपि चयनं तत्क्षणमेव "
+"केनचित् प्रकारेण चिनोतुं उपलब्धं भवति । यदि निष्क्रियं भवति तर्हि चयनं अद्यापि क्लिप्बोर्ड-"
+"इतिहासस्य मध्ये रक्षितं भवितुम् अर्हति (अधः विकल्पानाम् अधीनम्), परन्तु केवलं मध्यमूषकस्य "
+"बटनस्य उपयोगेन एव चिनोतुं शक्यते ।"
 
 #: configdialog.cpp:133 configdialog.cpp:171
 #, kde-format
@@ -113,6 +122,10 @@ msgid ""
 "excluded window, then it can be shown by using the <shortcut>%1</shortcut> "
 "key shortcut."
 msgstr ""
+"यदा क्रियाप्रतिमानेन सह सङ्गतः पाठः चयनितः अथवा क्लिप्बोर्ड-इतिहासात् चयनितः भवति "
+"तदा स्वयमेव प्रयोज्यक्रियाभिः सह पॉपअप-मेनू दर्शयन्तु । यदि स्वचालितमेनू अत्र निष्क्रियं "
+"भवति, अथवा बहिष्कृतविण्डो कृते न दर्शितं, तर्हि <shortcut>%1</shortcut> कीलशॉर्टकट् "
+"इत्यस्य उपयोगेन दर्शयितुं शक्यते ।"
 
 #: configdialog.cpp:280
 #, kde-format
@@ -124,14 +137,14 @@ msgstr "विण्डोज इत्येतत् बहिष्कृत�
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%v द्वितीयः"
+msgstr[1] "%v सेकण्ड्"
 
 #: configdialog.cpp:295
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
-msgstr ""
+msgstr "न कश्चित्"
 
 #: configdialog.cpp:304
 #, kde-format
@@ -151,12 +164,15 @@ msgid ""
 "its <interface>commands</interface> appear in the Klipper popup menu and can "
 "be executed."
 msgstr ""
+"यदा <interface>match pattern</interface> क्लिप्बोर्ड् सामग्रीभिः सह मेलनं करोति तदा "
+"तस्य <interface>आदेशाः</interface> Klipper popup मेन्यू मध्ये दृश्यन्ते, तेषां कार्यान्वयनं "
+"कर्तुं शक्यते ।"
 
 #: configdialog.cpp:370
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
-msgstr ""
+msgstr "प्रतिमानं आदेशानां च मेलनं कुर्वन्तु"
 
 #: configdialog.cpp:370
 #, kde-format
@@ -186,6 +202,8 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
+"एतानि क्रियाणि पॉपअप मेन्यू मध्ये दृश्यन्ते ये <interface>Action Menu</interface> पृष्ठे "
+"विन्यस्तुं शक्यन्ते ।"
 
 #: configdialog.cpp:576
 #, kde-kuit-format
@@ -193,7 +211,7 @@ msgctxt "@info"
 msgid ""
 "Delete the selected action <resource>%1</resource><nl/>and all of its "
 "commands?"
-msgstr ""
+msgstr "चयनितं कार्यं <resource>%1</resource><nl/>तस्य सर्वाणि आदेशानि च विलोपयन्तु?"
 
 #: configdialog.cpp:577
 #, kde-format
@@ -204,7 +222,7 @@ msgstr "विलोपनक्रियायाः पुष्टिं क�
 #, kde-format
 msgctxt "General Config"
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #: configdialog.cpp:606
 #, kde-format
@@ -237,7 +255,7 @@ msgstr "क्रियाः विन्यासः"
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
-msgstr ""
+msgstr "शॉर्टकट"
 
 #: configdialog.cpp:611
 #, kde-format
@@ -255,6 +273,11 @@ msgid ""
 "particular application, then add it to this list. <link>How to find the name "
 "to enter</link>."
 msgstr ""
+"एतेषां विण्डोजानां कृते क्रिया-पॉपअप स्वयमेव न दर्शितं भविष्यति, यद्यपि तत् सक्षमम् अस्ति । "
+"यतो हि, उदाहरणार्थं, जालपुटं टङ्कनकाले पतापट्टिकायां URL प्रकाशयितुं शक्नोति, अतः प्रत्येकं "
+"कीलप्रहारस्य कृते मेनू दर्शयिष्यति स्म ।<nl/><nl/> यदि कस्यचित् अनुप्रयोगस्य उपयोगे क्रियामेनू "
+"अप्रत्याशितरूपेण दृश्यते तर्हि अस्मिन् सूचौ योजयन्तु ।<link> प्रविष्टुं नाम कथं अन्वेष्टव्यम्</"
+"link> ."
 
 #: configdialog.cpp:705
 #, kde-kuit-format
@@ -266,6 +289,10 @@ msgid ""
 "icode><nl/><nl/>and click on the window that you want to exclude. The first "
 "name that it displays after the equal sign is the one that you need to enter."
 msgstr ""
+"अत्र यत् नाम प्रविष्टव्यं तत् बहिष्कृतस्य विण्डो इत्यस्य WM_CLASS नाम अस्ति । विण्डो कृते "
+"WM_CLASS नाम अन्वेष्टुं अन्यस्मिन् टर्मिनल् विण्डो मध्ये आदेशं प्रविशन्तु:<nl/><nl/>&nbsp;"
+"&nbsp;<icode>xprop | grep WM_CLASS</icode><nl/><nl/>तथा विण्डो नुदन्तु यत् भवान् "
+"बहिष्कृतुम् इच्छति । समचिह्नस्य अनन्तरं प्रथमं नाम यत् प्रदर्शयति तत् भवद्भिः प्रविष्टव्यम् ।"
 
 #: declarative/qml/BarcodePage.qml:31
 #, kde-format
@@ -281,7 +308,7 @@ msgstr "डाटा मैट्रिक्स"
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "एज्टेक"
 
 #: declarative/qml/BarcodePage.qml:34
 #, kde-format
@@ -324,13 +351,13 @@ msgstr "QR कोडस्य निर्माणं विफलम् अभ
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "संश्यान"
 
 #: declarative/qml/ClipboardItemDelegate.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "आतन्"
 
 #: declarative/qml/ClipboardMenu.qml:187
 #, kde-format
@@ -371,26 +398,26 @@ msgstr "इतिहासात् निष्कासयतु"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "पाठ सम्पादन क्षेत्र"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "रक्ष्"
 
 #: declarative/qml/EditPage.qml:88
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "निरसयतु"
 
 #: declarative/qml/UrlItemDelegate.qml:97
 #, kde-format
 msgctxt ""
 "Indicator that there are more urls in the clipboard than previews shown"
 msgid "+%1"
-msgstr ""
+msgstr "+%1"
 
 #: editactiondialog.cpp:34 editcommanddialog.cpp:89
 #, kde-format
@@ -436,6 +463,10 @@ msgid ""
 "interface> appear in the Klipper popup menu; if one of them is chosen, the "
 "command is executed."
 msgstr ""
+"यदा तस्य <interface>match pattern</interface> क्लिप्बोर्डसामग्रीभिः सह मेलनं करोति "
+"तदा कश्चन क्रिया प्रभावी भवति । यदा एतत् भवति तदा क्रियायाः <interface>आदेशाः</"
+"interface> Klipper popup मेन्यू मध्ये दृश्यन्ते; यदि तेषु एकः चयनितः भवति तर्हि आदेशः "
+"निष्पादितः भवति।"
 
 #: editactiondialog.cpp:207
 #, kde-format
@@ -455,6 +486,9 @@ msgid ""
 "<link url=\"https://en.wikipedia.org/wiki/Regular_expression\">Wikipedia "
 "entry</link> for this topic."
 msgstr ""
+"मेलप्रतिमानं नियमितव्यञ्जनम् अस्ति । अधिकविवरणार्थं पश्यन्तु<link url=\"https://en."
+"wikipedia.org/wiki/Regular_expression\"> विकिपीडिया प्रविष्टि</link> अस्य "
+"विषयस्य कृते।"
 
 #: editactiondialog.cpp:223
 #, kde-format
@@ -481,6 +515,11 @@ msgid ""
 "the automatic popup but they will be included if the popup is activated "
 "manually with the <shortcut>%1</shortcut> key shortcut."
 msgstr ""
+"अस्य मेलस्य आदेशाः स्वचालितक्रिया-पॉपअप-मध्ये समाविष्टाः भविष्यन्ति, यदि "
+"<interface>Action Menu</interface> पृष्ठे सक्षमम् अस्ति । यदि एषः विकल्पः निष्क्रियः "
+"अस्ति तर्हि अस्य मेलस्य आदेशाः स्वचालित-पॉपअप-मध्ये न समाविष्टाः भविष्यन्ति परन्तु यदि "
+"पॉपअप <shortcut>%1</shortcut> कील-शॉर्टकट् इत्यनेन सह मैन्युअल् रूपेण सक्रियः भवति तर्हि "
+"ते समाविष्टाः भविष्यन्ति"
 
 #: editactiondialog.cpp:266
 #, kde-format
@@ -501,7 +540,7 @@ msgstr "Delete Command इति"
 #, kde-kuit-format
 msgctxt "@info"
 msgid "Delete the selected command <resource>%1</resource>?"
-msgstr ""
+msgstr "<resource>%1</resource> इति चयनितं आदेशं विलोपयतु?"
 
 #: editactiondialog.cpp:393
 #, kde-format
@@ -532,6 +571,9 @@ msgid ""
 "<placeholder>&#37;9</placeholder> will be replaced by the corresponding "
 "captured texts from the match pattern."
 msgstr ""
+"आदेशे एकं <placeholder>&#37;s</placeholder> पूर्णतया क्लिप्बोर्डसामग्रीभिः प्रतिस्थापितं "
+"भविष्यति । <placeholder>&#37;0</placeholder> तः <placeholder>&#37;9</"
+"placeholder> पर्यन्तं मेलप्रतिमानात् तत्सम्बद्धैः गृहीतग्रन्थैः प्रतिस्थाप्यते ।"
 
 #: editcommanddialog.cpp:81
 #, kde-format
@@ -582,55 +624,55 @@ msgstr "क्लिपबोर्ड इतिहासं स्वच्छ�
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr ""
+msgstr "%1x%2"
 
 #: klipper.cpp:90
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
-msgstr ""
+msgstr "स्वचालित क्रिया पॉपअप मेनू"
 
 #: klipper.cpp:109
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
-msgstr ""
+msgstr "C&lear क्लिपबोर्ड इतिहास"
 
 #: klipper.cpp:116
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
-msgstr ""
+msgstr "&क्लिप्स विन्यस्तं कुर्वन्तु..."
 
 #: klipper.cpp:120
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
-msgstr ""
+msgstr "वर्तमान क्लिप्बोर्ड् मध्ये मैन्युअल् रूपेण क्रियाम् आह्वयन्तु"
 
 #: klipper.cpp:127
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
-msgstr ""
+msgstr "&बारकोडं दर्शयतु..."
 
 #: klipper.cpp:136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
-msgstr ""
+msgstr "अग्रिमः इतिहासः मदः"
 
 #: klipper.cpp:141
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
-msgstr ""
+msgstr "पूर्व इतिहास मद"
 
 #: klipper.cpp:148
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
-msgstr ""
+msgstr "Mouse Position इत्यत्र Clipboard Items दर्शयतु"
 
 #: klipper.cpp:314
 #, kde-kuit-format
@@ -639,6 +681,8 @@ msgid ""
 "You can enable URL actions later in the <interface>Actions</interface> page "
 "of the Clipboard applet's configuration window"
 msgstr ""
+"भवन्तः पश्चात् Clipboard एप्लेट् इत्यस्य विन्यासविण्डो इत्यस्य <interface>Actions</"
+"interface> पृष्ठे URL क्रियाः सक्षमं कर्तुं शक्नुवन्ति"
 
 #: klipper.cpp:448
 #, kde-format

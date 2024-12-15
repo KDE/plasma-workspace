@@ -100,25 +100,25 @@ msgstr "भवतः प्रणाल्यां निम्नलिखि�
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
-msgstr ""
+msgstr "सर्वे विषयाः"
 
 #: ui/main.qml:102
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
-msgstr ""
+msgstr "प्रकाश विषयाः"
 
 #: ui/main.qml:103
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Dark themes"
-msgstr ""
+msgstr "अन्धकारमयाः विषयाः"
 
 #: ui/main.qml:104
 #, kde-format
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Color scheme compatible"
-msgstr ""
+msgstr "वर्ण योजना संगत"
 
 #: ui/main.qml:130
 #, kde-format

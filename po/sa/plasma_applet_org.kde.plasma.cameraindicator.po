@@ -21,66 +21,66 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Camera"
-msgstr ""
+msgstr "कॅमेरा"
 
 #: contents/ui/FullRepresentation.qml:50
 #, kde-format
 msgctxt "@info:status"
 msgid "Active"
-msgstr ""
+msgstr "सक्रियं"
 
 #: contents/ui/FullRepresentation.qml:52
 #, kde-format
 msgctxt "@info:status"
 msgid "Idle"
-msgstr ""
+msgstr "आलम"
 
 #: contents/ui/FullRepresentation.qml:54
 #, kde-format
 msgctxt "@info:status"
 msgid "Error"
-msgstr ""
+msgstr "त्रुटि"
 
 #: contents/ui/FullRepresentation.qml:56
 #, kde-format
 msgctxt "@info:status"
 msgid "Creating"
-msgstr ""
+msgstr "सृजति"
 
 #: contents/ui/FullRepresentation.qml:58
 #, kde-format
 msgctxt "@info:status"
 msgid "Suspended"
-msgstr ""
+msgstr "निलंबित"
 
 #: contents/ui/FullRepresentation.qml:60
 #, kde-format
 msgctxt "@info:status"
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: contents/ui/FullRepresentation.qml:79
 #, kde-format
 msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
-msgstr ""
+msgstr "%1 प्रयुक्तम् अस्ति"
 
 #: contents/ui/main.qml:23
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
-msgstr ""
+msgstr "कॅमेरा सूचकः अनुपलब्धः अस्ति"
 
 #: contents/ui/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
 msgid_plural "%1 cameras are in use"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "एकः कॅमेरा प्रयुक्तः अस्ति"
+msgstr[1] "%1 कॅमेरा प्रयुक्ताः सन्ति"
 
 #: contents/ui/main.qml:27
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"
-msgstr ""
+msgstr "कोऽपि कॅमेरा प्रयुक्तः नास्ति"

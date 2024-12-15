@@ -22,7 +22,7 @@ msgctxt ""
 "Jump list search result, %1 is action (eg. open new tab), %2 is application "
 "(eg. browser)"
 msgid "%1 - %2"
-msgstr ""
+msgstr "%1 - %2"
 
 #: servicerunner.cpp:418
 #, kde-format

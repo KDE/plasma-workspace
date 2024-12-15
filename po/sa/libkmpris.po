@@ -20,58 +20,58 @@ msgstr ""
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
-msgstr ""
+msgstr "मीडिया नियन्त्रक"
 
 #: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
-msgstr ""
+msgstr "मीडिया प्लेबैकं वादयन्तु/विरामयन्तु"
 
 #: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
-msgstr ""
+msgstr "अग्रे मीडिया प्लेबैक"
 
 #: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
-msgstr ""
+msgstr "मीडिया प्लेबैक पूर्व"
 
 #: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
-msgstr ""
+msgstr "मीडिया प्लेबैकं स्थगयन्तु"
 
 #: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
-msgstr ""
+msgstr "मीडिया प्लेबैकं विरामयन्तु"
 
 #: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
-msgstr ""
+msgstr "मीडिया प्लेबैकं वादयन्तु"
 
 #: kded/mprisservice.cpp:120
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
-msgstr ""
+msgstr "मीडिया वॉल्यूम अप"
 
 #: kded/mprisservice.cpp:121
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"
-msgstr ""
+msgstr "मीडिया मात्रा न्यूनीभवति"
 
 #: multiplexermodel.cpp:75
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr ""
+msgstr "स्वयमेव खिलाडी चिनोतु"

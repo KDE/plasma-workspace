@@ -26,7 +26,7 @@ msgstr "सामान्य"
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
-msgstr ""
+msgstr "क्रियाः दर्शयतु : १."
 
 #: contents/ui/ConfigGeneral.qml:35
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "Log Out इति"
 #, kde-format
 msgctxt "@option:check"
 msgid "Show logout screen"
-msgstr ""
+msgstr "लॉगआउट् पटलं दर्शयतु"
 
 #: contents/ui/ConfigGeneral.qml:48
 #, kde-format
@@ -68,7 +68,7 @@ msgstr "शीतनिद्रा"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "शयनं करोतु"
 
 #: contents/ui/data.js:6
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "सत्रस्य समाप्तिम्"
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Show logout screen"
-msgstr ""
+msgstr "लॉगआउट् पटलं दर्शयतु"
 
 #: contents/ui/data.js:40
 #, kde-format

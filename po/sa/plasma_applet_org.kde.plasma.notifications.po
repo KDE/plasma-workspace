@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-07 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -41,7 +43,7 @@ msgstr "&प्रतिलिपि"
 #, kde-format
 msgctxt "@action:incontextmenu"
 msgid "Copy Location"
-msgstr ""
+msgstr "प्रतिलिपि स्थानम्"
 
 #: filemenu.cpp:196
 #, kde-format
@@ -57,75 +59,75 @@ msgstr "टॉगलं न बाधयन्तु"
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications Off"
-msgstr ""
+msgstr "सूचनाः Off"
 
 #: globalshortcuts.cpp:43
 #, kde-format
 msgctxt "OSD popup, keep short"
 msgid "Notifications On"
-msgstr ""
+msgstr "अधिसूचना On"
 
 #: package/contents/ui/components/ActionContainer.qml:80
 #, kde-format
 msgctxt "Reply to message"
 msgid "Reply"
-msgstr ""
+msgstr "उत्तरं"
 
 #: package/contents/ui/components/EditContextMenu.qml:32
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy Link Address"
-msgstr ""
+msgstr "लिङ्क पता प्रतिलिपि कुर्वन्तु"
 
 #: package/contents/ui/components/EditContextMenu.qml:44
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Copy"
-msgstr ""
+msgstr "प्रतिलिपि"
 
 #: package/contents/ui/components/EditContextMenu.qml:61
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Select All"
-msgstr ""
+msgstr "All इति चिनोतु"
 
 #: package/contents/ui/components/HeadingButtons.qml:78
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
-msgstr ""
+msgstr "अधुना एव"
 
 #: package/contents/ui/components/HeadingButtons.qml:84
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
 msgid_plural "%1 min ago"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 मि.पूर्वम्"
+msgstr[1] "%1 मि.पूर्वम्"
 
 #: package/contents/ui/components/HeadingButtons.qml:118
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
 msgid_plural "%1 s remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 s अवशिष्टम्"
+msgstr[1] "%1 s अवशिष्टम्"
 
 #: package/contents/ui/components/HeadingButtons.qml:122
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
 msgid_plural "%1 min remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 मिन् अवशिष्टम्"
+msgstr[1] "%1 मिन् अवशिष्टम्"
 
 #: package/contents/ui/components/HeadingButtons.qml:127
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
 msgid_plural "%1 h remaining"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 ज शेषः"
+msgstr[1] "%1 ज शेषः"
 
 #: package/contents/ui/components/HeadingButtons.qml:147
 #, kde-format
@@ -136,7 +138,7 @@ msgstr "विन्यस्तं कुर्वन्तु"
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
-msgstr ""
+msgstr "निर्यत्"
 
 #: package/contents/ui/components/HeadingButtons.qml:165
 #, kde-format
@@ -152,94 +154,94 @@ msgstr "पिधानं करोतु"
 #, kde-format
 msgctxt "Row description, e.g. Source"
 msgid "%1:"
-msgstr ""
+msgstr "%1: १."
 
 #: package/contents/ui/components/JobDetails.qml:105
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
-msgstr ""
+msgstr "%1 इत्यस्य %2"
 
 #: package/contents/ui/components/JobDetails.qml:109
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 सञ्चिकायाः %2"
+msgstr[1] "%1 सञ्चिकानां %2"
 
 #: package/contents/ui/components/JobDetails.qml:112
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 पुटस्य %2"
+msgstr[1] "%1 पुटस्य %2"
 
 #: package/contents/ui/components/JobDetails.qml:115
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 द्रव्यस्य %2"
+msgstr[1] "%1 द्रव्येषु %2"
 
 #: package/contents/ui/components/JobDetails.qml:123
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 सञ्चिका"
+msgstr[1] "%1 सञ्चिकाः"
 
 #: package/contents/ui/components/JobDetails.qml:125
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 पुटम्"
+msgstr[1] "%1 पुटम्"
 
 #: package/contents/ui/components/JobDetails.qml:127
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 द्रव्यम्"
+msgstr[1] "%1 द्रव्यम्"
 
 #: package/contents/ui/components/JobDetails.qml:144
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
-msgstr ""
+msgstr "%1/s"
 
 #: package/contents/ui/components/JobItem.qml:67
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr ""
+msgstr "%1% २."
 
 #: package/contents/ui/components/JobItem.qml:85
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
-msgstr ""
+msgstr "वर्णन"
 
 #: package/contents/ui/components/JobItem.qml:104
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
-msgstr ""
+msgstr "पुनर्प्रारम्भय"
 
 #: package/contents/ui/components/JobItem.qml:105
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
-msgstr ""
+msgstr "विराम"
 
 #: package/contents/ui/components/JobItem.qml:119
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
-msgstr ""
+msgstr "निरसयतु"
 
 #: package/contents/ui/components/JobItem.qml:151
 #: package/contents/ui/components/ThumbnailStrip.qml:160
@@ -256,25 +258,25 @@ msgstr "उद्घाटित"
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
-msgstr ""
+msgstr "एकं उत्तरं टङ्कयन्तु..."
 
 #: package/contents/ui/components/NotificationReplyField.qml:62
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"
-msgstr ""
+msgstr "प्रेषयतु"
 
 #: package/contents/ui/components/Summary.qml:35
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
-msgstr ""
+msgstr "%1 (विरामितः) २."
 
 #: package/contents/ui/components/Summary.qml:40
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
-msgstr ""
+msgstr "%1 (विफलम्) २."
 
 #: package/contents/ui/components/Summary.qml:42
 #, kde-format
@@ -285,7 +287,7 @@ msgstr "Job Failed इति"
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
-msgstr ""
+msgstr "%1 (समाप्तम्) २."
 
 #: package/contents/ui/components/Summary.qml:48
 #, kde-format
@@ -331,25 +333,25 @@ msgstr "यावत् मैन्युअल् रूपेण अक्ष
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
-msgstr ""
+msgstr "स्वयमेव समाप्तं भवति: %1"
 
 #: package/contents/ui/FullRepresentation.qml:218
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
-msgstr ""
+msgstr "यदा %1 सक्रियः अस्ति (%2) ।"
 
 #: package/contents/ui/FullRepresentation.qml:220
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
-msgstr ""
+msgstr "यदा %1 सक्रियः अस्ति"
 
 #: package/contents/ui/FullRepresentation.qml:226
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
-msgstr ""
+msgstr "पटलाः प्रतिबिम्बिताः भवन्ति"
 
 #: package/contents/ui/FullRepresentation.qml:538
 #, kde-format
@@ -365,7 +367,7 @@ msgstr "न्यूनानि दर्शयतु"
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
-msgstr ""
+msgstr "%1 अधिकं दर्शयतु"
 
 #: package/contents/ui/FullRepresentation.qml:591
 #: package/contents/ui/main.qml:105
@@ -383,34 +385,34 @@ msgstr "सूचनासेवा उपलब्धा नास्ति"
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
-msgstr ""
+msgstr "सूचनाः सम्प्रति '%1 %2' द्वारा प्रदत्ताः सन्ति ।"
 
 #: package/contents/ui/main.qml:63
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 चालयति कार्यम्"
+msgstr[1] "%1 कार्याणि चालयति"
 
 #: package/contents/ui/main.qml:67
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr ""
+msgstr "%1 (%2%) २."
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 चालयति कार्यम् (%2%) ."
+msgstr[1] "%1 चालयति कार्याणि (%2%) ."
 
 #: package/contents/ui/main.qml:85
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 अपठितसूचना"
+msgstr[1] "%1 अपठितसूचनाः"
 
 #: package/contents/ui/main.qml:98
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-08-22 09:19+0200\n"
+"PO-Revision-Date: 2024-12-14 11:03+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -183,10 +183,10 @@ msgid ""
 "detailed description of what this service will do."
 msgstr ""
 "O servizo <application>%1</application> usarase periodicamente para "
-"actualizar a localización do dispositivo. Remita un informe de fallo "
-"mediante <link url='https://bugs.kde.org'>https://bugs.kde.org</link> para "
-"solicitar ao equipo desenvolvedor de KDE que forneza unha descrición "
-"detallada do que fai o servizo."
+"actualizar a localización do dispositivo. Envíe un informe de fallo mediante "
+"<link url='https://bugs.kde.org'>https://bugs.kde.org</link> para solicitar "
+"ao equipo desenvolvedor de KDE que forneza unha descrición detallada do que "
+"fai o servizo."
 
 #: ui/main.qml:334
 #, kde-format

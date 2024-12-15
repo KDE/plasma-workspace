@@ -115,31 +115,31 @@ msgstr "कृपया दोषाणां सूचनां दातुं
 #, kde-format
 msgctxt "@action:button"
 msgid "Copy Plasma Version"
-msgstr ""
+msgstr "प्लाज्मा संस्करणं प्रतिलिख्यताम्"
 
 #: desktopview.cpp:292
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr ""
+msgstr "एकं दोषं प्रतिवेदयतु..."
 
 #: desktopview.cpp:302
 #, kde-format
 msgctxt "@title:menu"
 msgid "Hide Preview Banner"
-msgstr ""
+msgstr "पूर्वावलोकन बैनरं गोपयन्तु"
 
 #: desktopview.cpp:305
 #, kde-format
 msgctxt "@action:button Hide the preview banner until the system is restarted"
 msgid "Hide Until Restart"
-msgstr ""
+msgstr "पुनः आरम्भपर्यन्तं गोपयन्तु"
 
 #: desktopview.cpp:312
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr ""
+msgstr "स्थायीरूपेण निगूहन्तु..."
 
 #: desktopview.cpp:318
 #, kde-kuit-format
@@ -150,17 +150,20 @@ msgid ""
 "<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
 "filename> config file."
 msgstr ""
+"किं भवान् निश्चयेन पूर्वावलोकन-बैनरं स्थायिरूपेण गोपयितुम् इच्छति?<nl/><nl/>एतत् क्रिया केवलं "
+"<filename>kdeglobals</filename> इत्यस्मिन् <icode>ShowDesktopPreviewBanner</"
+"icode> इत्यनेन आरभ्यमाणां रेखां निष्कास्य एव अकृतुं शक्यते config सञ्चिका ।"
 
 #: desktopview.cpp:320
 #, kde-format
 msgctxt "@title:window"
 msgid "Hide Preview Banner?"
-msgstr ""
+msgstr "पूर्वावलोकन बैनरं गोपयन्तु?"
 
 #: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "सम्पादन मोडं प्रविशन्तु"
 
 #: main.cpp:86
 #, kde-format
@@ -212,7 +215,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2% ."
 
 #: osd.cpp:88
 #, kde-format
@@ -300,31 +303,31 @@ msgstr "On-Screen कीलफलक निष्क्रियः"
 #, kde-format
 msgctxt "power management was inhibited, keep short"
 msgid "Sleep and Screen Locking Blocked"
-msgstr ""
+msgstr "निद्रा तथा स्क्रीन लॉकिंग अवरुद्ध"
 
 #: osd.cpp:197
 #, kde-format
 msgctxt "power management was uninhibited, keep short"
 msgid "Sleep and Screen Locking Unblocked"
-msgstr ""
+msgstr "निद्रा तथा स्क्रीन लॉकिंग अनब्लॉक"
 
 #: osd.cpp:207
 #, kde-format
 msgctxt "Power profile was changed to power save mode, keep short"
 msgid "Power Save Mode"
-msgstr ""
+msgstr "पावर सेव मोड"
 
 #: osd.cpp:210
 #, kde-format
 msgctxt "Power profile was changed to balanced mode, keep short"
 msgid "Balanced Power Mode"
-msgstr ""
+msgstr "संतुलित शक्ति मोड"
 
 #: osd.cpp:213
 #, kde-format
 msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
-msgstr ""
+msgstr "कार्यप्रदर्शनविधिः"
 
 #: panelview.cpp:438
 #, kde-format
@@ -333,18 +336,21 @@ msgid ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 msgstr ""
+"X11 इत्यस्मिन् NVIDIA GPU इत्यनेन सह Floating शैली तथा Adaptive opacity mode "
+"इत्येतयोः विण्डो-ड्रैग् तथा आकार-परिवर्तनस्य कार्यक्षमतायाः दुर्बलं कारणं भवति इति ज्ञायते । "
+"अन्येषां सेटिङ्ग्स् इत्यस्य उपयोगं विचारयन्तु।"
 
 #: panelview.cpp:1105
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
-msgstr ""
+msgstr "फलकविन्यासं गोपयन्तु"
 
 #: panelview.cpp:1107
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
-msgstr ""
+msgstr "Panel Configuration दर्शयतु"
 
 #: shellcontainmentconfig.cpp:106
 #, kde-format
@@ -375,7 +381,7 @@ msgstr "कार्यमुखम् गोपयन्तु"
 #: shellcorona.cpp:230
 #, kde-format
 msgid "Activate Application Launcher"
-msgstr ""
+msgstr "अनुप्रयोग प्रक्षेपक सक्रिय करें"
 
 #: shellcorona.cpp:238
 #, kde-format
@@ -405,7 +411,7 @@ msgstr "कार्यप्रबन्धकप्रविष्टिः %1
 #: shellcorona.cpp:312
 #, kde-format
 msgid "Panel and Desktop Management"
-msgstr ""
+msgstr "पैनल तथा डेस्कटॉप प्रबन्धन"
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -454,16 +460,3 @@ msgstr "पैनलसंख्या"
 #, kde-format
 msgid "Counts the panels"
 msgstr "पैनलानि गणयतु"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "परीक्षणविधिं सक्षमं करोति तथा परीक्षणवातावरणं स्थापयितुं विन्यासजावास्क्रिप्टसञ्चिकां "
-#~ "निर्दिशति"
-
-#~ msgid "file"
-#~ msgstr "सञ्चिका"
-
-#~ msgid "Manage Desktops And Panels..."
-#~ msgstr "कार्यमुखाः तथा पैनल्स् प्रबन्धयन्तु..."

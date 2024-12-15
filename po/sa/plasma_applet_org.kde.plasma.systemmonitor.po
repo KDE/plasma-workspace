@@ -40,10 +40,10 @@ msgstr "सिस्टम मॉनिटर"
 #, kde-format
 msgctxt "Sensor name: value"
 msgid "%1: %2"
-msgstr ""
+msgstr "%1: %2"
 
 #: package/contents/ui/main.qml:86
 #, kde-format
 msgctxt "@action"
 msgid "Open System Monitor…"
-msgstr ""
+msgstr "Open System Monitor..."

@@ -25,7 +25,7 @@ msgstr "सत्र प्रबन्धन"
 #, kde-format
 msgctxt "@action"
 msgid "Show Logout Screen"
-msgstr ""
+msgstr "Logout Screen दर्शयतु"
 
 #: main.cpp:48
 #, kde-format

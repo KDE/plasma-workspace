@@ -20,10 +20,10 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is the subject (can be anything) upon which the job is performed"
 msgid "The JobView for %1 cannot be found"
-msgstr ""
+msgstr "%1 कृते JobView न प्राप्यते"
 
 #: kuiserverengine.cpp:209
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
-msgstr ""
+msgstr "%1/s"

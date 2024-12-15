@@ -3,54 +3,56 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "Installing software updates and restarting in 1 second"
 msgid_plural "Installing software updates and restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "सॉफ्टवेयर अपडेट् संस्थाप्य १ सेकेण्ड् मध्ये पुनः आरम्भः"
+msgstr[1] "सॉफ्टवेयर अपडेट् संस्थाप्य %1 सेकेण्ड् मध्ये पुनः आरभ्यते"
 
 #: contents/logout/Logout.qml:154
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "१ सेकेण्ड् मध्ये पुनः आरभ्यते"
+msgstr[1] "%1 सेकेण्ड् मध्ये पुनः आरभ्यते"
 
 #: contents/logout/Logout.qml:156
 #, kde-format
 msgid "Logging out in 1 second"
 msgid_plural "Logging out in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "१ सेकेण्ड् मध्ये लॉग आउट् करणम्"
+msgstr[1] "%1 सेकेण्ड् मध्ये लॉग आउट् करणम्"
 
 #: contents/logout/Logout.qml:159
 #, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "सॉफ्टवेयर अपडेट् संस्थाप्य 1 सेकेण्ड् मध्ये निष्क्रियं करणम्"
+msgstr[1] "सॉफ्टवेयर अपडेट् संस्थाप्य %1 सेकेण्ड् मध्ये निष्क्रियं करणम्"
 
 #: contents/logout/Logout.qml:160
 #, kde-format
 msgid "Shutting down in 1 second"
 msgid_plural "Shutting down in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "१ सेकेण्ड् मध्ये निरुद्धं भवति"
+msgstr[1] "%1 सेकेण्ड् मध्ये निष्क्रियं भवति"
 
 #: contents/logout/Logout.qml:175
 #, kde-format
@@ -61,7 +63,11 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"अन्यः एकः उपयोक्ता सम्प्रति प्रवेशितः अस्ति यदि सङ्गणकः निरुद्धः अथवा पुनः आरब्धः अस्ति "
+"तर्हि सः उपयोक्ता कार्यं नष्टं कर्तुं शक्नोति ।"
 msgstr[1] ""
+"%1 अन्ये उपयोक्तारः सम्प्रति प्रवेशं कृतवन्तः यदि सङ्गणकं निरुद्धं वा पुनः आरब्धं वा तर्हि ते "
+"उपयोक्तारः कार्यं नष्टुं शक्नुवन्ति ।"
 
 #: contents/logout/Logout.qml:190
 #, kde-format
@@ -77,13 +83,13 @@ msgstr "पुनः आरभ्यते सति सङ्गणकः ब�
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "शयनं करोतु"
 
 #: contents/logout/Logout.qml:217
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep Now"
-msgstr ""
+msgstr "अधुना निद्रातु"
 
 #: contents/logout/Logout.qml:226
 #, kde-format
@@ -99,7 +105,7 @@ msgstr "अधुना हाइबरनेटं कुर्वन्तु"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr ""
+msgstr "Updates संस्थाप्य पुनः आरम्भं कुर्वन्तु"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
 #, kde-format
@@ -115,7 +121,7 @@ msgstr "अधुना पुनः आरभत"
 #, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr ""
+msgstr "Updates संस्थाप्य Shut Down कुर्वन्तु"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
 #, kde-format
@@ -146,7 +152,7 @@ msgstr "निरसयतु"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1% २."
 
 #: contents/splash/Splash.qml:79
 #, kde-format
@@ -155,4 +161,4 @@ msgctxt ""
 "should be translated as something short, is a form that can be seen on a "
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
-msgstr ""
+msgstr "केडीई द्वारा निर्मित प्लाज्मा"

@@ -63,13 +63,13 @@ msgstr "विण्डो शीर्षक फ़ॉन्ट"
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr ""
+msgstr "विक्रेता पूर्वनिर्धारित"
 
 #: kxftconfig.cpp:457
 #, kde-format
 msgctxt "no subpixel rendering"
 msgid "None"
-msgstr ""
+msgstr "न कश्चित्"
 
 #: kxftconfig.cpp:459
 #, kde-format
@@ -95,31 +95,31 @@ msgstr "ऊर्ध्वाधर बीजीआर"
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr ""
+msgstr "विक्रेता पूर्वनिर्धारित"
 
 #: kxftconfig.cpp:495
 #, kde-format
 msgctxt "medium hinting"
 msgid "Medium"
-msgstr ""
+msgstr "मध्यम"
 
 #: kxftconfig.cpp:497
 #, kde-format
 msgctxt "no hinting"
 msgid "None"
-msgstr ""
+msgstr "न कश्चित्"
 
 #: kxftconfig.cpp:499
 #, kde-format
 msgctxt "slight hinting"
 msgid "Slight"
-msgstr ""
+msgstr "स्वल्पम्"
 
 #: kxftconfig.cpp:501
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"
-msgstr ""
+msgstr "पूर्ण"
 
 #: ui/FontWidget.qml:32
 #, kde-format
@@ -127,7 +127,7 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2pt"
 
 #: ui/main.qml:23
 #, kde-format
@@ -246,6 +246,10 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"प्रदर्शनेषु पिक्सेलाः सामान्यतया जालपुटे संरेखिताः भवन्ति । अतः एतेन जालपुटेन सह न सङ्गताः "
+"फन्ट्-आकाराः अवरोधयुक्ताः, गलताः च दृश्यन्ते यावत् अस्य प्रभावस्य न्यूनीकरणाय "
+"<emphasis>anti-aliasing</emphasis>-विधिः न उपयुज्यते सामान्यतया भवान् एतत् विकल्पं "
+"सक्षमं कर्तुम् इच्छति यावत् समस्यां न जनयति ।"
 
 #: ui/main.qml:197
 #, kde-format
@@ -266,7 +270,7 @@ msgstr "इत्यस्मै"
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr ""
+msgstr "उप-पिक्सेल-प्रतिपादनम् : १."
 
 #: ui/main.qml:309
 #, kde-kuit-format
@@ -281,12 +285,20 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>TFT अथवा LCD स्क्रीन इत्यत्र प्रत्येकं एकं पिक्सेलं वस्तुतः त्रीणि वा चत्वारि वा लघु "
+"एकवर्णीयप्रकाशैः निर्मितं भवति । एतानि <emphasis>उपपिक्सेल</emphasis> प्रदर्शितानि "
+"फन्ट्-गुणवत्तां अधिकं सुधारयितुम् स्वतन्त्रतया परिवर्तयितुं शक्यन्ते ।</para> "
+"<para>प्रतिपादनगुणवत्ता केवलं तदा एव उन्नता भवति यदा चयनं तस्य उपपिक्सेलस्य यथा सङ्गतिं "
+"करोति भवतः प्रदर्शनं संरेखितम् अस्ति। अधिकांशप्रदर्शनेषु <emphasis>RGB</emphasis> "
+"उपपिक्सेलस्य रेखीयक्रमः भवति, केषुचित् <emphasis>BGR</emphasis> भवति तथा च केचन "
+"विदेशीयाः क्रमाः एतेन विशेषतायाः समर्थिताः न सन्ति ।</para>एतत् CRT इत्यनेन सह कार्यं न "
+"करोति निरीक्षते।"
 
 #: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr ""
+msgstr "संकेतः : १."
 
 #: ui/main.qml:359
 #, kde-kuit-format
@@ -297,6 +309,9 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"हिन्टिङ्ग् इति एकः तकनीकः यस्मिन् फॉन्ट् मध्ये निहिताः हिन्ट् इत्यस्य उपयोगः विशेषतः लघु "
+"आकारेषु रेण्डरिंग् गुणवत्तां वर्धयितुं भवति । बलिष्ठतरं संकेतं सामान्यतया तीक्ष्णतरधारं जनयति "
+"परन्तु लघुाक्षराणि बृहत्प्रमाणेषु तेषां आकारेण न्यूनतया सदृशाः भविष्यन्ति ।"
 
 #: ui/main.qml:372
 #, kde-format
@@ -314,6 +329,11 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>मुद्रितसमये पर्दा-अङ्कानां भौतिक-आकारैः सह मेलनं कर्तुं भवतः पटलस्य DPI अत्र प्रविशन्तु "
+"। अस्य विकल्पस्य पूर्वनिर्धारितमूल्यात् परिवर्तनं बहुभिः एप्स्-सहितं विग्रहं करिष्यति; केचन "
+"चिह्नानि चित्राणि च यथा अपेक्षितं स्केल न कर्तुं शक्नुवन्ति।</para><para>पाठस्य आकारं "
+"वर्धयितुं उपरिष्टात् फन्ट्-आकारं परिवर्तयन्तु । सर्वं स्केल कर्तुं <interface>Display & "
+"Monitor</interface> पृष्ठे स्केलिंग् स्लाइडर् इत्यस्य उपयोगं कुर्वन्तु ।</para>"
 
 #: ui/main.qml:406
 #, kde-format

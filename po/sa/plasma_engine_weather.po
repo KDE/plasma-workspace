@@ -1,4 +1,3 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -2807,7 +2806,7 @@ msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "
 "\"Rain then Sunny\")"
 msgid " then "
-msgstr ""
+msgstr " तदा "
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
@@ -4911,9 +4910,3 @@ msgstr "वर्षाणां वा वज्रपातस्य वा �
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
 msgstr "वज्रपातः सम्भाव्यते"
-
-#~ msgid "UK"
-#~ msgstr "यूके"
-
-#~ msgid "USA"
-#~ msgstr "अमेरिका"

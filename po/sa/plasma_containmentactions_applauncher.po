@@ -26,4 +26,4 @@ msgstr "अनुप्रयोगाः नामतः दर्शयन्�
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
-msgstr ""
+msgstr "एप्लिकेशन लॉन्चर प्लगिन् विन्यस्तं कुर्वन्तु"

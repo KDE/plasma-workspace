@@ -20,7 +20,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr ""
+msgstr "प्रदर्शनं ज्ञातम्"
 
 #: devicenotifications.cpp:334
 #, kde-format
@@ -31,7 +31,7 @@ msgstr "एकं प्रदर्शनं प्लग् कृतम् �
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr ""
+msgstr "प्रदर्शनं निष्कासितम्"
 
 #: devicenotifications.cpp:348
 #, kde-format
@@ -52,7 +52,7 @@ msgstr "एकं USB-यन्त्रं प्लग्-इन् कृत�
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
-msgstr ""
+msgstr "USB उपकरणं ज्ञातम्"
 
 #: devicenotifications.cpp:405
 #, kde-format
@@ -68,4 +68,4 @@ msgstr "एकं USB-यन्त्रं अनप्लग् कृतम�
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
-msgstr ""
+msgstr "USB उपकरणं निष्कासितम्"

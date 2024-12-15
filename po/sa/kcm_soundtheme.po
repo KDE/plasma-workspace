@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "Name of the fallback \"freedesktop\" sound theme"
 msgid "FreeDesktop"
-msgstr ""
+msgstr "FreeDesktop इति"
 
 #: kcm_soundtheme.cpp:112
 #, kde-format
@@ -32,7 +32,7 @@ msgstr "freedesktop.org इत्यस्मात् Fallback ध्वनि�
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable notification sounds"
-msgstr ""
+msgstr "सूचनाध्वनयः सक्षमाः कुर्वन्तु"
 
 #: ui/main.qml:97
 #, kde-format
@@ -41,8 +41,8 @@ msgctxt ""
 "from"
 msgid "Based on: %2"
 msgid_plural "Based on: %2"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "आधारितम् : %2"
+msgstr[1] "आधारितम् : %2"
 
 #: ui/main.qml:110
 #, kde-format
@@ -50,25 +50,25 @@ msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
 "theme's sounds. Keep it very short"
 msgid "Preview:"
-msgstr ""
+msgstr "पूर्वावलोकनम् : १."
 
 #: ui/main.qml:129
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
-msgstr ""
+msgstr "पूर्वावलोकनध्वनि \"%1\"।"
 
 #: ui/main.qml:151
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
-msgstr ""
+msgstr "\"%1\" विषयस्य कृते डेमो ध्वनिं पूर्वावलोकनं कुर्वन्तु ।"
 
 #: ui/main.qml:186
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
-msgstr ""
+msgstr "%1 विषये '%2' इति ध्वनिः न समाविष्टः ।"
 
 #: ui/main.qml:191
 #, kde-format

@@ -35,16 +35,16 @@ msgstr "सप्ताहसङ्ख्याः दर्शयतु"
 #, kde-format
 msgctxt "What information is shown in the calendar icon"
 msgid "Compact version:"
-msgstr ""
+msgstr "संकुचितं संस्करणम् : १."
 
 #: package/contents/ui/configGeneral.qml:33
 #, kde-format
 msgctxt "Show the number of the day (eg. 31) in the icon"
 msgid "Show day of the month"
-msgstr ""
+msgstr "मासस्य दिवसं दर्शयतु"
 
 #: package/contents/ui/configGeneral.qml:39
 #, kde-format
 msgctxt "Show the week number (eg. 50) in the icon"
 msgid "Show week number"
-msgstr ""
+msgstr "सप्ताहसङ्ख्यां दर्शयतु"

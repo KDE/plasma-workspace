@@ -19,12 +19,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: main.cpp:57 view.cpp:49
 #, kde-format
@@ -70,7 +70,7 @@ msgstr "चालयितुं प्रश्नः, केवलं तद�
 #, kde-format
 msgctxt "Header for command line output"
 msgid "Available KRunner plugins, pluginId"
-msgstr ""
+msgstr "उपलब्धाः KRunner प्लगिन्स्, pluginId"
 
 #: qml/RunCommand.qml:104
 #, kde-format
@@ -96,13 +96,13 @@ msgstr "केवलं %1 तः परिणामान् दर्शयत
 #, kde-format
 msgctxt "Textfield placeholder text, query specific KRunner plugin"
 msgid "Search '%1'…"
-msgstr ""
+msgstr "'%1' इति अन्वेषणं कुर्वन्तु..."
 
 #: qml/RunCommand.qml:136
 #, kde-format
 msgctxt "Textfield placeholder text"
 msgid "Search…"
-msgstr ""
+msgstr "अन्वेषण…"
 
 #: qml/RunCommand.qml:305 qml/RunCommand.qml:306 qml/RunCommand.qml:308
 #, kde-format

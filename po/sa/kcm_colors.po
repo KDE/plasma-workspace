@@ -1,4 +1,3 @@
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
@@ -1362,6 +1361,3 @@ msgstr "रङ्ग योजना उद्घाटयतु"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "रङ्ग योजना सञ्चिकाः (*.colors)"
-
-#~ msgid "Message ID"
-#~ msgstr "Message String"

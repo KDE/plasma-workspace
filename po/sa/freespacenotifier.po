@@ -80,4 +80,4 @@ msgstr ""
 #, kde-format
 msgctxt "The settings dialog main page name, as in 'general settings'"
 msgid "General"
-msgstr ""
+msgstr "सामान्य"

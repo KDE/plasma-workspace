@@ -278,7 +278,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "नोटः- यदि पटलः पर्याप्तं स्थूलः नास्ति तर्हि आकारः न्यूनीकर्तुं शक्यते ।"
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
@@ -438,7 +438,7 @@ msgstr "समय प्रारूपं निरूपयतु…"
 msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
-msgstr ""
+msgstr "समयक्षेत्रं न सेट् भवति; Date & Time सेटिंग्स् उद्घाट्य एकं सेट् कर्तुं अत्र क्लिक् कुर्वन्तु"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -459,7 +459,7 @@ msgstr "समयक्षेत्राणि"
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
-msgstr ""
+msgstr "Date & Time सेटिंग्स् उद्घाट्य समयक्षेत्रं सेट् कर्तुं घण्टाचिह्नं नुदन्तु ।"
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

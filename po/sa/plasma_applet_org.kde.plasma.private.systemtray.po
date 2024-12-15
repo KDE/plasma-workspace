@@ -55,7 +55,7 @@ msgstr "विविध"
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
-msgstr ""
+msgstr "प्रविष्टि"
 
 #: package/contents/ui/ConfigEntries.qml:81
 #, kde-format
@@ -96,7 +96,7 @@ msgstr "सर्वदा सर्वाणि प्रविष्टयः 
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr ""
+msgstr "फलकचिह्न आकारः : १."
 
 #: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
@@ -122,7 +122,7 @@ msgstr "टच मोड् मध्ये स्थित्वा स्व�
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr ""
+msgstr "फलकचिह्नान्तरम् : १."
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format
@@ -134,25 +134,25 @@ msgstr "लघु"
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Normal"
-msgstr ""
+msgstr "सामान्य"
 
 #: package/contents/ui/ConfigGeneral.qml:60
 #, kde-format
 msgctxt "@item:inlistbox Icon spacing"
 msgid "Large"
-msgstr ""
+msgstr "बृहत्‌"
 
 #: package/contents/ui/ConfigGeneral.qml:85
 #, kde-format
 msgctxt "@info:usagetip under a combobox when Touch Mode is on"
 msgid "Automatically set to Large when in Touch Mode"
-msgstr ""
+msgstr "स्पर्शविधौ स्थित्वा स्वयमेव Large इति सेट् भवति"
 
 #: package/contents/ui/ExpandedRepresentation.qml:59
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
-msgstr ""
+msgstr "Go Back इति"
 
 #: package/contents/ui/ExpandedRepresentation.qml:71
 #, kde-format
@@ -188,4 +188,4 @@ msgstr "गुप्तचिह्नानि दर्शयतु"
 #, kde-format
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
-msgstr ""
+msgstr "AILlmyjgGJP"

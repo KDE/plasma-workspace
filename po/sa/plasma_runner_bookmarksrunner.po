@@ -25,7 +25,7 @@ msgstr ":q: इत्यनेन सह मेलनं कुर्वन्�
 #, kde-format
 msgctxt "list of all web browser bookmarks"
 msgid "bookmarks"
-msgstr ""
+msgstr "पुस्तकचिह्नानि"
 
 #: bookmarksrunner.cpp:38
 #, kde-format
@@ -36,4 +36,4 @@ msgstr "सर्वाणि जालपुटस्य पुस्तकच�
 #, kde-format
 msgctxt "list of all konqueror bookmarks"
 msgid "bookmarks"
-msgstr ""
+msgstr "पुस्तकचिह्नानि"

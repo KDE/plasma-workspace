@@ -25,13 +25,13 @@ msgstr "&प्रभज्"
 #, kde-format
 msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
 msgid "Plasma"
-msgstr ""
+msgstr "प्लाज्मा"
 
 #: interactiveconsole.cpp:65
 #, kde-format
 msgctxt "Toolbar Button to switch to KWin Scripting Mode"
 msgid "KWin"
-msgstr ""
+msgstr "केविन्"
 
 #: interactiveconsole.cpp:66
 #, kde-format

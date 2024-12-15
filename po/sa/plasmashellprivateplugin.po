@@ -20,18 +20,18 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:46
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "बैटरी %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
@@ -42,32 +42,32 @@ msgstr "विद्युत्कोष"
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr ""
+msgstr "अवकाशदिनानि"
 
 #: calendar/eventdatadecorator.cpp:52
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
-msgstr ""
+msgstr "घटनाः"
 
 #: calendar/eventdatadecorator.cpp:54
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr ""
+msgstr "सर्वे"
 
 #: calendar/eventdatadecorator.cpp:56
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
-msgstr ""
+msgstr "इतर"
 
 #: calendar/qml/DayDelegate.qml:95
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 घटना"
+msgstr[1] "%1 घटनाः"
 
 #: calendar/qml/DayDelegate.qml:96
 #, kde-format
@@ -78,7 +78,7 @@ msgstr "न घटनाः"
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:131
 #, kde-format
@@ -114,7 +114,7 @@ msgstr "पूर्वदशकम्"
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "अद्य"
 
 #: calendar/qml/MonthViewHeader.qml:203
 #, kde-format
@@ -220,112 +220,112 @@ msgstr ""
 #: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "सुलभता"
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "अनुप्रयोग प्रक्षेपक"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "खगोलशास्त्रम्"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "दिनाङ्कः समयः च"
 
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "विकाससाधनम्"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "शिक्षा"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "पर्यावरण एवं मौसम"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "उदाहरणानि"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "सञ्चिकातन्त्रम्"
 
 #: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr ""
+msgstr "मजा तथा क्रीडा"
 
 #: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "ग्राफिक्स"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "भाषा"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "मानचित्रणम्"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "विविध"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "बहुमाध्यमम्"
 
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "ऑनलाइन सेवाएँ"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "उत्पादकता"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "प्रणाली सूचना"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "उपयोगिताएँ"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "विण्डोज एण्ड् टास्क्स्"
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "क्लिपबोर्ड"
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "कार्याणि"
 
 #: shellprivate/widgetexplorer.cpp:146
 #, kde-format
@@ -344,7 +344,7 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "Uninstallable"
-msgstr ""
+msgstr "विस्थापनीयम्"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
@@ -352,7 +352,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "सद्यः एव संस्थापितम्"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -373,7 +373,7 @@ msgstr "स्थानीयसञ्चिकातः विजेट् स�
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr ""
+msgstr "नवीनविजेट् प्राप्नुवन्तु"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -384,7 +384,7 @@ msgstr "Plasmoid File इति चिनोतु"
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr ""
+msgstr "%1 संकुलस्य संस्थापनं विफलम्: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format

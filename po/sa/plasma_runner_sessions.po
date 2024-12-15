@@ -22,7 +22,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to log out of the "
 "session"
 msgid "logout;log out"
-msgstr ""
+msgstr "logout;लॉग आउट्"
 
 #: sessionrunner.cpp:25
 #, kde-format
@@ -35,7 +35,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to shut down the "
 "computer"
 msgid "shutdown;shut down;power;power off"
-msgstr ""
+msgstr "shutdown;shut down;शक्ति;विद्युत् अवरम्"
 
 #: sessionrunner.cpp:31
 #, kde-format
@@ -48,7 +48,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to restart the "
 "computer"
 msgid "restart;reboot"
-msgstr ""
+msgstr "पुनः आरम्भ;पुनः आरम्भ"
 
 #: sessionrunner.cpp:37
 #, kde-format
@@ -60,7 +60,7 @@ msgstr "सङ्गणकं पुनः आरभ्यते"
 msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to lock the screen"
 msgid "lock;lock screen"
-msgstr ""
+msgstr "lock;लॉक स्क्रीन"
 
 #: sessionrunner.cpp:43
 #, kde-format
@@ -73,7 +73,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to save the "
 "desktop session"
 msgid "save;save session"
-msgstr ""
+msgstr "save;save सत्रम्"
 
 #: sessionrunner.cpp:49
 #, kde-format
@@ -86,7 +86,7 @@ msgctxt ""
 "KRunner keywords (split by semicolons without whitespace) to switch user "
 "sessions"
 msgid "switch user;new session"
-msgstr ""
+msgstr "स्विच उपयोक्ता;नव सत्र"
 
 #: sessionrunner.cpp:55
 #, kde-format
@@ -97,7 +97,7 @@ msgstr "भिन्नप्रयोक्तृरूपेण नूतन�
 #, kde-format
 msgctxt "KRunner keyword to list user sessions"
 msgid "sessions"
-msgstr ""
+msgstr "सत्रम्"
 
 #: sessionrunner.cpp:59
 #, kde-format
@@ -108,7 +108,7 @@ msgstr "सर्वेषां सत्राणां सूचीं कर
 #, kde-format
 msgctxt "KRunner keyword to switch user sessions"
 msgid "switch"
-msgstr ""
+msgstr "नुदति"
 
 #: sessionrunner.cpp:64
 #, kde-format
@@ -123,25 +123,25 @@ msgstr ""
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
-msgstr ""
+msgstr "Log Out इति"
 
 #: sessionrunner.cpp:91
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
-msgstr ""
+msgstr "शट डाउन"
 
 #: sessionrunner.cpp:98
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
-msgstr ""
+msgstr "पुनः आरभत"
 
 #: sessionrunner.cpp:105
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
-msgstr ""
+msgstr "ताल"
 
 #: sessionrunner.cpp:112
 #, kde-format

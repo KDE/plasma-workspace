@@ -113,7 +113,7 @@ msgstr "गौण साधनपट्टी लेबल"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icons and Toolbars"
-msgstr ""
+msgstr "Icons तथा Toolbars विन्यस्तं कुर्वन्तु"
 
 #: ui/EffectSettingsPopup.qml:36
 #, kde-format

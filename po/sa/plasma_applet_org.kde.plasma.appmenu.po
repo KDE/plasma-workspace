@@ -35,7 +35,7 @@ msgstr "पूर्णं अनुप्रयोगमेनू दर्श�
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Open a menu"
-msgstr ""
+msgstr "एकं मेनू उद्घाटयन्तु"
 
 #: plugin/appmenumodel.cpp:84
 #, kde-format

@@ -19,12 +19,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: baloosearchrunner.cpp:69
 #, kde-format
@@ -37,7 +37,7 @@ msgctxt ""
 "Audio files; translate this as a plural noun in languages with a plural form "
 "of the word"
 msgid "Audio"
-msgstr ""
+msgstr "श्रव्यः"
 
 #: baloosearchrunner.cpp:95
 #, kde-format

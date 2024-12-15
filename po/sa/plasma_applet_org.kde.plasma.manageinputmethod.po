@@ -20,7 +20,7 @@ msgstr ""
 #, kde-format
 msgctxt "Opens the system settings module"
 msgid "Configure Virtual Keyboards..."
-msgstr ""
+msgstr "वर्चुअल् कीबोर्ड्स् विन्यस्तं कुर्वन्तु..."
 
 #: contents/ui/main.qml:89
 #, kde-format

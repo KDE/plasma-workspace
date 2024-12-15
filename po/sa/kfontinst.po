@@ -3,30 +3,31 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 20:10+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:45+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
@@ -175,8 +176,8 @@ msgstr "चिह्नितसञ्चिकाः विलोपयन्�
 #, kde-format
 msgid "%1 duplicate font found."
 msgid_plural "%1 duplicate fonts found."
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 द्वितीयकं फ़ॉन्ट् प्राप्तम् ।"
+msgstr[1] "%1 द्वितीयकं फ़ॉन्ट् प्राप्तम् ।"
 
 #: kcmfontinst/DuplicatesDialog.cpp:189
 #, kde-format
@@ -241,8 +242,8 @@ msgstr "लोपार्थं चिह्नं कुर्वन्तु"
 #, kde-format
 msgid "Open font in font viewer?"
 msgid_plural "Open all %1 fonts in font viewer?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "font viewer इत्यस्मिन् font उद्घाटयन्तु?"
+msgstr[1] "font viewer मध्ये सर्वाणि %1 fonts उद्घाटयन्तु?"
 
 #: kcmfontinst/FontFilter.cpp:105
 #, kde-format
@@ -771,8 +772,8 @@ msgstr "Font विलोपयतु"
 #, kde-format
 msgid "Do you really want to delete this font?"
 msgid_plural "Do you really want to delete these %1 fonts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "किं भवान् वास्तवमेव एतत् फन्ट् विलोपयितुम् इच्छति ?"
+msgstr[1] "किं भवान् वास्तवमेव एतानि %1 फ़ॉन्ट् विलोपयितुम् इच्छति?"
 
 #: kcmfontinst/KCmFontInst.cpp:627
 #, kde-format
@@ -820,7 +821,11 @@ msgid ""
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] ""
+"<p>किं भवान् वास्तवम् एतत् फ़ॉन्ट् <i>%2</i> तः <i>%3 -</i> मध्ये स्थानान्तरयितुम् इच्छति ?"
+"</p>"
 msgstr[1] ""
+"<p>किं भवान् वास्तवमेव एतानि %1 फ़ॉन्ट् <i>%2</i> तः <i>%3</i> मध्ये स्थानान्तरयितुम् "
+"इच्छति ?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:674
 #, kde-format
@@ -886,8 +891,8 @@ msgstr "न फन्ट्"
 #, kde-format
 msgid "1 Font"
 msgid_plural "%1 Fonts"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "१ फन्ट्"
+msgstr[1] "%1 फ़ॉन्ट्स"
 
 #: kcmfontinst/KCmFontInst.cpp:895
 #, kde-format
@@ -1000,15 +1005,15 @@ msgstr "Font अक्षम करें"
 #, kde-format
 msgid "Do you really want to enable this font?"
 msgid_plural "Do you really want to enable these %1 fonts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "किं भवान् वास्तवमेव एतत् फन्ट् सक्षमं कर्तुम् इच्छति ?"
+msgstr[1] "किं भवान् वास्तवमेव एतानि %1 फ़ॉन्ट् सक्षमं कर्तुम् इच्छति?"
 
 #: kcmfontinst/KCmFontInst.cpp:1123
 #, kde-format
 msgid "Do you really want to disable this font?"
 msgid_plural "Do you really want to disable these %1 fonts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "किं भवान् वास्तवमेव एतत् फ़ॉन्ट् अक्षमं कर्तुम् इच्छति ?"
+msgstr[1] "किं भवान् वास्तवमेव एतानि %1 फ़ॉन्ट् निष्क्रियं कर्तुम् इच्छति?"
 
 #: kcmfontinst/KCmFontInst.cpp:1125
 #, kde-format
@@ -1019,7 +1024,11 @@ msgid_plural ""
 "<p>Do you really want to enable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
+"<p>किं भवान् वास्तवमेव &#39; <b>%2</b> &#39; समूहस्य अन्तः समाविष्टं एतत् फ़ॉन्ट् सक्षमं "
+"कर्तुम् इच्छति?</p>"
 msgstr[1] ""
+"<p>किं भवान् वास्तवमेव &#39; <b>%2</b> &#39; समूहस्य अन्तः समाविष्टानि एतानि %1 फ़ॉन्ट् "
+"सक्षमं कर्तुम् इच्छति?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
@@ -1030,7 +1039,11 @@ msgid_plural ""
 "<p>Do you really want to disable these %1 fonts contained within group '<b>"
 "%2</b>'?</p>"
 msgstr[0] ""
+"<p>किं भवान् वास्तवमेव &#39; <b>%2</b> &#39; समूहस्य अन्तः समाविष्टं एतत् फ़ॉन्ट् निष्क्रियं "
+"कर्तुम् इच्छति?</p>"
 msgstr[1] ""
+"<p>किं भवान् वास्तवमेव &#39; <b>%2</b> &#39; समूहस्य अन्तः समाविष्टानि एतानि %1 फ़ॉन्ट् "
+"निष्क्रियं कर्तुम् इच्छति?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1133 kcmfontinst/KCmFontInst.cpp:1135
 #, kde-format
@@ -1181,14 +1194,14 @@ msgstr "अज्ञात"
 #, kde-format
 msgctxt "First letter of the alphabet (in upper then lower case)"
 msgid "Aa"
-msgstr ""
+msgstr "आ"
 
 #: lib/FcEngine.cpp:871
 #, kde-format
 msgctxt ""
 "All letters of the alphabet (in upper/lower case pairs), followed by numbers"
 msgid "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
-msgstr ""
+msgstr "आBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789"
 
 #: lib/FcEngine.cpp:1033
 #, kde-format
@@ -1199,25 +1212,25 @@ msgstr "न वर्णाः प्राप्ताः।"
 #, kde-format
 msgctxt "A sentence that uses all of the letters of the alphabet"
 msgid "The quick brown fox jumps over the lazy dog"
-msgstr ""
+msgstr "द्रुतगतिः शृगालः आलस्यस्य श्वः उपरि कूर्दति"
 
 #: lib/FcEngine.cpp:1076
 #, kde-format
 msgctxt "All of the letters of the alphabet, uppercase"
 msgid "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-msgstr ""
+msgstr "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
 #: lib/FcEngine.cpp:1081
 #, kde-format
 msgctxt "All of the letters of the alphabet, lowercase"
 msgid "abcdefghijklmnopqrstuvwxyz"
-msgstr ""
+msgstr "abcdefghijklmnopqrstuvwxyz"
 
 #: lib/FcEngine.cpp:1086
 #, kde-format
 msgctxt "Numbers and characters"
 msgid "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
-msgstr ""
+msgstr "0123456789.:,;(*!?'/\\\")£$€%^&-+@~#<>{}[]"
 
 #: lib/FcEngine.cpp:1484
 #, kde-format
@@ -1228,8 +1241,8 @@ msgstr "त्रुटिः: फ़ॉन्ट् इत्यस्य न�
 #, kde-format
 msgid "%2 [1 pixel]"
 msgid_plural "%2 [%1 pixels]"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%2 [१ पिक्सेल्] ।"
+msgstr[1] "%2 [%1 पिक्सेल्] ।"
 
 #: lib/KfiConstants.h:22
 msgid "Personal"

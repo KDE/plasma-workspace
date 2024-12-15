@@ -20,7 +20,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title"
 msgid "Memory Shortage Avoided"
-msgstr ""
+msgstr "स्मृति-अभावः परिहृतः"
 
 #: module.cpp:68
 #, kde-kuit-format
@@ -30,6 +30,8 @@ msgid ""
 "system is low on memory. Consider closing unused applications or browser "
 "tabs."
 msgstr ""
+"<command>%1</command> इति Linux कर्नेल् द्वारा समाप्तम् अस्ति यतः प्रणाली स्मृतिः न्यूना "
+"अस्ति । अप्रयुक्तानि अनुप्रयोगाः अथवा ब्राउजर् ट्याब्स् बन्दं कर्तुं विचारयन्तु ।"
 
 #: module.cpp:74
 #, kde-kuit-format
@@ -39,9 +41,11 @@ msgid ""
 "Linux kernel because the system is low on memory. Consider closing unused "
 "applications or browser tabs."
 msgstr ""
+"पृष्ठभूमिसेवा <command>%1</command> Linux कर्नेल् द्वारा समाप्तवती यतः प्रणाली स्मृतिः "
+"न्यूना अस्ति । अप्रयुक्तानि अनुप्रयोगाः अथवा ब्राउजर् ट्याब्स् बन्दं कर्तुं विचारयन्तु ।"
 
 #: module.cpp:82
 #, kde-format
 msgctxt "@action"
 msgid "Restart Application"
-msgstr ""
+msgstr "अनुप्रयोगं पुनः आरभत"

@@ -19,12 +19,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: logout.cpp:273
 #, kde-format
@@ -35,7 +35,7 @@ msgstr "'%1' द्वारा लॉगआउट् रद्दम्।"
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "सत्रं निर्गच्छति"
 
 #: main.cpp:66
 #, kde-format
@@ -54,6 +54,8 @@ msgid ""
 "No write access to $HOME directory (%1). If this is intentional, set "
 "<envar>KDE_HOME_READONLY=1</envar> in your environment."
 msgstr ""
+"$HOME निर्देशिकायां (%1) लेखनप्रवेशः नास्ति । यदि एतत् अभिप्रेतम् अस्ति तर्हि भवतः परिवेशे "
+"<envar>KDE_HOME_READONLY=1</envar> सेट् कुर्वन्तु ।"
 
 #: main.cpp:81
 #, kde-format
@@ -155,7 +157,7 @@ msgstr ""
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[अज्ञात]"
 
 #: server.cpp:801
 #, kde-kuit-format
@@ -165,6 +167,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"प्रणाल्याः सत्रप्रबन्धनसंसाधनाः क्षीणाः इति कारणेन केचन एप्स् प्रबन्धयितुं असमर्थाः । अत्र "
+"सत्रसंसाधनानाम् शीर्षत्रयग्राहकाः सन्ति ।\n"
+"%1"
 
 #: server.cpp:1073
 #, kde-kuit-format
@@ -174,3 +179,5 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"<application>%1</application> इत्यस्य पुनर्स्थापनं कर्तुं असमर्थः यतः एतत् भग्नम् अस्ति "
+"तथा च प्रणाल्याः सत्रपुनर्स्थापनसंसाधनं क्षीणं कृतवान् । कृपया एप्-विकासकानाम् कृते एतत् सूचयन्तु।"

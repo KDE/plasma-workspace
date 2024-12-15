@@ -3,18 +3,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-23 00:39+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
@@ -32,41 +35,41 @@ msgstr "न मीडिया वाद्यते"
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
-msgstr ""
+msgstr "-%1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:535
 #, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
-msgstr ""
+msgstr "शफल"
 
 #: package/contents/ui/ExpandedRepresentation.qml:559
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
-msgstr ""
+msgstr "पूर्व Track"
 
 #: package/contents/ui/ExpandedRepresentation.qml:581
 #: package/contents/ui/main.qml:119
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
-msgstr ""
+msgstr "विराम"
 
 #: package/contents/ui/ExpandedRepresentation.qml:581
 #: package/contents/ui/main.qml:127
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
-msgstr ""
+msgstr "क्रीडतु"
 
 #: package/contents/ui/ExpandedRepresentation.qml:599
 #: package/contents/ui/main.qml:135
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
-msgstr ""
+msgstr "अग्रिमः Track"
 
 #: package/contents/ui/ExpandedRepresentation.qml:622
 #, kde-format
@@ -86,6 +89,9 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1 (%2) द्वारा .\n"
+"विरामं कर्तुं मध्य-क्लिक् कुर्वन्तु\n"
+"मात्रा समायोजितुं स्क्रॉल कुर्वन्तु"
 
 #: package/contents/ui/main.qml:58
 #, kde-format
@@ -95,6 +101,9 @@ msgid ""
 "Middle-click to pause\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1\n"
+"विरामं कर्तुं मध्य-क्लिक् कुर्वन्तु\n"
+"मात्रा समायोजितुं स्क्रॉल कुर्वन्तु"
 
 #: package/contents/ui/main.qml:60
 #, kde-format
@@ -104,6 +113,9 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
+"%1 द्वारा (विरामितः, %2)\n"
+"क्रीडितुं मध्य-क्लिक् कुर्वन्तु\n"
+"मात्रा समायोजितुं स्क्रॉल कुर्वन्तु"
 
 #: package/contents/ui/main.qml:61
 #, kde-format
@@ -113,21 +125,24 @@ msgid ""
 "Middle-click to play\n"
 "Scroll to adjust volume"
 msgstr ""
+"विरामः (%1) २.\n"
+"क्रीडितुं मध्य-क्लिक् कुर्वन्तु\n"
+"मात्रा समायोजितुं स्क्रॉल कुर्वन्तु"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
-msgstr ""
+msgstr "उद्घाटित"
 
 #: package/contents/ui/main.qml:143
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
-msgstr ""
+msgstr "विरमतु"
 
 #: package/contents/ui/main.qml:156
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
-msgstr ""
+msgstr "परिजहातु"

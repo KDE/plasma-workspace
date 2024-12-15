@@ -25,10 +25,10 @@ msgstr "%1 क्रियाकलापं प्रति स्विच क
 #, kde-format
 msgctxt "@action:inmenu widget context menu"
 msgid "Show Activity Manager"
-msgstr ""
+msgstr "गतिविधिप्रबन्धकं दर्शयतु"
 
 #: contents/ui/main.qml:100
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Activities…"
-msgstr ""
+msgstr "&क्रियाकलापाः विन्यस्तं कुर्वन्तु..."

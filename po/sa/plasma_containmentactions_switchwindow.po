@@ -38,16 +38,16 @@ msgstr "केवलं वर्तमानस्य डेस्कटॉप�
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Configure Switch Window Plugin"
-msgstr ""
+msgstr "स्विच विण्डो प्लगिन् विन्यस्तं कुर्वन्तु"
 
 #: switch.cpp:155
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "Windows"
-msgstr ""
+msgstr "विण्डोज"
 
 #: switch.cpp:179 switch.cpp:200 switch.cpp:202
 #, kde-format
 msgctxt "plasma_containmentactions_switchwindow"
 msgid "All Desktops"
-msgstr ""
+msgstr "सर्वे डेस्कटॉप्"

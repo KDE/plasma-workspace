@@ -3,77 +3,79 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-08 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "भवतः नामानि"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "भवतः ईमेलपत्राणि"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:58
 #, kde-format
 msgctxt "@title:window"
 msgid "Open Image"
-msgstr ""
+msgstr "चित्रं उद्घाटयतु"
 
 #: imagepackage/contents/ui/AddFileDialog.qml:70
 #, kde-format
 msgctxt "@title:window"
 msgid "Directory with the wallpaper to show slides from"
-msgstr ""
+msgstr "स्लाइड्स् दर्शयितुं वॉलपेपरसहितं निर्देशिका"
 
 #: imagepackage/contents/ui/config.qml:128
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
-msgstr ""
+msgstr "स्थितिः : १."
 
 #: imagepackage/contents/ui/config.qml:131
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
-msgstr ""
+msgstr "स्केल कृत्वा क्रॉप् कृतम्"
 
 #: imagepackage/contents/ui/config.qml:135
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
-msgstr ""
+msgstr "स्केल कृतम्"
 
 #: imagepackage/contents/ui/config.qml:139
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
-msgstr ""
+msgstr "स्केल कृत्वा, अनुपातं रक्षन्तु"
 
 #: imagepackage/contents/ui/config.qml:143
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr ""
+msgstr "केन्द्रित"
 
 #: imagepackage/contents/ui/config.qml:147
 #, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
-msgstr ""
+msgstr "टाइल्युक्तम्"
 
 #: imagepackage/contents/ui/config.qml:175
 #, kde-format
@@ -114,25 +116,25 @@ msgstr "बिम्बाः"
 #, kde-format
 msgctxt "@action:button the thing being added is an image file"
 msgid "Add…"
-msgstr ""
+msgstr "संयोजयति…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr ""
+msgstr "वॉलपेपर इमेज योजयतु..."
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
 msgctxt "@action:button the new things being gotten are wallpapers"
 msgid "Get New…"
-msgstr ""
+msgstr "Get New..."
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr ""
+msgstr "नवीन वॉलपेपर चित्राणि प्राप्नुवन्तु..."
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -259,22 +261,22 @@ msgstr "प्रत्येकं परिवर्तनं कुर्व�
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 घण्टा"
+msgstr[1] "%1 घण्टा"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:142
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 मिनिट्"
+msgstr[1] "%1 निमेषाः"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 द्वितीयम्"
+msgstr[1] "%1 सेकण्ड्"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:206
 #, kde-format
@@ -285,13 +287,13 @@ msgstr "पुटम्"
 #, kde-format
 msgctxt "@action button the thing being added is a folder"
 msgid "Add…"
-msgstr ""
+msgstr "संयोजयति…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
 #, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
-msgstr ""
+msgstr "पुटं योजयतु..."
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format
@@ -312,31 +314,31 @@ msgstr "तत्र वॉलपेपरस्थानानि विन्�
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Set as Wallpaper"
-msgstr ""
+msgstr "Wallpaper इति सेट् कुर्वन्तु"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:52
 #, kde-format
 msgctxt "@action:inmenu Set as Desktop Wallpaper"
 msgid "Desktop"
-msgstr ""
+msgstr "डेस्कटॉप"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:58
 #, kde-format
 msgctxt "@action:inmenu Set as Lockscreen Wallpaper"
 msgid "Lockscreen"
-msgstr ""
+msgstr "लॉकस्क्रीन"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:64
 #, kde-format
 msgctxt "@action:inmenu Set as both lockscreen and Desktop Wallpaper"
 msgid "Both"
-msgstr ""
+msgstr "उभौ"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:97
 #, kde-kuit-format
 msgctxt "@info %1 is the dbus error message"
 msgid "An error occurred while attempting to set the Plasma wallpaper:<nl/>%1"
-msgstr ""
+msgstr "Plasma wallpaper:<nl/>%1 सेट् कर्तुं प्रयतमाने त्रुटिः अभवत्"
 
 #: wallpaperfileitemactionplugin/wallpaperfileitemaction.cpp:110
 #, kde-format

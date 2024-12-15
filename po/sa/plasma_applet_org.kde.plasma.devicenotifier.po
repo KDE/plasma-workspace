@@ -21,7 +21,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr ""
+msgstr "%1 %2 तः मुक्तम्"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -29,7 +29,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr ""
+msgstr "अभिगम्य..."
 
 #: package/contents/ui/DeviceItem.qml:105
 #, kde-format
@@ -37,7 +37,7 @@ msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr ""
+msgstr "निष्कासयन्..."
 
 #: package/contents/ui/DeviceItem.qml:108
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "कोऽपि उपकरणः उपलब्धः नास्त
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr ""
+msgstr "हटनीयानि उपकरणानि विन्यस्यताम्..."
 
 #: package/contents/ui/main.qml:134
 #, kde-format
@@ -150,7 +150,7 @@ msgstr "एतत् यन्त्रं माउण्ट् कर्तु
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr ""
+msgstr "भवन्तः एतत् यन्त्रं निष्कासयितुं अधिकृताः न सन्ति।"
 
 #: plugin/deviceerrormonitor_p.cpp:198
 #, kde-format
@@ -173,13 +173,15 @@ msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] ""
+"अस्मिन् यन्त्रे एकः वा अधिकः सञ्चिकाः \"%2\" इति अनुप्रयोगे उद्घाटिताः भवन्ति ।"
 msgstr[1] ""
+"अस्मिन् यन्त्रे एकः वा अधिकः सञ्चिकाः निम्नलिखित-अनुप्रयोगेषु उद्घाटिताः भवन्ति: %2."
 
 #: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
-msgstr ""
+msgstr ", ९. "
 
 #: plugin/deviceerrormonitor_p.cpp:258
 #, kde-format
@@ -190,7 +192,7 @@ msgstr "एतत् यन्त्रं माउण्ट् कर्तु
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
-msgstr ""
+msgstr "एतत् यन्त्रं निष्कासयितुं न शक्तवान्।"
 
 #: plugin/deviceerrormonitor_p.cpp:264
 #, kde-format
