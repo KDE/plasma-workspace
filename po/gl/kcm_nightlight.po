@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-12-14 11:03+0100\n"
+"PO-Revision-Date: 2024-12-16 01:01+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -173,6 +173,7 @@ msgstr ""
 "torres de telefonía se están dispoñíbeis, ou senón enviando o seu enderezo "
 "de IP a <link url='https://geoip.com/privacy/'>GeoIP</link>."
 
+# skip-rule: trasno-file-a_reverse
 #: ui/main.qml:319
 #, kde-kuit-format
 msgctxt "@info"

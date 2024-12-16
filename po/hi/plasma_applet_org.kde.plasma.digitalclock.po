@@ -1,21 +1,22 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Raghavendra Kamath <raghu@raghukamath.com>, 2021, 2022.
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2022-02-17 23:00+0530\n"
-"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
-"Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
+"PO-Revision-Date: 2024-12-15 19:31+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Lokalize 21.12.2\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -184,7 +185,7 @@ msgstr "२४-घंटे"
 #| msgid "Change Regional Settings…"
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
-msgstr "क्षेत्रीय सेटिंग्स बदलें..."
+msgstr "क्षेत्रीय सेटिंग्स बदलें…"
 
 #: package/contents/ui/configAppearance.qml:152
 #, fuzzy, kde-format
@@ -431,7 +432,7 @@ msgstr "दिनांक और समय समायोजित करे�
 #: package/contents/ui/main.qml:225
 #, kde-format
 msgid "Set Time Format…"
-msgstr "समय प्रारूप नियत करें..."
+msgstr "समय प्रारूप नियत करें…"
 
 #: package/contents/ui/NoTimezoneWarning.qml:37
 #, kde-format

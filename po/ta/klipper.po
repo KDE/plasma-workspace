@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-11 00:42+0000\n"
-"PO-Revision-Date: 2024-10-27 11:43+0530\n"
+"PO-Revision-Date: 2024-12-15 15:51+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -594,11 +594,10 @@ msgid "Clear Clipboard History"
 msgstr "பிடிப்புப்பலகையின் வரலாற்றை காலியாக்கு"
 
 #: historymodel.cpp:242
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2 %3bpp"
+msgstr "%1x%2"
 
 #: klipper.cpp:90
 #, kde-format

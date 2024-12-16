@@ -3,20 +3,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Raghavendra Kamath <raghu@raghukamath.com>, 2021.
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-07 00:42+0000\n"
-"PO-Revision-Date: 2021-09-07 10:37+0530\n"
-"Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
-"Language-Team: kde-hindi\n"
+"PO-Revision-Date: 2024-12-15 19:31+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: hi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -26,7 +27,7 @@ msgstr "%1 के साथ खोलें"
 #: fileinfo.cpp:174
 #, kde-format
 msgid "Open with…"
-msgstr "इसके साथ खोलें..."
+msgstr "इसके साथ खोलें…"
 
 #: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:187
 #, kde-format
@@ -448,7 +449,7 @@ msgstr "सभी सूचनाएं साफ़ करें"
 #: package/contents/ui/main.qml:248
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
-msgstr "घटना की सूचनाएं और क्रियाएँ विन्यस्त करें..."
+msgstr "घटना की सूचनाएं और क्रियाएँ विन्यस्त करें…"
 
 #~ msgctxt "A button tooltip; expands the item to show details"
 #~ msgid "Show Details"

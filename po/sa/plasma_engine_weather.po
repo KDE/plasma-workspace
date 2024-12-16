@@ -10,9 +10,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -3834,9 +3834,7 @@ msgid "Low Drifting Snow"
 msgstr "न्यून बहाव हिम"
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Mostly Clear"
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
 msgstr "अधिकांशतः निर्मलम्"
@@ -4880,33 +4878,25 @@ msgid "Mostly Clear"
 msgstr "अधिकांशतः निर्मलम्"
 
 #: noaa_i18n.dat:358
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Showers or thunderstorms"
+#, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr "वर्षा वा वज्रपातः वा"
+msgstr "वर्षाणि वज्रपाताः च"
 
 #: noaa_i18n.dat:359
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Slight Chance Thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr "मामूली संभावना वज्रपात"
+msgstr "वर्षाणां वज्रपातस्य च मामूली संभावना"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Chance of showers or thunderstorms"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "वर्षाणां वा वज्रपातस्य वा सम्भावना"
+msgstr "वर्षाणां वज्रपातस्य च सम्भावना"
 
 #: noaa_i18n.dat:361
-#, fuzzy, kde-format
-#| msgctxt "weather forecast"
-#| msgid "Thunderstorms Likely"
+#, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr "वज्रपातः सम्भाव्यते"
+msgstr "वर्षाणां वज्रपातस्य च सम्भावना"

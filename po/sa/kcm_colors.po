@@ -10,9 +10,9 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.3.2\n"
-"X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-SourceCharset: UTF-8\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -439,9 +439,7 @@ msgstr "द्रष्टुं/संशोधयितुं वर्णस�
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
-#, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
+#, kde-format
 msgctxt "color-sets"
 msgid "Common colors"
 msgstr "सामान्यवर्णाः"
@@ -1230,25 +1228,19 @@ msgid " * %1 (current color scheme)"
 msgstr " * %1 (वर्तमानवर्णयोजना)"
 
 #: ui/AccentColorUI.qml:27
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from color scheme"
-#| msgid "Accent Color From Color Scheme"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from color scheme"
 msgid "Accent color from color scheme"
 msgstr "वर्ण योजनातः शिरस्कन्धवर्णः"
 
 #: ui/AccentColorUI.qml:28
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox Accent color from wallpaper"
-#| msgid "Accent Color From Wallpaper"
+#, kde-format
 msgctxt "@item:inlistbox Accent color from wallpaper"
 msgid "Accent color from wallpaper"
 msgstr "शिरस्कन्ध रङ्ग दीपचित्रतः"
 
 #: ui/AccentColorUI.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@item:inlistbox User-chosen custom accent color"
-#| msgid "Custom Accent Color"
+#, kde-format
 msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "अनुकूलनीयः शिरस्कन्ध रंग"
@@ -1265,22 +1257,19 @@ msgid ""
 msgstr "'%1' इति वर्णयोजना न संस्थापिता । तस्य स्थाने पूर्वनिर्धारितं विषयवस्तुं चिन्वन् ।."
 
 #: ui/main.qml:123
-#, fuzzy, kde-format
-#| msgid "All Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "All schemes"
 msgstr "सर्वाणि योजनानि"
 
 #: ui/main.qml:124
-#, fuzzy, kde-format
-#| msgid "Light Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Light schemes"
 msgstr "प्रकाश योजनाएँ"
 
 #: ui/main.qml:125
-#, fuzzy, kde-format
-#| msgid "Dark Schemes"
+#, kde-format
 msgctxt "@item:inlistbox filter displayed schemes"
 msgid "Dark schemes"
 msgstr "अन्धकार योजनाएँ"
