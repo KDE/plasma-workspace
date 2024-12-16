@@ -9,6 +9,8 @@ pragma ComponentBehavior: Bound
 
 import QtQuick
 
+import org.kde.kirigami as Kirigami
+
 import org.kde.plasma.components as PlasmaComponents3
 import org.kde.plasma.plasmoid
 
@@ -175,7 +177,13 @@ AbstractItem {
     }
 
     PlasmaComponents3.BusyIndicator {
-        anchors.fill: parent
+        anchors {
+            top: parent.top
+            bottom: parent.bottom
+            left: parent.left
+            leftMargin: inHiddenLayout ? Math.round(Kirigami.Units.smallSpacing / 2) : 0
+            right: inHiddenLayout ? undefined : parent.right
+        }
         z: 999
         running: plasmoidContainer.applet?.plasmoid.busy ?? false
     }
