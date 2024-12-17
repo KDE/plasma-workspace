@@ -206,8 +206,8 @@ void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const M
     QRegularExpression newLine(QStringLiteral("[\\r\\n\\t]+"));
     if (!metadata.title.isEmpty()) {
         auto title = new QString(metadata.title);
-        QString titleLine = title->section(newLine, 0, 0);
-        if (m_backgroundTitleCache.insert(path, &titleLine, 1)) {
+        QString *titleLine = new QString(title->section(newLine, 0, 0));
+        if (m_backgroundTitleCache.insert(path, titleLine, 1)) {
             Q_EMIT dataChanged(index, index, {Qt::DisplayRole});
         } else {
             delete title;
@@ -216,8 +216,8 @@ void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const M
 
     if (!metadata.author.isEmpty()) {
         auto author = new QString(metadata.author);
-        QString authorLine = author->section(newLine, 0, 0);
-        if (m_backgroundAuthorCache.insert(path, &authorLine, 1)) {
+        QString *authorLine = new QString(author->section(newLine, 0, 0));
+        if (m_backgroundAuthorCache.insert(path, authorLine, 1)) {
             Q_EMIT dataChanged(index, index, {AuthorRole});
         } else {
             delete author;
