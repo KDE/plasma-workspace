@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-14 00:42+0000\n"
-"PO-Revision-Date: 2024-07-17 09:15+0300\n"
+"PO-Revision-Date: 2024-12-16 07:54+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.05.1\n"
+"X-Generator: Lokalize 24.08.3\n"
 
 #: package/contents/ui/DeviceItem.qml:98
 #, kde-format
@@ -178,12 +178,8 @@ msgid_plural ""
 "One or more files on this device are opened in following applications: %2."
 msgstr[0] "קובץ אחד או יותר בהתקן הזה פתוחים ביישום „%2”."
 msgstr[1] "קובץ אחד או יותר בהתקן הזה פתוחים ביישומים הבאים: %2."
-msgstr[2] ""
-"קובץ אחד או יותר בהתקן הזה פתוחים ביישומים הבאים: %2.לחץ כדי לגשת להתקן "
-"מיישומים אחרים."
-msgstr[3] ""
-"קובץ אחד או יותר בהתקן הזה פתוחים ביישומים הבאים: %2.לחץ כדי לגשת להתקן "
-"מיישומים אחרים."
+msgstr[2] "קובץ אחד או יותר בהתקן הזה פתוחים ביישומים הבאים: %2."
+msgstr[3] "קובץ אחד או יותר בהתקן הזה פתוחים ביישומים הבאים: %2."
 
 #: plugin/deviceerrormonitor_p.cpp:238
 #, kde-format
