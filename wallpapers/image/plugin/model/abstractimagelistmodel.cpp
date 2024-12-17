@@ -8,6 +8,7 @@
 
 #include <QPainter>
 #include <QThreadPool>
+#include <QRegularExpression>
 
 #include <KFileItem>
 #include <KIO/PreviewJob>
@@ -201,10 +202,14 @@ void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const M
 {
     const QPersistentModelIndex index = m_sizeJobsUrls.take(path);
 
+    // JR the title is then set in the model m_backgroundTitleCache here
 #if HAVE_KExiv2
+    QRegularExpression newLine(QStringLiteral("[\\r\\n\\t]+"));
     if (!metadata.title.isEmpty()) {
         auto title = new QString(metadata.title);
-        if (m_backgroundTitleCache.insert(path, title, 1)) {
+        //QString titleLine = title->section('\n', 0, 0);
+        QString titleLine = title->section(newLine, 0, 0);
+        if (m_backgroundTitleCache.insert(path, &titleLine, 1)) {
             Q_EMIT dataChanged(index, index, {Qt::DisplayRole});
         } else {
             delete title;
@@ -213,7 +218,9 @@ void AbstractImageListModel::slotMediaMetadataFound(const QString &path, const M
 
     if (!metadata.author.isEmpty()) {
         auto author = new QString(metadata.author);
-        if (m_backgroundAuthorCache.insert(path, author, 1)) {
+        //author = author->section(newLine, 0, 0);
+        QString authorLine = author->section(newLine, 0, 0);
+        if (m_backgroundAuthorCache.insert(path, &authorLine, 1)) {
             Q_EMIT dataChanged(index, index, {AuthorRole});
         } else {
             delete author;
