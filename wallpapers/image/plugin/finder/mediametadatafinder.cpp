@@ -43,7 +43,6 @@ void MediaMetadataFinder::run()
         metadata.title = QString::fromUtf8(titleByte).chopped(std::min<qsizetype>(titleByte.size(), 1));
     }
 
-    // JR the title is extracted here passed onto AbstractImageListModel::slotMediaMetadataFound()
     // Use description as title
     if (metadata.title.isEmpty()) {
         const QByteArray titleByte = exivImage.getExifTagData("Exif.Image.ImageDescription");

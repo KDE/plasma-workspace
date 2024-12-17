@@ -37,10 +37,8 @@ QVariant ImageListModel::data(const QModelIndex &index, int role) const
     const int row = index.row();
 
     switch (role) {
-    // JR Now we get the title from here!
     case Qt::DisplayRole: {
         const QString *const title = m_backgroundTitleCache.object(m_data.at(row));
-        //QString titleLine = title->section(QStringLiteral("\n"), 0, 0);
 
         if (title) {
             return title->isEmpty() ? QFileInfo(m_data.at(row)).completeBaseName() : *title;

@@ -20,9 +20,6 @@ KCM.GridDelegate {
     opacity: model.pendingDeletion ? 0.5 : 1
     scale: index, 1 // Workaround for https://bugreports.qt.io/browse/QTBUG-107458
 
-    // This is the problem text!
-    //text: "YYY moo moo moo asd asd wqer f sdf sdf sdf sdf s fsdf we rfwer wer sd asd asd asd" // model.display
-    //subtitle: "XXX hello XXXX Moo thing one two one two asdj saoijhwertlkjsdfg jkhfjh werf wer jkhnsdfjnvjn werijwerjf " //model.author
     text: model.display
     subtitle: model.author
 
