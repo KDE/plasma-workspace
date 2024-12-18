@@ -456,10 +456,10 @@ ki18n_install(po)
 install(FILES completions/plasmashell.zsh RENAME _plasmashell DESTINATION ${KDE_INSTALL_ZSHAUTOCOMPLETEDIR})
 
 ecm_qt_install_logging_categories(
-        EXPORT PLASMAWORKSPACE
-        FILE plasma-workspace.categories
-        DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
-        )
+    EXPORT PLASMAWORKSPACE
+    FILE plasma-workspace.categories
+    DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
+)
 
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

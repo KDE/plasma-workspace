@@ -9,13 +9,14 @@ set(notifications_engine_SRCS
     notificationaction.h
 )
 
-ecm_qt_declare_logging_category(notifications_engine_SRCS HEADER debug.h
-                                               IDENTIFIER NOTIFICATIONS
-                                               CATEGORY_NAME kde.dataengine.notifications`
-                                               DEFAULT_SEVERITY Info
-                                               DESCRIPTION "DataEngine notifications"
-                                               EXPORT PLASMAWORKSPACE
-                                           )
+ecm_qt_declare_logging_category(notifications_engine_SRCS
+    HEADER debug.h
+    IDENTIFIER NOTIFICATIONS
+    CATEGORY_NAME kde.dataengine.notifications
+    DEFAULT_SEVERITY Info
+    DESCRIPTION "DataEngine notifications"
+    EXPORT PLASMAWORKSPACE
+)
 
 kcoreaddons_add_plugin(plasma_engine_notifications SOURCES ${notifications_engine_SRCS} INSTALL_NAMESPACE plasma5support/dataengine)
 
