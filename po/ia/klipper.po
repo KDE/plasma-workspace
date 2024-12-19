@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-11 00:42+0000\n"
-"PO-Revision-Date: 2024-10-26 10:39+0200\n"
+"PO-Revision-Date: 2024-12-18 18:07+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -639,11 +639,10 @@ msgid "Clear Clipboard History"
 msgstr "Netta chrnologia de area de transferentia"
 
 #: historymodel.cpp:242
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2 %3bpp"
+msgstr "%1x%2"
 
 #: klipper.cpp:90
 #, kde-format
