@@ -178,7 +178,7 @@ void HistoryModel::clear()
         return;
     }
     for (const auto &item : m_items) {
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'));
+        KIO::del(QUrl::fromLocalFile(dataLocation(item->uuid())));
     }
     QSqlQuery(u"VACUUM"_s, m_db).exec();
     beginResetModel();
@@ -224,6 +224,31 @@ int HistoryModel::rowCount(const QModelIndex &parent) const
     return m_items.size();
 }
 
+QString HistoryModel::dataLocation(QStringView itemUuid, QStringView dataUuid) const
+{
+    if (itemUuid.empty()) {
+        return m_dbFolder % u"/data/";
+    }
+    if (dataUuid.empty()) {
+        return m_dbFolder % u"/data/" % itemUuid % u'/';
+    }
+    return m_dbFolder % u"/data/" % itemUuid % u'/' % dataUuid;
+}
+
+QString HistoryModel::dataUuid(const std::shared_ptr<HistoryItem> &item, const QLatin1String &mimetype) const
+{
+    if (!item || mimetype.empty()) {
+        return {};
+    }
+
+    Q_ASSERT_X(m_db.isOpen(), Q_FUNC_INFO, qPrintable(m_db.lastError().text()));
+    QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), mimetype), m_db);
+    if (query.exec() && query.isSelect() && query.next()) {
+        return query.value(0).toString();
+    }
+    return {};
+}
+
 QVariant HistoryModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid() || index.row() >= m_items.size() || index.column() != 0) {
@@ -236,9 +261,9 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
     switch (role) {
     case Qt::DisplayRole: {
         if (item->type() == HistoryItemType::Image) {
-            QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), s_imageFormat), m_db);
-            if (query.exec() && query.isSelect() && query.next()) {
-                QSize size = QImageReader(QString(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString())).size();
+            auto dataUuid = this->dataUuid(item, s_imageFormat);
+            if (!dataUuid.isEmpty()) {
+                QSize size = QImageReader(dataLocation(item->uuid(), dataUuid)).size();
                 return QString(u"▨ " + i18nc("@info:tooltip width x height", "%1x%2", QString::number(size.width()), QString::number(size.height())));
             }
         }
@@ -248,9 +273,9 @@ QVariant HistoryModel::data(const QModelIndex &index, int role) const
         if (!(item->allTypes() & HistoryItemType::Image)) {
             return QUrl();
         }
-        QSqlQuery query(u"SELECT data_uuid FROM aux WHERE uuid='%1' AND (mimetype='%2')"_s.arg(item->uuid(), s_imageFormat), m_db);
-        if (query.exec() && query.isSelect() && query.next()) {
-            return QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/' + query.value(0).toString());
+        auto dataUuid = this->dataUuid(item, s_imageFormat);
+        if (!dataUuid.isEmpty()) {
+            return QUrl::fromLocalFile(dataLocation(item->uuid(), dataUuid));
         }
         return QUrl();
     }
@@ -310,7 +335,7 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
             }
         }
 
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'), KIO::HideProgressInfo);
+        KIO::del(QUrl::fromLocalFile(dataLocation(item->uuid())), KIO::HideProgressInfo);
         saveToFile(m_dbFolder, text.toUtf8(), newUuid, newUuid); // Must be synchronous so the clipboard can be updated immediately
 
         item = std::make_shared<HistoryItem>(std::move(newUuid), std::move(mimetypes), std::move(text));
@@ -347,7 +372,7 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
     }
 
     for (int i = 0; i < count; ++i) {
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + m_items[row + i]->uuid() + u'/'), KIO::HideProgressInfo);
+        KIO::del(QUrl::fromLocalFile(dataLocation(m_items[row + i]->uuid())), KIO::HideProgressInfo);
     }
 
     beginRemoveRows(QModelIndex(), row, row + count - 1);
@@ -475,7 +500,7 @@ bool HistoryModel::loadHistory()
     } else {
         m_dbFolder = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper";
     }
-    QDir().mkpath(m_dbFolder + u'/' + u"data");
+    QDir().mkpath(dataLocation());
     m_db = QSqlDatabase::database(u"klipper"_s);
     if (!m_db.isValid()) [[likely]] {
         m_db = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"klipper"_s);

@@ -118,6 +118,9 @@ private:
 
     static void saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid);
 
+    QString dataLocation(QStringView itemUuid = {}, QStringView dataUuid = {}) const;
+    QString dataUuid(const std::shared_ptr<HistoryItem> &item, const QLatin1String &mimetype) const;
+
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
     int m_pendingJobs = 0;
