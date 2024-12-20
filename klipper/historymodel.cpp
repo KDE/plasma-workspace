@@ -174,7 +174,7 @@ HistoryModel::~HistoryModel()
 
 void HistoryModel::clear()
 {
-    if (TransactionGuard transaction(&m_db); !transaction.exec(u"DELETE FROM main"_s) || !transaction.exec(u"DELETE FROM aux"_s)) {
+    if (QSqlQuery query(m_db); !query.exec(u"DELETE FROM main"_s)) {
         return;
     }
     for (const auto &item : m_items) {
@@ -287,13 +287,16 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
         {
             TransactionGuard transaction(&m_db);
             {
+                if (!transaction.exec(u"DELETE FROM aux WHERE uuid='%1'"_s.arg(item->uuid()))) {
+                    return false;
+                }
                 QSqlQuery query(m_db);
                 query.prepare(u"UPDATE main SET (uuid, mimetypes, text)=(?, ?, ?) WHERE uuid='%1'"_s.arg(item->uuid()));
                 query.addBindValue(newUuid);
                 query.addBindValue(mimetypes.join(u','));
                 query.addBindValue(text);
                 // last_used_time is updated in the signal slot
-                if (!transaction.exec(query) || !transaction.exec(u"DELETE FROM aux WHERE uuid='%1'"_s.arg(item->uuid()))) {
+                if (!transaction.exec(query)) {
                     return false;
                 }
             }
@@ -339,9 +342,6 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
         }
         const QString uuids = uuidList.join(u',');
         if (!transaction.exec(u"DELETE FROM main WHERE uuid IN (%1)"_s.arg(uuids))) {
-            return false;
-        }
-        if (!transaction.exec(u"DELETE FROM aux WHERE uuid IN (%1)"_s.arg(uuids))) {
             return false;
         }
     }
@@ -492,11 +492,13 @@ bool HistoryModel::loadHistory()
     }
 
     QSqlQuery query(m_db);
+    query.exec(u"PRAGMA foreign_keys=ON"_s);
     // The main table only stores text data
     query.exec(
         u"CREATE TABLE IF NOT EXISTS main (uuid char(40) PRIMARY KEY, added_time REAL NOT NULL CHECK (added_time > 0), last_used_time REAL CHECK (last_used_time > 0), mimetypes TEXT NOT NULL, text NTEXT, starred BOOLEAN)"_s);
     // The aux table stores data index
-    query.exec(u"CREATE TABLE IF NOT EXISTS aux (uuid char(40) NOT NULL, mimetype TEXT NOT NULL, data_uuid char(40) NOT NULL, PRIMARY KEY (uuid, mimetype))"_s);
+    query.exec(
+        u"CREATE TABLE IF NOT EXISTS aux (uuid char(40) NOT NULL, mimetype TEXT NOT NULL, data_uuid char(40) NOT NULL, PRIMARY KEY (uuid, mimetype), FOREIGN KEY (uuid) REFERENCES main (uuid) ON DELETE CASCADE)"_s);
     // Save the latest version number
     query.exec(u"CREATE TABLE IF NOT EXISTS version (db_version INT NOT NULL)"_s);
     constexpr int currentDBVersion = 3;
