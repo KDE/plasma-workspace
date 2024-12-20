@@ -166,16 +166,16 @@ void HistoryModelTest::testIndexOf()
 
 void HistoryModelTest::testType_data()
 {
-    QTest::addColumn<QMimeData *>("item");
+    QTest::addColumn<std::shared_ptr<QMimeData>>("item");
     QTest::addColumn<HistoryItemType>("expectedType");
 
-    auto item = new QMimeData;
+    auto item = std::make_shared<QMimeData>();
     item->setText(QStringLiteral("foo"));
     QTest::newRow("text") << item << HistoryItemType::Text;
-    item = new QMimeData;
+    item = std::make_shared<QMimeData>();
     item->setImageData(QImage());
     QTest::newRow("image") << item << HistoryItemType::Image;
-    item = new QMimeData;
+    item = std::make_shared<QMimeData>();
     item->setText(QStringLiteral("foo"));
     item->setUrls({QUrl(QStringLiteral("file:///home/"))});
     QTest::newRow("url") << item << HistoryItemType::Url;
@@ -188,9 +188,9 @@ void HistoryModelTest::testType()
     history->setMaxSize(10);
     QCOMPARE(history->rowCount(), 0);
 
-    QFETCH(QMimeData *, item);
+    QFETCH(std::shared_ptr<QMimeData>, item);
     QFETCH(HistoryItemType, expectedType);
-    history->insert(item);
+    history->insert(item.get());
     QCOMPARE(history->index(0).data(HistoryModel::TypeRole).value<HistoryItemType>(), expectedType);
     history->clear();
 }

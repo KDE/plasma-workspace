@@ -48,7 +48,7 @@ void importHistory(const QString &history2FilePath)
     delete[] version;
 
     auto model = HistoryModel::self();
-    QList<QMimeData *> dataList;
+    QList<std::shared_ptr<QMimeData>> dataList;
 
     while (!dataStream.atEnd()) {
         QString type;
@@ -60,34 +60,34 @@ void importHistory(const QString &history2FilePath)
             dataStream >> urls;
             dataStream >> metaData;
             dataStream >> cut;
-            auto mimeData = new QMimeData;
+            auto mimeData = std::make_shared<QMimeData>();
             mimeData->setUrls(urls);
             for (auto it = metaData.cbegin(); it != metaData.cend(); it = std::next(it)) {
                 mimeData->setData(it.key(), it.value().toUtf8());
             }
             mimeData->setData(u"application/x-kde-cutselection"_s, QByteArray(cut ? "1" : "0"));
-            dataList.emplace_back(mimeData);
+            dataList.push_back(mimeData);
         }
         if (type == u"string") {
             QString text;
             dataStream >> text;
-            auto mimeData = new QMimeData;
+            auto mimeData = std::make_shared<QMimeData>();
             mimeData->setText(text);
-            dataList.emplace_back(mimeData);
+            dataList.push_back(mimeData);
         }
         if (type == u"image") {
             QImage image;
             dataStream >> image;
-            auto mimeData = new QMimeData;
+            auto mimeData = std::make_shared<QMimeData>();
             mimeData->setImageData(image);
-            dataList.emplace_back(mimeData);
+            dataList.push_back(mimeData);
         }
     }
 
     qInfo() << "Size:" << dataList.size();
     qreal timestamp = QDateTime::currentSecsSinceEpoch();
-    for (QMimeData *it : std::as_const(dataList)) {
-        model->insert(it, timestamp--);
+    for (auto &it : std::as_const(dataList)) {
+        model->insert(it.get(), timestamp--);
     }
 
     int count = 0;

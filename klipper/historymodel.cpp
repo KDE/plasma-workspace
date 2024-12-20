@@ -455,9 +455,9 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
 
 bool HistoryModel::insert(const QString &text)
 {
-    auto data = new QMimeData;
+    auto data = std::make_unique<QMimeData>();
     data->setText(text);
-    return insert(data);
+    return insert(data.get());
 }
 
 bool HistoryModel::loadHistory()
