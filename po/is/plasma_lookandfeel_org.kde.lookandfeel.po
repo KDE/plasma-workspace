@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-03-14 20:55+0000\n"
-"Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
+"PO-Revision-Date: 2024-12-15 15:28+0000\n"
+"Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -40,12 +40,10 @@ msgstr[0] "Útskráning eftir 1 sekúndu"
 msgstr[1] "Útskráning eftir %1 sekúndur"
 
 #: contents/logout/Logout.qml:159
-#, fuzzy, kde-format
-#| msgid "Installing software updates and restarting in 1 second"
-#| msgid_plural "Installing software updates and restarting in %1 seconds"
+#, kde-format
 msgid "Installing software updates and shutting down in 1 second"
 msgid_plural "Installing software updates and shutting down in %1 seconds"
-msgstr[0] "Uppfæri forrit og endurræsi eftir 1 sekúndu"
+msgstr[0] "Set upp hugbúnaðaruppfærslur og slekk á tölvunni eftir 1 sekúndu"
 msgstr[1] "Uppfæri forrit og endurræsi eftir %1 sekúndur"
 
 #: contents/logout/Logout.qml:160
@@ -78,12 +76,9 @@ msgstr ""
 "(firmware)."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
-"Við endurræsingu mun tölvan fara á skjáinn fyrir uppsetningu fastbúnaðar "
-"(firmware)."
+msgstr "Við endurræsingu fer tölvan á skjáinn með "
 
 #: contents/logout/Logout.qml:216
 #, kde-format
@@ -108,9 +103,7 @@ msgid "Hibernate Now"
 msgstr "Leggja í dvala núna"
 
 #: contents/logout/Logout.qml:238
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
 msgstr "Setja upp uppfærslur og endurræsa"
@@ -126,12 +119,10 @@ msgid "Restart Now"
 msgstr "Endurræsa núna"
 
 #: contents/logout/Logout.qml:273
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart Now"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Setja upp uppfærslur og endurræsa núna"
+msgstr "Setja upp uppfærslur og slökkva"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
 #, kde-format

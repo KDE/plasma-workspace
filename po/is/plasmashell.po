@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-14 00:54+0000\n"
-"PO-Revision-Date: 2024-06-30 15:31+0000\n"
+"PO-Revision-Date: 2024-12-18 21:06+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -151,7 +151,7 @@ msgstr "Fela forskoðunarborða?"
 #: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Opna breytisnið"
 
 #: main.cpp:86
 #, kde-format
@@ -195,15 +195,15 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
-"Ekki tókst að keyra Plasma þar sem það gat ekki notað OpenGL 2 rétt eða "
-"varahugbúnað\n"
+"Ekki tókst að keyra Plasma þar sem það gat hvorki notað OpenGL 2 rétt "
+"névarahugbúnað\n"
 "Kannaðu hvort skjákortsrekillinn sé rétt uppsettur."
 
 #: osd.cpp:62
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:88
 #, kde-format

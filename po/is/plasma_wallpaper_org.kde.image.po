@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-08 00:41+0000\n"
-"PO-Revision-Date: 2024-07-22 13:11+0000\n"
+"PO-Revision-Date: 2024-12-15 15:31+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -45,46 +45,40 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Mappa með veggfóðursmyndum sem á að sýna sem skyggnusýningu"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Staðsetning:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
-msgstr "Fylla skjá og skera af"
+msgstr "Stækkuð og skorin"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
-msgstr "Fylla skjá"
+msgstr "Stækkuð"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
-msgstr "Fylla skjá, halda hlutföllum"
+msgstr "Stækkuð, halda hlutföllum"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr "Miðja"
+msgstr "Miðjuð"
 
 #: imagepackage/contents/ui/config.qml:147
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
-msgstr "Flísaleggja"
+msgstr "Flísalögð"
 
 #: imagepackage/contents/ui/config.qml:175
 #, kde-format
@@ -179,7 +173,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
-msgstr ""
+msgstr "Tilgreindu fyllisniðið (t.d. stretch, preserveAspectCrop o.s.frv.)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -194,7 +188,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Ógilt fyllisnið tilgreint: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
