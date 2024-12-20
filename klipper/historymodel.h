@@ -86,6 +86,7 @@ public:
      * should be reset.
      */
     bool loadHistory();
+    bool saveClipboardHistory();
 
     void loadSettings();
 

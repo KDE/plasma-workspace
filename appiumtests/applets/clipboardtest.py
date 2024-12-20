@@ -299,6 +299,7 @@ class ClipboardTest(unittest.TestCase):
         app.klipper_updated_event.clear()
         last_modified = os.stat(app.klipper_data_file).st_mtime
         app.klipper_proxy.clearClipboardHistory()
+        app.klipper_proxy.saveClipboardHistory()
         app.spin()
         self.assertTrue(app.klipper_updated_event.is_set())
         self.assertFalse(element.is_displayed())

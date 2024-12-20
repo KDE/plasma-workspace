@@ -492,6 +492,7 @@ bool HistoryModel::loadHistory()
     }
 
     QSqlQuery query(m_db);
+    query.exec(u"PRAGMA journal_mode=WAL"_s);
     // The main table only stores text data
     query.exec(
         u"CREATE TABLE IF NOT EXISTS main (uuid char(40) PRIMARY KEY, added_time REAL NOT NULL CHECK (added_time > 0), last_used_time REAL CHECK (last_used_time > 0), mimetypes TEXT NOT NULL, text NTEXT, starred BOOLEAN)"_s);
@@ -532,6 +533,12 @@ bool HistoryModel::loadHistory()
     m_clip->setMimeData(m_items[0], SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
 
     return true;
+}
+
+bool HistoryModel::saveClipboardHistory()
+{
+    QSqlQuery query(u"PRAGMA wal_checkpoint"_s, m_db);
+    return query.exec();
 }
 
 void HistoryModel::loadSettings()
