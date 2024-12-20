@@ -81,9 +81,18 @@ struct TransactionGuard {
     bool committed = true;
 };
 
+constexpr QLatin1String s_replaceableIdFormat("application/x-kde-clipboard-replaceable-uuid");
+
 QString computeUuid(const QMimeData *data)
 {
     QCryptographicHash hash(QCryptographicHash::Sha1);
+    auto replaceableUuid = data->data(s_replaceableIdFormat);
+    if (!QUuid::fromString(replaceableUuid).isNull()) {
+        hash.addData(replaceableUuid);
+        // We only need the UUID because we will always replace an item that uses
+        // the same replaceable UUID.
+        return QString::fromLatin1(hash.result().toHex());
+    }
     if (data->hasText()) {
         hash.addData(data->text().toUtf8());
     }
@@ -425,9 +434,14 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
         return false;
     }
     if (const int existingItemIndex = indexOf(uuid); existingItemIndex >= 0) {
-        // move to top
-        moveToTop(existingItemIndex);
-        return true;
+        if (mimeData->hasFormat(s_replaceableIdFormat) //
+            && !removeRow(existingItemIndex)) [[unlikely]] {
+            return false;
+        } else {
+            // move to top
+            moveToTop(existingItemIndex);
+            return true;
+        }
     }
 
     QStringList formats = mimeData->formats();
