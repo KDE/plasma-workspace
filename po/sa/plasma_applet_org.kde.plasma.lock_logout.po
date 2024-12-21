@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-25 00:40+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: contents/config/config.qml:13
 #, kde-format
@@ -27,7 +29,7 @@ msgstr "सामान्य"
 msgctxt ""
 "Heading for a list of actions (leave, lock, switch user, hibernate, suspend)"
 msgid "Show actions:"
-msgstr "क्रियाः दर्शयतु : १."
+msgstr "क्रियाः दर्शयतु :"
 
 #: contents/ui/ConfigGeneral.qml:35
 #, kde-format
@@ -130,9 +132,9 @@ msgstr "सङ्गणकं बहिः गच्छन्तु, निष�
 #: contents/ui/data.js:47
 #, kde-format
 msgid "Sleep (suspend to RAM)"
-msgstr "निद्रा (रैम प्रति निलम्बनम्) २."
+msgstr "निद्रा (रैम प्रति निलम्बनम्)"
 
 #: contents/ui/data.js:54
 #, kde-format
 msgid "Hibernate (suspend to disk)"
-msgstr "हाइबरनेट (डिस्कं प्रति निलम्बनम्) २."
+msgstr "हाइबरनेट (डिस्कं प्रति निलम्बनम्)"

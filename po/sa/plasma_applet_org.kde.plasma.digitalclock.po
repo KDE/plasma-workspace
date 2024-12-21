@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-12-15 21:27+0530\n"
+"PO-Revision-Date: 2024-12-20 22:20+0530\n"
 "Last-Translator: \n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -432,7 +432,7 @@ msgstr "समयक्षेत्रं न सेट् भवति"
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
-msgstr "Date & Time सेटिंग्स् उद्घाट्य समयक्षेत्रं सेट् कर्तुं घण्टाचिह्नं नुदन्तु ।"
+msgstr "घटी-चिह्नं स्पर्श्य काल-तिथि-समायोजनं उद्घाटयित्वा समय-क्षेत्रं निश्चितम्।"
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

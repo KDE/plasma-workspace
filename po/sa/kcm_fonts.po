@@ -3,19 +3,20 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2024-12-13 20:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
 #. i18n: ectx: label, entry (forceFontDPI), group (General)
@@ -180,7 +181,7 @@ msgstr "सामान्यं फ़ॉन्टं चिनोतु"
 #: ui/main.qml:111
 #, kde-format
 msgid "Fixed width:"
-msgstr "नियतविस्तारः : १."
+msgstr "नियतविस्तारः :"
 
 #: ui/main.qml:112
 #, kde-format
@@ -200,7 +201,7 @@ msgstr "लघु फॉन्ट् चिनोतु"
 #: ui/main.qml:135
 #, kde-format
 msgid "Toolbar:"
-msgstr "साधनपट्टिका : १."
+msgstr "साधनपट्टिका :"
 
 #: ui/main.qml:136
 #, kde-format
@@ -210,7 +211,7 @@ msgstr "टूल्बार-फॉन्ट् चिनोतु"
 #: ui/main.qml:147
 #, kde-format
 msgid "Menu:"
-msgstr "मेनू : १."
+msgstr "मेनू :"
 
 #: ui/main.qml:148
 #, kde-format
@@ -220,7 +221,7 @@ msgstr "मेनू फॉन्ट् चिनोतु"
 #: ui/main.qml:158
 #, kde-format
 msgid "Window title:"
-msgstr "विण्डो शीर्षकम् : १."
+msgstr "विण्डो शीर्षकम् :"
 
 #: ui/main.qml:159
 #, kde-format
@@ -230,7 +231,7 @@ msgstr "विण्डो शीर्षकं फन्ट् चिनोत
 #: ui/main.qml:174
 #, kde-format
 msgid "Anti-Aliasing:"
-msgstr "उपनामविरोधी : १."
+msgstr "उपनामविरोधी :"
 
 #: ui/main.qml:179
 #, kde-format
@@ -271,7 +272,7 @@ msgstr "इत्यस्मै"
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr "उप-पिक्सेल-प्रतिपादनम् : १."
+msgstr "उप-पिक्सेल-प्रतिपादनम् :"
 
 #: ui/main.qml:309
 #, kde-kuit-format
@@ -299,7 +300,7 @@ msgstr ""
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr "संकेतः : १."
+msgstr "संकेतः :"
 
 #: ui/main.qml:359
 #, kde-kuit-format

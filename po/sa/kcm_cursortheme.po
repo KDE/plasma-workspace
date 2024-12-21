@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-24 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -183,7 +183,7 @@ msgstr "अनुप्रयोगस्य प्रारम्भकाल�
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
-msgstr "कर्सर प्रतिक्रिया : १."
+msgstr "कर्सर प्रतिक्रिया :"
 
 #: ui/LaunchFeedbackDialog.qml:48
 #, kde-format
@@ -213,7 +213,7 @@ msgstr "उच्छ्वासः"
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
-msgstr "कार्यप्रबन्धकस्य प्रतिक्रियाः १."
+msgstr "कार्यप्रबन्धकस्य प्रतिक्रियाः"
 
 #: ui/LaunchFeedbackDialog.qml:92
 #, kde-format

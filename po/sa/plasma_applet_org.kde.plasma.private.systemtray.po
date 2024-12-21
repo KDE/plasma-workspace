@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-02 00:40+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -97,7 +99,7 @@ msgstr "सर्वदा सर्वाणि प्रविष्टयः 
 #, kde-format
 msgctxt "The arrangement of system tray icons in the Panel"
 msgid "Panel icon size:"
-msgstr "फलकचिह्न आकारः : १."
+msgstr "फलकचिह्न आकारः :"
 
 #: package/contents/ui/ConfigGeneral.qml:25
 #, kde-format
@@ -123,7 +125,7 @@ msgstr "टच मोड् मध्ये स्थित्वा स्व�
 #, kde-format
 msgctxt "@label:listbox The spacing between system tray icons in the Panel"
 msgid "Panel icon spacing:"
-msgstr "फलकचिह्नान्तरम् : १."
+msgstr "फलकचिह्नान्तरम् :"
 
 #: package/contents/ui/ConfigGeneral.qml:52
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-12 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -132,7 +132,7 @@ msgstr "Do Not Disturb मोड् इति"
 #, kde-format
 msgctxt "Automatically enable Do Not Disturb mode when screens are mirrored"
 msgid "Enable automatically:"
-msgstr "स्वयमेव सक्षमं कुर्वन्तु : १."
+msgstr "स्वयमेव सक्षमं कुर्वन्तु :"
 
 #: ui/main.qml:111
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "दृश्यतायाः स्थितिः"
 #: ui/main.qml:150
 #, kde-format
 msgid "Critical notifications:"
-msgstr "समीक्षात्मकसूचनाः : १."
+msgstr "समीक्षात्मकसूचनाः :"
 
 #: ui/main.qml:151
 #, kde-format
@@ -171,7 +171,7 @@ msgstr "Do Not Disturb मोड् इत्यत्र दर्शयतु"
 #: ui/main.qml:163
 #, kde-format
 msgid "Normal notifications:"
-msgstr "सामान्यसूचनाः : १."
+msgstr "सामान्यसूचनाः :"
 
 #: ui/main.qml:164
 #, kde-format
@@ -181,7 +181,7 @@ msgstr "पूर्णपर्दे विण्डोषु दर्शय�
 #: ui/main.qml:176
 #, kde-format
 msgid "Low priority notifications:"
-msgstr "न्यूनप्राथमिकतायुक्तानि सूचनानि : १."
+msgstr "न्यूनप्राथमिकतायुक्तानि सूचनानि :"
 
 #: ui/main.qml:177
 #, kde-format
@@ -222,7 +222,7 @@ msgstr[1] "%1 सेकण्ड्"
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
-msgstr "पश्चात् गोपनम् : १."
+msgstr "पश्चात् गोपनम् :"
 
 #: ui/main.qml:287
 #, kde-format
@@ -239,7 +239,7 @@ msgstr "सूचनासु दर्शयतु"
 #: ui/main.qml:294
 #, kde-format
 msgid "Application progress:"
-msgstr "आवेदनस्य प्रगतिः : १."
+msgstr "आवेदनस्य प्रगतिः :"
 
 #: ui/main.qml:308
 #, kde-format
@@ -250,7 +250,7 @@ msgstr "प्रगतेः समये पॉपअपं उद्घाट
 #: ui/main.qml:321
 #, kde-format
 msgid "Notification badges:"
-msgstr "सूचनाबिल्लाः : १."
+msgstr "सूचनाबिल्लाः :"
 
 #: ui/main.qml:322
 #, kde-format

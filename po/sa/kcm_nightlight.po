@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-12-14 19:38+0530\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: ui/DayNightView.qml:132
 #, kde-format
@@ -77,13 +77,13 @@ msgstr ""
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Latitude:"
-msgstr "अक्षांशः : १."
+msgstr "अक्षांशः :"
 
 #: ui/LocationsFixedView.qml:271
 #, kde-format
 msgctxt "@label: textbox"
 msgid "Longitude:"
-msgstr "देशान्तर : १."
+msgstr "देशान्तर :"
 
 #: ui/main.qml:75
 #, kde-format
@@ -99,13 +99,13 @@ msgstr "%1K"
 #: ui/main.qml:136
 #, kde-format
 msgid "Day light temperature:"
-msgstr "दिवसस्य प्रकाशस्य तापमानम् : १."
+msgstr "दिवसस्य प्रकाशस्य तापमानम् :"
 
 #: ui/main.qml:186 ui/main.qml:250
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "शीतलम् (कोऽपि छानकं नास्ति) २."
+msgstr "शीतलम् (कोऽपि छानकं नास्ति)"
 
 #: ui/main.qml:193 ui/main.qml:257
 #, kde-format
@@ -116,12 +116,12 @@ msgstr "उष्णम्‌"
 #: ui/main.qml:200
 #, kde-format
 msgid "Night light temperature:"
-msgstr "रात्रौ प्रकाशस्य तापमानम् : १."
+msgstr "रात्रौ प्रकाशस्य तापमानम् :"
 
 #: ui/main.qml:269
 #, kde-format
 msgid "Switching times:"
-msgstr "स्विचिंग् समयः : १."
+msgstr "स्विचिंग् समयः :"
 
 #: ui/main.qml:272
 #, kde-format
@@ -152,7 +152,7 @@ msgstr "नित्यं रात्रौ प्रकाशे"
 #, kde-format
 msgctxt "@label The coordinates for the current location"
 msgid "Current location:"
-msgstr "वर्तमानस्थानम् : १."
+msgstr "वर्तमानस्थानम् :"
 
 #: ui/main.qml:293
 #, kde-format
@@ -199,7 +199,7 @@ msgstr "दिवसप्रकाशस्य आरम्भः 1.1."
 #: ui/main.qml:367
 #, kde-format
 msgid "Transition duration:"
-msgstr "संक्रमणकालः : १."
+msgstr "संक्रमणकालः :"
 
 #: ui/main.qml:378
 #, kde-format
@@ -229,7 +229,7 @@ msgstr "घटकः"
 #, kde-format
 msgctxt "Time separator between hours and minutes"
 msgid ":"
-msgstr ": १."
+msgstr ":"
 
 #: ui/TimeField.qml:56
 #, kde-format

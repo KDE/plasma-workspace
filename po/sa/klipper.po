@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-11 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"POT-Creation-Date: 2024-12-21 00:43+0000\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -30,7 +32,7 @@ msgstr "भवतः ईमेलपत्राणि"
 #: configdialog.cpp:82
 #, kde-format
 msgid "Clipboard history:"
-msgstr "क्लिपबोर्ड इतिहासः : १."
+msgstr "क्लिपबोर्ड इतिहासः :"
 
 #: configdialog.cpp:88
 #, kde-format
@@ -43,7 +45,7 @@ msgstr[1] "%v प्रविष्टयः"
 #: configdialog.cpp:97
 #, kde-format
 msgid "Selection and Clipboard:"
-msgstr "चयनं तथा क्लिप्बोर्डः : १."
+msgstr "चयनं तथा क्लिप्बोर्डः :"
 
 #: configdialog.cpp:104
 #, kde-kuit-format
@@ -78,7 +80,7 @@ msgstr "इतिहासे सर्वदा रक्षन्तु"
 #: configdialog.cpp:137
 #, kde-format
 msgid "Text selection:"
-msgstr "पाठचयनम् : १."
+msgstr "पाठचयनम् :"
 
 #: configdialog.cpp:139 configdialog.cpp:177
 #, kde-format
@@ -93,7 +95,7 @@ msgstr "पाठचयनं क्लिप्बोर्ड-इतिहा�
 #: configdialog.cpp:175
 #, kde-format
 msgid "Non-text selection:"
-msgstr "अपाठचयनम् : १."
+msgstr "अपाठचयनम् :"
 
 #: configdialog.cpp:182
 #, kde-format
@@ -149,7 +151,7 @@ msgstr "न कश्चित्"
 #: configdialog.cpp:304
 #, kde-format
 msgid "Options:"
-msgstr "विकल्पाः : १."
+msgstr "विकल्पाः :"
 
 #: configdialog.cpp:331
 #, kde-format
@@ -476,7 +478,7 @@ msgstr "क्लिप्बोर्ड् इत्यस्य विरु�
 #: editactiondialog.cpp:209
 #, kde-format
 msgid "Match pattern:"
-msgstr "मेलप्रतिमानः : १."
+msgstr "मेलप्रतिमानः :"
 
 #: editactiondialog.cpp:212
 #, kde-kuit-format
@@ -583,7 +585,7 @@ msgstr "आदेशस्य कृते वर्णनं प्रविश
 #: editcommanddialog.cpp:91
 #, kde-format
 msgid "Output from command:"
-msgstr "आदेशात् निर्गमः : १."
+msgstr "आदेशात् निर्गमः :"
 
 #: editcommanddialog.cpp:93
 #, kde-format
@@ -608,7 +610,7 @@ msgstr "आदेशस्य कृते चिह्नं पूर्वन
 #: editcommanddialog.cpp:121
 #, kde-format
 msgid "Icon:"
-msgstr "चिह्नम् : १."
+msgstr "चिह्नम् :"
 
 #: historymodel.cpp:192
 #, kde-format
@@ -674,7 +676,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mouse Position इत्यत्र Clipboard Items दर्शयतु"
 
-#: klipper.cpp:314
+#: klipper.cpp:313
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -684,27 +686,27 @@ msgstr ""
 "भवन्तः पश्चात् Clipboard एप्लेट् इत्यस्य विन्यासविण्डो इत्यस्य <interface>Actions</"
 "interface> पृष्ठे URL क्रियाः सक्षमं कर्तुं शक्नुवन्ति"
 
-#: klipper.cpp:448
+#: klipper.cpp:447
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "मोबाइल बारकोड"
 
-#: klipper.cpp:491 klipper.cpp:500
+#: klipper.cpp:490 klipper.cpp:499
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:517
+#: klipper.cpp:516
 #, kde-format
 msgid "up"
 msgstr "उपरि"
 
-#: klipper.cpp:524
+#: klipper.cpp:523
 #, kde-format
 msgid "current"
 msgstr "वर्त्तमानः"
 
-#: klipper.cpp:531
+#: klipper.cpp:530
 #, kde-format
 msgid "down"
 msgstr "अधः"
@@ -837,7 +839,7 @@ msgstr "WM_CLASS कृते कोऽपि क्रियाः नास्
 #: klipper.kcfg:60
 #, kde-format
 msgid "Automatic action menu time:"
-msgstr "स्वचालितं क्रिया मेनू समयः : १."
+msgstr "स्वचालितं क्रिया मेनू समयः :"
 
 #. i18n: ectx: tooltip, entry (TimeoutForActionPopups), group (General)
 #: klipper.kcfg:64
@@ -849,7 +851,7 @@ msgstr "अस्य समयस्य कृते स्वचालितक
 #: klipper.kcfg:67
 #, kde-format
 msgid "History size:"
-msgstr "इतिहासस्य आकारः : १."
+msgstr "इतिहासस्य आकारः :"
 
 #. i18n: ectx: tooltip, entry (MaxClipItems), group (General)
 #: klipper.kcfg:71

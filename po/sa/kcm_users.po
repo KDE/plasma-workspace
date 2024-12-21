@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-07 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: English <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -146,7 +148,7 @@ msgstr "नामः:"
 #: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Username:"
-msgstr "उपयोक्तृनाम : १."
+msgstr "उपयोक्तृनाम :"
 
 #: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:156
 #, kde-format
@@ -161,7 +163,7 @@ msgstr "प्रशासकः"
 #: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:146
 #, kde-format
 msgid "Account type:"
-msgstr "खाताप्रकारः : १."
+msgstr "खाताप्रकारः :"
 
 #: src/ui/CreateUser.qml:53
 #, kde-format
@@ -171,7 +173,7 @@ msgstr "समाभाष्:"
 #: src/ui/CreateUser.qml:58
 #, kde-format
 msgid "Confirm password:"
-msgstr "गुप्तशब्दस्य पुष्टिः कुर्वन्तु : १."
+msgstr "गुप्तशब्दस्य पुष्टिः कुर्वन्तु :"
 
 #: src/ui/CreateUser.qml:75
 #, kde-format
@@ -513,7 +515,7 @@ msgid ""
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
 "चित्रसञ्चिकाः (सर्वाः प्रमुखाः सञ्चिकाप्रकाराः) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
-"jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *. xbm *.xpm) २."
+"jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *. xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:196
 #, kde-format
@@ -546,7 +548,7 @@ msgstr ""
 #: src/ui/UserDetailsPage.qml:175
 #, kde-format
 msgid "Email address:"
-msgstr "ईमेल-सङ्केतः : १."
+msgstr "ईमेल-सङ्केतः :"
 
 #: src/ui/UserDetailsPage.qml:204
 #, kde-format

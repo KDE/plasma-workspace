@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-08 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:12+0530\n"
+"PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -45,7 +45,7 @@ msgstr "स्लाइड्स् दर्शयितुं वॉलपे�
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
-msgstr "स्थितिः : १."
+msgstr "स्थितिः :"
 
 #: imagepackage/contents/ui/config.qml:131
 #, kde-format
@@ -245,7 +245,7 @@ msgstr "परिवर्तिता तिथि (नवीनतम प्�
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:75
 #, kde-format
 msgid "Date modified (oldest first)"
-msgstr "परिवर्तिता तिथि (प्राचीनतमः प्रथमः) २."
+msgstr "परिवर्तिता तिथि (प्राचीनतमः प्रथमः)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:100
 #, kde-format
