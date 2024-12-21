@@ -81,12 +81,12 @@ struct TransactionGuard {
     bool committed = true;
 };
 
-constexpr QLatin1String s_replaceableIdFormat("application/x-kde-clipboard-replaceable-uuid");
+constexpr auto s_replaceableUuidFormat = "application/x-kde-clipboard-replaceable-uuid"_L1;
 
 QString computeUuid(const QMimeData *data)
 {
     QCryptographicHash hash(QCryptographicHash::Sha1);
-    auto replaceableUuid = data->data(s_replaceableIdFormat);
+    auto replaceableUuid = data->data(s_replaceableUuidFormat);
     if (!QUuid::fromString(replaceableUuid).isNull()) {
         hash.addData(replaceableUuid);
         // We only need the UUID because we will always replace an item that uses
@@ -433,20 +433,33 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
     if (uuid.size() != 40 /*SHA1*/) [[unlikely]] {
         return false;
     }
-    if (const int existingItemIndex = indexOf(uuid); existingItemIndex >= 0) {
-        if (mimeData->hasFormat(s_replaceableIdFormat) //
-            && !removeRow(existingItemIndex)) [[unlikely]] {
-            return false;
+
+    QStringList formats = mimeData->formats();
+    if (formats.empty() || formats.size() > 50) [[unlikely]] {
+        return false;
+    }
+
+    KIO::DeleteJob *delJob = nullptr;
+    bool isReplacement = false;
+    const int existingItemIndex = indexOf(uuid);
+    if (existingItemIndex >= 0) {
+        if (formats.contains(s_replaceableUuidFormat)) {
+            isReplacement = true;
+            {
+                TransactionGuard transaction(&m_db);
+                if (!transaction.exec(u"DELETE FROM main WHERE uuid='%1'"_s.arg(uuid))) {
+                    return false;
+                }
+                if (!transaction.exec(u"DELETE FROM aux WHERE uuid='%1'"_s.arg(uuid))) {
+                    return false;
+                }
+            }
+            delJob = KIO::del(QUrl::fromLocalFile(dataLocation(uuid)), KIO::HideProgressInfo);
         } else {
             // move to top
             moveToTop(existingItemIndex);
             return true;
         }
-    }
-
-    QStringList formats = mimeData->formats();
-    if (formats.empty() || formats.size() > 50) [[unlikely]] {
-        return false;
     }
 
     QString text;
@@ -479,15 +492,28 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
         });
     }
 
-    beginInsertRows(QModelIndex(), 0, 0);
-    m_items.prepend(std::move(item));
-    endInsertRows();
+    if (isReplacement) {
+        beginMoveRows(QModelIndex(), existingItemIndex, existingItemIndex, QModelIndex(), 0);
+        m_items.move(existingItemIndex, 0);
+        m_items[0] = std::move(item);
+        endMoveRows();
+        auto modelIndex = index(0);
+        Q_EMIT dataChanged(modelIndex, modelIndex, {Qt::DisplayRole, HistoryItemConstPtrRole, TypeRole, TypeIntRole, ImageUrlRole});
+    } else {
+        beginInsertRows(QModelIndex(), 0, 0);
+        m_items.prepend(std::move(item));
+        endInsertRows();
+    }
 
     ++m_pendingJobs;
     connect(updateJob, &KJob::finished, this, [this] {
         --m_pendingJobs;
     });
-    updateJob->start();
+    if (delJob) {
+        connect(delJob, &KJob::finished, updateJob, &UpdateDatabaseJob::start);
+    } else {
+        updateJob->start();
+    }
 
     return true;
 }
