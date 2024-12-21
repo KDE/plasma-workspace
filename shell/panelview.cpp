@@ -1491,24 +1491,6 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateExclusiveZone()
 {
-    auto exclusiveMargin = [this] {
-        switch (location()) {
-        case Plasma::Types::TopEdge:
-            return m_layerWindow->margins().top();
-            break;
-        case Plasma::Types::LeftEdge:
-            return m_layerWindow->margins().left();
-            break;
-        case Plasma::Types::RightEdge:
-            return m_layerWindow->margins().right();
-            break;
-        case Plasma::Types::BottomEdge:
-        default:
-            return m_layerWindow->margins().bottom();
-            break;
-        }
-    };
-
     if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == 0) {
         // We set the exclusive zone to make sure the ruler does not
         // overlap with the panel regardless of the visibility mode;
