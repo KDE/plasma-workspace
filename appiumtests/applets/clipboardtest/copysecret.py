@@ -20,11 +20,9 @@ class ClipboardHelperWindow(QMainWindow):
 
         self.button = QPushButton("Copy Secret", self)
         self.button.clicked.connect(self.copy_secret)
-        self.button.resize(self.size())
+        self.setCentralWidget(self.button)
 
     def resizeEvent(self, event) -> None:
-        # Make the button fill the whole window so the test can click it
-        self.button.resize(event.size())
         print("button resized", file=sys.stderr)
 
     def copy_secret(self) -> None:
