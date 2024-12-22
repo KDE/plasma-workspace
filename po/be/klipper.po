@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-21 00:43+0000\n"
+"POT-Creation-Date: 2024-12-22 00:42+0000\n"
 "PO-Revision-Date: 2024-11-04 22:00\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@licei2.com>\n"
 "Language-Team: Belarusian\n"
@@ -366,13 +366,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "Не ўдалося стварыць QR-код"
 
-#: declarative/qml/ClipboardItemDelegate.qml:179
+#: declarative/qml/ClipboardItemDelegate.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "Згарнуць"
 
-#: declarative/qml/ClipboardItemDelegate.qml:179
+#: declarative/qml/ClipboardItemDelegate.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"

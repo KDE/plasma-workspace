@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-21 00:43+0000\n"
+"POT-Creation-Date: 2024-12-22 00:42+0000\n"
 "PO-Revision-Date: 2024-11-28 23:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -348,13 +348,13 @@ msgstr ""
 msgid "Creating QR code failed"
 msgstr "QR 코드 생성 실패"
 
-#: declarative/qml/ClipboardItemDelegate.qml:179
+#: declarative/qml/ClipboardItemDelegate.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
 msgstr "접기"
 
-#: declarative/qml/ClipboardItemDelegate.qml:179
+#: declarative/qml/ClipboardItemDelegate.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
