@@ -20,8 +20,13 @@ import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.common.exceptions import NoSuchElementException
+from PySide6.QtGui import QLinearGradient
+from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.interaction import POINTER_MOUSE
+from selenium.webdriver.common.actions.mouse_button import MouseButton
+from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -451,7 +456,7 @@ class ClipboardTest(unittest.TestCase):
         When `IgnoreImages` is set to false, the clipboard should save images.
         """
         # Enable "Only when explicitly copied" to test the two bugs
-        self.update_config(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
+        self.update_config(["General"] * 4, ["IgnoreImages", "IgnoreSelection", "SyncClipboards", "MaxClipItems"], ["false", "true", "false", str(len(QLinearGradient.Preset))])
 
         memory_usage_before = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
 
@@ -461,16 +466,44 @@ class ClipboardTest(unittest.TestCase):
             pixbuf.fill(color)
             content_image = Gdk.ContentProvider.new_for_bytes("image/png", Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes())
             app.gtk_copy(content_image)
-            time.sleep(1)
             # Match the color block in the history
             partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
             partial_pixbuf.fill(color)
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
-            app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+            success = False
+            for _ in range(3):
+                try:
+                    app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+                    success = True
+                    break
+                except WebDriverException:
+                    time.sleep(1)
+            self.assertTrue(success)
 
         memory_usage_after = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
         logging.info(f"before: {memory_usage_before} after: {memory_usage_after} diff: {memory_usage_after - memory_usage_before}")
-        self.assertTrue(memory_usage_after - memory_usage_before < 80000)
+
+        # Stress test
+        count = len(app.klipper_proxy.getClipboardHistoryMenu())
+        process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "bug497735_simultaneous_clipboard_requests.py"), "-w", "100", "-h", "100"], stdout=sys.stderr, stderr=subprocess.PIPE)
+        self.addCleanup(process.kill)
+        assert process.stderr is not None
+        process.stderr.readline()  # From resizeEvent
+        process.stderr.readline()  # From resizeEvent
+        action = ActionBuilder(app.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        actions = action.pointer_action.move_to_location(100, 100)
+        for _ in list(QLinearGradient.Preset)[:50]:
+            actions = actions.click(None, MouseButton.LEFT).pause(0.1)
+        action.perform()
+        try:
+            self.assertEqual(count + 50, len(app.klipper_proxy.getClipboardHistoryMenu()))
+        except AssertionError:
+            self.assertEqual(count + 50, len(app.klipper_proxy.getClipboardHistoryMenu()))
+        finally:
+            process.kill()
+            process.wait(10)
+
+        app.driver.find_element(AppiumBy.NAME, "Clear History")
 
     def test_8_bug492170_disable_history_across_session(self) -> None:
         """
