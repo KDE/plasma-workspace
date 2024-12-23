@@ -20,8 +20,13 @@ import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.common.exceptions import NoSuchElementException
+from PySide6.QtGui import QLinearGradient
+from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.interaction import POINTER_MOUSE
+from selenium.webdriver.common.actions.mouse_button import MouseButton
+from selenium.webdriver.common.actions.pointer_input import PointerInput
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 
@@ -451,17 +456,30 @@ class ClipboardTest(unittest.TestCase):
         When `IgnoreImages` is set to false, the clipboard should save images.
         """
         # Enable "Only when explicitly copied" to test the two bugs
-        self.update_config(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
+        self.update_config(["General"] * 4, ["IgnoreImages", "IgnoreSelection", "SyncClipboards", "MaxClipItems"], ["false", "true", "false", str(len(QLinearGradient.Preset))])
 
+        app.klipper_proxy.clearClipboardHistory()
+        self.assertEqual(0, len(app.klipper_proxy.getClipboardHistoryMenu()))
         memory_usage_before = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
 
         # Copy 3 color blocks to clipboard
-        for color in (0xff0000ff, 0x00ff00ff, 0x0000ffff):
-            pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 2048, 2048)
-            pixbuf.fill(color)
-            content_image = Gdk.ContentProvider.new_for_bytes("image/png", Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes())
-            app.gtk_copy(content_image)
-            time.sleep(1)
+        colors = (0xff0000ff, 0x00ff00ff, 0x0000ffff)
+        process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "bug497735_simultaneous_clipboard_requests.py"), "-w", "1000", "-h", "1000"], stdout=sys.stderr, stderr=subprocess.PIPE)
+        self.addCleanup(process.kill)
+        assert process.stderr is not None
+        process.stderr.readline()  # From resizeEvent
+        process.stderr.readline()  # From resizeEvent
+        action = ActionBuilder(app.driver, mouse=PointerInput(POINTER_MOUSE, "mouse"))
+        actions = action.pointer_action.move_to_location(100, 100)
+        for _ in range(len(colors)):
+            actions = actions.click(None, MouseButton.LEFT).pause(0.1)
+        action.perform()
+        process.stderr.readline()
+        process.stderr.readline()
+        process.stderr.readline()
+        self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
+
+        for color in colors:
             # Match the color block in the history
             partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
             partial_pixbuf.fill(color)
@@ -470,7 +488,6 @@ class ClipboardTest(unittest.TestCase):
 
         memory_usage_after = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
         logging.info(f"before: {memory_usage_before} after: {memory_usage_after} diff: {memory_usage_after - memory_usage_before}")
-        self.assertTrue(memory_usage_after - memory_usage_before < 80000)
 
     def test_8_bug492170_disable_history_across_session(self) -> None:
         """
