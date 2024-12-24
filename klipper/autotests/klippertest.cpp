@@ -13,7 +13,6 @@
 #include <KConfigGroup>
 #include <KIO/CopyJob>
 #include <KSharedConfig>
-#include <KSystemClipboard>
 
 #include <QDir>
 #include <QMimeData>
@@ -74,7 +73,7 @@ void KlipperTest::testBug465225()
     config.writeEntry("MaxClipItems", 30);
     QVERIFY(config.sync());
 
-    auto clipboard = KSystemClipboard::instance();
+    auto clipboard = QGuiApplication::clipboard();
     // Load the history file which contains faulty image data
     {
         clipboard->clear(QClipboard::Clipboard); // Reset local clipboard

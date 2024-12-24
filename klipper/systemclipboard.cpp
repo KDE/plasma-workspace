@@ -187,14 +187,20 @@ std::shared_ptr<SystemClipboard> SystemClipboard::self()
 
 SystemClipboard::SystemClipboard()
     : QObject(nullptr)
-    , m_clip(KSystemClipboard::instance())
+    , m_clip(QGuiApplication::clipboard())
 {
+    if (!m_clip) {
+        return;
+    }
+
     x11RoundTrip(); // read initial X user time
-    connect(m_clip, &KSystemClipboard::changed, this, &SystemClipboard::checkClipData);
+    connect(m_clip, &QClipboard::changed, this, &SystemClipboard::checkClipData);
 
     m_pendingCheckTimer.setSingleShot(true);
     connect(&m_pendingCheckTimer, &QTimer::timeout, this, &SystemClipboard::slotCheckPending);
     connect(&m_overflowClearTimer, &QTimer::timeout, this, &SystemClipboard::slotClearOverflow);
+
+    Q_ASSERT(m_clip->ownsClipboard() && m_clip->ownsSelection());
 }
 
 SystemClipboard::~SystemClipboard()

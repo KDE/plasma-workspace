@@ -12,11 +12,8 @@
 #include <QObject>
 #include <QTimer>
 
-#include <KSystemClipboard>
-
 #include "klipper_export.h"
 
-class KSystemClipboard;
 class HistoryItem;
 
 /**
@@ -50,7 +47,7 @@ private:
 };
 
 /**
- * This class filters out invalid data from KSystemClipboard, and only emits newClipData when the data is valid.
+ * This class filters out invalid data from the system clipboard, and only emits newClipData when the data is valid.
  */
 class KLIPPER_EXPORT SystemClipboard : public QObject
 {
@@ -108,7 +105,7 @@ private:
     bool blockFetchingNewData();
     void setMimeDataInternal(QMimeData *selection, QMimeData *clipboard, ClipboardUpdateReason updateReason = ClipboardUpdateReason::UpdateClipboard);
 
-    KSystemClipboard *m_clip = nullptr;
+    QClipboard *m_clip = nullptr;
 
     /**
      * Avoid reacting to our own changes, using this

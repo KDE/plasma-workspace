@@ -33,7 +33,6 @@ target_link_libraries(klipper
     Qt::Widgets
     KF6::ConfigGui
     KF6::CoreAddons
-    KF6::GuiAddons
     KF6::GlobalAccel
     KF6::I18n
     KF6::IconThemes
