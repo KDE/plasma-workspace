@@ -37,12 +37,12 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
         if (!format.contains(u'/')) {
             continue;
         }
-        hash.reset();
         QByteArray data;
         if (format.startsWith(u"image/") || format == u"application/x-qt-image") {
             if (!hasImage) {
                 hasImage = true;
                 QImage image = mimeData->imageData().value<QImage>();
+                hash.reset();
                 hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
                 QBuffer buffer(&data);
                 QImageWriter encoder(&buffer, "PNG");
@@ -56,6 +56,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
                 // many heavy things to be persistently held in the clipboard.
                 continue;
             }
+            hash.reset();
             hash.addData(data);
             mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
         }
