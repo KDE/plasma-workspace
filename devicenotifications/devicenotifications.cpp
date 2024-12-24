@@ -289,7 +289,6 @@ void KdedDeviceNotifications::setupWaylandOutputListener()
 
     auto globalAdded = [](void *data, wl_registry *registry, uint32_t name, const char *interface, uint32_t version) {
         Q_UNUSED(registry)
-        Q_UNUSED(name)
         Q_UNUSED(version)
         auto *self = static_cast<KdedDeviceNotifications *>(data);
         if (qstrcmp(interface, "kde_output_device_v2") == 0) {
