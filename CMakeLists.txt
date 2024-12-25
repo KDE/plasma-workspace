@@ -224,7 +224,7 @@ endif()
 find_package(UDev REQUIRED)
 set_package_properties(UDev PROPERTIES
     PURPOSE "Allows to play notification sounds when (un)plugging devices"
-    TYPE OPTIONAL
+    TYPE REQUIRED
 )
 
 # Region & Language KCM
@@ -448,9 +448,7 @@ endif()
 
 add_subdirectory(appiumtests)
 
-if (TARGET UDev::UDev)
-    add_subdirectory(devicenotifications)
-endif()
+add_subdirectory(devicenotifications)
 
 ki18n_install(po)
 
