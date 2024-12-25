@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-31 00:42+0000\n"
+"POT-Creation-Date: 2024-12-25 00:43+0000\n"
 "PO-Revision-Date: 2024-08-01 10:03+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -14,55 +14,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 23.08.5\n"
 
-#: devicenotifications.cpp:333
+#: devicenotifications.cpp:332
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Un écran a été détecté."
 
-#: devicenotifications.cpp:334
+#: devicenotifications.cpp:333
 #, kde-format
 msgid "A display has been plugged in."
 msgstr "Un écran a été connecté."
 
-#: devicenotifications.cpp:347
+#: devicenotifications.cpp:346
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Un écran a été supprimé."
 
-#: devicenotifications.cpp:348
+#: devicenotifications.cpp:347
 #, kde-format
 msgid "A display has been unplugged."
 msgstr "Un écran a été débranché."
 
-#: devicenotifications.cpp:379
+#: devicenotifications.cpp:378
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "%1 a été connecté."
 
-#: devicenotifications.cpp:379
+#: devicenotifications.cpp:378
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "Un périphérique USB a été connecté."
 
-#: devicenotifications.cpp:382
+#: devicenotifications.cpp:381
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "Un périphérique USB a été détecté."
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:404
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 a été débranché."
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:404
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "Un périphérique USB a été débranché."
 
-#: devicenotifications.cpp:408
+#: devicenotifications.cpp:407
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

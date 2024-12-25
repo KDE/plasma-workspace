@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-31 00:42+0000\n"
+"POT-Creation-Date: 2024-12-25 00:43+0000\n"
 "PO-Revision-Date: 2024-07-31 07:23+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,55 +17,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: devicenotifications.cpp:333
+#: devicenotifications.cpp:332
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Bildskärm detekterad"
 
-#: devicenotifications.cpp:334
+#: devicenotifications.cpp:333
 #, kde-format
 msgid "A display has been plugged in."
 msgstr "En bildskärm har kopplats in."
 
-#: devicenotifications.cpp:347
+#: devicenotifications.cpp:346
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Bildskärm borttagen"
 
-#: devicenotifications.cpp:348
+#: devicenotifications.cpp:347
 #, kde-format
 msgid "A display has been unplugged."
 msgstr "En bildskärm har kopplats ur."
 
-#: devicenotifications.cpp:379
+#: devicenotifications.cpp:378
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "%1 har kopplats in."
 
-#: devicenotifications.cpp:379
+#: devicenotifications.cpp:378
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "En USB-enhet har kopplats in."
 
-#: devicenotifications.cpp:382
+#: devicenotifications.cpp:381
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB-enhet detekterad"
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:404
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 har kopplats ur."
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:404
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "En USB-enhet har kopplats ur."
 
-#: devicenotifications.cpp:408
+#: devicenotifications.cpp:407
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"

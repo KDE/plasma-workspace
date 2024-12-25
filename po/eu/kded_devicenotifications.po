@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-31 00:42+0000\n"
+"POT-Creation-Date: 2024-12-25 00:43+0000\n"
 "PO-Revision-Date: 2024-08-06 00:05+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -20,55 +20,55 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: devicenotifications.cpp:333
+#: devicenotifications.cpp:332
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
 msgstr "Bistaratzailea hauteman da"
 
-#: devicenotifications.cpp:334
+#: devicenotifications.cpp:333
 #, kde-format
 msgid "A display has been plugged in."
 msgstr "Bistaratzaile bat entxufatu da."
 
-#: devicenotifications.cpp:347
+#: devicenotifications.cpp:346
 #, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
 msgstr "Bistaratzailea kendu da"
 
-#: devicenotifications.cpp:348
+#: devicenotifications.cpp:347
 #, kde-format
 msgid "A display has been unplugged."
 msgstr "Bistaratzaile bat desentxufatu da."
 
-#: devicenotifications.cpp:379
+#: devicenotifications.cpp:378
 #, kde-format
 msgid "%1 has been plugged in."
 msgstr "%1 entxufatu da."
 
-#: devicenotifications.cpp:379
+#: devicenotifications.cpp:378
 #, kde-format
 msgid "A USB device has been plugged in."
 msgstr "USB gailu bat entxufatu da."
 
-#: devicenotifications.cpp:382
+#: devicenotifications.cpp:381
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Detected"
 msgstr "USB gailu bat antzeman da"
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:404
 #, kde-format
 msgid "%1 has been unplugged."
 msgstr "%1 deskonektatu da."
 
-#: devicenotifications.cpp:405
+#: devicenotifications.cpp:404
 #, kde-format
 msgid "A USB device has been unplugged."
 msgstr "USB gailu bat deskonektatu da."
 
-#: devicenotifications.cpp:408
+#: devicenotifications.cpp:407
 #, kde-format
 msgctxt "@title:notifications"
 msgid "USB Device Removed"
