@@ -55,7 +55,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick 
 find_package(QCoro6 REQUIRED COMPONENTS Core)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Auth Parts Runner Notifications NotifyConfig NewStuff Wallet IdleTime
-                    Svg Declarative I18n KCMUtils TextWidgets Crash GlobalAccel DBusAddons
+                    Svg Declarative I18n KCMUtils KDED TextWidgets Crash GlobalAccel DBusAddons
                     CoreAddons KIO Prison Package
                     GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor StatusNotifierItem
                     OPTIONAL_COMPONENTS DocTools)
@@ -71,8 +71,6 @@ if (BUILD_TESTING)
     find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Test QuickTest)
     find_package(Qt6 REQUIRED CONFIG COMPONENTS WaylandCompositor)
 endif()
-
-find_package(KF6KDED CONFIG REQUIRED)
 
 find_package(KF6Kirigami ${KF6_MIN_VERSION} CONFIG)
 set_package_properties(KF6Kirigami PROPERTIES
