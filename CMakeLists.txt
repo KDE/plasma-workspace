@@ -51,13 +51,15 @@ if(PipeWire_FOUND)
 endif()
 option(BUILD_CAMERAINDICATOR "Build the camera indicator Plasma applet" ${BUILD_CAMERAINDICATOR_DEFAULT})
 
-find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS Svg Widgets Quick QuickWidgets Concurrent Network Core5Compat DBus ShaderTools Positioning Sql)
+find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
+                    Concurrent Core5Compat DBus Network Positioning Quick QuickWidgets
+                    ShaderTools Sql Svg Widgets)
 find_package(QCoro6 REQUIRED COMPONENTS Core)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
-                    Auth Parts Runner Notifications NotifyConfig NewStuff Wallet IdleTime
-                    Svg Declarative I18n KCMUtils KDED TextWidgets Crash GlobalAccel DBusAddons
-                    CoreAddons KIO Prison Package
-                    GuiAddons Archive ItemModels IconThemes UnitConversion TextEditor StatusNotifierItem
+                    Archive Auth CoreAddons Crash DBusAddons Declarative GlobalAccel GuiAddons
+                    I18n IconThemes IdleTime ItemModels KCMUtils KDED KIO NewStuff Notifications
+                    NotifyConfig Package Parts Prison Runner StatusNotifierItem Svg TextEditor
+                    TextWidgets UnitConversion Wallet
                     OPTIONAL_COMPONENTS DocTools)
 find_package(Plasma5Support ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(Plasma ${PROJECT_DEP_VERSION} REQUIRED)
