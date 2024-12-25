@@ -217,7 +217,7 @@ set_package_properties(AppStreamQt PROPERTIES DESCRIPTION "Access metadata for l
                        URL "https://www.freedesktop.org/wiki/Distributions/AppStream/"
                        TYPE OPTIONAL)
 
-if(${AppStreamQt_FOUND})
+if(AppStreamQt_FOUND)
     set(HAVE_APPSTREAMQT true)
 endif()
 
@@ -323,7 +323,7 @@ set_package_properties(ICU
         TYPE REQUIRED
         PURPOSE "Better application groups in Kicker, timezone support"
         )
-if(${ICU_FOUND})
+if(ICU_FOUND)
     set(HAVE_ICU TRUE)
 endif()
 
@@ -334,7 +334,7 @@ set_package_properties(KExiv2Qt6
         TYPE OPTIONAL
         PURPOSE "Provides metadata for image wallpaper plugin"
         )
-if(${KExiv2Qt6_FOUND})
+if(KExiv2Qt6_FOUND)
     set(HAVE_KExiv2 TRUE)
 endif()
 
