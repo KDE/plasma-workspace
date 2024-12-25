@@ -2,7 +2,7 @@ add_subdirectory(plasmaautostart)
 add_subdirectory(kcminit)
 add_subdirectory(waitforname)
 
-if (SYSTEMD_FOUND)
+if (WITH_SYSTEMD)
     add_subdirectory(systemd)
 endif()
 

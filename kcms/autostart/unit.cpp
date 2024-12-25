@@ -6,6 +6,8 @@
 
 #include "unit.h"
 
+#include "config-workspace.h"
+
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -16,7 +18,7 @@
 #include <QDateTime>
 #include <QFile>
 
-#if HAVE_SYSTEMD
+#if WITH_SYSTEMD
 #include <systemd/sd-journal.h>
 #endif
 
@@ -147,7 +149,7 @@ void Unit::stop()
 
 QStringList Unit::getLastJournalEntries(const QString &unit)
 {
-#if HAVE_SYSTEMD
+#if WITH_SYSTEMD
     sd_journal *journal;
 
     int returnValue = sd_journal_open(&journal, (SD_JOURNAL_LOCAL_ONLY | SD_JOURNAL_CURRENT_USER));

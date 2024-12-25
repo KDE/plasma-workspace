@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "config-workspace.h"
+
 #include <QAbstractListModel>
 #include <QDBusConnection>
 #include <QDBusObjectPath>
@@ -89,7 +91,7 @@ private:
     static std::optional<AutostartEntry> loadDesktopEntry(const QString &fileName);
     QString systemdEscape(const QString &name) const;
 
-#if HAVE_SYSTEMD
+#if WITH_SYSTEMD
     static constexpr bool haveSystemd = true;
 #else
     static constexpr bool haveSystemd = false;

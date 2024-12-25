@@ -21,3 +21,5 @@
 #cmakedefine01 GLIBC_LOCALE_AUTO
 #cmakedefine01 GLIBC_LOCALE_GENERATED
 #cmakedefine GLIBC_LOCALE
+
+#cmakedefine01 WITH_SYSTEMD

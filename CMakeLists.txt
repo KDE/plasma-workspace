@@ -116,8 +116,21 @@ set_package_properties(KF6Holidays PROPERTIES DESCRIPTION "Holidays provider for
                        TYPE OPTIONAL
                        PURPOSE "Needed to for holidays plugin for Plasma Calendar."
                       )
-# Used in kcm_autostart
+
+# Used in kcm_autostart (journald) and startkde (systemd startup)
 pkg_check_modules(SYSTEMD "systemd")
+set(WITH_SYSTEMD_DEFAULT OFF)
+if(SYSTEMD_FOUND)
+    set(WITH_SYSTEMD_DEFAULT ON)
+endif()
+option(WITH_SYSTEMD "Build with systemd startup and journald support in kcm_autostart" ${WITH_SYSTEMD_DEFAULT})
+if(WITH_SYSTEMD)
+    if(NOT SYSTEMD_FOUND)
+        message(FATAL_ERROR "WITH_SYSTEMD enabled, but systemd not found!")
+    else()
+        pkg_check_modules(JOURNALD "libsystemd" REQUIRED)
+    endif()
+endif()
 
 find_package(Phonon4Qt6 4.6.60 REQUIRED NO_MODULE)
 set_package_properties(Phonon4Qt6 PROPERTIES

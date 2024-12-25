@@ -1,12 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kcm_autostart\")
 
-if(SYSTEMD_FOUND)
-    pkg_check_modules(JOURNALD "libsystemd" REQUIRED)
-    add_definitions(-DHAVE_SYSTEMD=1)
-else()
-    add_definitions(-DHAVE_SYSTEMD=0)
-endif()
-
 kcmutils_add_qml_kcm(kcm_autostart SOURCES ${kcm_autostart_PART_SRCS})
 target_sources(kcm_autostart PRIVATE
    autostartmodel.cpp
@@ -14,7 +7,9 @@ target_sources(kcm_autostart PRIVATE
    autostartmodel.h
    autostart.h
    unit.cpp
-   unit.h)
+   unit.h
+   ${CMAKE_CURRENT_BINARY_DIR}/../../config-workspace.h
+)
 target_link_libraries(kcm_autostart PRIVATE
     Qt6::Quick
     Qt6::DBus
