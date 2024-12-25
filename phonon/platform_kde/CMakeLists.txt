@@ -1,3 +1,7 @@
+add_definitions(-DQT_USE_FAST_OPERATOR_PLUS)
+
+include_directories(BEFORE ${PHONON_INCLUDES})
+
 set(kde_PART_SRCS
     debug.cpp
     kdeplatformplugin.cpp kdeplatformplugin.h
