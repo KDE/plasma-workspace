@@ -67,6 +67,10 @@ find_package(PlasmaQuick ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(KWayland ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivitiesStats ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(KSysGuard ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
+find_package(KF6Screen ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
+find_package(KScreenLocker ${PROJECT_DEP_VERSION} REQUIRED)
+find_package(LayerShellQt ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 
 if (BUILD_TESTING)
     include(ECMAddTests)
@@ -94,7 +98,6 @@ set_package_properties(KF6QuickCharts PROPERTIES
 )
 
 find_package(KF6UserFeedback)
-find_package(KSysGuard CONFIG REQUIRED)
 
 find_package(KF6Baloo)
 set_package_properties(KF6Baloo PROPERTIES DESCRIPTION "File Searching"
@@ -106,11 +109,8 @@ pkg_check_modules(QALCULATE libqalculate>2.0 REQUIRED IMPORTED_TARGET)
 pkg_check_modules(DBus dbus-1 REQUIRED IMPORTED_TARGET)
 
 find_package(KWinDBusInterface CONFIG REQUIRED)
-
-find_package(KF6Screen CONFIG REQUIRED)
-find_package(KScreenLocker 5.13.80 REQUIRED)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
-find_package(LayerShellQt CONFIG REQUIRED)
+
 find_package(KF6Holidays)
 set_package_properties(KF6Holidays PROPERTIES DESCRIPTION "Holidays provider for Plasma calendar"
                        TYPE OPTIONAL
