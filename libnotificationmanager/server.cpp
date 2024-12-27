@@ -39,8 +39,8 @@ Server::~Server() = default;
 
 Server &Server::self()
 {
-    static Server s_self;
-    return s_self;
+    static Server *s_self = new Server(qApp);
+    return *s_self;
 }
 
 Server *Server::create(QQmlEngine *, QJSEngine *)
