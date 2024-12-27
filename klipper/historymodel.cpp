@@ -431,12 +431,6 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
         text = mimeData->text();
     }
 
-    if (m_items.size() > m_maxSize - 1) {
-        if (!removeRow(m_items.size() - 1)) [[unlikely]] {
-            return false;
-        }
-    }
-
     auto item = std::make_shared<HistoryItem>(uuid, formats, text);
     auto updateJob = UpdateDatabaseJob::updateClipboard(this, &m_db, m_dbFolder, uuid, text, mimeData, timestamp);
     if (item->type() == HistoryItemType::Image) {
@@ -453,6 +447,11 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
     beginInsertRows(QModelIndex(), 0, 0);
     m_items.prepend(std::move(item));
     endInsertRows();
+
+    // BUG 417590: Remove only after an item is inserted to avoid clearing clipboard
+    if (m_items.size() > m_maxSize) {
+        removeRow(m_items.size() - 1);
+    }
 
     ++m_pendingJobs;
     connect(updateJob, &KJob::finished, this, [this] {
