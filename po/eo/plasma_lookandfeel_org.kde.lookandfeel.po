@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-09 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 19:03+0200\n"
+"PO-Revision-Date: 2024-12-27 10:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -80,10 +80,9 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Rekomencinte, la komputilo eniros la ekranon de agordo de firmware."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "Rekomencinte, la komputilo eniros la ekranon de agordo de firmware."
+msgstr "Rekomencante, la komputilo eniros la praŝargilan menuon."
 
 #: contents/logout/Logout.qml:216
 #, kde-format

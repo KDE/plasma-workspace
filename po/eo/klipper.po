@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-22 00:42+0000\n"
-"PO-Revision-Date: 2024-09-21 10:41+0200\n"
+"PO-Revision-Date: 2024-12-27 17:40+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -36,15 +36,12 @@ msgid "Clipboard history:"
 msgstr "Poŝohistorio:"
 
 #: configdialog.cpp:88
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " ero"
-msgstr[1] " eroj"
+msgstr[0] "%v ero"
+msgstr[1] "%v eroj"
 
 #: configdialog.cpp:97
 #, kde-format
@@ -142,15 +139,12 @@ msgid "Exclude Windows..."
 msgstr "Ekskludi Fenestrojn..."
 
 #: configdialog.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " sekundo"
-msgstr[1] " sekundoj"
+msgstr[0] "%v sekundo"
+msgstr[1] "%v sekundoj"
 
 #: configdialog.cpp:295
 #, kde-format
@@ -161,7 +155,7 @@ msgstr "Neniu"
 #: configdialog.cpp:304
 #, kde-format
 msgid "Options:"
-msgstr "Opcioj:"
+msgstr "Elektebloj:"
 
 #: configdialog.cpp:331
 #, kde-format
@@ -533,8 +527,8 @@ msgid ""
 msgstr ""
 "La komandoj por ĉi tiu kongruo estos inkluzivitaj en la aŭtomata aga "
 "ŝprucfenestro, se ĝi estas ebligita en la paĝo <interface>Ago-Menuo</"
-"interface>. Se ĉi tiu opcio estas malŝaltita, la komandoj por ĉi tiu kongruo "
-"ne estos inkluzivitaj en la aŭtomata ŝprucfenestro sed ili estos "
+"interface>. Se ĉi tiu elekteblo estas malŝaltita, la komandoj por ĉi tiu "
+"kongruo ne estos inkluzivitaj en la aŭtomata ŝprucfenestro sed ili estos "
 "inkluzivitaj se la ŝprucfenestro estas aktivigita permane per la klavkomando "
 "<shortcut>%1</shortcut>."
 
@@ -639,11 +633,10 @@ msgid "Clear Clipboard History"
 msgstr "Forviŝi Poŝohistorion"
 
 #: historymodel.cpp:242
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2 %3bpp"
+msgstr "%1x%2"
 
 #: klipper.cpp:90
 #, kde-format
