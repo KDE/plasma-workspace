@@ -42,6 +42,17 @@ PlasmaComponents3.AbstractButton {
         }
     }
 
+    Kirigami.MnemonicData.enabled: root.enabled && root.visible
+    Kirigami.MnemonicData.controlType: Kirigami.MnemonicData.SecondaryControl
+    Kirigami.MnemonicData.label: root.text
+
+    Shortcut {
+        //in case of explicit & the button manages it by itself
+        enabled: !(RegExp(/\&[^\&]/).test(root.text))
+        sequence: root.Kirigami.MnemonicData.sequence
+        onActivated: root.animateClick()
+    }
+
     background: Rectangle {
         implicitWidth: root.icon.width + root.padding * 2
         implicitHeight: root.icon.height + root.padding * 2
@@ -89,12 +100,12 @@ PlasmaComponents3.AbstractButton {
         PlasmaComponents3.Label {
             anchors.horizontalCenter: parent.horizontalCenter
             width: Math.min(implicitWidth, parent.width)
-            text: root.text
+            text: root.Kirigami.MnemonicData.richTextLabel
             style: root.softwareRendering ? Text.Outline : Text.Normal
             styleColor: Kirigami.Theme.backgroundColor // Unused without outline
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignTop
-            textFormat: Text.PlainText
+            textFormat: Text.StyledText
             wrapMode: Text.WordWrap
         }
     }
