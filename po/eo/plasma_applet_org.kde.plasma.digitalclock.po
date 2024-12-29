@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 00:42+0000\n"
-"PO-Revision-Date: 2024-12-27 10:42+0100\n"
+"PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -266,7 +266,7 @@ msgstr "%1pt %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "Rimarku: grandeco povus reduktiĝi se la panelo ne estas sufiĉe dika."
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
@@ -417,6 +417,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Horzono ne estas metita; klaku ĉi tie por malfermi agordon Dato & Horo kaj "
+"fiksi ĝin"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format

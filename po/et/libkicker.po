@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-01 00:41+0000\n"
+"POT-Creation-Date: 2024-12-29 00:44+0000\n"
 "PO-Revision-Date: 2020-09-28 01:43+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -53,13 +53,13 @@ msgstr "Viimati kasutatud failid"
 msgid "Forget Recent Files"
 msgstr "Unusta viimati kasutatud failid"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:382
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Muuda rakendust..."
 
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:414
 #, fuzzy, kde-format
 #| msgctxt "@action opens a software center with the application"
 #| msgid "Uninstall or Manage Add-Ons..."

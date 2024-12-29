@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-01 00:41+0000\n"
+"POT-Creation-Date: 2024-12-29 00:44+0000\n"
 "PO-Revision-Date: 2024-09-24 19:23+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -54,13 +54,13 @@ msgstr "Nyleg brukte filer"
 msgid "Forget Recent Files"
 msgstr "Gløym nyleg brukte filer"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:382
 #, kde-format
 msgid "Edit Application…"
 msgstr "Rediger program …"
 
 # Det er snakk om anten å avinstallera *programmet* eller å handsama (installera) programtillegg (for programmet). Det er altså ikkje snakk om å avinstallera programtillegg. Derfor er det mellomrom rundt skråstreken.
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:414
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

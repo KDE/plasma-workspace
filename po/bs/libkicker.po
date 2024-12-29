@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-01 00:41+0000\n"
+"POT-Creation-Date: 2024-12-29 00:44+0000\n"
 "PO-Revision-Date: 2015-02-04 15:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -56,13 +56,13 @@ msgstr "Skorašnji dokumenti"
 msgid "Forget Recent Files"
 msgstr "Skorašnji dokumenti"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:382
 #, fuzzy, kde-format
 #| msgid "Edit Application..."
 msgid "Edit Application…"
 msgstr "Podesavanje aplikacije..."
 
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:414
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

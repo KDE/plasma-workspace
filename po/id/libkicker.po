@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-01 00:41+0000\n"
+"POT-Creation-Date: 2024-12-29 00:44+0000\n"
 "PO-Revision-Date: 2024-10-03 20:40+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -54,12 +54,12 @@ msgstr "File-file Baru-baru Ini"
 msgid "Forget Recent Files"
 msgstr "Lupakan File-file Baru-baru Ini"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:382
 #, kde-format
 msgid "Edit Application…"
 msgstr "Edit Aplikasi..."
 
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:414
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"

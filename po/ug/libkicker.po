@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-01 00:41+0000\n"
+"POT-Creation-Date: 2024-12-29 00:44+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
@@ -53,12 +53,12 @@ msgstr "يېقىنقى پۈتۈكلەر"
 msgid "Forget Recent Files"
 msgstr "يېقىنقى پۈتۈكلەر"
 
-#: plugin/actionlist.cpp:395
+#: plugin/actionlist.cpp:382
 #, fuzzy, kde-format
 msgid "Edit Application…"
 msgstr "پروگراممىلار"
 
-#: plugin/actionlist.cpp:428
+#: plugin/actionlist.cpp:414
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
