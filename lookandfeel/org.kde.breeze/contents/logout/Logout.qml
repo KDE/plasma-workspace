@@ -213,8 +213,8 @@ Item {
             LogoutButton {
                 id: suspendButton
                 icon.name: "system-suspend"
-                text: root.showAllOptions ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep")
-                                          : i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Sleep Now")
+                text: root.showAllOptions ? i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Slee&p")
+                                          : i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "Suspend to RAM", "Slee&p Now")
                 onClicked: sleepRequested()
                 KeyNavigation.left: cancelButton
                 KeyNavigation.right: hibernateButton.visible ? hibernateButton : (rebootButton.visible ? rebootButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton)))
@@ -223,8 +223,8 @@ Item {
             LogoutButton {
                 id: hibernateButton
                 icon.name: "system-suspend-hibernate"
-                text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate")
-                                          : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Hibernate Now")
+                text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Hibernate")
+                                          : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Hibernate Now")
                 onClicked: hibernateRequested()
                 KeyNavigation.left: suspendButton.visible ? suspendButton : cancelButton
                 KeyNavigation.right: rebootButton.visible ? rebootButton : (shutdownButton.visible ? shutdownButton : (logoutButton.visible ? logoutButton : cancelButton))
@@ -237,8 +237,8 @@ Item {
                     if (softwareUpdatePending) {
                         return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates and Restart")
                     } else {
-                        return root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                                                   : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart Now")
+                        return root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Restart")
+                                                   : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Restart Now")
                     }
                 }
                 onClicked: {
@@ -256,8 +256,8 @@ Item {
             LogoutButton {
                 id: rebootWithoutUpdatesButton
                 icon.name: "system-reboot"
-                text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart")
-                                          : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Restart Now")
+                text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Restart")
+                                          : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Restart Now")
                 onClicked: {
                     rebootRequested();
                 }
@@ -272,8 +272,8 @@ Item {
                     if (softwareUpdatePending) {
                         return i18ndc("plasma_lookandfeel_org.kde.lookandfeel", "@action:button Keep short", "Install Updates and Shut Down")
                     } else {
-                        return root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
-                                                   : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down Now")
+                        return root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Shut Down")
+                                                   : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Shut Down Now")
                     }
                 }
                 onClicked: {
@@ -291,8 +291,8 @@ Item {
             LogoutButton {
                 id: shutdownWithoutUpdatesButton
                 icon.name: "system-shutdown"
-                text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down")
-                                          : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Shut Down Now")
+                text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Shut Down")
+                                          : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Shut Down Now")
                 onClicked: {
                     haltRequested();
                 }
@@ -304,8 +304,8 @@ Item {
             LogoutButton {
                 id: logoutButton
                 icon.name: "system-log-out"
-                text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log Out")
-                                          : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Log Out Now")
+                text: root.showAllOptions ? i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Log Out")
+                                          : i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Log Out Now")
                 onClicked: logoutRequested()
                 KeyNavigation.left: shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : (suspendButton.visible ? suspendButton : cancelButton)))))
                 KeyNavigation.right: cancelButton
@@ -315,7 +315,7 @@ Item {
             LogoutButton {
                 id: cancelButton
                 icon.name: "dialog-cancel"
-                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "Cancel")
+                text: i18nd("plasma_lookandfeel_org.kde.lookandfeel", "&Cancel")
                 onClicked: cancelRequested()
                 KeyNavigation.left: logoutButton.visible ? logoutButton : (shutdownWithoutUpdatesButton.visible ? shutdownWithoutUpdatesButton : (shutdownButton.visible ? shutdownButton : (rebootWithoutUpdatesButton.visible ? rebootWithoutUpdatesButton : (rebootButton.visible ? rebootButton : (hibernateButton.visible ? hibernateButton : suspendButton)))))
                 KeyNavigation.right: suspendButton.visible ? suspendButton : (hibernateButton.visible ? hibernateButton : rebootButton)

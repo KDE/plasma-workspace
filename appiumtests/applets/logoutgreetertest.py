@@ -44,19 +44,19 @@ class LogoutGreeterTests(unittest.TestCase):
         self.assertEqual(expected, outLines[(len(outLines) - 1)].decode('UTF-8'))
 
     def test_sleep(self):
-        self.driver.find_element(by=AppiumBy.NAME, value="Sleep").click()
+        self.driver.find_element(by=AppiumBy.NAME, value="Slee&p").click()
         self.assertStdOutLine("suspend")
 
     def test_hibernate(self):
-        self.driver.find_element(by=AppiumBy.NAME, value="Hibernate").click()
+        self.driver.find_element(by=AppiumBy.NAME, value="&Hibernate").click()
         self.assertStdOutLine("hibernate")
 
     def test_restart(self):
-        self.driver.find_element(by=AppiumBy.NAME, value="Restart").click()
+        self.driver.find_element(by=AppiumBy.NAME, value="&Restart").click()
         self.assertStdOutLine("reboot")
 
     def test_restart(self):
-        self.driver.find_element(by=AppiumBy.NAME, value="Shut Down").click()
+        self.driver.find_element(by=AppiumBy.NAME, value="&Shut Down").click()
         self.assertStdOutLine("shutdown")
 
 
