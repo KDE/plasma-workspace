@@ -27,6 +27,7 @@ WallpaperItem {
             // Save drag and drop result
             root.configuration.SlidePaths = imageWallpaper.slidePaths;
         }
+        root.configuration.writeConfig();
     }
 
     contextualActions: [
@@ -45,7 +46,7 @@ WallpaperItem {
     ]
 
     Connections {
-        enabled: root.pluginName === "org.kde.slideshow"
+		enabled: root.pluginName === "org.kde.slideshow"
         target: Qt.application
         function onAboutToQuit() {
             root.configuration.writeConfig(); // Save the last position

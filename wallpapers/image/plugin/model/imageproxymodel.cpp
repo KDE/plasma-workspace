@@ -195,6 +195,7 @@ void ImageProxyModel::commitAddition()
     list.removeDuplicates();
 
     cfg.writeEntry("usersWallpapers", list);
+    cfg.sync();
 
     m_pendingAddition.clear();
 }
