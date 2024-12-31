@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-12-31 00:42+0000\n"
 "PO-Revision-Date: 2017-09-25 19:53+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -92,23 +92,23 @@ msgstr ""
 #: contents/logout/Logout.qml:216
 #, kde-format
 msgctxt "Suspend to RAM"
-msgid "Sleep"
+msgid "Slee&p"
 msgstr ""
 
 #: contents/logout/Logout.qml:217
 #, kde-format
 msgctxt "Suspend to RAM"
-msgid "Sleep Now"
+msgid "Slee&p Now"
 msgstr ""
 
 #: contents/logout/Logout.qml:226
 #, kde-format
-msgid "Hibernate"
+msgid "&Hibernate"
 msgstr ""
 
 #: contents/logout/Logout.qml:227
 #, kde-format
-msgid "Hibernate Now"
+msgid "&Hibernate Now"
 msgstr ""
 
 #: contents/logout/Logout.qml:238
@@ -119,15 +119,16 @@ msgstr ""
 
 # rewrite-msgid: /Restart/Reset/
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, kde-format
-msgid "Restart"
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "&Restart"
 msgstr "Resetuj"
 
 # rewrite-msgid: /Restart/Reset/
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
 #, fuzzy, kde-format
 #| msgid "Restart"
-msgid "Restart Now"
+msgid "&Restart Now"
 msgstr "Resetuj"
 
 #: contents/logout/Logout.qml:273
@@ -139,28 +140,29 @@ msgstr ""
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
 #, fuzzy, kde-format
 #| msgid "Shutdown"
-msgid "Shut Down"
+msgid "&Shut Down"
 msgstr "Ugasi"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
 #, fuzzy, kde-format
 #| msgid "Shutdown"
-msgid "Shut Down Now"
+msgid "&Shut Down Now"
 msgstr "Ugasi"
 
 #: contents/logout/Logout.qml:307
 #, kde-format
-msgid "Log Out"
+msgid "&Log Out"
 msgstr ""
 
 #: contents/logout/Logout.qml:308
 #, kde-format
-msgid "Log Out Now"
+msgid "&Log Out Now"
 msgstr ""
 
 #: contents/logout/Logout.qml:318
-#, kde-format
-msgid "Cancel"
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgid "&Cancel"
 msgstr "Odustani"
 
 #: contents/osd/OsdItem.qml:34

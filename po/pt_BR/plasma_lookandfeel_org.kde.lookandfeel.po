@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-12-31 00:42+0000\n"
 "PO-Revision-Date: 2024-11-29 00:29-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -88,25 +88,31 @@ msgstr ""
 "firmware."
 
 #: contents/logout/Logout.qml:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
 msgctxt "Suspend to RAM"
-msgid "Sleep"
+msgid "Slee&p"
 msgstr "Suspender"
 
 #: contents/logout/Logout.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep Now"
 msgctxt "Suspend to RAM"
-msgid "Sleep Now"
+msgid "Slee&p Now"
 msgstr "Suspender agora"
 
 #: contents/logout/Logout.qml:226
-#, kde-format
-msgid "Hibernate"
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "&Hibernate"
 msgstr "Hibernar"
 
 #: contents/logout/Logout.qml:227
-#, kde-format
-msgid "Hibernate Now"
+#, fuzzy, kde-format
+#| msgid "Hibernate Now"
+msgid "&Hibernate Now"
 msgstr "Hibernar agora"
 
 #: contents/logout/Logout.qml:238
@@ -116,13 +122,15 @@ msgid "Install Updates and Restart"
 msgstr "Instalar atualizações e reiniciar"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, kde-format
-msgid "Restart"
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "&Restart"
 msgstr "Reiniciar"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, kde-format
-msgid "Restart Now"
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgid "&Restart Now"
 msgstr "Reiniciar agora"
 
 #: contents/logout/Logout.qml:273
@@ -132,28 +140,33 @@ msgid "Install Updates and Shut Down"
 msgstr "Instalar atualizações e desligar"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, kde-format
-msgid "Shut Down"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "&Shut Down"
 msgstr "Desligar"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, kde-format
-msgid "Shut Down Now"
+#, fuzzy, kde-format
+#| msgid "Shut Down Now"
+msgid "&Shut Down Now"
 msgstr "Desligar agora"
 
 #: contents/logout/Logout.qml:307
-#, kde-format
-msgid "Log Out"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "&Log Out"
 msgstr "Encerrar sessão"
 
 #: contents/logout/Logout.qml:308
-#, kde-format
-msgid "Log Out Now"
+#, fuzzy, kde-format
+#| msgid "Log Out Now"
+msgid "&Log Out Now"
 msgstr "Encerrar sessão agora"
 
 #: contents/logout/Logout.qml:318
-#, kde-format
-msgid "Cancel"
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgid "&Cancel"
 msgstr "Cancelar"
 
 #: contents/osd/OsdItem.qml:34

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-12-31 00:42+0000\n"
 "PO-Revision-Date: 2022-02-26 11:47+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: Hindi <kde-l10n-hi@kde.org>\n"
@@ -79,9 +79,11 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "पुनरारंभ होने पर, कंप्यूटर फर्मवेयर संस्थापन स्क्रीन में प्रवेश करेगा।"
 
 #: contents/logout/Logout.qml:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
 msgctxt "Suspend to RAM"
-msgid "Sleep"
+msgid "Slee&p"
 msgstr "निद्रा"
 
 #: contents/logout/Logout.qml:217
@@ -89,18 +91,19 @@ msgstr "निद्रा"
 #| msgctxt "Suspend to RAM"
 #| msgid "Sleep"
 msgctxt "Suspend to RAM"
-msgid "Sleep Now"
+msgid "Slee&p Now"
 msgstr "निद्रा"
 
 #: contents/logout/Logout.qml:226
-#, kde-format
-msgid "Hibernate"
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "&Hibernate"
 msgstr "सुप्तावस्था"
 
 #: contents/logout/Logout.qml:227
 #, fuzzy, kde-format
 #| msgid "Hibernate"
-msgid "Hibernate Now"
+msgid "&Hibernate Now"
 msgstr "सुप्तावस्था"
 
 #: contents/logout/Logout.qml:238
@@ -110,14 +113,15 @@ msgid "Install Updates and Restart"
 msgstr ""
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, kde-format
-msgid "Restart"
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "&Restart"
 msgstr "पुनः प्रारंभ करें"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
 #, fuzzy, kde-format
 #| msgid "Restart"
-msgid "Restart Now"
+msgid "&Restart Now"
 msgstr "पुनः प्रारंभ करें"
 
 #: contents/logout/Logout.qml:273
@@ -127,30 +131,33 @@ msgid "Install Updates and Shut Down"
 msgstr ""
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, kde-format
-msgid "Shut Down"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "&Shut Down"
 msgstr "बन्द करें"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
 #, fuzzy, kde-format
 #| msgid "Shut Down"
-msgid "Shut Down Now"
+msgid "&Shut Down Now"
 msgstr "बन्द करें"
 
 #: contents/logout/Logout.qml:307
-#, kde-format
-msgid "Log Out"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "&Log Out"
 msgstr "लॉग-आउट"
 
 #: contents/logout/Logout.qml:308
 #, fuzzy, kde-format
 #| msgid "Log Out"
-msgid "Log Out Now"
+msgid "&Log Out Now"
 msgstr "लॉग-आउट"
 
 #: contents/logout/Logout.qml:318
-#, kde-format
-msgid "Cancel"
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgid "&Cancel"
 msgstr "रद्द करें"
 
 #: contents/osd/OsdItem.qml:34

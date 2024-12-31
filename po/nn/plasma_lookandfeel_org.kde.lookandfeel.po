@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-12-31 00:42+0000\n"
 "PO-Revision-Date: 2024-09-01 15:05+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -85,25 +85,31 @@ msgstr ""
 "oppsett av fastvara."
 
 #: contents/logout/Logout.qml:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
 msgctxt "Suspend to RAM"
-msgid "Sleep"
+msgid "Slee&p"
 msgstr "Kvilemodus"
 
 #: contents/logout/Logout.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep Now"
 msgctxt "Suspend to RAM"
-msgid "Sleep Now"
+msgid "Slee&p Now"
 msgstr "Gå i kvilemodus no"
 
 #: contents/logout/Logout.qml:226
-#, kde-format
-msgid "Hibernate"
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "&Hibernate"
 msgstr "Dvalemodus"
 
 #: contents/logout/Logout.qml:227
-#, kde-format
-msgid "Hibernate Now"
+#, fuzzy, kde-format
+#| msgid "Hibernate Now"
+msgid "&Hibernate Now"
 msgstr "Gå i dvalemodus no"
 
 #: contents/logout/Logout.qml:238
@@ -113,13 +119,15 @@ msgid "Install Updates and Restart"
 msgstr "Installer oppdateringar og start på nytt"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, kde-format
-msgid "Restart"
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "&Restart"
 msgstr "Start på nytt"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, kde-format
-msgid "Restart Now"
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgid "&Restart Now"
 msgstr "Start på nytt no"
 
 #: contents/logout/Logout.qml:273
@@ -130,28 +138,33 @@ msgstr "Installer oppdateringar og slå av"
 
 # Teksten bør vera kort, for å unngå å bli delt over fleire linjer (så «Slå av maskina», som stod før, er gjerne hakket for langt), sidan dei andre tekstane er på éi linje.
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, kde-format
-msgid "Shut Down"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "&Shut Down"
 msgstr "Slå av"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, kde-format
-msgid "Shut Down Now"
+#, fuzzy, kde-format
+#| msgid "Shut Down Now"
+msgid "&Shut Down Now"
 msgstr "Slå av no"
 
 #: contents/logout/Logout.qml:307
-#, kde-format
-msgid "Log Out"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "&Log Out"
 msgstr "Logg ut"
 
 #: contents/logout/Logout.qml:308
-#, kde-format
-msgid "Log Out Now"
+#, fuzzy, kde-format
+#| msgid "Log Out Now"
+msgid "&Log Out Now"
 msgstr "Logg ut no"
 
 #: contents/logout/Logout.qml:318
-#, kde-format
-msgid "Cancel"
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgid "&Cancel"
 msgstr "Avbryt"
 
 #: contents/osd/OsdItem.qml:34

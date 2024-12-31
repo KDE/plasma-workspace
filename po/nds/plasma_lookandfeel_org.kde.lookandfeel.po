@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-12-31 00:42+0000\n"
 "PO-Revision-Date: 2014-09-18 16:12+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -79,23 +79,23 @@ msgstr ""
 #: contents/logout/Logout.qml:216
 #, kde-format
 msgctxt "Suspend to RAM"
-msgid "Sleep"
+msgid "Slee&p"
 msgstr ""
 
 #: contents/logout/Logout.qml:217
 #, kde-format
 msgctxt "Suspend to RAM"
-msgid "Sleep Now"
+msgid "Slee&p Now"
 msgstr ""
 
 #: contents/logout/Logout.qml:226
 #, kde-format
-msgid "Hibernate"
+msgid "&Hibernate"
 msgstr ""
 
 #: contents/logout/Logout.qml:227
 #, kde-format
-msgid "Hibernate Now"
+msgid "&Hibernate Now"
 msgstr ""
 
 #: contents/logout/Logout.qml:238
@@ -106,12 +106,12 @@ msgstr ""
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
 #, kde-format
-msgid "Restart"
+msgid "&Restart"
 msgstr ""
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
 #, kde-format
-msgid "Restart Now"
+msgid "&Restart Now"
 msgstr ""
 
 #: contents/logout/Logout.qml:273
@@ -123,32 +123,33 @@ msgstr ""
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
 #, fuzzy, kde-format
 #| msgid "Shut down"
-msgid "Shut Down"
+msgid "&Shut Down"
 msgstr "Utmaken"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
 #, fuzzy, kde-format
 #| msgid "Shut down"
-msgid "Shut Down Now"
+msgid "&Shut Down Now"
 msgstr "Utmaken"
 
 #: contents/logout/Logout.qml:307
 #, fuzzy, kde-format
 #| msgctxt "Button to log out of the desktop session"
 #| msgid "Log out"
-msgid "Log Out"
+msgid "&Log Out"
 msgstr "Afmellen"
 
 #: contents/logout/Logout.qml:308
 #, fuzzy, kde-format
 #| msgctxt "Button to log out of the desktop session"
 #| msgid "Log out"
-msgid "Log Out Now"
+msgid "&Log Out Now"
 msgstr "Afmellen"
 
 #: contents/logout/Logout.qml:318
-#, kde-format
-msgid "Cancel"
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgid "&Cancel"
 msgstr "Afbreken"
 
 #: contents/osd/OsdItem.qml:34

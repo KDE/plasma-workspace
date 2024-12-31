@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-12-31 00:42+0000\n"
 "PO-Revision-Date: 2024-03-15 01:17+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -78,25 +78,31 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr ""
 
 #: contents/logout/Logout.qml:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
 msgctxt "Suspend to RAM"
-msgid "Sleep"
+msgid "Slee&p"
 msgstr "Dormir"
 
 #: contents/logout/Logout.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep Now"
 msgctxt "Suspend to RAM"
-msgid "Sleep Now"
+msgid "Slee&p Now"
 msgstr "Dormir"
 
 #: contents/logout/Logout.qml:226
-#, kde-format
-msgid "Hibernate"
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "&Hibernate"
 msgstr "Ivernar"
 
 #: contents/logout/Logout.qml:227
-#, kde-format
-msgid "Hibernate Now"
+#, fuzzy, kde-format
+#| msgid "Hibernate Now"
+msgid "&Hibernate Now"
 msgstr "Ivernar"
 
 #: contents/logout/Logout.qml:238
@@ -106,13 +112,15 @@ msgid "Install Updates and Restart"
 msgstr ""
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, kde-format
-msgid "Restart"
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "&Restart"
 msgstr "Reaniciar"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, kde-format
-msgid "Restart Now"
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgid "&Restart Now"
 msgstr "Reaniciar"
 
 #: contents/logout/Logout.qml:273
@@ -122,28 +130,32 @@ msgid "Install Updates and Shut Down"
 msgstr ""
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, kde-format
-msgid "Shut Down"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "&Shut Down"
 msgstr "Apagar"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, kde-format
-msgid "Shut Down Now"
+#, fuzzy, kde-format
+#| msgid "Shut Down Now"
+msgid "&Shut Down Now"
 msgstr "Apagar"
 
 #: contents/logout/Logout.qml:307
-#, kde-format
-msgid "Log Out"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "&Log Out"
 msgstr "Zarrar la sesión"
 
 #: contents/logout/Logout.qml:308
-#, kde-format
-msgid "Log Out Now"
+#, fuzzy, kde-format
+#| msgid "Log Out Now"
+msgid "&Log Out Now"
 msgstr "Zarrar la sesión"
 
 #: contents/logout/Logout.qml:318
 #, kde-format
-msgid "Cancel"
+msgid "&Cancel"
 msgstr ""
 
 #: contents/osd/OsdItem.qml:34

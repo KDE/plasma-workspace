@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-09 00:42+0000\n"
+"POT-Creation-Date: 2024-12-31 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -70,25 +70,31 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "重新启动时，电脑将进入引导加载程序菜单。"
 
 #: contents/logout/Logout.qml:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep"
 msgctxt "Suspend to RAM"
-msgid "Sleep"
+msgid "Slee&p"
 msgstr "睡眠"
 
 #: contents/logout/Logout.qml:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Suspend to RAM"
+#| msgid "Sleep Now"
 msgctxt "Suspend to RAM"
-msgid "Sleep Now"
+msgid "Slee&p Now"
 msgstr "立即睡眠"
 
 #: contents/logout/Logout.qml:226
-#, kde-format
-msgid "Hibernate"
+#, fuzzy, kde-format
+#| msgid "Hibernate"
+msgid "&Hibernate"
 msgstr "休眠"
 
 #: contents/logout/Logout.qml:227
-#, kde-format
-msgid "Hibernate Now"
+#, fuzzy, kde-format
+#| msgid "Hibernate Now"
+msgid "&Hibernate Now"
 msgstr "立即休眠"
 
 #: contents/logout/Logout.qml:238
@@ -98,13 +104,15 @@ msgid "Install Updates and Restart"
 msgstr "安装更新并重启"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, kde-format
-msgid "Restart"
+#, fuzzy, kde-format
+#| msgid "Restart"
+msgid "&Restart"
 msgstr "重启"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, kde-format
-msgid "Restart Now"
+#, fuzzy, kde-format
+#| msgid "Restart Now"
+msgid "&Restart Now"
 msgstr "立即重新启动"
 
 #: contents/logout/Logout.qml:273
@@ -114,28 +122,33 @@ msgid "Install Updates and Shut Down"
 msgstr "安装更新并关机"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, kde-format
-msgid "Shut Down"
+#, fuzzy, kde-format
+#| msgid "Shut Down"
+msgid "&Shut Down"
 msgstr "关机"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, kde-format
-msgid "Shut Down Now"
+#, fuzzy, kde-format
+#| msgid "Shut Down Now"
+msgid "&Shut Down Now"
 msgstr "立即关机"
 
 #: contents/logout/Logout.qml:307
-#, kde-format
-msgid "Log Out"
+#, fuzzy, kde-format
+#| msgid "Log Out"
+msgid "&Log Out"
 msgstr "注销"
 
 #: contents/logout/Logout.qml:308
-#, kde-format
-msgid "Log Out Now"
+#, fuzzy, kde-format
+#| msgid "Log Out Now"
+msgid "&Log Out Now"
 msgstr "立即注销"
 
 #: contents/logout/Logout.qml:318
-#, kde-format
-msgid "Cancel"
+#, fuzzy, kde-format
+#| msgid "Cancel"
+msgid "&Cancel"
 msgstr "取消"
 
 #: contents/osd/OsdItem.qml:34
