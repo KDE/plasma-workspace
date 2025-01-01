@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-08 00:41+0000\n"
+"POT-Creation-Date: 2025-01-01 00:42+0000\n"
 "PO-Revision-Date: 2024-12-09 07:16+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -98,12 +98,12 @@ msgstr "Warna padat"
 msgid "Select Background Color"
 msgstr "Pilih Warna LatarBelakang:"
 
-#: imagepackage/contents/ui/main.qml:34
+#: imagepackage/contents/ui/main.qml:35
 #, kde-format
 msgid "Open Wallpaper Image"
 msgstr "Buka Gambar Wallpaper"
 
-#: imagepackage/contents/ui/main.qml:40
+#: imagepackage/contents/ui/main.qml:41
 #, kde-format
 msgid "Next Wallpaper Image"
 msgstr "Gambar Wallpaper Selanjutnya"

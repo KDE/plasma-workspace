@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-31 00:42+0000\n"
-"PO-Revision-Date: 2024-11-09 08:36+0300\n"
+"PO-Revision-Date: 2024-12-31 11:53+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -84,32 +84,26 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Yeniden başlatıldığında bilgisayar, önyükleyici menüsüne girecektir."
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "Uyut"
+msgstr "&Uyut"
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Şimdi Uyut"
+msgstr "Ş&imdi Uyut"
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Derin Uykuya Geçir"
+msgstr "&Derin Uykuya Geçir"
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "Şimdi Derin Uykuya Geçir"
+msgstr "Şi&mdi Derin Uykuya Geçir"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -118,16 +112,14 @@ msgid "Install Updates and Restart"
 msgstr "Güncellemeleri Kur ve Yeniden Başlat"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
-msgstr "Yeniden Başlat"
+msgstr "&Yeniden Başlat"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
-msgstr "Şimdi Yeniden Başlat"
+msgstr "Şimdi Y&eniden Başlat"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -136,34 +128,29 @@ msgid "Install Updates and Shut Down"
 msgstr "Güncellemeleri Kur ve Kapat"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
-msgstr "Kapat"
+msgstr "&Kapat"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "Şimdi Kapat"
+msgstr "Şimdi K&apat"
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
-msgstr "Oturumu Kapat"
+msgstr "&Oturumu Kapat"
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
-msgstr "Şimdi Oturumu Kapat"
+msgstr "Şimdi Oturumu Kapa&t"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "İptal"
+msgstr "İ&ptal"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
