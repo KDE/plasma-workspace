@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-28 00:41+0000\n"
-"PO-Revision-Date: 2024-08-23 21:45+0200\n"
+"PO-Revision-Date: 2024-12-31 11:42+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -102,12 +102,10 @@ msgid "Hibernate Now"
 msgstr "Pasivumigi Nun"
 
 #: contents/logout/Logout.qml:225
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Restart"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Restart"
-msgstr "Instali Ĝisdatigojn & Rekomenci"
+msgstr "Instali Ĝisdatigojn kaj Rekomenci"
 
 #: contents/logout/Logout.qml:227 contents/logout/Logout.qml:246
 #, kde-format
@@ -120,12 +118,10 @@ msgid "Restart Now"
 msgstr "Rekomenci Nun"
 
 #: contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgctxt "@action:button Keep short"
-#| msgid "Install Updates & Shut Down"
+#, kde-format
 msgctxt "@action:button Keep short"
 msgid "Install Updates and Shut Down"
-msgstr "Instali Ĝisdatigojn & Sistemfermi"
+msgstr "Instali Ĝisdatigojn kaj Sistemfermi"
 
 #: contents/logout/Logout.qml:262 contents/logout/Logout.qml:281
 #, kde-format
@@ -166,11 +162,3 @@ msgctxt ""
 "product. Plasma is the project name so shouldn't be translated."
 msgid "Plasma made by KDE"
 msgstr "Plasma farita de KDE"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Restart Now"
-#~ msgstr "Instali Ĝisdatigojn & Rekomenci Nun"
-
-#~ msgctxt "@action:button Keep short"
-#~ msgid "Install Updates & Shut Down Now"
-#~ msgstr "Instali Ĝisdatigojn & Sistemfermi Nun"

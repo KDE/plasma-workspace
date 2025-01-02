@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-06 02:32+0000\n"
-"PO-Revision-Date: 2024-08-03 07:26+0200\n"
+"PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -155,7 +155,7 @@ msgstr "Neniu"
 #: configdialog.cpp:303
 #, kde-format
 msgid "Options:"
-msgstr "Opcioj:"
+msgstr "Elektebloj:"
 
 #: configdialog.cpp:330
 #, kde-format
@@ -396,7 +396,7 @@ msgstr "Forigi el historio"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Tekstredakta areo"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
@@ -515,8 +515,8 @@ msgid ""
 msgstr ""
 "La komandoj por ĉi tiu kongruo estos inkluzivitaj en la aŭtomata aga "
 "ŝprucfenestro, se ĝi estas ebligita en la paĝo <interface>Ago-Menuo</"
-"interface>. Se ĉi tiu opcio estas malŝaltita, la komandoj por ĉi tiu kongruo "
-"ne estos inkluzivitaj en la aŭtomata ŝprucfenestro sed ili estos "
+"interface>. Se ĉi tiu elekteblo estas malŝaltita, la komandoj por ĉi tiu "
+"kongruo ne estos inkluzivitaj en la aŭtomata ŝprucfenestro sed ili estos "
 "inkluzivitaj se la ŝprucfenestro estas aktivigita permane per la klavkomando "
 "<shortcut>%1</shortcut>."
 

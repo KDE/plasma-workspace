@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-27 02:38+0000\n"
-"PO-Revision-Date: 2024-08-23 21:45+0200\n"
+"PO-Revision-Date: 2024-09-18 19:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -357,7 +357,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Lastatempe instalita"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -386,11 +386,10 @@ msgid "Select Plasmoid File"
 msgstr "Elekti Plasmoid-Dosieron"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Instalado de la pako %1 malsukcesis."
+msgstr "Instalado de la pako %1 malsukcesis: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format

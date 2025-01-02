@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-22 02:32+0000\n"
-"PO-Revision-Date: 2024-06-09 06:15+0200\n"
+"PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -154,7 +154,7 @@ msgstr "Ĉu Kaŝi Antaŭrigardan Rubandon?"
 #: desktopview.cpp:518
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr ""
+msgstr "Eniri Redaktan Reĝimon"
 
 #: main.cpp:88
 #, kde-format
@@ -206,7 +206,7 @@ msgstr ""
 #, kde-format
 msgctxt "Brightness OSD: display name and brightness percentage"
 msgid "%1: %2%"
-msgstr ""
+msgstr "%1: %2%"
 
 #: osd.cpp:88
 #, kde-format

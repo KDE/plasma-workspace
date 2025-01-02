@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-08 02:31+0000\n"
-"PO-Revision-Date: 2024-07-06 06:58+0200\n"
+"PO-Revision-Date: 2024-09-18 19:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -42,46 +42,40 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Dosierujo kun ekranfonbildo el kiu montri lumbildojn"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Lokigo:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
-msgstr "Skalite kaj Stucite"
+msgstr "Skalita kaj stucita"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
-msgstr "Skalite"
+msgstr "Skalita"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
-msgstr "Skalite"
+msgstr "Skalita, teni proprociojn"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
-msgstr "Centre"
+msgstr "Centrita"
 
 #: imagepackage/contents/ui/config.qml:147
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
-msgstr "Kahele"
+msgstr "Kahela"
 
 #: imagepackage/contents/ui/config.qml:175
 #, kde-format
@@ -175,7 +169,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:33
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
-msgstr ""
+msgstr "Specifu la plenigoreĝimon (ekz. stretch, preserveAspectCrop, ktp.)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -191,7 +185,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Nevalida plenigoreĝimo specifita: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format

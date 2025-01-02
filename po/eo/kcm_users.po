@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-07 02:30+0000\n"
-"PO-Revision-Date: 2024-07-20 17:03+0200\n"
+"PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -187,11 +187,10 @@ msgstr "Krei"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "Elekti Bildan Areon"
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
 msgstr "Fingro Enskribita"
@@ -552,6 +551,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Bilddosieroj (Ĉiuj gravaj dosiertipoj) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
+"jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:196
 #, kde-format
@@ -649,6 +650,3 @@ msgstr "Via Konto"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Aliaj Kontoj"
-
-#~ msgid "Enrolling Fingerprint"
-#~ msgstr "Enskribanta Fingrosignon"
