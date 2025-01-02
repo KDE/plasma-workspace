@@ -22,7 +22,7 @@ Kirigami.OverlaySheet {
 
         QQC2.Label {
             Layout.fillWidth: true
-            text: xi18nc("@info", "Now that you have changed your login password, you may also want to change the password on your default KWallet to match it.")
+            text: i18nc("@info", "Now that you have changed your login password, you may also want to change the password on your default KWallet to match it.")
             textFormat: Text.PlainText
             wrapMode: Text.Wrap
         }
