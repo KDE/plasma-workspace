@@ -6,13 +6,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2019.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-31 00:42+0000\n"
-"PO-Revision-Date: 2024-11-11 16:13+0900\n"
+"PO-Revision-Date: 2025-01-02 18:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -75,32 +75,26 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "重新開機後，電腦將進入開機管理員選單。"
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "睡眠"
+msgstr "睡眠(&P)"
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "立即睡眠"
+msgstr "立即睡眠(&P)"
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "休眠"
+msgstr "休眠(&H)"
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "立即休眠"
+msgstr "立即休眠(&H)"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -109,16 +103,14 @@ msgid "Install Updates and Restart"
 msgstr "安裝更新後重新啟動"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
-msgstr "重新啟動"
+msgstr "重新啟動(&R)"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
-msgstr "立即重新啟動"
+msgstr "立即重新啟動(&R)"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -127,34 +119,29 @@ msgid "Install Updates and Shut Down"
 msgstr "安裝更新後關機"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
-msgstr "關機"
+msgstr "關機(&S)"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "立即關機"
+msgstr "立即關機(&S)"
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
-msgstr "登出"
+msgstr "登出(&L)"
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
-msgstr "立即登出"
+msgstr "立即登出(&L)"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "取消"
+msgstr "取消(&C)"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format

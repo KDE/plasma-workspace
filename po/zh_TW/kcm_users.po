@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-07 00:41+0000\n"
+"POT-Creation-Date: 2025-01-03 00:43+0000\n"
 "PO-Revision-Date: 2024-11-11 16:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -92,11 +92,15 @@ msgid "Change Wallet Password?"
 msgstr "變更錢包密碼？"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, kde-kuit-format
+#, fuzzy, kde-format
+#| msgctxt "@info"
+#| msgid ""
+#| "Now that you have changed your login password, you may also want to "
+#| "change the password on your default KWallet to match it."
 msgctxt "@info"
 msgid ""
-"Now that you have changed your login password, you may also want to change "
-"the password on your default KWallet to match it."
+"Now that you have changed your login password, consider changing the "
+"password on your default KWallet to match it."
 msgstr "修改登入密碼後，您可能也會想要變更預設 KWallet 錢包密碼來使兩者相符。"
 
 #: src/ui/ChangeWalletPassword.qml:31

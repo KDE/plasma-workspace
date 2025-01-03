@@ -73,23 +73,23 @@ msgstr "重新启动时，电脑将进入引导加载程序菜单。"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr ""
+msgstr "睡眠(&P)"
 
 #: contents/logout/Logout.qml:217
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr ""
+msgstr "立即睡眠(&P)"
 
 #: contents/logout/Logout.qml:226
 #, kde-format
 msgid "&Hibernate"
-msgstr ""
+msgstr "休眠(&H)"
 
 #: contents/logout/Logout.qml:227
 #, kde-format
 msgid "&Hibernate Now"
-msgstr ""
+msgstr "立即休眠(&H)"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -100,12 +100,12 @@ msgstr "安装更新并重启"
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
 #, kde-format
 msgid "&Restart"
-msgstr ""
+msgstr "重启(&R)"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
 #, kde-format
 msgid "&Restart Now"
-msgstr ""
+msgstr "立即重启(&R)"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -116,27 +116,27 @@ msgstr "安装更新并关机"
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
 #, kde-format
 msgid "&Shut Down"
-msgstr ""
+msgstr "关闭(&S)"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
 #, kde-format
 msgid "&Shut Down Now"
-msgstr ""
+msgstr "立即关机(&S)"
 
 #: contents/logout/Logout.qml:307
 #, kde-format
 msgid "&Log Out"
-msgstr ""
+msgstr "注销(&L)"
 
 #: contents/logout/Logout.qml:308
 #, kde-format
 msgid "&Log Out Now"
-msgstr ""
+msgstr "立即注销(&L)"
 
 #: contents/logout/Logout.qml:318
 #, kde-format
 msgid "&Cancel"
-msgstr ""
+msgstr "取消(&C)"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
