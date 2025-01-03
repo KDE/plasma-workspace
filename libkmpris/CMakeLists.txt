@@ -46,7 +46,7 @@ set_target_properties(kmpris PROPERTIES
 ecm_add_qml_module(kmpris URI org.kde.plasma.private.mpris GENERATE_PLUGIN_SOURCE)
 ecm_finalize_qml_module(kmpris)
 
-install(TARGETS kmpris ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS kmpris ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 add_subdirectory(kded)
 
