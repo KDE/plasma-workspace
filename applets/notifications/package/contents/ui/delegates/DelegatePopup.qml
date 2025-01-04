@@ -52,7 +52,32 @@ BaseDelegate {
         }
     }
 
+    // Horizontal timeout indicator
+    Item {
+        Layout.fillWidth: true
+        Layout.row: 1
+        Layout.columnSpan: delegateRoot.__firstColumn + 2
+        // Hug the top, left, and right
+        Layout.topMargin: -((delegateRoot.columnSpacing * 2) + height)
+        Layout.leftMargin: -delegateRoot.modelInterface.popupLeftPadding
+        Layout.rightMargin: -delegateRoot.modelInterface.popupRightPadding
+        implicitHeight: 1
+        implicitWidth: -1
+        visible: !criticalNotificationIndicator.visible
+
+        Rectangle {
+            readonly property real completionFraction: delegateRoot.modelInterface.remainingTime / delegateRoot.modelInterface.timeout
+
+            height: parent.height
+            width: Math.round(parent.width * completionFraction)
+            anchors.left: parent.left
+
+            color: Kirigami.Theme.highlightColor
+        }
+    }
+
     Rectangle {
+        id: criticalNotificationIndicator
         Layout.fillHeight: true
         Layout.leftMargin: Layout.mirrored ? 0 : -modelInterface.popupLeftPadding
         Layout.rightMargin: Layout.mirrored ? -modelInterface.popupRightPadding : 0
@@ -70,7 +95,7 @@ BaseDelegate {
         id: summary
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
-        Layout.row: 1
+        Layout.row: 2
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: icon.visible ? 1 : 2
         modelInterface: delegateRoot.modelInterface
@@ -78,7 +103,7 @@ BaseDelegate {
 
     Components.Icon {
         id: icon
-        Layout.row: 1
+        Layout.row: 2
         Layout.column: delegateRoot.__firstColumn + 1
         Layout.rowSpan: 2
         modelInterface: delegateRoot.modelInterface
@@ -86,7 +111,7 @@ BaseDelegate {
 
     KQuickControlsAddons.MouseEventListener {
         Layout.fillWidth: true
-        Layout.row: summary.visible ? 2 : 1
+        Layout.row: summary.visible ? 3 : 2
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: icon.visible ? 1 : 2
         Layout.maximumHeight: Kirigami.Units.gridUnit * modelInterface.maximumLineCount
@@ -117,7 +142,7 @@ BaseDelegate {
     Components.FooterLoader {
         id: footerLoader
         Layout.fillWidth: true
-        Layout.row: 3
+        Layout.row: 4
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: 2
         modelInterface: delegateRoot.modelInterface

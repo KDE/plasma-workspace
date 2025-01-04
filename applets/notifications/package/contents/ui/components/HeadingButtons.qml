@@ -16,8 +16,6 @@ import org.kde.notificationmanager as NotificationManager
 
 import org.kde.coreaddons as KCoreAddons
 
-import org.kde.quickcharts as Charts
-
 import "../global"
 
 RowLayout {
@@ -186,28 +184,6 @@ RowLayout {
         PlasmaComponents3.ToolTip {
             id: closeButtonToolTip
             text: modelInterface.closeButtonToolTip || i18nd("plasma_applet_org.kde.plasma.notifications", "Close")
-        }
-
-        Charts.PieChart {
-            id: chart
-            anchors.fill: parent.contentItem
-            anchors.margins: 1
-
-            opacity: (modelInterface.remainingTime > 0 && modelInterface.remainingTime < modelInterface.timeout) ? 1 : 0
-            Behavior on opacity {
-                NumberAnimation { duration: Kirigami.Units.longDuration }
-            }
-
-            range { from: 0; to: modelInterface.timeout; automatic: false }
-
-            valueSources: Charts.SingleValueSource { value: modelInterface.remainingTime }
-            range { from: 0; to: 2000; automatic: false }
-
-            colorSource: Charts.SingleValueSource { value: Kirigami.Theme.highlightColor }
-
-            thickness: 5
-
-            transform: Scale { origin.x: chart.width / 2; xScale: -1 }
         }
     }
 }
