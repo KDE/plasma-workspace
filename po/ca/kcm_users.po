@@ -1,16 +1,16 @@
 # Translation of kcm_users.po to Catalan
-# Copyright (C) 2020-2024 This_file_is_part_of_KDE
+# Copyright (C) 2020-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # SPDX-FileCopyrightText: 2023, 2024 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:43+0000\n"
-"PO-Revision-Date: 2024-11-07 09:26+0100\n"
+"PO-Revision-Date: 2025-01-03 10:07+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -102,18 +102,14 @@ msgid "Change Wallet Password?"
 msgstr "Canvio la contrasenya de la cartera?"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"Ara que s'ha canviat la contrasenya de l'usuari, potser voleu canviar la "
-"contrasenya de la vostra KWallet predeterminada perquè coincideixin."
+"Ara que s'ha canviat la contrasenya de l'usuari, considereu canviar la "
+"contrasenya de la KWallet predeterminada perquè coincideixin."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format

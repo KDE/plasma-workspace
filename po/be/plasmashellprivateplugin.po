@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-08 00:42+0000\n"
+"POT-Creation-Date: 2025-01-04 00:42+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -346,12 +346,17 @@ msgid "Running"
 msgstr "Выконваецца"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
+#| "installed from the system, which are usually installed by the user to a "
+#| "local place."
+#| msgid "Uninstallable"
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
-msgid "Uninstallable"
+msgid "User-installed"
 msgstr "Немагчыма ўсталяваць"
 
 #: shellprivate/widgetexplorer.cpp:160

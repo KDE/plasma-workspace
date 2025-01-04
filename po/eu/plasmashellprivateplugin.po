@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-08 00:42+0000\n"
+"POT-Creation-Date: 2025-01-04 00:42+0000\n"
 "PO-Revision-Date: 2024-08-30 10:46+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -344,12 +344,17 @@ msgid "Running"
 msgstr "Exekutatzen"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
+#| "installed from the system, which are usually installed by the user to a "
+#| "local place."
+#| msgid "Uninstallable"
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
-msgid "Uninstallable"
+msgid "User-installed"
 msgstr "Desinstalagaitza"
 
 #: shellprivate/widgetexplorer.cpp:160

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:43+0000\n"
-"PO-Revision-Date: 2024-11-07 05:32+0100\n"
+"PO-Revision-Date: 2025-01-03 06:51+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -98,18 +98,14 @@ msgid "Change Wallet Password?"
 msgstr "Spremenim geslo listnice?"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"Zdaj, ko ste spremenili svoje geslo za prijavo, boste morda želeli tudi "
-"spremeniti geslo za vašo privzeto listnico (KWallet), da se ujemata."
+"Zdaj, ko ste spremenili geslo za prijavo, razmislite še o spremembi gesla v "
+"vaši privzeti listnici KWallet, da se bo ujemal z njim."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-08 00:42+0000\n"
+"POT-Creation-Date: 2025-01-04 00:42+0000\n"
 "PO-Revision-Date: 2024-10-01 21:17-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -330,12 +330,17 @@ msgid "Running"
 msgstr "ਚੱਲ ਰਹੇ"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
+#| "installed from the system, which are usually installed by the user to a "
+#| "local place."
+#| msgid "Uninstallable"
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
-msgid "Uninstallable"
+msgid "User-installed"
 msgstr "ਹਟਾਉਣਯੋਗ"
 
 #: shellprivate/widgetexplorer.cpp:160

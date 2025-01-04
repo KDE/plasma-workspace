@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-08 00:42+0000\n"
+"POT-Creation-Date: 2025-01-04 00:42+0000\n"
 "PO-Revision-Date: 2024-08-24 18:43+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -343,12 +343,17 @@ msgid "Running"
 msgstr "Εκτελείται"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
+#| "installed from the system, which are usually installed by the user to a "
+#| "local place."
+#| msgid "Uninstallable"
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
-msgid "Uninstallable"
+msgid "User-installed"
 msgstr "Απεγκαταστήσιμο"
 
 #: shellprivate/widgetexplorer.cpp:160
