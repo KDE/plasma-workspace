@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-05 00:42+0000\n"
 "PO-Revision-Date: 2024-02-02 19:37+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -92,13 +92,13 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Hautatu guztia"
 
-#: package/contents/ui/components/HeadingButtons.qml:78
+#: package/contents/ui/components/HeadingButtons.qml:76
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Oraintxe"
 
-#: package/contents/ui/components/HeadingButtons.qml:84
+#: package/contents/ui/components/HeadingButtons.qml:82
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -106,7 +106,7 @@ msgid_plural "%1 min ago"
 msgstr[0] "duela minutu %1"
 msgstr[1] "duela %1 minutu"
 
-#: package/contents/ui/components/HeadingButtons.qml:118
+#: package/contents/ui/components/HeadingButtons.qml:116
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -114,7 +114,7 @@ msgid_plural "%1 s remaining"
 msgstr[0] "s %1 falta da"
 msgstr[1] "%1 s falta dira"
 
-#: package/contents/ui/components/HeadingButtons.qml:122
+#: package/contents/ui/components/HeadingButtons.qml:120
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -122,7 +122,7 @@ msgid_plural "%1 min remaining"
 msgstr[0] "min %1 falta da"
 msgstr[1] "%1 min falta dira"
 
-#: package/contents/ui/components/HeadingButtons.qml:127
+#: package/contents/ui/components/HeadingButtons.qml:125
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -130,23 +130,23 @@ msgid_plural "%1 h remaining"
 msgstr[0] "h %1 falta da"
 msgstr[1] "%1 h falta dira"
 
-#: package/contents/ui/components/HeadingButtons.qml:147
+#: package/contents/ui/components/HeadingButtons.qml:145
 #, kde-format
 msgid "Configure"
 msgstr "Konfiguratu"
 
-#: package/contents/ui/components/HeadingButtons.qml:164
+#: package/contents/ui/components/HeadingButtons.qml:162
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Lehengoratu"
 
-#: package/contents/ui/components/HeadingButtons.qml:165
+#: package/contents/ui/components/HeadingButtons.qml:163
 #, kde-format
 msgid "Minimize"
 msgstr "Ikonotu"
 
-#: package/contents/ui/components/HeadingButtons.qml:188
+#: package/contents/ui/components/HeadingButtons.qml:186
 #, kde-format
 msgid "Close"
 msgstr "Itxi"

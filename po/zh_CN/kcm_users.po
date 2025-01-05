@@ -101,6 +101,8 @@ msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
+"您刚刚修改了登录密码，请考虑同时更改您的默认 KWallet 密码库的密码以保持两者匹"
+"配。"
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format

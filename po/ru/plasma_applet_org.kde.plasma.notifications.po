@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-05 00:42+0000\n"
 "PO-Revision-Date: 2024-02-04 19:16+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -97,13 +97,13 @@ msgctxt "@action:inmenu"
 msgid "Select All"
 msgstr "Выделить всё"
 
-#: package/contents/ui/components/HeadingButtons.qml:78
+#: package/contents/ui/components/HeadingButtons.qml:76
 #, kde-format
 msgctxt "Notification was added less than a minute ago, keep short"
 msgid "Just now"
 msgstr "Только что"
 
-#: package/contents/ui/components/HeadingButtons.qml:84
+#: package/contents/ui/components/HeadingButtons.qml:82
 #, kde-format
 msgctxt "Notification was added minutes ago, keep short"
 msgid "%1 min ago"
@@ -113,7 +113,7 @@ msgstr[1] "%1 минуты назад"
 msgstr[2] "%1 минут назад"
 msgstr[3] "минуту назад"
 
-#: package/contents/ui/components/HeadingButtons.qml:118
+#: package/contents/ui/components/HeadingButtons.qml:116
 #, kde-format
 msgctxt "seconds remaining, keep short"
 msgid "%1 s remaining"
@@ -123,7 +123,7 @@ msgstr[1] "осталось %1 секунды"
 msgstr[2] "осталось %1 секунд"
 msgstr[3] "осталась секунда"
 
-#: package/contents/ui/components/HeadingButtons.qml:122
+#: package/contents/ui/components/HeadingButtons.qml:120
 #, kde-format
 msgctxt "minutes remaining, keep short"
 msgid "%1 min remaining"
@@ -133,7 +133,7 @@ msgstr[1] "осталось %1 минуты"
 msgstr[2] "осталось %1 минут"
 msgstr[3] "осталась минута"
 
-#: package/contents/ui/components/HeadingButtons.qml:127
+#: package/contents/ui/components/HeadingButtons.qml:125
 #, kde-format
 msgctxt "hours remaining, keep short"
 msgid "%1 h remaining"
@@ -143,23 +143,23 @@ msgstr[1] "осталось %1 часа"
 msgstr[2] "осталось %1 часов"
 msgstr[3] "остался час"
 
-#: package/contents/ui/components/HeadingButtons.qml:147
+#: package/contents/ui/components/HeadingButtons.qml:145
 #, kde-format
 msgid "Configure"
 msgstr "Настроить"
 
-#: package/contents/ui/components/HeadingButtons.qml:164
+#: package/contents/ui/components/HeadingButtons.qml:162
 #, kde-format
 msgctxt "Opposite of minimize"
 msgid "Restore"
 msgstr "Восстановить"
 
-#: package/contents/ui/components/HeadingButtons.qml:165
+#: package/contents/ui/components/HeadingButtons.qml:163
 #, kde-format
 msgid "Minimize"
 msgstr "Свернуть"
 
-#: package/contents/ui/components/HeadingButtons.qml:188
+#: package/contents/ui/components/HeadingButtons.qml:186
 #, kde-format
 msgid "Close"
 msgstr "Закрыть"
