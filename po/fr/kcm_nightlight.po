@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Yoann Laissus <yoann.laissus@gmail.com>, 2019.
 # Simon Depiets <sdepiets@gmail.com>, 2019.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kcm_nightcolor\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-21 00:49+0000\n"
-"PO-Revision-Date: 2024-08-22 09:49+0200\n"
+"PO-Revision-Date: 2025-01-04 10:53+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #: ui/DayNightView.qml:132
@@ -92,7 +92,7 @@ msgstr "Longitude :"
 #, kde-format
 msgid "The blue light filter makes the colors on the screen warmer."
 msgstr ""
-"Le filtre de couleur bleue rend les couleurs de l'écran plus chaleureuses."
+"Le filtre anti-couleur bleue rend les couleurs de l'écran plus chaleureuses."
 
 #: ui/main.qml:128 ui/main.qml:179 ui/main.qml:243
 #, kde-format
@@ -109,7 +109,7 @@ msgstr "Température de couleur de jour :"
 #, kde-format
 msgctxt "Night colour blue-ish; no blue light filter activated"
 msgid "Cool (no filter)"
-msgstr "Doux (Aucun filtre)"
+msgstr "Froide (Aucun filtre)"
 
 #: ui/main.qml:193 ui/main.qml:257
 #, kde-format

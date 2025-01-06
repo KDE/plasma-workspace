@@ -106,7 +106,6 @@ msgstr ""
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
 #, fuzzy, kde-format
-#| msgid "Restart"
 msgid "&Restart"
 msgstr "Start på nytt"
 
@@ -143,7 +142,6 @@ msgstr ""
 
 #: contents/logout/Logout.qml:318
 #, fuzzy, kde-format
-#| msgid "Cancel"
 msgid "&Cancel"
 msgstr "Avbryt"
 

@@ -633,7 +633,6 @@ msgstr "Tøm utklippshistorikken"
 
 #: historymodel.cpp:242
 #, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1 × %2 %3 b/p"

@@ -452,8 +452,6 @@ msgstr "Fargesett som skal vises/endres"
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
 #, fuzzy, kde-format
-#| msgctxt "color-sets"
-#| msgid "Common Colors"
 msgctxt "color-sets"
 msgid "Common colors"
 msgstr "Vanlige farger"

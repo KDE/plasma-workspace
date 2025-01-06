@@ -425,7 +425,6 @@ msgstr "I dag er %1"
 
 #: package/contents/ui/Tooltip.qml:65
 #, fuzzy, kde-format
-#| msgid "Time Zones"
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"

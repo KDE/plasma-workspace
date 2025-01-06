@@ -443,7 +443,6 @@ msgstr "Ivdnečoahkkádusa maid galggat geahččat/rievdadit"
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:40
 #, fuzzy, kde-format
-#| msgid "Colors"
 msgctxt "color-sets"
 msgid "Common colors"
 msgstr "Ivnnit"

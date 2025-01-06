@@ -43,7 +43,6 @@ msgstr "Mappe med bakgrunnsbilder å vise lysbilder fra"
 
 #: imagepackage/contents/ui/config.qml:128
 #, fuzzy, kde-format
-#| msgid "Positioning:"
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Plassering:"
@@ -56,28 +55,24 @@ msgstr ""
 
 #: imagepackage/contents/ui/config.qml:135
 #, fuzzy, kde-format
-#| msgid "Scaled"
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Skalert"
 
 #: imagepackage/contents/ui/config.qml:139
 #, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Skalert, behold proporsjoner"
 
 #: imagepackage/contents/ui/config.qml:143
 #, fuzzy, kde-format
-#| msgid "Centered"
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Midtstilt"
 
 #: imagepackage/contents/ui/config.qml:147
 #, fuzzy, kde-format
-#| msgid "Tiled"
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Flislagt"

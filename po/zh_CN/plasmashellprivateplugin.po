@@ -344,7 +344,7 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr ""
+msgstr "用户安装的项目"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
