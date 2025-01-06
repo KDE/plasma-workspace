@@ -541,6 +541,7 @@ MouseArea {
                     features: { "tnum": 1 }
                     pixelSize: 1024
                 }
+                color: Plasmoid.configuration.color
                 minimumPixelSize: 1
 
                 text: Qt.formatTime(main.getCurrentTime(), Plasmoid.configuration.showSeconds === 2 ? main.timeFormatWithSeconds : main.timeFormat)
@@ -556,6 +557,7 @@ MouseArea {
                 font.weight: timeLabel.font.weight
                 font.italic: timeLabel.font.italic
                 font.pixelSize: 1024
+                color: timeLabel.color
                 minimumPixelSize: 1
 
                 visible: text.length > 0
@@ -573,7 +575,7 @@ MouseArea {
             height: timeLabel.height * 0.8
             width: timeLabel.height / 16
             radius: width / 2
-            color: Kirigami.Theme.textColor
+            color: timeLabel.color
 
             anchors.leftMargin: timeMetrics.advanceWidth(" ") + width / 2
             anchors.verticalCenter: parent.verticalCenter
@@ -591,6 +593,7 @@ MouseArea {
             font.weight: timeLabel.font.weight
             font.italic: timeLabel.font.italic
             font.pixelSize: 1024
+            color: timeLabel.color
             minimumPixelSize: 1
 
             horizontalAlignment: Text.AlignHCenter

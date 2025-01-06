@@ -34,6 +34,8 @@ KCMUtils.SimpleKCM {
     property alias cfg_fontStyleName: fontDialog.fontChosen.styleName
     property alias cfg_fontSize: fontDialog.fontChosen.pointSize
 
+    property alias cfg_color: colorDialog.colorChosen
+
     property string cfg_timeFormat: ""
     property alias cfg_showLocalTimezone: showLocalTimeZone.checked
     property alias cfg_displayTimezoneFormat: displayTimeZoneFormat.currentIndex
@@ -256,6 +258,7 @@ KCMUtils.SimpleKCM {
                 onClicked: {
                     if (cfg_fontFamily === "") {
                         fontDialog.fontChosen = Kirigami.Theme.defaultFont
+                        colorDialog.colorChosen = Kirigami.Theme.textColor
                     }
                 }
             }
@@ -269,6 +272,15 @@ KCMUtils.SimpleKCM {
                     fontDialog.open()
                 }
             }
+            QQC2.Button {
+                    text: i18nc("@action:button", "Choose Color…")
+                    icon.name: "preferences-desktop-color"
+                    enabled: manualFontAndSizeRadioButton.checked
+                    onClicked: {
+                        colorDialog.selectedColor = colorDialog.colorChosen
+                        colorDialog.open()
+                    }
+                }
 
         }
 
@@ -277,12 +289,14 @@ KCMUtils.SimpleKCM {
             text: i18nc("@info %1 is the font size, %2 is the font family", "%1pt %2", cfg_fontSize, fontDialog.fontChosen.family)
             textFormat: Text.PlainText
             font: fontDialog.fontChosen
+            color: colorDialog.colorChosen
         }
         QQC2.Label {
             visible: manualFontAndSizeRadioButton.checked
             text: i18nc("@info", "Note: size may be reduced if the panel is not thick enough.")
             textFormat: Text.PlainText
             font: Kirigami.Theme.smallFont
+            color: colorDialog.colorChosen
         }
     }
 
@@ -296,6 +310,19 @@ KCMUtils.SimpleKCM {
 
         onAccepted: {
             fontChosen = selectedFont
+        }
+    }
+
+    QtDialogs.ColorDialog {
+        id: colorDialog
+        title: i18nc("@title:window", "Choose a Color")
+        modality: Qt.WindowModal
+        parentWindow: appearancePage.Window.window
+
+        property color colorChosen: Qt.currentColor()
+
+        onAccepted: {
+            colorChosen = selectedColor
         }
     }
 

@@ -59,6 +59,10 @@
       <label>Sets font size.</label>
       <default>10</default>
     </entry>
+    <entry name="color" type="string">
+      <label>Sets text color</label>
+      <default>#111111</default>
+    </entry>
     <entry name="timeFormat" type="string">
       <default>default</default>
     </entry>
