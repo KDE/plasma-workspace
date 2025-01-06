@@ -359,6 +359,7 @@ private:
     bool m_floating;
     bool m_floatingApplets;
     bool m_containsMouse = false;
+    bool m_containsDrag = false;
     bool m_fakeEventPending = false;
     bool m_touchingWindow = false;
     bool m_internalResize = false;
