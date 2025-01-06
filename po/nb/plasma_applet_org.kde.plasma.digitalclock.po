@@ -183,14 +183,12 @@ msgstr ""
 
 #: package/contents/ui/configAppearance.qml:152
 #, fuzzy, kde-format
-#| msgid "Date format:"
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Datoformat:"
 
 #: package/contents/ui/configAppearance.qml:161
 #, fuzzy, kde-format
-#| msgid "Long Date"
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
 "word"
@@ -199,14 +197,12 @@ msgstr "Langt datoformat"
 
 #: package/contents/ui/configAppearance.qml:168
 #, fuzzy, kde-format
-#| msgid "Short Date"
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Kort datoformat"
 
 #: package/contents/ui/configAppearance.qml:175
 #, fuzzy, kde-format
-#| msgid "Show date"
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "Vis dato"

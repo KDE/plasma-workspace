@@ -376,7 +376,6 @@ msgstr "Velg plasmoidefil"
 
 #: shellprivate/widgetexplorer.cpp:528
 #, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "Klarte ikke å installere pakka %1."
