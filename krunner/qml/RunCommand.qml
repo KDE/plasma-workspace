@@ -210,7 +210,8 @@ ColumnLayout {
                 if (!allowCompletion || !root.query ) { // Clear suggestion in case it was disabled or the query is cleared
                     fadedTextCompletion.text = ""
                 } else if (runnerWindow.historyBehavior === HistoryBehavior.CompletionSuggestion) {
-                    fadedTextCompletion.text = runnerManager.getHistorySuggestion(text)
+                    // Match the user's exact typed characters to account for case insensitive matches
+                    fadedTextCompletion.text = text + runnerManager.getHistorySuggestion(text).substring(text.length)
                 } else if (length > 0 && runnerWindow.historyBehavior === HistoryBehavior.ImmediateCompletion) {
                     var oldText = text
                     var suggestedText = runnerManager.getHistorySuggestion(text);
