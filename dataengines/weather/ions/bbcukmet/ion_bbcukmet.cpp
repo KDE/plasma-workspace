@@ -223,6 +223,7 @@ bool UKMETIon::updateIonSource(const QString &source)
             setData(source, QStringLiteral("validate"), QStringLiteral("bbcukmet|malformed"));
             return true;
         }
+        setData(source, Data()); // To ensure a DataSource is created
 
         qCDebug(IONENGINE_BBCUKMET) << "Update request for:" << sourceAction[2] << "stationId:" << sourceAction[3];
 
@@ -427,11 +428,6 @@ void UKMETIon::observation_slotJobFinished(KJob *job)
     m_retryAttemps = 0;
     m_weatherData[source].isObservationDataPending = false;
     getForecast(source);
-
-    if (m_sourcesToReset.contains(source)) {
-        m_sourcesToReset.removeAll(source);
-        Q_EMIT forceUpdate(this, source);
-    }
 }
 
 void UKMETIon::forecast_slotJobFinished(KJob *job)
@@ -722,6 +718,13 @@ void UKMETIon::updateWeather(const QString &source)
 
     Q_EMIT cleanUpData(weatherSource);
     setData(weatherSource, data);
+
+    // Update the applet on forced updates
+    if (m_sourcesToReset.contains(weatherSource)) {
+        m_sourcesToReset.removeAll(weatherSource);
+        forceImmediateUpdateOfAllVisualizations();
+        Q_EMIT forceUpdate(this, weatherSource);
+    }
 
     qCDebug(IONENGINE_BBCUKMET) << "Updated weather data for" << weatherSource;
 }
