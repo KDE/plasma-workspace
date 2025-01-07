@@ -285,7 +285,7 @@ void LookAndFeelManager::setPlasmaTheme(const QString &theme)
         return;
     }
 
-    writeNewDefaults(QStringLiteral("plasmarc"), QStringLiteral("Theme"), QStringLiteral("name"), theme);
+    writeNewDefaults(QStringLiteral("plasmarc"), QStringLiteral("Theme"), QStringLiteral("name"), theme, KConfig::Notify);
 }
 
 void LookAndFeelManager::setGeneralFont(const QString &font)
