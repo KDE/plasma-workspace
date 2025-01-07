@@ -11,7 +11,7 @@
         "Description[eu]": "Aplikazioak bukatzen direnean jakinarazi egiten du, memoria agortzeko baldintzak saiheste aldera",
         "Description[fi]": "Pyytää sovelluksia sulkeutumaan muistin loppumisen välttämiseksi",
         "Description[fr]": "Informe lorsque les applications se terminent pour éviter des conditions de mémoire insuffisante.",
-        "Description[gl]": "Informa cando as aplicacións se pechan para evitar unha falta de memoria.",
+        "Description[gl]": "Informa cando as aplicacións se finalizan para evitar unha falta de memoria.",
         "Description[he]": "מודיע כאשר יישומים מושמדים כדי למנוע מצבים בהם ינצלו את כל הזיכרון",
         "Description[hu]": "Értesít, ha az alkalmazások leállításra kerülnek a memória elfogyásának megelőzése miatt",
         "Description[ia]": "informa quando applicationes es terminate per prevenir conditiones de fin de memoria (forsa de memoria)",
