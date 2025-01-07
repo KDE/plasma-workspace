@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2015-04-28 14:02+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -390,7 +390,8 @@ msgstr ""
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
 msgstr ""
 
 #: shellcorona.cpp:334

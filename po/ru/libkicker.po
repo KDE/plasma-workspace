@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-29 00:44+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-09-21 11:53+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -85,8 +85,8 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
-#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
-#: plugin/recentusagemodel.cpp:215
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:165
+#: plugin/recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "Приложения"
@@ -124,42 +124,48 @@ msgid "Favorites"
 msgstr "Избранное"
 
 # BUGME: where is this visible in UI? --aspotashev
-#: plugin/recentusagemodel.cpp:150
+#: plugin/recentusagemodel.cpp:163
 #, kde-format
 msgid "Recently Used"
 msgstr "Последние"
 
-#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
+#: plugin/recentusagemodel.cpp:168 plugin/recentusagemodel.cpp:315
 #, kde-format
 msgid "Files"
 msgstr "Файлы"
 
-#: plugin/recentusagemodel.cpp:237
+#: plugin/recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "Убрать приложение"
 
-#: plugin/recentusagemodel.cpp:331
+#: plugin/recentusagemodel.cpp:313
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgid "Folders"
+msgstr "Папка"
+
+#: plugin/recentusagemodel.cpp:350
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Открыть содержащую объект папку"
 
-#: plugin/recentusagemodel.cpp:334
+#: plugin/recentusagemodel.cpp:353
 #, kde-format
 msgid "Forget File"
 msgstr "Убрать этот файл"
 
-#: plugin/recentusagemodel.cpp:471
+#: plugin/recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "Убрать все"
 
-#: plugin/recentusagemodel.cpp:473
+#: plugin/recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Убрать все приложения"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "Убрать все файлы"
@@ -540,9 +546,6 @@ msgstr "Системные действия"
 #~ msgstr ""
 #~ "Просмотр всех установленных приложений в виде простого списка, "
 #~ "сгруппированных по категориям"
-
-#~ msgid "Folder"
-#~ msgstr "Папка"
 
 #~ msgid "List the content of a folder and let you browse into sub-folders"
 #~ msgstr ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-09-19 17:01+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -403,8 +403,9 @@ msgstr "Ενεργοποίηση της καταχώρησης διαχείρι�
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
-msgstr "Διαχείριση πίνακα και επιφάνειας εργασίας"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr ""
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -453,6 +454,9 @@ msgstr "Αριθμός πινάκων"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Μετράει τους πίνακες"
+
+#~ msgid "Panel and Desktop Management"
+#~ msgstr "Διαχείριση πίνακα και επιφάνειας εργασίας"
 
 #~ msgid ""
 #~ "Enables test mode and specifies the layout javascript file to set up the "

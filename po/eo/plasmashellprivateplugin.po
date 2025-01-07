@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-04 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 19:03+0200\n"
+"PO-Revision-Date: 2025-01-06 18:58+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -343,18 +343,13 @@ msgid "Running"
 msgstr "Kurante"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Neinstalebla"
+msgstr "Uzant-instalita"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format

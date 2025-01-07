@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -396,8 +396,9 @@ msgstr "激活任务管理器条目 %1"
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
-msgstr "面板和桌面管理"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr ""
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -446,3 +447,6 @@ msgstr "面板数量"
 #, kde-format
 msgid "Counts the panels"
 msgstr "统计面板数量"
+
+#~ msgid "Panel and Desktop Management"
+#~ msgstr "面板和桌面管理"

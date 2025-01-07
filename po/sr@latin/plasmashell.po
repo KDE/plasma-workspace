@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2016-12-18 21:56+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -409,7 +409,8 @@ msgstr "Aktiviraj unos menadžera zadataka %1"
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
 msgstr ""
 
 #: shellcorona.cpp:334

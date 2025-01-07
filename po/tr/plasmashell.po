@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-12-11 22:49+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -400,8 +400,9 @@ msgstr "Etkin Görev Yöneticisi Girdisi %1"
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
-msgstr "Panel ve Masaüstü Yönetimi"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr ""
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -450,3 +451,6 @@ msgstr "Panel Sayısı"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Panelleri sayar"
+
+#~ msgid "Panel and Desktop Management"
+#~ msgstr "Panel ve Masaüstü Yönetimi"

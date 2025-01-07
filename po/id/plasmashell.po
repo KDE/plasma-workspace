@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-10-15 05:51+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -398,9 +398,11 @@ msgid "Activate Task Manager Entry %1"
 msgstr "Aktifkan Entri Task Manager %1"
 
 #: shellcorona.cpp:312
-#, kde-format
-msgid "Panel and Desktop Management"
-msgstr "Pengelolaan Desktop dan Panel"
+#, fuzzy, kde-format
+#| msgid "Manage Desktops And Panels..."
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr "Kelola Desktop Dan Panel..."
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -450,6 +452,9 @@ msgstr "Cacah Panel"
 msgid "Counts the panels"
 msgstr "Cacahnya panel-panel"
 
+#~ msgid "Panel and Desktop Management"
+#~ msgstr "Pengelolaan Desktop dan Panel"
+
 #~ msgid ""
 #~ "Enables test mode and specifies the layout javascript file to set up the "
 #~ "testing environment"
@@ -459,9 +464,6 @@ msgstr "Cacahnya panel-panel"
 
 #~ msgid "file"
 #~ msgstr "file"
-
-#~ msgid "Manage Desktops And Panels..."
-#~ msgstr "Kelola Desktop Dan Panel..."
 
 #~ msgid ""
 #~ "Load plasmashell as a standalone application, needs the shell-plugin "

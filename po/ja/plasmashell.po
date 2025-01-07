@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-10-06 21:40+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -401,8 +401,9 @@ msgstr "タスクマネージャのエントリ %1 をアクティベート"
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
-msgstr "パネルとデスクトップの管理"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr ""
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -451,3 +452,6 @@ msgstr "パネルの数"
 #, kde-format
 msgid "Counts the panels"
 msgstr "パネルの数を数えます"
+
+#~ msgid "Panel and Desktop Management"
+#~ msgstr "パネルとデスクトップの管理"

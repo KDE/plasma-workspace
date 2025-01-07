@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libkicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-29 00:44+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-09-22 20:53+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -82,8 +82,8 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
-#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
-#: plugin/recentusagemodel.cpp:215
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:165
+#: plugin/recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "Anwendungen"
@@ -120,42 +120,48 @@ msgstr "Rechner"
 msgid "Favorites"
 msgstr "Favoriten"
 
-#: plugin/recentusagemodel.cpp:150
+#: plugin/recentusagemodel.cpp:163
 #, kde-format
 msgid "Recently Used"
 msgstr "Kürzlich benutzt"
 
-#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
+#: plugin/recentusagemodel.cpp:168 plugin/recentusagemodel.cpp:315
 #, kde-format
 msgid "Files"
 msgstr "Dateien"
 
-#: plugin/recentusagemodel.cpp:237
+#: plugin/recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "Anwendung vergessen"
 
-#: plugin/recentusagemodel.cpp:331
+#: plugin/recentusagemodel.cpp:313
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgid "Folders"
+msgstr "Ordner"
+
+#: plugin/recentusagemodel.cpp:350
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Ordner mit diesem Inhalt öffnen"
 
-#: plugin/recentusagemodel.cpp:334
+#: plugin/recentusagemodel.cpp:353
 #, kde-format
 msgid "Forget File"
 msgstr "Datei vergessen"
 
-#: plugin/recentusagemodel.cpp:471
+#: plugin/recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "Alles vergessen"
 
-#: plugin/recentusagemodel.cpp:473
+#: plugin/recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Alle Anwendungen vergessen"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "Alle Dateien vergessen"
@@ -520,9 +526,6 @@ msgstr "Systemfunktionen"
 
 #~ msgid "List the most recently launched applications"
 #~ msgstr "Zeigt die letzten am häufigsten gestarteten Programme"
-
-#~ msgid "Folder"
-#~ msgstr "Ordner"
 
 #~ msgid "List the content of a folder and let you browse into sub-folders"
 #~ msgstr "Den Inhalt von Ordnern anzeigen und Unterordner durchstöbern"

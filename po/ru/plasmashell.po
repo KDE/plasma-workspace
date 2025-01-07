@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-09-16 13:56+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -414,9 +414,11 @@ msgid "Activate Task Manager Entry %1"
 msgstr "Открыть %1-ю кнопку на панели задач"
 
 #: shellcorona.cpp:312
-#, kde-format
-msgid "Panel and Desktop Management"
-msgstr "Управление панелями и рабочими столами"
+#, fuzzy, kde-format
+#| msgid "Manage Desktops And Panels..."
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr "Управление рабочими столами и панелями…"
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -469,6 +471,9 @@ msgstr "Количество панелей"
 msgid "Counts the panels"
 msgstr "Подсчёт количества панелей"
 
+#~ msgid "Panel and Desktop Management"
+#~ msgstr "Управление панелями и рабочими столами"
+
 #~ msgid ""
 #~ "Enables test mode and specifies the layout javascript file to set up the "
 #~ "testing environment"
@@ -478,9 +483,6 @@ msgstr "Подсчёт количества панелей"
 
 #~ msgid "file"
 #~ msgstr "файл"
-
-#~ msgid "Manage Desktops And Panels..."
-#~ msgstr "Управление рабочими столами и панелями…"
 
 #~ msgid ""
 #~ "Load plasmashell as a standalone application, needs the shell-plugin "

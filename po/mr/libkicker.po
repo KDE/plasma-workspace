@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-29 00:44+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2013-04-13 16:15+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -82,8 +82,8 @@ msgid "%1 (%2)"
 msgstr ""
 
 #: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
-#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
-#: plugin/recentusagemodel.cpp:215
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:165
+#: plugin/recentusagemodel.cpp:228
 #, fuzzy, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोग"
@@ -120,44 +120,50 @@ msgstr ""
 msgid "Favorites"
 msgstr "पसंत जागा"
 
-#: plugin/recentusagemodel.cpp:150
+#: plugin/recentusagemodel.cpp:163
 #, kde-format
 msgid "Recently Used"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
+#: plugin/recentusagemodel.cpp:168 plugin/recentusagemodel.cpp:315
 #, fuzzy, kde-format
 #| msgctxt "Tab title"
 #| msgid "Files"
 msgid "Files"
 msgstr "फाईल्स"
 
-#: plugin/recentusagemodel.cpp:237
+#: plugin/recentusagemodel.cpp:250
 #, fuzzy, kde-format
 msgid "Forget Application"
 msgstr "पसंत अनुप्रयोग"
 
-#: plugin/recentusagemodel.cpp:331
+#: plugin/recentusagemodel.cpp:313
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgid "Folders"
+msgstr "संचयीका"
+
+#: plugin/recentusagemodel.cpp:350
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:334
+#: plugin/recentusagemodel.cpp:353
 #, fuzzy, kde-format
 msgid "Forget File"
 msgstr "दस्तऐवज विसरा"
 
-#: plugin/recentusagemodel.cpp:471
+#: plugin/recentusagemodel.cpp:490
 #, fuzzy, kde-format
 msgid "Forget All"
 msgstr "दस्तऐवज विसरा"
 
-#: plugin/recentusagemodel.cpp:473
+#: plugin/recentusagemodel.cpp:492
 #, fuzzy, kde-format
 msgid "Forget All Applications"
 msgstr "पसंत अनुप्रयोग"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:495
 #, fuzzy, kde-format
 msgid "Forget All Files"
 msgstr "दस्तऐवज विसरा"
@@ -496,9 +502,6 @@ msgstr ""
 #~| "List all installed applications in a flat list, grouped by categories"
 #~ msgid "List all installed applications and filter via the sidebar"
 #~ msgstr "प्रतिष्ठापीत केलेले अनुप्रयोग विभागाप्रमाणे समूहात यादी करा"
-
-#~ msgid "Folder"
-#~ msgstr "संचयीका"
 
 #~ msgid "List applications marked as favorite"
 #~ msgstr "पसंत केलेले अनुप्रयोगांची यादी करा"

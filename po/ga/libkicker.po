@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-29 00:44+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2012-09-21 16:01-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -82,8 +82,8 @@ msgid "%1 (%2)"
 msgstr ""
 
 #: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
-#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
-#: plugin/recentusagemodel.cpp:215
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:165
+#: plugin/recentusagemodel.cpp:228
 #, fuzzy, kde-format
 msgid "Applications"
 msgstr "Feidhmchláir"
@@ -120,42 +120,48 @@ msgstr ""
 msgid "Favorites"
 msgstr "Áiteanna Is Ansa Liom"
 
-#: plugin/recentusagemodel.cpp:150
+#: plugin/recentusagemodel.cpp:163
 #, kde-format
 msgid "Recently Used"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
+#: plugin/recentusagemodel.cpp:168 plugin/recentusagemodel.cpp:315
 #, kde-format
 msgid "Files"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:237
+#: plugin/recentusagemodel.cpp:250
 #, fuzzy, kde-format
 msgid "Forget Application"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: plugin/recentusagemodel.cpp:331
+#: plugin/recentusagemodel.cpp:313
+#, fuzzy, kde-format
+#| msgid "Folder"
+msgid "Folders"
+msgstr "Fillteán"
+
+#: plugin/recentusagemodel.cpp:350
 #, kde-format
 msgid "Open Containing Folder"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:334
+#: plugin/recentusagemodel.cpp:353
 #, fuzzy, kde-format
 msgid "Forget File"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: plugin/recentusagemodel.cpp:471
+#: plugin/recentusagemodel.cpp:490
 #, fuzzy, kde-format
 msgid "Forget All"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: plugin/recentusagemodel.cpp:473
+#: plugin/recentusagemodel.cpp:492
 #, fuzzy, kde-format
 msgid "Forget All Applications"
 msgstr "Feidhmchláir Is Ansa Leat"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:495
 #, fuzzy, kde-format
 msgid "Forget All Files"
 msgstr "Feidhmchláir Is Ansa Leat"
@@ -386,9 +392,6 @@ msgstr ""
 #~| msgid "Installed Applications"
 #~ msgid "All Installed Applications With Filters"
 #~ msgstr "Feidhmchláir Shuiteáilte"
-
-#~ msgid "Folder"
-#~ msgstr "Fillteán"
 
 #~ msgid "Power Management"
 #~ msgstr "Bainisteoireacht Cumhachta"

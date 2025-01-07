@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-08-30 10:36+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -401,9 +401,11 @@ msgid "Activate Task Manager Entry %1"
 msgstr "Aktibatu Ataza Kudeatzaileko %1 sarrera"
 
 #: shellcorona.cpp:312
-#, kde-format
-msgid "Panel and Desktop Management"
-msgstr "Panel eta mahaigain kudeaketa"
+#, fuzzy, kde-format
+#| msgid "Manage Desktops And Panels..."
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr "Kudeatu mahaigainak eta panelak..."
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -453,6 +455,9 @@ msgstr "Panel kopurua"
 msgid "Counts the panels"
 msgstr "Panelak zenbatzen ditu"
 
+#~ msgid "Panel and Desktop Management"
+#~ msgstr "Panel eta mahaigain kudeaketa"
+
 #~ msgid ""
 #~ "Enables test mode and specifies the layout javascript file to set up the "
 #~ "testing environment"
@@ -462,9 +467,6 @@ msgstr "Panelak zenbatzen ditu"
 
 #~ msgid "file"
 #~ msgstr "fitxategia"
-
-#~ msgid "Manage Desktops And Panels..."
-#~ msgstr "Kudeatu mahaigainak eta panelak..."
 
 #~ msgctxt "@label %1 version string"
 #~ msgid "Plasma %1 Development Build"

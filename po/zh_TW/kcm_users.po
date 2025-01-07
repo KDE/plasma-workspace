@@ -1,10 +1,10 @@
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:43+0000\n"
-"PO-Revision-Date: 2024-11-11 16:12+0900\n"
+"PO-Revision-Date: 2025-01-06 16:42+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -64,7 +64,7 @@ msgstr "發生了未知錯誤。"
 #: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Change Password"
-msgstr "變更密碼"
+msgstr "變更密碼(&C)"
 
 #: src/ui/ChangePassword.qml:32
 #, kde-format
@@ -92,16 +92,12 @@ msgid "Change Wallet Password?"
 msgstr "變更錢包密碼？"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
-msgstr "修改登入密碼後，您可能也會想要變更預設 KWallet 錢包密碼來使兩者相符。"
+msgstr "您已修改登入密碼，請考慮變更預設 KWallet 錢包的密碼來使兩者相符。"
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format
@@ -139,12 +135,12 @@ msgstr "建立使用者"
 #: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:131
 #, kde-format
 msgid "Name:"
-msgstr "姓名："
+msgstr "姓名(&N)："
 
 #: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Username:"
-msgstr "使用者名稱："
+msgstr "使用者名稱(&U)："
 
 #: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:156
 #, kde-format
@@ -348,7 +344,7 @@ msgstr "使用者"
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "新增…"
+msgstr "新增(&N)…"
 
 #: src/ui/main.qml:29
 #, kde-format
@@ -545,7 +541,7 @@ msgstr ""
 #: src/ui/UserDetailsPage.qml:175
 #, kde-format
 msgid "Email address:"
-msgstr "電子郵件地址："
+msgstr "電子郵件地址(&E)："
 
 #: src/ui/UserDetailsPage.qml:204
 #, kde-format
@@ -560,7 +556,7 @@ msgstr "保留檔案"
 #: src/ui/UserDetailsPage.qml:218
 #, kde-format
 msgid "Delete User…"
-msgstr "刪除使用者…"
+msgstr "刪除使用者(&D)…"
 
 #: src/ui/UserDetailsPage.qml:230
 #, kde-format

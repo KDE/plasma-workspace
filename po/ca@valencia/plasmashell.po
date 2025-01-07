@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-10-27 18:38+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -404,8 +404,9 @@ msgstr "Activa l'entrada %1 del gestor de tasques"
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
-msgstr "Gestioneu el quadro i l'escriptori"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr ""
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -454,3 +455,6 @@ msgstr "Nombre de quadros"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els quadros"
+
+#~ msgid "Panel and Desktop Management"
+#~ msgstr "Gestioneu el quadro i l'escriptori"

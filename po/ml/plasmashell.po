@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -404,7 +404,8 @@ msgstr "ടാസ്ക് മാനേജർ ഇനം %1 സജീവമാക
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
 msgstr ""
 
 #: shellcorona.cpp:334

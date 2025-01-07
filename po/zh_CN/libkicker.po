@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-29 00:44+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -81,8 +81,8 @@ msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
 #: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
-#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:152
-#: plugin/recentusagemodel.cpp:215
+#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:165
+#: plugin/recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "应用程序"
@@ -119,42 +119,47 @@ msgstr "电脑"
 msgid "Favorites"
 msgstr "常用程序"
 
-#: plugin/recentusagemodel.cpp:150
+#: plugin/recentusagemodel.cpp:163
 #, kde-format
 msgid "Recently Used"
 msgstr "最近使用"
 
-#: plugin/recentusagemodel.cpp:155 plugin/recentusagemodel.cpp:297
+#: plugin/recentusagemodel.cpp:168 plugin/recentusagemodel.cpp:315
 #, kde-format
 msgid "Files"
 msgstr "文件"
 
-#: plugin/recentusagemodel.cpp:237
+#: plugin/recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "忘记应用程序"
 
-#: plugin/recentusagemodel.cpp:331
+#: plugin/recentusagemodel.cpp:313
+#, kde-format
+msgid "Folders"
+msgstr ""
+
+#: plugin/recentusagemodel.cpp:350
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "打开所在文件夹"
 
-#: plugin/recentusagemodel.cpp:334
+#: plugin/recentusagemodel.cpp:353
 #, kde-format
 msgid "Forget File"
 msgstr "忘记文件"
 
-#: plugin/recentusagemodel.cpp:471
+#: plugin/recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "忘记全部"
 
-#: plugin/recentusagemodel.cpp:473
+#: plugin/recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "忘记全部应用程序"
 
-#: plugin/recentusagemodel.cpp:476
+#: plugin/recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "忘记全部文件"

@@ -3,7 +3,7 @@
 # Yoann Laissus <yoann.laissus@gmail.com>, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2016.
 # Simon Depiets <sdepiets@gmail.com>, 2018.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Xavier Besnard <xavier.besnard@kde.org>, 2023.
 #
 msgid ""
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-04 00:42+0000\n"
-"PO-Revision-Date: 2024-08-31 09:20+0200\n"
+"PO-Revision-Date: 2025-01-05 09:38+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -349,18 +349,13 @@ msgid "Running"
 msgstr "En cours d'exécution"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Non installable"
+msgstr "Installé par l'utilisateur"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format

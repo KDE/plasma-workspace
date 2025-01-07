@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-14 00:54+0000\n"
+"POT-Creation-Date: 2025-01-07 00:42+0000\n"
 "PO-Revision-Date: 2024-07-07 20:22-0400\n"
 "Last-Translator: Janet Blackquill <uhhadd@gmail.com>\n"
 "Language-Team: C <kde-i18n-doc@kde.org>\n"
@@ -397,7 +397,8 @@ msgstr ""
 
 #: shellcorona.cpp:312
 #, kde-format
-msgid "Panel and Desktop Management"
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
 msgstr ""
 
 #: shellcorona.cpp:334
