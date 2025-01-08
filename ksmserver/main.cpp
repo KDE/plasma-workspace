@@ -92,9 +92,6 @@ void sanity_check(int argc, char *argv[])
         fprintf(stderr, "%s", msg.toUtf8().constData());
         fputs(msg_post.toUtf8().constData(), stderr);
 
-        QApplication a(argc, argv);
-        const QString qmsg = msg_pre + msg + msg_post;
-        KMessageBox::error(nullptr, qmsg, i18n("Plasma Workspace installation problem!"));
         exit(255);
     }
 }
