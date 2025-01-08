@@ -91,5 +91,5 @@ Name[wa]=Djeus d' platea
 Name[x-test]=xxBoard Gamesxx
 Name[zh_CN]=棋盘游戏
 Name[zh_TW]=棋盤遊戲
-Icon=applications-games-board
+Icon=applications-games-board-symbolic
 X-KDE-SuppressGenericNames=Game,Board Game

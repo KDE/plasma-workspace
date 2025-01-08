@@ -94,5 +94,5 @@ Name[xh]=Ofisi
 Name[x-test]=xxOfficexx
 Name[zh_CN]=办公
 Name[zh_TW]=辦公軟體
-Icon=applications-office
+Icon=applications-office-symbolic
 SortOrder=koshell.desktop,kword.desktop,kspread.desktop,kpresenter.desktop
