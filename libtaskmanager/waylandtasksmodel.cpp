@@ -353,6 +353,10 @@ public:
             }
         });
         initialize();
+        if (!isActive()) {
+            qCWarning(TASKMANAGER_DEBUG)
+                << "The PlasmaWindowManagement protocol hasn't activated in time. The client possibly got denied by kwin? Check kwin output.";
+        }
     }
     ~PlasmaWindowManagement()
     {
