@@ -126,7 +126,7 @@ captured texts from the match pattern."),
     mainLayout->addStretch();
     mainLayout->addWidget(buttons);
 
-    (void)winId();
+    create();
     windowHandle()->resize(560, 440); // default, if there is no saved size
     const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
