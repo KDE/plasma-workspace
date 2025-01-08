@@ -414,6 +414,7 @@ QDebug operator<<(QDebug debug, const ScreenPool *pool)
     debug << "Redundant screens covered by other ones:\t" << pool->m_redundantScreens << '\n';
     debug << "All screens, ordered by size:\t" << pool->m_sizeSortedScreens << '\n';
     debug << "All screen that QGuiApplication knows:\t" << qGuiApp->screens() << '\n';
+    debug << "Screen order from outputOrderWatcher" << pool->m_outputOrderWatcher->outputOrder() << '\n';
     return debug;
 }
 
