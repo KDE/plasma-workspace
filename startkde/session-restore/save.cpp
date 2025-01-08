@@ -9,6 +9,7 @@ SPDX-License-Identifier: LGPL-2.1-or-later
 
 #include <QEventLoop>
 #include <QGuiApplication>
+#include <QRegularExpression>
 #include <QThreadPool>
 #include <QTimer>
 #include <cstdlib>
@@ -58,6 +59,17 @@ int main(int argc, char *argv[])
     for (int i = 0; i < tasksModel.rowCount(); ++i) {
         const QModelIndex index = tasksModel.index(i, 0);
         QString appId = tasksModel.data(index, TaskManager::AbstractTasksModel::AppId).toString();
+
+        static const auto excludeApps = []() -> QStringList {
+            KSharedConfig::Ptr config = KSharedConfig::openConfig(u"ksmserverrc"_s);
+            KConfigGroup generalGroup(config, u"General"_s);
+            return generalGroup.readEntry("excludeApps").split(QRegularExpression(u"[,:]"_s), Qt::SkipEmptyParts);
+        }();
+        if (excludeApps.contains(appId)) {
+            qCDebug(FALLBACK_SESSION_RESTORE) << "Excluding" << appId;
+            continue;
+        }
+
         auto group = config->group(QString::number(i));
         qCDebug(FALLBACK_SESSION_RESTORE) << "Saving" << group.name() << appId;
         group.writeEntry("appId", appId);
