@@ -580,9 +580,6 @@ void WidgetExplorer::removeAllInstances(const QString &pluginName)
             }
         }
     }
-
-    // Update the running applets count
-    d->itemModel.setRunningApplets(d->runningApplets);
 }
 
 #include "moc_widgetexplorer.cpp"
