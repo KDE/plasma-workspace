@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 07:22+0200\n"
+"PO-Revision-Date: 2025-01-07 07:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -140,7 +140,7 @@ msgstr "Pozabi program"
 #: plugin/recentusagemodel.cpp:313
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Mape"
 
 #: plugin/recentusagemodel.cpp:350
 #, kde-format

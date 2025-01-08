@@ -1,16 +1,16 @@
 # Translation of libkicker.po to Catalan
-# Copyright (C) 2014-2024 This_file_is_part_of_KDE
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
+# SPDX-FileCopyrightText: 2015, 2016, 2017, 2019, 2020, 2021, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2017, 2019.
-# SPDX-FileCopyrightText: 2015, 2016, 2017, 2019, 2020, 2021, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 10:05+0200\n"
+"PO-Revision-Date: 2025-01-07 10:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -141,7 +141,7 @@ msgstr "Oblida l'aplicació"
 #: plugin/recentusagemodel.cpp:313
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Carpetes"
 
 #: plugin/recentusagemodel.cpp:350
 #, kde-format
@@ -298,18 +298,3 @@ msgstr "Apaga l'ordinador"
 #, kde-format
 msgid "System actions"
 msgstr "Accions del sistema"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "Mostra la informació del contacte…"
-
-#~ msgid "Contacts"
-#~ msgstr "Contactes"
-
-#~ msgid "Forget Contact"
-#~ msgstr "Oblida el contacte"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "Oblida tots els contactes"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "Contactes recents"

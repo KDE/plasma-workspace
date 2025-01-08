@@ -1,16 +1,16 @@
 # Translation of plasmashell.po to Catalan
-# Copyright (C) 2014-2024 This_file_is_part_of_KDE
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016, 2020.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-10-27 18:38+0100\n"
+"PO-Revision-Date: 2025-01-07 10:14+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -404,11 +404,10 @@ msgid "Activate Task Manager Entry %1"
 msgstr "Activa l'entrada %1 del gestor de tasques"
 
 #: shellcorona.cpp:312
-#, fuzzy, kde-format
-#| msgid "Manage Desktops And Panels..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr "Gestiona escriptoris i plafons..."
+msgstr "Gestiona escriptoris i plafons…"
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -457,16 +456,3 @@ msgstr "Nombre de plafons"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Compta els plafons"
-
-#~ msgid "Panel and Desktop Management"
-#~ msgstr "Gestió del plafó i l'escriptori"
-
-#~ msgid ""
-#~ "Enables test mode and specifies the layout javascript file to set up the "
-#~ "testing environment"
-#~ msgstr ""
-#~ "Activa el mode prova i especifica el fitxer en JavaScript de disposició "
-#~ "per a definir l'entorn de prova"
-
-#~ msgid "file"
-#~ msgstr "fitxer"

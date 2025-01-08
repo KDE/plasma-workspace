@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-08-30 05:42+0200\n"
+"PO-Revision-Date: 2025-01-07 05:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -397,11 +397,10 @@ msgid "Activate Task Manager Entry %1"
 msgstr "ამოცანების მენეჯერის ჩანაწერის აქტივაცია: %1"
 
 #: shellcorona.cpp:312
-#, fuzzy, kde-format
-#| msgid "Manage Desktops And Panels..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr "სამუშაო მაგიდებისა და პანელების მართვა..."
+msgstr "სამუშაო მაგიდებისა და პანელების მართვა…"
 
 #: shellcorona.cpp:334
 #, kde-format

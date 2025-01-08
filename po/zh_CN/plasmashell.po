@@ -447,6 +447,3 @@ msgstr "面板数量"
 #, kde-format
 msgid "Counts the panels"
 msgstr "统计面板数量"
-
-#~ msgid "Panel and Desktop Management"
-#~ msgstr "面板和桌面管理"
