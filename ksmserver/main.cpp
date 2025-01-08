@@ -61,37 +61,6 @@ void sanity_check(int argc, char *argv[])
 {
     QString msg;
     QByteArray path = qgetenv("HOME");
-    const QByteArray readOnly = qgetenv("KDE_HOME_READONLY");
-    if (path.isEmpty()) {
-        msg = i18n("$HOME not set!");
-    }
-    if (msg.isEmpty() && access(path.data(), W_OK)) {
-        if (errno == ENOENT) {
-            msg = i18n("$HOME directory (%1) does not exist.", QFile::decodeName(path));
-        } else if (readOnly.isEmpty()) {
-            msg = xi18nc("@info",
-                         "No write access to $HOME directory (%1). If this is intentional, set <envar>KDE_HOME_READONLY=1</envar> in your environment.",
-                         QFile::decodeName(path));
-        }
-    }
-    if (msg.isEmpty() && access(path.data(), R_OK)) {
-        if (errno == ENOENT) {
-            msg = i18n("$HOME directory (%1) does not exist.", QFile::decodeName(path));
-        } else {
-            msg = i18n("No read access to $HOME directory (%1).", QFile::decodeName(path));
-        }
-    }
-    if (msg.isEmpty() && readOnly.isEmpty() && !writeTest(path)) {
-        if (errno == ENOSPC) {
-            msg = i18n("$HOME directory (%1) is out of disk space.", QFile::decodeName(path));
-        } else {
-            msg = i18n(
-                "Writing to the $HOME directory (%2) failed with "
-                "the error '%1'",
-                QString::fromLocal8Bit(strerror(errno)),
-                QFile::decodeName(path));
-        }
-    }
     if (msg.isEmpty()) {
         path = getenv("ICEAUTHORITY");
         if (path.isEmpty()) {
@@ -103,37 +72,6 @@ void sanity_check(int argc, char *argv[])
             msg = i18n("No write access to '%1'.", QFile::decodeName(path));
         } else if (access(path.data(), R_OK) && (errno != ENOENT)) {
             msg = i18n("No read access to '%1'.", QFile::decodeName(path));
-        }
-    }
-    if (msg.isEmpty()) {
-        path = getenv("KDETMP");
-        if (path.isEmpty()) {
-            path = "/tmp";
-        }
-        if (!writeTest(path)) {
-            if (errno == ENOSPC) {
-                msg = i18n("Temp directory (%1) is out of disk space.", QFile::decodeName(path));
-            } else {
-                msg = i18n(
-                    "Writing to the temp directory (%2) failed with\n    "
-                    "the error '%1'",
-                    QString::fromLocal8Bit(strerror(errno)),
-                    QFile::decodeName(path));
-            }
-        }
-    }
-    if (msg.isEmpty() && (path != "/tmp")) {
-        path = "/tmp";
-        if (!writeTest(path)) {
-            if (errno == ENOSPC) {
-                msg = i18n("Temp directory (%1) is out of disk space.", QFile::decodeName(path));
-            } else {
-                msg = i18n(
-                    "Writing to the temp directory (%2) failed with\n    "
-                    "the error '%1'",
-                    QString::fromLocal8Bit(strerror(errno)),
-                    QFile::decodeName(path));
-            }
         }
     }
     if (msg.isEmpty()) {
