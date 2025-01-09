@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -40,66 +40,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "सत्रं निर्गच्छति"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME न सेट्!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME निर्देशिका (%1) नास्ति ।"
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"$HOME निर्देशिकायां (%1) लेखनप्रवेशः नास्ति । यदि एतत् अभिप्रेतम् अस्ति तर्हि भवतः परिवेशे "
-"<envar>KDE_HOME_READONLY=1</envar> सेट् कुर्वन्तु ।"
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "$HOME निर्देशिकायाः (%1) पठनप्रवेशः नास्ति ।"
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME निर्देशिका (%1) डिस्कस्थानात् बहिः अस्ति ।"
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "$HOME निर्देशिकायां (%2) लेखनं '%1' इति त्रुटिना विफलम् अभवत् ।"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1' कृते लेखनप्रवेशः नास्ति ।"
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1' इत्यस्य पठनप्रवेशः नास्ति ।"
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Temp निर्देशिका (%1) डिस्कस्थानात् बहिः अस्ति ।"
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"temp निर्देशिकायां (%2) लेखनं विफलम् अभवत्\n"
-"    '%1' इति त्रुटिः ।"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -108,7 +59,7 @@ msgstr ""
 "निम्नलिखितस्थापनसमस्या ज्ञाता\n"
 "प्लाज्मा आरभ्यतुं प्रयतमानोऽपि :"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -119,12 +70,7 @@ msgstr ""
 "\n"
 "प्लाज्मा आरम्भं कर्तुं असमर्थः अस्ति।\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "प्लाज्मा कार्यक्षेत्र संस्थापन समस्या!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -133,22 +79,22 @@ msgstr ""
 "विश्वसनीयः प्लाज्मा सत्रप्रबन्धकः यः मानक X11R6 इत्यस्य चर्चां करोति \n"
 "सत्रप्रबन्धनप्रोटोकॉल (XSMP)।"
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "यदि उपलब्धं भवति तर्हि रक्षितं उपयोक्तृसत्रं पुनः स्थापयति"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "दूरस्थसंयोजनानि अपि अनुमन्यताम्"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "सत्रं लॉक्ड् मोड् मध्ये आरभते"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -184,3 +130,39 @@ msgid ""
 msgstr ""
 "<application>%1</application> इत्यस्य पुनर्स्थापनं कर्तुं असमर्थः यतः एतत् भग्नम् अस्ति "
 "तथा च प्रणाल्याः सत्रपुनर्स्थापनसंसाधनं क्षीणं कृतवान् । कृपया एप्-विकासकानाम् कृते एतत् सूचयन्तु।"
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME न सेट्!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "$HOME निर्देशिका (%1) नास्ति ।"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "$HOME निर्देशिकायां (%1) लेखनप्रवेशः नास्ति । यदि एतत् अभिप्रेतम् अस्ति तर्हि भवतः "
+#~ "परिवेशे <envar>KDE_HOME_READONLY=1</envar> सेट् कुर्वन्तु ।"
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "$HOME निर्देशिकायाः (%1) पठनप्रवेशः नास्ति ।"
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "$HOME निर्देशिका (%1) डिस्कस्थानात् बहिः अस्ति ।"
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "$HOME निर्देशिकायां (%2) लेखनं '%1' इति त्रुटिना विफलम् अभवत् ।"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Temp निर्देशिका (%1) डिस्कस्थानात् बहिः अस्ति ।"
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "temp निर्देशिकायां (%2) लेखनं विफलम् अभवत्\n"
+#~ "    '%1' इति त्रुटिः ।"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "प्लाज्मा कार्यक्षेत्र संस्थापन समस्या!"

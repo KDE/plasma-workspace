@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-08-20 10:57+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -47,66 +47,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr ""
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "Το $HOME δεν έχει οριστεί!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "Ο κατάλογος $HOME (%1) δεν υπάρχει."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Δεν υπάρχει πρόσβαση εγγραφής στον κατάλογο $HOME (%1). Αν αυτό είναι "
-"σκόπιμο, ορίστε <envar>KDE_HOME_READONLY=1</envar> στο περιβάλλον σας."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Αδυναμία πρόσβασης ανάγνωσης στον κατάλογο $HOME (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "Ανεπαρκής χώρος δίσκου για τον κατάλογο $HOME (%1)."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Η εγγραφή στον κατάλογο $HOME (%2) απέτυχε με το σφάλμα '%1'"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Αδυναμία πρόσβασης εγγραφής στο '%1'."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Αδυναμία πρόσβασης ανάγνωσης στο '%1'."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Ανεπαρκής χώρος δίσκου για τον προσωρινό κατάλογο (%1)."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Η εγγραφή στον προσωρινό κατάλογο (%2) απέτυχε με\n"
-"    το σφάλμα '%1'"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -115,7 +66,7 @@ msgstr ""
 "Εντοπίστηκε το ακόλουθο πρόβλημα εγκατάστασης\n"
 "κατά την προσπάθεια εκκίνησης του Plasma:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -126,12 +77,7 @@ msgstr ""
 "\n"
 "Το Plasma δεν μπορεί να ξεκινήσει.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Πρόβλημα στην εγκατάσταση του χώρου εργασίας Plasma!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -141,22 +87,22 @@ msgstr ""
 "X11R6 \n"
 "πρωτόκολλο διαχείρισης συνεδριών (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Επαναφέρει την αποθηκευμένη συνεδρία χρήστη αν είναι διαθέσιμη"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Να επιτρέπονται και απομακρυσμένες συνδέσεις"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Εκκινεί τη συνεδρία σε κλειδωμένη λειτουργία"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -195,6 +141,42 @@ msgstr ""
 "Δεν είναι δυνατή η αποκατάσταση της <application>%1</application> επειδή "
 "έχει χαλάσει και έχουν εξαντληθεί οι πόροι αποκατάστασης συνεδρίας του "
 "συστήματος. Παρακαλούμε να το αναφέρετε στους προγραμματιστές της εφαρμογής."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "Το $HOME δεν έχει οριστεί!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "Ο κατάλογος $HOME (%1) δεν υπάρχει."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Δεν υπάρχει πρόσβαση εγγραφής στον κατάλογο $HOME (%1). Αν αυτό είναι "
+#~ "σκόπιμο, ορίστε <envar>KDE_HOME_READONLY=1</envar> στο περιβάλλον σας."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Αδυναμία πρόσβασης ανάγνωσης στον κατάλογο $HOME (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "Ανεπαρκής χώρος δίσκου για τον κατάλογο $HOME (%1)."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "Η εγγραφή στον κατάλογο $HOME (%2) απέτυχε με το σφάλμα '%1'"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Ανεπαρκής χώρος δίσκου για τον προσωρινό κατάλογο (%1)."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Η εγγραφή στον προσωρινό κατάλογο (%2) απέτυχε με\n"
+#~ "    το σφάλμα '%1'"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Πρόβλημα στην εγκατάσταση του χώρου εργασίας Plasma!"
 
 #, fuzzy
 #~| msgid "The KDE Session Manager"

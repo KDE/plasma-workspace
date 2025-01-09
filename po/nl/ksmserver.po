@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-09-25 10:45+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -48,66 +48,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "Sessie is bezig zich af te sluiten"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME niet ingesteld!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "Map $HOME (%1) bestaat niet."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Geen schrijftoegang tot map $HOME (%1). Als dit de bedoeling is, zet dan "
-"<envar>KDE_HOME_READONLY=1</envar> in uw omgeving."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Geen leestoegang tot map $HOME (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "Map $HOME (%1) heeft geen ruimte op schijf meer."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Schrijven naar de map $HOME (%2) is mislukt met de fout '%1'"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Geen schrijftoegang tot '%1'."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Geen leestoegang tot '%1'."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Tijdelijke map (%1) heeft geen ruimte op schijf meer."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Schrijven naar de tijdelijke map (%2) is mislukt\n"
-"    met de fout '%1'"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -116,7 +67,7 @@ msgstr ""
 "Het volgende installatieprobleem is gedetecteerd\n"
 "bij een poging om Plasma te starten:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -127,12 +78,7 @@ msgstr ""
 "\n"
 "Plasma kan niet starten.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Installatieprobleem van Plasma Workspace!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -141,22 +87,22 @@ msgstr ""
 "De betrouwbare Plasma-sessiebeheerder die het standaard X11R6-\n"
 "sessiebeheerprotocol (XSMP) gebruikt."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Herstelt, indien beschikbaar, de vorige sessie"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Ook externe verbindingen toestaan"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Start de sessie in de modus vergrendeld"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -195,6 +141,42 @@ msgstr ""
 "Kan <application>%1</application> niet herstellen omdat het gebroken is en "
 "de hulpbronnen voor herstel van de sessie zijn uitgeput. Rapporteer dit aan "
 "de ontwikkelaars van de toepassing."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME niet ingesteld!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "Map $HOME (%1) bestaat niet."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Geen schrijftoegang tot map $HOME (%1). Als dit de bedoeling is, zet dan "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in uw omgeving."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Geen leestoegang tot map $HOME (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "Map $HOME (%1) heeft geen ruimte op schijf meer."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "Schrijven naar de map $HOME (%2) is mislukt met de fout '%1'"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Tijdelijke map (%1) heeft geen ruimte op schijf meer."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Schrijven naar de tijdelijke map (%2) is mislukt\n"
+#~ "    met de fout '%1'"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Installatieprobleem van Plasma Workspace!"
 
 #~ msgid "Session Management"
 #~ msgstr "Sessiebeheer"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2008-12-23 03:34+0200\n"
 "Last-Translator: Omer Ensari <oensari@gmail.com>\n"
 "Language-Team: Kurdish <ku@li.org>\n"
@@ -42,69 +42,24 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr ""
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr ""
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr ""
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr ""
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr ""
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr ""
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr ""
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr ""
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr ""
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -112,12 +67,7 @@ msgid ""
 "Plasma is unable to start.\n"
 msgstr ""
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr ""
-
-#: main.cpp:194
+#: main.cpp:129
 #, fuzzy, kde-format
 #| msgid ""
 #| "The reliable KDE session manager that talks the standard X11R6 \n"
@@ -129,22 +79,22 @@ msgstr ""
 "Rêveberê danişîna KDE yê ewle ku protokola (XSMP) rêveberiya danişînê ya "
 "X11R6 a Standart bi kar tîne."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Heke pêkan be danişîna tomarkirî ji nû ve lê bar dike"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Destûrê bide pêwendiya ji dûr ve"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr ""
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-09-26 10:05+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -46,66 +46,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "الجلسة تخرج"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "لم تضع البيت"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "مجلد البيت (%1) غير موجود"
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"لا يوجد صلاحية للنفاذ إلى مجلد  $HOME ‏(%1). إذا كان هذا بالعمد؛ فضع  "
-"<envar>KDE_HOME_READONLY=1</envar> في بيئتك."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "لا توجد صلاحية القراءة لمجلد البيت (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "مجلد البيت (%1) ممتلئ"
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "فشل في الكتابة لمجلد البيت (%2) بخطأ '%1'"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "لا يوجد صلاحية الكتابة لـ'%1'."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "لا يوجد صلاحية القراءة لـ'%1'."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "مجلد المؤقت (%1) ممتلئ"
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"فشل في الكتابة للمجلد المؤقت (%2)\n"
-" بخطأ '%1'"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -114,7 +65,7 @@ msgstr ""
 "وجدت مشكلة في التثبيت التالية\n"
 "عند محاولة بدء بلازما:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -125,12 +76,7 @@ msgstr ""
 "\n"
 "بلازما غير قادرة على البدء.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "مشكلة في تثبيت مساحة عمل بلازما!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -139,22 +85,22 @@ msgstr ""
 "مدير جلسة بلازما الموثوق به و الذي يتطابق معيارياً مع X11R6 \n"
 "بروتوكول إدارة الجلسة (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "يستعيد جلسة المستخدم المحفوظة إذا كانت متوفرة"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "اسمح أيضاً بالاتصال عن بعد"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "تبدأ الجلسة في النمط المقفل"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -189,6 +135,42 @@ msgid ""
 msgstr ""
 "غير قادر على استعادة <application>%1</application> لأنه معطل واستنفد موارد "
 "استعادة جلسة النظام. يرجى الإبلاغ عن هذا لمطوري التطبيق."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "لم تضع البيت"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "مجلد البيت (%1) غير موجود"
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "لا يوجد صلاحية للنفاذ إلى مجلد  $HOME ‏(%1). إذا كان هذا بالعمد؛ فضع  "
+#~ "<envar>KDE_HOME_READONLY=1</envar> في بيئتك."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "لا توجد صلاحية القراءة لمجلد البيت (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "مجلد البيت (%1) ممتلئ"
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "فشل في الكتابة لمجلد البيت (%2) بخطأ '%1'"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "مجلد المؤقت (%1) ممتلئ"
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "فشل في الكتابة للمجلد المؤقت (%2)\n"
+#~ " بخطأ '%1'"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "مشكلة في تثبيت مساحة عمل بلازما!"
 
 #~ msgid "Session Management"
 #~ msgstr "إدارة الجلسة"

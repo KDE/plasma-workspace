@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-15 00:41+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2020-11-25 19:54+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Weblate 4.3.2\n"
 
-#: abstractnotificationsmodel.cpp:317
+#: abstractnotificationsmodel.cpp:318
 #, fuzzy, kde-format
 #| msgctxt "Copying n files to location"
 #| msgid "%1 file to %2"
@@ -115,3 +115,15 @@ msgstr "%1 ഫയൽ %2 ലേക്ക്"
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "പ്രയോഗം അപ്രതീക്ഷിതമായി അടഞ്ഞു."
+
+#: notifications.cpp:844
+#, kde-format
+msgctxt "@title"
+msgid "Unread Notifications"
+msgstr ""
+
+#: notifications.cpp:845
+#, kde-format
+msgctxt "@info"
+msgid "%1 notifications were received while Do Not Disturb was active."
+msgstr ""

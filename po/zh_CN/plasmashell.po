@@ -398,7 +398,7 @@ msgstr "激活任务管理器条目 %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr ""
+msgstr "管理桌面和面板…"
 
 #: shellcorona.cpp:334
 #, kde-format

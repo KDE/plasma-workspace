@@ -4,14 +4,14 @@
 # Maxime Corteel <mcorteel@gmail.com>, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-08-31 09:19+0200\n"
+"PO-Revision-Date: 2025-01-08 09:13+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.0\n"
 "X-Text-Markup: kde4\n"
 
 #, kde-format
@@ -406,8 +406,7 @@ msgid "Activate Task Manager Entry %1"
 msgstr "Activer l'entrée du gestionnaire de tâches %1"
 
 #: shellcorona.cpp:312
-#, fuzzy, kde-format
-#| msgid "Manage Desktops And Panels..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Gérer les bureaux et les panneaux..."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-05 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-09-21 08:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -321,89 +321,89 @@ msgstr "המשימה הסתיימה"
 msgid "Do not disturb"
 msgstr "לא להפריע"
 
-#: package/contents/ui/FullRepresentation.qml:113
+#: package/contents/ui/FullRepresentation.qml:121
 #, kde-format
 msgid "For 1 hour"
 msgstr "לשעה"
 
-#: package/contents/ui/FullRepresentation.qml:118
+#: package/contents/ui/FullRepresentation.qml:126
 #, kde-format
 msgid "For 4 hours"
 msgstr "ל־4 שעות"
 
-#: package/contents/ui/FullRepresentation.qml:127
+#: package/contents/ui/FullRepresentation.qml:135
 #, kde-format
 msgid "Until this evening"
 msgstr "עד הערב"
 
-#: package/contents/ui/FullRepresentation.qml:137
+#: package/contents/ui/FullRepresentation.qml:145
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "עד מחר בבוקר"
 
-#: package/contents/ui/FullRepresentation.qml:149
+#: package/contents/ui/FullRepresentation.qml:157
 #, kde-format
 msgid "Until Monday"
 msgstr "עד יום שני"
 
-#: package/contents/ui/FullRepresentation.qml:156
+#: package/contents/ui/FullRepresentation.qml:164
 #, kde-format
 msgid "Until manually disabled"
 msgstr "עד להשבתה ידנית"
 
-#: package/contents/ui/FullRepresentation.qml:206
+#: package/contents/ui/FullRepresentation.qml:214
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "מסתיים אוטומטית: %1"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:226
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "כל עוד %1 פעיל (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:220
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "כל עוד %1 פעיל"
 
-#: package/contents/ui/FullRepresentation.qml:226
+#: package/contents/ui/FullRepresentation.qml:234
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "המסכים משוקפים"
 
-#: package/contents/ui/FullRepresentation.qml:538
+#: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
 msgid "Close Group"
 msgstr "סגירת קבוצה"
 
-#: package/contents/ui/FullRepresentation.qml:560
+#: package/contents/ui/FullRepresentation.qml:568
 #, kde-format
 msgid "Show Fewer"
 msgstr "להציג פחות"
 
-#: package/contents/ui/FullRepresentation.qml:562
+#: package/contents/ui/FullRepresentation.qml:570
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "להציג עוד %1"
 
-#: package/contents/ui/FullRepresentation.qml:591
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
 msgstr "אין התראות שלא נקראו"
 
-#: package/contents/ui/FullRepresentation.qml:606
+#: package/contents/ui/FullRepresentation.qml:614
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
 msgstr "שירות התראות לא זמין"
 
-#: package/contents/ui/FullRepresentation.qml:608
+#: package/contents/ui/FullRepresentation.qml:616
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

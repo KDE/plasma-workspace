@@ -1,14 +1,14 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Giovanni Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Giovanni Sora <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:43+0000\n"
-"PO-Revision-Date: 2024-11-08 15:16+0100\n"
+"PO-Revision-Date: 2025-01-08 15:38+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -98,11 +98,7 @@ msgid "Change Wallet Password?"
 msgstr "Modifica contrasigno de Portafolio?"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
@@ -110,7 +106,7 @@ msgid ""
 msgstr ""
 "Ora que tu ha cambiate tu contrasigno de accesso, tu pote anque voler "
 "cambiar le contrasigno su tu portafolio predefinite de Kwallet pro facer lo "
-"coincidere."
+"coincider."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format

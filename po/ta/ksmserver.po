@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-10-09 20:59+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -41,66 +41,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "அமர்விலிருந்து வெளியேறுகிறது"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME அமைக்கப்படவில்லை!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME அடைவு (%1) இல்லை."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"$HOME (%1) அடைவிற்கு எழுத முடியவில்லை. இவ்வாறு நீங்கள் வேண்டுமென்றே அமைத்திருந்தால், "
-"<envar>KDE_HOME_READONLY=1</envar> என்ற மாறியை உங்கள் சூழலில் அமையுங்கள்."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "$HOME (%1) அடைவை படிக்க முடியவில்லை."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME (%1) அடைவில் சேமிப்பக இடம் முடிந்துவிட்டது."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "$HOME (%2) அடைவிற்கு எழுதுதல், '%1' என்ற சிக்கலை தெரிவித்து தோல்வியடைந்தது"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "'%1' என்பதற்கு எழுத அனுமதி இல்லை."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "'%1' என்பதை படிக்க அனுமதி இல்லை."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "தற்காலிக (%1) அடைவில் சேமிப்பக இடம் முடிந்துவிட்டது."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"தற்காலிக (%2) அடைவிற்கு எழுதுதல், கீழ்வரும்  சிக்கலை தெரிவித்து தோல்வியடைந்தது:\n"
-"'%1'"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -109,7 +60,7 @@ msgstr ""
 "பிளாஸ்மாவை துவக்க முயற்சிக்கும்போது கீழ்வரும்\n"
 " நிறுவல்நேர பிரச்சனை கண்டறியப்பட்டது:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -120,12 +71,7 @@ msgstr ""
 "\n"
 "பிளாஸ்மாவை துவக்க முடியவில்லை.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "பிளாஸ்மா பணிமேடையை நிறுவியதில் பிரச்சனை!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -134,22 +80,22 @@ msgstr ""
 "செந்தர X11R6 அமர்வு மேலாண் வரைமுறை (XSMP) யின் நம்பகதக்க பிளாஸ்மா \n"
 "அமர்வு மேலாளர்."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "முந்தைய அமர்வு இருந்தால் அதை தொடரும்"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "தொலை இணைப்புகளையும் அனுமதி"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "அமர்வை பூட்டிய நிலையில் தொடங்கும்"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -186,6 +132,42 @@ msgid ""
 msgstr ""
 "<application>%1</application> எனும் செயலி கணினியின் அமர்வு மீட்பு ஆற்றலை "
 "தீர்த்துள்ளதால் அதை மீட்டமைக்க முடியாது. அச்செயலியின் நிரலாளர்களிடம் இதைத் தெரிவிக்கவும்."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME அமைக்கப்படவில்லை!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "$HOME அடைவு (%1) இல்லை."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "$HOME (%1) அடைவிற்கு எழுத முடியவில்லை. இவ்வாறு நீங்கள் வேண்டுமென்றே அமைத்திருந்தால், "
+#~ "<envar>KDE_HOME_READONLY=1</envar> என்ற மாறியை உங்கள் சூழலில் அமையுங்கள்."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "$HOME (%1) அடைவை படிக்க முடியவில்லை."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "$HOME (%1) அடைவில் சேமிப்பக இடம் முடிந்துவிட்டது."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "$HOME (%2) அடைவிற்கு எழுதுதல், '%1' என்ற சிக்கலை தெரிவித்து தோல்வியடைந்தது"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "தற்காலிக (%1) அடைவில் சேமிப்பக இடம் முடிந்துவிட்டது."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "தற்காலிக (%2) அடைவிற்கு எழுதுதல், கீழ்வரும்  சிக்கலை தெரிவித்து தோல்வியடைந்தது:\n"
+#~ "'%1'"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "பிளாஸ்மா பணிமேடையை நிறுவியதில் பிரச்சனை!"
 
 #~ msgid "Session Management"
 #~ msgstr "அமர்வு மேலாண்மை"

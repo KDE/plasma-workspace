@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-09-25 13:04+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -44,67 +44,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "La sessione sta per terminare"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME non impostata!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "La cartella $HOME (%1) non esiste."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Nessun accesso in scrittura alla cartella $HOME (%1). Se questo è voluto, "
-"imposta <envar>KDE_HOME_READONLY=1</envar> nel tuo ambiente."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Nessun accesso in lettura alla cartella $HOME (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "Spazio su disco insufficiente per la cartella $HOME (%1)."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr ""
-"La scrittura sulla cartella $HOME (%2) non è riuscita con l'errore «%1»"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Nessun accesso in scrittura a «%1»."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Nessun accesso in lettura a «%1»."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Spazio su disco insufficiente per la cartella temporanea (%1)."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"La scrittura sulla cartella temporanea (%2) non è riuscita\n"
-"    con l'errore «%1»"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -113,7 +63,7 @@ msgstr ""
 "Il seguente problema di installazione è stato rilevato\n"
 "durante il tentativo di avvio di Plasma:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -124,12 +74,7 @@ msgstr ""
 "\n"
 "Plasma non può essere avviato.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Problema di installazione di Plasma Workspace!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -138,22 +83,22 @@ msgstr ""
 "L'affidabile gestore di sessione di Plasma che usa il protocollo standard\n"
 "di X11R6 per la gestione delle sessioni (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Ripristina la sessione utente salvata se disponibile"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permetti anche le connessioni remote"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Avvia la sessione come bloccata"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -192,6 +137,43 @@ msgstr ""
 "Impossibile ripristinare <application>%1</application> perché è danneggiata "
 "e ha esaurito le risorse di ripristino della sessione del sistema. Segnalalo "
 "agli sviluppatori dell'applicazione."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME non impostata!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "La cartella $HOME (%1) non esiste."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Nessun accesso in scrittura alla cartella $HOME (%1). Se questo è voluto, "
+#~ "imposta <envar>KDE_HOME_READONLY=1</envar> nel tuo ambiente."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Nessun accesso in lettura alla cartella $HOME (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "Spazio su disco insufficiente per la cartella $HOME (%1)."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr ""
+#~ "La scrittura sulla cartella $HOME (%2) non è riuscita con l'errore «%1»"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Spazio su disco insufficiente per la cartella temporanea (%1)."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "La scrittura sulla cartella temporanea (%2) non è riuscita\n"
+#~ "    con l'errore «%1»"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Problema di installazione di Plasma Workspace!"
 
 #~ msgid "Session Management"
 #~ msgstr "Gestione della sessione"

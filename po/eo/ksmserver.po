@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -42,66 +42,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "Seanco estas finiĝanta"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME nedifinita!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME dosierujo (%1) ne ekzistas."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Neniu skribaliro al $HOME dosierujo (%1). Sie tio estas intenca, metu "
-"<envar>KDE_HOME_READONLY=1</envar> en via medio."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Neniu leg-aliro al $HOME dosierujo (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME dosierujo (%1) ne plu havas diskospacon."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Skribo al $HOME dosierujo (%2) malsukcesis kun la eraro '%1'"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Neniu skribaliro al '%1'."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Neniu leg-aliro al '%1'."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Dumtempdosierujo (%1) ne plu havas diskospacon."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Skribo al la dumtempdosierujo (%2) malsukcesis kun\n"
-"    la eraro '%1'"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -110,7 +61,7 @@ msgstr ""
 "La sekva instalproblemo estis detektita\n"
 "dum provo startigi Plasma:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -121,12 +72,7 @@ msgstr ""
 "\n"
 "Plasma estas nekapabla starti.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Plasma-Laborspaca instalproblemo!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -135,22 +81,22 @@ msgstr ""
 "La fidinda Plasma-seancadministrilo kiu parolas la norman X11R6-\n"
 "seancadministran protokolon XSMP."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Restarigas la antaŭan uzantoseancon, se ekzistas"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permesi ankaŭ forajn konektojn"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Startigas la seancon en ŝlosita reĝimo"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -187,3 +133,39 @@ msgstr ""
 "Ne eblas restarigi <application>%1</application> ĉar ĝi estas rompita kaj "
 "elĉerpis la seancorestaŭrajn rimedojn de la sistemo. Bonvolu raporti ĉi tion "
 "al la evoluistoj de la programo."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME nedifinita!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "$HOME dosierujo (%1) ne ekzistas."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Neniu skribaliro al $HOME dosierujo (%1). Sie tio estas intenca, metu "
+#~ "<envar>KDE_HOME_READONLY=1</envar> en via medio."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Neniu leg-aliro al $HOME dosierujo (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "$HOME dosierujo (%1) ne plu havas diskospacon."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "Skribo al $HOME dosierujo (%2) malsukcesis kun la eraro '%1'"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Dumtempdosierujo (%1) ne plu havas diskospacon."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Skribo al la dumtempdosierujo (%2) malsukcesis kun\n"
+#~ "    la eraro '%1'"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Plasma-Laborspaca instalproblemo!"

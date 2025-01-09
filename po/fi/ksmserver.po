@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-10-16 19:01+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -52,66 +52,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "Istunto on päättymässä"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME-muuttujaa ei ole asetettu!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME-kansiota (%1) ei ole olemassa."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Ei kirjoitusoikeutta $HOME-kansioon (%1). Jos näin on tarkoitus, aseta "
-"ympäristömuuttuja <envar>KDE_HOME_READONLY=1</envar>."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "$HOME-kansioon (%1) ei ole lukuoikeutta."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME-kansiossa (%1) ei ole vapaata levytilaa."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "$HOME-kansioon (%2) kirjoittaminen epäonnistui virheellä ”%1”"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Kansioon ”%1” ei ole kirjoitusoikeutta."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Kansioon ”%1” ei ole lukuoikeutta."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Väliaikaiskansiossa (%1) ei ole vapaata levytilaa."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Väliaikaiskansioon (%2) kirjoittaminen epäonnistui\n"
-"virheellä ”%1”"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -120,7 +71,7 @@ msgstr ""
 "Plasmaa käynnistettäessä havaittiin\n"
 "seuraava asennusongelma:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -131,12 +82,7 @@ msgstr ""
 "\n"
 "Plasmaa ei voi käynnistää.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Plasma-työtilan asennusongelma!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -145,22 +91,22 @@ msgstr ""
 "Standardinmukaista X11R6-istunnonhallintayhteyskäytäntöä (XSMP)\n"
 "käyttävä luotettava Plasma-istunnonhallinta."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Palauttaa tallennetun käyttäjän istunnon, jos mahdollista"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Salli myös etäyhteydet"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Aloittaa istunnon lukittuna"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -198,6 +144,42 @@ msgstr ""
 "Sovellusta <application>%1</application> ei voitu palauttaa, koska se on "
 "rikki ja kuluttanut järjestelmän palautusresurssit loppuun. Ilmoita "
 "ongelmasta sovelluksen kehittäjille."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME-muuttujaa ei ole asetettu!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "$HOME-kansiota (%1) ei ole olemassa."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Ei kirjoitusoikeutta $HOME-kansioon (%1). Jos näin on tarkoitus, aseta "
+#~ "ympäristömuuttuja <envar>KDE_HOME_READONLY=1</envar>."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "$HOME-kansioon (%1) ei ole lukuoikeutta."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "$HOME-kansiossa (%1) ei ole vapaata levytilaa."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "$HOME-kansioon (%2) kirjoittaminen epäonnistui virheellä ”%1”"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Väliaikaiskansiossa (%1) ei ole vapaata levytilaa."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Väliaikaiskansioon (%2) kirjoittaminen epäonnistui\n"
+#~ "virheellä ”%1”"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Plasma-työtilan asennusongelma!"
 
 #~ msgid "Session Management"
 #~ msgstr "Istunnonhallinta"

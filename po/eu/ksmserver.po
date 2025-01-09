@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-09-28 13:30+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -43,66 +43,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "Saioa ixten ari da"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME ezarri gabe!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME direktorioa (%1) ez dago."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"$HOME direktoriora (%1) idazteko sarbiderik ez. Nahita egina bada, ezarri "
-"<envar>KDE_HOME_READONLY=1</envar> zure ingurunean."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Irakurtzeko sarbiderik ez $HOME direktoriora (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME direktorioa (%1) disko-lekurik gabe dago."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "%HOME direktoriora (%2) idaztea huts egin du '%1' errorearekin"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Idazteko sarbiderik ez '%1'-era."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Irakurtzeko sarbiderik ez '%1'-era."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Aldi baterako direktorioa (%1) disko-lekurik gabe dago."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Aldi baterako direktoriora (%2) idaztea huts egin du\n"
-"    '%1' errorearekin"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -111,7 +62,7 @@ msgstr ""
 "Ondoko instalazio arazoa antzeman da\n"
 "Plasma abiatzen saiatzean:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -122,12 +73,7 @@ msgstr ""
 "\n"
 "Plasma ezin da abiatu.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Plasma Langunearen instalazio arazoa!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -136,22 +82,22 @@ msgstr ""
 "Plasmaren saio-kudeatzaile fidagarria, X11R6 saio-kudeaketa protokolo\n"
 "estandarrean (XSMP) mintzo dena."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Erabiltzailearen saio gordea berreskuratzen du, erabilgarria bada."
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Urruneko konexioak ere onartzen ditu."
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Giltzatuta moduan hasten du saioa"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -190,6 +136,42 @@ msgstr ""
 "Ez da <application>%1</application> lehengoratzeko gai, hautsita dagoelako "
 "eta sistemaren saioa lehengoratzeko baliabideak ahitu dituelako. Mesedez, "
 "eman horren berri aplikazioaren garatzaileari."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME ezarri gabe!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "$HOME direktorioa (%1) ez dago."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "$HOME direktoriora (%1) idazteko sarbiderik ez. Nahita egina bada, ezarri "
+#~ "<envar>KDE_HOME_READONLY=1</envar> zure ingurunean."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Irakurtzeko sarbiderik ez $HOME direktoriora (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "$HOME direktorioa (%1) disko-lekurik gabe dago."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "%HOME direktoriora (%2) idaztea huts egin du '%1' errorearekin"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Aldi baterako direktorioa (%1) disko-lekurik gabe dago."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Aldi baterako direktoriora (%2) idaztea huts egin du\n"
+#~ "    '%1' errorearekin"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Plasma Langunearen instalazio arazoa!"
 
 #~ msgid "Session Management"
 #~ msgstr "Saio-kudeaketa"

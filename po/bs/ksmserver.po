@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2015-02-04 14:12+0000\n"
 "Last-Translator: Dino Babahmetovic <dbabahmeto1@etf.unsa.ba>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -43,64 +43,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr ""
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME nije postavljen!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME direktorij (%1) ne postoji."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Pravo čitanja $HOME direktorija (%1) nije dato."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME direktorij (%1) nema slobodnog diskovnog prostora."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Pisanje na $HOME direktorij (%2) neuspješno zbog greške '%1'"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Nema pristupa pisanja na '%1'."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Nema pristupa čitanja sa '%1'."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Direktorij temp (%1) nema slobodnog diskovnog prostora."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Pisanje na temp direktorij (%2) neuspješno zbog\n"
-"    greške '%1'"
-
-#: main.cpp:149
+#: main.cpp:87
 #, fuzzy, kde-format
 #| msgid ""
 #| "The following installation problem was detected\n"
@@ -112,7 +65,7 @@ msgstr ""
 "Slijedeći instalacioni problem je uočen\n"
 "prilikom pokušaja pokretanja KDE:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, fuzzy, kde-format
 #| msgid ""
 #| "\n"
@@ -127,12 +80,7 @@ msgstr ""
 "\n"
 "KDE se ne može pokrenuti.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Plazma Workspace instalacioni problem!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, fuzzy, kde-format
 #| msgid ""
 #| "The reliable KDE session manager that talks the standard X11R6 \n"
@@ -144,22 +92,22 @@ msgstr ""
 "Pouzdan KDE‑ov menadžer sesija koji komunicira standardnim\n"
 "X‑ovim protokolom za upravljanje sesijama (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Obnavlja sačuvanu korisničku sesiju (ako postoji)"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Takođe dozvoli udaljene veze"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Počinje sesiju u zaključanom režimu"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -189,6 +137,34 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME nije postavljen!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "$HOME direktorij (%1) ne postoji."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Pravo čitanja $HOME direktorija (%1) nije dato."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "$HOME direktorij (%1) nema slobodnog diskovnog prostora."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "Pisanje na $HOME direktorij (%2) neuspješno zbog greške '%1'"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Direktorij temp (%1) nema slobodnog diskovnog prostora."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Pisanje na temp direktorij (%2) neuspješno zbog\n"
+#~ "    greške '%1'"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Plazma Workspace instalacioni problem!"
 
 #~ msgid "Log Out"
 #~ msgstr "Odjavi me"

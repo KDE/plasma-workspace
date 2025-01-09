@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-10-02 18:21+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -41,66 +41,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "Sesi telah keluar"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME belum diatur!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "Direktori $HOME (%1) tidak ada."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Tidak ada akses ke direktori $HOME (%1). Jika memang sengaja, atur "
-"<envar>KDE_HOME_READONLY=1</envar> dalam lingkungan Anda."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Tak ada akses baca ke direktori $HOME (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "Direktori $HOME (%1) kehabisan ruang cakram."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Menulis ke direktrori $HOME (%2) gagal dengan error '%1'"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Tak ada akses tulis ke '%1'."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Tak ada akses baca ke '%1'."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Direktori temporer (%1) kehabisan ruang cakram."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Menulis ke direktori temporer (%2) gagal dengan\n"
-"    error '%1'"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -109,7 +60,7 @@ msgstr ""
 "Masalah penginstalan berikut terdeteksi\n"
 "ketika mencoba menjalankan Plasma:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -120,12 +71,7 @@ msgstr ""
 "\n"
 "Plasma tidak dapat dijalankan.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Masalah penginstalan Workspace Plasma!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -134,22 +80,22 @@ msgstr ""
 "Pengelola sesi Plasma yang andal bilang bahwa protokol pengelolaan \n"
 "sesi X11R6 (XSMP) standar."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Mengembalikan sesi pengguna tersimpan jika tersedia"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Juga mengizinkan koneksi jarak jauh"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Jalankan sesi dalam mode terkunci"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -187,6 +133,42 @@ msgstr ""
 "Tidak dapat memulihkan <application>%1</application> karena ia rusak dan "
 "sumberdaya pemulihan sesi sistem kepayahan. Silakan laporkan ini ke "
 "pengembang aplikasi."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME belum diatur!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "Direktori $HOME (%1) tidak ada."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Tidak ada akses ke direktori $HOME (%1). Jika memang sengaja, atur "
+#~ "<envar>KDE_HOME_READONLY=1</envar> dalam lingkungan Anda."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Tak ada akses baca ke direktori $HOME (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "Direktori $HOME (%1) kehabisan ruang cakram."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "Menulis ke direktrori $HOME (%2) gagal dengan error '%1'"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Direktori temporer (%1) kehabisan ruang cakram."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Menulis ke direktori temporer (%2) gagal dengan\n"
+#~ "    error '%1'"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Masalah penginstalan Workspace Plasma!"
 
 #~ msgid "Session Management"
 #~ msgstr "Pengelolaan Sesi"

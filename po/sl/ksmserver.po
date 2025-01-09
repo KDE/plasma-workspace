@@ -1,7 +1,7 @@
 # Translation of ksmserver.po to Slovenian
 # SLOVENIAN TRANSLATION OF KSMSERVER.
 # Copyright (C) 2000, 2003, 2004 Free Software Foundation, Inc.
-# $Id: ksmserver.po 1694995 2024-11-14 01:16:55Z scripty $
+# $Id: ksmserver.po 1699768 2025-01-09 01:18:56Z scripty $
 # $Source$
 #
 # Roman Maurer <roman.maurer@hermes.si>, 2000.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-09-25 07:35+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -47,66 +47,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "Seja je v odhajanju"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME ni nastavljena!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "Mapa $HOME (%1) ne obstaja."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Ni dostopa za pisanje do imenika $HOME (%1). Če je to namerno, nastavite "
-"<envar>KDE_HOME_READONLY=1</envar> v vašem okolju."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Ni dovoljenja za branje iz mape $HOME (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "V mapi $HOME (%1) ni neporabljenega prostora."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Zapisovanje v mapo $HOME (%2) je spodletelo z napako '%1'"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Brez pisalnega dostopa do '%1'."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Brez bralnega dostopa do '%1'."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "V začasni mapi (%1) ni neporabljenega prostora."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Zapisovanje v začasno mapo (%2) je spodletelo\n"
-"    z napako '%1'"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -115,7 +66,7 @@ msgstr ""
 "Med poskusom zagona Plasme je bila zaznana naslednja\n"
 "napaka v namestitvi:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -126,12 +77,7 @@ msgstr ""
 "\n"
 "Plasme ni mogoče zagnati.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Težava v namestitvi delovnega prostora Plasma!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -140,22 +86,22 @@ msgstr ""
 "Zanesljivi upravljalnik sej za Plasmo, ki se pogovarja po standardnem\n"
 "protokolu za upravljanje sej za X11R6 (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Obnovi shranjeno uporabniško sejo, če obstaja"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Dovoli tudi oddaljene povezave"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Zažene sejo v zaklenjenem načinu"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -193,6 +139,42 @@ msgstr ""
 "Ni mogoče obnoviti <application>%1</application>, ker je pokvarjena in "
 "jeizčrpala sistemska sredstva za obnovitev seje. Prosimo, da to sporočite "
 "razvijalcem aplikacije."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME ni nastavljena!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "Mapa $HOME (%1) ne obstaja."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Ni dostopa za pisanje do imenika $HOME (%1). Če je to namerno, nastavite "
+#~ "<envar>KDE_HOME_READONLY=1</envar> v vašem okolju."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Ni dovoljenja za branje iz mape $HOME (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "V mapi $HOME (%1) ni neporabljenega prostora."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "Zapisovanje v mapo $HOME (%2) je spodletelo z napako '%1'"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "V začasni mapi (%1) ni neporabljenega prostora."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Zapisovanje v začasno mapo (%2) je spodletelo\n"
+#~ "    z napako '%1'"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Težava v namestitvi delovnega prostora Plasma!"
 
 #~ msgid "Session Management"
 #~ msgstr "Upravljanje sej"

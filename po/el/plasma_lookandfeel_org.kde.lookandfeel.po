@@ -88,32 +88,26 @@ msgstr ""
 "υλικολογισμικού."
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "Κοίμηση"
+msgstr "Κοί&μηση"
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Κοίμηση τώρα"
+msgstr "&Κοίμηση τώρα"
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Νάρκη"
+msgstr "&Νάρκη"
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "Νάρκη τώρα"
+msgstr "Νάρκ&η τώρα"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -122,16 +116,14 @@ msgid "Install Updates and Restart"
 msgstr "Εγκατάσταση ενημερώσεων και επανεκκίνηση"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
-msgstr "Επανεκκίνηση"
+msgstr "Επανε&κκίνηση"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
-msgstr "Επανεκκίνηση τώρα"
+msgstr "&Επανεκκίνηση τώρα"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -140,34 +132,29 @@ msgid "Install Updates and Shut Down"
 msgstr "Εγκατάσταση ενημερώσεων και τερματισμός"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
-msgstr "Τερματισμός"
+msgstr "Τε&ρματισμός"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "Τερματισμός τώρα"
+msgstr "Τερ&ματισμός τώρα"
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
-msgstr "Αποσύνδεση"
+msgstr "Αποσύν&δεση"
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
-msgstr "Αποσύνδεση τώρα"
+msgstr "Αποσύν&δεση τώρα"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Ακύρωση"
+msgstr "Ακύρ&ωση"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-05 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-08-24 11:39+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -302,89 +302,89 @@ msgstr "Ολοκληρωμένη εργασία"
 msgid "Do not disturb"
 msgstr "Μην ενοχλείτε"
 
-#: package/contents/ui/FullRepresentation.qml:113
+#: package/contents/ui/FullRepresentation.qml:121
 #, kde-format
 msgid "For 1 hour"
 msgstr "Για 1 ώρα"
 
-#: package/contents/ui/FullRepresentation.qml:118
+#: package/contents/ui/FullRepresentation.qml:126
 #, kde-format
 msgid "For 4 hours"
 msgstr "Για 4 ώρες"
 
-#: package/contents/ui/FullRepresentation.qml:127
+#: package/contents/ui/FullRepresentation.qml:135
 #, kde-format
 msgid "Until this evening"
 msgstr "Μέχρι σήμερα το απόγευμα"
 
-#: package/contents/ui/FullRepresentation.qml:137
+#: package/contents/ui/FullRepresentation.qml:145
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "Μέχρι αύριο το πρωί"
 
-#: package/contents/ui/FullRepresentation.qml:149
+#: package/contents/ui/FullRepresentation.qml:157
 #, kde-format
 msgid "Until Monday"
 msgstr "Μέχρι τη Δευτέρα"
 
-#: package/contents/ui/FullRepresentation.qml:156
+#: package/contents/ui/FullRepresentation.qml:164
 #, kde-format
 msgid "Until manually disabled"
 msgstr "Μέχρι να απενεργοποιηθεί χειροκίνητα"
 
-#: package/contents/ui/FullRepresentation.qml:206
+#: package/contents/ui/FullRepresentation.qml:214
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Τελειώνει αυτόματα: %1"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:226
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Ενώ το %1 είναι ενεργό (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:220
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Ενώ το %1 είναι ενεργό"
 
-#: package/contents/ui/FullRepresentation.qml:226
+#: package/contents/ui/FullRepresentation.qml:234
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Οι οθόνες καθρεφτίζονται"
 
-#: package/contents/ui/FullRepresentation.qml:538
+#: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
 msgid "Close Group"
 msgstr "Κλείσιμο ομάδας"
 
-#: package/contents/ui/FullRepresentation.qml:560
+#: package/contents/ui/FullRepresentation.qml:568
 #, kde-format
 msgid "Show Fewer"
 msgstr "Εμφάνιση λιγότερων"
 
-#: package/contents/ui/FullRepresentation.qml:562
+#: package/contents/ui/FullRepresentation.qml:570
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Εμφάνιση %1 περισσότερων"
 
-#: package/contents/ui/FullRepresentation.qml:591
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
 msgstr "Καμία μη αναγνωσμένη ειδοποίηση"
 
-#: package/contents/ui/FullRepresentation.qml:606
+#: package/contents/ui/FullRepresentation.qml:614
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
 msgstr "Η υπηρεσία ειδοποίησης δεν είναι διαθέσιμη"
 
-#: package/contents/ui/FullRepresentation.qml:608
+#: package/contents/ui/FullRepresentation.qml:616
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

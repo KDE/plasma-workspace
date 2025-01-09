@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-09-25 19:21+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -41,67 +41,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr "Økta vert avslutta"
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME er ikke definert"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "$HOME-mappa (%1) finst ikkje."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Har ikkje skrivetilgang til $HOME-mappa (%1). Viss dette er meininga, "
-"registrer miljø­variabelen <envar>KDE_HOME_READONLY=1</envar>."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Har ikkje lesetilgang til $HOME-mappa (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME-mappa (%1) har ikkje meir ledig plass."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Klarte ikkje skriva til $HOME-mappa (%2): %1"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Har ikkje skrivetilgang til «%1»."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Har ikkje lesetilgang til «%1»."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Mappa for mellombelse filer (%1) har ikkje meir ledig plass."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Klarte ikkje skriva til mappa for mellombelse filer (%2).\n"
-"\n"
-"Feilmelding: %1"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -110,7 +60,7 @@ msgstr ""
 "Oppdaga følgjande installasjonsproblem ved\n"
 "forsøk på å starta Plasma:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -121,12 +71,7 @@ msgstr ""
 "\n"
 "Kan ikkje starta Plasma.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Feil ved installasjon av Plasma-arbeidsområde"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -135,22 +80,22 @@ msgstr ""
 "Den pålitelege økthandsamaren til Plasma som snakkar med den \n"
 "normale økthandsamingsprotokollen til X11R6 (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "Gjenopprettar tilstanden frå den førre økta, om det går"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Tillat nettverkstilkoplingar"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Startar økta i låst modus"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -188,3 +133,40 @@ msgstr ""
 "Kan ikkje gjenoppretta <application>%1</application>, då programmet er "
 "øydelagt og har brukt opp ressursane for økthandsaming på dette systemet. "
 "Meld frå om feilen til utviklarane av appen."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME er ikke definert"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "$HOME-mappa (%1) finst ikkje."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Har ikkje skrivetilgang til $HOME-mappa (%1). Viss dette er meininga, "
+#~ "registrer miljø­variabelen <envar>KDE_HOME_READONLY=1</envar>."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Har ikkje lesetilgang til $HOME-mappa (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "$HOME-mappa (%1) har ikkje meir ledig plass."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "Klarte ikkje skriva til $HOME-mappa (%2): %1"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Mappa for mellombelse filer (%1) har ikkje meir ledig plass."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Klarte ikkje skriva til mappa for mellombelse filer (%2).\n"
+#~ "\n"
+#~ "Feilmelding: %1"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Feil ved installasjon av Plasma-arbeidsområde"

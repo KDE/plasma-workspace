@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-03-02 15:38+0000\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -40,66 +40,17 @@ msgctxt "@info:status"
 msgid "Session is exiting"
 msgstr ""
 
-#: main.cpp:66
-#, kde-format
-msgid "$HOME not set!"
-msgstr "$HOME nu e definit!"
-
-#: main.cpp:70 main.cpp:79
-#, kde-format
-msgid "$HOME directory (%1) does not exist."
-msgstr "Dosarul $HOME (%1) nu există."
-
-#: main.cpp:73
-#, kde-kuit-format
-msgctxt "@info"
-msgid ""
-"No write access to $HOME directory (%1). If this is intentional, set "
-"<envar>KDE_HOME_READONLY=1</envar> in your environment."
-msgstr ""
-"Nu se poate scrie în dosarul %HOME (%1). Dacă acest lucru e intenționat, "
-"stabiliți <envar>KDE_HOME_READONLY=1</envar> în mediul dumneavoastră."
-
-#: main.cpp:81
-#, kde-format
-msgid "No read access to $HOME directory (%1)."
-msgstr "Lipsește accesul de citire în dosarul $HOME (%1)."
-
-#: main.cpp:86
-#, kde-format
-msgid "$HOME directory (%1) is out of disk space."
-msgstr "Dosarul $HOME (%1) a rămas fără spațiu pe disc."
-
-#: main.cpp:89
-#, kde-format
-msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Scrierea în dosarul $HOME (%2) a eșuat cu eroarea „%1”"
-
-#: main.cpp:103 main.cpp:142
+#: main.cpp:72 main.cpp:80
 #, kde-format
 msgid "No write access to '%1'."
 msgstr "Lipsește accesul de scriere în „%1”."
 
-#: main.cpp:105 main.cpp:144
+#: main.cpp:74 main.cpp:82
 #, kde-format
 msgid "No read access to '%1'."
 msgstr "Lipsește accesul de citire în „%1”."
 
-#: main.cpp:115 main.cpp:129
-#, kde-format
-msgid "Temp directory (%1) is out of disk space."
-msgstr "Dosarul temporar (%1) a rămas fără spațiu pe disc."
-
-#: main.cpp:118 main.cpp:132
-#, kde-format
-msgid ""
-"Writing to the temp directory (%2) failed with\n"
-"    the error '%1'"
-msgstr ""
-"Scrierea în dosarul temporar (%2) a eșuat cu\n"
-"    eroarea „%1”"
-
-#: main.cpp:149
+#: main.cpp:87
 #, kde-format
 msgid ""
 "The following installation problem was detected\n"
@@ -108,7 +59,7 @@ msgstr ""
 "La pornirea Plasma a fost depistată următoarea\n"
 "problemă cu instalarea:"
 
-#: main.cpp:152
+#: main.cpp:90
 #, kde-format
 msgid ""
 "\n"
@@ -119,12 +70,7 @@ msgstr ""
 "\n"
 "Plasma nu poate porni.\n"
 
-#: main.cpp:159
-#, kde-format
-msgid "Plasma Workspace installation problem!"
-msgstr "Problemă cu instalarea spațiului de lucru Plasma!"
-
-#: main.cpp:194
+#: main.cpp:129
 #, kde-format
 msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
@@ -133,22 +79,22 @@ msgstr ""
 "Un gestionar de sesiune Plasma care comunică prin\n"
 "protocolul standard de gestiune a sesiunii X11R6 (XSMP)."
 
-#: main.cpp:198
+#: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
 msgstr "reface sesiunea precedentă dacă este disponibilă"
 
-#: main.cpp:201
+#: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
 msgstr "Permite și conexiuni distante"
 
-#: main.cpp:204
+#: main.cpp:139
 #, kde-format
 msgid "Starts the session in locked mode"
 msgstr "Pornește sesiunea în regim blocat"
 
-#: main.cpp:208
+#: main.cpp:143
 #, kde-format
 msgid ""
 "Starts without lock screen support. Only needed if other component provides "
@@ -187,6 +133,42 @@ msgstr ""
 "<application>%1</application> nu se poate restabili deoarece e defectă și a "
 "epuizat resursele de restabilire a sesiunii ale sistemului. Raportați acest "
 "lucru dezvoltatorilor aplicației."
+
+#~ msgid "$HOME not set!"
+#~ msgstr "$HOME nu e definit!"
+
+#~ msgid "$HOME directory (%1) does not exist."
+#~ msgstr "Dosarul $HOME (%1) nu există."
+
+#~ msgctxt "@info"
+#~ msgid ""
+#~ "No write access to $HOME directory (%1). If this is intentional, set "
+#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
+#~ msgstr ""
+#~ "Nu se poate scrie în dosarul %HOME (%1). Dacă acest lucru e intenționat, "
+#~ "stabiliți <envar>KDE_HOME_READONLY=1</envar> în mediul dumneavoastră."
+
+#~ msgid "No read access to $HOME directory (%1)."
+#~ msgstr "Lipsește accesul de citire în dosarul $HOME (%1)."
+
+#~ msgid "$HOME directory (%1) is out of disk space."
+#~ msgstr "Dosarul $HOME (%1) a rămas fără spațiu pe disc."
+
+#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
+#~ msgstr "Scrierea în dosarul $HOME (%2) a eșuat cu eroarea „%1”"
+
+#~ msgid "Temp directory (%1) is out of disk space."
+#~ msgstr "Dosarul temporar (%1) a rămas fără spațiu pe disc."
+
+#~ msgid ""
+#~ "Writing to the temp directory (%2) failed with\n"
+#~ "    the error '%1'"
+#~ msgstr ""
+#~ "Scrierea în dosarul temporar (%2) a eșuat cu\n"
+#~ "    eroarea „%1”"
+
+#~ msgid "Plasma Workspace installation problem!"
+#~ msgstr "Problemă cu instalarea spațiului de lucru Plasma!"
 
 #~ msgid "Session Management"
 #~ msgstr "Gestiune sesiuni"

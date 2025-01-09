@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-05 00:42+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2024-02-28 15:16-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -300,89 +300,89 @@ msgstr "Tarefa concluída"
 msgid "Do not disturb"
 msgstr "Não perturbe"
 
-#: package/contents/ui/FullRepresentation.qml:113
+#: package/contents/ui/FullRepresentation.qml:121
 #, kde-format
 msgid "For 1 hour"
 msgstr "Por 1 hora"
 
-#: package/contents/ui/FullRepresentation.qml:118
+#: package/contents/ui/FullRepresentation.qml:126
 #, kde-format
 msgid "For 4 hours"
 msgstr "Por 4 horas"
 
-#: package/contents/ui/FullRepresentation.qml:127
+#: package/contents/ui/FullRepresentation.qml:135
 #, kde-format
 msgid "Until this evening"
 msgstr "Até esta noite"
 
-#: package/contents/ui/FullRepresentation.qml:137
+#: package/contents/ui/FullRepresentation.qml:145
 #, kde-format
 msgid "Until tomorrow morning"
 msgstr "Até amanhã de manhã"
 
-#: package/contents/ui/FullRepresentation.qml:149
+#: package/contents/ui/FullRepresentation.qml:157
 #, kde-format
 msgid "Until Monday"
 msgstr "Até segunda-feira"
 
-#: package/contents/ui/FullRepresentation.qml:156
+#: package/contents/ui/FullRepresentation.qml:164
 #, kde-format
 msgid "Until manually disabled"
 msgstr "Até ser desabilitado manualmente"
 
-#: package/contents/ui/FullRepresentation.qml:206
+#: package/contents/ui/FullRepresentation.qml:214
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Terminar automaticamente: %1"
 
-#: package/contents/ui/FullRepresentation.qml:218
+#: package/contents/ui/FullRepresentation.qml:226
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Enquanto %1 estiver ativo (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:220
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Enquanto %1 estiver ativo"
 
-#: package/contents/ui/FullRepresentation.qml:226
+#: package/contents/ui/FullRepresentation.qml:234
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "As telas são espelhadas"
 
-#: package/contents/ui/FullRepresentation.qml:538
+#: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
 msgid "Close Group"
 msgstr "Fechar grupo"
 
-#: package/contents/ui/FullRepresentation.qml:560
+#: package/contents/ui/FullRepresentation.qml:568
 #, kde-format
 msgid "Show Fewer"
 msgstr "Mostrar menos"
 
-#: package/contents/ui/FullRepresentation.qml:562
+#: package/contents/ui/FullRepresentation.qml:570
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Mostrar mais %1"
 
-#: package/contents/ui/FullRepresentation.qml:591
+#: package/contents/ui/FullRepresentation.qml:599
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
 msgstr "Sem notificações não lidas"
 
-#: package/contents/ui/FullRepresentation.qml:606
+#: package/contents/ui/FullRepresentation.qml:614
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
 msgstr "O serviço de notificações não está disponível"
 
-#: package/contents/ui/FullRepresentation.qml:608
+#: package/contents/ui/FullRepresentation.qml:616
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

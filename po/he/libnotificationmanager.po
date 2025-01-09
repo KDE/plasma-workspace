@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-15 00:41+0000\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
 "PO-Revision-Date: 2023-10-04 22:40+0300\n"
 "Last-Translator: \n"
 "Language-Team: Hebrew <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: abstractnotificationsmodel.cpp:317
+#: abstractnotificationsmodel.cpp:318
 #, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
@@ -117,3 +117,15 @@ msgstr "%1 מתוך %2"
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "יישום נסגר במפתיע."
+
+#: notifications.cpp:844
+#, kde-format
+msgctxt "@title"
+msgid "Unread Notifications"
+msgstr ""
+
+#: notifications.cpp:845
+#, kde-format
+msgctxt "@info"
+msgid "%1 notifications were received while Do Not Disturb was active."
+msgstr ""
