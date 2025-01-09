@@ -45,7 +45,6 @@ KCM.GridViewKCM {
         }
     }
 
-    view.enabled: kcm.settings.soundsEnabled
     view.model: kcm.themes
     view.currentIndex: kcm.currentIndex
 
