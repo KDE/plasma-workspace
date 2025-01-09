@@ -79,12 +79,21 @@ class TestApplication(Gtk.Application):
         if signal_name == "clipboardHistoryUpdated":
             self.klipper_updated_event.set()
 
-    @classmethod
-    def spin(cls) -> None:
+    @staticmethod
+    def spin() -> None:
         context = GLib.MainContext.default()
         count = 0
         while context.pending() or count < 10:
             count += 1
+            if not context.pending():
+                time.sleep(0.1)
+                continue
+            context.iteration(may_block=True)
+
+    @staticmethod
+    def spin_until(event: threading.Event) -> None:
+        context = GLib.MainContext.default()
+        while not event.is_set() or context.pending():
             if not context.pending():
                 time.sleep(0.1)
                 continue
@@ -128,19 +137,25 @@ class TestApplication(Gtk.Application):
         self.spin()
 
         data: dict[str, GLib.Bytes] = {}
+        read_event = threading.Event()
 
         def on_value_read(_clipboard: Gdk.Clipboard, result: Gio.AsyncResult, user_data) -> None:
-            nonlocal data
+            nonlocal data, read_event
             stream, t = _clipboard.read_finish(result)
             logging.info(f"reading data for {t}")
             data[t] = stream.read_bytes(10000, None)
+            logging.info(f"reading done")
+            read_event.set()
 
         for t in clipboard.get_formats().get_mime_types():
             if t.startswith("image/") and not t.endswith("png"):
                 continue
+            if t.startswith("application/x-qt-image"):
+                continue
             ActionChains(self.driver).send_keys(Keys.SPACE).perform()
             clipboard.read_async([t, None], GLib.PRIORITY_DEFAULT, None, on_value_read, None)
-            self.spin()
+            self.spin_until(read_event)
+            read_event.clear()
 
         window.set_visible(False)
         self.spin()
