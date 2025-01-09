@@ -117,7 +117,8 @@ PlasmoidItem {
             timeZone === "Local" || displayStringForTimeZone(timeZone) !== displayStringForLocalTimeZone;
 
         return Plasmoid.configuration.selectedTimeZones
-            .filter(isLiterallyLocalOrResolvesToSomethingOtherThanLocal);
+            .filter(isLiterallyLocalOrResolvesToSomethingOtherThanLocal)
+            .sort((a, b) => dataSource.data[a]["Offset"] - dataSource.data[b]["Offset"]);
     }
 
     function timeZoneResolvesToLastSelectedTimeZone(timeZone: string): bool {
