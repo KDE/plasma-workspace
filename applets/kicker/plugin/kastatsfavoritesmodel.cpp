@@ -375,7 +375,9 @@ public:
 
         // Removing the entry from the cache
         for (auto it = m_itemEntries.cbegin(); it != m_itemEntries.cend();) {
-            if (it->second->id() == resource) {
+            // NOTE: the value may not actually be valid anymore, so let's make sure we also check the key to ensure entries are properly purged
+            // https://bugs.kde.org/show_bug.cgi?id=497958
+            if (it->first == resource || it->second->id() == resource) {
                 it = m_itemEntries.erase(it);
             } else {
                 it = std::next(it);
