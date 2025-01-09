@@ -56,9 +56,15 @@ int main(int argc, char *argv[])
         config->deleteGroup(group);
     }
 
+    QSet<QString> seenAppIds;
     for (int i = 0; i < tasksModel.rowCount(); ++i) {
         const QModelIndex index = tasksModel.index(i, 0);
         QString appId = tasksModel.data(index, TaskManager::AbstractTasksModel::AppId).toString();
+
+        if (seenAppIds.contains(appId)) {
+            qCDebug(FALLBACK_SESSION_RESTORE) << "Skipping duplicate" << appId;
+            continue;
+        }
 
         static const auto excludeApps = []() -> QStringList {
             KSharedConfig::Ptr config = KSharedConfig::openConfig(u"ksmserverrc"_s);
@@ -73,6 +79,7 @@ int main(int argc, char *argv[])
         auto group = config->group(QString::number(i));
         qCDebug(FALLBACK_SESSION_RESTORE) << "Saving" << group.name() << appId;
         group.writeEntry("appId", appId);
+        seenAppIds.insert(appId);
     }
 
     config->sync();
