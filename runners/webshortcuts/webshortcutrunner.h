@@ -19,11 +19,7 @@ public:
 
     void match(KRunner::RunnerContext &context) override;
     void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &match) override;
-    void init() override
-    {
-        configurePrivateBrowsingActions();
-        loadSyntaxes();
-    }
+    void init() override;
 
 private:
     Q_SLOT void loadSyntaxes();
@@ -36,6 +32,7 @@ private:
     QString m_lastKey;
     QString m_lastProvider;
     QRegularExpression m_regex;
+    QString m_iconName;
 
     KServiceAction m_privateAction;
 
