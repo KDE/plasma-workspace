@@ -100,8 +100,7 @@ void WebshortcutRunner::configurePrivateBrowsingActions()
         if (containsPrivate || containsIncognito) {
             m_privateAction = action;
             const QString text = containsPrivate ? i18n("Search in private window") : i18n("Search in incognito window");
-            const QIcon icon = QIcon::fromTheme(QStringLiteral("view-private"), QIcon::fromTheme(QStringLiteral("view-hidden")));
-            m_match.setActions({KRunner::Action(action.exec(), icon.name(), text)});
+            m_match.setActions({KRunner::Action(action.exec(), m_iconName, text)});
             return;
         }
     }
@@ -192,6 +191,13 @@ void WebshortcutRunner::run(const KRunner::RunnerContext &context, const KRunner
             job->start();
         }
     }
+}
+
+void WebshortcutRunner::init()
+{
+    m_iconName = QIcon::fromTheme(QStringLiteral("view-private"), QIcon::fromTheme(QStringLiteral("view-hidden"))).name();
+    configurePrivateBrowsingActions();
+    loadSyntaxes();
 }
 
 K_PLUGIN_CLASS_WITH_JSON(WebshortcutRunner, "plasma-runner-webshortcuts.json")
