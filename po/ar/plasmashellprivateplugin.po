@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2015.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-04 00:42+0000\n"
-"PO-Revision-Date: 2024-09-05 09:44+0400\n"
+"PO-Revision-Date: 2025-01-09 09:39+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -344,18 +344,13 @@ msgid "Running"
 msgstr "العاملة"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "غير قابلة للإزالة"
+msgstr "ثبتها-المستخدم"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format

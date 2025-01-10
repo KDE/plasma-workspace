@@ -2,7 +2,7 @@
 # translation of kfontinst.po to
 # Copyright (C) 2003, 2007, 2008 Free Software Foundation, Inc.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 # Görkem Çetin <gorkem@kde.org>, 2003.
 # Serdar Soytetir <tulliana@gmail.com>, 2007.
 # Serdar Soytetir <tulliana@gmail.com>, 2007, 2008, 2009, 2011, 2012.
@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2024-09-23 15:21+0300\n"
+"PO-Revision-Date: 2025-01-09 15:57+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -448,8 +448,8 @@ msgstr ""
 "yöneticisi tarafından kullanılan özel gruplardır.<ul>%1</ul></"
 "li><li><b>Özel</b> sizin tarafınızdan oluşturulmuş gruplardır. Bu gruplardan "
 "bir tanesine bir yazıtipi ailesi eklemek için yazıtipleri listesinden "
-"sürükleyin ve istenilen gruba bırakın. Gruptan çıkarmak için yazıtipini ‘Tüm "
-"Yazıtipleri’ grubuna sürükleyin.</li></ul></p>"
+"sürükleyin ve istenilen gruba bırakın. Gruptan çıkarmak için yazıtipini “Tüm "
+"Yazıtipleri” grubuna sürükleyin.</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:596
 #, kde-format
@@ -459,7 +459,7 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Tüm Yazıtipleri</i>, sisteminizde kurulu olan tüm yazıtiplerini "
-"içerir.</li><li><i>Sınıflandırılmamış</i>, henüz bir ‘Özel’ grubu içine "
+"içerir.</li><li><i>Sınıflandırılmamış</i>, henüz bir “Özel” grubu içine "
 "yerleştirilmemiş tüm yazıtiplerini içerir.</li>"
 
 #: kcmfontinst/GroupList.cpp:599
@@ -473,7 +473,7 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Tüm Yazıtipleri</i> sisteminizde kurulu olan tüm yazıtiplerini içerir "
-"— hem ‘Sistem’ hem de ‘Kişisel’ yazıtipleri.</li><li><i>Sistem</i> sistem "
+"— hem “Sistem” hem de “Kişisel” yazıtipleri.</li><li><i>Sistem</i> sistem "
 "geneli için kurulmuş yazıtiplerini içerir (tüm kullanıcılar tarafından "
 "kullanılabilirler).</li><li><i>Kişisel</i> kişisel yazıtiplerinizi içerir.</"
 "li><li><i>Sınıflandırılmamış</i> ise henüz bir “özel” gruba yerleştirilmemiş "

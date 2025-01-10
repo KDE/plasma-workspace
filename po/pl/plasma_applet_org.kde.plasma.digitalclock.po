@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-10 09:29+0000\n"
 "PO-Revision-Date: 2024-12-07 12:45+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -399,17 +399,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:215
+#: package/contents/ui/main.qml:216
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Skopiuj do schowka"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Dostosuj datę i czas..."
 
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Ustaw zapis czasu..."

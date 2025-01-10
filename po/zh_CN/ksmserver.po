@@ -127,37 +127,3 @@ msgid ""
 msgstr ""
 "无法恢复 <application>%1</application>，因为它已经损坏，而且还耗尽了系统会话"
 "恢复资源。请将此情况报告给该应用程序的开发人员。"
-
-#~ msgid "$HOME not set!"
-#~ msgstr "$HOME 未设置！"
-
-#~ msgid "$HOME directory (%1) does not exist."
-#~ msgstr "$HOME 目录 (%1) 不存在。"
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "No write access to $HOME directory (%1). If this is intentional, set "
-#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
-#~ msgstr ""
-#~ "没有 $HOME 目录的写入权限 (%1)。如果这是有意为之，\n"
-#~ "请在环境变量中设置 <envar>KDE_HOME_READONLY=1</envar>。"
-
-#~ msgid "No read access to $HOME directory (%1)."
-#~ msgstr "没有 $HOME 目录的读取权限 (%1)。"
-
-#~ msgid "$HOME directory (%1) is out of disk space."
-#~ msgstr "$HOME 目录 (%1) 没有可用空间。"
-
-#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-#~ msgstr "写入 $HOME 目录 (%2) 时失败，错误“%1”。"
-
-#~ msgid "Temp directory (%1) is out of disk space."
-#~ msgstr "临时目录 (%1) 没有可用空间。"
-
-#~ msgid ""
-#~ "Writing to the temp directory (%2) failed with\n"
-#~ "    the error '%1'"
-#~ msgstr "写入临时目录 (%2) 失败，错误“%1”。"
-
-#~ msgid "Plasma Workspace installation problem!"
-#~ msgstr "Plasma 工作空间存在安装问题！"

@@ -124,10 +124,9 @@ msgid "Install Updates and Restart"
 msgstr "Nainstalovat aktualizace a restartovat"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
-msgstr "Restartovat"
+msgstr "&Restartovat"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
 #, fuzzy, kde-format
@@ -142,10 +141,9 @@ msgid "Install Updates and Shut Down"
 msgstr "Nainstalovat aktualizace a vypnout"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
-msgstr "Vypnout"
+msgstr "Vy&pnout"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
 #, fuzzy, kde-format
@@ -166,10 +164,9 @@ msgid "&Log Out Now"
 msgstr "Odhlásit se nyní"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Zrušit"
+msgstr "Z&rušit"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format

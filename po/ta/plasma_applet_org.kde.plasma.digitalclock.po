@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-10 09:29+0000\n"
 "PO-Revision-Date: 2024-11-24 16:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -394,17 +394,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:215
+#: package/contents/ui/main.qml:216
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "பிடிப்புப்பலகைக்கு நகலெடு"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "தேதி மற்றும் நேரத்தை மாற்று..."
 
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Set Time Format…"
 msgstr "நேரத்தின் வடிவத்தை மாற்று..."

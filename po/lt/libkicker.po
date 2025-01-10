@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: KDE Frameworks 5 Applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-10-05 19:30+0300\n"
+"PO-Revision-Date: 2025-01-10 01:17+0200\n"
 "Last-Translator: Mindaugas Baranauskas <opensuse.lietuviu.kalba@gmail.com>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -140,7 +140,7 @@ msgstr "Pamiršti programą"
 #: plugin/recentusagemodel.cpp:313
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Aplankai"
 
 #: plugin/recentusagemodel.cpp:350
 #, kde-format

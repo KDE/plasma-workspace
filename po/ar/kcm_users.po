@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:43+0000\n"
-"PO-Revision-Date: 2024-11-11 16:59+0400\n"
+"PO-Revision-Date: 2025-01-09 09:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -96,18 +96,14 @@ msgid "Change Wallet Password?"
 msgstr "هل تغير كلمة سر المحفظة؟"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"الآن بعد أن قمت بتغيير كلمة مرور الولوج الخاصة بك، قد ترغب أيضًا في تغيير "
-"كلمة المرور على حافظة ك المبدئية لمطابقتها."
+"الآن بعد أن غيرت كلمة ولوجك، فكّر في تغيير كلمة السر على حافظة ك المبدئية "
+"لمطابقتها."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format

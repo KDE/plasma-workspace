@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-10 09:29+0000\n"
 "PO-Revision-Date: 2024-09-01 15:07+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -395,17 +395,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:215
+#: package/contents/ui/main.qml:216
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopier til utklippstavla"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Still inn dato og klokkeslett …"
 
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Vel klokkeslettformat …"

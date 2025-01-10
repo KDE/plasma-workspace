@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Automatically generated, 2019.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2019, 2022.
+# SPDX-FileCopyrightText: 2019, 2022, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: libnotificationmanager\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2022-12-01 16:39+0100\n"
+"PO-Revision-Date: 2025-01-09 04:28+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.11.90\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: abstractnotificationsmodel.cpp:318
 #, kde-format
@@ -108,10 +108,12 @@ msgstr "La aplicación se ha cerrado de forma no esperada."
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
-msgstr ""
+msgstr "Notificaciones sin leer"
 
 #: notifications.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."
 msgstr ""
+"Se han recibido %1 notificaciones mientra estaba activo el modo «No "
+"molestar»."

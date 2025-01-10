@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# Giovanni Sora <g.sora@tiscali.it>, 2019, 2022.
+# SPDX-FileCopyrightText: 2019, 2022, 2025 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2022-12-16 22:26+0100\n"
+"PO-Revision-Date: 2025-01-09 17:55+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: abstractnotificationsmodel.cpp:318
 #, kde-format
@@ -106,10 +106,11 @@ msgstr "Application  claudeva inopinatemente."
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
-msgstr ""
+msgstr "Notificationes non legite"
 
 #: notifications.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."
 msgstr ""
+"%1 notificationes esseva recipite durante que Non Distuirbar esseva active."

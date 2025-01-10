@@ -140,7 +140,7 @@ msgstr "Zapomenout aplikaci"
 #: plugin/recentusagemodel.cpp:313
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Složky"
 
 #: plugin/recentusagemodel.cpp:350
 #, kde-format
