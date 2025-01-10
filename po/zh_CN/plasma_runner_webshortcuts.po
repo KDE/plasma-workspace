@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2025-01-10 02:00+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -14,11 +14,11 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/"
+"X-Crowdin-File: /kf6-stable/messages/plasma-workspace/"
 "plasma_runner_webshortcuts.pot\n"
-"X-Crowdin-File-ID: 43181\n"
+"X-Crowdin-File-ID: 51186\n"
 
-#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
+#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:137 webshortcutrunner.cpp:154
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "搜索 %1 中的 %2"

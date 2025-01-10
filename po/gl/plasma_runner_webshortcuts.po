@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2025-01-10 02:00+0000\n"
 "PO-Revision-Date: 2023-06-18 17:31+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 23.04.2\n"
 
-#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
+#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:137 webshortcutrunner.cpp:154
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "Buscar %2 en %1"

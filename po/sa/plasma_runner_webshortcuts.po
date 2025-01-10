@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2025-01-10 02:00+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
 
-#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
+#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:137 webshortcutrunner.cpp:154
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "%2 इत्यस्य कृते %1 अन्वेष्टुम्"

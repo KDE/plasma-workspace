@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-01 01:39+0000\n"
+"POT-Creation-Date: 2025-01-10 02:00+0000\n"
 "PO-Revision-Date: 2008-11-17 23:57+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:138 webshortcutrunner.cpp:155
+#: webshortcutrunner.cpp:45 webshortcutrunner.cpp:137 webshortcutrunner.cpp:154
 #, kde-format
 msgid "Search %1 for %2"
 msgstr "Pytam w %1 za %2"

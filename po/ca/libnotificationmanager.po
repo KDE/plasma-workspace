@@ -1,15 +1,15 @@
 # Translation of libnotificationmanager.po to Catalan
-# Copyright (C) 2019-2022 This_file_is_part_of_KDE
+# Copyright (C) 2019-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2022.
+# Josep M. Ferrer <txemaq@gmail.com>, 2019, 2022, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2022-12-01 13:44+0100\n"
+"PO-Revision-Date: 2025-01-09 09:53+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 20.12.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: abstractnotificationsmodel.cpp:318
 #, kde-format
@@ -109,10 +109,10 @@ msgstr "L'aplicació s'ha tancat inesperadament."
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
-msgstr ""
+msgstr "Notificacions sense llegir"
 
 #: notifications.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."
-msgstr ""
+msgstr "S'han rebut %1 notificacions mentre «no destorbar» estava actiu."

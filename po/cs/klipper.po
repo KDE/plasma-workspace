@@ -351,13 +351,13 @@ msgstr "Vytvoření QR kódu selhalo"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "Svinout"
 
 #: declarative/qml/ClipboardItemDelegate.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "Rozvinout"
 
 #: declarative/qml/ClipboardMenu.qml:187
 #, kde-format

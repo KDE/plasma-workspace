@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-10 02:00+0000\n"
 "PO-Revision-Date: 2024-09-11 19:46+0900\n"
 "Last-Translator: UTUMI Hirosi <utuhiro78@yahoo.co.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -394,17 +394,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:215
+#: package/contents/ui/main.qml:216
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "クリップボードにコピー"
 
-#: package/contents/ui/main.qml:219
+#: package/contents/ui/main.qml:220
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "日付と時刻の調整…"
 
-#: package/contents/ui/main.qml:225
+#: package/contents/ui/main.qml:226
 #, kde-format
 msgid "Set Time Format…"
 msgstr "日付と時間の書式…"
