@@ -3,9 +3,27 @@
 
 [Global]
 Name=Notification Manager
+Name[ca]=Gestor de notificacions
+Name[es]=Gestor de notificaciones
+Name[eu]=Jakinarazpen kudeatzailea
+Name[he]=מנהל התראות
+Name[ka]=გაფრთხილებების მმართველი
+Name[sl]=Upravljalnik obvestil
+Name[tr]=Bildirim Yöneticisi
+Name[uk]=Керування сповіщеннями
+Name[x-test]=xxNotification Managerxx
 IconName=preferences-desktop-notification-bell
 
 [Event/inhibitionSummary]
 Name=Summary for unread inhibited notifications
+Name[ca]=Resum de les notificacions inhibides sense llegir
+Name[es]=Resumen para las notificaciones inhibidas sin leer
+Name[eu]=Irakurri gabeko galarazitako jakinarazpenen laburpena
+Name[he]=תקציר להתראות שעוכבו ולא נקראו
+Name[ka]=შეჯამება წაუკითხავი დადუმებული გაფრთხილებებისთვის
+Name[sl]=Povzetek neprebranih preprečenih obvestil
+Name[tr]=Sessizdeyken okunmamış bildirimler için özet
+Name[uk]=Резюме щодо непрочитаних заборонених сповіщень
+Name[x-test]=xxSummary for unread inhibited notificationsxx
 Action=Popup
 Urgency=Low
