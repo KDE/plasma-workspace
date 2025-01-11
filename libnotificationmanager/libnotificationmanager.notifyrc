@@ -15,6 +15,7 @@ Name[sl]=Upravljalnik obvestil
 Name[tr]=Bildirim Yöneticisi
 Name[uk]=Керування сповіщеннями
 Name[x-test]=xxNotification Managerxx
+Name[zh_CN]=通知管理器
 IconName=preferences-desktop-notification-bell
 
 [Event/inhibitionSummary]
@@ -31,5 +32,6 @@ Name[sl]=Povzetek neprebranih preprečenih obvestil
 Name[tr]=Sessizdeyken okunmamış bildirimler için özet
 Name[uk]=Резюме щодо непрочитаних заборонених сповіщень
 Name[x-test]=xxSummary for unread inhibited notificationsxx
+Name[zh_CN]=未读已抑制通知摘要
 Action=Popup
 Urgency=Low
