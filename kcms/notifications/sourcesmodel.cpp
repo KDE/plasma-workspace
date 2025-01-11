@@ -11,6 +11,8 @@
 #include "sourcesmodel.h"
 
 #include <QCollator>
+#include <QDBusConnection>
+#include <QDBusMessage>
 #include <QDir>
 #include <QRegularExpression>
 #include <QStandardPaths>
@@ -443,6 +445,13 @@ void SourcesModel::saveEvents()
     for (const SourceData &source : std::as_const(m_data)) {
         for (auto &event : source.events) {
             event->save();
+        }
+
+        if (!source.notifyRcName.isEmpty()) {
+            QDBusMessage message =
+                QDBusMessage::createSignal(QStringLiteral("/Config"), QStringLiteral("org.kde.knotification"), QStringLiteral("reparseConfiguration"));
+            message.setArguments({source.notifyRcName});
+            QDBusConnection::sessionBus().send(message);
         }
     }
 }
