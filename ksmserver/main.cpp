@@ -60,7 +60,7 @@ bool writeTest(QByteArray path)
 void sanity_check(int argc, char *argv[])
 {
     QString msg;
-    QByteArray path = qgetenv("HOME");
+    QByteArray path;
     if (msg.isEmpty()) {
         path = getenv("ICEAUTHORITY");
         if (path.isEmpty()) {
@@ -75,7 +75,7 @@ void sanity_check(int argc, char *argv[])
         }
     }
     if (msg.isEmpty()) {
-        path += "/.ICE-unix";
+        path = "/tmp/.ICE-unix";
         if (access(path.data(), W_OK) && (errno != ENOENT)) {
             msg = i18n("No write access to '%1'.", QFile::decodeName(path));
         } else if (access(path.data(), R_OK) && (errno != ENOENT)) {
