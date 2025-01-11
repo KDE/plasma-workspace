@@ -9,9 +9,11 @@ Name[eu]=Jakinarazpen kudeatzailea
 Name[he]=מנהל התראות
 Name[ka]=გაფრთხილებების მმართველი
 Name[sl]=Upravljalnik obvestil
+Name[sv]=Underrättelsehanterare
 Name[tr]=Bildirim Yöneticisi
 Name[uk]=Керування сповіщеннями
 Name[x-test]=xxNotification Managerxx
+Name[zh_CN]=通知管理器
 IconName=preferences-desktop-notification-bell
 
 [Event/inhibitionSummary]
@@ -22,8 +24,10 @@ Name[eu]=Irakurri gabeko galarazitako jakinarazpenen laburpena
 Name[he]=תקציר להתראות שעוכבו ולא נקראו
 Name[ka]=შეჯამება წაუკითხავი დადუმებული გაფრთხილებებისთვის
 Name[sl]=Povzetek neprebranih preprečenih obvestil
+Name[sv]=Sammanfattning av olästa inaktiverade underrättelser
 Name[tr]=Sessizdeyken okunmamış bildirimler için özet
 Name[uk]=Резюме щодо непрочитаних заборонених сповіщень
 Name[x-test]=xxSummary for unread inhibited notificationsxx
+Name[zh_CN]=未读已抑制通知摘要
 Action=Popup
 Urgency=Low
