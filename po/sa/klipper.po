@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-11 00:42+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,12 +29,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "skkalwar999@gmail.com"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:83
 #, kde-format
 msgid "Clipboard history:"
 msgstr "क्लिपबोर्ड इतिहासः :"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:89
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -42,12 +42,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v प्रविष्टिः"
 msgstr[1] "%v प्रविष्टयः"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:98
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "चयनं तथा क्लिप्बोर्डः :"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -72,49 +72,49 @@ msgstr ""
 "इतिहासस्य मध्ये रक्षितं भवितुम् अर्हति (अधः विकल्पानाम् अधीनम्), परन्तु केवलं मध्यमूषकस्य "
 "बटनस्य उपयोगेन एव चिनोतुं शक्यते ।"
 
-#: configdialog.cpp:133 configdialog.cpp:171
+#: configdialog.cpp:134 configdialog.cpp:172
 #, kde-format
 msgid "Always save in history"
 msgstr "इतिहासे सर्वदा रक्षन्तु"
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, kde-format
 msgid "Text selection:"
 msgstr "पाठचयनम् :"
 
-#: configdialog.cpp:139 configdialog.cpp:177
+#: configdialog.cpp:140 configdialog.cpp:178
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "केवलं यदा स्पष्टतया प्रतिलिपितः भवति"
 
-#: configdialog.cpp:144
+#: configdialog.cpp:145
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "पाठचयनं क्लिप्बोर्ड-इतिहासस्य मध्ये रक्षितम् अस्ति वा ।"
 
-#: configdialog.cpp:175
+#: configdialog.cpp:176
 #, kde-format
 msgid "Non-text selection:"
 msgstr "अपाठचयनम् :"
 
-#: configdialog.cpp:182
+#: configdialog.cpp:183
 #, kde-format
 msgid "Never save in history"
 msgstr "इतिहासे कदापि न रक्षन्तु"
 
-#: configdialog.cpp:187
+#: configdialog.cpp:188
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr "अपाठचयनं (चित्रम् इत्यादयः) क्लिप्बोर्ड-इतिहासस्य मध्ये रक्षिताः सन्ति वा ।"
 
-#: configdialog.cpp:261
+#: configdialog.cpp:262
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "क्रिया-पॉपअप-मेनू दर्शयतु:"
 
-#: configdialog.cpp:271
+#: configdialog.cpp:272
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -129,12 +129,12 @@ msgstr ""
 "भवति, अथवा बहिष्कृतविण्डो कृते न दर्शितं, तर्हि <shortcut>%1</shortcut> कीलशॉर्टकट् "
 "इत्यस्य उपयोगेन दर्शयितुं शक्यते ।"
 
-#: configdialog.cpp:280
+#: configdialog.cpp:281
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "विण्डोज इत्येतत् बहिष्कृत्य..."
 
-#: configdialog.cpp:294
+#: configdialog.cpp:295
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -142,23 +142,23 @@ msgid_plural "%v seconds"
 msgstr[0] "%v द्वितीयः"
 msgstr[1] "%v सेकण्ड्"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:296
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "न कश्चित्"
 
-#: configdialog.cpp:304
+#: configdialog.cpp:305
 #, kde-format
 msgid "Options:"
 msgstr "विकल्पाः :"
 
-#: configdialog.cpp:331
+#: configdialog.cpp:332
 #, kde-format
 msgid "Exclude Windows"
 msgstr "विण्डोजं बहिष्कृत्य"
 
-#: configdialog.cpp:361
+#: configdialog.cpp:362
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -170,34 +170,34 @@ msgstr ""
 "तस्य <interface>आदेशाः</interface> Klipper popup मेन्यू मध्ये दृश्यन्ते, तेषां कार्यान्वयनं "
 "कर्तुं शक्यते ।"
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "प्रतिमानं आदेशानां च मेलनं कुर्वन्तु"
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "वर्णनम्‌"
 
-#: configdialog.cpp:376
+#: configdialog.cpp:377
 #, kde-format
 msgid "Add Action..."
 msgstr "Add Action..."
 
-#: configdialog.cpp:380
+#: configdialog.cpp:381
 #, kde-format
 msgid "Edit Action..."
 msgstr "सम्पादयतु क्रिया..."
 
-#: configdialog.cpp:385
+#: configdialog.cpp:386
 #, kde-format
 msgid "Delete Action"
 msgstr "Delete Action इति"
 
-#: configdialog.cpp:392
+#: configdialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -207,7 +207,7 @@ msgstr ""
 "एतानि क्रियाणि पॉपअप मेन्यू मध्ये दृश्यन्ते ये <interface>Action Menu</interface> पृष्ठे "
 "विन्यस्तुं शक्यन्ते ।"
 
-#: configdialog.cpp:576
+#: configdialog.cpp:577
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -215,56 +215,56 @@ msgid ""
 "commands?"
 msgstr "चयनितं कार्यं <resource>%1</resource><nl/>तस्य सर्वाणि आदेशानि च विलोपयन्तु?"
 
-#: configdialog.cpp:577
+#: configdialog.cpp:578
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "विलोपनक्रियायाः पुष्टिं कुर्वन्तु"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "सामान्य"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgid "General Configuration"
 msgstr "सामान्यविन्यासः"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "क्रिया मेनू"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, kde-format
 msgid "Action Menu"
 msgstr "क्रिया मेनू"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "क्रियाः विन्यासः"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, kde-format
 msgid "Actions Configuration"
 msgstr "क्रियाः विन्यासः"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "शॉर्टकट"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "शॉर्टकट् विन्यासः"
 
-#: configdialog.cpp:692
+#: configdialog.cpp:693
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -281,7 +281,7 @@ msgstr ""
 "अप्रत्याशितरूपेण दृश्यते तर्हि अस्मिन् सूचौ योजयन्तु ।<link> प्रविष्टुं नाम कथं अन्वेष्टव्यम्</"
 "link> ."
 
-#: configdialog.cpp:705
+#: configdialog.cpp:706
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

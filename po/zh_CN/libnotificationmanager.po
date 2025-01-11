@@ -100,10 +100,10 @@ msgstr "应用程序意外关闭。"
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
-msgstr ""
+msgstr "未读通知"
 
 #: notifications.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."
-msgstr ""
+msgstr "勿扰模式开启期间收到了 %1 条通知。"
