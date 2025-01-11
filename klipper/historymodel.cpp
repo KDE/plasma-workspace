@@ -178,7 +178,7 @@ void HistoryModel::clear()
         return;
     }
     for (const auto &item : m_items) {
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'));
+        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'), KIO::HideProgressInfo);
     }
     QSqlQuery(u"VACUUM"_s, m_db).exec();
     beginResetModel();
