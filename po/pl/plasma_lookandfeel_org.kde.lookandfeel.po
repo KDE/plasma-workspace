@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-31 00:42+0000\n"
-"PO-Revision-Date: 2024-12-07 12:46+0100\n"
+"PO-Revision-Date: 2025-01-11 11:28+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -94,32 +94,26 @@ msgstr ""
 "rozruchowego."
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "Uśpij"
+msgstr "Uś&pij"
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Uśpij teraz"
+msgstr "Uś&pij teraz"
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Zahibernuj"
+msgstr "Za&hibernuj"
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "Zahibernuj teraz"
+msgstr "Za&hibernuj teraz"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -128,16 +122,14 @@ msgid "Install Updates and Restart"
 msgstr "Wgraj uaktualnienia i uruchom ponownie"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
-msgstr "Uruchom ponownie"
+msgstr "U&ruchom ponownie"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
-msgstr "Uruchom ponownie"
+msgstr "U&ruchom ponownie"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -146,34 +138,29 @@ msgid "Install Updates and Shut Down"
 msgstr "Wgraj uaktualnienia i wyłącz"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
-msgstr "Wyłącz"
+msgstr "&Wyłącz"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "Wyłącz teraz"
+msgstr "&Wyłącz teraz"
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
-msgstr "Wyloguj"
+msgstr "Wy&loguj"
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
-msgstr "Wyloguj teraz"
+msgstr "Wy&loguj teraz"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Anuluj"
+msgstr "&Anuluj"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format

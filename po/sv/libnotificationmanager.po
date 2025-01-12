@@ -112,4 +112,4 @@ msgstr "Olästa underrättelser"
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."
-msgstr "%1 underrättelser togs emot med Stör ej var aktivt."
+msgstr "%1 underrättelser togs emot medan Stör ej var aktivt."
