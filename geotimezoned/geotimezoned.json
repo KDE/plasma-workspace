@@ -3,10 +3,18 @@
         "Description": "Automatically change the system time zone based on the current location",
         "Description[ca]": "Canvia automàticament la zona horària del sistema en funció de la ubicació actual",
         "Description[es]": "Cambiar automáticamente la zona horaria del sistema según la ubicación actual",
+        "Description[eu]": "Sistemaren ordu-eremua automatikoki aldatu uneko kokapenean oinarrituta",
+        "Description[he]": "להחליף את אזור הזמן של המערכת לפי המקום הנוכחי",
         "Description[sl]": "Samodejno spremeni časovni pas sistema na osnovi trenutne lokacije",
+        "Description[sv]": "Ändra automatiskt systemets tidszon baserat på nuvarande plats",
+        "Description[tr]": "Geçerli konuma bağlı olarak sistem zamanını kendiliğinden değiştirin",
         "Name": "Location-based System Time Zone",
         "Name[ca]": "Zona horària del sistema basada en la ubicació",
         "Name[es]": "Zona horaria del sistema basada en la ubicación",
-        "Name[sl]": "Časovni pas, ki temelji na lokaciji sistema"
+        "Name[eu]": "Kokapenean oinarritutako sistemaren ordu-eremua",
+        "Name[he]": "אזור זמן המערכת מבוסס מקום",
+        "Name[sl]": "Časovni pas, ki temelji na lokaciji sistema",
+        "Name[sv]": "Platsbaserad systemtidszon",
+        "Name[tr]": "Konum Tabanlı Sistem Zaman Dilimi"
     }
 }
