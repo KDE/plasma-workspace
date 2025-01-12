@@ -5,14 +5,26 @@
         "Description[es]": "Cambiar automáticamente la zona horaria del sistema según la ubicación actual",
         "Description[eu]": "Sistemaren ordu-eremua automatikoki aldatu uneko kokapenean oinarrituta",
         "Description[he]": "להחליף את אזור הזמן של המערכת לפי המקום הנוכחי",
+        "Description[ka]": "ავტომატურად ცვლის სისტემურ დროის სარტყელს თქვენი მდებარეობის მიხედვით",
+        "Description[nl]": "Automatisch de systeemtijdzone wijzigen gebaseerd op de huidige locatie",
+        "Description[pl]": "Samozmieniająca się strefa czasowa na podstawie obecnego przebywania",
+        "Description[sv]": "Ändra automatiskt systemets tidszon baserat på nuvarande plats",
         "Description[tr]": "Geçerli konuma bağlı olarak sistem zamanını kendiliğinden değiştirin",
+        "Description[uk]": "Автоматично змінювати часовий пояс на основі поточного місця перебування",
         "Description[x-test]": "xxAutomatically change the system time zone based on the current locationxx",
+        "Description[zh_CN]": "基于当前位置自动更改系统时区",
         "Name": "Location-based System Time Zone",
         "Name[ca]": "Zona horària del sistema basada en la ubicació",
         "Name[es]": "Zona horaria del sistema basada en la ubicación",
         "Name[eu]": "Kokapenean oinarritutako sistemaren ordu-eremua",
         "Name[he]": "אזור זמן המערכת מבוסס מקום",
+        "Name[ka]": "მდებარეობაზე დამოკიდებული სისტემური დროის სარტყელი",
+        "Name[nl]": "Op locatie gebaseerde systeemtijdzone",
+        "Name[pl]": "Systemowa strefa czasowa oparta na obecnym przebywaniu",
+        "Name[sv]": "Platsbaserad systemtidszon",
         "Name[tr]": "Konum Tabanlı Sistem Zaman Dilimi",
-        "Name[x-test]": "xxLocation-based System Time Zonexx"
+        "Name[uk]": "Часовий пояс системи на основі місця перебування",
+        "Name[x-test]": "xxLocation-based System Time Zonexx",
+        "Name[zh_CN]": "基于位置的系统时区"
     }
 }
