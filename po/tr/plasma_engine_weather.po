@@ -5,13 +5,13 @@
 # H. İbrahim Güngör <ibrahim@pardus.org.tr>, 2010.
 # Ozan Çağlayan <ozan@pardus.org.tr>, 2010.
 # Volkan Gezer <volkangezer@gmail.com>, 2017, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-20 00:41+0000\n"
-"PO-Revision-Date: 2024-06-12 00:45+0300\n"
+"PO-Revision-Date: 2025-01-11 17:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: bbcukmet_i18n.dat:1
 #, kde-format
@@ -2992,7 +2992,7 @@ msgstr "Birkaç Bulut ve Esinti"
 #, kde-format
 msgctxt "weather condition"
 msgid "A Few Clouds and Windy"
-msgstr "Birkaç Bulut ve Rüzgar"
+msgstr "Birkaç Bulut ve Rüzgâr"
 
 #: noaa_i18n.dat:4
 #, kde-format
@@ -4534,7 +4534,7 @@ msgstr "Yağmur/Donmuş Yağmur"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix Likely"
-msgstr "Olası Rüzgarlı Karla Karışık Yağmur"
+msgstr "Olası Rüzgârlı Karla Karışık Yağmur"
 
 #: noaa_i18n.dat:289
 #, kde-format
@@ -4798,7 +4798,7 @@ msgstr "Yoğun Sis"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blustery"
-msgstr "Rüzgarlı"
+msgstr "Rüzgârlı"
 
 #: noaa_i18n.dat:340
 #, kde-format

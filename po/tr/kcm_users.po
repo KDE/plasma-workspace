@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-03 00:43+0000\n"
-"PO-Revision-Date: 2025-01-03 20:32+0300\n"
+"PO-Revision-Date: 2025-01-11 17:15+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -478,7 +478,7 @@ msgstr "Yanmış Kömür"
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
-msgstr "Kağıt Mükemmelliği"
+msgstr "Kâğıt Mükemmelliği"
 
 #: src/ui/PicturesSheet.qml:37
 #, kde-format

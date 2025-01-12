@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-12-28 17:41+0100\n"
+"PO-Revision-Date: 2025-01-11 22:49+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -403,7 +403,7 @@ msgstr "Aktivigi Task-Administran Eniron %1"
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr ""
+msgstr "Administri Labortablojn kaj Panelojn…"
 
 #: shellcorona.cpp:334
 #, kde-format
@@ -452,6 +452,3 @@ msgstr "Panelo-kalkulo"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Nombras la panelojn"
-
-#~ msgid "Panel and Desktop Management"
-#~ msgstr "Panela kaj Labortabla Administrado"

@@ -1,27 +1,22 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: kdeorg\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-10 09:29+0000\n"
-"PO-Revision-Date: 2025-01-10 19:20\n"
-"Last-Translator: \n"
-"Language-Team: Chinese Simplified\n"
-"Language: zh_CN\n"
+"PO-Revision-Date: 2025-01-11 05:33+0100\n"
+"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
+"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Crowdin-Project: kdeorg\n"
-"X-Crowdin-Project-ID: 269464\n"
-"X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf6-trunk/messages/plasma-workspace/kded_geotimezoned.pot\n"
-"X-Crowdin-File-ID: 57092\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: geotimezonemodule.cpp:187
 #, kde-format
 msgctxt "OSD, keep short"
 msgid "Time zone changed to %1"
-msgstr "时区已更改为 %1"
+msgstr ""
 
 #: geotimezonemodule.cpp:190
 #, kde-format
@@ -29,14 +24,14 @@ msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
 "(time zone)"
 msgid "Clock changed to %1 (%2)"
-msgstr "时钟已更改为 %1 (%2)"
+msgstr ""
 
 #: geotimezonemodule.cpp:206
 #, kde-format
 msgid "Refresh is already in progress."
-msgstr "刷新已在进行中。"
+msgstr ""
 
 #: geotimezonemodule.cpp:269
 #, kde-format
 msgid "Received no or an invalid time zone."
-msgstr "没有收到时区或收到了无效时区。"
+msgstr ""
