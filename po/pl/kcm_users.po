@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-08 02:42+0000\n"
-"PO-Revision-Date: 2023-01-21 10:25+0100\n"
+"PO-Revision-Date: 2025-01-11 11:26+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:156
@@ -57,8 +57,8 @@ msgid ""
 "Now that you have changed your login password, you may also want to change "
 "the password on your default KWallet to match it."
 msgstr ""
-"Teraz gdy zmieniłeś hasło swoje logowania, możesz chcieć zmienić hasło do "
-"domyślnego Portfela na takie samo."
+"Po zmianie swojego hasła do logowania, rozważ także zmianę hasła do swojego "
+"domyślnego portfela na to samo."
 
 #: package/contents/ui/ChangeWalletPassword.qml:31
 #, kde-format
