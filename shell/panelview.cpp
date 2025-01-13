@@ -78,6 +78,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
         setScreen(targetScreen);
     }
 
+    // TODO: when we depend from Qt 6.9 retest if this is still necessary
     connect(this, &QQuickWindow::afterFrameEnd, this, &PanelView::onFrameEnd);
 
     setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
