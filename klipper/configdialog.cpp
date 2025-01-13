@@ -20,6 +20,7 @@
 #include <qtooltip.h>
 #include <qwindow.h>
 
+#include <KActionCollection>
 #include <KConfigSkeleton>
 #include <KEditListWidget>
 #include <KLocalization>
@@ -620,7 +621,7 @@ ConfigDialog::ConfigDialog(QWidget *parent, KConfigSkeleton *skeleton, Klipper *
     const KConfigGroup grp = KSharedConfig::openConfig()->group(QLatin1String(metaObject()->className()));
     KWindowConfig::restoreWindowSize(windowHandle(), grp);
     resize(windowHandle()->size());
-
+    connect(collection, &QObject::destroyed, this, &ConfigDialog::close);
     setMinimumHeight(550);
 }
 
