@@ -82,6 +82,9 @@ WallpaperModule::WallpaperModule(QObject *parent, const KPluginMetaData &data)
 
     m_outputOrderWatcher = OutputOrderWatcher::instance(this);
     connect(m_outputOrderWatcher, &OutputOrderWatcher::outputOrderChanged, this, [this](const QStringList &outputOrder) {
+        if (!m_selectedScreen) {
+            return;
+        }
         if (!outputOrder.contains(m_selectedScreen->name())) {
             // current screen was removed
             m_selectedScreen = mainUi()->window()->screen();
@@ -261,6 +264,7 @@ void WallpaperModule::onWallpaperChanged(uint screenIdx)
     m_config->markAsClean();
     m_config->reparseConfiguration();
 
+    Q_ASSERT(m_selectedScreen);
     int screen = screenIdFromName(m_selectedScreen->name());
     if (screen >= 0 && screenIdx == uint(screen)) {
         onScreenChanged();
