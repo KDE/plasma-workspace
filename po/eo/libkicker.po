@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 19:03+0200\n"
+"PO-Revision-Date: 2025-01-12 08:09+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -140,7 +140,7 @@ msgstr "Forgesi Aplikaĵon"
 #: plugin/recentusagemodel.cpp:313
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Dosierujoj"
 
 #: plugin/recentusagemodel.cpp:350
 #, kde-format
@@ -297,18 +297,3 @@ msgstr "Malŝalti komputilon"
 #, kde-format
 msgid "System actions"
 msgstr "Sistemaj agoj"
-
-#~ msgid "Show Contact Information…"
-#~ msgstr "Montri kontaktinformojn…"
-
-#~ msgid "Contacts"
-#~ msgstr "Kontaktoj"
-
-#~ msgid "Forget Contact"
-#~ msgstr "Forgesi Kontakton"
-
-#~ msgid "Forget All Contacts"
-#~ msgstr "Forgesi Ĉiujn Kontaktojn"
-
-#~ msgid "Recent Contacts"
-#~ msgstr "Lastatempaj Kontaktoj"
