@@ -79,7 +79,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
     }
 
     // TODO: when we depend from Qt 6.9 retest if this is still necessary
-    connect(this, &QQuickWindow::afterFrameEnd, this, &PanelView::onFrameEnd);
+    connect(this, &QQuickWindow::afterAnimating, this, &PanelView::onFrameEnd);
 
     setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
     setColor(QColor(Qt::transparent));
