@@ -455,6 +455,20 @@ class SystemTrayTests(unittest.TestCase):
         for l in range(0, len(expected_result)):
             self.assertEqual(output[l].decode().strip(), expected_result[l])
 
+    @unittest.skipIf(os.getenv("TEST_WITH_KWIN_WAYLAND", "1") == "0", "Screenshot")
+    def test_2_1_sni_svg_icon(self) -> None:
+        """
+        Shows the tray icon if the source is an svg file
+        """
+        with subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "svgtrayicon.py")], stdout=sys.stderr, stderr=sys.stderr) as process:
+            sni_title = "SvgTrayIconTest"
+            logging.info(self.driver.page_source)
+            element = self.driver.find_element(AppiumBy.NAME, sni_title)
+            # The tray icon is a red square
+            self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))
+            process.kill()
+        WebDriverWait(self.driver, 10).until_not(lambda _: element.is_displayed())
+
     @unittest.skipIf(os.environ.get("TEST_WITH_KWIN_WAYLAND", "1") == "0", "In openbox, the popup is not focused by default, so sending keys will not work.")
     def test_3_bug479466_keyboard_navigation_in_HiddenItemsView(self) -> None:
         """
