@@ -78,11 +78,7 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
         setScreen(targetScreen);
     }
 
-    m_repositionLimitTimer = std::make_unique<QTimer>(this);
-    m_repositionLimitTimer->setSingleShot(true);
-    // 16 is ~60 fps
-    m_repositionLimitTimer->setInterval(16);
-    connect(m_repositionLimitTimer.get(), &QTimer::timeout, this, &PanelView::positionAndResizePanel2);
+    connect(this, &QQuickWindow::afterFrameEnd, this, &PanelView::onFrameEnd);
 
     setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
     setColor(QColor(Qt::transparent));
@@ -332,7 +328,7 @@ void PanelView::setThickness(int value)
     // For thickness, always use the default thickness value for horizontal/vertical panel
     configDefaults().writeEntry("thickness", value);
     m_corona->requestApplicationConfigSync();
-    positionAndResizePanel();
+    queuePositionAndResizePanel();
 }
 
 int PanelView::length() const
@@ -348,7 +344,7 @@ void PanelView::setLength(int value)
 
     m_contentLength = value;
 
-    positionAndResizePanel();
+    queuePositionAndResizePanel();
 }
 
 int PanelView::maximumLength() const
@@ -372,7 +368,7 @@ void PanelView::setMaximumLength(int length)
     Q_EMIT maximumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
-    positionAndResizePanel();
+    queuePositionAndResizePanel();
 }
 
 int PanelView::minimumLength() const
@@ -396,7 +392,7 @@ void PanelView::setMinimumLength(int length)
     Q_EMIT minimumLengthChanged();
     m_corona->requestApplicationConfigSync();
 
-    positionAndResizePanel();
+    queuePositionAndResizePanel();
 }
 
 bool PanelView::floating() const
@@ -565,7 +561,7 @@ void PanelView::setLengthMode(PanelView::LengthMode mode)
             m_corona->requestApplicationConfigSync();
         }
         Q_EMIT lengthModeChanged();
-        positionAndResizePanel();
+        queuePositionAndResizePanel();
         Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
     }
 }
@@ -701,14 +697,20 @@ void PanelView::positionPanel()
     KWindowEffects::slideWindow(this, slideLocation(), -1);
 }
 
-void PanelView::positionAndResizePanel()
+void PanelView::queuePositionAndResizePanel()
 {
-    if (!m_repositionLimitTimer->isActive()) {
-        m_repositionLimitTimer->start();
+    m_geometryDirty = true;
+    update();
+}
+
+void PanelView::onFrameEnd()
+{
+    if (m_geometryDirty) {
+        positionAndResizePanel();
     }
 }
 
-void PanelView::positionAndResizePanel2()
+void PanelView::positionAndResizePanel()
 {
     if (!containment()) {
         return;
@@ -741,6 +743,7 @@ void PanelView::positionAndResizePanel2()
     Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
 
     KWindowEffects::slideWindow(this, slideLocation(), -1);
+    m_geometryDirty = false;
 }
 
 QRect PanelView::dogdeGeometryByDistance(int distance) const
@@ -907,6 +910,7 @@ void PanelView::restore()
     setVisibilityMode((VisibilityMode)panelConfig.parent().readEntry<int>("panelVisibility", panelConfig.readEntry<int>("panelVisibility", (int)NormalPanel)));
     setOpacityMode((OpacityMode)config().parent().readEntry<int>("panelOpacity", defaultOpacityMode()));
     setLengthMode((LengthMode)config().parent().readEntry<int>("panelLengthMode", PanelView::LengthMode::FillAvailable));
+    // here is necessary to call this immediately or the panel will be show the first frame with wrong geometry
     positionAndResizePanel();
 
     Q_EMIT maximumLengthChanged();

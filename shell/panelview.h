@@ -317,8 +317,9 @@ private:
     KWindowEffects::SlideFromLocation slideLocation() const;
     void updateLayerWindow();
     void positionPanel();
+    void queuePositionAndResizePanel();
     void positionAndResizePanel();
-    void positionAndResizePanel2();
+    void onFrameEnd();
     void integrateScreen();
     void updateEditModeLabel();
     bool containmentContainsPosition(const QPointF &point) const;
@@ -349,12 +350,12 @@ private:
     bool m_fakeEventPending = false;
     bool m_touchingWindow = false;
     bool m_internalResize = false;
+    bool m_geometryDirty = true;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
     QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView;
     ShellCorona *m_corona;
     QTimer m_strutsTimer;
-    std::unique_ptr<QTimer> m_repositionLimitTimer;
     VisibilityMode m_visibilityMode;
     OpacityMode m_opacityMode;
     LengthMode m_lengthMode;
