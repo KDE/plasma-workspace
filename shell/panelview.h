@@ -318,6 +318,7 @@ private:
     void updateLayerWindow();
     void positionPanel();
     void positionAndResizePanel();
+    void positionAndResizePanel2();
     void integrateScreen();
     void updateEditModeLabel();
     bool containmentContainsPosition(const QPointF &point) const;
@@ -353,6 +354,7 @@ private:
     QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView;
     ShellCorona *m_corona;
     QTimer m_strutsTimer;
+    std::unique_ptr<QTimer> m_repositionLimitTimer;
     VisibilityMode m_visibilityMode;
     OpacityMode m_opacityMode;
     LengthMode m_lengthMode;

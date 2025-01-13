@@ -77,6 +77,13 @@ PanelView::PanelView(ShellCorona *corona, QScreen *targetScreen, QWindow *parent
         setScreenToFollow(targetScreen);
         setScreen(targetScreen);
     }
+
+    m_repositionLimitTimer = std::make_unique<QTimer>(this);
+    m_repositionLimitTimer->setSingleShot(true);
+    // 16 is ~60 fps
+    m_repositionLimitTimer->setInterval(16);
+    connect(m_repositionLimitTimer.get(), &QTimer::timeout, this, &PanelView::positionAndResizePanel2);
+
     setResizeMode(QuickViewSharedEngine::SizeRootObjectToView);
     setColor(QColor(Qt::transparent));
     setFlags(Qt::FramelessWindowHint | Qt::WindowDoesNotAcceptFocus);
@@ -695,6 +702,13 @@ void PanelView::positionPanel()
 }
 
 void PanelView::positionAndResizePanel()
+{
+    if (!m_repositionLimitTimer->isActive()) {
+        m_repositionLimitTimer->start();
+    }
+}
+
+void PanelView::positionAndResizePanel2()
 {
     if (!containment()) {
         return;
