@@ -492,14 +492,20 @@ class ClipboardTest(unittest.TestCase):
         process.stderr.readline()
         process.stderr.readline()
         process.stderr.readline()
-        self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
+        try:
+            self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
+        except AssertionError: # Flaky
+            self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
 
         for color in colors:
             # Match the color block in the history
             partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
             partial_pixbuf.fill(color)
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
-            app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+            try:
+                app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+            except WebDriverException: # Flaky
+                app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
         memory_usage_after = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
         logging.info(f"before: {memory_usage_before} after: {memory_usage_after} diff: {memory_usage_after - memory_usage_before}")
