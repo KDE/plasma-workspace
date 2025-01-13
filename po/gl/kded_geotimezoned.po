@@ -1,40 +1,43 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2025 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2025 Adrián Chaves (Gallaecio)
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-10 02:00+0000\n"
-"PO-Revision-Date: 2025-01-11 10:23+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <French <kde-francophone@kde.org>>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2025-01-12 15:14+0100\n"
+"Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
+"Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
+"Language: gl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.12.0\n"
 
 #: geotimezonemodule.cpp:187
 #, kde-format
 msgctxt "OSD, keep short"
 msgid "Time zone changed to %1"
-msgstr "Le fuseau horaire a été modifié à %1."
+msgstr "O fuso horario cambiou a «%1»."
 
+# skip-rule: trasno-change, trasno-check3_reverse
 #: geotimezonemodule.cpp:190
 #, kde-format
 msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
 "(time zone)"
 msgid "Clock changed to %1 (%2)"
-msgstr "L'horloge a été modifiée à %1 (%2)."
+msgstr "O reloxo pasou a marcar as %1 (%2)."
 
 #: geotimezonemodule.cpp:206
 #, kde-format
 msgid "Refresh is already in progress."
-msgstr "L'actualisation est déjà en cours."
+msgstr "A actualización xa está en marcha."
 
 #: geotimezonemodule.cpp:269
 #, kde-format
 msgid "Received no or an invalid time zone."
-msgstr "N'a reçu aucun fuseau horaire ou un fuseau horaire non valable."
+msgstr "Ou non se recibiu un fuso horario ou o recibido non é válido."
