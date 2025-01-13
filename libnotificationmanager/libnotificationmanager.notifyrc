@@ -3,10 +3,12 @@
 
 [Global]
 Name=Notification Manager
+Name[ar]=مدير الإخطارات
 Name[ca]=Gestor de notificacions
 Name[es]=Gestor de notificaciones
 Name[eu]=Jakinarazpen kudeatzailea
 Name[fr]=Gestionnaire de notifications
+Name[gl]=Xestor de notificacións
 Name[he]=מנהל התראות
 Name[ka]=გაფრთხილებების მმართველი
 Name[pl]=Zarządzanie powiadomieniami
@@ -20,10 +22,12 @@ IconName=preferences-desktop-notification-bell
 
 [Event/inhibitionSummary]
 Name=Summary for unread inhibited notifications
+Name[ar]=ملخص للإخطارات المحظورة غير المقروءة
 Name[ca]=Resum de les notificacions inhibides sense llegir
 Name[es]=Resumen para las notificaciones inhibidas sin leer
 Name[eu]=Irakurri gabeko galarazitako jakinarazpenen laburpena
 Name[fr]=Résumé des notifications bloquées et non lues
+Name[gl]=Resumo das notificacións inhibidas sen ler
 Name[he]=תקציר להתראות שעוכבו ולא נקראו
 Name[ka]=შეჯამება წაუკითხავი დადუმებული გაფრთხილებებისთვის
 Name[pl]=Podsumowanie nieprzeczytanych i wyciszonych powiadomień
