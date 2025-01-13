@@ -45,7 +45,7 @@ private Q_SLOTS:
     void initTestCase()
     {
         // make KIOs use test mode too
-        setenv("KIOWORKER_ENABLE_TESTMODE", "1", 1);
+        qputenv("KIOWORKER_ENABLE_TESTMODE", "1");
         QStandardPaths::setTestModeEnabled(true);
 
         // Warning: even with test mode enabled, this is the real user's Desktop directory
