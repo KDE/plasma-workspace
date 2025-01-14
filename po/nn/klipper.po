@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-14 02:36+0000\n"
 "PO-Revision-Date: 2024-10-27 14:40+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -31,12 +31,12 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "gaute@verdsveven.com,eirbir@gmail.com,karl@huftis.org"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:83
 #, kde-format
 msgid "Clipboard history:"
 msgstr "Utklippshistorikk:"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:89
 #, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
@@ -44,12 +44,12 @@ msgid_plural "%v entries"
 msgstr[0] "%v oppføring"
 msgstr[1] "%v oppføringar"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:98
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr "Utval og utklippstavle:"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -75,37 +75,37 @@ msgstr ""
 "det ikkje er kryssa av her, kan likevel utvalet lagrast i utklippstavla "
 "(avhengig av vala nedanfor), men det kan berre limast inn med midtknappen."
 
-#: configdialog.cpp:133 configdialog.cpp:171
+#: configdialog.cpp:134 configdialog.cpp:172
 #, kde-format
 msgid "Always save in history"
 msgstr "Lagra alltid i historikken"
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, kde-format
 msgid "Text selection:"
 msgstr "Merkt tekst:"
 
-#: configdialog.cpp:139 configdialog.cpp:177
+#: configdialog.cpp:140 configdialog.cpp:178
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr "Berre ved direkte kopiering"
 
-#: configdialog.cpp:144
+#: configdialog.cpp:145
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Om merkt tekst skal lagrast på utklippstavla."
 
-#: configdialog.cpp:175
+#: configdialog.cpp:176
 #, kde-format
 msgid "Non-text selection:"
 msgstr "Merkt ikkje-tekst:"
 
-#: configdialog.cpp:182
+#: configdialog.cpp:183
 #, kde-format
 msgid "Never save in history"
 msgstr "Lagra aldri i historikken"
 
-#: configdialog.cpp:187
+#: configdialog.cpp:188
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
@@ -113,12 +113,12 @@ msgid ""
 msgstr ""
 "Om merkt ikkje-tekst (eksempelvis bilete) skal lagrast på utklippstavla."
 
-#: configdialog.cpp:261
+#: configdialog.cpp:262
 #, kde-format
 msgid "Show action popup menu:"
 msgstr "Vis handlingsmeny som sprettopp:"
 
-#: configdialog.cpp:271
+#: configdialog.cpp:272
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -134,12 +134,12 @@ msgstr ""
 "viss eit vindauge er ekskludert, kan du likevel visa menyen via snøggtasten "
 "<shortcut>%1</shortcut>."
 
-#: configdialog.cpp:280
+#: configdialog.cpp:281
 #, kde-format
 msgid "Exclude Windows..."
 msgstr "Ekskluder vindauge …"
 
-#: configdialog.cpp:294
+#: configdialog.cpp:295
 #, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
@@ -147,23 +147,23 @@ msgid_plural "%v seconds"
 msgstr[0] "%v sekund"
 msgstr[1] "%v sekund"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:296
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr "Ingen"
 
-#: configdialog.cpp:304
+#: configdialog.cpp:305
 #, kde-format
 msgid "Options:"
 msgstr "Innstillingar:"
 
-#: configdialog.cpp:331
+#: configdialog.cpp:332
 #, kde-format
 msgid "Exclude Windows"
 msgstr "Ekskluder vindauge"
 
-#: configdialog.cpp:361
+#: configdialog.cpp:362
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -175,34 +175,34 @@ msgstr ""
 "tavla, vert tilhøyrande <interface>kommando</interface> vist i "
 "sprettoppmenyen."
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr "Mønster og kommandoar"
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, kde-format
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Skildring"
 
-#: configdialog.cpp:376
+#: configdialog.cpp:377
 #, kde-format
 msgid "Add Action..."
 msgstr "Legg til handling …"
 
-#: configdialog.cpp:380
+#: configdialog.cpp:381
 #, kde-format
 msgid "Edit Action..."
 msgstr "Rediger handling …"
 
-#: configdialog.cpp:385
+#: configdialog.cpp:386
 #, kde-format
 msgid "Delete Action"
 msgstr "Slett handling"
 
-#: configdialog.cpp:392
+#: configdialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -212,7 +212,7 @@ msgstr ""
 "Desse handlingane vert viste i sprettopp­menyen, som du kan endra "
 "innstillingane for på sida <interface>Handlingsmeny</interface>."
 
-#: configdialog.cpp:576
+#: configdialog.cpp:577
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -222,56 +222,56 @@ msgstr ""
 "Vil du sletta handlinga <resource>%1</resource><nl/>og alle tilhøyrande "
 "kommandoar?"
 
-#: configdialog.cpp:577
+#: configdialog.cpp:578
 #, kde-format
 msgid "Confirm Delete Action"
 msgstr "Stadfest slettehandling"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Generelt"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgid "General Configuration"
 msgstr "Generelt oppsett"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, kde-format
 msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Handlingsmeny"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, kde-format
 msgid "Action Menu"
 msgstr "Handlingsmeny"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Oppsett for handlingar"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, kde-format
 msgid "Actions Configuration"
 msgstr "Oppsett for handlingar"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Snøggtastar"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr "Snøggtastoppsett"
 
-#: configdialog.cpp:692
+#: configdialog.cpp:693
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -290,7 +290,7 @@ msgstr ""
 "det, kan du registrera programmet her. <link>Korleis finn rett namn å "
 "registrera</link>."
 
-#: configdialog.cpp:705
+#: configdialog.cpp:706
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

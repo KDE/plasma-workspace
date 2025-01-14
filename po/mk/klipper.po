@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-14 02:36+0000\n"
 "PO-Revision-Date: 2010-01-30 09:51+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -30,13 +30,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "bobibobi@freemail.com.mk"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:83
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clipboard history:"
 msgstr "Историја на таблата"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -47,13 +47,13 @@ msgstr[0] " ставка"
 msgstr[1] " ставки"
 msgstr[2] " ставки"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:98
 #, fuzzy, kde-format
 #| msgid "Selection and clipboard"
 msgid "Selection and Clipboard:"
 msgstr "Избор и табла со исечоци"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -69,55 +69,55 @@ msgid ""
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:133 configdialog.cpp:171
+#: configdialog.cpp:134 configdialog.cpp:172
 #, fuzzy, kde-format
 #| msgid "Replay action in history"
 msgid "Always save in history"
 msgstr "Повтори дејство од историјата"
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, fuzzy, kde-format
 #| msgid "Text selection only"
 msgid "Text selection:"
 msgstr "Само избраниот текст"
 
-#: configdialog.cpp:139 configdialog.cpp:177
+#: configdialog.cpp:140 configdialog.cpp:178
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr ""
 
-#: configdialog.cpp:144
+#: configdialog.cpp:145
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "Дали навистина сакате да ја избришете историја на таблата?"
 
-#: configdialog.cpp:175
+#: configdialog.cpp:176
 #, fuzzy, kde-format
 #| msgid "Ignore Selection"
 msgid "Non-text selection:"
 msgstr "Игнорирај избор"
 
-#: configdialog.cpp:182
+#: configdialog.cpp:183
 #, fuzzy, kde-format
 #| msgid "Replay action in history"
 msgid "Never save in history"
 msgstr "Повтори дејство од историјата"
 
-#: configdialog.cpp:187
+#: configdialog.cpp:188
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
 
-#: configdialog.cpp:261
+#: configdialog.cpp:262
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgid "Show action popup menu:"
 msgstr "Истек на време за покренување на акции:"
 
-#: configdialog.cpp:271
+#: configdialog.cpp:272
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -128,12 +128,12 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:280
+#: configdialog.cpp:281
 #, kde-format
 msgid "Exclude Windows..."
 msgstr ""
 
-#: configdialog.cpp:294
+#: configdialog.cpp:295
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -144,25 +144,25 @@ msgstr[0] " секунда"
 msgstr[1] " секунди"
 msgstr[2] " секунди"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:296
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:304
+#: configdialog.cpp:305
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "Дејства"
 
-#: configdialog.cpp:331
+#: configdialog.cpp:332
 #, kde-format
 msgid "Exclude Windows"
 msgstr ""
 
-#: configdialog.cpp:361
+#: configdialog.cpp:362
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -171,35 +171,35 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Опис"
 
-#: configdialog.cpp:376
+#: configdialog.cpp:377
 #, kde-format
 msgid "Add Action..."
 msgstr "Додај дејство..."
 
-#: configdialog.cpp:380
+#: configdialog.cpp:381
 #, kde-format
 msgid "Edit Action..."
 msgstr "Уреди дејство..."
 
-#: configdialog.cpp:385
+#: configdialog.cpp:386
 #, kde-format
 msgid "Delete Action"
 msgstr "Отстрани дејство"
 
-#: configdialog.cpp:392
+#: configdialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -207,7 +207,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:576
+#: configdialog.cpp:577
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -215,25 +215,25 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:577
+#: configdialog.cpp:578
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "Отстрани дејство"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Општо"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, fuzzy, kde-format
 #| msgid "General Config"
 msgid "General Configuration"
 msgstr "Општa конфигурација"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -241,39 +241,39 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Дејства"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "Дејства"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, fuzzy, kde-format
 #| msgid "Actions Config"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Конфигурација на дејства"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, fuzzy, kde-format
 #| msgid "Actions Config"
 msgid "Actions Configuration"
 msgstr "Конфигурација на дејства"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Кратенки"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, fuzzy, kde-format
 #| msgid "Shortcuts Config"
 msgid "Shortcuts Configuration"
 msgstr "Конфигурација на кратенки"
 
-#: configdialog.cpp:692
+#: configdialog.cpp:693
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -285,7 +285,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:705
+#: configdialog.cpp:706
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

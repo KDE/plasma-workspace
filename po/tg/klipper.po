@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-14 02:36+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -25,13 +25,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "victor.ibragimov@gmail.com"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:83
 #, fuzzy, kde-format
 #| msgid "Delete clipboard history?"
 msgid "Clipboard history:"
 msgstr "Таърихи ҳофизаи муваққатиро нест мекунед?"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -41,12 +41,12 @@ msgid_plural "%v entries"
 msgstr[0] " мавод"
 msgstr[1] " мавод"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:98
 #, kde-format
 msgid "Selection and Clipboard:"
 msgstr ""
 
-#: configdialog.cpp:104
+#: configdialog.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -62,50 +62,50 @@ msgid ""
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:133 configdialog.cpp:171
+#: configdialog.cpp:134 configdialog.cpp:172
 #, kde-format
 msgid "Always save in history"
 msgstr ""
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, kde-format
 msgid "Text selection:"
 msgstr ""
 
-#: configdialog.cpp:139 configdialog.cpp:177
+#: configdialog.cpp:140 configdialog.cpp:178
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr ""
 
-#: configdialog.cpp:144
+#: configdialog.cpp:145
 #, kde-format
 msgid "Whether text selections are saved in the clipboard history."
 msgstr ""
 
-#: configdialog.cpp:175
+#: configdialog.cpp:176
 #, kde-format
 msgid "Non-text selection:"
 msgstr ""
 
-#: configdialog.cpp:182
+#: configdialog.cpp:183
 #, kde-format
 msgid "Never save in history"
 msgstr ""
 
-#: configdialog.cpp:187
+#: configdialog.cpp:188
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
 
-#: configdialog.cpp:261
+#: configdialog.cpp:262
 #, fuzzy, kde-format
 #| msgid "Show Klipper Popup-Menu"
 msgid "Show action popup menu:"
 msgstr "Нишон додани Менюи Ба Рӯй барояндаи Клиппер"
 
-#: configdialog.cpp:271
+#: configdialog.cpp:272
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -116,12 +116,12 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:280
+#: configdialog.cpp:281
 #, kde-format
 msgid "Exclude Windows..."
 msgstr ""
 
-#: configdialog.cpp:294
+#: configdialog.cpp:295
 #, fuzzy, kde-format
 #| msgid " second"
 #| msgid_plural " seconds"
@@ -131,25 +131,25 @@ msgid_plural "%v seconds"
 msgstr[0] " сония"
 msgstr[1] " сония"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:296
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:304
+#: configdialog.cpp:305
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "Амалиётҳо"
 
-#: configdialog.cpp:331
+#: configdialog.cpp:332
 #, kde-format
 msgid "Exclude Windows"
 msgstr ""
 
-#: configdialog.cpp:361
+#: configdialog.cpp:362
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -158,35 +158,35 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Тавсиф"
 
-#: configdialog.cpp:376
+#: configdialog.cpp:377
 #, kde-format
 msgid "Add Action..."
 msgstr "Илова кардани амалиёт..."
 
-#: configdialog.cpp:380
+#: configdialog.cpp:381
 #, kde-format
 msgid "Edit Action..."
 msgstr "Таҳрир кардани амалиёт..."
 
-#: configdialog.cpp:385
+#: configdialog.cpp:386
 #, kde-format
 msgid "Delete Action"
 msgstr "Нест кардани амалиёт"
 
-#: configdialog.cpp:392
+#: configdialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -194,7 +194,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:576
+#: configdialog.cpp:577
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -202,24 +202,24 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:577
+#: configdialog.cpp:578
 #, fuzzy, kde-format
 #| msgid "Delete Action"
 msgid "Confirm Delete Action"
 msgstr "Нест кардани амалиёт"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Умумӣ"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgid "General Configuration"
 msgstr ""
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -227,36 +227,36 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Амалиётҳо"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "Амалиётҳо"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, kde-format
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr ""
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, kde-format
 msgid "Actions Configuration"
 msgstr ""
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr ""
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, kde-format
 msgid "Shortcuts Configuration"
 msgstr ""
 
-#: configdialog.cpp:692
+#: configdialog.cpp:693
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -268,7 +268,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:705
+#: configdialog.cpp:706
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-22 00:42+0000\n"
+"POT-Creation-Date: 2025-01-14 02:36+0000\n"
 "PO-Revision-Date: 2008-10-18 22:34+0300\n"
 "Last-Translator: Ihar Hrachyshka <ihar.hrachyshka@gmail.com>\n"
 "Language-Team: Belarusian Latin <i18n@mova.org>\n"
@@ -30,13 +30,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ihar.hrachyshka@gmail.com"
 
-#: configdialog.cpp:82
+#: configdialog.cpp:83
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard history:"
 msgstr "&Pamier historyi abmiennaha bufera:"
 
-#: configdialog.cpp:88
+#: configdialog.cpp:89
 #, fuzzy, kde-format
 #| msgid " entry"
 #| msgid_plural " entries"
@@ -47,13 +47,13 @@ msgstr[0] " element"
 msgstr[1] " element"
 msgstr[2] " element"
 
-#: configdialog.cpp:97
+#: configdialog.cpp:98
 #, fuzzy, kde-format
 #| msgid "Pre&vent empty clipboard"
 msgid "Selection and Clipboard:"
 msgstr "&Zabarani čynnaść z pustym buferam"
 
-#: configdialog.cpp:104
+#: configdialog.cpp:105
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""
@@ -69,55 +69,55 @@ msgid ""
 "options below), but it can only be pasted using the middle mouse button."
 msgstr ""
 
-#: configdialog.cpp:133 configdialog.cpp:171
+#: configdialog.cpp:134 configdialog.cpp:172
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgid "Always save in history"
 msgstr "&Paŭtary aperacyi z elementam, vybranym z historyi"
 
-#: configdialog.cpp:137
+#: configdialog.cpp:138
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
 msgid "Text selection:"
 msgstr "&Nie zvažaj na vyłučeńnie"
 
-#: configdialog.cpp:139 configdialog.cpp:177
+#: configdialog.cpp:140 configdialog.cpp:178
 #, kde-format
 msgid "Only when explicitly copied"
 msgstr ""
 
-#: configdialog.cpp:144
+#: configdialog.cpp:145
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Whether text selections are saved in the clipboard history."
 msgstr "&Vyčyści historyju abmiennaha bufera"
 
-#: configdialog.cpp:175
+#: configdialog.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Ignore selection"
 msgid "Non-text selection:"
 msgstr "&Nie zvažaj na vyłučeńnie"
 
-#: configdialog.cpp:182
+#: configdialog.cpp:183
 #, fuzzy, kde-format
 #| msgid "&Replay actions on an item selected from history"
 msgid "Never save in history"
 msgstr "&Paŭtary aperacyi z elementam, vybranym z historyi"
 
-#: configdialog.cpp:187
+#: configdialog.cpp:188
 #, kde-format
 msgid ""
 "Whether non-text selections (such as images) are saved in the clipboard "
 "history."
 msgstr ""
 
-#: configdialog.cpp:261
+#: configdialog.cpp:262
 #, fuzzy, kde-format
 #| msgid "Tim&eout for action popups:"
 msgid "Show action popup menu:"
 msgstr "&Termin čakańnia dla vypłyŭnych menu:"
 
-#: configdialog.cpp:271
+#: configdialog.cpp:272
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -128,12 +128,12 @@ msgid ""
 "key shortcut."
 msgstr ""
 
-#: configdialog.cpp:280
+#: configdialog.cpp:281
 #, kde-format
 msgid "Exclude Windows..."
 msgstr ""
 
-#: configdialog.cpp:294
+#: configdialog.cpp:295
 #, fuzzy, kde-format
 #| msgid " sec"
 msgctxt "Unit of time"
@@ -143,25 +143,25 @@ msgstr[0] " sek"
 msgstr[1] " sek"
 msgstr[2] " sek"
 
-#: configdialog.cpp:295
+#: configdialog.cpp:296
 #, kde-format
 msgctxt "No timeout"
 msgid "None"
 msgstr ""
 
-#: configdialog.cpp:304
+#: configdialog.cpp:305
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Options:"
 msgstr "Aperacyi"
 
-#: configdialog.cpp:331
+#: configdialog.cpp:332
 #, kde-format
 msgid "Exclude Windows"
 msgstr ""
 
-#: configdialog.cpp:361
+#: configdialog.cpp:362
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -170,38 +170,38 @@ msgid ""
 "be executed."
 msgstr ""
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, kde-format
 msgctxt "@title:column"
 msgid "Match pattern and commands"
 msgstr ""
 
-#: configdialog.cpp:370
+#: configdialog.cpp:371
 #, fuzzy, kde-format
 #| msgid "Description"
 msgctxt "@title:column"
 msgid "Description"
 msgstr "Apisańnie"
 
-#: configdialog.cpp:376
+#: configdialog.cpp:377
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Add Action..."
 msgstr "&Dadaj aperacyju"
 
-#: configdialog.cpp:380
+#: configdialog.cpp:381
 #, fuzzy, kde-format
 #| msgid "&Add Action"
 msgid "Edit Action..."
 msgstr "&Dadaj aperacyju"
 
-#: configdialog.cpp:385
+#: configdialog.cpp:386
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Delete Action"
 msgstr "&Vydali aperacyju"
 
-#: configdialog.cpp:392
+#: configdialog.cpp:393
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -209,7 +209,7 @@ msgid ""
 "<interface>Action Menu</interface> page."
 msgstr ""
 
-#: configdialog.cpp:576
+#: configdialog.cpp:577
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -217,25 +217,25 @@ msgid ""
 "commands?"
 msgstr ""
 
-#: configdialog.cpp:577
+#: configdialog.cpp:578
 #, fuzzy, kde-format
 #| msgid "&Delete Action"
 msgid "Confirm Delete Action"
 msgstr "&Vydali aperacyju"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, kde-format
 msgctxt "General Config"
 msgid "General"
 msgstr "Hałoŭnaje"
 
-#: configdialog.cpp:606
+#: configdialog.cpp:607
 #, fuzzy, kde-format
 #| msgid "General Config"
 msgid "General Configuration"
 msgstr "Hałoŭnyja nałady"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
@@ -243,39 +243,39 @@ msgctxt "Popup Menu Config"
 msgid "Action Menu"
 msgstr "Aperacyi"
 
-#: configdialog.cpp:607
+#: configdialog.cpp:608
 #, fuzzy, kde-format
 #| msgctxt "Actions Config"
 #| msgid "Actions"
 msgid "Action Menu"
 msgstr "Aperacyi"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, fuzzy, kde-format
 #| msgid "Actions Config"
 msgctxt "Actions Config"
 msgid "Actions Configuration"
 msgstr "Nałady aperacyjaŭ"
 
-#: configdialog.cpp:608
+#: configdialog.cpp:609
 #, fuzzy, kde-format
 #| msgid "Actions Config"
 msgid "Actions Configuration"
 msgstr "Nałady aperacyjaŭ"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, kde-format
 msgctxt "Shortcuts Config"
 msgid "Shortcuts"
 msgstr "Skaroty"
 
-#: configdialog.cpp:611
+#: configdialog.cpp:612
 #, fuzzy, kde-format
 #| msgid "Shortcuts Config"
 msgid "Shortcuts Configuration"
 msgstr "Nałady skarotaŭ"
 
-#: configdialog.cpp:692
+#: configdialog.cpp:693
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -287,7 +287,7 @@ msgid ""
 "to enter</link>."
 msgstr ""
 
-#: configdialog.cpp:705
+#: configdialog.cpp:706
 #, kde-kuit-format
 msgctxt "@info:tooltip"
 msgid ""

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2024 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.homerun\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 12:59+0200\n"
+"PO-Revision-Date: 2025-01-07 19:05+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.1\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -135,10 +135,9 @@ msgid "Forget Application"
 msgstr "Dimentica applicazione"
 
 #: plugin/recentusagemodel.cpp:313
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "Cartella"
+msgstr "Cartelle"
 
 #: plugin/recentusagemodel.cpp:350
 #, kde-format
