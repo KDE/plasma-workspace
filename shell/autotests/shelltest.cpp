@@ -659,6 +659,7 @@ void ShellTest::testPanelSizeModes()
     QCOMPARE(m_corona->m_panelViews[panelCont]->screen(), qApp->primaryScreen());
 
     auto panel = m_corona->m_panelViews[panelCont];
+    QSignalSpy panelResizeSpy(panel, &QWindow::widthChanged);
 
     // Plase panel to bottom edge of screen
     panel->containment()->setLocation(Plasma::Types::BottomEdge);
@@ -670,16 +671,20 @@ void ShellTest::testPanelSizeModes()
 
     // Set panel lengths
     panel->setLengthMode(PanelView::FillAvailable);
+    QVERIFY(panelResizeSpy.wait());
     QCOMPARE(panel->size(), QSize(panel->screen()->size().width(), thickness)); // Panel should be screen width
 
     panel->setLengthMode(PanelView::Custom);
+    // QVERIFY(panelResizeSpy.wait());
     panel->setMaximumLength(lengthMax);
     panel->setMinimumLength(lengthMin);
+    QVERIFY(panelResizeSpy.wait());
     QCOMPARE(panel->maximumLength(), lengthMax); // Panel should be custom width
     QCOMPARE(panel->minimumLength(), lengthMin);
     QCOMPARE(panel->size(), QSize(std::min(panel->length(), lengthMax), thickness)); // Panel should be screen width
 
     panel->setLengthMode(PanelView::FitContent);
+    QVERIFY(panelResizeSpy.wait());
     QCOMPARE(panel->size(), QSize(800, thickness));
 
     // Test floating setting
@@ -694,6 +699,7 @@ void ShellTest::testPanelSizeModes()
     // Set vertical panel
     panel->containment()->setLocation(Plasma::Types::LeftEdge);
     panel->containment()->setFormFactor(Plasma::Types::Vertical);
+    QVERIFY(panelResizeSpy.wait());
     QTRY_COMPARE(panel->size(), QSize(thickness, 800));
 }
 
