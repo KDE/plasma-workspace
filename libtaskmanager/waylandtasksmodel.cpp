@@ -374,9 +374,17 @@ public:
         Q_EMIT stackingOrderChanged(uuids.split(QLatin1Char(';')));
     }
     void org_kde_plasma_window_management_stacking_order_changed_2() override;
+    void stackingOrderDone(const QList<QString> &uuids)
+    {
+        Q_EMIT stackingOrderChanged(uuids);
+        m_pendingStackingOrder.reset();
+    }
 Q_SIGNALS:
     void windowCreated(PlasmaWindow *window);
     void stackingOrderChanged(const QList<QString> &uuids);
+
+private:
+    std::unique_ptr<PlasmaStackingOrder> m_pendingStackingOrder;
 };
 
 class PlasmaStackingOrder : public QtWayland::org_kde_plasma_stacking_order
@@ -399,8 +407,7 @@ public:
 
     void org_kde_plasma_stacking_order_done() override
     {
-        Q_EMIT m_windowManagement->stackingOrderChanged(m_uuids);
-        delete this;
+        m_windowManagement->stackingOrderDone(m_uuids);
     }
 
     PlasmaWindowManagement *const m_windowManagement;
@@ -409,7 +416,7 @@ public:
 
 void PlasmaWindowManagement::org_kde_plasma_window_management_stacking_order_changed_2()
 {
-    new PlasmaStackingOrder(this, org_kde_plasma_window_management_get_stacking_order(object()));
+    m_pendingStackingOrder.reset(new PlasmaStackingOrder(this, org_kde_plasma_window_management_get_stacking_order(object())));
 }
 
 class Q_DECL_HIDDEN WaylandTasksModel::Private
