@@ -127,6 +127,7 @@ bool DWDIon::updateIonSource(const QString &source)
             setData(source, u"validate"_s, u"dwd|malformed"_s);
             return false;
         }
+        setData(source, Data()); // To ensure a DataSource is created
 
         const QString stationId = sourceAction[3].toString();
         m_place[placeName] = stationId;
@@ -234,17 +235,6 @@ void DWDIon::forecast_slotJobFinished(KJob *job)
 
     m_weatherData[source].isForecastsDataPending = false;
     updateWeather(source);
-
-    if (m_sourcesToReset.contains(source)) {
-        m_sourcesToReset.removeAll(source);
-        const QString weatherSource = u"dwd|weather|%1|%2"_s.arg(source, m_place[source]);
-
-        // so the weather engine updates it's data
-        forceImmediateUpdateOfAllVisualizations();
-
-        // update the clients of our engine
-        Q_EMIT forceUpdate(this, weatherSource);
-    }
 }
 
 void DWDIon::parseStationData(const QByteArray &data)
@@ -548,6 +538,13 @@ void DWDIon::updateWeather(const QString &source)
 
     Q_EMIT cleanUpData(source);
     setData(weatherSource, data);
+
+    // Update the applet on forced updates
+    if (m_sourcesToReset.contains(weatherSource)) {
+        m_sourcesToReset.removeAll(weatherSource);
+        forceImmediateUpdateOfAllVisualizations();
+        Q_EMIT forceUpdate(this, weatherSource);
+    }
 }
 
 /*
