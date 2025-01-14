@@ -177,9 +177,11 @@ void HistoryModel::clear()
     if (TransactionGuard transaction(&m_db); !transaction.exec(u"DELETE FROM main"_s) || !transaction.exec(u"DELETE FROM aux"_s)) {
         return;
     }
-    for (const auto &item : m_items) {
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'), KIO::HideProgressInfo);
-    }
+    QList<QUrl> deletedDataFolders;
+    std::transform(m_items.cbegin(), m_items.cend(), std::back_inserter(deletedDataFolders), [this](const auto &item) {
+        return QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/');
+    });
+    KIO::del(deletedDataFolders, KIO::HideProgressInfo);
     QSqlQuery(u"VACUUM"_s, m_db).exec();
     beginResetModel();
     m_items.clear();
