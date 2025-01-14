@@ -161,7 +161,8 @@ msgid "Sleep"
 msgstr "Standby-Modus"
 
 #: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hibernate"
 msgid "Hibernate"
 msgstr "Ruhezustand"
 
@@ -243,7 +244,8 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Beim Neustart wird der Dialog für Firmware-Einrichtung angezeigt."
 
 #: contents/logout/Logout.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Log Out"
 msgid "Log Out"
 msgstr "Abmelden"
 
@@ -274,7 +276,8 @@ msgid "OK"
 msgstr "OK"
 
 #: contents/logout/Logout.qml:245
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
 msgid "Cancel"
 msgstr "Abbrechen"
 
