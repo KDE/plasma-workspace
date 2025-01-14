@@ -11,7 +11,8 @@ import QtQuick.Layouts 1.12
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.plasma5support 2.0 as P5Support
 import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
 
 import org.kde.plasma.workspace.calendar 2.0
 
@@ -49,14 +50,16 @@ PlasmoidItem {
     compactRepresentation: MouseArea {
         onClicked: root.expanded = !root.expanded
 
-        Kirigami.Icon {
-            anchors.fill: parent
+        KSvg.SvgItem {
+            anchors.centerIn: parent
+            width: Kirigami.Units.iconSizes.roundedIconSize(Math.min(parent.width, parent.height))
+            height: width
 
-            source: Qt.resolvedUrl("../images/mini-calendar.svgz")
+            imagePath: Qt.resolvedUrl("../images/mini-calendar.svgz")
 
             PlasmaComponents3.Label {
                 id: monthLabel
-                y: parent.y + parent.height * 0.05;
+                y: parent.height * 0.05;
                 x: 0
                 width: parent.width
                 height: parent.height * 0.2
