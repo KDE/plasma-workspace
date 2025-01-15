@@ -471,6 +471,14 @@ QUrl windowUrlFromMetadata(const QString &appId, quint32 pid, const KSharedConfi
         }
     }
 
+    // last resort, if we have neither appId or xWindowsWMClassName, check by Pid
+
+    services = servicesFromPid(pid, rulesConfig);
+
+    if (!services.isEmpty()) {
+        return QUrl(u"applications:" + services.first()->menuId());
+    }
+
     return url;
 }
 
