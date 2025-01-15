@@ -546,7 +546,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
     int slash = 0;
 
     services = KApplicationTrader::query([&cmdLine](const KService::Ptr &service) {
-        return service->exec() == cmdLine;
+        return service->exec().startsWith(cmdLine);
     });
 
     if (services.isEmpty()) {
@@ -556,7 +556,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
         if (slash > 0) {
             const QStringView midCmd = QStringView(cmdLine).mid(slash + 1);
             services = services = KApplicationTrader::query([&midCmd](const KService::Ptr &service) {
-                return service->exec() == midCmd;
+                return service->exec().startsWith(midCmd);
             });
         }
     }
@@ -566,7 +566,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
         cmdLine.truncate(firstSpace);
 
         services = KApplicationTrader::query([&cmdLine](const KService::Ptr &service) {
-            return service->exec() == cmdLine;
+            return service->exec().startsWith(cmdLine);
         });
 
         if (services.isEmpty()) {
@@ -575,7 +575,7 @@ KService::List servicesFromCmdLine(const QString &_cmdLine, const QString &proce
             if (slash > 0) {
                 const QStringView midCmd = QStringView(cmdLine).mid(slash + 1);
                 services = KApplicationTrader::query([&midCmd](const KService::Ptr &service) {
-                    return service->exec() == midCmd;
+                    return service->exec().startsWith(midCmd);
                 });
             }
         }
