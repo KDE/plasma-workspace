@@ -1352,9 +1352,15 @@ bool PanelView::containmentContainsPosition(const QPointF &point) const
         return false;
     }
 
-    return QRectF(containmentItem->mapToScene(QPoint(m_leftPadding, m_topPadding)),
-                  QSizeF(containmentItem->width() - m_leftPadding - m_rightPadding, containmentItem->height() - m_topPadding - m_bottomPadding))
-        .contains(point);
+    QRectF boundingRect = QRectF(containmentItem->mapToScene(QPoint(m_leftPadding, m_topPadding)),
+                                 QSizeF(containmentItem->width() - m_leftPadding - m_rightPadding, containmentItem->height() - m_topPadding - m_bottomPadding));
+
+    // We are not using .contains here since that function will consider
+    // boundingRect.x() + boundingRect.width() to be part of the rectangle,
+    // but the right/bottom-most pixels do not react to user input. Thus, we
+    // manually exclude them here.
+    return (point.x() >= boundingRect.x() && point.x() < (boundingRect.x() + boundingRect.width()) && point.y() >= boundingRect.y()
+            && point.y() < (boundingRect.y() + boundingRect.height()));
 }
 
 QPointF PanelView::positionAdjustedForContainment(const QPointF &point) const
