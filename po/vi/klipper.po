@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -634,17 +634,17 @@ msgstr "Đặt lại biểu tượng về mặc định cho lệnh"
 msgid "Icon:"
 msgstr "Biểu tượng:"
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Bạn có thực sự muốn làm trống và xoá toàn bộ lịch sử bảng nháp?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Xoá lịch sử bảng nháp"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"

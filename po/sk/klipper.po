@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2023-08-06 11:28+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -636,17 +636,17 @@ msgstr "Obnovenie predvolenej ikony pre príkaz"
 msgid "Icon:"
 msgstr "Ikona:"
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Naozaj chcete vyčistiť a odstrániť celú históriu schránky?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Vyčistiť históriu schránky"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"

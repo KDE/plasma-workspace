@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2024-09-23 17:27+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -636,17 +636,17 @@ msgstr "Symbol des Befehls auf Standard zurücksetzen"
 msgid "Icon:"
 msgstr "Symbol:"
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Möchten Sie wirklich den gesamten Verlauf der Zwischenablage löschen?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Bisherigen Inhalt der Zwischenablage löschen"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -612,17 +612,17 @@ msgstr "आदेशस्य कृते चिह्नं पूर्वन
 msgid "Icon:"
 msgstr "चिह्नम् :"
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "किं भवान् वास्तवमेव सम्पूर्णं क्लिप्बोर्ड-इतिहासं स्वच्छं विलोपयितुम् इच्छति?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहासं स्वच्छं कुर्वन्तु"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"

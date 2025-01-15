@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2013-03-28 14:37+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -609,19 +609,19 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "क्लिपबोर्डचा पूर्ण इतिहास नष्ट करायचा का?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहास नष्ट करा (&L)"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"

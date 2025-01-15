@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.2\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2024-11-19 19:51+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -623,17 +623,17 @@ msgstr "A parancs alapértelmezett ikonjának visszaállítása"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Biztosan törölni szeretné a vágólap összes előzményét?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Vágólapnapló törlése"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"

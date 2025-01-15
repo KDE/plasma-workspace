@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2024-12-09 15:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -632,18 +632,18 @@ msgstr "Скинути піктограму до типової для кома�
 msgid "Icon:"
 msgstr "Піктограма:"
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Ви справді хочете спорожнити і вилучити увесь журнал буфера обміну даними?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Спорожнити журнал буфера обміну даними"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"

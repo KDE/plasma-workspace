@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2024-12-10 06:35+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -628,18 +628,18 @@ msgstr "Ripristina l'icona predefinita per il comando"
 msgid "Icon:"
 msgstr "Icona:"
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Vuoi davvero cancellare ed eliminare l'intera cronologia degli appunti?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Cancella la cronologia degli appunti"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 02:36+0000\n"
+"POT-Creation-Date: 2025-01-15 02:34+0000\n"
 "PO-Revision-Date: 2010-07-16 13:01+0100\n"
 "Last-Translator: Berend Ytsma <berendy@gmail.com>\n"
 "Language-Team: Frysk <kde-i18n-fry@kde.org>\n"
@@ -608,19 +608,19 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:192
+#: historymodel.cpp:194
 #, fuzzy, kde-format
 #| msgid "Really delete entire clipboard history?"
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Totale klamboerdskiednis wiskje?"
 
-#: historymodel.cpp:193
+#: historymodel.cpp:195
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgid "Clear Clipboard History"
 msgstr "Klamboerdskiednis &leechje"
 
-#: historymodel.cpp:242
+#: historymodel.cpp:244
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
