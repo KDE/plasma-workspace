@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-15 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -327,13 +327,13 @@ msgstr ""
 "इत्येतयोः विण्डो-ड्रैग् तथा आकार-परिवर्तनस्य कार्यक्षमतायाः दुर्बलं कारणं भवति इति ज्ञायते । "
 "अन्येषां सेटिङ्ग्स् इत्यस्य उपयोगं विचारयन्तु।"
 
-#: panelview.cpp:1105
+#: panelview.cpp:1112
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "फलकविन्यासं गोपयन्तु"
 
-#: panelview.cpp:1107
+#: panelview.cpp:1114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

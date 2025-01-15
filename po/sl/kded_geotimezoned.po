@@ -1,28 +1,28 @@
-# SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+# SPDX-FileCopyrightText: 2025 Matjaž Jeran <matjaz.jeran@amis.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-10 09:29+0000\n"
-"PO-Revision-Date: 2025-01-13 19:20+0100\n"
-"Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
-"Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
-"Language: ka\n"
+"PO-Revision-Date: 2025-01-14 21:57+0100\n"
+"Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
+"Language-Team: Slovenian <lugos-slo@lugos.si>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 3.5\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.12.1\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
+"%100==4 ? 3 : 0);\n"
 
 #: geotimezonemodule.cpp:187
 #, kde-format
 msgctxt "OSD, keep short"
 msgid "Time zone changed to %1"
-msgstr "დროის სარტყელი შეიცვალა %1-ზე"
+msgstr "Časovni pas spremenjen za %1"
 
 #: geotimezonemodule.cpp:190
 #, kde-format
@@ -30,14 +30,14 @@ msgctxt ""
 "System clock was changed due to time zone change OSD, keep short: new time "
 "(time zone)"
 msgid "Clock changed to %1 (%2)"
-msgstr "საათი შეიცვალა %1-ზე (%2)"
+msgstr "Ura spremenjena v %1 (%2)"
 
 #: geotimezonemodule.cpp:206
 #, kde-format
 msgid "Refresh is already in progress."
-msgstr "განახლება უკვე მიმდინარეობს."
+msgstr "Osveževanje že v teku."
 
 #: geotimezonemodule.cpp:269
 #, kde-format
 msgid "Received no or an invalid time zone."
-msgstr "დროის სარტყელის მიღების ან მიღებულის შეცდომა."
+msgstr "Ni sprejetega pasu ali sprejet neveljavni časovni pas."
