@@ -918,6 +918,14 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
         return;
     }
 
+    // When a context menu is opened, the panel status is set to
+    // RequiresAttentionStatus to make sure it does not hide. When
+    // "Show alternatives" is clicked, the status goes back to normal,
+    // and the panel hides. To avoid that, we set the status back to
+    // RequiresAttentionStatus to keep it open as long as there is
+    // an alternatives dialog.
+    applet->containment()->setStatus(Plasma::Types::RequiresAttentionStatus);
+
     auto *qmlObj = new PlasmaQuick::SharedQmlEngine(this);
     qmlObj->setInitializationDelayed(true);
     qmlObj->setSource(alternativesQML);
@@ -938,14 +946,20 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
         if (!destroyed) {
             return;
         }
-        m_showingAlternatives = nullptr;
+        if (m_showingAlternatives) {
+            m_showingAlternatives->containment()->setStatus(Plasma::Types::ActiveStatus);
+            m_showingAlternatives = nullptr;
+        }
         qmlObj->deleteLater();
     });
     connect(dialog, &QQuickWindow::visibleChanged, qmlObj, [qmlObj, this](bool visible) {
         if (visible) {
             return;
         }
-        m_showingAlternatives = nullptr;
+        if (m_showingAlternatives) {
+            m_showingAlternatives->containment()->setStatus(Plasma::Types::ActiveStatus);
+            m_showingAlternatives = nullptr;
+        }
         qmlObj->deleteLater();
     });
 }
