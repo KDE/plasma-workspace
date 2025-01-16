@@ -347,6 +347,17 @@ void StatusNotifierItemSource::refreshCallback(QDBusPendingCallWatcher *call)
                 m_toolTipTitle = toolTip.title;
                 m_toolTipSubTitle = toolTip.subTitle;
             }
+
+            // Some applications, such as Discord, seem to prefer to
+            // only set the tooltip title, and no title. This results in a
+            // system tray entry that has the correct name when hovered,
+            // but no name in the system tray settings. To avoid this, if
+            // we have a tooltip title but no title, we will use the
+            // former as the latter. In the example of Discord, this is
+            // the only information we can use to guess the correct name.
+            if (m_title.isEmpty() && !m_toolTipTitle.isEmpty()) {
+                m_title = m_toolTipTitle;
+            }
         }
 
         // Menu
