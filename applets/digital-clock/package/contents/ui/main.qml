@@ -133,6 +133,7 @@ PlasmoidItem {
     compactRepresentation: Loader {
         id: conditionalLoader
 
+        property bool containsMouse: item?.containsMouse ?? false
         Layout.minimumWidth: item.Layout.minimumWidth
         Layout.minimumHeight: item.Layout.minimumHeight
         Layout.preferredWidth: item.Layout.preferredWidth
