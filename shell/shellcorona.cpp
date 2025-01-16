@@ -2084,8 +2084,16 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
     }
 
     newContainment->init();
-    newCg.writeEntry("activityId", oldContainment->activity());
-    newCg.writeEntry("wallpaperplugin", oldContainment->wallpaperPlugin());
+
+    const QMap<QString, QString> entryMap = oldCg.entryMap();
+    for (auto it = entryMap.constBegin(); it != entryMap.constEnd(); it++) {
+        if (it.key() == QStringLiteral("activityId") || it.key() == QStringLiteral("wallpaperplugin")
+            || it.key().startsWith(QStringLiteral("ItemGeometries"))) {
+            newCg.writeEntry(it.key(), it.value());
+            newCg2.writeEntry(it.key(), it.value());
+        }
+    }
+
     newContainment->restore(newCg);
     newContainment->updateConstraints(Plasma::Applet::StartupCompletedConstraint);
     newContainment->flushPendingConstraintsEvents();
