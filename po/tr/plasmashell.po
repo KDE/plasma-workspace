@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 02:32+0000\n"
 "PO-Revision-Date: 2025-01-07 15:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -330,13 +330,13 @@ msgstr ""
 "kipinin pencere sürükleme ve yeniden boyutlandırma başarımını kötü biçimde "
 "etkilediği bilinmektedir. Başka bir ayar kullanmayı düşünün."
 
-#: panelview.cpp:1105
+#: panelview.cpp:1112
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Panel Yapılandırmasını Gizle"
 
-#: panelview.cpp:1107
+#: panelview.cpp:1114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

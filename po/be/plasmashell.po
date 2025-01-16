@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 02:32+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -334,13 +334,13 @@ msgstr ""
 "перацягванні і змене памеру акон. Падумайце над тым, каб скарыстацца іншымі "
 "наладамі."
 
-#: panelview.cpp:1105
+#: panelview.cpp:1112
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Схаваць панэль канфігурацыі"
 
-#: panelview.cpp:1107
+#: panelview.cpp:1114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 02:32+0000\n"
 "PO-Revision-Date: 2024-06-11 16:13+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -329,13 +329,13 @@ msgstr ""
 "rejimində pəncərələrin sürüşdürülməsində və ölçüsünün dəyişdirilməsində bəzi "
 "pozulmalar olması məlumdur. Başqa ayarlardan istifadə etməyə cəhd edin."
 
-#: panelview.cpp:1105
+#: panelview.cpp:1112
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Panel tənzimləməsini gizlətmək"
 
-#: panelview.cpp:1107
+#: panelview.cpp:1114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

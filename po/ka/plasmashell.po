@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-01-16 02:32+0000\n"
 "PO-Revision-Date: 2025-01-07 05:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -328,13 +328,13 @@ msgstr ""
 "რეჟიმებს, ცნობილია, რომ ფანჯრის გადათრევისა და ზომის შეცვლისას საშინელი "
 "წარმადობა გააჩნიათ. იფიქრეთ სხვა პარამეტრების გამოყენებაზე."
 
-#: panelview.cpp:1105
+#: panelview.cpp:1112
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "პანელის კონფიგურაციის დამალვა"
 
-#: panelview.cpp:1107
+#: panelview.cpp:1114
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
