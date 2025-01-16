@@ -60,11 +60,9 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("remove");
     } else {
         actions.insert(QStringLiteral("configure shortcuts"), false);
-        m_actionOrder << QStringLiteral("configure")
-                      << QStringLiteral("_display_settings")
-                      << QStringLiteral("configure shortcuts")
+        m_actionOrder << QStringLiteral("_context")
                       << QStringLiteral("_sep1")
-                      << QStringLiteral("_context")
+                      << QStringLiteral("configure shortcuts")
                       << QStringLiteral("_open_terminal")
                       << QStringLiteral("_run_command")
                       << QStringLiteral("add widgets")
@@ -82,7 +80,10 @@ void ContextMenu::restore(const KConfigGroup &config)
                       << QStringLiteral("_lock_screen")
                       << QStringLiteral("_logout")
                       << QStringLiteral("_sep3")
-                      << QStringLiteral("_wallpaper");
+                      << QStringLiteral("_wallpaper")
+                      << QStringLiteral("_sep4")
+                      << QStringLiteral("configure")
+                      << QStringLiteral("_display_settings");
         disabled.insert(QStringLiteral("add widgets"));
         disabled.insert(QStringLiteral("_add panel"));
         disabled.insert(QStringLiteral("configure shortcuts"));
@@ -138,6 +139,8 @@ void ContextMenu::restore(const KConfigGroup &config)
         m_separator2->setSeparator(true);
         m_separator3 = new QAction(this);
         m_separator3->setSeparator(true);
+        m_separator4 = new QAction(this);
+        m_separator4->setSeparator(true);
     }
 }
 
@@ -188,6 +191,8 @@ QAction *ContextMenu::action(const QString &name)
         return m_separator2;
     } else if (name == QLatin1String("_sep3")) {
         return m_separator3;
+    } else if (name == QLatin1String("_sep4")) {
+        return m_separator4;
     } else if (name == QLatin1String("_add panel")) {
         if (c->corona() && c->corona()->immutability() == Plasma::Types::Mutable) {
             return c->corona()->action(QStringLiteral("add panel"));
@@ -287,7 +292,7 @@ QWidget *ContextMenu::createConfigurationInterface(QWidget *parent)
             item = new QCheckBox(widget);
             item->setText(i18nc("plasma_containmentactions_contextmenu", "Wallpaper Actions"));
             item->setIcon(QIcon::fromTheme(QStringLiteral("user-desktop")));
-        } else if (name == QLatin1String("_sep1") || name == QLatin1String("_sep2") || name == QLatin1String("_sep3")) {
+        } else if (name == QLatin1String("_sep1") || name == QLatin1String("_sep2") || name == QLatin1String("_sep3") || name == QLatin1String("_sep4")) {
             item = new QCheckBox(widget);
             item->setText(i18nc("plasma_containmentactions_contextmenu", "[Separator]"));
         } else {
