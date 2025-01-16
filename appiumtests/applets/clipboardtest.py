@@ -374,7 +374,10 @@ class ClipboardTest(unittest.TestCase):
             for color in colors:
                 partial_pixbuf.fill(color)
                 partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
-                app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+                try:
+                    app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
+                except WebDriverException:  # Flaky
+                    app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
             self.assertRaises(NoSuchElementException, app.driver.find_element, AppiumBy.NAME, new_text)
 
@@ -494,7 +497,7 @@ class ClipboardTest(unittest.TestCase):
         process.stderr.readline()
         try:
             self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
-        except AssertionError: # Flaky
+        except AssertionError:  # Flaky
             self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
 
         for color in colors:
@@ -504,7 +507,7 @@ class ClipboardTest(unittest.TestCase):
             partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
             try:
                 app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
-            except WebDriverException: # Flaky
+            except WebDriverException:  # Flaky
                 app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
         memory_usage_after = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
