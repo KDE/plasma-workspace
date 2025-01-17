@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-10 02:00+0000\n"
+"POT-Creation-Date: 2025-01-17 02:33+0000\n"
 "PO-Revision-Date: 2021-10-07 00:53+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -418,17 +418,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:216
+#: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Kopeeri lõikepuhvrisse"
 
-#: package/contents/ui/main.qml:220
+#: package/contents/ui/main.qml:221
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Kohanda kuupäeva ja kellaaega …"
 
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Kohanda ajavormingut …"
