@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-10 09:29+0000\n"
+"POT-Creation-Date: 2025-01-17 00:43+0000\n"
 "PO-Revision-Date: 2024-12-13 21:23+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -394,17 +394,17 @@ msgstr "%1, %2 (%3)"
 msgid "%1, %2"
 msgstr "%1, %2"
 
-#: package/contents/ui/main.qml:216
+#: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Copy to Clipboard"
 msgstr "Afrita á klippispjald"
 
-#: package/contents/ui/main.qml:220
+#: package/contents/ui/main.qml:221
 #, kde-format
 msgid "Adjust Date and Time…"
 msgstr "Stilla tíma og dagsetningu...…"
 
-#: package/contents/ui/main.qml:226
+#: package/contents/ui/main.qml:227
 #, kde-format
 msgid "Set Time Format…"
 msgstr "Stilla tímasnið…"
