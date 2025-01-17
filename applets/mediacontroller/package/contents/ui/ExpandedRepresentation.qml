@@ -12,6 +12,7 @@ import QtQuick.Layouts
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.plasmoid 2.0
+import org.kde.plasma.core as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.coreaddons 1.0 as KCoreAddons
@@ -365,6 +366,7 @@ PlasmaExtras.Representation {
             anchors.fill: parent
             RowLayout { // Seek Bar
                 spacing: Kirigami.Units.smallSpacing
+                Layout.minimumHeight: playbackRateMetricsButton.implicitHeight
 
                 // if there's no "mpris:length" in the metadata, we cannot seek, so hide it in that case
                 enabled: playerList.count > 0 && root.track.length > 0 && expandedRepresentation.length > 0 ? true : false
@@ -375,7 +377,7 @@ PlasmaExtras.Representation {
 
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
-                Layout.maximumWidth: Math.min(Kirigami.Units.gridUnit * 45, Math.round(expandedRepresentation.width * (7 / 10)))
+                Layout.maximumWidth: Math.min(Kirigami.Units.gridUnit * 45, Math.round(expandedRepresentation.width * (7 / 10))) + 2 * playbackRateMetricsButton.implicitWidth
 
                 // ensure the layout doesn't shift as the numbers change and measure roughly the longest text that could occur with the current song
                 TextMetrics {
@@ -385,8 +387,19 @@ PlasmaExtras.Representation {
                     font: Kirigami.Theme.smallFont
                 }
 
+                // Used for metrics of the playbackRate button *and* for even centering the layout.
+                PlasmaComponents3.ToolButton {
+                    id: playbackRateMetricsButton
+                    font: playbackRateButton.font
+                    text: playbackRateButton.formatPlaybackRate(8.88) // probably longest string.
+                    enabled: false
+                    opacity: 0
+                    // Visible so it is taken into account in the layout.
+                }
+
                 PlasmaComponents3.Label { // Time Elapsed
                     Layout.preferredWidth: timeMetrics.width
+                    Layout.fillHeight: true
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignRight
                     text: KCoreAddons.Format.formatDuration(seekSlider.value / 1000, expandedRepresentation.durationFormattingOptions)
@@ -522,6 +535,7 @@ PlasmaExtras.Representation {
 
                 PlasmaComponents3.Label {
                     Layout.preferredWidth: timeMetrics.width
+                    Layout.fillHeight: true
                     verticalAlignment: Text.AlignVCenter
                     horizontalAlignment: Text.AlignLeft
                     text: i18nc("Remaining time for song e.g -5:42", "-%1",
@@ -530,6 +544,90 @@ PlasmaExtras.Representation {
                     font: Kirigami.Theme.smallFont
                     color: Kirigami.Theme.textColor
                     textFormat: Text.PlainText
+                }
+
+                PlasmaComponents3.ToolButton { // Playback Rate
+                    id: playbackRateButton
+                    Layout.minimumWidth: playbackRateMetricsButton.implicitWidth
+                    display: root.playbackRate === 1 ? PlasmaComponents3.AbstractButton.IconOnly : PlasmaComponents3.AbstractButton.TextOnly
+                    icon.width: Kirigami.Units.iconSizes.small
+                    icon.height: Kirigami.Units.iconSizes.small
+                    icon.name: "speedometer"
+                    // Not hidden so the layout doesn't shift.
+                    opacity: enabled ? 0.9 : 0
+                    font: Kirigami.Theme.smallFont
+                    text: formatPlaybackRate(root.playbackRate)
+                    checkable: true
+                    enabled: root.minimumPlaybackRate <= 0.75 || root.maximumPlaybackRate >= 1.25
+                    Accessible.name: i18n("Playback rate %1", text)
+
+                    function formatPlaybackRate(rate : real) : string {
+                        return i18nc("Playback rate", "%1x", Math.round(rate * 100) / 100)
+                    }
+
+                    PlasmaComponents3.ToolTip {
+                        text: i18nc("@info:tooltip", "Playback rate")
+                    }
+
+                    Component {
+                        id: playbackRateMenuComponent
+                        PlasmaExtras.Menu {
+                            placement: PlasmaExtras.Menu.TopPosedRightAlignedPopup
+                            visualParent: playbackRateButton
+
+                            onStatusChanged: {
+                                if (status === PlasmaExtras.Menu.Closed) {
+                                    playbackRateButton.checked = false;
+                                    destroy();
+                                }
+                            }
+                        }
+                    }
+
+                    PlasmaCore.ActionGroup {
+                        id: playbackSpeedActionGroup
+                    }
+
+                    Component {
+                        id: playbackSpeedMenuItemComponent
+                        PlasmaExtras.MenuItem {
+                            action: PlasmaCore.Action {
+                                actionGroup: playbackSpeedActionGroup
+                                checkable: true
+                            }
+                        }
+                    }
+
+                    onPressed: {
+                        let speeds = [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0];
+                        // Add current speed to menu if it differs from the presets.
+                        if (!speeds.includes(root.playbackRate)) {
+                            speeds.push(root.playbackRate);
+                        }
+                        speeds.filter(speed => speed >= root.minimumPlaybackRate && speed <= root.maximumPlaybackRate);
+                        speeds.sort((a, b) => a - b)
+
+                        const menu = playbackRateMenuComponent.createObject(root);
+
+                        speeds.forEach((speed) => {
+                            let text = playbackRateButton.formatPlaybackRate(speed);
+                            if (speed === 1.0) {
+                                text = i18nc("@action:inmenu Playback speed (Normal)", "%1 (Normal)", text);
+                            }
+
+                            const menuItem = playbackSpeedMenuItemComponent.createObject(menu, {
+                                "action.text": text,
+                                "action.checked": root.playbackRate === speed
+                            });
+                            menuItem.action.triggered.connect(() => {
+                                mpris2Model.currentPlayer.rate = speed;
+                            });
+                            menu.addMenuItem(menuItem);
+                        });
+
+                        playbackRateButton.checked = true;
+                        menu.openRelative();
+                    }
                 }
             }
 

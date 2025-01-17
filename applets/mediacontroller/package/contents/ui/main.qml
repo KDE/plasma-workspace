@@ -40,6 +40,9 @@ PlasmoidItem {
     readonly property bool canQuit: mpris2Model.currentPlayer?.canQuit ?? false
     readonly property int shuffle: mpris2Model.currentPlayer?.shuffle ?? 0
     readonly property int loopStatus: mpris2Model.currentPlayer?.loopStatus ?? 0
+    readonly property real playbackRate: mpris2Model.currentPlayer?.rate ?? 1.0
+    readonly property real minimumPlaybackRate: mpris2Model.currentPlayer?.minimumRate ?? 1.0
+    readonly property real maximumPlaybackRate: mpris2Model.currentPlayer?.maximumRate ?? 1.0
     // END model properties
 
     Plasmoid.icon: switch (root.playbackStatus) {
