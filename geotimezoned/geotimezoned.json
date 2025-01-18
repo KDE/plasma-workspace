@@ -16,6 +16,7 @@
         "Description[sl]": "Samodejno spremeni časovni pas sistema na osnovi trenutne lokacije",
         "Description[sv]": "Ändra automatiskt systemets tidszon baserat på nuvarande plats",
         "Description[tr]": "Geçerli konuma bağlı olarak sistem zamanını kendiliğinden değiştirin",
+        "Description[uk]": "Автоматично змінювати часовий пояс на основі поточного місця перебування",
         "Description[zh_CN]": "基于当前位置自动更改系统时区",
         "Name": "Location-based System Time Zone",
         "Name[ar]": "المنطقة الزمنية للنظام اعتمادًا الموقع",
@@ -33,6 +34,7 @@
         "Name[sl]": "Časovni pas, ki temelji na lokaciji sistema",
         "Name[sv]": "Platsbaserad systemtidszon",
         "Name[tr]": "Konum Tabanlı Sistem Zaman Dilimi",
+        "Name[uk]": "Часовий пояс системи на основі місця перебування",
         "Name[zh_CN]": "基于位置的系统时区"
     }
 }
