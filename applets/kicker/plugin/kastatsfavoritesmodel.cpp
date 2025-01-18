@@ -241,18 +241,18 @@ public:
             qCDebug(KICKER_DEBUG) << "No ordering for this applet found, trying others";
             const auto allGroups = cfg->groupList();
             int instanceHighest = -1;
-            for (const auto &groupName : allGroups) {
+            for (const QStringView groupName : allGroups) {
                 if (groupName.contains(QStringLiteral(".favorites.instance-"))
                     && (groupName.endsWith(QStringLiteral("-global")) || groupName.endsWith(m_activities.currentActivity()))) {
                     // the group names look like "Favorites-org.kde.plasma.kicker.favorites.instance-58-1bd5bb42-187c-4c77-a746-c9644c5da866"
-                    const QStringList split = groupName.split(QStringLiteral("-"));
+                    const QList<QStringView> split = groupName.split(u'-');
                     if (split.length() >= 3) {
                         bool ok;
                         int instanceN = split[2].toInt(&ok);
                         if (!ok) {
                             continue;
                         }
-                        auto groupOrdering = KConfigGroup(cfg, groupName).readEntry("ordering", QStringList());
+                        auto groupOrdering = KConfigGroup(cfg, groupName.toString()).readEntry("ordering", QStringList());
                         if (groupOrdering.length() != m_items.length()) {
                             continue;
                         }
@@ -267,7 +267,7 @@ public:
                         if (instanceHighest == instanceN) {
                             // we got a -global as well as -{activity uuid}
                             // we add them
-                            if (groupName.endsWith(QStringLiteral("-global"))) {
+                            if (groupName.endsWith(u"-global")) {
                                 ordering += groupOrdering;
                             } else {
                                 ordering = groupOrdering + ordering;
