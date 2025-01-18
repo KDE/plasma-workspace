@@ -41,14 +41,13 @@ CurrentContainmentActionsModel::CurrentContainmentActionsModel(Plasma::Containme
 
         QStandardItem *item = new QStandardItem();
         item->setData(i.key(), ActionRole);
-        item->setData(i.value()->metadata().pluginId(), PluginNameRole);
+        item->setData(i.value()->id(), PluginNameRole);
 
-        m_plugins[i.key()] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, i.value()->metadata().pluginId());
+        m_plugins[i.key()] = Plasma::PluginLoader::self()->loadContainmentActions(m_containment, i.value()->id());
         m_plugins[i.key()]->setContainment(m_containment);
         KConfigGroup cfg(&m_baseCfg, i.key());
         m_plugins[i.key()]->restore(cfg);
-        item->setData(m_plugins[i.key()]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(),
-                      HasConfigurationInterfaceRole);
+        item->setData(m_plugins[i.key()]->hasConfigurationInterface(), HasConfigurationInterfaceRole);
 
         appendRow(item);
     }
@@ -116,7 +115,7 @@ bool CurrentContainmentActionsModel::append(const QString &action, const QString
     // empty config: the new one will ne in default state
     KConfigGroup tempConfig(&m_tempConfigParent, u"test"_s);
     m_plugins[action]->restore(tempConfig);
-    item->setData(m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(), HasConfigurationInterfaceRole);
+    item->setData(m_plugins[action]->hasConfigurationInterface(), HasConfigurationInterfaceRole);
     m_removedTriggers.removeAll(action);
 
     appendRow(item);
@@ -154,9 +153,7 @@ void CurrentContainmentActionsModel::update(int row, const QString &action, cons
             // empty config: the new one will ne in default state
             KConfigGroup tempConfig(&m_tempConfigParent, u"test"_s);
             m_plugins[action]->restore(tempConfig);
-            setData(idx,
-                    m_plugins[action]->metadata().rawData().value(QStringLiteral("X-Plasma-HasConfigurationInterface")).toBool(),
-                    HasConfigurationInterfaceRole);
+            setData(idx, m_plugins[action]->hasConfigurationInterface(), HasConfigurationInterfaceRole);
         }
 
         Q_EMIT configurationChanged();
@@ -236,7 +233,7 @@ void CurrentContainmentActionsModel::save()
         KConfigGroup cfg(&m_baseCfg, i.key());
         i.value()->save(cfg);
 
-        m_containment->setContainmentActions(i.key(), i.value()->metadata().pluginId());
+        m_containment->setContainmentActions(i.key(), i.value()->id());
     }
 }
 
