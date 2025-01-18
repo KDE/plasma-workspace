@@ -11,6 +11,7 @@ import queue
 import shutil
 import subprocess
 import sys
+import sysconfig
 import tempfile
 import threading
 import time
@@ -384,8 +385,10 @@ class SystemTrayTests(unittest.TestCase):
         5. Activate menu actions
         6. NeedsAttention/Active/Passive status
         """
-        status_notifier = subprocess.Popen([os.path.join(CMAKE_RUNTIME_OUTPUT_DIRECTORY, "systemtray_statusnotifiertest")], stdout=subprocess.PIPE)
-        self.addCleanup(status_notifier.terminate)
+        asan_env = os.environ.copy()
+        asan_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip()
+        status_notifier = subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "statusnotifieritemtest.py")], stdout=subprocess.PIPE, stderr=sys.stderr, env=asan_env)
+        self.addCleanup(status_notifier.kill)
         time.sleep(1)  # Wait until the icon appears
         rect: dict = self.driver.find_image_occurrence(self.take_screenshot(), generate_color_block(255, 0, 0))["rect"]  # Red
 
@@ -448,7 +451,7 @@ class SystemTrayTests(unittest.TestCase):
         # The icon is hidden
         self.assertRaises(Exception, self.driver.find_image_occurrence, self.take_screenshot(), generate_color_block(255, 0, 0))
 
-        status_notifier.terminate()
+        status_notifier.kill()
         status_notifier.wait(10)
         output = status_notifier.stdout.readlines()
         self.assertEqual(len(expected_result), len(output), f"output: f{output} expected: {expected_result}")
