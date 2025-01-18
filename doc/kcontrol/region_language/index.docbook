@@ -36,21 +36,21 @@ Applications to be displayed in.
 </para>
 
 <para>
-In most cases, you can simply select the language, and all
-options will be set in an appropriate manner.
+In most cases, you can simply select the language and all
+options will be set accordingly.
 The &plasma; Workspace and &kde; Applications are written in American English and are
 translated into many different languages by teams of volunteers. These
 translations need to be installed first before you can choose to use them.
 </para>
 <note><para>Ensure that you have installed the &plasma; language packages or translations for the
 languages you want to use.</para>
-<para>As &plasma; is build upon the &Qt; libraries, you need the &Qt; translations for the selected
+<para>As &plasma; is built upon the &Qt; libraries, you need the &Qt; translations for the selected
 languages as well to have a fully localized &GUI;.</para></note>
 
 
 <para>
-On each selection bar you can see examples how the settings look
-like and which measurement units are used. In addition to numbers, you can see 
+On each selection bar you can see examples of what each setting looks
+like and which measurement units are used. In addition to numbers, you can see
 how currency values, dates, and times in long and short format are displayed.
 When you change any of the settings, the preview shows the effects of the
 changes before you apply them.
@@ -83,11 +83,11 @@ you can select the locale for <guilabel>Numbers</guilabel>, <guilabel>Time</guil
 
 <note>
 <para>
-Previously, Language and Formats are independent settings. Since &plasma; 5.26, they were
+Previously, Language and Formats were independent settings. Since &plasma; 5.26, they have been
 merged into this KCM called Region And Language. Changing a language does
 <emphasis>automatically change</emphasis> the settings for numbers,
 currency &etc; to the corresponding country or region. However, this change
-does not break the old configuration. The configuration file still located
+does not break the old configuration. The configuration file is still located
 at <emphasis>~/.config/plasma-localerc</emphasis> .
 </para>
 </note>
