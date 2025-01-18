@@ -222,17 +222,6 @@ void CurrentContainmentActionsModel::showConfiguration(int row, QQuickItem *ctx)
     configDlg->show();
 }
 
-QVariant CurrentContainmentActionsModel::aboutMetaData(int row) const
-{
-    const QString action = itemData(index(row, 0)).value(ActionRole).toString();
-
-    if (!m_plugins.contains(action)) {
-        return QVariant();
-    }
-
-    return QVariant::fromValue(m_plugins[action]->metadata());
-}
-
 void CurrentContainmentActionsModel::save()
 {
     for (const QString &removedTrigger : std::as_const(m_removedTriggers)) {
