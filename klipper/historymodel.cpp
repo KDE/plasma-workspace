@@ -124,7 +124,10 @@ HistoryModel::HistoryModel()
     }
 
     loadSettings();
-    loadHistory();
+    if (!loadHistory()) [[unlikely]] {
+        return;
+    }
+
     // Only connect to this signal after loading the history, to avoid the action of loading triggering a save
     auto modelChanged = [this](const QModelIndex & /*parent*/, int first, int /*last*/) {
         changed(first == 0);
@@ -170,22 +173,37 @@ HistoryModel::HistoryModel()
 
 HistoryModel::~HistoryModel()
 {
+    if (!m_bKeepContents) {
+        m_db.close();
+        QFile(m_db.databaseName()).remove();
+        QDir(m_dbFolder + u"/data").removeRecursively();
+    }
 }
 
 void HistoryModel::clear()
 {
+    if (!m_db.isOpen()) {
+        return;
+    }
     if (TransactionGuard transaction(&m_db); !transaction.exec(u"DELETE FROM main"_s) || !transaction.exec(u"DELETE FROM aux"_s)) {
         return;
     }
     QList<QUrl> deletedDataFolders;
+    deletedDataFolders.reserve(m_items.size());
     std::transform(m_items.cbegin(), m_items.cend(), std::back_inserter(deletedDataFolders), [this](const auto &item) {
         return QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/');
     });
-    KIO::del(deletedDataFolders, KIO::HideProgressInfo);
+    auto job = KIO::del(deletedDataFolders, KIO::HideProgressInfo);
+    ++m_pendingJobs;
+    connect(job, &KJob::finished, this, [this] {
+        --m_pendingJobs;
+    });
     QSqlQuery(u"VACUUM"_s, m_db).exec();
-    beginResetModel();
-    m_items.clear();
-    endResetModel();
+    if (!m_items.empty()) { // Is empty when m_bKeepContents is false
+        beginResetModel();
+        m_items.clear();
+        endResetModel();
+    }
 }
 
 void HistoryModel::clearHistory()
@@ -358,9 +376,16 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
         }
     }
 
+    QList<QUrl> deletedDataFolders;
+    deletedDataFolders.reserve(count);
     for (int i = 0; i < count; ++i) {
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + m_items[row + i]->uuid() + u'/'), KIO::HideProgressInfo);
+        deletedDataFolders.append(QUrl::fromLocalFile(m_dbFolder + u"/data/" + m_items[row + i]->uuid() + u'/'));
     }
+    auto job = KIO::del(deletedDataFolders, KIO::HideProgressInfo);
+    ++m_pendingJobs;
+    connect(job, &KJob::finished, this, [this] {
+        --m_pendingJobs;
+    });
 
     beginRemoveRows(QModelIndex(), row, row + count - 1);
     m_items.erase(std::next(m_items.cbegin(), row), std::next(m_items.cbegin(), row + count));
@@ -473,20 +498,17 @@ bool HistoryModel::insert(const QString &text)
 
 bool HistoryModel::loadHistory()
 {
-    if (m_maxSize == 0 || !KlipperSettings::keepClipboardContents()) [[unlikely]] {
-        // rare special case - cannot insert any items
-        return true;
-    }
-
     constexpr const char *failedLoadWarning = "Failed to load history resource. Clipboard history cannot be read.";
     // don't use "appdata", klipper is also a kicker applet
-    // Try to reuse the previous connection
     if (qEnvironmentVariableIsSet("KLIPPER_DATABASE")) {
         m_dbFolder = QFileInfo(qEnvironmentVariable("KLIPPER_DATABASE")).absoluteDir().absolutePath();
     } else {
         m_dbFolder = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper";
     }
-    QDir().mkpath(m_dbFolder + u'/' + u"data");
+    QDir dataDir(m_dbFolder + u"/data");
+    dataDir.mkpath(dataDir.absolutePath());
+
+    // Try to reuse the previous connection
     m_db = QSqlDatabase::database(u"klipper"_s);
     if (!m_db.isValid()) [[likely]] {
         m_db = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"klipper"_s);
@@ -521,6 +543,21 @@ bool HistoryModel::loadHistory()
         return false;
     }
 
+    if (!m_bKeepContents) {
+        QSqlQuery clearQuery(m_db);
+        clearQuery.exec(u"DELETE FROM main"_s);
+        clearQuery.exec(u"DELETE FROM aux"_s);
+        clearQuery.exec(u"VACUUM"_s);
+        if (dataDir.exists()) {
+            dataDir.removeRecursively();
+            dataDir.mkpath(dataDir.absolutePath());
+        }
+    }
+
+    if (m_maxSize == 0) {
+        return true;
+    }
+
     // The last row is either items.size() - 1 or m_maxSize - 1.
     decltype(m_items) items;
     if (query.exec(u"SELECT * FROM main ORDER BY last_used_time DESC, added_time DESC LIMIT %1"_s.arg(QString::number(m_maxSize))) && query.isSelect()) {
@@ -532,8 +569,7 @@ bool HistoryModel::loadHistory()
     }
 
     if (items.empty()) {
-        // special case - nothing to insert, so just clear.
-        clear();
+        // special case - nothing to insert
         return true;
     }
 
@@ -559,6 +595,7 @@ void HistoryModel::loadSettings()
     m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
     // 0 is the id of "Ignore selection" radiobutton
     m_bIgnoreSelection = KlipperSettings::ignoreSelection();
+    m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bSynchronize = KlipperSettings::syncClipboards();
     m_bSelectionTextOnly = KlipperSettings::selectionTextOnly();
 
@@ -566,6 +603,12 @@ void HistoryModel::loadSettings()
         connect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard, Qt::UniqueConnection);
     } else {
         disconnect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard);
+    }
+
+    // BUG: 142882
+    // Security: If user has save clipboard turned off, old data should be deleted from disk
+    if (!m_bKeepContents) {
+        clear();
     }
 }
 
@@ -581,6 +624,11 @@ void HistoryModel::moveToTop(const QString &uuid)
         return;
     }
     moveToTop(existingItemIndex);
+}
+
+KCoreConfigSkeleton *HistoryModel::settings()
+{
+    return KlipperSettings::self();
 }
 
 void HistoryModel::moveToTop(qsizetype row)

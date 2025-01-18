@@ -15,6 +15,7 @@
 
 #include "klipper_export.h"
 
+class KCoreConfigSkeleton;
 class HistoryItem;
 class SystemClipboard;
 class UpdateDatabaseJob;
@@ -111,10 +112,7 @@ private Q_SLOTS:
 private:
     explicit HistoryModel();
 
-    /**
-     * Enter clipboard data in the history.
-     */
-    [[nodiscard]] std::shared_ptr<HistoryItem> applyClipChanges(const QMimeData *data);
+    static KCoreConfigSkeleton *settings();
 
     void moveToTop(qsizetype row);
 
@@ -129,8 +127,10 @@ private:
     bool m_displayImages = false;
     bool m_bNoNullClipboard = true;
     bool m_bIgnoreSelection = true;
+    bool m_bKeepContents = true;
     bool m_bSynchronize = false;
     bool m_bSelectionTextOnly = true;
 
     friend class DeclarativeHistoryModel;
+    friend class HistoryModelTest;
 };

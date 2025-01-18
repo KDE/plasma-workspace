@@ -13,6 +13,10 @@
 #include <QStandardPaths>
 #include <QTest>
 
+#include <KConfigGroup>
+#include <KCoreConfigSkeleton>
+#include <KSharedConfig>
+
 class HistoryModelTest : public QObject
 {
     Q_OBJECT
@@ -24,6 +28,7 @@ private Q_SLOTS:
     void testIndexOf();
     void testType_data();
     void testType();
+    void testKeepClipboardContents();
 };
 
 void HistoryModelTest::initTestCase()
@@ -69,6 +74,7 @@ void HistoryModelTest::testSetMaxSize()
     history->setMaxSize(0);
     QCOMPARE(history->maxSize(), 0);
     QCOMPARE(history->rowCount(), 0);
+    QTRY_COMPARE(history->pendingJobs(), 0);
 }
 
 void HistoryModelTest::testInsertRemove()
@@ -119,6 +125,7 @@ void HistoryModelTest::testInsertRemove()
 
     QVERIFY(history->remove(fooUuid));
     QCOMPARE(history->rowCount(), 0);
+    QTRY_COMPARE(history->pendingJobs(), 0);
 }
 
 void HistoryModelTest::testClear()
@@ -140,6 +147,7 @@ void HistoryModelTest::testClear()
 
     // and clear
     history->clear();
+    QTRY_COMPARE(history->pendingJobs(), 0);
     QCOMPARE(history->rowCount(), 0);
 }
 
@@ -161,6 +169,7 @@ void HistoryModelTest::testIndexOf()
     QCOMPARE(history->index(history->indexOf(fooUuid)).data(HistoryModel::UuidRole).toString(), fooUuid);
 
     history->clear();
+    QTRY_COMPARE(history->pendingJobs(), 0);
     QVERIFY(history->indexOf(fooUuid) < 0);
 }
 
@@ -193,6 +202,65 @@ void HistoryModelTest::testType()
     history->insert(item.get());
     QCOMPARE(history->index(0).data(HistoryModel::TypeRole).value<HistoryItemType>(), expectedType);
     history->clear();
+    QTRY_COMPARE(history->pendingJobs(), 0);
+}
+
+void HistoryModelTest::testKeepClipboardContents()
+{
+    auto setKeepClipboardContents = [](bool value) {
+        std::shared_ptr<HistoryModel> history = HistoryModel::self();
+        auto settings = history->settings()->sharedConfig();
+        KConfigGroup group = settings->group(QStringLiteral("General"));
+        QVERIFY(group.isValid());
+        group.writeEntry(QStringLiteral("KeepClipboardContents"), value);
+        settings->sync();
+        history->settings()->read();
+        history->loadSettings();
+    };
+
+    {
+        std::shared_ptr<HistoryModel> history = HistoryModel::self();
+        setKeepClipboardContents(true);
+        QVERIFY(history->insert(QStringLiteral("foo")));
+        QCOMPARE(history->rowCount(), 1);
+        QCOMPARE(history->pendingJobs(), 1);
+        QTRY_COMPARE(history->pendingJobs(), 0);
+    }
+
+    {
+        qDebug() << "Stage 2";
+        std::shared_ptr<HistoryModel> history = HistoryModel::self();
+        QCOMPARE(history->rowCount(), 1);
+
+        setKeepClipboardContents(false);
+    }
+
+    qDebug() << "Stage 3";
+    QDir dataDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data");
+    QVERIFY(!dataDir.exists());
+
+    {
+        std::shared_ptr<HistoryModel> history = HistoryModel::self();
+        QCOMPARE(history->rowCount(), 0);
+        dataDir.refresh();
+        QVERIFY(dataDir.exists());
+        QCOMPARE(dataDir.entryList(QDir::NoDotAndDotDot).size(), 0);
+
+        QVERIFY(history->insert(QStringLiteral("foobar")));
+        QCOMPARE(history->rowCount(), 1);
+        QCOMPARE(history->pendingJobs(), 1);
+        QTRY_COMPARE(history->pendingJobs(), 0);
+        dataDir.refresh();
+        qDebug() << dataDir.entryList();
+        QCOMPARE(dataDir.entryList().size(), 3); // QList(".", "..", "8843d7f92416211de9ebb963ff4ce28125932878")
+
+        setKeepClipboardContents(true);
+    }
+
+    qDebug() << "Stage 4";
+    dataDir.refresh();
+    QVERIFY(dataDir.exists());
+    QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper").removeRecursively();
 }
 
 QTEST_MAIN(HistoryModelTest)
