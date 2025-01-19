@@ -50,7 +50,14 @@ PlasmaComponents3.AbstractButton {
         //in case of explicit & the button manages it by itself
         enabled: !(RegExp(/\&[^\&]/).test(root.text))
         sequence: root.Kirigami.MnemonicData.sequence
-        onActivated: root.animateClick()
+        onActivated: {
+            // TODO Remove check once we depend on Qt 6.8.
+            if (typeof root.animateClick === "function") {
+                root.animateClick();
+            } else {
+                root.clicked();
+            }
+        }
     }
 
     background: Rectangle {
