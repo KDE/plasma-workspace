@@ -129,6 +129,7 @@ void UpdateDatabaseJob::onDataDirReady(KJob *job)
         return;
     }
 
+    QSet<QStringView> addedUuidList;
     for (const MimeData &data : m_mimeDataList) {
         QSqlQuery query(*m_db);
         query.prepare(u"INSERT INTO aux (uuid, mimetype, data_uuid) VALUES (?, ?, ?)"_s);
@@ -136,9 +137,13 @@ void UpdateDatabaseJob::onDataDirReady(KJob *job)
         query.addBindValue(data.type);
         query.addBindValue(data.uuid);
         if (query.exec()) {
-            KIO::StoredTransferJob *fileJob =
-                KIO::storedPut(data.data, QUrl::fromLocalFile(QString(m_dataDir + m_uuid + u'/' + data.uuid)), -1, KIO::HideProgressInfo);
-            addSubjob(fileJob);
+            // Different mimetypes can refer to the same content. Often happens between text/plain;charset=utf-8 and text/plain
+            if (QStringView uuid(data.uuid); !addedUuidList.contains(uuid)) {
+                addedUuidList.insert(uuid);
+                KIO::StoredTransferJob *fileJob =
+                    KIO::storedPut(data.data, QUrl::fromLocalFile(QString(m_dataDir + m_uuid + u'/' + data.uuid)), -1, KIO::HideProgressInfo);
+                addSubjob(fileJob);
+            }
         }
     }
 }
