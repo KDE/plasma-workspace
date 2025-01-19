@@ -206,11 +206,6 @@ void Klipper::reloadConfig()
         KlipperSettings::self()->read();
     }
     loadSettings();
-    // BUG: 142882
-    // Security: If user has save clipboard turned off, old data should be deleted from disk
-    if (!m_bKeepContents) {
-        m_historyModel->clear();
-    }
 }
 
 // DBUS - don't call from Klipper itself
@@ -250,7 +245,6 @@ void Klipper::slotStartShowTimer()
 
 void Klipper::loadSettings()
 {
-    m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
     // NOTE: not used atm - kregexpeditor is not ported to kde4
     m_bUseGUIRegExpEditor = KlipperSettings::useGUIRegExpEditor();

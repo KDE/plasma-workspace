@@ -135,7 +135,6 @@ private:
     QAction *m_cyclePrevAction;
     QAction *m_showOnMousePos;
 
-    bool m_bKeepContents : 1;
     bool m_bURLGrabber : 1;
     bool m_bReplayActionInHistory : 1;
     bool m_bUseGUIRegExpEditor : 1;
