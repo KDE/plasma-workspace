@@ -518,10 +518,10 @@ bool HistoryModel::loadHistory()
         } else {
             m_db.setDatabaseName(m_dbFolder + u"/history3.sqlite");
         }
-        if (!m_db.open()) {
-            qCWarning(KLIPPER_LOG) << failedLoadWarning << m_db.lastError().text();
-            return false;
-        }
+    }
+    if (!m_db.isOpen() && !m_db.open()) {
+        qCWarning(KLIPPER_LOG) << failedLoadWarning << m_db.lastError().text();
+        return false;
     }
 
     QSqlQuery query(m_db);
