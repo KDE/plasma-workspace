@@ -402,18 +402,11 @@ PlasmaExtras.Representation {
                     z: 999
                     value: 0
                     visible: canSeek
+                    stepSize: 5000000 // 5s in microseconds.
 
                     KeyNavigation.backtab: playerSelector.currentItem
                     KeyNavigation.up: KeyNavigation.backtab
                     KeyNavigation.down: playPauseButton.enabled ? playPauseButton : (playPauseButton.KeyNavigation.left.enabled ? playPauseButton.KeyNavigation.left : playPauseButton.KeyNavigation.right)
-                    Keys.onLeftPressed: {
-                        seekSlider.value = Math.max(0, seekSlider.value - 5000000) // microseconds
-                        seekSlider.moved();
-                    }
-                    Keys.onRightPressed: {
-                        seekSlider.value = Math.max(0, seekSlider.value + 5000000) // microseconds
-                        seekSlider.moved();
-                    }
 
                     onMoved: {
                         if (!disablePositionUpdate) {
