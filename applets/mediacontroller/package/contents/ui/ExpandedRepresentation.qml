@@ -412,6 +412,7 @@ PlasmaExtras.Representation {
                         if (!disablePositionUpdate) {
                             // delay setting the position to avoid race conditions
                             queuedPositionUpdate.restart()
+                            flashToolTipTimer.restart();
                         }
                     }
                     onPressedChanged: {
@@ -423,35 +424,62 @@ PlasmaExtras.Representation {
                             seekToolTip.visible = true;
                         } else {
                             seekToolTip.delay = Qt.binding(() => Kirigami.Units.toolTipDelay);
-                            seekToolTip.visible = Qt.binding(() => seekToolTipHandler.hovered);
+                            seekToolTip.visible = Qt.binding(() => seekToolTip.shouldBeVisible);
                         }
+                    }
+
+                    // Briefly flash tooltip when position gets changed by the user.
+                    Timer {
+                        id: flashToolTipTimer
+                        interval: Kirigami.Units.humanMoment / 2
                     }
 
                     HoverHandler {
                         id: seekToolTipHandler
+                        // HACK point changes all the time, even when moving the slider with the keyboard?!
+                        // Store its position (the only thing we really care here) in a property so we get
+                        // notified only of that.
+                        readonly property point position: point.position
+                        // Unstick tooltip as soon as the mouse moves.
+                        onPositionChanged: flashToolTipTimer.stop()
                     }
 
                     PlasmaComponents3.ToolTip {
                         id: seekToolTip
+                        property real indicatedPosition
                         readonly property real position: {
-                            if (seekSlider.pressed) {
+                            if (seekSlider.pressed || flashToolTipTimer.running) {
                                 return seekSlider.visualPosition;
                             }
                             // does not need mirroring since we work on raw mouse coordinates
                             const mousePos = seekToolTipHandler.point.position.x - seekSlider.handle.width / 2;
                             return Math.max(0, Math.min(1, mousePos / (seekSlider.width - seekSlider.handle.width)));
                         }
-                        x: Math.round(seekSlider.handle.width / 2 + position * (seekSlider.width - seekSlider.handle.width) - width / 2)
+
+                        x: Math.round(seekSlider.handle.width / 2 + indicatedPosition * (seekSlider.width - seekSlider.handle.width) - width / 2)
                         // Never hide (not on press, no timeout) as long as the mouse is hovered
                         closePolicy: PlasmaComponents3.Popup.NoAutoClose
                         timeout: -1
                         text: {
                             // Label text needs mirrored position again
-                            const effectivePosition = seekSlider.mirrored ? (1 - position) : position;
+                            const effectivePosition = seekSlider.mirrored ? (1 - indicatedPosition) : indicatedPosition;
                             return KCoreAddons.Format.formatDuration((seekSlider.to - seekSlider.from) * effectivePosition / 1000, expandedRepresentation.durationFormattingOptions)
                         }
+
                         // NOTE also controlled in onPressedChanged handler above
-                        visible: seekToolTipHandler.hovered
+                        readonly property bool shouldBeVisible: seekToolTipHandler.hovered || flashToolTipTimer.running
+                        visible: shouldBeVisible
+
+                        // Don't update position during hide animation,
+                        // "visible" only becomes false once the exit animation finishes.
+                        function updateIndicatedPosition() {
+                            if (shouldBeVisible) {
+                                indicatedPosition = position;
+                            }
+                        }
+
+                        onPositionChanged: updateIndicatedPosition()
+                        onVisibleChanged: updateIndicatedPosition()
                     }
 
                     Timer {
