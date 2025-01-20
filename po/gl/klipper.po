@@ -9,7 +9,7 @@
 # Marce Villarino <mvillarino@kde-espana.es>, 2009, 2011.
 # Marce Villarino <mvillarino@kde-espana.es>, 2012.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015.
-# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2024, 2025 Adrián Chaves (Gallaecio)
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
 # colaborar connosco, podes atopar máis información en http://trasno.gpul.org
@@ -21,7 +21,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-27 02:34+0000\n"
-"PO-Revision-Date: 2023-07-29 10:00+0200\n"
+"PO-Revision-Date: 2025-01-19 13:39+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -29,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: configdialog.cpp:80
 #, kde-format
@@ -763,7 +763,7 @@ msgstr "Inmediatamente ao seleccionar"
 msgid ""
 "Show the popup menu of applicable actions as soon as a selection is made."
 msgstr ""
-"Amosar o menú emerxente de accións aplicables en canto se faga a selección."
+"Amosar o menú emerxente de accións aplicábeis en canto se faga a selección."
 
 #. i18n: ectx: label, entry (NoActionsForWM_CLASS), group (General)
 #: klipper.kcfg:57
@@ -853,7 +853,7 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 "Se se selecciona un nome de ficheiro ou URL, incluír no menú emerxente as "
-"aplicacións que admiten o seu tipo MIME."
+"aplicacións que aceptan o seu tipo MIME."
 
 #: klipperpopup.cpp:105
 #, kde-format
