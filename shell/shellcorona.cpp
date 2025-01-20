@@ -623,16 +623,17 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
         // Try to parse the item geometries
         const KConfigGroup genericConf(&contConfig, QStringLiteral("General"));
-        const QStringList appletsGeomStrings = genericConf.readEntry(QStringLiteral("ItemsGeometries"), QString()).split(QChar(u';'));
+        const QString appletsGeomeString = genericConf.readEntry(QStringLiteral("ItemsGeometries"), QString());
+        const QList<QStringView> appletsGeomStrings = QStringView(appletsGeomeString).split(QChar(u';'));
 
-        QHash<QString, QRect> appletGeometries;
-        for (const QString &encoded : appletsGeomStrings) {
-            const QStringList keyValue = encoded.split(QLatin1Char(':'));
+        QHash<QStringView, QRect> appletGeometries;
+        for (const QStringView encoded : appletsGeomStrings) {
+            const QList<QStringView> keyValue = encoded.split(QLatin1Char(':'));
             if (keyValue.length() != 2) {
                 continue;
             }
 
-            const QStringList rectPieces = keyValue.crbegin()->split(QLatin1Char(','));
+            const QList<QStringView> rectPieces = keyValue.crbegin()->split(QLatin1Char(','));
             if (rectPieces.length() != 5) {
                 continue;
             }
