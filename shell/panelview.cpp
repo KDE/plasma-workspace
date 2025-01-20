@@ -456,6 +456,9 @@ void PanelView::clonePanelTo(Plasma::Types::Location location, QScreen *screen)
 
 QRect PanelView::relativeConfigRect() const
 {
+    if (!m_screenToFollow) {
+        return QRect();
+    }
     PanelConfigView *panelConfigView = qobject_cast<PanelConfigView *>(m_panelConfigView);
     if (!panelConfigView || !panelConfigView->isVisible()) {
         return QRect();
