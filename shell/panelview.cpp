@@ -1656,7 +1656,6 @@ void PanelView::refreshContainment()
             }
         }
     });
-    connect(containment(), &Plasma::Applet::userConfiguringChanged, this, &PanelView::updateExclusiveZone);
 
     // FEATURE 352476: cancel focus on the panel when clicking outside
     connect(this, &PanelView::activeFocusItemChanged, containment(), [this] {
