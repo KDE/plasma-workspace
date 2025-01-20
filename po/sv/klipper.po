@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:43+0000\n"
+"POT-Creation-Date: 2025-01-20 00:43+0000\n"
 "PO-Revision-Date: 2025-01-11 12:29+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -622,17 +622,17 @@ msgstr "Nollställ ikonen till kommandots standardvärde"
 msgid "Icon:"
 msgstr "Ikon:"
 
-#: historymodel.cpp:194
+#: historymodel.cpp:212
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Vill du verkligen tömma och ta bort hela klippbordshistoriken?"
 
-#: historymodel.cpp:195
+#: historymodel.cpp:213
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Töm klippbordshistorik"
 
-#: historymodel.cpp:244
+#: historymodel.cpp:262
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
@@ -686,7 +686,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Visa klippbordets innehåll vid muspekarens position"
 
-#: klipper.cpp:313
+#: klipper.cpp:307
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -696,27 +696,27 @@ msgstr ""
 "Du kan aktivera webbadressåtgärder senare på sidan <interface>Åtgärder</"
 "interface> i miniprogrammets inställningsfönster"
 
-#: klipper.cpp:447
+#: klipper.cpp:441
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobil streckkod"
 
-#: klipper.cpp:490 klipper.cpp:499
+#: klipper.cpp:484 klipper.cpp:493
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klippbordshistorik"
 
-#: klipper.cpp:516
+#: klipper.cpp:510
 #, kde-format
 msgid "up"
 msgstr "upp"
 
-#: klipper.cpp:523
+#: klipper.cpp:517
 #, kde-format
 msgid "current"
 msgstr "nuvarande"
 
-#: klipper.cpp:530
+#: klipper.cpp:524
 #, kde-format
 msgid "down"
 msgstr "ner"

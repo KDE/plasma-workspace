@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2024, 2025 Adrián Chaves (Gallaecio)
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 00:41+0000\n"
-"PO-Revision-Date: 2024-12-16 01:01+0100\n"
+"PO-Revision-Date: 2025-01-19 11:57+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -276,12 +276,14 @@ msgctxt ""
 msgid "%1 (Brazil)"
 msgstr "%1 (Brasil)"
 
+# skip-rule: trasno/2012_support
 #: localegeneratorubuntu.cpp:42
 #, kde-format
 msgctxt "@info:warning"
 msgid "Can't locate executable `check-language-support`"
 msgstr "Non é posíbel atopar o executábel «check-language-support»."
 
+# skip-rule: trasno/2012_support
 #: localegeneratorubuntu.cpp:52
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
@@ -477,7 +479,7 @@ msgstr ""
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
-msgstr "Non se pode usar o idioma «%1»."
+msgstr "Non se permite o idioma «%1»."
 
 #: ui/AdvancedLanguageSelectPage.qml:55
 #, kde-format

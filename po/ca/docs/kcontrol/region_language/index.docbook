@@ -49,12 +49,12 @@
 >En aquesta pàgina podreu establir els idiomes preferits i els formats en els quals es mostrarà l'espai de treball &plasma; i les aplicacions &kde;. </para>
 
 <para
->En la majoria dels casos només cal seleccionar l'idioma i totes les opcions es configuraran de la manera apropiada. L'espai de treball &plasma; i les aplicacions &kde; estan escrites en anglès americà i són traduïdes a molts idiomes diferents per equips de voluntaris. Aquestes traduccions hauran d'estar instal·lades abans que pugueu optar per utilitzar-les. </para>
+>En la majoria dels casos només cal seleccionar l'idioma i totes les opcions es configuraran d'acord amb això. L'espai de treball &plasma; i les aplicacions &kde; estan escrites en anglès americà i són traduïdes a molts idiomes diferents per equips de voluntaris. Aquestes traduccions hauran d'estar instal·lades abans que pugueu optar per utilitzar-les. </para>
 <note
 ><para
 >Assegureu-vos que heu instal·lat els paquets d'idiomes o les traduccions del &plasma; per als idiomes que voleu emprar.</para>
 <para
->Com el &plasma; aprofita les biblioteques &Qt;, necessitareu les traduccions de les &Qt; per als idiomes seleccionats, per tal de tenir una &IGU; totalment localitzada.</para
+>Com el &plasma; s'ha construït sobre les biblioteques &Qt;, necessitareu les traduccions de les &Qt; per als idiomes seleccionats, per tal de tenir una &IGU; totalment traduïda.</para
 ></note>
 
 
@@ -90,7 +90,7 @@
 
 <note>
 <para
->Anteriorment, l'idioma i els formats eren paràmetres independents. Des del &plasma; 5.26, es van fusionar en aquest KCM anomenat Regió i idioma. Canviar un idioma fa <emphasis
+>Anteriorment, l'idioma i els formats eren paràmetres independents. Des del &plasma; 5.26, s'han fusionat en aquest KCM anomenat Regió i idioma. Canviar un idioma fa <emphasis
 >canviar automàticament</emphasis
 > els paràmetres dels nombres, moneda, &etc; al país o regió corresponent. No obstant això, aquest canvi no trenca l'antiga configuració. El fitxer de configuració encara es troba a <emphasis
 >~/.config/plasma-localerc</emphasis

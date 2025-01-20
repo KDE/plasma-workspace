@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:43+0000\n"
+"POT-Creation-Date: 2025-01-20 00:43+0000\n"
 "PO-Revision-Date: 2024-12-09 15:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -632,18 +632,18 @@ msgstr "Скинути піктограму до типової для кома�
 msgid "Icon:"
 msgstr "Піктограма:"
 
-#: historymodel.cpp:194
+#: historymodel.cpp:212
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 "Ви справді хочете спорожнити і вилучити увесь журнал буфера обміну даними?"
 
-#: historymodel.cpp:195
+#: historymodel.cpp:213
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Спорожнити журнал буфера обміну даними"
 
-#: historymodel.cpp:244
+#: historymodel.cpp:262
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
@@ -697,7 +697,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Показувати записи буфера на позиції вказівника"
 
-#: klipper.cpp:313
+#: klipper.cpp:307
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -707,27 +707,27 @@ msgstr ""
 "Ви можете увімкнути дії з адресами пізніше за допомогою сторінки "
 "<interface>Дії</interface> вікна налаштувань аплету буфера обміну даними"
 
-#: klipper.cpp:447
+#: klipper.cpp:441
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Мобільний штрихкод"
 
-#: klipper.cpp:490 klipper.cpp:499
+#: klipper.cpp:484 klipper.cpp:493
 #, kde-format
 msgid "Clipboard history"
 msgstr "Журнал буфера даних"
 
-#: klipper.cpp:516
+#: klipper.cpp:510
 #, kde-format
 msgid "up"
 msgstr "вгору"
 
-#: klipper.cpp:523
+#: klipper.cpp:517
 #, kde-format
 msgid "current"
 msgstr "поточний"
 
-#: klipper.cpp:530
+#: klipper.cpp:524
 #, kde-format
 msgid "down"
 msgstr "вниз"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:43+0000\n"
+"POT-Creation-Date: 2025-01-20 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -612,17 +612,17 @@ msgstr "आदेशस्य कृते चिह्नं पूर्वन
 msgid "Icon:"
 msgstr "चिह्नम् :"
 
-#: historymodel.cpp:194
+#: historymodel.cpp:212
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "किं भवान् वास्तवमेव सम्पूर्णं क्लिप्बोर्ड-इतिहासं स्वच्छं विलोपयितुम् इच्छति?"
 
-#: historymodel.cpp:195
+#: historymodel.cpp:213
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "क्लिपबोर्ड इतिहासं स्वच्छं कुर्वन्तु"
 
-#: historymodel.cpp:244
+#: historymodel.cpp:262
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
@@ -676,7 +676,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Mouse Position इत्यत्र Clipboard Items दर्शयतु"
 
-#: klipper.cpp:313
+#: klipper.cpp:307
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -686,27 +686,27 @@ msgstr ""
 "भवन्तः पश्चात् Clipboard एप्लेट् इत्यस्य विन्यासविण्डो इत्यस्य <interface>Actions</"
 "interface> पृष्ठे URL क्रियाः सक्षमं कर्तुं शक्नुवन्ति"
 
-#: klipper.cpp:447
+#: klipper.cpp:441
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "मोबाइल बारकोड"
 
-#: klipper.cpp:490 klipper.cpp:499
+#: klipper.cpp:484 klipper.cpp:493
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:516
+#: klipper.cpp:510
 #, kde-format
 msgid "up"
 msgstr "उपरि"
 
-#: klipper.cpp:523
+#: klipper.cpp:517
 #, kde-format
 msgid "current"
 msgstr "वर्त्तमानः"
 
-#: klipper.cpp:530
+#: klipper.cpp:524
 #, kde-format
 msgid "down"
 msgstr "अधः"

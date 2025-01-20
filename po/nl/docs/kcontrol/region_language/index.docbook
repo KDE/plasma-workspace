@@ -49,17 +49,17 @@
 >Op deze pagina kunt u uw voorkeurtalen en formaten instellen die in de &plasma;-werkruimte en toepassingen worden gebruikt. </para>
 
 <para
->In de meeste gevallen kunt u eenvoudig de taal selecteren en alle opties zullen ingesteld worden op de van toepassing zijnde manier. De &plasma;-werkruimte en &kde;-toepassingen zijn geschreven in Amerikaans-Engels en vertaald in veel verschillende talen door teams van vrijwilligers. Deze vertalingen moeten eerst worden geïnstalleerd voordat u hun gebruik kunt kiezen. </para>
+>In de meeste gevallen kunt u eenvoudig de taal selecteren en alle opties zullen overeenkomstig ingesteld worden. De &plasma;-werkruimte en &kde;-toepassingen zijn geschreven in Amerikaans-Engels en vertaald in veel verschillende talen door teams van vrijwilligers. Deze vertalingen moeten eerst worden geïnstalleerd voordat u hun gebruik kunt kiezen. </para>
 <note
 ><para
 >Ga na dat u de &plasma; taalpakketten of vertalingen voor de talen die u wilt gebruiken hebt geïnstalleerd.</para>
 <para
->Omdat &plasma; is gebouwd bovenop de &Qt; bibliotheken, hebt u ook de &Qt;-vertalingen voor de geselecteerde talen nodig evenals een volledig vertaalde &GUI;.</para
+>Omdat &plasma; is gebouwd bovenop de &Qt;-bibliotheken, hebt u ook de &Qt;-vertalingen voor de geselecteerde talen nodig evenals een volledig vertaalde &GUI;.</para
 ></note>
 
 
 <para
->Op elke selectiebalk ziet u voorbeelden van hoe de instellingen er uit zien en welke eenheden van maten gebruikt worden. Naast getallen, ziet u hoe waarden van munteenheid, datums en tijden in lang en kort formaat worden getoond. Wanneer u elk van de instellingen wijzigt, tonen de voorbeelden de effecten van de wijzigingen voordat u ze toepast. </para>
+>Op elke selectiebalk kunt u voorbeelden zien van hoe elke instelling er uitziet en welke eenheden van maten gebruikt worden. Naast getallen, ziet u hoe waarden van munteenheid, datums en tijden in lang en kort formaat worden getoond. Wanneer u elk van de instellingen wijzigt, tonen de voorbeelden de effecten van de wijzigingen voordat u ze toepast. </para>
 
 <para
 >Op de knop <guilabel
@@ -96,6 +96,6 @@
 >wijzigt automatisch</emphasis
 > de instellingen voor getallen, munteenheden &etc; naar het overeenkomstige land of regio. Deze wijziging breekt niet de oude configuratie. Het configuratiebestand is nog steeds gelokaliseerd op <emphasis
 >~/.config/plasma-localerc</emphasis
-> . </para>
+>. </para>
 </note>
 </article>
