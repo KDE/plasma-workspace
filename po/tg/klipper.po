@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 02:34+0000\n"
+"POT-Creation-Date: 2025-01-20 02:42+0000\n"
 "PO-Revision-Date: 2019-09-19 19:00+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -589,18 +589,18 @@ msgstr ""
 msgid "Icon:"
 msgstr ""
 
-#: historymodel.cpp:194
+#: historymodel.cpp:212
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr ""
 
-#: historymodel.cpp:195
+#: historymodel.cpp:213
 #, fuzzy, kde-format
 #| msgid "Delete clipboard history?"
 msgid "Clear Clipboard History"
 msgstr "Таърихи ҳофизаи муваққатиро нест мекунед?"
 
-#: historymodel.cpp:244
+#: historymodel.cpp:262
 #, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
@@ -658,7 +658,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Менюи ба &рӯй бароянда дар мавқеъи ҷойгиршавии нишоннамо"
 
-#: klipper.cpp:313
+#: klipper.cpp:307
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -666,27 +666,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:447
+#: klipper.cpp:441
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:490 klipper.cpp:499
+#: klipper.cpp:484 klipper.cpp:493
 #, kde-format
 msgid "Clipboard history"
 msgstr ""
 
-#: klipper.cpp:516
+#: klipper.cpp:510
 #, kde-format
 msgid "up"
 msgstr ""
 
-#: klipper.cpp:523
+#: klipper.cpp:517
 #, kde-format
 msgid "current"
 msgstr ""
 
-#: klipper.cpp:530
+#: klipper.cpp:524
 #, kde-format
 msgid "down"
 msgstr ""

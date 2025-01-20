@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 02:34+0000\n"
+"POT-Creation-Date: 2025-01-20 02:42+0000\n"
 "PO-Revision-Date: 2022-10-31 11:53+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -634,17 +634,17 @@ msgstr "Đặt lại biểu tượng về mặc định cho lệnh"
 msgid "Icon:"
 msgstr "Biểu tượng:"
 
-#: historymodel.cpp:194
+#: historymodel.cpp:212
 #, kde-format
 msgid "Do you really want to clear and delete the entire clipboard history?"
 msgstr "Bạn có thực sự muốn làm trống và xoá toàn bộ lịch sử bảng nháp?"
 
-#: historymodel.cpp:195
+#: historymodel.cpp:213
 #, kde-format
 msgid "Clear Clipboard History"
 msgstr "Xoá lịch sử bảng nháp"
 
-#: historymodel.cpp:244
+#: historymodel.cpp:262
 #, fuzzy, kde-format
 #| msgid "%1x%2 %3bpp"
 msgctxt "@info:tooltip width x height"
@@ -701,7 +701,7 @@ msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Hiện các mục tại vị trí con trỏ chuột"
 
-#: klipper.cpp:313
+#: klipper.cpp:307
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -711,27 +711,27 @@ msgstr ""
 "Bạn có thể bật các hành động cho URL về sau ở trong trang <interface>Hành "
 "động</interface> của cửa sổ cấu hình tiểu ứng dụng bảng nháp"
 
-#: klipper.cpp:447
+#: klipper.cpp:441
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mã vạch điện thoại"
 
-#: klipper.cpp:490 klipper.cpp:499
+#: klipper.cpp:484 klipper.cpp:493
 #, kde-format
 msgid "Clipboard history"
 msgstr "Lịch sử bảng nháp"
 
-#: klipper.cpp:516
+#: klipper.cpp:510
 #, kde-format
 msgid "up"
 msgstr "lên"
 
-#: klipper.cpp:523
+#: klipper.cpp:517
 #, kde-format
 msgid "current"
 msgstr "hiện tại"
 
-#: klipper.cpp:530
+#: klipper.cpp:524
 #, kde-format
 msgid "down"
 msgstr "xuống"
