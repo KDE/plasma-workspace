@@ -809,7 +809,7 @@ void playStartupSound()
 
     KNotifyConfig notifyConfig(QStringLiteral("plasma_workspace"), QStringLiteral("startkde"));
     const QString action = notifyConfig.readEntry(QStringLiteral("Action"));
-    if (action.isEmpty() || !action.split(QLatin1Char('|')).contains(QLatin1String("Sound"))) {
+    if (action.isEmpty() || !QStringView(action).split(QLatin1Char('|')).contains(u"Sound")) {
         // no startup sound configured
         return;
     }
