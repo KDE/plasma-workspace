@@ -1735,6 +1735,9 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     if (status == Plasma::Types::NeedsAttentionStatus) {
         showTemporarily();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
+        if (KWindowSystem::isPlatformX11()) {
+            KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
+        }
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
             requestUpdate();
@@ -1742,7 +1745,6 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
     } else if (status == Plasma::Types::AcceptingInputStatus) {
         m_corona->savePreviousWindow();
         setFlags(flags() & ~Qt::WindowDoesNotAcceptFocus);
-
         if (KWindowSystem::isPlatformX11()) {
             KX11Extras::forceActiveWindow(winId());
         } else {
@@ -1769,6 +1771,9 @@ void PanelView::refreshStatus(Plasma::Types::ItemStatus status)
 
         restoreAutoHide();
         setFlags(flags() | Qt::WindowDoesNotAcceptFocus);
+        if (KWindowSystem::isPlatformX11()) {
+            KX11Extras::setState(winId(), NET::SkipSwitcher | NET::KeepAbove);
+        }
         if (m_layerWindow) {
             m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityNone);
             requestUpdate();
