@@ -522,9 +522,16 @@ void DesktopView::slotContainmentChanged()
         connect(desktopEditMode, &QAction::triggered, [&]() {
             m_enteredEditMode = true;
         });
-        connect(m_containment->corona(), &Plasma::Corona::editModeChanged, this, [&](bool editMode) {
+        connect(m_containment->corona(), &Plasma::Corona::editModeChanged, this, [this](bool editMode) {
             if (!editMode) {
                 m_enteredEditMode = false;
+            }
+        });
+        connect(m_containment->corona(), &Plasma::Corona::editModeChanged, desktopEditMode, [desktopEditMode](bool editMode) {
+            if (editMode) {
+                desktopEditMode->setText(i18n("Exit Edit Mode"));
+            } else {
+                desktopEditMode->setText(i18n("Enter Edit Mode"));
             }
         });
     }
