@@ -112,6 +112,8 @@ KCMUtils.ScrollViewKCM {
 
             width: itemsList.width
 
+            Kirigami.Theme.useAlternateBackgroundColor: true
+
             // Don't need highlight, hover, or pressed effects
             highlighted: false
             hoverEnabled: false
