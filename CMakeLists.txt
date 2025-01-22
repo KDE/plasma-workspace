@@ -57,7 +57,7 @@ find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
 find_package(QCoro6 REQUIRED COMPONENTS Core)
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
                     Archive Auth CoreAddons Crash DBusAddons Declarative GlobalAccel GuiAddons
-                    I18n IconThemes IdleTime ItemModels KCMUtils KDED KIO NewStuff Notifications
+                    I18n IconThemes ItemModels KCMUtils KDED KIO NewStuff Notifications
                     NotifyConfig Package Parts Prison Runner StatusNotifierItem Svg TextEditor
                     TextWidgets UnitConversion Wallet
                     OPTIONAL_COMPONENTS DocTools)
