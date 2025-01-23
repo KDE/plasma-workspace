@@ -1,0 +1,9 @@
+## timezones.json
+
+This file is taken from https://github.com/evansiroky/timezone-boundary-builder/releases; the 'timezones.geojson.zip' file is chosen as it maps directly to the system available system timezones on Linux. The file is simplified using mapshaper (https://github.com/mbloch/mapshaper) to keep it under ~400kb.
+
+The script "timezone_geojson_update.py" automates the download and compress process so that it can be run before any release or upon a timezone change.
+
+## offline_tiles
+
+These are the official openstreetmap tiles. The tile named `offline_tiles/osm_100_l_<a>_<b>_<c>.png` has been downloaded from the URL `https://b.tile.openstreetmap.org/<a>/<b>/<c>.png`.

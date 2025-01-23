@@ -17,6 +17,7 @@ from dateutil.relativedelta import relativedelta
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.keys import Keys
 
 WIDGET_ID: Final = "org.kde.plasma.digitalclock"
 KDE_VERSION: Final = 6
@@ -143,14 +144,19 @@ class DigitalClockTests(unittest.TestCase):
 
     def test_2_config_dialog_3_time_zones(self) -> None:
         """
-        Checks the time zone list
+        Checks the time zone map
         """
         self.driver.find_element(AppiumBy.NAME, "Time Zones").click()
         wait = WebDriverWait(self.driver, 10)
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Time Zones…"))).click()
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add More Time Zones")))
-        self.driver.find_element(AppiumBy.NAME, "Search").send_keys("utc+03:00")
-        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "UTC+03:00")))
+        wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Add Time Zone…"))).click()
+        el = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Timezone region selector")))
+        el.click()
+        wait = WebDriverWait(self.driver, 1)
+        el.send_keys(Keys.DOWN)
+        el.send_keys(Keys.ENTER)
+        wait = WebDriverWait(self.driver, 1)
+        el = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Timezone location selector")))
+
 
 
 if __name__ == '__main__':
