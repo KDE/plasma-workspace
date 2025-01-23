@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:43+0000\n"
+"POT-Creation-Date: 2025-01-23 00:42+0000\n"
 "PO-Revision-Date: 2025-01-07 19:50+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "adrian@chaves.io"
 
-#: currentcontainmentactionsmodel.cpp:206
+#: currentcontainmentactionsmodel.cpp:203
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Configurar o complemento de accións do rato"
@@ -150,9 +150,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Quere agochar o cadro da vista previa?"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "Activar o modo de edición"
+
+#: desktopview.cpp:532
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "Activar o modo de edición"
 
 #: main.cpp:86
@@ -330,13 +336,13 @@ msgstr ""
 "adaptativa poden provocar un mal rendemento ao arrastrar ou cambiar de "
 "tamaño as xanelas. Considere usar outra configuración."
 
-#: panelview.cpp:1112
+#: panelview.cpp:1115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Agochar a configuración do panel"
 
-#: panelview.cpp:1114
+#: panelview.cpp:1117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

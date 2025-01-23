@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:43+0000\n"
+"POT-Creation-Date: 2025-01-23 00:42+0000\n"
 "PO-Revision-Date: 2025-01-07 15:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -30,7 +30,7 @@ msgid "Your emails"
 msgstr ""
 "kaanozdincer@gmail.com, a_developer_2002@outlook.com, emir_sari@icloud.com"
 
-#: currentcontainmentactionsmodel.cpp:206
+#: currentcontainmentactionsmodel.cpp:203
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Fare Eylemleri Eklentisini Yapılandır"
@@ -151,9 +151,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Önizleme Afişini Gizle?"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "Düzenleme Kipine Gir"
+
+#: desktopview.cpp:532
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "Düzenleme Kipine Gir"
 
 #: main.cpp:86
@@ -330,13 +336,13 @@ msgstr ""
 "kipinin pencere sürükleme ve yeniden boyutlandırma başarımını kötü biçimde "
 "etkilediği bilinmektedir. Başka bir ayar kullanmayı düşünün."
 
-#: panelview.cpp:1112
+#: panelview.cpp:1115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Panel Yapılandırmasını Gizle"
 
-#: panelview.cpp:1114
+#: panelview.cpp:1117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:43+0000\n"
+"POT-Creation-Date: 2025-01-23 00:42+0000\n"
 "PO-Revision-Date: 2025-01-09 09:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -29,7 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "safa1996alfulaij@gmail.com"
 
-#: currentcontainmentactionsmodel.cpp:206
+#: currentcontainmentactionsmodel.cpp:203
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "اضبط ملحقة إجراءات الفأرة"
@@ -150,9 +150,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "أأخف لافتة المعاينة؟"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "ادخل نمط التحرير"
+
+#: desktopview.cpp:532
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "ادخل نمط التحرير"
 
 #: main.cpp:86
@@ -330,13 +336,13 @@ msgstr ""
 "ووضع العتامة التكيفي في ضعف أداء سحب النافذة وتغيير حجمها. فكر في استخدام "
 "إعدادات أخرى."
 
-#: panelview.cpp:1112
+#: panelview.cpp:1115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "أخف ضبط اللوحة"
 
-#: panelview.cpp:1114
+#: panelview.cpp:1117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

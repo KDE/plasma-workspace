@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-02 00:40+0000\n"
+"POT-Creation-Date: 2025-01-23 00:42+0000\n"
 "PO-Revision-Date: 2024-09-02 18:06+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -68,27 +68,27 @@ msgstr "Synlighet"
 msgid "Keyboard Shortcut"
 msgstr "Snabbtangent"
 
-#: package/contents/ui/ConfigEntries.qml:242
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Visas om relevant"
 
-#: package/contents/ui/ConfigEntries.qml:243
+#: package/contents/ui/ConfigEntries.qml:245
 #, kde-format
 msgid "Always shown"
 msgstr "Visa alltid"
 
-#: package/contents/ui/ConfigEntries.qml:244
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Always hidden"
 msgstr "Alltid dold"
 
-#: package/contents/ui/ConfigEntries.qml:245
+#: package/contents/ui/ConfigEntries.qml:247
 #, kde-format
 msgid "Disabled"
 msgstr "Aktiverad"
 
-#: package/contents/ui/ConfigEntries.qml:311
+#: package/contents/ui/ConfigEntries.qml:313
 #, kde-format
 msgid "Always show all entries"
 msgstr "Visa alltid alla poster"

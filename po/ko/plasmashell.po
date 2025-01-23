@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:43+0000\n"
+"POT-Creation-Date: 2025-01-23 00:42+0000\n"
 "PO-Revision-Date: 2024-11-29 00:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: currentcontainmentactionsmodel.cpp:206
+#: currentcontainmentactionsmodel.cpp:203
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "마우스 동작 플러그인 설정"
@@ -147,9 +147,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "미리 보기 배너 숨기기?"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "편집 모드 들어가기"
+
+#: desktopview.cpp:532
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "편집 모드 들어가기"
 
 #: main.cpp:86
@@ -327,13 +333,13 @@ msgstr ""
 "창 드래그와 크기 조정 성능에 악영향을 줄 수 있습니다. 다른 설정을 사용하십시"
 "오."
 
-#: panelview.cpp:1112
+#: panelview.cpp:1115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "패널 설정 숨기기"
 
-#: panelview.cpp:1114
+#: panelview.cpp:1117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:43+0000\n"
+"POT-Creation-Date: 2025-01-23 00:42+0000\n"
 "PO-Revision-Date: 2023-10-19 20:34+0300\n"
 "Last-Translator: Alosra <aleomoeini@gmail.com>\n"
 "Language-Team: fa\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 
-#: currentcontainmentactionsmodel.cpp:206
+#: currentcontainmentactionsmodel.cpp:203
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "تنظیم افزونه عملکرد های موشواره"
@@ -157,9 +157,14 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr ""
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr ""
+
+#: desktopview.cpp:532
+#, kde-format
+msgid "Exit Edit Mode"
 msgstr ""
 
 #: main.cpp:86
@@ -331,13 +336,13 @@ msgid ""
 "settings."
 msgstr ""
 
-#: panelview.cpp:1112
+#: panelview.cpp:1115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr ""
 
-#: panelview.cpp:1114
+#: panelview.cpp:1117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

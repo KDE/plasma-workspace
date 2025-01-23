@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:43+0000\n"
+"POT-Creation-Date: 2025-01-23 00:42+0000\n"
 "PO-Revision-Date: 2024-10-16 19:14+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -30,7 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lasse.liehu@gmail.com,translator@legisign.org"
 
-#: currentcontainmentactionsmodel.cpp:206
+#: currentcontainmentactionsmodel.cpp:203
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "Hiiritoimintojen asetukset"
@@ -150,9 +150,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Piilotetaanko esikatselualue?"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "Siirry muokkaustilaan"
+
+#: desktopview.cpp:532
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "Siirry muokkaustilaan"
 
 #: main.cpp:86
@@ -331,13 +337,13 @@ msgstr ""
 "aiheuttavat tunnetusti huonoa ikkunan siirron ja koon muuttamisen "
 "suorituskykyä. Harkitse toisia asetuksia."
 
-#: panelview.cpp:1112
+#: panelview.cpp:1115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Piilota paneelin asetukset"
 
-#: panelview.cpp:1114
+#: panelview.cpp:1117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

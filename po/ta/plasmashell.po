@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-22 00:43+0000\n"
+"POT-Creation-Date: 2025-01-23 00:42+0000\n"
 "PO-Revision-Date: 2024-09-01 17:00+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Kde-l10n-ta@kde.org"
 
-#: currentcontainmentactionsmodel.cpp:206
+#: currentcontainmentactionsmodel.cpp:203
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
 msgstr "சுட்டி செயல்கள் செருகுநிரலை அமைத்தல்"
@@ -148,9 +148,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "முன்னோட்டப் பட்டையை மறைக்கலாமா?"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "திருத்தும் பயன்முறையில் நுழை"
+
+#: desktopview.cpp:532
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "திருத்தும் பயன்முறையில் நுழை"
 
 #: main.cpp:86
@@ -328,13 +334,13 @@ msgstr ""
 "ஒளிபுகாமை மாறக்கூடியதாக இருந்தாலோ, சாளரங்களை இழுக்கும்போதும் அளவுமாற்றும்போதும் "
 "சாளரநிரலின் வேகம் பாதிக்கப்படலாம். அமைப்புகளை மாற்றுமாறு பரிந்துரைக்கிறோம்."
 
-#: panelview.cpp:1112
+#: panelview.cpp:1115
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "பலகை அமைப்புகளை மறை"
 
-#: panelview.cpp:1114
+#: panelview.cpp:1117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
