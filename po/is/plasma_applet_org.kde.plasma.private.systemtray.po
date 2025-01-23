@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-02 00:40+0000\n"
+"POT-Creation-Date: 2025-01-23 02:31+0000\n"
 "PO-Revision-Date: 2024-12-13 21:23+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -69,27 +69,27 @@ msgstr "Sýnileiki"
 msgid "Keyboard Shortcut"
 msgstr "Flýtilykill"
 
-#: package/contents/ui/ConfigEntries.qml:242
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Sýnt þegar við á"
 
-#: package/contents/ui/ConfigEntries.qml:243
+#: package/contents/ui/ConfigEntries.qml:245
 #, kde-format
 msgid "Always shown"
 msgstr "Alltaf sýnt"
 
-#: package/contents/ui/ConfigEntries.qml:244
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Always hidden"
 msgstr "Alltaf falið"
 
-#: package/contents/ui/ConfigEntries.qml:245
+#: package/contents/ui/ConfigEntries.qml:247
 #, kde-format
 msgid "Disabled"
 msgstr "Óvirkt"
 
-#: package/contents/ui/ConfigEntries.qml:311
+#: package/contents/ui/ConfigEntries.qml:313
 #, kde-format
 msgid "Always show all entries"
 msgstr "Alltaf birta allar færslur"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-02 00:40+0000\n"
+"POT-Creation-Date: 2025-01-23 02:31+0000\n"
 "PO-Revision-Date: 2017-01-14 19:23+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -74,28 +74,28 @@ msgstr "Видљивост"
 msgid "Keyboard Shortcut"
 msgstr "Пречица са тастатуре"
 
-#: package/contents/ui/ConfigEntries.qml:242
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Shown when relevant"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:243
+#: package/contents/ui/ConfigEntries.qml:245
 #, fuzzy, kde-format
 #| msgid "Always show all entries"
 msgid "Always shown"
 msgstr "Увек прикажи све ставке"
 
-#: package/contents/ui/ConfigEntries.qml:244
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Always hidden"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:245
+#: package/contents/ui/ConfigEntries.qml:247
 #, kde-format
 msgid "Disabled"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:311
+#: package/contents/ui/ConfigEntries.qml:313
 #, kde-format
 msgid "Always show all entries"
 msgstr "Увек прикажи све ставке"

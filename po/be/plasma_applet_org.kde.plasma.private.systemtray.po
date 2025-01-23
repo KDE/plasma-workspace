@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-02 00:40+0000\n"
+"POT-Creation-Date: 2025-01-23 02:31+0000\n"
 "PO-Revision-Date: 2024-11-06 22:00\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -73,27 +73,27 @@ msgstr "Бачнасць"
 msgid "Keyboard Shortcut"
 msgstr "Спалучэнне клавіш"
 
-#: package/contents/ui/ConfigEntries.qml:242
+#: package/contents/ui/ConfigEntries.qml:244
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Паказваецца пры неабходнасці"
 
-#: package/contents/ui/ConfigEntries.qml:243
+#: package/contents/ui/ConfigEntries.qml:245
 #, kde-format
 msgid "Always shown"
 msgstr "Паказваецца заўсёды"
 
-#: package/contents/ui/ConfigEntries.qml:244
+#: package/contents/ui/ConfigEntries.qml:246
 #, kde-format
 msgid "Always hidden"
 msgstr "Заўсёды схавана"
 
-#: package/contents/ui/ConfigEntries.qml:245
+#: package/contents/ui/ConfigEntries.qml:247
 #, kde-format
 msgid "Disabled"
 msgstr "Адключана"
 
-#: package/contents/ui/ConfigEntries.qml:311
+#: package/contents/ui/ConfigEntries.qml:313
 #, kde-format
 msgid "Always show all entries"
 msgstr "Заўсёды паказваць усе запісы"
