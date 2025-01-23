@@ -4,6 +4,7 @@
 [Global]
 Name=Notification Manager
 Name[ar]=مدير الإخطارات
+Name[bg]=Управление на известията
 Name[ca]=Gestor de notificacions
 Name[es]=Gestor de notificaciones
 Name[eu]=Jakinarazpen kudeatzailea
@@ -25,6 +26,7 @@ IconName=preferences-desktop-notification-bell
 [Event/inhibitionSummary]
 Name=Summary for unread inhibited notifications
 Name[ar]=ملخص للإخطارات المحظورة غير المقروءة
+Name[bg]=Обобщение на непрочетени и заглушени известия
 Name[ca]=Resum de les notificacions inhibides sense llegir
 Name[es]=Resumen para las notificaciones inhibidas sin leer
 Name[eu]=Irakurri gabeko galarazitako jakinarazpenen laburpena
