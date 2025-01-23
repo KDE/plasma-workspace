@@ -16,7 +16,7 @@ PlasmaComponents3.StackView {
 
     property ModelInterface modelInterface
 
-    implicitWidth: currentItem.implicitWidth
+    implicitWidth: currentItem.Layout.maximumWidth < Infinity ? currentItem.Layout.maximumWidth : currentItem.implicitWidth
     implicitHeight: currentItem.implicitHeight
 
     function beginReply() {
