@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2022-10-31 11:54+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -248,13 +248,13 @@ msgstr "Lựa chọn thêm…"
 msgid "Open"
 msgstr "Mở"
 
-#: package/contents/ui/components/NotificationReplyField.qml:35
+#: package/contents/ui/components/NotificationReplyField.qml:39
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "Viết lời hồi đáp…"
 
-#: package/contents/ui/components/NotificationReplyField.qml:62
+#: package/contents/ui/components/NotificationReplyField.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

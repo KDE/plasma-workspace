@@ -16,7 +16,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-04 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-09-16 13:47+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -417,6 +417,68 @@ msgstr "Ошибка при установке пакета «%1»: %2"
 msgid "Installation Failure"
 msgstr "Ошибка установки"
 
+#: timezoneselector/TimezoneSelector.qml:106
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The currently selected time zone is not available for visualization on this "
+"map"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:179
+#, fuzzy, kde-format
+#| msgid "Zoom Out"
+msgctxt "@action:button"
+msgid "Zoom in"
+msgstr "Отдалить"
+
+#: timezoneselector/TimezoneSelector.qml:195
+#, fuzzy, kde-format
+#| msgid "Zoom Out"
+msgctxt "@action:button"
+msgid "Zoom out"
+msgstr "Отдалить"
+
+#: timezoneselector/TimezoneSelector.qml:227
+#, kde-format
+msgctxt "Placeholder for empty time zone combobox selector"
+msgid "Choose…"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:231
+#, kde-format
+msgid "Timezone region selector"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:251
+#, kde-format
+msgctxt ""
+"Full context is: '<region> region, <zone> time zone.' in the context of time "
+"zone selection."
+msgid "region, "
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:251
+#, kde-format
+msgctxt ""
+"Full context is: 'Choose region' in the context of time zone region "
+"selection."
+msgid "region"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:260
+#, kde-format
+msgid "Timezone location selector"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:277
+#, kde-format
+msgctxt ""
+"Full context is: '<region> region, <zone> time zone.' in the context of time "
+"zone selection."
+msgid "time zone."
+msgstr ""
+
 #~ msgid "&Execute"
 #~ msgstr "&Выполнить"
 
@@ -707,9 +769,6 @@ msgstr "Ошибка установки"
 #~ "\n"
 #~ "Стек вызовов:\n"
 #~ "%3"
-
-#~ msgid "Zoom Out"
-#~ msgstr "Отдалить"
 
 #~ msgid "Configure Plasma..."
 #~ msgstr "Настроить Plasma..."

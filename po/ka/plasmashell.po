@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:42+0000\n"
-"PO-Revision-Date: 2025-01-07 05:26+0100\n"
+"PO-Revision-Date: 2025-01-23 04:26+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -154,10 +154,9 @@ msgid "Enter Edit Mode"
 msgstr "ჩასწორების რეჟიმზე გადასვლა"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "ჩასწორების რეჟიმზე გადასვლა"
+msgstr "ჩასწორების რეჟიმიდან გასვლა"
 
 #: main.cpp:86
 #, kde-format

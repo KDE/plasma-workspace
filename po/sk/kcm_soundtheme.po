@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_soundtheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-25 00:40+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-11-11 17:58+0100\n"
 "Last-Translator: Roman Paholík <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -32,7 +32,7 @@ msgctxt "@option:check"
 msgid "Enable notification sounds"
 msgstr "Povoliť zvuky oznámení"
 
-#: ui/main.qml:97
+#: ui/main.qml:96
 #, kde-format
 msgctxt ""
 "%2 is a theme name or a list of theme names that the current theme inherits "
@@ -43,7 +43,7 @@ msgstr[0] "Založené na: %2"
 msgstr[1] "Založené na: %2"
 msgstr[2] "Založené na: %2"
 
-#: ui/main.qml:110
+#: ui/main.qml:109
 #, kde-format
 msgctxt ""
 "@label Precedes a list of buttons which can be clicked to preview the "
@@ -51,25 +51,25 @@ msgctxt ""
 msgid "Preview:"
 msgstr "Náhľad:"
 
-#: ui/main.qml:129
+#: ui/main.qml:128
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview sound \"%1\""
 msgstr "Náhľad zvuku \"%1“"
 
-#: ui/main.qml:151
+#: ui/main.qml:150
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Náhľad demo zvuku pre tému \"%1“"
 
-#: ui/main.qml:186
+#: ui/main.qml:185
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "Téma %1 neobsahuje zvuk '%2'"
 
-#: ui/main.qml:191
+#: ui/main.qml:190
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "Nepodarilo sa prehrať ukážku zvuku: %1"

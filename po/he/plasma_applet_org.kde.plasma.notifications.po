@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-09-21 08:49+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -276,13 +276,13 @@ msgstr "אפשרויות נוספות…"
 msgid "Open"
 msgstr "פתיחה"
 
-#: package/contents/ui/components/NotificationReplyField.qml:35
+#: package/contents/ui/components/NotificationReplyField.qml:39
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "נא להקליד תגובה…"
 
-#: package/contents/ui/components/NotificationReplyField.qml:62
+#: package/contents/ui/components/NotificationReplyField.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

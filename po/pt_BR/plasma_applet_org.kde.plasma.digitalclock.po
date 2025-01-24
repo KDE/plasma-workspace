@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 00:43+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-11-16 01:48-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -302,7 +302,20 @@ msgstr "Usar padrões regionais"
 msgid "Available Plugins:"
 msgstr "Plugins disponíveis:"
 
-#: package/contents/ui/configTimeZones.qml:42
+#: package/contents/ui/configTimeZones.qml:59
+#, fuzzy, kde-format
+#| msgctxt "This is a city associated with particular time zone"
+#| msgid "Cancun"
+msgid "Cancel"
+msgstr "Cancún"
+
+#: package/contents/ui/configTimeZones.qml:66
+#, fuzzy, kde-format
+#| msgid "Add More Time Zones"
+msgid "Add Selected Time Zone"
+msgstr "Adicionar mais fusos horários"
+
+#: package/contents/ui/configTimeZones.qml:98
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
@@ -312,17 +325,18 @@ msgstr ""
 "lista. Ele só aparecerá quando você alterar o fuso horário do sistema para "
 "outro."
 
-#: package/contents/ui/configTimeZones.qml:59
-#, kde-format
-msgid "Add Time Zones…"
+#: package/contents/ui/configTimeZones.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Time Zones…"
+msgid "Add Time Zone…"
 msgstr "Adicionar fusos horários..."
 
-#: package/contents/ui/configTimeZones.qml:94
+#: package/contents/ui/configTimeZones.qml:156
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "O relógio atualmente está usando este fuso horário"
 
-#: package/contents/ui/configTimeZones.qml:96
+#: package/contents/ui/configTimeZones.qml:158
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -331,27 +345,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Oculto enquanto esta é a cidade do fuso horário local"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Mudar o fuso horário do sistema..."
 
-#: package/contents/ui/configTimeZones.qml:138
+#: package/contents/ui/configTimeZones.qml:200
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Remover este fuso horário"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Fuso horário do sistema"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Fusos horários adicionais"
 
-#: package/contents/ui/configTimeZones.qml:163
+#: package/contents/ui/configTimeZones.qml:225
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -360,12 +374,12 @@ msgstr ""
 "Adicione mais fusos horários para exibir todos eles no miniaplicativo "
 "flutuante ou use um deles para o próprio relógio"
 
-#: package/contents/ui/configTimeZones.qml:177
+#: package/contents/ui/configTimeZones.qml:239
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Mudar o fuso horário exibido rolando sobre o miniaplicativo do relógio"
 
-#: package/contents/ui/configTimeZones.qml:184
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -374,29 +388,11 @@ msgstr ""
 "Usar esse recurso não altera o fuso horário do sistema. Quando você viajar, "
 "altere o fuso horário do sistema."
 
-#: package/contents/ui/configTimeZones.qml:209
-#, kde-format
-msgid "Add More Time Zones"
-msgstr "Adicionar mais fusos horários"
-
-#: package/contents/ui/configTimeZones.qml:221
-#, kde-format
-msgid ""
-"At least one time zone needs to be enabled. Your local time zone was enabled "
-"automatically."
-msgstr ""
-"Pelo menos um fuso horário precisa ser habilitado. Seu fuso horário local "
-"foi habilitado automaticamente."
-
-#: package/contents/ui/configTimeZones.qml:257
-#, kde-format
-msgid "%1, %2 (%3)"
-msgstr "%1, %2 (%3)"
-
-#: package/contents/ui/configTimeZones.qml:259
-#, kde-format
-msgid "%1, %2"
-msgstr "%1, %2"
+#: package/contents/ui/configTimeZones.qml:256
+#, fuzzy, kde-format
+#| msgid "Time Zones"
+msgid "Choose Time Zone"
+msgstr "Fuso horário"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -474,6 +470,19 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Fuso horário local do sistema"
+
+#~ msgid ""
+#~ "At least one time zone needs to be enabled. Your local time zone was "
+#~ "enabled automatically."
+#~ msgstr ""
+#~ "Pelo menos um fuso horário precisa ser habilitado. Seu fuso horário local "
+#~ "foi habilitado automaticamente."
+
+#~ msgid "%1, %2 (%3)"
+#~ msgstr "%1, %2 (%3)"
+
+#~ msgid "%1, %2"
+#~ msgstr "%1, %2"
 
 #~ msgctxt "Format: month year"
 #~ msgid "%1 %2"
@@ -812,10 +821,6 @@ msgstr "Fuso horário local do sistema"
 #~ msgctxt "This is a city associated with particular time zone"
 #~ msgid "Canary"
 #~ msgstr "Canárias"
-
-#~ msgctxt "This is a city associated with particular time zone"
-#~ msgid "Cancun"
-#~ msgstr "Cancún"
 
 #~ msgctxt "This is a city associated with particular time zone"
 #~ msgid "Cape Verde"

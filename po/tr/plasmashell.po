@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:42+0000\n"
-"PO-Revision-Date: 2025-01-07 15:09+0300\n"
+"PO-Revision-Date: 2025-01-23 12:04+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -157,10 +157,9 @@ msgid "Enter Edit Mode"
 msgstr "Düzenleme Kipine Gir"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Düzenleme Kipine Gir"
+msgstr "Düzenleme Kipinden Çık"
 
 #: main.cpp:86
 #, kde-format

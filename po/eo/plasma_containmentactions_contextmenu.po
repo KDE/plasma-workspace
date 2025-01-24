@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_containmentactions_contextmenu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-31 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-06-28 16:51+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -17,54 +17,54 @@ msgstr ""
 "Content-Transfer-Encoding: 8-bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: menu.cpp:108
+#: menu.cpp:109
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "Montri KRunner"
 
-#: menu.cpp:113
+#: menu.cpp:114
 #, kde-format
 msgid "Open Terminal"
 msgstr "Malfermi Terminalon"
 
-#: menu.cpp:117
+#: menu.cpp:118
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Ŝlosi Ekranon"
 
-#: menu.cpp:126
+#: menu.cpp:127
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
 msgstr "Montri Elsalutan Ekranon"
 
-#: menu.cpp:131
+#: menu.cpp:132
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
 msgstr "Ekran-Agordo"
 
-#: menu.cpp:275
+#: menu.cpp:280
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Agordi kromprogramon por kontekstaj menuoj"
 
-#: menu.cpp:285
+#: menu.cpp:290
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Aliaj agoj]"
 
-#: menu.cpp:288
+#: menu.cpp:293
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Ekranfonagoj"
 
-#: menu.cpp:292
+#: menu.cpp:297
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

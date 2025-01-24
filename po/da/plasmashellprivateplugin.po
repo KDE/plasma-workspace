@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-04 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-10-26 11:40+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -397,6 +397,66 @@ msgstr "Installation af pakken %1 mislykkedes: %2."
 #, kde-format
 msgid "Installation Failure"
 msgstr "Installationsfejl"
+
+#: timezoneselector/TimezoneSelector.qml:106
+#, kde-format
+msgctxt "@info"
+msgid ""
+"The currently selected time zone is not available for visualization on this "
+"map"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:179
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom in"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:195
+#, kde-format
+msgctxt "@action:button"
+msgid "Zoom out"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:227
+#, kde-format
+msgctxt "Placeholder for empty time zone combobox selector"
+msgid "Choose…"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:231
+#, kde-format
+msgid "Timezone region selector"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:251
+#, kde-format
+msgctxt ""
+"Full context is: '<region> region, <zone> time zone.' in the context of time "
+"zone selection."
+msgid "region, "
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:251
+#, kde-format
+msgctxt ""
+"Full context is: 'Choose region' in the context of time zone region "
+"selection."
+msgid "region"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:260
+#, kde-format
+msgid "Timezone location selector"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:277
+#, kde-format
+msgctxt ""
+"Full context is: '<region> region, <zone> time zone.' in the context of time "
+"zone selection."
+msgid "time zone."
+msgstr ""
 
 #~ msgid "&Execute"
 #~ msgstr "&Kør"

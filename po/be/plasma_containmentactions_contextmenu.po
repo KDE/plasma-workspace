@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-31 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -22,54 +22,54 @@ msgstr ""
 "plasma_containmentactions_contextmenu.po\n"
 "X-Crowdin-File-ID: 10842\n"
 
-#: menu.cpp:108
+#: menu.cpp:109
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "Паказаць KRunner"
 
-#: menu.cpp:113
+#: menu.cpp:114
 #, kde-format
 msgid "Open Terminal"
 msgstr "Адкрыць тэрмінал"
 
-#: menu.cpp:117
+#: menu.cpp:118
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Экран блакавання"
 
-#: menu.cpp:126
+#: menu.cpp:127
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
 msgstr "Паказваць экран выхаду"
 
-#: menu.cpp:131
+#: menu.cpp:132
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
 msgstr "Канфігурацыя дысплэя"
 
-#: menu.cpp:275
+#: menu.cpp:280
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Наладжванне ўбудовы кантэкстнага меню"
 
-#: menu.cpp:285
+#: menu.cpp:290
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Іншыя дзеянні]"
 
-#: menu.cpp:288
+#: menu.cpp:293
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Дзеянні са шпалерамі"
 
-#: menu.cpp:292
+#: menu.cpp:297
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-31 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2021-09-05 11:38-0700\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik Language Support\n"
@@ -17,24 +17,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 21.08.1\n"
 
-#: menu.cpp:108
+#: menu.cpp:109
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
 msgstr "Намоиш додани KRunner"
 
-#: menu.cpp:113
+#: menu.cpp:114
 #, kde-format
 msgid "Open Terminal"
 msgstr ""
 
-#: menu.cpp:117
+#: menu.cpp:118
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "Қулфи экран"
 
-#: menu.cpp:126
+#: menu.cpp:127
 #, fuzzy, kde-format
 #| msgctxt "plasma_containmentactions_contextmenu"
 #| msgid "Lock Screen"
@@ -42,31 +42,31 @@ msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
 msgstr "Қулфи экран"
 
-#: menu.cpp:131
+#: menu.cpp:132
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
 msgstr ""
 
-#: menu.cpp:275
+#: menu.cpp:280
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
 msgstr "Танзимоти васлкунаки феҳристи мазмун"
 
-#: menu.cpp:285
+#: menu.cpp:290
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
 msgstr "[Амалиётҳои дигар]"
 
-#: menu.cpp:288
+#: menu.cpp:293
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "Амалиётҳои тасвири замина"
 
-#: menu.cpp:292
+#: menu.cpp:297
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"

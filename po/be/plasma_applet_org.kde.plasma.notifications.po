@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -277,13 +277,13 @@ msgstr "Больш параметраў…"
 msgid "Open"
 msgstr "Адкрыць"
 
-#: package/contents/ui/components/NotificationReplyField.qml:35
+#: package/contents/ui/components/NotificationReplyField.qml:39
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "Увядзіце адказ…"
 
-#: package/contents/ui/components/NotificationReplyField.qml:62
+#: package/contents/ui/components/NotificationReplyField.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

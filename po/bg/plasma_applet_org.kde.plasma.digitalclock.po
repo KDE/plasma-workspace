@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 00:43+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-11-22 18:30+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -299,7 +299,18 @@ msgstr "Използване на регионалните настройки п
 msgid "Available Plugins:"
 msgstr "Налични приставки:"
 
-#: package/contents/ui/configTimeZones.qml:42
+#: package/contents/ui/configTimeZones.qml:59
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: package/contents/ui/configTimeZones.qml:66
+#, fuzzy, kde-format
+#| msgid "Add More Time Zones"
+msgid "Add Selected Time Zone"
+msgstr "Добавяне на още часови зони"
+
+#: package/contents/ui/configTimeZones.qml:98
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
@@ -309,17 +320,18 @@ msgstr ""
 "зона към този списък. Той ще се появи само когато промените общосистемната "
 "часова зона на друга."
 
-#: package/contents/ui/configTimeZones.qml:59
-#, kde-format
-msgid "Add Time Zones…"
+#: package/contents/ui/configTimeZones.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Time Zones…"
+msgid "Add Time Zone…"
 msgstr "Добавяне на часови зони…"
 
-#: package/contents/ui/configTimeZones.qml:94
+#: package/contents/ui/configTimeZones.qml:156
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Часовникът използва понастоящем тази часова зона"
 
-#: package/contents/ui/configTimeZones.qml:96
+#: package/contents/ui/configTimeZones.qml:158
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -328,27 +340,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Скрит, докато това е местната часова зона на града"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Превключване на системната часова зона…"
 
-#: package/contents/ui/configTimeZones.qml:138
+#: package/contents/ui/configTimeZones.qml:200
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Премахване на часова зона"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Системна часова зона"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Допълнителни часови зони"
 
-#: package/contents/ui/configTimeZones.qml:163
+#: package/contents/ui/configTimeZones.qml:225
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -357,14 +369,14 @@ msgstr ""
 "Добавете още часови зони, за да се показват всички от тях в изскачащия "
 "прозорец на аплета, или използвайте една от тях за самия часовник"
 
-#: package/contents/ui/configTimeZones.qml:177
+#: package/contents/ui/configTimeZones.qml:239
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Превключване на показаната часова зона чрез превъртане над аплета на "
 "часовника"
 
-#: package/contents/ui/configTimeZones.qml:184
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -373,29 +385,11 @@ msgstr ""
 "Използването на тази функция не води до промяна на часовата зона в цялата "
 "система. Когато пътувате, вместо това превключете часовата зона на системата."
 
-#: package/contents/ui/configTimeZones.qml:209
-#, kde-format
-msgid "Add More Time Zones"
-msgstr "Добавяне на още часови зони"
-
-#: package/contents/ui/configTimeZones.qml:221
-#, kde-format
-msgid ""
-"At least one time zone needs to be enabled. Your local time zone was enabled "
-"automatically."
-msgstr ""
-"Трябва да бъде активирана поне една часова зона. Местната ви часова зона "
-"беше активирана автоматично."
-
-#: package/contents/ui/configTimeZones.qml:257
-#, kde-format
-msgid "%1, %2 (%3)"
-msgstr "%1, %2 (%3)"
-
-#: package/contents/ui/configTimeZones.qml:259
-#, kde-format
-msgid "%1, %2"
-msgstr "%1, %2"
+#: package/contents/ui/configTimeZones.qml:256
+#, fuzzy, kde-format
+#| msgid "Time Zones"
+msgid "Choose Time Zone"
+msgstr "Времеви зони"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -476,3 +470,16 @@ msgstr "Местно"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Местна часова зона на системата"
+
+#~ msgid ""
+#~ "At least one time zone needs to be enabled. Your local time zone was "
+#~ "enabled automatically."
+#~ msgstr ""
+#~ "Трябва да бъде активирана поне една часова зона. Местната ви часова зона "
+#~ "беше активирана автоматично."
+
+#~ msgid "%1, %2 (%3)"
+#~ msgstr "%1, %2 (%3)"
+
+#~ msgid "%1, %2"
+#~ msgstr "%1, %2"

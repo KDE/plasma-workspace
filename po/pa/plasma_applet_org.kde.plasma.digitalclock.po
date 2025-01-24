@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 00:43+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-10-25 23:30-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -296,24 +296,40 @@ msgstr "ਖੇਤਰੀ ਡਿਫਾਲਟ ਵਰਤੋਂ"
 msgid "Available Plugins:"
 msgstr "ਮੌਜੂਦ ਪਲੱਗਇਨ:"
 
-#: package/contents/ui/configTimeZones.qml:42
+#: package/contents/ui/configTimeZones.qml:59
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "This is a country name associated with a particular time zone in a zone "
+#| "selection dialog"
+#| msgid "France"
+msgid "Cancel"
+msgstr "ਫਰਾਂਸ"
+
+#: package/contents/ui/configTimeZones.qml:66
+#, fuzzy, kde-format
+#| msgid "Add More Time Zones"
+msgid "Add Selected Time Zone"
+msgstr "ਹੋਰ ਸਮਾਂ ਖੇਤਰਾਂ ਨੂੰ ਜੋੜੋ"
+
+#: package/contents/ui/configTimeZones.qml:98
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:59
-#, kde-format
-msgid "Add Time Zones…"
+#: package/contents/ui/configTimeZones.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Time Zones…"
+msgid "Add Time Zone…"
 msgstr "…ਸਮਾਂ ਖੇਤਰ ਜੋੜੋ"
 
-#: package/contents/ui/configTimeZones.qml:94
+#: package/contents/ui/configTimeZones.qml:156
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "ਘੜੀ ਇਸ ਵੇਲੇ ਇਹ ਸਮਾਂ ਖੇਤਰ ਵਰਤ ਰਹੀ ਹੈ"
 
-#: package/contents/ui/configTimeZones.qml:96
+#: package/contents/ui/configTimeZones.qml:158
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -322,68 +338,50 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "ਜਦੋਂ ਇਹ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ ਦਾ ਸ਼ਹਿਰ ਹੋਵੇ ਤਾਂ ਓਹਲੇ ਕਰੋ"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "…ਪੂਰੇ ਸਿਸਟਮ ਲਈ ਸਮਾਂ ਖੇਤਰ ਲਈ ਬਦਲੋ"
 
-#: package/contents/ui/configTimeZones.qml:138
+#: package/contents/ui/configTimeZones.qml:200
 #, kde-format
 msgid "Remove this time zone"
 msgstr "ਇਸ ਸਮੇਂ ਖੇਤਰ ਨੂੰ ਹਟਾਓ"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "ਪੂਰੇ ਸਿਸਟਮ ਲਈ ਸਮਾਂ ਖੇਤਰ"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "ਵਧੀਕ ਸਮਾਂ ਖੇਤਰ"
 
-#: package/contents/ui/configTimeZones.qml:163
+#: package/contents/ui/configTimeZones.qml:225
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
 "one of them for the clock itself"
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:177
+#: package/contents/ui/configTimeZones.qml:239
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "ਘੜੀ ਐਪਲਿਟ ਉੱਤੇ ਸਕਰੋਲ ਕਰਨ ਨਾਲ ਦਿਖਾਉਣ ਵਾਲਾ ਸਮਾਂ ਖੇਤਰ ਬਦਲੋ"
 
-#: package/contents/ui/configTimeZones.qml:184
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
 "travel, switch the systemwide time zone instead."
 msgstr ""
 
-#: package/contents/ui/configTimeZones.qml:209
-#, kde-format
-msgid "Add More Time Zones"
-msgstr "ਹੋਰ ਸਮਾਂ ਖੇਤਰਾਂ ਨੂੰ ਜੋੜੋ"
-
-#: package/contents/ui/configTimeZones.qml:221
-#, kde-format
-msgid ""
-"At least one time zone needs to be enabled. Your local time zone was enabled "
-"automatically."
-msgstr ""
-"ਘੱਟੋ-ਘੱਟ ਇੱਕ ਸਮਾਂ-ਖੇਤਰ ਸਮਰੱਥ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। ਤੁਹਾਡੇ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਆਪਣੇ-ਆਪ ਸਮਰੱਥ ਕੀਤਾ ਗਿਆ "
-"ਸੀ।"
-
-#: package/contents/ui/configTimeZones.qml:257
-#, kde-format
-msgid "%1, %2 (%3)"
-msgstr "%1, %2 (%3)"
-
-#: package/contents/ui/configTimeZones.qml:259
-#, kde-format
-msgid "%1, %2"
-msgstr "%1, %2"
+#: package/contents/ui/configTimeZones.qml:256
+#, fuzzy, kde-format
+#| msgid "Time Zones"
+msgid "Choose Time Zone"
+msgstr "ਸਮਾਂ ਖੇਤਰ"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -461,6 +459,19 @@ msgstr "ਲੋਕਲ"
 #, kde-format
 msgid "System's local time zone"
 msgstr "ਸਿਸਟਮ ਦਾ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ"
+
+#~ msgid ""
+#~ "At least one time zone needs to be enabled. Your local time zone was "
+#~ "enabled automatically."
+#~ msgstr ""
+#~ "ਘੱਟੋ-ਘੱਟ ਇੱਕ ਸਮਾਂ-ਖੇਤਰ ਸਮਰੱਥ ਕਰਨ ਦੀ ਲੋੜ ਹੈ। ਤੁਹਾਡੇ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਆਪਣੇ-ਆਪ ਸਮਰੱਥ ਕੀਤਾ "
+#~ "ਗਿਆ ਸੀ।"
+
+#~ msgid "%1, %2 (%3)"
+#~ msgstr "%1, %2 (%3)"
+
+#~ msgid "%1, %2"
+#~ msgstr "%1, %2"
 
 #~ msgctxt "Format: month year"
 #~ msgid "%1 %2"
@@ -1825,12 +1836,6 @@ msgstr "ਸਿਸਟਮ ਦਾ ਲੋਕਲ ਸਮਾਂ ਖੇਤਰ"
 #, fuzzy
 #~ msgid "Font"
 #~ msgstr "ਫੋਂਟ"
-
-#~ msgctxt ""
-#~ "This is a country name associated with a particular time zone in a zone "
-#~ "selection dialog"
-#~ msgid "France"
-#~ msgstr "ਫਰਾਂਸ"
 
 #~ msgctxt ""
 #~ "This is a country name associated with a particular time zone in a zone "

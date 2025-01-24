@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-02-09 02:52+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -243,13 +243,13 @@ msgstr "他のオプション…"
 msgid "Open"
 msgstr "開く"
 
-#: package/contents/ui/components/NotificationReplyField.qml:35
+#: package/contents/ui/components/NotificationReplyField.qml:39
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "返信を入力…"
 
-#: package/contents/ui/components/NotificationReplyField.qml:62
+#: package/contents/ui/components/NotificationReplyField.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

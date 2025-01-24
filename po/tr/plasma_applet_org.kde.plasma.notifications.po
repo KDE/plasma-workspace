@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-09-21 22:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -257,13 +257,13 @@ msgstr "Daha Fazla Seçenek…"
 msgid "Open"
 msgstr "Aç"
 
-#: package/contents/ui/components/NotificationReplyField.qml:35
+#: package/contents/ui/components/NotificationReplyField.qml:39
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
 msgstr "Bir yanıt yaz…"
 
-#: package/contents/ui/components/NotificationReplyField.qml:62
+#: package/contents/ui/components/NotificationReplyField.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Send"

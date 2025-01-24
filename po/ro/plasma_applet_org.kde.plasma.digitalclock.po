@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 00:43+0000\n"
+"POT-Creation-Date: 2025-01-24 00:43+0000\n"
 "PO-Revision-Date: 2024-06-08 17:16+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -311,7 +311,20 @@ msgstr "Folosește valoarea implicită a regiunii"
 msgid "Available Plugins:"
 msgstr "Extensii disponibile:"
 
-#: package/contents/ui/configTimeZones.qml:42
+#: package/contents/ui/configTimeZones.qml:59
+#, fuzzy, kde-format
+#| msgctxt "This is a city associated with particular time zone"
+#| msgid "Cancun"
+msgid "Cancel"
+msgstr "Cancun"
+
+#: package/contents/ui/configTimeZones.qml:66
+#, fuzzy, kde-format
+#| msgid "Add More Time Zones"
+msgid "Add Selected Time Zone"
+msgstr "Adaugă mai multe fuse orare"
+
+#: package/contents/ui/configTimeZones.qml:98
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
@@ -320,17 +333,18 @@ msgstr ""
 "Sfat: dacă călătoriți des, adăugați încă în această listă fusul orar de "
 "acasă. Acesta va apărea doar când schimbați fusul orar al sistemului."
 
-#: package/contents/ui/configTimeZones.qml:59
-#, kde-format
-msgid "Add Time Zones…"
+#: package/contents/ui/configTimeZones.qml:115
+#, fuzzy, kde-format
+#| msgid "Add Time Zones…"
+msgid "Add Time Zone…"
 msgstr "Adaugă fuse orare…"
 
-#: package/contents/ui/configTimeZones.qml:94
+#: package/contents/ui/configTimeZones.qml:156
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Ceasul folosește acest fus orar în prezent"
 
-#: package/contents/ui/configTimeZones.qml:96
+#: package/contents/ui/configTimeZones.qml:158
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -339,27 +353,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Ascuns cât acesta e orașul fusului orar local"
 
-#: package/contents/ui/configTimeZones.qml:126
+#: package/contents/ui/configTimeZones.qml:188
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Schimbă fusul orar al sistemului…"
 
-#: package/contents/ui/configTimeZones.qml:138
+#: package/contents/ui/configTimeZones.qml:200
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Elimină acest fus orar"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Fusul orar al sistemului"
 
-#: package/contents/ui/configTimeZones.qml:150
+#: package/contents/ui/configTimeZones.qml:212
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Fuse orare suplimentare"
 
-#: package/contents/ui/configTimeZones.qml:163
+#: package/contents/ui/configTimeZones.qml:225
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -368,12 +382,12 @@ msgstr ""
 "Adăugați mai multe fuse orare pentru afișarea tuturor în fereastra "
 "miniaplicației, sau folosiți unul din ele pentru ceas"
 
-#: package/contents/ui/configTimeZones.qml:177
+#: package/contents/ui/configTimeZones.qml:239
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr "Schimbă fusul orar afișat prin derularea peste miniaplicația ceasului"
 
-#: package/contents/ui/configTimeZones.qml:184
+#: package/contents/ui/configTimeZones.qml:246
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -382,29 +396,11 @@ msgstr ""
 "Folosirea acestei funcționalități nu schimbă fusul orar al sistemului. Când "
 "călătoriți, schimbați fusul orar al sistemului."
 
-#: package/contents/ui/configTimeZones.qml:209
-#, kde-format
-msgid "Add More Time Zones"
-msgstr "Adaugă mai multe fuse orare"
-
-#: package/contents/ui/configTimeZones.qml:221
-#, kde-format
-msgid ""
-"At least one time zone needs to be enabled. Your local time zone was enabled "
-"automatically."
-msgstr ""
-"Cel puțin un fus orar trebuie să fie activ. Fusul orar local a fost activat "
-"automat."
-
-#: package/contents/ui/configTimeZones.qml:257
-#, kde-format
-msgid "%1, %2 (%3)"
-msgstr "%1, %2 (%3)"
-
-#: package/contents/ui/configTimeZones.qml:259
-#, kde-format
-msgid "%1, %2"
-msgstr "%1, %2"
+#: package/contents/ui/configTimeZones.qml:256
+#, fuzzy, kde-format
+#| msgid "Time Zones"
+msgid "Choose Time Zone"
+msgstr "Fuse orare"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -482,6 +478,19 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Fusul orar local al sistemului"
+
+#~ msgid ""
+#~ "At least one time zone needs to be enabled. Your local time zone was "
+#~ "enabled automatically."
+#~ msgstr ""
+#~ "Cel puțin un fus orar trebuie să fie activ. Fusul orar local a fost "
+#~ "activat automat."
+
+#~ msgid "%1, %2 (%3)"
+#~ msgstr "%1, %2 (%3)"
+
+#~ msgid "%1, %2"
+#~ msgstr "%1, %2"
 
 #~ msgctxt "Format: month year"
 #~ msgid "%1 %2"
@@ -818,10 +827,6 @@ msgstr "Fusul orar local al sistemului"
 #~ msgctxt "This is a city associated with particular time zone"
 #~ msgid "Canary"
 #~ msgstr "Canare"
-
-#~ msgctxt "This is a city associated with particular time zone"
-#~ msgid "Cancun"
-#~ msgstr "Cancun"
 
 #~ msgctxt "This is a city associated with particular time zone"
 #~ msgid "Cape Verde"
