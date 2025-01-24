@@ -71,7 +71,7 @@ protected:
     /**
      * Backend failed, use QScreen based implementaion
      */
-    void useFallback(bool fallback);
+    void useFallback(bool fallback, const char *reason = nullptr);
 
     QStringList m_outputOrder;
     bool m_orderProtocolPresent = false;
