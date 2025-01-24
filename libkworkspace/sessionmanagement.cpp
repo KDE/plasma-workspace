@@ -74,6 +74,13 @@ SessionManagement::SessionManagement(QObject *parent)
     connect(backend, &SessionBackend::canSuspendThenHibernateChanged, this, &SessionManagement::canSuspendThenHibernateChanged);
     connect(backend, &SessionBackend::aboutToSuspend, this, &SessionManagement::aboutToSuspend);
     connect(backend, &SessionBackend::resumingFromSuspend, this, &SessionManagement::resumingFromSuspend);
+
+    KConfigWatcher::Ptr saveSessionWatcher = KConfigWatcher::create(KSharedConfig::openConfig(u"ksmserverrc"_s));
+    connect(saveSessionWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
+        if (group.name() == u"General" && names.contains("loginMode")) {
+            Q_EMIT canSaveSessionChanged();
+        }
+    });
 }
 
 bool SessionManagement::canShutdown() const
