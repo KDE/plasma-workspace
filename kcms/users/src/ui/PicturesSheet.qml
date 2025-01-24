@@ -16,8 +16,11 @@ Kirigami.OverlaySheet {
     id: picturesSheet
 
     title: i18nc("@title", "Change Avatar")
+    parent: usersDetailPage.QQC2.Overlay.overlay
+
     required property Kirigami.Page usersDetailPage
 
+    readonly property int buttonSize: Kirigami.Units.gridUnit * 6
     readonly property var colorPalette: [
         {"name": i18nc("@item:intable", "It's Nothing"),     "color": "transparent", "dark": false},
         {"name": i18nc("@item:intable", "Feisty Flamingo"),  "color": "#E93A9A", "dark": true},
@@ -39,9 +42,12 @@ Kirigami.OverlaySheet {
     ]
 
     component PicturesGridLayout: GridLayout {
-        rowSpacing: Kirigami.Units.smallSpacing
-        columns: Math.floor((stackSwitcher.implicitWidth - (Kirigami.Units.gridUnit + Kirigami.Units.largeSpacing * 2)) / (Kirigami.Units.gridUnit * 6))
+        readonly property int contentWidth: stackSwitcher.width - Layout.leftMargin - Layout.rightMargin
+        readonly property int delegateWidth: picturesSheet.buttonSize + columnSpacing
+
+        columns: Math.floor(contentWidth / delegateWidth)
         columnSpacing: Kirigami.Units.smallSpacing
+        rowSpacing: Kirigami.Units.smallSpacing
 
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignHCenter
@@ -50,8 +56,8 @@ Kirigami.OverlaySheet {
     }
 
     component PictureButton: QQC2.Button {
-        Layout.preferredHeight: Kirigami.Units.gridUnit * 6
-        Layout.preferredWidth: Layout.preferredHeight
+        Layout.preferredHeight: picturesSheet.buttonSize
+        Layout.preferredWidth: picturesSheet.buttonSize
         display: QQC2.AbstractButton.IconOnly
     }
 
@@ -309,10 +315,11 @@ Kirigami.OverlaySheet {
         destroy();
     }
 
+    width: parent.width - Kirigami.Units.gridUnit * 4
+
     QQC2.StackView {
         id: stackSwitcher
 
-        implicitWidth: usersDetailPage.width - Kirigami.Units.largeSpacing * 4
         implicitHeight: currentItem.implicitHeight
 
         focus: true

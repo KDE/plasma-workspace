@@ -23,9 +23,10 @@ Kirigami.Dialog {
     required property Kirigami.OverlaySheet picturesSheet
     required property Kirigami.Page usersDetailPage
 
+    parent: usersDetailPage.QQC2.Overlay.overlay
     standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
     title: i18nc("@title:window", "Select Picture Area")
-    width: Kirigami.Units.gridUnit * 30
+    width: Math.max(Math.round(parent.width * 0.6), Kirigami.Units.gridUnit * 20) - Kirigami.Units.gridUnit * 4
 
     onAccepted: {
         if (image.sourceSize.height !== image.height) {
