@@ -231,8 +231,8 @@ protected:
     Q_OBJECT_BINDABLE_PROPERTY(AbstractPlayerContainer, QString, m_album, &AbstractPlayerContainer::albumChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, double, m_length, 0.0, &AbstractPlayerContainer::lengthChanged)
 
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, double, m_minimumRate, 0.0, &AbstractPlayerContainer::minimumRateChanged)
-    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, double, m_maximumRate, 0.0, &AbstractPlayerContainer::maximumRateChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, double, m_minimumRate, 1.0, &AbstractPlayerContainer::minimumRateChanged)
+    Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer, double, m_maximumRate, 1.0, &AbstractPlayerContainer::maximumRateChanged)
     Q_OBJECT_BINDABLE_PROPERTY_WITH_ARGS(AbstractPlayerContainer,
                                          PlaybackStatus::Status,
                                          m_playbackStatus,
