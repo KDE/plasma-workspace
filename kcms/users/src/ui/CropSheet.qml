@@ -170,6 +170,9 @@ Kirigami.Dialog {
             // This item surrounds the cropping circle, and keeps it centered and unmoving while performing resizes.
             Item {
                 id: centerCage
+
+                readonly property int constrainedToSquare: Math.min(width, height)
+
                 visible: false
                 width: image.width
                 height: image.height
@@ -183,9 +186,10 @@ Kirigami.Dialog {
                     width: 1
                 }
                 color: "transparent"
-                height: 100
+
+                height: centerCage.constrainedToSquare
+                width: centerCage.constrainedToSquare
                 radius: width / 2
-                width: 100
 
                 anchors {
                     verticalCenter: centerCage.verticalCenter
