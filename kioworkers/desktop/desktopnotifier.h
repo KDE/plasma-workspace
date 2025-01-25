@@ -10,7 +10,7 @@
 #include <QUrl>
 #include <kdedmodule.h>
 
-class KDirWatch;
+class QFileSystemWatcher;
 
 class DesktopNotifier : public KDEDModule
 {
@@ -24,12 +24,11 @@ public Q_SLOTS:
     Q_SCRIPTABLE Q_NOREPLY void watchDir(const QString &path);
 
 private Q_SLOTS:
-    void created(const QString &path);
     void dirty(const QString &path);
 
 private:
     void checkDesktopLocation();
 
-    KDirWatch *dirWatch;
+    QFileSystemWatcher *watcher;
     QUrl m_desktopLocation;
 };
