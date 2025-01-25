@@ -10,6 +10,7 @@
         "Description[fr]": "Modifier automatiquement le fuseau horaire du système en fonction de l'emplacement courant",
         "Description[gl]": "Cambiar automaticamente o fuso horario do sistema segundo a localización actual.",
         "Description[he]": "להחליף את אזור הזמן של המערכת לפי המקום הנוכחי",
+        "Description[hu]": "A rendszer időzónájának automatikus módosítása az aktuális hely alapján",
         "Description[ia]": "Automaticamente cambia le fuso horari de systema basate sur le location currente",
         "Description[it]": "Cambia automaticamente il fuso orario del sistema in base alla posizione attuale",
         "Description[ka]": "ავტომატურად ცვლის სისტემურ დროის სარტყელს თქვენი მდებარეობის მიხედვით",
@@ -21,6 +22,7 @@
         "Description[uk]": "Автоматично змінювати часовий пояс на основі поточного місця перебування",
         "Description[x-test]": "xxAutomatically change the system time zone based on the current locationxx",
         "Description[zh_CN]": "基于当前位置自动更改系统时区",
+        "Description[zh_TW]": "自動依目前地理位置變更系統時區",
         "Name": "Location-based System Time Zone",
         "Name[ar]": "المنطقة الزمنية للنظام اعتمادًا الموقع",
         "Name[bg]": "Местоположение базирано на системната часова зона",
@@ -31,6 +33,7 @@
         "Name[fr]": "Fuseau horaire du système reposant sur la localisation",
         "Name[gl]": "Fuso horario do sistema segundo a localización",
         "Name[he]": "אזור זמן המערכת מבוסס מקום",
+        "Name[hu]": "Helyalapú rendszer-időzóna",
         "Name[ia]": "Fuso horari de systema basate sur location",
         "Name[it]": "Fuso orario del sistema in base alla posizione",
         "Name[ka]": "მდებარეობაზე დამოკიდებული სისტემური დროის სარტყელი",
@@ -41,6 +44,7 @@
         "Name[tr]": "Konum Tabanlı Sistem Zaman Dilimi",
         "Name[uk]": "Часовий пояс системи на основі місця перебування",
         "Name[x-test]": "xxLocation-based System Time Zonexx",
-        "Name[zh_CN]": "基于位置的系统时区"
+        "Name[zh_CN]": "基于位置的系统时区",
+        "Name[zh_TW]": "基於地點的系統時區"
     }
 }
