@@ -226,6 +226,10 @@ Item {
                 anchors.centerIn: parent
                 spacing: Kirigami.Units.smallSpacing
 
+                QQC2.Label {
+                    text: i18nc("@label:listbox In the context of time zone selection", "Region:")
+                }
+
                 QQC2.ComboBox {
                     id: regionComboBox
                     model: [chooseText, ...regionsModel]
@@ -254,7 +258,8 @@ Item {
                 }
 
                 QQC2.Label {
-                    text: locationComboBox.visible ? i18nc("Full context is: '<region> region, <zone> time zone.' in the context of time zone selection.", "region, ") : i18nc("Full context is: 'Choose region' in the context of time zone region selection.", "region")
+                    text: i18nc("@label:listbox In the context of time zone selection", "Time zone:")
+                    visible: locationComboBox.visible
                 }
 
                 QQC2.ComboBox {
@@ -277,11 +282,6 @@ Item {
                     onActivated: {
                         root.selectedTimeZone = root.technical(regionComboBox.currentText) + '/' + root.technical(locationComboBox.currentText)
                     }
-                }
-
-                QQC2.Label {
-                    text: i18nc("Full context is: '<region> region, <zone> time zone.' in the context of time zone selection.", "time zone.")
-                    visible: locationComboBox.visible
                 }
             }
         }
