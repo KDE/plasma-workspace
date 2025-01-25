@@ -7,13 +7,13 @@
 #include "desktopnotifier.h"
 
 #include <KDesktopFile>
-#include <KDirWatch>
 #include <KPluginFactory>
 
 #include <kdirnotify.h>
 
 #include <QDir>
 #include <QFile>
+#include <QFileSystemWatcher>
 #include <QStandardPaths>
 
 K_PLUGIN_CLASS_WITH_JSON(DesktopNotifier, "desktopnotifier.json")
@@ -25,32 +25,23 @@ DesktopNotifier::DesktopNotifier(QObject *parent, const QList<QVariant> &)
 {
     m_desktopLocation = QUrl::fromLocalFile(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
 
-    dirWatch = new KDirWatch(this);
-    dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::DesktopLocation));
-    dirWatch->addDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"Trash/files");
-    dirWatch->addFile(QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs"));
+    watcher = new QFileSystemWatcher(this);
+    watcher->addPaths(QStringList{QStandardPaths::writableLocation(QStandardPaths::DesktopLocation),
+                                  QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + u"/trashrc",
+                                  QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")});
 
-    connect(dirWatch, &KDirWatch::created, this, &DesktopNotifier::created);
-    connect(dirWatch, &KDirWatch::dirty, this, &DesktopNotifier::dirty);
+    connect(watcher, &QFileSystemWatcher::fileChanged, this, &DesktopNotifier::dirty);
+    connect(watcher, &QFileSystemWatcher::directoryChanged, this, &DesktopNotifier::dirty);
 }
 
 void DesktopNotifier::watchDir(const QString &path)
 {
-    dirWatch->addDir(path);
-}
-
-void DesktopNotifier::created(const QString &path)
-{
-    if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")) {
-        checkDesktopLocation();
-    }
+    watcher->addPath(path);
 }
 
 void DesktopNotifier::dirty(const QString &path)
 {
-    Q_UNUSED(path)
-
-    if (path.startsWith(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u'/' + u"Trash/files")) {
+    if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + u"/trashrc") {
         QList<QUrl> trashUrls;
 
         // Check for any .desktop file linking to trash:/ to update its icon
@@ -65,8 +56,16 @@ void DesktopNotifier::dirty(const QString &path)
         if (!trashUrls.isEmpty()) {
             org::kde::KDirNotify::emitFilesChanged(trashUrls);
         }
+
+        if (!watcher->files().contains(path)) {
+            watcher->addPath(path);
+        }
     } else if (path == QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + QStringLiteral("/user-dirs.dirs")) {
         checkDesktopLocation();
+
+        if (!watcher->files().contains(path)) {
+            watcher->addPath(path);
+        }
     } else {
         // Emitting FilesAdded forces a re-read of the dir
         QUrl url;
@@ -84,7 +83,7 @@ void DesktopNotifier::checkDesktopLocation()
 
     if (m_desktopLocation != currentLocation) {
         m_desktopLocation = currentLocation;
-        org::kde::KDirNotify::emitFilesChanged(QList<QUrl>() << QUrl(QStringLiteral("desktop:/")));
+        org::kde::KDirNotify::emitFilesChanged(QList{QUrl(QStringLiteral("desktop:/"))});
     }
 }
 
