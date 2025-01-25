@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:42+0000\n"
-"PO-Revision-Date: 2025-01-08 16:38+0200\n"
+"PO-Revision-Date: 2025-01-23 09:14+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -156,10 +156,9 @@ msgid "Enter Edit Mode"
 msgstr "כניסה למצב עריכה"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "כניסה למצב עריכה"
+msgstr "יציאה ממצב עריכה"
 
 #: main.cpp:86
 #, kde-format

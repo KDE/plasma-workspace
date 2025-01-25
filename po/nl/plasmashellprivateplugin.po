@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-04 15:02+0100\n"
+"PO-Revision-Date: 2025-01-24 11:34+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -400,29 +400,31 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"De nu geselecteerde tijdzone is niet beschikbaar voor visualisatie op deze "
+"kaart"
 
 #: timezoneselector/TimezoneSelector.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Inzoomen"
 
 #: timezoneselector/TimezoneSelector.qml:195
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Uitzoomen"
 
 #: timezoneselector/TimezoneSelector.qml:227
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Kiezen…"
 
 #: timezoneselector/TimezoneSelector.qml:231
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Kiezer van tijdzoneregio"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -430,7 +432,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "region, "
-msgstr ""
+msgstr "regio, "
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -438,12 +440,12 @@ msgctxt ""
 "Full context is: 'Choose region' in the context of time zone region "
 "selection."
 msgid "region"
-msgstr ""
+msgstr "regio"
 
 #: timezoneselector/TimezoneSelector.qml:260
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Kiezer van tijdzonelocatie"
 
 #: timezoneselector/TimezoneSelector.qml:277
 #, kde-format
@@ -451,7 +453,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "time zone."
-msgstr ""
+msgstr "tijdzone."
 
 #~ msgid "&Execute"
 #~ msgstr "Uitvo&eren"

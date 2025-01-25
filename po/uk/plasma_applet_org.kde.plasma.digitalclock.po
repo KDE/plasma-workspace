@@ -3,13 +3,13 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-22 09:26+0200\n"
+"PO-Revision-Date: 2025-01-24 22:24+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -303,17 +303,14 @@ msgid "Available Plugins:"
 msgstr "Доступні додатки:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Канкун"
+msgstr "Скасувати"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Додати часові пояси"
+msgstr "Додати вибраний часовий пояс"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -326,10 +323,9 @@ msgstr ""
 "загальносистемний часовий пояс на якийсь інший."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Додати часові пояси…"
+msgstr "Додати часовий пояс…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -390,10 +386,9 @@ msgstr ""
 "поясу. Якщо ви подорожуєте, вам варто змінити загальносистемний часовий пояс."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Часові пояси"
+msgstr "Виберіть часовий пояс"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

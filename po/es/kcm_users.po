@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:43+0000\n"
+"POT-Creation-Date: 2025-01-25 00:42+0000\n"
 "PO-Revision-Date: 2025-01-03 12:26+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -184,7 +184,7 @@ msgstr "Confirmar contraseña:"
 msgid "Create"
 msgstr "Crear"
 
-#: src/ui/CropSheet.qml:27
+#: src/ui/CropSheet.qml:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
@@ -398,133 +398,133 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Cambiar avatar"
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "No es nada"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Flamenco Fuerte"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Fruta del dragón"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Boniato"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Ámbar Ambiental"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Rayo de Sol"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Lima Limón"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Amuleto Verde"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Pradera Apacible"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Azul Tibio"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma Azul"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Púrpura"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Púrpura Bajo"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Carbón Quemado"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:39
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Papel Perfecto"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:40
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Cafetera Marrón"
 
-#: src/ui/PicturesSheet.qml:38
+#: src/ui/PicturesSheet.qml:41
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Madera Dura"
 
-#: src/ui/PicturesSheet.qml:60
+#: src/ui/PicturesSheet.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Volver"
 
-#: src/ui/PicturesSheet.qml:78
+#: src/ui/PicturesSheet.qml:84
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
 msgstr "Iniciales"
 
-#: src/ui/PicturesSheet.qml:132
+#: src/ui/PicturesSheet.qml:138
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Escoger archivo..."
 
-#: src/ui/PicturesSheet.qml:137
+#: src/ui/PicturesSheet.qml:143
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Escoger una imagen"
 
-#: src/ui/PicturesSheet.qml:140
+#: src/ui/PicturesSheet.qml:146
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -538,13 +538,13 @@ msgstr ""
 "Archivos de imagen (todos los tipos principales) (*.avif *.bmp *.gif *.jp2 *."
 "jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:196
+#: src/ui/PicturesSheet.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Icono provisional"
 
-#: src/ui/PicturesSheet.qml:285
+#: src/ui/PicturesSheet.qml:291
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

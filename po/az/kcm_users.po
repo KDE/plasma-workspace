@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:43+0000\n"
+"POT-Creation-Date: 2025-01-25 00:42+0000\n"
 "PO-Revision-Date: 2024-08-13 16:03+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -185,7 +185,7 @@ msgstr "Şifrəni təsdiq etmək:"
 msgid "Create"
 msgstr "Yaratmaq"
 
-#: src/ui/CropSheet.qml:27
+#: src/ui/CropSheet.qml:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
@@ -397,133 +397,133 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Avatarı dəyiş"
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Heç nə"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Cəsur flaminqo"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Əjdaha meyvəsi"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Şirin kartof"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Parlayan yantar"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Parlaq günəş şüası"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Limon-Laym"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Cazibədar yaşıllıq"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Yumuşaq çəmən"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "İlıq dəniz mavisi"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Mavi plasma"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Bənövşəyi ponpon"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Bənövşəyi bajo"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Yanmış kömür"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:39
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Kağız mükəmməlliyi"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:40
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Braun kafesi"
 
-#: src/ui/PicturesSheet.qml:38
+#: src/ui/PicturesSheet.qml:41
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Rich Hardwood"
 
-#: src/ui/PicturesSheet.qml:60
+#: src/ui/PicturesSheet.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Geriyə"
 
-#: src/ui/PicturesSheet.qml:78
+#: src/ui/PicturesSheet.qml:84
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
 msgstr "Ad, Soyad"
 
-#: src/ui/PicturesSheet.qml:132
+#: src/ui/PicturesSheet.qml:138
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Fayl seç..."
 
-#: src/ui/PicturesSheet.qml:137
+#: src/ui/PicturesSheet.qml:143
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Bir şəkil seç"
 
-#: src/ui/PicturesSheet.qml:140
+#: src/ui/PicturesSheet.qml:146
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -537,13 +537,13 @@ msgstr ""
 "Şəkil faylları (Bütün əsas fayl növləri) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
 "jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:196
+#: src/ui/PicturesSheet.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Əvəzetmə nişanı"
 
-#: src/ui/PicturesSheet.qml:285
+#: src/ui/PicturesSheet.qml:291
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

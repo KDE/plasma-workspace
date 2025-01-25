@@ -303,10 +303,9 @@ msgid "Cancel"
 msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "添加更多时区"
+msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -318,10 +317,9 @@ msgstr ""
 "时显示。"
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "添加时区…"
+msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -381,10 +379,9 @@ msgstr ""
 "系统全局时区。"
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "时区"
+msgstr ""
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -461,14 +458,3 @@ msgstr "本地"
 #, kde-format
 msgid "System's local time zone"
 msgstr "系统本地时区"
-
-#~ msgid ""
-#~ "At least one time zone needs to be enabled. Your local time zone was "
-#~ "enabled automatically."
-#~ msgstr "必须启用至少一个时区。系统本地时区已自动启用。"
-
-#~ msgid "%1, %2 (%3)"
-#~ msgstr "%1, %2 (%3)"
-
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"

@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2020, 2021, 2022, 2023, 2024 Giovanni Sora <g.sora@tiscali.it>
+# SPDX-FileCopyrightText: 2014, 2020, 2021, 2022, 2023, 2024, 2025 Giovanni Sora <g.sora@tiscali.it>
 # giovanni <g.sora@tiscali.it>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-22 17:20+0100\n"
+"PO-Revision-Date: 2025-01-24 11:24+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -301,17 +301,14 @@ msgid "Available Plugins:"
 msgstr "Plugins disponibile:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancun"
+msgstr "Cancella"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Adde altere fusos horari"
+msgstr "Adde fuso horari selectionate"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -324,10 +321,9 @@ msgstr ""
 "systema  a alcun altere cosa."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Adde Fusos horari..."
+msgstr "Adde fuso horari …"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -387,10 +383,9 @@ msgstr ""
 "Quando tu viagia, commuta le fuso horari de toto le systema in loco."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Fusos horari"
+msgstr "Selige Fuso Horari"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

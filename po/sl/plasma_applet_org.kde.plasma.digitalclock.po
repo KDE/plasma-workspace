@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-22 07:46+0100\n"
+"PO-Revision-Date: 2025-01-24 07:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -303,17 +303,14 @@ msgid "Available Plugins:"
 msgstr "Razpoložljivi vstavki:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancun"
+msgstr "Prekliči"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Dodaj več časovnih pasov"
+msgstr "Dodaj izbrani časovni pas"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -325,10 +322,9 @@ msgstr ""
 "Prikazan bo samo, kadar spremenite sistemski časovni pas v nekega drugega."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Dodaj časovne pasove …"
+msgstr "Dodaj časovni pas…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -390,10 +386,9 @@ msgstr ""
 "namesto tega preklopite sistemski časovni pas."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Časovni pasovi"
+msgstr "Izberi časovni pas"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

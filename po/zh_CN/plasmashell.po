@@ -156,7 +156,7 @@ msgstr "进入编辑模式"
 #: desktopview.cpp:532
 #, kde-format
 msgid "Exit Edit Mode"
-msgstr ""
+msgstr "退出编辑模式"
 
 #: main.cpp:86
 #, kde-format

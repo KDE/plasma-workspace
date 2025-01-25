@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:43+0000\n"
+"POT-Creation-Date: 2025-01-25 00:42+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -183,7 +183,7 @@ msgstr "कूटशब्द की पुष्टि करें :"
 msgid "Create"
 msgstr "बनाएँ"
 
-#: src/ui/CropSheet.qml:27
+#: src/ui/CropSheet.qml:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
@@ -385,152 +385,152 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "अवतार बदलें"
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:25
 #, fuzzy, kde-format
 #| msgid "It's Nothing"
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "यह कुछ भी नहीं है"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:26
 #, fuzzy, kde-format
 #| msgid "Feisty Flamingo"
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "फीस्टी फ्लेमिंगो"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:27
 #, fuzzy, kde-format
 #| msgid "Dragon's Fruit"
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "ड्रेगन का फल"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:28
 #, fuzzy, kde-format
 #| msgid "Sweet Potato"
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "शकरकंद"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:29
 #, fuzzy, kde-format
 #| msgid "Ambient Amber"
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "एम्बिएंट एंबर"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:30
 #, fuzzy, kde-format
 #| msgid "Sparkle Sunbeam"
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "स्पार्कल सूर्यकिरण"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:31
 #, fuzzy, kde-format
 #| msgid "Lemon-Lime"
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "लेमन-लैम"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:32
 #, fuzzy, kde-format
 #| msgid "Verdant Charm"
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "वर्दांत चार्म"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:33
 #, fuzzy, kde-format
 #| msgid "Mellow Meadow"
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "मधुर घास का मैदान"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:34
 #, fuzzy, kde-format
 #| msgid "Tepid Teal"
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "टीपिड टील"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:35
 #, fuzzy, kde-format
 #| msgid "Plasma Blue"
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "प्लाज़्मा नीला"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:36
 #, fuzzy, kde-format
 #| msgid "Pon Purple"
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "पोन बैंगनी"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:37
 #, fuzzy, kde-format
 #| msgid "Bajo Purple"
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "बाजो बैंगनी"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:38
 #, fuzzy, kde-format
 #| msgid "Burnt Charcoal"
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "जला कोयला"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:39
 #, fuzzy, kde-format
 #| msgid "Paper Perfection"
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "कागज पूर्णता"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:40
 #, fuzzy, kde-format
 #| msgid "Cafétera Brown"
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "कैफेटेरा भूरा"
 
-#: src/ui/PicturesSheet.qml:38
+#: src/ui/PicturesSheet.qml:41
 #, fuzzy, kde-format
 #| msgid "Rich Hardwood"
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "धनी लकड़ी"
 
-#: src/ui/PicturesSheet.qml:60
+#: src/ui/PicturesSheet.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:78
+#: src/ui/PicturesSheet.qml:84
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:132
+#: src/ui/PicturesSheet.qml:138
 #, fuzzy, kde-format
 #| msgid "Choose File…"
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "फ़ाइल चुनें…"
 
-#: src/ui/PicturesSheet.qml:137
+#: src/ui/PicturesSheet.qml:143
 #, fuzzy, kde-format
 #| msgid "Choose a picture"
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "एक छवि चुनें"
 
-#: src/ui/PicturesSheet.qml:140
+#: src/ui/PicturesSheet.qml:146
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -542,13 +542,13 @@ msgid ""
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:196
+#: src/ui/PicturesSheet.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:285
+#: src/ui/PicturesSheet.qml:291
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

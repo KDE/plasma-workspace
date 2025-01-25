@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-03 00:43+0000\n"
+"POT-Creation-Date: 2025-01-25 00:42+0000\n"
 "PO-Revision-Date: 2024-11-28 23:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -182,7 +182,7 @@ msgstr "암호 확인:"
 msgid "Create"
 msgstr "만들기"
 
-#: src/ui/CropSheet.qml:27
+#: src/ui/CropSheet.qml:28
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
@@ -379,133 +379,133 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "아바타 변경"
 
-#: src/ui/PicturesSheet.qml:22
+#: src/ui/PicturesSheet.qml:25
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "아무것도 아님"
 
-#: src/ui/PicturesSheet.qml:23
+#: src/ui/PicturesSheet.qml:26
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "화려한 플라밍고"
 
-#: src/ui/PicturesSheet.qml:24
+#: src/ui/PicturesSheet.qml:27
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "용과"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "고구마"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "호박"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "반짝이는 햇빛"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "레몬 라임"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "풀밭"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "평화로운 목초지"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "암록색"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma 파란색"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "연한 보라색"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "진한 보라색"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "목탄"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:39
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "종이 느낌"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:40
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "커피 갈색"
 
-#: src/ui/PicturesSheet.qml:38
+#: src/ui/PicturesSheet.qml:41
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "단단한 나무"
 
-#: src/ui/PicturesSheet.qml:60
+#: src/ui/PicturesSheet.qml:66
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "뒤로 이동"
 
-#: src/ui/PicturesSheet.qml:78
+#: src/ui/PicturesSheet.qml:84
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
 msgstr "두문자"
 
-#: src/ui/PicturesSheet.qml:132
+#: src/ui/PicturesSheet.qml:138
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "파일 선택…"
 
-#: src/ui/PicturesSheet.qml:137
+#: src/ui/PicturesSheet.qml:143
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "사진 선택"
 
-#: src/ui/PicturesSheet.qml:140
+#: src/ui/PicturesSheet.qml:146
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -519,13 +519,13 @@ msgstr ""
 "그림 파일(모든 주요 형식) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *.pbm *.pgm "
 "*.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:196
+#: src/ui/PicturesSheet.qml:202
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "자리 비움자 아이콘"
 
-#: src/ui/PicturesSheet.qml:285
+#: src/ui/PicturesSheet.qml:291
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

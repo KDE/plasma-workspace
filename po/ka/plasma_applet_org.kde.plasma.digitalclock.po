@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-22 04:35+0100\n"
+"PO-Revision-Date: 2025-01-24 04:55+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -302,13 +302,12 @@ msgstr "ხელმისაწვდომი დამატებები:"
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "გაუქმება"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "დროის მეტი სარტყლის დამატება"
+msgstr "მონიშნული დროის სარტყლის დამატება"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -321,8 +320,7 @@ msgstr ""
 "სარტყელს რამე სხვა მნიშვნელობაზე გადართავთ."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
 msgstr "დროის სარტყლის დამატება…"
 
@@ -386,10 +384,9 @@ msgstr ""
 "სარტყელს. მგზავრობისას გადაერთეთ დროის ლოკალურ სარტყელზე."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "დროის სარტყლები"
+msgstr "აირჩიეთ დროის სარტყელი"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
