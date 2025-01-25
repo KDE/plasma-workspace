@@ -5,21 +5,21 @@
 #
 # Automatically generated, 2019.
 # pan93412 <pan93412@gmail.com>, 2019.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2023-03-06 21:57+0900\n"
+"PO-Revision-Date: 2025-01-24 22:37+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: Traditional Chinese <zh-l10n@linux.org.tw>\n"
+"Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: abstractnotificationsmodel.cpp:318
 #, kde-format
@@ -103,10 +103,10 @@ msgstr "應用程式非預期關閉。"
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
-msgstr ""
+msgstr "未讀通知"
 
 #: notifications.cpp:845
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."
-msgstr ""
+msgstr "勿擾模式作用中時收到了 %1 個通知。"

@@ -4,13 +4,13 @@
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013, 2014.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2014, 2019.
 # Kiszel Kristóf <kiszel.kristof@gmail.com>, 2017, 2020, 2021.
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-07 00:42+0000\n"
-"PO-Revision-Date: 2024-09-18 21:26+0200\n"
+"PO-Revision-Date: 2025-01-24 20:48+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: plugin/actionlist.cpp:85
 #, kde-format
@@ -138,10 +138,9 @@ msgid "Forget Application"
 msgstr "Alkalmazás elfelejtése"
 
 #: plugin/recentusagemodel.cpp:313
-#, fuzzy, kde-format
-#| msgid "Folder"
+#, kde-format
 msgid "Folders"
-msgstr "Mappa"
+msgstr "Mappák"
 
 #: plugin/recentusagemodel.cpp:350
 #, kde-format
