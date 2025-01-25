@@ -377,6 +377,7 @@ class ClipboardTest(unittest.TestCase):
                 try:
                     app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
                 except WebDriverException:  # Flaky
+                    time.sleep(1)
                     app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
             self.assertRaises(NoSuchElementException, app.driver.find_element, AppiumBy.NAME, new_text)
@@ -498,6 +499,7 @@ class ClipboardTest(unittest.TestCase):
         try:
             self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
         except AssertionError:  # Flaky
+            time.sleep(1)
             self.assertEqual(len(colors), len(app.klipper_proxy.getClipboardHistoryMenu()))
 
         for color in colors:
@@ -508,6 +510,7 @@ class ClipboardTest(unittest.TestCase):
             try:
                 app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
             except WebDriverException:  # Flaky
+                time.sleep(1)
                 app.driver.find_image_occurrence(self.take_screenshot(), partial_image)
 
         memory_usage_after = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
