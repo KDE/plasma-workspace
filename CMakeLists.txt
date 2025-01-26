@@ -53,7 +53,7 @@ option(BUILD_CAMERAINDICATOR "Build the camera indicator Plasma applet" ${BUILD_
 
 find_package(Qt6 ${QT_MIN_VERSION} CONFIG REQUIRED COMPONENTS
                     Concurrent Core5Compat DBus Network Positioning Quick QuickWidgets
-                    ShaderTools Sql Svg Widgets QuickControls2)
+                    ShaderTools Sql Svg Widgets)
 
 if (Qt6Gui_VERSION VERSION_GREATER_EQUAL "6.10.0")
     find_package(Qt6GuiPrivate ${REQUIRED_QT_VERSION} REQUIRED NO_MODULE)
