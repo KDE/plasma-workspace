@@ -74,10 +74,13 @@ OutputOrderWatcher::OutputOrderWatcher(QObject *parent)
     connect(qGuiApp, &QGuiApplication::screenRemoved, this, &OutputOrderWatcher::refresh);
 }
 
-void OutputOrderWatcher::useFallback(bool fallback)
+void OutputOrderWatcher::useFallback(bool fallback, const char *reason)
 {
     m_orderProtocolPresent = !fallback;
     if (fallback) {
+        if (reason) {
+            qCritical() << "OutputOrderWatcher may not work as expected. Reason:" << reason;
+        }
         connect(qGuiApp, &QGuiApplication::primaryScreenChanged, this, &OutputOrderWatcher::refresh, Qt::UniqueConnection);
         refresh();
     }
@@ -153,6 +156,11 @@ X11OutputOrderWatcher::X11OutputOrderWatcher(QObject *parent)
 
     qGuiApp->installNativeEventFilter(this);
     const xcb_query_extension_reply_t *reply = xcb_get_extension_data(m_x11Interface->connection(), &xcb_randr_id);
+    if (!reply || !reply->present) { // SENTRY PLASMA-WORKSPACE-1MMC: XRandr extension is not initialized when using vncserver
+        useFallback(true, "XRandr extension is not initialized");
+        return;
+    }
+
     m_xrandrExtensionOffset = reply->first_event;
 
     constexpr const char *effectName = "_KDE_SCREEN_INDEX";
@@ -321,7 +329,7 @@ WaylandOutputOrderWatcher::WaylandOutputOrderWatcher(QObject *parent)
     auto outputListManagement = new WaylandOutputOrder(this);
     m_orderProtocolPresent = outputListManagement->isActive();
     if (!m_orderProtocolPresent) {
-        useFallback(true);
+        useFallback(true, "kde_output_order_v1 protocol is not available");
         return;
     }
     connect(outputListManagement, &WaylandOutputOrder::outputOrderChanged, this, [this](const QStringList &order) {
