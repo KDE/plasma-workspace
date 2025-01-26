@@ -22,7 +22,6 @@ target_link_libraries(timezoneplugin PRIVATE
     Qt6::Quick
     Qt6::Qml
     KF6::ConfigCore
-    Qt6::QuickControls2
 )
 
 ecm_finalize_qml_module(timezoneplugin)
