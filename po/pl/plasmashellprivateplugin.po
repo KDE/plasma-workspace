@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-11 11:32+0100\n"
+"PO-Revision-Date: 2025-01-25 12:47+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -402,30 +402,30 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "Obecnie wybranej strefy czasowej nie można zobrazować na tej mapie"
 
 #: timezoneselector/TimezoneSelector.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Powiększ"
 
 #: timezoneselector/TimezoneSelector.qml:195
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Pomniejsz"
 
 #: timezoneselector/TimezoneSelector.qml:227
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Wybierz…"
 
 #: timezoneselector/TimezoneSelector.qml:231
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Wybór regionu strefy czasowej"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -433,7 +433,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "region, "
-msgstr ""
+msgstr "region, "
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -441,12 +441,12 @@ msgctxt ""
 "Full context is: 'Choose region' in the context of time zone region "
 "selection."
 msgid "region"
-msgstr ""
+msgstr "region"
 
 #: timezoneselector/TimezoneSelector.qml:260
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Wybór miejsca strefy czasowej"
 
 #: timezoneselector/TimezoneSelector.qml:277
 #, kde-format
@@ -454,7 +454,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "time zone."
-msgstr ""
+msgstr "strefa czasowa."
 
 #~ msgid "&Execute"
 #~ msgstr "&Wykonaj"

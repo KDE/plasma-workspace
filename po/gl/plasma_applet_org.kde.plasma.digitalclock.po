@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 # Adrián Chaves Fernández <adriyetichaves@gmail.com>, 2015, 2016.
-# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-12-04 09:50+0100\n"
+"PO-Revision-Date: 2025-01-25 11:57+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -300,17 +300,14 @@ msgid "Available Plugins:"
 msgstr "Complementos dispoñíbeis:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancún"
+msgstr "Cancelar"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Engadir máis fusos horarios"
+msgstr "Engadir o fuso horario seleccionado"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -322,10 +319,9 @@ msgstr ""
 "vive. Só aparecerá cando cambie o fuso horario do sistema por outro."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Engadir fusos horarios…"
+msgstr "Engadir un fuso horario…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -387,10 +383,9 @@ msgstr ""
 "cambie mellor o fuso horario do sistema."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Fusos horarios"
+msgstr "Escoller o fuso horario"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

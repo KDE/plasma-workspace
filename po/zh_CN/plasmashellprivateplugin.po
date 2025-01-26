@@ -397,30 +397,30 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "当前选中的时区无法在此地图上进行可视化"
 
 #: timezoneselector/TimezoneSelector.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "放大"
 
 #: timezoneselector/TimezoneSelector.qml:195
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "缩小"
 
 #: timezoneselector/TimezoneSelector.qml:227
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "选择…"
 
 #: timezoneselector/TimezoneSelector.qml:231
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "时区地区选择器"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -428,7 +428,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "region, "
-msgstr ""
+msgstr "地区，"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -436,12 +436,12 @@ msgctxt ""
 "Full context is: 'Choose region' in the context of time zone region "
 "selection."
 msgid "region"
-msgstr ""
+msgstr "地区"
 
 #: timezoneselector/TimezoneSelector.qml:260
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "时区位置选择器"
 
 #: timezoneselector/TimezoneSelector.qml:277
 #, kde-format
@@ -449,4 +449,4 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "time zone."
-msgstr ""
+msgstr "时区。"

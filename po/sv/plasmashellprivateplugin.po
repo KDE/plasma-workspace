@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-11 12:32+0100\n"
+"PO-Revision-Date: 2025-01-25 08:22+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -400,29 +400,31 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"Tidszonen som för närvarande är vald är inte tillgänglig för visualisering "
+"på kartan"
 
 #: timezoneselector/TimezoneSelector.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Zooma in"
 
 #: timezoneselector/TimezoneSelector.qml:195
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Zooma ut"
 
 #: timezoneselector/TimezoneSelector.qml:227
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Välj…"
 
 #: timezoneselector/TimezoneSelector.qml:231
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Tidszonsområdesväljare"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -430,7 +432,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "region, "
-msgstr ""
+msgstr "område,"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -438,12 +440,12 @@ msgctxt ""
 "Full context is: 'Choose region' in the context of time zone region "
 "selection."
 msgid "region"
-msgstr ""
+msgstr "område"
 
 #: timezoneselector/TimezoneSelector.qml:260
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Tidszonsplatsväljare"
 
 #: timezoneselector/TimezoneSelector.qml:277
 #, kde-format
@@ -451,7 +453,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "time zone."
-msgstr ""
+msgstr "tidszon."
 
 #~ msgid "&Execute"
 #~ msgstr "&Kör"

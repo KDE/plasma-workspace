@@ -300,12 +300,12 @@ msgstr "可用插件："
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "取消"
 
 #: package/contents/ui/configTimeZones.qml:66
 #, kde-format
 msgid "Add Selected Time Zone"
-msgstr ""
+msgstr "添加选择的时区"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -319,7 +319,7 @@ msgstr ""
 #: package/contents/ui/configTimeZones.qml:115
 #, kde-format
 msgid "Add Time Zone…"
-msgstr ""
+msgstr "添加时区…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -381,7 +381,7 @@ msgstr ""
 #: package/contents/ui/configTimeZones.qml:256
 #, kde-format
 msgid "Choose Time Zone"
-msgstr ""
+msgstr "选择时区"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

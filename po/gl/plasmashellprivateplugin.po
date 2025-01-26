@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-04 15:03+0100\n"
+"PO-Revision-Date: 2025-01-25 12:07+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -401,29 +401,31 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"O fuso horario seleccionado non está dispoñíbel para visualización neste "
+"mapa."
 
 #: timezoneselector/TimezoneSelector.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Achegar"
 
 #: timezoneselector/TimezoneSelector.qml:195
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Afastar"
 
 #: timezoneselector/TimezoneSelector.qml:227
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Escoller…"
 
 #: timezoneselector/TimezoneSelector.qml:231
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Selector de rexión de fuso horario"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -431,7 +433,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "region, "
-msgstr ""
+msgstr "rexión, "
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -439,12 +441,12 @@ msgctxt ""
 "Full context is: 'Choose region' in the context of time zone region "
 "selection."
 msgid "region"
-msgstr ""
+msgstr "rexión"
 
 #: timezoneselector/TimezoneSelector.qml:260
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Selector de localización de fuso horario"
 
 #: timezoneselector/TimezoneSelector.qml:277
 #, kde-format
@@ -452,7 +454,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "time zone."
-msgstr ""
+msgstr "fuso horario."
 
 #~ msgid "&Execute"
 #~ msgstr "&Executar"

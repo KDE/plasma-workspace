@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-23 00:42+0000\n"
-"PO-Revision-Date: 2025-01-07 19:50+0100\n"
+"PO-Revision-Date: 2025-01-25 11:55+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -156,10 +156,9 @@ msgid "Enter Edit Mode"
 msgstr "Activar o modo de edición"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Activar o modo de edición"
+msgstr "Desactivar o modo de edición"
 
 #: main.cpp:86
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-24 19:43+0100\n"
+"PO-Revision-Date: 2025-01-25 08:20+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -299,17 +299,14 @@ msgid "Available Plugins:"
 msgstr "Tillgängliga insticksprogram:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancun"
+msgstr "Avbryt"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Lägg till fler tidszoner"
+msgstr "Lägg till vald tidszoner"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -321,10 +318,9 @@ msgstr ""
 "när du ändrar den systemomfattande tidszonen till något annat."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Lägg till tidszoner…"
+msgstr "Lägg till tidszon…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -384,10 +380,9 @@ msgstr ""
 "reser, ändra istället den systemomfattande tidszonen."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Tidszoner"
+msgstr "Välj tidszon"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
