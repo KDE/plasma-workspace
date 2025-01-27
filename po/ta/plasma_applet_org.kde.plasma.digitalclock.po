@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-24 16:07+0530\n"
+"PO-Revision-Date: 2025-01-26 17:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -301,13 +301,12 @@ msgstr "பயன்படுத்தக்கூடிய செருகு�
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "ரத்து செய்"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "கூடுதல் நேரமண்டலங்களை சேர்த்தல்"
+msgstr "தேர்ந்தெடுத்துள்ள நேர மண்டலத்தை சேர்"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -320,10 +319,9 @@ msgstr ""
 "இப்பட்டியலில் அதுவும் காட்டப்படும்."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "நேரமண்டலங்களை சேர்…"
+msgstr "நேரமண்டலத்தை சேர்…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -383,10 +381,9 @@ msgstr ""
 "முழுவதற்குமான நேரமண்டலத்தையே மாற்றி அமையுங்கள்."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "நேரமண்டலங்கள்"
+msgstr "நேரமண்டலத்தை தேர்ந்தெடு"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

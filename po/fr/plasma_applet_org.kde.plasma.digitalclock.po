@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-06 17:10+0100\n"
+"PO-Revision-Date: 2025-01-25 10:45+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/config/config.qml:20
@@ -307,17 +307,14 @@ msgid "Available Plugins:"
 msgstr "Modules complémentaires disponibles :"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancún"
+msgstr "Annuler"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Ajouter plus de fuseaux horaires"
+msgstr "Ajouter le fuseau horaire sélectionné"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -331,10 +328,9 @@ msgstr ""
 "autre fuseau."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Ajouter des fuseaux horaires..."
+msgstr "Ajouter un fuseau horaire..."
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -397,10 +393,9 @@ msgstr ""
 "vers le fuseau horaire applicable à l'ensemble du système."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Fuseaux horaires"
+msgstr "Sélectionner un fuseau horaire"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

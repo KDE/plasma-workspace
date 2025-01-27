@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-09-01 17:03+0200\n"
+"PO-Revision-Date: 2025-01-26 17:18+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -338,18 +338,13 @@ msgid "Running"
 msgstr "இயங்குகிறவை"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "நிறுவல்நீக்கக்கூடியவை"
+msgstr "பயனர் நிறுவியவை"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
@@ -402,30 +397,30 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "தற்போதைய நேரமண்டலத்தை இந்த நிலப்படத்தில் காட்ட முடியாது"
 
 #: timezoneselector/TimezoneSelector.qml:179
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "பெரிதாக்கு"
 
 #: timezoneselector/TimezoneSelector.qml:195
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "சிறிதாக்கு"
 
 #: timezoneselector/TimezoneSelector.qml:227
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "தேர்வு செய்…"
 
 #: timezoneselector/TimezoneSelector.qml:231
-#, kde-format
+#, fuzzy, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "நேர மண்டல தேர்வி"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -433,7 +428,7 @@ msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "region, "
-msgstr ""
+msgstr "பகுதி,"
 
 #: timezoneselector/TimezoneSelector.qml:251
 #, kde-format
@@ -441,7 +436,7 @@ msgctxt ""
 "Full context is: 'Choose region' in the context of time zone region "
 "selection."
 msgid "region"
-msgstr ""
+msgstr "பகுதி"
 
 #: timezoneselector/TimezoneSelector.qml:260
 #, kde-format
