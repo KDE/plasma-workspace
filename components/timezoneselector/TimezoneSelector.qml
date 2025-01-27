@@ -121,6 +121,10 @@ Item {
                     name: 'osm.mapping.offline.directory'
                     value: ":/plasma-workspace/timezone/offline_tiles"
                 }
+                PluginParameter {
+                    name: "osm.mapping.providersrepository.disabled"
+                    value: true
+                }
             }
             zoomLevel: 0
             minimumZoomLevel: 0
@@ -154,6 +158,8 @@ Item {
                     easing.type: Easing.InOutCubic
                 }
             }
+
+            onCopyrightLinkActivated: (link) => { Qt.openUrlExternally(link); }
         }
 
         property variant referenceSurface: QtLocation.ReferenceSurface.Map
