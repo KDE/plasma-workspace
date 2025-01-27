@@ -6,25 +6,50 @@
 
 import QtQuick
 import QtQml
+import QtQuick.Controls
 import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.coreaddons as KCoreAddons
 import org.kde.plasma.components as PlasmaComponents3
 
-import QtCharts 2.0
-import QtQuick.Controls
+import org.kde.quickcharts as Charts
+import org.kde.quickcharts.controls as ChartsControls
 
 Item {
     id: root
 
     property ModelInterface modelInterface
 
-    property int maxSpeed: 0
-    property int minSpeed: 0
+    property int speed
     property int averageSpeed
 
-    property LineSeries speedSerie : LineSeries {}
+    property int previousSpeed: 0
+    property int previousProcessed: 0
+
+    readonly property real resolution: modelInterface.jobDetails.totalBytes / chart.xRange.to
+
+    ListModel {
+        id: dataSource
+
+        function appendSpeed(processedBytes, speed) {
+            let speedChange = speed - root.previousSpeed
+
+            let processed = Math.round(processedBytes / root.resolution)
+            let processedChange = processed - root.previousProcessed
+
+            if (processedChange > 0) {
+                let newSpeed = root.previousSpeed
+                for (let i = 0; i < processedChange; ++i) {
+                    newSpeed += speedChange / processedChange
+                    dataSource.append({data: newSpeed})
+                }
+
+                root.previousProcessed = processed
+                root.previousSpeed = speed
+            }
+        }
+    }
 
     Layout.minimumHeight: chart.visible ? Kirigami.Units.gridUnit * 10 :
         // Even when indeterminate, we want to reserve the height for the text, otherwise it's too tightly spaced
@@ -32,125 +57,159 @@ Item {
 
     Layout.fillWidth: true
 
+    PlasmaComponents3.Label {
+        id: metricsLabel
+        visible: false
+        font: Kirigami.Theme.smallFont
+        // Measure 888.8 KiB/s
+        text: KCoreAddons.Format.formatByteSize(910131) + i18n("/s")
+    }
+
+    Item {
+        id: chartContainer
+
+        anchors.fill: parent
+        visible: dataSource.count >= 2
+
+        ChartsControls.AxisLabels {
+            id: axisLabels
+
+            anchors {
+                left: parent.left
+                top: chart.top
+                bottom: chart.bottom
+            }
+
+            width: metricsLabel.implicitWidth
+            constrainToBounds: false
+            direction: ChartsControls.AxisLabels.VerticalBottomTop
+
+            delegate: PlasmaComponents3.Label {
+                text: KCoreAddons.Format.formatByteSize(ChartsControls.AxisLabels.label) + i18n("/s")
+                font: Kirigami.Theme.smallFont
+            }
+
+            source: Charts.ChartAxisSource {
+                chart: chart
+                axis: Charts.ChartAxisSource.YAxis
+                itemCount: 5
+            }
+        }
+
+        ChartsControls.GridLines {
+            anchors.fill: chart
+            direction: ChartsControls.GridLines.Vertical
+            minor.visible: false
+            major.count: 3
+            major.lineWidth: 1
+            // Same calculation as Kirigami Separator
+            major.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.4)
+        }
+
+        Charts.LineChart {
+            id: chart
+
+            anchors {
+                left: axisLabels.right
+                leftMargin: Kirigami.Units.smallSpacing
+                right: parent.right
+                top: parent.top
+                topMargin: Math.round(metricsLabel.implicitHeight / 2) + Kirigami.Units.smallSpacing
+                bottom: legend.top
+                bottomMargin: Math.round(metricsLabel.implicitHeight / 2) + Kirigami.Units.smallSpacing
+            }
+
+            xRange.from: 0
+            xRange.to: 100
+            xRange.automatic: false
+
+            lineWidth: 1
+            interpolate: true
+
+            valueSources: Charts.ModelSource {
+                model: dataSource
+                roleName: "data"
+            }
+
+            nameSource: Charts.SingleValueSource {
+                value: i18n("Speed")
+            }
+
+            colorSource: Charts.SingleValueSource {
+                value: Kirigami.Theme.highlightColor
+            }
+
+            fillColorSource: Charts.SingleValueSource {
+                value: Qt.lighter(Kirigami.Theme.highlightColor, 1.5)
+            }
+        }
+
+        ChartsControls.Legend {
+            id: legend
+
+            anchors {
+                left: parent.left
+                right: parent.right
+                bottom: parent.bottom
+            }
+
+            chart: chart
+
+            spacing: Kirigami.Units.largeSpacing
+            delegate: RowLayout {
+                spacing: Kirigami.Units.smallSpacing
+
+                ChartsControls.LegendLayout.maximumWidth: implicitWidth
+
+                Rectangle {
+                    color: model.color
+                    width: Kirigami.Units.smallSpacing
+                    height: legendLabel.height
+                }
+                PlasmaComponents3.Label {
+                    id: legendLabel
+                    font: Kirigami.Theme.smallFont
+                    text: model.name
+                }
+                PlasmaComponents3.Label {
+                    font: Kirigami.Theme.smallFont
+                    text: KCoreAddons.Format.formatByteSize(root.speed) + i18n("/s")
+                }
+            }
+
+            RowLayout {
+                PlasmaComponents3.Label {
+                    font: Kirigami.Theme.smallFont
+                    text: i18n("Average Speed")
+                }
+                PlasmaComponents3.Label {
+                    font: Kirigami.Theme.smallFont
+                    text: KCoreAddons.Format.formatByteSize(root.averageSpeed) + i18n("/s")
+                }
+            }
+        }
+    }
+
     Component.onCompleted: () => {
-        speedSerie.append(0, modelInterface.jobDetails.processedBytes / (1000 * modelInterface.jobDetails.elapsedTime));
+        if (modelInterface.jobDetails.processedBytes > 0) {
+            dataSource.appendSpeed(modelInterface.jobDetails.processedBytes, modelInterface.jobDetails.speed)
+        }
     }
 
     Connections {
         target: modelInterface.jobDetails
 
         function onProcessedBytesChanged() {
-            var speedMBperSec = modelInterface.jobDetails.speed / 1000000;
+            dataSource.appendSpeed(modelInterface.jobDetails.processedBytes, modelInterface.jobDetails.speed)
 
-            speedSerie.append(modelInterface.jobDetails.processedBytes, speedMBperSec);
-
-            if (speedMBperSec > maxSpeed) {
-                maxSpeed = speedMBperSec;
-            }
-
-            if (minSpeed == 0 || minSpeed > speedMBperSec ) {
-                minSpeed = speedMBperSec;
-            }
-
-            if (averageLine.count > 0) {
-                averageLine.removePoints(0, 2);
-            }
-            averageSpeed = modelInterface.jobDetails.processedBytes / (1000 * modelInterface.jobDetails.elapsedTime);
-            averageLine.append(valueAxis.min, averageSpeed);
-            averageLine.append(valueAxis.max, averageSpeed);
-        }
-    }
-
-    ChartView {
-        id: chart
-        anchors.fill: root
-        visible: speedSerie.count >= 2
-
-        margins { top: 0; bottom: 0; left: 0; right: 0 }
-
-        antialiasing: true
-        backgroundColor: Kirigami.Theme.backgroundColor
-
-        legend.visible: false
-
-        ToolTip {
-            id: tooltip
-            contentItem: Text {
-                color: Kirigami.Theme.textColor
-                text: tooltip.text
-            }
-            background: Rectangle {
-                color: Kirigami.Theme.backgroundColor
-                border.color: Kirigami.Theme.alternateBackgroundColor
-            }
-        }
-
-        ValueAxis {
-            id: valueAxis
-            min: 0
-            max: root.modelInterface.jobDetails.totalBytes
-            labelsVisible: false
-        }
-
-        ValueAxis {
-            id: dataAxis
-            min: Math.max(Math.min(root.averageSpeed - 5, minSpeed - 5), 0)
-            max: Math.max(root.averageSpeed, root.maxSpeed) + 2
-            labelsColor: Kirigami.Theme.textColor
-            shadesVisible: false
-            // See https://bugreports.qt.io/browse/QTBUG-130594 to be able to customize the unit displayed
-            labelFormat: i18ndc("plasma_applet_org.kde.plasma.notifications", "MBytes per second as printf format", "%u MiB/s")
-        }
-
-        AreaSeries {
-            axisX: valueAxis
-            axisY: dataAxis
-            useOpenGL: true
-
-            upperSeries: root.speedSerie
-            color: Kirigami.Theme.highlightColor
-
-            onHovered: (point, hovered) => {
-                if (!hovered) {
-                    tooltip.visible = false;
-                    return;
-                }
-                var p = chart.mapToPosition(point)
-                var text = i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s",
-                                            KCoreAddons.Format.formatByteSize(point.y * 1000000))
-                tooltip.x = p.x
-                tooltip.y = p.y - tooltip.height
-                tooltip.text = text
-                tooltip.visible = true
-            }
-        }
-
-        LineSeries {
-            id: averageLine
-            useOpenGL: true
-
-            color: "red"
-            width: 3
-            visible: modelInterface.jobDetails.elapsedTime > 0
-
-            axisX: valueAxis
-            axisY: dataAxis
-
-            onHovered: (point) => {
-                var p = chart.mapToPosition(point)
-                var text = i18ndc("plasma_applet_org.kde.plasma.notifications", "Average Bytes per second", "Average: %1/s",
-                                            KCoreAddons.Format.formatByteSize(averageSpeed * 1000000))
-                tooltip.x = p.x
-                tooltip.y = p.y - tooltip.height
-                tooltip.text = text
-                tooltip.visible = true
-            }
+            root.speed = modelInterface.jobDetails.speed
+            root.averageSpeed = modelInterface.jobDetails.processedBytes / modelInterface.jobDetails.elapsedTime;
         }
     }
 
     RowLayout {
         id: progressRow
-        visible: speedSerie.count < 2
+        visible: !chartContainer.visible
         anchors.fill: root
         // We want largeSpacing between the progress bar and the label
         spacing: Kirigami.Units.largeSpacing
