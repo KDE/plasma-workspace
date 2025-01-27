@@ -218,8 +218,8 @@ Item {
             anchors.bottomMargin: Kirigami.Units.gridUnit
             anchors.horizontalCenter: parent.horizontalCenter
 
-            width: mainLayout.implicitWidth + Kirigami.Units.gridUnit
-            height: mainLayout.implicitHeight + Kirigami.Units.gridUnit
+            width: mainLayout.implicitWidth + Kirigami.Units.largeSpacing * 2
+            height: mainLayout.implicitHeight + Kirigami.Units.largeSpacing * 2
 
             contentItem: RowLayout {
                 id: mainLayout
