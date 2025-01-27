@@ -9,6 +9,7 @@
 #include "keyboard_layout_interface.h"
 
 #include <QDBusInterface>
+#include <QDBusServiceWatcher>
 
 template<>
 inline void KeyboardLayout::requestDBusData<KeyboardLayout::Layout>()
@@ -30,6 +31,24 @@ KeyboardLayout::KeyboardLayout(QObject *parent)
 {
     LayoutNames::registerMetaType();
 
+    auto watcher = new QDBusServiceWatcher(QStringLiteral("org.kde.keyboard"), QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForRegistration, this);
+    connect(watcher, &QDBusServiceWatcher::serviceRegistered, this, &KeyboardLayout::initialize);
+
+    // attempt to connect in case service already exists
+    initialize();
+}
+
+KeyboardLayout::~KeyboardLayout()
+{
+}
+
+void KeyboardLayout::initialize()
+{
+    if (mIface) {
+        delete mIface;
+        mIface = nullptr;
+    }
+
     mIface = new OrgKdeKeyboardLayoutsInterface(QStringLiteral("org.kde.keyboard"), QStringLiteral("/Layouts"), QDBusConnection::sessionBus(), this);
     if (!mIface->isValid()) {
         delete mIface;
@@ -48,10 +67,6 @@ KeyboardLayout::KeyboardLayout(QObject *parent)
     });
 
     Q_EMIT mIface->OrgKdeKeyboardLayoutsInterface::layoutListChanged();
-}
-
-KeyboardLayout::~KeyboardLayout()
-{
 }
 
 void KeyboardLayout::switchToNextLayout()
