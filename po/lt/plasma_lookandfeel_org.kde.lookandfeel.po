@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-31 00:42+0000\n"
-"PO-Revision-Date: 2024-11-13 00:16+0200\n"
+"PO-Revision-Date: 2025-01-27 16:23+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -111,32 +111,26 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Paleidus iš naujo, kompiuteris įžengs į pradinio įkėliklio meniu."
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "Pristabdyti"
+msgstr "&Pristabdyti"
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Pristabdyti dabar"
+msgstr "&Pristabdyti dabar"
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Užmigdyti"
+msgstr "Už&migdyti"
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "Užmigdyti dabar"
+msgstr "Už&migdyti dabar"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -145,16 +139,14 @@ msgid "Install Updates and Restart"
 msgstr "Įdiegti atnaujinimus ir paleisti iš naujo"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
-msgstr "Paleisti iš naujo"
+msgstr "Pa&leisti iš naujo"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
-msgstr "Paleisti iš naujo dabar"
+msgstr "Pa&leisti iš naujo dabar"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -163,34 +155,29 @@ msgid "Install Updates and Shut Down"
 msgstr "Įdiegti atnaujinimus ir išjungti"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
-msgstr "Išjungti"
+msgstr "&Išjungti"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "Išjungti dabar"
+msgstr "&Išjungti dabar"
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
-msgstr "Atsijungti"
+msgstr "A&tsijungti"
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
-msgstr "Atsijungti dabar"
+msgstr "A&tsijungti dabar"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Atsisakyti"
+msgstr "&Atsisakyti"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
