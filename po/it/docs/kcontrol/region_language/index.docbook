@@ -68,7 +68,7 @@
 ><para
 >Assicurarsi che siano installati i pacchetti della lingua o le traduzioni di &plasma; per le le lingue che si desidera utilizzare.</para>
 <para
->Poiché il software &plasma; è sviluppato con le librerie &Qt;, è necessario avere le traduzioni &Qt; per le lingue selezionate per avere un'interfaccia completamente localizzata.</para
+>Poiché &plasma; è sviluppato con le librerie &Qt;, è necessario avere anche le traduzioni &Qt; per le lingue selezionate per avere un'interfaccia completamente localizzata.</para
 ></note>
 
 
@@ -108,7 +108,7 @@
 <para
 >In precedenza, Lingua e formati erano impostazioni indipendenti. A partire da &plasma; 5.26, sono stati uniti in questo KCM chiamato Regione e lingua. La modifica di una lingua <emphasis
 >cambia automaticamente</emphasis
-> le impostazioni per numeri, valuta &etc; al paese o alla regione corrispondente. In ogni caso, questa modifica non interrompe la vecchia configurazione. Il file di configurazione si trova ancora in <emphasis
+> le impostazioni per numeri, valuta &etc; al paese o alla regione corrispondente. In ogni caso, questa modifica non crea problemi alla vecchia configurazione. Il file di configurazione si trova ancora in <emphasis
 >~/.config/plasma-localerc</emphasis
 >. </para>
 </note>
