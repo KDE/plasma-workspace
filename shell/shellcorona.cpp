@@ -237,7 +237,6 @@ void ShellCorona::init()
     connect(activityAction, &QAction::triggered, this, &ShellCorona::toggleActivityManager);
     activityAction->setText(i18n("Show Activity Switcher"));
     activityAction->setIcon(QIcon::fromTheme(QStringLiteral("activities")));
-    activityAction->setShortcut(QKeySequence(QStringLiteral("alt+d, alt+a")));
     activityAction->setShortcutContext(Qt::ApplicationShortcut);
 
     KGlobalAccel::self()->setGlobalShortcut(activityAction, Qt::META | Qt::Key_Q);

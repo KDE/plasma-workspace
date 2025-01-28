@@ -107,7 +107,6 @@ PlasmoidItem {
         icon.name: "configure"
         text: i18nc("Open auto mounter kcm", "Configure Removable Devices…")
         visible: devicenotifier.openAutomounterKcmAuthorized
-        shortcut: "Alt+D, S"
         onTriggered: KCMLauncher.openSystemSettings("kcm_device_automounter")
     }
 

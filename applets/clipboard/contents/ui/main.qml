@@ -73,7 +73,6 @@ PlasmoidItem {
         id: configureAction
         text: i18n("Configure Clipboard…")
         icon.name: "configure"
-        shortcut: "alt+d, s"
         onTriggered: klipper.configure()
     }
 
