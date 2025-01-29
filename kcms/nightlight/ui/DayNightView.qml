@@ -253,10 +253,6 @@ ColumnLayout {
             [1.00000000, 1.00000000, 1.00000000]      /* 6500K */
         ]
         var rgb = temp2RGB[(temp - 1000)/100];
-        var col = Qt.rgba(rgb[0], rgb[1], rgb[2], 1);
-        if (isThemeDark() && col.hsvSaturation < 0.7) {
-            col.hsvSaturation += 0.3;
-        }
-        return col;
+        return Qt.rgba(rgb[0], rgb[1], rgb[2], 1);
     }
 }
