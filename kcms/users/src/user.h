@@ -81,6 +81,8 @@ class User : public QObject
 
     Q_PROPERTY(bool administrator READ administrator WRITE setAdministrator NOTIFY administratorChanged)
 
+    Q_PROPERTY(QUrl lastFileDialogLocation READ lastFileDialogLocation WRITE setLastFileDialogLocation NOTIFY lastFileDialogLocationChanged)
+
 public:
     explicit User(QObject *parent = nullptr);
 
@@ -98,6 +100,7 @@ public:
     bool administrator() const;
     QDBusObjectPath path() const;
     QRect faceCrop() const;
+    QUrl lastFileDialogLocation() const;
 
     void setName(const QString &value);
     void setRealName(const QString &value);
@@ -106,6 +109,7 @@ public:
     void setAdministrator(bool value);
     void setPath(const QDBusObjectPath &path);
     void setFaceCrop(const QRect &rect);
+    void setLastFileDialogLocation(QUrl &url);
 
     void loadData();
 
@@ -127,6 +131,7 @@ Q_SIGNALS:
     void administratorChanged();
     void applyError(const QString &errorMessage);
     void passwordSuccessfullyChanged();
+    void lastFileDialogLocationChanged();
 
 private:
     qulonglong mUid = 0;
@@ -150,4 +155,5 @@ private:
     QDBusObjectPath mPath;
     QPointer<OrgFreedesktopAccountsUserInterface> m_dbusIface;
     std::optional<QString> mError;
+    QUrl m_lastFileDialogLocation;
 };

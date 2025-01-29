@@ -141,11 +141,13 @@ Kirigami.OverlaySheet {
                     Dialogs.FileDialog {
                         id: fileDialog
                         title: i18nc("@title", "Choose a picture")
+                        currentFolder: usersDetailPage.user.lastFileDialogLocation
                         nameFilters: [
                             i18nc("@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, png, ppm, tiff, wbmp, webp, xbm, xpm image file formats; do not translate *.avif, *.bmp, *.gif, *.jp2, *.jpeg, *.jpg, *.pbm, *.pgm, *.png, *.ppm, *.tiff, *.wbmp, *.webp, *.xbm, *.xpm",
                                 "Image files \(All major file types\) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)")
                         ]
                         onAccepted: {
+                            usersDetailPage.user.lastFileDialogLocation = currentFolder;
                             const component = Qt.createComponent("CropSheet.qml");
                             const obj = component.incubateObject(usersDetailPage, {
                                 imageUrl: fileDialog.selectedFile,

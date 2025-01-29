@@ -9,7 +9,9 @@
 #include "user.h"
 #include "kcmusers_debug.h"
 #include "user_interface.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <KWallet>
 #include <QDir>
 #include <QImage>
@@ -24,9 +26,21 @@
 
 using namespace Qt::StringLiterals;
 
+static const QString CONFIGNAME = QStringLiteral("kcmusers");
+
 User::User(QObject *parent)
     : QObject(parent)
 {
+    const QStringList picturesLocations = QStandardPaths::standardLocations(QStandardPaths::PicturesLocation);
+    QUrl bestLocationUrl;
+    if (!picturesLocations.isEmpty()) {
+        bestLocationUrl = QUrl::fromLocalFile(picturesLocations[0]);
+    } else {
+        bestLocationUrl = QUrl::fromLocalFile(QDir::homePath());
+    }
+
+    m_lastFileDialogLocation =
+        KSharedConfig::openStateConfig(CONFIGNAME)->group(QStringLiteral("FileDialog")).readEntry(QStringLiteral("LastUsedUrl"), bestLocationUrl);
 }
 
 qulonglong User::uid() const
@@ -347,6 +361,22 @@ void User::setFaceCrop(const QRect &rect)
 QRect User::faceCrop() const
 {
     return mFaceCrop.value_or(QRect());
+}
+
+QUrl User::lastFileDialogLocation() const
+{
+    return m_lastFileDialogLocation;
+}
+
+void User::setLastFileDialogLocation(QUrl &url)
+{
+    if (m_lastFileDialogLocation == url) {
+        return;
+    }
+
+    m_lastFileDialogLocation = url;
+    KSharedConfig::openStateConfig(CONFIGNAME)->group(QStringLiteral("FileDialog")).writeEntry(QStringLiteral("LastUsedUrl"), m_lastFileDialogLocation);
+    Q_EMIT lastFileDialogLocationChanged();
 }
 
 UserApplyJob::UserApplyJob(QPointer<OrgFreedesktopAccountsUserInterface> dbusIface,
