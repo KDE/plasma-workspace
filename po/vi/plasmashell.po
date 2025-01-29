@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-23 00:42+0000\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
 "PO-Revision-Date: 2023-01-08 09:29+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -384,44 +384,44 @@ msgstr ""
 msgid "Show Activity Switcher"
 msgstr "Hiện trình chuyển Hoạt động"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:248
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Dừng Hoạt động hiện tại"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Chuyển sang Hoạt động trước"
 
-#: shellcorona.cpp:265
+#: shellcorona.cpp:264
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Chuyển sang Hoạt động sau"
 
-#: shellcorona.cpp:280
+#: shellcorona.cpp:279
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Mở mục %1 của trình quản lí tác vụ"
 
-#: shellcorona.cpp:312
+#: shellcorona.cpp:311
 #, fuzzy, kde-format
 #| msgid "Manage Desktops And Panels..."
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Quản lí các bảng và bàn làm việc..."
 
-#: shellcorona.cpp:334
+#: shellcorona.cpp:333
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Di chuyển nhắm của bàn phím giữa các bảng"
 
-#: shellcorona.cpp:2173
+#: shellcorona.cpp:2172
 #, kde-format
 msgid "Add Panel"
 msgstr "Thêm bảng"
 
-#: shellcorona.cpp:2234
+#: shellcorona.cpp:2233
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

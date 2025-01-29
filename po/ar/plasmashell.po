@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-23 00:42+0000\n"
-"PO-Revision-Date: 2025-01-09 09:38+0400\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"PO-Revision-Date: 2025-01-28 19:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -156,10 +156,9 @@ msgid "Enter Edit Mode"
 msgstr "ادخل نمط التحرير"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "ادخل نمط التحرير"
+msgstr "اخرج من نمط التحرير"
 
 #: main.cpp:86
 #, kde-format
@@ -384,43 +383,43 @@ msgstr "فعّل مُطلِق التطبيقات"
 msgid "Show Activity Switcher"
 msgstr "أظهر مبدل الأنشطة"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:248
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "أوقف النّشاط الحاليّ"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "بدل إلى النّشاط السابق"
 
-#: shellcorona.cpp:265
+#: shellcorona.cpp:264
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "بدل إلى النّشاط التالي"
 
-#: shellcorona.cpp:280
+#: shellcorona.cpp:279
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "نشط مدخلة مدير المهام %1"
 
-#: shellcorona.cpp:312
+#: shellcorona.cpp:311
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "أدر الأسطح و اللوحات…"
 
-#: shellcorona.cpp:334
+#: shellcorona.cpp:333
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "حرّك تركيز لوحة المفاتيح بين اللوحات"
 
-#: shellcorona.cpp:2173
+#: shellcorona.cpp:2172
 #, kde-format
 msgid "Add Panel"
 msgstr "أضف لوحة"
 
-#: shellcorona.cpp:2234
+#: shellcorona.cpp:2233
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

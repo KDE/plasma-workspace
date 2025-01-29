@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-04 10:09+0100\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"PO-Revision-Date: 2025-01-24 08:06+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -403,55 +403,57 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"La zona horària seleccionada actualment no està disponible per a la "
+"visualització en este mapa"
 
-#: timezoneselector/TimezoneSelector.qml:179
+#: timezoneselector/TimezoneSelector.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Amplia"
 
-#: timezoneselector/TimezoneSelector.qml:195
+#: timezoneselector/TimezoneSelector.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Reduïx"
 
-#: timezoneselector/TimezoneSelector.qml:227
+#: timezoneselector/TimezoneSelector.qml:233
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Seleccioneu…"
 
-#: timezoneselector/TimezoneSelector.qml:231
+#: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Selector de regió de zona horària"
 
-#: timezoneselector/TimezoneSelector.qml:251
+#: timezoneselector/TimezoneSelector.qml:257
 #, kde-format
 msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "region, "
-msgstr ""
+msgstr "regió, "
 
-#: timezoneselector/TimezoneSelector.qml:251
+#: timezoneselector/TimezoneSelector.qml:257
 #, kde-format
 msgctxt ""
 "Full context is: 'Choose region' in the context of time zone region "
 "selection."
 msgid "region"
-msgstr ""
+msgstr "regió"
 
-#: timezoneselector/TimezoneSelector.qml:260
+#: timezoneselector/TimezoneSelector.qml:266
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Selector d'ubicació de zona horària"
 
-#: timezoneselector/TimezoneSelector.qml:277
+#: timezoneselector/TimezoneSelector.qml:283
 #, kde-format
 msgctxt ""
 "Full context is: '<region> region, <zone> time zone.' in the context of time "
 "zone selection."
 msgid "time zone."
-msgstr ""
+msgstr "zona horària."

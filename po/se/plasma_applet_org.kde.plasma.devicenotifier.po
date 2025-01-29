@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
 "PO-Revision-Date: 2007-12-10 07:07+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -47,7 +47,7 @@ msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:126
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -83,22 +83,22 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr ""
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "Removable Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Non Removable Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:163
 #, kde-format
 msgid "All Devices"
 msgstr ""
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr ""

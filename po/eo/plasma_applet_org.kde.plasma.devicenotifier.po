@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
 "PO-Revision-Date: 2024-07-20 17:03+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -48,7 +48,7 @@ msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Ankoraŭ ne malŝtopu! Dosieroj ankoraŭ estas en transiĝo…"
 
 #: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:126
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr "Demeti Ĉiujn"
@@ -84,22 +84,22 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Agordi Demeteblajn Aparatojn…"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "Removable Devices"
 msgstr "Demeteblaj Aparatoj"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nedemeteblaj Aparatoj"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:163
 #, kde-format
 msgid "All Devices"
 msgstr "Ĉiuj aparatoj"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Montri ŝprucfenestron kiam nova aparato estas enŝtopata."

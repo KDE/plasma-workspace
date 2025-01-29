@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
 "PO-Revision-Date: 2024-09-08 20:34+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -47,7 +47,7 @@ msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "Noch nicht abziehen! Es werden noch Dateien übertragen …"
 
 #: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:126
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr "Alle entfernen"
@@ -83,22 +83,22 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Wechselmedien einrichten ..."
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, kde-format
 msgid "Removable Devices"
 msgstr "Wechselmedien"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Non Removable Devices"
 msgstr "Nicht-Wechselmedien"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:163
 #, kde-format
 msgid "All Devices"
 msgstr "Alle Geräte"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr "Aufklappfenster anzeigen, wenn ein neues Gerät angeschlossen wird"

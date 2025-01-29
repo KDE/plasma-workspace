@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
 "PO-Revision-Date: 2020-09-03 15:56+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: Tajik <kde-i18n-doc@kde.org>\n"
@@ -53,7 +53,7 @@ msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:126
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr "Ҳамаро ҷудо кардан"
@@ -93,25 +93,25 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Танзимоти дастгоҳҳои ҷудошаванда"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, fuzzy, kde-format
 #| msgid "Removable devices"
 msgid "Removable Devices"
 msgstr "Дастгоҳҳои ҷудошаванда"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Non-removable devices"
 msgid "Non Removable Devices"
 msgstr "Дастгоҳҳои доимӣ"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:163
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Ҳамаи дастгоҳҳо"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:180
 #, kde-format
 msgid "Show popup when new device is plugged in"
 msgstr ""

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Maris Nartiss <maris.kde@gmail.com>, 2020.
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-23 00:42+0000\n"
-"PO-Revision-Date: 2024-10-29 12:41+0200\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"PO-Revision-Date: 2025-01-27 15:55+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -155,10 +155,9 @@ msgid "Enter Edit Mode"
 msgstr "Ieslēgt rediģēšanas režīmu"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Ieslēgt rediģēšanas režīmu"
+msgstr "Iziet no rediģēšanas režīma"
 
 #: main.cpp:86
 #, kde-format
@@ -356,12 +355,12 @@ msgstr "Iekšējais ekrāns uz „%1“"
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr "%1 %2 uz %3"
+msgstr "„%1 %2“ uz „%3“"
 
 #: shellcontainmentconfig.cpp:133
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr "Atvienots ekrāns %1"
+msgstr "Atvienots ekrāns „%1“"
 
 #: shellcorona.cpp:213 shellcorona.cpp:215
 #, kde-format
@@ -383,44 +382,43 @@ msgstr "Aktivizēt programmu palaidēju"
 msgid "Show Activity Switcher"
 msgstr "Rādīt aktivitāšu pārslēdzēju"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:248
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Pārtraukt pašreizējo aktivitāti"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:256
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Pārslēgties uz iepriekšējo aktivitāti"
 
-#: shellcorona.cpp:265
+#: shellcorona.cpp:264
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Pārslēgties uz nākamo aktivitāti"
 
-#: shellcorona.cpp:280
+#: shellcorona.cpp:279
 #, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr "Aktivēt uzdevumu pārvaldnieka vienumu %1"
+msgstr "Aktivēt uzdevumu pārvaldnieka vienumu „%1“"
 
-#: shellcorona.cpp:312
-#, fuzzy, kde-format
-#| msgid "Manage Desktops And Panels..."
+#: shellcorona.cpp:311
+#, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr "Pārvaldīt darbvirsmas un paneļus..."
+msgstr "Pārvaldīt darbvirsmas un paneļus…"
 
-#: shellcorona.cpp:334
+#: shellcorona.cpp:333
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr "Tastatūras fokusu mainīt starp paneļiem"
+msgstr "Mainīt tastatūras fokusu starp paneļiem"
 
-#: shellcorona.cpp:2173
+#: shellcorona.cpp:2172
 #, kde-format
 msgid "Add Panel"
 msgstr "Pievienot paneli"
 
-#: shellcorona.cpp:2234
+#: shellcorona.cpp:2233
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

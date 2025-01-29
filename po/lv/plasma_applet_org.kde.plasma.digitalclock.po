@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Māris Nartišs <maris.kde@gmail.com>, 2023.
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-12-01 16:16+0200\n"
+"PO-Revision-Date: 2025-01-27 15:51+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -302,13 +302,12 @@ msgstr "Pieejamie spraudņi:"
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Atcelt"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Pievienot papildu laika joslas"
+msgstr "Pievienot atlasīto laika joslu"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -316,15 +315,14 @@ msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Padoms: ja bieži ceļojat, šim sarakstam pievienojat savu mājas laika joslu. "
+"Padoms: ja bieži ceļojat, šim sarakstam pievienojiet savu mājas laika joslu. "
 "Tā parādīsies tikai tad, ja mainīsies visas sistēmas laika josla uz kādu "
 "citu."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Pievienot laika joslas…"
+msgstr "Pievienot laika joslu…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -384,10 +382,9 @@ msgstr ""
 "vietā mainiet sistēmas laika joslu."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Laika joslas"
+msgstr "Izvēlieties laika joslu"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

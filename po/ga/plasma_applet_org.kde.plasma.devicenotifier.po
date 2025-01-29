@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdebase/plasma_applet_devicenotifier.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-14 00:42+0000\n"
+"POT-Creation-Date: 2025-01-29 00:43+0000\n"
 "PO-Revision-Date: 2007-10-23 08:08-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -55,7 +55,7 @@ msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
 
 #: package/contents/ui/FullRepresentation.qml:45
-#: package/contents/ui/main.qml:126
+#: package/contents/ui/main.qml:125
 #, kde-format
 msgid "Remove All"
 msgstr ""
@@ -96,25 +96,25 @@ msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
 msgstr "Gléasanna neamh-inbhainte amháin"
 
-#: package/contents/ui/main.qml:134
+#: package/contents/ui/main.qml:133
 #, fuzzy, kde-format
 #| msgid "Removable devices only"
 msgid "Removable Devices"
 msgstr "Gléasanna inbhainte amháin"
 
-#: package/contents/ui/main.qml:149
+#: package/contents/ui/main.qml:148
 #, fuzzy, kde-format
 #| msgid "Non-removable devices only"
 msgid "Non Removable Devices"
 msgstr "Gléasanna neamh-inbhainte amháin"
 
-#: package/contents/ui/main.qml:164
+#: package/contents/ui/main.qml:163
 #, fuzzy, kde-format
 #| msgid "All devices"
 msgid "All Devices"
 msgstr "Gach gléas"
 
-#: package/contents/ui/main.qml:181
+#: package/contents/ui/main.qml:180
 #, fuzzy, kde-format
 #| msgid "No devices plugged in"
 msgid "Show popup when new device is plugged in"

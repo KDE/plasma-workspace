@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2016, 2017.
 # Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2024.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-28 08:18+0400\n"
+"PO-Revision-Date: 2025-01-28 19:03+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -300,17 +300,14 @@ msgid "Available Plugins:"
 msgstr "الملحقات المتوفّرة:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "كانكون"
+msgstr "ألغِ"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "أضف المزيد من المناطق الزمنية"
+msgstr "أضف المناطق الزمنية المحددة"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -322,10 +319,9 @@ msgstr ""
 "القائمة. لن تظهر إلا عند تغيير المنطقة الزمنية على مستوى النظام إلى شيء آخر."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "أضف المناطق الزّمنيّة..."
+msgstr "أضف منطقة زمنيّة..."
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -385,10 +381,9 @@ msgstr ""
 "المنطقة الزمنية لكامل النظام بدلاً من ذلك."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "المناطق الزّمنيّة"
+msgstr "اختر المنطقة الزمنيّة"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

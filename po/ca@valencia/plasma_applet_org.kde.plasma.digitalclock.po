@@ -1,16 +1,16 @@
 # Translation of plasma_applet_org.kde.plasma.digitalclock.po to Catalan (Valencian)
-# Copyright (C) 2014-2024 This_file_is_part_of_KDE
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2020.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-22 10:15+0100\n"
+"PO-Revision-Date: 2025-01-24 08:03+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -305,13 +305,12 @@ msgstr "Connectors disponibles:"
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Cancel·la"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Afig més zones horàries"
+msgstr "Afig la zona horària seleccionada"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -324,10 +323,9 @@ msgstr ""
 "global del sistema a una altra cosa."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Afig zones horàries…"
+msgstr "Afig una zona horària…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -389,10 +387,9 @@ msgstr ""
 "lloc d'açò, quan viatgeu canvieu la zona horària global del sistema."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Zones horàries"
+msgstr "Escolliu la zona horària"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -473,16 +470,3 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Zona horària local del sistema"
-
-#~ msgid ""
-#~ "At least one time zone needs to be enabled. Your local time zone was "
-#~ "enabled automatically."
-#~ msgstr ""
-#~ "Cal activar una zona horària com a mínim. Automàticament s'ha activat la "
-#~ "vostra zona horària local."
-
-#~ msgid "%1, %2 (%3)"
-#~ msgstr "%1, %2 (%3)"
-
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
