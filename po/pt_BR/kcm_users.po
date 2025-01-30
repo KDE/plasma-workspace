@@ -4,20 +4,21 @@
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2020, 2021, 2022.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2020.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-25 00:42+0000\n"
-"PO-Revision-Date: 2024-11-15 00:39-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
+"PO-Revision-Date: 2025-01-27 23:34-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -99,18 +100,14 @@ msgid "Change Wallet Password?"
 msgstr "Alterar senha da carteira?"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
 "Agora que você alterou sua senha de login, você pode também querer alterar a "
-"senha na carteira padrão para coincidir a ela."
+"senha na carteira padrão do KWallet para coincidir a ela."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format
@@ -533,7 +530,7 @@ msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Escolha uma imagem"
 
-#: src/ui/PicturesSheet.qml:146
+#: src/ui/PicturesSheet.qml:147
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -548,13 +545,13 @@ msgstr ""
 "gif *.jp2 *.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *."
 "xpm)"
 
-#: src/ui/PicturesSheet.qml:202
+#: src/ui/PicturesSheet.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Ícone marcador de posição"
 
-#: src/ui/PicturesSheet.qml:291
+#: src/ui/PicturesSheet.qml:293
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -615,28 +612,28 @@ msgstr ""
 "de linha de comando que as solicitem.<nl/><nl/>O login no sistema com sua "
 "impressão digital ainda não é suportado."
 
-#: src/user.cpp:126
+#: src/user.cpp:140
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Erro ao recortar imagem: %1"
 
-#: src/user.cpp:310
+#: src/user.cpp:324
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Não foi possível obter permissões para salvar o usuário %1"
 
-#: src/user.cpp:315
+#: src/user.cpp:329
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Um erro ocorreu ao salvar as alterações"
 
-#: src/user.cpp:426
+#: src/user.cpp:456
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "Falha ao redimensionar imagem: falha ao abrir o arquivo temporário"
 
-#: src/user.cpp:434
+#: src/user.cpp:464
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "Falha ao redimensionar imagem: falha ao gravar o arquivo temporário"

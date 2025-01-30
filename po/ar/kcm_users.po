@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-25 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
 "PO-Revision-Date: 2025-01-09 09:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -502,7 +502,7 @@ msgctxt "@title"
 msgid "Choose a picture"
 msgstr "اختر صورة"
 
-#: src/ui/PicturesSheet.qml:146
+#: src/ui/PicturesSheet.qml:147
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -516,13 +516,13 @@ msgstr ""
 "ملفّات الصّور (كافة أنواع الملفات الرئيسة) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
 "jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:202
+#: src/ui/PicturesSheet.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "مكان صورة تعبيرية"
 
-#: src/ui/PicturesSheet.qml:291
+#: src/ui/PicturesSheet.qml:293
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -582,28 +582,28 @@ msgstr ""
 "أذونات المسؤول للتطبيقات وبرامج سطر الأوامر التي تطلبها. <nl/><nl/> الولوج "
 "إلى النظام باستخدام البصمة غير مدعوم لحد الآن."
 
-#: src/user.cpp:126
+#: src/user.cpp:140
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
 msgstr "فشل اقتصاص الصورة: %1"
 
-#: src/user.cpp:310
+#: src/user.cpp:324
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "تعذر الحصول على إذن لحفظ المستخدم %1"
 
-#: src/user.cpp:315
+#: src/user.cpp:329
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "حدث خطأ أثناء حفظ التغييرات"
 
-#: src/user.cpp:426
+#: src/user.cpp:456
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشل في فتح الملف المؤقت"
 
-#: src/user.cpp:434
+#: src/user.cpp:464
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "فشل في تغيير حجم الصورة: فشلت الكتابة إلى ملف مؤقت"

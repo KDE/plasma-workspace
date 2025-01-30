@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-25 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
 "PO-Revision-Date: 2023-09-19 22:34+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -512,7 +512,7 @@ msgctxt "@title"
 msgid "Choose a picture"
 msgstr "画像を選択"
 
-#: src/ui/PicturesSheet.qml:146
+#: src/ui/PicturesSheet.qml:147
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -524,13 +524,13 @@ msgid ""
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:202
+#: src/ui/PicturesSheet.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr ""
 
-#: src/ui/PicturesSheet.qml:291
+#: src/ui/PicturesSheet.qml:293
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -587,28 +587,28 @@ msgstr ""
 "ンプログラムに管理者の許可を与える時に使用できます。<nl/><nl/>指紋を用いたシ"
 "ステムへのログインはまだサポートされていません。"
 
-#: src/user.cpp:126
+#: src/user.cpp:140
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
 msgstr ""
 
-#: src/user.cpp:310
+#: src/user.cpp:324
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "ユーザ %1 を保存する許可が得られませんでした"
 
-#: src/user.cpp:315
+#: src/user.cpp:329
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "変更の保存時にエラーが発生しました"
 
-#: src/user.cpp:426
+#: src/user.cpp:456
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "画像のリサイズに失敗しました: 一時ファイルを開けませんでした"
 
-#: src/user.cpp:434
+#: src/user.cpp:464
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "画像のリサイズに失敗しました: 一時ファイルへの書き込みが失敗しました"

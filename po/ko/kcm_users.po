@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-25 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
 "PO-Revision-Date: 2024-11-28 23:38+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -505,7 +505,7 @@ msgctxt "@title"
 msgid "Choose a picture"
 msgstr "사진 선택"
 
-#: src/ui/PicturesSheet.qml:146
+#: src/ui/PicturesSheet.qml:147
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -519,13 +519,13 @@ msgstr ""
 "그림 파일(모든 주요 형식) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *.pbm *.pgm "
 "*.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:202
+#: src/ui/PicturesSheet.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "자리 비움자 아이콘"
 
-#: src/ui/PicturesSheet.qml:291
+#: src/ui/PicturesSheet.qml:293
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -585,28 +585,28 @@ msgstr ""
 "을 사용할 수 있습니다.<nl/><nl/>시스템에 지문으로 로그인은 아직 지원하지 않습"
 "니다."
 
-#: src/user.cpp:126
+#: src/user.cpp:140
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
 msgstr "그림을 잘라낼 수 없음: %1"
 
-#: src/user.cpp:310
+#: src/user.cpp:324
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "%1 사용자를 저장할 권한을 얻을 수 없음"
 
-#: src/user.cpp:315
+#: src/user.cpp:329
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "변경 내용을 저장하는 동안 오류 발생"
 
-#: src/user.cpp:426
+#: src/user.cpp:456
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "이미지 크기 조정 실패: 임시 파일을 열 수 없음"
 
-#: src/user.cpp:434
+#: src/user.cpp:464
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "이미지 크기 조정 실패: 임시 파일에 쓸 수 없음"

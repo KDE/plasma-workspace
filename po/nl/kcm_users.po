@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-25 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
 "PO-Revision-Date: 2025-01-03 17:58+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -504,7 +504,7 @@ msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Een afbeelding kiezen"
 
-#: src/ui/PicturesSheet.qml:146
+#: src/ui/PicturesSheet.qml:147
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -518,13 +518,13 @@ msgstr ""
 "Afbeeldingsbestanden (alle belangrijke bestandstypen) (*.avif *.bmp *.gif *."
 "jp2 *.jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:202
+#: src/ui/PicturesSheet.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Plaatshouderpictogram"
 
-#: src/ui/PicturesSheet.qml:291
+#: src/ui/PicturesSheet.qml:293
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -586,30 +586,30 @@ msgstr ""
 "toepassingen en opdrachtregelprogramma's die er om vragen.<nl/><nl/"
 ">Aanmelden in het systeem met uw vingerafdruk wordt nog niet ondersteund."
 
-#: src/user.cpp:126
+#: src/user.cpp:140
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
 msgstr "Afbeelding bijsnijden is mislukt: %1"
 
-#: src/user.cpp:310
+#: src/user.cpp:324
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Kon geen toegangsrechten verkrijgen om gebruiker %1 op te slaan"
 
-#: src/user.cpp:315
+#: src/user.cpp:329
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Er was een fout tijdens opslaan van wijzigingen"
 
-#: src/user.cpp:426
+#: src/user.cpp:456
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Afbeelding van grootte wijzigen is mislukt: openen van tijdelijk bestand is "
 "mislukt "
 
-#: src/user.cpp:434
+#: src/user.cpp:464
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

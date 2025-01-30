@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
 "PO-Revision-Date: 2016-11-23 19:27+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -412,44 +412,32 @@ msgctxt "@action:button"
 msgid "Zoom out"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:233
+#: timezoneselector/TimezoneSelector.qml:230
+#, kde-format
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Region:"
+msgstr ""
+
+#: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:237
+#: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgid "Timezone region selector"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:257
+#: timezoneselector/TimezoneSelector.qml:261
 #, kde-format
-msgctxt ""
-"Full context is: '<region> region, <zone> time zone.' in the context of time "
-"zone selection."
-msgid "region, "
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Time zone:"
 msgstr ""
 
-#: timezoneselector/TimezoneSelector.qml:257
-#, kde-format
-msgctxt ""
-"Full context is: 'Choose region' in the context of time zone region "
-"selection."
-msgid "region"
-msgstr ""
-
-#: timezoneselector/TimezoneSelector.qml:266
+#: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
-
-#: timezoneselector/TimezoneSelector.qml:283
-#, kde-format
-msgctxt ""
-"Full context is: '<region> region, <zone> time zone.' in the context of time "
-"zone selection."
-msgid "time zone."
 msgstr ""
 
 #~ msgid "&Execute"

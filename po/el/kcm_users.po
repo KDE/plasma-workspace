@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-25 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
 "PO-Revision-Date: 2024-09-21 13:07+0300\n"
 "Last-Translator: Δημήτρης Μηλιάτης <demetresmeliates+i18n@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -551,7 +551,7 @@ msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Επιλογή εικόνας"
 
-#: src/ui/PicturesSheet.qml:146
+#: src/ui/PicturesSheet.qml:147
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -565,13 +565,13 @@ msgstr ""
 "Αρχεία εικόνας (Όλοι οι κύριοι τύποι αρχείων) (*.avif *.bmp *.gif *.jp2 *."
 "jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:202
+#: src/ui/PicturesSheet.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Εικονίδιο Κάτοχου"
 
-#: src/ui/PicturesSheet.qml:291
+#: src/ui/PicturesSheet.qml:293
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -634,29 +634,29 @@ msgstr ""
 "><nl/>Η είσοδος στο σύστημα με το δακτυλικό σας αποτύπωμα δεν υποστηρίζεται "
 "ακόμη."
 
-#: src/user.cpp:126
+#: src/user.cpp:140
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
 msgstr ""
 
-#: src/user.cpp:310
+#: src/user.cpp:324
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Αδυναμία λήψης άδειας για την αποθήκευση χρήστη %1"
 
-#: src/user.cpp:315
+#: src/user.cpp:329
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "Προέκυψε σφάλμα κατά την αποθήκευση αλλαγών"
 
-#: src/user.cpp:426
+#: src/user.cpp:456
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Αποτυχία αλλαγής μεγέθους εικόνας: το άνοιγμα του προσωρινό αρχείου απέτυχε"
 
-#: src/user.cpp:434
+#: src/user.cpp:464
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""

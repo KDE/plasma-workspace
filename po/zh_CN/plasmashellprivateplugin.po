@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -411,42 +411,44 @@ msgctxt "@action:button"
 msgid "Zoom out"
 msgstr "缩小"
 
-#: timezoneselector/TimezoneSelector.qml:233
+#: timezoneselector/TimezoneSelector.qml:230
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Full context is: 'Choose region' in the context of time zone region "
+#| "selection."
+#| msgid "region"
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Region:"
+msgstr "地区"
+
+#: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
 msgstr "选择…"
 
-#: timezoneselector/TimezoneSelector.qml:237
+#: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgid "Timezone region selector"
 msgstr "时区地区选择器"
 
-#: timezoneselector/TimezoneSelector.qml:257
-#, kde-format
-msgctxt ""
-"Full context is: '<region> region, <zone> time zone.' in the context of time "
-"zone selection."
-msgid "region, "
-msgstr "地区，"
+#: timezoneselector/TimezoneSelector.qml:261
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Full context is: '<region> region, <zone> time zone.' in the context of "
+#| "time zone selection."
+#| msgid "time zone."
+msgctxt "@label:listbox In the context of time zone selection"
+msgid "Time zone:"
+msgstr "时区。"
 
-#: timezoneselector/TimezoneSelector.qml:257
-#, kde-format
-msgctxt ""
-"Full context is: 'Choose region' in the context of time zone region "
-"selection."
-msgid "region"
-msgstr "地区"
-
-#: timezoneselector/TimezoneSelector.qml:266
+#: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgid "Timezone location selector"
 msgstr "时区位置选择器"
 
-#: timezoneselector/TimezoneSelector.qml:283
-#, kde-format
-msgctxt ""
-"Full context is: '<region> region, <zone> time zone.' in the context of time "
-"zone selection."
-msgid "time zone."
-msgstr "时区。"
+#~ msgctxt ""
+#~ "Full context is: '<region> region, <zone> time zone.' in the context of "
+#~ "time zone selection."
+#~ msgid "region, "
+#~ msgstr "地区，"

@@ -10,13 +10,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2014, 2015, 2016, 2019.
 # Yuri Efremov <yur.arh@gmail.com>, 2011.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_dig_clock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-09-20 12:46+0300\n"
+"PO-Revision-Date: 2025-01-27 11:55+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -274,7 +274,7 @@ msgstr "%1 пт %2"
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
-msgstr ""
+msgstr "Примечание: размер может быть уменьшен при недостаточной высоте панели"
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
@@ -310,17 +310,14 @@ msgid "Available Plugins:"
 msgstr "Доступные модули:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Канкун"
+msgstr "Отмена"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Добавление часовых поясов"
+msgstr "Добавить выбранный часовой пояс"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -333,10 +330,9 @@ msgstr ""
 "часового пояса."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Добавить часовые пояса..."
+msgstr "Добавить часовой пояс..."
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -397,10 +393,9 @@ msgstr ""
 "изменить часовой пояс системы."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Часовые пояса"
+msgstr "Выбор часового пояса"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -423,6 +418,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"Часовой пояс не задан. Нажмите здесь, чтобы открыть параметры даты и времени "
+"и задать часовой пояс."
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -431,12 +428,11 @@ msgid "Today is %1"
 msgstr "Сегодня %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "По городу"
+msgstr "Часовой пояс не задан"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -444,6 +440,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Нажмите на значок чтобы открыть параметры даты и времени и задать часовой "
+"пояс."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

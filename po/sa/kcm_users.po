@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-25 00:42+0000\n"
+"POT-Creation-Date: 2025-01-30 00:43+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -507,7 +507,7 @@ msgctxt "@title"
 msgid "Choose a picture"
 msgstr "चित्रं चिनुत"
 
-#: src/ui/PicturesSheet.qml:146
+#: src/ui/PicturesSheet.qml:147
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -521,13 +521,13 @@ msgstr ""
 "चित्रसञ्चिकाः (सर्वाः प्रमुखाः सञ्चिकाप्रकाराः) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
 "jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *. xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:202
+#: src/ui/PicturesSheet.qml:204
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "स्थानधारक चिह्न"
 
-#: src/ui/PicturesSheet.qml:291
+#: src/ui/PicturesSheet.qml:293
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
@@ -587,28 +587,28 @@ msgstr ""
 "तान् अनुरोधयन्तः अनुप्रयोगाः आदेशपङ्क्तिकार्यक्रमाः च प्रशासकस्य अनुमतिः प्रदातुं शक्यते।<nl/"
 "><nl/>भवतः अङ्गुलिचिह्नेन सह प्रणाल्यां प्रवेशः अद्यापि समर्थितः नास्ति।"
 
-#: src/user.cpp:126
+#: src/user.cpp:140
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
 msgstr "चित्रं क्रॉप् कर्तुं असफलम्: %1"
 
-#: src/user.cpp:310
+#: src/user.cpp:324
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "उपयोक्तारं %1 रक्षितुं अनुमतिं प्राप्तुं न शक्तम्"
 
-#: src/user.cpp:315
+#: src/user.cpp:329
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "परिवर्तनं रक्षन् त्रुटिः अभवत्"
 
-#: src/user.cpp:426
+#: src/user.cpp:456
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "चित्रस्य आकारं परिवर्तयितुं असफलम्: temp सञ्चिकां उद्घाटयितुं विफलम्"
 
-#: src/user.cpp:434
+#: src/user.cpp:464
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "चित्रस्य आकारं परिवर्तयितुं असफलम्: temp सञ्चिकायां लेखनं विफलम्"
