@@ -12,13 +12,13 @@
 # Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Olesya Gerasimenko <translation-team@basealt.ru>, 2022.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2023, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 02:34+0000\n"
-"PO-Revision-Date: 2024-09-16 13:56+0300\n"
+"PO-Revision-Date: 2025-01-27 11:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -414,8 +414,7 @@ msgid "Activate Task Manager Entry %1"
 msgstr "Открыть %1-ю кнопку на панели задач"
 
 #: shellcorona.cpp:312
-#, fuzzy, kde-format
-#| msgid "Manage Desktops And Panels..."
+#, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Управление рабочими столами и панелями…"

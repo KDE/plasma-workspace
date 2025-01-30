@@ -11,13 +11,13 @@
 # Andrey Cherepanov <skull@kde.ru>, 2009.
 # Yuri Efremov <yur.arh@gmail.com>, 2010, 2011, 2012, 2013.
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-04 00:42+0000\n"
-"PO-Revision-Date: 2024-09-16 13:47+0300\n"
+"PO-Revision-Date: 2025-01-27 12:06+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -359,18 +359,13 @@ msgid "Running"
 msgstr "Запущенные"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Возможно удалить"
+msgstr "Установленные пользователем"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format

@@ -3,58 +3,53 @@
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2023.
 # SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-25 00:43+0000\n"
-"PO-Revision-Date: 2024-03-19 00:47-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-01-28 00:07-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: devicenotifications.cpp:332
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Detected"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Detected"
-msgstr "Dispositivo USB detectado"
+msgstr "Tela detectada"
 
 #: devicenotifications.cpp:333
-#, fuzzy, kde-format
-#| msgid "A USB device has been plugged in."
+#, kde-format
 msgid "A display has been plugged in."
-msgstr "Foi ligado um dispositivo USB."
+msgstr "Uma tela foi conectada."
 
 #: devicenotifications.cpp:346
-#, fuzzy, kde-format
-#| msgctxt "@title:notifications"
-#| msgid "USB Device Removed"
+#, kde-format
 msgctxt "@title:notifications"
 msgid "Display Removed"
-msgstr "Dispositivo USB removido"
+msgstr "Tela removida"
 
 #: devicenotifications.cpp:347
-#, fuzzy, kde-format
-#| msgid "A USB device has been unplugged."
+#, kde-format
 msgid "A display has been unplugged."
-msgstr "Um dispositivo USB foi desconectado."
+msgstr "Uma tela foi desconectada."
 
 #: devicenotifications.cpp:378
 #, kde-format
 msgid "%1 has been plugged in."
-msgstr "%1 foi ligado."
+msgstr "%1 foi conectado."
 
 #: devicenotifications.cpp:378
 #, kde-format
 msgid "A USB device has been plugged in."
-msgstr "Foi ligado um dispositivo USB."
+msgstr "Um dispositivo USB foi conectado."
 
 #: devicenotifications.cpp:381
 #, kde-format

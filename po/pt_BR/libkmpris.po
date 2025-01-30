@@ -1,75 +1,76 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2023.
+# SPDX-FileCopyrightText: 2025 Guilherme Marçal Silva <guimarcalsilva@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-26 00:41+0000\n"
-"PO-Revision-Date: 2023-11-14 14:12-0300\n"
-"Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
+"PO-Revision-Date: 2025-01-28 00:01-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: kded/mprisservice.cpp:105
 #, kde-format
 msgctxt "@title Name for global shortcuts category"
 msgid "Media Controller"
-msgstr ""
+msgstr "Controlador de mídia"
 
 #: kded/mprisservice.cpp:114
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play/Pause media playback"
-msgstr ""
+msgstr "Reproduzir/Pausar reprodução de mídia"
 
 #: kded/mprisservice.cpp:115
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback next"
-msgstr ""
+msgstr "Próxima reprodução de mídia"
 
 #: kded/mprisservice.cpp:116
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media playback previous"
-msgstr ""
+msgstr "Reprodução de mídia anterior"
 
 #: kded/mprisservice.cpp:117
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Stop media playback"
-msgstr ""
+msgstr "Parar reprodução de mídia"
 
 #: kded/mprisservice.cpp:118
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Pause media playback"
-msgstr ""
+msgstr "Pausar reprodução de mídia"
 
 #: kded/mprisservice.cpp:119
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Play media playback"
-msgstr ""
+msgstr "Reproduzir mídia"
 
 #: kded/mprisservice.cpp:120
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume up"
-msgstr ""
+msgstr "Aumentar volume da mídia"
 
 #: kded/mprisservice.cpp:121
 #, kde-format
 msgctxt "@title shortcut"
 msgid "Media volume down"
-msgstr ""
+msgstr "Diminuir volume da mídia"
 
 #: multiplexermodel.cpp:75
 #, kde-format
