@@ -69,6 +69,7 @@ KCM.ScrollViewKCM {
             Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
             // TODO: enable once Kirigami actions can have Accessible.name set (Qt 6.8)
             // Accessible.name: i18nc("@action:button accessible menu button", "Add new application or script")
+            displayHint: Kirigami.DisplayHint.KeepVisible
 
             Kirigami.Action {
                 text: i18nc("@action:inmenu completes: add new application", "Application…")
