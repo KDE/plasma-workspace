@@ -52,23 +52,20 @@ QPoint SubMenu::popupPosition(QQuickItem *item, const QSize &size)
     QPointF pos = item->mapToScene(QPointF(0, 0));
     pos = item->window()->mapToGlobal(pos.toPoint());
 
-    pos.setX(pos.x() + (isRightToLeft ? (-m_offset - size.width()) : (m_offset + item->width())));
-
     QRect avail = availableScreenRectForItem(item);
 
-    if (isRightToLeft) {
-        if (pos.x() < avail.left()) {
-            pos.setX(pos.x() + 2 * m_offset + item->width() + size.width());
-        } else {
-            m_facingLeft = true;
-            Q_EMIT facingLeftChanged();
-        }
+    qreal xPopupLeft = pos.x() - m_offset - size.width();
+    qreal xPopupRight = pos.x() + m_offset + item->width();
+
+    bool fitsLeft = xPopupLeft >= avail.left();
+    bool fitsRight = xPopupRight + size.width() <= avail.right();
+
+    if ((isRightToLeft && fitsLeft) || (!isRightToLeft && !fitsRight)) {
+        pos.setX(xPopupLeft);
+        m_facingLeft = true;
+        Q_EMIT facingLeftChanged();
     } else {
-        if (pos.x() + size.width() > avail.right()) {
-            pos.setX(pos.x() + -m_offset - item->width() - size.width());
-            m_facingLeft = true;
-            Q_EMIT facingLeftChanged();
-        }
+        pos.setX(xPopupRight);
     }
 
     pos.setY(pos.y() - margins()->property("top").toInt());
