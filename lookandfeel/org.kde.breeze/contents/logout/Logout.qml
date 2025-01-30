@@ -207,7 +207,7 @@ Item {
 
         RowLayout {
             id: logoutButtonsRow
-            spacing: Kirigami.Units.gridUnit * 2
+            spacing: Kirigami.Units.largeSpacing
             Layout.topMargin: Kirigami.Units.gridUnit * 2 - column.spacing
             Layout.alignment: Qt.AlignHCenter
             LogoutButton {
