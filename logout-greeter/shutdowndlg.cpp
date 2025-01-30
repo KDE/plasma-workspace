@@ -20,7 +20,6 @@
 #include <QQuickView>
 #include <QTimer>
 #include <limits>
-#include <private/qtx11extras_p.h>
 
 #ifdef PACKAGEKIT_OFFLINE_UPDATES
 #include <PackageKit/Daemon>
@@ -94,9 +93,10 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         constexpr auto role = std::string_view("logoutdialog");
         constexpr std::size_t roleLength = role.length();
 
-        XChangeProperty(QX11Info::display(),
+        auto x11App = qGuiApp->nativeInterface<QNativeInterface::QX11Application>();
+        XChangeProperty(x11App->display(),
                         winId(),
-                        XInternAtom(QX11Info::display(), "WM_WINDOW_ROLE", False),
+                        XInternAtom(x11App->display(), "WM_WINDOW_ROLE", False),
                         XA_STRING,
                         8,
                         PropModeReplace,
@@ -106,7 +106,7 @@ KSMShutdownDlg::KSMShutdownDlg(QWindow *parent, KWorkSpace::ShutdownType sdtype,
         XClassHint classHint;
         classHint.res_name = const_cast<char *>("ksmserver-logout-greeter");
         classHint.res_class = const_cast<char *>("ksmserver-logout-greeter");
-        XSetClassHint(QX11Info::display(), winId(), &classHint);
+        XSetClassHint(x11App->display(), winId(), &classHint);
         KX11Extras::setState(winId(), NET::SkipTaskbar | NET::SkipPager | NET::SkipSwitcher);
     }
 
