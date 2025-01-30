@@ -216,18 +216,6 @@ PlasmoidItem {
             id: clipboardAction
             text: i18n("Copy to Clipboard")
             icon.name: "edit-copy"
-        },
-        PlasmaCore.Action {
-            text: i18n("Adjust Date and Time…")
-            icon.name: "clock"
-            visible: KConfig.KAuthorized.authorize("kcm_clock")
-            onTriggered: KCMUtils.KCMLauncher.openSystemSettings("kcm_clock")
-        },
-        PlasmaCore.Action {
-            text: i18n("Set Time Format…")
-            icon.name: "gnumeric-format-thousand-separator"
-            visible: KConfig.KAuthorized.authorizeControlModule("kcm_regionandlang")
-            onTriggered: KCMUtils.KCMLauncher.openSystemSettings("kcm_regionandlang")
         }
     ]
 
