@@ -22,7 +22,7 @@ PlasmaComponents3.AbstractButton {
     hoverEnabled: true
 
     // Expand clickable area, keep background centered
-    leftInset: Math.max(Kirigami.Units.largeSpacing * 2, (implicitContentWidth - implicitBackgroundWidth) / 2)
+    leftInset: Math.max(Kirigami.Units.largeSpacing * 4, (implicitContentWidth - implicitBackgroundWidth) / 2)
     rightInset: leftInset
 
     padding: Kirigami.Units.smallSpacing
