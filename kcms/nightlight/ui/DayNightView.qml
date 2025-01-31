@@ -48,7 +48,29 @@ ColumnLayout {
 
             readonly property color dayColor: colorForTemp(root.dayTemperature)
             readonly property color nightColor: colorForTemp(root.nightTemperature)
-            readonly property color edgeColor: (root.nightTransitionOn < root.dayTransitionOff) ? dayColor : nightColor
+
+            readonly property real edgeBlendFactor: {
+                const lastEvent = Math.max(nightTransitionOn, nightTransitionOff, dayTransitionOn, dayTransitionOff)
+
+                if (lastEvent == nightTransitionOff) {
+                    return 1  // Night color
+                } else if (lastEvent == dayTransitionOff) {
+                    return 0  // Day color
+                }
+
+                // Transition wraps around: blend the colors
+                const firstEvent = Math.min(nightTransitionOff, dayTransitionOff)  // Last event was a transition start
+                const minutesBeforeMidnight = 1440 - lastEvent
+
+                // Calculate blend factor as transition progress
+                const blendFactor = minutesBeforeMidnight / (minutesBeforeMidnight + firstEvent)
+                if (lastEvent == dayTransitionOn) {
+                    return 1 - blendFactor
+                } else {
+                    return blendFactor
+                }
+            }
+            readonly property color edgeColor: Kirigami.ColorUtils.linearInterpolation(dayColor, nightColor, edgeBlendFactor)
 
             GradientStop { position: root.dayTransitionOn / 1440; color: grad.nightColor }
             GradientStop { position: root.dayTransitionOff / 1440; color: grad.dayColor }
