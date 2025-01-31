@@ -104,17 +104,29 @@ KCMUtils.SimpleKCM {
             Kirigami.FormData.isSection: true
         }
 
-        QQC2.ComboBox {
-            id: displayTimeZoneFormat
-
+        RowLayout {
             Kirigami.FormData.label: i18n("Display time zone as:")
+            Kirigami.FormData.buddyFor: displayTimeZoneFormat
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.smallSpacing
 
-            model: [
-                i18n("Code"),
-                i18n("City"),
-                i18n("Offset from UTC time"),
-            ]
-            onActivated: cfg_displayTimezoneFormat = currentIndex
+            QQC2.ComboBox {
+                id: displayTimeZoneFormat
+
+
+                model: [
+                    i18n("Code"),
+                    i18n("City"),
+                    i18n("Offset from UTC time"),
+                ]
+                onActivated: cfg_displayTimezoneFormat = currentIndex
+            }
+            QQC2.Button {
+                visible: KConfig.KAuthorized.authorizeControlModule("kcm_clock")
+                text: i18nc("@action:button opens kcm", "Switch Time Zone…")
+                icon.name: "preferences-system-time"
+                onClicked: KCMUtils.KCMLauncher.openSystemSettings("kcm_clock")
+            }
         }
 
         Item {
