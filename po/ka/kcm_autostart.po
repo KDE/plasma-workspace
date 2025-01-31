@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2025-01-31 02:36+0000\n"
 "PO-Revision-Date: 2024-07-30 06:31+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -105,25 +105,25 @@ msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
 msgstr "ახლის დამატება"
 
-#: ui/main.qml:74
+#: ui/main.qml:75
 #, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
 msgstr "აპლიკაცია…"
 
-#: ui/main.qml:81
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
 msgstr "შესვლის სკრიპტი…"
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
 msgstr "გასვლის სკრიპტი…"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -132,62 +132,62 @@ msgstr ""
 "%1 ჯერ ავტომატურად არ გაშვებულა. დეტალები სისტემის გადატვირთვის შემდეგ "
 "იქნება ხელმისაწვდომი."
 
-#: ui/main.qml:148
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "ჯერ ავტომატურად არ გაშვებულა"
 
-#: ui/main.qml:157
+#: ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "თვისებების ნახვა"
 
-#: ui/main.qml:168
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "ჩანაწერის წაშლა"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-format
 msgid "Applications"
 msgstr "აპლიკაციები"
 
-#: ui/main.qml:187
+#: ui/main.qml:188
 #, kde-format
 msgid "Login Scripts"
 msgstr "შესვლის სკიპტები"
 
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "გაშვებამდელი სკრიპტები"
 
-#: ui/main.qml:193
+#: ui/main.qml:194
 #, kde-format
 msgid "Logout Scripts"
 msgstr "გამოსვლის სკრიპტები"
 
-#: ui/main.qml:202
+#: ui/main.qml:203
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "მომხმარებელს ავტომატურად გასაშვებლად არაფერი მიუთითებია"
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "დასამატებლად, <interface>ახლის დამატების…</interface> ღილაკს დააწექით"
 
-#: ui/main.qml:218
+#: ui/main.qml:219
 #, kde-format
 msgid "Choose Login Script"
 msgstr "აირჩიეთ შესვლის სკრიპტი"
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "აირჩიეთ გამოსვლის სკრიპტი"

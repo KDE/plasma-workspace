@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2025-01-31 02:36+0000\n"
 "PO-Revision-Date: 2024-07-30 11:19+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -109,25 +109,25 @@ msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
 msgstr "Afig nou"
 
-#: ui/main.qml:74
+#: ui/main.qml:75
 #, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
 msgstr "Aplicació…"
 
-#: ui/main.qml:81
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
 msgstr "Script d'inici…"
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
 msgstr "Script d'eixida…"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
@@ -136,62 +136,62 @@ msgstr ""
 "%1 encara no s'ha iniciat automàticament. Els detalls estaran disponibles "
 "després de reiniciar el sistema."
 
-#: ui/main.qml:148
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "Encara no s'ha iniciat automàticament"
 
-#: ui/main.qml:157
+#: ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "Veure les propietats"
 
-#: ui/main.qml:168
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "Elimina l'entrada"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-format
 msgid "Applications"
 msgstr "Aplicacions"
 
-#: ui/main.qml:187
+#: ui/main.qml:188
 #, kde-format
 msgid "Login Scripts"
 msgstr "Scripts d'inici de sessió"
 
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "Scripts previs a l'inici"
 
-#: ui/main.qml:193
+#: ui/main.qml:194
 #, kde-format
 msgid "Logout Scripts"
 msgstr "Scripts d'eixida de sessió"
 
-#: ui/main.qml:202
+#: ui/main.qml:203
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "No hi ha cap element d'inici automàtic especificat per l'usuari"
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "Feu clic en el botó <interface>Afig nou</interface> per a afegir-ne"
 
-#: ui/main.qml:218
+#: ui/main.qml:219
 #, kde-format
 msgid "Choose Login Script"
 msgstr "Seleccioneu un script d'inici de sessió"
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "Seleccioneu un script d'eixida"

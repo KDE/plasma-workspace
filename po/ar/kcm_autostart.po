@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2025-01-31 02:36+0000\n"
 "PO-Revision-Date: 2024-08-15 10:47+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -109,87 +109,87 @@ msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
 msgstr "أضف جديدًا"
 
-#: ui/main.qml:74
+#: ui/main.qml:75
 #, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
 msgstr "تطبيق…"
 
-#: ui/main.qml:81
+#: ui/main.qml:82
 #, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
 msgstr "سكربت ولوج…"
 
-#: ui/main.qml:88
+#: ui/main.qml:89
 #, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
 msgstr "سكربت خروج…"
 
-#: ui/main.qml:125
+#: ui/main.qml:126
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
 msgstr "لم تجعل %1 في حالة بدء آلي. ستتوفر التفاصيل بعد إعادة تشغيل النظام."
 
-#: ui/main.qml:148
+#: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
 msgstr "لم تجعل تبدأ آليا بعد"
 
-#: ui/main.qml:157
+#: ui/main.qml:158
 #, kde-format
 msgctxt "@action:button"
 msgid "See properties"
 msgstr "انظر الخصائص"
 
-#: ui/main.qml:168
+#: ui/main.qml:169
 #, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
 msgstr "أزِل المدخلة"
 
-#: ui/main.qml:184
+#: ui/main.qml:185
 #, kde-format
 msgid "Applications"
 msgstr "التطبيقات"
 
-#: ui/main.qml:187
+#: ui/main.qml:188
 #, kde-format
 msgid "Login Scripts"
 msgstr "سكربتات الولوج"
 
-#: ui/main.qml:190
+#: ui/main.qml:191
 #, kde-format
 msgid "Pre-startup Scripts"
 msgstr "سكربت ما قبل البدء"
 
-#: ui/main.qml:193
+#: ui/main.qml:194
 #, kde-format
 msgid "Logout Scripts"
 msgstr "سكربتات الخروج"
 
-#: ui/main.qml:202
+#: ui/main.qml:203
 #, kde-format
 msgid "No user-specified autostart items"
 msgstr "لا توجد عناصر بدء آلي حددها المستخدم"
 
-#: ui/main.qml:203
+#: ui/main.qml:204
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
 msgstr "انقر على زر <interface>أضف جديدًا...</interface> لتضيف بعضها"
 
-#: ui/main.qml:218
+#: ui/main.qml:219
 #, kde-format
 msgid "Choose Login Script"
 msgstr "اختر سكربت الولوج"
 
-#: ui/main.qml:238
+#: ui/main.qml:239
 #, kde-format
 msgid "Choose Logout Script"
 msgstr "اختر سكربت الخروج"
