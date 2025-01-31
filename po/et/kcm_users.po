@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-31 00:43+0000\n"
 "PO-Revision-Date: 2020-10-25 18:48+0100\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -357,7 +357,7 @@ msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "Lisa uus kasutaja"
 
-#: src/ui/main.qml:120
+#: src/ui/main.qml:121
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"

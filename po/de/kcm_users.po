@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:43+0000\n"
+"POT-Creation-Date: 2025-01-31 00:43+0000\n"
 "PO-Revision-Date: 2024-09-29 18:48+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -395,7 +395,7 @@ msgctxt "@action:button"
 msgid "Add New User…"
 msgstr "Neuen Benutzer hinzufügen …"
 
-#: src/ui/main.qml:120
+#: src/ui/main.qml:121
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Press Space to edit the user profile"

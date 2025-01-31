@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-30 00:43+0000\n"
-"PO-Revision-Date: 2025-01-24 07:14+0100\n"
+"PO-Revision-Date: 2025-01-30 07:33+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -420,14 +420,10 @@ msgid "Zoom out"
 msgstr "Oddalji"
 
 #: timezoneselector/TimezoneSelector.qml:230
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: 'Choose region' in the context of time zone region "
-#| "selection."
-#| msgid "region"
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr "regija"
+msgstr "Regija:"
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
@@ -441,14 +437,10 @@ msgid "Timezone region selector"
 msgstr "Izbirnik regije časovnega pasu"
 
 #: timezoneselector/TimezoneSelector.qml:261
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: '<region> region, <zone> time zone.' in the context of "
-#| "time zone selection."
-#| msgid "time zone."
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr "časovni pas."
+msgstr "Časovni pas:"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
