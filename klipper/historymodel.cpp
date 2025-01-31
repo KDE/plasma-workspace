@@ -561,6 +561,7 @@ bool HistoryModel::loadHistory()
     // The last row is either items.size() - 1 or m_maxSize - 1.
     decltype(m_items) items;
     if (query.exec(u"SELECT * FROM main ORDER BY last_used_time DESC, added_time DESC LIMIT %1"_s.arg(QString::number(m_maxSize))) && query.isSelect()) {
+        items.reserve(std::max(query.size(), 1));
         while (query.next()) {
             if (HistoryItemPtr item = HistoryItem::create(query)) {
                 items.emplace_back(std::move(item));
