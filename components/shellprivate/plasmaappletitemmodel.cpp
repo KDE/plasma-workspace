@@ -400,7 +400,7 @@ void PlasmaAppletItemModel::populateModel()
     QList<KPackage::Package> kPackages = KPackage::PackageLoader::self()->listKPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"));
     for (const KPackage::Package &package : kPackages) {
         KPluginMetaData data = package.metadata();
-        if (package.filePath("metadata").endsWith(QStringLiteral("metadata.desktop")) && filter(data)) {
+        if (package.filePath("metadata").endsWith(u"metadata.desktop") && filter(data)) {
             appendRow(new PlasmaAppletItem(data));
         }
     }

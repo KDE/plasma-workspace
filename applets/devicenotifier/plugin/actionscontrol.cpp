@@ -244,7 +244,7 @@ void ActionsControl::onIsActionValidChanged(const QString &name, bool status)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Action Controller for " << m_udi << " : "
                                      << "isActionValidChanged signal arrived for action " << name << " with status " << status;
-    if (name == QStringLiteral("Unmount")) {
+    if (name == u"Unmount") {
         Q_EMIT unmountActionIsValidChanged(m_udi, status);
     } else if (status) {
         if (auto it = m_notValidActions.find(name); it != m_notValidActions.end()) {

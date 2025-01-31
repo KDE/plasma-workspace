@@ -187,7 +187,7 @@ int main(int argc, char *argv[])
     QString loginMode = config.readEntry("loginMode", "restorePreviousLogout");
 
     // we don't need session restoring in Plasma Mobile
-    if (KRuntimePlatform::runtimePlatform().contains(QStringLiteral("phone"))) {
+    if (KRuntimePlatform::runtimePlatform().contains(u"phone")) {
         loginMode = QStringLiteral("emptySession");
     }
 

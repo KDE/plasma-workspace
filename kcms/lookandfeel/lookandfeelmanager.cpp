@@ -467,7 +467,7 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
         if (itemsToApply.testFlag(WidgetStyle)) {
             QString widgetStyle = group.readEntry("widgetStyle", QString());
             // Some global themes refer to breeze's widgetStyle with a lowercase b.
-            if (widgetStyle == QStringLiteral("breeze")) {
+            if (widgetStyle == u"breeze") {
                 widgetStyle = QStringLiteral("Breeze");
             }
 

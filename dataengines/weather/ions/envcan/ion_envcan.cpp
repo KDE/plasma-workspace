@@ -603,7 +603,7 @@ bool EnvCanadaIon::readXMLSetup()
         if (m_xmlSetup.isStartElement()) {
             // XML ID code to match filename
             if (elementName == QLatin1String("site")) {
-                code = m_xmlSetup.attributes().value(QStringLiteral("code")).toString();
+                code = m_xmlSetup.attributes().value(u"code").toString();
             }
 
             if (elementName == QLatin1String("nameEn")) {
@@ -747,9 +747,9 @@ void EnvCanadaIon::parseDateTime(WeatherData &data, QXmlStreamReader &xml, Weath
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("dateTime"));
 
     // What kind of date info is this?
-    const QString dateType = xml.attributes().value(QStringLiteral("name")).toString();
-    const QString dateZone = xml.attributes().value(QStringLiteral("zone")).toString();
-    const QString dateUtcOffset = xml.attributes().value(QStringLiteral("UTCOffset")).toString();
+    const QString dateType = xml.attributes().value(u"name").toString();
+    const QString dateZone = xml.attributes().value(u"zone").toString();
+    const QString dateUtcOffset = xml.attributes().value(u"UTCOffset").toString();
 
     QString selectTimeStamp;
 
@@ -865,7 +865,7 @@ void EnvCanadaIon::parseWindInfo(WeatherData &data, QXmlStreamReader &xml)
             } else if (elementName == QLatin1String("direction")) {
                 data.windDirection = xml.readElementText();
             } else if (elementName == QLatin1String("bearing")) {
-                data.windDegrees = xml.attributes().value(QStringLiteral("degrees")).toString();
+                data.windDegrees = xml.attributes().value(u"degrees").toString();
             } else {
                 parseUnknownElement(xml);
             }
@@ -903,10 +903,10 @@ void EnvCanadaIon::parseConditions(WeatherData &data, QXmlStreamReader &xml)
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("station")) {
-                data.stationID = xml.attributes().value(QStringLiteral("code")).toString();
+                data.stationID = xml.attributes().value(u"code").toString();
                 QRegularExpression dumpDirection(QStringLiteral("[^0-9.]"));
-                data.stationLatitude = xml.attributes().value(QStringLiteral("lat")).toString().remove(dumpDirection).toDouble();
-                data.stationLongitude = xml.attributes().value(QStringLiteral("lon")).toString().remove(dumpDirection).toDouble();
+                data.stationLatitude = xml.attributes().value(u"lat").toString().remove(dumpDirection).toDouble();
+                data.stationLongitude = xml.attributes().value(u"lon").toString().remove(dumpDirection).toDouble();
             } else if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
             } else if (elementName == QLatin1String("condition")) {
@@ -923,7 +923,7 @@ void EnvCanadaIon::parseConditions(WeatherData &data, QXmlStreamReader &xml)
                 // prevent N/A text to result in 0.0 value
                 parseFloat(data.windchill, xml);
             } else if (elementName == QLatin1String("pressure")) {
-                data.pressureTendency = xml.attributes().value(QStringLiteral("tendency")).toString();
+                data.pressureTendency = xml.attributes().value(u"tendency").toString();
                 if (data.pressureTendency.isEmpty()) {
                     data.pressureTendency = QStringLiteral("steady");
                 }
@@ -947,7 +947,7 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader &xml)
     WeatherData::WeatherEvent *warning = new WeatherData::WeatherEvent;
 
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("warnings"));
-    QString eventURL = xml.attributes().value(QStringLiteral("url")).toString();
+    QString eventURL = xml.attributes().value(u"url").toString();
 
     // envcan provides three type of events: 'warning', 'watch' and 'advisory'
     const auto mapToPriority = [](const QString &type) {
@@ -979,8 +979,8 @@ void EnvCanadaIon::parseWarnings(WeatherData &data, QXmlStreamReader &xml)
             } else if (elementName == QLatin1String("event")) {
                 // Append new event to list.
                 warning->url = eventURL;
-                warning->description = xml.attributes().value(QStringLiteral("description")).toString();
-                warning->priority = mapToPriority(xml.attributes().value(QStringLiteral("type")).toString());
+                warning->description = xml.attributes().value(u"description").toString();
+                warning->priority = mapToPriority(xml.attributes().value(u"type").toString());
             } else {
                 if (xml.name() != QLatin1String("dateTime")) {
                     parseUnknownElement(xml);
@@ -1037,10 +1037,10 @@ void EnvCanadaIon::parseRegionalNormals(WeatherData &data, QXmlStreamReader &xml
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("textSummary")) {
                 xml.readElementText();
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("high")) {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(u"class") == QLatin1String("high")) {
                 // prevent N/A text to result in 0.0 value
                 parseFloat(data.normalHigh, xml);
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("low")) {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(u"class") == QLatin1String("low")) {
                 // prevent N/A text to result in 0.0 value
                 parseFloat(data.normalLow, xml);
             }
@@ -1064,7 +1064,7 @@ void EnvCanadaIon::parseForecast(WeatherData &data, QXmlStreamReader &xml, Weath
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("period")) {
-                forecast->forecastPeriod = xml.attributes().value(QStringLiteral("textForecastName")).toString();
+                forecast->forecastPeriod = xml.attributes().value(u"textForecastName").toString();
             } else if (elementName == QLatin1String("textSummary")) {
                 forecast->forecastSummary = xml.readElementText();
             } else if (elementName == QLatin1String("abbreviatedForecast")) {
@@ -1076,7 +1076,7 @@ void EnvCanadaIon::parseForecast(WeatherData &data, QXmlStreamReader &xml, Weath
             } else if (elementName == QLatin1String("precipitation")) {
                 parsePrecipitationForecast(forecast, xml);
             } else if (elementName == QLatin1String("uv")) {
-                data.UVRating = xml.attributes().value(QStringLiteral("category")).toString();
+                data.UVRating = xml.attributes().value(u"category").toString();
                 parseUVIndex(data, xml);
                 // else if (elementName == QLatin1String("frost")) { FIXME: Wait until winter to see what this looks like.
                 //  parseFrost(xml, forecast);
@@ -1181,9 +1181,9 @@ void EnvCanadaIon::parseForecastTemperatures(WeatherData::ForecastInfo *forecast
         }
 
         if (xml.isStartElement()) {
-            if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("low")) {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value(u"class") == QLatin1String("low")) {
                 parseFloat(forecast->tempLow, xml);
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("high")) {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(u"class") == QLatin1String("high")) {
                 parseFloat(forecast->tempHigh, xml);
             } else if (elementName == QLatin1String("textSummary")) {
                 xml.readElementText();
@@ -1277,12 +1277,12 @@ void EnvCanadaIon::parseYesterdayWeather(WeatherData &data, QXmlStreamReader &xm
         const auto elementName = xml.name();
 
         if (xml.isStartElement()) {
-            if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("high")) {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value(u"class") == QLatin1String("high")) {
                 parseFloat(data.prevHigh, xml);
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("low")) {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(u"class") == QLatin1String("low")) {
                 parseFloat(data.prevLow, xml);
             } else if (elementName == QLatin1String("precip")) {
-                data.prevPrecipType = xml.attributes().value(QStringLiteral("units")).toString();
+                data.prevPrecipType = xml.attributes().value(u"units").toString();
                 if (data.prevPrecipType.isEmpty()) {
                     data.prevPrecipType = QString::number(KUnitConversion::NoUnit);
                 }
@@ -1306,13 +1306,13 @@ void EnvCanadaIon::parseWeatherRecords(WeatherData &data, QXmlStreamReader &xml)
         }
 
         if (xml.isStartElement()) {
-            if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("extremeMax")) {
+            if (elementName == QLatin1String("temperature") && xml.attributes().value(u"class") == QLatin1String("extremeMax")) {
                 parseFloat(data.recordHigh, xml);
-            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("extremeMin")) {
+            } else if (elementName == QLatin1String("temperature") && xml.attributes().value(u"class") == QLatin1String("extremeMin")) {
                 parseFloat(data.recordLow, xml);
-            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("extremeRainfall")) {
+            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value(u"class") == QLatin1String("extremeRainfall")) {
                 parseFloat(data.recordRain, xml);
-            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value(QStringLiteral("class")) == QLatin1String("extremeSnowfall")) {
+            } else if (elementName == QLatin1String("precipitation") && xml.attributes().value(u"class") == QLatin1String("extremeSnowfall")) {
                 parseFloat(data.recordSnow, xml);
             }
         }
@@ -1493,7 +1493,7 @@ void EnvCanadaIon::updateWeather(const QString &source)
         QString forecastPeriod = forecastInfo->forecastPeriod;
         // Indicate whether the first forcast is a nightly one
         if (i == 0) {
-            data.insert(QStringLiteral("Forecast Starts at Night"), forecastPeriod.contains(QStringLiteral("night")));
+            data.insert(QStringLiteral("Forecast Starts at Night"), forecastPeriod.contains(u"night"));
         }
 
         if (forecastPeriod.isEmpty()) {

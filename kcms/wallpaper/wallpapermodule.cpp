@@ -286,10 +286,10 @@ bool WallpaperModule::isDefault() const
     }
     for (const auto &item : m_configLoader->items()) {
         if (!item->isDefault()) {
-            if (item->name() == QStringLiteral("Image") && item->property() == m_defaultWallpaper) {
+            if (item->name() == u"Image" && item->property() == m_defaultWallpaper) {
                 continue;
             }
-            if (item->name() == QStringLiteral("SlidePaths")) {
+            if (item->name() == u"SlidePaths") {
                 continue;
             }
             return false;

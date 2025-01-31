@@ -68,7 +68,7 @@ int main(int argc, char **argv)
         if (requestedScheme.contains(dirSplit)) {
             QStringList splitScheme = requestedScheme.split(dirSplit, Qt::SkipEmptyParts);
             requestedScheme = splitScheme.last();
-            if (requestedScheme.endsWith(QStringLiteral(".colors"))) {
+            if (requestedScheme.endsWith(u".colors")) {
                 requestedScheme = requestedScheme.left(requestedScheme.lastIndexOf(QStringLiteral(".")));
             } else {
                 exitCode = -1;

@@ -2101,8 +2101,7 @@ Plasma::Containment *ShellCorona::setContainmentTypeForScreen(int screen, const 
 
     const QMap<QString, QString> entryMap = oldCg.entryMap();
     for (auto it = entryMap.constBegin(); it != entryMap.constEnd(); it++) {
-        if (it.key() == QStringLiteral("activityId") || it.key() == QStringLiteral("wallpaperplugin")
-            || it.key().startsWith(QStringLiteral("ItemGeometries"))) {
+        if (it.key() == u"activityId" || it.key() == u"wallpaperplugin" || it.key().startsWith(u"ItemGeometries")) {
             newCg.writeEntry(it.key(), it.value());
             newCg2.writeEntry(it.key(), it.value());
         }
@@ -2314,7 +2313,7 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
         KConfigGroup oldAppletConfig = targetAppletsConfig.group(QString::number(applet->id()));
         KConfigGroup newAppletConfig = targetAppletsConfig.group(QString::number(newApplet->id()));
 
-        if (newApplet->pluginName() == QStringLiteral("org.kde.plasma.systemtray")) {
+        if (newApplet->pluginName() == u"org.kde.plasma.systemtray") {
             // System trays are their own containments, so we have to handle their
             // scenario separately. Firstly, do not copy the settings over: the only
             // setting of "org.kde.plasma.systemtray" applet is the id of the actual

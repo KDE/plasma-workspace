@@ -86,7 +86,7 @@ protected:
 private:
     void parseFolder(const QJsonObject &obj, QJsonArray &bookmarks)
     {
-        const QJsonArray children = obj.value(QStringLiteral("children")).toArray();
+        const QJsonArray children = obj.value(u"children").toArray();
         for (const QJsonValue &child : children) {
             const QJsonObject entry = child.toObject();
             if (entry.value(QLatin1String("type")).toString() == QLatin1String("folder"))

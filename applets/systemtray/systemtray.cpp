@@ -73,7 +73,7 @@ void SystemTray::init()
 
         m_configWatcher = KConfigWatcher::create(config);
         connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-            if (group.name() == QStringLiteral("KScreen") && names.contains(QByteArrayLiteral("XwaylandClientsScale"))) {
+            if (group.name() == u"KScreen" && names.contains(QByteArrayLiteral("XwaylandClientsScale"))) {
                 m_xwaylandClientsScale = group.readEntry("XwaylandClientsScale", true);
             }
         });

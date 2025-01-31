@@ -85,11 +85,11 @@ QString MountAndOpenAction::predicate() const
             }
 
             for (const QString &protocol : m_supportedProtocols) {
-                if (protocol == QStringLiteral("mtp")) {
+                if (protocol == u"mtp") {
                     newPredicate = QLatin1String("solid_mtp.desktop"); // this lives in kio-extras!
                     break;
                 }
-                if (protocol == QStringLiteral("afc")) {
+                if (protocol == u"afc") {
                     newPredicate = QLatin1String("solid_afc.desktop"); // this lives in kio-extras!
                     break;
                 }

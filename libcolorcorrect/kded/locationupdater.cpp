@@ -31,7 +31,7 @@ void LocationUpdater::resetLocator()
     KConfigGroup group(m_configWatcher->config(), QStringLiteral("NightColor"));
     const bool enabled = group.readEntry(QStringLiteral("Active"), false);
     const QString mode = group.readEntry(QStringLiteral("Mode"), QStringLiteral("Automatic"));
-    if (m_adaptor->running() && enabled && mode == QStringLiteral("Automatic")) {
+    if (m_adaptor->running() && enabled && mode == u"Automatic") {
         if (!m_positionSource) {
             m_positionSource = QGeoPositionInfoSource::createDefaultSource(this);
             if (!m_positionSource) {

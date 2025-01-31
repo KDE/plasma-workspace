@@ -179,7 +179,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         // to write out any header color data because then various things will think
         // the color scheme *does* have header colors, which it mostly doesn't, and
         // things will visually break in creative ways
-        if (item == QStringLiteral("Colors:Header") && !config->hasGroup(QStringLiteral("Colors:Header"))) {
+        if (item == u"Colors:Header" && !config->hasGroup(QStringLiteral("Colors:Header"))) {
             continue;
         }
 
@@ -219,7 +219,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             }
         }
 
-        if (item == QStringLiteral("Colors:Selection") && hasAccent) {
+        if (item == u"Colors:Selection" && hasAccent) {
             QColor accentbg = accentBackground(accent, config->group(u"Colors:View"_s).readEntry<QColor>("BackgroundNormal", QColor()));
             for (const auto &entry : {QStringLiteral("BackgroundNormal"), QStringLiteral("BackgroundAlternate")}) {
                 targetGroup.writeEntry(entry, accentbg);
@@ -229,7 +229,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
             }
         }
 
-        if (item == QStringLiteral("Colors:Button") && hasAccent) {
+        if (item == u"Colors:Button" && hasAccent) {
             QColor accentbg = accentBackground(accent, config->group(u"Colors:Button"_s).readEntry<QColor>("BackgroundNormal", QColor()));
             for (const auto &entry : {QStringLiteral("BackgroundAlternate")}) {
                 targetGroup.writeEntry(entry, accentbg);
@@ -251,7 +251,7 @@ void applyScheme(const QString &colorSchemePath, KConfig *configOutput, KConfig:
         }
 
         // Header accent colouring
-        if (item == QStringLiteral("Colors:Header") && hasAccent) {
+        if (item == u"Colors:Header" && hasAccent) {
             const auto windowBackground = config->group(u"Colors:Window"_s).readEntry<QColor>("BackgroundNormal", QColor());
             const auto accentedWindowBackground = accentBackground(accent, windowBackground);
             const auto inactiveWindowBackground = tintColor(windowBackground, accent, tintFactor);

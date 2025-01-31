@@ -291,8 +291,8 @@ bool WetterComIon::updateIonSource(const QString &source)
 void WetterComIon::findPlace(const QString &place, const QString &source)
 {
     QCryptographicHash md5(QCryptographicHash::Md5);
-    md5.addData(QByteArray(PROJECTNAME));
-    md5.addData(QByteArray(APIKEY));
+    md5.addData(QByteArrayLiteral(PROJECTNAME));
+    md5.addData(QByteArrayLiteral(APIKEY));
     md5.addData(place.toUtf8());
     const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
@@ -445,8 +445,8 @@ void WetterComIon::fetchForecast(const QString &source)
     }
 
     QCryptographicHash md5(QCryptographicHash::Md5);
-    md5.addData(QByteArray(PROJECTNAME));
-    md5.addData(QByteArray(APIKEY));
+    md5.addData(QByteArrayLiteral(PROJECTNAME));
+    md5.addData(QByteArrayLiteral(APIKEY));
     md5.addData(m_place[source].placeCode.toUtf8());
     const QString encodedKey = QString::fromLatin1(md5.result().toHex());
 
@@ -583,9 +583,9 @@ void WetterComIon::parseWeatherForecast(const QString &source, QXmlStreamReader 
 
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("date")) {
-                date = xml.attributes().value(QStringLiteral("value")).toString();
+                date = xml.attributes().value(u"value").toString();
             } else if (elementName == QLatin1String("time")) {
-                time = xml.attributes().value(QStringLiteral("value")).toString();
+                time = xml.attributes().value(u"value").toString();
             } else if (elementName == QLatin1String("tx")) {
                 tempMax = qRound(xml.readElementText().toDouble());
             } else if (elementName == QLatin1String("tn")) {

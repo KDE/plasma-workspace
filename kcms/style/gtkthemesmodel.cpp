@@ -32,7 +32,7 @@ void GtkThemesModel::load()
             // Do not show dark Breeze GTK variant, since the colors of it
             // are coming from the color scheme and selecting them here
             // is redundant and does not work
-            if (possibleThemeDirectory.dirName() == QStringLiteral("Breeze-Dark")) {
+            if (possibleThemeDirectory.dirName() == u"Breeze-Dark") {
                 continue;
             }
 

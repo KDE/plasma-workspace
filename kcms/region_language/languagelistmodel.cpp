@@ -96,7 +96,7 @@ QString LanguageListModel::languageCodeToName(const QString &languageCode)
 
     // KDE languageCode got translated by QLocale to a locale code we also have on
     // the list. Currently this only happens with pt that gets translated to pt_BR.
-    if (languageCode == QStringLiteral("pt_BR")) {
+    if (languageCode == u"pt_BR") {
         return i18nc("%1 is português in system locale name, Brazil is to distinguish European português and Brazilian português", "%1 (Brazil)", languageName);
     }
 

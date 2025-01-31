@@ -48,9 +48,9 @@ int main(int argc, char **argv)
     filteredActionNames.erase(std::remove_if(filteredActionNames.begin(),
                                              filteredActionNames.end(),
                                              [allowedActionNames](const QString &str) {
-                                                 return str == QStringLiteral("_k_friendly_name") || str == QStringLiteral("activate application launcher")
-                                                     || str.startsWith(QStringLiteral("activate task manager entry"))
-                                                     || str.startsWith(QStringLiteral("activate widget")) || allowedActionNames.contains(str);
+                                                 return str == u"_k_friendly_name" || str == u"activate application launcher"
+                                                     || str.startsWith(u"activate task manager entry") || str.startsWith(u"activate widget")
+                                                     || allowedActionNames.contains(str);
                                              }),
                               filteredActionNames.end());
 

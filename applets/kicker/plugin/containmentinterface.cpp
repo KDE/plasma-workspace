@@ -159,7 +159,7 @@ void ContainmentInterface::addLauncher(QObject *appletInterface, ContainmentInte
             return;
         }
 
-        const QStringList &containmentProvides = containment->pluginMetaData().value(QStringLiteral("X-Plasma-Provides"), QStringList());
+        const QStringList &containmentProvides = containment->pluginMetaData().value(u"X-Plasma-Provides", QStringList());
 
         if (containmentProvides.contains(QLatin1String("org.kde.plasma.filemanagement"))) {
             auto *folderQuickItem = PlasmaQuick::AppletQuickItem::itemForApplet(containment);

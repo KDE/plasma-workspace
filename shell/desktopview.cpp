@@ -79,7 +79,7 @@ DesktopView::DesktopView(Plasma::Corona *corona, QScreen *targetScreen)
 
     m_configWatcher = KConfigWatcher::create(config);
     connect(m_configWatcher.data(), &KConfigWatcher::configChanged, this, [this](const KConfigGroup &group, const QByteArrayList &names) {
-        if (names.contains(QByteArray("ActivateWhenTypingOnDesktop"))) {
+        if (names.contains(QByteArrayView("ActivateWhenTypingOnDesktop"))) {
             m_activateKRunnerWhenTypingOnDesktop = group.readEntry("ActivateWhenTypingOnDesktop", true);
         }
     });

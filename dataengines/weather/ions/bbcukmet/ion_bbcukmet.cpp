@@ -329,7 +329,7 @@ void UKMETIon::readSearchData(const QString & /*source*/, const QByteArray &json
 
     if (resultsVariant.isUndefined()) {
         // this is a response from an auto=true query
-        resultsVariant = jsonDocumentObject.value(QStringLiteral("results")).toObject().value(QStringLiteral("results"));
+        resultsVariant = jsonDocumentObject.value(u"results").toObject().value(u"results");
     }
 
     const QJsonArray results = resultsVariant.toArray();

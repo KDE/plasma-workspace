@@ -242,8 +242,7 @@ public:
             const auto allGroups = cfg->groupList();
             int instanceHighest = -1;
             for (const QStringView groupName : allGroups) {
-                if (groupName.contains(QStringLiteral(".favorites.instance-"))
-                    && (groupName.endsWith(QStringLiteral("-global")) || groupName.endsWith(m_activities.currentActivity()))) {
+                if (groupName.contains(u".favorites.instance-") && (groupName.endsWith(u"-global") || groupName.endsWith(m_activities.currentActivity()))) {
                     // the group names look like "Favorites-org.kde.plasma.kicker.favorites.instance-58-1bd5bb42-187c-4c77-a746-c9644c5da866"
                     const QList<QStringView> split = groupName.split(u'-');
                     if (split.length() >= 3) {

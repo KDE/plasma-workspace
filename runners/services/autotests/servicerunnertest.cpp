@@ -202,7 +202,7 @@ void ServiceRunnerTest::testINotifyUsage()
         uint count = 0;
         const QDir procDir(QStringLiteral("/proc/%1/fd").arg(getpid()));
         for (const auto &fileInfo : procDir.entryInfoList()) {
-            if (fileInfo.symLinkTarget().endsWith(QStringLiteral("anon_inode:inotify"))) {
+            if (fileInfo.symLinkTarget().endsWith(u"anon_inode:inotify")) {
                 ++count;
             }
         }

@@ -195,7 +195,7 @@ QUrl Job::effectiveDestUrl() const
     }
 
     // Don't offer opening files in Trash
-    if (url.scheme() == QStringLiteral("trash")) {
+    if (url.scheme() == u"trash") {
         return QUrl();
     }
 

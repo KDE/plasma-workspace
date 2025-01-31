@@ -341,7 +341,7 @@ void User::apply()
 bool User::usesDefaultWallet()
 {
     const QStringList wallets = KWallet::Wallet::walletList();
-    return wallets.contains(QStringLiteral("kdewallet"));
+    return wallets.contains(u"kdewallet");
 }
 void User::changeWalletPassword()
 {
