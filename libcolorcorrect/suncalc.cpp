@@ -11,6 +11,7 @@
 #include <numbers>
 
 #include <QDateTime>
+#include <QTimeZone>
 
 using namespace Qt::StringLiterals;
 
@@ -20,8 +21,18 @@ inline constexpr double TWILIGHT_NAUT = -12.0;
 inline constexpr double TWILIGHT_CIVIL = -6.0;
 inline constexpr double SUN_RISE_SET = -0.833;
 inline constexpr double SUN_HIGH = 2.0;
+inline constexpr int DEFAULT_TRANSITION_DURATION = 1800000; /* 30 minutes */
 
-QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
+static QTime convertToLocalTime(const QDateTime &when, const QTime &utcTime)
+{
+    const QTimeZone timeZone = QTimeZone::systemTimeZone();
+    const int utcOffset = timeZone.offsetFromUtc(when);
+    return utcTime.addSecs(utcOffset);
+}
+
+typedef QPair<QDateTime, QDateTime> DateTimes;
+
+DateTimes calculateSunTimings(const QDateTime &dateTime, double latitude, double longitude, bool morning)
 {
     // calculations based on https://aa.quae.nl/en/reken/zonpositie.html
     // accuracy: +/- 5min
@@ -34,8 +45,8 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
     const double lng = -longitude; // lw
 
     // times
-    QDate prompt = QDate::currentDate();
-    const double juPrompt = prompt.toJulianDay(); // J
+    const QDateTime utcDateTime = dateTime.toUTC();
+    const double juPrompt = utcDateTime.date().toJulianDay(); // J
     constexpr double ju2000 = 2451545.; // J2000
 
     // geometry
@@ -132,38 +143,64 @@ QVariantMap calculateSunTimings(double latitude, double longitude, bool morning)
     begin += 0.5;
     end += 0.5;
 
-    QTime timeBegin, timeEnd;
+    QDateTime dateTimeBegin;
+    QDateTime dateTimeEnd;
 
-    if (std::isnan(begin)) {
-        timeBegin = QTime();
-    } else {
-        double timePart = begin - (int)begin;
-        timeBegin = QTime::fromMSecsSinceStartOfDay((int)(timePart * MSC_DAY));
-    }
-    if (std::isnan(end)) {
-        timeEnd = QTime();
-    } else {
-        double timePart = end - (int)end;
-        timeEnd = QTime::fromMSecsSinceStartOfDay((int)(timePart * MSC_DAY));
+    if (!std::isnan(begin)) {
+        const double dayFraction = begin - int(begin);
+        const QTime utcTime = QTime::fromMSecsSinceStartOfDay(dayFraction * MSC_DAY);
+        const QTime localTime = convertToLocalTime(dateTime, utcTime);
+        dateTimeBegin = QDateTime(dateTime.date(), localTime);
     }
 
-    QDateTime dateTimeBegin(prompt, timeBegin, Qt::UTC);
-    QDateTime dateTimeEnd(prompt, timeEnd, Qt::UTC);
+    if (!std::isnan(end)) {
+        const double dayFraction = end - int(end);
+        const QTime utcTime = QTime::fromMSecsSinceStartOfDay(dayFraction * MSC_DAY);
+        const QTime localTime = convertToLocalTime(dateTime, utcTime);
+        dateTimeEnd = QDateTime(dateTime.date(), localTime);
+    }
+
+    return {dateTimeBegin, dateTimeEnd};
+}
+
+QVariantMap getSunTimings(double latitude, double longitude, bool morning)
+{
+    QDateTime currentDateTime = QDateTime::currentDateTime();
+    DateTimes dateTimes = calculateSunTimings(currentDateTime, latitude, longitude, morning);
+    // At locations near the poles it is possible, that we can't
+    // calculate some or all sun timings (midnight sun).
+    // In this case try to fallback to sensible default values.
+    const bool beginDefined = !dateTimes.first.isNull();
+    const bool endDefined = !dateTimes.second.isNull();
+    if (!beginDefined || !endDefined) {
+        if (beginDefined) {
+            dateTimes.second = dateTimes.first.addMSecs(DEFAULT_TRANSITION_DURATION);
+        } else if (endDefined) {
+            dateTimes.first = dateTimes.second.addMSecs(-DEFAULT_TRANSITION_DURATION);
+        } else {
+            // Just use default values for morning and evening, but the user
+            // will probably deactivate Night Light anyway if he is living
+            // in a region without clear sun rise and set.
+            const QTime referenceTime = morning ? QTime(6, 0) : QTime(18, 0);
+            dateTimes.first = QDateTime(currentDateTime.date(), referenceTime);
+            dateTimes.second = dateTimes.first.addMSecs(DEFAULT_TRANSITION_DURATION);
+        }
+    }
 
     QVariantMap map;
-    map.insert(u"begin"_s, dateTimeBegin.toLocalTime());
-    map.insert(u"end"_s, dateTimeEnd.toLocalTime());
+    map.insert(u"begin"_s, dateTimes.first);
+    map.insert(u"end"_s, dateTimes.second);
     return map;
 }
 
 QVariantMap SunCalc::getMorningTimings(double latitude, double longitude)
 {
-    return calculateSunTimings(latitude, longitude, true);
+    return getSunTimings(latitude, longitude, true);
 }
 
 QVariantMap SunCalc::getEveningTimings(double latitude, double longitude)
 {
-    return calculateSunTimings(latitude, longitude, false);
+    return getSunTimings(latitude, longitude, false);
 }
 
 }

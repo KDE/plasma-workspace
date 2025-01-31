@@ -23,7 +23,8 @@ namespace ColorCorrect
  * The final calculations happen in similar functions in the compositor.
  *
  * The functions provided by this class here therefore needs to be hold in
- * sync with the functions in the compositor.
+ * sync with the functions in the compositor. At the time of writing, these are
+ * in "src/plugins/nightlight/{suncalc.cpp,nightlightmanager.cpp}".
  */
 
 class COLORCORRECT_EXPORT SunCalc : public QObject
