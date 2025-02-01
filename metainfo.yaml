@@ -1,5 +1,5 @@
 maintainer:
-- notmart
+    - notmart
 description: Plasma Workspace
 platforms:
     - name: Linux
@@ -21,8 +21,8 @@ group_info:
     maintainer: notmart
     mailinglist: plasma-devel
     platforms:
-      - Linux
-      - FreeBSD
+        - Linux
+        - FreeBSD
     description: Provides APIs to build plasma widgets, wallpaper plugins and more.
     logo: konqi_frameworks.png
     long_description:

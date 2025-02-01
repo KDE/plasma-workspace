@@ -2,8 +2,8 @@
 # SPDX-License-Identifier: CC0-1.0
 
 Dependencies:
-- 'on': ['@all']
-  'require':
+ - 'on': ['@all']
+   'require':
     'frameworks/attica': '@latest-kf6'
     'frameworks/baloo': '@latest-kf6'
     'frameworks/extra-cmake-modules': '@latest-kf6'
@@ -70,24 +70,24 @@ Dependencies:
     'third-party/wayland': '@latest'
     'third-party/wayland-protocols': '@latest'
 
-- 'on': ['Linux']
-  'require':
+ - 'on': ['Linux']
+   'require':
     'libraries/polkit-qt-1': '@latest-kf6'
     'third-party/packagekit-qt': '@latest'
 
 RuntimeDependencies:
-- 'on': ['Linux']
-  'require':
+ - 'on': ['Linux']
+   'require':
     'network/kio-extras': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
     'sdk/selenium-webdriver-at-spi': '@latest-kf6'
-- 'on': ['Linux', 'FreeBSD']
-  'require':
+ - 'on': ['Linux', 'FreeBSD']
+   'require':
     'frameworks/qqc2-desktop-style': '@latest-kf6'
-    'plasma/milou' : '@same'
+    'plasma/milou': '@same'
     'plasma/kglobalacceld': '@same'
 
 Options:
-  ctest-arguments: '--repeat until-pass:5'
-  require-passing-tests-on: [ '@all' ]
-  clang-format-versions: [14, 18]
+ ctest-arguments: '--repeat until-pass:5'
+ require-passing-tests-on: ['@all']
+ clang-format-versions: [14, 18]
