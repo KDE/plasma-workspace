@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-22 18:30+0100\n"
+"PO-Revision-Date: 2025-01-31 11:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -31,7 +31,7 @@ msgstr "Календар"
 #: package/contents/ui/CalendarView.qml:426
 #, kde-format
 msgid "Time Zones"
-msgstr "Времеви зони"
+msgstr "Часови зони"
 
 #: package/contents/ui/CalendarView.qml:148
 #, kde-format
@@ -302,13 +302,12 @@ msgstr "Налични приставки:"
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Отказ"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Добавяне на още часови зони"
+msgstr "Добавяне на избраната часова зона"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -321,10 +320,9 @@ msgstr ""
 "часова зона на друга."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Добавяне на часови зони…"
+msgstr "Добавяне на часова зона…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -386,10 +384,9 @@ msgstr ""
 "система. Когато пътувате, вместо това превключете часовата зона на системата."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Времеви зони"
+msgstr "Избиране на часова зона"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

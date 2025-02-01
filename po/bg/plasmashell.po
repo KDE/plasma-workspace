@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:43+0000\n"
-"PO-Revision-Date: 2025-01-07 23:17+0100\n"
+"POT-Creation-Date: 2025-02-01 00:43+0000\n"
+"PO-Revision-Date: 2025-01-31 11:05+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -154,10 +154,9 @@ msgid "Enter Edit Mode"
 msgstr "Влизане в режим редактиране"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Влизане в режим редактиране"
+msgstr "Излизане от режим на редактиране"
 
 #: main.cpp:86
 #, kde-format
@@ -414,12 +413,12 @@ msgstr "Настройки на работния плот и панелите…
 msgid "Move keyboard focus between panels"
 msgstr "Преместване на фокуса на клавиатурата между панелите"
 
-#: shellcorona.cpp:2172
+#: shellcorona.cpp:2171
 #, kde-format
 msgid "Add Panel"
 msgstr "Добавяне на панел"
 
-#: shellcorona.cpp:2233
+#: shellcorona.cpp:2232
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

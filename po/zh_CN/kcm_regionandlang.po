@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:41+0000\n"
+"POT-Creation-Date: 2025-02-01 00:43+0000\n"
 "PO-Revision-Date: 2024-04-23 19:24\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -456,12 +456,12 @@ msgstr " (%1 的标准格式)"
 msgid "Inherit Language"
 msgstr "继承语言设置"
 
-#: ui/AdvancedLanguageSelectPage.qml:20
+#: ui/AdvancedLanguageSelectPage.qml:22
 #, kde-format
 msgid "Language"
 msgstr "语言"
 
-#: ui/AdvancedLanguageSelectPage.qml:33
+#: ui/AdvancedLanguageSelectPage.qml:35
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -471,54 +471,54 @@ msgstr ""
 "将其他语言移到英语的下方可能会导致某些程序发生问题。如果您想要系统显示英语，"
 "请移除所有其他语言。"
 
-#: ui/AdvancedLanguageSelectPage.qml:42
+#: ui/AdvancedLanguageSelectPage.qml:44
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "不支持语言“%1”"
 
-#: ui/AdvancedLanguageSelectPage.qml:55
+#: ui/AdvancedLanguageSelectPage.qml:57
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "添加语言，并按照您的需要调整语言的优先顺序。"
 
-#: ui/AdvancedLanguageSelectPage.qml:93
+#: ui/AdvancedLanguageSelectPage.qml:95
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "更改语言"
 
-#: ui/AdvancedLanguageSelectPage.qml:97
+#: ui/AdvancedLanguageSelectPage.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "更改语言"
 
-#: ui/AdvancedLanguageSelectPage.qml:108
+#: ui/AdvancedLanguageSelectPage.qml:110
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "置顶"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "移除"
 
-#: ui/AdvancedLanguageSelectPage.qml:127
+#: ui/AdvancedLanguageSelectPage.qml:129
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "未配置语言"
 
-#: ui/AdvancedLanguageSelectPage.qml:158 ui/AdvancedLanguageSelectPage.qml:169
+#: ui/AdvancedLanguageSelectPage.qml:171 ui/AdvancedLanguageSelectPage.qml:186
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "添加语言"
 
-#: ui/AdvancedLanguageSelectPage.qml:186
+#: ui/AdvancedLanguageSelectPage.qml:230
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

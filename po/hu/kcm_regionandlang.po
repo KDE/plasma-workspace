@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:41+0000\n"
+"POT-Creation-Date: 2025-02-01 00:43+0000\n"
 "PO-Revision-Date: 2024-05-28 11:50+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -457,12 +457,12 @@ msgstr " (standard %1 formátum)"
 msgid "Inherit Language"
 msgstr "Nyelv öröklése"
 
-#: ui/AdvancedLanguageSelectPage.qml:20
+#: ui/AdvancedLanguageSelectPage.qml:22
 #, kde-format
 msgid "Language"
 msgstr "Nyelv"
 
-#: ui/AdvancedLanguageSelectPage.qml:33
+#: ui/AdvancedLanguageSelectPage.qml:35
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -473,56 +473,56 @@ msgstr ""
 "alkalmazásokban. Ha angolul szeretné használni a rendszerét, távolítsa el az "
 "összes többi nyelvet."
 
-#: ui/AdvancedLanguageSelectPage.qml:42
+#: ui/AdvancedLanguageSelectPage.qml:44
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "A(z) „%1” nyelv nem támogatott"
 
-#: ui/AdvancedLanguageSelectPage.qml:55
+#: ui/AdvancedLanguageSelectPage.qml:57
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr ""
 "Adja hozzá a nyelveket abban a sorrendben, ahogyan azokat az alkalmazásokban "
 "látni szeretné."
 
-#: ui/AdvancedLanguageSelectPage.qml:93
+#: ui/AdvancedLanguageSelectPage.qml:95
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Nyelvváltás"
 
-#: ui/AdvancedLanguageSelectPage.qml:97
+#: ui/AdvancedLanguageSelectPage.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Nyelvváltás"
 
-#: ui/AdvancedLanguageSelectPage.qml:108
+#: ui/AdvancedLanguageSelectPage.qml:110
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Mozgatás legfelülre"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: ui/AdvancedLanguageSelectPage.qml:127
+#: ui/AdvancedLanguageSelectPage.qml:129
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Nincs beállítva nyelv"
 
-#: ui/AdvancedLanguageSelectPage.qml:158 ui/AdvancedLanguageSelectPage.qml:169
+#: ui/AdvancedLanguageSelectPage.qml:171 ui/AdvancedLanguageSelectPage.qml:186
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Nyelvek hozzáadása"
 
-#: ui/AdvancedLanguageSelectPage.qml:186
+#: ui/AdvancedLanguageSelectPage.qml:230
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-25 00:41+0000\n"
+"POT-Creation-Date: 2025-02-01 00:43+0000\n"
 "PO-Revision-Date: 2025-01-27 23:30-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -459,12 +459,12 @@ msgstr " (formato padrão para %1)"
 msgid "Inherit Language"
 msgstr "Herdar idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:20
+#: ui/AdvancedLanguageSelectPage.qml:22
 #, kde-format
 msgid "Language"
 msgstr "Idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:33
+#: ui/AdvancedLanguageSelectPage.qml:35
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -475,54 +475,54 @@ msgstr ""
 "indesejado em alguns aplicativos. Se você quiser usar seu sistema em inglês, "
 "remova todos os outros idiomas."
 
-#: ui/AdvancedLanguageSelectPage.qml:42
+#: ui/AdvancedLanguageSelectPage.qml:44
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "O idioma \"%1\" não é suportado"
 
-#: ui/AdvancedLanguageSelectPage.qml:55
+#: ui/AdvancedLanguageSelectPage.qml:57
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Adicione idiomas na ordem que você quer vê-los em seus aplicativos."
 
-#: ui/AdvancedLanguageSelectPage.qml:93
+#: ui/AdvancedLanguageSelectPage.qml:95
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Alterar idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:97
+#: ui/AdvancedLanguageSelectPage.qml:99
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Alterar idioma"
 
-#: ui/AdvancedLanguageSelectPage.qml:108
+#: ui/AdvancedLanguageSelectPage.qml:110
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Mover para o topo"
 
-#: ui/AdvancedLanguageSelectPage.qml:114
+#: ui/AdvancedLanguageSelectPage.qml:116
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Excluir"
 
-#: ui/AdvancedLanguageSelectPage.qml:127
+#: ui/AdvancedLanguageSelectPage.qml:129
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Nenhum idioma configurado"
 
-#: ui/AdvancedLanguageSelectPage.qml:158 ui/AdvancedLanguageSelectPage.qml:169
+#: ui/AdvancedLanguageSelectPage.qml:171 ui/AdvancedLanguageSelectPage.qml:186
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Adicionar idiomas"
 
-#: ui/AdvancedLanguageSelectPage.qml:186
+#: ui/AdvancedLanguageSelectPage.qml:230
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kde 49i410\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-02-01 00:43+0000\n"
 "PO-Revision-Date: 2015-02-04 15:12+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian\n"
@@ -120,7 +120,7 @@ msgid "Computer"
 msgstr ""
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:553 plugin/rootmodel.cpp:392
+#: plugin/kastatsfavoritesmodel.cpp:552 plugin/rootmodel.cpp:392
 #: plugin/simplefavoritesmodel.cpp:33
 #, fuzzy, kde-format
 msgid "Favorites"
