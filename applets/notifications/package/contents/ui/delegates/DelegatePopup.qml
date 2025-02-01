@@ -61,7 +61,7 @@ BaseDelegate {
         Layout.topMargin: -((delegateRoot.columnSpacing * 2) + height)
         Layout.leftMargin: -delegateRoot.modelInterface.popupLeftPadding
         Layout.rightMargin: -delegateRoot.modelInterface.popupRightPadding
-        implicitHeight: 1
+        implicitHeight: 2
         implicitWidth: -1
         visible: !criticalNotificationIndicator.visible
 
