@@ -352,10 +352,6 @@ void runEnvironmentScripts()
 
 void setupPlasmaEnvironment()
 {
-    // Manually disable auto scaling because we are scaling above
-    // otherwise apps that manually opt in for high DPI get auto scaled by the developer AND manually scaled by us
-    qputenv("QT_AUTO_SCREEN_SCALE_FACTOR", "0");
-
     qputenv("KDE_FULL_SESSION", "true");
     qputenv("KDE_SESSION_VERSION", "6");
     qputenv("KDE_SESSION_UID", QByteArray::number(getuid()));
