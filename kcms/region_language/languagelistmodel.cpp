@@ -317,6 +317,10 @@ void SelectedLanguageModel::remove(int index)
     if (index < 0 || index >= m_selectedLanguages.size()) {
         return;
     }
+    if (m_hasImplicitLang) {
+        m_hasImplicitLang = false;
+        Q_EMIT hasImplicitLangChanged();
+    }
     beginRemoveRows(QModelIndex(), index, index);
     m_selectedLanguages.removeAt(index);
     endRemoveRows();
