@@ -130,7 +130,7 @@ KCM.ScrollViewKCM {
                 spacing: Kirigami.Units.smallSpacing
 
                 KirigamiComponents.Avatar {
-                    source: model.decoration + '?' + avatarVersion // force reload after saving
+                    source: model.faceValid ? model.decoration + '?' + avatarVersion : ""// force reload after saving
                     cache: false // avoid caching
                     name: model.displayPrimaryName
                 }

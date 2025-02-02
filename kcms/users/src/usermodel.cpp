@@ -158,7 +158,7 @@ QVariant UserModel::data(const QModelIndex &index, int role) const
     case AdministratorRole:
         return user->administrator();
     case FaceValidRole:
-        return QFile::exists(user->face().toString());
+        return QFile::exists(user->face().path());
     case UserRole:
         return QVariant::fromValue(user);
     case LoggedInRole:

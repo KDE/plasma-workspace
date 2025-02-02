@@ -200,7 +200,7 @@ void User::loadData()
     if (mFace != localIconFile) {
         mFace = localIconFile;
         mOriginalFace = mFace;
-        mFaceValid = QFileInfo::exists(mFace.toString());
+        mFaceValid = QFileInfo::exists(mFace.path());
         mOriginalFaceValid = mFaceValid;
         userDataChanged = true;
         Q_EMIT faceChanged();

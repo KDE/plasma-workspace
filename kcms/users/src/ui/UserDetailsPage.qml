@@ -102,7 +102,7 @@ KCM.SimpleKCM {
             Layout.alignment: Qt.AlignHCenter
             Layout.topMargin: Kirigami.Units.largeSpacing
 
-            source: usersDetailPage.user.face
+            source: usersDetailPage.user.faceValid ? usersDetailPage.user.face : ""
             cache: false
             name: user.realName
 
