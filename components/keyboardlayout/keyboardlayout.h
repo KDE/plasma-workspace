@@ -33,6 +33,9 @@ protected:
     Q_INVOKABLE void switchToNextLayout();
     Q_INVOKABLE void switchToPreviousLayout();
 
+private Q_SLOTS:
+    void initialize();
+
 private:
     void setLayout(uint index);
     const QList<LayoutNames> &getLayoutsList() const
