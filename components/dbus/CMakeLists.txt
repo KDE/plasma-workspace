@@ -11,6 +11,7 @@ target_sources(dbusplugin
         dbuserror.cpp dbuserror.h
         dbusmessage.cpp dbusmessage.h
         dbuspendingreply.cpp dbuspendingreply.h
+        dbusproperties.cpp dbusproperties.h
         dbusservicewatcher.cpp dbusservicewatcher.h
         dbustype.h
 )
