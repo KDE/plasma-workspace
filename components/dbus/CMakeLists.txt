@@ -11,8 +11,16 @@ target_sources(dbusplugin
         dbuserror.cpp dbuserror.h
         dbusmessage.cpp dbusmessage.h
         dbuspendingreply.cpp dbuspendingreply.h
+        dbusproperties.cpp dbusproperties.h
         dbusservicewatcher.cpp dbusservicewatcher.h
         dbustype.h
+)
+ecm_qt_declare_logging_category(dbusplugin
+    HEADER dbusplugin_debug.h
+    IDENTIFIER DBUSPLUGIN_DEBUG
+    CATEGORY_NAME org.kde.plasma.workspace.dbus
+    DESCRIPTION "dbusplugin"
+    EXPORT PLASMAWORKSPACE
 )
 target_link_libraries(dbusplugin
     PRIVATE

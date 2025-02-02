@@ -20,11 +20,12 @@ if __name__ == '__main__':
         args = [
             QMLTEST_PATH,
             "-input",
-            os.path.join(os.path.dirname(os.path.abspath(__file__)), "dbusmethodcalltest.qml"),
+            os.path.join(os.path.dirname(os.path.abspath(__file__)), sys.argv[1]),
         ]
         if CMAKE_BINARY_DIR is not None:
             args += ["-import", CMAKE_BINARY_DIR]
 
+        print("Starting test")
         test_runner = subprocess.Popen(args, stdout=sys.stdout, stderr=sys.stderr)
         try:
             result = test_runner.wait(timeout=60)

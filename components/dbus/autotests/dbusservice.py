@@ -5,7 +5,7 @@
 
 import sys
 import threading
-from typing import Final
+from typing import Any, Final
 
 from gi.repository import Gio, GLib
 
@@ -47,6 +47,27 @@ class OrgKdeKSplash:
 
         self.stage: str = ""
         self.stage_set_event = threading.Event()
+        self.default_variant = GLib.Variant("(bnixqutdysgoa{sv}v)", [
+            True,
+            32767,
+            2147483647,
+            21474836470,
+            65535,
+            4294967295,
+            18446744073709551615,
+            1.23,
+            255,
+            "abc",
+            "(bnixqutdysgoa{sv}v)",
+            "/abc/def",
+            {
+                "int64": GLib.Variant("n", 32767),
+                "objectPath": GLib.Variant("o", "/abc/def"),
+                "string": GLib.Variant("s", "string"),
+            },
+            GLib.Variant("s", "variant"),
+        ])
+        self.read_write_prop = 1
 
     def quit(self) -> None:
         self.connection.unregister_object(self.reg_id)
@@ -64,9 +85,12 @@ class OrgKdeKSplash:
     "http://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
 <node>
   <interface name="org.kde.KSplash">
+    <property name="readOnlyProp" type="(bnixqutdysgoa{sv}v)" access="read"/>
+    <property name="readWriteProp" type="i" access="readwrite"/>
     <method name="setStage">
       <arg name="stage" type="s" direction="in"/>
     </method>
+    <method name="updatePropertySilently"/>
     <method name="ping" />
     <method name="testAllTypes">
       <arg name="arg1" type="b" direction="in"/>
@@ -105,7 +129,7 @@ class OrgKdeKSplash:
   </interface>
 </node>
 """)
-        self.reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.handle_method_call, None, None)
+        self.reg_id = connection.register_object(self.OBJECT_PATH, introspection_data.interfaces[0], self.handle_method_call, self.handle_get_property, self.handle_set_property)
         assert self.reg_id > 0
 
         self.registered_event.set()
@@ -124,6 +148,9 @@ class OrgKdeKSplash:
             self.stage = parameters.unpack()[0]
             self.stage_set_event.set()
             invocation.return_value(None)
+        elif method_name == "updatePropertySilently":
+            self.read_write_prop += 1
+            invocation.return_value(None)
         elif method_name == "ping":
             invocation.return_value(None)
         elif method_name == "testAllTypes":
@@ -138,27 +165,7 @@ class OrgKdeKSplash:
             if not first_entry_value.is_of_type(GLib.VariantType("n")) or not second_entry_value.is_of_type(GLib.VariantType("o")) or not third_entry_value.is_of_type(GLib.VariantType("s")):
                 invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.INVALID_ARGS, f"Incorrect signature {first_entry_value.get_type_string()} {second_entry_value.get_type_string()} {third_entry_value.get_type_string()}")
                 return
-            ret = GLib.Variant("(bnixqutdysgoa{sv}v)", [
-                True,
-                32767,
-                2147483647,
-                21474836470,
-                65535,
-                4294967295,
-                18446744073709551615,
-                1.23,
-                255,
-                "abc",
-                "(bnixqutdysgoa{sv}v)",
-                "/abc/def",
-                {
-                    "int64": GLib.Variant("n", 32767),
-                    "objectPath": GLib.Variant("o", "/abc/def"),
-                    "string": GLib.Variant("s", "string"),
-                },
-                GLib.Variant("s", "variant"),
-            ])
-            invocation.return_value(GLib.Variant.new_tuple(ret))
+            invocation.return_value(GLib.Variant.new_tuple(self.default_variant))
         elif method_name == "testListTypes":
             if not parameters.is_of_type(GLib.VariantType("(abanaiaxaqauatadayasagaoaa{sv}av)")):
                 invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.INVALID_ARGS, f"Incorrect signature {parameters.get_type_string()}")
@@ -186,6 +193,26 @@ class OrgKdeKSplash:
             invocation.return_value(GLib.Variant.new_tuple(ret))
         else:
             invocation.return_error_literal(Gio.dbus_error_quark(), Gio.DBusError.UNKNOWN_METHOD, f"Unknown method {method_name}")
+
+    def handle_get_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, value: Any):
+        print(f"ksplash get {value}", file=sys.stderr, flush=True)
+        if value == "readOnlyProp":
+            return self.default_variant
+        if value == "readWriteProp":
+            return GLib.Variant("i", self.read_write_prop)
+        return None
+
+    def handle_set_property(self, connection: Gio.DBusConnection, sender: str, object_path: str, interface_name: str, key: str, value: Any) -> bool:
+        print(f"ksplash set {key} to {value}", file=sys.stderr, flush=True)
+        if key == "readWriteProp":
+            self.read_write_prop = value.get_int32()
+            changed_properties = GLib.Variant('a{sv}', {
+                "readWriteProp": GLib.Variant("i", self.read_write_prop),
+            })
+            Gio.DBusConnection.emit_signal(connection, None, object_path, "org.freedesktop.DBus.Properties", "PropertiesChanged", GLib.Variant.new_tuple(GLib.Variant("s", interface_name), changed_properties, GLib.Variant('as', ())))
+        else:
+            return False
+        return True
 
 
 if __name__ == '__main__':

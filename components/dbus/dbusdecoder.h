@@ -12,5 +12,6 @@ class QDBusMessage;
 
 namespace Decoder
 {
+QVariant dbusToVariant(const QVariant &variant);
 QVariantList decode(const QDBusMessage &message);
 }
