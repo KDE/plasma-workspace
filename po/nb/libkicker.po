@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-07 00:42+0000\n"
+"POT-Creation-Date: 2025-02-03 02:32+0000\n"
 "PO-Revision-Date: 2018-06-24 21:56+0100\n"
 "Last-Translator: Øystein Steffensen-Alværvik <ystein@posteo.net>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -116,7 +116,7 @@ msgid "Computer"
 msgstr "Datamaskin"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:553 plugin/rootmodel.cpp:392
+#: plugin/kastatsfavoritesmodel.cpp:555 plugin/rootmodel.cpp:392
 #: plugin/simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
