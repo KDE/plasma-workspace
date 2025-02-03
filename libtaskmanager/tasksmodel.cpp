@@ -1300,6 +1300,7 @@ void TasksModel::setHideActivatedLaunchers(bool hideActivatedLaunchers)
         d->hideActivatedLaunchers = hideActivatedLaunchers;
 
         d->updateManualSortMap();
+        invalidateFilter();
         d->forceResort();
 
         Q_EMIT hideActivatedLaunchersChanged();
