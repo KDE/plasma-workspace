@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-30 00:43+0000\n"
-"PO-Revision-Date: 2025-01-26 17:18+0530\n"
+"PO-Revision-Date: 2025-02-02 15:56+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -412,14 +412,10 @@ msgid "Zoom out"
 msgstr "சிறிதாக்கு"
 
 #: timezoneselector/TimezoneSelector.qml:230
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: 'Choose region' in the context of time zone region "
-#| "selection."
-#| msgid "region"
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr "பகுதி"
+msgstr "பகுதி:"
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
@@ -428,20 +424,20 @@ msgid "Choose…"
 msgstr "தேர்வு செய்…"
 
 #: timezoneselector/TimezoneSelector.qml:241
-#, fuzzy, kde-format
+#, kde-format
 msgid "Timezone region selector"
-msgstr "நேர மண்டல தேர்வி"
+msgstr "பகுதித் தேர்வி"
 
 #: timezoneselector/TimezoneSelector.qml:261
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "நேர மண்டலம்:"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "நேர மண்டல தேர்வி"
 
 #~ msgctxt ""
 #~ "Full context is: '<region> region, <zone> time zone.' in the context of "

@@ -1,33 +1,30 @@
-# Translation of kcmcolors to Spanish
-# translation of kcmcolors.po to Spanish
-# Translation to spanish.
-# Copyright (C) 2000-2002.
+# Translation of kcm_colors.po to Spanish
+# Copyright (C) 2000-2025.
 #
-# Pablo de Vicente <vicente@oan.es>,2000-2002.
-# Jaime Robles <jaime@kde.org>, 2003, 2007, 2008.
-# Pablo de Vicente <vicnte@oan.es>, 2003.
-# Miguel Revilla Rodríguez <yo@miguelrevilla.com>, 2004.
-# Pablo de Vicente <p.devicente@wanadoo.es>, 2004, 2005.
-# Jaime Robles <jaime@robles.nu>, 2005.
-# Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
-# SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010, 2011.
-# Javier Vinal <fjvinal@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2000-2002 Pablo de Vicente <vicente@oan.es>
+# SPDX-FileCopyrightText: 2003, 2007, 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2003 Pablo de Vicente <vicnte@oan.es>
+# SPDX-FileCopyrightText: 2004 Miguel Revilla Rodríguez <yo@miguelrevilla.com>
+# SPDX-FileCopyrightText: 2004, 2005 Pablo de Vicente <p.devicente@wanadoo.es>
+# SPDX-FileCopyrightText: 2005 Jaime Robles <jaime@robles.nu>
+# SPDX-FileCopyrightText: 2007 Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010, 2011 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: kcmcolors\n"
+"Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-21 00:42+0000\n"
-"PO-Revision-Date: 2024-08-30 01:09+0200\n"
+"PO-Revision-Date: 2025-02-03 01:14+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
 "First-Translator: Boris Wesslowski <Boris@Wesslowski.com>\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #, kde-format
@@ -1386,214 +1383,3 @@ msgstr "Abrir esquema de color"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Archivos de esquema de color (*.colors)"
-
-#~ msgid "Get New Color Schemes…"
-#~ msgstr "Obtener nuevos esquemas de color..."
-
-#~ msgid "This module lets you choose the color scheme."
-#~ msgstr "Este módulo le permite escoger el esquema de color."
-
-#~ msgid "Use accent color:"
-#~ msgstr "Usar color de acentuación:"
-
-#~ msgid "From current color scheme"
-#~ msgstr "Del esquema de color actual"
-
-#~ msgctxt "@option:radio wallpaper accent color option"
-#~ msgid "From current wallpaper"
-#~ msgstr "Del fondo de pantalla actual"
-
-#~ msgid "Custom:"
-#~ msgstr "Personalizado:"
-
-#~ msgid "Apply a&ccent color to active window titlebars"
-#~ msgstr ""
-#~ "Aplicar el &color de acentuación a las barras de título de las ventanas "
-#~ "activas"
-
-#~ msgid "Apply acce&nt color to inactive window titlebars"
-#~ msgstr ""
-#~ "Aplicar el color de ace&ntuación a las barras de título de las ventanas "
-#~ "inactivas"
-
-#~ msgid "Kai Uwe Broulik"
-#~ msgstr "Kai Uwe Broulik"
-
-#~ msgid "This colour scheme was not saved. Continue?"
-#~ msgstr "Este esquema de color no se ha guardado. ¿Desea continuar?"
-
-#~ msgid "Do you really want to upload?"
-#~ msgstr "¿Realmente desea enviarlo?"
-
-#~ msgid "Share the selected scheme on the Internet"
-#~ msgstr "Compartir el esquema de colores seleccionado en Internet"
-
-#~ msgid "Upload Scheme"
-#~ msgstr "Enviar esquema"
-
-#~ msgid "Search..."
-#~ msgstr "Buscar..."
-
-#~ msgid "Download New Color Schemes"
-#~ msgstr "Descargar nuevos esquemas de color"
-
-#~ msgid "Edit..."
-#~ msgstr "Editar..."
-
-#~ msgid "Remove the selected scheme"
-#~ msgstr "Eliminar el esquema seleccionado"
-
-#~ msgid "Remove"
-#~ msgstr "Eliminar"
-
-#~ msgid "Import a color scheme from a file"
-#~ msgstr "Importar esquema de color desde un archivo"
-
-#~ msgid "&Install from File..."
-#~ msgstr "&Instalar desde archivo..."
-
-#~ msgid "Get new color schemes from the Internet"
-#~ msgstr "Importar esquema de colores desde Internet"
-
-#~ msgid "Get &New Color Schemes..."
-#~ msgstr "Obtener &nuevos esquemas de colores..."
-
-#~ msgid "Apply colors to &non-Qt applications"
-#~ msgstr "Aplicar colores a aplicaciones &no Qt"
-
-#~ msgid "Overwrite edited theme when saving"
-#~ msgstr "Sobrescribir el tema editado al guardar"
-
-#~ msgid "(c) 2007 Matthew Woehlke"
-#~ msgstr "© 2007 Matthew Woehlke"
-
-#~ msgctxt "Default color scheme"
-#~ msgid "Default"
-#~ msgstr "Por omisión"
-
-#~ msgctxt "Current color scheme"
-#~ msgid "Current"
-#~ msgstr "Actual"
-
-#~ msgid "You do not have permission to delete that scheme"
-#~ msgstr "No tiene privilegios para borrar ese esquema"
-
-#~ msgid ""
-#~ "The scheme you have selected appears to be a KDE3 scheme.\n"
-#~ "\n"
-#~ "This is not supported anymore."
-#~ msgstr ""
-#~ "Parece que el esquema que ha seleccionado es de KDE3.\n"
-#~ "\n"
-#~ "Ya no se puede usar."
-
-#~ msgid "Notice"
-#~ msgstr "Aviso"
-
-#~ msgid "In&active selection changes color"
-#~ msgstr "Selección in&activa cambia el color"
-
-#~ msgid "This scheme was not found."
-#~ msgstr "No se ha encontrado este esquema."
-
-#~ msgid "File not found"
-#~ msgstr "Archivo no encontrado"
-
-#~ msgid "Selecting another scheme will discard any changes you have made"
-#~ msgstr "Seleccionar otro esquema deshará cualquier cambio que haya hecho"
-
-#~ msgid "Are you sure?"
-#~ msgstr "¿Está seguro?"
-
-#~ msgid ""
-#~ "The scheme you have selected appears to be a KDE3 scheme.\n"
-#~ "\n"
-#~ "KDE will attempt to import this scheme, however many color roles have "
-#~ "been added since KDE3. Some manual work will likely be required.\n"
-#~ "\n"
-#~ "This scheme will not be saved automatically."
-#~ msgstr ""
-#~ "Parece que ha seleccionado un esquema de KDE3.\n"
-#~ "\n"
-#~ "KDE intentará importar el esquema, aunque se han añadido muchos roles de "
-#~ "color desde KDE3. Es probable que necesite adaptar algo a mano.\n"
-#~ "\n"
-#~ "Este esquema no se guardará automáticamente."
-
-#~ msgid "Please save the color scheme before uploading it."
-#~ msgstr "Por favor, guarde el esquema de color antes de enviarlo."
-
-#~ msgid "Please save"
-#~ msgstr "Por favor, guarde"
-
-#~ msgctxt "@title:tab color transformations on inactive elements"
-#~ msgid "Inactive"
-#~ msgstr "Inactivo"
-
-#~ msgid "Inactive intensity effect type"
-#~ msgstr "Tipo de efecto de intensidad para elementos no activos"
-
-#~ msgctxt "no inactive intensity effect"
-#~ msgid "None"
-#~ msgstr "Ninguna"
-
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Shade"
-#~ msgstr "Sombrear"
-
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Darken"
-#~ msgstr "Oscurecer"
-
-#~ msgctxt "inactive intensity effect"
-#~ msgid "Lighten"
-#~ msgstr "Aclarar"
-
-#~ msgid "Inactive intensity effect amount"
-#~ msgstr "Cantidad del efecto de intensidad para elementos inactivos"
-
-#~ msgid "Inactive color effect type"
-#~ msgstr "Tipo de efecto del color no activo"
-
-#~ msgctxt "no inactive color effect"
-#~ msgid "None"
-#~ msgstr "Ninguno"
-
-#~ msgctxt "inactive color effect"
-#~ msgid "Desaturate"
-#~ msgstr "Desaturar"
-
-#~ msgctxt "inactive color effect"
-#~ msgid "Fade"
-#~ msgstr "Degradar"
-
-#~ msgctxt "inactive color effect"
-#~ msgid "Tint"
-#~ msgstr "Teñir"
-
-#~ msgid "Inactive color amount"
-#~ msgstr "Cantidad de color inactivo"
-
-#~ msgid "Inactive contrast effect type"
-#~ msgstr "Tipo de efecto de contraste no activo"
-
-#~ msgctxt "no inactive contrast effect"
-#~ msgid "None"
-#~ msgstr "Ninguno"
-
-#~ msgctxt "inactive contrast effect"
-#~ msgid "Fade"
-#~ msgstr "Degradar"
-
-#~ msgctxt "inactive contrast effect"
-#~ msgid "Tint"
-#~ msgstr "Teñir"
-
-#~ msgid "Inactive contrast effect amount"
-#~ msgstr "Cantidad de efecto de contraste inactivo"
-
-#~ msgid "Preview"
-#~ msgstr "Previsualizar"
-
-#~ msgid "Import Scheme..."
-#~ msgstr "Importar esquema..."
