@@ -461,6 +461,3 @@ msgstr "Paneltal"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Talet på panel."
-
-#~ msgid "Panel and Desktop Management"
-#~ msgstr "Handsaming av panel og skrivebord"

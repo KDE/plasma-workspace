@@ -465,16 +465,3 @@ msgstr "Lokal"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Systemets lokale tidssone"
-
-#~ msgid ""
-#~ "At least one time zone needs to be enabled. Your local time zone was "
-#~ "enabled automatically."
-#~ msgstr ""
-#~ "Du må velja minst éi tidssone. Den lokale tidssona di vart automatisk "
-#~ "valt."
-
-#~ msgid "%1, %2 (%3)"
-#~ msgstr "%1, %2 (%3)"
-
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"
