@@ -8,7 +8,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
 "PO-Revision-Date: 2018-06-24 21:50+0100\n"
-"Last-Translator: Øystein Steffensen-Alværvik <ystein@posteo.net>\n"
+"Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
+"com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
@@ -274,7 +275,8 @@ msgid "OK"
 msgstr "OK"
 
 #: contents/logout/Logout.qml:245
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
 msgid "Cancel"
 msgstr "Avbryt"
 

@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2023-02-23 19:21+0100\n"
+"PO-Revision-Date: 2024-03-09 18:30+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -165,7 +165,8 @@ msgid "Sleep"
 msgstr "Kvilemodus"
 
 #: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hibernate"
 msgid "Hibernate"
 msgstr "Dvalemodus"
 
@@ -249,7 +250,8 @@ msgstr ""
 "oppsett av fastvara."
 
 #: contents/logout/Logout.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Log Out"
 msgid "Log Out"
 msgstr "Logg ut"
 
@@ -280,7 +282,8 @@ msgid "OK"
 msgstr "OK"
 
 #: contents/logout/Logout.qml:245
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
 msgid "Cancel"
 msgstr "Avbryt"
 
