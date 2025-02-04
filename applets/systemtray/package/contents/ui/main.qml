@@ -308,6 +308,7 @@ ContainmentItem {
                 if (!visible) {
                     expandedSync.restart();
                 } else {
+                    dialog.requestActivate();
                     if (expandedRepresentation.plasmoidContainer.visible) {
                         expandedRepresentation.plasmoidContainer.forceActiveFocus();
                     } else if (expandedRepresentation.hiddenLayout.visible) {
