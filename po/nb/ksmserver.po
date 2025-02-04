@@ -119,31 +119,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "$HOME not set!"
-#~ msgstr "$HOME ikke oppgitt."
-
-#~ msgid "$HOME directory (%1) does not exist."
-#~ msgstr "$HOME-mappa (%1) finnes ikke."
-
-#~ msgid "No read access to $HOME directory (%1)."
-#~ msgstr "Ingen lesetilgang til $HOME-mappa (%1),"
-
-#~ msgid "$HOME directory (%1) is out of disk space."
-#~ msgstr "$HOME-mappa (%1) har ikke mer diskplass."
-
-#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-#~ msgstr "Skriving til $HOME-mappa (%2) mislyktes med feilen «%1»."
-
-#~ msgid "Temp directory (%1) is out of disk space."
-#~ msgstr "Den midlertidige mappa (%1) har ikke mer diskplass."
-
-#~ msgid ""
-#~ "Writing to the temp directory (%2) failed with\n"
-#~ "    the error '%1'"
-#~ msgstr ""
-#~ "Skriving til  den midlertidige mappa (%2) mislyktes med\n"
-#~ "    feilen «%1»."
-
-#~ msgid "Plasma Workspace installation problem!"
-#~ msgstr "Installasjonsproblem med Plasma Workspace."
