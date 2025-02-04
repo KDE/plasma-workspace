@@ -11,6 +11,8 @@
 
 #include <QScreen>
 
+#include <QApplication>
+
 #include <KWindowSystem>
 
 SubMenu::SubMenu(QQuickItem *parent)
@@ -45,18 +47,28 @@ QPoint SubMenu::popupPosition(QQuickItem *item, const QSize &size)
         return QPoint(0, 0);
     }
 
+    const bool isRightToLeft = QApplication::layoutDirection() == Qt::RightToLeft;
+
     QPointF pos = item->mapToScene(QPointF(0, 0));
     pos = item->window()->mapToGlobal(pos.toPoint());
 
-    pos.setX(pos.x() + m_offset + item->width());
+    pos.setX(pos.x() + (isRightToLeft ? (-m_offset - size.width()) : (m_offset + item->width())));
 
     QRect avail = availableScreenRectForItem(item);
 
-    if (pos.x() + size.width() > avail.right()) {
-        pos.setX(pos.x() - m_offset - item->width() - size.width());
-
-        m_facingLeft = true;
-        Q_EMIT facingLeftChanged();
+    if (isRightToLeft) {
+        if (pos.x() < avail.left()) {
+            pos.setX(pos.x() + 2 * m_offset + item->width() + size.width());
+        } else {
+            m_facingLeft = true;
+            Q_EMIT facingLeftChanged();
+        }
+    } else {
+        if (pos.x() + size.width() > avail.right()) {
+            pos.setX(pos.x() + -m_offset - item->width() - size.width());
+            m_facingLeft = true;
+            Q_EMIT facingLeftChanged();
+        }
     }
 
     pos.setY(pos.y() - margins()->property("top").toInt());
