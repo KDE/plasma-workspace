@@ -72,7 +72,7 @@ QVariant dbusToVariant(const QVariant &variant)
     } else {
         switch (variant.typeId()) {
         case QMetaType::Bool:
-            return Plasma::DBus::BOOL(get<bool>(variant));
+            return variant; // QML always sees object as true
         case QMetaType::Short:
             return Plasma::DBus::INT16(get<short>(variant));
         case QMetaType::Int:
