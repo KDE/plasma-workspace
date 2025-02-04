@@ -88,7 +88,7 @@ TestCase {
             "variant" as DBus.variant
         ];
         const replyArgs = [
-            true as DBus.bool,
+            true,
             32767 as DBus.int16,
             2147483647 as DBus.int32,
             21474836470 as DBus.int64,
