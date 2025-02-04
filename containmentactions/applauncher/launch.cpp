@@ -13,6 +13,8 @@
 #include <KPluginFactory>
 #include <Plasma/PluginLoader>
 
+using namespace Qt::StringLiterals;
+
 AppLauncher::AppLauncher(QObject *parent, const QVariantList &args)
     : Plasma::ContainmentActions(parent, args)
     , m_group(new KServiceGroup(QStringLiteral("/")))
@@ -47,7 +49,7 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr &group)
             if (!m_showAppsByName && !service->genericName().isEmpty()) {
                 text = service->genericName();
             }
-
+            text.replace(u'&', u"&&"_s);
             QAction *action = new QAction(QIcon::fromTheme(service->icon()), text, this);
             connect(action, &QAction::triggered, [action]() {
                 KService::Ptr service = KService::serviceByStorageId(action->data().toString());
@@ -65,7 +67,8 @@ void AppLauncher::makeMenu(QMenu *menu, const KServiceGroup::Ptr &group)
             if (service->childCount() == 0) {
                 continue;
             }
-            QAction *action = new QAction(QIcon::fromTheme(service->icon()), service->caption(), this);
+            const QString caption = service->caption().replace(u'&', u"&&"_s);
+            QAction *action = new QAction(QIcon::fromTheme(service->icon()), caption, this);
             QMenu *subMenu = new QMenu();
             makeMenu(subMenu, service);
             action->setMenu(subMenu);
