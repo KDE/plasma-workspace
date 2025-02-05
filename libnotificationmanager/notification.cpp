@@ -46,10 +46,15 @@ QString Notification::Private::sanitize(const QString &text)
     t.replace(QLatin1String("\n"), QStringLiteral("<br/>"));
     // Now remove all inner whitespace (\ns are already <br/>s)
     t = std::move(t).simplified();
+    // Replace <br></br> with just <br/> in case someone is mad enough to send that
+    static const QRegularExpression brOpenCloseExpr(QStringLiteral("<br>\\s*</br>"));
+    t.replace(brOpenCloseExpr, QLatin1String("<br/>"));
+    // Replace single <br> with <br/> as QXmlStreamReader requires it
+    t.replace(QStringLiteral("<br>"), QLatin1String("<br/>"));
     // Finally, check if we don't have multiple <br/>s following,
     // can happen for example when "\n       \n" is sent, this replaces
-    // all <br/>s in succession with just one
-    static const QRegularExpression brExpr(QStringLiteral("<br/>\\s*<br/>(\\s|<br/>)*"));
+    // all <br/>s in succession with just one. Also remove extra whitespace after any newline
+    static const QRegularExpression brExpr(QStringLiteral("<br/>(\\s|<br/>)+"));
     t.replace(brExpr, QLatin1String("<br/>"));
     // This fancy RegExp escapes every occurrence of & since QtQuick Text will blatantly cut off
     // text where it finds a stray ampersand.

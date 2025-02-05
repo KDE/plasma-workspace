@@ -48,6 +48,13 @@ void NotificationTest::parse_data()
     QTest::newRow("newlines") << "I am\nthe\nnotification" << "I am<br/>the<br/>notification";
     QTest::newRow("multinewlines") << "I am\n\nthe\n\n\nnotification" << "I am<br/>the<br/>notification";
 
+    QTest::newRow("newlinewhitespace") << "I am<br/> the<br/> notification" << "I am<br/>the<br/>notification";
+    QTest::newRow("multinewlinewhitepace") << "I am<br/> <br/> the<br/> <br/> <br/> notification" << "I am<br/>the<br/>notification";
+
+    QTest::newRow("newlineclosedbr") << "I am<br/>the<br />notification" << "I am<br/>the<br/>notification";
+    QTest::newRow("newlinesimplebr") << "I am<br>the<br>notification" << "I am<br/>the<br/>notification";
+    QTest::newRow("multinewlineformats") << "Newline printer goes<br> </br><br>\nbr<br/>  <br><br>br<br><br></br>br" << "Newline printer goes<br/>br<br/>br<br/>br";
+
     QTest::newRow("amp") << "me&you" << "me&amp;you";
     QTest::newRow("double escape") << "foo &amp; &lt;bar&gt;" << "foo &amp; &lt;bar&gt;";
 
