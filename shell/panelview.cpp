@@ -1635,7 +1635,8 @@ void PanelView::updateExclusiveZone()
 void PanelView::refreshContainment()
 {
     restore();
-    connect(containment(), &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring) {
+    Plasma::Containment *const cont = containment();
+    connect(cont, &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring) {
         if (configuring) {
             showTemporarily();
         } else {
@@ -1644,15 +1645,15 @@ void PanelView::refreshContainment()
         }
     });
 
-    connect(containment(), &Plasma::Applet::statusChanged, this, &PanelView::refreshStatus);
-    connect(containment(), &Plasma::Applet::appletDeleted, this, [this] {
+    connect(cont, &Plasma::Applet::statusChanged, this, &PanelView::refreshStatus);
+    connect(cont, &Plasma::Applet::appletDeleted, this, [this, cont] {
         // containment()->destroyed() is true only when the user deleted it
         // so the config is to be thrown away, not during shutdown
-        if (containment()->destroyed()) {
+        if (cont->destroyed()) {
             KConfigGroup views(m_corona->applicationConfig(), u"PlasmaViews"_s);
             for (auto grp : views.groupList()) {
-                if (grp.contains(QRegularExpression(QStringLiteral("Panel %1$").arg(QString::number(containment()->id()))))) {
-                    qDebug() << "Panel" << containment()->id() << "removed by user";
+                if (grp.contains(QRegularExpression(QStringLiteral("Panel %1$").arg(QString::number(cont->id()))))) {
+                    qDebug() << "Panel" << cont->id() << "removed by user";
                     views.deleteGroup(grp);
                 }
                 views.sync();
@@ -1662,10 +1663,10 @@ void PanelView::refreshContainment()
     connect(containment(), &Plasma::Applet::userConfiguringChanged, this, &PanelView::updateExclusiveZone);
 
     // FEATURE 352476: cancel focus on the panel when clicking outside
-    connect(this, &PanelView::activeFocusItemChanged, containment(), [this] {
-        if (containment()->status() == Plasma::Types::AcceptingInputStatus && !activeFocusItem()) {
+    connect(this, &PanelView::activeFocusItemChanged, cont, [this, cont] {
+        if (cont->status() == Plasma::Types::AcceptingInputStatus && !activeFocusItem()) {
             // BUG 454729: avoid switching to PassiveStatus in keyboard navigation
-            containment()->setStatus(Plasma::Types::ActiveStatus);
+            cont->setStatus(Plasma::Types::ActiveStatus);
         }
     });
 }
