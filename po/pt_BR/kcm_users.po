@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-31 02:36+0000\n"
-"PO-Revision-Date: 2025-02-03 08:17-0300\n"
+"PO-Revision-Date: 2025-02-04 11:56-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -99,18 +99,14 @@ msgid "Change Wallet Password?"
 msgstr "Alterar senha da carteira?"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
 "Agora que você alterou sua senha de login, você pode também querer alterar a "
-"senha na carteira padrão para coincidir a ela."
+"senha na carteira padrão do KWallet para coincidir a ela."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format
@@ -619,7 +615,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Erro ao recortar imagem: %1"
 
 #: src/user.cpp:310
 #, kde-format

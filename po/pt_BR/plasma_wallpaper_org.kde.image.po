@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-01 00:42+0000\n"
-"PO-Revision-Date: 2025-02-03 08:23-0300\n"
+"PO-Revision-Date: 2025-02-04 12:01-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -44,43 +44,37 @@ msgid "Directory with the wallpaper to show slides from"
 msgstr "Pasta com o papel de parede a mostrar como slide"
 
 #: imagepackage/contents/ui/config.qml:128
-#, fuzzy, kde-format
-#| msgid "Positioning:"
+#, kde-format
 msgctxt "@label:listbox"
 msgid "Positioning:"
 msgstr "Posicionamento:"
 
 #: imagepackage/contents/ui/config.qml:131
-#, fuzzy, kde-format
-#| msgid "Scaled and Cropped"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled and cropped"
 msgstr "Escalonado e recortado"
 
 #: imagepackage/contents/ui/config.qml:135
-#, fuzzy, kde-format
-#| msgid "Scaled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled"
 msgstr "Escalonado"
 
 #: imagepackage/contents/ui/config.qml:139
-#, fuzzy, kde-format
-#| msgid "Scaled, Keep Proportions"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Scaled, keep proportions"
 msgstr "Escalonado, manter proporções"
 
 #: imagepackage/contents/ui/config.qml:143
-#, fuzzy, kde-format
-#| msgid "Centered"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Centered"
 msgstr "Centralizado"
 
 #: imagepackage/contents/ui/config.qml:147
-#, fuzzy, kde-format
-#| msgid "Tiled"
+#, kde-format
 msgctxt "@item:inlistbox"
 msgid "Tiled"
 msgstr "Ladrilhado"
@@ -127,11 +121,10 @@ msgid "Add…"
 msgstr "Adicionar…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:65
-#, fuzzy, kde-format
-#| msgid "Open Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Wallpaper Image…"
-msgstr "Abrir imagem de papel de parede"
+msgstr "Adicionar imagem de papel de parede…"
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:71
 #, kde-format
@@ -140,11 +133,10 @@ msgid "Get New…"
 msgstr "Baixar novos..."
 
 #: imagepackage/contents/ui/ThumbnailsComponent.qml:72
-#, fuzzy, kde-format
-#| msgid "Next Wallpaper Image"
+#, kde-format
 msgctxt "@action:button"
 msgid "Get New Wallpaper Images…"
-msgstr "Próxima imagem de papel de parede"
+msgstr "Obter novas imagens de papel de parede…"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:31
 #, kde-format
@@ -182,6 +174,8 @@ msgstr ""
 #, kde-format
 msgid "Specify the fill mode (e.g., stretch, preserveAspectCrop, etc.)"
 msgstr ""
+"Especifique o modo de preenchimento (ex.: esticar, preservar aspecto de "
+"corte, etc.)"
 
 #: plasma-apply-wallpaperimage.cpp:61
 #, kde-format
@@ -197,7 +191,7 @@ msgstr ""
 #: plasma-apply-wallpaperimage.cpp:99
 #, kde-format
 msgid "Invalid fill mode specified: %1"
-msgstr ""
+msgstr "Modo de preenchimento inválido especificado: %1"
 
 #: plasma-apply-wallpaperimage.cpp:115
 #, kde-format
@@ -307,11 +301,10 @@ msgid "Add…"
 msgstr "Adicionar…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:211
-#, fuzzy, kde-format
-#| msgid "Add Folder…"
+#, kde-format
 msgctxt "@action:button"
 msgid "Add Folder…"
-msgstr "Adicionar pasta..."
+msgstr "Adicionar pasta…"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:249
 #, kde-format

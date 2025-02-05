@@ -5,13 +5,13 @@
 # André Marcelo Alvarenga <alvarenga@kde.org>, 2014, 2015, 2016, 2019.
 # Aracele Torres <aracele@kde.org>, 2014.
 # Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2018, 2019, 2020, 2021, 2022.
-# SPDX-FileCopyrightText: 2024 Geraldo Simiao <geraldosimiao@fedoraproject.org>
+# SPDX-FileCopyrightText: 2024, 2025 Geraldo Simiao <geraldosimiao@fedoraproject.org>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-17 02:33+0000\n"
-"PO-Revision-Date: 2024-11-16 01:48-0300\n"
+"PO-Revision-Date: 2025-02-04 11:59-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -268,6 +268,7 @@ msgstr "%1pt %2"
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
+"Note: o tamanho pode ser reduzido se o painel não for grosso o suficiente."
 
 #: package/contents/ui/configAppearance.qml:291
 #, kde-format
@@ -419,6 +420,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"O fuso horário não está definido; clique aqui para abrir as configurações de "
+"Data e hora e definir um."
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -427,12 +430,11 @@ msgid "Today is %1"
 msgstr "Hoje é %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Cidade do fuso horário"
+msgstr "O fuso horário não está definido"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -440,6 +442,8 @@ msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
 msgstr ""
+"Clique no ícone do relógio para abrir as configurações de Data e hora e "
+"definir um fuso horário."
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format

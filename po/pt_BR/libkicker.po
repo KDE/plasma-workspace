@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-03 02:32+0000\n"
-"PO-Revision-Date: 2025-02-03 08:19-0300\n"
+"PO-Revision-Date: 2025-02-04 11:58-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -140,7 +140,7 @@ msgstr "Esquecer o aplicativo"
 #: plugin/recentusagemodel.cpp:313
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Pastas"
 
 #: plugin/recentusagemodel.cpp:350
 #, kde-format

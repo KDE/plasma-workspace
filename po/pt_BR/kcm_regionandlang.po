@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-25 00:41+0000\n"
-"PO-Revision-Date: 2025-02-03 08:16-0300\n"
+"PO-Revision-Date: 2025-02-04 12:07-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -28,40 +28,40 @@ msgstr "International Electrotechnical Commission (IEC)"
 #, kde-format
 msgctxt "Binary dialect JEDEC, with sigle in parentheses"
 msgid "Joint Electron Device Engineering Council (JEDEC)"
-msgstr ""
+msgstr "Joint Electron Device Engineering Council (JEDEC)"
 
 #: binarydialectmodel.cpp:60
 #, kde-format
 msgctxt "Binary dialect Metric, with origin in parentheses"
 msgid "Metric system (SI)"
-msgstr ""
+msgstr "Sistema métrico (SM)"
 
 #: binarydialectmodel.cpp:75
 #, kde-format
 msgid "Binary -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
-msgstr ""
+msgstr "Binário -  Kibibytes (KiB), Mebibytes (MiB), Gibibytes (GiB)"
 
 #: binarydialectmodel.cpp:77
 #, kde-format
 msgid "Binary - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Binário - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 
 #: binarydialectmodel.cpp:79
 #, kde-format
 msgid "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
-msgstr ""
+msgstr "Decimal - Kilobytes (kB), Megabytes (MB), Gigabytes (GB)"
 
 #: exampleutility.cpp:31
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial UK"
-msgstr ""
+msgstr "Imperial Reino Unido"
 
 #: exampleutility.cpp:33
 #, kde-format
 msgctxt "Measurement combobox"
 msgid "Imperial US"
-msgstr ""
+msgstr "Imperial EUA"
 
 #: exampleutility.cpp:35
 #, kde-format
@@ -73,7 +73,7 @@ msgstr "Métrico"
 #, kde-format
 msgctxt "PaperSize combobox"
 msgid "Letter"
-msgstr ""
+msgstr "Carta"
 
 #: exampleutility.cpp:78
 #, kde-format
@@ -97,55 +97,55 @@ msgstr "Corporação Acme"
 #, kde-format
 msgctxt "Department name"
 msgid "Development Department"
-msgstr ""
+msgstr "Departamento de desenvolvimento"
 
 #: exampleutility.cpp:96
 #, kde-format
 msgctxt "Building name"
 msgid "Dev-Building"
-msgstr ""
+msgstr "Edifício"
 
 #: exampleutility.cpp:97
 #, kde-format
 msgctxt "Street or block name"
 msgid "Main Street"
-msgstr ""
+msgstr "Rua principal"
 
 #: exampleutility.cpp:98
 #, kde-format
 msgctxt "House number"
 msgid "House 1"
-msgstr ""
+msgstr "Casa 1"
 
 #: exampleutility.cpp:100
 #, kde-format
 msgctxt "Whitespace field for locale address style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:101
 #, kde-format
 msgctxt "Room number"
 msgid "Room 2"
-msgstr ""
+msgstr "Sala 2"
 
 #: exampleutility.cpp:102
 #, kde-format
 msgctxt "Floor number"
 msgid "Floor 3"
-msgstr ""
+msgstr "Piso 3"
 
 #: exampleutility.cpp:104
 #, kde-format
 msgctxt "Local township within town or city"
 msgid "Downtown"
-msgstr ""
+msgstr "Centro da cidade"
 
 #: exampleutility.cpp:105
 #, kde-format
 msgctxt "Zip number, postal code"
 msgid "123456"
-msgstr ""
+msgstr "123456"
 
 #: exampleutility.cpp:106
 #, kde-format
@@ -163,85 +163,85 @@ msgstr "Estado"
 #, kde-format
 msgctxt "Family names"
 msgid "FamilyName"
-msgstr ""
+msgstr "NomeDaFamília"
 
 #: exampleutility.cpp:121
 #, kde-format
 msgctxt "Family names in uppercase"
 msgid "FAMILYNAME"
-msgstr ""
+msgstr "NOMEDAFAMÍLIA"
 
 #: exampleutility.cpp:122
 #, kde-format
 msgctxt "First given name"
 msgid "FirstName"
-msgstr ""
+msgstr "PrimeiroNome"
 
 #: exampleutility.cpp:123
 #, kde-format
 msgctxt "First given initial"
 msgid "F"
-msgstr ""
+msgstr "F"
 
 #: exampleutility.cpp:124
 #, kde-format
 msgctxt "First given name with latin letters"
 msgid "FirstName"
-msgstr ""
+msgstr "PrimeiroNome"
 
 #: exampleutility.cpp:125
 #, kde-format
 msgctxt "Other shorter name"
 msgid "OtherName"
-msgstr ""
+msgstr "OutroNome"
 
 #: exampleutility.cpp:126
 #, kde-format
 msgctxt "Additional given names"
 msgid "AdditionalName"
-msgstr ""
+msgstr "NomeAdicional"
 
 #: exampleutility.cpp:127
 #, kde-format
 msgctxt "Initials for additional given names"
 msgid "A"
-msgstr ""
+msgstr "A"
 
 #: exampleutility.cpp:128
 #, kde-format
 msgctxt "Profession"
 msgid "Profession"
-msgstr ""
+msgstr "Profissão"
 
 #: exampleutility.cpp:129
 #, kde-format
 msgctxt "Salutation"
 msgid "Doctor"
-msgstr ""
+msgstr "Doutor"
 
 #: exampleutility.cpp:130
 #, kde-format
 msgctxt "Abbreviated salutation"
 msgid "Dr."
-msgstr ""
+msgstr "Dr."
 
 #: exampleutility.cpp:131
 #, kde-format
 msgctxt "Salutation using the FDCC-sets conventions"
 msgid "Dr."
-msgstr ""
+msgstr "Dr."
 
 #: exampleutility.cpp:132
 #, kde-format
 msgctxt "Space or dot for locale name style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:148
 #, kde-format
 msgctxt "Whitespace for telephone style example"
 msgid " "
-msgstr ""
+msgstr " "
 
 #: exampleutility.cpp:162
 #, kde-format
@@ -287,13 +287,13 @@ msgstr "Não é possível localizar o executável `check-language-support`"
 #, kde-format
 msgctxt "the arg is the output of failed check-language-support call"
 msgid "check-language-support failed, output: %1"
-msgstr ""
+msgstr "check-language-support falhou, saída: %1"
 
 #: localegeneratorubuntu.cpp:83
 #, kde-format
 msgctxt "%1 is a list of package names"
 msgid "Not all missing packages managed to resolve! %1"
-msgstr ""
+msgstr "Nem todos os pacotes faltantes foram resolvidos! %1"
 
 #: localegeneratorubuntu.cpp:89
 #, kde-format
@@ -309,7 +309,7 @@ msgstr "Outro processo já está em execução, tente novamente mais tarde"
 #: localegenhelper/localegenhelper.cpp:65
 #, kde-format
 msgid "Unauthorized to edit locale configuration file"
-msgstr ""
+msgstr "Não foi permitido editar o arquivo de configuração de localidade"
 
 #: localegenhelper/localegenhelper.cpp:115
 #, kde-format
@@ -349,7 +349,7 @@ msgstr "%1 (%2)"
 msgctxt ""
 "@info:title, meaning the current locale is system default(which is `C`)"
 msgid "System Default C"
-msgstr ""
+msgstr "Padrão do sistema C"
 
 #: localelistmodel.cpp:157
 #, kde-format
