@@ -8,9 +8,12 @@
 
 #include <QDBusMessage>
 #include <QDBusReply>
+#include <QJSValue>
+#include <QQmlEngine>
 #include <QXmlStreamReader>
 
 #include "dbusmessage.h"
+#include "dbusplugin_debug.h"
 
 using namespace Qt::StringLiterals;
 
@@ -25,6 +28,24 @@ DBusConnection::DBusConnection(QObject *parent)
 DBusPendingReply *DBusConnection::asyncCall(const DBusMessage &message)
 {
     return new DBusPendingReply(*this, message); // QML managed
+}
+
+void DBusConnection::asyncCall(const DBusMessage &message, const QJSValue &resolve, const QJSValue &reject)
+{
+    auto reply = new DBusPendingReply(*this, message);
+    connect(reply, &DBusPendingReply::finished, this, [this, reply, resolve, reject] {
+        QQmlEngine::setObjectOwnership(reply, QJSEngine::JavaScriptOwnership);
+        const QJSValueList values{qjsEngine(this)->toScriptValue(reply)};
+        QJSValue ret;
+        if (reply->isValid()) {
+            ret = resolve.call(values);
+        } else {
+            ret = reject.call(values);
+        }
+        if (ret.isError()) {
+            qCWarning(DBUSPLUGIN_DEBUG) << ret.toString();
+        }
+    });
 }
 
 QByteArray DBusConnection::parseSignatureFromIntrospection(QStringView introspection, const DBusMessage &message)

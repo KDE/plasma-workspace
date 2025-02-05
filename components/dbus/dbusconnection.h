@@ -12,6 +12,8 @@
 
 #include "dbuspendingreply.h"
 
+class QJSValue;
+
 namespace Plasma
 {
 class DBusMessage;
@@ -25,6 +27,7 @@ public:
     explicit DBusConnection(QObject *parent = nullptr);
 
     Q_INVOKABLE DBusPendingReply *asyncCall(const DBusMessage &message);
+    Q_INVOKABLE void asyncCall(const DBusMessage &message, const QJSValue &resolve, const QJSValue &reject);
 
     static QByteArray parseSignatureFromIntrospection(QStringView introspection, const DBusMessage &message);
 

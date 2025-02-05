@@ -180,9 +180,18 @@ TestCase {
             "member": "ping",
         } as DBus.dbusMessage;
 
-        root.pendingReply = DBus.SessionBus.asyncCall(msg);
-        verify(root.pendingReply);
-        tryVerify(() => root.pendingReply.isFinished);
+        root.pendingReply = null;
+
+        const promise = new Promise((resolve, reject) => {
+            DBus.SessionBus.asyncCall(msg, resolve, reject);
+        }).then((result) => {
+            root.pendingReply = result;
+        }).catch((error) => {
+            root.pendingReply = error;
+        });
+
+        tryVerify(() => root.pendingReply);
+        verify(() => root.pendingReply.isFinished);
 
         verify(root.pendingReply.isValid);
         verify(!root.pendingReply.value);
