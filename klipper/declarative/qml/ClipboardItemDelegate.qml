@@ -13,6 +13,8 @@ import QtQuick.Layouts 1.1
 import Qt5Compat.GraphicalEffects
 
 import org.kde.plasma.components 3.0 as PlasmaComponents
+import org.kde.plasma.extras 2.0 as PlasmaExtras
+
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ksvg 1.0 as KSvg
 
@@ -85,17 +87,17 @@ PlasmaComponents.ItemDelegate {
         expandButtonLoader.item.checked = false;
     }
 
-    Binding {
-        target: menuItem.ListView.view
-        // don't change currentIndex if it would make listview scroll
-        // see https://bugs.kde.org/show_bug.cgi?id=387797
-        // this is a workaround till https://bugreports.qt.io/browse/QTBUG-114574 gets fixed
-        // which would allow a proper solution
-        when: menuItem.hovered && (menuItem.y - menuItem.ListView.view.contentY + menuItem.height + 1 /* border */ < menuItem.ListView.view.height) && (menuItem.y - menuItem.ListView.view.contentY >= 0)
-        property: "currentIndex"
-        value: menuItem.index
-        restoreMode: Binding.RestoreBinding
+    onHoveredChanged: if (hovered) menuListView.currentIndex = index
+
+    // The highlight at a listview level is disabled as by default Listview then scrolls to keep that index in view
+    // see https://bugs.kde.org/show_bug.cgi?id=387797
+    // Instead place highlight in each delegate and we don't keep the highlight in view
+    PlasmaExtras.Highlight {
+        hovered: menuItem.hovered
+        anchors.fill: parent
+        z: 1
     }
+    background: null
 
     DragHandler {
         id: dragHandler
