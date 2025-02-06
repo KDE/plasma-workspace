@@ -46,7 +46,7 @@ protected:
     // The rectangle as near as possible to the current item geometry which can fit it
     QRectF nextAvailableSpace(ItemContainer *item, const QSizeF &minimumSize, AppletsLayout::PreferredLayoutDirection direction) const override;
 
-    bool assignSpaceImpl(ItemContainer *item) override;
+    bool assignSpaceImpl(ItemContainer *item, QRectF geometry) override;
     void releaseSpaceImpl(ItemContainer *item) override;
 
 private:

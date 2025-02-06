@@ -55,26 +55,28 @@ QRectF AbstractLayoutManager::candidateGeometry(ItemContainer *item) const
     const QRectF ttbRect = nextAvailableSpace(item, minimumSize, AppletsLayout::TopToBottom);
     const QRectF bttRect = nextAvailableSpace(item, minimumSize, AppletsLayout::BottomToTop);
 
+    auto score = [originalItemRect](QRectF target) {
+        auto dist = QPointF(originalItemRect.center() - target.center()).manhattanLength();
+        auto size = QPointF(originalItemRect.width() - target.width(), originalItemRect.height() - target.height()).manhattanLength();
+        return dist + size;
+    };
+
     // Take the closest rect, unless the item prefers a particular positioning strategy
     QMap<int, QRectF> distances;
     if (!ltrRect.isEmpty()) {
-        const int dist =
-            item->preferredLayoutDirection() == AppletsLayout::LeftToRight ? 0 : QPointF(originalItemRect.center() - ltrRect.center()).manhattanLength();
+        const int dist = item->preferredLayoutDirection() == AppletsLayout::LeftToRight ? 0 : score(ltrRect);
         distances[dist] = ltrRect;
     }
     if (!rtlRect.isEmpty()) {
-        const int dist =
-            item->preferredLayoutDirection() == AppletsLayout::RightToLeft ? 0 : QPointF(originalItemRect.center() - rtlRect.center()).manhattanLength();
+        const int dist = item->preferredLayoutDirection() == AppletsLayout::RightToLeft ? 0 : score(rtlRect);
         distances[dist] = rtlRect;
     }
     if (!ttbRect.isEmpty()) {
-        const int dist =
-            item->preferredLayoutDirection() == AppletsLayout::TopToBottom ? 0 : QPointF(originalItemRect.center() - ttbRect.center()).manhattanLength();
+        const int dist = item->preferredLayoutDirection() == AppletsLayout::TopToBottom ? 0 : score(ttbRect);
         distances[dist] = ttbRect;
     }
     if (!bttRect.isEmpty()) {
-        const int dist =
-            item->preferredLayoutDirection() == AppletsLayout::BottomToTop ? 0 : QPointF(originalItemRect.center() - bttRect.center()).manhattanLength();
+        const int dist = item->preferredLayoutDirection() == AppletsLayout::BottomToTop ? 0 : score(bttRect);
         distances[dist] = bttRect;
     }
 
@@ -86,7 +88,7 @@ QRectF AbstractLayoutManager::candidateGeometry(ItemContainer *item) const
     }
 }
 
-void AbstractLayoutManager::positionItem(ItemContainer *item)
+QRectF AbstractLayoutManager::positionItem(ItemContainer *item)
 {
     // Give it a sane size if uninitialized: this may change size hints
     if (item->width() <= 0 || item->height() <= 0) {
@@ -99,18 +101,18 @@ void AbstractLayoutManager::positionItem(ItemContainer *item)
     item->setProperty("x", candidate.topLeft().x());
     item->setProperty("y", candidate.topLeft().y());
     item->setSize(candidate.size());
+    return candidate;
 }
 
 void AbstractLayoutManager::positionItemAndAssign(ItemContainer *item)
 {
     releaseSpace(item);
-    positionItem(item);
-    assignSpace(item);
+    assignSpace(item, positionItem(item));
 }
 
-bool AbstractLayoutManager::assignSpace(ItemContainer *item)
+bool AbstractLayoutManager::assignSpace(ItemContainer *item, QRectF geometry)
 {
-    if (assignSpaceImpl(item)) {
+    if (assignSpaceImpl(item, geometry)) {
         Q_EMIT layoutNeedsSaving();
         return true;
     } else {

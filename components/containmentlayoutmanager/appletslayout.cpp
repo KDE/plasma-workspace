@@ -423,8 +423,6 @@ void AppletsLayout::showPlaceHolderAt(const QRectF &geom)
     m_placeHolder->setSize(geom.size());
 
     m_layoutManager->positionItem(m_placeHolder);
-
-    m_placeHolder->setProperty("opacity", 1);
 }
 
 void AppletsLayout::showPlaceHolderForItem(ItemContainer *item)

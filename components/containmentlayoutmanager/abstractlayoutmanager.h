@@ -31,8 +31,10 @@ public:
 
     /**
      * Positions the item, does *not* assign the space as taken
+     * New geometry is returned, since behaviors might interfere with
+     * subsequently readings of coordinates.
      */
-    void positionItem(ItemContainer *item);
+    QRectF positionItem(ItemContainer *item);
 
     /**
      * Positions the item and assigns the space as taken by this item
@@ -40,11 +42,11 @@ public:
     void positionItemAndAssign(ItemContainer *item);
 
     /**
-     * Set the space of item's rect as occupied by item.
-     * The operation may fail if some space of the item's geometry is already occupied.
+     * Set a certain geometry to be occupied by the given item.
+     * The operation may fail if some space of given geometry is already occupied.
      * @returns true if the operation succeeded
      */
-    bool assignSpace(ItemContainer *item);
+    bool assignSpace(ItemContainer *item, QRectF geometry);
 
     /**
      * If item is occupying space, set it as available
@@ -102,7 +104,7 @@ protected:
     /**
      * Subclasses implement their assignSpace logic here
      */
-    virtual bool assignSpaceImpl(ItemContainer *item) = 0;
+    virtual bool assignSpaceImpl(ItemContainer *item, QRectF geometry) = 0;
 
     /**
      * Subclasses implement their releasespace logic here

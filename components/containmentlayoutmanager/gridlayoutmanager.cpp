@@ -105,8 +105,7 @@ void GridLayoutManager::layoutGeometryChanged(const QRectF &newGeometry, const Q
         auto *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
             // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
-            positionItem(itemCont);
-            assignSpaceImpl(itemCont);
+            assignSpaceImpl(itemCont, positionItem(itemCont));
         }
     }
 }
@@ -119,8 +118,7 @@ void GridLayoutManager::resetLayout()
         ItemContainer *itemCont = qobject_cast<ItemContainer *>(item);
         if (itemCont && itemCont != layout()->placeHolder()) {
             // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
-            positionItem(itemCont);
-            assignSpaceImpl(itemCont);
+            assignSpaceImpl(itemCont, positionItem(itemCont));
         }
     }
 }
@@ -143,8 +141,7 @@ void GridLayoutManager::resetLayoutFromConfig(const QRectF &newGeom, const QRect
     for (auto *item : std::as_const(missingItems)) {
         // NOTE: do not use positionItemAndAssign here, because we do not want to Q_EMIT layoutNeedsSaving, to not save after resize
         maintainItemEdgeAlignment(item, newGeom, oldGeom);
-        positionItem(item);
-        assignSpaceImpl(item);
+        assignSpaceImpl(item, positionItem(item));
     }
 
     if (!missingItems.isEmpty()) {
@@ -166,8 +163,7 @@ bool GridLayoutManager::restoreItem(ItemContainer *item)
         // If size is empty the layout is not in a valid state and probably startup is not completed yet
         if (!layout()->size().isEmpty()) {
             releaseSpaceImpl(item);
-            positionItem(item);
-            assignSpaceImpl(item);
+            assignSpaceImpl(item, positionItem(item));
         }
 
         return true;
@@ -195,16 +191,16 @@ bool GridLayoutManager::isRectAvailable(const QRectF &rect)
     return true;
 }
 
-bool GridLayoutManager::assignSpaceImpl(ItemContainer *item)
+bool GridLayoutManager::assignSpaceImpl(ItemContainer *item, QRectF geometry)
 {
     // Don't Q_EMIT extra layoutneedssaving signals
     releaseSpaceImpl(item);
-    if (!isRectAvailable(itemGeometry(item))) {
+    if (!isRectAvailable(geometry)) {
         qCDebug(CONTAINMENTLAYOUTMANAGER_DEBUG) << "Trying to take space not available" << item;
         return false;
     }
 
-    const QRect cellItemGeom = cellBasedGeometry(itemGeometry(item));
+    const QRect cellItemGeom = cellBasedGeometry(geometry);
 
     for (int row = cellItemGeom.top(); row <= cellItemGeom.bottom(); ++row) {
         for (int column = cellItemGeom.left(); column <= cellItemGeom.right(); ++column) {
@@ -310,8 +306,7 @@ void GridLayoutManager::adjustToItemSizeHints(ItemContainer *item)
     // Relayout if anything changed
     if (changed && itemIsManaged(item)) {
         releaseSpace(item);
-        positionItem(item);
-        assignSpace(item);
+        assignSpace(item, positionItem(item));
     }
 }
 
@@ -343,7 +338,7 @@ bool GridLayoutManager::isCellAvailable(const QPair<int, int> &cell) const
 
 QRectF GridLayoutManager::itemGeometry(QQuickItem *item) const
 {
-    return QRectF(item->x(), item->y(), item->width(), item->height());
+    return QRectF(item->property("x").toReal(), item->property("y").toReal(), item->width(), item->height());
 }
 
 QPair<int, int> GridLayoutManager::nextCell(const QPair<int, int> &cell, AppletsLayout::PreferredLayoutDirection direction) const
@@ -477,7 +472,7 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
         cell = nextAvailableCell(cell, direction);
     }
 
-    while (!isOutOfBounds(cell)) {
+    while (!isOutOfBounds(cell) && isCellAvailable(cell)) {
         if (direction == AppletsLayout::LeftToRight || direction == AppletsLayout::RightToLeft) {
             partialSize = QSize(INT_MAX, 0);
 
@@ -511,7 +506,7 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                     return QRectF(cell.second * cellSize().width(), cell.first * cellSize().height(), width, height);
                 }
             } else {
-                cell = nextAvailableCell(nextTakenCell(cell, direction), direction);
+                cell = nextAvailableCell(cell, direction);
             }
 
         } else if (direction == AppletsLayout::TopToBottom || direction == AppletsLayout::BottomToTop) {
@@ -547,7 +542,7 @@ QRectF GridLayoutManager::nextAvailableSpace(ItemContainer *item, const QSizeF &
                     return QRectF(cell.second * cellSize().width(), cell.first * cellSize().height(), width, height);
                 }
             } else {
-                cell = nextAvailableCell(nextTakenCell(cell, direction), direction);
+                cell = nextAvailableCell(cell, direction);
             }
         }
     }
