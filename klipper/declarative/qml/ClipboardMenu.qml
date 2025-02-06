@@ -233,9 +233,7 @@ PlasmaComponents3.ScrollView {
 
         readonly property alias clipboardMenu: clipboardMenu
 
-        highlight: PlasmaExtras.Highlight { }
-        highlightMoveDuration: 0
-        highlightResizeDuration: 0
+        highlightFollowsCurrentItem: false
         currentIndex: 0
         model: KItemModels.KSortFilterProxyModel {
             sourceModel: clipboardMenu.model
