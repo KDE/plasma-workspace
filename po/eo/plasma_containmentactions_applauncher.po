@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2025-02-06 02:33+0000\n"
 "PO-Revision-Date: 2023-04-07 23:35+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -25,7 +25,7 @@ msgstr ""
 msgid "Show applications by name"
 msgstr "Montri aplikaĵojn laŭ nomo"
 
-#: launch.cpp:89
+#: launch.cpp:92
 #, kde-format
 msgctxt "plasma_containmentactions_applauncher"
 msgid "Configure Application Launcher Plugin"
