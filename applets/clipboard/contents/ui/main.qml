@@ -40,22 +40,6 @@ PlasmoidItem {
         clearSearchField()
     }
 
-    property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
-
-    onIsClipboardEmptyChanged: {
-        if (isClipboardEmpty) {
-            if (!main.inEmbeddedContainment)
-                return;
-            // We need to hide the applet before changing its status to passive
-            // because only the active applet can hide itself
-            if (main.hideOnWindowDeactivate)
-                main.expanded = false;
-            Plasmoid.status = PlasmaCore.Types.HiddenStatus;
-        } else {
-            Plasmoid.status = PlasmaCore.Types.ActiveStatus
-        }
-    }
-
     function clearSearchField() {
         (fullRepresentationItem.clipboardMenu as Private.ClipboardMenu).filter.clear();
     }
