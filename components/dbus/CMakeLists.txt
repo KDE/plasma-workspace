@@ -6,6 +6,7 @@ target_sources(dbusplugin
     PRIVATE
         dbusplugin.cpp
         dbusconnection.cpp dbusconnection.h
+        dbussignalwatcher.cpp dbussignalwatcher.h
         dbusdecoder.cpp dbusdecoder.h
         dbusencoder.cpp dbusencoder.h
         dbuserror.cpp dbuserror.h
