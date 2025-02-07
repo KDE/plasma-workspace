@@ -7,6 +7,7 @@
 */
 
 #include "user.h"
+#include "homed_manager_interface.h"
 #include "kcmusers_debug.h"
 #include "user_interface.h"
 #include <KLocalizedString>
@@ -217,9 +218,19 @@ void User::loadData()
         mOriginalLoggedIn = mLoggedIn;
         userDataChanged = true;
     }
+    if (mUsesHomed != m_dbusIface->usesHomed()) {
+        mUsesHomed = m_dbusIface->usesHomed();
+        Q_EMIT usesHomedChanged();
+        userDataChanged = true;
+    }
     if (userDataChanged) {
         Q_EMIT dataChanged();
     }
+}
+
+bool User::usesHomed() const
+{
+    return mUsesHomed;
 }
 
 #if !(HAVE_CRYPT_GENSALT)
@@ -265,8 +276,48 @@ static QString saltPassword(const QString &plain)
     return QString::fromUtf8(salted);
 }
 
-void User::setPassword(const QString &password)
+void User::setHomedPassword(const QString &oldPassword, const QString &newPassword)
 {
+    auto homedManager =
+        new OrgFreedesktopHome1ManagerInterface(u"org.freedesktop.home1.Manager"_s, u"/org/freedesktop/home1"_s, QDBusConnection::systemBus(), this);
+
+    QJsonObject oldPasswordJson{
+        {"password"_L1, QJsonArray({oldPassword})},
+    };
+
+    QJsonObject newPasswordJson{
+        {"password"_L1, QJsonArray({newPassword})},
+    };
+
+    auto reply = homedManager->ChangePasswordHome(mName,
+                                                  QString::fromUtf8(QJsonDocument(newPasswordJson).toJson()),
+                                                  QString::fromUtf8(QJsonDocument(oldPasswordJson).toJson()));
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(reply, this);
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [homedManager, watcher, reply, this]() {
+        // Not an error or invalid message
+        if (reply.isValid()) {
+            Q_EMIT passwordSuccessfullyChanged();
+        } else if (reply.isError()) {
+            const auto error = reply.error().name();
+            if (error == "org.freedesktop.home1.LowPasswordQuality"_L1) {
+                Q_EMIT applyError(i18nc("@info", "The new password is too simple. Please choose another password."));
+            } else if (error == "org.freedesktop.home1.LowPasswordQuality"_L1) {
+                Q_EMIT applyError(i18nc("@info", "Wrong password. Please type your current password again."));
+            } else {
+                Q_EMIT applyError(i18nc("@info", "Password could not be changed. Unknown error: %s", reply.error().message()));
+            }
+        }
+        delete homedManager;
+        delete watcher;
+    });
+}
+
+void User::setPassword(const QString &password, const QString &oldPassword)
+{
+    if (mUsesHomed) {
+        setHomedPassword(password, oldPassword);
+        return;
+    }
     // Blocking because we need to wait for the password to be changed before we
     // can ask the user about also possibly changing their KWallet password
 

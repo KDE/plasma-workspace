@@ -80,5 +80,6 @@
         <property type="b" name="AutomaticLogin" access="read"/>
         <property type="b" name="SystemAccount" access="read"/>
         <property type="b" name="LocalAccount" access="read"/>
+        <property type="b" name="UsesHomed" access="read" />
     </interface>
 </node>

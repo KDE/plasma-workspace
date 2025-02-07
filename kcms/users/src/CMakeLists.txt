@@ -10,6 +10,11 @@ qt_add_dbus_interface(kcm_users_DBUS_SRCS
 )
 
 qt_add_dbus_interface(kcm_users_DBUS_SRCS
+    org.freedesktop.home1.Manager.xml
+    homed_manager_interface
+)
+
+qt_add_dbus_interface(kcm_users_DBUS_SRCS
     org.freedesktop.Accounts.User.xml
     user_interface
 )

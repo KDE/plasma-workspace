@@ -36,7 +36,7 @@ Kirigami.PromptDialog {
                 debouncer.isTriggered = true
                 return
             }
-            passwordRoot.user.setPassword(passwordField.text)
+            passwordRoot.user.setPassword(passwordField.text, user.usesHomed ? oldPasswordField.text : '')
             passwordRoot.close()
         }
     }
@@ -44,6 +44,19 @@ Kirigami.PromptDialog {
     ColumnLayout {
         id: mainColumn
         spacing: Kirigami.Units.smallSpacing
+
+        Kirigami.PasswordField {
+            id: oldPasswordField
+
+            Layout.fillWidth: true
+
+            visible: user.usesHomed
+            placeholderText: i18n("Current Password")
+
+            onAccepted: {
+                passwordField.forceActiveFocus();
+            }
+        }
 
         Kirigami.PasswordField {
             id: passwordField

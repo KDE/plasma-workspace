@@ -81,6 +81,8 @@ class User : public QObject
 
     Q_PROPERTY(bool administrator READ administrator WRITE setAdministrator NOTIFY administratorChanged)
 
+    Q_PROPERTY(bool usesHomed READ usesHomed NOTIFY usesHomedChanged)
+
 public:
     explicit User(QObject *parent = nullptr);
 
@@ -98,6 +100,7 @@ public:
     bool administrator() const;
     QDBusObjectPath path() const;
     QRect faceCrop() const;
+    bool usesHomed() const;
 
     void setName(const QString &value);
     void setRealName(const QString &value);
@@ -113,7 +116,7 @@ public Q_SLOTS:
     Q_SCRIPTABLE void apply();
     Q_SCRIPTABLE bool usesDefaultWallet();
     Q_SCRIPTABLE void changeWalletPassword();
-    Q_SCRIPTABLE void setPassword(const QString &value);
+    Q_SCRIPTABLE void setPassword(const QString &value, const QString &oldPassword = {});
 
 Q_SIGNALS:
     void dataChanged();
@@ -126,9 +129,12 @@ Q_SIGNALS:
     void faceValidChanged();
     void administratorChanged();
     void applyError(const QString &errorMessage);
+    void usesHomedChanged();
     void passwordSuccessfullyChanged();
 
 private:
+    void setHomedPassword(const QString &oldPassword, const QString &newPassword);
+
     qulonglong mUid = 0;
     int mOriginalUid = 0;
     QString mName;
@@ -147,6 +153,8 @@ private:
     bool mOriginalFaceValid = false;
     bool mLoggedIn = false;
     bool mOriginalLoggedIn = false;
+    bool mUsesHomed = false;
+    bool mOriginalUsesHomed = false;
     QDBusObjectPath mPath;
     QPointer<OrgFreedesktopAccountsUserInterface> m_dbusIface;
     std::optional<QString> mError;

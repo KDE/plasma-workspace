@@ -1,0 +1,127 @@
+<!DOCTYPE node PUBLIC "-//freedesktop//DTD D-BUS Object Introspection 1.0//EN"
+"https://www.freedesktop.org/standards/dbus/1.0/introspect.dtd">
+<node>
+ <interface name="org.freedesktop.home1.Manager">
+  <property name="AutoLogin" type="a(sso)" access="read">
+    <annotation name="org.qtproject.QtDBus.QtTypeName" value="QVariantList"/>
+  </property>
+  <method name="GetHomeByName">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="u" name="uid" direction="out"/>
+   <arg type="s" name="home_state" direction="out"/>
+   <arg type="u" name="gid" direction="out"/>
+   <arg type="s" name="real_name" direction="out"/>
+   <arg type="s" name="home_directory" direction="out"/>
+   <arg type="s" name="shell" direction="out"/>
+   <arg type="o" name="bus_path" direction="out"/>
+  </method>
+  <method name="GetHomeByUID">
+   <arg type="u" name="uid" direction="in"/>
+   <arg type="s" name="user_name" direction="out"/>
+   <arg type="s" name="home_state" direction="out"/>
+   <arg type="u" name="gid" direction="out"/>
+   <arg type="s" name="real_name" direction="out"/>
+   <arg type="s" name="home_directory" direction="out"/>
+   <arg type="s" name="shell" direction="out"/>
+   <arg type="o" name="bus_path" direction="out"/>
+  </method>
+  <method name="GetUserRecordByName">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="s" name="user_record" direction="out"/>
+   <arg type="b" name="incomplete" direction="out"/>
+   <arg type="o" name="bus_path" direction="out"/>
+  </method>
+  <method name="GetUserRecordByUID">
+   <arg type="u" name="uid" direction="in"/>
+   <arg type="s" name="user_record" direction="out"/>
+   <arg type="b" name="incomplete" direction="out"/>
+   <arg type="o" name="bus_path" direction="out"/>
+  </method>
+  <method name="ListHomes">
+    <arg type="a(susussso)" name="home_areas" direction="out" />
+    <annotation name="org.qtproject.QtDBus.QtTypeName.Out0" value="QVariantList"/>
+  </method>
+  <method name="ActivateHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="s" name="secret" direction="in"/>
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="DeactivateHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="RegisterHome">
+   <arg type="s" name="user_record" direction="in"/>
+  </method>
+  <method name="UnregisterHome">
+   <arg type="s" name="user_name" direction="in"/>
+  </method>
+  <method name="CreateHome">
+   <arg type="s" name="user_record" direction="in"/>
+  </method>
+  <method name="RealizeHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="s" name="secret" direction="in"/>
+  </method>
+  <method name="RemoveHome">
+   <arg type="s" name="user_name" direction="in"/>
+  </method>
+  <method name="FixateHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="s" name="secret" direction="in"/>
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="AuthenticateHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="s" name="secret" direction="in"/>
+  </method>
+  <method name="UpdateHome">
+   <arg type="s" name="user_record" direction="in"/>
+  </method>
+  <method name="ResizeHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="t" name="size" direction="in"/>
+   <arg type="s" name="secret" direction="in"/>
+  </method>
+  <method name="ChangePasswordHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="s" name="new_secret" direction="in"/>
+   <arg type="s" name="old_secret" direction="in"/>
+  </method>
+  <method name="LockHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="UnlockHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="s" name="secret" direction="in"/>
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="AcquireHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="s" name="secret" direction="in"/>
+   <arg type="b" name="please_suspend" direction="in"/>
+   <arg type="h" name="send_fd" direction="out"/>
+  </method>
+  <method name="RefHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <arg type="b" name="please_suspend" direction="in"/>
+   <arg type="h" name="send_fd" direction="out"/>
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="ReleaseHome">
+   <arg type="s" name="user_name" direction="in"/>
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="LockAllHomes">
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="DeactivateAllHomes">
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+  <method name="Rebalance">
+   <annotation name="org.freedesktop.systemd1.Privileged" value="true"/>
+  </method>
+ </interface>
+ <node name="home"/>
+</node>
