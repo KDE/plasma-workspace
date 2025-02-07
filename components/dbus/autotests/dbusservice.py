@@ -92,6 +92,22 @@ class OrgKdeKSplash:
     </method>
     <method name="updatePropertySilently"/>
     <method name="ping" />
+    <signal name="pong">
+      <arg name="arg1" type="b"/>
+      <arg name="arg2" type="n"/>
+      <arg name="arg3" type="i"/>
+      <arg name="arg4" type="x"/>
+      <arg name="arg5" type="q"/>
+      <arg name="arg6" type="u"/>
+      <arg name="arg7" type="t"/>
+      <arg name="arg8" type="d"/>
+      <arg name="arg9" type="y"/>
+      <arg name="arg10" type="s"/>
+      <arg name="arg11" type="g"/>
+      <arg name="arg12" type="o"/>
+      <arg name="arg13" type="a{sv}"/>
+      <arg name="arg14" type="v"/>
+    </signal>
     <method name="testAllTypes">
       <arg name="arg1" type="b" direction="in"/>
       <arg name="arg2" type="n" direction="in"/>
@@ -152,6 +168,7 @@ class OrgKdeKSplash:
             self.read_write_prop += 1
             invocation.return_value(None)
         elif method_name == "ping":
+            Gio.DBusConnection.emit_signal(connection, None, object_path, interface_name, "pong", self.default_variant)
             invocation.return_value(None)
         elif method_name == "testAllTypes":
             if not parameters.is_of_type(GLib.VariantType("(bnixqutdysgoa{sv}v)")):
