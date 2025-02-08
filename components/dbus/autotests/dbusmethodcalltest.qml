@@ -5,7 +5,6 @@
 */
 
 pragma ComponentBehavior: Bound
-pragma ValueTypeBehavior: Addressable
 
 import QtQuick
 import QtTest
@@ -23,19 +22,19 @@ TestCase {
     function test_toString_data() {
         return [
             {
-                source: [107 as DBus.byte, 100 as DBus.byte, 101 as DBus.byte],
+                source: [new DBus.byte(107), new DBus.byte(100), new DBus.byte(101)],
                 result: "k,d,e"
             },
             {
-                source: "b" as DBus.signature,
+                source: new DBus.signature("b"),
                 result: "b"
             },
             {
-                source: "/org/kde/test" as DBus.objectPath,
+                source: new DBus.objectPath("/org/kde/test"),
                 result: "/org/kde/test"
             },
             {
-                source: "abc" as DBus.variant,
+                source: new DBus.variant("abc"),
                 result: "abc"
             },
         ];
@@ -48,24 +47,24 @@ TestCase {
     function test_asyncCall_data() {
         // Same as the returned value in dbusservice.py
         const args = [
-            true as DBus.bool,
-            32767 as DBus.int16,
-            2147483647 as DBus.int32,
-            21474836470 as DBus.int64,
-            65535 as DBus.uint16,
-            4294967295 as DBus.uint32,
-            18446744073709551615.0 as DBus.uint64,
-            1.23 as DBus.double,
-            255 as DBus.byte,
-            "abc" as DBus.string,
-            "(bnixqutdysgoa{sv}v)" as DBus.signature,
-            "/abc/def" as DBus.objectPath,
-            {
-                "int64": 32767 as DBus.int16,
-                "objectPath": "/abc/def" as DBus.objectPath,
-                "string": "string",
-            } as DBus.dict,
-            "variant" as DBus.variant
+            new DBus.bool(true),
+            new DBus.int16(32767),
+            new DBus.int32(2147483647),
+            new DBus.int64(21474836470.0),
+            new DBus.uint16(65535),
+            new DBus.uint32(4294967295),
+            new DBus.uint64(18446744073709551615.0),
+            new DBus.double(1.23),
+            new DBus.byte(255),
+            new DBus.string("abc"),
+            new DBus.signature("(bnixqutdysgoa{sv}v)"),
+            new DBus.objectPath("/abc/def"),
+            new DBus.dict({
+                "int64": new DBus.int16(32767),
+                "objectPath": new DBus.objectPath("/abc/def"),
+                "string": new DBus.string("string"),
+            }),
+            new DBus.variant("variant")
         ];
         const nativeArgs = [
             true,
@@ -81,28 +80,28 @@ TestCase {
             "(bnixqutdysgoa{sv}v)",
             "/abc/def",
             {
-                "int64": 32767 as DBus.int16,
-                "objectPath": "/abc/def" as DBus.objectPath,
-                "string": "string",
+                "int64": new DBus.int16(32767),
+                "objectPath": new DBus.objectPath("/abc/def"),
+                "string": new DBus.string("string"),
             },
-            "variant" as DBus.variant
+            new DBus.variant("variant")
         ];
         const replyArgs = [
             true,
-            32767 as DBus.int16,
-            2147483647 as DBus.int32,
-            21474836470 as DBus.int64,
-            65535 as DBus.uint16,
-            4294967295 as DBus.uint32,
-            18446744073709551615.0 as DBus.uint64,
-            1.23 as DBus.double,
-            255 as DBus.byte,
-            "abc" as DBus.string,
-            "(bnixqutdysgoa{sv}v)" as DBus.signature,
-            "/abc/def" as DBus.objectPath,
+            new DBus.int16(32767),
+            new DBus.int32(2147483647),
+            new DBus.int64(21474836470.0),
+            new DBus.uint16(65535),
+            new DBus.uint32(4294967295),
+            new DBus.uint64(18446744073709551615.0),
+            new DBus.double(1.23),
+            new DBus.byte(255),
+            "abc",
+            "(bnixqutdysgoa{sv}v)",
+            "/abc/def",
             {
-                "int64": 32767 as DBus.int16,
-                "objectPath": "/abc/def" as DBus.objectPath,
+                "int64": new DBus.int16(32767),
+                "objectPath": "/abc/def",
                 "string": "string",
             },
             "variant"
@@ -152,16 +151,14 @@ TestCase {
     }
 
     function test_asyncCall(data) {
-        const msg = {
+        root.pendingReply = DBus.SessionBus.asyncCall({
             "service": root.service,
             "path": root.path,
             "iface": root.iface,
             "member": data.member,
             "arguments": data.arguments,
             "signature": data.signature
-        } as DBus.dbusMessage;
-
-        root.pendingReply = DBus.SessionBus.asyncCall(msg);
+        });
         verify(root.pendingReply);
         tryVerify(() => root.pendingReply.isFinished);
 
@@ -173,17 +170,15 @@ TestCase {
     }
 
     function test_ping() {
-        const msg = {
-            "service": root.service,
-            "path": root.path,
-            "iface": root.iface,
-            "member": "ping",
-        } as DBus.dbusMessage;
-
         root.pendingReply = null;
 
         const promise = new Promise((resolve, reject) => {
-            DBus.SessionBus.asyncCall(msg, resolve, reject);
+            DBus.SessionBus.asyncCall({
+                "service": root.service,
+                "path": root.path,
+                "iface": root.iface,
+                "member": "ping",
+            }, resolve, reject);
         }).then((result) => {
             root.pendingReply = result;
         }).catch((error) => {
@@ -199,15 +194,14 @@ TestCase {
     }
 
     function test_wrong_signature() {
-        const msg = {
+        root.pendingReply = DBus.SessionBus.asyncCall({
             "service": root.service,
             "path": root.path,
             "iface": root.iface,
             "member": "setStage",
             "signature": "i",
-            "arguments": ["break" as DBus.string],
-        } as DBus.dbusMessage;
-        root.pendingReply = DBus.SessionBus.asyncCall(msg);
+            "arguments": [new DBus.string("break")],
+        });
         verify(root.pendingReply);
         tryVerify(() => root.pendingReply.isFinished);
 
@@ -216,15 +210,14 @@ TestCase {
     }
 
     function test_invalid_signature() {
-        const msg = {
+        root.pendingReply = DBus.SessionBus.asyncCall({
             "service": root.service,
             "path": root.path,
             "iface": root.iface,
             "member": "setStage",
             "signature": "-",
-            "arguments": ["break" as DBus.string],
-        } as DBus.dbusMessage;
-        root.pendingReply = DBus.SessionBus.asyncCall(msg);
+            "arguments": [new DBus.string("break")],
+        });
         verify(root.pendingReply);
         tryVerify(() => root.pendingReply.isFinished);
 

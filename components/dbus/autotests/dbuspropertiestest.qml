@@ -5,7 +5,6 @@
 */
 
 pragma ComponentBehavior: Bound
-pragma ValueTypeBehavior: Addressable
 
 import QtQuick
 import QtTest
@@ -52,23 +51,23 @@ TestCase {
         // Same as the returned value in dbusservice.py
         const args = [
             true,
-            32767 as DBus.int16,
-            2147483647 as DBus.int32,
-            21474836470 as DBus.int64,
-            65535 as DBus.uint16,
-            4294967295 as DBus.uint32,
-            18446744073709551615.0 as DBus.uint64,
-            1.23 as DBus.double,
-            255 as DBus.byte,
-            "abc" as DBus.string,
-            "(bnixqutdysgoa{sv}v)" as DBus.signature,
-            "/abc/def" as DBus.objectPath,
-            {
-                "int64": 32767 as DBus.int16,
-                "objectPath": "/abc/def" as DBus.objectPath,
-                "string": "string",
-            } as DBus.dict,
-            "variant" as DBus.variant
+            new DBus.int16(32767),
+            new DBus.int32(2147483647),
+            new DBus.int64(21474836470.0),
+            new DBus.uint16(65535),
+            new DBus.uint32(4294967295),
+            new DBus.uint64(18446744073709551615.0),
+            new DBus.double(1.23),
+            new DBus.byte(255),
+            "abc",
+            "(bnixqutdysgoa{sv}v)",
+            "/abc/def",
+            new DBus.dict({
+                "int64": new DBus.int16(32767),
+                "objectPath": new DBus.objectPath("/abc/def"),
+                "string": new DBus.string("string"),
+            }),
+            new DBus.variant("variant")
         ];
         for (let i = 0; i < args.length; ++i) {
             if (args[i] instanceof DBus.variant) {
