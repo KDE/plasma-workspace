@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:43+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2024-10-13 15:59+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -324,7 +324,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Leistungsmodus"
 
-#: panelview.cpp:438
+#: panelview.cpp:458
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -336,13 +336,13 @@ msgstr ""
 "Größenänderung der Fenster bekannt. Bitte ziehen Sie andere Einstellungen in "
 "Betracht."
 
-#: panelview.cpp:1115
+#: panelview.cpp:1136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Kontrollleisteneinstellungen ausblenden"
 
-#: panelview.cpp:1117
+#: panelview.cpp:1138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:43+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2025-01-27 16:03+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -325,7 +325,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Našumo veiksena"
 
-#: panelview.cpp:438
+#: panelview.cpp:458
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -336,13 +336,13 @@ msgstr ""
 "stilius ir prisitaikanti nepermatomumo veiksena sąlygoja blogą langų tempimo "
 "ir dydžio keitimo našumą. Apsvarstykite galimybę naudoti kitokias nuostatas."
 
-#: panelview.cpp:1115
+#: panelview.cpp:1136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Slėpti skydelio konfigūraciją"
 
-#: panelview.cpp:1117
+#: panelview.cpp:1138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

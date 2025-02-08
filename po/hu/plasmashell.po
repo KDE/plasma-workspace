@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:43+0000\n"
+"POT-Creation-Date: 2025-02-08 00:42+0000\n"
 "PO-Revision-Date: 2025-01-24 20:51+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -325,7 +325,7 @@ msgctxt "Power profile was changed to performance mode, keep short"
 msgid "Performance Mode"
 msgstr "Teljesítmény mód"
 
-#: panelview.cpp:438
+#: panelview.cpp:458
 #, kde-format
 msgid ""
 "With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
@@ -336,13 +336,13 @@ msgstr ""
 "közismerten gyenge teljesítményt nyújtanak az ablakok húzása és átméretezése "
 "során. Fontolja meg más beállítások használatát."
 
-#: panelview.cpp:1115
+#: panelview.cpp:1136
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Panelbeállító felület elrejtése"
 
-#: panelview.cpp:1117
+#: panelview.cpp:1138
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
