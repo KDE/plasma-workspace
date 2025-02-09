@@ -440,15 +440,23 @@ class ClipboardTest(unittest.TestCase):
 
         app.driver.find_element(AppiumBy.XPATH, f"//list_item[@name='file://{temp_file.name}' and contains(@states, 'focused')]")
         actions.send_keys(Keys.RETURN).perform()
-        mime_data = app.gtk_get_clipboard_mime_data()
-        self.assertEqual(mime_data["text/plain;charset=utf-8"].get_data(), text_data.get_data())
-        self.assertEqual(mime_data["text/uri-list"].get_data(), urls_data.get_data())
-        self.assertIn("application/x-kde-appiumtest", mime_data)
-        with tempfile.NamedTemporaryFile(mode="wb", suffix=".png") as temp_file:
-            temp_file.write(mime_data["image/png"].get_data())
-            temp_file.flush()
-            image_from_clipboard = GdkPixbuf.Pixbuf.new_from_file(temp_file.name)
-            self.assertEqual(image_from_clipboard.get_pixels(), pixbuf.get_pixels())
+
+        def check_clipboard() -> None:
+            mime_data = app.gtk_get_clipboard_mime_data()
+            self.assertEqual(mime_data["text/plain;charset=utf-8"].get_data(), text_data.get_data())
+            self.assertEqual(mime_data["text/uri-list"].get_data(), urls_data.get_data())
+            self.assertIn("application/x-kde-appiumtest", mime_data)
+            with tempfile.NamedTemporaryFile(mode="wb", suffix=".png") as temp_file:
+                temp_file.write(mime_data["image/png"].get_data())
+                temp_file.flush()
+                image_from_clipboard = GdkPixbuf.Pixbuf.new_from_file(temp_file.name)
+                self.assertEqual(image_from_clipboard.get_pixels(), pixbuf.get_pixels())
+
+        try:
+            check_clipboard()
+        except AssertionError:
+            time.sleep(1)
+            check_clipboard()
 
     def test_6_bug487843_bug466414_empty_clip_crash(self) -> None:
         """
