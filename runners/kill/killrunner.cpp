@@ -27,7 +27,7 @@ KillRunner::KillRunner(QObject *parent, const KPluginMetaData &metaData)
           KRunner::Action(QString::number(15), QStringLiteral("application-exit"), i18n("Send SIGTERM")),
           KRunner::Action(QString::number(9), QStringLiteral("process-stop"), i18n("Send SIGKILL")),
       })
-    , m_processes(new KSysGuard::Processes(QString(), this))
+    , m_processes(new KSysGuard::Processes(this))
 {
     connect(this, &KRunner::AbstractRunner::prepare, m_processes, [this]() {
         m_needsRefresh = true;
