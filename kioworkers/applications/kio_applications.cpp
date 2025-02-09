@@ -38,6 +38,8 @@ public:
     KIO::WorkerResult listDir(const QUrl &url) override;
 
 private:
+    void listRootEntry();
+
     RunMode m_runMode;
 };
 
@@ -138,6 +140,18 @@ KIO::WorkerResult ApplicationsProtocol::stat(const QUrl &url)
     return KIO::WorkerResult::pass();
 }
 
+// Create a UDSEntry for "."
+void ApplicationsProtocol::listRootEntry()
+{
+    KIO::UDSEntry entry;
+    entry.reserve(4);
+    entry.fastInsert(KIO::UDSEntry::UDS_NAME, QStringLiteral("."));
+    entry.fastInsert(KIO::UDSEntry::UDS_FILE_TYPE, S_IFDIR);
+    entry.fastInsert(KIO::UDSEntry::UDS_SIZE, 0);
+    entry.fastInsert(KIO::UDSEntry::UDS_ACCESS, S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IXOTH);
+    listEntry(entry);
+}
+
 KIO::WorkerResult ApplicationsProtocol::listDir(const QUrl &url)
 {
     QString groupPath = url.path();
@@ -150,6 +164,8 @@ KIO::WorkerResult ApplicationsProtocol::listDir(const QUrl &url)
     if (!grp || !grp->isValid()) {
         return KIO::WorkerResult::fail(KIO::ERR_DOES_NOT_EXIST, groupPath);
     }
+
+    listRootEntry();
 
     unsigned int count = 0;
     KIO::UDSEntry entry;
