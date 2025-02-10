@@ -905,7 +905,7 @@ void PanelView::restore()
     }
 
     setFloating((bool)config().parent().readEntry<int>("floating", defaultFloating()));
-    setFloating((bool)config().parent().readEntry<int>("floatingApplets", false));
+    setFloatingApplets((bool)config().parent().readEntry<int>("floatingApplets", false));
     setThickness(configDefaults().readEntry("thickness", m_thickness));
 
     const QSize screenSize = m_screenToFollow->size();
