@@ -75,6 +75,8 @@ PlasmoidItem {
         Plasmoid.setInternalAction("configure", settingsAction)
     }
 
+    property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
+
     states: [
         State {
             name: "unavailable"
@@ -82,7 +84,7 @@ PlasmoidItem {
             PropertyChanges {
                 target: Plasmoid
                 icon: "input-keyboard-virtual-off"
-                status: PlasmaCore.Types.HiddenStatus
+                status: root.inEmbeddedContainment ? PlasmaCore.Types.HiddenStatus : PlasmaCore.Types.PassiveStatus
             }
             PropertyChanges {
                 target: root

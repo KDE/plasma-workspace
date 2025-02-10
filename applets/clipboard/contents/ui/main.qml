@@ -40,8 +40,12 @@ PlasmoidItem {
         clearSearchField()
     }
 
+    property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
+
     onIsClipboardEmptyChanged: {
         if (isClipboardEmpty) {
+            if (!main.inEmbeddedContainment)
+                return;
             // We need to hide the applet before changing its status to passive
             // because only the active applet can hide itself
             if (main.hideOnWindowDeactivate)

@@ -19,6 +19,8 @@ PlasmoidItem {
     switchWidth: Kirigami.Units.gridUnit * 12
     switchHeight: Kirigami.Units.gridUnit * 12
 
+    property bool inEmbeddedContainment: Plasmoid.containment.containmentType === PlasmaCore.Containment.CustomEmbedded
+
     toolTipSubText: if (!monitor.detectionAvailable) {
         return i18nc("@info:tooltip", "Camera indicator is unavailable");
     } else if (monitor.runningCount) {
@@ -36,7 +38,7 @@ PlasmoidItem {
     } else {
         return "camera-off-symbolic";
     }
-    Plasmoid.status: (monitor.idleCount > 0 || monitor.runningCount > 0) ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.HiddenStatus
+    Plasmoid.status: (monitor.idleCount > 0 || monitor.runningCount > 0) ? PlasmaCore.Types.ActiveStatus : inEmbeddedContainment ?  PlasmaCore.Types.HiddenStatus : PlasmaCore.Types.PassiveStatus
 
     Monitor.MediaMonitor {
         id: monitor
