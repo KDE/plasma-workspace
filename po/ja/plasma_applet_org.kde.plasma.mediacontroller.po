@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-21 00:43+0000\n"
+"POT-Creation-Date: 2025-02-10 00:42+0000\n"
 "PO-Revision-Date: 2023-04-07 23:40-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -23,64 +23,89 @@ msgid "No title"
 msgstr "タイトルなし"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
-#: package/contents/ui/main.qml:54
+#: package/contents/ui/main.qml:57
 #, kde-format
 msgid "No media playing"
 msgstr "再生中のメディアはありません"
 
-#: package/contents/ui/ExpandedRepresentation.qml:383
-#: package/contents/ui/ExpandedRepresentation.qml:527
+#: package/contents/ui/ExpandedRepresentation.qml:385
+#: package/contents/ui/ExpandedRepresentation.qml:541
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:556
+#: package/contents/ui/ExpandedRepresentation.qml:562
+#, kde-format
+msgid "Playback rate %1"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:565
+#, fuzzy, kde-format
+#| msgctxt "Remaining time for song e.g -5:42"
+#| msgid "-%1"
+msgctxt "Playback rate"
+msgid "%1x"
+msgstr "-%1"
+
+#: package/contents/ui/ExpandedRepresentation.qml:569
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Playback rate"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:615
+#, kde-format
+msgctxt "@action:inmenu Playback speed (Normal)"
+msgid "%1 (Normal)"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:654
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "シャッフル"
 
-#: package/contents/ui/ExpandedRepresentation.qml:580
-#: package/contents/ui/main.qml:111
+#: package/contents/ui/ExpandedRepresentation.qml:678
+#: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "前のトラック"
 
-#: package/contents/ui/ExpandedRepresentation.qml:602
-#: package/contents/ui/main.qml:119
+#: package/contents/ui/ExpandedRepresentation.qml:700
+#: package/contents/ui/main.qml:122
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "一時停止"
 
-#: package/contents/ui/ExpandedRepresentation.qml:602
-#: package/contents/ui/main.qml:127
+#: package/contents/ui/ExpandedRepresentation.qml:700
+#: package/contents/ui/main.qml:130
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "再生"
 
-#: package/contents/ui/ExpandedRepresentation.qml:620
-#: package/contents/ui/main.qml:135
+#: package/contents/ui/ExpandedRepresentation.qml:718
+#: package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "次のトラック"
 
-#: package/contents/ui/ExpandedRepresentation.qml:643
+#: package/contents/ui/ExpandedRepresentation.qml:741
 #, kde-format
 msgid "Repeat Track"
 msgstr "トラックをリピート"
 
-#: package/contents/ui/ExpandedRepresentation.qml:643
+#: package/contents/ui/ExpandedRepresentation.qml:741
 #, kde-format
 msgid "Repeat"
 msgstr "リピート"
 
-#: package/contents/ui/main.qml:57
+#: package/contents/ui/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -92,7 +117,7 @@ msgstr ""
 "中クリックして一時停止\n"
 "スクロールして音量調整"
 
-#: package/contents/ui/main.qml:58
+#: package/contents/ui/main.qml:61
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -104,7 +129,7 @@ msgstr ""
 "中クリックして一時停止\n"
 "スクロールして音量調整"
 
-#: package/contents/ui/main.qml:60
+#: package/contents/ui/main.qml:63
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
 msgid ""
@@ -116,7 +141,7 @@ msgstr ""
 "中クリックして再生\n"
 "スクロールして音量調整"
 
-#: package/contents/ui/main.qml:61
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgctxt "@info:tooltip %1 is an app name"
 msgid ""
@@ -128,19 +153,19 @@ msgstr ""
 "中クリックして再生\n"
 "スクロールして音量調整"
 
-#: package/contents/ui/main.qml:104
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgctxt "Open player window or bring it to the front if already open"
 msgid "Open"
 msgstr "開く"
 
-#: package/contents/ui/main.qml:143
+#: package/contents/ui/main.qml:146
 #, kde-format
 msgctxt "Stop playback"
 msgid "Stop"
 msgstr "停止"
 
-#: package/contents/ui/main.qml:156
+#: package/contents/ui/main.qml:159
 #, kde-format
 msgctxt "Quit player"
 msgid "Quit"
