@@ -986,7 +986,7 @@ void PanelView::restoreAutoHide()
 
     if (!edgeActivated()) {
         autoHide = false;
-    } else if (m_containsMouse) {
+    } else if (m_containsMouse || m_containsDrag) {
         autoHide = false;
     } else if (m_corona->isEditMode()) {
         autoHide = false;
@@ -1274,6 +1274,10 @@ bool PanelView::event(QEvent *e)
     }
 
     case QEvent::DragEnter: {
+        m_containsDrag = true;
+        if (edgeActivated()) {
+            m_unhideTimer.stop();
+        }
         QDragEnterEvent *de = static_cast<QDragEnterEvent *>(e);
         if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
             QDragEnterEvent de2(positionAdjustedForContainment(de->position()).toPoint(),
@@ -1290,6 +1294,7 @@ bool PanelView::event(QEvent *e)
         break;
     }
     case QEvent::DragLeave:
+        m_containsDrag = false;
         m_containsMouse = false;
         if (edgeActivated()) {
             m_unhideTimer.start();
@@ -1308,6 +1313,7 @@ bool PanelView::event(QEvent *e)
         break;
     }
     case QEvent::Drop: {
+        m_containsDrag = false;
         QDropEvent *de = static_cast<QDropEvent *>(e);
         if (!containmentContainsPosition(de->position()) && !m_fakeEventPending) {
             QDropEvent de2(positionAdjustedForContainment(de->position()).toPoint(), de->possibleActions(), de->mimeData(), de->buttons(), de->modifiers());
