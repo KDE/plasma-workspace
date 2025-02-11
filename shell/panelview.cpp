@@ -1230,6 +1230,12 @@ bool PanelView::event(QEvent *e)
         }
         break;
 
+    case QEvent::FocusOut:
+        if (edgeActivated()) {
+            m_unhideTimer.start();
+        }
+        break;
+
     case QEvent::Leave:
         m_containsMouse = false;
         if (edgeActivated()) {
