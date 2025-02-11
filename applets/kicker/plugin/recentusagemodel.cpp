@@ -454,7 +454,7 @@ bool RecentUsageModel::trigger(int row, const QString &actionId, const QVariant 
         } else {
             bool close = false;
 
-            QUrl url(sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString());
+            const QUrl url = QUrl::fromLocalFile(sourceModel()->data(sourceModel()->index(row, 0), ResultModel::ResourceRole).toString());
 
             KFileItem item(url);
 
