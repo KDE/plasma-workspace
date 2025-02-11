@@ -32,7 +32,7 @@
 // #include <KFileMetaInfo>
 #include "config-fontinst.h"
 #include <KPluginFactory>
-#include <KStandardAction>
+#include <KStandardActions>
 #include <KWaylandExtras>
 #include <KWindowSystem>
 #include <KZip>

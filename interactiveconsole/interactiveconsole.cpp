@@ -33,7 +33,7 @@
 #include <KPluginFactory>
 #include <KSharedConfig>
 #include <KShell>
-#include <KStandardAction>
+#include <KStandardActions>
 #include <KTextEdit>
 #include <KTextEditor/Document>
 #include <KTextEditor/View>
@@ -57,9 +57,9 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
     , m_editorPart(nullptr)
     , m_editor(nullptr)
     , m_output(nullptr)
-    , m_loadAction(KStandardAction::open(this, SLOT(openScriptFile()), this))
-    , m_saveAction(KStandardAction::saveAs(this, SLOT(saveScript()), this))
-    , m_clearAction(KStandardAction::clear(this, SLOT(clearEditor()), this))
+    , m_loadAction(KStandardActions::open(this, &InteractiveConsole::openScriptFile, this))
+    , m_saveAction(KStandardActions::saveAs(this, qOverload<>(&InteractiveConsole::saveScript), this))
+    , m_clearAction(KStandardActions::clear(this, &InteractiveConsole::clearEditor, this))
     , m_executeAction(new QAction(QIcon::fromTheme(QStringLiteral("system-run")), i18n("&Execute"), this))
     , m_plasmaAction(new QAction(QIcon::fromTheme(QStringLiteral("plasma")), i18nc("Toolbar Button to switch to Plasma Scripting Mode", "Plasma"), this))
     , m_kwinAction(new QAction(QIcon::fromTheme(QStringLiteral("kwin")), i18nc("Toolbar Button to switch to KWin Scripting Mode", "KWin"), this))
@@ -68,7 +68,7 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
     , m_closeWhenCompleted(false)
     , m_mode(mode)
 {
-    addAction(KStandardAction::close(this, SLOT(close()), this));
+    addAction(KStandardActions::close(this, &InteractiveConsole::close, this));
     addAction(m_saveAction);
     addAction(m_clearAction);
 
@@ -164,7 +164,7 @@ InteractiveConsole::InteractiveConsole(ConsoleMode mode, QWidget *parent)
 
     KToolBar *outputToolBar = new KToolBar(widget, true, false);
     outputToolBar->setToolButtonStyle(Qt::ToolButtonTextBesideIcon);
-    QAction *clearOutputAction = KStandardAction::clear(this, SLOT(clearOutput()), this);
+    QAction *clearOutputAction = KStandardActions::clear(this, &InteractiveConsole::clearOutput, this);
     outputToolBar->addAction(clearOutputAction);
     outputLayout->addWidget(outputToolBar);
 

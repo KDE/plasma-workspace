@@ -24,7 +24,7 @@
 #include <KJobWidgets>
 #include <KMessageBox>
 #include <KPluginFactory>
-#include <KStandardAction>
+#include <KStandardActions>
 #include <KToolBar>
 #include <KZip>
 #include <QAction>
@@ -320,8 +320,8 @@ CKCmFontInst::CKCmFontInst(QObject *parent, const KPluginMetaData &data)
 
     // Preview widget pop-up menu
     m_previewMenu = new QMenu(m_preview);
-    QAction *zoomIn = KStandardAction::create(KStandardAction::ZoomIn, m_preview, SLOT(zoomIn()), this),
-            *zoomOut = KStandardAction::create(KStandardAction::ZoomOut, m_preview, SLOT(zoomOut()), this);
+    QAction *zoomIn = KStandardActions::create(KStandardActions::ZoomIn, m_preview, &CFontPreview::zoomIn, this),
+            *zoomOut = KStandardActions::create(KStandardActions::ZoomOut, m_preview, &CFontPreview::zoomOut, this);
 
     m_previewMenu->addAction(zoomIn);
     m_previewMenu->addAction(zoomOut);
