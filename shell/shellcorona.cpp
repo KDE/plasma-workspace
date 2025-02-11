@@ -48,6 +48,7 @@
 #include <KWayland/Client/plasmashell.h>
 #include <KWayland/Client/plasmawindowmanagement.h>
 #include <KWayland/Client/registry.h>
+#include <qassert.h>
 
 #include "alternativeshelper.h"
 #include "debug.h"
@@ -859,9 +860,15 @@ void ShellCorona::load()
 #ifndef NDEBUG
 void ShellCorona::screenInvariants() const
 {
+    [[maybe_unused]] auto debugMessage = [this] {
+        QString message;
+        QDebug(&message) << "desktopViewForScreen:\n" << m_desktopViewForScreen << "\npanelViews:\n" << m_panelViews << "\nScreenPool:\n" << m_screenPool;
+        return message;
+    };
+
     if (m_screenPool->noRealOutputsConnected()) {
-        Q_ASSERT(m_desktopViewForScreen.isEmpty());
-        Q_ASSERT(m_panelViews.isEmpty());
+        Q_ASSERT_X(m_desktopViewForScreen.isEmpty(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
+        Q_ASSERT_X(m_panelViews.isEmpty(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
         return;
     }
 
@@ -876,26 +883,26 @@ void ShellCorona::screenInvariants() const
     for (QScreen *knownScreen : managedScreens) {
         const int id = m_screenPool->idForScreen(knownScreen);
         const DesktopView *view = desktopForScreen(knownScreen);
-        Q_ASSERT(view->isVisible());
+        Q_ASSERT_X(view->isVisible(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
         QScreen *screen = view->screenToFollow();
-        Q_ASSERT(knownScreen == screen);
-        Q_ASSERT(!screens.contains(screen));
+        Q_ASSERT_X(knownScreen == screen, Q_FUNC_INFO, qUtf8Printable(debugMessage()));
+        Q_ASSERT_X(!screens.contains(screen), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
         //         commented out because a different part of the code-base is responsible for this
         //         and sometimes is not yet called here.
         //         Q_ASSERT(!view->fillScreen() || view->geometry() == screen->geometry());
 
-        Q_ASSERT(view->containment()->screen() == id || view->containment()->screen() == -1);
-        Q_ASSERT(view->containment()->lastScreen() == id || view->containment()->lastScreen() == -1);
-        Q_ASSERT(view->isVisible());
+        Q_ASSERT_X(view->containment()->screen() == id || view->containment()->screen() == -1, Q_FUNC_INFO, qUtf8Printable(debugMessage()));
+        Q_ASSERT_X(view->containment()->lastScreen() == id || view->containment()->lastScreen() == -1, Q_FUNC_INFO, qUtf8Printable(debugMessage()));
+        Q_ASSERT_X(view->isVisible(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
 
         for (const PanelView *panel : m_panelViews) {
             if (panel->screenToFollow() == screen) {
-                Q_ASSERT(panel->containment());
-                Q_ASSERT(panel->containment()->screen() == id || panel->containment()->screen() == -1);
+                Q_ASSERT_X(panel->containment(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
+                Q_ASSERT_X(panel->containment()->screen() == id || panel->containment()->screen() == -1, Q_FUNC_INFO, qUtf8Printable(debugMessage()));
                 // If any kscreen related activities occurred
                 // during startup, the panel wouldn't be visible yet, and this would assert
                 if (panel->containment()->isUiReady()) {
-                    Q_ASSERT(panel->isVisible());
+                    Q_ASSERT_X(panel->isVisible(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
                 }
             }
         }
