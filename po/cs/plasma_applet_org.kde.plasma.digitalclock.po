@@ -304,13 +304,12 @@ msgstr "Dostupné moduly:"
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Zrušit"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Přidat další časová pásma"
+msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -322,10 +321,9 @@ msgstr ""
 "Zobrazí se pouze pokud změníte časové pásmo systému na jiné."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Přidat časová pásma…"
+msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -385,10 +383,9 @@ msgstr ""
 "přepněte raději na místní časové pásmo."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Časová pásma"
+msgstr ""
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -419,12 +416,11 @@ msgid "Today is %1"
 msgstr "Dnes je %1"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "Časová pásma"
+msgstr ""
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
@@ -466,16 +462,3 @@ msgstr "Místní"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Systémové místní časové pásmo"
-
-#~ msgid ""
-#~ "At least one time zone needs to be enabled. Your local time zone was "
-#~ "enabled automatically."
-#~ msgstr ""
-#~ "Je třeba povolit alespoň jedno časové pásmo. Vaše místní časové pásmo "
-#~ "bylo automaticky povoleno."
-
-#~ msgid "%1, %2 (%3)"
-#~ msgstr "%1, %2 (%3)"
-
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"

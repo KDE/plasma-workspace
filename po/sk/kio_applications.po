@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2009-07-15 20:03+0200\n"
 "Last-Translator: Michal Sulek <misurel@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -16,17 +16,17 @@ msgstr ""
 "X-Generator: Lokalize 0.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
-#: kio_applications.cpp:124
+#: kio_applications.cpp:126
 #, kde-format
 msgid "Applications"
 msgstr "Aplikácie"
 
-#: kio_applications.cpp:124
+#: kio_applications.cpp:126
 #, kde-format
 msgid "Programs"
 msgstr "Programy"
 
-#: kio_applications.cpp:133
+#: kio_applications.cpp:135
 #, kde-format
 msgid "Unknown application folder"
 msgstr "Neznámy priečinok aplikácie"

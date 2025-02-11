@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_settings\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2008-11-07 11:04+0900\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: kio_applications.cpp:124
+#: kio_applications.cpp:126
 #, kde-format
 msgid "Applications"
 msgstr "앱"
 
-#: kio_applications.cpp:124
+#: kio_applications.cpp:126
 #, kde-format
 msgid "Programs"
 msgstr "프로그램"
 
-#: kio_applications.cpp:133
+#: kio_applications.cpp:135
 #, kde-format
 msgid "Unknown application folder"
 msgstr "알 수 없는 앱 폴더"

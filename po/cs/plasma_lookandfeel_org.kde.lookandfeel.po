@@ -84,38 +84,31 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "Při restartu počítač vstoupí do obrazovky pro nastavení firmwaru."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
-#| msgid "When restarted, the computer will enter the firmware setup screen."
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "Při restartu počítač vstoupí do obrazovky pro nastavení firmwaru."
+msgstr ""
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "Uspat"
+msgstr ""
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Uspat nyní"
+msgstr ""
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Hibernovat"
+msgstr ""
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "Hibernovat nyní"
+msgstr ""
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -129,10 +122,9 @@ msgid "&Restart"
 msgstr "&Restartovat"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
-msgstr "Restartovat nyní"
+msgstr ""
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -146,22 +138,19 @@ msgid "&Shut Down"
 msgstr "Vy&pnout"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "Vypnout nyní"
+msgstr ""
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
-msgstr "Odhlásit se"
+msgstr ""
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
-msgstr "Odhlásit se nyní"
+msgstr ""
 
 #: contents/logout/Logout.qml:318
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2012-12-29 15:29+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -19,17 +19,17 @@ msgstr ""
 "X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: kio_applications.cpp:124
+#: kio_applications.cpp:126
 #, kde-format
 msgid "Applications"
 msgstr "अनुप्रयोग"
 
-#: kio_applications.cpp:124
+#: kio_applications.cpp:126
 #, kde-format
 msgid "Programs"
 msgstr "कार्यक्रम"
 
-#: kio_applications.cpp:133
+#: kio_applications.cpp:135
 #, kde-format
 msgid "Unknown application folder"
 msgstr "अपरिचीत संयोजना संचयीका"

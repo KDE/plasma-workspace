@@ -153,10 +153,9 @@ msgid "Enter Edit Mode"
 msgstr "Spustit režim úprav"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Spustit režim úprav"
+msgstr "Ukončit režim úprav"
 
 #: main.cpp:86
 #, kde-format
@@ -451,6 +450,3 @@ msgstr "Počet panelů"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Počítá panely"
-
-#~ msgid "Panel and Desktop Management"
-#~ msgstr "Správa panelů a pracovních ploch"

@@ -127,31 +127,3 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
-
-#~ msgid "$HOME not set!"
-#~ msgstr "$HOME nenastaven."
-
-#~ msgid "$HOME directory (%1) does not exist."
-#~ msgstr "Adresář $HOME (%1) neexistuje."
-
-#~ msgid "No read access to $HOME directory (%1)."
-#~ msgstr "K adresáři $HOME (%1) nemáte práva pro čtení."
-
-#~ msgid "$HOME directory (%1) is out of disk space."
-#~ msgstr "Adresáři $HOME (%1) došlo místo na disku."
-
-#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-#~ msgstr "Zápis do dočasného $HOME (%2) selhal s chybou '%1'"
-
-#~ msgid "Temp directory (%1) is out of disk space."
-#~ msgstr "Dočasnému adresáři (%1) došlo místo na disku."
-
-#~ msgid ""
-#~ "Writing to the temp directory (%2) failed with\n"
-#~ "    the error '%1'"
-#~ msgstr ""
-#~ "Zápis do dočasného adresáře (%2) selhal s\n"
-#~ "    chybou '%1'"
-
-#~ msgid "Plasma Workspace installation problem!"
-#~ msgstr "Problém s instalací Plasma Workspace."

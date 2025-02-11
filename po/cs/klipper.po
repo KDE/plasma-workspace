@@ -622,11 +622,10 @@ msgid "Clear Clipboard History"
 msgstr "Vyčistit historii schránky"
 
 #: historymodel.cpp:262
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2 %3bpp"
+msgstr ""
 
 #: klipper.cpp:90
 #, kde-format

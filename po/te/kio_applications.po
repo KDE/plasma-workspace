@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kio_applications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-11 00:43+0000\n"
 "PO-Revision-Date: 2009-01-16 22:16+0530\n"
 "Last-Translator: Krishna Babu K <kkrothap@redhat.com>\n"
 "Language-Team: Telugu <en@li.org>\n"
@@ -17,17 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 "X-Generator: KBabel 1.11.4\n"
 
-#: kio_applications.cpp:124
+#: kio_applications.cpp:126
 #, kde-format
 msgid "Applications"
 msgstr "అప్లికేషన్లు"
 
-#: kio_applications.cpp:124
+#: kio_applications.cpp:126
 #, kde-format
 msgid "Programs"
 msgstr "ప్రోగ్రాములు"
 
-#: kio_applications.cpp:133
+#: kio_applications.cpp:135
 #, fuzzy, kde-format
 #| msgid "Unknown settings folder"
 msgid "Unknown application folder"
