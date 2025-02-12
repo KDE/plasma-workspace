@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-08 00:42+0000\n"
+"POT-Creation-Date: 2025-02-12 00:43+0000\n"
 "PO-Revision-Date: 2024-10-06 21:40+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -365,63 +365,63 @@ msgstr "%3 の %1 %2"
 msgid "Disconnected Screen %1"
 msgstr "切断されたスクリーン %1"
 
-#: shellcorona.cpp:213 shellcorona.cpp:215
+#: shellcorona.cpp:214 shellcorona.cpp:216
 #, kde-format
 msgid "Show Desktop"
 msgstr "デスクトップを表示"
 
-#: shellcorona.cpp:215
+#: shellcorona.cpp:216
 #, kde-format
 msgid "Hide Desktop"
 msgstr "デスクトップを隠す"
 
-#: shellcorona.cpp:230
+#: shellcorona.cpp:231
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "アプリケーションランチャーをアクティブ化"
 
-#: shellcorona.cpp:238
+#: shellcorona.cpp:239
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "アクティビティスイッチャーを表示"
 
-#: shellcorona.cpp:248
+#: shellcorona.cpp:249
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "現在のアクティビティを停止"
 
-#: shellcorona.cpp:256
+#: shellcorona.cpp:257
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "前のアクティビティに切り替え"
 
-#: shellcorona.cpp:264
+#: shellcorona.cpp:265
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "次のアクティビティに切り替え"
 
-#: shellcorona.cpp:279
+#: shellcorona.cpp:280
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "タスクマネージャのエントリ %1 をアクティベート"
 
-#: shellcorona.cpp:311
+#: shellcorona.cpp:312
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr ""
 
-#: shellcorona.cpp:333
+#: shellcorona.cpp:334
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "キーボードフォーカスをパネル間で移動"
 
-#: shellcorona.cpp:2171
+#: shellcorona.cpp:2178
 #, kde-format
 msgid "Add Panel"
 msgstr "パネルを追加"
 
-#: shellcorona.cpp:2232
+#: shellcorona.cpp:2239
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
