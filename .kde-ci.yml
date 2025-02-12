@@ -53,9 +53,9 @@ Dependencies:
     'plasma/kwayland': '@same'
     'plasma/libplasma': '@same'
     'plasma/layer-shell-qt': '@same'
+    'plasma/kglobalacceld': '@same'
     'plasma/kscreenlocker': '@same'
     'plasma/libkscreen': '@same'
-    'plasma/kwin': '@same'
     'plasma/libksysguard': '@same'
     'plasma/plasma-nano': '@same'
     'plasma/plasma5support': '@same'
@@ -80,12 +80,11 @@ RuntimeDependencies:
    'require':
     'network/kio-extras': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
-    'sdk/selenium-webdriver-at-spi': '@latest-kf6'
+    # 'sdk/selenium-webdriver-at-spi': '@latest-kf6'
  - 'on': ['Linux', 'FreeBSD']
    'require':
     'frameworks/qqc2-desktop-style': '@latest-kf6'
     'plasma/milou': '@same'
-    'plasma/kglobalacceld': '@same'
 
 Options:
  ctest-arguments: '--repeat until-pass:5'

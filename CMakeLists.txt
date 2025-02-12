@@ -121,7 +121,7 @@ set_package_properties(KF6Baloo PROPERTIES DESCRIPTION "File Searching"
 pkg_check_modules(QALCULATE libqalculate>2.0 REQUIRED IMPORTED_TARGET)
 pkg_check_modules(DBus dbus-1 REQUIRED IMPORTED_TARGET)
 
-find_package(KWinDBusInterface CONFIG REQUIRED)
+find_package(KWinDBusInterface)
 find_package(ScreenSaverDBusInterface CONFIG REQUIRED)
 
 find_package(KF6Holidays)
