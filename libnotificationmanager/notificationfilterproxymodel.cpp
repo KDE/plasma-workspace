@@ -130,6 +130,9 @@ void NotificationFilterProxyModel::setWhitelistedNotifyRcNames(const QStringList
 
 bool NotificationFilterProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
+    if (!sourceModel()->hasIndex(source_row, 0, source_parent)) {
+        return false;
+    }
     const QModelIndex sourceIdx = sourceModel()->index(source_row, 0, source_parent);
 
     const bool expired = sourceIdx.data(Notifications::ExpiredRole).toBool();
