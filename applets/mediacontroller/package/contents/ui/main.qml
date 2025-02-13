@@ -17,6 +17,8 @@ import org.kde.kirigami 2 as Kirigami
 PlasmoidItem {
     id: root
 
+    width: Kirigami.Units.gridUnit * 4
+    height: Kirigami.Units.gridUnit * 4
     switchWidth: Kirigami.Units.gridUnit * 14
     switchHeight: Kirigami.Units.gridUnit * 10
 
