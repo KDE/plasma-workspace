@@ -592,7 +592,7 @@ QString DWDIon::camelCaseString(const QString &text) const
                 result.append(c.toLower());
             }
         } else {
-            if (c == QChar::Space || c == '-'_L1) {
+            if (c == QChar::Space || c == '-'_L1 || c == '/'_L1) {
                 nextBig = true;
             }
             result.append(c);
