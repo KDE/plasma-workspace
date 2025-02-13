@@ -82,8 +82,8 @@ UserModel::UserModel(QObject *parent)
         m_userList.append(user);
     }
 
-    std::ranges::sort(m_userList, [](User *lhs, User *) {
-        return lhs->loggedIn();
+    std::ranges::stable_partition(m_userList, [](User *u) {
+        return u->loggedIn();
     });
 
     connect(this, &QAbstractItemModel::rowsInserted, this, &UserModel::moreThanOneAdminUserChanged);
