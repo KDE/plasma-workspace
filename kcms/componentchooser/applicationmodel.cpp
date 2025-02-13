@@ -73,7 +73,7 @@ int ApplicationModel::currentIndex() const
 {
     int index = 0;
     for (const auto &application : std::as_const(m_applications)) {
-        if (application["isSelected"].toBool()) {
+        if (application[QStringLiteral("isSelected")].toBool()) {
             return index;
         }
         ++index;
@@ -160,15 +160,15 @@ QVariant ApplicationModel::data(const QModelIndex &index, int role) const
     const auto map = m_applications.at(row);
     switch (role) {
     case Qt::DisplayRole:
-        return map["name"];
+        return map[QStringLiteral("name")];
     case Icon:
-        return map["icon"];
+        return map[QStringLiteral("icon")];
     case StorageId:
-        return map["storageId"];
+        return map[QStringLiteral("storageId")];
     case Selected:
-        return map["isSelected"];
+        return map[QStringLiteral("isSelected")];
     case ExecLine:
-        return map["execLine"];
+        return map[QStringLiteral("execLine")];
     }
 
     return QVariant();
@@ -197,13 +197,13 @@ bool ApplicationModel::setData(const QModelIndex &index, const QVariant &value, 
     }
 
     for (auto &application : m_applications) {
-        application["isSelected"] = false;
+        application[QStringLiteral("isSelected")] = false;
     }
 
     const auto row = index.row();
 
     // auto map = m_applications[row].toMap();
-    m_applications[row]["isSelected"] = true;
+    m_applications[row][QStringLiteral("isSelected")] = true;
     // m_applications[row] = map;
 
     Q_EMIT dataChanged(index, index, {role});
@@ -215,7 +215,7 @@ QModelIndex ApplicationModel::findByStorageId(const QString &storageId) const
 {
     int i = 0;
     for (const auto &application : std::as_const(m_applications)) {
-        if (application["storageId"] == storageId) {
+        if (application[QStringLiteral("storageId")] == storageId) {
             return index(i, 0);
         }
         ++i;

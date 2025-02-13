@@ -16,7 +16,13 @@ ComponentChooserImageViewer::ComponentChooserImageViewer(QObject *parent)
 {
 }
 
-static const QStringList imageViewerMimetypes{"image/png", "image/jpeg", "image/webp", "image/avif", "image/heif", "image/bmp", "image/x-icns"};
+static const QStringList imageViewerMimetypes{QStringLiteral("image/png"),
+                                              QStringLiteral("image/jpeg"),
+                                              QStringLiteral("image/webp"),
+                                              QStringLiteral("image/avif"),
+                                              QStringLiteral("image/heif"),
+                                              QStringLiteral("image/bmp"),
+                                              QStringLiteral("image/x-icns")};
 
 QStringList ComponentChooserImageViewer::mimeTypes() const
 {

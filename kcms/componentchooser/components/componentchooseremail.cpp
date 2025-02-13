@@ -21,7 +21,7 @@ ComponentChooserEmail::ComponentChooserEmail(QObject *parent)
 {
 }
 
-static const QStringList emailMimetypes{"x-scheme-handler/mailto"};
+static const QStringList emailMimetypes{QStringLiteral("x-scheme-handler/mailto")};
 
 QStringList ComponentChooserEmail::mimeTypes() const
 {

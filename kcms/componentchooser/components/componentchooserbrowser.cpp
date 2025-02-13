@@ -14,7 +14,7 @@ ComponentChooserBrowser::ComponentChooserBrowser(QObject *parent)
 {
 }
 
-static const QStringList browserMimetypes{"x-scheme-handler/http", "x-scheme-handler/https"};
+static const QStringList browserMimetypes{QStringLiteral("x-scheme-handler/http"), QStringLiteral("x-scheme-handler/https")};
 
 QStringList ComponentChooserBrowser::mimeTypes() const
 {

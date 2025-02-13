@@ -18,7 +18,7 @@ ComponentChooserTel::ComponentChooserTel(QObject *parent)
 {
 }
 
-static const QStringList telMimetypes{"x-scheme-handler/tel"};
+static const QStringList telMimetypes{QStringLiteral("x-scheme-handler/tel")};
 
 QStringList ComponentChooserTel::mimeTypes() const
 {

@@ -16,12 +16,12 @@ ComponentChooserTextEditor::ComponentChooserTextEditor(QObject *parent)
 {
 }
 
-static const QStringList textEditorMimetypes{"text/plain",
-                                             "text/x-cmake",
-                                             "text/markdown",
-                                             "application/x-docbook+xml",
-                                             "application/json",
-                                             "application/x-yaml"};
+static const QStringList textEditorMimetypes{QStringLiteral("text/plain"),
+                                             QStringLiteral("text/x-cmake"),
+                                             QStringLiteral("text/markdown"),
+                                             QStringLiteral("application/x-docbook+xml"),
+                                             QStringLiteral("application/json"),
+                                             QStringLiteral("application/x-yaml")};
 
 QStringList ComponentChooserTextEditor::mimeTypes() const
 {

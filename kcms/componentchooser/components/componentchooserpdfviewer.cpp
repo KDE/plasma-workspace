@@ -12,7 +12,7 @@ ComponentChooserPdfViewer::ComponentChooserPdfViewer(QObject *parent)
 {
 }
 
-static const QStringList pdfMimetypes{"application/pdf"};
+static const QStringList pdfMimetypes{QStringLiteral("application/pdf")};
 
 QStringList ComponentChooserPdfViewer::mimeTypes() const
 {

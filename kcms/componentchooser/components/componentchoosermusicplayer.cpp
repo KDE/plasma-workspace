@@ -16,25 +16,25 @@ ComponentChooserMusicPlayer::ComponentChooserMusicPlayer(QObject *parent)
 {
 }
 
-static const QStringList audioMimetypes{"audio/aac",
-                                        "audio/mp4",
-                                        "audio/mpeg",
-                                        "audio/mpegurl",
-                                        "audio/ogg",
-                                        "audio/vnd.rn-realaudio",
-                                        "audio/vorbis",
-                                        "audio/x-flac",
-                                        "audio/x-mp3",
-                                        "audio/x-mpegurl",
-                                        "audio/x-ms-wma",
-                                        "audio/x-musepack",
-                                        "audio/x-oggflac",
-                                        "audio/x-pn-realaudio",
-                                        "audio/x-scpls",
-                                        "audio/x-speex",
-                                        "audio/x-vorbis",
-                                        "audio/x-vorbis+ogg",
-                                        "audio/x-wav"};
+static const QStringList audioMimetypes{QStringLiteral("audio/aac"),
+                                        QStringLiteral("audio/mp4"),
+                                        QStringLiteral("audio/mpeg"),
+                                        QStringLiteral("audio/mpegurl"),
+                                        QStringLiteral("audio/ogg"),
+                                        QStringLiteral("audio/vnd.rn-realaudio"),
+                                        QStringLiteral("audio/vorbis"),
+                                        QStringLiteral("audio/x-flac"),
+                                        QStringLiteral("audio/x-mp3"),
+                                        QStringLiteral("audio/x-mpegurl"),
+                                        QStringLiteral("audio/x-ms-wma"),
+                                        QStringLiteral("audio/x-musepack"),
+                                        QStringLiteral("audio/x-oggflac"),
+                                        QStringLiteral("audio/x-pn-realaudio"),
+                                        QStringLiteral("audio/x-scpls"),
+                                        QStringLiteral("audio/x-speex"),
+                                        QStringLiteral("audio/x-vorbis"),
+                                        QStringLiteral("audio/x-vorbis+ogg"),
+                                        QStringLiteral("audio/x-wav")};
 
 QStringList ComponentChooserMusicPlayer::mimeTypes() const
 {

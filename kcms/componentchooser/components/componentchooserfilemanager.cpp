@@ -16,7 +16,7 @@ ComponentChooserFileManager::ComponentChooserFileManager(QObject *parent)
 {
 }
 
-static const QStringList fileManagerMimetypes{"inode/directory"};
+static const QStringList fileManagerMimetypes{QStringLiteral("inode/directory")};
 
 QStringList ComponentChooserFileManager::mimeTypes() const
 {

@@ -82,7 +82,7 @@ Q_SIGNALS:
     void isSaveNeededChanged();
     void modelChanged();
 
-public slots:
+public Q_SLOTS:
     void onSaved();
 
 protected:

@@ -258,7 +258,7 @@ bool ComponentChooser::isDefaults() const
 bool ComponentChooser::isSaveNeeded() const
 {
     const auto storageId = currentStorageId();
-    return m_model->rowCount() > 1 && (m_currentApplication != storageId) && storageId != "";
+    return m_model->rowCount() > 1 && (m_currentApplication != storageId) && !storageId.isEmpty();
 }
 
 bool ComponentChooser::serviceSupportsMimeType(KService::Ptr service, const QString &targetMimeType)

@@ -14,7 +14,7 @@ ComponentChooserGeo::ComponentChooserGeo(QObject *parent)
 {
 }
 
-static const QStringList geolocationMimetypes{"x-scheme-handler/geo"};
+static const QStringList geolocationMimetypes{QStringLiteral("x-scheme-handler/geo")};
 
 QStringList ComponentChooserGeo::mimeTypes() const
 {
