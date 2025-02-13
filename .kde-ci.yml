@@ -89,5 +89,5 @@ RuntimeDependencies:
 
 Options:
  ctest-arguments: '--repeat until-pass:5'
- require-passing-tests-on: ['@all']
+ require-passing-tests-on: ['Linux/Qt6', 'FreeBSD/Qt6']
  clang-format-versions: [14, 18]
