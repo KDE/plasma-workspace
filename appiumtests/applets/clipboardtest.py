@@ -20,7 +20,6 @@ import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from PySide6.QtGui import QLinearGradient
 from selenium.common.exceptions import NoSuchElementException, WebDriverException
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
@@ -483,7 +482,7 @@ class ClipboardTest(unittest.TestCase):
         When `IgnoreImages` is set to false, the clipboard should save images.
         """
         # Enable "Only when explicitly copied" to test the two bugs
-        self.update_config(["General"] * 4, ["IgnoreImages", "IgnoreSelection", "SyncClipboards", "MaxClipItems"], ["false", "true", "false", str(len(QLinearGradient.Preset))])
+        self.update_config(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
 
         app.klipper_proxy.clearClipboardHistory()
         self.assertEqual(0, len(app.klipper_proxy.getClipboardHistoryMenu()))
