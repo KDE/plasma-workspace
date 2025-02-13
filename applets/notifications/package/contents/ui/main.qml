@@ -132,6 +132,8 @@ PlasmoidItem {
         return iconName;
     }
 
+    width: Kirigami.Units.gridUnit * 4
+    height: Kirigami.Units.gridUnit * 4
     switchWidth: Kirigami.Units.gridUnit * 14
     // This is to let the plasmoid expand in a vertical panel for a "sidebar" notification panel
     // The CompactRepresentation size is limited to not have the notification icon grow gigantic
