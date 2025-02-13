@@ -15,6 +15,9 @@ import org.kde.kirigami as Kirigami
 PlasmoidItem {
     id: root
 
+    width: Kirigami.Units.gridUnit * 10
+    height: Kirigami.Units.gridUnit * 10
+
     readonly property int minButtonSize: Kirigami.Units.iconSizes.small
 
     preferredRepresentation: fullRepresentation
