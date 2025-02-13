@@ -16,7 +16,7 @@ import org.kde.pipewire.monitor as Monitor
 PlasmoidItem {
     id: root
 
-    width: Kirigami.Units.gridUnit * 10
+    width: Kirigami.Units.gridUnit * 4
     height: Kirigami.Units.gridUnit * 4
     switchWidth: Kirigami.Units.gridUnit * 12
     switchHeight: Kirigami.Units.gridUnit * 12
