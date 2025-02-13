@@ -18,6 +18,9 @@ import org.kde.plasma.workspace.calendar 2.0
 
 PlasmoidItem {
     id: root
+
+    width: Kirigami.Units.gridUnit * 10
+    height: Kirigami.Units.gridUnit * 4
     switchWidth: Kirigami.Units.gridUnit * 12
     switchHeight: Kirigami.Units.gridUnit * 12
 
