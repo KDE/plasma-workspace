@@ -61,6 +61,7 @@ Dependencies:
     'plasma/plasma5support': '@same'
     'plasma/plasma-activities': '@latest-kf6' # Different branch scheme due to formerly being a Framework
     'plasma/plasma-activities-stats': '@latest-kf6' # Different branch scheme due to formerly being a Framework
+    'plasma/kwin': '@same'
     'libraries/plasma-wayland-protocols': '@latest-kf6'
     'libraries/phonon': '@latest-kf6'
     'libraries/kirigami-addons': '@latest-kf6'
@@ -80,7 +81,7 @@ RuntimeDependencies:
    'require':
     'network/kio-extras': '@latest-kf6'
     'plasma/kactivitymanagerd': '@same'
-    # 'sdk/selenium-webdriver-at-spi': '@latest-kf6'
+    'sdk/selenium-webdriver-at-spi': '@latest-kf6'
  - 'on': ['Linux', 'FreeBSD']
    'require':
     'frameworks/qqc2-desktop-style': '@latest-kf6'
