@@ -66,6 +66,8 @@ PlasmoidItem {
     // causing our "No devices" heading to overlap with the remaining device
     property bool isMessageHighlightAnimatorRunning: false
 
+    width: Kirigami.Units.gridUnit * 4
+    height: Kirigami.Units.gridUnit * 4
     switchWidth: Kirigami.Units.gridUnit * 10
     switchHeight: Kirigami.Units.gridUnit * 10
 
