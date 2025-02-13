@@ -39,27 +39,25 @@ msgstr "-%1"
 #: package/contents/ui/ExpandedRepresentation.qml:562
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "播放速率 %1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:565
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "-%1"
+msgstr "%1x"
 
 #: package/contents/ui/ExpandedRepresentation.qml:569
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "播放速率"
 
 #: package/contents/ui/ExpandedRepresentation.qml:615
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (正常)"
 
 #: package/contents/ui/ExpandedRepresentation.qml:654
 #, kde-format

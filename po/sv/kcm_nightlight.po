@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2025-02-13 00:47+0000\n"
 "PO-Revision-Date: 2024-08-21 08:11+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -17,14 +17,14 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.05.2\n"
 
-#: ui/DayNightView.qml:132
+#: ui/DayNightView.qml:154
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
 "by %2"
 msgstr "Färgtemperaturen börjar ändras till nattid %1 och är helt ändrad %2"
 
-#: ui/DayNightView.qml:135
+#: ui/DayNightView.qml:157
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-12 00:43+0000\n"
-"PO-Revision-Date: 2025-01-11 22:49+0100\n"
+"PO-Revision-Date: 2025-02-12 07:01+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -157,10 +157,9 @@ msgid "Enter Edit Mode"
 msgstr "Eniri Redaktan Reĝimon"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Eniri Redaktan Reĝimon"
+msgstr "Eliri Redaktan Reĝimon"
 
 #: main.cpp:86
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2025-02-13 00:47+0000\n"
 "PO-Revision-Date: 2024-09-18 21:22+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 24.08.0\n"
 
-#: ui/DayNightView.qml:132
+#: ui/DayNightView.qml:154
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
@@ -26,7 +26,7 @@ msgid ""
 msgstr ""
 "A színhőmérséklet változásának kezdete éjszakára: %1, teljes változás: %2"
 
-#: ui/DayNightView.qml:135
+#: ui/DayNightView.qml:157
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "

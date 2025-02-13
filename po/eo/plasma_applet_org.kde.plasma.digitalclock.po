@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-12-28 17:41+0100\n"
+"PO-Revision-Date: 2025-02-12 22:59+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -304,13 +304,12 @@ msgstr "Disponeblaj Kromaĵoj:"
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Nuligi"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Aldoni Pliajn Horzonojn"
+msgstr "Aldoni Elektitan Horzonon"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -322,10 +321,9 @@ msgstr ""
 "aperos nur kiam vi ŝanĝas la tutsisteman horzonon al io alia."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Aldoni Horzonojn…"
+msgstr "Aldoni Horzonon…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -385,10 +383,9 @@ msgstr ""
 "anstataŭe ŝanĝu la tutsisteman horzonon."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Horzonoj"
+msgstr "Elekti Horzonon"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -469,16 +466,3 @@ msgstr "Loka"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Loka horzono de la sistemo"
-
-#~ msgid ""
-#~ "At least one time zone needs to be enabled. Your local time zone was "
-#~ "enabled automatically."
-#~ msgstr ""
-#~ "Almenaŭ unu horzono devas esti ebligita. Via loka horzono estis aŭtomate "
-#~ "ebligita."
-
-#~ msgid "%1, %2 (%3)"
-#~ msgstr "%1, %2 (%3)"
-
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2025-02-13 00:47+0000\n"
 "PO-Revision-Date: 2024-09-01 01:03+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt\n"
@@ -19,7 +19,7 @@ msgstr ""
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
 "X-Generator: Poedit 3.4.2\n"
 
-#: ui/DayNightView.qml:132
+#: ui/DayNightView.qml:154
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
@@ -28,7 +28,7 @@ msgstr ""
 "Spalvų temperatūra %1 pradės keistis į naktinę spalvą, o iki %2 temperatūra "
 "bus pilnai pasikeitusi"
 
-#: ui/DayNightView.qml:135
+#: ui/DayNightView.qml:157
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "

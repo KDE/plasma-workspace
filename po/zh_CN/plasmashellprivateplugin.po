@@ -412,14 +412,10 @@ msgid "Zoom out"
 msgstr "缩小"
 
 #: timezoneselector/TimezoneSelector.qml:230
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: 'Choose region' in the context of time zone region "
-#| "selection."
-#| msgid "region"
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr "地区"
+msgstr "地区："
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
@@ -433,22 +429,12 @@ msgid "Timezone region selector"
 msgstr "时区地区选择器"
 
 #: timezoneselector/TimezoneSelector.qml:261
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: '<region> region, <zone> time zone.' in the context of "
-#| "time zone selection."
-#| msgid "time zone."
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr "时区。"
+msgstr "时区："
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgid "Timezone location selector"
 msgstr "时区位置选择器"
-
-#~ msgctxt ""
-#~ "Full context is: '<region> region, <zone> time zone.' in the context of "
-#~ "time zone selection."
-#~ msgid "region, "
-#~ msgstr "地区，"

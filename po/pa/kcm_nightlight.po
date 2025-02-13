@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-21 00:49+0000\n"
+"POT-Creation-Date: 2025-02-13 00:47+0000\n"
 "PO-Revision-Date: 2024-10-25 23:37-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.2\n"
 
-#: ui/DayNightView.qml:132
+#: ui/DayNightView.qml:154
 #, kde-format
 msgid ""
 "Color temperature begins changing to night time at %1 and is fully changed "
@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "ਰੰਗ ਤਾਪਮਾਨ ਰਾਤ ਦੇ ਸਮੇਂ ਲਈ %1 ਵਜੇ ਬਦਲਣਾ ਸ਼ੁਰੂ ਕਰਦਾ ਹੈ ਅਤੇ %2 ਵਜੇ ਤੱਕ ਪੂਰੀ ਤਰ੍ਹਾਂ ਬਦਲ ਜਾਂਦਾ ਹੈ"
 
-#: ui/DayNightView.qml:135
+#: ui/DayNightView.qml:157
 #, kde-format
 msgid ""
 "Color temperature begins changing to day time at %1 and is fully changed by "
