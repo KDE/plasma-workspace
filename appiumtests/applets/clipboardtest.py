@@ -398,6 +398,11 @@ class ClipboardTest(unittest.TestCase):
         """
         When a mimedata has "x-kde-passwordManagerHint" set to "secret", the clip should not be saved to history.
         """
+        try:
+            from PySide6.QtCore import QObject
+        except ModuleNotFoundError:
+            self.skipTest("PySide is not available")
+
         process = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "clipboardtest", "copysecret.py")], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         self.addCleanup(process.kill)
         process.stderr.readline()
@@ -481,6 +486,11 @@ class ClipboardTest(unittest.TestCase):
         """
         When `IgnoreImages` is set to false, the clipboard should save images.
         """
+        try:
+            from PySide6.QtCore import QObject
+        except ModuleNotFoundError:
+            self.skipTest("PySide is not available")
+
         # Enable "Only when explicitly copied" to test the two bugs
         self.update_config(["General"] * 3, ["IgnoreImages", "IgnoreSelection", "SyncClipboards"], ["false", "true", "false"])
 

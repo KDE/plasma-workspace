@@ -385,6 +385,11 @@ class SystemTrayTests(unittest.TestCase):
         5. Activate menu actions
         6. NeedsAttention/Active/Passive status
         """
+        try:
+            from PySide6.QtCore import QObject
+        except ModuleNotFoundError:
+            self.skipTest("PySide is not available")
+
         asan_env = os.environ.copy()
         asan_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip()
         status_notifier = subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "statusnotifieritemtest.py")], stdout=subprocess.PIPE, stderr=sys.stderr, env=asan_env)
@@ -463,6 +468,11 @@ class SystemTrayTests(unittest.TestCase):
         """
         Shows the tray icon if the source is an svg file
         """
+        try:
+            from PySide6.QtCore import QObject
+        except ModuleNotFoundError:
+            self.skipTest("PySide is not available")
+
         with subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "svgtrayicon.py")], stdout=sys.stderr, stderr=sys.stderr) as process:
             sni_title = "SvgTrayIconTest"
             logging.info(self.driver.page_source)
