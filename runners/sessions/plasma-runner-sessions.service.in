@@ -1,0 +1,11 @@
+[Unit]
+Description=KRunner provider for user session switching
+
+[Service]
+ExecStart=@CMAKE_INSTALL_FULL_LIBEXECDIR@/krunner_sessions
+Type=dbus
+BusName=org.kde.runners.sessions
+TimeoutSec=5sec
+Slice=background.slice
+# as we're dbus activated anyway
+Restart=no

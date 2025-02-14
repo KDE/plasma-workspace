@@ -1,0 +1,17 @@
+[Desktop Entry]
+Name=Desktop Sessions
+Comment=Fast User Switcings
+X-KDE-ServiceTypes=Plasma/Runner
+Type=Service
+Icon=system-switch-user
+X-KDE-PluginInfo-Name=krunner_sessions
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-License=LGPL
+X-KDE-PluginInfo-EnabledByDefault=true
+X-Plasma-API=DBus
+X-Plasma-DBusRunner-Service=org.kde.runners.sessions
+X-Plasma-DBusRunner-Path=/runner
+X-Plasma-Request-Actions-Once=true
+X-Plasma-Runner-Min-Letter-Count=3
+X-Plasma-Runner-Unique-Results=true
+X-Plasma-Runner-Weak-Results=true
