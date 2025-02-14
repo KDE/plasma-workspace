@@ -18,15 +18,15 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-07 02:41+0000\n"
-"PO-Revision-Date: 2025-02-03 08:06-0300\n"
-"Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
+"PO-Revision-Date: 2025-02-13 21:41-0300\n"
+"Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -218,7 +218,7 @@ msgid ""
 "These actions appear in the popup menu which can be configured on the "
 "<interface>Action Menu</interface> page."
 msgstr ""
-"Estas ações aparecem no menu de contexto o qual pode ser configurado na "
+"Estas ações aparecem no menu de contexto, o qual pode ser configurado na "
 "página do <interface>Menu de ações</interface>."
 
 #: configdialog.cpp:577
@@ -542,7 +542,7 @@ msgstr ""
 "interface>. Se esta opção estiver desativada, os comandos para esta "
 "correspondência não serão incluídos no menu de contexto automático, mas "
 "serão incluídos se o pop-up for ativado manualmente com a tecla de atalho "
-"<shortcut>%1</shortcut> ."
+"<shortcut>%1</shortcut>."
 
 #: editactiondialog.cpp:266
 #, kde-format
@@ -949,7 +949,7 @@ msgid ""
 "MIME type in the popup menu."
 msgstr ""
 "Se um nome de arquivo ou URL for selecionado, incluir aplicativos que "
-"aceitam seu tipo MIME no menu de de contexto."
+"aceitam seu tipo MIME no menu de contexto."
 
 #: klipperpopup.cpp:33
 #, kde-format

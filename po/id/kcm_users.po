@@ -1,6 +1,6 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2022, 2024 Wantoyèk <wantoyek@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Wantoyèk <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 # SPDX-FileCopyrightText: 2023 Linerly <linerly@linerly.xyz>
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-31 02:36+0000\n"
-"PO-Revision-Date: 2024-12-09 06:32+0700\n"
+"PO-Revision-Date: 2025-02-13 22:09+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -99,18 +99,14 @@ msgid "Change Wallet Password?"
 msgstr "Ubah Sandi Wallet?"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"Sekarang Anda mengubah sandi login Anda, kamu mungkin juga ingin mengubah "
-"sandi pada KWallet bawaan Anda untuk mencocokkannya."
+"Sekarang Anda telah mengubah sandi login Anda, pertimbangkan untuk mengubah "
+"sandi pada KWallet baku Anda untuk mencocokkannya."
 
 #: src/ui/ChangeWalletPassword.qml:31
 #, kde-format
