@@ -31,7 +31,7 @@ BaseDelegate {
 
     Accessible.role: Accessible.Notification
 
-    readonly property int __firstColumn: 1
+    readonly property int __firstColumn: 0
 
     PlasmaExtras.PlasmoidHeading {
         id: heading
@@ -50,100 +50,6 @@ BaseDelegate {
         contentItem: Components.NotificationHeader {
             modelInterface: delegateRoot.modelInterface
         }
-    }
-
-    /*
-    // Horizontal timeout indicator
-    Item {
-        Layout.fillWidth: true
-        Layout.row: 1
-        Layout.columnSpan: delegateRoot.__firstColumn + 2
-        // Hug the top, left, and right
-        Layout.topMargin: -((delegateRoot.columnSpacing * 2) + height)
-        Layout.leftMargin: -delegateRoot.modelInterface.popupLeftPadding
-        Layout.rightMargin: -delegateRoot.modelInterface.popupRightPadding
-        implicitHeight: 2
-        implicitWidth: -1
-        visible: !criticalNotificationIndicator.visible
-
-        Rectangle {
-            readonly property real completionFraction: delegateRoot.modelInterface.remainingTime / delegateRoot.modelInterface.timeout
-
-            height: parent.height
-            width: Math.round(parent.width * completionFraction)
-            anchors.left: parent.left
-
-            color: Kirigami.Theme.highlightColor
-        }
-    }
-    */
-
-    /*
-    Rectangle {
-        id: criticalNotificationIndicator
-        Layout.fillHeight: true
-        Layout.leftMargin: Layout.mirrored ? 0 : -modelInterface.popupLeftPadding
-        Layout.rightMargin: Layout.mirrored ? -modelInterface.popupRightPadding : 0
-        Layout.topMargin: -delegateRoot.rowSpacing
-        Layout.bottomMargin: -delegateRoot.rowSpacing
-        Layout.rowSpan: 3
-
-        implicitWidth: 4
-        height: parent.height
-        color: Kirigami.Theme.neutralTextColor
-        visible: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
-    }
-    */
-
-    Item {
-        id: notificationIndicator
-        Layout.fillHeight: true
-        //Layout.leftMargin: Layout.mirrored ? 0 : -modelInterface.popupLeftPadding
-        //Layout.rightMargin: Layout.mirrored ? -modelInterface.popupRightPadding : 0
-        //Layout.topMargin: -delegateRoot.rowSpacing
-        //Layout.bottomMargin: -delegateRoot.rowSpacing
-        Layout.rowSpan: 3
-
-        implicitWidth: Kirigami.Units.smallSpacing
-
-        // Background rectangle
-        Rectangle {
-            anchors.fill: parent
-
-            color: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency ? Kirigami.Theme.neutralTextColor : Kirigami.Theme.highlightColor
-            opacity: 0.4 // TODO: or 0.6, but I think 0.4 is better
-            radius: Kirigami.Units.cornerRadius
-        }
-
-        // Indicator fill rectangle, shrinks with timeout
-        Rectangle {
-            id: notificationIndicatorFill
-            anchors.bottom: parent.bottom
-            anchors.left: parent.left
-            anchors.right: parent.right
-
-            // Critical notifications will use an effect using this as a source
-            /* visible: modelInterface.urgency !== NotificationManager.Notifications.CriticalUrgency */
-
-            color: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency ? Kirigami.Theme.neutralTextColor : Kirigami.Theme.highlightColor
-            height: parent.height * (delegateRoot.modelInterface.timeout === 0 ? 1 : (delegateRoot.modelInterface.remainingTime / delegateRoot.modelInterface.timeout))
-            radius: Kirigami.Units.cornerRadius
-        }
-
-        // Special indicator fill for critical notifications
-        /*
-        MultiEffect {
-            anchors.fill: parent
-
-            visible: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
-
-            source: notificationIndicatorFill
-            maskEnabled: true
-            maskSource: Item {
-                // ...proceeds to bang head against table
-            }
-        }
-        */
     }
 
     Components.Summary {

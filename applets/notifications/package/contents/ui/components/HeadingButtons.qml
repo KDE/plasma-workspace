@@ -136,6 +136,15 @@ RowLayout {
         }
     }
 
+    PlasmaComponents3.ProgressBar {
+        Layout.preferredWidth: Kirigami.Units.gridUnit * 4
+
+        // TODO: Recolor for criticality
+        //readonly property bool isCritical: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
+
+        value: modelInterface.timeout === 0 ? 1 : (modelInterface.remainingTime / modelInterface.timeout)
+    }
+
     PlasmaComponents3.ToolButton {
         id: configureButton
         icon.name: "configure"
