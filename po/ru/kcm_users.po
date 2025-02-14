@@ -4,13 +4,13 @@
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Alexander Yavorsky <kekcuha@gmail.com>
 # Alexander Potashev <aspotashev@gmail.com>, 2020.
 # Дронова Ю <juliette.tux@gmail.com>, 2020.
-# Alexander Yavorsky <kekcuha@gmail.com>, 2024.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-31 00:43+0000\n"
-"PO-Revision-Date: 2024-09-21 11:53+0300\n"
+"PO-Revision-Date: 2025-02-13 11:42+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -101,17 +101,13 @@ msgid "Change Wallet Password?"
 msgstr "Изменить пароль бумажника (хранителя паролей)?"
 
 #: src/ui/ChangeWalletPassword.qml:25
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"После смены пароля входа в систему также можно сменить пароль хранителя "
+"После смены пароля входа в систему рекомендуется сменить пароль хранителя "
 "паролей KWallet по умолчанию, так, чтобы пароли совпадали."
 
 #: src/ui/ChangeWalletPassword.qml:31
@@ -603,7 +599,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Не удалось обрезать изображение: %1"
 
 #: src/user.cpp:324
 #, kde-format

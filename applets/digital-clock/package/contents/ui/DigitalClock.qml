@@ -579,7 +579,7 @@ MouseArea {
             anchors.verticalCenter: parent.verticalCenter
             anchors.left: dateLabel.right
 
-            visible: isOneLineMode
+            visible: isOneLineMode && Plasmoid.configuration.showDate
         }
 
         PlasmaComponents.Label {

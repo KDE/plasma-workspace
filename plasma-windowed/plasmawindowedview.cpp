@@ -170,22 +170,14 @@ void PlasmaWindowedView::showConfigurationInterface()
 
 void PlasmaWindowedView::resizeEvent(QResizeEvent *ev)
 {
-    if (!m_applet) {
-        return;
-    }
+    updateSize(ev->size());
+    QQuickView::resizeEvent(ev);
+}
 
-    QQuickItem *i = PlasmaQuick::AppletQuickItem::itemForApplet(m_applet);
-    if (!i) {
-        return;
-    }
-
-    minimumWidthChanged();
-    minimumHeightChanged();
-
-    i->setSize(ev->size());
-    contentItem()->setSize(ev->size());
-
-    m_applet->config().writeEntry("geometry", QRect(position(), ev->size()));
+void PlasmaWindowedView::exposeEvent(QExposeEvent *ev)
+{
+    updateSize(size());
+    QQuickView::exposeEvent(ev);
 }
 
 void PlasmaWindowedView::mouseReleaseEvent(QMouseEvent *ev)
@@ -293,6 +285,25 @@ void PlasmaWindowedView::maximumHeightChanged()
     }
 
     setMaximumHeight(m_layout->property("maximumHeight").toInt());
+}
+
+void PlasmaWindowedView::updateSize(const QSize &newSize)
+{
+    if (!m_applet) {
+        return;
+    }
+
+    QQuickItem *i = PlasmaQuick::AppletQuickItem::itemForApplet(m_applet);
+    if (!i) {
+        return;
+    }
+
+    minimumWidthChanged();
+    minimumHeightChanged();
+
+    i->setSize(newSize);
+
+    m_applet->config().writeEntry("geometry", QRect(position(), newSize));
 }
 
 void PlasmaWindowedView::updateSniIcon()
