@@ -1,6 +1,6 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2022, 2024 Wantoyèk <wantoyek@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Wantoyèk <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 # SPDX-FileCopyrightText: 2023 Linerly <linerly@linerly.xyz>
 #
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/ui/ChangePassword.qml:27
 #: package/contents/ui/UserDetailsPage.qml:156
