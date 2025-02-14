@@ -31,7 +31,7 @@ BaseDelegate {
 
     Accessible.role: Accessible.Notification
 
-    readonly property int __firstColumn: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency ? 1 : 0
+    readonly property int __firstColumn: 1
 
     PlasmaExtras.PlasmoidHeading {
         id: heading
@@ -52,6 +52,7 @@ BaseDelegate {
         }
     }
 
+    /*
     // Horizontal timeout indicator
     Item {
         Layout.fillWidth: true
@@ -75,7 +76,9 @@ BaseDelegate {
             color: Kirigami.Theme.highlightColor
         }
     }
+    */
 
+    /*
     Rectangle {
         id: criticalNotificationIndicator
         Layout.fillHeight: true
@@ -90,12 +93,64 @@ BaseDelegate {
         color: Kirigami.Theme.neutralTextColor
         visible: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
     }
+    */
+
+    Item {
+        id: notificationIndicator
+        Layout.fillHeight: true
+        //Layout.leftMargin: Layout.mirrored ? 0 : -modelInterface.popupLeftPadding
+        //Layout.rightMargin: Layout.mirrored ? -modelInterface.popupRightPadding : 0
+        //Layout.topMargin: -delegateRoot.rowSpacing
+        //Layout.bottomMargin: -delegateRoot.rowSpacing
+        Layout.rowSpan: 3
+
+        implicitWidth: Kirigami.Units.smallSpacing
+
+        // Background rectangle
+        Rectangle {
+            anchors.fill: parent
+
+            color: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency ? Kirigami.Theme.neutralTextColor : Kirigami.Theme.highlightColor
+            opacity: 0.4 // TODO: or 0.6, but I think 0.4 is better
+            radius: Kirigami.Units.cornerRadius
+        }
+
+        // Indicator fill rectangle, shrinks with timeout
+        Rectangle {
+            id: notificationIndicatorFill
+            anchors.bottom: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+
+            // Critical notifications will use an effect using this as a source
+            /* visible: modelInterface.urgency !== NotificationManager.Notifications.CriticalUrgency */
+
+            color: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency ? Kirigami.Theme.neutralTextColor : Kirigami.Theme.highlightColor
+            height: parent.height * (delegateRoot.modelInterface.timeout === 0 ? 1 : (delegateRoot.modelInterface.remainingTime / delegateRoot.modelInterface.timeout))
+            radius: Kirigami.Units.cornerRadius
+        }
+
+        // Special indicator fill for critical notifications
+        /*
+        MultiEffect {
+            anchors.fill: parent
+
+            visible: modelInterface.urgency === NotificationManager.Notifications.CriticalUrgency
+
+            source: notificationIndicatorFill
+            maskEnabled: true
+            maskSource: Item {
+                // ...proceeds to bang head against table
+            }
+        }
+        */
+    }
 
     Components.Summary {
         id: summary
         Layout.fillWidth: true
         Layout.alignment: Qt.AlignTop
-        Layout.row: 2
+        Layout.row: 1
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: icon.visible ? 1 : 2
         modelInterface: delegateRoot.modelInterface
@@ -103,7 +158,7 @@ BaseDelegate {
 
     Components.Icon {
         id: icon
-        Layout.row: 2
+        Layout.row: 1
         Layout.column: delegateRoot.__firstColumn + 1
         Layout.rowSpan: 2
         modelInterface: delegateRoot.modelInterface
@@ -111,7 +166,7 @@ BaseDelegate {
 
     KQuickControlsAddons.MouseEventListener {
         Layout.fillWidth: true
-        Layout.row: summary.visible ? 3 : 2
+        Layout.row: summary.visible ? 2 : 1
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: icon.visible ? 1 : 2
         Layout.maximumHeight: Kirigami.Units.gridUnit * modelInterface.maximumLineCount
@@ -142,11 +197,10 @@ BaseDelegate {
     Components.FooterLoader {
         id: footerLoader
         Layout.fillWidth: true
-        Layout.row: 4
+        Layout.row: 3
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: 2
         modelInterface: delegateRoot.modelInterface
         iconContainerItem: icon
     }
 }
-
