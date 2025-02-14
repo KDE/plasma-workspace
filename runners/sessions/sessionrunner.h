@@ -6,24 +6,30 @@
 
 #pragma once
 
-#include <kdisplaymanager.h>
-#include <krunner/abstractrunner.h>
+#include <QDBusContext>
+#include <QDBusMessage>
+#include <QObject>
 
+#include <KRunner/QueryMatch>
+
+#include <kdisplaymanager.h>
 #include <sessionmanagement.h>
+
+#include "dbusutils_p.h"
 
 /**
  * This class provides matches for running sessions as well as
  * an action to start a new session, etc.
  */
-class SessionRunner : public KRunner::AbstractRunner
+class SessionRunner : public QObject, protected QDBusContext
 {
     Q_OBJECT
 
 public:
-    SessionRunner(QObject *parent, const KPluginMetaData &metaData);
+    SessionRunner(QObject *parent = nullptr);
 
-    void match(KRunner::RunnerContext &context) override;
-    void run(const KRunner::RunnerContext &context, const KRunner::QueryMatch &action) override;
+    RemoteMatches Match(const QString &term);
+    void Run(const QString &id, const QString &actionId);
 
     enum {
         LogoutAction = 1,
@@ -34,7 +40,7 @@ public:
     };
 
 private:
-    void matchCommands(QList<KRunner::QueryMatch> &matches, const QString &term);
+    RemoteMatches matchCommands(const QString &term);
 
     QStringList m_logoutKeywords;
     QStringList m_shutdownKeywords;
