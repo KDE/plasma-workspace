@@ -341,7 +341,11 @@ QVariantList DaysModel::eventsForDate(const QDate &date)
 
     // sort events by their time and type
     std::sort(events.begin(), events.end(), [](const CalendarEvents::EventData &a, const CalendarEvents::EventData &b) {
-        return b.type() > a.type() || b.startDateTime() > a.startDateTime();
+        if (a.type() != b.type()) {
+            return a.type() < b.type();
+        }
+
+        return a.startDateTime() < b.startDateTime();
     });
 
     for (const CalendarEvents::EventData &event : std::as_const(events)) {
