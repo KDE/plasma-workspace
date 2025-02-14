@@ -69,6 +69,7 @@ void Surface::surface_attach(Resource *resource, wl_resource *buffer, int32_t x,
 {
     Q_UNUSED(resource);
     QPoint offset(x, y);
+    Q_ASSERT(!m_pending.buffer);
     m_pending.buffer = fromResource<Buffer>(buffer);
     m_pending.commitSpecific.attachOffset = offset;
     m_pending.commitSpecific.attached = true;

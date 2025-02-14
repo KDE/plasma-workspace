@@ -48,7 +48,7 @@ DefaultCompositor::DefaultCompositor()
 
         QObject::connect(get<WlCompositor>(), &WlCompositor::surfaceCreated, [&](Surface *surface) {
             QObject::connect(surface, &Surface::bufferCommitted, [this, surface] {
-                if (m_config.autoRelease) {
+                if (m_config.autoRelease && surface->m_committed.buffer) {
                     // Pretend we made a copy of the buffer and just release it immediately
                     surface->m_committed.buffer->send_release();
                 }
