@@ -28,6 +28,7 @@ public:
 
 protected:
     void resizeEvent(QResizeEvent *ev) override;
+    void exposeEvent(QExposeEvent *ev) override;
     void mouseReleaseEvent(QMouseEvent *ev) override;
     void moveEvent(QMoveEvent *ev) override;
     void hideEvent(QHideEvent *ev) override;
@@ -41,6 +42,7 @@ protected Q_SLOTS:
     void maximumHeightChanged();
 
 private:
+    void updateSize(const QSize &newSize);
     void updateSniIcon();
     void updateSniTitle();
     void updateSniStatus();
