@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024, 2025 Wantoyo <wantoyek@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-24 00:43+0000\n"
-"PO-Revision-Date: 2024-12-09 06:44+0700\n"
+"PO-Revision-Date: 2025-02-13 22:14+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -302,17 +302,14 @@ msgid "Available Plugins:"
 msgstr "Plugin Yang Tersedia:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "Cancun"
+msgstr "Batal"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Tambahkan Zona Waktu Selebihnya"
+msgstr "Tambahkan Zona Waktu yang Dipilih"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -325,8 +322,7 @@ msgstr ""
 "untuk suatu hal."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
 msgstr "Tambahkan Zona Waktu..."
 
@@ -390,10 +386,9 @@ msgstr ""
 "bepergian, alihkan zona waktu systemwide sebagai gantinya."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Zona Waktu"
+msgstr "Pilih Zona Waktu"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

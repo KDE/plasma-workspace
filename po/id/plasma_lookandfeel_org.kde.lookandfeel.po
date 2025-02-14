@@ -1,6 +1,6 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024 Wantoyo <wantoyek@gmail.com>
+# SPDX-FileCopyrightText: 2018, 2019, 2022, 2024, 2025 Wantoyo <wantoyek@gmail.com>
 # Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
 # Linerly <linerly@protonmail.com>, 2022.
 #
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-31 00:42+0000\n"
-"PO-Revision-Date: 2024-12-09 06:45+0700\n"
+"PO-Revision-Date: 2025-02-13 22:18+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
 "Language: id\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -89,32 +89,26 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "Ketika dinyalakan ulang, komputer akan memasuki menu boot loader."
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "Tidur"
+msgstr "&Tidur"
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Tidur Sekarang"
+msgstr "&Tidurkan Sekarang"
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "Hibernasi"
+msgstr "&Hibernasi"
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "Hibernasi Sekarang"
+msgstr "&Hibernasi Sekarang"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -123,16 +117,14 @@ msgid "Install Updates and Restart"
 msgstr "Instal Pembaruan dan Nyalakan Ulang"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
-msgstr "Nyalakan Ulang"
+msgstr "&Nyalakan Ulang"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
-msgstr "Nyalakan Ulang Sekarang"
+msgstr "&Nyalakan Ulang Sekarang"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -141,34 +133,29 @@ msgid "Install Updates and Shut Down"
 msgstr "Instal Pembaruan dan Matikan"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
-msgstr "Matikan"
+msgstr "&Matikan"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "Matikan Sekarang"
+msgstr "&Matikan Sekarang"
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
-msgstr "Keluar Log"
+msgstr "&Keluar"
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
-msgstr "Keluar Log Sekarang"
+msgstr "&Keluarkan Sekarang"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "Batal"
+msgstr "&Batal"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
