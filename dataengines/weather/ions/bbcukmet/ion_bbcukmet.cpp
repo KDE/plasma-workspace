@@ -340,8 +340,14 @@ void UKMETIon::readSearchData(const QString & /*source*/, const QByteArray &json
         const QString name = result.value(u"name").toString();
         const QString area = result.value(u"container").toString();
         const QString country = result.value(u"country").toString();
+        const QString placeType = result.value(u"placeType").toString();
 
         if (id.isEmpty() || name.isEmpty() || area.isEmpty() || country.isEmpty()) {
+            continue;
+        }
+
+        if (placeType == "region"_L1) {
+            qCDebug(IONENGINE_BBCUKMET) << "Filtering out region:" << name << id;
             continue;
         }
 
