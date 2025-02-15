@@ -7,7 +7,7 @@
 # Tapio Kautto <eleknader@phnet.fi>, 2004.
 # Ilpo Kantonen <ilpo@iki.fi>, 2005.
 # Niklas Laxström <niklas.laxstrom+kdetrans@gmail.com>, 2006, 2007.
-# SPDX-FileCopyrightText: 2009, 2010, 2018, 2019, 2021, 2022, 2023, 2024 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2009, 2010, 2018, 2019, 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
 # Jorma Karvonen <karvonen.jorma@gmail.com>, 2010.
 # Lasse Liehu <lasse.liehu@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017.
 # Copyright © 2002, 2003, 2004, 2005, 2006 Free Software Foundation, Inc.
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-07 02:41+0000\n"
-"PO-Revision-Date: 2024-11-07 17:18+0200\n"
+"PO-Revision-Date: 2025-01-12 17:10+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -641,11 +641,10 @@ msgid "Clear Clipboard History"
 msgstr "Tyhjennä leikepöydän historia"
 
 #: historymodel.cpp:262
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1×%2 %3 bpp"
+msgstr "%1 x %2"
 
 #: klipper.cpp:90
 #, kde-format
