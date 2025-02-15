@@ -93,6 +93,8 @@ public:
         IsHidden, /**< Task (i.e window) is hidden on screen. A minimzed
                        window is not necessarily hidden. */
         CanLaunchNewInstance, /**< A new instance of the task can be launched. @since 5.24 */
+        HasNoBorder,
+        CanSetNoBorder,
     };
     Q_ENUM(AdditionalRoles)
 
@@ -240,6 +242,8 @@ public:
      * @param index An index in this tasks model.
      **/
     void requestToggleShaded(const QModelIndex &index) override;
+
+    void requestToggleNoBorder(const QModelIndex &index) override;
 
     /**
      * Request entering the window at the given index on the specified virtual desktops,

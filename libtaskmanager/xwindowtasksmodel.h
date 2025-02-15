@@ -161,6 +161,8 @@ public:
      **/
     void requestToggleShaded(const QModelIndex &index) override;
 
+    void requestToggleNoBorder(const QModelIndex &index) override;
+
     /**
      * Request entering the window at the given index on the specified virtual desktop.
      * For compatibility across windowing systems the library supports, the desktops

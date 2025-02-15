@@ -197,6 +197,8 @@ public:
      * reject invalid objects.
      **/
     virtual void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) = 0;
+
+    virtual void requestToggleNoBorder(const QModelIndex &index) = 0;
 };
 
 }

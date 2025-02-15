@@ -974,6 +974,12 @@ void XWindowTasksModel::requestToggleShaded(const QModelIndex &index)
     }
 }
 
+void XWindowTasksModel::requestToggleNoBorder(const QModelIndex &index)
+{
+    Q_UNUSED(index);
+    // TODO
+}
+
 void XWindowTasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (!index.isValid() || index.model() != this || index.row() < 0 || index.row() >= d->windows.count()) {

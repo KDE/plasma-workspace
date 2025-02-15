@@ -695,6 +695,10 @@ QVariant TaskGroupingProxyModel::data(const QModelIndex &proxyIndex, int role) c
             return d->all(proxyIndex, AbstractTasksModel::IsShadeable);
         } else if (role == AbstractTasksModel::IsShaded) {
             return d->all(proxyIndex, AbstractTasksModel::IsShaded);
+        } else if (role == AbstractTasksModel::CanSetNoBorder) {
+            return d->all(proxyIndex, AbstractTasksModel::CanSetNoBorder);
+        } else if (role == AbstractTasksModel::HasNoBorder) {
+            return d->all(proxyIndex, AbstractTasksModel::HasNoBorder);
         } else if (role == AbstractTasksModel::IsVirtualDesktopsChangeable) {
             return d->all(proxyIndex, AbstractTasksModel::IsVirtualDesktopsChangeable);
         } else if (role == AbstractTasksModel::VirtualDesktops) {
@@ -1099,6 +1103,27 @@ void TaskGroupingProxyModel::requestToggleShaded(const QModelIndex &index)
 
             if (child.data(AbstractTasksModel::IsShaded).toBool() != goalState) {
                 d->abstractTasksSourceModel->requestToggleShaded(mapToSource(child));
+            }
+        }
+    }
+}
+
+void TaskGroupingProxyModel::requestToggleNoBorder(const QModelIndex &index)
+{
+    if (!d->abstractTasksSourceModel || !index.isValid() || index.model() != this) {
+        return;
+    }
+
+    if (index.parent().isValid() || !d->isGroup(index.row())) {
+        d->abstractTasksSourceModel->requestToggleNoBorder(mapToSource(index));
+    } else {
+        const bool goalState = !index.data(AbstractTasksModel::HasNoBorder).toBool();
+
+        for (int i = 0; i < rowCount(index); ++i) {
+            const QModelIndex &child = this->index(i, 0, index);
+
+            if (child.data(AbstractTasksModel::HasNoBorder).toBool() != goalState) {
+                d->abstractTasksSourceModel->requestToggleNoBorder(mapToSource(child));
             }
         }
     }

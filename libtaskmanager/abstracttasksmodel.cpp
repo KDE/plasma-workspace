@@ -101,6 +101,8 @@ QVariant AbstractTasksModel::data(const QModelIndex &, int role) const
         return QString();
     case IsHidden:
     case CanLaunchNewInstance:
+    case CanSetNoBorder:
+    case HasNoBorder:
         return false;
     default:
         return QVariant();
@@ -172,6 +174,11 @@ void AbstractTasksModel::requestToggleFullScreen(const QModelIndex &index)
 void AbstractTasksModel::requestToggleShaded(const QModelIndex &index)
 {
     Q_UNUSED(index)
+}
+
+void AbstractTasksModel::requestToggleNoBorder(const QModelIndex &index)
+{
+    Q_UNUSED(index);
 }
 
 void AbstractTasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
