@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-30 00:43+0000\n"
-"PO-Revision-Date: 2025-01-25 12:07+0100\n"
+"PO-Revision-Date: 2025-02-14 08:32+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -26,7 +26,7 @@ msgstr "Adrian Chaves (Gallaecio)"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "adrian@chaves.io"
+msgstr "adrian@chaves.gal"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:46
 #, kde-format
@@ -417,14 +417,10 @@ msgid "Zoom out"
 msgstr "Afastar"
 
 #: timezoneselector/TimezoneSelector.qml:230
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: 'Choose region' in the context of time zone region "
-#| "selection."
-#| msgid "region"
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr "rexión"
+msgstr "Rexión:"
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
@@ -438,14 +434,10 @@ msgid "Timezone region selector"
 msgstr "Selector de rexión de fuso horario"
 
 #: timezoneselector/TimezoneSelector.qml:261
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: '<region> region, <zone> time zone.' in the context of "
-#| "time zone selection."
-#| msgid "time zone."
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr "fuso horario."
+msgstr "Fuso horario:"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
