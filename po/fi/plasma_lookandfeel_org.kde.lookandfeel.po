@@ -11,8 +11,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2022-11-11 22:27+0200\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"PO-Revision-Date: 2024-02-24 13:13+0200\n"
+"Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
@@ -165,7 +165,8 @@ msgid "Sleep"
 msgstr "Valmiustila"
 
 #: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hibernate"
 msgid "Hibernate"
 msgstr "Lepotila"
 
@@ -248,7 +249,8 @@ msgstr ""
 "Uudelleenkäynnistettäessä tietokone siirtyy laiteohjelmiston asetusnäyttöön."
 
 #: contents/logout/Logout.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Log Out"
 msgid "Log Out"
 msgstr "Kirjaudu ulos"
 
@@ -279,7 +281,8 @@ msgid "OK"
 msgstr "OK"
 
 #: contents/logout/Logout.qml:245
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
 msgid "Cancel"
 msgstr "Peru"
 
