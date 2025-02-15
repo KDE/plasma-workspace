@@ -233,6 +233,7 @@ void RunnerModel::initializeModels()
     }
     for (auto model : std::as_const(m_models)) {
         connect(model->runnerManager(), &KRunner::RunnerManager::queryFinished, this, [this]() {
+            Q_EMIT anyRunnerFinished();
             if (--m_queryingModels == 0) {
                 Q_EMIT queryFinished();
             }

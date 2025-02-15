@@ -65,6 +65,7 @@ Q_SIGNALS:
     void queryFinished();
     void mergeResultsChanged() const;
     void requestUpdateQuery(const QString &query);
+    void anyRunnerFinished();
 
 private Q_SLOTS:
     void startQuery();
