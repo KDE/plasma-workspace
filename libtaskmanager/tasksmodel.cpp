@@ -774,34 +774,38 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
     // as the launchers they replace (see also move()).
 
     if (separateLaunchers) {
-        if (left.data(AbstractTasksModel::IsLauncher).toBool() && right.data(AbstractTasksModel::IsLauncher).toBool()) {
-            return (left.row() < right.row());
-        } else if (left.data(AbstractTasksModel::IsLauncher).toBool() && !right.data(AbstractTasksModel::IsLauncher).toBool()) {
-            if (launchInPlace) {
-                const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
-                const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+        const bool leftIsLauncher = left.data(AbstractTasksModel::IsLauncher).toBool();
+        const bool rightIsLauncher = right.data(AbstractTasksModel::IsLauncher).toBool();
 
+        if (leftIsLauncher && rightIsLauncher) {
+            return (left.row() < right.row());
+        }
+
+        const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+        const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+
+        if (leftIsLauncher && !rightIsLauncher) {
+            if (launchInPlace) {
                 if (rightPos != -1) {
                     return (leftPos < rightPos);
                 }
             }
 
             return true;
-        } else if (!left.data(AbstractTasksModel::IsLauncher).toBool() && right.data(AbstractTasksModel::IsLauncher).toBool()) {
-            if (launchInPlace) {
-                const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
-                const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+        }
 
+        if (!leftIsLauncher && rightIsLauncher) {
+            if (launchInPlace) {
                 if (leftPos != -1) {
                     return (leftPos < rightPos);
                 }
             }
 
             return false;
-        } else if (launchInPlace) {
-            const int leftPos = q->launcherPosition(left.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
-            const int rightPos = q->launcherPosition(right.data(AbstractTasksModel::LauncherUrlWithoutIcon).toUrl());
+        }
 
+        // neither is a launcher
+        if (launchInPlace) {
             if (leftPos != -1 && rightPos != -1) {
                 return (leftPos < rightPos);
             } else if (leftPos != -1 && rightPos == -1) {
