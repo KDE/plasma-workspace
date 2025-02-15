@@ -86,6 +86,8 @@ Q_SIGNALS:
     void skiptaskbarChanged();
     void shadeableChanged();
     void shadedChanged();
+    void canSetNoBorderChanged();
+    void hasNoBorderChanged();
     void movableChanged();
     void resizableChanged();
     void virtualDesktopChangeableChanged();
@@ -249,6 +251,14 @@ protected:
         if (diff & state::state_skipswitcher) {
             windowState.setFlag(state::state_skipswitcher, flags & state::state_skipswitcher);
             Q_EMIT skipSwitcherChanged();
+        }
+        if (diff & state::state_can_set_no_border) {
+            windowState.setFlag(state::state_can_set_no_border, flags & state::state_can_set_no_border);
+            Q_EMIT canSetNoBorderChanged();
+        }
+        if (diff & state::state_no_border) {
+            windowState.setFlag(state::state_no_border, flags & state::state_no_border);
+            Q_EMIT hasNoBorderChanged();
         }
     }
     void org_kde_plasma_window_virtual_desktop_entered(const QString &id) override
@@ -718,6 +728,14 @@ void WaylandTasksModel::Private::addWindow(PlasmaWindow *window)
         this->dataChanged(window, IsShadeable);
     });
 
+    QObject::connect(window, &PlasmaWindow::canSetNoBorderChanged, q, [window, this] {
+        this->dataChanged(window, CanSetNoBorder);
+    });
+
+    QObject::connect(window, &PlasmaWindow::hasNoBorderChanged, q, [window, this] {
+        this->dataChanged(window, HasNoBorder);
+    });
+
     QObject::connect(window, &PlasmaWindow::virtualDesktopChangeableChanged, q, [window, this] {
         this->dataChanged(window, IsVirtualDesktopsChangeable);
     });
@@ -927,6 +945,10 @@ QVariant WaylandTasksModel::data(const QModelIndex &index, int role) const
         return window->windowState.testFlag(PlasmaWindow::state::state_shadeable);
     } else if (role == IsShaded) {
         return window->windowState.testFlag(PlasmaWindow::state::state_shaded);
+    } else if (role == CanSetNoBorder) {
+        return window->windowState.testFlag(PlasmaWindow::state::state_can_set_no_border);
+    } else if (role == HasNoBorder) {
+        return window->windowState.testFlag(PlasmaWindow::state::state_no_border);
     } else if (role == IsVirtualDesktopsChangeable) {
         return window->windowState.testFlag(PlasmaWindow::state::state_virtual_desktop_changeable);
     } else if (role == VirtualDesktops) {
@@ -1137,6 +1159,21 @@ void WaylandTasksModel::requestToggleShaded(const QModelIndex &index)
         window->set_state(PlasmaWindow::state::state_shaded, 0);
     } else {
         window->set_state(PlasmaWindow::state::state_shaded, PlasmaWindow::state::state_shaded);
+    };
+}
+
+void WaylandTasksModel::requestToggleNoBorder(const QModelIndex &index)
+{
+    if (!checkIndex(index, QAbstractItemModel::CheckIndexOption::IndexIsValid | QAbstractItemModel::CheckIndexOption::DoNotUseParent)) {
+        return;
+    }
+
+    auto &window = d->windows.at(index.row());
+
+    if (window->windowState & PlasmaWindow::state::state_no_border) {
+        window->set_state(PlasmaWindow::state::state_no_border, 0);
+    } else {
+        window->set_state(PlasmaWindow::state::state_no_border, PlasmaWindow::state::state_no_border);
     };
 }
 

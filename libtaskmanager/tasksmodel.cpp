@@ -1576,6 +1576,13 @@ void TasksModel::requestToggleShaded(const QModelIndex &index)
     }
 }
 
+void TasksModel::requestToggleNoBorder(const QModelIndex &index)
+{
+    if (index.isValid() && index.model() == this) {
+        d->abstractTasksSourceModel->requestToggleNoBorder(mapToSource(index));
+    }
+}
+
 void TasksModel::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (index.isValid() && index.model() == this) {

@@ -178,6 +178,20 @@ void AbstractTasksProxyModelIface::requestToggleShaded(const QModelIndex &index)
     }
 }
 
+void AbstractTasksProxyModelIface::requestToggleNoBorder(const QModelIndex &index)
+{
+    if (!index.isValid()) {
+        return;
+    }
+
+    const QModelIndex &sourceIndex = mapIfaceToSource(index);
+    const AbstractTasksModelIface *m = dynamic_cast<const AbstractTasksModelIface *>(sourceIndex.model());
+
+    if (m) {
+        const_cast<AbstractTasksModelIface *>(m)->requestToggleNoBorder(sourceIndex);
+    }
+}
+
 void AbstractTasksProxyModelIface::requestVirtualDesktops(const QModelIndex &index, const QVariantList &desktops)
 {
     if (!index.isValid()) {

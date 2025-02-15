@@ -847,6 +847,17 @@ public:
     Q_INVOKABLE void requestToggleShaded(const QModelIndex &index) override;
 
     /**
+     * Request toggling the no border state of the task at given index.
+     *
+     * This is meant for tasks that have an associated window, and may be
+     * a no-op when there is no window.
+     *
+     * @param index An index in this tasks model.
+     * @since 6.4
+     */
+    Q_INVOKABLE void requestToggleNoBorder(const QModelIndex &index) override;
+
+    /**
      * Request entering the window at the given index on the specified virtual desktops.
      *
      * On Wayland, virtual desktop ids are QStrings. On X11, they are uint >0.

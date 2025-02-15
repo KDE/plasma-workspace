@@ -197,6 +197,17 @@ public:
      * reject invalid objects.
      **/
     virtual void requestPublishDelegateGeometry(const QModelIndex &index, const QRect &geometry, QObject *delegate = nullptr) = 0;
+
+    /**
+     * Request toggling the no border state of the task at given index.
+     *
+     * This is meant for tasks that have an associated window, and may be
+     * a no-op when there is no window.
+     *
+     * @param index An index in this tasks model.
+     * @since 6.4
+     **/
+    virtual void requestToggleNoBorder(const QModelIndex &index) = 0;
 };
 
 }
