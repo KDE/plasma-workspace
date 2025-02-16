@@ -823,29 +823,23 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
 
     // Sort other cases by sort mode.
     switch (sortMode) {
+    case SortDisabled: {
+        return (left.row() < right.row());
+    }
+
     case SortLastActivated: {
-        QDateTime leftSortDateTime, rightSortDateTime;
+        const auto getSortDateTime = [](const QModelIndex &model) {
+            // Check if the task is in a group
+            const QModelIndex topMost = model.parent().isValid() ? model.parent() : model;
+            QDateTime sortDateTime = topMost.data(AbstractTasksModel::LastActivated).toDateTime();
+            if (!sortDateTime.isValid()) {
+                sortDateTime = model.data(Qt::DisplayRole).toDateTime();
+            }
+            return sortDateTime;
+        };
 
-        // Check if the task is in a group
-        if (left.parent().isValid()) {
-            leftSortDateTime = left.parent().data(AbstractTasksModel::LastActivated).toDateTime();
-        } else {
-            leftSortDateTime = left.data(AbstractTasksModel::LastActivated).toDateTime();
-        }
-
-        if (!leftSortDateTime.isValid()) {
-            leftSortDateTime = left.data(Qt::DisplayRole).toDateTime();
-        }
-
-        if (right.parent().isValid()) {
-            rightSortDateTime = right.parent().data(AbstractTasksModel::LastActivated).toDateTime();
-        } else {
-            rightSortDateTime = right.data(AbstractTasksModel::LastActivated).toDateTime();
-        }
-
-        if (!rightSortDateTime.isValid()) {
-            rightSortDateTime = right.data(Qt::DisplayRole).toDateTime();
-        }
+        const QDateTime leftSortDateTime = getSortDateTime(left);
+        const QDateTime rightSortDateTime = getSortDateTime(right);
 
         if (leftSortDateTime != rightSortDateTime) {
             // Move latest to leftmost
@@ -854,43 +848,37 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
 
         Q_FALLTHROUGH();
     }
-
+    // fall through
     case SortVirtualDesktop: {
         const bool leftAll = left.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
         const bool rightAll = right.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
 
         if (leftAll && !rightAll) {
             return true;
-        } else if (rightAll && !leftAll) {
+        }
+
+        if (!leftAll && rightAll) {
             return false;
         }
 
-        if (!(leftAll && rightAll)) {
-            const QVariantList &leftDesktops = left.data(AbstractTasksModel::VirtualDesktops).toList();
-            QVariant leftDesktop;
-            int leftDesktopPos = virtualDesktopInfo->numberOfDesktops();
+        if (!leftAll && !rightAll) {
+            const auto getDesktop = [this](const QModelIndex &model) {
+                const QVariantList modelDesktops = model.data(AbstractTasksModel::VirtualDesktops).toList();
+                QVariant modelDesktop;
+                int modelDesktopPos = virtualDesktopInfo->numberOfDesktops();
+                for (const QVariant &desktop : modelDesktops) {
+                    const int desktopPos = virtualDesktopInfo->position(desktop);
 
-            for (const QVariant &desktop : leftDesktops) {
-                const int desktopPos = virtualDesktopInfo->position(desktop);
-
-                if (desktopPos <= leftDesktopPos) {
-                    leftDesktop = desktop;
-                    leftDesktopPos = desktopPos;
+                    if (desktopPos <= modelDesktopPos) {
+                        modelDesktop = desktop;
+                        modelDesktopPos = desktopPos;
+                    }
                 }
-            }
+                return modelDesktop;
+            };
 
-            const QVariantList &rightDesktops = right.data(AbstractTasksModel::VirtualDesktops).toList();
-            QVariant rightDesktop;
-            int rightDesktopPos = virtualDesktopInfo->numberOfDesktops();
-
-            for (const QVariant &desktop : rightDesktops) {
-                const int desktopPos = virtualDesktopInfo->position(desktop);
-
-                if (desktopPos <= rightDesktopPos) {
-                    rightDesktop = desktop;
-                    rightDesktopPos = desktopPos;
-                }
-            }
+            const QVariant leftDesktop = getDesktop(left);
+            const QVariant rightDesktop = getDesktop(right);
 
             if (!leftDesktop.isNull() && !rightDesktop.isNull() && (leftDesktop != rightDesktop)) {
                 return (virtualDesktopInfo->position(leftDesktop) < virtualDesktopInfo->position(rightDesktop));
@@ -907,15 +895,16 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
         // activity. This will sort tasks by comparing a cumulative score made
         // up of the task counts for each activity a task is assigned to, and
         // otherwise fall through to alphabetical sorting.
-        const QStringList &leftActivities = left.data(AbstractTasksModel::Activities).toStringList();
-        int leftScore = std::accumulate(leftActivities.cbegin(), leftActivities.cend(), -1, [this](int a, const QString &activity) {
-            return a + activityTaskCounts[activity];
-        });
+        const auto getScore = [this](const QModelIndex &model) {
+            const QStringList activities = model.data(AbstractTasksModel::Activities).toStringList();
+            const int score = std::accumulate(activities.cbegin(), activities.cend(), -1, [this](int a, const QString &activity) {
+                return a + activityTaskCounts[activity];
+            });
+            return score;
+        };
 
-        const QStringList &rightActivities = right.data(AbstractTasksModel::Activities).toStringList();
-        int rightScore = std::accumulate(rightActivities.cbegin(), rightActivities.cend(), -1, [this](int a, const QString &activity) {
-            return a + activityTaskCounts[activity];
-        });
+        int leftScore = getScore(left);
+        int rightScore = getScore(right);
 
         if (leftScore == -1 || rightScore == -1) {
             const int sumScore = std::accumulate(activityTaskCounts.constBegin(), activityTaskCounts.constEnd(), 0);
@@ -933,50 +922,46 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
             return (leftScore > rightScore);
         }
     }
-    // Fall through to source order if sorting is disabled or manual, or alphabetical by app name otherwise.
-    // This marker comment makes gcc/clang happy:
+    // fall through
+    case SortAlpha:
     // fall through
     default: {
-        if (sortMode == SortDisabled) {
-            return (left.row() < right.row());
-        } else {
-            // The overall goal of alphabetic sorting is to sort tasks belonging to the
-            // same app together, while sorting the resulting sets alphabetically among
-            // themselves by the app name. The following code tries to achieve this by
-            // going for AppName first, and falling back to DisplayRole - which for
-            // window-type tasks generally contains the window title - if AppName is
-            // not available. When comparing tasks with identical resulting sort strings,
-            // we sort them by the source model order (i.e. insertion/creation). Older
-            // versions of this code compared tasks by a concatenation of AppName and
-            // DisplayRole at all times, but always sorting by the window title does more
-            // than our goal description - and can cause tasks within an app's set to move
-            // around when window titles change, which is a nuisance for users (especially
-            // in case of tabbed apps that have the window title reflect the active tab,
-            // e.g. web browsers). To recap, the common case is "sort by AppName, then
-            // insertion order", only swapping out AppName for DisplayRole (i.e. window
-            // title) when necessary.
+        // The overall goal of alphabetic sorting is to sort tasks belonging to the
+        // same app together, while sorting the resulting sets alphabetically among
+        // themselves by the app name. The following code tries to achieve this by
+        // going for AppName first, and falling back to DisplayRole - which for
+        // window-type tasks generally contains the window title - if AppName is
+        // not available. When comparing tasks with identical resulting sort strings,
+        // we sort them by the source model order (i.e. insertion/creation). Older
+        // versions of this code compared tasks by a concatenation of AppName and
+        // DisplayRole at all times, but always sorting by the window title does more
+        // than our goal description - and can cause tasks within an app's set to move
+        // around when window titles change, which is a nuisance for users (especially
+        // in case of tabbed apps that have the window title reflect the active tab,
+        // e.g. web browsers). To recap, the common case is "sort by AppName, then
+        // insertion order", only swapping out AppName for DisplayRole (i.e. window
+        // title) when necessary.
 
-            QString leftSortString = left.data(AbstractTasksModel::AppName).toString();
+        QString leftSortString = left.data(AbstractTasksModel::AppName).toString();
 
-            if (leftSortString.isEmpty()) {
-                leftSortString = left.data(Qt::DisplayRole).toString();
-            }
-
-            QString rightSortString = right.data(AbstractTasksModel::AppName).toString();
-
-            if (rightSortString.isEmpty()) {
-                rightSortString = right.data(Qt::DisplayRole).toString();
-            }
-
-            const int sortResult = leftSortString.localeAwareCompare(rightSortString);
-
-            // If the string are identical fall back to source model (creation/append) order.
-            if (sortResult == 0) {
-                return (left.row() < right.row());
-            }
-
-            return (sortResult < 0);
+        if (leftSortString.isEmpty()) {
+            leftSortString = left.data(Qt::DisplayRole).toString();
         }
+
+        QString rightSortString = right.data(AbstractTasksModel::AppName).toString();
+
+        if (rightSortString.isEmpty()) {
+            rightSortString = right.data(Qt::DisplayRole).toString();
+        }
+
+        const int sortResult = leftSortString.localeAwareCompare(rightSortString);
+
+        // If the string are identical fall back to source model (creation/append) order.
+        if (sortResult == 0) {
+            return (left.row() < right.row());
+        }
+
+        return (sortResult < 0);
     }
     }
 }
