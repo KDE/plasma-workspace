@@ -542,18 +542,18 @@ msgstr "Reintenta l'escaneig del dit."
 #: src/fingerprintmodel.cpp:333
 #, kde-format
 msgid "Swipe too short. Try again."
-msgstr "El lliscament és massa curt. Torneu-ho a intentar."
+msgstr "El lliscament és massa curt. Torneu-ho a provar."
 
 #: src/fingerprintmodel.cpp:335
 #, kde-format
 msgid "Finger not centered on the reader. Try again."
-msgstr "El dit no està centrat en el lector. Torneu-ho a intentar."
+msgstr "El dit no està centrat en el lector. Torneu-ho a provar."
 
 # skip-rule: kct-remove
 #: src/fingerprintmodel.cpp:337
 #, kde-format
 msgid "Remove your finger from the reader, and try again."
-msgstr "Retireu el dit del lector, i torneu-ho a intentar."
+msgstr "Retireu el dit del lector, i torneu-ho a provar."
 
 #: src/fingerprintmodel.cpp:345
 #, kde-format

@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2016, 2017, 2018, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2021, 2022, 2023, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-29 02:35+0000\n"
-"PO-Revision-Date: 2022-12-10 11:37+0100\n"
+"PO-Revision-Date: 2025-02-15 11:20+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:190
 #, kde-format
@@ -99,7 +100,7 @@ msgstr "Zakończ"
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Choose player automatically"
-msgstr "Samoczynnie wybierz odtwarzacz"
+msgstr "Sam wybierz odtwarzacz"
 
 #: package/contents/ui/main.qml:292
 #, kde-format
