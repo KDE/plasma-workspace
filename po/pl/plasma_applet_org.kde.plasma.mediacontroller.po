@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2021, 2022, 2023, 2025 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2014, 2016, 2017, 2018, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-10 00:42+0000\n"
-"PO-Revision-Date: 2023-09-17 12:58+0200\n"
+"PO-Revision-Date: 2025-02-15 11:20+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -16,6 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
@@ -38,27 +39,25 @@ msgstr "-%1"
 #: package/contents/ui/ExpandedRepresentation.qml:562
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "Szybkość odtwarzania %1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:565
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "-%1"
+msgstr "%1x"
 
 #: package/contents/ui/ExpandedRepresentation.qml:569
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "Szybkość odtwarzania"
 
 #: package/contents/ui/ExpandedRepresentation.qml:615
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (Normalny)"
 
 #: package/contents/ui/ExpandedRepresentation.qml:654
 #, kde-format
