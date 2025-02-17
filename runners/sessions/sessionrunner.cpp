@@ -18,6 +18,7 @@
 
 #include "config-workspace.h"
 #include "dbusutils_p.h"
+#include "krunner1adaptor.h"
 
 using namespace Qt::StringLiterals;
 
@@ -39,6 +40,14 @@ int main(int argc, char **argv)
 SessionRunner::SessionRunner(QObject *parent)
     : QObject(parent)
 {
+    new Krunner1Adaptor(this);
+    qDBusRegisterMetaType<RemoteMatch>();
+    qDBusRegisterMetaType<RemoteMatches>();
+    qDBusRegisterMetaType<RemoteAction>();
+    qDBusRegisterMetaType<RemoteActions>();
+    QDBusConnection::sessionBus().registerObject(QStringLiteral("/runner"), this);
+    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.runners.sessions"));
+
     m_logoutKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to log out of the session", "logout;log out")
                            .split(QLatin1Char(';'), Qt::SkipEmptyParts);
     if (m_session.canLogout()) {
@@ -81,8 +90,11 @@ SessionRunner::SessionRunner(QObject *parent)
     m_switchKeyword = i18nc("KRunner keyword to switch user sessions", "switch");
     // TODO addSyntax(m_switchKeyword + QStringLiteral(" :q:"),
     //           i18n("Switches to the active session for the user :q:, or lists all active sessions if :q: is not provided"));
+}
 
-    // setMinLetterCount(3);
+RemoteActions SessionRunner::Actions()
+{
+    return RemoteActions();
 }
 
 static inline bool anyKeywordMatches(const QStringList &keywords, const QString &term)
@@ -100,38 +112,38 @@ RemoteMatches SessionRunner::matchCommands(const QString &term)
     match.relevance = 0.9;
     if (anyKeywordMatches(m_logoutKeywords, term)) {
         if (m_session.canLogout()) {
+            match.id = QString::number(LogoutAction);
             match.text = i18nc("log out command", "Log Out");
             match.iconName = QStringLiteral("system-log-out");
-            match.properties[QStringLiteral("action")] = LogoutAction;
             matches << match;
         }
     } else if (anyKeywordMatches(m_shutdownKeywords, term)) {
         if (m_session.canShutdown()) {
             RemoteMatch match;
+            match.id = QString::number(ShutdownAction);
             match.text = i18nc("turn off computer command", "Shut Down");
             match.iconName = QStringLiteral("system-shutdown");
-            match.properties[QStringLiteral("action")] = ShutdownAction;
             matches << match;
         }
     } else if (anyKeywordMatches(m_restartKeywords, term)) {
         if (m_session.canReboot()) {
+            match.id = QString::number(RestartAction);
             match.text = i18nc("restart computer command", "Restart");
             match.iconName = QStringLiteral("system-reboot");
-            match.properties[QStringLiteral("action")] = RestartAction;
             matches << match;
         }
     } else if (anyKeywordMatches(m_lockKeywords, term)) {
         if (m_session.canLock()) {
+            match.id = QString::number(LockAction);
             match.text = i18nc("lock screen command", "Lock");
             match.iconName = QStringLiteral("system-lock-screen");
-            match.properties[QStringLiteral("action")] = LockAction;
             matches << match;
         }
     } else if (anyKeywordMatches(m_saveKeywords, term)) {
         if (m_session.canSaveSession()) {
+            match.id = QString::number(SaveAction);
             match.text = i18n("Save Session");
             match.iconName = QStringLiteral("system-save-session");
-            match.properties[QStringLiteral("action")] = SaveAction;
             matches << match;
         }
     }
@@ -168,6 +180,7 @@ RemoteMatches SessionRunner::Match(const QString &term)
 
     if (switchUser && m_session.canSwitchUser() && dm.isSwitchable() && dm.numReserve() >= 0) {
         RemoteMatch match;
+        match.id = QString::number(SwitchUserAction);
         match.categoryRelevance = qToUnderlying(KRunner::QueryMatch::CategoryRelevance::Highest);
         match.iconName = QStringLiteral("system-switch-user");
         match.text = i18n("Switch User");
@@ -210,9 +223,9 @@ RemoteMatches SessionRunner::Match(const QString &term)
             RemoteMatch match;
             match.categoryRelevance = qToUnderlying(categoryRelevance);
             match.relevance = relevance;
+            match.id = QStringLiteral("terminal:") % QString::number(session.vt);
             match.iconName = QStringLiteral("user-identity");
             match.text = name;
-            match.properties[QStringLiteral("terminal")] = QString::number(session.vt);
             matches << match;
         }
     }
@@ -222,30 +235,32 @@ RemoteMatches SessionRunner::Match(const QString &term)
 
 void SessionRunner::Run(const QString &id, const QString &actionId)
 {
-    /*
-    if (match.data().typeId() == QMetaType::Int) {
-        switch (match.data().toInt()) {
+    qWarning() << "RUN" << id << actionId;
+
+    bool isBaseAction = false;
+    Action mainAction = Action(id.toInt(&isBaseAction));
+    if (isBaseAction) {
+        switch (mainAction) {
         case LogoutAction:
             m_session.requestLogout();
-            break;
+            return;
         case RestartAction:
             m_session.requestReboot();
-            break;
+            return;
         case ShutdownAction:
             m_session.requestShutdown();
-            break;
+            return;
         case LockAction:
             m_session.lock();
-            break;
+            return;
         case SaveAction:
             m_session.saveSession();
-            break;
+            return;
         }
-        return;
     }
 
-    if (!match.data().toString().isEmpty()) {
-        dm.lockSwitchVT(match.data().toString().toInt());
+    if (QStringList parts = id.split(QLatin1Char(':')); parts.count() == 2 && parts.first() == QStringLiteral("terminal")) {
+        dm.lockSwitchVT(parts.last().toInt());
         return;
     }
 
@@ -273,7 +288,7 @@ void SessionRunner::Run(const QString &id, const QString &actionId)
     if (confirmNewSession == KMessageBox::Continue) {
         m_session.lock();
         dm.startReserve();
-    }*/
+    }
 }
 
 #include "sessionrunner.moc"

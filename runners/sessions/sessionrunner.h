@@ -28,15 +28,17 @@ class SessionRunner : public QObject, protected QDBusContext
 public:
     SessionRunner(QObject *parent = nullptr);
 
+    RemoteActions Actions();
     RemoteMatches Match(const QString &term);
     void Run(const QString &id, const QString &actionId);
 
-    enum {
+    enum Action {
         LogoutAction = 1,
         ShutdownAction,
         RestartAction,
         LockAction,
         SaveAction,
+        SwitchUserAction
     };
 
 private:
