@@ -68,6 +68,7 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
         q->beginRemoveRows(QModelIndex(), 0, cleanupCount - 1);
         for (int i = 0; i < cleanupCount; ++i) {
             Notification::Private::s_imageCache.remove(notifications.at(0).id());
+            q->stopTimeout(notifications.first().id());
             notifications.removeAt(0);
             // TODO close gracefully?
         }
