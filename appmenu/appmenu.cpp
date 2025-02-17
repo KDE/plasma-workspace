@@ -203,6 +203,12 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
         });
 
         if (m_plasmashell) {
+            QScreen *screen = QGuiApplication::screenAt(QPoint(x, y));
+            if (!screen) {
+                screen = QGuiApplication::primaryScreen();
+            }
+
+            const QRect screenRect = screen->geometry();
             if (!m_menu->isVisible()) {
                 // We create a invisible toplevel so the menu can be an xdg_popup which is important
                 // to have the expected UX of an menu. By using the ToolTip role it cannot receive
@@ -211,7 +217,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
                 auto toplevelWindow = new ToplevelWindow;
                 toplevelWindow->setFlag(Qt::FramelessWindowHint);
                 toplevelWindow->QObject::setParent(menu);
-                toplevelWindow->setGeometry(0, 0, 1, 1);
+                toplevelWindow->setGeometry(QRect(screenRect.topLeft(), QSize(1, 1)));
                 auto surface = KWayland::Client::Surface::fromWindow(toplevelWindow);
                 auto plasmaSurface = m_plasmashell->createSurface(surface, surface);
                 plasmaSurface->setSkipSwitcher(true);
@@ -224,7 +230,7 @@ void AppMenuModule::slotShowMenu(int x, int y, const QString &serviceName, const
                 });
                 ensureSerial(toplevelWindow);
             }
-            m_menu.data()->popup(QPoint(0, 0));
+            m_menu.data()->popup(screenRect.topLeft());
         } else {
             m_menu.data()->popup(QPoint(x, y) / qApp->devicePixelRatio());
         }
