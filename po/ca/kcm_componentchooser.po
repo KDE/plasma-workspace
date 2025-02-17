@@ -10,7 +10,7 @@
 # SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2016, 2017, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma-desktop\n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-16 00:43+0000\n"
 "PO-Revision-Date: 2024-09-26 10:24+0200\n"

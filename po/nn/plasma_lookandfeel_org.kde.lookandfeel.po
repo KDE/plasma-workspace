@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-31 00:42+0000\n"
-"PO-Revision-Date: 2024-09-01 15:05+0200\n"
+"PO-Revision-Date: 2025-02-16 12:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -77,33 +77,31 @@ msgstr ""
 "oppsett av fastvara."
 
 #: contents/logout/Logout.qml:203
-#, fuzzy, kde-format
+#, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr ""
-"Når maskina vert starta på nytt, vil ho starta systeminnstillingane for "
-"oppsett av fastvara."
+msgstr "Når maskina vert starta på nytt, vil ho starta oppstartslastar-menyen."
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "Kvilemodus"
+msgstr "&Kvilemodus"
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "Gå i kvilemodus no"
+msgstr "Gå i &kvilemodus no"
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Hibernate"
-msgstr "Dvalemodus"
+msgstr "&Dvalemodus"
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "Gå i dvalemodus no"
+msgstr "Gå i &dvalemodus no"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -112,14 +110,14 @@ msgid "Install Updates and Restart"
 msgstr "Installer oppdateringar og start på nytt"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Restart"
-msgstr "Start på nytt"
+msgstr "&Start på nytt"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Restart Now"
-msgstr "Start på nytt no"
+msgstr "&Start på nytt no"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -129,29 +127,29 @@ msgstr "Installer oppdateringar og slå av"
 
 # Teksten bør vera kort, for å unngå å bli delt over fleire linjer (så «Slå av maskina», som stod før, er gjerne hakket for langt), sidan dei andre tekstane er på éi linje.
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Shut Down"
-msgstr "Slå av"
+msgstr "Slå a&v"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "Slå av no"
+msgstr "Slå a&v no"
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Log Out"
-msgstr "Logg ut"
+msgstr "&Logg ut"
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Log Out Now"
-msgstr "Logg ut no"
+msgstr "&Logg ut no"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Cancel"
-msgstr "Avbryt"
+msgstr "&Avbryt"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format
