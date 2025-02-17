@@ -93,7 +93,7 @@ PlasmaComponents.ItemDelegate {
     // see https://bugs.kde.org/show_bug.cgi?id=387797
     // Instead place highlight in each delegate and we don't keep the highlight in view
     PlasmaExtras.Highlight {
-        hovered: menuItem.hovered
+        hovered: menuItem.ListView.isCurrentItem
         anchors.fill: parent
         z: 1
     }
