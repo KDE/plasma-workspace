@@ -1,3 +1,10 @@
+/*
+    SPDX-FileCopyrightText: 2017 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2025 Marco Martin <mart@kde.org>
+
+    SPDX-License-Identifier: LGPL-2.0-only
+*/
+
 #pragma once
 
 #include <KRunner/QueryMatch>
