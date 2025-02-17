@@ -50,46 +50,25 @@ SessionRunner::SessionRunner(QObject *parent)
 
     m_logoutKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to log out of the session", "logout;log out")
                            .split(QLatin1Char(';'), Qt::SkipEmptyParts);
-    if (m_session.canLogout()) {
-        // TODO addSyntax(m_logoutKeywords, i18n("Logs out, exiting the current desktop session"));
-    }
 
     m_shutdownKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to shut down the computer", "shutdown;shut down;power;power off")
                              .split(QLatin1Char(';'), Qt::SkipEmptyParts);
-    if (m_session.canShutdown()) {
-        // TODO addSyntax(m_shutdownKeywords, i18n("Turns off the computer"));
-    }
 
     m_restartKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to restart the computer", "restart;reboot")
                             .split(QLatin1Char(';'), Qt::SkipEmptyParts);
-    if (m_session.canReboot()) {
-        // TODO addSyntax(m_restartKeywords, i18n("Reboots the computer"));
-    }
 
     m_lockKeywords =
         i18nc("KRunner keywords (split by semicolons without whitespace) to lock the screen", "lock;lock screen").split(QLatin1Char(';'), Qt::SkipEmptyParts);
-    if (m_session.canLock()) {
-        // TODO addSyntax(m_lockKeywords, i18n("Locks the current sessions and starts the screen saver"));
-    }
 
     m_saveKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to save the desktop session", "save;save session")
                          .split(QLatin1Char(';'), Qt::SkipEmptyParts);
-    if (m_session.canSaveSession()) {
-        // TODO addSyntax(m_saveKeywords, i18n("Saves the current session for session restoration"));
-    }
 
     m_usersKeywords = i18nc("KRunner keywords (split by semicolons without whitespace) to switch user sessions", "switch user;new session")
                           .split(QLatin1Char(';'), Qt::SkipEmptyParts);
-    if (m_session.canSwitchUser()) {
-        // TODO addSyntax(m_usersKeywords, i18n("Starts a new session as a different user"));
-    }
 
     m_sessionsKeyword = i18nc("KRunner keyword to list user sessions", "sessions");
-    // TODO addSyntax(m_sessionsKeyword, i18n("Lists all sessions"));
 
     m_switchKeyword = i18nc("KRunner keyword to switch user sessions", "switch");
-    // TODO addSyntax(m_switchKeyword + QStringLiteral(" :q:"),
-    //           i18n("Switches to the active session for the user :q:, or lists all active sessions if :q: is not provided"));
 }
 
 RemoteActions SessionRunner::Actions()

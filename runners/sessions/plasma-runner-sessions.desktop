@@ -114,3 +114,5 @@ X-Plasma-Request-Actions-Once=true
 X-Plasma-Runner-Min-Letter-Count=3
 X-Plasma-Runner-Unique-Results=true
 X-Plasma-Runner-Weak-Results=true
+X-Plasma-Runner-Syntaxes=logout;log out,shutdown;shut down;power;power off,restart;reboot,lock;lock screen,save;save session,switch user;new session,sessions,switch :q:
+X-Plasma-Runner-Syntax-Descriptions=Logs out exiting the current desktop session,Turns off the computer,Reboots the computer,Locks the current sessions and starts the screen saver,Saves the current session for session restoration,Starts a new session as a different user,Lists all sessions,Switches to the active session for the user :q: or lists all active sessions if :q: is not provided
