@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma_lookandfeel_org.kde.lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-12 02:31+0000\n"
-"PO-Revision-Date: 2024-01-19 23:29+0900\n"
+"PO-Revision-Date: 2024-02-05 00:22+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -164,7 +164,8 @@ msgid "Sleep"
 msgstr "スリープ"
 
 #: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hibernate"
 msgid "Hibernate"
 msgstr "ハイバネート"
 
@@ -234,8 +235,8 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
-"現在、他に%1人のユーザがログインしています。もしコンピュータがシャットダウン"
-"もしくは再起動された場合、そのユーザは作業中のデータを失う可能性があります。"
+"現在、他に%1人のユーザがログインしています。コンピュータがシャットダウンもし"
+"くは再起動された場合、そのユーザは作業中のデータを失う可能性があります。"
 
 #: contents/logout/Logout.qml:153
 #, kde-format
@@ -243,7 +244,8 @@ msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr "再起動すると、コンピュータはファームウェア設定画面に入ります。"
 
 #: contents/logout/Logout.qml:201
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Log Out"
 msgid "Log Out"
 msgstr "ログアウト"
 
@@ -271,7 +273,8 @@ msgid "OK"
 msgstr "OK"
 
 #: contents/logout/Logout.qml:245
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Cancel"
 msgid "Cancel"
 msgstr "キャンセル"
 
