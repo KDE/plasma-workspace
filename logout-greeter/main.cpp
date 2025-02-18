@@ -24,6 +24,17 @@
 
 using namespace Qt::StringLiterals;
 
+QString shellPackage()
+{
+    KSharedConfig::Ptr startupConf = KSharedConfig::openConfig(QStringLiteral("plasmashellrc"));
+    KConfigGroup startupConfGroup(startupConf, QStringLiteral("Shell"));
+    const QString defaultValue = qEnvironmentVariable("PLASMA_DEFAULT_SHELL", QStringLiteral("org.kde.plasma.desktop"));
+    QString value = startupConfGroup.readEntry("ShellPackage", defaultValue);
+
+    // In the global theme an empty value was written, make sure we still return a shell package
+    return value.isEmpty() ? defaultValue : value;
+}
+
 int main(int argc, char *argv[])
 {
     qunsetenv("SESSION_MANAGER");
@@ -37,19 +48,13 @@ int main(int argc, char *argv[])
 
     bool windowed = false;
     KConfigGroup cg(KSharedConfig::openConfig(QStringLiteral("kdeglobals")), u"KDE"_s);
-    QString packageName = cg.readEntry("LookAndFeelPackage", QString());
     {
         QCommandLineParser parser;
         QCommandLineOption testingOption(u"windowed"_s, u"have the dialog show, windowed, regardless of the session state"_s);
-        QCommandLineOption lnfOption(u"lookandfeel"_s, u"The look and feel package name to use"_s, u"name"_s, packageName);
         parser.addOption(testingOption);
-        parser.addOption(lnfOption);
         parser.addHelpOption();
         parser.process(app);
         windowed = parser.isSet(testingOption);
-        if (parser.isSet(lnfOption)) {
-            packageName = parser.value(lnfOption);
-        }
     }
 
     // because we export stuff as horrific contextProperties we need to know "maysd" may shutdown, at the time of initial creation and can't update
@@ -65,10 +70,11 @@ int main(int argc, char *argv[])
         e.exec();
     }
 
-    const auto pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/LookAndFeel"), packageName);
+    const QString packageName = shellPackage();
+    const auto pkg = KPackage::PackageLoader::self()->loadPackage(QStringLiteral("Plasma/Shell"), packageName);
 
     if (!pkg.isValid()) {
-        qCWarning(LOGOUT_GREETER) << "Failed to load lookandfeel package" << packageName;
+        qCWarning(LOGOUT_GREETER) << "Failed to load desktop package" << packageName;
     }
 
     Greeter greeter(pkg);
