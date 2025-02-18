@@ -130,11 +130,15 @@ PlasmaComponents3.ScrollView {
         }
         case Qt.Key_PageUp: {
             menuListView.currentIndex = Math.max(menuListView.currentIndex - pageUpPageDownSkipCount, 0);
+            menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
+            menuListView.currentItem.forceActiveFocus()
             event.accepted = true;
             break;
         }
         case Qt.Key_PageDown: {
             menuListView.currentIndex = Math.min(menuListView.currentIndex + pageUpPageDownSkipCount, menuListView.count - 1);
+            menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Beginning)
+            menuListView.currentItem.forceActiveFocus()
             event.accepted = true;
             break;
         }
@@ -255,8 +259,21 @@ PlasmaComponents3.ScrollView {
             if (menuListView.currentIndex === 0) {
                 menuListView.currentIndex = -1;
                 filter.selectAll();
+                event.accepted = false; // Forward to KeyNavigation.up
+
+            } else {
+                menuListView.decrementCurrentIndex()
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible)
             }
-            event.accepted = false; // Forward to KeyNavigation.up
+        }
+
+        Keys.onDownPressed: event => {
+            if (menuListView.currentIndex >= menuListView.count) {
+                event.accepted = false; // no target, but we may add one in the future
+            } else {
+                menuListView.incrementCurrentIndex()
+                menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible)
+            }
         }
 
         Loader {
