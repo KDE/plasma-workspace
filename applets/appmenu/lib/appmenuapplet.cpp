@@ -187,6 +187,21 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
             }
         };
 
+        if (!m_currentMenu) {
+            m_currentMenu = new QMenu(qobject_cast<QWidget *>(actionMenu->parent()));
+            connect(m_currentMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
+        } else if (m_sourceMenu != actionMenu) {
+            for (QAction *action : m_currentMenu->actions()) {
+                m_currentMenu->removeAction(action);
+                m_sourceMenu->addAction(action);
+            }
+        }
+        m_sourceMenu = actionMenu;
+        for (QAction *action : m_sourceMenu->actions()) {
+            m_sourceMenu->removeAction(action);
+            m_currentMenu->addAction(action);
+        }
+
         QTimer::singleShot(0, ctx, ungrabMouseHack);
         // end workaround
 
@@ -195,58 +210,31 @@ void AppMenuApplet::trigger(QQuickItem *ctx, int idx)
         QPoint pos = ctx->window()->mapToGlobal(ctx->mapToScene(QPointF()).toPoint());
 
         const Qt::Edges edges = edgeFromLocation(location());
-        actionMenu->setProperty("_breeze_menu_seamless_edges", QVariant::fromValue(edges));
+        m_currentMenu->setProperty("_breeze_menu_seamless_edges", QVariant::fromValue(edges));
 
         if (location() == Plasma::Types::TopEdge) {
             pos.setY(pos.y() + ctx->height());
         }
 
-        actionMenu->adjustSize();
+        m_currentMenu->adjustSize();
 
-        pos = QPoint(qBound(geo.x(), pos.x(), geo.x() + geo.width() - actionMenu->width()),
-                     qBound(geo.y(), pos.y(), geo.y() + geo.height() - actionMenu->height()));
-
-        if (view() == FullView) {
-            actionMenu->installEventFilter(this);
-        }
-
-        actionMenu->winId(); // create window handle
-        actionMenu->windowHandle()->setTransientParent(ctx->window());
-
-        // hide the old menu only after showing the new one to avoid brief focus flickering on X11.
-        // on wayland, you can't have more than one grabbing popup at a time so we show it after
-        // the menu has hidden. thankfully, wayland doesn't have this flickering.
-        if (!KWindowSystem::isPlatformWayland()) {
-            actionMenu->popup(pos);
-        }
+        pos = QPoint(qBound(geo.x(), pos.x(), geo.x() + geo.width() - m_currentMenu->width()),
+                     qBound(geo.y(), pos.y(), geo.y() + geo.height() - m_currentMenu->height()));
 
         if (view() == FullView) {
-            QMenu *oldMenu = m_currentMenu;
-            m_currentMenu = actionMenu;
-            if (oldMenu && oldMenu != actionMenu) {
-                // don't initialize the currentIndex when another menu is already shown
-                disconnect(oldMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide);
-                oldMenu->hide();
-
-                // QGuiApplication and QApplication will close all popups when the application loses
-                // focus. QtWayland will re-evaluate the focused window later after making an async
-                // roundtrip to the compositor even though oldMenu->hide() has been called now. To force
-                // Qt to re-evaluate the focused window (and thus closing actionMenu later) now, we
-                // destroy the window handle.
-                if (oldMenu->windowHandle()) {
-                    oldMenu->windowHandle()->destroy();
-                }
+            if (m_currentMenu->isVisible()) {
+                m_currentMenu->move(pos);
+            } else {
+                m_currentMenu->installEventFilter(this);
+                m_currentMenu->winId(); // create window handle
+                m_currentMenu->windowHandle()->setTransientParent(ctx->window());
+                m_currentMenu->popup(pos);
             }
-        }
-
-        if (KWindowSystem::isPlatformWayland()) {
-            actionMenu->popup(pos);
         }
 
         setCurrentIndex(idx);
 
         // FIXME TODO connect only once
-        connect(actionMenu, &QMenu::aboutToHide, this, &AppMenuApplet::onMenuAboutToHide, Qt::UniqueConnection);
     } else { // is it just an action without a menu?
         if (QAction *action = m_model->index(idx, 0).data(AppMenuModel::ActionRole).value<QAction *>()) {
             Q_ASSERT(!action->menu());

@@ -70,6 +70,7 @@ private:
     int m_currentIndex = -1;
     int m_viewType = FullView;
     QPointer<QMenu> m_currentMenu;
+    QPointer<QMenu> m_sourceMenu;
     QPointer<QQuickItem> m_buttonGrid;
     QPointer<QAbstractItemModel> m_model;
     static int s_refs;

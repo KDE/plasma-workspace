@@ -119,7 +119,7 @@ PlasmoidItem {
                 text: activeMenu
                 Kirigami.MnemonicData.active: altState.pressed
 
-                down: pressed || Plasmoid.currentIndex === index
+                down: Plasmoid.currentIndex === index
                 visible: text !== "" && model.activeActions.visible
 
                 menuIsOpen: Plasmoid.currentIndex !== -1
