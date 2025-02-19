@@ -342,7 +342,7 @@ void PanelView::setLength(int value)
 
     m_contentLength = value;
 
-    queuePositionAndResizePanel();
+    positionAndResizePanel();
 }
 
 int PanelView::maximumLength() const
