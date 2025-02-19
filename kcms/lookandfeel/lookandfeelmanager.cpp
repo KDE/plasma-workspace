@@ -10,7 +10,6 @@
 */
 
 #include "lookandfeelmanager.h"
-#include "../../startkde/plasmaautostart/plasmaautostart.h"
 #include "../colors/colorsapplicator.h"
 #include "config-kcm.h"
 #include "lookandfeeldata.h"
@@ -114,7 +113,6 @@ LookAndFeelManager::Contents LookAndFeelManager::packageContents(const KPackage:
         contents.setFlag(ShellPackage, configProvides(conf, u"plasmashellrc/Shell"_s, u"ShellPackage"_s));
 
         // TODO: Currently managed together within the "DesktopLayout" content
-        // contents.setFlag(Autostart, configProvides(conf, "Autostart", "Services"));
     }
 
     return contents;
@@ -591,46 +589,6 @@ void LookAndFeelManager::save(const KPackage::Package &package, const KPackage::
             QDBusMessage message =
                 QDBusMessage::createSignal(QStringLiteral("/PlasmaShell"), QStringLiteral("org.kde.PlasmaShell"), QStringLiteral("refreshCurrentShell"));
             QDBusConnection::sessionBus().send(message);
-        }
-
-        // autostart
-        if (itemsToApply.testFlag(DesktopLayout)) {
-            QStringList toStop;
-            KService::List toStart;
-            // remove all the old package to autostart
-            {
-                KSharedConfigPtr oldConf = KSharedConfig::openConfig(previousPackage.filePath("defaults"));
-                group = KConfigGroup(oldConf, u"Autostart"_s);
-                const QStringList autostartServices = group.readEntry("Services", QStringList());
-
-                if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
-                    for (const QString &serviceFile : autostartServices) {
-                        KService service(serviceFile + QStringLiteral(".desktop"));
-                        PlasmaAutostart as(serviceFile);
-                        as.setAutostarts(false);
-                        QString serviceName = service.property<QString>(QStringLiteral("X-DBUS-ServiceName"));
-                        toStop.append(serviceName);
-                    }
-                }
-            }
-            // Set all the stuff in the new lnf to autostart
-            {
-                group = KConfigGroup(conf, u"Autostart"_s);
-                const QStringList autostartServices = group.readEntry("Services", QStringList());
-
-                for (const QString &serviceFile : autostartServices) {
-                    KService::Ptr service(new KService(serviceFile + QStringLiteral(".desktop")));
-                    PlasmaAutostart as(serviceFile);
-                    as.setCommand(service->exec());
-                    as.setAutostarts(true);
-                    const QString serviceName = service->property<QString>(QStringLiteral("X-DBUS-ServiceName"));
-                    toStop.removeAll(serviceName);
-                    if (qEnvironmentVariableIsSet("KDE_FULL_SESSION")) {
-                        toStart += service;
-                    }
-                }
-            }
-            Q_EMIT refreshServices(toStop, toStart);
         }
     }
     // Reload KWin if something changed, but only once.
