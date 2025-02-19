@@ -480,7 +480,11 @@ void runRdb(unsigned int flags)
             qWarning() << "xcb_cursor_context_new() failed";
         } else {
             xcb_cursor_t cursor = xcb_cursor_load_cursor(context, "left_ptr");
-            xcb_change_window_attributes(connection, screen->root, XCB_CW_CURSOR, &cursor);
+            auto cookie = xcb_change_window_attributes_checked(connection, screen->root, XCB_CW_CURSOR, &cursor);
+            if (auto error = xcb_request_check(connection, cookie)) {
+                qWarning() << "Failed to set root window cursor, error code:" << error->error_code;
+                free(error);
+            }
             xcb_free_cursor(connection, cursor);
             xcb_cursor_context_free(context);
         }
