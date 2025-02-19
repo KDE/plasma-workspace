@@ -107,8 +107,11 @@ void SystemTrayContainer::ensureSystrayExists()
     m_innerContainment->setContainmentDisplayHints(containmentDisplayHints() | Plasma::Types::ContainmentDrawsPlasmoidHeading
                                                    | Plasma::Types::ContainmentForcesSquarePlasmoids);
     connect(cont, &Plasma::Containment::containmentDisplayHintsChanged, this, [this]() {
-        m_innerContainment->setContainmentDisplayHints(containmentDisplayHints() | Plasma::Types::ContainmentDrawsPlasmoidHeading
-                                                       | Plasma::Types::ContainmentForcesSquarePlasmoids);
+        // m_innerContainment can be deleted independently by look and feel switch as well
+        if (m_innerContainment) {
+            m_innerContainment->setContainmentDisplayHints(containmentDisplayHints() | Plasma::Types::ContainmentDrawsPlasmoidHeading
+                                                           | Plasma::Types::ContainmentForcesSquarePlasmoids);
+        }
     });
 }
 
