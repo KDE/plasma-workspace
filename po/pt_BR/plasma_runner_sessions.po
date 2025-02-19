@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2024-07-20 23:28-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -94,89 +94,78 @@ msgid "switch user;new session"
 msgstr "trocar usuário;nova sessão"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Inicia uma nova sessão com um usuário diferente"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "sessões"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Lista todas as sessões"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "trocar"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Alterna para a sessão ativa do usuário :q: ou lista todas as sessões ativas "
-"se :q: não for fornecido"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Encerrar sessão"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Desligar"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Reiniciar"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Bloquear"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "Salvar sessão"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "Trocar usuário"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>Você está prestes a entrar em uma nova sessão de desktop.</p><p>Uma tela  "
-"de login será exibida e a sessão atual será ocultada.</p><p>Você pode  "
-"alternar entre sessões de desktop usando:</p><ul><li>Ctrl+Alt+F{número da "
-"sessão}</li><li>Pesquisa do Plasma (tipo '%1')</li><li>Widgets do Plasma  "
-"(como o inicializador de aplicativos )</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "sessões"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "Nova sessão da área de trabalho"
+#~ msgid "Lists all sessions"
+#~ msgstr "Lista todas as sessões"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "trocar"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Alterna para a sessão ativa do usuário :q: ou lista todas as sessões "
+#~ "ativas se :q: não for fornecido"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>Você está prestes a entrar em uma nova sessão de desktop.</p><p>Uma "
+#~ "tela  de login será exibida e a sessão atual será ocultada.</p><p>Você "
+#~ "pode  alternar entre sessões de desktop usando:</p><ul><li>Ctrl+Alt"
+#~ "+F{número da sessão}</li><li>Pesquisa do Plasma (tipo '%1')</"
+#~ "li><li>Widgets do Plasma  (como o inicializador de aplicativos )</li></ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "Nova sessão da área de trabalho"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

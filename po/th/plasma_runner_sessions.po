@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2010-02-11 21:12+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -99,46 +99,18 @@ msgid "switch user;new session"
 msgstr "สลับผู้ใช้"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "เริ่มวาระงานใหม่ด้วยสิทธิ์ผู้ใช้อื่น"
 
-#: sessionrunner.cpp:58
-#, fuzzy, kde-format
-#| msgid "new session"
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "วาระงานใหม่"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "เรียกดูวาระงานทั้งหมด"
-
-#: sessionrunner.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "สลับ"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"ทำการสลับวาระงานที่ใช้งานอยู่โดยผู้ใช้ :q: หรือเรียกดูวาระงานทั้งหมดที่ทำงานอยู่หากไม่ได้กำหนด :"
-"q:"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -146,7 +118,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "ปิดเครื่อง"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -154,39 +126,51 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "เริ่มระบบใหม่"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "วาระงานใหม่"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "สลับผู้ใช้"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
+#, fuzzy
+#~| msgid "new session"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "วาระงานใหม่"
 
-#: sessionrunner.cpp:248
-#, fuzzy, kde-format
-#| msgid "New Session"
-msgid "New Desktop Session"
-msgstr "วาระงานใหม่"
+#~ msgid "Lists all sessions"
+#~ msgstr "เรียกดูวาระงานทั้งหมด"
+
+#, fuzzy
+#~| msgctxt "switch user command"
+#~| msgid "switch"
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "สลับ"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "ทำการสลับวาระงานที่ใช้งานอยู่โดยผู้ใช้ :q: "
+#~ "หรือเรียกดูวาระงานทั้งหมดที่ทำงานอยู่หากไม่ได้กำหนด :q:"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "New Desktop Session"
+#~ msgstr "วาระงานใหม่"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

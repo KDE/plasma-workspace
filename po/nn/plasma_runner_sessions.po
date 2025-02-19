@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2024-03-09 18:12+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -92,86 +92,75 @@ msgid "switch user;new session"
 msgstr "byt brukar;ny økt;brukarbyte"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Startar ei ny økt som ein annan brukar"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "økter"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Vis alle økter"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "byt"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Byter til den aktive økta for brukaren :q:, eller viser alle dei aktive "
-"øktene om :q: ikkje er med"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Logg ut"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Slå av"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Start på nytt"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Lås"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "Lagra økta"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "Byt brukar"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>Du er ferd med å opna ei ny skrivebordsøkt.</p><p>Gjeldande økt vert "
-"gøymd, og du får presentert ein innloggingsvindauge.</p><p>Slik byter du "
-"mellom økter som køyrer:</p><ul><li>Ctrl + Alt +F{øktnummer}</li><li>Plasma-"
-"søk (skriv «%1»)</li><li>Plasma-element (for eksempel programstartaren)</"
-"li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "økter"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "Ny skrivebordsøkt"
+#~ msgid "Lists all sessions"
+#~ msgstr "Vis alle økter"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "byt"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Byter til den aktive økta for brukaren :q:, eller viser alle dei aktive "
+#~ "øktene om :q: ikkje er med"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>Du er ferd med å opna ei ny skrivebordsøkt.</p><p>Gjeldande økt vert "
+#~ "gøymd, og du får presentert ein innloggingsvindauge.</p><p>Slik byter du "
+#~ "mellom økter som køyrer:</p><ul><li>Ctrl + Alt +F{øktnummer}</"
+#~ "li><li>Plasma-søk (skriv «%1»)</li><li>Plasma-element (for eksempel "
+#~ "programstartaren)</li></ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "Ny skrivebordsøkt"

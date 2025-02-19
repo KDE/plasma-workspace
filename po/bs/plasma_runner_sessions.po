@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2012-09-03 14:07+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: bosanski <bs@li.org>\n"
@@ -104,47 +104,18 @@ msgid "switch user;new session"
 msgstr "prebaci korisnika"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Pokreće novu sesiju sa drugim korisnikom"
 
-#: sessionrunner.cpp:58
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "sesije"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Nabraja sve sesije"
-
-#: sessionrunner.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "prebaci"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Prebacuje na aktivnu sesiju za korisnika :q:, ili nabraja sve aktivne sesije "
-"ako :q: nije zadato"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -152,7 +123,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "ugasi"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -160,39 +131,52 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "pokreni ponovo"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "nova sesija"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "prebaci korisnika"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
+#, fuzzy
+#~| msgctxt "User sessions"
+#~| msgid "sessions"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "sesije"
 
-#: sessionrunner.cpp:248
-#, fuzzy, kde-format
-#| msgid "New Session"
-msgid "New Desktop Session"
-msgstr "Nova sesija"
+#~ msgid "Lists all sessions"
+#~ msgstr "Nabraja sve sesije"
+
+#, fuzzy
+#~| msgctxt "switch user command"
+#~| msgid "switch"
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "prebaci"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Prebacuje na aktivnu sesiju za korisnika :q:, ili nabraja sve aktivne "
+#~ "sesije ako :q: nije zadato"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "New Desktop Session"
+#~ msgstr "Nova sesija"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

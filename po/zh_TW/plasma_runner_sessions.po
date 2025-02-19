@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2023-10-20 03:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -94,86 +94,76 @@ msgid "switch user;new session"
 msgstr "switch user;new session;新工作階段;切換使用者"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "用不同使用者開始新的工作階段"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "sessions;工作階段"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "列出所有工作階段"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "switch;切換"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr "切換到使用者 :q: 的工作階段，若沒有提供 :q: 則列出所有活躍中的工作階段"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "登出"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "關機"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "重新啟動"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "鎖定"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "儲存工作階段"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "切換使用者"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>您即將進入新的桌面工作階段。</p><p>將會顯示一個登入畫面，而目前工作階段則"
-"會被隱藏。</p><p>您可以透過以下方式在桌面工作階段之間切換：</p><ul><li>Ctrl"
-"+Alt+F{工作階段數字}</li><li>Plasma 搜尋（輸入 '%1'）</li><li>Plasma 元件（例"
-"如應用程式啟動器）</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "sessions;工作階段"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "新的桌面工作階段"
+#~ msgid "Lists all sessions"
+#~ msgstr "列出所有工作階段"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "switch;切換"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "切換到使用者 :q: 的工作階段，若沒有提供 :q: 則列出所有活躍中的工作階段"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>您即將進入新的桌面工作階段。</p><p>將會顯示一個登入畫面，而目前工作階段"
+#~ "則會被隱藏。</p><p>您可以透過以下方式在桌面工作階段之間切換：</"
+#~ "p><ul><li>Ctrl+Alt+F{工作階段數字}</li><li>Plasma 搜尋（輸入 '%1'）</"
+#~ "li><li>Plasma 元件（例如應用程式啟動器）</li></ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "新的桌面工作階段"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

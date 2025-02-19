@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2024-01-01 23:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -94,86 +94,76 @@ msgstr ""
 "kullanıcı değiştir"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Farklı bir kullanıcı ile yeni bir oturum başlatır"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "oturumlar"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Tüm oturumları listele"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "değiştir"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Etkin oturum için :q: kullanıcısına geçmeyi sağlar veya :q: verilmediyse "
-"etkin oturumların listesini verir"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Oturumu Kapat"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Kapat"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Yeniden Başlat"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Kilitle"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "Oturumu Kaydet"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "Kullanıcı Değiştir"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>Yeni bir masaüstü oturumuna girmek üzeresiniz.</p><p>Bir oturum açma "
-"ekranı görüntülenir ve geçerli oturum gizlenecektir.</p><p>Masaüstü "
-"oturumları arasında şunları kullanarak geçiş yapabilirsiniz:</"
-"p><ul><li>Kontrol+Seçenek+F {oturum numarası}</li><li>Plasma arama (%1 "
-"yazın)</li><li>Plasma araç takımları (örneğin uygulama başlatıcısı)</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "oturumlar"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "Yeni Masaüstü Oturumu"
+#~ msgid "Lists all sessions"
+#~ msgstr "Tüm oturumları listele"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "değiştir"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Etkin oturum için :q: kullanıcısına geçmeyi sağlar veya :q: verilmediyse "
+#~ "etkin oturumların listesini verir"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>Yeni bir masaüstü oturumuna girmek üzeresiniz.</p><p>Bir oturum açma "
+#~ "ekranı görüntülenir ve geçerli oturum gizlenecektir.</p><p>Masaüstü "
+#~ "oturumları arasında şunları kullanarak geçiş yapabilirsiniz:</"
+#~ "p><ul><li>Kontrol+Seçenek+F {oturum numarası}</li><li>Plasma arama (%1 "
+#~ "yazın)</li><li>Plasma araç takımları (örneğin uygulama başlatıcısı)</li></"
+#~ "ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "Yeni Masaüstü Oturumu"

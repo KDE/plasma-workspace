@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:43+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2024-09-18 21:30+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -2696,19 +2696,19 @@ msgctxt "weather forecast"
 msgid "Windy"
 msgstr "Szélfúvások"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:693 ions/dwd/ion_dwd.cpp:501
+#: ions/bbcukmet/ion_bbcukmet.cpp:699 ions/dwd/ion_dwd.cpp:501
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
 msgstr "Ma"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:693
+#: ions/bbcukmet/ion_bbcukmet.cpp:699
 #, kde-format
 msgctxt "Short for Tonight"
 msgid "Tonight"
 msgstr "Ma éjszaka"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:714
+#: ions/bbcukmet/ion_bbcukmet.cpp:720
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"

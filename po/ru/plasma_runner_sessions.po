@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2023-12-17 09:20+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -100,89 +100,78 @@ msgid "switch user;new session"
 msgstr "switch user;new session;переключить пользователя;новый сеанс"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Начать новый сеанс"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "sessions;сеансы"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Показать все сеансы"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "switch;переключить"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Переключить на сеанс пользователя :q: или показать все активные сеансы, "
-"если :q: не указано"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Завершить сеанс"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Выключить"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Перезагрузить"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Заблокировать"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "Сохранить сеанс"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "Переключить пользователя"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>Вы начинаете новый сеанс работы.</p> <p>Текущий сеанс будет скрыт и "
-"откроется окно входа в систему.</p> <p>Для переключения между сеансами "
-"возможно использовать:</p><ul> <li>Комбинацию клавиш Ctrl+Alt+F{номер сеанса}"
-"</li> <li>Поиск Plasma (введите «%1»)</li> <li>Виджеты Plasma (например, "
-"меню запуска приложений)</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "sessions;сеансы"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "Новый графический сеанс"
+#~ msgid "Lists all sessions"
+#~ msgstr "Показать все сеансы"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "switch;переключить"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Переключить на сеанс пользователя :q: или показать все активные сеансы, "
+#~ "если :q: не указано"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>Вы начинаете новый сеанс работы.</p> <p>Текущий сеанс будет скрыт и "
+#~ "откроется окно входа в систему.</p> <p>Для переключения между сеансами "
+#~ "возможно использовать:</p><ul> <li>Комбинацию клавиш Ctrl+Alt+F{номер "
+#~ "сеанса}</li> <li>Поиск Plasma (введите «%1»)</li> <li>Виджеты Plasma "
+#~ "(например, меню запуска приложений)</li></ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "Новый графический сеанс"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

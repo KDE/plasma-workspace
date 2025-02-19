@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2011-06-23 22:51+0800\n"
 "Last-Translator: Sharuzzaman Ahmat Raslan <sharuzzaman@gmail.com>\n"
 "Language-Team: Malay <kedidiemas@yahoogroups.com>\n"
@@ -100,47 +100,18 @@ msgid "switch user;new session"
 msgstr "tukar pengguna"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Mulakan sesi baru sebagai pengguna lain"
 
-#: sessionrunner.cpp:58
-#, fuzzy, kde-format
-#| msgctxt "User sessions"
-#| msgid "sessions"
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "sesi"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Senaraikan semua sesi"
-
-#: sessionrunner.cpp:62
-#, fuzzy, kde-format
-#| msgctxt "switch user command"
-#| msgid "switch"
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "tukar"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Menukar ke sesi aktif untuk pengguna :q:, atau senaraikan semua sesi aktif "
-"jika :q: tidak diberikan"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr ""
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, fuzzy, kde-format
 #| msgctxt "shutdown computer command"
 #| msgid "shutdown"
@@ -148,7 +119,7 @@ msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "matikan"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, fuzzy, kde-format
 #| msgctxt "restart computer command"
 #| msgid "restart"
@@ -156,39 +127,52 @@ msgctxt "restart computer command"
 msgid "Restart"
 msgstr "ulangmula"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr ""
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, fuzzy, kde-format
 #| msgid "new session"
 msgid "Save Session"
 msgstr "sesi baru"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, fuzzy, kde-format
 #| msgid "switch user"
 msgid "Switch User"
 msgstr "tukar pengguna"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
+#, fuzzy
+#~| msgctxt "User sessions"
+#~| msgid "sessions"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "sesi"
 
-#: sessionrunner.cpp:248
-#, fuzzy, kde-format
-#| msgid "New Session"
-msgid "New Desktop Session"
-msgstr "Sesi Baru"
+#~ msgid "Lists all sessions"
+#~ msgstr "Senaraikan semua sesi"
+
+#, fuzzy
+#~| msgctxt "switch user command"
+#~| msgid "switch"
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "tukar"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Menukar ke sesi aktif untuk pengguna :q:, atau senaraikan semua sesi "
+#~ "aktif jika :q: tidak diberikan"
+
+#, fuzzy
+#~| msgid "New Session"
+#~ msgid "New Desktop Session"
+#~ msgstr "Sesi Baru"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

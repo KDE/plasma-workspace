@@ -5,13 +5,13 @@
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-10 00:42+0000\n"
-"PO-Revision-Date: 2023-10-20 03:17+0900\n"
+"PO-Revision-Date: 2025-02-18 15:52+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
@@ -42,27 +42,25 @@ msgstr "-%1"
 #: package/contents/ui/ExpandedRepresentation.qml:562
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "播放速度 %1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:565
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "-%1"
+msgstr "%1x"
 
 #: package/contents/ui/ExpandedRepresentation.qml:569
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "播放速度"
 
 #: package/contents/ui/ExpandedRepresentation.qml:615
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1（正常）"
 
 #: package/contents/ui/ExpandedRepresentation.qml:654
 #, kde-format

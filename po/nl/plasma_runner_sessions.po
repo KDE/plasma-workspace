@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2023-09-07 09:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -92,89 +92,78 @@ msgid "switch user;new session"
 msgstr "gebruiker wisselen;nieuwe sessie"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Start een nieuwe sessie als een andere gebruiker"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "sessies"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Alle sessies tonen"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "omschakelen"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Wisselt naar de actieve sessie van gebnruiker :q: of toont alle active "
-"sessies als :q: niet is gegeven"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Afmelden"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Systeem afsluiten"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Herstarten"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Vergrendelen"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "Sessie opslaan"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "Gebruiker wisselen"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>U staat op het punt een nieuwe bureaubladsessie te beginnen.</p><p>Een "
-"aanmeldscherm zal getoond worden en de huidige sessie zal worden verborgen.</"
-"p><p>U Kunt schakelen tussen bureaubladsessies met:</p><ul><li>Ctrl+Alt"
-"+F{nummer van de sessie}</li><li>Plasma zoeken (typ '%1')</li><li>Plasma "
-"widgets (zoals de starter van toepassingen)</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "sessies"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "Nieuwe bureaubladsessie"
+#~ msgid "Lists all sessions"
+#~ msgstr "Alle sessies tonen"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "omschakelen"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Wisselt naar de actieve sessie van gebnruiker :q: of toont alle active "
+#~ "sessies als :q: niet is gegeven"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>U staat op het punt een nieuwe bureaubladsessie te beginnen.</p><p>Een "
+#~ "aanmeldscherm zal getoond worden en de huidige sessie zal worden "
+#~ "verborgen.</p><p>U Kunt schakelen tussen bureaubladsessies met:</"
+#~ "p><ul><li>Ctrl+Alt+F{nummer van de sessie}</li><li>Plasma zoeken (typ "
+#~ "'%1')</li><li>Plasma widgets (zoals de starter van toepassingen)</li></ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "Nieuwe bureaubladsessie"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

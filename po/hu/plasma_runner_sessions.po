@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2023-12-28 11:08+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -92,89 +92,78 @@ msgid "switch user;new session"
 msgstr "felhasználóváltás;új munkamenet"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Elindít egy új munkamenetet más felhasználónévvel"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "munkamenetek"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Az összes munkamenet listázása"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "váltás"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Átvált a(z) :q: felhasználó aktív munkamenetére, vagy kilistázza az összes "
-"aktív munkamenetet, ha a kifejezés üres"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Kijelentkezés"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Leállítás"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Újraindítás"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Zárolás"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "Munkamenet mentése"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "Felhasználóváltás"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>Új asztali munkamenet indítására készül.</p><p>A jelenlegi munkamenet "
-"rejtve lesz, és egy bejelentkező képernyő jelenik meg.</p><p>A munkamenetek "
-"között az alábbi módokon válthat:</p><ul><li>Ctrl+Alt+F{munkamenetszám}</"
-"li><li>Plasma keresés (írja be: „%1”)</li><li>Plasma elemek (például az "
-"alkalmazásindító)</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "munkamenetek"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "Új asztali munkamenet"
+#~ msgid "Lists all sessions"
+#~ msgstr "Az összes munkamenet listázása"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "váltás"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Átvált a(z) :q: felhasználó aktív munkamenetére, vagy kilistázza az "
+#~ "összes aktív munkamenetet, ha a kifejezés üres"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>Új asztali munkamenet indítására készül.</p><p>A jelenlegi munkamenet "
+#~ "rejtve lesz, és egy bejelentkező képernyő jelenik meg.</p><p>A "
+#~ "munkamenetek között az alábbi módokon válthat:</p><ul><li>Ctrl+Alt"
+#~ "+F{munkamenetszám}</li><li>Plasma keresés (írja be: „%1”)</li><li>Plasma "
+#~ "elemek (például az alkalmazásindító)</li></ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "Új asztali munkamenet"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

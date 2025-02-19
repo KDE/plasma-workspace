@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2024-06-11 20:17\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -95,88 +95,78 @@ msgid "switch user;new session"
 msgstr "switch user;new session"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "Запуск новага сеанса ад імя іншага карыстальніка"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "sessions"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "Спіс усіх сеансаў"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "switch"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"Пераключэнне бягучага сеанса для карыстальніка :q: або спіс актыўных "
-"сеансаў, калі :q: не пазначана"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Выйсці"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "Выключыць"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "Перазапусціць"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "Заблакаваць"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "Захаваць сеанс"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "Пераключыць карыстальніка"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>Вы хочаце ўвайсці ў новы сеанс.</p><p>Будзе паказаны экран уваходу, а "
-"бягучы сеанс будзе схаваны.</p><p>Вы можаце пераключацца паміж сеансамі з "
-"дапамогай:</p><ul><li>Ctrl+Alt+F{нумар сеанса}</li><li>Пошук Plasma (тып "
-"\"%1\")</li><li>Віджэты Plasma (напрыклад, сродак запуску праграм)</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "sessions"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "Новы сеанс працоўнага стала"
+#~ msgid "Lists all sessions"
+#~ msgstr "Спіс усіх сеансаў"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "switch"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "Пераключэнне бягучага сеанса для карыстальніка :q: або спіс актыўных "
+#~ "сеансаў, калі :q: не пазначана"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>Вы хочаце ўвайсці ў новы сеанс.</p><p>Будзе паказаны экран уваходу, а "
+#~ "бягучы сеанс будзе схаваны.</p><p>Вы можаце пераключацца паміж сеансамі з "
+#~ "дапамогай:</p><ul><li>Ctrl+Alt+F{нумар сеанса}</li><li>Пошук Plasma (тып "
+#~ "\"%1\")</li><li>Віджэты Plasma (напрыклад, сродак запуску праграм)</li></"
+#~ "ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "Новы сеанс працоўнага стала"
 
 #~ msgctxt "log out command"
 #~ msgid "logout"

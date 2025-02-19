@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:43+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2025-01-11 17:26+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -2696,19 +2696,19 @@ msgctxt "weather forecast"
 msgid "Windy"
 msgstr "Rüzgârlı"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:693 ions/dwd/ion_dwd.cpp:501
+#: ions/bbcukmet/ion_bbcukmet.cpp:699 ions/dwd/ion_dwd.cpp:501
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
 msgstr "Bugün"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:693
+#: ions/bbcukmet/ion_bbcukmet.cpp:699
 #, kde-format
 msgctxt "Short for Tonight"
 msgid "Tonight"
 msgstr "Bu gece"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:714
+#: ions/bbcukmet/ion_bbcukmet.cpp:720
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2023-09-10 18:46+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -90,88 +90,78 @@ msgid "switch user;new session"
 msgstr "switch user;new session;பயனரை மாற்று;புதிய அமர்வு"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "வேறு பயனராக புதிய அமர்வை துவக்கும்"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "sessions;அமர்வுகள்"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "அனைத்து அமர்வுகளையும் பட்டியலிடும்"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "switch;தாவு;மாறு;மாற்று"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-":q: என்ற பயனரின் நடப்பு அமர்வுக்கு தாவும், அல்லது :q: கொடுக்கப்படாத பட்சத்தில் செயலிலுள்ள "
-"அமர்வுகளை பட்டியலிடும்"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "அமர்விலிருந்து வெளியேறு"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "கணினியை நிறுத்து"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "மீள்துவக்கு"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "பூட்டு"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "அமர்வை சேமி"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "பயனரை மாற்று"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>நீங்கள் ஓர் புதிய பணிமேடை அமர்வுக்குள் நுழையவுள்ளீர்கள்.</p><p>தற்போதைய திரை "
-"மறைக்கப்பட்டு, ஓர் நுழைவுச்சாளரம் காட்டப்படும்.</p><p>பணிமேடை அமர்வுகளுக்கிடையே "
-"பின்வருபவற்றைக் கொண்டு தாவலாம்:</p><ul><li>Ctrl+Alt+F{அமர்வின் எண்}</li> <li>பிளாஸ்மா "
-"தேடல் ('%1' என்று தேடுங்கள்)</li> <li>பிளாஸ்மாய்டுகள் (எ.கா. செயலி ஏவி)</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "sessions;அமர்வுகள்"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "புதிய பணிமேடை அமர்வு"
+#~ msgid "Lists all sessions"
+#~ msgstr "அனைத்து அமர்வுகளையும் பட்டியலிடும்"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "switch;தாவு;மாறு;மாற்று"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ ":q: என்ற பயனரின் நடப்பு அமர்வுக்கு தாவும், அல்லது :q: கொடுக்கப்படாத பட்சத்தில் "
+#~ "செயலிலுள்ள அமர்வுகளை பட்டியலிடும்"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>நீங்கள் ஓர் புதிய பணிமேடை அமர்வுக்குள் நுழையவுள்ளீர்கள்.</p><p>தற்போதைய திரை "
+#~ "மறைக்கப்பட்டு, ஓர் நுழைவுச்சாளரம் காட்டப்படும்.</p><p>பணிமேடை அமர்வுகளுக்கிடையே "
+#~ "பின்வருபவற்றைக் கொண்டு தாவலாம்:</p><ul><li>Ctrl+Alt+F{அமர்வின் எண்}</li> "
+#~ "<li>பிளாஸ்மா தேடல் ('%1' என்று தேடுங்கள்)</li> <li>பிளாஸ்மாய்டுகள் (எ.கா. செயலி "
+#~ "ஏவி)</li></ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "புதிய பணிமேடை அமர்வு"
 
 #~ msgctxt "log out command"
 #~ msgid "Logout"

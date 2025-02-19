@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_engine_weather_gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-15 00:43+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2009-12-13 22:28+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -2724,20 +2724,20 @@ msgctxt "weather forecast"
 msgid "Windy"
 msgstr "પવનીયું"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:693 ions/dwd/ion_dwd.cpp:501
+#: ions/bbcukmet/ion_bbcukmet.cpp:699 ions/dwd/ion_dwd.cpp:501
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
 msgstr ""
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:693
+#: ions/bbcukmet/ion_bbcukmet.cpp:699
 #, fuzzy, kde-format
 #| msgid "Night"
 msgctxt "Short for Tonight"
 msgid "Tonight"
 msgstr "રાત્રિ"
 
-#: ions/bbcukmet/ion_bbcukmet.cpp:714
+#: ions/bbcukmet/ion_bbcukmet.cpp:720
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"

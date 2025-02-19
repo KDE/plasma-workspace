@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-06 00:40+0000\n"
+"POT-Creation-Date: 2025-02-19 00:43+0000\n"
 "PO-Revision-Date: 2024-12-13 19:09+0530\n"
 "Last-Translator: Kali <EMAIL@ADDRESS>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -90,85 +90,74 @@ msgid "switch user;new session"
 msgstr "स्विच उपयोक्ता;नव सत्र"
 
 #: sessionrunner.cpp:55
-#, kde-format
-msgid "Starts a new session as a different user"
+#, fuzzy, kde-format
+#| msgid "Starts a new session as a different user"
+msgid "Switch to a session as a different user"
 msgstr "भिन्नप्रयोक्तृरूपेण नूतनं सत्रं आरभते"
 
-#: sessionrunner.cpp:58
-#, kde-format
-msgctxt "KRunner keyword to list user sessions"
-msgid "sessions"
-msgstr "सत्रम्"
-
-#: sessionrunner.cpp:59
-#, kde-format
-msgid "Lists all sessions"
-msgstr "सर्वेषां सत्राणां सूचीं करोति"
-
-#: sessionrunner.cpp:62
-#, kde-format
-msgctxt "KRunner keyword to switch user sessions"
-msgid "switch"
-msgstr "नुदति"
-
-#: sessionrunner.cpp:64
-#, kde-format
-msgid ""
-"Switches to the active session for the user :q:, or lists all active "
-"sessions if :q: is not provided"
-msgstr ""
-"उपयोक्तुः :q: कृते सक्रियसत्रं प्रति स्विच करोति, अथवा यदि :q: न प्रदत्तं तर्हि सर्वाणि "
-"सक्रियसत्राणि सूचीबद्धं करोति"
-
-#: sessionrunner.cpp:83
+#: sessionrunner.cpp:77
 #, kde-format
 msgctxt "log out command"
 msgid "Log Out"
 msgstr "Log Out इति"
 
-#: sessionrunner.cpp:91
+#: sessionrunner.cpp:85
 #, kde-format
 msgctxt "turn off computer command"
 msgid "Shut Down"
 msgstr "शट डाउन"
 
-#: sessionrunner.cpp:98
+#: sessionrunner.cpp:92
 #, kde-format
 msgctxt "restart computer command"
 msgid "Restart"
 msgstr "पुनः आरभत"
 
-#: sessionrunner.cpp:105
+#: sessionrunner.cpp:99
 #, kde-format
 msgctxt "lock screen command"
 msgid "Lock"
 msgstr "ताल"
 
-#: sessionrunner.cpp:112
+#: sessionrunner.cpp:106
 #, kde-format
 msgid "Save Session"
 msgstr "सत्रं रक्षतु"
 
-#: sessionrunner.cpp:153
+#: sessionrunner.cpp:113
 #, kde-format
 msgid "Switch User"
 msgstr "उपयोक्तारं स्विच कुर्वन्तु"
 
-#: sessionrunner.cpp:239
-#, kde-format
-msgid ""
-"<p>You are about to enter a new desktop session.</p><p>A login screen will "
-"be displayed and the current session will be hidden.</p><p>You can switch "
-"between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of session}</"
-"li><li>Plasma search (type '%1')</li><li>Plasma widgets (such as the "
-"application launcher)</li></ul>"
-msgstr ""
-"<p>भवान् नूतनं डेस्कटॉप् सत्रं प्रविष्टुं प्रवृत्तः अस्ति ।</p><p> एकं प्रवेशपट्टिका प्रदर्शितं "
-"भविष्यति तथा च वर्तमानसत्रं गोपनीयं भविष्यति ।</p><p> भवान् डेस्कटॉप् सत्रेषु स्विच् कर्तुं "
-"शक्नोति:</p><ul><li> Ctrl+Alt+F{सत्रस्य संख्या}</li><li> प्लाज्मा अन्वेषण (प्रकार &#39;"
-"%1&#39;) २.</li><li> प्लाज्मा विजेट् (यथा अनुप्रयोगप्रक्षेपकः) २.</li></ul>"
+#~ msgctxt "KRunner keyword to list user sessions"
+#~ msgid "sessions"
+#~ msgstr "सत्रम्"
 
-#: sessionrunner.cpp:248
-#, kde-format
-msgid "New Desktop Session"
-msgstr "नवीनं डेस्कटॉप सत्रम्"
+#~ msgid "Lists all sessions"
+#~ msgstr "सर्वेषां सत्राणां सूचीं करोति"
+
+#~ msgctxt "KRunner keyword to switch user sessions"
+#~ msgid "switch"
+#~ msgstr "नुदति"
+
+#~ msgid ""
+#~ "Switches to the active session for the user :q:, or lists all active "
+#~ "sessions if :q: is not provided"
+#~ msgstr ""
+#~ "उपयोक्तुः :q: कृते सक्रियसत्रं प्रति स्विच करोति, अथवा यदि :q: न प्रदत्तं तर्हि सर्वाणि "
+#~ "सक्रियसत्राणि सूचीबद्धं करोति"
+
+#~ msgid ""
+#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
+#~ "will be displayed and the current session will be hidden.</p><p>You can "
+#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
+#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
+#~ "as the application launcher)</li></ul>"
+#~ msgstr ""
+#~ "<p>भवान् नूतनं डेस्कटॉप् सत्रं प्रविष्टुं प्रवृत्तः अस्ति ।</p><p> एकं प्रवेशपट्टिका प्रदर्शितं "
+#~ "भविष्यति तथा च वर्तमानसत्रं गोपनीयं भविष्यति ।</p><p> भवान् डेस्कटॉप् सत्रेषु स्विच् कर्तुं "
+#~ "शक्नोति:</p><ul><li> Ctrl+Alt+F{सत्रस्य संख्या}</li><li> प्लाज्मा अन्वेषण (प्रकार "
+#~ "&#39;%1&#39;) २.</li><li> प्लाज्मा विजेट् (यथा अनुप्रयोगप्रक्षेपकः) २.</li></ul>"
+
+#~ msgid "New Desktop Session"
+#~ msgstr "नवीनं डेस्कटॉप सत्रम्"
