@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1702185 $
+# Version: $Revision: 1703234 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-07 02:41+0000\n"
+"POT-Creation-Date: 2025-02-19 02:36+0000\n"
 "PO-Revision-Date: 2024-12-21 11:42+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -377,17 +377,17 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Rozwiń"
 
-#: declarative/qml/ClipboardMenu.qml:187
+#: declarative/qml/ClipboardMenu.qml:191
 #, kde-format
 msgid "Clear History"
 msgstr "Wyczyść historię"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:293
 #, kde-format
 msgid "No matches"
 msgstr "Brak pasujących wyrażeń"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:293
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Schowek jest pusty"

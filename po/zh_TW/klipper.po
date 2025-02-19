@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-07 02:41+0000\n"
+"POT-Creation-Date: 2025-02-19 02:36+0000\n"
 "PO-Revision-Date: 2024-12-19 17:32+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -365,17 +365,17 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "展開"
 
-#: declarative/qml/ClipboardMenu.qml:187
+#: declarative/qml/ClipboardMenu.qml:191
 #, kde-format
 msgid "Clear History"
 msgstr "清除歷史"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:293
 #, kde-format
 msgid "No matches"
 msgstr "無相符"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:293
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "剪貼簿是空的"

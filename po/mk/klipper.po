@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-07 02:41+0000\n"
+"POT-Creation-Date: 2025-02-19 02:36+0000\n"
 "PO-Revision-Date: 2010-01-30 09:51+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -361,19 +361,19 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:187
+#: declarative/qml/ClipboardMenu.qml:191
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Историја на таблата"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:293
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<нема совпаѓања>"
 
-#: declarative/qml/ClipboardMenu.qml:276
+#: declarative/qml/ClipboardMenu.qml:293
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Таблата е празна"
