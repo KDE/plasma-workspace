@@ -51,6 +51,7 @@
 #include <qassert.h>
 
 #include "alternativeshelper.h"
+#include "containmentconfigview.h"
 #include "debug.h"
 #include "desktopview.h"
 #include "futureutil.h"
@@ -990,13 +991,20 @@ void ShellCorona::unload()
     m_waitingPanels.clear();
     m_activityContainmentPlugins.clear();
 
-    while (!containments().isEmpty()) {
+    // iterate with a for on a copy of the list making sure this loop will end
+    // (destroy() might be a noop in case of immutability)
+    const QList<Plasma::Containment *> conts = containments();
+    for (Plasma::Containment *cont : conts) {
         // Some applets react to destroyedChanged rather just destroyed,
         // give them  the possibility to react
         // deleting a containment will remove it from the list due to QObject::destroyed connect in Corona
         // this form doesn't crash, while qDeleteAll(containments()) does
         // And is more correct anyways to use destroy()
-        containments().constFirst()->destroy();
+        // Exclude CustomEmbedded containments like the systray as they
+        // will already be deleted by their parent applet
+        if (cont->containmentType() != Plasma::Containment::CustomEmbedded) {
+            cont->destroy();
+        }
     }
 }
 
