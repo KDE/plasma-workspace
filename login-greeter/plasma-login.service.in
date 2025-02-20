@@ -1,0 +1,9 @@
+[Unit]
+Description=Plasma Login
+PartOf=plasma-login-wayland.target
+After=plasma-kwin_wayland.service
+
+[Service]
+ExecStart=@CMAKE_INSTALL_FULL_LIBEXECDIR@/plasma-login-greeter
+Slice=session.slice
+

@@ -1,0 +1,89 @@
+/*
+    SPDX-FileCopyrightText: 2019 Aleix Pol Gonzalez <aleixpol@kde.org>
+
+    SPDX-License-Identifier: LGPL-2.0-or-later
+*/
+
+#include "debug.h"
+#include "startplasma.h"
+#include <KConfig>
+#include <KConfigGroup>
+#include <QDBusConnection>
+#include <QDBusInterface>
+#include <signal.h>
+
+int main(int argc, char **argv)
+{
+    QCoreApplication app(argc, argv);
+
+    createConfigDirectory();
+    setupCursor(true);
+    signal(SIGTERM, sigtermHandler);
+
+    // Let clients try to reconnect to kwin after a restart
+    qputenv("QT_WAYLAND_RECONNECT", "1");
+
+    // Query whether org.freedesktop.locale1 is available. If it is, try to
+    // set XKB_DEFAULT_{MODEL,LAYOUT,VARIANT,OPTIONS} accordingly.
+    {
+        const QString locale1Service = QStringLiteral("org.freedesktop.locale1");
+        const QString locale1Path = QStringLiteral("/org/freedesktop/locale1");
+        QDBusMessage message =
+            QDBusMessage::createMethodCall(locale1Service, locale1Path, QStringLiteral("org.freedesktop.DBus.Properties"), QStringLiteral("GetAll"));
+        message << locale1Service;
+        QDBusMessage resultMessage = QDBusConnection::systemBus().call(message);
+        if (resultMessage.type() == QDBusMessage::ReplyMessage) {
+            QVariantMap result;
+            QDBusArgument dbusArgument = resultMessage.arguments().at(0).value<QDBusArgument>();
+            while (!dbusArgument.atEnd()) {
+                dbusArgument >> result;
+            }
+
+            auto queryAndSet = [&result](const char *var, const QString &value) {
+                const auto r = result.value(value).toString();
+                if (!r.isEmpty())
+                    qputenv(var, r.toUtf8());
+            };
+
+            queryAndSet("XKB_DEFAULT_MODEL", QStringLiteral("X11Model"));
+            queryAndSet("XKB_DEFAULT_LAYOUT", QStringLiteral("X11Layout"));
+            queryAndSet("XKB_DEFAULT_VARIANT", QStringLiteral("X11Variant"));
+            queryAndSet("XKB_DEFAULT_OPTIONS", QStringLiteral("X11Options"));
+        } else {
+            qCWarning(PLASMA_STARTUP) << "not a reply org.freedesktop.locale1" << resultMessage;
+        }
+    }
+    runEnvironmentScripts();
+
+    setupPlasmaEnvironment();
+    runStartupConfig();
+    qputenv("XDG_SESSION_TYPE", "wayland");
+
+    auto oldSystemdEnvironment = getSystemdEnvironment();
+    if (!syncDBusEnvironment()) {
+        out << "Could not sync environment to dbus.\n";
+        return 1;
+    }
+
+    // We import systemd environment after we sync the dbus environment here.
+    // Otherwise it may leads to some unwanted order of applying environment
+    // variables (e.g. LANG and LC_*)
+    importSystemdEnvrionment();
+
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.freedesktop.systemd1"),
+                                              QStringLiteral("/org/freedesktop/systemd1"),
+                                              QStringLiteral("org.freedesktop.systemd1.Manager"),
+                                              QStringLiteral("StartUnit"));
+    msg << QStringLiteral("plasma-login-wayland.target") << QStringLiteral("fail");
+
+    QDBusReply<QDBusObjectPath> reply = QDBusConnection::sessionBus().call(msg);
+    if (!reply.isValid()) {
+        qWarning(PLASMA_STARTUP) << "Could not start systemd managed Plasma session:" << reply.error().name() << reply.error().message();
+    }
+    QEventLoop e;
+    e.exec();
+    // obviously this needs fixing somewhat
+    // maybe just exec systemctl --user start --wait plsama-login-wayland.target
+
+    return 0;
+}

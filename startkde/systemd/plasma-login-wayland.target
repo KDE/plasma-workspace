@@ -1,0 +1,5 @@
+[Unit]
+Requires=plasma-kwin_wayland.service
+BindsTo=plasma-kwin_wayland.service
+Requires=plasma-login.service
+BindsTo=plasma-login.service
