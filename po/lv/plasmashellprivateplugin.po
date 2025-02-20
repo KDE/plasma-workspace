@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-30 00:43+0000\n"
-"PO-Revision-Date: 2025-01-27 15:57+0200\n"
+"PO-Revision-Date: 2025-02-18 18:46+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -415,14 +415,10 @@ msgid "Zoom out"
 msgstr "Tālināt"
 
 #: timezoneselector/TimezoneSelector.qml:230
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: 'Choose region' in the context of time zone region "
-#| "selection."
-#| msgid "region"
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr "reģions"
+msgstr "Reģions:"
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
@@ -436,14 +432,10 @@ msgid "Timezone region selector"
 msgstr "Laika joslas reģiona atlasītājs"
 
 #: timezoneselector/TimezoneSelector.qml:261
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Full context is: '<region> region, <zone> time zone.' in the context of "
-#| "time zone selection."
-#| msgid "time zone."
+#, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr "laika josla."
+msgstr "Laika josla:"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format

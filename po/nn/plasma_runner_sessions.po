@@ -130,37 +130,3 @@ msgstr "Lagra økta"
 #, kde-format
 msgid "Switch User"
 msgstr "Byt brukar"
-
-#~ msgctxt "KRunner keyword to list user sessions"
-#~ msgid "sessions"
-#~ msgstr "økter"
-
-#~ msgid "Lists all sessions"
-#~ msgstr "Vis alle økter"
-
-#~ msgctxt "KRunner keyword to switch user sessions"
-#~ msgid "switch"
-#~ msgstr "byt"
-
-#~ msgid ""
-#~ "Switches to the active session for the user :q:, or lists all active "
-#~ "sessions if :q: is not provided"
-#~ msgstr ""
-#~ "Byter til den aktive økta for brukaren :q:, eller viser alle dei aktive "
-#~ "øktene om :q: ikkje er med"
-
-#~ msgid ""
-#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#~ "will be displayed and the current session will be hidden.</p><p>You can "
-#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
-#~ "as the application launcher)</li></ul>"
-#~ msgstr ""
-#~ "<p>Du er ferd med å opna ei ny skrivebordsøkt.</p><p>Gjeldande økt vert "
-#~ "gøymd, og du får presentert ein innloggingsvindauge.</p><p>Slik byter du "
-#~ "mellom økter som køyrer:</p><ul><li>Ctrl + Alt +F{øktnummer}</"
-#~ "li><li>Plasma-søk (skriv «%1»)</li><li>Plasma-element (for eksempel "
-#~ "programstartaren)</li></ul>"
-
-#~ msgid "New Desktop Session"
-#~ msgstr "Ny skrivebordsøkt"

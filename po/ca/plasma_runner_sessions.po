@@ -1,16 +1,16 @@
 # Translation of plasma_runner_sessions.po to Catalan
-# Copyright (C) 2008-2023 This_file_is_part_of_KDE
+# Copyright (C) 2008-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2018, 2020, 2022, 2023.
+# Josep M. Ferrer <txemaq@gmail.com>, 2008, 2009, 2010, 2011, 2018, 2020, 2022, 2023, 2025.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2020, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 00:43+0000\n"
-"PO-Revision-Date: 2023-09-07 11:29+0200\n"
+"PO-Revision-Date: 2025-02-19 09:21+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -94,10 +94,9 @@ msgid "switch user;new session"
 msgstr "commuta d'usuari;sessió nova"
 
 #: sessionrunner.cpp:55
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Inicia una sessió nova amb un usuari diferent"
+msgstr "Canvia a una sessió amb un usuari diferent"
 
 #: sessionrunner.cpp:77
 #, kde-format
@@ -132,38 +131,3 @@ msgstr "Desa la sessió"
 #, kde-format
 msgid "Switch User"
 msgstr "Commuta d'usuari"
-
-#~ msgctxt "KRunner keyword to list user sessions"
-#~ msgid "sessions"
-#~ msgstr "sessions"
-
-#~ msgid "Lists all sessions"
-#~ msgstr "Llista totes les sessions"
-
-#~ msgctxt "KRunner keyword to switch user sessions"
-#~ msgid "switch"
-#~ msgstr "commuta"
-
-# skip-rule: punctuation-colon-no
-#~ msgid ""
-#~ "Switches to the active session for the user :q:, or lists all active "
-#~ "sessions if :q: is not provided"
-#~ msgstr ""
-#~ "Commuta a la sessió activa de l'usuari :q:, o llista totes les sessions "
-#~ "actives si no es proporciona :q:"
-
-#~ msgid ""
-#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#~ "will be displayed and the current session will be hidden.</p><p>You can "
-#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
-#~ "as the application launcher)</li></ul>"
-#~ msgstr ""
-#~ "<p>Esteu a punt d'obrir una sessió d'escriptori nova.</p><p>La sessió "
-#~ "actual s'amagarà i es mostrarà una pantalla nova de connexió.</p><p>Podeu "
-#~ "commutar entre les sessions usant:</p><ul><li>Ctrl+Alt+F{número de sessió}"
-#~ "</li><li>Cerca del Plasma (teclegeu «%1»)</li><li>Ginys del Plasma (com "
-#~ "el llançador d'aplicacions)</li></ul>"
-
-#~ msgid "New Desktop Session"
-#~ msgstr "Sessió nova d'escriptori"

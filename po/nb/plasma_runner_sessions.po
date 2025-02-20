@@ -130,13 +130,3 @@ msgstr ""
 #, kde-format
 msgid "Switch User"
 msgstr ""
-
-#~ msgid "Lists all sessions"
-#~ msgstr "Lister alle økter"
-
-#~ msgid ""
-#~ "Switches to the active session for the user :q:, or lists all active "
-#~ "sessions if :q: is not provided"
-#~ msgstr ""
-#~ "Bytter til den aktive økta for bruker :q:, eller lister alle aktive økter "
-#~ "hvis :q: ikke er oppgitt"

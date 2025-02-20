@@ -75,4 +75,4 @@ msgstr "Ortam Sesini Kıs"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr "Kendiliğinden Çalar/Oynatıcı Seç"
+msgstr "Çaları/Oynatıcıyı Kendiliğinden Seç"

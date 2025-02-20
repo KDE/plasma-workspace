@@ -1,24 +1,24 @@
 # translation of krunner_sessions.po to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2008-2025 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Jaime Robles <jaime@kde.org>, 2008.
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2011.
-# SPDX-FileCopyrightText: 2016, 2018, 2020, 2022, 2023 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2011 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2016, 2018, 2020, 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 00:43+0000\n"
-"PO-Revision-Date: 2023-09-07 12:16+0200\n"
+"PO-Revision-Date: 2025-02-19 03:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:22
@@ -94,10 +94,9 @@ msgid "switch user;new session"
 msgstr "cambiar usuario;nueva sesión"
 
 #: sessionrunner.cpp:55
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Inicia una nueva sesión como otro usuario"
+msgstr "Cambiar a una sesión como otro usuario"
 
 #: sessionrunner.cpp:77
 #, kde-format

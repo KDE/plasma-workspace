@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-10 00:42+0000\n"
-"PO-Revision-Date: 2024-01-17 15:07+0200\n"
+"PO-Revision-Date: 2025-02-18 18:43+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
@@ -39,27 +39,25 @@ msgstr "−%1"
 #: package/contents/ui/ExpandedRepresentation.qml:562
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "Atskaņošanas ātrums %1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:565
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "−%1"
+msgstr "%1×"
 
 #: package/contents/ui/ExpandedRepresentation.qml:569
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "Atskaņošanas ātrums"
 
 #: package/contents/ui/ExpandedRepresentation.qml:615
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1 (normāls)"
 
 #: package/contents/ui/ExpandedRepresentation.qml:654
 #, kde-format
