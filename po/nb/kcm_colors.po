@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-22 02:35+0000\n"
-"PO-Revision-Date: 2015-04-30 22:58+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-20 21:19+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -29,56 +29,56 @@ msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr ""
 "Hans Petter Bieker,Bjørn Steensrud,Axel Bojer,Nils Kristian Tomren,Bjørn "
-"Kvisli"
+"Kvisli,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "bieker@kde.org,bjornst@skogkatt.homelinux.org,fri_programvare@bojer.no,"
-"slx@nilsk.net,bjorn.kvisli@gmail.com"
+"slx@nilsk.net,bjorn.kvisli@gmail.com,mh306602@gmail.com"
 
 #: colors.cpp:235
 #, kde-format
 msgid "Unable to create a temporary file."
-msgstr ""
+msgstr "Klarte ikke opprette midlertidig fil."
 
 #: colors.cpp:248
 #, kde-format
 msgid "Unable to download the color scheme: %1"
-msgstr ""
+msgstr "Klarte ikke laste ned fargeoppsett-arkivet: %1"
 
 #: colors.cpp:266
 #, kde-format
 msgid "This file is not a color scheme file."
-msgstr ""
+msgstr "Fila er ikke en gyldig fargeoppsett-fil."
 
 #: colors.cpp:285
 #, kde-format
 msgid "Failed to create 'color-scheme' data folder."
-msgstr ""
+msgstr "Klarte ikke opprette datamappa «color-scheme»."
 
 #: colors.cpp:292
 #, kde-format
 msgid "Failed to copy color scheme into 'color-scheme' data folder."
-msgstr ""
+msgstr "Klarte ikke kopiere fargeoppsettet til datamappa «color-scheme»."
 
 #: colors.cpp:309
 #, kde-format
 msgid "Color scheme installed successfully."
-msgstr ""
+msgstr "Fargeoppsettet er nå installert."
 
 #. i18n: ectx: label, entry (colorScheme), group (General)
 #: colorssettings.kcfg:9
 #, kde-format
 msgid "Color scheme name"
-msgstr ""
+msgstr "Navn på fargeoppsett"
 
 #. i18n: ectx: label, entry (accentColor), group (General)
 #: colorssettings.kcfg:13
 #, kde-format
 msgid "Accent color"
-msgstr ""
+msgstr "Kontrastfarge"
 
 #. i18n: ectx: label, entry (lastUsedCustomAccentColor), group (General)
 #: colorssettings.kcfg:17
@@ -87,32 +87,34 @@ msgid ""
 "The last used custom accent color before user switched to wallpaper "
 "generated color or default color"
 msgstr ""
+"Siste brukte tilpassa kontrastfarge før brukeren byttet til kontrastfarge "
+"fra bakgrunnsbilde eller standard kontrastfarge"
 
 #. i18n: ectx: label, entry (accentColorFromWallpaper), group (General)
 #: colorssettings.kcfg:21
 #, kde-format
 msgid "Whether accent color from wallpaper should be applied"
-msgstr ""
+msgstr "Om kontrastfarge hentet fra bakgrunnsbildet skal brukes"
 
 #: editor/kcolorschemeeditor.cpp:25
 #, kde-format
 msgid "KColorSchemeEditor"
-msgstr ""
+msgstr "KColorSchemeEditor"
 
 #: editor/kcolorschemeeditor.cpp:27
 #, kde-format
 msgid "Utility to edit and create color schemes"
-msgstr ""
+msgstr "Verktøy for å lage og redigere fargeoppsett"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Olivier Churlaud"
-msgstr ""
+msgstr "Olivier Churlaud"
 
 #: editor/kcolorschemeeditor.cpp:29
 #, kde-format
 msgid "Utility creation"
-msgstr ""
+msgstr "Laget verktøyet"
 
 #: editor/kcolorschemeeditor.cpp:30
 #, kde-format
@@ -122,7 +124,7 @@ msgstr "Jeremy Whiting"
 #: editor/kcolorschemeeditor.cpp:30 editor/kcolorschemeeditor.cpp:31
 #, kde-format
 msgid "KCM code (reused in here)"
-msgstr ""
+msgstr "KCM-koden (gjenbrukt her)"
 
 #: editor/kcolorschemeeditor.cpp:31
 #, kde-format
@@ -132,7 +134,7 @@ msgstr "Matthew Woehlke"
 #: editor/kcolorschemeeditor.cpp:35
 #, kde-format
 msgid "Scheme to edit or to use as a base."
-msgstr ""
+msgstr "Oppsett å redigere eller bruke som grunnlag."
 
 #: editor/kcolorschemeeditor.cpp:37
 #, kde-format
@@ -140,17 +142,19 @@ msgid ""
 "Show 'Apply' button that saves changes without asking (unlike 'Save As' "
 "button)"
 msgstr ""
+"Vis «Bruk»-knapp som tar i bruk endringer uten spørsmål (i motsetning til "
+"«Lagre som»-knappen)"
 
 #: editor/kcolorschemeeditor.cpp:41
 #, kde-format
 msgid ""
 "Makes the dialog transient for another application window specified by handle"
-msgstr ""
+msgstr "Gjør dialogvinduet forbigående for vinduet som vindus-ID-en hører til"
 
 #: editor/kcolorschemeeditor.cpp:57
 #, kde-format
 msgid "Scheme not found, falling back to current one.\n"
-msgstr ""
+msgstr "Fant ikke fargeoppsett. Går tilbake til det gjeldende.\n"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, label)
 #: editor/preview.ui:29
@@ -184,7 +188,7 @@ msgstr "Trykknapp"
 #: editor/preview.ui:123
 #, kde-format
 msgid "Selection Normal Text against Selection Normal Background"
-msgstr "Normal merket tekst mot normal utvalgsbakgrunn"
+msgstr "«Merket normal tekst» mot «Merket normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelSelection0)
@@ -198,7 +202,7 @@ msgstr "Merket tekst"
 #: editor/preview.ui:138
 #, kde-format
 msgid "Selection Link Text against Selection Normal Background"
-msgstr "Merket lenketekst mot normal utvalgsbakgrunn"
+msgstr "«Merket lenketekst» mot «Merket normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -214,7 +218,7 @@ msgstr "lenke"
 #: editor/preview.ui:153
 #, kde-format
 msgid "Selection Visited Text against Selection Normal Background"
-msgstr "Merket besøkt tekst mot normal utvalgsbakgrunn"
+msgstr "«Merket besøkt tekst» mot «Merket normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -230,7 +234,7 @@ msgstr "besøkt"
 #: editor/preview.ui:163
 #, kde-format
 msgid "Selection Active Text against Selection Normal Background"
-msgstr "Merket aktiv tekst mot normal utvalgsbakgrunn"
+msgstr "«Merket aktiv tekst» mot «Merket normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -246,7 +250,7 @@ msgstr "a"
 #: editor/preview.ui:173
 #, kde-format
 msgid "Selection Inactive Text against Selection Normal Background"
-msgstr "Merket inaktiv tekst mot normal utvalgsbakgrunn"
+msgstr "«Merket inaktiv tekst» mot «Merket normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -262,7 +266,7 @@ msgstr "i"
 #: editor/preview.ui:183
 #, kde-format
 msgid "Selection Negative Text against Selection Normal Background"
-msgstr "Merket negativ tekst mot normal utvalgsbakgrunn"
+msgstr "«Merket negativ tekst» mot «Merket normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -278,7 +282,7 @@ msgstr "!"
 #: editor/preview.ui:193
 #, kde-format
 msgid "Selection Neutral Text against Selection Normal Background"
-msgstr "Merket nøytral tekst mot normal utvalgsbakgrunn"
+msgstr "«Merket nøytral tekst» mot «Merket normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -294,7 +298,7 @@ msgstr "="
 #: editor/preview.ui:203
 #, kde-format
 msgid "Selection Positive Text against Selection Normal Background"
-msgstr "Merket positiv tekst mot normal utvalgsbakgrunn"
+msgstr "«Merket positiv tekst» mot «Merket normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
@@ -310,7 +314,7 @@ msgstr "+"
 #: editor/preview.ui:247
 #, kde-format
 msgid "View Normal Text against View Normal Background"
-msgstr "Vis normal tekst mot normal visningsbakgrunn"
+msgstr "«Vis normal tekst» mot «Vis normal bakgrunn»"
 
 #. i18n: see kdebase/workspace/kcontrol/colors/README.i18n
 #. i18n: ectx: property (text), widget (QLabel, labelView0)
@@ -324,43 +328,43 @@ msgstr "Normal tekst"
 #: editor/preview.ui:262
 #, kde-format
 msgid "View Link Text against View Normal Background"
-msgstr "Vis lenketekst mot normal visningsbakgrunn"
+msgstr "«Vis lenketekst» mot «Vis normal bakgrunn»"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView4)
 #: editor/preview.ui:277
 #, kde-format
 msgid "View Visited Text against View Normal Background"
-msgstr "Vis besøkt tekst mot normal visningsbakgrunn"
+msgstr "«Vis besøkt tekst» mot «Vis normal bakgrunn»"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView2)
 #: editor/preview.ui:287
 #, kde-format
 msgid "View Active Text against View Normal Background"
-msgstr "Vis aktiv tekst mot normal visningsbakgrunn"
+msgstr "«Vis aktiv tekst» mot «Vis normal bakgrunn»"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView1)
 #: editor/preview.ui:297
 #, kde-format
 msgid "View Inactive Text against View Normal Background"
-msgstr "Vis inaktiv tekst mot normal visningsbakgrunn"
+msgstr "«Vis inaktiv tekst» mot «Vis normal bakgrunn»"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView5)
 #: editor/preview.ui:307
 #, kde-format
 msgid "View Negative Text against View Normal Background"
-msgstr "Vis negativ tekst mot normal visningsbakgrunn"
+msgstr "«Vis negativ tekst» mot «Vis normal bakgrunn»"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView6)
 #: editor/preview.ui:317
 #, kde-format
 msgid "View Neutral Text against View Normal Background"
-msgstr "Vis nøytral tekst mot normal visningsbakgrunn"
+msgstr "«Vis nøytral tekst» mot «Vis normal bakgrunn»"
 
 #. i18n: ectx: property (toolTip), widget (QLabel, labelView7)
 #: editor/preview.ui:327
 #, kde-format
 msgid "View Positive Text against View Normal Background"
-msgstr "Vis positiv tekst mot normal visningsbakgrunn"
+msgstr "«Vis positiv tekst» mot «Vis normal bakgrunn»"
 
 #: editor/scmeditorcolors.cpp:62 editor/scmeditorcolors.cpp:76
 #, kde-format
@@ -375,7 +379,7 @@ msgstr "Normal bakgrunn"
 #: editor/scmeditorcolors.cpp:100
 #, kde-format
 msgid "Alternate Background"
-msgstr "Vekslende bakgrunn"
+msgstr "Alternativ bakgrunn"
 
 #: editor/scmeditorcolors.cpp:101
 #, kde-format
@@ -440,13 +444,13 @@ msgstr "Svevedekorasjon"
 #: editor/scmeditorcolors.ui:23
 #, kde-format
 msgid "Color set:"
-msgstr "Fargesett:"
+msgstr "Fargeoppsett:"
 
 #. i18n: ectx: property (toolTip), widget (QComboBox, colorSet)
 #: editor/scmeditorcolors.ui:36
 #, kde-format
 msgid "Colorset to view/modify"
-msgstr "Fargesett som skal vises/endres"
+msgstr "Fargeoppsett som skal vises/endres"
 
 #. i18n: 'Common' here means &quot;frequent/not rare&quot;, not &quot;shared&quot;
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -454,7 +458,7 @@ msgstr "Fargesett som skal vises/endres"
 #, kde-format
 msgctxt "color-sets"
 msgid "Common Colors"
-msgstr "Vanlige farger"
+msgstr "Fellesfarger"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -462,7 +466,7 @@ msgstr "Vanlige farger"
 #, kde-format
 msgctxt "color-sets"
 msgid "View"
-msgstr "Vis"
+msgstr "Visning"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -486,7 +490,7 @@ msgstr "Knapp"
 #, kde-format
 msgctxt "color-sets"
 msgid "Selection"
-msgstr "Utvalg"
+msgstr "Merket tekst"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -494,7 +498,7 @@ msgstr "Utvalg"
 #, kde-format
 msgctxt "color-sets"
 msgid "Tooltip"
-msgstr "Verktøytips"
+msgstr "Hjelpebobler"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -502,7 +506,7 @@ msgstr "Verktøytips"
 #, kde-format
 msgctxt "color-sets"
 msgid "Complementary"
-msgstr ""
+msgstr "Komplementær"
 
 #. i18n: see plasma-workspace/kcms/colors/README.i18n
 #. i18n: ectx: property (text), item, widget (QComboBox, colorSet)
@@ -510,7 +514,7 @@ msgstr ""
 #, kde-format
 msgctxt "color-sets"
 msgid "Header"
-msgstr ""
+msgstr "Topptekst"
 
 #. i18n: ectx: property (text), widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:118 editor/scmeditorcolors.ui:123
@@ -546,13 +550,13 @@ msgstr "1"
 #: editor/scmeditorcolors.ui:258
 #, kde-format
 msgid "View Background"
-msgstr "Vis bakgrunn"
+msgstr "Visningsbakgrunn"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:263
 #, kde-format
 msgid "View Text"
-msgstr "Vis tekst"
+msgstr "Visningstekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:268
@@ -600,13 +604,13 @@ msgstr "Inaktiv utvalgstekst"
 #: editor/scmeditorcolors.ui:348
 #, kde-format
 msgid "Tooltip Background"
-msgstr "Bakgrunn for verktøytips"
+msgstr "Bakgrunn for hjelpebobler"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:353
 #, kde-format
 msgid "Tooltip Text"
-msgstr "Tekst for verktøytips"
+msgstr "Tekst for hjelpebobler"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:358
@@ -618,13 +622,13 @@ msgstr "Aktiv tittellinje"
 #: editor/scmeditorcolors.ui:363
 #, kde-format
 msgid "Active Titlebar Text"
-msgstr "Tekst på aktiv tittellinje"
+msgstr "Aktiv tittellinje-tekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:368
 #, kde-format
 msgid "Active Titlebar Secondary"
-msgstr "Sekundær på aktiv tittellinje"
+msgstr "Sekundær aktiv tittellinje"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:373
@@ -636,13 +640,13 @@ msgstr "Inaktiv tittellinje"
 #: editor/scmeditorcolors.ui:378
 #, kde-format
 msgid "Inactive Titlebar Text"
-msgstr "Tekst på inaktiv tittellinje"
+msgstr "Inaktiv tittellinje-tekst"
 
 #. i18n: ectx: property (text), item, widget (QTableWidget, commonColorTable)
 #: editor/scmeditorcolors.ui:383
 #, kde-format
 msgid "Inactive Titlebar Secondary"
-msgstr "Sekundær på inaktiv tittellinje"
+msgstr "Inaktiv sekundær tittellinje"
 
 #: editor/scmeditordialog.cpp:60
 #, kde-format
@@ -657,12 +661,12 @@ msgstr "Farger"
 #: editor/scmeditordialog.cpp:62
 #, kde-format
 msgid "Disabled"
-msgstr ""
+msgstr "Slått av"
 
 #: editor/scmeditordialog.cpp:94
 #, kde-format
 msgid "You have unsaved changes. Do you really want to quit?"
-msgstr ""
+msgstr "Du har ulagrede endringer. Er du sikker på at du vil avslutte?"
 
 #: editor/scmeditordialog.cpp:95
 #, kde-format
@@ -672,12 +676,12 @@ msgstr "Ulagrede endringer"
 #: editor/scmeditordialog.cpp:115 editor/scmeditordialog.cpp:140
 #, kde-format
 msgid "Save Color Scheme"
-msgstr "Lagre fargeoppsettet"
+msgstr "Lagre fargeoppsett"
 
 #: editor/scmeditordialog.cpp:115
 #, kde-format
 msgid "&Enter a name for the color scheme:"
-msgstr "&Gi navn til fargeoppsettet:"
+msgstr "&Skriv inn et navn for fargeoppsettet:"
 
 #: editor/scmeditordialog.cpp:139
 #, kde-format
@@ -844,13 +848,13 @@ msgstr "Avslått kontraststyrke"
 #: editor/scmeditoroptions.ui:17
 #, kde-format
 msgid "Apply &effects to inactive windows"
-msgstr ""
+msgstr "Bruk &effekter på inaktive vinduer"
 
 #. i18n: ectx: property (text), widget (QCheckBox, inactiveSelectionEffect)
 #: editor/scmeditoroptions.ui:24
 #, kde-format
 msgid "Use different colors for in&active selections"
-msgstr ""
+msgstr "Bruk forskjellige farger for i&naktive utvalg"
 
 #. i18n: ectx: property (text), widget (QCheckBox, shadeSortedColumn)
 #: editor/scmeditoroptions.ui:31
@@ -862,19 +866,19 @@ msgstr "Skyggelegg sorterte kolonner &i lister"
 #: editor/scmeditoroptions.ui:38
 #, kde-format
 msgid "Tint all colors with accent color"
-msgstr ""
+msgstr "Juster alle farger mot kontrastfargen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, accentTitlebar)
 #: editor/scmeditoroptions.ui:45
 #, kde-format
 msgid "Make window titlebars a&ccent-colored"
-msgstr ""
+msgstr "Fargelegg tittellinjer med &kontrastfargen"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: editor/scmeditoroptions.ui:52
 #, kde-format
 msgid "Tint strength:"
-msgstr ""
+msgstr "Justeringsstyrke:"
 
 #. i18n: ectx: property (toolTip), widget (QGroupBox, groupBox_5)
 #: editor/scmeditoroptions.ui:69
@@ -1150,131 +1154,131 @@ msgstr "fokus"
 #: package/contents/ui/main.qml:23
 #, kde-format
 msgid "This module lets you choose the color scheme."
-msgstr ""
+msgstr "Denne modulen lar deg velge fargeoppsett."
 
 #: package/contents/ui/main.qml:90
 #, kde-format
 msgid ""
 "The color scheme '%1' is not installed. Selecting the default theme instead."
-msgstr ""
+msgstr "Fargeoppsettet «%1» er ikke installert. Velg derfor standardtemaet."
 
 #: package/contents/ui/main.qml:108
 #, kde-format
 msgid "All Schemes"
-msgstr ""
+msgstr "Alle fargeoppsett"
 
 #: package/contents/ui/main.qml:109
 #, kde-format
 msgid "Light Schemes"
-msgstr ""
+msgstr "Lyse fargeoppsett"
 
 #: package/contents/ui/main.qml:110
 #, kde-format
 msgid "Dark Schemes"
-msgstr ""
+msgstr "Mørke fargeoppsett"
 
 #: package/contents/ui/main.qml:143
 #, kde-format
 msgid "Use accent color:"
-msgstr ""
+msgstr "Bruk kontrastfarge:"
 
 #: package/contents/ui/main.qml:144
 #, kde-format
 msgid "From current color scheme"
-msgstr ""
+msgstr "Fra gjeldende fargeoppsett"
 
 #: package/contents/ui/main.qml:157
 #, kde-format
 msgctxt "@option:radio wallpaper accent color option"
 msgid "From current wallpaper"
-msgstr ""
+msgstr "Fra gjeldende bakgrunnsbilde"
 
 #: package/contents/ui/main.qml:266
 #, kde-format
 msgid "Custom:"
-msgstr ""
+msgstr "Tilpasset:"
 
 #: package/contents/ui/main.qml:273
 #, kde-format
 msgid "Choose custom accent color"
-msgstr ""
+msgstr "Velg kontrastfarge"
 
 #: package/contents/ui/main.qml:361
 #, kde-format
 msgid "Window Title"
-msgstr ""
+msgstr "Vindustittel"
 
 #: package/contents/ui/main.qml:383
 #, kde-format
 msgid "Window text"
-msgstr ""
+msgstr "Vindustekst"
 
 #: package/contents/ui/main.qml:390
 #, kde-format
 msgid "Button"
-msgstr ""
+msgstr "Knapp"
 
 #: package/contents/ui/main.qml:427
 #, kde-format
 msgctxt "Hyperlink"
 msgid "link"
-msgstr ""
+msgstr "lenke"
 
 #: package/contents/ui/main.qml:429
 #, kde-format
 msgctxt "Visited hyperlink"
 msgid "visited"
-msgstr ""
+msgstr "besøkt"
 
 #: package/contents/ui/main.qml:436
 #, kde-format
 msgid "Normal text"
-msgstr ""
+msgstr "Normal tekst"
 
 #: package/contents/ui/main.qml:444
 #, kde-format
 msgid "Highlighted text"
-msgstr ""
+msgstr "Fremhevet tekst"
 
 #: package/contents/ui/main.qml:451
 #, kde-format
 msgid "Disabled text"
-msgstr ""
+msgstr "Avslått tekst"
 
 #: package/contents/ui/main.qml:469
 #, kde-format
 msgid "Edit Color Scheme…"
-msgstr ""
+msgstr "Rediger fargeoppsett …"
 
 #: package/contents/ui/main.qml:475
 #, kde-format
 msgid "Remove Color Scheme"
-msgstr ""
+msgstr "Fjern fargeoppsett"
 
 #: package/contents/ui/main.qml:482
 #, kde-format
 msgid "Restore Color Scheme"
-msgstr ""
+msgstr "Gjenopprett fargeoppsett"
 
 #: package/contents/ui/main.qml:526
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Installer fra fil …"
 
 #: package/contents/ui/main.qml:531
 #, kde-format
 msgid "Get New Color Schemes…"
-msgstr ""
+msgstr "Hent nye fargeoppsett …"
 
 #: package/contents/ui/main.qml:549
 #, kde-format
 msgid "Open Color Scheme"
-msgstr ""
+msgstr "Åpne fargeoppsett"
 
 #: package/contents/ui/main.qml:551
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
-msgstr ""
+msgstr "Fargeoppsett-filer (*.colors)"
 
 #: plasma-apply-colorscheme.cpp:39
 #, kde-format
@@ -1283,6 +1287,8 @@ msgid ""
 "without accidentally setting it to one that is either not available, or "
 "which is already set."
 msgstr ""
+"Dette verktøyet lar deg velge fargeoppsett for den gjeldende Plasma-økta og "
+"hindrer deg i å velge et oppsett som ikke finnes eller som allerede er valgt."
 
 #: plasma-apply-colorscheme.cpp:43
 #, kde-format
@@ -1290,6 +1296,9 @@ msgid ""
 "The name of the color scheme you wish to set for your current Plasma session "
 "(passing a full path will only use the last part of the path)"
 msgstr ""
+"Navnet på fargeoppsettet du vil bruke for gjeldende Plasma-økt (hvis du "
+"oppgir en fullstendig filadresse, blir bare den siste delen av adressen "
+"brukt)"
 
 #: plasma-apply-colorscheme.cpp:46
 #, kde-format
@@ -1297,6 +1306,8 @@ msgid ""
 "Show all the color schemes available on the system (and which is the current "
 "theme)"
 msgstr ""
+"Vis alle fargeoppsettene som finnes på systemet (og marker hva som er "
+"gjeldende oppsett)"
 
 #: plasma-apply-colorscheme.cpp:51
 #, kde-format
@@ -1305,6 +1316,10 @@ msgid ""
 "w3.org/TR/SVG11/types.html#ColorKeywords) and hex color codes are supported. "
 "Quote the hex code if there is possibility of shell expansion"
 msgstr ""
+"Navnet på kontrastfargen du vil bruke. Du kan bruke både SVG-fargenavn "
+"(https://www.w3.org/TR/SVG11/types.html#ColorKeywords) og fargekoder "
+"(heksadesimal-format). Skriv fargekoden i hermetegn hvis det er risiko for "
+"automatisk variabelutviding."
 
 #: plasma-apply-colorscheme.cpp:78
 #, kde-format
@@ -1312,25 +1327,26 @@ msgid ""
 "The requested theme \"%1\" is already set as the theme for the current "
 "Plasma session."
 msgstr ""
+"Det valgte temaet «%1» er allerede i bruk som tema for gjeldende Plasma-økt."
 
 #: plasma-apply-colorscheme.cpp:111
 #, kde-format
 msgid "Successfully applied the color scheme %1 to your current Plasma session"
-msgstr ""
+msgstr "Fargeoppsettet %1 er nå tatt i bruk i gjeldende Plasma-økt."
 
 #: plasma-apply-colorscheme.cpp:113
 #, kde-format
 msgid ""
 "Could not find theme \"%1\". The theme should be one of the following "
 "options: %2"
-msgstr ""
+msgstr "Fant ikke temaet «%1». Temaet må være ett av følgende: %2"
 
 #: plasma-apply-colorscheme.cpp:120
 #, kde-format
 msgid ""
 "You have managed to pass an empty color scheme name, which isn't supported "
 "behavior."
-msgstr ""
+msgstr "Du har oppgitt et tomt navn på fargeoppsett, noe som ikke støttes."
 
 #: plasma-apply-colorscheme.cpp:124
 #, kde-format
@@ -1338,23 +1354,25 @@ msgid ""
 "The file you attempted to set as your scheme, %1, could not be identified as "
 "a color scheme."
 msgstr ""
+"Fila du prøvde å velge som fargeoppsett, %1, kunne ikke tolkes som et "
+"fargeoppsett."
 
 #: plasma-apply-colorscheme.cpp:147
 #, kde-format
 msgid "Successfully applied the accent color %1"
-msgstr ""
+msgstr "Kontrastfargen %1 er nå tatt i bruk."
 
 #: plasma-apply-colorscheme.cpp:149
 #, kde-format
 msgid "Invalid accent color "
-msgstr ""
+msgstr "Ugyldig kontrastfarge  "
 
 #: plasma-apply-colorscheme.cpp:154
 #, kde-format
 msgid "You have the following color schemes on your system:"
-msgstr ""
+msgstr "Du har følgende temaene for fargeoppsettene tilgjengelige:"
 
 #: plasma-apply-colorscheme.cpp:159
 #, kde-format
 msgid " * %1 (current color scheme)"
-msgstr ""
+msgstr " * %1 (gjeldende fargeoppsett)"

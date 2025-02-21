@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kcmicons\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:47+0000\n"
-"PO-Revision-Date: 2014-04-25 18:41+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-20 20:36+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -32,59 +32,59 @@ msgstr "Hovedverktøylinje"
 #: iconsizecategorymodel.cpp:15
 #, kde-format
 msgid "Secondary Toolbars"
-msgstr ""
+msgstr "Sekundærverktøylinjer"
 
 #: iconsizecategorymodel.cpp:16
 #, kde-format
 msgid "Small Icons"
-msgstr "Små ikoner"
+msgstr "Små ikon"
 
 #: iconsizecategorymodel.cpp:17
 #, kde-format
 msgid "Dialogs"
-msgstr "Dialoger"
+msgstr "Dialogvindu"
 
 #. i18n: ectx: label, entry (Theme), group (Icons)
 #: iconssettingsbase.kcfg:9
 #, kde-format
 msgid "Name of the current icon theme"
-msgstr ""
+msgstr "Navn på gjeldende ikontema"
 
 #. i18n: ectx: label, entry (desktopSize), group (DesktopIcons)
 #: iconssettingsbase.kcfg:15
 #, kde-format
 msgid "Desktop icons size"
-msgstr ""
+msgstr "Størrelse på skrivebords-ikon"
 
 #. i18n: ectx: label, entry (toolbarSize), group (ToolbarIcons)
 #: iconssettingsbase.kcfg:21
 #, kde-format
 msgid "Toolbar icons size"
-msgstr ""
+msgstr "Størrelse på verktøylinje-ikon"
 
 #. i18n: ectx: label, entry (mainToolbarSize), group (MainToolbarIcons)
 #: iconssettingsbase.kcfg:27
 #, kde-format
 msgid "Main toolbar icons size"
-msgstr ""
+msgstr "Størrelse på hovedverktøylinje-ikon"
 
 #. i18n: ectx: label, entry (smallSize), group (SmallIcons)
 #: iconssettingsbase.kcfg:33
 #, kde-format
 msgid "Small icons size"
-msgstr ""
+msgstr "Størrelse på små ikon"
 
 #. i18n: ectx: label, entry (panelSize), group (PanelIcons)
 #: iconssettingsbase.kcfg:39
 #, kde-format
 msgid "Panel icons size"
-msgstr ""
+msgstr "Størrelse på panelikon"
 
 #. i18n: ectx: label, entry (dialogSize), group (DialogIcons)
 #: iconssettingsbase.kcfg:45
 #, kde-format
 msgid "Dialog icons size"
-msgstr ""
+msgstr "Størrelse på ikon i dialogvindu"
 
 #: main.cpp:182
 #, kde-format
@@ -94,7 +94,7 @@ msgstr "Kan ikke opprette midlertidig fil."
 #: main.cpp:193
 #, kde-format
 msgid "Unable to download the icon theme archive: %1"
-msgstr ""
+msgstr "Klarte ikke laste ned ikontema-arkivet: %1"
 
 #: main.cpp:207
 #, kde-format
@@ -107,23 +107,23 @@ msgid ""
 "A problem occurred during the installation process; however, most of the "
 "themes in the archive have been installed"
 msgstr ""
-"Det oppsto et problem under installasjonen, men de fleste temaene i arkivet "
-"er likevel installert"
+"Det oppstod et problem under installasjonen, men de fleste temaene i arkivet "
+"er likevel installert."
 
 #: main.cpp:216
 #, kde-format
 msgid "Theme installed successfully."
-msgstr "Tema vellykket installert."
+msgstr "Temaet er nå installert."
 
 #: main.cpp:260
 #, kde-format
 msgid "Installing icon themes…"
-msgstr ""
+msgstr "Installerer ikontema …"
 
 #: main.cpp:270
 #, kde-format
 msgid "Installing %1 theme…"
-msgstr ""
+msgstr "Installerer %1-temaet …"
 
 #: package/contents/ui/IconSizePopup.qml:34
 #, kde-kuit-format
@@ -134,53 +134,57 @@ msgid ""
 "you find that objects on screen are generally too small or too large, "
 "consider adjusting the global scale instead."
 msgstr ""
+"Her kan du sette opp standardstørrelse for ulike type ikon. Merk at ikkee "
+"alle programmer tar hensyn til innstillingene her.<nl/><nl/>Hvis du synes at "
+"også andre elementer på skjermen generelt er for store eller små, kan du "
+"vurdere å endre den globale skaleringsverdien."
 
 #: package/contents/ui/IconSizePopup.qml:41
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Tilpass global skalering …"
 
 #: package/contents/ui/IconSizePopup.qml:117
 #, kde-format
 msgctxt "@label:slider"
 msgid "Size:"
-msgstr ""
+msgstr "Størrelse:"
 
 #: package/contents/ui/main.qml:22
 #, kde-format
 msgid "This module allows you to choose the icons for your desktop."
-msgstr ""
+msgstr "Denne modulen lar deg velge ikon til skrivebordet."
 
 #: package/contents/ui/main.qml:148
 #, kde-format
 msgid "Remove Icon Theme"
-msgstr "Fjern ikon-tema"
+msgstr "Fjern ikontema"
 
 #: package/contents/ui/main.qml:155
 #, kde-format
 msgid "Restore Icon Theme"
-msgstr ""
+msgstr "Gjenopprett ikontema"
 
 #: package/contents/ui/main.qml:229
 #, kde-format
 msgid "Configure Icon Sizes"
-msgstr ""
+msgstr "Sett opp ikonstørrelser"
 
 #: package/contents/ui/main.qml:246
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Installer fra fil …"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Get New Icons…"
-msgstr ""
+msgstr "Hent nye ikon …"
 
 #: package/contents/ui/main.qml:273
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure Icon Sizes"
-msgstr ""
+msgstr "Sett opp ikonstørrelser"
 
 #: package/contents/ui/main.qml:285
 #, kde-format
@@ -190,4 +194,4 @@ msgstr "Åpne tema"
 #: package/contents/ui/main.qml:287
 #, kde-format
 msgid "Theme Files (*.tar.gz *.tar.bz2)"
-msgstr ""
+msgstr "Temafiler (*.tar.gz *.tar.bz2)"
