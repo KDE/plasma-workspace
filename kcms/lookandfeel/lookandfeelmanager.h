@@ -100,6 +100,8 @@ public:
     void setMenuFont(const QString &font);
     void setWindowTitleFont(const QString &font);
 
+    bool isPlasmaLocked() const;
+
     LookAndFeelSettings *settings() const;
 
 Q_SIGNALS:
@@ -110,6 +112,7 @@ Q_SIGNALS:
     void cursorsChanged(const QString &newStyle);
     void fontsChanged();
     void refreshServices(const QStringList &toStop, const KService::List &toStart);
+    void plasmaLockedChanged(bool locked);
 
 private:
     void writeNewDefaults(const QString &filename,
@@ -133,6 +136,7 @@ private:
     bool m_applyLatteLayout : 1;
     bool m_plasmashellChanged : 1;
     bool m_fontsChanged : 1;
+    bool m_plasmaLocked : 1;
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(LookAndFeelManager::Contents)

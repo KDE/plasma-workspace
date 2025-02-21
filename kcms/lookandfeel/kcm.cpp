@@ -120,6 +120,8 @@ KCMLookandFeel::KCMLookandFeel(QObject *parent, const KPluginMetaData &data)
         QDBusMessage message = QDBusMessage::createSignal(u"/KDEPlatformTheme"_s, u"org.kde.KDEPlatformTheme"_s, u"refreshFonts"_s);
         QDBusConnection::sessionBus().send(message);
     });
+
+    connect(m_lnf, &LookAndFeelManager::plasmaLockedChanged, this, &KCMLookandFeel::plasmaLockedChanged);
 }
 
 KCMLookandFeel::~KCMLookandFeel()
@@ -326,6 +328,11 @@ void KCMLookandFeel::resetSelectedContents()
         resetContents &= ~LookAndFeelManager::LayoutSettings;
     }
     setSelectedContents(resetContents);
+}
+
+bool KCMLookandFeel::isPlasmaLocked() const
+{
+    return m_lnf->isPlasmaLocked();
 }
 
 QDir KCMLookandFeel::cursorThemeDir(const QString &theme, const int depth)

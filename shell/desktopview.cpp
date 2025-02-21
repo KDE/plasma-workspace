@@ -534,6 +534,27 @@ void DesktopView::slotContainmentChanged()
                 desktopEditMode->setText(i18n("Enter Edit Mode"));
             }
         });
+
+        auto updateEditModeAction = [desktopEditMode](Plasma::Types::ImmutabilityType immutability) {
+            switch (immutability) {
+            case Plasma::Types::UserImmutable:
+                desktopEditMode->setEnabled(false);
+                desktopEditMode->setVisible(true);
+                break;
+            case Plasma::Types::SystemImmutable:
+                desktopEditMode->setEnabled(false);
+                desktopEditMode->setVisible(false);
+                break;
+            case Plasma::Types::Mutable:
+            default:
+                desktopEditMode->setEnabled(true);
+                desktopEditMode->setVisible(true);
+                break;
+            }
+        };
+
+        connect(m_containment->corona(), &Plasma::Corona::immutabilityChanged, desktopEditMode, updateEditModeAction);
+        updateEditModeAction(m_containment->corona()->immutability());
     }
 }
 
