@@ -966,16 +966,16 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
             configView->setAnimated(true);
             m_panelConfigView = configView;
 
-            auto positionConfigView = [this]() {
-                QQuickItem *contObject = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
-                QQuickItem *tb = contObject->property("toolBox").value<QQuickItem *>();
-                if (tb && containment()->formFactor() != Plasma::Types::Vertical) {
-                    m_panelConfigView->setVisualParent(tb);
-                } else {
-                    m_panelConfigView->setVisualParent(contObject);
-                }
-            };
-            connect(this, &PanelView::formFactorChanged, this, positionConfigView);
+            connect(this, &PanelView::formFactorChanged, this, [&]() {
+                // The panel window will resize first, and the content
+                // will follow. We first unset the visual parent so that
+                // the config view does not reposition in the incorrect
+                // position before the content has a chance to update.
+                m_panelConfigView->setVisualParent(nullptr);
+                // We will then re-parent the config view to the correct
+                // item as soon as the window is done resizing.
+                QTimer::singleShot(0, this, &PanelView::positionConfigView);
+            });
             positionConfigView();
 
             configView->init();
@@ -997,6 +997,17 @@ void PanelView::showConfigurationInterface(Plasma::Applet *applet)
         m_appletConfigView->init();
         m_appletConfigView->show();
         m_appletConfigView->requestActivate();
+    }
+}
+
+void PanelView::positionConfigView()
+{
+    QQuickItem *contObject = PlasmaQuick::AppletQuickItem::itemForApplet(containment());
+    QQuickItem *tb = contObject->property("toolBox").value<QQuickItem *>();
+    if (tb && containment()->formFactor() != Plasma::Types::Vertical) {
+        m_panelConfigView->setVisualParent(tb);
+    } else {
+        m_panelConfigView->setVisualParent(contObject);
     }
 }
 
