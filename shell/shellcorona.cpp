@@ -679,6 +679,9 @@ QByteArray ShellCorona::dumpCurrentLayoutJS() const
 
 void ShellCorona::loadLookAndFeelDefaultLayout(const QString &packageName)
 {
+    if (immutability() != Plasma::Types::Mutable) {
+        return;
+    }
     KPackage::Package newPack = m_lookAndFeelPackage;
     newPack.setPath(packageName);
 
@@ -966,7 +969,7 @@ void ShellCorona::showAlternativesForApplet(Plasma::Applet *applet)
 
 void ShellCorona::unload()
 {
-    if (m_shell.isEmpty()) {
+    if (m_shell.isEmpty() || immutable()) {
         return;
     }
 

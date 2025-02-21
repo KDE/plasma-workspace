@@ -20,6 +20,8 @@
 #include <KSharedConfig>
 #include <QDBusConnection>
 #include <QDBusMessage>
+#include <QDBusPendingCall>
+#include <QDBusPendingReply>
 #include <QGuiApplication>
 #include <QStyle>
 #include <QStyleFactory>
@@ -65,8 +67,39 @@ LookAndFeelManager::LookAndFeelManager(QObject *parent)
     , m_data(new LookAndFeelData(this))
     , m_plasmashellChanged(false)
     , m_fontsChanged(false)
+    , m_plasmaLocked(false)
 {
     m_applyLatteLayout = (KService::serviceByDesktopName(u"org.kde.latte-dock"_s) != nullptr);
+
+    QDBusMessage message = QDBusMessage::createMethodCall(QStringLiteral("org.kde.plasmashell"),
+                                                          QStringLiteral("/PlasmaShell"),
+                                                          QStringLiteral("org.kde.PlasmaShell"),
+                                                          QStringLiteral("immutable"));
+    QDBusPendingCall async = QDBusConnection::sessionBus().asyncCall(message);
+
+    // Create watcher for the pending call
+    QDBusPendingCallWatcher *watcher = new QDBusPendingCallWatcher(async, this);
+
+    // Connect watcher finished signal to our slot
+    connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *call) {
+        QDBusPendingReply<bool> reply = *call;
+
+        if (reply.isError()) {
+            qWarning() << "Error:" << reply.error().message();
+        } else {
+            const bool locked = reply.value();
+            if (locked != m_plasmaLocked) {
+                m_plasmaLocked = locked;
+                Q_EMIT plasmaLockedChanged(locked);
+            }
+        }
+        call->deleteLater();
+    });
+}
+
+bool LookAndFeelManager::isPlasmaLocked() const
+{
+    return m_plasmaLocked;
 }
 
 LookAndFeelSettings *LookAndFeelManager::settings() const

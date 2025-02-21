@@ -37,6 +37,8 @@ class KCMLookandFeel : public KQuickManagedConfigModule
     Q_PROPERTY(LookAndFeelManager::Contents selectedContents READ selectedContents WRITE setSelectedContents RESET resetSelectedContents NOTIFY
                    selectedContentsChanged)
 
+    Q_PROPERTY(bool plasmaLocked READ isPlasmaLocked NOTIFY plasmaLockedChanged)
+
 public:
     enum Roles {
         PluginNameRole = Qt::UserRole + 1,
@@ -86,6 +88,8 @@ public:
     void setSelectedContents(LookAndFeelManager::Contents items);
     void resetSelectedContents();
 
+    bool isPlasmaLocked() const;
+
 public Q_SLOTS:
     void load() override;
     void save() override;
@@ -95,6 +99,7 @@ Q_SIGNALS:
     void showConfirmation();
     void themeContentsChanged();
     void selectedContentsChanged();
+    void plasmaLockedChanged();
 
 private:
     // List only packages which provide at least one of the components

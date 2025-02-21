@@ -44,7 +44,7 @@ ColumnLayout {
 
         QtControls.CheckBox {
             id: resetLayoutCheckbox
-            visible: root.hasAppearance && root.hasLayout
+            visible: !kcm.plasmaLocked && root.hasAppearance && root.hasLayout
             text: i18n("Desktop and window layout")
             checked: kcm.selectedContents & Private.LookandFeelManager.LayoutSettings
             onToggled: kcm.selectedContents ^= Private.LookandFeelManager.LayoutSettings

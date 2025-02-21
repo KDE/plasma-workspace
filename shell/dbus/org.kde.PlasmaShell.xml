@@ -18,6 +18,9 @@
     <method name="color">
       <arg name="output" type="u" direction="out"/>
     </method>
+    <method name="immutable">
+      <arg name="output" type="b" direction="out"/>
+    </method>
     <method name="dumpCurrentLayoutJS">
       <arg name="script" type="ay" direction="out"/>
     </method>

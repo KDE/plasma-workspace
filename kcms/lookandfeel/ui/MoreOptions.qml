@@ -27,14 +27,15 @@ ColumnLayout {
                     { text: i18n("Desktop layout"),
                       flag: Private.LookandFeelManager.DesktopLayout
                             | Private.LookandFeelManager.WindowPlacement
-                            | Private.LookandFeelManager.ShellPackage
+                            | Private.LookandFeelManager.ShellPackage,
+                      enabled: !kcm.plasmaLocked
                     },
-                    { text: i18n("Titlebar Buttons layout"), flag: Private.LookandFeelManager.TitlebarLayout },
+                    { text: i18n("Titlebar Buttons layout"), flag: Private.LookandFeelManager.TitlebarLayout, enabled: true },
                 ]
                 delegate: QtControls.CheckBox {
                     required property var modelData
                     text: modelData.text
-                    visible: kcm.themeContents & modelData.flag
+                    visible: enabled && (kcm.themeContents & modelData.flag)
                     checked: kcm.selectedContents & modelData.flag
                     onToggled: {
                         kcm.selectedContents ^= modelData.flag
