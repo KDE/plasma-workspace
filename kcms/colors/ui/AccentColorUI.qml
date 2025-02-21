@@ -6,7 +6,7 @@
 
 import QtQuick 2.15
 import QtQuick.Layouts 1.1
-import QtQuick.Dialogs as QtDialogs
+import Qt.labs.platform as Platform
 import QtQuick.Controls 2.3 as QQC2
 import QtQuick.Templates 2.3 as T
 
@@ -142,16 +142,13 @@ RowLayout {
             }
         }
 
-        QtDialogs.ColorDialog {
+        Platform.ColorDialog {
             id: colorDialog
-            title: i18n("Choose custom accent color")
-            // User must either choose a colour or cancel the operation before doing something else
-            modality: Qt.ApplicationModal
-            parentWindow: accentColorUI.Window.window
-            selectedColor: Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? kcm.accentColor : kcm.lastUsedCustomAccentColor
+
+            currentColor: Qt.colorEqual(kcm.lastUsedCustomAccentColor, "transparent") ? kcm.accentColor : kcm.lastUsedCustomAccentColor
             onAccepted: {
-                kcm.accentColor = colorDialog.selectedColor;
-                kcm.lastUsedCustomAccentColor = colorDialog.selectedColor;
+                kcm.accentColor = color;
+                kcm.lastUsedCustomAccentColor = color;
                 kcm.accentColorFromWallpaper = false;
             }
         }
