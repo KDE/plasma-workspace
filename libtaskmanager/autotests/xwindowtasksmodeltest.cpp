@@ -226,9 +226,12 @@ void XWindowTasksModelTest::test_modelData()
         QVERIFY(oldWindowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2)
                 != newWindowIcon.pixmap(KIconLoader::SizeLarge).toImage().pixelColor(KIconLoader::SizeLarge / 2, KIconLoader::SizeLarge / 2));
 
+        dataChangedSpy.clear();
         window->setIcon(QIcon());
         QVERIFY(!dataChangedSpy.empty() || dataChangedSpy.wait());
-        QVERIFY(dataChangedSpy.takeLast().at(2).value<QList<int>>().contains(Qt::DecorationRole));
+        QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &content) {
+            return content.at(2).value<QList<int>>().contains(static_cast<int>(qToUnderlying(Qt::DecorationRole)));
+        }));
     } // END Icon
 
     const NET::Properties windowInfoFlags =
