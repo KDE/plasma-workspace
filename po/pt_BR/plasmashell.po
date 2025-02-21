@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-12 00:43+0000\n"
+"POT-Creation-Date: 2025-02-21 00:43+0000\n"
 "PO-Revision-Date: 2025-02-08 10:38-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -366,63 +366,63 @@ msgstr "%1 %2 em %3"
 msgid "Disconnected Screen %1"
 msgstr "Tela desconectada %1"
 
-#: shellcorona.cpp:214 shellcorona.cpp:216
+#: shellcorona.cpp:215 shellcorona.cpp:217
 #, kde-format
 msgid "Show Desktop"
 msgstr "Mostrar a Área de Trabalho"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Hide Desktop"
 msgstr "Ocultar a Área de Trabalho"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "Ativar o lançador de aplicativos"
 
-#: shellcorona.cpp:239
+#: shellcorona.cpp:240
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "Mostrar seletor de atividade"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:250
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "Parar a atividade atual"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "Trocar para a atividade anterior"
 
-#: shellcorona.cpp:265
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "Trocar para a próxima atividade"
 
-#: shellcorona.cpp:280
+#: shellcorona.cpp:281
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "Ativar entrada %1 do gerenciador de tarefas"
 
-#: shellcorona.cpp:312
+#: shellcorona.cpp:313
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "Gerenciar áreas de trabalho e painéis…"
 
-#: shellcorona.cpp:334
+#: shellcorona.cpp:335
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "Mover o foco do teclado entre os painéis"
 
-#: shellcorona.cpp:2178
+#: shellcorona.cpp:2186
 #, kde-format
 msgid "Add Panel"
 msgstr "Adicionar painel"
 
-#: shellcorona.cpp:2239
+#: shellcorona.cpp:2247
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

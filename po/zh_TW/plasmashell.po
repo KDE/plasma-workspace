@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-12 00:43+0000\n"
+"POT-Creation-Date: 2025-02-21 00:43+0000\n"
 "PO-Revision-Date: 2025-01-24 22:39+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -361,63 +361,63 @@ msgstr "%1 %2 於 %3"
 msgid "Disconnected Screen %1"
 msgstr "已拔出螢幕 %1"
 
-#: shellcorona.cpp:214 shellcorona.cpp:216
+#: shellcorona.cpp:215 shellcorona.cpp:217
 #, kde-format
 msgid "Show Desktop"
 msgstr "顯示桌面"
 
-#: shellcorona.cpp:216
+#: shellcorona.cpp:217
 #, kde-format
 msgid "Hide Desktop"
 msgstr "隱藏桌面"
 
-#: shellcorona.cpp:231
+#: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Application Launcher"
 msgstr "開啟應用程式啟動器"
 
-#: shellcorona.cpp:239
+#: shellcorona.cpp:240
 #, kde-format
 msgid "Show Activity Switcher"
 msgstr "顯示活動切換器"
 
-#: shellcorona.cpp:249
+#: shellcorona.cpp:250
 #, kde-format
 msgid "Stop Current Activity"
 msgstr "停止目前的活動"
 
-#: shellcorona.cpp:257
+#: shellcorona.cpp:258
 #, kde-format
 msgid "Switch to Previous Activity"
 msgstr "切至上個活動"
 
-#: shellcorona.cpp:265
+#: shellcorona.cpp:266
 #, kde-format
 msgid "Switch to Next Activity"
 msgstr "切至下個活動"
 
-#: shellcorona.cpp:280
+#: shellcorona.cpp:281
 #, kde-format
 msgid "Activate Task Manager Entry %1"
 msgstr "啟用工作管理員項目 %1"
 
-#: shellcorona.cpp:312
+#: shellcorona.cpp:313
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
 msgstr "管理桌面與面板…"
 
-#: shellcorona.cpp:334
+#: shellcorona.cpp:335
 #, kde-format
 msgid "Move keyboard focus between panels"
 msgstr "在面板間移動鍵盤焦點"
 
-#: shellcorona.cpp:2178
+#: shellcorona.cpp:2186
 #, kde-format
 msgid "Add Panel"
 msgstr "新增面板"
 
-#: shellcorona.cpp:2239
+#: shellcorona.cpp:2247
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: kcmfonts\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-06-09 00:40+0000\n"
-"PO-Revision-Date: 2015-01-08 21:39+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-20 20:26+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -29,49 +29,49 @@ msgstr ""
 #: fontsaasettingsbase.kcfg:9
 #, kde-format
 msgid "Force font DPI on X11"
-msgstr ""
+msgstr "Tving skrift-PPT på X11"
 
 #. i18n: ectx: label, entry (font), group (General)
 #: fontssettings.kcfg:9
 #, kde-format
 msgid "General font"
-msgstr ""
+msgstr "Generell skrift"
 
 #. i18n: ectx: label, entry (fixed), group (General)
 #: fontssettings.kcfg:21
 #, kde-format
 msgid "Fixed width font"
-msgstr ""
+msgstr "Fastbreddeskrift"
 
 #. i18n: ectx: label, entry (smallestReadableFont), group (General)
 #: fontssettings.kcfg:33
 #, kde-format
 msgid "Small font"
-msgstr ""
+msgstr "Liten skrift"
 
 #. i18n: ectx: label, entry (toolBarFont), group (General)
 #: fontssettings.kcfg:45
 #, kde-format
 msgid "Tool bar font"
-msgstr ""
+msgstr "Verktøylinjeskrift"
 
 #. i18n: ectx: label, entry (menuFont), group (General)
 #: fontssettings.kcfg:57
 #, kde-format
 msgid "Menu font"
-msgstr ""
+msgstr "Menyskrift"
 
 #. i18n: ectx: label, entry (activeFont), group (WM)
 #: fontssettings.kcfg:71
 #, kde-format
 msgid "Window title font"
-msgstr ""
+msgstr "Vindustittel-skrift"
 
 #: kxftconfig.cpp:455
 #, kde-format
 msgctxt "use system subpixel setting"
 msgid "Vendor default"
-msgstr ""
+msgstr "Leverandørstandard"
 
 #: kxftconfig.cpp:457
 #, kde-format
@@ -103,7 +103,7 @@ msgstr "Loddrett BGR"
 #, kde-format
 msgctxt "use system hinting settings"
 msgid "Vendor default"
-msgstr ""
+msgstr "Leverandørstandard"
 
 #: kxftconfig.cpp:495
 #, kde-format
@@ -127,7 +127,7 @@ msgstr "Litt"
 #, kde-format
 msgctxt "full hinting"
 msgid "Full"
-msgstr "Helt"
+msgstr "Full"
 
 #: ui/FontWidget.qml:32
 #, kde-format
@@ -135,12 +135,12 @@ msgctxt ""
 "%1 is the name of a font type, %2 is the size in points (pt). Ex: Noto Sans "
 "10pt"
 msgid "%1 %2pt"
-msgstr ""
+msgstr "%1 %2 pt"
 
 #: ui/main.qml:23
 #, kde-format
 msgid "Adjust Global Scale…"
-msgstr ""
+msgstr "Tilpass global skalering …"
 
 #: ui/main.qml:37
 #, kde-format
@@ -148,6 +148,8 @@ msgid ""
 "Some changes such as anti-aliasing or DPI will only affect newly started "
 "applications."
 msgstr ""
+"Noen skriftinnstillinger, som for eksempel kantutjevning og PPT, vil bare "
+"tre i kraft for nystartede programmer."
 
 #: ui/main.qml:52
 #, kde-format
@@ -155,6 +157,8 @@ msgid ""
 "Very large fonts may produce odd-looking results. Instead of using a very "
 "large font size, consider adjusting the global screen scale."
 msgstr ""
+"Veldig stor skriftstørrelse kan føre til rar utseende. Vurder i stedet å "
+"tilpasse den globale skjermskaleringa."
 
 #: ui/main.qml:73
 #, kde-format
@@ -162,61 +166,63 @@ msgid ""
 "The recommended way to scale the user interface is using the global screen "
 "scaling feature."
 msgstr ""
+"Anbefalte måten for skalering av brukergrensesnitt er å bruke global "
+"skjermskalering."
 
 #: ui/main.qml:86
 #, kde-format
 msgid "&Adjust All Fonts…"
-msgstr ""
+msgstr "&Tilpass alle skriftene …"
 
 #: ui/main.qml:99
 #, kde-format
 msgid "General:"
-msgstr ""
+msgstr "Generelt:"
 
 #: ui/main.qml:100
 #, kde-format
 msgid "Select general font"
-msgstr ""
+msgstr "Velg generell skrift"
 
 #: ui/main.qml:111
 #, kde-format
 msgid "Fixed width:"
-msgstr ""
+msgstr "Fast bredde:"
 
 #: ui/main.qml:112
 #, kde-format
 msgid "Select fixed width font"
-msgstr ""
+msgstr "Velg fastbreddeskrift"
 
 #: ui/main.qml:123
 #, kde-format
 msgid "Small:"
-msgstr ""
+msgstr "Liten:"
 
 #: ui/main.qml:124
 #, kde-format
 msgid "Select small font"
-msgstr ""
+msgstr "Velg liten skrift"
 
 #: ui/main.qml:135
 #, kde-format
 msgid "Toolbar:"
-msgstr ""
+msgstr "Verktøylinje:"
 
 #: ui/main.qml:136
 #, kde-format
 msgid "Select toolbar font"
-msgstr ""
+msgstr "Velg verktøylinje-skrift"
 
 #: ui/main.qml:147
 #, kde-format
 msgid "Menu:"
-msgstr ""
+msgstr "Menyer:"
 
 #: ui/main.qml:148
 #, kde-format
 msgid "Select menu font"
-msgstr ""
+msgstr "Velg menyskrift"
 
 #: ui/main.qml:158
 #, kde-format
@@ -226,17 +232,17 @@ msgstr "Vindustittel:"
 #: ui/main.qml:159
 #, kde-format
 msgid "Select window title font"
-msgstr ""
+msgstr "Velg vindustittel-skrift"
 
 #: ui/main.qml:174
 #, kde-format
 msgid "Anti-Aliasing:"
-msgstr ""
+msgstr "Kantutjevning:"
 
 #: ui/main.qml:179
 #, kde-format
 msgid "Enable"
-msgstr ""
+msgstr "Slå på"
 
 #: ui/main.qml:183
 #, kde-kuit-format
@@ -248,27 +254,32 @@ msgid ""
 "effect. You generally want to keep this option enabled unless it causes "
 "problems."
 msgstr ""
+"Piksler (bildetpunkt) blir vanligvis vist på et rutenett på skjermen. "
+"Skrifter som ikke passer nøyaktig med dette rutenettet, vil derfor se "
+"klumpete og feil ut med mindre du bruker <emphasis>kantutjevning</emphasis> "
+"til å redusere effekten av rutenettavviket. Du bør vanligvis ha "
+"kantutgjevning slått på, og bare slå det av dersom det fører til problemer."
 
 #: ui/main.qml:197
 #, kde-format
 msgid "Exclude range from anti-aliasing"
-msgstr ""
+msgstr "Utelat kantutjevning for noen størrelser"
 
 #: ui/main.qml:216 ui/main.qml:240
 #, kde-format
 msgid "%1 pt"
-msgstr ""
+msgstr "%1 punkt"
 
 #: ui/main.qml:231
 #, kde-format
 msgid "to"
-msgstr ""
+msgstr "til"
 
 #: ui/main.qml:263
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Sub-pixel rendering:"
-msgstr ""
+msgstr "Delpikselvisning:"
 
 #: ui/main.qml:309
 #, kde-kuit-format
@@ -283,12 +294,21 @@ msgid ""
 "have <emphasis>BGR</emphasis> and some exotic orderings are not supported by "
 "this feature.</para>This does not work with CRT monitors."
 msgstr ""
+"<para>På TFT- og LCD-skjermer er hver eneste piksel (bildetpunkt) bygd opp "
+"av tre eller fire mindre ensfargede punktlys. Disse <emphasis>delpikslene</"
+"emphasis> kan tilpasses uavhengig av hverandre, for å forbedre kvaliteten på "
+"skriftvisingen.</para><para>Visingskvaliteten blir bare forbedret hvis "
+"innstillingene er i samsvar med det fysiske oppsettet av delpikslene på "
+"skjermen. Vanligvis har skjermer delpikslene i rekkefølge <emphasis>RGB</"
+"emphasis>, men noen har de i rekkefølge <emphasis>BGR</emphasis>, og andre "
+"har mer eksotiske mønster, som ikke støttes av denne funksjonen.</"
+"para><para>Dette virker ikke med CRT-skjermar.</para>"
 
 #: ui/main.qml:314
 #, kde-format
 msgctxt "Used as a noun, and precedes a combobox full of options"
 msgid "Hinting:"
-msgstr ""
+msgstr "Hintstil:"
 
 #: ui/main.qml:359
 #, kde-kuit-format
@@ -299,11 +319,15 @@ msgid ""
 "leads to sharper edges but the small letters will less closely resemble "
 "their shape at big sizes."
 msgstr ""
+"Hinting er en teknikk der innebygde «hint» i skriftene blir brukt til å "
+"forbedre skriftvisningen, spesielt ved liten skriftstørrelse. Sterkere "
+"hinting fører generelt til skarpere kanter, men bokstavene vil ved liten "
+"skriftstørrelse ligne mindre på hvordan de egentlig skal se ut."
 
 #: ui/main.qml:372
 #, kde-format
 msgid "Force font DPI:"
-msgstr ""
+msgstr "Tving skrift-PPT:"
 
 #: ui/main.qml:400
 #, kde-kuit-format
@@ -316,8 +340,16 @@ msgid ""
 "above. To scale everything, use the scaling slider on the <interface>Display "
 "& Monitor</interface> page.</para>"
 msgstr ""
+"<para>Skriv inn PPT-verdien (punkt per tomme, også kalt DPI) her, slik at "
+"tekst på skjermen får nøyaktig samme størrelse som ved utskrift. Merk at "
+"hvis du endrer denne verdien fra standardverdien, kan det føre til problemer "
+"i mange programer, ved at ikon og bilde ikke blir skalert slik du forventer."
+"</para><para>Vil du endre størrelsen bare på tekst, kan du justere "
+"skriftstørrelsesverdiene ovenfor. Vil du endre størrelsen på alt, kan du "
+"tilpasse den globale skaleringen under siden <interface>Skjerm og "
+"skjermbilde</interface>.</para>"
 
 #: ui/main.qml:406
 #, kde-format
 msgid "Select Font"
-msgstr ""
+msgstr "Velg skrift"
