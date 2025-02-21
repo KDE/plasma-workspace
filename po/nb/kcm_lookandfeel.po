@@ -6,15 +6,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-07-26 00:41+0000\n"
-"PO-Revision-Date: 2015-04-30 21:55+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-20 20:44+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -22,28 +22,28 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Bjørn Steensrud"
+msgstr "Bjørn Steensrud,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "bjornst@skogkatt.homelinux.org"
+msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
 #: kcm.cpp:467
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
-msgstr ""
+msgstr "Du må starte økta på nytt for at endringene skal tre i kraft."
 
 #: kcm.cpp:468
 #, kde-format
 msgid "Cursor Settings Changed"
-msgstr "Markørinnstillinger endret"
+msgstr "Pekerinnstillinger endret"
 
 #: lnftool.cpp:33
 #, kde-format
 msgid "Global Theme Tool"
-msgstr ""
+msgstr "Verktøy for globale tema"
 
 #: lnftool.cpp:35
 #, kde-format
@@ -51,11 +51,13 @@ msgid ""
 "Command line tool to apply global theme packages for changing the look and "
 "feel."
 msgstr ""
+"Kommandolinjeverktøy for å ta i bruk globale temapakker for utseende og "
+"atferd."
 
 #: lnftool.cpp:37
 #, kde-format
 msgid "Copyright 2017, Marco Martin"
-msgstr ""
+msgstr "© 2017 Marco Martin"
 
 #: lnftool.cpp:38
 #, kde-format
@@ -65,12 +67,12 @@ msgstr "Marco Martin"
 #: lnftool.cpp:38
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Vedlikeholder"
 
 #: lnftool.cpp:46
 #, kde-format
 msgid "List available global theme packages"
-msgstr ""
+msgstr "Vis tilgjengelige globale temapakker"
 
 #: lnftool.cpp:49
 #, kde-format
@@ -79,79 +81,83 @@ msgid ""
 "path to an installed package, at which point this tool will ensure it is a "
 "global theme package and then attempt to apply it"
 msgstr ""
+"Ta i bruk pakke for globalt tema. Dette kan være navnet på en pakke eller "
+"filadressen til en installert pakke. I sistnevnte tilfelle vil dette "
+"verktøyet kontrollere at det er en pakke for globalt tema og så ta den i "
+"bruk."
 
 #: lnftool.cpp:51
 #, kde-format
 msgid "packagename"
-msgstr ""
+msgstr "pakkenavn"
 
 #: lnftool.cpp:52
 #, kde-format
 msgid "Reset the Plasma Desktop layout"
-msgstr ""
+msgstr "Tilbakestill oppsett til Plasma-skrivebord"
 
 #. i18n: ectx: label, entry (lookAndFeelPackage), group (KDE)
 #: lookandfeelsettings.kcfg:9
 #, kde-format
 msgid "Global look and feel"
-msgstr ""
+msgstr "Globalt tema for utseende og atferd"
 
 #: ui/main.qml:62
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Slett for alltid"
 
 #: ui/main.qml:63
 #, kde-format
 msgctxt "@label"
 msgid "Do you really want to permanently delete this theme?"
-msgstr ""
+msgstr "Er du sikker på at du vil slette dette temaet for alltid?"
 
 #: ui/main.qml:67
 #, kde-format
 msgctxt "@action:button"
 msgid "Delete Permanently"
-msgstr ""
+msgstr "Slett for alltid"
 
 #: ui/main.qml:72
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ui/main.qml:88
 #, kde-format
 msgid "Get New…"
-msgstr ""
+msgstr "Hent nye …"
 
 #: ui/main.qml:103
 #, kde-format
 msgid "Contains Desktop layout"
-msgstr ""
+msgstr "Inneholder skrivebordsoppsett"
 
 #: ui/main.qml:117
 #, kde-format
 msgid "Preview Theme"
-msgstr ""
+msgstr "Forhåndsvis tema"
 
 #: ui/main.qml:126
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove theme"
-msgstr ""
+msgstr "Fjern tema"
 
 #: ui/main.qml:128
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete the active theme"
-msgstr ""
+msgstr "Kan ikke slette det gjeldende temaet"
 
 #: ui/main.qml:130
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Cannot delete system-installed themes"
-msgstr ""
+msgstr "Kan ikke slette systeminstallerte temaer"
 
 #: ui/main.qml:147
 #, kde-format
@@ -159,42 +165,42 @@ msgctxt ""
 "Confirmation question about applying the Global Theme - %1 is the Global "
 "Theme's name"
 msgid "Apply %1?"
-msgstr ""
+msgstr "Bruk %1?"
 
 #: ui/main.qml:165
 #, kde-format
 msgid "Choose what to apply…"
-msgstr ""
+msgstr "Velg hva du vil ta i bruk …"
 
 #: ui/main.qml:165
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
+msgstr "Vis færre valg …"
 
 #: ui/main.qml:182
 #, kde-format
 msgid "Apply"
-msgstr ""
+msgstr "Bruk"
 
 #: ui/main.qml:194
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
 msgid "Layout settings:"
-msgstr ""
+msgstr "Oppsettsinnstillinger:"
 
 #: ui/MoreOptions.qml:27
 #, kde-format
 msgid "Desktop layout"
-msgstr ""
+msgstr "Tilbakestill oppstillingen"
 
 #: ui/MoreOptions.qml:32
 #, kde-format
 msgid "Titlebar Buttons layout"
-msgstr ""
+msgstr "Plassering av knapper på tittellinja"
 
 #: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
 #, kde-format
@@ -202,88 +208,91 @@ msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
 "docks, and widgets, replacing them with what the theme specifies."
 msgstr ""
+"Hvis du tar i bruk et skrivebordsoppsett, blir gjeldende oppsett av "
+"skrivebord, panel, dokkpanel og skjermelement slettet og erstattet med det i "
+"oppsettet."
 
 #: ui/MoreOptions.qml:66
 #, kde-format
 msgid "Appearance settings:"
-msgstr ""
+msgstr "Innstillinger for utseende:"
 
 #: ui/MoreOptions.qml:69
 #, kde-format
 msgid "Colors"
-msgstr ""
+msgstr "Farger"
 
 #: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Application Style"
-msgstr ""
+msgstr "Programstil"
 
 #: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Window Decoration Style"
-msgstr ""
+msgstr "Vindusdekorasjon-stil"
 
 #: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Size"
-msgstr ""
+msgstr "Vindusdekorasjon-størrelse"
 
 #: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Icons"
-msgstr ""
+msgstr "Ikoner"
 
 #: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Plasma Style"
-msgstr ""
+msgstr "Plasma-stil"
 
 #: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Cursors"
-msgstr ""
+msgstr "Pekere"
 
 #: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Fonts"
-msgstr ""
+msgstr "Skrifter"
 
 #: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Task Switcher"
-msgstr ""
+msgstr "Oppgavebytter"
 
 #: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Splash Screen"
-msgstr ""
+msgstr "Velkomstbilde"
 
 #: ui/SimpleOptions.qml:19
 #, kde-format
 msgid "The following will be applied by this Global Theme:"
-msgstr ""
+msgstr "Dette blir endret av det globale temaet:"
 
 #: ui/SimpleOptions.qml:33
 #, kde-format
 msgid "Appearance settings"
-msgstr ""
+msgstr "Innstillinger for utseende"
 
 #: ui/SimpleOptions.qml:40
 #, kde-format
 msgctxt "List item"
 msgid "• Appearance settings"
-msgstr ""
+msgstr "– Innstillinger for utseende"
 
 #: ui/SimpleOptions.qml:48
 #, kde-format
 msgid "Desktop and window layout"
-msgstr ""
+msgstr "Skrivebords- og vindusoppsett"
 
 #: ui/SimpleOptions.qml:55
 #, kde-format
 msgctxt "List item"
 msgid "• Desktop and window layout"
-msgstr ""
+msgstr "– Skrivebords- og vindusoppsett"
 
 #: ui/SimpleOptions.qml:71
 #, kde-format
@@ -291,3 +300,5 @@ msgid ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
 msgstr ""
+"Dette globale temaet inneholder ikke noen aktuelle innstillinger. Ta kontakt "
+"med utviklerne av teamet, da det trolig er ødelagt."
