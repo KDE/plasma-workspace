@@ -13,6 +13,7 @@ class ClipAction;
 struct ClipCommand;
 class HistoryItem;
 class HistoryModel;
+class SystemClipboard;
 
 class ClipCommandProcess : public KProcess
 {
@@ -25,6 +26,7 @@ public Q_SLOTS:
 
 private:
     std::shared_ptr<HistoryModel> m_model;
+    std::shared_ptr<SystemClipboard> m_clip;
     std::shared_ptr<const HistoryItem> m_historyItem;
     QString m_newhistoryItem;
 };

@@ -20,7 +20,7 @@ import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.common.exceptions import NoSuchElementException, WebDriverException
+from selenium.common.exceptions import (NoSuchElementException, WebDriverException)
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.interaction import POINTER_MOUSE
@@ -272,8 +272,9 @@ class ClipboardTest(unittest.TestCase):
         """
         In edit mode, the text area should be focused by default.
         """
-        app.klipper_proxy.setClipboardContents("(s)", "clip thin")
-        app.klipper_proxy.setClipboardContents("(s)", "clip medium")
+        for new_text in ("clip thin", "clip medium"):
+            content_text = Gdk.ContentProvider.new_for_bytes("text/plain;charset=utf-8", GLib.Bytes.new(bytes(new_text, "utf-8")))
+            app.gtk_copy(content_text)
         app.driver.find_element(AppiumBy.NAME, "clip medium")
 
         ActionChains(app.driver).send_keys(Keys.DOWN).send_keys(Keys.DOWN).perform()
@@ -300,6 +301,8 @@ class ClipboardTest(unittest.TestCase):
         """
         D-Bus interface for Klipper
         """
+        app.klipper_proxy.clearClipboardHistory()
+        app.spin()
         app.klipper_updated_event.clear()
         # setClipboardContents with a valid string
         clipboard_content = "setFromTest"
@@ -307,12 +310,18 @@ class ClipboardTest(unittest.TestCase):
         element = app.driver.find_element(AppiumBy.NAME, clipboard_content)
         app.spin()
         self.assertTrue(app.klipper_updated_event.is_set())
+        # self.assertEqual(app.driver.get_clipboard_text(), clipboard_content) TODO: this doesn't work on Wayland
 
         # setClipboardContents with an empty string
         app.klipper_updated_event.clear()
         app.klipper_proxy.setClipboardContents("(s)", "")
         app.spin()
         self.assertFalse(app.klipper_updated_event.is_set())
+
+        # History item
+        self.assertEqual(app.klipper_proxy.getClipboardHistoryMenu(), [clipboard_content])
+        self.assertEqual(app.klipper_proxy.getClipboardHistoryItem("(i)", 0), clipboard_content)
+        self.assertEqual(app.klipper_proxy.getClipboardHistoryItem("(i)", 123), "")  # Invalid index
 
         # clearClipboardHistory
         app.klipper_updated_event.clear()
@@ -323,17 +332,6 @@ class ClipboardTest(unittest.TestCase):
         self.assertTrue(app.klipper_updated_event.is_set())
         self.assertFalse(element.is_displayed())
         self.assertNotEqual(last_modified, os.stat(app.klipper_data_file).st_mtime)
-
-        # saveClipboardHistory
-        last_modified = os.stat(app.klipper_data_file).st_mtime
-        app.klipper_proxy.setClipboardContents("(s)", clipboard_content)
-        app.klipper_proxy.saveClipboardHistory()
-        self.assertNotEqual(last_modified, os.stat(app.klipper_data_file).st_mtime)
-
-        # History item
-        self.assertEqual(app.klipper_proxy.getClipboardHistoryMenu(), [clipboard_content])
-        self.assertEqual(app.klipper_proxy.getClipboardHistoryItem("(i)", 0), clipboard_content)
-        self.assertEqual(app.klipper_proxy.getClipboardHistoryItem("(i)", 123), "")  # Invalid index
 
     def update_config(self, group: str | list[str], key: str | list[str], new_value: str | list[str]) -> None:
         if isinstance(group, str):

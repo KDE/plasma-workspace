@@ -77,6 +77,12 @@ public:
     static std::shared_ptr<SystemClipboard> self();
     ~SystemClipboard() override;
 
+    /**
+     * Check data in clipboard, and if it passes these checks,
+     * emit newClipData
+     */
+    void checkClipData(QClipboard::Mode mode, const QMimeData *data = nullptr);
+
     void clear(SelectionMode mode = SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
     void setMimeData(const std::shared_ptr<const HistoryItem> &data,
                      SelectionMode mode,
@@ -93,12 +99,6 @@ Q_SIGNALS:
     void receivedEmptyClipboard(QClipboard::Mode mode);
 
 private Q_SLOTS:
-    /**
-     * Check data in clipboard, and if it passes these checks,
-     * emit newClipData
-     */
-    void checkClipData(QClipboard::Mode mode);
-
     void slotClearOverflow();
     void slotCheckPending();
 

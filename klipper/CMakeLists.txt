@@ -53,7 +53,7 @@ target_link_libraries(klipper
 )
 
 if (HAVE_X11)
-    target_link_libraries(klipper Qt::GuiPrivate XCB::XCB)
+    target_link_libraries(klipper XCB::XCB XCB::AUX)
 endif()
 
 set_target_properties(klipper PROPERTIES
