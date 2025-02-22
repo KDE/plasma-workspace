@@ -1745,7 +1745,7 @@ void ShellCorona::toggleWidgetExplorer()
     for (DesktopView *view : std::as_const(m_desktopViewForScreen)) {
         if (view->screen()->geometry().contains(cursorPos)) {
             // The view QML has to provide something to display the widget explorer
-            view->rootObject()->metaObject()->invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
+            QMetaObject::invokeMethod(view->rootObject(), "toggleWidgetExplorer", Q_ARG(QVariant, QVariant::fromValue(sender())));
             return;
         }
     }
