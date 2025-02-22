@@ -183,12 +183,15 @@ RowLayout {
                 checked: isCustomColor
                 visible: isCustomColor
                 anchors.left: parent.left
+                activeFocusOnTab: false
 
                 MouseArea { // To prevent the button being toggled when clicked. The toggle state should only be controlled through isCustomColor
                     anchors.fill: parent
-                    onClicked: colorDialog.open()
+                    onClicked: {
+                        colorPicker.forceActiveFocus(Qt.MouseFocusReason)
+                        colorDialog.open()
+                    }
                 }
-                onFocusChanged: colorPicker.focus = true;
             }
             QQC2.RoundButton {
                 id: colorPicker
