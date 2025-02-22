@@ -6,15 +6,19 @@
 
 #include "clipcommandprocess.h"
 
+#include <QMimeData>
+
 #include <KMacroExpander>
 
 #include "historyitem.h"
 #include "historymodel.h"
+#include "systemclipboard.h"
 #include "urlgrabber.h"
 
 ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipCommand &command, const QString &clip, HistoryItemConstPtr original_item)
     : KProcess()
     , m_model(HistoryModel::self())
+    , m_clip(SystemClipboard::self())
     , m_historyItem(original_item)
     , m_newhistoryItem()
 {
@@ -48,12 +52,15 @@ ClipCommandProcess::ClipCommandProcess(const ClipAction &action, const ClipComma
 
 void ClipCommandProcess::slotFinished(int /*exitCode*/, QProcess::ExitStatus /*newState*/)
 {
+    if (!m_newhistoryItem.isEmpty()) {
+        auto data = std::make_unique<QMimeData>();
+        data->setText(m_newhistoryItem);
+        m_clip->setMimeData(data.get(), SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+        m_clip->checkClipData(QClipboard::Clipboard, data.get());
+    }
     // If an history item was provided, remove it so that the new item can replace it
     if (m_historyItem) {
         m_model->remove(m_historyItem->uuid());
-    }
-    if (!m_newhistoryItem.isEmpty()) {
-        m_model->insert(m_newhistoryItem);
     }
     deleteLater();
 }

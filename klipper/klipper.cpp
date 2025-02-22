@@ -48,9 +48,10 @@
 #include <Prison/Barcode>
 
 #include <config-X11.h>
+#include <wayland-client-core.h>
 #if HAVE_X11
-#include <private/qtx11extras_p.h>
 #include <xcb/xcb.h>
+#include <xcb/xcb_aux.h>
 #endif
 
 std::shared_ptr<Klipper> Klipper::self()
@@ -214,8 +215,10 @@ void Klipper::setClipboardContents(const QString &s)
     if (s.isEmpty())
         return;
     updateTimestamp();
-    m_historyModel->insert(s);
-    m_clip->setMimeData(m_historyModel->first(), SystemClipboard::SelectionMode(SystemClipboard::Clipboard | SystemClipboard::Selection));
+    auto data = std::make_unique<QMimeData>();
+    data->setText(s);
+    m_clip->setMimeData(data.get(), SystemClipboard::SelectionMode(SystemClipboard::Selection | SystemClipboard::Clipboard));
+    m_clip->checkClipData(QClipboard::Clipboard, data.get());
 }
 
 // DBUS - don't call from Klipper itself
@@ -407,8 +410,8 @@ QString Klipper::getClipboardHistoryItem(int i)
 void Klipper::updateTimestamp()
 {
 #if HAVE_X11
-    if (KWindowSystem::isPlatformX11()) {
-        QX11Info::setAppTime(QX11Info::getTimestamp());
+    if (auto interface = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()) {
+        xcb_aux_sync(interface->connection());
     }
 #endif
 }

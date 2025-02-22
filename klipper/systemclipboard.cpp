@@ -190,7 +190,9 @@ SystemClipboard::SystemClipboard()
     , m_clip(KSystemClipboard::instance())
 {
     x11RoundTrip(); // read initial X user time
-    connect(m_clip, &KSystemClipboard::changed, this, &SystemClipboard::checkClipData);
+    connect(m_clip, &KSystemClipboard::changed, this, [this](QClipboard::Mode mode) {
+        checkClipData(mode);
+    });
 
     m_pendingCheckTimer.setSingleShot(true);
     connect(&m_pendingCheckTimer, &QTimer::timeout, this, &SystemClipboard::slotCheckPending);
@@ -199,6 +201,62 @@ SystemClipboard::SystemClipboard()
 
 SystemClipboard::~SystemClipboard()
 {
+}
+
+void SystemClipboard::checkClipData(QClipboard::Mode mode, const QMimeData *data)
+{
+    if ((mode == QClipboard::Clipboard && m_clipboardLocklevel) || (mode == QClipboard::Selection && m_selectionLocklevel)) {
+        return;
+    }
+
+    if (mode == QClipboard::Selection && blockFetchingNewData()) {
+        return;
+    }
+
+    Ignore lock(mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel);
+
+    // internal to klipper, ignoring QSpinBox selections
+    if (ignoreClipboardChanges()) {
+        // keep our old clipboard, thanks
+        // This won't quite work, but it's close enough for now.
+        // The trouble is that the top selection =! top clipboard
+        // but we don't track that yet. We will....
+        Q_EMIT ignored(mode);
+        return;
+    }
+
+    qCDebug(KLIPPER_LOG) << "Checking clip data";
+
+    if (!data) {
+        data = m_clip->mimeData(mode);
+    }
+
+    if (!data) {
+        Q_EMIT receivedEmptyClipboard(mode);
+        return;
+    } else if (data->formats().isEmpty()) {
+        // Might be a timeout. Try again
+        x11RoundTrip();
+        data = m_clip->mimeData(mode);
+        if (!data || data->formats().isEmpty()) {
+            qCDebug(KLIPPER_LOG) << "was empty. Retried, now still empty";
+            Q_EMIT receivedEmptyClipboard(mode);
+            return;
+        }
+    }
+
+    if (!data->hasUrls() && !data->hasText() && !data->hasImage()) {
+        return; // unknown, ignore
+    }
+
+    if (data->hasFormat(QStringLiteral("application/x-kde-syncselection"))) {
+        return;
+    }
+
+    Q_ASSERT_X((mode == QClipboard::Clipboard && m_clipboardLocklevel == 1) || (mode == QClipboard::Selection && m_selectionLocklevel == 1),
+               Q_FUNC_INFO,
+               qPrintable(QStringLiteral("%1 %2").arg(QString::number(m_clipboardLocklevel), QString::number(m_selectionLocklevel))));
+    Q_EMIT newClipData(mode, data);
 }
 
 void SystemClipboard::clear(SelectionMode mode)
@@ -263,60 +321,6 @@ void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, Cli
 bool SystemClipboard::isLocked(QClipboard::Mode mode)
 {
     return mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel;
-}
-
-void SystemClipboard::checkClipData(QClipboard::Mode mode)
-{
-    if ((mode == QClipboard::Clipboard && m_clipboardLocklevel) || (mode == QClipboard::Selection && m_selectionLocklevel)) {
-        return;
-    }
-
-    if (mode == QClipboard::Selection && blockFetchingNewData()) {
-        return;
-    }
-
-    Ignore lock(mode == QClipboard::Selection ? m_selectionLocklevel : m_clipboardLocklevel);
-
-    // internal to klipper, ignoring QSpinBox selections
-    if (ignoreClipboardChanges()) {
-        // keep our old clipboard, thanks
-        // This won't quite work, but it's close enough for now.
-        // The trouble is that the top selection =! top clipboard
-        // but we don't track that yet. We will....
-        Q_EMIT ignored(mode);
-        return;
-    }
-
-    qCDebug(KLIPPER_LOG) << "Checking clip data";
-
-    const QMimeData *data = m_clip->mimeData(mode);
-
-    if (!data) {
-        Q_EMIT receivedEmptyClipboard(mode);
-        return;
-    } else if (data->formats().isEmpty()) {
-        // Might be a timeout. Try again
-        x11RoundTrip();
-        data = m_clip->mimeData(mode);
-        if (!data || data->formats().isEmpty()) {
-            qCDebug(KLIPPER_LOG) << "was empty. Retried, now still empty";
-            Q_EMIT receivedEmptyClipboard(mode);
-            return;
-        }
-    }
-
-    if (!data->hasUrls() && !data->hasText() && !data->hasImage()) {
-        return; // unknown, ignore
-    }
-
-    if (data->hasFormat(QStringLiteral("application/x-kde-syncselection"))) {
-        return;
-    }
-
-    Q_ASSERT_X((mode == QClipboard::Clipboard && m_clipboardLocklevel == 1) || (mode == QClipboard::Selection && m_selectionLocklevel == 1),
-               Q_FUNC_INFO,
-               qPrintable(QStringLiteral("%1 %2").arg(QString::number(m_clipboardLocklevel), QString::number(m_selectionLocklevel))));
-    Q_EMIT newClipData(mode, data);
 }
 
 void SystemClipboard::slotClearOverflow()
