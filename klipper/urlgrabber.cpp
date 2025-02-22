@@ -166,6 +166,7 @@ void URLGrabber::actionMenu(HistoryItemConstPtr item, bool automatically_invoked
 
         m_myMenu = new QMenu;
         m_myMenu->setWindowFlags(m_myMenu->windowFlags() | Qt::FramelessWindowHint);
+        m_myMenu->setObjectName(QStringLiteral("klipperActionPopup"));
 
         connect(m_myMenu, &QMenu::triggered, this, &URLGrabber::slotItemSelected);
 
