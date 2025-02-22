@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2021-10-07 00:53+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -133,69 +133,76 @@ msgstr "Ajavööndi näitamine:"
 msgid "Only when different from local time zone"
 msgstr "Kui see erineb kohalikust ajavööndist"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Ajavööndi esitamise vorm:"
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:118
 #, kde-format
 msgid "Code"
 msgstr "Kood"
 
-#: package/contents/ui/configAppearance.qml:114
+#: package/contents/ui/configAppearance.qml:119
 #, kde-format
 msgid "City"
 msgstr "Linn"
 
-#: package/contents/ui/configAppearance.qml:115
+#: package/contents/ui/configAppearance.qml:120
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Nihe UTC-ajast"
 
 #: package/contents/ui/configAppearance.qml:126
 #, fuzzy, kde-format
+#| msgid "Switch Local Time Zone…"
+msgctxt "@action:button opens kcm"
+msgid "Switch Time Zone…"
+msgstr "Vaheta kohalikku ajavööndit …"
+
+#: package/contents/ui/configAppearance.qml:138
+#, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Aja kuvamine:"
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:144
 #, fuzzy, kde-format
 #| msgid "12-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-tunnisena"
 
-#: package/contents/ui/configAppearance.qml:133
+#: package/contents/ui/configAppearance.qml:145
 #, fuzzy, kde-format
 #| msgid "Use Region Defaults"
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "Piirkonna vaikeväärtuse järgi"
 
-#: package/contents/ui/configAppearance.qml:134
+#: package/contents/ui/configAppearance.qml:146
 #, fuzzy, kde-format
 #| msgid "24-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-tunnisena"
 
-#: package/contents/ui/configAppearance.qml:141
+#: package/contents/ui/configAppearance.qml:153
 #, fuzzy, kde-format
 #| msgid "Change Regional Settings…"
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Muuda piirkonna seadistusi …"
 
-#: package/contents/ui/configAppearance.qml:152
+#: package/contents/ui/configAppearance.qml:164
 #, fuzzy, kde-format
 #| msgid "Date format:"
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Kuupäeva vorming:"
 
-#: package/contents/ui/configAppearance.qml:161
+#: package/contents/ui/configAppearance.qml:173
 #, fuzzy, kde-format
 #| msgid "Long Date"
 msgctxt ""
@@ -204,21 +211,21 @@ msgctxt ""
 msgid "Long date"
 msgstr "Pikk kuupäev"
 
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:180
 #, fuzzy, kde-format
 #| msgid "Short Date"
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Lühike kuupäev"
 
-#: package/contents/ui/configAppearance.qml:175
+#: package/contents/ui/configAppearance.qml:187
 #, fuzzy, kde-format
 #| msgid "ISO Date"
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO kuupäev"
 
-#: package/contents/ui/configAppearance.qml:182
+#: package/contents/ui/configAppearance.qml:194
 #, fuzzy, kde-format
 #| msgctxt "custom date format"
 #| msgid "Custom"
@@ -226,7 +233,7 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Kohandatud"
 
-#: package/contents/ui/configAppearance.qml:212
+#: package/contents/ui/configAppearance.qml:224
 #, fuzzy, kde-format
 #| msgid ""
 #| "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
@@ -238,51 +245,51 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-5/qml-qtqml-qt.html#formatDateTime-method"
 "\">Ajavormingu dokumentatsioon</a>"
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:249
 #, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Aja kuvamine:"
 
-#: package/contents/ui/configAppearance.qml:238
+#: package/contents/ui/configAppearance.qml:250
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:242
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:266
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:264
+#: package/contents/ui/configAppearance.qml:276
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:277
+#: package/contents/ui/configAppearance.qml:289
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:283
+#: package/contents/ui/configAppearance.qml:295
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:291
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -413,16 +420,6 @@ msgstr "Ajavööndid"
 msgid "Copy to Clipboard"
 msgstr "Kopeeri lõikepuhvrisse"
 
-#: package/contents/ui/main.qml:221
-#, kde-format
-msgid "Adjust Date and Time…"
-msgstr "Kohanda kuupäeva ja kellaaega …"
-
-#: package/contents/ui/main.qml:227
-#, kde-format
-msgid "Set Time Format…"
-msgstr "Kohanda ajavormingut …"
-
 #: package/contents/ui/NoTimezoneWarning.qml:37
 #, kde-format
 msgctxt "@label Shown in place of digital clock when no timezone is set"
@@ -486,6 +483,12 @@ msgstr "Kohalik"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Süsteemi kohalik ajavöönd"
+
+#~ msgid "Adjust Date and Time…"
+#~ msgstr "Kohanda kuupäeva ja kellaaega …"
+
+#~ msgid "Set Time Format…"
+#~ msgstr "Kohanda ajavormingut …"
 
 #, fuzzy
 #~| msgid ""

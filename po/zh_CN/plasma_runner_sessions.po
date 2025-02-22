@@ -94,10 +94,9 @@ msgid "switch user;new session"
 msgstr "switch user;new session;切换用户;新建会话;qiehuanyonghu;xinjianhuihua"
 
 #: sessionrunner.cpp:55
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "以不同的用户启动新会话"
+msgstr ""
 
 #: sessionrunner.cpp:77
 #, kde-format
@@ -132,34 +131,3 @@ msgstr "保存会话"
 #, kde-format
 msgid "Switch User"
 msgstr "切换用户"
-
-#~ msgctxt "KRunner keyword to list user sessions"
-#~ msgid "sessions"
-#~ msgstr "会话"
-
-#~ msgid "Lists all sessions"
-#~ msgstr "列出所有会话"
-
-#~ msgctxt "KRunner keyword to switch user sessions"
-#~ msgid "switch"
-#~ msgstr "switch"
-
-#~ msgid ""
-#~ "Switches to the active session for the user :q:, or lists all active "
-#~ "sessions if :q: is not provided"
-#~ msgstr "切换到用户 :q: 的活动会话，若未提供 :q:，则列出全部活动的会话"
-
-#~ msgid ""
-#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#~ "will be displayed and the current session will be hidden.</p><p>You can "
-#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
-#~ "as the application launcher)</li></ul>"
-#~ msgstr ""
-#~ "<p>你将要进入新的桌面会话。</p><p>系统将显示登录屏幕，并隐藏当前会话。</"
-#~ "p><p>若要在桌面会话间切换，你可以使用：</p><ul><li>Ctrl+Alt+F{会话序号}</"
-#~ "li><li>Plasma 搜索 (输入“%1”)</li><li>Plasma 挂件 (例如应用程序启动器)</"
-#~ "li></ul>"
-
-#~ msgid "New Desktop Session"
-#~ msgstr "新建桌面会话"

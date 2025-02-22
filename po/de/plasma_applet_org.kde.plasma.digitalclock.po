@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-11-25 20:11+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -130,63 +130,70 @@ msgstr "Zeitzone anzeigen:"
 msgid "Only when different from local time zone"
 msgstr "Nur wenn von lokaler Zeitzone abweichend"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Zeitzone anzeigen als:"
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:118
 #, kde-format
 msgid "Code"
 msgstr "Code"
 
-#: package/contents/ui/configAppearance.qml:114
+#: package/contents/ui/configAppearance.qml:119
 #, kde-format
 msgid "City"
 msgstr "Stadt"
 
-#: package/contents/ui/configAppearance.qml:115
+#: package/contents/ui/configAppearance.qml:120
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "Abweichung von UTC-Zeit"
 
 #: package/contents/ui/configAppearance.qml:126
+#, fuzzy, kde-format
+#| msgid "Switch Systemwide Time Zone…"
+msgctxt "@action:button opens kcm"
+msgid "Switch Time Zone…"
+msgstr "Zeitzone des Systems wechseln ..."
+
+#: package/contents/ui/configAppearance.qml:138
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Anzeigeformat der Zeit:"
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:144
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 Stunden"
 
-#: package/contents/ui/configAppearance.qml:133
+#: package/contents/ui/configAppearance.qml:145
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "Regionaleinstellungen verwenden"
 
-#: package/contents/ui/configAppearance.qml:134
+#: package/contents/ui/configAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 Stunden"
 
-#: package/contents/ui/configAppearance.qml:141
+#: package/contents/ui/configAppearance.qml:153
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "Regionaleinstellungen ändern …"
 
-#: package/contents/ui/configAppearance.qml:152
+#: package/contents/ui/configAppearance.qml:164
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Datumsformat:"
 
-#: package/contents/ui/configAppearance.qml:161
+#: package/contents/ui/configAppearance.qml:173
 #, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
@@ -194,25 +201,25 @@ msgctxt ""
 msgid "Long date"
 msgstr "Datum (Langform)"
 
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:180
 #, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Datum (Kurzform)"
 
-#: package/contents/ui/configAppearance.qml:175
+#: package/contents/ui/configAppearance.qml:187
 #, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "Datum (ISO)"
 
-#: package/contents/ui/configAppearance.qml:182
+#: package/contents/ui/configAppearance.qml:194
 #, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Benutzerdefiniert"
 
-#: package/contents/ui/configAppearance.qml:212
+#: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -221,19 +228,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Dokumentation zum Zeitformat</a>"
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:249
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Textanzeige:"
 
-#: package/contents/ui/configAppearance.qml:238
+#: package/contents/ui/configAppearance.qml:250
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "Automatisch"
 
-#: package/contents/ui/configAppearance.qml:242
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -242,25 +249,25 @@ msgstr ""
 "Der Text entspricht der Systemschriftart und wird an den verfügbaren Platz "
 "angepasst."
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:266
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "Manuell"
 
-#: package/contents/ui/configAppearance.qml:264
+#: package/contents/ui/configAppearance.qml:276
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "Darstellung auswählen ..."
 
-#: package/contents/ui/configAppearance.qml:277
+#: package/contents/ui/configAppearance.qml:289
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:283
+#: package/contents/ui/configAppearance.qml:295
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
@@ -268,7 +275,7 @@ msgstr ""
 "Hinweis: Die Größe kann reduziert sein, wenn die Kontrollleiste nicht groß "
 "genug ist."
 
-#: package/contents/ui/configAppearance.qml:291
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -397,16 +404,6 @@ msgstr "Zeitzonen"
 msgid "Copy to Clipboard"
 msgstr "In die Zwischenablage kopieren"
 
-#: package/contents/ui/main.qml:221
-#, kde-format
-msgid "Adjust Date and Time…"
-msgstr "Datum und Zeit einstellen ..."
-
-#: package/contents/ui/main.qml:227
-#, kde-format
-msgid "Set Time Format…"
-msgstr "Zeitformat einstellen ..."
-
 #: package/contents/ui/NoTimezoneWarning.qml:37
 #, kde-format
 msgctxt "@label Shown in place of digital clock when no timezone is set"
@@ -471,6 +468,12 @@ msgstr "Lokal"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Lokale Zeitzone des Systems"
+
+#~ msgid "Adjust Date and Time…"
+#~ msgstr "Datum und Zeit einstellen ..."
+
+#~ msgid "Set Time Format…"
+#~ msgstr "Zeitformat einstellen ..."
 
 #~ msgid ""
 #~ "At least one time zone needs to be enabled. Your local time zone was "

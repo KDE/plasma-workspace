@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-12-13 21:14+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -28,13 +28,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "sv1@fellsnet.is, gudmundure@gmail.com"
 
-#: kcm.cpp:467
+#: kcm.cpp:474
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "Þú þarft að endurræsa Plasma-setuna til að breytingarnar taki gildi."
 
-#: kcm.cpp:468
+#: kcm.cpp:475
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Bendilstillingum hefur verið breytt"
@@ -195,12 +195,12 @@ msgstr "Stillingar framsetningar:"
 msgid "Desktop layout"
 msgstr "Framsetning skjáborðs"
 
-#: ui/MoreOptions.qml:32
+#: ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Framsetning hnappa á titilstiku"
 
-#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
+#: ui/MoreOptions.qml:56 ui/SimpleOptions.qml:64
 #, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
@@ -210,57 +210,57 @@ msgstr ""
 "skjáborðum, skjáborðsstikum, dokkum og græjum í samræmi við skilgreiningar í "
 "þemanu."
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Stillingar útlits:"
 
-#: ui/MoreOptions.qml:69
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Colors"
 msgstr "Litir"
 
-#: ui/MoreOptions.qml:70
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Application Style"
 msgstr "Stíll forrits"
 
-#: ui/MoreOptions.qml:71
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Gluggaskreytingastíll"
 
-#: ui/MoreOptions.qml:72
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Gluggaskreytingastærð"
 
-#: ui/MoreOptions.qml:73
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Icons"
 msgstr "Tákn"
 
-#: ui/MoreOptions.qml:74
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Plasma Style"
 msgstr "Stíll Plasma"
 
-#: ui/MoreOptions.qml:75
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Cursors"
 msgstr "Bendlar"
 
-#: ui/MoreOptions.qml:76
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Fonts"
 msgstr "Letur"
 
-#: ui/MoreOptions.qml:77
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Task Switcher"
 msgstr "Verkefnaskiptir"
 
-#: ui/MoreOptions.qml:78
+#: ui/MoreOptions.qml:79
 #, kde-format
 msgid "Splash Screen"
 msgstr "Upphafsskjár"

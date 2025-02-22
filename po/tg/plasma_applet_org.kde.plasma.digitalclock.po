@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2019-09-23 21:28+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -133,67 +133,74 @@ msgstr "Нишон додани минтақаи вақти маҳаллӣ"
 msgid "Only when different from local time zone"
 msgstr "Нишон додани минтақаи вақти маҳаллӣ"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Нишон додани минтақаи вақт ҳамчун:"
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:118
 #, kde-format
 msgid "Code"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:114
+#: package/contents/ui/configAppearance.qml:119
 #, kde-format
 msgid "City"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:115
+#: package/contents/ui/configAppearance.qml:120
 #, kde-format
 msgid "Offset from UTC time"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:126
 #, fuzzy, kde-format
+#| msgid "Show local time zone"
+msgctxt "@action:button opens kcm"
+msgid "Switch Time Zone…"
+msgstr "Нишон додани минтақаи вақти маҳаллӣ"
+
+#: package/contents/ui/configAppearance.qml:138
+#, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "Лавҳаи соат:"
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:144
 #, fuzzy, kde-format
 #| msgid "12-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-соата"
 
-#: package/contents/ui/configAppearance.qml:133
+#: package/contents/ui/configAppearance.qml:145
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:134
+#: package/contents/ui/configAppearance.qml:146
 #, fuzzy, kde-format
 #| msgid "24-Hour"
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-соата"
 
-#: package/contents/ui/configAppearance.qml:141
+#: package/contents/ui/configAppearance.qml:153
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:152
+#: package/contents/ui/configAppearance.qml:164
 #, fuzzy, kde-format
 #| msgid "Date format:"
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "Формати сана:"
 
-#: package/contents/ui/configAppearance.qml:161
+#: package/contents/ui/configAppearance.qml:173
 #, fuzzy, kde-format
 #| msgid "Show date"
 msgctxt ""
@@ -202,21 +209,21 @@ msgctxt ""
 msgid "Long date"
 msgstr "Нишон додани сана"
 
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:180
 #, fuzzy, kde-format
 #| msgid "Show date"
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "Нишон додани сана"
 
-#: package/contents/ui/configAppearance.qml:175
+#: package/contents/ui/configAppearance.qml:187
 #, fuzzy, kde-format
 #| msgid "Show date"
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "Нишон додани сана"
 
-#: package/contents/ui/configAppearance.qml:182
+#: package/contents/ui/configAppearance.qml:194
 #, fuzzy, kde-format
 #| msgctxt "custom date format"
 #| msgid "Custom"
@@ -224,58 +231,58 @@ msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "Фармоишӣ"
 
-#: package/contents/ui/configAppearance.qml:212
+#: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:249
 #, fuzzy, kde-format
 #| msgid "Time display:"
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "Лавҳаи соат:"
 
-#: package/contents/ui/configAppearance.qml:238
+#: package/contents/ui/configAppearance.qml:250
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:242
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:266
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:264
+#: package/contents/ui/configAppearance.qml:276
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:277
+#: package/contents/ui/configAppearance.qml:289
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:283
+#: package/contents/ui/configAppearance.qml:295
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:291
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -397,16 +404,6 @@ msgstr "Минтақаи вақт"
 #: package/contents/ui/main.qml:217
 #, kde-format
 msgid "Copy to Clipboard"
-msgstr ""
-
-#: package/contents/ui/main.qml:221
-#, kde-format
-msgid "Adjust Date and Time…"
-msgstr ""
-
-#: package/contents/ui/main.qml:227
-#, kde-format
-msgid "Set Time Format…"
 msgstr ""
 
 #: package/contents/ui/NoTimezoneWarning.qml:37

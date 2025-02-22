@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -130,63 +130,70 @@ msgstr "显示时区："
 msgid "Only when different from local time zone"
 msgstr "仅在不同于本地时区时显示"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Display time zone as:"
 msgstr "时区显示方式："
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:118
 #, kde-format
 msgid "Code"
 msgstr "时区代码"
 
-#: package/contents/ui/configAppearance.qml:114
+#: package/contents/ui/configAppearance.qml:119
 #, kde-format
 msgid "City"
 msgstr "城市名称"
 
-#: package/contents/ui/configAppearance.qml:115
+#: package/contents/ui/configAppearance.qml:120
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "UTC 时间偏移"
 
 #: package/contents/ui/configAppearance.qml:126
+#, fuzzy, kde-format
+#| msgid "Switch Systemwide Time Zone…"
+msgctxt "@action:button opens kcm"
+msgid "Switch Time Zone…"
+msgstr "更改系统全局时区…"
+
+#: package/contents/ui/configAppearance.qml:138
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "时间显示方式："
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:144
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12 小时制"
 
-#: package/contents/ui/configAppearance.qml:133
+#: package/contents/ui/configAppearance.qml:145
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "使用当前区域设置的默认值"
 
-#: package/contents/ui/configAppearance.qml:134
+#: package/contents/ui/configAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24 小时制"
 
-#: package/contents/ui/configAppearance.qml:141
+#: package/contents/ui/configAppearance.qml:153
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "更改区域设置…"
 
-#: package/contents/ui/configAppearance.qml:152
+#: package/contents/ui/configAppearance.qml:164
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "日期格式："
 
-#: package/contents/ui/configAppearance.qml:161
+#: package/contents/ui/configAppearance.qml:173
 #, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
@@ -194,25 +201,25 @@ msgctxt ""
 msgid "Long date"
 msgstr "长日期"
 
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:180
 #, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "短日期"
 
-#: package/contents/ui/configAppearance.qml:175
+#: package/contents/ui/configAppearance.qml:187
 #, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO 日期"
 
-#: package/contents/ui/configAppearance.qml:182
+#: package/contents/ui/configAppearance.qml:194
 #, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "自定义"
 
-#: package/contents/ui/configAppearance.qml:212
+#: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -221,50 +228,50 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method\">时"
 "间格式文档</a>"
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:249
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "文本显示："
 
-#: package/contents/ui/configAppearance.qml:238
+#: package/contents/ui/configAppearance.qml:250
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "自动"
 
-#: package/contents/ui/configAppearance.qml:242
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr "文本将使用系统字体显示，并自动调整宽度以填满可用空间。"
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:266
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "手动"
 
-#: package/contents/ui/configAppearance.qml:264
+#: package/contents/ui/configAppearance.qml:276
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "选择风格…"
 
-#: package/contents/ui/configAppearance.qml:277
+#: package/contents/ui/configAppearance.qml:289
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:283
+#: package/contents/ui/configAppearance.qml:295
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "注意：如果面板高度不足，大小可能会被压缩。"
 
-#: package/contents/ui/configAppearance.qml:291
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -388,16 +395,6 @@ msgstr "选择时区"
 msgid "Copy to Clipboard"
 msgstr "复制到剪贴板"
 
-#: package/contents/ui/main.qml:221
-#, kde-format
-msgid "Adjust Date and Time…"
-msgstr "调整日期和时间…"
-
-#: package/contents/ui/main.qml:227
-#, kde-format
-msgid "Set Time Format…"
-msgstr "设置时间格式…"
-
 #: package/contents/ui/NoTimezoneWarning.qml:37
 #, kde-format
 msgctxt "@label Shown in place of digital clock when no timezone is set"
@@ -458,3 +455,9 @@ msgstr "本地"
 #, kde-format
 msgid "System's local time zone"
 msgstr "系统本地时区"
+
+#~ msgid "Adjust Date and Time…"
+#~ msgstr "调整日期和时间…"
+
+#~ msgid "Set Time Format…"
+#~ msgstr "设置时间格式…"

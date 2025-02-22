@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-07-28 12:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -29,13 +29,13 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "safa1996alfulaij@gmail.com,zayed.alsaidi@gmail.com"
 
-#: kcm.cpp:467
+#: kcm.cpp:474
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
 msgstr "عليك إعادة تشغيل جلسة بلازما  لتأخذ التغييرات تأثيرها."
 
-#: kcm.cpp:468
+#: kcm.cpp:475
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "تغيّرت إعدادات المؤشّر"
@@ -194,12 +194,12 @@ msgstr "إعدادات التخطيط:"
 msgid "Desktop layout"
 msgstr "تخطيط سطح مكتب"
 
-#: ui/MoreOptions.qml:32
+#: ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "تخطيط أزرار شريط العنوان"
 
-#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
+#: ui/MoreOptions.qml:56 ui/SimpleOptions.qml:64
 #, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
@@ -208,57 +208,57 @@ msgstr ""
 "سيؤدي تطبيق تخطيط سطح المكتب إلى حذف المجموعة الحالية من أسطح المكتب "
 "واللوحات ووحدات الإرساء وعناصر واجهة المستخدم، واستبدالها بما تحددها السمة."
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Appearance settings:"
 msgstr "إعدادات المظهر:"
 
-#: ui/MoreOptions.qml:69
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Colors"
 msgstr "الألوان"
 
-#: ui/MoreOptions.qml:70
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Application Style"
 msgstr "نمط التطبيق"
 
-#: ui/MoreOptions.qml:71
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "نمط زخارف النوافذ"
 
-#: ui/MoreOptions.qml:72
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "حجم زخارف النوافذ"
 
-#: ui/MoreOptions.qml:73
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Icons"
 msgstr "الأيقونات"
 
-#: ui/MoreOptions.qml:74
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Plasma Style"
 msgstr "نمط بلازما"
 
-#: ui/MoreOptions.qml:75
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Cursors"
 msgstr "المؤشرات"
 
-#: ui/MoreOptions.qml:76
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Fonts"
 msgstr "الخطوط"
 
-#: ui/MoreOptions.qml:77
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Task Switcher"
 msgstr "مبدّل المهام"
 
-#: ui/MoreOptions.qml:78
+#: ui/MoreOptions.qml:79
 #, kde-format
 msgid "Splash Screen"
 msgstr "شاشة البدء"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-09-29 08:28+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "wantoyek@gmail.com,4.adam.adrian@gmail.com"
 
-#: kcm.cpp:467
+#: kcm.cpp:474
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -36,7 +36,7 @@ msgstr ""
 "Kamu harus menjalankan-ulang sesi Plasma untuk perubahan tersebut agar "
 "berpengaruh."
 
-#: kcm.cpp:468
+#: kcm.cpp:475
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Pengaturan Kursor Diubah"
@@ -197,12 +197,12 @@ msgstr "Pengaturan tataletak:"
 msgid "Desktop layout"
 msgstr "Tataletak Desktop"
 
-#: ui/MoreOptions.qml:32
+#: ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Tata letak Tombol Bilah Judul"
 
-#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
+#: ui/MoreOptions.qml:56 ui/SimpleOptions.qml:64
 #, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
@@ -211,57 +211,57 @@ msgstr ""
 "Menerapkan tata letak Desktop akan menghapus seperangkat desktop, panel, "
 "dock, dan widget saat ini, menggantikan dengan apa yang ditentukan tema."
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Pengaturan penampilan:"
 
-#: ui/MoreOptions.qml:69
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Colors"
 msgstr "Warna"
 
-#: ui/MoreOptions.qml:70
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Application Style"
 msgstr "Gaya Aplikasi"
 
-#: ui/MoreOptions.qml:71
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Gaya Dekorasi Jendela"
 
-#: ui/MoreOptions.qml:72
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Ukuran Dekorasi Jendela"
 
-#: ui/MoreOptions.qml:73
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Icons"
 msgstr "Ikon"
 
-#: ui/MoreOptions.qml:74
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Plasma Style"
 msgstr "Gaya Plasma"
 
-#: ui/MoreOptions.qml:75
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Cursors"
 msgstr "Kursor"
 
-#: ui/MoreOptions.qml:76
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Fonts"
 msgstr "Font"
 
-#: ui/MoreOptions.qml:77
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Task Switcher"
 msgstr "Pengalih Tugas"
 
-#: ui/MoreOptions.qml:78
+#: ui/MoreOptions.qml:79
 #, kde-format
 msgid "Splash Screen"
 msgstr "Layar Splash"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-26 00:41+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2024-09-19 16:49+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dimkard@gmail.com"
 
-#: kcm.cpp:467
+#: kcm.cpp:474
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -36,7 +36,7 @@ msgstr ""
 "Πρέπει να επανεκκινήσετε τη συνεδρία Plasma για να εφαρμοστούν αυτές οι "
 "αλλαγές."
 
-#: kcm.cpp:468
+#: kcm.cpp:475
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Οι ρυθμίσεις του δρομέα άλλαξαν"
@@ -198,12 +198,12 @@ msgstr "Ρυθμίσεις διάταξης:"
 msgid "Desktop layout"
 msgstr "Διάταξη επιφάνειας εργασίας"
 
-#: ui/MoreOptions.qml:32
+#: ui/MoreOptions.qml:33
 #, kde-format
 msgid "Titlebar Buttons layout"
 msgstr "Διάταξη κουμπιών γραμμής τίτλου"
 
-#: ui/MoreOptions.qml:55 ui/SimpleOptions.qml:64
+#: ui/MoreOptions.qml:56 ui/SimpleOptions.qml:64
 #, kde-format
 msgid ""
 "Applying a Desktop layout will delete the current set of desktops, panels, "
@@ -213,57 +213,57 @@ msgstr ""
 "επιφανειών εργασίας, πινάκων, βάσεων και γραφικών, αντικαθιστώντας τα με "
 "αυτά που ορίζει το θέμα."
 
-#: ui/MoreOptions.qml:66
+#: ui/MoreOptions.qml:67
 #, kde-format
 msgid "Appearance settings:"
 msgstr "Ρυθμίσεις εμφάνισης:"
 
-#: ui/MoreOptions.qml:69
+#: ui/MoreOptions.qml:70
 #, kde-format
 msgid "Colors"
 msgstr "Χρώματα"
 
-#: ui/MoreOptions.qml:70
+#: ui/MoreOptions.qml:71
 #, kde-format
 msgid "Application Style"
 msgstr "Στυλ εφαρμογών"
 
-#: ui/MoreOptions.qml:71
+#: ui/MoreOptions.qml:72
 #, kde-format
 msgid "Window Decoration Style"
 msgstr "Στυλ διακόσμηση παραθύρων"
 
-#: ui/MoreOptions.qml:72
+#: ui/MoreOptions.qml:73
 #, kde-format
 msgid "Window Decoration Size"
 msgstr "Μέγεθος διακόσμησης παραθύρου"
 
-#: ui/MoreOptions.qml:73
+#: ui/MoreOptions.qml:74
 #, kde-format
 msgid "Icons"
 msgstr "Εικονίδια"
 
-#: ui/MoreOptions.qml:74
+#: ui/MoreOptions.qml:75
 #, kde-format
 msgid "Plasma Style"
 msgstr "Στυλ Plasma"
 
-#: ui/MoreOptions.qml:75
+#: ui/MoreOptions.qml:76
 #, kde-format
 msgid "Cursors"
 msgstr "Δρομέας"
 
-#: ui/MoreOptions.qml:76
+#: ui/MoreOptions.qml:77
 #, kde-format
 msgid "Fonts"
 msgstr "Γραμματοσειρές"
 
-#: ui/MoreOptions.qml:77
+#: ui/MoreOptions.qml:78
 #, kde-format
 msgid "Task Switcher"
 msgstr "Εναλλαγή εργασιών"
 
-#: ui/MoreOptions.qml:78
+#: ui/MoreOptions.qml:79
 #, kde-format
 msgid "Splash Screen"
 msgstr "Οθόνη εκκίνησης"

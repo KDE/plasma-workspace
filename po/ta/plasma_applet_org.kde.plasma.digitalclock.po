@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2025-01-26 17:24+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -129,63 +129,70 @@ msgstr "நேரமண்டலத்தை காட்டுவது:"
 msgid "Only when different from local time zone"
 msgstr "தற்போதைய இருப்பிடத்தின் நேரமண்டலமாக இல்லாத போது மட்டும்"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Display time zone as:"
 msgstr "நேரமண்டலத்தை இவ்வாறு காட்டு:"
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:118
 #, kde-format
 msgid "Code"
 msgstr "குறிமுறையாக"
 
-#: package/contents/ui/configAppearance.qml:114
+#: package/contents/ui/configAppearance.qml:119
 #, kde-format
 msgid "City"
 msgstr "நகரமாக"
 
-#: package/contents/ui/configAppearance.qml:115
+#: package/contents/ui/configAppearance.qml:120
 #, kde-format
 msgid "Offset from UTC time"
 msgstr "UTC நேரத்திலிருந்து உள்ள வித்தியாசமாக"
 
 #: package/contents/ui/configAppearance.qml:126
+#, fuzzy, kde-format
+#| msgid "Switch Systemwide Time Zone…"
+msgctxt "@action:button opens kcm"
+msgid "Switch Time Zone…"
+msgstr "கணினி முழுவதற்குமான நேர மண்டலத்தை மாற்று..."
+
+#: package/contents/ui/configAppearance.qml:138
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr "நேரம் காட்டப்படுவது:"
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:144
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr "12-மணிநேரம்"
 
-#: package/contents/ui/configAppearance.qml:133
+#: package/contents/ui/configAppearance.qml:145
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr "வட்டார இயல்பிருப்பு"
 
-#: package/contents/ui/configAppearance.qml:134
+#: package/contents/ui/configAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr "24-மணிநேரம்"
 
-#: package/contents/ui/configAppearance.qml:141
+#: package/contents/ui/configAppearance.qml:153
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr "வட்டார அமைப்புகளை மாற்று…"
 
-#: package/contents/ui/configAppearance.qml:152
+#: package/contents/ui/configAppearance.qml:164
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Date format:"
 msgstr "தேதி எவ்வாறு காட்டப்படும்:"
 
-#: package/contents/ui/configAppearance.qml:161
+#: package/contents/ui/configAppearance.qml:173
 #, kde-format
 msgctxt ""
 "@item:inlistbox date display option, includes e.g. day of week and month as "
@@ -193,25 +200,25 @@ msgctxt ""
 msgid "Long date"
 msgstr "விவரமான தேதி"
 
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:180
 #, kde-format
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
 msgid "Short date"
 msgstr "சுருக்கமான தேதி"
 
-#: package/contents/ui/configAppearance.qml:175
+#: package/contents/ui/configAppearance.qml:187
 #, kde-format
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO தேதி"
 
-#: package/contents/ui/configAppearance.qml:182
+#: package/contents/ui/configAppearance.qml:194
 #, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr "வேறு"
 
-#: package/contents/ui/configAppearance.qml:212
+#: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
@@ -220,19 +227,19 @@ msgstr ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">தேதி/நேர வடிவத்திற்கான கையேடு</a>"
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:249
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr "உரை காட்டப்படுவது:"
 
-#: package/contents/ui/configAppearance.qml:238
+#: package/contents/ui/configAppearance.qml:250
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr "தானியக்கம்"
 
-#: package/contents/ui/configAppearance.qml:242
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@label"
 msgid ""
@@ -241,31 +248,31 @@ msgstr ""
 "கணினி முழுவதற்குமான எழுத்துருவைப் பயன்படுத்தி, கிடைக்கும் இடத்தை நிரப்பும் அளவுக்கு உரை "
 "பெரிதாக்கப்படும்."
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:266
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr "கைமுறை"
 
-#: package/contents/ui/configAppearance.qml:264
+#: package/contents/ui/configAppearance.qml:276
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr "தோற்றத்தை தேர்ந்தெடு…"
 
-#: package/contents/ui/configAppearance.qml:277
+#: package/contents/ui/configAppearance.qml:289
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr "%1pt %2"
 
-#: package/contents/ui/configAppearance.qml:283
+#: package/contents/ui/configAppearance.qml:295
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "குறிப்பு: பலகையின் அகலம் குறைவாக இருந்தால் இதன் அளவு குறையலாம்."
 
-#: package/contents/ui/configAppearance.qml:291
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -390,16 +397,6 @@ msgstr "நேரமண்டலத்தை தேர்ந்தெடு"
 msgid "Copy to Clipboard"
 msgstr "பிடிப்புப்பலகைக்கு நகலெடு"
 
-#: package/contents/ui/main.qml:221
-#, kde-format
-msgid "Adjust Date and Time…"
-msgstr "தேதி மற்றும் நேரத்தை மாற்று..."
-
-#: package/contents/ui/main.qml:227
-#, kde-format
-msgid "Set Time Format…"
-msgstr "நேரத்தின் வடிவத்தை மாற்று..."
-
 #: package/contents/ui/NoTimezoneWarning.qml:37
 #, kde-format
 msgctxt "@label Shown in place of digital clock when no timezone is set"
@@ -461,6 +458,12 @@ msgstr "வட்டாரம்"
 #, kde-format
 msgid "System's local time zone"
 msgstr "கணினியின் வட்டார நேரமண்டலம்"
+
+#~ msgid "Adjust Date and Time…"
+#~ msgstr "தேதி மற்றும் நேரத்தை மாற்று..."
+
+#~ msgid "Set Time Format…"
+#~ msgstr "நேரத்தின் வடிவத்தை மாற்று..."
 
 #~ msgid ""
 #~ "At least one time zone needs to be enabled. Your local time zone was "

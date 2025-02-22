@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-02-22 00:43+0000\n"
 "PO-Revision-Date: 2016-05-17 01:39+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -140,59 +140,66 @@ msgstr "lokalna vremenska zona"
 msgid "Only when different from local time zone"
 msgstr "lokalna vremenska zona"
 
-#: package/contents/ui/configAppearance.qml:110
+#: package/contents/ui/configAppearance.qml:108
 #, kde-format
 msgid "Display time zone as:"
 msgstr "Prikaži vremensku zonu:"
 
-#: package/contents/ui/configAppearance.qml:113
+#: package/contents/ui/configAppearance.qml:118
 #, kde-format
 msgid "Code"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:114
+#: package/contents/ui/configAppearance.qml:119
 #, fuzzy, kde-format
 #| msgctxt "This is a city associated with particular time zone"
 #| msgid "Tell City"
 msgid "City"
 msgstr "Tel Siti"
 
-#: package/contents/ui/configAppearance.qml:115
+#: package/contents/ui/configAppearance.qml:120
 #, kde-format
 msgid "Offset from UTC time"
 msgstr ""
 
 #: package/contents/ui/configAppearance.qml:126
+#, fuzzy, kde-format
+#| msgid "Time Zones"
+msgctxt "@action:button opens kcm"
+msgid "Switch Time Zone…"
+msgstr "Vremenske zone"
+
+#: package/contents/ui/configAppearance.qml:138
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:132
+#: package/contents/ui/configAppearance.qml:144
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "12-Hour"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:133
+#: package/contents/ui/configAppearance.qml:145
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "Use region defaults"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:134
+#: package/contents/ui/configAppearance.qml:146
 #, kde-format
 msgctxt "@item:inlistbox time display option"
 msgid "24-Hour"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:141
+#: package/contents/ui/configAppearance.qml:153
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Change Regional Settings…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:152
+#: package/contents/ui/configAppearance.qml:164
 #, fuzzy, kde-format
 #| msgid "Date format:"
 msgctxt "@label:listbox"
@@ -200,7 +207,7 @@ msgid "Date format:"
 msgstr "Format datuma:"
 
 # >> @option:radio Date format:
-#: package/contents/ui/configAppearance.qml:161
+#: package/contents/ui/configAppearance.qml:173
 #, fuzzy, kde-format
 #| msgid "Long Date"
 msgctxt ""
@@ -210,7 +217,7 @@ msgid "Long date"
 msgstr "dugačak datum"
 
 # >> @option:radio Date format:
-#: package/contents/ui/configAppearance.qml:168
+#: package/contents/ui/configAppearance.qml:180
 #, fuzzy, kde-format
 #| msgid "Short Date"
 msgctxt "@item:inlistbox date display option, e.g. all numeric"
@@ -218,70 +225,70 @@ msgid "Short date"
 msgstr "kratak datum"
 
 # >> @option:radio Date format:
-#: package/contents/ui/configAppearance.qml:175
+#: package/contents/ui/configAppearance.qml:187
 #, fuzzy, kde-format
 #| msgid "ISO Date"
 msgctxt "@item:inlistbox date display option, yyyy-mm-dd"
 msgid "ISO date"
 msgstr "ISO datum"
 
-#: package/contents/ui/configAppearance.qml:182
+#: package/contents/ui/configAppearance.qml:194
 #, kde-format
 msgctxt "@item:inlistbox custom date format"
 msgid "Custom"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:212
+#: package/contents/ui/configAppearance.qml:224
 #, kde-format
 msgid ""
 "<a href=\"https://doc.qt.io/qt-6/qml-qtqml-qt.html#formatDateTime-method"
 "\">Time Format Documentation</a>"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:237
+#: package/contents/ui/configAppearance.qml:249
 #, kde-format
 msgctxt "@label:group"
 msgid "Text display:"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:238
+#: package/contents/ui/configAppearance.qml:250
 #, kde-format
 msgctxt "@option:radio"
 msgid "Automatic"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:242
+#: package/contents/ui/configAppearance.qml:254
 #, kde-format
 msgctxt "@label"
 msgid ""
 "Text will follow the system font and expand to fill the available space."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:254
+#: package/contents/ui/configAppearance.qml:266
 #, kde-format
 msgctxt "@option:radio setting for manually configuring the font settings"
 msgid "Manual"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:264
+#: package/contents/ui/configAppearance.qml:276
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose Style…"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:277
+#: package/contents/ui/configAppearance.qml:289
 #, kde-format
 msgctxt "@info %1 is the font size, %2 is the font family"
 msgid "%1pt %2"
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:283
+#: package/contents/ui/configAppearance.qml:295
 #, kde-format
 msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 
-#: package/contents/ui/configAppearance.qml:291
+#: package/contents/ui/configAppearance.qml:303
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
@@ -410,18 +417,6 @@ msgstr "Vremenske zone"
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: package/contents/ui/main.qml:221
-#, fuzzy, kde-format
-#| msgid "Adjust Date and Time..."
-msgid "Adjust Date and Time…"
-msgstr "Podesi datum i vreme..."
-
-#: package/contents/ui/main.qml:227
-#, fuzzy, kde-format
-#| msgid "Set Time Format..."
-msgid "Set Time Format…"
-msgstr "Format vremena..."
-
 #: package/contents/ui/NoTimezoneWarning.qml:37
 #, kde-format
 msgctxt "@label Shown in place of digital clock when no timezone is set"
@@ -487,6 +482,16 @@ msgstr "lokalno"
 #| msgid "Show local time zone"
 msgid "System's local time zone"
 msgstr "lokalna vremenska zona"
+
+#, fuzzy
+#~| msgid "Adjust Date and Time..."
+#~ msgid "Adjust Date and Time…"
+#~ msgstr "Podesi datum i vreme..."
+
+#, fuzzy
+#~| msgid "Set Time Format..."
+#~ msgid "Set Time Format…"
+#~ msgstr "Format vremena..."
 
 #, fuzzy
 #~| msgid ""
