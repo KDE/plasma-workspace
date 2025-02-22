@@ -60,7 +60,12 @@ void MountAction::triggered()
     if (device.is<Solid::StorageAccess>()) {
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
         if (access && !access->isAccessible()) {
-            access->setup();
+            if (!m_stateMonitor->isChecked(m_udi) && access->canCheck()) {
+                connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &MountAction::deviceStateChanged);
+                access->check();
+            } else {
+                access->setup();
+            }
         }
     }
 }
@@ -86,6 +91,19 @@ QString MountAction::icon() const
 QString MountAction::text() const
 {
     return i18n("Mount");
+}
+
+void MountAction::deviceStateChanged(const QString &udi)
+{
+    if (udi != m_udi || m_stateMonitor->getOperationResult(m_udi) != DevicesStateMonitor::CheckDone) {
+        return;
+    }
+
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Mount action check done, need repair: " << m_stateMonitor->needRepair(m_udi);
+    disconnect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &MountAction::deviceStateChanged);
+    if (!m_stateMonitor->needRepair(m_udi)) {
+        MountAction::triggered();
+    }
 }
 
 #include "moc_mountaction.cpp"

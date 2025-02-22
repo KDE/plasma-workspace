@@ -41,7 +41,7 @@ PlasmaExtras.ExpandableListItem {
 
     property bool hasMessage: deviceItem.deviceErrorMessage !== ""
 
-    property bool isFree: deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working && deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.NotPresent && !(deviceItem.deviceMounted === false && deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Successful)
+    property bool isFree: deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working && deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Checking && deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Repairing && deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.NotPresent && !(deviceItem.deviceMounted === false && deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Successful)
 
     onDeviceOperationResultChanged: {
         if (!popupIconTimer.running) {
@@ -93,7 +93,11 @@ PlasmaExtras.ExpandableListItem {
         if (deviceItem.hasMessage) {
             return deviceItem.deviceErrorMessage
         }
-        if (deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working) {
+        if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Checking) {
+            return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Checking…")
+        } else if (deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Repairing) {
+            return i18nc("Accessing is a less technical word for Mounting; translation should be short and mean \'Currently mounting this device\'", "Repairing…")
+        } else if (deviceItem.deviceOperationResult !== DN.DevicesStateMonitor.Working) {
             if (deviceItem.deviceFreeSpace > 0 && deviceItem.deviceSize > 0) {
                 return i18nc("@info:status Free disk space", "%1 free of %2", deviceItem.deviceFreeSpaceText, deviceItem.deviceSizeText)
             }
@@ -135,7 +139,7 @@ PlasmaExtras.ExpandableListItem {
         }
     }
 
-    isBusy: deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working
+    isBusy: deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Working || deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Checking || deviceItem.deviceOperationResult === DN.DevicesStateMonitor.Repairing
 
     customExpandedViewContent: deviceActions !== undefined && deviceActions.rowCount() !== 0 && isFree ? actionComponent : null
 

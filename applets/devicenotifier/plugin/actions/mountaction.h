@@ -30,6 +30,7 @@ public:
 
 private Q_SLOTS:
     void updateIsValid(const QString &udi);
+    void deviceStateChanged(const QString &udi);
 
 private:
     bool m_supportsMTP;

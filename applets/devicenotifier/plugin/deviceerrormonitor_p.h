@@ -34,6 +34,8 @@ private:
         Setup = 0,
         Teardown,
         Eject,
+        Check,
+        Repair,
     };
 
     explicit DeviceErrorMonitor(QObject *parent = nullptr);
@@ -48,6 +50,7 @@ private Q_SLOTS:
     void notify(Solid::ErrorType error, const QString &errorMessage, const QString &errorData, const QString &udi);
     bool isSafelyRemovable(const QString &udi) const;
     void queryBlockingApps(const QString &devicePath);
+    void clearPreviousError(const QString &udi);
 
 private:
     QHash<QString, std::pair<Solid::ErrorType, QString>> m_deviceErrors;

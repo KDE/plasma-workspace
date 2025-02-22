@@ -35,6 +35,7 @@ public:
 
 private Q_SLOTS:
     void updateAction(const QString &udi);
+    void deviceStateChanged(const QString &udi);
 
 private:
     bool m_hasStorageAccess;

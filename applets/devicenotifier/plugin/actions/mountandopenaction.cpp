@@ -123,10 +123,18 @@ void MountAndOpenAction::triggered()
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Mount And Open action triggered";
 
+    Solid::Device device(m_udi);
     if (!m_hasStorageAccess || !m_stateMonitor->isRemovable(m_udi) || m_isRoot || !m_stateMonitor->isMounted(m_udi)) {
-        ActionInterface::triggered();
+        auto access = device.as<Solid::StorageAccess>();
+        if (!m_stateMonitor->isChecked(m_udi) && access->canCheck()) {
+            connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &MountAndOpenAction::deviceStateChanged);
+            access->check();
+        } else if (m_stateMonitor->isChecked(m_udi) && m_stateMonitor->needRepair(m_udi)) {
+            access->repair();
+        } else {
+            ActionInterface::triggered();
+        }
     } else {
-        Solid::Device device(m_udi);
         if (device.is<Solid::OpticalDisc>()) {
             Solid::OpticalDrive *drive = device.as<Solid::OpticalDrive>();
             if (!drive) {
@@ -155,7 +163,12 @@ void MountAndOpenAction::updateAction(const QString &udi)
     qCDebug(APPLETS::DEVICENOTIFIER) << "Mount and open action: begin updating action";
 
     if (m_stateMonitor->isRemovable(m_udi)) {
-        m_icon = m_stateMonitor->isMounted(m_udi) ? QStringLiteral("media-eject") : QStringLiteral("document-open-folder");
+        if (m_stateMonitor->isMounted(m_udi)) {
+            m_icon = QStringLiteral("media-eject");
+        } else {
+            m_icon = (m_stateMonitor->isChecked(m_udi) && m_stateMonitor->needRepair(m_udi)) ? QStringLiteral("tools-wizard")
+                                                                                             : QStringLiteral("document-open-folder");
+        }
     } else {
         m_icon = QStringLiteral("document-open-folder");
     }
@@ -166,7 +179,7 @@ void MountAndOpenAction::updateAction(const QString &udi)
         m_text = i18n("Open in File Manager");
     } else {
         if (!m_stateMonitor->isMounted(m_udi)) {
-            m_text = i18n("Mount and Open");
+            m_text = (m_stateMonitor->isChecked(m_udi) && m_stateMonitor->needRepair(m_udi)) ? i18n("Try to Fix") : i18n("Mount and Open");
         } else if (m_isOpticalDisk) {
             m_text = i18n("Eject");
         } else {
@@ -177,6 +190,19 @@ void MountAndOpenAction::updateAction(const QString &udi)
 
     Q_EMIT iconChanged(m_icon);
     Q_EMIT textChanged(m_text);
+}
+
+void MountAndOpenAction::deviceStateChanged(const QString &udi)
+{
+    if (udi != m_udi || m_stateMonitor->getOperationResult(m_udi) != DevicesStateMonitor::CheckDone) {
+        return;
+    }
+
+    qCDebug(APPLETS::DEVICENOTIFIER) << "Mount And Open action check done, need repair: " << m_stateMonitor->needRepair(m_udi);
+    disconnect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &MountAndOpenAction::deviceStateChanged);
+    if (!m_stateMonitor->needRepair(m_udi) && !m_stateMonitor->isMounted(m_udi)) {
+        ActionInterface::triggered();
+    }
 }
 
 #include "moc_mountandopenaction.cpp"

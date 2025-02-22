@@ -41,6 +41,10 @@ public:
         Working,
         Successful,
         Unsuccessful,
+        Checking,
+        CheckDone,
+        Repairing,
+        RepairDone,
     };
 
     Q_ENUM(OperationResult)
@@ -53,6 +57,8 @@ public:
 
     bool isRemovable(const QString &udi) const;
     bool isMounted(const QString &udi) const;
+    bool isChecked(const QString &udi) const;
+    bool needRepair(const QString &udi) const;
     QDateTime getDeviceTimeStamp(const QString &udi) const;
 
     /**
@@ -75,6 +81,8 @@ private:
 private Q_SLOTS:
     void setMountingState(const QString &udi);
     void setUnmountingState(const QString &udi);
+    void setCheckingState(const QString &udi);
+    void setRepairingState(const QString &udi);
     void setIdleState(Solid::ErrorType error, QVariant errorData, const QString &udi);
 
 Q_SIGNALS:
@@ -88,6 +96,8 @@ private:
     struct DeviceInfo {
         bool isRemovable;
         bool isMounted;
+        bool isChecked;
+        bool needRepair;
         OperationResult operationResult;
         QDateTime deviceTimeStamp;
     };

@@ -68,6 +68,19 @@ void DeviceErrorMonitor::addMonitoringDevice(const QString &udi)
                                              << "Setup signal arrived for device " << udi;
             onSolidReply(SolidReplyType::Setup, error, errorData, udi);
         });
+
+        connect(access, &Solid::StorageAccess::checkDone, this, [this](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: " << "Check signal arrived for device " << udi;
+            onSolidReply(SolidReplyType::Check, error, errorData, udi);
+        });
+
+        connect(access, &Solid::StorageAccess::repairDone, this, [this](Solid::ErrorType error, const QVariant &errorData, const QString &udi) {
+            qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: " << "Repair signal arrived for device " << udi;
+            onSolidReply(SolidReplyType::Repair, error, errorData, udi);
+        });
+
+        connect(access, &Solid::StorageAccess::setupRequested, this, &DeviceErrorMonitor::clearPreviousError);
+        connect(access, &Solid::StorageAccess::repairRequested, this, &DeviceErrorMonitor::clearPreviousError);
     }
     if (device.is<Solid::OpticalDisc>()) {
         Solid::OpticalDrive *drive = device.parent().as<Solid::OpticalDrive>();
@@ -159,6 +172,11 @@ void DeviceErrorMonitor::queryBlockingApps(const QString &devicePath)
     //    p.start(QStringLiteral("fuser"), {QStringLiteral("-m"), devicePath});
 }
 
+void DeviceErrorMonitor::clearPreviousError(const QString &udi)
+{
+    notify(Solid::NoError, QString(), QString(), udi);
+}
+
 void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType error, const QVariant &errorData, const QString &udi)
 {
     qCDebug(APPLETS::DEVICENOTIFIER) << "Device Error Monitor: "
@@ -175,7 +193,13 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
 
     switch (error) {
     case Solid::ErrorType::NoError:
-        if (type != SolidReplyType::Setup && isSafelyRemovable(udi)) {
+        if (type == SolidReplyType::Check) {
+            if (!errorData.toBool()) {
+                errorMsg = i18n("This device has file system errors.");
+            }
+        } else if (type == SolidReplyType::Repair) {
+            errorMsg = i18n("Successfully repaired!");
+        } else if (type != SolidReplyType::Setup && isSafelyRemovable(udi)) {
             KNotification::event(QStringLiteral("safelyRemovable"),
                                  i18n("Device Status"),
                                  i18n("A device can now be safely removed"),
@@ -196,6 +220,9 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
             break;
         case SolidReplyType::Eject:
             errorMsg = i18n("You are not authorized to eject this disc.");
+            break;
+        case SolidReplyType::Repair:
+            errorMsg = i18n("You are not authorized to repair this device.");
             break;
         }
 
@@ -262,6 +289,9 @@ void DeviceErrorMonitor::onSolidReply(SolidReplyType type, Solid::ErrorType erro
             break;
         case SolidReplyType::Eject:
             errorMsg = i18n("Could not eject this disc.");
+            break;
+        case SolidReplyType::Repair:
+            errorMsg = i18n("Could not repair this device: %1").arg(errorData.toString());
             break;
         }
 
