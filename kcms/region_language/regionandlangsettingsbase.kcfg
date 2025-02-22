@@ -9,10 +9,6 @@
   <kcfgfile name="plasma-localerc" />
   <group name="Formats">
     <entry key="LANG" name="lang" type="String">
-        <code>
-            QString lang = QString::fromLocal8Bit(qgetenv("LANG"));
-        </code>
-        <default code="true">lang</default>
     </entry>
     <entry key="LC_NUMERIC" name="numeric" type="String">
         <default code="true">i18n("Inherit Language")</default>

@@ -9,11 +9,19 @@
 
 using KCM_RegionAndLang::SettingType;
 
+RegionAndLangSettings::RegionAndLangSettings(QObject *parent)
+    : RegionAndLangSettingsBase(parent)
+{
+    connect(this, &RegionAndLangSettings::langChanged, this, [this] {
+        this->setLC_Vars(this->lang());
+    });
+}
+
 bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
 {
     switch (setting) {
     case SettingType::Lang:
-        return lang() == defaultLangValue();
+        return lang().isEmpty();
     case SettingType::Language:
         return language() == defaultLanguageValue();
     case SettingType::Numeric:
@@ -43,14 +51,14 @@ bool RegionAndLangSettings::isDefaultSetting(SettingType setting) const
 QString RegionAndLangSettings::langWithFallback() const
 {
     QString lang = RegionAndLangSettings::lang();
-    if (!(isDefaultSetting(SettingType::Lang) && lang.isEmpty())) {
-        if (QString envLang = qEnvironmentVariable("LANG"); !envLang.isEmpty()) {
-            envLang.replace(QStringLiteral("utf8"), QStringLiteral("UTF-8"));
-            return envLang;
-        }
-        return QLocale::system().name();
+    if (!lang.isEmpty()) {
+        return lang;
     }
-    return lang;
+    if (QString envLang = qEnvironmentVariable("LANG"); !envLang.isEmpty()) {
+        envLang.replace(QStringLiteral("utf8"), QStringLiteral("UTF-8"));
+        return envLang;
+    }
+    return QLocale::system().name();
 }
 
 QString RegionAndLangSettings::LC_LocaleWithLang(SettingType setting) const
