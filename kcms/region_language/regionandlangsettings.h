@@ -14,7 +14,7 @@ class RegionAndLangSettings : public RegionAndLangSettingsBase
 {
     Q_OBJECT
 public:
-    using RegionAndLangSettingsBase::RegionAndLangSettingsBase;
+    RegionAndLangSettings(QObject *parent = nullptr);
     bool isDefaultSetting(KCM_RegionAndLang::SettingType setting) const;
     QString langWithFallback() const;
     QString LC_LocaleWithLang(KCM_RegionAndLang::SettingType setting) const;

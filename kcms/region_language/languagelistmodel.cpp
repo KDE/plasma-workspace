@@ -385,7 +385,7 @@ void SelectedLanguageModel::saveLanguages()
         return;
     }
     if (m_selectedLanguages.empty()) {
-        m_settings->setLang(m_settings->defaultLangValue());
+        m_settings->setLang(m_settings->langWithFallback());
         m_settings->config()->group(QStringLiteral("Formats")).deleteEntry("lang");
         m_settings->config()->group(QStringLiteral("Translations")).deleteEntry("language");
     } else {

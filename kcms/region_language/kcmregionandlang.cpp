@@ -137,10 +137,6 @@ QString KCMRegionAndLang::localeFileDirPath()
 
 void KCMRegionAndLang::save()
 {
-    if (!settings()->isDefaultSetting(SettingType::Lang)) {
-        settings()->setLC_Vars(settings()->lang());
-    }
-
     if (settings()->isSaveNeeded()) {
         // assemble full locales in use
         QStringList locales;
@@ -264,7 +260,7 @@ void KCMRegionAndLang::unset(SettingType setting) const
         return;
     case SettingType::Lang:
         entry = "LANG";
-        settings()->setLang(settings()->defaultLangValue());
+        settings()->setLang(QString());
         break;
     case SettingType::Numeric:
         entry = "LC_NUMERIC";
@@ -351,7 +347,7 @@ QString KCMRegionAndLang::toUTF8Locale(const QString &locale)
 #ifdef GLIBC_LOCALE
 std::unordered_map<QString, QString> KCMRegionAndLang::constructGlibcLocaleMap()
 {
-    std::unordered_map<QString, QString> localeMap;
+    std::unordered_map<QString, QString> localeMap = {{QStringLiteral("C"), QStringLiteral("C")}};
 
     QDir glibcLocaleDir(localeFileDirPath());
     auto availableLocales = glibcLocaleDir.entryList(QDir::Files);

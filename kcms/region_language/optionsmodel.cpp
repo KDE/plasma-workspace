@@ -126,25 +126,7 @@ QVariant OptionsModel::data(const QModelIndex &index, int role) const
             Q_ASSERT(false); // shouldn't happen
             return {};
         case Lang:
-            if (m_settings->defaultLangValue().isEmpty() && m_settings->isDefaultSetting(SettingType::Lang)) {
-                // no Lang configured, no $LANG in env
-                return i18nc("@info:title, the current setting is system default", "System Default");
-            } else if (!m_settings->lang().isEmpty() && m_settings->lang() != m_settings->defaultLangValue()) {
-                // Lang configured and not empty
-                return getNativeName(m_settings->lang());
-            } else {
-                // Lang configured but empty, try to read from $LANGUAGE first.
-                if (const QString languages = m_settings->defaultLanguageValue(); !languages.isEmpty()) {
-                    // If the first language is invalid, just fall through to $LANG
-                    const QStringList languageList = languages.split(QLatin1Char(':'));
-                    if (const QString firstLanguage = getNativeName(languageList[0]); !firstLanguage.isEmpty()) {
-                        return firstLanguage;
-                    }
-                }
-
-                // Lang configured but empty, try to read from $LANG, shouldn't happen on a valid config file
-                return getNativeName(m_settings->defaultLangValue());
-            }
+            return getNativeName(m_settings->langWithFallback());
         case Numeric:
             if (m_settings->isDefaultSetting(SettingType::Numeric)) {
                 return getNativeName(m_settings->numeric());
@@ -369,8 +351,8 @@ QString OptionsModel::implicitFormatExampleMsg() const
 
     if (!m_settings->lang().isEmpty()) {
         locale = getNativeName(m_settings->lang());
-    } else if (!m_settings->defaultLangValue().isEmpty()) {
-        locale = getNativeName(m_settings->defaultLangValue());
+    } else if (!m_settings->langWithFallback().isEmpty()) {
+        locale = getNativeName(m_settings->langWithFallback());
     } else {
         locale = i18nc("@info:title, the current setting is system default", "System Default");
     }
