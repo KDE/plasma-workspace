@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2019 David Edmundson <kde@davidedmundson.co.uk>
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 #pragma once
 
 #include <QDBusArgument>
