@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-02-23 02:31+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -18,7 +18,7 @@ msgstr ""
 "pot\n"
 "X-Crowdin-File-ID: 50880\n"
 
-#: abstractnotificationsmodel.cpp:318
+#: abstractnotificationsmodel.cpp:319
 #, kde-format
 msgctxt "@info %1 notification body %2 application name"
 msgid "%1 from %2"
