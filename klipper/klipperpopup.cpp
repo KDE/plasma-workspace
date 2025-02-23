@@ -106,7 +106,7 @@ void KlipperPopup::onObjectIncubated()
 
 void KlipperPopup::onFocusWindowChanged(QWindow *focusWindow)
 {
-    if (focusWindow != this) {
+    if (focusWindow != this && (!focusWindow || focusWindow->objectName() != u"klipperActionPopupWindow")) {
         hide();
     }
 }
