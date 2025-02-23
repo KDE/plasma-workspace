@@ -167,6 +167,7 @@ PlasmaComponents3.ScrollView {
                 KeyNavigation.right: clearHistoryButton.visible ? clearHistoryButton : null
                 Keys.onDownPressed: event => {
                     clipboardMenu.view.incrementCurrentIndex();
+                    menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible)
                     event.accepted = false;
                 }
                 Keys.onEnterPressed: event => Keys.returnPressed(event)
@@ -189,6 +190,14 @@ PlasmaComponents3.ScrollView {
 
                 display: PlasmaComponents3.AbstractButton.IconOnly
                 text: i18nd("klipper", "Clear History")
+
+                Keys.onDownPressed: { // can't KeyNavigation or Up from the ListView goes here
+                    if (menuListView.count > 0) {
+                        clipboardMenu.view.incrementCurrentIndex();
+                        menuListView.positionViewAtIndex(menuListView.currentIndex, ListView.Visible)
+                        menuListView.forceActiveFocus(Qt.TabFocusReason)
+                    }
+                }
 
                 onClicked: {
                     clipboardMenu.model.clearHistory();
