@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_kdebase\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"POT-Creation-Date: 2025-02-23 00:42+0000\n"
 "PO-Revision-Date: 2008-11-13 00:55+0100\n"
 "Last-Translator: Eduard Werner <edi.werner@gmx.de>\n"
 "Language-Team: en_US <kde-i18n-doc@lists.kde.org>\n"
@@ -17,13 +17,37 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n"
 "%100==4 ? 2 : 3;\n"
 
-#: package/contents/ui/DeviceItem.qml:98
+#: package/contents/ui/DeviceItem.qml:97
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr "Wotwjazuju..."
+
+#: package/contents/ui/DeviceItem.qml:99
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr "Wotwjazuju..."
+
+#: package/contents/ui/DeviceItem.qml:102
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 swobodne z %2"
 
-#: package/contents/ui/DeviceItem.qml:102
+#: package/contents/ui/DeviceItem.qml:106
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -31,7 +55,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "Wočinjam..."
 
-#: package/contents/ui/DeviceItem.qml:105
+#: package/contents/ui/DeviceItem.qml:109
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -39,7 +63,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "Wotwjazuju..."
 
-#: package/contents/ui/DeviceItem.qml:108
+#: package/contents/ui/DeviceItem.qml:112
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
@@ -101,54 +125,69 @@ msgstr "Wšitke graty"
 msgid "Show popup when new device is plugged in"
 msgstr "Pokaž wuskakotawku (popup), hdyž so nowy grat přityknje"
 
-#: plugin/actions/mountaction.cpp:88
+#: plugin/actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr "Zapójsnyć"
 
-#: plugin/actions/mountandopenaction.cpp:166
+#: plugin/actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Z datajowym rjadowakom wočinić"
 
-#: plugin/actions/mountandopenaction.cpp:169
+#: plugin/actions/mountandopenaction.cpp:182
+#, kde-format
+msgid "Try to Fix"
+msgstr ""
+
+#: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr "Zapójsnyć a wočinić"
 
-#: plugin/actions/mountandopenaction.cpp:171
+#: plugin/actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr "Wućisnyć"
 
-#: plugin/actions/mountandopenaction.cpp:173
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr "Kedźbliwje wotpójsnyć"
 
-#: plugin/deviceerrormonitor_p.cpp:180
+#: plugin/deviceerrormonitor_p.cpp:198
+#, kde-format
+msgid "This device has file system errors."
+msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:201
+#, kde-format
+msgid "Successfully repaired!"
+msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:181
+#: plugin/deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:185
+#: plugin/deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:192
+#: plugin/deviceerrormonitor_p.cpp:216
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to mount this device."
 msgstr "%1 akcija za tutón grat"
 
-#: plugin/deviceerrormonitor_p.cpp:195
+#: plugin/deviceerrormonitor_p.cpp:219
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
@@ -156,20 +195,27 @@ msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "%1 akcija za tutón grat"
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: plugin/deviceerrormonitor_p.cpp:222
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "You are not authorized to eject this disc."
 msgstr "%1 akcija za tutón grat"
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: plugin/deviceerrormonitor_p.cpp:225
+#, fuzzy, kde-format
+#| msgid "1 action for this device"
+#| msgid_plural "%1 actions for this device"
+msgid "You are not authorized to repair this device."
+msgstr "%1 akcija za tutón grat"
+
+#: plugin/deviceerrormonitor_p.cpp:232
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "Posledni přizamknjeny grat: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:233
+#: plugin/deviceerrormonitor_p.cpp:260
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -179,7 +225,7 @@ msgstr ""
 "Njemóžu CD/DVD wućisnyć.\n"
 "Někajka aplikacija hišće jednu abo wjace datajow na tutym disku wužiwa."
 
-#: plugin/deviceerrormonitor_p.cpp:235
+#: plugin/deviceerrormonitor_p.cpp:262
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot unmount the device.\n"
@@ -200,31 +246,37 @@ msgstr[3] ""
 "Njemóžu grat wotmontować.\n"
 "Někajka aplikacija hišće jednu abo wjace datajow na tutym graće wužiwa."
 
-#: plugin/deviceerrormonitor_p.cpp:238
+#: plugin/deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:258
+#: plugin/deviceerrormonitor_p.cpp:285
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "Posledni přizamknjeny grat: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:261
+#: plugin/deviceerrormonitor_p.cpp:288
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Posledni přizamknjeny grat: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:264
+#: plugin/deviceerrormonitor_p.cpp:291
 #, fuzzy, kde-format
 #| msgid "1 action for this device"
 #| msgid_plural "%1 actions for this device"
 msgid "Could not eject this disc."
 msgstr "%1 akcija za tutón grat"
+
+#: plugin/deviceerrormonitor_p.cpp:294
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not repair this device: %1"
+msgstr "Posledni přizamknjeny grat: %1"
 
 #, fuzzy
 #~| msgid "1 action for this device"

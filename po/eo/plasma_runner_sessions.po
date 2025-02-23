@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 00:43+0000\n"
-"PO-Revision-Date: 2023-09-07 20:47+0100\n"
+"PO-Revision-Date: 2025-02-22 21:54+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: eo <kde-i18n-doc@kde.org>\n"
 "Language: eo\n"
@@ -92,10 +92,9 @@ msgid "switch user;new session"
 msgstr "ŝanĝi uzanton"
 
 #: sessionrunner.cpp:55
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Komencas novan seancon kiel alia uzanto"
+msgstr "Ŝalti al nova seanco kiel alia uzanto"
 
 #: sessionrunner.cpp:77
 #, kde-format
@@ -130,37 +129,3 @@ msgstr "Konservi Seancon"
 #, kde-format
 msgid "Switch User"
 msgstr "Ŝanĝi Uzanton"
-
-#~ msgctxt "KRunner keyword to list user sessions"
-#~ msgid "sessions"
-#~ msgstr "seancoj"
-
-#~ msgid "Lists all sessions"
-#~ msgstr "Listi ĉiujn seancojn"
-
-#~ msgctxt "KRunner keyword to switch user sessions"
-#~ msgid "switch"
-#~ msgstr "ŝanĝi"
-
-#~ msgid ""
-#~ "Switches to the active session for the user :q:, or lists all active "
-#~ "sessions if :q: is not provided"
-#~ msgstr ""
-#~ "Ŝanĝas al la aktiva seanco por la uzanto :q:, aŭ listas ĉiujn aktivajn "
-#~ "seancojn se :q: ne estas difinita"
-
-#~ msgid ""
-#~ "<p>You are about to enter a new desktop session.</p><p>A login screen "
-#~ "will be displayed and the current session will be hidden.</p><p>You can "
-#~ "switch between desktop sessions using:</p><ul><li>Ctrl+Alt+F{number of "
-#~ "session}</li><li>Plasma search (type '%1')</li><li>Plasma widgets (such "
-#~ "as the application launcher)</li></ul>"
-#~ msgstr ""
-#~ "<p>Vi estas enigonta novan labortablan seancon.</p><p>Ensaluta ekrano "
-#~ "estos montrata kaj la aktuala seanco estos kaŝata.</p><p>Vi povas baskuli "
-#~ "inter labortablaj seancoj uzante:</p><ul><li>Ctrl+Alt+F{numero de seanco}"
-#~ "</li><li>Plasma-serĉo (tipo '%1')</li><li>Plasma-fenestraĵoj (kiel la "
-#~ "aplikolanĉilo)</li></ul>"
-
-#~ msgid "New Desktop Session"
-#~ msgstr "Nova Laborspaca Seanco"

@@ -151,11 +151,10 @@ msgid "Offset from UTC time"
 msgstr "UTC 时间偏移"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "更改系统全局时区…"
+msgstr ""
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -455,9 +454,3 @@ msgstr "本地"
 #, kde-format
 msgid "System's local time zone"
 msgstr "系统本地时区"
-
-#~ msgid "Adjust Date and Time…"
-#~ msgstr "调整日期和时间…"
-
-#~ msgid "Set Time Format…"
-#~ msgstr "设置时间格式…"

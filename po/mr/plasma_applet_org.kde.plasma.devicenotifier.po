@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"POT-Creation-Date: 2025-02-23 00:42+0000\n"
 "PO-Revision-Date: 2014-10-28 10:25+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: Marathi <kde-i18n-doc@kde.org>\n"
@@ -19,7 +19,31 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 "X-Generator: Lokalize 1.5\n"
 
-#: package/contents/ui/DeviceItem.qml:98
+#: package/contents/ui/DeviceItem.qml:97
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr "काढून टाकत आहे..."
+
+#: package/contents/ui/DeviceItem.qml:99
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation shoud be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing..."
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr "काढून टाकत आहे..."
+
+#: package/contents/ui/DeviceItem.qml:102
 #, fuzzy, kde-format
 #| msgctxt "@info:status Free disk space"
 #| msgid "%1 free"
@@ -27,7 +51,7 @@ msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 मोकळे"
 
-#: package/contents/ui/DeviceItem.qml:102
+#: package/contents/ui/DeviceItem.qml:106
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Accessing is a less technical word for Mounting; translation should be "
@@ -39,7 +63,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "वापरत आहे..."
 
-#: package/contents/ui/DeviceItem.qml:105
+#: package/contents/ui/DeviceItem.qml:109
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "Removing is a less technical word for Unmounting; translation shoud be "
@@ -51,7 +75,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "काढून टाकत आहे..."
 
-#: package/contents/ui/DeviceItem.qml:108
+#: package/contents/ui/DeviceItem.qml:112
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr ""
@@ -122,72 +146,93 @@ msgstr "सर्व साधने"
 msgid "Show popup when new device is plugged in"
 msgstr "साधन जोडले नाही"
 
-#: plugin/actions/mountaction.cpp:88
+#: plugin/actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:166
+#: plugin/actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:169
+#: plugin/actions/mountandopenaction.cpp:182
+#, kde-format
+msgid "Try to Fix"
+msgstr ""
+
+#: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:171
+#: plugin/actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr ""
 
-#: plugin/actions/mountandopenaction.cpp:173
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:180
+#: plugin/deviceerrormonitor_p.cpp:198
+#, kde-format
+msgid "This device has file system errors."
+msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:201
+#, kde-format
+msgid "Successfully repaired!"
+msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:181
+#: plugin/deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:185
+#: plugin/deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:192
+#: plugin/deviceerrormonitor_p.cpp:216
 #, fuzzy, kde-format
 #| msgid "Click to mount this device."
 msgid "You are not authorized to mount this device."
 msgstr "हे साधन जुळवणी करण्याकरिता क्लिक करा."
 
-#: plugin/deviceerrormonitor_p.cpp:195
+#: plugin/deviceerrormonitor_p.cpp:219
 #, fuzzy, kde-format
 #| msgid "It is currently safe to remove this device."
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "हे साधन बाहेर काढण्याकरिता सुरक्षित आहे."
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: plugin/deviceerrormonitor_p.cpp:222
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "You are not authorized to eject this disc."
 msgstr "ही डिस्क बाहेर काढण्याकरिता क्लिक करा."
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: plugin/deviceerrormonitor_p.cpp:225
+#, fuzzy, kde-format
+#| msgid "It is currently safe to remove this device."
+msgid "You are not authorized to repair this device."
+msgstr "हे साधन बाहेर काढण्याकरिता सुरक्षित आहे."
+
+#: plugin/deviceerrormonitor_p.cpp:232
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device as it is busy."
 msgstr "शेवटचे जोडलेले साधन: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:233
+#: plugin/deviceerrormonitor_p.cpp:260
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot eject the disc.\n"
@@ -197,7 +242,7 @@ msgstr ""
 "डिस्क बाहेर काढू शकत नाही.\n"
 "अनुप्रयोग अंतर्गत एक किंवा त्यापेक्षा जास्त फाइल या साधनवर उघडले आहेत."
 
-#: plugin/deviceerrormonitor_p.cpp:235
+#: plugin/deviceerrormonitor_p.cpp:262
 #, fuzzy, kde-format
 #| msgid ""
 #| "Cannot unmount the device.\n"
@@ -212,30 +257,36 @@ msgstr[1] ""
 "साधन unmount करू शकत नाही.\n"
 "अनुप्रयोग अंतर्गत एक किंवा त्यापेक्षा जास्त फाइल या साधनवर उघडले आहेत."
 
-#: plugin/deviceerrormonitor_p.cpp:238
+#: plugin/deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:258
+#: plugin/deviceerrormonitor_p.cpp:285
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgid "Could not mount this device."
 msgstr "शेवटचे जोडलेले साधन: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:261
+#: plugin/deviceerrormonitor_p.cpp:288
 #, fuzzy, kde-format
 #| msgid "Last plugged in device: %1"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "शेवटचे जोडलेले साधन: %1"
 
-#: plugin/deviceerrormonitor_p.cpp:264
+#: plugin/deviceerrormonitor_p.cpp:291
 #, fuzzy, kde-format
 #| msgid "Click to eject this disc."
 msgid "Could not eject this disc."
 msgstr "ही डिस्क बाहेर काढण्याकरिता क्लिक करा."
+
+#: plugin/deviceerrormonitor_p.cpp:294
+#, fuzzy, kde-format
+#| msgid "Last plugged in device: %1"
+msgid "Could not repair this device: %1"
+msgstr "शेवटचे जोडलेले साधन: %1"
 
 #~ msgid "General"
 #~ msgstr "साधारण"

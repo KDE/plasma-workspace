@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 00:43+0000\n"
-"PO-Revision-Date: 2025-01-24 16:44+0300\n"
+"PO-Revision-Date: 2025-02-22 10:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -151,11 +151,10 @@ msgid "Offset from UTC time"
 msgstr "UTC zamanından sapma"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Sistem Geneli Zaman Dilimini Değiştir…"
+msgstr "Zaman Dilimini Değiştir…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format

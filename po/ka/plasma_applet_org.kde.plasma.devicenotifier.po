@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"POT-Creation-Date: 2025-02-23 00:42+0000\n"
 "PO-Revision-Date: 2024-07-17 05:48+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -18,13 +18,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.3.2\n"
 
-#: package/contents/ui/DeviceItem.qml:98
+#: package/contents/ui/DeviceItem.qml:97
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr "წაშლა…"
+
+#: package/contents/ui/DeviceItem.qml:99
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr "წაშლა…"
+
+#: package/contents/ui/DeviceItem.qml:102
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "თავისუფალია %1 %2-დან"
 
-#: package/contents/ui/DeviceItem.qml:102
+#: package/contents/ui/DeviceItem.qml:106
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -32,7 +56,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "წვდომა…"
 
-#: package/contents/ui/DeviceItem.qml:105
+#: package/contents/ui/DeviceItem.qml:109
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -40,7 +64,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "წაშლა…"
 
-#: package/contents/ui/DeviceItem.qml:108
+#: package/contents/ui/DeviceItem.qml:112
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
 msgstr "არ გამოაერთოთ! ფაილები ჯერ კიდევ იწერება…"
@@ -102,73 +126,96 @@ msgstr "ყველა მოწყობილობა"
 msgid "Show popup when new device is plugged in"
 msgstr "ახალი მოწყობილობის შეერთებისას მხტუნავი ფანჯრის ჩვენება"
 
-#: plugin/actions/mountaction.cpp:88
+#: plugin/actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr "მიმაგრება"
 
-#: plugin/actions/mountandopenaction.cpp:166
+#: plugin/actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr "ფაილთა მმართველში გახსნა"
 
-#: plugin/actions/mountandopenaction.cpp:169
+#: plugin/actions/mountandopenaction.cpp:182
+#, kde-format
+msgid "Try to Fix"
+msgstr ""
+
+#: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr "მიმაგრება და გახსნა"
 
-#: plugin/actions/mountandopenaction.cpp:171
+#: plugin/actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr "გამოღება"
 
-#: plugin/actions/mountandopenaction.cpp:173
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr "უსაფრთხოდ მოცილება"
 
-#: plugin/deviceerrormonitor_p.cpp:180
+#: plugin/deviceerrormonitor_p.cpp:198
+#, fuzzy, kde-format
+#| msgid "This device can now be safely removed."
+msgid "This device has file system errors."
+msgstr "ახლა შესაძლებელია მოწყობილობის უსაფრთხოდ გამოერთება."
+
+#: plugin/deviceerrormonitor_p.cpp:201
+#, kde-format
+msgid "Successfully repaired!"
+msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr "მოწყობილობის სტატუსი"
 
-#: plugin/deviceerrormonitor_p.cpp:181
+#: plugin/deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr "ახლა შესაძლებელია მოწყობილობის უსაფრთხოდ გამოერთება"
 
-#: plugin/deviceerrormonitor_p.cpp:185
+#: plugin/deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr "ახლა შესაძლებელია მოწყობილობის უსაფრთხოდ გამოერთება."
 
-#: plugin/deviceerrormonitor_p.cpp:192
+#: plugin/deviceerrormonitor_p.cpp:216
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr "ამ მოწყობილობის მისამაგრებლად საჭირო ავტორიზაცია არ გაგაჩნიათ."
 
-#: plugin/deviceerrormonitor_p.cpp:195
+#: plugin/deviceerrormonitor_p.cpp:219
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr "ამ მოწყობილობის მოხსნის ავტორიზაცია არ გაგაჩნიათ."
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: plugin/deviceerrormonitor_p.cpp:222
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr "დისკის გამოსაღებლად ავტორიზაცია არ გაგაჩნიათ."
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: plugin/deviceerrormonitor_p.cpp:225
+#, fuzzy, kde-format
+#| msgctxt "Remove is less technical for unmount"
+#| msgid "You are not authorized to remove this device."
+msgid "You are not authorized to repair this device."
+msgstr "ამ მოწყობილობის მოხსნის ავტორიზაცია არ გაგაჩნიათ."
+
+#: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr "მოწყობილობის მიმაგრების შეცდომა. ის დაკავებულია."
 
-#: plugin/deviceerrormonitor_p.cpp:233
+#: plugin/deviceerrormonitor_p.cpp:260
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr "აპლიკაციას ამ მოწყობილობაზე მდებარე ერთი ან მეტი ფაილი აქვს გახსნილი."
 
-#: plugin/deviceerrormonitor_p.cpp:235
+#: plugin/deviceerrormonitor_p.cpp:262
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -178,27 +225,34 @@ msgstr[0] ""
 msgstr[1] ""
 "აპლიკაციას ამ მოწყობილობაზე მდებარე ერთი ან მეტი ფაილი აქვს გახსნილი: \"%2\"."
 
-#: plugin/deviceerrormonitor_p.cpp:238
+#: plugin/deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ", "
 
-#: plugin/deviceerrormonitor_p.cpp:258
+#: plugin/deviceerrormonitor_p.cpp:285
 #, kde-format
 msgid "Could not mount this device."
 msgstr "მოწყობილობის მიმაგრების შეცდომა."
 
-#: plugin/deviceerrormonitor_p.cpp:261
+#: plugin/deviceerrormonitor_p.cpp:288
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "მოწყობილობის მოხსნის შეცდომა."
 
-#: plugin/deviceerrormonitor_p.cpp:264
+#: plugin/deviceerrormonitor_p.cpp:291
 #, kde-format
 msgid "Could not eject this disc."
 msgstr "დისკის გამოღების შეცდომა."
+
+#: plugin/deviceerrormonitor_p.cpp:294
+#, fuzzy, kde-format
+#| msgctxt "Remove is less technical for unmount"
+#| msgid "Could not remove this device."
+msgid "Could not repair this device: %1"
+msgstr "მოწყობილობის მოხსნის შეცდომა."
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "ფაილური სისტემა არ პასუხობს"

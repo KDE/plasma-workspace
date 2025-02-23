@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-29 00:43+0000\n"
+"POT-Creation-Date: 2025-02-23 00:42+0000\n"
 "PO-Revision-Date: 2022-03-26 21:27+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -12,13 +12,37 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
-#: package/contents/ui/DeviceItem.qml:98
+#: package/contents/ui/DeviceItem.qml:97
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Checking…"
+msgstr "A retirar…"
+
+#: package/contents/ui/DeviceItem.qml:99
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "Removing is a less technical word for Unmounting; translation should be "
+#| "short and mean 'Currently unmounting this device'"
+#| msgid "Removing…"
+msgctxt ""
+"Accessing is a less technical word for Mounting; translation should be short "
+"and mean 'Currently mounting this device'"
+msgid "Repairing…"
+msgstr "A retirar…"
+
+#: package/contents/ui/DeviceItem.qml:102
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
 msgstr "%1 livres de %2"
 
-#: package/contents/ui/DeviceItem.qml:102
+#: package/contents/ui/DeviceItem.qml:106
 #, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
@@ -26,7 +50,7 @@ msgctxt ""
 msgid "Accessing…"
 msgstr "A aceder…"
 
-#: package/contents/ui/DeviceItem.qml:105
+#: package/contents/ui/DeviceItem.qml:109
 #, kde-format
 msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
@@ -34,7 +58,7 @@ msgctxt ""
 msgid "Removing…"
 msgstr "A retirar…"
 
-#: package/contents/ui/DeviceItem.qml:108
+#: package/contents/ui/DeviceItem.qml:112
 #, fuzzy, kde-format
 #| msgid "Don't unplug yet! Files are still being transferred..."
 msgid "Don't unplug yet! Files are still being transferred…"
@@ -97,73 +121,94 @@ msgstr "Todos os Dispositivos"
 msgid "Show popup when new device is plugged in"
 msgstr "Mostrar uma mensagem quando for ligado um novo dispositivo"
 
-#: plugin/actions/mountaction.cpp:88
+#: plugin/actions/mountaction.cpp:93
 #, kde-format
 msgid "Mount"
 msgstr "Montar"
 
-#: plugin/actions/mountandopenaction.cpp:166
+#: plugin/actions/mountandopenaction.cpp:179
 #, kde-format
 msgid "Open in File Manager"
 msgstr "Abrir no Gestor de Ficheiros"
 
-#: plugin/actions/mountandopenaction.cpp:169
+#: plugin/actions/mountandopenaction.cpp:182
+#, kde-format
+msgid "Try to Fix"
+msgstr ""
+
+#: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Mount and Open"
 msgstr "Montar e Abrir"
 
-#: plugin/actions/mountandopenaction.cpp:171
+#: plugin/actions/mountandopenaction.cpp:184
 #, kde-format
 msgid "Eject"
 msgstr "Ejectar"
 
-#: plugin/actions/mountandopenaction.cpp:173
+#: plugin/actions/mountandopenaction.cpp:186
 #, kde-format
 msgid "Safely remove"
 msgstr "Remover em segurança"
 
-#: plugin/deviceerrormonitor_p.cpp:180
+#: plugin/deviceerrormonitor_p.cpp:198
+#, kde-format
+msgid "This device has file system errors."
+msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:201
+#, kde-format
+msgid "Successfully repaired!"
+msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
 msgid "Device Status"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:181
+#: plugin/deviceerrormonitor_p.cpp:205
 #, kde-format
 msgid "A device can now be safely removed"
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:185
+#: plugin/deviceerrormonitor_p.cpp:209
 #, kde-format
 msgid "This device can now be safely removed."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:192
+#: plugin/deviceerrormonitor_p.cpp:216
 #, kde-format
 msgid "You are not authorized to mount this device."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:195
+#: plugin/deviceerrormonitor_p.cpp:219
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:198
+#: plugin/deviceerrormonitor_p.cpp:222
 #, kde-format
 msgid "You are not authorized to eject this disc."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:205
+#: plugin/deviceerrormonitor_p.cpp:225
+#, fuzzy, kde-format
+#| msgid "Click to safely remove all devices"
+msgid "You are not authorized to repair this device."
+msgstr "Carregue para retirar todos os dispositivos em segurança"
+
+#: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
 msgid "Could not mount this device as it is busy."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:233
+#: plugin/deviceerrormonitor_p.cpp:260
 #, kde-format
 msgid "One or more files on this device are open within an application."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:235
+#: plugin/deviceerrormonitor_p.cpp:262
 #, kde-format
 msgid "One or more files on this device are opened in application \"%2\"."
 msgid_plural ""
@@ -171,25 +216,31 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 
-#: plugin/deviceerrormonitor_p.cpp:238
+#: plugin/deviceerrormonitor_p.cpp:265
 #, kde-format
 msgctxt "separator in list of apps blocking device unmount"
 msgid ", "
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:258
+#: plugin/deviceerrormonitor_p.cpp:285
 #, kde-format
 msgid "Could not mount this device."
 msgstr ""
 
-#: plugin/deviceerrormonitor_p.cpp:261
+#: plugin/deviceerrormonitor_p.cpp:288
 #, fuzzy, kde-format
 #| msgid "Click to safely remove all devices"
 msgctxt "Remove is less technical for unmount"
 msgid "Could not remove this device."
 msgstr "Carregue para retirar todos os dispositivos em segurança"
 
-#: plugin/deviceerrormonitor_p.cpp:264
+#: plugin/deviceerrormonitor_p.cpp:291
 #, kde-format
 msgid "Could not eject this disc."
 msgstr ""
+
+#: plugin/deviceerrormonitor_p.cpp:294
+#, fuzzy, kde-format
+#| msgid "Click to safely remove all devices"
+msgid "Could not repair this device: %1"
+msgstr "Carregue para retirar todos os dispositivos em segurança"

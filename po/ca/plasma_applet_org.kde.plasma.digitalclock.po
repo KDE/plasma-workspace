@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 00:43+0000\n"
-"PO-Revision-Date: 2025-01-24 08:03+0100\n"
+"PO-Revision-Date: 2025-02-22 08:39+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -154,11 +154,10 @@ msgid "Offset from UTC time"
 msgstr "Diferència amb l'hora UTC"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Canvia la zona horària global del sistema…"
+msgstr "Canvia la zona horària…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -467,22 +466,3 @@ msgstr "Local"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Zona horària local del sistema"
-
-#~ msgid "Adjust Date and Time…"
-#~ msgstr "Ajusta la data i l'hora…"
-
-#~ msgid "Set Time Format…"
-#~ msgstr "Estableix el format de l'hora…"
-
-#~ msgid ""
-#~ "At least one time zone needs to be enabled. Your local time zone was "
-#~ "enabled automatically."
-#~ msgstr ""
-#~ "Cal activar una zona horària com a mínim. Automàticament s'ha activat la "
-#~ "vostra zona horària local."
-
-#~ msgid "%1, %2 (%3)"
-#~ msgstr "%1, %2 (%3)"
-
-#~ msgid "%1, %2"
-#~ msgstr "%1, %2"

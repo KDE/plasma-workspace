@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 00:43+0000\n"
-"PO-Revision-Date: 2025-02-12 22:59+0100\n"
+"PO-Revision-Date: 2025-02-22 21:54+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -153,11 +153,10 @@ msgid "Offset from UTC time"
 msgstr "Deŝovo de UTC-tempo"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Ŝanĝi Tutsisteman Horzonon…"
+msgstr "Ŝanĝi Horzonon…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -463,9 +462,3 @@ msgstr "Loka"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Loka horzono de la sistemo"
-
-#~ msgid "Adjust Date and Time…"
-#~ msgstr "Alĝustigi Daton kaj Tempon…"
-
-#~ msgid "Set Time Format…"
-#~ msgstr "Agordi Tempoformaton…"

@@ -96,7 +96,7 @@ msgstr "switch user;new session;切换用户;新建会话;qiehuanyonghu;xinjianh
 #: sessionrunner.cpp:55
 #, kde-format
 msgid "Switch to a session as a different user"
-msgstr ""
+msgstr "切换到其他用户的会话"
 
 #: sessionrunner.cpp:77
 #, kde-format

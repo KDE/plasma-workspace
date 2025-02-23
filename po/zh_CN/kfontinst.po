@@ -1741,7 +1741,7 @@ msgstr "哈努诺文"
 
 #: viewpart/UnicodeBlocks.h:58 viewpart/UnicodeScripts.h:22
 msgid "Buhid"
-msgstr "布希德文"
+msgstr "布希德字母"
 
 #: viewpart/UnicodeBlocks.h:59 viewpart/UnicodeScripts.h:71
 msgid "Tagbanwa"
@@ -1949,7 +1949,7 @@ msgstr "片假名"
 
 #: viewpart/UnicodeBlocks.h:110 viewpart/UnicodeScripts.h:19
 msgid "Bopomofo"
-msgstr "汉语拼音"
+msgstr "注音符号"
 
 #: viewpart/UnicodeBlocks.h:111
 msgid "Hangul Compatibility Jamo"
@@ -1961,7 +1961,7 @@ msgstr "汉文注释标志"
 
 #: viewpart/UnicodeBlocks.h:113
 msgid "Bopomofo Extended"
-msgstr "汉语拼音扩展"
+msgstr "注音符号扩展"
 
 #: viewpart/UnicodeBlocks.h:114
 msgid "CJK Strokes"
@@ -2001,7 +2001,7 @@ msgstr "彝文字根"
 
 #: viewpart/UnicodeBlocks.h:123
 msgid "Modifier Tone Letters"
-msgstr "修饰用声调符号"
+msgstr "声调修饰符号"
 
 #: viewpart/UnicodeBlocks.h:124
 msgid "Latin Extended-D"
@@ -2013,7 +2013,7 @@ msgstr "锡尔赫特文"
 
 #: viewpart/UnicodeBlocks.h:126
 msgid "Phags-pa"
-msgstr "八思巴字"
+msgstr "八思巴文"
 
 #: viewpart/UnicodeBlocks.h:127
 msgid "Hangul Syllables"
