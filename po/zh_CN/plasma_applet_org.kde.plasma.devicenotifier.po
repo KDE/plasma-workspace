@@ -19,28 +19,20 @@ msgstr ""
 "X-Crowdin-File-ID: 43745\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "正在移除…"
+msgstr ""
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "正在移除…"
+msgstr ""
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -157,10 +149,9 @@ msgid "Safely remove"
 msgstr "安全移除"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "现在可以安全移除此设备。"
+msgstr ""
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
@@ -199,11 +190,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "您没有弹出此光盘的权限。"
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "您没有移除此设备的权限。"
+msgstr ""
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -245,8 +234,6 @@ msgid "Could not eject this disc."
 msgstr "无法弹出此光盘。"
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "无法移除此设备。"
+msgstr ""

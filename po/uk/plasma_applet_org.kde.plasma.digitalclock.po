@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 00:43+0000\n"
-"PO-Revision-Date: 2025-01-24 22:24+0200\n"
+"PO-Revision-Date: 2025-02-22 11:18+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -153,11 +153,10 @@ msgid "Offset from UTC time"
 msgstr "Різниця із всесвітнім часом"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Перемкнути загальносистемний часовий пояс…"
+msgstr "Перемкнути часовий пояс…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format

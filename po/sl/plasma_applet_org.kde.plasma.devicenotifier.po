@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-07-17 04:51+0200\n"
+"PO-Revision-Date: 2025-02-23 08:20+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,31 +21,23 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Odstranjevanje…"
+msgstr "Preverjanje…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Odstranjevanje…"
+msgstr "Popravljanje…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -144,7 +136,7 @@ msgstr "Odpri v upravljalniku datotek"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Poskusi popraviti"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -162,15 +154,14 @@ msgid "Safely remove"
 msgstr "Varno odklopi"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "To napravo je zdaj mogoče varno odstraniti."
+msgstr "Ta naprava ima napake datotečnega sistema."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Uspešno popravljeno!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -204,11 +195,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Niste pooblaščeni za izvrženje tega diska."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Niste pooblaščeni za odstranitev te naprave."
+msgstr "Niste pooblaščeni za popravilo te naprave."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -257,11 +246,9 @@ msgid "Could not eject this disc."
 msgstr "Tega diska ni bilo mogoče izvreči."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Te naprave ni bilo mogoče odstraniti."
+msgstr "Te naprave ni bilo mogoče popraviti: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Datotečni sistem se ne odziva"

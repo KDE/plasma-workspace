@@ -3,15 +3,15 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024.
+# Yuri Chornoivan <yurchor@ukr.net>, 2013, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-07-17 09:45+0300\n"
+"PO-Revision-Date: 2025-02-23 08:40+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -21,28 +21,20 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Видаляємо…"
+msgstr "Перевіряємо…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Видаляємо…"
+msgstr "Відновлення…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -141,7 +133,7 @@ msgstr "Відкрити у програмі для керування файл�
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Спробувати виправити"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -159,15 +151,14 @@ msgid "Safely remove"
 msgstr "Безпечно вилучити"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Цей пристрій тепер можна безпечно від’єднувати."
+msgstr "На цьому пристрої є помилки файлової системи."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Успішно відновлено!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -201,11 +192,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Ви не маєте прав доступу до виштовхування цього диска."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Ви не маєте прав доступу для вилучення цього пристрою."
+msgstr "Ви не маєте прав доступу для відновлення цього пристрою."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -256,11 +245,9 @@ msgid "Could not eject this disc."
 msgstr "Не вдалося виштовхнути цей диск."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Не вдалося вилучити цей пристрій."
+msgstr "Не вдалося відновити цей пристрій: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Файлова система не відповідає"

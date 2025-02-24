@@ -462,9 +462,3 @@ msgstr "Lokal"
 #, kde-format
 msgid "System's local time zone"
 msgstr "Systemets lokale tidssone"
-
-#~ msgid "Adjust Date and Time…"
-#~ msgstr "Still inn dato og klokkeslett …"
-
-#~ msgid "Set Time Format…"
-#~ msgstr "Vel klokkeslettformat …"

@@ -3,45 +3,37 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Rinse de Vries <rinsedevries@kde.nl>, 2007, 2008.
-# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
+# SPDX-FileCopyrightText: 2009, 2010, 2011, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-07-17 10:53+0200\n"
+"PO-Revision-Date: 2025-02-23 12:05+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Verwijderen…"
+msgstr "Bezig met controleren…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Verwijderen…"
+msgstr "Bezig met repareren…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -140,7 +132,7 @@ msgstr "In bestandsbeheerder openen"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Proberen te repareren"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -158,15 +150,14 @@ msgid "Safely remove"
 msgstr "Veilig verwijderen"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Dit apparaat kan nu veilig worden verwijderd."
+msgstr "Dit apparaat heeft fouten in het bestandssysteem."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Met succes gerepareerd!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -200,11 +191,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "U bent niet geautoriseerd om deze schijf uit te werpen."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "U bent niet geautoriseerd om dit apparaat te verwijderen."
+msgstr "U bent niet geautoriseerd om dit apparaat te repareren."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -249,11 +238,9 @@ msgid "Could not eject this disc."
 msgstr "Kon deze schijf miet uitwerpen."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Kon dit apparaat niet verwijderen."
+msgstr "Kon dit apparaat niet repareren: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Bestandssysteem geeft geen respons"

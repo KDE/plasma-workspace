@@ -1,51 +1,42 @@
-# translation of plasma_applet_devicenotifier.po to Spanish
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Translation of plasma_applet_devicenotifier.po to Spanish
+# Copyright (C) 2007-2025 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Jaime Robles <jaime@robles.nu>, 2007.
-# Jaime Robles <jaime@kde.org>, 2008.
-# SPDX-FileCopyrightText: 2009, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2012.
+# SPDX-FileCopyrightText: 2007 Jaime Robles <jaime@robles.nu>
+# SPDX-FileCopyrightText: 2008 Jaime Robles <jaime@kde.org>
+# SPDX-FileCopyrightText: 2009, 2012, 2014, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2012 Javier Vinal <fjvinal@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-07-18 01:28+0200\n"
+"PO-Revision-Date: 2025-02-23 02:37+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"com>\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Extrayendo..."
+msgstr "Comprobando…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Extrayendo..."
+msgstr "Reparando…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -59,7 +50,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr "Accediendo..."
+msgstr "Accediendo…"
 
 #: package/contents/ui/DeviceItem.qml:109
 #, kde-format
@@ -67,12 +58,12 @@ msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr "Extrayendo..."
+msgstr "Extrayendo…"
 
 #: package/contents/ui/DeviceItem.qml:112
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred…"
-msgstr "No lo desconecte. Todavía se están transfiriendo archivos..."
+msgstr "No lo desconecte. Todavía se están transfiriendo archivos…"
 
 #: package/contents/ui/FullRepresentation.qml:45
 #: package/contents/ui/main.qml:125
@@ -109,7 +100,7 @@ msgstr "No hay ningún dispositivo disponible"
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr "Configurar dispositivos extraíbles..."
+msgstr "Configurar dispositivos extraíbles…"
 
 #: package/contents/ui/main.qml:133
 #, kde-format
@@ -144,7 +135,7 @@ msgstr "Abrir en el gestor de archivos"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Intentar reparar"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -162,15 +153,14 @@ msgid "Safely remove"
 msgstr "Extraer con seguridad"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Este dispositivo se puede extraer con seguridad."
+msgstr "Este dispositivo tiene errores en el sistema de archivos."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Reparado correctamente."
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -190,25 +180,23 @@ msgstr "Este dispositivo se puede extraer con seguridad."
 #: plugin/deviceerrormonitor_p.cpp:216
 #, kde-format
 msgid "You are not authorized to mount this device."
-msgstr "No está autorizado para montar este dispositivo."
+msgstr "No tiene autorización para montar este dispositivo."
 
 #: plugin/deviceerrormonitor_p.cpp:219
 #, kde-format
 msgctxt "Remove is less technical for unmount"
 msgid "You are not authorized to remove this device."
-msgstr "No está autorizado para extraer este dispositivo."
+msgstr "No tiene autorización para extraer este dispositivo."
 
 #: plugin/deviceerrormonitor_p.cpp:222
 #, kde-format
 msgid "You are not authorized to eject this disc."
-msgstr "No está autorizado para expulsar este disco."
+msgstr "No tiene autorización para expulsar este disco."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "No está autorizado para extraer este dispositivo."
+msgstr "No tiene autorización para reparar este dispositivo."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -255,11 +243,9 @@ msgid "Could not eject this disc."
 msgstr "No se ha podido expulsar este disco."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "No se ha podido extraer este dispositivo."
+msgstr "No se ha podido reparar este dispositivo: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "El sistema de archivos no responde"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-07-20 17:03+0200\n"
+"PO-Revision-Date: 2025-02-23 13:36+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -21,28 +21,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Foriganta…"
+msgstr "Kontrolanta…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Foriganta…"
+msgstr "Riparanta…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -141,7 +133,7 @@ msgstr "Malfermi en Dosiermastrumilo"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Provi Ripari"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -159,15 +151,14 @@ msgid "Safely remove"
 msgstr "Sekure demeti"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "La aparato povas nun esti sekure forigita."
+msgstr "Ĉi aparato havas doriersistemajn erarojn."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Sukcese riparita!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -201,11 +192,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Vi ne estas rajtigita elĵeti ĉi tiun diskon."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Vi ne estas rajtigita demeti ĉi tiun aparaton."
+msgstr "Vi ne estas rajtigita ripari ĉi tiun aparaton."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -253,14 +242,6 @@ msgid "Could not eject this disc."
 msgstr "Ne eblis elĵeti ĉi tiun diskon."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Ne eblis forigi tiun ĉi aparaton."
-
-#~ msgid "Filesystem is not responding"
-#~ msgstr "Dosiersistemo ne estas respondanta"
-
-#~ msgid "Filesystem mounted at '%1' is not responding"
-#~ msgstr "Dosiersistemo surmetita ĉe '%1' ne estas respondanta"
+msgstr "Ne eblis ripari ĉi aparaton: %1"

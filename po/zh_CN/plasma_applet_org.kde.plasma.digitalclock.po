@@ -154,7 +154,7 @@ msgstr "UTC 时间偏移"
 #, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr ""
+msgstr "切换时区…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format

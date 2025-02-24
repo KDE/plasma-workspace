@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Safa Alfulaij <safa1996alfulaij@gmail.com>, 2014, 2017.
-# SPDX-FileCopyrightText: 2021, 2022, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-07-28 12:21+0400\n"
+"PO-Revision-Date: 2025-02-23 19:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -21,29 +21,21 @@ msgstr ""
 
 # هنا للتناسق مع يجري الوصول فقط
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "يفصل..."
+msgstr "يفحص…"
 
 # هنا للتناسق مع يجري الوصول فقط
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "يفصل..."
+msgstr "يصلح…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -144,7 +136,7 @@ msgstr "افتح في مدير الملفّات"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "حاول الإصلاح"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -162,15 +154,14 @@ msgid "Safely remove"
 msgstr "أزِل بأمان"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "يمكن إزالة هذا الجهاز الآن بأمان."
+msgstr "يحتوي هذا الجهاز على أخطاء في نظام الملفات."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "نحج في إصلاحه!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -204,11 +195,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "لست مستوثقًا لإخراج هذا القرص."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "لست مستوثقًا لإزالة هذا الجهاز."
+msgstr "ليس لديك الإذن في إصلاح هذا الجهاز."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -255,11 +244,9 @@ msgid "Could not eject this disc."
 msgstr "تعذّر إخراج هذا القرص."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "تعذّرت إزالة هذا الجهاز."
+msgstr "لم يتمكن من إصلاح هذا الجهاز: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "نظام الملفات لا يستجيب"

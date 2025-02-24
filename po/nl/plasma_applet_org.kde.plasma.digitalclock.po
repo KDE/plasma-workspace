@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 00:43+0000\n"
-"PO-Revision-Date: 2025-01-24 11:31+0100\n"
+"PO-Revision-Date: 2025-02-23 12:05+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -150,11 +150,10 @@ msgid "Offset from UTC time"
 msgstr "Offset vanaf UTC-tijd"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Systeembrede tijdzone omschakelen…"
+msgstr "Tijdzone omschakelen…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
