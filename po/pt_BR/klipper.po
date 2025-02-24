@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 02:31+0000\n"
+"POT-Creation-Date: 2025-02-24 02:32+0000\n"
 "PO-Revision-Date: 2025-02-13 21:41-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -956,12 +956,12 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Menu de contexto da área de transferência"
 
-#: urlgrabber.cpp:200
+#: urlgrabber.cpp:201
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Desabilitar este menu de contexto"
 
-#: urlgrabber.cpp:206
+#: urlgrabber.cpp:207
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancelar"

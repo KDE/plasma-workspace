@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 02:31+0000\n"
+"POT-Creation-Date: 2025-02-24 02:32+0000\n"
 "PO-Revision-Date: 2024-10-27 14:40+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -937,12 +937,12 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Utklippstavle-sprettopp"
 
-#: urlgrabber.cpp:200
+#: urlgrabber.cpp:201
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Slå av dette sprettoppvindauget"
 
-#: urlgrabber.cpp:206
+#: urlgrabber.cpp:207
 #, kde-format
 msgid "&Cancel"
 msgstr "&Avbryt"

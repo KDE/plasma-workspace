@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 02:31+0000\n"
+"POT-Creation-Date: 2025-02-24 02:32+0000\n"
 "PO-Revision-Date: 2009-12-16 21:43+0530\n"
 "Last-Translator: Danishka Navin <danishka@gmail.com>\n"
 "Language-Team: Sinhala <danishka@gmail.com>\n"
@@ -922,12 +922,12 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "ක්ලිප් පුවරු ඉතිහාස ප්‍රමාණය"
 
-#: urlgrabber.cpp:200
+#: urlgrabber.cpp:201
 #, kde-format
 msgid "Disable This Popup"
 msgstr "මෙම පොප්අප් අක්‍රීය කරන්න"
 
-#: urlgrabber.cpp:206
+#: urlgrabber.cpp:207
 #, kde-format
 msgid "&Cancel"
 msgstr "අවලංගු කරන්න (&C)"

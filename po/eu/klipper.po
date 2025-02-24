@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 02:31+0000\n"
+"POT-Creation-Date: 2025-02-24 02:32+0000\n"
 "PO-Revision-Date: 2024-12-09 18:36+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -942,12 +942,12 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "Arbelaren leiho gainerakorra"
 
-#: urlgrabber.cpp:200
+#: urlgrabber.cpp:201
 #, kde-format
 msgid "Disable This Popup"
 msgstr "Desgaitu leiho gainerakor hau"
 
-#: urlgrabber.cpp:206
+#: urlgrabber.cpp:207
 #, kde-format
 msgid "&Cancel"
 msgstr "&Utzi"

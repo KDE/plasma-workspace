@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper-gu\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 02:31+0000\n"
+"POT-Creation-Date: 2025-02-24 02:32+0000\n"
 "PO-Revision-Date: 2009-04-07 22:47+0530\n"
 "Last-Translator: Kartik Mistry <kartik.mistry@gmail.com>\n"
 "Language-Team: Gujarati <kde-i18n-doc@kde.org>\n"
@@ -923,12 +923,12 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "ક્લિપબોર્ડ ઇતિહાસ માપ"
 
-#: urlgrabber.cpp:200
+#: urlgrabber.cpp:201
 #, kde-format
 msgid "Disable This Popup"
 msgstr "આ પોપઅપ નિષ્ક્રિય કરો"
 
-#: urlgrabber.cpp:206
+#: urlgrabber.cpp:207
 #, kde-format
 msgid "&Cancel"
 msgstr "રદ કરો (&C)"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 02:31+0000\n"
+"POT-Creation-Date: 2025-02-24 02:32+0000\n"
 "PO-Revision-Date: 2002-10-26 12:49SAST\n"
 "Last-Translator: Lwandle Mgidlana <lwandle@translate.org.za>\n"
 "Language-Team: Xhosa <xhosa@translate.org.za>\n"
@@ -925,12 +925,12 @@ msgstr ""
 msgid "Clipboard Popup"
 msgstr "U&bungakanani bembali yebebhodi eqhotyoshwayo:"
 
-#: urlgrabber.cpp:200
+#: urlgrabber.cpp:201
 #, fuzzy, kde-format
 msgid "Disable This Popup"
 msgstr "Kubhaza lengxolo eqhekezayo"
 
-#: urlgrabber.cpp:206
+#: urlgrabber.cpp:207
 #, kde-format
 msgid "&Cancel"
 msgstr ""

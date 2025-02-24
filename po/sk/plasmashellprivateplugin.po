@@ -2,19 +2,20 @@
 # Roman Paholik <wizzardsk@gmail.com>, 2014, 2015, 2016.
 # Mthw <jari_45@hotmail.com>, 2018.
 # SPDX-FileCopyrightText: 2020, 2021, 2023 Matej Mrenica <matejm98mthw@gmail.com>
+# SPDX-FileCopyrightText: 2025 Lucia Mrenica <lucia.mrenica@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-04 00:42+0000\n"
-"PO-Revision-Date: 2023-11-11 14:56+0100\n"
-"Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
+"PO-Revision-Date: 2025-02-23 12:05+0100\n"
+"Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #, kde-format
@@ -31,12 +32,12 @@ msgstr "matejm98mthw@gmail.com"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Batéria %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Batéria"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -188,6 +189,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Tento widget bol napísaný pre neznámu staršiu verziu Plasmy a nie je "
+"kompatibilný s Plasmou %1. Pre aktualizovanú verziu prosím kontaktujte "
+"autora widgetu."
 
 #: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
@@ -195,6 +199,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s Plasmou %2. "
+"Ak chcete získať aktualizovanú verziu widgetu, obráťte sa na jeho autora."
 
 #: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
@@ -202,6 +208,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s Plasmou %2. "
+"Ak chcete widget používať, aktualizujte Plasmu."
 
 #: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
@@ -209,6 +217,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Tento widget bol napísaný pre Plasmu %1 a nie je kompatibilný s najnovšou "
+"verziou Plasmy. Ak chcete widget používať, aktualizujte Plasmu."
 
 #: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
@@ -331,18 +341,13 @@ msgid "Running"
 msgstr "Beží"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Odinštalovateľné"
+msgstr "Nainštalované používateľom"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
@@ -350,7 +355,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Nedávno nainštalované"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -368,11 +373,10 @@ msgid "Install Widget From Local File…"
 msgstr "Inštalovať widget z lokálneho súboru..."
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Všetky widgety"
+msgstr "Získať nové miniaplikácie"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -380,11 +384,10 @@ msgid "Select Plasmoid File"
 msgstr "Vybrať súbor plazmoidu"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Inštalácia balíčka %1 zlyhala."
+msgstr "Inštalácia balíčka %1 zlyhala: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format

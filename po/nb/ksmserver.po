@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-09 00:42+0000\n"
-"PO-Revision-Date: 2014-08-11 19:30+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-22 07:41+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -24,23 +24,23 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Bjørn Steensrud,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
 #: logout.cpp:273
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "Utlogging avbrutt av «%1»"
+msgstr "Utlogging avbrutt av «%1»."
 
 #: logout.cpp:371
 #, kde-format
 msgctxt "@info:status"
 msgid "Session is exiting"
-msgstr ""
+msgstr "Økta avsluttes"
 
 #: main.cpp:72 main.cpp:80
 #, kde-format
@@ -58,6 +58,8 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
+"Følgende installasjonsproblem ble funnet ved\n"
+"forsøk på start av Plasma:"
 
 #: main.cpp:90
 #, kde-format
@@ -66,6 +68,9 @@ msgid ""
 "\n"
 "Plasma is unable to start.\n"
 msgstr ""
+"\n"
+"\n"
+"Kan ikke starte Plasma .\n"
 
 #: main.cpp:129
 #, kde-format
@@ -73,16 +78,18 @@ msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
+"Den pålitelige øktbehandleren til Plasma som snakker med standarden\n"
+"øktbehandlingsprotokollen til X11R6 (XSMP)."
 
 #: main.cpp:133
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr "Gjenopprett forrige økt hvis tilgjengelig"
+msgstr "Gjenoppretter tilstanden fra den forrige økta, hvis tilgjengelig"
 
 #: main.cpp:136
 #, kde-format
 msgid "Also allow remote connections"
-msgstr "Godta også fjernforbindelser"
+msgstr "Tillat også nettverkstilkoblinger"
 
 #: main.cpp:139
 #, kde-format
@@ -95,12 +102,14 @@ msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
+"Starter uten støtte for skjermlåsing. Bare nødvendig hvis andre komponenter "
+"står for skjermlåsinga."
 
 #: server.cpp:778
 #, kde-format
 msgctxt "@label an unknown executable is using resources"
 msgid "[unknown]"
-msgstr ""
+msgstr "[ukjent]"
 
 #: server.cpp:801
 #, kde-kuit-format
@@ -110,6 +119,9 @@ msgid ""
 "are exhausted. Here are the top three consumers of session resources:\n"
 "%1"
 msgstr ""
+"Kan ikke behandle noen programmer, fordi ressursene for øktbehandling på "
+"dette systemet er oppbrukte. Her er det som bruker mest øktressurser:\n"
+"%1"
 
 #: server.cpp:1073
 #, kde-kuit-format
@@ -119,3 +131,6 @@ msgid ""
 "exhausted the system's session restoration resources. Please report this to "
 "the app's developers."
 msgstr ""
+"Kan ikke gjenopprette <application>%1</application>, fordi programmet er "
+"ødelagt og har brukt opp ressursene for øktbehandling på dette systemet. "
+"Meld fra om feilen til utviklerne av programmet."
