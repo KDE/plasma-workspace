@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 02:34+0000\n"
+"POT-Creation-Date: 2025-02-24 11:24+0000\n"
 "PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -151,9 +151,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Ĉu Kaŝi Antaŭrigardan Rubandon?"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:535
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "Eniri Redaktan Reĝimon"
+
+#: desktopview.cpp:533
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "Eniri Redaktan Reĝimon"
 
 #: main.cpp:86
@@ -410,12 +416,12 @@ msgstr ""
 msgid "Move keyboard focus between panels"
 msgstr "Movi klavaran fokuson inter paneloj"
 
-#: shellcorona.cpp:2172
+#: shellcorona.cpp:2175
 #, kde-format
 msgid "Add Panel"
 msgstr "Aldoni Panelon"
 
-#: shellcorona.cpp:2233
+#: shellcorona.cpp:2236
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

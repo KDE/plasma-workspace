@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 02:34+0000\n"
+"POT-Creation-Date: 2025-02-24 11:24+0000\n"
 "PO-Revision-Date: 2025-01-26 17:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -148,9 +148,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "முன்னோட்டப் பட்டையை மறைக்கலாமா?"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:535
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "திருத்தும் பயன்முறையில் நுழை"
+
+#: desktopview.cpp:533
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "திருத்தும் பயன்முறையில் நுழை"
 
 #: main.cpp:86
@@ -407,12 +413,12 @@ msgstr "பணிமேடைகளையும் பலகைகளையு�
 msgid "Move keyboard focus between panels"
 msgstr "விசைப்பலகை குவியத்தை வேறு பலகைக்கு மாற்று"
 
-#: shellcorona.cpp:2172
+#: shellcorona.cpp:2175
 #, kde-format
 msgid "Add Panel"
 msgstr "பலகையைச் சேர்"
 
-#: shellcorona.cpp:2233
+#: shellcorona.cpp:2236
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

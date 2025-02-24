@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 02:34+0000\n"
+"POT-Creation-Date: 2025-02-24 11:24+0000\n"
 "PO-Revision-Date: 2025-01-07 07:00+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
@@ -152,9 +152,15 @@ msgctxt "@title:window"
 msgid "Hide Preview Banner?"
 msgstr "Naj skrijem predogled pasice?"
 
-#: desktopview.cpp:518
+#: desktopview.cpp:518 desktopview.cpp:535
 #, kde-format
 msgid "Enter Edit Mode"
+msgstr "Vstopi v način urejanja"
+
+#: desktopview.cpp:533
+#, fuzzy, kde-format
+#| msgid "Enter Edit Mode"
+msgid "Exit Edit Mode"
 msgstr "Vstopi v način urejanja"
 
 #: main.cpp:86
@@ -411,12 +417,12 @@ msgstr "Upravljanje namizij in pultov…"
 msgid "Move keyboard focus between panels"
 msgstr "Prenašaj osredotočenost tipkovnice med pulti"
 
-#: shellcorona.cpp:2172
+#: shellcorona.cpp:2175
 #, kde-format
 msgid "Add Panel"
 msgstr "Dodaj pult"
 
-#: shellcorona.cpp:2233
+#: shellcorona.cpp:2236
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
