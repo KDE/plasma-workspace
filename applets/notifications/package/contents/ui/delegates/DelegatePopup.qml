@@ -135,6 +135,7 @@ BaseDelegate {
                 id: bodyLabel
                 width: scroll.contentItem.width
                 modelInterface: delegateRoot.modelInterface
+                Accessible.ignored: true // ignore HTML body in favor of Accessible.description on delegateRoot
             }
         }
     }
