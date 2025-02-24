@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-11 02:38+0000\n"
-"PO-Revision-Date: 2018-06-24 21:56+0100\n"
-"Last-Translator: Øystein Steffensen-Alværvik <ystein@posteo.net>\n"
+"PO-Revision-Date: 2025-02-22 07:41+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 2.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -33,7 +33,7 @@ msgstr "Egenskaper"
 #: plugin/actionlist.cpp:146
 #, kde-format
 msgid "Add to Desktop"
-msgstr "Legg til på skrivebord"
+msgstr "Legg til skrivebord"
 
 #: plugin/actionlist.cpp:151
 #, kde-format
@@ -43,28 +43,28 @@ msgstr "Legg til panel (skjermelement)"
 #: plugin/actionlist.cpp:156
 #, kde-format
 msgid "Pin to Task Manager"
-msgstr "Fest til oppgavelinje"
+msgstr "Fest til oppgavelinja"
 
 #: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:429
 #, kde-format
 msgid "Recent Files"
-msgstr ""
+msgstr "Nylig brukte filer"
 
 #: plugin/actionlist.cpp:317
 #, kde-format
 msgid "Forget Recent Files"
-msgstr ""
+msgstr "Glem nylig brukte filer"
 
 #: plugin/actionlist.cpp:395
 #, kde-format
 msgid "Edit Application…"
-msgstr ""
+msgstr "Rediger program …"
 
 #: plugin/actionlist.cpp:429
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
-msgstr ""
+msgstr "Avinstaller / håndter programtillegg …"
 
 #: plugin/appentry.cpp:308
 #, kde-format
@@ -103,12 +103,12 @@ msgstr "Vis programmer i «%1»"
 #: plugin/computermodel.cpp:92
 #, kde-format
 msgid "Show KRunner"
-msgstr ""
+msgstr "Vis KRunner"
 
 #: plugin/computermodel.cpp:96
 #, kde-format
 msgid "Search, calculate, or run a command"
-msgstr ""
+msgstr "Søk, gjør utregninger og kjør kommandoer"
 
 #: plugin/computermodel.cpp:149
 #, kde-format
@@ -118,7 +118,7 @@ msgstr "Datamaskin"
 #: plugin/contactentry.cpp:106 plugin/recentcontactsmodel.cpp:82
 #, kde-format
 msgid "Show Contact Information…"
-msgstr ""
+msgstr "Vis kontaktinformasjon …"
 
 #. i18n.
 #: plugin/kastatsfavoritesmodel.cpp:548 plugin/rootmodel.cpp:416
@@ -150,7 +150,7 @@ msgstr "Nylig brukte"
 #: plugin/recentusagemodel.cpp:156 plugin/recentusagemodel.cpp:298
 #, kde-format
 msgid "Files"
-msgstr ""
+msgstr "filer"
 
 #: plugin/recentusagemodel.cpp:238
 #, kde-format
@@ -160,12 +160,12 @@ msgstr "Glem program"
 #: plugin/recentusagemodel.cpp:332
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Åpne overmappa"
 
 #: plugin/recentusagemodel.cpp:335
 #, kde-format
 msgid "Forget File"
-msgstr ""
+msgstr "Glem fila"
 
 #: plugin/recentusagemodel.cpp:472
 #, kde-format
@@ -180,7 +180,7 @@ msgstr "Glem alle programmene"
 #: plugin/recentusagemodel.cpp:477
 #, kde-format
 msgid "Forget All Files"
-msgstr ""
+msgstr "Glem alle filer"
 
 #: plugin/rootmodel.cpp:95
 #, kde-format
@@ -195,7 +195,7 @@ msgstr "Alle programmer"
 #: plugin/rootmodel.cpp:410
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
-msgstr ""
+msgstr "Denne meldinga skal aldri være synlig! Bruk KICKER_FAVORITES_MODEL"
 
 #: plugin/rootmodel.cpp:422
 #, kde-format
@@ -205,7 +205,7 @@ msgstr "Nylig brukte kontakter"
 #: plugin/rootmodel.cpp:429
 #, kde-format
 msgid "Often Used Files"
-msgstr ""
+msgstr "Ofte brukte filer"
 
 #: plugin/rootmodel.cpp:438
 #, kde-format
@@ -235,7 +235,7 @@ msgstr "Lås"
 #: plugin/systementry.cpp:198
 #, kde-format
 msgid "Log Out"
-msgstr ""
+msgstr "Logg ut"
 
 #: plugin/systementry.cpp:201 plugin/systementry.cpp:269
 #, kde-format
@@ -251,7 +251,7 @@ msgstr "Bytt bruker"
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
-msgstr ""
+msgstr "Hvilemodus"
 
 #: plugin/systementry.cpp:210
 #, kde-format
@@ -261,12 +261,12 @@ msgstr "Dvalemodus"
 #: plugin/systementry.cpp:213
 #, kde-format
 msgid "Restart"
-msgstr ""
+msgstr "Start på nytt"
 
 #: plugin/systementry.cpp:216
 #, kde-format
 msgid "Shut Down"
-msgstr "Slå av maskinen"
+msgstr "Slå av"
 
 #: plugin/systementry.cpp:229 plugin/systementry.cpp:232
 #: plugin/systementry.cpp:235 plugin/systementry.cpp:238
@@ -288,7 +288,7 @@ msgstr "Lås skjermen"
 #: plugin/systementry.cpp:266
 #, kde-format
 msgid "End session"
-msgstr "Avslutt økt"
+msgstr "Avslutt økta"
 
 #: plugin/systementry.cpp:272
 #, kde-format
@@ -308,12 +308,12 @@ msgstr "Dvalemodus til disk"
 #: plugin/systementry.cpp:281
 #, kde-format
 msgid "Restart computer"
-msgstr "Start maskinen på nytt"
+msgstr "Start datamaskinen på nytt"
 
 #: plugin/systementry.cpp:284
 #, kde-format
 msgid "Turn off computer"
-msgstr "Slå av maskinen"
+msgstr "Slå av datamaskinen"
 
 #: plugin/systemmodel.cpp:31
 #, kde-format

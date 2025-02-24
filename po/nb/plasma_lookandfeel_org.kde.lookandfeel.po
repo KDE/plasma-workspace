@@ -236,12 +236,18 @@ msgid_plural ""
 "%1 other users are currently logged in. If the computer is shut down or "
 "restarted, those users may lose work."
 msgstr[0] ""
+"En annen bruker er logget inn. Hvis du slår av datamaskinen eller starter "
+"den på nytt, vil brukeren miste eventuelt ulagret arbeid."
 msgstr[1] ""
+"%1 andre brukere er logget inn. Hvis du slår av datamaskinen eller starter "
+"den på nytt, vil brukeren miste eventuelt ulagret arbeid."
 
 #: contents/logout/Logout.qml:153
 #, kde-format
 msgid "When restarted, the computer will enter the firmware setup screen."
 msgstr ""
+"Når datamaskinen startes på nytt, vil den starte systeminnstillingene for "
+"oppsett av fastvare."
 
 #: contents/logout/Logout.qml:201
 #, kde-format
@@ -252,8 +258,8 @@ msgstr ""
 #, kde-format
 msgid "Restarting in 1 second"
 msgid_plural "Restarting in %1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Starter på nytt om 1 sekund"
+msgstr[1] "Starter på nytt om %1 sekunder"
 
 #: contents/logout/Logout.qml:226
 #, kde-format
@@ -284,7 +290,7 @@ msgstr "Avbryt"
 #, kde-format
 msgctxt "Percentage value"
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/splash/Splash.qml:79
 #, kde-format

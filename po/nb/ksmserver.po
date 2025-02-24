@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: ksmserver\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-21 03:16+0000\n"
-"PO-Revision-Date: 2014-08-11 19:30+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-22 07:41+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -24,7 +24,7 @@ msgstr ""
 #: logout.cpp:340
 #, kde-format
 msgid "Logout canceled by '%1'"
-msgstr "Utlogging avbrutt av «%1»"
+msgstr "Utlogging avbrutt av «%1»."
 
 #: main.cpp:118
 #, kde-format
@@ -44,17 +44,17 @@ msgstr "Ingen skrivetilgang til $HOME-mappa (%1),"
 #: main.cpp:130
 #, kde-format
 msgid "No read access to $HOME directory (%1)."
-msgstr "Ingen lesetilgang til $HOME-mappa (%1),"
+msgstr "Ingen lesetilgang til $HOME-mappa (%1)."
 
 #: main.cpp:134
 #, kde-format
 msgid "$HOME directory (%1) is out of disk space."
-msgstr "$HOME-mappa (%1) har ikke mer diskplass."
+msgstr "$HOME-mappa (%1) har ikke mer ledig diskplass."
 
 #: main.cpp:137
 #, kde-format
 msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-msgstr "Skriving til $HOME-mappa (%2) mislyktes med feilen «%1»."
+msgstr "Klarte ikke skrive til $HOME-mappa (%2): «%1»"
 
 #: main.cpp:150 main.cpp:185
 #, kde-format
@@ -69,7 +69,7 @@ msgstr "Ingen lesetilgang til «%1»."
 #: main.cpp:160 main.cpp:173
 #, kde-format
 msgid "Temp directory (%1) is out of disk space."
-msgstr "Den midlertidige mappa (%1) har ikke mer diskplass."
+msgstr "Den midlertidige mappa (%1) har ikke mer ledig diskplass."
 
 #: main.cpp:163 main.cpp:176
 #, kde-format
@@ -77,8 +77,8 @@ msgid ""
 "Writing to the temp directory (%2) failed with\n"
 "    the error '%1'"
 msgstr ""
-"Skriving til  den midlertidige mappa (%2) mislyktes med\n"
-"    feilen «%1»."
+"Klarte ikke skrive til mappa for midlertidige filer (%2)\n"
+"    Feilmelding: «%1»"
 
 #: main.cpp:191
 #, kde-format
@@ -86,6 +86,8 @@ msgid ""
 "The following installation problem was detected\n"
 "while trying to start Plasma:"
 msgstr ""
+"Følgende installasjonsproblem ble funnet ved\n"
+"forsøk på start av Plasma:"
 
 #: main.cpp:194
 #, kde-format
@@ -94,11 +96,14 @@ msgid ""
 "\n"
 "Plasma is unable to start.\n"
 msgstr ""
+"\n"
+"\n"
+"Kan ikke starte Plasma .\n"
 
 #: main.cpp:201
 #, kde-format
 msgid "Plasma Workspace installation problem!"
-msgstr "Installasjonsproblem med Plasma Workspace."
+msgstr "Feil ved installasjon av Plasma-arbeidsområde"
 
 #: main.cpp:237
 #, kde-format
@@ -106,16 +111,18 @@ msgid ""
 "The reliable Plasma session manager that talks the standard X11R6 \n"
 "session management protocol (XSMP)."
 msgstr ""
+"Den pålitelige øktbehandleren til Plasma som snakker med standarden\n"
+"øktbehandlingsprotokollen til X11R6 (XSMP)."
 
 #: main.cpp:241
 #, kde-format
 msgid "Restores the saved user session if available"
-msgstr "Gjenopprett forrige økt hvis tilgjengelig"
+msgstr "Gjenoppretter tilstanden fra den forrige økta, hvis tilgjengelig"
 
 #: main.cpp:244
 #, kde-format
 msgid "Also allow remote connections"
-msgstr "Godta også fjernforbindelser"
+msgstr "Tillat også nettverkstilkoblinger"
 
 #: main.cpp:247
 #, kde-format
@@ -128,11 +135,13 @@ msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
+"Starter uten støtte for skjermlåsing. Bare nødvendig hvis andre komponenter "
+"står for skjermlåsinga."
 
 #: server.cpp:857
 #, kde-format
 msgid "Session Management"
-msgstr ""
+msgstr "Øktbehandling"
 
 #: server.cpp:860
 #, kde-format
@@ -152,4 +161,4 @@ msgstr "Stopp datamaskinen uten bekreftelse"
 #: server.cpp:875
 #, kde-format
 msgid "Reboot Without Confirmation"
-msgstr "Start datamaskinen om igjen uten bekreftelse"
+msgstr "Start datamaskinen på nytt uten bekreftelse"

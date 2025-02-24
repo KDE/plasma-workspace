@@ -1,12 +1,13 @@
-# Translation of plasma_runner_appstream to Norwegian Bokmål
+# Translation of kholidays_calendar_plugin to Norwegian Bokmål
 #
-# Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2018.
+# SPDX-FileCopyrightText: 2025 Martin Hansen <mh306602@gmail.com>
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: \n"
+"Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-02-11 00:46+0000\n"
-"PO-Revision-Date: 2025-02-22 07:16+0100\n"
+"POT-Creation-Date: 2022-03-08 00:45+0000\n"
+"PO-Revision-Date: 2025-02-13 22:22+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
@@ -19,12 +20,17 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: appstreamrunner.cpp:34
+#: HolidaysConfig.qml:90
 #, kde-format
-msgid "Looks for non-installed components according to :q:"
-msgstr "Ser etter ikke-installerte komponenter ifølge :q:"
+msgid "Region"
+msgstr "Region"
 
-#: appstreamrunner.cpp:133
+#: HolidaysConfig.qml:94
 #, kde-format
-msgid "Get %1…"
-msgstr "Hent %1 …"
+msgid "Name"
+msgstr "Navn"
+
+#: HolidaysConfig.qml:98
+#, kde-format
+msgid "Description"
+msgstr "Beskrivelse"

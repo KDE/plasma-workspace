@@ -6,15 +6,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-02 01:06+0000\n"
-"PO-Revision-Date: 2014-09-04 11:50+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-14 23:05+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -22,53 +22,53 @@ msgstr ""
 #: contents/ui/BarcodePage.qml:36
 #, kde-format
 msgid "Return to Clipboard"
-msgstr ""
+msgstr "Tilbake til utklippstavla"
 
 #: contents/ui/BarcodePage.qml:57
 #, kde-format
 msgid "QR Code"
-msgstr ""
+msgstr "QR-kode"
 
 #: contents/ui/BarcodePage.qml:58
 #, kde-format
 msgid "Data Matrix"
-msgstr ""
+msgstr "Datatabell"
 
 #: contents/ui/BarcodePage.qml:59
 #, kde-format
 msgctxt "Aztec barcode"
 msgid "Aztec"
-msgstr ""
+msgstr "Aztec"
 
 #: contents/ui/BarcodePage.qml:60
 #, kde-format
 msgid "Code 39"
-msgstr ""
+msgstr "Kode 39"
 
 #: contents/ui/BarcodePage.qml:61
 #, kde-format
 msgid "Code 93"
-msgstr ""
+msgstr "Kode 93"
 
 #: contents/ui/BarcodePage.qml:62
 #, kde-format
 msgid "Code 128"
-msgstr ""
+msgstr "Kode 128"
 
 #: contents/ui/BarcodePage.qml:85
 #, kde-format
 msgid "Change the QR code type"
-msgstr ""
+msgstr "Endre type QR-kode"
 
 #: contents/ui/BarcodePage.qml:114
 #, kde-format
 msgid "Creating QR code failed"
-msgstr ""
+msgstr "Klarte ikke opprette QR-kode"
 
 #: contents/ui/BarcodePage.qml:123
 #, kde-format
 msgid "The QR code is too large to be displayed"
-msgstr ""
+msgstr "QR-koden er for stor til å vises"
 
 #: contents/ui/clipboard.qml:27
 #, kde-format
@@ -83,22 +83,22 @@ msgstr "Utklippstavla er tom"
 #: contents/ui/clipboard.qml:56
 #, kde-format
 msgid "Configure Clipboard…"
-msgstr ""
+msgstr "Sett opp utklippstavla …"
 
 #: contents/ui/clipboard.qml:58
 #, kde-format
 msgid "Clear History"
-msgstr ""
+msgstr "Tøm historikken"
 
 #: contents/ui/DelegateToolButtons.qml:23
 #, kde-format
 msgid "Invoke action"
-msgstr "Utfør operasjon"
+msgstr "Utfør handling"
 
 #: contents/ui/DelegateToolButtons.qml:38
 #, kde-format
 msgid "Show QR code"
-msgstr ""
+msgstr "Vis QR-kode"
 
 #: contents/ui/DelegateToolButtons.qml:54
 #, kde-format
@@ -108,24 +108,24 @@ msgstr "Rediger innhold"
 #: contents/ui/DelegateToolButtons.qml:68
 #, kde-format
 msgid "Remove from history"
-msgstr "Fjern fra historie"
+msgstr "Fjern fra historikk"
 
 #: contents/ui/EditPage.qml:86
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
-msgstr ""
+msgstr "Lagre"
 
 #: contents/ui/EditPage.qml:94
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
-msgstr ""
+msgstr "Avbryt"
 
 #: contents/ui/Menu.qml:126
 #, kde-format
 msgid "No matches"
-msgstr ""
+msgstr "Ingen treff"
 
 #: contents/ui/UrlItemDelegate.qml:99
 #, kde-format

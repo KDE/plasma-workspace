@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2014-08-28 19:59+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-22 07:42+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -23,7 +23,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info:status Free disk space"
 msgid "%1 free of %2"
-msgstr ""
+msgstr "%1 ledig av %2"
 
 #: package/contents/ui/DeviceItem.qml:189
 #, kde-format
@@ -31,7 +31,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Accessing…"
-msgstr ""
+msgstr "Tar i bruk …"
 
 #: package/contents/ui/DeviceItem.qml:192
 #, kde-format
@@ -39,63 +39,63 @@ msgctxt ""
 "Removing is a less technical word for Unmounting; translation should be "
 "short and mean 'Currently unmounting this device'"
 msgid "Removing…"
-msgstr ""
+msgstr "Fjerner …"
 
 #: package/contents/ui/DeviceItem.qml:195
 #, kde-format
 msgid "Don't unplug yet! Files are still being transferred..."
-msgstr ""
+msgstr "Ikke koble fra enda! Filoverføring pågår fremdeles …"
 
 #: package/contents/ui/DeviceItem.qml:226
 #, kde-format
 msgid "Open in File Manager"
-msgstr ""
+msgstr "Åpne i filbehandler"
 
 #: package/contents/ui/DeviceItem.qml:229
 #, kde-format
 msgid "Mount and Open"
-msgstr ""
+msgstr "Monter og åpne"
 
 #: package/contents/ui/DeviceItem.qml:231
 #, kde-format
 msgid "Eject"
-msgstr ""
+msgstr "Løs ut"
 
 #: package/contents/ui/DeviceItem.qml:233
 #, kde-format
 msgid "Safely remove"
-msgstr ""
+msgstr "Fjern trygt"
 
 #: package/contents/ui/DeviceItem.qml:275
 #, kde-format
 msgid "Mount"
-msgstr ""
+msgstr "Monter"
 
 #: package/contents/ui/FullRepresentation.qml:41
 #: package/contents/ui/main.qml:238
 #, kde-format
 msgid "Remove All"
-msgstr ""
+msgstr "Fjern alle"
 
 #: package/contents/ui/FullRepresentation.qml:42
 #, kde-format
 msgid "Click to safely remove all devices"
-msgstr ""
+msgstr "Trykk for å fjerne denne enheten trygt"
 
 #: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No removable devices attached"
-msgstr ""
+msgstr "Ingen flyttbare enheter er tilkoblet"
 
 #: package/contents/ui/FullRepresentation.qml:186
 #, kde-format
 msgid "No disks available"
-msgstr ""
+msgstr "Ingen disk er tilgjengelig"
 
 #: package/contents/ui/main.qml:47
 #, kde-format
 msgid "Most Recent Device"
-msgstr ""
+msgstr "Siste tilkoblede enhet"
 
 #: package/contents/ui/main.qml:47
 #, kde-format
@@ -105,25 +105,25 @@ msgstr "Ingen enheter tilgjengelig"
 #: package/contents/ui/main.qml:245
 #, kde-format
 msgid "Removable Devices"
-msgstr ""
+msgstr "Flyttbare enheter"
 
 #: package/contents/ui/main.qml:251
 #, kde-format
 msgid "Non Removable Devices"
-msgstr ""
+msgstr "Ikke-flyttbare enheter"
 
 #: package/contents/ui/main.qml:257
 #, kde-format
 msgid "All Devices"
-msgstr ""
+msgstr "Alle enheter"
 
 #: package/contents/ui/main.qml:265
 #, kde-format
 msgid "Show popup when new device is plugged in"
-msgstr ""
+msgstr "Vis sprettopp ved tilkobling av enheter"
 
 #: package/contents/ui/main.qml:274
 #, kde-format
 msgctxt "Open auto mounter kcm"
 msgid "Configure Removable Devices…"
-msgstr ""
+msgstr "Sett opp flyttbare enheter …"

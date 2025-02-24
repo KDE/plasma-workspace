@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-01 00:48+0000\n"
-"PO-Revision-Date: 2010-03-26 13:47+0100\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-02-22 07:25+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -27,19 +27,19 @@ msgstr "Søk i %1 etter %2"
 #: webshortcutrunner.cpp:72
 #, kde-format
 msgid "Opens \"%1\" in a web browser with the query :q:."
-msgstr "Åpner «%1» i en nettleser med forespørselen :q:."
+msgstr "Åpner «%1» i en nettleser med søket :q:."
 
 #: webshortcutrunner.cpp:77
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
-msgstr ""
+msgstr "Søk med «bang»-syntaks fra DuckDuckGo"
 
 #: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in private window"
-msgstr ""
+msgstr "Søk i privat vindu"
 
 #: webshortcutrunner.cpp:112
 #, kde-format
 msgid "Search in incognito window"
-msgstr ""
+msgstr "Søk i inkognitovindu"
