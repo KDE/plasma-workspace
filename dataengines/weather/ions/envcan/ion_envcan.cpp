@@ -873,6 +873,25 @@ void EnvCanadaIon::parseWindInfo(WeatherData &data, QXmlStreamReader &xml)
     }
 }
 
+float EnvCanadaIon::parseCoordinate(QStringView coord) const
+{
+    // Coordinates are in form of "64.52N" or "105.23W"
+    const QRegularExpression coord_re(QStringLiteral("([0-9\\.]+)([NSEW])"));
+    const QRegularExpressionMatch match = coord_re.match(coord);
+    if (!match.hasMatch()) {
+        return qQNaN();
+    }
+
+    bool ok = false;
+    const float value = match.captured(1).toFloat(&ok);
+    if (!ok) {
+        return qQNaN();
+    }
+
+    const bool isNegative = (match.captured(2) == u"S" || match.captured(2) == u"W");
+    return isNegative ? -value : value;
+};
+
 void EnvCanadaIon::parseConditions(WeatherData &data, QXmlStreamReader &xml)
 {
     Q_ASSERT(xml.isStartElement() && xml.name() == QLatin1String("currentConditions"));
@@ -904,9 +923,9 @@ void EnvCanadaIon::parseConditions(WeatherData &data, QXmlStreamReader &xml)
         if (xml.isStartElement()) {
             if (elementName == QLatin1String("station")) {
                 data.stationID = xml.attributes().value(QStringLiteral("code")).toString();
-                QRegularExpression dumpDirection(QStringLiteral("[^0-9.]"));
-                data.stationLatitude = xml.attributes().value(QStringLiteral("lat")).toString().remove(dumpDirection).toDouble();
-                data.stationLongitude = xml.attributes().value(QStringLiteral("lon")).toString().remove(dumpDirection).toDouble();
+                data.stationLatitude = parseCoordinate(xml.attributes().value(QStringLiteral("lat")).toString());
+                data.stationLongitude = parseCoordinate(xml.attributes().value(QStringLiteral("lon")).toString());
+
             } else if (elementName == QLatin1String("dateTime")) {
                 parseDateTime(data, xml);
             } else if (elementName == QLatin1String("condition")) {

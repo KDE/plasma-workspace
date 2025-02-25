@@ -201,6 +201,7 @@ private:
     void parseWeatherRecords(WeatherData &data, QXmlStreamReader &xml);
 
     void parseFloat(float &value, QXmlStreamReader &xml);
+    float parseCoordinate(QStringView coord) const;
 
 private:
     struct XMLMapInfo {
