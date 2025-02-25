@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2024-09-07 12:09+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -334,13 +334,13 @@ msgstr ""
 "known to cause poor window drag and resize performance. Consider using other "
 "settings."
 
-#: panelview.cpp:1136
+#: panelview.cpp:1147
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Hide Panel Configuration"
 
-#: panelview.cpp:1138
+#: panelview.cpp:1149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

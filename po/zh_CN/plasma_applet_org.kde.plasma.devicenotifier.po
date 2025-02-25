@@ -24,7 +24,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr ""
+msgstr "正在检查…"
 
 #: package/contents/ui/DeviceItem.qml:99
 #, kde-format
@@ -32,7 +32,7 @@ msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr ""
+msgstr "正在修复…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -131,7 +131,7 @@ msgstr "在文件管理器中打开"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "尝试修复"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -151,12 +151,12 @@ msgstr "安全移除"
 #: plugin/deviceerrormonitor_p.cpp:198
 #, kde-format
 msgid "This device has file system errors."
-msgstr ""
+msgstr "此设备有文件系统错误。"
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "成功修复"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -192,7 +192,7 @@ msgstr "您没有弹出此光盘的权限。"
 #: plugin/deviceerrormonitor_p.cpp:225
 #, kde-format
 msgid "You are not authorized to repair this device."
-msgstr ""
+msgstr "您没有修复此设备的权限。"
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -236,4 +236,4 @@ msgstr "无法弹出此光盘。"
 #: plugin/deviceerrormonitor_p.cpp:294
 #, kde-format
 msgid "Could not repair this device: %1"
-msgstr ""
+msgstr "无法修复此设备：%1"

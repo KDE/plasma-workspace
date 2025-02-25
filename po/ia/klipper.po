@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 00:42+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2024-12-18 18:07+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -372,17 +372,17 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr "Expande"
 
-#: declarative/qml/ClipboardMenu.qml:191
+#: declarative/qml/ClipboardMenu.qml:192
 #, kde-format
 msgid "Clear History"
 msgstr "Netta historia"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:302
 #, kde-format
 msgid "No matches"
 msgstr "Nulle correspondentias"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:302
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "Area de transferentia  es vacue"

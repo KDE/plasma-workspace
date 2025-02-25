@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Yasen Pramatarov <yasen@lindeas.com>, 2009, 2010, 2011.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Mincho Kondarev <mkondarev@yahoo.de>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Mincho Kondarev <mkondarev@yahoo.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-11-09 20:09+0100\n"
+"PO-Revision-Date: 2025-02-24 21:18+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -16,31 +16,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Премахване…"
+msgstr "Проверка…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Премахване…"
+msgstr "Възстановяване…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -139,7 +131,7 @@ msgstr "Отваряне във Файлов мениджър"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Опит за поправяне"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -157,15 +149,14 @@ msgid "Safely remove"
 msgstr "Безопасно отстраняване"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Това устройство вече може безопасно да бъде премахнато."
+msgstr "Това устройство съдържа грешки във файловата система."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Поправянето е успешно!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -199,11 +190,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Не сте упълномощени да извадите този диск."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Не сте упълномощени да премахвате това устройство."
+msgstr "Не сте упълномощени да поправяте това устройство."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -250,8 +239,6 @@ msgid "Could not eject this disc."
 msgstr "Неуспех при изваждане на диска."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Неуспех при премахване на устройството."
+msgstr "Неуспех при поправянето на устройството: %1"

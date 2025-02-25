@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2025-01-23 09:48+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -339,13 +339,13 @@ msgstr ""
 "són coneguts per provocar un rendiment deficient en arrossegar i "
 "redimensionar les finestres. Considereu utilitzar altres paràmetres."
 
-#: panelview.cpp:1136
+#: panelview.cpp:1147
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Oculta la configuració del quadro"
 
-#: panelview.cpp:1138
+#: panelview.cpp:1149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

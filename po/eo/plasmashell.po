@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2025-02-12 07:01+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -336,13 +336,13 @@ msgstr ""
 "malbonan fenestran trenadon kaj regrandigon de rendimento. Konsideru uzi "
 "aliajn agordojn."
 
-#: panelview.cpp:1136
+#: panelview.cpp:1147
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Kaŝi Panelagordon"
 
-#: panelview.cpp:1138
+#: panelview.cpp:1149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

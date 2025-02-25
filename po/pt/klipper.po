@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 00:42+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2022-10-17 10:13+0100\n"
 "Last-Translator: José Nuno Pires <zepires@gmail.com>\n"
 "Language-Team: pt <kde-i18n-pt@kde.org>\n"
@@ -378,18 +378,18 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:191
+#: declarative/qml/ClipboardMenu.qml:192
 #, fuzzy, kde-format
 #| msgid "Clipboard history"
 msgid "Clear History"
 msgstr "Histórico da área de transferência"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:302
 #, kde-format
 msgid "No matches"
 msgstr "Sem correspondências"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:302
 #, kde-format
 msgid "Clipboard is empty"
 msgstr "A área de transferência está em branco"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2025-01-23 06:51+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -337,13 +337,13 @@ msgstr ""
 "leihoen arrastatzea eta neurri-aldaketaren errendimendua eskasa izatea "
 "eragiten dute. Beste ezarpen batzuk erabiltzeko aukera pentsa ezazu."
 
-#: panelview.cpp:1136
+#: panelview.cpp:1147
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Ezkutatu panelaren konfigurazioa"
 
-#: panelview.cpp:1138
+#: panelview.cpp:1149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2023-01-08 09:29+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -336,13 +336,13 @@ msgid ""
 "settings."
 msgstr ""
 
-#: panelview.cpp:1136
+#: panelview.cpp:1147
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr ""
 
-#: panelview.cpp:1138
+#: panelview.cpp:1149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

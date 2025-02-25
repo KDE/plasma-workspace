@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 00:42+0000\n"
+"POT-Creation-Date: 2025-02-25 00:42+0000\n"
 "PO-Revision-Date: 2006-12-17 12:20+0000\n"
 "Last-Translator: Mashrab Kuvatov <kmashrab@uni-bremen.de>\n"
 "Language-Team: Uzbek <floss-uz-l10n@googlegroups.com>\n"
@@ -349,19 +349,19 @@ msgctxt "@action:button"
 msgid "Expand"
 msgstr ""
 
-#: declarative/qml/ClipboardMenu.qml:191
+#: declarative/qml/ClipboardMenu.qml:192
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clear History"
 msgstr "&Клипборд тарихининг ҳажми:"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:302
 #, fuzzy, kde-format
 #| msgid "<no matches>"
 msgid "No matches"
 msgstr "<ҳеч нарса мос келамади>"
 
-#: declarative/qml/ClipboardMenu.qml:293
+#: declarative/qml/ClipboardMenu.qml:302
 #, fuzzy, kde-format
 #| msgid "C&lipboard history size:"
 msgid "Clipboard is empty"

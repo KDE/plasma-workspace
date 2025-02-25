@@ -1,14 +1,14 @@
 # translation of plasma_runner_sessions.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # Federico Zenith <zenith@chemeng.ntnu.no>, 2008.
-# SPDX-FileCopyrightText: 2009, 2011, 2014, 2018, 2020, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2009, 2011, 2014, 2018, 2020, 2022, 2023, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_runner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 00:43+0000\n"
-"PO-Revision-Date: 2023-09-07 18:01+0200\n"
+"PO-Revision-Date: 2025-02-21 09:12+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: sessionrunner.cpp:22
 #, kde-format
@@ -91,10 +91,9 @@ msgid "switch user;new session"
 msgstr "cambia utente;nuova sessione"
 
 #: sessionrunner.cpp:55
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Avvia una nuova sessione con un altro utente"
+msgstr "Passa a una sessione con un altro utente"
 
 #: sessionrunner.cpp:77
 #, kde-format

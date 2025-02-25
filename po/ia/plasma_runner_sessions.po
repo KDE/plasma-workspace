@@ -1,20 +1,20 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# g.sora <g.sora@tiscali.it>, 2010, 2011, 2020, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2010, 2011, 2020, 2021, 2022, 2023, 2025 g.sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 00:43+0000\n"
-"PO-Revision-Date: 2023-09-07 10:59+0200\n"
+"PO-Revision-Date: 2025-02-24 16:27+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: sessionrunner.cpp:22
@@ -90,10 +90,9 @@ msgid "switch user;new session"
 msgstr "switch user;new session"
 
 #: sessionrunner.cpp:55
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "Il initia un nove session como differente usator"
+msgstr "Commuta a un session con un differente usator"
 
 #: sessionrunner.cpp:77
 #, kde-format

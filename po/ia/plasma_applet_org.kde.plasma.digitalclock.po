@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 00:43+0000\n"
-"PO-Revision-Date: 2025-01-24 11:24+0100\n"
+"PO-Revision-Date: 2025-02-24 16:26+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -151,11 +151,10 @@ msgid "Offset from UTC time"
 msgstr "DisplaciamentO (offset) ab tempore UTC"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Commmuta fuso horari per toto le systema ..."
+msgstr "Commmuta fuso horari..."
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
