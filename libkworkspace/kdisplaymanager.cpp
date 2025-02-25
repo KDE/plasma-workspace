@@ -829,9 +829,9 @@ bool KDisplayManager::switchVT(int vt)
     }
 
     if (DMType == OldGDM)
-        return exec(QStringLiteral("SET_VT %1\n").arg(vt).toLatin1().constData());
+        return exec(QStringLiteral("SET_VT %1\n").arg(vt).toLatin1().constBegin());
 
-    return exec(QStringLiteral("activate\tvt%1\n").arg(vt).toLatin1().constData());
+    return exec(QStringLiteral("activate\tvt%1\n").arg(vt).toLatin1().constBegin());
 }
 
 void KDisplayManager::lockSwitchVT(int vt)
@@ -877,7 +877,7 @@ void KDisplayManager::GDMAuthenticate()
             for (int i = 0; i < 16; i++)
                 cmd += QString::number((uchar)xau->data[i], 16).rightJustified(2, u'0');
             cmd += u'\n';
-            if (exec(cmd.toLatin1().constData())) {
+            if (exec(cmd.toLatin1().constBegin())) {
                 XauDisposeAuth(xau);
                 break;
             }

@@ -160,7 +160,7 @@ QStringList Unit::getLastJournalEntries(const QString &unit)
     sd_journal_flush_matches(journal);
 
     const QString match1 = QStringLiteral("USER_UNIT=%1").arg(unit);
-    returnValue = sd_journal_add_match(journal, match1.toUtf8().constData(), 0);
+    returnValue = sd_journal_add_match(journal, match1.toUtf8().constBegin(), 0);
     if (returnValue != 0) {
         sd_journal_close(journal);
         return {};
@@ -169,7 +169,7 @@ QStringList Unit::getLastJournalEntries(const QString &unit)
     sd_journal_add_disjunction(journal);
 
     const QString match2 = QStringLiteral("_SYSTEMD_USER_UNIT=%1").arg(unit);
-    returnValue = sd_journal_add_match(journal, match2.toUtf8().constData(), 0);
+    returnValue = sd_journal_add_match(journal, match2.toUtf8().constBegin(), 0);
     if (returnValue != 0) {
         sd_journal_close(journal);
         return {};

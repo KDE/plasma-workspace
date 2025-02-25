@@ -98,7 +98,7 @@ char *safeSmsGenerateClientID(SmsConn /*c*/)
         if (ret == nullptr)
             return nullptr;
 
-        sprintf(ret, "1%s%.13ld%.10d%.4d", my_addr->toLatin1().constData(), (long)time(nullptr), getpid(), sequence);
+        sprintf(ret, "1%s%.13ld%.10d%.4d", my_addr->toLatin1().constBegin(), (long)time(nullptr), getpid(), sequence);
         sequence = (sequence + 1) % 10000;
     }
     return ret;

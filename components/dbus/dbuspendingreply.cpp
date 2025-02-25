@@ -74,7 +74,7 @@ void DBusPendingReply::callInternal(const QDBusConnection &connection, const DBu
 {
     QDBusMessage msg = QDBusMessage::createMethodCall(message.service(), message.path(), message.interface(), message.member());
     if (!signature.isEmpty()) {
-        msg.setArguments(Encoder::encode(message.arguments(), signature.constData()).toList());
+        msg.setArguments(Encoder::encode(message.arguments(), signature.constBegin()).toList());
     }
     auto watcher = new QDBusPendingCallWatcher(connection.asyncCall(msg), this);
     connect(watcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {

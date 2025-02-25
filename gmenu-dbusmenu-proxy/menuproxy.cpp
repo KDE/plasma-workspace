@@ -369,7 +369,7 @@ void MenuProxy::writeWindowProperty(WId id, const QByteArray &name, const QByteA
     if (value.isEmpty()) {
         xcb_delete_property(m_xConnection, id, atom);
     } else {
-        xcb_change_property(m_xConnection, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING, 8, value.length(), value.constData());
+        xcb_change_property(m_xConnection, XCB_PROP_MODE_REPLACE, id, atom, XCB_ATOM_STRING, 8, value.length(), value.constBegin());
     }
 }
 

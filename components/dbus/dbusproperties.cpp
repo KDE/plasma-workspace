@@ -141,7 +141,7 @@ QVariant DBusPropertyMap::updateValue(const QString &key, const QVariant &input)
     }
 
     QDBusMessage message = QDBusMessage::createMethodCall(q->m_service, q->m_path, u"org.freedesktop.DBus.Properties"_s, u"Set"_s);
-    QVariantList arguments = Encoder::encode(QVariantList{input}, propertySignature(key).constData()).toList();
+    QVariantList arguments = Encoder::encode(QVariantList{input}, propertySignature(key).constBegin()).toList();
     arguments.prepend(key);
     arguments.prepend(q->m_interface);
     arguments[2] = QVariant::fromValue(QDBusVariant(arguments[2]));

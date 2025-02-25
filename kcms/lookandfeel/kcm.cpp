@@ -181,7 +181,7 @@ bool KCMLookandFeel::removeRow(int row, bool removeDependencies)
     if (isRemoved) {
         // Remove the theme from the item model
         const bool ret = m_model->removeRow(row);
-        Q_ASSERT_X(ret, "removeRow", QStringLiteral("Failed to remove item at row %1").arg(row).toLatin1().constData()); // Shouldn't happen
+        Q_ASSERT_X(ret, "removeRow", QStringLiteral("Failed to remove item at row %1").arg(row).toLatin1().constBegin()); // Shouldn't happen
     }
 
     return isRemoved;

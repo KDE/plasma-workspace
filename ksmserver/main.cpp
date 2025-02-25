@@ -88,9 +88,9 @@ void sanity_check(int argc, char *argv[])
                                     "while trying to start Plasma:")
             + QStringLiteral("\n\n    ");
         const QString msg_post = i18n("\n\nPlasma is unable to start.\n");
-        fputs(msg_pre.toUtf8().constData(), stderr);
-        fprintf(stderr, "%s", msg.toUtf8().constData());
-        fputs(msg_post.toUtf8().constData(), stderr);
+        fputs(msg_pre.toUtf8().constBegin(), stderr);
+        fprintf(stderr, "%s", msg.toUtf8().constBegin());
+        fputs(msg_post.toUtf8().constBegin(), stderr);
 
         exit(255);
     }

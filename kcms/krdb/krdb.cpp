@@ -436,7 +436,7 @@ void runRdb(unsigned int flags)
                     if (idx2 == -1) {
                         idx2 = db.size() - 1;
                     }
-                    const auto entry = QByteArray::fromRawData(db.constData() + idx1, idx2 - idx1 + 1);
+                    const auto entry = QByteArray::fromRawData(db.constBegin() + idx1, idx2 - idx1 + 1);
                     if (entry.startsWith("Xft.dpi:")) {
                         db.remove(idx1, entry.size());
                     } else {
@@ -524,7 +524,7 @@ void runRdb(unsigned int flags)
             if (!qt_settings_timestamp) {
                 QString atomname(QStringLiteral("_QT_SETTINGS_TIMESTAMP_"));
                 atomname += QString::fromLocal8Bit(XDisplayName(nullptr)); // Use the $DISPLAY envvar.
-                qt_settings_timestamp = XInternAtom(QX11Info::display(), atomname.toLatin1().constData(), False);
+                qt_settings_timestamp = XInternAtom(QX11Info::display(), atomname.toLatin1().constBegin(), False);
             }
 
             QBuffer stamp;
