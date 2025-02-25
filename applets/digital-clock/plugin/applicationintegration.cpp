@@ -13,7 +13,7 @@ ApplicationIntegration::ApplicationIntegration(QObject *parent)
     if (!services.isEmpty()) {
         const KService::Ptr app = services.first();
 
-        if (app->desktopEntryName() == QLatin1String("org.kde.korganizer") || app->desktopEntryName() == QLatin1String("org.kde.kalendar")) {
+        if (app->desktopEntryName() == QLatin1String("org.kde.korganizer") || app->desktopEntryName() == QLatin1String("org.kde.merkuro.calendar")) {
             m_calendarService = app;
         }
     }
