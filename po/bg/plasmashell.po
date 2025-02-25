@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-24 11:24+0000\n"
-"PO-Revision-Date: 2025-01-07 23:17+0100\n"
+"PO-Revision-Date: 2025-02-24 19:36+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -154,10 +154,9 @@ msgid "Enter Edit Mode"
 msgstr "Влизане в режим редактиране"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Влизане в режим редактиране"
+msgstr "Излизане от режим на редактиране"
 
 #: main.cpp:86
 #, kde-format

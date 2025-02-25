@@ -1,6 +1,6 @@
 # Spanish translations for plasmashell.po package.
-# Copyright (C) 2014 This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2014-2025 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma-workspace package.
 #
 # Automatically generated, 2014.
 # SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2020, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-24 11:24+0000\n"
-"PO-Revision-Date: 2025-01-07 19:46+0100\n"
+"PO-Revision-Date: 2025-02-24 18:04+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -110,7 +110,7 @@ msgstr "Copiar la versión de Plasma"
 #, kde-format
 msgctxt "@action:button"
 msgid "Report a Bug…"
-msgstr "Informar de un fallo..."
+msgstr "Informar de un fallo…"
 
 #: desktopview.cpp:302
 #, kde-format
@@ -128,7 +128,7 @@ msgstr "Ocultar hasta reiniciar"
 #, kde-format
 msgctxt "@action:button Hide the preview banner permanently"
 msgid "Hide Permanently…"
-msgstr "Ocultar permanentemente..."
+msgstr "Ocultar permanentemente…"
 
 #: desktopview.cpp:318
 #, kde-kuit-format
@@ -156,10 +156,9 @@ msgid "Enter Edit Mode"
 msgstr "Entrar en el modo de edición"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Entrar en el modo de edición"
+msgstr "Salir del modo de edición"
 
 #: main.cpp:86
 #, kde-format
@@ -410,7 +409,7 @@ msgstr "Activar la entrada %1 del gestor de tareas"
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr "Gestión de escritorios y paneles..."
+msgstr "Gestión de escritorios y paneles…"
 
 #: shellcorona.cpp:334
 #, kde-format

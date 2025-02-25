@@ -1,7 +1,7 @@
 # translation of plasma_runner_sessions.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
 # Federico Zenith <zenith@chemeng.ntnu.no>, 2008.
-# SPDX-FileCopyrightText: 2009, 2011, 2014, 2018, 2020, 2022, 2023 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2009, 2011, 2014, 2018, 2020, 2022, 2023, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: sessionrunner.cpp:22
 #, kde-format

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-24 11:24+0000\n"
-"PO-Revision-Date: 2025-01-07 07:00+0100\n"
+"PO-Revision-Date: 2025-02-24 22:20+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: LUGOS\n"
 "Language: sl\n"
@@ -158,10 +158,9 @@ msgid "Enter Edit Mode"
 msgstr "Vstopi v način urejanja"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Vstopi v način urejanja"
+msgstr "Izstopi iz načina urejanja"
 
 #: main.cpp:86
 #, kde-format
