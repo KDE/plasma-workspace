@@ -6,6 +6,8 @@
 #include <QQuickView>
 #include <QScreen>
 
+#include "greetd/GreetdManager.hpp"
+
 class LoginGreeter : public QObject
 {
     Q_OBJECT
@@ -47,6 +49,7 @@ int main(int argc, char *argv[])
 {
     QGuiApplication app(argc, argv);
 
+    qmlRegisterSingletonInstance("org.greetd", 0, 1, "Authenticator", new GreetdLogin);
     LoginGreeter greeter;
     return app.exec();
 }
