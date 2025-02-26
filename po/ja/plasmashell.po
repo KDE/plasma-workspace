@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu Takeyama <ftake@geeko.jp>, 2016.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2016, 2023.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:34+0000\n"
-"PO-Revision-Date: 2024-10-06 21:40+0900\n"
+"PO-Revision-Date: 2025-02-21 22:17+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -124,7 +124,7 @@ msgstr "マイクミュート"
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
-msgstr "%1 をミュート"
+msgstr "%1 がミュートされました"
 
 #: osd.cpp:110
 #, kde-format
