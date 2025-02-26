@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE Malayalam Translation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 02:32+0000\n"
+"POT-Creation-Date: 2025-02-26 02:36+0000\n"
 "PO-Revision-Date: 2021-08-17 12:59+0000\n"
 "Last-Translator: anuraghkp <kpanuragh@gmail.com>\n"
 "Language-Team: Malayalam <Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|"
@@ -625,63 +625,63 @@ msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, fuzzy, kde-format
 #| msgid "Timeout for action popups:"
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "പൊങ്ങിവരുന്ന ജാലകങ്ങള്‍ക്കുള്ള സമയക്രമം:"
 
-#: klipper.cpp:109
+#: klipper.cpp:110
 #, fuzzy, kde-format
 #| msgid "C&lear Clipboard History"
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം കളയുക"
 
-#: klipper.cpp:116
+#: klipper.cpp:117
 #, fuzzy, kde-format
 #| msgid "&Configure Klipper..."
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "ക്ലിപ്പര്‍ സജ്ജീകരിക്കുക"
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, fuzzy, kde-format
 #| msgid "Manually Invoke Action on Current Clipboard"
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ഇപ്പോഴത്തെ ഓര്‍മ്മച്ചെപ്പില്‍ പ്രവൃത്തി തുടങ്ങുക"
 
-#: klipper.cpp:127
+#: klipper.cpp:128
 #, fuzzy, kde-format
 #| msgid "&Show Barcode…"
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "ബാർകോഡ് കാണിക്കുക… (&S)"
 
-#: klipper.cpp:136
+#: klipper.cpp:137
 #, fuzzy, kde-format
 #| msgid "Next History Item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ചരിത്രത്തിലെ അടുത്ത ഇനം"
 
-#: klipper.cpp:141
+#: klipper.cpp:142
 #, fuzzy, kde-format
 #| msgid "Previous History Item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ചരിത്രത്തിലെ മുമ്പുള്ള ഇനം"
 
-#: klipper.cpp:148
+#: klipper.cpp:149
 #, fuzzy, kde-format
 #| msgid "Open Klipper at Mouse Position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "മൗസ് സ്ഥാനത്ത് ക്ലിപ്പർ തുറക്കുക"
 
-#: klipper.cpp:307
+#: klipper.cpp:310
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -691,27 +691,27 @@ msgstr ""
 "ക്ലിപ്പ്ബോർഡ് ആപ്പ്‌ലെറ്റിന്റെ ക്രമീകരണ ജാലകത്തിലെ <interface>പ്രവർത്തനങ്ങൾ</interface> "
 "താളിൽ നിങ്ങൾക്ക് പിന്നീട് URL പ്രവർത്തനങ്ങൾ പ്രവർത്തനക്ഷമമാക്കാനാകും"
 
-#: klipper.cpp:441
+#: klipper.cpp:444
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "മൊബൈൽ ബാർകോഡ്"
 
-#: klipper.cpp:484 klipper.cpp:493
+#: klipper.cpp:487 klipper.cpp:496
 #, kde-format
 msgid "Clipboard history"
 msgstr "ഓര്‍മ്മച്ചെപ്പ് ചരിത്രം"
 
-#: klipper.cpp:510
+#: klipper.cpp:513
 #, kde-format
 msgid "up"
 msgstr "മുകളില്‍"
 
-#: klipper.cpp:517
+#: klipper.cpp:520
 #, kde-format
 msgid "current"
 msgstr "ഇപ്പോള്‍ നിലവിലുളളത്"
 
-#: klipper.cpp:524
+#: klipper.cpp:527
 #, kde-format
 msgid "down"
 msgstr "താഴെ"
