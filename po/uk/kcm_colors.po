@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_colors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-08-29 09:16+0300\n"
 "Last-Translator: Fracture dept <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -1266,11 +1266,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Нетиповий колір акценту"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Виберіть нетиповий колір акценту"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1371,6 +1366,9 @@ msgstr "Відкрити схему кольорів"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "файли схем кольорів (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Виберіть нетиповий колір акценту"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Отримати нові схеми кольорів…"

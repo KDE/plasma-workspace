@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2025-01-10 01:19+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: lt <kde-i18n-lt@kde.org>\n"
@@ -646,55 +646,55 @@ msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Automatinis iškylantysis veiksmų meniu"
 
-#: klipper.cpp:109
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Išva&lyti iškarpinės istoriją"
 
-#: klipper.cpp:116
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Konfigūruoti Klipper…"
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Rankiniu būdu įvykdyti veiksmą su esamu iškarpinės turiniu"
 
-#: klipper.cpp:127
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Rodyti brūkšninį kodą…"
 
-#: klipper.cpp:136
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Kitas istorijos elementas"
 
-#: klipper.cpp:141
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Ankstesnis istorijos elementas"
 
-#: klipper.cpp:148
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Rodyti iškarpinės elementus ties pelės vieta"
 
-#: klipper.cpp:307
+#: klipper.cpp:310
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -704,27 +704,27 @@ msgstr ""
 "Vėliau URL veiksmus galite įjungti iškarpinės programėlės konfigūracijos "
 "lango <interface>Veiksmų</interface> puslapyje"
 
-#: klipper.cpp:441
+#: klipper.cpp:444
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Mobilusis brūkšninis kodas"
 
-#: klipper.cpp:484 klipper.cpp:493
+#: klipper.cpp:487 klipper.cpp:496
 #, kde-format
 msgid "Clipboard history"
 msgstr "Iškarpinės istorija"
 
-#: klipper.cpp:510
+#: klipper.cpp:513
 #, kde-format
 msgid "up"
 msgstr "aukštyn"
 
-#: klipper.cpp:517
+#: klipper.cpp:520
 #, kde-format
 msgid "current"
 msgstr "dabartinis"
 
-#: klipper.cpp:524
+#: klipper.cpp:527
 #, kde-format
 msgid "down"
 msgstr "žemyn"

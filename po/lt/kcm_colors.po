@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-09-01 00:56+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -1263,11 +1263,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Tinkinta paryškinimo spalva"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Pasirinkti tinkintą paryškinimo spalvą"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1370,6 +1365,9 @@ msgstr "Atverti spalvų rinkinį"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Spalvų rinkinio failai (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Pasirinkti tinkintą paryškinimo spalvą"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Gauti naujus spalvų rinkinius…"

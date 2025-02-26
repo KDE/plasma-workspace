@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_cursortheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2023-02-15 16:03+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -1273,11 +1273,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Cor Acentuada Personalizada"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Escolher uma cor acentuada personalizada"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1383,6 +1378,9 @@ msgstr "Abrir um Esquema de Cores"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Ficheiros de Esquemas de Cores (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Escolher uma cor acentuada personalizada"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Obter Novos Esquemas de Cores…"

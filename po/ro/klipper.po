@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-06-09 15:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -641,55 +641,55 @@ msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "Meniu contextual cu acțiuni automate:"
 
-#: klipper.cpp:109
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "Curăță istoricu&l"
 
-#: klipper.cpp:116
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "&Configurează Klipper…"
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invocă manual acțiunea pe clipboard-ul actual"
 
-#: klipper.cpp:127
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Arată cod de &bare…"
 
-#: klipper.cpp:136
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Următorul element din istoric"
 
-#: klipper.cpp:141
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Precedentul element din istoric"
 
-#: klipper.cpp:148
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Arată elementele clipboard-ului la poziția mausului"
 
-#: klipper.cpp:307
+#: klipper.cpp:310
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -699,27 +699,27 @@ msgstr ""
 "Puteți activa mai târziu acțiunile de URL pe pagina <interface>Acțiuni</"
 "interface> a ferestrei de configurare a miniaplicației Clipboard."
 
-#: klipper.cpp:441
+#: klipper.cpp:444
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Cod de bare pentru mobil"
 
-#: klipper.cpp:484 klipper.cpp:493
+#: klipper.cpp:487 klipper.cpp:496
 #, kde-format
 msgid "Clipboard history"
 msgstr "Istoric clipboard"
 
-#: klipper.cpp:510
+#: klipper.cpp:513
 #, kde-format
 msgid "up"
 msgstr "sus"
 
-#: klipper.cpp:517
+#: klipper.cpp:520
 #, kde-format
 msgid "current"
 msgstr "curent"
 
-#: klipper.cpp:524
+#: klipper.cpp:527
 #, kde-format
 msgid "down"
 msgstr "jos"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-08-29 06:20+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -1257,11 +1257,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "აქცენტის ფერის ხელით მითითება"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "აქცენტის ფერის ხელით მითითება"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1363,6 +1358,9 @@ msgstr "ფერების სქემის გახსნა"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "ფერების სქემის ფაილები (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "აქცენტის ფერის ხელით მითითება"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "ფერების ახალი სქემების გადმოწერა…"

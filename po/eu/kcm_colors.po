@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-08-30 10:58+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -1270,11 +1270,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Neurrira ipinitako azentu-kolorea"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Hautatu norberak finkatutako azentu-kolorea"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1377,6 +1372,9 @@ msgstr "Ireki kolore-antolaera"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Kolore-antolaera fitxategiak (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Hautatu norberak finkatutako azentu-kolorea"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Lortu kolore-antolaera berriak..."

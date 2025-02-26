@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-11-05 10:00\n"
 "Last-Translator: Siarhei Liantsevich <serzh.by@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -1263,11 +1263,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Адвольны дамінанты колер"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Абраць адвольны дамінанты колер"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1369,6 +1364,9 @@ msgstr "Адкрыць колеравую схему"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлы колеравых схемаў (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Абраць адвольны дамінанты колер"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Атрымаць новыя колеравыя схемы…"

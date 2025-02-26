@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Hindi <kde-i18n-doc@kde.org>\n"
@@ -1258,11 +1258,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "तदनुकूल प्रभावी रंग चुनें"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "तदनुकूल प्रभावी रंग चुनें"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1366,6 +1361,9 @@ msgstr "रंग योजना खोलें"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "रंग योजनाओं की फ़ाइलें (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "तदनुकूल प्रभावी रंग चुनें"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "नई रंग योजनाएँ प्राप्त करें..."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-01-11 14:23-0500\n"
 "Last-Translator: Weblate Admin <admin@example.com>\n"
 "Language-Team: Toki Pona <http://weblate.blackquill.cc/projects/ante-toki-pi-"
@@ -1230,11 +1230,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "o pana e kule wawa ante"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "o pana e kule wawa ante"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1338,3 +1333,6 @@ msgstr "o lukin e nasin kule"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "lipu pi nasin kule (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "o pana e kule wawa ante"

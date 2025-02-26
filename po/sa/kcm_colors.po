@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -1246,11 +1246,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "अनुकूलनीयः शिरस्कन्ध रंग"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "अनुकूलनीयः शिरस्कन्धवर्णं चिनोतु"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1351,3 +1346,6 @@ msgstr "रङ्ग योजना उद्घाटयतु"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "रङ्ग योजना सञ्चिकाः (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "अनुकूलनीयः शिरस्कन्धवर्णं चिनोतु"

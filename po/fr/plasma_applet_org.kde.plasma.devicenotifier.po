@@ -8,7 +8,7 @@
 # Guillaume Pujol <guill.p@gmail.com>, 2010.
 # Joëlle Cornavin <jcorn@free.fr>, 2012, 2013.
 # Anne-Marie Mahfouf <annma@kde.org>, 2013.
-# SPDX-FileCopyrightText: 2013, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2013, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 # Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2016.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
 # SPDX-FileCopyrightText: 2020, 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
@@ -20,7 +20,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-07-18 08:44+0200\n"
+"PO-Revision-Date: 2025-02-24 09:27+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -30,32 +30,24 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Suppression en cours…"
+msgstr "Vérification en cours…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Suppression en cours…"
+msgstr "Réparation en cours…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -155,7 +147,7 @@ msgstr "Ouvrir dans le gestionnaire de fichiers"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Essayer de réparer"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -173,15 +165,14 @@ msgid "Safely remove"
 msgstr "Retirer en toute sécurité"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Ce périphérique peut désormais être retiré en toute sécurité."
+msgstr "Ce périphérique présente des erreurs de fichiers système."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Réparé avec succès !"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -215,11 +206,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Vous n'êtes pas autorisé à libérer ce disque."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Vous n'êtes pas autorisé à retirer ce périphérique."
+msgstr "Vous n'êtes pas autorisé à réparer ce périphérique."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -267,11 +256,9 @@ msgid "Could not eject this disc."
 msgstr "Impossible de libérer ce disque."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Impossible de retirer ce périphérique."
+msgstr "Impossible de réparer ce périphérique :%1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Le système de fichiers ne répond pas."

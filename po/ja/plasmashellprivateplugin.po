@@ -1,12 +1,12 @@
-# Ryuichi Yamada <ryuichi_ya220@outlook.jp>, 2023.
+# SPDX-FileCopyrightText: 2023, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-30 00:43+0000\n"
-"PO-Revision-Date: 2023-04-07 23:52-0700\n"
-"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
+"PO-Revision-Date: 2025-02-23 13:31+0900\n"
+"Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -31,12 +31,12 @@ msgstr "ryuichi_ya220@outlook.jp"
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "バッテリー %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "バッテリー"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
@@ -187,6 +187,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"このウィジェットは不明な古いバージョンの Plasma のために作成されており、"
+"Plasma %1 には対応していません。更新されたバージョンについては、ウィジェット"
+"の作者に連絡してください。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
@@ -194,6 +197,9 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"このウィジェットは Plasma %1 のために作成されており、Plasma %2 には対応してい"
+"ません。更新されたバージョンについては、ウィジェットの作者に連絡してくださ"
+"い。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
@@ -201,6 +207,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"このウィジェットは Plasma %1 のために作成されており、Plasma %2 には対応してい"
+"ません。このウィジェットを使用するためには、Plasma を更新してください。"
 
 #: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
@@ -208,119 +216,119 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"このウィジェットは Plasma %1 のために作成されており、最新バージョンの Plasma "
+"には対応していません。このウィジェットを使用するためには、Plasma を更新してく"
+"ださい。"
 
 #: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "アクセシビリティ"
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "アプリケーションランチャー"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "天文学"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "日付と時間"
 
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "開発ツール"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "教育"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "環境と天気"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "例"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "ファイルシステム"
 
 #: shellprivate/widgetexplorer.cpp:118
-#, fuzzy
-#| msgctxt "NAME OF TRANSLATORS"
-#| msgid "Your names"
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr "Ryuichi Yamada"
+msgstr "ゲームとお楽しみ"
 
 #: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "グラフィックス"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "言語"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "マッピング"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "その他"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "マルチメディア"
 
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "オンラインサービス"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "生産性"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "システム情報"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "ユーティリティ"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "ウィンドウとタスク"
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "クリップボード"
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "タスク"
 
 #: shellprivate/widgetexplorer.cpp:146
 #, kde-format
@@ -333,18 +341,13 @@ msgid "Running"
 msgstr "実行中"
 
 #: shellprivate/widgetexplorer.cpp:156
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "アンインストール可能"
+msgstr "ユーザによるインストール"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
@@ -352,7 +355,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "最近インストール"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
@@ -367,14 +370,13 @@ msgstr "新しい Plasma ウィジェットをダウンロード"
 #: shellprivate/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr "ローカルのファイルからインストール..."
+msgstr "ローカルファイルからウィジェットをインストール..."
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "すべてのウィジェット"
+msgstr "新しいウィジェットを入手"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
@@ -382,11 +384,10 @@ msgid "Select Plasmoid File"
 msgstr "Plasmoid ファイルを開く"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "パッケージ %1 のインストールに失敗しました。"
+msgstr "パッケージ %1 のインストールに失敗しました: %2"
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
@@ -399,44 +400,44 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "現在選択されているタイムゾーンはこのマップ上に表示できません"
 
 #: timezoneselector/TimezoneSelector.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "拡大"
 
 #: timezoneselector/TimezoneSelector.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "縮小"
 
 #: timezoneselector/TimezoneSelector.qml:230
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "地域:"
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "選択…"
 
 #: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "タイムゾーン地域セレクタ"
 
 #: timezoneselector/TimezoneSelector.qml:261
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "タイムゾーン:"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "タイムゾーン場所セレクタ"

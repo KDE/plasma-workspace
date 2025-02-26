@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-09-21 11:39+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -1270,11 +1270,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Использовать собственный цвет выделения"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Выбор цвета выделения"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1377,6 +1372,9 @@ msgstr "Открыть цветовую схему"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Файлы цветовых схем (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Выбор цвета выделения"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Загрузить цветовые схемы..."

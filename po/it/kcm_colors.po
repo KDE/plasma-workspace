@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-08-29 18:39+0200\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -1269,11 +1269,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Colore secondario personalizzato"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Scegli colore secondario personalizzato"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1376,6 +1371,9 @@ msgstr "Apri schema di colori"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "File di schemi di colori (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Scegli colore secondario personalizzato"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Ottieni nuovi schemi di colori…"

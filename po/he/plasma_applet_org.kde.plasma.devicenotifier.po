@@ -4,13 +4,13 @@
 # Diego Iastrubni <elcuco@kde.org>, 2008, 2013.
 # elkana bardugo <ttv200@gmail.com>, 2016.
 # Elkana Bardugo <ttv200@gmail.com>, 2017. #zanata
-# SPDX-FileCopyrightText: 2023, 2024 Yaron Shahrabani <sh.yaron@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-12-16 07:54+0200\n"
+"PO-Revision-Date: 2025-02-24 08:07+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -19,31 +19,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.08.3\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "מתבצעת הסרה…"
+msgstr "מתבצעת בדיקה…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "מתבצעת הסרה…"
+msgstr "מתבצע תיקון…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -142,7 +134,7 @@ msgstr "פתיחת מנהל הקבצים"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "לנסות לתקן"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -160,15 +152,14 @@ msgid "Safely remove"
 msgstr "הסרה בבטחה"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "אפשר להסיר כעת את ההתקן בבטחה."
+msgstr "למכשיר הזה יש שגיאות במערכת הקבצים."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "תוקן בהצלחה!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -202,11 +193,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "אסור לך לשלוף את התקליטור הזה."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "אסור לך להסיר את ההתקן הזה.."
+msgstr "אסור לך לתקן את המכשיר הזה."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -251,11 +240,9 @@ msgid "Could not eject this disc."
 msgstr "לא ניתן לשלוף את התקליטור הזה."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "לא ניתן להסיר את ההתקן הזה."
+msgstr "לא ניתן לתקן את המכשיר הזה: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "מערכת הקבצים לא מגיבה"

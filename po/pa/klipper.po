@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-10-25 23:34-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -588,55 +588,55 @@ msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
 msgstr "%1x%2 %3bpp"
 
-#: klipper.cpp:90
+#: klipper.cpp:91
 #, kde-format
 msgctxt "@action:inmenu Toggle automatic action"
 msgid "Automatic Action Popup Menu"
 msgstr "ਆਟੋਮੈਟਿਕ ਕਾਰਵਾਈ ਪੌਪਅੱਪ ਮੇਨੂ"
 
-#: klipper.cpp:109
+#: klipper.cpp:110
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "C&lear Clipboard History"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ ਨੂੰ ਮਿਟਾਓ(&l)"
 
-#: klipper.cpp:116
+#: klipper.cpp:117
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Configure Klipper…"
 msgstr "…ਕਲਿੱਪਰ ਦੀ ਸੰਰਚਨਾ(&C)"
 
-#: klipper.cpp:120
+#: klipper.cpp:121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "ਮੌਜੂਦਾ ਕਲਿੱਪਬੋਰਡ ਉੱਤੇ ਕਾਰਵਾਈ ਦਸਤੀ ਸ਼ਾਮਿਲ ਕਰੋ"
 
-#: klipper.cpp:127
+#: klipper.cpp:128
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "…ਬਾਰਕੋਡ ਵੇਖੋ(&S)"
 
-#: klipper.cpp:136
+#: klipper.cpp:137
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "ਅਗਲੀ ਅਤੀਤ ਆਈਟਮ"
 
-#: klipper.cpp:141
+#: klipper.cpp:142
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "ਪਿਛਲੀ ਅਤੀਤ ਆਈਟਮ"
 
-#: klipper.cpp:148
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "ਮਾਊਸ ਸਥਿਤੀ ਉੱਤੇ ਕਲਿੱਪਬੋਰਡ ਆਈਟਮਾਂ ਵੇਖਾਓ"
 
-#: klipper.cpp:307
+#: klipper.cpp:310
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -644,27 +644,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:441
+#: klipper.cpp:444
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "ਮੋਬਾਇਲ ਬਾਰਕੋਡ"
 
-#: klipper.cpp:484 klipper.cpp:493
+#: klipper.cpp:487 klipper.cpp:496
 #, kde-format
 msgid "Clipboard history"
 msgstr "ਕਲਿੱਪਬੋਰਡ ਅਤੀਤ"
 
-#: klipper.cpp:510
+#: klipper.cpp:513
 #, kde-format
 msgid "up"
 msgstr "ਉੱਤੇ"
 
-#: klipper.cpp:517
+#: klipper.cpp:520
 #, kde-format
 msgid "current"
 msgstr "ਮੌਜੂਦਾ"
 
-#: klipper.cpp:524
+#: klipper.cpp:527
 #, kde-format
 msgid "down"
 msgstr "ਹੇਠਾਂ"

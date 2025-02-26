@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-06-10 12:09+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -1273,11 +1273,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Xüsusi seçim rəngi"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Vurğulama rəngini seçin"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1382,6 +1377,9 @@ msgstr "Rəng Sxemini Açmaq"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Rəng Sxemi Faylları (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Vurğulama rəngini seçin"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Yeni Rəng Sxemi Almaq..."

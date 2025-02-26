@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-11-29 00:24-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -1288,11 +1288,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Cor de destaque personalizada"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Escolher cor de destaque personalizada"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1394,6 +1389,9 @@ msgstr "Abrir esquema de cores"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Arquivos de esquema de cores (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Escolher cor de destaque personalizada"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Baixar novos esquemas de cores..."

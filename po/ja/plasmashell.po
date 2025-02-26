@@ -1,4 +1,4 @@
-# SPDX-FileCopyrightText: 2023, 2024 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Ryuichi Yamada <ryuichi_ya220@outlook.jp>
 # Fuminobu Takeyama <ftake@geeko.jp>, 2016.
 # Tomohiro Hyakutake <tomhioo@outlook.jp>, 2020.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2016, 2023.
@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasmashell\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-25 00:42+0000\n"
-"PO-Revision-Date: 2024-10-06 21:40+0900\n"
+"PO-Revision-Date: 2025-02-21 22:17+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -153,13 +153,12 @@ msgstr "プレビューバナーを隠しますか？"
 #: desktopview.cpp:518 desktopview.cpp:534
 #, kde-format
 msgid "Enter Edit Mode"
-msgstr "編集モードに入る"
+msgstr "編集モードを開始"
 
 #: desktopview.cpp:532
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "編集モードに入る"
+msgstr "編集モードを終了"
 
 #: main.cpp:86
 #, kde-format
@@ -229,7 +228,7 @@ msgstr "マイクミュート"
 #, kde-format
 msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
 msgid "%1 Muted"
-msgstr "%1 をミュート"
+msgstr "%1 がミュートされました"
 
 #: osd.cpp:148
 #, kde-format
@@ -409,7 +408,7 @@ msgstr "タスクマネージャのエントリ %1 をアクティベート"
 #, kde-format
 msgctxt "@action:button"
 msgid "Manage Desktops and Panels…"
-msgstr ""
+msgstr "デスクトップとパネルを管理..."
 
 #: shellcorona.cpp:335
 #, kde-format
@@ -458,6 +457,3 @@ msgstr "パネルの数"
 #, kde-format
 msgid "Counts the panels"
 msgstr "パネルの数を数えます"
-
-#~ msgid "Panel and Desktop Management"
-#~ msgstr "パネルとデスクトップの管理"

@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-09-19 16:48+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -1279,11 +1279,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Προσαρμοσμένο χρώμα έμφασης"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Επιλογή προσαρμοσμένου χρώματος έμφασης"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1385,6 +1380,9 @@ msgstr "Άνοιγμα θέματος χρωμάτων"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Αρχεία θέματος χρωμάτων (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Επιλογή προσαρμοσμένου χρώματος έμφασης"
 
 #, fuzzy
 #~| msgid "Get &New Scheme"

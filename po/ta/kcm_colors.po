@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-09-01 17:02+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -1256,11 +1256,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "விருப்பமான சிறப்பு நிறம்"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "விருப்பமான சிறப்பு நிறத்தைத் தேர்ந்தெடுத்தல்"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1362,6 +1357,9 @@ msgstr "நிறத்திட்டத்தை திற"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "நிறத்திட்ட கோப்புகள் (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "விருப்பமான சிறப்பு நிறத்தைத் தேர்ந்தெடுத்தல்"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "புதிய நிறத்திட்டங்களை பெறு…"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2024-11-28 23:26+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -1245,11 +1245,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "사용자 정의 강조 색상"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "사용자 정의 강조 색상 선택"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1350,6 +1345,9 @@ msgstr "색 구성표 열기"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "색 구성표 파일 (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "사용자 정의 강조 색상 선택"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "새 색 구성표 가져오기…"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcmcolors\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-11-21 00:42+0000\n"
+"POT-Creation-Date: 2025-02-26 00:43+0000\n"
 "PO-Revision-Date: 2023-08-06 11:26+0200\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -1275,11 +1275,6 @@ msgctxt "@item:inlistbox User-chosen custom accent color"
 msgid "Custom accent color"
 msgstr "Vlastná zvýrazňovacia farba"
 
-#: ui/AccentColorUI.qml:147
-#, kde-format
-msgid "Choose custom accent color"
-msgstr "Použiť vlastnú zvýrazňovaciu farbu:"
-
 #: ui/main.qml:90
 #, kde-format
 msgid ""
@@ -1385,6 +1380,9 @@ msgstr "Otvoriť farebnú schému"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Súbory farebných schém (*.colors)"
+
+#~ msgid "Choose custom accent color"
+#~ msgstr "Použiť vlastnú zvýrazňovaciu farbu:"
 
 #~ msgid "Get New Color Schemes…"
 #~ msgstr "Získať nové farebné schémy..."
