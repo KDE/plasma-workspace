@@ -47,9 +47,9 @@ std::unique_ptr<icu::Transliterator> getICUTransliterator(const QLocale &locale)
     // is ok to use to the old 1 character strategy instead of using transliterator.
     icu::UnicodeString id;
     if (locale.language() == QLocale::Japanese) {
-        id = u"Katakana-Hiragana";
+        id = "Katakana-Hiragana";
     } else if (locale.language() == QLocale::Chinese) {
-        id = u"Han-Latin; Latin-ASCII";
+        id = "Han-Latin; Latin-ASCII";
     }
     if (id.isEmpty()) {
         return nullptr;
@@ -110,7 +110,7 @@ QString groupName(const QString &name)
         static auto transliterator = getICUTransliterator(locale);
 
         if (transliterator) {
-            icu::UnicodeString icuText((std::u16string_view(name)));
+            icu::UnicodeString icuText(reinterpret_cast<const char16_t *>(name.data()), name.size());
             transliterator->transliterate(icuText);
             return QStringView(icuText.getBuffer(), static_cast<int>(icuText.length())).sliced(0, 1).toString();
         }
