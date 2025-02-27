@@ -121,9 +121,11 @@ KCM.ScrollViewKCM {
             Accessible.description: `${delegate.ListView.section}, ${i18nc("@info:usagetip", "Press Space to edit the user profile")}`
 
             onClicked: {
-                userList.currentIndex = index;
-                root.prepareChangePage();
-                kcm.push("UserDetailsPage.qml", { user });
+                if (userList.currentIndex != index) {
+                    userList.currentIndex = index;
+                    root.prepareChangePage();
+                    kcm.push("UserDetailsPage.qml", { user });
+                }
             }
 
             contentItem: RowLayout {
