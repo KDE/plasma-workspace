@@ -383,14 +383,16 @@ class ClipboardTest(unittest.TestCase):
         """
         A cell has both image data and text data, which should not be ignored when images are ignored.
         """
-        new_text = "clip thin"
+        utf8_text = "你好世界"
+        ascii_text = "helloworld"
         pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 256, 256)
         pixbuf.fill(0xff0000ff)
         content_image = Gdk.ContentProvider.new_for_bytes("image/png", Gdk.Texture.new_for_pixbuf(pixbuf).save_to_png_bytes())
-        content_text = Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(new_text, "utf-8")))
-        content_union = Gdk.ContentProvider.new_union([content_text, content_image])
+        content_text = Gdk.ContentProvider.new_for_bytes("text/plain;charset=utf-8", GLib.Bytes.new(bytes(utf8_text, "utf-8")))
+        content_asciitext = Gdk.ContentProvider.new_for_bytes("text/plain;charset=ANSI_X3.4-1968", GLib.Bytes.new(bytes(ascii_text, "ANSI_X3.4-1968")))
+        content_union = Gdk.ContentProvider.new_union([content_text, content_asciitext, content_image])
         app.gtk_copy(content_union)
-        app.driver.find_element(AppiumBy.NAME, new_text)
+        app.driver.find_element(AppiumBy.NAME, utf8_text)
 
     def test_5_2_bug496331_secret_password_hint(self) -> None:
         """
