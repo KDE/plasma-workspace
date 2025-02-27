@@ -197,7 +197,7 @@ X11AutoHideScreenEdge::X11AutoHideScreenEdge(PanelView *view)
 {
     xcb_connection_t *connection = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection();
 
-    const QByteArray atomName = QByteArrayLiteral("_KDE_NET_WM_SCREEN_EDGE_SHOW");
+    constexpr QByteArrayView atomName("_KDE_NET_WM_SCREEN_EDGE_SHOW");
     xcb_intern_atom_cookie_t cookie = xcb_intern_atom_unchecked(connection, false, atomName.length(), atomName.constData());
     xcb_intern_atom_reply_t *reply = xcb_intern_atom_reply(connection, cookie, nullptr);
     if (reply) {
