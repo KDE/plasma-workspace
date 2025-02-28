@@ -45,13 +45,11 @@ using namespace NotificationManager;
 class SingleColumnConcatenateTables : public QConcatenateTablesProxyModel
 {
 public:
-    SingleColumnConcatenateTables(QObject *parent = nullptr)
-        : QConcatenateTablesProxyModel(parent)
-    {
-    }
+    using QConcatenateTablesProxyModel::QConcatenateTablesProxyModel;
 
     int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
+        Q_UNUSED(parent)
         return 1;
     }
 };
