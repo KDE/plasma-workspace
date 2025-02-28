@@ -241,6 +241,7 @@ Item {
 
                 KeyNavigation.down: backButton.KeyNavigation.down
                 KeyNavigation.left: configureButton.visible ? configureButton : configureButton.KeyNavigation.left
+                KeyNavigation.tab: hiddenItemsView.visible ? hiddenItemsView.layout : container.currentItem?.nextItemInFocusChain() ?? null
 
                 PlasmaComponents.ToolTip {
                     text: parent.text
