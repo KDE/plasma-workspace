@@ -50,6 +50,13 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
                 mimeDataList.emplace_back(s_imageFormat, std::move(data), QString::fromLatin1(hash.result().toHex()));
             }
         } else {
+            if (format.startsWith(s_plainTextPrefix)) {
+                const QStringView encoding = QStringView(format).sliced(s_plainTextPrefix.size());
+                if (encoding.compare(u"utf-8", Qt::CaseInsensitive)) {
+                    // Qt clipboard doesn't support other encodings.
+                    continue;
+                }
+            }
             data = mimeData->data(format);
             if (data.size() > 20 * 1000 * 1000) {
                 // Skip anything greater than 20MB because we don't want too
