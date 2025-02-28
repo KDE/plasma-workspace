@@ -18,6 +18,18 @@ namespace Plasma
 {
 class DBusMessage;
 
+/*!
+    \qmltype DBusConnection
+    \inherits QtObject
+    \inqmlmodule org.kde.plasma.workspace.dbus
+
+    \brief The DBusConnection class provides an interface to interact with the D-Bus system.
+
+    This class allows for asynchronous method calls on D-Bus services, and provides the ability to
+    automatically parse method signatures from introspection data.
+
+    \sa SessionBus, SystemBus
+*/
 class DBusConnection : public QObject
 {
     Q_OBJECT
@@ -33,15 +45,25 @@ public:
         \a message The DBusMessage object that contains information about the D-Bus method call.
 
         \qml
-        SessionBus.asyncCall({
-            "service": "org.kde.KSplash",
-            "path": "/KSplash",
-            "iface": "org.kde.KSplash",
-            "member": "setStage",
-            "signature": "s",
-            "arguments": [new DBus.string("break")],
+        // Get the current wallpaper
+        const pendingReply = SessionBus.asyncCall({
+            "service": "org.kde.plasmashell",
+            "path": "/PlasmaShell",
+            "iface": "org.kde.PlasmaShell",
+            "member": "wallpaper",
+            "signature": "(u)",
+            "arguments": [
+                new DBus.uint32(0)
+            ],
+        })
+        pendingReply.finished.connect(() => {
+            console.log("Current wallpaper is", pendingReply.value["wallpaperPlugin"])
+            pendingReply.destroy()
         })
         \endqml
+
+        \note You need to destroy the pending reply object manually in QML
+        if you connect to the \c finished signal.
     */
     Q_INVOKABLE DBusPendingReply *asyncCall(const DBusMessage &message);
 
@@ -56,17 +78,19 @@ public:
         \qml
         const promise = new Promise((resolve, reject) => {
             SessionBus.asyncCall({
-                "service": "org.kde.KSplash",
-                "path": "/KSplash",
-                "iface": "org.kde.KSplash",
-                "member": "setStage",
-                "signature": "s",
-                "arguments": [new DBus.string("break")],
+                "service": "org.kde.plasmashell",
+                "path": "/PlasmaShell",
+                "iface": "org.kde.PlasmaShell",
+                "member": "wallpaper",
+                "signature": "(u)",
+                "arguments": [
+                    new DBus.uint32(0)
+                ],
             }, resolve, reject)
         }).then((result) => {
-            ...
-        }).catch((error) => {
-            ...
+            console.log("Current wallpaper is", result.value["wallpaperPlugin"])
+        }).catch((result) => {
+            console.warn("Failed to get the current wallpaper:", result.error.message)
         })
         \endqml
     */
@@ -94,7 +118,21 @@ protected:
     This class inherits from DBusConnection and provides a way to interact with the session bus.
 
     \qml
-        SessionBus.asyncCall(message)
+        // Get the current wallpaper
+        const pendingReply = SessionBus.asyncCall({
+            "service": "org.kde.plasmashell",
+            "path": "/PlasmaShell",
+            "iface": "org.kde.PlasmaShell",
+            "member": "wallpaper",
+            "signature": "(u)",
+            "arguments": [
+                new DBus.uint32(0)
+            ],
+        })
+        pendingReply.finished.connect(() => {
+            console.log("Current wallpaper is", pendingReply.value["wallpaperPlugin"])
+            pendingReply.destroy()
+        })
     \endqml
 
     \sa SystemBus
@@ -120,7 +158,23 @@ public:
     This class inherits from DBusConnection and provides a way to interact with the system bus.
 
     \qml
-        SystemBus.asyncCall(message)
+        // Enforce a power profile
+        const pendingReply = SystemBus.asyncCall({
+            "service": "org.freedesktop.UPower.PowerProfiles",
+            "path": "/org/freedesktop/UPower/PowerProfiles",
+            "iface": "org.freedesktop.UPower.PowerProfiles",
+            "member": "HoldProfile",
+            "signature": "(sss)",
+            "arguments": [
+                "performance",
+                "A game is running",
+                "org.foo.bar",
+            ],
+        })
+        pendingReply.finished.connect(() => {
+            console.log("Cookie:", pendingReply.value)
+            pendingReply.destroy()
+        })
     \endqml
 
     \sa SessionBus
