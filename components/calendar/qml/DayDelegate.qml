@@ -183,12 +183,13 @@ PlasmaComponents.AbstractButton {
 
             Repeater {
                 id: eventIndicatorsRepeater
+                readonly property int maxDots: 5
                 model: DelegateModel {
                     model: dayStyle.dayModel
                     delegate: Rectangle {
-                        // If there are <= 3 events for the day, show them as individual dots.
+                        // If there are <= maxDots events for the day, show them as individual dots.
                         // Otherwise, show a little bar to not overflow the box.
-                        visible: eventIndicatorsRepeater.count <= 3
+                        visible: eventIndicatorsRepeater.count <= eventIndicatorsRepeater.maxDots
                         required property string eventColor
 
                         width: dayStyle.eventIndicatorsRowSize
@@ -205,7 +206,7 @@ PlasmaComponents.AbstractButton {
                 }
             }
             Rectangle {
-                visible: eventIndicatorsRepeater.count > 3
+                visible: eventIndicatorsRepeater.count > eventIndicatorsRepeater.maxDots
                 width: dayStyle.width * 0.5
                 height: dayStyle.eventIndicatorsRowSize
                 radius: height / 2
