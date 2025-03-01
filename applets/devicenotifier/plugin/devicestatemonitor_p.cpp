@@ -113,7 +113,7 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
 
     if (device.is<Solid::PortableMediaPlayer>()) {
         Solid::PortableMediaPlayer *mediaplayer = device.as<Solid::PortableMediaPlayer>();
-        if (!mediaplayer) {
+        if (mediaplayer) {
             it->isRemovable = true;
         }
     }
