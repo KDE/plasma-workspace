@@ -153,6 +153,9 @@ Q_SIGNALS:
 
     void wallpaperChanged(uint screenNum);
     void panelBeingConfiguredChanged();
+    // Emitted when the shell property is set, but before the new shell is loaded
+    void shellAboutToChange(const QString &shell);
+    // Emitted after the new shell has loaded
     void shellChanged(const QString &shell);
 
 public Q_SLOTS:
