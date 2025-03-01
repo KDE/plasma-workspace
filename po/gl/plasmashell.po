@@ -156,10 +156,9 @@ msgid "Enter Edit Mode"
 msgstr "Activar o modo de edición"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Activar o modo de edición"
+msgstr "Desactivar o modo de edición"
 
 #: main.cpp:86
 #, kde-format
