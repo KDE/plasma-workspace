@@ -33,19 +33,28 @@ DBusPendingReply *DBusConnection::asyncCall(const DBusMessage &message)
 void DBusConnection::asyncCall(const DBusMessage &message, const QJSValue &resolve, const QJSValue &reject)
 {
     auto reply = new DBusPendingReply(*this, message);
-    connect(reply, &DBusPendingReply::finished, this, [this, reply, resolve, reject] {
-        QQmlEngine::setObjectOwnership(reply, QJSEngine::JavaScriptOwnership);
-        const QJSValueList values{qjsEngine(this)->toScriptValue(reply)};
-        QJSValue ret;
-        if (reply->isValid()) {
-            ret = resolve.call(values);
-        } else {
-            ret = reject.call(values);
-        }
-        if (ret.isError()) {
-            qCWarning(DBUSPLUGIN_DEBUG) << ret.toString();
-        }
-    });
+    // The connection to DBusPendingReply::finished needs to be single shot
+    // so the JS engine can garbage collect the pending reply object.
+    // Otherwise the callback object still has a reference to the pending reply object,
+    // and the callback object will not get GC'd because the slot still keeps a copy of it.
+    connect(
+        reply,
+        &DBusPendingReply::finished,
+        this,
+        [this, reply, resolve, reject] {
+            QQmlEngine::setObjectOwnership(reply, QJSEngine::JavaScriptOwnership);
+            const QJSValueList values{qjsEngine(this)->toScriptValue(reply)};
+            QJSValue ret;
+            if (reply->isValid()) {
+                ret = resolve.call(values);
+            } else {
+                ret = reject.call(values);
+            }
+            if (ret.isError()) {
+                qCWarning(DBUSPLUGIN_DEBUG) << ret.toString();
+            }
+        },
+        Qt::SingleShotConnection);
 }
 
 QByteArray DBusConnection::parseSignatureFromIntrospection(QStringView introspection, const DBusMessage &message)
