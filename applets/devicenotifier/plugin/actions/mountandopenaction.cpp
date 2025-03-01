@@ -126,10 +126,10 @@ void MountAndOpenAction::triggered()
     Solid::Device device(m_udi);
     if (!m_hasStorageAccess || !m_stateMonitor->isRemovable(m_udi) || m_isRoot || !m_stateMonitor->isMounted(m_udi)) {
         auto access = device.as<Solid::StorageAccess>();
-        if (!m_stateMonitor->isChecked(m_udi) && access->canCheck()) {
+        if (access && !m_stateMonitor->isChecked(m_udi) && access->canCheck()) {
             connect(m_stateMonitor.get(), &DevicesStateMonitor::stateChanged, this, &MountAndOpenAction::deviceStateChanged);
             access->check();
-        } else if (m_stateMonitor->isChecked(m_udi) && m_stateMonitor->needRepair(m_udi)) {
+        } else if (access && m_stateMonitor->isChecked(m_udi) && m_stateMonitor->needRepair(m_udi)) {
             access->repair();
         } else {
             ActionInterface::triggered();
