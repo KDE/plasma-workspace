@@ -66,14 +66,6 @@ ListView {
         (currentItem as DaysCalendar).repeater.itemAt(0).forceActiveFocus(Qt.TabFocusReason);
     }
 
-    function finishChangeIfNeeded() {
-        // Finish the date change if we're already moving, to prevent issues where it won't change if we press
-        // the next/previous buttons too quickly.
-        if (verticalVelocity != 0.0) {
-            handleDateChange((verticalVelocity < 0.0) ? -1 : 1);
-        }
-    }
-
     function resetViewPosition() {
         currentIndex = 1;
         positionViewAtIndex(currentIndex, ListView.Beginning);
@@ -92,32 +84,32 @@ ListView {
         return false; // return false because we need to change date either for first drag or for view changed by some means other than drag
     }
 
-    function handleDateChange(direction) {
-        if (handleDrag()) {
-            return;
-        }
-        if (changeDate) {
-            if (direction < 0) {
-                previousView();
-            } else {
-                nextView();
-            }
-        } else {
-            changeDate = true;
-        }
-        resetViewPosition();
-    }
-
     // These signal handlers animate the view. They are the only ones through which date (and should as well) changes.
     onAtYEndChanged: {
         if (atYEnd) {
-            handleDateChange(1);
+            if (handleDrag()) {
+                return;
+            }
+            if (changeDate) {
+                nextView();
+            } else {
+                changeDate = true;
+            }
+            resetViewPosition();
         }
     }
 
     onAtYBeginningChanged: {
         if (atYBeginning) {
-            handleDateChange(-1);
+            if (handleDrag()) {
+                return;
+            }
+            if (changeDate) {
+                previousView();
+            } else {
+                changeDate = true;
+            }
+            resetViewPosition();
         }
     }
 
