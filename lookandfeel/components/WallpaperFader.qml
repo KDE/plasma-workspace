@@ -47,9 +47,9 @@ Item {
             textureMirroring: ShaderEffectSource.NoMirroring
         }
 
-        readonly property real contrast: 0.65 * wallpaperFader.factor + (1 - wallpaperFader.factor)
-        readonly property real saturation: 1.6 * wallpaperFader.factor + (1 - wallpaperFader.factor)
-        readonly property real intensity: (wallpaperFader.lightColorScheme ? 1.7 : 0.6) * wallpaperFader.factor + (1 - wallpaperFader.factor)
+        readonly property real contrast: 0.8 * wallpaperFader.factor + (1 - wallpaperFader.factor)
+        readonly property real saturation: 1.5 * wallpaperFader.factor + (1 - wallpaperFader.factor)
+        readonly property real intensity: (wallpaperFader.lightColorScheme ? 1.6 : 0.7) * wallpaperFader.factor + (1 - wallpaperFader.factor)
 
         readonly property real transl: (1.0 - contrast) / 2.0;
         readonly property real rval: (1.0 - saturation) * 0.2126;
