@@ -2,19 +2,20 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Thanomsub Noppaburana <donga.nb@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-12-01 01:39+0000\n"
-"PO-Revision-Date: 2010-02-11 23:33+0700\n"
-"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
-"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2025-03-01 14:54+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: killrunner.cpp:27
@@ -45,17 +46,17 @@ msgstr "ยุติการทำงานของ %1"
 #: killrunner.cpp:86
 #, kde-format
 msgid "Process ID: %1"
-msgstr ""
+msgstr "Process ID: %1"
 
 #: killrunner_config.cpp:25
 #, kde-format
 msgid "CPU usage"
-msgstr "การใช้ตัวประมวลผลกลาง"
+msgstr "การใช้ CPU"
 
 #: killrunner_config.cpp:26
 #, kde-format
 msgid "inverted CPU usage"
-msgstr "กลับค่าการใช้ตัวประมวลผลกลาง"
+msgstr "กลับค่าการใช้ CPU"
 
 #: killrunner_config.cpp:27
 #, kde-format
