@@ -15,6 +15,7 @@ static const QString EXTRA_ITEMS_KEY = QStringLiteral("extraItems");
 static const QString SHOW_ALL_ITEMS_KEY = QStringLiteral("showAllItems");
 static const QString SHOWN_ITEMS_KEY = QStringLiteral("shownItems");
 static const QString HIDDEN_ITEMS_KEY = QStringLiteral("hiddenItems");
+static const QString DISABLED_SNIS_KEY = QStringLiteral("disabledStatusNotifiers");
 
 SystemTraySettings::SystemTraySettings(KConfigLoader *config, QObject *parent)
     : QObject(parent)
@@ -75,6 +76,11 @@ void SystemTraySettings::removeEnabledPlugin(const QString &pluginId)
     Q_EMIT enabledPluginsChanged({}, {pluginId});
 }
 
+bool SystemTraySettings::isDisabledStatusNotifier(const QString &pluginId)
+{
+    return m_disabledStatusNotifiers.contains(pluginId);
+}
+
 bool SystemTraySettings::isShowAllItems() const
 {
     return config->property(SHOW_ALL_ITEMS_KEY).toBool();
@@ -119,6 +125,7 @@ void SystemTraySettings::loadConfig()
         m_extraItems = extraItems;
         notifyAboutChangedEnabledPlugins(extraItemsOld, m_extraItems);
     }
+    m_disabledStatusNotifiers = config->property(DISABLED_SNIS_KEY).toStringList();
 
     Q_EMIT configurationChanged();
 }

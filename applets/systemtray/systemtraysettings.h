@@ -31,6 +31,8 @@ public:
     void addEnabledPlugin(const QString &pluginId);
     void removeEnabledPlugin(const QString &pluginId);
 
+    bool isDisabledStatusNotifier(const QString &pluginId);
+
     bool isShowAllItems() const;
     const QStringList shownItems() const;
     const QStringList hiddenItems() const;
@@ -51,4 +53,5 @@ private:
     bool updatingConfigValue = false;
     QStringList m_extraItems;
     QStringList m_knownItems;
+    QStringList m_disabledStatusNotifiers;
 };

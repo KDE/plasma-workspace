@@ -25,6 +25,7 @@ KCMUtils.ScrollViewKCM {
     property var cfg_shownItems: []
     property var cfg_hiddenItems: []
     property var cfg_extraItems: []
+    property var cfg_disabledStatusNotifiers: []
     property alias cfg_showAllItems: showAllCheckBox.checked
 
     function categoryName(category) {
@@ -43,8 +44,34 @@ KCMUtils.ScrollViewKCM {
         }
     }
 
-    header: Kirigami.SearchField {
-        id: filterField
+    // Frameless style for the InlineMessage is not visually compatible here
+    header: ColumnLayout {
+        spacing: Kirigami.Units.smallSpacing
+
+        Kirigami.SearchField {
+            Layout.fillWidth: true
+            id: filterField
+        }
+
+        Kirigami.InlineMessage {
+            id: disablingSniMessage
+            property string appName
+
+            function showWithAppName(appName: string) {
+                disablingSniMessage.appName = appName
+                visible = true;
+            }
+
+            Layout.fillWidth: true
+            type: Kirigami.MessageType.Warning
+            text: xi18nc("@info:usagetip", "Look for a setting in <application>%1</application> to disable its tray icon before doing it here. Some apps’ tray icons were not designed to be disabled, and using this setting may cause them to behave unexpectedly.<nl/><nl/>Use this setting at your own risk, and do not report issues to KDE or the app’s author.", appName)
+            actions: [
+                Kirigami.Action {
+                    text: i18nc("@action:button", "I understand the risks")
+                    onTriggered: disablingSniMessage.visible = false;
+                }
+            ]
+        }
     }
 
     view: ListView {
@@ -140,6 +167,7 @@ KCMUtils.ScrollViewKCM {
                     }
 
                     QQC2.Label {
+                        id: nameLabel
                         Layout.fillWidth: true
                         text: model.display
                         textFormat: Text.PlainText
@@ -156,10 +184,15 @@ KCMUtils.ScrollViewKCM {
 
                         property real contentWidth: Math.max(implicitBackgroundWidth + leftInset + rightInset,
                                                             implicitContentWidth + leftPadding + rightPadding)
+                        readonly property bool shown:    cfg_showAllItems || cfg_shownItems.indexOf(itemId) !== -1
+                        readonly property bool hidden:   cfg_hiddenItems.indexOf(itemId) !== -1
+                        readonly property bool disabled: (isPlasmoid && cfg_extraItems.indexOf(itemId) === -1)
+                                                      || (!isPlasmoid && cfg_disabledStatusNotifiers.indexOf(itemId) > -1)
+
                         implicitWidth: Math.max(contentWidth, itemsList.visibilityColumnWidth)
                         Component.onCompleted: itemsList.visibilityColumnWidth = Math.max(implicitWidth, itemsList.visibilityColumnWidth)
 
-                        enabled: (!showAllCheckBox.checked || isPlasmoid) && itemId
+                        enabled: !cfg_showAllItems && itemId
                         textRole: "text"
                         valueRole: "value"
                         model: comboBoxModel()
@@ -167,11 +200,11 @@ KCMUtils.ScrollViewKCM {
                         currentIndex: {
                             let value
 
-                            if (cfg_shownItems.indexOf(itemId) !== -1) {
+                            if (shown) {
                                 value = "shown"
-                            } else if (cfg_hiddenItems.indexOf(itemId) !== -1) {
+                            } else if (hidden) {
                                 value = "hidden"
-                            } else if (isPlasmoid && cfg_extraItems.indexOf(itemId) === -1) {
+                            } else if (disabled) {
                                 value = "disabled"
                             } else {
                                 value = "auto"
@@ -190,6 +223,7 @@ KCMUtils.ScrollViewKCM {
                             const shownIndex = cfg_shownItems.indexOf(itemId)
                             const hiddenIndex = cfg_hiddenItems.indexOf(itemId)
                             const extraIndex = cfg_extraItems.indexOf(itemId)
+                            const disabledSniIndex = cfg_disabledStatusNotifiers.indexOf(itemId)
 
                             switch (currentValue) {
                             case "auto":
@@ -199,8 +233,10 @@ KCMUtils.ScrollViewKCM {
                                 if (hiddenIndex > -1) {
                                     cfg_hiddenItems.splice(hiddenIndex, 1)
                                 }
-                                if (extraIndex === -1) {
+                                if (isPlasmoid && extraIndex === -1) {
                                     cfg_extraItems.push(itemId)
+                                } else if (!isPlasmoid && disabledSniIndex > -1) {
+                                    cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1)
                                 }
                                 break
                             case "shown":
@@ -210,8 +246,10 @@ KCMUtils.ScrollViewKCM {
                                 if (hiddenIndex > -1) {
                                     cfg_hiddenItems.splice(hiddenIndex, 1)
                                 }
-                                if (extraIndex === -1) {
+                                if (isPlasmoid && extraIndex === -1) {
                                     cfg_extraItems.push(itemId)
+                                } else if (!isPlasmoid && disabledSniIndex > -1) {
+                                    cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1)
                                 }
                                 break
                             case "hidden":
@@ -221,8 +259,10 @@ KCMUtils.ScrollViewKCM {
                                 if (hiddenIndex === -1) {
                                     cfg_hiddenItems.push(itemId)
                                 }
-                                if (extraIndex === -1) {
+                                if (isPlasmoid && extraIndex === -1) {
                                     cfg_extraItems.push(itemId)
+                                } else if (!isPlasmoid && disabledSniIndex > -1) {
+                                    cfg_disabledStatusNotifiers.splice(disabledSniIndex, 1)
                                 }
                                 break
                             case "disabled":
@@ -232,8 +272,11 @@ KCMUtils.ScrollViewKCM {
                                 if (hiddenIndex > -1) {
                                     cfg_hiddenItems.splice(hiddenIndex, 1)
                                 }
-                                if (extraIndex > -1) {
+                                if (isPlasmoid && extraIndex >= -1) {
                                     cfg_extraItems.splice(extraIndex, 1)
+                                } else if (!isPlasmoid && disabledSniIndex === -1) {
+                                    disablingSniMessage.showWithAppName(nameLabel.text)
+                                    cfg_disabledStatusNotifiers.push(itemId)
                                 }
                                 break
                             }
@@ -247,17 +290,9 @@ KCMUtils.ScrollViewKCM {
                             const disabledElement = {"value": "disabled", "text": i18n("Disabled")}
 
                             if (showAllCheckBox.checked) {
-                                if (isPlasmoid) {
-                                    return [autoElement, disabledElement]
-                                } else {
-                                    return [shownElement]
-                                }
+                                return [autoElement, disabledElement]
                             } else {
-                                if (isPlasmoid) {
-                                    return [autoElement, shownElement, hiddenElement, disabledElement]
-                                } else {
-                                    return [autoElement, shownElement, hiddenElement]
-                                }
+                                return [autoElement, shownElement, hiddenElement, disabledElement]
                             }
                         }
                     }
