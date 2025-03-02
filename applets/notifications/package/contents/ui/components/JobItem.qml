@@ -39,6 +39,7 @@ ColumnLayout {
         id: speedChart
         width: jobItem.width
         modelInterface: jobItem.modelInterface
+        expanded: expandButton.checked
     }
 
     RowLayout {

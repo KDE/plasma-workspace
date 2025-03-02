@@ -1,5 +1,6 @@
 /*
-    SPDX-FileCopyrightText: 2024 Méven Car <meven@kde.org>
+    SPDX-FileCopyrightText: 2025 Méven Car <meven@kde.org>
+    SPDX-FileCopyrightText: 2025 Arjen Hiemstra <ahiemstra@heimr.nl>
 
     SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
@@ -20,6 +21,7 @@ Item {
     id: root
 
     property ModelInterface modelInterface
+    property bool expanded
 
     property int speed
     property int averageSpeed
@@ -65,11 +67,13 @@ Item {
         text: KCoreAddons.Format.formatByteSize(910131) + i18n("/s")
     }
 
-    Item {
+    Loader {
         id: chartContainer
 
+        active: dataSource.count >= 2 && expanded
+        visible: active
+
         anchors.fill: parent
-        visible: dataSource.count >= 2
 
         ChartsControls.AxisLabels {
             id: axisLabels
@@ -203,7 +207,7 @@ Item {
             dataSource.appendSpeed(modelInterface.jobDetails.processedBytes, modelInterface.jobDetails.speed)
 
             root.speed = modelInterface.jobDetails.speed
-            root.averageSpeed = modelInterface.jobDetails.processedBytes / modelInterface.jobDetails.elapsedTime;
+            root.averageSpeed = modelInterface.jobDetails.processedBytes / modelInterface.jobDetails.elapsedTime * 1000;
         }
     }
 
