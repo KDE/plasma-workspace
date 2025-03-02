@@ -127,6 +127,7 @@ Item {
      * calendar view displayed.
      */
     function nextView() {
+        swipeView.currentItem.finishChangeIfNeeded();
         swipeView.currentItem.resetViewPosition();
         swipeView.currentItem.incrementCurrentIndex();
     }
@@ -136,6 +137,7 @@ Item {
      * calendar view displayed.
      */
     function previousView() {
+        swipeView.currentItem.finishChangeIfNeeded();
         swipeView.currentItem.resetViewPosition();
         swipeView.currentItem.decrementCurrentIndex();
     }
