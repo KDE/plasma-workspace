@@ -64,7 +64,7 @@ Item {
         visible: false
         font: Kirigami.Theme.smallFont
         // Measure 888.8 KiB/s
-        text: KCoreAddons.Format.formatByteSize(910131) + i18n("/s")
+        text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", 910131)
     }
 
     Loader {
@@ -89,7 +89,7 @@ Item {
             direction: ChartsControls.AxisLabels.VerticalBottomTop
 
             delegate: PlasmaComponents3.Label {
-                text: KCoreAddons.Format.formatByteSize(ChartsControls.AxisLabels.label) + i18n("/s")
+                text:  i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(ChartsControls.AxisLabels.label))
                 font: Kirigami.Theme.smallFont
             }
 
@@ -177,7 +177,7 @@ Item {
                 }
                 PlasmaComponents3.Label {
                     font: Kirigami.Theme.smallFont
-                    text: KCoreAddons.Format.formatByteSize(root.speed) + i18n("/s")
+                    text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(root.speed))
                 }
             }
 
@@ -188,7 +188,7 @@ Item {
                 }
                 PlasmaComponents3.Label {
                     font: Kirigami.Theme.smallFont
-                    text: KCoreAddons.Format.formatByteSize(root.averageSpeed) + i18n("/s")
+                    text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Bytes per second", "%1/s", KCoreAddons.Format.formatByteSize(root.averageSpeed))
                 }
             }
         }

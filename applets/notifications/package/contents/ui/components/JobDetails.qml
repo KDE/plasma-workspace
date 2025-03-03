@@ -145,6 +145,6 @@ GridLayout {
                                            KCoreAddons.Format.formatByteSize(modelInterface.jobDetails.speed)) : ""
         font: Kirigami.Theme.smallFont
         textFormat: Text.PlainText
-        visible: text !== ""
+        visible: text !== "" && !(percentage > 0 && modelInterface.jobDetails.elapsedTime > 0) // SpeedChart should be visible then
     }
 }
