@@ -33,6 +33,7 @@ Name[ko]=글꼴 설치기
 Name[lt]=Šriftų diegimo programa
 Name[lv]=Fontu instalētājs
 Name[ml]=അക്ഷരസഞ്ചയ ഇൻസ്റ്റാളർ
+Name[nb]=Skriftinstallering
 Name[nl]=Lettertype-installatie
 Name[nn]=Skrift­installering
 Name[pa]=ਫੋਂਟ ਇੰਸਟਾਲਰ
@@ -87,6 +88,7 @@ Name[ko]=시스템 전역 글꼴을 관리합니다.
 Name[lt]=Tvarkyti sistemos masto šriftus.
 Name[lv]=Pārvaldīt sistēmas fontus
 Name[ml]=സിസ്റ്റമാകമാനം ഫോണ്ടുകൾ നിയന്ത്രിക്കുക.
+Name[nb]=Håndter skrifter for hele systemet.
 Name[nl]=Beheer van systeembrede lettertypen.
 Name[nn]=Handsam skrifter for heile systemet.
 Name[pa]=ਸਿਸਟਮ ਦੇ ਫੋਂਟਾਂ ਦਾ ਇੰਤਜ਼ਾਮ ਕਰੋ।
@@ -138,6 +140,7 @@ Description[ko]=시스템 전역 글꼴 설정을 수정하려면 권한이 필�
 Description[lt]=Norint modifikuoti sistemos masto šriftų konfigūraciją, reikia tam tikrų teisių.
 Description[lv]=Sistēmas fontu konfigurācijas pārvaldībai ir nepieciešamas attiecīgas atļaujas.
 Description[ml]=സിസ്റ്റം-വൈഡ് അക്ഷരസഞ്ചയ ക്രമീകരണം പരിഷ്ക്കരിക്കുന്നതിന് പ്രത്യേകാവകാശങ്ങൾ ആവശ്യമാണ്.
+Description[nb]=Du trenger utvidet rettigheter for å kunne endre innstillingene for skriftene på hele systemet.
 Description[nl]=Wijzigen van de systeembrede lettertypen vereist rechten.
 Description[nn]=Du treng utvida løyve for å kunna endra innstillingane for skriftene på heile systemet.
 Description[pa]=ਪੂਰੀ ਸਿਸਟਮ ਲਈ ਫੋਂਟ ਸੰਰਚਨਾ ਬਦਲਣ ਲਈ ਅਧਿਕਾਰਾਂ ਦੀ ਲੋੜ ਹੈ।

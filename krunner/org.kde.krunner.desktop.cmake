@@ -105,6 +105,7 @@ Name[ko]=클립보드 내용에서 명령 실행하기
 Name[lt]=Vykdyti komandas su iškarpinės turiniu
 Name[lv]=Palaist komandu ar starpliktuves vienumu
 Name[ml]=ഓര്‍മ്മചെപ്പ് ഉള്ളടക്കങ്ങളിൽ ആജ്ഞ പ്രവർത്തിപ്പിക്കുക
+Name[nb]=Kjør kommando på innholdet i utklippstavla
 Name[nl]=Commando uitvoeren op klembordinhoud
 Name[nn]=Køyr kommando på innhaldet på utklippstavla
 Name[pa]=ਕਲਿੱਪਬੋਡ ਸਮੱਗਰੀ ਉੱਤੇ ਕਮਾਂਡ ਚਲਾਓ
