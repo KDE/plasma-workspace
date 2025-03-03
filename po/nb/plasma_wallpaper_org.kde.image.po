@@ -6,14 +6,14 @@ msgstr ""
 "Project-Id-Version: plasma_wallpaper_image\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-22 02:28+0000\n"
-"PO-Revision-Date: 2024-03-09 12:45+0100\n"
-"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
+"PO-Revision-Date: 2025-03-02 11:56+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -22,12 +22,12 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Bjørn Steensrud,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
 #: imagepackage/contents/ui/config.qml:94
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "Plassering:"
 #: imagepackage/contents/ui/config.qml:97
 #, kde-format
 msgid "Scaled and Cropped"
-msgstr ""
+msgstr "Skalert og beskåret"
 
 #: imagepackage/contents/ui/config.qml:101
 #, kde-format
@@ -67,28 +67,28 @@ msgstr "Bakgrunn:"
 #: imagepackage/contents/ui/config.qml:142
 #, kde-format
 msgid "Blur"
-msgstr ""
+msgstr "Uklar"
 
 #: imagepackage/contents/ui/config.qml:151
 #, kde-format
 msgid "Solid color"
-msgstr ""
+msgstr "Ensfarget"
 
 #: imagepackage/contents/ui/config.qml:161
 #, kde-format
 msgid "Select Background Color"
-msgstr ""
+msgstr "Velg bakgrunnsfarge"
 
 #: imagepackage/contents/ui/config.qml:207
 #, kde-format
 msgid "Add Image…"
-msgstr ""
+msgstr "Legg til bilde …"
 
 #: imagepackage/contents/ui/config.qml:213
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:257
 #, kde-format
 msgid "Get New Wallpapers…"
-msgstr ""
+msgstr "Hent nye bakgrunnsbilder …"
 
 #: imagepackage/contents/ui/main.qml:66
 #, kde-format
@@ -103,7 +103,7 @@ msgstr "Neste bakgrunnsbilde"
 #: imagepackage/contents/ui/WallpaperDelegate.qml:34
 #, kde-format
 msgid "Open Containing Folder"
-msgstr ""
+msgstr "Åpne overmappa"
 
 #: imagepackage/contents/ui/WallpaperDelegate.qml:40
 #, kde-format
@@ -119,7 +119,7 @@ msgstr "Fjern bakgrunnsbilde"
 #, kde-format
 msgid ""
 "This tool allows you to set an image as the wallpaper for the Plasma session."
-msgstr ""
+msgstr "Her kan du velge et bakgrunnsbilde for Plasma-økta."
 
 #: plasma-apply-wallpaperimage.cpp:31
 #, kde-format
@@ -127,6 +127,8 @@ msgid ""
 "An image file or an installed wallpaper kpackage that you wish to set as the "
 "wallpaper for your Plasma session"
 msgstr ""
+"En bildefil eller en installert KPackage for bakgrunnsbilde som du ønsker å "
+"bruke som bakgrunnsbilde i Plasma-økta"
 
 #: plasma-apply-wallpaperimage.cpp:45
 #, kde-format
@@ -135,22 +137,26 @@ msgid ""
 "contact the author of the wallpaper to fix this, or rename the file "
 "yourself: %1"
 msgstr ""
+"Det er en apostrof (') i filnavnet til bakgrunnsbildet. Ta kontakt med "
+"opphavspersonen til bakgrunnsbildet og be hen rette dette, eller gi nytt "
+"navn til fila selv: %1"
 
 #: plasma-apply-wallpaperimage.cpp:85
 #, kde-format
 msgid "An error occurred while attempting to set the Plasma wallpaper:\n"
-msgstr ""
+msgstr "Det oppstod en feil ved valg av bakgrunnsbilde for Plasma:\n"
 
 #: plasma-apply-wallpaperimage.cpp:89
 #, kde-format
 msgid ""
 "Successfully set the wallpaper for all desktops to the KPackage based %1"
 msgstr ""
+"Bakgrunnsbildet for alle skrivebordene er nå satt til den KPackage-baserte %1"
 
 #: plasma-apply-wallpaperimage.cpp:91
 #, kde-format
 msgid "Successfully set the wallpaper for all desktops to the image %1"
-msgstr ""
+msgstr "Bakgrunnsbildet for alle skrivebordene er nå satt til bildefila %1"
 
 #: plasma-apply-wallpaperimage.cpp:97
 #, kde-format
@@ -158,6 +164,8 @@ msgid ""
 "The file passed to be set as wallpaper does not exist, or we cannot identify "
 "it as a wallpaper: %1"
 msgstr ""
+"Den valgte fila for bakgrunnsbilde finnes ikke, eller så er den ikke en "
+"bildefil: %1"
 
 #: plugin/finder/packagefinder.cpp:148
 #, kde-format
@@ -172,7 +180,7 @@ msgstr "Mappe med bakgrunnsbilder å vise lysbilder fra"
 #: plugin/imagebackend.cpp:350
 #, kde-format
 msgid "Open Image"
-msgstr "Åpne bildet"
+msgstr "Åpne bilde"
 
 #: plugin/imagebackend.cpp:350
 #, kde-format
@@ -182,37 +190,37 @@ msgstr "Bildefiler"
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:38
 #, kde-format
 msgid "Order:"
-msgstr ""
+msgstr "Rekkefølge:"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:45
 #, kde-format
 msgid "Random"
-msgstr ""
+msgstr "Tilfeldig"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:49
 #, kde-format
 msgid "A to Z"
-msgstr ""
+msgstr "A til Å"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:53
 #, kde-format
 msgid "Z to A"
-msgstr ""
+msgstr "Å til A"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:57
 #, kde-format
 msgid "Date modified (newest first)"
-msgstr ""
+msgstr "Dato endret (nyeste først)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:61
 #, kde-format
 msgid "Date modified (oldest first)"
-msgstr ""
+msgstr "Dato endret (eldste først)"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:86
 #, kde-format
 msgid "Group by folders"
-msgstr ""
+msgstr "Grupper etter mapper"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:98
 #, kde-format
@@ -223,44 +231,44 @@ msgstr "Bytt bilde hver:"
 #, kde-format
 msgid "%1 hour"
 msgid_plural "%1 hours"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 time"
+msgstr[1] "%1 timer"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:128
 #, kde-format
 msgid "%1 minute"
 msgid_plural "%1 minutes"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 minutt"
+msgstr[1] "%1 minutter"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:148
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 sekund"
+msgstr[1] "%1 sekunder"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:162
 #, kde-format
 msgid "Folders"
-msgstr ""
+msgstr "Mapper"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:220
 #, kde-format
 msgid "Remove Folder"
-msgstr ""
+msgstr "Fjern mappe"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:225
 #, kde-format
 msgid "Open Folder"
-msgstr ""
+msgstr "Åpne mappe"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:235
 #, kde-format
 msgid "There are no wallpaper locations configured"
-msgstr ""
+msgstr "Ingen mapper for bakgrunnsbilder er satt opp"
 
 #: slideshowpackage/contents/ui/SlideshowComponent.qml:250
 #, kde-format
 msgid "Add Folder…"
-msgstr ""
+msgstr "Legg til mappe …"

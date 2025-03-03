@@ -6,15 +6,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-02 02:34+0000\n"
-"PO-Revision-Date: 2015-04-28 14:02+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-02 12:40+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -22,17 +22,17 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Bjørn Steensrud"
+msgstr "Bjørn Steensrud,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "bjornst@skogkatt.homelinux.org"
+msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
 #: currentcontainmentactionsmodel.cpp:205
 #, kde-format
 msgid "Configure Mouse Actions Plugin"
-msgstr ""
+msgstr "Tillegg for oppsett av musehandlinger"
 
 #: main.cpp:88
 #, kde-format
@@ -65,20 +65,20 @@ msgid ""
 "Load plasmashell as a standalone application, needs the shell-plugin option "
 "to be specified"
 msgstr ""
-"Last inn plasmashell som et frittstående program, trenger at valget skall-"
-"modul er oppgitt"
+"Last inn plasmashell som et frittstående program (trenger at valget «shell-"
+"plugin» er oppgitt)"
 
 #: main.cpp:113
 #, kde-format
 msgid "Replace an existing instance"
-msgstr ""
+msgstr "Erstatt en eksisterende instans"
 
 #: main.cpp:116
 #, kde-format
 msgid ""
 "Enables test mode and specifies the layout javascript file to set up the "
 "testing environment"
-msgstr ""
+msgstr "Slår på testmodus og velger JavaScript-fil for utforming av testmiljø"
 
 #: main.cpp:117
 #, kde-format
@@ -88,12 +88,12 @@ msgstr "fil"
 #: main.cpp:121
 #, kde-format
 msgid "Lists the available options for user feedback"
-msgstr ""
+msgstr "Vis tilgjengelige valg for tilbakemeldinger"
 
 #: main.cpp:221
 #, kde-format
 msgid "Plasma Failed To Start"
-msgstr ""
+msgstr "Klarte ikke starte Plasma"
 
 #: main.cpp:222
 #, kde-format
@@ -102,6 +102,9 @@ msgid ""
 "fallback\n"
 "Please check that your graphic drivers are set up correctly."
 msgstr ""
+"Kan ikke starte Plasma, fordi programmet ikke klarer å bruke OpenGL 2 eller "
+"programvarebasert resevereløsning på rett vis.\n"
+"Se til at skjermkortdriverne er satt skikkelig opp."
 
 #: osd.cpp:54
 #, kde-format
@@ -113,7 +116,7 @@ msgstr "Dempet lyd"
 #, kde-format
 msgctxt "OSD informing that the microphone is muted, keep short"
 msgid "Microphone Muted"
-msgstr ""
+msgstr "Dempet mikrofon"
 
 #: osd.cpp:88
 #, kde-format
@@ -125,49 +128,49 @@ msgstr "%1 dempet"
 #, kde-format
 msgctxt "touchpad was enabled, keep short"
 msgid "Touchpad On"
-msgstr ""
+msgstr "Styreplate på"
 
 #: osd.cpp:112
 #, kde-format
 msgctxt "touchpad was disabled, keep short"
 msgid "Touchpad Off"
-msgstr ""
+msgstr "Styreplate av"
 
 #: osd.cpp:119
 #, kde-format
 msgctxt "wireless lan was enabled, keep short"
 msgid "Wifi On"
-msgstr ""
+msgstr "Trådløs på"
 
 #: osd.cpp:121
 #, kde-format
 msgctxt "wireless lan was disabled, keep short"
 msgid "Wifi Off"
-msgstr ""
+msgstr "Trådløs av"
 
 #: osd.cpp:128
 #, kde-format
 msgctxt "Bluetooth was enabled, keep short"
 msgid "Bluetooth On"
-msgstr ""
+msgstr "Bluetooth på"
 
 #: osd.cpp:130
 #, kde-format
 msgctxt "Bluetooth was disabled, keep short"
 msgid "Bluetooth Off"
-msgstr ""
+msgstr "Bluetooth av"
 
 #: osd.cpp:137
 #, kde-format
 msgctxt "mobile internet was enabled, keep short"
 msgid "Mobile Internet On"
-msgstr ""
+msgstr "Mobil tilkobling på"
 
 #: osd.cpp:139
 #, kde-format
 msgctxt "mobile internet was disabled, keep short"
 msgid "Mobile Internet Off"
-msgstr ""
+msgstr "Mobil tilkobling av"
 
 #: osd.cpp:147
 #, kde-format
@@ -175,7 +178,7 @@ msgctxt ""
 "on screen keyboard was enabled because physical keyboard got unplugged, keep "
 "short"
 msgid "On-Screen Keyboard Activated"
-msgstr ""
+msgstr "Skjermtastatur på"
 
 #: osd.cpp:150
 #, kde-format
@@ -183,68 +186,68 @@ msgctxt ""
 "on screen keyboard was disabled because physical keyboard was plugged in, "
 "keep short"
 msgid "On-Screen Keyboard Deactivated"
-msgstr ""
+msgstr "Skjermtastatur av"
 
 #: shellcontainmentconfig.cpp:104
 #, kde-format
 msgid "Internal Screen on %1"
-msgstr ""
+msgstr "Intern skjerm på %1"
 
 #: shellcontainmentconfig.cpp:108
 #, kde-format
 msgctxt "Screen manufacturer and model on connector"
 msgid "%1 %2 on %3"
-msgstr ""
+msgstr "%1 %2 på %3"
 
 #: shellcontainmentconfig.cpp:132
 #, kde-format
 msgid "Disconnected Screen %1"
-msgstr ""
+msgstr "Frakoblet skjerm %1"
 
 #: shellcorona.cpp:176 shellcorona.cpp:178
 #, kde-format
 msgid "Show Desktop"
-msgstr ""
+msgstr "Vis skrivebord"
 
 #: shellcorona.cpp:178
 #, kde-format
 msgid "Hide Desktop"
-msgstr ""
+msgstr "Skjul skrivebord"
 
 #: shellcorona.cpp:193
 #, kde-format
 msgid "Show Activity Switcher"
-msgstr ""
+msgstr "Vis aktivitetsbytter"
 
 #: shellcorona.cpp:203
 #, kde-format
 msgid "Stop Current Activity"
-msgstr "Stopp nåværende aktivitet"
+msgstr "Stopp gjeldende aktivitet"
 
 #: shellcorona.cpp:210
 #, kde-format
 msgid "Switch to Previous Activity"
-msgstr ""
+msgstr "Bytt til forrige aktivitet"
 
 #: shellcorona.cpp:217
 #, kde-format
 msgid "Switch to Next Activity"
-msgstr ""
+msgstr "Bytt til neste aktivitet"
 
 #: shellcorona.cpp:232
 #, kde-format
 msgid "Activate Task Manager Entry %1"
-msgstr ""
+msgstr "Gå til oppføring %1 på oppgavelinja"
 
 #: shellcorona.cpp:258
 #, kde-format
 msgid "Manage Desktops And Panels..."
-msgstr ""
+msgstr "Håndter skrivebord og panel …"
 
 #: shellcorona.cpp:279
 #, kde-format
 msgid "Move keyboard focus between panels"
-msgstr ""
+msgstr "Flytt tastaturfokus mellom panel"
 
 #: shellcorona.cpp:1923
 #, kde-format
@@ -255,36 +258,36 @@ msgstr "Legg til panel"
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"
-msgstr ""
+msgstr "Tom %1"
 
 #: softwarerendernotifier.cpp:27
 #, kde-format
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "Bruker programvarebasert opptegner"
 
 #: softwarerendernotifier.cpp:28
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Software Renderer In Use"
-msgstr ""
+msgstr "Bruker programvarebasert opptegner"
 
 #: softwarerendernotifier.cpp:29
 #, kde-format
 msgctxt "Tooltip telling user their GL drivers are broken"
 msgid "Rendering may be degraded"
-msgstr ""
+msgstr "Grafikkvaliteten kan være dårligere"
 
 #: softwarerendernotifier.cpp:39
 #, kde-format
 msgid "Never show again"
-msgstr ""
+msgstr "Ikke vis denne meldinga igjen"
 
 #: userfeedback.cpp:36
 #, kde-format
 msgid "Panel Count"
-msgstr ""
+msgstr "Panelantall"
 
 #: userfeedback.cpp:40
 #, kde-format
 msgid "Counts the panels"
-msgstr ""
+msgstr "Antallet på panel"

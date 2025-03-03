@@ -31,7 +31,7 @@ msgstr ""
 #: iconsizecategorymodel.cpp:14
 #, kde-format
 msgid "Main Toolbar"
-msgstr "Barra de ferramentas Principal"
+msgstr "Barra de ferramentas principal"
 
 #: iconsizecategorymodel.cpp:15
 #, kde-format
