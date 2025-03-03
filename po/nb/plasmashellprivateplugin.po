@@ -6,15 +6,15 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-04 00:42+0000\n"
-"PO-Revision-Date: 2014-09-02 20:48+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-02 12:50+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.5\n"
+"X-Generator: Lokalize 24.12.2\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -22,143 +22,143 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Bjørn Steensrud,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "bjornst@skogkatt.homelinux.org,mh306602@gmail.com"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:46
 #, kde-format
 msgctxt "Placeholder is the battery number"
 msgid "Battery %1"
-msgstr ""
+msgstr "Batteri %1"
 
 #: batterycontrol/batteriesnamesmonitor_p.cpp:48
 #, kde-format
 msgid "Battery"
-msgstr ""
+msgstr "Batteri"
 
 #: calendar/eventdatadecorator.cpp:50
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Holidays"
-msgstr ""
+msgstr "Fridager"
 
 #: calendar/eventdatadecorator.cpp:52
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Events"
-msgstr ""
+msgstr "Hendelser"
 
 #: calendar/eventdatadecorator.cpp:54
 #, kde-format
 msgctxt "Agenda listview section title"
 msgid "Todo"
-msgstr ""
+msgstr "Gjøremål"
 
 #: calendar/eventdatadecorator.cpp:56
 #, kde-format
 msgctxt "Means 'Other calendar items'"
 msgid "Other"
-msgstr ""
+msgstr "Annet"
 
 #: calendar/qml/DayDelegate.qml:95
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 hendelse"
+msgstr[1] "%1 hendelser"
 
 #: calendar/qml/DayDelegate.qml:96
 #, kde-format
 msgid "No events"
-msgstr ""
+msgstr "Ingen hendelser"
 
 #: calendar/qml/MonthViewHeader.qml:74
 #, kde-format
 msgctxt "Format: month year"
 msgid "%1 %2"
-msgstr ""
+msgstr "%1 %2"
 
 #: calendar/qml/MonthViewHeader.qml:131
 #, kde-format
 msgid "Days"
-msgstr ""
+msgstr "Dager"
 
 #: calendar/qml/MonthViewHeader.qml:137
 #, kde-format
 msgid "Months"
-msgstr ""
+msgstr "Måneder"
 
 #: calendar/qml/MonthViewHeader.qml:143
 #, kde-format
 msgid "Years"
-msgstr ""
+msgstr "År"
 
 #: calendar/qml/MonthViewHeader.qml:181
 #, kde-format
 msgid "Previous Month"
-msgstr ""
+msgstr "Forrige måned"
 
 #: calendar/qml/MonthViewHeader.qml:183
 #, kde-format
 msgid "Previous Year"
-msgstr ""
+msgstr "I fjor"
 
 #: calendar/qml/MonthViewHeader.qml:185
 #, kde-format
 msgid "Previous Decade"
-msgstr ""
+msgstr "Forrige tiår"
 
 #: calendar/qml/MonthViewHeader.qml:202
 #, kde-format
 msgctxt "Reset calendar to today"
 msgid "Today"
-msgstr ""
+msgstr "I dag"
 
 #: calendar/qml/MonthViewHeader.qml:203
 #, kde-format
 msgid "Reset calendar to today"
-msgstr ""
+msgstr "Gå til i dag"
 
 #: calendar/qml/MonthViewHeader.qml:214
 #, kde-format
 msgid "Next Month"
-msgstr ""
+msgstr "Neste måned"
 
 #: calendar/qml/MonthViewHeader.qml:216
 #, kde-format
 msgid "Next Year"
-msgstr ""
+msgstr "Neste år"
 
 #: calendar/qml/MonthViewHeader.qml:218
 #, kde-format
 msgid "Next Decade"
-msgstr ""
+msgstr "Neste tiår"
 
 #: calendar/qml/MonthViewHeader.qml:274
 #, kde-format
 msgid "Keep Open"
-msgstr ""
+msgstr "Hold åpen"
 
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:286
 #, kde-format
 msgid "Configure…"
-msgstr ""
+msgstr "Sett opp …"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
 #, kde-format
 msgid "Screen lock enabled"
-msgstr "Skjermlås slått på"
+msgstr "Skjermlås er slått på"
 
 #. i18n: ectx: whatsthis, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:11
 #, kde-format
 msgid "Sets whether the screen will be locked after the specified time."
-msgstr "Bestemmer om skjermen skal låses etter oppgitt tid."
+msgstr "Velger om skjermen skal låses etter valgt tid."
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:16
@@ -189,6 +189,9 @@ msgid ""
 "compatible with Plasma %1. Please contact the widget's author for an updated "
 "version."
 msgstr ""
+"Dette skjermelementet er laget for en eldre versjon av Plasma og er ikke "
+"kompatibelt med Plasma %1. Ta kontakt med utvikleren av skjermelementet for "
+"å skaffe en oppdatert versjon."
 
 #: shellprivate/plasmaappletitemmodel.cpp:201
 #, kde-format
@@ -196,6 +199,9 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please contact the widget's author for an updated version."
 msgstr ""
+"Dette skjermelementet er laget for Plasma versjon %1 og er ikke kompatibelt "
+"med Plasma %2. Ta kontakt med utvikleren av skjermelementet for å skaffe en "
+"oppdatert versjon."
 
 #: shellprivate/plasmaappletitemmodel.cpp:205
 #, kde-format
@@ -203,6 +209,8 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with Plasma %2. "
 "Please update Plasma in order to use the widget."
 msgstr ""
+"Dette skjermelementet er laget for Plasma versjon %1 og er ikke kompatibelt "
+"med Plasma %2. Oppdater Plasma-versjonen din for å ta elementet i bruk."
 
 #: shellprivate/plasmaappletitemmodel.cpp:210
 #, kde-format
@@ -210,116 +218,119 @@ msgid ""
 "This Widget was written for Plasma %1 and is not compatible with the latest "
 "version of Plasma. Please update Plasma in order to use the widget."
 msgstr ""
+"Dette skjermelementet er laget for Plasma versjon %1 og er ikke kompatibelt "
+"med den nyeste versjonen av Plasma. Oppdater Plasma-versjonen din for å ta "
+"elementet i bruk."
 
 #: shellprivate/widgetexplorer.cpp:109
 msgctxt "applet category"
 msgid "Accessibility"
-msgstr ""
+msgstr "Tilgjengelighet"
 
 #: shellprivate/widgetexplorer.cpp:110
 msgctxt "applet category"
 msgid "Application Launchers"
-msgstr ""
+msgstr "Programstartere"
 
 #: shellprivate/widgetexplorer.cpp:111
 msgctxt "applet category"
 msgid "Astronomy"
-msgstr ""
+msgstr "Astronomi"
 
 #: shellprivate/widgetexplorer.cpp:112
 msgctxt "applet category"
 msgid "Date and Time"
-msgstr ""
+msgstr "Dato og klokkeslett"
 
 #: shellprivate/widgetexplorer.cpp:113
 msgctxt "applet category"
 msgid "Development Tools"
-msgstr ""
+msgstr "Utviklingsverktøy"
 
 #: shellprivate/widgetexplorer.cpp:114
 msgctxt "applet category"
 msgid "Education"
-msgstr ""
+msgstr "Utdanning"
 
 #: shellprivate/widgetexplorer.cpp:115
 msgctxt "applet category"
 msgid "Environment and Weather"
-msgstr ""
+msgstr "Vær og miljø"
 
 #: shellprivate/widgetexplorer.cpp:116
 msgctxt "applet category"
 msgid "Examples"
-msgstr ""
+msgstr "Eksempler"
 
 #: shellprivate/widgetexplorer.cpp:117
 msgctxt "applet category"
 msgid "File System"
-msgstr ""
+msgstr "Filsystem"
 
 #: shellprivate/widgetexplorer.cpp:118
 msgctxt "applet category"
 msgid "Fun and Games"
-msgstr ""
+msgstr "Spill og moro"
 
 #: shellprivate/widgetexplorer.cpp:119
 msgctxt "applet category"
 msgid "Graphics"
-msgstr ""
+msgstr "Grafikk"
 
 #: shellprivate/widgetexplorer.cpp:120
 msgctxt "applet category"
 msgid "Language"
-msgstr ""
+msgstr "Språk"
 
 #: shellprivate/widgetexplorer.cpp:121
 msgctxt "applet category"
 msgid "Mapping"
-msgstr ""
+msgstr "Kartlegging"
 
 #: shellprivate/widgetexplorer.cpp:122
 msgctxt "applet category"
 msgid "Miscellaneous"
-msgstr ""
+msgstr "Diverse"
 
 #: shellprivate/widgetexplorer.cpp:123
 msgctxt "applet category"
 msgid "Multimedia"
-msgstr ""
+msgstr "Multimedia"
 
 #: shellprivate/widgetexplorer.cpp:124
 msgctxt "applet category"
 msgid "Online Services"
-msgstr ""
+msgstr "Nett-tjenester"
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Productivity"
-msgstr ""
+msgstr "Produktivitet"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "System Information"
-msgstr ""
+msgstr "Systeminformasjon"
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "Utilities"
-msgstr ""
+msgstr "Verktøy"
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Windows and Tasks"
-msgstr ""
+msgstr "Vinduer og oppgaver"
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Clipboard"
-msgstr ""
+msgstr "Utklippstavle"
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Tasks"
-msgstr ""
+msgstr "Oppgaver"
 
 #: shellprivate/widgetexplorer.cpp:146
 #, kde-format
@@ -338,7 +349,7 @@ msgctxt ""
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr ""
+msgstr "Brukerinstallerte"
 
 #: shellprivate/widgetexplorer.cpp:160
 #, kde-format
@@ -346,39 +357,39 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Nylig installerte"
 
 #: shellprivate/widgetexplorer.cpp:164
 #, kde-format
 msgid "Categories:"
-msgstr "Kategorier: "
+msgstr "Kategorier:"
 
 #: shellprivate/widgetexplorer.cpp:234
 #, kde-format
 msgid "Download New Plasma Widgets"
-msgstr "Last ned nye Plasma-elementer"
+msgstr "Last ned nye skjermelement"
 
 #: shellprivate/widgetexplorer.cpp:243
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr ""
+msgstr "Installer skjermelement fra lokal fil …"
 
 #: shellprivate/widgetexplorer.cpp:493
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Alle elementer"
+msgstr "Hent nye element"
 
 #: shellprivate/widgetexplorer.cpp:512
 #, kde-format
 msgid "Select Plasmoid File"
-msgstr "Velg plasmoidefil"
+msgstr "Velg skjermelement-fil"
 
 #: shellprivate/widgetexplorer.cpp:528
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "Klarte ikke å installere pakka %1."
+msgstr "Feil ved installering av pakken %1: %2."
 
 #: shellprivate/widgetexplorer.cpp:529
 #, kde-format
