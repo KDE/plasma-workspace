@@ -1366,6 +1366,3 @@ msgstr "Åpne fargeoppsett"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "Fargeoppsett-filer (*.colors)"
-
-#~ msgid "Choose custom accent color"
-#~ msgstr "Velg kontrastfarge"
