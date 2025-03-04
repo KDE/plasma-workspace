@@ -53,6 +53,7 @@ Name[sr@ijekavianlatin]=K‑izvođač
 Name[sr@latin]=K‑izvođač
 Name[sv]=Kör program
 Name[ta]=கேரன்னர்
+Name[th]=KRunner
 Name[tr]=K Çalıştır
 Name[uk]=KRunner
 Name[vi]=KRunner
