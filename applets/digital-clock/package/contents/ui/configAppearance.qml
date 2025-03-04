@@ -12,7 +12,7 @@ pragma ComponentBehavior: Bound
 import QtQuick
 import QtQuick.Controls as QQC2
 import QtQuick.Layouts
-import QtQuick.Dialogs as QtDialogs
+import Qt.labs.platform as Platform
 
 import org.kde.plasma.plasmoid
 import org.kde.plasma.core as PlasmaCore
@@ -277,7 +277,7 @@ KCMUtils.SimpleKCM {
                 icon.name: "settings-configure"
                 enabled: manualFontAndSizeRadioButton.checked
                 onClicked: {
-                    fontDialog.selectedFont = fontDialog.fontChosen
+                    fontDialog.currentFont = fontDialog.fontChosen
                     fontDialog.open()
                 }
             }
@@ -298,7 +298,12 @@ KCMUtils.SimpleKCM {
         }
     }
 
-    QtDialogs.FontDialog {
+    // Use the Qt.Labs font dialog so it looks okay, or else we get the half-baked
+    // QML version shipped in Qt 6, which doesn't look good.
+    // Port back to the standard QtDialogs version when one of the following happens:
+    // Qt's QML font dialog implementation looks better
+    // We override the default dialog with our own in plasma-integration
+    Platform.FontDialog {
         id: fontDialog
         title: i18nc("@title:window", "Choose a Font")
         modality: Qt.WindowModal
@@ -307,7 +312,7 @@ KCMUtils.SimpleKCM {
         property font fontChosen: Qt.font()
 
         onAccepted: {
-            fontChosen = selectedFont
+            fontChosen = font
         }
     }
 
