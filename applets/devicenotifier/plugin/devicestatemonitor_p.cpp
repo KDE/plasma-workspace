@@ -66,6 +66,7 @@ void DevicesStateMonitor::addMonitoringDevice(const QString &udi)
     if (device.is<Solid::StorageVolume>()) {
         Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
         if (access) {
+            connect(access, &Solid::StorageAccess::accessibilityChanged, this, &DevicesStateMonitor::setAccessibilityState);
             connect(access, &Solid::StorageAccess::setupRequested, this, &DevicesStateMonitor::setMountingState);
             connect(access, &Solid::StorageAccess::setupDone, this, &DevicesStateMonitor::setIdleState);
             connect(access, &Solid::StorageAccess::teardownRequested, this, &DevicesStateMonitor::setUnmountingState);
@@ -241,6 +242,16 @@ void DevicesStateMonitor::setRepairingState(const QString &udi)
     if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
         it->operationResult = Repairing;
         Q_EMIT stateChanged(udi);
+    }
+}
+
+void DevicesStateMonitor::setAccessibilityState(bool isAccessible, const QString &udi)
+{
+    if (auto it = m_devicesStates.find(udi); it != m_devicesStates.end()) {
+        if (it->isMounted != isAccessible) {
+            it->isMounted = isAccessible;
+            Q_EMIT stateChanged(udi);
+        }
     }
 }
 

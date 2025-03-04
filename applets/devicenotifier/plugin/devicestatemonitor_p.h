@@ -79,6 +79,7 @@ private:
     void updateEncryptedContainer(const QString &udi);
 
 private Q_SLOTS:
+    void setAccessibilityState(bool isAccessible, const QString &udi);
     void setMountingState(const QString &udi);
     void setUnmountingState(const QString &udi);
     void setCheckingState(const QString &udi);
