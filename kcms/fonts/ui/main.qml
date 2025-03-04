@@ -9,7 +9,6 @@
 import QtQuick 2.1
 import QtQuick.Layouts 1.1
 import QtQuick.Controls 2.0 as QtControls
-import QtQuick.Dialogs 6.3 as QtDialogs
 import org.kde.kirigami as Kirigami
 import org.kde.kcmutils as KCM
 import org.kde.config // KAuthorized
@@ -398,21 +397,6 @@ KCM.SimpleKCM {
             }
             Kirigami.ContextualHelpButton {
                 toolTipText: xi18nc("@info:tooltip Force fonts DPI", "<para>Enter your screen's DPI here to make on-screen fonts match their physical sizes when printed. Changing this option from its default value will conflict with many apps; some icons and images may not scale as expected.</para><para>To increase text size, change the size of the fonts above. To scale everything, use the scaling slider on the <interface>Display & Monitor</interface> page.</para>")
-            }
-        }
-
-        QtDialogs.FontDialog {
-            id: fontDialog
-            title: i18n("Select Font")
-            modality: Qt.WindowModal
-            property string currentCategory
-            property bool adjustAllFonts: false
-            onAccepted: {
-                if (adjustAllFonts) {
-                    kcm.adjustAllFonts()
-                } else {
-                    kcm.adjustFont(font, currentCategory)
-                }
             }
         }
     }
