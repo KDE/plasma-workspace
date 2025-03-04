@@ -35,6 +35,25 @@
 using namespace Qt::StringLiterals;
 using namespace NotificationManager;
 
+// This class is a workaround to https://bugreports.qt.io/browse/QTBUG-134210
+// and https://bugs.kde.org/show_bug.cgi?id=500749
+// if a model is added to an empty QConcatenateTablesProxyModel
+// it will report zero columns and non-zero rows, causing a data inconsistence
+// which causes an infinite recursion in NotificationFilterProxyModel::filterAcceptsRow
+// We fix the number of columns to always be 1
+// remove when the upstream bug is fixed
+class SingleColumnConcatenateTables : public QConcatenateTablesProxyModel
+{
+public:
+    using QConcatenateTablesProxyModel::QConcatenateTablesProxyModel;
+
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override
+    {
+        Q_UNUSED(parent)
+        return 1;
+    }
+};
+
 class Q_DECL_HIDDEN Notifications::Private
 {
 public:
@@ -161,7 +180,7 @@ void Notifications::Private::initProxyModels()
      */
 
     if (!notificationsAndJobsModel) {
-        notificationsAndJobsModel = new QConcatenateTablesProxyModel(q);
+        notificationsAndJobsModel = new SingleColumnConcatenateTables(q);
     }
 
     if (!filterModel) {
