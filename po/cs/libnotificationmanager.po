@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 00:42+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2023-01-06 11:21+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -109,13 +109,13 @@ msgstr "%1 z %2"
 msgid "Application closed unexpectedly."
 msgstr "Aplikace byla neočekávaně ukončena"
 
-#: notifications.cpp:844
+#: notifications.cpp:863
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
 msgstr ""
 
-#: notifications.cpp:845
+#: notifications.cpp:864
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."

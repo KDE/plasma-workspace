@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 00:42+0000\n"
+"POT-Creation-Date: 2025-03-04 00:42+0000\n"
 "PO-Revision-Date: 2024-11-04 22:07\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -121,13 +121,13 @@ msgstr "%1 з %2"
 msgid "Application closed unexpectedly."
 msgstr "Праграма нечакана закрылася."
 
-#: notifications.cpp:844
+#: notifications.cpp:863
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
 msgstr ""
 
-#: notifications.cpp:845
+#: notifications.cpp:864
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."

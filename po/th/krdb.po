@@ -3,19 +3,20 @@
 #
 # Thanomsub Noppaburana <donga_n@yahoo.com>, 2003.
 # Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
 msgid ""
 msgstr ""
 "Project-Id-Version: krdb\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-25 00:41+0000\n"
-"PO-Revision-Date: 2010-02-11 20:18+0700\n"
-"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
-"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2025-03-02 00:49+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: krdb.cpp:262
@@ -24,6 +25,8 @@ msgid ""
 "# created by KDE Plasma, %1\n"
 "#\n"
 msgstr ""
+"# สร้างโดย KDE Plasma, %1\n"
+"#\n"
 
 #, fuzzy
 #~| msgid ""

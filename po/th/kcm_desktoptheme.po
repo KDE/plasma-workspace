@@ -4,19 +4,20 @@
 #
 # Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
 # Narachai Sakorn <narachai@gmail.com>, 2008.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_desktopthemedetails\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-29 00:41+0000\n"
-"PO-Revision-Date: 2010-07-07 15:20+0700\n"
-"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
-"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2025-03-03 20:07+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. i18n: ectx: label, entry (name), group (Theme)
@@ -36,7 +37,7 @@ msgstr "ไม่สามารถจัดเก็บชุดตกแต่
 #, fuzzy, kde-format
 #| msgid "Unable to save theme."
 msgid "Unable to download the theme: %1"
-msgstr "ไม่สามารถจัดเก็บชุดตกแต่งได้"
+msgstr "ไม่สามารถจัดเก็บธีมได้"
 
 #: kcm.cpp:148
 #, kde-format
@@ -103,14 +104,14 @@ msgstr ""
 #| msgid "Available themes"
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "All themes"
-msgstr "ชุดตกแต่งต่าง ๆ ที่มีให้ใช้"
+msgstr "ธีมต่าง ๆ ที่มีให้ใช้"
 
 #: ui/main.qml:102
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgctxt "@item:inlistbox filters displayed themes"
 msgid "Light themes"
-msgstr "ชุดตกแต่ง"
+msgstr "ธีม"
 
 #: ui/main.qml:103
 #, kde-format
@@ -145,24 +146,24 @@ msgstr "ชุดสี"
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Edit Theme…"
-msgstr "ชุดตกแต่ง"
+msgstr "ธีม"
 
 #: ui/main.qml:173
 #, kde-format
 msgid "Remove Theme"
-msgstr "ลบชุดตกแต่งออก"
+msgstr "ลบธีมออก"
 
 #: ui/main.qml:180
 #, fuzzy, kde-format
 #| msgid "Remove Theme"
 msgid "Restore Theme"
-msgstr "ลบชุดตกแต่งออก"
+msgstr "ลบธีมออก"
 
 #: ui/main.qml:199
 #, fuzzy, kde-format
 #| msgid "Theme"
 msgid "Open Theme"
-msgstr "ชุดตกแต่ง"
+msgstr "ธีม"
 
 #: ui/main.qml:201
 #, kde-format

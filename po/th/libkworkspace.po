@@ -4,33 +4,30 @@
 #
 # Sahachart Anukulkitch <drrider@gmail.com>, 2007.
 # Thanomsub Noppaburana <donga.nb@gmail.com>, 2008.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
 msgid ""
 msgstr ""
 "Project-Id-Version: libkworkspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-06 01:42+0000\n"
-"PO-Revision-Date: 2008-12-14 20:04+0700\n"
-"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
-"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2025-03-02 10:59+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 0.2\n"
+"X-Generator: Lokalize 24.12.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: kdisplaymanager.cpp:768
-#, fuzzy, kde-format
-#| msgctxt "user: ..."
-#| msgid "%1: TTY login"
+#, kde-format
 msgctxt "user: …"
 msgid "%1: TTY login"
-msgstr "ผู้ใช้ %1: ล็อกอินทางเทอร์มินัล"
+msgstr "%1: ล็อกอินทางเทอร์มินัล"
 
 #: kdisplaymanager.cpp:773
-#, fuzzy, kde-format
-#| msgctxt "... location (TTY or X display)"
-#| msgid "Unused"
+#, kde-format
 msgctxt "… location (TTY or X display)"
 msgid "Unused"
 msgstr "ไม่ได้ใช้"
@@ -41,12 +38,10 @@ msgid "X login on remote host"
 msgstr "ล็อกอิน X บนเครื่องทางไกล"
 
 #: kdisplaymanager.cpp:774
-#, fuzzy, kde-format
-#| msgctxt "... host"
-#| msgid "X login on %1"
+#, kde-format
 msgctxt "… host"
 msgid "X login on %1"
-msgstr "ล็อกอิน X บนเครื่อง %1"
+msgstr "ล็อกอิน X บน %1"
 
 #: kdisplaymanager.cpp:776
 #, kde-format
