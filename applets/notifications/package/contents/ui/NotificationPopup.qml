@@ -167,7 +167,7 @@ NotificationsApplet.NotificationWindow {
                 from: timer.interval
                 to: 0
                 duration: timer.interval
-                running: timer.running && Kirigami.Units.longDuration > 1
+                running: timer.running
             }
 
             contentItem: Delegates.DelegatePopup {
