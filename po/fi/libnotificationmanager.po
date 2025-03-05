@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 02:31+0000\n"
+"POT-Creation-Date: 2025-03-05 03:13+0000\n"
 "PO-Revision-Date: 2023-03-14 22:06+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -102,13 +102,13 @@ msgstr "%1 työstä %2"
 msgid "Application closed unexpectedly."
 msgstr "Sovellus sulkeutui odottamatta."
 
-#: notifications.cpp:844
+#: notifications.cpp:863
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
 msgstr ""
 
-#: notifications.cpp:845
+#: notifications.cpp:864
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."

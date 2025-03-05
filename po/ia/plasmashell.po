@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-24 11:24+0000\n"
-"PO-Revision-Date: 2025-01-08 15:41+0100\n"
+"PO-Revision-Date: 2025-03-04 15:51+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -154,10 +154,9 @@ msgid "Enter Edit Mode"
 msgstr "Entra modo de modificar"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Entra modo de modificar"
+msgstr "Exi modo de modificar"
 
 #: main.cpp:86
 #, kde-format
