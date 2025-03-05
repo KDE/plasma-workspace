@@ -1,0 +1,50 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-07-19 00:41+0000\n"
+"PO-Revision-Date: 2025-03-04 14:48+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 24.12.2\n"
+
+#: package/contents/config/config.qml:9
+#, kde-format
+msgid "Appearance"
+msgstr "รูปลักษณ์"
+
+#: package/contents/config/config.qml:14
+#, kde-format
+msgid "%1 Details"
+msgstr "%1 รายละเอียด"
+
+#: package/contents/config/config.qml:20
+#, kde-format
+msgid "Sensors Details"
+msgstr "รายละเอียดเซนเซอร์"
+
+#: package/contents/ui/main.qml:62
+#, kde-format
+msgid "System Monitor"
+msgstr "System Monitor"
+
+#: package/contents/ui/main.qml:63
+#, kde-format
+msgctxt "Sensor name: value"
+msgid "%1: %2"
+msgstr "%1: %2"
+
+#: package/contents/ui/main.qml:86
+#, kde-format
+msgctxt "@action"
+msgid "Open System Monitor…"
+msgstr "เปิด System Monitor…"

@@ -1,0 +1,59 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-07-20 00:41+0000\n"
+"PO-Revision-Date: 2025-03-02 11:09+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 24.12.2\n"
+
+#: main.cpp:32
+#, kde-format
+msgid "Session Management"
+msgstr "การจัดการเซสชัน"
+
+#: main.cpp:39
+#, kde-format
+msgctxt "@action"
+msgid "Show Logout Screen"
+msgstr "แสดงหน้าจอออกจากระบบ"
+
+#: main.cpp:48
+#, kde-format
+msgid "Log Out"
+msgstr "ออกจากระบบ"
+
+#: main.cpp:54
+#, kde-format
+msgid "Shut Down"
+msgstr "ปิดเครื่อง"
+
+#: main.cpp:60
+#, kde-format
+msgid "Reboot"
+msgstr "รีบูต"
+
+#: main.cpp:68
+#, kde-format
+msgid "Log Out Without Confirmation"
+msgstr "ออกจากระบบโดยไม่ต้องยืนยัน"
+
+#: main.cpp:74
+#, kde-format
+msgid "Shut Down Without Confirmation"
+msgstr "ปิดเครื่องโดยไม่ได้รับการยืนยัน"
+
+#: main.cpp:80
+#, kde-format
+msgid "Reboot Without Confirmation"
+msgstr "รีบูตโดยไม่ต้องยืนยัน"
