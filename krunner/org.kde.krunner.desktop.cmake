@@ -120,6 +120,7 @@ Name[sk]=Spustiť príkaz na obsahu schránky
 Name[sl]=Zaženi ukaz na vsebini odložišča
 Name[sv]=Kör kommando med klippbordets innehåll
 Name[ta]=பிடிப்புப்பலகையின் உள்ளடக்கம் மீது கட்டளையை இயக்கு
+Name[th]=เรียกใช้คําสั่งบนเนื้อหาคลิปบอร์ด
 Name[tr]=Pano içeriğinde komut çalıştır
 Name[uk]=Виконати команду над вмістом буфера обміну
 Name[vi]=Chạy lệnh với nội dung bảng nháp

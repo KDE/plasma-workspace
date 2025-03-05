@@ -57,6 +57,7 @@ Name[sr@latin]=Plasma, radni prostor površi
 Name[sv]=Plasma arbetsområde för skrivbordet
 Name[ta]=பிளாஸ்மா பணிமேடை
 Name[tg]=Фазои мизи кории Плазма
+Name[th]=พื้นที่ทำงานเดสก์ท็อป Plasma
 Name[tr]=Plasma Masaüstü Çalışma Alanı
 Name[uk]=Робочий простір Плазми для комп’ютерів
 Name[vi]=Không gian bàn làm việc Plasma
