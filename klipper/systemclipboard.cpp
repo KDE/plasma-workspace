@@ -29,8 +29,10 @@
 
 #include "../c_ptr.h"
 #include "config-X11.h"
+#include "databaseutils.h"
 #include "historyitem.h"
 #include "klipper_debug.h"
+#include "klippersettings.h"
 #include "updateclipboardjob.h"
 #include <wayland-client-core.h>
 
@@ -117,15 +119,15 @@ DatabaseRecordToMimeDataJob::~DatabaseRecordToMimeDataJob()
 
 void DatabaseRecordToMimeDataJob::start()
 {
-    QSqlDatabase db = QSqlDatabase::database(u"klipper"_s);
-    if (!db.isOpen()) [[unlikely]] {
+    std::optional<QSqlDatabase> db = DatabaseUtils::openDatabase(KlipperSettings::keepClipboardContents() ? DatabaseUtils::LocalFile : DatabaseUtils::Memory);
+    if (!db.has_value()) [[unlikely]] {
         setError(UserDefinedError);
-        setErrorText(db.lastError().text());
+        setErrorText(u"Unable to open database"_s);
         emitResult();
         return;
     }
 
-    QSqlQuery query(db);
+    QSqlQuery query(db.value());
     query.exec(u"SELECT mimetype,data_uuid FROM aux WHERE uuid='%1'"_s.arg(m_uuid));
     while (query.next()) {
         const QString mimeType = query.value(0).toString();

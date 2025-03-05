@@ -103,7 +103,7 @@ Klipper::Klipper(QObject *parent)
     /*
      * Load configuration settings
      */
-    loadSettings();
+    loadSettings(true);
 
     m_clearHistoryAction = m_collection->addAction(QStringLiteral("clear-history"));
     m_clearHistoryAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-clear-history")));
@@ -246,7 +246,7 @@ void Klipper::slotStartShowTimer()
     m_showTimer.start();
 }
 
-void Klipper::loadSettings()
+void Klipper::loadSettings(bool firstTime)
 {
     m_bReplayActionInHistory = KlipperSettings::replayActionInHistory();
     // NOTE: not used atm - kregexpeditor is not ported to kde4
@@ -256,7 +256,9 @@ void Klipper::loadSettings()
     // this will cause it to loadSettings too
     setURLGrabberEnabled(m_bURLGrabber);
 
-    m_historyModel->loadSettings();
+    if (!firstTime) {
+        m_historyModel->loadSettings();
+    }
 }
 
 void Klipper::saveSettings() const

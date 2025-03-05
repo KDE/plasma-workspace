@@ -25,6 +25,7 @@
 #include <KMessageBox>
 
 #include "config-klipper.h"
+#include "databaseutils.h"
 #include "historyitem.h"
 #include "klipper_debug.h"
 #include "klippersettings.h"
@@ -123,7 +124,7 @@ HistoryModel::HistoryModel()
         return;
     }
 
-    loadSettings();
+    loadSettings(true);
     if (!loadHistory()) [[unlikely]] {
         return;
     }
@@ -174,8 +175,6 @@ HistoryModel::HistoryModel()
 HistoryModel::~HistoryModel()
 {
     if (!m_bKeepContents) {
-        m_db.close();
-        QFile(m_db.databaseName()).remove();
         QDir(m_dbFolder + u"/data").removeRecursively();
     }
 }
@@ -498,61 +497,19 @@ bool HistoryModel::insert(const QString &text)
 
 bool HistoryModel::loadHistory()
 {
-    constexpr const char *failedLoadWarning = "Failed to load history resource. Clipboard history cannot be read.";
     // don't use "appdata", klipper is also a kicker applet
-    if (qEnvironmentVariableIsSet("KLIPPER_DATABASE")) {
-        m_dbFolder = QFileInfo(qEnvironmentVariable("KLIPPER_DATABASE")).absoluteDir().absolutePath();
-    } else {
-        m_dbFolder = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper";
-    }
+    m_dbFolder = DatabaseUtils::databaseFolder();
     QDir dataDir(m_dbFolder + u"/data");
+    if (dataDir.exists() && !m_bKeepContents) {
+        dataDir.removeRecursively();
+    }
     dataDir.mkpath(dataDir.absolutePath());
 
-    // Try to reuse the previous connection
-    m_db = QSqlDatabase::database(u"klipper"_s);
-    if (!m_db.isValid()) [[likely]] {
-        m_db = QSqlDatabase::addDatabase(u"QSQLITE"_s, u"klipper"_s);
-        m_db.setHostName(u"localhost"_s);
-        if (qEnvironmentVariableIsSet("KLIPPER_DATABASE")) {
-            m_db.setDatabaseName(qEnvironmentVariable("KLIPPER_DATABASE"));
-        } else {
-            m_db.setDatabaseName(m_dbFolder + u"/history3.sqlite");
-        }
-    }
-    if (!m_db.isOpen() && !m_db.open()) {
-        qCWarning(KLIPPER_LOG) << failedLoadWarning << m_db.lastError().text();
+    std::optional<QSqlDatabase> db = DatabaseUtils::openDatabase(m_bKeepContents ? DatabaseUtils::LocalFile : DatabaseUtils::Memory);
+    if (!db.has_value()) {
         return false;
     }
-
-    QSqlQuery query(m_db);
-    query.exec(u"PRAGMA journal_mode=WAL"_s);
-    // The main table only stores text data
-    query.exec(
-        u"CREATE TABLE IF NOT EXISTS main (uuid char(40) PRIMARY KEY, added_time REAL NOT NULL CHECK (added_time > 0), last_used_time REAL CHECK (last_used_time > 0), mimetypes TEXT NOT NULL, text NTEXT, starred BOOLEAN)"_s);
-    // The aux table stores data index
-    query.exec(u"CREATE TABLE IF NOT EXISTS aux (uuid char(40) NOT NULL, mimetype TEXT NOT NULL, data_uuid char(40) NOT NULL, PRIMARY KEY (uuid, mimetype))"_s);
-    // Save the latest version number
-    query.exec(u"CREATE TABLE IF NOT EXISTS version (db_version INT NOT NULL)"_s);
-    constexpr int currentDBVersion = 3;
-    if (query.exec(u"SELECT db_version FROM version"_s) && query.isSelect() && query.next() /* has a record */) {
-        if (query.value(0).toInt() != currentDBVersion) {
-            return false;
-        }
-    } else if (!query.exec(u"INSERT INTO version (db_version) VALUES (%1)"_s.arg(QString::number(currentDBVersion)))) {
-        qCWarning(KLIPPER_LOG) << failedLoadWarning << m_db.lastError().text();
-        return false;
-    }
-
-    if (!m_bKeepContents) {
-        QSqlQuery clearQuery(m_db);
-        clearQuery.exec(u"DELETE FROM main"_s);
-        clearQuery.exec(u"DELETE FROM aux"_s);
-        clearQuery.exec(u"VACUUM"_s);
-        if (dataDir.exists()) {
-            dataDir.removeRecursively();
-            dataDir.mkpath(dataDir.absolutePath());
-        }
-    }
+    m_db = db.value();
 
     if (m_maxSize == 0) {
         return true;
@@ -560,6 +517,7 @@ bool HistoryModel::loadHistory()
 
     // The last row is either items.size() - 1 or m_maxSize - 1.
     decltype(m_items) items;
+    QSqlQuery query(m_db);
     if (query.exec(u"SELECT * FROM main ORDER BY last_used_time DESC, added_time DESC LIMIT %1"_s.arg(QString::number(m_maxSize))) && query.isSelect()) {
         items.reserve(std::max(query.size(), 1));
         while (query.next()) {
@@ -589,14 +547,13 @@ bool HistoryModel::saveClipboardHistory()
     return query.exec();
 }
 
-void HistoryModel::loadSettings()
+void HistoryModel::loadSettings(bool firstTime)
 {
     setMaxSize(KlipperSettings::maxClipItems());
     m_displayImages = !KlipperSettings::ignoreImages();
     m_bNoNullClipboard = KlipperSettings::preventEmptyClipboard();
     // 0 is the id of "Ignore selection" radiobutton
     m_bIgnoreSelection = KlipperSettings::ignoreSelection();
-    m_bKeepContents = KlipperSettings::keepClipboardContents();
     m_bSynchronize = KlipperSettings::syncClipboards();
     m_bSelectionTextOnly = KlipperSettings::selectionTextOnly();
 
@@ -606,10 +563,36 @@ void HistoryModel::loadSettings()
         disconnect(m_clip.get(), &SystemClipboard::receivedEmptyClipboard, this, &HistoryModel::slotReceivedEmptyClipboard);
     }
 
-    // BUG: 142882
-    // Security: If user has save clipboard turned off, old data should be deleted from disk
-    if (!m_bKeepContents) {
-        clear();
+    if (!firstTime && m_bKeepContents != KlipperSettings::keepClipboardContents()) {
+        m_bKeepContents = KlipperSettings::keepClipboardContents();
+        // BUG: 142882
+        // Security: If user has save clipboard turned off, old data should be deleted from disk
+        if (!m_bKeepContents) {
+            clear();
+            saveClipboardHistory();
+            std::optional<QSqlDatabase> db = DatabaseUtils::openDatabase(DatabaseUtils::Memory);
+            if (db.has_value()) {
+                m_db.close();
+                m_db = db.value();
+                QSqlDatabase::removeDatabase(DatabaseUtils::databaseConnectionName(DatabaseUtils::LocalFile));
+            }
+        } else {
+            std::optional<QSqlDatabase> db = DatabaseUtils::migrate(DatabaseUtils::MemToFile);
+            if (db.has_value()) {
+                m_db.close();
+                m_db = db.value();
+                QSqlDatabase::removeDatabase(DatabaseUtils::databaseConnectionName(DatabaseUtils::Memory));
+            } else {
+                std::optional<QSqlDatabase> db = DatabaseUtils::openDatabase(DatabaseUtils::LocalFile);
+                if (db.has_value()) {
+                    m_db.close();
+                    m_db = db.value();
+                    QSqlDatabase::removeDatabase(DatabaseUtils::databaseConnectionName(DatabaseUtils::Memory));
+                }
+            }
+        }
+    } else {
+        m_bKeepContents = KlipperSettings::keepClipboardContents();
     }
 }
 
