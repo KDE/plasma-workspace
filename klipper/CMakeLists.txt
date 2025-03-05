@@ -5,6 +5,7 @@ set(libklipper_common_SRCS
     klipper.cpp
     urlgrabber.cpp urlgrabber.h
     configdialog.cpp configdialog.h
+    databaseutils.cpp
     historycycler.cpp historycycler.h
     historyitem.cpp historyitem.h
     historymodel.cpp

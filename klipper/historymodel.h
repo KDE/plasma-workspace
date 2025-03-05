@@ -90,7 +90,7 @@ public:
     bool loadHistory();
     bool saveClipboardHistory();
 
-    void loadSettings();
+    void loadSettings(bool firstTime = false);
 
     int pendingJobs() const;
 

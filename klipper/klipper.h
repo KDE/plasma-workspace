@@ -112,7 +112,7 @@ private Q_SLOTS:
 
     void slotStartShowTimer();
 
-    void loadSettings();
+    void loadSettings(bool firstTime = false);
 
 private:
     static void updateTimestamp();

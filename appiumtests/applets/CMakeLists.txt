@@ -31,6 +31,13 @@ add_test(
 )
 set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 ENVIRONMENT "QT_QPA_PLATFORM=wayland;GDK_BACKEND=wayland")
 
+# Disable "Save history across desktop sessions"
+add_test(
+    NAME clipboardtest_in_memory_database
+    COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/clipboardtest.py
+)
+set_tests_properties(clipboardtest PROPERTIES TIMEOUT 300 ENVIRONMENT "QT_QPA_PLATFORM=wayland;GDK_BACKEND=wayland;USE_IN_MEMORY_DATABASE=1")
+
 add_test(
     NAME devicenotifiertest
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/devicenotifiertest.py --failfast

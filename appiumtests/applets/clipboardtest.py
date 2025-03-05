@@ -8,6 +8,7 @@ import base64
 import logging
 import os
 import shutil
+import sqlite3
 import subprocess
 import sys
 import tempfile
@@ -36,6 +37,7 @@ from gi.repository import Gdk, GdkPixbuf, Gio, GLib, Gtk
 
 WIDGET_ID: Final = "org.kde.plasma.clipboard"
 KDE_VERSION: Final = 6
+USE_IN_MEMORY_DATABASE: Final = os.getenv("USE_IN_MEMORY_DATABASE", "0") == "1"
 
 
 class TestApplication(Gtk.Application):
@@ -197,8 +199,15 @@ class ClipboardTest(unittest.TestCase):
         """
         Tests the widget can be opened and the history can be loaded
         """
-        app.driver.find_element(AppiumBy.NAME, "Fushan Wen")
-        app.driver.find_element(AppiumBy.NAME, "clipboard")
+        INIT_LIST: Final = ("clipboard", "Fushan Wen")
+        if USE_IN_MEMORY_DATABASE:
+            self.update_config("General", "KeepClipboardContents", "false")
+            for new_text in INIT_LIST:
+                content_text = Gdk.ContentProvider.new_for_bytes("text/plain;charset=utf-8", GLib.Bytes.new(bytes(new_text, "utf-8")))
+                app.gtk_copy(content_text)
+
+        for text in INIT_LIST:
+            app.driver.find_element(AppiumBy.NAME, text)
 
         self.assertEqual(app.klipper_proxy.getClipboardContents(), "Fushan Wen")
 
@@ -331,7 +340,8 @@ class ClipboardTest(unittest.TestCase):
         app.spin()
         self.assertTrue(app.klipper_updated_event.is_set())
         self.assertFalse(element.is_displayed())
-        self.assertNotEqual(last_modified, os.stat(app.klipper_data_file).st_mtime)
+        if not USE_IN_MEMORY_DATABASE:
+            self.assertNotEqual(last_modified, os.stat(app.klipper_data_file).st_mtime)
 
     def update_config(self, group: str | list[str], key: str | list[str], new_value: str | list[str]) -> None:
         if isinstance(group, str):
@@ -536,14 +546,36 @@ class ClipboardTest(unittest.TestCase):
         memory_usage_after = int(subprocess.check_output(["ps", "-o", "rss", "-C", "plasmawindowed"]).decode("utf-8").strip().split("\n")[1])
         logging.info(f"before: {memory_usage_before} after: {memory_usage_after} diff: {memory_usage_after - memory_usage_before}")
 
+    @unittest.skipIf(USE_IN_MEMORY_DATABASE, "Alreadying using in-memory database")
     def test_8_bug492170_disable_history_across_session(self) -> None:
         """
         Clips should not be saved across desktop sessions when "Save history across desktop sessions" is disabled.
         """
-        app.klipper_proxy.setClipboardContents("(s)", "appiumtest")
-        app.driver.find_element(AppiumBy.NAME, "appiumtest")
+        text = "appiumtest"
+        app.klipper_proxy.setClipboardContents("(s)", text)
+        app.driver.find_element(AppiumBy.NAME, text)
         self.update_config("General", "KeepClipboardContents", "false")
         app.driver.find_element(AppiumBy.NAME, "Clipboard is empty")
+
+        # Test database migration from memory to local file after "Save history across desktop sessions" is enabled again
+        content_text = Gdk.ContentProvider.new_for_bytes("text/plain;charset=utf-8", GLib.Bytes.new(bytes(text, "utf-8")))
+        app.gtk_copy(content_text)
+        app.driver.find_element(AppiumBy.NAME, text)
+
+        self.update_config("General", "KeepClipboardContents", "true")
+        app.driver.find_element(AppiumBy.NAME, text)
+        with sqlite3.connect(os.path.join(GLib.get_user_data_dir(), "klipper", "history3.sqlite")) as con:
+            cur = con.cursor()
+            uuid = "8ba7db6f7d8967a481f5a2dc6c9a16150de5b58d"
+            res = cur.execute("SELECT uuid,text FROM main").fetchall()
+            self.assertEqual(res[0][0], uuid)
+            self.assertEqual(res[0][1], text)
+            res = cur.execute("SELECT uuid,data_uuid,mimetype FROM aux").fetchall()
+            self.assertEqual(res[0][0], uuid)
+            self.assertEqual(res[0][1], uuid)
+            self.assertEqual(res[0][2], "text/plain;charset=utf-8")
+        klipper_data_folder = os.path.join(GLib.get_user_data_dir(), "klipper", "data")
+        self.assertIn(uuid, os.listdir(klipper_data_folder))
 
 
 if __name__ == '__main__':
