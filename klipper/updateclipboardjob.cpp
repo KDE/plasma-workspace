@@ -17,7 +17,8 @@
 #include <QUrl>
 
 #include <KIO/MkdirJob>
-#include <KIO/StoredTransferJob>
+
+#include "mimedatabase.h"
 
 using namespace Qt::StringLiterals;
 
@@ -82,6 +83,7 @@ UpdateDatabaseJob::UpdateDatabaseJob(QObject *parent,
                                      qreal timestamp)
     : KCompositeJob(parent)
     , m_db(database)
+    , m_mimedb(MimeDatabase::self())
     , m_uuid(uuid)
     , m_text(text)
     , m_formats(formats)
@@ -147,9 +149,10 @@ void UpdateDatabaseJob::onDataDirReady(KJob *job)
             // Different mimetypes can refer to the same content. Often happens between text/plain;charset=utf-8 and text/plain
             if (QStringView uuid(data.uuid); !addedUuidList.contains(uuid)) {
                 addedUuidList.insert(uuid);
-                KIO::StoredTransferJob *fileJob =
-                    KIO::storedPut(data.data, QUrl::fromLocalFile(QString(m_dataDir + m_uuid + u'/' + data.uuid)), -1, KIO::HideProgressInfo);
-                addSubjob(fileJob);
+                if (KJob *fileJob = m_mimedb->asyncWrite(m_uuid, data)) {
+                    // When using in-memory database the data is written synchronously
+                    addSubjob(fileJob);
+                }
             }
         }
     }

@@ -14,6 +14,7 @@ set(libklipper_common_SRCS
     editactiondialog.cpp
     editcommanddialog.cpp
     clipcommandprocess.cpp
+    mimedatabase.cpp
     updateclipboardjob.cpp
     utils.cpp
     systemclipboard.cpp

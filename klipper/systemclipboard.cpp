@@ -23,7 +23,6 @@
 #include <QWidget>
 
 #include <KCompositeJob>
-#include <KIO/FileJob>
 #include <KWindowSystem>
 #include <kurlmimedata.h>
 
@@ -33,6 +32,7 @@
 #include "historyitem.h"
 #include "klipper_debug.h"
 #include "klippersettings.h"
+#include "mimedatabase.h"
 #include "updateclipboardjob.h"
 #include <wayland-client-core.h>
 
@@ -103,12 +103,14 @@ public:
 private:
     void slotResult(KJob *job) override;
 
+    std::shared_ptr<MimeDatabase> m_mimedb;
     QString m_uuid;
     std::list<std::pair<QString /*type*/, QByteArray /*data*/>> m_mimeDataList;
 };
 
 DatabaseRecordToMimeDataJob::DatabaseRecordToMimeDataJob(QObject *parent, const std::shared_ptr<const HistoryItem> &data)
     : KCompositeJob(parent)
+    , m_mimedb(MimeDatabase::self())
     , m_uuid(data->uuid())
 {
 }
@@ -135,14 +137,9 @@ void DatabaseRecordToMimeDataJob::start()
         if (mimeType.isEmpty() || dataUuid.isEmpty()) {
             continue;
         }
-        const QString dataPath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + u"/klipper/data/" + m_uuid + u'/' + dataUuid;
-        auto job = KIO::open(QUrl::fromLocalFile(dataPath), QIODevice::ReadOnly);
-        connect(job, &KIO::FileJob::open, this, [this, job, mimeType] {
-            connect(job, &KIO::FileJob::data, this, [this, job, mimeType](KJob *, const QByteArray &data) {
-                m_mimeDataList.emplace_back(mimeType, data);
-                job->close();
-            });
-            job->read(job->size());
+        auto job = m_mimedb->asyncRead(m_uuid, dataUuid);
+        connect(job, &ReadJob::data, this, [this, mimeType](const QByteArray &data) {
+            m_mimeDataList.emplace_back(mimeType, data);
         });
         addSubjob(job);
     }

@@ -10,6 +10,7 @@
 
 class QMimeData;
 class QSqlDatabase;
+class MimeDatabase;
 
 inline constexpr QLatin1String s_imageFormat("image/png");
 inline constexpr QLatin1String s_plainTextPrefix("text/plain;charset=");
@@ -58,6 +59,7 @@ private:
     void slotResult(KJob *job) override;
 
     QSqlDatabase *m_db = nullptr;
+    std::shared_ptr<MimeDatabase> m_mimedb;
     QString m_uuid;
     QString m_text;
     QStringList m_formats;

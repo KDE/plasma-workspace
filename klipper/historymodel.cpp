@@ -20,7 +20,6 @@
 #include <QSqlQuery>
 #include <QStandardPaths>
 
-#include <KIO/DeleteJob>
 #include <KLocalizedString>
 #include <KMessageBox>
 
@@ -117,7 +116,7 @@ std::shared_ptr<HistoryModel> HistoryModel::self()
 HistoryModel::HistoryModel()
     : QAbstractListModel(nullptr)
     , m_clip(SystemClipboard::self())
-    , m_displayImages(true)
+    , m_mimedb(MimeDatabase::self())
 {
     if (!QSqlDatabase::isDriverAvailable(u"QSQLITE"_s)) {
         qCCritical(KLIPPER_LOG) << "SQLITE driver isn't available";
@@ -174,9 +173,6 @@ HistoryModel::HistoryModel()
 
 HistoryModel::~HistoryModel()
 {
-    if (!m_bKeepContents) {
-        QDir(m_dbFolder + u"/data").removeRecursively();
-    }
 }
 
 void HistoryModel::clear()
@@ -187,16 +183,14 @@ void HistoryModel::clear()
     if (TransactionGuard transaction(&m_db); !transaction.exec(u"DELETE FROM main"_s) || !transaction.exec(u"DELETE FROM aux"_s)) {
         return;
     }
-    QList<QUrl> deletedDataFolders;
-    deletedDataFolders.reserve(m_items.size());
-    std::transform(m_items.cbegin(), m_items.cend(), std::back_inserter(deletedDataFolders), [this](const auto &item) {
-        return QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/');
+
+    QStringList deletedUuids;
+    deletedUuids.reserve(m_items.size());
+    std::transform(m_items.cbegin(), m_items.cend(), std::back_inserter(deletedUuids), [this](const auto &item) {
+        return item->uuid();
     });
-    auto job = KIO::del(deletedDataFolders, KIO::HideProgressInfo);
-    ++m_pendingJobs;
-    connect(job, &KJob::finished, this, [this] {
-        --m_pendingJobs;
-    });
+    m_mimedb->clear(deletedUuids, m_pendingJobs);
+
     QSqlQuery(u"VACUUM"_s, m_db).exec();
     if (!m_items.empty()) { // Is empty when m_bKeepContents is false
         beginResetModel();
@@ -339,8 +333,8 @@ bool HistoryModel::setData(const QModelIndex &index, const QVariant &value, int 
             }
         }
 
-        KIO::del(QUrl::fromLocalFile(m_dbFolder + u"/data/" + item->uuid() + u'/'), KIO::HideProgressInfo);
-        saveToFile(m_dbFolder, text.toUtf8(), newUuid, newUuid); // Must be synchronous so the clipboard can be updated immediately
+        m_mimedb->clear({item->uuid()}, m_pendingJobs);
+        m_mimedb->write(newUuid, newUuid, text.toUtf8()); // Must be synchronous so the clipboard can be updated immediately
 
         item = std::make_shared<HistoryItem>(std::move(newUuid), std::move(mimetypes), std::move(text));
         Q_EMIT dataChanged(index, index, {Qt::DisplayRole, UuidRole});
@@ -375,16 +369,12 @@ bool HistoryModel::removeRows(int row, int count, const QModelIndex &parent)
         }
     }
 
-    QList<QUrl> deletedDataFolders;
-    deletedDataFolders.reserve(count);
+    QStringList deletedUuids;
+    deletedUuids.reserve(count);
     for (int i = 0; i < count; ++i) {
-        deletedDataFolders.append(QUrl::fromLocalFile(m_dbFolder + u"/data/" + m_items[row + i]->uuid() + u'/'));
+        deletedUuids.append(m_items[row + i]->uuid());
     }
-    auto job = KIO::del(deletedDataFolders, KIO::HideProgressInfo);
-    ++m_pendingJobs;
-    connect(job, &KJob::finished, this, [this] {
-        --m_pendingJobs;
-    });
+    m_mimedb->clear(deletedUuids, m_pendingJobs);
 
     beginRemoveRows(QModelIndex(), row, row + count - 1);
     m_items.erase(std::next(m_items.cbegin(), row), std::next(m_items.cbegin(), row + count));
@@ -497,13 +487,8 @@ bool HistoryModel::insert(const QString &text)
 
 bool HistoryModel::loadHistory()
 {
-    // don't use "appdata", klipper is also a kicker applet
     m_dbFolder = DatabaseUtils::databaseFolder();
-    QDir dataDir(m_dbFolder + u"/data");
-    if (dataDir.exists() && !m_bKeepContents) {
-        dataDir.removeRecursively();
-    }
-    dataDir.mkpath(dataDir.absolutePath());
+    m_mimedb->init(!m_bKeepContents, this);
 
     std::optional<QSqlDatabase> db = DatabaseUtils::openDatabase(m_bKeepContents ? DatabaseUtils::LocalFile : DatabaseUtils::Memory);
     if (!db.has_value()) {
@@ -630,19 +615,6 @@ void HistoryModel::moveToTop(qsizetype row)
     beginMoveRows(QModelIndex(), row, row, QModelIndex(), 0);
     m_items.move(row, 0);
     endMoveRows();
-}
-
-void HistoryModel::saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid)
-{
-    const QString folderPath = dbFolder + u"/data/" + newUuid;
-    QDir().mkpath(folderPath);
-    QSaveFile file(folderPath + u'/' + dataUuid);
-    if (!file.open(QIODevice::WriteOnly)) {
-        qCWarning(KLIPPER_LOG) << file.errorString() << folderPath;
-        return;
-    }
-    file.write(data);
-    file.commit();
 }
 
 void HistoryModel::moveTopToBack()

@@ -14,6 +14,7 @@
 #include <QSqlDatabase>
 
 #include "klipper_export.h"
+#include "mimedatabase.h"
 
 class KCoreConfigSkeleton;
 class HistoryItem;
@@ -116,15 +117,14 @@ private:
 
     void moveToTop(qsizetype row);
 
-    static void saveToFile(QStringView dbFolder, const QByteArray &data, QStringView newUuid, QStringView dataUuid);
-
     std::shared_ptr<SystemClipboard> m_clip;
     QList<std::shared_ptr<HistoryItem>> m_items;
     int m_pendingJobs = 0;
     QString m_dbFolder;
     QSqlDatabase m_db;
+    std::shared_ptr<MimeDatabase> m_mimedb;
     qsizetype m_maxSize = 0;
-    bool m_displayImages = false;
+    bool m_displayImages = true;
     bool m_bNoNullClipboard = true;
     bool m_bIgnoreSelection = true;
     bool m_bKeepContents = true;
