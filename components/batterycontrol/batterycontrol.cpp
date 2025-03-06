@@ -71,7 +71,7 @@ void BatteryControlModel::onServiceRegistered(const QString &serviceName)
             auto batteryRemainingTimeWatcher = new QDBusPendingCallWatcher(batteryRemainingTimeCall, this);
             connect(batteryRemainingTimeWatcher, &QDBusPendingCallWatcher::finished, this, [this](QDBusPendingCallWatcher *watcher) {
                 QDBusReply<qulonglong> reply = *watcher;
-                if (!reply.isValid()) {
+                if (reply.isValid()) {
                     m_remainingMsec = reply.value();
                 } else {
                     qCDebug(COMPONENTS::BATTERYCONTROL) << "error getting battery remaining time";
