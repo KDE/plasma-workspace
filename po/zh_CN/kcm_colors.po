@@ -1338,6 +1338,3 @@ msgstr "打开配色方案"
 #, kde-format
 msgid "Color Scheme Files (*.colors)"
 msgstr "配色方案文件 (*.colors)"
-
-#~ msgid "Choose custom accent color"
-#~ msgstr "选择自定义强调色"

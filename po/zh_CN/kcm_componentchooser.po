@@ -156,7 +156,7 @@ msgstr "网页浏览器："
 #: ui/main.qml:82
 #, kde-format
 msgid "Email client:"
-msgstr "电邮客户端："
+msgstr "电子邮件客户端："
 
 #: ui/main.qml:96
 #, kde-format

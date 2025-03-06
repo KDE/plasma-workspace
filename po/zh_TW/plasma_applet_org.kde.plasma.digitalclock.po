@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-22 00:43+0000\n"
-"PO-Revision-Date: 2025-01-24 22:38+0900\n"
+"PO-Revision-Date: 2025-03-05 19:48+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -153,11 +153,10 @@ msgid "Offset from UTC time"
 msgstr "與 UTC 時間差異 (offset)"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "切換系統時區…"
+msgstr "切換時區…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
