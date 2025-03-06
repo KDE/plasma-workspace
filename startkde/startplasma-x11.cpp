@@ -53,16 +53,16 @@ int main(int argc, char **argv)
         }
     }
 
-    // NOTE: Be very mindful of what you start this early in the process. The environment is not yet complete.
     setupCursor(false);
-    std::unique_ptr<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
-    Q_UNUSED(ksplash)
 
     runEnvironmentScripts();
 
     out << "startkde: Starting up...\n";
 
     setupPlasmaEnvironment();
+
+    std::unique_ptr<QProcess, KillBeforeDeleter> ksplash(setupKSplash());
+    Q_UNUSED(ksplash)
 
     qunsetenv("QT_NO_XDG_DESKTOP_PORTAL");
     auto oldSystemdEnvironment = getSystemdEnvironment();
