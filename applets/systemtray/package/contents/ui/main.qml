@@ -47,22 +47,22 @@ ContainmentItem {
 
     KItemModels.KSortFilterProxyModel {
         id: activeModel
-        sourceModel: Plasmoid.systemTrayModel
         filterRoleName: "effectiveStatus"
         filterRowCallback: (sourceRow, sourceParent) => {
             let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
             return value === PlasmaCore.Types.ActiveStatus;
         }
+        Component.onCompleted: sourceModel = Plasmoid.systemTrayModel // avoid unnecessary binding, it causes loops
     }
 
     KItemModels.KSortFilterProxyModel {
         id: hiddenModel
-        sourceModel: Plasmoid.systemTrayModel
         filterRoleName: "effectiveStatus"
         filterRowCallback: (sourceRow, sourceParent) => {
             let value = sourceModel.data(sourceModel.index(sourceRow, 0, sourceParent), filterRole);
             return value === PlasmaCore.Types.PassiveStatus
         }
+        Component.onCompleted: sourceModel = Plasmoid.systemTrayModel // avoid unnecessary binding, it causes loops
     }
 
     Instantiator {
