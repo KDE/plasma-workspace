@@ -133,7 +133,7 @@ BaseDelegate {
 
             Components.Body {
                 id: bodyLabel
-                width: scroll.contentItem.width
+                width: scroll.width - scroll.PlasmaComponents3.ScrollBar.vertical.width
                 modelInterface: delegateRoot.modelInterface
                 Accessible.ignored: true // ignore HTML body in favor of Accessible.description on delegateRoot
             }
