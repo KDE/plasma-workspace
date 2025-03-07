@@ -22,16 +22,52 @@ Q_NAMESPACE //
 Q_ENUM_NS(Type)
 }
 
+/*!
+    \qmltype DBusServiceWatcher
+    \inherits QtObject
+    \inqmlmodule org.kde.plasma.workspace.dbus
+    \brief The DBusServiceWatcher class watches for the availability of D-Bus services.
+
+    The DBusServiceWatcher class allows you to monitor the availability of specific D-Bus services.
+    You can specify which services to watch and react to events such as service registration and unregistration.
+
+    The following example shows how you might monitor a D-Bus service in QML.
+
+    \qml
+    DBusServiceWatcher {
+        id: effectWatcher
+        busType: BusType.Session
+        watchedService: "org.kde.KWin.Effect.WindowView1"
+    }
+
+    property bool hasWindowViewEffect: effectWatcher.registered // Whether the KWin effect is enabled
+    \endqml
+*/
 class DBusServiceWatcher : public QObject, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
     QML_ELEMENT
 
+    /*!
+        \qmlproperty BusType::Type DBusServiceWatcher::busType
+
+        The type of the bus connection. The valid bus types are \c Session and \c System
+     */
     Q_PROPERTY(BusType::Type busType READ busType WRITE setBusType NOTIFY busTypeChanged)
-    // This property holds the watched service.
+
+    /*!
+        \qmlproperty string DBusServiceWatcher::watchedService
+
+        The D-Bus service name that the watcher is currently monitoring.
+     */
     Q_PROPERTY(QString watchedService READ watchedService WRITE setWatchedService NOTIFY watchedServiceChanged)
-    // Whether the watched service is registered on D-Bus
+
+    /*!
+        \qmlproperty bool DBusServiceWatcher::registered
+
+        Whether the watched service is registered on D-Bus.
+     */
     Q_PROPERTY(bool registered READ default NOTIFY registeredChanged BINDABLE isRegistered)
 
 public:
