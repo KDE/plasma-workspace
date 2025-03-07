@@ -1,5 +1,6 @@
 /*
     SPDX-FileCopyrightText: 2016 David Edmundson <davidedmundson@kde.org>
+    SPDX-FileCopyrightText: 2025 Thomas Duckworth <tduck@filotimoproject.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -21,7 +22,10 @@ ColumnLayout {
         textFormat: Text.PlainText
         style: root.softwareRendering ? Text.Outline : Text.Normal
         styleColor: root.softwareRendering ? Kirigami.Theme.backgroundColor : "transparent" //no outline, doesn't matter
-        font.pointSize: Math.round(Kirigami.Theme.defaultFont.pointSize * 4.8)
+        font.pointSize: Math.round(Kirigami.Theme.defaultFont.pointSize * 7.2)
+        font.weight: Font.DemiBold
+        font.letterSpacing: -3.0
+        font.wordSpacing: 3.0
         Layout.alignment: Qt.AlignHCenter
     }
     PlasmaComponents3.Label {
