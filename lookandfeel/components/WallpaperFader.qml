@@ -21,6 +21,8 @@ Item {
     property real factor: 0
     readonly property bool lightColorScheme: Math.max(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b) > 0.5
 
+    property bool alwaysShowClock: false
+
     state: "on"
 
     Behavior on factor {
@@ -89,6 +91,14 @@ Item {
                 target: wallpaperFader
                 factor: 1
             }
+            PropertyChanges {
+                target: clock.shadow
+                opacity: 0
+            }
+            PropertyChanges {
+                target: clock
+                opacity: 1
+            }
         },
         State {
             name: "off"
@@ -103,6 +113,14 @@ Item {
             PropertyChanges {
                 target: wallpaperFader
                 factor: 0
+            }
+            PropertyChanges {
+                target: clock.shadow
+                opacity: wallpaperFader.alwaysShowClock ? 1 : 0
+            }
+            PropertyChanges {
+                target: clock
+                opacity: wallpaperFader.alwaysShowClock ? 1 : 0
             }
         }
     ]
