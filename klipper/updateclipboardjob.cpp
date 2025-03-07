@@ -56,6 +56,10 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
                     // Qt clipboard doesn't support other encodings.
                     continue;
                 }
+            } else if (format.startsWith(u"application/x-openoffice-link")) {
+                // Don't create un-asked for DDE links in LibreOffice apps;
+                // we don't want them.
+                continue;
             }
             data = mimeData->data(format);
             if (data.size() > 20 * 1000 * 1000) {
