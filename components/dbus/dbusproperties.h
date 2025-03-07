@@ -59,7 +59,7 @@ private:
 
     The following example shows how you might access a property in QML.
 
-    \code
+    \qml
     Properties {
         id: plasmashellProps
         busType: DBus.BusType.Session
@@ -69,7 +69,7 @@ private:
     }
 
     property bool editMode: Boolean(plasmashellProps.properties.editMode)
-    \endcode
+    \endqml
 */
 class DBusProperties : public QObject, public QQmlParserStatus
 {
@@ -78,28 +78,38 @@ class DBusProperties : public QObject, public QQmlParserStatus
     QML_NAMED_ELEMENT(Properties)
     Q_DISABLE_COPY_MOVE(DBusProperties)
 
-    /**
-     * The type of the bus connection. The valid bus types are @c Session and @c System
+    /*!
+        \qmlproperty BusType::Type Properties::busType
+
+        The type of the bus connection. The valid bus types are \c Session and \c System
      */
     Q_PROPERTY(BusType::Type busType READ busType WRITE setBusType NOTIFY busTypeChanged)
 
-    /**
-     * The bus address of the method call
+    /*!
+        \qmlproperty string Properties::service
+
+        The bus address of the method call
      */
     Q_PROPERTY(QString service READ service WRITE setService NOTIFY serviceChanged)
 
-    /**
-     * The object path of the method call is being sent to
+    /*!
+        \qmlproperty string Properties::path
+
+        The object path of the method call is being sent to
      */
     Q_PROPERTY(QString path READ path WRITE setPath NOTIFY pathChanged)
 
-    /**
-     * The interface of the method call
+    /*!
+        \qmlproperty string Properties::iface
+
+        The interface of the method call
      */
     Q_PROPERTY(QString iface READ interface WRITE setInterface NOTIFY interfaceChanged)
 
-    /**
-     * The properties of the specific interface
+    /*!
+        \qmlproperty QQmlPropertyMap Properties::properties
+
+        The properties of the specific interface
      */
     Q_PROPERTY(DBusPropertyMap *properties READ properties NOTIFY propertyMapChanged)
 
@@ -121,13 +131,17 @@ public:
     DBusPropertyMap *properties() const;
     void resetProperties();
 
-    /**
-     * Manually update a property whose name is @p key
+    /*!
+        \qmlmethod void org.kde.plasma.workspace.dbus::Properties::update(key)
+
+        Manually update a property whose name is \a key
      */
     Q_INVOKABLE void update(const QString &key);
 
-    /**
-     * Manually update all properties
+    /*!
+        \qmlmethod void org.kde.plasma.workspace.dbus::Properties::updateAll()
+
+        Manually update all properties
      */
     Q_INVOKABLE void updateAll();
 
