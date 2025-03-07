@@ -53,12 +53,12 @@ Kirigami.Page {
     ]
 
     function onConfigurationChanged() {
-        for (var key in kcm.configuration) {
+        kcm.configuration.keys().forEach(key => {
             const cfgKey = "cfg_" + key;
             if (main.currentItem[cfgKey] !== undefined) {
                 kcm.configuration[key] = main.currentItem[cfgKey]
             }
-        }
+        })
     }
 
     ColumnLayout {
