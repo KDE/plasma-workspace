@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 02:33+0000\n"
+"POT-Creation-Date: 2025-03-08 02:50+0000\n"
 "PO-Revision-Date: 2025-01-24 20:48+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -267,7 +267,7 @@ msgctxt "@info"
 msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr "Megjegyzés: a méret csökkenthető, ha a panel nem elég vastag."
 
-#: package/contents/ui/configAppearance.qml:291
+#: package/contents/ui/configAppearance.qml:296
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"

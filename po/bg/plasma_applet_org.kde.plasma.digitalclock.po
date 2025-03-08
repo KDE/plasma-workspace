@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-17 02:33+0000\n"
+"POT-Creation-Date: 2025-03-08 02:50+0000\n"
 "PO-Revision-Date: 2024-11-22 18:30+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -266,7 +266,7 @@ msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 "Забележка: размерът може да бъде намален, ако панелът не е достатъчно висок."
 
-#: package/contents/ui/configAppearance.qml:291
+#: package/contents/ui/configAppearance.qml:296
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
