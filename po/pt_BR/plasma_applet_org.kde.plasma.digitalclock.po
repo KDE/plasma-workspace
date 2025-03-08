@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.digitalclock\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-08 00:45+0000\n"
 "PO-Revision-Date: 2025-02-23 18:46-0300\n"
 "Last-Translator: Guilherme Marçal Silva <guimarcalsilva@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -277,7 +277,7 @@ msgid "Note: size may be reduced if the panel is not thick enough."
 msgstr ""
 "Note: o tamanho pode ser reduzido se o painel não for grosso o suficiente."
 
-#: package/contents/ui/configAppearance.qml:303
+#: package/contents/ui/configAppearance.qml:308
 #, kde-format
 msgctxt "@title:window"
 msgid "Choose a Font"
