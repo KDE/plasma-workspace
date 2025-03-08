@@ -57,9 +57,9 @@ KCMUtils.ScrollViewKCM {
         clip: true
 
         model: KItemModels.KSortFilterProxyModel {
-            sourceModel: Plasmoid.configSystemTrayModel
             filterString: filterField.text
             filterCaseSensitivity: Qt.CaseInsensitive
+            Component.onCompleted: sourceModel = Plasmoid.configSystemTrayModel // avoid unnecessary binding, it causes loops
         }
         reuseItems: true
 
