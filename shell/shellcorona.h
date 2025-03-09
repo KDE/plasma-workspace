@@ -87,6 +87,7 @@ public:
     Q_INVOKABLE QStringList availableActivities() const;
 
     void clonePanelTo(PanelView *panel, Plasma::Types::Location location, QScreen *screen);
+    bool shouldPanelReserveSpace(PanelView *panel);
 
     PanelView *panelView(Plasma::Containment *containment) const;
     void savePreviousWindow();
