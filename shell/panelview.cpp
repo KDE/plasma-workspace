@@ -1576,12 +1576,16 @@ void PanelView::updateExclusiveZone()
     if (KWindowSystem::isPlatformWayland()) {
         switch (m_visibilityMode) {
         case NormalPanel:
-            m_layerWindow->setExclusiveZone(thickness());
+            if (m_corona->shouldPanelReserveSpace(this)) {
+                m_layerWindow->setExclusiveZone(thickness());
+            } else {
+                m_layerWindow->setExclusiveZone(-1);
+            }
             break;
         case AutoHide:
         case DodgeWindows:
         case WindowsGoBelow:
-            m_layerWindow->setExclusiveZone(0);
+            m_layerWindow->setExclusiveZone(-1);
             break;
         }
         requestUpdate();

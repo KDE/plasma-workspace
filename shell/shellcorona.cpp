@@ -1276,26 +1276,6 @@ QRect ShellCorona::_availableScreenRect(int id) const
         return screen ? screen->availableGeometry() : QRect();
     }
 
-    std::function<int(int, int)> accumulator;
-
-    if (KWindowSystem::isPlatformX11()) {
-        // On X11, panels on the same side overlap, and they all
-        // touch the border of the containment. This means that,
-        // to find the total thickness of a side, we only need
-        // to find the thickest panel.
-        accumulator = [](int a, int b) {
-            return qMax(a, b);
-        };
-    } else {
-        // On Wayland, panels on the same side stack on top of
-        // each other. This means that to find the total thickness
-        // of a side we need to add together each panel on that
-        // side.
-        accumulator = [](int a, int b) {
-            return a + b;
-        };
-    }
-
     QRect r = screen->geometry();
     int topThickness, leftThickness, rightThickness, bottomThickness;
     topThickness = leftThickness = rightThickness = bottomThickness = 0;
@@ -1303,16 +1283,16 @@ QRect ShellCorona::_availableScreenRect(int id) const
         if (v->isVisible() && v->screen() == screen && v->visibilityMode() != PanelView::AutoHide) {
             switch (v->location()) {
             case Plasma::Types::LeftEdge:
-                leftThickness = accumulator(leftThickness, v->totalThickness());
+                leftThickness = qMax(leftThickness, v->totalThickness());
                 break;
             case Plasma::Types::RightEdge:
-                rightThickness = accumulator(rightThickness, v->totalThickness());
+                rightThickness = qMax(rightThickness, v->totalThickness());
                 break;
             case Plasma::Types::TopEdge:
-                topThickness = accumulator(topThickness, v->totalThickness());
+                topThickness = qMax(topThickness, v->totalThickness());
                 break;
             case Plasma::Types::BottomEdge:
-                bottomThickness = accumulator(bottomThickness, v->totalThickness());
+                bottomThickness = qMax(bottomThickness, v->totalThickness());
             default:
                 break;
             }
@@ -2445,6 +2425,20 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
 
         targetPanelView->restore();
     }
+}
+
+bool ShellCorona::shouldPanelReserveSpace(PanelView *panel)
+{
+    PanelView *thickestVisiblePanel = nullptr;
+    for (auto it = m_panelViews.constBegin(); it != m_panelViews.constEnd(); ++it) {
+        if ((*it)->screenToFollow() == panel->screenToFollow() && (*it)->location() == panel->location() && (*it)->visibilityMode() == PanelView::NormalPanel
+            && (*it)) {
+            if ((thickestVisiblePanel && (*it)->thickness() > thickestVisiblePanel->thickness()) || !thickestVisiblePanel) {
+                thickestVisiblePanel = (*it);
+            }
+        }
+    }
+    return thickestVisiblePanel == panel;
 }
 
 Plasma::Containment *ShellCorona::addPanel(const QString &plugin)
