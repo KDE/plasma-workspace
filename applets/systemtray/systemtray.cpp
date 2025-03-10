@@ -26,6 +26,7 @@
 #include <qpa/qplatformscreen.h>
 
 #include <Plasma/Applet>
+#include <Plasma/Corona>
 #include <Plasma/PluginLoader>
 #include <Plasma5Support/ServiceJob>
 
@@ -51,6 +52,8 @@ SystemTray::~SystemTray()
 
 void SystemTray::init()
 {
+    migrateFromSystrayContainer();
+
     Containment::init();
 
     m_settings = new SystemTraySettings(configScheme(), this);
@@ -78,6 +81,32 @@ void SystemTray::init()
             }
         });
     }
+}
+
+void SystemTray::migrateFromSystrayContainer()
+{
+    KConfigGroup cg(config());
+    const int oldSystrayId = cg.readEntry(QStringLiteral("SystrayContainmentId"), -1);
+
+    if (oldSystrayId < 0) {
+        return;
+    }
+
+    // Search the old systray containment config group
+    KConfigGroup rootCg(corona()->config(), QStringLiteral("Containments"));
+    KConfigGroup oldContCg = KConfigGroup(&rootCg, QString::number(oldSystrayId));
+
+    oldContCg.copyTo(&cg);
+
+    const QStringList groups = oldContCg.groupList();
+    for (const QString &group : groups) {
+        KConfigGroup appletCg(&oldContCg, group);
+        KConfigGroup newCg(&cg, group);
+        appletCg.copyTo(&newCg);
+    }
+
+    rootCg.deleteGroup(QString::number(oldSystrayId));
+    cg.deleteEntry(QStringLiteral("SystrayContainmentId"));
 }
 
 void SystemTray::restoreContents(KConfigGroup &group)

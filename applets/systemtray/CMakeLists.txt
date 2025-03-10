@@ -1,6 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.private.systemtray\")
 
-plasma_install_package(package org.kde.plasma.private.systemtray)
+plasma_install_package(package org.kde.plasma.systemtray)
 
 include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
 
@@ -69,7 +69,6 @@ ecm_finalize_qml_module(systemtrayplugin)
 
 install(FILES statusnotifieritem.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
 
-add_subdirectory(container)
 if(BUILD_TESTING)
   add_subdirectory(autotests)
   add_subdirectory(tests)
