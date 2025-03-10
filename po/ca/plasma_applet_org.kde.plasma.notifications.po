@@ -440,7 +440,3 @@ msgstr "Neteja totes les notificacions"
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Configura les notificacions d'esdeveniments i accions…"
-
-#~ msgctxt "A button tooltip; expands the item to show details"
-#~ msgid "Show Details"
-#~ msgstr "Mostra els detalls"

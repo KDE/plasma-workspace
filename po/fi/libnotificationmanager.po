@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2025 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
-# Tommi Nieminen <translator@legisign.org>, 2019, 2022, 2023.
+# SPDX-FileCopyrightText: 2019, 2022, 2023, 2025 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-05 03:13+0000\n"
-"PO-Revision-Date: 2023-03-14 22:06+0200\n"
+"PO-Revision-Date: 2025-02-14 19:52+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,6 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: abstractnotificationsmodel.cpp:319
 #, kde-format
@@ -106,10 +107,10 @@ msgstr "Sovellus sulkeutui odottamatta."
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
-msgstr ""
+msgstr "Lukematta olevat ilmoitukset"
 
 #: notifications.cpp:864
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."
-msgstr ""
+msgstr "Vastaanotettiin %1 ilmoitusta Älä häiritse -tilan ollessa aktiivinen."

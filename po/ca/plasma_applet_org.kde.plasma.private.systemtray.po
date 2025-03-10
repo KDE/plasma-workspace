@@ -196,10 +196,3 @@ msgstr "Mostra les icones ocultes"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-# skip-rule: punctuation-period-no
-#~ msgid "Some letters with tall characters, ascenders, descenders, etc"
-#~ msgstr "Diverses lletres amb caràcters alts, ascendents, descendents, etc."
-
-#~ msgid "Expand System Tray"
-#~ msgstr "Expandeix la safata del sistema"

@@ -362,7 +362,3 @@ msgid "An error occurred while attempting to open kscreenlockerrc config file."
 msgstr ""
 "Hi ha hagut un error en intentar obrir el fitxer de configuració "
 "«kscreenlockerrc»."
-
-#~ msgctxt "@title:window"
-#~ msgid "Open Media"
-#~ msgstr "Obertura d'un fitxer multimèdia"
