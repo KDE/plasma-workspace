@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Kishore G <kishore96@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Kishore G <kishore96@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-08-04 16:59+0530\n"
+"PO-Revision-Date: 2025-03-09 12:50+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,31 +15,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "நீக்கப்படுகிறது…"
+msgstr "சரிபார்க்கப்படுகிறது…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "நீக்கப்படுகிறது…"
+msgstr "பழுதுநீக்கப்படுகிறது…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -138,7 +130,7 @@ msgstr "கோப்பு மேலாளரில் திற"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "பழுதுநீக்கு"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -156,15 +148,14 @@ msgid "Safely remove"
 msgstr "பத்திரமாக நீக்கு"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "இந்த சாதனத்தை இப்போது பத்திரமாக கழற்றலாம்"
+msgstr "இச்சாதனத்தின் கோப்பு முறைமை பழுதடைந்துள்ளது."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "வெற்றிகரமாக பழுதுநீக்கப்பட்டுள்ளது."
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -198,11 +189,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "இந்த வட்டை வெளியேற்றும் உரிமை உங்களிடம் இல்லை."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "இந்த சாதனத்தை நீக்கும் உரிமை உங்களிடம் இல்லை."
+msgstr "இந்த சாதனத்தில் பழுதுநீக்கும் உரிமை உங்களிடம் இல்லை."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -247,11 +236,9 @@ msgid "Could not eject this disc."
 msgstr "இந்த வட்டை வெளியேற்ற முடியவில்லை."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "இந்த சாதனத்தை நீக்க முடியவில்லை."
+msgstr "இந்த சாதனத்தில் பழுதுநீக்க முடியவில்லை: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "கோப்பு முறைமை பதிலளிக்கவில்லை"
