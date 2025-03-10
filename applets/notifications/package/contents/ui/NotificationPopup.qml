@@ -80,7 +80,7 @@ NotificationsApplet.NotificationWindow {
 
         DropArea {
             anchors.fill: parent
-            onEntered: {
+            onEntered: (drag) => {
                 if (notificationItem.modelInterface.hasDefaultAction && !notificationItem.dragging) {
                     dragActivationTimer.start();
                 } else {
