@@ -19,6 +19,7 @@
 #include <QMenu>
 #include <QMetaMethod>
 #include <QMetaObject>
+#include <QQueue>
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QScreen>
@@ -52,6 +53,7 @@ SystemTray::~SystemTray()
 
 void SystemTray::init()
 {
+    // run this before doing any config restore
     migrateFromSystrayContainer();
 
     Containment::init();
@@ -85,28 +87,62 @@ void SystemTray::init()
 
 void SystemTray::migrateFromSystrayContainer()
 {
-    KConfigGroup cg(config());
-    const int oldSystrayId = cg.readEntry(QStringLiteral("SystrayContainmentId"), -1);
+    // Search the old systray containment config group
+    KConfigGroup rootCg(corona()->config(), QStringLiteral("Containments"));
+    // NOTE: this function is called from tyhe constructor, so we can't use config() yet
+    KConfigGroup ownCg = KConfigGroup(config());
+    // old Configuration group of the old systray applet
+    KConfigGroup oldAppletCg(&ownCg, QStringLiteral("Configuration"));
+    const uint oldSystrayId = oldAppletCg.readEntry(QStringLiteral("SystrayContainmentId"), 0);
 
-    if (oldSystrayId < 0) {
+    if (oldSystrayId == 0) {
         return;
     }
 
-    // Search the old systray containment config group
-    KConfigGroup rootCg(corona()->config(), QStringLiteral("Containments"));
+    // Config group of the old systray containment
     KConfigGroup oldContCg = KConfigGroup(&rootCg, QString::number(oldSystrayId));
 
-    oldContCg.copyTo(&cg);
+    // Copy everything all the applets inside, all the subgroup of any applet
+    QQueue<QPair<KConfigGroup, KConfigGroup>> queue;
+    queue.enqueue(qMakePair(oldContCg, ownCg));
+    // Iterative Tree traversal of the systray configuration
+    while (!queue.isEmpty()) {
+        QPair<KConfigGroup, KConfigGroup> current = queue.dequeue();
+        const KConfigGroup &currentSource = current.first;
+        KConfigGroup &currentDest = current.second;
 
-    const QStringList groups = oldContCg.groupList();
-    for (const QString &group : groups) {
-        KConfigGroup appletCg(&oldContCg, group);
-        KConfigGroup newCg(&cg, group);
-        appletCg.copyTo(&newCg);
+        // Copy all entries in the current group
+        const QMap<QString, QString> entries = currentSource.entryMap();
+        for (auto it = entries.constBegin(); it != entries.constEnd(); ++it) {
+            currentDest.writeEntry(it.key(), currentSource.readEntry(it.key(), QString()));
+        }
+
+        const QStringList groups = currentSource.groupList();
+        for (const QString &group : groups) {
+            KConfigGroup sourceSubGroup = currentSource.group(group);
+            KConfigGroup destSubGroup = currentDest.group(group);
+            queue.enqueue(qMakePair(sourceSubGroup, destSubGroup));
+        }
     }
 
+    // Delete the the old systray
+    bool oldSystrayInstantiated = false;
+    for (Plasma::Containment *cont : corona()->containments()) {
+        if (cont->id() == oldSystrayId) {
+            delete cont;
+            break;
+        }
+    }
+    // To make sure the old containment is really gone from the config first delete then
+    // remove the group, as destroy() might fail
     rootCg.deleteGroup(QString::number(oldSystrayId));
-    cg.deleteEntry(QStringLiteral("SystrayContainmentId"));
+
+    // Delete the old unused key SystrayContainmentId in this systray
+    oldAppletCg.deleteEntry(QStringLiteral("SystrayContainmentId"));
+
+    for (Applet *a : applets()) {
+        a->configChanged();
+    }
 }
 
 void SystemTray::restoreContents(KConfigGroup &group)
