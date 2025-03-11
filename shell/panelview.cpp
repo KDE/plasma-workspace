@@ -1553,7 +1553,7 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateExclusiveZone()
 {
-    if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == 0) {
+    if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == -1) {
         // We set the exclusive zone to make sure the ruler does not
         // overlap with the panel regardless of the visibility mode;
         // this won't be updated anymore as long as we are within
@@ -1679,11 +1679,11 @@ void PanelView::refreshContainment()
     restore();
     Plasma::Containment *const cont = containment();
     connect(cont, &Plasma::Containment::userConfiguringChanged, this, [this](bool configuring) {
+        updateExclusiveZone();
         if (configuring) {
             showTemporarily();
         } else {
             m_unhideTimer.start();
-            updateExclusiveZone();
         }
     });
 
