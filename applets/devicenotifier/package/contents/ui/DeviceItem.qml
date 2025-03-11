@@ -129,8 +129,8 @@ PlasmaExtras.ExpandableListItem {
 
     QQC2.Action {
         id: defaultAction
-        icon.name: deviceActions.defaultActionIcon
-        text: deviceActions.defaultActionText
+        icon.name: deviceActions?.defaultActionIcon ?? ""
+        text: deviceActions?.defaultActionText ?? ""
         onTriggered: {
             if (deviceItem.deviceMounted) {
                 unmountTimer.restart();
