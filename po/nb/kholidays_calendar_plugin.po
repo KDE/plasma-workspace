@@ -1,6 +1,5 @@
 # Translation of kholidays_calendar_plugin to Norwegian Bokmål
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
