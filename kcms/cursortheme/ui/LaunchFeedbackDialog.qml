@@ -8,12 +8,14 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 import org.kde.kcmutils as KCM
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: sheet
 
     title: i18nc("@title", "Launch Feedback")
+
+    padding: Kirigami.Units.largeSpacing
 
     ColumnLayout {
         Layout.preferredWidth: Kirigami.Units.gridUnit * 20

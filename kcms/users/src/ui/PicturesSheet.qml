@@ -10,9 +10,9 @@ import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Dialogs 6.3 as Dialogs
 import QtQuick.Layouts 1.15
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: picturesSheet
 
     title: i18nc("@title", "Change Avatar")
@@ -20,7 +20,10 @@ Kirigami.OverlaySheet {
 
     required property Kirigami.Page usersDetailPage
 
+    readonly property int pageMargins: Kirigami.Units.largeSpacing
+    readonly property int gridSpacing: Kirigami.Units.smallSpacing
     readonly property int buttonSize: Kirigami.Units.gridUnit * 6
+    readonly property int columns: Math.floor(((parent.width * 0.85) - (pageMargins * 2 )) / (buttonSize + gridSpacing))
     readonly property var colorPalette: [
         {"name": i18nc("@item:intable", "It's Nothing"),     "color": "transparent", "dark": false},
         {"name": i18nc("@item:intable", "Feisty Flamingo"),  "color": "#E93A9A", "dark": true},
@@ -42,17 +45,11 @@ Kirigami.OverlaySheet {
     ]
 
     component PicturesGridLayout: GridLayout {
-        readonly property int contentWidth: stackSwitcher.width - Layout.leftMargin - Layout.rightMargin
-        readonly property int delegateWidth: picturesSheet.buttonSize + columnSpacing
+        columns: picturesSheet.columns
+        columnSpacing: picturesSheet.gridSpacing
+        rowSpacing: picturesSheet.gridSpacing
 
-        columns: Math.floor(contentWidth / delegateWidth)
-        columnSpacing: Kirigami.Units.smallSpacing
-        rowSpacing: Kirigami.Units.smallSpacing
-
-        Layout.fillWidth: true
-        Layout.alignment: Qt.AlignHCenter
-        Layout.leftMargin: Kirigami.Units.largeSpacing
-        Layout.rightMargin: Kirigami.Units.largeSpacing
+        Layout.margins: picturesSheet.pageMargins
     }
 
     component PictureButton: QQC2.Button {
@@ -317,11 +314,10 @@ Kirigami.OverlaySheet {
         destroy();
     }
 
-    width: parent.width - Kirigami.Units.gridUnit * 4
-
     QQC2.StackView {
         id: stackSwitcher
 
+        implicitWidth: currentItem.implicitWidth
         implicitHeight: currentItem.implicitHeight
 
         focus: true

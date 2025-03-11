@@ -230,7 +230,7 @@ KCM.SimpleKCM {
             text: i18n("Configure Fingerprint Authentication…")
             icon.name: "fingerprint-gui"
 
-            property Kirigami.OverlaySheet dialog: null
+            property Kirigami.Dialog dialog: null
 
             onClicked: {
                 if (kcm.fingerprintModel.currentlyEnrolling) {
@@ -267,6 +267,13 @@ KCM.SimpleKCM {
         }
     }
 
-    ChangePassword { id: changePassword }
-    ChangeWalletPassword { id: changeWalletPassword }
+    ChangePassword {
+        id: changePassword
+        usersDetailPage: usersDetailPage
+    }
+
+    ChangeWalletPassword {
+        id: changeWalletPassword
+        usersDetailPage: usersDetailPage
+    }
 }

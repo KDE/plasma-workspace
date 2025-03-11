@@ -20,7 +20,7 @@ Kirigami.Dialog {
     property bool isMousePressed: false
     property int handleToCursor: 0
     property var cursor: Qt.OpenHandCursor
-    required property Kirigami.OverlaySheet picturesSheet
+    required property Kirigami.Dialog picturesSheet
     required property Kirigami.Page usersDetailPage
 
     parent: usersDetailPage.QQC2.Overlay.overlay

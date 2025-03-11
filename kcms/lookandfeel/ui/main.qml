@@ -8,8 +8,8 @@
 import QtQuick 2.6
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.2
-import QtQuick.Controls 2.3 as QtControls
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick.Controls as QtControls
+import org.kde.kirigami as Kirigami
 import org.kde.newstuff 1.91 as NewStuff
 import org.kde.config // for KAuthorized
 import org.kde.kcmutils as KCM
@@ -31,7 +31,7 @@ KCM.GridViewKCM {
         }
         resetCheckboxes()
         globalThemeConfirmSheet.open()
-        proceedButton.forceActiveFocus()
+        globalThemeConfirmSheet.standardButton(Kirigami.Dialog.Apply).forceActiveFocus()
     }
     function resetCheckboxes() { //This call is used whenever you switch pages (More/Less Options) or trigger the Kirigami Sheet
         kcm.selectedItems = undefined //triggers RESET
@@ -141,10 +141,24 @@ KCM.GridViewKCM {
         }
     }
 
-    Kirigami.OverlaySheet {
+    Kirigami.Dialog {
         id: globalThemeConfirmSheet
         title: i18nc("Confirmation question about applying the Global Theme - %1 is the Global Theme's name",
                      "Apply %1?", currentThemeRole(Qt.Display))
+        standardButtons: Kirigami.Dialog.Apply | Kirigami.Dialog.Cancel
+        padding: Kirigami.Units.largeSpacing
+        clip: true
+
+        onApplied: {
+            kcm.save()
+            globalThemeConfirmSheet.close()
+            view.forceActiveFocus() //Prevent further button presses via keyboard
+        }
+        onRejected: {
+            globalThemeConfirmSheet.close()
+            view.forceActiveFocus()
+        }
+
         QtControls.StackView {
             id: stackSwitcher
             initialItem: simpleOptions
@@ -159,46 +173,28 @@ KCM.GridViewKCM {
                 MoreOptions {}
             }
         }
-        footer: ColumnLayout {
-            RowLayout {
-                QtControls.Button {
-                    text: stackSwitcher.depth === 1 ? i18n("Choose what to apply…") : i18n("Show fewer options…")
-                    icon.name: stackSwitcher.depth === 1 ? "settings-configure" : "go-previous"
-                    enabled: hasAppearance
-                    onClicked: {
-                        if (stackSwitcher.depth === 1) {
-                            stackSwitcher.push(moreOptions);
-                        } else {
-                            stackSwitcher.pop();
-                        }
-                        resetCheckboxes() //Force a refresh to reset button states
-                    }
+
+        footerLeadingComponent: QtControls.Button {
+            text: stackSwitcher.depth === 1 ? i18n("Choose what to apply…") : i18n("Show fewer options…")
+            icon.name: stackSwitcher.depth === 1 ? "settings-configure" : "go-previous"
+            QtControls.DialogButtonBox.buttonRole: QtControls.DialogButtonBox.HelpRole
+            enabled: hasAppearance
+            onClicked: {
+                if (stackSwitcher.depth === 1) {
+                    stackSwitcher.push(moreOptions);
+                } else {
+                    stackSwitcher.pop();
                 }
-                Rectangle {
-                    Layout.fillWidth: true
-                }
-                QtControls.Button {
-                    id: proceedButton
-                    text: i18n("Apply")
-                    icon.name: "dialog-ok-apply"
-                    onClicked: {
-                        kcm.save()
-                        globalThemeConfirmSheet.close()
-                        view.forceActiveFocus() //Prevent further button presses via keyboard
-                    }
-                    enabled: kcm.selectedContents & (Private.LookandFeelManager.AppearanceSettings
-                                                      | Private.LookandFeelManager.LayoutSettings
-                                                      | Private.LookandFeelManager.DesktopLayout)
-                }
-                QtControls.Button {
-                    text: i18n("Cancel")
-                    icon.name: "dialog-cancel"
-                    onClicked: {
-                        globalThemeConfirmSheet.close()
-                        view.forceActiveFocus()
-                    }
-                }
+                resetCheckboxes() //Force a refresh to reset button states
             }
+        }
+
+        Component.onCompleted: {
+            standardButton(Kirigami.Dialog.Apply).enabled = Qt.binding(() => {
+                return kcm.selectedContents & (Private.LookandFeelManager.AppearanceSettings
+                                             | Private.LookandFeelManager.LayoutSettings
+                                             | Private.LookandFeelManager.DesktopLayout);
+            });
         }
     }
 

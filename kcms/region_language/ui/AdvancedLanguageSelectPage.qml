@@ -9,7 +9,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15 as QQC2
 import QtQuick.Layouts 1.15
 
-import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami as Kirigami
+import org.kde.kirigami.dialogs as KDialogs
 import org.kde.kcmutils as KCM
 import org.kde.kitemmodels 1.0 as ItemModels
 
@@ -166,17 +167,35 @@ KCM.ScrollViewKCM {
         }
     }
 
-    Kirigami.OverlaySheet {
+    Kirigami.Dialog {
         id: addLanguagesSheet
         property string titleText: i18nc("@title:window", "Add Languages")
+
         parent: languageSelectPage
-
-        topPadding: 0
-        leftPadding: 0
-        rightPadding: 0
-        bottomPadding: 0
-
         title: titleText
+        preferredWidth: 18 * Kirigami.Units.gridUnit
+
+        header: KDialogs.DialogHeader {
+            dialog: addLanguagesSheet
+
+            contentItem: ColumnLayout {
+                spacing: Kirigami.Units.smallSpacing
+
+                KDialogs.DialogHeaderTopContent {
+                    dialog: addLanguagesSheet
+                }
+
+                Kirigami.SearchField {
+                    id: searchField
+                    Layout.fillWidth: true
+                    focus: true
+                    Keys.onDownPressed: event => {
+                        availableLanguagesList.currentIndex = 0;
+                        availableLanguagesList.forceActiveFocus(Qt.TabFocusReason)
+                    }
+                }
+            }
+        }
 
         onOpened: {
             searchField.forceActiveFocus(Qt.PopupFocusReason)
@@ -187,29 +206,8 @@ KCM.ScrollViewKCM {
             searchField.clear();
         }
 
-        header: ColumnLayout {
-            spacing: Kirigami.Units.smallSpacing
-
-            Kirigami.Heading {
-                Layout.fillWidth: true
-                text: addLanguagesSheet.title
-                wrapMode: Text.Wrap
-            }
-            Kirigami.SearchField {
-                id: searchField
-                Layout.fillWidth: true
-                Layout.rightMargin: Kirigami.Units.largeSpacing // Dodge close button
-                focus: true
-                Keys.onDownPressed: event => {
-                    availableLanguagesList.currentIndex = 0;
-                    availableLanguagesList.forceActiveFocus(Qt.TabFocusReason)
-                }
-            }
-        }
-
         ListView {
             id: availableLanguagesList
-            implicitWidth: 18 * Kirigami.Units.gridUnit
             model: ItemModels.KSortFilterProxyModel {
                 id: filterModel
                 sourceModel: languageListModel

@@ -8,16 +8,20 @@ import QtQuick 2.6
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.5 as QQC2
 
-import org.kde.kirigami 2.8 as Kirigami
+import org.kde.kirigami as Kirigami
 
-Kirigami.OverlaySheet {
+Kirigami.Dialog {
     id: walletPasswordRoot
 
+    required property Kirigami.Page usersDetailPage
+
     title: i18n("Change Wallet Password?")
+    parent: usersDetailPage.QQC2.Overlay.overlay
+    padding: Kirigami.Units.largeSpacing
+    maximumWidth: Kirigami.Units.gridUnit * 27
 
     ColumnLayout {
         id: baseLayout
-        Layout.preferredWidth: Kirigami.Units.gridUnit * 27
         spacing: Kirigami.Units.largeSpacing
 
         QQC2.Label {
@@ -45,8 +49,6 @@ Kirigami.OverlaySheet {
 
         // Not using a QQC2.DialogButtonBox because it can only do horizontal layouts
         // and we want the buttons to be stacked when the view is really narrow.
-        // TODO: go back to using a DialogButtonBox if this OverlaySheet is ever
-        // parented to the KCM as a whole, not this view in particular
         GridLayout {
             readonly property bool narrow: baseLayout.width < Kirigami.Units.gridUnit * 20
             Layout.alignment: narrow ? Qt.AlignHCenter : Qt.AlignRight
