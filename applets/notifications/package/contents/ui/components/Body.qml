@@ -34,7 +34,7 @@ Kirigami.SelectableLabel {
     // Selectable only when we are in desktop mode
     selectByMouse: !Kirigami.Settings.tabletMode
 
-    onLinkActivated: Qt.openUrlExternally(link)
+    onLinkActivated: link => Qt.openUrlExternally(link)
 
     onClicked: modelInterface.bodyClicked()
 
