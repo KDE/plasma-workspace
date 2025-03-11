@@ -106,8 +106,8 @@ msgid ""
 "Starts without lock screen support. Only needed if other component provides "
 "the lock screen."
 msgstr ""
-"Inicia sense el suport del bloqueig de pantalla. Només cal si altres "
-"components proporcionen el bloqueig de pantalla."
+"Inicia sense el suport del bloqueig de la pantalla. Només cal si altres "
+"components proporcionen el bloqueig de la pantalla."
 
 #: server.cpp:778
 #, kde-format
@@ -139,39 +139,3 @@ msgstr ""
 "No s'ha pogut restaurar l'aplicació <application>%1</application> perquè "
 "està trencada i ha exhaurit els recursos de restauració de la sessió del "
 "sistema. Informeu-ne als desenvolupadors de l'aplicació."
-
-#~ msgid "$HOME not set!"
-#~ msgstr "No s'ha establit el «$HOME»!"
-
-#~ msgid "$HOME directory (%1) does not exist."
-#~ msgstr "El directori «$HOME» (%1) no existix."
-
-#~ msgctxt "@info"
-#~ msgid ""
-#~ "No write access to $HOME directory (%1). If this is intentional, set "
-#~ "<envar>KDE_HOME_READONLY=1</envar> in your environment."
-#~ msgstr ""
-#~ "Sense permís d'escriptura al directori «$HOME» (%1). Si açò és "
-#~ "intencionat, establiu <envar>KDE_HOME_READONLY=1</envar> a l'entorn."
-
-#~ msgid "No read access to $HOME directory (%1)."
-#~ msgstr "Sense permís de lectura al directori «$HOME» (%1)."
-
-#~ msgid "$HOME directory (%1) is out of disk space."
-#~ msgstr "El directori «$HOME» (%1) està sense espai en el disc."
-
-#~ msgid "Writing to the $HOME directory (%2) failed with the error '%1'"
-#~ msgstr "No s'ha pogut escriure al directori «$HOME» (%2) amb l'error «%1»"
-
-#~ msgid "Temp directory (%1) is out of disk space."
-#~ msgstr "El directori temporal (%1) està sense espai en el disc."
-
-#~ msgid ""
-#~ "Writing to the temp directory (%2) failed with\n"
-#~ "    the error '%1'"
-#~ msgstr ""
-#~ "No s'ha pogut escriure al directori temporal (%2) amb\n"
-#~ "    l'error «%1»"
-
-#~ msgid "Plasma Workspace installation problem!"
-#~ msgstr "Problema d'instal·lació en l'espai de treball Plasma!"

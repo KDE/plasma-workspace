@@ -4919,9 +4919,3 @@ msgstr "Possibilitat de ruixats i tempestes elèctriques"
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
 msgstr "Probabilitat de ruixats i tempestes elèctriques"
-
-#~ msgid "UK"
-#~ msgstr "RU"
-
-#~ msgid "USA"
-#~ msgstr "EUA"
