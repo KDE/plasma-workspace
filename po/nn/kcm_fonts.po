@@ -344,6 +344,3 @@ msgstr ""
 "skriftstorleiks­verdiane ovanfor. Vil du endra storleiken på alt, kan du "
 "justera den globale skaleringa under sida <interface>Skjerm og skjermbilete</"
 "interface>.</para>"
-
-#~ msgid "Select Font"
-#~ msgstr "Vel skrift"

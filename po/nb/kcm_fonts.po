@@ -348,6 +348,3 @@ msgstr ""
 "skriftstørrelsesverdiene ovenfor. Vil du endre størrelsen på alt, kan du "
 "tilpasse den globale skaleringen under siden <interface>Skjerm og "
 "skjermbilde</interface>.</para>"
-
-#~ msgid "Select Font"
-#~ msgstr "Velg skrift"

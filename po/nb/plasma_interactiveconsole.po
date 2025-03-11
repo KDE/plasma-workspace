@@ -1,6 +1,5 @@
 # Translation of plasma_interactiveconsole to Norwegian Bokmål
 #
-#
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
