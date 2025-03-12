@@ -69,7 +69,7 @@ void PanelRulerView::syncPanelLocation()
     if (!mainItem()) {
         return;
     }
-    const QRect available = m_containment->corona()->availableScreenRect(m_containment->screen());
+    const QRect available = m_containment->corona()->screenGeometry(m_containment->screen());
 
     switch (m_containment->location()) {
     case Plasma::Types::TopEdge:
