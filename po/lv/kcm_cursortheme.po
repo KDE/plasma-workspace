@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-04-24 16:19+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -176,61 +176,61 @@ msgctxt "@title"
 msgid "Launch Feedback"
 msgstr "Palaišanas animācija"
 
-#: ui/LaunchFeedbackDialog.qml:25
+#: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr "Pielāgojiet animāciju, kas ir redzama, slēdzot programmas."
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "Kursora animācija:"
 
-#: ui/LaunchFeedbackDialog.qml:48
+#: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "Nav"
 
-#: ui/LaunchFeedbackDialog.qml:57
+#: ui/LaunchFeedbackDialog.qml:59
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "Statiska"
 
-#: ui/LaunchFeedbackDialog.qml:66
+#: ui/LaunchFeedbackDialog.qml:68
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "Mirgojoša"
 
-#: ui/LaunchFeedbackDialog.qml:75
+#: ui/LaunchFeedbackDialog.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "Lēkājoša"
 
-#: ui/LaunchFeedbackDialog.qml:90
+#: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "Uzdevumu pārvaldnieka animācija:"
 
-#: ui/LaunchFeedbackDialog.qml:92
+#: ui/LaunchFeedbackDialog.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "Ieslēgt animāciju"
 
-#: ui/LaunchFeedbackDialog.qml:111
+#: ui/LaunchFeedbackDialog.qml:113
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "Apturēt animāciju pēc:"
 
-#: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
+#: ui/LaunchFeedbackDialog.qml:127 ui/LaunchFeedbackDialog.qml:139
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"

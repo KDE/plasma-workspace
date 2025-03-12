@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-10-16 18:55+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -463,12 +463,12 @@ msgstr " (oletusmuotoilu alueelle %1)"
 msgid "Inherit Language"
 msgstr "Peri kieli"
 
-#: ui/AdvancedLanguageSelectPage.qml:22
+#: ui/AdvancedLanguageSelectPage.qml:23
 #, kde-format
 msgid "Language"
 msgstr "Kieli"
 
-#: ui/AdvancedLanguageSelectPage.qml:35
+#: ui/AdvancedLanguageSelectPage.qml:36
 #, kde-format
 msgid ""
 "Putting any other languages below English will cause undesired behavior in "
@@ -479,54 +479,54 @@ msgstr ""
 "epätoivottua toimintaa. Jos haluat järjestelmän käyttävän englantia, poista "
 "muut kielet."
 
-#: ui/AdvancedLanguageSelectPage.qml:44
+#: ui/AdvancedLanguageSelectPage.qml:45
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "Kieltä ”%1” ei tueta"
 
-#: ui/AdvancedLanguageSelectPage.qml:57
+#: ui/AdvancedLanguageSelectPage.qml:58
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Lisää kielet järjestykseen, jossa haluat käyttää niitä sovelluksissa."
 
-#: ui/AdvancedLanguageSelectPage.qml:95
+#: ui/AdvancedLanguageSelectPage.qml:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Vaihda kieli"
 
-#: ui/AdvancedLanguageSelectPage.qml:99
+#: ui/AdvancedLanguageSelectPage.qml:100
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Vaihda kieli"
 
-#: ui/AdvancedLanguageSelectPage.qml:110
+#: ui/AdvancedLanguageSelectPage.qml:111
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Siirrä ylimmäs"
 
-#: ui/AdvancedLanguageSelectPage.qml:116
+#: ui/AdvancedLanguageSelectPage.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Poista"
 
-#: ui/AdvancedLanguageSelectPage.qml:129
+#: ui/AdvancedLanguageSelectPage.qml:130
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Kieltä ei ole asetettu"
 
-#: ui/AdvancedLanguageSelectPage.qml:171 ui/AdvancedLanguageSelectPage.qml:186
+#: ui/AdvancedLanguageSelectPage.qml:172 ui/AdvancedLanguageSelectPage.qml:205
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Lisää kieliä"
 
-#: ui/AdvancedLanguageSelectPage.qml:230
+#: ui/AdvancedLanguageSelectPage.qml:228
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-31 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -64,37 +64,37 @@ msgstr "设备已断开连接。"
 msgid "An unknown error has occurred."
 msgstr "发生未知错误。"
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:181
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Change Password"
 msgstr "修改密码"
 
-#: src/ui/ChangePassword.qml:32
+#: src/ui/ChangePassword.qml:35
 #, kde-format
 msgid "Set Password"
 msgstr "设置密码"
 
-#: src/ui/ChangePassword.qml:53
+#: src/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Password"
 msgstr "密码"
 
-#: src/ui/ChangePassword.qml:68
+#: src/ui/ChangePassword.qml:71
 #, kde-format
 msgid "Confirm password"
 msgstr "确认密码"
 
-#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:65
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "两次输入的密码必须一致。"
 
-#: src/ui/ChangeWalletPassword.qml:16
+#: src/ui/ChangeWalletPassword.qml:18
 #, kde-format
 msgid "Change Wallet Password?"
 msgstr "更改密码库密码？"
 
-#: src/ui/ChangeWalletPassword.qml:25
+#: src/ui/ChangeWalletPassword.qml:29
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -104,12 +104,12 @@ msgstr ""
 "您刚刚修改了登录密码，请考虑同时更改您的默认 KWallet 密码库的密码以保持两者匹"
 "配。"
 
-#: src/ui/ChangeWalletPassword.qml:31
+#: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
 msgid "What is KWallet?"
 msgstr "KWallet 密码库是什么？"
 
-#: src/ui/ChangeWalletPassword.qml:41
+#: src/ui/ChangeWalletPassword.qml:45
 #, kde-format
 msgid ""
 "KWallet is a password manager that stores your passwords for wireless "
@@ -122,12 +122,12 @@ msgstr ""
 "用独立于您登录密码的密码进行锁定。如果登录密码和密码库的密码相同，您可以设置"
 "在登录时自动解锁密码库，免去再次输入密码的麻烦。"
 
-#: src/ui/ChangeWalletPassword.qml:58
+#: src/ui/ChangeWalletPassword.qml:60
 #, kde-format
 msgid "Change Wallet Password"
 msgstr "更改密码库密码"
 
-#: src/ui/ChangeWalletPassword.qml:67
+#: src/ui/ChangeWalletPassword.qml:69
 #, kde-format
 msgid "Leave Unchanged"
 msgstr "保持不变"
@@ -374,133 +374,133 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "更换头像"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "啥都不是"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "火烈鸟"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "火龙果"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "番薯"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "琥珀"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "阳光"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "柠檬绿"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "青葱"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "草地"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "孔雀绿"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma 蓝"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:39
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "暖紫"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:40
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "冷紫"
 
-#: src/ui/PicturesSheet.qml:38
+#: src/ui/PicturesSheet.qml:41
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "焦炭"
 
-#: src/ui/PicturesSheet.qml:39
+#: src/ui/PicturesSheet.qml:42
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "白纸"
 
-#: src/ui/PicturesSheet.qml:40
+#: src/ui/PicturesSheet.qml:43
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "咖啡"
 
-#: src/ui/PicturesSheet.qml:41
+#: src/ui/PicturesSheet.qml:44
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "木材"
 
-#: src/ui/PicturesSheet.qml:66
+#: src/ui/PicturesSheet.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "返回"
 
-#: src/ui/PicturesSheet.qml:84
+#: src/ui/PicturesSheet.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
 msgstr "首字母"
 
-#: src/ui/PicturesSheet.qml:138
+#: src/ui/PicturesSheet.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "选择文件…"
 
-#: src/ui/PicturesSheet.qml:143
+#: src/ui/PicturesSheet.qml:140
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "选择图片"
 
-#: src/ui/PicturesSheet.qml:147
+#: src/ui/PicturesSheet.qml:144
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -514,13 +514,13 @@ msgstr ""
 "图像文件 (所有主要文件类型) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *.pbm *."
 "pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:204
+#: src/ui/PicturesSheet.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "占位图标"
 
-#: src/ui/PicturesSheet.qml:293
+#: src/ui/PicturesSheet.qml:290
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

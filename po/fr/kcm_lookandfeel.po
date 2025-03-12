@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-07-27 10:16+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -175,25 +175,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Appliquer %1 ?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Sélectionnez quoi appliquer..."
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Afficher moins d'options..."
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Appliquer"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Annuler"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -310,6 +300,12 @@ msgid ""
 msgstr ""
 "Ce thème global ne fournit aucun paramètre applicable. Veuillez contacter le "
 "responsable de ce thème global car il est peut-être défectueux."
+
+#~ msgid "Apply"
+#~ msgstr "Appliquer"
+
+#~ msgid "Cancel"
+#~ msgstr "Annuler"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Écran de verrouillage"

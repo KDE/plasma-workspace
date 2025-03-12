@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-11-29 00:19-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -171,25 +171,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Aplicar %1?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Escolha o que aplicar..."
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostrar menos opções…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Aplicar"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Cancelar"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -306,6 +296,12 @@ msgid ""
 msgstr ""
 "Este tema global não fornece qualquer configuração aplicável. Contate o "
 "mantenedor deste tema global pois ele pode estar quebrado."
+
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Bloquear tela"

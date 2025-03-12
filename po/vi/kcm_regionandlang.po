@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-01 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2023-01-08 09:27+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -457,12 +457,12 @@ msgstr " (Định dạng chuẩn cho %1)"
 msgid "Inherit Language"
 msgstr "Kế thừa từ ngôn ngữ"
 
-#: ui/AdvancedLanguageSelectPage.qml:22
+#: ui/AdvancedLanguageSelectPage.qml:23
 #, kde-format
 msgid "Language"
 msgstr "Ngôn ngữ"
 
-#: ui/AdvancedLanguageSelectPage.qml:35
+#: ui/AdvancedLanguageSelectPage.qml:36
 #, fuzzy, kde-format
 #| msgid ""
 #| "Putting American English above other languages will cause undesired "
@@ -477,54 +477,54 @@ msgstr ""
 "muốn ở một số ứng dụng. Nếu bạn muốn hệ thống sử dụng tiếng Anh Mĩ, hãy bỏ "
 "tất cả các ngôn ngữ khác đi."
 
-#: ui/AdvancedLanguageSelectPage.qml:44
+#: ui/AdvancedLanguageSelectPage.qml:45
 #, kde-format
 msgctxt "Error message, %1 is the language name"
 msgid "The language \"%1\" is unsupported"
 msgstr "Ngôn ngữ \"%1\" không được hỗ trợ"
 
-#: ui/AdvancedLanguageSelectPage.qml:57
+#: ui/AdvancedLanguageSelectPage.qml:58
 #, kde-format
 msgid "Add languages in the order you want to see them in your applications."
 msgstr "Thêm các ngôn ngữ theo thứ tự mà bạn muốn thấy trong các ứng dụng."
 
-#: ui/AdvancedLanguageSelectPage.qml:95
+#: ui/AdvancedLanguageSelectPage.qml:96
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Change Language"
 msgstr "Đổi ngôn ngữ"
 
-#: ui/AdvancedLanguageSelectPage.qml:99
+#: ui/AdvancedLanguageSelectPage.qml:100
 #, kde-format
 msgctxt "@title:window"
 msgid "Change Language"
 msgstr "Đổi ngôn ngữ"
 
-#: ui/AdvancedLanguageSelectPage.qml:110
+#: ui/AdvancedLanguageSelectPage.qml:111
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Move to top"
 msgstr "Chuyển lên đầu"
 
-#: ui/AdvancedLanguageSelectPage.qml:116
+#: ui/AdvancedLanguageSelectPage.qml:117
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Remove"
 msgstr "Bỏ"
 
-#: ui/AdvancedLanguageSelectPage.qml:129
+#: ui/AdvancedLanguageSelectPage.qml:130
 #, kde-format
 msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Không ngôn ngữ nào được cấu hình"
 
-#: ui/AdvancedLanguageSelectPage.qml:171 ui/AdvancedLanguageSelectPage.qml:186
+#: ui/AdvancedLanguageSelectPage.qml:172 ui/AdvancedLanguageSelectPage.qml:205
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Thêm ngôn ngữ"
 
-#: ui/AdvancedLanguageSelectPage.qml:230
+#: ui/AdvancedLanguageSelectPage.qml:228
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

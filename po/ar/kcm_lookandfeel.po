@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-07-28 12:21+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -164,25 +164,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "طبّق %1؟"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "اختر ماذا تريد أن تطبق..."
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "اعرض خيارات أقل…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "طبّق"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "ألغِ"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -298,6 +288,12 @@ msgid ""
 msgstr ""
 "لا تقدم السمة الشاملة أي إعدادات. الرجاء التواصل مع مؤلف هذه السمة لأنها قد "
 "تكون معطوبة."
+
+#~ msgid "Apply"
+#~ msgstr "طبّق"
+
+#~ msgid "Cancel"
+#~ msgstr "ألغِ"
 
 #~ msgid "Lock Screen"
 #~ msgstr "قفل الشّاشة"

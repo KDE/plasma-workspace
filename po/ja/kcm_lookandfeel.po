@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-11-17 22:41+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -165,25 +165,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 を適用しますか？"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "適用するものを選んでください..."
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "表示するオプションを減らす..."
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "適用"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "キャンセル"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -299,3 +289,9 @@ msgid ""
 msgstr ""
 "このグローバルテーマは適切な設定を提供していません。壊れている可能性があるた"
 "め、このグローバルテーマのメンテナに連絡してください。"
+
+#~ msgid "Apply"
+#~ msgstr "適用"
+
+#~ msgid "Cancel"
+#~ msgstr "キャンセル"

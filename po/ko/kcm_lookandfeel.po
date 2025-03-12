@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-11-28 23:28+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -161,25 +161,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 테마를 적용하시겠습니까?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "적용할 항목 선택…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "옵션 덜 보기…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "적용"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "취소"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -295,6 +285,12 @@ msgid ""
 msgstr ""
 "이 전역 테마에 변경할 수 있는 설정이 없습니다. 전역 테마에 문제가 있는 것일 "
 "수도 있으므로 테마 관리자에게 연락하십시오."
+
+#~ msgid "Apply"
+#~ msgstr "적용"
+
+#~ msgid "Cancel"
+#~ msgstr "취소"
 
 #~ msgid "Lock Screen"
 #~ msgstr "잠금 화면"

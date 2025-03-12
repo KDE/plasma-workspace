@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2023-01-22 22:38+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -162,25 +162,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Deseja aplicar o %1?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Escolher o que aplicar…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostrar menos opções…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Aplicar"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Cancelar"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -302,6 +292,12 @@ msgstr ""
 "Este tema global não oferece nenhumas definições que se possam aplicar. Por "
 "favor contacte o responsável por este tema global, porque poderá estar com "
 "problemas."
+
+#~ msgid "Apply"
+#~ msgstr "Aplicar"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancelar"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Bloquear o Ecrã"

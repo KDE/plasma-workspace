@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-31 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-12-13 21:16+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -66,37 +66,37 @@ msgstr "Tækið var aftengt."
 msgid "An unknown error has occurred."
 msgstr "Óþekkt villa kom upp."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:181
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Change Password"
 msgstr "Breyta lykilorði"
 
-#: src/ui/ChangePassword.qml:32
+#: src/ui/ChangePassword.qml:35
 #, kde-format
 msgid "Set Password"
 msgstr "Velja lykilorð"
 
-#: src/ui/ChangePassword.qml:53
+#: src/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Password"
 msgstr "Lykilorð"
 
-#: src/ui/ChangePassword.qml:68
+#: src/ui/ChangePassword.qml:71
 #, kde-format
 msgid "Confirm password"
 msgstr "Staðfesta lykilorð"
 
-#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:65
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "Lykilorðin þurfa að stemma"
 
-#: src/ui/ChangeWalletPassword.qml:16
+#: src/ui/ChangeWalletPassword.qml:18
 #, kde-format
 msgid "Change Wallet Password?"
 msgstr "Breyta lykilorði veskis?"
 
-#: src/ui/ChangeWalletPassword.qml:25
+#: src/ui/ChangeWalletPassword.qml:29
 #, fuzzy, kde-format
 #| msgctxt "@info"
 #| msgid ""
@@ -110,12 +110,12 @@ msgstr ""
 "Nú þegar þú hefur breytt lykilorðinu fyrir innskráningu, þá gætirðu viljað "
 "breyta einnig lykilorðinu að KWallet-veskinu til samræmis."
 
-#: src/ui/ChangeWalletPassword.qml:31
+#: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
 msgid "What is KWallet?"
 msgstr "Hvaða er KWallet?"
 
-#: src/ui/ChangeWalletPassword.qml:41
+#: src/ui/ChangeWalletPassword.qml:45
 #, kde-format
 msgid ""
 "KWallet is a password manager that stores your passwords for wireless "
@@ -130,12 +130,12 @@ msgstr ""
 "lykilorð eru eins er hægt að aflæsa KWallet sjálfkrafa svo þú þurfir ekki að "
 "færa inn lykilorðið í KWallet sérstaklega."
 
-#: src/ui/ChangeWalletPassword.qml:58
+#: src/ui/ChangeWalletPassword.qml:60
 #, kde-format
 msgid "Change Wallet Password"
 msgstr "Breyta lykilorði veskis"
 
-#: src/ui/ChangeWalletPassword.qml:67
+#: src/ui/ChangeWalletPassword.qml:69
 #, kde-format
 msgid "Leave Unchanged"
 msgstr "Láta vera óbreytt"
@@ -382,133 +382,133 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "Skipta um notandamynd"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "Þetta er ekkert"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "Flottur Flamingó"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "Drekaaldin"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "Sætkartafla"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "Rafgullið rými"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "Geislandi geisli"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "Sítrónulímóna"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "Grænt og vænt"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "Grundir og engi"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "Tepid Teal"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "Plasma-blátt"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:39
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "Fjóludúskur"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:40
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "Fjólublátt"
 
-#: src/ui/PicturesSheet.qml:38
+#: src/ui/PicturesSheet.qml:41
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "Kolamoli"
 
-#: src/ui/PicturesSheet.qml:39
+#: src/ui/PicturesSheet.qml:42
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "Pappírspési"
 
-#: src/ui/PicturesSheet.qml:40
+#: src/ui/PicturesSheet.qml:43
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "Kaffibrúnt"
 
-#: src/ui/PicturesSheet.qml:41
+#: src/ui/PicturesSheet.qml:44
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "Harðviður"
 
-#: src/ui/PicturesSheet.qml:66
+#: src/ui/PicturesSheet.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "Fara til baka"
 
-#: src/ui/PicturesSheet.qml:84
+#: src/ui/PicturesSheet.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
 msgstr "Upphafsstafir"
 
-#: src/ui/PicturesSheet.qml:138
+#: src/ui/PicturesSheet.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "Veldu skrá…"
 
-#: src/ui/PicturesSheet.qml:143
+#: src/ui/PicturesSheet.qml:140
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "Velja mynd"
 
-#: src/ui/PicturesSheet.qml:147
+#: src/ui/PicturesSheet.qml:144
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -522,13 +522,13 @@ msgstr ""
 "Myndskrár (allar helstu skrárgerðir) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg "
 "*.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:204
+#: src/ui/PicturesSheet.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "Staðgengilstákn"
 
-#: src/ui/PicturesSheet.qml:293
+#: src/ui/PicturesSheet.qml:290
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

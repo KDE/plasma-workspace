@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2020-09-26 10:53+0200\n"
 "Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
 "Language-Team: Estonian <>\n"
@@ -164,24 +164,14 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr ""
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr ""
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr ""
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
 msgstr ""
 
 #: ui/MoreOptions.qml:24

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2023-08-07 23:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.slat.org>\n"
@@ -170,61 +170,61 @@ msgctxt "@title"
 msgid "Launch Feedback"
 msgstr "啟動回饋"
 
-#: ui/LaunchFeedbackDialog.qml:25
+#: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr "設定應用程式啟動中的時候播放的動畫。"
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "游標回饋："
 
-#: ui/LaunchFeedbackDialog.qml:48
+#: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "無"
 
-#: ui/LaunchFeedbackDialog.qml:57
+#: ui/LaunchFeedbackDialog.qml:59
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "靜態"
 
-#: ui/LaunchFeedbackDialog.qml:66
+#: ui/LaunchFeedbackDialog.qml:68
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "閃爍"
 
-#: ui/LaunchFeedbackDialog.qml:75
+#: ui/LaunchFeedbackDialog.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "彈跳"
 
-#: ui/LaunchFeedbackDialog.qml:90
+#: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "工作管理員回饋："
 
-#: ui/LaunchFeedbackDialog.qml:92
+#: ui/LaunchFeedbackDialog.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "啟用動畫"
 
-#: ui/LaunchFeedbackDialog.qml:111
+#: ui/LaunchFeedbackDialog.qml:113
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "幾秒後停止動畫："
 
-#: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
+#: ui/LaunchFeedbackDialog.qml:127 ui/LaunchFeedbackDialog.qml:139
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"

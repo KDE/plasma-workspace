@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-10-25 23:38-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -169,61 +169,61 @@ msgctxt "@title"
 msgid "Launch Feedback"
 msgstr "ਫੀਡਬੈਕ ਚਲਾਓ"
 
-#: ui/LaunchFeedbackDialog.qml:25
+#: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
 msgstr ""
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "ਕਰਸਰ ਫੀਡਬੈਕ:"
 
-#: ui/LaunchFeedbackDialog.qml:48
+#: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "ਕੋਈ ਨਹੀਂ"
 
-#: ui/LaunchFeedbackDialog.qml:57
+#: ui/LaunchFeedbackDialog.qml:59
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "ਸਥਿਰ"
 
-#: ui/LaunchFeedbackDialog.qml:66
+#: ui/LaunchFeedbackDialog.qml:68
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "ਝਪਕਣਾ"
 
-#: ui/LaunchFeedbackDialog.qml:75
+#: ui/LaunchFeedbackDialog.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "ਕੁੱਦਦੀ"
 
-#: ui/LaunchFeedbackDialog.qml:90
+#: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "ਟਾਸਕ ਮੈਨੇਜਰ ਫੀਡਬੈਕ:"
 
-#: ui/LaunchFeedbackDialog.qml:92
+#: ui/LaunchFeedbackDialog.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "ਐਨੀਮੇਸ਼ਨ ਸਮਰੱਥ ਕਰੋ"
 
-#: ui/LaunchFeedbackDialog.qml:111
+#: ui/LaunchFeedbackDialog.qml:113
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "ਇਸ ਦੇ ਬਾਅਦ ਐਨੀਮੇਸ਼ਨ ਰੋਕੋ:"
 
-#: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
+#: ui/LaunchFeedbackDialog.qml:127 ui/LaunchFeedbackDialog.qml:139
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"

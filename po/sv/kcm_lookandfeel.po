@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-07-26 20:59+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -164,25 +164,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Verkställ %1?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Välj vad som ska verkställas…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Visa färre alternativ…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Verkställ"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Avbryt"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -300,6 +290,12 @@ msgstr ""
 "Det här globala temat tillhandahåller inte några tillämpliga inställningar. "
 "Kontakta underhållsansvarig för det globala temat, eftersom det kan vara "
 "felaktigt."
+
+#~ msgid "Apply"
+#~ msgstr "Verkställ"
+
+#~ msgid "Cancel"
+#~ msgstr "Avbryt"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Lås skärmen"

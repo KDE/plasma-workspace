@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -167,25 +167,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Ужыць %1?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Абраць, што ўжываць…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Паказаць менш параметраў…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Ужыць"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Скасаваць"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -302,6 +292,12 @@ msgid ""
 msgstr ""
 "У гэтай глабальнай тэмы няма прыдатных налад. Калі ласка, звяжыцеся з "
 "распрацоўнікам гэтай глабальнай тэмы, бо яна можа быць пашкоджанай."
+
+#~ msgid "Apply"
+#~ msgstr "Ужыць"
+
+#~ msgid "Cancel"
+#~ msgstr "Скасаваць"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Экран блакавання"

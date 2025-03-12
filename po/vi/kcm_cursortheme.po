@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcminput\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-24 00:41+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2023-01-08 16:09+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -176,7 +176,7 @@ msgctxt "@title"
 msgid "Launch Feedback"
 msgstr "Phản hồi khởi chạy"
 
-#: ui/LaunchFeedbackDialog.qml:25
+#: ui/LaunchFeedbackDialog.qml:27
 #, kde-format
 msgctxt "@info:usagetip"
 msgid "Configure the animations played while an application is launching."
@@ -184,55 +184,55 @@ msgstr ""
 "Cấu hình các hiệu ứng động được thể hiện trong khi một ứng dụng đang khởi "
 "chạy."
 
-#: ui/LaunchFeedbackDialog.qml:47
+#: ui/LaunchFeedbackDialog.qml:49
 #, kde-format
 msgctxt "@label"
 msgid "Cursor feedback:"
 msgstr "Phản hồi ở con trỏ:"
 
-#: ui/LaunchFeedbackDialog.qml:48
+#: ui/LaunchFeedbackDialog.qml:50
 #, kde-format
 msgctxt "@option:radio No cursor feedback when launching apps"
 msgid "None"
 msgstr "Không"
 
-#: ui/LaunchFeedbackDialog.qml:57
+#: ui/LaunchFeedbackDialog.qml:59
 #, kde-format
 msgctxt "@option:radio"
 msgid "Static"
 msgstr "Tĩnh"
 
-#: ui/LaunchFeedbackDialog.qml:66
+#: ui/LaunchFeedbackDialog.qml:68
 #, kde-format
 msgctxt "@option:radio"
 msgid "Blinking"
 msgstr "Nhấp nháy"
 
-#: ui/LaunchFeedbackDialog.qml:75
+#: ui/LaunchFeedbackDialog.qml:77
 #, kde-format
 msgctxt "@option:radio"
 msgid "Bouncing"
 msgstr "Nảy"
 
-#: ui/LaunchFeedbackDialog.qml:90
+#: ui/LaunchFeedbackDialog.qml:92
 #, kde-format
 msgctxt "@label"
 msgid "Task Manager feedback:"
 msgstr "Phản hồi ở trình quản lí tác vụ:"
 
-#: ui/LaunchFeedbackDialog.qml:92
+#: ui/LaunchFeedbackDialog.qml:94
 #, kde-format
 msgctxt "@option:check"
 msgid "Enable animation"
 msgstr "Bật hiệu ứng động"
 
-#: ui/LaunchFeedbackDialog.qml:111
+#: ui/LaunchFeedbackDialog.qml:113
 #, kde-format
 msgctxt "@label"
 msgid "Stop animations after:"
 msgstr "Dừng hiệu ứng động sau:"
 
-#: ui/LaunchFeedbackDialog.qml:125 ui/LaunchFeedbackDialog.qml:137
+#: ui/LaunchFeedbackDialog.qml:127 ui/LaunchFeedbackDialog.qml:139
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"

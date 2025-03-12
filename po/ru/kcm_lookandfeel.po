@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-09-21 11:49+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -167,25 +167,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Применить «%1»?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Выбрать компоненты оформления…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Скрыть подробности…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Применить"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Отмена"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -301,6 +291,12 @@ msgid ""
 msgstr ""
 "Это оформление не сдержит ни одного параметра, который может быть "
 "использован. Сообщите об этой ситуации разработчику."
+
+#~ msgid "Apply"
+#~ msgstr "Применить"
+
+#~ msgid "Cancel"
+#~ msgstr "Отмена"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Экран блокировки"

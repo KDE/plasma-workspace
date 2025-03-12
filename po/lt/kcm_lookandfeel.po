@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-08-12 16:19+0300\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -168,25 +168,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Taikyti %1?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Pasirinkite, ką taikyti…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Rodyti mažiau parinkčių…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Taikyti"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Atsisakyti"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -304,6 +294,12 @@ msgstr ""
 "Šis visuotinis apipavidalinimas nepateikia jokių nuostatų, kurias galima "
 "būtų pritaikyti. Susisiekite su šio visuotinio apipavidalinimo autoriumi, "
 "nes gali būti, jog apipavidalinimas yra sugadintas."
+
+#~ msgid "Apply"
+#~ msgstr "Taikyti"
+
+#~ msgid "Cancel"
+#~ msgstr "Atsisakyti"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Ekrano užraktas"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-23 00:42+0000\n"
-"PO-Revision-Date: 2024-08-12 16:28+0300\n"
+"PO-Revision-Date: 2025-03-11 21:40+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -20,31 +20,23 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Atjungiama…"
+msgstr "Tikrinama…"
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Atjungiama…"
+msgstr "Pataisoma…"
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -143,7 +135,7 @@ msgstr "Atverti failų tvarkytuvėje"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Pabandyti pataisyti"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -161,15 +153,14 @@ msgid "Safely remove"
 msgstr "Saugiai pašalinti"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Dabar šis įrenginys gali būti saugiai pašalintas."
+msgstr "Šiame įrenginyje yra failų sistemos klaidų."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Sėkmingai pataisyta!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -203,11 +194,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Jūs neturite įgaliojimų išstumti šį diską."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Jūs neturite įgaliojimų pašalinti šį įrenginį."
+msgstr "Jūs neturite įgaliojimų pataisyti šį įrenginį."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -257,11 +246,9 @@ msgid "Could not eject this disc."
 msgstr "Nepavyko išstumti šio disko."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Nepavyko pašalinti šio įrenginio."
+msgstr "Nepavyko pataisyti šio įrenginio: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Failų sistema nereaguoja"

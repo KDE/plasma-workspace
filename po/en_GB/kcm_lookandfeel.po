@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-08-03 12:47+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -165,25 +165,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Apply %1?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Choose what to apply…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Show fewer options…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Apply"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Cancel"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -299,6 +289,12 @@ msgid ""
 msgstr ""
 "This Global Theme does not provide any applicable settings. Please contact "
 "the maintainer of this Global Theme as it might be broken."
+
+#~ msgid "Apply"
+#~ msgstr "Apply"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancel"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Lock Screen"

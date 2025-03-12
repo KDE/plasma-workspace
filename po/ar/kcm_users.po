@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-31 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2025-01-09 09:38+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -65,37 +65,37 @@ msgstr "الجهاز مفصول."
 msgid "An unknown error has occurred."
 msgstr "حدث خطأ مجهول."
 
-#: src/ui/ChangePassword.qml:27 src/ui/UserDetailsPage.qml:181
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:181
 #, kde-format
 msgid "Change Password"
 msgstr "غيّر كلمة السر"
 
-#: src/ui/ChangePassword.qml:32
+#: src/ui/ChangePassword.qml:35
 #, kde-format
 msgid "Set Password"
 msgstr "ضع كلمة سر"
 
-#: src/ui/ChangePassword.qml:53
+#: src/ui/ChangePassword.qml:56
 #, kde-format
 msgid "Password"
 msgstr "كلمة السر"
 
-#: src/ui/ChangePassword.qml:68
+#: src/ui/ChangePassword.qml:71
 #, kde-format
 msgid "Confirm password"
 msgstr "أكد كلمة السر"
 
-#: src/ui/ChangePassword.qml:87 src/ui/CreateUser.qml:65
+#: src/ui/ChangePassword.qml:90 src/ui/CreateUser.qml:65
 #, kde-format
 msgid "Passwords must match"
 msgstr "يجب أن تتطابق كلمتي السر"
 
-#: src/ui/ChangeWalletPassword.qml:16
+#: src/ui/ChangeWalletPassword.qml:18
 #, kde-format
 msgid "Change Wallet Password?"
 msgstr "هل تغير كلمة سر المحفظة؟"
 
-#: src/ui/ChangeWalletPassword.qml:25
+#: src/ui/ChangeWalletPassword.qml:29
 #, kde-format
 msgctxt "@info"
 msgid ""
@@ -105,12 +105,12 @@ msgstr ""
 "الآن بعد أن غيرت كلمة ولوجك، فكّر في تغيير كلمة السر على حافظة ك المبدئية "
 "لمطابقتها."
 
-#: src/ui/ChangeWalletPassword.qml:31
+#: src/ui/ChangeWalletPassword.qml:35
 #, kde-format
 msgid "What is KWallet?"
 msgstr "ما هي حافظة ك؟"
 
-#: src/ui/ChangeWalletPassword.qml:41
+#: src/ui/ChangeWalletPassword.qml:45
 #, kde-format
 msgid ""
 "KWallet is a password manager that stores your passwords for wireless "
@@ -124,12 +124,12 @@ msgstr ""
 "مرور الولوج الخاصة بك. إذا كانت كلمتا المرور متطابقتين ، فيمكن إلغاء قفله "
 "عند الولوج تلقائيًا حتى لا تضطر إلى إدخال كلمة مرور حافظة ك بنفسك. "
 
-#: src/ui/ChangeWalletPassword.qml:58
+#: src/ui/ChangeWalletPassword.qml:60
 #, kde-format
 msgid "Change Wallet Password"
 msgstr "غير كلمة سر المحفظة"
 
-#: src/ui/ChangeWalletPassword.qml:67
+#: src/ui/ChangeWalletPassword.qml:69
 #, kde-format
 msgid "Leave Unchanged"
 msgstr "اتركه بدون تعديل"
@@ -376,133 +376,133 @@ msgctxt "@title"
 msgid "Change Avatar"
 msgstr "غيّر الصورة"
 
-#: src/ui/PicturesSheet.qml:25
+#: src/ui/PicturesSheet.qml:28
 #, kde-format
 msgctxt "@item:intable"
 msgid "It's Nothing"
 msgstr "لا شيء"
 
-#: src/ui/PicturesSheet.qml:26
+#: src/ui/PicturesSheet.qml:29
 #, kde-format
 msgctxt "@item:intable"
 msgid "Feisty Flamingo"
 msgstr "فلامنغو المشاكس"
 
-#: src/ui/PicturesSheet.qml:27
+#: src/ui/PicturesSheet.qml:30
 #, kde-format
 msgctxt "@item:intable"
 msgid "Dragon's Fruit"
 msgstr "فاكهة التنين"
 
-#: src/ui/PicturesSheet.qml:28
+#: src/ui/PicturesSheet.qml:31
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sweet Potato"
 msgstr "بطاطا حلوة"
 
-#: src/ui/PicturesSheet.qml:29
+#: src/ui/PicturesSheet.qml:32
 #, kde-format
 msgctxt "@item:intable"
 msgid "Ambient Amber"
 msgstr "محيط العنبر"
 
-#: src/ui/PicturesSheet.qml:30
+#: src/ui/PicturesSheet.qml:33
 #, kde-format
 msgctxt "@item:intable"
 msgid "Sparkle Sunbeam"
 msgstr "تألق شعاع الشمس"
 
-#: src/ui/PicturesSheet.qml:31
+#: src/ui/PicturesSheet.qml:34
 #, kde-format
 msgctxt "@item:intable"
 msgid "Lemon-Lime"
 msgstr "ليمون حامض"
 
-#: src/ui/PicturesSheet.qml:32
+#: src/ui/PicturesSheet.qml:35
 #, kde-format
 msgctxt "@item:intable"
 msgid "Verdant Charm"
 msgstr "سحر الخضرة"
 
-#: src/ui/PicturesSheet.qml:33
+#: src/ui/PicturesSheet.qml:36
 #, kde-format
 msgctxt "@item:intable"
 msgid "Mellow Meadow"
 msgstr "مرج ناضج"
 
-#: src/ui/PicturesSheet.qml:34
+#: src/ui/PicturesSheet.qml:37
 #, kde-format
 msgctxt "@item:intable"
 msgid "Tepid Teal"
 msgstr "البط البري الفاتر"
 
-#: src/ui/PicturesSheet.qml:35
+#: src/ui/PicturesSheet.qml:38
 #, kde-format
 msgctxt "@item:intable"
 msgid "Plasma Blue"
 msgstr "بلازما الزرقاء"
 
-#: src/ui/PicturesSheet.qml:36
+#: src/ui/PicturesSheet.qml:39
 #, kde-format
 msgctxt "@item:intable"
 msgid "Pon Purple"
 msgstr "بون الأرجواني"
 
-#: src/ui/PicturesSheet.qml:37
+#: src/ui/PicturesSheet.qml:40
 #, kde-format
 msgctxt "@item:intable"
 msgid "Bajo Purple"
 msgstr "باجو الأرجواني"
 
-#: src/ui/PicturesSheet.qml:38
+#: src/ui/PicturesSheet.qml:41
 #, kde-format
 msgctxt "@item:intable"
 msgid "Burnt Charcoal"
 msgstr "فحم محترق"
 
-#: src/ui/PicturesSheet.qml:39
+#: src/ui/PicturesSheet.qml:42
 #, kde-format
 msgctxt "@item:intable"
 msgid "Paper Perfection"
 msgstr "إتقان الورق"
 
-#: src/ui/PicturesSheet.qml:40
+#: src/ui/PicturesSheet.qml:43
 #, kde-format
 msgctxt "@item:intable"
 msgid "Cafétera Brown"
 msgstr "كافيترا براون"
 
-#: src/ui/PicturesSheet.qml:41
+#: src/ui/PicturesSheet.qml:44
 #, kde-format
 msgctxt "@item:intable"
 msgid "Rich Hardwood"
 msgstr "خشب صلب غني "
 
-#: src/ui/PicturesSheet.qml:66
+#: src/ui/PicturesSheet.qml:63
 #, kde-format
 msgctxt "@action:button"
 msgid "Go Back"
 msgstr "عُد"
 
-#: src/ui/PicturesSheet.qml:84
+#: src/ui/PicturesSheet.qml:81
 #, kde-format
 msgctxt "@action:button"
 msgid "Initials"
 msgstr "الحروف البادئة"
 
-#: src/ui/PicturesSheet.qml:138
+#: src/ui/PicturesSheet.qml:135
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
 msgstr "اختر ملف..."
 
-#: src/ui/PicturesSheet.qml:143
+#: src/ui/PicturesSheet.qml:140
 #, kde-format
 msgctxt "@title"
 msgid "Choose a picture"
 msgstr "اختر صورة"
 
-#: src/ui/PicturesSheet.qml:147
+#: src/ui/PicturesSheet.qml:144
 #, kde-format
 msgctxt ""
 "@option file type (mime type) for avif, bmp, gif, jp2, jpeg, jpg, pbm, pgm, "
@@ -516,13 +516,13 @@ msgstr ""
 "ملفّات الصّور (كافة أنواع الملفات الرئيسة) (*.avif *.bmp *.gif *.jp2 *.jpeg *."
 "jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
-#: src/ui/PicturesSheet.qml:204
+#: src/ui/PicturesSheet.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Placeholder Icon"
 msgstr "مكان صورة تعبيرية"
 
-#: src/ui/PicturesSheet.qml:293
+#: src/ui/PicturesSheet.qml:290
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"

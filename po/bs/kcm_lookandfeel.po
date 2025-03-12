@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: bosnianuniversetranslation\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2015-01-06 23:58+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -164,24 +164,14 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr ""
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr ""
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
-msgstr ""
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr ""
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
 msgstr ""
 
 #: ui/MoreOptions.qml:24

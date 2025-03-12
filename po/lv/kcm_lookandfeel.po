@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-08-15 19:04+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -165,25 +165,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Vai pielietot „%1“?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Izvēlieties, ko pielietot…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Rādīt mazāk iespēju…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Pielietot"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Atcelt"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -299,6 +289,12 @@ msgid ""
 msgstr ""
 "Šis globālais motīvs nepiedāvā nekādus pielietojamus iestatījumus. "
 "Sazinieties ar tā uzturētāju, jo, iespējams, motīvs nestrādā."
+
+#~ msgid "Apply"
+#~ msgstr "Pielietot"
+
+#~ msgid "Cancel"
+#~ msgstr "Atcelt"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Bloķēšanas ekrāns"

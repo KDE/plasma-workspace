@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-07-26 07:49+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -171,25 +171,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Voleu aplicar %1?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Seleccioneu què aplicar…"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Mostra menys opcions…"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Aplica"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Cancel·la"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -306,3 +296,9 @@ msgid ""
 msgstr ""
 "Este tema global no proporciona cap configuració aplicable. Contacteu amb el "
 "mantenidor d'este tema global, ja que podria estar trencat."
+
+#~ msgid "Apply"
+#~ msgstr "Aplica"
+
+#~ msgid "Cancel"
+#~ msgstr "Cancel·la"

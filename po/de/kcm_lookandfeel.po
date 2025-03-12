@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_lookandfeel\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-09-29 18:25+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -167,25 +167,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "%1 anwenden?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Wählen Sie, was angewendet werden soll …"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Weniger Optionen anzeigen …"
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Anwenden"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Abbrechen"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -303,6 +293,12 @@ msgstr ""
 "Dieses globale Design stellt keine anwendbaren Einstellungen zur Verfügung. "
 "Bitte kontaktieren Sie den Betreuer dieses Designs, da es fehlerhaft sein "
 "könnte."
+
+#~ msgid "Apply"
+#~ msgstr "Anwenden"
+
+#~ msgid "Cancel"
+#~ msgstr "Abbrechen"
 
 #~ msgid "Lock Screen"
 #~ msgstr "Bildschirm sperren"

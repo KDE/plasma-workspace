@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-22 00:43+0000\n"
+"POT-Creation-Date: 2025-03-12 00:44+0000\n"
 "PO-Revision-Date: 2024-07-26 15:26+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -164,25 +164,15 @@ msgctxt ""
 msgid "Apply %1?"
 msgstr "Použít %1?"
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Choose what to apply…"
 msgstr "Vyberte co použít..."
 
-#: ui/main.qml:165
+#: ui/main.qml:178
 #, kde-format
 msgid "Show fewer options…"
 msgstr "Zobrazit méně možností..."
-
-#: ui/main.qml:182
-#, kde-format
-msgid "Apply"
-msgstr "Použít"
-
-#: ui/main.qml:194
-#, kde-format
-msgid "Cancel"
-msgstr "Zrušit"
 
 #: ui/MoreOptions.qml:24
 #, kde-format
@@ -296,3 +286,9 @@ msgid ""
 msgstr ""
 "tento globální motiv neposkytuje jakékoliv použitelné nastavení. Prosím "
 "kontaktujte správce tohoto globálního motivu, jelikož může být poškozen."
+
+#~ msgid "Apply"
+#~ msgstr "Použít"
+
+#~ msgid "Cancel"
+#~ msgstr "Zrušit"
