@@ -1552,20 +1552,24 @@ bool PanelView::canSetStrut() const
 
 void PanelView::updateExclusiveZone()
 {
-    if (containment() && containment()->isUserConfiguring() && m_layerWindow && m_layerWindow->exclusionZone() == -1) {
+    if (containment() && containment()->isUserConfiguring() && m_layerWindow) {
         // We set the exclusive zone to make sure the ruler does not
         // overlap with the panel regardless of the visibility mode;
         // this won't be updated anymore as long as we are within
         // the panel configuration.
-        switch (containment()->formFactor()) {
-        case Plasma::Types::Horizontal:
-            m_layerWindow->setExclusiveZone(thickness() + m_topFloatingPadding + m_bottomFloatingPadding);
-            break;
-        case Plasma::Types::Vertical:
-            m_layerWindow->setExclusiveZone(thickness() + m_leftFloatingPadding + m_rightFloatingPadding);
-            break;
-        default:
-            qWarning() << "Warning: unexpected panel formFactor:" << containment()->formFactor() << "Horizontal or Vertical expected";
+        if (m_panelConfigView->isVisible()) {
+            switch (containment()->formFactor()) {
+            case Plasma::Types::Horizontal:
+                m_layerWindow->setExclusiveZone(thickness() + m_topFloatingPadding + m_bottomFloatingPadding);
+                break;
+            case Plasma::Types::Vertical:
+                m_layerWindow->setExclusiveZone(thickness() + m_leftFloatingPadding + m_rightFloatingPadding);
+                break;
+            default:
+                qWarning() << "Warning: unexpected panel formFactor:" << containment()->formFactor() << "Horizontal or Vertical expected";
+            }
+        } else {
+            m_layerWindow->setExclusiveZone(-1);
         }
     }
     if (!containment() || containment()->isUserConfiguring() || !m_screenToFollow) {
