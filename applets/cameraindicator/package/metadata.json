@@ -54,6 +54,7 @@
             }
         ],
         "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=plasmashell&component=Camera%20Indicator",
+        "Category": "System Information",
         "Description": "Shows whether any camera is currently used by an app",
         "Description[ar]": "يوضح ما إذا كان التطبيق يستخدم أي كاميرا حاليًا",
         "Description[az]": "Kameranın hansı tətbiq tərəfindən istifadə olunduğunu göstərir",
