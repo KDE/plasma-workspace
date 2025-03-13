@@ -93,6 +93,14 @@ PlasmaExtras.Representation {
             }
         }
 
+        // the controls handle arrow keys on their own, but if the representation itself has focus
+        // it looks like the tabbar does, so treat it as such
+        if ((event.key == Qt.Key_Left || event.key == Qt.Key_Right) && playerSelector.visible) {
+            event.accepted = true
+            playerSelector.forceActiveFocus(Qt.TabFocusReason)
+            playerSelector.handleArrows(event)
+        }
+
         if (event.modifiers & Qt.AltModifier && (event.key >= Qt.Key_0 && event.key <= Qt.Key_9)) {
             let target = event.key == Qt.Key_0 ? 9 : (event.key - Qt.Key_0) -1
             if (target < playerList.count) {
@@ -792,6 +800,19 @@ PlasmaExtras.Representation {
             implicitHeight: contentHeight
             currentIndex: playerSelector.count, mpris2Model.currentIndex
             position: PlasmaComponents3.TabBar.Header
+            // the currentIndex can go out of sync despite the binding if new tabbuttons are added, so we force it
+            onCurrentIndexChanged: setCurrentIndex(mpris2Model.currentIndex)
+
+            // immediately update content on arrow key press the way other plasmoids do (e.g. weather, volume)
+            function handleArrows(event: KeyEvent): void {
+                let forwardArrowKey = (event.key === Qt.Key_Right && Application.layoutDirection === Qt.LeftToRight) ||
+                    (event.key === Qt.Key_Left && Application.layoutDirection === Qt.RightToLeft)
+                if (forwardArrowKey) {
+                    mpris2Model.currentIndex = Math.min(currentIndex+1, count-1)
+                } else {
+                    mpris2Model.currentIndex = Math.max(currentIndex-1, 0)
+                }
+            }
 
             Repeater {
                 id: playerList
@@ -811,6 +832,8 @@ PlasmaExtras.Representation {
 
                     Accessible.onPressAction: clicked()
                     KeyNavigation.down: seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down
+                    Keys.onLeftPressed: event => playerSelector.handleArrows(event)
+                    Keys.onRightPressed: event => playerSelector.handleArrows(event)
 
                     onClicked: {
                         mpris2Model.currentIndex = index;
