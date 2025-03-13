@@ -1194,11 +1194,6 @@ void PanelView::adaptToScreen()
 bool PanelView::event(QEvent *e)
 {
     switch (e->type()) {
-    case QEvent::UpdateRequest:
-        if (m_geometryDirty) {
-            positionAndResizePanel();
-        }
-        break;
     case QEvent::Show:
         positionAndResizePanel();
         break;
@@ -1348,6 +1343,10 @@ bool PanelView::event(QEvent *e)
                 qGuiApp->postEvent(focusWindow, fe);
             }
         }
+    }
+
+    if (m_geometryDirty && e->type() == QEvent::UpdateRequest) {
+        positionAndResizePanel();
     }
 
     return rc;
