@@ -157,10 +157,9 @@ msgid "Enter Edit Mode"
 msgstr "Düzenleme Kipine Gir"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Düzenleme Kipine Gir"
+msgstr "Düzenleme Kipinden Çık"
 
 #: main.cpp:86
 #, kde-format
@@ -457,6 +456,3 @@ msgstr "Panel Sayısı"
 #, kde-format
 msgid "Counts the panels"
 msgstr "Panelleri sayar"
-
-#~ msgid "Panel and Desktop Management"
-#~ msgstr "Panel ve Masaüstü Yönetimi"
