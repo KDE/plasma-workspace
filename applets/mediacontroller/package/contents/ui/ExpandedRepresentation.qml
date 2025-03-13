@@ -74,11 +74,8 @@ PlasmaExtras.Representation {
         disablePositionUpdate = false
     }
 
-    Keys.onPressed: keyPressed = true
-
-    Keys.onReleased: event => {
-        keyPressed = false
-
+    Keys.onPressed: event => {
+        keyPressed = true
         if ((event.key == Qt.Key_Tab || event.key == Qt.Key_Backtab) && event.modifiers & Qt.ControlModifier) {
             event.accepted = true;
             if (playerList.count > 2) {
@@ -95,6 +92,10 @@ PlasmaExtras.Representation {
                 mpris2Model.currentIndex = nextIndex;
             }
         }
+    }
+
+    Keys.onReleased: event => {
+        keyPressed = false
 
         if (!event.modifiers) {
             event.accepted = true
