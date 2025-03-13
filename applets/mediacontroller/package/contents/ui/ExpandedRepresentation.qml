@@ -832,6 +832,7 @@ PlasmaExtras.Representation {
 
                     Accessible.onPressAction: clicked()
                     KeyNavigation.down: seekSlider.visible ? seekSlider : seekSlider.KeyNavigation.down
+                    KeyNavigation.backtab: expandedRepresentation.KeyNavigation.backtab || repeatButton
                     Keys.onLeftPressed: event => playerSelector.handleArrows(event)
                     Keys.onRightPressed: event => playerSelector.handleArrows(event)
 
