@@ -21,6 +21,15 @@
 
 using namespace Qt::StringLiterals;
 
+namespace
+{
+constexpr std::array<QStringView, 3> s_acceptableTextFormatPrefixes{
+    u"text/",
+    u"application/json",
+    u"application/xml",
+};
+}
+
 UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
                                                       QSqlDatabase *database,
                                                       QStringView databaseFolder,
@@ -56,7 +65,9 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
                     // Qt clipboard doesn't support other encodings.
                     continue;
                 }
-            } else if (format.startsWith(u"application/x-openoffice-link")) {
+            } else if (std::none_of(s_acceptableTextFormatPrefixes.begin(), s_acceptableTextFormatPrefixes.end(), [&format](QStringView prefix) {
+                           return format.startsWith(prefix);
+                       })) {
                 // Don't create un-asked for DDE links in LibreOffice apps;
                 // we don't want them.
                 continue;
@@ -73,7 +84,7 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
         }
     }
 
-    return new UpdateDatabaseJob(parent, database, databaseFolder, uuid, text, formats, std::move(mimeDataList), timestamp);
+    return new UpdateDatabaseJob(parent, database, databaseFolder, uuid, text, std::move(mimeDataList), timestamp);
 }
 
 UpdateDatabaseJob::UpdateDatabaseJob(QObject *parent,
@@ -81,14 +92,12 @@ UpdateDatabaseJob::UpdateDatabaseJob(QObject *parent,
                                      QStringView databaseFolder,
                                      const QString &uuid,
                                      const QString &text,
-                                     const QStringList &formats,
                                      std::list<MimeData> &&mimeDataList,
                                      qreal timestamp)
     : KCompositeJob(parent)
     , m_db(database)
     , m_uuid(uuid)
     , m_text(text)
-    , m_formats(formats)
     , m_dataDir(databaseFolder + u"/data/")
     , m_mimeDataList(std::move(mimeDataList))
     , m_timestamp(timestamp)
@@ -118,7 +127,10 @@ void UpdateDatabaseJob::start()
         query.addBindValue(qreal(m_timestamp));
         query.addBindValue(qreal(m_timestamp));
     }
-    query.addBindValue(m_formats.join(u','));
+    query.addBindValue(
+        std::accumulate(std::next(m_mimeDataList.begin()), m_mimeDataList.end(), m_mimeDataList.begin()->type, [](const QString &a, const MimeData &b) {
+            return a + u',' + b.type;
+        }));
     query.addBindValue(m_text);
     if (!query.exec()) {
         setErrorText(query.lastError().text());

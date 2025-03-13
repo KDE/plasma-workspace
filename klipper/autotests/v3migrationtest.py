@@ -99,7 +99,7 @@ class V3MigrationTest(unittest.TestCase):
             # main
             self.assertEqual(res[0][0], "8f9353dabfdcf9aca5a901cd2c4ae6717cac5adc")
             self.assertGreaterEqual(res[0][1], self.time_now)
-            self.assertEqual(res[0][2], "application/x-qt-image")
+            self.assertEqual(res[0][2], "image/png")
             self.assertIsNone(res[0][3])
 
             # aux
