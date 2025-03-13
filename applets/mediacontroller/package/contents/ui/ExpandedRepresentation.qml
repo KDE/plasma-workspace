@@ -92,6 +92,14 @@ PlasmaExtras.Representation {
                 mpris2Model.currentIndex = nextIndex;
             }
         }
+
+        if (event.modifiers & Qt.AltModifier && (event.key >= Qt.Key_0 && event.key <= Qt.Key_9)) {
+            let target = event.key == Qt.Key_0 ? 9 : (event.key - Qt.Key_0) -1
+            if (target < playerList.count) {
+                event.accepted = true
+                mpris2Model.currentIndex = target
+            }
+        }
     }
 
     Keys.onReleased: event => {
