@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-23 00:42+0000\n"
+"POT-Creation-Date: 2025-03-13 00:43+0000\n"
 "PO-Revision-Date: 2025-03-02 12:55+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -73,12 +73,12 @@ msgstr "Fjern alle"
 msgid "Click to safely remove all devices"
 msgstr "Trykk for å fjerne denne enheten trygt"
 
-#: package/contents/ui/FullRepresentation.qml:158
+#: package/contents/ui/FullRepresentation.qml:159
 #, kde-format
 msgid "No removable devices attached"
 msgstr "Ingen flyttbare enheter er tilkoblet"
 
-#: package/contents/ui/FullRepresentation.qml:158
+#: package/contents/ui/FullRepresentation.qml:159
 #, kde-format
 msgid "No disks available"
 msgstr "Ingen disk er tilgjengelig"
