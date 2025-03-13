@@ -122,6 +122,7 @@ QString readTranslatedCategory(const QString &category, const QString &plugin)
         kli18nc("applet category", "Miscellaneous"),
         kli18nc("applet category", "Multimedia"),
         kli18nc("applet category", "Online Services"),
+        kli18nc("applet category", "Personal Information"),
         kli18nc("applet category", "Productivity"),
         kli18nc("applet category", "System Information"),
         kli18nc("applet category", "Utilities"),
