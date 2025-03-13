@@ -365,6 +365,7 @@ private:
     bool m_touchingWindow = false;
     bool m_internalResize = false;
     bool m_geometryDirty = true;
+    bool m_insideUpdate = false;
     Qt::Alignment m_alignment;
     QPointer<PlasmaQuick::ConfigView> m_appletConfigView;
     QPointer<PlasmaQuick::PopupPlasmaWindow> m_panelConfigView;

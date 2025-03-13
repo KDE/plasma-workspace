@@ -719,6 +719,10 @@ void PanelView::positionPanel()
 
 void PanelView::queuePositionAndResizePanel()
 {
+    if (m_insideUpdate) {
+        positionAndResizePanel();
+        return;
+    }
     m_geometryDirty = true;
     update();
 }
@@ -1230,6 +1234,7 @@ bool PanelView::event(QEvent *e)
         if (m_geometryDirty) {
             positionAndResizePanel();
         }
+        m_insideUpdate = true;
         break;
     case QEvent::Show:
         positionAndResizePanel();
@@ -1380,6 +1385,9 @@ bool PanelView::event(QEvent *e)
                 qGuiApp->postEvent(focusWindow, fe);
             }
         }
+    }
+    if (e->type() == QEvent::UpdateRequest) {
+        m_insideUpdate = false;
     }
 
     return rc;
