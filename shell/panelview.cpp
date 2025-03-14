@@ -720,7 +720,12 @@ void PanelView::positionPanel()
 void PanelView::queuePositionAndResizePanel()
 {
     m_geometryDirty = true;
-    update();
+    QTimer::singleShot(0, [&]() {
+        if (m_geometryDirty) {
+            positionAndResizePanel();
+            m_geometryDirty = false;
+        }
+    });
 }
 
 void PanelView::positionAndResizePanel()
@@ -756,7 +761,6 @@ void PanelView::positionAndResizePanel()
     Q_EMIT m_corona->availableScreenRegionChanged(containment()->screen());
 
     KWindowEffects::slideWindow(this, slideLocation(), -1);
-    m_geometryDirty = false;
 }
 
 QRect PanelView::dogdeGeometryByDistance(int distance) const
@@ -1375,10 +1379,6 @@ bool PanelView::event(QEvent *e)
                 qGuiApp->postEvent(focusWindow, fe);
             }
         }
-    }
-
-    if (m_geometryDirty && e->type() == QEvent::UpdateRequest) {
-        positionAndResizePanel();
     }
 
     return rc;
