@@ -35,38 +35,11 @@ ColumnLayout {
         url: jobItem.totalFiles === 1 ? modelInterface.jobDetails.effectiveDestUrl : ""
     }
 
-    RowLayout {
-        id: progressRow
-        Layout.fillWidth: true
-        // Even when indeterminate, we want to reserve the height for the text, otherwise it's too tightly spaced
-        Layout.minimumHeight: progressText.implicitHeight
-        // We want largeSpacing between the progress bar and the label
-        spacing: Kirigami.Units.largeSpacing
-
-        PlasmaComponents3.ProgressBar {
-            id: progressBar
-            Layout.fillWidth: true
-            from: 0
-            to: 100
-            value: modelInterface.percentage
-            // TODO do we actually need the window visible check? perhaps I do because it can be in popup or expanded plasmoid
-            indeterminate: visible && Window.window && Window.window.visible && modelInterface.percentage < 1
-                           && modelInterface.jobState === NotificationManager.Notifications.JobStateRunning
-                           // is this too annoying?
-                           && (modelInterface.jobDetails.processedBytes === 0 || modelInterface.jobDetails.totalBytes === 0)
-                           && modelInterface.jobDetails.processedFiles === 0
-                           //&& modelInterface.jobDetails.processedDirectories === 0
-        }
-
-        PlasmaComponents3.Label {
-            id: progressText
-
-            visible: !progressBar.indeterminate
-            // the || "0" is a workaround for the fact that 0 as number is falsey, and is wrongly considered a missing argument
-            // BUG: 451807
-            text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Percentage of a job", "%1%", modelInterface.percentage || "0")
-            textFormat: Text.PlainText
-        }
+    SpeedChart {
+        id: speedChart
+        width: jobItem.width
+        modelInterface: jobItem.modelInterface
+        expanded: expandButton.checked
     }
 
     RowLayout {
@@ -209,14 +182,14 @@ ColumnLayout {
         State {
             when: modelInterface.jobState === NotificationManager.Notifications.JobStateSuspended
             PropertyChanges {
-                target: progressBar
+                target: speedChart
                 enabled: false
             }
         },
         State {
             when: modelInterface.jobState === NotificationManager.Notifications.JobStateStopped
             PropertyChanges {
-                target: progressRow
+                target: speedChart
                 visible: false
             }
             PropertyChanges {

@@ -93,6 +93,8 @@ class NOTIFICATIONMANAGER_EXPORT Job : public QObject
      */
     Q_PROPERTY(qulonglong speed READ speed NOTIFY speedChanged)
 
+    Q_PROPERTY(qulonglong elapsedTime READ elapsedTime NOTIFY elapsedTimeChanged)
+
     Q_PROPERTY(qulonglong processedBytes READ processedBytes NOTIFY processedBytesChanged)
     Q_PROPERTY(qulonglong processedFiles READ processedFiles NOTIFY processedFilesChanged)
     Q_PROPERTY(qulonglong processedDirectories READ processedDirectories NOTIFY processedDirectoriesChanged)
@@ -186,6 +188,8 @@ public:
 
     qulonglong speed() const;
 
+    qint64 elapsedTime() const;
+
     qulonglong processedBytes() const;
     qulonglong processedFiles() const;
     qulonglong processedDirectories() const;
@@ -227,6 +231,7 @@ Q_SIGNALS:
     void destUrlChanged();
     void effectiveDestUrlChanged();
     void speedChanged();
+    void elapsedTimeChanged();
     void processedBytesChanged();
     void processedFilesChanged();
     void processedDirectoriesChanged();
