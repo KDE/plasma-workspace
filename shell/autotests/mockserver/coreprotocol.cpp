@@ -166,6 +166,7 @@ void Output::sendDone(wl_client *client)
     auto resources = resourceMap().values(client);
     for (auto *r : resources)
         wl_output::send_done(r->handle);
+    send_done();
 }
 
 void Output::sendDone()
@@ -173,6 +174,7 @@ void Output::sendDone()
     const auto resources = resourceMap().values();
     for (auto r : resources)
         wl_output::send_done(r->handle);
+    send_done();
 }
 
 void Output::output_bind_resource(QtWaylandServer::wl_output::Resource *resource)
