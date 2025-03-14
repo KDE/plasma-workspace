@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:39+0000\n"
+"POT-Creation-Date: 2025-03-14 00:44+0000\n"
 "PO-Revision-Date: 2024-01-17 14:26+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -66,13 +66,13 @@ msgctxt "@info:status %1 camera name"
 msgid "%1 is in use"
 msgstr "%1 ir lietošanā"
 
-#: contents/ui/main.qml:23
+#: contents/ui/main.qml:25
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Camera indicator is unavailable"
 msgstr "Kameras indikators nav pieejams"
 
-#: contents/ui/main.qml:25
+#: contents/ui/main.qml:27
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "A camera is in use"
@@ -81,7 +81,7 @@ msgstr[0] "Tiek izmantota %1 kamera"
 msgstr[1] "Tiek izmantotas %1 kameras"
 msgstr[2] "Tiek izmantotas %1 kameras"
 
-#: contents/ui/main.qml:27
+#: contents/ui/main.qml:29
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "No camera is in use"

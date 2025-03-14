@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"POT-Creation-Date: 2025-03-14 00:44+0000\n"
 "PO-Revision-Date: 2024-06-03 19:40\n"
 "Last-Translator: Zmicier <zmicerturok@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -112,32 +112,32 @@ msgctxt "Textfield placeholder text"
 msgid "Search…"
 msgstr "Пошук…"
 
-#: qml/RunCommand.qml:306 qml/RunCommand.qml:307 qml/RunCommand.qml:309
+#: qml/RunCommand.qml:309 qml/RunCommand.qml:310 qml/RunCommand.qml:312
 #, kde-format
 msgid "Show Usage Help"
 msgstr "Паказаць даведку па выкарыстанні"
 
-#: qml/RunCommand.qml:317
+#: qml/RunCommand.qml:320
 #, kde-format
 msgid "Pin"
 msgstr "Замацаваць"
 
-#: qml/RunCommand.qml:318
+#: qml/RunCommand.qml:321
 #, kde-format
 msgid "Pin Search"
 msgstr "Замацаваць пошук"
 
-#: qml/RunCommand.qml:320
+#: qml/RunCommand.qml:323
 #, kde-format
 msgid "Keep Open"
 msgstr "Не закрываць"
 
-#: qml/RunCommand.qml:379 qml/RunCommand.qml:384
+#: qml/RunCommand.qml:382 qml/RunCommand.qml:387
 #, kde-format
 msgid "Recent Queries"
 msgstr "Нядаўнія запыты"
 
-#: qml/RunCommand.qml:382
+#: qml/RunCommand.qml:385
 #, kde-format
 msgid "Remove"
 msgstr "Выдаліць"

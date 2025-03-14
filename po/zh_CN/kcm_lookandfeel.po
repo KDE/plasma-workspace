@@ -285,9 +285,3 @@ msgid ""
 msgstr ""
 "此全局主题并未提供任何可用设置。请联系此全局主题的维护人员，因为它的代码可能"
 "存在问题。"
-
-#~ msgid "Apply"
-#~ msgstr "应用"
-
-#~ msgid "Cancel"
-#~ msgstr "取消"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:42+0000\n"
+"POT-Creation-Date: 2025-03-14 00:44+0000\n"
 "PO-Revision-Date: 2023-05-26 19:45+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,12 +30,12 @@ msgstr "Tonduja Enhavo"
 msgid "Clipboard is empty"
 msgstr "Tondujo estas malplena"
 
-#: contents/ui/main.qml:62
+#: contents/ui/main.qml:66
 #, kde-format
 msgid "Clear History"
 msgstr "Malplenigi Historion"
 
-#: contents/ui/main.qml:74
+#: contents/ui/main.qml:78
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "Agordi tondujon…"

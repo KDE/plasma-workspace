@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-02 00:42+0000\n"
+"POT-Creation-Date: 2025-03-14 00:44+0000\n"
 "PO-Revision-Date: 2025-03-03 22:47+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -27,12 +27,12 @@ msgstr "เนื้อหาในคลิปบอร์ด"
 msgid "Clipboard is empty"
 msgstr "คลิปบอร์ดว่าง"
 
-#: contents/ui/main.qml:62
+#: contents/ui/main.qml:66
 #, kde-format
 msgid "Clear History"
 msgstr "ล้างประวัติ"
 
-#: contents/ui/main.qml:74
+#: contents/ui/main.qml:78
 #, kde-format
 msgid "Configure Clipboard…"
 msgstr "กําหนดค่าคลิปบอร์ด..."
