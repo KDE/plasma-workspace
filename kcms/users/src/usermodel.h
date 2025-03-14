@@ -29,6 +29,7 @@ public:
         FaceValidRole,
         AdministratorRole,
         UserRole,
+        IsCurrentUserRole,
         LoggedInRole,
         SectionHeaderRole,
     };
@@ -42,7 +43,7 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
-    Q_INVOKABLE User *getLoggedInUser() const;
+    Q_INVOKABLE User *getCurrentUser() const;
 
     QHash<int, QByteArray> roleNames() const override;
 

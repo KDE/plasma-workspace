@@ -71,7 +71,7 @@ KCM.ScrollViewKCM {
             kcm.columnWidth = Kirigami.Units.gridUnit * 15
 
             // Push users page on desktop for two pane layout
-            kcm.push("UserDetailsPage.qml", { user: kcm.userModel.getLoggedInUser() })
+            kcm.push("UserDetailsPage.qml", { user: kcm.userModel.getCurrentUser() })
         }
     }
 

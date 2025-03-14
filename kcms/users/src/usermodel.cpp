@@ -83,7 +83,7 @@ UserModel::UserModel(QObject *parent)
     }
 
     std::ranges::stable_partition(m_userList, [](User *u) {
-        return u->loggedIn();
+        return u->isCurrentUser();
     });
 
     connect(this, &QAbstractItemModel::rowsInserted, this, &UserModel::moreThanOneAdminUserChanged);
@@ -103,6 +103,7 @@ QHash<int, QByteArray> UserModel::roleNames() const
     names.insert(AdministratorRole, QByteArrayLiteral("administrator"));
     names.insert(UserRole, QByteArrayLiteral("userObject"));
     names.insert(FaceValidRole, QByteArrayLiteral("faceValid"));
+    names.insert(IsCurrentUserRole, QByteArrayLiteral("isCurrentUser"));
     names.insert(LoggedInRole, QByteArrayLiteral("loggedIn"));
     names.insert(SectionHeaderRole, QByteArrayLiteral("sectionHeader"));
     return names;
@@ -110,10 +111,10 @@ QHash<int, QByteArray> UserModel::roleNames() const
 
 UserModel::~UserModel() = default;
 
-User *UserModel::getLoggedInUser() const
+User *UserModel::getCurrentUser() const
 {
     for (const auto user : std::as_const(m_userList)) {
-        if (user->loggedIn()) {
+        if (user->isCurrentUser()) {
             return user;
         }
     }
@@ -161,10 +162,12 @@ QVariant UserModel::data(const QModelIndex &index, int role) const
         return QFile::exists(user->face().path());
     case UserRole:
         return QVariant::fromValue(user);
+    case IsCurrentUserRole:
+        return user->isCurrentUser();
     case LoggedInRole:
         return user->loggedIn();
     case SectionHeaderRole:
-        return user->loggedIn() ? i18n("Your Account") : i18n("Other Accounts");
+        return user->isCurrentUser() ? i18n("Your Account") : i18n("Other Accounts");
     }
 
     return QVariant();

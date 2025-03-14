@@ -17,6 +17,7 @@
 #include <QImage>
 #include <QImageWriter>
 #include <config-workspace.h>
+#include <kdisplaymanager.h>
 #include <sys/types.h>
 #include <unistd.h>
 
@@ -225,12 +226,24 @@ void User::loadData()
         userDataChanged = true;
         Q_EMIT administratorChanged();
     }
-    const auto loggedIn = (mUid == getuid());
-    if (mLoggedIn != loggedIn) {
-        mLoggedIn = loggedIn;
-        mOriginalLoggedIn = mLoggedIn;
-        userDataChanged = true;
+
+    mIsCurrentUser = (mUid == getuid());
+
+    mOriginalLoggedIn = mLoggedIn;
+
+    SessList sessions;
+    KDisplayManager displayManager;
+    displayManager.localSessions(sessions);
+    for (auto s : sessions) {
+        if (s.user == mOriginalName)
+            mLoggedIn = true;
     }
+
+    if (mOriginalLoggedIn != mLoggedIn) {
+        userDataChanged = true;
+        Q_EMIT loggedInChanged();
+    }
+
     if (userDataChanged) {
         Q_EMIT dataChanged();
     }
@@ -346,6 +359,11 @@ bool User::usesDefaultWallet()
 void User::changeWalletPassword()
 {
     KWallet::Wallet::changePassword(QStringLiteral("kdewallet"), 1);
+}
+
+bool User::isCurrentUser() const
+{
+    return mIsCurrentUser;
 }
 
 bool User::loggedIn() const

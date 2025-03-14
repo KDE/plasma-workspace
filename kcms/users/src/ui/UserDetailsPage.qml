@@ -36,8 +36,8 @@ KCM.SimpleKCM {
     Connections {
         target: user
         function onPasswordSuccessfullyChanged() {
-            // Prompt to change the wallet password of the logged-in user
-            if (usersDetailPage.user.loggedIn && usersDetailPage.user.usesDefaultWallet()) {
+            // Prompt to change the wallet password of the current user
+            if (usersDetailPage.user.isCurrentUser && usersDetailPage.user.usesDefaultWallet()) {
                 changeWalletPassword.open()
             }
         }
@@ -81,6 +81,15 @@ KCM.SimpleKCM {
         return pending
     }
 
+    function deleteUser(uid: int, deleteUserFiles: bool) {
+        if (usersDetailPage.user.loggedIn) {
+            deleteLoggedInUserWarningDialog.askedToDeleteUserFilesWhenImpossible = deleteUserFiles
+            deleteLoggedInUserWarningDialog.open()
+        } else {
+            kcm.mainUi.deleteUser(usersDetailPage.user.uid, deleteUserFiles)
+        }
+    }
+
     Component.onCompleted: {
         kcm.needsSave = Qt.binding(resolvePending)
     }
@@ -91,6 +100,31 @@ KCM.SimpleKCM {
         visible: false
         type: Kirigami.MessageType.Error
         position: Kirigami.InlineMessage.Position.Header
+    }
+
+    Kirigami.PromptDialog {
+        id: deleteLoggedInUserWarningDialog
+
+        property bool askedToDeleteUserFilesWhenImpossible: false
+
+        parent: usersDetailPage.QQC2.Overlay.overlay
+        maximumWidth: Kirigami.Units.gridUnit * 30
+
+        title: askedToDeleteUserFilesWhenImpossible
+            ? i18nc("@title:window", "Delete Logged-In User Without Deleting Files?")
+            : i18nc("@title:window", "Delete Logged-In User?")
+        subtitle: askedToDeleteUserFilesWhenImpossible
+            ? xi18nc("@info:usagetip", "%1 is currently logged in, so their files cannot be deleted. Delete just the account instead?<nl/><nl/>This will make %1 unable to log in again, and they may experience strange behaviors until they log out.", usersDetailPage.user.displayPrimaryName)
+            : i18nc("@info:usagetip", "%1 is currently logged in. Deleting the account will make them unable to log in again, and they may experience strange behaviors until they log out.", usersDetailPage.user.displayPrimaryName)
+        dialogType: Kirigami.PromptDialog.Warning
+        standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+
+        onAccepted: kcm.mainUi.deleteUser(usersDetailPage.user.uid, false)
+
+        Component.onCompleted: {
+            standardButton(Kirigami.Dialog.Ok).text = i18nc("@action: button", "Delete %1", usersDetailPage.user.realName)
+            standardButton(Kirigami.Dialog.Ok).icon.name = "edit-delete"
+        }
     }
 
     ColumnLayout {
@@ -193,7 +227,7 @@ KCM.SimpleKCM {
             QQC2.Button {
                 id: deleteUser
 
-                enabled: !usersDetailPage.user.loggedIn && (!kcm.userModel.rowCount() < 2)
+                enabled: !usersDetailPage.user.isCurrentUser
 
                 KeyNavigation.down: fingerprintButton
 
@@ -204,14 +238,14 @@ KCM.SimpleKCM {
                         text: i18n("Delete files")
                         icon.name: "edit-delete-shred"
                         onClicked: {
-                            kcm.mainUi.deleteUser(usersDetailPage.user.uid, true)
+                            usersDetailPage.deleteUser(usersDetailPage.user.uid, true);
                         }
                     }
                     QQC2.MenuItem {
                         text: i18n("Keep files")
                         icon.name: "document-multiple"
                         onClicked: {
-                            kcm.mainUi.deleteUser(usersDetailPage.user.uid, false)
+                            usersDetailPage.deleteUser(usersDetailPage.user.uid, false);
                         }
                     }
                 }
@@ -236,7 +270,7 @@ KCM.SimpleKCM {
                 if (kcm.fingerprintModel.currentlyEnrolling) {
                     kcm.fingerprintModel.stopEnrolling();
                 }
-                kcm.fingerprintModel.switchUser(user.name == kcm.userModel.getLoggedInUser().name ? "" : user.name);
+                kcm.fingerprintModel.switchUser(user.name == kcm.userModel.getCurrentUser().name ? "" : user.name);
 
                 if (fingerprintButton.dialog === null) {
                     const component = Qt.createComponent("FingerprintDialog.qml");

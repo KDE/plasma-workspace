@@ -69,6 +69,7 @@ target_link_libraries(kcm_users PRIVATE
     KF6::I18n
     KF6::KCMUtilsQuick
     KF6::Wallet
+    PW::KWorkspace
     Qt::DBus
     crypt
 )
