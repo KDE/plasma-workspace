@@ -246,11 +246,11 @@ class ClipboardTest(unittest.TestCase):
         ActionChains(app.driver).send_keys(Keys.TAB).send_keys(Keys.DOWN).pause(0.5).perform()
         app.driver.find_element(AppiumBy.NAME, "Show QR code")
         ActionChains(app.driver).send_keys(Keys.RETURN).perform()
-        self.assertEqual(app.driver.get_clipboard_text(), "clipboard")
+        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "clipboard")
         ActionChains(app.driver).send_keys(Keys.ENTER).perform()
-        self.assertEqual(app.driver.get_clipboard_text(), "Fushan Wen")
+        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "Fushan Wen")
         ActionChains(app.driver).send_keys(Keys.SPACE).perform()
-        self.assertEqual(app.driver.get_clipboard_text(), "clipboard")
+        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "clipboard")
 
     def test_2_list_2_delete(self) -> None:
         """
@@ -261,7 +261,7 @@ class ClipboardTest(unittest.TestCase):
         ActionChains(app.driver).send_keys(Keys.UP).perform()
         app.driver.find_element(AppiumBy.NAME, "Remove from history").click()
         # The first item becomes the current clipboard item
-        self.assertEqual(app.driver.get_clipboard_text(), "Fushan Wen")
+        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "Fushan Wen")
 
         item = app.driver.find_element(AppiumBy.NAME, "Fushan Wen")
         app.driver.find_element(AppiumBy.NAME, "Clear History").click()
@@ -289,13 +289,13 @@ class ClipboardTest(unittest.TestCase):
         ActionChains(app.driver).send_keys(new_text).pause(1).perform()
         ActionChains(app.driver).key_down(Keys.CONTROL).send_keys("s").key_up(Keys.CONTROL).perform()  # Save
         app.driver.find_element(AppiumBy.NAME, new_text)
-        self.assertEqual(app.driver.get_clipboard_text(), new_text)
+        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), new_text)
 
         # BUG 494145: update uuid after editing so the item can be removed
         delete_button = app.driver.find_element(AppiumBy.NAME, "Remove from history")
         delete_button.click()
         WebDriverWait(app.driver, 5).until_not(lambda _: delete_button.is_displayed())
-        self.assertNotEqual(app.driver.get_clipboard_text(), new_text)
+        self.assertNotEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), new_text)
 
     def test_3_dbus_interface(self) -> None:
         """
@@ -310,7 +310,7 @@ class ClipboardTest(unittest.TestCase):
         element = app.driver.find_element(AppiumBy.NAME, clipboard_content)
         app.spin()
         self.assertTrue(app.klipper_updated_event.is_set())
-        # self.assertEqual(app.driver.get_clipboard_text(), clipboard_content) TODO: this doesn't work on Wayland
+        # self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), clipboard_content) TODO: this doesn't work on Wayland
 
         # setClipboardContents with an empty string
         app.klipper_updated_event.clear()
@@ -482,7 +482,7 @@ class ClipboardTest(unittest.TestCase):
 
         new_text = "Hello World"
         app.gtk_copy(Gdk.ContentProvider.new_for_bytes("text/plain", GLib.Bytes.new(bytes(new_text, "utf-8"))))
-        # self.assertEqual(app.driver.get_clipboard_text(), new_text) Broken in CI
+        # self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), new_text) Broken in CI
         app.driver.find_element(AppiumBy.NAME, new_text)  # Still alive
 
     def test_7_ignore_image(self) -> None:
