@@ -134,7 +134,9 @@ void DashboardWindow::toggle()
     } else {
         resize(screen()->size());
         showFullScreen();
-        KX11Extras::forceActiveWindow(winId());
+        if (KWindowSystem::isPlatformX11()) {
+            KX11Extras::forceActiveWindow(winId());
+        }
     }
 }
 
@@ -170,10 +172,8 @@ bool DashboardWindow::event(QEvent *event)
         if (m_mainItem) {
             m_mainItem->setVisible(false);
         }
-    } else if (event->type() == QEvent::FocusOut) {
-        if (isVisible()) {
-            KX11Extras::forceActiveWindow(winId());
-        }
+    } else if (event->type() == QEvent::FocusOut && KWindowSystem::isPlatformX11() && isVisible()) {
+        KX11Extras::forceActiveWindow(winId());
     }
 
     return QQuickWindow::event(event);
