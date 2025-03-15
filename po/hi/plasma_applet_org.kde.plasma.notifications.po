@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-03-15 00:44+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -29,7 +29,7 @@ msgstr "%1 के साथ खोलें"
 msgid "Open with…"
 msgstr "इसके साथ खोलें…"
 
-#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:187
+#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:160
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "युक्त फोल्डर खोलें"
@@ -211,20 +211,16 @@ msgstr[0] "%1 वस्तु"
 msgstr[1] "%1 वस्तुएँ"
 
 #: package/contents/ui/components/JobDetails.qml:144
+#: package/contents/ui/components/SpeedChart.qml:67
+#: package/contents/ui/components/SpeedChart.qml:92
+#: package/contents/ui/components/SpeedChart.qml:180
+#: package/contents/ui/components/SpeedChart.qml:191
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/से"
 
-#: package/contents/ui/components/JobItem.qml:67
-#, fuzzy, kde-format
-#| msgctxt "Row description, e.g. Source"
-#| msgid "%1:"
-msgctxt "Percentage of a job"
-msgid "%1%"
-msgstr "%1:"
-
-#: package/contents/ui/components/JobItem.qml:85
+#: package/contents/ui/components/JobItem.qml:58
 #, fuzzy, kde-format
 #| msgctxt "A button tooltip; hides item details"
 #| msgid "Hide Details"
@@ -232,32 +228,32 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "विवरण छुपाएँ"
 
-#: package/contents/ui/components/JobItem.qml:104
+#: package/contents/ui/components/JobItem.qml:77
 #, fuzzy, kde-format
 #| msgid "Resume job"
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "कार्य पुनरारंभ"
 
-#: package/contents/ui/components/JobItem.qml:105
+#: package/contents/ui/components/JobItem.qml:78
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "ठहरें"
 
-#: package/contents/ui/components/JobItem.qml:119
+#: package/contents/ui/components/JobItem.qml:92
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "रद्द करें"
 
-#: package/contents/ui/components/JobItem.qml:151
+#: package/contents/ui/components/JobItem.qml:124
 #: package/contents/ui/components/ThumbnailStrip.qml:160
 #, kde-format
 msgid "More Options…"
 msgstr "अधिक विकल्प…"
 
-#: package/contents/ui/components/JobItem.qml:179
+#: package/contents/ui/components/JobItem.qml:152
 #, kde-format
 msgid "Open"
 msgstr "खोलें"
@@ -273,6 +269,24 @@ msgstr "जवाब लिखें…"
 msgctxt "@action:button"
 msgid "Send"
 msgstr "भेजें"
+
+#: package/contents/ui/components/SpeedChart.qml:139
+#, kde-format
+msgid "Speed"
+msgstr ""
+
+#: package/contents/ui/components/SpeedChart.qml:187
+#, kde-format
+msgid "Average Speed"
+msgstr ""
+
+#: package/contents/ui/components/SpeedChart.qml:244
+#, fuzzy, kde-format
+#| msgctxt "Row description, e.g. Source"
+#| msgid "%1:"
+msgctxt "Percentage of a job"
+msgid "%1%"
+msgstr "%1:"
 
 #: package/contents/ui/components/Summary.qml:35
 #, kde-format

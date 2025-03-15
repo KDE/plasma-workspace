@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-23 00:42+0000\n"
+"POT-Creation-Date: 2025-03-15 00:44+0000\n"
 "PO-Revision-Date: 2024-09-21 10:41+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -30,68 +30,85 @@ msgstr "Ĝenerala"
 msgid "Entries"
 msgstr "Eniroj"
 
-#: package/contents/ui/ConfigEntries.qml:33
+#: package/contents/ui/ConfigEntries.qml:34
 #, kde-format
 msgid "Application Status"
 msgstr "Aplika Statuso"
 
-#: package/contents/ui/ConfigEntries.qml:35
+#: package/contents/ui/ConfigEntries.qml:36
 #, kde-format
 msgid "Communications"
 msgstr "Komunikadoj"
 
-#: package/contents/ui/ConfigEntries.qml:37
+#: package/contents/ui/ConfigEntries.qml:38
 #, kde-format
 msgid "System Services"
 msgstr "Sistemaj Servoj"
 
-#: package/contents/ui/ConfigEntries.qml:39
+#: package/contents/ui/ConfigEntries.qml:40
 #, kde-format
 msgid "Hardware Control"
 msgstr "Aparataro Kontrolo"
 
-#: package/contents/ui/ConfigEntries.qml:42
+#: package/contents/ui/ConfigEntries.qml:43
 #, kde-format
 msgid "Miscellaneous"
 msgstr "Diversaj"
 
-#: package/contents/ui/ConfigEntries.qml:74
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:101
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "Eniro"
 
-#: package/contents/ui/ConfigEntries.qml:81
+#: package/contents/ui/ConfigEntries.qml:108
 #, kde-format
 msgid "Visibility"
 msgstr "Videbleco"
 
-#: package/contents/ui/ConfigEntries.qml:88
+#: package/contents/ui/ConfigEntries.qml:115
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "Klava ŝparvojo"
 
-#: package/contents/ui/ConfigEntries.qml:244
+#: package/contents/ui/ConfigEntries.qml:287
 #, kde-format
 msgid "Shown when relevant"
 msgstr "Montrite kiam koncernas"
 
-#: package/contents/ui/ConfigEntries.qml:245
+#: package/contents/ui/ConfigEntries.qml:288
 #, kde-format
 msgid "Always shown"
 msgstr "Ĉiam montrata"
 
-#: package/contents/ui/ConfigEntries.qml:246
+#: package/contents/ui/ConfigEntries.qml:289
 #, kde-format
 msgid "Always hidden"
 msgstr "Ĉiam kaŝita"
 
-#: package/contents/ui/ConfigEntries.qml:247
+#: package/contents/ui/ConfigEntries.qml:290
 #, kde-format
 msgid "Disabled"
 msgstr "Malebligita"
 
-#: package/contents/ui/ConfigEntries.qml:313
+#: package/contents/ui/ConfigEntries.qml:348
 #, kde-format
 msgid "Always show all entries"
 msgstr "Ĉiam montri ĉiujn enskribojn"

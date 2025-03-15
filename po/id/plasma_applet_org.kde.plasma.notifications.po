@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-03-15 00:44+0000\n"
 "PO-Revision-Date: 2024-10-03 20:40+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -31,7 +31,7 @@ msgstr "Buka dengan %1"
 msgid "Open with…"
 msgstr "Buka dengan..."
 
-#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:187
+#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:160
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Buka Folder Konten"
@@ -210,48 +210,46 @@ msgstr[0] "%1 item"
 msgstr[1] "%1 item"
 
 #: package/contents/ui/components/JobDetails.qml:144
+#: package/contents/ui/components/SpeedChart.qml:67
+#: package/contents/ui/components/SpeedChart.qml:92
+#: package/contents/ui/components/SpeedChart.qml:180
+#: package/contents/ui/components/SpeedChart.qml:191
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
 msgstr "%1/dt"
 
-#: package/contents/ui/components/JobItem.qml:67
-#, kde-format
-msgctxt "Percentage of a job"
-msgid "%1%"
-msgstr "%1%"
-
-#: package/contents/ui/components/JobItem.qml:85
+#: package/contents/ui/components/JobItem.qml:58
 #, kde-format
 msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Rincian"
 
-#: package/contents/ui/components/JobItem.qml:104
+#: package/contents/ui/components/JobItem.qml:77
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "Lanjutkan"
 
-#: package/contents/ui/components/JobItem.qml:105
+#: package/contents/ui/components/JobItem.qml:78
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Jeda"
 
-#: package/contents/ui/components/JobItem.qml:119
+#: package/contents/ui/components/JobItem.qml:92
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Batalkan"
 
-#: package/contents/ui/components/JobItem.qml:151
+#: package/contents/ui/components/JobItem.qml:124
 #: package/contents/ui/components/ThumbnailStrip.qml:160
 #, kde-format
 msgid "More Options…"
 msgstr "Opsi Selebihnya..."
 
-#: package/contents/ui/components/JobItem.qml:179
+#: package/contents/ui/components/JobItem.qml:152
 #, kde-format
 msgid "Open"
 msgstr "Buka"
@@ -267,6 +265,22 @@ msgstr "­Ketik balasan..."
 msgctxt "@action:button"
 msgid "Send"
 msgstr "Kirim"
+
+#: package/contents/ui/components/SpeedChart.qml:139
+#, kde-format
+msgid "Speed"
+msgstr ""
+
+#: package/contents/ui/components/SpeedChart.qml:187
+#, kde-format
+msgid "Average Speed"
+msgstr ""
+
+#: package/contents/ui/components/SpeedChart.qml:244
+#, kde-format
+msgctxt "Percentage of a job"
+msgid "%1%"
+msgstr "%1%"
 
 #: package/contents/ui/components/Summary.qml:35
 #, kde-format

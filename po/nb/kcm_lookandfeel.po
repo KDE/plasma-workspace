@@ -292,9 +292,3 @@ msgid ""
 msgstr ""
 "Dette globale temaet inneholder ikke noen aktuelle innstillinger. Ta kontakt "
 "med utviklerne av teamet, da det trolig er ødelagt."
-
-#~ msgid "Apply"
-#~ msgstr "Bruk"
-
-#~ msgid "Cancel"
-#~ msgstr "Avbryt"
