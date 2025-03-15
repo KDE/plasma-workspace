@@ -5,12 +5,14 @@
 */
 
 #include "eventpluginsmanager.h"
+#include "debug_p.h"
 
 #include <QAbstractListModel>
 #include <QCoreApplication>
 #include <QDebug>
 #include <QDir>
 #include <QJsonObject>
+#include <QLoggingCategory>
 #include <QPluginLoader>
 
 #include <KPluginMetaData>
@@ -208,8 +210,8 @@ void EventPluginsManager::loadPlugin(const QString &pluginId)
     QPluginLoader loader(QString(u"plasmacalendarplugins/" + QDir::cleanPath(pluginId)));
 
     if (!loader.load()) {
-        qWarning() << "Could not create Plasma Calendar Plugin: " << pluginId;
-        qWarning() << loader.errorString();
+        qCWarning(COMPONENTS::CALENDAR) << "Could not create Plasma Calendar Plugin: " << pluginId;
+        qCWarning(COMPONENTS::CALENDAR) << loader.errorString();
         return;
     }
 
@@ -217,7 +219,7 @@ void EventPluginsManager::loadPlugin(const QString &pluginId)
     if (obj) {
         CalendarEvents::CalendarEventsPlugin *eventsPlugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(obj);
         if (eventsPlugin) {
-            qDebug() << "Loading Calendar plugin" << eventsPlugin;
+            qCDebug(COMPONENTS::CALENDAR) << "Loading Calendar plugin" << eventsPlugin;
             eventsPlugin->setProperty("pluginId", pluginId);
             d->plugins << eventsPlugin;
 

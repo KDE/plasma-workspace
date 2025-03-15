@@ -26,6 +26,15 @@ ecm_target_qml_sources(calendarplugin
     qml/MonthViewHeader.qml
 )
 
+ecm_qt_declare_logging_category(calendarplugin
+    HEADER debug_p.h
+    IDENTIFIER "COMPONENTS::CALENDAR"
+    CATEGORY_NAME org.kde.plasma.workspace.calendar
+    DESCRIPTION "Plasma Calendar component"
+    DEFAULT_SEVERITY Warning
+    EXPORT "COMPONENTS::CALENDAR"
+)
+
 target_link_libraries(calendarplugin PRIVATE
     Qt6::Core
     Qt6::Quick
