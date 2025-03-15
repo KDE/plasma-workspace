@@ -47,7 +47,7 @@ using namespace Qt::StringLiterals;
 
 // TODO:
 // interactive help?
-static const QString s_autosaveFileName(QStringLiteral("interactiveconsoleautosave.js"));
+static constexpr auto s_autosaveFileName(u"interactiveconsoleautosave.js");
 static const QString s_kwinService = QStringLiteral("org.kde.KWin");
 static const QString s_plasmaShellService = QStringLiteral("org.kde.plasmashell");
 
