@@ -155,10 +155,9 @@ msgid "Enter Edit Mode"
 msgstr "Masuki Mode Edit"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Masuki Mode Edit"
+msgstr "Keluar Mode Edit"
 
 #: main.cpp:86
 #, kde-format

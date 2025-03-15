@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: plasma_engine_weather\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-26 02:36+0000\n"
-"PO-Revision-Date: 2011-07-14 21:35+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-14 17:19+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 1.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -25,215 +25,215 @@ msgstr ""
 #, kde-format
 msgctxt "weather condition"
 msgid "clear"
-msgstr "klarvær"
+msgstr "Klarvær"
 
 #: bbcukmet_i18n.dat:2
 #, kde-format
 msgctxt "weather condition"
 msgid "clear intervals"
-msgstr "perioder med klart vær"
+msgstr "Perioder med klarvær"
 
 #: bbcukmet_i18n.dat:3 ions/wetter.com/ion_wettercom.cpp:220
 #, kde-format
 msgctxt "weather condition"
 msgid "clear sky"
-msgstr "klar himmel"
+msgstr "Klar himmel"
 
 #: bbcukmet_i18n.dat:4 ions/wetter.com/ion_wettercom.cpp:158
 #: ions/wetter.com/ion_wettercom.cpp:159
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy"
-msgstr "skyet"
+msgstr "Skyet"
 
 #: bbcukmet_i18n.dat:5
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with hail"
-msgstr "skyet med hagl"
+msgstr "Skyet med hagl"
 
 #: bbcukmet_i18n.dat:6
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with heavy snow"
-msgstr "skyet med kraftig snøfall"
+msgstr "Skyet med kraftig snøfall"
 
 #: bbcukmet_i18n.dat:7
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with light snow"
-msgstr "skyet med lett snøfall"
+msgstr "Skyet med lett snøfall"
 
 #: bbcukmet_i18n.dat:8
 #, kde-format
 msgctxt "weather condition"
 msgid "cloudy with sleet"
-msgstr "skyet med sludd"
+msgstr "Skyet med sludd"
 
 #: bbcukmet_i18n.dat:9 ions/wetter.com/ion_wettercom.cpp:167
 #: ions/wetter.com/ion_wettercom.cpp:168 ions/wetter.com/ion_wettercom.cpp:170
 #, kde-format
 msgctxt "weather condition"
 msgid "drizzle"
-msgstr "yr"
+msgstr "Yr"
 
 #: bbcukmet_i18n.dat:10
 #, kde-format
 msgctxt "weather condition"
 msgid "fog"
-msgstr "tåke"
+msgstr "Tåke"
 
 #: bbcukmet_i18n.dat:11
 #, kde-format
 msgctxt "weather condition"
 msgid "foggy"
-msgstr "tåket"
+msgstr "Tåke"
 
 #: bbcukmet_i18n.dat:12
 #, kde-format
 msgctxt "weather condition"
 msgid "grey cloud"
-msgstr "grå skyer"
+msgstr "Grå skyer"
 
 #: bbcukmet_i18n.dat:13
 #, kde-format
 msgctxt "weather condition"
 msgid "hail"
-msgstr "hagl"
+msgstr "Hagl"
 
 #: bbcukmet_i18n.dat:14
 #, kde-format
 msgctxt "weather condition"
 msgid "hail shower"
-msgstr "haglbyge"
+msgstr "Haglbyger"
 
 #: bbcukmet_i18n.dat:15
 #, kde-format
 msgctxt "weather condition"
 msgid "hail showers"
-msgstr "haglbyger"
+msgstr "Haglbyger"
 
 #: bbcukmet_i18n.dat:16
 #, kde-format
 msgctxt "weather condition"
 msgid "hazy"
-msgstr "tørrdis"
+msgstr "Tørrdis"
 
 #: bbcukmet_i18n.dat:17 ions/wetter.com/ion_wettercom.cpp:178
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain"
-msgstr "kraftig regn"
+msgstr "Kraftig regn"
 
 #: bbcukmet_i18n.dat:18
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain shower"
-msgstr "kraftige regnbyger"
+msgstr "Kraftige regnbyger"
 
 #: bbcukmet_i18n.dat:19
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain showers"
-msgstr ""
+msgstr "Kraftige regnbyger"
 
 #: bbcukmet_i18n.dat:20
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy shower"
-msgstr "kraftig byge"
+msgstr "kraftige byger"
 
 #: bbcukmet_i18n.dat:21 ions/wetter.com/ion_wettercom.cpp:191
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy showers"
-msgstr "kraftige byger"
+msgstr "Kraftige byger"
 
 #: bbcukmet_i18n.dat:22 ions/wetter.com/ion_wettercom.cpp:187
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow"
-msgstr "kraftig snøfall"
+msgstr "Kraftig snøfall"
 
 #: bbcukmet_i18n.dat:23
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow shower"
-msgstr "kraftig snøbyge"
+msgstr "Kraftige snøbyger"
 
 #: bbcukmet_i18n.dat:24
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow showers"
-msgstr "kraftige snøbyger"
+msgstr "Kraftige snøbyger"
 
 #: bbcukmet_i18n.dat:25
 #, kde-format
 msgctxt "weather condition"
 msgid "light cloud"
-msgstr ""
+msgstr "Lettskyet"
 
 #: bbcukmet_i18n.dat:26 ions/wetter.com/ion_wettercom.cpp:175
 #: ions/wetter.com/ion_wettercom.cpp:176
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain"
-msgstr "lett regn"
+msgstr "Lett regn"
 
 #: bbcukmet_i18n.dat:27
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain shower"
-msgstr "lett regnbyge"
+msgstr "Lette regnbyger"
 
 #: bbcukmet_i18n.dat:28
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain showers"
-msgstr ""
+msgstr "Lette regnbyger"
 
 #: bbcukmet_i18n.dat:29
 #, kde-format
 msgctxt "weather condition"
 msgid "light shower"
-msgstr "lett byge"
+msgstr "Lette byger"
 
 #: bbcukmet_i18n.dat:30 ions/wetter.com/ion_wettercom.cpp:189
 #, kde-format
 msgctxt "weather condition"
 msgid "light showers"
-msgstr "lette byger"
+msgstr "Lette byger"
 
 #: bbcukmet_i18n.dat:31 ions/wetter.com/ion_wettercom.cpp:184
 #: ions/wetter.com/ion_wettercom.cpp:185
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow"
-msgstr "lett snøfall"
+msgstr "Lett snøfall"
 
 #: bbcukmet_i18n.dat:32
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow shower"
-msgstr "lett snøbyge"
+msgstr "Lette snøbyger"
 
 #: bbcukmet_i18n.dat:33 ions/wetter.com/ion_wettercom.cpp:194
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow showers"
-msgstr "lette snøbyger"
+msgstr "Lette snøbyger"
 
 #: bbcukmet_i18n.dat:34
 #, kde-format
 msgctxt "weather condition"
 msgid "mist"
-msgstr "tåkedis"
+msgstr "Tåkedis"
 
 #: bbcukmet_i18n.dat:35
 #, kde-format
 msgctxt "weather condition"
 msgid "misty"
-msgstr "disig"
+msgstr "Tåkedis"
 
 #: bbcukmet_i18n.dat:36 envcan_i18n.dat:1 noaa_i18n.dat:265
 #, kde-format
@@ -251,290 +251,290 @@ msgstr "–"
 #, kde-format
 msgctxt "weather condition"
 msgid "partly cloudy"
-msgstr "delvis skyet"
+msgstr "Delvis skyet"
 
 #: bbcukmet_i18n.dat:39
 #, kde-format
 msgctxt "weather condition"
 msgid "sandstorm"
-msgstr "sandfokk"
+msgstr "Sandfokk"
 
 #: bbcukmet_i18n.dat:40
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet"
-msgstr "sludd"
+msgstr "Sludd"
 
 #: bbcukmet_i18n.dat:41
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet shower"
-msgstr "sluddbyge"
+msgstr "Sluddbyger"
 
 #: bbcukmet_i18n.dat:42
 #, kde-format
 msgctxt "weather condition"
 msgid "sleet showers"
-msgstr "sluddbyger"
+msgstr "Sluddbyger"
 
 #: bbcukmet_i18n.dat:43 ions/wetter.com/ion_wettercom.cpp:207
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny"
-msgstr "sol"
+msgstr "Sol"
 
 #: bbcukmet_i18n.dat:44
 #, kde-format
 msgctxt "weather condition"
 msgid "sunny intervals"
-msgstr "perioder med sol"
+msgstr "Perioder med sol"
 
 #: bbcukmet_i18n.dat:45
 #, kde-format
 msgctxt "weather condition"
 msgid "thick cloud"
-msgstr ""
+msgstr "Tykt skydekke"
 
 #: bbcukmet_i18n.dat:46 ions/wetter.com/ion_wettercom.cpp:196
 #: ions/wetter.com/ion_wettercom.cpp:197
 #, kde-format
 msgctxt "weather condition"
 msgid "thunderstorm"
-msgstr "tordenvær"
+msgstr "Tordenvær"
 
 #: bbcukmet_i18n.dat:47
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery shower"
-msgstr "tordenbyger"
+msgstr "Tordenbyger"
 
 #: bbcukmet_i18n.dat:48
 #, kde-format
 msgctxt "weather condition"
 msgid "thundery showers"
-msgstr ""
+msgstr "Tordenbyger"
 
 #: bbcukmet_i18n.dat:49
 #, kde-format
 msgctxt "weather condition"
 msgid "tropical storm"
-msgstr "tropisk storm"
+msgstr "Tropisk storm"
 
 #: bbcukmet_i18n.dat:50
 #, kde-format
 msgctxt "weather condition"
 msgid "white cloud"
-msgstr "hvite skyer"
+msgstr "Hvite skyer"
 
 #: bbcukmet_i18n.dat:51
 #, kde-format
 msgctxt "weather forecast"
 msgid "clear"
-msgstr "klart"
+msgstr "Klarvær"
 
 #: bbcukmet_i18n.dat:52
 #, kde-format
 msgctxt "weather forecast"
 msgid "clear intervals"
-msgstr "Perioder med klart vær"
+msgstr "Perioder med klarær"
 
 #: bbcukmet_i18n.dat:53
 #, kde-format
 msgctxt "weather forecast"
 msgid "clear sky"
-msgstr "klar himmel"
+msgstr "Klar himmel"
 
 #: bbcukmet_i18n.dat:54
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy"
-msgstr "skyet"
+msgstr "Skyet"
 
 #: bbcukmet_i18n.dat:55
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with hail"
-msgstr "skyet med hagl"
+msgstr "Skyet med hagl"
 
 #: bbcukmet_i18n.dat:56
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with heavy snow"
-msgstr "skyet med kraftig snøfall"
+msgstr "Skyet med kraftig snøfall"
 
 #: bbcukmet_i18n.dat:57
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with light snow"
-msgstr "skyet med lett snøfall"
+msgstr "Skyet med lett snøfall"
 
 #: bbcukmet_i18n.dat:58
 #, kde-format
 msgctxt "weather forecast"
 msgid "cloudy with sleet"
-msgstr "skyet med sludd"
+msgstr "Skyet med sludd"
 
 #: bbcukmet_i18n.dat:59
 #, kde-format
 msgctxt "weather forecast"
 msgid "drizzle"
-msgstr "yr"
+msgstr "Yr"
 
 #: bbcukmet_i18n.dat:60
 #, kde-format
 msgctxt "weather forecast"
 msgid "fog"
-msgstr "tåke"
+msgstr "Tåke"
 
 #: bbcukmet_i18n.dat:61
 #, kde-format
 msgctxt "weather forecast"
 msgid "foggy"
-msgstr "tåket"
+msgstr "Tåke"
 
 #: bbcukmet_i18n.dat:62
 #, kde-format
 msgctxt "weather forecast"
 msgid "grey cloud"
-msgstr "grå skyer"
+msgstr "Grå skyer"
 
 #: bbcukmet_i18n.dat:63
 #, kde-format
 msgctxt "weather forecast"
 msgid "hail"
-msgstr "hagl"
+msgstr "Hagl"
 
 #: bbcukmet_i18n.dat:64
 #, kde-format
 msgctxt "weather forecast"
 msgid "hail shower"
-msgstr "haglbyge"
+msgstr "Haglbyger"
 
 #: bbcukmet_i18n.dat:65
 #, kde-format
 msgctxt "weather forecast"
 msgid "hail showers"
-msgstr "haglbyger"
+msgstr "Haglbyger"
 
 #: bbcukmet_i18n.dat:66
 #, kde-format
 msgctxt "weather forecast"
 msgid "hazy"
-msgstr "disig"
+msgstr "Tørrdis"
 
 #: bbcukmet_i18n.dat:67
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain"
-msgstr "kraftig regn"
+msgstr "Kraftig regn"
 
 #: bbcukmet_i18n.dat:68
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain shower"
-msgstr "kraftig regnbyge"
+msgstr "Kraftige regnbyger"
 
 #: bbcukmet_i18n.dat:69
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy rain showers"
-msgstr ""
+msgstr "Kraftige regnbyger"
 
 #: bbcukmet_i18n.dat:70
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy shower"
-msgstr "kraftig byge"
+msgstr "Kraftige byger"
 
 #: bbcukmet_i18n.dat:71
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy showers"
-msgstr "kraftige byger"
+msgstr "Kraftige byger"
 
 #: bbcukmet_i18n.dat:72
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy snow"
-msgstr "kraftig snøfall"
+msgstr "Kraftig snøfall"
 
 #: bbcukmet_i18n.dat:73
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy snow shower"
-msgstr "kraftig snøbyge"
+msgstr "Kraftige snøbyger"
 
 #: bbcukmet_i18n.dat:74
 #, kde-format
 msgctxt "weather forecast"
 msgid "heavy snow showers"
-msgstr "kraftige snøbyger"
+msgstr "Kraftige snøbyger"
 
 #: bbcukmet_i18n.dat:75
 #, kde-format
 msgctxt "weather forecast"
 msgid "light cloud"
-msgstr ""
+msgstr "Lettskyet"
 
 #: bbcukmet_i18n.dat:76
 #, kde-format
 msgctxt "weather forecast"
 msgid "light rain"
-msgstr "lett regn"
+msgstr "Lett regn"
 
 #: bbcukmet_i18n.dat:77
 #, kde-format
 msgctxt "weather forecast"
 msgid "light rain shower"
-msgstr "lett regnbyge"
+msgstr "Lette regnbyger"
 
 #: bbcukmet_i18n.dat:78
 #, kde-format
 msgctxt "weather forecast"
 msgid "light rain showers"
-msgstr ""
+msgstr "Lette regnbyger"
 
 #: bbcukmet_i18n.dat:79
 #, kde-format
 msgctxt "weather forecast"
 msgid "light shower"
-msgstr "lett byge"
+msgstr "Lette byger"
 
 #: bbcukmet_i18n.dat:80
 #, kde-format
 msgctxt "weather forecast"
 msgid "light showers"
-msgstr "lette byger"
+msgstr "Lette byger"
 
 #: bbcukmet_i18n.dat:81
 #, kde-format
 msgctxt "weather forecast"
 msgid "light snow"
-msgstr "lett snøfall"
+msgstr "Lett snøfall"
 
 #: bbcukmet_i18n.dat:82
 #, kde-format
 msgctxt "weather forecast"
 msgid "light snow shower"
-msgstr "lett snøbyge"
+msgstr "Lette snøbyger"
 
 #: bbcukmet_i18n.dat:83
 #, kde-format
 msgctxt "weather forecast"
 msgid "light snow showers"
-msgstr "lette snøbyger"
+msgstr "Lette snøbyger"
 
 #: bbcukmet_i18n.dat:84
 #, kde-format
 msgctxt "weather forecast"
 msgid "mist"
-msgstr "tåkedis"
+msgstr "Tåkedis"
 
 #: bbcukmet_i18n.dat:85
 #, kde-format
 msgctxt "weather forecast"
 msgid "misty"
-msgstr "disig"
+msgstr "Tåkedis"
 
 #: bbcukmet_i18n.dat:86
 #, kde-format
@@ -546,91 +546,91 @@ msgstr "–"
 #, kde-format
 msgctxt "weather forecast"
 msgid "partly cloudy"
-msgstr "delvis skyet"
+msgstr "Delvis skyet"
 
 #: bbcukmet_i18n.dat:88
 #, kde-format
 msgctxt "weather forecast"
 msgid "sandstorm"
-msgstr "sandfokk"
+msgstr "Sandfokk"
 
 #: bbcukmet_i18n.dat:89
 #, kde-format
 msgctxt "weather forecast"
 msgid "sleet"
-msgstr "sludd"
+msgstr "Sludd"
 
 #: bbcukmet_i18n.dat:90
 #, kde-format
 msgctxt "weather forecast"
 msgid "sleet shower"
-msgstr "sluddbyge"
+msgstr "Sluddbyger"
 
 #: bbcukmet_i18n.dat:91
 #, kde-format
 msgctxt "weather forecast"
 msgid "sleet showers"
-msgstr "sluddbyger"
+msgstr "Sluddbyger"
 
 #: bbcukmet_i18n.dat:92
 #, kde-format
 msgctxt "weather forecast"
 msgid "sunny"
-msgstr "sol"
+msgstr "Sol"
 
 #: bbcukmet_i18n.dat:93
 #, kde-format
 msgctxt "weather forecast"
 msgid "sunny intervals"
-msgstr "perioder med sol"
+msgstr "Perioder med sol"
 
 #: bbcukmet_i18n.dat:94
 #, kde-format
 msgctxt "weather forecast"
 msgid "thick cloud"
-msgstr ""
+msgstr "Tykt skydekke"
 
 #: bbcukmet_i18n.dat:95
 #, kde-format
 msgctxt "weather forecast"
 msgid "thunderstorm"
-msgstr ""
+msgstr "Tordenvær"
 
 #: bbcukmet_i18n.dat:96
 #, kde-format
 msgctxt "weather forecast"
 msgid "thundery shower"
-msgstr "tordenbyge"
+msgstr "Tordenbyger"
 
 #: bbcukmet_i18n.dat:97
 #, kde-format
 msgctxt "weather forecast"
 msgid "thundery showers"
-msgstr ""
+msgstr "Tordenbyger"
 
 #: bbcukmet_i18n.dat:98
 #, kde-format
 msgctxt "weather forecast"
 msgid "tropical storm"
-msgstr "tropisk storm"
+msgstr "Tropisk storm"
 
 #: bbcukmet_i18n.dat:99
 #, kde-format
 msgctxt "weather forecast"
 msgid "white cloud"
-msgstr "hvite skyer"
+msgstr "Hvite skyer"
 
 #: bbcukmet_i18n.dat:100
 #, kde-format
 msgctxt "visibility"
 msgid "Excellent"
-msgstr ""
+msgstr "Glimrende"
 
 #: bbcukmet_i18n.dat:101
 #, kde-format
 msgctxt "visibility"
 msgid "Very Good"
-msgstr ""
+msgstr "Veldig god"
 
 #: bbcukmet_i18n.dat:102
 #, kde-format
@@ -654,7 +654,7 @@ msgstr "Dårlig"
 #, kde-format
 msgctxt "visibility"
 msgid "Very Poor"
-msgstr ""
+msgstr "Svært dårlig"
 
 # Nettsida http://retro.met.no/met/met_lex/q_u/synopkode-ww.html var til stor hjelp i omsetjinga.
 #: envcan_i18n.dat:2 noaa_i18n.dat:7
@@ -675,12 +675,11 @@ msgctxt "weather condition"
 msgid "Cloudy"
 msgstr "Skyet"
 
-# Ikkje heilt fornøgd med ordet «Minkande» …
 #: envcan_i18n.dat:5
 #, kde-format
 msgctxt "weather condition"
 msgid "Decreasing Cloud"
-msgstr "Minkende skyer"
+msgstr "Avtakende skydekke"
 
 #: envcan_i18n.dat:6
 #, kde-format
@@ -777,7 +776,7 @@ msgstr "Tett snøfokk"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drifting Snow"
-msgstr "Tett snødrev"
+msgstr "Tett snøfokk"
 
 #: envcan_i18n.dat:22 noaa_i18n.dat:46
 #, kde-format
@@ -801,7 +800,7 @@ msgstr "Tett yr og regn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Mixed Rain and Snow Shower"
-msgstr "Kraftige regn- og snøbyer"
+msgstr "Kraftige regn- og snøbyger"
 
 #: envcan_i18n.dat:26 noaa_i18n.dat:62
 #, kde-format
@@ -819,13 +818,13 @@ msgstr "Kraftig regn og snøfall"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Rainshower"
-msgstr "Kraftige regnbyer"
+msgstr "Kraftige regnbyger"
 
 #: envcan_i18n.dat:29 noaa_i18n.dat:78
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow"
-msgstr "Sterkt snøfall"
+msgstr "Kraftig snøfall"
 
 #: envcan_i18n.dat:30
 #, kde-format
@@ -903,7 +902,7 @@ msgstr "Lett regn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rainshower"
-msgstr "Lette regnbyer"
+msgstr "Lette regnbyger"
 
 #: envcan_i18n.dat:43 noaa_i18n.dat:137
 #, kde-format
@@ -927,13 +926,13 @@ msgstr "Lette snøbyger"
 #, kde-format
 msgctxt "weather condition"
 msgid "Lightning Visible"
-msgstr "Synlige lyn"
+msgstr "Lyn kan ses"
 
 #: envcan_i18n.dat:47
 #, kde-format
 msgctxt "weather condition"
 msgid "Mainly Clear"
-msgstr "For det meste klart"
+msgstr "For det meste klarvær"
 
 #: envcan_i18n.dat:48
 #, kde-format
@@ -1131,7 +1130,7 @@ msgstr "Kornsnø"
 #, kde-format
 msgctxt "weather condition"
 msgid "Squalls"
-msgstr "Vindrosser"
+msgstr "Vindbyger"
 
 #: envcan_i18n.dat:81
 #, kde-format
@@ -1155,13 +1154,13 @@ msgstr "Tordenvær med regn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with light rainshowers"
-msgstr ""
+msgstr "Tordenvær med lette regnbyger"
 
 #: envcan_i18n.dat:85
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm with heavy rainshowers"
-msgstr ""
+msgstr "Tordenvær med kraftige regnbyger"
 
 #: envcan_i18n.dat:86
 #, kde-format
@@ -1504,7 +1503,7 @@ msgstr "Utrygt for byger, til tider kraftige eller tordenbyger"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of showers at times heavy or thunderstorms"
-msgstr "Utrygt for byer, til tider kraftige eller tordenvær"
+msgstr "Utrygt for byger, til tider kraftige eller tordenvær"
 
 #: envcan_i18n.dat:143
 #, kde-format
@@ -1564,7 +1563,7 @@ msgstr "Utrygt for snø eller regn"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance of snow squalls"
-msgstr "Utrygt for kraftige snøbyer"
+msgstr "Utrygt for kraftige snøbyger"
 
 #: envcan_i18n.dat:153
 #, kde-format
@@ -1631,7 +1630,7 @@ msgstr "Klarvær"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Clearing"
-msgstr "Oppklarnende"
+msgstr "Opphold"
 
 #: envcan_i18n.dat:164 noaa_i18n.dat:343
 #, kde-format
@@ -1643,13 +1642,13 @@ msgstr "Skyet"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Partly cloudy"
-msgstr ""
+msgstr "Delvis skyet"
 
 #: envcan_i18n.dat:166
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mainly cloudy"
-msgstr ""
+msgstr "For det meste skyet"
 
 #: envcan_i18n.dat:167
 #, kde-format
@@ -1830,31 +1829,31 @@ msgstr "Iståke som brytes opp"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets"
-msgstr ""
+msgstr "Iskorn"
 
 #: envcan_i18n.dat:197
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with freezing rain"
-msgstr ""
+msgstr "Iskorn og regn som fryser"
 
 #: envcan_i18n.dat:198
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets mixed with snow"
-msgstr ""
+msgstr "Iskorn og snø"
 
 #: envcan_i18n.dat:199
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or freezing rain"
-msgstr ""
+msgstr "Iskorn eller regn som fryser"
 
 #: envcan_i18n.dat:200
 #, kde-format
 msgctxt "weather forecast"
 msgid "Ice pellets or snow"
-msgstr ""
+msgstr "Iskorn eller snø"
 
 #: envcan_i18n.dat:201
 #, kde-format
@@ -2065,31 +2064,31 @@ msgstr "Perioder med regn som fryser eller snø"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets"
-msgstr ""
+msgstr "Perioder med iskorn"
 
 #: envcan_i18n.dat:236
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with freezing rain"
-msgstr ""
+msgstr "Perioder med iskorn og regn som fryser"
 
 #: envcan_i18n.dat:237
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets mixed with snow"
-msgstr ""
+msgstr "Perioder med iskorn og snø"
 
 #: envcan_i18n.dat:238
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or freezing rain"
-msgstr ""
+msgstr "Perioder med iskorn og regn som fryser"
 
 #: envcan_i18n.dat:239
 #, kde-format
 msgctxt "weather forecast"
 msgid "Periods of ice pellets or snow"
-msgstr ""
+msgstr "Perioder med iskorn eller snø"
 
 #: envcan_i18n.dat:240
 #, kde-format
@@ -2353,7 +2352,7 @@ msgstr "Regn, til dels kraftig, eller yr"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain at times heavy or freezing rain"
-msgstr "Regn, til dels kreftig, eller regn som fryser"
+msgstr "Regn, til dels kraftig, eller regn som fryser"
 
 #: envcan_i18n.dat:284
 #, kde-format
@@ -2611,7 +2610,7 @@ msgstr "Snø eller regn"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow squalls"
-msgstr "Kraftige snøbyer"
+msgstr "Kraftige snøbyger"
 
 #: envcan_i18n.dat:327 noaa_i18n.dat:348
 #, kde-format
@@ -2623,7 +2622,7 @@ msgstr "Sol"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mainly sunny"
-msgstr ""
+msgstr "For det meste sol"
 
 #: envcan_i18n.dat:329
 #, kde-format
@@ -2660,7 +2659,7 @@ msgstr "Sluddbyger, til tider kraftige"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wet flurries at times heavy or rain showers"
-msgstr "Sluddbyer, til tider kraftige, eller regnbyer"
+msgstr "Sluddbyger, til tider kraftige, eller regnbyger"
 
 #: envcan_i18n.dat:335
 #, kde-format
@@ -2708,67 +2707,67 @@ msgstr "Kuling"
 #, kde-format
 msgctxt "Short for Today"
 msgid "Today"
-msgstr ""
+msgstr "I dag"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:699
 #, kde-format
 msgctxt "Short for Tonight"
 msgid "Tonight"
-msgstr ""
+msgstr "I natt"
 
 #: ions/bbcukmet/ion_bbcukmet.cpp:720
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from BBC Weather"
-msgstr ""
+msgstr "Data fra BBC Weather"
 
 #: ions/dwd/ion_dwd.cpp:505 ions/envcan/ion_envcan.cpp:1526
 #, kde-format
 msgctxt "Short for Saturday"
 msgid "Sat"
-msgstr "Lør"
+msgstr "lø."
 
 #: ions/dwd/ion_dwd.cpp:506 ions/envcan/ion_envcan.cpp:1527
 #, kde-format
 msgctxt "Short for Sunday"
 msgid "Sun"
-msgstr "Søn"
+msgstr "sø."
 
 #: ions/dwd/ion_dwd.cpp:507 ions/envcan/ion_envcan.cpp:1528
 #, kde-format
 msgctxt "Short for Monday"
 msgid "Mon"
-msgstr "Man"
+msgstr "ma."
 
 #: ions/dwd/ion_dwd.cpp:508 ions/envcan/ion_envcan.cpp:1529
 #, kde-format
 msgctxt "Short for Tuesday"
 msgid "Tue"
-msgstr "Tir"
+msgstr "ti."
 
 #: ions/dwd/ion_dwd.cpp:509 ions/envcan/ion_envcan.cpp:1530
 #, kde-format
 msgctxt "Short for Wednesday"
 msgid "Wed"
-msgstr "Ons"
+msgstr "on."
 
 #: ions/dwd/ion_dwd.cpp:510 ions/envcan/ion_envcan.cpp:1531
 #, kde-format
 msgctxt "Short for Thursday"
 msgid "Thu"
-msgstr "Tor"
+msgstr "to."
 
 #: ions/dwd/ion_dwd.cpp:511 ions/envcan/ion_envcan.cpp:1532
 #, kde-format
 msgctxt "Short for Friday"
 msgid "Fri"
-msgstr "Fre"
+msgstr "fr."
 
 #: ions/dwd/ion_dwd.cpp:536
 #, kde-format
 msgctxt "credit line, don't change name!"
 msgid "Source: Deutscher Wetterdienst"
-msgstr ""
+msgstr "Kilde: Deutscher Wetterdienst"
 
 #: ions/envcan/ion_envcan.cpp:902 ions/envcan/ion_envcan.cpp:904
 #: ions/envcan/ion_envcan.cpp:1390 ions/envcan/ion_envcan.cpp:1519
@@ -2786,13 +2785,13 @@ msgstr "dag"
 #, kde-format
 msgctxt "Short for tonight"
 msgid "nite"
-msgstr "natt"
+msgstr "kveld"
 
 #: ions/envcan/ion_envcan.cpp:1525
 #, kde-format
 msgctxt "Short for night, appended to the end of the weekday"
 msgid "nt"
-msgstr "natt"
+msgstr "kv."
 
 #: ions/envcan/ion_envcan.cpp:1556
 #, kde-format
@@ -2804,13 +2803,13 @@ msgstr "Spor"
 #, kde-format
 msgctxt "credit line, keep string short"
 msgid "Data from Environment and Climate Change Canada"
-msgstr ""
+msgstr "Data fra Environment and Climate Change Canada"
 
 #: ions/noaa/ion_noaa.cpp:522
 #, kde-format
 msgctxt "credit line, keep string short)"
 msgid "Data from NOAA National Weather Service"
-msgstr ""
+msgstr "Data fra NOAAs amerikanske værtjeneste"
 
 #. i18n: The forecast summary can include several single conditions that follow
 #. a temporary sequence, separated by " then ". Also include spaces if necessary.
@@ -2821,152 +2820,152 @@ msgctxt ""
 "Separator between forecast conditions that follow a temporal sequence (ex. "
 "\"Rain then Sunny\")"
 msgid " then "
-msgstr ""
+msgstr " så  "
 
 #: ions/wetter.com/ion_wettercom.cpp:156 ions/wetter.com/ion_wettercom.cpp:157
 #, kde-format
 msgctxt "weather condition"
 msgid "few clouds"
-msgstr "lettskyet"
+msgstr "Lettskyet"
 
 #: ions/wetter.com/ion_wettercom.cpp:160 ions/wetter.com/ion_wettercom.cpp:161
 #, kde-format
 msgctxt "weather condition"
 msgid "overcast"
-msgstr "overskyet"
+msgstr "Overskyet"
 
 #: ions/wetter.com/ion_wettercom.cpp:162 ions/wetter.com/ion_wettercom.cpp:163
 #: ions/wetter.com/ion_wettercom.cpp:164
 #, kde-format
 msgctxt "weather condition"
 msgid "haze"
-msgstr "tørrdis"
+msgstr "Tørrdis"
 
 #: ions/wetter.com/ion_wettercom.cpp:165 ions/wetter.com/ion_wettercom.cpp:166
 #, kde-format
 msgctxt "weather condition"
 msgid "fog with icing"
-msgstr "tåke med rim"
+msgstr "Tåke med is"
 
 #: ions/wetter.com/ion_wettercom.cpp:169
 #, kde-format
 msgctxt "weather condition"
 msgid "light drizzle"
-msgstr "lett yr"
+msgstr "Lett yr"
 
 #: ions/wetter.com/ion_wettercom.cpp:171
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy drizzle"
-msgstr "tett yr"
+msgstr "Tett yr"
 
 #: ions/wetter.com/ion_wettercom.cpp:172
 #, kde-format
 msgctxt "weather condition"
 msgid "freezing drizzle"
-msgstr "yr som fryser"
+msgstr "Yr som fryser"
 
 #: ions/wetter.com/ion_wettercom.cpp:173
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy freezing drizzle"
-msgstr "tett yr som fryser"
+msgstr "Tett yr som fryser"
 
 #: ions/wetter.com/ion_wettercom.cpp:174
 #, kde-format
 msgctxt "weather condition"
 msgid "rain"
-msgstr "regn"
+msgstr "Regn"
 
 #: ions/wetter.com/ion_wettercom.cpp:177
 #, kde-format
 msgctxt "weather condition"
 msgid "moderate rain"
-msgstr "moderat regn"
+msgstr "Moderat regn"
 
 #: ions/wetter.com/ion_wettercom.cpp:179
 #, kde-format
 msgctxt "weather condition"
 msgid "light freezing rain"
-msgstr "lett regn som fryser"
+msgstr "Lett regn som fryser"
 
 #: ions/wetter.com/ion_wettercom.cpp:180
 #, kde-format
 msgctxt "weather condition"
 msgid "freezing rain"
-msgstr "regn som fryser"
+msgstr "Regn som fryser"
 
 #: ions/wetter.com/ion_wettercom.cpp:181
 #, kde-format
 msgctxt "weather condition"
 msgid "light rain snow"
-msgstr "lett regn med snø"
+msgstr "Lette regnbyger, og snø"
 
 #: ions/wetter.com/ion_wettercom.cpp:182
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy rain snow"
-msgstr "kraftig regn og snø"
+msgstr "Kraftig regn, og snø"
 
 #: ions/wetter.com/ion_wettercom.cpp:183
 #, kde-format
 msgctxt "weather condition"
 msgid "snow"
-msgstr "snø"
+msgstr "Snø"
 
 #: ions/wetter.com/ion_wettercom.cpp:186
 #, kde-format
 msgctxt "weather condition"
 msgid "moderate snow"
-msgstr "moderat snø"
+msgstr "Moderat snø"
 
 #: ions/wetter.com/ion_wettercom.cpp:188 ions/wetter.com/ion_wettercom.cpp:190
 #, kde-format
 msgctxt "weather condition"
 msgid "showers"
-msgstr "byger"
+msgstr "Byger"
 
 #: ions/wetter.com/ion_wettercom.cpp:192
 #, kde-format
 msgctxt "weather condition"
 msgid "light snow rain showers"
-msgstr "lette snø- og regnbyger"
+msgstr "Lette snø- og regnbyger"
 
 #: ions/wetter.com/ion_wettercom.cpp:193
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy snow rain showers"
-msgstr "kraftige snø-og regnbyger"
+msgstr "Kraftige snø- og regnbyger"
 
 #: ions/wetter.com/ion_wettercom.cpp:195
 #, kde-format
 msgctxt "weather condition"
 msgid "snow showers"
-msgstr "snøbyger"
+msgstr "Snøbyger"
 
 #: ions/wetter.com/ion_wettercom.cpp:198
 #, kde-format
 msgctxt "weather condition"
 msgid "light thunderstorm"
-msgstr "lett tordenvær"
+msgstr "Lett tordenvær"
 
 #: ions/wetter.com/ion_wettercom.cpp:199
 #, kde-format
 msgctxt "weather condition"
 msgid "heavy thunderstorm"
-msgstr "kraftig tordenvær"
+msgstr "Kraftig tordenvær"
 
 #: ions/wetter.com/ion_wettercom.cpp:200
 #, kde-format
 msgctxt "weather condition"
 msgid "n/a"
-msgstr "i/t"
+msgstr "–"
 
 #: ions/wetter.com/ion_wettercom.cpp:362
 #, kde-format
 msgctxt "Geographical location: city, state, ISO-country-code"
 msgid "%1, %2, %3"
-msgstr "%1 %2, %3"
+msgstr "%1, %2, %3"
 
 #: ions/wetter.com/ion_wettercom.cpp:364
 #, kde-format
@@ -3036,7 +3035,7 @@ msgstr "Bris"
 #, kde-format
 msgctxt "weather condition"
 msgid "Clear and Breezy"
-msgstr "Klarvær med bris"
+msgstr "Klarvær, og bris"
 
 #: noaa_i18n.dat:12
 #, kde-format
@@ -3102,19 +3101,19 @@ msgstr "Lettskyet"
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair and Breezy"
-msgstr "Lettskyet med bris"
+msgstr "Lettskyet, og bris"
 
 #: noaa_i18n.dat:25
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair and Windy"
-msgstr "Lettskyet med kuling"
+msgstr "Lettskyet, og kuling"
 
 #: noaa_i18n.dat:26
 #, kde-format
 msgctxt "weather condition"
 msgid "Fair with Haze"
-msgstr "Lettskyet med tørrdis"
+msgstr "Lettskyet, og tørrdis"
 
 #: noaa_i18n.dat:28
 #, kde-format
@@ -3204,7 +3203,7 @@ msgstr "Haglbyger"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Drizzle Fog"
-msgstr "Tett yr med tåke"
+msgstr "Tett yr, og tåke"
 
 #: noaa_i18n.dat:48
 #, kde-format
@@ -3421,7 +3420,7 @@ msgstr "Tett kornsnø"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Snow Low Drifting Snow"
-msgstr "Kraftig snøfall, og lavt snødrev"
+msgstr "Kraftig snøfall, og lavt snøfokk"
 
 #: noaa_i18n.dat:86
 #, kde-format
@@ -3488,7 +3487,7 @@ msgstr "Kraftig tordenvær, regn, hagl og tåke"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Rain Hail Fog/Hail"
-msgstr "Kraftig tordenvær, regn og hagl eller tåke med hagl"
+msgstr "Kraftig tordenvær, regn, hagl og tåke eller tåkedis"
 
 #: noaa_i18n.dat:97
 #, kde-format
@@ -3512,7 +3511,7 @@ msgstr "Kraftig tordenvær med regn og sprøhagl"
 #, kde-format
 msgctxt "weather condition"
 msgid "Heavy Thunderstorm Snow"
-msgstr "Kraftig tordenvær med snø"
+msgstr "Kraftig tordenvær, og snø"
 
 #: noaa_i18n.dat:103
 #, kde-format
@@ -3536,25 +3535,25 @@ msgstr "Iskorn og regn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Fog"
-msgstr "Lett yr med tåke"
+msgstr "Lett yr, og tåke"
 
 #: noaa_i18n.dat:108
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Fog/Mist"
-msgstr "Lett yr med tåke eller tåkedis"
+msgstr "Lett yr, og tåke eller tåkedis"
 
 #: noaa_i18n.dat:109
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Ice Pellets"
-msgstr "Lett yr og iskorn"
+msgstr "Lett yr, og iskorn"
 
 #: noaa_i18n.dat:110
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Drizzle Snow"
-msgstr "Lett yr med snø"
+msgstr "Lett yr, og snø"
 
 #: noaa_i18n.dat:112
 #, kde-format
@@ -3608,13 +3607,13 @@ msgstr "Lett nedbør med iskorn, og regn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain and Breezy"
-msgstr "Lett regn, med bris"
+msgstr "Lett regn, og bris"
 
 #: noaa_i18n.dat:123
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Fog"
-msgstr "Lett regn, med tåke"
+msgstr "Lett regn, og tåke"
 
 #: noaa_i18n.dat:124
 #, kde-format
@@ -3656,13 +3655,13 @@ msgstr "Lette regnbyger med tåke eller tåkedis"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Rain Snow"
-msgstr "Lette regnbyger med snø"
+msgstr "Lette regnbyger, og snø"
 
 #: noaa_i18n.dat:131
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Showers Rain"
-msgstr "Lett nedbør, med regn"
+msgstr "Lette byger, og regn"
 
 #: noaa_i18n.dat:132
 #, kde-format
@@ -3746,7 +3745,7 @@ msgstr "Lett kornsnø"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Low Drifting Snow"
-msgstr "Lett snøfall, med lågt snøfokk"
+msgstr "Lett snøfall, med lavt snøfokk"
 
 #: noaa_i18n.dat:147
 #, kde-format
@@ -3758,85 +3757,85 @@ msgstr "Lett snøfall, med regn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers"
-msgstr "Lette snøbyer"
+msgstr "Lette snøbyger"
 
 #: noaa_i18n.dat:149
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers Fog"
-msgstr "Lette snøbyer med tåke"
+msgstr "Lette snøbyger, og tåke"
 
 #: noaa_i18n.dat:150
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Snow Showers Fog/Mist"
-msgstr "Lette snøbyer med tåke eller tåkedis"
+msgstr "Lette snøbyger, og tåke eller tåkedis"
 
 #: noaa_i18n.dat:151
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain"
-msgstr "Lett tordenvær med regn"
+msgstr "Lett tordenvær, og regn"
 
 #: noaa_i18n.dat:152
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Fog"
-msgstr "Lett tordenvær med regn og tåke"
+msgstr "Lett tordenvær, med regn og tåke"
 
 #: noaa_i18n.dat:153
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Fog/Mist"
-msgstr "Lett tordenvær med regn og tåke eller tåkedis"
+msgstr "Lett tordenvær, med regn og tåke eller tåkedis"
 
 #: noaa_i18n.dat:154
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail"
-msgstr "Lett tordenvær med regn og hagl"
+msgstr "Lett tordenvær, med regn og hagl"
 
 #: noaa_i18n.dat:155
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Fog"
-msgstr "Lett tordenvær med regn, hagl og tåke"
+msgstr "Lett tordenvær, med regn, hagl og tåke"
 
 #: noaa_i18n.dat:156
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Fog/Mist"
-msgstr "Lett tordenvær med regn, hagl og tåke eller tåkedis"
+msgstr "Lett tordenvær, med regn, hagl og tåke eller tåkedis"
 
 #: noaa_i18n.dat:157
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Hail Haze"
-msgstr "Lett tordenvær med regn, hagl og tørrdis"
+msgstr "Lett tordenvær, med regn, hagl og tørrdis"
 
 #: noaa_i18n.dat:158
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Haze"
-msgstr "Lett tordenvær med regn og tørrdis"
+msgstr "Lett tordenvær, med regn og tørrdis"
 
 #: noaa_i18n.dat:159
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Rain Small Hail/Snow Pellets"
-msgstr "Lett tordenvær med regn og sprøhagl"
+msgstr "Lett tordenvær, med regn og sprøhagl"
 
 #: noaa_i18n.dat:160
 #, kde-format
 msgctxt "weather condition"
 msgid "Light Thunderstorm Snow"
-msgstr "Lett tordenvær med snø"
+msgstr "Lett tordenvær, med snø"
 
 #: noaa_i18n.dat:161
 #, kde-format
 msgctxt "weather condition"
 msgid "Low Drifting Dust"
-msgstr "Lavt drivende støvfokk"
+msgstr "Lavt støvfokk"
 
 #: noaa_i18n.dat:162
 #, kde-format
@@ -3848,31 +3847,31 @@ msgstr "Lavt sandfokk"
 #, kde-format
 msgctxt "weather condition"
 msgid "Low Drifting Snow"
-msgstr "Lavt snødrev"
+msgstr "Lavt snøfokk"
 
 #: noaa_i18n.dat:164
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "weather condition"
 msgid "Mostly Clear"
-msgstr "For det meste klart"
+msgstr "For det meste klarvær"
 
 #: noaa_i18n.dat:166
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy and Breezy"
-msgstr "For det meste skyet og bris"
+msgstr "For det meste skyet, og bris"
 
 #: noaa_i18n.dat:167
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy and Windy"
-msgstr "For det meste skyet og kuling"
+msgstr "For det meste skyet, og kuling"
 
 #: noaa_i18n.dat:168
 #, kde-format
 msgctxt "weather condition"
 msgid "Mostly Cloudy with Haze"
-msgstr "For det meste skyet med tørrdis"
+msgstr "For det meste skyet, og tørrdis"
 
 #: noaa_i18n.dat:169
 #, kde-format
@@ -3884,13 +3883,13 @@ msgstr "Overskyet"
 #, kde-format
 msgctxt "weather condition"
 msgid "Overcast and Breezy"
-msgstr "Overskyet og bris"
+msgstr "Overskyet, og bris"
 
 #: noaa_i18n.dat:171
 #, kde-format
 msgctxt "weather condition"
 msgid "Overcast and Windy"
-msgstr "Overskyet og kuling"
+msgstr "Overskyet, og kuling"
 
 #: noaa_i18n.dat:172
 #, kde-format
@@ -3914,25 +3913,25 @@ msgstr "Delvis tåke i nærheten"
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy and Breezy"
-msgstr "Delvis skyet og bris"
+msgstr "Delvis skyet, og bris"
 
 #: noaa_i18n.dat:177
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy and Windy"
-msgstr "Delvis skyet og kuling"
+msgstr "Delvis skyet og, kuling"
 
 #: noaa_i18n.dat:178
 #, kde-format
 msgctxt "weather condition"
 msgid "Partly Cloudy with Haze"
-msgstr "Delvis skyet og tørrdis"
+msgstr "Delvis skyet og, tørrdis"
 
 #: noaa_i18n.dat:179
 #, kde-format
 msgctxt "weather condition"
 msgid "Patchy Freezing Fog"
-msgstr ""
+msgstr "Spredt tåke som fryser"
 
 #: noaa_i18n.dat:180
 #, kde-format
@@ -4046,13 +4045,13 @@ msgstr "Byger og iskorn"
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Fog"
-msgstr "Byger i nærheten og tåke"
+msgstr "Byger i nærheten, og tåke"
 
 #: noaa_i18n.dat:200
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers in Vicinity Snow"
-msgstr "Byger i nærheten og snø"
+msgstr "Byger i nærheten, og snø"
 
 #: noaa_i18n.dat:201
 #, kde-format
@@ -4070,7 +4069,7 @@ msgstr "Byger, regn og tåke eller tåkedis"
 #, kde-format
 msgctxt "weather condition"
 msgid "Showers Rain in Vicinity"
-msgstr "Byger og regn i nærheten"
+msgstr "Byger, og regn i nærheten"
 
 #: noaa_i18n.dat:204
 #, kde-format
@@ -4142,7 +4141,7 @@ msgstr "Snø og regn som fryser"
 #, kde-format
 msgctxt "weather condition"
 msgid "Snow Low Drifting Snow"
-msgstr "Snø og lavt snødrev"
+msgstr "Snø og lavt snøfokk"
 
 #: noaa_i18n.dat:219
 #, kde-format
@@ -4202,7 +4201,7 @@ msgstr "Tordenvær og hagl"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Hail Fog"
-msgstr "Tordenvær og hagl med tåke"
+msgstr "Tordenvær, hagl og tåke"
 
 #: noaa_i18n.dat:230
 #, kde-format
@@ -4214,7 +4213,7 @@ msgstr "Tordenvær og tørrdis i nærheten"
 #, kde-format
 msgctxt "weather condition"
 msgid "Thunderstorm Haze in Vicinity Hail"
-msgstr "Tordenvær og tørrdis i nærheten, med hagl"
+msgstr "Tordenvær og tørrdis i nærheten, og hagl"
 
 #: noaa_i18n.dat:232
 #, kde-format
@@ -4406,7 +4405,7 @@ msgstr "Tordenvær med snø"
 #, kde-format
 msgctxt "weather condition"
 msgid "Tornado/Water Spout"
-msgstr "Tornado/Skypumpe"
+msgstr "Skypumpe"
 
 #: noaa_i18n.dat:264
 #, kde-format
@@ -4436,19 +4435,19 @@ msgstr "Skypumpe"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Freezing Spray"
-msgstr "Sprøyt som fryser"
+msgstr "Underkjølt tåke"
 
 #: noaa_i18n.dat:270
 #, kde-format
 msgctxt "weather forecast"
 msgid "Frost"
-msgstr "Rim"
+msgstr "Frost"
 
 #: noaa_i18n.dat:271
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Thunderstorms"
-msgstr "Litt utrygt for tordenvær"
+msgstr "Tordenvær mulig"
 
 #: noaa_i18n.dat:272
 #, kde-format
@@ -4472,91 +4471,91 @@ msgstr "Kraftig tordenvær"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow/Sleet"
-msgstr ""
+msgstr "Snø og sludd mulig"
 
 #: noaa_i18n.dat:277
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Snow/Sleet"
-msgstr "Utrygt for snø/sludd"
+msgstr "Utrygt for snø og sludd"
 
 #: noaa_i18n.dat:278
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow/Sleet Likely"
-msgstr "Snø/sludd sannsynlig"
+msgstr "Snø og sludd sannsynlig"
 
 #: noaa_i18n.dat:279
 #, kde-format
 msgctxt "weather forecast"
 msgid "Snow/Sleet"
-msgstr "Snø/sludd"
+msgstr "Snø og sludd"
 
 #: noaa_i18n.dat:280
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Sleet"
-msgstr ""
+msgstr "Regn og sludd mulig"
 
 #: noaa_i18n.dat:281
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Sleet"
-msgstr "Utrygt for regn/sludd"
+msgstr "Utrygt for regn og sludd"
 
 #: noaa_i18n.dat:282
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Sleet Likely"
-msgstr "Regn/sludd sannsynlig"
+msgstr "Regn og sludd sannsynlig"
 
 #: noaa_i18n.dat:283
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Sleet"
-msgstr "Regn/sludd"
+msgstr "Regn og sludd"
 
 #: noaa_i18n.dat:284
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Freezing Rain"
-msgstr ""
+msgstr "Regn eller regn som fryser mulig"
 
 #: noaa_i18n.dat:285
 #, kde-format
 msgctxt "weather forecast"
 msgid "Chance Rain/Freezing Rain"
-msgstr "Utrygt for regn og regn som fryser"
+msgstr "Utrygt for regn eller regn som fryser"
 
 #: noaa_i18n.dat:286
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain Likely"
-msgstr "Regn og regn som fryser sannsynlig"
+msgstr "Regn eller regn som fryser sannsynlig"
 
 #: noaa_i18n.dat:287
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Freezing Rain"
-msgstr "Regn og regn som fryser"
+msgstr "Regn eller regn som fryser"
 
 #: noaa_i18n.dat:288
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix Likely"
-msgstr ""
+msgstr "Vinternedbør sannsynlig"
 
 #: noaa_i18n.dat:289
 #, kde-format
 msgctxt "weather forecast"
 msgid "Wintry Mix"
-msgstr "Vinterblanding"
+msgstr "Vinternedbør"
 
 #: noaa_i18n.dat:290
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Drizzle"
-msgstr ""
+msgstr "Yr som fryser mulig"
 
 #: noaa_i18n.dat:291
 #, kde-format
@@ -4580,7 +4579,7 @@ msgstr "Yr som fryser"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Freezing Rain"
-msgstr ""
+msgstr "Regn som fryser mulig"
 
 #: noaa_i18n.dat:295
 #, kde-format
@@ -4604,7 +4603,7 @@ msgstr "Regn som fryser"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain/Snow"
-msgstr ""
+msgstr "Regn eller snø mulig"
 
 #: noaa_i18n.dat:299
 #, kde-format
@@ -4616,19 +4615,19 @@ msgstr "Utrygt for regn eller snø"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Snow Likely"
-msgstr "Regn og snø sannsynlig"
+msgstr "Regn eller snø sannsynlig"
 
 #: noaa_i18n.dat:301
 #, kde-format
 msgctxt "weather forecast"
 msgid "Rain/Snow"
-msgstr "Regn og snø"
+msgstr "Regn eller snø"
 
 #: noaa_i18n.dat:302
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow"
-msgstr ""
+msgstr "Snø mulig"
 
 #: noaa_i18n.dat:303
 #, kde-format
@@ -4646,13 +4645,13 @@ msgstr "Snø sannsynlig"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Heavy Snow"
-msgstr "Sterkt snøfall"
+msgstr "Kraftig snøfall"
 
 #: noaa_i18n.dat:307
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Flurries"
-msgstr ""
+msgstr "Snøbyger mulig"
 
 #: noaa_i18n.dat:308
 #, kde-format
@@ -4670,7 +4669,7 @@ msgstr "Snøbyger sannsynlig"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Snow Showers"
-msgstr ""
+msgstr "Snøbyger mulig"
 
 #: noaa_i18n.dat:312
 #, kde-format
@@ -4694,7 +4693,7 @@ msgstr "Snøbyger"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Drizzle"
-msgstr ""
+msgstr "Yr mulig"
 
 #: noaa_i18n.dat:316
 #, kde-format
@@ -4712,7 +4711,7 @@ msgstr "Yr sannsynlig"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain"
-msgstr ""
+msgstr "Regn mulig"
 
 #: noaa_i18n.dat:320
 #, kde-format
@@ -4736,7 +4735,7 @@ msgstr "Kraftig regn"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Rain Showers"
-msgstr ""
+msgstr "Regnbyger mulig"
 
 #: noaa_i18n.dat:325
 #, kde-format
@@ -4809,7 +4808,7 @@ msgstr "Tett tåke"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Blustery"
-msgstr "Kastevind"
+msgstr "Vindkast"
 
 #: noaa_i18n.dat:340
 #, kde-format
@@ -4851,7 +4850,7 @@ msgstr "For det meste sol"
 #, kde-format
 msgctxt "weather forecast"
 msgid "Partly Sunny"
-msgstr ""
+msgstr "Delvis sol"
 
 #: noaa_i18n.dat:349
 #, kde-format
@@ -4859,67 +4858,65 @@ msgctxt "weather forecast"
 msgid "Increasing Clouds"
 msgstr "Økende skydekke"
 
-# Ikkje heilt fornøgd med ordet «Minkande» …
 #: noaa_i18n.dat:350
 #, kde-format
 msgctxt "weather forecast"
 msgid "Becoming Cloudy"
-msgstr "Tilskyende"
+msgstr "Økende skydekke"
 
 # Litt usikker på denne.
 #: noaa_i18n.dat:352
 #, kde-format
 msgctxt "weather forecast"
 msgid "Gradual Clearing"
-msgstr "Gradvis oppklarnende"
+msgstr "Gradvis opphold"
 
 # Litt usikker på denne.
 #: noaa_i18n.dat:353
 #, kde-format
 msgctxt "weather forecast"
 msgid "Clearing Late"
-msgstr "Senere oppklarnende"
+msgstr "Opphold senere"
 
-# Ikkje heilt fornøgd med ordet «Minkande» …
 #: noaa_i18n.dat:354
 #, kde-format
 msgctxt "weather forecast"
 msgid "Decreasing Clouds"
-msgstr "Minkende skyer"
+msgstr "Avtakende skydekke"
 
 # Nettsida http://retro.met.no/met/met_lex/q_u/synopkode-ww.html var til stor hjelp i omsetjinga.
 #: noaa_i18n.dat:355
 #, kde-format
 msgctxt "weather forecast"
 msgid "Becoming Sunny"
-msgstr "Kommende solskinn"
+msgstr "Kommende sol"
 
 #: noaa_i18n.dat:357
 #, kde-format
 msgctxt "weather forecast"
 msgid "Mostly Clear"
-msgstr "For det meste klart"
+msgstr "For det meste klarvær"
 
 #: noaa_i18n.dat:358
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "weahter forecast"
 msgid "Showers And Thunderstorms"
-msgstr "Byger eller tordenvær"
+msgstr "Byger og tordenvær"
 
 #: noaa_i18n.dat:359
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "weather forecast"
 msgid "Slight Chance Showers And Thunderstorms"
-msgstr "Litt utrygt for tordenvær"
+msgstr "Byger og tordenvær mulig"
 
 #: noaa_i18n.dat:360
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "weather forecast"
 msgid "Chance Showers And Thunderstorms"
-msgstr "Utrygt for byger eller tordenvær"
+msgstr "Utrygt for byger og tordenvær"
 
 #: noaa_i18n.dat:361
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "weather forecast"
 msgid "Showers And Thunderstorms Likely"
-msgstr "Tordenvær sannsynlig"
+msgstr "Byger og tordenvær sannsynlig"
