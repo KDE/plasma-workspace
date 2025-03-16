@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-03 04:49+0200\n"
+"PO-Revision-Date: 2025-03-15 03:34+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -63,12 +63,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"მოძებნეთ პარამეტრი <application>%1</application>-ში სისტემურ კუთხეში ხატულის "
+"გასათიშად მანამდე, სანამ ამას აქ იზამდეთ. ზოგიერთი აპის ხატულა სისტემურ "
+"კუთხეში არ შექმნილა იმისთვის, რომ ის გამორთონ და შეიძლება, მათი მოულოდნელი "
+"ქცევები გამოიწვიოს.<nl/><nl/>გამოიყენეთ ეს პარამეტრი, მხოლოდ, თუ იცით რას "
+"აკეთებთ და თუ პრობლემები შეგექმნათ, ამის შესახებ KDE-ს ან აპის ავტორს ნუ "
+"მისწერთ."
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "მე ვიცი, რას ვაკეთებ"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-02 07:08+0200\n"
+"PO-Revision-Date: 2025-03-15 08:11+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.4\n"
+"X-Generator: Poedit 3.5\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -65,12 +65,17 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Poiščite nastavitev v <application>%1</application>, da onemogočite njeno "
+"ikono v pladnju, preden to storite tukaj. Ikone pladnja nekaterih aplikacij "
+"niso bile načrtovane za onemogočanje in uporaba te nastavitve lahko povzroči "
+"nepričakovano vedenje.<nl/><nl/>To nastavitev uporabljajte na lastno "
+"odgovornost in ne poročajte o težavah KDE ali avtorju aplikacije."
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Razumem tveganja"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format

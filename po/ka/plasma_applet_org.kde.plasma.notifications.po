@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-21 05:19+0200\n"
+"PO-Revision-Date: 2025-03-15 03:31+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -266,12 +266,12 @@ msgstr "გაგზავნა"
 #: package/contents/ui/components/SpeedChart.qml:139
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "სიჩქარე"
 
 #: package/contents/ui/components/SpeedChart.qml:187
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "საშუალო სიჩქარე"
 
 #: package/contents/ui/components/SpeedChart.qml:244
 #, kde-format
