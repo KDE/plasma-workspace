@@ -39,49 +39,54 @@ UpdateDatabaseJob *UpdateDatabaseJob::updateClipboard(QObject *parent,
                                                       qreal timestamp)
 {
     QCryptographicHash hash(QCryptographicHash::Sha1);
-    bool hasImage = false;
     std::list<MimeData> mimeDataList;
     const QStringList formats = mimeData->formats();
+
+    if (mimeData->hasText()) {
+        QByteArray data = mimeData->text().toUtf8();
+        hash.addData(data);
+        mimeDataList.emplace_back(s_plainTextPrefix, std::move(data), QString::fromLatin1(hash.result().toHex()));
+        mimeDataList.emplace_back(s_plainUtf8Text, QByteArray() /*Same uuid*/, QString::fromLatin1(hash.result().toHex()));
+    }
+
+    if (mimeData->hasImage()) {
+        QImage image = mimeData->imageData().value<QImage>();
+        hash.reset();
+        hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
+        QByteArray data;
+        QBuffer buffer(&data);
+        QImageWriter encoder(&buffer, "PNG");
+        encoder.write(image);
+        mimeDataList.emplace_back(s_imageFormat, std::move(data), QString::fromLatin1(hash.result().toHex()));
+    }
+
     for (const QString &format : formats) {
         if (!format.contains(u'/')) {
             continue;
         }
-        QByteArray data;
-        if (format.startsWith(u"image/") || format == u"application/x-qt-image") {
-            if (!hasImage) {
-                hasImage = true;
-                QImage image = mimeData->imageData().value<QImage>();
-                hash.reset();
-                hash.addData(QByteArrayView(reinterpret_cast<const char *>(image.constBits()), image.sizeInBytes()));
-                QBuffer buffer(&data);
-                QImageWriter encoder(&buffer, "PNG");
-                encoder.write(image);
-                mimeDataList.emplace_back(s_imageFormat, std::move(data), QString::fromLatin1(hash.result().toHex()));
-            }
-        } else {
-            if (format.startsWith(s_plainTextPrefix)) {
-                const QStringView encoding = QStringView(format).sliced(s_plainTextPrefix.size());
-                if (encoding.compare(u"utf-8", Qt::CaseInsensitive)) {
-                    // Qt clipboard doesn't support other encodings.
-                    continue;
-                }
-            } else if (std::none_of(s_acceptableTextFormatPrefixes.begin(), s_acceptableTextFormatPrefixes.end(), [&format](QStringView prefix) {
-                           return format.startsWith(prefix);
-                       })) {
-                // Don't create un-asked for DDE links in LibreOffice apps;
-                // we don't want them.
-                continue;
-            }
-            data = mimeData->data(format);
-            if (data.size() > 20 * 1000 * 1000) {
-                // Skip anything greater than 20MB because we don't want too
-                // many heavy things to be persistently held in the clipboard.
-                continue;
-            }
-            hash.reset();
-            hash.addData(data);
-            mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
+
+        if (format.startsWith(s_plainTextPrefix) || format.startsWith(u"image/") || format == u"application/x-qt-image") {
+            continue; // Already saved
         }
+
+        if (std::none_of(s_acceptableTextFormatPrefixes.begin(), s_acceptableTextFormatPrefixes.end(), [&format](QStringView prefix) {
+                return format.startsWith(prefix);
+            })) {
+            // Don't create un-asked for DDE links in LibreOffice apps;
+            // we don't want them.
+            continue;
+        }
+
+        QByteArray data = mimeData->data(format);
+        if (data.size() > 20 * 1000 * 1000) {
+            // Skip anything greater than 20MB because we don't want too
+            // many heavy things to be persistently held in the clipboard.
+            continue;
+        }
+
+        hash.reset();
+        hash.addData(data);
+        mimeDataList.emplace_back(format, std::move(data), QString::fromLatin1(hash.result().toHex()));
     }
 
     return new UpdateDatabaseJob(parent, database, databaseFolder, uuid, text, std::move(mimeDataList), timestamp);

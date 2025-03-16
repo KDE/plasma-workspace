@@ -12,7 +12,8 @@ class QMimeData;
 class QSqlDatabase;
 
 inline constexpr QLatin1String s_imageFormat("image/png");
-inline constexpr QLatin1String s_plainTextPrefix("text/plain;charset=");
+inline constexpr QLatin1String s_plainTextPrefix("text/plain");
+inline constexpr QLatin1String s_plainUtf8Text("text/plain;charset=utf-8");
 
 struct MimeData {
     QString type;
