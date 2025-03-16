@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-24 11:24+0000\n"
-"PO-Revision-Date: 2025-01-11 11:32+0100\n"
+"PO-Revision-Date: 2025-01-25 12:46+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -155,10 +155,9 @@ msgid "Enter Edit Mode"
 msgstr "Wejdź do trybu dostosowywania"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Wejdź do trybu dostosowywania"
+msgstr "Wyjdź z trybu dostosowywania"
 
 #: main.cpp:86
 #, kde-format
