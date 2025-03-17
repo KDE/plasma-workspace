@@ -1,12 +1,12 @@
-# Translation of plasma_private_systemtray to Spanish
+# Spanish translations for plasma_applet_org.kde.plasma.private.systemtray.po package.
 #
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_private_systemtray\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.private.systemtray\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-02 11:40+0200\n"
+"PO-Revision-Date: 2025-03-16 01:28+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -61,12 +61,19 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Busque un ajuste en <application>%1</application> para desactivar su icono "
+"de la bandeja del sistema antes de hacerlo aquí. Los iconos de la bandeja "
+"del sistema de algunas aplicaciones no están diseñados para que se puedan "
+"desactivar, por lo que el uso de este ajuste podría causar que se "
+"comportaran de una forma que no se espera.<nl/><nl/>Modifique esta "
+"preferencia bajo su propio riesgo y no informe de problemas a KDE ni al "
+"autor de la aplicación."
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Entiendo los riesgos"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format
@@ -208,203 +215,3 @@ msgstr "Mostrar los iconos ocultos"
 msgctxt "Some letters with tall characters, ascenders, descenders, etc"
 msgid "AILlmyjgGJP"
 msgstr "AILlmyjgGJP"
-
-#~ msgid "Some letters with tall characters, ascenders, descenders, etc"
-#~ msgstr ""
-#~ "Algunas letras con caracteres altos, ascendentes, descendentes, etc."
-
-#~ msgid "Expand System Tray"
-#~ msgstr "Expandir la bandeja del sistema"
-
-#~ msgctxt ""
-#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
-#~ "activation"
-#~ msgid "%1 (Automatic load)"
-#~ msgstr "%1 (carga automática)"
-
-#~ msgid "This layout may look odd with a short panel."
-#~ msgstr "Esta distribución puede verse mal en un panel corto."
-
-#~ msgid "This layout may look odd with a narrow panel."
-#~ msgstr "Esta distribución puede verse mal en un panel estrecho."
-
-#~ msgctxt "The arrangement of system tray icons in the Panel"
-#~ msgid "Panel icon arrangement:"
-#~ msgstr "Organización de iconos del panel:"
-
-#~ msgid "One row of small icons"
-#~ msgstr "Una fila de iconos pequeños"
-
-#~ msgid "One column of small icons"
-#~ msgstr "Una columna de iconos pequeños"
-
-#~ msgid "Two rows of small icons"
-#~ msgstr "Dos filas de iconos pequeños"
-
-#~ msgid "Two columns of small icons"
-#~ msgstr "Dos columnas de iconos pequeños"
-
-#~ msgid "One row"
-#~ msgstr "Una fila"
-
-#~ msgid "One column"
-#~ msgstr "Una columna"
-
-#~ msgid "Two rows"
-#~ msgstr "Dos filas"
-
-#~ msgid "Two columns"
-#~ msgstr "Dos columnas"
-
-#~ msgid "Very Small"
-#~ msgstr "Muy pequeño"
-
-#~ msgid "Medium"
-#~ msgstr "Mediano"
-
-#~ msgid "Huge"
-#~ msgstr "Muy grande"
-
-#~ msgid "Enormous"
-#~ msgstr "Enorme"
-
-#~ msgid "Auto"
-#~ msgstr "Automática"
-
-#~ msgid "Shown"
-#~ msgstr "Mostrada"
-
-#~ msgid "Hidden"
-#~ msgstr "Oculta"
-
-#~ msgid "Categories"
-#~ msgstr "Categorías"
-
-#~ msgid "Extra Items"
-#~ msgstr "Elementos adicionales"
-
-#~ msgid "Hide icons"
-#~ msgstr "Ocultar iconos"
-
-#~ msgid "Stat&usNotifier Testap"
-#~ msgstr "Aplicación de pruebas de Stat&usNotifier"
-
-#~ msgid "Stat&us Notifier"
-#~ msgstr "Noti&ficador de estado"
-
-#~ msgid ""
-#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
-#~ "body></html>"
-#~ msgstr ""
-#~ "<html><head/><body><p><span style=\" font-weight:600;\">Registro</span></"
-#~ "p></body></html>"
-
-#~ msgid "<b>Status</b>"
-#~ msgstr "<b>Estado</b>"
-
-#~ msgid "Automatic"
-#~ msgstr "Automático"
-
-#~ msgid "Passive"
-#~ msgstr "Pasivo"
-
-#~ msgid "Ac&tive"
-#~ msgstr "Ac&tivo"
-
-#~ msgid "&NeedsAttention"
-#~ msgstr "&NeedsAttention"
-
-#~ msgid "<b>Icon</b>"
-#~ msgstr "<b>Icono</b>"
-
-#~ msgid "<b>ToolTip</b>"
-#~ msgstr "<b>Ayuda emergente</b>"
-
-#~ msgid "Update"
-#~ msgstr "Actualizar"
-
-#~ msgid "&Jobs"
-#~ msgstr "Traba&jos"
-
-#~ msgid "<b>Job Control</b>"
-#~ msgstr "<b>Control del trabajo</b>"
-
-#~ msgid "<b>Progress</b>"
-#~ msgstr "<b>Progreso</b>"
-
-#~ msgid "<b>Naming</b>"
-#~ msgstr "<b>Nombre</b>"
-
-#~ msgid "Job Started"
-#~ msgstr "Trabajo iniciado"
-
-#~ msgid "Pump Job"
-#~ msgstr "Inyectar trabajo"
-
-#~ msgid "Source"
-#~ msgstr "Origen"
-
-#~ msgid "Destination"
-#~ msgstr "Destino"
-
-#~ msgid "Testing kuiserver (%1 seconds remaining)"
-#~ msgstr "Probando kuiserver (faltan %1 segundos)"
-
-#~ msgctxt "tooltip title"
-#~ msgid "System Service Item"
-#~ msgstr "Elemento de servicio del sistema"
-
-#~ msgctxt "title"
-#~ msgid "StatusNotifierTest"
-#~ msgstr "StatusNotifierTest"
-
-#~ msgctxt "tooltip subtitle"
-#~ msgid "Some explanation from the beach."
-#~ msgstr "Alguna explicación desde la playa."
-
-#~ msgid "System Tray Options"
-#~ msgstr "Opciones de la bandeja del sistema"
-
-#~ msgctxt "%1 is the name of the containment"
-#~ msgid "%1 Options"
-#~ msgstr "Opciones de %1"
-
-#~ msgid "Unknown Category"
-#~ msgstr "Categoría desconocida"
-
-#~ msgid "Hardware"
-#~ msgstr "Hardware"
-
-#~ msgctxt "%1 is the name of the applet"
-#~ msgid "%1 Options"
-#~ msgstr "Opciones de %1"
-
-#~ msgid "Alt+S"
-#~ msgstr "Alt+S"
-
-#~ msgid "Error: Can't find plugin metadata: %1"
-#~ msgstr "Error: no se pueden encontrar los metadatos del complemento: %1"
-
-#~ msgid "Error loading QML file: %1"
-#~ msgstr "Error al cargar archivo QML: %1"
-
-#~ msgid "Dialog"
-#~ msgstr "Diálogo"
-
-#~ msgid "Showing info for package: %1"
-#~ msgstr "Mostrando información del paquete: %1"
-
-#~ msgid "      Name : %1"
-#~ msgstr "      Nombre : %1"
-
-#~ msgid "   Comment : %1"
-#~ msgstr "   Comentario : %1"
-
-#~ msgid "    Plugin : %1"
-#~ msgstr "    Complemento : %1"
-
-#~ msgid "    Author : %1"
-#~ msgstr "    Autor : %1"
-
-#~ msgid "      Path : %1"
-#~ msgstr "      Ruta : %1"

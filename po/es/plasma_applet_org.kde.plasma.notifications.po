@@ -1,15 +1,16 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Spanish translations for plasma_applet_org.kde.plasma.notifications.po package.
+# Copyright (C) 2010-2025 This_file_is_part_of_KDE
+# This file is distributed under the same license as the plasma-workspace package.
 #
-# Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2010.
-# Javier Vinal <fjvinal@gmail.com>, 2011, 2012.
-# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2010 Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>
+# SPDX-FileCopyrightText: 2011, 2012 Javier Vinal <fjvinal@gmail.com>
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_notifications\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2024-02-03 19:23+0100\n"
+"PO-Revision-Date: 2025-03-16 01:24+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Poedit-Language: Spanish\n"
 "X-Poedit-Country: SPAIN\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -29,7 +30,7 @@ msgstr "Abrir con %1"
 #: fileinfo.cpp:174
 #, kde-format
 msgid "Open with…"
-msgstr "Abrir con..."
+msgstr "Abrir con…"
 
 #: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:160
 #, kde-format
@@ -247,7 +248,7 @@ msgstr "Cancelar"
 #: package/contents/ui/components/ThumbnailStrip.qml:160
 #, kde-format
 msgid "More Options…"
-msgstr "Más opciones..."
+msgstr "Más opciones…"
 
 #: package/contents/ui/components/JobItem.qml:152
 #, kde-format
@@ -258,7 +259,7 @@ msgstr "Abrir"
 #, kde-format
 msgctxt "Text field placeholder"
 msgid "Type a reply…"
-msgstr "Escriba una respuesta..."
+msgstr "Escriba una respuesta…"
 
 #: package/contents/ui/components/NotificationReplyField.qml:66
 #, kde-format
@@ -269,18 +270,18 @@ msgstr "Enviar"
 #: package/contents/ui/components/SpeedChart.qml:139
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Velocidad"
 
 #: package/contents/ui/components/SpeedChart.qml:187
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Velocidad media"
 
 #: package/contents/ui/components/SpeedChart.qml:244
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: package/contents/ui/components/Summary.qml:35
 #, kde-format
@@ -414,14 +415,14 @@ msgstr[1] "%1 trabajos en ejecución"
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
-msgstr "%1 (%2%)"
+msgstr "%1 (%2 %)"
 
 #: package/contents/ui/main.qml:72
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
-msgstr[0] "%1 trabajo en ejecución (%2%)"
-msgstr[1] "%1 trabajos en ejecución (%2%)"
+msgstr[0] "%1 trabajo en ejecución (%2 %)"
+msgstr[1] "%1 trabajos en ejecución (%2 %)"
 
 #: package/contents/ui/main.qml:85
 #, kde-format
@@ -455,132 +456,4 @@ msgstr "Borrar todas las notificaciones"
 #: package/contents/ui/main.qml:248
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
-msgstr "&Configurar notificaciones de eventos y acciones..."
-
-#~ msgctxt "A button tooltip; expands the item to show details"
-#~ msgid "Show Details"
-#~ msgstr "Mostrar detalles"
-
-#~ msgctxt "Do not disturb until date"
-#~ msgid "Until %1"
-#~ msgstr "Hasta %1"
-
-#~ msgid "Open with..."
-#~ msgstr "Abrir con..."
-
-#~ msgid "Clear History"
-#~ msgstr "Borrar historial"
-
-#~| msgid "Select All"
-#~ msgctxt "Clear all notifications"
-#~ msgid "Clear All"
-#~ msgstr "Borrar todo"
-
-#~ msgid "Until turned off"
-#~ msgstr "Hasta que se desactive"
-
-#~ msgid "No unread notifications."
-#~ msgstr "No hay notificaciones sin leer."
-
-#~ msgid "Information"
-#~ msgstr "Información"
-
-#~ msgid "Show application and system notifications"
-#~ msgstr "Notificaciones de aplicaciones y del sistema"
-
-#~ msgid "Show a history of notifications"
-#~ msgstr "Mostrar un historial de notificaciones"
-
-#~ msgid "Track file transfers and other jobs"
-#~ msgstr "Transferencias de archivos y otros trabajos"
-
-#~ msgid "Use custom position for the notification popup"
-#~ msgstr "Usar posición personalizada para la notificación emergente"
-
-#~ msgctxt "Either just 1 dir or m of n dirs are being processed"
-#~ msgid "1 dir"
-#~ msgid_plural "%2 of %1 dirs"
-#~ msgstr[0] "1 directorio"
-#~ msgstr[1] "%2 de %1 directorios"
-
-#~ msgid "%1 of %2 %3"
-#~ msgstr "%1 de %2 %3"
-
-#~ msgid "No notifications or jobs"
-#~ msgstr "No hay notificaciones ni trabajos"
-
-#~ msgctxt "10 seconds ago, keep short"
-#~ msgid "10 s ago"
-#~ msgstr "Hace 10 s"
-
-#~ msgctxt "30 seconds ago, keep short"
-#~ msgid "30 s ago"
-#~ msgstr "Hace 30 s"
-
-#~ msgctxt "notification was added yesterday, keep short"
-#~ msgid "Yesterday"
-#~ msgstr "Ayer"
-
-#~ msgctxt "notification was added n days ago, keep short"
-#~ msgid "%1 day ago"
-#~ msgid_plural "%1 days ago"
-#~ msgstr[0] "Hace %1 día"
-#~ msgstr[1] "Hace %1 días"
-
-#~ msgid "History"
-#~ msgstr "Historial"
-
-#~ msgctxt ""
-#~ "Indicator that there are more urls in the notification than previews shown"
-#~ msgid "+%1"
-#~ msgstr "+%1"
-
-#~ msgctxt "the job, which can be anything, finished with error"
-#~ msgid "%1: Error"
-#~ msgstr "%1: Error"
-
-#~ msgid "Job Error"
-#~ msgstr "Error en trabajo"
-
-#~ msgctxt "m of n dirs are being processed"
-#~ msgid "dirs"
-#~ msgstr "directorios"
-
-#~ msgid "&Application notifications:"
-#~ msgstr "Notificaciones de &aplicaciones:"
-
-#~ msgid "&File transfers and jobs:"
-#~ msgstr "&Transferencias de archivos y trabajos:"
-
-#~ msgid "Choose which information to show"
-#~ msgstr "Seleccione qué información se mostrará"
-
-#~ msgid "Transfers"
-#~ msgstr "Transferencias"
-
-#~ msgid "All"
-#~ msgstr "Todo"
-
-#~ msgid "%1 TiB"
-#~ msgstr "%1 TiB"
-
-#~ msgid "%1 GiB"
-#~ msgstr "%1 GiB"
-
-#~ msgid "%1 MiB"
-#~ msgstr "%1 MiB"
-
-#~ msgid "%1 KiB"
-#~ msgstr "%1 KiB"
-
-#~ msgid "%1 B"
-#~ msgstr "%1 B"
-
-#~ msgid "0 B"
-#~ msgstr "0 B"
-
-#~ msgid "%1 min %2 sec"
-#~ msgstr "%1 min %2 seg"
-
-#~ msgid "KiB/s"
-#~ msgstr "KiB/s"
+msgstr "&Configurar notificaciones de eventos y acciones…"
