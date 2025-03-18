@@ -423,7 +423,7 @@ class ClipboardTest(unittest.TestCase):
         temp_file = tempfile.NamedTemporaryFile(suffix=".txt")
         urls_data = GLib.Bytes.new(bytes(f"file://{temp_file.name}\r\n", "utf-8"))
         content_urls = Gdk.ContentProvider.new_for_bytes("text/uri-list", urls_data)
-        content_application = Gdk.ContentProvider.new_for_bytes("application/x-kde-appiumtest", GLib.Bytes.new(bytes("abcdefg", "utf-8")))
+        content_application = Gdk.ContentProvider.new_for_bytes("application/json", GLib.Bytes.new(bytes("abcdefg", "utf-8")))
         content_union = Gdk.ContentProvider.new_union([ascii_text, utf8_text, content_image, content_urls, content_application])
         app.gtk_copy(content_union)
         app.driver.find_element(AppiumBy.NAME, f"file://{temp_file.name}")
@@ -444,7 +444,7 @@ class ClipboardTest(unittest.TestCase):
             mime_data = app.gtk_get_clipboard_mime_data()
             self.assertEqual(mime_data["text/plain;charset=utf-8"].get_data(), utf8_text_data.get_data())
             self.assertEqual(mime_data["text/uri-list"].get_data(), urls_data.get_data())
-            self.assertIn("application/x-kde-appiumtest", mime_data)
+            self.assertIn("application/json", mime_data)
             self.assertNotIn("text/plain;charset=ANSI_X3.4-1968", mime_data)
             with tempfile.NamedTemporaryFile(mode="wb", suffix=".png") as temp_file:
                 temp_file.write(mime_data["image/png"].get_data())

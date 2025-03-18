@@ -49,7 +49,6 @@ protected:
                                QStringView databaseFolder,
                                const QString &uuid,
                                const QString &text,
-                               const QStringList &formats,
                                std::list<MimeData> &&mimeDataList,
                                qreal timestamp);
 
@@ -60,7 +59,6 @@ private:
     QSqlDatabase *m_db = nullptr;
     QString m_uuid;
     QString m_text;
-    QStringList m_formats;
     QString m_dataDir;
     std::list<MimeData> m_mimeDataList;
     qreal m_timestamp;
