@@ -5,14 +5,14 @@
 # Thomas Vergnaud <thomas.vergnaud@gmx.fr>, 2014, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2017.
 # Simon Depiets <sdepiets@gmail.com>, 2019, 2020.
-# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024 Xavier Besnard <xavier.besnard@kde.org>
+# SPDX-FileCopyrightText: 2020, 2021, 2022, 2023, 2024, 2025 Xavier Besnard <xavier.besnard@kde.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-03 07:20+0200\n"
+"PO-Revision-Date: 2025-03-16 10:35+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -22,7 +22,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Accelerator-Marker: &\n"
 "X-Environment: kde\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Text-Markup: kde4\n"
 
 #: package/contents/config/config.qml:13
@@ -70,12 +70,19 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Rechercher un paramètre dans <application>%1</application> pour désactiver "
+"son icône de boîte à miniatures avant de le faire ici. Certaines icônes "
+"d'applications dans la boîte à miniatures n’ont pas été conçues pour être "
+"désactivées. Ainsi, l’utilisation de ce paramètre peut entraîner un "
+"comportement inattendu. <nl/><nl/>Veuillez utiliser ce paramètre à vos "
+"risques et périls et ne pas signaler de problèmes à KDE ou à l’auteur de "
+"l’application."
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Je comprends les risques"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format

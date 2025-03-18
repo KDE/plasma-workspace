@@ -63,12 +63,16 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"请在<application>%1</application>中查找设置以禁用其系统托盘图标，然后再在此处"
+"进行操作。有些应用程序的系统托盘图标并非按照可禁用的标准设计，使用此设置可能"
+"会导致它们工作异常。<nl/><nl/>使用此设置需自行承担风险，如果您遇到问题，请不"
+"要向 KDE 或应用程序作者报告。"
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "我明白上述风险"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format

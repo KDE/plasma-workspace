@@ -256,12 +256,12 @@ msgstr "发送"
 #: package/contents/ui/components/SpeedChart.qml:139
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "速度"
 
 #: package/contents/ui/components/SpeedChart.qml:187
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "平均速度"
 
 #: package/contents/ui/components/SpeedChart.qml:244
 #, kde-format
