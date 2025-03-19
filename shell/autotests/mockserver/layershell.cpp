@@ -67,7 +67,7 @@ void LayerShell::zwlr_layer_shell_v1_destroy(Resource *resource)
 
 LayerSurface::LayerSurface(LayerShell *shell, Surface *surface, Output *output, uint32_t layer, const QString &scope, wl_resource *resource)
     : QtWaylandServer::zwlr_layer_surface_v1(resource)
-    , m_output(output)
+    , m_requestedOutput(output)
     , m_layer(layer)
     , m_scope(scope)
 {
