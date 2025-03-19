@@ -158,6 +158,7 @@ public:
     QList<Callback *> m_waitingFrameCallbacks;
     QList<Output *> m_outputs;
     SurfaceRole *m_role = nullptr;
+    bool m_mapHandled = false;
 
 Q_SIGNALS:
     void attach(void *buffer, QPoint offset);
