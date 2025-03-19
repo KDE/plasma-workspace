@@ -72,7 +72,7 @@ void Surface::surface_attach(Resource *resource, wl_resource *buffer, int32_t x,
     Q_ASSERT(!m_pending.buffer);
     m_pending.buffer = fromResource<Buffer>(buffer);
     m_pending.commitSpecific.attachOffset = offset;
-    m_pending.commitSpecific.attached = true;
+    m_pending.commitSpecific.attached = m_pending.buffer;
     Q_EMIT attach(buffer, offset);
 }
 
@@ -95,6 +95,10 @@ void Surface::surface_commit(Resource *resource)
     Q_EMIT commit();
     if (m_committed.commitSpecific.attached)
         Q_EMIT bufferCommitted();
+    else {
+        m_mapHandled = false;
+        m_role = nullptr;
+    }
 }
 
 void Surface::surface_frame(Resource *resource, uint32_t callback)
