@@ -58,8 +58,7 @@ class LayerSurface : public SurfaceRole, public QtWaylandServer::zwlr_layer_surf
 public:
     explicit LayerSurface(LayerShell *shell, Surface *surface, Output *output, uint32_t layer, const QString &scope, wl_resource *resource);
 
-private:
-    Output *m_output = nullptr;
+    QPointer<Output> m_requestedOutput = nullptr;
     uint32_t m_layer = 0;
     QString m_scope;
 };
