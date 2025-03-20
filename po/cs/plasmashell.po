@@ -153,10 +153,9 @@ msgid "Enter Edit Mode"
 msgstr "Spustit režim úprav"
 
 #: desktopview.cpp:533
-#, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
+#, kde-format
 msgid "Exit Edit Mode"
-msgstr "Spustit režim úprav"
+msgstr "Ukončit režim úprav"
 
 #: main.cpp:86
 #, kde-format
