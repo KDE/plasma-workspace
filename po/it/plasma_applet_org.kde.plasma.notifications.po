@@ -1,6 +1,6 @@
 # translation of plasma_applet_notifications.po to Italian
 # Copyright (C) 2008 Free Software Foundation, Inc.
-# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2008, 2009, 2010, 2011, 2014, 2015, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
 # Nicola Ruggero <nicola@nxnt.org>, 2013.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2024-02-02 14:54+0100\n"
+"PO-Revision-Date: 2025-03-16 07:44+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -266,12 +266,12 @@ msgstr "Invia"
 #: package/contents/ui/components/SpeedChart.qml:139
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Velocità"
 
 #: package/contents/ui/components/SpeedChart.qml:187
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Velocità media"
 
 #: package/contents/ui/components/SpeedChart.qml:244
 #, kde-format

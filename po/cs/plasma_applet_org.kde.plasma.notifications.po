@@ -275,7 +275,7 @@ msgstr "Odeslat"
 #: package/contents/ui/components/SpeedChart.qml:139
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Rychlost"
 
 #: package/contents/ui/components/SpeedChart.qml:187
 #, kde-format
