@@ -1,16 +1,16 @@
 # Translation of plasma_applet_org.kde.plasma.private.systemtray.po to Catalan (Valencian)
-# Copyright (C) 2013-2024 This_file_is_part_of_KDE
+# Copyright (C) 2013-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2014, 2015, 2016.
+# Josep M. Ferrer <txemaq@gmail.com>, 2013, 2014, 2015, 2016, 2017, 2018, 2020, 2021, 2022, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2024-09-02 12:27+0200\n"
+"PO-Revision-Date: 2025-03-15 10:36+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 # skip-rule: punctuation-period-no
 #: package/contents/config/config.qml:13
@@ -67,12 +67,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Busqueu un paràmetre a <application>%1</application> per a desactivar la "
+"icona de la safata abans de fer-ho ací. Algunes icones de la safata "
+"d'aplicacions no s'han dissenyat per a desactivar-se, i l'ús d'este "
+"paràmetre pot provocar que es comporten de manera inesperada.<nl/><nl/"
+">Utilitzeu este paràmetre davall el vostre propi risc, i no informeu de "
+"problemes a KDE o a l'autor de l'aplicació."
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Entenc els riscos"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format

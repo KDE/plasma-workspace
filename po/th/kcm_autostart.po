@@ -1,71 +1,69 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_autostart\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-31 00:43+0000\n"
-"PO-Revision-Date: 2010-07-07 15:25+0700\n"
-"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
-"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2025-03-20 15:26+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.1\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: autostartmodel.cpp:383
 #, kde-format
 msgid "\"%1\" is not an absolute url."
-msgstr ""
+msgstr "\"%1\" ไม่ใช่ URL ที่แน่นอน"
 
 #: autostartmodel.cpp:386
 #, kde-format
 msgid "\"%1\" does not exist."
-msgstr ""
+msgstr "%1 ไม่ได้มีอยู่"
 
 #: autostartmodel.cpp:389
 #, kde-format
 msgid "\"%1\" is not a file."
-msgstr ""
+msgstr "%1 ไม่ใช่ไฟล์"
 
 #: autostartmodel.cpp:392
 #, kde-format
 msgid "\"%1\" is not readable."
-msgstr ""
+msgstr "\"%1\" ไม่สามารถอ่านได้"
 
 #: ui/entry.qml:30
 #, kde-format
 msgctxt "@label Stop the Systemd unit for a running process"
 msgid "Stop"
-msgstr ""
+msgstr "หยุด"
 
 #: ui/entry.qml:31
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Start the Systemd unit for a currently inactive process"
 msgid "Start"
-msgstr "เริ่มวาระงาน"
+msgstr "เริ่ม"
 
 #: ui/entry.qml:71
-#, fuzzy, kde-format
-#| msgid "Name"
+#, kde-format
 msgctxt ""
 "@label The name of a Systemd unit for an app or script that will autostart"
 msgid "Name:"
-msgstr "ชื่อ"
+msgstr "ชื่อ:"
 
 #: ui/entry.qml:77
-#, fuzzy, kde-format
-#| msgid "Status"
+#, kde-format
 msgctxt ""
 "@label The current status (e.g. active or inactive) of a Systemd unit for an "
 "app or script that will autostart"
 msgid "Status:"
-msgstr "สถานะ"
+msgstr "สถานะ:"
 
 #: ui/entry.qml:83
 #, kde-format
@@ -73,171 +71,164 @@ msgctxt ""
 "@label A date and time follows this text, making a sentence like 'Last "
 "activated on: August 7th 11 PM 2023'"
 msgid "Last activated on:"
-msgstr ""
+msgstr "เปิดใช้งานล่าสุดเมื่อ:"
 
 #: ui/entry.qml:114
 #, kde-format
 msgid "Unable to load logs. Try refreshing."
-msgstr ""
+msgstr "ไม่สามารถโหลด log ได้ โปรดลองรีเฟรช"
 
 #: ui/entry.qml:118
 #, kde-format
 msgctxt "@action:button Refresh entry logs when it failed to load"
 msgid "Refresh"
-msgstr ""
+msgstr "โหลดใหม่"
 
 #: ui/main.qml:35
 #, kde-format
 msgid "Make Executable"
-msgstr ""
+msgstr "ทำให้สามารถประมวลผลได้"
 
 #: ui/main.qml:55
 #, kde-format
 msgid "The file '%1' must be executable to run at logout."
-msgstr ""
+msgstr "ไฟล์ '%1' จะต้องสามารถเรียกทำงานได้เพื่อรันตอนออกจากระบบ"
 
 #: ui/main.qml:57
 #, kde-format
 msgid "The file '%1' must be executable to run at login."
-msgstr ""
+msgstr "ไฟล์ '%1' จะต้องสามารถเรียกทำงานได้เพื่อรันตอนเข้าสู่ระบบ"
 
 #: ui/main.qml:68
 #, kde-format
 msgctxt "@action:button menu button; add new application etc"
 msgid "Add New"
-msgstr ""
+msgstr "เพิ่มใหม่"
 
 #: ui/main.qml:75
 #, kde-format
 msgctxt "@action:inmenu completes: add new application"
 msgid "Application…"
-msgstr ""
+msgstr "แอ&ปพลิเคชั่น"
 
 #: ui/main.qml:82
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:inmenu completes: add new login script"
 msgid "Login Script…"
-msgstr "เพิ่มสคริปต์..."
+msgstr "สคริปต์ตอนเข้าสู่ระบบ…"
 
 #: ui/main.qml:89
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgctxt "@action:inmenu completes: add new logout script"
 msgid "Logout Script…"
-msgstr "เพิ่มสคริปต์..."
+msgstr "สคริปต์ตอนออกจากระบบ…"
 
 #: ui/main.qml:126
 #, kde-format
 msgid ""
 "%1 has not been autostarted yet. Details will be available after the system "
 "is restarted."
-msgstr ""
+msgstr "%1 ยังไม่ได้เริ่มการทำงานโดยอัตโนมัติ รายละเอียดจะพร้อมใช้งานหลังจากรีสตาร์ทระบบ"
 
 #: ui/main.qml:149
 #, kde-format
 msgctxt ""
 "@label Entry hasn't been autostarted because system hasn't been restarted"
 msgid "Not autostarted yet"
-msgstr ""
+msgstr "ยังไม่ได้เริ่มอัตโนมัติ"
 
 #: ui/main.qml:158
-#, fuzzy, kde-format
-#| msgid "&Properties"
+#, kde-format
 msgctxt "@action:button"
 msgid "See properties"
-msgstr "คุณ&สมบัติ"
+msgstr "ดูคุณสมบัติ"
 
 #: ui/main.qml:169
-#, fuzzy, kde-format
-#| msgid "&Remove"
+#, kde-format
 msgctxt "@action:button"
 msgid "Remove entry"
-msgstr "เอา&ออก"
+msgstr "ลบรายการ"
 
 #: ui/main.qml:185
 #, kde-format
 msgid "Applications"
-msgstr ""
+msgstr "แอปพลิเคชั่น"
 
 #: ui/main.qml:188
 #, kde-format
 msgid "Login Scripts"
-msgstr ""
+msgstr "สคริปต์ตอนเข้าสู่ระบบ"
 
 #: ui/main.qml:191
-#, fuzzy, kde-format
-#| msgid "Pre-KDE startup"
+#, kde-format
 msgid "Pre-startup Scripts"
-msgstr "เริ่มก่อน KDE เริ่มทำงาน"
+msgstr "สคริปต์ก่อนการเริ่มต้น"
 
 #: ui/main.qml:194
 #, kde-format
 msgid "Logout Scripts"
-msgstr ""
+msgstr "สคริปต์ตอนออกจากระบบ"
 
 #: ui/main.qml:203
 #, kde-format
 msgid "No user-specified autostart items"
-msgstr ""
+msgstr "ไม่มีรายการเริ่มอัตโนมัติที่ผู้ใช้ระบุ"
 
 #: ui/main.qml:204
 #, kde-kuit-format
 msgctxt "@info 'some' refers to autostart items"
 msgid "Click the <interface>Add New</interface> button to add some"
-msgstr ""
+msgstr "คลิกปุ่ม <interface>เพิ่มใหม่</interface> เพื่อเพิ่ม"
 
 #: ui/main.qml:219
-#, fuzzy, kde-format
-#| msgid "Add Script..."
+#, kde-format
 msgid "Choose Login Script"
-msgstr "เพิ่มสคริปต์..."
+msgstr "เลือกสคริปต์ตอนเข้าสู่ระบบ"
 
 #: ui/main.qml:239
 #, kde-format
 msgid "Choose Logout Script"
-msgstr ""
+msgstr "เลือกสคริปต์ตอนออกจากระบบ"
 
 #: unit.cpp:26
 #, kde-format
 msgctxt "@label Entry is running right now"
 msgid "Running"
-msgstr ""
+msgstr "ทำงานอยู่"
 
 #: unit.cpp:27
 #, kde-format
 msgctxt "@label Entry is not running right now (exited without error)"
 msgid "Not running"
-msgstr ""
+msgstr "ยังไม่ทำงาน"
 
 #: unit.cpp:28
-#, fuzzy, kde-format
-#| msgid "Startup"
+#, kde-format
 msgctxt "@label Entry is being started"
 msgid "Starting"
-msgstr "เริ่มวาระงาน"
+msgstr "กำลังเริ่ม"
 
 #: unit.cpp:29
 #, kde-format
 msgctxt "@label Entry is being stopped"
 msgid "Stopping"
-msgstr ""
+msgstr "กำลังหยุด"
 
 #: unit.cpp:30
 #, kde-format
 msgctxt "@label Entry has failed (exited with an error)"
 msgid "Failed"
-msgstr ""
+msgstr "ล้มเหลว"
 
 #: unit.cpp:83
 #, kde-format
 msgid "Error occurred when receiving reply of GetAll call %1"
-msgstr ""
+msgstr "เกิดข้อผิดพลาดขณะได้รับการตอบกลับของ GetAll call %1"
 
 #: unit.cpp:155
 #, kde-format
 msgid "Failed to open journal"
-msgstr ""
+msgstr "ไม่สามารถเปิดวารสารได้"
 
 #~ msgctxt "NAME OF TRANSLATORS"
 #~ msgid "Your names"

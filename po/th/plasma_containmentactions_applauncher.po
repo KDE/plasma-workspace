@@ -15,7 +15,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.12.2\n"
 
 #. i18n: ectx: property (text), widget (QCheckBox, showAppsByName)
 #: config.ui:17
