@@ -174,6 +174,7 @@ KCM.ScrollViewKCM {
         parent: languageSelectPage
         title: titleText
         preferredWidth: 18 * Kirigami.Units.gridUnit
+        implicitHeight: Math.round(parent.height * 0.8)
 
         header: KDialogs.DialogHeader {
             dialog: addLanguagesSheet
