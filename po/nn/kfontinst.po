@@ -9,14 +9,14 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-29 02:56+0000\n"
-"PO-Revision-Date: 2024-08-01 15:57+0200\n"
+"PO-Revision-Date: 2025-03-20 20:06+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -86,12 +86,12 @@ msgstr "Avbryt …"
 #: apps/Printer.cpp:325
 #, kde-format
 msgid "Font Printer"
-msgstr "Utskrift av skrift"
+msgstr "Utskrift av skriftprøve"
 
 #: apps/Printer.cpp:327
 #, kde-format
 msgid "Simple font printer"
-msgstr "Enkel utskrift av skrift"
+msgstr "Enkel utskrift av skriftprøve"
 
 #: apps/Printer.cpp:337
 #, kde-format
@@ -606,8 +606,8 @@ msgstr "Systemmotoren vart avslutta. Prøv ein gong til.<br><i>%1</i>"
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
 msgstr ""
-"<i>%1</i> er ei punktskrift, men du kan ikkje installera punktskrifter, "
-"fordi det valet er slått av på systemet ditt."
+"<i>%1</i> er ei rasterskrift, men du kan ikkje installera rasterskrifter, då "
+"støtte for dette er slått av på systemet ditt."
 
 #: kcmfontinst/JobRunner.cpp:703
 #, kde-format
@@ -756,7 +756,7 @@ msgid ""
 "installed fonts. To install a font, simply copy one into the folder.</p>"
 msgstr ""
 "<h1>Skriftinstallering</h1>\n"
-"<p>Med denne modulen kan du installera TrueType-, Type1- og punktskrifter.</"
+"<p>Med denne modulen kan du installera TrueType-, Type1- og rasterskrifter.</"
 "p><p>Du kan òg installera skrifter gjennom Konqueror: Skriv fonts:/ i "
 "adresselinja til Konqueror, og du vil få oversikt over dei installerte "
 "skriftene. For å installera, berre kopier ei skrift inn i den rette mappa.</"
@@ -773,7 +773,7 @@ msgid ""
 "wide fonts (available to all).</p>"
 msgstr ""
 "<h1>Skriftinstallering</h1><p>Med denne modulen kan du installera TrueType-, "
-"Type1- og punktskrifter.</p><p>Du kan òg installera skrifter gjennom "
+"Type1- og rasterskrifter.</p><p>Du kan òg installera skrifter gjennom "
 "Konqueror: Skriv fonts:/ i adresselinja til Konqueror, og du vil få oversikt "
 "over dei installerte skriftene. For å installera, berre kopier ei skrift inn "
 "i den rette mappa, «%1» for skrifter som berre er tilgjengelege for deg "
@@ -792,7 +792,7 @@ msgstr "Klarte ikkje lagra lista over skrifter som skal skrivast ut."
 #: kcmfontinst/KCmFontInst.cpp:583
 #, kde-format
 msgid "Failed to start font printer."
-msgstr "Klarte ikkje starta skrivar til utskrift av skrifter."
+msgstr "Klarte ikkje starta utskrift av skriftprøve."
 
 #: kcmfontinst/KCmFontInst.cpp:590
 #, kde-format
@@ -801,7 +801,7 @@ msgid ""
 "You can only print non-bitmap and enabled fonts."
 msgstr ""
 "Det finst ingen utskrivbare skrifter.\n"
-"Du kan berre skriva ut ikkje-punktskrifter og skrifter i bruk."
+"Du kan berre skriva ut ikkje-rasterskrifter og skrifter som er tekne i bruk."
 
 #: kcmfontinst/KCmFontInst.cpp:592
 #, kde-format
@@ -1227,8 +1227,8 @@ msgstr "Motoren vart avslutta"
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
 msgstr ""
-"%1 er ei punktskrift, men du kan ikkje installera punktskrifter, fordi det "
-"valet er slått av på systemet ditt."
+"%1 er ei rasterskrift, men du kan ikkje installera rasterskrifter, då støtte "
+"for dette er slått av på systemet ditt."
 
 #: kio/KioFonts.cpp:717
 #, kde-format
@@ -1327,15 +1327,15 @@ msgstr "Tynn"
 
 #: lib/KfiConstants.h:75
 msgid "Extra Light"
-msgstr "Ekstra lett"
+msgstr "Ekstratynn"
 
 #: lib/KfiConstants.h:76
 msgid "Ultra Light"
-msgstr "Ultralett"
+msgstr "Ultratynn"
 
 #: lib/KfiConstants.h:77
 msgid "Light"
-msgstr "Lett"
+msgstr "Mager"
 
 #: lib/KfiConstants.h:78
 msgid "Regular"
@@ -1351,19 +1351,19 @@ msgstr "Middels"
 
 #: lib/KfiConstants.h:81
 msgid "Demi Bold"
-msgstr "Tynn halvfeit"
+msgstr "Demifeit"
 
 #: lib/KfiConstants.h:82
 msgid "Semi Bold"
-msgstr "Halvfeit"
+msgstr "Semifeit"
 
 #: lib/KfiConstants.h:83
 msgid "Bold"
-msgstr "Feit"
+msgstr "Halvfeit"
 
 #: lib/KfiConstants.h:84
 msgid "Extra Bold"
-msgstr "Ekstra feit"
+msgstr "Feit"
 
 #: lib/KfiConstants.h:85
 msgid "Ultra Bold"
@@ -1375,7 +1375,7 @@ msgstr "Svart"
 
 #: lib/KfiConstants.h:87
 msgid "Heavy"
-msgstr "Tjukk"
+msgstr "Ekstra feit"
 
 #: lib/KfiConstants.h:89
 msgid "Roman"
@@ -1395,7 +1395,7 @@ msgstr "Ultrasmal"
 
 #: lib/KfiConstants.h:94
 msgid "Extra Condensed"
-msgstr "Ekstra smal"
+msgstr "Ekstrasmal"
 
 #: lib/KfiConstants.h:95
 msgid "Condensed"
@@ -1415,7 +1415,7 @@ msgstr "Brei"
 
 #: lib/KfiConstants.h:100
 msgid "Extra Expanded"
-msgstr "Ekstra brei"
+msgstr "Ekstrabrei"
 
 #: lib/KfiConstants.h:101
 msgid "Ultra Expanded"
