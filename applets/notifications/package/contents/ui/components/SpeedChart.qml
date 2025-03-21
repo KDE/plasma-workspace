@@ -12,6 +12,7 @@ import QtQuick.Layouts
 
 import org.kde.kirigami as Kirigami
 import org.kde.coreaddons as KCoreAddons
+import org.kde.notificationmanager as NotificationManager
 import org.kde.plasma.components as PlasmaComponents3
 
 import org.kde.quickcharts as Charts
