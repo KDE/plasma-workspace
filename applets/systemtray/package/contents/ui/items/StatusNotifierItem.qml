@@ -42,6 +42,11 @@ AbstractItem {
     }
 
     onActivated: pos => {
+        if (model.ItemIsMenu) {
+            openContextMenu(pos);
+            return;
+        }
+
         const service = model.Service;
         const operation = service.operationDescription("Activate");
         operation.x = pos.x; //mouseX
