@@ -63,19 +63,19 @@ class V3MigrationTest(unittest.TestCase):
             res = res_cur.fetchone()
             self.assertEqual(res[0], "230aa750d982a8e1a7e8f0b7ccc4e4b1b87bf593")
             self.assertGreaterEqual(res[1], self.time_now)
-            self.assertEqual(res[2], "text/plain")
+            self.assertEqual(res[2], "text/plain,text/plain;charset=utf-8")
             self.assertEqual(res[3], "Fushan Wen")
 
             # main
             res = res_cur.fetchone()
             self.assertEqual(res[0], "e2ab8561c5a8f9967e62486c44211c63bcf7d002")
             self.assertGreaterEqual(res[1], self.time_now - 1)
-            self.assertEqual(res[2], "text/plain")
+            self.assertEqual(res[2], "text/plain,text/plain;charset=utf-8")
             self.assertEqual(res[3], "clipboard")
 
             # aux
-            self.assertEqual(1, len(cur.execute("SELECT uuid,mimetype,data_uuid FROM aux WHERE uuid='230aa750d982a8e1a7e8f0b7ccc4e4b1b87bf593' AND mimetype='text/plain' AND data_uuid='230aa750d982a8e1a7e8f0b7ccc4e4b1b87bf593'").fetchall()))
-            self.assertEqual(1, len(cur.execute("SELECT uuid,mimetype,data_uuid FROM aux WHERE uuid='e2ab8561c5a8f9967e62486c44211c63bcf7d002' AND mimetype='text/plain' AND data_uuid='e2ab8561c5a8f9967e62486c44211c63bcf7d002'").fetchall()))
+            self.assertEqual(1, len(cur.execute("SELECT uuid,mimetype,data_uuid FROM aux WHERE uuid='230aa750d982a8e1a7e8f0b7ccc4e4b1b87bf593' AND mimetype='text/plain;charset=utf-8' AND data_uuid='230aa750d982a8e1a7e8f0b7ccc4e4b1b87bf593'").fetchall()))
+            self.assertEqual(1, len(cur.execute("SELECT uuid,mimetype,data_uuid FROM aux WHERE uuid='e2ab8561c5a8f9967e62486c44211c63bcf7d002' AND mimetype='text/plain;charset=utf-8' AND data_uuid='e2ab8561c5a8f9967e62486c44211c63bcf7d002'").fetchall()))
 
     def test_convert_v2_to_v3_image(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
