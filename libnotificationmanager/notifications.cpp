@@ -8,9 +8,14 @@
 
 #include <QConcatenateTablesProxyModel>
 #include <QDebug>
+#include <QFile>
 #include <QMetaEnum>
+#include <canberra.h>
 #include <memory>
 
+#include <KConfig>
+#include <KConfigGroup>
+#include <KConfigWatcher>
 #include <KDescendantsProxyModel>
 #include <KLocalizedString>
 #include <KNotification>
@@ -96,7 +101,7 @@ public:
     NotificationGroupingProxyModel *groupingModel = nullptr;
     NotificationGroupCollapsingProxyModel *groupCollapsingModel = nullptr;
     KDescendantsProxyModel *flattenModel = nullptr;
-
+    ca_context *canberraContext = nullptr;
     LimitedRowCountProxyModel *limiterModel = nullptr;
 
 private:
@@ -895,6 +900,67 @@ int Notifications::rowCount(const QModelIndex &parent) const
 QHash<int, QByteArray> Notifications::roleNames() const
 {
     return Utils::roleNames();
+}
+
+void Notifications::playSoundHint(const QModelIndex &idx) const
+{
+    auto hints = data(idx, Notifications::HintsRole).toMap();
+    auto soundFilePath = hints.value(QStringLiteral("sound-file")).toString();
+    auto soundName = hints.value(QStringLiteral("sound-name")).toString();
+    auto isSuppressSound = hints.value(QStringLiteral("suppress-sound")).toBool();
+    auto desktopFile = data(idx, Notifications::DesktopEntryRole).toString();
+    auto appName = data(idx, Notifications::ApplicationNameRole).toString();
+
+    if (isSuppressSound || (soundName.isEmpty() && soundFilePath.isEmpty())) {
+        return;
+    }
+
+    if (!d->canberraContext) {
+        const int ret = ca_context_create(&d->canberraContext);
+        if (ret != CA_SUCCESS) {
+            qCWarning(NOTIFICATIONMANAGER)
+                << "Failed to initialize canberra context for audio notification:"
+                << ca_strerror(ret);
+            d->canberraContext = nullptr;
+            return;
+        }
+    }
+
+    ca_proplist *props = nullptr;
+    ca_proplist_create(&props);
+
+    const auto config = KSharedConfig::openConfig(QStringLiteral("kdeglobals"));
+    const KConfigGroup soundGroup = config->group(QStringLiteral("Sounds"));
+    const auto soundTheme =
+        soundGroup.readEntry("Theme", QStringLiteral("ocean"));
+
+    if (!soundName.isEmpty()) {
+        ca_proplist_sets(props, CA_PROP_EVENT_ID, soundName.toLatin1().constData());
+    }
+    if (!soundFilePath.isEmpty()) {
+        ca_proplist_sets(props, CA_PROP_MEDIA_FILENAME,
+                       QFile::encodeName(soundFilePath).constData());
+    }
+    ca_proplist_sets(props, CA_PROP_APPLICATION_NAME,
+                     appName.toLatin1().constData());
+    ca_proplist_sets(props, CA_PROP_APPLICATION_ID,
+                     desktopFile.toLatin1().constData());
+    ca_proplist_sets(props, CA_PROP_CANBERRA_XDG_THEME_NAME,
+                     soundTheme.toLatin1().constData());
+    // We'll also want this cached for a time. volatile makes sure the cache is
+    // dropped after some time or when the cache is under pressure.
+    ca_proplist_sets(props, CA_PROP_CANBERRA_CACHE_CONTROL, "volatile");
+
+    const int ret =
+        ca_context_play_full(d->canberraContext, 0, props, nullptr, nullptr);
+
+    ca_proplist_destroy(props);
+
+    if (ret != CA_SUCCESS) {
+        qCWarning(NOTIFICATIONMANAGER) << "Failed to play sound" << soundName
+                                       << "with canberra:" << ca_strerror(ret);
+        return;
+    }
 }
 
 #include "moc_notifications.cpp"

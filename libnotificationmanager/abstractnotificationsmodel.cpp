@@ -393,6 +393,8 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
         return notification.replySubmitButtonText();
     case Notifications::ReplySubmitButtonIconNameRole:
         return notification.replySubmitButtonIconName();
+    case Notifications::HintsRole:
+        return notification.hints();
     }
 
     return QVariant();

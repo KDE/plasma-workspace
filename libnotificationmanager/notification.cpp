@@ -453,6 +453,8 @@ void Notification::Private::processHints(const QVariantMap &hints)
             loadImagePath(it->toString());
         }
     }
+
+    this->hints = hints;
 }
 
 void Notification::Private::setUrgency(Notifications::Urgency urgency)

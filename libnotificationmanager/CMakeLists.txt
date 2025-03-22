@@ -89,6 +89,7 @@ target_link_libraries(notificationmanager
         Plasma::Plasma
         KF6::Screen
         KF6::Service
+        Canberra::Canberra
 )
 
 set_target_properties(notificationmanager PROPERTIES

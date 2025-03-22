@@ -296,6 +296,7 @@ public:
         TransientRole, ///< Whether the notification is transient and should not be kept in history. @since 5.22
 
         WasAddedDuringInhibitionRole, ///< Whether the notification was added while inhibition was active. @since 6.3
+        HintsRole, ///< To provide extra data to a notification server that the server may be able to make use of. @since 6.4
     };
     Q_ENUM(Roles)
 
@@ -542,6 +543,8 @@ public:
     Q_INVOKABLE QModelIndex groupIndex(const QModelIndex &idx) const;
 
     Q_INVOKABLE void collapseAllGroups();
+
+    Q_INVOKABLE void playSoundHint(const QModelIndex &idx) const;
 
     /**
      * Shows a notification to report the number of unread inhibited notifications.

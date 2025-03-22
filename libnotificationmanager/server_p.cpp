@@ -284,7 +284,7 @@ QStringList ServerPrivate::GetCapabilities() const
                        QStringLiteral("actions"),
                        QStringLiteral("persistence"),
                        QStringLiteral("inline-reply"),
-
+                       QStringLiteral("sound"),
                        QStringLiteral("x-kde-urls"),
                        QStringLiteral("x-kde-origin-name"),
                        QStringLiteral("x-kde-display-appname"),
