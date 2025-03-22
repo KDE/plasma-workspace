@@ -1343,10 +1343,10 @@ bool PanelView::event(QEvent *e)
                 qGuiApp->postEvent(focusWindow, fe);
             }
         }
-    }
-
-    if (m_geometryDirty && e->type() == QEvent::UpdateRequest) {
-        positionAndResizePanel();
+    } else if (e->type() == QEvent::UpdateRequest) {
+        if (m_geometryDirty) {
+            positionAndResizePanel();
+        }
     }
 
     return rc;
