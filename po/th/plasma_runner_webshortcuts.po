@@ -1,21 +1,21 @@
 # translation of krunner_webshortcutsrunner.po to Thai
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Thanomsub Noppaburana <donga.nb@gmail.com>, 2008, 2010.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_webshortcutsrunner\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-10 02:00+0000\n"
-"PO-Revision-Date: 2010-03-10 15:31+0700\n"
-"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
-"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2025-03-02 00:53+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: webshortcutrunner.cpp:45 webshortcutrunner.cpp:137 webshortcutrunner.cpp:154
@@ -31,17 +31,17 @@ msgstr "เปิด \"%1\" ในเว็บเบราว์เซอร์�
 #: webshortcutrunner.cpp:74
 #, kde-format
 msgid "Search using the DuckDuckGo bang syntax"
-msgstr ""
+msgstr "ค้นหาโดยใช้ไวยากรณ์ DuckDuckGo bang"
 
 #: webshortcutrunner.cpp:102
 #, kde-format
 msgid "Search in private window"
-msgstr ""
+msgstr "ค้นหาในหน้าต่างส่วนตัว"
 
 #: webshortcutrunner.cpp:102
 #, kde-format
 msgid "Search in incognito window"
-msgstr ""
+msgstr "ค้นหาในหน้าต่างที่ไม่ระบุตัวตน"
 
 #~ msgctxt "A web shortcut and its name"
 #~ msgid "%1: %2"

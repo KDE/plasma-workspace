@@ -1,0 +1,74 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-01-24 02:34+0000\n"
+"PO-Revision-Date: 2025-03-04 14:52+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: kcm_soundtheme.cpp:111
+#, kde-format
+msgctxt "Name of the fallback \"freedesktop\" sound theme"
+msgid "FreeDesktop"
+msgstr "FreeDesktop"
+
+#: kcm_soundtheme.cpp:112
+#, kde-format
+msgid "Fallback sound theme from freedesktop.org"
+msgstr "ธีมเสียงสํารองจาก freedesktop.org"
+
+#: ui/main.qml:29
+#, kde-format
+msgctxt "@option:check"
+msgid "Enable notification sounds"
+msgstr "เปิดใช้งานเสียงแจ้งเตือน"
+
+#: ui/main.qml:96
+#, kde-format
+msgctxt ""
+"%2 is a theme name or a list of theme names that the current theme inherits "
+"from"
+msgid "Based on: %2"
+msgid_plural "Based on: %2"
+msgstr[0] "อิงจาก: %2"
+
+#: ui/main.qml:109
+#, kde-format
+msgctxt ""
+"@label Precedes a list of buttons which can be clicked to preview the "
+"theme's sounds. Keep it very short"
+msgid "Preview:"
+msgstr "แสดงตัวอย่าง:"
+
+#: ui/main.qml:128
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview sound \"%1\""
+msgstr "แสดงตัวอย่างเสียง \"%1\""
+
+#: ui/main.qml:150
+#, kde-format
+msgctxt "@info:tooltip"
+msgid "Preview the demo sound for the theme \"%1\""
+msgstr "แสดงตัวอย่างเสียงสาธิตสําหรับธีม \"%1\""
+
+#: ui/main.qml:185
+#, kde-format
+msgctxt "%1 is a sound theme name. %2 is a sound name"
+msgid "The %1 theme doesn't include the sound '%2'"
+msgstr "ธีม %1 ไม่รวมเสียง '%2'"
+
+#: ui/main.qml:190
+#, kde-format
+msgid "Failed to preview sound: %1"
+msgstr "แสดงตัวอย่างเสียงไม่สําเร็จ: %1"

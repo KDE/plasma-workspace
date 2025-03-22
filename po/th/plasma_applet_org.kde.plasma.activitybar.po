@@ -1,0 +1,34 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-09-01 00:40+0000\n"
+"PO-Revision-Date: 2025-03-03 22:46+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: contents/ui/main.qml:72
+#, kde-format
+msgid "Switch to activity %1"
+msgstr "สลับไปยังกิจกรรม %1"
+
+#: contents/ui/main.qml:92
+#, kde-format
+msgctxt "@action:inmenu widget context menu"
+msgid "Show Activity Manager"
+msgstr "แสดงตัวจัดการกิจกรรม"
+
+#: contents/ui/main.qml:100
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Configure Activities…"
+msgstr "&กําหนดค่ากิจกรรม..."

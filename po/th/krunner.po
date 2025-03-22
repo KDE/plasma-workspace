@@ -1,0 +1,133 @@
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-01-09 00:42+0000\n"
+"PO-Revision-Date: 2025-03-20 15:15+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 24.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Pongsakorn S."
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@xerusion.me"
+
+#: main.cpp:57 view.cpp:49
+#, kde-format
+msgid "KRunner"
+msgstr "KRunner"
+
+#: main.cpp:57
+#, kde-format
+msgid "Run Command interface"
+msgstr "เรียกใช้อินเทอร์เฟซคำสั่ง"
+
+#: main.cpp:63
+#, kde-format
+msgid "Use the clipboard contents as query for KRunner"
+msgstr "ใช้เนื้อหาของคลิปบอร์ดเป็นสิ่งค้นหาสำหรับ KRunner"
+
+#: main.cpp:64
+#, kde-format
+msgid "Start KRunner in the background, don't show it."
+msgstr "เริ่ม KRunner ในพื้นหลัง ไม่ต้องแสดง"
+
+#: main.cpp:65
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "แทนที่อินสแตนซ์ที่มีอยู่"
+
+#: main.cpp:66
+#, kde-format
+msgid "Show only results from the given plugin"
+msgstr "แสดงเฉพาะผลลัพธ์จากปลั๊กอินที่กำหนด"
+
+#: main.cpp:67
+#, kde-format
+msgid "List available plugins"
+msgstr "รายการปลั๊กอินที่พร้อมใช้งาน"
+
+#: main.cpp:74
+#, kde-format
+msgid "The query to run, only used if -c is not provided"
+msgstr "สิ่งค้นหาที่จะรันจะใช้เฉพาะเมื่อไม่ได้ระบุ -c"
+
+#: main.cpp:83
+#, kde-format
+msgctxt "Header for command line output"
+msgid "Available KRunner plugins, pluginId"
+msgstr "ปลั๊กอิน KRunner ที่พร้อมใช้งาน, pluginId"
+
+#: qml/RunCommand.qml:104
+#, kde-format
+msgid "Configure"
+msgstr "ปรับแต่ง"
+
+#: qml/RunCommand.qml:105
+#, kde-format
+msgid "Configure KRunner Behavior"
+msgstr "กำหนดพฤติกรรมของ KRunner"
+
+#: qml/RunCommand.qml:108
+#, kde-format
+msgid "Configure KRunner…"
+msgstr "ปรับแต่ง KRunner..."
+
+#: qml/RunCommand.qml:121
+#, kde-format
+msgid "Showing only results from %1"
+msgstr "แสดงเฉพาะผลลัพธ์จาก %1"
+
+#: qml/RunCommand.qml:135
+#, kde-format
+msgctxt "Textfield placeholder text, query specific KRunner plugin"
+msgid "Search '%1'…"
+msgstr "ค้นหา '%1'..."
+
+#: qml/RunCommand.qml:136
+#, kde-format
+msgctxt "Textfield placeholder text"
+msgid "Search…"
+msgstr "ค้นหา..."
+
+#: qml/RunCommand.qml:306 qml/RunCommand.qml:307 qml/RunCommand.qml:309
+#, kde-format
+msgid "Show Usage Help"
+msgstr "แสดงวิธีใช้"
+
+#: qml/RunCommand.qml:317
+#, kde-format
+msgid "Pin"
+msgstr "ปักหมุด"
+
+#: qml/RunCommand.qml:318
+#, kde-format
+msgid "Pin Search"
+msgstr "ค้นหาหมุด"
+
+#: qml/RunCommand.qml:320
+#, kde-format
+msgid "Keep Open"
+msgstr "เปิดไว้"
+
+#: qml/RunCommand.qml:379 qml/RunCommand.qml:384
+#, kde-format
+msgid "Recent Queries"
+msgstr "สิ่งค้นหาล่าสุด"
+
+#: qml/RunCommand.qml:382
+#, kde-format
+msgid "Remove"
+msgstr "เอาออก"

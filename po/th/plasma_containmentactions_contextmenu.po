@@ -1,77 +1,71 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-#
 # Thanomsub Noppaburana <donga.nb@gmail.com>, 2010.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-31 00:42+0000\n"
-"PO-Revision-Date: 2010-02-11 22:26+0700\n"
-"Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
-"Language-Team: Thai <thai-l10n@googlegroups.com>\n"
+"PO-Revision-Date: 2025-03-02 11:05+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
 "Language: th\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #: menu.cpp:108
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show KRunner"
-msgstr ""
+msgstr "แสดง KRunner"
 
 #: menu.cpp:113
 #, kde-format
 msgid "Open Terminal"
-msgstr ""
+msgstr "เปิดเทอร์มินัล"
 
 #: menu.cpp:117
-#, fuzzy, kde-format
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Lock Screen"
 msgstr "ล็อคหน้าจอ"
 
 #: menu.cpp:126
-#, fuzzy, kde-format
-#| msgid "Lock Screen"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Show Logout Screen"
-msgstr "ล็อคหน้าจอ"
+msgstr "แสดงหน้าจอออกจากระบบ"
 
 #: menu.cpp:131
 #, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Display Configuration"
-msgstr ""
+msgstr "การกําหนดค่าหน้าจอ"
 
 #: menu.cpp:275
-#, fuzzy, kde-format
-#| msgid "Configure Contextual Menu Plugin"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Configure Contextual Menu Plugin"
-msgstr "ปรับแต่งส่วนเสริมเมนูคลิกขวา"
+msgstr "กําหนดค่าปลั๊กอิน เมนูตามบริบท"
 
 #: menu.cpp:285
-#, fuzzy, kde-format
-#| msgid "[Other Actions]"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Other Actions]"
-msgstr "[การกระทำอื่น ๆ ]"
+msgstr "[การกระทำอื่นๆ]"
 
 #: menu.cpp:288
-#, fuzzy, kde-format
-#| msgid "Wallpaper Actions"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "Wallpaper Actions"
 msgstr "การกระทำกับภาพพื้นหลัง"
 
 #: menu.cpp:292
-#, fuzzy, kde-format
-#| msgid "[Separator]"
+#, kde-format
 msgctxt "plasma_containmentactions_contextmenu"
 msgid "[Separator]"
 msgstr "[ตัวแบ่ง]"

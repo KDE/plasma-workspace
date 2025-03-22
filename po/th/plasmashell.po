@@ -1,0 +1,453 @@
+# Copyright (C) 2025 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# SPDX-FileCopyrightText: 2025 Pongsakorn S. <kde@xerusion.me>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-02-24 11:24+0000\n"
+"PO-Revision-Date: 2025-03-04 14:42+0700\n"
+"Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
+"Language-Team: Thai\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Pongsakorn S."
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "kde@xerusion.me"
+
+#: currentcontainmentactionsmodel.cpp:206
+#, kde-format
+msgid "Configure Mouse Actions Plugin"
+msgstr "ปลั๊กอินกำหนดค่าการกระทำของเมาส์"
+
+#: desktopview.cpp:220
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Dev"
+msgstr "KDE Plasma 6.0 Alpha"
+
+#: desktopview.cpp:223
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Alpha"
+msgstr "KDE Plasma 6.0 Alpha"
+
+#: desktopview.cpp:226
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 1"
+msgstr "KDE Plasma 6.0 Beta 1"
+
+#: desktopview.cpp:229
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma 6.0 Beta 2"
+msgstr "KDE Plasma 6.0 RC1"
+
+#: desktopview.cpp:232
+#, kde-format
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC1"
+msgstr "KDE Plasma 6.0 RC1"
+
+#: desktopview.cpp:235
+#, kde-format
+msgctxt "@label %1 is the Plasma version, RC meaning Release Candidate"
+msgid "KDE Plasma 6.0 RC2"
+msgstr "KDE Plasma 6.0 RC2"
+
+#: desktopview.cpp:261
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Dev"
+msgstr "KDE Plasma %1 Dev"
+
+#: desktopview.cpp:265
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1 Beta"
+msgstr "KDE Plasma %1 Beta"
+
+#: desktopview.cpp:268
+#, kde-format
+msgctxt "@label %1 is the Plasma version, %2 is the beta release number"
+msgid "KDE Plasma %1 Beta %2"
+msgstr "KDE Plasma %1 Beta %2"
+
+#: desktopview.cpp:272
+#, kde-format
+msgctxt "@label %1 is the Plasma version"
+msgid "KDE Plasma %1"
+msgstr "KDE Plasma %1"
+
+#: desktopview.cpp:278
+#, kde-format
+msgctxt "@info:usagetip"
+msgid "Visit bugs.kde.org to report issues"
+msgstr "โปรดไปยังเว็บไซต์ http://bugs.kde.org เพื่อรายงานสิ่งขัดข้อง"
+
+#: desktopview.cpp:286
+#, kde-format
+msgctxt "@action:button"
+msgid "Copy Plasma Version"
+msgstr "คัดลอกเวอร์ชันพลาสม่า"
+
+#: desktopview.cpp:292
+#, kde-format
+msgctxt "@action:button"
+msgid "Report a Bug…"
+msgstr "รายงานข้อผิดพลาด..."
+
+#: desktopview.cpp:302
+#, kde-format
+msgctxt "@title:menu"
+msgid "Hide Preview Banner"
+msgstr "ซ่อนแบนเนอร์ตัวอย่าง"
+
+#: desktopview.cpp:305
+#, kde-format
+msgctxt "@action:button Hide the preview banner until the system is restarted"
+msgid "Hide Until Restart"
+msgstr "ซ่อนจนกว่าจะเริ่มใหม่"
+
+#: desktopview.cpp:312
+#, kde-format
+msgctxt "@action:button Hide the preview banner permanently"
+msgid "Hide Permanently…"
+msgstr "ซ่อนถาวร…"
+
+#: desktopview.cpp:318
+#, kde-kuit-format
+msgctxt "@info"
+msgid ""
+"Are you sure you want to permanently hide the preview banner?<nl/><nl/>This "
+"action can only be undone by removing the line beginning with "
+"<icode>ShowDesktopPreviewBanner</icode> in the <filename>kdeglobals</"
+"filename> config file."
+msgstr ""
+"คุณแน่ใจหรือไม่ว่าต้องการซ่อนแบนเนอร์ตัวอย่างอย่างถาวร? <nl/><nl/> "
+"การดำเนินการนี้สามารถย้อนกลับได้โดยการลบบรรทัดที่ขึ้นต้นด้วย<icode>ShowDesktopPreviewBanner</"
+"icode> ในไฟล์การกำหนดค่า <filename>kdeglobals</filename> เท่านั้น"
+
+#: desktopview.cpp:320
+#, kde-format
+msgctxt "@title:window"
+msgid "Hide Preview Banner?"
+msgstr "ซ่อนแบนเนอร์ตัวอย่าง?"
+
+#: desktopview.cpp:518 desktopview.cpp:535
+#, kde-format
+msgid "Enter Edit Mode"
+msgstr "เข้าสู่โหมดแก้ไข"
+
+#: desktopview.cpp:533
+#, kde-format
+msgid "Exit Edit Mode"
+msgstr "ออกจากโหมดแก้ไข"
+
+#: main.cpp:86
+#, kde-format
+msgid "Plasma Shell"
+msgstr "Plasma Shell"
+
+#: main.cpp:99
+#, kde-format
+msgid "Enable QML Javascript debugger"
+msgstr "เปิดใช้งานดีบักเกอร์ QML Javascript"
+
+#: main.cpp:102
+#, kde-format
+msgid "Do not restart plasma-shell automatically after a crash"
+msgstr "อย่ารีสตาร์ท plasma-shell โดยอัตโนมัติหลังจากเกิดข้อขัดข้อง"
+
+#: main.cpp:105
+#, kde-format
+msgid "Force loading the given shell plugin"
+msgstr "บังคับโหลดปลั๊กอิน shell ที่กำหนด"
+
+#: main.cpp:109
+#, kde-format
+msgid "Replace an existing instance"
+msgstr "แทนที่กรณีที่มีอยู่"
+
+#: main.cpp:112
+#, kde-format
+msgid "Lists the available options for user feedback"
+msgstr "แสดงรายการตัวเลือกที่มีให้สำหรับ ความคิดเห็นของผู้ใช้"
+
+#: main.cpp:177
+#, kde-format
+msgid "Plasma Failed To Start"
+msgstr "Plasma ไม่สามารถเริ่มต้นได้"
+
+#: main.cpp:178
+#, kde-format
+msgid ""
+"Plasma is unable to start as it could not correctly use OpenGL 2 or software "
+"fallback\n"
+"Please check that your graphic drivers are set up correctly."
+msgstr ""
+"Plasma ไม่สามารถเริ่มการทำงานได้เนื่องจากไม่สามารถใช้ OpenGL 2 "
+"หรือซอฟต์แวร์สำรองได้อย่างถูกต้อง\n"
+"โปรดตรวจสอบว่าไดรเวอร์กราฟิกของคุณได้รับการตั้งค่าอย่างถูกต้อง"
+
+#: osd.cpp:62
+#, kde-format
+msgctxt "Brightness OSD: display name and brightness percentage"
+msgid "%1: %2%"
+msgstr "%1: %2%"
+
+#: osd.cpp:88
+#, kde-format
+msgctxt "OSD informing that the system is muted, keep short"
+msgid "Audio Muted"
+msgstr "ปิดเสียง"
+
+#: osd.cpp:110
+#, kde-format
+msgctxt "OSD informing that the microphone is muted, keep short"
+msgid "Microphone Muted"
+msgstr "ไมโครโฟนปิดเสียง"
+
+#: osd.cpp:126
+#, kde-format
+msgctxt "OSD informing that some media app is muted, eg. Amarok Muted"
+msgid "%1 Muted"
+msgstr "%1 ถูกปิดเสียง"
+
+#: osd.cpp:148
+#, kde-format
+msgctxt "touchpad was enabled, keep short"
+msgid "Touchpad On"
+msgstr "ทัชแพดเปิด"
+
+#: osd.cpp:150
+#, kde-format
+msgctxt "touchpad was disabled, keep short"
+msgid "Touchpad Off"
+msgstr "ทัชแพดปิด"
+
+#: osd.cpp:157
+#, kde-format
+msgctxt "wireless lan was enabled, keep short"
+msgid "Wifi On"
+msgstr "ไวไฟเปิด"
+
+#: osd.cpp:159
+#, kde-format
+msgctxt "wireless lan was disabled, keep short"
+msgid "Wifi Off"
+msgstr "ไวไฟปิด"
+
+#: osd.cpp:166
+#, kde-format
+msgctxt "Bluetooth was enabled, keep short"
+msgid "Bluetooth On"
+msgstr "บลูทูธเปิด"
+
+#: osd.cpp:168
+#, kde-format
+msgctxt "Bluetooth was disabled, keep short"
+msgid "Bluetooth Off"
+msgstr "บลูทูธปิด"
+
+#: osd.cpp:175
+#, kde-format
+msgctxt "mobile internet was enabled, keep short"
+msgid "Mobile Internet On"
+msgstr "เปิดอินเทอร์เน็ตบนมือถือ"
+
+#: osd.cpp:177
+#, kde-format
+msgctxt "mobile internet was disabled, keep short"
+msgid "Mobile Internet Off"
+msgstr "ปิดอินเทอร์เน็ตบนมือถือ"
+
+#: osd.cpp:185
+#, kde-format
+msgctxt ""
+"on screen keyboard was enabled because physical keyboard got unplugged, keep "
+"short"
+msgid "On-Screen Keyboard Activated"
+msgstr "เปิดใช้งานแป้นพิมพ์บนหน้าจอ"
+
+#: osd.cpp:188
+#, kde-format
+msgctxt ""
+"on screen keyboard was disabled because physical keyboard was plugged in, "
+"keep short"
+msgid "On-Screen Keyboard Deactivated"
+msgstr "ปิดใช้งานแป้นพิมพ์บนหน้าจอ"
+
+#: osd.cpp:195
+#, kde-format
+msgctxt "power management was inhibited, keep short"
+msgid "Sleep and Screen Locking Blocked"
+msgstr "การนอนหลับและการล็อกหน้าจอถูกปิดกั้น"
+
+#: osd.cpp:197
+#, kde-format
+msgctxt "power management was uninhibited, keep short"
+msgid "Sleep and Screen Locking Unblocked"
+msgstr "ไม่ปิดกั้นการนอนหลับและการล็อกหน้าจอ"
+
+#: osd.cpp:207
+#, kde-format
+msgctxt "Power profile was changed to power save mode, keep short"
+msgid "Power Save Mode"
+msgstr "โหมดประหยัดพลังงาน"
+
+#: osd.cpp:210
+#, kde-format
+msgctxt "Power profile was changed to balanced mode, keep short"
+msgid "Balanced Power Mode"
+msgstr "โหมดสมดุลพลังงาน"
+
+#: osd.cpp:213
+#, kde-format
+msgctxt "Power profile was changed to performance mode, keep short"
+msgid "Performance Mode"
+msgstr "โหมดประสิทธิภาพ"
+
+#: panelview.cpp:438
+#, kde-format
+msgid ""
+"With an NVIDIA GPU on X11, the Floating style and Adaptive opacity mode are "
+"known to cause poor window drag and resize performance. Consider using other "
+"settings."
+msgstr ""
+"NVIDIA GPU บน X11 เป็นที่ทราบกันดีว่ารูปแบบลอยตัวและ โหมดความทึบแบบปรับได้ "
+"ทําให้ประสิทธิภาพการลากหน้าต่างและปรับขนาดไม่ดี พิจารณาใช้อื่นๆ การตั้งค่า"
+
+#: panelview.cpp:1115
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Hide Panel Configuration"
+msgstr "ซ่อนการกําหนดค่าแผง"
+
+#: panelview.cpp:1117
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Show Panel Configuration"
+msgstr "แสดงการกําหนดค่าแผง"
+
+#: shellcontainmentconfig.cpp:106
+#, kde-format
+msgid "Internal Screen on %1"
+msgstr "หน้าจอภายในบน %1"
+
+#: shellcontainmentconfig.cpp:110
+#, kde-format
+msgctxt "Screen manufacturer and model on connector"
+msgid "%1 %2 on %3"
+msgstr "%1 %2 บน %3"
+
+#: shellcontainmentconfig.cpp:133
+#, kde-format
+msgid "Disconnected Screen %1"
+msgstr "หน้าจอถูกตัดการเชื่อมต่อ %1"
+
+#: shellcorona.cpp:213 shellcorona.cpp:215
+#, kde-format
+msgid "Show Desktop"
+msgstr "แสดงเดสก์ท็อป"
+
+#: shellcorona.cpp:215
+#, kde-format
+msgid "Hide Desktop"
+msgstr "ซ่อนเดสก์ท็อป"
+
+#: shellcorona.cpp:230
+#, kde-format
+msgid "Activate Application Launcher"
+msgstr "เปิดใช้งานตัวเรียกใช้งานโปรแกรม"
+
+#: shellcorona.cpp:238
+#, kde-format
+msgid "Show Activity Switcher"
+msgstr "แสดงตัวสลับกิจกรรม"
+
+#: shellcorona.cpp:249
+#, kde-format
+msgid "Stop Current Activity"
+msgstr "หยุดกิจกรรมปัจจุบัน"
+
+#: shellcorona.cpp:257
+#, kde-format
+msgid "Switch to Previous Activity"
+msgstr "สลับไปยังกิจกรรมก่อนหน้า"
+
+#: shellcorona.cpp:265
+#, kde-format
+msgid "Switch to Next Activity"
+msgstr "สลับไปยังกิจกรรมถัดไป"
+
+#: shellcorona.cpp:280
+#, kde-format
+msgid "Activate Task Manager Entry %1"
+msgstr "เปิดใช้งานรายการ Task manager %1"
+
+#: shellcorona.cpp:312
+#, kde-format
+msgctxt "@action:button"
+msgid "Manage Desktops and Panels…"
+msgstr "จัดการเดสก์ท็อปและแผง..."
+
+#: shellcorona.cpp:334
+#, kde-format
+msgid "Move keyboard focus between panels"
+msgstr "ย้ายโฟกัสของแป้นพิมพ์ระหว่างแผง"
+
+#: shellcorona.cpp:2175
+#, kde-format
+msgid "Add Panel"
+msgstr "เพิ่มแผง"
+
+#: shellcorona.cpp:2236
+#, kde-format
+msgctxt "Creates an empty containment (%1 is the containment name)"
+msgid "Empty %1"
+msgstr "ว่าง %1"
+
+#: softwarerendernotifier.cpp:34
+#, kde-format
+msgid "Software Renderer In Use"
+msgstr "ซอฟต์แวร์ Renderer ที่ใช้งานอยู่"
+
+#: softwarerendernotifier.cpp:35
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Software Renderer In Use"
+msgstr "ซอฟต์แวร์ Renderer ที่ใช้งานอยู่"
+
+#: softwarerendernotifier.cpp:36
+#, kde-format
+msgctxt "Tooltip telling user their GL drivers are broken"
+msgid "Rendering may be degraded"
+msgstr "Rendering อาจเสื่อมสภาพ"
+
+#: softwarerendernotifier.cpp:46
+#, kde-format
+msgid "Never show again"
+msgstr "ไม่แสดงอีก"
+
+#: userfeedback.cpp:36
+#, kde-format
+msgid "Panel Count"
+msgstr "จํานวนแผง"
+
+#: userfeedback.cpp:40
+#, kde-format
+msgid "Counts the panels"
+msgstr "นับแผง"
