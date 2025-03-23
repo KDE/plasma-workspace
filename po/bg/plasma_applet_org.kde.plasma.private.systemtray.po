@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-15 00:44+0000\n"
-"PO-Revision-Date: 2025-01-31 11:31+0100\n"
+"PO-Revision-Date: 2025-03-22 16:19+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
@@ -62,12 +62,18 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"Потърсете настройка в <application>%1</application>, за да деактивирате "
+"иконата му в системната област, преди да го направите тук. Иконите в "
+"системната област на някои приложения не са проектирани да бъдат "
+"деактивирани и използването на тази настройка може да доведе до неочаквано "
+"поведение.<nl/><nl/>Използвайте тази настройка на свой собствен риск и не "
+"докладвайте за проблеми на KDE или на автора на приложението."
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "Запознат съм с рисковете"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format
