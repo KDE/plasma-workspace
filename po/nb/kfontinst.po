@@ -10,14 +10,14 @@ msgstr ""
 "Project-Id-Version: kfontinst\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-26 00:42+0000\n"
-"PO-Revision-Date: 2012-09-03 08:51+0200\n"
-"Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
+"PO-Revision-Date: 2025-03-20 21:06+0100\n"
+"Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
 "Language: nb\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.4\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -26,14 +26,15 @@ msgstr ""
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Knut Yrvin,Bjørn Steensrud,Håvard Korsvoll,Eskild Hustvedt"
+msgstr ""
+"Knut Yrvin,Bjørn Steensrud,Håvard Korsvoll,Eskild Hustvedt,Martin Hansen"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr ""
 "knut.yrvin@gmail.com,bjornst@skogkatt.homelinux.org,korsvoll@skulelinux.no,"
-"zerodogg@skolelinux.no"
+"zerodogg@skolelinux.no,mh306602@gmail.com"
 
 #: apps/Installer.cpp:36 kcmfontinst/KCmFontInst.cpp:949
 #, kde-format
@@ -52,22 +53,23 @@ msgstr "Installeringssted"
 #: apps/Installer.cpp:113
 #, kde-format
 msgid "Font Installer"
-msgstr "Skrifttype-installerer"
+msgstr "Skriftinstallering"
 
 #: apps/Installer.cpp:115
 #, kde-format
 msgid "Simple font installer"
-msgstr "Enkel skriftinstallerer"
+msgstr "Enkel skriftinstallering"
 
 #: apps/Installer.cpp:117 apps/Printer.cpp:332
 #, kde-format
 msgid "(C) Craig Drummond, 2007"
-msgstr "© Craig Drummond, 2007"
+msgstr "© 2007 Craig Drummond"
 
 #: apps/Installer.cpp:124
-#, fuzzy, kde-format
+#, kde-format
 msgid "Makes the dialog transient for a window specified by windowHandle"
-msgstr "Gjør dialogvinduet forbigående for et X-program oppgitt ved winId"
+msgstr ""
+"Gjør dialogvinduet forbigående for et vindu som windowHandle-en hører til"
 
 #: apps/Installer.cpp:127
 #, kde-format
@@ -82,17 +84,17 @@ msgstr "Skriv ut"
 #: apps/Printer.cpp:311 kcmfontinst/DuplicatesDialog.cpp:224
 #, kde-format
 msgid "Canceling…"
-msgstr ""
+msgstr "Avbryter …"
 
 #: apps/Printer.cpp:328
 #, kde-format
 msgid "Font Printer"
-msgstr "Skrifttypeskriver"
+msgstr "Utskrift av skriftprøve"
 
 #: apps/Printer.cpp:330
 #, kde-format
 msgid "Simple font printer"
-msgstr "Enkel skrifttypeskriver"
+msgstr "Enkel utskrift av skriftprøve"
 
 #: apps/Printer.cpp:338
 #, kde-format
@@ -126,17 +128,17 @@ msgstr "Fjern fil med liste over skrifter som skal skrives ut"
 #: apps/Viewer.cpp:50
 #, kde-format
 msgid "Open an existing font file"
-msgstr ""
+msgstr "Åpne en skriftfil som finnes fra før"
 
 #: apps/Viewer.cpp:51
 #, kde-format
 msgid "Print font preview"
-msgstr ""
+msgstr "Forhåndsvisning av utskrift av skrifter"
 
 #: apps/Viewer.cpp:68
 #, kde-format
 msgid "Select Font to View"
-msgstr "Velg skrifttype for visning"
+msgstr "Velg skrift for visning"
 
 #: apps/Viewer.cpp:108
 #, kde-format
@@ -146,7 +148,7 @@ msgstr "URL som skal åpnes"
 #: apps/Viewer.cpp:150
 #, kde-format
 msgid "Font Viewer"
-msgstr "Skrifttypeviser"
+msgstr "Skriftviser"
 
 #: apps/Viewer.cpp:152
 #, kde-format
@@ -156,27 +158,27 @@ msgstr "Enkel skriftviser"
 #: apps/Viewer.cpp:154
 #, kde-format
 msgid "(C) Craig Drummond, 2004-2007"
-msgstr "© Craig Drummond, 2004-2007"
+msgstr "© 2004–2007 Craig Drummond"
 
 #: kcmfontinst/DuplicatesDialog.cpp:49
 #, kde-format
 msgid "Duplicate Fonts"
-msgstr "Dupliserte skrifttyper"
+msgstr "Dupliserte skrifter"
 
 #: kcmfontinst/DuplicatesDialog.cpp:79
 #, kde-format
 msgid "Scanning for duplicate fonts. Please wait…"
-msgstr ""
+msgstr "Søker etter dupliserte skrifter. Vent litt …"
 
 #: kcmfontinst/DuplicatesDialog.cpp:98
 #, kde-format
 msgid "No duplicate fonts found."
-msgstr "Fant ingen dupliserte skrifttyper."
+msgstr "Fant ingen dupliserte skrifter."
 
 #: kcmfontinst/DuplicatesDialog.cpp:106
 #, kde-format
 msgid "Delete Marked Files"
-msgstr "Slett merkede filer"
+msgstr "Slett valgte filer"
 
 #: kcmfontinst/DuplicatesDialog.cpp:108
 #, kde-format
@@ -202,7 +204,7 @@ msgstr "Er du sikker på at du vil slette:"
 #: kcmfontinst/DuplicatesDialog.cpp:223
 #, kde-format
 msgid "Cancel font scan?"
-msgstr "Kansellere skriftsøking?"
+msgstr "Avbryte skriftsøking?"
 
 #: kcmfontinst/DuplicatesDialog.cpp:384
 #, kde-format
@@ -237,7 +239,7 @@ msgstr "Egenskaper"
 #: kcmfontinst/DuplicatesDialog.cpp:405
 #, kde-format
 msgid "Unmark for Deletion"
-msgstr "Ta vekk merke for sletting"
+msgstr "Fjern merke for sletting"
 
 #: kcmfontinst/DuplicatesDialog.cpp:406
 #, kde-format
@@ -304,7 +306,7 @@ msgstr "Symbol/annet"
 #: kcmfontinst/FontFilter.cpp:267 kcmfontinst/FontFilter.cpp:335
 #, kde-format
 msgid "Filter by %1…"
-msgstr ""
+msgstr "Filter etter %1 …"
 
 #: kcmfontinst/FontList.cpp:548
 #, kde-format
@@ -334,13 +336,13 @@ msgid ""
 msgstr ""
 "<p>Denne lista viser de skriftene som er installert. Skriftene er samlet i "
 "familier, og tallet i firkantparenteser viser hvor mange stiler som finnes i "
-"familien. F.eks. </p><ul><li>Times [4]<ul><li>Vanlig</li><li>Halvfet</"
+"familien, for eksempel</p><ul><li>Times [4]<ul><li>Vanlig</li><li>Halvfet</"
 "li><li>Halvfet kursiv</li><li>kursiv</li></ul></li></ul>"
 
 #: kcmfontinst/FontList.cpp:950 kcmfontinst/FontList.cpp:974
 #, kde-format
 msgid "…plus %1 more"
-msgstr ""
+msgstr "… i tillegg til %1 flere"
 
 #: kcmfontinst/FontList.cpp:1001
 #, kde-format
@@ -367,17 +369,17 @@ msgstr "Slå av"
 #: kcmfontinst/FontList.cpp:1308 kcmfontinst/GroupList.cpp:798
 #, kde-format
 msgid "Print…"
-msgstr ""
+msgstr "Skriv ut …"
 
 #: kcmfontinst/FontList.cpp:1312
 #, kde-format
 msgid "Reload"
-msgstr "Last på nytt"
+msgstr "Oppdater"
 
 #: kcmfontinst/FontList.cpp:1690
 #, kde-format
 msgid "Open all %1 fonts in font viewer?"
-msgstr "Åpne alle %1 skrifter i skriftviseren?"
+msgstr "Åpne alle %1 skriftene i skriftviseren?"
 
 #: kcmfontinst/GroupList.cpp:61
 #, kde-format
@@ -397,7 +399,7 @@ msgstr "Systemskrifter"
 #: kcmfontinst/GroupList.cpp:70
 #, kde-format
 msgid "Unclassified"
-msgstr "Usortert"
+msgstr "Uklassifisert"
 
 #: kcmfontinst/GroupList.cpp:352
 #, kde-format
@@ -441,9 +443,9 @@ msgid ""
 msgstr ""
 "<h3>Skriftgrupper</h3><p>Denne lista viser skriftgruppene som er "
 "tilgjengelige på systemet. Det er to hovedtyper skriftgrupper:"
-"<ul><li><b>Standard</b> er spesielle grupper som skriftbehandleren bruker, "
+"<ul><li><b>Standard</b> er spesielle grupper som skriftbehandleren bruker,"
 "<ul>%1</ul></li><li><b>Selvvalgt</b> er grupper du har opprettet. En skrift "
-"kan legges til en av dissr gruppene ved å dra den fra skriftlista og slippe "
+"kan legges til en av disse gruppene ved å dra den fra skriftlista og slippe "
 "den i ønsket gruppe. Dra skrifta fra en gruppe til gruppa «Alle skrifter» "
 "for å ta bort familien fra den opprinelige gruppa.</li></ul></p>"
 
@@ -455,8 +457,8 @@ msgid ""
 "within a \"Custom\" group.</li>"
 msgstr ""
 "<li><i>Alle skrifter</i> inneholder alle skrifter som er installert på "
-"systemet.</li><li><i>Usortert</i> inneholder alle skrifter som ennå ikke er "
-"plassert i en «selvvalgt» gruppe.</li>"
+"systemet.</li><li><i>Uklassifisert</i> inneholder alle skrifter som ennå "
+"ikke er plassert i en «selvvalgt»-gruppe.</li>"
 
 #: kcmfontinst/GroupList.cpp:599
 #, kde-format
@@ -472,28 +474,28 @@ msgstr ""
 "systemet, både «System» og «Personlig».</li><li><i>System</i> inneholder "
 "alle skrifter som gjelder hele systemet (dvs. tilgjengelige for alle "
 "brukere)</li><li><i>Personlig</i> inneholder dine personlige skrifter.</"
-"li><li><i>Usortert</i> inneholder alle skrifter som ennå ikke er plassert i "
-"en «Selvvalgt» gruppe.</li>"
+"li><li><i>Uklassifisert</i> inneholder alle skrifter som ennå ikke er "
+"plassert i en «Selvvalgt»-gruppe.</li>"
 
 #: kcmfontinst/GroupList.cpp:701
 #, kde-format
 msgid "<qt>A group named <b>'%1'</b> already exists.</qt>"
-msgstr "<qt>Det finnes fra før en gruppe som heter <b>«%1»</b>.</qt>"
+msgstr "<qt>En gruppe med navn «<b>%1</b>» finnes allerede.</qt>"
 
 #: kcmfontinst/GroupList.cpp:794
 #, kde-format
 msgid "Rename…"
-msgstr ""
+msgstr "Endre navn …"
 
 #: kcmfontinst/GroupList.cpp:803
 #, kde-format
 msgid "Export…"
-msgstr ""
+msgstr "Eksporter …"
 
 #: kcmfontinst/GroupList.cpp:897
 #, kde-format
 msgid "Add to \"%1\"."
-msgstr "Legg til «%1»."
+msgstr "Legg til i «%1»."
 
 #: kcmfontinst/GroupList.cpp:899
 #, kde-format
@@ -518,7 +520,7 @@ msgstr "Hopp over"
 #: kcmfontinst/JobRunner.cpp:141
 #, kde-format
 msgid "AutoSkip"
-msgstr "Auto-hopp over"
+msgstr "Hopp automatisk over"
 
 #: kcmfontinst/JobRunner.cpp:186
 #, kde-format
@@ -532,12 +534,12 @@ msgid ""
 "restarted in order for any changes to be noticed.</p>"
 msgstr ""
 "<h3>Ferdig</h3><p>Merk at åpne programmer må startes på nytt for at "
-"endringer skal synes.</p>"
+"endringene skal tre i kraft.</p>"
 
 #: kcmfontinst/JobRunner.cpp:206
 #, kde-format
 msgid "Do not show this message again"
-msgstr "Ikike vis denne meldinga igjen"
+msgstr "Ikke vis denne meldinga igjen"
 
 #: kcmfontinst/JobRunner.cpp:314
 #, kde-format
@@ -577,17 +579,17 @@ msgstr "Slår av"
 #: kcmfontinst/JobRunner.cpp:372
 #, kde-format
 msgid "Updating font configuration. Please wait…"
-msgstr ""
+msgstr "Oppdaterer skriftoppsettet. Vent litt …"
 
 #: kcmfontinst/JobRunner.cpp:444
 #, kde-format
 msgid "Unable to start backend."
-msgstr "Klarte ikke å starte bakgrunnsmotoren."
+msgstr "Klarte ikke starte motoren."
 
 #: kcmfontinst/JobRunner.cpp:453
 #, kde-format
 msgid "Backend died, but has been restarted. Please try again."
-msgstr "Bakgrunnsmotoren døde, men er blitt startet igjen. Prøv igjen."
+msgstr "Motoren ble avsluttet, men er startet igjen. Prøv en gang til."
 
 #: kcmfontinst/JobRunner.cpp:618 kcmfontinst/JobRunner.cpp:624
 #, kde-format
@@ -597,18 +599,18 @@ msgstr "<h3>Feil</h3>"
 #: kcmfontinst/JobRunner.cpp:690
 #, kde-format
 msgid "Failed to download <i>%1</i>"
-msgstr "Klarte ikke å laste ned <i>%1</i>"
+msgstr "Klarte ikke laste ned <i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:692
 #, kde-format
 msgid "System backend died. Please try again.<br><i>%1</i>"
-msgstr "Systemets bakgrunnsmotor stoppet. Forsøk igjen.<br /> <i>%1</i>"
+msgstr "Systemmotoren ble avsluttet. Prøv en gang til.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:694
 #, kde-format
 msgid ""
 "<i>%1</i> is a bitmap font, and these have been disabled on your system."
-msgstr "<i>%1</i> er en bitkart-skrift,  og de er slått av på dette systemet."
+msgstr "<i>%1</i> er en rasterskrift, og de er slått av på dette systemet."
 
 #: kcmfontinst/JobRunner.cpp:696
 #, kde-format
@@ -616,7 +618,7 @@ msgid ""
 "<i>%1</i> contains the font <b>%2</b>, which is already installed on your "
 "system."
 msgstr ""
-"<i>%1</i> inneholder skriften <b>%2</b>, som allerede er installert på "
+"<i>%1</i> inneholder skrifta <b>%2</b>, som allerede er installert på "
 "systemet."
 
 #: kcmfontinst/JobRunner.cpp:698
@@ -632,7 +634,7 @@ msgstr "Klarte ikke fjerne alle filer som er tilknyttet <i>%1</i>"
 #: kcmfontinst/JobRunner.cpp:702
 #, kde-format
 msgid "Failed to start the system daemon.<br><i>%1</i>"
-msgstr "Klarte ikke å starte systemnissen.<br /> <i>%1</i>"
+msgstr "Klarte ikke starte systemtjenesten.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:705 kio/KioFonts.cpp:719
 #, kde-format
@@ -647,17 +649,17 @@ msgstr "<i>%1</i> finnes ikke."
 #: kcmfontinst/JobRunner.cpp:710
 #, kde-format
 msgid "Permission denied.<br><i>%1</i>"
-msgstr "Tillatelse nektet.<br /> <i>%1</i>"
+msgstr "Tilgang nektet.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:712
 #, kde-format
 msgid "Unsupported action.<br><i>%1</i>"
-msgstr "Ustøttet handling.<br><i>%1</i>"
+msgstr "Handlinga er ikke støttet.<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:714
 #, kde-format
 msgid "Authentication failed.<br><i>%1</i>"
-msgstr "Autentisering mislyktes.<br> <i>%1</i>"
+msgstr "Feil ved autentisering<br><i>%1</i>"
 
 #: kcmfontinst/JobRunner.cpp:716
 #, kde-format
@@ -667,82 +669,82 @@ msgstr "Uventet feil under behandling av: <i>%1</i>"
 #: kcmfontinst/KCmFontInst.cpp:213
 #, kde-format
 msgid "Create New Group…"
-msgstr ""
+msgstr "Lag ny gruppe …"
 
 #: kcmfontinst/KCmFontInst.cpp:216
 #, kde-format
 msgid "Remove Group…"
-msgstr ""
+msgstr "Fjern gruppe …"
 
 #: kcmfontinst/KCmFontInst.cpp:219
 #, kde-format
 msgid "Enable Fonts in Group…"
-msgstr ""
+msgstr "Slå på skriftene i gruppa …"
 
 #: kcmfontinst/KCmFontInst.cpp:222
 #, kde-format
 msgid "Disable Fonts in Group…"
-msgstr ""
+msgstr "Slå av skriftene i gruppa …"
 
 #: kcmfontinst/KCmFontInst.cpp:243
 #, kde-format
 msgid "This displays a preview of the selected font."
-msgstr "Dette viser en forhåndsvisning av de valgte skriftene."
+msgstr "Dette forhåndsviser de valgte skriftene."
 
 #: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Find Duplicates…"
-msgstr ""
+msgstr "Finn Duplikater …"
 
 #: kcmfontinst/KCmFontInst.cpp:260
 #, kde-format
 msgid "Scan for Duplicate Fonts…"
-msgstr ""
+msgstr "Søk etter dupliserte skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Install from File…"
-msgstr ""
+msgstr "Installer fra fil …"
 
 #: kcmfontinst/KCmFontInst.cpp:262
 #, kde-format
 msgid "Install fonts from a local file"
-msgstr ""
+msgstr "Installer skrifter fra lokal fil"
 
 #: kcmfontinst/KCmFontInst.cpp:263
 #, kde-format
 msgid "Get New Fonts…"
-msgstr ""
+msgstr "Hent nye skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:264
 #, kde-format
 msgid "Download new fonts"
-msgstr ""
+msgstr "Last ned nye skrifter"
 
 #: kcmfontinst/KCmFontInst.cpp:266
 #, kde-format
 msgid "Delete Selected Fonts…"
-msgstr ""
+msgstr "Slett de valgte skriftene …"
 
 #: kcmfontinst/KCmFontInst.cpp:331
 #, kde-format
 msgid "Change Preview Text…"
-msgstr ""
+msgstr "Endre tekst i forhåndsvisning …"
 
 #: kcmfontinst/KCmFontInst.cpp:430
 #, kde-format
 msgid "Add Fonts"
-msgstr "Legg til skrifttyper"
+msgstr "Legg til skrifter"
 
 #: kcmfontinst/KCmFontInst.cpp:555
 #, kde-format
 msgid "Failed to save list of fonts to print."
-msgstr "Klarte ikke å lagre liste over skrifttyper som skal skrives ut."
+msgstr "Klarte ikke å lagre liste over skrifter som skal skrives ut."
 
 #: kcmfontinst/KCmFontInst.cpp:576
 #, kde-format
 msgid "Failed to start font printer."
-msgstr "Klarte ikke å starte skriftskriveren."
+msgstr "Klarte ikke starte utskrift av skriftprøve."
 
 #: kcmfontinst/KCmFontInst.cpp:583
 #, kde-format
@@ -751,7 +753,7 @@ msgid ""
 "You can only print non-bitmap and enabled fonts."
 msgstr ""
 "Det finnes ingen utskrivbare skrifter.\n"
-"Du kan bare skrive ut ikke-punktskrifter og skrifter som er slått på."
+"Du kan bare skrive ut ikke-rasterskrifter og skrifter som er slått på."
 
 #: kcmfontinst/KCmFontInst.cpp:585
 #, kde-format
@@ -793,7 +795,7 @@ msgstr "Slett skrifter"
 #: kcmfontinst/KCmFontInst.cpp:632
 #, kde-format
 msgid "Deleting font(s)…"
-msgstr ""
+msgstr "Sletter skriftene …"
 
 #: kcmfontinst/KCmFontInst.cpp:647
 #, kde-format
@@ -831,7 +833,7 @@ msgid ""
 msgid_plural ""
 "<p>Do you really want to move these %1 fonts from <i>%2</i> to <i>%3</i>?</p>"
 msgstr[0] ""
-"<p>Er du sikker på at du vil flytte denne skriften fra <i>%2</i> til <i>%3</"
+"<p>Er du sikker på at du vil flytte denne skrifta fra <i>%2</i> til <i>%3</"
 "i>?</p>"
 msgstr[1] ""
 "<p>Er du sikker på at du vil flytte disse %1 skriftene fra <i>%2</i> til <i>"
@@ -845,7 +847,7 @@ msgstr "Flytt skrifter"
 #: kcmfontinst/KCmFontInst.cpp:679
 #, kde-format
 msgid "Moving font(s)…"
-msgstr ""
+msgstr "Flytter skriftene …"
 
 #: kcmfontinst/KCmFontInst.cpp:693
 #, kde-format
@@ -860,17 +862,17 @@ msgstr "Ingen filer?"
 #: kcmfontinst/KCmFontInst.cpp:722
 #, kde-format
 msgid "Failed to open %1 for writing"
-msgstr "Klarte ikke å åpne %1 for skriving."
+msgstr "Klarte ikke åpne %1 for skriving."
 
 #: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "Create New Group"
-msgstr "Opprett ny gruppe"
+msgstr "Lag ny gruppe"
 
 #: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
 msgid "Name of new group:"
-msgstr ""
+msgstr "Navn på ny skriftgruppe:"
 
 #: kcmfontinst/KCmFontInst.cpp:742
 #, kde-format
@@ -885,12 +887,12 @@ msgstr "Tekst for forhåndsvisning"
 #: kcmfontinst/KCmFontInst.cpp:770
 #, kde-format
 msgid "Please enter new text:"
-msgstr "Oppgi ny tekst:"
+msgstr "Skriv inn ny tekst:"
 
 #: kcmfontinst/KCmFontInst.cpp:822
 #, kde-format
 msgid "Scanning font list…"
-msgstr ""
+msgstr "Ser gjennom lista over skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:881
 #, kde-format
@@ -912,9 +914,9 @@ msgid ""
 "enabled:</td><td>%3</td></tr><tr><td align=\"right\">Total:</td><td>%4</td></"
 "tr></table>"
 msgstr ""
-"<table><tr><td align=\"right\">Aktiverte:</td><td>%1</td></tr><tr><td align="
-"\"right\">Inaktiverte:</td><td>%2</td></tr><tr><td align=\"right\">Delvis "
-"aktiverte:</td><td>%3</td></tr><tr><td align=\"right\">Totalt:</td><td>%4</"
+"<table><tr><td align=\"right\">I bruk:</td><td>%1</td></tr><tr><td align="
+"\"right\">Ute av bruk:</td><td>%2</td></tr><tr><td align=\"right\">Delvis i "
+"bruk:</td><td>%3</td></tr><tr><td align=\"right\">Til sammen:</td><td>%4</"
 "td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:905
@@ -924,34 +926,34 @@ msgid ""
 "\"right\">Disabled:</td><td>%2</td></tr><tr><td align=\"right\">Total:</"
 "td><td>%3</td></tr></table>"
 msgstr ""
-"<table><tr><td align=\"right\">Aktiverte:</td><td>%1</td></tr><tr><td align="
-"\"right\">Inaktiverte:</td><td>%2</td></tr><tr><td align=\"right\">Totalt:</"
-"td><td>%3</td></tr></table>"
+"<table><tr><td align=\"right\">I bruk:</td><td>%1</td></tr><tr><td align="
+"\"right\">ute av bruk:</td><td>%2</td></tr><tr><td align=\"right\">Til "
+"sammen:</td><td>%3</td></tr></table>"
 
 #: kcmfontinst/KCmFontInst.cpp:982
 #, kde-format
 msgid "Looking for any associated files…"
-msgstr ""
+msgstr "Ser etter tilknyttede filer …"
 
 #: kcmfontinst/KCmFontInst.cpp:986
 #, kde-format
 msgid "Scanning Files…"
-msgstr ""
+msgstr "Søker gjennom filer …"
 
 #: kcmfontinst/KCmFontInst.cpp:987
 #, kde-format
 msgid "Looking for additional files to install…"
-msgstr ""
+msgstr "Ser etter flere filer å installere …"
 
 #: kcmfontinst/KCmFontInst.cpp:1002
 #, kde-format
 msgid "Looking for files associated with %1"
-msgstr "Ser etter filer tilordnet %1"
+msgstr "Ser etter filer som er tilknyttet %1"
 
 #: kcmfontinst/KCmFontInst.cpp:1030
 #, kde-format
 msgid "Installing font(s)…"
-msgstr ""
+msgstr "Installerer skrifter …"
 
 #: kcmfontinst/KCmFontInst.cpp:1095
 #, kde-format
@@ -976,12 +978,12 @@ msgstr "Ingenting å slå av"
 #: kcmfontinst/KCmFontInst.cpp:1110
 #, kde-format
 msgid "<p>Do you really want to enable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Er du sikker på at du vil slå på </p><p>«<b>%1</b>»?</p>"
+msgstr "<p>Er du sikker på at du vil slå på</p><p>«<b>%1</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1111
 #, kde-format
 msgid "<p>Do you really want to disable</p><p>'<b>%1</b>'?</p>"
-msgstr "<p>Er du sikker på at du vil slå av </p><p>«<b>%1</b>»?</p>"
+msgstr "<p>Er du sikker på at du vil slå av</p><p>«<b>%1</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1112
 #, kde-format
@@ -989,7 +991,7 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>Er du sikker på at du vil slå på </p><p>«<b>%1</b>», som er i gruppe «<b>"
+"<p>Er du sikker på at du vil slå på</p><p>«<b>%1</b>», som er i gruppe «<b>"
 "%2</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1113
@@ -998,7 +1000,7 @@ msgid ""
 "<p>Do you really want to disable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>Er du sikker på at du vil slå av </p><p>«<b>%1</b>» som er inneholdt i "
+"<p>Er du sikker på at du vil slå av</p><p>«<b>%1</b>» som er inneholdt i "
 "gruppe «<b>%2</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1114 kcmfontinst/KCmFontInst.cpp:1115
@@ -1035,10 +1037,10 @@ msgid_plural ""
 "%2</b>'?</p>"
 msgstr[0] ""
 "<p>Er du sikker på at du vil slå på denne skrifta som er i gruppe «<b>%2</"
-"b>Â»?</p>"
+"b>»?</p>"
 msgstr[1] ""
 "<p>Er du sikker på at du vil slå på disse %1 skriftene som er i gruppe «<b>"
-"%2</b>Â»?</p>"
+"%2</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1129
 #, kde-format
@@ -1068,12 +1070,12 @@ msgstr "Slå av skrifter"
 #: kcmfontinst/KCmFontInst.cpp:1142
 #, kde-format
 msgid "Enabling font(s)…"
-msgstr ""
+msgstr "Slår på skriftene …"
 
 #: kcmfontinst/KCmFontInst.cpp:1144
 #, kde-format
 msgid "Disabling font(s)…"
-msgstr ""
+msgstr "Slår av skriftene …"
 
 #: kcmfontinst/PrintDialog.cpp:21
 #, kde-format
@@ -1118,7 +1120,7 @@ msgstr "48 pt"
 #: kio/KioFonts.cpp:209
 #, kde-format
 msgid "Can only install fonts to either \"%1\" or \"%2\"."
-msgstr "Kan bare installere skrifter enten til «%1» eller «%2»."
+msgstr "Kan bare installere skrifter til «%1» eller «%2»."
 
 #: kio/KioFonts.cpp:212
 #, kde-format
@@ -1147,7 +1149,7 @@ msgstr "Bare skrifter kan slettes."
 #: kio/KioFonts.cpp:455
 #, kde-format
 msgid "Can only remove fonts from either \"%1\" or \"%2\"."
-msgstr "Kan bare slette skrifter fra enten «%1» eller «%2»."
+msgstr "Kan bare slette skrifter fra «%1» eller «%2»."
 
 #: kio/KioFonts.cpp:484
 #, kde-format
@@ -1157,7 +1159,7 @@ msgstr "Oppgi «%1» eller «%2»."
 #: kio/KioFonts.cpp:502
 #, kde-format
 msgid "No special methods supported."
-msgstr "Ikke støtte for noen spesielle metoder."
+msgstr "Ingen spesialmetoder er støttet."
 
 #: kio/KioFonts.cpp:576
 #, kde-format
@@ -1167,23 +1169,24 @@ msgstr "Skrifter"
 #: kio/KioFonts.cpp:705
 #, kde-format
 msgid "Failed to start the system daemon"
-msgstr "Klarte ikke å starte systemnissen."
+msgstr "Klarte ikke starte systemtjenesten."
 
 #: kio/KioFonts.cpp:707
 #, kde-format
 msgid "Backend died"
-msgstr "Bakgrunnsmotoren døde."
+msgstr "Motoren ble avsluttet"
 
 #: kio/KioFonts.cpp:709
 #, kde-format
 msgid "%1 is a bitmap font, and these have been disabled on your system."
-msgstr "%1 er en bitkart-skrift,  og de er slått av på dette systemet."
+msgstr "%1 er en rasterskrift, og de er slått av på dette systemet."
 
 #: kio/KioFonts.cpp:712
 #, kde-format
 msgid ""
 "%1 contains the font <b>%2</b>, which is already installed on your system."
-msgstr "%1 inneholder skrifta <b>%2</b>, som alt installert på systemet."
+msgstr ""
+"%1 inneholder skrifta <b>%2</b>, som allerede er installert på systemet."
 
 #: kio/KioFonts.cpp:714
 #, kde-format
@@ -1276,11 +1279,11 @@ msgstr "Tynn"
 
 #: lib/KfiConstants.h:76
 msgid "Extra Light"
-msgstr "Ekstra mager"
+msgstr "Ekstratynn"
 
 #: lib/KfiConstants.h:77
 msgid "Ultra Light"
-msgstr "Ultra mager"
+msgstr "Ultratynn"
 
 #: lib/KfiConstants.h:78
 msgid "Light"
@@ -1470,22 +1473,22 @@ msgstr "Tegnsetting, sammenbindere"
 #: viewpart/CharTip.cpp:78
 #, kde-format
 msgid "Punctuation, Dash"
-msgstr "Tegnsetting, bindestreker"
+msgstr "Tegnsetting, tankestrek"
 
 #: viewpart/CharTip.cpp:80
 #, kde-format
 msgid "Punctuation, Close"
-msgstr "Tegnsetting, avsluttende"
+msgstr "Tegnsetting, avslutning"
 
 #: viewpart/CharTip.cpp:82
 #, kde-format
 msgid "Punctuation, Final Quote"
-msgstr "Tegnsetting, avsluttende hermetegn"
+msgstr "Tegnsetting, sitat slutt"
 
 #: viewpart/CharTip.cpp:84
 #, kde-format
 msgid "Punctuation, Initial Quote"
-msgstr "Tegnsetting, begynnende hermetegn"
+msgstr "Tegnsetting, sitat start"
 
 #: viewpart/CharTip.cpp:86
 #, kde-format
@@ -1495,7 +1498,7 @@ msgstr "Tegnsetting, annet"
 #: viewpart/CharTip.cpp:88
 #, kde-format
 msgid "Punctuation, Open"
-msgstr "Tegnsetting, begynnende"
+msgstr "Tegnsetting, begynnelse"
 
 #: viewpart/CharTip.cpp:90
 #, kde-format
@@ -1565,27 +1568,27 @@ msgstr "Vis skriftsnitt:"
 #: viewpart/FontViewPart.cpp:94
 #, kde-format
 msgid "Install…"
-msgstr ""
+msgstr "Installer …"
 
 #: viewpart/FontViewPart.cpp:115
 #, kde-format
 msgid "Change Text…"
-msgstr ""
+msgstr "Bytt tekst …"
 
 #: viewpart/FontViewPart.cpp:341
 #, kde-format
 msgid "Could not read font."
-msgstr "Klarte ikke å lese skrift."
+msgstr "Klarte ikke lese skrift."
 
 #: viewpart/FontViewPart.cpp:407
 #, kde-format
 msgid "Preview String"
-msgstr "Streng for forhåndsvisning"
+msgstr "Tekst for forhåndsvisning"
 
 #: viewpart/FontViewPart.cpp:407
 #, kde-format
 msgid "Please enter new string:"
-msgstr "Oppgi ny streng:"
+msgstr "Skriv inn ny tekst:"
 
 #. i18n: ectx: ToolBar (mainToolBar)
 #: viewpart/kfontviewpart.rc:4
@@ -1596,7 +1599,7 @@ msgstr "&Hovedverktøylinje"
 #: viewpart/PreviewSelectAction.cpp:15
 #, kde-format
 msgid "Preview Type"
-msgstr "Type forhåndsvisning"
+msgstr "Tekst til forhåndsvisning"
 
 #: viewpart/PreviewSelectAction.cpp:33
 #, kde-format
@@ -1616,7 +1619,7 @@ msgstr "Unicode-blokk: %1"
 #: viewpart/PreviewSelectAction.cpp:46
 #, kde-format
 msgid "Unicode Script: %1"
-msgstr "Unicode-skrift: %1"
+msgstr "Unicode-skript: %1"
 
 #: viewpart/UnicodeBlocks.h:17
 msgid "Basic Latin"
@@ -1624,15 +1627,15 @@ msgstr "Grunnleggende latin"
 
 #: viewpart/UnicodeBlocks.h:18
 msgid "Latin-1 Supplement"
-msgstr "Latin-1 tillegg"
+msgstr "Tillegg til latin-1"
 
 #: viewpart/UnicodeBlocks.h:19
 msgid "Latin Extended-A"
-msgstr "Latin utvidet A"
+msgstr "Utvidet latinsk A"
 
 #: viewpart/UnicodeBlocks.h:20
 msgid "Latin Extended-B"
-msgstr "Latin utvidet-B"
+msgstr "Utvidet latinsk B"
 
 #: viewpart/UnicodeBlocks.h:21
 msgid "IPA Extensions"
@@ -1656,7 +1659,7 @@ msgstr "Kyrillisk"
 
 #: viewpart/UnicodeBlocks.h:26
 msgid "Cyrillic Supplement"
-msgstr "Kyrillisk tillegg"
+msgstr "Tillegg til kyrillisk"
 
 #: viewpart/UnicodeBlocks.h:27 viewpart/UnicodeScripts.h:16
 msgid "Armenian"
@@ -1676,7 +1679,7 @@ msgstr "Syrisk"
 
 #: viewpart/UnicodeBlocks.h:31
 msgid "Arabic Supplement"
-msgstr "Arabisk tillegg"
+msgstr "Tillegg til arabisk"
 
 #: viewpart/UnicodeBlocks.h:32 viewpart/UnicodeScripts.h:75
 msgid "Thaana"
@@ -1708,7 +1711,7 @@ msgstr "Oriya"
 
 #: viewpart/UnicodeBlocks.h:39 viewpart/UnicodeScripts.h:73
 msgid "Tamil"
-msgstr "Tamilsk"
+msgstr "Tamil"
 
 #: viewpart/UnicodeBlocks.h:40 viewpart/UnicodeScripts.h:74
 msgid "Telugu"
@@ -1728,7 +1731,7 @@ msgstr "singalesisk"
 
 #: viewpart/UnicodeBlocks.h:44 viewpart/UnicodeScripts.h:76
 msgid "Thai"
-msgstr "Thailandsk"
+msgstr "Thai"
 
 #: viewpart/UnicodeBlocks.h:45 viewpart/UnicodeScripts.h:49
 msgid "Lao"
@@ -1740,7 +1743,7 @@ msgstr "Tibetansk"
 
 #: viewpart/UnicodeBlocks.h:47 viewpart/UnicodeScripts.h:55
 msgid "Myanmar"
-msgstr "Myanmar"
+msgstr "Myanmarsk"
 
 #: viewpart/UnicodeBlocks.h:48 viewpart/UnicodeScripts.h:33
 msgid "Georgian"
@@ -1756,7 +1759,7 @@ msgstr "Etiopisk"
 
 #: viewpart/UnicodeBlocks.h:51
 msgid "Ethiopic Supplement"
-msgstr "Etiopisk tillegg"
+msgstr "Tilleg til etiopisk"
 
 #: viewpart/UnicodeBlocks.h:52 viewpart/UnicodeScripts.h:24
 msgid "Cherokee"
@@ -1764,7 +1767,7 @@ msgstr "Cherokee"
 
 #: viewpart/UnicodeBlocks.h:53
 msgid "Unified Canadian Aboriginal Syllabics"
-msgstr "Forent stavelsesskrift for kanadisk urbefolkning"
+msgstr "Forente stavelser for kanadisk urbefolkning"
 
 #: viewpart/UnicodeBlocks.h:54 viewpart/UnicodeScripts.h:58
 msgid "Ogham"
@@ -1812,7 +1815,7 @@ msgstr "Ny Tai Lue"
 
 #: viewpart/UnicodeBlocks.h:65
 msgid "Khmer Symbols"
-msgstr "Khmer symboler"
+msgstr "Khmer-symboler"
 
 #: viewpart/UnicodeBlocks.h:66 viewpart/UnicodeScripts.h:21
 msgid "Buginese"
@@ -1828,19 +1831,19 @@ msgstr "Fonetiske utvidelser"
 
 #: viewpart/UnicodeBlocks.h:69
 msgid "Phonetic Extensions Supplement"
-msgstr "Fonetiske utvidelser, tillegg"
+msgstr "Tillegg til fonetiske utvidelser"
 
 #: viewpart/UnicodeBlocks.h:70
 msgid "Combining Diacritical Marks Supplement"
-msgstr "Tillegg for kombinerende diakritiske tegn"
+msgstr "Tillegg til kombinerende diakritiske tegn"
 
 #: viewpart/UnicodeBlocks.h:71
 msgid "Latin Extended Additional"
-msgstr "Latin utvidet tillegg"
+msgstr "Tillegg til latinsk utvidelse"
 
 #: viewpart/UnicodeBlocks.h:72
 msgid "Greek Extended"
-msgstr "Gresk utvidet"
+msgstr "Utvidet gresk"
 
 #: viewpart/UnicodeBlocks.h:73
 msgid "General Punctuation"
@@ -1876,7 +1879,7 @@ msgstr "Matematiske operatorer"
 
 #: viewpart/UnicodeBlocks.h:81
 msgid "Miscellaneous Technical"
-msgstr "Forskjellig teknisk"
+msgstr "Diverse teknisk"
 
 #: viewpart/UnicodeBlocks.h:82
 msgid "Control Pictures"
@@ -1904,7 +1907,7 @@ msgstr "Geometriske former"
 
 #: viewpart/UnicodeBlocks.h:88
 msgid "Miscellaneous Symbols"
-msgstr "Forskjellige symboler"
+msgstr "Diverse symboler"
 
 #: viewpart/UnicodeBlocks.h:89
 msgid "Dingbats"
@@ -1912,31 +1915,31 @@ msgstr "Dingbats"
 
 #: viewpart/UnicodeBlocks.h:90
 msgid "Miscellaneous Mathematical Symbols-A"
-msgstr "Forskjellige matematiske symboler-A"
+msgstr "Diverse matematiske symboler A"
 
 #: viewpart/UnicodeBlocks.h:91
 msgid "Supplemental Arrows-A"
-msgstr "Tilleggspiler-A"
+msgstr "Tilleggspiler A"
 
 #: viewpart/UnicodeBlocks.h:92
 msgid "Braille Patterns"
-msgstr "Braille-mønstre"
+msgstr "Punktskriftmønster"
 
 #: viewpart/UnicodeBlocks.h:93
 msgid "Supplemental Arrows-B"
-msgstr "Tilleggspiler-B"
+msgstr "Tilleggspiler B"
 
 #: viewpart/UnicodeBlocks.h:94
 msgid "Miscellaneous Mathematical Symbols-B"
-msgstr "Forskjellige matematiske symboler-B"
+msgstr "Diverse matematiske symboler B"
 
 #: viewpart/UnicodeBlocks.h:95
 msgid "Supplemental Mathematical Operators"
-msgstr "Matematiske operatorer, tillegg"
+msgstr "Tillegg til matematiske operatorer"
 
 #: viewpart/UnicodeBlocks.h:96
 msgid "Miscellaneous Symbols and Arrows"
-msgstr "Forskjellige symboler og piler"
+msgstr "Diverse symboler og piler"
 
 # = Kirkeslavisk
 #: viewpart/UnicodeBlocks.h:97 viewpart/UnicodeScripts.h:34
@@ -1945,7 +1948,7 @@ msgstr "Glagolittisk"
 
 #: viewpart/UnicodeBlocks.h:98
 msgid "Latin Extended-C"
-msgstr "Latin utvidet-C"
+msgstr "Utvidet latinsk C"
 
 #: viewpart/UnicodeBlocks.h:99 viewpart/UnicodeScripts.h:26
 msgid "Coptic"
@@ -1953,7 +1956,7 @@ msgstr "Koptisk"
 
 #: viewpart/UnicodeBlocks.h:100
 msgid "Georgian Supplement"
-msgstr "Georgisk tillegg"
+msgstr "Tillegg til georgisk"
 
 #: viewpart/UnicodeBlocks.h:101 viewpart/UnicodeScripts.h:78
 msgid "Tifinagh"
@@ -1961,15 +1964,15 @@ msgstr "Tifinagh"
 
 #: viewpart/UnicodeBlocks.h:102
 msgid "Ethiopic Extended"
-msgstr "Etiopisk utvidet"
+msgstr "Utvidet etiopisk"
 
 #: viewpart/UnicodeBlocks.h:103
 msgid "Supplemental Punctuation"
-msgstr "Tegnsetting, tillegg"
+msgstr "Tillegg til tegnsetting"
 
 #: viewpart/UnicodeBlocks.h:104
 msgid "CJK Radicals Supplement"
-msgstr "Tillegg for tegnstammer for CJK"
+msgstr "Tillegg til tegnstammer for CJK"
 
 #: viewpart/UnicodeBlocks.h:105
 msgid "Kangxi Radicals"
@@ -1977,7 +1980,7 @@ msgstr "Kangxi tegnstammer"
 
 #: viewpart/UnicodeBlocks.h:106
 msgid "Ideographic Description Characters"
-msgstr "Beskrivelsestegn for ordtegn"
+msgstr "Ideografiske beskrivelsestegn"
 
 #: viewpart/UnicodeBlocks.h:107
 msgid "CJK Symbols and Punctuation"
@@ -2005,7 +2008,7 @@ msgstr "Kanbun"
 
 #: viewpart/UnicodeBlocks.h:113
 msgid "Bopomofo Extended"
-msgstr "Bopomofo utvidet"
+msgstr "Utvidet bopomofo"
 
 #: viewpart/UnicodeBlocks.h:114
 msgid "CJK Strokes"
@@ -2013,7 +2016,7 @@ msgstr "CJK-strøk"
 
 #: viewpart/UnicodeBlocks.h:115
 msgid "Katakana Phonetic Extensions"
-msgstr "Katakana fonetiske utvidelser"
+msgstr "Fonetiske utvidelser til katakana"
 
 #: viewpart/UnicodeBlocks.h:116
 msgid "Enclosed CJK Letters and Months"
@@ -2025,7 +2028,7 @@ msgstr "CJK-kompatibilitet"
 
 #: viewpart/UnicodeBlocks.h:118
 msgid "CJK Unified Ideographs Extension A"
-msgstr "Forente CJK-tegn, utvidelse A"
+msgstr "Utvidelse til forente CJK-ideogram A"
 
 #: viewpart/UnicodeBlocks.h:119
 msgid "Yijing Hexagram Symbols"
@@ -2033,11 +2036,11 @@ msgstr "Yijing heksagram-symboler"
 
 #: viewpart/UnicodeBlocks.h:120
 msgid "CJK Unified Ideographs"
-msgstr "CJK forente ideogram"
+msgstr "Forente CJK-ideogram"
 
 #: viewpart/UnicodeBlocks.h:121
 msgid "Yi Syllables"
-msgstr "Yi stavelser"
+msgstr "Yi-stavelser"
 
 #: viewpart/UnicodeBlocks.h:122
 msgid "Yi Radicals"
@@ -2049,7 +2052,7 @@ msgstr "Toneendringsbokstaver"
 
 #: viewpart/UnicodeBlocks.h:124
 msgid "Latin Extended-D"
-msgstr "Latin utvidet-D"
+msgstr "Utvidet latinsk D"
 
 #: viewpart/UnicodeBlocks.h:125 viewpart/UnicodeScripts.h:68
 msgid "Syloti Nagri"
@@ -2069,11 +2072,11 @@ msgstr "High Surrogates"
 
 #: viewpart/UnicodeBlocks.h:129
 msgid "High Private Use Surrogates"
-msgstr "High Private Use Surrogates"
+msgstr "Høye surrogat til privat bruk"
 
 #: viewpart/UnicodeBlocks.h:130
 msgid "Low Surrogates"
-msgstr "Low Surrogates"
+msgstr "Lave surrogat"
 
 #: viewpart/UnicodeBlocks.h:131
 msgid "Private Use Area"
@@ -2081,7 +2084,7 @@ msgstr "Område for privat bruk"
 
 #: viewpart/UnicodeBlocks.h:132
 msgid "CJK Compatibility Ideographs"
-msgstr "CJK – ideogram for kompatibilitet"
+msgstr "CJK-kompatibilitetsideogram"
 
 #: viewpart/UnicodeBlocks.h:133
 msgid "Alphabetic Presentation Forms"
@@ -2089,7 +2092,7 @@ msgstr "Alfabetiske presentasjonsformer"
 
 #: viewpart/UnicodeBlocks.h:134
 msgid "Arabic Presentation Forms-A"
-msgstr "Arabiske presentasjonsformer-A"
+msgstr "Arabiske presentasjonsformer A"
 
 #: viewpart/UnicodeBlocks.h:135
 msgid "Variation Selectors"
@@ -2105,7 +2108,7 @@ msgstr "Kombinerende halve merker"
 
 #: viewpart/UnicodeBlocks.h:138
 msgid "CJK Compatibility Forms"
-msgstr "CJK kompatibilitetsformer"
+msgstr "CJK-kompatibilitetsformer"
 
 #: viewpart/UnicodeBlocks.h:139
 msgid "Small Form Variants"
@@ -2113,11 +2116,11 @@ msgstr "Små formvarianter"
 
 #: viewpart/UnicodeBlocks.h:140
 msgid "Arabic Presentation Forms-B"
-msgstr "Arabiske presentasjonsformer-B"
+msgstr "Arabiske presentasjonsformer B"
 
 #: viewpart/UnicodeBlocks.h:141
 msgid "Half-Width and Full-Width Forms"
-msgstr "Halvbredde og fullbredde-former"
+msgstr "Halv- og fullbreddeformer"
 
 #: viewpart/UnicodeBlocks.h:142
 msgid "Specials"
@@ -2125,11 +2128,11 @@ msgstr "Spesielle"
 
 #: viewpart/UnicodeBlocks.h:143
 msgid "Linear B Syllabary"
-msgstr "Linear B stavelsesskrift"
+msgstr "Lineære B-stavelser"
 
 #: viewpart/UnicodeBlocks.h:144
 msgid "Linear B Ideograms"
-msgstr "Linear B tegnskrift"
+msgstr "Lineære B-ideogram"
 
 #: viewpart/UnicodeBlocks.h:145
 msgid "Aegean Numbers"
@@ -2171,7 +2174,7 @@ msgstr "Osmanya"
 
 #: viewpart/UnicodeBlocks.h:154
 msgid "Cypriot Syllabary"
-msgstr "Kypriotisk stavelsesskrift"
+msgstr "Kypriotisk stavelser"
 
 #: viewpart/UnicodeBlocks.h:155 viewpart/UnicodeScripts.h:64
 msgid "Phoenician"
@@ -2208,7 +2211,7 @@ msgstr "Tai Xuan Jing-symboler"
 # Gamle kinesiske talltegn
 #: viewpart/UnicodeBlocks.h:163
 msgid "Counting Rod Numerals"
-msgstr "Tellestav-tall"
+msgstr "Tall fra tellestav"
 
 #: viewpart/UnicodeBlocks.h:164
 msgid "Mathematical Alphanumeric Symbols"
@@ -2216,11 +2219,11 @@ msgstr "Matematiske alfanumeriske symboler"
 
 #: viewpart/UnicodeBlocks.h:165
 msgid "CJK Unified Ideographs Extension B"
-msgstr "Utvidelse B for forente CJK-tegn"
+msgstr "Utvidelse til forente CJK-ideogram B"
 
 #: viewpart/UnicodeBlocks.h:166
 msgid "CJK Compatibility Ideographs Supplement"
-msgstr "Tillegg for CJK kompatibilitetstegn"
+msgstr "Tillegg til CJK-kompatibilitetsideogram"
 
 #: viewpart/UnicodeBlocks.h:167
 msgid "Tags"
@@ -2228,19 +2231,19 @@ msgstr "Merker"
 
 #: viewpart/UnicodeBlocks.h:168
 msgid "Variation Selectors Supplement"
-msgstr "Tillegg for variasjonsvelgere"
+msgstr "Tillegg til variasjonsvelgere"
 
 #: viewpart/UnicodeBlocks.h:169
 msgid "Supplementary Private Use Area-A"
-msgstr "Tilleggsområde A for privat bruk"
+msgstr "Tillegg til område for privat bruk A"
 
 #: viewpart/UnicodeBlocks.h:170
 msgid "Supplementary Private Use Area-B"
-msgstr "Tilleggsområde B for privat bruk"
+msgstr "Tillegg til område for privat bruk B"
 
 #: viewpart/UnicodeScripts.h:20
 msgid "Braille"
-msgstr "Braille"
+msgstr "Punktskrift"
 
 #: viewpart/UnicodeScripts.h:23
 msgid "Canadian Aboriginal"
@@ -2248,7 +2251,7 @@ msgstr "Kanadisk urinnvåner"
 
 #: viewpart/UnicodeScripts.h:25
 msgid "Common"
-msgstr "Vanlig"
+msgstr "Felles"
 
 #: viewpart/UnicodeScripts.h:28
 msgid "Cypriot"
@@ -2276,7 +2279,7 @@ msgstr "Latin"
 
 #: viewpart/UnicodeScripts.h:52
 msgid "Linear B"
-msgstr "Linear B"
+msgstr "Lineær B"
 
 #: viewpart/UnicodeScripts.h:57
 msgid "Nko"
