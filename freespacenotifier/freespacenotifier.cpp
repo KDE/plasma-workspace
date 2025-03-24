@@ -31,6 +31,7 @@ FreeSpaceNotifier::FreeSpaceNotifier(const QString &path, const KLocalizedString
     , m_path(path)
     , m_notificationText(notificationText)
 {
+    checkFreeDiskSpace();
     connect(&m_timer, &QTimer::timeout, this, &FreeSpaceNotifier::checkFreeDiskSpace);
     m_timer.start(std::chrono::minutes(1));
 }
@@ -90,6 +91,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
             if (m_notification) {
                 m_notification->close();
             }
+            m_lastAvail = avail;
             return;
         }
 
@@ -109,7 +111,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
         }
 
         // Always warn the first time or when available space dropped to half of the previous time
-        const bool warn = (m_lastAvail < 0 || avail < m_lastAvail / 2);
+        const bool warn = (m_lastAvail >= limit || avail < m_lastAvail / 2);
         if (!warn) {
             return;
         }
@@ -180,7 +182,7 @@ void FreeSpaceNotifier::onNotificationClosed()
 
 void FreeSpaceNotifier::resetLastAvailable()
 {
-    m_lastAvail = -1;
+    m_lastAvail = FreeSpaceNotifierSettings::minimumSpace();
     m_lastAvailTimer->deleteLater();
     m_lastAvailTimer = nullptr;
 }

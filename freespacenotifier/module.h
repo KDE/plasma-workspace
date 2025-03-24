@@ -21,4 +21,8 @@ public:
 
 private:
     void showConfiguration();
+    void updateNotifiers();
+
+    QMap<QByteArray, FreeSpaceNotifier *> m_notifiers;
+    QTimer m_timer;
 };

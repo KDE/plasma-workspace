@@ -4,7 +4,7 @@
     SPDX-FileCopyrightText: 2009 Ivo Anjo <knuckles@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ */
 
 #include "module.h"
 
@@ -28,20 +28,53 @@ FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject *parent, const QList<QV
     // If the module is loaded, notifications are enabled
     FreeSpaceNotifierSettings::setEnableNotification(true);
 
-    const QString rootPath = QStringLiteral("/");
-    const QString homePath = QDir::homePath();
+    updateNotifiers();
 
-    const QStorageInfo rootInfo(rootPath);
-    const QStorageInfo homeInfo(homePath);
+    connect(&m_timer, &QTimer::timeout, this, &FreeSpaceNotifierModule::updateNotifiers);
+    m_timer.start(std::chrono::minutes(1));
+}
 
-    // Always monitor home
-    auto *homeNotifier = new FreeSpaceNotifier(homePath, ki18n("Your Home folder is running out of disk space, you have %1 MiB remaining (%2%)."), this);
-    connect(homeNotifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
+void FreeSpaceNotifierModule::updateNotifiers()
+{
+    const QStorageInfo rootInfo(QStringLiteral("/"));
+    const QStorageInfo homeInfo(QDir::homePath());
 
-    // Monitor '/' when it is different from home
-    if (rootInfo != homeInfo) {
-        auto *rootNotifier = new FreeSpaceNotifier(rootPath, ki18n("Your Root partition is running out of disk space, you have %1 MiB remaining (%2%)."), this);
-        connect(rootNotifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
+    QMap<QByteArray, QStorageInfo> storageMap;
+
+    for (const QStorageInfo &storage : QStorageInfo::mountedVolumes()) {
+        if (storage.isValid() && storage.isReady() && !storage.isReadOnly()) {
+            QByteArray device = storage.device();
+            if (!storageMap.contains(device)) {
+                storageMap.insert(device, storage);
+            } else if (storage == rootInfo) {
+                storageMap[device] = storage;
+            } else if (storage == homeInfo && storageMap[device] != rootInfo) {
+                storageMap[device] = storage;
+            }
+        }
+    }
+
+    QSet<QByteArray> storageKeys(storageMap.keyBegin(), storageMap.keyEnd());
+    QSet<QByteArray> notifierKeys(m_notifiers.keyBegin(), m_notifiers.keyEnd());
+
+    // Devices that have been added since last check
+    for (const QByteArray &device : storageKeys - notifierKeys) {
+        const QStorageInfo &storage = storageMap[device];
+        KLocalizedString message = ki18n("Your %1 partition is running out of disk space, you have %2 MiB remaining (%3%).").subs(QString::fromUtf8(device));
+        if (storage == rootInfo) {
+            message = ki18n("Your Root partition is running out of disk space, you have %1 MiB remaining (%2%).");
+        } else if (storage == homeInfo) {
+            message = ki18n("Your Home folder is running out of disk space, you have %1 MiB remaining (%2%).");
+        }
+        auto *notifier = new FreeSpaceNotifier(storage.rootPath(), message, this);
+        connect(notifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
+        m_notifiers[device] = notifier;
+    }
+
+    // Devices that have been removed since last check
+    QSet<QByteArray> onlyInNotifiers = notifierKeys - storageKeys;
+    for (const QByteArray &device : onlyInNotifiers) {
+        delete m_notifiers.take(device);
     }
 }
 
