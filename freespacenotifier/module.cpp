@@ -28,20 +28,32 @@ FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject *parent, const QList<QV
     // If the module is loaded, notifications are enabled
     FreeSpaceNotifierSettings::setEnableNotification(true);
 
-    const QString rootPath = QStringLiteral("/");
-    const QString homePath = QDir::homePath();
+    const QStorageInfo rootInfo(QStringLiteral("/"));
+    const QStorageInfo homeInfo(QDir::homePath());
 
-    const QStorageInfo rootInfo(rootPath);
-    const QStorageInfo homeInfo(homePath);
+    QMap<QByteArray, QStorageInfo> storageMap;
 
-    // Always monitor home
-    auto *homeNotifier = new FreeSpaceNotifier(homePath, ki18n("Your Home folder is running out of disk space, you have %1 MiB remaining (%2%)."), this);
-    connect(homeNotifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
+    for (const QStorageInfo &storage : QStorageInfo::mountedVolumes()) {
+        if (storage.isValid() && storage.isReady() && !storage.isReadOnly()) {
+            QByteArray device = storage.device();
+            if (!storageMap.contains(device)) {
+                storageMap.insert(device, storage);
+            } else if (storage == rootInfo) {
+                storageMap[device] = storage;
+            } else if (storage == homeInfo && storageMap[device] != rootInfo) {
+                storageMap[device] = storage;
+            }
+        }
+    }
 
-    // Monitor '/' when it is different from home
-    if (rootInfo != homeInfo) {
-        auto *rootNotifier = new FreeSpaceNotifier(rootPath, ki18n("Your Root partition is running out of disk space, you have %1 MiB remaining (%2%)."), this);
-        connect(rootNotifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
+    for (const QStorageInfo &storage : storageMap) {
+        const char *baseMessage = "Your %1 is running out of disk space, you have %2 MiB remaining (%3%).";
+        QString deviceName = (storage == rootInfo) ? QStringLiteral("Root partition")
+            : (storage == homeInfo)                ? QStringLiteral("Home folder")
+                                                   : QString::fromUtf8(storage.device());
+
+        auto *notifier = new FreeSpaceNotifier(storage.rootPath(), ki18n(baseMessage).subs(deviceName), this);
+        connect(notifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
     }
 }
 
