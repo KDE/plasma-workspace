@@ -4,23 +4,32 @@
     SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+pragma ComponentBehavior: Bound
+
 import QtQuick
+import QtTest
 import org.kde.plasma.private.mpris as Mpris
 
-Item {
+TestCase {
     id: root
-    readonly property alias count: repeater.count
-    property QtObject modelData
-    Mpris.MultiplexerModel {
-        id: mpris
-    }
+
     Repeater {
         id: repeater
-        model: mpris
-        Item {
-            Component.onCompleted: {
-                root.modelData = model;
-            }
+        model: Mpris.MultiplexerModel {
+            id: mpris
         }
+        Item {
+            required property string identity
+        }
+    }
+
+    function test_count() {
+        tryCompare(repeater, "count", 1);
+    }
+
+    function test_identity() {
+        const item = repeater.itemAt(0);
+        verify(item)
+        compare(item.identity, "Choose player automatically");
     }
 }
