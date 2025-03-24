@@ -14,23 +14,25 @@
 #include <KNotificationJobUiDelegate>
 
 #include <KIO/ApplicationLauncherJob>
+#include <KIO/FileSystemFreeSpaceJob>
 #include <KIO/OpenUrlJob>
 
-#include <QStorageInfo>
-#include <QtConcurrent>
+#include <Solid/Device>
+#include <Solid/StorageAccess>
 
-#include <QCoroFuture>
-#include <QCoroTask>
+#include <QFileInfo>
 
 #include <chrono>
 
 #include "settings.h"
 
-FreeSpaceNotifier::FreeSpaceNotifier(const QString &path, const KLocalizedString &notificationText, QObject *parent)
+FreeSpaceNotifier::FreeSpaceNotifier(const QString &udi, const QString &path, const KLocalizedString &notificationText, QObject *parent)
     : QObject(parent)
+    , m_udi(udi)
     , m_path(path)
     , m_notificationText(notificationText)
 {
+    checkFreeDiskSpace();
     connect(&m_timer, &QTimer::timeout, this, &FreeSpaceNotifier::checkFreeDiskSpace);
     m_timer.start(std::chrono::minutes(1));
 }
@@ -51,51 +53,44 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
         return;
     }
 
-    if (m_checking) {
-        qCWarning(FSN) << "Obtaining storage info is taking a long while for" << m_path;
+    Solid::Device device(m_udi);
+
+    Solid::StorageAccess *storageaccess = device.as<Solid::StorageAccess>();
+    if (!storageaccess || !storageaccess->isAccessible()) {
+        qCDebug(FSN) << "Space Monitor: failed to get storage access " << m_udi;
         return;
     }
-    m_checking = true;
 
-    // Load the QStorageInfo in a co-routine in case the filesystem is having performance issues.
-    auto future = QtConcurrent::run([path = m_path]() -> std::optional<QStorageInfo> {
-        QStorageInfo info(path);
-        if (!info.isValid()) {
-            qCWarning(FSN) << "Failed to obtain storage info for" << path;
-            return {};
-        }
-        if (!info.isReady()) {
-            qCWarning(FSN) << "Storage info is not ready for" << path;
-            return {};
-        }
-        return info;
-    });
-    QCoro::connect(std::move(future), this, [this](const auto &optionalInfo) {
-        m_checking = false;
-        if (!optionalInfo.has_value()) {
-            qCDebug(FSN) << "Empty QStorageInfo for" << m_path;
+    QString path = storageaccess->filePath();
+
+    // create job
+    KIO::FileSystemFreeSpaceJob *job = KIO::fileSystemFreeSpace(QUrl::fromLocalFile(path));
+
+    // collect and process info
+    connect(job, &KJob::result, this, [this, job]() {
+        if (job->error()) {
+            qCDebug(FSN) << "Space Monitor: failed to get storage access " << m_udi;
             return;
         }
-        const QStorageInfo &info = optionalInfo.value();
-        if (info.isReadOnly()) {
-            qCDebug(FSN) << "Not checking for free space for read only mount point" << m_path;
-            return;
-        }
-
-        const int limit = FreeSpaceNotifierSettings::minimumSpace(); // MiB
-        const qint64 avail = info.bytesAvailable() / (1024 * 1024); // to MiB
-        qCDebug(FSN) << "Available MiB for" << m_path << ":" << avail;
+        KIO::filesize_t size = job->size();
+        KIO::filesize_t available = job->availableSize();
+        const qint64 totalSpaceMB = size / (1024 * 1024); // to MiB
+        const int percLimit = (FreeSpaceNotifierSettings::minimumSpacePercentage() * totalSpaceMB) / 100;
+        const int fixedLimit = FreeSpaceNotifierSettings::minimumSpace();
+        const int limit = qMin(fixedLimit, percLimit);
+        const qint64 avail = available / (1024 * 1024); // to MiB
 
         if (avail >= limit) {
             if (m_notification) {
                 m_notification->close();
             }
+            m_lastAvail = avail;
             return;
         }
 
-        const int availPercent = int(100 * info.bytesAvailable() / info.bytesTotal());
+        const int availPercent = int(100 * available / size);
         const QString text = m_notificationText.subs(avail).subs(availPercent).toString();
-        qCDebug(FSN) << "Available percentage for" << m_path << ":" << availPercent;
+        qCDebug(FSN) << "Available percentage for" << m_udi << ":" << availPercent;
 
         // Make sure the notification text is always up to date whenever we checked free space
         if (m_notification) {
@@ -109,7 +104,7 @@ void FreeSpaceNotifier::checkFreeDiskSpace()
         }
 
         // Always warn the first time or when available space dropped to half of the previous time
-        const bool warn = (m_lastAvail < 0 || avail < m_lastAvail / 2);
+        const bool warn = (m_lastAvail >= limit || avail < m_lastAvail / 2);
         if (!warn) {
             return;
         }
@@ -180,7 +175,7 @@ void FreeSpaceNotifier::onNotificationClosed()
 
 void FreeSpaceNotifier::resetLastAvailable()
 {
-    m_lastAvail = -1;
+    m_lastAvail = FreeSpaceNotifierSettings::minimumSpace();
     m_lastAvailTimer->deleteLater();
     m_lastAvailTimer = nullptr;
 }

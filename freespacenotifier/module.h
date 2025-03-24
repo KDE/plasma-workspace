@@ -11,6 +11,8 @@
 #include <KDEDModule>
 #include <QObject>
 
+#include <Solid/StorageAccess>
+
 #include "freespacenotifier.h"
 
 class FreeSpaceNotifierModule : public KDEDModule
@@ -21,4 +23,9 @@ public:
 
 private:
     void showConfiguration();
+    void onNewSolidDevice(const QString &udi);
+    void startTracking(const QString &udi, Solid::StorageAccess *access);
+    void stopTracking(const QString &udi);
+
+    QMap<QString, FreeSpaceNotifier *> m_notifiers;
 };

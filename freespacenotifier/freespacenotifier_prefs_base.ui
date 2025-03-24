@@ -7,11 +7,11 @@
     <x>0</x>
     <y>0</y>
     <width>320</width>
-    <height>217</height>
+    <height>250</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
-   <item row="0" column="0">
+   <item row="0" column="0" colspan="2">
     <widget class="QCheckBox" name="kcfg_enableNotification">
      <property name="text">
       <string>Enable low disk space warning</string>
@@ -39,6 +39,39 @@
     </widget>
    </item>
    <item row="2" column="0">
+    <widget class="QLabel" name="label_minimumSpacePercentage">
+     <property name="text">
+      <string>And when free space is under:</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QSpinBox" name="kcfg_minimumSpacePercentage">
+     <property name="suffix">
+      <string>%</string>
+     </property>
+     <property name="minimum">
+      <number>0</number>
+     </property>
+     <property name="maximum">
+      <number>100</number>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2">
+    <widget class="QLabel" name="label_info">
+     <property name="text">
+      <string>The system will notify you if the free space drops below the specified MiB and the specified percentage of available space.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0" colspan="2">
     <spacer name="verticalSpacer">
      <property name="orientation">
       <enum>Qt::Vertical</enum>
@@ -60,32 +93,24 @@
    <signal>toggled(bool)</signal>
    <receiver>kcfg_minimumSpace</receiver>
    <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>114</x>
-     <y>15</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>272</x>
-     <y>44</y>
-    </hint>
-   </hints>
   </connection>
   <connection>
    <sender>kcfg_enableNotification</sender>
    <signal>toggled(bool)</signal>
    <receiver>label_minimumSpace</receiver>
    <slot>setEnabled(bool)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>114</x>
-     <y>15</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>114</x>
-     <y>44</y>
-    </hint>
-   </hints>
+  </connection>
+  <connection>
+   <sender>kcfg_enableNotification</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>kcfg_minimumSpacePercentage</receiver>
+   <slot>setEnabled(bool)</slot>
+  </connection>
+  <connection>
+   <sender>kcfg_enableNotification</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>label_minimumSpacePercentage</receiver>
+   <slot>setEnabled(bool)</slot>
   </connection>
  </connections>
 </ui>

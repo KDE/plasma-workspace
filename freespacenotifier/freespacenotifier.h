@@ -22,7 +22,7 @@ class FreeSpaceNotifier : public QObject
     Q_OBJECT
 
 public:
-    explicit FreeSpaceNotifier(const QString &path, const KLocalizedString &notificationText, QObject *parent = nullptr);
+    explicit FreeSpaceNotifier(const QString &udi, const QString &path, const KLocalizedString &notificationText, QObject *parent = nullptr);
     ~FreeSpaceNotifier() override;
 
 Q_SIGNALS:
@@ -39,6 +39,7 @@ private:
     // Only run one check at a time
     bool m_checking = false;
 
+    const QString m_udi;
     const QString m_path;
     KLocalizedString m_notificationText;
 

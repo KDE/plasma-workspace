@@ -21,7 +21,6 @@ kde_target_enable_exceptions(freespacenotifier PRIVATE)
 
 target_link_libraries(freespacenotifier
     Qt6::Concurrent
-    QCoro::Core
     KF6::ConfigWidgets
     KF6::DBusAddons
     KF6::I18n
@@ -30,6 +29,7 @@ target_link_libraries(freespacenotifier
     KF6::Notifications
     KF6::JobWidgets
     KF6::Service
+    KF6::Solid
 )
 
 ########### install files ###############

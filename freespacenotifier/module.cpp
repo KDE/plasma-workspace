@@ -4,13 +4,19 @@
     SPDX-FileCopyrightText: 2009 Ivo Anjo <knuckles@gmail.com>
 
     SPDX-License-Identifier: GPL-2.0-or-later
-*/
+ */
 
 #include "module.h"
 
 #include <KConfigDialog>
 #include <KMountPoint>
 #include <KPluginFactory>
+
+#include <Solid/Device>
+#include <Solid/DeviceNotifier>
+#include <Solid/GenericInterface>
+#include <Solid/StorageAccess>
+#include <Solid/StorageVolume>
 
 #include <QDir>
 
@@ -28,20 +34,83 @@ FreeSpaceNotifierModule::FreeSpaceNotifierModule(QObject *parent, const QList<QV
     // If the module is loaded, notifications are enabled
     FreeSpaceNotifierSettings::setEnableNotification(true);
 
-    const QString rootPath = QStringLiteral("/");
-    const QString homePath = QDir::homePath();
+    auto m_notifier = Solid::DeviceNotifier::instance();
+    connect(m_notifier, &Solid::DeviceNotifier::deviceAdded, this, [this](const QString &udi) {
+        Solid::Device device(udi);
 
-    const QStorageInfo rootInfo(rootPath);
-    const QStorageInfo homeInfo(homePath);
+        // Required for two stage devices
+        if (auto volume = device.as<Solid::StorageVolume>()) {
+            Solid::GenericInterface *iface = device.as<Solid::GenericInterface>();
+            if (iface) {
+                iface->setProperty("udi", udi);
+                connect(iface, &Solid::GenericInterface::propertyChanged, this, [this, udi]() {
+                    onNewSolidDevice(udi);
+                });
+            }
+        }
+        onNewSolidDevice(udi);
+    });
+    connect(m_notifier, &Solid::DeviceNotifier::deviceRemoved, this, [this](const QString &udi) {
+        stopTracking(udi);
+    });
 
-    // Always monitor home
-    auto *homeNotifier = new FreeSpaceNotifier(homePath, ki18n("Your Home folder is running out of disk space, you have %1 MiB remaining (%2%)."), this);
-    connect(homeNotifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
+    const auto devices = Solid::Device::listFromType(Solid::DeviceInterface::StorageAccess);
+    for (auto device : devices) {
+        onNewSolidDevice(device.udi());
+    };
+}
 
-    // Monitor '/' when it is different from home
-    if (rootInfo != homeInfo) {
-        auto *rootNotifier = new FreeSpaceNotifier(rootPath, ki18n("Your Root partition is running out of disk space, you have %1 MiB remaining (%2%)."), this);
-        connect(rootNotifier, &FreeSpaceNotifier::configureRequested, this, &FreeSpaceNotifierModule::showConfiguration);
+void FreeSpaceNotifierModule::onNewSolidDevice(const QString &udi)
+{
+    Solid::Device device(udi);
+    Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+    if (!access) {
+        return;
+    }
+
+    // We only track a partition if we are able to
+    // determine that it's not read only.
+    bool isReadOnly = true;
+    if (auto generic = device.as<Solid::GenericInterface>()) {
+        isReadOnly = generic->property(QStringLiteral("ReadOnly")).toBool();
+    }
+    if (isReadOnly) {
+        return;
+    }
+
+    if (access->isAccessible()) {
+        startTracking(udi, access);
+    }
+    connect(access, &Solid::StorageAccess::accessibilityChanged, this, [this, udi, access](bool available) {
+        if (available) {
+            startTracking(udi, access);
+        } else {
+            stopTracking(udi);
+        }
+    });
+}
+
+void FreeSpaceNotifierModule::startTracking(const QString &udi, Solid::StorageAccess *access)
+{
+    if (m_notifiers.contains(udi)) {
+        return;
+    }
+    Solid::Device device(udi);
+
+    KLocalizedString message = ki18n("Your %1 partition is running out of disk space; %2 MiB of space remaining (%3%).").subs(device.displayName());
+    if (access->filePath() == QStringLiteral("/")) {
+        message = ki18n("Your Root partition is running out of disk space; %1 MiB of space remaining (%2%).");
+    } else if (access->filePath() == QDir::homePath()) {
+        message = ki18n("Your Home folder is running out of disk space; %1 MiB of space remaining (%2%).");
+    }
+    auto *notifier = new FreeSpaceNotifier(udi, access->filePath(), message, this);
+    m_notifiers.insert(udi, notifier);
+}
+
+void FreeSpaceNotifierModule::stopTracking(const QString &udi)
+{
+    if (m_notifiers.contains(udi)) {
+        delete m_notifiers.take(udi);
     }
 }
 
