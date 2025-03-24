@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2025-01-31 11:05+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -334,13 +334,13 @@ msgstr ""
 "при влачене и при промяна на размера. Обмислете използването на други "
 "настройки."
 
-#: panelview.cpp:1147
+#: panelview.cpp:1151
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Скриване на конфигурацията на панела"
 
-#: panelview.cpp:1149
+#: panelview.cpp:1153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

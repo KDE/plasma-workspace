@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-15 00:44+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2024-06-21 09:40+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -207,10 +207,10 @@ msgstr[0] "%1 objekt"
 msgstr[1] "%1 objekt"
 
 #: package/contents/ui/components/JobDetails.qml:144
-#: package/contents/ui/components/SpeedChart.qml:67
-#: package/contents/ui/components/SpeedChart.qml:92
-#: package/contents/ui/components/SpeedChart.qml:180
-#: package/contents/ui/components/SpeedChart.qml:191
+#: package/contents/ui/components/SpeedChart.qml:68
+#: package/contents/ui/components/SpeedChart.qml:93
+#: package/contents/ui/components/SpeedChart.qml:181
+#: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -263,17 +263,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Skicka"
 
-#: package/contents/ui/components/SpeedChart.qml:139
+#: package/contents/ui/components/SpeedChart.qml:140
 #, kde-format
 msgid "Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:187
+#: package/contents/ui/components/SpeedChart.qml:188
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:244
+#: package/contents/ui/components/SpeedChart.qml:245
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

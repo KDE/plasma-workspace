@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2024-11-29 00:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -333,13 +333,13 @@ msgstr ""
 "창 드래그와 크기 조정 성능에 악영향을 줄 수 있습니다. 다른 설정을 사용하십시"
 "오."
 
-#: panelview.cpp:1147
+#: panelview.cpp:1151
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "패널 설정 숨기기"
 
-#: panelview.cpp:1149
+#: panelview.cpp:1153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

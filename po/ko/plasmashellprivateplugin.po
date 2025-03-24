@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:43+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2024-11-29 00:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -297,46 +297,54 @@ msgid "Online Services"
 msgstr "온라인 서비스"
 
 #: shellprivate/widgetexplorer.cpp:125
+#, fuzzy
+#| msgctxt "applet category"
+#| msgid "System Information"
+msgctxt "applet category"
+msgid "Personal Information"
+msgstr "시스템 정보"
+
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "생산성"
 
-#: shellprivate/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "System Information"
 msgstr "시스템 정보"
 
-#: shellprivate/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "유틸리티"
 
-#: shellprivate/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "창과 작업"
 
-#: shellprivate/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "클립보드"
 
-#: shellprivate/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "작업"
 
-#: shellprivate/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:147
 #, kde-format
 msgid "All Widgets"
 msgstr "모든 위젯"
 
-#: shellprivate/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:151
 #, kde-format
 msgid "Running"
 msgstr "실행 중"
 
-#: shellprivate/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:157
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -350,7 +358,7 @@ msgctxt ""
 msgid "User-installed"
 msgstr "삭제 가능"
 
-#: shellprivate/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:161
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
@@ -358,39 +366,39 @@ msgctxt ""
 msgid "Recently installed"
 msgstr "최근 설치됨"
 
-#: shellprivate/widgetexplorer.cpp:164
+#: shellprivate/widgetexplorer.cpp:165
 #, kde-format
 msgid "Categories:"
 msgstr "분류:"
 
-#: shellprivate/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "새 Plasma 위젯 다운로드"
 
-#: shellprivate/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "로컬 파일에서 위젯 설치…"
 
-#: shellprivate/widgetexplorer.cpp:493
+#: shellprivate/widgetexplorer.cpp:494
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "새 위젯 가져오기…"
 
-#: shellprivate/widgetexplorer.cpp:512
+#: shellprivate/widgetexplorer.cpp:513
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Plasmoid 파일 선택"
 
-#: shellprivate/widgetexplorer.cpp:528
+#: shellprivate/widgetexplorer.cpp:529
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "%1 패키지 설치 실패: %2."
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:530
 #, kde-format
 msgid "Installation Failure"
 msgstr "설치 실패"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-15 00:44+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -211,10 +211,10 @@ msgstr[0] "%1 वस्तु"
 msgstr[1] "%1 वस्तुएँ"
 
 #: package/contents/ui/components/JobDetails.qml:144
-#: package/contents/ui/components/SpeedChart.qml:67
-#: package/contents/ui/components/SpeedChart.qml:92
-#: package/contents/ui/components/SpeedChart.qml:180
-#: package/contents/ui/components/SpeedChart.qml:191
+#: package/contents/ui/components/SpeedChart.qml:68
+#: package/contents/ui/components/SpeedChart.qml:93
+#: package/contents/ui/components/SpeedChart.qml:181
+#: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -270,17 +270,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "भेजें"
 
-#: package/contents/ui/components/SpeedChart.qml:139
+#: package/contents/ui/components/SpeedChart.qml:140
 #, kde-format
 msgid "Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:187
+#: package/contents/ui/components/SpeedChart.qml:188
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:244
+#: package/contents/ui/components/SpeedChart.qml:245
 #, fuzzy, kde-format
 #| msgctxt "Row description, e.g. Source"
 #| msgid "%1:"

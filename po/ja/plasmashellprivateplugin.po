@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: widgetexplorer\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:43+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2025-02-23 13:31+0900\n"
 "Last-Translator: Ryuichi Yamada <ryuichi_ya220@outlook.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -301,46 +301,54 @@ msgid "Online Services"
 msgstr "オンラインサービス"
 
 #: shellprivate/widgetexplorer.cpp:125
+#, fuzzy
+#| msgctxt "applet category"
+#| msgid "System Information"
+msgctxt "applet category"
+msgid "Personal Information"
+msgstr "システム情報"
+
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "生産性"
 
-#: shellprivate/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "System Information"
 msgstr "システム情報"
 
-#: shellprivate/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "ユーティリティ"
 
-#: shellprivate/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "ウィンドウとタスク"
 
-#: shellprivate/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "クリップボード"
 
-#: shellprivate/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "タスク"
 
-#: shellprivate/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:147
 #, kde-format
 msgid "All Widgets"
 msgstr "すべてのウィジェット"
 
-#: shellprivate/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:151
 #, kde-format
 msgid "Running"
 msgstr "実行中"
 
-#: shellprivate/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:157
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -349,7 +357,7 @@ msgctxt ""
 msgid "User-installed"
 msgstr "ユーザによるインストール"
 
-#: shellprivate/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:161
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
@@ -357,39 +365,39 @@ msgctxt ""
 msgid "Recently installed"
 msgstr "最近インストール"
 
-#: shellprivate/widgetexplorer.cpp:164
+#: shellprivate/widgetexplorer.cpp:165
 #, kde-format
 msgid "Categories:"
 msgstr "カテゴリ:"
 
-#: shellprivate/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "新しい Plasma ウィジェットをダウンロード"
 
-#: shellprivate/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "ローカルファイルからウィジェットをインストール..."
 
-#: shellprivate/widgetexplorer.cpp:493
+#: shellprivate/widgetexplorer.cpp:494
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "新しいウィジェットを入手"
 
-#: shellprivate/widgetexplorer.cpp:512
+#: shellprivate/widgetexplorer.cpp:513
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Plasmoid ファイルを開く"
 
-#: shellprivate/widgetexplorer.cpp:528
+#: shellprivate/widgetexplorer.cpp:529
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "パッケージ %1 のインストールに失敗しました: %2"
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:530
 #, kde-format
 msgid "Installation Failure"
 msgstr "インストール失敗"

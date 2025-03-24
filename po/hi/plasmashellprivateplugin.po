@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:43+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2021-08-21 16:25+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -294,45 +294,50 @@ msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
-msgid "Productivity"
+msgid "Personal Information"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
-msgid "System Information"
+msgid "Productivity"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
-msgid "Utilities"
+msgid "System Information"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
-msgid "Windows and Tasks"
+msgid "Utilities"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
-msgid "Clipboard"
+msgid "Windows and Tasks"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
+msgid "Clipboard"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:131
+msgctxt "applet category"
 msgid "Tasks"
 msgstr ""
 
-#: shellprivate/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:147
 #, kde-format
 msgid "All Widgets"
 msgstr "सभी विजेट"
 
-#: shellprivate/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:151
 #, kde-format
 msgid "Running"
 msgstr "चल रहा है"
 
-#: shellprivate/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:157
 #, fuzzy, kde-format
 #| msgid "Uninstallable"
 msgctxt ""
@@ -342,7 +347,7 @@ msgctxt ""
 msgid "User-installed"
 msgstr "गैर संस्थापन योग्य"
 
-#: shellprivate/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:161
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
@@ -350,41 +355,41 @@ msgctxt ""
 msgid "Recently installed"
 msgstr ""
 
-#: shellprivate/widgetexplorer.cpp:164
+#: shellprivate/widgetexplorer.cpp:165
 #, kde-format
 msgid "Categories:"
 msgstr "श्रेणियाँ :"
 
-#: shellprivate/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "नए प्लाज़्मा विजेटों को डाउनलोड करें"
 
-#: shellprivate/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "स्थानीय फ़ाइल से विजेट स्थापित करें…"
 
-#: shellprivate/widgetexplorer.cpp:493
+#: shellprivate/widgetexplorer.cpp:494
 #, fuzzy, kde-format
 #| msgid "All Widgets"
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "सभी विजेट"
 
-#: shellprivate/widgetexplorer.cpp:512
+#: shellprivate/widgetexplorer.cpp:513
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "प्लाज़्मॉइड फ़ाइल का चयन करें"
 
-#: shellprivate/widgetexplorer.cpp:528
+#: shellprivate/widgetexplorer.cpp:529
 #, fuzzy, kde-format
 #| msgid "Installing the package %1 failed."
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "पैकेज %1 को स्थापित करना विफल रहा।"
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:530
 #, kde-format
 msgid "Installation Failure"
 msgstr "संस्थापन त्रुटि"

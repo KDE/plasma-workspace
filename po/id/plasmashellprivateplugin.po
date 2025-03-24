@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:43+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2025-02-13 22:25+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -300,46 +300,54 @@ msgid "Online Services"
 msgstr "Layanan Daring"
 
 #: shellprivate/widgetexplorer.cpp:125
+#, fuzzy
+#| msgctxt "applet category"
+#| msgid "System Information"
+msgctxt "applet category"
+msgid "Personal Information"
+msgstr "Informasi Sistem"
+
+#: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
 msgid "Productivity"
 msgstr "Produktivitas"
 
-#: shellprivate/widgetexplorer.cpp:126
+#: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
 msgid "System Information"
 msgstr "Informasi Sistem"
 
-#: shellprivate/widgetexplorer.cpp:127
+#: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
 msgid "Utilities"
 msgstr "Utilitas"
 
-#: shellprivate/widgetexplorer.cpp:128
+#: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
 msgid "Windows and Tasks"
 msgstr "Jendela dan Tugas"
 
-#: shellprivate/widgetexplorer.cpp:129
+#: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
 msgid "Clipboard"
 msgstr "Papan Klip"
 
-#: shellprivate/widgetexplorer.cpp:130
+#: shellprivate/widgetexplorer.cpp:131
 msgctxt "applet category"
 msgid "Tasks"
 msgstr "Tugas"
 
-#: shellprivate/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:147
 #, kde-format
 msgid "All Widgets"
 msgstr "Semua Widget"
 
-#: shellprivate/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:151
 #, kde-format
 msgid "Running"
 msgstr "Berjalan"
 
-#: shellprivate/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:157
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
@@ -348,7 +356,7 @@ msgctxt ""
 msgid "User-installed"
 msgstr "Diinstal pengguna"
 
-#: shellprivate/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:161
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
@@ -356,39 +364,39 @@ msgctxt ""
 msgid "Recently installed"
 msgstr "Yang baru-baru ini diinstal"
 
-#: shellprivate/widgetexplorer.cpp:164
+#: shellprivate/widgetexplorer.cpp:165
 #, kde-format
 msgid "Categories:"
 msgstr "Kategori:"
 
-#: shellprivate/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Unduh Widget Plasma Baru"
 
-#: shellprivate/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
 msgstr "Instal Widget Dari File Lokal..."
 
-#: shellprivate/widgetexplorer.cpp:493
+#: shellprivate/widgetexplorer.cpp:494
 #, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
 msgstr "Dapatkan Widget Baru"
 
-#: shellprivate/widgetexplorer.cpp:512
+#: shellprivate/widgetexplorer.cpp:513
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Pilih File Plasmoid"
 
-#: shellprivate/widgetexplorer.cpp:528
+#: shellprivate/widgetexplorer.cpp:529
 #, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "Menginstal paket %1 gagal: %2."
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:530
 #, kde-format
 msgid "Installation Failure"
 msgstr "Kegagalan Penginstalan"

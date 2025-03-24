@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2025-01-24 20:51+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -336,13 +336,13 @@ msgstr ""
 "közismerten gyenge teljesítményt nyújtanak az ablakok húzása és átméretezése "
 "során. Fontolja meg más beállítások használatát."
 
-#: panelview.cpp:1147
+#: panelview.cpp:1151
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Panelbeállító felület elrejtése"
 
-#: panelview.cpp:1149
+#: panelview.cpp:1153
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

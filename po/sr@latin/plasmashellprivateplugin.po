@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-30 00:43+0000\n"
+"POT-Creation-Date: 2025-03-24 00:43+0000\n"
 "PO-Revision-Date: 2016-11-23 19:27+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -294,45 +294,50 @@ msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
-msgid "Productivity"
+msgid "Personal Information"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
-msgid "System Information"
+msgid "Productivity"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:127
 msgctxt "applet category"
-msgid "Utilities"
+msgid "System Information"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:128
 msgctxt "applet category"
-msgid "Windows and Tasks"
+msgid "Utilities"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:129
 msgctxt "applet category"
-msgid "Clipboard"
+msgid "Windows and Tasks"
 msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:130
 msgctxt "applet category"
+msgid "Clipboard"
+msgstr ""
+
+#: shellprivate/widgetexplorer.cpp:131
+msgctxt "applet category"
 msgid "Tasks"
 msgstr ""
 
-#: shellprivate/widgetexplorer.cpp:146
+#: shellprivate/widgetexplorer.cpp:147
 #, kde-format
 msgid "All Widgets"
 msgstr "Svi vidžeti"
 
-#: shellprivate/widgetexplorer.cpp:150
+#: shellprivate/widgetexplorer.cpp:151
 #, kde-format
 msgid "Running"
 msgstr "U pogonu"
 
-#: shellprivate/widgetexplorer.cpp:156
+#: shellprivate/widgetexplorer.cpp:157
 #, fuzzy, kde-format
 #| msgid "Uninstallable"
 msgctxt ""
@@ -342,7 +347,7 @@ msgctxt ""
 msgid "User-installed"
 msgstr "Moguće deinstalirati"
 
-#: shellprivate/widgetexplorer.cpp:160
+#: shellprivate/widgetexplorer.cpp:161
 #, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
@@ -350,24 +355,24 @@ msgctxt ""
 msgid "Recently installed"
 msgstr ""
 
-#: shellprivate/widgetexplorer.cpp:164
+#: shellprivate/widgetexplorer.cpp:165
 #, kde-format
 msgid "Categories:"
 msgstr "Kategorije:"
 
 # >> @title:window
-#: shellprivate/widgetexplorer.cpp:234
+#: shellprivate/widgetexplorer.cpp:235
 #, kde-format
 msgid "Download New Plasma Widgets"
 msgstr "Preuzimanje novih plasma vidžeta"
 
-#: shellprivate/widgetexplorer.cpp:243
+#: shellprivate/widgetexplorer.cpp:244
 #, fuzzy, kde-format
 #| msgid "Install Widget From Local File..."
 msgid "Install Widget From Local File…"
 msgstr "Instaliraj vidžete iz lokalnog fajla..."
 
-#: shellprivate/widgetexplorer.cpp:493
+#: shellprivate/widgetexplorer.cpp:494
 #, fuzzy, kde-format
 #| msgid "All Widgets"
 msgctxt "@title:window"
@@ -375,19 +380,19 @@ msgid "Get New Widgets"
 msgstr "Svi vidžeti"
 
 # >> @title:window
-#: shellprivate/widgetexplorer.cpp:512
+#: shellprivate/widgetexplorer.cpp:513
 #, kde-format
 msgid "Select Plasmoid File"
 msgstr "Izbor fajla plazmoida"
 
-#: shellprivate/widgetexplorer.cpp:528
+#: shellprivate/widgetexplorer.cpp:529
 #, fuzzy, kde-format
 #| msgid "Installing the package %1 failed."
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
 msgstr "Instaliranje paketa %1 nije uspelo."
 
-#: shellprivate/widgetexplorer.cpp:529
+#: shellprivate/widgetexplorer.cpp:530
 #, kde-format
 msgid "Installation Failure"
 msgstr "Neuspeh instaliranja"
