@@ -2330,28 +2330,9 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
         KConfigGroup oldAppletConfig = targetAppletsConfig.group(QString::number(applet->id()));
         KConfigGroup newAppletConfig = targetAppletsConfig.group(QString::number(newApplet->id()));
 
-        if (newApplet->pluginName() == u"org.kde.plasma.systemtray") {
-            // System trays are their own containments, so we have to handle their
-            // scenario separately. Firstly, do not copy the settings over: the only
-            // setting of "org.kde.plasma.systemtray" applet is the id of the actual
-            // system tray containment, and by creating a new tray applet, we've also
-            // created a new tray containment with a new id. We now read that id and
-            // we copy over the old tray containment settings to the new tray.
-
-            auto oldTrayId = oldAppletConfig.group(QStringLiteral("Configuration")).readEntry("SystrayContainmentId");
-            auto newTrayId = newAppletConfig.group(QStringLiteral("Configuration")).readEntry("SystrayContainmentId");
-
-            Plasma::Containment *oldTrayContainment;
-            Plasma::Containment *newTrayContainment;
-
-            for (auto c : containments()) {
-                if (c->id() == oldTrayId.toUInt()) {
-                    oldTrayContainment = c;
-                } else if (c->id() == newTrayId.toUInt()) {
-                    newTrayContainment = c;
-                }
-            }
-
+        Plasma::Containment *oldTrayContainment = qobject_cast<Plasma::Containment *>(applet);
+        Plasma::Containment *newTrayContainment = qobject_cast<Plasma::Containment *>(newApplet);
+        if (oldTrayContainment && newTrayContainment && newTrayContainment->pluginName() == u"org.kde.plasma.systemtray") {
             auto newTrayConfig = newTrayContainment->config();
             auto oldTrayConfig = oldTrayContainment->config();
             oldTrayConfig.copyTo(&newTrayConfig);
@@ -2384,10 +2365,6 @@ void ShellCorona::clonePanelTo(PanelView *oldPanelView, Plasma::Types::Location 
                 Q_EMIT newTrayApplet->configScheme()->configChanged();
                 oldTrayAppletConfig.deleteGroup();
             }
-
-            Q_EMIT newTrayContainment->configScheme()->configChanged();
-            oldAppletConfig.deleteGroup();
-
         } else {
             // All the applet ids are different, so we re-parent their settings.
             oldAppletConfig.copyTo(&newAppletConfig);

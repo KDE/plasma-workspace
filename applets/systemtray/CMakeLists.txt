@@ -1,6 +1,6 @@
-add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.private.systemtray\")
+add_definitions(-DTRANSLATION_DOMAIN=\"plasma_applet_org.kde.plasma.systemtray\")
 
-plasma_install_package(package org.kde.plasma.private.systemtray)
+plasma_install_package(package org.kde.plasma.systemtray)
 
 include_directories(${plasma-workspace_SOURCE_DIR}/statusnotifierwatcher)
 
@@ -58,9 +58,9 @@ add_library(systemtraymodel_static STATIC systemtraymodel.cpp sortedsystemtraymo
 target_link_libraries(systemtraymodel_static PUBLIC systemtray_static)
 set_property(TARGET systemtraymodel_static PROPERTY POSITION_INDEPENDENT_CODE ON)
 
-kcoreaddons_add_plugin(org.kde.plasma.private.systemtray SOURCES systemtray.cpp systemtray.h INSTALL_NAMESPACE "plasma/applets")
+kcoreaddons_add_plugin(org.kde.plasma.systemtray SOURCES systemtray.cpp systemtray.h INSTALL_NAMESPACE "plasma/applets")
 
-target_link_libraries(org.kde.plasma.private.systemtray systemtraymodel_static)
+target_link_libraries(org.kde.plasma.systemtray systemtraymodel_static)
 
 ecm_add_qml_module(systemtrayplugin URI org.kde.plasma.private.systemtray GENERATE_PLUGIN_SOURCE)
 target_sources(systemtrayplugin PRIVATE systemtraymodel.cpp)
@@ -69,7 +69,6 @@ ecm_finalize_qml_module(systemtrayplugin)
 
 install(FILES statusnotifieritem.operations DESTINATION ${PLASMA5SUPPORT_DATA_INSTALL_DIR}/services)
 
-add_subdirectory(container)
 if(BUILD_TESTING)
   add_subdirectory(autotests)
   add_subdirectory(tests)

@@ -84,6 +84,7 @@ private Q_SLOTS:
     void stopApplet(const QString &pluginId);
 
 private:
+    void migrateFromSystrayContainer();
     SystemTrayModel *systemTrayModel();
 
     KConfigWatcher::Ptr m_configWatcher;
