@@ -795,7 +795,7 @@ PlasmaExtras.Representation {
                     display: PlasmaComponents3.AbstractButton.IconOnly
                     icon.name: model.iconName
                     icon.height: Kirigami.Units.iconSizes.smallMedium
-                    text: model.identity
+                    text: model.isMultiplexer ? i18nc("@action:button", "Choose player automatically") : model.identity
                     // Keep the delegate centered by offsetting the padding removed in the parent
                     bottomPadding: verticalPadding + headerItem.bottomPadding
                     topPadding: verticalPadding - headerItem.bottomPadding

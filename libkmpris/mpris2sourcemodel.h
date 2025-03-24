@@ -55,6 +55,7 @@ public:
         IconNameRole,
         InstancePidRole,
         KDEPidRole,
+        IsMultiplexerRole,
     };
     Q_ENUM(Role)
 

@@ -98,6 +98,8 @@ QVariant Mpris2SourceModel::dataFromPlayer(PlayerContainer *container, int role)
         return container->instancePid();
     case KDEPidRole:
         return container->kdePid();
+    case IsMultiplexerRole:
+        return false;
     case ContainerRole:
         return QVariant::fromValue(container);
     default:
@@ -193,6 +195,7 @@ QHash<int, QByteArray> Mpris2SourceModel::roleNames() const
         {IdentityRole, QByteArrayLiteral("identity")},
         {IconNameRole, QByteArrayLiteral("iconName")},
         {KDEPidRole, QByteArrayLiteral("kdePid")},
+        {IsMultiplexerRole, QByteArrayLiteral("isMultiplexer")},
         {ContainerRole, QByteArrayLiteral("container")},
     };
 }

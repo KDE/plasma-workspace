@@ -71,10 +71,10 @@ QVariant MultiplexerModel::data(const QModelIndex &index, int role) const
     }
 
     switch (role) {
-    case Mpris2SourceModel::IdentityRole:
-        return i18nc("@action:button", "Choose player automatically");
     case Mpris2SourceModel::IconNameRole:
         return QStringLiteral("emblem-favorite");
+    case Mpris2SourceModel::IsMultiplexerRole:
+        return true;
     default:
         return Mpris2SourceModel::dataFromPlayer(m_activePlayer, role);
     }

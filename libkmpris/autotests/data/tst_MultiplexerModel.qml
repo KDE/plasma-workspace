@@ -19,7 +19,7 @@ TestCase {
             id: mpris
         }
         Item {
-            required property string identity
+            required property bool isMultiplexer
         }
     }
 
@@ -27,9 +27,8 @@ TestCase {
         tryCompare(repeater, "count", 1);
     }
 
-    function test_identity() {
+    function test_isMultiplexer() {
         const item = repeater.itemAt(0);
-        verify(item)
-        compare(item.identity, "Choose player automatically");
+        verify(item.isMultiplexer);
     }
 }
