@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 11:24+0000\n"
+"POT-Creation-Date: 2025-03-24 02:34+0000\n"
 "PO-Revision-Date: 2025-01-26 17:07+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -334,13 +334,13 @@ msgstr ""
 "ஒளிபுகாமை மாறக்கூடியதாக இருந்தாலோ, சாளரங்களை இழுக்கும்போதும் அளவுமாற்றும்போதும் "
 "சாளரநிரலின் வேகம் பாதிக்கப்படலாம். அமைப்புகளை மாற்றுமாறு பரிந்துரைக்கிறோம்."
 
-#: panelview.cpp:1115
+#: panelview.cpp:1119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "பலகை அமைப்புகளை மறை"
 
-#: panelview.cpp:1117
+#: panelview.cpp:1121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

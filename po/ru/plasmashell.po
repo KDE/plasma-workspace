@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 11:24+0000\n"
+"POT-Creation-Date: 2025-03-24 02:34+0000\n"
 "PO-Revision-Date: 2025-01-27 11:22+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -351,13 +351,13 @@ msgstr ""
 "производительности графики при перетаскивании окон и изменении их размеров. "
 "Рекомендуется использовать другие параметры."
 
-#: panelview.cpp:1115
+#: panelview.cpp:1119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "Скрыть окно настройки панели"
 
-#: panelview.cpp:1117
+#: panelview.cpp:1121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"

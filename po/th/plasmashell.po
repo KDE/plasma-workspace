@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-24 11:24+0000\n"
+"POT-Creation-Date: 2025-03-24 02:34+0000\n"
 "PO-Revision-Date: 2025-03-04 14:42+0700\n"
 "Last-Translator: Pongsakorn S. <kde@xerusion.me>\n"
 "Language-Team: Thai\n"
@@ -330,13 +330,13 @@ msgstr ""
 "NVIDIA GPU บน X11 เป็นที่ทราบกันดีว่ารูปแบบลอยตัวและ โหมดความทึบแบบปรับได้ "
 "ทําให้ประสิทธิภาพการลากหน้าต่างและปรับขนาดไม่ดี พิจารณาใช้อื่นๆ การตั้งค่า"
 
-#: panelview.cpp:1115
+#: panelview.cpp:1119
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Hide Panel Configuration"
 msgstr "ซ่อนการกําหนดค่าแผง"
 
-#: panelview.cpp:1117
+#: panelview.cpp:1121
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Panel Configuration"
