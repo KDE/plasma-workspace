@@ -6,10 +6,16 @@
   <kcfgfile name="freespacenotifierrc"/>
   <group name="General">
     <entry name="minimumSpace" type="Int">
-	    <label>Minimum free space before user starts being notified.</label>
-	    <default>200</default>
-	    <min>1</min>
-	    <max>100000</max>
+      <label>Minimum free space before user starts being notified.</label>
+      <default>200</default>
+      <min>1</min>
+      <max>100000</max>
+    </entry>
+    <entry name="minimumSpacePercentage" type="Int">
+      <label>Minimum percentage free space before user starts being notified.</label>
+      <default>5</default>
+      <min>1</min>
+      <max>30</max>
     </entry>
     <entry name="enableNotification" type="Bool">
 	    <label>Is the free space notification enabled.</label>
