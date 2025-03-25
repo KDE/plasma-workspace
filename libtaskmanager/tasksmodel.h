@@ -94,6 +94,7 @@ public:
         SortVirtualDesktop, /**< Tasks are sorted by the virtual desktop they are on. */
         SortActivity, /**< Tasks are sorted by the number of tasks on the activities they're on. */
         SortLastActivated, /**< Tasks are sorted by the last time they were active. */
+        SortWindowPositionHorizontal, /**< Tasks are sorted by the virtual desktop they are on, then by window coordinates. */
     };
     Q_ENUM(SortMode)
 

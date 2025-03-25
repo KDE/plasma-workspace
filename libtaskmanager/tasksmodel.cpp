@@ -26,6 +26,7 @@
 #include <QUrl>
 
 #include <numeric>
+#include <optional>
 
 namespace TaskManager
 {
@@ -80,6 +81,7 @@ public:
     void updateActivityTaskCounts();
     void forceResort();
     bool lessThan(const QModelIndex &left, const QModelIndex &right, bool sortOnlyLaunchers = false) const;
+    std::optional<bool> lessThanByVirtualDesktop(const QModelIndex &left, const QModelIndex &right) const;
 
 private:
     TasksModel *const q;
@@ -767,6 +769,51 @@ void TasksModel::Private::forceResort()
     q->setDynamicSortFilter(true);
 }
 
+std::optional<bool> TasksModel::Private::lessThanByVirtualDesktop(const QModelIndex &left, const QModelIndex &right) const
+{
+    const bool leftAll = left.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
+    const bool rightAll = right.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
+
+    if (leftAll && !rightAll) {
+        return true;
+    }
+
+    if (!leftAll && rightAll) {
+        return false;
+    }
+
+    if (!leftAll && !rightAll) {
+        const auto getDesktop = [this](const QModelIndex &model) {
+            const QVariantList modelDesktops = model.data(AbstractTasksModel::VirtualDesktops).toList();
+            QVariant modelDesktop;
+            int modelDesktopPos = virtualDesktopInfo->numberOfDesktops();
+            for (const QVariant &desktop : modelDesktops) {
+                const int desktopPos = virtualDesktopInfo->position(desktop);
+
+                if (desktopPos <= modelDesktopPos) {
+                    modelDesktop = desktop;
+                    modelDesktopPos = desktopPos;
+                }
+            }
+            return modelDesktop;
+        };
+
+        const QVariant leftDesktop = getDesktop(left);
+        const QVariant rightDesktop = getDesktop(right);
+
+        if (!leftDesktop.isNull() && !rightDesktop.isNull() && (leftDesktop != rightDesktop)) {
+            return (virtualDesktopInfo->position(leftDesktop) < virtualDesktopInfo->position(rightDesktop));
+        } else if (!leftDesktop.isNull() && rightDesktop.isNull()) {
+            return false;
+        } else if (leftDesktop.isNull() && !rightDesktop.isNull()) {
+            return true;
+        }
+    }
+
+    // We couldn't determine the order (e.g., both on all desktops or the same desktop)
+    return std::nullopt;
+}
+
 bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &right, bool sortOnlyLaunchers) const
 {
     // Launcher tasks go first.
@@ -827,6 +874,29 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
         return (left.row() < right.row());
     }
 
+    case SortWindowPositionHorizontal: {
+
+        if (auto result = lessThanByVirtualDesktop(left, right)) {
+            return *result;
+        }
+
+        const QRect leftGeom = left.data(AbstractTasksModel::Geometry).value<QRect>();
+        const QRect rightGeom = right.data(AbstractTasksModel::Geometry).value<QRect>();
+
+        if (leftGeom.x() != rightGeom.x()) {
+            if (QGuiApplication::isRightToLeft()) {
+                return leftGeom.right() > rightGeom.right();
+            } else {
+                return leftGeom.x() < rightGeom.x();
+            }
+        }
+        if (leftGeom.y() != rightGeom.y()) {
+            return leftGeom.y() < rightGeom.y();
+        }
+
+        Q_FALLTHROUGH();
+    }
+
     case SortLastActivated: {
         const auto getSortDateTime = [](const QModelIndex &model) {
             // Check if the task is in a group
@@ -850,44 +920,12 @@ bool TasksModel::Private::lessThan(const QModelIndex &left, const QModelIndex &r
     }
     // fall through
     case SortVirtualDesktop: {
-        const bool leftAll = left.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
-        const bool rightAll = right.data(AbstractTasksModel::IsOnAllVirtualDesktops).toBool();
 
-        if (leftAll && !rightAll) {
-            return true;
+        if (auto result = lessThanByVirtualDesktop(left, right)) {
+            return *result;
         }
 
-        if (!leftAll && rightAll) {
-            return false;
-        }
-
-        if (!leftAll && !rightAll) {
-            const auto getDesktop = [this](const QModelIndex &model) {
-                const QVariantList modelDesktops = model.data(AbstractTasksModel::VirtualDesktops).toList();
-                QVariant modelDesktop;
-                int modelDesktopPos = virtualDesktopInfo->numberOfDesktops();
-                for (const QVariant &desktop : modelDesktops) {
-                    const int desktopPos = virtualDesktopInfo->position(desktop);
-
-                    if (desktopPos <= modelDesktopPos) {
-                        modelDesktop = desktop;
-                        modelDesktopPos = desktopPos;
-                    }
-                }
-                return modelDesktop;
-            };
-
-            const QVariant leftDesktop = getDesktop(left);
-            const QVariant rightDesktop = getDesktop(right);
-
-            if (!leftDesktop.isNull() && !rightDesktop.isNull() && (leftDesktop != rightDesktop)) {
-                return (virtualDesktopInfo->position(leftDesktop) < virtualDesktopInfo->position(rightDesktop));
-            } else if (!leftDesktop.isNull() && rightDesktop.isNull()) {
-                return false;
-            } else if (leftDesktop.isNull() && !rightDesktop.isNull()) {
-                return true;
-            }
-        }
+        Q_FALLTHROUGH();
     }
     // fall through
     case SortActivity: {
@@ -1204,10 +1242,10 @@ void TasksModel::setSortMode(SortMode mode)
             d->sortedPreFilterRows.clear();
         }
 
-        if (mode == SortVirtualDesktop) {
+        if (mode == SortVirtualDesktop || mode == SortWindowPositionHorizontal) {
             d->virtualDesktopInfo = virtualDesktopInfo();
             setSortRole(AbstractTasksModel::VirtualDesktops);
-        } else if (d->sortMode == SortVirtualDesktop) {
+        } else if (d->sortMode == SortVirtualDesktop || d->sortMode == SortWindowPositionHorizontal) {
             d->virtualDesktopInfo = nullptr;
             setSortRole(Qt::DisplayRole);
         }
