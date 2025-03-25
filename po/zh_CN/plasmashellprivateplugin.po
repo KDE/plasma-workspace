@@ -298,12 +298,9 @@ msgid "Online Services"
 msgstr "在线服务"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "系统信息"
+msgstr ""
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-30 22:36+0200\n"
+"PO-Revision-Date: 2025-03-24 15:13+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -308,12 +308,9 @@ msgid "Online Services"
 msgstr "Мережеві служби"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Інформація про систему"
+msgstr "Особисті відомості"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"

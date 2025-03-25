@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_regionandlang\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
 "PO-Revision-Date: 2024-10-04 21:19+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -526,13 +526,13 @@ msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Keine Sprache eingerichtet"
 
-#: ui/AdvancedLanguageSelectPage.qml:172 ui/AdvancedLanguageSelectPage.qml:205
+#: ui/AdvancedLanguageSelectPage.qml:172 ui/AdvancedLanguageSelectPage.qml:206
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Sprachen hinzufügen"
 
-#: ui/AdvancedLanguageSelectPage.qml:228
+#: ui/AdvancedLanguageSelectPage.qml:229
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

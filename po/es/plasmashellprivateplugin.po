@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasmashellprivateplugin\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-30 16:22+0100\n"
+"PO-Revision-Date: 2025-03-24 03:24+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -146,7 +146,7 @@ msgstr "Mantener abierto"
 #: containmentlayoutmanager/qml/BasicAppletContainer.qml:286
 #, kde-format
 msgid "Configure…"
-msgstr "Configurar..."
+msgstr "Configurar…"
 
 #. i18n: ectx: label, entry, group (Daemon)
 #: sessionsprivate/kscreenlockersettings.kcfg:10
@@ -303,12 +303,9 @@ msgid "Online Services"
 msgstr "Servicios en línea"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Información del sistema"
+msgstr "Información personal"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -380,7 +377,7 @@ msgstr "Descargar nuevos elementos gráficos de Plasma"
 #: shellprivate/widgetexplorer.cpp:244
 #, kde-format
 msgid "Install Widget From Local File…"
-msgstr "Instalar elemento gráfico desde un archivo local..."
+msgstr "Instalar elemento gráfico desde un archivo local…"
 
 #: shellprivate/widgetexplorer.cpp:494
 #, kde-format
@@ -435,7 +432,7 @@ msgstr "Región:"
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr "Escoger..."
+msgstr "Escoger…"
 
 #: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
@@ -452,65 +449,3 @@ msgstr "Zona horaria:"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Selector de ubicación de zona horaria"
-
-#~ msgctxt ""
-#~ "Full context is: '<region> region, <zone> time zone.' in the context of "
-#~ "time zone selection."
-#~ msgid "region, "
-#~ msgstr "región, "
-
-#~ msgid "&Execute"
-#~ msgstr "&Ejecutar"
-
-#~ msgctxt "Toolbar Button to switch to Plasma Scripting Mode"
-#~ msgid "Plasma"
-#~ msgstr "Plasma"
-
-#~ msgctxt "Toolbar Button to switch to KWin Scripting Mode"
-#~ msgid "KWin"
-#~ msgstr "KWin"
-
-#~ msgid "Templates"
-#~ msgstr "Plantillas"
-
-#~ msgid "Desktop Shell Scripting Console"
-#~ msgstr "Consola para guiones del intérprete de órdenes del escritorio"
-
-#~ msgid "Editor"
-#~ msgstr "Editor"
-
-#~ msgid "Load"
-#~ msgstr "Cargar"
-
-#~ msgid "Use"
-#~ msgstr "Usar"
-
-#~ msgid "Output"
-#~ msgstr "Salida"
-
-#~ msgid "Unable to load script file <b>%1</b>"
-#~ msgstr "No se puede cargar el archivo de script <b>%1</b>"
-
-#~ msgid "Open Script File"
-#~ msgstr "Abrir archivo de script"
-
-#~ msgid "Save Script File"
-#~ msgstr "Guardar archivo de script"
-
-#~ msgid "Executing script at %1"
-#~ msgstr "Ejecutando script en %1"
-
-#~ msgid "Runtime: %1ms"
-#~ msgstr "Tiempo de ejecución: %1 ms"
-
-#~ msgid "Download Wallpaper Plugins"
-#~ msgstr "Descargar complementos de fondos del escritorio"
-
-#~ msgid "Containments"
-#~ msgstr "Contenedores"
-
-#~ msgctxt ""
-#~ "%1 is a type of widgets, as defined by e.g. some plasma-packagestructure-"
-#~ "*.desktop files"
-#~ msgid "Download New %1"
-#~ msgstr "Descargar nuevo %1"

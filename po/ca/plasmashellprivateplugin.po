@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-30 10:22+0100\n"
+"PO-Revision-Date: 2025-03-24 12:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -303,12 +303,9 @@ msgid "Online Services"
 msgstr "Serveis en línia"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Informació del sistema"
+msgstr "Informació personal"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -453,9 +450,3 @@ msgstr "Zona horària:"
 #, kde-format
 msgid "Timezone location selector"
 msgstr "Selector d'ubicació de zona horària"
-
-#~ msgctxt ""
-#~ "Full context is: '<region> region, <zone> time zone.' in the context of "
-#~ "time zone selection."
-#~ msgid "region, "
-#~ msgstr "regió, "

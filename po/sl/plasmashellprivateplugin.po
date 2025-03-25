@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-24 00:43+0000\n"
-"PO-Revision-Date: 2025-01-30 07:33+0100\n"
+"PO-Revision-Date: 2025-03-24 07:30+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -305,12 +305,9 @@ msgid "Online Services"
 msgstr "Spletne storitve"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Sistemske informacije"
+msgstr "Osebne informacije"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"

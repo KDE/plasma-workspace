@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
 "PO-Revision-Date: 2024-05-06 12:37+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -516,13 +516,13 @@ msgctxt "@info:placeholder"
 msgid "No Language Configured"
 msgstr "Ekkert tungumál grunnstillt"
 
-#: ui/AdvancedLanguageSelectPage.qml:172 ui/AdvancedLanguageSelectPage.qml:205
+#: ui/AdvancedLanguageSelectPage.qml:172 ui/AdvancedLanguageSelectPage.qml:206
 #, kde-format
 msgctxt "@title:window"
 msgid "Add Languages"
 msgstr "Bæta við tungumálum"
 
-#: ui/AdvancedLanguageSelectPage.qml:228
+#: ui/AdvancedLanguageSelectPage.qml:229
 #, kde-format
 msgctxt "@action:button"
 msgid "Add More…"

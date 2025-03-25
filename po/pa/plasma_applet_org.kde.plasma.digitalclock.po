@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2020, 2021, 2022, 2023, 2024 A S Alam <aalam@users.sf.net>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2020, 2021, 2022, 2023, 2024, 2025 A S Alam <aalam@users.sf.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-08 00:45+0000\n"
-"PO-Revision-Date: 2024-10-25 23:30-0500\n"
-"Last-Translator: A S Alam <aman@punlinux.org>\n"
-"Language-Team: pa\n"
+"PO-Revision-Date: 2025-03-24 15:01-0500\n"
+"Last-Translator: A S Alam <aalam@punlinux.org>\n"
+"Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
 "Language: pa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.08.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:20
 #, kde-format
@@ -150,17 +150,16 @@ msgid "Offset from UTC time"
 msgstr "UTC ਸਮੇਂ ਤੋਂ ਦੂਰ"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "…ਪੂਰੇ ਸਿਸਟਮ ਲਈ ਸਮਾਂ ਖੇਤਰ ਲਈ ਬਦਲੋ"
+msgstr "…ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਬਦਲੋ"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
 msgctxt "@label:listbox"
 msgid "Time display:"
-msgstr "ਸਮਾਂ ਵੇਖਾਓ:"
+msgstr "ਸਮਾਂ ਲਈ ਦਿੱਖ:"
 
 #: package/contents/ui/configAppearance.qml:144
 #, kde-format
@@ -304,19 +303,14 @@ msgid "Available Plugins:"
 msgstr "ਮੌਜੂਦ ਪਲੱਗਇਨ:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "This is a country name associated with a particular time zone in a zone "
-#| "selection dialog"
-#| msgid "France"
+#, kde-format
 msgid "Cancel"
-msgstr "ਫਰਾਂਸ"
+msgstr "ਰੱਦ ਕਰੋ"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "ਹੋਰ ਸਮਾਂ ਖੇਤਰਾਂ ਨੂੰ ਜੋੜੋ"
+msgstr "ਚੁਣੇ ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਜੋੜੋ"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -326,10 +320,9 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "…ਸਮਾਂ ਖੇਤਰ ਜੋੜੋ"
+msgstr "…ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਜੋੜੋ"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -385,10 +378,9 @@ msgid ""
 msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "ਸਮਾਂ ਖੇਤਰ"
+msgstr "ਸਮਾਂ ਖੇਤਰ ਨੂੰ ਚੁਣੋ"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
@@ -401,6 +393,8 @@ msgctxt "@label Shown in place of digital clock when no timezone is set"
 msgid ""
 "Time zone is not set; click here to open Date & Time settings and set one"
 msgstr ""
+"ਸਮਾਂ ਖੇਤਰ ਸੈੱਟ ਨਹੀਂ ਕੀਤਾ ਹੋਇਆ ਹੈ; ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਖੋਲ੍ਹਣ ਅਤੇ ਇਹ ਸੈੱਟ ਕਰਨ ਲਈ ਇੱਥੇ ਕਲਿੱਕ "
+"ਕਰੋ"
 
 #: package/contents/ui/Tooltip.qml:34
 #, kde-format
@@ -409,19 +403,18 @@ msgid "Today is %1"
 msgstr "ਅੱਜ %1 ਹੈ"
 
 #: package/contents/ui/Tooltip.qml:65
-#, fuzzy, kde-format
-#| msgid "Time zone city"
+#, kde-format
 msgctxt ""
 "@label main text shown in digital clock's tooltip when timezone is missing"
 msgid "Time zone is not set"
-msgstr "ਸਮਾਂ ਖੇਤਰ ਸ਼ਹਿਰ"
+msgstr "ਸਮਾਂ ਖੇਤਰ ਨਿਰਧਾਰਿਤ ਨਹੀਂ ਹੈ"
 
 #: package/contents/ui/Tooltip.qml:86
 #, kde-format
 msgctxt ""
 "@label sub text shown in digital clock's tooltip when timezone is missing"
 msgid "Click the clock icon to open Date & Time settings and set a time zone."
-msgstr ""
+msgstr "ਤਾਰੀਖ ਅਤੇ ਸਮਾਂ ਸੈਟਿੰਗਾਂ ਨੂੰ ਖੋਲ੍ਹਣ ਅਤੇ ਸਮਾਂ ਖੇਤਰ ਸੈੱਟ ਕਰਨ ਲਈ ਘੜੀ ਦੇ ਆਈਕਾਨ ਨੂੰ ਕਲਿੱਕ ਕਰੋ।"
 
 #: package/contents/ui/Tooltip.qml:131
 #, kde-format
