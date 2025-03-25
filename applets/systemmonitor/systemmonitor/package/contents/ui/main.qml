@@ -59,7 +59,7 @@ PlasmoidItem {
 
     preferredRepresentation: Plasmoid.formFactor === PlasmaCore.Types.Planar ? fullRepresentation : null
 
-    Plasmoid.title: Plasmoid.faceController.title || i18n("System Monitor")
+    Plasmoid.title: Plasmoid.faceController?.title || i18n("System Monitor")
     toolTipSubText: totalSensor.sensorId ? i18nc("Sensor name: value", "%1: %2", totalSensor.name, totalSensor.formattedValue) : ""
 
     compactRepresentation: CompactRepresentation {
@@ -67,12 +67,12 @@ PlasmoidItem {
     fullRepresentation: FullRepresentation {
     }
 
-    Plasmoid.configurationRequired: Plasmoid.faceController.highPrioritySensorIds.length == 0 && Plasmoid.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.faceController.totalSensors.length == 0
+    Plasmoid.configurationRequired: (Plasmoid.faceController ?? false) && Plasmoid.faceController.highPrioritySensorIds.length == 0 && Plasmoid.faceController.lowPrioritySensorIds.length == 0 && Plasmoid.faceController.totalSensors.length == 0
 
     Sensors.Sensor {
         id: totalSensor
-        sensorId: Plasmoid.faceController.totalSensors[0] || ""
-        updateRateLimit: Plasmoid.faceController.updateRateLimit
+        sensorId: Plasmoid.faceController?.totalSensors[0] || ""
+        updateRateLimit: Plasmoid.faceController?.updateRateLimit
     }
 
     MouseArea {
