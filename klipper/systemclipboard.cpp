@@ -294,15 +294,20 @@ void SystemClipboard::setMimeData(const QMimeData *data, SelectionMode mode, Cli
         return;
     }
 
-    QStringList formats = data->formats();
-    const bool hasQtImage = formats.removeOne(u"application/x-qt-image"_s);
-    auto setData = [data, &formats, hasQtImage]() {
+    const QStringList formats = data->formats();
+    auto setData = [data, &formats]() {
         auto mimeData = new QMimeData;
-        for (const QString &format : formats) {
-            mimeData->setData(format, data->data(format));
-        }
-        if (hasQtImage) {
+        if (data->hasImage()) {
             mimeData->setImageData(data->imageData());
+        }
+        if (data->hasText()) {
+            mimeData->setText(data->text());
+        }
+        for (const QString &format : formats) {
+            if (format.startsWith(s_plainTextPrefix) || format.startsWith(u"image/") || format == u"application/x-qt-image") {
+                continue; // Already saved
+            }
+            mimeData->setData(format, data->data(format));
         }
         return mimeData;
     };
