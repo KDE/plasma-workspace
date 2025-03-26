@@ -1,0 +1,235 @@
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+# Lorenz Adam Damara <lorenzrenz@gmail.com>, 2018.
+# SPDX-FileCopyrightText: 2018, 2019, 2020, 2021, 2022, 2024 Wantoyo <wantoyek@gmail.com>
+# Aziz Adam Adrian <4.adam.adrian@gmail.com>, 2022.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2024-10-02 18:49+0700\n"
+"Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
+"Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.05.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Umum"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Entri"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "Status Aplikasi"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "Komunikasi"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "Layanan Sistem"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "Kontrol Perangkat Keras"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Beraneka"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Entri"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr "Visibilitas"
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Pintasan Keyboard"
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Tampilkan ketika relevan"
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr "Selalu tampilkan"
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr "Selalu sembunyi"
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, kde-format
+msgid "Disabled"
+msgstr "Dinonfungsikan"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr "Selalu tampilkan semua entri"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Ukuran ikon panel:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Kecil"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Skalakan dengan tinggi Panel"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Skalakan dengan lebar Panel"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Secara otomatis difungsikan ketika dalam Mode Sentuh"
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Penyepasian ikon panel:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Kecil"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Normal"
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Besar"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Secara otomatis diatur ke Besar ketika dalam Mode Sentuh"
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Mundur"
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Status dan Notifikasi"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr "Aksi selebihnya"
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr "Tetap Buka"
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "Tampilkan semua item di system tray dalam sebuah sembulan"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr "Tutup sembulan"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Tampilkan ikon tersembunyi"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr "AILlmyjgGJP"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Luaskan System Tray"
+
+#~ msgctxt ""
+#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
+#~ "activation"
+#~ msgid "%1 (Automatic load)"
+#~ msgstr "%1 (Muat otomatis)"
+
+#~ msgid "Auto"
+#~ msgstr "Auto"
+
+#~ msgid "Shown"
+#~ msgstr "Ditampilkan"
+
+#~ msgid "Hidden"
+#~ msgstr "Disembunyikan"
+
+#~ msgid "Categories"
+#~ msgstr "Kategori"
+
+#~ msgid "Extra Items"
+#~ msgstr "Item Tambahan"

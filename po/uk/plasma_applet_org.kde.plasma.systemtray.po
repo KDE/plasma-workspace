@@ -1,0 +1,215 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the plasma-workspace package.
+#
+# Yuri Chornoivan <yurchor@ukr.net>, 2025.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma-workspace\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2025-03-25 08:23+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 23.04.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Загальне"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Записи"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "Стан програм"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "Обмін даними"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "Служби системи"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "Керування обладнанням"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Різне"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+"Пошукайте пункт у <application>%1</application>, щоб вимкнути піктограму "
+"лотка, перш ніж робити це тут. Піктограми лотка деяких програм не призначено "
+"для вимикання, отже використання цього пункту може призвести до небажаних "
+"наслідків.<nl/><nl/>Використовуючи цей пункт ви берете відповідальність на "
+"себе — не повідомляйте про вади до KDE або автору програми."
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr "Хочу ризикнути"
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Пункт"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr "Видимість"
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Клавіатурне скорочення"
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Показувати, якщо потрібно"
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr "Завжди показувати"
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr "Завжди ховати"
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, kde-format
+msgid "Disabled"
+msgstr "Вимкнено"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr "Завжди показувати усі записи"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Розмір піктограм на панелі:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Малий"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Масштабувати за висотою панелі"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Масштабувати за шириною панелі"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Автоматично вмикається у режимі сенсорного керування"
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Інтервал між піктограмами на панелі:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Малий"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Звичайний"
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Великий"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "У режимі сенсорного керування буде автоматично встановлено «Великий»"
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Назад"
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Стан і сповіщення"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr "Додаткові дії"
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr "Тримати відкритим"
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "Показати на контекстній панелі усі пункти у системному лотку"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr "Закрити контекстну підказку"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Показати приховані піктограми"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr "ОДЛВдлоадбаА"

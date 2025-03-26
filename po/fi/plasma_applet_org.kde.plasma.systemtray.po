@@ -1,0 +1,393 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Lasse Liehu <lasse.liehu@gmail.com>, 2013, 2014, 2015, 2017.
+# SPDX-FileCopyrightText: 2013, 2014, 2019, 2020, 2021, 2022, 2024 Tommi Nieminen <translator@legisign.org>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2024-10-16 19:02+0300\n"
+"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 24.08.2\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Perusasetukset"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Kuvakkeet"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "Sovelluksen tila"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "Viestintä"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "Järjestelmäpalvelut"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "Laitteistonhallinta"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Sekalaiset"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Kuvake"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr "Näkyvyys"
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Pikanäppäin"
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Näytä tarvittaessa"
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr "Aina näkyvissä"
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr "Aina piilossa"
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, kde-format
+msgid "Disabled"
+msgstr "Ei käytössä"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr "Näytä aina kaikki kuvakkeet"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Paneelin kuvakekoko:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Pieni"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Sovita paneelin korkeuteen"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Sovita paneelin leveyteen"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Otetaan automaattisesti käyttöön kosketustilassa"
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Paneelikuvakkeiden välistys:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Pieni"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Tavallinen"
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Suuri"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Aseta automaattisesti suureksi kosketustilassa"
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Palaa"
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Tila ja ilmoitukset"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr "Lisää toimintoja"
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr "Pidä avoinna"
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "Näytä kaikki ilmoitusaluekuvakkeet ponnahdusvalikkona"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr "Sulje ponnahdusikkuna"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Näytä piilotetut kuvakkeet"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr "AILlmyjgGJP"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Laajenna ilmoitusalue"
+
+#~ msgctxt ""
+#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
+#~ "activation"
+#~ msgid "%1 (Automatic load)"
+#~ msgstr "%1 (automaattinen lataus)"
+
+#~ msgid "This layout may look odd with a short panel."
+#~ msgstr "Tämä asettelu voi näyttää oudolta lyhyessä paneelissa."
+
+#~ msgid "This layout may look odd with a narrow panel."
+#~ msgstr "Tämä asettelu voi näyttää oudolta kapeassa paneelissa."
+
+#~ msgctxt "The arrangement of system tray icons in the Panel"
+#~ msgid "Panel icon arrangement:"
+#~ msgstr "Paneelikuvakkeiden lajittelu:"
+
+#~ msgid "One row of small icons"
+#~ msgstr "Yksi rivi pieniä kuvakkeita"
+
+#~ msgid "One column of small icons"
+#~ msgstr "Yksi sarake pieniä kuvakkeita"
+
+#~ msgid "Two rows of small icons"
+#~ msgstr "Kaksi riviä pieniä kuvakkeita"
+
+#~ msgid "Two columns of small icons"
+#~ msgstr "Kaksi saraketta pieniä kuvakkeita"
+
+#~ msgid "Very Small"
+#~ msgstr "Pikkuruinen"
+
+#~ msgid "Medium"
+#~ msgstr "Keskikokoinen"
+
+#~ msgid "Huge"
+#~ msgstr "Valtava"
+
+#~ msgid "Enormous"
+#~ msgstr "Jättiläismäinen"
+
+#~ msgid "Auto"
+#~ msgstr "Automaattinen"
+
+#~ msgid "Shown"
+#~ msgstr "Näkyvissä"
+
+#~ msgid "Hidden"
+#~ msgstr "Piilossa"
+
+#~ msgid "Categories"
+#~ msgstr "Luokat"
+
+#~ msgid "Extra Items"
+#~ msgstr "Lisäkuvakkeet"
+
+#~ msgid "Hide icons"
+#~ msgstr "Piilota kuvakkeet"
+
+#~ msgid "Stat&usNotifier Testap"
+#~ msgstr "T&ilailmoittimen testisovellus"
+
+#~ msgid "Stat&us Notifier"
+#~ msgstr "Tilailmoitin"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Loki</span></p></"
+#~ "body></html>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>Tila</b>"
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgid "Automatic"
+#~ msgstr " (automaattinen lataus)"
+
+#~ msgid "Passive"
+#~ msgstr "Passiivinen"
+
+#~ msgid "Ac&tive"
+#~ msgstr "Ak&tiivinen"
+
+#~ msgid "&NeedsAttention"
+#~ msgstr "Tarvitsee &huomiota"
+
+#~ msgid "<b>Icon</b>"
+#~ msgstr "<b>Kuvake</b>"
+
+#~ msgid "<b>ToolTip</b>"
+#~ msgstr "<b>Työkaluvihje</b>"
+
+#~ msgid "Update"
+#~ msgstr "Päivitä"
+
+#~ msgid "&Jobs"
+#~ msgstr "&Työt"
+
+#~ msgid "<b>Job Control</b>"
+#~ msgstr "<b>Töiden hallinta</b>"
+
+#~ msgid "<b>Progress</b>"
+#~ msgstr "<b>Edistyminen</b>"
+
+#~ msgid "<b>Naming</b>"
+#~ msgstr "<b>Nimeäminen</b>"
+
+#~ msgid "Job Started"
+#~ msgstr "Työ aloitettu"
+
+#~ msgid "Source"
+#~ msgstr "Lähde"
+
+#~ msgid "Destination"
+#~ msgstr "Kohde"
+
+#~ msgid "Testing kuiserver (%1 seconds remaining)"
+#~ msgstr "Testataan kui-palvelinta (%1 sekuntia jäljellä)"
+
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "Järjestelmäpalvelun tietue"
+
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "StatusNotifierTest"
+
+#~ msgctxt "tooltip subtitle"
+#~ msgid "Some explanation from the beach."
+#~ msgstr "Joku selitys rannalta."
+
+#~ msgid "System Tray Options"
+#~ msgstr "Ilmoitusalueen asetukset"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "Asetukset: %1|/|$[gen %1] asetukset"
+
+#~ msgid "Unknown Category"
+#~ msgstr "Tuntematon luokka"
+
+#~ msgid "Hardware"
+#~ msgstr "Laitteisto"
+
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "Asetukset: %1|/|$[gen %1] asetukset"
+
+#~ msgid "Alt+S"
+#~ msgstr "Alt+S"
+
+#~ msgid "Error: Can't find plugin metadata: %1"
+#~ msgstr "Virhe: Liitännäisen metatietoja ei löydy: %1"
+
+#~ msgid "Error loading QML file: %1"
+#~ msgstr "Virhe ladattaessa QML-tiedostoa: %1"
+
+#~ msgid "Dialog"
+#~ msgstr "Ikkuna"
+
+#~ msgid "Showing info for package: %1"
+#~ msgstr "Näytetään paketin %1 tiedot"
+
+#~ msgid "      Name : %1"
+#~ msgstr "      Nimi : %1"
+
+#~ msgid "   Comment : %1"
+#~ msgstr "   Kommentti : %1"
+
+#~ msgid "    Plugin : %1"
+#~ msgstr "    Liitännäinen : %1"
+
+#~ msgid "    Author : %1"
+#~ msgstr "    Tekijä : %1"
+
+#~ msgid "      Path : %1"
+#~ msgstr "      Polku : %1"

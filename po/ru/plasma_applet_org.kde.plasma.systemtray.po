@@ -1,0 +1,507 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Артём Середа <overmind88@gmail.com>, 2008.
+# Artem Sereda <overmind88@gmail.com>, 2008.
+# Nick Shaforostoff <shaforostoff@kde.ru>, 2009.
+# Andrey Cherepanov <skull@kde.ru>, 2009.
+# Alexander Potashev <aspotashev@gmail.com>, 2009, 2010, 2011, 2014, 2015, 2016, 2017, 2019.
+# Nick Shaforostoff <shafff@ukr.net>, 2009.
+# Yuri Efremov <yur.arh@gmail.com>, 2013.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2020, 2021, 2022, 2024.
+msgid ""
+msgstr ""
+"Project-Id-Version: plasma_applet_systemtray\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2024-09-20 13:02+0300\n"
+"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
+"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 21.08.3\n"
+"Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Environment: kde\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Основное"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Элементы"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "Состояния приложений"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "Связь"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "Системные службы"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "Управление оборудованием"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Прочее"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Элемент"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr "Видимость"
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Комбинация клавиш"
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Автоматически"
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr "Всегда показывать"
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr "Всегда скрывать"
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, kde-format
+msgid "Disabled"
+msgstr "Отключить"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr "Всегда показывать все элементы"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Размер значков:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Маленькие"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Масштабировать по высоте панели"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Масштабировать по ширине панели"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "В сенсорном режиме используется автоматически"
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Интервал между значками:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Маленький"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Обычный"
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Большой"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "В режиме планшета автоматически используется интервал большого размера"
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Назад"
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Состояние и уведомления"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr "Больше действий"
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr "Держать окно открытым"
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "Просмотр всех объектов системного во всплывающем окне"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr "Закрыть всплывающее окно"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Показать скрытые значки"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr "AILlmyjgGJP"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Развернуть системный лоток"
+
+#~ msgctxt ""
+#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
+#~ "activation"
+#~ msgid "%1 (Automatic load)"
+#~ msgstr "%1 (загружается автоматически)"
+
+#~ msgid "Very Small"
+#~ msgstr "Очень маленький"
+
+#~ msgid "Medium"
+#~ msgstr "Средний"
+
+#~ msgid "Huge"
+#~ msgstr "Очень большой"
+
+#~ msgid "Enormous"
+#~ msgstr "Огромный"
+
+#~ msgid "Auto"
+#~ msgstr "Автоматически"
+
+#~ msgid "Shown"
+#~ msgstr "Всегда показывать"
+
+#~ msgid "Hidden"
+#~ msgstr "Всегда скрывать"
+
+#~ msgid "Categories"
+#~ msgstr "Показываемые категории"
+
+#~ msgid "Extra Items"
+#~ msgstr "Индивидуальная настройка"
+
+#~ msgid "Hide icons"
+#~ msgstr "Скрыть значки"
+
+#, fuzzy
+#~| msgid "statusnotifierwatcher"
+#~ msgid "Stat&usNotifier Testap"
+#~ msgstr "statusnotifierwatcher"
+
+#, fuzzy
+#~| msgid "Status & Notifications"
+#~ msgid "Stat&us Notifier"
+#~ msgstr "Состояние и уведомления"
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgid "Automatic"
+#~ msgstr " (загружается автоматически)"
+
+#, fuzzy
+#~| msgid "System Services"
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "Системные службы"
+
+#, fuzzy
+#~| msgid "statusnotifierwatcher"
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "statusnotifierwatcher"
+
+#~ msgid "Unknown Category"
+#~ msgstr "Неизвестная категория"
+
+#~ msgid "Hardware"
+#~ msgstr "Оборудование"
+
+#~ msgid "System Tray Options"
+#~ msgstr "Настроить системный лоток"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "Настроить контейнер «%1»"
+
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "Настроить виджет «%1»"
+
+#~ msgid "Display"
+#~ msgstr "Вид"
+
+#~ msgid "Choose which information to show"
+#~ msgstr "Выберите, какую информацию нужно показывать"
+
+#~ msgid "Item"
+#~ msgstr "Элемент"
+
+#~ msgid "Widgets are currently locked, disabling some options."
+#~ msgstr ""
+#~ "В данный момент заблокировано изменение виджетов, поэтому не все "
+#~ "параметры можно изменить."
+
+#~ msgid "Unlock Widgets"
+#~ msgstr "Разблокировать виджеты"
+
+#~ msgid ""
+#~ "Widgets are currently locked. To change which items are shown, please "
+#~ "unlock the widgets first."
+#~ msgstr ""
+#~ "В данный момент заблокировано изменение виджетов. Чтобы настроить "
+#~ "видимость элементов, сначала разблокируйте изменение виджетов."
+
+#~ msgid "Auto Hide"
+#~ msgstr "Скрывать автоматически"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "2"
+#~ msgstr "2"
+
+#~ msgid "Icons"
+#~ msgstr "Значки"
+
+#~ msgid "add default applets"
+#~ msgstr "добавить стандартные виджеты"
+
+#~ msgctxt "NAME OF TRANSLATORS"
+#~ msgid "Your names"
+#~ msgstr "Николай Шафоростов"
+
+#~ msgctxt "EMAIL OF TRANSLATORS"
+#~ msgid "Your emails"
+#~ msgstr "shaforostoff@kde.ru"
+
+#~ msgid "Notification from %1"
+#~ msgstr "Уведомление от %1"
+
+#~ msgid "More"
+#~ msgstr "Развернуть"
+
+#~ msgid "Pause job"
+#~ msgstr "Приостановить задание"
+
+#~ msgid "Resume job"
+#~ msgstr "Возобновить задание"
+
+#~ msgid "Cancel job"
+#~ msgstr "Отменить задание"
+
+#~ msgid "%1 (%2 remaining)"
+#~ msgstr "%1 (%2 осталось)"
+
+#~ msgctxt ""
+#~ "%1 is the name of the job, can be things like Copying, deleting, moving"
+#~ msgid "%1 [Paused]"
+#~ msgstr "(приостановлено) %1"
+
+#~ msgid "Paused"
+#~ msgstr "Приостановлено"
+
+#~ msgctxt ""
+#~ "%1 is the name of the job, can be things like Copying, deleting, moving"
+#~ msgid "%1 [Finished]"
+#~ msgstr "(завершено) %1"
+
+#~ msgid "%2 / 1 folder"
+#~ msgid_plural "%2 / %1 folders"
+#~ msgstr[0] "%2 / %1 папка"
+#~ msgstr[1] "%2 / %1 папки"
+#~ msgstr[2] "%2 / %1 папок"
+#~ msgstr[3] "%2 / %1 папка"
+
+#~ msgid "%2 / 1 file"
+#~ msgid_plural "%2 / %1 files"
+#~ msgstr[0] "%2 / %1 файл"
+#~ msgstr[1] "%2 / %1 файла"
+#~ msgstr[2] "%2 / %1 файлов"
+#~ msgstr[3] "%2 / %1 файл"
+
+#~ msgid "Less"
+#~ msgstr "Свернуть"
+
+#~ msgid "No notifications and no jobs"
+#~ msgstr "Нет уведомлений и заданий"
+
+#, fuzzy
+#~ msgid "Notifications"
+#~ msgstr "Уведомление от %1"
+
+#~ msgid "Recently Completed Jobs"
+#~ msgstr "Недавно выполненные задания"
+
+#~ msgid "%1 file, to: %2"
+#~ msgid_plural "%1 files, to: %2"
+#~ msgstr[0] "%1 файл в %2"
+#~ msgstr[1] "%1 файла в %2"
+#~ msgstr[2] "%1 файлов в %2"
+#~ msgstr[3] "%1 файл в %2"
+
+#~ msgid "1 running job (%2 remaining)"
+#~ msgid_plural "%1 running jobs (%2 remaining)"
+#~ msgstr[0] "Выполняется %1 задание (осталось %2)"
+#~ msgstr[1] "Выполняются %1 задания (осталось %2)"
+#~ msgstr[2] "Выполняются %1 заданий (осталось %2)"
+#~ msgstr[3] "Выполняется %1 задание (осталось %2)"
+
+#~ msgid "no running jobs"
+#~ msgstr "нет выполняющихся заданий"
+
+#~ msgid "%1 [Finished]"
+#~ msgstr "(завершено) %1"
+
+#~ msgid "%1 running job"
+#~ msgid_plural "%1 running jobs"
+#~ msgstr[0] "Выполняется %1 задание"
+#~ msgstr[1] "Выполняются %1 задания"
+#~ msgstr[2] "Выполняются %1 заданий"
+#~ msgstr[3] "Выполняется %1 задание"
+
+#~ msgid "%1 suspended job"
+#~ msgid_plural "%1 suspended jobs"
+#~ msgstr[0] "Приостановлено %1 задание"
+#~ msgstr[1] "Приостановлено %1 задания"
+#~ msgstr[2] "Приостановлено %1 заданий"
+#~ msgstr[3] "Приостановлено %1 задание"
+
+#, fuzzy
+#~| msgid "%1 Recently Completed Job:"
+#~| msgid_plural "%1 Recently Completed Jobs:"
+#~ msgid "%1 completed job"
+#~ msgid_plural "%1 completed jobs"
+#~ msgstr[0] "Выполнено %1 задание:"
+#~ msgstr[1] "Выполнены %1 задания:"
+#~ msgstr[2] "Выполнены %1 заданий:"
+#~ msgstr[3] "Выполнено %1 задание:"
+
+#~ msgid "%1 notification"
+#~ msgid_plural "%1 notifications"
+#~ msgstr[0] "%1 уведомление"
+#~ msgstr[1] "%1 уведомления"
+#~ msgstr[2] "%1 уведомлений"
+#~ msgstr[3] "%1 уведомление"
+
+#~ msgid "No active jobs or notifications"
+#~ msgstr "Нет активных уведомлений или заданий"
+
+#~ msgid "Notifications and jobs"
+#~ msgstr "Уведомления и задания"
+
+#~ msgid "Show or hide notifications and jobs"
+#~ msgstr "Показывать или скрывать уведомления и задания"
+
+#~ msgid "Automatically hide new notifications and jobs after a short delay"
+#~ msgstr "Скрывать новые уведомления после небольшой задержки"
+
+#~ msgid "Pop Up Notices"
+#~ msgstr "Всплывающие уведомления"
+
+#~ msgid "Application notifications"
+#~ msgstr "Уведомления от приложений"
+
+#~ msgid "File transfers and other jobs"
+#~ msgstr "Задания"
+
+#~ msgid "Recent notifications"
+#~ msgstr "Последние уведомления"
+
+#~ msgctxt "Show all recent notifications"
+#~ msgid "Recent"
+#~ msgstr "Последние"
+
+#~ msgid "more"
+#~ msgstr "Развернуть"
+
+#~ msgid "clear all"
+#~ msgstr "очистить"
+
+#~ msgctxt ""
+#~ "%1 is the name of the job, can be things like Copying, deleting, moving"
+#~ msgid "(paused) %1"
+#~ msgstr "(приостановлено) %1"
+
+#~ msgctxt ""
+#~ "%1 is the name of the job, can be things like Copying, deleting, moving"
+#~ msgid "(finished) %1"
+#~ msgstr "(завершено) %1"
+
+#, fuzzy
+#~ msgid "Toggle visibility of notifications and jobs"
+#~ msgstr "Включить/выключить показ уведомлений и заданий"

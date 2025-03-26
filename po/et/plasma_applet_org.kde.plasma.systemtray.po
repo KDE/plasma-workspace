@@ -1,0 +1,278 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Marek Laane <qiilaq69@gmail.com>, 2016, 2019, 2020.
+# Mihkel Tõnnov <mihhkel@gmail.com>, 2020, 2021.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2021-09-05 15:52+0200\n"
+"Last-Translator: Mihkel Tõnnov <mihhkel@gmail.com>\n"
+"Language-Team: Estonian <>\n"
+"Language: et\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.08.1\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Üldine"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Kirjed"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "Rakenduse olek"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "Teated"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "Süsteemsed teenused"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "Riistvara juhtimine"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Muu"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Kirje"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr "Nähtavus"
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Kiirklahv"
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Näidatakse vajadusel"
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr "Näidatakse alati"
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr "Peidetakse alati"
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, kde-format
+msgid "Disabled"
+msgstr "Keelatud"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr "Alati näidatakse kõiki kirjeid"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Paneeli ikoonide suurus:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Väike"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Paneeli kõrguse järgi"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Paneeli laiuse järgi"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, fuzzy, kde-format
+#| msgid "Automatically enabled when in tablet mode"
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Tahvlirežiimis automaatselt lubatud"
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, fuzzy, kde-format
+#| msgctxt "The arrangement of system tray icons in the Panel"
+#| msgid "Panel icon size:"
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Paneeli ikoonide suurus:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, fuzzy, kde-format
+#| msgid "Small"
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Väike"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, fuzzy, kde-format
+#| msgid "Automatically enabled when in tablet mode"
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Tahvlirežiimis automaatselt lubatud"
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Olek ja märguanded"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr "Veel toiminguid"
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr "Hoia avatud"
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr "Sulge hüpik"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Näita peidetud ikoone"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr ""
+
+#~ msgctxt ""
+#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
+#~ "activation"
+#~ msgid "%1 (Automatic load)"
+#~ msgstr "%1 (automaatne laadimine)"
+
+#~ msgid "Auto"
+#~ msgstr "Automaatne"
+
+#~ msgid "Shown"
+#~ msgstr "Näidatav"
+
+#~ msgid "Hidden"
+#~ msgstr "Peidetud"
+
+#~ msgid "Categories"
+#~ msgstr "Kategooriad"
+
+#~ msgid "Extra Items"
+#~ msgstr "Lisaelemendid"
+
+#~ msgid "Hide icons"
+#~ msgstr "Peida ikoonid"
+
+#, fuzzy
+#~| msgid "Status & Notifications"
+#~ msgid "Stat&us Notifier"
+#~ msgstr "Olek ja märguanded"
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgid "Automatic"
+#~ msgstr " (automaatne laadimine)"
+
+#, fuzzy
+#~| msgid "System Services"
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "Süsteemsed teenused"
+
+#, fuzzy
+#~| msgid "Status & Notifications"
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "Olek ja märguanded"
+
+#~ msgid "System Tray Options"
+#~ msgstr "Süsteemisalve valikud"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "%1 valikud"
+
+#~ msgid "Unknown Category"
+#~ msgstr "Tundmatu kategooria"
+
+#~ msgid "Hardware"
+#~ msgstr "Riistvara"
+
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "%1 valikud"

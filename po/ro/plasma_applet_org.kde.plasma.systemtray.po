@@ -1,0 +1,337 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sergiu Bivol <sergiu@cip.md>, 2013, 2020, 2022, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2023-04-10 19:51+0100\n"
+"Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
+"Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < "
+"20)) ? 1 : 2;\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Generale"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Înregistrări"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "Starea aplicației"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "Comunicații"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "Servicii de sistem"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "Control echipament"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Diverse"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Înregistrare"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr "Vizibilitate"
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Scurtătură de taste"
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Arată când e relevant"
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr "Întotdeauna vizibil"
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr "Întotdeauna ascuns"
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, kde-format
+msgid "Disabled"
+msgstr "Dezactivat"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr "Arată mereu toate înregistrările"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Dimensiune pictograme panou:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Mică"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Scalează cu înălțimea panoului"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Scalează cu lățimea panoului"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Activată automat în regim tactil"
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Spațiere pictograme panou:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Mică"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Normală"
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Mare"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Stabilește automat la Mare în regim tactil"
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Mergi înapoi"
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Stare și notificări"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr "Acțiuni suplimentare"
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr "Ține deschis"
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "Arată toate elementele tăvii de sistem într-o fereastră plutitoare"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr "Închide balonul"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Arată pictogramele ascunse"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr ""
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Desfășoară tava de sistem"
+
+#~ msgctxt ""
+#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
+#~ "activation"
+#~ msgid "%1 (Automatic load)"
+#~ msgstr "%1 (încărcată automat)"
+
+#, fuzzy
+#~| msgid "Automaticox"
+#~ msgid "Auto"
+#~ msgstr "Automaticox"
+
+#~ msgid "Hide icons"
+#~ msgstr "Ascunde pictogramele"
+
+#, fuzzy
+#~| msgctxt "title"
+#~| msgid "StatusNotifierTest"
+#~ msgid "Stat&usNotifier Testap"
+#~ msgstr "StatusNotifierTest"
+
+#, fuzzy
+#~| msgctxt "title"
+#~| msgid "StatusNotifierTest"
+#~ msgid "Stat&us Notifier"
+#~ msgstr "StatusNotifierTest"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>Stare</b>"
+
+#, fuzzy
+#~| msgid "Automaticox"
+#~ msgid "Automatic"
+#~ msgstr "Automaticox"
+
+#~ msgid "Passive"
+#~ msgstr "Pasiv"
+
+#~ msgid "Ac&tive"
+#~ msgstr "Ac&tiv"
+
+#, fuzzy
+#~| msgid "NeedsAttention"
+#~ msgid "&NeedsAttention"
+#~ msgstr "CereAtenție"
+
+#~ msgid "<b>Icon</b>"
+#~ msgstr "<b>Pictogramă</b>"
+
+#~ msgid "<b>ToolTip</b>"
+#~ msgstr "<b>Indiciu</b>"
+
+#~ msgid "Update"
+#~ msgstr "Actualizare"
+
+#, fuzzy
+#~| msgid "<b>ToolTip</b>"
+#~ msgid "<b>Job Control</b>"
+#~ msgstr "<b>Indiciu</b>"
+
+#, fuzzy
+#~| msgid "<b>Icon</b>"
+#~ msgid "<b>Progress</b>"
+#~ msgstr "<b>Pictogramă</b>"
+
+#, fuzzy
+#~| msgid "<b>Icon</b>"
+#~ msgid "<b>Naming</b>"
+#~ msgstr "<b>Pictogramă</b>"
+
+#, fuzzy
+#~| msgid "NeedsAttention"
+#~ msgid "Destination"
+#~ msgstr "CereAtenție"
+
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "Element serviciu de sistem"
+
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "StatusNotifierTest"
+
+#~ msgctxt "tooltip subtitle"
+#~ msgid "Some explanation from the beach."
+#~ msgstr "Câteva explicații de pe plajă."
+
+#, fuzzy
+#~| msgid "SystemTray Settings"
+#~ msgid "System Tray Options"
+#~ msgstr "Configurări tavă de sistem"
+
+#~ msgid "Unknown Category"
+#~ msgstr "Categorie necunoscută"
+
+#~ msgid "Hardware"
+#~ msgstr "Echipament"
+
+#~ msgid "Error: Can't find plugin metadata: %1"
+#~ msgstr "Eroare: metadatele extensiei nu pot fi găsite:  %1"
+
+#~ msgid "Error loading QML file: %1"
+#~ msgstr "Eroare la încărcarea fișierului QML: %1"
+
+#~ msgid "Dialog"
+#~ msgstr "Dialog"
+
+#~ msgid "Showing info for package: %1"
+#~ msgstr "Se arată informații pentru pachetul: %1"
+
+#~ msgid "      Name : %1"
+#~ msgstr "      Denumire : %1"
+
+#~ msgid "   Comment : %1"
+#~ msgstr "   Comentariu : %1"
+
+#~ msgid "    Plugin : %1"
+#~ msgstr "   Extensie : %1"
+
+#~ msgid "    Author : %1"
+#~ msgstr "    Autor : %1"
+
+#~ msgid "      Path : %1"
+#~ msgstr "      Cale : %1"

@@ -1,0 +1,347 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# JungHee Lee <daemul72@gmail.com>, 2019.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2024-11-28 23:46+0100\n"
+"Last-Translator: Shinjo Park <kde@peremen.name>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 23.08.5\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "일반"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "항목"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "앱 상태"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "통신"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "시스템 서비스"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "하드웨어 제어"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "기타"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "항목"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr "표시 여부"
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "키보드 단축키"
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr "필요할 때 표시"
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr "항상 표시"
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr "항상 숨김"
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, kde-format
+msgid "Disabled"
+msgstr "비활성화됨"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr "항상 모든 항목 표시"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "패널 아이콘 크기:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "작게"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "패널 높이에 따라 조정"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "패널 너비에 따라 조정"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "터치 모드에서 자동으로 활성화"
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "패널 아이콘 간격:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "작게"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "일반"
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "크게"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "터치 모드에서 자동으로 크게 설정"
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "뒤로 가기"
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr "상태 및 알림"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr "더 많은 동작"
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr "열린 상태로 유지"
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "시스템 트레이의 모든 항목을 팝업으로 표시"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr "팝업 닫기"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "숨은 아이콘 보기"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr "AILlmyjgGJP가힣"
+
+#~ msgid "Expand System Tray"
+#~ msgstr "시스템 트레이 확장"
+
+#~ msgctxt ""
+#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
+#~ "activation"
+#~ msgid "%1 (Automatic load)"
+#~ msgstr "%1(자동 불러오기)"
+
+#~ msgid "Very Small"
+#~ msgstr "매우 작게"
+
+#~ msgid "Medium"
+#~ msgstr "중간"
+
+#~ msgid "Huge"
+#~ msgstr "매우 크게"
+
+#~ msgid "Enormous"
+#~ msgstr "거대하게"
+
+#~ msgid "Auto"
+#~ msgstr "자동"
+
+#~ msgid "Shown"
+#~ msgstr "보임"
+
+#~ msgid "Hidden"
+#~ msgstr "숨김"
+
+#~ msgid "Categories"
+#~ msgstr "분류"
+
+#~ msgid "Extra Items"
+#~ msgstr "추가 항목"
+
+#~ msgid "Hide icons"
+#~ msgstr "아이콘 숨기기"
+
+#~ msgid "Stat&usNotifier Testap"
+#~ msgstr "상태 알림이 테스트(&U)"
+
+#~ msgid "Stat&us Notifier"
+#~ msgstr "상태 알림이(&U)"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">기록</span></p></"
+#~ "body></html>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>상태</b>"
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgid "Automatic"
+#~ msgstr " (자동 불러옴)"
+
+#~ msgid "Passive"
+#~ msgstr "수동적"
+
+#~ msgid "Ac&tive"
+#~ msgstr "활성(&T)"
+
+#~ msgid "&NeedsAttention"
+#~ msgstr "주의 필요(&N)"
+
+#~ msgid "<b>Icon</b>"
+#~ msgstr "<b>아이콘</b>"
+
+#~ msgid "<b>ToolTip</b>"
+#~ msgstr "<b>풍선 도움말</b>"
+
+#~ msgid "Update"
+#~ msgstr "업데이트"
+
+#~ msgid "&Jobs"
+#~ msgstr "작업(&J)"
+
+#~ msgid "<b>Job Control</b>"
+#~ msgstr "<b>작업 제어</b>"
+
+#~ msgid "<b>Progress</b>"
+#~ msgstr "<b>진행</b>"
+
+#~ msgid "<b>Naming</b>"
+#~ msgstr "<b>이름</b>"
+
+#~ msgid "Job Started"
+#~ msgstr "작업 시작됨"
+
+#~ msgid "Pump Job"
+#~ msgstr "전송 작업"
+
+#~ msgid "Source"
+#~ msgstr "원본"
+
+#~ msgid "Destination"
+#~ msgstr "대상"
+
+#~ msgid "Testing kuiserver (%1 seconds remaining)"
+#~ msgstr "kuiserver 테스트 중 (%1초 남음)"
+
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "시스템 서비스 항목"
+
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "상태 알림이 테스트"
+
+#~ msgctxt "tooltip subtitle"
+#~ msgid "Some explanation from the beach."
+#~ msgstr "어디선가 등장한 설명입니다."
+
+#~ msgid "System Tray Options"
+#~ msgstr "시스템 트레이 설정"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "%1 옵션"
+
+#~ msgid "Unknown Category"
+#~ msgstr "알 수 없는 분류"
+
+#~ msgid "Hardware"
+#~ msgstr "하드웨어"
+
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "%1 옵션"
+
+#~ msgid "Alt+S"
+#~ msgstr "Alt+S"

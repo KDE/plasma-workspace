@@ -1,0 +1,337 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# Sönke Dibbern <s_dibbern@web.de>, 2014.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2014-06-09 20:50+0200\n"
+"Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
+"Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
+"Language: nds\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 1.4\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Allmeen"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Indrääg"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "Programm-Status"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "Kommunikatschoon"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "Systeemdeensten"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "Reedschap-Kuntrull"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Annerswat"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, fuzzy, kde-format
+#| msgid "Entries"
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Indrääg"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, fuzzy, kde-format
+#| msgid "Enabled"
+msgid "Disabled"
+msgstr "Anmaakt"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Lüttbildgrött:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, fuzzy, kde-format
+#| msgid "Icon size:"
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Lüttbildgrött:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr ""
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, fuzzy, kde-format
+#| msgid "Status & Notifications"
+msgid "Status and Notifications"
+msgstr "Tostand & Bescheden"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr ""
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr ""
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Versteken Lüttbiller wiesen"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr ""
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgctxt ""
+#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
+#~ "activation"
+#~ msgid "%1 (Automatic load)"
+#~ msgstr " (Automaatsch laden)"
+
+#, fuzzy
+#~| msgid "Automatic"
+#~ msgid "Auto"
+#~ msgstr "Automaatsch"
+
+#~ msgid "Categories"
+#~ msgstr "Kategorien"
+
+#~ msgid "Extra Items"
+#~ msgstr "Indrääg bito"
+
+#~ msgid "Hide icons"
+#~ msgstr "Lüttbiller versteken"
+
+#~ msgid "Stat&usNotifier Testap"
+#~ msgstr "&Tostandnaricht-Testapp"
+
+#~ msgid "Stat&us Notifier"
+#~ msgstr "T&ostandnaricht"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Logbook</span></"
+#~ "p></body></html>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>Tostand</b>"
+
+#, fuzzy
+#~| msgid " (Automatic load)"
+#~ msgid "Automatic"
+#~ msgstr " (Automaatsch laden)"
+
+#~ msgid "Passive"
+#~ msgstr "Passiev"
+
+#~ msgid "Ac&tive"
+#~ msgstr "A&ktiev"
+
+#~ msgid "&NeedsAttention"
+#~ msgstr "&BruuktAcht"
+
+#~ msgid "<b>Icon</b>"
+#~ msgstr "<b>Lüttbild</b>"
+
+#~ msgid "<b>ToolTip</b>"
+#~ msgstr "<b>Kortinfo</b>"
+
+#~ msgid "Update"
+#~ msgstr "Opfrischen"
+
+#~ msgid "&Jobs"
+#~ msgstr "&Opgaven"
+
+#~ msgid "<b>Job Control</b>"
+#~ msgstr "<b>Opgavenkuntrull</b>"
+
+#~ msgid "<b>Progress</b>"
+#~ msgstr "<b>Vörankamen</b>"
+
+#~ msgid "<b>Naming</b>"
+#~ msgstr "<b>Naams</b>"
+
+#~ msgid "Job Started"
+#~ msgstr "Opgaav anfungen"
+
+#~ msgid "Pump Job"
+#~ msgstr "Pump-Opgaav"
+
+#~ msgid "Source"
+#~ msgstr "Born"
+
+#~ msgid "Destination"
+#~ msgstr "Teel"
+
+#~ msgid "Testing kuiserver (%1 seconds remaining)"
+#~ msgstr "KUIServer warrt test (%1 Sekunnen na)"
+
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "Systeemdeenst-Indrag"
+
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "Tostandnaricht-Test"
+
+#~ msgctxt "tooltip subtitle"
+#~ msgid "Some explanation from the beach."
+#~ msgstr "Wat verkloren över't Peerd."
+
+#~ msgid "System Tray Options"
+#~ msgstr "Systeemafsnitt-Optschonen"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "Optschonen för „%1“"
+
+#~ msgid "Unknown Category"
+#~ msgstr "Nich begäng Kategorie"
+
+#~ msgid "Hardware"
+#~ msgstr "Hardware"
+
+#, fuzzy
+#~| msgctxt "%1 is the name of the containment"
+#~| msgid "%1 Options"
+#~ msgctxt "%1 is the name of the applet"
+#~ msgid "%1 Options"
+#~ msgstr "Optschonen för „%1“"
+
+#~ msgid "Alt+S"
+#~ msgstr "Alt+S"

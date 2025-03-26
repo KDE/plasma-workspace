@@ -1,0 +1,376 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# SPDX-FileCopyrightText: 2016, 2017, 2018, 2020, 2021, 2022, 2024, 2025 Freek de Kruijf <freekdekruijf@kde.nl>
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"PO-Revision-Date: 2025-03-15 13:45+0100\n"
+"Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 24.12.3\n"
+
+#: package/contents/config/config.qml:13
+#, kde-format
+msgid "General"
+msgstr "Algemeen"
+
+#: package/contents/config/config.qml:18
+#, kde-format
+msgid "Entries"
+msgstr "Items"
+
+#: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Application Status"
+msgstr "Programmastatus"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Communications"
+msgstr "Communicaties"
+
+#: package/contents/ui/ConfigEntries.qml:38
+#, kde-format
+msgid "System Services"
+msgstr "Systeemservices"
+
+#: package/contents/ui/ConfigEntries.qml:40
+#, kde-format
+msgid "Hardware Control"
+msgstr "Hardwarebesturing"
+
+#: package/contents/ui/ConfigEntries.qml:43
+#, kde-format
+msgid "Miscellaneous"
+msgstr "Diversen"
+
+#: package/contents/ui/ConfigEntries.qml:67
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"Look for a setting in <application>%1</application> to disable its tray icon "
+"before doing it here. Some apps’ tray icons were not designed to be "
+"disabled, and using this setting may cause them to behave unexpectedly.<nl/"
+"><nl/>Use this setting at your own risk, and do not report issues to KDE or "
+"the app’s author."
+msgstr ""
+"Zoek naar een instelling in <application>%1</application> om zijn vak, "
+"systeemvakpictogram uit te schakelen alvorens het hier te doen. Sommige "
+"systeemvakpictogrammen waren niet ontworpen om uitgeschakeld te worden en "
+"gebruiken van deze instelling kan veroorzaken dat ze zich onverwacht "
+"gedragen.<nl/><nl/>Gebruik deze instelling op uw eigen risico en rapporteer "
+"geen problemen aan KDE of de auteur van de toepassing."
+
+#: package/contents/ui/ConfigEntries.qml:70
+#, kde-format
+msgctxt "@action:button"
+msgid "I understand the risks"
+msgstr "Ik begrijp het risico"
+
+#: package/contents/ui/ConfigEntries.qml:101
+#, kde-format
+msgctxt "Name of the system tray entry"
+msgid "Entry"
+msgstr "Item"
+
+#: package/contents/ui/ConfigEntries.qml:108
+#, kde-format
+msgid "Visibility"
+msgstr "Zichtbaarheid"
+
+#: package/contents/ui/ConfigEntries.qml:115
+#, kde-format
+msgid "Keyboard Shortcut"
+msgstr "Sneltoets"
+
+#: package/contents/ui/ConfigEntries.qml:287
+#, kde-format
+msgid "Shown when relevant"
+msgstr "Indien relevant tonen"
+
+#: package/contents/ui/ConfigEntries.qml:288
+#, kde-format
+msgid "Always shown"
+msgstr "Altijd tonen"
+
+#: package/contents/ui/ConfigEntries.qml:289
+#, kde-format
+msgid "Always hidden"
+msgstr "Altijd verborgen"
+
+#: package/contents/ui/ConfigEntries.qml:290
+#, kde-format
+msgid "Disabled"
+msgstr "Uitgeschakeld"
+
+#: package/contents/ui/ConfigEntries.qml:348
+#, kde-format
+msgid "Always show all entries"
+msgstr "Altijd alle items tonen"
+
+#: package/contents/ui/ConfigGeneral.qml:23
+#, kde-format
+msgctxt "The arrangement of system tray icons in the Panel"
+msgid "Panel icon size:"
+msgstr "Pictogramgrootte in paneel:"
+
+#: package/contents/ui/ConfigGeneral.qml:25
+#, kde-format
+msgid "Small"
+msgstr "Klein"
+
+#: package/contents/ui/ConfigGeneral.qml:32
+#, kde-format
+msgid "Scale with Panel height"
+msgstr "Schalen met paneelhoogte"
+
+#: package/contents/ui/ConfigGeneral.qml:33
+#, kde-format
+msgid "Scale with Panel width"
+msgstr "Schalen met paneelbreedte"
+
+#: package/contents/ui/ConfigGeneral.qml:39
+#, kde-format
+msgid "Automatically enabled when in Touch Mode"
+msgstr "Automatisch inschakelen wanneer in aanraakmodus"
+
+#: package/contents/ui/ConfigGeneral.qml:49
+#, kde-format
+msgctxt "@label:listbox The spacing between system tray icons in the Panel"
+msgid "Panel icon spacing:"
+msgstr "Ruimte tussen pictogrammen in paneel:"
+
+#: package/contents/ui/ConfigGeneral.qml:52
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Small"
+msgstr "Klein"
+
+#: package/contents/ui/ConfigGeneral.qml:56
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Normal"
+msgstr "Normaal"
+
+#: package/contents/ui/ConfigGeneral.qml:60
+#, kde-format
+msgctxt "@item:inlistbox Icon spacing"
+msgid "Large"
+msgstr "Groot"
+
+#: package/contents/ui/ConfigGeneral.qml:85
+#, kde-format
+msgctxt "@info:usagetip under a combobox when Touch Mode is on"
+msgid "Automatically set to Large when in Touch Mode"
+msgstr "Automatisch instellen op groot wanneer in aanraakmodus"
+
+#: package/contents/ui/ExpandedRepresentation.qml:59
+#, kde-format
+msgctxt "@action:button"
+msgid "Go Back"
+msgstr "Ga terug"
+
+#: package/contents/ui/ExpandedRepresentation.qml:71
+#, kde-format
+msgid "Status and Notifications"
+msgstr "Status en meldingen"
+
+#: package/contents/ui/ExpandedRepresentation.qml:140
+#, kde-format
+msgid "More actions"
+msgstr "Meer acties"
+
+#: package/contents/ui/ExpandedRepresentation.qml:240
+#, kde-format
+msgid "Keep Open"
+msgstr "Open houden"
+
+#: package/contents/ui/ExpanderArrow.qml:26
+#, kde-format
+msgid "Show all the items in the system tray in a popup"
+msgstr "Alle items in het systeemvak in een pop-up tonen"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Close popup"
+msgstr "Pop-up sluiten"
+
+#: package/contents/ui/ExpanderArrow.qml:40
+#, kde-format
+msgid "Show hidden icons"
+msgstr "Verborgen pictogrammen tonen"
+
+#: package/contents/ui/HiddenItemsView.qml:43
+#, kde-format
+msgctxt "Some letters with tall characters, ascenders, descenders, etc"
+msgid "AILlmyjgGJP"
+msgstr "AILlmyjgGJP"
+
+#~ msgid "Some letters with tall characters, ascenders, descenders, etc"
+#~ msgstr "Sommige letters met slanke, verhoogde, verlaagde tekens, etc."
+
+#~ msgid "Expand System Tray"
+#~ msgstr "Systeemvak uitklappen"
+
+#~ msgctxt ""
+#~ "Suffix added to the applet name if the applet is autoloaded via DBus "
+#~ "activation"
+#~ msgid "%1 (Automatic load)"
+#~ msgstr "%1 (automatisch laden)"
+
+#~ msgid "This layout may look odd with a short panel."
+#~ msgstr "Deze indeling kan er vreemd uitzien met een kort paneel."
+
+#~ msgid "This layout may look odd with a narrow panel."
+#~ msgstr "Deze indeling kan er vreemd uitzien met een smal paneel."
+
+#~ msgctxt "The arrangement of system tray icons in the Panel"
+#~ msgid "Panel icon arrangement:"
+#~ msgstr "Ordening van paneelpictogrammen:"
+
+#~ msgid "One row of small icons"
+#~ msgstr "Eén rij met kleine pictogrammen"
+
+#~ msgid "One column of small icons"
+#~ msgstr "Eén kolom met kleine pictogrammen"
+
+#~ msgid "Two rows of small icons"
+#~ msgstr "Twee rijen met kleine pictogrammen"
+
+#~ msgid "Two columns of small icons"
+#~ msgstr "Twee kolommen met kleine pictogrammen"
+
+#~ msgid "One row"
+#~ msgstr "Eén rij"
+
+#~ msgid "One column"
+#~ msgstr "Één kolom"
+
+#~ msgid "Two rows"
+#~ msgstr "Twee rijen"
+
+#~ msgid "Two columns"
+#~ msgstr "Twee kolommen"
+
+#~ msgid "Very Small"
+#~ msgstr "Heel klein"
+
+#~ msgid "Medium"
+#~ msgstr "Middel"
+
+#~ msgid "Huge"
+#~ msgstr "Zeer groot"
+
+#~ msgid "Enormous"
+#~ msgstr "Enorm groot"
+
+#~ msgid "Auto"
+#~ msgstr "Automatisch"
+
+#~ msgid "Shown"
+#~ msgstr "Getoond"
+
+#~ msgid "Hidden"
+#~ msgstr "Verborgen"
+
+#~ msgid "Categories"
+#~ msgstr "Categorieën"
+
+#~ msgid "Extra Items"
+#~ msgstr "Extra items"
+
+#~ msgid "Hide icons"
+#~ msgstr "Pictogrammen verbergen"
+
+#~ msgid "Stat&usNotifier Testap"
+#~ msgstr "Stat&usmelder van Testap"
+
+#~ msgid "Stat&us Notifier"
+#~ msgstr "Stat&usmelder"
+
+#~ msgid ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
+#~ "body></html>"
+#~ msgstr ""
+#~ "<html><head/><body><p><span style=\" font-weight:600;\">Log</span></p></"
+#~ "body></html>"
+
+#~ msgid "<b>Status</b>"
+#~ msgstr "<b>Status</b>"
+
+#~ msgid "Automatic"
+#~ msgstr "Automatisch"
+
+#~ msgid "Passive"
+#~ msgstr "Passief"
+
+#~ msgid "Ac&tive"
+#~ msgstr "Ac&tief"
+
+#~ msgid "&NeedsAttention"
+#~ msgstr "&HeeftAandachtNodig"
+
+#~ msgid "<b>Icon</b>"
+#~ msgstr "<b>Pictogram</b>"
+
+#~ msgid "<b>ToolTip</b>"
+#~ msgstr "<b>Tekstballon</b>"
+
+#~ msgid "Update"
+#~ msgstr "Bijwerken"
+
+#~ msgid "&Jobs"
+#~ msgstr "&Taken"
+
+#~ msgid "<b>Job Control</b>"
+#~ msgstr "<b>Taakbesturing</b>"
+
+#~ msgid "<b>Progress</b>"
+#~ msgstr "<b>Voortgang</b>"
+
+#~ msgid "<b>Naming</b>"
+#~ msgstr "<b>Naamgeving</b>"
+
+#~ msgid "Job Started"
+#~ msgstr "Taak gestart"
+
+#~ msgid "Pump Job"
+#~ msgstr "Pomptaak"
+
+#~ msgid "Source"
+#~ msgstr "Bron"
+
+#~ msgid "Destination"
+#~ msgstr "Bestemming"
+
+#~ msgid "Testing kuiserver (%1 seconds remaining)"
+#~ msgstr "Testen van kuiserver (%1 seconden over)"
+
+#~| msgid "System Services"
+#~ msgctxt "tooltip title"
+#~ msgid "System Service Item"
+#~ msgstr "Systeemservice-item"
+
+#~| msgid "Status & Notifications"
+#~ msgctxt "title"
+#~ msgid "StatusNotifierTest"
+#~ msgstr "StatusNotifierTest"
+
+#~ msgctxt "tooltip subtitle"
+#~ msgid "Some explanation from the beach."
+#~ msgstr "Enige uitleg vanaf het strand."
+
+#~ msgid "System Tray Options"
+#~ msgstr "Opties voor het systeemvak"
+
+#~ msgctxt "%1 is the name of the containment"
+#~ msgid "%1 Options"
+#~ msgstr "%1-opties"
