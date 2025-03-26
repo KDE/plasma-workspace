@@ -21,7 +21,7 @@ import org.kde.plasma.kcm.wallpaper
 import org.kde.plasma.configuration 2.0
 
 // Not using AbstractKCM because we're not using any of it features, not even one
-Kirigami.Page {
+Kirigami.ScrollablePage {
     id: appearanceRoot
 
     title: i18nc("@title:window", "Wallpaper")
@@ -62,7 +62,8 @@ Kirigami.Page {
     }
 
     ColumnLayout {
-        anchors.fill: parent
+        height: Math.max(implicitHeight, appearanceRoot.availableHeight)
+        width: appearanceRoot.availableWidth
 
         spacing: 0
 
@@ -119,6 +120,7 @@ Kirigami.Page {
 
         QQC2.StackView {
             id: main
+            implicitHeight: main.empty ? 0 : (currentItem?.implicitHeight ?? 0)
 
             Layout.fillHeight: true;
             Layout.fillWidth: true;
@@ -132,7 +134,7 @@ Kirigami.Page {
             }
 
             Connections {
-                enabled: main.currentItem.hasOwnProperty("saveConfig")
+                enabled: main.currentItem?.hasOwnProperty("saveConfig") ?? false
                 target: kcm
                 function onSettingsSaved() { main.currentItem.saveConfig(); }
             }
