@@ -134,6 +134,11 @@ QStringList OutputOrderWatcher::outputOrder() const
     return m_outputOrder;
 }
 
+bool OutputOrderWatcher::isReorderPending() const
+{
+    return m_reorderPending;
+}
+
 X11OutputOrderWatcher::X11OutputOrderWatcher(QObject *parent)
     : OutputOrderWatcher(parent)
     , m_x11Interface(qGuiApp->nativeInterface<QNativeInterface::QX11Application>())
@@ -336,6 +341,7 @@ WaylandOutputOrderWatcher::WaylandOutputOrderWatcher(QObject *parent)
         m_pendingOutputOrder = order;
 
         if (hasAllScreens()) {
+            m_reorderPending = false;
             if (m_pendingOutputOrder != m_outputOrder) {
                 m_outputOrder = m_pendingOutputOrder;
                 Q_EMIT outputOrderChanged(m_outputOrder);
@@ -372,8 +378,11 @@ void WaylandOutputOrderWatcher::refresh()
     }
 
     if (!hasAllScreens()) {
+        m_reorderPending = true;
         return;
     }
+
+    m_reorderPending = false;
 
     if (m_outputOrder != m_pendingOutputOrder) {
         m_outputOrder = m_pendingOutputOrder;

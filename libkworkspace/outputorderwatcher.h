@@ -45,6 +45,18 @@ public:
     QStringList outputOrder() const;
 
     /**
+     * Returns true if a reorder is pending and the current state
+     * is not to be considered internally consistent yet.
+     * This can happen in Wayland when order changes and screen add/removals
+     * are done in quick succession.
+     * When This is true, a screen that has been removed or that has not been added yet
+     * might be in outputOrder.
+     * If this is false, the internal state is guaranteed to be consistent and all
+     * output names in outputOrder have an 1:1 correspondence with QGuiApplication::screens()
+     */
+    bool isReorderPending() const;
+
+    /**
      * @internal
      * For X11 we know libkscreen takes a server grab whilst changing properties.
      * This means we know at the time of any runtime screen addition and removal the priorities will
@@ -75,6 +87,7 @@ protected:
 
     QStringList m_outputOrder;
     bool m_orderProtocolPresent = false;
+    bool m_reorderPending = false;
 
 private:
 };
