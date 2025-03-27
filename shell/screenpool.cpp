@@ -281,11 +281,6 @@ void ScreenPool::handleScreenRemoved(QScreen *screen)
 
 void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 {
-    if (m_outputOrderWatcher->isReorderPending()) {
-        qCDebug(SCREENPOOL) << "Not executing handleOutputOrderChanged as the output order is in a pending state";
-        return;
-    }
-
     qCDebug(SCREENPOOL) << "handleOutputOrderChanged" << newOrder;
 
     QHash<QString, QScreen *> connMap;
@@ -298,10 +293,12 @@ void ScreenPool::handleOutputOrderChanged(const QStringList &newOrder)
 
     for (const auto &c : newOrder) {
         // When a screen is removed we reevaluate the order, but the order changed signal may not have happened yet,
-        // so filter out outputs which now are invalid
+        // If this is the case we should not do anything, to not propagate a partly inconsistent state in ScreenPool as well
         if (!connMap.contains(c)) {
-            continue;
+            return;
         }
+    }
+    for (const auto &c : newOrder) {
         auto *s = connMap[c];
         if (!m_sizeSortedScreens.contains(s)) {
             // BUG 483432: This can happen when an external monitor is connected, but the internal monitor emits QScreen::geometryChanged
@@ -364,8 +361,6 @@ void ScreenPool::screenInvariants()
         return message;
     };
 
-    Q_ASSERT_X(!m_outputOrderWatcher->isReorderPending(), Q_FUNC_INFO, qUtf8Printable(debugMessage()));
-
     // Is the primary connector in sync with the actual primaryScreen? The only way it can get out of sync with primaryConnector() is the single fake screen/no
     // real outputs scenario
     Q_ASSERT_X(noRealOutputsConnected() || !m_availableScreens.isEmpty(),
@@ -423,9 +418,6 @@ QDebug operator<<(QDebug debug, const ScreenPool *pool)
     debug << "All screens, ordered by size:\t" << pool->m_sizeSortedScreens << '\n';
     debug << "All screen that QGuiApplication knows:\t" << qGuiApp->screens() << '\n';
     debug << "Screen order from outputOrderWatcher" << pool->m_outputOrderWatcher->outputOrder() << '\n';
-    if (pool->m_outputOrderWatcher->isReorderPending()) {
-        debug << "outputOrderWatcher is in an inconsistent state";
-    }
     return debug;
 }
 
