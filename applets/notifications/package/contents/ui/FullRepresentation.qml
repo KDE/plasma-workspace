@@ -428,6 +428,9 @@ PlasmaExtras.Representation {
                     readonly property Components.ModelInterface modelInterface: Components.ModelInterface {
                         notificationType: model.type
 
+                        hasSomeActions: (model.hasDefaultAction || false) || (model.actionLabels || []).length > 0 || (model.configureActionLabel.length || "").length > 0 || (model.hasReplyAction || false)
+                        hasReplyAction: model.hasReplyAction || false
+
                         inGroup: model.isInGroup
                         inHistory: true
 
@@ -454,6 +457,14 @@ PlasmaExtras.Representation {
 
                         urls: model.urls || []
 
+                        defaultActionLabel: model.defaultActionLabel || i18nc("@action:button", "View")
+
+                        // In the popup the default action is triggered by clicking on the popup
+                        // however in the list this is undesirable, so instead show a clickable button
+                        // in case you have a non-expired notification in history (do not disturb mode)
+                        // unless it has the same label as an action
+                        addDefaultAction: (model.hasDefaultAction && (model.actionLabels || []).indexOf(model.defaultActionLabel || i18nc("@action:button", "View")) === -1) ? true : false
+
                         jobState: model.jobState || 0
                         percentage: model.percentage || 0
                         jobError: model.jobError || 0
@@ -463,22 +474,8 @@ PlasmaExtras.Representation {
 
                         configureActionLabel: model.configureActionLabel || ""
 
-                        actionNames: {
-                            // This syntax actually ensures model.actionNames is copied and not a reference
-                            // otherwise we modify model.actionNames and we have a binding loop
-                            let names = [... (model.actionNames || [])];
-                            if (delegateLoader.addDefaultAction) {
-                                names.unshift("default"); // prepend
-                            }
-                            return names;
-                        }
-                        actionLabels: {
-                            let labels = [... (model.actionLabels || [])];
-                            if (delegateLoader.addDefaultAction) {
-                                labels.unshift(model.defaultActionLabel);
-                            }
-                            return labels;
-                        }
+                        actionNames: model.actionNames || []
+                        actionLabels: model.actionLabels || []
 
                         onCloseClicked: delegate.close()
 
@@ -489,13 +486,20 @@ PlasmaExtras.Representation {
                         onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 
                         onActionInvoked: {
-                            if (actionName === "default") {
-                                historyModel.invokeDefaultAction(historyModel.index(index, 0));
-                            } else {
-                                historyModel.invokeAction(historyModel.index(index, 0), actionName);
-                            }
+                            // We close any non-resident notification (even those that still may have some actions)
+                            // because the assumption is that once the notification has been interacted with, it may
+                            // safely lose interaction capabilities (since the user is now likely in the app itself).
+                            //
+                            // The alternative to this would have the downside that notifications whose apps have been
+                            // closed will keep their buttons in the notification history. This way, invoking an action
+                            // will make the notification actually disappear (as is common on other operating systems).
+                            const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
 
-                            delegateLoader.expire();
+                            if (actionName === "default") {
+                                historyModel.invokeDefaultAction(historyModel.index(index, 0), behavior);
+                            } else {
+                                historyModel.invokeAction(historyModel.index(index, 0), actionName, behavior);
+                            }
                         }
                         onOpenUrl: {
                             Qt.openUrlExternally(url);
@@ -508,19 +512,16 @@ PlasmaExtras.Representation {
                                 delegateLoader.expire();
                             }
                         }
+                        onReplied: text => {
+                            const behavior = model.resident ? NotificationManager.Notifications.None : NotificationManager.Notifications.Close;
+                            historyModel.reply(historyModel.index(index, 0), text, behavior);
+                        }
 
                         onSuspendJobClicked: historyModel.suspendJob(historyModel.index(index, 0))
                         onResumeJobClicked: historyModel.resumeJob(historyModel.index(index, 0))
                         onKillJobClicked: historyModel.killJob(historyModel.index(index, 0))
                     }
 
-                    // In the popup the default action is triggered by clicking on the popup
-                    // however in the list this is undesirable, so instead show a clickable button
-                    // in case you have a non-expired notification in history (do not disturb mode)
-                    // unless it has the same label as an action
-                    readonly property bool addDefaultAction: (model.hasDefaultAction
-                                                            && model.defaultActionLabel
-                                                            && (model.actionLabels || []).indexOf(model.defaultActionLabel) === -1) ? true : false
                     function expire() {
                         if (model.resident) {
                             model.expired = true;

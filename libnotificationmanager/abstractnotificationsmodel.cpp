@@ -12,6 +12,7 @@
 
 #include "notification_p.h"
 
+#include <QDBusConnection>
 #include <QDebug>
 #include <QProcess>
 #include <QTextDocumentFragment>
@@ -49,6 +50,21 @@ AbstractNotificationsModel::Private::Private(AbstractNotificationsModel *q)
 
         removeRows(rowsToBeRemoved);
     });
+
+    notificationWatcher.setConnection(QDBusConnection::sessionBus());
+    notificationWatcher.setWatchMode(QDBusServiceWatcher::WatchForUnregistration);
+    // Forcibly expire the notification once the owning application exits, in order to
+    // remove the interactive buttons from the notification in the history and/or make the
+    // popup disappear.
+    connect(&notificationWatcher, &QDBusServiceWatcher::serviceUnregistered, q, [this, q](const QString &serviceName) {
+        for (const Notification &notification : std::as_const(notifications)) {
+            if (notification.dBusService() == serviceName) {
+                q->expire(notification.id());
+            }
+        }
+
+        notificationWatcher.removeWatchedService(serviceName);
+    });
 }
 
 AbstractNotificationsModel::Private::~Private()
@@ -76,6 +92,11 @@ void AbstractNotificationsModel::Private::onNotificationAdded(const Notification
     }
 
     setupNotificationTimeout(notification);
+    // Only set up watchers for notifications with actions, since some apps (e.g. `notify-send`) may just
+    // dispatch a notification and then immediately exit
+    if (notification.hasDefaultAction() || notification.hasReplyAction() || !notification.actionNames().empty()) {
+        notificationWatcher.addWatchedService(notification.dBusService());
+    }
 
     q->beginInsertRows(QModelIndex(), notifications.count(), notifications.count());
     notifications.append(std::move(notification));

@@ -81,6 +81,13 @@ PlasmaComponents3.StackView {
                     });
                 }
 
+                if (actionContainer.modelInterface.inHistory && actionContainer.modelInterface.addDefaultAction) {
+                    buttons.unshift({
+                        actionName: "default",
+                        label: actionContainer.modelInterface.defaultActionLabel
+                    });
+                }
+
                 return buttons;
             }
 

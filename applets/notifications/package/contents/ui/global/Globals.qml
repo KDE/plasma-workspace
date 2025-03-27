@@ -473,6 +473,8 @@ QtObject {
             // so Instantiator can access that after the model row is gone
             readonly property var notificationId: model.notificationId
 
+            readonly property bool hasSomeActions: (model.hasDefaultAction || false) || (model.actionLabels || []).length > 0 || (model.configureActionLabel.length || "").length > 0 || (model.hasReplyAction || false)
+
             popupWidth: globals.popupWidth
 
             isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && notificationSettings.keepNormalAlwaysOnTop)
@@ -615,9 +617,11 @@ QtObject {
 
             onHoverEntered: model.read = true
             onExpired: {
-                if (model.resident) {
+                if (model.resident || hasSomeActions) {
                     // When resident, only mark it as expired so the popup disappears
-                    // but don't actually invalidate the notification
+                    // but don't actually invalidate the notification.
+                    // Also don't invalidate if the popup has any actions,
+                    // so it remains usable in history.
                     model.expired = true;
                 } else {
                     popupNotificationsModel.expire(popupNotificationsModel.index(index, 0))

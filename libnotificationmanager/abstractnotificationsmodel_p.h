@@ -9,6 +9,7 @@
 #include "notification.h"
 #include "server.h"
 
+#include <QDBusServiceWatcher>
 #include <QDateTime>
 #include <QTimer>
 
@@ -35,6 +36,13 @@ public:
     // otherwise when it isn't shown to the user and doesn't expire
     // an app might wait indefinitely for the notification to do so
     QHash<uint /*notificationId*/, QTimer *> notificationTimeouts;
+
+    // Some apps clean up their own notifications on exit, but for
+    // those that don't, we need to manually expire the notifications.
+    // Otherwise, we will be left with notifications in the history with
+    // buttons, making it seem as though they are interactive, even though
+    // they are not.
+    QDBusServiceWatcher notificationWatcher;
 
     QList<uint /*notificationId*/> pendingRemovals;
     QTimer pendingRemovalTimer;

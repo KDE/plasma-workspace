@@ -52,6 +52,10 @@ QtObject {
     property var actionNames: []
     property var actionLabels: []
     property bool hasDefaultAction
+    property bool hasSomeActions
+
+    property bool addDefaultAction: false
+    property string defaultActionLabel
 
     property bool hasReplyAction
     property string replyActionLabel

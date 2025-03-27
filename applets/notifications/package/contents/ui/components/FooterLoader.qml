@@ -24,8 +24,8 @@ Loader {
         if (modelInterface.notificationType === NotificationManager.Notifications.JobType) {
             return jobComponent;
         } else if (modelInterface.urls.length > 0) {
-            return thumbnailComponent
-        } else if (modelInterface.actionNames.length > 0 || modelInterface.hasReplyAction) {
+            return thumbnailComponent;
+        } else if ((modelInterface.inHistory && modelInterface.hasSomeActions) || (modelInterface.actionNames.length > 0 || modelInterface.hasReplyAction)) {
             return actionComponent;
         }
         return null;
