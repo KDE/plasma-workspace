@@ -4,13 +4,13 @@
 # Franklin Weng <franklin at goodhorse dot idv dot tw>, 2013, 2014, 2015.
 # Jeff Huang <s8321414@gmail.com>, 2016, 2017.
 # pan93412 <pan93412@gmail.com>, 2018, 2020.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-25 00:43+0000\n"
-"PO-Revision-Date: 2024-09-10 02:27+0900\n"
+"PO-Revision-Date: 2025-03-26 18:22+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/config/config.qml:13
 #, kde-format
@@ -65,12 +65,17 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"請先試著在 <application>%1</application> 的設定裡尋找停用系統匣圖示的選項，如"
+"果它沒有提供的時候再考慮從此處停用它。有些應用程式並未考量系統匣圖示可能被停"
+"用，而使用這個設定來停用它可能會造成這種應用程式發生未預期的行為。<nl/><nl/>"
+"請只在瞭解風險的時候再使用這個設定，而如果發生問題的時候也請避免回報它給 KDE "
+"或該應用程式的作者。"
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "我瞭解風險"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format

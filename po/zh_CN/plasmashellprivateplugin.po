@@ -300,7 +300,7 @@ msgstr "在线服务"
 #: shellprivate/widgetexplorer.cpp:125
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr ""
+msgstr "个人信息"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
