@@ -182,23 +182,20 @@ Kirigami.ScrollablePage {
                 if (wallpaperConfig && wallpaperPluginSource) {
                     var props = {
                         "configDialog": kcm,
-                        "screen": kcm.selectedScreen,
                         "wallpaperConfiguration": wallpaperConfig
                     };
 
-                    wallpaperConfig.keys().forEach(key => {
-                        // Preview is not part of the config, only of the WallpaperObject
-                        if (!key.startsWith("Preview")) {
-                            props["cfg_" + key] = wallpaperConfig[key];
-                        }
-                    });
-
                     var newItem = replace(Qt.resolvedUrl(wallpaperPluginSource), props)
+
+                    if ("screen" in newItem) {
+                        newItem.screen = kcm.selectedScreen
+                    }
 
                     wallpaperConfig.keys().forEach(key => {
                         const cfgKey = "cfg_" + key;
-                        if (cfgKey in main.currentItem) {
-                            var changedSignal = main.currentItem[cfgKey + "Changed"]
+                        if (cfgKey in newItem) {
+                            newItem[cfgKey] = wallpaperConfig[key];
+                            let changedSignal = main.currentItem[cfgKey + "Changed"]
                             if (changedSignal) {
                                 changedSignal.connect(appearanceRoot.onConfigurationChanged)
                             }
