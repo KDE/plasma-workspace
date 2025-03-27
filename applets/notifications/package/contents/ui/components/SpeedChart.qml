@@ -38,18 +38,20 @@ Item {
         function appendSpeed(processedBytes, speed) {
             let speedChange = speed - root.previousSpeed
 
-            let processed = Math.round(processedBytes / root.resolution)
-            let processedChange = processed - root.previousProcessed
+            if (root.resolution > 0) {
+                let processed = Math.round(processedBytes / root.resolution)
+                let processedChange = processed - root.previousProcessed
 
-            if (processedChange > 0) {
-                let newSpeed = root.previousSpeed
-                for (let i = 0; i < processedChange; ++i) {
-                    newSpeed += speedChange / processedChange
-                    dataSource.append({data: newSpeed})
+                if (processedChange > 0) {
+                    let newSpeed = root.previousSpeed
+                    for (let i = 0; i < processedChange; ++i) {
+                        newSpeed += speedChange / processedChange
+                        dataSource.append({data: newSpeed})
+                    }
+
+                    root.previousProcessed = processed
+                    root.previousSpeed = speed
                 }
-
-                root.previousProcessed = processed
-                root.previousSpeed = speed
             }
         }
     }
