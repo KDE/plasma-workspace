@@ -464,13 +464,13 @@ PlasmaExtras.Representation {
                         configureActionLabel: model.configureActionLabel || ""
 
                         actionNames: {
-                            // This syntax actually ensures model.actions is copied and not a reference
-                            // otherwise we modify model.actions and we have a binding loop
-                            let actions = [... (model.actions || [])];
+                            // This syntax actually ensures model.actionNames is copied and not a reference
+                            // otherwise we modify model.actionNames and we have a binding loop
+                            let names = [... (model.actionNames || [])];
                             if (delegateLoader.addDefaultAction) {
-                                actions.unshift("default"); // prepend
+                                names.unshift("default"); // prepend
                             }
-                            return actions;
+                            return names;
                         }
                         actionLabels: {
                             let labels = [... (model.actionLabels || [])];
