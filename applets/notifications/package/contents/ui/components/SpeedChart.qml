@@ -149,6 +149,8 @@ Item {
             fillColorSource: Charts.SingleValueSource {
                 value: Qt.lighter(Kirigami.Theme.highlightColor, 1.5)
             }
+
+            Accessible.role: Accessible.Chart
         }
 
         ChartsControls.Legend {
