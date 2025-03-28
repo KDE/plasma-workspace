@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-24 00:43+0000\n"
+"POT-Creation-Date: 2025-03-28 00:43+0000\n"
 "PO-Revision-Date: 2024-02-11 12:13+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -218,10 +218,10 @@ msgstr[1] "%1 elementy"
 msgstr[2] "%1 elementów"
 
 #: package/contents/ui/components/JobDetails.qml:144
-#: package/contents/ui/components/SpeedChart.qml:68
-#: package/contents/ui/components/SpeedChart.qml:93
-#: package/contents/ui/components/SpeedChart.qml:181
-#: package/contents/ui/components/SpeedChart.qml:192
+#: package/contents/ui/components/SpeedChart.qml:70
+#: package/contents/ui/components/SpeedChart.qml:95
+#: package/contents/ui/components/SpeedChart.qml:183
+#: package/contents/ui/components/SpeedChart.qml:194
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -274,17 +274,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Wyślij"
 
-#: package/contents/ui/components/SpeedChart.qml:140
+#: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:188
+#: package/contents/ui/components/SpeedChart.qml:190
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:245
+#: package/contents/ui/components/SpeedChart.qml:247
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
@@ -377,35 +377,42 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Ekrany są lustrzanie odbite"
 
-#: package/contents/ui/FullRepresentation.qml:546
+#: package/contents/ui/FullRepresentation.qml:460
+#: package/contents/ui/FullRepresentation.qml:466
+#, kde-format
+msgctxt "@action:button"
+msgid "View"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:547
 #, kde-format
 msgid "Close Group"
 msgstr "Zamknij grupę"
 
-#: package/contents/ui/FullRepresentation.qml:568
+#: package/contents/ui/FullRepresentation.qml:569
 #, kde-format
 msgid "Show Fewer"
 msgstr "Wyświetl mniej"
 
-#: package/contents/ui/FullRepresentation.qml:570
+#: package/contents/ui/FullRepresentation.qml:571
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Wyświetl %1 więcej"
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:600
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
 msgstr "Brak nieprzeczytanych powiadomień"
 
-#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/FullRepresentation.qml:615
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
 msgstr "Usługa powiadomień jest niedostępna"
 
-#: package/contents/ui/FullRepresentation.qml:616
+#: package/contents/ui/FullRepresentation.qml:617
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

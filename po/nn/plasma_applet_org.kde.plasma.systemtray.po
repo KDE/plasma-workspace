@@ -1,4 +1,4 @@
-# Translation of plasma_applet_org.kde.plasma.private.systemtray to Norwegian Nynorsk
+# Translation of plasma_applet_org.kde.plasma.systemtray to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
 msgid ""

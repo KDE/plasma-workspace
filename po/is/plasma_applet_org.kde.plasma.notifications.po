@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-24 00:43+0000\n"
+"POT-Creation-Date: 2025-03-28 00:43+0000\n"
 "PO-Revision-Date: 2024-12-13 21:23+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -212,10 +212,10 @@ msgstr[0] "%1 atriði"
 msgstr[1] "%1 atriði"
 
 #: package/contents/ui/components/JobDetails.qml:144
-#: package/contents/ui/components/SpeedChart.qml:68
-#: package/contents/ui/components/SpeedChart.qml:93
-#: package/contents/ui/components/SpeedChart.qml:181
-#: package/contents/ui/components/SpeedChart.qml:192
+#: package/contents/ui/components/SpeedChart.qml:70
+#: package/contents/ui/components/SpeedChart.qml:95
+#: package/contents/ui/components/SpeedChart.qml:183
+#: package/contents/ui/components/SpeedChart.qml:194
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -268,17 +268,17 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Senda"
 
-#: package/contents/ui/components/SpeedChart.qml:140
+#: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:188
+#: package/contents/ui/components/SpeedChart.qml:190
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:245
+#: package/contents/ui/components/SpeedChart.qml:247
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
@@ -371,35 +371,42 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Skjáir eru speglaðir"
 
-#: package/contents/ui/FullRepresentation.qml:546
+#: package/contents/ui/FullRepresentation.qml:460
+#: package/contents/ui/FullRepresentation.qml:466
+#, kde-format
+msgctxt "@action:button"
+msgid "View"
+msgstr ""
+
+#: package/contents/ui/FullRepresentation.qml:547
 #, kde-format
 msgid "Close Group"
 msgstr "Loka flokki"
 
-#: package/contents/ui/FullRepresentation.qml:568
+#: package/contents/ui/FullRepresentation.qml:569
 #, kde-format
 msgid "Show Fewer"
 msgstr "Sýna færri"
 
-#: package/contents/ui/FullRepresentation.qml:570
+#: package/contents/ui/FullRepresentation.qml:571
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Birta %1 til viðbótar"
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:600
 #: package/contents/ui/main.qml:105
 #, kde-format
 msgid "No unread notifications"
 msgstr "Engar ólesnar tilkynningar"
 
-#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/FullRepresentation.qml:615
 #: package/contents/ui/main.qml:79
 #, kde-format
 msgid "Notification service not available"
 msgstr "Tilkynningaþjónusta ekki tiltæk"
 
-#: package/contents/ui/FullRepresentation.qml:616
+#: package/contents/ui/FullRepresentation.qml:617
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
