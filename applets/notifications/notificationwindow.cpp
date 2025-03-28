@@ -65,6 +65,18 @@ void NotificationWindow::setIsCritical(bool critical)
     Q_EMIT isCriticalChanged();
 }
 
+bool NotificationWindow::event(QEvent *e)
+{
+    // moveEvents only occur when we have a platform window, so we need to explicitly sync on creation
+    if (e->type() == QEvent::PlatformSurface) {
+        auto ps = static_cast<QPlatformSurfaceEvent *>(e);
+        if (ps->surfaceEventType() == QPlatformSurfaceEvent::SurfaceCreated) {
+            PlasmaShellWaylandIntegration::get(this)->setPosition(QPoint(x(), y()));
+        }
+    }
+    return PlasmaWindow::event(e);
+}
+
 void NotificationWindow::moveEvent(QMoveEvent *me)
 {
     PlasmaShellWaylandIntegration::get(this)->setPosition(me->pos());
