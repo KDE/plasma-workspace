@@ -23,6 +23,7 @@ public:
     void setIsCritical(bool critical);
 
 protected:
+    bool event(QEvent *e) override;
     void moveEvent(QMoveEvent *) override;
 Q_SIGNALS:
     void takeFocusChanged();
