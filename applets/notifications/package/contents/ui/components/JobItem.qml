@@ -58,6 +58,8 @@ ColumnLayout {
             text: i18ndc("plasma_applet_org.kde.plasma.notifications", "Hides/expands item details", "Details")
             checkable: modelInterface.jobDetails && modelInterface.jobDetails.hasDetails
             visible: checkable
+
+            Accessible.onPressAction: if (checkable) toggle()
         }
 
         Item { Layout.fillWidth: true }

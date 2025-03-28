@@ -8,6 +8,7 @@ import logging
 import os
 import shutil
 import subprocess
+import sys
 import tempfile
 import time
 import unittest
@@ -24,8 +25,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 gi.require_version('Gdk', '4.0')
 gi.require_version('GdkPixbuf', '2.0')
 from gi.repository import Gdk, GdkPixbuf, Gio, GLib
-
 from kicker.favoritetest import start_kactivitymanagerd
+from notificationstest.jobnotificationinterface import JobNotificationControlInterface
 
 WIDGET_ID: Final = "org.kde.plasma.notifications"
 KDE_VERSION: Final = 6
@@ -378,7 +379,46 @@ class NotificationsTest(unittest.TestCase):
             WebDriverWait(self.driver, 10).until(match_image)
             self.close_notifications()
 
-    def test_7_do_not_disturb(self) -> None:
+    def test_7_job_notification(self) -> None:
+        """
+        https://bugs.kde.org/show_bug.cgi?id=501991
+        """
+        try:
+            from PySide6.QtCore import QObject
+        except ModuleNotFoundError:
+            self.skipTest("PySide is not available")
+
+        asan_env = os.environ.copy()
+        asan_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
+        proc = subprocess.Popen(["python3", os.path.join(os.path.dirname(os.path.abspath(__file__)), "notificationstest", "jobnotification.py")], stdout=sys.stderr, stderr=sys.stderr, env=asan_env)
+        self.addCleanup(proc.kill)
+        self.driver.find_element(AppiumBy.NAME, "10%")
+        self.driver.find_element(AppiumBy.XPATH, "//notification[contains(@description, '1 file')]")
+        self.driver.find_element(AppiumBy.NAME, "Pause").click()
+        self.driver.find_element(AppiumBy.NAME, "Resume").click()
+        self.driver.find_element(AppiumBy.XPATH, "//button[@name='Details' and contains(@accessibility-id, 'NotificationPopup')]").click()  # Expand details in the popup
+
+        # Change progress to 20%
+        session_bus: Gio.DBusConnection = Gio.bus_get_sync(Gio.BusType.SESSION)
+        session_bus.call_sync(JobNotificationControlInterface.BUS_NAME, JobNotificationControlInterface.OBJECT_PATH, JobNotificationControlInterface.BUS_NAME, "SetProcessedAmount", GLib.Variant("(t)", [1024 * 1024 * 2]), None, Gio.DBusSendMessageFlags.NONE, 1000)
+        self.driver.find_element(AppiumBy.NAME, "20%")
+        self.driver.find_element(AppiumBy.NAME, "8 s remaining")
+        self.driver.find_element(AppiumBy.NAME, "1.0 MiB/s")
+        self.driver.find_element(AppiumBy.XPATH, "//chart[contains(@accessibility-id, 'LineChart')]")
+
+        # Change progress to 50%
+        session_bus.call_sync(JobNotificationControlInterface.BUS_NAME, JobNotificationControlInterface.OBJECT_PATH, JobNotificationControlInterface.BUS_NAME, "SetProcessedAmount", GLib.Variant("(t)", [1024 * 1024 * 5]), None, Gio.DBusSendMessageFlags.NONE, 1000)
+        self.driver.find_element(AppiumBy.NAME, "50%")
+        self.driver.find_element(AppiumBy.NAME, "2 s remaining")
+        self.driver.find_element(AppiumBy.NAME, "3.0 MiB/s")
+
+        # Change progress to 100%. The job should emit finished signal.
+        session_bus.call_sync(JobNotificationControlInterface.BUS_NAME, JobNotificationControlInterface.OBJECT_PATH, JobNotificationControlInterface.BUS_NAME, "SetProcessedAmount", GLib.Variant("(t)", [1024 * 1024 * 10]), None, Gio.DBusSendMessageFlags.NONE, 1000)
+        self.driver.find_element(AppiumBy.NAME, "Job Finished")
+        self.driver.find_element(AppiumBy.XPATH, "//notification[contains(@description, 'file:///home/foobar/test.txt')]")
+        proc.wait(10)
+
+    def test_8_do_not_disturb(self) -> None:
         """
         Suppress inhibited notifications after "Do not disturb" is turned off, and show a summary for unread inhibited notifications.
         """
