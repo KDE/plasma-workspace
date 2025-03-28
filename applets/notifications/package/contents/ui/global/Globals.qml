@@ -473,7 +473,7 @@ QtObject {
             // so Instantiator can access that after the model row is gone
             readonly property var notificationId: model.notificationId
 
-            readonly property bool hasSomeActions: (model.hasDefaultAction || false) || (model.actionLabels || []).length > 0 || (model.configureActionLabel.length || "").length > 0 || (model.hasReplyAction || false)
+            readonly property bool hasSomeActions: (model.hasDefaultAction || false) || (model.actionLabels || []).length > 0 || (model.configureActionLabel || "").length > 0 || (model.hasReplyAction || false)
 
             popupWidth: globals.popupWidth
 
