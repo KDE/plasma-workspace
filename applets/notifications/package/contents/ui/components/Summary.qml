@@ -23,7 +23,8 @@ Kirigami.Heading {
 
     textFormat: Text.PlainText
     maximumLineCount: 3
-    wrapMode: Text.WordWrap
+    // WordWrap fails for long unbroken text e.g. URLs
+    wrapMode: Text.Wrap
     elide: Text.ElideRight
     level: 4
     // Give it a bit more visual prominence than the app name in the header
