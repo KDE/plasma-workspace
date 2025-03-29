@@ -48,7 +48,6 @@ BaseDelegate {
 
         Layout.fillWidth: true
         Layout.columnSpan: 2
-        Layout.alignment: Qt.AlignTop
 
         Components.Summary {
             id: summaryLabel
@@ -70,6 +69,7 @@ BaseDelegate {
     Components.Body {
         id: bodyLabel
         Layout.fillWidth: true
+        visible: delegateRoot.hasBodyText
         modelInterface: delegateRoot.modelInterface
     }
 
