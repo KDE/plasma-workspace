@@ -662,7 +662,13 @@ bool Notification::hasDefaultAction() const
 
 QString Notification::defaultActionLabel() const
 {
-    return d->defaultActionLabel;
+    // Most apps don't expect the default action be visible to the user.
+    // For KDE apps we can assume KNotification does something reasonable.
+    if (!d->notifyRcName.isEmpty() && d->notifyRcName != Private::defaultComponentName()) {
+        return d->defaultActionLabel;
+    } else {
+        return QString(); // Let the UI pick a sensible default.
+    }
 }
 
 void Notification::setActions(const QStringList &actions)
