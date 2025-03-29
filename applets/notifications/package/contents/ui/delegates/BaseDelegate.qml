@@ -30,7 +30,7 @@ GridLayout {
                                      || Boolean(footer?.menuOpen)
     readonly property bool dragging: Boolean(icon?.dragging) || Boolean(footer?.dragging)
 
-    rowSpacing: Kirigami.Units.smallSpacing
+    rowSpacing: 0
     columnSpacing: Kirigami.Units.smallSpacing
 
     Accessible.role: Accessible.NoRole
