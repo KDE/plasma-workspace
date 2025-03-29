@@ -95,7 +95,10 @@ GridLayout {
             Layout.row: 2 + index
             Layout.fillWidth: true
             text: {
-                var processed = modelInterface.jobDetails["processed" + modelData];
+                let rawProcessed = modelInterface.jobDetails["processed" + modelData];
+                // Format number to not display as exponential
+                processed = rawProcessed.toLocaleString(Qt.locale(), 'f', 0);
+
                 var total = modelInterface.jobDetails["total" + modelData];
 
                 if (processed > 0 || total > 1) {
@@ -103,8 +106,8 @@ GridLayout {
                         switch(modelData) {
                         case "Bytes":
                             return i18ndc("plasma_applet_org.kde.plasma.notifications", "How many bytes have been copied", "%2 of %1",
-                                KCoreAddons.Format.formatByteSize(total),
-                                KCoreAddons.Format.formatByteSize(processed))
+                                KCoreAddons.Format.formatByteSize(total).toLocaleString(Qt.locale(), 'f', 0),
+                                KCoreAddons.Format.formatByteSize(processed)).toLocaleString(Qt.locale(), 'f', 0)
                         case "Files":
                             return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many files have been copied", "%2 of %1 file", "%2 of %1 files",
                                           total, processed);
