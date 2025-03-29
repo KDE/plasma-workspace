@@ -58,7 +58,7 @@ BaseDelegate {
         Layout.row: 1
         Layout.columnSpan: delegateRoot.__firstColumn + 2
         // Hug the top, left, and right
-        Layout.topMargin: -((delegateRoot.columnSpacing * 2) + height)
+        Layout.topMargin: -((delegateRoot.rowSpacing * 2) + height)
         Layout.leftMargin: -delegateRoot.modelInterface.popupLeftPadding
         Layout.rightMargin: -delegateRoot.modelInterface.popupRightPadding
         implicitHeight: 2
