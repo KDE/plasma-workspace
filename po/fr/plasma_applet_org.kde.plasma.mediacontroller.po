@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:44+0000\n"
 "PO-Revision-Date: 2025-02-11 09:46+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -108,6 +108,13 @@ msgstr "Répéter la piste"
 msgid "Repeat"
 msgstr "Répéter"
 
+#: package/contents/ui/ExpandedRepresentation.qml:798
+#, fuzzy, kde-format
+#| msgid "Choose player automatically"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "Sélectionner un lecteur automatiquement"
+
 #: package/contents/ui/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
@@ -173,9 +180,6 @@ msgstr "Arrêter"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Quitter"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Sélectionner un lecteur automatiquement"
 
 #~ msgid "General"
 #~ msgstr "Général"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:44+0000\n"
 "PO-Revision-Date: 2025-02-10 08:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -105,6 +105,12 @@ msgstr "Repetix la peça"
 #, kde-format
 msgid "Repeat"
 msgstr "Repetix"
+
+#: package/contents/ui/ExpandedRepresentation.qml:798
+#, kde-format
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr ""
 
 #: package/contents/ui/main.qml:60
 #, kde-format

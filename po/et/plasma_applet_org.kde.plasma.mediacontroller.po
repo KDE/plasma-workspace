@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:44+0000\n"
 "PO-Revision-Date: 2019-10-30 22:25+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -106,6 +106,13 @@ msgstr "Järgmine pala"
 msgid "Repeat"
 msgstr ""
 
+#: package/contents/ui/ExpandedRepresentation.qml:798
+#, fuzzy, kde-format
+#| msgid "Choose player automatically"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "Mängija automaatne valimine"
+
 #: package/contents/ui/main.qml:60
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
@@ -165,9 +172,6 @@ msgstr "Peata"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Välju"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Mängija automaatne valimine"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

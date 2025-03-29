@@ -420,7 +420,7 @@ msgstr "缩小"
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr "地区："
+msgstr "地域："
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
@@ -431,7 +431,7 @@ msgstr "选择…"
 #: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgid "Timezone region selector"
-msgstr "时区地区选择器"
+msgstr "时区地域选择器"
 
 #: timezoneselector/TimezoneSelector.qml:261
 #, kde-format

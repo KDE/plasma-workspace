@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:44+0000\n"
 "PO-Revision-Date: 2025-02-10 16:11+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -105,6 +105,13 @@ msgstr "Повторювати композицію"
 msgid "Repeat"
 msgstr "Повторювати"
 
+#: package/contents/ui/ExpandedRepresentation.qml:798
+#, fuzzy, kde-format
+#| msgid "Choose player automatically"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "Вибрати програвач автоматично"
+
 #: package/contents/ui/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
@@ -170,9 +177,6 @@ msgstr "Стоп"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Вийти"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Вибрати програвач автоматично"
 
 #~ msgid "General"
 #~ msgstr "Загальне"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:44+0000\n"
 "PO-Revision-Date: 2023-10-08 23:52+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -104,6 +104,13 @@ msgstr "트랙 반복"
 msgid "Repeat"
 msgstr "반복"
 
+#: package/contents/ui/ExpandedRepresentation.qml:798
+#, fuzzy, kde-format
+#| msgid "Choose player automatically"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "자동으로 재생기 선택"
+
 #: package/contents/ui/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
@@ -169,9 +176,6 @@ msgstr "정지"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "끝내기"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "자동으로 재생기 선택"
 
 #~ msgid "General"
 #~ msgstr "일반"

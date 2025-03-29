@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:44+0000\n"
 "PO-Revision-Date: 2021-02-18 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -107,6 +107,13 @@ msgstr "ട്രാക്ക് ആവർത്തിക്കുക"
 msgid "Repeat"
 msgstr "ആവർത്തിക്കുക"
 
+#: package/contents/ui/ExpandedRepresentation.qml:798
+#, fuzzy, kde-format
+#| msgid "Choose player automatically"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "പ്ലയർ സ്വയമേവ തിരഞ്ഞെടുക്കുക"
+
 #: package/contents/ui/main.qml:60
 #, fuzzy, kde-format
 #| msgctxt "by Artist (paused, player name)"
@@ -166,9 +173,6 @@ msgstr "നിർത്തുക"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "പുറത്തുകടക്കുക"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "പ്ലയർ സ്വയമേവ തിരഞ്ഞെടുക്കുക"
 
 #~ msgctxt "by Artist (player name)"
 #~ msgid "by %1 (%2)"

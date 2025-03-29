@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-28 00:43+0000\n"
-"PO-Revision-Date: 2025-03-15 08:50+0200\n"
+"PO-Revision-Date: 2025-03-28 12:59+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -393,7 +393,7 @@ msgstr "Екрани віддзеркалено"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Переглянути"
 
 #: package/contents/ui/FullRepresentation.qml:547
 #, kde-format

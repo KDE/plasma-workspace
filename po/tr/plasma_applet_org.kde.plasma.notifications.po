@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-28 00:43+0000\n"
-"PO-Revision-Date: 2025-03-15 13:24+0300\n"
+"PO-Revision-Date: 2025-03-28 14:44+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -344,7 +344,7 @@ msgstr "Pazartesi’ye kadar"
 #: package/contents/ui/FullRepresentation.qml:164
 #, kde-format
 msgid "Until manually disabled"
-msgstr "El ile devre dışı bırakılana kadar"
+msgstr "Elle devre dışı bırakılana kadar"
 
 #: package/contents/ui/FullRepresentation.qml:214
 #, kde-format
@@ -375,7 +375,7 @@ msgstr "Ekranlar yansıtılır"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Görüntüle"
 
 #: package/contents/ui/FullRepresentation.qml:547
 #, kde-format

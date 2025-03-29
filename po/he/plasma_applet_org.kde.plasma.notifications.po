@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-28 00:43+0000\n"
-"PO-Revision-Date: 2025-03-15 12:53+0200\n"
+"PO-Revision-Date: 2025-03-28 22:27+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -394,7 +394,7 @@ msgstr "המסכים משוקפים"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "הצגה"
 
 #: package/contents/ui/FullRepresentation.qml:547
 #, kde-format

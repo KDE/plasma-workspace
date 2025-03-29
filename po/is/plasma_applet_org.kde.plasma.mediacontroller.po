@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:44+0000\n"
 "PO-Revision-Date: 2023-09-15 10:10+0000\n"
 "Last-Translator: Guðmundur Erlingsson <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -105,6 +105,13 @@ msgstr "Endurtaka lag"
 msgid "Repeat"
 msgstr "Endurtaka"
 
+#: package/contents/ui/ExpandedRepresentation.qml:798
+#, fuzzy, kde-format
+#| msgid "Choose player automatically"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "Velja spilara sjálfvirkt"
+
 #: package/contents/ui/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
@@ -170,9 +177,6 @@ msgstr "Stöðva"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Hætta"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Velja spilara sjálfvirkt"
 
 #~ msgid "General"
 #~ msgstr "Almennt"

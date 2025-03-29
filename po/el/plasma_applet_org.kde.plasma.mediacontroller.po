@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-10 00:42+0000\n"
+"POT-Creation-Date: 2025-03-29 00:44+0000\n"
 "PO-Revision-Date: 2024-08-24 11:15+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -105,6 +105,13 @@ msgstr "Επανάληψη κομματιού"
 msgid "Repeat"
 msgstr "Επανάληψη"
 
+#: package/contents/ui/ExpandedRepresentation.qml:798
+#, fuzzy, kde-format
+#| msgid "Choose player automatically"
+msgctxt "@action:button"
+msgid "Choose player automatically"
+msgstr "Αυτόματη επιλογή αναπαραγωγέα"
+
 #: package/contents/ui/main.qml:60
 #, kde-format
 msgctxt "@info:tooltip %1 is a musical artist and %2 is an app name"
@@ -170,9 +177,6 @@ msgstr "Διακοπή"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Έξοδος"
-
-#~ msgid "Choose player automatically"
-#~ msgstr "Αυτόματη επιλογή αναπαραγωγέα"
 
 #~ msgid "General"
 #~ msgstr "Γενικά"
