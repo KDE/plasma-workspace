@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:44+0000\n"
 "PO-Revision-Date: 2025-03-20 09:47+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -172,13 +172,13 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/components/JobDetails.qml:105
+#: package/contents/ui/components/JobDetails.qml:108
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 من %2"
 
-#: package/contents/ui/components/JobDetails.qml:109
+#: package/contents/ui/components/JobDetails.qml:112
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -190,7 +190,7 @@ msgstr[3] "%2 من %1 ملفّات"
 msgstr[4] "%2 من %1 ملفًّا"
 msgstr[5] "%2 من %1 ملفّ"
 
-#: package/contents/ui/components/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:115
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -202,7 +202,7 @@ msgstr[3] "%2 من %1 مجلدات"
 msgstr[4] "%2 من %1 مجلدا"
 msgstr[5] "%2 من %1 مجلد"
 
-#: package/contents/ui/components/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:118
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -214,7 +214,7 @@ msgstr[3] "%2 من %1 عناصر"
 msgstr[4] "%2 من %1 عنصرا"
 msgstr[5] "%2 من %1 عنصر"
 
-#: package/contents/ui/components/JobDetails.qml:123
+#: package/contents/ui/components/JobDetails.qml:126
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -225,7 +225,7 @@ msgstr[3] "%1 ملفّات"
 msgstr[4] "%1 ملفًّا"
 msgstr[5] "%1 ملفّ"
 
-#: package/contents/ui/components/JobDetails.qml:125
+#: package/contents/ui/components/JobDetails.qml:128
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -236,7 +236,7 @@ msgstr[3] "%1 مجلّدات"
 msgstr[4] "%1 مجلّدًا"
 msgstr[5] "%1 مجلّد"
 
-#: package/contents/ui/components/JobDetails.qml:127
+#: package/contents/ui/components/JobDetails.qml:130
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -247,7 +247,7 @@ msgstr[3] "%1 عناصر"
 msgstr[4] "%1 عنصرًا"
 msgstr[5] "%1 عنصر"
 
-#: package/contents/ui/components/JobDetails.qml:144
+#: package/contents/ui/components/JobDetails.qml:147
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
 #: package/contents/ui/components/SpeedChart.qml:183

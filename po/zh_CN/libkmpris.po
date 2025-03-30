@@ -70,7 +70,3 @@ msgstr "媒体音量提高"
 msgctxt "@title shortcut"
 msgid "Media volume down"
 msgstr "媒体音量降低"
-
-#~ msgctxt "@action:button"
-#~ msgid "Choose player automatically"
-#~ msgstr "自动选择播放器"

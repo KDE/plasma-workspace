@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:44+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -180,7 +180,7 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/components/JobDetails.qml:105
+#: package/contents/ui/components/JobDetails.qml:108
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "How much many bytes (or whether unit in the locale has been copied over "
@@ -190,7 +190,7 @@ msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 од %2"
 
-#: package/contents/ui/components/JobDetails.qml:109
+#: package/contents/ui/components/JobDetails.qml:112
 #, fuzzy, kde-format
 #| msgctxt "Either just 1 file or m of n files are being processed"
 #| msgid "1 file"
@@ -203,7 +203,7 @@ msgstr[1] "%2 од %1 фајла"
 msgstr[2] "%2 од %1 фајлова"
 msgstr[3] "%1 фајл"
 
-#: package/contents/ui/components/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:115
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -213,7 +213,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: package/contents/ui/components/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:118
 #, fuzzy, kde-format
 #| msgctxt "Either just 1 file or m of n files are being processed"
 #| msgid "1 file"
@@ -226,7 +226,7 @@ msgstr[1] "%2 од %1 фајла"
 msgstr[2] "%2 од %1 фајлова"
 msgstr[3] "%1 фајл"
 
-#: package/contents/ui/components/JobDetails.qml:123
+#: package/contents/ui/components/JobDetails.qml:126
 #, fuzzy, kde-format
 #| msgctxt "Either just 1 file or m of n files are being processed"
 #| msgid "1 file"
@@ -238,7 +238,7 @@ msgstr[1] "%2 од %1 фајла"
 msgstr[2] "%2 од %1 фајлова"
 msgstr[3] "%1 фајл"
 
-#: package/contents/ui/components/JobDetails.qml:125
+#: package/contents/ui/components/JobDetails.qml:128
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -247,7 +247,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: package/contents/ui/components/JobDetails.qml:127
+#: package/contents/ui/components/JobDetails.qml:130
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -256,7 +256,7 @@ msgstr[1] ""
 msgstr[2] ""
 msgstr[3] ""
 
-#: package/contents/ui/components/JobDetails.qml:144
+#: package/contents/ui/components/JobDetails.qml:147
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
 #: package/contents/ui/components/SpeedChart.qml:183

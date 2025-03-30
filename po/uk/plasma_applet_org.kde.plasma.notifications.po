@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:44+0000\n"
 "PO-Revision-Date: 2025-03-28 12:59+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -165,13 +165,13 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/components/JobDetails.qml:105
+#: package/contents/ui/components/JobDetails.qml:108
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 з %1"
 
-#: package/contents/ui/components/JobDetails.qml:109
+#: package/contents/ui/components/JobDetails.qml:112
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -181,7 +181,7 @@ msgstr[1] "%2 з %1 файлів"
 msgstr[2] "%2 з %1 файлів"
 msgstr[3] "%1 файл"
 
-#: package/contents/ui/components/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:115
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -191,7 +191,7 @@ msgstr[1] "%2 з %1 тек"
 msgstr[2] "%2 з %1 тек"
 msgstr[3] "%1 тека"
 
-#: package/contents/ui/components/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:118
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -201,7 +201,7 @@ msgstr[1] "%2 з %1 записів"
 msgstr[2] "%2 з %1 записів"
 msgstr[3] "%2 з %1 запису"
 
-#: package/contents/ui/components/JobDetails.qml:123
+#: package/contents/ui/components/JobDetails.qml:126
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -210,7 +210,7 @@ msgstr[1] "%1 файли"
 msgstr[2] "%1 файлів"
 msgstr[3] "%1 файл"
 
-#: package/contents/ui/components/JobDetails.qml:125
+#: package/contents/ui/components/JobDetails.qml:128
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -219,7 +219,7 @@ msgstr[1] "%1 теки"
 msgstr[2] "%1 тек"
 msgstr[3] "%1 тека"
 
-#: package/contents/ui/components/JobDetails.qml:127
+#: package/contents/ui/components/JobDetails.qml:130
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -228,7 +228,7 @@ msgstr[1] "%1 записи"
 msgstr[2] "%1 записів"
 msgstr[3] "%1 запис"
 
-#: package/contents/ui/components/JobDetails.qml:144
+#: package/contents/ui/components/JobDetails.qml:147
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
 #: package/contents/ui/components/SpeedChart.qml:183

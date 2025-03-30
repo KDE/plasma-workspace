@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-03-30 00:44+0000\n"
 "PO-Revision-Date: 2025-03-28 22:27+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -166,13 +166,13 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/components/JobDetails.qml:105
+#: package/contents/ui/components/JobDetails.qml:108
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 מתוך %2"
 
-#: package/contents/ui/components/JobDetails.qml:109
+#: package/contents/ui/components/JobDetails.qml:112
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -182,7 +182,7 @@ msgstr[1] "%2 מתוך שני קבצים"
 msgstr[2] "%2 מתוך %1 קבצים"
 msgstr[3] "%2 מתוך %1 קבצים"
 
-#: package/contents/ui/components/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:115
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -192,7 +192,7 @@ msgstr[1] "%2 מתוך שתי תיקיות"
 msgstr[2] "%2 מתוך %1 תיקיות"
 msgstr[3] "%2 מתוך %1 תיקיות"
 
-#: package/contents/ui/components/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:118
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -202,7 +202,7 @@ msgstr[1] "%2 מתוך שני פריטים"
 msgstr[2] "%2 מתוך %1 פריטים"
 msgstr[3] "%2 מתוך %1 פריטים"
 
-#: package/contents/ui/components/JobDetails.qml:123
+#: package/contents/ui/components/JobDetails.qml:126
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -211,7 +211,7 @@ msgstr[1] "שני קבצים"
 msgstr[2] "%1 קבצים"
 msgstr[3] "%1 קבצים"
 
-#: package/contents/ui/components/JobDetails.qml:125
+#: package/contents/ui/components/JobDetails.qml:128
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -220,7 +220,7 @@ msgstr[1] "שתי תיקיות"
 msgstr[2] "%1 תיקיות"
 msgstr[3] "%1 תיקיות"
 
-#: package/contents/ui/components/JobDetails.qml:127
+#: package/contents/ui/components/JobDetails.qml:130
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -229,7 +229,7 @@ msgstr[1] "שני פריטים"
 msgstr[2] "%1 פריטים"
 msgstr[3] "%1 פריטים"
 
-#: package/contents/ui/components/JobDetails.qml:144
+#: package/contents/ui/components/JobDetails.qml:147
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
 #: package/contents/ui/components/SpeedChart.qml:183

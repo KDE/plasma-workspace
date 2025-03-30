@@ -6,10 +6,10 @@
 # SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2020, 2022, 2023, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
-"Project-Id-Version: plasma_applet_org\n"
+"Project-Id-Version: plasma_applet_org.kde.plasma.mediacontroller\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-29 00:44+0000\n"
-"PO-Revision-Date: 2025-02-11 00:06+0100\n"
+"PO-Revision-Date: 2025-03-30 01:32+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
@@ -105,11 +105,10 @@ msgid "Repeat"
 msgstr "Repetir"
 
 #: package/contents/ui/ExpandedRepresentation.qml:798
-#, fuzzy, kde-format
-#| msgid "Choose player automatically"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr "Escoger el reproductor automáticamente"
+msgstr "Escoger reproductor automáticamente"
 
 #: package/contents/ui/main.qml:60
 #, kde-format
@@ -176,28 +175,3 @@ msgstr "Detener"
 msgctxt "Quit player"
 msgid "Quit"
 msgstr "Salir"
-
-#~ msgid "General"
-#~ msgstr "General"
-
-#~ msgid "Volume step:"
-#~ msgstr "Paso de volumen:"
-
-#~ msgctxt "by Artist (player name)"
-#~ msgid "by %1 (%2)"
-#~ msgstr "por %1 (%2)"
-
-#~ msgctxt "Paused (player name)"
-#~ msgid "Paused (%1)"
-#~ msgstr "En pausa (%1)"
-
-#~ msgctxt "artist – track"
-#~ msgid "%1 – %2"
-#~ msgstr "%1 – %2"
-
-#~ msgctxt "Artist of the song"
-#~ msgid "by %1"
-#~ msgstr "por %1"
-
-#~ msgid "Pause playback when screen is locked"
-#~ msgstr "Pausar la reproducción al bloquear la pantalla"
