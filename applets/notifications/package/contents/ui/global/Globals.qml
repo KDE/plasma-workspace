@@ -501,8 +501,7 @@ QtObject {
                 configurable: model.configurable
                 // For running jobs instead of offering a "close" button that might lead the user to
                 // think that will cancel the job, we offer a "dismiss" button that hides it in the history
-                dismissable: model.type === NotificationManager.Notifications.JobType
-                    && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                dismissable: model.dismissable
                 // TODO would be nice to be able to "pin" jobs when they autohide
                     && notificationSettings.permanentJobPopups
                 closable: model.closable

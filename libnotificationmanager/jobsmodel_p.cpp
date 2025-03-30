@@ -344,6 +344,7 @@ QDBusObjectPath JobsModelPrivate::requestView(const QString &desktopEntry, int c
         // Timeout and Closable depend on state, signal a change for those, too
         scheduleUpdate(job, Notifications::TimeoutRole);
         scheduleUpdate(job, Notifications::ClosableRole);
+        scheduleUpdate(job, Notifications::DismissableRole);
 
         if (job->state() == Notifications::JobStateStopped) {
             unwatchJob(job);

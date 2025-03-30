@@ -416,6 +416,11 @@ QVariant AbstractNotificationsModel::data(const QModelIndex &index, int role) co
         return notification.replySubmitButtonIconName();
     case Notifications::HintsRole:
         return notification.hints();
+
+    case Notifications::DismissedRole:
+        return notification.dismissed();
+    case Notifications::DismissableRole:
+        return notification.resident() && notification.timeout() == 0;
     }
 
     return QVariant();
@@ -450,6 +455,11 @@ bool AbstractNotificationsModel::setData(const QModelIndex &index, const QVarian
             dirty = true;
         }
         break;
+    case Notifications::DismissedRole:
+        if (const bool v = value.toBool(); v != notification.dismissed()) {
+            notification.setDismissed(v);
+            dirty = true;
+        }
     }
 
     if (dirty) {

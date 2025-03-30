@@ -81,6 +81,7 @@ public:
     int expiredNotificationsCount = 0;
 
     int unreadNotificationsCount = 0;
+    int dismissedResidentNotificationsCount = 0;
 
     int activeJobsCount = 0;
     int jobsPercentage = 0;
@@ -209,7 +210,8 @@ void Notifications::Private::initProxyModels()
             Q_UNUSED(topLeft);
             Q_UNUSED(bottomRight);
             if (roles.isEmpty() || roles.contains(Notifications::UpdatedRole) || roles.contains(Notifications::ExpiredRole)
-                || roles.contains(Notifications::JobStateRole) || roles.contains(Notifications::PercentageRole) || roles.contains(Notifications::ReadRole)) {
+                || roles.contains(Notifications::JobStateRole) || roles.contains(Notifications::PercentageRole) || roles.contains(Notifications::ReadRole)
+                || roles.contains(Notifications::ResidentRole) || roles.contains(Notifications::DismissedRole)) {
                 updateCount();
             }
         });
@@ -263,6 +265,7 @@ void Notifications::Private::updateCount()
     int active = 0;
     int expired = 0;
     int unread = 0;
+    int dismissedResident = 0;
 
     int jobs = 0;
     int totalPercentage = 0;
@@ -273,7 +276,8 @@ void Notifications::Private::updateCount()
     for (int i = 0; i < filterModel->rowCount(); ++i) {
         const QModelIndex idx = filterModel->index(i, 0);
 
-        if (idx.data(Notifications::ExpiredRole).toBool() || idx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
+        const bool isExpired = idx.data(Notifications::ExpiredRole).toBool();
+        if (isExpired || idx.data(Notifications::WasAddedDuringInhibitionRole).toBool()) {
             ++expired;
         } else {
             ++active;
@@ -289,6 +293,10 @@ void Notifications::Private::updateCount()
             if (notificationsModel && date > notificationsModel->lastRead()) {
                 ++unread;
             }
+        }
+
+        if (!isExpired && idx.data(Notifications::ResidentRole).toBool() && idx.data(Notifications::DismissedRole).toBool()) {
+            ++dismissedResident;
         }
 
         if (idx.data(Notifications::TypeRole).toInt() == Notifications::JobType) {
@@ -311,6 +319,10 @@ void Notifications::Private::updateCount()
     if (unreadNotificationsCount != unread) {
         unreadNotificationsCount = unread;
         Q_EMIT q->unreadNotificationsCountChanged();
+    }
+    if (dismissedResidentNotificationsCount != dismissedResident) {
+        dismissedResidentNotificationsCount = dismissedResident;
+        Q_EMIT q->dismissedResidentNotificationsCountChanged();
     }
     if (activeJobsCount != jobs) {
         activeJobsCount = jobs;
@@ -673,6 +685,11 @@ void Notifications::resetLastRead()
 int Notifications::unreadNotificationsCount() const
 {
     return d->unreadNotificationsCount;
+}
+
+int Notifications::dismissedResidentNotificationsCount() const
+{
+    return d->dismissedResidentNotificationsCount;
 }
 
 int Notifications::activeJobsCount() const

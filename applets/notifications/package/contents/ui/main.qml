@@ -38,6 +38,7 @@ PlasmoidItem {
 
     readonly property int effectiveStatus: historyModel.activeJobsCount > 0
                      || historyModel.unreadNotificationsCount > 0
+                     || historyModel.dismissedResidentNotificationsCount > 0
                      || Globals.inhibited ? PlasmaCore.Types.ActiveStatus
                                           : PlasmaCore.Types.PassiveStatus
     onEffectiveStatusChanged: {
@@ -83,6 +84,11 @@ PlasmoidItem {
             var actualUnread = historyModel.unreadNotificationsCount - Globals.popupNotificationsModel.activeNotificationsCount;
             if (actualUnread > 0) {
                 lines.push(i18np("%1 unread notification", "%1 unread notifications", actualUnread));
+            }
+
+            const dismissedResidents = historyModel.dismissedResidentNotificationsCount;
+            if (dismissedResidents > 0) {
+                lines.push(i18np("%1 active notification", "%1 active notifications", dismissedResidents));
             }
 
             if (Globals.inhibited) {

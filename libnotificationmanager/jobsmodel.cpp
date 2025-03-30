@@ -136,6 +136,8 @@ QVariant JobsModel::data(const QModelIndex &index, int role) const
         return job->expired();
     case Notifications::DismissedRole:
         return job->dismissed();
+    case Notifications::DismissableRole:
+        return job->state() != Notifications::JobStateStopped;
 
     // A job is usually either a long lasting operation you're aware about
     // or a quick job you don't care about.

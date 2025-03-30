@@ -205,6 +205,15 @@ class NOTIFICATIONMANAGER_EXPORT Notifications : public QSortFilterProxyModel, p
     Q_PROPERTY(int unreadNotificationsCount READ unreadNotificationsCount NOTIFY unreadNotificationsCountChanged)
 
     /**
+     * The number of resident notifications that have been dismissed
+     *
+     * This can be used to show that there is an active notification in the history
+     *
+     * @since 6.4
+     */
+    Q_PROPERTY(int dismissedResidentNotificationsCount READ dismissedResidentNotificationsCount NOTIFY dismissedResidentNotificationsCountChanged)
+
+    /**
      * The number of active jobs
      */
     Q_PROPERTY(int activeJobsCount READ activeJobsCount NOTIFY activeJobsCountChanged)
@@ -297,6 +306,7 @@ public:
 
         WasAddedDuringInhibitionRole, ///< Whether the notification was added while inhibition was active. @since 6.3
         HintsRole, ///< To provide extra data to a notification server that the server may be able to make use of. @since 6.4
+        DismissableRole, ///< Whether a notification can be dismissed (minimized). @since 6.4
     };
     Q_ENUM(Roles)
 
@@ -435,6 +445,7 @@ public:
     void resetLastRead();
 
     int unreadNotificationsCount() const;
+    int dismissedResidentNotificationsCount() const;
 
     int activeJobsCount() const;
     int jobsPercentage() const;
@@ -581,6 +592,7 @@ Q_SIGNALS:
     void expiredNotificationsCountChanged();
     void lastReadChanged();
     void unreadNotificationsCountChanged();
+    void dismissedResidentNotificationsCountChanged();
     void activeJobsCountChanged();
     void jobsPercentageChanged();
     void windowChanged(QWindow *window);

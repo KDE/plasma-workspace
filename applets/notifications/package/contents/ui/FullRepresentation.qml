@@ -443,8 +443,7 @@ PlasmaExtras.Representation {
                         // configure button on every single notifications is bit overwhelming
                         configurable: !inGroup && model.configurable
 
-                        dismissable: model.type === NotificationManager.Notifications.JobType
-                            && model.jobState !== NotificationManager.Notifications.JobStateStopped
+                        dismissable: model.dismissable
                             && model.dismissed
                             // TODO would be nice to be able to undismiss jobs even when they autohide
                             && notificationSettings.permanentJobPopups
