@@ -103,6 +103,8 @@ BaseDelegate {
 
     Components.Icon {
         id: icon
+        // We removed the row spacing from the base layout, so re-add it just here
+        Layout.topMargin: Kirigami.Units.smallSpacing
         Layout.row: 2
         Layout.column: delegateRoot.__firstColumn + 1
         Layout.rowSpan: 2
