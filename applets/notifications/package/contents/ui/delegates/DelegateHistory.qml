@@ -29,7 +29,6 @@ BaseDelegate {
     Components.Summary {
         id: summary
         Layout.fillWidth: true
-        Layout.alignment: Qt.AlignTop
         Layout.row: 1
         Layout.column: 0
         modelInterface: delegateRoot.modelInterface
@@ -48,6 +47,7 @@ BaseDelegate {
         Layout.fillWidth: true
         Layout.row: summary.visible ? 2 : 1
         Layout.column: 0
+        visible: delegateRoot.hasBodyText
         modelInterface: delegateRoot.modelInterface
     }
 

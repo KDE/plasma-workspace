@@ -94,11 +94,16 @@ BaseDelegate {
     Components.Summary {
         id: summary
         Layout.fillWidth: true
-        Layout.alignment: Qt.AlignTop
         Layout.row: 2
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: icon.visible ? 1 : 2
         modelInterface: delegateRoot.modelInterface
+
+        KQuickControlsAddons.MouseEventListener {
+            anchors.fill: parent
+            visible: modelInterface.hasDefaultAction && !delegateRoot.hasBodyText
+            onClicked: modelInterface.defaultActionInvoked();
+        }
     }
 
     Components.Icon {
@@ -113,6 +118,7 @@ BaseDelegate {
 
     KQuickControlsAddons.MouseEventListener {
         Layout.fillWidth: true
+        Layout.fillHeight: true
         Layout.row: summary.visible ? 3 : 2
         Layout.column: delegateRoot.__firstColumn
         Layout.columnSpan: icon.visible ? 1 : 2
@@ -120,6 +126,7 @@ BaseDelegate {
         // The body doesn't need to influence the implicit width in any way, this avoids a binding loop
         implicitWidth: -1
         implicitHeight: scroll.implicitHeight
+        visible: delegateRoot.hasBodyText
         onClicked: {
             if (modelInterface.hasDefaultAction) {
                 modelInterface.defaultActionInvoked();

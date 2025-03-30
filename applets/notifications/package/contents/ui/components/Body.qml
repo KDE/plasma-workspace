@@ -31,9 +31,6 @@ Kirigami.SelectableLabel {
     // cf. QTBUG-81463 and to some extent QTBUG-80354
     text: "<style>a { color: " + Kirigami.Theme.linkColor + "; }</style>" + modelInterface.body
 
-    // Cannot do text !== "" because RichText adds some HTML tags even when empty
-    visible: modelInterface.body.length > 0
-
     // Selectable only when we are in desktop mode
     selectByMouse: !Kirigami.Settings.tabletMode
 

@@ -29,6 +29,8 @@ GridLayout {
     readonly property bool menuOpen: Boolean(body?.menuOpen)
                                      || Boolean(footer?.menuOpen)
     readonly property bool dragging: Boolean(icon?.dragging) || Boolean(footer?.dragging)
+    // Cannot do text !== "" because RichText adds some HTML tags even when empty
+    readonly property bool hasBodyText: modelInterface.body.length > 0
 
     rowSpacing: 0
     columnSpacing: Kirigami.Units.smallSpacing
