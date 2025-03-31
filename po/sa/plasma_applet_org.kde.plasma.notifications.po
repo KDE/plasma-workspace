@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 02:34+0000\n"
+"POT-Creation-Date: 2025-03-31 02:33+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -266,30 +266,30 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "प्रेषयतु"
 
-#: package/contents/ui/components/Summary.qml:35
+#: package/contents/ui/components/Summary.qml:36
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (विरामितः)"
 
-#: package/contents/ui/components/Summary.qml:40
+#: package/contents/ui/components/Summary.qml:41
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (विफलम्)"
 
-#: package/contents/ui/components/Summary.qml:42
+#: package/contents/ui/components/Summary.qml:43
 #, kde-format
 msgid "Job Failed"
 msgstr "Job Failed इति"
 
-#: package/contents/ui/components/Summary.qml:46
+#: package/contents/ui/components/Summary.qml:47
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (समाप्तम्)"
 
-#: package/contents/ui/components/Summary.qml:48
+#: package/contents/ui/components/Summary.qml:49
 #, kde-format
 msgid "Job Finished"
 msgstr "Job Finished इति"

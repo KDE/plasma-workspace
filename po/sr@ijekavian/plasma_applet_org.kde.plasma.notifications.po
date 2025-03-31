@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 02:34+0000\n"
+"POT-Creation-Date: 2025-03-31 02:33+0000\n"
 "PO-Revision-Date: 2017-12-31 22:42+0100\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -323,7 +323,7 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr ""
 
-#: package/contents/ui/components/Summary.qml:35
+#: package/contents/ui/components/Summary.qml:36
 #, fuzzy, kde-format
 #| msgctxt "Placeholder is job name, eg. 'Copying'"
 #| msgid "%1 (Paused)"
@@ -331,7 +331,7 @@ msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (паузирано)"
 
-#: package/contents/ui/components/Summary.qml:40
+#: package/contents/ui/components/Summary.qml:41
 #, fuzzy, kde-format
 #| msgctxt "the job, which can be anything, failed to complete"
 #| msgid "%1: Failed"
@@ -339,12 +339,12 @@ msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1: пропало"
 
-#: package/contents/ui/components/Summary.qml:42
+#: package/contents/ui/components/Summary.qml:43
 #, kde-format
 msgid "Job Failed"
 msgstr "Посао пропао"
 
-#: package/contents/ui/components/Summary.qml:46
+#: package/contents/ui/components/Summary.qml:47
 #, fuzzy, kde-format
 #| msgctxt "the job, which can be anything, has finished"
 #| msgid "%1: Finished"
@@ -352,7 +352,7 @@ msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1: завршено"
 
-#: package/contents/ui/components/Summary.qml:48
+#: package/contents/ui/components/Summary.qml:49
 #, kde-format
 msgid "Job Finished"
 msgstr "Посао завршен"

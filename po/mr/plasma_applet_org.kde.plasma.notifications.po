@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 02:34+0000\n"
+"POT-Creation-Date: 2025-03-31 02:33+0000\n"
 "PO-Revision-Date: 2013-02-07 13:16+0530\n"
 "Last-Translator: Chetan Khona <chetan@kompkin.com>\n"
 "Language-Team: American English <kde-i18n-doc@kde.org>\n"
@@ -287,33 +287,33 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr ""
 
-#: package/contents/ui/components/Summary.qml:35
+#: package/contents/ui/components/Summary.qml:36
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr ""
 
-#: package/contents/ui/components/Summary.qml:40
+#: package/contents/ui/components/Summary.qml:41
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 [संपले]"
 
-#: package/contents/ui/components/Summary.qml:42
+#: package/contents/ui/components/Summary.qml:43
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgid "Job Failed"
 msgstr "%1 [संपले]"
 
-#: package/contents/ui/components/Summary.qml:46
+#: package/contents/ui/components/Summary.qml:47
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 [संपले]"
 
-#: package/contents/ui/components/Summary.qml:48
+#: package/contents/ui/components/Summary.qml:49
 #, fuzzy, kde-format
 #| msgid "%1 [Finished]"
 msgid "Job Finished"

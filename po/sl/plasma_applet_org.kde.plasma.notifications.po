@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 02:34+0000\n"
+"POT-Creation-Date: 2025-03-31 02:33+0000\n"
 "PO-Revision-Date: 2024-02-27 00:58+0100\n"
 "Last-Translator: Jure Repinc <jlp@holodeck1.com>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -289,30 +289,30 @@ msgctxt "@action:button"
 msgid "Send"
 msgstr "Pošlji"
 
-#: package/contents/ui/components/Summary.qml:35
+#: package/contents/ui/components/Summary.qml:36
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
 msgstr "%1 (Premor)"
 
-#: package/contents/ui/components/Summary.qml:40
+#: package/contents/ui/components/Summary.qml:41
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
 msgstr "%1 (Spodletelo)"
 
-#: package/contents/ui/components/Summary.qml:42
+#: package/contents/ui/components/Summary.qml:43
 #, kde-format
 msgid "Job Failed"
 msgstr "Posel je spodletel"
 
-#: package/contents/ui/components/Summary.qml:46
+#: package/contents/ui/components/Summary.qml:47
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
 msgstr "%1 (Zaključeno)"
 
-#: package/contents/ui/components/Summary.qml:48
+#: package/contents/ui/components/Summary.qml:49
 #, kde-format
 msgid "Job Finished"
 msgstr "Posel zaključen"
