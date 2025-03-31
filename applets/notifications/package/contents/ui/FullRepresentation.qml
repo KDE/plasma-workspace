@@ -428,7 +428,7 @@ PlasmaExtras.Representation {
                     readonly property Components.ModelInterface modelInterface: Components.ModelInterface {
                         notificationType: model.type
 
-                        hasSomeActions: (model.hasDefaultAction || false) || (model.actionLabels || []).length > 0 || (model.configureActionLabel.length || "").length > 0 || (model.hasReplyAction || false)
+                        hasSomeActions: (model.hasDefaultAction || false) || (model.actionLabels || []).length > 0 || (model.configureActionLabel || "").length > 0 || (model.hasReplyAction || false)
                         hasReplyAction: model.hasReplyAction || false
 
                         inGroup: model.isInGroup
