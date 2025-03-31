@@ -107,7 +107,7 @@ msgstr "重复"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr ""
+msgstr "自动选择播放器"
 
 #: package/contents/ui/main.qml:60
 #, kde-format
