@@ -147,11 +147,9 @@ void JobPrivate::updateHasDetails()
     const bool hasDetails = m_totalBytes > 0
         || m_totalFiles > 0
         || m_totalDirectories > 0
-        || m_totalItems > 0
         || m_processedBytes > 0
         || m_processedFiles > 0
         || m_processedDirectories > 0
-        || m_processedItems > 0
         || !m_descriptionValue1.isEmpty()
         || !m_descriptionValue2.isEmpty()
         || m_speed > 0
