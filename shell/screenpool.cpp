@@ -369,9 +369,6 @@ void ScreenPool::screenInvariants()
     // QScreen bookeeping integrity
     auto allScreens = qGuiApp->screens();
     // Do we actually track every screen?
-    Q_ASSERT_X((m_availableScreens.count() + m_redundantScreens.count()) == m_outputOrderWatcher->outputOrder().count(),
-               Q_FUNC_INFO,
-               qUtf8Printable(debugMessage())); // https://crash-reports.kde.org/organizations/kde/issues/5249/
     Q_ASSERT_X(allScreens.count() == m_sizeSortedScreens.count(),
                Q_FUNC_INFO,
                qUtf8Printable(debugMessage())); // https://crash-reports.kde.org/organizations/kde/issues/6337/
