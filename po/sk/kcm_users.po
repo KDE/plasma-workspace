@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-01-31 02:36+0000\n"
-"PO-Revision-Date: 2025-02-23 12:33+0100\n"
+"PO-Revision-Date: 2025-03-31 16:12+0200\n"
 "Last-Translator: Lucia Mrenica <lucia.mrenica@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
 "Language: sk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
@@ -189,11 +189,10 @@ msgstr "Vytvoriť"
 #, kde-format
 msgctxt "@title:window"
 msgid "Select Picture Area"
-msgstr ""
+msgstr "Výber oblasti obrákzu"
 
 #: src/ui/EnrolledConfirmation.qml:20
-#, fuzzy, kde-format
-#| msgid "Finger Enrolled"
+#, kde-format
 msgctxt "@info:status"
 msgid "Finger enrolled"
 msgstr "Odtlačok pridaný"
@@ -520,6 +519,8 @@ msgid ""
 "Image files (All major file types) (*.avif *.bmp *.gif *.jp2 *.jpeg *.jpg *."
 "pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 msgstr ""
+"Obrázkové súbory (všetky hlavné typy súborov) (*.avif *.bmp *.gif *.jp2 *."
+"jpeg *.jpg *.pbm *.pgm *.png *.ppm *.tiff *.wbmp *.webp *.xbm *.xpm)"
 
 #: src/ui/PicturesSheet.qml:202
 #, kde-format
@@ -545,6 +546,9 @@ msgid ""
 "other Administrator account on the system. Without one, authentication would "
 "become impossible or require the insecure use of the root password."
 msgstr ""
+"Nie je možné zmeniť typ účtu na štandardný, ak v systéme nie je aspoň jeden "
+"ďalší účet správcu. Bez neho by bolo overovanie nemožné alebo by si "
+"vyžadovalo nezabezpečené použitie hesla root."
 
 #: src/ui/UserDetailsPage.qml:175
 #, kde-format
@@ -589,7 +593,7 @@ msgstr ""
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
-msgstr ""
+msgstr "Nepodarilo sa orezať obrázok: %1"
 
 #: src/user.cpp:310
 #, kde-format
