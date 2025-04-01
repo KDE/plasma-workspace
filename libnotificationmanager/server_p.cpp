@@ -169,9 +169,14 @@ uint ServerPrivate::Notify(const QString &app_name,
     // might override some of the things we set above (like application name)
     notification.d->processHints(hints);
 
-    // If we didn't get a pixmap, load the app_icon instead
-    if (!notification.d->s_imageCache.contains(notificationId)) {
-        notification.setIcon(app_icon);
+    // If we got a pixmap, use app_icon as application icon,
+    // otherwise use it as the notification icon.
+    if (!app_icon.isEmpty()) {
+        if (notification.d->s_imageCache.contains(notificationId)) {
+            notification.setApplicationIconName(app_icon);
+        } else {
+            notification.setIcon(app_icon);
+        }
     }
 
     uint pid = 0;
