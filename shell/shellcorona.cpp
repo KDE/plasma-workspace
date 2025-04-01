@@ -221,7 +221,7 @@ void ShellCorona::init()
     dashboardAction->setAutoRepeat(true);
     dashboardAction->setCheckable(true);
     dashboardAction->setIcon(QIcon::fromTheme(QStringLiteral("dashboard-show")));
-    KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::CTRL | Qt::Key_F12);
+    KGlobalAccel::self()->setGlobalShortcut(dashboardAction, Qt::META | Qt::Key_F12);
 
     checkAddPanelAction();
     connect(KSycoca::self(), &KSycoca::databaseChanged, this, &ShellCorona::checkAddPanelAction);
