@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-31 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -381,48 +381,48 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Obrazovky sú zrkadlené"
 
-#: package/contents/ui/FullRepresentation.qml:460
-#: package/contents/ui/FullRepresentation.qml:466
+#: package/contents/ui/FullRepresentation.qml:459
+#: package/contents/ui/FullRepresentation.qml:465
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:547
+#: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
 msgid "Close Group"
 msgstr "Zatvoriť skupinu"
 
-#: package/contents/ui/FullRepresentation.qml:569
+#: package/contents/ui/FullRepresentation.qml:568
 #, kde-format
 msgid "Show Fewer"
 msgstr "Zobraziť menej"
 
-#: package/contents/ui/FullRepresentation.qml:571
+#: package/contents/ui/FullRepresentation.qml:570
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Zobraziť ďalších %1"
 
-#: package/contents/ui/FullRepresentation.qml:600
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "Žiadne neprečítané upozornenia"
 
-#: package/contents/ui/FullRepresentation.qml:615
-#: package/contents/ui/main.qml:79
+#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "Služba upozornení nie je dostupná"
 
-#: package/contents/ui/FullRepresentation.qml:617
+#: package/contents/ui/FullRepresentation.qml:616
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "Oznámenia v súčasnosti poskytuje '%1 %2'"
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
@@ -430,13 +430,13 @@ msgstr[0] "%1 spustená úloha"
 msgstr[1] "%1 spustené úlohy"
 msgstr[2] "%1 spustených úloh"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
@@ -444,7 +444,7 @@ msgstr[0] "%1 spustená úloha (%2%)"
 msgstr[1] "%1 spustené úlohy (%2%)"
 msgstr[2] "%1 spustených úloh (%2%)"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
@@ -452,27 +452,37 @@ msgstr[0] "%1 neprečítané upozornenie"
 msgstr[1] "%1 neprečítané upozornenia"
 msgstr[2] "%1 neprečítaných upozornení"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:91
+#, fuzzy, kde-format
+#| msgid "%1 unread notification"
+#| msgid_plural "%1 unread notifications"
+msgid "%1 active notification"
+msgid_plural "%1 active notifications"
+msgstr[0] "%1 neprečítané upozornenie"
+msgstr[1] "%1 neprečítané upozornenia"
+msgstr[2] "%1 neprečítaných upozornení"
+
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Režim nevyrušovať do %1; kliknutím stredného tlačidla ho ukončíte"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Režim nerušiť je aktívny; stredným kliknutím ho ukončíte"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Kliknutím stredného tlačidla prejdete do režimu nerušiť"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Vymazať všetky oznámenia"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "&Nastaviť pripomienky a akcie udalostí..."

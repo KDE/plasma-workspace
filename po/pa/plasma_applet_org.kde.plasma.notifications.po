@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-31 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2024-02-05 07:41-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -365,95 +365,104 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "ਸਕਰੀਨਾਂ ਨੂੰ ਮਿਰੱਰ ਕੀਤਾ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:460
-#: package/contents/ui/FullRepresentation.qml:466
+#: package/contents/ui/FullRepresentation.qml:459
+#: package/contents/ui/FullRepresentation.qml:465
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:547
+#: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
 msgid "Close Group"
 msgstr "ਗਰੁੱਪ ਬੰਦ ਕਰੋ"
 
-#: package/contents/ui/FullRepresentation.qml:569
+#: package/contents/ui/FullRepresentation.qml:568
 #, kde-format
 msgid "Show Fewer"
 msgstr "ਘੱਟ ਵੇਖਾਓ"
 
-#: package/contents/ui/FullRepresentation.qml:571
+#: package/contents/ui/FullRepresentation.qml:570
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "%1 ਹੋਰ ਵੇਖਾਓ"
 
-#: package/contents/ui/FullRepresentation.qml:600
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "ਕੋਈ ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਨਹੀਂ ਹਨ"
 
-#: package/contents/ui/FullRepresentation.qml:615
-#: package/contents/ui/main.qml:79
+#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੇਵਾ ਉਪਲਬਧ ਨਹੀਂ ਹੈ"
 
-#: package/contents/ui/FullRepresentation.qml:617
+#: package/contents/ui/FullRepresentation.qml:616
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਇਸ ਵੇਲੇ '%1 %2' ਵਲੋਂ ਦਿੱਤੇ ਜਾ ਰਹੇ ਹਨ"
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "%1 ਚੱਲਦੀ ਜਾਬ"
 msgstr[1] "%1 ਚੱਲਦੇ ਜਾਬ"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 ਚੱਲਦੀ ਜਾਬ (%2%)"
 msgstr[1] "%1 ਚੱਲਦੀਆਂ ਜਾਬ (%2%)"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "%1 ਨਾ-ਪੜ੍ਹਿਆ ਨੋਟੀਫਿਕੇਸ਼ਨ"
 msgstr[1] "%1 ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:91
+#, fuzzy, kde-format
+#| msgid "%1 unread notification"
+#| msgid_plural "%1 unread notifications"
+msgid "%1 active notification"
+msgid_plural "%1 active notifications"
+msgstr[0] "%1 ਨਾ-ਪੜ੍ਹਿਆ ਨੋਟੀਫਿਕੇਸ਼ਨ"
+msgstr[1] "%1 ਨਾ-ਪੜ੍ਹੇ ਨੋਟੀਫਿਕੇਸ਼ਨ"
+
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "%1 ਤੱਕ ਤੰਗ ਨਾ ਕਰੋ; ਹੁਣੇ ਬੰਦ ਕਰਨ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ ਸਰਗਰਮ ਹੈ; ਬੰਦ ਕਰਨ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "ਤੰਗ ਨਾ ਕਰੋ ਮੋਡ ਵਿੱਚ ਜਾਣ ਲਈ ਮਿਡਲ-ਕਲਿੱਕ ਕਰੋ"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "ਸਾਰੇ ਨੋਟੀਫਿਕੇਸ਼ਨ ਮਿਟਾਓ"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "…ਈਵੈਂਟ ਸੂਚਨਾਵਾਂ ਤੇ ਕਾਰਵਾਈ ਸੰਰਚਨਾ(&C)"

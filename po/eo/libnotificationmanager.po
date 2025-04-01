@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-28 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2025-01-11 22:49+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -100,18 +100,18 @@ msgctxt "@info %1 notification body %2 job name"
 msgid "%1 from %2"
 msgstr "%1 de %2"
 
-#: jobsmodel_p.cpp:484
+#: jobsmodel_p.cpp:485
 #, kde-format
 msgid "Application closed unexpectedly."
 msgstr "Aplikaĵo fermiĝis neatendite."
 
-#: notifications.cpp:868
+#: notifications.cpp:885
 #, kde-format
 msgctxt "@title"
 msgid "Unread Notifications"
 msgstr "Nelegitaj Sciigoj"
 
-#: notifications.cpp:869
+#: notifications.cpp:886
 #, kde-format
 msgctxt "@info"
 msgid "%1 notifications were received while Do Not Disturb was active."

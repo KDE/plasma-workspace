@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-31 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2024-02-04 19:16+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -393,48 +393,48 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "При дублировании изображения на внешний экран"
 
-#: package/contents/ui/FullRepresentation.qml:460
-#: package/contents/ui/FullRepresentation.qml:466
+#: package/contents/ui/FullRepresentation.qml:459
+#: package/contents/ui/FullRepresentation.qml:465
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:547
+#: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
 msgid "Close Group"
 msgstr "Закрыть группу"
 
-#: package/contents/ui/FullRepresentation.qml:569
+#: package/contents/ui/FullRepresentation.qml:568
 #, kde-format
 msgid "Show Fewer"
 msgstr "Показывать меньше"
 
-#: package/contents/ui/FullRepresentation.qml:571
+#: package/contents/ui/FullRepresentation.qml:570
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Показать ещё %1"
 
-#: package/contents/ui/FullRepresentation.qml:600
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "Нет непрочитанных уведомлений"
 
-#: package/contents/ui/FullRepresentation.qml:615
-#: package/contents/ui/main.qml:79
+#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "Служба уведомлений недоступна"
 
-#: package/contents/ui/FullRepresentation.qml:617
+#: package/contents/ui/FullRepresentation.qml:616
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "Уведомления выводятся приложением «%1 %2»"
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
@@ -443,13 +443,13 @@ msgstr[1] "%1 выполняющихся задания"
 msgstr[2] "%1 выполняющихся заданий"
 msgstr[3] "%1 выполняющееся задание"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
@@ -458,7 +458,7 @@ msgstr[1] "Выполняется %1 задания (%2%)"
 msgstr[2] "Выполняется %1 заданий (%2%)"
 msgstr[3] "Выполняется 1 задание (%2%)"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
@@ -467,28 +467,39 @@ msgstr[1] "%1 непрочитанных уведомления"
 msgstr[2] "%1 непрочитанных уведомлений"
 msgstr[3] "одно непрочитанное уведомление"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:91
+#, fuzzy, kde-format
+#| msgid "%1 unread notification"
+#| msgid_plural "%1 unread notifications"
+msgid "%1 active notification"
+msgid_plural "%1 active notifications"
+msgstr[0] "%1 непрочитанное уведомление"
+msgstr[1] "%1 непрочитанных уведомления"
+msgstr[2] "%1 непрочитанных уведомлений"
+msgstr[3] "одно непрочитанное уведомление"
+
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr ""
 "Включён режим «не беспокоить» до %1, для отключения щёлкните средней кнопкой"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Включён режим «не беспокоить», для отключения щёлкните средней кнопкой"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Для отключения режима «не беспокоить» щёлкните средней кнопкой"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Удалить все уведомления"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Настроить &уведомления и действия..."

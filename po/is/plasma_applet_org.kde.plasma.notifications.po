@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-31 00:43+0000\n"
+"POT-Creation-Date: 2025-04-01 00:43+0000\n"
 "PO-Revision-Date: 2024-12-13 21:23+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
@@ -371,95 +371,104 @@ msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Skjáir eru speglaðir"
 
-#: package/contents/ui/FullRepresentation.qml:460
-#: package/contents/ui/FullRepresentation.qml:466
+#: package/contents/ui/FullRepresentation.qml:459
+#: package/contents/ui/FullRepresentation.qml:465
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:547
+#: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
 msgid "Close Group"
 msgstr "Loka flokki"
 
-#: package/contents/ui/FullRepresentation.qml:569
+#: package/contents/ui/FullRepresentation.qml:568
 #, kde-format
 msgid "Show Fewer"
 msgstr "Sýna færri"
 
-#: package/contents/ui/FullRepresentation.qml:571
+#: package/contents/ui/FullRepresentation.qml:570
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Birta %1 til viðbótar"
 
-#: package/contents/ui/FullRepresentation.qml:600
-#: package/contents/ui/main.qml:105
+#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "Engar ólesnar tilkynningar"
 
-#: package/contents/ui/FullRepresentation.qml:615
-#: package/contents/ui/main.qml:79
+#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "Tilkynningaþjónusta ekki tiltæk"
 
-#: package/contents/ui/FullRepresentation.qml:617
+#: package/contents/ui/FullRepresentation.qml:616
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
 msgstr "Tilkynningar eru núna meðhöndlaðar af '%1 %2'"
 
-#: package/contents/ui/main.qml:63
+#: package/contents/ui/main.qml:64
 #, kde-format
 msgid "%1 running job"
 msgid_plural "%1 running jobs"
 msgstr[0] "%1 verk í gangi"
 msgstr[1] "%1 verk í gangi"
 
-#: package/contents/ui/main.qml:67
+#: package/contents/ui/main.qml:68
 #, kde-format
 msgctxt "Job title (percentage)"
 msgid "%1 (%2%)"
 msgstr "%1 (%2%)"
 
-#: package/contents/ui/main.qml:72
+#: package/contents/ui/main.qml:73
 #, kde-format
 msgid "%1 running job (%2%)"
 msgid_plural "%1 running jobs (%2%)"
 msgstr[0] "%1 verk í gangi (%2%)"
 msgstr[1] "%1 verk í gangi (%2%)"
 
-#: package/contents/ui/main.qml:85
+#: package/contents/ui/main.qml:86
 #, kde-format
 msgid "%1 unread notification"
 msgid_plural "%1 unread notifications"
 msgstr[0] "%1 ólesin tilkynning"
 msgstr[1] "%1 ólesnar tilkynningar"
 
-#: package/contents/ui/main.qml:98
+#: package/contents/ui/main.qml:91
+#, fuzzy, kde-format
+#| msgid "%1 unread notification"
+#| msgid_plural "%1 unread notifications"
+msgid "%1 active notification"
+msgid_plural "%1 active notifications"
+msgstr[0] "%1 ólesin tilkynning"
+msgstr[1] "%1 ólesnar tilkynningar"
+
+#: package/contents/ui/main.qml:104
 #, kde-format
 msgid "Do not disturb until %1; middle-click to exit now"
 msgstr "Ekki ónáða fyrr en %1. Miðjusmelltu til að hætta núna"
 
-#: package/contents/ui/main.qml:101
+#: package/contents/ui/main.qml:107
 #, kde-format
 msgid "Do not disturb mode active; middle-click to exit"
 msgstr "Stillingin 'Ekki ónáða' er virk. Miðjusmelltu til að hætta"
 
-#: package/contents/ui/main.qml:107
+#: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
 msgstr "Miðjusmelltu til að virkja sniðið 'Ekki ónáða'"
 
-#: package/contents/ui/main.qml:229
+#: package/contents/ui/main.qml:235
 #, kde-format
 msgid "Clear All Notifications"
 msgstr "Hreinsa allar tilkynningar"
 
-#: package/contents/ui/main.qml:248
+#: package/contents/ui/main.qml:254
 #, kde-format
 msgid "&Configure Event Notifications and Actions…"
 msgstr "Stilla til&kynningar um viðburði og aðgerðir…"
