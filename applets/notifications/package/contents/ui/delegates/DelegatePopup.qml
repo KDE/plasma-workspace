@@ -93,6 +93,8 @@ BaseDelegate {
 
     Components.Summary {
         id: summary
+        // Base layout intentionally has no row spacing, so add top padding here when needed
+        Layout.topMargin: delegateRoot.hasBodyText || icon.visible ? Kirigami.Units.smallSpacing : 0
         Layout.fillWidth: true
         Layout.row: 2
         Layout.column: delegateRoot.__firstColumn
@@ -108,7 +110,7 @@ BaseDelegate {
 
     Components.Icon {
         id: icon
-        // We removed the row spacing from the base layout, so re-add it just here
+        // Base layout intentionally has no row spacing, so add top padding here
         Layout.topMargin: Kirigami.Units.smallSpacing
         Layout.row: 2
         Layout.column: delegateRoot.__firstColumn + 1
