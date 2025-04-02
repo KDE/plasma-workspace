@@ -41,6 +41,7 @@ private Q_SLOTS:
     void testLastScreenRemoval();
     void testFakeToRealScreen();
     void testFakeOutputInitially();
+    void testReorderRemoveRace();
 
 private:
     ScreenPool *m_screenPool;
@@ -457,6 +458,65 @@ void ScreenPoolTest::testFakeOutputInitially()
     QCOMPARE(newScreen->geometry(), QRect(0, 0, 1920, 1080));
 
     QCOMPARE(screenPool.idForScreen(newScreen), 0);
+}
+
+void ScreenPoolTest::testReorderRemoveRace()
+{
+    QSignalSpy addedSpy(qGuiApp, SIGNAL(screenAdded(QScreen *)));
+    QSignalSpy orderChangeSpy(m_screenPool, &ScreenPool::screenOrderChanged);
+    QSignalSpy firstScreenResizedSpy(qGuiApp->screens()[0], &QScreen::geometryChanged);
+
+    // Add a new output
+    exec([this] {
+        OutputData data;
+        data.mode.resolution = {1920, 1080};
+        data.position = {1920, 0};
+        data.physicalSize = data.mode.physicalSizeForDpi(96);
+        // NOTE: assumes that when a screen is added it will already have the final geometry
+        auto *out = add<Output>(data);
+        auto *xdgOut = xdgOutput(out);
+        xdgOut->m_name = QStringLiteral("WL-2");
+        outputOrder()->setList({u"WL-1"_s, u"WL-2"_s});
+    });
+
+    QVERIFY(orderChangeSpy.wait());
+
+    QCOMPARE(orderChangeSpy.size(), 1);
+    QCOMPARE(QGuiApplication::screens().size(), 2);
+    QCOMPARE(m_screenPool->screenOrder().size(), 2);
+    QCOMPARE(addedSpy.size(), 1);
+
+    QScreen *newScreen = addedSpy.takeFirst().at(0).value<QScreen *>();
+    QCOMPARE(newScreen->name(), QStringLiteral("WL-2"));
+    QCOMPARE(newScreen->geometry(), QRect(1920, 0, 1920, 1080));
+    // Check mapping
+    QCOMPARE(m_screenPool->idForScreen(newScreen), 1);
+    QCOMPARE(m_screenPool->screenForId(1)->name(), QStringLiteral("WL-2"));
+
+    exec([this] {
+        // BUG 494616:
+        // When there are those 3 things happening in quick order
+        // * Setting the order
+        // * resizing an output
+        // * removing another output
+        // we used to get an inconsistent state in OutputOrderWatcher
+        // where the removed output is *not* removed from outputOrder
+        outputOrder()->setList({u"WL-2"_s, u"WL-1"_s});
+        auto *out = output(0);
+        auto *xdgOut = xdgOutput(output(0));
+        xdgOut->sendLogicalSize(QSize(1024, 600));
+        remove(output(1));
+        out->m_data.physicalSize = QSize(1024, 600);
+        out->sendGeometry();
+        out->sendDone();
+    });
+
+    QVERIFY(orderChangeSpy.wait());
+    QTRY_COMPARE(firstScreenResizedSpy.size(), 1);
+    QCOMPARE(m_screenPool->screenOrder().size(), 1);
+    QCOMPARE(m_screenPool->screenOrder().first()->name(), QStringLiteral("WL-1"));
+    QCOMPARE(qApp->screens().size(), 1);
+    QCOMPARE(qApp->screens().first()->geometry(), QRect(0, 0, 1024, 600));
 }
 
 QCOMPOSITOR_TEST_MAIN(ScreenPoolTest)
