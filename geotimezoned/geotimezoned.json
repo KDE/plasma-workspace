@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Automatically change the system time zone based on the current location",
         "Description[ar]": "تغيير المنطقة الزمنية للنظام تلقائيًا استنادًا إلى الموقع الحالي",
+        "Description[az]": "Cari məkana görə saat qurşağını avtomatik dəyişdirmək",
         "Description[bg]": "Автоматична смяна на системната часова зона въз основа на текущото местоположение",
         "Description[ca@valencia]": "Canvia automàticament la zona horària del sistema en funció de la ubicació actual",
         "Description[ca]": "Canvia automàticament la zona horària del sistema en funció de la ubicació actual",
@@ -33,6 +34,7 @@
         "Description[zh_TW]": "自動依目前地理位置變更系統時區",
         "Name": "Location-based System Time Zone",
         "Name[ar]": "المنطقة الزمنية للنظام اعتمادًا الموقع",
+        "Name[az]": "Yerinə görə sistemin saat qurşağı",
         "Name[bg]": "Местоположение базирано на системната часова зона",
         "Name[ca@valencia]": "Zona horària del sistema basada en la ubicació",
         "Name[ca]": "Zona horària del sistema basada en la ubicació",

@@ -62,6 +62,7 @@
         "Category": "System Information",
         "Description": "System monitor widget that shows usage of individual CPU cores",
         "Description[ar]": "أداة مراقبة النظام التي تعرض استخدام كل نواة من المعالج",
+        "Description[az]": "Hər prosessorun istifadəsini göstərən sistem izləyici vidjeti",
         "Description[be]": "Віджэт сістэмнага назіральніка, які паказвае выкарыстанне ядзер працэсара паасобку",
         "Description[bg]": "Уиджет за системен монитор, който показва използването на отделни ядра на процесора",
         "Description[ca@valencia]": "Giny del monitor del sistema que mostra l'ús individual dels nuclis de la CPU",

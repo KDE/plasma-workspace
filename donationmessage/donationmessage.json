@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "Shows a yearly request to donate to KDE",
         "Description[ar]": "تظهر طلب سنوي للتبرع لكيدي",
+        "Description[az]": "KDE-yə maddi dsətək üçün illik sorğunu göstərir",
         "Description[be]": "Паказвае штогадовы запыт на ахвяраванне KDE",
         "Description[bg]": "Показва годишна заявка за дарение на KDE",
         "Description[ca@valencia]": "Mostra una sol·licitud anual de donació a KDE",
@@ -43,6 +44,7 @@
         "Description[zh_TW]": "每年一次顯示贊助 KDE 的請求",
         "Name": "Donation Request",
         "Name[ar]": "طلب تبرع",
+        "Name[az]": "Maddi dəstək sorğusu",
         "Name[be]": "Запыт на ахвяраванне",
         "Name[bg]": "Заявка за дарения",
         "Name[ca@valencia]": "Sol·licitud de donació",
