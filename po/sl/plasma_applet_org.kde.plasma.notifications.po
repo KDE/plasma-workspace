@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 07:17+0100\n"
+"PO-Revision-Date: 2025-04-01 07:19+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -465,15 +465,13 @@ msgstr[2] "%1 neprebrani obvestili"
 msgstr[3] "%1 neprebrana obvestila"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 neprebranih obvestil"
-msgstr[1] "%1 neprebrano obvestilo"
-msgstr[2] "%1 neprebrani obvestili"
-msgstr[3] "%1 neprebrana obvestila"
+msgstr[0] "%1 dejavnih obvestil"
+msgstr[1] "%1 dejavno obvestilo"
+msgstr[2] "%1 dejavni obvestili"
+msgstr[3] "%1 dejavna obvestila"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

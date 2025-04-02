@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 10:55+0100\n"
+"PO-Revision-Date: 2025-04-01 09:31+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -438,13 +438,11 @@ msgstr[0] "%1 notificació sense llegir"
 msgstr[1] "%1 notificacions sense llegir"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 notificació sense llegir"
-msgstr[1] "%1 notificacions sense llegir"
+msgstr[0] "%1 notificació activa"
+msgstr[1] "%1 notificacions actives"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

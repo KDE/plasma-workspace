@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 X əyyam
-# SPDX-FileCopyrightText: 2024 Kheyyam Godjayev <xxmn77@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-26 00:43+0000\n"
-"PO-Revision-Date: 2024-08-09 16:10+0400\n"
+"PO-Revision-Date: 2025-04-01 15:05+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -34,15 +34,12 @@ msgid "Clipboard history:"
 msgstr "Mübadilə tarixçəsi:"
 
 #: configdialog.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " giriş"
-msgstr[1] " girişlər"
+msgstr[0] "%v giriş"
+msgstr[1] "%v girişlər"
 
 #: configdialog.cpp:98
 #, kde-format
@@ -142,15 +139,12 @@ msgid "Exclude Windows..."
 msgstr "Pəncərəni istisna edin..."
 
 #: configdialog.cpp:295
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " saniyə"
-msgstr[1] " saniyələr"
+msgstr[0] "%v saniyə"
+msgstr[1] "%v saniyə"
 
 #: configdialog.cpp:296
 #, kde-format
@@ -365,13 +359,13 @@ msgstr "QR kod yaratmaq mümkün olmadı"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "Yəğmaq"
 
 #: declarative/qml/ClipboardItemDelegate.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "Genişləndirmək"
 
 #: declarative/qml/ClipboardMenu.qml:192
 #, kde-format
@@ -412,7 +406,7 @@ msgstr "Tarixçədən silmək"
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
-msgstr ""
+msgstr "Mətn redaktoru sahəsi"
 
 #: declarative/qml/EditPage.qml:80
 #, kde-format
@@ -638,11 +632,10 @@ msgid "Clear Clipboard History"
 msgstr "Mübadilə yaddaşı tarixçəsini təmizləyin"
 
 #: historymodel.cpp:262
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1x%2 %3bpp"
+msgstr "%1x%2"
 
 #: klipper.cpp:91
 #, kde-format

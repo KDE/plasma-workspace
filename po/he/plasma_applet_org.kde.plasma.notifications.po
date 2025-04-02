@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 22:27+0300\n"
+"PO-Revision-Date: 2025-04-01 08:13+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -464,15 +464,13 @@ msgstr[2] "%1 התראות שלא נקראו"
 msgstr[3] "%1 התראות שלא נקראו"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "התראה שלא נקראה"
-msgstr[1] "שתי התראות שלא נקראו"
-msgstr[2] "%1 התראות שלא נקראו"
-msgstr[3] "%1 התראות שלא נקראו"
+msgstr[0] "התראה פעילה"
+msgstr[1] "שתי התראות פעילות"
+msgstr[2] "%1 התראות פעילות"
+msgstr[3] "%1 התראות פעילות"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

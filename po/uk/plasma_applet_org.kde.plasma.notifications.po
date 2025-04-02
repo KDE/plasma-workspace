@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2025-03-28 12:59+0200\n"
+"PO-Revision-Date: 2025-04-01 09:06+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -463,15 +463,13 @@ msgstr[2] "%1 непрочитаних сповіщень"
 msgstr[3] "%1 непрочитане сповіщення"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 непрочитане сповіщення"
-msgstr[1] "%1 непрочитаних сповіщення"
-msgstr[2] "%1 непрочитаних сповіщень"
-msgstr[3] "%1 непрочитане сповіщення"
+msgstr[0] "%1 активне сповіщення"
+msgstr[1] "%1 активних сповіщення"
+msgstr[2] "%1 активних сповіщень"
+msgstr[3] "%1 активне сповіщення"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
