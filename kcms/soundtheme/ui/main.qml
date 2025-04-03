@@ -158,6 +158,10 @@ KCM.GridViewKCM {
 
         TapHandler {
             onTapped: kcm.settings.theme = theme.id
+            onDoubleTapped: {
+                kcm.settings.theme = theme.id;
+                kcm.save();
+            }
         }
     }
 
