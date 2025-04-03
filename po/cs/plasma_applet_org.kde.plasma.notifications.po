@@ -380,7 +380,7 @@ msgstr "Obrazovky jsou zrcadleny"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Pohled"
 
 #: package/contents/ui/FullRepresentation.qml:546
 #, kde-format

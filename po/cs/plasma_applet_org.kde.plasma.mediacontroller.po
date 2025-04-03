@@ -108,7 +108,7 @@ msgstr "Opakovat"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr ""
+msgstr "Automaticky vybrat přehrávač"
 
 #: package/contents/ui/main.qml:60
 #, kde-format
