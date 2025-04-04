@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-04 00:43+0000\n"
 "PO-Revision-Date: 2024-02-20 12:24+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -66,13 +66,13 @@ msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Presentació preliminar del so de mostra per al tema «%1»"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "El tema %1 no inclou el so «%2»"
 
-#: ui/main.qml:190
+#: ui/main.qml:194
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "La presentació preliminar del so ha fallat: %1"

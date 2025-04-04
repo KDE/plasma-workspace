@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-04 00:43+0000\n"
 "PO-Revision-Date: 2024-03-30 21:00+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -64,13 +64,13 @@ msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "\"%1\" எனும் ஒலித்திட்டத்தின் முன்னோட்டங்காட்டும்"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "%1 எனும் ஒலித்திட்டத்தில் '%2' என்பதற்கான ஒலி இல்லை"
 
-#: ui/main.qml:190
+#: ui/main.qml:194
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "ஒலியின் முன்னோட்டங்காட்டுவது தோல்வியடைந்தது: %1"

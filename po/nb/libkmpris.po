@@ -71,7 +71,3 @@ msgstr "Media høyere lyd"
 msgctxt "@title shortcut"
 msgid "Media volume down"
 msgstr "Media lavere lyd"
-
-#~ msgctxt "@action:button"
-#~ msgid "Choose player automatically"
-#~ msgstr "Velg spiller automatisk"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_soundtheme\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-04 00:43+0000\n"
 "PO-Revision-Date: 2024-02-20 02:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -66,13 +66,13 @@ msgctxt "@info:tooltip"
 msgid "Preview the demo sound for the theme \"%1\""
 msgstr "Probar el sonido de demostración para el tema «%1»"
 
-#: ui/main.qml:185
+#: ui/main.qml:189
 #, kde-format
 msgctxt "%1 is a sound theme name. %2 is a sound name"
 msgid "The %1 theme doesn't include the sound '%2'"
 msgstr "El tema de sonido %1 no incluye el sonido «%2»"
 
-#: ui/main.qml:190
+#: ui/main.qml:194
 #, kde-format
 msgid "Failed to preview sound: %1"
 msgstr "No se ha podido probar el sonido: %1"

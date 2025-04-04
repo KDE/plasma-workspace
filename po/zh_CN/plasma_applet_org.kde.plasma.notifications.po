@@ -425,7 +425,7 @@ msgstr[0] "%1 条未读通知"
 #, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] ""
+msgstr[0] "%1 条活动通知"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
