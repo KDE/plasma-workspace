@@ -309,7 +309,7 @@ KCMUtils.SimpleKCM {
         modality: Qt.WindowModal
         parentWindow: appearancePage.Window.window
 
-        property font fontChosen: Qt.font()
+        property font fontChosen: null
 
         onAccepted: {
             fontChosen = font
