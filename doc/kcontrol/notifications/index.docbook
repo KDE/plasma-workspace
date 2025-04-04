@@ -58,6 +58,11 @@ each event.</para>
     </varlistentry>
 
     <varlistentry>
+    <term><guiicon>Enable while a fullscreen application is focused</guiicon></term>
+    <listitem><para>Automatically enable do not disturb mode while you are using a fullscreen application, for example watching a video.</para></listitem>
+    </varlistentry>
+
+    <varlistentry>
     <term><guiicon>Show critical notifications</guiicon></term>
     <listitem><para>Whether to show critical notifications, such as your battery is almost empty, to show even when in do not disturb mode.</para></listitem>
     </varlistentry>

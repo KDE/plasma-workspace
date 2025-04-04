@@ -277,6 +277,10 @@ QtObject {
                 inhibited |= true;
             }
 
+            if (notificationSettings.inhibitNotificationsWhenFullscreen) {
+                inhibited |= notificationSettings.fullscreenFocused;
+            }
+
             if (notificationSettings.inhibitNotificationsWhenScreensMirrored) {
                 inhibited |= notificationSettings.screensMirrored;
             }
@@ -288,6 +292,7 @@ QtObject {
     function revokeInhibitions() {
         notificationSettings.notificationsInhibitedUntil = undefined;
         notificationSettings.revokeApplicationInhibitions();
+        notificationSettings.fullscreenFocused = false;
         // overrules current mirrored screen setup, updates again when screen configuration changes
         notificationSettings.screensMirrored = false;
 
@@ -477,7 +482,7 @@ QtObject {
 
             popupWidth: globals.popupWidth
 
-            isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && notificationSettings.keepNormalAlwaysOnTop)
+            isCritical: model.urgency === NotificationManager.Notifications.CriticalUrgency || (model.urgency === NotificationManager.Notifications.NormalUrgency && !notificationSettings.inhibitNotificationsWhenFullscreen)
 
             modelTimeout: model.timeout
             // Increase default timeout for notifications with a URL so you have enough time

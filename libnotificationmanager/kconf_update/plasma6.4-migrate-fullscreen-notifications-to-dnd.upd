@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2025 Kristen McWilliam <kmcwilliampublic@gmail.com>
+# SPDX-License-Identifier: LGPL-2.1-only OR LGPL-3.0-only OR LicenseRef-KDE-Accepted-LGPL
+
+Version=6
+
+Id=plasma6.4-migrate-fullscreen-notifications-to-dnd
+Script=plasma6.4-migrate-fullscreen-notifications-to-dnd

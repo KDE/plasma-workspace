@@ -133,6 +133,17 @@ KCM.SimpleKCM {
             }
         }
 
+        QtControls.CheckBox {
+            text: i18nc("Automatically enable Do Not Disturb mode while a fullscreen application is focused", "While a fullscreen application is focused")
+            checked: kcm.dndSettings.whenFullscreen
+            onClicked: kcm.dndSettings.whenFullscreen = checked
+
+            KCM.SettingStateBinding {
+                configObject: kcm.dndSettings
+                settingName: "WhenFullscreen"
+                extraEnabledConditions: root.notificationsAvailable
+            }
+        }
 
         KQuickControls.KeySequenceItem {
             Kirigami.FormData.label: i18nc("Keyboard shortcut to turn Do Not Disturb mode on and off", "Manually toggle with shortcut:")
@@ -155,19 +166,6 @@ KCM.SimpleKCM {
             KCM.SettingStateBinding {
                 configObject: kcm.notificationSettings
                 settingName: "CriticalInDndMode"
-                extraEnabledConditions: root.notificationsAvailable
-            }
-        }
-
-        QtControls.CheckBox {
-            Kirigami.FormData.label: i18n("Normal notifications:")
-            text: i18n("Show over full screen windows")
-            checked: kcm.notificationSettings.normalAlwaysOnTop
-            onClicked: kcm.notificationSettings.normalAlwaysOnTop = checked
-
-            KCM.SettingStateBinding {
-                configObject: kcm.notificationSettings
-                settingName: "NormalAlwaysOnTop"
                 extraEnabledConditions: root.notificationsAvailable
             }
         }
