@@ -391,7 +391,7 @@ class SystemTrayTests(unittest.TestCase):
             self.skipTest("PySide is not available")
 
         asan_env = os.environ.copy()
-        asan_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip()
+        asan_env["LD_PRELOAD"] = subprocess.check_output(["gcc", "-print-file-name=libasan.so"]).strip().decode(encoding="utf-8")
         status_notifier = subprocess.Popen([os.path.join(os.path.dirname(os.path.abspath(__file__)), "systemtraytest", "statusnotifieritemtest.py")], stdout=subprocess.PIPE, stderr=sys.stderr, env=asan_env)
         self.addCleanup(status_notifier.kill)
         time.sleep(1)  # Wait until the icon appears
