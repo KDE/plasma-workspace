@@ -438,8 +438,6 @@ msgstr[1] "%1 ulesne varslingar"
 
 #: package/contents/ui/main.qml:91
 #, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
 msgstr[0] "%1 ulesen varsling"

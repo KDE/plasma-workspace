@@ -153,7 +153,6 @@ msgstr "UTC-avstand"
 
 #: package/contents/ui/configAppearance.qml:126
 #, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
 msgstr "Byt tidssone for heile systemet …"
@@ -314,7 +313,6 @@ msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:66
 #, fuzzy, kde-format
-#| msgid "Add More Time Zones"
 msgid "Add Selected Time Zone"
 msgstr "Legg til fleire tidssoner"
 
@@ -330,7 +328,6 @@ msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:115
 #, fuzzy, kde-format
-#| msgid "Add Time Zones…"
 msgid "Add Time Zone…"
 msgstr "Legg til tidssoner …"
 
@@ -393,7 +390,6 @@ msgstr ""
 
 #: package/contents/ui/configTimeZones.qml:256
 #, fuzzy, kde-format
-#| msgid "Time Zones"
 msgid "Choose Time Zone"
 msgstr "Tidssoner"
 

@@ -44,8 +44,6 @@ msgstr ""
 
 #: package/contents/ui/ExpandedRepresentation.qml:565
 #, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
 msgctxt "Playback rate"
 msgid "%1x"
 msgstr "−%1"

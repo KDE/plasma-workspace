@@ -93,7 +93,6 @@ msgstr "byt brukar;ny økt;brukarbyte"
 
 #: sessionrunner.cpp:55
 #, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
 msgid "Switch to a session as a different user"
 msgstr "Startar ei ny økt som ein annan brukar"
 

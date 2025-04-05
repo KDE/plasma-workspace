@@ -157,7 +157,6 @@ msgstr "Start tilpassing"
 
 #: desktopview.cpp:532
 #, fuzzy, kde-format
-#| msgid "Enter Edit Mode"
 msgid "Exit Edit Mode"
 msgstr "Start tilpassing"
 

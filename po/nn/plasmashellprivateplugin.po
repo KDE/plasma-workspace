@@ -303,8 +303,6 @@ msgstr "Nett-tenester"
 
 #: shellprivate/widgetexplorer.cpp:125
 #, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
 msgstr "Systeminformasjon"
