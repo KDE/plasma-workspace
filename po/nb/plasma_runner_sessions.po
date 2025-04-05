@@ -119,8 +119,8 @@ msgid ""
 "Switches to the active session for the user :q:, or lists all active "
 "sessions if :q: is not provided"
 msgstr ""
-"Bytter til den aktive økta for bruker :q:, eller vier alle aktive økter hvis "
-":q: ikke er oppgitt"
+"Bytter til den aktive økta for bruker :q:, eller vier alle aktive økter "
+"hvis :q: ikke er oppgitt"
 
 #: sessionrunner.cpp:111
 #, kde-format

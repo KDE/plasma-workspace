@@ -166,7 +166,6 @@ msgstr "Kvilemodus"
 
 #: contents/lockscreen/LockScreenUi.qml:338 contents/logout/Logout.qml:172
 #, fuzzy, kde-format
-#| msgid "Hibernate"
 msgid "Hibernate"
 msgstr "Dvalemodus"
 
@@ -251,7 +250,6 @@ msgstr ""
 
 #: contents/logout/Logout.qml:201
 #, fuzzy, kde-format
-#| msgid "Log Out"
 msgid "Log Out"
 msgstr "Logg ut"
 
@@ -283,7 +281,6 @@ msgstr "OK"
 
 #: contents/logout/Logout.qml:245
 #, fuzzy, kde-format
-#| msgid "Cancel"
 msgid "Cancel"
 msgstr "Avbryt"
 

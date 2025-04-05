@@ -436,13 +436,12 @@ msgid ""
 "li></ul></p>"
 msgstr ""
 "<h3>Skriftgrupper</h3><p>Denne lista viser skriftgruppene som er "
-"tilgjengelige på systemet. Det er to hovedtyper "
-"skriftgrupper:<ul><li><b>Standard</b> er spesielle grupper som "
-"skriftbehandleren bruker,<ul>%1</ul></li><li><b>Selvvalgt</b> er grupper du "
-"har opprettet. En skrift kan legges til en av disse gruppene ved å dra den "
-"fra skriftlista og slippe den i ønsket gruppe. Dra skrifta fra en gruppe til "
-"gruppa «Alle skrifter» for å ta bort familien fra den opprinelige gruppa.</"
-"li></ul></p>"
+"tilgjengelige på systemet. Det er to hovedtyper skriftgrupper:"
+"<ul><li><b>Standard</b> er spesielle grupper som skriftbehandleren bruker,"
+"<ul>%1</ul></li><li><b>Selvvalgt</b> er grupper du har opprettet. En skrift "
+"kan legges til en av disse gruppene ved å dra den fra skriftlista og slippe "
+"den i ønsket gruppe. Dra skrifta fra en gruppe til gruppa «Alle skrifter» "
+"for å ta bort familien fra den opprinelige gruppa.</li></ul></p>"
 
 #: kcmfontinst/GroupList.cpp:594
 #, kde-format
@@ -467,8 +466,8 @@ msgid ""
 msgstr ""
 "<li><i>Alle skrifter</i> inneholder alle skrifter som er installerte på "
 "systemet, både «System» og «Personlig».</li><li><i>System</i> inneholder "
-"alle skrifter som gjelder hele systemet (dvs. tilgjengelige for alle brukere)"
-"</li><li><i>Personlig</i> inneholder dine personlige skrifter.</"
+"alle skrifter som gjelder hele systemet (dvs. tilgjengelige for alle "
+"brukere)</li><li><i>Personlig</i> inneholder dine personlige skrifter.</"
 "li><li><i>Uklassifisert</i> inneholder alle skrifter som ennå ikke er "
 "plassert i en «Selvvalgt»-gruppe.</li>"
 
@@ -774,8 +773,8 @@ msgstr ""
 "<p>Med denne modulen kan du installere TrueType-, Type1- og rasterskrifter.</"
 "p><p>Du kan òg installere skrifter gjennom Konqueror: Skriv fonts:/ i "
 "adresselinja til Konqueror, og du vil få oversikt over de installerte "
-"skriftene. For å installere, bare kopier en skrift inn i den rette mappa – «"
-"%1» for skrifter som bare du kan bruke, eller «%2» for systemskrifter som "
+"skriftene. For å installere, bare kopier en skrift inn i den rette mappa – "
+"«%1» for skrifter som bare du kan bruke, eller «%2» for systemskrifter som "
 "alle kan bruke.</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:437
@@ -883,8 +882,8 @@ msgstr[0] ""
 "<p>Er du sikker på at du vil flytte denne skrifta fra <i>%2</i> til <i>%3</"
 "i>?</p>"
 msgstr[1] ""
-"<p>Er du sikker på at du vil flytte disse %1 skriftene fra <i>%2</i> til <i>"
-"%3</i>?</p>"
+"<p>Er du sikker på at du vil flytte disse %1 skriftene fra <i>%2</i> til "
+"<i>%3</i>?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:681
 #, kde-format
@@ -1038,8 +1037,8 @@ msgid ""
 "<p>Do you really want to enable</p><p>'<b>%1</b>', contained within group "
 "'<b>%2</b>'?</p>"
 msgstr ""
-"<p>Er du sikker på at du vil slå på</p><p>«<b>%1</b>», som er i gruppe «<b>"
-"%2</b>»?</p>"
+"<p>Er du sikker på at du vil slå på</p><p>«<b>%1</b>», som er i gruppe "
+"«<b>%2</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1128
 #, kde-format
@@ -1086,8 +1085,8 @@ msgstr[0] ""
 "<p>Er du sikker på at du vil slå på denne skrifta som er i gruppe «<b>%2</"
 "b>»?</p>"
 msgstr[1] ""
-"<p>Er du sikker på at du vil slå på disse %1 skriftene som er i gruppe «<b>"
-"%2</b>»?</p>"
+"<p>Er du sikker på at du vil slå på disse %1 skriftene som er i gruppe "
+"«<b>%2</b>»?</p>"
 
 #: kcmfontinst/KCmFontInst.cpp:1150
 #, kde-format

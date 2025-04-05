@@ -307,7 +307,8 @@ msgstr "Ukjent"
 msgid "Default for System"
 msgstr "Standard for systemet"
 
-#: localelistmodel.cpp:34 localelistmodel.cpp:85 package/contents/ui/main.qml:239
+#: localelistmodel.cpp:34 localelistmodel.cpp:85
+#: package/contents/ui/main.qml:239
 #, kde-format
 msgid "Default"
 msgstr "Standard"

@@ -95,27 +95,32 @@ msgstr "La stå uendret"
 msgid "Create User"
 msgstr "Legg til bruker"
 
-#: package/contents/ui/CreateUser.qml:30 package/contents/ui/UserDetailsPage.qml:124
+#: package/contents/ui/CreateUser.qml:30
+#: package/contents/ui/UserDetailsPage.qml:124
 #, kde-format
 msgid "Name:"
 msgstr "Navn:"
 
-#: package/contents/ui/CreateUser.qml:34 package/contents/ui/UserDetailsPage.qml:131
+#: package/contents/ui/CreateUser.qml:34
+#: package/contents/ui/UserDetailsPage.qml:131
 #, kde-format
 msgid "Username:"
 msgstr "Brukernavn:"
 
-#: package/contents/ui/CreateUser.qml:44 package/contents/ui/UserDetailsPage.qml:139
+#: package/contents/ui/CreateUser.qml:44
+#: package/contents/ui/UserDetailsPage.qml:139
 #, kde-format
 msgid "Standard"
 msgstr "Standard"
 
-#: package/contents/ui/CreateUser.qml:45 package/contents/ui/UserDetailsPage.qml:140
+#: package/contents/ui/CreateUser.qml:45
+#: package/contents/ui/UserDetailsPage.qml:140
 #, kde-format
 msgid "Administrator"
 msgstr "Administrator"
 
-#: package/contents/ui/CreateUser.qml:48 package/contents/ui/UserDetailsPage.qml:143
+#: package/contents/ui/CreateUser.qml:48
+#: package/contents/ui/UserDetailsPage.qml:143
 #, kde-format
 msgid "Account type:"
 msgstr "Kontotype:"
