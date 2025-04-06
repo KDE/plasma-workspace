@@ -12,6 +12,7 @@
 #include "sectionsmodel.h"
 
 #include <QQmlParserStatus>
+#include <qqmlregistration.h>
 
 #include <KServiceGroup>
 
@@ -21,6 +22,7 @@ class AppsModel : public AbstractModel, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
+    QML_ELEMENT
 
     Q_PROPERTY(bool autoPopulate READ autoPopulate WRITE setAutoPopulate NOTIFY autoPopulateChanged)
 

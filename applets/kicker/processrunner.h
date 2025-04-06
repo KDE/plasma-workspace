@@ -8,9 +8,12 @@
 
 #include <QAction>
 
+#include <qqmlregistration.h>
+
 class ProcessRunner : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit ProcessRunner(QObject *parent = nullptr);

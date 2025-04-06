@@ -10,6 +10,8 @@
 #include "forwardingmodel.h"
 
 #include <QSortFilterProxyModel>
+#include <qqmlregistration.h>
+
 #include <Solid/StorageAccess>
 
 class SimpleFavoritesModel;
@@ -62,6 +64,7 @@ public:
 class ComputerModel : public ForwardingModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(int appNameFormat READ appNameFormat WRITE setAppNameFormat NOTIFY appNameFormatChanged)
     Q_PROPERTY(QObject *appletInterface READ appletInterface WRITE setAppletInterface NOTIFY appletInterfaceChanged)

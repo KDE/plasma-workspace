@@ -12,6 +12,7 @@
 class SubMenu : public PlasmaQuick::Dialog
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(int offset READ offset WRITE setOffset NOTIFY offsetChanged)
     Q_PROPERTY(bool facingLeft READ facingLeft NOTIFY facingLeftChanged)

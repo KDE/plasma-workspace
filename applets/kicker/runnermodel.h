@@ -14,6 +14,7 @@
 #include <KSharedConfig>
 #include <QAbstractListModel>
 #include <QTimer>
+#include <qqmlregistration.h>
 
 class AbstractModel;
 class RunnerMatchesModel;
@@ -21,6 +22,7 @@ class RunnerMatchesModel;
 class RunnerModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(int count READ count NOTIFY countChanged)
     Q_PROPERTY(AbstractModel *favoritesModel READ favoritesModel WRITE setFavoritesModel NOTIFY favoritesModelChanged)

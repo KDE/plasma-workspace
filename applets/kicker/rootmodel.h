@@ -34,6 +34,7 @@ private:
 class RootModel : public AppsModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QObject *systemFavoritesModel READ systemFavoritesModel NOTIFY systemFavoritesModelChanged)
     Q_PROPERTY(bool showAllApps READ showAllApps WRITE setShowAllApps NOTIFY showAllAppsChanged)

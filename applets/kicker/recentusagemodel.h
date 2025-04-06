@@ -12,6 +12,7 @@
 #include <PlasmaActivities/Stats/ResultModel>
 #include <QQmlParserStatus>
 #include <QSortFilterProxyModel>
+#include <qqmlregistration.h>
 
 class QModelIndex;
 class KFileItem;
@@ -51,6 +52,7 @@ class RecentUsageModel : public ForwardingModel, public QQmlParserStatus
 {
     Q_OBJECT
     Q_INTERFACES(QQmlParserStatus)
+    QML_ELEMENT
 
     Q_PROPERTY(int ordering READ ordering WRITE setOrdering NOTIFY orderingChanged)
     Q_PROPERTY(IncludeUsage shownItems READ shownItems WRITE setShownItems NOTIFY shownItemsChanged)

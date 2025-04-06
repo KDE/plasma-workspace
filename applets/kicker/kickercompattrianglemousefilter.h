@@ -6,11 +6,12 @@
 
 #pragma once
 
-#include "../../../components/trianglemousefilter/trianglemousefilter.h"
+#include "trianglemousefilter.h"
 
 class KickerCompatTriangleMouseFilter : public TriangleMouseFilter
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     KickerCompatTriangleMouseFilter(QQuickItem *parent = nullptr);

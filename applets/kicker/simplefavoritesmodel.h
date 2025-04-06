@@ -9,10 +9,12 @@
 #include "abstractmodel.h"
 
 #include <QPointer>
+#include <qqmlregistration.h>
 
 class SimpleFavoritesModel : public AbstractModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(QStringList favorites READ favorites WRITE setFavorites NOTIFY favoritesChanged)

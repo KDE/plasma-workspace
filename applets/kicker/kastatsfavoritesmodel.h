@@ -10,6 +10,7 @@
 #include "placeholdermodel.h"
 
 #include <QPointer>
+#include <qqmlregistration.h>
 
 #include <KConfig>
 
@@ -30,6 +31,7 @@ class Activity;
 class KAStatsFavoritesModel : public PlaceholderModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(bool enabled READ enabled WRITE setEnabled NOTIFY enabledChanged)
     Q_PROPERTY(QStringList favorites READ favorites WRITE setFavorites NOTIFY favoritesChanged)
