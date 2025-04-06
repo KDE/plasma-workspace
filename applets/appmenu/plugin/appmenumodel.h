@@ -12,6 +12,7 @@
 #include <QPointer>
 #include <QRect>
 #include <QStringList>
+#include <qqmlregistration.h>
 #include <tasksmodel.h>
 
 #include <Plasma/Containment>
@@ -24,6 +25,7 @@ class KDBusMenuImporter;
 class AppMenuModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(bool menuAvailable READ menuAvailable WRITE setMenuAvailable NOTIFY menuAvailableChanged)
     Q_PROPERTY(bool visible READ visible NOTIFY visibleChanged)

@@ -1,12 +1,16 @@
-set(appmenuapplet_SRCS
-    appmenumodel.cpp
-    appmenuplugin.cpp
-    appmenumodel.h
-    appmenuplugin.h
+ecm_add_qml_module(appmenuplugin
+    URI "org.kde.plasma.private.appmenu"
+    VERSION 1.0
+    GENERATE_PLUGIN_SOURCE
+    DEPENDENCIES QtCore
 )
 
-add_library(appmenuplugin SHARED ${appmenuapplet_SRCS})
-target_link_libraries(appmenuplugin
+target_sources(appmenuplugin PRIVATE
+    appmenumodel.cpp
+    appmenumodel.h
+)
+
+target_link_libraries(appmenuplugin PRIVATE
                       Qt::Core
                       Qt::Widgets
                       Qt::Quick
@@ -16,6 +20,4 @@ target_link_libraries(appmenuplugin
                       PW::LibTaskManager
                       dbusmenuqt)
 
-install(TARGETS appmenuplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/appmenu)
-
-install(FILES qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/appmenu)
+ecm_finalize_qml_module(appmenuplugin)
