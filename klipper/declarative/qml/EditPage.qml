@@ -43,6 +43,7 @@ ColumnLayout {
     }
 
     Shortcut {
+        enabled: textArea.canUndo
         sequence: StandardKey.Save
         onActivated: editPage.saveAndExit()
     }
@@ -63,7 +64,7 @@ ColumnLayout {
             Accessible.name: i18ndc("klipper", "@info:whatsthis", "Text edit area")
             KeyNavigation.up: editPage.dialogItem.KeyNavigation.up
             Keys.onPressed: event => {
-                if ((event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
+                if (textArea.canUndo && (event.key === Qt.Key_Return || event.key === Qt.Key_Enter) && !(event.modifiers & Qt.ShiftModifier)) {
                     editPage.saveAndExit();
                     event.accepted = true;
                 } else {
@@ -77,6 +78,7 @@ ColumnLayout {
         Layout.alignment: Qt.AlignRight
         Layout.margins: Kirigami.Units.smallSpacing * 2
         PlasmaComponents3.Button {
+            enabled: textArea.canUndo
             text: i18ndc("klipper", "@action:button", "Save")
             icon.name: "document-save"
             KeyNavigation.up: textArea
