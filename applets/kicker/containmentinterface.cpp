@@ -11,8 +11,6 @@
 #include <Plasma/Corona>
 #include <PlasmaQuick/AppletQuickItem>
 
-#include <KActionCollection>
-
 // FIXME HACK TODO: Unfortunately we have no choice but to hard-code a list of
 // applets we know to expose the correct interface right now -- this is slated
 // for replacement with some form of generic service.

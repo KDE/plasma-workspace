@@ -7,12 +7,14 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlregistration.h>
 
 class AbstractEntry;
 
 class AbstractModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ANONYMOUS
 
     Q_PROPERTY(QString description READ description NOTIFY descriptionChanged)
 

@@ -3,35 +3,34 @@ add_definitions(
 )
 
 set(kickerplugin_SRCS
-    plugin/abstractentry.cpp
-    plugin/abstractmodel.cpp
-    plugin/actionlist.cpp
-    plugin/appentry.cpp
-    plugin/appsmodel.cpp
-    plugin/computermodel.cpp
-    plugin/containmentinterface.cpp
-    plugin/draghelper.cpp
-    plugin/simplefavoritesmodel.cpp
-    plugin/kastatsfavoritesmodel.cpp
-    plugin/fileentry.cpp
-    plugin/forwardingmodel.cpp
-    plugin/placeholdermodel.cpp
-    plugin/funnelmodel.cpp
-    plugin/dashboardwindow.cpp
-    plugin/kickerplugin.cpp
-    plugin/processrunner.cpp
-    plugin/rootmodel.cpp
-    plugin/runnermodel.cpp
-    plugin/runnermatchesmodel.cpp
-    plugin/recentusagemodel.cpp
-    plugin/submenu.cpp
-    plugin/systementry.cpp
-    plugin/systemmodel.cpp
-    plugin/systemsettings.cpp
-    plugin/wheelinterceptor.cpp
-    plugin/windowsystem.cpp
-    plugin/funnelmodel.cpp
-    plugin/sectionsmodel.cpp
+    abstractentry.cpp
+    abstractmodel.cpp
+    actionlist.cpp
+    appentry.cpp
+    appsmodel.cpp
+    computermodel.cpp
+    containmentinterface.cpp
+    draghelper.cpp
+    simplefavoritesmodel.cpp
+    kastatsfavoritesmodel.cpp
+    fileentry.cpp
+    forwardingmodel.cpp
+    placeholdermodel.cpp
+    funnelmodel.cpp
+    dashboardwindow.cpp
+    processrunner.cpp
+    rootmodel.cpp
+    runnermodel.cpp
+    runnermatchesmodel.cpp
+    recentusagemodel.cpp
+    submenu.cpp
+    systementry.cpp
+    systemmodel.cpp
+    systemsettings.cpp
+    wheelinterceptor.cpp
+    windowsystem.cpp
+    funnelmodel.cpp
+    sectionsmodel.cpp
 )
 
 ecm_qt_declare_logging_category(kickerplugin_SRCS
@@ -45,15 +44,19 @@ ecm_qt_declare_logging_category(kickerplugin_SRCS
 qt_add_dbus_interface(kickerplugin_SRCS ${CMAKE_SOURCE_DIR}/krunner/dbus/org.kde.krunner.App.xml krunner_interface)
 qt_add_dbus_interface(kickerplugin_SRCS ${CMAKE_SOURCE_DIR}/ksmserver/org.kde.KSMServerInterface.xml ksmserver_interface)
 
-install(FILES plugin/qmldir DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kicker)
-
-add_library(kickerplugin SHARED ${kickerplugin_SRCS})
+ecm_add_qml_module(kickerplugin
+    URI "org.kde.plasma.private.kicker"
+    VERSION 0.1
+    SOURCES ${kickerplugin_SRCS}
+    DEPENDENCIES QtCore QtQuick
+    GENERATE_PLUGIN_SOURCE
+)
 
 if (BUILD_TESTING)
     set_target_properties(kickerplugin PROPERTIES CXX_VISIBILITY_PRESET default)
 endif()
 
-target_link_libraries(kickerplugin
+target_link_libraries(kickerplugin PRIVATE
                       Qt::Core
                       Qt::Qml
                       Qt::Quick
@@ -72,21 +75,20 @@ target_link_libraries(kickerplugin
                       KF6::Runner
                       KF6::Service
                       KF6::WindowSystem
-                      KF6::XmlGui
                       Plasma::KWaylandClient
                       PW::KWorkspace)
 
 if (${HAVE_APPSTREAMQT})
-target_link_libraries(kickerplugin AppStreamQt)
+target_link_libraries(kickerplugin PRIVATE AppStreamQt)
 endif()
 
 if (${HAVE_ICU})
-    target_link_libraries(kickerplugin ICU::i18n ICU::uc)
+    target_link_libraries(kickerplugin PRIVATE ICU::i18n ICU::uc)
     target_compile_definitions(kickerplugin PRIVATE "-DHAVE_ICU")
 endif()
 
 if (BUILD_TESTING)
-    add_subdirectory(plugin/autotests)
+    add_subdirectory(autotests)
 endif()
 
-install(TARGETS kickerplugin DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/private/kicker)
+ecm_finalize_qml_module(kickerplugin)

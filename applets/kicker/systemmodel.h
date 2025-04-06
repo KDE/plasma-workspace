@@ -9,9 +9,12 @@
 #include "abstractmodel.h"
 #include "systementry.h"
 
+#include <qqmlregistration.h>
+
 class SystemModel : public AbstractModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit SystemModel(QObject *parent = nullptr);

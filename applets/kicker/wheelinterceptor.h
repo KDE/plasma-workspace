@@ -12,6 +12,7 @@
 class WheelInterceptor : public QQuickItem
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QQuickItem *destination READ destination WRITE setDestination NOTIFY destinationChanged)
 

@@ -13,6 +13,7 @@ class QQuickItem;
 class WindowSystem : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit WindowSystem(QObject *parent = nullptr);

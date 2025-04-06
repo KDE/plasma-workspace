@@ -19,6 +19,7 @@ class PlasmaShell;
 class DashboardWindow : public QQuickWindow
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QQuickItem *mainItem READ mainItem WRITE setMainItem NOTIFY mainItemChanged)
     Q_PROPERTY(QQuickItem *visualParent READ visualParent WRITE setVisualParent NOTIFY visualParentChanged)

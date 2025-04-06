@@ -8,9 +8,12 @@
 
 #include "forwardingmodel.h"
 
+#include <qqmlregistration.h>
+
 class FunnelModel : public ForwardingModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit FunnelModel(QObject *parent = nullptr);

@@ -8,12 +8,15 @@
 
 #include <QObject>
 #include <QUrl>
+#include <qqmlregistration.h>
 
 class QQuickItem;
 
 class DragHelper : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+
     Q_PROPERTY(int dragIconSize READ dragIconSize WRITE setDragIconSize NOTIFY dragIconSizeChanged)
     Q_PROPERTY(bool dragging READ isDragging NOTIFY draggingChanged)
 

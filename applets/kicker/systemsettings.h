@@ -7,10 +7,12 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlregistration.h>
 
 class SystemSettings : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit SystemSettings(QObject *parent = nullptr);
