@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-29 00:44+0000\n"
-"PO-Revision-Date: 2025-02-10 16:52+0100\n"
+"PO-Revision-Date: 2025-04-05 08:58+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
@@ -103,11 +103,10 @@ msgid "Repeat"
 msgstr "Upprepa"
 
 #: package/contents/ui/ExpandedRepresentation.qml:798
-#, fuzzy, kde-format
-#| msgid "Choose player automatically"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
-msgstr "Välj automatiskt spelare"
+msgstr "Välj spelare automatiskt"
 
 #: package/contents/ui/main.qml:60
 #, kde-format

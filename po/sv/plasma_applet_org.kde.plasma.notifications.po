@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# SPDX-FileCopyrightText: 2010, 2024 Stefan Asserhäll <stefan.asserhall@gmail.com>
+# SPDX-FileCopyrightText: 2010, 2024, 2025 Stefan Asserhäll <stefan.asserhall@gmail.com>
 # Stefan Asserhall <stefan.asserhall@gmail.com>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-06-21 09:40+0200\n"
+"PO-Revision-Date: 2025-04-05 08:59+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.08.5\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -266,12 +266,12 @@ msgstr "Skicka"
 #: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Hastighet"
 
 #: package/contents/ui/components/SpeedChart.qml:190
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Medelhastighet"
 
 #: package/contents/ui/components/SpeedChart.qml:247
 #, kde-format
@@ -371,7 +371,7 @@ msgstr "Skärmar är speglade"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Visa"
 
 #: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
@@ -435,13 +435,11 @@ msgstr[0] "%1 oläst underrättelse"
 msgstr[1] "%1 olästa underrättelser"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 oläst underrättelse"
-msgstr[1] "%1 olästa underrättelser"
+msgstr[0] "%1 aktiv underrättelse"
+msgstr[1] "%1 aktiva underrättelser"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

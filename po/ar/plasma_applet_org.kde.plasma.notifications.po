@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2025-03-20 09:47+0400\n"
+"PO-Revision-Date: 2025-04-05 11:58+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -412,7 +412,7 @@ msgstr "الشاشات معكوسة"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "اعرض"
 
 #: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
@@ -488,17 +488,15 @@ msgstr[4] "%1 إشعارا"
 msgstr[5] "%1 إشعار"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
 msgstr[0] "لا يوجد إشعارات"
-msgstr[1] "إشعار واحد"
-msgstr[2] "إشعارين"
-msgstr[3] "%1 إشعارات"
-msgstr[4] "%1 إشعارا"
-msgstr[5] "%1 إشعار"
+msgstr[1] "إشعارًا واحدًا نشطًا"
+msgstr[2] "إشعارين نشيطين"
+msgstr[3] "%1 إشعارات نشطة"
+msgstr[4] "%1 إشعارًا نشطًا"
+msgstr[5] "%1 إشعار نشطًا"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

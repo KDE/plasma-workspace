@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-24 00:43+0000\n"
-"PO-Revision-Date: 2025-02-03 16:30+0400\n"
+"PO-Revision-Date: 2025-04-05 11:56+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -304,12 +304,9 @@ msgid "Online Services"
 msgstr "الخدمات على الشابكة"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "معلومات النظام"
+msgstr "المعلومات الشخصية"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
