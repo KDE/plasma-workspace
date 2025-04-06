@@ -95,13 +95,14 @@ GridLayout {
             Layout.row: 2 + index
             Layout.fillWidth: true
             text: {
-                let rawProcessed = modelInterface.jobDetails["processed" + modelData];
-                // Format number to not display as exponential
-                processed = rawProcessed.toLocaleString(Qt.locale(), 'f', 0);
-
-                var total = modelInterface.jobDetails["total" + modelData];
+                let processed = modelInterface.jobDetails["processed" + modelData];
+                let total = modelInterface.jobDetails["total" + modelData];
 
                 if (processed > 0 || total > 1) {
+                    // Format numbers to not display as exponential
+                    processedAsString = processed.toLocaleString(Qt.locale(), 'f', 0);
+                    totalAsString = total.toLocaleString(Qt.locale(), 'f', 0);
+
                     if (processed > 0 && total > 0 && processed <= total) {
                         switch(modelData) {
                         case "Bytes":
@@ -110,24 +111,24 @@ GridLayout {
                                 KCoreAddons.Format.formatByteSize(processed)).toLocaleString(Qt.locale(), 'f', 0)
                         case "Files":
                             return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many files have been copied", "%2 of %1 file", "%2 of %1 files",
-                                          total, processed);
+                                          totalAsString, processedAsString);
                         case "Directories":
                             return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many dirs have been copied", "%2 of %1 folder", "%2 of %1 folders",
-                                         total, processed);
+                                         totalAsString, processedAsString);
                         case "Items":
                             return i18ndcp("plasma_applet_org.kde.plasma.notifications", "How many items (that includes files and dirs) have been copied", "%2 of %1 item", "%2 of %1 items",
-                                         total, processed);
+                                         totalAsString, processedAsString);
                         }
                     } else {
                         switch(modelData) {
                         case "Bytes":
-                            return KCoreAddons.Format.formatByteSize(processed || total)
+                            return KCoreAddons.Format.formatByteSize(processedAsString || totalAsString)
                         case "Files":
-                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 file", "%1 files", (processed || total));
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 file", "%1 files", (processedAsString || totalAsString));
                         case "Directories":
-                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 folder", "%1 folders", (processed || total));
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 folder", "%1 folders", (processedAsString || totalAsString));
                         case "Items":
-                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 item", "%1 items", (processed || total));
+                            return i18ndp("plasma_applet_org.kde.plasma.notifications", "%1 item", "%1 items", (processedAsString || totalAsString));
                         }
                     }
                 }
