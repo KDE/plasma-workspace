@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-25 00:43+0000\n"
-"PO-Revision-Date: 2024-11-28 23:46+0100\n"
+"PO-Revision-Date: 2025-04-07 00:38+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -63,12 +63,17 @@ msgid ""
 "><nl/>Use this setting at your own risk, and do not report issues to KDE or "
 "the app’s author."
 msgstr ""
+"여기에서 시스템 트레이 아이콘을 비활성화하기 전에 <application>%1</"
+"application> 설정을 확인하십시오. 일부 앱의 트레이 아이콘은 비활성화되지 않"
+"을 것을 간주하고 있으며, 이 설정을 사용했을 경우 앱이 올바르게 작동하지 않을 "
+"수도 있습니다.<nl/><nl/>이 설정을 사용하는 것은 본인의 책임이며, KDE나 앱 개"
+"발자에게 문제를 보고하지 마십시오."
 
 #: package/contents/ui/ConfigEntries.qml:70
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
-msgstr ""
+msgstr "이해했고 위험성을 받아들임"
 
 #: package/contents/ui/ConfigEntries.qml:101
 #, kde-format

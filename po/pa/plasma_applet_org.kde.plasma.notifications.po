@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-01 00:43+0000\n"
+"POT-Creation-Date: 2025-04-07 00:44+0000\n"
 "PO-Revision-Date: 2024-02-05 07:41-0600\n"
 "Last-Translator: A S Alam <aalam@punlinux.org>\n"
 "Language-Team: Punjabi <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgstr "%1 ਨਾਲ ਖੋਲ੍ਹੋ"
 msgid "Open with…"
 msgstr "…ਨਾਲ ਖੋਲ੍ਹੋ"
 
-#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:160
+#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:162
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "ਰੱਖਣ ਵਾਲਾ ਫੋਲਡਰ ਖੋਲ੍ਹੋ"
@@ -208,8 +208,8 @@ msgstr[1] "%1 ਆਈਟਮਾਂ"
 #: package/contents/ui/components/JobDetails.qml:147
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
-#: package/contents/ui/components/SpeedChart.qml:183
-#: package/contents/ui/components/SpeedChart.qml:194
+#: package/contents/ui/components/SpeedChart.qml:185
+#: package/contents/ui/components/SpeedChart.qml:196
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -221,31 +221,31 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "ਵੇਰਵੇ"
 
-#: package/contents/ui/components/JobItem.qml:77
+#: package/contents/ui/components/JobItem.qml:79
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "ਵਾਪਸ ਚਲਾਓ"
 
-#: package/contents/ui/components/JobItem.qml:78
+#: package/contents/ui/components/JobItem.qml:80
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "ਵਿਰਾਮ"
 
-#: package/contents/ui/components/JobItem.qml:92
+#: package/contents/ui/components/JobItem.qml:94
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
-#: package/contents/ui/components/JobItem.qml:124
+#: package/contents/ui/components/JobItem.qml:126
 #: package/contents/ui/components/ThumbnailStrip.qml:160
 #, kde-format
 msgid "More Options…"
 msgstr "…ਹੋਰ ਚੋਣਾਂ"
 
-#: package/contents/ui/components/JobItem.qml:152
+#: package/contents/ui/components/JobItem.qml:154
 #, kde-format
 msgid "Open"
 msgstr "ਖੋਲ੍ਹੋ"
@@ -267,12 +267,12 @@ msgstr "ਭੇਜੋ"
 msgid "Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:190
+#: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:247
+#: package/contents/ui/components/SpeedChart.qml:249
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-31 00:42+0000\n"
-"PO-Revision-Date: 2024-11-28 23:48+0100\n"
+"PO-Revision-Date: 2025-04-07 00:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -71,32 +71,26 @@ msgid "When restarted, the computer will enter the boot loader menu."
 msgstr "컴퓨터를 다시 시작하면 부트 로더 메뉴 화면으로 진입합니다."
 
 #: contents/logout/Logout.qml:216
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p"
-msgstr "대기 모드"
+msgstr "대기 모드(&P)"
 
 #: contents/logout/Logout.qml:217
-#, fuzzy, kde-format
-#| msgctxt "Suspend to RAM"
-#| msgid "Sleep Now"
+#, kde-format
 msgctxt "Suspend to RAM"
 msgid "Slee&p Now"
-msgstr "지금 대기 모드로 전환"
+msgstr "지금 대기 모드로 전환(&P)"
 
 #: contents/logout/Logout.qml:226
-#, fuzzy, kde-format
-#| msgid "Hibernate"
+#, kde-format
 msgid "&Hibernate"
-msgstr "최대 절전 모드"
+msgstr "최대 절전 모드(&H)"
 
 #: contents/logout/Logout.qml:227
-#, fuzzy, kde-format
-#| msgid "Hibernate Now"
+#, kde-format
 msgid "&Hibernate Now"
-msgstr "지금 최대 절전 모드로 전환"
+msgstr "지금 최대 절전 모드로 전환(&H)"
 
 #: contents/logout/Logout.qml:238
 #, kde-format
@@ -105,16 +99,14 @@ msgid "Install Updates and Restart"
 msgstr "업데이트 설치 후 다시 시작"
 
 #: contents/logout/Logout.qml:240 contents/logout/Logout.qml:259
-#, fuzzy, kde-format
-#| msgid "Restart"
+#, kde-format
 msgid "&Restart"
-msgstr "다시 시작"
+msgstr "다시 시작(&R)"
 
 #: contents/logout/Logout.qml:241 contents/logout/Logout.qml:260
-#, fuzzy, kde-format
-#| msgid "Restart Now"
+#, kde-format
 msgid "&Restart Now"
-msgstr "지금 다시 시작"
+msgstr "지금 다시 시작(&R)"
 
 #: contents/logout/Logout.qml:273
 #, kde-format
@@ -123,34 +115,29 @@ msgid "Install Updates and Shut Down"
 msgstr "업데이트 설치 후 컴퓨터 끄기"
 
 #: contents/logout/Logout.qml:275 contents/logout/Logout.qml:294
-#, fuzzy, kde-format
-#| msgid "Shut Down"
+#, kde-format
 msgid "&Shut Down"
-msgstr "컴퓨터 끄기"
+msgstr "컴퓨터 끄기(&S)"
 
 #: contents/logout/Logout.qml:276 contents/logout/Logout.qml:295
-#, fuzzy, kde-format
-#| msgid "Shut Down Now"
+#, kde-format
 msgid "&Shut Down Now"
-msgstr "지금 컴퓨터 끄기"
+msgstr "지금 컴퓨터 끄기(&S)"
 
 #: contents/logout/Logout.qml:307
-#, fuzzy, kde-format
-#| msgid "Log Out"
+#, kde-format
 msgid "&Log Out"
-msgstr "로그아웃"
+msgstr "로그아웃(&L)"
 
 #: contents/logout/Logout.qml:308
-#, fuzzy, kde-format
-#| msgid "Log Out Now"
+#, kde-format
 msgid "&Log Out Now"
-msgstr "지금 로그아웃"
+msgstr "지금 로그아웃(&L)"
 
 #: contents/logout/Logout.qml:318
-#, fuzzy, kde-format
-#| msgid "Cancel"
+#, kde-format
 msgid "&Cancel"
-msgstr "취소"
+msgstr "취소(&C)"
 
 #: contents/osd/OsdItem.qml:34
 #, kde-format

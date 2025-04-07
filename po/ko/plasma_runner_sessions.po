@@ -1,14 +1,14 @@
 # Translation of krunner_sessions to Korean.
 # Copyright (C) 2008 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdebase package.
-# Shinjo Park <kde@peremen.name>, 2008, 2009, 2011, 2019, 2020, 2022, 2023.
+# SPDX-FileCopyrightText: 2008, 2009, 2011, 2019, 2020, 2022, 2023, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: krunner_sessions\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-19 00:43+0000\n"
-"PO-Revision-Date: 2023-10-08 23:53+0200\n"
+"PO-Revision-Date: 2025-04-07 00:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: sessionrunner.cpp:22
 #, kde-format
@@ -91,10 +91,9 @@ msgid "switch user;new session"
 msgstr "사용자 전환;새 세션;새로운 세션"
 
 #: sessionrunner.cpp:55
-#, fuzzy, kde-format
-#| msgid "Starts a new session as a different user"
+#, kde-format
 msgid "Switch to a session as a different user"
-msgstr "새 사용자로 세션 시작하기"
+msgstr "다른 사용자로 세션 전환"
 
 #: sessionrunner.cpp:77
 #, kde-format

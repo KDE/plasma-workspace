@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2014, 2016, 2017, 2018, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2014, 2016, 2017, 2018, 2021, 2022, 2023, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-29 00:44+0000\n"
-"PO-Revision-Date: 2023-10-08 23:52+0200\n"
+"PO-Revision-Date: 2025-04-07 00:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/AlbumArtStackView.qml:202
 #, kde-format
@@ -38,27 +38,25 @@ msgstr "-%1"
 #: package/contents/ui/ExpandedRepresentation.qml:562
 #, kde-format
 msgid "Playback rate %1"
-msgstr ""
+msgstr "재생 속도: %1"
 
 #: package/contents/ui/ExpandedRepresentation.qml:565
-#, fuzzy, kde-format
-#| msgctxt "Remaining time for song e.g -5:42"
-#| msgid "-%1"
+#, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
-msgstr "-%1"
+msgstr "%1x"
 
 #: package/contents/ui/ExpandedRepresentation.qml:569
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
-msgstr ""
+msgstr "재생 속도"
 
 #: package/contents/ui/ExpandedRepresentation.qml:615
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
-msgstr ""
+msgstr "%1(표준)"
 
 #: package/contents/ui/ExpandedRepresentation.qml:654
 #, kde-format
@@ -105,8 +103,7 @@ msgid "Repeat"
 msgstr "반복"
 
 #: package/contents/ui/ExpandedRepresentation.qml:798
-#, fuzzy, kde-format
-#| msgid "Choose player automatically"
+#, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"
 msgstr "자동으로 재생기 선택"

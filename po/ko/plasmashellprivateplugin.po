@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2016, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2016, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-24 00:43+0000\n"
-"PO-Revision-Date: 2024-11-29 00:01+0100\n"
+"PO-Revision-Date: 2025-04-07 00:31+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -297,12 +297,9 @@ msgid "Online Services"
 msgstr "온라인 서비스"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "시스템 정보"
+msgstr "개인 정보"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -345,18 +342,13 @@ msgid "Running"
 msgstr "실행 중"
 
 #: shellprivate/widgetexplorer.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "삭제 가능"
+msgstr "사용자가 설치함"
 
 #: shellprivate/widgetexplorer.cpp:161
 #, kde-format
@@ -409,47 +401,47 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "현재 선택한 시간대를 이 지도에 표시할 수 없음"
 
 #: timezoneselector/TimezoneSelector.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "확대"
 
 #: timezoneselector/TimezoneSelector.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "축소"
 
 #: timezoneselector/TimezoneSelector.qml:230
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "지역:"
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "선택…"
 
 #: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "시간대 지역 선택기"
 
 #: timezoneselector/TimezoneSelector.qml:261
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "시간대:"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "시간대 위치 선택기"
 
 #~ msgid "&Execute"
 #~ msgstr "실행(&E)"

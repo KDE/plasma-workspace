@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-01 00:43+0000\n"
+"POT-Creation-Date: 2025-04-07 00:44+0000\n"
 "PO-Revision-Date: 2022-10-31 11:54+0100\n"
 "Last-Translator: Phu Hung Nguyen <phu.nguyen@kdemail.net>\n"
 "Language-Team: Vietnamese <kde-l10n-vi@kde.org>\n"
@@ -28,7 +28,7 @@ msgstr "Mở bằng %1"
 msgid "Open with…"
 msgstr "Mở bằng…"
 
-#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:160
+#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:162
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Mở thư mục chứa"
@@ -202,8 +202,8 @@ msgstr[0] "%1 mục"
 #: package/contents/ui/components/JobDetails.qml:147
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
-#: package/contents/ui/components/SpeedChart.qml:183
-#: package/contents/ui/components/SpeedChart.qml:194
+#: package/contents/ui/components/SpeedChart.qml:185
+#: package/contents/ui/components/SpeedChart.qml:196
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -217,31 +217,31 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "Ẩn chi tiết"
 
-#: package/contents/ui/components/JobItem.qml:77
+#: package/contents/ui/components/JobItem.qml:79
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "Tiếp tục trở lại"
 
-#: package/contents/ui/components/JobItem.qml:78
+#: package/contents/ui/components/JobItem.qml:80
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "Tạm dừng"
 
-#: package/contents/ui/components/JobItem.qml:92
+#: package/contents/ui/components/JobItem.qml:94
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "Huỷ"
 
-#: package/contents/ui/components/JobItem.qml:124
+#: package/contents/ui/components/JobItem.qml:126
 #: package/contents/ui/components/ThumbnailStrip.qml:160
 #, kde-format
 msgid "More Options…"
 msgstr "Lựa chọn thêm…"
 
-#: package/contents/ui/components/JobItem.qml:152
+#: package/contents/ui/components/JobItem.qml:154
 #, kde-format
 msgid "Open"
 msgstr "Mở"
@@ -263,12 +263,12 @@ msgstr "Gửi"
 msgid "Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:190
+#: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgid "Average Speed"
 msgstr ""
 
-#: package/contents/ui/components/SpeedChart.qml:247
+#: package/contents/ui/components/SpeedChart.qml:249
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"

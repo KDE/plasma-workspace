@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 # JungHee Lee <daemul72@gmail.com>, 2019.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-01 00:43+0000\n"
-"PO-Revision-Date: 2024-02-09 19:42+0100\n"
+"POT-Creation-Date: 2025-04-07 00:44+0000\n"
+"PO-Revision-Date: 2025-04-07 00:29+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 23.08.1\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -28,7 +28,7 @@ msgstr "%1(으)로 열기|/|%1$[으 %1]로 열기"
 msgid "Open with…"
 msgstr "다음으로 열기…"
 
-#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:160
+#: filemenu.cpp:117 package/contents/ui/components/JobItem.qml:162
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "포함된 폴더 열기"
@@ -199,8 +199,8 @@ msgstr[0] "항목 %1개"
 #: package/contents/ui/components/JobDetails.qml:147
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
-#: package/contents/ui/components/SpeedChart.qml:183
-#: package/contents/ui/components/SpeedChart.qml:194
+#: package/contents/ui/components/SpeedChart.qml:185
+#: package/contents/ui/components/SpeedChart.qml:196
 #, kde-format
 msgctxt "Bytes per second"
 msgid "%1/s"
@@ -212,31 +212,31 @@ msgctxt "Hides/expands item details"
 msgid "Details"
 msgstr "자세히"
 
-#: package/contents/ui/components/JobItem.qml:77
+#: package/contents/ui/components/JobItem.qml:79
 #, kde-format
 msgctxt "Resume paused job"
 msgid "Resume"
 msgstr "다시 시작"
 
-#: package/contents/ui/components/JobItem.qml:78
+#: package/contents/ui/components/JobItem.qml:80
 #, kde-format
 msgctxt "Pause running job"
 msgid "Pause"
 msgstr "일시 정지"
 
-#: package/contents/ui/components/JobItem.qml:92
+#: package/contents/ui/components/JobItem.qml:94
 #, kde-format
 msgctxt "Cancel running job"
 msgid "Cancel"
 msgstr "취소"
 
-#: package/contents/ui/components/JobItem.qml:124
+#: package/contents/ui/components/JobItem.qml:126
 #: package/contents/ui/components/ThumbnailStrip.qml:160
 #, kde-format
 msgid "More Options…"
 msgstr "옵션 더 보기…"
 
-#: package/contents/ui/components/JobItem.qml:152
+#: package/contents/ui/components/JobItem.qml:154
 #, kde-format
 msgid "Open"
 msgstr "열기"
@@ -256,14 +256,14 @@ msgstr "보내기"
 #: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "속도"
 
-#: package/contents/ui/components/SpeedChart.qml:190
+#: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "평균 속도"
 
-#: package/contents/ui/components/SpeedChart.qml:247
+#: package/contents/ui/components/SpeedChart.qml:249
 #, kde-format
 msgctxt "Percentage of a job"
 msgid "%1%"
@@ -361,7 +361,7 @@ msgstr "화면이 미러링됨"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "보기"
 
 #: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
@@ -422,12 +422,10 @@ msgid_plural "%1 unread notifications"
 msgstr[0] "읽지 않은 알림 %1개"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "읽지 않은 알림 %1개"
+msgstr[0] "활성 알림 %1개"
 
 #: package/contents/ui/main.qml:104
 #, kde-format

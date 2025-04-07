@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024 Shinjo Park <kde@peremen.name>
+# SPDX-FileCopyrightText: 2014, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025 Shinjo Park <kde@peremen.name>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-08 00:45+0000\n"
-"PO-Revision-Date: 2024-11-28 23:53+0100\n"
+"PO-Revision-Date: 2025-04-07 00:28+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -150,11 +150,10 @@ msgid "Offset from UTC time"
 msgstr "UTC 시간대와의 시차"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "시스템 기본 시간대 변경…"
+msgstr "시간대 변경…"
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -305,17 +304,14 @@ msgid "Available Plugins:"
 msgstr "사용 가능한 플러그인:"
 
 #: package/contents/ui/configTimeZones.qml:59
-#, fuzzy, kde-format
-#| msgctxt "This is a city associated with particular time zone"
-#| msgid "Cancun"
+#, kde-format
 msgid "Cancel"
-msgstr "칸쿤"
+msgstr "취소"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "더 많은 시간대 추가"
+msgstr "선택한 시간대 추가"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -327,8 +323,7 @@ msgstr ""
 "대가 다른 것으로 바뀌었을 때에만 표시됩니다."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
 msgstr "시간대 추가…"
 
@@ -389,10 +384,9 @@ msgstr ""
 "템 기본 시간대를 변경하십시오."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "시간대"
+msgstr "시간대 선택"
 
 #: package/contents/ui/main.qml:217
 #, kde-format
