@@ -23,9 +23,16 @@ KCMUtils.SimpleKCM {
 
     property alias cfg_showWeekNumbers: showWeekNumbers.checked
     property int cfg_firstDayOfWeek
+    property bool unsavedChanges: false
 
     function saveConfig() {
         Plasmoid.configuration.enabledCalendarPlugins = eventPluginsManager.enabledPlugins;
+        Plasmoid.configuration.writeConfig()
+        unsavedChanges = false
+    }
+
+    function checkUnsavedChanges() {
+            calendarPage.unsavedChanges = !(Plasmoid.configuration.enabledCalendarPlugins.every(entry => eventPluginsManager.enabledPlugins.includes(entry)) &&  eventPluginsManager.enabledPlugins.every(entry =>  Plasmoid.configuration.enabledCalendarPlugins.includes(entry)))
     }
 
     Kirigami.FormLayout {
@@ -90,7 +97,7 @@ KCMUtils.SimpleKCM {
                     onClicked: {
                         //needed for model's setData to be called
                         model.checked = checked;
-                        calendarPage.configurationChanged();
+                        calendarPage.checkUnsavedChanges();
                     }
                 }
 
