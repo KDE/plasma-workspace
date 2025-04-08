@@ -20,14 +20,22 @@ import org.kde.plasma.private.holidayevents as Private
 KCMUtils.ScrollViewKCM {
     id: root
 
-    signal configurationChanged()
+    property var oldSelectedRegions
+    property bool unsavedChanges
 
     function saveConfig() {
         configHelper.saveConfig();
+        root.oldSelectedRegions = [...configHelper.selectedRegions]
+        root.unsavedChanges = false
+    }
+
+    function checkUnsavedChanges() {
+        root.unsavedChanges = !(configHelper.selectedRegions.every(entry => root.oldSelectedRegions.includes(entry)) &&  root.oldSelectedRegions.every(entry =>  configHelper.selectedRegions.includes(entry)))
     }
 
     Private.HolidayRegionsConfig {
         id: configHelper
+        Component.onCompleted: root.oldSelectedRegions = [...configHelper.selectedRegions]
     }
 
     header: Kirigami.SearchField {
@@ -85,7 +93,7 @@ KCMUtils.ScrollViewKCM {
                 } else {
                     configHelper.removeRegion(region);
                 }
-                root.configurationChanged();
+                root.checkUnsavedChanges();
             }
         }
     }
