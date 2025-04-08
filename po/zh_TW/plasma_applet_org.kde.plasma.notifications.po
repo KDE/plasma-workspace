@@ -6,13 +6,13 @@
 # pan93412 <pan93412@gmail.com>, 2018, 2019, 2020.
 # Frank Weng (a.k.a. Franklin) <franklin at goodhorse dot idv dot tw>, 2010.
 # Chaoting Liu <brli@chakralinux.org>, 2021.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-31 02:33+0000\n"
-"PO-Revision-Date: 2024-02-05 17:22+0900\n"
+"PO-Revision-Date: 2025-04-07 14:12+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.95\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: fileinfo.cpp:170
 #, kde-format
@@ -263,13 +263,13 @@ msgstr "傳送"
 #, kde-format
 msgctxt "Job name, e.g. Copying is paused"
 msgid "%1 (Paused)"
-msgstr "%1 （已暫停）"
+msgstr "%1（已暫停）"
 
 #: package/contents/ui/components/Summary.qml:41
 #, kde-format
 msgctxt "Job name, e.g. Copying has failed"
 msgid "%1 (Failed)"
-msgstr "%1 （失敗）"
+msgstr "%1（失敗）"
 
 #: package/contents/ui/components/Summary.qml:43
 #, kde-format
@@ -280,7 +280,7 @@ msgstr "工作已失敗"
 #, kde-format
 msgctxt "Job name, e.g. Copying has finished"
 msgid "%1 (Finished)"
-msgstr "%1 （完成）"
+msgstr "%1（完成）"
 
 #: package/contents/ui/components/Summary.qml:49
 #, kde-format
