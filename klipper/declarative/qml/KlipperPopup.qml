@@ -28,6 +28,14 @@ PlasmaExtras.Representation {
     Keys.onEscapePressed: requestHidePopup()
     Keys.forwardTo: [stack.currentItem]
 
+    function editClipboardContent(index: int) {
+        if (clipboardMenu.editing || index < 0 || index >= clipboardMenu.view.count) {
+            return;
+        }
+        (clipboardMenu.view as ListView).currentIndex = index;
+        ((clipboardMenu.view as ListView).currentItem as ClipboardItemDelegate).edit();
+    }
+
     Connections {
         target: dialogItem.Window.window
         function onVisibleChanged() {
@@ -49,6 +57,7 @@ PlasmaExtras.Representation {
         id: stack
         anchors.fill: parent
         initialItem: Private.ClipboardMenu {
+            id: clipboardMenu
             expanded: dialogItem.Window.window.visible
             dialogItem: dialogItem
             model: historyModel

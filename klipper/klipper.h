@@ -128,6 +128,7 @@ private:
     KToggleAction *m_toggleURLGrabAction;
     QAction *m_clearHistoryAction;
     QAction *m_repeatAction;
+    QAction *m_editAction = nullptr;
     QAction *m_showBarcodeAction;
     QAction *m_configureAction;
     QAction *m_quitAction;

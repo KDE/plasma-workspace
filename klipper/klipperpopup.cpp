@@ -53,6 +53,14 @@ void KlipperPopup::setPlasmaShell(KWayland::Client::PlasmaShell *plasmashell)
     m_plasmashell = plasmashell;
 }
 
+void KlipperPopup::editCurrentClipboard()
+{
+    if (!isVisible()) {
+        show();
+    }
+    QMetaObject::invokeMethod(mainItem(), "editClipboardContent", Q_ARG(int, 0));
+}
+
 void KlipperPopup::hide()
 {
     QWindow::hide();

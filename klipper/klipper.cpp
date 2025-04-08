@@ -123,6 +123,13 @@ Klipper::Klipper(QObject *parent)
     KGlobalAccel::setGlobalShortcut(m_repeatAction, QKeySequence());
     connect(m_repeatAction, &QAction::triggered, this, &Klipper::slotRepeatAction);
 
+    // add an edit-possibility
+    m_editAction = m_collection->addAction(QStringLiteral("edit_clipboard"));
+    m_editAction->setIcon(QIcon::fromTheme(QStringLiteral("document-properties")));
+    m_editAction->setText(i18nc("@action:inmenu", "&Edit Contents…"));
+    KGlobalAccel::setGlobalShortcut(m_editAction, QKeySequence());
+    connect(m_editAction, &QAction::triggered, m_popup.get(), &KlipperPopup::editCurrentClipboard);
+
     // add barcode for mobile phones
     m_showBarcodeAction = m_collection->addAction(QStringLiteral("show-barcode"));
     m_showBarcodeAction->setText(i18nc("@action:inmenu", "&Show Barcode…"));
