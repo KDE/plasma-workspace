@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2024-12-09 12:42+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -419,19 +419,19 @@ msgstr "Inhoud bewerken"
 msgid "Remove from history"
 msgstr "Uit geschiedenis verwijderen"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:64
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Tekstgebied voor bewerken"
 
-#: declarative/qml/EditPage.qml:80
+#: declarative/qml/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Opslaan"
 
-#: declarative/qml/EditPage.qml:88
+#: declarative/qml/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

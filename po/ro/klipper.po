@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2024-06-09 15:09+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -405,19 +405,19 @@ msgstr "Editare conținut"
 msgid "Remove from history"
 msgstr "Pentru un element ales din istoric"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:64
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:80
+#: declarative/qml/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr ""
 
-#: declarative/qml/EditPage.qml:88
+#: declarative/qml/EditPage.qml:90
 #, fuzzy, kde-format
 #| msgid "&Cancel"
 msgctxt "@action:button"

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2024-12-12 06:53+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -409,19 +409,19 @@ msgstr "حرّر المحتويات"
 msgid "Remove from history"
 msgstr "أزل من التّاريخ"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:64
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "منطقة تحرير النص"
 
-#: declarative/qml/EditPage.qml:80
+#: declarative/qml/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "احفظ"
 
-#: declarative/qml/EditPage.qml:88
+#: declarative/qml/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2025-02-22 07:48+0100\n"
 "Last-Translator: Martin Hansen <mh306602@gmail.com>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -410,19 +410,19 @@ msgstr "Rediger innhold"
 msgid "Remove from history"
 msgstr "Fjern fra historikk"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:64
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "Skriveprogram"
 
-#: declarative/qml/EditPage.qml:80
+#: declarative/qml/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "Lagre"
 
-#: declarative/qml/EditPage.qml:88
+#: declarative/qml/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"

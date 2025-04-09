@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:43+0000\n"
+"POT-Creation-Date: 2025-04-09 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -396,19 +396,19 @@ msgstr "सामग्रीं सम्पादयन्तु"
 msgid "Remove from history"
 msgstr "इतिहासात् निष्कासयतु"
 
-#: declarative/qml/EditPage.qml:63
+#: declarative/qml/EditPage.qml:64
 #, kde-format
 msgctxt "@info:whatsthis"
 msgid "Text edit area"
 msgstr "पाठ सम्पादन क्षेत्र"
 
-#: declarative/qml/EditPage.qml:80
+#: declarative/qml/EditPage.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "Save"
 msgstr "रक्ष्"
 
-#: declarative/qml/EditPage.qml:88
+#: declarative/qml/EditPage.qml:90
 #, kde-format
 msgctxt "@action:button"
 msgid "Cancel"
