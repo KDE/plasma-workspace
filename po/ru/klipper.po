@@ -14,14 +14,14 @@
 # Nick Shaforostoff <shaforostoff@kde.ru>, 2009.
 # Alexander Potashev <aspotashev@gmail.com>, 2010, 2014, 2017.
 # Yuri Efremov <yur.arh@gmail.com>, 2011, 2012, 2013.
-# SPDX-FileCopyrightText: 2022, 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2022, 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 # Alexander Yavorsky <kekcuha@gmail.com>, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-26 02:36+0000\n"
-"PO-Revision-Date: 2024-09-26 12:06+0300\n"
+"PO-Revision-Date: 2025-04-08 09:47+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -51,17 +51,14 @@ msgid "Clipboard history:"
 msgstr "Журнал буфера обмена:"
 
 #: configdialog.cpp:89
-#, fuzzy, kde-format
-#| msgctxt "Number of entries"
-#| msgid " entry"
-#| msgid_plural " entries"
+#, kde-format
 msgctxt "Number of entries"
 msgid "%v entry"
 msgid_plural "%v entries"
-msgstr[0] " запись"
-msgstr[1] " записи"
-msgstr[2] " записей"
-msgstr[3] " запись"
+msgstr[0] "%v запись"
+msgstr[1] "%v записи"
+msgstr[2] "%v записей"
+msgstr[3] "%v запись"
 
 #: configdialog.cpp:98
 #, kde-format
@@ -165,17 +162,14 @@ msgid "Exclude Windows..."
 msgstr "Исключить окна…"
 
 #: configdialog.cpp:295
-#, fuzzy, kde-format
-#| msgctxt "Unit of time"
-#| msgid " second"
-#| msgid_plural " seconds"
+#, kde-format
 msgctxt "Unit of time"
 msgid "%v second"
 msgid_plural "%v seconds"
-msgstr[0] " секунда"
-msgstr[1] " секунды"
-msgstr[2] " секунд"
-msgstr[3] " секунда"
+msgstr[0] "%v секунда"
+msgstr[1] "%v секунды"
+msgstr[2] "%v секунд"
+msgstr[3] "%v секунда"
 
 #: configdialog.cpp:296
 #, kde-format
@@ -392,13 +386,13 @@ msgstr "Не удалось создать QR-код"
 #, kde-format
 msgctxt "@action:button"
 msgid "Collapse"
-msgstr ""
+msgstr "Свернуть"
 
 #: declarative/qml/ClipboardItemDelegate.qml:180
 #, kde-format
 msgctxt "@action:button"
 msgid "Expand"
-msgstr ""
+msgstr "Развернуть"
 
 #: declarative/qml/ClipboardMenu.qml:191
 #, kde-format
@@ -664,11 +658,10 @@ msgid "Clear Clipboard History"
 msgstr "Очистить журнал буфера обмена"
 
 #: historymodel.cpp:262
-#, fuzzy, kde-format
-#| msgid "%1x%2 %3bpp"
+#, kde-format
 msgctxt "@info:tooltip width x height"
 msgid "%1x%2"
-msgstr "%1×%2 %3bpp"
+msgstr "%1x%2"
 
 #: klipper.cpp:91
 #, kde-format
