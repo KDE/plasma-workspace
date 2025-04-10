@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-31 00:42+0000\n"
-"PO-Revision-Date: 2025-01-01 10:08+0100\n"
+"PO-Revision-Date: 2025-04-08 15:44+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 24.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -89,7 +89,7 @@ msgstr ""
 #: contents/logout/Logout.qml:203
 #, kde-format
 msgid "When restarted, the computer will enter the boot loader menu."
-msgstr "Au redémarrage, l'ordinateur ouvrira le menu de chargement du boot."
+msgstr "Au redémarrage, l'ordinateur ouvrira le menu du chargeur de démarrage."
 
 #: contents/logout/Logout.qml:216
 #, kde-format
