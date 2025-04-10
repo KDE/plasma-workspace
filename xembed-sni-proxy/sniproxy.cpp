@@ -63,26 +63,6 @@ void xembed_message_send(xcb_window_t towin, long message, long d1, long d2, lon
     xcb_send_event(qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection(), false, towin, XCB_EVENT_MASK_NO_EVENT, (char *)&ev);
 }
 
-static bool checkWindowOrDescendantWantButtonEvents(xcb_window_t window)
-{
-    auto connection = qGuiApp->nativeInterface<QNativeInterface::QX11Application>()->connection();
-    auto waCookie = xcb_get_window_attributes(connection, window);
-    UniqueCPointer<xcb_get_window_attributes_reply_t> windowAttributes(xcb_get_window_attributes_reply(connection, waCookie, nullptr));
-    if (windowAttributes && windowAttributes->all_event_masks & XCB_EVENT_MASK_BUTTON_PRESS) {
-        return true;
-    }
-    if (windowAttributes && windowAttributes->do_not_propagate_mask & XCB_EVENT_MASK_BUTTON_PRESS) {
-        return false;
-    }
-    auto treeCookie = xcb_query_tree(connection, window);
-    UniqueCPointer<xcb_query_tree_reply_t> tree(xcb_query_tree_reply(connection, treeCookie, nullptr));
-    if (!tree) {
-        return false;
-    }
-    std::span<xcb_window_t> children(xcb_query_tree_children(tree.get()), xcb_query_tree_children_length(tree.get()));
-    return std::ranges::any_of(children, &checkWindowOrDescendantWantButtonEvents);
-}
-
 SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
     : QObject(parent)
     ,
@@ -190,7 +170,7 @@ SNIProxy::SNIProxy(xcb_window_t wid, QObject *parent)
     // if the client does supports that we send directly, otherwise we'll use xtest
     auto waCookie = xcb_get_window_attributes(c, wid);
     UniqueCPointer<xcb_get_window_attributes_reply_t> windowAttributes(xcb_get_window_attributes_reply(c, waCookie, nullptr));
-    if (!checkWindowOrDescendantWantButtonEvents(wid)) {
+    if (windowAttributes && !(windowAttributes->all_event_masks & XCB_EVENT_MASK_BUTTON_PRESS)) {
         m_injectMode = XTest;
     }
 
