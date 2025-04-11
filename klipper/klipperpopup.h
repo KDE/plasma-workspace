@@ -41,6 +41,7 @@ public:
 
 public Q_SLOTS:
     void hide();
+    void onRequestResizePopup();
 
 protected:
     void showEvent(QShowEvent *event) override;

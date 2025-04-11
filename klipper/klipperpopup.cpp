@@ -69,6 +69,24 @@ void KlipperPopup::hide()
     }
 }
 
+void KlipperPopup::onRequestResizePopup()
+{
+    // If the popup is off-screen, move it to the closest edge of the screen
+    const QSize popupSize = QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize());
+
+    if (KWindowSystem::isPlatformX11()) {
+        const QRect screenGeometry = screen()->geometry();
+        QRect popupGeometry(position(), popupSize);
+        if (!screenGeometry.contains(popupGeometry)) {
+            popupGeometry.moveTo(std::clamp(x(), screenGeometry.left(), screenGeometry.right() - popupSize.width()),
+                                 std::clamp(y(), screenGeometry.top(), screenGeometry.bottom() - popupSize.height()));
+        }
+        setGeometry(popupGeometry);
+    } else {
+        resize(popupSize);
+    }
+}
+
 void KlipperPopup::showEvent(QShowEvent *event)
 {
     if (KWindowSystem::isPlatformX11()) {
@@ -84,7 +102,13 @@ void KlipperPopup::showEvent(QShowEvent *event)
 void KlipperPopup::positionOnScreen()
 {
     if (KWindowSystem::isPlatformX11()) {
-        setPosition(QCursor::pos());
+        const QList<QScreen *> screens = QGuiApplication::screens();
+        auto screenIt = std::find_if(screens.cbegin(), screens.cend(), [](QScreen *screen) {
+            return screen->geometry().contains(QCursor::pos(screen));
+        });
+        QScreen *const shownOnScreen = screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen();
+        setPosition(QCursor::pos(shownOnScreen));
+        setScreen(shownOnScreen);
         KX11Extras::setOnDesktop(winId(), KX11Extras::currentDesktop());
     } else if (m_plasmashell && KWindowSystem::isPlatformWayland()) {
         auto surface = KWayland::Client::Surface::fromWindow(this);
@@ -101,13 +125,8 @@ void KlipperPopup::onObjectIncubated()
     auto item = qobject_cast<QQuickItem *>(m_engine.rootObject());
     setMainItem(item);
 
-    auto updateSize = [this]() {
-        resize(QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize()));
-    };
-
-    connect(item, &QQuickItem::implicitHeightChanged, this, updateSize);
-    connect(this, &KlipperPopup::paddingChanged, this, updateSize);
-    updateSize();
+    connect(this, &KlipperPopup::paddingChanged, this, &KlipperPopup::onRequestResizePopup);
+    connect(item, SIGNAL(requestResizePopup()), this, SLOT(onRequestResizePopup()));
 
     connect(item, SIGNAL(requestHidePopup()), this, SLOT(hide()));
 }
