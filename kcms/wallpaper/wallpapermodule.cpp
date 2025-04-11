@@ -20,6 +20,7 @@
 #include <KPluginFactory>
 #include <plasmaactivities/consumer.h>
 
+#include <PlasmaQuick/ConfigModel>
 #include <QAbstractItemModel>
 #include <QApplication>
 #include <QDBusArgument>
@@ -255,6 +256,7 @@ class WallpaperConfigModel : public PlasmaQuick::ConfigModel
 
 public:
     WallpaperConfigModel(QObject *parent);
+    QHash<int, QByteArray> roleNames() const override;
 public Q_SLOTS:
     void repopulate();
 };
@@ -492,6 +494,13 @@ void WallpaperConfigModel::repopulate()
         }
         appendCategory(pkg.metadata().iconName(), pkg.metadata().name(), pkg.fileUrl("ui", QStringLiteral("config.qml")).toString(), m.pluginId());
     }
+}
+
+QHash<int, QByteArray> WallpaperConfigModel::roleNames() const
+{
+    auto rolenames = PlasmaQuick::ConfigModel::roleNames();
+    rolenames.remove(KCMRole); // or the qml combobox will try to load the plugin as a kcm
+    return rolenames;
 }
 
 #include "wallpapermodule.moc"
