@@ -178,7 +178,7 @@ class NotificationsTest(unittest.TestCase):
                         pixbuf.get_pixels(),
                     ]),
                 },
-                "timeout": 10 * 1000,
+                "timeout": 30 * 1000,
             })
             wait.until(EC.presence_of_element_located((AppiumBy.NAME, summary + str(color))))
             partial_pixbuf.fill(color)
@@ -249,6 +249,7 @@ class NotificationsTest(unittest.TestCase):
             "app_name": "Appium Test",
             "body": "A notification with actions",
             "actions": ["action1", "FooAction", "action2", "BarAction"],
+            "timeout": 30 * 1000,
         })
         self.driver.find_element(AppiumBy.NAME, "BarAction")
         element = self.driver.find_element(AppiumBy.NAME, "FooAction")
@@ -288,6 +289,7 @@ class NotificationsTest(unittest.TestCase):
             "app_name": "Appium Test",
             "body": "A notification with actions 1",
             "actions": ["inline-reply", ""],  # Use the default label
+            "timeout": 30 * 1000,
         })
         reply_text = "this is a reply"
         self.driver.find_element(AppiumBy.NAME, "begin reply").click()
@@ -309,6 +311,7 @@ class NotificationsTest(unittest.TestCase):
                 "x-kde-reply-submit-button-text": GLib.Variant("s", "Reeply"),  # Use a custom label
                 "x-kde-reply-placeholder-text": GLib.Variant("s", "A placeholder"),  # Use a custom placeholder
             },
+            "timeout": 30 * 1000,
         })
         reply_text = "this is another reply"
         self.driver.find_element(AppiumBy.NAME, "begin reply").click()
@@ -326,6 +329,7 @@ class NotificationsTest(unittest.TestCase):
             "app_name": "Appium Test",
             "body": "A notification with actions 3",
             "actions": ["inline-reply", "Replyy", "foo", "Foo", "bar", "Bar"],  # Click to show the text field
+            "timeout": 30 * 1000,
         })
         self.driver.find_element(AppiumBy.NAME, "Foo")
         self.driver.find_element(AppiumBy.NAME, "Bar")
@@ -360,7 +364,7 @@ class NotificationsTest(unittest.TestCase):
                 "hints": {
                     "x-kde-urls": GLib.Variant("as", url_list),
                 },
-                "timeout": 10 * 1000,
+                "timeout": 30 * 1000,
             })
 
             self.driver.find_element(AppiumBy.NAME, "More Options…")
