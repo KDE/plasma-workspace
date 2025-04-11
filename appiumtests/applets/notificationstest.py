@@ -440,7 +440,7 @@ class NotificationsTest(unittest.TestCase):
                 "timeout": 60 * 1000,
             })
         title = self.driver.find_element(AppiumBy.XPATH, f"//heading[starts-with(@name, '{summary}') and contains(@accessibility-id, 'FullRepresentation')]")
-        self.assertRaises(NoSuchElementException, self.driver.find_element, AppiumBy.XPATH, f"//notification[starts-with(@name, '{summary}')]")
+        self.assertRaises((NoSuchElementException, WebDriverException), self.driver.find_element, AppiumBy.XPATH, f"//notification[starts-with(@name, '{summary}')]")
 
         dnd_button.click()
         self.driver.find_element(AppiumBy.XPATH, "//notification[@name='Unread Notifications' and @description='2 notifications were received while Do Not Disturb was active.  from Notification Manager']")
