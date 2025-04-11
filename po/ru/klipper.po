@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-11 00:43+0000\n"
 "PO-Revision-Date: 2025-04-08 09:31+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -687,31 +687,37 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ручной выбор действия с буфером обмена"
 
-#: klipper.cpp:128
+#: klipper.cpp:129
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "&Редактирование буфера обмена…"
+
+#: klipper.cpp:135
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Показать штрихкод…"
 
-#: klipper.cpp:137
+#: klipper.cpp:144
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Следующая запись журнала"
 
-#: klipper.cpp:142
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Предыдущая запись журнала"
 
-#: klipper.cpp:149
+#: klipper.cpp:156
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Показать записи на позиции указателя мыши"
 
-#: klipper.cpp:310
+#: klipper.cpp:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -722,27 +728,27 @@ msgstr ""
 "<interface>Действия</interface>, расположенном в окне настройки параметров "
 "виджета «Содержимое буфера обмена»"
 
-#: klipper.cpp:444
+#: klipper.cpp:451
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "QR-код"
 
-#: klipper.cpp:487 klipper.cpp:496
+#: klipper.cpp:494 klipper.cpp:503
 #, kde-format
 msgid "Clipboard history"
 msgstr "Журнал буфера обмена"
 
-#: klipper.cpp:513
+#: klipper.cpp:520
 #, kde-format
 msgid "up"
 msgstr "более новое:"
 
-#: klipper.cpp:520
+#: klipper.cpp:527
 #, kde-format
 msgid "current"
 msgstr "выбрано:"
 
-#: klipper.cpp:527
+#: klipper.cpp:534
 #, kde-format
 msgid "down"
 msgstr "более старое:"
@@ -1060,10 +1066,6 @@ msgstr "О&тмена"
 
 #~ msgid "Maintainer"
 #~ msgstr "Сопровождающий"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "&Редактирование буфера обмена…"
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "Содержимое буфера обмена"

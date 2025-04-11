@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-11 00:43+0000\n"
 "PO-Revision-Date: 2010-01-30 09:51+0100\n"
 "Last-Translator: Bozidar Proevski <bobibobi@freemail.com.mk>\n"
 "Language-Team: Macedonian <mkde-l10n@lists.sourceforge.net>\n"
@@ -656,34 +656,41 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Рачно активирај акција од тековната табла"
 
-#: klipper.cpp:128
+#: klipper.cpp:129
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "Уреди содржина"
+
+#: klipper.cpp:135
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:137
+#: klipper.cpp:144
 #, fuzzy, kde-format
 #| msgid "Next history item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Следен елемент од историјата"
 
-#: klipper.cpp:142
+#: klipper.cpp:149
 #, fuzzy, kde-format
 #| msgid "Previous history item"
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Претходен елемент од историјата"
 
-#: klipper.cpp:149
+#: klipper.cpp:156
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Прикажи мени кај позицијата на глушецот"
 
-#: klipper.cpp:310
+#: klipper.cpp:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -691,27 +698,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:444
+#: klipper.cpp:451
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:487 klipper.cpp:496
+#: klipper.cpp:494 klipper.cpp:503
 #, kde-format
 msgid "Clipboard history"
 msgstr "Историја на таблата"
 
-#: klipper.cpp:513
+#: klipper.cpp:520
 #, kde-format
 msgid "up"
 msgstr "нагоре"
 
-#: klipper.cpp:520
+#: klipper.cpp:527
 #, kde-format
 msgid "current"
 msgstr "тековен"
 
-#: klipper.cpp:527
+#: klipper.cpp:534
 #, kde-format
 msgid "down"
 msgstr "надолу"
@@ -1028,12 +1035,6 @@ msgstr "&Откажи"
 
 #~ msgid "Maintainer"
 #~ msgstr "Одржувач"
-
-#, fuzzy
-#~| msgid "Edit Contents"
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "Уреди содржина"
 
 #, fuzzy
 #~| msgid "Keep clipboard contents"

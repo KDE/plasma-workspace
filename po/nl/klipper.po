@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-11 00:43+0000\n"
 "PO-Revision-Date: 2024-12-09 12:42+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -677,31 +677,37 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Handmatig een actie op huidig klembord uitvoeren"
 
-#: klipper.cpp:128
+#: klipper.cpp:129
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "Inhoud be&werken…"
+
+#: klipper.cpp:135
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Barcode &tonen…"
 
-#: klipper.cpp:137
+#: klipper.cpp:144
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Volgende item uit geschiedenis"
 
-#: klipper.cpp:142
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Vorige item uit geschiedenis"
 
-#: klipper.cpp:149
+#: klipper.cpp:156
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Items in klembord op de muispositie tonen"
 
-#: klipper.cpp:310
+#: klipper.cpp:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -711,27 +717,27 @@ msgstr ""
 "U kunt URL-acties later in de pagina <interface>Acties</interface> van het "
 "configuratievenster van het klembordapplet inschakelen"
 
-#: klipper.cpp:444
+#: klipper.cpp:451
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Barcode van mobiel"
 
-#: klipper.cpp:487 klipper.cpp:496
+#: klipper.cpp:494 klipper.cpp:503
 #, kde-format
 msgid "Clipboard history"
 msgstr "Klembordgeschiedenis"
 
-#: klipper.cpp:513
+#: klipper.cpp:520
 #, kde-format
 msgid "up"
 msgstr "omhoog"
 
-#: klipper.cpp:520
+#: klipper.cpp:527
 #, kde-format
 msgid "current"
 msgstr "huidige"
 
-#: klipper.cpp:527
+#: klipper.cpp:534
 #, kde-format
 msgid "down"
 msgstr "omlaag"
@@ -1046,10 +1052,6 @@ msgstr "&Annuleren"
 
 #~ msgid "Maintainer"
 #~ msgstr "Onderhouder"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "Inhoud be&werken…"
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "Klembordinhoud"

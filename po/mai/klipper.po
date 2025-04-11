@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-11 00:43+0000\n"
 "PO-Revision-Date: 2010-01-29 15:54+0530\n"
 "Last-Translator: Rajesh Ranjan <rajesh672@gmail.com>\n"
 "Language-Team: Maithili <maithili.sf.net>\n"
@@ -652,33 +652,40 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "मोजुदा क्लिपबोर्ड पर क्रिया हाथ सँ वापिस करू"
 
-#: klipper.cpp:128
+#: klipper.cpp:129
+#, fuzzy, kde-format
+#| msgid "Edit Contents"
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "विषय-वस्तु क' संपादन करू"
+
+#: klipper.cpp:135
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr ""
 
-#: klipper.cpp:137
+#: klipper.cpp:144
 #, fuzzy, kde-format
 #| msgid "Next history item"
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "अगिला इतिहास मद"
 
-#: klipper.cpp:142
+#: klipper.cpp:149
 #, fuzzy, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "पछिला मद"
 
-#: klipper.cpp:149
+#: klipper.cpp:156
 #, fuzzy, kde-format
 #| msgid "Popup at mouse position"
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "पाप अप एट माउस स्थिति"
 
-#: klipper.cpp:310
+#: klipper.cpp:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -686,27 +693,27 @@ msgid ""
 "of the Clipboard applet's configuration window"
 msgstr ""
 
-#: klipper.cpp:444
+#: klipper.cpp:451
 #, kde-format
 msgid "Mobile Barcode"
 msgstr ""
 
-#: klipper.cpp:487 klipper.cpp:496
+#: klipper.cpp:494 klipper.cpp:503
 #, kde-format
 msgid "Clipboard history"
 msgstr "क्लिपबोर्ड इतिहास"
 
-#: klipper.cpp:513
+#: klipper.cpp:520
 #, kde-format
 msgid "up"
 msgstr "उप्पर"
 
-#: klipper.cpp:520
+#: klipper.cpp:527
 #, kde-format
 msgid "current"
 msgstr "मोजुदा"
 
-#: klipper.cpp:527
+#: klipper.cpp:534
 #, kde-format
 msgid "down"
 msgstr "नीच्चाँ"
@@ -1020,12 +1027,6 @@ msgstr "रद्द करू (&C)"
 
 #~ msgid "Maintainer"
 #~ msgstr "अनुरक्षक"
-
-#, fuzzy
-#~| msgid "Edit Contents"
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "विषय-वस्तु क' संपादन करू"
 
 #, fuzzy
 #~| msgid "Keep clipboard contents"

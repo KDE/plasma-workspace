@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-11 00:43+0000\n"
 "PO-Revision-Date: 2025-02-13 22:10+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -667,31 +667,37 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Panggil Tindakan Secara Manual di Papan Klip Saat Ini"
 
-#: klipper.cpp:128
+#: klipper.cpp:129
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "&Sunting Konten..."
+
+#: klipper.cpp:135
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "&Tampilkan Kode Bilah..."
 
-#: klipper.cpp:137
+#: klipper.cpp:144
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Item Riwayat Selanjutnya"
 
-#: klipper.cpp:142
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Item Riwayat Sebelumnya"
 
-#: klipper.cpp:149
+#: klipper.cpp:156
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Tampilkan Item Papan Klip di Posisi Mouse"
 
-#: klipper.cpp:310
+#: klipper.cpp:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -701,27 +707,27 @@ msgstr ""
 "Anda bisa memfungsikan tindakan URL nanti di halaman <interface>Tindakan</"
 "interface> pada jendela konfigurasi applet Papan Klip"
 
-#: klipper.cpp:444
+#: klipper.cpp:451
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "KodeBilah Ponsel"
 
-#: klipper.cpp:487 klipper.cpp:496
+#: klipper.cpp:494 klipper.cpp:503
 #, kde-format
 msgid "Clipboard history"
 msgstr "Riwayat papan klip"
 
-#: klipper.cpp:513
+#: klipper.cpp:520
 #, kde-format
 msgid "up"
 msgstr "atas"
 
-#: klipper.cpp:520
+#: klipper.cpp:527
 #, kde-format
 msgid "current"
 msgstr "saat ini"
 
-#: klipper.cpp:527
+#: klipper.cpp:534
 #, kde-format
 msgid "down"
 msgstr "bawah"
@@ -1041,10 +1047,6 @@ msgstr "&Batal"
 
 #~ msgid "Maintainer"
 #~ msgstr "Pemelihara"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "&Sunting Konten..."
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "Dartar Isi Papan Klip"

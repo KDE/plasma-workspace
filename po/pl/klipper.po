@@ -1,6 +1,6 @@
 # translation of klipper.po to Polish
 # translation of klipper.po to
-# Version: $Revision: 1706842 $
+# Version: $Revision: 1706958 $
 # Copyright (C) 2002, 2003, 2004, 2005, 2006, 2008, 2009 Free Software Foundation, Inc.
 # Norbert Popiołek <norbert@kde.com.pl>
 # Michal Rudolf <mrudolf@kdewebdev.org>, 2002, 2003.
@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-09 00:43+0000\n"
+"POT-Creation-Date: 2025-04-11 00:43+0000\n"
 "PO-Revision-Date: 2024-12-21 11:42+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -669,31 +669,37 @@ msgctxt "@action:inmenu"
 msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ręcznie wywołaj działanie na zawartości schowka"
 
-#: klipper.cpp:128
+#: klipper.cpp:129
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "&Edit Contents…"
+msgstr "Zmi&eń zawartość..."
+
+#: klipper.cpp:135
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Show Barcode…"
 msgstr "Pokaż kod kre&skowy..."
 
-#: klipper.cpp:137
+#: klipper.cpp:144
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Next History Item"
 msgstr "Następny wpis w historii"
 
-#: klipper.cpp:142
+#: klipper.cpp:149
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Previous History Item"
 msgstr "Poprzedni wpis w historii"
 
-#: klipper.cpp:149
+#: klipper.cpp:156
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Show Clipboard Items at Mouse Position"
 msgstr "Pokaż rzeczy schowka pod wskaźnikiem myszy"
 
-#: klipper.cpp:310
+#: klipper.cpp:317
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -703,27 +709,27 @@ msgstr ""
 "Możesz włączyć działania na adresach URL później na stronie "
 "<interface>Działań</interface> ustawień apletu schowka"
 
-#: klipper.cpp:444
+#: klipper.cpp:451
 #, kde-format
 msgid "Mobile Barcode"
 msgstr "Komórkowy kod kreskowy"
 
-#: klipper.cpp:487 klipper.cpp:496
+#: klipper.cpp:494 klipper.cpp:503
 #, kde-format
 msgid "Clipboard history"
 msgstr "Historia schowka"
 
-#: klipper.cpp:513
+#: klipper.cpp:520
 #, kde-format
 msgid "up"
 msgstr "w górę"
 
-#: klipper.cpp:520
+#: klipper.cpp:527
 #, kde-format
 msgid "current"
 msgstr "aktualna"
 
-#: klipper.cpp:527
+#: klipper.cpp:534
 #, kde-format
 msgid "down"
 msgstr "w dół"
@@ -1035,10 +1041,6 @@ msgstr "&Anuluj"
 
 #~ msgid "Maintainer"
 #~ msgstr "Opiekun"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "&Edit Contents…"
-#~ msgstr "Zmi&eń zawartość..."
 
 #~ msgid "Clipboard Contents"
 #~ msgstr "Zawartość schowka"
