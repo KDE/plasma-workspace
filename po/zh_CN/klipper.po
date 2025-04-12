@@ -639,11 +639,10 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "在当前剪贴板上手动执行操作"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Edit contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "编辑内容"
+msgstr ""
 
 #: klipper.cpp:135
 #, kde-format

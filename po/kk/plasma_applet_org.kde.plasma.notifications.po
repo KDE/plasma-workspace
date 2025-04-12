@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-07 00:44+0000\n"
+"POT-Creation-Date: 2025-04-12 00:42+0000\n"
 "PO-Revision-Date: 2013-05-30 02:14+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -164,7 +164,7 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/components/JobDetails.qml:108
+#: package/contents/ui/components/JobDetails.qml:109
 #, fuzzy, kde-format
 #| msgctxt ""
 #| "How much many bytes (or whether unit in the locale has been copied over "
@@ -174,7 +174,7 @@ msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%1 / %2"
 
-#: package/contents/ui/components/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:113
 #, fuzzy, kde-format
 #| msgid "%2 / 1 file"
 #| msgid_plural "%2 / %1 files"
@@ -183,7 +183,7 @@ msgid "%2 of %1 file"
 msgid_plural "%2 of %1 files"
 msgstr[0] "%2 / %1 файл"
 
-#: package/contents/ui/components/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:116
 #, fuzzy, kde-format
 #| msgid "%2 / 1 folder"
 #| msgid_plural "%2 / %1 folders"
@@ -192,7 +192,7 @@ msgid "%2 of %1 folder"
 msgid_plural "%2 of %1 folders"
 msgstr[0] "%2 / %1 қапшық"
 
-#: package/contents/ui/components/JobDetails.qml:118
+#: package/contents/ui/components/JobDetails.qml:119
 #, fuzzy, kde-format
 #| msgid "%2 / 1 file"
 #| msgid_plural "%2 / %1 files"
@@ -201,7 +201,7 @@ msgid "%2 of %1 item"
 msgid_plural "%2 of %1 items"
 msgstr[0] "%2 / %1 файл"
 
-#: package/contents/ui/components/JobDetails.qml:126
+#: package/contents/ui/components/JobDetails.qml:127
 #, fuzzy, kde-format
 #| msgid "%2 / 1 file"
 #| msgid_plural "%2 / %1 files"
@@ -209,7 +209,7 @@ msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%2 / %1 файл"
 
-#: package/contents/ui/components/JobDetails.qml:128
+#: package/contents/ui/components/JobDetails.qml:129
 #, fuzzy, kde-format
 #| msgid "%2 / 1 folder"
 #| msgid_plural "%2 / %1 folders"
@@ -217,13 +217,13 @@ msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%2 / %1 қапшық"
 
-#: package/contents/ui/components/JobDetails.qml:130
+#: package/contents/ui/components/JobDetails.qml:131
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] ""
 
-#: package/contents/ui/components/JobDetails.qml:147
+#: package/contents/ui/components/JobDetails.qml:148
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
 #: package/contents/ui/components/SpeedChart.qml:185

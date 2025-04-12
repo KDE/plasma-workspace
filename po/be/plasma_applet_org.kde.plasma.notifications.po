@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: fc57ad16a28d02dea100ceb1c60de14e\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-07 00:44+0000\n"
+"POT-Creation-Date: 2025-04-12 00:42+0000\n"
 "PO-Revision-Date: 2024-11-04 22:01\n"
 "Last-Translator: Antikruk <nashtlumach@gmail.com>\n"
 "Language-Team: Belarusian\n"
@@ -167,13 +167,13 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/components/JobDetails.qml:108
+#: package/contents/ui/components/JobDetails.qml:109
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 з %1"
 
-#: package/contents/ui/components/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:113
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -183,7 +183,7 @@ msgstr[1] "%2 з %1 файлаў"
 msgstr[2] "%2 з %1 файлаў"
 msgstr[3] "%2 з %1 файлаў"
 
-#: package/contents/ui/components/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:116
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -193,7 +193,7 @@ msgstr[1] "%2 з %1 каталогаў"
 msgstr[2] "%2 з %1 каталогаў"
 msgstr[3] "%2 з %1 каталогаў"
 
-#: package/contents/ui/components/JobDetails.qml:118
+#: package/contents/ui/components/JobDetails.qml:119
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -203,7 +203,7 @@ msgstr[1] "%2 з %1 элементаў"
 msgstr[2] "%2 з %1 элементаў"
 msgstr[3] "%2 з %1 элементаў"
 
-#: package/contents/ui/components/JobDetails.qml:126
+#: package/contents/ui/components/JobDetails.qml:127
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -212,7 +212,7 @@ msgstr[1] "%1 файлы"
 msgstr[2] "%1 файлаў"
 msgstr[3] "%1 файлы"
 
-#: package/contents/ui/components/JobDetails.qml:128
+#: package/contents/ui/components/JobDetails.qml:129
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -221,7 +221,7 @@ msgstr[1] "%1 каталогі"
 msgstr[2] "%1 каталогаў"
 msgstr[3] "%1 каталогі"
 
-#: package/contents/ui/components/JobDetails.qml:130
+#: package/contents/ui/components/JobDetails.qml:131
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -230,7 +230,7 @@ msgstr[1] "%1 элементы"
 msgstr[2] "%1 элементаў"
 msgstr[3] "%1 элементы"
 
-#: package/contents/ui/components/JobDetails.qml:147
+#: package/contents/ui/components/JobDetails.qml:148
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
 #: package/contents/ui/components/SpeedChart.qml:185

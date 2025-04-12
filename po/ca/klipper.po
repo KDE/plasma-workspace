@@ -1,19 +1,19 @@
 # Translation of klipper.po to Catalan
-# Copyright (C) 1998-2024 This_file_is_part_of_KDE
+# Copyright (C) 1998-2025 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Sebastià Pla i Sanz <sps@sastia.com>, 1998, 1999, 2000, 2001, 2002, 2004, 2005, 2006.
 # Albert Astals Cid <aacid@kde.org>, 2005.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2013, 2015, 2020.
 # Empar Montoro Martín <montoro_mde@gva.es>, 2019.
+# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2014, 2015, 2016, 2017, 2019, 2020, 2021, 2022, 2023, 2024, 2025.
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-11 00:43+0000\n"
-"PO-Revision-Date: 2024-12-09 09:14+0100\n"
+"PO-Revision-Date: 2025-04-11 10:01+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -672,11 +672,10 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Invoca manualment una acció al porta-retalls actual"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Edit contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "Edita el contingut"
+msgstr "&Edita el contingut…"
 
 #: klipper.cpp:135
 #, kde-format
@@ -967,86 +966,3 @@ msgstr "Desactiva aquest emergent"
 #, kde-format
 msgid "&Cancel"
 msgstr "&Cancel·la"
-
-#~ msgid "Clipboard Items"
-#~ msgstr "Elements del porta-retalls"
-
-#~ msgid "Search…"
-#~ msgstr "Cerca…"
-
-#~ msgid "Invalid regular expression, %1"
-#~ msgstr "Expressió regular no vàlida: %1"
-
-#~ msgid "&More"
-#~ msgstr "&Més"
-
-#~ msgid "Should Klipper start automatically when you login?"
-#~ msgstr "El Klipper ha d'engegar automàticament en connectar-vos?"
-
-#~ msgid "Automatically Start Klipper?"
-#~ msgstr "Engego el Klipper automàticament?"
-
-#~ msgid "Start"
-#~ msgstr "Engega"
-
-#~ msgid "Do Not Start"
-#~ msgstr "No engeguis"
-
-#~ msgctxt "@action:inmenu Quit Klipper"
-#~ msgid "&Quit"
-#~ msgstr "&Surt"
-
-#~ msgctxt "%1 is application display name"
-#~ msgid "%1 - Clipboard Tool"
-#~ msgstr "%1 - Eina de porta-retalls"
-
-#~ msgid "Klipper"
-#~ msgstr "Klipper"
-
-#~ msgid "Plasma cut & paste history utility"
-#~ msgstr "Utilitat de l'historial per a retallar i enganxar del Plasma"
-
-#~ msgid ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-#~ msgstr ""
-#~ "(c) 1998, Andrew Stanley-Jones\n"
-#~ "1998-2002, Carsten Pfeiffer\n"
-#~ "2001, Patrick Dubroy"
-
-#~ msgid "Carsten Pfeiffer"
-#~ msgstr "Carsten Pfeiffer"
-
-#~ msgid "Author"
-#~ msgstr "Autor"
-
-#~ msgid "Andrew Stanley-Jones"
-#~ msgstr "Andrew Stanley-Jones"
-
-#~ msgid "Original Author"
-#~ msgstr "Autor original"
-
-#~ msgid "Patrick Dubroy"
-#~ msgstr "Patrick Dubroy"
-
-#~ msgid "Contributor"
-#~ msgstr "Col·laborador"
-
-#~ msgid "Luboš Luňák"
-#~ msgstr "Luboš Luňák"
-
-#~ msgid "Bugfixes and optimizations"
-#~ msgstr "Correccions d'errors i optimitzacions"
-
-#~ msgid "Esben Mose Hansen"
-#~ msgstr "Esben Mose Hansen"
-
-#~ msgid "Previous Maintainer"
-#~ msgstr "Mantenidor anterior"
-
-#~ msgid "Martin Gräßlin"
-#~ msgstr "Martin Gräßlin"
-
-#~ msgid "Maintainer"
-#~ msgstr "Mantenidor"

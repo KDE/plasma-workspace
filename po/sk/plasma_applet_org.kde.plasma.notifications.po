@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_org.kde.plasma.notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-07 00:44+0000\n"
+"POT-Creation-Date: 2025-04-12 00:42+0000\n"
 "PO-Revision-Date: 2023-11-11 15:16+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -162,13 +162,13 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/components/JobDetails.qml:108
+#: package/contents/ui/components/JobDetails.qml:109
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 z %1"
 
-#: package/contents/ui/components/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:113
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -177,7 +177,7 @@ msgstr[0] "%2 súbor z %1"
 msgstr[1] "%2 súbory z %1"
 msgstr[2] "%2 súborov z %1"
 
-#: package/contents/ui/components/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:116
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -186,7 +186,7 @@ msgstr[0] "%2 priečinok z %1"
 msgstr[1] "%2 priečinky z %1"
 msgstr[2] "%2 priečinkov z %1"
 
-#: package/contents/ui/components/JobDetails.qml:118
+#: package/contents/ui/components/JobDetails.qml:119
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -195,7 +195,7 @@ msgstr[0] "%2 položka z %1"
 msgstr[1] "%2 položky z %1"
 msgstr[2] "%2 položiek z %1"
 
-#: package/contents/ui/components/JobDetails.qml:126
+#: package/contents/ui/components/JobDetails.qml:127
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
@@ -203,7 +203,7 @@ msgstr[0] "%1 súbor"
 msgstr[1] "%1 súbory"
 msgstr[2] "%1 súborov"
 
-#: package/contents/ui/components/JobDetails.qml:128
+#: package/contents/ui/components/JobDetails.qml:129
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
@@ -211,7 +211,7 @@ msgstr[0] "%1 priečinok"
 msgstr[1] "%1 priečinky"
 msgstr[2] "%1 priečinkov"
 
-#: package/contents/ui/components/JobDetails.qml:130
+#: package/contents/ui/components/JobDetails.qml:131
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
@@ -219,7 +219,7 @@ msgstr[0] "%1 položka"
 msgstr[1] "%1 položky"
 msgstr[2] "%1 položiek"
 
-#: package/contents/ui/components/JobDetails.qml:147
+#: package/contents/ui/components/JobDetails.qml:148
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
 #: package/contents/ui/components/SpeedChart.qml:185

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-07 00:44+0000\n"
+"POT-Creation-Date: 2025-04-12 00:42+0000\n"
 "PO-Revision-Date: 2022-10-16 11:44+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -153,13 +153,13 @@ msgctxt "Row description, e.g. Source"
 msgid "%1:"
 msgstr "%1:"
 
-#: package/contents/ui/components/JobDetails.qml:108
+#: package/contents/ui/components/JobDetails.qml:109
 #, kde-format
 msgctxt "How many bytes have been copied"
 msgid "%2 of %1"
 msgstr "%2 de %1"
 
-#: package/contents/ui/components/JobDetails.qml:112
+#: package/contents/ui/components/JobDetails.qml:113
 #, kde-format
 msgctxt "How many files have been copied"
 msgid "%2 of %1 file"
@@ -167,7 +167,7 @@ msgid_plural "%2 of %1 files"
 msgstr[0] "%2 de %1 ficheiro"
 msgstr[1] "%2 de %1 ficheiros"
 
-#: package/contents/ui/components/JobDetails.qml:115
+#: package/contents/ui/components/JobDetails.qml:116
 #, kde-format
 msgctxt "How many dirs have been copied"
 msgid "%2 of %1 folder"
@@ -175,7 +175,7 @@ msgid_plural "%2 of %1 folders"
 msgstr[0] "%2 de %1 pasta"
 msgstr[1] "%2 de %1 pastas"
 
-#: package/contents/ui/components/JobDetails.qml:118
+#: package/contents/ui/components/JobDetails.qml:119
 #, kde-format
 msgctxt "How many items (that includes files and dirs) have been copied"
 msgid "%2 of %1 item"
@@ -183,28 +183,28 @@ msgid_plural "%2 of %1 items"
 msgstr[0] "%2 de %1 item"
 msgstr[1] "%2 de %1 itens"
 
-#: package/contents/ui/components/JobDetails.qml:126
+#: package/contents/ui/components/JobDetails.qml:127
 #, kde-format
 msgid "%1 file"
 msgid_plural "%1 files"
 msgstr[0] "%1 ficheiro"
 msgstr[1] "%1 ficheiros"
 
-#: package/contents/ui/components/JobDetails.qml:128
+#: package/contents/ui/components/JobDetails.qml:129
 #, kde-format
 msgid "%1 folder"
 msgid_plural "%1 folders"
 msgstr[0] "%1 pasta"
 msgstr[1] "%1 pastas"
 
-#: package/contents/ui/components/JobDetails.qml:130
+#: package/contents/ui/components/JobDetails.qml:131
 #, kde-format
 msgid "%1 item"
 msgid_plural "%1 items"
 msgstr[0] "%1 item"
 msgstr[1] "%1 itens"
 
-#: package/contents/ui/components/JobDetails.qml:147
+#: package/contents/ui/components/JobDetails.qml:148
 #: package/contents/ui/components/SpeedChart.qml:70
 #: package/contents/ui/components/SpeedChart.qml:95
 #: package/contents/ui/components/SpeedChart.qml:185
