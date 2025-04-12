@@ -247,7 +247,7 @@ KCM.SimpleKCM {
             }
             QtControls.Button {
                 id: positionCustomButton
-                text: i18n("Choose Custom Position…")
+                text: i18nc("@action:button choose custom notification position", "Custom…")
                 icon.name: "preferences-desktop-display"
                 onClicked: kcm.push("PopupPositionPage.qml")
             }

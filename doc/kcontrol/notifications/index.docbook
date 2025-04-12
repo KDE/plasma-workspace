@@ -105,7 +105,7 @@ each event.</para>
     </varlistentry>
 
     <varlistentry>
-    <term><guiicon>Choose Custom Position...</guiicon></term>
+    <term><guiicon>Custom…</guiicon></term>
     <listitem><para>Lets you choose a fixed screen corner where notification popups will be positioned.</para></listitem>
     </varlistentry>
 
