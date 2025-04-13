@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2020-01-06 12:09+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -224,10 +224,10 @@ msgid "Near notification icon"
 msgstr "Näitamine märguandeikooni lähedal"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Choose Custom Position..."
-msgid "Choose Custom Position…"
-msgstr "Vali kohandatud asukoht ..."
+#, kde-format
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -311,6 +311,11 @@ msgid ""
 "and behavior"
 msgstr ""
 "Vali loendist rakendus, mille märguannete seadistusi ja käitumist muuta."
+
+#, fuzzy
+#~| msgid "Choose Custom Position..."
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Vali kohandatud asukoht ..."
 
 #, fuzzy
 #~| msgid "Application Settings"

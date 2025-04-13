@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-07-26 09:03+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -207,8 +207,9 @@ msgstr "ליד סמל ההתראות"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "להשתמש במקום מותאם אישית…"
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -289,6 +290,9 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "נא לבחור יישום מהרשימה כדי להגדיר את הגדרות ההתראות וההתהגות שלו"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "להשתמש במקום מותאם אישית…"
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"

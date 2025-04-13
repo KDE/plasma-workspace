@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-07-26 21:00+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -208,8 +208,9 @@ msgstr "Nära underrättelseikon"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "Välj egen position…"
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -290,6 +291,9 @@ msgid ""
 msgstr ""
 "Välj ett program i listan för att anpassa dess underrättelseinställningar "
 "och beteende"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Välj egen position…"
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"

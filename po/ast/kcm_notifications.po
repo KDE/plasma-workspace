@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-03-14 23:27+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Assamese <alministradores@softastur.org>\n"
@@ -208,7 +208,8 @@ msgstr ""
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
 msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-12-15 19:31+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -223,8 +223,9 @@ msgstr "सूचना प्रतीक के पास दिखाएँ"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "तदनुकूल स्थिति चुनें…"
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -308,6 +309,9 @@ msgid ""
 "and behavior"
 msgstr ""
 "इसकी सूचना सेटिंग्स और व्यवहार को विन्यस्त करने के लिए सूची से किसी अनुप्रयोग का चयन करें।"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "तदनुकूल स्थिति चुनें…"
 
 #, fuzzy
 #~| msgid "Application Settings"

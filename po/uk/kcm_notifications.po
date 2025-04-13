@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-07-26 08:38+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -212,8 +212,9 @@ msgstr "Поруч із піктограмою сповіщень"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "Вибрати нетипове розташування…"
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -296,6 +297,9 @@ msgid ""
 msgstr ""
 "Виберіть програму зі списку, щоб налаштувати параметри та поведінку для її "
 "сповіщень"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Вибрати нетипове розташування…"
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"

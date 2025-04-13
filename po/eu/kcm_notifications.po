@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-08-06 00:08+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -214,8 +214,9 @@ msgstr "Jakinarazpen ikonotik hurbil"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "Aukeratu zuk nahi duzun kokapena..."
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -297,6 +298,9 @@ msgid ""
 msgstr ""
 "Hautatu aplikazio bat zerrendatik bere jakinarazpen ezarpenak eta jokabidea "
 "konfiguratzeko"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Aukeratu zuk nahi duzun kokapena..."
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"

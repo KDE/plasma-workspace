@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-10-25 23:37-0500\n"
 "Last-Translator: A S Alam <aman@punlinux.org>\n"
 "Language-Team: pa\n"
@@ -206,8 +206,9 @@ msgstr "ਨੋਟੀਫਿਕੇਸ਼ਨ ਆਈਕਾਨ ਦੇ ਨੇੜੇ"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "…ਕਸਟਮ ਸਥਿਤੀ ਚੁਣੋ"
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -287,6 +288,9 @@ msgid ""
 "and behavior"
 msgstr ""
 "ਸੂਚੀ ਵਿੱਚੋਂ ਐਪਲੀਕੇਸ਼ਨ ਨੂੰ ਚੁਣੋ, ਜਿਸ ਦੀਆਂ ਨੋਟੀਫਿਕੇਸ਼ਨ ਸੈਟਿੰਗਾਂ ਅਤੇ ਰਵੱਈਏ ਦੀ ਸੰਰਚਨਾ ਕਰਨੀ ਚਾਹੁੰਦੇ ਹੋ"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "…ਕਸਟਮ ਸਥਿਤੀ ਚੁਣੋ"
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"

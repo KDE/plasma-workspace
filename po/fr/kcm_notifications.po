@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-07-27 10:15+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -213,8 +213,9 @@ msgstr "A côté de l'icône de notification"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "Sélectionner une position personnalisée..."
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -295,6 +296,9 @@ msgid ""
 msgstr ""
 "Sélectionner une application dans la liste pour définir sa configuration "
 "pour ses notifications et son comportement"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Sélectionner une position personnalisée..."
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"

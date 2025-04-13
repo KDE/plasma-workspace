@@ -642,7 +642,7 @@ msgstr "在当前剪贴板上手动执行操作"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr ""
+msgstr "编辑内容(&E)…"
 
 #: klipper.cpp:135
 #, kde-format

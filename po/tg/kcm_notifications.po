@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2019-10-10 07:59+0500\n"
 "Last-Translator: Victor Ibragimov <victor.ibragimov@gmail.com>\n"
 "Language-Team: English <kde-i18n-doc@kde.org>\n"
@@ -215,10 +215,10 @@ msgid "Near notification icon"
 msgstr "Намоиш додан дар огоҳиҳо"
 
 #: ui/main.qml:250
-#, fuzzy, kde-format
-#| msgid "Choose Custom Position..."
-msgid "Choose Custom Position…"
-msgstr "Интихоби мавқеъи фармоишӣ..."
+#, kde-format
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -298,6 +298,11 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr ""
+
+#, fuzzy
+#~| msgid "Choose Custom Position..."
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Интихоби мавқеъи фармоишӣ..."
 
 #, fuzzy
 #~| msgid "Application Settings"

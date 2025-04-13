@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-07-26 16:22+0200\n"
 "Last-Translator: Flori G <Renner03@protonmail.com>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -215,8 +215,9 @@ msgstr "Neben dem Benachrichtigungssymbol"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "Benutzerdefinierte Position auswählen ..."
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -297,6 +298,9 @@ msgid ""
 msgstr ""
 "Wählen Sie eine Anwendung aus der Liste, um die Einstellungen und das "
 "Verhalten von Benachrichtigungen einzurichten"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Benutzerdefinierte Position auswählen ..."
 
 #, fuzzy
 #~| msgid "Application Settings"

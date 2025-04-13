@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-11-06 20:35+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -209,8 +209,9 @@ msgstr "Pie paziņojuma ikonas"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "Pielāgota paziņojumu vieta…"
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -292,6 +293,9 @@ msgid ""
 msgstr ""
 "Sarakstā atlasiet programmu, lai konfigurētu tās paziņojumu iestatījumus un "
 "uzvedību"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Pielāgota paziņojumu vieta…"
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"

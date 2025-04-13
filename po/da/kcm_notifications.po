@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-10-26 10:54+0200\n"
 "Last-Translator: rasmus rosendahl-kaa <rasmus@rosendahl-kaa.name>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -210,8 +210,9 @@ msgstr "Nær bekendtgørelsesikonet"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "Angiv brugervalgt placering..."
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -292,6 +293,9 @@ msgid ""
 msgstr ""
 "Vælg et program fra listen for at indstille dets "
 "bekendtgørelsesindstillinger og opførsel."
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Angiv brugervalgt placering..."
 
 #~ msgctxt "@action:button Application-specific notifications"
 #~ msgid "Application Settings…"

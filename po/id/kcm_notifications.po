@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-14 00:43+0000\n"
+"POT-Creation-Date: 2025-04-13 00:43+0000\n"
 "PO-Revision-Date: 2024-09-29 20:48+0700\n"
 "Last-Translator: Wantoyèk <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -209,8 +209,9 @@ msgstr "Dekat ikon notifikasi"
 
 #: ui/main.qml:250
 #, kde-format
-msgid "Choose Custom Position…"
-msgstr "Memilih Posisi Kustom..."
+msgctxt "@action:button choose custom notification position"
+msgid "Custom…"
+msgstr ""
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -292,6 +293,9 @@ msgid ""
 msgstr ""
 "Pilih sebuah aplikasi dari daftar untuk mengonfigurasi pengaturan notifikasi "
 "dan perilakunya"
+
+#~ msgid "Choose Custom Position…"
+#~ msgstr "Memilih Posisi Kustom..."
 
 #, fuzzy
 #~| msgid "Application Settings"
