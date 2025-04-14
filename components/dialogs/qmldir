@@ -1,3 +1,0 @@
-module org.kde.plasma.workspace.dialogs
-
-SystemDialog 1.0 SystemDialog.qml

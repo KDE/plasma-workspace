@@ -1,6 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"plasmashellprivateplugin\")
 
-install(DIRECTORY dialogs/ DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/workspace/dialogs)
+add_subdirectory(dialogs)
 add_subdirectory(containmentlayoutmanager)
 add_subdirectory(dbus)
 add_subdirectory(shellprivate)
