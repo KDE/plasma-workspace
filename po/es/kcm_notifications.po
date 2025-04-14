@@ -1,15 +1,15 @@
 # Spanish translations for kcm_notifications.po package.
-# Copyright (C) 2019 This file is copyright:
+# Copyright (C) 2019-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2019.
-# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2019, 2020, 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: kcm_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-13 00:43+0000\n"
-"PO-Revision-Date: 2024-07-27 00:33+0200\n"
+"PO-Revision-Date: 2025-04-13 19:18+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: kcm.cpp:70
 #, kde-format
@@ -215,7 +215,7 @@ msgstr "Junto al icono de la notificación"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
-msgstr ""
+msgstr "Personalizar…"
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -296,61 +296,3 @@ msgid ""
 msgstr ""
 "Seleccione una aplicación en la lista para configurar las preferencias y el "
 "comportamiento de sus notificaciones"
-
-#~ msgid "Choose Custom Position…"
-#~ msgstr "Escoger posición personalizada..."
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings…"
-#~ msgstr "Preferencias de las aplicaciones..."
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Configurar las preferencias de las aplicaciones..."
-
-#~ msgctxt "@title:group"
-#~ msgid "Application-specific settings"
-#~ msgstr "Preferencias específicas de las aplicaciones"
-
-#~ msgid "Configure…"
-#~ msgstr "Configurar..."
-
-#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#~ msgid "Enable:"
-#~ msgstr "Activar:"
-
-#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-#~ msgid "Keyboard shortcut:"
-#~ msgstr "Atajo de teclado:"
-
-#~ msgid "Configure Notifications"
-#~ msgstr "Configurar notificaciones"
-
-#~ msgid "This module lets you manage application and system notifications."
-#~ msgstr ""
-#~ "Este módulo le permite gestionar las notificaciones de las aplicaciones y "
-#~ "del sistema."
-
-#~ msgctxt "Turn do not disturb mode on/off with keyboard shortcut"
-#~ msgid "Toggle with:"
-#~ msgstr "Conmutar con:"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "Kai Uwe Broulik"
-#~ msgstr "Kai Uwe Broulik"
-
-#~ msgid "Show critical notifications"
-#~ msgstr "Mostrar notificaciones críticas"
-
-#~ msgid "Always keep on top"
-#~ msgstr "Mantener siempre visibles"
-
-#~ msgid "Popup position:"
-#~ msgstr "Posición de la ventana emergente:"

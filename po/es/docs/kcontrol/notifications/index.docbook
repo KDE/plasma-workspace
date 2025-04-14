@@ -193,7 +193,7 @@
     <varlistentry>
     <term
 ><guiicon
->Escoger posición personalizada...</guiicon
+>Personalizar…</guiicon
 ></term>
     <listitem
 ><para
@@ -294,7 +294,7 @@
 
 <para
 >Si pulsa el botón <guilabel
->Configurar...</guilabel
+>Configurar…</guilabel
 > que hay al final de la lista se abrirá la página de preferencias de la aplicación, que le permitirá configurar el comportamiento de la notificación por aplicación y por servicio.</para>
 
 <para
@@ -363,7 +363,7 @@
     <varlistentry>
     <term
 ><guiicon
->Configurar eventos...</guiicon
+>Configurar eventos…</guiicon
 ></term>
     <listitem
 ><para

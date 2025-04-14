@@ -289,6 +289,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "Velg et program fra lista for å velge varslingsinnstillinger"
-
-#~ msgid "Choose Custom Position…"
-#~ msgstr "Velg plassering manuelt …"

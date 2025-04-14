@@ -666,11 +666,10 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Start handling på utklippstavla manuelt"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Edit contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "Rediger innhold"
+msgstr "&Rediger innhold …"
 
 #: klipper.cpp:135
 #, kde-format
