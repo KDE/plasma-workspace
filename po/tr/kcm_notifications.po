@@ -211,7 +211,7 @@ msgstr "Bildirim simgesi yakınında"
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
-msgstr ""
+msgstr "Özel…"
 
 #: ui/main.qml:259 ui/main.qml:275
 #, kde-format
@@ -292,29 +292,3 @@ msgid ""
 msgstr ""
 "Bildirim ayarlarını ve davranışlarını yapılandırmak için listeden bir "
 "uygulama seçin."
-
-#~ msgid "Choose Custom Position…"
-#~ msgstr "Özel Konum Seç…"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Application Settings…"
-#~ msgstr "Uygulama Ayarları…"
-
-#~ msgctxt "@action:button Application-specific notifications"
-#~ msgid "Configure Application Settings…"
-#~ msgstr "Uygulama Ayarlarını Yapılandır…"
-
-#~ msgctxt "@title:group"
-#~ msgid "Application-specific settings"
-#~ msgstr "Uygulamaya Özel Ayarlar"
-
-#~ msgid "Configure…"
-#~ msgstr "Yapılandır…"
-
-#~ msgctxt "Enable Do Not Disturb mode when screens are mirrored"
-#~ msgid "Enable:"
-#~ msgstr "Etkinleştir:"
-
-#~ msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
-#~ msgid "Keyboard shortcut:"
-#~ msgstr "Klavye kısayolu:"

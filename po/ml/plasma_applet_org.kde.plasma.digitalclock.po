@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:45+0000\n"
+"POT-Creation-Date: 2025-04-15 00:43+0000\n"
 "PO-Revision-Date: 2021-03-05 12:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -294,31 +294,31 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr ""
 
-#: package/contents/ui/configCalendar.qml:41
+#: package/contents/ui/configCalendar.qml:48
 #, kde-format
 msgid "General:"
 msgstr "പൊതുവായ:"
 
-#: package/contents/ui/configCalendar.qml:42
+#: package/contents/ui/configCalendar.qml:49
 #, kde-format
 msgid "Show week numbers"
 msgstr "ആഴ്ച അക്കങ്ങൾ കാണിക്കുക"
 
-#: package/contents/ui/configCalendar.qml:49
+#: package/contents/ui/configCalendar.qml:56
 #, fuzzy, kde-format
 #| msgid "First day of week:"
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "ആഴ്ചയിലെ ആദ്യ ദിവസം:"
 
-#: package/contents/ui/configCalendar.qml:55
+#: package/contents/ui/configCalendar.qml:62
 #, fuzzy, kde-format
 #| msgid "Use Region Defaults"
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "മേഖല തനത് ഉപയോഗിക്കുക"
 
-#: package/contents/ui/configCalendar.qml:72
+#: package/contents/ui/configCalendar.qml:79
 #, kde-format
 msgid "Available Plugins:"
 msgstr "ലഭ്യമായ സംയോജകങ്ങൾ"

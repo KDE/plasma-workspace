@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:45+0000\n"
+"POT-Creation-Date: 2025-04-15 00:43+0000\n"
 "PO-Revision-Date: 2025-02-22 16:18+0100\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -277,29 +277,29 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Välj ett teckensnitt"
 
-#: package/contents/ui/configCalendar.qml:41
+#: package/contents/ui/configCalendar.qml:48
 #, kde-format
 msgid "General:"
 msgstr "Allmänt:"
 
-#: package/contents/ui/configCalendar.qml:42
+#: package/contents/ui/configCalendar.qml:49
 #, kde-format
 msgid "Show week numbers"
 msgstr "Visa veckonummer"
 
-#: package/contents/ui/configCalendar.qml:49
+#: package/contents/ui/configCalendar.qml:56
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Första veckodagen:"
 
-#: package/contents/ui/configCalendar.qml:55
+#: package/contents/ui/configCalendar.qml:62
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Använd landsinställning"
 
-#: package/contents/ui/configCalendar.qml:72
+#: package/contents/ui/configCalendar.qml:79
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Tillgängliga insticksprogram:"

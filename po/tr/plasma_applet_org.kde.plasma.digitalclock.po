@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:45+0000\n"
+"POT-Creation-Date: 2025-04-15 00:43+0000\n"
 "PO-Revision-Date: 2025-02-22 10:21+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -278,29 +278,29 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Bir Yazıtipi Seç"
 
-#: package/contents/ui/configCalendar.qml:41
+#: package/contents/ui/configCalendar.qml:48
 #, kde-format
 msgid "General:"
 msgstr "Genel:"
 
-#: package/contents/ui/configCalendar.qml:42
+#: package/contents/ui/configCalendar.qml:49
 #, kde-format
 msgid "Show week numbers"
 msgstr "Hafta numaralarını göster"
 
-#: package/contents/ui/configCalendar.qml:49
+#: package/contents/ui/configCalendar.qml:56
 #, kde-format
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Haftanın ilk günü:"
 
-#: package/contents/ui/configCalendar.qml:55
+#: package/contents/ui/configCalendar.qml:62
 #, kde-format
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Bölge öntanımlılarını kullan"
 
-#: package/contents/ui/configCalendar.qml:72
+#: package/contents/ui/configCalendar.qml:79
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Kullanılabilir eklentiler:"

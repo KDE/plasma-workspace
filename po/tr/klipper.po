@@ -666,11 +666,10 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Geçerli Panoda Elle İşlem Yap"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Edit contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "İçeriği Düzenle"
+msgstr "İçeriği Dü&zenle…"
 
 #: klipper.cpp:135
 #, kde-format

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-08 00:45+0000\n"
+"POT-Creation-Date: 2025-04-15 00:43+0000\n"
 "PO-Revision-Date: 2024-06-11 14:57+0400\n"
 "Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -290,31 +290,31 @@ msgctxt "@title:window"
 msgid "Choose a Font"
 msgstr "Şrift seçin"
 
-#: package/contents/ui/configCalendar.qml:41
+#: package/contents/ui/configCalendar.qml:48
 #, kde-format
 msgid "General:"
 msgstr "Əsas:"
 
-#: package/contents/ui/configCalendar.qml:42
+#: package/contents/ui/configCalendar.qml:49
 #, kde-format
 msgid "Show week numbers"
 msgstr "Həftənin nömrələrini göstərmək"
 
-#: package/contents/ui/configCalendar.qml:49
+#: package/contents/ui/configCalendar.qml:56
 #, fuzzy, kde-format
 #| msgid "First day of week:"
 msgctxt "@label:listbox"
 msgid "First day of week:"
 msgstr "Həftənin ilk günü:"
 
-#: package/contents/ui/configCalendar.qml:55
+#: package/contents/ui/configCalendar.qml:62
 #, fuzzy, kde-format
 #| msgid "Use Region Defaults"
 msgctxt "@item:inlistbox first day of week option"
 msgid "Use region defaults"
 msgstr "Bölgə standartlarını istifadə etmək"
 
-#: package/contents/ui/configCalendar.qml:72
+#: package/contents/ui/configCalendar.qml:79
 #, kde-format
 msgid "Available Plugins:"
 msgstr "Mövcud Əlavələr:"

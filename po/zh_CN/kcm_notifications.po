@@ -286,6 +286,3 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "从列表中选择应用程序来配置其通知设置和行为"
-
-#~ msgid "Choose Custom Position…"
-#~ msgstr "选择自定义位置…"
