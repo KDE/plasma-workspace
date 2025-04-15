@@ -11,13 +11,16 @@
 #include <QPolygonF>
 #include <cmath>
 
+#include <QPainter>
+
 TriangleMouseFilter::TriangleMouseFilter(QQuickItem *parent)
-    : QQuickItem(parent)
+    : QQuickPaintedItem(parent)
     , m_edgeLine()
     , m_active(true)
     , m_blockFirstEnter(false)
 {
     setFiltersChildMouseEvents(true);
+    setVisible(true);
 
     m_resetTimer.setSingleShot(true);
     connect(&m_resetTimer, &QTimer::timeout, this, [this]() {
@@ -55,12 +58,14 @@ bool TriangleMouseFilter::childMouseEventFilter(QQuickItem *item, QEvent *event)
         if (m_interceptedHoverItem == item) {
             m_interceptedHoverItem = nullptr;
         }
+        update();
         return false;
     case QEvent::HoverEnter:
     case QEvent::HoverMove: {
         QHoverEvent &he = *static_cast<QHoverEvent *>(event);
 
         const QPointF position = item->mapToItem(this, he.position());
+        update();
 
         // This clause means that we block focus when first entering a given position
         // in the case of kickoff it's so that we can move the mouse from the bottom tabbar to the side view
@@ -180,7 +185,42 @@ bool TriangleMouseFilter::filterContains(const QPointF &p) const
         poly << m_interceptionPos.value() + QPointF(-JITTER_THRESHOLD, 0) << shape.topRight() << shape.bottomRight();
         break;
     case Qt::TopEdge:
-        poly << m_interceptionPos.value() + QPointF(0, -JITTER_THRESHOLD) << shape.topLeft() << shape.topRight();
+        poly << m_interceptionPos.value() + QPointF(0, JITTER_THRESHOLD) << shape.topLeft() << shape.topRight();
+        break;
+    case Qt::LeftEdge:
+        poly << m_interceptionPos.value() + QPointF(JITTER_THRESHOLD, 0) << shape.topLeft() << shape.bottomLeft();
+        break;
+    case Qt::BottomEdge:
+        poly << m_interceptionPos.value() + QPointF(0, -JITTER_THRESHOLD) << shape.bottomLeft() << shape.bottomRight();
+    }
+
+    bool firstCheck = poly.containsPoint(p, Qt::OddEvenFill);
+    poly.replace(0, m_secondaryPoint);
+    bool secondCheck = m_secondaryPoint != QPointF(0, 0) && poly.containsPoint(p, Qt::OddEvenFill);
+    return (firstCheck || secondCheck);
+}
+
+void TriangleMouseFilter::paint(QPainter *painter)
+{
+    if (!m_interceptionPos) {
+        return;
+    }
+
+    // QPolygonF.contains returns false if we're on the edge, so we pad our main item
+
+    const QRectF shape = (m_edgeLine.size() == 4) ? QRect(m_edgeLine[0] - 1, m_edgeLine[1] - 1, width() + m_edgeLine[2] + 1, height() + m_edgeLine[3] + 1)
+                                                  : QRect(-1, -1, width() + 1, height() + 1);
+
+    QPolygonF poly;
+    // poly << m_interceptionPos.value();
+
+    // We use some jitter protection by extending our triangle out slight past the mouse position in the opposite direction of the edge;
+    switch (m_edge) {
+    case Qt::RightEdge:
+        poly << m_interceptionPos.value() + QPointF(-JITTER_THRESHOLD, 0) << shape.topRight() << shape.bottomRight();
+        break;
+    case Qt::TopEdge:
+        poly << m_interceptionPos.value() + QPointF(0, 10) << shape.topLeft() << shape.topRight();
         break;
     case Qt::LeftEdge:
         poly << m_interceptionPos.value() + QPointF(JITTER_THRESHOLD, 0) << shape.topLeft() << shape.bottomLeft();
@@ -189,10 +229,27 @@ bool TriangleMouseFilter::filterContains(const QPointF &p) const
         poly << m_interceptionPos.value() + QPointF(0, JITTER_THRESHOLD) << shape.bottomLeft() << shape.bottomRight();
     }
 
-    bool firstCheck = poly.containsPoint(p, Qt::OddEvenFill);
-    poly.replace(0, m_secondaryPoint);
-    bool secondCheck = m_secondaryPoint != QPointF(0, 0) && poly.containsPoint(p, Qt::OddEvenFill);
-    return (firstCheck || secondCheck);
+    // QPolygonF poly;
+    // poly << m_interceptionPos.value();
+
+    // switch (m_edge) {
+    // case Qt::RightEdge:
+    //     poly << QPointF(width() + 1, height()) << QPointF(width() + 1, 0);
+    //     break;
+    // case Qt::TopEdge:
+    //     poly << QPointF(0, -1) << QPointF(width(), -1);
+    //     break;
+    // case Qt::LeftEdge:
+    //     poly << QPointF(-1, 0) << QPointF(-1, height());
+    //     break;
+    // case Qt::BottomEdge:
+    //     poly << QPointF(0, height() + 1) << QPointF(width(), height() + 1);
+    // }
+
+    QColor color(Qt::red);
+    color.setAlphaF(0.2);
+    painter->setBrush(color);
+    painter->drawPolygon(poly);
 }
 
 #include "moc_trianglemousefilter.cpp"
