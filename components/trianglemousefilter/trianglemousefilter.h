@@ -110,7 +110,7 @@ protected:
 
 private:
     static constexpr double VELOCITY_THRESHOLD = 0.1;
-    static constexpr int JITTER_THRESHOLD = 1;
+    static constexpr int JITTER_THRESHOLD = 5;
 
     bool filterContains(const QPointF &p) const;
     void resendHoverEvents(const QPointF &cursorPosition);

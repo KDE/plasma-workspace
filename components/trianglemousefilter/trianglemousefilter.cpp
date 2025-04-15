@@ -180,13 +180,13 @@ bool TriangleMouseFilter::filterContains(const QPointF &p) const
         poly << m_interceptionPos.value() + QPointF(-JITTER_THRESHOLD, 0) << shape.topRight() << shape.bottomRight();
         break;
     case Qt::TopEdge:
-        poly << m_interceptionPos.value() + QPointF(0, -JITTER_THRESHOLD) << shape.topLeft() << shape.topRight();
+        poly << m_interceptionPos.value() + QPointF(0, JITTER_THRESHOLD) << shape.topLeft() << shape.topRight();
         break;
     case Qt::LeftEdge:
         poly << m_interceptionPos.value() + QPointF(JITTER_THRESHOLD, 0) << shape.topLeft() << shape.bottomLeft();
         break;
     case Qt::BottomEdge:
-        poly << m_interceptionPos.value() + QPointF(0, JITTER_THRESHOLD) << shape.bottomLeft() << shape.bottomRight();
+        poly << m_interceptionPos.value() + QPointF(0, -JITTER_THRESHOLD) << shape.bottomLeft() << shape.bottomRight();
     }
 
     bool firstCheck = poly.containsPoint(p, Qt::OddEvenFill);
