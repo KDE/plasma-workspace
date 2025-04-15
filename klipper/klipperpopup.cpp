@@ -8,6 +8,9 @@
 
 #include "klipperpopup.h"
 
+#include <QDBusConnection>
+#include <QDBusMessage>
+#include <QDBusReply>
 #include <QQmlEngine>
 #include <QQuickItem>
 
@@ -45,6 +48,8 @@ void KlipperPopup::show()
         hide();
     }
     positionOnScreen();
+    QMetaObject::invokeMethod(mainItem(), "updateContentSize", Q_ARG(QSizeF, screen()->availableSize().toSizeF()));
+    resizePopup();
     setVisible(true);
 }
 
@@ -69,7 +74,7 @@ void KlipperPopup::hide()
     }
 }
 
-void KlipperPopup::onRequestResizePopup()
+void KlipperPopup::resizePopup()
 {
     // If the popup is off-screen, move it to the closest edge of the screen
     const QSize popupSize = QSize(mainItem()->implicitWidth(), mainItem()->implicitHeight()).grownBy(padding()).boundedTo(screen()->availableSize());
@@ -101,8 +106,8 @@ void KlipperPopup::showEvent(QShowEvent *event)
 
 void KlipperPopup::positionOnScreen()
 {
+    const QList<QScreen *> screens = QGuiApplication::screens();
     if (KWindowSystem::isPlatformX11()) {
-        const QList<QScreen *> screens = QGuiApplication::screens();
         auto screenIt = std::find_if(screens.cbegin(), screens.cend(), [](QScreen *screen) {
             return screen->geometry().contains(QCursor::pos(screen));
         });
@@ -117,6 +122,16 @@ void KlipperPopup::positionOnScreen()
         plasmaSurface->setSkipTaskbar(true);
         plasmaSurface->setSkipSwitcher(true);
         plasmaSurface->setRole(KWayland::Client::PlasmaShellSurface::Role::AppletPopup);
+
+        auto message = QDBusMessage::createMethodCall(u"org.kde.KWin"_s, u"/KWin"_s, u"org.kde.KWin"_s, u"activeOutputName"_s);
+        QDBusReply<QString> reply = QDBusConnection::sessionBus().call(message);
+        if (reply.isValid()) {
+            const QString activeOutputName = reply.value();
+            auto screenIt = std::find_if(screens.cbegin(), screens.cend(), [&activeOutputName](QScreen *screen) {
+                return screen->name() == activeOutputName;
+            });
+            setScreen(screenIt != screens.cend() ? *screenIt : QGuiApplication::primaryScreen());
+        }
     }
 }
 
@@ -125,8 +140,7 @@ void KlipperPopup::onObjectIncubated()
     auto item = qobject_cast<QQuickItem *>(m_engine.rootObject());
     setMainItem(item);
 
-    connect(this, &KlipperPopup::paddingChanged, this, &KlipperPopup::onRequestResizePopup);
-    connect(item, SIGNAL(requestResizePopup()), this, SLOT(onRequestResizePopup()));
+    connect(this, &KlipperPopup::paddingChanged, this, &KlipperPopup::resizePopup);
 
     connect(item, SIGNAL(requestHidePopup()), this, SLOT(hide()));
 }

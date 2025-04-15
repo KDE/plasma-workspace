@@ -19,7 +19,6 @@ PlasmaExtras.Representation {
     implicitWidth: 100 // A friendly initial size
     implicitHeight: 100
 
-    signal requestResizePopup()
     signal requestHidePopup()
 
     focus: true
@@ -37,14 +36,15 @@ PlasmaExtras.Representation {
         ((clipboardMenu.view as ListView).currentItem as ClipboardItemDelegate).edit();
     }
 
+    function updateContentSize(screenSize: size): void {
+        dialogItem.implicitWidth = Math.max(Kirigami.Units.gridUnit * 15, Math.min(screenSize.width / 4, Kirigami.Units.gridUnit * 40));
+        dialogItem.implicitHeight = Math.min(screenSize.height / 2, Kirigami.Units.gridUnit * 40);
+    }
+
     Connections {
         target: dialogItem.Window.window
         function onVisibleChanged() {
             if (dialogItem.Window.window.visible) {
-                // Break the bindings to avoid resizing loops due to screen changes
-                dialogItem.implicitWidth = Math.max(Kirigami.Units.gridUnit * 15, Math.min(dialogItem.Screen.width / 4, Kirigami.Units.gridUnit * 40));
-                dialogItem.implicitHeight = Math.min(dialogItem.Screen.height / 2, Kirigami.Units.gridUnit * 40);
-                dialogItem.requestResizePopup();
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).currentIndex = 0;
                 ((stack.initialItem as Private.ClipboardMenu).view as ListView).positionViewAtBeginning();
             }
