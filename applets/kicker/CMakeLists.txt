@@ -32,8 +32,6 @@ set(kickerplugin_SRCS
     plugin/windowsystem.cpp
     plugin/funnelmodel.cpp
     plugin/sectionsmodel.cpp
-    plugin/kickercompattrianglemousefilter.cpp
-    ../../components/trianglemousefilter/trianglemousefilter.cpp
 )
 
 ecm_qt_declare_logging_category(kickerplugin_SRCS
