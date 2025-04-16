@@ -28,3 +28,20 @@ target_link_libraries(trianglemousefilterplugin PRIVATE
 )
 
 ecm_finalize_qml_module(trianglemousefilterplugin)
+
+execute_process(COMMAND gcc -print-file-name=libasan.so OUTPUT_VARIABLE LIBASAN_PATH ECHO_OUTPUT_VARIABLE OUTPUT_STRIP_TRAILING_WHITESPACE)
+macro(qtquick_add_tests)
+    foreach(test ${ARGV})
+        add_test(NAME ${test}
+                 COMMAND $<TARGET_FILE:${QT_CMAKE_EXPORT_NAMESPACE}::qmltestrunner>
+                        -import ${CMAKE_BINARY_DIR}/bin
+                        -input ${test}.qml
+                 WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+        )
+        set_tests_properties(${test} PROPERTIES ENVIRONMENT "LD_PRELOAD=${LIBASAN_PATH}")
+    endforeach()
+endmacro()
+
+qtquick_add_tests(
+    tst_triangleFilter
+)

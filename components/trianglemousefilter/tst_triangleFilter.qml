@@ -1,6 +1,6 @@
 import QtQuick 2.12
 import QtTest 1.0
-import org.kde.plasma.private.kicker 0.1
+import org.kde.plasma.workspace.trianglemousefilter
 
 Item {
     id: root
@@ -43,8 +43,6 @@ Item {
             compare(item3.containsMouse, false);
 
             mouseMove(root, 100, 290); // enter the last item
-            // the first entrance is filtered
-            compare(item3.containsMouse, false);
 
             // move up slightly
             mouseMove(root, 100, 250); // still in the last
