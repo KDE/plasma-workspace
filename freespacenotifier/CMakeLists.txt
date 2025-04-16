@@ -30,6 +30,7 @@ target_link_libraries(freespacenotifier
     KF6::Notifications
     KF6::JobWidgets
     KF6::Service
+    KF6::Solid
 )
 
 ########### install files ###############

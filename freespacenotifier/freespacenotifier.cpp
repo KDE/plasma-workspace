@@ -24,6 +24,14 @@
 
 #include <chrono>
 
+#include <Solid/StorageAccess>
+#include <Solid/StorageVolume>
+
+#include <Solid/DeviceNotifier>
+#include <Solid/GenericInterface>
+
+#include <Solid/Device>
+
 #include "settings.h"
 
 FreeSpaceNotifier::FreeSpaceNotifier(const QString &path, const KLocalizedString &notificationText, QObject *parent)
@@ -31,8 +39,55 @@ FreeSpaceNotifier::FreeSpaceNotifier(const QString &path, const KLocalizedString
     , m_path(path)
     , m_notificationText(notificationText)
 {
-    connect(&m_timer, &QTimer::timeout, this, &FreeSpaceNotifier::checkFreeDiskSpace);
-    m_timer.start(std::chrono::minutes(1));
+    // connect(&m_timer, &QTimer::timeout, this, &FreeSpaceNotifier::checkFreeDiskSpace);
+    // m_timer.start(std::chrono::minutes(1));
+
+    qDebug() << "DAVES BRANCH RUNNING";
+    auto m_notifier = Solid::DeviceNotifier::instance();
+    connect(m_notifier, &Solid::DeviceNotifier::deviceAdded, this, [this](const QString &udi) {
+        qDebug() << "got a new device, watching for access";
+        Solid::Device device(udi);
+
+        // code in data engine imply we need this for a "two stage device" whatever that is....
+        if (auto volume = device.as<Solid::StorageVolume>()) {
+            Solid::GenericInterface *iface = device.as<Solid::GenericInterface>();
+            if (iface) {
+                iface->setProperty("udi", udi);
+                connect(iface, &Solid::GenericInterface::propertyChanged, this, [this, udi]() {
+                    onNewSolidDevice(udi);
+                });
+            }
+        }
+        onNewSolidDevice(udi);
+    });
+    const auto devices = Solid::Device::listFromType(Solid::DeviceInterface::StorageAccess);
+    for (auto device : devices) {
+        onNewSolidDevice(device.udi());
+    }
+}
+
+void FreeSpaceNotifier::onNewSolidDevice(const QString &udi)
+{
+    // note this can be called twice, make sure you guard this in a proper impl
+
+    Solid::Device device(udi);
+    Solid::StorageAccess *access = device.as<Solid::StorageAccess>();
+    if (!access) {
+        return;
+    }
+    if (access->isAccessible()) {
+        qDebug() << "We have a storage access!" << udi << access->filePath();
+    }
+    connect(access, &Solid::StorageAccess::accessibilityChanged, this, [udi, access](bool available) {
+        if (available) {
+            qDebug() << "Storage access changed to available for" << udi << access->filePath();
+            // at this point, we may as well use solid rather than QStorageInfo...
+            // then can also get rid of this QCoro nonsense
+        } else {
+            qDebug() << "Storage access changed to unavailable for" << udi;
+            // should cleanup here, but might also need to do so in deviceRemoved?
+        }
+    });
 }
 
 FreeSpaceNotifier::~FreeSpaceNotifier()
