@@ -46,7 +46,6 @@ Dependencies:
     'frameworks/kholidays': '@latest-kf6'
     'frameworks/kquickcharts': '@latest-kf6'
     'frameworks/kded': '@latest-kf6'
-    'frameworks/kdesu': '@latest-kf6'
     'frameworks/prison': '@latest-kf6'
     'frameworks/kstatusnotifieritem': '@latest-kf6'
     'frameworks/kuserfeedback': '@latest-kf6'
