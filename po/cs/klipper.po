@@ -652,11 +652,10 @@ msgid "Manually Invoke Action on Current Clipboard"
 msgstr "Ručně vyvolat činnost nad současným obsahem schránky"
 
 #: klipper.cpp:129
-#, fuzzy, kde-format
-#| msgid "Edit contents"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "&Edit Contents…"
-msgstr "Upravit obsah"
+msgstr "&Upravit obsah…"
 
 #: klipper.cpp:135
 #, kde-format
