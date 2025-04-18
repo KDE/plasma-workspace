@@ -275,10 +275,10 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
         if (m_devices[position].udi() == udi) {
             qCDebug(APPLETS::DEVICENOTIFIER) << "Device Controller: Begin remove device: " << udi << " from the model at position : " << position;
 
-            m_actions[udi]->deleteLater();
-            m_actions.remove(udi);
+            ActionsControl *actions = m_actions.take(udi);
             QModelIndex index = DeviceControl::index(position);
             Q_EMIT dataChanged(index, index, {Actions});
+            delete actions;
 
             // remove space monitoring because device not mounted
             m_spaceMonitor->removeMonitoringDevice(udi);
