@@ -202,16 +202,7 @@ void AppMenuModel::onActiveWindowChanged()
     const QModelIndex activeTaskIndex = m_tasksModel->activeTask();
     const QString objectPath = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuObjectPath).toString();
     const QString serviceName = m_tasksModel->data(activeTaskIndex, TaskManager::AbstractTasksModel::ApplicationMenuServiceName).toString();
-
-    if (!objectPath.isEmpty() && !serviceName.isEmpty()) {
-        setMenuAvailable(true);
-        updateApplicationMenu(serviceName, objectPath);
-        setVisible(true);
-        Q_EMIT modelNeedsUpdate();
-    } else {
-        setMenuAvailable(false);
-        setVisible(false);
-    }
+    updateApplicationMenu(serviceName, objectPath);
 }
 
 QHash<int, QByteArray> AppMenuModel::roleNames() const
@@ -282,61 +273,81 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         return;
     }
 
-    m_serviceName = serviceName;
-    m_serviceWatcher->setWatchedServices(QStringList({m_serviceName}));
+    if (serviceName.isEmpty() || menuObjectPath.isEmpty()) {
+        setMenuAvailable(false);
+        setVisible(false);
 
-    m_menuObjectPath = menuObjectPath;
+        m_serviceName = QString();
+        m_menuObjectPath = QString();
+        m_serviceWatcher->setWatchedServices({});
 
-    if (m_importer) {
-        m_importer->deleteLater();
-    }
+        if (m_importer) {
+            m_importer->disconnect(this);
+            m_importer->deleteLater();
+            m_importer = nullptr;
+        }
+    } else {
+        m_serviceName = serviceName;
+        m_menuObjectPath = menuObjectPath;
+        m_serviceWatcher->setWatchedServices(QStringList({m_serviceName}));
 
-    m_importer = new KDBusMenuImporter(serviceName, menuObjectPath, this);
-    QMetaObject::invokeMethod(m_importer, "updateMenu", Qt::QueuedConnection);
-
-    connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=, this](QMenu *menu) {
-        m_menu = m_importer->menu();
-        if (m_menu.isNull() || menu != m_menu) {
-            return;
+        if (m_importer) {
+            m_importer->disconnect(this);
+            m_importer->deleteLater();
         }
 
-        // cache first layer of sub menus, which we'll be popping up
-        const auto actions = m_menu->actions();
-        for (QAction *a : actions) {
-            // signal dataChanged when the action changes
-            connect(a, &QAction::changed, this, [this, a] {
-                if (m_menuAvailable && m_menu) {
-                    const int actionIdx = m_menu->actions().indexOf(a);
-                    if (actionIdx > -1) {
-                        const QModelIndex modelIdx = index(actionIdx, 0);
-                        Q_EMIT dataChanged(modelIdx, modelIdx);
-                    }
-                }
-            });
+        m_importer = new KDBusMenuImporter(serviceName, menuObjectPath, this);
+        QMetaObject::invokeMethod(m_importer, "updateMenu", Qt::QueuedConnection);
 
-            connect(a, &QAction::destroyed, this, &AppMenuModel::modelNeedsUpdate);
-
-            if (a->menu()) {
-                m_importer->updateMenu(a->menu());
+        connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=, this](QMenu *menu) {
+            m_menu = m_importer->menu();
+            if (m_menu.isNull() || menu != m_menu) {
+                return;
             }
-        }
+
+            // cache first layer of sub menus, which we'll be popping up
+            const auto actions = m_menu->actions();
+            for (QAction *a : actions) {
+                // signal dataChanged when the action changes
+                connect(a, &QAction::changed, this, [this, a] {
+                    if (m_menuAvailable && m_menu) {
+                        const int actionIdx = m_menu->actions().indexOf(a);
+                        if (actionIdx > -1) {
+                            const QModelIndex modelIdx = index(actionIdx, 0);
+                            Q_EMIT dataChanged(modelIdx, modelIdx);
+                        }
+                    }
+                });
+
+                connect(a, &QAction::destroyed, this, &AppMenuModel::modelNeedsUpdate);
+
+                if (a->menu()) {
+                    m_importer->updateMenu(a->menu());
+                }
+            }
+
+            setMenuAvailable(true);
+            Q_EMIT modelNeedsUpdate();
+        });
+
+        connect(m_importer.data(), &DBusMenuImporter::actionActivationRequested, this, [this](QAction *action) {
+            // TODO submenus
+            if (!m_menuAvailable || !m_menu) {
+                return;
+            }
+
+            const auto actions = m_menu->actions();
+            auto it = std::find(actions.begin(), actions.end(), action);
+            if (it != actions.end()) {
+                Q_EMIT requestActivateIndex(it - actions.begin());
+            }
+        });
 
         setMenuAvailable(true);
+        setVisible(true);
+
         Q_EMIT modelNeedsUpdate();
-    });
-
-    connect(m_importer.data(), &DBusMenuImporter::actionActivationRequested, this, [this](QAction *action) {
-        // TODO submenus
-        if (!m_menuAvailable || !m_menu) {
-            return;
-        }
-
-        const auto actions = m_menu->actions();
-        auto it = std::find(actions.begin(), actions.end(), action);
-        if (it != actions.end()) {
-            Q_EMIT requestActivateIndex(it - actions.begin());
-        }
-    });
+    }
 }
 
 #include "moc_appmenumodel.cpp"
