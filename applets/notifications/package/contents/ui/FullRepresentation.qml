@@ -484,7 +484,7 @@ PlasmaExtras.Representation {
                         }
                         onConfigureClicked: historyModel.configure(historyModel.index(index, 0))
 
-                        onActionInvoked: {
+                        onActionInvoked: actionName => {
                             // We close any non-resident notification (even those that still may have some actions)
                             // because the assumption is that once the notification has been interacted with, it may
                             // safely lose interaction capabilities (since the user is now likely in the app itself).
@@ -500,11 +500,11 @@ PlasmaExtras.Representation {
                                 historyModel.invokeAction(historyModel.index(index, 0), actionName, behavior);
                             }
                         }
-                        onOpenUrl: {
+                        onOpenUrl: url => {
                             Qt.openUrlExternally(url);
                             delegateLoader.expire();
                         }
-                        onFileActionInvoked: {
+                        onFileActionInvoked: action => {
                             if (action.objectName === "movetotrash" || action.objectName === "deletefile") {
                                 delegate.close();
                             } else {
