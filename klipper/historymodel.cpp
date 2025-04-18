@@ -13,6 +13,7 @@
 #include <QCryptographicHash>
 #include <QDir>
 #include <QFile>
+#include <QGuiApplication>
 #include <QImageReader>
 #include <QMimeData>
 #include <QSaveFile>
@@ -436,9 +437,15 @@ bool HistoryModel::insert(const QMimeData *mimeData, qreal timestamp)
     if (uuid.size() != 40 /*SHA1*/) [[unlikely]] {
         return false;
     }
-    if (const int existingItemIndex = indexOf(uuid); existingItemIndex >= 0) {
+    if (const int existingItemIndex = indexOf(uuid); existingItemIndex > 0) {
         // move to top
         moveToTop(existingItemIndex);
+        return true;
+    } else if (existingItemIndex == 0) {
+        // BUG 502831: Provide a data source to avoid empty clipboard
+        if (QGuiApplication::clipboard()->ownsClipboard()) {
+            m_clip->setMimeData(m_items[0], SystemClipboard::Clipboard);
+        }
         return true;
     }
 
