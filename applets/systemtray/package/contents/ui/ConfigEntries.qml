@@ -28,6 +28,18 @@ KCMUtils.ScrollViewKCM {
     property var cfg_disabledStatusNotifiers: []
     property alias cfg_showAllItems: showAllCheckBox.checked
 
+    // We can share one combobox model across all delegates, they all have the same options
+    readonly property var comboBoxModel: {
+        const autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
+        const shownElement = {"value": "shown", "text": i18n("Always shown")}
+        const hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
+        const disabledElement = {"value": "disabled", "text": i18n("Disabled")}
+
+        return cfg_showAllItems
+            ? [autoElement, disabledElement]
+            : [autoElement, shownElement, hiddenElement, disabledElement]
+    }
+
     function categoryName(category) {
         switch (category) {
         case "ApplicationStatus":
@@ -195,7 +207,6 @@ KCMUtils.ScrollViewKCM {
                         enabled: !cfg_showAllItems && itemId
                         textRole: "text"
                         valueRole: "value"
-                        model: comboBoxModel()
 
                         currentIndex: {
                             let value
@@ -218,6 +229,7 @@ KCMUtils.ScrollViewKCM {
 
                             return 0
                         }
+                        model: iconsPage.comboBoxModel
 
                         onActivated: index => {
                             const shownIndex = cfg_shownItems.indexOf(itemId)
@@ -281,19 +293,6 @@ KCMUtils.ScrollViewKCM {
                                 break
                             }
                             iconsPage.configurationChanged()
-                        }
-
-                        function comboBoxModel() {
-                            const autoElement = {"value": "auto", "text": i18n("Shown when relevant")}
-                            const shownElement = {"value": "shown", "text": i18n("Always shown")}
-                            const hiddenElement = {"value": "hidden", "text": i18n("Always hidden")}
-                            const disabledElement = {"value": "disabled", "text": i18n("Disabled")}
-
-                            if (showAllCheckBox.checked) {
-                                return [autoElement, disabledElement]
-                            } else {
-                                return [autoElement, shownElement, hiddenElement, disabledElement]
-                            }
                         }
                     }
                     KQC.KeySequenceItem {
