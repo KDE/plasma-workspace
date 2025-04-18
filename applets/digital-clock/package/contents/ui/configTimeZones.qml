@@ -79,6 +79,21 @@ Kirigami.PageRow {
 
         title: timeZonesRow.title
 
+        actions: [
+            Kirigami.Action {
+                text: i18n("Add Time Zone…")
+                icon.name: "list-add-symbolic"
+                Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
+                onTriggered: {
+                    if (timeZonesRow.depth == 1) {
+                        timeZonesRow.push(timeZonesRow.addTimeZonePage)
+                    } else {
+                        timeZonesRow.currentIndex = 1
+                    }
+                }
+            }
+        ]
+
         TimeZoneModel {
             id: timeZones
 
@@ -108,24 +123,6 @@ Kirigami.PageRow {
             focus: true // keyboard navigation
             activeFocusOnTab: true // keyboard navigation
 
-            headerPositioning: ListView.OverlayHeader
-            header: Kirigami.InlineViewHeader {
-                width: ListView.view.width
-                actions: [
-                    Kirigami.Action {
-                        text: i18n("Add Time Zone…")
-                        icon.name: "list-add-symbolic"
-                        Accessible.name: text // https://bugreports.qt.io/browse/QTBUG-130360
-                        onTriggered: {
-                            if (timeZonesRow.depth == 1) {
-                                timeZonesRow.push(timeZonesRow.addTimeZonePage)
-                            } else {
-                                timeZonesRow.currentIndex = 1
-                            }
-                        }
-                    }
-                ]
-            }
             model: TimeZoneFilterProxy {
                 sourceModel: timeZones
                 onlyShowChecked: true
