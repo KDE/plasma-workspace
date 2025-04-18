@@ -25,6 +25,7 @@ Kirigami.PageRow {
     property alias cfg_wheelChangesTimezone: enableWheelCheckBox.checked
 
     defaultColumnWidth: timeZonesRow.width
+    globalToolBar.style: Kirigami.ApplicationHeaderStyle.Auto
 
     /*Component.onCompleted: {
         applicationWindow().footer.visible = Qt.binding(function() {
