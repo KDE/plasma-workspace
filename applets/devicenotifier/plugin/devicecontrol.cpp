@@ -304,6 +304,7 @@ void DeviceControl::onDeviceRemoved(const QString &udi)
                 }
             }
             deviceDelayRemove(udi, QString());
+            break;
         }
     }
 }
