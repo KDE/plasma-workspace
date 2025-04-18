@@ -185,16 +185,30 @@ Kirigami.ScrollablePage {
                         "wallpaperConfiguration": wallpaperConfig
                     };
 
-                    var newItem = replace(Qt.resolvedUrl(wallpaperPluginSource), props)
-
-                    if ("screen" in newItem) {
-                        newItem.screen = kcm.selectedScreen
+                    // Some third-party wallpaper plugins need the config keys to be set initially.
+                    // We should not break them within one Plasma major version, but setting everything
+                    // will lead to an error message for every unused property (and some, like KConfigXT
+                    // default values, are used by almost no plugin configuration). We load the config
+                    // page in a temp variable first, then use that to figure out which ones we need to
+                    // set initially.
+                    // TODO Plasma 7: consider whether we can drop this workaround
+                    const temp = Qt.createComponent(Qt.resolvedUrl(wallpaperPluginSource)).createObject(appearanceRoot, props)
+                    wallpaperConfig.keys().forEach(key => {
+                        const cfgKey = "cfg_" + key;
+                        if (cfgKey in temp) {
+                            props[cfgKey] = wallpaperConfig[key]
+                        }
+                    })
+                    if ("screen" in temp) {
+                        props["screen"] = kcm.selectedScreen
                     }
+                    temp.destroy()
+
+                    var newItem = replace(Qt.resolvedUrl(wallpaperPluginSource), props)
 
                     wallpaperConfig.keys().forEach(key => {
                         const cfgKey = "cfg_" + key;
                         if (cfgKey in newItem) {
-                            newItem[cfgKey] = wallpaperConfig[key];
                             let changedSignal = main.currentItem[cfgKey + "Changed"]
                             if (changedSignal) {
                                 changedSignal.connect(appearanceRoot.onConfigurationChanged)
