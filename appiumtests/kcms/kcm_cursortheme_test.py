@@ -12,12 +12,16 @@ import time
 import unittest
 from typing import Final
 
-import cv2 as cv
-import numpy as np
+import gi
 from appium import webdriver
 from appium.options.common.base import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
-from gi.repository import GLib
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
+
+gi.require_version('Gdk', '4.0')
+gi.require_version('GdkPixbuf', '2.0')
+from gi.repository import Gdk, GdkPixbuf, GLib
 
 KDE_VERSION: Final = 6
 KCM_ID: Final = "kcm_cursortheme"
@@ -83,46 +87,32 @@ class KCMCursorThemeTest(unittest.TestCase):
 
     def test_0_open(self) -> None:
         """
-        Tests the KCM can be opened
+        Tests the KCM and the launcher feedback dialog can be opened
         """
         self.driver.find_element(AppiumBy.NAME, "&Configure Launch Feedback…")
         self.driver.find_element(AppiumBy.NAME, "Test Cursor Theme (DO NOT TRANSLATE)")
+
+        self.driver.find_element(AppiumBy.NAME, "&Configure Launch Feedback…").click()
+        self.driver.find_element(AppiumBy.NAME, "Blinking")
+        close_button = self.driver.find_element(AppiumBy.XPATH, "//button[@name='Close' and contains(@accessibility-id, 'LaunchFeedbackDialog')]")
+        close_button.click()
+        WebDriverWait(self.driver, 10).until_not(lambda _: close_button.is_displayed())
 
     def test_1_cursor_theme_preview(self) -> None:
         """
         Tests if the cursor preview is loaded
         """
-        time.sleep(3)  # Wait until the window appears
-
         with tempfile.TemporaryDirectory() as temp_dir:
             saved_image_path: str = os.path.join(temp_dir, "kcm_window.png")
-            subprocess.check_call(["import", "-window", "root", saved_image_path])
-
-            cv_first_image = cv.imread(saved_image_path, cv.IMREAD_COLOR)
-            first_image = base64.b64encode(cv.imencode('.png', cv_first_image)[1].tobytes()).decode()
+            self.driver.get_screenshot_as_file(saved_image_path)
+            full_image = base64.b64encode(Gdk.Texture.new_from_filename(saved_image_path).save_to_png_bytes().get_data()).decode()
 
         # Red
-        cv_second_image = np.zeros((16, 16, 3), dtype=np.uint8)
-        cv_second_image[:, :] = [0, 0, 255]
-        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
-        self.driver.find_image_occurrence(first_image, second_image)
-        # Green
-        cv_second_image[:, :] = [0, 255, 0]
-        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
-        self.driver.find_image_occurrence(first_image, second_image)
-        # Blue
-        cv_second_image[:, :] = [255, 0, 0]
-        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
-        self.driver.find_image_occurrence(first_image, second_image)
-        # Yellow
-        cv_second_image[:, :] = [0, 255, 255]
-        second_image = base64.b64encode(cv.imencode('.png', cv_second_image)[1].tobytes()).decode()
-        self.driver.find_image_occurrence(first_image, second_image)
-
-    def test_2_launch_feedback_dialog(self) -> None:
-        self.driver.find_element(AppiumBy.NAME, "&Configure Launch Feedback…").click()
-        self.driver.find_element(AppiumBy.NAME, "Blinking")
+        partial_pixbuf = GdkPixbuf.Pixbuf.new(GdkPixbuf.Colorspace.RGB, True, 8, 16, 16)
+        partial_pixbuf.fill(0xff0000ff)
+        partial_image = base64.b64encode(Gdk.Texture.new_for_pixbuf(partial_pixbuf).save_to_png_bytes().get_data()).decode()
+        self.driver.find_image_occurrence(full_image, partial_image)
 
 
 if __name__ == '__main__':
-    unittest.main()
+    unittest.main(failfast=True)

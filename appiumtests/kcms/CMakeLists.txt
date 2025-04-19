@@ -17,9 +17,8 @@ set_tests_properties(kcm_colors_test PROPERTIES TIMEOUT 120)
 add_test(
     NAME kcm_cursortheme_test
     COMMAND selenium-webdriver-at-spi-run ${CMAKE_CURRENT_SOURCE_DIR}/kcm_cursortheme_test.py
-    WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
 )
-set_tests_properties(kcm_cursortheme_test PROPERTIES TIMEOUT 120 ENVIRONMENT "TEST_WITH_KWIN_WAYLAND=0")
+set_tests_properties(kcm_cursortheme_test PROPERTIES TIMEOUT 120)
 
 add_test(
     NAME kcm_desktoptheme_test
