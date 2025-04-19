@@ -64,7 +64,7 @@ public:
 
     virtual QAbstractListModel *sections() const;
 
-    virtual void entryChanged(AbstractEntry *entry);
+    virtual void entryChanged(AbstractEntry *entry, const QVector<int> &roles = {});
 
 Q_SIGNALS:
     void descriptionChanged();

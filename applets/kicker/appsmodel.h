@@ -93,7 +93,7 @@ public:
 
     SectionsModel *sections() const override;
 
-    void entryChanged(AbstractEntry *entry) override;
+    void entryChanged(AbstractEntry *entry, const QVector<int> &roles = {}) override;
 
     void classBegin() override;
     void componentComplete() override;

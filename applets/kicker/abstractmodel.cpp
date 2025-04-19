@@ -146,9 +146,10 @@ QAbstractListModel *AbstractModel::sections() const
     return nullptr;
 }
 
-void AbstractModel::entryChanged(AbstractEntry *entry)
+void AbstractModel::entryChanged(AbstractEntry *entry, const QVector<int> &roles)
 {
     Q_UNUSED(entry)
+    Q_UNUSED(roles)
 }
 
 #include "moc_abstractmodel.cpp"

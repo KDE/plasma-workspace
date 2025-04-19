@@ -752,13 +752,13 @@ void AppsModel::sortEntries(QList<AbstractEntry *> &entryList)
     });
 }
 
-void AppsModel::entryChanged(AbstractEntry *entry)
+void AppsModel::entryChanged(AbstractEntry *entry, const QVector<int> &roles)
 {
     int i = m_entryList.indexOf(entry);
 
     if (i != -1) {
         QModelIndex idx = index(i, 0);
-        Q_EMIT dataChanged(idx, idx);
+        Q_EMIT dataChanged(idx, idx, roles);
     }
 }
 
