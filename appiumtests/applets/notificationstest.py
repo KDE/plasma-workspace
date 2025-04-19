@@ -263,7 +263,7 @@ class NotificationsTest(unittest.TestCase):
         self.assertTrue(notification_closed)
         self.assertEqual(params_3[0], notification_id)
         self.assertEqual(params_3[1], 3)  # reason: Revoked
-        self.assertFalse(element.is_displayed())
+        WebDriverWait(self.driver, 5).until_not(lambda _: element.is_displayed())
 
     def test_5_inline_reply(self) -> None:
         """
