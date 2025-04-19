@@ -228,6 +228,7 @@ void XWindowTasksModelTest::test_modelData()
 
         dataChangedSpy.clear();
         window->setIcon(QIcon());
+        xcb_flush(QX11Info::connection());
         QVERIFY(!dataChangedSpy.empty() || dataChangedSpy.wait());
         QTRY_VERIFY(std::any_of(dataChangedSpy.cbegin(), dataChangedSpy.cend(), [](const QVariantList &content) {
             return content.at(2).value<QList<int>>().contains(static_cast<int>(qToUnderlying(Qt::DecorationRole)));

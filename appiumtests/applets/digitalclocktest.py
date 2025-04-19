@@ -4,6 +4,7 @@
 # SPDX-FileCopyrightText: 2021-2022 Harald Sitter <sitter@kde.org>
 # SPDX-FileCopyrightText: 2023 Marco Martin <mart@kde.org>
 
+import os
 import subprocess
 import time
 import unittest
@@ -35,7 +36,7 @@ class DigitalClockTests(unittest.TestCase):
         options.set_capability("environ", {
             "LC_ALL": "en_US.UTF-8",
         })
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        cls.driver = webdriver.Remote(command_executor=f'http://127.0.0.1:{os.getenv("FLASK_PORT", "4723")}', options=options)
         # Check the current time in the compact representation
         cls.driver.find_element(AppiumBy.XPATH, f"//label[contains(@name, '{time.strftime('%I:%M', time.localtime()).lstrip('0')}')]")
         # Open Applet
@@ -55,12 +56,6 @@ class DigitalClockTests(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
-        for _ in range(10):
-            try:
-                subprocess.check_call(["pidof", "plasmawindowed"])
-            except subprocess.CalledProcessError:
-                break
-            time.sleep(1)
         cls.driver.quit()
 
     def assertResult(self, actual, expected):
@@ -156,7 +151,6 @@ class DigitalClockTests(unittest.TestCase):
         el.send_keys(Keys.ENTER)
         wait = WebDriverWait(self.driver, 1)
         el = wait.until(EC.presence_of_element_located((AppiumBy.NAME, "Timezone location selector")))
-
 
 
 if __name__ == '__main__':

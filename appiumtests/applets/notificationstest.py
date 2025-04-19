@@ -83,7 +83,7 @@ class NotificationsTest(unittest.TestCase):
             "LC_ALL": "en_US.UTF-8",
             "QT_LOGGING_RULES": "kf.notification*.debug=true;org.kde.plasma.notificationmanager.debug=true",
         })
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        cls.driver = webdriver.Remote(command_executor=f'http://127.0.0.1:{os.getenv("FLASK_PORT", "4723")}', options=options)
 
         cls.notification_proxy = Gio.DBusProxy.new_for_bus_sync(Gio.BusType.SESSION, 0, None, BUS_NAME, OBJECT_PATH, IFACE_NAME)
 
@@ -102,12 +102,6 @@ class NotificationsTest(unittest.TestCase):
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
         cls.kactivitymanagerd.kill()
         cls.kactivitymanagerd.wait(10)
-        for _ in range(10):
-            try:
-                subprocess.check_call(["pidof", "plasmawindowed"])
-            except subprocess.CalledProcessError:
-                break
-            time.sleep(1)
         cls.driver.quit()
 
     def close_notifications(self) -> None:
@@ -240,7 +234,8 @@ class NotificationsTest(unittest.TestCase):
                 case "NotificationClosed":
                     params_3 = parameters.unpack()
                     notification_closed = True
-                    loop.quit()
+            if activation_token and action_invoked and notification_closed:
+                loop.quit()
 
         connection_id = self.notification_proxy.connect("g-signal", notification_signal_handler)
         self.addCleanup(lambda: self.notification_proxy.disconnect(connection_id))
@@ -452,6 +447,6 @@ class NotificationsTest(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    assert "USE_CUSTOM_BUS" in os.environ or subprocess.call(["pidof", "plasmashell"]) != 0
+    assert "USE_CUSTOM_BUS" in os.environ or subprocess.call(["pidof", "plasmashell"]) != 0 or "KDECI_BUILD" in os.environ, "plasmashell should not be running"
     logging.getLogger().setLevel(logging.INFO)
     unittest.main(failfast=True)

@@ -14,4 +14,4 @@ if (${HAVE_APPSTREAMQT})
 target_link_libraries(testrunnermodel AppStreamQt)
 endif()
 
-set_tests_properties(testrunnermodel PROPERTIES REPEAT UNTIL_PASS:2)
+set_tests_properties(testrunnermodel PROPERTIES RUN_SERIAL ON)

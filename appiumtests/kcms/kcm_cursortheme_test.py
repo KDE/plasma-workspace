@@ -62,7 +62,7 @@ class KCMCursorThemeTest(unittest.TestCase):
             "XCURSOR_PATH": icons_folder,
             "QT_LOGGING_RULES": "kcm_cursortheme.debug=true",
         })
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        cls.driver = webdriver.Remote(command_executor=f'http://127.0.0.1:{os.getenv("FLASK_PORT", "4723")}', options=options)
 
     def tearDown(self) -> None:
         """
@@ -77,12 +77,6 @@ class KCMCursorThemeTest(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         cls.driver.find_element(AppiumBy.XPATH, "//*[@name='Close' and contains(@accessibility-id, 'Button')]").click()
-        for _ in range(10):
-            try:
-                subprocess.check_call(["pidof", f"kcmshell{KDE_VERSION}"])
-            except subprocess.CalledProcessError:
-                break
-            time.sleep(1)
         cls.driver.quit()
 
     def test_0_open(self) -> None:

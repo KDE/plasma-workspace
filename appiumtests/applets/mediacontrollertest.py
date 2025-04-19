@@ -67,7 +67,7 @@ class MediaControllerTests(unittest.TestCase):
             "QT_LOGGING_RULES": "qt.accessibility.atspi.warning=false;kf.plasma.core.warning=false;kf.windowsystem.warning=false;kf.kirigami.platform.warning=false;qt.qml.typeresolution.cycle.warning=false",
         })
         options.set_capability("timeouts", {'implicit': 10000})
-        cls.driver = webdriver.Remote(command_executor='http://127.0.0.1:4723', options=options)
+        cls.driver = webdriver.Remote(command_executor=f'http://127.0.0.1:{os.getenv("FLASK_PORT", "4723")}', options=options)
 
     def setUp(self) -> None:
         json_path: str = os.path.join(os.path.dirname(os.path.abspath(__file__)), "mediacontrollertest", "player_a.json")
@@ -95,12 +95,6 @@ class MediaControllerTests(unittest.TestCase):
         Make sure to terminate the driver again, lest it dangles.
         """
         subprocess.check_call([f"kquitapp{KDE_VERSION}", "plasmawindowed"])
-        for _ in range(10):
-            try:
-                subprocess.check_call(["pidof", "plasmawindowed"])
-            except subprocess.CalledProcessError:
-                break
-            time.sleep(1)
         cls.loop_thread.quit()
         cls.driver.quit()
 

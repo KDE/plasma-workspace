@@ -79,5 +79,5 @@ PLASMASHELL_UNIT_TESTS(
     screenpooltest
     shelltest
 )
-set_tests_properties(screenpooltest shelltest PROPERTIES TIMEOUT 120 ENVIRONMENT "QT_LOGGING_RULES=*.debug=true")
+set_tests_properties(screenpooltest shelltest PROPERTIES TIMEOUT 120)
 
