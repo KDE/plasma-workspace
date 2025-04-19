@@ -752,7 +752,7 @@ void KAStatsFavoritesModel::refresh()
         it->second->refreshLabels();
     }
 
-    Q_EMIT dataChanged(index(0, 0), index(rowCount(), 0));
+    Q_EMIT dataChanged(index(0, 0), index(rowCount() - 1, 0));
 }
 
 QObject *KAStatsFavoritesModel::activities() const
