@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2008, 2009, 2022.
-# SPDX-FileCopyrightText: 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_devicenotifier\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-13 00:43+0000\n"
-"PO-Revision-Date: 2024-07-22 13:09+0000\n"
+"PO-Revision-Date: 2025-04-18 16:29+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -22,28 +22,20 @@ msgstr ""
 "X-Generator: Lokalize 23.08.5\n"
 
 #: package/contents/ui/DeviceItem.qml:97
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Checking…"
-msgstr "Fjarlægi..."
+msgstr "Athuga..."
 
 #: package/contents/ui/DeviceItem.qml:99
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "Removing is a less technical word for Unmounting; translation should be "
-#| "short and mean 'Currently unmounting this device'"
-#| msgid "Removing…"
+#, kde-format
 msgctxt ""
 "Accessing is a less technical word for Mounting; translation should be short "
 "and mean 'Currently mounting this device'"
 msgid "Repairing…"
-msgstr "Fjarlægi..."
+msgstr "Lagfæri..."
 
 #: package/contents/ui/DeviceItem.qml:102
 #, kde-format
@@ -142,7 +134,7 @@ msgstr "Opna í skráastjóra"
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
 msgid "Try to Fix"
-msgstr ""
+msgstr "Reyna að lagfæra"
 
 #: plugin/actions/mountandopenaction.cpp:182
 #, kde-format
@@ -160,15 +152,14 @@ msgid "Safely remove"
 msgstr "Fjarlæga á öruggan máta"
 
 #: plugin/deviceerrormonitor_p.cpp:198
-#, fuzzy, kde-format
-#| msgid "This device can now be safely removed."
+#, kde-format
 msgid "This device has file system errors."
-msgstr "Nú er óhætt að fjarlægja þetta tæki."
+msgstr "Það eru skráakerfisvillur á þessu tæki."
 
 #: plugin/deviceerrormonitor_p.cpp:201
 #, kde-format
 msgid "Successfully repaired!"
-msgstr ""
+msgstr "Tókst að lagfæra!"
 
 #: plugin/deviceerrormonitor_p.cpp:204
 #, kde-format
@@ -202,11 +193,9 @@ msgid "You are not authorized to eject this disc."
 msgstr "Þú hefur ekki heimild til að ýta þessum diski úr."
 
 #: plugin/deviceerrormonitor_p.cpp:225
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "You are not authorized to remove this device."
+#, kde-format
 msgid "You are not authorized to repair this device."
-msgstr "Þú hefur ekki heimild til að fjarlægja þetta tæki."
+msgstr "Þú hefur ekki heimild til að lagfæra þetta tæki."
 
 #: plugin/deviceerrormonitor_p.cpp:232
 #, kde-format
@@ -250,11 +239,9 @@ msgid "Could not eject this disc."
 msgstr "Gat ekki ýtt þessum diski úr."
 
 #: plugin/deviceerrormonitor_p.cpp:294
-#, fuzzy, kde-format
-#| msgctxt "Remove is less technical for unmount"
-#| msgid "Could not remove this device."
+#, kde-format
 msgid "Could not repair this device: %1"
-msgstr "Gat ekki fjarlægt þetta tæki."
+msgstr "Gat ekki lagfært þetta tæki: %1"
 
 #~ msgid "Filesystem is not responding"
 #~ msgstr "Skráakerfi svarar ekki"
@@ -273,7 +260,7 @@ msgstr "Gat ekki fjarlægt þetta tæki."
 #~ msgid "1 action for this device"
 #~ msgid_plural "%1 actions for this device"
 #~ msgstr[0] "1 aðgerð fyrir þetta tæki"
-#~ msgstr[1] "1 aðgerð fyrir þetta tæki"
+#~ msgstr[1] "%1 aðgerð fyrir þetta tæki"
 
 #, fuzzy
 #~| msgid "1 action for this device"

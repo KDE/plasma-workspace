@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"POT-Creation-Date: 2025-04-19 00:43+0000\n"
 "PO-Revision-Date: 2025-03-16 14:12+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -27,32 +27,52 @@ msgstr "பொதுவானவை"
 msgid "Entries"
 msgstr "பதிவுகள்"
 
+#: package/contents/ui/ConfigEntries.qml:33
+#, kde-format
+msgid "Shown when relevant"
+msgstr "தேவைப்படும்போது காட்டு"
+
 #: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Always shown"
+msgstr "எப்போதும் காட்டு"
+
+#: package/contents/ui/ConfigEntries.qml:35
+#, kde-format
+msgid "Always hidden"
+msgstr "எப்போதும் மறை"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Disabled"
+msgstr "முடக்கு"
+
+#: package/contents/ui/ConfigEntries.qml:46
 #, kde-format
 msgid "Application Status"
 msgstr "செயலியின் நிலை"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:48
 #, kde-format
 msgid "Communications"
 msgstr "தொலைதொடர்பு"
 
-#: package/contents/ui/ConfigEntries.qml:38
+#: package/contents/ui/ConfigEntries.qml:50
 #, kde-format
 msgid "System Services"
 msgstr "கணினி சேவைகள்"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:52
 #, kde-format
 msgid "Hardware Control"
 msgstr "வன்பொருள் கட்டுப்பாடு"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:55
 #, kde-format
 msgid "Miscellaneous"
 msgstr "மற்றவை"
 
-#: package/contents/ui/ConfigEntries.qml:67
+#: package/contents/ui/ConfigEntries.qml:79
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -68,49 +88,29 @@ msgstr ""
 ">இத்தேர்வால் செயலியில் ஏதேனும் சிக்கல் ஏற்பட்டால், தயவுசெய்து அதை கே.டீ.யீ.யிடமோ செயலியின் "
 "நிரலாளரிடமோ தெரிவிக்க வேண்டாம்."
 
-#: package/contents/ui/ConfigEntries.qml:70
+#: package/contents/ui/ConfigEntries.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "விளைவுகளை ஏற்கிறேன்"
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:113
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "பதிவு"
 
-#: package/contents/ui/ConfigEntries.qml:108
+#: package/contents/ui/ConfigEntries.qml:120
 #, kde-format
 msgid "Visibility"
 msgstr "காட்டப்படுவது"
 
-#: package/contents/ui/ConfigEntries.qml:115
+#: package/contents/ui/ConfigEntries.qml:127
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "விசைப்பலகை சுருக்குவழி"
 
-#: package/contents/ui/ConfigEntries.qml:287
-#, kde-format
-msgid "Shown when relevant"
-msgstr "தேவைப்படும்போது காட்டு"
-
-#: package/contents/ui/ConfigEntries.qml:288
-#, kde-format
-msgid "Always shown"
-msgstr "எப்போதும் காட்டு"
-
-#: package/contents/ui/ConfigEntries.qml:289
-#, kde-format
-msgid "Always hidden"
-msgstr "எப்போதும் மறை"
-
-#: package/contents/ui/ConfigEntries.qml:290
-#, kde-format
-msgid "Disabled"
-msgstr "முடக்கு"
-
-#: package/contents/ui/ConfigEntries.qml:348
+#: package/contents/ui/ConfigEntries.qml:347
 #, kde-format
 msgid "Always show all entries"
 msgstr "அனைத்து பதிவுகளையும் எப்போதும் காட்டு"

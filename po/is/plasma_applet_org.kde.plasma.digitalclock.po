@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-15 00:43+0000\n"
-"PO-Revision-Date: 2024-12-13 21:23+0000\n"
+"PO-Revision-Date: 2025-04-18 11:58+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -151,11 +151,10 @@ msgid "Offset from UTC time"
 msgstr "Hliðrun frá UTC-tíma"
 
 #: package/contents/ui/configAppearance.qml:126
-#, fuzzy, kde-format
-#| msgid "Switch Systemwide Time Zone…"
+#, kde-format
 msgctxt "@action:button opens kcm"
 msgid "Switch Time Zone…"
-msgstr "Skipta um tímabelti kerfisins…"
+msgstr "Skipta um tímabelti..."
 
 #: package/contents/ui/configAppearance.qml:138
 #, kde-format
@@ -308,13 +307,12 @@ msgstr "Tiltækar tengiviðbætur:"
 #: package/contents/ui/configTimeZones.qml:59
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Hætta við"
 
 #: package/contents/ui/configTimeZones.qml:66
-#, fuzzy, kde-format
-#| msgid "Add More Time Zones"
+#, kde-format
 msgid "Add Selected Time Zone"
-msgstr "Bæta við fleiri tímabeltum"
+msgstr "Bæta við völdu tímabelti"
 
 #: package/contents/ui/configTimeZones.qml:98
 #, kde-format
@@ -322,15 +320,14 @@ msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
 "only appear when you change the systemwide time zone to something else."
 msgstr ""
-"Ábending: Ef þú ferðast reglulega geturðu bætt annarri færslu fyrir "
-"heimatímabeltið við þennan lista. Hún birtist bara þegar þú breytir "
-"tímabelti kerfisins í eitthvað annað."
+"Ábending: Ef þú ferðast reglulega geturðu bætt heimatímabeltinu þínu við "
+"þennan lista. Það birtist bara þegar þú breytir tímabelti kerfisins í "
+"eitthvað annað."
 
 #: package/contents/ui/configTimeZones.qml:115
-#, fuzzy, kde-format
-#| msgid "Add Time Zones…"
+#, kde-format
 msgid "Add Time Zone…"
-msgstr "Bæta við tímabeltum…"
+msgstr "Bæta við tímabelti…"
 
 #: package/contents/ui/configTimeZones.qml:156
 #, kde-format
@@ -390,10 +387,9 @@ msgstr ""
 "þú ferðast skaltu breyta tímabelti kerfisins í staðinn."
 
 #: package/contents/ui/configTimeZones.qml:256
-#, fuzzy, kde-format
-#| msgid "Time Zones"
+#, kde-format
 msgid "Choose Time Zone"
-msgstr "Tímabelti"
+msgstr "Velja tímabelti"
 
 #: package/contents/ui/main.qml:217
 #, kde-format

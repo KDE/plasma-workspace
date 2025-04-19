@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-03 00:42+0000\n"
+"POT-Creation-Date: 2025-04-19 00:43+0000\n"
 "PO-Revision-Date: 2021-07-25 14:01+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian\n"
@@ -18,58 +18,58 @@ msgstr ""
 "20)) ? 1 : 2;\n"
 "X-Generator: Lokalize 19.12.3\n"
 
-#: plugin/actionlist.cpp:85
+#: actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
 msgstr "Deschide cu:"
 
-#: plugin/actionlist.cpp:98
+#: actionlist.cpp:98
 #, kde-format
 msgid "Properties"
 msgstr "Proprietăți"
 
-#: plugin/actionlist.cpp:145
+#: actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
 msgstr "Adaugă la birou"
 
-#: plugin/actionlist.cpp:152
+#: actionlist.cpp:152
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "Fixează la gestionarul de sarcini"
 
-#: plugin/actionlist.cpp:156
+#: actionlist.cpp:156
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "Adaugă la panou (control grafic)"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
+#: actionlist.cpp:307 rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "Fișiere recente"
 
-#: plugin/actionlist.cpp:317
+#: actionlist.cpp:317
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "Uită fișierele recente"
 
-#: plugin/actionlist.cpp:382
+#: actionlist.cpp:382
 #, kde-format
 msgid "Edit Application…"
 msgstr "Modifică aplicația…"
 
-#: plugin/actionlist.cpp:414
+#: actionlist.cpp:414
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "Dezinstalează sau gestionează extensii…"
 
-#: plugin/appentry.cpp:328
+#: appentry.cpp:328
 #, kde-format
 msgid "Hide Application"
 msgstr "Ascunde aplicația"
 
-#: plugin/appentry.cpp:390
+#: appentry.cpp:390
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -77,223 +77,221 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:392
+#: appentry.cpp:392
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
-#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:165
-#: plugin/recentusagemodel.cpp:228
+#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "Aplicații"
 
-#: plugin/appsmodel.cpp:167
+#: appsmodel.cpp:167
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "Demaschează aplicațiile din acest submeniu"
 
-#: plugin/appsmodel.cpp:176
+#: appsmodel.cpp:176
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "Demaschează aplicațiile din „%1”"
 
-#: plugin/computermodel.cpp:91
+#: computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
 msgstr "Arată KRunner"
 
-#: plugin/computermodel.cpp:95
+#: computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "Caută, calculează, sau rulează o comandă"
 
-#: plugin/computermodel.cpp:148
+#: computermodel.cpp:148
 #, kde-format
 msgid "Computer"
 msgstr "Calculator"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:554 plugin/rootmodel.cpp:392
-#: plugin/simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "Favorite"
 
-#: plugin/recentusagemodel.cpp:163
+#: recentusagemodel.cpp:163
 #, kde-format
 msgid "Recently Used"
 msgstr "Utilizate recent"
 
-#: plugin/recentusagemodel.cpp:168 plugin/recentusagemodel.cpp:315
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:315
 #, kde-format
 msgid "Files"
 msgstr "Fișiere"
 
-#: plugin/recentusagemodel.cpp:250
+#: recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "Uită aplicația"
 
-#: plugin/recentusagemodel.cpp:313
+#: recentusagemodel.cpp:313
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:350
+#: recentusagemodel.cpp:350
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "Deschide dosarul conținător"
 
-#: plugin/recentusagemodel.cpp:353
+#: recentusagemodel.cpp:353
 #, kde-format
 msgid "Forget File"
 msgstr "Uită fișierul"
 
-#: plugin/recentusagemodel.cpp:490
+#: recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "Uită tot"
 
-#: plugin/recentusagemodel.cpp:492
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "Uită toate aplicațiile"
 
-#: plugin/recentusagemodel.cpp:495
+#: recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "Uită toate fișierele"
 
-#: plugin/rootmodel.cpp:92
+#: rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "Ascunde %1"
 
-#: plugin/rootmodel.cpp:374
+#: rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "Toate aplicațiile"
 
-#: plugin/rootmodel.cpp:386
+#: rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr "Aceasta nu ar trebui să fie vizibilă! Folosiți KICKER_FAVORITES_MODEL"
 
-#: plugin/rootmodel.cpp:399
+#: rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "Fișiere folosite des"
 
-#: plugin/rootmodel.cpp:408
+#: rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "Aplicații recente"
 
-#: plugin/rootmodel.cpp:408
+#: rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "Aplicații folosite des"
 
-#: plugin/rootmodel.cpp:423
+#: rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "Alimentare / Sesiune"
 
-#: plugin/runnermodel.cpp:222
+#: runnermodel.cpp:222
 #, kde-format
 msgid "Search results"
 msgstr "Rezultatele căutării"
 
-#: plugin/systementry.cpp:194
+#: systementry.cpp:194
 #, kde-format
 msgid "Lock"
 msgstr "Blocare"
 
-#: plugin/systementry.cpp:197
+#: systementry.cpp:197
 #, kde-format
 msgid "Log Out"
 msgstr "Ieșire din sistem"
 
-#: plugin/systementry.cpp:200 plugin/systementry.cpp:254
+#: systementry.cpp:200 systementry.cpp:254
 #, kde-format
 msgid "Save Session"
 msgstr "Salvează sesiunea"
 
-#: plugin/systementry.cpp:203
+#: systementry.cpp:203
 #, kde-format
 msgid "Switch User"
 msgstr "Schimbă utilizatorul"
 
-#: plugin/systementry.cpp:206
+#: systementry.cpp:206
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "Adormire"
 
-#: plugin/systementry.cpp:209
+#: systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
 msgstr "Hibernare"
 
-#: plugin/systementry.cpp:212
+#: systementry.cpp:212
 #, kde-format
 msgid "Restart"
 msgstr "Repornire"
 
-#: plugin/systementry.cpp:215
+#: systementry.cpp:215
 #, kde-format
 msgid "Shut Down"
 msgstr "Deconectare"
 
-#: plugin/systementry.cpp:231
+#: systementry.cpp:231
 #, kde-format
 msgid "Session"
 msgstr "Sesiune"
 
-#: plugin/systementry.cpp:236
+#: systementry.cpp:236
 #, kde-format
 msgid "System"
 msgstr "Sistem"
 
-#: plugin/systementry.cpp:248
+#: systementry.cpp:248
 #, kde-format
 msgid "Lock screen"
 msgstr "Blochează ecranul"
 
-#: plugin/systementry.cpp:251
+#: systementry.cpp:251
 #, kde-format
 msgid "End session"
 msgstr "Termină sesiunea"
 
-#: plugin/systementry.cpp:257
+#: systementry.cpp:257
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "Pornește o sesiune paralelă ca alt utilizator"
 
-#: plugin/systementry.cpp:260
+#: systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "Suspendă în RAM"
 
-#: plugin/systementry.cpp:263
+#: systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
 msgstr "Suspendă pe disc"
 
-#: plugin/systementry.cpp:266
+#: systementry.cpp:266
 #, kde-format
 msgid "Restart computer"
 msgstr "Repornește calculatorul"
 
-#: plugin/systementry.cpp:269
+#: systementry.cpp:269
 #, kde-format
 msgid "Turn off computer"
 msgstr "Deconectează calculatorul"
 
-#: plugin/systemmodel.cpp:31
+#: systemmodel.cpp:31
 #, kde-format
 msgid "System actions"
 msgstr "Acțiuni de sistem"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_kicker\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-03 00:42+0000\n"
+"POT-Creation-Date: 2025-04-19 00:43+0000\n"
 "PO-Revision-Date: 2022-06-17 23:47-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -19,58 +19,58 @@ msgstr ""
 "X-Text-Markup: kde4\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: plugin/actionlist.cpp:85
+#: actionlist.cpp:85
 #, kde-format
 msgid "Open with:"
 msgstr "以下のアプリケーションで開く:"
 
-#: plugin/actionlist.cpp:98
+#: actionlist.cpp:98
 #, kde-format
 msgid "Properties"
 msgstr "プロパティ"
 
-#: plugin/actionlist.cpp:145
+#: actionlist.cpp:145
 #, kde-format
 msgid "Add to Desktop"
 msgstr "デスクトップに追加"
 
-#: plugin/actionlist.cpp:152
+#: actionlist.cpp:152
 #, kde-format
 msgid "Pin to Task Manager"
 msgstr "タスクマネージャにピン留め"
 
-#: plugin/actionlist.cpp:156
+#: actionlist.cpp:156
 #, kde-format
 msgid "Add to Panel (Widget)"
 msgstr "パネル (ウィジェット) に追加"
 
-#: plugin/actionlist.cpp:307 plugin/rootmodel.cpp:399
+#: actionlist.cpp:307 rootmodel.cpp:399
 #, kde-format
 msgid "Recent Files"
 msgstr "最近使用したファイル"
 
-#: plugin/actionlist.cpp:317
+#: actionlist.cpp:317
 #, kde-format
 msgid "Forget Recent Files"
 msgstr "最近使用したファイルの履歴を消去"
 
-#: plugin/actionlist.cpp:382
+#: actionlist.cpp:382
 #, kde-format
 msgid "Edit Application…"
 msgstr "アプリケーションを編集…"
 
-#: plugin/actionlist.cpp:414
+#: actionlist.cpp:414
 #, kde-format
 msgctxt "@action opens a software center with the application"
 msgid "Uninstall or Manage Add-Ons…"
 msgstr "アドオンをアンインストールまたは管理する..."
 
-#: plugin/appentry.cpp:328
+#: appentry.cpp:328
 #, kde-format
 msgid "Hide Application"
 msgstr "アプリケーションを隠す"
 
-#: plugin/appentry.cpp:390
+#: appentry.cpp:390
 #, fuzzy, kde-format
 #| msgctxt "App name (Generic name)"
 #| msgid "%1 (%2)"
@@ -78,223 +78,221 @@ msgctxt "App name (Comment or Generic name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appentry.cpp:392
+#: appentry.cpp:392
 #, kde-format
 msgctxt "Generic name (App name)"
 msgid "%1 (%2)"
 msgstr "%1 (%2)"
 
-#: plugin/appsmodel.cpp:36 plugin/appsmodel.cpp:72 plugin/computermodel.cpp:97
-#: plugin/computermodel.cpp:225 plugin/recentusagemodel.cpp:165
-#: plugin/recentusagemodel.cpp:228
+#: appsmodel.cpp:36 appsmodel.cpp:72 computermodel.cpp:97 computermodel.cpp:225
+#: recentusagemodel.cpp:165 recentusagemodel.cpp:228
 #, kde-format
 msgid "Applications"
 msgstr "アプリケーション"
 
-#: plugin/appsmodel.cpp:167
+#: appsmodel.cpp:167
 #, kde-format
 msgid "Unhide Applications in this Submenu"
 msgstr "このサブメニューのアプリケーションを再表示"
 
-#: plugin/appsmodel.cpp:176
+#: appsmodel.cpp:176
 #, kde-format
 msgid "Unhide Applications in '%1'"
 msgstr "'%1' のアプリケーションを再表示"
 
-#: plugin/computermodel.cpp:91
+#: computermodel.cpp:91
 #, kde-format
 msgid "Show KRunner"
 msgstr "KRunner を表示"
 
-#: plugin/computermodel.cpp:95
+#: computermodel.cpp:95
 #, kde-format
 msgid "Search, calculate, or run a command"
 msgstr "検索や計算もしくはコマンドを実行"
 
-#: plugin/computermodel.cpp:148
+#: computermodel.cpp:148
 #, kde-format
 msgid "Computer"
 msgstr "コンピュータ"
 
 #. i18n.
-#: plugin/kastatsfavoritesmodel.cpp:554 plugin/rootmodel.cpp:392
-#: plugin/simplefavoritesmodel.cpp:33
+#: kastatsfavoritesmodel.cpp:554 rootmodel.cpp:392 simplefavoritesmodel.cpp:33
 #, kde-format
 msgid "Favorites"
 msgstr "お気に入り"
 
-#: plugin/recentusagemodel.cpp:163
+#: recentusagemodel.cpp:163
 #, kde-format
 msgid "Recently Used"
 msgstr "最近使用"
 
-#: plugin/recentusagemodel.cpp:168 plugin/recentusagemodel.cpp:315
+#: recentusagemodel.cpp:168 recentusagemodel.cpp:315
 #, kde-format
 msgid "Files"
 msgstr "ファイル"
 
-#: plugin/recentusagemodel.cpp:250
+#: recentusagemodel.cpp:250
 #, kde-format
 msgid "Forget Application"
 msgstr "アプリケーションを忘れる"
 
-#: plugin/recentusagemodel.cpp:313
+#: recentusagemodel.cpp:313
 #, kde-format
 msgid "Folders"
 msgstr ""
 
-#: plugin/recentusagemodel.cpp:350
+#: recentusagemodel.cpp:350
 #, kde-format
 msgid "Open Containing Folder"
 msgstr "保存フォルダを開く"
 
-#: plugin/recentusagemodel.cpp:353
+#: recentusagemodel.cpp:353
 #, kde-format
 msgid "Forget File"
 msgstr "ファイルを忘れる"
 
-#: plugin/recentusagemodel.cpp:490
+#: recentusagemodel.cpp:490
 #, kde-format
 msgid "Forget All"
 msgstr "すべて忘れる"
 
-#: plugin/recentusagemodel.cpp:492
+#: recentusagemodel.cpp:492
 #, kde-format
 msgid "Forget All Applications"
 msgstr "すべてのアプリケーションを忘れる"
 
-#: plugin/recentusagemodel.cpp:495
+#: recentusagemodel.cpp:495
 #, kde-format
 msgid "Forget All Files"
 msgstr "すべてのファイルを忘れる"
 
-#: plugin/rootmodel.cpp:92
+#: rootmodel.cpp:92
 #, kde-format
 msgid "Hide %1"
 msgstr "%1 を隠す"
 
-#: plugin/rootmodel.cpp:374
+#: rootmodel.cpp:374
 #, kde-format
 msgid "All Applications"
 msgstr "すべてのアプリケーション"
 
-#: plugin/rootmodel.cpp:386
+#: rootmodel.cpp:386
 #, kde-format
 msgid "This shouldn't be visible! Use KICKER_FAVORITES_MODEL"
 msgstr ""
 
-#: plugin/rootmodel.cpp:399
+#: rootmodel.cpp:399
 #, kde-format
 msgid "Often Used Files"
 msgstr "よく使用するファイル"
 
-#: plugin/rootmodel.cpp:408
+#: rootmodel.cpp:408
 #, kde-format
 msgid "Recent Applications"
 msgstr "最近使用したアプリケーション"
 
-#: plugin/rootmodel.cpp:408
+#: rootmodel.cpp:408
 #, kde-format
 msgid "Often Used Applications"
 msgstr "よく使用するアプリケーション"
 
-#: plugin/rootmodel.cpp:423
+#: rootmodel.cpp:423
 #, kde-format
 msgid "Power / Session"
 msgstr "電源/セッション"
 
-#: plugin/runnermodel.cpp:222
+#: runnermodel.cpp:222
 #, kde-format
 msgid "Search results"
 msgstr "検索結果"
 
-#: plugin/systementry.cpp:194
+#: systementry.cpp:194
 #, kde-format
 msgid "Lock"
 msgstr "ロック"
 
-#: plugin/systementry.cpp:197
+#: systementry.cpp:197
 #, kde-format
 msgid "Log Out"
 msgstr "ログアウト"
 
-#: plugin/systementry.cpp:200 plugin/systementry.cpp:254
+#: systementry.cpp:200 systementry.cpp:254
 #, kde-format
 msgid "Save Session"
 msgstr "セッションを保存"
 
-#: plugin/systementry.cpp:203
+#: systementry.cpp:203
 #, kde-format
 msgid "Switch User"
 msgstr "ユーザの切り替え"
 
-#: plugin/systementry.cpp:206
+#: systementry.cpp:206
 #, kde-format
 msgctxt "Suspend to RAM"
 msgid "Sleep"
 msgstr "スリープ"
 
-#: plugin/systementry.cpp:209
+#: systementry.cpp:209
 #, kde-format
 msgid "Hibernate"
 msgstr "ハイバネート"
 
-#: plugin/systementry.cpp:212
+#: systementry.cpp:212
 #, kde-format
 msgid "Restart"
 msgstr "再起動"
 
-#: plugin/systementry.cpp:215
+#: systementry.cpp:215
 #, kde-format
 msgid "Shut Down"
 msgstr "シャットダウン"
 
-#: plugin/systementry.cpp:231
+#: systementry.cpp:231
 #, kde-format
 msgid "Session"
 msgstr "セッション"
 
-#: plugin/systementry.cpp:236
+#: systementry.cpp:236
 #, kde-format
 msgid "System"
 msgstr "システム"
 
-#: plugin/systementry.cpp:248
+#: systementry.cpp:248
 #, kde-format
 msgid "Lock screen"
 msgstr "画面をロックする"
 
-#: plugin/systementry.cpp:251
+#: systementry.cpp:251
 #, kde-format
 msgid "End session"
 msgstr "セッションを終了する"
 
-#: plugin/systementry.cpp:257
+#: systementry.cpp:257
 #, kde-format
 msgid "Start a parallel session as a different user"
 msgstr "別のユーザとして並行するセッションを開始する"
 
-#: plugin/systementry.cpp:260
+#: systementry.cpp:260
 #, kde-format
 msgid "Suspend to RAM"
 msgstr "状態をメモリに保持して待機する"
 
-#: plugin/systementry.cpp:263
+#: systementry.cpp:263
 #, kde-format
 msgid "Suspend to disk"
 msgstr "状態をディスクに退避して待機する"
 
-#: plugin/systementry.cpp:266
+#: systementry.cpp:266
 #, kde-format
 msgid "Restart computer"
 msgstr "コンピュータを再起動する"
 
-#: plugin/systementry.cpp:269
+#: systementry.cpp:269
 #, kde-format
 msgid "Turn off computer"
 msgstr "コンピュータを停止する"
 
-#: plugin/systemmodel.cpp:31
+#: systemmodel.cpp:31
 #, kde-format
 msgid "System actions"
 msgstr "システムのアクション"

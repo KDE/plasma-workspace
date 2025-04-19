@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"POT-Creation-Date: 2025-04-19 00:43+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -28,32 +28,52 @@ msgstr "常规"
 msgid "Entries"
 msgstr "项目"
 
+#: package/contents/ui/ConfigEntries.qml:33
+#, kde-format
+msgid "Shown when relevant"
+msgstr "有作用时显示"
+
 #: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Always shown"
+msgstr "总是显示"
+
+#: package/contents/ui/ConfigEntries.qml:35
+#, kde-format
+msgid "Always hidden"
+msgstr "总是隐藏"
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Disabled"
+msgstr "已禁用"
+
+#: package/contents/ui/ConfigEntries.qml:46
 #, kde-format
 msgid "Application Status"
 msgstr "应用程序状态"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:48
 #, kde-format
 msgid "Communications"
 msgstr "通信"
 
-#: package/contents/ui/ConfigEntries.qml:38
+#: package/contents/ui/ConfigEntries.qml:50
 #, kde-format
 msgid "System Services"
 msgstr "系统服务"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:52
 #, kde-format
 msgid "Hardware Control"
 msgstr "硬件控制"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:55
 #, kde-format
 msgid "Miscellaneous"
 msgstr "其他"
 
-#: package/contents/ui/ConfigEntries.qml:67
+#: package/contents/ui/ConfigEntries.qml:79
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -68,49 +88,29 @@ msgstr ""
 "会导致它们工作异常。<nl/><nl/>使用此设置需自行承担风险，如果您遇到问题，请不"
 "要向 KDE 或应用程序作者报告。"
 
-#: package/contents/ui/ConfigEntries.qml:70
+#: package/contents/ui/ConfigEntries.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr "我明白上述风险"
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:113
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr "项目"
 
-#: package/contents/ui/ConfigEntries.qml:108
+#: package/contents/ui/ConfigEntries.qml:120
 #, kde-format
 msgid "Visibility"
 msgstr "可见性"
 
-#: package/contents/ui/ConfigEntries.qml:115
+#: package/contents/ui/ConfigEntries.qml:127
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr "键盘快捷键"
 
-#: package/contents/ui/ConfigEntries.qml:287
-#, kde-format
-msgid "Shown when relevant"
-msgstr "有作用时显示"
-
-#: package/contents/ui/ConfigEntries.qml:288
-#, kde-format
-msgid "Always shown"
-msgstr "总是显示"
-
-#: package/contents/ui/ConfigEntries.qml:289
-#, kde-format
-msgid "Always hidden"
-msgstr "总是隐藏"
-
-#: package/contents/ui/ConfigEntries.qml:290
-#, kde-format
-msgid "Disabled"
-msgstr "已禁用"
-
-#: package/contents/ui/ConfigEntries.qml:348
+#: package/contents/ui/ConfigEntries.qml:347
 #, kde-format
 msgid "Always show all entries"
 msgstr "总是显示所有项目"

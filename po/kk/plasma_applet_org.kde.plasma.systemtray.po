@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-25 00:43+0000\n"
+"POT-Creation-Date: 2025-04-19 00:43+0000\n"
 "PO-Revision-Date: 2013-11-16 03:48+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -27,33 +27,53 @@ msgstr ""
 msgid "Entries"
 msgstr ""
 
+#: package/contents/ui/ConfigEntries.qml:33
+#, kde-format
+msgid "Shown when relevant"
+msgstr ""
+
 #: package/contents/ui/ConfigEntries.qml:34
+#, kde-format
+msgid "Always shown"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:35
+#, kde-format
+msgid "Always hidden"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:36
+#, kde-format
+msgid "Disabled"
+msgstr ""
+
+#: package/contents/ui/ConfigEntries.qml:46
 #, kde-format
 msgid "Application Status"
 msgstr "Қолданбаның күй-жайы"
 
-#: package/contents/ui/ConfigEntries.qml:36
+#: package/contents/ui/ConfigEntries.qml:48
 #, kde-format
 msgid "Communications"
 msgstr "Байланыстар"
 
-#: package/contents/ui/ConfigEntries.qml:38
+#: package/contents/ui/ConfigEntries.qml:50
 #, kde-format
 msgid "System Services"
 msgstr "Жүйелік қызметтері"
 
-#: package/contents/ui/ConfigEntries.qml:40
+#: package/contents/ui/ConfigEntries.qml:52
 #, fuzzy, kde-format
 #| msgid "Hardware"
 msgid "Hardware Control"
 msgstr "Жабдық"
 
-#: package/contents/ui/ConfigEntries.qml:43
+#: package/contents/ui/ConfigEntries.qml:55
 #, kde-format
 msgid "Miscellaneous"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:67
+#: package/contents/ui/ConfigEntries.qml:79
 #, kde-kuit-format
 msgctxt "@info:usagetip"
 msgid ""
@@ -64,49 +84,29 @@ msgid ""
 "the app’s author."
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:70
+#: package/contents/ui/ConfigEntries.qml:82
 #, kde-format
 msgctxt "@action:button"
 msgid "I understand the risks"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:101
+#: package/contents/ui/ConfigEntries.qml:113
 #, kde-format
 msgctxt "Name of the system tray entry"
 msgid "Entry"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:108
+#: package/contents/ui/ConfigEntries.qml:120
 #, kde-format
 msgid "Visibility"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:115
+#: package/contents/ui/ConfigEntries.qml:127
 #, kde-format
 msgid "Keyboard Shortcut"
 msgstr ""
 
-#: package/contents/ui/ConfigEntries.qml:287
-#, kde-format
-msgid "Shown when relevant"
-msgstr ""
-
-#: package/contents/ui/ConfigEntries.qml:288
-#, kde-format
-msgid "Always shown"
-msgstr ""
-
-#: package/contents/ui/ConfigEntries.qml:289
-#, kde-format
-msgid "Always hidden"
-msgstr ""
-
-#: package/contents/ui/ConfigEntries.qml:290
-#, kde-format
-msgid "Disabled"
-msgstr ""
-
-#: package/contents/ui/ConfigEntries.qml:348
+#: package/contents/ui/ConfigEntries.qml:347
 #, kde-format
 msgid "Always show all entries"
 msgstr ""

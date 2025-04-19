@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the plasma-workspace package.
 #
-# SPDX-FileCopyrightText: 2023, 2024 gummi <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 gummi <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-24 00:43+0000\n"
-"PO-Revision-Date: 2024-12-18 21:05+0000\n"
+"PO-Revision-Date: 2025-04-18 13:07+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -298,12 +298,9 @@ msgid "Online Services"
 msgstr "Netþjónustur"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Kerfisupplýsingar"
+msgstr "Persónulegar upplýsingar"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -346,18 +343,13 @@ msgid "Running"
 msgstr "Í keyrslu"
 
 #: shellprivate/widgetexplorer.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Hægt að fjarlægja"
+msgstr "Uppsett af notanda"
 
 #: shellprivate/widgetexplorer.cpp:161
 #, kde-format
@@ -411,43 +403,45 @@ msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
 msgstr ""
+"Tímabeltið sem er valið er ekki tiltækt til að hægt sé að sýna það á þessu "
+"korti"
 
 #: timezoneselector/TimezoneSelector.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Auka aðdrátt"
 
 #: timezoneselector/TimezoneSelector.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Minnka aðdrátt"
 
 #: timezoneselector/TimezoneSelector.qml:230
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Svæði:"
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Velja…"
 
 #: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Svæðisval tímabeltis"
 
 #: timezoneselector/TimezoneSelector.qml:261
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Tímabelti:"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Staðarval tímabeltis"

@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # Sveinn í Felli <sv1@fellsnet.is>, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-12 00:44+0000\n"
-"PO-Revision-Date: 2024-12-13 21:16+0000\n"
+"PO-Revision-Date: 2025-04-18 11:07+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -97,18 +97,14 @@ msgid "Change Wallet Password?"
 msgstr "Breyta lykilorði veskis?"
 
 #: src/ui/ChangeWalletPassword.qml:29
-#, fuzzy, kde-format
-#| msgctxt "@info"
-#| msgid ""
-#| "Now that you have changed your login password, you may also want to "
-#| "change the password on your default KWallet to match it."
+#, kde-format
 msgctxt "@info"
 msgid ""
 "Now that you have changed your login password, consider changing the "
 "password on your default KWallet to match it."
 msgstr ""
-"Nú þegar þú hefur breytt lykilorðinu fyrir innskráningu, þá gætirðu viljað "
-"breyta einnig lykilorðinu að KWallet-veskinu til samræmis."
+"Nú þegar þú hefur breytt innskráningarrlykilorðinu þínu skaltu íhuga að "
+"breyta líka lykilorðinu að KWallet-veskinu til samræmis."
 
 #: src/ui/ChangeWalletPassword.qml:35
 #, kde-format

@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2010, 2022.
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Guðmundur Erlingsson <gudmundure@gmail.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Guðmundur Erlingsson <gudmundure@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-12 00:42+0000\n"
-"PO-Revision-Date: 2024-12-13 21:23+0000\n"
+"PO-Revision-Date: 2025-04-18 12:04+0000\n"
 "Last-Translator: Gummi <gudmundure@gmail.com>\n"
 "Language-Team: Icelandic <kde-i18n-doc@kde.org>\n"
 "Language: is\n"
@@ -271,12 +271,12 @@ msgstr "Senda"
 #: package/contents/ui/components/SpeedChart.qml:142
 #, kde-format
 msgid "Speed"
-msgstr ""
+msgstr "Hraði"
 
 #: package/contents/ui/components/SpeedChart.qml:192
 #, kde-format
 msgid "Average Speed"
-msgstr ""
+msgstr "Meðalhraði"
 
 #: package/contents/ui/components/SpeedChart.qml:249
 #, kde-format
@@ -376,7 +376,7 @@ msgstr "Skjáir eru speglaðir"
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
-msgstr ""
+msgstr "Skoða"
 
 #: package/contents/ui/FullRepresentation.qml:546
 #, kde-format
@@ -440,13 +440,11 @@ msgstr[0] "%1 ólesin tilkynning"
 msgstr[1] "%1 ólesnar tilkynningar"
 
 #: package/contents/ui/main.qml:91
-#, fuzzy, kde-format
-#| msgid "%1 unread notification"
-#| msgid_plural "%1 unread notifications"
+#, kde-format
 msgid "%1 active notification"
 msgid_plural "%1 active notifications"
-msgstr[0] "%1 ólesin tilkynning"
-msgstr[1] "%1 ólesnar tilkynningar"
+msgstr[0] "%1 virk tilkynning"
+msgstr[1] "%1 virkar tilkynningar"
 
 #: package/contents/ui/main.qml:104
 #, kde-format
@@ -461,7 +459,7 @@ msgstr "Stillingin 'Ekki ónáða' er virk. Miðjusmelltu til að hætta"
 #: package/contents/ui/main.qml:113
 #, kde-format
 msgid "Middle-click to enter do not disturb mode"
-msgstr "Miðjusmelltu til að virkja sniðið 'Ekki ónáða'"
+msgstr "Miðjusmelltu til að stilla á 'Ekki ónáða'"
 
 #: package/contents/ui/main.qml:235
 #, kde-format
