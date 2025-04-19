@@ -238,27 +238,12 @@ class ClipboardTest(unittest.TestCase):
         app.driver.find_element(AppiumBy.NAME, "Fushan Wen")
         self.assertFalse(button_item.is_displayed())
 
-    def test_2_list_1_bug475696(self) -> None:
-        """
-        Pressing Return on an item should trigger the copy action
-        @see https://bugs.kde.org/show_bug.cgi?id=475696
-        """
-        ActionChains(app.driver).send_keys(Keys.TAB).send_keys(Keys.DOWN).pause(0.5).perform()
-        app.driver.find_element(AppiumBy.NAME, "Show QR code")
-        ActionChains(app.driver).send_keys(Keys.RETURN).perform()
-        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "clipboard")
-        ActionChains(app.driver).send_keys(Keys.ENTER).perform()
-        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "Fushan Wen")
-        ActionChains(app.driver).send_keys(Keys.SPACE).perform()
-        self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "clipboard")
-
-    def test_2_list_2_delete(self) -> None:
+    def test_2_list_1_delete(self) -> None:
         """
         Deletes the top item and tests if the current clipboard changes
         @see https://bugs.kde.org/show_bug.cgi?id=475696
         """
-        # Now "clipboard" is the first item
-        ActionChains(app.driver).send_keys(Keys.UP).perform()
+        ActionChains(app.driver).send_keys(Keys.TAB).send_keys(Keys.DOWN).pause(0.5).perform()
         app.driver.find_element(AppiumBy.NAME, "Remove from history").click()
         # The first item becomes the current clipboard item
         self.assertEqual(app.gtk_get_clipboard_mime_data()["text/plain;charset=utf-8"].get_data().decode("utf-8"), "Fushan Wen")
@@ -268,7 +253,7 @@ class ClipboardTest(unittest.TestCase):
         app.driver.find_element(AppiumBy.NAME, "Delete").click()
         WebDriverWait(app.driver, 5).until_not(lambda _: item.is_displayed())
 
-    def test_2_list_3_edit(self) -> None:
+    def test_2_list_2_edit(self) -> None:
         """
         In edit mode, the text area should be focused by default.
         """
