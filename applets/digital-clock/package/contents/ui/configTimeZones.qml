@@ -222,7 +222,7 @@ Kirigami.PageRow {
                 Layout.fillWidth: true
                 leftPadding: Application.layoutDirection === Qt.LeftToRight ? enableWheelCheckBox.spacing : Kirigami.Units.largeSpacing * 2
                 rightPadding: Application.layoutDirection === Qt.LeftToRight ? Kirigami.Units.largeSpacing * 2 : enableWheelCheckBox.spacing
-                text: i18n("Tip: if you travel frequently, add your home time zone to this list. It will only appear when you change the systemwide time zone to something else.")
+                text: i18nc("@info:usagetip shown below listview", "Tip: Add your home time zone to this list to see the time there even when you're traveling. It will not be shown twice while at home.")
                 font: Kirigami.Theme.smallFont
                 textFormat: Text.PlainText
                 wrapMode: Text.Wrap
