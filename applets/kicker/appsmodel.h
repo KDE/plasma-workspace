@@ -116,6 +116,7 @@ protected Q_SLOTS:
 
 protected:
     void refreshInternal();
+    void refreshNewlyInstalledEntry(AppEntry *entry);
     void sortEntries(QList<AbstractEntry *> &entryList);
 
     bool m_complete;

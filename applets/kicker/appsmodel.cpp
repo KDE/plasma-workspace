@@ -15,7 +15,9 @@
 #include <QQmlPropertyMap>
 #include <QTimer>
 
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <KSycoca>
 #include <chrono>
 
@@ -182,6 +184,8 @@ QVariant AppsModel::data(const QModelIndex &index, int role) const
         return actionList;
     } else if (role == Kicker::GroupRole) {
         return entry->group();
+    } else if (role == Kicker::IsNewlyInstalledRole) {
+        return entry->isNewlyInstalled();
     }
 
     return QVariant();
@@ -290,6 +294,16 @@ bool AppsModel::trigger(int row, const QString &actionId, const QVariant &argume
         }
 
         return false;
+    } else if (entry->type() == AbstractEntry::RunnableType && (actionId.isEmpty() || actionId == QLatin1String("_kicker_jumpListAction"))) {
+        if (entry->firstSeen().isValid()) {
+            auto *appEntry = static_cast<AppEntry *>(entry);
+            appEntry->setFirstSeen(QDate());
+            refreshNewlyInstalledEntry(appEntry);
+
+            auto stateConfig = Kicker::stateConfig();
+            KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
+            applicationsGroup.deleteGroup(appEntry->id());
+        }
     }
 
     return entry->run(actionId, argument);
@@ -635,6 +649,19 @@ void AppsModel::refreshSectionList()
     }
 
     Q_EMIT sectionsChanged();
+}
+
+void AppsModel::refreshNewlyInstalledEntry(AppEntry *entry)
+{
+    const QVector<int> roles{Kicker::IsNewlyInstalledRole};
+    entryChanged(entry, roles);
+    // Signal the parent model(s). Could be optimized...
+    // Cannot use entryChanged since we might be the RootModel but we need to update the effective model hierarchy.
+    AbstractModel *model = entry->owner();
+    while (model) {
+        Q_EMIT model->dataChanged(model->index(0, 0), model->index(model->rowCount() - 1, 0), roles);
+        model = qobject_cast<AbstractModel *>(model->parent());
+    }
 }
 
 void AppsModel::processServiceGroup(KServiceGroup::Ptr group)

@@ -118,6 +118,8 @@ QString groupName(const QString &name)
 #endif
     return name.left(1);
 }
+
+static constexpr int s_newlyInstalledDays = 3; // how many days an app counts as newly installed
 }
 
 AppEntry::AppEntry(AbstractModel *owner, KService::Ptr service, NameFormat nameFormat)
@@ -268,6 +270,21 @@ QString AppEntry::menuId() const
 QUrl AppEntry::url() const
 {
     return QUrl::fromLocalFile(m_service->entryPath());
+}
+
+QDate AppEntry::firstSeen() const
+{
+    return m_firstSeen;
+}
+
+void AppEntry::setFirstSeen(const QDate &firstSeen)
+{
+    m_firstSeen = firstSeen;
+}
+
+bool AppEntry::isNewlyInstalled() const
+{
+    return m_firstSeen.isValid() && m_firstSeen.daysTo(QDate::currentDate()) < s_newlyInstalledDays;
 }
 
 bool AppEntry::hasActions() const
@@ -444,6 +461,19 @@ QString AppGroupEntry::icon() const
 QString AppGroupEntry::name() const
 {
     return m_group->caption();
+}
+
+bool AppGroupEntry::isNewlyInstalled() const
+{
+    if (m_childModel) {
+        for (int i = 0; i < m_childModel->count(); ++i) {
+            auto *entry = static_cast<AbstractEntry *>(m_childModel->index(i, 0).internalPointer());
+            if (entry && entry->isNewlyInstalled()) {
+                return true;
+            }
+        }
+    }
+    return false;
 }
 
 bool AppGroupEntry::hasChildren() const

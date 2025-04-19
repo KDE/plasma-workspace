@@ -6,13 +6,21 @@
 
 #include "rootmodel.h"
 #include "actionlist.h"
+#include "debug.h"
 #include "kastatsfavoritesmodel.h"
 #include "recentusagemodel.h"
 #include "systemmodel.h"
 
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 
 #include <QCollator>
+#include <QTimer>
+
+#include <chrono>
+
+using namespace std::literals::chrono_literals;
 
 GroupEntry::GroupEntry(AppsModel *parentModel, const QString &name, const QString &iconName, AbstractModel *childModel)
     : AbstractGroupEntry(parentModel)
@@ -39,6 +47,19 @@ QString GroupEntry::icon() const
     return m_iconName;
 }
 
+bool GroupEntry::isNewlyInstalled() const
+{
+    if (m_childModel) {
+        for (int i = 0; i < m_childModel->count(); ++i) {
+            auto *entry = static_cast<AbstractEntry *>(m_childModel->index(i, 0).internalPointer());
+            if (entry && entry->isNewlyInstalled()) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+
 bool GroupEntry::hasChildren() const
 {
     return m_childModel && m_childModel->count() > 0;
@@ -47,6 +68,18 @@ bool GroupEntry::hasChildren() const
 AbstractModel *GroupEntry::childModel() const
 {
     return m_childModel;
+}
+
+AllAppsGroupEntry::AllAppsGroupEntry(AppsModel *parentModel, AbstractModel *childModel)
+    : GroupEntry(parentModel, i18n("All Applications"), QStringLiteral("applications-all-symbolic"), childModel)
+{
+}
+
+bool AllAppsGroupEntry::isNewlyInstalled() const
+{
+    // The highlight is for the user to find the app in the hierarchy,
+    // there's no point in additionally highlighting the "all apps" category.
+    return false;
 }
 
 RootModel::RootModel(QObject *parent)
@@ -60,6 +93,8 @@ RootModel::RootModel(QObject *parent)
     , m_recentOrdering(RecentUsageModel::Recent)
     , m_showPowerSession(true)
     , m_showFavoritesPlaceholder(false)
+    , m_highlightNewlyInstalledApps(false)
+    , m_refreshNewlyInstalledAppsTimer(nullptr)
     , m_recentAppsModel(nullptr)
     , m_recentDocsModel(nullptr)
 {
@@ -236,6 +271,22 @@ void RootModel::setShowFavoritesPlaceholder(bool show)
     }
 }
 
+bool RootModel::highlightNewlyInstalledApps() const
+{
+    return m_highlightNewlyInstalledApps;
+}
+
+void RootModel::setHighlightNewlyInstalledApps(bool highlight)
+{
+    if (highlight != m_highlightNewlyInstalledApps) {
+        m_highlightNewlyInstalledApps = highlight;
+
+        refresh();
+
+        Q_EMIT highlightNewlyInstalledAppsChanged();
+    }
+}
+
 AbstractModel *RootModel::favoritesModel()
 {
     return m_favorites;
@@ -368,10 +419,86 @@ void RootModel::refresh()
         allModel->setDescription(QStringLiteral("KICKER_ALL_MODEL")); // Intentionally no i18n.
     }
 
+    bool hasNewlyInstalledApp = false;
+    if (m_highlightNewlyInstalledApps) {
+        const QDate today = QDate::currentDate();
+
+        auto stateConfig = Kicker::stateConfig();
+        const QStringList storedInstalledApps = stateConfig->group(QString()).readEntry(QStringLiteral("InstalledApps"), QStringList());
+
+        KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
+
+        QStringList installedApps;
+
+        std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
+            if (entry->type() == AbstractEntry::RunnableType) {
+                AppEntry *appEntry = static_cast<AppEntry *>(entry);
+
+                const QString appId = appEntry->id();
+                installedApps.append(appId);
+
+                QDate firstSeen;
+
+                // If stored list is empty, initial survey, everything is known.
+                KConfigGroup group = applicationsGroup.group(appId);
+                if (!storedInstalledApps.isEmpty() && !storedInstalledApps.contains(appId)) {
+                    qCDebug(KICKER_DEBUG) << appId << "appears to be newly installed";
+                    group.writeEntry(QStringLiteral("FirstSeen"), today);
+                    firstSeen = today;
+                } else {
+                    firstSeen = group.readEntry(QStringLiteral("FirstSeen"), QDate());
+                }
+
+                appEntry->setFirstSeen(firstSeen);
+                if (appEntry->isNewlyInstalled()) {
+                    hasNewlyInstalledApp = true;
+                } else {
+                    applicationsGroup.deleteGroup(appId);
+                }
+            } else if (entry->type() == AbstractEntry::GroupType) {
+                GroupEntry *groupEntry = static_cast<GroupEntry *>(entry);
+                if (AbstractModel *model = groupEntry->childModel()) {
+                    for (int i = 0; i < model->count(); ++i) {
+                        processEntry(static_cast<AbstractEntry *>(model->index(i, 0).internalPointer()));
+                    }
+                }
+            }
+        };
+
+        for (AbstractEntry *entry : std::as_const(m_entryList)) {
+            processEntry(entry);
+        }
+
+        stateConfig->group(QString()).writeEntry(QStringLiteral("InstalledApps"), installedApps);
+
+        // Clear apps that have been uninstalled before the highlight period was over.
+        const QStringList newlyInstalledApps = applicationsGroup.groupList();
+        for (const QString &appId : newlyInstalledApps) {
+            if (!installedApps.contains(appId)) {
+                applicationsGroup.deleteGroup(appId);
+            }
+        }
+    }
+
+    if (hasNewlyInstalledApp) {
+        if (!m_refreshNewlyInstalledAppsTimer) {
+            m_refreshNewlyInstalledAppsTimer = new QTimer(this);
+            m_refreshNewlyInstalledAppsTimer->setInterval(24h);
+            m_refreshNewlyInstalledAppsTimer->callOnTimeout(this, &RootModel::refreshNewlyInstalledApps);
+        }
+        if (!m_refreshNewlyInstalledAppsTimer->isActive()) {
+            qCDebug(KICKER_DEBUG) << "Starting periodic newly installed apps check";
+            m_refreshNewlyInstalledAppsTimer->start();
+        }
+    } else if (m_refreshNewlyInstalledAppsTimer) {
+        qCDebug(KICKER_DEBUG) << "Stopping periodic newly installed apps check";
+        m_refreshNewlyInstalledAppsTimer->stop();
+    }
+
     int separatorPosition = 0;
 
     if (allModel) {
-        m_entryList.prepend(new GroupEntry(this, i18n("All Applications"), QStringLiteral("applications-all-symbolic"), allModel));
+        m_entryList.prepend(new AllAppsGroupEntry(this, allModel));
         ++separatorPosition;
     }
 
@@ -432,6 +559,51 @@ void RootModel::refresh()
     Q_EMIT separatorCountChanged();
 
     Q_EMIT refreshed();
+}
+
+void RootModel::refreshNewlyInstalledApps()
+{
+    qCDebug(KICKER_DEBUG) << "Refreshing newly installed apps";
+    Q_ASSERT(m_highlightNewlyInstalledApps);
+
+    KSharedConfig::Ptr stateConfig = Kicker::stateConfig();
+    KConfigGroup applicationsGroup = stateConfig->group(QStringLiteral("Application"));
+
+    bool hasNewlyInstalledApp = false;
+
+    std::function<void(AbstractEntry *)> processEntry = [&](AbstractEntry *entry) {
+        if (entry->type() == AbstractEntry::RunnableType) {
+            AppEntry *appEntry = static_cast<AppEntry *>(entry);
+
+            if (appEntry->isNewlyInstalled()) {
+                hasNewlyInstalledApp = true;
+            } else if (appEntry->firstSeen().isValid()) {
+                qCDebug(KICKER_DEBUG) << appEntry->id() << "is no longer considered newly installed";
+                appEntry->setFirstSeen(QDate());
+                applicationsGroup.deleteGroup(appEntry->id());
+
+                refreshNewlyInstalledEntry(appEntry);
+            }
+        } else if (entry->type() == AbstractEntry::GroupType) {
+            GroupEntry *groupEntry = static_cast<GroupEntry *>(entry);
+            if (AbstractModel *model = groupEntry->childModel()) {
+                for (int i = 0; i < model->count(); ++i) {
+                    if (auto *entry = static_cast<AbstractEntry *>(model->index(i, 0).internalPointer())) {
+                        processEntry(entry);
+                    }
+                }
+            }
+        }
+    };
+
+    for (AbstractEntry *entry : std::as_const(m_entryList)) {
+        processEntry(entry);
+    }
+
+    if (!hasNewlyInstalledApp) {
+        qCDebug(KICKER_DEBUG) << "Stopping periodic newly installed apps check";
+        m_refreshNewlyInstalledAppsTimer->stop();
+    }
 }
 
 #include "moc_rootmodel.cpp"

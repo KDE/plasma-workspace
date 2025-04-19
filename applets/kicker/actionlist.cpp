@@ -41,6 +41,12 @@ using namespace KAStats::Terms;
 
 namespace Kicker
 {
+
+KSharedConfig::Ptr stateConfig()
+{
+    return KSharedConfig::openStateConfig(QStringLiteral("kickerstaterc"));
+}
+
 QVariantMap createActionItem(const QString &label, const QString &icon, const QString &actionId, const QVariant &argument)
 {
     QVariantMap map;

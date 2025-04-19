@@ -62,6 +62,16 @@ QUrl AbstractEntry::url() const
     return QUrl();
 }
 
+QDate AbstractEntry::firstSeen() const
+{
+    return QDate();
+}
+
+bool AbstractEntry::isNewlyInstalled() const
+{
+    return false;
+}
+
 bool AbstractEntry::hasChildren() const
 {
     return false;

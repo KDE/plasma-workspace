@@ -22,6 +22,8 @@ public:
     QString icon() const override;
     QString name() const override;
 
+    bool isNewlyInstalled() const override;
+
     bool hasChildren() const override;
     AbstractModel *childModel() const override;
 
@@ -29,6 +31,14 @@ private:
     QString m_name;
     QString m_iconName;
     QPointer<AbstractModel> m_childModel;
+};
+
+class AllAppsGroupEntry : public GroupEntry
+{
+public:
+    AllAppsGroupEntry(AppsModel *parentModel, AbstractModel *childModel);
+
+    bool isNewlyInstalled() const override;
 };
 
 class RootModel : public AppsModel
@@ -44,6 +54,7 @@ class RootModel : public AppsModel
     Q_PROPERTY(int recentOrdering READ recentOrdering WRITE setRecentOrdering NOTIFY recentOrderingChanged)
     Q_PROPERTY(bool showPowerSession READ showPowerSession WRITE setShowPowerSession NOTIFY showPowerSessionChanged)
     Q_PROPERTY(bool showFavoritesPlaceholder READ showFavoritesPlaceholder WRITE setShowFavoritesPlaceholder NOTIFY showFavoritesPlaceholderChanged)
+    Q_PROPERTY(bool highlightNewlyInstalledApps READ highlightNewlyInstalledApps WRITE setHighlightNewlyInstalledApps NOTIFY highlightNewlyInstalledAppsChanged)
 
 public:
     explicit RootModel(QObject *parent = nullptr);
@@ -74,6 +85,9 @@ public:
     bool showFavoritesPlaceholder() const;
     void setShowFavoritesPlaceholder(bool show);
 
+    bool highlightNewlyInstalledApps() const;
+    void setHighlightNewlyInstalledApps(bool highlight);
+
     AbstractModel *favoritesModel() override;
     AbstractModel *systemFavoritesModel();
 
@@ -88,11 +102,14 @@ Q_SIGNALS:
     void recentOrderingChanged() const;
     void recentAppsModelChanged() const;
     void showFavoritesPlaceholderChanged() const;
+    void highlightNewlyInstalledAppsChanged() const;
 
 protected Q_SLOTS:
     void refresh() override;
 
 private:
+    void refreshNewlyInstalledApps();
+
     KAStatsFavoritesModel *m_favorites;
     SystemModel *m_systemModel;
 
@@ -103,6 +120,9 @@ private:
     int m_recentOrdering;
     bool m_showPowerSession;
     bool m_showFavoritesPlaceholder;
+
+    bool m_highlightNewlyInstalledApps;
+    QTimer *m_refreshNewlyInstalledAppsTimer;
 
     RecentUsageModel *m_recentAppsModel;
     RecentUsageModel *m_recentDocsModel;

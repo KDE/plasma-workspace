@@ -9,6 +9,7 @@
 
 #include "abstractmodel.h"
 
+#include <QDate>
 #include <QUrl>
 
 class AbstractEntry
@@ -37,6 +38,9 @@ public:
 
     virtual QString id() const;
     virtual QUrl url() const;
+
+    virtual QDate firstSeen() const;
+    virtual bool isNewlyInstalled() const;
 
     virtual bool hasChildren() const;
     virtual AbstractModel *childModel() const;

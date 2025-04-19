@@ -10,6 +10,7 @@
 #include <QVariant>
 
 #include <KService>
+#include <KSharedConfig>
 
 class KFileItem;
 
@@ -30,8 +31,11 @@ enum {
     IsMultilineTextRole,
     DisplayWrappedRole,
     CompactNameRole,
-    CompactNameWrappedRole
+    CompactNameWrappedRole,
+    IsNewlyInstalledRole,
 };
+
+KSharedConfig::Ptr stateConfig();
 
 QVariantMap createActionItem(const QString &label, const QString &icon, const QString &actionId, const QVariant &argument = QVariant());
 

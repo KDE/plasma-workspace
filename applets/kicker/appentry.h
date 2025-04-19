@@ -47,6 +47,11 @@ public:
     QString id() const override;
     QUrl url() const override;
 
+    QDate firstSeen() const override;
+    void setFirstSeen(const QDate &firstSeen);
+
+    bool isNewlyInstalled() const override;
+
     bool hasActions() const override;
     QVariantList actions() const override;
 
@@ -67,6 +72,7 @@ private:
     QString m_name;
     QString m_compactName;
     QString m_description;
+    QDate m_firstSeen;
     // Not an actual group name, but the first character for transliterated name.
     mutable QString m_group;
     mutable QString m_icon;
@@ -81,6 +87,7 @@ public:
 
     QString icon() const override;
     QString name() const override;
+    bool isNewlyInstalled() const override;
 
     bool hasChildren() const override;
     AbstractModel *childModel() const override;
