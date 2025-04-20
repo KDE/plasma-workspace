@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-11 00:43+0000\n"
+"POT-Creation-Date: 2025-04-20 00:43+0000\n"
 "PO-Revision-Date: 2024-09-19 16:56+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -963,7 +963,7 @@ msgstr ""
 "Εάν έχει επιλεγεί ένα όνομα αρχείου ή μια διεύθυνση URL, συμπεριλάβετε στο "
 "αναδυόμενο μενού εφαρμογές που μπορούν να δεχτούν τον τύπο MIME."
 
-#: klipperpopup.cpp:33
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Αναδυόμενο μενού πρόχειρου"

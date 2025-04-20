@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-11 00:43+0000\n"
+"POT-Creation-Date: 2025-04-20 00:43+0000\n"
 "PO-Revision-Date: 2024-12-24 19:10+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -915,7 +915,7 @@ msgstr ""
 "파일 이름이나 URL을 선택했을 때 동작 팝업에 해당 MIME 형식을 처리할 수 있는 "
 "앱을 표시합니다."
 
-#: klipperpopup.cpp:33
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "클립보드 팝업"

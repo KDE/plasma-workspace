@@ -20,7 +20,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: klipper\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-11 00:43+0000\n"
+"POT-Creation-Date: 2025-04-20 00:43+0000\n"
 "PO-Revision-Date: 2025-01-19 13:39+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -955,7 +955,7 @@ msgstr ""
 "Se se selecciona un nome de ficheiro ou URL, incluír no menú emerxente as "
 "aplicacións que aceptan o seu tipo MIME."
 
-#: klipperpopup.cpp:33
+#: klipperpopup.cpp:36
 #, kde-format
 msgid "Clipboard Popup"
 msgstr "Xanela emerxente do portapapeis"
