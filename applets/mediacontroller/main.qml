@@ -10,7 +10,7 @@ import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.core as PlasmaCore
-import org.kde.plasma.private.mediacontroller 1.0
+import plasma.applet.org.kde.plasma.mediacontroller
 import org.kde.plasma.private.mpris as Mpris
 import org.kde.kirigami 2 as Kirigami
 

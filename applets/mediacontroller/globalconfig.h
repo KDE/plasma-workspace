@@ -8,11 +8,14 @@
 
 #include <KConfigWatcher>
 #include <KSharedConfig>
+
 #include <QObject>
+#include <qqmlregistration.h>
 
 class GlobalConfig : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(int volumeStep READ volumeStep NOTIFY volumeStepChanged)
 

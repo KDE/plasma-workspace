@@ -111,7 +111,6 @@
             "desktop"
         ],
         "Icon": "applications-multimedia",
-        "Id": "org.kde.plasma.mediacontroller",
         "License": "GPL-2.0+",
         "Name": "Media Player",
         "Name[ar]": "مشغّل وسائط",
