@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:44+0000\n"
+"POT-Creation-Date: 2025-04-21 00:43+0000\n"
 "PO-Revision-Date: 2025-04-18 21:32+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -30,81 +30,81 @@ msgstr "بدون عنوان"
 msgid "No media playing"
 msgstr "لا وسائط تعمل"
 
-#: package/contents/ui/ExpandedRepresentation.qml:385
-#: package/contents/ui/ExpandedRepresentation.qml:541
+#: package/contents/ui/ExpandedRepresentation.qml:402
+#: package/contents/ui/ExpandedRepresentation.qml:558
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/ExpandedRepresentation.qml:579
 #, kde-format
 msgid "Playback rate %1"
 msgstr "معدل التشغيل %1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:565
+#: package/contents/ui/ExpandedRepresentation.qml:582
 #, kde-format
 msgctxt "Playback rate"
 msgid "%1x"
 msgstr "%1×"
 
-#: package/contents/ui/ExpandedRepresentation.qml:569
+#: package/contents/ui/ExpandedRepresentation.qml:586
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
 msgstr "معدل التشغيل"
 
-#: package/contents/ui/ExpandedRepresentation.qml:615
+#: package/contents/ui/ExpandedRepresentation.qml:632
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
 msgstr "%1 (عادي)"
 
-#: package/contents/ui/ExpandedRepresentation.qml:654
+#: package/contents/ui/ExpandedRepresentation.qml:671
 #, kde-format
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "اخلط"
 
-#: package/contents/ui/ExpandedRepresentation.qml:678
+#: package/contents/ui/ExpandedRepresentation.qml:695
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "المقطوعة السّابقة"
 
-#: package/contents/ui/ExpandedRepresentation.qml:700
+#: package/contents/ui/ExpandedRepresentation.qml:717
 #: package/contents/ui/main.qml:122
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "ألبث"
 
-#: package/contents/ui/ExpandedRepresentation.qml:700
+#: package/contents/ui/ExpandedRepresentation.qml:717
 #: package/contents/ui/main.qml:130
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "شغّل"
 
-#: package/contents/ui/ExpandedRepresentation.qml:718
+#: package/contents/ui/ExpandedRepresentation.qml:735
 #: package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "المقطوعة التّالية"
 
-#: package/contents/ui/ExpandedRepresentation.qml:741
+#: package/contents/ui/ExpandedRepresentation.qml:758
 #, kde-format
 msgid "Repeat Track"
 msgstr "كرر المقطوعة"
 
-#: package/contents/ui/ExpandedRepresentation.qml:741
+#: package/contents/ui/ExpandedRepresentation.qml:758
 #, kde-format
 msgid "Repeat"
 msgstr "كرّر"
 
-#: package/contents/ui/ExpandedRepresentation.qml:798
+#: package/contents/ui/ExpandedRepresentation.qml:828
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose player automatically"

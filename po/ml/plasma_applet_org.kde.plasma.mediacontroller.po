@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-29 00:44+0000\n"
+"POT-Creation-Date: 2025-04-21 00:43+0000\n"
 "PO-Revision-Date: 2021-02-18 13:23+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -30,19 +30,19 @@ msgstr ""
 msgid "No media playing"
 msgstr "മീഡിയ പ്ലേ ചെയ്യുന്നില്ല"
 
-#: package/contents/ui/ExpandedRepresentation.qml:385
-#: package/contents/ui/ExpandedRepresentation.qml:541
+#: package/contents/ui/ExpandedRepresentation.qml:402
+#: package/contents/ui/ExpandedRepresentation.qml:558
 #, kde-format
 msgctxt "Remaining time for song e.g -5:42"
 msgid "-%1"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:562
+#: package/contents/ui/ExpandedRepresentation.qml:579
 #, kde-format
 msgid "Playback rate %1"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:565
+#: package/contents/ui/ExpandedRepresentation.qml:582
 #, fuzzy, kde-format
 #| msgctxt "Remaining time for song e.g -5:42"
 #| msgid "-%1"
@@ -50,64 +50,64 @@ msgctxt "Playback rate"
 msgid "%1x"
 msgstr "-%1"
 
-#: package/contents/ui/ExpandedRepresentation.qml:569
+#: package/contents/ui/ExpandedRepresentation.qml:586
 #, kde-format
 msgctxt "@info:tooltip"
 msgid "Playback rate"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:615
+#: package/contents/ui/ExpandedRepresentation.qml:632
 #, kde-format
 msgctxt "@action:inmenu Playback speed (Normal)"
 msgid "%1 (Normal)"
 msgstr ""
 
-#: package/contents/ui/ExpandedRepresentation.qml:654
+#: package/contents/ui/ExpandedRepresentation.qml:671
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgctxt "@action:button"
 msgid "Shuffle"
 msgstr "കലർത്തുക"
 
-#: package/contents/ui/ExpandedRepresentation.qml:678
+#: package/contents/ui/ExpandedRepresentation.qml:695
 #: package/contents/ui/main.qml:114
 #, kde-format
 msgctxt "Play previous track"
 msgid "Previous Track"
 msgstr "മുൻപത്തെ ട്രാക്ക്"
 
-#: package/contents/ui/ExpandedRepresentation.qml:700
+#: package/contents/ui/ExpandedRepresentation.qml:717
 #: package/contents/ui/main.qml:122
 #, kde-format
 msgctxt "Pause playback"
 msgid "Pause"
 msgstr "താത്കാലികമായി നിർത്തുക"
 
-#: package/contents/ui/ExpandedRepresentation.qml:700
+#: package/contents/ui/ExpandedRepresentation.qml:717
 #: package/contents/ui/main.qml:130
 #, kde-format
 msgctxt "Start playback"
 msgid "Play"
 msgstr "പ്ലേ"
 
-#: package/contents/ui/ExpandedRepresentation.qml:718
+#: package/contents/ui/ExpandedRepresentation.qml:735
 #: package/contents/ui/main.qml:138
 #, kde-format
 msgctxt "Play next track"
 msgid "Next Track"
 msgstr "അടുത്ത ട്രാക്ക്"
 
-#: package/contents/ui/ExpandedRepresentation.qml:741
+#: package/contents/ui/ExpandedRepresentation.qml:758
 #, kde-format
 msgid "Repeat Track"
 msgstr "ട്രാക്ക് ആവർത്തിക്കുക"
 
-#: package/contents/ui/ExpandedRepresentation.qml:741
+#: package/contents/ui/ExpandedRepresentation.qml:758
 #, kde-format
 msgid "Repeat"
 msgstr "ആവർത്തിക്കുക"
 
-#: package/contents/ui/ExpandedRepresentation.qml:798
+#: package/contents/ui/ExpandedRepresentation.qml:828
 #, fuzzy, kde-format
 #| msgid "Choose player automatically"
 msgctxt "@action:button"
