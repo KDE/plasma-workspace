@@ -35,7 +35,7 @@ public:
 
     std::unique_ptr<EventPluginsModel> model;
     // These pointers are owned and managed by QPluginLoader internals and deleted once all consumers unload.
-    QList<CalendarEvents::CalendarEventsPlugin *> plugins;
+    QMap<QString, CalendarEvents::CalendarEventsPlugin *> plugins;
     QMap<QString, PluginData> availablePlugins;
     QStringList enabledPlugins;
 };
@@ -181,12 +181,12 @@ void EventPluginsManager::setEnabledPlugins(QStringList &pluginsList)
     // and unload those plugins that are not in the pluginsList
     auto i = d->plugins.begin();
     while (i != d->plugins.end()) {
-        const QString pluginId = (*i)->property("pluginId").toString();
+        const QString pluginId = i.key();
         if (pluginsList.contains(pluginId)) {
             pluginsList.removeAll(pluginId);
             ++i;
         } else {
-            (*i)->deleteLater();
+            i.value()->deleteLater();
             i = d->plugins.erase(i);
         }
     }
@@ -210,8 +210,7 @@ void EventPluginsManager::loadPlugin(const QString &pluginId)
     QPluginLoader loader(QString(u"plasmacalendarplugins/" + QDir::cleanPath(pluginId)));
     if (auto eventsPlugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(loader.instance())) {
         qCDebug(COMPONENTS::CALENDAR) << "Loading Calendar plugin" << eventsPlugin;
-        eventsPlugin->setProperty("pluginId", pluginId);
-        d->plugins << eventsPlugin;
+        d->plugins.insert(pluginId, eventsPlugin);
 
         // Connect the relay signals
         connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::dataReady, this, &EventPluginsManager::dataReady);
@@ -228,7 +227,7 @@ void EventPluginsManager::loadPlugin(const QString &pluginId)
 
 QList<CalendarEvents::CalendarEventsPlugin *> EventPluginsManager::plugins() const
 {
-    return d->plugins;
+    return d->plugins.values();
 }
 
 QAbstractListModel *EventPluginsManager::pluginsModel() const
