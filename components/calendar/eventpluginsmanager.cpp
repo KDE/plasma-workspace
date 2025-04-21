@@ -208,32 +208,20 @@ QStringList EventPluginsManager::enabledPlugins() const
 void EventPluginsManager::loadPlugin(const QString &pluginId)
 {
     QPluginLoader loader(QString(u"plasmacalendarplugins/" + QDir::cleanPath(pluginId)));
+    if (auto eventsPlugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(loader.instance())) {
+        qCDebug(COMPONENTS::CALENDAR) << "Loading Calendar plugin" << eventsPlugin;
+        eventsPlugin->setProperty("pluginId", pluginId);
+        d->plugins << eventsPlugin;
 
-    if (!loader.load()) {
+        // Connect the relay signals
+        connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::dataReady, this, &EventPluginsManager::dataReady);
+        connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::eventModified, this, &EventPluginsManager::eventModified);
+        connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::eventRemoved, this, &EventPluginsManager::eventRemoved);
+        connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::alternateCalendarDateReady, this, &EventPluginsManager::alternateCalendarDateReady);
+        connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::subLabelReady, this, &EventPluginsManager::subLabelReady);
+    } else {
         qCWarning(COMPONENTS::CALENDAR) << "Could not create Plasma Calendar Plugin: " << pluginId;
         qCWarning(COMPONENTS::CALENDAR) << loader.errorString();
-        return;
-    }
-
-    QObject *obj = loader.instance();
-    if (obj) {
-        CalendarEvents::CalendarEventsPlugin *eventsPlugin = qobject_cast<CalendarEvents::CalendarEventsPlugin *>(obj);
-        if (eventsPlugin) {
-            qCDebug(COMPONENTS::CALENDAR) << "Loading Calendar plugin" << eventsPlugin;
-            eventsPlugin->setProperty("pluginId", pluginId);
-            d->plugins << eventsPlugin;
-
-            // Connect the relay signals
-            connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::dataReady, this, &EventPluginsManager::dataReady);
-            connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::eventModified, this, &EventPluginsManager::eventModified);
-            connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::eventRemoved, this, &EventPluginsManager::eventRemoved);
-            connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::alternateCalendarDateReady, this, &EventPluginsManager::alternateCalendarDateReady);
-            connect(eventsPlugin, &CalendarEvents::CalendarEventsPlugin::subLabelReady, this, &EventPluginsManager::subLabelReady);
-        } else {
-            // not our/valid plugin, so unload it
-            loader.unload();
-        }
-    } else {
         loader.unload();
     }
 }
@@ -249,5 +237,4 @@ QAbstractListModel *EventPluginsManager::pluginsModel() const
 }
 
 #include "eventpluginsmanager.moc"
-
 #include "moc_eventpluginsmanager.cpp"
