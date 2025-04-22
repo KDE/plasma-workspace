@@ -21,6 +21,12 @@ class QModelIndex;
 class QDBusServiceWatcher;
 class KDBusMenuImporter;
 
+struct AppMenuEntry {
+    QPointer<QAction> action;
+    QString text;
+    bool visible = false;
+};
+
 class AppMenuModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -63,27 +69,26 @@ Q_SIGNALS:
 private Q_SLOTS:
     void onActiveWindowChanged();
     void setVisible(bool visible);
-    void update();
 
 Q_SIGNALS:
     void menuAvailableChanged();
-    void modelNeedsUpdate();
     void containmentStatusChanged();
     void screenGeometryChanged();
     void visibleChanged();
 
 private:
+    void rebuild();
+
     bool m_menuAvailable = false;
-    bool m_updatePending = false;
     bool m_visible = true;
 
     Plasma::Types::ItemStatus m_containmentStatus = Plasma::Types::PassiveStatus;
     TaskManager::TasksModel *m_tasksModel;
 
-    QPointer<QMenu> m_menu;
     QDBusServiceWatcher *m_serviceWatcher;
     QString m_serviceName;
     QString m_menuObjectPath;
 
     QPointer<KDBusMenuImporter> m_importer;
+    QList<AppMenuEntry> m_entries;
 };

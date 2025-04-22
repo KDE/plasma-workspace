@@ -53,13 +53,6 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(m_tasksModel, &TaskManager::TasksModel::countChanged, this, &AppMenuModel::onActiveWindowChanged);
     connect(m_tasksModel, &TaskManager::TasksModel::screenGeometryChanged, this, &AppMenuModel::screenGeometryChanged);
 
-    connect(this, &AppMenuModel::modelNeedsUpdate, this, [this] {
-        if (!m_updatePending) {
-            m_updatePending = true;
-            QMetaObject::invokeMethod(this, "update", Qt::QueuedConnection);
-        }
-    });
-
     onActiveWindowChanged();
 
     m_serviceWatcher->setConnection(QDBusConnection::sessionBus());
@@ -68,7 +61,6 @@ AppMenuModel::AppMenuModel(QObject *parent)
     connect(m_serviceWatcher, &QDBusServiceWatcher::serviceUnregistered, this, [this](const QString &serviceName) {
         if (serviceName == m_serviceName) {
             setMenuAvailable(false);
-            Q_EMIT modelNeedsUpdate();
         }
     });
 }
@@ -115,18 +107,7 @@ void AppMenuModel::setScreenGeometry(QRect geometry)
 int AppMenuModel::rowCount(const QModelIndex &parent) const
 {
     Q_UNUSED(parent);
-    if (!m_menuAvailable || !m_menu) {
-        return 0;
-    }
-
-    return m_menu->actions().count();
-}
-
-void AppMenuModel::update()
-{
-    beginResetModel();
-    endResetModel();
-    m_updatePending = false;
+    return m_entries.size();
 }
 
 void AppMenuModel::onActiveWindowChanged()
@@ -154,27 +135,22 @@ QHash<int, QByteArray> AppMenuModel::roleNames() const
 
 QVariant AppMenuModel::data(const QModelIndex &index, int role) const
 {
-    if (!m_menuAvailable || !m_menu) {
-        return QVariant();
-    }
-
     if (!index.isValid()) {
         return QVariant();
     }
 
-    const auto actions = m_menu->actions();
     const int row = index.row();
-    if (row >= actions.count()) {
+    if (row >= m_entries.count()) {
         return QVariant();
     }
 
     switch (role) {
     case TextRole:
-        return actions.at(row)->text();
+        return m_entries.at(row).text;
     case VisibleRole:
-        return actions.at(row)->isVisible();
+        return m_entries.at(row).visible;
     case ActionRole:
-        return QVariant::fromValue(actions.at(row));
+        return QVariant::fromValue(m_entries.at(row).action.data());
     default:
         return QVariant();
     }
@@ -216,54 +192,53 @@ void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QStri
         QMetaObject::invokeMethod(m_importer, "updateMenu", Qt::QueuedConnection);
 
         connect(m_importer.data(), &DBusMenuImporter::menuUpdated, this, [=, this](QMenu *menu) {
-            m_menu = m_importer->menu();
-            if (m_menu.isNull() || menu != m_menu) {
-                return;
+            QMenu *topMenu = m_importer->menu();
+            if (topMenu && topMenu == menu) {
+                rebuild();
             }
-
-            // cache first layer of sub menus, which we'll be popping up
-            const auto actions = m_menu->actions();
-            for (QAction *a : actions) {
-                // signal dataChanged when the action changes
-                connect(a, &QAction::changed, this, [this, a] {
-                    if (m_menuAvailable && m_menu) {
-                        const int actionIdx = m_menu->actions().indexOf(a);
-                        if (actionIdx > -1) {
-                            const QModelIndex modelIdx = index(actionIdx, 0);
-                            Q_EMIT dataChanged(modelIdx, modelIdx);
-                        }
-                    }
-                });
-
-                connect(a, &QAction::destroyed, this, &AppMenuModel::modelNeedsUpdate);
-
-                if (a->menu()) {
-                    m_importer->updateMenu(a->menu());
-                }
-            }
-
-            setMenuAvailable(true);
-            Q_EMIT modelNeedsUpdate();
         });
 
         connect(m_importer.data(), &DBusMenuImporter::actionActivationRequested, this, [this](QAction *action) {
             // TODO submenus
-            if (!m_menuAvailable || !m_menu) {
-                return;
-            }
-
-            const auto actions = m_menu->actions();
-            auto it = std::find(actions.begin(), actions.end(), action);
-            if (it != actions.end()) {
-                Q_EMIT requestActivateIndex(it - actions.begin());
+            for (int i = 0; i < m_entries.size(); ++i) {
+                if (m_entries[i].action == action) {
+                    Q_EMIT requestActivateIndex(i);
+                }
             }
         });
 
         setMenuAvailable(true);
         setVisible(true);
 
-        Q_EMIT modelNeedsUpdate();
+        rebuild();
     }
+}
+
+void AppMenuModel::rebuild()
+{
+    QList<AppMenuEntry> entries;
+    if (m_importer && m_importer->menu()) {
+        const auto actions = m_importer->menu()->actions();
+        for (QAction *action : actions) {
+            // TODO: connect QAction::changed()
+            entries.append({
+                .action = action,
+                .text = action->text(),
+                .visible = action->isVisible(),
+            });
+
+            // Preload second level menus for better responsiveness.
+            if (action->menu()) {
+                m_importer->updateMenu(action->menu());
+            }
+        }
+    }
+
+    beginResetModel();
+    m_entries = entries;
+    endResetModel();
+
+    setMenuAvailable(true);
 }
 
 #include "moc_appmenumodel.cpp"
