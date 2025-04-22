@@ -116,11 +116,11 @@ PlasmoidItem {
 
                 Layout.fillWidth: root.vertical
                 Layout.fillHeight: !root.vertical
-                text: activeMenu
+                text: model.text
                 Kirigami.MnemonicData.active: altState.pressed
 
                 down: Plasmoid.currentIndex === index
-                visible: text !== "" && model.activeActions.visible
+                visible: text !== "" && model.visible
 
                 menuIsOpen: Plasmoid.currentIndex !== -1
                 onActivated: Plasmoid.trigger(this, index)

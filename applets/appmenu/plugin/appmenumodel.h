@@ -38,7 +38,8 @@ public:
     ~AppMenuModel() override;
 
     enum AppMenuRole {
-        MenuRole = Qt::UserRole + 1, // TODO this should be Qt::DisplayRole
+        TextRole = Qt::UserRole + 1, // TODO this should be Qt::DisplayRole
+        VisibleRole,
         ActionRole,
     };
 

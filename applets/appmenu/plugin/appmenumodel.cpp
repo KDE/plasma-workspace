@@ -208,8 +208,9 @@ void AppMenuModel::onActiveWindowChanged()
 QHash<int, QByteArray> AppMenuModel::roleNames() const
 {
     QHash<int, QByteArray> roleNames;
-    roleNames[MenuRole] = QByteArrayLiteral("activeMenu");
-    roleNames[ActionRole] = QByteArrayLiteral("activeActions");
+    roleNames[TextRole] = QByteArrayLiteral("text");
+    roleNames[VisibleRole] = QByteArrayLiteral("visible");
+    roleNames[ActionRole] = QByteArrayLiteral("action");
     return roleNames;
 }
 
@@ -235,19 +236,18 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
     }
 
     if (!index.isValid()) {
-        if (role == MenuRole) {
-            return QString();
-        } else if (role == ActionRole) {
-            return QVariant::fromValue(m_menu->menuAction());
-        }
+        return QVariant();
     }
 
     const auto actions = m_menu->actions();
     const int row = index.row();
     if (row == actions.count() && m_searchAction) {
-        if (role == MenuRole) {
+        switch (role) {
+        case TextRole:
             return m_searchAction->text();
-        } else if (role == ActionRole) {
+        case VisibleRole:
+            return m_searchAction->isVisible();
+        case ActionRole:
             return QVariant::fromValue(m_searchAction.data());
         }
     }
@@ -255,13 +255,16 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
 
-    if (role == MenuRole) { // TODO this should be Qt::DisplayRole
+    switch (role) {
+    case TextRole:
         return actions.at(row)->text();
-    } else if (role == ActionRole) {
+    case VisibleRole:
+        return actions.at(row)->isVisible();
+    case ActionRole:
         return QVariant::fromValue(actions.at(row));
+    default:
+        return QVariant();
     }
-
-    return QVariant();
 }
 
 void AppMenuModel::updateApplicationMenu(const QString &serviceName, const QString &menuObjectPath)
