@@ -13,12 +13,6 @@
 #include <QGuiApplication>
 #include <QMenu>
 
-// Includes for the menu search.
-#include <KLocalizedString>
-#include <QLineEdit>
-#include <QListView>
-#include <QWidgetAction>
-
 #include <abstracttasksmodel.h>
 #include <dbusmenuimporter.h>
 
@@ -77,39 +71,6 @@ AppMenuModel::AppMenuModel(QObject *parent)
             Q_EMIT modelNeedsUpdate();
         }
     });
-
-    // X11 has funky menu behaviour that prevents this from working properly.
-    if (KWindowSystem::isPlatformWayland()) {
-        m_searchAction = new QAction(this);
-        m_searchAction->setText(i18n("Search"));
-        m_searchAction->setObjectName(QStringLiteral("appmenu"));
-
-        m_searchMenu.reset(new QMenu);
-        auto searchAction = new QWidgetAction(this);
-        auto searchBar = new QLineEdit;
-        searchBar->setClearButtonEnabled(true);
-        searchBar->setPlaceholderText(i18n("Search…"));
-        searchBar->setMinimumWidth(200);
-        searchBar->setContentsMargins(4, 4, 4, 4);
-        connect(m_tasksModel, &TaskManager::TasksModel::activeTaskChanged, searchBar, [searchBar]() {
-            searchBar->setText(QString());
-        });
-        connect(searchBar, &QLineEdit::textChanged, this, [searchBar, this]() mutable {
-            insertSearchActionsIntoMenu(searchBar->text());
-        });
-        connect(searchBar, &QLineEdit::returnPressed, this, [this]() mutable {
-            if (!m_currentSearchActions.empty()) {
-                m_currentSearchActions.constFirst()->trigger();
-            }
-        });
-        connect(this, &AppMenuModel::modelNeedsUpdate, searchBar, [this, searchBar]() mutable {
-            insertSearchActionsIntoMenu(searchBar->text());
-        });
-        searchAction->setDefaultWidget(searchBar);
-        m_searchMenu->addAction(searchAction);
-        m_searchMenu->addSeparator();
-        m_searchAction->setMenu(m_searchMenu.get());
-    }
 }
 
 AppMenuModel::~AppMenuModel() = default;
@@ -158,30 +119,7 @@ int AppMenuModel::rowCount(const QModelIndex &parent) const
         return 0;
     }
 
-    return m_menu->actions().count() + (m_searchAction ? 1 : 0);
-}
-
-void AppMenuModel::removeSearchActionsFromMenu()
-{
-    for (auto action : std::as_const(m_currentSearchActions)) {
-        m_searchAction->menu()->removeAction(action);
-    }
-    m_currentSearchActions = QList<QAction *>();
-}
-
-void AppMenuModel::insertSearchActionsIntoMenu(const QString &filter)
-{
-    removeSearchActionsFromMenu();
-    if (filter.isEmpty()) {
-        return;
-    }
-    const auto actions = flatActionList();
-    for (const auto &action : actions) {
-        if (action->text().contains(filter, Qt::CaseInsensitive)) {
-            m_searchAction->menu()->addAction(action);
-            m_currentSearchActions << action;
-        }
-    }
+    return m_menu->actions().count();
 }
 
 void AppMenuModel::update()
@@ -214,21 +152,6 @@ QHash<int, QByteArray> AppMenuModel::roleNames() const
     return roleNames;
 }
 
-QList<QAction *> AppMenuModel::flatActionList()
-{
-    QList<QAction *> ret;
-    if (!m_menuAvailable || !m_menu) {
-        return ret;
-    }
-    const auto actions = m_menu->findChildren<QAction *>();
-    for (auto &action : actions) {
-        if (action->menu() == nullptr) {
-            ret << action;
-        }
-    }
-    return ret;
-}
-
 QVariant AppMenuModel::data(const QModelIndex &index, int role) const
 {
     if (!m_menuAvailable || !m_menu) {
@@ -241,16 +164,6 @@ QVariant AppMenuModel::data(const QModelIndex &index, int role) const
 
     const auto actions = m_menu->actions();
     const int row = index.row();
-    if (row == actions.count() && m_searchAction) {
-        switch (role) {
-        case TextRole:
-            return m_searchAction->text();
-        case VisibleRole:
-            return m_searchAction->isVisible();
-        case ActionRole:
-            return QVariant::fromValue(m_searchAction.data());
-        }
-    }
     if (row >= actions.count()) {
         return QVariant();
     }

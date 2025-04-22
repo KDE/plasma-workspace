@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include <KWindowSystem>
 #include <QAbstractListModel>
 #include <QAction>
 #include <QPointer>
@@ -56,7 +55,6 @@ public:
 
     QRect screenGeometry() const;
     void setScreenGeometry(QRect geometry);
-    QList<QAction *> flatActionList();
 
 Q_SIGNALS:
     void requestActivateIndex(int index);
@@ -82,14 +80,7 @@ private:
     Plasma::Types::ItemStatus m_containmentStatus = Plasma::Types::PassiveStatus;
     TaskManager::TasksModel *m_tasksModel;
 
-    std::unique_ptr<QMenu> m_searchMenu;
     QPointer<QMenu> m_menu;
-    QPointer<QAction> m_searchAction;
-    QList<QAction *> m_currentSearchActions;
-
-    void removeSearchActionsFromMenu();
-    void insertSearchActionsIntoMenu(const QString &filter = QString());
-
     QDBusServiceWatcher *m_serviceWatcher;
     QString m_serviceName;
     QString m_menuObjectPath;
