@@ -74,7 +74,7 @@ Q_SIGNALS:
     void visibleChanged();
 
 private:
-    bool m_menuAvailable;
+    bool m_menuAvailable = false;
     bool m_updatePending = false;
     bool m_visible = true;
 
