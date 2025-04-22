@@ -2,21 +2,21 @@
 # This file is distributed under the same license as the plasma-workspace package.
 #
 # SPDX-FileCopyrightText: 2024 X əyyam
-# SPDX-FileCopyrightText: 2024 Kheyyam Godjayev <xxmn77@gmail.com>
+# SPDX-FileCopyrightText: 2024, 2025 Kheyyam Godjayev <xxmn77@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-24 00:43+0000\n"
-"PO-Revision-Date: 2024-06-11 16:35+0400\n"
-"Last-Translator: Kheyyam Godjayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2025-04-21 18:44+0400\n"
+"Last-Translator: linux <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -300,12 +300,9 @@ msgid "Online Services"
 msgstr "Canlı xidmətlər"
 
 #: shellprivate/widgetexplorer.cpp:125
-#, fuzzy
-#| msgctxt "applet category"
-#| msgid "System Information"
 msgctxt "applet category"
 msgid "Personal Information"
-msgstr "Sistem haqqında"
+msgstr "Fərdi məlumat"
 
 #: shellprivate/widgetexplorer.cpp:126
 msgctxt "applet category"
@@ -348,18 +345,13 @@ msgid "Running"
 msgstr "İşlək"
 
 #: shellprivate/widgetexplorer.cpp:157
-#, fuzzy, kde-format
-#| msgctxt ""
-#| "@item:inmenu used in the widget filter. Filter widgets that can be un-"
-#| "installed from the system, which are usually installed by the user to a "
-#| "local place."
-#| msgid "Uninstallable"
+#, kde-format
 msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can be un-"
 "installed from the system, which are usually installed by the user to a "
 "local place."
 msgid "User-installed"
-msgstr "Silinə bilən"
+msgstr "İstifadəçinin quraşdırdığı"
 
 #: shellprivate/widgetexplorer.cpp:161
 #, kde-format
@@ -367,7 +359,7 @@ msgctxt ""
 "@item:inmenu used in the widget filter. Filter widgets that can were "
 "recently installed."
 msgid "Recently installed"
-msgstr ""
+msgstr "Son quraşdırılan"
 
 #: shellprivate/widgetexplorer.cpp:165
 #, kde-format
@@ -385,11 +377,10 @@ msgid "Install Widget From Local File…"
 msgstr "Vidjeti yerli fayldan quraşdırmaq..."
 
 #: shellprivate/widgetexplorer.cpp:494
-#, fuzzy, kde-format
-#| msgid "All Widgets"
+#, kde-format
 msgctxt "@title:window"
 msgid "Get New Widgets"
-msgstr "Bütün vidjetlər"
+msgstr "Yeni vidjet alın"
 
 #: shellprivate/widgetexplorer.cpp:513
 #, kde-format
@@ -397,11 +388,10 @@ msgid "Select Plasmoid File"
 msgstr "Plasmoid faylını seçmək"
 
 #: shellprivate/widgetexplorer.cpp:529
-#, fuzzy, kde-format
-#| msgid "Installing the package %1 failed."
+#, kde-format
 msgctxt "%1 is the name of an applet, %2 is an error message"
 msgid "Installing the package %1 failed: %2."
-msgstr "%1 paketini qurmaq mümkün olmadı."
+msgstr "%1 paketini qurmaq mümkün olmadı: %2"
 
 #: shellprivate/widgetexplorer.cpp:530
 #, kde-format
@@ -414,47 +404,47 @@ msgctxt "@info"
 msgid ""
 "The currently selected time zone is not available for visualization on this "
 "map"
-msgstr ""
+msgstr "Hal-hazırda seçilmiş saat qurşağını bu xəritədə görüntüləmək olmur "
 
 #: timezoneselector/TimezoneSelector.qml:185
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom in"
-msgstr ""
+msgstr "Yaxınlaşdırmaq"
 
 #: timezoneselector/TimezoneSelector.qml:201
 #, kde-format
 msgctxt "@action:button"
 msgid "Zoom out"
-msgstr ""
+msgstr "Uzaqlaşdırmaq"
 
 #: timezoneselector/TimezoneSelector.qml:230
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Region:"
-msgstr ""
+msgstr "Bölgə:"
 
 #: timezoneselector/TimezoneSelector.qml:237
 #, kde-format
 msgctxt "Placeholder for empty time zone combobox selector"
 msgid "Choose…"
-msgstr ""
+msgstr "Seçin..."
 
 #: timezoneselector/TimezoneSelector.qml:241
 #, kde-format
 msgid "Timezone region selector"
-msgstr ""
+msgstr "Saat qurşağı bölgəsi seçicisi"
 
 #: timezoneselector/TimezoneSelector.qml:261
 #, kde-format
 msgctxt "@label:listbox In the context of time zone selection"
 msgid "Time zone:"
-msgstr ""
+msgstr "Saat qurşağı:"
 
 #: timezoneselector/TimezoneSelector.qml:271
 #, kde-format
 msgid "Timezone location selector"
-msgstr ""
+msgstr "Saat qurşağı yeri seçicisi"
 
 #~ msgid "&Execute"
 #~ msgstr "&İcra etmək"
