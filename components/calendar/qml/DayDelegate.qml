@@ -45,10 +45,11 @@ PlasmaComponents.AbstractButton {
     required property int yearNumber
 
     required property /*PlasmaCalendar.Calendar.DateMatchingPrecision*/int dateMatchingPrecision
+
     /*
      * The layout of this button is
-     * [label]
      * [eventIndicatorsRow]
+     * [label]
      * [subDayLabel]
      */
     property double mainLabelFontPixelSize: Math.max(
@@ -173,8 +174,8 @@ PlasmaComponents.AbstractButton {
         // Basically, only active when dayStyle.dayModel is PlasmaCalendar.DaysModel
         // and thus dateMatchingPrecision is PlasmaCalendar.Calendar.MatchYearMonthAndDay
         active: dayStyle.model.eventCount !== undefined && dayStyle.model.eventCount > 0
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: subDayLabel.item?.implicitHeight ?? Kirigami.Units.smallSpacing
+        anchors.top: parent.top
+        anchors.topMargin: Kirigami.Units.largeSpacing
         anchors.horizontalCenter: parent.horizontalCenter
         sourceComponent: Row {
             id: eventIndicatorsRow
