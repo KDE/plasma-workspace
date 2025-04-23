@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-04 00:42+0000\n"
+"POT-Creation-Date: 2025-04-23 02:36+0000\n"
 "PO-Revision-Date: 2021-08-12 11:59+0000\n"
 "Last-Translator: Vivek K J <vivekkj2004@gmail.com>\n"
 "Language-Team: Swathanthra|സ്വതന്ത്ര Malayalam|മലയാളം Computing|കമ്പ്യൂട്ടിങ്ങ് <smc."
@@ -64,14 +64,14 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr ""
 
-#: calendar/qml/DayDelegate.qml:95
+#: calendar/qml/DayDelegate.qml:96
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
 msgstr[0] ""
 msgstr[1] ""
 
-#: calendar/qml/DayDelegate.qml:96
+#: calendar/qml/DayDelegate.qml:97
 #, kde-format
 msgid "No events"
 msgstr ""

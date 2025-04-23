@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: trunk-kf 5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-01-04 00:42+0000\n"
+"POT-Creation-Date: 2025-04-23 02:36+0000\n"
 "PO-Revision-Date: 2025-01-27 16:13+0200\n"
 "Last-Translator: Moo <<>>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -66,7 +66,7 @@ msgctxt "Means 'Other calendar items'"
 msgid "Other"
 msgstr "Kita"
 
-#: calendar/qml/DayDelegate.qml:95
+#: calendar/qml/DayDelegate.qml:96
 #, kde-format
 msgid "%1 event"
 msgid_plural "%1 events"
@@ -75,7 +75,7 @@ msgstr[1] "%1 įvykiai"
 msgstr[2] "%1 įvykių"
 msgstr[3] "%1 įvykis"
 
-#: calendar/qml/DayDelegate.qml:96
+#: calendar/qml/DayDelegate.qml:97
 #, kde-format
 msgid "No events"
 msgstr "Nėra įvykių"
