@@ -236,8 +236,6 @@ Item {
         id: dateAndPin
 
         RowLayout {
-            spacing: 0
-
             readonly property alias configureButton: configureButton
             readonly property alias pinButton: pinButton
 
