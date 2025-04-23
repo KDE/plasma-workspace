@@ -100,7 +100,7 @@ RowLayout {
             // to the maximum width to avoid the progress bad resizing itself
             TextMetrics {
                 id: widestLabelSize
-                text: formatPercent(root.osdMaxValue)
+                text: root.formatPercent(root.osdMaxValue)
                 font: percentageLabel.font
             }
 
@@ -114,7 +114,7 @@ RowLayout {
                 level: 3
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
-                text: formatPercent(progressBar.value)
+                text: root.formatPercent(progressBar.value)
                 textFormat: Text.PlainText
                 wrapMode: Text.NoWrap
                 visible: root.showingProgress
