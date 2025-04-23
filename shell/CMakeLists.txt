@@ -66,6 +66,16 @@ kconfig_add_kcfg_files(plasma_shell_SRCS ../kcms/colors/colorssettings.kcfgc GEN
 
 add_executable(plasmashell)
 
+ecm_add_qml_module(plasmashell_osd
+    URI "org.kde.plasma.workspace.osd"
+    GENERATE_PLUGIN_SOURCE
+)
+ecm_target_qml_sources(plasmashell_osd SOURCES
+    qml/Osd.qml
+    qml/OsdItem.qml
+)
+ecm_finalize_qml_module(plasmashell_osd)
+
 if (Qt6_VERSION VERSION_GREATER_EQUAL "6.8.0")
     set(private_code_option  "PRIVATE_CODE")
 endif()

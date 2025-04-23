@@ -225,29 +225,15 @@ bool Osd::init()
         return true;
     }
 
-    const QUrl url = m_corona->kPackage().fileUrl("osdmainscript");
-    if (url.isEmpty()) {
-        return false;
-    }
-
     if (!m_osdObject) {
         m_osdObject = new PlasmaQuick::SharedQmlEngine(this);
     }
 
-    m_osdObject->setSource(url);
+    m_osdObject->setSourceFromModule("org.kde.plasma.workspace.osd", "Osd");
 
     if (m_osdObject->status() != QQmlComponent::Ready) {
-        qCWarning(PLASMASHELL) << "Failed to load OSD QML file" << url;
-        auto fallbackUrl = m_corona->kPackage().fallbackPackage().fileUrl("osdmainscript");
-        if (fallbackUrl.isEmpty() || fallbackUrl == url) {
-            return false;
-        }
-        qCWarning(PLASMASHELL) << "Trying fallback theme";
-        m_osdObject->setSource(fallbackUrl);
-        if (m_osdObject->status() != QQmlComponent::Ready) {
-            qCWarning(PLASMASHELL) << "Failed to load fallback OSD QML file" << fallbackUrl;
-            return false;
-        }
+        qCWarning(PLASMASHELL) << "Failed to load OSD QML file";
+        return false;
     }
 
     m_timeout = m_osdObject->rootObject()->property("timeout").toInt();
