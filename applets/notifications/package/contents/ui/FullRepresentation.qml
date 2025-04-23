@@ -202,6 +202,8 @@ PlasmaExtras.Representation {
                     var inhibitedByApp = notificationSettings.notificationsInhibitedByApplication;
                     var inhibitedByMirroredScreens = notificationSettings.inhibitNotificationsWhenScreensMirrored
                                                         && notificationSettings.screensMirrored;
+                    var inhibitedByFullscreen = notificationSettings.inhibitNotificationsWhenFullscreen
+                                                        && notificationSettings.fullscreenFocused;
                     var dateNow = Date.now();
 
                     var sections = [];
@@ -232,6 +234,10 @@ PlasmaExtras.Representation {
 
                     if (inhibitedByMirroredScreens) {
                         sections.push(i18nc("Do not disturb because external mirrored screens connected", "Screens are mirrored"))
+                    }
+
+                    if (inhibitedByFullscreen) {
+                        sections.push(i18nc("Do not disturb because fullscreen app is focused", "Fullscreen app is focused"))
                     }
 
                     return sections.join(" · ");
