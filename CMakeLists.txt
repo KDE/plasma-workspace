@@ -117,7 +117,10 @@ set_package_properties(KF6Baloo PROPERTIES DESCRIPTION "File Searching"
                        PURPOSE "Needed for the File Search runner."
                       )
 
-pkg_check_modules(QALCULATE libqalculate>2.0 REQUIRED IMPORTED_TARGET)
+pkg_check_modules(QALCULATE libqalculate>2.0 IMPORTED_TARGET)
+set_package_properties(QALCULATE PROPERTIES
+   DESCRIPTION "A library for calculations, used in runners/calculator"
+   TYPE REQUIRED)
 pkg_check_modules(DBus dbus-1 REQUIRED IMPORTED_TARGET)
 
 find_package(KWinDBusInterface CONFIG REQUIRED)
