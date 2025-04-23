@@ -16,9 +16,11 @@ ecm_add_tests(
 )
 set_tests_properties(tasksmodeltest PROPERTIES TIMEOUT 120 RUN_SERIAL ON) # openbox is slow to respond
 
-# Require QX11Info to set window state
-ecm_add_test(xwindowtasksmodeltest.cpp LINK_LIBRARIES taskmanager Qt::Test Qt::GuiPrivate XCB::XCB Plasma::Activities KF6::Service KF6::IconThemes KF6::WindowSystem)
-set_tests_properties(xwindowtasksmodeltest PROPERTIES TIMEOUT 120 RUN_SERIAL ON) # openbox is slow to respond
+if (WITH_X11)
+    # Require QX11Info to set window state
+    ecm_add_test(xwindowtasksmodeltest.cpp LINK_LIBRARIES taskmanager Qt::Test Qt::GuiPrivate XCB::XCB Plasma::Activities KF6::Service KF6::IconThemes KF6::WindowSystem)
+    set_tests_properties(xwindowtasksmodeltest PROPERTIES TIMEOUT 120 RUN_SERIAL ON) # openbox is slow to respond
+endif()
 
 # Require kwin_wayland, and KWIN_WAYLAND_NO_PERMISSION_CHECKS doesn't work on FreeBSD
 if(NOT CMAKE_SYSTEM_NAME MATCHES "Linux")
