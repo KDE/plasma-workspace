@@ -30,7 +30,6 @@ ConfigModel {
         name: i18n("Time Zones")
         icon: "preferences-system-time"
         source: "configTimeZones.qml"
-        includeMargins: false
     }
 
     readonly property PlasmaCalendar.EventPluginsManager eventPluginsManager: PlasmaCalendar.EventPluginsManager {
@@ -50,7 +49,6 @@ ConfigModel {
             name: display
             icon: decoration
             source: configUi
-            includeMargins: false
             visible: Plasmoid.configuration.enabledCalendarPlugins.indexOf(pluginId) > -1
         }
 
