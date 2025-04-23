@@ -31,6 +31,8 @@ public:
         QString desc;
         QString icon;
         QString configUi;
+        QString configUiModule;
+        QString configUiComponent;
     };
 
     std::unique_ptr<EventPluginsModel> model;
@@ -51,6 +53,8 @@ public:
         m_roles.insert(Qt::EditRole, QByteArrayLiteral("checked"));
         m_roles.insert(Qt::UserRole, QByteArrayLiteral("configUi"));
         m_roles.insert(Qt::UserRole + 1, QByteArrayLiteral("pluginId"));
+        m_roles.insert(Qt::UserRole + 2, QByteArrayLiteral("configModule"));
+        m_roles.insert(Qt::UserRole + 3, QByteArrayLiteral("configComponent"));
     }
 
     // make these two available to the manager
@@ -97,6 +101,10 @@ public:
         }
         case Qt::UserRole + 1:
             return currentPlugin;
+        case Qt::UserRole + 2:
+            return metadata.configUiModule;
+        case Qt::UserRole + 3:
+            return metadata.configUiComponent;
         case Qt::EditRole:
             return d->enabledPlugins.contains(currentPlugin);
         }
@@ -144,7 +152,13 @@ EventPluginsManagerPrivate::EventPluginsManagerPrivate()
         const QString prefix = plugin.fileName().left(plugin.fileName().lastIndexOf(QLatin1Char('/')));
         const QString configName = plugin.value(u"X-KDE-PlasmaCalendar-ConfigUi");
 
-        availablePlugins.insert(plugin.pluginId(), {plugin.name(), plugin.description(), plugin.iconName(), prefix + QLatin1Char('/') + configName});
+        availablePlugins.insert(plugin.pluginId(),
+                                {plugin.name(),
+                                 plugin.description(),
+                                 plugin.iconName(),
+                                 prefix + QLatin1Char('/') + configName,
+                                 plugin.value(u"X-KDE-PlasmaCalendar-ConfigUi-Module"),
+                                 plugin.value(u"X-KDE-PlasmaCalendar-ConfigUi-Component")});
     }
 }
 
