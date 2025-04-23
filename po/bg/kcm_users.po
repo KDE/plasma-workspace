@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-04-23 00:44+0000\n"
 "PO-Revision-Date: 2025-01-07 23:16+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "Връзката с устройството е прекъсната."
 msgid "An unknown error has occurred."
 msgstr "Възникна неизвестна грешка."
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:181
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:215
 #, kde-format
 msgid "Change Password"
 msgstr "Промяна на парола"
@@ -141,27 +141,27 @@ msgstr "Оставяне непроменено"
 msgid "Create User"
 msgstr "Създаване на потребител"
 
-#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:131
+#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:165
 #, kde-format
 msgid "Name:"
 msgstr "Име:"
 
-#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:139
+#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Username:"
 msgstr "Потребителско име:"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:156
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Standard"
 msgstr "Стандартно"
 
-#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:157
+#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:191
 #, kde-format
 msgid "Administrator"
 msgstr "Администратор"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:146
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:180
 #, kde-format
 msgid "Account type:"
 msgstr "Вид на акаунта:"
@@ -570,12 +570,49 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "Използване на заместваща икона аватар"
 
-#: src/ui/UserDetailsPage.qml:110
+#: src/ui/UserDetailsPage.qml:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Logged-In User Without Deleting Files?"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:115
+#, fuzzy, kde-format
+#| msgid "Delete User…"
+msgctxt "@title:window"
+msgid "Delete Logged-In User?"
+msgstr "Изтриване на потребител…"
+
+#: src/ui/UserDetailsPage.qml:117
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in, so their files cannot be deleted. Delete just the "
+"account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
+"may experience strange behaviors until they log out."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:118
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in. Deleting the account will make them unable to log "
+"in again, and they may experience strange behaviors until they log out."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:125
+#, fuzzy, kde-format
+#| msgid "Delete files"
+msgctxt "@action: button"
+msgid "Delete %1"
+msgstr "Изтриване на файлове"
+
+#: src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Change avatar"
 msgstr "Промяна на аватара"
 
-#: src/ui/UserDetailsPage.qml:167
+#: src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -587,32 +624,32 @@ msgstr ""
 "би станало невъзможно или би изисквало несигурното използване на root "
 "паролата."
 
-#: src/ui/UserDetailsPage.qml:175
+#: src/ui/UserDetailsPage.qml:209
 #, kde-format
 msgid "Email address:"
 msgstr "Адрес за е-поща:"
 
-#: src/ui/UserDetailsPage.qml:204
+#: src/ui/UserDetailsPage.qml:238
 #, kde-format
 msgid "Delete files"
 msgstr "Изтриване на файлове"
 
-#: src/ui/UserDetailsPage.qml:211
+#: src/ui/UserDetailsPage.qml:245
 #, kde-format
 msgid "Keep files"
 msgstr "Запазване на файлове"
 
-#: src/ui/UserDetailsPage.qml:218
+#: src/ui/UserDetailsPage.qml:252
 #, kde-format
 msgid "Delete User…"
 msgstr "Изтриване на потребител…"
 
-#: src/ui/UserDetailsPage.qml:230
+#: src/ui/UserDetailsPage.qml:264
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "Конфигуриране на идентификация с пръстов отпечатък…"
 
-#: src/ui/UserDetailsPage.qml:262
+#: src/ui/UserDetailsPage.qml:296
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -626,42 +663,42 @@ msgstr ""
 "команди, които ги изискват.<nl/><nl/> Влизане в системата с пръстов "
 "отпечатък все още не се поддържа."
 
-#: src/user.cpp:140
+#: src/user.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
 msgstr "Грешка при изрязване на изображение: %1"
 
-#: src/user.cpp:324
+#: src/user.cpp:337
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "Не можа да се получи разрешение за запазване на потребител %1"
 
-#: src/user.cpp:329
+#: src/user.cpp:342
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "При запазването на промените възникна грешка"
 
-#: src/user.cpp:456
+#: src/user.cpp:474
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr ""
 "Неуспех при преоразмеряване на изображение: отварянето на временния файл "
 "пропадна"
 
-#: src/user.cpp:464
+#: src/user.cpp:482
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr ""
 "Неуспех при преоразмеряване на изображение: записът във временния файл "
 "пропадна"
 
-#: src/usermodel.cpp:167
+#: src/usermodel.cpp:170
 #, kde-format
 msgid "Your Account"
 msgstr "Вашия акаунт"
 
-#: src/usermodel.cpp:167
+#: src/usermodel.cpp:170
 #, kde-format
 msgid "Other Accounts"
 msgstr "Други акаунти"

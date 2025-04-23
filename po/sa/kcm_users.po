@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-04-23 00:44+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -66,7 +66,7 @@ msgstr "यन्त्रस्य सम्बन्धः विच्छि�
 msgid "An unknown error has occurred."
 msgstr "अज्ञातदोषः अभवत् ।"
 
-#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:181
+#: src/ui/ChangePassword.qml:29 src/ui/UserDetailsPage.qml:215
 #, kde-format
 msgid "Change Password"
 msgstr "गुप्तशब्दं परिवर्तयन्तु"
@@ -144,27 +144,27 @@ msgstr "अपरिवर्तितं त्यजतु"
 msgid "Create User"
 msgstr "उपयोक्तारं रचयन्तु"
 
-#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:131
+#: src/ui/CreateUser.qml:30 src/ui/UserDetailsPage.qml:165
 #, kde-format
 msgid "Name:"
 msgstr "नामः:"
 
-#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:139
+#: src/ui/CreateUser.qml:34 src/ui/UserDetailsPage.qml:173
 #, kde-format
 msgid "Username:"
 msgstr "उपयोक्तृनाम :"
 
-#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:156
+#: src/ui/CreateUser.qml:44 src/ui/UserDetailsPage.qml:190
 #, kde-format
 msgid "Standard"
 msgstr "स्तरीय"
 
-#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:157
+#: src/ui/CreateUser.qml:45 src/ui/UserDetailsPage.qml:191
 #, kde-format
 msgid "Administrator"
 msgstr "प्रशासकः"
 
-#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:146
+#: src/ui/CreateUser.qml:48 src/ui/UserDetailsPage.qml:180
 #, kde-format
 msgid "Account type:"
 msgstr "खाताप्रकारः :"
@@ -533,12 +533,49 @@ msgctxt "@info:whatsthis"
 msgid "User avatar placeholder icon"
 msgstr "उपयोक्ता अवतार स्थानधारक चिह्न"
 
-#: src/ui/UserDetailsPage.qml:110
+#: src/ui/UserDetailsPage.qml:114
+#, kde-format
+msgctxt "@title:window"
+msgid "Delete Logged-In User Without Deleting Files?"
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:115
+#, fuzzy, kde-format
+#| msgid "Delete User…"
+msgctxt "@title:window"
+msgid "Delete Logged-In User?"
+msgstr "उपयोक्तारं विलोपयन्तु..."
+
+#: src/ui/UserDetailsPage.qml:117
+#, kde-kuit-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in, so their files cannot be deleted. Delete just the "
+"account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
+"may experience strange behaviors until they log out."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:118
+#, kde-format
+msgctxt "@info:usagetip"
+msgid ""
+"%1 is currently logged in. Deleting the account will make them unable to log "
+"in again, and they may experience strange behaviors until they log out."
+msgstr ""
+
+#: src/ui/UserDetailsPage.qml:125
+#, fuzzy, kde-format
+#| msgid "Delete files"
+msgctxt "@action: button"
+msgid "Delete %1"
+msgstr "सञ्चिकाः विलोपयन्तु"
+
+#: src/ui/UserDetailsPage.qml:144
 #, kde-format
 msgid "Change avatar"
 msgstr "अवतार परिवर्तयतु"
 
-#: src/ui/UserDetailsPage.qml:167
+#: src/ui/UserDetailsPage.qml:201
 #, kde-format
 msgid ""
 "Cannot change the account type to Standard unless there is at least one "
@@ -549,32 +586,32 @@ msgstr ""
 "Standard इति परिवर्तयितुं न शक्यते । एकं विना प्रमाणीकरणं असम्भवं भविष्यति अथवा "
 "मूलगुप्तशब्दस्य असुरक्षितप्रयोगस्य आवश्यकता स्यात् ।"
 
-#: src/ui/UserDetailsPage.qml:175
+#: src/ui/UserDetailsPage.qml:209
 #, kde-format
 msgid "Email address:"
 msgstr "ईमेल-सङ्केतः :"
 
-#: src/ui/UserDetailsPage.qml:204
+#: src/ui/UserDetailsPage.qml:238
 #, kde-format
 msgid "Delete files"
 msgstr "सञ्चिकाः विलोपयन्तु"
 
-#: src/ui/UserDetailsPage.qml:211
+#: src/ui/UserDetailsPage.qml:245
 #, kde-format
 msgid "Keep files"
 msgstr "सञ्चिकाः स्थापयन्तु"
 
-#: src/ui/UserDetailsPage.qml:218
+#: src/ui/UserDetailsPage.qml:252
 #, kde-format
 msgid "Delete User…"
 msgstr "उपयोक्तारं विलोपयन्तु..."
 
-#: src/ui/UserDetailsPage.qml:230
+#: src/ui/UserDetailsPage.qml:264
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
 msgstr "अङ्गुलिचिह्नप्रमाणीकरणं विन्यस्तं कुर्वन्तु..."
 
-#: src/ui/UserDetailsPage.qml:262
+#: src/ui/UserDetailsPage.qml:296
 #, kde-kuit-format
 msgctxt "@info"
 msgid ""
@@ -587,38 +624,38 @@ msgstr ""
 "तान् अनुरोधयन्तः अनुप्रयोगाः आदेशपङ्क्तिकार्यक्रमाः च प्रशासकस्य अनुमतिः प्रदातुं शक्यते।<nl/"
 "><nl/>भवतः अङ्गुलिचिह्नेन सह प्रणाल्यां प्रवेशः अद्यापि समर्थितः नास्ति।"
 
-#: src/user.cpp:140
+#: src/user.cpp:141
 #, kde-format
 msgctxt "@info"
 msgid "Failed to crop image: %1"
 msgstr "चित्रं क्रॉप् कर्तुं असफलम्: %1"
 
-#: src/user.cpp:324
+#: src/user.cpp:337
 #, kde-format
 msgid "Could not get permission to save user %1"
 msgstr "उपयोक्तारं %1 रक्षितुं अनुमतिं प्राप्तुं न शक्तम्"
 
-#: src/user.cpp:329
+#: src/user.cpp:342
 #, kde-format
 msgid "There was an error while saving changes"
 msgstr "परिवर्तनं रक्षन् त्रुटिः अभवत्"
 
-#: src/user.cpp:456
+#: src/user.cpp:474
 #, kde-format
 msgid "Failed to resize image: opening temp file failed"
 msgstr "चित्रस्य आकारं परिवर्तयितुं असफलम्: temp सञ्चिकां उद्घाटयितुं विफलम्"
 
-#: src/user.cpp:464
+#: src/user.cpp:482
 #, kde-format
 msgid "Failed to resize image: writing to temp file failed"
 msgstr "चित्रस्य आकारं परिवर्तयितुं असफलम्: temp सञ्चिकायां लेखनं विफलम्"
 
-#: src/usermodel.cpp:167
+#: src/usermodel.cpp:170
 #, kde-format
 msgid "Your Account"
 msgstr "भवतः खाता"
 
-#: src/usermodel.cpp:167
+#: src/usermodel.cpp:170
 #, kde-format
 msgid "Other Accounts"
 msgstr "अन्ये लेखा"
