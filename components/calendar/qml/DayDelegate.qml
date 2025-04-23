@@ -197,7 +197,7 @@ PlasmaComponents.AbstractButton {
                         height: width
                         radius: width / 2
                         color: eventColor
-                            ? Kirigami.ColorUtils.linearInterpolation(eventColor, Kirigami.Theme.textColor, 0.2)
+                            ? Kirigami.ColorUtils.linearInterpolation(eventColor, Kirigami.Theme.textColor, 0.05)
                             : Kirigami.Theme.highlightColor
                     }
 
