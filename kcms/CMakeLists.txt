@@ -10,13 +10,16 @@ endif()
 add_subdirectory(style)
 add_subdirectory(lookandfeel)
 add_subdirectory(colors)
-if(X11_Xcursor_FOUND)
+if(WITH_X11 AND X11_Xcursor_FOUND)
     add_subdirectory(cursortheme)
 endif()
 
 if(FONTCONFIG_FOUND)
     add_subdirectory( kfontinst )
-    add_subdirectory( fonts )
+    if (WITH_X11)
+        # TODO should port away from Xcursor, maybe fork it like kwin did
+        add_subdirectory( fonts )
+    endif()
 endif()
 
 add_subdirectory(autostart)

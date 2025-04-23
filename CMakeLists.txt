@@ -419,7 +419,9 @@ add_subdirectory(shell)
 add_subdirectory(freespacenotifier)
 add_subdirectory(klipper)
 add_subdirectory(krunner)
-add_subdirectory(ksmserver)
+if(WITH_X11)
+    add_subdirectory(ksmserver)
+endif()
 add_subdirectory(logout-greeter)
 add_subdirectory(ksplash)
 add_subdirectory(statusnotifierwatcher)
@@ -454,7 +456,10 @@ endif()
 
 ecm_optional_add_subdirectory(xembed-sni-proxy)
 
-ecm_optional_add_subdirectory(gmenu-dbusmenu-proxy)
+if (WITH_X11)
+    #TODO port away from X11
+    ecm_optional_add_subdirectory(gmenu-dbusmenu-proxy)
+endif()
 
 add_subdirectory(soliduiserver)
 

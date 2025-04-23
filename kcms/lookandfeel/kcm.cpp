@@ -25,21 +25,22 @@
 #include <QDBusConnection>
 #include <QDBusMessage>
 #include <QDebug>
+#include <QFileInfo>
 #include <QProcess>
 #include <QQuickItem>
 #include <QQuickWindow>
 #include <QStandardItemModel>
 #include <QStandardPaths>
-#include <private/qtx11extras_p.h>
 
 #include <KLocalizedString>
 #include <KPackage/PackageLoader>
 
 #include <array>
 
+#include "config-X11.h"
+#if HAVE_X11
 #include <X11/Xlib.h>
-
-#include <QFileInfo>
+#include <private/qtx11extras_p.h>
 
 #ifdef HAVE_XCURSOR
 #include "../cursortheme/xcursor/xcursortheme.h"
@@ -48,6 +49,7 @@
 
 #ifdef HAVE_XFIXES
 #include <X11/extensions/Xfixes.h>
+#endif
 #endif
 
 using namespace Qt::StringLiterals;

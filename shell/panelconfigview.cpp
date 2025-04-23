@@ -105,6 +105,7 @@ void PanelRulerView::syncPanelLocation()
     }
 
     if (KWindowSystem::isPlatformX11()) {
+#if HAVE_X11
         KX11Extras::setType(winId(), NET::Dock);
         KX11Extras::setState(winId(), NET::KeepAbove);
         switch (m_containment->location()) {
@@ -121,6 +122,7 @@ void PanelRulerView::syncPanelLocation()
         default:
             setPosition(available.bottomLeft() + screen()->geometry().topLeft() - QPoint(0, height()));
         }
+#endif
     } else if (m_layerWindow) {
         m_layerWindow->setKeyboardInteractivity(LayerShellQt::Window::KeyboardInteractivityOnDemand);
         LayerShellQt::Window::Anchors anchors;

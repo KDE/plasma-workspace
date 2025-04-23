@@ -1377,7 +1377,9 @@ void ShellCorona::restorePreviousWindow()
 
 void ShellCorona::clearPreviousWindow()
 {
+#if HAVE_X11
     m_previousWId = 0;
+#endif
     m_previousPlasmaWindow = nullptr;
 }
 
