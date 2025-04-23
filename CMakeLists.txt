@@ -73,7 +73,11 @@ find_package(PlasmaQuick ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(KWayland ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivities ${PROJECT_DEP_VERSION} REQUIRED)
 find_package(PlasmaActivitiesStats ${PROJECT_DEP_VERSION} REQUIRED)
-find_package(KSysGuard ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
+find_package(KSysGuard ${PROJECT_DEP_VERSION} CONFIG)
+set_package_properties(KSysGuard PROPERTIES
+    DESCRIPTION "Components to monitor the system"
+    TYPE REQUIRED
+)
 find_package(KF6Screen ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 find_package(LayerShellQt ${PROJECT_DEP_VERSION} CONFIG REQUIRED)
 

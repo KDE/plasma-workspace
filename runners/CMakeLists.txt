@@ -20,4 +20,6 @@ if(AppStreamQt_FOUND)
 endif()
 
 add_subdirectory(sessions)
-add_subdirectory(kill)
+if (KSysGuard_FOUND)
+    add_subdirectory(kill)
+endif()
