@@ -48,7 +48,7 @@ PlasmaExtras.Representation {
 
     readonly property int paddings: Kirigami.Units.largeSpacing
     readonly property bool showAgenda: eventPluginsManager.enabledPlugins.length > 0
-    readonly property bool showClocks: Plasmoid.configuration.selectedTimeZones.length > 1
+    readonly property bool showClocks: clocksList.count > 1
 
     readonly property alias monthView: monthView
     // This helps synchronize the header of the agenda and the monthView.
