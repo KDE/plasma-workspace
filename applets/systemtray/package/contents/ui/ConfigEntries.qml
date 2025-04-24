@@ -84,6 +84,14 @@ KCMUtils.ScrollViewKCM {
                 }
             ]
         }
+
+        Kirigami.InlineMessage {
+            id: disablingKlipperMessage
+
+            Layout.fillWidth: true
+            type: Kirigami.MessageType.Warning
+            text: xi18nc("@info:usagetip", "Disabling the clipboard is not recommended, as it will cause copied data to be lost when the application it was copied from is closed.<nl/><nl/>Instead consider configuring the clipboard to disable its history, or only remember one item at a time.")
+        }
     }
 
     view: ListView {
@@ -239,6 +247,9 @@ KCMUtils.ScrollViewKCM {
 
                             switch (currentValue) {
                             case "auto":
+                                if (itemId == "org.kde.plasma.clipboard") {
+                                    disablingKlipperMessage.visible = false;
+                                }
                                 if (shownIndex > -1) {
                                     cfg_shownItems.splice(shownIndex, 1)
                                 }
@@ -252,6 +263,9 @@ KCMUtils.ScrollViewKCM {
                                 }
                                 break
                             case "shown":
+                                if (itemId == "org.kde.plasma.clipboard") {
+                                    disablingKlipperMessage.visible = false;
+                                }
                                 if (shownIndex === -1) {
                                     cfg_shownItems.push(itemId)
                                 }
@@ -265,6 +279,9 @@ KCMUtils.ScrollViewKCM {
                                 }
                                 break
                             case "hidden":
+                                if (itemId == "org.kde.plasma.clipboard") {
+                                    disablingKlipperMessage.visible = false;
+                                }
                                 if (shownIndex > -1) {
                                     cfg_shownItems.splice(shownIndex, 1)
                                 }
@@ -278,6 +295,9 @@ KCMUtils.ScrollViewKCM {
                                 }
                                 break
                             case "disabled":
+                                if (itemId == "org.kde.plasma.clipboard") {
+                                    disablingKlipperMessage.visible = true;
+                                }
                                 if (shownIndex > -1) {
                                     cfg_shownItems.splice(shownIndex, 1)
                                 }
