@@ -344,7 +344,31 @@ private:
     QMetaObject::Connection parentWindowDestroyedConnection;
 };
 
-class PlasmaStackingOrder;
+class PlasmaWindowManagement;
+
+class PlasmaStackingOrder : public QtWayland::org_kde_plasma_stacking_order
+{
+public:
+    explicit PlasmaStackingOrder(PlasmaWindowManagement *windowManagement, ::org_kde_plasma_stacking_order *id)
+        : QtWayland::org_kde_plasma_stacking_order(id)
+        , m_windowManagement(windowManagement)
+    {
+    }
+    ~PlasmaStackingOrder()
+    {
+        org_kde_plasma_stacking_order_destroy(object());
+    }
+
+    void org_kde_plasma_stacking_order_window(const QString &uuid) override
+    {
+        m_uuids.push_back(uuid);
+    }
+
+    void org_kde_plasma_stacking_order_done() override;
+
+    PlasmaWindowManagement *const m_windowManagement;
+    QList<QString> m_uuids;
+};
 
 class PlasmaWindowManagement : public QWaylandClientExtensionTemplate<PlasmaWindowManagement>, public QtWayland::org_kde_plasma_window_management
 {
@@ -397,32 +421,10 @@ private:
     std::unique_ptr<PlasmaStackingOrder> m_pendingStackingOrder;
 };
 
-class PlasmaStackingOrder : public QtWayland::org_kde_plasma_stacking_order
+void PlasmaStackingOrder::org_kde_plasma_stacking_order_done()
 {
-public:
-    explicit PlasmaStackingOrder(PlasmaWindowManagement *windowManagement, ::org_kde_plasma_stacking_order *id)
-        : QtWayland::org_kde_plasma_stacking_order(id)
-        , m_windowManagement(windowManagement)
-    {
-    }
-    ~PlasmaStackingOrder()
-    {
-        org_kde_plasma_stacking_order_destroy(object());
-    }
-
-    void org_kde_plasma_stacking_order_window(const QString &uuid) override
-    {
-        m_uuids.push_back(uuid);
-    }
-
-    void org_kde_plasma_stacking_order_done() override
-    {
-        m_windowManagement->stackingOrderDone(m_uuids);
-    }
-
-    PlasmaWindowManagement *const m_windowManagement;
-    QList<QString> m_uuids;
-};
+    m_windowManagement->stackingOrderDone(m_uuids);
+}
 
 void PlasmaWindowManagement::org_kde_plasma_window_management_stacking_order_changed_2()
 {

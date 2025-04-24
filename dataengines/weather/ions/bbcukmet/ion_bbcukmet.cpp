@@ -1,15 +1,16 @@
 /*
-    SPDX-FileCopyrightText: 2007-2009 Shawn Starr <shawn.starr@rogers.com>
-    SPDX-FileCopyrightText: 2024 Ismael Asensio <isma.af@gmail.com>
+     SPDX-FileCopyrightText: 2007-2009 Shawn Starr <shawn.starr@rogers.com>
+     SPDX-FileCopyrightText: 2024 Ismael Asensio <isma.af@gmail.com>
 
-    SPDX-License-Identifier: GPL-2.0-or-later
-*/
+     SPDX-License-Identifier: GPL-2.0-or-later
+ */
 
 /* Ion for BBC's Weather from the UK Met Office */
 
 #include "ion_bbcukmet.h"
-
 #include "ion_bbcukmetdebug.h"
+
+#include <mutex>
 
 #include <KIO/TransferJob>
 #include <KLocalizedString>
