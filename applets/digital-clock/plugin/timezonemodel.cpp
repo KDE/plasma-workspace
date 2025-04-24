@@ -190,6 +190,7 @@ void TimeZoneModel::setSelectedTimeZones(const QStringList &selectedTimeZones)
     }
 
     sortTimeZones();
+    Q_EMIT selectedTimeZonesChanged();
 }
 
 void TimeZoneModel::selectLocalTimeZone()
