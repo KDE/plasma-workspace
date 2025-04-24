@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-04-13 10:55+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -42,7 +42,7 @@ msgstr "Mostra els missatges emergents"
 msgid "Show in do not disturb mode"
 msgstr "Mostra en el mode no destorbar"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:189
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:187
 #, kde-format
 msgid "Show in history"
 msgstr "Mostra en l'historial"
@@ -154,114 +154,112 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "En compartir la pantalla"
 
-#: ui/main.qml:138
+#: ui/main.qml:137
+#, kde-format
+msgctxt ""
+"Automatically enable Do Not Disturb mode while a fullscreen application is "
+"focused"
+msgid "While a fullscreen application is focused"
+msgstr ""
+
+#: ui/main.qml:149
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "Canvia manualment amb una drecera:"
 
-#: ui/main.qml:145
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Condicions de visibilitat"
 
-#: ui/main.qml:150
+#: ui/main.qml:161
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Notificacions crítiques:"
 
-#: ui/main.qml:151
+#: ui/main.qml:162
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Mostra en el mode no destorbar"
 
-#: ui/main.qml:163
-#, kde-format
-msgid "Normal notifications:"
-msgstr "Notificacions normals:"
-
-#: ui/main.qml:164
-#, kde-format
-msgid "Show over full screen windows"
-msgstr "Mostra sobre les finestres a pantalla completa"
-
-#: ui/main.qml:176
+#: ui/main.qml:174
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Notificacions de prioritat baixa:"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "Show popup"
 msgstr "Mostra una finestra emergent"
 
-#: ui/main.qml:206
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Missatges emergents"
 
-#: ui/main.qml:212
+#: ui/main.qml:210
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Ubicació:"
 
-#: ui/main.qml:213
+#: ui/main.qml:211
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Prop de la icona de la notificació"
 
-#: ui/main.qml:250
+#: ui/main.qml:248
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr "Personalitzat…"
 
-#: ui/main.qml:259 ui/main.qml:275
+#: ui/main.qml:257 ui/main.qml:273
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 segon"
 msgstr[1] "%1 segons"
 
-#: ui/main.qml:264
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Oculta després de:"
 
-#: ui/main.qml:287
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Confirmació addicional"
 
-#: ui/main.qml:293
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Mostra a les notificacions"
 
-#: ui/main.qml:294
+#: ui/main.qml:292
 #, kde-format
 msgid "Application progress:"
 msgstr "Progrés de l'aplicació:"
 
-#: ui/main.qml:308
+#: ui/main.qml:306
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Mantín el missatge emergent obert durant el progrés"
 
-#: ui/main.qml:321
+#: ui/main.qml:319
 #, kde-format
 msgid "Notification badges:"
 msgstr "Distintius de notificació:"
 
-#: ui/main.qml:322
+#: ui/main.qml:320
 #, kde-format
 msgid "Show in task manager"
 msgstr "Mostra en el gestor de tasques"
@@ -299,3 +297,9 @@ msgid ""
 msgstr ""
 "Seleccioneu una aplicació de la llista per a configurar el seu configuració "
 "de notificacions i el comportament"
+
+#~ msgid "Normal notifications:"
+#~ msgstr "Notificacions normals:"
+
+#~ msgid "Show over full screen windows"
+#~ msgstr "Mostra sobre les finestres a pantalla completa"

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-03 10:07+0100\n"
+"PO-Revision-Date: 2025-04-23 10:18+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -573,14 +573,13 @@ msgstr "Icona de substitució de l'avatar d'usuari"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Suprimeixo l'usuari connectat sense suprimir els fitxers?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Suprimeix l'usuari…"
+msgstr "Suprimeixo l'usuari connectat?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -590,6 +589,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 està connectat actualment, de manera que els seus fitxers no es poden "
+"suprimir. Suprimeixo només el compte?<nl/><nl/>Això farà que %1 no pugui "
+"tornar a iniciar la sessió, i pot experimentar comportaments estranys fins "
+"que surti."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -598,13 +601,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 està connectat actualment. Suprimir el compte farà que no pugui tornar a "
+"iniciar la sessió, i pot experimentar comportaments estranys fins que surti."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Suprimeix els fitxers"
+msgstr "Suprimeix %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
@@ -700,10 +704,3 @@ msgstr "El vostre compte"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Altres comptes"
-
-#~ msgid "Enrolling Fingerprint"
-#~ msgstr "Registre de les empremtes dactilars"
-
-#~ msgctxt "@action:button 'all' refers to fingerprints"
-#~ msgid "Clear All"
-#~ msgstr "Neteja-ho tot"

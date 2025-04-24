@@ -1,5 +1,5 @@
 # Spanish translations for kcm_users.po package.
-# Copyright (C) 2020 This file is copyright:
+# Copyright (C) 2020-2025 This file is copyright:
 # This file is distributed under the same license as the plasma-desktop package.
 #
 # Automatically generated, 2020.
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-03 12:26+0100\n"
+"PO-Revision-Date: 2025-04-24 00:56+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.0\n"
+"X-Generator: Lokalize 25.04.0\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -373,13 +373,13 @@ msgstr "Usuarios"
 #, kde-format
 msgctxt "@action:button As in, 'add new user'"
 msgid "Add New…"
-msgstr "Añadir nuevo..."
+msgstr "Añadir nuevo…"
 
 #: src/ui/main.qml:29
 #, kde-format
 msgctxt "@action:button"
 msgid "Add New User…"
-msgstr "Añadir nuevo usuario..."
+msgstr "Añadir nuevo usuario…"
 
 #: src/ui/main.qml:121
 #, kde-format
@@ -516,7 +516,7 @@ msgstr "Iniciales"
 #, kde-format
 msgctxt "@action:button"
 msgid "Choose File…"
-msgstr "Escoger archivo..."
+msgstr "Escoger archivo…"
 
 #: src/ui/PicturesSheet.qml:140
 #, kde-format
@@ -554,14 +554,13 @@ msgstr "Icono provisional de avatar de usuario"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "¿Borrar el usuario que ha iniciado sesión sin borrar los archivos?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Borrar usuario..."
+msgstr "¿Borrar el usuario que ha iniciado sesión?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -571,6 +570,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 tiene una sesión abierta, por lo que sus archivos no se pueden borrar. "
+"¿Quiere borrar solo la cuenta?<nl/><nl/>Esto hará que %1 no pueda volver a "
+"iniciar sesión; también es posible que experimente comportamientos extraños "
+"hasta que cierre la sesión."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -579,13 +582,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 tiene una sesión abierta. Si borra la cuenta, no podrá volver a iniciar "
+"sesión; también es posible que experimente comportamientos extraños hasta "
+"que cierre la sesión."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Borrar archivos"
+msgstr "Borrar %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format
@@ -621,12 +626,12 @@ msgstr "Conservar archivos"
 #: src/ui/UserDetailsPage.qml:252
 #, kde-format
 msgid "Delete User…"
-msgstr "Borrar usuario..."
+msgstr "Borrar usuario…"
 
 #: src/ui/UserDetailsPage.qml:264
 #, kde-format
 msgid "Configure Fingerprint Authentication…"
-msgstr "Configurar la autenticación por huella dactilar..."
+msgstr "Configurar la autenticación por huella dactilar…"
 
 #: src/ui/UserDetailsPage.qml:296
 #, kde-kuit-format
@@ -681,50 +686,3 @@ msgstr "Su cuenta"
 #, kde-format
 msgid "Other Accounts"
 msgstr "Otras cuentas"
-
-#~ msgid "Enrolling Fingerprint"
-#~ msgstr "Registro de huella dactilar"
-
-#~ msgctxt "@action:button 'all' refers to fingerprints"
-#~ msgid "Clear All"
-#~ msgstr "Borrar todo"
-
-#~ msgid "Manage Users"
-#~ msgstr "Gestionar usuarios"
-
-#~ msgid "Continue"
-#~ msgstr "Continuar"
-
-#~ msgid "Please repeatedly "
-#~ msgstr "Pase el dedo repetidamente"
-
-#~ msgctxt "Example email address"
-#~ msgid "john.doe@kde.org"
-#~ msgstr "juan.perez@kde.org"
-
-#~ msgctxt "NAME OF TRANSLATORS"
-#~ msgid "Your names"
-#~ msgstr "Eloy Cuadra"
-
-#~ msgctxt "EMAIL OF TRANSLATORS"
-#~ msgid "Your emails"
-#~ msgstr "ecuadra@eloihr.net"
-
-#~ msgid "Manage user accounts"
-#~ msgstr "Gestionar cuentas de usuario"
-
-#~ msgid "Nicolas Fella"
-#~ msgstr "Nicolas Fella"
-
-#~ msgid "Carson Black"
-#~ msgstr "Carson Black"
-
-#~ msgid "Devin Lin"
-#~ msgstr "Devin Lin"
-
-#~ msgctxt "Example name"
-#~ msgid "John Doe"
-#~ msgstr "Juan Pérez"
-
-#~ msgid "Fingerprints"
-#~ msgstr "Huellas dactilares"

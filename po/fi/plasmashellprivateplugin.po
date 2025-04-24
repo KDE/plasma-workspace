@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-23 00:44+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-02-14 19:55+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -138,7 +138,7 @@ msgstr "Seuraava vuosi"
 msgid "Next Decade"
 msgstr "Seuraava vuosikymmen"
 
-#: calendar/qml/MonthViewHeader.qml:274
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "Pidä avoinna"

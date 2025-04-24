@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-12 00:42+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2024-08-24 11:39+0300\n"
 "Last-Translator: Αντώνης Γέραλης <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-doc@kde.org>\n"
@@ -346,66 +346,72 @@ msgstr "Μέχρι τη Δευτέρα"
 msgid "Until manually disabled"
 msgstr "Μέχρι να απενεργοποιηθεί χειροκίνητα"
 
-#: package/contents/ui/FullRepresentation.qml:214
+#: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Τελειώνει αυτόματα: %1"
 
-#: package/contents/ui/FullRepresentation.qml:226
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Ενώ το %1 είναι ενεργό (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:228
+#: package/contents/ui/FullRepresentation.qml:230
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Ενώ το %1 είναι ενεργό"
 
-#: package/contents/ui/FullRepresentation.qml:234
+#: package/contents/ui/FullRepresentation.qml:236
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Οι οθόνες καθρεφτίζονται"
 
-#: package/contents/ui/FullRepresentation.qml:459
+#: package/contents/ui/FullRepresentation.qml:240
+#, kde-format
+msgctxt "Do not disturb because fullscreen app is focused"
+msgid "Fullscreen app is focused"
+msgstr ""
+
 #: package/contents/ui/FullRepresentation.qml:465
+#: package/contents/ui/FullRepresentation.qml:471
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:546
+#: package/contents/ui/FullRepresentation.qml:552
 #, kde-format
 msgid "Close Group"
 msgstr "Κλείσιμο ομάδας"
 
-#: package/contents/ui/FullRepresentation.qml:568
+#: package/contents/ui/FullRepresentation.qml:574
 #, kde-format
 msgid "Show Fewer"
 msgstr "Εμφάνιση λιγότερων"
 
-#: package/contents/ui/FullRepresentation.qml:570
+#: package/contents/ui/FullRepresentation.qml:576
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Εμφάνιση %1 περισσότερων"
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:605
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "Καμία μη αναγνωσμένη ειδοποίηση"
 
-#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "Η υπηρεσία ειδοποίησης δεν είναι διαθέσιμη"
 
-#: package/contents/ui/FullRepresentation.qml:616
+#: package/contents/ui/FullRepresentation.qml:622
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

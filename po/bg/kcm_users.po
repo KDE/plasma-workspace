@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-07 23:16+0100\n"
+"PO-Revision-Date: 2025-04-23 22:01+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 25.03.70\n"
+"X-Generator: Lokalize 25.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
@@ -574,14 +574,13 @@ msgstr "Използване на заместваща икона аватар"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Изтриване на влязъл потребител без изтриване на файловете?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Изтриване на потребител…"
+msgstr "Изтриване на влязъл потребител…"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -591,6 +590,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 в момента е влязъл в системата, така че файловете му не могат да бъдат "
+"изтрити. Вместо това да се изтрие ли само акаунта?<nl/><nl/>По този начин %1 "
+"няма да може да влезе отново и освен това може доведе до странно поведение "
+"на системата, докато не излезе."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -599,13 +602,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 в момента е влязъл в системата. Изтриването на акаунта ще доведе до "
+"невъзможност за повторно влизане и може да доведе до странно поведение, "
+"докато не излезе от него."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Изтриване на файлове"
+msgstr "Изтриване на %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

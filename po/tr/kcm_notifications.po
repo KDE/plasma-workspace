@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-03-13 21:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Açılır pencere göster"
 msgid "Show in do not disturb mode"
 msgstr "Rahatsız Etmeyin kipinde göster"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:189
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:187
 #, kde-format
 msgid "Show in history"
 msgstr "Geçmişte göster"
@@ -147,114 +147,112 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "Ekran paylaşımı sırasında"
 
-#: ui/main.qml:138
+#: ui/main.qml:137
+#, kde-format
+msgctxt ""
+"Automatically enable Do Not Disturb mode while a fullscreen application is "
+"focused"
+msgid "While a fullscreen application is focused"
+msgstr ""
+
+#: ui/main.qml:149
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "Kısayol kullanarak elle aç/kapat:"
 
-#: ui/main.qml:145
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Görünürlük Koşulları"
 
-#: ui/main.qml:150
+#: ui/main.qml:161
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Kritik bildirimler:"
 
-#: ui/main.qml:151
+#: ui/main.qml:162
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Rahatsız Etmeyin kipinde göster"
 
-#: ui/main.qml:163
-#, kde-format
-msgid "Normal notifications:"
-msgstr "Olağan bildirimler:"
-
-#: ui/main.qml:164
-#, kde-format
-msgid "Show over full screen windows"
-msgstr "Tam ekran pencerelerin üzerinde göster"
-
-#: ui/main.qml:176
+#: ui/main.qml:174
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Düşük öncelikli bildirimler:"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "Show popup"
 msgstr "Açılır pencere göster"
 
-#: ui/main.qml:206
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Açılır Pencereler"
 
-#: ui/main.qml:212
+#: ui/main.qml:210
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Konum:"
 
-#: ui/main.qml:213
+#: ui/main.qml:211
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Bildirim simgesi yakınında"
 
-#: ui/main.qml:250
+#: ui/main.qml:248
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr "Özel…"
 
-#: ui/main.qml:259 ui/main.qml:275
+#: ui/main.qml:257 ui/main.qml:273
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 saniye"
 msgstr[1] "%1 saniye"
 
-#: ui/main.qml:264
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Şundan sonra gizle:"
 
-#: ui/main.qml:287
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Ek Geri Bildirim"
 
-#: ui/main.qml:293
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Bildirimlerde göster"
 
-#: ui/main.qml:294
+#: ui/main.qml:292
 #, kde-format
 msgid "Application progress:"
 msgstr "Uygulama ilerlemesi:"
 
-#: ui/main.qml:308
+#: ui/main.qml:306
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "İlerleme sırasında açılır pencereyi açık tut"
 
-#: ui/main.qml:321
+#: ui/main.qml:319
 #, kde-format
 msgid "Notification badges:"
 msgstr "Bildirim rozetleri:"
 
-#: ui/main.qml:322
+#: ui/main.qml:320
 #, kde-format
 msgid "Show in task manager"
 msgstr "Görev yöneticisinde göster"
@@ -292,3 +290,9 @@ msgid ""
 msgstr ""
 "Bildirim ayarlarını ve davranışlarını yapılandırmak için listeden bir "
 "uygulama seçin."
+
+#~ msgid "Normal notifications:"
+#~ msgstr "Olağan bildirimler:"
+
+#~ msgid "Show over full screen windows"
+#~ msgstr "Tam ekran pencerelerin üzerinde göster"

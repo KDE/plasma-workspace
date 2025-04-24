@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-04-19 14:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -40,7 +40,7 @@ msgstr "顯示彈出通知"
 msgid "Show in do not disturb mode"
 msgstr "在「請勿打擾」模式中顯示"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:189
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:187
 #, kde-format
 msgid "Show in history"
 msgstr "在歷史記錄中顯示"
@@ -147,113 +147,111 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "分享螢幕時啟用"
 
-#: ui/main.qml:138
+#: ui/main.qml:137
+#, kde-format
+msgctxt ""
+"Automatically enable Do Not Disturb mode while a fullscreen application is "
+"focused"
+msgid "While a fullscreen application is focused"
+msgstr ""
+
+#: ui/main.qml:149
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "手動以快捷鍵切換："
 
-#: ui/main.qml:145
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "可見狀態"
 
-#: ui/main.qml:150
+#: ui/main.qml:161
 #, kde-format
 msgid "Critical notifications:"
 msgstr "嚴重通知："
 
-#: ui/main.qml:151
+#: ui/main.qml:162
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "在「請勿打擾」模式中顯示"
 
-#: ui/main.qml:163
-#, kde-format
-msgid "Normal notifications:"
-msgstr "一般通知："
-
-#: ui/main.qml:164
-#, kde-format
-msgid "Show over full screen windows"
-msgstr "在全螢幕視窗上顯示"
-
-#: ui/main.qml:176
+#: ui/main.qml:174
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "低優先級通知："
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "Show popup"
 msgstr "顯示彈出通知"
 
-#: ui/main.qml:206
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "彈出視窗："
 
-#: ui/main.qml:212
+#: ui/main.qml:210
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "位置："
 
-#: ui/main.qml:213
+#: ui/main.qml:211
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "通知圖示附近"
 
-#: ui/main.qml:250
+#: ui/main.qml:248
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr "自訂…"
 
-#: ui/main.qml:259 ui/main.qml:275
+#: ui/main.qml:257 ui/main.qml:273
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 秒"
 
-#: ui/main.qml:264
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "隱藏間隔："
 
-#: ui/main.qml:287
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "額外回饋"
 
-#: ui/main.qml:293
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "在通知中顯示"
 
-#: ui/main.qml:294
+#: ui/main.qml:292
 #, kde-format
 msgid "Application progress:"
 msgstr "應用程式進度："
 
-#: ui/main.qml:308
+#: ui/main.qml:306
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "進行時保持彈出視窗為開啟狀態"
 
-#: ui/main.qml:321
+#: ui/main.qml:319
 #, kde-format
 msgid "Notification badges:"
 msgstr "通知徽章："
 
-#: ui/main.qml:322
+#: ui/main.qml:320
 #, kde-format
 msgid "Show in task manager"
 msgstr "在工作管理員顯示"
@@ -289,6 +287,12 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "從列表選取應用程式以調整其通知設定及行為"
+
+#~ msgid "Normal notifications:"
+#~ msgstr "一般通知："
+
+#~ msgid "Show over full screen windows"
+#~ msgstr "在全螢幕視窗上顯示"
 
 #~ msgid "Choose Custom Position…"
 #~ msgstr "選擇自訂位置…"

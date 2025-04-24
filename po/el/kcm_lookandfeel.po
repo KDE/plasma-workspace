@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-12 00:44+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2024-09-19 16:49+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -28,7 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "dimkard@gmail.com"
 
-#: kcm.cpp:474
+#: kcm.cpp:476
 #, kde-format
 msgid ""
 "You have to restart the Plasma session for these changes to take effect."
@@ -36,7 +36,7 @@ msgstr ""
 "Πρέπει να επανεκκινήσετε τη συνεδρία Plasma για να εφαρμοστούν αυτές οι "
 "αλλαγές."
 
-#: kcm.cpp:475
+#: kcm.cpp:477
 #, kde-format
 msgid "Cursor Settings Changed"
 msgstr "Οι ρυθμίσεις του δρομέα άλλαξαν"

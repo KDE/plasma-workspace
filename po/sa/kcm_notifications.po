@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2024-12-20 21:54+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -39,7 +39,7 @@ msgstr "पॉपअप्स् दर्शयतु"
 msgid "Show in do not disturb mode"
 msgstr "मा विघ्न मोड् इत्यत्र दर्शयतु"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:189
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:187
 #, kde-format
 msgid "Show in history"
 msgstr "इतिहासे दर्शयतु"
@@ -146,114 +146,112 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "स्क्रीनशेयरिंग् इत्यस्य समये"
 
-#: ui/main.qml:138
+#: ui/main.qml:137
+#, kde-format
+msgctxt ""
+"Automatically enable Do Not Disturb mode while a fullscreen application is "
+"focused"
+msgid "While a fullscreen application is focused"
+msgstr ""
+
+#: ui/main.qml:149
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "शॉर्टकट् इत्यनेन सह मैन्युअल् रूपेण टॉगलं कुर्वन्तु:"
 
-#: ui/main.qml:145
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "दृश्यतायाः स्थितिः"
 
-#: ui/main.qml:150
+#: ui/main.qml:161
 #, kde-format
 msgid "Critical notifications:"
 msgstr "समीक्षात्मकसूचनाः :"
 
-#: ui/main.qml:151
+#: ui/main.qml:162
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Do Not Disturb मोड् इत्यत्र दर्शयतु"
 
-#: ui/main.qml:163
-#, kde-format
-msgid "Normal notifications:"
-msgstr "सामान्यसूचनाः :"
-
-#: ui/main.qml:164
-#, kde-format
-msgid "Show over full screen windows"
-msgstr "पूर्णपर्दे विण्डोषु दर्शयतु"
-
-#: ui/main.qml:176
+#: ui/main.qml:174
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "न्यूनप्राथमिकतायुक्तानि सूचनानि :"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "Show popup"
 msgstr "पॉपअप दर्शयतु"
 
-#: ui/main.qml:206
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "पॉपअप्स"
 
-#: ui/main.qml:212
+#: ui/main.qml:210
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "स्थानीय:"
 
-#: ui/main.qml:213
+#: ui/main.qml:211
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "सूचनाचिह्नस्य समीपे"
 
-#: ui/main.qml:250
+#: ui/main.qml:248
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr ""
 
-#: ui/main.qml:259 ui/main.qml:275
+#: ui/main.qml:257 ui/main.qml:273
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
 msgstr[0] "%1 द्वितीयम्"
 msgstr[1] "%1 सेकण्ड्"
 
-#: ui/main.qml:264
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "पश्चात् गोपनम् :"
 
-#: ui/main.qml:287
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "अतिरिक्तप्रतिक्रिया"
 
-#: ui/main.qml:293
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "सूचनासु दर्शयतु"
 
-#: ui/main.qml:294
+#: ui/main.qml:292
 #, kde-format
 msgid "Application progress:"
 msgstr "आवेदनस्य प्रगतिः :"
 
-#: ui/main.qml:308
+#: ui/main.qml:306
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "प्रगतेः समये पॉपअपं उद्घाटितं कुर्वन्तु"
 
-#: ui/main.qml:321
+#: ui/main.qml:319
 #, kde-format
 msgid "Notification badges:"
 msgstr "सूचनाबिल्लाः :"
 
-#: ui/main.qml:322
+#: ui/main.qml:320
 #, kde-format
 msgid "Show in task manager"
 msgstr "कार्यप्रबन्धके दर्शयतु"
@@ -289,6 +287,12 @@ msgid ""
 "Select an application from the list to configure its notification settings "
 "and behavior"
 msgstr "तस्य सूचनासेटिंग्स् व्यवहारं च विन्यस्तुं सूचीतः एकं अनुप्रयोगं चिनोतु"
+
+#~ msgid "Normal notifications:"
+#~ msgstr "सामान्यसूचनाः :"
+
+#~ msgid "Show over full screen windows"
+#~ msgstr "पूर्णपर्दे विण्डोषु दर्शयतु"
 
 #~ msgid "Choose Custom Position…"
 #~ msgstr "कस्टम् स्थानं चिनोतु..."

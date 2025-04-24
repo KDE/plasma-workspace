@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-23 00:44+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-04-13 16:37+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -136,7 +136,7 @@ msgstr "அடுத்த ஆண்டு"
 msgid "Next Decade"
 msgstr "அடுத்த பத்தாண்டு"
 
-#: calendar/qml/MonthViewHeader.qml:274
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "திறந்தே வைத்திரு"

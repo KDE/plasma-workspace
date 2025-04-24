@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kcm_users\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-03 13:36+0200\n"
+"PO-Revision-Date: 2025-04-23 09:31+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -579,14 +579,13 @@ msgstr "Піктограма-замінник аватара користува�
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Вилучити запис користувача у системі без вилучення файлів?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Вилучити користувача…"
+msgstr "Вилучити користувача у системі?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -596,6 +595,10 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"Зараз %1 здійснено вхід до системи, отже файли користувача не може бути "
+"вилучено. Вилучити замість файлів обліковий запис?<nl/><nl/>У результаті %1 "
+"не зможе увійти до системи знову, а під час поточного сеансу, до виходу із "
+"системи, робота в обліковому записі може призводити до неочікуваних ефектів."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -604,13 +607,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"Зараз %1 здійснено вхід до системи. Вилучення облікового запису призведе до "
+"неможливості увійти до нього знову, а під час поточного сеансу, до виходу із "
+"системи, робота в обліковому записі може призводити до неочікуваних ефектів."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Вилучити файли"
+msgstr "Вилучити %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

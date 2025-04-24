@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-23 00:44+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2024-09-01 15:09+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -137,7 +137,7 @@ msgstr "Neste år"
 msgid "Next Decade"
 msgstr "Neste tiår"
 
-#: calendar/qml/MonthViewHeader.qml:274
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "Hald open"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-24 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-04-01 15:08+0400\n"
 "Last-Translator: Khayyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -413,12 +413,12 @@ msgstr "İş masalarının və Panellərin idarə edilməsi..."
 msgid "Move keyboard focus between panels"
 msgstr "Klaviatura fokusunu panellər arasında dəyişmək"
 
-#: shellcorona.cpp:2188
+#: shellcorona.cpp:2190
 #, kde-format
 msgid "Add Panel"
 msgstr "Panel əlavə edin"
 
-#: shellcorona.cpp:2249
+#: shellcorona.cpp:2251
 #, kde-format
 msgctxt "Creates an empty containment (%1 is the containment name)"
 msgid "Empty %1"

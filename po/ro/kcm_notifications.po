@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-13 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2024-06-09 15:07+0100\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Romanian <kde-i18n-ro@kde.org>\n"
@@ -38,7 +38,7 @@ msgstr "Arată indicii contextuale"
 msgid "Show in do not disturb mode"
 msgstr "Arată în regimul „nu deranja”"
 
-#: ui/ApplicationConfiguration.qml:132 ui/main.qml:189
+#: ui/ApplicationConfiguration.qml:132 ui/main.qml:187
 #, kde-format
 msgid "Show in history"
 msgstr "Arată în istoric"
@@ -149,73 +149,71 @@ msgctxt "Automatically enable Do Not Disturb mode during screen sharing"
 msgid "During screen sharing"
 msgstr "În timpul partajării ecranului"
 
-#: ui/main.qml:138
+#: ui/main.qml:137
+#, kde-format
+msgctxt ""
+"Automatically enable Do Not Disturb mode while a fullscreen application is "
+"focused"
+msgid "While a fullscreen application is focused"
+msgstr ""
+
+#: ui/main.qml:149
 #, kde-format
 msgctxt "Keyboard shortcut to turn Do Not Disturb mode on and off"
 msgid "Manually toggle with shortcut:"
 msgstr "Comută manual cu scurtătura:"
 
-#: ui/main.qml:145
+#: ui/main.qml:156
 #, kde-format
 msgctxt "@title:group"
 msgid "Visibility conditions"
 msgstr "Condiții de vizibilitate"
 
-#: ui/main.qml:150
+#: ui/main.qml:161
 #, kde-format
 msgid "Critical notifications:"
 msgstr "Notificări critice:"
 
-#: ui/main.qml:151
+#: ui/main.qml:162
 #, kde-format
 msgid "Show in Do Not Disturb mode"
 msgstr "Arată în regimul „nu deranja”"
 
-#: ui/main.qml:163
-#, kde-format
-msgid "Normal notifications:"
-msgstr "Notificări normale:"
-
-#: ui/main.qml:164
-#, kde-format
-msgid "Show over full screen windows"
-msgstr "Arată peste ferestrele în ecran complet"
-
-#: ui/main.qml:176
+#: ui/main.qml:174
 #, kde-format
 msgid "Low priority notifications:"
 msgstr "Notificări cu prioritate joasă:"
 
-#: ui/main.qml:177
+#: ui/main.qml:175
 #, kde-format
 msgid "Show popup"
 msgstr "Arată indiciu"
 
-#: ui/main.qml:206
+#: ui/main.qml:204
 #, kde-format
 msgctxt "@title:group As in: 'notification popups'"
 msgid "Popups"
 msgstr "Indicii"
 
-#: ui/main.qml:212
+#: ui/main.qml:210
 #, kde-format
 msgctxt "@label"
 msgid "Location:"
 msgstr "Amplasare:"
 
-#: ui/main.qml:213
+#: ui/main.qml:211
 #, kde-format
 msgctxt "Popup position near notification plasmoid"
 msgid "Near notification icon"
 msgstr "Lângă pictograma de notificare"
 
-#: ui/main.qml:250
+#: ui/main.qml:248
 #, kde-format
 msgctxt "@action:button choose custom notification position"
 msgid "Custom…"
 msgstr ""
 
-#: ui/main.qml:259 ui/main.qml:275
+#: ui/main.qml:257 ui/main.qml:273
 #, kde-format
 msgid "%1 second"
 msgid_plural "%1 seconds"
@@ -223,41 +221,41 @@ msgstr[0] "%1 secundă"
 msgstr[1] "%1 secunde"
 msgstr[2] "%1 de secunde"
 
-#: ui/main.qml:264
+#: ui/main.qml:262
 #, kde-format
 msgctxt "Part of a sentence like, 'Hide popup after n seconds'"
 msgid "Hide after:"
 msgstr "Ascunde după:"
 
-#: ui/main.qml:287
+#: ui/main.qml:285
 #, kde-format
 msgctxt "@title:group"
 msgid "Additional feedback"
 msgstr "Reacții suplimentare"
 
-#: ui/main.qml:293
+#: ui/main.qml:291
 #, kde-format
 msgctxt "Show application jobs in notification widget"
 msgid "Show in notifications"
 msgstr "Arată în notificări"
 
-#: ui/main.qml:294
+#: ui/main.qml:292
 #, kde-format
 msgid "Application progress:"
 msgstr "Progres aplicație:"
 
-#: ui/main.qml:308
+#: ui/main.qml:306
 #, kde-format
 msgctxt "Keep application job popup open for entire duration of job"
 msgid "Keep popup open during progress"
 msgstr "Ține indiciul deschis pe durata progresului"
 
-#: ui/main.qml:321
+#: ui/main.qml:319
 #, kde-format
 msgid "Notification badges:"
 msgstr "Ecusoane de notificare:"
 
-#: ui/main.qml:322
+#: ui/main.qml:320
 #, kde-format
 msgid "Show in task manager"
 msgstr "Arată în gestionarul de sarcini"
@@ -295,6 +293,12 @@ msgid ""
 msgstr ""
 "Alegeți o aplicație din listă pentru a-i configura parametrii și "
 "comportamentul de notificare"
+
+#~ msgid "Normal notifications:"
+#~ msgstr "Notificări normale:"
+
+#~ msgid "Show over full screen windows"
+#~ msgstr "Arată peste ferestrele în ecran complet"
 
 #~ msgid "Choose Custom Position…"
 #~ msgstr "Alege poziție personalizată…"

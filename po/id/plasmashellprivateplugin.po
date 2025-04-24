@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-23 00:44+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-02-13 22:25+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -137,7 +137,7 @@ msgstr "Tahun Depan"
 msgid "Next Decade"
 msgstr "Dasawarsa Depan"
 
-#: calendar/qml/MonthViewHeader.qml:274
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "Tetap Buka"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-23 00:44+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-01-06 18:58+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -139,7 +139,7 @@ msgstr "Venonta jaro"
 msgid "Next Decade"
 msgstr "Venontan Jardekon"
 
-#: calendar/qml/MonthViewHeader.qml:274
+#: calendar/qml/MonthViewHeader.qml:272
 #, kde-format
 msgid "Keep Open"
 msgstr "Teni Malfermita"

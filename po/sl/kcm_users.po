@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: plasma-desktop\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-03 06:51+0100\n"
+"PO-Revision-Date: 2025-04-23 07:00+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.5\n"
+"X-Generator: Poedit 3.6\n"
 
 #: src/fingerprintmodel.cpp:145 src/fingerprintmodel.cpp:229
 #, kde-format
@@ -534,14 +534,13 @@ msgstr "Ikona rezerviranega prostora za uporabnkovega avatarja"
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "Želite izbrisati prijavljenega uporabnika brez brisanja datotek?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "Zbriši uporabnika…"
+msgstr "Želite izbrisati prijavljenega uporabnika?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -551,6 +550,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 je trenutno prijavljen, zato njegovih datotek ni mogoče izbrisati. Želite "
+"namesto tega izbrisati samo račun?<nl/><nl/>S tem se %1 ne bo mogel znova "
+"prijaviti in se lahko zazna čudno obnašanje, dokler se ne odjavi."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -559,13 +561,14 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 je trenutno prijavljen. Če izbrišete račun, se ne bo mogel znova "
+"prijaviti in se lahko zazna nenavadno obnašanje, dokler se ne odjavi."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "Zbriši datoteke"
+msgstr "Zbriši %1"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

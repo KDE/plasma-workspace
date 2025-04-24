@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-04-23 00:44+0000\n"
-"PO-Revision-Date: 2025-01-03 04:04+0100\n"
+"PO-Revision-Date: 2025-04-23 03:39+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -536,14 +536,13 @@ msgstr "მომხმარებლის ავატარის ადგ�
 #, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User Without Deleting Files?"
-msgstr ""
+msgstr "წავშალო სისტემაში შესული მომხმარებელი ფაილების წაშლის გარეშე?"
 
 #: src/ui/UserDetailsPage.qml:115
-#, fuzzy, kde-format
-#| msgid "Delete User…"
+#, kde-format
 msgctxt "@title:window"
 msgid "Delete Logged-In User?"
-msgstr "მომხმარებლის წაშლა…"
+msgstr "წავშალო სისტემაში შესული მომხმარებელი?"
 
 #: src/ui/UserDetailsPage.qml:117
 #, kde-kuit-format
@@ -553,6 +552,9 @@ msgid ""
 "account instead?<nl/><nl/>This will make %1 unable to log in again, and they "
 "may experience strange behaviors until they log out."
 msgstr ""
+"%1 ამჟამად შესულია სისტემაში, ასე რომ, მათ ფაილებს ვერ წაშლით. გნებავთ, "
+"უბრალოდ, ანგარიში წავშალო?<nl/><nl/>ეს სისტემაში %1-ის შესვლას შეუძლებელს "
+"გახდის და შეიძლება, უცნაური რაღაცები მოუვიდეს, სანამ სისტემიდან გავა."
 
 #: src/ui/UserDetailsPage.qml:118
 #, kde-format
@@ -561,13 +563,15 @@ msgid ""
 "%1 is currently logged in. Deleting the account will make them unable to log "
 "in again, and they may experience strange behaviors until they log out."
 msgstr ""
+"%1 ამჟამად შესულია სისტემაში. ანგარიშის წაშლა მათი სისტემაში თავიდან შესვლას "
+"შეუძლებელს გახდის და მათ შეიძლება, უცნაური რაღაცები შეამჩნიონ, სანამ გავლენ "
+"სისტემიდან."
 
 #: src/ui/UserDetailsPage.qml:125
-#, fuzzy, kde-format
-#| msgid "Delete files"
+#, kde-format
 msgctxt "@action: button"
 msgid "Delete %1"
-msgstr "ფაილების წაშლა"
+msgstr "%1-ის წაშლა"
 
 #: src/ui/UserDetailsPage.qml:144
 #, kde-format

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma_applet_notifications\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-12 00:42+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2014-09-18 16:11+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -382,69 +382,75 @@ msgstr ""
 msgid "Until manually disabled"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:214
+#: package/contents/ui/FullRepresentation.qml:216
 #, fuzzy, kde-format
 #| msgid "Automatically hide"
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Automaatsch versteken"
 
-#: package/contents/ui/FullRepresentation.qml:226
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:228
+#: package/contents/ui/FullRepresentation.qml:230
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:234
+#: package/contents/ui/FullRepresentation.qml:236
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:459
+#: package/contents/ui/FullRepresentation.qml:240
+#, kde-format
+msgctxt "Do not disturb because fullscreen app is focused"
+msgid "Fullscreen app is focused"
+msgstr ""
+
 #: package/contents/ui/FullRepresentation.qml:465
+#: package/contents/ui/FullRepresentation.qml:471
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:546
+#: package/contents/ui/FullRepresentation.qml:552
 #, kde-format
 msgid "Close Group"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:568
+#: package/contents/ui/FullRepresentation.qml:574
 #, kde-format
 msgid "Show Fewer"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:570
+#: package/contents/ui/FullRepresentation.qml:576
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr ""
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:605
 #: package/contents/ui/main.qml:111
 #, fuzzy, kde-format
 #| msgid "No new notifications."
 msgid "No unread notifications"
 msgstr "Keen nieg Bescheden."
 
-#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:80
 #, fuzzy, kde-format
 #| msgid "Notifications and Jobs"
 msgid "Notification service not available"
 msgstr "Bescheden un Opgaven"
 
-#: package/contents/ui/FullRepresentation.qml:616
+#: package/contents/ui/FullRepresentation.qml:622
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"

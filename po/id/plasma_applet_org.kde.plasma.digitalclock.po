@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-15 00:43+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-02-13 22:14+0700\n"
 "Last-Translator: Wantoyo <wantoyek@gmail.com>\n"
 "Language-Team: https://t.me/Localizations_KDE_Indonesia\n"
@@ -308,17 +308,17 @@ msgstr "Gunakan region baku"
 msgid "Available Plugins:"
 msgstr "Plugin Yang Tersedia:"
 
-#: package/contents/ui/configTimeZones.qml:59
+#: package/contents/ui/configTimeZones.qml:60
 #, kde-format
 msgid "Cancel"
 msgstr "Batal"
 
-#: package/contents/ui/configTimeZones.qml:66
+#: package/contents/ui/configTimeZones.qml:67
 #, kde-format
 msgid "Add Selected Time Zone"
 msgstr "Tambahkan Zona Waktu yang Dipilih"
 
-#: package/contents/ui/configTimeZones.qml:98
+#: package/contents/ui/configTimeZones.qml:99
 #, kde-format
 msgid ""
 "Tip: if you travel frequently, add your home time zone to this list. It will "
@@ -328,17 +328,17 @@ msgstr ""
 "daftar ini. Ini akan muncul hanya ketika Anda mengubah zona waktu systemwide "
 "untuk suatu hal."
 
-#: package/contents/ui/configTimeZones.qml:115
+#: package/contents/ui/configTimeZones.qml:116
 #, kde-format
 msgid "Add Time Zone…"
 msgstr "Tambahkan Zona Waktu..."
 
-#: package/contents/ui/configTimeZones.qml:156
+#: package/contents/ui/configTimeZones.qml:157
 #, kde-format
 msgid "Clock is currently using this time zone"
 msgstr "Jam saat ini menggunakan zona waktu ini"
 
-#: package/contents/ui/configTimeZones.qml:158
+#: package/contents/ui/configTimeZones.qml:159
 #, kde-format
 msgctxt ""
 "@label This list item shows a time zone city name that is identical to the "
@@ -347,27 +347,27 @@ msgctxt ""
 msgid "Hidden while this is the local time zone's city"
 msgstr "Sembunyikan ketika ini adalah kota zona waktu setempat"
 
-#: package/contents/ui/configTimeZones.qml:188
+#: package/contents/ui/configTimeZones.qml:189
 #, kde-format
 msgid "Switch Systemwide Time Zone…"
 msgstr "Alihkan Zona Waktu Systemwide..."
 
-#: package/contents/ui/configTimeZones.qml:200
+#: package/contents/ui/configTimeZones.qml:201
 #, kde-format
 msgid "Remove this time zone"
 msgstr "Singkirkan zona waktu ini"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:213
 #, kde-format
 msgid "Systemwide Time Zone"
 msgstr "Zona Waktu Systemwide"
 
-#: package/contents/ui/configTimeZones.qml:212
+#: package/contents/ui/configTimeZones.qml:213
 #, kde-format
 msgid "Additional Time Zones"
 msgstr "Zona Waktu Tambahan"
 
-#: package/contents/ui/configTimeZones.qml:225
+#: package/contents/ui/configTimeZones.qml:226
 #, kde-format
 msgid ""
 "Add more time zones to display all of them in the applet's pop-up, or use "
@@ -376,14 +376,14 @@ msgstr ""
 "Tambahkan lebih banyak zona waktu untuk menampilkan semuanya di sembulan "
 "applet, atau gunakan salahsatunya untuk jam itu sendiri"
 
-#: package/contents/ui/configTimeZones.qml:239
+#: package/contents/ui/configTimeZones.qml:240
 #, kde-format
 msgid "Switch displayed time zone by scrolling over clock applet"
 msgstr ""
 "Alihkan zona waktu yang ditampilkan berdasarkan pengguliran melalui applet "
 "jam"
 
-#: package/contents/ui/configTimeZones.qml:246
+#: package/contents/ui/configTimeZones.qml:247
 #, kde-format
 msgid ""
 "Using this feature does not change the systemwide time zone. When you "
@@ -392,7 +392,7 @@ msgstr ""
 "Menggunakan fitur ini tidak mengubah zona waktu systemwide. Ketika Anda "
 "bepergian, alihkan zona waktu systemwide sebagai gantinya."
 
-#: package/contents/ui/configTimeZones.qml:256
+#: package/contents/ui/configTimeZones.qml:257
 #, kde-format
 msgid "Choose Time Zone"
 msgstr "Pilih Zona Waktu"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: plasma-workspace\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-12 00:42+0000\n"
+"POT-Creation-Date: 2025-04-24 00:43+0000\n"
 "PO-Revision-Date: 2025-04-01 09:31+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -345,66 +345,72 @@ msgstr "Fins dilluns"
 msgid "Until manually disabled"
 msgstr "Fins que es desactivi manualment"
 
-#: package/contents/ui/FullRepresentation.qml:214
+#: package/contents/ui/FullRepresentation.qml:216
 #, kde-format
 msgctxt "Do not disturb until date"
 msgid "Automatically ends: %1"
 msgstr "Acaba automàticament: %1"
 
-#: package/contents/ui/FullRepresentation.qml:226
+#: package/contents/ui/FullRepresentation.qml:228
 #, kde-format
 msgctxt "Do not disturb until app has finished (reason)"
 msgid "While %1 is active (%2)"
 msgstr "Mentre %1 estigui actiu (%2)"
 
-#: package/contents/ui/FullRepresentation.qml:228
+#: package/contents/ui/FullRepresentation.qml:230
 #, kde-format
 msgctxt "Do not disturb until app has finished"
 msgid "While %1 is active"
 msgstr "Mentre %1 estigui actiu"
 
-#: package/contents/ui/FullRepresentation.qml:234
+#: package/contents/ui/FullRepresentation.qml:236
 #, kde-format
 msgctxt "Do not disturb because external mirrored screens connected"
 msgid "Screens are mirrored"
 msgstr "Les pantalles estan emmirallades"
 
-#: package/contents/ui/FullRepresentation.qml:459
+#: package/contents/ui/FullRepresentation.qml:240
+#, kde-format
+msgctxt "Do not disturb because fullscreen app is focused"
+msgid "Fullscreen app is focused"
+msgstr ""
+
 #: package/contents/ui/FullRepresentation.qml:465
+#: package/contents/ui/FullRepresentation.qml:471
 #, kde-format
 msgctxt "@action:button"
 msgid "View"
 msgstr "Visualitza"
 
-#: package/contents/ui/FullRepresentation.qml:546
+#: package/contents/ui/FullRepresentation.qml:552
 #, kde-format
 msgid "Close Group"
 msgstr "Tanca el grup"
 
-#: package/contents/ui/FullRepresentation.qml:568
+#: package/contents/ui/FullRepresentation.qml:574
 #, kde-format
 msgid "Show Fewer"
 msgstr "Mostra'n menys"
 
-#: package/contents/ui/FullRepresentation.qml:570
+#: package/contents/ui/FullRepresentation.qml:576
 #, kde-format
 msgctxt "Expand to show n more notifications"
 msgid "Show %1 More"
 msgstr "Mostra'n %1 més"
 
-#: package/contents/ui/FullRepresentation.qml:599
+#: package/contents/ui/FullRepresentation.qml:605
 #: package/contents/ui/main.qml:111
 #, kde-format
 msgid "No unread notifications"
 msgstr "No hi ha notificacions sense llegir"
 
-#: package/contents/ui/FullRepresentation.qml:614
+#: package/contents/ui/FullRepresentation.qml:620
 #: package/contents/ui/main.qml:80
 #, kde-format
 msgid "Notification service not available"
 msgstr "El servei de notificació no està disponible"
 
-#: package/contents/ui/FullRepresentation.qml:616
+#: package/contents/ui/FullRepresentation.qml:622
 #, kde-format
 msgctxt "Vendor and product name"
 msgid "Notifications are currently provided by '%1 %2'"
