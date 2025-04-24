@@ -1,0 +1,18 @@
+[Domain]
+Name=Location Settings
+Icon=preferences-location
+
+[org.kde.kcm.location.getlocation]
+Name=Get manual location
+Description=Queries manually configurated location
+Policy=yes
+
+[org.kde.kcm.location.setlocation]
+Name=Use manual location
+Description=Configures geoclue2 to use the user provide location
+Policy=yes
+
+[org.kde.kcm.location.unsetlocation]
+Name=Use automatic location
+Description=Configures geoclue2 to detect the geolocation automatically
+Policy=yes
