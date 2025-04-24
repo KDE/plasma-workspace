@@ -21,6 +21,8 @@
 #include <KPackage/PackageLoader>
 #include <KRuntimePlatform>
 
+#include <Plasma/PluginLoader>
+
 using namespace Qt::StringLiterals;
 
 PlasmaAppletItem::PlasmaAppletItem(const KPluginMetaData &info)
@@ -389,8 +391,10 @@ void PlasmaAppletItemModel::populateModel()
         return true;
     };
 
-    QList<KPluginMetaData> packages =
-        KPackage::PackageLoader::self()->findPackages(QStringLiteral("Plasma/Applet"), QStringLiteral("plasma/plasmoids"), filter);
+    QList<KPluginMetaData> unfilteredPackages = Plasma::PluginLoader::self()->listAppletMetaData(QString());
+
+    QList<KPluginMetaData> packages;
+    std::copy_if(unfilteredPackages.begin(), unfilteredPackages.end(), std::back_inserter(packages), filter);
 
     // NOTE: Those 2 extra searches are for pure retrocompatibility, to list old plasmoids
     // Just to give the user the possibility to remove them.
