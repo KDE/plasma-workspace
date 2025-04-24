@@ -1,0 +1,33 @@
+[Domain]
+Name=Location Settings
+Icon=preferences-location
+
+[org.kde.kcm.location.reconfigure]
+Name=Reload GeoClue2
+Description=Make GeoClue2 use the new configuration
+Policy=yes
+
+[org.kde.kcm.location.query]
+Name=Query GeoClue2 configuration
+Description=Queries enabled sources and manually configured location
+Policy=yes
+
+[org.kde.kcm.location.enable]
+Name=Enable geolocation
+Description=Enable geolocation
+Policy=yes
+
+[org.kde.kcm.location.disable]
+Name=Disable geolocation
+Description=Disable geolocation
+Policy=yes
+
+[org.kde.kcm.location.setstaticlocation]
+Name=Set static location
+Description=Configures geoclue2 to use the user provided location
+Policy=yes
+
+[org.kde.kcm.location.unsetstaticlocation]
+Name=Unset static location
+Description=Configures geoclue2 to detect the geolocation automatically
+Policy=yes

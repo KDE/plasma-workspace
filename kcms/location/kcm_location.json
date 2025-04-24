@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "BugReportUrl": "https://bugs.kde.org/enter_bug.cgi?product=systemsettings&component=kcm_location",
+        "Description": "Configure geolocation",
+        "Icon": "mark-location",
+        "Name": "Location"
+    },
+    "X-KDE-System-Settings-Parent-Category": "security-privacy",
+    "X-KDE-Weight": 10
+}
