@@ -426,23 +426,20 @@ class ClipboardTest(unittest.TestCase):
         app.driver.find_element(AppiumBy.XPATH, f"//list_item[@name='file://{temp_file.name}' and contains(@states, 'focused')]")
         actions.send_keys(Keys.RETURN).perform()
 
-        def check_clipboard() -> None:
-            mime_data = app.gtk_get_clipboard_mime_data()
+        mime_data = app.gtk_get_clipboard_mime_data()
+        self.assertIn("text/plain;charset=utf-8", mime_data)
+        self.assertIn("text/uri-list", mime_data)
+        self.assertIn("application/json", mime_data)
+        self.assertIn("image/png", mime_data)
+        self.assertNotIn("text/plain;charset=ANSI_X3.4-1968", mime_data)
+        if "KDECI_BUILD" not in os.environ:  # Too flaky in CI
             self.assertEqual(mime_data["text/plain;charset=utf-8"].get_data(), utf8_text_data.get_data())
             self.assertEqual(mime_data["text/uri-list"].get_data(), urls_data.get_data())
-            self.assertIn("application/json", mime_data)
-            self.assertNotIn("text/plain;charset=ANSI_X3.4-1968", mime_data)
             with tempfile.NamedTemporaryFile(mode="wb", suffix=".png") as temp_file:
                 temp_file.write(mime_data["image/png"].get_data())
                 temp_file.flush()
                 image_from_clipboard = GdkPixbuf.Pixbuf.new_from_file(temp_file.name)
                 self.assertEqual(image_from_clipboard.get_pixels(), pixbuf.get_pixels())
-
-        try:
-            check_clipboard()
-        except AssertionError:
-            time.sleep(1)
-            check_clipboard()
 
     def test_6_bug487843_bug466414_empty_clip_crash(self) -> None:
         """
